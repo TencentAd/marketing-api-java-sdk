@@ -218,11 +218,6 @@
             <artifactId>threetenbp</artifactId>
             <version>${threetenbp-version}</version>
         </dependency>
-        <dependency>
-            <groupId>com.tencent.mm.opensdk</groupId>
-            <artifactId>wechat-sdk-android-without-mta</artifactId>
-            <version>5.5.4</version>
-        </dependency>
         <!-- test dependencies -->
         <dependency>
             <groupId>junit</groupId>
