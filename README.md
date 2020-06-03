@@ -1,4 +1,4 @@
-# Marketing JAVA SDK
+# Marketing Jave SDK
 ## 概述
 腾讯广告 Marketing API(以下简称API) SDK 提供了Token获取、请求封装、响应解释等功能，以本地化方式轻松完成API的调用和结果的获取，旨在帮助开发者快速搭建投放管理系统。
 未来还会基于常用的广告投放场景，提供场景化的接口组合及调用封装。
@@ -6,13 +6,13 @@
 ## 使用条件
 1. 使用SDK需要首先注册成为腾讯广告开发者，请参考[开发者快速入门文档](https://developers.e.qq.com/docs/start)
 2. 使用SDK需要先拥有API的访问权限，所有SDK的使用与应用拥有的权限组相关联
-3. JAVA SDK 需要依赖 JDK 1.7 及以上
+3. Java SDK 需要依赖 JDK 1.7 及以上
 4. Maven
 
 ## 如何安装运行
 
 - 如果你想直接使用我们准备好的pre-compiled.jar文件，点击 [marketing-api-java-sdk-1.1.1.jar](https://i.gtimg.cn/qzone/biz/gdt/lib/mkt-sdk/marketing-api-java-sdk-1.1.1.jar?version=1.1.1) 下载，该jar包已经包含SDK依赖的所有文件。当你编译时，需要将 marketing-api-java-sdk-1.1.1.jar 包添加进你的编译路径中。
-- 手动下载[JAVA压缩包文件](https://i.gtimg.cn/qzone/biz/gdt/lib/mkt-sdk/ams-marketing-sdk-java.zip?version=1.1.1)，解压后可以得到一个JAVA SDK的源码项目。SDK下载地址：[ams-marketing-sdk-java-1.1.1.zip](https://i.gtimg.cn/qzone/biz/gdt/lib/mkt-sdk/ams-marketing-sdk-java.zip?version=1.1.1)
+- 手动下载[Jave压缩包文件](https://i.gtimg.cn/qzone/biz/gdt/lib/mkt-sdk/ams-marketing-sdk-java.zip?version=1.1.1)，解压后可以得到一个Java SDK的源码项目。SDK下载地址：[ams-marketing-sdk-java-1.1.1.zip](https://i.gtimg.cn/qzone/biz/gdt/lib/mkt-sdk/ams-marketing-sdk-java.zip?version=1.1.1)
 
   1. 解压文件，默认解压到目录ams-marketing-sdk-java
   2. 执行mvn clean install，将包安装到你本地的Maven资源库中。
