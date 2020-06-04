@@ -10,9 +10,17 @@
 4. Maven
 
 ## 如何安装运行
+- 我们推荐用Maven的方式管理我们的Java SDK，可以添加如下XML内容到您项目的pom.xml中
+```xml
+<dependency>
+  <groupId>com.tencent.ads</groupId>
+  <artifactId>marketing-api-java-sdk</artifactId>
+  <version>1.1.1</version>
+</dependency>
+```
 
 - 如果你想直接使用我们准备好的pre-compiled.jar文件，点击 [marketing-api-java-sdk-1.1.1.jar](https://i.gtimg.cn/qzone/biz/gdt/lib/mkt-sdk/marketing-api-java-sdk-1.1.1.jar?version=1.1.1) 下载，该jar包已经包含SDK依赖的所有文件。当你编译时，需要将 marketing-api-java-sdk-1.1.1.jar 包添加进你的编译路径中。
-- 手动下载[Jave压缩包文件](https://i.gtimg.cn/qzone/biz/gdt/lib/mkt-sdk/ams-marketing-sdk-java.zip?version=1.1.1)，解压后可以得到一个Java SDK的源码项目。SDK下载地址：[ams-marketing-sdk-java-1.1.1.zip](https://i.gtimg.cn/qzone/biz/gdt/lib/mkt-sdk/ams-marketing-sdk-java.zip?version=1.1.1)
+- 或者您也可以手动下载[Java压缩包文件](https://i.gtimg.cn/qzone/biz/gdt/lib/mkt-sdk/ams-marketing-sdk-java.zip?version=1.1.1)，解压后可以得到一个Java SDK的源码项目。SDK下载地址：[ams-marketing-sdk-java-1.1.1.zip](https://i.gtimg.cn/qzone/biz/gdt/lib/mkt-sdk/ams-marketing-sdk-java.zip?version=1.1.1)
 
   1. 解压文件，默认解压到目录ams-marketing-sdk-java
   2. 执行mvn clean install，将包安装到你本地的Maven资源库中。
