@@ -4,76 +4,62 @@ import com.tencent.ads.ApiContextConfig;
 import com.tencent.ads.TencentAds;
 import com.tencent.ads.exception.TencentAdsResponseException;
 import com.tencent.ads.exception.TencentAdsSDKException;
-import com.tencent.ads.model.ActionType;
-import com.tencent.ads.model.ActionsUserId;
-import com.tencent.ads.model.UserAction;
+import com.tencent.ads.model.*;
 import com.tencent.ads.model.UserActionsAddRequest;
 import com.tencent.ads.model.UserActionsAddResponse;
 import java.util.ArrayList;
 import java.util.List;
 
-/*****
- * 本文件提供了一个创建用户行为数据(User action)的简单示例
- */
 public class AddUserActions {
-
-  /**
-   * YOUR ACCESS TOKEN
-   */
+  /** YOUR ACCESS TOKEN */
   public String ACCESS_TOKEN = "YOUR ACCESS TOKEN";
-  /**
-   * YOUR ACCOUNT ID
-   */
-  public Long ACCOUNT_ID = 0L;
-  /**
-   * YOUR USER ACTION SET ID
-   */
-  public Long USER_ACTION_SET_ID = 0L; // 数据源ID
-  /**
-   * YOUR USER IMEI
-   */
-  public String USER_HASH_IMEI = ""; // 用户IMEI
-  /**
-   * 自定义行为
-   */
-  public ActionType USER_ACTION_TYPE = ActionType.CUSTOM; // 自定义行为
-  /**
-   * 自定义行为类型
-   */
-  public String USER_CUSTOM_ACTION = ""; // 自定义行为类型
-  /**
-   * TencentAds
-   */
+
+  /** TencentAds */
   public TencentAds tencentAds;
+
+  public Long accountId = null;
+  public UserActionsAddRequest data = new UserActionsAddRequest();
+  public Long actionTime = 1591616815L;
+  public String hashImei = "YOUR USER IMEI";
+  public ActionType actionType = ActionType.CUSTOM;
+  public String customAction = "YOUR CUSTOM ACTION TYPE";
+  public Long userActionSetId = null;
 
   public void init() {
     this.tencentAds = TencentAds.getInstance();
     this.tencentAds.init(
-        new ApiContextConfig().accessToken(ACCESS_TOKEN).isDebug(true));// debug==true 会打印请求详细信息
-    this.tencentAds.useSandbox();// 默认使用沙箱环境，如果要请求线上，这里需要设为线上环境
+        new ApiContextConfig().accessToken(ACCESS_TOKEN).isDebug(true)); // debug==true 会打印请求详细信息
+    this.tencentAds.useSandbox(); // 默认使用沙箱环境，如果要请求线上，这里需要设为线上环境
+    this.buildParams();
   }
 
-  public boolean addUserActionSets() throws Exception {
-    UserActionsAddRequest userActionsAddRequest = new UserActionsAddRequest();
-    userActionsAddRequest.accountId(ACCOUNT_ID);
-    userActionsAddRequest.setUserActionSetId(USER_ACTION_SET_ID);
-    List<UserAction> actions = new ArrayList<>();
-    UserAction action = new UserAction().actionTime(System.currentTimeMillis() / 1000)
-        .actionType(USER_ACTION_TYPE).customAction(USER_CUSTOM_ACTION)
-        .userId(new ActionsUserId().hashImei(USER_HASH_IMEI));
-    actions.add(action);
-    userActionsAddRequest.setActions(actions);
-    UserActionsAddResponse response = tencentAds.userActions()
-        .userActionsAdd(userActionsAddRequest);
+  public void buildParams() {
+    data.setAccountId(accountId);
 
-    return true;
+    UserAction userAction = new UserAction();
+    userAction.setActionTime(actionTime);
+    ActionsUserId userId = new ActionsUserId();
+    userId.setHashImei(hashImei);
+    userAction.setUserId(userId);
+    userAction.setActionType(actionType);
+    userAction.setCustomAction(customAction);
+    List<UserAction> actions = new ArrayList<>();
+    actions.add(userAction);
+    data.setActions(actions);
+
+    data.setUserActionSetId(userActionSetId);
+  }
+
+  public UserActionsAddResponse addUserActions() throws Exception {
+    UserActionsAddResponse response = tencentAds.userActions().userActionsAdd(data);
+    return response;
   }
 
   public static void main(String[] args) {
     try {
-      AddUserActions example = new AddUserActions();
-      example.init();
-      example.addUserActionSets();
+      AddUserActions addUserActions = new AddUserActions();
+      addUserActions.init();
+      UserActionsAddResponse response = addUserActions.addUserActions();
     } catch (TencentAdsResponseException e) {
       e.printStackTrace();
     } catch (TencentAdsSDKException e) {

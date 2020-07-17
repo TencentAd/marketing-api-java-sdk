@@ -4,54 +4,63 @@ import com.tencent.ads.ApiContextConfig;
 import com.tencent.ads.TencentAds;
 import com.tencent.ads.exception.TencentAdsResponseException;
 import com.tencent.ads.exception.TencentAdsSDKException;
-import com.tencent.ads.model.HourlyReportsGetListStruct;
-import com.tencent.ads.model.HourlyReportsGetResponseData;
+import com.tencent.ads.model.*;
+import com.tencent.ads.model.DateRange;
+import com.tencent.ads.model.FilteringStruct;
+import com.tencent.ads.model.OrderByStruct;
 import java.util.Arrays;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
-/*****
- * 本文件提供了一个获取小时报表(Hourly report)列表的简单示例
- */
 public class GetHourlyReports {
-
-  /**
-   * YOUR ACCESS TOKEN
-   */
+  /** YOUR ACCESS TOKEN */
   public String ACCESS_TOKEN = "YOUR ACCESS TOKEN";
-  /**
-   * YOUR ACCOUNT ID
-   */
-  public Long ACCOUNT_ID = 0L;
-  /**
-   * YOUR REPORT LEVEL
-   */
-  public String LEVEL = "REPORT_LEVEL_ADGROUP"; // 广告组级别报表
-  /**
-   * YOUR REPORT DATE
-   */
-  public String DATE = "REPORT DATE"; // 报表查询日期 YYYY-MM-DD
-  /**
-   * TencentAds
-   */
+
+  /** TencentAds */
   public TencentAds tencentAds;
+
+  public Long accountId = null;
+
+  public String level = "REPORT_LEVEL_ADGROUP";
+
+  public DateRange dateRange = new DateRange();
+
+  public List<FilteringStruct> filtering = null;
+
+  public List<String> groupBy = null;
+
+  public List<OrderByStruct> orderBy = null;
+
+  public Long page = null;
+
+  public Long pageSize = null;
+
+  public String timeLine = null;
+
+  public List<String> fields =
+      Arrays.asList("hour", "view_count", "valid_click_count", "ctr", "cpc", "cost");
 
   public void init() {
     this.tencentAds = TencentAds.getInstance();
     this.tencentAds.init(
-        new ApiContextConfig().accessToken(ACCESS_TOKEN).isDebug(true));// debug==true 会打印请求详细信息
-    this.tencentAds.useSandbox();// 默认使用沙箱环境，如果要请求线上，这里需要设为线上环境
+        new ApiContextConfig().accessToken(ACCESS_TOKEN).isDebug(true)); // debug==true 会打印请求详细信息
+    this.tencentAds.useSandbox(); // 默认使用沙箱环境，如果要请求线上，这里需要设为线上环境
+    this.buildParams();
+  }
+
+  public void buildParams() {
+    String startDate = "REPORT DATE";
+    dateRange.setStartDate(startDate);
+    String endDate = "REPORT DATE";
+    dateRange.setEndDate(endDate);
   }
 
   public HourlyReportsGetResponseData getHourlyReports() throws Exception {
-    Map<String, Object> dateRange = new HashMap<>();
-    dateRange.put("start_date", DATE);
-    dateRange.put("end_date", DATE);
-    HourlyReportsGetResponseData response = tencentAds.hourlyReports()
-        .hourlyReportsGet(ACCOUNT_ID, LEVEL, dateRange, null,
-            null, null, null, null, null,
-            Arrays.asList("hour", "view_count", "valid_click_count", "ctr", "cpc", "cost"));
+    HourlyReportsGetResponseData response =
+        tencentAds
+            .hourlyReports()
+            .hourlyReportsGet(
+                accountId, level, dateRange, filtering, groupBy, orderBy, page, pageSize, timeLine,
+                fields);
     return response;
   }
 
@@ -60,9 +69,6 @@ public class GetHourlyReports {
       GetHourlyReports getHourlyReports = new GetHourlyReports();
       getHourlyReports.init();
       HourlyReportsGetResponseData response = getHourlyReports.getHourlyReports();
-      if (response != null) {
-        List<HourlyReportsGetListStruct> list = response.getList();
-      }
     } catch (TencentAdsResponseException e) {
       e.printStackTrace();
     } catch (TencentAdsSDKException e) {

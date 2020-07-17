@@ -4,54 +4,45 @@ import com.tencent.ads.ApiContextConfig;
 import com.tencent.ads.TencentAds;
 import com.tencent.ads.exception.TencentAdsResponseException;
 import com.tencent.ads.exception.TencentAdsSDKException;
+import com.tencent.ads.model.*;
 import com.tencent.ads.model.AsyncTasksAddRequest;
-import com.tencent.ads.model.AsyncTasksAddResponseData;
-import com.tencent.ads.model.TaskSpec;
-import com.tencent.ads.model.TaskType;
-import com.tencent.ads.model.TaskTypeAdHourlyReportSpec;
-import java.util.UUID;
 
-
-/*****
- * 本文件提供了一个创建异步任务(Async task)的简单示例
- */
 public class AddAsyncTasks {
-
-  /**
-   * YOUR ACCESS TOKEN
-   */
+  /** YOUR ACCESS TOKEN */
   public String ACCESS_TOKEN = "YOUR ACCESS TOKEN";
-  /**
-   * YOUR ACCOUNT ID
-   */
-  public Long ACCOUNT_ID = 0L;
-  /**
-   * YOUR TASK_TYPE
-   */
-  public TaskType TASK_TYPE = TaskType.TASK_TYPE_AD_HOURLY_REPORT; // 广告小时报表数据
-  /**
-   * YOUR REPORT DATE
-   */
-  public String DATE = "REPORT DATE"; // 报表查询日期 YYYY-MM-DD
-  /**
-   * TencentAds
-   */
+
+  /** TencentAds */
   public TencentAds tencentAds;
+
+  public String taskName = "SDK异步任务5ede252e2f1db";
+  public AsyncTasksAddRequest data = new AsyncTasksAddRequest();
+  public Long accountId = null;
+  public TaskType taskType = TaskType.TASK_TYPE_AD_HOURLY_REPORT;
+  public String date = "REPORT DATE";
 
   public void init() {
     this.tencentAds = TencentAds.getInstance();
     this.tencentAds.init(
-        new ApiContextConfig().accessToken(ACCESS_TOKEN).isDebug(true));// debug==true 会打印请求详细信息
-    this.tencentAds.useSandbox();// 默认使用沙箱环境，如果要请求线上，这里需要设为线上环境
+        new ApiContextConfig().accessToken(ACCESS_TOKEN).isDebug(true)); // debug==true 会打印请求详细信息
+    this.tencentAds.useSandbox(); // 默认使用沙箱环境，如果要请求线上，这里需要设为线上环境
+    this.buildParams();
+  }
+
+  public void buildParams() {
+    data.setTaskName(taskName);
+
+    data.setAccountId(accountId);
+
+    data.setTaskType(taskType);
+
+    TaskTypeAdHourlyReportSpec taskTypeAdHourlyReportSpec = new TaskTypeAdHourlyReportSpec();
+    taskTypeAdHourlyReportSpec.setDate(date);
+    TaskSpec taskSpec = new TaskSpec();
+    taskSpec.setTaskTypeAdHourlyReportSpec(taskTypeAdHourlyReportSpec);
+    data.setTaskSpec(taskSpec);
   }
 
   public AsyncTasksAddResponseData addAsyncTasks() throws Exception {
-    AsyncTasksAddRequest data = new AsyncTasksAddRequest();
-    data.accountId(ACCOUNT_ID);
-    data.taskType(TASK_TYPE);
-    data.taskName("SDK异步任务" + UUID.randomUUID().toString().substring(0, 10));
-    data.taskSpec(
-        new TaskSpec().taskTypeAdHourlyReportSpec(new TaskTypeAdHourlyReportSpec().date(DATE)));
     AsyncTasksAddResponseData response = tencentAds.asyncTasks().asyncTasksAdd(data);
     return response;
   }
@@ -61,9 +52,6 @@ public class AddAsyncTasks {
       AddAsyncTasks addAsyncTasks = new AddAsyncTasks();
       addAsyncTasks.init();
       AsyncTasksAddResponseData response = addAsyncTasks.addAsyncTasks();
-      if (response != null) {
-        response.getTaskId();
-      }
     } catch (TencentAdsResponseException e) {
       e.printStackTrace();
     } catch (TencentAdsSDKException e) {

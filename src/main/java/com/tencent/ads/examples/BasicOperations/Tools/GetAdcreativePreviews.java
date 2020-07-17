@@ -4,47 +4,47 @@ import com.tencent.ads.ApiContextConfig;
 import com.tencent.ads.TencentAds;
 import com.tencent.ads.exception.TencentAdsResponseException;
 import com.tencent.ads.exception.TencentAdsSDKException;
-import com.tencent.ads.model.AdcreativePreviewsGetListStruct;
-import com.tencent.ads.model.AdcreativePreviewsGetResponseData;
+import com.tencent.ads.model.*;
 import com.tencent.ads.model.FilteringStruct;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-/*****
- * 本文件提供了一个获取预览受众(Adcreative preview)的简单示例
- */
 public class GetAdcreativePreviews {
-
-  /**
-   * YOUR ACCESS TOKEN
-   */
+  /** YOUR ACCESS TOKEN */
   public String ACCESS_TOKEN = "YOUR ACCESS TOKEN";
-  /**
-   * YOUR ACCOUNT ID
-   */
-  public Long ACCOUNT_ID = 0L;
-  /**
-   * YOUR ADGROUP ID
-   */
-  public Long ADGROUP_ID = 0L; // 广告组ID
-  /**
-   * TencentAds
-   */
+
+  /** TencentAds */
   public TencentAds tencentAds;
+
+  public Long accountId = null;
+
+  public List<FilteringStruct> filtering = new ArrayList<>();
+
+  public List<String> fields = Arrays.asList("user_id", "user_id_type");
 
   public void init() {
     this.tencentAds = TencentAds.getInstance();
     this.tencentAds.init(
-        new ApiContextConfig().accessToken(ACCESS_TOKEN).isDebug(true));// debug==true 会打印请求详细信息
-    this.tencentAds.useSandbox();// 默认使用沙箱环境，如果要请求线上，这里需要设为线上环境
+        new ApiContextConfig().accessToken(ACCESS_TOKEN).isDebug(true)); // debug==true 会打印请求详细信息
+    this.tencentAds.useSandbox(); // 默认使用沙箱环境，如果要请求线上，这里需要设为线上环境
+    this.buildParams();
+  }
+
+  public void buildParams() {
+    String field = "adgroup_id";
+    FilteringStruct filteringStruct = new FilteringStruct();
+    filteringStruct.setField(field);
+    String operator = "EQUALS";
+    filteringStruct.setOperator(operator);
+    List<String> values = Arrays.asList("YOUR ADGROUP ID");
+    filteringStruct.setValues(values);
+    filtering.add(filteringStruct);
   }
 
   public AdcreativePreviewsGetResponseData getAdcreativePreviews() throws Exception {
-    AdcreativePreviewsGetResponseData response = tencentAds.adcreativePreviews()
-        .adcreativePreviewsGet(ACCOUNT_ID,
-            Arrays.asList(new FilteringStruct().field("adgroup_id")
-                .values(Arrays.asList(String.valueOf(ADGROUP_ID))).operator("EQUALS")),
-            Arrays.asList("user_id", "user_id_type"));
+    AdcreativePreviewsGetResponseData response =
+        tencentAds.adcreativePreviews().adcreativePreviewsGet(accountId, filtering, fields);
     return response;
   }
 
@@ -53,9 +53,6 @@ public class GetAdcreativePreviews {
       GetAdcreativePreviews getAdcreativePreviews = new GetAdcreativePreviews();
       getAdcreativePreviews.init();
       AdcreativePreviewsGetResponseData response = getAdcreativePreviews.getAdcreativePreviews();
-      if (response != null) {
-        List<AdcreativePreviewsGetListStruct> list = response.getList();
-      }
     } catch (TencentAdsResponseException e) {
       e.printStackTrace();
     } catch (TencentAdsSDKException e) {

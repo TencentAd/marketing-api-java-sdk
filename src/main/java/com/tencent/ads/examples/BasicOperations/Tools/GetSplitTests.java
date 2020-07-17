@@ -4,42 +4,52 @@ import com.tencent.ads.ApiContextConfig;
 import com.tencent.ads.TencentAds;
 import com.tencent.ads.exception.TencentAdsResponseException;
 import com.tencent.ads.exception.TencentAdsSDKException;
-import com.tencent.ads.model.SplitTestsGetResponseData;
+import com.tencent.ads.model.*;
+import com.tencent.ads.model.FilteringStruct;
 import java.util.Arrays;
+import java.util.List;
 
-/*****
- * 本文件提供了一个获取拆分对比实验(Split test)列表的简单示例
- */
 public class GetSplitTests {
-
-  /**
-   * YOUR ACCESS TOKEN
-   */
+  /** YOUR ACCESS TOKEN */
   public String ACCESS_TOKEN = "YOUR ACCESS TOKEN";
-  /**
-   * YOUR ACCOUNT ID
-   */
-  public Long ACCOUNT_ID = 0L;
-  /**
-   * TencentAds
-   */
+
+  /** TencentAds */
   public TencentAds tencentAds;
+
+  public Long accountId = null;
+
+  public List<FilteringStruct> filtering = null;
+
+  public Long page = null;
+
+  public Long pageSize = null;
+
+  public List<String> fields =
+      Arrays.asList(
+          "account_id",
+          "split_test_id",
+          "split_test_status",
+          "split_test_name",
+          "begin_time",
+          "end_time",
+          "smart_expand_enabled",
+          "adgroup_id_list",
+          "recommended_rating",
+          "recommended_adgroup_id_list");
 
   public void init() {
     this.tencentAds = TencentAds.getInstance();
     this.tencentAds.init(
-        new ApiContextConfig().accessToken(ACCESS_TOKEN).isDebug(true));// debug==true 会打印请求详细信息
-    this.tencentAds.useSandbox();// 默认使用沙箱环境，如果要请求线上，这里需要设为线上环境
+        new ApiContextConfig().accessToken(ACCESS_TOKEN).isDebug(true)); // debug==true 会打印请求详细信息
+    this.tencentAds.useSandbox(); // 默认使用沙箱环境，如果要请求线上，这里需要设为线上环境
+    this.buildParams();
   }
 
-  public SplitTestsGetResponseData getSplitTests() throws Exception {
-    SplitTestsGetResponseData response = tencentAds.splitTests()
-        .splitTestsGet(ACCOUNT_ID, null, null, null, Arrays
-            .asList("account_id", "split_test_id", "split_test_status", "split_test_name",
-                "begin_time",
-                "end_time", "smart_expand_enabled", "adgroup_id_list", "recommended_rating",
-                "recommended_adgroup_id_list"));
+  public void buildParams() {}
 
+  public SplitTestsGetResponseData getSplitTests() throws Exception {
+    SplitTestsGetResponseData response =
+        tencentAds.splitTests().splitTestsGet(accountId, filtering, page, pageSize, fields);
     return response;
   }
 

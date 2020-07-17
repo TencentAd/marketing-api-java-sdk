@@ -4,13 +4,11 @@ import com.tencent.ads.TencentAds;
 import com.tencent.ads.anno.NeedDiffHost;
 import com.tencent.ads.anno.NoInterceptor;
 import com.tencent.ads.constants.DiffHostConfig;
+import java.util.HashMap;
 import org.aopalliance.intercept.MethodInterceptor;
 import org.aopalliance.intercept.MethodInvocation;
-import java.util.HashMap;
-
 
 public class DiffHostInterceptor implements MethodInterceptor {
-
 
   @Override
   public Object invoke(MethodInvocation invocation) throws Throwable {
@@ -20,8 +18,8 @@ public class DiffHostInterceptor implements MethodInterceptor {
     }
     if (invocation.getMethod().isAnnotationPresent(NeedDiffHost.class)) {
       Class keyClass = invocation.getThis().getClass();
-      String className = keyClass.getSimpleName()
-          .substring(0, keyClass.getSimpleName().indexOf("$"));
+      String className =
+          keyClass.getSimpleName().substring(0, keyClass.getSimpleName().indexOf("$"));
       if (DiffHostConfig.getDiffHostMap().get(className) != null) {
         HashMap<String, String> map = DiffHostConfig.getDiffHostMap().get(className);
         if (map.get(invocation.getMethod().getName()) != null) {

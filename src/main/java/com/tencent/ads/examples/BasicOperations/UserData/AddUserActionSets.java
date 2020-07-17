@@ -4,57 +4,47 @@ import com.tencent.ads.ApiContextConfig;
 import com.tencent.ads.TencentAds;
 import com.tencent.ads.exception.TencentAdsResponseException;
 import com.tencent.ads.exception.TencentAdsSDKException;
-import com.tencent.ads.model.AmUserActionSetType;
+import com.tencent.ads.model.*;
 import com.tencent.ads.model.UserActionSetsAddRequest;
-import com.tencent.ads.model.UserActionSetsAddResponseData;
-import java.util.UUID;
 
-/*****
- * 本文件提供了一个创建用户行为数据源(User action set)的简单示例
- */
 public class AddUserActionSets {
-
-  /**
-   * YOUR ACCESS TOKEN
-   */
+  /** YOUR ACCESS TOKEN */
   public String ACCESS_TOKEN = "YOUR ACCESS TOKEN";
-  /**
-   * YOUR ACCOUNT ID
-   */
-  public Long ACCOUNT_ID = 0L;
-  /**
-   * AmUserActionSetType
-   */
-  public AmUserActionSetType TYPE = AmUserActionSetType.WEB;
-  /**
-   * TencentAds
-   */
+
+  /** TencentAds */
   public TencentAds tencentAds;
+
+  public Long accountId = null;
+  public UserActionSetsAddRequest data = new UserActionSetsAddRequest();
+  public String name = "SDK数据源5ede252f5d953";
+  public AmUserActionSetType type = AmUserActionSetType.WEB;
 
   public void init() {
     this.tencentAds = TencentAds.getInstance();
     this.tencentAds.init(
-        new ApiContextConfig().accessToken(ACCESS_TOKEN).isDebug(true));// debug==true 会打印请求详细信息
-    this.tencentAds.useSandbox();// 默认使用沙箱环境，如果要请求线上，这里需要设为线上环境
+        new ApiContextConfig().accessToken(ACCESS_TOKEN).isDebug(true)); // debug==true 会打印请求详细信息
+    this.tencentAds.useSandbox(); // 默认使用沙箱环境，如果要请求线上，这里需要设为线上环境
+    this.buildParams();
   }
 
-  public Long addUserActionSets() throws Exception {
-    UserActionSetsAddRequest data = new UserActionSetsAddRequest();
-    data.setAccountId(ACCOUNT_ID);
-    data.setName("SDK数据源" + UUID.randomUUID().toString().substring(0, 22));
-    data.setType(TYPE);
+  public void buildParams() {
+    data.setAccountId(accountId);
+
+    data.setName(name);
+
+    data.setType(type);
+  }
+
+  public UserActionSetsAddResponseData addUserActionSets() throws Exception {
     UserActionSetsAddResponseData response = tencentAds.userActionSets().userActionSetsAdd(data);
-    if (response != null) {
-      response.getUserActionSetId();
-    }
-    return null;
+    return response;
   }
 
   public static void main(String[] args) {
     try {
-      AddUserActionSets example = new AddUserActionSets();
-      example.init();
-      Long id = example.addUserActionSets();
+      AddUserActionSets addUserActionSets = new AddUserActionSets();
+      addUserActionSets.init();
+      UserActionSetsAddResponseData response = addUserActionSets.addUserActionSets();
     } catch (TencentAdsResponseException e) {
       e.printStackTrace();
     } catch (TencentAdsSDKException e) {

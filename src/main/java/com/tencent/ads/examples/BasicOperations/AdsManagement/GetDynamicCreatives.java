@@ -4,53 +4,51 @@ import com.tencent.ads.ApiContextConfig;
 import com.tencent.ads.TencentAds;
 import com.tencent.ads.exception.TencentAdsResponseException;
 import com.tencent.ads.exception.TencentAdsSDKException;
-import com.tencent.ads.model.DynamicCreativesGetListStruct;
-import com.tencent.ads.model.DynamicCreativesGetResponseData;
+import com.tencent.ads.model.*;
+import com.tencent.ads.model.FilteringStruct;
 import java.util.Arrays;
-import java.util.Collections;
 import java.util.List;
 
-/*****
- * 本文件提供了一个获取动态创意(Dynamic creative)列表的简单示例
- */
 public class GetDynamicCreatives {
-
-  /**
-   * YOUR ACCESS TOKEN
-   */
+  /** YOUR ACCESS TOKEN */
   public String ACCESS_TOKEN = "YOUR ACCESS TOKEN";
-  /**
-   * YOUR ACCOUNT ID
-   */
-  public Long ACCOUNT_ID = 0L;
-  /**
-   * TencentAds
-   */
+
+  /** TencentAds */
   public TencentAds tencentAds;
+
+  public Long accountId = null;
+
+  public List<FilteringStruct> filtering = null;
+
+  public Long page = null;
+
+  public Long pageSize = null;
+
+  public List<String> fields = Arrays.asList("dynamic_creative_id", "dynamic_creative_name");
 
   public void init() {
     this.tencentAds = TencentAds.getInstance();
     this.tencentAds.init(
-        new ApiContextConfig().accessToken(ACCESS_TOKEN).isDebug(true));// debug==true 会打印请求详细信息
-    this.tencentAds.useSandbox();// 默认使用沙箱环境，如果要请求线上，这里需要设为线上环境
+        new ApiContextConfig().accessToken(ACCESS_TOKEN).isDebug(true)); // debug==true 会打印请求详细信息
+    this.tencentAds.useSandbox(); // 默认使用沙箱环境，如果要请求线上，这里需要设为线上环境
+    this.buildParams();
   }
 
-  public List<DynamicCreativesGetListStruct> getDynamicCreatives() throws Exception {
+  public void buildParams() {}
 
-    List<String> fields = Arrays.asList("dynamic_creative_id", "dynamic_creative_name");
-    DynamicCreativesGetResponseData response = tencentAds.dynamicCreatives()
-        .dynamicCreativesGet(ACCOUNT_ID, null, null, null, fields);
-    if (response != null) {
-      return response.getList();
-    }
-    return Collections.emptyList();
+  public DynamicCreativesGetResponseData getDynamicCreatives() throws Exception {
+    DynamicCreativesGetResponseData response =
+        tencentAds
+            .dynamicCreatives()
+            .dynamicCreativesGet(accountId, filtering, page, pageSize, fields);
+    return response;
   }
 
   public static void main(String[] args) {
     try {
-      GetDynamicCreatives example = new GetDynamicCreatives();
-      example.init();
-      List<DynamicCreativesGetListStruct> list = example.getDynamicCreatives();
+      GetDynamicCreatives getDynamicCreatives = new GetDynamicCreatives();
+      getDynamicCreatives.init();
+      DynamicCreativesGetResponseData response = getDynamicCreatives.getDynamicCreatives();
     } catch (TencentAdsResponseException e) {
       e.printStackTrace();
     } catch (TencentAdsSDKException e) {
@@ -59,5 +57,4 @@ public class GetDynamicCreatives {
       e.printStackTrace();
     }
   }
-
 }

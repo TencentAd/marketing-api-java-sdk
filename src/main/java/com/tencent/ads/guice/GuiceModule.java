@@ -11,9 +11,9 @@ public class GuiceModule extends AbstractModule {
 
   @Override
   protected void configure() {
-    bindInterceptor(Matchers.annotatedWith(AuthInfoAppend.class), Matchers.any(),
-        new AuthInterceptor());
-    bindInterceptor(Matchers.annotatedWith(NeedDiffHost.class), Matchers.any(),
-        new DiffHostInterceptor());
+    bindInterceptor(
+        Matchers.annotatedWith(AuthInfoAppend.class), Matchers.any(), new AuthInterceptor());
+    bindInterceptor(
+        Matchers.annotatedWith(NeedDiffHost.class), Matchers.any(), new DiffHostInterceptor());
   }
 }

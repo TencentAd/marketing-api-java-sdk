@@ -4,46 +4,37 @@ import com.tencent.ads.ApiContextConfig;
 import com.tencent.ads.TencentAds;
 import com.tencent.ads.exception.TencentAdsResponseException;
 import com.tencent.ads.exception.TencentAdsSDKException;
+import com.tencent.ads.model.*;
 import com.tencent.ads.model.WechatPagesDeleteRequest;
-import com.tencent.ads.model.WechatPagesDeleteResponseData;
 
-
-/*****
- * 本文件提供了一个删除微信原生页(Wechat page)的简单示例
- */
 public class DeleteWechatPages {
-
-  /**
-   * YOUR ACCESS TOKEN
-   */
+  /** YOUR ACCESS TOKEN */
   public String ACCESS_TOKEN = "YOUR ACCESS TOKEN";
-  /**
-   * YOUR ACCOUNT ID
-   */
-  public Long ACCOUNT_ID = 0L;
-  /**
-   * YOUR PAGE ID
-   */
-  public Long PAGE_ID = 0L; // 微信原生页ID
-  /**
-   * TencentAds
-   */
+
+  /** TencentAds */
   public TencentAds tencentAds;
+
+  public Long pageId = null;
+  public WechatPagesDeleteRequest data = new WechatPagesDeleteRequest();
+  public Long accountId = null;
 
   public void init() {
     this.tencentAds = TencentAds.getInstance();
     this.tencentAds.init(
-        new ApiContextConfig().accessToken(ACCESS_TOKEN).isDebug(true));// debug==true 会打印请求详细信息
-    this.tencentAds.useSandbox();// 默认使用沙箱环境，如果要请求线上，这里需要设为线上环境
+        new ApiContextConfig().accessToken(ACCESS_TOKEN).isDebug(true)); // debug==true 会打印请求详细信息
+    this.tencentAds.useSandbox(); // 默认使用沙箱环境，如果要请求线上，这里需要设为线上环境
+    this.buildParams();
+  }
+
+  public void buildParams() {
+    data.setPageId(pageId);
+
+    data.setAccountId(accountId);
   }
 
   public WechatPagesDeleteResponseData deleteWechatPages() throws Exception {
-    WechatPagesDeleteRequest data = new WechatPagesDeleteRequest();
-    data.accountId(ACCOUNT_ID);
-    data.pageId(PAGE_ID);
     WechatPagesDeleteResponseData response = tencentAds.wechatPages().wechatPagesDelete(data);
     return response;
-
   }
 
   public static void main(String[] args) {

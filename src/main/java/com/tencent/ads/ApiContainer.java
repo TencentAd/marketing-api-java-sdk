@@ -1,6 +1,5 @@
 package com.tencent.ads;
 
-
 import com.google.gson.*;
 import com.google.inject.Inject;
 import com.google.inject.Singleton;
@@ -12,8 +11,7 @@ import com.tencent.ads.exception.TencentAdsResponseException;
 @AuthInfoAppend
 public class ApiContainer {
 
-  @Inject
-  protected Gson gson;
+  @Inject protected Gson gson;
 
   @NoInterceptor
   protected void handleResponse(String toJson) {

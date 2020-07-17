@@ -4,71 +4,72 @@ import com.tencent.ads.ApiContextConfig;
 import com.tencent.ads.TencentAds;
 import com.tencent.ads.exception.TencentAdsResponseException;
 import com.tencent.ads.exception.TencentAdsSDKException;
-import com.tencent.ads.model.ElementButtonRead;
-import com.tencent.ads.model.ElementGoods;
-import com.tencent.ads.model.GoodsButtonSpec;
-import com.tencent.ads.model.PageElementsStruct;
-import com.tencent.ads.model.PageElementsType;
-import com.tencent.ads.model.ServiceSpec;
-import com.tencent.ads.model.ShareContentSpec;
+import com.tencent.ads.model.*;
 import com.tencent.ads.model.WechatPagesAddRequest;
-import com.tencent.ads.model.WechatPagesAddResponseData;
-import java.util.Arrays;
-import java.util.UUID;
+import java.util.ArrayList;
+import java.util.List;
 
-
-/*****
- * 本文件提供了一个创建微信原生页(Wechat page)的简单示例
- */
 public class AddWechatPages {
-
-  /**
-   * YOUR ACCESS TOKEN
-   */
+  /** YOUR ACCESS TOKEN */
   public String ACCESS_TOKEN = "YOUR ACCESS TOKEN";
-  /**
-   * YOUR ACCOUNT ID
-   */
-  public Long ACCOUNT_ID = 0L;
-  /**
-   * YOUR PAGE TEMPLATE ID
-   */
-  public Long PAGE_TEMPLATE_ID = 0L; // 微信原生页模板ID
-  /**
-   * YOUR AD TITLE
-   */
-  public String PAGE_TITLE = "YOUR AD TITLE"; // 标题
-  /**
-   * YOUR BUTTON TEXT
-   */
-  public String PAGE_BUTTON = "YOUR BUTTON TEXT"; // 按钮文字
-  /**
-   * TencentAds
-   */
+
+  /** TencentAds */
   public TencentAds tencentAds;
+
+  public PageElementsType elementType = PageElementsType.GOODS;
+  public String title = "YOUR AD TITLE";
+  public PageElementsType elementType_1 = PageElementsType.BUTTON;
+  public String title_1 = "YOUR BUTTON TEXT";
+  public WechatPagesAddRequest data = new WechatPagesAddRequest();
+  public Long accountId = null;
+  public String pageName = "SDK原生页5ede252bee1a8";
+  public Long pageTemplateId = null;
+  public String shareTitle = "分享标题";
+  public String shareDescription = "分享内容";
 
   public void init() {
     this.tencentAds = TencentAds.getInstance();
     this.tencentAds.init(
-        new ApiContextConfig().accessToken(ACCESS_TOKEN).isDebug(true));// debug==true 会打印请求详细信息
-    this.tencentAds.useSandbox();// 默认使用沙箱环境，如果要请求线上，这里需要设为线上环境
+        new ApiContextConfig().accessToken(ACCESS_TOKEN).isDebug(true)); // debug==true 会打印请求详细信息
+    this.tencentAds.useSandbox(); // 默认使用沙箱环境，如果要请求线上，这里需要设为线上环境
+    this.buildParams();
+  }
+
+  public void buildParams() {
+    PageElementsStruct pageElementsStruct = new PageElementsStruct();
+    pageElementsStruct.setElementType(elementType);
+    GoodsButtonSpec goodsButtonSpec = new GoodsButtonSpec();
+    goodsButtonSpec.setTitle(title);
+    ElementGoods elementGoods = new ElementGoods();
+    elementGoods.setGoodsButtonSpec(goodsButtonSpec);
+    pageElementsStruct.setElementGoods(elementGoods);
+    PageElementsStruct pageElementsStruct_1 = new PageElementsStruct();
+    pageElementsStruct_1.setElementType(elementType_1);
+    ServiceSpec serviceSpec_1 = new ServiceSpec();
+    serviceSpec_1.setTitle(title_1);
+    ElementButtonRead buttonSpec_1 = new ElementButtonRead();
+    buttonSpec_1.setServiceSpec(serviceSpec_1);
+    pageElementsStruct_1.setButtonSpec(buttonSpec_1);
+    List<PageElementsStruct> pageElementsSpecList = new ArrayList<>();
+    pageElementsSpecList.add(pageElementsStruct);
+    pageElementsSpecList.add(pageElementsStruct_1);
+    data.setPageElementsSpecList(pageElementsSpecList);
+
+    data.setAccountId(accountId);
+
+    data.setPageName(pageName);
+
+    data.setPageTemplateId(pageTemplateId);
+
+    ShareContentSpec shareContentSpec = new ShareContentSpec();
+    shareContentSpec.setShareTitle(shareTitle);
+    shareContentSpec.setShareDescription(shareDescription);
+    data.setShareContentSpec(shareContentSpec);
   }
 
   public WechatPagesAddResponseData addWechatPages() throws Exception {
-    WechatPagesAddRequest data = new WechatPagesAddRequest();
-    data.accountId(ACCOUNT_ID);
-    data.pageName("SDK原生页" + UUID.randomUUID().toString().substring(0, 10));
-    data.pageTemplateId(PAGE_TEMPLATE_ID);
-    data.pageElementsSpecList(Arrays.asList(
-        new PageElementsStruct().elementType(PageElementsType.GOODS).elementGoods(
-            new ElementGoods().goodsButtonSpec(new GoodsButtonSpec().title(PAGE_TITLE))),
-        new PageElementsStruct().elementType(PageElementsType.BUTTON)
-            .buttonSpec(
-                new ElementButtonRead().serviceSpec(new ServiceSpec().title(PAGE_BUTTON)))));
-    data.shareContentSpec(new ShareContentSpec().shareTitle("分享标题").shareDescription("分享内容"));
     WechatPagesAddResponseData response = tencentAds.wechatPages().wechatPagesAdd(data);
     return response;
-
   }
 
   public static void main(String[] args) {

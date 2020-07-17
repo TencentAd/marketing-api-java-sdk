@@ -4,75 +4,58 @@ import com.tencent.ads.ApiContextConfig;
 import com.tencent.ads.TencentAds;
 import com.tencent.ads.exception.TencentAdsResponseException;
 import com.tencent.ads.exception.TencentAdsSDKException;
-import com.tencent.ads.model.AdditionalIndustryQualificationsSpec;
-import com.tencent.ads.model.QualificationSpec;
-import com.tencent.ads.model.QualificationType;
+import com.tencent.ads.model.*;
 import com.tencent.ads.model.QualificationsAddRequest;
-import com.tencent.ads.model.QualificationsAddResponseData;
 import java.util.Arrays;
 import java.util.List;
 
-/**
- * 本文件提供了一个创建广告主资质(Qualification)的简单示例
- */
 public class AddQualifications {
-
-  /**
-   * YOUR ACCESS TOKEN
-   */
+  /** YOUR ACCESS TOKEN */
   public String ACCESS_TOKEN = "YOUR ACCESS TOKEN";
-  /**
-   * YOUR ACCOUNT ID
-   */
-  public Long ACCOUNT_ID = 0L;
-  /**
-   * 附加行业资质
-   */
-  public QualificationType QUALIFICATION_TYPE = QualificationType.ADDITIONAL_INDUSTRY_QUALIFICATION;
-  /**
-   * 行业ID
-   */
-  public Long SYSTEM_INDUSTRY_ID = 0L;
-  /**
-   * 资质编码
-   */
-  public String QUALIFICATION_CODE = "YOUR QUALIFICATION CODE";
-  /**
-   * 资质图片ID
-   */
-  public List<String> QUALIFICATION_IMAGE_ID = Arrays.asList("YOUR QUALIFICATION IMAGE ID");
-  /**
-   * TencentAds
-   */
+
+  /** TencentAds */
   public TencentAds tencentAds;
+
+  public Long accountId = null;
+  public QualificationsAddRequest data = new QualificationsAddRequest();
+  public QualificationType qualificationType = QualificationType.ADDITIONAL_INDUSTRY_QUALIFICATION;
+  public Long systemIndustryId = null;
+  public String qualificationCode = "YOUR QUALIFICATION CODE";
+  public List<String> imageIdList = Arrays.asList("YOUR QUALIFICATION IMAGE ID");
 
   public void init() {
     this.tencentAds = TencentAds.getInstance();
     this.tencentAds.init(
-        new ApiContextConfig().accessToken(ACCESS_TOKEN).isDebug(true));// debug==true 会打印请求详细信息
-    this.tencentAds.useSandbox();// 默认使用沙箱环境，如果要请求线上，这里需要设为线上环境
+        new ApiContextConfig().accessToken(ACCESS_TOKEN).isDebug(true)); // debug==true 会打印请求详细信息
+    this.tencentAds.useSandbox(); // 默认使用沙箱环境，如果要请求线上，这里需要设为线上环境
+    this.buildParams();
   }
 
-  public Long addQualifications() throws Exception {
-    QualificationsAddRequest data = new QualificationsAddRequest();
-    data.setAccountId(ACCOUNT_ID);
+  public void buildParams() {
+    data.setAccountId(accountId);
 
-    data.setQualificationSpec(new QualificationSpec().additionalIndustrySpec(
-        new AdditionalIndustryQualificationsSpec().systemIndustryId(SYSTEM_INDUSTRY_ID)
-            .qualificationCode(QUALIFICATION_CODE).imageIdList(QUALIFICATION_IMAGE_ID)));
-    data.setQualificationType(QUALIFICATION_TYPE);
+    data.setQualificationType(qualificationType);
+
+    AdditionalIndustryQualificationsSpec additionalIndustrySpec =
+        new AdditionalIndustryQualificationsSpec();
+    additionalIndustrySpec.setSystemIndustryId(systemIndustryId);
+    additionalIndustrySpec.setQualificationCode(qualificationCode);
+    additionalIndustrySpec.setImageIdList(imageIdList);
+    QualificationSpec qualificationSpec = new QualificationSpec();
+    qualificationSpec.setAdditionalIndustrySpec(additionalIndustrySpec);
+    data.setQualificationSpec(qualificationSpec);
+  }
+
+  public QualificationsAddResponseData addQualifications() throws Exception {
     QualificationsAddResponseData response = tencentAds.qualifications().qualificationsAdd(data);
-    if (response != null) {
-      return response.getQualificationId();
-    }
-    return null;
+    return response;
   }
 
   public static void main(String[] args) {
     try {
       AddQualifications addQualifications = new AddQualifications();
       addQualifications.init();
-      Long qualificationId = addQualifications.addQualifications();
+      QualificationsAddResponseData response = addQualifications.addQualifications();
     } catch (TencentAdsResponseException e) {
       e.printStackTrace();
     } catch (TencentAdsSDKException e) {
@@ -81,5 +64,4 @@ public class AddQualifications {
       e.printStackTrace();
     }
   }
-
 }

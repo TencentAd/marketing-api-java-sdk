@@ -4,43 +4,39 @@ import com.tencent.ads.ApiContextConfig;
 import com.tencent.ads.TencentAds;
 import com.tencent.ads.exception.TencentAdsResponseException;
 import com.tencent.ads.exception.TencentAdsSDKException;
+import com.tencent.ads.model.*;
 import com.tencent.ads.model.CustomTagsUpdateRequest;
 import com.tencent.ads.model.CustomTagsUpdateResponse;
 
-/*****
- * 本文件提供了一个更新客户标签(Custom tag)的简单示例
- */
 public class UpdateCustomTags {
-
-  /**
-   * YOUR ACCESS TOKEN
-   */
+  /** YOUR ACCESS TOKEN */
   public String ACCESS_TOKEN = "YOUR ACCESS TOKEN";
-  /**
-   * YOUR ACCOUNT ID
-   */
-  public Long ACCOUNT_ID = 0L;
-  /**
-   * YOUR TAG ID
-   */
-  public Long TAG_ID = 0L;// 标签ID
-  /**
-   * TencentAds
-   */
+
+  /** TencentAds */
   public TencentAds tencentAds;
+
+  public Long accountId = null;
+  public CustomTagsUpdateRequest data = new CustomTagsUpdateRequest();
+  public Long tagId = null;
+  public String description = "SDK sample";
 
   public void init() {
     this.tencentAds = TencentAds.getInstance();
     this.tencentAds.init(
-        new ApiContextConfig().accessToken(ACCESS_TOKEN).isDebug(true));// debug==true 会打印请求详细信息
-    this.tencentAds.useSandbox();// 默认使用沙箱环境，如果要请求线上，这里需要设为线上环境
+        new ApiContextConfig().accessToken(ACCESS_TOKEN).isDebug(true)); // debug==true 会打印请求详细信息
+    this.tencentAds.useSandbox(); // 默认使用沙箱环境，如果要请求线上，这里需要设为线上环境
+    this.buildParams();
+  }
+
+  public void buildParams() {
+    data.setAccountId(accountId);
+
+    data.setTagId(tagId);
+
+    data.setDescription(description);
   }
 
   public CustomTagsUpdateResponse updateCustomTags() throws Exception {
-    CustomTagsUpdateRequest data = new CustomTagsUpdateRequest();
-    data.accountId(ACCOUNT_ID);
-    data.tagId(TAG_ID);
-    data.description("SDK sample updated");
     CustomTagsUpdateResponse response = tencentAds.customTags().customTagsUpdate(data);
     return response;
   }

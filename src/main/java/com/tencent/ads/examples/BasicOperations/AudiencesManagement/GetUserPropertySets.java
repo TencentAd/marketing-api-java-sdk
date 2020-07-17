@@ -4,40 +4,38 @@ import com.tencent.ads.ApiContextConfig;
 import com.tencent.ads.TencentAds;
 import com.tencent.ads.exception.TencentAdsResponseException;
 import com.tencent.ads.exception.TencentAdsSDKException;
-import com.tencent.ads.model.UserPropertySetsGetResponseData;
+import com.tencent.ads.model.*;
 import java.util.Arrays;
+import java.util.List;
 
-/*****
- * 本文件提供了一个获取用户属性数据源(User property set)列表的简单示例
- */
 public class GetUserPropertySets {
-
-  /**
-   * YOUR ACCESS TOKEN
-   */
+  /** YOUR ACCESS TOKEN */
   public String ACCESS_TOKEN = "YOUR ACCESS TOKEN";
-  /**
-   * YOUR ACCOUNT ID
-   */
-  public Long ACCOUNT_ID = 0L;
-  /**
-   * TencentAds
-   */
+
+  /** TencentAds */
   public TencentAds tencentAds;
+
+  public Long accountId = null;
+
+  public Long userPropertySetId = null;
+
+  public List<String> fields =
+      Arrays.asList("user_property_set_id", "name", "description", "created_time");
 
   public void init() {
     this.tencentAds = TencentAds.getInstance();
     this.tencentAds.init(
-        new ApiContextConfig().accessToken(ACCESS_TOKEN).isDebug(true));// debug==true 会打印请求详细信息
-    this.tencentAds.useSandbox();// 默认使用沙箱环境，如果要请求线上，这里需要设为线上环境
+        new ApiContextConfig().accessToken(ACCESS_TOKEN).isDebug(true)); // debug==true 会打印请求详细信息
+    this.tencentAds.useSandbox(); // 默认使用沙箱环境，如果要请求线上，这里需要设为线上环境
+    this.buildParams();
   }
 
-  public UserPropertySetsGetResponseData getUserPropertySets() throws Exception {
-    UserPropertySetsGetResponseData response = tencentAds.userPropertySets()
-        .userPropertySetsGet(ACCOUNT_ID, null, Arrays
-            .asList("user_property_set_id", "name", "description", "created_time"));
-    return response;
+  public void buildParams() {}
 
+  public UserPropertySetsGetResponseData getUserPropertySets() throws Exception {
+    UserPropertySetsGetResponseData response =
+        tencentAds.userPropertySets().userPropertySetsGet(accountId, userPropertySetId, fields);
+    return response;
   }
 
   public static void main(String[] args) {

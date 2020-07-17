@@ -4,7 +4,7 @@ import java.security.MessageDigest;
 
 public class DigestUtils {
 
-  //盐，用于混交md5
+  // 盐，用于混交md5
   private static final String slat = "&%5123***&&%%$$#@";
 
   public static String encrypt(String dataStr) {

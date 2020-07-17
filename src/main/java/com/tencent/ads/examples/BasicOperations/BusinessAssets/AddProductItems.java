@@ -4,71 +4,54 @@ import com.tencent.ads.ApiContextConfig;
 import com.tencent.ads.TencentAds;
 import com.tencent.ads.exception.TencentAdsResponseException;
 import com.tencent.ads.exception.TencentAdsSDKException;
-import com.tencent.ads.model.ProductItemSpec;
+import com.tencent.ads.model.*;
 import com.tencent.ads.model.ProductItemsAddRequest;
-import com.tencent.ads.model.ProductItemsAddResponseData;
-import java.text.SimpleDateFormat;
-import java.util.Arrays;
-import java.util.Calendar;
+import java.util.ArrayList;
+import java.util.List;
 
-/*****
- * 本文件提供了一个创建商品(Product item)的简单示例
- */
 public class AddProductItems {
-
-  /**
-   * YOUR ACCESS TOKEN
-   */
+  /** YOUR ACCESS TOKEN */
   public String ACCESS_TOKEN = "YOUR ACCESS TOKEN";
-  /**
-   * YOUR ACCOUNT ID
-   */
-  public Long ACCOUNT_ID = 0L;
-  /**
-   * YOUR PRODUCT CATALOG ID
-   */
-  public Long PRODUCT_CATALOG_ID = 0L; // 商品库ID
-  /**
-   * YOUR PRODUCT ID
-   */
-  public String PRODUCT_ID = "YOUR PRODUCT ID"; // 商品ID(自有ID)
-  /**
-   * YOUR PRODUCT NAME
-   */
-  public String PRODUCT_NAME = "YOUR PRODUCT NAME"; // 商品名称
-  /**
-   * YOUR PRODUCT IMAGE URL
-   */
-  public String PRODUCT_IMAGE_URL = "YOUR PRODUCT IMAGE URL"; // 商品主图
-  /**
-   * PRODUCT_STOCK
-   */
-  public Long PRODUCT_STOCK = 10L; // 商品库存
-  /**
-   * TencentAds
-   */
+
+  /** TencentAds */
   public TencentAds tencentAds;
+
+  public Long productCatalogId = null;
+  public ProductItemsAddRequest data = new ProductItemsAddRequest();
+  public Long accountId = null;
+  public String productOuterId = "YOUR PRODUCT ID";
+  public String productName = "YOUR PRODUCT NAME";
+  public String expirationTime = "2021-06-08 11:46:51";
+  public Long stockVolume = 10L;
+  public String imageUrl = "YOUR PRODUCT IMAGE URL";
+  public String description = "SDK sample";
 
   public void init() {
     this.tencentAds = TencentAds.getInstance();
     this.tencentAds.init(
-        new ApiContextConfig().accessToken(ACCESS_TOKEN).isDebug(true));// debug==true 会打印请求详细信息
-    this.tencentAds.useSandbox();// 默认使用沙箱环境，如果要请求线上，这里需要设为线上环境
+        new ApiContextConfig().accessToken(ACCESS_TOKEN).isDebug(true)); // debug==true 会打印请求详细信息
+    this.tencentAds.useSandbox(); // 默认使用沙箱环境，如果要请求线上，这里需要设为线上环境
+    this.buildParams();
+  }
+
+  public void buildParams() {
+    data.setProductCatalogId(productCatalogId);
+
+    data.setAccountId(accountId);
+
+    ProductItemSpec productItemSpec = new ProductItemSpec();
+    productItemSpec.setProductOuterId(productOuterId);
+    productItemSpec.setProductName(productName);
+    productItemSpec.setExpirationTime(expirationTime);
+    productItemSpec.setStockVolume(stockVolume);
+    productItemSpec.setImageUrl(imageUrl);
+    productItemSpec.setDescription(description);
+    List<ProductItemSpec> productItemSpecList = new ArrayList<>();
+    productItemSpecList.add(productItemSpec);
+    data.setProductItemSpecList(productItemSpecList);
   }
 
   public ProductItemsAddResponseData addProductItems() throws Exception {
-    SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
-    Calendar c = Calendar.getInstance();
-    c.add(Calendar.DATE, 365);
-    String expirationTime = sdf.format(c.getTime());
-    ProductItemsAddRequest data = new ProductItemsAddRequest();
-    data.accountId(ACCOUNT_ID);
-    data.productCatalogId(PRODUCT_CATALOG_ID);
-    data.productItemSpecList(Arrays.asList(
-        new ProductItemSpec().productOuterId(PRODUCT_ID).productName(PRODUCT_NAME)
-            .expirationTime(expirationTime).stockVolume(PRODUCT_STOCK).imageUrl(PRODUCT_IMAGE_URL)
-            .description("Sdk sample")));
-
     ProductItemsAddResponseData response = tencentAds.productItems().productItemsAdd(data);
     return response;
   }

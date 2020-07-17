@@ -1,11 +1,9 @@
 package com.tencent.ads.constants;
 
-
 import java.util.HashMap;
 import java.util.Map;
 
 public class DiffHostConfig {
-
 
   private static Map<String, HashMap<String, String>> diffHostMap;
 
@@ -21,11 +19,9 @@ public class DiffHostConfig {
     HashMap<String, String> authorizationApiContainerMap = new HashMap<>();
     authorizationApiContainerMap.put("authorizationWechatBind", "https://developers.e.qq.com");
     diffHostMap.put("AuthorizationApiContainer", authorizationApiContainerMap);
-
   }
 
   public static Map<String, HashMap<String, String>> getDiffHostMap() {
     return diffHostMap;
   }
-
 }

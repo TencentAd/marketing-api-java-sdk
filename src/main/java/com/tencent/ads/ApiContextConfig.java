@@ -5,8 +5,7 @@ public class ApiContextConfig {
   private String accessToken;
   private boolean isDebug;
 
-  public ApiContextConfig() {
-  }
+  public ApiContextConfig() {}
 
   public ApiContextConfig(String accessToken) {
     this.accessToken = accessToken;

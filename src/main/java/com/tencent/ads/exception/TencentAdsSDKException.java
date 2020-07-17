@@ -1,6 +1,5 @@
 package com.tencent.ads.exception;
 
-
 public class TencentAdsSDKException extends RuntimeException {
 
   private String message;
@@ -10,7 +9,6 @@ public class TencentAdsSDKException extends RuntimeException {
     this.message = message;
   }
 
-
   public String getMessage() {
     return message;
   }
@@ -18,5 +16,4 @@ public class TencentAdsSDKException extends RuntimeException {
   public void setMessage(String message) {
     this.message = message;
   }
-
 }

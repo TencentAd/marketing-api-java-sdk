@@ -7,41 +7,31 @@ import com.tencent.ads.exception.TencentAdsResponseException;
 import com.tencent.ads.exception.TencentAdsSDKException;
 import com.tencent.ads.model.OauthTokenResponseData;
 
-/**
- * 本文件提供了一个从Refresh Token刷新Access Token的示例
- **/
+/** 本文件提供了一个从Refresh Token刷新Access Token的示例 */
 public class RefreshAccessToken {
 
-  /**
-   * YOUR CLIENT ID
-   */
+  /** YOUR CLIENT ID */
   public Long CLIENT_ID = 0L;
-  /**
-   * YOUR CLIENT SECRET
-   */
+  /** YOUR CLIENT SECRET */
   public String CLIENT_SECRET = "YOUR CLIENT SECRET";
-  /**
-   * YOUR REFRESH TOKEN
-   */
+  /** YOUR REFRESH TOKEN */
   public String REFRESH_TOKEN = "YOUR REFRESH TOKEN";
 
-  /**
-   * TencentAds
-   */
+  /** TencentAds */
   public TencentAds tencentAds;
 
   public void init() {
     this.tencentAds = TencentAds.getInstance();
-    this.tencentAds.init(
-        new ApiContextConfig().isDebug(true));
+    this.tencentAds.init(new ApiContextConfig().isDebug(true));
     // oauth/token不提供沙箱环境
     this.tencentAds.useProduction();
   }
 
   public String refreshAccessToken() throws ApiException {
-    OauthTokenResponseData responseData = tencentAds.oauth()
-        .oauthToken(CLIENT_ID, CLIENT_SECRET, "refresh_token", null, REFRESH_TOKEN,
-            null);
+    OauthTokenResponseData responseData =
+        tencentAds
+            .oauth()
+            .oauthToken(CLIENT_ID, CLIENT_SECRET, "refresh_token", null, REFRESH_TOKEN, null);
     if (responseData != null) {
       String accessToken = responseData.getAccessToken();
       tencentAds.setAccessToken(accessToken);

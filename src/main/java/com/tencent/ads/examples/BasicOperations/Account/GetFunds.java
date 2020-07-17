@@ -4,38 +4,33 @@ import com.tencent.ads.ApiContextConfig;
 import com.tencent.ads.TencentAds;
 import com.tencent.ads.exception.TencentAdsResponseException;
 import com.tencent.ads.exception.TencentAdsSDKException;
-import com.tencent.ads.model.FundsGetResponseData;
+import com.tencent.ads.model.*;
 import java.util.Arrays;
 import java.util.List;
 
-/**
- * 本文件提供了一个获取资金账户(Fund)列表的简单示例
- */
 public class GetFunds {
-
-  /**
-   * YOUR ACCESS TOKEN
-   */
+  /** YOUR ACCESS TOKEN */
   public String ACCESS_TOKEN = "YOUR ACCESS TOKEN";
-  /**
-   * YOUR ACCOUNT ID
-   */
-  public Long ACCOUNT_ID = 0L;
-  /**
-   * TencentAds
-   */
+
+  /** TencentAds */
   public TencentAds tencentAds;
+
+  public Long accountId = null;
+
+  public List<String> fields =
+      Arrays.asList("fund_type", "balance", "fund_status", "realtime_cost");
 
   public void init() {
     this.tencentAds = TencentAds.getInstance();
     this.tencentAds.init(
-        new ApiContextConfig().accessToken(ACCESS_TOKEN).isDebug(true));// debug==true 会打印请求详细信息
-    this.tencentAds.useSandbox();// 默认使用沙箱环境，如果要请求线上，这里需要设为线上环境
+        new ApiContextConfig().accessToken(ACCESS_TOKEN).isDebug(true)); // debug==true 会打印请求详细信息
+    this.tencentAds.useSandbox(); // 默认使用沙箱环境，如果要请求线上，这里需要设为线上环境
+    this.buildParams();
   }
 
+  public void buildParams() {}
+
   public FundsGetResponseData getFunds() throws Exception {
-    Long accountId = ACCOUNT_ID;
-    List<String> fields = Arrays.asList("fund_type", "balance", "fund_status", "realtime_cost");
     FundsGetResponseData response = tencentAds.funds().fundsGet(accountId, fields);
     return response;
   }
@@ -44,7 +39,7 @@ public class GetFunds {
     try {
       GetFunds getFunds = new GetFunds();
       getFunds.init();
-      FundsGetResponseData responseData = getFunds.getFunds();
+      FundsGetResponseData response = getFunds.getFunds();
     } catch (TencentAdsResponseException e) {
       e.printStackTrace();
     } catch (TencentAdsSDKException e) {
@@ -53,5 +48,4 @@ public class GetFunds {
       e.printStackTrace();
     }
   }
-
 }

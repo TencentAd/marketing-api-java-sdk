@@ -4,61 +4,48 @@ import com.tencent.ads.ApiContextConfig;
 import com.tencent.ads.TencentAds;
 import com.tencent.ads.exception.TencentAdsResponseException;
 import com.tencent.ads.exception.TencentAdsSDKException;
-import com.tencent.ads.model.QualificationType;
+import com.tencent.ads.model.*;
 import com.tencent.ads.model.QualificationsDeleteRequest;
-import com.tencent.ads.model.QualificationsDeleteResponseData;
 
-/**
- * 本文件提供了一个删除广告主资质(Qualification)的简单示例
- */
 public class DeleteQualifications {
-
-  /**
-   * YOUR ACCESS TOKEN
-   */
+  /** YOUR ACCESS TOKEN */
   public String ACCESS_TOKEN = "YOUR ACCESS TOKEN";
-  /**
-   * YOUR ACCOUNT ID
-   */
-  public Long ACCOUNT_ID = 0L;
-  /**
-   * 资质ID
-   */
-  public Long QUALIFICATION_ID = 0L;
-  /**
-   * 附加行业资质
-   */
-  public QualificationType QUALIFICATION_TYPE = QualificationType.ADDITIONAL_INDUSTRY_QUALIFICATION;
-  /**
-   * TencentAds
-   */
+
+  /** TencentAds */
   public TencentAds tencentAds;
+
+  public Long accountId = null;
+  public QualificationsDeleteRequest data = new QualificationsDeleteRequest();
+  public Long qualificationId = null;
+  public QualificationType qualificationType = QualificationType.ADDITIONAL_INDUSTRY_QUALIFICATION;
 
   public void init() {
     this.tencentAds = TencentAds.getInstance();
     this.tencentAds.init(
-        new ApiContextConfig().accessToken(ACCESS_TOKEN).isDebug(true));// debug==true 会打印请求详细信息
-    this.tencentAds.useSandbox();// 默认使用沙箱环境，如果要请求线上，这里需要设为线上环境
+        new ApiContextConfig().accessToken(ACCESS_TOKEN).isDebug(true)); // debug==true 会打印请求详细信息
+    this.tencentAds.useSandbox(); // 默认使用沙箱环境，如果要请求线上，这里需要设为线上环境
+    this.buildParams();
   }
 
-  public Long deleteQualifications() throws Exception {
-    QualificationsDeleteRequest data = new QualificationsDeleteRequest();
-    data.setAccountId(ACCOUNT_ID);
-    data.setQualificationId(QUALIFICATION_ID);
-    data.setQualificationType(QUALIFICATION_TYPE);
-    QualificationsDeleteResponseData response = tencentAds.qualifications()
-        .qualificationsDelete(data);
-    if (response != null) {
-      return response.getQualificationId();
-    }
-    return null;
+  public void buildParams() {
+    data.setAccountId(accountId);
+
+    data.setQualificationId(qualificationId);
+
+    data.setQualificationType(qualificationType);
+  }
+
+  public QualificationsDeleteResponseData deleteQualifications() throws Exception {
+    QualificationsDeleteResponseData response =
+        tencentAds.qualifications().qualificationsDelete(data);
+    return response;
   }
 
   public static void main(String[] args) {
     try {
       DeleteQualifications deleteQualifications = new DeleteQualifications();
       deleteQualifications.init();
-      Long qualificationId = deleteQualifications.deleteQualifications();
+      QualificationsDeleteResponseData response = deleteQualifications.deleteQualifications();
     } catch (TencentAdsResponseException e) {
       e.printStackTrace();
     } catch (TencentAdsSDKException e) {
@@ -67,5 +54,4 @@ public class DeleteQualifications {
       e.printStackTrace();
     }
   }
-
 }

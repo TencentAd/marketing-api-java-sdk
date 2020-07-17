@@ -1,6 +1,5 @@
 package com.tencent.ads.exception;
 
-
 public class TencentAdsResponseException extends RuntimeException {
 
   private Long code;

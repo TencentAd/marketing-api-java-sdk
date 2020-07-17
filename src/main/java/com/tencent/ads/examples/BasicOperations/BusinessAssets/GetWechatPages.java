@@ -4,41 +4,52 @@ import com.tencent.ads.ApiContextConfig;
 import com.tencent.ads.TencentAds;
 import com.tencent.ads.exception.TencentAdsResponseException;
 import com.tencent.ads.exception.TencentAdsSDKException;
-import com.tencent.ads.model.WechatPagesGetResponseData;
+import com.tencent.ads.model.*;
+import com.tencent.ads.model.FilteringStruct;
 import java.util.Arrays;
+import java.util.List;
 
-/*****
- * 本文件提供了一个获取微信原生页(Wechat page)列表的简单示例
- */
 public class GetWechatPages {
-
-  /**
-   * YOUR ACCESS TOKEN
-   */
+  /** YOUR ACCESS TOKEN */
   public String ACCESS_TOKEN = "YOUR ACCESS TOKEN";
-  /**
-   * YOUR ACCOUNT ID
-   */
-  public Long ACCOUNT_ID = 0L;
-  /**
-   * TencentAds
-   */
+
+  /** TencentAds */
   public TencentAds tencentAds;
+
+  public Long accountId = null;
+
+  public List<FilteringStruct> filtering = null;
+
+  public Long page = null;
+
+  public Long pageSize = null;
+
+  public List<String> fields =
+      Arrays.asList(
+          "page_id",
+          "page_name",
+          "created_time",
+          "last_modified_time",
+          "page_template_id",
+          "page_elements_spec_list",
+          "share_content_spec",
+          "preview_url",
+          "page_type");
 
   public void init() {
     this.tencentAds = TencentAds.getInstance();
     this.tencentAds.init(
-        new ApiContextConfig().accessToken(ACCESS_TOKEN).isDebug(true));// debug==true 会打印请求详细信息
-    this.tencentAds.useSandbox();// 默认使用沙箱环境，如果要请求线上，这里需要设为线上环境
+        new ApiContextConfig().accessToken(ACCESS_TOKEN).isDebug(true)); // debug==true 会打印请求详细信息
+    this.tencentAds.useSandbox(); // 默认使用沙箱环境，如果要请求线上，这里需要设为线上环境
+    this.buildParams();
   }
 
-  public WechatPagesGetResponseData getWechatPages() throws Exception {
-    WechatPagesGetResponseData response = tencentAds.wechatPages().wechatPagesGet(ACCOUNT_ID, null,
-        null, null, Arrays.asList("page_id", "page_name", "created_time", "last_modified_time",
-            "page_template_id", "page_elements_spec_list", "share_content_spec", "preview_url",
-            "page_type"));
-    return response;
+  public void buildParams() {}
 
+  public WechatPagesGetResponseData getWechatPages() throws Exception {
+    WechatPagesGetResponseData response =
+        tencentAds.wechatPages().wechatPagesGet(accountId, filtering, page, pageSize, fields);
+    return response;
   }
 
   public static void main(String[] args) {

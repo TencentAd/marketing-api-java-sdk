@@ -4,52 +4,47 @@ import com.tencent.ads.ApiContextConfig;
 import com.tencent.ads.TencentAds;
 import com.tencent.ads.exception.TencentAdsResponseException;
 import com.tencent.ads.exception.TencentAdsSDKException;
-import com.tencent.ads.model.CustomAudienceFilesAddResponseData;
+import com.tencent.ads.model.*;
 import java.io.File;
 
-/*****
- * 本文件提供了一个创建客户人群数据文件(Custom audience file)的简单示例
- */
 public class AddCustomAudienceFiles {
-
-  /**
-   * YOUR ACCESS TOKEN
-   */
+  /** YOUR ACCESS TOKEN */
   public String ACCESS_TOKEN = "YOUR ACCESS TOKEN";
-  /**
-   * YOUR ACCOUNT ID
-   */
-  public Long ACCOUNT_ID = 0L;
-  /**
-   * YOUR AUDIENCE ID
-   */
-  public Long AUDIENCE_ID = 0L; // 人群ID
-  /**
-   * USER_ID_TYPE
-   */
-  public String USER_ID_TYPE = "QQ"; // QQ号码包
-  /**
-   * AUDIENCE_FILE_PATH
-   */
-  public String AUDIENCE_FILE_PATH = "YOUR AUDIENCE FILE PATH"; // 人群包文件路径
-  /**
-   * TencentAds
-   */
+
+  /** TencentAds */
   public TencentAds tencentAds;
+
+  public Long accountId = null;
+
+  public Long audienceId = null;
+
+  public String userIdType = "QQ";
+
+  public File file = new File("YOUR AUDIENCE FILE PATH");
+
+  public String operationType = null;
+
+  public String openAppId = null;
+
+  public String saltId = null;
 
   public void init() {
     this.tencentAds = TencentAds.getInstance();
     this.tencentAds.init(
-        new ApiContextConfig().accessToken(ACCESS_TOKEN).isDebug(true));// debug==true 会打印请求详细信息
-    this.tencentAds.useSandbox();// 默认使用沙箱环境，如果要请求线上，这里需要设为线上环境
+        new ApiContextConfig().accessToken(ACCESS_TOKEN).isDebug(true)); // debug==true 会打印请求详细信息
+    this.tencentAds.useSandbox(); // 默认使用沙箱环境，如果要请求线上，这里需要设为线上环境
+    this.buildParams();
   }
 
-  public CustomAudienceFilesAddResponseData addCustomAudienceFiles() throws Exception {
-    CustomAudienceFilesAddResponseData response = tencentAds.customAudienceFiles()
-        .customAudienceFilesAdd(ACCOUNT_ID, AUDIENCE_ID,
-            USER_ID_TYPE, new File(AUDIENCE_FILE_PATH), null, null, null);
-    return response;
+  public void buildParams() {}
 
+  public CustomAudienceFilesAddResponseData addCustomAudienceFiles() throws Exception {
+    CustomAudienceFilesAddResponseData response =
+        tencentAds
+            .customAudienceFiles()
+            .customAudienceFilesAdd(
+                accountId, audienceId, userIdType, file, operationType, openAppId, saltId);
+    return response;
   }
 
   public static void main(String[] args) {

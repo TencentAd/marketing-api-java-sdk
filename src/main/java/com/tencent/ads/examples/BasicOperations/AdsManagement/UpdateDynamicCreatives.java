@@ -4,83 +4,59 @@ import com.tencent.ads.ApiContextConfig;
 import com.tencent.ads.TencentAds;
 import com.tencent.ads.exception.TencentAdsResponseException;
 import com.tencent.ads.exception.TencentAdsSDKException;
-import com.tencent.ads.model.DynamicCreativeElements;
+import com.tencent.ads.model.*;
 import com.tencent.ads.model.DynamicCreativesUpdateRequest;
-import com.tencent.ads.model.DynamicCreativesUpdateResponseData;
 import java.util.Arrays;
+import java.util.List;
 
-/*****
- * 本文件提供了一个修改动态创意(Dynamic creative)的简单示例
- */
 public class UpdateDynamicCreatives {
-
-  /**
-   * YOUR ACCESS TOKEN
-   */
+  /** YOUR ACCESS TOKEN */
   public String ACCESS_TOKEN = "YOUR ACCESS TOKEN";
-  /**
-   * YOUR ACCOUNT ID
-   */
-  public Long ACCOUNT_ID = 0L;
-  /**
-   * YOUR DYNAMIC CREATIVE ID
-   */
-  public Long DYNAMIC_CREATIVE_ID = 0L; // 要修改的动态创意ID
-  /**
-   * 方形小图
-   */
-  public Long ADCREATIVE_TEMPLATE_ID = 717L; // 方形小图
-  /**
-   * 广告图片
-   */
-  public String AD_IMAGE_ID = "YOUR AD IMAGE"; // 广告图片，717规格要求：147x147, <30K, png/jpg
-  /**
-   * 广告标题
-   */
-  public String AD_TITLE_1 = "YOUR AD TEXT 1"; // 广告标题，717规格要求：字数：1~10
-  /**
-   * 广告标题
-   */
-  public String AD_TITLE_2 = "YOUR AD TEXT 2"; // 广告标题，717规格要求：字数：1~10
-  /**
-   * 广告文案
-   */
-  public String AD_DESCRIPTION = "YOUR AD DESCRIPTION"; // 广告文案，717规格要求：字数：1~18
-  /**
-   * TencentAds
-   */
+
+  /** TencentAds */
   public TencentAds tencentAds;
+
+  public Long accountId = null;
+  public DynamicCreativesUpdateRequest data = new DynamicCreativesUpdateRequest();
+  public List<String> imageOptions = Arrays.asList("YOUR AD IMAGE");
+  public List<String> titleOptions = Arrays.asList("YOUR AD TEXT 1", "YOUR AD TEXT 2");
+  public List<String> descriptionOptions = Arrays.asList("YOUR AD DESCRIPTION");
+  public Long dynamicCreativeId = null;
+  public Long dynamicCreativeTemplateId = 717L;
 
   public void init() {
     this.tencentAds = TencentAds.getInstance();
     this.tencentAds.init(
-        new ApiContextConfig().accessToken(ACCESS_TOKEN).isDebug(true));// debug==true 会打印请求详细信息
-    this.tencentAds.useSandbox();// 默认使用沙箱环境，如果要请求线上，这里需要设为线上环境
+        new ApiContextConfig().accessToken(ACCESS_TOKEN).isDebug(true)); // debug==true 会打印请求详细信息
+    this.tencentAds.useSandbox(); // 默认使用沙箱环境，如果要请求线上，这里需要设为线上环境
+    this.buildParams();
   }
 
-  public Long updateDynamicCreatives() throws Exception {
-    DynamicCreativesUpdateRequest data = new DynamicCreativesUpdateRequest();
-    data.accountId(ACCOUNT_ID);
-    data.dynamicCreativeTemplateId(ADCREATIVE_TEMPLATE_ID);
-    data.dynamicCreativeId(DYNAMIC_CREATIVE_ID);
-    data.dynamicCreativeElements(
-        new DynamicCreativeElements().imageOptions(Arrays.asList(AD_IMAGE_ID))
-            .titleOptions(Arrays.asList(AD_TITLE_1, AD_TITLE_2))
-            .descriptionOptions(Arrays.asList(AD_DESCRIPTION)));
+  public void buildParams() {
+    data.setAccountId(accountId);
 
-    DynamicCreativesUpdateResponseData response = tencentAds.dynamicCreatives()
-        .dynamicCreativesUpdate(data);
-    if (response != null) {
-      return response.getDynamicCreativeId();
-    }
-    return null;
+    DynamicCreativeElements dynamicCreativeElements = new DynamicCreativeElements();
+    dynamicCreativeElements.setImageOptions(imageOptions);
+    dynamicCreativeElements.setTitleOptions(titleOptions);
+    dynamicCreativeElements.setDescriptionOptions(descriptionOptions);
+    data.setDynamicCreativeElements(dynamicCreativeElements);
+
+    data.setDynamicCreativeId(dynamicCreativeId);
+
+    data.setDynamicCreativeTemplateId(dynamicCreativeTemplateId);
+  }
+
+  public DynamicCreativesUpdateResponseData updateDynamicCreatives() throws Exception {
+    DynamicCreativesUpdateResponseData response =
+        tencentAds.dynamicCreatives().dynamicCreativesUpdate(data);
+    return response;
   }
 
   public static void main(String[] args) {
     try {
-      UpdateDynamicCreatives example = new UpdateDynamicCreatives();
-      example.init();
-      Long id = example.updateDynamicCreatives();
+      UpdateDynamicCreatives updateDynamicCreatives = new UpdateDynamicCreatives();
+      updateDynamicCreatives.init();
+      DynamicCreativesUpdateResponseData response = updateDynamicCreatives.updateDynamicCreatives();
     } catch (TencentAdsResponseException e) {
       e.printStackTrace();
     } catch (TencentAdsSDKException e) {
@@ -89,5 +65,4 @@ public class UpdateDynamicCreatives {
       e.printStackTrace();
     }
   }
-
 }

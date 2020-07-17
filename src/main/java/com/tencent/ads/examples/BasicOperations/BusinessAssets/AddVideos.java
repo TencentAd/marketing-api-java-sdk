@@ -4,45 +4,42 @@ import com.tencent.ads.ApiContextConfig;
 import com.tencent.ads.TencentAds;
 import com.tencent.ads.exception.TencentAdsResponseException;
 import com.tencent.ads.exception.TencentAdsSDKException;
-import com.tencent.ads.model.VideosAddResponseData;
-import com.tencent.ads.utils.SignatureUtils;
+import com.tencent.ads.model.*;
 import java.io.File;
 
-/*****
- * 本文件提供了一个创建视频(Video)的简单示例
- */
 public class AddVideos {
-
-  /**
-   * YOUR ACCESS TOKEN
-   */
+  /** YOUR ACCESS TOKEN */
   public String ACCESS_TOKEN = "YOUR ACCESS TOKEN";
-  /**
-   * YOUR ACCOUNT ID
-   */
-  public Long ACCOUNT_ID = 0L;
-  /**
-   * YOUR VIDEO FILE PATH
-   */
-  public String VIDEO_FILE = "YOUR VIDEO FILE PATH";
-  /**
-   * TencentAds
-   */
+
+  /** TencentAds */
   public TencentAds tencentAds;
+
+  public Long accountId = null;
+
+  public File videoFile = new File("YOUR VIDEO FILE PATH");
+
+  public String signature = null;
+
+  public String description = null;
+
+  public Long adcreativeTemplateId = null;
 
   public void init() {
     this.tencentAds = TencentAds.getInstance();
     this.tencentAds.init(
-        new ApiContextConfig().accessToken(ACCESS_TOKEN).isDebug(true));// debug==true 会打印请求详细信息
-    this.tencentAds.useSandbox();// 默认使用沙箱环境，如果要请求线上，这里需要设为线上环境
+        new ApiContextConfig().accessToken(ACCESS_TOKEN).isDebug(true)); // debug==true 会打印请求详细信息
+    this.tencentAds.useSandbox(); // 默认使用沙箱环境，如果要请求线上，这里需要设为线上环境
+    this.buildParams();
   }
 
-  public VideosAddResponseData addVideos() throws Exception {
-    VideosAddResponseData response = tencentAds.videos()
-        .videosAdd(ACCOUNT_ID, new File(VIDEO_FILE), SignatureUtils.getMD5Checksum(VIDEO_FILE),
-            null, null);
-    return response;
+  public void buildParams() {}
 
+  public VideosAddResponseData addVideos() throws Exception {
+    VideosAddResponseData response =
+        tencentAds
+            .videos()
+            .videosAdd(accountId, videoFile, signature, description, adcreativeTemplateId);
+    return response;
   }
 
   public static void main(String[] args) {

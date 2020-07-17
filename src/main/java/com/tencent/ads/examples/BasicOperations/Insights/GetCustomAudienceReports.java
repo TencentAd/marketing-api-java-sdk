@@ -4,78 +4,88 @@ import com.tencent.ads.ApiContextConfig;
 import com.tencent.ads.TencentAds;
 import com.tencent.ads.exception.TencentAdsResponseException;
 import com.tencent.ads.exception.TencentAdsSDKException;
-import com.tencent.ads.model.AudienceReport;
-import com.tencent.ads.model.CustomAudienceReportsGetResponseData;
+import com.tencent.ads.model.*;
+import com.tencent.ads.model.DateRange;
 import com.tencent.ads.model.FilteringStruct;
+import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
-/*****
- * 本文件提供了一个获取人群报表(Custom audience report)列表的简单示例
- */
 public class GetCustomAudienceReports {
-
-  /**
-   * YOUR ACCESS TOKEN
-   */
+  /** YOUR ACCESS TOKEN */
   public String ACCESS_TOKEN = "YOUR ACCESS TOKEN";
-  /**
-   * YOUR ACCOUNT ID
-   */
-  public Long ACCOUNT_ID = 0L;
-  /**
-   * YOUR AUDIENCE ID
-   */
-  public Long AUDIENCE_ID = 0L; // 人群ID
-  /**
-   * REPORT START DATE
-   */
-  public String START_DATE = "REPORT START DATE"; // 报表开始日期 YYYY-MM-DDD
-  /**
-   * REPORT END DATE
-   */
-  public String END_DATE = "REPORT END DATE"; // 报表结束日期 YYYY-MM-DDD
-  /**
-   * TencentAds
-   */
+
+  /** TencentAds */
   public TencentAds tencentAds;
+
+  public Long accountId = null;
+
+  public List<FilteringStruct> filtering = new ArrayList<>();
+
+  public DateRange dateRange = new DateRange();
+
+  public List<String> groupBy = null;
+
+  public List<String> fields =
+      Arrays.asList(
+          "audience_id",
+          "account_id",
+          "adgroup_id",
+          "campaign_id",
+          "wechat_adgroup_id",
+          "wechat_campaign_id",
+          "model_id",
+          "audience_predict_task_id",
+          "action_type",
+          "cost",
+          "action_count",
+          "user_count");
 
   public void init() {
     this.tencentAds = TencentAds.getInstance();
     this.tencentAds.init(
-        new ApiContextConfig().accessToken(ACCESS_TOKEN).isDebug(true));// debug==true 会打印请求详细信息
-    this.tencentAds.useSandbox();// 默认使用沙箱环境，如果要请求线上，这里需要设为线上环境
+        new ApiContextConfig().accessToken(ACCESS_TOKEN).isDebug(true)); // debug==true 会打印请求详细信息
+    this.tencentAds.useSandbox(); // 默认使用沙箱环境，如果要请求线上，这里需要设为线上环境
+    this.buildParams();
+  }
+
+  public void buildParams() {
+    String field = "audience_id";
+    FilteringStruct filteringStruct = new FilteringStruct();
+    filteringStruct.setField(field);
+    String operator = "IN";
+    filteringStruct.setOperator(operator);
+    List<String> values = Arrays.asList("YOUR AUDIENCE ID");
+    filteringStruct.setValues(values);
+    String field_1 = "audience_platform";
+    FilteringStruct filteringStruct_1 = new FilteringStruct();
+    filteringStruct_1.setField(field_1);
+    String operator_1 = "EQUALS";
+    filteringStruct_1.setOperator(operator_1);
+    List<String> values_1 = Arrays.asList("DMP");
+    filteringStruct_1.setValues(values_1);
+    filtering.add(filteringStruct);
+    filtering.add(filteringStruct_1);
+    String startDate = "REPORT START DATE";
+    dateRange.setStartDate(startDate);
+    String endDate = "REPORT END DATE";
+    dateRange.setEndDate(endDate);
   }
 
   public CustomAudienceReportsGetResponseData getCustomAudienceReports() throws Exception {
-    Map<String, Object> dateRange = new HashMap<>();
-    dateRange.put("start_date", START_DATE);
-    dateRange.put("end_date", END_DATE);
-    CustomAudienceReportsGetResponseData response = tencentAds.customAudienceReports()
-        .customAudienceReportsGet(ACCOUNT_ID,
-            Arrays.asList(new FilteringStruct().field("audience_id").operator("IN")
-                    .values(Arrays.asList(String.valueOf(AUDIENCE_ID))),
-                new FilteringStruct().field("audience_platform").operator("EQUALS")
-                    .values(Arrays.asList("DMP"))), dateRange, null,
-            Arrays.asList("audience_id", "account_id", "adgroup_id", "campaign_id",
-                "wechat_adgroup_id", "wechat_campaign_id",
-                "model_id", "audience_predict_task_id", "action_type", "cost",
-                "action_count", "user_count"));
+    CustomAudienceReportsGetResponseData response =
+        tencentAds
+            .customAudienceReports()
+            .customAudienceReportsGet(accountId, filtering, dateRange, groupBy, fields);
     return response;
-
   }
 
   public static void main(String[] args) {
     try {
-      GetCustomAudienceReports GetCustomAudienceReports = new GetCustomAudienceReports();
-      GetCustomAudienceReports.init();
-      CustomAudienceReportsGetResponseData response = GetCustomAudienceReports
-          .getCustomAudienceReports();
-      if (response != null) {
-        List<AudienceReport> list = response.getList();
-      }
+      GetCustomAudienceReports getCustomAudienceReports = new GetCustomAudienceReports();
+      getCustomAudienceReports.init();
+      CustomAudienceReportsGetResponseData response =
+          getCustomAudienceReports.getCustomAudienceReports();
     } catch (TencentAdsResponseException e) {
       e.printStackTrace();
     } catch (TencentAdsSDKException e) {
@@ -84,5 +94,4 @@ public class GetCustomAudienceReports {
       e.printStackTrace();
     }
   }
-
 }

@@ -5,7 +5,7 @@
     <artifactId>marketing-api-java-sdk</artifactId>
     <packaging>jar</packaging>
     <name>com.tencent.ads</name>
-    <version>1.1.1</version>
+    <version>1.1.2</version>
     <url>https://developers.e.qq.com/docs/start</url>
     <description>Tencent Ads Mareting-Api Java Sdk</description>
 
@@ -16,6 +16,11 @@
             <distribution>repo</distribution>
         </license>
     </licenses>
+    <scm>
+        <connection>scm:git:git://github.com/TencentAd/marketing-api-java-sdk.git</connection>
+        <developerConnection>scm:git:ssh://github.com/TencentAd/marketing-api-java-sdk.git</developerConnection>
+        <url>https://github.com/TencentAd/marketing-api-java-sdk</url>
+    </scm>
 
     <developers>
         <developer>
@@ -181,7 +186,16 @@
             </build>
         </profile>
     </profiles>
-
+    <distributionManagement>
+        <snapshotRepository>
+            <id>ossrh</id>
+            <url>https://oss.sonatype.org/content/repositories/snapshots</url>
+        </snapshotRepository>
+        <repository>
+            <id>ossrh</id>
+            <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+        </repository>
+    </distributionManagement>
     <dependencies>
         <dependency>
             <groupId>io.swagger</groupId>
