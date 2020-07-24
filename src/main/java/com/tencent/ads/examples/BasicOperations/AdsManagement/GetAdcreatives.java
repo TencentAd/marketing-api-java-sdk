@@ -27,6 +27,8 @@ public class GetAdcreatives {
 
   public Boolean isDeleted = null;
 
+  public Boolean linkPageTypeCompatible = null;
+
   public List<String> fields = Arrays.asList("adcreative_id", "campaign_id", "adcreative_name");
 
   public void init() {
@@ -52,7 +54,8 @@ public class GetAdcreatives {
     AdcreativesGetResponseData response =
         tencentAds
             .adcreatives()
-            .adcreativesGet(accountId, filtering, page, pageSize, isDeleted, fields);
+            .adcreativesGet(
+                accountId, filtering, page, pageSize, isDeleted, linkPageTypeCompatible, fields);
     return response;
   }
 

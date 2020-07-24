@@ -5,7 +5,6 @@ import com.tencent.ads.TencentAds;
 import com.tencent.ads.model.*;
 import com.tencent.ads.tools.RapidAdsContainer;
 import com.tencent.ads.tools.RapidAdsContainer.RapidAddAdsRequestData;
-
 import java.util.Arrays;
 
 public class RapidAddAds {
@@ -19,7 +18,9 @@ public class RapidAddAds {
   public AdcreativesAddRequest adcreativesAddRequest = new AdcreativesAddRequest();
   public AdsAddRequest adsAddRequest = new AdsAddRequest();
 
-  public RapidAddAdsRequestData rapidAddAdsRequestData = new RapidAddAdsRequestData(campaignsAddRequest, adgroupsAddRequest, adcreativesAddRequest, adsAddRequest);
+  public RapidAddAdsRequestData rapidAddAdsRequestData =
+      new RapidAddAdsRequestData(
+          campaignsAddRequest, adgroupsAddRequest, adcreativesAddRequest, adsAddRequest);
 
   public void init() {
     this.tencentAds = TencentAds.getInstance();
@@ -30,7 +31,7 @@ public class RapidAddAds {
   }
 
   public void buildParams() {
-    campaignsAddRequest.setCampaignName("SDK计划ede5fdcfffb0aafg1a17adf1c2");
+    campaignsAddRequest.setCampaignName("SDK计划ede5fdcfffb0aaffg1a17adf1c2");
     campaignsAddRequest.setAccountId(null);
     campaignsAddRequest.setCampaignType(CampaignType.NORMAL);
     campaignsAddRequest.setPromotedObjectType(PromotedObjectType.LINK);
@@ -38,22 +39,28 @@ public class RapidAddAds {
 
     adgroupsAddRequest.setEndDate("YOUR ADGROUP END DATE");
     adgroupsAddRequest.setOptimizationGoal(OptimizationGoal.IMPRESSION);
-    adgroupsAddRequest.setTargeting(new WriteTargetingSettingForAdgroup().userOs(Arrays.asList("IOS")));;
+    adgroupsAddRequest.setTargeting(
+        new WriteTargetingSettingForAdgroup().userOs(Arrays.asList("IOS")));
+    ;
     adgroupsAddRequest.setBidAmount(150L);
     adgroupsAddRequest.setBillingEvent(BillingEvent.IMPRESSION);
-    adgroupsAddRequest.setTimeSeries("111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111");
+    adgroupsAddRequest.setTimeSeries(
+        "111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111");
     adgroupsAddRequest.setPromotedObjectType(PromotedObjectType.LINK);
     adgroupsAddRequest.setBeginDate("YOUR ADGROUP BEGIN DATE");
     adgroupsAddRequest.setSiteSet(Arrays.asList("SITE_SET_QZONE"));
-    adgroupsAddRequest.setAdgroupName("SDK广告组ede525afc5fgfdcfb0aa1ajf1a1c2");
+    adgroupsAddRequest.setAdgroupName("SDK广告组ede525afcf5fgfdcfb0aa1ajf1a1c2");
 
     // adcreative
     adcreativesAddRequest.setAdcreativeTemplateId(968L);
-    adcreativesAddRequest.setAdcreativeElements(new AdcreativeCreativeElementsMp().title("YOUR AD TEXT").description("YOUR AD DESCRIPTION"));
+    adcreativesAddRequest.setAdcreativeElements(
+        new AdcreativeCreativeElementsMp()
+            .title("YOUR AD TEXT")
+            .description("YOUR AD DESCRIPTION"));
     adcreativesAddRequest.setPageType(DestinationType.DEFAULT);
     adcreativesAddRequest.setPageSpec(new PageSpec().pageUrl("YOUR AD PAGE URL"));
     adcreativesAddRequest.setPromotedObjectType(PromotedObjectType.LINK);
-    adcreativesAddRequest.setAdcreativeName("SDK广告创意ede525afc5jhgdcb0gaa1a1a1c2");
+    adcreativesAddRequest.setAdcreativeName("SDK广告创意ede525afcf5jhgdcb0gaa1a1a1c2");
     adcreativesAddRequest.setSiteSet(Arrays.asList("SITE_SET_QZONE"));
 
     // ad

@@ -19,16 +19,16 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-/** 用于投放的的商品数量 */
-@JsonAdapter(ProductMode.Adapter.class)
-public enum ProductMode {
-  SINGLE("SINGLE"),
+/** 商务管家账号类型 */
+@JsonAdapter(BMAccountType.Adapter.class)
+public enum BMAccountType {
+  QQ("BM_ACCOUNT_TYPE_QQ"),
 
-  MULTIPLE("MULTIPLE");
+  WECHAT("BM_ACCOUNT_TYPE_WECHAT");
 
   private String value;
 
-  ProductMode(String value) {
+  BMAccountType(String value) {
     this.value = value;
   }
 
@@ -41,8 +41,8 @@ public enum ProductMode {
     return String.valueOf(value);
   }
 
-  public static ProductMode fromValue(String text) {
-    for (ProductMode b : ProductMode.values()) {
+  public static BMAccountType fromValue(String text) {
+    for (BMAccountType b : BMAccountType.values()) {
       if (String.valueOf(b.value).equals(text)) {
         return b;
       }
@@ -50,17 +50,17 @@ public enum ProductMode {
     return null;
   }
 
-  public static class Adapter extends TypeAdapter<ProductMode> {
+  public static class Adapter extends TypeAdapter<BMAccountType> {
     @Override
-    public void write(final JsonWriter jsonWriter, final ProductMode enumeration)
+    public void write(final JsonWriter jsonWriter, final BMAccountType enumeration)
         throws IOException {
       jsonWriter.value(enumeration.getValue());
     }
 
     @Override
-    public ProductMode read(final JsonReader jsonReader) throws IOException {
+    public BMAccountType read(final JsonReader jsonReader) throws IOException {
       String value = jsonReader.nextString();
-      return ProductMode.fromValue(String.valueOf(value));
+      return BMAccountType.fromValue(String.valueOf(value));
     }
   }
 }

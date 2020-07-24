@@ -693,6 +693,9 @@ public class TargetingTagReportsGetListStruct {
   @SerializedName("effect_leads_purchase_count")
   private Long effectLeadsPurchaseCount = null;
 
+  @SerializedName("reservation_uv")
+  private Long reservationUv = null;
+
   @SerializedName("overall_leads_purchase_count")
   private Long overallLeadsPurchaseCount = null;
 
@@ -5021,6 +5024,25 @@ public class TargetingTagReportsGetListStruct {
     this.effectLeadsPurchaseCount = effectLeadsPurchaseCount;
   }
 
+  public TargetingTagReportsGetListStruct reservationUv(Long reservationUv) {
+    this.reservationUv = reservationUv;
+    return this;
+  }
+
+  /**
+   * Get reservationUv
+   *
+   * @return reservationUv
+   */
+  @ApiModelProperty(value = "")
+  public Long getReservationUv() {
+    return reservationUv;
+  }
+
+  public void setReservationUv(Long reservationUv) {
+    this.reservationUv = reservationUv;
+  }
+
   public TargetingTagReportsGetListStruct overallLeadsPurchaseCount(
       Long overallLeadsPurchaseCount) {
     this.overallLeadsPurchaseCount = overallLeadsPurchaseCount;
@@ -5727,6 +5749,7 @@ public class TargetingTagReportsGetListStruct {
         && Objects.equals(
             this.effectLeadsPurchaseCount,
             targetingTagReportsGetListStruct.effectLeadsPurchaseCount)
+        && Objects.equals(this.reservationUv, targetingTagReportsGetListStruct.reservationUv)
         && Objects.equals(
             this.overallLeadsPurchaseCount,
             targetingTagReportsGetListStruct.overallLeadsPurchaseCount)
@@ -5986,6 +6009,7 @@ public class TargetingTagReportsGetListStruct {
         specialPageExpCost,
         viewCommodityPageUv,
         effectLeadsPurchaseCount,
+        reservationUv,
         overallLeadsPurchaseCount,
         leadsPurchaseCount,
         leadsPurchaseRate,

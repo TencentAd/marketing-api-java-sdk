@@ -52,7 +52,9 @@ public enum UserIdType {
 
   SALTED_HASH_IDFA("SALTED_HASH_IDFA"),
 
-  OAID("OAID");
+  OAID("OAID"),
+
+  HASH_OAID("HASH_OAID");
 
   private String value;
 

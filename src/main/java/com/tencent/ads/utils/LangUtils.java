@@ -6,8 +6,7 @@ public final class LangUtils {
   public static final int HASH_OFFSET = 37;
 
   /** Disabled default constructor. */
-  private LangUtils() {
-  }
+  private LangUtils() {}
 
   public static int hashCode(final int seed, final int hashcode) {
     return seed * HASH_OFFSET + hashcode;
@@ -45,5 +44,4 @@ public final class LangUtils {
       }
     }
   }
-
 }

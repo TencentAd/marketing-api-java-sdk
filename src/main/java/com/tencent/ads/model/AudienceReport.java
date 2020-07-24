@@ -46,7 +46,7 @@ public class AudienceReport {
   private Long audiencePredictTaskId = null;
 
   @SerializedName("action_type")
-  private ActionType actionType = null;
+  private AdActionType actionType = null;
 
   @SerializedName("cost")
   private Long cost = null;
@@ -209,7 +209,7 @@ public class AudienceReport {
     this.audiencePredictTaskId = audiencePredictTaskId;
   }
 
-  public AudienceReport actionType(ActionType actionType) {
+  public AudienceReport actionType(AdActionType actionType) {
     this.actionType = actionType;
     return this;
   }
@@ -220,11 +220,11 @@ public class AudienceReport {
    * @return actionType
    */
   @ApiModelProperty(value = "")
-  public ActionType getActionType() {
+  public AdActionType getActionType() {
     return actionType;
   }
 
-  public void setActionType(ActionType actionType) {
+  public void setActionType(AdActionType actionType) {
     this.actionType = actionType;
   }
 

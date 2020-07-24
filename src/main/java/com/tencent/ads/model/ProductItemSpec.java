@@ -129,7 +129,7 @@ public class ProductItemSpec {
   private String startTime = null;
 
   @SerializedName("end_time")
-  private Long endTime = null;
+  private String endTime = null;
 
   @SerializedName("sales_volume")
   private Long salesVolume = null;
@@ -917,7 +917,7 @@ public class ProductItemSpec {
     this.startTime = startTime;
   }
 
-  public ProductItemSpec endTime(Long endTime) {
+  public ProductItemSpec endTime(String endTime) {
     this.endTime = endTime;
     return this;
   }
@@ -928,11 +928,11 @@ public class ProductItemSpec {
    * @return endTime
    */
   @ApiModelProperty(value = "")
-  public Long getEndTime() {
+  public String getEndTime() {
     return endTime;
   }
 
-  public void setEndTime(Long endTime) {
+  public void setEndTime(String endTime) {
     this.endTime = endTime;
   }
 

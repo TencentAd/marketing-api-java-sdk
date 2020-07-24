@@ -12,6 +12,9 @@ public class DiffHostConfig {
     HashMap<String, String> asyncTaskFilesApiContainerMap = new HashMap<>();
     asyncTaskFilesApiContainerMap.put("asyncTaskFilesGet", "https://dl.e.qq.com/v1.1");
     diffHostMap.put("AsyncTaskFilesApiContainer", asyncTaskFilesApiContainerMap);
+    HashMap<String, String> asyncReportFilesApiContainerMap = new HashMap<>();
+    asyncReportFilesApiContainerMap.put("asyncReportFilesGet", "https://dl.e.qq.com/v1.1");
+    diffHostMap.put("AsyncReportFilesApiContainer", asyncReportFilesApiContainerMap);
     HashMap<String, String> oauthApiContainerMap = new HashMap<>();
     oauthApiContainerMap.put("oauthToken", "https://api.e.qq.com");
     oauthApiContainerMap.put("oauthAuthorize", "https://developers.e.qq.com");

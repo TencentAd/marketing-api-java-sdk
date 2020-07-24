@@ -26,7 +26,6 @@ public class URLEncode {
     PATH_SEPARATORS.set(PATH_SEPARATOR);
   }
 
-
   public static String format(List<? extends NameValuePair> parameters, Charset charset) {
     final StringBuilder buf = new StringBuilder();
 
@@ -46,7 +45,8 @@ public class URLEncode {
     return buf.toString();
   }
 
-  static void encodeFormFields(final StringBuilder buf, final String content, final Charset charset) {
+  static void encodeFormFields(
+      final StringBuilder buf, final String content, final Charset charset) {
     if (content == null) {
       return;
     }
@@ -144,5 +144,4 @@ public class URLEncode {
     URIC.or(RESERVED);
     URIC.or(UNRESERVED);
   }
-
 }

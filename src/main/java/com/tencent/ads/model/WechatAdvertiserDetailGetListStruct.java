@@ -54,7 +54,7 @@ public class WechatAdvertiserDetailGetListStruct {
   private Long dailyBudget = null;
 
   @SerializedName("fund_type")
-  private AccountTypeMap fundType = null;
+  private WechatAdvertiserAccountType fundType = null;
 
   public WechatAdvertiserDetailGetListStruct accountId(Long accountId) {
     this.accountId = accountId;
@@ -263,7 +263,7 @@ public class WechatAdvertiserDetailGetListStruct {
     this.dailyBudget = dailyBudget;
   }
 
-  public WechatAdvertiserDetailGetListStruct fundType(AccountTypeMap fundType) {
+  public WechatAdvertiserDetailGetListStruct fundType(WechatAdvertiserAccountType fundType) {
     this.fundType = fundType;
     return this;
   }
@@ -274,11 +274,11 @@ public class WechatAdvertiserDetailGetListStruct {
    * @return fundType
    */
   @ApiModelProperty(value = "")
-  public AccountTypeMap getFundType() {
+  public WechatAdvertiserAccountType getFundType() {
     return fundType;
   }
 
-  public void setFundType(AccountTypeMap fundType) {
+  public void setFundType(WechatAdvertiserAccountType fundType) {
     this.fundType = fundType;
   }
 

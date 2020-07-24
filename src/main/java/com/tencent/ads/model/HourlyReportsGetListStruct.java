@@ -621,6 +621,9 @@ public class HourlyReportsGetListStruct {
   @SerializedName("effect_leads_purchase_count")
   private Long effectLeadsPurchaseCount = null;
 
+  @SerializedName("reservation_uv")
+  private Long reservationUv = null;
+
   @SerializedName("overall_leads_purchase_count")
   private Long overallLeadsPurchaseCount = null;
 
@@ -684,6 +687,24 @@ public class HourlyReportsGetListStruct {
   @SerializedName("add_wishlist_count")
   private Long addWishlistCount = null;
 
+  @SerializedName("video_outer_play10_count")
+  private Long videoOuterPlay10Count = null;
+
+  @SerializedName("video_outer_play25_count")
+  private Long videoOuterPlay25Count = null;
+
+  @SerializedName("video_outer_play50_count")
+  private Long videoOuterPlay50Count = null;
+
+  @SerializedName("video_outer_play75_count")
+  private Long videoOuterPlay75Count = null;
+
+  @SerializedName("video_outer_play95_count")
+  private Long videoOuterPlay95Count = null;
+
+  @SerializedName("video_outer_play100_count")
+  private Long videoOuterPlay100Count = null;
+
   @SerializedName("video_outer_play_count")
   private Long videoOuterPlayCount = null;
 
@@ -701,6 +722,27 @@ public class HourlyReportsGetListStruct {
 
   @SerializedName("ad_id")
   private Long adId = null;
+
+  @SerializedName("video_outer_play_time_count")
+  private Double videoOuterPlayTimeCount = null;
+
+  @SerializedName("video_outer_play_time_avg_rate")
+  private Double videoOuterPlayTimeAvgRate = null;
+
+  @SerializedName("video_outer_play_rate")
+  private Double videoOuterPlayRate = null;
+
+  @SerializedName("video_outer_play_cost")
+  private Long videoOuterPlayCost = null;
+
+  @SerializedName("video_outer_play3s_count")
+  private Long videoOuterPlay3sCount = null;
+
+  @SerializedName("video_outer_play5s_count")
+  private Long videoOuterPlay5sCount = null;
+
+  @SerializedName("video_outer_play7s_count")
+  private Long videoOuterPlay7sCount = null;
 
   @SerializedName("promoted_object_type")
   private String promotedObjectType = null;
@@ -4716,6 +4758,25 @@ public class HourlyReportsGetListStruct {
     this.effectLeadsPurchaseCount = effectLeadsPurchaseCount;
   }
 
+  public HourlyReportsGetListStruct reservationUv(Long reservationUv) {
+    this.reservationUv = reservationUv;
+    return this;
+  }
+
+  /**
+   * Get reservationUv
+   *
+   * @return reservationUv
+   */
+  @ApiModelProperty(value = "")
+  public Long getReservationUv() {
+    return reservationUv;
+  }
+
+  public void setReservationUv(Long reservationUv) {
+    this.reservationUv = reservationUv;
+  }
+
   public HourlyReportsGetListStruct overallLeadsPurchaseCount(Long overallLeadsPurchaseCount) {
     this.overallLeadsPurchaseCount = overallLeadsPurchaseCount;
     return this;
@@ -5115,6 +5176,120 @@ public class HourlyReportsGetListStruct {
     this.addWishlistCount = addWishlistCount;
   }
 
+  public HourlyReportsGetListStruct videoOuterPlay10Count(Long videoOuterPlay10Count) {
+    this.videoOuterPlay10Count = videoOuterPlay10Count;
+    return this;
+  }
+
+  /**
+   * Get videoOuterPlay10Count
+   *
+   * @return videoOuterPlay10Count
+   */
+  @ApiModelProperty(value = "")
+  public Long getVideoOuterPlay10Count() {
+    return videoOuterPlay10Count;
+  }
+
+  public void setVideoOuterPlay10Count(Long videoOuterPlay10Count) {
+    this.videoOuterPlay10Count = videoOuterPlay10Count;
+  }
+
+  public HourlyReportsGetListStruct videoOuterPlay25Count(Long videoOuterPlay25Count) {
+    this.videoOuterPlay25Count = videoOuterPlay25Count;
+    return this;
+  }
+
+  /**
+   * Get videoOuterPlay25Count
+   *
+   * @return videoOuterPlay25Count
+   */
+  @ApiModelProperty(value = "")
+  public Long getVideoOuterPlay25Count() {
+    return videoOuterPlay25Count;
+  }
+
+  public void setVideoOuterPlay25Count(Long videoOuterPlay25Count) {
+    this.videoOuterPlay25Count = videoOuterPlay25Count;
+  }
+
+  public HourlyReportsGetListStruct videoOuterPlay50Count(Long videoOuterPlay50Count) {
+    this.videoOuterPlay50Count = videoOuterPlay50Count;
+    return this;
+  }
+
+  /**
+   * Get videoOuterPlay50Count
+   *
+   * @return videoOuterPlay50Count
+   */
+  @ApiModelProperty(value = "")
+  public Long getVideoOuterPlay50Count() {
+    return videoOuterPlay50Count;
+  }
+
+  public void setVideoOuterPlay50Count(Long videoOuterPlay50Count) {
+    this.videoOuterPlay50Count = videoOuterPlay50Count;
+  }
+
+  public HourlyReportsGetListStruct videoOuterPlay75Count(Long videoOuterPlay75Count) {
+    this.videoOuterPlay75Count = videoOuterPlay75Count;
+    return this;
+  }
+
+  /**
+   * Get videoOuterPlay75Count
+   *
+   * @return videoOuterPlay75Count
+   */
+  @ApiModelProperty(value = "")
+  public Long getVideoOuterPlay75Count() {
+    return videoOuterPlay75Count;
+  }
+
+  public void setVideoOuterPlay75Count(Long videoOuterPlay75Count) {
+    this.videoOuterPlay75Count = videoOuterPlay75Count;
+  }
+
+  public HourlyReportsGetListStruct videoOuterPlay95Count(Long videoOuterPlay95Count) {
+    this.videoOuterPlay95Count = videoOuterPlay95Count;
+    return this;
+  }
+
+  /**
+   * Get videoOuterPlay95Count
+   *
+   * @return videoOuterPlay95Count
+   */
+  @ApiModelProperty(value = "")
+  public Long getVideoOuterPlay95Count() {
+    return videoOuterPlay95Count;
+  }
+
+  public void setVideoOuterPlay95Count(Long videoOuterPlay95Count) {
+    this.videoOuterPlay95Count = videoOuterPlay95Count;
+  }
+
+  public HourlyReportsGetListStruct videoOuterPlay100Count(Long videoOuterPlay100Count) {
+    this.videoOuterPlay100Count = videoOuterPlay100Count;
+    return this;
+  }
+
+  /**
+   * Get videoOuterPlay100Count
+   *
+   * @return videoOuterPlay100Count
+   */
+  @ApiModelProperty(value = "")
+  public Long getVideoOuterPlay100Count() {
+    return videoOuterPlay100Count;
+  }
+
+  public void setVideoOuterPlay100Count(Long videoOuterPlay100Count) {
+    this.videoOuterPlay100Count = videoOuterPlay100Count;
+  }
+
   public HourlyReportsGetListStruct videoOuterPlayCount(Long videoOuterPlayCount) {
     this.videoOuterPlayCount = videoOuterPlayCount;
     return this;
@@ -5227,6 +5402,139 @@ public class HourlyReportsGetListStruct {
 
   public void setAdId(Long adId) {
     this.adId = adId;
+  }
+
+  public HourlyReportsGetListStruct videoOuterPlayTimeCount(Double videoOuterPlayTimeCount) {
+    this.videoOuterPlayTimeCount = videoOuterPlayTimeCount;
+    return this;
+  }
+
+  /**
+   * Get videoOuterPlayTimeCount
+   *
+   * @return videoOuterPlayTimeCount
+   */
+  @ApiModelProperty(value = "")
+  public Double getVideoOuterPlayTimeCount() {
+    return videoOuterPlayTimeCount;
+  }
+
+  public void setVideoOuterPlayTimeCount(Double videoOuterPlayTimeCount) {
+    this.videoOuterPlayTimeCount = videoOuterPlayTimeCount;
+  }
+
+  public HourlyReportsGetListStruct videoOuterPlayTimeAvgRate(Double videoOuterPlayTimeAvgRate) {
+    this.videoOuterPlayTimeAvgRate = videoOuterPlayTimeAvgRate;
+    return this;
+  }
+
+  /**
+   * Get videoOuterPlayTimeAvgRate
+   *
+   * @return videoOuterPlayTimeAvgRate
+   */
+  @ApiModelProperty(value = "")
+  public Double getVideoOuterPlayTimeAvgRate() {
+    return videoOuterPlayTimeAvgRate;
+  }
+
+  public void setVideoOuterPlayTimeAvgRate(Double videoOuterPlayTimeAvgRate) {
+    this.videoOuterPlayTimeAvgRate = videoOuterPlayTimeAvgRate;
+  }
+
+  public HourlyReportsGetListStruct videoOuterPlayRate(Double videoOuterPlayRate) {
+    this.videoOuterPlayRate = videoOuterPlayRate;
+    return this;
+  }
+
+  /**
+   * Get videoOuterPlayRate
+   *
+   * @return videoOuterPlayRate
+   */
+  @ApiModelProperty(value = "")
+  public Double getVideoOuterPlayRate() {
+    return videoOuterPlayRate;
+  }
+
+  public void setVideoOuterPlayRate(Double videoOuterPlayRate) {
+    this.videoOuterPlayRate = videoOuterPlayRate;
+  }
+
+  public HourlyReportsGetListStruct videoOuterPlayCost(Long videoOuterPlayCost) {
+    this.videoOuterPlayCost = videoOuterPlayCost;
+    return this;
+  }
+
+  /**
+   * Get videoOuterPlayCost
+   *
+   * @return videoOuterPlayCost
+   */
+  @ApiModelProperty(value = "")
+  public Long getVideoOuterPlayCost() {
+    return videoOuterPlayCost;
+  }
+
+  public void setVideoOuterPlayCost(Long videoOuterPlayCost) {
+    this.videoOuterPlayCost = videoOuterPlayCost;
+  }
+
+  public HourlyReportsGetListStruct videoOuterPlay3sCount(Long videoOuterPlay3sCount) {
+    this.videoOuterPlay3sCount = videoOuterPlay3sCount;
+    return this;
+  }
+
+  /**
+   * Get videoOuterPlay3sCount
+   *
+   * @return videoOuterPlay3sCount
+   */
+  @ApiModelProperty(value = "")
+  public Long getVideoOuterPlay3sCount() {
+    return videoOuterPlay3sCount;
+  }
+
+  public void setVideoOuterPlay3sCount(Long videoOuterPlay3sCount) {
+    this.videoOuterPlay3sCount = videoOuterPlay3sCount;
+  }
+
+  public HourlyReportsGetListStruct videoOuterPlay5sCount(Long videoOuterPlay5sCount) {
+    this.videoOuterPlay5sCount = videoOuterPlay5sCount;
+    return this;
+  }
+
+  /**
+   * Get videoOuterPlay5sCount
+   *
+   * @return videoOuterPlay5sCount
+   */
+  @ApiModelProperty(value = "")
+  public Long getVideoOuterPlay5sCount() {
+    return videoOuterPlay5sCount;
+  }
+
+  public void setVideoOuterPlay5sCount(Long videoOuterPlay5sCount) {
+    this.videoOuterPlay5sCount = videoOuterPlay5sCount;
+  }
+
+  public HourlyReportsGetListStruct videoOuterPlay7sCount(Long videoOuterPlay7sCount) {
+    this.videoOuterPlay7sCount = videoOuterPlay7sCount;
+    return this;
+  }
+
+  /**
+   * Get videoOuterPlay7sCount
+   *
+   * @return videoOuterPlay7sCount
+   */
+  @ApiModelProperty(value = "")
+  public Long getVideoOuterPlay7sCount() {
+    return videoOuterPlay7sCount;
+  }
+
+  public void setVideoOuterPlay7sCount(Long videoOuterPlay7sCount) {
+    this.videoOuterPlay7sCount = videoOuterPlay7sCount;
   }
 
   public HourlyReportsGetListStruct promotedObjectType(String promotedObjectType) {
@@ -6844,6 +7152,7 @@ public class HourlyReportsGetListStruct {
         && Objects.equals(this.viewCommodityPageUv, hourlyReportsGetListStruct.viewCommodityPageUv)
         && Objects.equals(
             this.effectLeadsPurchaseCount, hourlyReportsGetListStruct.effectLeadsPurchaseCount)
+        && Objects.equals(this.reservationUv, hourlyReportsGetListStruct.reservationUv)
         && Objects.equals(
             this.overallLeadsPurchaseCount, hourlyReportsGetListStruct.overallLeadsPurchaseCount)
         && Objects.equals(this.leadsPurchaseCount, hourlyReportsGetListStruct.leadsPurchaseCount)
@@ -6867,12 +7176,36 @@ public class HourlyReportsGetListStruct {
         && Objects.equals(this.firstDayOrderCount, hourlyReportsGetListStruct.firstDayOrderCount)
         && Objects.equals(this.firstDayOrderAmount, hourlyReportsGetListStruct.firstDayOrderAmount)
         && Objects.equals(this.addWishlistCount, hourlyReportsGetListStruct.addWishlistCount)
+        && Objects.equals(
+            this.videoOuterPlay10Count, hourlyReportsGetListStruct.videoOuterPlay10Count)
+        && Objects.equals(
+            this.videoOuterPlay25Count, hourlyReportsGetListStruct.videoOuterPlay25Count)
+        && Objects.equals(
+            this.videoOuterPlay50Count, hourlyReportsGetListStruct.videoOuterPlay50Count)
+        && Objects.equals(
+            this.videoOuterPlay75Count, hourlyReportsGetListStruct.videoOuterPlay75Count)
+        && Objects.equals(
+            this.videoOuterPlay95Count, hourlyReportsGetListStruct.videoOuterPlay95Count)
+        && Objects.equals(
+            this.videoOuterPlay100Count, hourlyReportsGetListStruct.videoOuterPlay100Count)
         && Objects.equals(this.videoOuterPlayCount, hourlyReportsGetListStruct.videoOuterPlayCount)
         && Objects.equals(this.campaignId, hourlyReportsGetListStruct.campaignId)
         && Objects.equals(this.webAddToCartCount, hourlyReportsGetListStruct.webAddToCartCount)
         && Objects.equals(this.webAddToCartCost, hourlyReportsGetListStruct.webAddToCartCost)
         && Objects.equals(this.adgroupId, hourlyReportsGetListStruct.adgroupId)
         && Objects.equals(this.adId, hourlyReportsGetListStruct.adId)
+        && Objects.equals(
+            this.videoOuterPlayTimeCount, hourlyReportsGetListStruct.videoOuterPlayTimeCount)
+        && Objects.equals(
+            this.videoOuterPlayTimeAvgRate, hourlyReportsGetListStruct.videoOuterPlayTimeAvgRate)
+        && Objects.equals(this.videoOuterPlayRate, hourlyReportsGetListStruct.videoOuterPlayRate)
+        && Objects.equals(this.videoOuterPlayCost, hourlyReportsGetListStruct.videoOuterPlayCost)
+        && Objects.equals(
+            this.videoOuterPlay3sCount, hourlyReportsGetListStruct.videoOuterPlay3sCount)
+        && Objects.equals(
+            this.videoOuterPlay5sCount, hourlyReportsGetListStruct.videoOuterPlay5sCount)
+        && Objects.equals(
+            this.videoOuterPlay7sCount, hourlyReportsGetListStruct.videoOuterPlay7sCount)
         && Objects.equals(this.promotedObjectType, hourlyReportsGetListStruct.promotedObjectType)
         && Objects.equals(this.promotedObjectId, hourlyReportsGetListStruct.promotedObjectId)
         && Objects.equals(this.wechatAccountId, hourlyReportsGetListStruct.wechatAccountId)
@@ -7208,6 +7541,7 @@ public class HourlyReportsGetListStruct {
         specialPageExpCost,
         viewCommodityPageUv,
         effectLeadsPurchaseCount,
+        reservationUv,
         overallLeadsPurchaseCount,
         leadsPurchaseCount,
         leadsPurchaseRate,
@@ -7229,12 +7563,25 @@ public class HourlyReportsGetListStruct {
         firstDayOrderCount,
         firstDayOrderAmount,
         addWishlistCount,
+        videoOuterPlay10Count,
+        videoOuterPlay25Count,
+        videoOuterPlay50Count,
+        videoOuterPlay75Count,
+        videoOuterPlay95Count,
+        videoOuterPlay100Count,
         videoOuterPlayCount,
         campaignId,
         webAddToCartCount,
         webAddToCartCost,
         adgroupId,
         adId,
+        videoOuterPlayTimeCount,
+        videoOuterPlayTimeAvgRate,
+        videoOuterPlayRate,
+        videoOuterPlayCost,
+        videoOuterPlay3sCount,
+        videoOuterPlay5sCount,
+        videoOuterPlay7sCount,
         promotedObjectType,
         promotedObjectId,
         wechatAccountId,

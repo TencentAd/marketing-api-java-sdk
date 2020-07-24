@@ -43,61 +43,61 @@ public class ProductCatalogsReportsGetListStruct {
   private Long thirdCategoryId = null;
 
   @SerializedName("view_count")
-  private Double viewCount = null;
+  private Long viewCount = null;
 
   @SerializedName("valid_click_count")
-  private Double validClickCount = null;
+  private Long validClickCount = null;
 
   @SerializedName("ctr")
   private Double ctr = null;
 
   @SerializedName("cpc")
-  private Double cpc = null;
+  private Long cpc = null;
 
   @SerializedName("thousand_display_price")
-  private Double thousandDisplayPrice = null;
+  private Long thousandDisplayPrice = null;
 
   @SerializedName("cost")
-  private Double cost = null;
+  private Long cost = null;
 
   @SerializedName("activated_count")
-  private Double activatedCount = null;
+  private Long activatedCount = null;
 
   @SerializedName("activated_cost")
-  private Double activatedCost = null;
+  private Long activatedCost = null;
 
   @SerializedName("activated_rate")
   private Double activatedRate = null;
 
   @SerializedName("web_key_page_view_cost")
-  private Double webKeyPageViewCost = null;
+  private Long webKeyPageViewCost = null;
 
   @SerializedName("web_commodity_page_view_count")
-  private Double webCommodityPageViewCount = null;
+  private Long webCommodityPageViewCount = null;
 
   @SerializedName("web_commodity_page_view_cost")
-  private Double webCommodityPageViewCost = null;
+  private Long webCommodityPageViewCost = null;
 
   @SerializedName("web_register_count")
-  private Double webRegisterCount = null;
+  private Long webRegisterCount = null;
 
   @SerializedName("page_phone_call_direct_count")
-  private Double pagePhoneCallDirectCount = null;
+  private Long pagePhoneCallDirectCount = null;
 
   @SerializedName("own_page_navigation_count")
-  private Double ownPageNavigationCount = null;
+  private Long ownPageNavigationCount = null;
 
   @SerializedName("own_page_navigation_cost")
   private Long ownPageNavigationCost = null;
 
   @SerializedName("web_application_count")
-  private Double webApplicationCount = null;
+  private Long webApplicationCount = null;
 
   @SerializedName("web_application_cost")
-  private Double webApplicationCost = null;
+  private Long webApplicationCost = null;
 
   @SerializedName("web_order_count")
-  private Double webOrderCount = null;
+  private Long webOrderCount = null;
 
   @SerializedName("web_order_rate")
   private Double webOrderRate = null;
@@ -106,46 +106,46 @@ public class ProductCatalogsReportsGetListStruct {
   private Double appOrderRate = null;
 
   @SerializedName("web_order_cost")
-  private Double webOrderCost = null;
+  private Long webOrderCost = null;
 
   @SerializedName("web_checkout_amount")
-  private Double webCheckoutAmount = null;
+  private Long webCheckoutAmount = null;
 
   @SerializedName("web_checkout_count")
-  private Double webCheckoutCount = null;
+  private Long webCheckoutCount = null;
 
   @SerializedName("web_checkout_cost")
-  private Double webCheckoutCost = null;
+  private Long webCheckoutCost = null;
 
   @SerializedName("download_rate")
   private Double downloadRate = null;
 
   @SerializedName("download_cost")
-  private Double downloadCost = null;
+  private Long downloadCost = null;
 
   @SerializedName("install_cost")
-  private Double installCost = null;
+  private Long installCost = null;
 
   @SerializedName("click_activated_rate")
   private Double clickActivatedRate = null;
 
   @SerializedName("retention_count")
-  private Double retentionCount = null;
+  private Long retentionCount = null;
 
   @SerializedName("retention_rate")
   private Double retentionRate = null;
 
   @SerializedName("retention_cost")
-  private Double retentionCost = null;
+  private Long retentionCost = null;
 
   @SerializedName("app_key_page_view_count")
-  private Double appKeyPageViewCount = null;
+  private Long appKeyPageViewCount = null;
 
   @SerializedName("web_key_page_view_count")
-  private Double webKeyPageViewCount = null;
+  private Long webKeyPageViewCount = null;
 
   @SerializedName("app_commodity_page_view_count")
-  private Double appCommodityPageViewCount = null;
+  private Long appCommodityPageViewCount = null;
 
   @SerializedName("app_commodity_page_view_rate")
   private Double appCommodityPageViewRate = null;
@@ -154,49 +154,49 @@ public class ProductCatalogsReportsGetListStruct {
   private Double webCommodityPageViewRate = null;
 
   @SerializedName("app_commodity_page_view_cost")
-  private Double appCommodityPageViewCost = null;
+  private Long appCommodityPageViewCost = null;
 
   @SerializedName("app_register_count")
-  private Double appRegisterCount = null;
+  private Long appRegisterCount = null;
 
   @SerializedName("app_register_cost")
-  private Double appRegisterCost = null;
+  private Long appRegisterCost = null;
 
   @SerializedName("app_application_count")
-  private Double appApplicationCount = null;
+  private Long appApplicationCount = null;
 
   @SerializedName("app_application_cost")
-  private Double appApplicationCost = null;
+  private Long appApplicationCost = null;
 
   @SerializedName("app_order_count")
-  private Double appOrderCount = null;
+  private Long appOrderCount = null;
 
   @SerializedName("app_order_cost")
-  private Double appOrderCost = null;
+  private Long appOrderCost = null;
 
   @SerializedName("follow_cost")
-  private Double followCost = null;
+  private Long followCost = null;
 
   @SerializedName("forward_cost")
-  private Double forwardCost = null;
+  private Long forwardCost = null;
 
   @SerializedName("read_cost")
-  private Double readCost = null;
+  private Long readCost = null;
 
   @SerializedName("praise_count")
-  private Double praiseCount = null;
+  private Long praiseCount = null;
 
   @SerializedName("praise_cost")
-  private Double praiseCost = null;
+  private Long praiseCost = null;
 
   @SerializedName("comment_count")
-  private Double commentCount = null;
+  private Long commentCount = null;
 
   @SerializedName("like_or_comment")
-  private Double likeOrComment = null;
+  private Long likeOrComment = null;
 
   @SerializedName("comment_cost")
-  private Double commentCost = null;
+  private Long commentCost = null;
 
   @SerializedName("app_checkout_rate")
   private Double appCheckoutRate = null;
@@ -376,7 +376,7 @@ public class ProductCatalogsReportsGetListStruct {
     this.thirdCategoryId = thirdCategoryId;
   }
 
-  public ProductCatalogsReportsGetListStruct viewCount(Double viewCount) {
+  public ProductCatalogsReportsGetListStruct viewCount(Long viewCount) {
     this.viewCount = viewCount;
     return this;
   }
@@ -387,15 +387,15 @@ public class ProductCatalogsReportsGetListStruct {
    * @return viewCount
    */
   @ApiModelProperty(value = "")
-  public Double getViewCount() {
+  public Long getViewCount() {
     return viewCount;
   }
 
-  public void setViewCount(Double viewCount) {
+  public void setViewCount(Long viewCount) {
     this.viewCount = viewCount;
   }
 
-  public ProductCatalogsReportsGetListStruct validClickCount(Double validClickCount) {
+  public ProductCatalogsReportsGetListStruct validClickCount(Long validClickCount) {
     this.validClickCount = validClickCount;
     return this;
   }
@@ -406,11 +406,11 @@ public class ProductCatalogsReportsGetListStruct {
    * @return validClickCount
    */
   @ApiModelProperty(value = "")
-  public Double getValidClickCount() {
+  public Long getValidClickCount() {
     return validClickCount;
   }
 
-  public void setValidClickCount(Double validClickCount) {
+  public void setValidClickCount(Long validClickCount) {
     this.validClickCount = validClickCount;
   }
 
@@ -433,7 +433,7 @@ public class ProductCatalogsReportsGetListStruct {
     this.ctr = ctr;
   }
 
-  public ProductCatalogsReportsGetListStruct cpc(Double cpc) {
+  public ProductCatalogsReportsGetListStruct cpc(Long cpc) {
     this.cpc = cpc;
     return this;
   }
@@ -444,15 +444,15 @@ public class ProductCatalogsReportsGetListStruct {
    * @return cpc
    */
   @ApiModelProperty(value = "")
-  public Double getCpc() {
+  public Long getCpc() {
     return cpc;
   }
 
-  public void setCpc(Double cpc) {
+  public void setCpc(Long cpc) {
     this.cpc = cpc;
   }
 
-  public ProductCatalogsReportsGetListStruct thousandDisplayPrice(Double thousandDisplayPrice) {
+  public ProductCatalogsReportsGetListStruct thousandDisplayPrice(Long thousandDisplayPrice) {
     this.thousandDisplayPrice = thousandDisplayPrice;
     return this;
   }
@@ -463,15 +463,15 @@ public class ProductCatalogsReportsGetListStruct {
    * @return thousandDisplayPrice
    */
   @ApiModelProperty(value = "")
-  public Double getThousandDisplayPrice() {
+  public Long getThousandDisplayPrice() {
     return thousandDisplayPrice;
   }
 
-  public void setThousandDisplayPrice(Double thousandDisplayPrice) {
+  public void setThousandDisplayPrice(Long thousandDisplayPrice) {
     this.thousandDisplayPrice = thousandDisplayPrice;
   }
 
-  public ProductCatalogsReportsGetListStruct cost(Double cost) {
+  public ProductCatalogsReportsGetListStruct cost(Long cost) {
     this.cost = cost;
     return this;
   }
@@ -482,15 +482,15 @@ public class ProductCatalogsReportsGetListStruct {
    * @return cost
    */
   @ApiModelProperty(value = "")
-  public Double getCost() {
+  public Long getCost() {
     return cost;
   }
 
-  public void setCost(Double cost) {
+  public void setCost(Long cost) {
     this.cost = cost;
   }
 
-  public ProductCatalogsReportsGetListStruct activatedCount(Double activatedCount) {
+  public ProductCatalogsReportsGetListStruct activatedCount(Long activatedCount) {
     this.activatedCount = activatedCount;
     return this;
   }
@@ -501,15 +501,15 @@ public class ProductCatalogsReportsGetListStruct {
    * @return activatedCount
    */
   @ApiModelProperty(value = "")
-  public Double getActivatedCount() {
+  public Long getActivatedCount() {
     return activatedCount;
   }
 
-  public void setActivatedCount(Double activatedCount) {
+  public void setActivatedCount(Long activatedCount) {
     this.activatedCount = activatedCount;
   }
 
-  public ProductCatalogsReportsGetListStruct activatedCost(Double activatedCost) {
+  public ProductCatalogsReportsGetListStruct activatedCost(Long activatedCost) {
     this.activatedCost = activatedCost;
     return this;
   }
@@ -520,11 +520,11 @@ public class ProductCatalogsReportsGetListStruct {
    * @return activatedCost
    */
   @ApiModelProperty(value = "")
-  public Double getActivatedCost() {
+  public Long getActivatedCost() {
     return activatedCost;
   }
 
-  public void setActivatedCost(Double activatedCost) {
+  public void setActivatedCost(Long activatedCost) {
     this.activatedCost = activatedCost;
   }
 
@@ -547,7 +547,7 @@ public class ProductCatalogsReportsGetListStruct {
     this.activatedRate = activatedRate;
   }
 
-  public ProductCatalogsReportsGetListStruct webKeyPageViewCost(Double webKeyPageViewCost) {
+  public ProductCatalogsReportsGetListStruct webKeyPageViewCost(Long webKeyPageViewCost) {
     this.webKeyPageViewCost = webKeyPageViewCost;
     return this;
   }
@@ -558,16 +558,16 @@ public class ProductCatalogsReportsGetListStruct {
    * @return webKeyPageViewCost
    */
   @ApiModelProperty(value = "")
-  public Double getWebKeyPageViewCost() {
+  public Long getWebKeyPageViewCost() {
     return webKeyPageViewCost;
   }
 
-  public void setWebKeyPageViewCost(Double webKeyPageViewCost) {
+  public void setWebKeyPageViewCost(Long webKeyPageViewCost) {
     this.webKeyPageViewCost = webKeyPageViewCost;
   }
 
   public ProductCatalogsReportsGetListStruct webCommodityPageViewCount(
-      Double webCommodityPageViewCount) {
+      Long webCommodityPageViewCount) {
     this.webCommodityPageViewCount = webCommodityPageViewCount;
     return this;
   }
@@ -578,16 +578,16 @@ public class ProductCatalogsReportsGetListStruct {
    * @return webCommodityPageViewCount
    */
   @ApiModelProperty(value = "")
-  public Double getWebCommodityPageViewCount() {
+  public Long getWebCommodityPageViewCount() {
     return webCommodityPageViewCount;
   }
 
-  public void setWebCommodityPageViewCount(Double webCommodityPageViewCount) {
+  public void setWebCommodityPageViewCount(Long webCommodityPageViewCount) {
     this.webCommodityPageViewCount = webCommodityPageViewCount;
   }
 
   public ProductCatalogsReportsGetListStruct webCommodityPageViewCost(
-      Double webCommodityPageViewCost) {
+      Long webCommodityPageViewCost) {
     this.webCommodityPageViewCost = webCommodityPageViewCost;
     return this;
   }
@@ -598,15 +598,15 @@ public class ProductCatalogsReportsGetListStruct {
    * @return webCommodityPageViewCost
    */
   @ApiModelProperty(value = "")
-  public Double getWebCommodityPageViewCost() {
+  public Long getWebCommodityPageViewCost() {
     return webCommodityPageViewCost;
   }
 
-  public void setWebCommodityPageViewCost(Double webCommodityPageViewCost) {
+  public void setWebCommodityPageViewCost(Long webCommodityPageViewCost) {
     this.webCommodityPageViewCost = webCommodityPageViewCost;
   }
 
-  public ProductCatalogsReportsGetListStruct webRegisterCount(Double webRegisterCount) {
+  public ProductCatalogsReportsGetListStruct webRegisterCount(Long webRegisterCount) {
     this.webRegisterCount = webRegisterCount;
     return this;
   }
@@ -617,16 +617,16 @@ public class ProductCatalogsReportsGetListStruct {
    * @return webRegisterCount
    */
   @ApiModelProperty(value = "")
-  public Double getWebRegisterCount() {
+  public Long getWebRegisterCount() {
     return webRegisterCount;
   }
 
-  public void setWebRegisterCount(Double webRegisterCount) {
+  public void setWebRegisterCount(Long webRegisterCount) {
     this.webRegisterCount = webRegisterCount;
   }
 
   public ProductCatalogsReportsGetListStruct pagePhoneCallDirectCount(
-      Double pagePhoneCallDirectCount) {
+      Long pagePhoneCallDirectCount) {
     this.pagePhoneCallDirectCount = pagePhoneCallDirectCount;
     return this;
   }
@@ -637,15 +637,15 @@ public class ProductCatalogsReportsGetListStruct {
    * @return pagePhoneCallDirectCount
    */
   @ApiModelProperty(value = "")
-  public Double getPagePhoneCallDirectCount() {
+  public Long getPagePhoneCallDirectCount() {
     return pagePhoneCallDirectCount;
   }
 
-  public void setPagePhoneCallDirectCount(Double pagePhoneCallDirectCount) {
+  public void setPagePhoneCallDirectCount(Long pagePhoneCallDirectCount) {
     this.pagePhoneCallDirectCount = pagePhoneCallDirectCount;
   }
 
-  public ProductCatalogsReportsGetListStruct ownPageNavigationCount(Double ownPageNavigationCount) {
+  public ProductCatalogsReportsGetListStruct ownPageNavigationCount(Long ownPageNavigationCount) {
     this.ownPageNavigationCount = ownPageNavigationCount;
     return this;
   }
@@ -656,11 +656,11 @@ public class ProductCatalogsReportsGetListStruct {
    * @return ownPageNavigationCount
    */
   @ApiModelProperty(value = "")
-  public Double getOwnPageNavigationCount() {
+  public Long getOwnPageNavigationCount() {
     return ownPageNavigationCount;
   }
 
-  public void setOwnPageNavigationCount(Double ownPageNavigationCount) {
+  public void setOwnPageNavigationCount(Long ownPageNavigationCount) {
     this.ownPageNavigationCount = ownPageNavigationCount;
   }
 
@@ -683,7 +683,7 @@ public class ProductCatalogsReportsGetListStruct {
     this.ownPageNavigationCost = ownPageNavigationCost;
   }
 
-  public ProductCatalogsReportsGetListStruct webApplicationCount(Double webApplicationCount) {
+  public ProductCatalogsReportsGetListStruct webApplicationCount(Long webApplicationCount) {
     this.webApplicationCount = webApplicationCount;
     return this;
   }
@@ -694,15 +694,15 @@ public class ProductCatalogsReportsGetListStruct {
    * @return webApplicationCount
    */
   @ApiModelProperty(value = "")
-  public Double getWebApplicationCount() {
+  public Long getWebApplicationCount() {
     return webApplicationCount;
   }
 
-  public void setWebApplicationCount(Double webApplicationCount) {
+  public void setWebApplicationCount(Long webApplicationCount) {
     this.webApplicationCount = webApplicationCount;
   }
 
-  public ProductCatalogsReportsGetListStruct webApplicationCost(Double webApplicationCost) {
+  public ProductCatalogsReportsGetListStruct webApplicationCost(Long webApplicationCost) {
     this.webApplicationCost = webApplicationCost;
     return this;
   }
@@ -713,15 +713,15 @@ public class ProductCatalogsReportsGetListStruct {
    * @return webApplicationCost
    */
   @ApiModelProperty(value = "")
-  public Double getWebApplicationCost() {
+  public Long getWebApplicationCost() {
     return webApplicationCost;
   }
 
-  public void setWebApplicationCost(Double webApplicationCost) {
+  public void setWebApplicationCost(Long webApplicationCost) {
     this.webApplicationCost = webApplicationCost;
   }
 
-  public ProductCatalogsReportsGetListStruct webOrderCount(Double webOrderCount) {
+  public ProductCatalogsReportsGetListStruct webOrderCount(Long webOrderCount) {
     this.webOrderCount = webOrderCount;
     return this;
   }
@@ -732,11 +732,11 @@ public class ProductCatalogsReportsGetListStruct {
    * @return webOrderCount
    */
   @ApiModelProperty(value = "")
-  public Double getWebOrderCount() {
+  public Long getWebOrderCount() {
     return webOrderCount;
   }
 
-  public void setWebOrderCount(Double webOrderCount) {
+  public void setWebOrderCount(Long webOrderCount) {
     this.webOrderCount = webOrderCount;
   }
 
@@ -778,7 +778,7 @@ public class ProductCatalogsReportsGetListStruct {
     this.appOrderRate = appOrderRate;
   }
 
-  public ProductCatalogsReportsGetListStruct webOrderCost(Double webOrderCost) {
+  public ProductCatalogsReportsGetListStruct webOrderCost(Long webOrderCost) {
     this.webOrderCost = webOrderCost;
     return this;
   }
@@ -789,15 +789,15 @@ public class ProductCatalogsReportsGetListStruct {
    * @return webOrderCost
    */
   @ApiModelProperty(value = "")
-  public Double getWebOrderCost() {
+  public Long getWebOrderCost() {
     return webOrderCost;
   }
 
-  public void setWebOrderCost(Double webOrderCost) {
+  public void setWebOrderCost(Long webOrderCost) {
     this.webOrderCost = webOrderCost;
   }
 
-  public ProductCatalogsReportsGetListStruct webCheckoutAmount(Double webCheckoutAmount) {
+  public ProductCatalogsReportsGetListStruct webCheckoutAmount(Long webCheckoutAmount) {
     this.webCheckoutAmount = webCheckoutAmount;
     return this;
   }
@@ -808,15 +808,15 @@ public class ProductCatalogsReportsGetListStruct {
    * @return webCheckoutAmount
    */
   @ApiModelProperty(value = "")
-  public Double getWebCheckoutAmount() {
+  public Long getWebCheckoutAmount() {
     return webCheckoutAmount;
   }
 
-  public void setWebCheckoutAmount(Double webCheckoutAmount) {
+  public void setWebCheckoutAmount(Long webCheckoutAmount) {
     this.webCheckoutAmount = webCheckoutAmount;
   }
 
-  public ProductCatalogsReportsGetListStruct webCheckoutCount(Double webCheckoutCount) {
+  public ProductCatalogsReportsGetListStruct webCheckoutCount(Long webCheckoutCount) {
     this.webCheckoutCount = webCheckoutCount;
     return this;
   }
@@ -827,15 +827,15 @@ public class ProductCatalogsReportsGetListStruct {
    * @return webCheckoutCount
    */
   @ApiModelProperty(value = "")
-  public Double getWebCheckoutCount() {
+  public Long getWebCheckoutCount() {
     return webCheckoutCount;
   }
 
-  public void setWebCheckoutCount(Double webCheckoutCount) {
+  public void setWebCheckoutCount(Long webCheckoutCount) {
     this.webCheckoutCount = webCheckoutCount;
   }
 
-  public ProductCatalogsReportsGetListStruct webCheckoutCost(Double webCheckoutCost) {
+  public ProductCatalogsReportsGetListStruct webCheckoutCost(Long webCheckoutCost) {
     this.webCheckoutCost = webCheckoutCost;
     return this;
   }
@@ -846,11 +846,11 @@ public class ProductCatalogsReportsGetListStruct {
    * @return webCheckoutCost
    */
   @ApiModelProperty(value = "")
-  public Double getWebCheckoutCost() {
+  public Long getWebCheckoutCost() {
     return webCheckoutCost;
   }
 
-  public void setWebCheckoutCost(Double webCheckoutCost) {
+  public void setWebCheckoutCost(Long webCheckoutCost) {
     this.webCheckoutCost = webCheckoutCost;
   }
 
@@ -873,7 +873,7 @@ public class ProductCatalogsReportsGetListStruct {
     this.downloadRate = downloadRate;
   }
 
-  public ProductCatalogsReportsGetListStruct downloadCost(Double downloadCost) {
+  public ProductCatalogsReportsGetListStruct downloadCost(Long downloadCost) {
     this.downloadCost = downloadCost;
     return this;
   }
@@ -884,15 +884,15 @@ public class ProductCatalogsReportsGetListStruct {
    * @return downloadCost
    */
   @ApiModelProperty(value = "")
-  public Double getDownloadCost() {
+  public Long getDownloadCost() {
     return downloadCost;
   }
 
-  public void setDownloadCost(Double downloadCost) {
+  public void setDownloadCost(Long downloadCost) {
     this.downloadCost = downloadCost;
   }
 
-  public ProductCatalogsReportsGetListStruct installCost(Double installCost) {
+  public ProductCatalogsReportsGetListStruct installCost(Long installCost) {
     this.installCost = installCost;
     return this;
   }
@@ -903,11 +903,11 @@ public class ProductCatalogsReportsGetListStruct {
    * @return installCost
    */
   @ApiModelProperty(value = "")
-  public Double getInstallCost() {
+  public Long getInstallCost() {
     return installCost;
   }
 
-  public void setInstallCost(Double installCost) {
+  public void setInstallCost(Long installCost) {
     this.installCost = installCost;
   }
 
@@ -930,7 +930,7 @@ public class ProductCatalogsReportsGetListStruct {
     this.clickActivatedRate = clickActivatedRate;
   }
 
-  public ProductCatalogsReportsGetListStruct retentionCount(Double retentionCount) {
+  public ProductCatalogsReportsGetListStruct retentionCount(Long retentionCount) {
     this.retentionCount = retentionCount;
     return this;
   }
@@ -941,11 +941,11 @@ public class ProductCatalogsReportsGetListStruct {
    * @return retentionCount
    */
   @ApiModelProperty(value = "")
-  public Double getRetentionCount() {
+  public Long getRetentionCount() {
     return retentionCount;
   }
 
-  public void setRetentionCount(Double retentionCount) {
+  public void setRetentionCount(Long retentionCount) {
     this.retentionCount = retentionCount;
   }
 
@@ -968,7 +968,7 @@ public class ProductCatalogsReportsGetListStruct {
     this.retentionRate = retentionRate;
   }
 
-  public ProductCatalogsReportsGetListStruct retentionCost(Double retentionCost) {
+  public ProductCatalogsReportsGetListStruct retentionCost(Long retentionCost) {
     this.retentionCost = retentionCost;
     return this;
   }
@@ -979,15 +979,15 @@ public class ProductCatalogsReportsGetListStruct {
    * @return retentionCost
    */
   @ApiModelProperty(value = "")
-  public Double getRetentionCost() {
+  public Long getRetentionCost() {
     return retentionCost;
   }
 
-  public void setRetentionCost(Double retentionCost) {
+  public void setRetentionCost(Long retentionCost) {
     this.retentionCost = retentionCost;
   }
 
-  public ProductCatalogsReportsGetListStruct appKeyPageViewCount(Double appKeyPageViewCount) {
+  public ProductCatalogsReportsGetListStruct appKeyPageViewCount(Long appKeyPageViewCount) {
     this.appKeyPageViewCount = appKeyPageViewCount;
     return this;
   }
@@ -998,15 +998,15 @@ public class ProductCatalogsReportsGetListStruct {
    * @return appKeyPageViewCount
    */
   @ApiModelProperty(value = "")
-  public Double getAppKeyPageViewCount() {
+  public Long getAppKeyPageViewCount() {
     return appKeyPageViewCount;
   }
 
-  public void setAppKeyPageViewCount(Double appKeyPageViewCount) {
+  public void setAppKeyPageViewCount(Long appKeyPageViewCount) {
     this.appKeyPageViewCount = appKeyPageViewCount;
   }
 
-  public ProductCatalogsReportsGetListStruct webKeyPageViewCount(Double webKeyPageViewCount) {
+  public ProductCatalogsReportsGetListStruct webKeyPageViewCount(Long webKeyPageViewCount) {
     this.webKeyPageViewCount = webKeyPageViewCount;
     return this;
   }
@@ -1017,16 +1017,16 @@ public class ProductCatalogsReportsGetListStruct {
    * @return webKeyPageViewCount
    */
   @ApiModelProperty(value = "")
-  public Double getWebKeyPageViewCount() {
+  public Long getWebKeyPageViewCount() {
     return webKeyPageViewCount;
   }
 
-  public void setWebKeyPageViewCount(Double webKeyPageViewCount) {
+  public void setWebKeyPageViewCount(Long webKeyPageViewCount) {
     this.webKeyPageViewCount = webKeyPageViewCount;
   }
 
   public ProductCatalogsReportsGetListStruct appCommodityPageViewCount(
-      Double appCommodityPageViewCount) {
+      Long appCommodityPageViewCount) {
     this.appCommodityPageViewCount = appCommodityPageViewCount;
     return this;
   }
@@ -1037,11 +1037,11 @@ public class ProductCatalogsReportsGetListStruct {
    * @return appCommodityPageViewCount
    */
   @ApiModelProperty(value = "")
-  public Double getAppCommodityPageViewCount() {
+  public Long getAppCommodityPageViewCount() {
     return appCommodityPageViewCount;
   }
 
-  public void setAppCommodityPageViewCount(Double appCommodityPageViewCount) {
+  public void setAppCommodityPageViewCount(Long appCommodityPageViewCount) {
     this.appCommodityPageViewCount = appCommodityPageViewCount;
   }
 
@@ -1086,7 +1086,7 @@ public class ProductCatalogsReportsGetListStruct {
   }
 
   public ProductCatalogsReportsGetListStruct appCommodityPageViewCost(
-      Double appCommodityPageViewCost) {
+      Long appCommodityPageViewCost) {
     this.appCommodityPageViewCost = appCommodityPageViewCost;
     return this;
   }
@@ -1097,15 +1097,15 @@ public class ProductCatalogsReportsGetListStruct {
    * @return appCommodityPageViewCost
    */
   @ApiModelProperty(value = "")
-  public Double getAppCommodityPageViewCost() {
+  public Long getAppCommodityPageViewCost() {
     return appCommodityPageViewCost;
   }
 
-  public void setAppCommodityPageViewCost(Double appCommodityPageViewCost) {
+  public void setAppCommodityPageViewCost(Long appCommodityPageViewCost) {
     this.appCommodityPageViewCost = appCommodityPageViewCost;
   }
 
-  public ProductCatalogsReportsGetListStruct appRegisterCount(Double appRegisterCount) {
+  public ProductCatalogsReportsGetListStruct appRegisterCount(Long appRegisterCount) {
     this.appRegisterCount = appRegisterCount;
     return this;
   }
@@ -1116,15 +1116,15 @@ public class ProductCatalogsReportsGetListStruct {
    * @return appRegisterCount
    */
   @ApiModelProperty(value = "")
-  public Double getAppRegisterCount() {
+  public Long getAppRegisterCount() {
     return appRegisterCount;
   }
 
-  public void setAppRegisterCount(Double appRegisterCount) {
+  public void setAppRegisterCount(Long appRegisterCount) {
     this.appRegisterCount = appRegisterCount;
   }
 
-  public ProductCatalogsReportsGetListStruct appRegisterCost(Double appRegisterCost) {
+  public ProductCatalogsReportsGetListStruct appRegisterCost(Long appRegisterCost) {
     this.appRegisterCost = appRegisterCost;
     return this;
   }
@@ -1135,15 +1135,15 @@ public class ProductCatalogsReportsGetListStruct {
    * @return appRegisterCost
    */
   @ApiModelProperty(value = "")
-  public Double getAppRegisterCost() {
+  public Long getAppRegisterCost() {
     return appRegisterCost;
   }
 
-  public void setAppRegisterCost(Double appRegisterCost) {
+  public void setAppRegisterCost(Long appRegisterCost) {
     this.appRegisterCost = appRegisterCost;
   }
 
-  public ProductCatalogsReportsGetListStruct appApplicationCount(Double appApplicationCount) {
+  public ProductCatalogsReportsGetListStruct appApplicationCount(Long appApplicationCount) {
     this.appApplicationCount = appApplicationCount;
     return this;
   }
@@ -1154,15 +1154,15 @@ public class ProductCatalogsReportsGetListStruct {
    * @return appApplicationCount
    */
   @ApiModelProperty(value = "")
-  public Double getAppApplicationCount() {
+  public Long getAppApplicationCount() {
     return appApplicationCount;
   }
 
-  public void setAppApplicationCount(Double appApplicationCount) {
+  public void setAppApplicationCount(Long appApplicationCount) {
     this.appApplicationCount = appApplicationCount;
   }
 
-  public ProductCatalogsReportsGetListStruct appApplicationCost(Double appApplicationCost) {
+  public ProductCatalogsReportsGetListStruct appApplicationCost(Long appApplicationCost) {
     this.appApplicationCost = appApplicationCost;
     return this;
   }
@@ -1173,15 +1173,15 @@ public class ProductCatalogsReportsGetListStruct {
    * @return appApplicationCost
    */
   @ApiModelProperty(value = "")
-  public Double getAppApplicationCost() {
+  public Long getAppApplicationCost() {
     return appApplicationCost;
   }
 
-  public void setAppApplicationCost(Double appApplicationCost) {
+  public void setAppApplicationCost(Long appApplicationCost) {
     this.appApplicationCost = appApplicationCost;
   }
 
-  public ProductCatalogsReportsGetListStruct appOrderCount(Double appOrderCount) {
+  public ProductCatalogsReportsGetListStruct appOrderCount(Long appOrderCount) {
     this.appOrderCount = appOrderCount;
     return this;
   }
@@ -1192,15 +1192,15 @@ public class ProductCatalogsReportsGetListStruct {
    * @return appOrderCount
    */
   @ApiModelProperty(value = "")
-  public Double getAppOrderCount() {
+  public Long getAppOrderCount() {
     return appOrderCount;
   }
 
-  public void setAppOrderCount(Double appOrderCount) {
+  public void setAppOrderCount(Long appOrderCount) {
     this.appOrderCount = appOrderCount;
   }
 
-  public ProductCatalogsReportsGetListStruct appOrderCost(Double appOrderCost) {
+  public ProductCatalogsReportsGetListStruct appOrderCost(Long appOrderCost) {
     this.appOrderCost = appOrderCost;
     return this;
   }
@@ -1211,15 +1211,15 @@ public class ProductCatalogsReportsGetListStruct {
    * @return appOrderCost
    */
   @ApiModelProperty(value = "")
-  public Double getAppOrderCost() {
+  public Long getAppOrderCost() {
     return appOrderCost;
   }
 
-  public void setAppOrderCost(Double appOrderCost) {
+  public void setAppOrderCost(Long appOrderCost) {
     this.appOrderCost = appOrderCost;
   }
 
-  public ProductCatalogsReportsGetListStruct followCost(Double followCost) {
+  public ProductCatalogsReportsGetListStruct followCost(Long followCost) {
     this.followCost = followCost;
     return this;
   }
@@ -1230,15 +1230,15 @@ public class ProductCatalogsReportsGetListStruct {
    * @return followCost
    */
   @ApiModelProperty(value = "")
-  public Double getFollowCost() {
+  public Long getFollowCost() {
     return followCost;
   }
 
-  public void setFollowCost(Double followCost) {
+  public void setFollowCost(Long followCost) {
     this.followCost = followCost;
   }
 
-  public ProductCatalogsReportsGetListStruct forwardCost(Double forwardCost) {
+  public ProductCatalogsReportsGetListStruct forwardCost(Long forwardCost) {
     this.forwardCost = forwardCost;
     return this;
   }
@@ -1249,15 +1249,15 @@ public class ProductCatalogsReportsGetListStruct {
    * @return forwardCost
    */
   @ApiModelProperty(value = "")
-  public Double getForwardCost() {
+  public Long getForwardCost() {
     return forwardCost;
   }
 
-  public void setForwardCost(Double forwardCost) {
+  public void setForwardCost(Long forwardCost) {
     this.forwardCost = forwardCost;
   }
 
-  public ProductCatalogsReportsGetListStruct readCost(Double readCost) {
+  public ProductCatalogsReportsGetListStruct readCost(Long readCost) {
     this.readCost = readCost;
     return this;
   }
@@ -1268,15 +1268,15 @@ public class ProductCatalogsReportsGetListStruct {
    * @return readCost
    */
   @ApiModelProperty(value = "")
-  public Double getReadCost() {
+  public Long getReadCost() {
     return readCost;
   }
 
-  public void setReadCost(Double readCost) {
+  public void setReadCost(Long readCost) {
     this.readCost = readCost;
   }
 
-  public ProductCatalogsReportsGetListStruct praiseCount(Double praiseCount) {
+  public ProductCatalogsReportsGetListStruct praiseCount(Long praiseCount) {
     this.praiseCount = praiseCount;
     return this;
   }
@@ -1287,15 +1287,15 @@ public class ProductCatalogsReportsGetListStruct {
    * @return praiseCount
    */
   @ApiModelProperty(value = "")
-  public Double getPraiseCount() {
+  public Long getPraiseCount() {
     return praiseCount;
   }
 
-  public void setPraiseCount(Double praiseCount) {
+  public void setPraiseCount(Long praiseCount) {
     this.praiseCount = praiseCount;
   }
 
-  public ProductCatalogsReportsGetListStruct praiseCost(Double praiseCost) {
+  public ProductCatalogsReportsGetListStruct praiseCost(Long praiseCost) {
     this.praiseCost = praiseCost;
     return this;
   }
@@ -1306,15 +1306,15 @@ public class ProductCatalogsReportsGetListStruct {
    * @return praiseCost
    */
   @ApiModelProperty(value = "")
-  public Double getPraiseCost() {
+  public Long getPraiseCost() {
     return praiseCost;
   }
 
-  public void setPraiseCost(Double praiseCost) {
+  public void setPraiseCost(Long praiseCost) {
     this.praiseCost = praiseCost;
   }
 
-  public ProductCatalogsReportsGetListStruct commentCount(Double commentCount) {
+  public ProductCatalogsReportsGetListStruct commentCount(Long commentCount) {
     this.commentCount = commentCount;
     return this;
   }
@@ -1325,15 +1325,15 @@ public class ProductCatalogsReportsGetListStruct {
    * @return commentCount
    */
   @ApiModelProperty(value = "")
-  public Double getCommentCount() {
+  public Long getCommentCount() {
     return commentCount;
   }
 
-  public void setCommentCount(Double commentCount) {
+  public void setCommentCount(Long commentCount) {
     this.commentCount = commentCount;
   }
 
-  public ProductCatalogsReportsGetListStruct likeOrComment(Double likeOrComment) {
+  public ProductCatalogsReportsGetListStruct likeOrComment(Long likeOrComment) {
     this.likeOrComment = likeOrComment;
     return this;
   }
@@ -1344,15 +1344,15 @@ public class ProductCatalogsReportsGetListStruct {
    * @return likeOrComment
    */
   @ApiModelProperty(value = "")
-  public Double getLikeOrComment() {
+  public Long getLikeOrComment() {
     return likeOrComment;
   }
 
-  public void setLikeOrComment(Double likeOrComment) {
+  public void setLikeOrComment(Long likeOrComment) {
     this.likeOrComment = likeOrComment;
   }
 
-  public ProductCatalogsReportsGetListStruct commentCost(Double commentCost) {
+  public ProductCatalogsReportsGetListStruct commentCost(Long commentCost) {
     this.commentCost = commentCost;
     return this;
   }
@@ -1363,11 +1363,11 @@ public class ProductCatalogsReportsGetListStruct {
    * @return commentCost
    */
   @ApiModelProperty(value = "")
-  public Double getCommentCost() {
+  public Long getCommentCost() {
     return commentCost;
   }
 
-  public void setCommentCost(Double commentCost) {
+  public void setCommentCost(Long commentCost) {
     this.commentCost = commentCost;
   }
 

@@ -60,5 +60,4 @@ public class BasicNameValuePair implements NameValuePair, Serializable {
     hash = LangUtils.hashCode(hash, this.value);
     return hash;
   }
-
 }

@@ -27,6 +27,9 @@ public class BusinessManagerRelationsGetListStruct {
   @SerializedName("corporation_name")
   private String corporationName = null;
 
+  @SerializedName("fund_type")
+  private BMAccountType fundType = null;
+
   public BusinessManagerRelationsGetListStruct accountId(Long accountId) {
     this.accountId = accountId;
     return this;
@@ -65,6 +68,25 @@ public class BusinessManagerRelationsGetListStruct {
     this.corporationName = corporationName;
   }
 
+  public BusinessManagerRelationsGetListStruct fundType(BMAccountType fundType) {
+    this.fundType = fundType;
+    return this;
+  }
+
+  /**
+   * Get fundType
+   *
+   * @return fundType
+   */
+  @ApiModelProperty(value = "")
+  public BMAccountType getFundType() {
+    return fundType;
+  }
+
+  public void setFundType(BMAccountType fundType) {
+    this.fundType = fundType;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -77,12 +99,13 @@ public class BusinessManagerRelationsGetListStruct {
         (BusinessManagerRelationsGetListStruct) o;
     return Objects.equals(this.accountId, businessManagerRelationsGetListStruct.accountId)
         && Objects.equals(
-            this.corporationName, businessManagerRelationsGetListStruct.corporationName);
+            this.corporationName, businessManagerRelationsGetListStruct.corporationName)
+        && Objects.equals(this.fundType, businessManagerRelationsGetListStruct.fundType);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(accountId, corporationName);
+    return Objects.hash(accountId, corporationName, fundType);
   }
 
   @Override

@@ -43,7 +43,7 @@ public class ChannelPackageData {
   private Long lastModifiedTime = null;
 
   @SerializedName("system_status")
-  private SysStatus systemStatus = null;
+  private PackageSysStatus systemStatus = null;
 
   @SerializedName("audit_status")
   private PackageAuditStatus auditStatus = null;
@@ -181,7 +181,7 @@ public class ChannelPackageData {
     this.lastModifiedTime = lastModifiedTime;
   }
 
-  public ChannelPackageData systemStatus(SysStatus systemStatus) {
+  public ChannelPackageData systemStatus(PackageSysStatus systemStatus) {
     this.systemStatus = systemStatus;
     return this;
   }
@@ -192,11 +192,11 @@ public class ChannelPackageData {
    * @return systemStatus
    */
   @ApiModelProperty(value = "")
-  public SysStatus getSystemStatus() {
+  public PackageSysStatus getSystemStatus() {
     return systemStatus;
   }
 
-  public void setSystemStatus(SysStatus systemStatus) {
+  public void setSystemStatus(PackageSysStatus systemStatus) {
     this.systemStatus = systemStatus;
   }
 

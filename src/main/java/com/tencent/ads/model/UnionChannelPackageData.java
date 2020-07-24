@@ -43,7 +43,7 @@ public class UnionChannelPackageData {
   private Long lastModifiedTime = null;
 
   @SerializedName("system_status")
-  private SysStatus systemStatus = null;
+  private UnionPackageSysStatus systemStatus = null;
 
   @SerializedName("system_message")
   private String systemMessage = null;
@@ -181,7 +181,7 @@ public class UnionChannelPackageData {
     this.lastModifiedTime = lastModifiedTime;
   }
 
-  public UnionChannelPackageData systemStatus(SysStatus systemStatus) {
+  public UnionChannelPackageData systemStatus(UnionPackageSysStatus systemStatus) {
     this.systemStatus = systemStatus;
     return this;
   }
@@ -192,11 +192,11 @@ public class UnionChannelPackageData {
    * @return systemStatus
    */
   @ApiModelProperty(value = "")
-  public SysStatus getSystemStatus() {
+  public UnionPackageSysStatus getSystemStatus() {
     return systemStatus;
   }
 
-  public void setSystemStatus(SysStatus systemStatus) {
+  public void setSystemStatus(UnionPackageSysStatus systemStatus) {
     this.systemStatus = systemStatus;
   }
 

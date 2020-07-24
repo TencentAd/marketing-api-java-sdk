@@ -364,6 +364,7 @@ public class AdcreativesApi {
    * @param page (optional)
    * @param pageSize (optional)
    * @param isDeleted (optional)
+   * @param linkPageTypeCompatible (optional)
    * @param fields 返回参数的字段列表 (optional)
    * @param progressListener Progress listener
    * @param progressRequestListener Progress request listener
@@ -376,6 +377,7 @@ public class AdcreativesApi {
       Long page,
       Long pageSize,
       Boolean isDeleted,
+      Boolean linkPageTypeCompatible,
       List<String> fields,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener)
@@ -397,6 +399,9 @@ public class AdcreativesApi {
       localVarQueryParams.addAll(apiClient.parameterToPair("page_size", pageSize));
     if (isDeleted != null)
       localVarQueryParams.addAll(apiClient.parameterToPair("is_deleted", isDeleted));
+    if (linkPageTypeCompatible != null)
+      localVarQueryParams.addAll(
+          apiClient.parameterToPair("link_page_type_compatible", linkPageTypeCompatible));
     if (fields != null)
       localVarCollectionQueryParams.addAll(apiClient.parameterToPairs("multi", "fields", fields));
 
@@ -450,6 +455,7 @@ public class AdcreativesApi {
       Long page,
       Long pageSize,
       Boolean isDeleted,
+      Boolean linkPageTypeCompatible,
       List<String> fields,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener)
@@ -468,6 +474,7 @@ public class AdcreativesApi {
             page,
             pageSize,
             isDeleted,
+            linkPageTypeCompatible,
             fields,
             progressListener,
             progressRequestListener);
@@ -482,6 +489,7 @@ public class AdcreativesApi {
    * @param page (optional)
    * @param pageSize (optional)
    * @param isDeleted (optional)
+   * @param linkPageTypeCompatible (optional)
    * @param fields 返回参数的字段列表 (optional)
    * @return AdcreativesGetResponse
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
@@ -493,10 +501,12 @@ public class AdcreativesApi {
       Long page,
       Long pageSize,
       Boolean isDeleted,
+      Boolean linkPageTypeCompatible,
       List<String> fields)
       throws ApiException {
     ApiResponse<AdcreativesGetResponse> resp =
-        adcreativesGetWithHttpInfo(accountId, filtering, page, pageSize, isDeleted, fields);
+        adcreativesGetWithHttpInfo(
+            accountId, filtering, page, pageSize, isDeleted, linkPageTypeCompatible, fields);
     return resp.getData();
   }
 
@@ -508,6 +518,7 @@ public class AdcreativesApi {
    * @param page (optional)
    * @param pageSize (optional)
    * @param isDeleted (optional)
+   * @param linkPageTypeCompatible (optional)
    * @param fields 返回参数的字段列表 (optional)
    * @return ApiResponse&lt;AdcreativesGetResponse&gt;
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
@@ -519,11 +530,20 @@ public class AdcreativesApi {
       Long page,
       Long pageSize,
       Boolean isDeleted,
+      Boolean linkPageTypeCompatible,
       List<String> fields)
       throws ApiException {
     com.squareup.okhttp.Call call =
         adcreativesGetValidateBeforeCall(
-            accountId, filtering, page, pageSize, isDeleted, fields, null, null);
+            accountId,
+            filtering,
+            page,
+            pageSize,
+            isDeleted,
+            linkPageTypeCompatible,
+            fields,
+            null,
+            null);
     Type localVarReturnType = new TypeToken<AdcreativesGetResponse>() {}.getType();
     return apiClient.execute(call, localVarReturnType);
   }
@@ -536,6 +556,7 @@ public class AdcreativesApi {
    * @param page (optional)
    * @param pageSize (optional)
    * @param isDeleted (optional)
+   * @param linkPageTypeCompatible (optional)
    * @param fields 返回参数的字段列表 (optional)
    * @param callback The callback to be executed when the API call finishes
    * @return The request call
@@ -547,6 +568,7 @@ public class AdcreativesApi {
       Long page,
       Long pageSize,
       Boolean isDeleted,
+      Boolean linkPageTypeCompatible,
       List<String> fields,
       final ApiCallback<AdcreativesGetResponse> callback)
       throws ApiException {
@@ -579,6 +601,7 @@ public class AdcreativesApi {
             page,
             pageSize,
             isDeleted,
+            linkPageTypeCompatible,
             fields,
             progressListener,
             progressRequestListener);

@@ -82,6 +82,7 @@ public class App {
   @Inject PlayablePagesApiContainer playablePagesApiContainer;
   @Inject ProductCatalogsApiContainer productCatalogsApiContainer;
   @Inject ProductCatalogsReportsApiContainer productCatalogsReportsApiContainer;
+  @Inject ProductCategoriesListApiContainer productCategoriesListApiContainer;
   @Inject ProductItemsApiContainer productItemsApiContainer;
   @Inject ProductItemsDetailApiContainer productItemsDetailApiContainer;
   @Inject ProductsSystemStatusApiContainer productsSystemStatusApiContainer;
@@ -371,6 +372,10 @@ public class App {
 
   public ProductCatalogsReportsApiContainer productCatalogsReports() {
     return productCatalogsReportsApiContainer;
+  }
+
+  public ProductCategoriesListApiContainer productCategoriesList() {
+    return productCategoriesListApiContainer;
   }
 
   public ProductItemsApiContainer productItems() {

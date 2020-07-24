@@ -40,25 +40,25 @@ public class BatchAdDiagnosisListItem {
   private Long costGuaranteeMoney = null;
 
   @SerializedName("exposure_compete_score")
-  private Long exposureCompeteScore = null;
+  private String exposureCompeteScore = null;
 
   @SerializedName("exposure_raise_rate")
-  private Double exposureRaiseRate = null;
+  private String exposureRaiseRate = null;
 
   @SerializedName("cpa_bias_today")
-  private Double cpaBiasToday = null;
+  private String cpaBiasToday = null;
 
   @SerializedName("cpa_bias_overall")
-  private Double cpaBiasOverall = null;
+  private String cpaBiasOverall = null;
 
   @SerializedName("is_ocpx")
   private Boolean isOcpx = null;
 
   @SerializedName("optimization_goal")
-  private Long optimizationGoal = null;
+  private String optimizationGoal = null;
 
   @SerializedName("deep_optimization_goal")
-  private Long deepOptimizationGoal = null;
+  private String deepOptimizationGoal = null;
 
   @SerializedName("conclusion_description")
   private String conclusionDescription = null;
@@ -192,7 +192,7 @@ public class BatchAdDiagnosisListItem {
     this.costGuaranteeMoney = costGuaranteeMoney;
   }
 
-  public BatchAdDiagnosisListItem exposureCompeteScore(Long exposureCompeteScore) {
+  public BatchAdDiagnosisListItem exposureCompeteScore(String exposureCompeteScore) {
     this.exposureCompeteScore = exposureCompeteScore;
     return this;
   }
@@ -203,15 +203,15 @@ public class BatchAdDiagnosisListItem {
    * @return exposureCompeteScore
    */
   @ApiModelProperty(value = "")
-  public Long getExposureCompeteScore() {
+  public String getExposureCompeteScore() {
     return exposureCompeteScore;
   }
 
-  public void setExposureCompeteScore(Long exposureCompeteScore) {
+  public void setExposureCompeteScore(String exposureCompeteScore) {
     this.exposureCompeteScore = exposureCompeteScore;
   }
 
-  public BatchAdDiagnosisListItem exposureRaiseRate(Double exposureRaiseRate) {
+  public BatchAdDiagnosisListItem exposureRaiseRate(String exposureRaiseRate) {
     this.exposureRaiseRate = exposureRaiseRate;
     return this;
   }
@@ -222,15 +222,15 @@ public class BatchAdDiagnosisListItem {
    * @return exposureRaiseRate
    */
   @ApiModelProperty(value = "")
-  public Double getExposureRaiseRate() {
+  public String getExposureRaiseRate() {
     return exposureRaiseRate;
   }
 
-  public void setExposureRaiseRate(Double exposureRaiseRate) {
+  public void setExposureRaiseRate(String exposureRaiseRate) {
     this.exposureRaiseRate = exposureRaiseRate;
   }
 
-  public BatchAdDiagnosisListItem cpaBiasToday(Double cpaBiasToday) {
+  public BatchAdDiagnosisListItem cpaBiasToday(String cpaBiasToday) {
     this.cpaBiasToday = cpaBiasToday;
     return this;
   }
@@ -241,15 +241,15 @@ public class BatchAdDiagnosisListItem {
    * @return cpaBiasToday
    */
   @ApiModelProperty(value = "")
-  public Double getCpaBiasToday() {
+  public String getCpaBiasToday() {
     return cpaBiasToday;
   }
 
-  public void setCpaBiasToday(Double cpaBiasToday) {
+  public void setCpaBiasToday(String cpaBiasToday) {
     this.cpaBiasToday = cpaBiasToday;
   }
 
-  public BatchAdDiagnosisListItem cpaBiasOverall(Double cpaBiasOverall) {
+  public BatchAdDiagnosisListItem cpaBiasOverall(String cpaBiasOverall) {
     this.cpaBiasOverall = cpaBiasOverall;
     return this;
   }
@@ -260,11 +260,11 @@ public class BatchAdDiagnosisListItem {
    * @return cpaBiasOverall
    */
   @ApiModelProperty(value = "")
-  public Double getCpaBiasOverall() {
+  public String getCpaBiasOverall() {
     return cpaBiasOverall;
   }
 
-  public void setCpaBiasOverall(Double cpaBiasOverall) {
+  public void setCpaBiasOverall(String cpaBiasOverall) {
     this.cpaBiasOverall = cpaBiasOverall;
   }
 
@@ -287,7 +287,7 @@ public class BatchAdDiagnosisListItem {
     this.isOcpx = isOcpx;
   }
 
-  public BatchAdDiagnosisListItem optimizationGoal(Long optimizationGoal) {
+  public BatchAdDiagnosisListItem optimizationGoal(String optimizationGoal) {
     this.optimizationGoal = optimizationGoal;
     return this;
   }
@@ -298,15 +298,15 @@ public class BatchAdDiagnosisListItem {
    * @return optimizationGoal
    */
   @ApiModelProperty(value = "")
-  public Long getOptimizationGoal() {
+  public String getOptimizationGoal() {
     return optimizationGoal;
   }
 
-  public void setOptimizationGoal(Long optimizationGoal) {
+  public void setOptimizationGoal(String optimizationGoal) {
     this.optimizationGoal = optimizationGoal;
   }
 
-  public BatchAdDiagnosisListItem deepOptimizationGoal(Long deepOptimizationGoal) {
+  public BatchAdDiagnosisListItem deepOptimizationGoal(String deepOptimizationGoal) {
     this.deepOptimizationGoal = deepOptimizationGoal;
     return this;
   }
@@ -317,11 +317,11 @@ public class BatchAdDiagnosisListItem {
    * @return deepOptimizationGoal
    */
   @ApiModelProperty(value = "")
-  public Long getDeepOptimizationGoal() {
+  public String getDeepOptimizationGoal() {
     return deepOptimizationGoal;
   }
 
-  public void setDeepOptimizationGoal(Long deepOptimizationGoal) {
+  public void setDeepOptimizationGoal(String deepOptimizationGoal) {
     this.deepOptimizationGoal = deepOptimizationGoal;
   }
 

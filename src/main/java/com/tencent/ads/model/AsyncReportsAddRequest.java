@@ -33,6 +33,12 @@ public class AsyncReportsAddRequest {
   @SerializedName("level")
   private AsyncReportLevel level = null;
 
+  @SerializedName("time_line")
+  private TimeLine timeLine = null;
+
+  @SerializedName("group_by")
+  private List<String> groupBy = null;
+
   @SerializedName("granularity")
   private TimeGranularity granularity = null;
 
@@ -123,6 +129,52 @@ public class AsyncReportsAddRequest {
     this.level = level;
   }
 
+  public AsyncReportsAddRequest timeLine(TimeLine timeLine) {
+    this.timeLine = timeLine;
+    return this;
+  }
+
+  /**
+   * Get timeLine
+   *
+   * @return timeLine
+   */
+  @ApiModelProperty(value = "")
+  public TimeLine getTimeLine() {
+    return timeLine;
+  }
+
+  public void setTimeLine(TimeLine timeLine) {
+    this.timeLine = timeLine;
+  }
+
+  public AsyncReportsAddRequest groupBy(List<String> groupBy) {
+    this.groupBy = groupBy;
+    return this;
+  }
+
+  public AsyncReportsAddRequest addGroupByItem(String groupByItem) {
+    if (this.groupBy == null) {
+      this.groupBy = new ArrayList<String>();
+    }
+    this.groupBy.add(groupByItem);
+    return this;
+  }
+
+  /**
+   * Get groupBy
+   *
+   * @return groupBy
+   */
+  @ApiModelProperty(value = "")
+  public List<String> getGroupBy() {
+    return groupBy;
+  }
+
+  public void setGroupBy(List<String> groupBy) {
+    this.groupBy = groupBy;
+  }
+
   public AsyncReportsAddRequest granularity(TimeGranularity granularity) {
     this.granularity = granularity;
     return this;
@@ -174,13 +226,16 @@ public class AsyncReportsAddRequest {
         && Objects.equals(this.taskName, asyncReportsAddRequest.taskName)
         && Objects.equals(this.reportFields, asyncReportsAddRequest.reportFields)
         && Objects.equals(this.level, asyncReportsAddRequest.level)
+        && Objects.equals(this.timeLine, asyncReportsAddRequest.timeLine)
+        && Objects.equals(this.groupBy, asyncReportsAddRequest.groupBy)
         && Objects.equals(this.granularity, asyncReportsAddRequest.granularity)
         && Objects.equals(this.date, asyncReportsAddRequest.date);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(accountId, taskName, reportFields, level, granularity, date);
+    return Objects.hash(
+        accountId, taskName, reportFields, level, timeLine, groupBy, granularity, date);
   }
 
   @Override

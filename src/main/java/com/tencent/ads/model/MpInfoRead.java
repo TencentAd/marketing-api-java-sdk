@@ -33,7 +33,7 @@ public class MpInfoRead {
   private String wechatAccountName = null;
 
   @SerializedName("system_status")
-  private SysStatus systemStatus = null;
+  private WechatCustomerSystemStatus systemStatus = null;
 
   @SerializedName("industry_name")
   private String industryName = null;
@@ -103,7 +103,7 @@ public class MpInfoRead {
     this.wechatAccountName = wechatAccountName;
   }
 
-  public MpInfoRead systemStatus(SysStatus systemStatus) {
+  public MpInfoRead systemStatus(WechatCustomerSystemStatus systemStatus) {
     this.systemStatus = systemStatus;
     return this;
   }
@@ -114,11 +114,11 @@ public class MpInfoRead {
    * @return systemStatus
    */
   @ApiModelProperty(value = "")
-  public SysStatus getSystemStatus() {
+  public WechatCustomerSystemStatus getSystemStatus() {
     return systemStatus;
   }
 
-  public void setSystemStatus(SysStatus systemStatus) {
+  public void setSystemStatus(WechatCustomerSystemStatus systemStatus) {
     this.systemStatus = systemStatus;
   }
 

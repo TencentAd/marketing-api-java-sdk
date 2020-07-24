@@ -19,16 +19,18 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-/** 用于投放的的商品数量 */
-@JsonAdapter(ProductMode.Adapter.class)
-public enum ProductMode {
-  SINGLE("SINGLE"),
+/** 系统状态 */
+@JsonAdapter(WechatCustomerSystemStatus.Adapter.class)
+public enum WechatCustomerSystemStatus {
+  NORMAL("MP_STATUS_NORMAL"),
 
-  MULTIPLE("MULTIPLE");
+  PENDING("MP_STATUS_PENDING"),
+
+  DENIED("MP_STATUS_DENIED");
 
   private String value;
 
-  ProductMode(String value) {
+  WechatCustomerSystemStatus(String value) {
     this.value = value;
   }
 
@@ -41,8 +43,8 @@ public enum ProductMode {
     return String.valueOf(value);
   }
 
-  public static ProductMode fromValue(String text) {
-    for (ProductMode b : ProductMode.values()) {
+  public static WechatCustomerSystemStatus fromValue(String text) {
+    for (WechatCustomerSystemStatus b : WechatCustomerSystemStatus.values()) {
       if (String.valueOf(b.value).equals(text)) {
         return b;
       }
@@ -50,17 +52,17 @@ public enum ProductMode {
     return null;
   }
 
-  public static class Adapter extends TypeAdapter<ProductMode> {
+  public static class Adapter extends TypeAdapter<WechatCustomerSystemStatus> {
     @Override
-    public void write(final JsonWriter jsonWriter, final ProductMode enumeration)
+    public void write(final JsonWriter jsonWriter, final WechatCustomerSystemStatus enumeration)
         throws IOException {
       jsonWriter.value(enumeration.getValue());
     }
 
     @Override
-    public ProductMode read(final JsonReader jsonReader) throws IOException {
+    public WechatCustomerSystemStatus read(final JsonReader jsonReader) throws IOException {
       String value = jsonReader.nextString();
-      return ProductMode.fromValue(String.valueOf(value));
+      return WechatCustomerSystemStatus.fromValue(String.valueOf(value));
     }
   }
 }

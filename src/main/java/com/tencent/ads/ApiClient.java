@@ -54,7 +54,7 @@ public class ApiClient {
   private Map<String, String> defaultHeaderMap = new HashMap<String, String>();
   private String tempFolderPath = null;
 
-  private Map<String, Authentication> authentications;
+  private static ThreadLocal<Map<String, Authentication>> authenticationsLocal = new ThreadLocal<>();
 
   private DateFormat dateFormat;
   private DateFormat datetimeFormat;
@@ -84,12 +84,13 @@ public class ApiClient {
     setUserAgent("Tencent Ads Marketing API SDK");
 
     // Setup authentications (key: authentication name, value: authentication).
-    authentications = new HashMap<String, Authentication>();
+    Map<String, Authentication> authentications = new HashMap<String, Authentication>();
     authentications.put("accessToken", new ApiKeyAuth("query", "access_token"));
     authentications.put("nonce", new ApiKeyAuth("query", "nonce"));
     authentications.put("timestamp", new ApiKeyAuth("query", "timestamp"));
     // Prevent the authentications from being modified.
     authentications = Collections.unmodifiableMap(authentications);
+    authenticationsLocal.set(authentications);
   }
 
   /**
@@ -248,7 +249,7 @@ public class ApiClient {
    * @return Map of authentication objects
    */
   public Map<String, Authentication> getAuthentications() {
-    return authentications;
+    return authenticationsLocal.get();
   }
 
   /**
@@ -258,7 +259,7 @@ public class ApiClient {
    * @return The authentication, null if not found
    */
   public Authentication getAuthentication(String authName) {
-    return authentications.get(authName);
+    return authenticationsLocal.get().get(authName);
   }
 
   /**
@@ -267,7 +268,7 @@ public class ApiClient {
    * @param username Username
    */
   public void setUsername(String username) {
-    for (Authentication auth : authentications.values()) {
+    for (Authentication auth : authenticationsLocal.get().values()) {
       if (auth instanceof HttpBasicAuth) {
         ((HttpBasicAuth) auth).setUsername(username);
         return;
@@ -282,7 +283,7 @@ public class ApiClient {
    * @param password Password
    */
   public void setPassword(String password) {
-    for (Authentication auth : authentications.values()) {
+    for (Authentication auth : authenticationsLocal.get().values()) {
       if (auth instanceof HttpBasicAuth) {
         ((HttpBasicAuth) auth).setPassword(password);
         return;
@@ -297,7 +298,7 @@ public class ApiClient {
    * @param apiKey API key
    */
   public void setApiKey(String apiKey) {
-    for (Authentication auth : authentications.values()) {
+    for (Authentication auth : authenticationsLocal.get().values()) {
       if (auth instanceof ApiKeyAuth) {
         ((ApiKeyAuth) auth).setApiKey(apiKey);
         return;
@@ -312,7 +313,7 @@ public class ApiClient {
    * @param apiKeyPrefix API key prefix
    */
   public void setApiKeyPrefix(String apiKeyPrefix) {
-    for (Authentication auth : authentications.values()) {
+    for (Authentication auth : authenticationsLocal.get().values()) {
       if (auth instanceof ApiKeyAuth) {
         ((ApiKeyAuth) auth).setApiKeyPrefix(apiKeyPrefix);
         return;
@@ -327,7 +328,7 @@ public class ApiClient {
    * @param accessToken Access token
    */
   public void setAccessToken(String accessToken) {
-    for (Authentication auth : authentications.values()) {
+    for (Authentication auth : authenticationsLocal.get().values()) {
       if (auth instanceof OAuth) {
         ((OAuth) auth).setAccessToken(accessToken);
         return;
@@ -374,9 +375,14 @@ public class ApiClient {
    * @param debugging To enable (true) or disable (false) debugging
    * @return ApiClient
    */
-  public ApiClient setDebugging(boolean debugging) {
+  public synchronized ApiClient setDebugging(boolean debugging) {
     if (debugging != this.debugging) {
       if (debugging) {
+        for(Interceptor interceptor : httpClient.interceptors()) {
+          if (interceptor instanceof HttpLoggingInterceptor) {
+            return this;
+          }
+        }
         loggingInterceptor = new HttpLoggingInterceptor();
         loggingInterceptor.setLevel(Level.BODY);
         httpClient.interceptors().add(loggingInterceptor);
@@ -1105,7 +1111,7 @@ public class ApiClient {
   public void updateParamsForAuth(
       String[] authNames, List<Pair> queryParams, Map<String, String> headerParams) {
     for (String authName : authNames) {
-      Authentication auth = authentications.get(authName);
+      Authentication auth = authenticationsLocal.get().get(authName);
       if (auth == null) throw new RuntimeException("Authentication undefined: " + authName);
       auth.applyToParams(queryParams, headerParams);
     }
@@ -1242,5 +1248,15 @@ public class ApiClient {
     } catch (IOException e) {
       throw new AssertionError(e);
     }
+  }
+
+  protected void initAuthentications() {
+    Map<String, Authentication> authentications = new HashMap<String, Authentication>();
+    authentications.put("accessToken", new ApiKeyAuth("query", "access_token"));
+    authentications.put("nonce", new ApiKeyAuth("query", "nonce"));
+    authentications.put("timestamp", new ApiKeyAuth("query", "timestamp"));
+    // Prevent the authentications from being modified.
+    authentications = Collections.unmodifiableMap(authentications);
+    authenticationsLocal.set(authentications);
   }
 }

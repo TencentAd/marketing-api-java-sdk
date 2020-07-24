@@ -224,8 +224,7 @@ public class AddMiniProgramBannerAds {
                     .adcreativeName(adcreativeName)
                     .adcreativeTemplateId(adcreativeTemplateId)
                     .adcreativeElements(
-                        new AdcreativeCreativeElementsMp()
-                            .imageList(Arrays.asList(imageId)))
+                        new AdcreativeCreativeElementsMp().imageList(Arrays.asList(imageId)))
                     .promotedObjectType(promotedObjectType)
                     .pageType(pageType)
                     .pageSpec(

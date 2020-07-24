@@ -106,7 +106,7 @@ public class VideosGetListStruct {
   private MediaSourceType sourceType = null;
 
   @SerializedName("product_catalog_id")
-  private Long productCatalogId = null;
+  private String productCatalogId = null;
 
   @SerializedName("product_outer_id")
   private String productOuterId = null;
@@ -643,7 +643,7 @@ public class VideosGetListStruct {
     this.sourceType = sourceType;
   }
 
-  public VideosGetListStruct productCatalogId(Long productCatalogId) {
+  public VideosGetListStruct productCatalogId(String productCatalogId) {
     this.productCatalogId = productCatalogId;
     return this;
   }
@@ -654,11 +654,11 @@ public class VideosGetListStruct {
    * @return productCatalogId
    */
   @ApiModelProperty(value = "")
-  public Long getProductCatalogId() {
+  public String getProductCatalogId() {
     return productCatalogId;
   }
 
-  public void setProductCatalogId(Long productCatalogId) {
+  public void setProductCatalogId(String productCatalogId) {
     this.productCatalogId = productCatalogId;
   }
 
