@@ -5,7 +5,7 @@ import com.tencent.ads.TencentAds;
 import com.tencent.ads.exception.TencentAdsResponseException;
 import com.tencent.ads.exception.TencentAdsSDKException;
 import com.tencent.ads.model.*;
-import com.tencent.ads.model.QuerySpec;
+import com.tencent.ads.model.CapabilitiesGetQuerySpec;
 import java.util.Arrays;
 import java.util.List;
 
@@ -20,7 +20,7 @@ public class GetCapabilities {
 
   public String capability = "CAPABILITY_WECHAT_ECOMMERCE_PRODUCT";
 
-  public QuerySpec querySpec = null;
+  public CapabilitiesGetQuerySpec querySpec = null;
 
   public List<String> fields =
       Arrays.asList("wechat_ecommerce_product_spec", "wechat_link_ad_spec", "wechat_ocpa_spec");

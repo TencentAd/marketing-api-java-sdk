@@ -19,7 +19,7 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-/** 投放站点 */
+/** 投放版位 */
 @JsonAdapter(SiteSetDefinition.Adapter.class)
 public enum SiteSetDefinition {
   QZONE("SITE_SET_QZONE"),

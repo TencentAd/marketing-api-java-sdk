@@ -17,9 +17,8 @@ public class DeleteAssetPermissions {
 
   public Long accountId = null;
   public AssetPermissionsDeleteRequest data = new AssetPermissionsDeleteRequest();
-  public AssetPermissionGrantType assetPermissionGrantType =
-      AssetPermissionGrantType.ASSET_PERMISSION_GRANT_TYPE_ASSET;
-  public AssetType assetType = AssetType.ASSET_TYPE_CANVAS_WECHAT;
+  public AssetPermissionGrantType assetPermissionGrantType = AssetPermissionGrantType.ASSET;
+  public AssetType assetType = AssetType.CANVAS_WECHAT;
   public Long assetId = null;
   public Long licensingAccountId = null;
 

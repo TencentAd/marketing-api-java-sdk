@@ -27,7 +27,7 @@ public class XijingPageByComponentsApiContainer extends ApiContainer {
   @Inject XijingPageByComponentsApi api;
 
   /**
-   * 基于组件创建落地页
+   * 蹊径-基于组件创建落地页
    *
    * @param data (required)
    * @return XijingPageByComponentsAddResponse

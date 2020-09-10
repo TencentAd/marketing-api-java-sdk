@@ -19,10 +19,12 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-/** 资产权限授予类型 */
+/** 资产权限授予类型，素材授权功能目前白名单灰度中，若要使用可联系运营开通 */
 @JsonAdapter(AssetPermissionGrantType.Adapter.class)
 public enum AssetPermissionGrantType {
-  ASSET_PERMISSION_GRANT_TYPE_ASSET("ASSET_PERMISSION_GRANT_TYPE_ASSET");
+  ASSET("ASSET_PERMISSION_GRANT_TYPE_ASSET"),
+
+  ACCOUNT("ASSET_PERMISSION_GRANT_TYPE_ACCOUNT");
 
   private String value;
 

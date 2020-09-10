@@ -18,6 +18,16 @@ public class GetProductCategoriesList {
 
   public Long productCatalogId = null;
 
+  public Long page = null;
+
+  public Long pageSize = null;
+
+  public Long level = null;
+
+  public Long categoryId = null;
+
+  public String categoryName = null;
+
   public List<String> fields = null;
 
   public void init() {
@@ -34,7 +44,15 @@ public class GetProductCategoriesList {
     ProductCategoriesListGetResponseData response =
         tencentAds
             .productCategoriesList()
-            .productCategoriesListGet(accountId, productCatalogId, fields);
+            .productCategoriesListGet(
+                accountId,
+                productCatalogId,
+                page,
+                pageSize,
+                level,
+                categoryId,
+                categoryName,
+                fields);
     return response;
   }
 

@@ -101,6 +101,12 @@ public class PreviewAdcreative {
   @SerializedName("feeds_video_comment_switch")
   private Boolean feedsVideoCommentSwitch = null;
 
+  @SerializedName("conversion_data_type")
+  private ConversionDataType conversionDataType = null;
+
+  @SerializedName("conversion_target_type")
+  private ConversionTargetType conversionTargetType = null;
+
   @SerializedName("adcreative_template_id")
   private Long adcreativeTemplateId = null;
 
@@ -625,6 +631,44 @@ public class PreviewAdcreative {
     this.feedsVideoCommentSwitch = feedsVideoCommentSwitch;
   }
 
+  public PreviewAdcreative conversionDataType(ConversionDataType conversionDataType) {
+    this.conversionDataType = conversionDataType;
+    return this;
+  }
+
+  /**
+   * Get conversionDataType
+   *
+   * @return conversionDataType
+   */
+  @ApiModelProperty(value = "")
+  public ConversionDataType getConversionDataType() {
+    return conversionDataType;
+  }
+
+  public void setConversionDataType(ConversionDataType conversionDataType) {
+    this.conversionDataType = conversionDataType;
+  }
+
+  public PreviewAdcreative conversionTargetType(ConversionTargetType conversionTargetType) {
+    this.conversionTargetType = conversionTargetType;
+    return this;
+  }
+
+  /**
+   * Get conversionTargetType
+   *
+   * @return conversionTargetType
+   */
+  @ApiModelProperty(value = "")
+  public ConversionTargetType getConversionTargetType() {
+    return conversionTargetType;
+  }
+
+  public void setConversionTargetType(ConversionTargetType conversionTargetType) {
+    this.conversionTargetType = conversionTargetType;
+  }
+
   public PreviewAdcreative adcreativeTemplateId(Long adcreativeTemplateId) {
     this.adcreativeTemplateId = adcreativeTemplateId;
     return this;
@@ -700,6 +744,8 @@ public class PreviewAdcreative {
         && Objects.equals(this.playablePageMaterialId, previewAdcreative.playablePageMaterialId)
         && Objects.equals(this.videoEndPage, previewAdcreative.videoEndPage)
         && Objects.equals(this.feedsVideoCommentSwitch, previewAdcreative.feedsVideoCommentSwitch)
+        && Objects.equals(this.conversionDataType, previewAdcreative.conversionDataType)
+        && Objects.equals(this.conversionTargetType, previewAdcreative.conversionTargetType)
         && Objects.equals(this.adcreativeTemplateId, previewAdcreative.adcreativeTemplateId)
         && Objects.equals(this.adcreativeElements, previewAdcreative.adcreativeElements);
   }
@@ -733,6 +779,8 @@ public class PreviewAdcreative {
         playablePageMaterialId,
         videoEndPage,
         feedsVideoCommentSwitch,
+        conversionDataType,
+        conversionTargetType,
         adcreativeTemplateId,
         adcreativeElements);
   }

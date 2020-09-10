@@ -25,6 +25,9 @@ public class FundTransferAddResponseData {
   @SerializedName("external_bill_no")
   private String externalBillNo = null;
 
+  @SerializedName("trans_time")
+  private Long transTime = null;
+
   @SerializedName("fund_type")
   private AccountTypeMap fundType = null;
 
@@ -67,6 +70,25 @@ public class FundTransferAddResponseData {
 
   public void setExternalBillNo(String externalBillNo) {
     this.externalBillNo = externalBillNo;
+  }
+
+  public FundTransferAddResponseData transTime(Long transTime) {
+    this.transTime = transTime;
+    return this;
+  }
+
+  /**
+   * Get transTime
+   *
+   * @return transTime
+   */
+  @ApiModelProperty(value = "")
+  public Long getTransTime() {
+    return transTime;
+  }
+
+  public void setTransTime(Long transTime) {
+    this.transTime = transTime;
   }
 
   public FundTransferAddResponseData fundType(AccountTypeMap fundType) {
@@ -118,13 +140,14 @@ public class FundTransferAddResponseData {
     FundTransferAddResponseData fundTransferAddResponseData = (FundTransferAddResponseData) o;
     return Objects.equals(this.amount, fundTransferAddResponseData.amount)
         && Objects.equals(this.externalBillNo, fundTransferAddResponseData.externalBillNo)
+        && Objects.equals(this.transTime, fundTransferAddResponseData.transTime)
         && Objects.equals(this.fundType, fundTransferAddResponseData.fundType)
         && Objects.equals(this.isRepeated, fundTransferAddResponseData.isRepeated);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(amount, externalBillNo, fundType, isRepeated);
+    return Objects.hash(amount, externalBillNo, transTime, fundType, isRepeated);
   }
 
   @Override

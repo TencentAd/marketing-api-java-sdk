@@ -30,6 +30,48 @@ public class ProductItemsGetListStruct {
   @SerializedName("product_image_url")
   private String productImageUrl = null;
 
+  @SerializedName("product_short_name")
+  private String productShortName = null;
+
+  @SerializedName("price")
+  private Double price = null;
+
+  @SerializedName("first_category_id")
+  private Long firstCategoryId = null;
+
+  @SerializedName("first_category_name")
+  private String firstCategoryName = null;
+
+  @SerializedName("second_category_id")
+  private Long secondCategoryId = null;
+
+  @SerializedName("second_category_name")
+  private String secondCategoryName = null;
+
+  @SerializedName("third_category_id")
+  private Long thirdCategoryId = null;
+
+  @SerializedName("third_category_name")
+  private String thirdCategoryName = null;
+
+  @SerializedName("fourth_category_id")
+  private Long fourthCategoryId = null;
+
+  @SerializedName("fourth_category_name")
+  private String fourthCategoryName = null;
+
+  @SerializedName("brand_name")
+  private String brandName = null;
+
+  @SerializedName("brand_id")
+  private Long brandId = null;
+
+  @SerializedName("description")
+  private String description = null;
+
+  @SerializedName("custom_data")
+  private String customData = null;
+
   public ProductItemsGetListStruct productOuterId(String productOuterId) {
     this.productOuterId = productOuterId;
     return this;
@@ -87,6 +129,272 @@ public class ProductItemsGetListStruct {
     this.productImageUrl = productImageUrl;
   }
 
+  public ProductItemsGetListStruct productShortName(String productShortName) {
+    this.productShortName = productShortName;
+    return this;
+  }
+
+  /**
+   * Get productShortName
+   *
+   * @return productShortName
+   */
+  @ApiModelProperty(value = "")
+  public String getProductShortName() {
+    return productShortName;
+  }
+
+  public void setProductShortName(String productShortName) {
+    this.productShortName = productShortName;
+  }
+
+  public ProductItemsGetListStruct price(Double price) {
+    this.price = price;
+    return this;
+  }
+
+  /**
+   * Get price
+   *
+   * @return price
+   */
+  @ApiModelProperty(value = "")
+  public Double getPrice() {
+    return price;
+  }
+
+  public void setPrice(Double price) {
+    this.price = price;
+  }
+
+  public ProductItemsGetListStruct firstCategoryId(Long firstCategoryId) {
+    this.firstCategoryId = firstCategoryId;
+    return this;
+  }
+
+  /**
+   * Get firstCategoryId
+   *
+   * @return firstCategoryId
+   */
+  @ApiModelProperty(value = "")
+  public Long getFirstCategoryId() {
+    return firstCategoryId;
+  }
+
+  public void setFirstCategoryId(Long firstCategoryId) {
+    this.firstCategoryId = firstCategoryId;
+  }
+
+  public ProductItemsGetListStruct firstCategoryName(String firstCategoryName) {
+    this.firstCategoryName = firstCategoryName;
+    return this;
+  }
+
+  /**
+   * Get firstCategoryName
+   *
+   * @return firstCategoryName
+   */
+  @ApiModelProperty(value = "")
+  public String getFirstCategoryName() {
+    return firstCategoryName;
+  }
+
+  public void setFirstCategoryName(String firstCategoryName) {
+    this.firstCategoryName = firstCategoryName;
+  }
+
+  public ProductItemsGetListStruct secondCategoryId(Long secondCategoryId) {
+    this.secondCategoryId = secondCategoryId;
+    return this;
+  }
+
+  /**
+   * Get secondCategoryId
+   *
+   * @return secondCategoryId
+   */
+  @ApiModelProperty(value = "")
+  public Long getSecondCategoryId() {
+    return secondCategoryId;
+  }
+
+  public void setSecondCategoryId(Long secondCategoryId) {
+    this.secondCategoryId = secondCategoryId;
+  }
+
+  public ProductItemsGetListStruct secondCategoryName(String secondCategoryName) {
+    this.secondCategoryName = secondCategoryName;
+    return this;
+  }
+
+  /**
+   * Get secondCategoryName
+   *
+   * @return secondCategoryName
+   */
+  @ApiModelProperty(value = "")
+  public String getSecondCategoryName() {
+    return secondCategoryName;
+  }
+
+  public void setSecondCategoryName(String secondCategoryName) {
+    this.secondCategoryName = secondCategoryName;
+  }
+
+  public ProductItemsGetListStruct thirdCategoryId(Long thirdCategoryId) {
+    this.thirdCategoryId = thirdCategoryId;
+    return this;
+  }
+
+  /**
+   * Get thirdCategoryId
+   *
+   * @return thirdCategoryId
+   */
+  @ApiModelProperty(value = "")
+  public Long getThirdCategoryId() {
+    return thirdCategoryId;
+  }
+
+  public void setThirdCategoryId(Long thirdCategoryId) {
+    this.thirdCategoryId = thirdCategoryId;
+  }
+
+  public ProductItemsGetListStruct thirdCategoryName(String thirdCategoryName) {
+    this.thirdCategoryName = thirdCategoryName;
+    return this;
+  }
+
+  /**
+   * Get thirdCategoryName
+   *
+   * @return thirdCategoryName
+   */
+  @ApiModelProperty(value = "")
+  public String getThirdCategoryName() {
+    return thirdCategoryName;
+  }
+
+  public void setThirdCategoryName(String thirdCategoryName) {
+    this.thirdCategoryName = thirdCategoryName;
+  }
+
+  public ProductItemsGetListStruct fourthCategoryId(Long fourthCategoryId) {
+    this.fourthCategoryId = fourthCategoryId;
+    return this;
+  }
+
+  /**
+   * Get fourthCategoryId
+   *
+   * @return fourthCategoryId
+   */
+  @ApiModelProperty(value = "")
+  public Long getFourthCategoryId() {
+    return fourthCategoryId;
+  }
+
+  public void setFourthCategoryId(Long fourthCategoryId) {
+    this.fourthCategoryId = fourthCategoryId;
+  }
+
+  public ProductItemsGetListStruct fourthCategoryName(String fourthCategoryName) {
+    this.fourthCategoryName = fourthCategoryName;
+    return this;
+  }
+
+  /**
+   * Get fourthCategoryName
+   *
+   * @return fourthCategoryName
+   */
+  @ApiModelProperty(value = "")
+  public String getFourthCategoryName() {
+    return fourthCategoryName;
+  }
+
+  public void setFourthCategoryName(String fourthCategoryName) {
+    this.fourthCategoryName = fourthCategoryName;
+  }
+
+  public ProductItemsGetListStruct brandName(String brandName) {
+    this.brandName = brandName;
+    return this;
+  }
+
+  /**
+   * Get brandName
+   *
+   * @return brandName
+   */
+  @ApiModelProperty(value = "")
+  public String getBrandName() {
+    return brandName;
+  }
+
+  public void setBrandName(String brandName) {
+    this.brandName = brandName;
+  }
+
+  public ProductItemsGetListStruct brandId(Long brandId) {
+    this.brandId = brandId;
+    return this;
+  }
+
+  /**
+   * Get brandId
+   *
+   * @return brandId
+   */
+  @ApiModelProperty(value = "")
+  public Long getBrandId() {
+    return brandId;
+  }
+
+  public void setBrandId(Long brandId) {
+    this.brandId = brandId;
+  }
+
+  public ProductItemsGetListStruct description(String description) {
+    this.description = description;
+    return this;
+  }
+
+  /**
+   * Get description
+   *
+   * @return description
+   */
+  @ApiModelProperty(value = "")
+  public String getDescription() {
+    return description;
+  }
+
+  public void setDescription(String description) {
+    this.description = description;
+  }
+
+  public ProductItemsGetListStruct customData(String customData) {
+    this.customData = customData;
+    return this;
+  }
+
+  /**
+   * Get customData
+   *
+   * @return customData
+   */
+  @ApiModelProperty(value = "")
+  public String getCustomData() {
+    return customData;
+  }
+
+  public void setCustomData(String customData) {
+    this.customData = customData;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -98,12 +406,43 @@ public class ProductItemsGetListStruct {
     ProductItemsGetListStruct productItemsGetListStruct = (ProductItemsGetListStruct) o;
     return Objects.equals(this.productOuterId, productItemsGetListStruct.productOuterId)
         && Objects.equals(this.productName, productItemsGetListStruct.productName)
-        && Objects.equals(this.productImageUrl, productItemsGetListStruct.productImageUrl);
+        && Objects.equals(this.productImageUrl, productItemsGetListStruct.productImageUrl)
+        && Objects.equals(this.productShortName, productItemsGetListStruct.productShortName)
+        && Objects.equals(this.price, productItemsGetListStruct.price)
+        && Objects.equals(this.firstCategoryId, productItemsGetListStruct.firstCategoryId)
+        && Objects.equals(this.firstCategoryName, productItemsGetListStruct.firstCategoryName)
+        && Objects.equals(this.secondCategoryId, productItemsGetListStruct.secondCategoryId)
+        && Objects.equals(this.secondCategoryName, productItemsGetListStruct.secondCategoryName)
+        && Objects.equals(this.thirdCategoryId, productItemsGetListStruct.thirdCategoryId)
+        && Objects.equals(this.thirdCategoryName, productItemsGetListStruct.thirdCategoryName)
+        && Objects.equals(this.fourthCategoryId, productItemsGetListStruct.fourthCategoryId)
+        && Objects.equals(this.fourthCategoryName, productItemsGetListStruct.fourthCategoryName)
+        && Objects.equals(this.brandName, productItemsGetListStruct.brandName)
+        && Objects.equals(this.brandId, productItemsGetListStruct.brandId)
+        && Objects.equals(this.description, productItemsGetListStruct.description)
+        && Objects.equals(this.customData, productItemsGetListStruct.customData);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(productOuterId, productName, productImageUrl);
+    return Objects.hash(
+        productOuterId,
+        productName,
+        productImageUrl,
+        productShortName,
+        price,
+        firstCategoryId,
+        firstCategoryName,
+        secondCategoryId,
+        secondCategoryName,
+        thirdCategoryId,
+        thirdCategoryName,
+        fourthCategoryId,
+        fourthCategoryName,
+        brandName,
+        brandId,
+        description,
+        customData);
   }
 
   @Override

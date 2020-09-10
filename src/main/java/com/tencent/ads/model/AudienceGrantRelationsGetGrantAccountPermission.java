@@ -22,14 +22,14 @@ import java.util.Objects;
 
 /** 授权给指定账号结构 */
 @ApiModel(description = "授权给指定账号结构")
-public class GrantAccountPermission {
+public class AudienceGrantRelationsGetGrantAccountPermission {
   @SerializedName("account_id")
   private Long accountId = null;
 
   @SerializedName("grant_permission_type_list")
   private List<String> grantPermissionTypeList = null;
 
-  public GrantAccountPermission accountId(Long accountId) {
+  public AudienceGrantRelationsGetGrantAccountPermission accountId(Long accountId) {
     this.accountId = accountId;
     return this;
   }
@@ -48,12 +48,14 @@ public class GrantAccountPermission {
     this.accountId = accountId;
   }
 
-  public GrantAccountPermission grantPermissionTypeList(List<String> grantPermissionTypeList) {
+  public AudienceGrantRelationsGetGrantAccountPermission grantPermissionTypeList(
+      List<String> grantPermissionTypeList) {
     this.grantPermissionTypeList = grantPermissionTypeList;
     return this;
   }
 
-  public GrantAccountPermission addGrantPermissionTypeListItem(String grantPermissionTypeListItem) {
+  public AudienceGrantRelationsGetGrantAccountPermission addGrantPermissionTypeListItem(
+      String grantPermissionTypeListItem) {
     if (this.grantPermissionTypeList == null) {
       this.grantPermissionTypeList = new ArrayList<String>();
     }
@@ -83,10 +85,13 @@ public class GrantAccountPermission {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    GrantAccountPermission grantAccountPermission = (GrantAccountPermission) o;
-    return Objects.equals(this.accountId, grantAccountPermission.accountId)
+    AudienceGrantRelationsGetGrantAccountPermission
+        audienceGrantRelationsGetGrantAccountPermission =
+            (AudienceGrantRelationsGetGrantAccountPermission) o;
+    return Objects.equals(this.accountId, audienceGrantRelationsGetGrantAccountPermission.accountId)
         && Objects.equals(
-            this.grantPermissionTypeList, grantAccountPermission.grantPermissionTypeList);
+            this.grantPermissionTypeList,
+            audienceGrantRelationsGetGrantAccountPermission.grantPermissionTypeList);
   }
 
   @Override

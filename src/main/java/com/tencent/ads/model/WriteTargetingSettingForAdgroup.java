@@ -122,6 +122,9 @@ public class WriteTargetingSettingForAdgroup {
   @SerializedName("mini_game_qq_status")
   private List<String> miniGameQqStatus = null;
 
+  @SerializedName("excluded_converted_audience")
+  private ExcludedConvertedAudience excludedConvertedAudience = null;
+
   public WriteTargetingSettingForAdgroup age(List<AgeStruct> age) {
     this.age = age;
     return this;
@@ -990,6 +993,26 @@ public class WriteTargetingSettingForAdgroup {
     this.miniGameQqStatus = miniGameQqStatus;
   }
 
+  public WriteTargetingSettingForAdgroup excludedConvertedAudience(
+      ExcludedConvertedAudience excludedConvertedAudience) {
+    this.excludedConvertedAudience = excludedConvertedAudience;
+    return this;
+  }
+
+  /**
+   * Get excludedConvertedAudience
+   *
+   * @return excludedConvertedAudience
+   */
+  @ApiModelProperty(value = "")
+  public ExcludedConvertedAudience getExcludedConvertedAudience() {
+    return excludedConvertedAudience;
+  }
+
+  public void setExcludedConvertedAudience(ExcludedConvertedAudience excludedConvertedAudience) {
+    this.excludedConvertedAudience = excludedConvertedAudience;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -1042,7 +1065,10 @@ public class WriteTargetingSettingForAdgroup {
             writeTargetingSettingForAdgroup.wechatOfficialAccountCategory)
         && Objects.equals(
             this.mobileUnionCategory, writeTargetingSettingForAdgroup.mobileUnionCategory)
-        && Objects.equals(this.miniGameQqStatus, writeTargetingSettingForAdgroup.miniGameQqStatus);
+        && Objects.equals(this.miniGameQqStatus, writeTargetingSettingForAdgroup.miniGameQqStatus)
+        && Objects.equals(
+            this.excludedConvertedAudience,
+            writeTargetingSettingForAdgroup.excludedConvertedAudience);
   }
 
   @Override
@@ -1080,7 +1106,8 @@ public class WriteTargetingSettingForAdgroup {
         behaviorOrInterest,
         wechatOfficialAccountCategory,
         mobileUnionCategory,
-        miniGameQqStatus);
+        miniGameQqStatus,
+        excludedConvertedAudience);
   }
 
   @Override

@@ -25,7 +25,7 @@ public class CampaignsGetResponseData {
   private List<CampaignsGetListStruct> list = null;
 
   @SerializedName("page_info")
-  private Conf pageInfo = null;
+  private ConfPageSize500 pageInfo = null;
 
   public CampaignsGetResponseData list(List<CampaignsGetListStruct> list) {
     this.list = list;
@@ -54,7 +54,7 @@ public class CampaignsGetResponseData {
     this.list = list;
   }
 
-  public CampaignsGetResponseData pageInfo(Conf pageInfo) {
+  public CampaignsGetResponseData pageInfo(ConfPageSize500 pageInfo) {
     this.pageInfo = pageInfo;
     return this;
   }
@@ -65,11 +65,11 @@ public class CampaignsGetResponseData {
    * @return pageInfo
    */
   @ApiModelProperty(value = "")
-  public Conf getPageInfo() {
+  public ConfPageSize500 getPageInfo() {
     return pageInfo;
   }
 
-  public void setPageInfo(Conf pageInfo) {
+  public void setPageInfo(ConfPageSize500 pageInfo) {
     this.pageInfo = pageInfo;
   }
 

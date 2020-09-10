@@ -14,7 +14,7 @@ public class TencentAds extends CustomApp {
 
   private static String basePath = "https://sandbox-api.e.qq.com/v1.3";
 
-  private static final String SDK_VERSION = "1.1.3";
+  private static final String SDK_VERSION = "1.1.5";
 
   private TencentAds() {}
 
@@ -98,5 +98,27 @@ public class TencentAds extends CustomApp {
   public void setAccessToken(String accessTokenValue) {
     ApiKeyAuth accessToken = (ApiKeyAuth) defaultApiClient.getAuthentication("accessToken");
     accessToken.setApiKey(accessTokenValue);
+  }
+
+  /**
+   * 单位毫秒ms
+   * @param timeout
+   */
+  public void setConnectTimeout(int timeout) {
+    defaultApiClient.setConnectTimeout(timeout);
+  }
+  /**
+   * 单位毫秒ms
+   * @param readTimeout
+   */
+  public void setReadTimeout(int readTimeout) {
+    defaultApiClient.setReadTimeout(readTimeout);
+  }
+  /**
+   * 单位毫秒ms
+   * @param writeTimeout
+   */
+  public void setWriteTimeout(int writeTimeout) {
+    defaultApiClient.setReadTimeout(writeTimeout);
   }
 }

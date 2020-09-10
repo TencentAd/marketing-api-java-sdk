@@ -138,6 +138,9 @@ public class LeadCluesGetListStruct {
   @SerializedName("leads_action_time")
   private String leadsActionTime = null;
 
+  @SerializedName("leads_tags")
+  private String leadsTags = null;
+
   public LeadCluesGetListStruct accountId(Long accountId) {
     this.accountId = accountId;
     return this;
@@ -879,6 +882,25 @@ public class LeadCluesGetListStruct {
     this.leadsActionTime = leadsActionTime;
   }
 
+  public LeadCluesGetListStruct leadsTags(String leadsTags) {
+    this.leadsTags = leadsTags;
+    return this;
+  }
+
+  /**
+   * Get leadsTags
+   *
+   * @return leadsTags
+   */
+  @ApiModelProperty(value = "")
+  public String getLeadsTags() {
+    return leadsTags;
+  }
+
+  public void setLeadsTags(String leadsTags) {
+    this.leadsTags = leadsTags;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -926,7 +948,8 @@ public class LeadCluesGetListStruct {
         && Objects.equals(this.bundle, leadCluesGetListStruct.bundle)
         && Objects.equals(this.posType, leadCluesGetListStruct.posType)
         && Objects.equals(this.leadsCreateTime, leadCluesGetListStruct.leadsCreateTime)
-        && Objects.equals(this.leadsActionTime, leadCluesGetListStruct.leadsActionTime);
+        && Objects.equals(this.leadsActionTime, leadCluesGetListStruct.leadsActionTime)
+        && Objects.equals(this.leadsTags, leadCluesGetListStruct.leadsTags);
   }
 
   @Override
@@ -970,7 +993,8 @@ public class LeadCluesGetListStruct {
         bundle,
         posType,
         leadsCreateTime,
-        leadsActionTime);
+        leadsActionTime,
+        leadsTags);
   }
 
   @Override

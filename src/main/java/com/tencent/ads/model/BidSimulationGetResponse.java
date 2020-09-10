@@ -19,8 +19,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
-/** AsyncReportFilesGetResponse */
-public class AsyncReportFilesGetResponse {
+/** BidSimulationGetResponse */
+public class BidSimulationGetResponse {
   @SerializedName("code")
   private Long code = null;
 
@@ -33,7 +33,10 @@ public class AsyncReportFilesGetResponse {
   @SerializedName("errors")
   private List<ApiErrorStruct> errors = null;
 
-  public AsyncReportFilesGetResponse code(Long code) {
+  @SerializedName("data")
+  private BidSimulationGetResponseData data = null;
+
+  public BidSimulationGetResponse code(Long code) {
     this.code = code;
     return this;
   }
@@ -52,7 +55,7 @@ public class AsyncReportFilesGetResponse {
     this.code = code;
   }
 
-  public AsyncReportFilesGetResponse message(String message) {
+  public BidSimulationGetResponse message(String message) {
     this.message = message;
     return this;
   }
@@ -71,7 +74,7 @@ public class AsyncReportFilesGetResponse {
     this.message = message;
   }
 
-  public AsyncReportFilesGetResponse messageCn(String messageCn) {
+  public BidSimulationGetResponse messageCn(String messageCn) {
     this.messageCn = messageCn;
     return this;
   }
@@ -90,12 +93,12 @@ public class AsyncReportFilesGetResponse {
     this.messageCn = messageCn;
   }
 
-  public AsyncReportFilesGetResponse errors(List<ApiErrorStruct> errors) {
+  public BidSimulationGetResponse errors(List<ApiErrorStruct> errors) {
     this.errors = errors;
     return this;
   }
 
-  public AsyncReportFilesGetResponse addErrorsItem(ApiErrorStruct errorsItem) {
+  public BidSimulationGetResponse addErrorsItem(ApiErrorStruct errorsItem) {
     if (this.errors == null) {
       this.errors = new ArrayList<ApiErrorStruct>();
     }
@@ -117,6 +120,25 @@ public class AsyncReportFilesGetResponse {
     this.errors = errors;
   }
 
+  public BidSimulationGetResponse data(BidSimulationGetResponseData data) {
+    this.data = data;
+    return this;
+  }
+
+  /**
+   * Get data
+   *
+   * @return data
+   */
+  @ApiModelProperty(value = "")
+  public BidSimulationGetResponseData getData() {
+    return data;
+  }
+
+  public void setData(BidSimulationGetResponseData data) {
+    this.data = data;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -125,16 +147,17 @@ public class AsyncReportFilesGetResponse {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    AsyncReportFilesGetResponse asyncReportFilesGetResponse = (AsyncReportFilesGetResponse) o;
-    return Objects.equals(this.code, asyncReportFilesGetResponse.code)
-        && Objects.equals(this.message, asyncReportFilesGetResponse.message)
-        && Objects.equals(this.messageCn, asyncReportFilesGetResponse.messageCn)
-        && Objects.equals(this.errors, asyncReportFilesGetResponse.errors);
+    BidSimulationGetResponse bidSimulationGetResponse = (BidSimulationGetResponse) o;
+    return Objects.equals(this.code, bidSimulationGetResponse.code)
+        && Objects.equals(this.message, bidSimulationGetResponse.message)
+        && Objects.equals(this.messageCn, bidSimulationGetResponse.messageCn)
+        && Objects.equals(this.errors, bidSimulationGetResponse.errors)
+        && Objects.equals(this.data, bidSimulationGetResponse.data);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(code, message, messageCn, errors);
+    return Objects.hash(code, message, messageCn, errors, data);
   }
 
   @Override

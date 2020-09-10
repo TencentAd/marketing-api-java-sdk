@@ -18,9 +18,9 @@ import com.tencent.ads.ApiException;
 import com.tencent.ads.anno.*;
 import com.tencent.ads.api.CapabilitiesApi;
 import com.tencent.ads.exception.TencentAdsResponseException;
+import com.tencent.ads.model.CapabilitiesGetQuerySpec;
 import com.tencent.ads.model.CapabilitiesGetResponse;
 import com.tencent.ads.model.CapabilitiesGetResponseData;
-import com.tencent.ads.model.QuerySpec;
 import java.util.List;
 
 public class CapabilitiesApiContainer extends ApiContainer {
@@ -28,7 +28,7 @@ public class CapabilitiesApiContainer extends ApiContainer {
   @Inject CapabilitiesApi api;
 
   /**
-   * 查询广告相关权限
+   * 查询广告相关权限（待废弃）
    *
    * @param accountId (required)
    * @param capability (required)
@@ -39,7 +39,7 @@ public class CapabilitiesApiContainer extends ApiContainer {
    *     response body
    */
   public CapabilitiesGetResponseData capabilitiesGet(
-      Long accountId, String capability, QuerySpec querySpec, List<String> fields)
+      Long accountId, String capability, CapabilitiesGetQuerySpec querySpec, List<String> fields)
       throws ApiException, TencentAdsResponseException {
     CapabilitiesGetResponse resp = api.capabilitiesGet(accountId, capability, querySpec, fields);
     handleResponse(gson.toJson(resp));

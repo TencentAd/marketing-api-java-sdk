@@ -30,7 +30,7 @@ public class ProductCatalogsReportsApiContainer extends ApiContainer {
   @Inject ProductCatalogsReportsApi api;
 
   /**
-   * 获取商品库报表
+   * 获取商品库报表(待废弃)
    *
    * @param accountId (required)
    * @param productCatalogId (required)

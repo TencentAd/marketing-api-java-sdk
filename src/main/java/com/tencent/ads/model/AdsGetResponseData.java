@@ -25,7 +25,7 @@ public class AdsGetResponseData {
   private List<AdsGetListStruct> list = null;
 
   @SerializedName("page_info")
-  private Conf pageInfo = null;
+  private ConfPageSize500 pageInfo = null;
 
   public AdsGetResponseData list(List<AdsGetListStruct> list) {
     this.list = list;
@@ -54,7 +54,7 @@ public class AdsGetResponseData {
     this.list = list;
   }
 
-  public AdsGetResponseData pageInfo(Conf pageInfo) {
+  public AdsGetResponseData pageInfo(ConfPageSize500 pageInfo) {
     this.pageInfo = pageInfo;
     return this;
   }
@@ -65,11 +65,11 @@ public class AdsGetResponseData {
    * @return pageInfo
    */
   @ApiModelProperty(value = "")
-  public Conf getPageInfo() {
+  public ConfPageSize500 getPageInfo() {
     return pageInfo;
   }
 
-  public void setPageInfo(Conf pageInfo) {
+  public void setPageInfo(ConfPageSize500 pageInfo) {
     this.pageInfo = pageInfo;
   }
 

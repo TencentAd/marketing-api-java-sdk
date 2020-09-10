@@ -19,16 +19,18 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-/** 模板上的商品数量 */
-@JsonAdapter(ProductItemDisplayQuantity.Adapter.class)
-public enum ProductItemDisplayQuantity {
-  SINGLE("SINGLE"),
+/** 微信原生页视频资源状态 */
+@JsonAdapter(WechatPageResourceStatus.Adapter.class)
+public enum WechatPageResourceStatus {
+  STATUS_VALID("VIDEO_RESOURCE_STATUS_VALID"),
 
-  MULTIPLE("MULTIPLE");
+  STATUS_PENDING("VIDEO_RESOURCE_STATUS_PENDING"),
+
+  ERROR("VIDEO_RESOURCE_ERROR");
 
   private String value;
 
-  ProductItemDisplayQuantity(String value) {
+  WechatPageResourceStatus(String value) {
     this.value = value;
   }
 
@@ -41,8 +43,8 @@ public enum ProductItemDisplayQuantity {
     return String.valueOf(value);
   }
 
-  public static ProductItemDisplayQuantity fromValue(String text) {
-    for (ProductItemDisplayQuantity b : ProductItemDisplayQuantity.values()) {
+  public static WechatPageResourceStatus fromValue(String text) {
+    for (WechatPageResourceStatus b : WechatPageResourceStatus.values()) {
       if (String.valueOf(b.value).equals(text)) {
         return b;
       }
@@ -50,17 +52,17 @@ public enum ProductItemDisplayQuantity {
     return null;
   }
 
-  public static class Adapter extends TypeAdapter<ProductItemDisplayQuantity> {
+  public static class Adapter extends TypeAdapter<WechatPageResourceStatus> {
     @Override
-    public void write(final JsonWriter jsonWriter, final ProductItemDisplayQuantity enumeration)
+    public void write(final JsonWriter jsonWriter, final WechatPageResourceStatus enumeration)
         throws IOException {
       jsonWriter.value(enumeration.getValue());
     }
 
     @Override
-    public ProductItemDisplayQuantity read(final JsonReader jsonReader) throws IOException {
+    public WechatPageResourceStatus read(final JsonReader jsonReader) throws IOException {
       String value = jsonReader.nextString();
-      return ProductItemDisplayQuantity.fromValue(String.valueOf(value));
+      return WechatPageResourceStatus.fromValue(String.valueOf(value));
     }
   }
 }

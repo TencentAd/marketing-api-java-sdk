@@ -38,13 +38,14 @@ public class AddAudienceGrantRelations {
 
     data.setGrantType(grantType);
 
-    GrantToBusinessSpec grantToBusinessSpec = new GrantToBusinessSpec();
+    AudienceGrantRelationsAddGrantToBusinessSpec grantToBusinessSpec =
+        new AudienceGrantRelationsAddGrantToBusinessSpec();
     grantToBusinessSpec.setGrantBusinessId(grantBusinessId);
     grantToBusinessSpec.setGrantScopeType(grantScopeType);
     GrantBusinessPermission grantBusinessPermission = new GrantBusinessPermission();
     grantBusinessPermission.setGrantPermissionTypeList(grantPermissionTypeList);
     grantToBusinessSpec.setGrantBusinessPermission(grantBusinessPermission);
-    GrantSpec grantSpec = new GrantSpec();
+    AudienceGrantRelationsAddGrantSpec grantSpec = new AudienceGrantRelationsAddGrantSpec();
     grantSpec.setGrantToBusinessSpec(grantToBusinessSpec);
     data.setGrantSpec(grantSpec);
 

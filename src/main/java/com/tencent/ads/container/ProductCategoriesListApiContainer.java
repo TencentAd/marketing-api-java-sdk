@@ -31,16 +31,29 @@ public class ProductCategoriesListApiContainer extends ApiContainer {
    *
    * @param accountId (required)
    * @param productCatalogId (required)
+   * @param page (required)
+   * @param pageSize (required)
+   * @param level (optional)
+   * @param categoryId (optional)
+   * @param categoryName (optional)
    * @param fields 返回参数的字段列表 (optional)
    * @return ProductCategoriesListGetResponse
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
   public ProductCategoriesListGetResponseData productCategoriesListGet(
-      Long accountId, Long productCatalogId, List<String> fields)
+      Long accountId,
+      Long productCatalogId,
+      Long page,
+      Long pageSize,
+      Long level,
+      Long categoryId,
+      String categoryName,
+      List<String> fields)
       throws ApiException, TencentAdsResponseException {
     ProductCategoriesListGetResponse resp =
-        api.productCategoriesListGet(accountId, productCatalogId, fields);
+        api.productCategoriesListGet(
+            accountId, productCatalogId, page, pageSize, level, categoryId, categoryName, fields);
     handleResponse(gson.toJson(resp));
     return resp.getData();
   }

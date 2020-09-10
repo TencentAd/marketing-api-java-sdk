@@ -16,31 +16,41 @@ import com.google.gson.Gson;
 import com.google.gson.annotations.SerializedName;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Objects;
 
-/** 人群授权信息 */
-@ApiModel(description = "人群授权信息")
-public class GrantSpec {
-  @SerializedName("grant_to_business_spec")
-  private GrantToBusinessSpec grantToBusinessSpec = null;
+/** 调价设置内容 */
+@ApiModel(description = "调价设置内容")
+public class BidAdjustment {
+  @SerializedName("site_set_package")
+  private List<SiteSetPackageStruct> siteSetPackage = null;
 
-  public GrantSpec grantToBusinessSpec(GrantToBusinessSpec grantToBusinessSpec) {
-    this.grantToBusinessSpec = grantToBusinessSpec;
+  public BidAdjustment siteSetPackage(List<SiteSetPackageStruct> siteSetPackage) {
+    this.siteSetPackage = siteSetPackage;
+    return this;
+  }
+
+  public BidAdjustment addSiteSetPackageItem(SiteSetPackageStruct siteSetPackageItem) {
+    if (this.siteSetPackage == null) {
+      this.siteSetPackage = new ArrayList<SiteSetPackageStruct>();
+    }
+    this.siteSetPackage.add(siteSetPackageItem);
     return this;
   }
 
   /**
-   * Get grantToBusinessSpec
+   * Get siteSetPackage
    *
-   * @return grantToBusinessSpec
+   * @return siteSetPackage
    */
   @ApiModelProperty(value = "")
-  public GrantToBusinessSpec getGrantToBusinessSpec() {
-    return grantToBusinessSpec;
+  public List<SiteSetPackageStruct> getSiteSetPackage() {
+    return siteSetPackage;
   }
 
-  public void setGrantToBusinessSpec(GrantToBusinessSpec grantToBusinessSpec) {
-    this.grantToBusinessSpec = grantToBusinessSpec;
+  public void setSiteSetPackage(List<SiteSetPackageStruct> siteSetPackage) {
+    this.siteSetPackage = siteSetPackage;
   }
 
   @Override
@@ -51,13 +61,13 @@ public class GrantSpec {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    GrantSpec grantSpec = (GrantSpec) o;
-    return Objects.equals(this.grantToBusinessSpec, grantSpec.grantToBusinessSpec);
+    BidAdjustment bidAdjustment = (BidAdjustment) o;
+    return Objects.equals(this.siteSetPackage, bidAdjustment.siteSetPackage);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(grantToBusinessSpec);
+    return Objects.hash(siteSetPackage);
   }
 
   @Override

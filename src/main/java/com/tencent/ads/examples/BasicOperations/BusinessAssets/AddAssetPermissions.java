@@ -21,9 +21,8 @@ public class AddAssetPermissions {
   public List<Long> licensingAccountIdList = Arrays.asList(0L);
   public AssetPermissionsAddRequest data = new AssetPermissionsAddRequest();
   public Long accountId = null;
-  public AssetType assetType = AssetType.ASSET_TYPE_CANVAS_WECHAT;
-  public AssetPermissionGrantType assetPermissionGrantType =
-      AssetPermissionGrantType.ASSET_PERMISSION_GRANT_TYPE_ASSET;
+  public AssetType assetType = AssetType.CANVAS_WECHAT;
+  public AssetPermissionGrantType assetPermissionGrantType = AssetPermissionGrantType.ASSET;
   public Long assetId = null;
 
   public void init() {

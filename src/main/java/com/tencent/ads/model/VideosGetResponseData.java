@@ -25,7 +25,7 @@ public class VideosGetResponseData {
   private List<VideosGetListStruct> list = null;
 
   @SerializedName("page_info")
-  private Conf pageInfo = null;
+  private ConfPageSize500 pageInfo = null;
 
   public VideosGetResponseData list(List<VideosGetListStruct> list) {
     this.list = list;
@@ -54,7 +54,7 @@ public class VideosGetResponseData {
     this.list = list;
   }
 
-  public VideosGetResponseData pageInfo(Conf pageInfo) {
+  public VideosGetResponseData pageInfo(ConfPageSize500 pageInfo) {
     this.pageInfo = pageInfo;
     return this;
   }
@@ -65,11 +65,11 @@ public class VideosGetResponseData {
    * @return pageInfo
    */
   @ApiModelProperty(value = "")
-  public Conf getPageInfo() {
+  public ConfPageSize500 getPageInfo() {
     return pageInfo;
   }
 
-  public void setPageInfo(Conf pageInfo) {
+  public void setPageInfo(ConfPageSize500 pageInfo) {
     this.pageInfo = pageInfo;
   }
 

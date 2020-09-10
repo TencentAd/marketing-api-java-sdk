@@ -25,7 +25,7 @@ public class InterestTargetingTagSpec {
   private TargetingTagQueryMode queryMode = null;
 
   @SerializedName("query_spec")
-  private QuerySpec querySpec = null;
+  private TargetingTagsGetQuerySpec querySpec = null;
 
   public InterestTargetingTagSpec queryMode(TargetingTagQueryMode queryMode) {
     this.queryMode = queryMode;
@@ -46,7 +46,7 @@ public class InterestTargetingTagSpec {
     this.queryMode = queryMode;
   }
 
-  public InterestTargetingTagSpec querySpec(QuerySpec querySpec) {
+  public InterestTargetingTagSpec querySpec(TargetingTagsGetQuerySpec querySpec) {
     this.querySpec = querySpec;
     return this;
   }
@@ -57,11 +57,11 @@ public class InterestTargetingTagSpec {
    * @return querySpec
    */
   @ApiModelProperty(value = "")
-  public QuerySpec getQuerySpec() {
+  public TargetingTagsGetQuerySpec getQuerySpec() {
     return querySpec;
   }
 
-  public void setQuerySpec(QuerySpec querySpec) {
+  public void setQuerySpec(TargetingTagsGetQuerySpec querySpec) {
     this.querySpec = querySpec;
   }
 

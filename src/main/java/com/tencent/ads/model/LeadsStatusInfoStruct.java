@@ -28,7 +28,10 @@ public class LeadsStatusInfoStruct {
   private LeadCluesLeadsConvertType leadsConvertType = null;
 
   @SerializedName("leads_ineffect_reason")
-  private String leadsIneffectReason = null;
+  private LeadCluesLeadsIneffectReason leadsIneffectReason = null;
+
+  @SerializedName("leads_intention_score")
+  private LeadCluesLeadsIntentionScore leadsIntentionScore = null;
 
   public LeadsStatusInfoStruct leadsId(Long leadsId) {
     this.leadsId = leadsId;
@@ -68,7 +71,8 @@ public class LeadsStatusInfoStruct {
     this.leadsConvertType = leadsConvertType;
   }
 
-  public LeadsStatusInfoStruct leadsIneffectReason(String leadsIneffectReason) {
+  public LeadsStatusInfoStruct leadsIneffectReason(
+      LeadCluesLeadsIneffectReason leadsIneffectReason) {
     this.leadsIneffectReason = leadsIneffectReason;
     return this;
   }
@@ -79,12 +83,32 @@ public class LeadsStatusInfoStruct {
    * @return leadsIneffectReason
    */
   @ApiModelProperty(value = "")
-  public String getLeadsIneffectReason() {
+  public LeadCluesLeadsIneffectReason getLeadsIneffectReason() {
     return leadsIneffectReason;
   }
 
-  public void setLeadsIneffectReason(String leadsIneffectReason) {
+  public void setLeadsIneffectReason(LeadCluesLeadsIneffectReason leadsIneffectReason) {
     this.leadsIneffectReason = leadsIneffectReason;
+  }
+
+  public LeadsStatusInfoStruct leadsIntentionScore(
+      LeadCluesLeadsIntentionScore leadsIntentionScore) {
+    this.leadsIntentionScore = leadsIntentionScore;
+    return this;
+  }
+
+  /**
+   * Get leadsIntentionScore
+   *
+   * @return leadsIntentionScore
+   */
+  @ApiModelProperty(value = "")
+  public LeadCluesLeadsIntentionScore getLeadsIntentionScore() {
+    return leadsIntentionScore;
+  }
+
+  public void setLeadsIntentionScore(LeadCluesLeadsIntentionScore leadsIntentionScore) {
+    this.leadsIntentionScore = leadsIntentionScore;
   }
 
   @Override
@@ -98,12 +122,13 @@ public class LeadsStatusInfoStruct {
     LeadsStatusInfoStruct leadsStatusInfoStruct = (LeadsStatusInfoStruct) o;
     return Objects.equals(this.leadsId, leadsStatusInfoStruct.leadsId)
         && Objects.equals(this.leadsConvertType, leadsStatusInfoStruct.leadsConvertType)
-        && Objects.equals(this.leadsIneffectReason, leadsStatusInfoStruct.leadsIneffectReason);
+        && Objects.equals(this.leadsIneffectReason, leadsStatusInfoStruct.leadsIneffectReason)
+        && Objects.equals(this.leadsIntentionScore, leadsStatusInfoStruct.leadsIntentionScore);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(leadsId, leadsConvertType, leadsIneffectReason);
+    return Objects.hash(leadsId, leadsConvertType, leadsIneffectReason, leadsIntentionScore);
   }
 
   @Override

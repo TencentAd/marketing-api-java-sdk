@@ -42,6 +42,12 @@ public class AdcreativesUpdateRequest {
   @SerializedName("link_page_spec")
   private LinkPageSpec linkPageSpec = null;
 
+  @SerializedName("conversion_data_type")
+  private ConversionDataType conversionDataType = null;
+
+  @SerializedName("conversion_target_type")
+  private ConversionTargetType conversionTargetType = null;
+
   @SerializedName("qq_mini_game_tracking_query_string")
   private String qqMiniGameTrackingQueryString = null;
 
@@ -92,6 +98,9 @@ public class AdcreativesUpdateRequest {
 
   @SerializedName("feeds_video_comment_switch")
   private Boolean feedsVideoCommentSwitch = null;
+
+  @SerializedName("floating_zone")
+  private FloatingZone floatingZone = null;
 
   @SerializedName("account_id")
   private Long accountId = null;
@@ -230,6 +239,44 @@ public class AdcreativesUpdateRequest {
 
   public void setLinkPageSpec(LinkPageSpec linkPageSpec) {
     this.linkPageSpec = linkPageSpec;
+  }
+
+  public AdcreativesUpdateRequest conversionDataType(ConversionDataType conversionDataType) {
+    this.conversionDataType = conversionDataType;
+    return this;
+  }
+
+  /**
+   * Get conversionDataType
+   *
+   * @return conversionDataType
+   */
+  @ApiModelProperty(value = "")
+  public ConversionDataType getConversionDataType() {
+    return conversionDataType;
+  }
+
+  public void setConversionDataType(ConversionDataType conversionDataType) {
+    this.conversionDataType = conversionDataType;
+  }
+
+  public AdcreativesUpdateRequest conversionTargetType(ConversionTargetType conversionTargetType) {
+    this.conversionTargetType = conversionTargetType;
+    return this;
+  }
+
+  /**
+   * Get conversionTargetType
+   *
+   * @return conversionTargetType
+   */
+  @ApiModelProperty(value = "")
+  public ConversionTargetType getConversionTargetType() {
+    return conversionTargetType;
+  }
+
+  public void setConversionTargetType(ConversionTargetType conversionTargetType) {
+    this.conversionTargetType = conversionTargetType;
   }
 
   public AdcreativesUpdateRequest qqMiniGameTrackingQueryString(
@@ -574,6 +621,25 @@ public class AdcreativesUpdateRequest {
     this.feedsVideoCommentSwitch = feedsVideoCommentSwitch;
   }
 
+  public AdcreativesUpdateRequest floatingZone(FloatingZone floatingZone) {
+    this.floatingZone = floatingZone;
+    return this;
+  }
+
+  /**
+   * Get floatingZone
+   *
+   * @return floatingZone
+   */
+  @ApiModelProperty(value = "")
+  public FloatingZone getFloatingZone() {
+    return floatingZone;
+  }
+
+  public void setFloatingZone(FloatingZone floatingZone) {
+    this.floatingZone = floatingZone;
+  }
+
   public AdcreativesUpdateRequest accountId(Long accountId) {
     this.accountId = accountId;
     return this;
@@ -629,6 +695,8 @@ public class AdcreativesUpdateRequest {
         && Objects.equals(this.linkPageType, adcreativesUpdateRequest.linkPageType)
         && Objects.equals(this.linkNameType, adcreativesUpdateRequest.linkNameType)
         && Objects.equals(this.linkPageSpec, adcreativesUpdateRequest.linkPageSpec)
+        && Objects.equals(this.conversionDataType, adcreativesUpdateRequest.conversionDataType)
+        && Objects.equals(this.conversionTargetType, adcreativesUpdateRequest.conversionTargetType)
         && Objects.equals(
             this.qqMiniGameTrackingQueryString,
             adcreativesUpdateRequest.qqMiniGameTrackingQueryString)
@@ -653,6 +721,7 @@ public class AdcreativesUpdateRequest {
         && Objects.equals(this.videoEndPage, adcreativesUpdateRequest.videoEndPage)
         && Objects.equals(
             this.feedsVideoCommentSwitch, adcreativesUpdateRequest.feedsVideoCommentSwitch)
+        && Objects.equals(this.floatingZone, adcreativesUpdateRequest.floatingZone)
         && Objects.equals(this.accountId, adcreativesUpdateRequest.accountId)
         && Objects.equals(this.adcreativeElements, adcreativesUpdateRequest.adcreativeElements);
   }
@@ -667,6 +736,8 @@ public class AdcreativesUpdateRequest {
         linkPageType,
         linkNameType,
         linkPageSpec,
+        conversionDataType,
+        conversionTargetType,
         qqMiniGameTrackingQueryString,
         deepLinkUrl,
         androidDeepLinkAppId,
@@ -684,6 +755,7 @@ public class AdcreativesUpdateRequest {
         playablePageMaterialId,
         videoEndPage,
         feedsVideoCommentSwitch,
+        floatingZone,
         accountId,
         adcreativeElements);
   }

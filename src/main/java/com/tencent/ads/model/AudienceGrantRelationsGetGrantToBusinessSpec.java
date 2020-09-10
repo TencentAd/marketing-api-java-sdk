@@ -20,7 +20,7 @@ import java.util.Objects;
 
 /** 授权给商务管家账号认领的账号的授权信息 */
 @ApiModel(description = "授权给商务管家账号认领的账号的授权信息")
-public class GrantToBusinessSpec {
+public class AudienceGrantRelationsGetGrantToBusinessSpec {
   @SerializedName("grant_business_id")
   private Long grantBusinessId = null;
 
@@ -31,9 +31,9 @@ public class GrantToBusinessSpec {
   private GrantBusinessPermission grantBusinessPermission = null;
 
   @SerializedName("grant_account_permission")
-  private GrantAccountPermission grantAccountPermission = null;
+  private AudienceGrantRelationsGetGrantAccountPermission grantAccountPermission = null;
 
-  public GrantToBusinessSpec grantBusinessId(Long grantBusinessId) {
+  public AudienceGrantRelationsGetGrantToBusinessSpec grantBusinessId(Long grantBusinessId) {
     this.grantBusinessId = grantBusinessId;
     return this;
   }
@@ -52,7 +52,8 @@ public class GrantToBusinessSpec {
     this.grantBusinessId = grantBusinessId;
   }
 
-  public GrantToBusinessSpec grantScopeType(AudienceGrantScopeType grantScopeType) {
+  public AudienceGrantRelationsGetGrantToBusinessSpec grantScopeType(
+      AudienceGrantScopeType grantScopeType) {
     this.grantScopeType = grantScopeType;
     return this;
   }
@@ -71,7 +72,7 @@ public class GrantToBusinessSpec {
     this.grantScopeType = grantScopeType;
   }
 
-  public GrantToBusinessSpec grantBusinessPermission(
+  public AudienceGrantRelationsGetGrantToBusinessSpec grantBusinessPermission(
       GrantBusinessPermission grantBusinessPermission) {
     this.grantBusinessPermission = grantBusinessPermission;
     return this;
@@ -91,7 +92,8 @@ public class GrantToBusinessSpec {
     this.grantBusinessPermission = grantBusinessPermission;
   }
 
-  public GrantToBusinessSpec grantAccountPermission(GrantAccountPermission grantAccountPermission) {
+  public AudienceGrantRelationsGetGrantToBusinessSpec grantAccountPermission(
+      AudienceGrantRelationsGetGrantAccountPermission grantAccountPermission) {
     this.grantAccountPermission = grantAccountPermission;
     return this;
   }
@@ -102,11 +104,12 @@ public class GrantToBusinessSpec {
    * @return grantAccountPermission
    */
   @ApiModelProperty(value = "")
-  public GrantAccountPermission getGrantAccountPermission() {
+  public AudienceGrantRelationsGetGrantAccountPermission getGrantAccountPermission() {
     return grantAccountPermission;
   }
 
-  public void setGrantAccountPermission(GrantAccountPermission grantAccountPermission) {
+  public void setGrantAccountPermission(
+      AudienceGrantRelationsGetGrantAccountPermission grantAccountPermission) {
     this.grantAccountPermission = grantAccountPermission;
   }
 
@@ -118,11 +121,18 @@ public class GrantToBusinessSpec {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    GrantToBusinessSpec grantToBusinessSpec = (GrantToBusinessSpec) o;
-    return Objects.equals(this.grantBusinessId, grantToBusinessSpec.grantBusinessId)
-        && Objects.equals(this.grantScopeType, grantToBusinessSpec.grantScopeType)
-        && Objects.equals(this.grantBusinessPermission, grantToBusinessSpec.grantBusinessPermission)
-        && Objects.equals(this.grantAccountPermission, grantToBusinessSpec.grantAccountPermission);
+    AudienceGrantRelationsGetGrantToBusinessSpec audienceGrantRelationsGetGrantToBusinessSpec =
+        (AudienceGrantRelationsGetGrantToBusinessSpec) o;
+    return Objects.equals(
+            this.grantBusinessId, audienceGrantRelationsGetGrantToBusinessSpec.grantBusinessId)
+        && Objects.equals(
+            this.grantScopeType, audienceGrantRelationsGetGrantToBusinessSpec.grantScopeType)
+        && Objects.equals(
+            this.grantBusinessPermission,
+            audienceGrantRelationsGetGrantToBusinessSpec.grantBusinessPermission)
+        && Objects.equals(
+            this.grantAccountPermission,
+            audienceGrantRelationsGetGrantToBusinessSpec.grantAccountPermission);
   }
 
   @Override

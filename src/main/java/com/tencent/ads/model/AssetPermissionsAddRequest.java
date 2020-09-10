@@ -33,6 +33,9 @@ public class AssetPermissionsAddRequest {
   @SerializedName("licensing_account_id_list")
   private List<Long> licensingAccountIdList = null;
 
+  @SerializedName("licensing_id_type")
+  private AssetAccountType licensingIdType = null;
+
   public AssetPermissionsAddRequest accountId(Long accountId) {
     this.accountId = accountId;
     return this;
@@ -127,6 +130,25 @@ public class AssetPermissionsAddRequest {
     this.licensingAccountIdList = licensingAccountIdList;
   }
 
+  public AssetPermissionsAddRequest licensingIdType(AssetAccountType licensingIdType) {
+    this.licensingIdType = licensingIdType;
+    return this;
+  }
+
+  /**
+   * Get licensingIdType
+   *
+   * @return licensingIdType
+   */
+  @ApiModelProperty(value = "")
+  public AssetAccountType getLicensingIdType() {
+    return licensingIdType;
+  }
+
+  public void setLicensingIdType(AssetAccountType licensingIdType) {
+    this.licensingIdType = licensingIdType;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -140,12 +162,14 @@ public class AssetPermissionsAddRequest {
         && Objects.equals(this.assetType, assetPermissionsAddRequest.assetType)
         && Objects.equals(this.assetPermissionSpec, assetPermissionsAddRequest.assetPermissionSpec)
         && Objects.equals(
-            this.licensingAccountIdList, assetPermissionsAddRequest.licensingAccountIdList);
+            this.licensingAccountIdList, assetPermissionsAddRequest.licensingAccountIdList)
+        && Objects.equals(this.licensingIdType, assetPermissionsAddRequest.licensingIdType);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(accountId, assetType, assetPermissionSpec, licensingAccountIdList);
+    return Objects.hash(
+        accountId, assetType, assetPermissionSpec, licensingAccountIdList, licensingIdType);
   }
 
   @Override

@@ -5,7 +5,6 @@ import com.tencent.ads.TencentAds;
 import com.tencent.ads.exception.TencentAdsResponseException;
 import com.tencent.ads.exception.TencentAdsSDKException;
 import com.tencent.ads.model.*;
-import com.tencent.ads.model.AsyncReportFilesGetResponse;
 import java.util.List;
 
 public class GetAsyncReportFiles {
@@ -33,8 +32,8 @@ public class GetAsyncReportFiles {
 
   public void buildParams() {}
 
-  public AsyncReportFilesGetResponse getAsyncReportFiles() throws Exception {
-    AsyncReportFilesGetResponse response =
+  public String getAsyncReportFiles() throws Exception {
+    String response =
         tencentAds.asyncReportFiles().asyncReportFilesGet(accountId, taskId, fileId, fields);
     return response;
   }
@@ -43,7 +42,7 @@ public class GetAsyncReportFiles {
     try {
       GetAsyncReportFiles getAsyncReportFiles = new GetAsyncReportFiles();
       getAsyncReportFiles.init();
-      AsyncReportFilesGetResponse response = getAsyncReportFiles.getAsyncReportFiles();
+      String response = getAsyncReportFiles.getAsyncReportFiles();
     } catch (TencentAdsResponseException e) {
       e.printStackTrace();
     } catch (TencentAdsSDKException e) {

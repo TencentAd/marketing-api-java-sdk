@@ -143,6 +143,9 @@ public class ReadTargetingSettingForAdgroup {
   @SerializedName("mini_game_qq_status")
   private List<String> miniGameQqStatus = null;
 
+  @SerializedName("excluded_converted_audience")
+  private ExcludedConvertedAudience excludedConvertedAudience = null;
+
   public ReadTargetingSettingForAdgroup age(List<AgeStruct> age) {
     this.age = age;
     return this;
@@ -1188,6 +1191,26 @@ public class ReadTargetingSettingForAdgroup {
     this.miniGameQqStatus = miniGameQqStatus;
   }
 
+  public ReadTargetingSettingForAdgroup excludedConvertedAudience(
+      ExcludedConvertedAudience excludedConvertedAudience) {
+    this.excludedConvertedAudience = excludedConvertedAudience;
+    return this;
+  }
+
+  /**
+   * Get excludedConvertedAudience
+   *
+   * @return excludedConvertedAudience
+   */
+  @ApiModelProperty(value = "")
+  public ExcludedConvertedAudience getExcludedConvertedAudience() {
+    return excludedConvertedAudience;
+  }
+
+  public void setExcludedConvertedAudience(ExcludedConvertedAudience excludedConvertedAudience) {
+    this.excludedConvertedAudience = excludedConvertedAudience;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -1250,7 +1273,10 @@ public class ReadTargetingSettingForAdgroup {
             this.deprecatedExcludedCustomAudience,
             readTargetingSettingForAdgroup.deprecatedExcludedCustomAudience)
         && Objects.equals(this.deprecatedRegion, readTargetingSettingForAdgroup.deprecatedRegion)
-        && Objects.equals(this.miniGameQqStatus, readTargetingSettingForAdgroup.miniGameQqStatus);
+        && Objects.equals(this.miniGameQqStatus, readTargetingSettingForAdgroup.miniGameQqStatus)
+        && Objects.equals(
+            this.excludedConvertedAudience,
+            readTargetingSettingForAdgroup.excludedConvertedAudience);
   }
 
   @Override
@@ -1295,7 +1321,8 @@ public class ReadTargetingSettingForAdgroup {
         deprecatedCustomAudience,
         deprecatedExcludedCustomAudience,
         deprecatedRegion,
-        miniGameQqStatus);
+        miniGameQqStatus,
+        excludedConvertedAudience);
   }
 
   @Override

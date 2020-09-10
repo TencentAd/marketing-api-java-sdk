@@ -25,7 +25,7 @@ public class ImagesGetResponseData {
   private List<ImagesGetListStruct> list = null;
 
   @SerializedName("page_info")
-  private Conf pageInfo = null;
+  private ConfPageSize500 pageInfo = null;
 
   public ImagesGetResponseData list(List<ImagesGetListStruct> list) {
     this.list = list;
@@ -54,7 +54,7 @@ public class ImagesGetResponseData {
     this.list = list;
   }
 
-  public ImagesGetResponseData pageInfo(Conf pageInfo) {
+  public ImagesGetResponseData pageInfo(ConfPageSize500 pageInfo) {
     this.pageInfo = pageInfo;
     return this;
   }
@@ -65,11 +65,11 @@ public class ImagesGetResponseData {
    * @return pageInfo
    */
   @ApiModelProperty(value = "")
-  public Conf getPageInfo() {
+  public ConfPageSize500 getPageInfo() {
     return pageInfo;
   }
 
-  public void setPageInfo(Conf pageInfo) {
+  public void setPageInfo(ConfPageSize500 pageInfo) {
     this.pageInfo = pageInfo;
   }
 

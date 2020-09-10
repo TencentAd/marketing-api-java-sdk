@@ -630,6 +630,18 @@ public class TargetingTagReportsGetListStruct {
   @SerializedName("web_order_amount")
   private Long webOrderAmount = null;
 
+  @SerializedName("cre_web_cost")
+  private Long creWebCost = null;
+
+  @SerializedName("cre_app_cost")
+  private Long creAppCost = null;
+
+  @SerializedName("pre_cre_web_cost")
+  private Long preCreWebCost = null;
+
+  @SerializedName("pre_cre_app_cost")
+  private Long preCreAppCost = null;
+
   @SerializedName("account_id")
   private Long accountId = null;
 
@@ -755,6 +767,39 @@ public class TargetingTagReportsGetListStruct {
 
   @SerializedName("add_wishlist_count")
   private Long addWishlistCount = null;
+
+  @SerializedName("effect_leads_purchase_cost")
+  private Long effectLeadsPurchaseCost = null;
+
+  @SerializedName("income_roi_1")
+  private Double incomeRoi1 = null;
+
+  @SerializedName("income_roi_3")
+  private Double incomeRoi3 = null;
+
+  @SerializedName("income_roi_7")
+  private Double incomeRoi7 = null;
+
+  @SerializedName("income_roi_14")
+  private Double incomeRoi14 = null;
+
+  @SerializedName("first_day_pay_count")
+  private Long firstDayPayCount = null;
+
+  @SerializedName("first_day_pay_cost")
+  private Long firstDayPayCost = null;
+
+  @SerializedName("first_day_first_pay_cost")
+  private Long firstDayFirstPayCost = null;
+
+  @SerializedName("first_day_first_pay_count")
+  private Long firstDayFirstPayCount = null;
+
+  @SerializedName("first_day_pay_amount")
+  private Long firstDayPayAmount = null;
+
+  @SerializedName("first_day_first_pay_rate")
+  private Double firstDayFirstPayRate = null;
 
   public TargetingTagReportsGetListStruct date(String date) {
     this.date = date;
@@ -4625,6 +4670,82 @@ public class TargetingTagReportsGetListStruct {
     this.webOrderAmount = webOrderAmount;
   }
 
+  public TargetingTagReportsGetListStruct creWebCost(Long creWebCost) {
+    this.creWebCost = creWebCost;
+    return this;
+  }
+
+  /**
+   * Get creWebCost
+   *
+   * @return creWebCost
+   */
+  @ApiModelProperty(value = "")
+  public Long getCreWebCost() {
+    return creWebCost;
+  }
+
+  public void setCreWebCost(Long creWebCost) {
+    this.creWebCost = creWebCost;
+  }
+
+  public TargetingTagReportsGetListStruct creAppCost(Long creAppCost) {
+    this.creAppCost = creAppCost;
+    return this;
+  }
+
+  /**
+   * Get creAppCost
+   *
+   * @return creAppCost
+   */
+  @ApiModelProperty(value = "")
+  public Long getCreAppCost() {
+    return creAppCost;
+  }
+
+  public void setCreAppCost(Long creAppCost) {
+    this.creAppCost = creAppCost;
+  }
+
+  public TargetingTagReportsGetListStruct preCreWebCost(Long preCreWebCost) {
+    this.preCreWebCost = preCreWebCost;
+    return this;
+  }
+
+  /**
+   * Get preCreWebCost
+   *
+   * @return preCreWebCost
+   */
+  @ApiModelProperty(value = "")
+  public Long getPreCreWebCost() {
+    return preCreWebCost;
+  }
+
+  public void setPreCreWebCost(Long preCreWebCost) {
+    this.preCreWebCost = preCreWebCost;
+  }
+
+  public TargetingTagReportsGetListStruct preCreAppCost(Long preCreAppCost) {
+    this.preCreAppCost = preCreAppCost;
+    return this;
+  }
+
+  /**
+   * Get preCreAppCost
+   *
+   * @return preCreAppCost
+   */
+  @ApiModelProperty(value = "")
+  public Long getPreCreAppCost() {
+    return preCreAppCost;
+  }
+
+  public void setPreCreAppCost(Long preCreAppCost) {
+    this.preCreAppCost = preCreAppCost;
+  }
+
   public TargetingTagReportsGetListStruct accountId(Long accountId) {
     this.accountId = accountId;
     return this;
@@ -5424,6 +5545,215 @@ public class TargetingTagReportsGetListStruct {
     this.addWishlistCount = addWishlistCount;
   }
 
+  public TargetingTagReportsGetListStruct effectLeadsPurchaseCost(Long effectLeadsPurchaseCost) {
+    this.effectLeadsPurchaseCost = effectLeadsPurchaseCost;
+    return this;
+  }
+
+  /**
+   * Get effectLeadsPurchaseCost
+   *
+   * @return effectLeadsPurchaseCost
+   */
+  @ApiModelProperty(value = "")
+  public Long getEffectLeadsPurchaseCost() {
+    return effectLeadsPurchaseCost;
+  }
+
+  public void setEffectLeadsPurchaseCost(Long effectLeadsPurchaseCost) {
+    this.effectLeadsPurchaseCost = effectLeadsPurchaseCost;
+  }
+
+  public TargetingTagReportsGetListStruct incomeRoi1(Double incomeRoi1) {
+    this.incomeRoi1 = incomeRoi1;
+    return this;
+  }
+
+  /**
+   * Get incomeRoi1
+   *
+   * @return incomeRoi1
+   */
+  @ApiModelProperty(value = "")
+  public Double getIncomeRoi1() {
+    return incomeRoi1;
+  }
+
+  public void setIncomeRoi1(Double incomeRoi1) {
+    this.incomeRoi1 = incomeRoi1;
+  }
+
+  public TargetingTagReportsGetListStruct incomeRoi3(Double incomeRoi3) {
+    this.incomeRoi3 = incomeRoi3;
+    return this;
+  }
+
+  /**
+   * Get incomeRoi3
+   *
+   * @return incomeRoi3
+   */
+  @ApiModelProperty(value = "")
+  public Double getIncomeRoi3() {
+    return incomeRoi3;
+  }
+
+  public void setIncomeRoi3(Double incomeRoi3) {
+    this.incomeRoi3 = incomeRoi3;
+  }
+
+  public TargetingTagReportsGetListStruct incomeRoi7(Double incomeRoi7) {
+    this.incomeRoi7 = incomeRoi7;
+    return this;
+  }
+
+  /**
+   * Get incomeRoi7
+   *
+   * @return incomeRoi7
+   */
+  @ApiModelProperty(value = "")
+  public Double getIncomeRoi7() {
+    return incomeRoi7;
+  }
+
+  public void setIncomeRoi7(Double incomeRoi7) {
+    this.incomeRoi7 = incomeRoi7;
+  }
+
+  public TargetingTagReportsGetListStruct incomeRoi14(Double incomeRoi14) {
+    this.incomeRoi14 = incomeRoi14;
+    return this;
+  }
+
+  /**
+   * Get incomeRoi14
+   *
+   * @return incomeRoi14
+   */
+  @ApiModelProperty(value = "")
+  public Double getIncomeRoi14() {
+    return incomeRoi14;
+  }
+
+  public void setIncomeRoi14(Double incomeRoi14) {
+    this.incomeRoi14 = incomeRoi14;
+  }
+
+  public TargetingTagReportsGetListStruct firstDayPayCount(Long firstDayPayCount) {
+    this.firstDayPayCount = firstDayPayCount;
+    return this;
+  }
+
+  /**
+   * Get firstDayPayCount
+   *
+   * @return firstDayPayCount
+   */
+  @ApiModelProperty(value = "")
+  public Long getFirstDayPayCount() {
+    return firstDayPayCount;
+  }
+
+  public void setFirstDayPayCount(Long firstDayPayCount) {
+    this.firstDayPayCount = firstDayPayCount;
+  }
+
+  public TargetingTagReportsGetListStruct firstDayPayCost(Long firstDayPayCost) {
+    this.firstDayPayCost = firstDayPayCost;
+    return this;
+  }
+
+  /**
+   * Get firstDayPayCost
+   *
+   * @return firstDayPayCost
+   */
+  @ApiModelProperty(value = "")
+  public Long getFirstDayPayCost() {
+    return firstDayPayCost;
+  }
+
+  public void setFirstDayPayCost(Long firstDayPayCost) {
+    this.firstDayPayCost = firstDayPayCost;
+  }
+
+  public TargetingTagReportsGetListStruct firstDayFirstPayCost(Long firstDayFirstPayCost) {
+    this.firstDayFirstPayCost = firstDayFirstPayCost;
+    return this;
+  }
+
+  /**
+   * Get firstDayFirstPayCost
+   *
+   * @return firstDayFirstPayCost
+   */
+  @ApiModelProperty(value = "")
+  public Long getFirstDayFirstPayCost() {
+    return firstDayFirstPayCost;
+  }
+
+  public void setFirstDayFirstPayCost(Long firstDayFirstPayCost) {
+    this.firstDayFirstPayCost = firstDayFirstPayCost;
+  }
+
+  public TargetingTagReportsGetListStruct firstDayFirstPayCount(Long firstDayFirstPayCount) {
+    this.firstDayFirstPayCount = firstDayFirstPayCount;
+    return this;
+  }
+
+  /**
+   * Get firstDayFirstPayCount
+   *
+   * @return firstDayFirstPayCount
+   */
+  @ApiModelProperty(value = "")
+  public Long getFirstDayFirstPayCount() {
+    return firstDayFirstPayCount;
+  }
+
+  public void setFirstDayFirstPayCount(Long firstDayFirstPayCount) {
+    this.firstDayFirstPayCount = firstDayFirstPayCount;
+  }
+
+  public TargetingTagReportsGetListStruct firstDayPayAmount(Long firstDayPayAmount) {
+    this.firstDayPayAmount = firstDayPayAmount;
+    return this;
+  }
+
+  /**
+   * Get firstDayPayAmount
+   *
+   * @return firstDayPayAmount
+   */
+  @ApiModelProperty(value = "")
+  public Long getFirstDayPayAmount() {
+    return firstDayPayAmount;
+  }
+
+  public void setFirstDayPayAmount(Long firstDayPayAmount) {
+    this.firstDayPayAmount = firstDayPayAmount;
+  }
+
+  public TargetingTagReportsGetListStruct firstDayFirstPayRate(Double firstDayFirstPayRate) {
+    this.firstDayFirstPayRate = firstDayFirstPayRate;
+    return this;
+  }
+
+  /**
+   * Get firstDayFirstPayRate
+   *
+   * @return firstDayFirstPayRate
+   */
+  @ApiModelProperty(value = "")
+  public Double getFirstDayFirstPayRate() {
+    return firstDayFirstPayRate;
+  }
+
+  public void setFirstDayFirstPayRate(Double firstDayFirstPayRate) {
+    this.firstDayFirstPayRate = firstDayFirstPayRate;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -5717,6 +6047,10 @@ public class TargetingTagReportsGetListStruct {
         && Objects.equals(this.webCartAmount, targetingTagReportsGetListStruct.webCartAmount)
         && Objects.equals(this.appOrderAmount, targetingTagReportsGetListStruct.appOrderAmount)
         && Objects.equals(this.webOrderAmount, targetingTagReportsGetListStruct.webOrderAmount)
+        && Objects.equals(this.creWebCost, targetingTagReportsGetListStruct.creWebCost)
+        && Objects.equals(this.creAppCost, targetingTagReportsGetListStruct.creAppCost)
+        && Objects.equals(this.preCreWebCost, targetingTagReportsGetListStruct.preCreWebCost)
+        && Objects.equals(this.preCreAppCost, targetingTagReportsGetListStruct.preCreAppCost)
         && Objects.equals(this.accountId, targetingTagReportsGetListStruct.accountId)
         && Objects.equals(this.campaignId, targetingTagReportsGetListStruct.campaignId)
         && Objects.equals(this.adgroupId, targetingTagReportsGetListStruct.adgroupId)
@@ -5779,7 +6113,23 @@ public class TargetingTagReportsGetListStruct {
             this.firstDayOrderCount, targetingTagReportsGetListStruct.firstDayOrderCount)
         && Objects.equals(
             this.firstDayOrderAmount, targetingTagReportsGetListStruct.firstDayOrderAmount)
-        && Objects.equals(this.addWishlistCount, targetingTagReportsGetListStruct.addWishlistCount);
+        && Objects.equals(this.addWishlistCount, targetingTagReportsGetListStruct.addWishlistCount)
+        && Objects.equals(
+            this.effectLeadsPurchaseCost, targetingTagReportsGetListStruct.effectLeadsPurchaseCost)
+        && Objects.equals(this.incomeRoi1, targetingTagReportsGetListStruct.incomeRoi1)
+        && Objects.equals(this.incomeRoi3, targetingTagReportsGetListStruct.incomeRoi3)
+        && Objects.equals(this.incomeRoi7, targetingTagReportsGetListStruct.incomeRoi7)
+        && Objects.equals(this.incomeRoi14, targetingTagReportsGetListStruct.incomeRoi14)
+        && Objects.equals(this.firstDayPayCount, targetingTagReportsGetListStruct.firstDayPayCount)
+        && Objects.equals(this.firstDayPayCost, targetingTagReportsGetListStruct.firstDayPayCost)
+        && Objects.equals(
+            this.firstDayFirstPayCost, targetingTagReportsGetListStruct.firstDayFirstPayCost)
+        && Objects.equals(
+            this.firstDayFirstPayCount, targetingTagReportsGetListStruct.firstDayFirstPayCount)
+        && Objects.equals(
+            this.firstDayPayAmount, targetingTagReportsGetListStruct.firstDayPayAmount)
+        && Objects.equals(
+            this.firstDayFirstPayRate, targetingTagReportsGetListStruct.firstDayFirstPayRate);
   }
 
   @Override
@@ -5988,6 +6338,10 @@ public class TargetingTagReportsGetListStruct {
         webCartAmount,
         appOrderAmount,
         webOrderAmount,
+        creWebCost,
+        creAppCost,
+        preCreWebCost,
+        preCreAppCost,
         accountId,
         campaignId,
         adgroupId,
@@ -6029,7 +6383,18 @@ public class TargetingTagReportsGetListStruct {
         noInterestCount,
         firstDayOrderCount,
         firstDayOrderAmount,
-        addWishlistCount);
+        addWishlistCount,
+        effectLeadsPurchaseCost,
+        incomeRoi1,
+        incomeRoi3,
+        incomeRoi7,
+        incomeRoi14,
+        firstDayPayCount,
+        firstDayPayCost,
+        firstDayFirstPayCost,
+        firstDayFirstPayCount,
+        firstDayPayAmount,
+        firstDayFirstPayRate);
   }
 
   @Override

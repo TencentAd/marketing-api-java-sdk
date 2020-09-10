@@ -155,6 +155,15 @@ public class AdgroupsGetListStruct {
   @SerializedName("system_status")
   private AdgroupSysStatus systemStatus = null;
 
+  @SerializedName("bid_mode")
+  private BidMode bidMode = null;
+
+  @SerializedName("status")
+  private CalcStatus status = null;
+
+  @SerializedName("bid_adjustment")
+  private BidAdjustment bidAdjustment = null;
+
   public AdgroupsGetListStruct campaignId(Long campaignId) {
     this.campaignId = campaignId;
     return this;
@@ -1036,6 +1045,63 @@ public class AdgroupsGetListStruct {
     this.systemStatus = systemStatus;
   }
 
+  public AdgroupsGetListStruct bidMode(BidMode bidMode) {
+    this.bidMode = bidMode;
+    return this;
+  }
+
+  /**
+   * Get bidMode
+   *
+   * @return bidMode
+   */
+  @ApiModelProperty(value = "")
+  public BidMode getBidMode() {
+    return bidMode;
+  }
+
+  public void setBidMode(BidMode bidMode) {
+    this.bidMode = bidMode;
+  }
+
+  public AdgroupsGetListStruct status(CalcStatus status) {
+    this.status = status;
+    return this;
+  }
+
+  /**
+   * Get status
+   *
+   * @return status
+   */
+  @ApiModelProperty(value = "")
+  public CalcStatus getStatus() {
+    return status;
+  }
+
+  public void setStatus(CalcStatus status) {
+    this.status = status;
+  }
+
+  public AdgroupsGetListStruct bidAdjustment(BidAdjustment bidAdjustment) {
+    this.bidAdjustment = bidAdjustment;
+    return this;
+  }
+
+  /**
+   * Get bidAdjustment
+   *
+   * @return bidAdjustment
+   */
+  @ApiModelProperty(value = "")
+  public BidAdjustment getBidAdjustment() {
+    return bidAdjustment;
+  }
+
+  public void setBidAdjustment(BidAdjustment bidAdjustment) {
+    this.bidAdjustment = bidAdjustment;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -1096,7 +1162,10 @@ public class AdgroupsGetListStruct {
         && Objects.equals(
             this.androidChannelPackageAuditMessage,
             adgroupsGetListStruct.androidChannelPackageAuditMessage)
-        && Objects.equals(this.systemStatus, adgroupsGetListStruct.systemStatus);
+        && Objects.equals(this.systemStatus, adgroupsGetListStruct.systemStatus)
+        && Objects.equals(this.bidMode, adgroupsGetListStruct.bidMode)
+        && Objects.equals(this.status, adgroupsGetListStruct.status)
+        && Objects.equals(this.bidAdjustment, adgroupsGetListStruct.bidAdjustment);
   }
 
   @Override
@@ -1145,7 +1214,10 @@ public class AdgroupsGetListStruct {
         deepConversionBehaviorBid,
         deepConversionWorthRate,
         androidChannelPackageAuditMessage,
-        systemStatus);
+        systemStatus,
+        bidMode,
+        status,
+        bidAdjustment);
   }
 
   @Override

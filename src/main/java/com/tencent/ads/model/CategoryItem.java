@@ -16,6 +16,8 @@ import com.google.gson.Gson;
 import com.google.gson.annotations.SerializedName;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Objects;
 
 /** 商品类目 */
@@ -32,6 +34,9 @@ public class CategoryItem {
 
   @SerializedName("level")
   private Long level = null;
+
+  @SerializedName("category_path")
+  private List<CategoryPathsItem> categoryPath = null;
 
   public CategoryItem categoryId(Long categoryId) {
     this.categoryId = categoryId;
@@ -109,6 +114,33 @@ public class CategoryItem {
     this.level = level;
   }
 
+  public CategoryItem categoryPath(List<CategoryPathsItem> categoryPath) {
+    this.categoryPath = categoryPath;
+    return this;
+  }
+
+  public CategoryItem addCategoryPathItem(CategoryPathsItem categoryPathItem) {
+    if (this.categoryPath == null) {
+      this.categoryPath = new ArrayList<CategoryPathsItem>();
+    }
+    this.categoryPath.add(categoryPathItem);
+    return this;
+  }
+
+  /**
+   * Get categoryPath
+   *
+   * @return categoryPath
+   */
+  @ApiModelProperty(value = "")
+  public List<CategoryPathsItem> getCategoryPath() {
+    return categoryPath;
+  }
+
+  public void setCategoryPath(List<CategoryPathsItem> categoryPath) {
+    this.categoryPath = categoryPath;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -121,12 +153,13 @@ public class CategoryItem {
     return Objects.equals(this.categoryId, categoryItem.categoryId)
         && Objects.equals(this.categoryName, categoryItem.categoryName)
         && Objects.equals(this.parentCategoryId, categoryItem.parentCategoryId)
-        && Objects.equals(this.level, categoryItem.level);
+        && Objects.equals(this.level, categoryItem.level)
+        && Objects.equals(this.categoryPath, categoryItem.categoryPath);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(categoryId, categoryName, parentCategoryId, level);
+    return Objects.hash(categoryId, categoryName, parentCategoryId, level, categoryPath);
   }
 
   @Override

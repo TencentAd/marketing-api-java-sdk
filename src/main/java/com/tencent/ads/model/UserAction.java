@@ -13,6 +13,7 @@
 package com.tencent.ads.model;
 
 import com.google.gson.Gson;
+import com.google.gson.JsonObject;
 import com.google.gson.annotations.SerializedName;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
@@ -31,7 +32,7 @@ public class UserAction {
   private ActionType actionType = null;
 
   @SerializedName("action_param")
-  private String actionParam = null;
+  private JsonObject actionParam = null;
 
   @SerializedName("custom_action")
   private String customAction = null;
@@ -102,7 +103,7 @@ public class UserAction {
     this.actionType = actionType;
   }
 
-  public UserAction actionParam(String actionParam) {
+  public UserAction actionParam(JsonObject actionParam) {
     this.actionParam = actionParam;
     return this;
   }
@@ -113,11 +114,11 @@ public class UserAction {
    * @return actionParam
    */
   @ApiModelProperty(value = "")
-  public String getActionParam() {
+  public JsonObject getActionParam() {
     return actionParam;
   }
 
-  public void setActionParam(String actionParam) {
+  public void setActionParam(JsonObject actionParam) {
     this.actionParam = actionParam;
   }
 

@@ -33,7 +33,7 @@ public class XijingPageApiContainer extends ApiContainer {
   @Inject XijingPageApi api;
 
   /**
-   * 基于模板创建落地页
+   * 蹊径-基于模板创建落地页
    *
    * @param data (required)
    * @return XijingPageAddResponse
@@ -48,7 +48,7 @@ public class XijingPageApiContainer extends ApiContainer {
   }
 
   /**
-   * 送审落地页
+   * 蹊径-送审落地页
    *
    * @param data (required)
    * @return XijingPageDeleteResponse
@@ -63,7 +63,7 @@ public class XijingPageApiContainer extends ApiContainer {
   }
 
   /**
-   * 送审落地页
+   * 蹊径-送审落地页
    *
    * @param data (required)
    * @return XijingPageUpdateResponse

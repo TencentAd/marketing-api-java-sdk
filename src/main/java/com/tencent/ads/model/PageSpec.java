@@ -33,6 +33,9 @@ public class PageSpec {
   @SerializedName("mini_game_spec")
   private MiniGameSpec miniGameSpec = null;
 
+  @SerializedName("override_canvas_head_option")
+  private OverrideCanvasHeadOption overrideCanvasHeadOption = null;
+
   public PageSpec pageId(Long pageId) {
     this.pageId = pageId;
     return this;
@@ -109,6 +112,25 @@ public class PageSpec {
     this.miniGameSpec = miniGameSpec;
   }
 
+  public PageSpec overrideCanvasHeadOption(OverrideCanvasHeadOption overrideCanvasHeadOption) {
+    this.overrideCanvasHeadOption = overrideCanvasHeadOption;
+    return this;
+  }
+
+  /**
+   * Get overrideCanvasHeadOption
+   *
+   * @return overrideCanvasHeadOption
+   */
+  @ApiModelProperty(value = "")
+  public OverrideCanvasHeadOption getOverrideCanvasHeadOption() {
+    return overrideCanvasHeadOption;
+  }
+
+  public void setOverrideCanvasHeadOption(OverrideCanvasHeadOption overrideCanvasHeadOption) {
+    this.overrideCanvasHeadOption = overrideCanvasHeadOption;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -121,12 +143,13 @@ public class PageSpec {
     return Objects.equals(this.pageId, pageSpec.pageId)
         && Objects.equals(this.pageUrl, pageSpec.pageUrl)
         && Objects.equals(this.miniProgramSpec, pageSpec.miniProgramSpec)
-        && Objects.equals(this.miniGameSpec, pageSpec.miniGameSpec);
+        && Objects.equals(this.miniGameSpec, pageSpec.miniGameSpec)
+        && Objects.equals(this.overrideCanvasHeadOption, pageSpec.overrideCanvasHeadOption);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(pageId, pageUrl, miniProgramSpec, miniGameSpec);
+    return Objects.hash(pageId, pageUrl, miniProgramSpec, miniGameSpec, overrideCanvasHeadOption);
   }
 
   @Override

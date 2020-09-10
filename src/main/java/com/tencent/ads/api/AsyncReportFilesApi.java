@@ -21,7 +21,6 @@ import com.tencent.ads.Configuration;
 import com.tencent.ads.Pair;
 import com.tencent.ads.ProgressRequestBody;
 import com.tencent.ads.ProgressResponseBody;
-import com.tencent.ads.model.AsyncReportFilesGetResponse;
 import java.io.IOException;
 import java.lang.reflect.Type;
 import java.util.ArrayList;
@@ -166,14 +165,13 @@ public class AsyncReportFilesApi {
    * @param taskId (required)
    * @param fileId (required)
    * @param fields 返回参数的字段列表 (optional)
-   * @return AsyncReportFilesGetResponse
+   * @return String
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
-  public AsyncReportFilesGetResponse asyncReportFilesGet(
-      Long accountId, Long taskId, Long fileId, List<String> fields) throws ApiException {
-    ApiResponse<AsyncReportFilesGetResponse> resp =
-        asyncReportFilesGetWithHttpInfo(accountId, taskId, fileId, fields);
+  public String asyncReportFilesGet(Long accountId, Long taskId, Long fileId, List<String> fields)
+      throws ApiException {
+    ApiResponse<String> resp = asyncReportFilesGetWithHttpInfo(accountId, taskId, fileId, fields);
     return resp.getData();
   }
 
@@ -184,15 +182,15 @@ public class AsyncReportFilesApi {
    * @param taskId (required)
    * @param fileId (required)
    * @param fields 返回参数的字段列表 (optional)
-   * @return ApiResponse&lt;AsyncReportFilesGetResponse&gt;
+   * @return ApiResponse&lt;String&gt;
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
-  public ApiResponse<AsyncReportFilesGetResponse> asyncReportFilesGetWithHttpInfo(
+  public ApiResponse<String> asyncReportFilesGetWithHttpInfo(
       Long accountId, Long taskId, Long fileId, List<String> fields) throws ApiException {
     com.squareup.okhttp.Call call =
         asyncReportFilesGetValidateBeforeCall(accountId, taskId, fileId, fields, null, null);
-    Type localVarReturnType = new TypeToken<AsyncReportFilesGetResponse>() {}.getType();
+    Type localVarReturnType = new TypeToken<String>() {}.getType();
     return apiClient.execute(call, localVarReturnType);
   }
 
@@ -212,7 +210,7 @@ public class AsyncReportFilesApi {
       Long taskId,
       Long fileId,
       List<String> fields,
-      final ApiCallback<AsyncReportFilesGetResponse> callback)
+      final ApiCallback<String> callback)
       throws ApiException {
 
     ProgressResponseBody.ProgressListener progressListener = null;
@@ -239,7 +237,7 @@ public class AsyncReportFilesApi {
     com.squareup.okhttp.Call call =
         asyncReportFilesGetValidateBeforeCall(
             accountId, taskId, fileId, fields, progressListener, progressRequestListener);
-    Type localVarReturnType = new TypeToken<AsyncReportFilesGetResponse>() {}.getType();
+    Type localVarReturnType = new TypeToken<String>() {}.getType();
     apiClient.executeAsync(call, localVarReturnType, callback);
     return call;
   }

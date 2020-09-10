@@ -35,6 +35,9 @@ public class WechatAdvertiserDetailGetListStruct {
   @SerializedName("wechat_account_id")
   private String wechatAccountId = null;
 
+  @SerializedName("account_type")
+  private WechatAdvertiserAccountType accountType = null;
+
   @SerializedName("corporation_name")
   private String corporationName = null;
 
@@ -52,9 +55,6 @@ public class WechatAdvertiserDetailGetListStruct {
 
   @SerializedName("daily_budget")
   private Long dailyBudget = null;
-
-  @SerializedName("fund_type")
-  private WechatAdvertiserAccountType fundType = null;
 
   public WechatAdvertiserDetailGetListStruct accountId(Long accountId) {
     this.accountId = accountId;
@@ -130,6 +130,25 @@ public class WechatAdvertiserDetailGetListStruct {
 
   public void setWechatAccountId(String wechatAccountId) {
     this.wechatAccountId = wechatAccountId;
+  }
+
+  public WechatAdvertiserDetailGetListStruct accountType(WechatAdvertiserAccountType accountType) {
+    this.accountType = accountType;
+    return this;
+  }
+
+  /**
+   * Get accountType
+   *
+   * @return accountType
+   */
+  @ApiModelProperty(value = "")
+  public WechatAdvertiserAccountType getAccountType() {
+    return accountType;
+  }
+
+  public void setAccountType(WechatAdvertiserAccountType accountType) {
+    this.accountType = accountType;
   }
 
   public WechatAdvertiserDetailGetListStruct corporationName(String corporationName) {
@@ -263,25 +282,6 @@ public class WechatAdvertiserDetailGetListStruct {
     this.dailyBudget = dailyBudget;
   }
 
-  public WechatAdvertiserDetailGetListStruct fundType(WechatAdvertiserAccountType fundType) {
-    this.fundType = fundType;
-    return this;
-  }
-
-  /**
-   * Get fundType
-   *
-   * @return fundType
-   */
-  @ApiModelProperty(value = "")
-  public WechatAdvertiserAccountType getFundType() {
-    return fundType;
-  }
-
-  public void setFundType(WechatAdvertiserAccountType fundType) {
-    this.fundType = fundType;
-  }
-
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -298,14 +298,14 @@ public class WechatAdvertiserDetailGetListStruct {
         && Objects.equals(
             this.systemIndustryId, wechatAdvertiserDetailGetListStruct.systemIndustryId)
         && Objects.equals(this.wechatAccountId, wechatAdvertiserDetailGetListStruct.wechatAccountId)
+        && Objects.equals(this.accountType, wechatAdvertiserDetailGetListStruct.accountType)
         && Objects.equals(this.corporationName, wechatAdvertiserDetailGetListStruct.corporationName)
         && Objects.equals(this.authStatus, wechatAdvertiserDetailGetListStruct.authStatus)
         && Objects.equals(this.authTime, wechatAdvertiserDetailGetListStruct.authTime)
         && Objects.equals(this.agencyIdList, wechatAdvertiserDetailGetListStruct.agencyIdList)
         && Objects.equals(
             this.staffWechatIdList, wechatAdvertiserDetailGetListStruct.staffWechatIdList)
-        && Objects.equals(this.dailyBudget, wechatAdvertiserDetailGetListStruct.dailyBudget)
-        && Objects.equals(this.fundType, wechatAdvertiserDetailGetListStruct.fundType);
+        && Objects.equals(this.dailyBudget, wechatAdvertiserDetailGetListStruct.dailyBudget);
   }
 
   @Override
@@ -315,13 +315,13 @@ public class WechatAdvertiserDetailGetListStruct {
         wechatAccountName,
         systemIndustryId,
         wechatAccountId,
+        accountType,
         corporationName,
         authStatus,
         authTime,
         agencyIdList,
         staffWechatIdList,
-        dailyBudget,
-        fundType);
+        dailyBudget);
   }
 
   @Override

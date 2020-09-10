@@ -25,7 +25,7 @@ public class TargetingsGetResponseData {
   private List<TargetingsGetListStruct> list = null;
 
   @SerializedName("page_info")
-  private Conf pageInfo = null;
+  private ConfPageSize500 pageInfo = null;
 
   public TargetingsGetResponseData list(List<TargetingsGetListStruct> list) {
     this.list = list;
@@ -54,7 +54,7 @@ public class TargetingsGetResponseData {
     this.list = list;
   }
 
-  public TargetingsGetResponseData pageInfo(Conf pageInfo) {
+  public TargetingsGetResponseData pageInfo(ConfPageSize500 pageInfo) {
     this.pageInfo = pageInfo;
     return this;
   }
@@ -65,11 +65,11 @@ public class TargetingsGetResponseData {
    * @return pageInfo
    */
   @ApiModelProperty(value = "")
-  public Conf getPageInfo() {
+  public ConfPageSize500 getPageInfo() {
     return pageInfo;
   }
 
-  public void setPageInfo(Conf pageInfo) {
+  public void setPageInfo(ConfPageSize500 pageInfo) {
     this.pageInfo = pageInfo;
   }
 

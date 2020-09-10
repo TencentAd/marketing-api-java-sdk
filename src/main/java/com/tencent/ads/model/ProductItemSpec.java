@@ -236,6 +236,9 @@ public class ProductItemSpec {
   @SerializedName("semantic_labels")
   private List<String> semanticLabels = null;
 
+  @SerializedName("detail_img")
+  private List<String> detailImg = null;
+
   public ProductItemSpec productOuterId(String productOuterId) {
     this.productOuterId = productOuterId;
     return this;
@@ -1625,6 +1628,33 @@ public class ProductItemSpec {
     this.semanticLabels = semanticLabels;
   }
 
+  public ProductItemSpec detailImg(List<String> detailImg) {
+    this.detailImg = detailImg;
+    return this;
+  }
+
+  public ProductItemSpec addDetailImgItem(String detailImgItem) {
+    if (this.detailImg == null) {
+      this.detailImg = new ArrayList<String>();
+    }
+    this.detailImg.add(detailImgItem);
+    return this;
+  }
+
+  /**
+   * Get detailImg
+   *
+   * @return detailImg
+   */
+  @ApiModelProperty(value = "")
+  public List<String> getDetailImg() {
+    return detailImg;
+  }
+
+  public void setDetailImg(List<String> detailImg) {
+    this.detailImg = detailImg;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -1704,7 +1734,8 @@ public class ProductItemSpec {
         && Objects.equals(this.forwardCount, productItemSpec.forwardCount)
         && Objects.equals(this.commentCount, productItemSpec.commentCount)
         && Objects.equals(this.authorFansCount, productItemSpec.authorFansCount)
-        && Objects.equals(this.semanticLabels, productItemSpec.semanticLabels);
+        && Objects.equals(this.semanticLabels, productItemSpec.semanticLabels)
+        && Objects.equals(this.detailImg, productItemSpec.detailImg);
   }
 
   @Override
@@ -1780,7 +1811,8 @@ public class ProductItemSpec {
         forwardCount,
         commentCount,
         authorFansCount,
-        semanticLabels);
+        semanticLabels,
+        detailImg);
   }
 
   @Override

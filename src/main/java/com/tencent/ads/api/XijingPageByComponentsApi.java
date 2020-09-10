@@ -133,7 +133,7 @@ public class XijingPageByComponentsApi {
   }
 
   /**
-   * 基于组件创建落地页
+   * 蹊径-基于组件创建落地页
    *
    * @param data (required)
    * @return XijingPageByComponentsAddResponse
@@ -148,7 +148,7 @@ public class XijingPageByComponentsApi {
   }
 
   /**
-   * 基于组件创建落地页
+   * 蹊径-基于组件创建落地页
    *
    * @param data (required)
    * @return ApiResponse&lt;XijingPageByComponentsAddResponse&gt;
@@ -163,7 +163,7 @@ public class XijingPageByComponentsApi {
   }
 
   /**
-   * 基于组件创建落地页 (asynchronously)
+   * 蹊径-基于组件创建落地页 (asynchronously)
    *
    * @param data (required)
    * @param callback The callback to be executed when the API call finishes

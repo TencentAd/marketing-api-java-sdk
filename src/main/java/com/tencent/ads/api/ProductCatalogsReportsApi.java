@@ -191,7 +191,7 @@ public class ProductCatalogsReportsApi {
   }
 
   /**
-   * 获取商品库报表
+   * 获取商品库报表(待废弃)
    *
    * @param accountId (required)
    * @param productCatalogId (required)
@@ -220,7 +220,7 @@ public class ProductCatalogsReportsApi {
   }
 
   /**
-   * 获取商品库报表
+   * 获取商品库报表(待废弃)
    *
    * @param accountId (required)
    * @param productCatalogId (required)
@@ -258,7 +258,7 @@ public class ProductCatalogsReportsApi {
   }
 
   /**
-   * 获取商品库报表 (asynchronously)
+   * 获取商品库报表(待废弃) (asynchronously)
    *
    * @param accountId (required)
    * @param productCatalogId (required)

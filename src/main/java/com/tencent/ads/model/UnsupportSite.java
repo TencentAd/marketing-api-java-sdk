@@ -20,8 +20,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
-/** 不支持的站点 */
-@ApiModel(description = "不支持的站点")
+/** 不支持的版位 */
+@ApiModel(description = "不支持的版位")
 public class UnsupportSite {
   @SerializedName("site_set")
   private List<String> siteSet = null;

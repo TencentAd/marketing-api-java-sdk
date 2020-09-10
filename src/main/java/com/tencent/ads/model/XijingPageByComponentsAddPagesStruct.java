@@ -22,7 +22,7 @@ import java.util.Objects;
 
 /** 落地页配置结构 */
 @ApiModel(description = "落地页配置结构")
-public class PagesStruct {
+public class XijingPageByComponentsAddPagesStruct {
   @SerializedName("page_type")
   private ComponentsPageType pageType = null;
 
@@ -44,7 +44,7 @@ public class PagesStruct {
   @SerializedName("component_spec_list")
   private List<String> componentSpecList = null;
 
-  public PagesStruct pageType(ComponentsPageType pageType) {
+  public XijingPageByComponentsAddPagesStruct pageType(ComponentsPageType pageType) {
     this.pageType = pageType;
     return this;
   }
@@ -63,7 +63,7 @@ public class PagesStruct {
     this.pageType = pageType;
   }
 
-  public PagesStruct pageName(String pageName) {
+  public XijingPageByComponentsAddPagesStruct pageName(String pageName) {
     this.pageName = pageName;
     return this;
   }
@@ -82,7 +82,7 @@ public class PagesStruct {
     this.pageName = pageName;
   }
 
-  public PagesStruct pageTitle(String pageTitle) {
+  public XijingPageByComponentsAddPagesStruct pageTitle(String pageTitle) {
     this.pageTitle = pageTitle;
     return this;
   }
@@ -101,7 +101,7 @@ public class PagesStruct {
     this.pageTitle = pageTitle;
   }
 
-  public PagesStruct mobileAppId(String mobileAppId) {
+  public XijingPageByComponentsAddPagesStruct mobileAppId(String mobileAppId) {
     this.mobileAppId = mobileAppId;
     return this;
   }
@@ -120,7 +120,7 @@ public class PagesStruct {
     this.mobileAppId = mobileAppId;
   }
 
-  public PagesStruct bgColor(String bgColor) {
+  public XijingPageByComponentsAddPagesStruct bgColor(String bgColor) {
     this.bgColor = bgColor;
     return this;
   }
@@ -139,7 +139,7 @@ public class PagesStruct {
     this.bgColor = bgColor;
   }
 
-  public PagesStruct bgImageId(String bgImageId) {
+  public XijingPageByComponentsAddPagesStruct bgImageId(String bgImageId) {
     this.bgImageId = bgImageId;
     return this;
   }
@@ -158,12 +158,13 @@ public class PagesStruct {
     this.bgImageId = bgImageId;
   }
 
-  public PagesStruct componentSpecList(List<String> componentSpecList) {
+  public XijingPageByComponentsAddPagesStruct componentSpecList(List<String> componentSpecList) {
     this.componentSpecList = componentSpecList;
     return this;
   }
 
-  public PagesStruct addComponentSpecListItem(String componentSpecListItem) {
+  public XijingPageByComponentsAddPagesStruct addComponentSpecListItem(
+      String componentSpecListItem) {
     if (this.componentSpecList == null) {
       this.componentSpecList = new ArrayList<String>();
     }
@@ -193,14 +194,16 @@ public class PagesStruct {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    PagesStruct pagesStruct = (PagesStruct) o;
-    return Objects.equals(this.pageType, pagesStruct.pageType)
-        && Objects.equals(this.pageName, pagesStruct.pageName)
-        && Objects.equals(this.pageTitle, pagesStruct.pageTitle)
-        && Objects.equals(this.mobileAppId, pagesStruct.mobileAppId)
-        && Objects.equals(this.bgColor, pagesStruct.bgColor)
-        && Objects.equals(this.bgImageId, pagesStruct.bgImageId)
-        && Objects.equals(this.componentSpecList, pagesStruct.componentSpecList);
+    XijingPageByComponentsAddPagesStruct xijingPageByComponentsAddPagesStruct =
+        (XijingPageByComponentsAddPagesStruct) o;
+    return Objects.equals(this.pageType, xijingPageByComponentsAddPagesStruct.pageType)
+        && Objects.equals(this.pageName, xijingPageByComponentsAddPagesStruct.pageName)
+        && Objects.equals(this.pageTitle, xijingPageByComponentsAddPagesStruct.pageTitle)
+        && Objects.equals(this.mobileAppId, xijingPageByComponentsAddPagesStruct.mobileAppId)
+        && Objects.equals(this.bgColor, xijingPageByComponentsAddPagesStruct.bgColor)
+        && Objects.equals(this.bgImageId, xijingPageByComponentsAddPagesStruct.bgImageId)
+        && Objects.equals(
+            this.componentSpecList, xijingPageByComponentsAddPagesStruct.componentSpecList);
   }
 
   @Override

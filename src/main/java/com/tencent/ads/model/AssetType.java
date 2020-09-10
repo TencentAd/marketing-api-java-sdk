@@ -22,7 +22,13 @@ import java.io.IOException;
 /** 资产类型 */
 @JsonAdapter(AssetType.Adapter.class)
 public enum AssetType {
-  ASSET_TYPE_CANVAS_WECHAT("ASSET_TYPE_CANVAS_WECHAT");
+  XIJING("ASSET_TYPE_XIJING"),
+
+  CANVAS_WECHAT("ASSET_TYPE_CANVAS_WECHAT"),
+
+  CANVAS_IMAGE("ASSET_TYPE_CANVAS_IMAGE"),
+
+  CANVAS_VIDEO("ASSET_TYPE_CANVAS_VIDEO");
 
   private String value;
 

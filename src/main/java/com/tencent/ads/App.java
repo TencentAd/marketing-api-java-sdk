@@ -41,6 +41,7 @@ public class App {
   @Inject AuthorizationApiContainer authorizationApiContainer;
   @Inject BatchOperationApiContainer batchOperationApiContainer;
   @Inject BatchRequestsApiContainer batchRequestsApiContainer;
+  @Inject BidSimulationApiContainer bidSimulationApiContainer;
   @Inject BrandApiContainer brandApiContainer;
   @Inject BusinessManagerRelationsApiContainer businessManagerRelationsApiContainer;
   @Inject CampaignsApiContainer campaignsApiContainer;
@@ -76,6 +77,8 @@ public class App {
   @Inject LabelsApiContainer labelsApiContainer;
   @Inject LeadCluesApiContainer leadCluesApiContainer;
   @Inject LeadsApiContainer leadsApiContainer;
+  @Inject LeadsFormApiContainer leadsFormApiContainer;
+  @Inject LeadsFormListApiContainer leadsFormListApiContainer;
   @Inject OauthApiContainer oauthApiContainer;
   @Inject OptimizationGoalPermissionsApiContainer optimizationGoalPermissionsApiContainer;
   @Inject PagesApiContainer pagesApiContainer;
@@ -85,6 +88,7 @@ public class App {
   @Inject ProductCategoriesListApiContainer productCategoriesListApiContainer;
   @Inject ProductItemsApiContainer productItemsApiContainer;
   @Inject ProductItemsDetailApiContainer productItemsDetailApiContainer;
+  @Inject ProductItemsListApiContainer productItemsListApiContainer;
   @Inject ProductsSystemStatusApiContainer productsSystemStatusApiContainer;
   @Inject ProfilesApiContainer profilesApiContainer;
   @Inject PromotedObjectsApiContainer promotedObjectsApiContainer;
@@ -116,6 +120,7 @@ public class App {
   @Inject WechatPagesApiContainer wechatPagesApiContainer;
   @Inject XijingPageApiContainer xijingPageApiContainer;
   @Inject XijingPageByComponentsApiContainer xijingPageByComponentsApiContainer;
+  @Inject XijingPageListApiContainer xijingPageListApiContainer;
   @Inject XijingTemplateApiContainer xijingTemplateApiContainer;
 
   public App() {
@@ -208,6 +213,10 @@ public class App {
 
   public BatchRequestsApiContainer batchRequests() {
     return batchRequestsApiContainer;
+  }
+
+  public BidSimulationApiContainer bidSimulation() {
+    return bidSimulationApiContainer;
   }
 
   public BrandApiContainer brand() {
@@ -350,6 +359,14 @@ public class App {
     return leadsApiContainer;
   }
 
+  public LeadsFormApiContainer leadsForm() {
+    return leadsFormApiContainer;
+  }
+
+  public LeadsFormListApiContainer leadsFormList() {
+    return leadsFormListApiContainer;
+  }
+
   public OauthApiContainer oauth() {
     return oauthApiContainer;
   }
@@ -384,6 +401,10 @@ public class App {
 
   public ProductItemsDetailApiContainer productItemsDetail() {
     return productItemsDetailApiContainer;
+  }
+
+  public ProductItemsListApiContainer productItemsList() {
+    return productItemsListApiContainer;
   }
 
   public ProductsSystemStatusApiContainer productsSystemStatus() {
@@ -508,6 +529,10 @@ public class App {
 
   public XijingPageByComponentsApiContainer xijingPageByComponents() {
     return xijingPageByComponentsApiContainer;
+  }
+
+  public XijingPageListApiContainer xijingPageList() {
+    return xijingPageListApiContainer;
   }
 
   public XijingTemplateApiContainer xijingTemplate() {

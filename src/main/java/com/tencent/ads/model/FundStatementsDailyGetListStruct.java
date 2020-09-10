@@ -24,6 +24,9 @@ public class FundStatementsDailyGetListStruct {
   @SerializedName("trade_type")
   private TradeType tradeType = null;
 
+  @SerializedName("trans_time")
+  private Long transTime = null;
+
   @SerializedName("amount")
   private Long amount = null;
 
@@ -50,6 +53,25 @@ public class FundStatementsDailyGetListStruct {
 
   public void setTradeType(TradeType tradeType) {
     this.tradeType = tradeType;
+  }
+
+  public FundStatementsDailyGetListStruct transTime(Long transTime) {
+    this.transTime = transTime;
+    return this;
+  }
+
+  /**
+   * Get transTime
+   *
+   * @return transTime
+   */
+  @ApiModelProperty(value = "")
+  public Long getTransTime() {
+    return transTime;
+  }
+
+  public void setTransTime(Long transTime) {
+    this.transTime = transTime;
   }
 
   public FundStatementsDailyGetListStruct amount(Long amount) {
@@ -120,6 +142,7 @@ public class FundStatementsDailyGetListStruct {
     FundStatementsDailyGetListStruct fundStatementsDailyGetListStruct =
         (FundStatementsDailyGetListStruct) o;
     return Objects.equals(this.tradeType, fundStatementsDailyGetListStruct.tradeType)
+        && Objects.equals(this.transTime, fundStatementsDailyGetListStruct.transTime)
         && Objects.equals(this.amount, fundStatementsDailyGetListStruct.amount)
         && Objects.equals(this.description, fundStatementsDailyGetListStruct.description)
         && Objects.equals(this.fundType, fundStatementsDailyGetListStruct.fundType);
@@ -127,7 +150,7 @@ public class FundStatementsDailyGetListStruct {
 
   @Override
   public int hashCode() {
-    return Objects.hash(tradeType, amount, description, fundType);
+    return Objects.hash(tradeType, transTime, amount, description, fundType);
   }
 
   @Override

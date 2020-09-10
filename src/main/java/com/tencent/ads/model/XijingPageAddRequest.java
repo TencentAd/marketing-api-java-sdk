@@ -28,7 +28,7 @@ public class XijingPageAddRequest {
   private Long isAutoSubmit = null;
 
   @SerializedName("pages")
-  private List<PagesStruct> pages = null;
+  private List<XijingPageAddPagesStruct> pages = null;
 
   public XijingPageAddRequest accountId(Long accountId) {
     this.accountId = accountId;
@@ -68,14 +68,14 @@ public class XijingPageAddRequest {
     this.isAutoSubmit = isAutoSubmit;
   }
 
-  public XijingPageAddRequest pages(List<PagesStruct> pages) {
+  public XijingPageAddRequest pages(List<XijingPageAddPagesStruct> pages) {
     this.pages = pages;
     return this;
   }
 
-  public XijingPageAddRequest addPagesItem(PagesStruct pagesItem) {
+  public XijingPageAddRequest addPagesItem(XijingPageAddPagesStruct pagesItem) {
     if (this.pages == null) {
-      this.pages = new ArrayList<PagesStruct>();
+      this.pages = new ArrayList<XijingPageAddPagesStruct>();
     }
     this.pages.add(pagesItem);
     return this;
@@ -87,11 +87,11 @@ public class XijingPageAddRequest {
    * @return pages
    */
   @ApiModelProperty(value = "")
-  public List<PagesStruct> getPages() {
+  public List<XijingPageAddPagesStruct> getPages() {
     return pages;
   }
 
-  public void setPages(List<PagesStruct> pages) {
+  public void setPages(List<XijingPageAddPagesStruct> pages) {
     this.pages = pages;
   }
 

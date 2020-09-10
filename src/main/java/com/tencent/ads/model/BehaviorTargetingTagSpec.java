@@ -25,7 +25,7 @@ public class BehaviorTargetingTagSpec {
   private TargetingTagQueryMode queryMode = null;
 
   @SerializedName("query_spec")
-  private QuerySpec querySpec = null;
+  private TargetingTagsGetQuerySpec querySpec = null;
 
   public BehaviorTargetingTagSpec queryMode(TargetingTagQueryMode queryMode) {
     this.queryMode = queryMode;
@@ -46,7 +46,7 @@ public class BehaviorTargetingTagSpec {
     this.queryMode = queryMode;
   }
 
-  public BehaviorTargetingTagSpec querySpec(QuerySpec querySpec) {
+  public BehaviorTargetingTagSpec querySpec(TargetingTagsGetQuerySpec querySpec) {
     this.querySpec = querySpec;
     return this;
   }
@@ -57,11 +57,11 @@ public class BehaviorTargetingTagSpec {
    * @return querySpec
    */
   @ApiModelProperty(value = "")
-  public QuerySpec getQuerySpec() {
+  public TargetingTagsGetQuerySpec getQuerySpec() {
     return querySpec;
   }
 
-  public void setQuerySpec(QuerySpec querySpec) {
+  public void setQuerySpec(TargetingTagsGetQuerySpec querySpec) {
     this.querySpec = querySpec;
   }
 

@@ -711,8 +711,74 @@ public class DailyReportsGetListStruct {
   @SerializedName("video_outer_play100_count")
   private Long videoOuterPlay100Count = null;
 
+  @SerializedName("video_outer_play_time_count")
+  private Double videoOuterPlayTimeCount = null;
+
+  @SerializedName("video_outer_play_time_avg_rate")
+  private Double videoOuterPlayTimeAvgRate = null;
+
+  @SerializedName("video_outer_play_rate")
+  private Double videoOuterPlayRate = null;
+
+  @SerializedName("video_outer_play_cost")
+  private Long videoOuterPlayCost = null;
+
   @SerializedName("video_outer_play_count")
   private Long videoOuterPlayCount = null;
+
+  @SerializedName("video_outer_play3s_count")
+  private Long videoOuterPlay3sCount = null;
+
+  @SerializedName("video_outer_play5s_count")
+  private Long videoOuterPlay5sCount = null;
+
+  @SerializedName("video_outer_play7s_count")
+  private Long videoOuterPlay7sCount = null;
+
+  @SerializedName("effect_leads_purchase_cost")
+  private Long effectLeadsPurchaseCost = null;
+
+  @SerializedName("cre_web_cost")
+  private Long creWebCost = null;
+
+  @SerializedName("cre_app_cost")
+  private Long creAppCost = null;
+
+  @SerializedName("pre_cre_web_cost")
+  private Long preCreWebCost = null;
+
+  @SerializedName("pre_cre_app_cost")
+  private Long preCreAppCost = null;
+
+  @SerializedName("income_roi_1")
+  private Double incomeRoi1 = null;
+
+  @SerializedName("income_roi_3")
+  private Double incomeRoi3 = null;
+
+  @SerializedName("income_roi_7")
+  private Double incomeRoi7 = null;
+
+  @SerializedName("income_roi_14")
+  private Double incomeRoi14 = null;
+
+  @SerializedName("first_day_pay_count")
+  private Long firstDayPayCount = null;
+
+  @SerializedName("first_day_pay_cost")
+  private Long firstDayPayCost = null;
+
+  @SerializedName("first_day_first_pay_cost")
+  private Long firstDayFirstPayCost = null;
+
+  @SerializedName("first_day_first_pay_count")
+  private Long firstDayFirstPayCount = null;
+
+  @SerializedName("first_day_pay_amount")
+  private Long firstDayPayAmount = null;
+
+  @SerializedName("first_day_first_pay_rate")
+  private Double firstDayFirstPayRate = null;
 
   @SerializedName("campaign_id")
   private Long campaignId = null;
@@ -752,6 +818,15 @@ public class DailyReportsGetListStruct {
 
   @SerializedName("is_expand_targeting")
   private Boolean isExpandTargeting = null;
+
+  @SerializedName("site_set")
+  private String siteSet = null;
+
+  @SerializedName("material_id")
+  private Long materialId = null;
+
+  @SerializedName("signature")
+  private String signature = null;
 
   @SerializedName("wechat_account_id")
   private String wechatAccountId = null;
@@ -959,36 +1034,6 @@ public class DailyReportsGetListStruct {
 
   @SerializedName("video_inner_play_user_count")
   private Long videoInnerPlayUserCount = null;
-
-  @SerializedName("site_set")
-  private String siteSet = null;
-
-  @SerializedName("material_id")
-  private Long materialId = null;
-
-  @SerializedName("signature")
-  private String signature = null;
-
-  @SerializedName("video_outer_play_time_count")
-  private Double videoOuterPlayTimeCount = null;
-
-  @SerializedName("video_outer_play_time_avg_rate")
-  private Double videoOuterPlayTimeAvgRate = null;
-
-  @SerializedName("video_outer_play_rate")
-  private Double videoOuterPlayRate = null;
-
-  @SerializedName("video_outer_play_cost")
-  private Long videoOuterPlayCost = null;
-
-  @SerializedName("video_outer_play3s_count")
-  private Long videoOuterPlay3sCount = null;
-
-  @SerializedName("video_outer_play5s_count")
-  private Long videoOuterPlay5sCount = null;
-
-  @SerializedName("video_outer_play7s_count")
-  private Long videoOuterPlay7sCount = null;
 
   public DailyReportsGetListStruct accountId(Long accountId) {
     this.accountId = accountId;
@@ -5360,6 +5405,82 @@ public class DailyReportsGetListStruct {
     this.videoOuterPlay100Count = videoOuterPlay100Count;
   }
 
+  public DailyReportsGetListStruct videoOuterPlayTimeCount(Double videoOuterPlayTimeCount) {
+    this.videoOuterPlayTimeCount = videoOuterPlayTimeCount;
+    return this;
+  }
+
+  /**
+   * Get videoOuterPlayTimeCount
+   *
+   * @return videoOuterPlayTimeCount
+   */
+  @ApiModelProperty(value = "")
+  public Double getVideoOuterPlayTimeCount() {
+    return videoOuterPlayTimeCount;
+  }
+
+  public void setVideoOuterPlayTimeCount(Double videoOuterPlayTimeCount) {
+    this.videoOuterPlayTimeCount = videoOuterPlayTimeCount;
+  }
+
+  public DailyReportsGetListStruct videoOuterPlayTimeAvgRate(Double videoOuterPlayTimeAvgRate) {
+    this.videoOuterPlayTimeAvgRate = videoOuterPlayTimeAvgRate;
+    return this;
+  }
+
+  /**
+   * Get videoOuterPlayTimeAvgRate
+   *
+   * @return videoOuterPlayTimeAvgRate
+   */
+  @ApiModelProperty(value = "")
+  public Double getVideoOuterPlayTimeAvgRate() {
+    return videoOuterPlayTimeAvgRate;
+  }
+
+  public void setVideoOuterPlayTimeAvgRate(Double videoOuterPlayTimeAvgRate) {
+    this.videoOuterPlayTimeAvgRate = videoOuterPlayTimeAvgRate;
+  }
+
+  public DailyReportsGetListStruct videoOuterPlayRate(Double videoOuterPlayRate) {
+    this.videoOuterPlayRate = videoOuterPlayRate;
+    return this;
+  }
+
+  /**
+   * Get videoOuterPlayRate
+   *
+   * @return videoOuterPlayRate
+   */
+  @ApiModelProperty(value = "")
+  public Double getVideoOuterPlayRate() {
+    return videoOuterPlayRate;
+  }
+
+  public void setVideoOuterPlayRate(Double videoOuterPlayRate) {
+    this.videoOuterPlayRate = videoOuterPlayRate;
+  }
+
+  public DailyReportsGetListStruct videoOuterPlayCost(Long videoOuterPlayCost) {
+    this.videoOuterPlayCost = videoOuterPlayCost;
+    return this;
+  }
+
+  /**
+   * Get videoOuterPlayCost
+   *
+   * @return videoOuterPlayCost
+   */
+  @ApiModelProperty(value = "")
+  public Long getVideoOuterPlayCost() {
+    return videoOuterPlayCost;
+  }
+
+  public void setVideoOuterPlayCost(Long videoOuterPlayCost) {
+    this.videoOuterPlayCost = videoOuterPlayCost;
+  }
+
   public DailyReportsGetListStruct videoOuterPlayCount(Long videoOuterPlayCount) {
     this.videoOuterPlayCount = videoOuterPlayCount;
     return this;
@@ -5377,6 +5498,348 @@ public class DailyReportsGetListStruct {
 
   public void setVideoOuterPlayCount(Long videoOuterPlayCount) {
     this.videoOuterPlayCount = videoOuterPlayCount;
+  }
+
+  public DailyReportsGetListStruct videoOuterPlay3sCount(Long videoOuterPlay3sCount) {
+    this.videoOuterPlay3sCount = videoOuterPlay3sCount;
+    return this;
+  }
+
+  /**
+   * Get videoOuterPlay3sCount
+   *
+   * @return videoOuterPlay3sCount
+   */
+  @ApiModelProperty(value = "")
+  public Long getVideoOuterPlay3sCount() {
+    return videoOuterPlay3sCount;
+  }
+
+  public void setVideoOuterPlay3sCount(Long videoOuterPlay3sCount) {
+    this.videoOuterPlay3sCount = videoOuterPlay3sCount;
+  }
+
+  public DailyReportsGetListStruct videoOuterPlay5sCount(Long videoOuterPlay5sCount) {
+    this.videoOuterPlay5sCount = videoOuterPlay5sCount;
+    return this;
+  }
+
+  /**
+   * Get videoOuterPlay5sCount
+   *
+   * @return videoOuterPlay5sCount
+   */
+  @ApiModelProperty(value = "")
+  public Long getVideoOuterPlay5sCount() {
+    return videoOuterPlay5sCount;
+  }
+
+  public void setVideoOuterPlay5sCount(Long videoOuterPlay5sCount) {
+    this.videoOuterPlay5sCount = videoOuterPlay5sCount;
+  }
+
+  public DailyReportsGetListStruct videoOuterPlay7sCount(Long videoOuterPlay7sCount) {
+    this.videoOuterPlay7sCount = videoOuterPlay7sCount;
+    return this;
+  }
+
+  /**
+   * Get videoOuterPlay7sCount
+   *
+   * @return videoOuterPlay7sCount
+   */
+  @ApiModelProperty(value = "")
+  public Long getVideoOuterPlay7sCount() {
+    return videoOuterPlay7sCount;
+  }
+
+  public void setVideoOuterPlay7sCount(Long videoOuterPlay7sCount) {
+    this.videoOuterPlay7sCount = videoOuterPlay7sCount;
+  }
+
+  public DailyReportsGetListStruct effectLeadsPurchaseCost(Long effectLeadsPurchaseCost) {
+    this.effectLeadsPurchaseCost = effectLeadsPurchaseCost;
+    return this;
+  }
+
+  /**
+   * Get effectLeadsPurchaseCost
+   *
+   * @return effectLeadsPurchaseCost
+   */
+  @ApiModelProperty(value = "")
+  public Long getEffectLeadsPurchaseCost() {
+    return effectLeadsPurchaseCost;
+  }
+
+  public void setEffectLeadsPurchaseCost(Long effectLeadsPurchaseCost) {
+    this.effectLeadsPurchaseCost = effectLeadsPurchaseCost;
+  }
+
+  public DailyReportsGetListStruct creWebCost(Long creWebCost) {
+    this.creWebCost = creWebCost;
+    return this;
+  }
+
+  /**
+   * Get creWebCost
+   *
+   * @return creWebCost
+   */
+  @ApiModelProperty(value = "")
+  public Long getCreWebCost() {
+    return creWebCost;
+  }
+
+  public void setCreWebCost(Long creWebCost) {
+    this.creWebCost = creWebCost;
+  }
+
+  public DailyReportsGetListStruct creAppCost(Long creAppCost) {
+    this.creAppCost = creAppCost;
+    return this;
+  }
+
+  /**
+   * Get creAppCost
+   *
+   * @return creAppCost
+   */
+  @ApiModelProperty(value = "")
+  public Long getCreAppCost() {
+    return creAppCost;
+  }
+
+  public void setCreAppCost(Long creAppCost) {
+    this.creAppCost = creAppCost;
+  }
+
+  public DailyReportsGetListStruct preCreWebCost(Long preCreWebCost) {
+    this.preCreWebCost = preCreWebCost;
+    return this;
+  }
+
+  /**
+   * Get preCreWebCost
+   *
+   * @return preCreWebCost
+   */
+  @ApiModelProperty(value = "")
+  public Long getPreCreWebCost() {
+    return preCreWebCost;
+  }
+
+  public void setPreCreWebCost(Long preCreWebCost) {
+    this.preCreWebCost = preCreWebCost;
+  }
+
+  public DailyReportsGetListStruct preCreAppCost(Long preCreAppCost) {
+    this.preCreAppCost = preCreAppCost;
+    return this;
+  }
+
+  /**
+   * Get preCreAppCost
+   *
+   * @return preCreAppCost
+   */
+  @ApiModelProperty(value = "")
+  public Long getPreCreAppCost() {
+    return preCreAppCost;
+  }
+
+  public void setPreCreAppCost(Long preCreAppCost) {
+    this.preCreAppCost = preCreAppCost;
+  }
+
+  public DailyReportsGetListStruct incomeRoi1(Double incomeRoi1) {
+    this.incomeRoi1 = incomeRoi1;
+    return this;
+  }
+
+  /**
+   * Get incomeRoi1
+   *
+   * @return incomeRoi1
+   */
+  @ApiModelProperty(value = "")
+  public Double getIncomeRoi1() {
+    return incomeRoi1;
+  }
+
+  public void setIncomeRoi1(Double incomeRoi1) {
+    this.incomeRoi1 = incomeRoi1;
+  }
+
+  public DailyReportsGetListStruct incomeRoi3(Double incomeRoi3) {
+    this.incomeRoi3 = incomeRoi3;
+    return this;
+  }
+
+  /**
+   * Get incomeRoi3
+   *
+   * @return incomeRoi3
+   */
+  @ApiModelProperty(value = "")
+  public Double getIncomeRoi3() {
+    return incomeRoi3;
+  }
+
+  public void setIncomeRoi3(Double incomeRoi3) {
+    this.incomeRoi3 = incomeRoi3;
+  }
+
+  public DailyReportsGetListStruct incomeRoi7(Double incomeRoi7) {
+    this.incomeRoi7 = incomeRoi7;
+    return this;
+  }
+
+  /**
+   * Get incomeRoi7
+   *
+   * @return incomeRoi7
+   */
+  @ApiModelProperty(value = "")
+  public Double getIncomeRoi7() {
+    return incomeRoi7;
+  }
+
+  public void setIncomeRoi7(Double incomeRoi7) {
+    this.incomeRoi7 = incomeRoi7;
+  }
+
+  public DailyReportsGetListStruct incomeRoi14(Double incomeRoi14) {
+    this.incomeRoi14 = incomeRoi14;
+    return this;
+  }
+
+  /**
+   * Get incomeRoi14
+   *
+   * @return incomeRoi14
+   */
+  @ApiModelProperty(value = "")
+  public Double getIncomeRoi14() {
+    return incomeRoi14;
+  }
+
+  public void setIncomeRoi14(Double incomeRoi14) {
+    this.incomeRoi14 = incomeRoi14;
+  }
+
+  public DailyReportsGetListStruct firstDayPayCount(Long firstDayPayCount) {
+    this.firstDayPayCount = firstDayPayCount;
+    return this;
+  }
+
+  /**
+   * Get firstDayPayCount
+   *
+   * @return firstDayPayCount
+   */
+  @ApiModelProperty(value = "")
+  public Long getFirstDayPayCount() {
+    return firstDayPayCount;
+  }
+
+  public void setFirstDayPayCount(Long firstDayPayCount) {
+    this.firstDayPayCount = firstDayPayCount;
+  }
+
+  public DailyReportsGetListStruct firstDayPayCost(Long firstDayPayCost) {
+    this.firstDayPayCost = firstDayPayCost;
+    return this;
+  }
+
+  /**
+   * Get firstDayPayCost
+   *
+   * @return firstDayPayCost
+   */
+  @ApiModelProperty(value = "")
+  public Long getFirstDayPayCost() {
+    return firstDayPayCost;
+  }
+
+  public void setFirstDayPayCost(Long firstDayPayCost) {
+    this.firstDayPayCost = firstDayPayCost;
+  }
+
+  public DailyReportsGetListStruct firstDayFirstPayCost(Long firstDayFirstPayCost) {
+    this.firstDayFirstPayCost = firstDayFirstPayCost;
+    return this;
+  }
+
+  /**
+   * Get firstDayFirstPayCost
+   *
+   * @return firstDayFirstPayCost
+   */
+  @ApiModelProperty(value = "")
+  public Long getFirstDayFirstPayCost() {
+    return firstDayFirstPayCost;
+  }
+
+  public void setFirstDayFirstPayCost(Long firstDayFirstPayCost) {
+    this.firstDayFirstPayCost = firstDayFirstPayCost;
+  }
+
+  public DailyReportsGetListStruct firstDayFirstPayCount(Long firstDayFirstPayCount) {
+    this.firstDayFirstPayCount = firstDayFirstPayCount;
+    return this;
+  }
+
+  /**
+   * Get firstDayFirstPayCount
+   *
+   * @return firstDayFirstPayCount
+   */
+  @ApiModelProperty(value = "")
+  public Long getFirstDayFirstPayCount() {
+    return firstDayFirstPayCount;
+  }
+
+  public void setFirstDayFirstPayCount(Long firstDayFirstPayCount) {
+    this.firstDayFirstPayCount = firstDayFirstPayCount;
+  }
+
+  public DailyReportsGetListStruct firstDayPayAmount(Long firstDayPayAmount) {
+    this.firstDayPayAmount = firstDayPayAmount;
+    return this;
+  }
+
+  /**
+   * Get firstDayPayAmount
+   *
+   * @return firstDayPayAmount
+   */
+  @ApiModelProperty(value = "")
+  public Long getFirstDayPayAmount() {
+    return firstDayPayAmount;
+  }
+
+  public void setFirstDayPayAmount(Long firstDayPayAmount) {
+    this.firstDayPayAmount = firstDayPayAmount;
+  }
+
+  public DailyReportsGetListStruct firstDayFirstPayRate(Double firstDayFirstPayRate) {
+    this.firstDayFirstPayRate = firstDayFirstPayRate;
+    return this;
+  }
+
+  /**
+   * Get firstDayFirstPayRate
+   *
+   * @return firstDayFirstPayRate
+   */
+  @ApiModelProperty(value = "")
+  public Double getFirstDayFirstPayRate() {
+    return firstDayFirstPayRate;
+  }
+
+  public void setFirstDayFirstPayRate(Double firstDayFirstPayRate) {
+    this.firstDayFirstPayRate = firstDayFirstPayRate;
   }
 
   public DailyReportsGetListStruct campaignId(Long campaignId) {
@@ -5624,6 +6087,63 @@ public class DailyReportsGetListStruct {
 
   public void setIsExpandTargeting(Boolean isExpandTargeting) {
     this.isExpandTargeting = isExpandTargeting;
+  }
+
+  public DailyReportsGetListStruct siteSet(String siteSet) {
+    this.siteSet = siteSet;
+    return this;
+  }
+
+  /**
+   * Get siteSet
+   *
+   * @return siteSet
+   */
+  @ApiModelProperty(value = "")
+  public String getSiteSet() {
+    return siteSet;
+  }
+
+  public void setSiteSet(String siteSet) {
+    this.siteSet = siteSet;
+  }
+
+  public DailyReportsGetListStruct materialId(Long materialId) {
+    this.materialId = materialId;
+    return this;
+  }
+
+  /**
+   * Get materialId
+   *
+   * @return materialId
+   */
+  @ApiModelProperty(value = "")
+  public Long getMaterialId() {
+    return materialId;
+  }
+
+  public void setMaterialId(Long materialId) {
+    this.materialId = materialId;
+  }
+
+  public DailyReportsGetListStruct signature(String signature) {
+    this.signature = signature;
+    return this;
+  }
+
+  /**
+   * Get signature
+   *
+   * @return signature
+   */
+  @ApiModelProperty(value = "")
+  public String getSignature() {
+    return signature;
+  }
+
+  public void setSignature(String signature) {
+    this.signature = signature;
   }
 
   public DailyReportsGetListStruct wechatAccountId(String wechatAccountId) {
@@ -6946,196 +7466,6 @@ public class DailyReportsGetListStruct {
     this.videoInnerPlayUserCount = videoInnerPlayUserCount;
   }
 
-  public DailyReportsGetListStruct siteSet(String siteSet) {
-    this.siteSet = siteSet;
-    return this;
-  }
-
-  /**
-   * Get siteSet
-   *
-   * @return siteSet
-   */
-  @ApiModelProperty(value = "")
-  public String getSiteSet() {
-    return siteSet;
-  }
-
-  public void setSiteSet(String siteSet) {
-    this.siteSet = siteSet;
-  }
-
-  public DailyReportsGetListStruct materialId(Long materialId) {
-    this.materialId = materialId;
-    return this;
-  }
-
-  /**
-   * Get materialId
-   *
-   * @return materialId
-   */
-  @ApiModelProperty(value = "")
-  public Long getMaterialId() {
-    return materialId;
-  }
-
-  public void setMaterialId(Long materialId) {
-    this.materialId = materialId;
-  }
-
-  public DailyReportsGetListStruct signature(String signature) {
-    this.signature = signature;
-    return this;
-  }
-
-  /**
-   * Get signature
-   *
-   * @return signature
-   */
-  @ApiModelProperty(value = "")
-  public String getSignature() {
-    return signature;
-  }
-
-  public void setSignature(String signature) {
-    this.signature = signature;
-  }
-
-  public DailyReportsGetListStruct videoOuterPlayTimeCount(Double videoOuterPlayTimeCount) {
-    this.videoOuterPlayTimeCount = videoOuterPlayTimeCount;
-    return this;
-  }
-
-  /**
-   * Get videoOuterPlayTimeCount
-   *
-   * @return videoOuterPlayTimeCount
-   */
-  @ApiModelProperty(value = "")
-  public Double getVideoOuterPlayTimeCount() {
-    return videoOuterPlayTimeCount;
-  }
-
-  public void setVideoOuterPlayTimeCount(Double videoOuterPlayTimeCount) {
-    this.videoOuterPlayTimeCount = videoOuterPlayTimeCount;
-  }
-
-  public DailyReportsGetListStruct videoOuterPlayTimeAvgRate(Double videoOuterPlayTimeAvgRate) {
-    this.videoOuterPlayTimeAvgRate = videoOuterPlayTimeAvgRate;
-    return this;
-  }
-
-  /**
-   * Get videoOuterPlayTimeAvgRate
-   *
-   * @return videoOuterPlayTimeAvgRate
-   */
-  @ApiModelProperty(value = "")
-  public Double getVideoOuterPlayTimeAvgRate() {
-    return videoOuterPlayTimeAvgRate;
-  }
-
-  public void setVideoOuterPlayTimeAvgRate(Double videoOuterPlayTimeAvgRate) {
-    this.videoOuterPlayTimeAvgRate = videoOuterPlayTimeAvgRate;
-  }
-
-  public DailyReportsGetListStruct videoOuterPlayRate(Double videoOuterPlayRate) {
-    this.videoOuterPlayRate = videoOuterPlayRate;
-    return this;
-  }
-
-  /**
-   * Get videoOuterPlayRate
-   *
-   * @return videoOuterPlayRate
-   */
-  @ApiModelProperty(value = "")
-  public Double getVideoOuterPlayRate() {
-    return videoOuterPlayRate;
-  }
-
-  public void setVideoOuterPlayRate(Double videoOuterPlayRate) {
-    this.videoOuterPlayRate = videoOuterPlayRate;
-  }
-
-  public DailyReportsGetListStruct videoOuterPlayCost(Long videoOuterPlayCost) {
-    this.videoOuterPlayCost = videoOuterPlayCost;
-    return this;
-  }
-
-  /**
-   * Get videoOuterPlayCost
-   *
-   * @return videoOuterPlayCost
-   */
-  @ApiModelProperty(value = "")
-  public Long getVideoOuterPlayCost() {
-    return videoOuterPlayCost;
-  }
-
-  public void setVideoOuterPlayCost(Long videoOuterPlayCost) {
-    this.videoOuterPlayCost = videoOuterPlayCost;
-  }
-
-  public DailyReportsGetListStruct videoOuterPlay3sCount(Long videoOuterPlay3sCount) {
-    this.videoOuterPlay3sCount = videoOuterPlay3sCount;
-    return this;
-  }
-
-  /**
-   * Get videoOuterPlay3sCount
-   *
-   * @return videoOuterPlay3sCount
-   */
-  @ApiModelProperty(value = "")
-  public Long getVideoOuterPlay3sCount() {
-    return videoOuterPlay3sCount;
-  }
-
-  public void setVideoOuterPlay3sCount(Long videoOuterPlay3sCount) {
-    this.videoOuterPlay3sCount = videoOuterPlay3sCount;
-  }
-
-  public DailyReportsGetListStruct videoOuterPlay5sCount(Long videoOuterPlay5sCount) {
-    this.videoOuterPlay5sCount = videoOuterPlay5sCount;
-    return this;
-  }
-
-  /**
-   * Get videoOuterPlay5sCount
-   *
-   * @return videoOuterPlay5sCount
-   */
-  @ApiModelProperty(value = "")
-  public Long getVideoOuterPlay5sCount() {
-    return videoOuterPlay5sCount;
-  }
-
-  public void setVideoOuterPlay5sCount(Long videoOuterPlay5sCount) {
-    this.videoOuterPlay5sCount = videoOuterPlay5sCount;
-  }
-
-  public DailyReportsGetListStruct videoOuterPlay7sCount(Long videoOuterPlay7sCount) {
-    this.videoOuterPlay7sCount = videoOuterPlay7sCount;
-    return this;
-  }
-
-  /**
-   * Get videoOuterPlay7sCount
-   *
-   * @return videoOuterPlay7sCount
-   */
-  @ApiModelProperty(value = "")
-  public Long getVideoOuterPlay7sCount() {
-    return videoOuterPlay7sCount;
-  }
-
-  public void setVideoOuterPlay7sCount(Long videoOuterPlay7sCount) {
-    this.videoOuterPlay7sCount = videoOuterPlay7sCount;
-  }
-
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -7417,7 +7747,36 @@ public class DailyReportsGetListStruct {
             this.videoOuterPlay95Count, dailyReportsGetListStruct.videoOuterPlay95Count)
         && Objects.equals(
             this.videoOuterPlay100Count, dailyReportsGetListStruct.videoOuterPlay100Count)
+        && Objects.equals(
+            this.videoOuterPlayTimeCount, dailyReportsGetListStruct.videoOuterPlayTimeCount)
+        && Objects.equals(
+            this.videoOuterPlayTimeAvgRate, dailyReportsGetListStruct.videoOuterPlayTimeAvgRate)
+        && Objects.equals(this.videoOuterPlayRate, dailyReportsGetListStruct.videoOuterPlayRate)
+        && Objects.equals(this.videoOuterPlayCost, dailyReportsGetListStruct.videoOuterPlayCost)
         && Objects.equals(this.videoOuterPlayCount, dailyReportsGetListStruct.videoOuterPlayCount)
+        && Objects.equals(
+            this.videoOuterPlay3sCount, dailyReportsGetListStruct.videoOuterPlay3sCount)
+        && Objects.equals(
+            this.videoOuterPlay5sCount, dailyReportsGetListStruct.videoOuterPlay5sCount)
+        && Objects.equals(
+            this.videoOuterPlay7sCount, dailyReportsGetListStruct.videoOuterPlay7sCount)
+        && Objects.equals(
+            this.effectLeadsPurchaseCost, dailyReportsGetListStruct.effectLeadsPurchaseCost)
+        && Objects.equals(this.creWebCost, dailyReportsGetListStruct.creWebCost)
+        && Objects.equals(this.creAppCost, dailyReportsGetListStruct.creAppCost)
+        && Objects.equals(this.preCreWebCost, dailyReportsGetListStruct.preCreWebCost)
+        && Objects.equals(this.preCreAppCost, dailyReportsGetListStruct.preCreAppCost)
+        && Objects.equals(this.incomeRoi1, dailyReportsGetListStruct.incomeRoi1)
+        && Objects.equals(this.incomeRoi3, dailyReportsGetListStruct.incomeRoi3)
+        && Objects.equals(this.incomeRoi7, dailyReportsGetListStruct.incomeRoi7)
+        && Objects.equals(this.incomeRoi14, dailyReportsGetListStruct.incomeRoi14)
+        && Objects.equals(this.firstDayPayCount, dailyReportsGetListStruct.firstDayPayCount)
+        && Objects.equals(this.firstDayPayCost, dailyReportsGetListStruct.firstDayPayCost)
+        && Objects.equals(this.firstDayFirstPayCost, dailyReportsGetListStruct.firstDayFirstPayCost)
+        && Objects.equals(
+            this.firstDayFirstPayCount, dailyReportsGetListStruct.firstDayFirstPayCount)
+        && Objects.equals(this.firstDayPayAmount, dailyReportsGetListStruct.firstDayPayAmount)
+        && Objects.equals(this.firstDayFirstPayRate, dailyReportsGetListStruct.firstDayFirstPayRate)
         && Objects.equals(this.campaignId, dailyReportsGetListStruct.campaignId)
         && Objects.equals(this.adgroupId, dailyReportsGetListStruct.adgroupId)
         && Objects.equals(this.adId, dailyReportsGetListStruct.adId)
@@ -7431,6 +7790,9 @@ public class DailyReportsGetListStruct {
         && Objects.equals(this.webAddToCartRate, dailyReportsGetListStruct.webAddToCartRate)
         && Objects.equals(this.appAddToCartRate, dailyReportsGetListStruct.appAddToCartRate)
         && Objects.equals(this.isExpandTargeting, dailyReportsGetListStruct.isExpandTargeting)
+        && Objects.equals(this.siteSet, dailyReportsGetListStruct.siteSet)
+        && Objects.equals(this.materialId, dailyReportsGetListStruct.materialId)
+        && Objects.equals(this.signature, dailyReportsGetListStruct.signature)
         && Objects.equals(this.wechatAccountId, dailyReportsGetListStruct.wechatAccountId)
         && Objects.equals(this.wechatAgencyId, dailyReportsGetListStruct.wechatAgencyId)
         && Objects.equals(this.costDeviationRate, dailyReportsGetListStruct.costDeviationRate)
@@ -7552,22 +7914,7 @@ public class DailyReportsGetListStruct {
         && Objects.equals(
             this.videoOuterPlayUserCount, dailyReportsGetListStruct.videoOuterPlayUserCount)
         && Objects.equals(
-            this.videoInnerPlayUserCount, dailyReportsGetListStruct.videoInnerPlayUserCount)
-        && Objects.equals(this.siteSet, dailyReportsGetListStruct.siteSet)
-        && Objects.equals(this.materialId, dailyReportsGetListStruct.materialId)
-        && Objects.equals(this.signature, dailyReportsGetListStruct.signature)
-        && Objects.equals(
-            this.videoOuterPlayTimeCount, dailyReportsGetListStruct.videoOuterPlayTimeCount)
-        && Objects.equals(
-            this.videoOuterPlayTimeAvgRate, dailyReportsGetListStruct.videoOuterPlayTimeAvgRate)
-        && Objects.equals(this.videoOuterPlayRate, dailyReportsGetListStruct.videoOuterPlayRate)
-        && Objects.equals(this.videoOuterPlayCost, dailyReportsGetListStruct.videoOuterPlayCost)
-        && Objects.equals(
-            this.videoOuterPlay3sCount, dailyReportsGetListStruct.videoOuterPlay3sCount)
-        && Objects.equals(
-            this.videoOuterPlay5sCount, dailyReportsGetListStruct.videoOuterPlay5sCount)
-        && Objects.equals(
-            this.videoOuterPlay7sCount, dailyReportsGetListStruct.videoOuterPlay7sCount);
+            this.videoInnerPlayUserCount, dailyReportsGetListStruct.videoInnerPlayUserCount);
   }
 
   @Override
@@ -7803,7 +8150,29 @@ public class DailyReportsGetListStruct {
         videoOuterPlay75Count,
         videoOuterPlay95Count,
         videoOuterPlay100Count,
+        videoOuterPlayTimeCount,
+        videoOuterPlayTimeAvgRate,
+        videoOuterPlayRate,
+        videoOuterPlayCost,
         videoOuterPlayCount,
+        videoOuterPlay3sCount,
+        videoOuterPlay5sCount,
+        videoOuterPlay7sCount,
+        effectLeadsPurchaseCost,
+        creWebCost,
+        creAppCost,
+        preCreWebCost,
+        preCreAppCost,
+        incomeRoi1,
+        incomeRoi3,
+        incomeRoi7,
+        incomeRoi14,
+        firstDayPayCount,
+        firstDayPayCost,
+        firstDayFirstPayCost,
+        firstDayFirstPayCount,
+        firstDayPayAmount,
+        firstDayFirstPayRate,
         campaignId,
         adgroupId,
         adId,
@@ -7817,6 +8186,9 @@ public class DailyReportsGetListStruct {
         webAddToCartRate,
         appAddToCartRate,
         isExpandTargeting,
+        siteSet,
+        materialId,
+        signature,
         wechatAccountId,
         wechatAgencyId,
         costDeviationRate,
@@ -7885,17 +8257,7 @@ public class DailyReportsGetListStruct {
         couponUseCount,
         forwardUserCount,
         videoOuterPlayUserCount,
-        videoInnerPlayUserCount,
-        siteSet,
-        materialId,
-        signature,
-        videoOuterPlayTimeCount,
-        videoOuterPlayTimeAvgRate,
-        videoOuterPlayRate,
-        videoOuterPlayCost,
-        videoOuterPlay3sCount,
-        videoOuterPlay5sCount,
-        videoOuterPlay7sCount);
+        videoInnerPlayUserCount);
   }
 
   @Override

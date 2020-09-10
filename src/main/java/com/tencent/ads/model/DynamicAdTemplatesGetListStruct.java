@@ -31,7 +31,7 @@ public class DynamicAdTemplatesGetListStruct {
   private DynamicAdTemplateType dynamicAdTemplateType = null;
 
   @SerializedName("product_item_display_quantity")
-  private ProductItemDisplayQuantity productItemDisplayQuantity = null;
+  private ProductMode productItemDisplayQuantity = null;
 
   @SerializedName("dynamic_ad_template_width")
   private Long dynamicAdTemplateWidth = null;
@@ -104,7 +104,7 @@ public class DynamicAdTemplatesGetListStruct {
   }
 
   public DynamicAdTemplatesGetListStruct productItemDisplayQuantity(
-      ProductItemDisplayQuantity productItemDisplayQuantity) {
+      ProductMode productItemDisplayQuantity) {
     this.productItemDisplayQuantity = productItemDisplayQuantity;
     return this;
   }
@@ -115,11 +115,11 @@ public class DynamicAdTemplatesGetListStruct {
    * @return productItemDisplayQuantity
    */
   @ApiModelProperty(value = "")
-  public ProductItemDisplayQuantity getProductItemDisplayQuantity() {
+  public ProductMode getProductItemDisplayQuantity() {
     return productItemDisplayQuantity;
   }
 
-  public void setProductItemDisplayQuantity(ProductItemDisplayQuantity productItemDisplayQuantity) {
+  public void setProductItemDisplayQuantity(ProductMode productItemDisplayQuantity) {
     this.productItemDisplayQuantity = productItemDisplayQuantity;
   }
 

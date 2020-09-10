@@ -137,7 +137,7 @@ public class XijingPageApi {
   }
 
   /**
-   * 基于模板创建落地页
+   * 蹊径-基于模板创建落地页
    *
    * @param data (required)
    * @return XijingPageAddResponse
@@ -150,7 +150,7 @@ public class XijingPageApi {
   }
 
   /**
-   * 基于模板创建落地页
+   * 蹊径-基于模板创建落地页
    *
    * @param data (required)
    * @return ApiResponse&lt;XijingPageAddResponse&gt;
@@ -165,7 +165,7 @@ public class XijingPageApi {
   }
 
   /**
-   * 基于模板创建落地页 (asynchronously)
+   * 蹊径-基于模板创建落地页 (asynchronously)
    *
    * @param data (required)
    * @param callback The callback to be executed when the API call finishes
@@ -287,7 +287,7 @@ public class XijingPageApi {
   }
 
   /**
-   * 送审落地页
+   * 蹊径-送审落地页
    *
    * @param data (required)
    * @return XijingPageDeleteResponse
@@ -301,7 +301,7 @@ public class XijingPageApi {
   }
 
   /**
-   * 送审落地页
+   * 蹊径-送审落地页
    *
    * @param data (required)
    * @return ApiResponse&lt;XijingPageDeleteResponse&gt;
@@ -316,7 +316,7 @@ public class XijingPageApi {
   }
 
   /**
-   * 送审落地页 (asynchronously)
+   * 蹊径-送审落地页 (asynchronously)
    *
    * @param data (required)
    * @param callback The callback to be executed when the API call finishes
@@ -438,7 +438,7 @@ public class XijingPageApi {
   }
 
   /**
-   * 送审落地页
+   * 蹊径-送审落地页
    *
    * @param data (required)
    * @return XijingPageUpdateResponse
@@ -452,7 +452,7 @@ public class XijingPageApi {
   }
 
   /**
-   * 送审落地页
+   * 蹊径-送审落地页
    *
    * @param data (required)
    * @return ApiResponse&lt;XijingPageUpdateResponse&gt;
@@ -467,7 +467,7 @@ public class XijingPageApi {
   }
 
   /**
-   * 送审落地页 (asynchronously)
+   * 蹊径-送审落地页 (asynchronously)
    *
    * @param data (required)
    * @param callback The callback to be executed when the API call finishes

@@ -22,7 +22,7 @@ import java.util.Objects;
 
 /** 创意规格和投放权限数据结构 */
 @ApiModel(description = "创意规格和投放权限数据结构")
-public class AdcreativeTemplateListStruct {
+public class AdcreativeTemplateDetailGetAdcreativeTemplateListStruct {
   @SerializedName("adcreative_template_id")
   private Long adcreativeTemplateId = null;
 
@@ -71,7 +71,14 @@ public class AdcreativeTemplateListStruct {
   @SerializedName("support_dynamic_ability_spec_list")
   private SupportDynamicAbilitySpecList supportDynamicAbilitySpecList = null;
 
-  public AdcreativeTemplateListStruct adcreativeTemplateId(Long adcreativeTemplateId) {
+  @SerializedName("support_bid_mode_list")
+  private List<String> supportBidModeList = null;
+
+  @SerializedName("unsupport_bid_mode_list")
+  private List<UnsupportBidModeStruct> unsupportBidModeList = null;
+
+  public AdcreativeTemplateDetailGetAdcreativeTemplateListStruct adcreativeTemplateId(
+      Long adcreativeTemplateId) {
     this.adcreativeTemplateId = adcreativeTemplateId;
     return this;
   }
@@ -90,7 +97,8 @@ public class AdcreativeTemplateListStruct {
     this.adcreativeTemplateId = adcreativeTemplateId;
   }
 
-  public AdcreativeTemplateListStruct adcreativeTemplateName(String adcreativeTemplateName) {
+  public AdcreativeTemplateDetailGetAdcreativeTemplateListStruct adcreativeTemplateName(
+      String adcreativeTemplateName) {
     this.adcreativeTemplateName = adcreativeTemplateName;
     return this;
   }
@@ -109,7 +117,7 @@ public class AdcreativeTemplateListStruct {
     this.adcreativeTemplateName = adcreativeTemplateName;
   }
 
-  public AdcreativeTemplateListStruct adcreativeTemplateDescription(
+  public AdcreativeTemplateDetailGetAdcreativeTemplateListStruct adcreativeTemplateDescription(
       String adcreativeTemplateDescription) {
     this.adcreativeTemplateDescription = adcreativeTemplateDescription;
     return this;
@@ -129,7 +137,8 @@ public class AdcreativeTemplateListStruct {
     this.adcreativeTemplateDescription = adcreativeTemplateDescription;
   }
 
-  public AdcreativeTemplateListStruct adcreativeTemplateSize(String adcreativeTemplateSize) {
+  public AdcreativeTemplateDetailGetAdcreativeTemplateListStruct adcreativeTemplateSize(
+      String adcreativeTemplateSize) {
     this.adcreativeTemplateSize = adcreativeTemplateSize;
     return this;
   }
@@ -148,7 +157,8 @@ public class AdcreativeTemplateListStruct {
     this.adcreativeTemplateSize = adcreativeTemplateSize;
   }
 
-  public AdcreativeTemplateListStruct adcreativeTemplateStyle(String adcreativeTemplateStyle) {
+  public AdcreativeTemplateDetailGetAdcreativeTemplateListStruct adcreativeTemplateStyle(
+      String adcreativeTemplateStyle) {
     this.adcreativeTemplateStyle = adcreativeTemplateStyle;
     return this;
   }
@@ -167,13 +177,13 @@ public class AdcreativeTemplateListStruct {
     this.adcreativeTemplateStyle = adcreativeTemplateStyle;
   }
 
-  public AdcreativeTemplateListStruct adcreativeSampleImageList(
+  public AdcreativeTemplateDetailGetAdcreativeTemplateListStruct adcreativeSampleImageList(
       List<AdcreativeSampleImage> adcreativeSampleImageList) {
     this.adcreativeSampleImageList = adcreativeSampleImageList;
     return this;
   }
 
-  public AdcreativeTemplateListStruct addAdcreativeSampleImageListItem(
+  public AdcreativeTemplateDetailGetAdcreativeTemplateListStruct addAdcreativeSampleImageListItem(
       AdcreativeSampleImage adcreativeSampleImageListItem) {
     if (this.adcreativeSampleImageList == null) {
       this.adcreativeSampleImageList = new ArrayList<AdcreativeSampleImage>();
@@ -196,12 +206,14 @@ public class AdcreativeTemplateListStruct {
     this.adcreativeSampleImageList = adcreativeSampleImageList;
   }
 
-  public AdcreativeTemplateListStruct adAttributes(List<AdcreativeElement> adAttributes) {
+  public AdcreativeTemplateDetailGetAdcreativeTemplateListStruct adAttributes(
+      List<AdcreativeElement> adAttributes) {
     this.adAttributes = adAttributes;
     return this;
   }
 
-  public AdcreativeTemplateListStruct addAdAttributesItem(AdcreativeElement adAttributesItem) {
+  public AdcreativeTemplateDetailGetAdcreativeTemplateListStruct addAdAttributesItem(
+      AdcreativeElement adAttributesItem) {
     if (this.adAttributes == null) {
       this.adAttributes = new ArrayList<AdcreativeElement>();
     }
@@ -223,13 +235,13 @@ public class AdcreativeTemplateListStruct {
     this.adAttributes = adAttributes;
   }
 
-  public AdcreativeTemplateListStruct adcreativeAttributes(
+  public AdcreativeTemplateDetailGetAdcreativeTemplateListStruct adcreativeAttributes(
       List<AdcreativeElement> adcreativeAttributes) {
     this.adcreativeAttributes = adcreativeAttributes;
     return this;
   }
 
-  public AdcreativeTemplateListStruct addAdcreativeAttributesItem(
+  public AdcreativeTemplateDetailGetAdcreativeTemplateListStruct addAdcreativeAttributesItem(
       AdcreativeElement adcreativeAttributesItem) {
     if (this.adcreativeAttributes == null) {
       this.adcreativeAttributes = new ArrayList<AdcreativeElement>();
@@ -252,13 +264,13 @@ public class AdcreativeTemplateListStruct {
     this.adcreativeAttributes = adcreativeAttributes;
   }
 
-  public AdcreativeTemplateListStruct adcreativeElements(
+  public AdcreativeTemplateDetailGetAdcreativeTemplateListStruct adcreativeElements(
       List<AdcreativeElement> adcreativeElements) {
     this.adcreativeElements = adcreativeElements;
     return this;
   }
 
-  public AdcreativeTemplateListStruct addAdcreativeElementsItem(
+  public AdcreativeTemplateDetailGetAdcreativeTemplateListStruct addAdcreativeElementsItem(
       AdcreativeElement adcreativeElementsItem) {
     if (this.adcreativeElements == null) {
       this.adcreativeElements = new ArrayList<AdcreativeElement>();
@@ -281,13 +293,13 @@ public class AdcreativeTemplateListStruct {
     this.adcreativeElements = adcreativeElements;
   }
 
-  public AdcreativeTemplateListStruct supportBillingSpecList(
+  public AdcreativeTemplateDetailGetAdcreativeTemplateListStruct supportBillingSpecList(
       List<SupportBillingSpec> supportBillingSpecList) {
     this.supportBillingSpecList = supportBillingSpecList;
     return this;
   }
 
-  public AdcreativeTemplateListStruct addSupportBillingSpecListItem(
+  public AdcreativeTemplateDetailGetAdcreativeTemplateListStruct addSupportBillingSpecListItem(
       SupportBillingSpec supportBillingSpecListItem) {
     if (this.supportBillingSpecList == null) {
       this.supportBillingSpecList = new ArrayList<SupportBillingSpec>();
@@ -310,12 +322,14 @@ public class AdcreativeTemplateListStruct {
     this.supportBillingSpecList = supportBillingSpecList;
   }
 
-  public AdcreativeTemplateListStruct supportPageType(List<String> supportPageType) {
+  public AdcreativeTemplateDetailGetAdcreativeTemplateListStruct supportPageType(
+      List<String> supportPageType) {
     this.supportPageType = supportPageType;
     return this;
   }
 
-  public AdcreativeTemplateListStruct addSupportPageTypeItem(String supportPageTypeItem) {
+  public AdcreativeTemplateDetailGetAdcreativeTemplateListStruct addSupportPageTypeItem(
+      String supportPageTypeItem) {
     if (this.supportPageType == null) {
       this.supportPageType = new ArrayList<String>();
     }
@@ -337,13 +351,13 @@ public class AdcreativeTemplateListStruct {
     this.supportPageType = supportPageType;
   }
 
-  public AdcreativeTemplateListStruct unsupportBillingSpecList(
+  public AdcreativeTemplateDetailGetAdcreativeTemplateListStruct unsupportBillingSpecList(
       List<UnsupportBillingSpec> unsupportBillingSpecList) {
     this.unsupportBillingSpecList = unsupportBillingSpecList;
     return this;
   }
 
-  public AdcreativeTemplateListStruct addUnsupportBillingSpecListItem(
+  public AdcreativeTemplateDetailGetAdcreativeTemplateListStruct addUnsupportBillingSpecListItem(
       UnsupportBillingSpec unsupportBillingSpecListItem) {
     if (this.unsupportBillingSpecList == null) {
       this.unsupportBillingSpecList = new ArrayList<UnsupportBillingSpec>();
@@ -366,14 +380,14 @@ public class AdcreativeTemplateListStruct {
     this.unsupportBillingSpecList = unsupportBillingSpecList;
   }
 
-  public AdcreativeTemplateListStruct unsupportAdAttributesSpecList(
+  public AdcreativeTemplateDetailGetAdcreativeTemplateListStruct unsupportAdAttributesSpecList(
       List<UnsupportSpec> unsupportAdAttributesSpecList) {
     this.unsupportAdAttributesSpecList = unsupportAdAttributesSpecList;
     return this;
   }
 
-  public AdcreativeTemplateListStruct addUnsupportAdAttributesSpecListItem(
-      UnsupportSpec unsupportAdAttributesSpecListItem) {
+  public AdcreativeTemplateDetailGetAdcreativeTemplateListStruct
+      addUnsupportAdAttributesSpecListItem(UnsupportSpec unsupportAdAttributesSpecListItem) {
     if (this.unsupportAdAttributesSpecList == null) {
       this.unsupportAdAttributesSpecList = new ArrayList<UnsupportSpec>();
     }
@@ -395,14 +409,16 @@ public class AdcreativeTemplateListStruct {
     this.unsupportAdAttributesSpecList = unsupportAdAttributesSpecList;
   }
 
-  public AdcreativeTemplateListStruct unsupportAdcreativeAttributesSpecList(
-      List<UnsupportSpec> unsupportAdcreativeAttributesSpecList) {
+  public AdcreativeTemplateDetailGetAdcreativeTemplateListStruct
+      unsupportAdcreativeAttributesSpecList(
+          List<UnsupportSpec> unsupportAdcreativeAttributesSpecList) {
     this.unsupportAdcreativeAttributesSpecList = unsupportAdcreativeAttributesSpecList;
     return this;
   }
 
-  public AdcreativeTemplateListStruct addUnsupportAdcreativeAttributesSpecListItem(
-      UnsupportSpec unsupportAdcreativeAttributesSpecListItem) {
+  public AdcreativeTemplateDetailGetAdcreativeTemplateListStruct
+      addUnsupportAdcreativeAttributesSpecListItem(
+          UnsupportSpec unsupportAdcreativeAttributesSpecListItem) {
     if (this.unsupportAdcreativeAttributesSpecList == null) {
       this.unsupportAdcreativeAttributesSpecList = new ArrayList<UnsupportSpec>();
     }
@@ -425,13 +441,13 @@ public class AdcreativeTemplateListStruct {
     this.unsupportAdcreativeAttributesSpecList = unsupportAdcreativeAttributesSpecList;
   }
 
-  public AdcreativeTemplateListStruct unsupportSitesetDetailSpec(
+  public AdcreativeTemplateDetailGetAdcreativeTemplateListStruct unsupportSitesetDetailSpec(
       List<UnsupportSite> unsupportSitesetDetailSpec) {
     this.unsupportSitesetDetailSpec = unsupportSitesetDetailSpec;
     return this;
   }
 
-  public AdcreativeTemplateListStruct addUnsupportSitesetDetailSpecItem(
+  public AdcreativeTemplateDetailGetAdcreativeTemplateListStruct addUnsupportSitesetDetailSpecItem(
       UnsupportSite unsupportSitesetDetailSpecItem) {
     if (this.unsupportSitesetDetailSpec == null) {
       this.unsupportSitesetDetailSpec = new ArrayList<UnsupportSite>();
@@ -454,7 +470,7 @@ public class AdcreativeTemplateListStruct {
     this.unsupportSitesetDetailSpec = unsupportSitesetDetailSpec;
   }
 
-  public AdcreativeTemplateListStruct supportDynamicAbilitySpecList(
+  public AdcreativeTemplateDetailGetAdcreativeTemplateListStruct supportDynamicAbilitySpecList(
       SupportDynamicAbilitySpecList supportDynamicAbilitySpecList) {
     this.supportDynamicAbilitySpecList = supportDynamicAbilitySpecList;
     return this;
@@ -475,6 +491,64 @@ public class AdcreativeTemplateListStruct {
     this.supportDynamicAbilitySpecList = supportDynamicAbilitySpecList;
   }
 
+  public AdcreativeTemplateDetailGetAdcreativeTemplateListStruct supportBidModeList(
+      List<String> supportBidModeList) {
+    this.supportBidModeList = supportBidModeList;
+    return this;
+  }
+
+  public AdcreativeTemplateDetailGetAdcreativeTemplateListStruct addSupportBidModeListItem(
+      String supportBidModeListItem) {
+    if (this.supportBidModeList == null) {
+      this.supportBidModeList = new ArrayList<String>();
+    }
+    this.supportBidModeList.add(supportBidModeListItem);
+    return this;
+  }
+
+  /**
+   * Get supportBidModeList
+   *
+   * @return supportBidModeList
+   */
+  @ApiModelProperty(value = "")
+  public List<String> getSupportBidModeList() {
+    return supportBidModeList;
+  }
+
+  public void setSupportBidModeList(List<String> supportBidModeList) {
+    this.supportBidModeList = supportBidModeList;
+  }
+
+  public AdcreativeTemplateDetailGetAdcreativeTemplateListStruct unsupportBidModeList(
+      List<UnsupportBidModeStruct> unsupportBidModeList) {
+    this.unsupportBidModeList = unsupportBidModeList;
+    return this;
+  }
+
+  public AdcreativeTemplateDetailGetAdcreativeTemplateListStruct addUnsupportBidModeListItem(
+      UnsupportBidModeStruct unsupportBidModeListItem) {
+    if (this.unsupportBidModeList == null) {
+      this.unsupportBidModeList = new ArrayList<UnsupportBidModeStruct>();
+    }
+    this.unsupportBidModeList.add(unsupportBidModeListItem);
+    return this;
+  }
+
+  /**
+   * Get unsupportBidModeList
+   *
+   * @return unsupportBidModeList
+   */
+  @ApiModelProperty(value = "")
+  public List<UnsupportBidModeStruct> getUnsupportBidModeList() {
+    return unsupportBidModeList;
+  }
+
+  public void setUnsupportBidModeList(List<UnsupportBidModeStruct> unsupportBidModeList) {
+    this.unsupportBidModeList = unsupportBidModeList;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -483,41 +557,63 @@ public class AdcreativeTemplateListStruct {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    AdcreativeTemplateListStruct adcreativeTemplateListStruct = (AdcreativeTemplateListStruct) o;
+    AdcreativeTemplateDetailGetAdcreativeTemplateListStruct
+        adcreativeTemplateDetailGetAdcreativeTemplateListStruct =
+            (AdcreativeTemplateDetailGetAdcreativeTemplateListStruct) o;
     return Objects.equals(
-            this.adcreativeTemplateId, adcreativeTemplateListStruct.adcreativeTemplateId)
+            this.adcreativeTemplateId,
+            adcreativeTemplateDetailGetAdcreativeTemplateListStruct.adcreativeTemplateId)
         && Objects.equals(
-            this.adcreativeTemplateName, adcreativeTemplateListStruct.adcreativeTemplateName)
+            this.adcreativeTemplateName,
+            adcreativeTemplateDetailGetAdcreativeTemplateListStruct.adcreativeTemplateName)
         && Objects.equals(
             this.adcreativeTemplateDescription,
-            adcreativeTemplateListStruct.adcreativeTemplateDescription)
+            adcreativeTemplateDetailGetAdcreativeTemplateListStruct.adcreativeTemplateDescription)
         && Objects.equals(
-            this.adcreativeTemplateSize, adcreativeTemplateListStruct.adcreativeTemplateSize)
+            this.adcreativeTemplateSize,
+            adcreativeTemplateDetailGetAdcreativeTemplateListStruct.adcreativeTemplateSize)
         && Objects.equals(
-            this.adcreativeTemplateStyle, adcreativeTemplateListStruct.adcreativeTemplateStyle)
+            this.adcreativeTemplateStyle,
+            adcreativeTemplateDetailGetAdcreativeTemplateListStruct.adcreativeTemplateStyle)
         && Objects.equals(
-            this.adcreativeSampleImageList, adcreativeTemplateListStruct.adcreativeSampleImageList)
-        && Objects.equals(this.adAttributes, adcreativeTemplateListStruct.adAttributes)
+            this.adcreativeSampleImageList,
+            adcreativeTemplateDetailGetAdcreativeTemplateListStruct.adcreativeSampleImageList)
         && Objects.equals(
-            this.adcreativeAttributes, adcreativeTemplateListStruct.adcreativeAttributes)
-        && Objects.equals(this.adcreativeElements, adcreativeTemplateListStruct.adcreativeElements)
+            this.adAttributes, adcreativeTemplateDetailGetAdcreativeTemplateListStruct.adAttributes)
         && Objects.equals(
-            this.supportBillingSpecList, adcreativeTemplateListStruct.supportBillingSpecList)
-        && Objects.equals(this.supportPageType, adcreativeTemplateListStruct.supportPageType)
+            this.adcreativeAttributes,
+            adcreativeTemplateDetailGetAdcreativeTemplateListStruct.adcreativeAttributes)
         && Objects.equals(
-            this.unsupportBillingSpecList, adcreativeTemplateListStruct.unsupportBillingSpecList)
+            this.adcreativeElements,
+            adcreativeTemplateDetailGetAdcreativeTemplateListStruct.adcreativeElements)
+        && Objects.equals(
+            this.supportBillingSpecList,
+            adcreativeTemplateDetailGetAdcreativeTemplateListStruct.supportBillingSpecList)
+        && Objects.equals(
+            this.supportPageType,
+            adcreativeTemplateDetailGetAdcreativeTemplateListStruct.supportPageType)
+        && Objects.equals(
+            this.unsupportBillingSpecList,
+            adcreativeTemplateDetailGetAdcreativeTemplateListStruct.unsupportBillingSpecList)
         && Objects.equals(
             this.unsupportAdAttributesSpecList,
-            adcreativeTemplateListStruct.unsupportAdAttributesSpecList)
+            adcreativeTemplateDetailGetAdcreativeTemplateListStruct.unsupportAdAttributesSpecList)
         && Objects.equals(
             this.unsupportAdcreativeAttributesSpecList,
-            adcreativeTemplateListStruct.unsupportAdcreativeAttributesSpecList)
+            adcreativeTemplateDetailGetAdcreativeTemplateListStruct
+                .unsupportAdcreativeAttributesSpecList)
         && Objects.equals(
             this.unsupportSitesetDetailSpec,
-            adcreativeTemplateListStruct.unsupportSitesetDetailSpec)
+            adcreativeTemplateDetailGetAdcreativeTemplateListStruct.unsupportSitesetDetailSpec)
         && Objects.equals(
             this.supportDynamicAbilitySpecList,
-            adcreativeTemplateListStruct.supportDynamicAbilitySpecList);
+            adcreativeTemplateDetailGetAdcreativeTemplateListStruct.supportDynamicAbilitySpecList)
+        && Objects.equals(
+            this.supportBidModeList,
+            adcreativeTemplateDetailGetAdcreativeTemplateListStruct.supportBidModeList)
+        && Objects.equals(
+            this.unsupportBidModeList,
+            adcreativeTemplateDetailGetAdcreativeTemplateListStruct.unsupportBidModeList);
   }
 
   @Override
@@ -538,7 +634,9 @@ public class AdcreativeTemplateListStruct {
         unsupportAdAttributesSpecList,
         unsupportAdcreativeAttributesSpecList,
         unsupportSitesetDetailSpec,
-        supportDynamicAbilitySpecList);
+        supportDynamicAbilitySpecList,
+        supportBidModeList,
+        unsupportBidModeList);
   }
 
   @Override

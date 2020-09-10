@@ -24,7 +24,9 @@ import java.io.IOException;
 public enum ProfileType {
   DEFINITION("PROFILE_TYPE_DEFINITION"),
 
-  AUTO_GENERATE("PROFILE_TYPE_AUTO_GENERATE");
+  AUTO_GENERATE("PROFILE_TYPE_AUTO_GENERATE"),
+
+  WEAPP("PROFILE_TYPE_WEAPP");
 
   private String value;
 

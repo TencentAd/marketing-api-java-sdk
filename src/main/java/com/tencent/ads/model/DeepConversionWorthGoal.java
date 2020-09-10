@@ -19,7 +19,7 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-/** 优化 ROI 目标 */
+/** 优化ROI目标，不可更改，如修改深度优化效果值，需在结构体中传入已设置的优化ROI目标 */
 @JsonAdapter(DeepConversionWorthGoal.Adapter.class)
 public enum DeepConversionWorthGoal {
   _30DAY_PURCHASE_ROAS("GOAL_30DAY_PURCHASE_ROAS"),

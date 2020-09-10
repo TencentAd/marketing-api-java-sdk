@@ -34,6 +34,9 @@ public class AssetPermissionsDeleteRequest {
   @SerializedName("asset_id")
   private Long assetId = null;
 
+  @SerializedName("licensing_id_type")
+  private AssetAccountType licensingIdType = null;
+
   public AssetPermissionsDeleteRequest accountId(Long accountId) {
     this.accountId = accountId;
     return this;
@@ -130,6 +133,25 @@ public class AssetPermissionsDeleteRequest {
     this.assetId = assetId;
   }
 
+  public AssetPermissionsDeleteRequest licensingIdType(AssetAccountType licensingIdType) {
+    this.licensingIdType = licensingIdType;
+    return this;
+  }
+
+  /**
+   * Get licensingIdType
+   *
+   * @return licensingIdType
+   */
+  @ApiModelProperty(value = "")
+  public AssetAccountType getLicensingIdType() {
+    return licensingIdType;
+  }
+
+  public void setLicensingIdType(AssetAccountType licensingIdType) {
+    this.licensingIdType = licensingIdType;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -144,13 +166,19 @@ public class AssetPermissionsDeleteRequest {
         && Objects.equals(this.assetType, assetPermissionsDeleteRequest.assetType)
         && Objects.equals(
             this.assetPermissionGrantType, assetPermissionsDeleteRequest.assetPermissionGrantType)
-        && Objects.equals(this.assetId, assetPermissionsDeleteRequest.assetId);
+        && Objects.equals(this.assetId, assetPermissionsDeleteRequest.assetId)
+        && Objects.equals(this.licensingIdType, assetPermissionsDeleteRequest.licensingIdType);
   }
 
   @Override
   public int hashCode() {
     return Objects.hash(
-        accountId, licensingAccountId, assetType, assetPermissionGrantType, assetId);
+        accountId,
+        licensingAccountId,
+        assetType,
+        assetPermissionGrantType,
+        assetId,
+        licensingIdType);
   }
 
   @Override

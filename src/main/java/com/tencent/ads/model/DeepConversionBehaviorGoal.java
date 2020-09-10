@@ -19,7 +19,7 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-/** 优化转化行为目标。 */
+/** 优化转化行为目标，不可更改，如修改目标价格，需在结构体中传入已设置的优化转化行为目标。 */
 @JsonAdapter(DeepConversionBehaviorGoal.Adapter.class)
 public enum DeepConversionBehaviorGoal {
   ONE_DAY_RETENTION("OPTIMIZATIONGOAL_ONE_DAY_RETENTION"),

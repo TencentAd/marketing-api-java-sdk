@@ -25,7 +25,7 @@ public class DynamicCreativesGetResponseData {
   private List<DynamicCreativesGetListStruct> list = null;
 
   @SerializedName("page_info")
-  private Conf pageInfo = null;
+  private ConfPageSize500 pageInfo = null;
 
   public DynamicCreativesGetResponseData list(List<DynamicCreativesGetListStruct> list) {
     this.list = list;
@@ -54,7 +54,7 @@ public class DynamicCreativesGetResponseData {
     this.list = list;
   }
 
-  public DynamicCreativesGetResponseData pageInfo(Conf pageInfo) {
+  public DynamicCreativesGetResponseData pageInfo(ConfPageSize500 pageInfo) {
     this.pageInfo = pageInfo;
     return this;
   }
@@ -65,11 +65,11 @@ public class DynamicCreativesGetResponseData {
    * @return pageInfo
    */
   @ApiModelProperty(value = "")
-  public Conf getPageInfo() {
+  public ConfPageSize500 getPageInfo() {
     return pageInfo;
   }
 
-  public void setPageInfo(Conf pageInfo) {
+  public void setPageInfo(ConfPageSize500 pageInfo) {
     this.pageInfo = pageInfo;
   }
 

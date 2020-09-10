@@ -33,6 +33,9 @@ public class AsyncReportsAddRequest {
   @SerializedName("level")
   private AsyncReportLevel level = null;
 
+  @SerializedName("filtering")
+  private List<AsyncReportsFilteringStruct> filtering = null;
+
   @SerializedName("time_line")
   private TimeLine timeLine = null;
 
@@ -127,6 +130,33 @@ public class AsyncReportsAddRequest {
 
   public void setLevel(AsyncReportLevel level) {
     this.level = level;
+  }
+
+  public AsyncReportsAddRequest filtering(List<AsyncReportsFilteringStruct> filtering) {
+    this.filtering = filtering;
+    return this;
+  }
+
+  public AsyncReportsAddRequest addFilteringItem(AsyncReportsFilteringStruct filteringItem) {
+    if (this.filtering == null) {
+      this.filtering = new ArrayList<AsyncReportsFilteringStruct>();
+    }
+    this.filtering.add(filteringItem);
+    return this;
+  }
+
+  /**
+   * Get filtering
+   *
+   * @return filtering
+   */
+  @ApiModelProperty(value = "")
+  public List<AsyncReportsFilteringStruct> getFiltering() {
+    return filtering;
+  }
+
+  public void setFiltering(List<AsyncReportsFilteringStruct> filtering) {
+    this.filtering = filtering;
   }
 
   public AsyncReportsAddRequest timeLine(TimeLine timeLine) {
@@ -226,6 +256,7 @@ public class AsyncReportsAddRequest {
         && Objects.equals(this.taskName, asyncReportsAddRequest.taskName)
         && Objects.equals(this.reportFields, asyncReportsAddRequest.reportFields)
         && Objects.equals(this.level, asyncReportsAddRequest.level)
+        && Objects.equals(this.filtering, asyncReportsAddRequest.filtering)
         && Objects.equals(this.timeLine, asyncReportsAddRequest.timeLine)
         && Objects.equals(this.groupBy, asyncReportsAddRequest.groupBy)
         && Objects.equals(this.granularity, asyncReportsAddRequest.granularity)
@@ -235,7 +266,7 @@ public class AsyncReportsAddRequest {
   @Override
   public int hashCode() {
     return Objects.hash(
-        accountId, taskName, reportFields, level, timeLine, groupBy, granularity, date);
+        accountId, taskName, reportFields, level, filtering, timeLine, groupBy, granularity, date);
   }
 
   @Override

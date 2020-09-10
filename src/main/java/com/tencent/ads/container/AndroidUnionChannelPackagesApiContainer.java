@@ -23,6 +23,9 @@ import com.tencent.ads.model.AndroidUnionChannelPackagesAddResponse;
 import com.tencent.ads.model.AndroidUnionChannelPackagesAddResponseData;
 import com.tencent.ads.model.AndroidUnionChannelPackagesGetResponse;
 import com.tencent.ads.model.AndroidUnionChannelPackagesGetResponseData;
+import com.tencent.ads.model.AndroidUnionChannelPackagesUpdateRequest;
+import com.tencent.ads.model.AndroidUnionChannelPackagesUpdateResponse;
+import com.tencent.ads.model.AndroidUnionChannelPackagesUpdateResponseData;
 import java.util.List;
 
 public class AndroidUnionChannelPackagesApiContainer extends ApiContainer {
@@ -61,6 +64,22 @@ public class AndroidUnionChannelPackagesApiContainer extends ApiContainer {
       throws ApiException, TencentAdsResponseException {
     AndroidUnionChannelPackagesGetResponse resp =
         api.androidUnionChannelPackagesGet(accountId, androidUnionAppId, page, pageSize, fields);
+    handleResponse(gson.toJson(resp));
+    return resp.getData();
+  }
+
+  /**
+   * 更新广告渠道包
+   *
+   * @param data (required)
+   * @return AndroidUnionChannelPackagesUpdateResponse
+   * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
+   *     response body
+   */
+  public AndroidUnionChannelPackagesUpdateResponseData androidUnionChannelPackagesUpdate(
+      AndroidUnionChannelPackagesUpdateRequest data)
+      throws ApiException, TencentAdsResponseException {
+    AndroidUnionChannelPackagesUpdateResponse resp = api.androidUnionChannelPackagesUpdate(data);
     handleResponse(gson.toJson(resp));
     return resp.getData();
   }

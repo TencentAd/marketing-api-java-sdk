@@ -123,6 +123,12 @@ public class AdgroupsAddRequest {
   @SerializedName("deep_conversion_worth_rate")
   private Double deepConversionWorthRate = null;
 
+  @SerializedName("bid_mode")
+  private BidMode bidMode = null;
+
+  @SerializedName("bid_adjustment")
+  private BidAdjustment bidAdjustment = null;
+
   @SerializedName("account_id")
   private Long accountId = null;
 
@@ -815,6 +821,44 @@ public class AdgroupsAddRequest {
     this.deepConversionWorthRate = deepConversionWorthRate;
   }
 
+  public AdgroupsAddRequest bidMode(BidMode bidMode) {
+    this.bidMode = bidMode;
+    return this;
+  }
+
+  /**
+   * Get bidMode
+   *
+   * @return bidMode
+   */
+  @ApiModelProperty(value = "")
+  public BidMode getBidMode() {
+    return bidMode;
+  }
+
+  public void setBidMode(BidMode bidMode) {
+    this.bidMode = bidMode;
+  }
+
+  public AdgroupsAddRequest bidAdjustment(BidAdjustment bidAdjustment) {
+    this.bidAdjustment = bidAdjustment;
+    return this;
+  }
+
+  /**
+   * Get bidAdjustment
+   *
+   * @return bidAdjustment
+   */
+  @ApiModelProperty(value = "")
+  public BidAdjustment getBidAdjustment() {
+    return bidAdjustment;
+  }
+
+  public void setBidAdjustment(BidAdjustment bidAdjustment) {
+    this.bidAdjustment = bidAdjustment;
+  }
+
   public AdgroupsAddRequest accountId(Long accountId) {
     this.accountId = accountId;
     return this;
@@ -881,6 +925,8 @@ public class AdgroupsAddRequest {
         && Objects.equals(
             this.deepConversionBehaviorBid, adgroupsAddRequest.deepConversionBehaviorBid)
         && Objects.equals(this.deepConversionWorthRate, adgroupsAddRequest.deepConversionWorthRate)
+        && Objects.equals(this.bidMode, adgroupsAddRequest.bidMode)
+        && Objects.equals(this.bidAdjustment, adgroupsAddRequest.bidAdjustment)
         && Objects.equals(this.accountId, adgroupsAddRequest.accountId);
   }
 
@@ -921,6 +967,8 @@ public class AdgroupsAddRequest {
         conversionId,
         deepConversionBehaviorBid,
         deepConversionWorthRate,
+        bidMode,
+        bidAdjustment,
         accountId);
   }
 

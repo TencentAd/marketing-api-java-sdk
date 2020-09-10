@@ -22,17 +22,18 @@ import java.util.Objects;
 /** AdcreativeTemplateDetailGetResponseData */
 public class AdcreativeTemplateDetailGetResponseData {
   @SerializedName("list")
-  private List<AdcreativeTemplateListStruct> list = null;
+  private List<AdcreativeTemplateDetailGetAdcreativeTemplateListStruct> list = null;
 
-  public AdcreativeTemplateDetailGetResponseData list(List<AdcreativeTemplateListStruct> list) {
+  public AdcreativeTemplateDetailGetResponseData list(
+      List<AdcreativeTemplateDetailGetAdcreativeTemplateListStruct> list) {
     this.list = list;
     return this;
   }
 
   public AdcreativeTemplateDetailGetResponseData addListItem(
-      AdcreativeTemplateListStruct listItem) {
+      AdcreativeTemplateDetailGetAdcreativeTemplateListStruct listItem) {
     if (this.list == null) {
-      this.list = new ArrayList<AdcreativeTemplateListStruct>();
+      this.list = new ArrayList<AdcreativeTemplateDetailGetAdcreativeTemplateListStruct>();
     }
     this.list.add(listItem);
     return this;
@@ -44,11 +45,11 @@ public class AdcreativeTemplateDetailGetResponseData {
    * @return list
    */
   @ApiModelProperty(value = "")
-  public List<AdcreativeTemplateListStruct> getList() {
+  public List<AdcreativeTemplateDetailGetAdcreativeTemplateListStruct> getList() {
     return list;
   }
 
-  public void setList(List<AdcreativeTemplateListStruct> list) {
+  public void setList(List<AdcreativeTemplateDetailGetAdcreativeTemplateListStruct> list) {
     this.list = list;
   }
 

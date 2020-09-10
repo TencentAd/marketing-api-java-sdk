@@ -24,7 +24,9 @@ import java.io.IOException;
 public enum TimeGranularity {
   DAILY("DAILY"),
 
-  HOURLY("HOURLY");
+  HOURLY("HOURLY"),
+
+  SUMMARY("SUMMARY");
 
   private String value;
 

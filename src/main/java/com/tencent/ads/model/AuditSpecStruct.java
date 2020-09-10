@@ -18,8 +18,8 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.util.Objects;
 
-/** 多站点的审核结果信息 */
-@ApiModel(description = "多站点的审核结果信息")
+/** 多版位的审核结果信息 */
+@ApiModel(description = "多版位的审核结果信息")
 public class AuditSpecStruct {
   @SerializedName("site_set")
   private SiteSetDefinition siteSet = null;

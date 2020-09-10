@@ -24,6 +24,9 @@ public class ProductCategoriesListGetResponseData {
   @SerializedName("list")
   private List<CategoryItem> list = null;
 
+  @SerializedName("page_info")
+  private Conf pageInfo = null;
+
   public ProductCategoriesListGetResponseData list(List<CategoryItem> list) {
     this.list = list;
     return this;
@@ -51,6 +54,25 @@ public class ProductCategoriesListGetResponseData {
     this.list = list;
   }
 
+  public ProductCategoriesListGetResponseData pageInfo(Conf pageInfo) {
+    this.pageInfo = pageInfo;
+    return this;
+  }
+
+  /**
+   * Get pageInfo
+   *
+   * @return pageInfo
+   */
+  @ApiModelProperty(value = "")
+  public Conf getPageInfo() {
+    return pageInfo;
+  }
+
+  public void setPageInfo(Conf pageInfo) {
+    this.pageInfo = pageInfo;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -61,12 +83,13 @@ public class ProductCategoriesListGetResponseData {
     }
     ProductCategoriesListGetResponseData productCategoriesListGetResponseData =
         (ProductCategoriesListGetResponseData) o;
-    return Objects.equals(this.list, productCategoriesListGetResponseData.list);
+    return Objects.equals(this.list, productCategoriesListGetResponseData.list)
+        && Objects.equals(this.pageInfo, productCategoriesListGetResponseData.pageInfo);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(list);
+    return Objects.hash(list, pageInfo);
   }
 
   @Override

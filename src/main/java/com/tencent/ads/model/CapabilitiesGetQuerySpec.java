@@ -20,14 +20,14 @@ import java.util.Objects;
 
 /** 查询条件 */
 @ApiModel(description = "查询条件")
-public class QuerySpec {
+public class CapabilitiesGetQuerySpec {
   @SerializedName("wechat_link_ad")
   private WechatLinkAd wechatLinkAd = null;
 
   @SerializedName("wechat_ocpa")
   private WechatOcpa wechatOcpa = null;
 
-  public QuerySpec wechatLinkAd(WechatLinkAd wechatLinkAd) {
+  public CapabilitiesGetQuerySpec wechatLinkAd(WechatLinkAd wechatLinkAd) {
     this.wechatLinkAd = wechatLinkAd;
     return this;
   }
@@ -46,7 +46,7 @@ public class QuerySpec {
     this.wechatLinkAd = wechatLinkAd;
   }
 
-  public QuerySpec wechatOcpa(WechatOcpa wechatOcpa) {
+  public CapabilitiesGetQuerySpec wechatOcpa(WechatOcpa wechatOcpa) {
     this.wechatOcpa = wechatOcpa;
     return this;
   }
@@ -73,9 +73,9 @@ public class QuerySpec {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    QuerySpec querySpec = (QuerySpec) o;
-    return Objects.equals(this.wechatLinkAd, querySpec.wechatLinkAd)
-        && Objects.equals(this.wechatOcpa, querySpec.wechatOcpa);
+    CapabilitiesGetQuerySpec capabilitiesGetQuerySpec = (CapabilitiesGetQuerySpec) o;
+    return Objects.equals(this.wechatLinkAd, capabilitiesGetQuerySpec.wechatLinkAd)
+        && Objects.equals(this.wechatOcpa, capabilitiesGetQuerySpec.wechatOcpa);
   }
 
   @Override

@@ -31,7 +31,7 @@ public class AudienceGrantRelationsAddRequest {
   private AudienceGrantType grantType = null;
 
   @SerializedName("grant_spec")
-  private GrantSpec grantSpec = null;
+  private AudienceGrantRelationsAddGrantSpec grantSpec = null;
 
   public AudienceGrantRelationsAddRequest accountId(Long accountId) {
     this.accountId = accountId;
@@ -98,7 +98,7 @@ public class AudienceGrantRelationsAddRequest {
     this.grantType = grantType;
   }
 
-  public AudienceGrantRelationsAddRequest grantSpec(GrantSpec grantSpec) {
+  public AudienceGrantRelationsAddRequest grantSpec(AudienceGrantRelationsAddGrantSpec grantSpec) {
     this.grantSpec = grantSpec;
     return this;
   }
@@ -109,11 +109,11 @@ public class AudienceGrantRelationsAddRequest {
    * @return grantSpec
    */
   @ApiModelProperty(value = "")
-  public GrantSpec getGrantSpec() {
+  public AudienceGrantRelationsAddGrantSpec getGrantSpec() {
     return grantSpec;
   }
 
-  public void setGrantSpec(GrantSpec grantSpec) {
+  public void setGrantSpec(AudienceGrantRelationsAddGrantSpec grantSpec) {
     this.grantSpec = grantSpec;
   }
 

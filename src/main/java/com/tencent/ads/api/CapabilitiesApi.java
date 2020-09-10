@@ -21,8 +21,8 @@ import com.tencent.ads.Configuration;
 import com.tencent.ads.Pair;
 import com.tencent.ads.ProgressRequestBody;
 import com.tencent.ads.ProgressResponseBody;
+import com.tencent.ads.model.CapabilitiesGetQuerySpec;
 import com.tencent.ads.model.CapabilitiesGetResponse;
-import com.tencent.ads.model.QuerySpec;
 import java.io.IOException;
 import java.lang.reflect.Type;
 import java.util.ArrayList;
@@ -64,7 +64,7 @@ public class CapabilitiesApi {
   public com.squareup.okhttp.Call capabilitiesGetCall(
       Long accountId,
       String capability,
-      QuerySpec querySpec,
+      CapabilitiesGetQuerySpec querySpec,
       List<String> fields,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener)
@@ -132,7 +132,7 @@ public class CapabilitiesApi {
   private com.squareup.okhttp.Call capabilitiesGetValidateBeforeCall(
       Long accountId,
       String capability,
-      QuerySpec querySpec,
+      CapabilitiesGetQuerySpec querySpec,
       List<String> fields,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener)
@@ -157,7 +157,7 @@ public class CapabilitiesApi {
   }
 
   /**
-   * 查询广告相关权限
+   * 查询广告相关权限（待废弃）
    *
    * @param accountId (required)
    * @param capability (required)
@@ -168,7 +168,7 @@ public class CapabilitiesApi {
    *     response body
    */
   public CapabilitiesGetResponse capabilitiesGet(
-      Long accountId, String capability, QuerySpec querySpec, List<String> fields)
+      Long accountId, String capability, CapabilitiesGetQuerySpec querySpec, List<String> fields)
       throws ApiException {
     ApiResponse<CapabilitiesGetResponse> resp =
         capabilitiesGetWithHttpInfo(accountId, capability, querySpec, fields);
@@ -176,7 +176,7 @@ public class CapabilitiesApi {
   }
 
   /**
-   * 查询广告相关权限
+   * 查询广告相关权限（待废弃）
    *
    * @param accountId (required)
    * @param capability (required)
@@ -187,7 +187,7 @@ public class CapabilitiesApi {
    *     response body
    */
   public ApiResponse<CapabilitiesGetResponse> capabilitiesGetWithHttpInfo(
-      Long accountId, String capability, QuerySpec querySpec, List<String> fields)
+      Long accountId, String capability, CapabilitiesGetQuerySpec querySpec, List<String> fields)
       throws ApiException {
     com.squareup.okhttp.Call call =
         capabilitiesGetValidateBeforeCall(accountId, capability, querySpec, fields, null, null);
@@ -196,7 +196,7 @@ public class CapabilitiesApi {
   }
 
   /**
-   * 查询广告相关权限 (asynchronously)
+   * 查询广告相关权限（待废弃） (asynchronously)
    *
    * @param accountId (required)
    * @param capability (required)
@@ -209,7 +209,7 @@ public class CapabilitiesApi {
   public com.squareup.okhttp.Call capabilitiesGetAsync(
       Long accountId,
       String capability,
-      QuerySpec querySpec,
+      CapabilitiesGetQuerySpec querySpec,
       List<String> fields,
       final ApiCallback<CapabilitiesGetResponse> callback)
       throws ApiException {

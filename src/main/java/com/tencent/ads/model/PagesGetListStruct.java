@@ -39,6 +39,9 @@ public class PagesGetListStruct {
   @SerializedName("promoted_object_id")
   private String promotedObjectId = null;
 
+  @SerializedName("product_catalog_id")
+  private Long productCatalogId = null;
+
   @SerializedName("page_type")
   private DestinationTypeRead pageType = null;
 
@@ -156,6 +159,25 @@ public class PagesGetListStruct {
     this.promotedObjectId = promotedObjectId;
   }
 
+  public PagesGetListStruct productCatalogId(Long productCatalogId) {
+    this.productCatalogId = productCatalogId;
+    return this;
+  }
+
+  /**
+   * Get productCatalogId
+   *
+   * @return productCatalogId
+   */
+  @ApiModelProperty(value = "")
+  public Long getProductCatalogId() {
+    return productCatalogId;
+  }
+
+  public void setProductCatalogId(Long productCatalogId) {
+    this.productCatalogId = productCatalogId;
+  }
+
   public PagesGetListStruct pageType(DestinationTypeRead pageType) {
     this.pageType = pageType;
     return this;
@@ -190,13 +212,21 @@ public class PagesGetListStruct {
         && Objects.equals(this.createdTime, pagesGetListStruct.createdTime)
         && Objects.equals(this.lastModifiedTime, pagesGetListStruct.lastModifiedTime)
         && Objects.equals(this.promotedObjectId, pagesGetListStruct.promotedObjectId)
+        && Objects.equals(this.productCatalogId, pagesGetListStruct.productCatalogId)
         && Objects.equals(this.pageType, pagesGetListStruct.pageType);
   }
 
   @Override
   public int hashCode() {
     return Objects.hash(
-        pageId, pageName, previewUrl, createdTime, lastModifiedTime, promotedObjectId, pageType);
+        pageId,
+        pageName,
+        previewUrl,
+        createdTime,
+        lastModifiedTime,
+        promotedObjectId,
+        productCatalogId,
+        pageType);
   }
 
   @Override

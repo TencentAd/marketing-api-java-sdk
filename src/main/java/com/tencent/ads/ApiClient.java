@@ -54,7 +54,8 @@ public class ApiClient {
   private Map<String, String> defaultHeaderMap = new HashMap<String, String>();
   private String tempFolderPath = null;
 
-  private static ThreadLocal<Map<String, Authentication>> authenticationsLocal = new ThreadLocal<>();
+  private static ThreadLocal<Map<String, Authentication>> authenticationsLocal =
+      new ThreadLocal<>();
 
   private DateFormat dateFormat;
   private DateFormat datetimeFormat;
@@ -378,7 +379,7 @@ public class ApiClient {
   public synchronized ApiClient setDebugging(boolean debugging) {
     if (debugging != this.debugging) {
       if (debugging) {
-        for(Interceptor interceptor : httpClient.interceptors()) {
+        for (Interceptor interceptor : httpClient.interceptors()) {
           if (interceptor instanceof HttpLoggingInterceptor) {
             return this;
           }
