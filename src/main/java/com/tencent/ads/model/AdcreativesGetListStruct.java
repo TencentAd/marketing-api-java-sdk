@@ -137,6 +137,9 @@ public class AdcreativesGetListStruct {
   @SerializedName("floating_zone")
   private FloatingZone floatingZone = null;
 
+  @SerializedName("marketing_pendant_image_id")
+  private String marketingPendantImageId = null;
+
   @SerializedName("adcreative_template_id")
   private Long adcreativeTemplateId = null;
 
@@ -893,6 +896,25 @@ public class AdcreativesGetListStruct {
     this.floatingZone = floatingZone;
   }
 
+  public AdcreativesGetListStruct marketingPendantImageId(String marketingPendantImageId) {
+    this.marketingPendantImageId = marketingPendantImageId;
+    return this;
+  }
+
+  /**
+   * Get marketingPendantImageId
+   *
+   * @return marketingPendantImageId
+   */
+  @ApiModelProperty(value = "")
+  public String getMarketingPendantImageId() {
+    return marketingPendantImageId;
+  }
+
+  public void setMarketingPendantImageId(String marketingPendantImageId) {
+    this.marketingPendantImageId = marketingPendantImageId;
+  }
+
   public AdcreativesGetListStruct adcreativeTemplateId(Long adcreativeTemplateId) {
     this.adcreativeTemplateId = adcreativeTemplateId;
     return this;
@@ -987,6 +1009,8 @@ public class AdcreativesGetListStruct {
         && Objects.equals(
             this.feedsVideoCommentSwitch, adcreativesGetListStruct.feedsVideoCommentSwitch)
         && Objects.equals(this.floatingZone, adcreativesGetListStruct.floatingZone)
+        && Objects.equals(
+            this.marketingPendantImageId, adcreativesGetListStruct.marketingPendantImageId)
         && Objects.equals(this.adcreativeTemplateId, adcreativesGetListStruct.adcreativeTemplateId)
         && Objects.equals(this.adcreativeElements, adcreativesGetListStruct.adcreativeElements);
   }
@@ -1032,6 +1056,7 @@ public class AdcreativesGetListStruct {
         videoEndPage,
         feedsVideoCommentSwitch,
         floatingZone,
+        marketingPendantImageId,
         adcreativeTemplateId,
         adcreativeElements);
   }

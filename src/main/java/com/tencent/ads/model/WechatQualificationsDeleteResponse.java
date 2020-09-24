@@ -19,8 +19,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
-/** ProductItemsListGetResponse */
-public class ProductItemsListGetResponse {
+/** WechatQualificationsDeleteResponse */
+public class WechatQualificationsDeleteResponse {
   @SerializedName("code")
   private Long code = null;
 
@@ -34,9 +34,9 @@ public class ProductItemsListGetResponse {
   private List<ApiErrorStruct> errors = null;
 
   @SerializedName("data")
-  private ProductItemsListGetResponseData data = null;
+  private WechatQualificationsDeleteResponseData data = null;
 
-  public ProductItemsListGetResponse code(Long code) {
+  public WechatQualificationsDeleteResponse code(Long code) {
     this.code = code;
     return this;
   }
@@ -55,7 +55,7 @@ public class ProductItemsListGetResponse {
     this.code = code;
   }
 
-  public ProductItemsListGetResponse message(String message) {
+  public WechatQualificationsDeleteResponse message(String message) {
     this.message = message;
     return this;
   }
@@ -74,7 +74,7 @@ public class ProductItemsListGetResponse {
     this.message = message;
   }
 
-  public ProductItemsListGetResponse messageCn(String messageCn) {
+  public WechatQualificationsDeleteResponse messageCn(String messageCn) {
     this.messageCn = messageCn;
     return this;
   }
@@ -93,12 +93,12 @@ public class ProductItemsListGetResponse {
     this.messageCn = messageCn;
   }
 
-  public ProductItemsListGetResponse errors(List<ApiErrorStruct> errors) {
+  public WechatQualificationsDeleteResponse errors(List<ApiErrorStruct> errors) {
     this.errors = errors;
     return this;
   }
 
-  public ProductItemsListGetResponse addErrorsItem(ApiErrorStruct errorsItem) {
+  public WechatQualificationsDeleteResponse addErrorsItem(ApiErrorStruct errorsItem) {
     if (this.errors == null) {
       this.errors = new ArrayList<ApiErrorStruct>();
     }
@@ -120,7 +120,7 @@ public class ProductItemsListGetResponse {
     this.errors = errors;
   }
 
-  public ProductItemsListGetResponse data(ProductItemsListGetResponseData data) {
+  public WechatQualificationsDeleteResponse data(WechatQualificationsDeleteResponseData data) {
     this.data = data;
     return this;
   }
@@ -131,11 +131,11 @@ public class ProductItemsListGetResponse {
    * @return data
    */
   @ApiModelProperty(value = "")
-  public ProductItemsListGetResponseData getData() {
+  public WechatQualificationsDeleteResponseData getData() {
     return data;
   }
 
-  public void setData(ProductItemsListGetResponseData data) {
+  public void setData(WechatQualificationsDeleteResponseData data) {
     this.data = data;
   }
 
@@ -147,12 +147,13 @@ public class ProductItemsListGetResponse {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    ProductItemsListGetResponse productItemsListGetResponse = (ProductItemsListGetResponse) o;
-    return Objects.equals(this.code, productItemsListGetResponse.code)
-        && Objects.equals(this.message, productItemsListGetResponse.message)
-        && Objects.equals(this.messageCn, productItemsListGetResponse.messageCn)
-        && Objects.equals(this.errors, productItemsListGetResponse.errors)
-        && Objects.equals(this.data, productItemsListGetResponse.data);
+    WechatQualificationsDeleteResponse wechatQualificationsDeleteResponse =
+        (WechatQualificationsDeleteResponse) o;
+    return Objects.equals(this.code, wechatQualificationsDeleteResponse.code)
+        && Objects.equals(this.message, wechatQualificationsDeleteResponse.message)
+        && Objects.equals(this.messageCn, wechatQualificationsDeleteResponse.messageCn)
+        && Objects.equals(this.errors, wechatQualificationsDeleteResponse.errors)
+        && Objects.equals(this.data, wechatQualificationsDeleteResponse.data);
   }
 
   @Override

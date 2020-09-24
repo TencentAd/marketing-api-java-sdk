@@ -89,9 +89,6 @@ public class WriteTargetingSetting {
   @SerializedName("consumption_status")
   private List<String> consumptionStatus = null;
 
-  @SerializedName("gamer_consumption_ability")
-  private List<PlayerConsuptStruct> gamerConsumptionAbility = null;
-
   @SerializedName("game_consumption_level")
   private List<String> gameConsumptionLevel = null;
 
@@ -700,35 +697,6 @@ public class WriteTargetingSetting {
     this.consumptionStatus = consumptionStatus;
   }
 
-  public WriteTargetingSetting gamerConsumptionAbility(
-      List<PlayerConsuptStruct> gamerConsumptionAbility) {
-    this.gamerConsumptionAbility = gamerConsumptionAbility;
-    return this;
-  }
-
-  public WriteTargetingSetting addGamerConsumptionAbilityItem(
-      PlayerConsuptStruct gamerConsumptionAbilityItem) {
-    if (this.gamerConsumptionAbility == null) {
-      this.gamerConsumptionAbility = new ArrayList<PlayerConsuptStruct>();
-    }
-    this.gamerConsumptionAbility.add(gamerConsumptionAbilityItem);
-    return this;
-  }
-
-  /**
-   * Get gamerConsumptionAbility
-   *
-   * @return gamerConsumptionAbility
-   */
-  @ApiModelProperty(value = "")
-  public List<PlayerConsuptStruct> getGamerConsumptionAbility() {
-    return gamerConsumptionAbility;
-  }
-
-  public void setGamerConsumptionAbility(List<PlayerConsuptStruct> gamerConsumptionAbility) {
-    this.gamerConsumptionAbility = gamerConsumptionAbility;
-  }
-
   public WriteTargetingSetting gameConsumptionLevel(List<String> gameConsumptionLevel) {
     this.gameConsumptionLevel = gameConsumptionLevel;
     return this;
@@ -1019,8 +987,6 @@ public class WriteTargetingSetting {
         && Objects.equals(this.appInstallStatus, writeTargetingSetting.appInstallStatus)
         && Objects.equals(this.miniGameQqStatus, writeTargetingSetting.miniGameQqStatus)
         && Objects.equals(this.consumptionStatus, writeTargetingSetting.consumptionStatus)
-        && Objects.equals(
-            this.gamerConsumptionAbility, writeTargetingSetting.gamerConsumptionAbility)
         && Objects.equals(this.gameConsumptionLevel, writeTargetingSetting.gameConsumptionLevel)
         && Objects.equals(
             this.residentialCommunityPrice, writeTargetingSetting.residentialCommunityPrice)
@@ -1060,7 +1026,6 @@ public class WriteTargetingSetting {
         appInstallStatus,
         miniGameQqStatus,
         consumptionStatus,
-        gamerConsumptionAbility,
         gameConsumptionLevel,
         residentialCommunityPrice,
         financialSituation,

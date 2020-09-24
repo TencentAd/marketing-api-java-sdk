@@ -24,9 +24,6 @@ public class FundStatementsDailyGetListStruct {
   @SerializedName("trade_type")
   private TradeType tradeType = null;
 
-  @SerializedName("trans_time")
-  private Long transTime = null;
-
   @SerializedName("amount")
   private Long amount = null;
 
@@ -35,6 +32,9 @@ public class FundStatementsDailyGetListStruct {
 
   @SerializedName("fund_type")
   private AccountTypeMap fundType = null;
+
+  @SerializedName("time")
+  private Long time = null;
 
   public FundStatementsDailyGetListStruct tradeType(TradeType tradeType) {
     this.tradeType = tradeType;
@@ -53,25 +53,6 @@ public class FundStatementsDailyGetListStruct {
 
   public void setTradeType(TradeType tradeType) {
     this.tradeType = tradeType;
-  }
-
-  public FundStatementsDailyGetListStruct transTime(Long transTime) {
-    this.transTime = transTime;
-    return this;
-  }
-
-  /**
-   * Get transTime
-   *
-   * @return transTime
-   */
-  @ApiModelProperty(value = "")
-  public Long getTransTime() {
-    return transTime;
-  }
-
-  public void setTransTime(Long transTime) {
-    this.transTime = transTime;
   }
 
   public FundStatementsDailyGetListStruct amount(Long amount) {
@@ -131,6 +112,25 @@ public class FundStatementsDailyGetListStruct {
     this.fundType = fundType;
   }
 
+  public FundStatementsDailyGetListStruct time(Long time) {
+    this.time = time;
+    return this;
+  }
+
+  /**
+   * Get time
+   *
+   * @return time
+   */
+  @ApiModelProperty(value = "")
+  public Long getTime() {
+    return time;
+  }
+
+  public void setTime(Long time) {
+    this.time = time;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -142,15 +142,15 @@ public class FundStatementsDailyGetListStruct {
     FundStatementsDailyGetListStruct fundStatementsDailyGetListStruct =
         (FundStatementsDailyGetListStruct) o;
     return Objects.equals(this.tradeType, fundStatementsDailyGetListStruct.tradeType)
-        && Objects.equals(this.transTime, fundStatementsDailyGetListStruct.transTime)
         && Objects.equals(this.amount, fundStatementsDailyGetListStruct.amount)
         && Objects.equals(this.description, fundStatementsDailyGetListStruct.description)
-        && Objects.equals(this.fundType, fundStatementsDailyGetListStruct.fundType);
+        && Objects.equals(this.fundType, fundStatementsDailyGetListStruct.fundType)
+        && Objects.equals(this.time, fundStatementsDailyGetListStruct.time);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(tradeType, transTime, amount, description, fundType);
+    return Objects.hash(tradeType, amount, description, fundType, time);
   }
 
   @Override

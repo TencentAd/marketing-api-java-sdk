@@ -111,6 +111,9 @@ public class AdcreativesAddRequest {
   @SerializedName("floating_zone")
   private FloatingZone floatingZone = null;
 
+  @SerializedName("marketing_pendant_image_id")
+  private String marketingPendantImageId = null;
+
   @SerializedName("account_id")
   private Long accountId = null;
 
@@ -715,6 +718,25 @@ public class AdcreativesAddRequest {
     this.floatingZone = floatingZone;
   }
 
+  public AdcreativesAddRequest marketingPendantImageId(String marketingPendantImageId) {
+    this.marketingPendantImageId = marketingPendantImageId;
+    return this;
+  }
+
+  /**
+   * Get marketingPendantImageId
+   *
+   * @return marketingPendantImageId
+   */
+  @ApiModelProperty(value = "")
+  public String getMarketingPendantImageId() {
+    return marketingPendantImageId;
+  }
+
+  public void setMarketingPendantImageId(String marketingPendantImageId) {
+    this.marketingPendantImageId = marketingPendantImageId;
+  }
+
   public AdcreativesAddRequest accountId(Long accountId) {
     this.accountId = accountId;
     return this;
@@ -814,6 +836,8 @@ public class AdcreativesAddRequest {
         && Objects.equals(
             this.feedsVideoCommentSwitch, adcreativesAddRequest.feedsVideoCommentSwitch)
         && Objects.equals(this.floatingZone, adcreativesAddRequest.floatingZone)
+        && Objects.equals(
+            this.marketingPendantImageId, adcreativesAddRequest.marketingPendantImageId)
         && Objects.equals(this.accountId, adcreativesAddRequest.accountId)
         && Objects.equals(this.adcreativeTemplateId, adcreativesAddRequest.adcreativeTemplateId)
         && Objects.equals(this.adcreativeElements, adcreativesAddRequest.adcreativeElements);
@@ -852,6 +876,7 @@ public class AdcreativesAddRequest {
         videoEndPage,
         feedsVideoCommentSwitch,
         floatingZone,
+        marketingPendantImageId,
         accountId,
         adcreativeTemplateId,
         adcreativeElements);

@@ -14,7 +14,7 @@ public class TencentAds extends CustomApp {
 
   private static String basePath = "https://sandbox-api.e.qq.com/v1.3";
 
-  private static final String SDK_VERSION = "1.1.5";
+  private static final String SDK_VERSION = "1.1.6";
 
   private TencentAds() {}
 
@@ -102,6 +102,7 @@ public class TencentAds extends CustomApp {
 
   /**
    * 单位毫秒ms
+   *
    * @param timeout
    */
   public void setConnectTimeout(int timeout) {
@@ -109,6 +110,7 @@ public class TencentAds extends CustomApp {
   }
   /**
    * 单位毫秒ms
+   *
    * @param readTimeout
    */
   public void setReadTimeout(int readTimeout) {
@@ -116,6 +118,7 @@ public class TencentAds extends CustomApp {
   }
   /**
    * 单位毫秒ms
+   *
    * @param writeTimeout
    */
   public void setWriteTimeout(int writeTimeout) {

@@ -30,6 +30,9 @@ public class PromotedObjectSpec {
   @SerializedName("dianping_shop")
   private ProductTypeDianpingShop dianpingShop = null;
 
+  @SerializedName("product_type_link_jd")
+  private LinkJdInfo productTypeLinkJd = null;
+
   public PromotedObjectSpec jdItem(EcInfo jdItem) {
     this.jdItem = jdItem;
     return this;
@@ -87,6 +90,25 @@ public class PromotedObjectSpec {
     this.dianpingShop = dianpingShop;
   }
 
+  public PromotedObjectSpec productTypeLinkJd(LinkJdInfo productTypeLinkJd) {
+    this.productTypeLinkJd = productTypeLinkJd;
+    return this;
+  }
+
+  /**
+   * Get productTypeLinkJd
+   *
+   * @return productTypeLinkJd
+   */
+  @ApiModelProperty(value = "")
+  public LinkJdInfo getProductTypeLinkJd() {
+    return productTypeLinkJd;
+  }
+
+  public void setProductTypeLinkJd(LinkJdInfo productTypeLinkJd) {
+    this.productTypeLinkJd = productTypeLinkJd;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -98,12 +120,13 @@ public class PromotedObjectSpec {
     PromotedObjectSpec promotedObjectSpec = (PromotedObjectSpec) o;
     return Objects.equals(this.jdItem, promotedObjectSpec.jdItem)
         && Objects.equals(this.jdShop, promotedObjectSpec.jdShop)
-        && Objects.equals(this.dianpingShop, promotedObjectSpec.dianpingShop);
+        && Objects.equals(this.dianpingShop, promotedObjectSpec.dianpingShop)
+        && Objects.equals(this.productTypeLinkJd, promotedObjectSpec.productTypeLinkJd);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(jdItem, jdShop, dianpingShop);
+    return Objects.hash(jdItem, jdShop, dianpingShop, productTypeLinkJd);
   }
 
   @Override

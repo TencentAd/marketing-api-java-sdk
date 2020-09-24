@@ -9,17 +9,20 @@
 3. Java SDK 需要依赖 JDK 1.7 及以上
 4. Maven
 
+## 代码托管
+目前marketing-api-java-sdk的源码已经可以在github阅读，欢迎访问：[源码地址](https://github.com/TencentAd/marketing-api-java-sdk)
+
 ## 如何安装运行
 - 我们推荐用Maven的方式管理我们的Java SDK，可以添加如下XML内容到您项目的pom.xml中
 ```xml
 <dependency>
   <groupId>com.tencent.ads</groupId>
   <artifactId>marketing-api-java-sdk</artifactId>
-  <version>1.1.5</version>
+  <version>1.1.6</version>
 </dependency>
 ```
 
-- 或者您也可以手动下载[Java压缩包文件](https://i.gtimg.cn/qzone/biz/gdt/lib/mkt-sdk/ams-marketing-sdk-java.zip?version=1.1.5)，解压后可以得到一个Java SDK的源码项目。SDK下载地址：[ams-marketing-sdk-java-1.1.5.zip](https://i.gtimg.cn/qzone/biz/gdt/lib/mkt-sdk/ams-marketing-sdk-java.zip?version=1.1.5)
+- 或者您也可以手动下载[Java压缩包文件](https://i.gtimg.cn/qzone/biz/gdt/lib/mkt-sdk/ams-marketing-sdk-java.zip?version=1.1.6)，解压后可以得到一个Java SDK的源码项目。SDK下载地址：[ams-marketing-sdk-java-1.1.6.zip](https://i.gtimg.cn/qzone/biz/gdt/lib/mkt-sdk/ams-marketing-sdk-java.zip?version=1.1.6)
 
   1. 解压文件，默认解压到目录ams-marketing-sdk-java
   2. 执行mvn clean install，将包安装到你本地的Maven资源库中。
@@ -32,13 +35,13 @@ mvn clean install
         <dependency>
             <groupId>com.tencent.ads</groupId>
             <artifactId>marketing-api-java-sdk</artifactId>
-            <version>1.1.5</version>
+            <version>1.1.6</version>
         </dependency>
 ```
 
 ## 如何使用
 
-SDK数组参数调用的方法名与API接口一一对应，如campaigns/get接口就对应TencentAds.getInstance().campaigns().campaignsGet()方法
+SDK数组参数调用的方法名与API接口一一对应，如campaigns/get接口就对应TencentAds.getInstance().campaigns().campaignsGet()方法。
 
 ### 获取Access Token
 > 注：本示例适用于授权时通过Authorization Code获取Access Token和Refresh Token。
@@ -57,6 +60,7 @@ public class Example {
   public static void main(String[] args) {
     TencentAds tencentAds = TencentAds.getInstance();
     tencentAds.init(new ApiContextConfig());
+    
     try {
       OauthTokenResponseData responseData = tencentAds.oauth()
           .oauthToken(clientId, clientSecret, grantType, authorizationCode, null, redirectUri);

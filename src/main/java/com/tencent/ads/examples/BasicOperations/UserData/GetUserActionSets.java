@@ -19,6 +19,8 @@ public class GetUserActionSets {
 
   public Long userActionSetId = null;
 
+  public List<String> type = null;
+
   public List<String> fields =
       Arrays.asList(
           "user_action_set_id",
@@ -41,7 +43,7 @@ public class GetUserActionSets {
 
   public UserActionSetsGetResponseData getUserActionSets() throws Exception {
     UserActionSetsGetResponseData response =
-        tencentAds.userActionSets().userActionSetsGet(accountId, userActionSetId, fields);
+        tencentAds.userActionSets().userActionSetsGet(accountId, userActionSetId, type, fields);
     return response;
   }
 

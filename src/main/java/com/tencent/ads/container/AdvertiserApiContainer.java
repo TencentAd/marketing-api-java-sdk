@@ -56,9 +56,9 @@ public class AdvertiserApiContainer extends ApiContainer {
    *
    * @param accountId (optional)
    * @param filtering (optional)
+   * @param fields (optional)
    * @param page (optional)
    * @param pageSize (optional)
-   * @param fields 返回参数的字段列表 (optional)
    * @return AdvertiserGetResponse
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
@@ -66,11 +66,11 @@ public class AdvertiserApiContainer extends ApiContainer {
   public AdvertiserGetResponseData advertiserGet(
       Long accountId,
       List<FilteringStruct> filtering,
+      List<String> fields,
       Long page,
-      Long pageSize,
-      List<String> fields)
+      Long pageSize)
       throws ApiException, TencentAdsResponseException {
-    AdvertiserGetResponse resp = api.advertiserGet(accountId, filtering, page, pageSize, fields);
+    AdvertiserGetResponse resp = api.advertiserGet(accountId, filtering, fields, page, pageSize);
     handleResponse(gson.toJson(resp));
     return resp.getData();
   }

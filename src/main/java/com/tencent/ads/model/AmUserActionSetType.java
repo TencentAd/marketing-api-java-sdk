@@ -30,6 +30,12 @@ public enum AmUserActionSetType {
 
   OFFLINE("OFFLINE"),
 
+  WECHAT("WECHAT"),
+
+  WECHAT_MINI_PROGRAM("WECHAT_MINI_PROGRAM"),
+
+  WECHAT_MINI_GAME("WECHAT_MINI_GAME"),
+
   MARKETING("MARKETING");
 
   private String value;

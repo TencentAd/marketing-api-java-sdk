@@ -167,6 +167,18 @@ public class ProductItemSpec {
   @SerializedName("fourth_category_name")
   private String fourthCategoryName = null;
 
+  @SerializedName("first_category_url")
+  private String firstCategoryUrl = null;
+
+  @SerializedName("second_category_url")
+  private String secondCategoryUrl = null;
+
+  @SerializedName("third_category_url")
+  private String thirdCategoryUrl = null;
+
+  @SerializedName("fourth_category_url")
+  private String fourthCategoryUrl = null;
+
   @SerializedName("brand_id")
   private Long brandId = null;
 
@@ -238,6 +250,24 @@ public class ProductItemSpec {
 
   @SerializedName("detail_img")
   private List<String> detailImg = null;
+
+  @SerializedName("show_count")
+  private Long showCount = null;
+
+  @SerializedName("play_rate")
+  private Double playRate = null;
+
+  @SerializedName("make_money_online")
+  private String makeMoneyOnline = null;
+
+  @SerializedName("live_broadcast")
+  private String liveBroadcast = null;
+
+  @SerializedName("platform_attribute")
+  private String platformAttribute = null;
+
+  @SerializedName("custom_data")
+  private String customData = null;
 
   public ProductItemSpec productOuterId(String productOuterId) {
     this.productOuterId = productOuterId;
@@ -1175,6 +1205,82 @@ public class ProductItemSpec {
     this.fourthCategoryName = fourthCategoryName;
   }
 
+  public ProductItemSpec firstCategoryUrl(String firstCategoryUrl) {
+    this.firstCategoryUrl = firstCategoryUrl;
+    return this;
+  }
+
+  /**
+   * Get firstCategoryUrl
+   *
+   * @return firstCategoryUrl
+   */
+  @ApiModelProperty(value = "")
+  public String getFirstCategoryUrl() {
+    return firstCategoryUrl;
+  }
+
+  public void setFirstCategoryUrl(String firstCategoryUrl) {
+    this.firstCategoryUrl = firstCategoryUrl;
+  }
+
+  public ProductItemSpec secondCategoryUrl(String secondCategoryUrl) {
+    this.secondCategoryUrl = secondCategoryUrl;
+    return this;
+  }
+
+  /**
+   * Get secondCategoryUrl
+   *
+   * @return secondCategoryUrl
+   */
+  @ApiModelProperty(value = "")
+  public String getSecondCategoryUrl() {
+    return secondCategoryUrl;
+  }
+
+  public void setSecondCategoryUrl(String secondCategoryUrl) {
+    this.secondCategoryUrl = secondCategoryUrl;
+  }
+
+  public ProductItemSpec thirdCategoryUrl(String thirdCategoryUrl) {
+    this.thirdCategoryUrl = thirdCategoryUrl;
+    return this;
+  }
+
+  /**
+   * Get thirdCategoryUrl
+   *
+   * @return thirdCategoryUrl
+   */
+  @ApiModelProperty(value = "")
+  public String getThirdCategoryUrl() {
+    return thirdCategoryUrl;
+  }
+
+  public void setThirdCategoryUrl(String thirdCategoryUrl) {
+    this.thirdCategoryUrl = thirdCategoryUrl;
+  }
+
+  public ProductItemSpec fourthCategoryUrl(String fourthCategoryUrl) {
+    this.fourthCategoryUrl = fourthCategoryUrl;
+    return this;
+  }
+
+  /**
+   * Get fourthCategoryUrl
+   *
+   * @return fourthCategoryUrl
+   */
+  @ApiModelProperty(value = "")
+  public String getFourthCategoryUrl() {
+    return fourthCategoryUrl;
+  }
+
+  public void setFourthCategoryUrl(String fourthCategoryUrl) {
+    this.fourthCategoryUrl = fourthCategoryUrl;
+  }
+
   public ProductItemSpec brandId(Long brandId) {
     this.brandId = brandId;
     return this;
@@ -1655,6 +1761,120 @@ public class ProductItemSpec {
     this.detailImg = detailImg;
   }
 
+  public ProductItemSpec showCount(Long showCount) {
+    this.showCount = showCount;
+    return this;
+  }
+
+  /**
+   * Get showCount
+   *
+   * @return showCount
+   */
+  @ApiModelProperty(value = "")
+  public Long getShowCount() {
+    return showCount;
+  }
+
+  public void setShowCount(Long showCount) {
+    this.showCount = showCount;
+  }
+
+  public ProductItemSpec playRate(Double playRate) {
+    this.playRate = playRate;
+    return this;
+  }
+
+  /**
+   * Get playRate
+   *
+   * @return playRate
+   */
+  @ApiModelProperty(value = "")
+  public Double getPlayRate() {
+    return playRate;
+  }
+
+  public void setPlayRate(Double playRate) {
+    this.playRate = playRate;
+  }
+
+  public ProductItemSpec makeMoneyOnline(String makeMoneyOnline) {
+    this.makeMoneyOnline = makeMoneyOnline;
+    return this;
+  }
+
+  /**
+   * Get makeMoneyOnline
+   *
+   * @return makeMoneyOnline
+   */
+  @ApiModelProperty(value = "")
+  public String getMakeMoneyOnline() {
+    return makeMoneyOnline;
+  }
+
+  public void setMakeMoneyOnline(String makeMoneyOnline) {
+    this.makeMoneyOnline = makeMoneyOnline;
+  }
+
+  public ProductItemSpec liveBroadcast(String liveBroadcast) {
+    this.liveBroadcast = liveBroadcast;
+    return this;
+  }
+
+  /**
+   * Get liveBroadcast
+   *
+   * @return liveBroadcast
+   */
+  @ApiModelProperty(value = "")
+  public String getLiveBroadcast() {
+    return liveBroadcast;
+  }
+
+  public void setLiveBroadcast(String liveBroadcast) {
+    this.liveBroadcast = liveBroadcast;
+  }
+
+  public ProductItemSpec platformAttribute(String platformAttribute) {
+    this.platformAttribute = platformAttribute;
+    return this;
+  }
+
+  /**
+   * Get platformAttribute
+   *
+   * @return platformAttribute
+   */
+  @ApiModelProperty(value = "")
+  public String getPlatformAttribute() {
+    return platformAttribute;
+  }
+
+  public void setPlatformAttribute(String platformAttribute) {
+    this.platformAttribute = platformAttribute;
+  }
+
+  public ProductItemSpec customData(String customData) {
+    this.customData = customData;
+    return this;
+  }
+
+  /**
+   * Get customData
+   *
+   * @return customData
+   */
+  @ApiModelProperty(value = "")
+  public String getCustomData() {
+    return customData;
+  }
+
+  public void setCustomData(String customData) {
+    this.customData = customData;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -1712,6 +1932,10 @@ public class ProductItemSpec {
         && Objects.equals(this.secondCategoryName, productItemSpec.secondCategoryName)
         && Objects.equals(this.thirdCategoryName, productItemSpec.thirdCategoryName)
         && Objects.equals(this.fourthCategoryName, productItemSpec.fourthCategoryName)
+        && Objects.equals(this.firstCategoryUrl, productItemSpec.firstCategoryUrl)
+        && Objects.equals(this.secondCategoryUrl, productItemSpec.secondCategoryUrl)
+        && Objects.equals(this.thirdCategoryUrl, productItemSpec.thirdCategoryUrl)
+        && Objects.equals(this.fourthCategoryUrl, productItemSpec.fourthCategoryUrl)
         && Objects.equals(this.brandId, productItemSpec.brandId)
         && Objects.equals(this.brandName, productItemSpec.brandName)
         && Objects.equals(this.brandUrl, productItemSpec.brandUrl)
@@ -1735,7 +1959,13 @@ public class ProductItemSpec {
         && Objects.equals(this.commentCount, productItemSpec.commentCount)
         && Objects.equals(this.authorFansCount, productItemSpec.authorFansCount)
         && Objects.equals(this.semanticLabels, productItemSpec.semanticLabels)
-        && Objects.equals(this.detailImg, productItemSpec.detailImg);
+        && Objects.equals(this.detailImg, productItemSpec.detailImg)
+        && Objects.equals(this.showCount, productItemSpec.showCount)
+        && Objects.equals(this.playRate, productItemSpec.playRate)
+        && Objects.equals(this.makeMoneyOnline, productItemSpec.makeMoneyOnline)
+        && Objects.equals(this.liveBroadcast, productItemSpec.liveBroadcast)
+        && Objects.equals(this.platformAttribute, productItemSpec.platformAttribute)
+        && Objects.equals(this.customData, productItemSpec.customData);
   }
 
   @Override
@@ -1789,6 +2019,10 @@ public class ProductItemSpec {
         secondCategoryName,
         thirdCategoryName,
         fourthCategoryName,
+        firstCategoryUrl,
+        secondCategoryUrl,
+        thirdCategoryUrl,
+        fourthCategoryUrl,
         brandId,
         brandName,
         brandUrl,
@@ -1812,7 +2046,13 @@ public class ProductItemSpec {
         commentCount,
         authorFansCount,
         semanticLabels,
-        detailImg);
+        detailImg,
+        showCount,
+        playRate,
+        makeMoneyOnline,
+        liveBroadcast,
+        platformAttribute,
+        customData);
   }
 
   @Override

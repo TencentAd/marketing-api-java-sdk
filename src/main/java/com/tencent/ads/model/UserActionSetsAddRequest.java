@@ -15,6 +15,8 @@ package com.tencent.ads.model;
 import com.google.gson.Gson;
 import com.google.gson.annotations.SerializedName;
 import io.swagger.annotations.ApiModelProperty;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Objects;
 
 /** UserActionSetsAddRequest */
@@ -28,11 +30,17 @@ public class UserActionSetsAddRequest {
   @SerializedName("mobile_app_id")
   private Long mobileAppId = null;
 
+  @SerializedName("wechat_app_id")
+  private String wechatAppId = null;
+
   @SerializedName("name")
   private String name = null;
 
   @SerializedName("description")
   private String description = null;
+
+  @SerializedName("usages")
+  private List<String> usages = null;
 
   public UserActionSetsAddRequest accountId(Long accountId) {
     this.accountId = accountId;
@@ -91,6 +99,25 @@ public class UserActionSetsAddRequest {
     this.mobileAppId = mobileAppId;
   }
 
+  public UserActionSetsAddRequest wechatAppId(String wechatAppId) {
+    this.wechatAppId = wechatAppId;
+    return this;
+  }
+
+  /**
+   * Get wechatAppId
+   *
+   * @return wechatAppId
+   */
+  @ApiModelProperty(value = "")
+  public String getWechatAppId() {
+    return wechatAppId;
+  }
+
+  public void setWechatAppId(String wechatAppId) {
+    this.wechatAppId = wechatAppId;
+  }
+
   public UserActionSetsAddRequest name(String name) {
     this.name = name;
     return this;
@@ -129,6 +156,33 @@ public class UserActionSetsAddRequest {
     this.description = description;
   }
 
+  public UserActionSetsAddRequest usages(List<String> usages) {
+    this.usages = usages;
+    return this;
+  }
+
+  public UserActionSetsAddRequest addUsagesItem(String usagesItem) {
+    if (this.usages == null) {
+      this.usages = new ArrayList<String>();
+    }
+    this.usages.add(usagesItem);
+    return this;
+  }
+
+  /**
+   * Get usages
+   *
+   * @return usages
+   */
+  @ApiModelProperty(value = "")
+  public List<String> getUsages() {
+    return usages;
+  }
+
+  public void setUsages(List<String> usages) {
+    this.usages = usages;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -141,13 +195,15 @@ public class UserActionSetsAddRequest {
     return Objects.equals(this.accountId, userActionSetsAddRequest.accountId)
         && Objects.equals(this.type, userActionSetsAddRequest.type)
         && Objects.equals(this.mobileAppId, userActionSetsAddRequest.mobileAppId)
+        && Objects.equals(this.wechatAppId, userActionSetsAddRequest.wechatAppId)
         && Objects.equals(this.name, userActionSetsAddRequest.name)
-        && Objects.equals(this.description, userActionSetsAddRequest.description);
+        && Objects.equals(this.description, userActionSetsAddRequest.description)
+        && Objects.equals(this.usages, userActionSetsAddRequest.usages);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(accountId, type, mobileAppId, name, description);
+    return Objects.hash(accountId, type, mobileAppId, wechatAppId, name, description, usages);
   }
 
   @Override

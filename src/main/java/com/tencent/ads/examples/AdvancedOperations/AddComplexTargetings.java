@@ -29,7 +29,7 @@ public class AddComplexTargetings {
   public String ACCESS_TOKEN = "YOUR ACCESS TOKEN";
   /** YOUR ACCOUNT ID */
   public Long ACCOUNT_ID = 0L;
-  // 本示例会提供创建两个定向人群包，其中一个是包含的人群包，另一个是排除的人群包
+  // 本示例会提供创建两个定向人群包，其中一个是包含的人群包，另一个是排除的人群包。
   public String AUDIENCE_FILE_POS_IMEI = "YOUR AUDIENCE FILE PATH";
   public String AUDIENCE_FILE_NEG_IMEI = "YOUR AUDIENCE FILE PATH";
   /** TencentAds */

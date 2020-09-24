@@ -79,6 +79,11 @@ public class App {
   @Inject LeadsApiContainer leadsApiContainer;
   @Inject LeadsFormApiContainer leadsFormApiContainer;
   @Inject LeadsFormListApiContainer leadsFormListApiContainer;
+  @Inject LocalEndadsmanuallyApiContainer localEndadsmanuallyApiContainer;
+  @Inject LocalEstimatedamountApiContainer localEstimatedamountApiContainer;
+  @Inject LocalStoresApiContainer localStoresApiContainer;
+  @Inject LocalStoresAddressParsingResultApiContainer localStoresAddressParsingResultApiContainer;
+  @Inject LocalStoresSearchInfoApiContainer localStoresSearchInfoApiContainer;
   @Inject OauthApiContainer oauthApiContainer;
   @Inject OptimizationGoalPermissionsApiContainer optimizationGoalPermissionsApiContainer;
   @Inject PagesApiContainer pagesApiContainer;
@@ -88,7 +93,6 @@ public class App {
   @Inject ProductCategoriesListApiContainer productCategoriesListApiContainer;
   @Inject ProductItemsApiContainer productItemsApiContainer;
   @Inject ProductItemsDetailApiContainer productItemsDetailApiContainer;
-  @Inject ProductItemsListApiContainer productItemsListApiContainer;
   @Inject ProductsSystemStatusApiContainer productsSystemStatusApiContainer;
   @Inject ProfilesApiContainer profilesApiContainer;
   @Inject PromotedObjectsApiContainer promotedObjectsApiContainer;
@@ -111,13 +115,16 @@ public class App {
   @Inject WechatAdLabelsApiContainer wechatAdLabelsApiContainer;
   @Inject WechatAdvertiserApiContainer wechatAdvertiserApiContainer;
   @Inject WechatAdvertiserDetailApiContainer wechatAdvertiserDetailApiContainer;
+  @Inject WechatAdvertiserLocalBusinessApiContainer wechatAdvertiserLocalBusinessApiContainer;
   @Inject WechatAdvertiserSpecificationApiContainer wechatAdvertiserSpecificationApiContainer;
   @Inject WechatAgencyApiContainer wechatAgencyApiContainer;
   @Inject WechatDailyCostApiContainer wechatDailyCostApiContainer;
   @Inject WechatFundStatementsDetailedApiContainer wechatFundStatementsDetailedApiContainer;
+  @Inject WechatFundTransferApiContainer wechatFundTransferApiContainer;
   @Inject WechatFundsApiContainer wechatFundsApiContainer;
   @Inject WechatLeadsApiContainer wechatLeadsApiContainer;
   @Inject WechatPagesApiContainer wechatPagesApiContainer;
+  @Inject WechatQualificationsApiContainer wechatQualificationsApiContainer;
   @Inject XijingPageApiContainer xijingPageApiContainer;
   @Inject XijingPageByComponentsApiContainer xijingPageByComponentsApiContainer;
   @Inject XijingPageListApiContainer xijingPageListApiContainer;
@@ -367,6 +374,26 @@ public class App {
     return leadsFormListApiContainer;
   }
 
+  public LocalEndadsmanuallyApiContainer localEndadsmanually() {
+    return localEndadsmanuallyApiContainer;
+  }
+
+  public LocalEstimatedamountApiContainer localEstimatedamount() {
+    return localEstimatedamountApiContainer;
+  }
+
+  public LocalStoresApiContainer localStores() {
+    return localStoresApiContainer;
+  }
+
+  public LocalStoresAddressParsingResultApiContainer localStoresAddressParsingResult() {
+    return localStoresAddressParsingResultApiContainer;
+  }
+
+  public LocalStoresSearchInfoApiContainer localStoresSearchInfo() {
+    return localStoresSearchInfoApiContainer;
+  }
+
   public OauthApiContainer oauth() {
     return oauthApiContainer;
   }
@@ -401,10 +428,6 @@ public class App {
 
   public ProductItemsDetailApiContainer productItemsDetail() {
     return productItemsDetailApiContainer;
-  }
-
-  public ProductItemsListApiContainer productItemsList() {
-    return productItemsListApiContainer;
   }
 
   public ProductsSystemStatusApiContainer productsSystemStatus() {
@@ -495,6 +518,10 @@ public class App {
     return wechatAdvertiserDetailApiContainer;
   }
 
+  public WechatAdvertiserLocalBusinessApiContainer wechatAdvertiserLocalBusiness() {
+    return wechatAdvertiserLocalBusinessApiContainer;
+  }
+
   public WechatAdvertiserSpecificationApiContainer wechatAdvertiserSpecification() {
     return wechatAdvertiserSpecificationApiContainer;
   }
@@ -511,6 +538,10 @@ public class App {
     return wechatFundStatementsDetailedApiContainer;
   }
 
+  public WechatFundTransferApiContainer wechatFundTransfer() {
+    return wechatFundTransferApiContainer;
+  }
+
   public WechatFundsApiContainer wechatFunds() {
     return wechatFundsApiContainer;
   }
@@ -521,6 +552,10 @@ public class App {
 
   public WechatPagesApiContainer wechatPages() {
     return wechatPagesApiContainer;
+  }
+
+  public WechatQualificationsApiContainer wechatQualifications() {
+    return wechatQualificationsApiContainer;
   }
 
   public XijingPageApiContainer xijingPage() {

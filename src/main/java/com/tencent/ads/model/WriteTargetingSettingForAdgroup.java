@@ -86,9 +86,6 @@ public class WriteTargetingSettingForAdgroup {
   @SerializedName("consumption_status")
   private List<String> consumptionStatus = null;
 
-  @SerializedName("gamer_consumption_ability")
-  private List<PlayerConsuptStruct> gamerConsumptionAbility = null;
-
   @SerializedName("game_consumption_level")
   private List<String> gameConsumptionLevel = null;
 
@@ -676,35 +673,6 @@ public class WriteTargetingSettingForAdgroup {
     this.consumptionStatus = consumptionStatus;
   }
 
-  public WriteTargetingSettingForAdgroup gamerConsumptionAbility(
-      List<PlayerConsuptStruct> gamerConsumptionAbility) {
-    this.gamerConsumptionAbility = gamerConsumptionAbility;
-    return this;
-  }
-
-  public WriteTargetingSettingForAdgroup addGamerConsumptionAbilityItem(
-      PlayerConsuptStruct gamerConsumptionAbilityItem) {
-    if (this.gamerConsumptionAbility == null) {
-      this.gamerConsumptionAbility = new ArrayList<PlayerConsuptStruct>();
-    }
-    this.gamerConsumptionAbility.add(gamerConsumptionAbilityItem);
-    return this;
-  }
-
-  /**
-   * Get gamerConsumptionAbility
-   *
-   * @return gamerConsumptionAbility
-   */
-  @ApiModelProperty(value = "")
-  public List<PlayerConsuptStruct> getGamerConsumptionAbility() {
-    return gamerConsumptionAbility;
-  }
-
-  public void setGamerConsumptionAbility(List<PlayerConsuptStruct> gamerConsumptionAbility) {
-    this.gamerConsumptionAbility = gamerConsumptionAbility;
-  }
-
   public WriteTargetingSettingForAdgroup gameConsumptionLevel(List<String> gameConsumptionLevel) {
     this.gameConsumptionLevel = gameConsumptionLevel;
     return this;
@@ -1045,8 +1013,6 @@ public class WriteTargetingSettingForAdgroup {
         && Objects.equals(this.appInstallStatus, writeTargetingSettingForAdgroup.appInstallStatus)
         && Objects.equals(this.consumptionStatus, writeTargetingSettingForAdgroup.consumptionStatus)
         && Objects.equals(
-            this.gamerConsumptionAbility, writeTargetingSettingForAdgroup.gamerConsumptionAbility)
-        && Objects.equals(
             this.gameConsumptionLevel, writeTargetingSettingForAdgroup.gameConsumptionLevel)
         && Objects.equals(
             this.residentialCommunityPrice,
@@ -1095,7 +1061,6 @@ public class WriteTargetingSettingForAdgroup {
         airQualityIndex,
         appInstallStatus,
         consumptionStatus,
-        gamerConsumptionAbility,
         gameConsumptionLevel,
         residentialCommunityPrice,
         financialSituation,

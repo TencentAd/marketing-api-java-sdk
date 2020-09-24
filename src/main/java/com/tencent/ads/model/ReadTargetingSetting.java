@@ -89,9 +89,6 @@ public class ReadTargetingSetting {
   @SerializedName("consumption_status")
   private List<String> consumptionStatus = null;
 
-  @SerializedName("gamer_consumption_ability")
-  private List<PlayerConsuptStruct> gamerConsumptionAbility = null;
-
   @SerializedName("game_consumption_level")
   private List<String> gameConsumptionLevel = null;
 
@@ -721,35 +718,6 @@ public class ReadTargetingSetting {
     this.consumptionStatus = consumptionStatus;
   }
 
-  public ReadTargetingSetting gamerConsumptionAbility(
-      List<PlayerConsuptStruct> gamerConsumptionAbility) {
-    this.gamerConsumptionAbility = gamerConsumptionAbility;
-    return this;
-  }
-
-  public ReadTargetingSetting addGamerConsumptionAbilityItem(
-      PlayerConsuptStruct gamerConsumptionAbilityItem) {
-    if (this.gamerConsumptionAbility == null) {
-      this.gamerConsumptionAbility = new ArrayList<PlayerConsuptStruct>();
-    }
-    this.gamerConsumptionAbility.add(gamerConsumptionAbilityItem);
-    return this;
-  }
-
-  /**
-   * Get gamerConsumptionAbility
-   *
-   * @return gamerConsumptionAbility
-   */
-  @ApiModelProperty(value = "")
-  public List<PlayerConsuptStruct> getGamerConsumptionAbility() {
-    return gamerConsumptionAbility;
-  }
-
-  public void setGamerConsumptionAbility(List<PlayerConsuptStruct> gamerConsumptionAbility) {
-    this.gamerConsumptionAbility = gamerConsumptionAbility;
-  }
-
   public ReadTargetingSetting gameConsumptionLevel(List<String> gameConsumptionLevel) {
     this.gameConsumptionLevel = gameConsumptionLevel;
     return this;
@@ -1215,8 +1183,6 @@ public class ReadTargetingSetting {
         && Objects.equals(this.appInstallStatus, readTargetingSetting.appInstallStatus)
         && Objects.equals(this.miniGameQqStatus, readTargetingSetting.miniGameQqStatus)
         && Objects.equals(this.consumptionStatus, readTargetingSetting.consumptionStatus)
-        && Objects.equals(
-            this.gamerConsumptionAbility, readTargetingSetting.gamerConsumptionAbility)
         && Objects.equals(this.gameConsumptionLevel, readTargetingSetting.gameConsumptionLevel)
         && Objects.equals(
             this.residentialCommunityPrice, readTargetingSetting.residentialCommunityPrice)
@@ -1266,7 +1232,6 @@ public class ReadTargetingSetting {
         appInstallStatus,
         miniGameQqStatus,
         consumptionStatus,
-        gamerConsumptionAbility,
         gameConsumptionLevel,
         residentialCommunityPrice,
         financialSituation,

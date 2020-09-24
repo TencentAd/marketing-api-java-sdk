@@ -65,6 +65,12 @@ public class AdvertiserGetListStruct {
   @SerializedName("websites")
   private List<WebsiteReadStruct> websites = null;
 
+  @SerializedName("agency_account_id")
+  private Long agencyAccountId = null;
+
+  @SerializedName("operators")
+  private List<OperatorStruct> operators = null;
+
   @SerializedName("account_id")
   private Long accountId = null;
 
@@ -393,6 +399,52 @@ public class AdvertiserGetListStruct {
     this.websites = websites;
   }
 
+  public AdvertiserGetListStruct agencyAccountId(Long agencyAccountId) {
+    this.agencyAccountId = agencyAccountId;
+    return this;
+  }
+
+  /**
+   * Get agencyAccountId
+   *
+   * @return agencyAccountId
+   */
+  @ApiModelProperty(value = "")
+  public Long getAgencyAccountId() {
+    return agencyAccountId;
+  }
+
+  public void setAgencyAccountId(Long agencyAccountId) {
+    this.agencyAccountId = agencyAccountId;
+  }
+
+  public AdvertiserGetListStruct operators(List<OperatorStruct> operators) {
+    this.operators = operators;
+    return this;
+  }
+
+  public AdvertiserGetListStruct addOperatorsItem(OperatorStruct operatorsItem) {
+    if (this.operators == null) {
+      this.operators = new ArrayList<OperatorStruct>();
+    }
+    this.operators.add(operatorsItem);
+    return this;
+  }
+
+  /**
+   * Get operators
+   *
+   * @return operators
+   */
+  @ApiModelProperty(value = "")
+  public List<OperatorStruct> getOperators() {
+    return operators;
+  }
+
+  public void setOperators(List<OperatorStruct> operators) {
+    this.operators = operators;
+  }
+
   public AdvertiserGetListStruct accountId(Long accountId) {
     this.accountId = accountId;
     return this;
@@ -648,6 +700,8 @@ public class AdvertiserGetListStruct {
         && Objects.equals(this.contactPersonMobile, advertiserGetListStruct.contactPersonMobile)
         && Objects.equals(this.wechatSpec, advertiserGetListStruct.wechatSpec)
         && Objects.equals(this.websites, advertiserGetListStruct.websites)
+        && Objects.equals(this.agencyAccountId, advertiserGetListStruct.agencyAccountId)
+        && Objects.equals(this.operators, advertiserGetListStruct.operators)
         && Objects.equals(this.accountId, advertiserGetListStruct.accountId)
         && Objects.equals(this.adQualificationImage, advertiserGetListStruct.adQualificationImage)
         && Objects.equals(this.certificationImage, advertiserGetListStruct.certificationImage)
@@ -679,6 +733,8 @@ public class AdvertiserGetListStruct {
         contactPersonMobile,
         wechatSpec,
         websites,
+        agencyAccountId,
+        operators,
         accountId,
         adQualificationImage,
         certificationImage,

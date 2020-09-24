@@ -36,6 +36,9 @@ public class ProfilesGetListStruct {
   @SerializedName("head_image_id")
   private String headImageId = null;
 
+  @SerializedName("head_image_url")
+  private String headImageUrl = null;
+
   @SerializedName("profile_name")
   private String profileName = null;
 
@@ -147,6 +150,25 @@ public class ProfilesGetListStruct {
 
   public void setHeadImageId(String headImageId) {
     this.headImageId = headImageId;
+  }
+
+  public ProfilesGetListStruct headImageUrl(String headImageUrl) {
+    this.headImageUrl = headImageUrl;
+    return this;
+  }
+
+  /**
+   * Get headImageUrl
+   *
+   * @return headImageUrl
+   */
+  @ApiModelProperty(value = "")
+  public String getHeadImageUrl() {
+    return headImageUrl;
+  }
+
+  public void setHeadImageUrl(String headImageUrl) {
+    this.headImageUrl = headImageUrl;
   }
 
   public ProfilesGetListStruct profileName(String profileName) {
@@ -277,6 +299,7 @@ public class ProfilesGetListStruct {
         && Objects.equals(this.promotedObjectType, profilesGetListStruct.promotedObjectType)
         && Objects.equals(this.promotedObjectId, profilesGetListStruct.promotedObjectId)
         && Objects.equals(this.headImageId, profilesGetListStruct.headImageId)
+        && Objects.equals(this.headImageUrl, profilesGetListStruct.headImageUrl)
         && Objects.equals(this.profileName, profilesGetListStruct.profileName)
         && Objects.equals(this.description, profilesGetListStruct.description)
         && Objects.equals(this.createdTime, profilesGetListStruct.createdTime)
@@ -293,6 +316,7 @@ public class ProfilesGetListStruct {
         promotedObjectType,
         promotedObjectId,
         headImageId,
+        headImageUrl,
         profileName,
         description,
         createdTime,

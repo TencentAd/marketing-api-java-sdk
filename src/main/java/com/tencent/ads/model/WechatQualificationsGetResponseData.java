@@ -19,22 +19,19 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
-/** ProductItemsListGetResponseData */
-public class ProductItemsListGetResponseData {
+/** WechatQualificationsGetResponseData */
+public class WechatQualificationsGetResponseData {
   @SerializedName("list")
-  private List<PcmProductItemSpec> list = null;
+  private List<ListStruct> list = null;
 
-  @SerializedName("page_info")
-  private Conf pageInfo = null;
-
-  public ProductItemsListGetResponseData list(List<PcmProductItemSpec> list) {
+  public WechatQualificationsGetResponseData list(List<ListStruct> list) {
     this.list = list;
     return this;
   }
 
-  public ProductItemsListGetResponseData addListItem(PcmProductItemSpec listItem) {
+  public WechatQualificationsGetResponseData addListItem(ListStruct listItem) {
     if (this.list == null) {
-      this.list = new ArrayList<PcmProductItemSpec>();
+      this.list = new ArrayList<ListStruct>();
     }
     this.list.add(listItem);
     return this;
@@ -46,31 +43,12 @@ public class ProductItemsListGetResponseData {
    * @return list
    */
   @ApiModelProperty(value = "")
-  public List<PcmProductItemSpec> getList() {
+  public List<ListStruct> getList() {
     return list;
   }
 
-  public void setList(List<PcmProductItemSpec> list) {
+  public void setList(List<ListStruct> list) {
     this.list = list;
-  }
-
-  public ProductItemsListGetResponseData pageInfo(Conf pageInfo) {
-    this.pageInfo = pageInfo;
-    return this;
-  }
-
-  /**
-   * Get pageInfo
-   *
-   * @return pageInfo
-   */
-  @ApiModelProperty(value = "")
-  public Conf getPageInfo() {
-    return pageInfo;
-  }
-
-  public void setPageInfo(Conf pageInfo) {
-    this.pageInfo = pageInfo;
   }
 
   @Override
@@ -81,15 +59,14 @@ public class ProductItemsListGetResponseData {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    ProductItemsListGetResponseData productItemsListGetResponseData =
-        (ProductItemsListGetResponseData) o;
-    return Objects.equals(this.list, productItemsListGetResponseData.list)
-        && Objects.equals(this.pageInfo, productItemsListGetResponseData.pageInfo);
+    WechatQualificationsGetResponseData wechatQualificationsGetResponseData =
+        (WechatQualificationsGetResponseData) o;
+    return Objects.equals(this.list, wechatQualificationsGetResponseData.list);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(list, pageInfo);
+    return Objects.hash(list);
   }
 
   @Override

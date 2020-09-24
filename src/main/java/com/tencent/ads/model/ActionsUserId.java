@@ -45,6 +45,15 @@ public class ActionsUserId {
   @SerializedName("oaid")
   private String oaid = null;
 
+  @SerializedName("wechat_openid")
+  private String wechatOpenid = null;
+
+  @SerializedName("wechat_unionid")
+  private String wechatUnionid = null;
+
+  @SerializedName("wechat_app_id")
+  private String wechatAppId = null;
+
   public ActionsUserId hashImei(String hashImei) {
     this.hashImei = hashImei;
     return this;
@@ -197,6 +206,63 @@ public class ActionsUserId {
     this.oaid = oaid;
   }
 
+  public ActionsUserId wechatOpenid(String wechatOpenid) {
+    this.wechatOpenid = wechatOpenid;
+    return this;
+  }
+
+  /**
+   * Get wechatOpenid
+   *
+   * @return wechatOpenid
+   */
+  @ApiModelProperty(value = "")
+  public String getWechatOpenid() {
+    return wechatOpenid;
+  }
+
+  public void setWechatOpenid(String wechatOpenid) {
+    this.wechatOpenid = wechatOpenid;
+  }
+
+  public ActionsUserId wechatUnionid(String wechatUnionid) {
+    this.wechatUnionid = wechatUnionid;
+    return this;
+  }
+
+  /**
+   * Get wechatUnionid
+   *
+   * @return wechatUnionid
+   */
+  @ApiModelProperty(value = "")
+  public String getWechatUnionid() {
+    return wechatUnionid;
+  }
+
+  public void setWechatUnionid(String wechatUnionid) {
+    this.wechatUnionid = wechatUnionid;
+  }
+
+  public ActionsUserId wechatAppId(String wechatAppId) {
+    this.wechatAppId = wechatAppId;
+    return this;
+  }
+
+  /**
+   * Get wechatAppId
+   *
+   * @return wechatAppId
+   */
+  @ApiModelProperty(value = "")
+  public String getWechatAppId() {
+    return wechatAppId;
+  }
+
+  public void setWechatAppId(String wechatAppId) {
+    this.wechatAppId = wechatAppId;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -213,13 +279,26 @@ public class ActionsUserId {
         && Objects.equals(this.qaid, actionsUserId.qaid)
         && Objects.equals(this.hashAndroidId, actionsUserId.hashAndroidId)
         && Objects.equals(this.hashMac, actionsUserId.hashMac)
-        && Objects.equals(this.oaid, actionsUserId.oaid);
+        && Objects.equals(this.oaid, actionsUserId.oaid)
+        && Objects.equals(this.wechatOpenid, actionsUserId.wechatOpenid)
+        && Objects.equals(this.wechatUnionid, actionsUserId.wechatUnionid)
+        && Objects.equals(this.wechatAppId, actionsUserId.wechatAppId);
   }
 
   @Override
   public int hashCode() {
     return Objects.hash(
-        hashImei, hashIdfa, gdtOpenid, hashPhone, qaid, hashAndroidId, hashMac, oaid);
+        hashImei,
+        hashIdfa,
+        gdtOpenid,
+        hashPhone,
+        qaid,
+        hashAndroidId,
+        hashMac,
+        oaid,
+        wechatOpenid,
+        wechatUnionid,
+        wechatAppId);
   }
 
   @Override

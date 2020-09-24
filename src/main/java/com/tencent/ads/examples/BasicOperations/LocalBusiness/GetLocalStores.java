@@ -1,13 +1,14 @@
-package com.tencent.ads.examples.BasicOperations.BusinessAssets;
+package com.tencent.ads.examples.BasicOperations.LocalBusiness;
 
 import com.tencent.ads.ApiContextConfig;
 import com.tencent.ads.TencentAds;
 import com.tencent.ads.exception.TencentAdsResponseException;
 import com.tencent.ads.exception.TencentAdsSDKException;
 import com.tencent.ads.model.*;
+import com.tencent.ads.model.FilteringStruct;
 import java.util.List;
 
-public class GetProductItemsList {
+public class GetLocalStores {
   /** YOUR ACCESS TOKEN */
   public String ACCESS_TOKEN = "YOUR ACCESS TOKEN";
 
@@ -16,15 +17,11 @@ public class GetProductItemsList {
 
   public Long accountId = null;
 
-  public Long productCatalogId = null;
-
-  public Long pageSize = null;
+  public List<FilteringStruct> filtering = null;
 
   public Long page = null;
 
-  public String sortByProductLastModTime = null;
-
-  public String sortByProductName = null;
+  public Long pageSize = null;
 
   public List<String> fields = null;
 
@@ -38,26 +35,17 @@ public class GetProductItemsList {
 
   public void buildParams() {}
 
-  public ProductItemsListGetResponseData getProductItemsList() throws Exception {
-    ProductItemsListGetResponseData response =
-        tencentAds
-            .productItemsList()
-            .productItemsListGet(
-                accountId,
-                productCatalogId,
-                pageSize,
-                page,
-                sortByProductLastModTime,
-                sortByProductName,
-                fields);
+  public LocalStoresGetResponseData getLocalStores() throws Exception {
+    LocalStoresGetResponseData response =
+        tencentAds.localStores().localStoresGet(accountId, filtering, page, pageSize, fields);
     return response;
   }
 
   public static void main(String[] args) {
     try {
-      GetProductItemsList getProductItemsList = new GetProductItemsList();
-      getProductItemsList.init();
-      ProductItemsListGetResponseData response = getProductItemsList.getProductItemsList();
+      GetLocalStores getLocalStores = new GetLocalStores();
+      getLocalStores.init();
+      LocalStoresGetResponseData response = getLocalStores.getLocalStores();
     } catch (TencentAdsResponseException e) {
       e.printStackTrace();
     } catch (TencentAdsSDKException e) {

@@ -14,55 +14,31 @@ package com.tencent.ads.model;
 
 import com.google.gson.Gson;
 import com.google.gson.annotations.SerializedName;
-import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.util.Objects;
 
-/** 游戏用户消费能力信息结构 */
-@ApiModel(description = "游戏用户消费能力信息结构")
-public class PlayerConsuptStruct {
-  @SerializedName("min")
-  private Long min = null;
+/** WechatAdvertiserLocalBusinessAddResponseData */
+public class WechatAdvertiserLocalBusinessAddResponseData {
+  @SerializedName("account_id")
+  private Long accountId = null;
 
-  @SerializedName("max")
-  private Long max = null;
-
-  public PlayerConsuptStruct min(Long min) {
-    this.min = min;
+  public WechatAdvertiserLocalBusinessAddResponseData accountId(Long accountId) {
+    this.accountId = accountId;
     return this;
   }
 
   /**
-   * Get min
+   * Get accountId
    *
-   * @return min
+   * @return accountId
    */
   @ApiModelProperty(value = "")
-  public Long getMin() {
-    return min;
+  public Long getAccountId() {
+    return accountId;
   }
 
-  public void setMin(Long min) {
-    this.min = min;
-  }
-
-  public PlayerConsuptStruct max(Long max) {
-    this.max = max;
-    return this;
-  }
-
-  /**
-   * Get max
-   *
-   * @return max
-   */
-  @ApiModelProperty(value = "")
-  public Long getMax() {
-    return max;
-  }
-
-  public void setMax(Long max) {
-    this.max = max;
+  public void setAccountId(Long accountId) {
+    this.accountId = accountId;
   }
 
   @Override
@@ -73,14 +49,14 @@ public class PlayerConsuptStruct {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    PlayerConsuptStruct playerConsuptStruct = (PlayerConsuptStruct) o;
-    return Objects.equals(this.min, playerConsuptStruct.min)
-        && Objects.equals(this.max, playerConsuptStruct.max);
+    WechatAdvertiserLocalBusinessAddResponseData wechatAdvertiserLocalBusinessAddResponseData =
+        (WechatAdvertiserLocalBusinessAddResponseData) o;
+    return Objects.equals(this.accountId, wechatAdvertiserLocalBusinessAddResponseData.accountId);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(min, max);
+    return Objects.hash(accountId);
   }
 
   @Override

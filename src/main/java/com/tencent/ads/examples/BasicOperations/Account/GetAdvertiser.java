@@ -20,10 +20,6 @@ public class GetAdvertiser {
 
   public List<FilteringStruct> filtering = null;
 
-  public Long page = null;
-
-  public Long pageSize = null;
-
   public List<String> fields =
       Arrays.asList(
           "account_id",
@@ -52,6 +48,10 @@ public class GetAdvertiser {
           "wechat_spec",
           "websites");
 
+  public Long page = null;
+
+  public Long pageSize = null;
+
   public void init() {
     this.tencentAds = TencentAds.getInstance();
     this.tencentAds.init(
@@ -64,7 +64,7 @@ public class GetAdvertiser {
 
   public AdvertiserGetResponseData getAdvertiser() throws Exception {
     AdvertiserGetResponseData response =
-        tencentAds.advertiser().advertiserGet(accountId, filtering, page, pageSize, fields);
+        tencentAds.advertiser().advertiserGet(accountId, filtering, fields, page, pageSize);
     return response;
   }
 

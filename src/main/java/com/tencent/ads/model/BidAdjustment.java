@@ -20,8 +20,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
-/** 调价设置内容 */
-@ApiModel(description = "调价设置内容")
+/** 出价系数设置内容，仅当投放oCPC、oCPM广告时可使用 */
+@ApiModel(description = "出价系数设置内容，仅当投放oCPC、oCPM广告时可使用")
 public class BidAdjustment {
   @SerializedName("site_set_package")
   private List<SiteSetPackageStruct> siteSetPackage = null;

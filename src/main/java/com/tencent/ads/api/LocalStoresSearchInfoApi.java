@@ -21,7 +21,7 @@ import com.tencent.ads.Configuration;
 import com.tencent.ads.Pair;
 import com.tencent.ads.ProgressRequestBody;
 import com.tencent.ads.ProgressResponseBody;
-import com.tencent.ads.model.ProductItemsListGetResponse;
+import com.tencent.ads.model.LocalStoresSearchInfoGetResponse;
 import java.io.IOException;
 import java.lang.reflect.Type;
 import java.util.ArrayList;
@@ -29,14 +29,14 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class ProductItemsListApi {
+public class LocalStoresSearchInfoApi {
   private ApiClient apiClient;
 
-  public ProductItemsListApi() {
+  public LocalStoresSearchInfoApi() {
     this(Configuration.getDefaultApiClient());
   }
 
-  public ProductItemsListApi(ApiClient apiClient) {
+  public LocalStoresSearchInfoApi(ApiClient apiClient) {
     this.apiClient = apiClient;
   }
 
@@ -49,27 +49,23 @@ public class ProductItemsListApi {
   }
 
   /**
-   * Build call for productItemsListGet
+   * Build call for localStoresSearchInfoGet
    *
    * @param accountId (required)
-   * @param productCatalogId (required)
-   * @param pageSize (required)
-   * @param page (required)
-   * @param sortByProductLastModTime (optional)
-   * @param sortByProductName (optional)
+   * @param keyWord (required)
+   * @param page (optional)
+   * @param pageSize (optional)
    * @param fields 返回参数的字段列表 (optional)
    * @param progressListener Progress listener
    * @param progressRequestListener Progress request listener
    * @return Call to execute
    * @throws ApiException If fail to serialize the request body object
    */
-  public com.squareup.okhttp.Call productItemsListGetCall(
+  public com.squareup.okhttp.Call localStoresSearchInfoGetCall(
       Long accountId,
-      Long productCatalogId,
-      Long pageSize,
+      String keyWord,
       Long page,
-      String sortByProductLastModTime,
-      String sortByProductName,
+      Long pageSize,
       List<String> fields,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener)
@@ -77,23 +73,16 @@ public class ProductItemsListApi {
     Object localVarPostBody = null;
 
     // create path and map variables
-    String localVarPath = "/product_items_list/get";
+    String localVarPath = "/local_stores_search_info/get";
 
     List<Pair> localVarQueryParams = new ArrayList<Pair>();
     List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
     if (accountId != null)
       localVarQueryParams.addAll(apiClient.parameterToPair("account_id", accountId));
-    if (productCatalogId != null)
-      localVarQueryParams.addAll(apiClient.parameterToPair("product_catalog_id", productCatalogId));
+    if (keyWord != null) localVarQueryParams.addAll(apiClient.parameterToPair("key_word", keyWord));
+    if (page != null) localVarQueryParams.addAll(apiClient.parameterToPair("page", page));
     if (pageSize != null)
       localVarQueryParams.addAll(apiClient.parameterToPair("page_size", pageSize));
-    if (page != null) localVarQueryParams.addAll(apiClient.parameterToPair("page", page));
-    if (sortByProductLastModTime != null)
-      localVarQueryParams.addAll(
-          apiClient.parameterToPair("sort_by_product_last_mod_time", sortByProductLastModTime));
-    if (sortByProductName != null)
-      localVarQueryParams.addAll(
-          apiClient.parameterToPair("sort_by_product_name", sortByProductName));
     if (fields != null)
       localVarCollectionQueryParams.addAll(apiClient.parameterToPairs("multi", "fields", fields));
 
@@ -141,13 +130,11 @@ public class ProductItemsListApi {
   }
 
   @SuppressWarnings("rawtypes")
-  private com.squareup.okhttp.Call productItemsListGetValidateBeforeCall(
+  private com.squareup.okhttp.Call localStoresSearchInfoGetValidateBeforeCall(
       Long accountId,
-      Long productCatalogId,
-      Long pageSize,
+      String keyWord,
       Long page,
-      String sortByProductLastModTime,
-      String sortByProductName,
+      Long pageSize,
       List<String> fields,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener)
@@ -156,137 +143,82 @@ public class ProductItemsListApi {
     // verify the required parameter 'accountId' is set
     if (accountId == null) {
       throw new ApiException(
-          "Missing the required parameter 'accountId' when calling productItemsListGet(Async)");
+          "Missing the required parameter 'accountId' when calling localStoresSearchInfoGet(Async)");
     }
 
-    // verify the required parameter 'productCatalogId' is set
-    if (productCatalogId == null) {
+    // verify the required parameter 'keyWord' is set
+    if (keyWord == null) {
       throw new ApiException(
-          "Missing the required parameter 'productCatalogId' when calling productItemsListGet(Async)");
-    }
-
-    // verify the required parameter 'pageSize' is set
-    if (pageSize == null) {
-      throw new ApiException(
-          "Missing the required parameter 'pageSize' when calling productItemsListGet(Async)");
-    }
-
-    // verify the required parameter 'page' is set
-    if (page == null) {
-      throw new ApiException(
-          "Missing the required parameter 'page' when calling productItemsListGet(Async)");
+          "Missing the required parameter 'keyWord' when calling localStoresSearchInfoGet(Async)");
     }
 
     com.squareup.okhttp.Call call =
-        productItemsListGetCall(
-            accountId,
-            productCatalogId,
-            pageSize,
-            page,
-            sortByProductLastModTime,
-            sortByProductName,
-            fields,
-            progressListener,
-            progressRequestListener);
+        localStoresSearchInfoGetCall(
+            accountId, keyWord, page, pageSize, fields, progressListener, progressRequestListener);
     return call;
   }
 
   /**
-   * 商品列表
+   * 搜索门店
    *
    * @param accountId (required)
-   * @param productCatalogId (required)
-   * @param pageSize (required)
-   * @param page (required)
-   * @param sortByProductLastModTime (optional)
-   * @param sortByProductName (optional)
+   * @param keyWord (required)
+   * @param page (optional)
+   * @param pageSize (optional)
    * @param fields 返回参数的字段列表 (optional)
-   * @return ProductItemsListGetResponse
+   * @return LocalStoresSearchInfoGetResponse
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
-  public ProductItemsListGetResponse productItemsListGet(
-      Long accountId,
-      Long productCatalogId,
-      Long pageSize,
-      Long page,
-      String sortByProductLastModTime,
-      String sortByProductName,
-      List<String> fields)
+  public LocalStoresSearchInfoGetResponse localStoresSearchInfoGet(
+      Long accountId, String keyWord, Long page, Long pageSize, List<String> fields)
       throws ApiException {
-    ApiResponse<ProductItemsListGetResponse> resp =
-        productItemsListGetWithHttpInfo(
-            accountId,
-            productCatalogId,
-            pageSize,
-            page,
-            sortByProductLastModTime,
-            sortByProductName,
-            fields);
+    ApiResponse<LocalStoresSearchInfoGetResponse> resp =
+        localStoresSearchInfoGetWithHttpInfo(accountId, keyWord, page, pageSize, fields);
     return resp.getData();
   }
 
   /**
-   * 商品列表
+   * 搜索门店
    *
    * @param accountId (required)
-   * @param productCatalogId (required)
-   * @param pageSize (required)
-   * @param page (required)
-   * @param sortByProductLastModTime (optional)
-   * @param sortByProductName (optional)
+   * @param keyWord (required)
+   * @param page (optional)
+   * @param pageSize (optional)
    * @param fields 返回参数的字段列表 (optional)
-   * @return ApiResponse&lt;ProductItemsListGetResponse&gt;
+   * @return ApiResponse&lt;LocalStoresSearchInfoGetResponse&gt;
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
-  public ApiResponse<ProductItemsListGetResponse> productItemsListGetWithHttpInfo(
-      Long accountId,
-      Long productCatalogId,
-      Long pageSize,
-      Long page,
-      String sortByProductLastModTime,
-      String sortByProductName,
-      List<String> fields)
+  public ApiResponse<LocalStoresSearchInfoGetResponse> localStoresSearchInfoGetWithHttpInfo(
+      Long accountId, String keyWord, Long page, Long pageSize, List<String> fields)
       throws ApiException {
     com.squareup.okhttp.Call call =
-        productItemsListGetValidateBeforeCall(
-            accountId,
-            productCatalogId,
-            pageSize,
-            page,
-            sortByProductLastModTime,
-            sortByProductName,
-            fields,
-            null,
-            null);
-    Type localVarReturnType = new TypeToken<ProductItemsListGetResponse>() {}.getType();
+        localStoresSearchInfoGetValidateBeforeCall(
+            accountId, keyWord, page, pageSize, fields, null, null);
+    Type localVarReturnType = new TypeToken<LocalStoresSearchInfoGetResponse>() {}.getType();
     return apiClient.execute(call, localVarReturnType);
   }
 
   /**
-   * 商品列表 (asynchronously)
+   * 搜索门店 (asynchronously)
    *
    * @param accountId (required)
-   * @param productCatalogId (required)
-   * @param pageSize (required)
-   * @param page (required)
-   * @param sortByProductLastModTime (optional)
-   * @param sortByProductName (optional)
+   * @param keyWord (required)
+   * @param page (optional)
+   * @param pageSize (optional)
    * @param fields 返回参数的字段列表 (optional)
    * @param callback The callback to be executed when the API call finishes
    * @return The request call
    * @throws ApiException If fail to process the API call, e.g. serializing the request body object
    */
-  public com.squareup.okhttp.Call productItemsListGetAsync(
+  public com.squareup.okhttp.Call localStoresSearchInfoGetAsync(
       Long accountId,
-      Long productCatalogId,
-      Long pageSize,
+      String keyWord,
       Long page,
-      String sortByProductLastModTime,
-      String sortByProductName,
+      Long pageSize,
       List<String> fields,
-      final ApiCallback<ProductItemsListGetResponse> callback)
+      final ApiCallback<LocalStoresSearchInfoGetResponse> callback)
       throws ApiException {
 
     ProgressResponseBody.ProgressListener progressListener = null;
@@ -311,17 +243,9 @@ public class ProductItemsListApi {
     }
 
     com.squareup.okhttp.Call call =
-        productItemsListGetValidateBeforeCall(
-            accountId,
-            productCatalogId,
-            pageSize,
-            page,
-            sortByProductLastModTime,
-            sortByProductName,
-            fields,
-            progressListener,
-            progressRequestListener);
-    Type localVarReturnType = new TypeToken<ProductItemsListGetResponse>() {}.getType();
+        localStoresSearchInfoGetValidateBeforeCall(
+            accountId, keyWord, page, pageSize, fields, progressListener, progressRequestListener);
+    Type localVarReturnType = new TypeToken<LocalStoresSearchInfoGetResponse>() {}.getType();
     apiClient.executeAsync(call, localVarReturnType, callback);
     return call;
   }

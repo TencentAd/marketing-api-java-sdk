@@ -43,6 +43,12 @@ public class UserAction {
   @SerializedName("url")
   private String url = null;
 
+  @SerializedName("product_inform")
+  private ProductInform productInform = null;
+
+  @SerializedName("channel")
+  private ActionChannelType channel = null;
+
   @SerializedName("external_action_id")
   private String externalActionId = null;
 
@@ -179,6 +185,44 @@ public class UserAction {
     this.url = url;
   }
 
+  public UserAction productInform(ProductInform productInform) {
+    this.productInform = productInform;
+    return this;
+  }
+
+  /**
+   * Get productInform
+   *
+   * @return productInform
+   */
+  @ApiModelProperty(value = "")
+  public ProductInform getProductInform() {
+    return productInform;
+  }
+
+  public void setProductInform(ProductInform productInform) {
+    this.productInform = productInform;
+  }
+
+  public UserAction channel(ActionChannelType channel) {
+    this.channel = channel;
+    return this;
+  }
+
+  /**
+   * Get channel
+   *
+   * @return channel
+   */
+  @ApiModelProperty(value = "")
+  public ActionChannelType getChannel() {
+    return channel;
+  }
+
+  public void setChannel(ActionChannelType channel) {
+    this.channel = channel;
+  }
+
   public UserAction externalActionId(String externalActionId) {
     this.externalActionId = externalActionId;
     return this;
@@ -214,13 +258,24 @@ public class UserAction {
         && Objects.equals(this.customAction, userAction.customAction)
         && Objects.equals(this.trace, userAction.trace)
         && Objects.equals(this.url, userAction.url)
+        && Objects.equals(this.productInform, userAction.productInform)
+        && Objects.equals(this.channel, userAction.channel)
         && Objects.equals(this.externalActionId, userAction.externalActionId);
   }
 
   @Override
   public int hashCode() {
     return Objects.hash(
-        actionTime, userId, actionType, actionParam, customAction, trace, url, externalActionId);
+        actionTime,
+        userId,
+        actionType,
+        actionParam,
+        customAction,
+        trace,
+        url,
+        productInform,
+        channel,
+        externalActionId);
   }
 
   @Override

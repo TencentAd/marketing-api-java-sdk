@@ -19,16 +19,18 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-/** 排序方式 */
-@JsonAdapter(Sort.Adapter.class)
-public enum Sort {
-  DESC("DESC"),
+/** 类目层级 */
+@JsonAdapter(OcpaCategoryLevel.Adapter.class)
+public enum OcpaCategoryLevel {
+  FIRST_CATEGORY("LEVEL_FIRST_CATEGORY"),
 
-  ASC("ASC");
+  SECOND_CATEGORY("LEVEL_SECOND_CATEGORY"),
+
+  THIRD_CATEGORY("LEVEL_THIRD_CATEGORY");
 
   private String value;
 
-  Sort(String value) {
+  OcpaCategoryLevel(String value) {
     this.value = value;
   }
 
@@ -41,8 +43,8 @@ public enum Sort {
     return String.valueOf(value);
   }
 
-  public static Sort fromValue(String text) {
-    for (Sort b : Sort.values()) {
+  public static OcpaCategoryLevel fromValue(String text) {
+    for (OcpaCategoryLevel b : OcpaCategoryLevel.values()) {
       if (String.valueOf(b.value).equals(text)) {
         return b;
       }
@@ -50,16 +52,17 @@ public enum Sort {
     return null;
   }
 
-  public static class Adapter extends TypeAdapter<Sort> {
+  public static class Adapter extends TypeAdapter<OcpaCategoryLevel> {
     @Override
-    public void write(final JsonWriter jsonWriter, final Sort enumeration) throws IOException {
+    public void write(final JsonWriter jsonWriter, final OcpaCategoryLevel enumeration)
+        throws IOException {
       jsonWriter.value(enumeration.getValue());
     }
 
     @Override
-    public Sort read(final JsonReader jsonReader) throws IOException {
+    public OcpaCategoryLevel read(final JsonReader jsonReader) throws IOException {
       String value = jsonReader.nextString();
-      return Sort.fromValue(String.valueOf(value));
+      return OcpaCategoryLevel.fromValue(String.valueOf(value));
     }
   }
 }
