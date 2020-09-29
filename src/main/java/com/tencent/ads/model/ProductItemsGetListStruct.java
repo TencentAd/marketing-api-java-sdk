@@ -72,6 +72,12 @@ public class ProductItemsGetListStruct {
   @SerializedName("custom_data")
   private String customData = null;
 
+  @SerializedName("is_video")
+  private String isVideo = null;
+
+  @SerializedName("data_source")
+  private String dataSource = null;
+
   public ProductItemsGetListStruct productOuterId(String productOuterId) {
     this.productOuterId = productOuterId;
     return this;
@@ -395,6 +401,44 @@ public class ProductItemsGetListStruct {
     this.customData = customData;
   }
 
+  public ProductItemsGetListStruct isVideo(String isVideo) {
+    this.isVideo = isVideo;
+    return this;
+  }
+
+  /**
+   * Get isVideo
+   *
+   * @return isVideo
+   */
+  @ApiModelProperty(value = "")
+  public String getIsVideo() {
+    return isVideo;
+  }
+
+  public void setIsVideo(String isVideo) {
+    this.isVideo = isVideo;
+  }
+
+  public ProductItemsGetListStruct dataSource(String dataSource) {
+    this.dataSource = dataSource;
+    return this;
+  }
+
+  /**
+   * Get dataSource
+   *
+   * @return dataSource
+   */
+  @ApiModelProperty(value = "")
+  public String getDataSource() {
+    return dataSource;
+  }
+
+  public void setDataSource(String dataSource) {
+    this.dataSource = dataSource;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -420,7 +464,9 @@ public class ProductItemsGetListStruct {
         && Objects.equals(this.brandName, productItemsGetListStruct.brandName)
         && Objects.equals(this.brandId, productItemsGetListStruct.brandId)
         && Objects.equals(this.description, productItemsGetListStruct.description)
-        && Objects.equals(this.customData, productItemsGetListStruct.customData);
+        && Objects.equals(this.customData, productItemsGetListStruct.customData)
+        && Objects.equals(this.isVideo, productItemsGetListStruct.isVideo)
+        && Objects.equals(this.dataSource, productItemsGetListStruct.dataSource);
   }
 
   @Override
@@ -442,7 +488,9 @@ public class ProductItemsGetListStruct {
         brandName,
         brandId,
         description,
-        customData);
+        customData,
+        isVideo,
+        dataSource);
   }
 
   @Override

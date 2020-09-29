@@ -48,6 +48,7 @@ public class App {
   @Inject CapabilitiesApiContainer capabilitiesApiContainer;
   @Inject ComplianceValidationApiContainer complianceValidationApiContainer;
   @Inject ConversionsApiContainer conversionsApiContainer;
+  @Inject CreativetoolsTextApiContainer creativetoolsTextApiContainer;
   @Inject CustomAudienceEstimationsApiContainer customAudienceEstimationsApiContainer;
   @Inject CustomAudienceFilesApiContainer customAudienceFilesApiContainer;
   @Inject CustomAudienceInsightsApiContainer customAudienceInsightsApiContainer;
@@ -248,6 +249,10 @@ public class App {
 
   public ConversionsApiContainer conversions() {
     return conversionsApiContainer;
+  }
+
+  public CreativetoolsTextApiContainer creativetoolsText() {
+    return creativetoolsTextApiContainer;
   }
 
   public CustomAudienceEstimationsApiContainer customAudienceEstimations() {

@@ -19,20 +19,26 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-/** 资金账户类型，当trade_type为AGENCY_CREDIT_REPAY时，此字段不返回 */
+/** 资金账户类型 */
 @JsonAdapter(WechatMpOpenFundType.Adapter.class)
 public enum WechatMpOpenFundType {
   UNSUPPORTED("FUND_TYPE_UNSUPPORTED"),
+
+  UNKNOWN("FUND_TYPE_UNKNOWN"),
 
   CASH("FUND_TYPE_CASH"),
 
   GIFT("FUND_TYPE_GIFT"),
 
+  INNER("FUND_TYPE_INNER"),
+
   CREDIT("FUND_TYPE_CREDIT"),
 
-  SPECIAL_PROMOTION("FUND_TYPE_SPECIAL_PROMOTION"),
+  DEBT_TEMP("FUND_TYPE_DEBT_TEMP"),
 
-  PAYMENT_DUE("FUND_TYPE_PAYMENT_DUE"),
+  DEBT_FIXED("FUND_TYPE_DEBT_FIXED"),
+
+  TCC_GIFT("FUND_TYPE_TCC_GIFT"),
 
   UNSUPPPORTED("FUND_TYPE_UNSUPPPORTED"),
 
@@ -40,7 +46,11 @@ public enum WechatMpOpenFundType {
 
   CREDIT_TEMPORARY("FUND_TYPE_CREDIT_TEMPORARY"),
 
-  MINIPROGRAM("FUND_TYPE_MINIPROGRAM");
+  SPECIAL_PROMOTION("FUND_TYPE_SPECIAL_PROMOTION"),
+
+  MINIPROGRAM("FUND_TYPE_MINIPROGRAM"),
+
+  PAYMENT_DUE("FUND_TYPE_PAYMENT_DUE");
 
   private String value;
 

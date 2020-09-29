@@ -24,6 +24,9 @@ public class ImagesGetListStruct {
   @SerializedName("image_id")
   private String imageId = null;
 
+  @SerializedName("description")
+  private String description = null;
+
   @SerializedName("source_signature")
   private String sourceSignature = null;
 
@@ -77,6 +80,25 @@ public class ImagesGetListStruct {
 
   public void setImageId(String imageId) {
     this.imageId = imageId;
+  }
+
+  public ImagesGetListStruct description(String description) {
+    this.description = description;
+    return this;
+  }
+
+  /**
+   * Get description
+   *
+   * @return description
+   */
+  @ApiModelProperty(value = "")
+  public String getDescription() {
+    return description;
+  }
+
+  public void setDescription(String description) {
+    this.description = description;
   }
 
   public ImagesGetListStruct sourceSignature(String sourceSignature) {
@@ -317,6 +339,7 @@ public class ImagesGetListStruct {
     }
     ImagesGetListStruct imagesGetListStruct = (ImagesGetListStruct) o;
     return Objects.equals(this.imageId, imagesGetListStruct.imageId)
+        && Objects.equals(this.description, imagesGetListStruct.description)
         && Objects.equals(this.sourceSignature, imagesGetListStruct.sourceSignature)
         && Objects.equals(this.previewUrl, imagesGetListStruct.previewUrl)
         && Objects.equals(this.sourceType, imagesGetListStruct.sourceType)
@@ -335,6 +358,7 @@ public class ImagesGetListStruct {
   public int hashCode() {
     return Objects.hash(
         imageId,
+        description,
         sourceSignature,
         previewUrl,
         sourceType,

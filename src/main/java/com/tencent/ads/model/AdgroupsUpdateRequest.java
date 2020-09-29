@@ -30,6 +30,9 @@ public class AdgroupsUpdateRequest {
   @SerializedName("begin_date")
   private String beginDate = null;
 
+  @SerializedName("first_day_begin_time")
+  private String firstDayBeginTime = null;
+
   @SerializedName("end_date")
   private String endDate = null;
 
@@ -99,6 +102,12 @@ public class AdgroupsUpdateRequest {
   @SerializedName("bid_adjustment")
   private BidAdjustment bidAdjustment = null;
 
+  @SerializedName("auto_acquisition_enabled")
+  private Boolean autoAcquisitionEnabled = null;
+
+  @SerializedName("auto_acquisition_budget")
+  private Long autoAcquisitionBudget = null;
+
   @SerializedName("account_id")
   private Long accountId = null;
 
@@ -157,6 +166,25 @@ public class AdgroupsUpdateRequest {
 
   public void setBeginDate(String beginDate) {
     this.beginDate = beginDate;
+  }
+
+  public AdgroupsUpdateRequest firstDayBeginTime(String firstDayBeginTime) {
+    this.firstDayBeginTime = firstDayBeginTime;
+    return this;
+  }
+
+  /**
+   * Get firstDayBeginTime
+   *
+   * @return firstDayBeginTime
+   */
+  @ApiModelProperty(value = "")
+  public String getFirstDayBeginTime() {
+    return firstDayBeginTime;
+  }
+
+  public void setFirstDayBeginTime(String firstDayBeginTime) {
+    this.firstDayBeginTime = firstDayBeginTime;
   }
 
   public AdgroupsUpdateRequest endDate(String endDate) {
@@ -622,6 +650,44 @@ public class AdgroupsUpdateRequest {
     this.bidAdjustment = bidAdjustment;
   }
 
+  public AdgroupsUpdateRequest autoAcquisitionEnabled(Boolean autoAcquisitionEnabled) {
+    this.autoAcquisitionEnabled = autoAcquisitionEnabled;
+    return this;
+  }
+
+  /**
+   * Get autoAcquisitionEnabled
+   *
+   * @return autoAcquisitionEnabled
+   */
+  @ApiModelProperty(value = "")
+  public Boolean isAutoAcquisitionEnabled() {
+    return autoAcquisitionEnabled;
+  }
+
+  public void setAutoAcquisitionEnabled(Boolean autoAcquisitionEnabled) {
+    this.autoAcquisitionEnabled = autoAcquisitionEnabled;
+  }
+
+  public AdgroupsUpdateRequest autoAcquisitionBudget(Long autoAcquisitionBudget) {
+    this.autoAcquisitionBudget = autoAcquisitionBudget;
+    return this;
+  }
+
+  /**
+   * Get autoAcquisitionBudget
+   *
+   * @return autoAcquisitionBudget
+   */
+  @ApiModelProperty(value = "")
+  public Long getAutoAcquisitionBudget() {
+    return autoAcquisitionBudget;
+  }
+
+  public void setAutoAcquisitionBudget(Long autoAcquisitionBudget) {
+    this.autoAcquisitionBudget = autoAcquisitionBudget;
+  }
+
   public AdgroupsUpdateRequest accountId(Long accountId) {
     this.accountId = accountId;
     return this;
@@ -653,6 +719,7 @@ public class AdgroupsUpdateRequest {
     return Objects.equals(this.adgroupId, adgroupsUpdateRequest.adgroupId)
         && Objects.equals(this.adgroupName, adgroupsUpdateRequest.adgroupName)
         && Objects.equals(this.beginDate, adgroupsUpdateRequest.beginDate)
+        && Objects.equals(this.firstDayBeginTime, adgroupsUpdateRequest.firstDayBeginTime)
         && Objects.equals(this.endDate, adgroupsUpdateRequest.endDate)
         && Objects.equals(this.bidAmount, adgroupsUpdateRequest.bidAmount)
         && Objects.equals(this.conversionId, adgroupsUpdateRequest.conversionId)
@@ -680,6 +747,8 @@ public class AdgroupsUpdateRequest {
             this.deepConversionWorthRate, adgroupsUpdateRequest.deepConversionWorthRate)
         && Objects.equals(this.bidMode, adgroupsUpdateRequest.bidMode)
         && Objects.equals(this.bidAdjustment, adgroupsUpdateRequest.bidAdjustment)
+        && Objects.equals(this.autoAcquisitionEnabled, adgroupsUpdateRequest.autoAcquisitionEnabled)
+        && Objects.equals(this.autoAcquisitionBudget, adgroupsUpdateRequest.autoAcquisitionBudget)
         && Objects.equals(this.accountId, adgroupsUpdateRequest.accountId);
   }
 
@@ -689,6 +758,7 @@ public class AdgroupsUpdateRequest {
         adgroupId,
         adgroupName,
         beginDate,
+        firstDayBeginTime,
         endDate,
         bidAmount,
         conversionId,
@@ -712,6 +782,8 @@ public class AdgroupsUpdateRequest {
         deepConversionWorthRate,
         bidMode,
         bidAdjustment,
+        autoAcquisitionEnabled,
+        autoAcquisitionBudget,
         accountId);
   }
 

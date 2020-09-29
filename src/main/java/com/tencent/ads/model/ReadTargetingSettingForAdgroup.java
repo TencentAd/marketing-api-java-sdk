@@ -141,7 +141,7 @@ public class ReadTargetingSettingForAdgroup {
   private List<String> miniGameQqStatus = null;
 
   @SerializedName("excluded_converted_audience")
-  private ExcludedConvertedAudience excludedConvertedAudience = null;
+  private ExcludedConvertedAudienceStruct excludedConvertedAudience = null;
 
   public ReadTargetingSettingForAdgroup age(List<AgeStruct> age) {
     this.age = age;
@@ -1160,7 +1160,7 @@ public class ReadTargetingSettingForAdgroup {
   }
 
   public ReadTargetingSettingForAdgroup excludedConvertedAudience(
-      ExcludedConvertedAudience excludedConvertedAudience) {
+      ExcludedConvertedAudienceStruct excludedConvertedAudience) {
     this.excludedConvertedAudience = excludedConvertedAudience;
     return this;
   }
@@ -1171,11 +1171,12 @@ public class ReadTargetingSettingForAdgroup {
    * @return excludedConvertedAudience
    */
   @ApiModelProperty(value = "")
-  public ExcludedConvertedAudience getExcludedConvertedAudience() {
+  public ExcludedConvertedAudienceStruct getExcludedConvertedAudience() {
     return excludedConvertedAudience;
   }
 
-  public void setExcludedConvertedAudience(ExcludedConvertedAudience excludedConvertedAudience) {
+  public void setExcludedConvertedAudience(
+      ExcludedConvertedAudienceStruct excludedConvertedAudience) {
     this.excludedConvertedAudience = excludedConvertedAudience;
   }
 

@@ -77,6 +77,9 @@ public class AdgroupsGetListStruct {
   @SerializedName("begin_date")
   private String beginDate = null;
 
+  @SerializedName("first_day_begin_time")
+  private String firstDayBeginTime = null;
+
   @SerializedName("end_date")
   private String endDate = null;
 
@@ -163,6 +166,12 @@ public class AdgroupsGetListStruct {
 
   @SerializedName("bid_adjustment")
   private BidAdjustment bidAdjustment = null;
+
+  @SerializedName("auto_acquisition_enabled")
+  private Boolean autoAcquisitionEnabled = null;
+
+  @SerializedName("auto_acquisition_budget")
+  private Long autoAcquisitionBudget = null;
 
   public AdgroupsGetListStruct campaignId(Long campaignId) {
     this.campaignId = campaignId;
@@ -513,6 +522,25 @@ public class AdgroupsGetListStruct {
 
   public void setBeginDate(String beginDate) {
     this.beginDate = beginDate;
+  }
+
+  public AdgroupsGetListStruct firstDayBeginTime(String firstDayBeginTime) {
+    this.firstDayBeginTime = firstDayBeginTime;
+    return this;
+  }
+
+  /**
+   * Get firstDayBeginTime
+   *
+   * @return firstDayBeginTime
+   */
+  @ApiModelProperty(value = "")
+  public String getFirstDayBeginTime() {
+    return firstDayBeginTime;
+  }
+
+  public void setFirstDayBeginTime(String firstDayBeginTime) {
+    this.firstDayBeginTime = firstDayBeginTime;
   }
 
   public AdgroupsGetListStruct endDate(String endDate) {
@@ -1102,6 +1130,44 @@ public class AdgroupsGetListStruct {
     this.bidAdjustment = bidAdjustment;
   }
 
+  public AdgroupsGetListStruct autoAcquisitionEnabled(Boolean autoAcquisitionEnabled) {
+    this.autoAcquisitionEnabled = autoAcquisitionEnabled;
+    return this;
+  }
+
+  /**
+   * Get autoAcquisitionEnabled
+   *
+   * @return autoAcquisitionEnabled
+   */
+  @ApiModelProperty(value = "")
+  public Boolean isAutoAcquisitionEnabled() {
+    return autoAcquisitionEnabled;
+  }
+
+  public void setAutoAcquisitionEnabled(Boolean autoAcquisitionEnabled) {
+    this.autoAcquisitionEnabled = autoAcquisitionEnabled;
+  }
+
+  public AdgroupsGetListStruct autoAcquisitionBudget(Long autoAcquisitionBudget) {
+    this.autoAcquisitionBudget = autoAcquisitionBudget;
+    return this;
+  }
+
+  /**
+   * Get autoAcquisitionBudget
+   *
+   * @return autoAcquisitionBudget
+   */
+  @ApiModelProperty(value = "")
+  public Long getAutoAcquisitionBudget() {
+    return autoAcquisitionBudget;
+  }
+
+  public void setAutoAcquisitionBudget(Long autoAcquisitionBudget) {
+    this.autoAcquisitionBudget = autoAcquisitionBudget;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -1131,6 +1197,7 @@ public class AdgroupsGetListStruct {
             this.isIncludeUnsupportedTargeting, adgroupsGetListStruct.isIncludeUnsupportedTargeting)
         && Objects.equals(this.sceneSpec, adgroupsGetListStruct.sceneSpec)
         && Objects.equals(this.beginDate, adgroupsGetListStruct.beginDate)
+        && Objects.equals(this.firstDayBeginTime, adgroupsGetListStruct.firstDayBeginTime)
         && Objects.equals(this.endDate, adgroupsGetListStruct.endDate)
         && Objects.equals(this.timeSeries, adgroupsGetListStruct.timeSeries)
         && Objects.equals(this.configuredStatus, adgroupsGetListStruct.configuredStatus)
@@ -1165,7 +1232,9 @@ public class AdgroupsGetListStruct {
         && Objects.equals(this.systemStatus, adgroupsGetListStruct.systemStatus)
         && Objects.equals(this.bidMode, adgroupsGetListStruct.bidMode)
         && Objects.equals(this.status, adgroupsGetListStruct.status)
-        && Objects.equals(this.bidAdjustment, adgroupsGetListStruct.bidAdjustment);
+        && Objects.equals(this.bidAdjustment, adgroupsGetListStruct.bidAdjustment)
+        && Objects.equals(this.autoAcquisitionEnabled, adgroupsGetListStruct.autoAcquisitionEnabled)
+        && Objects.equals(this.autoAcquisitionBudget, adgroupsGetListStruct.autoAcquisitionBudget);
   }
 
   @Override
@@ -1189,6 +1258,7 @@ public class AdgroupsGetListStruct {
         isIncludeUnsupportedTargeting,
         sceneSpec,
         beginDate,
+        firstDayBeginTime,
         endDate,
         timeSeries,
         configuredStatus,
@@ -1217,7 +1287,9 @@ public class AdgroupsGetListStruct {
         systemStatus,
         bidMode,
         status,
-        bidAdjustment);
+        bidAdjustment,
+        autoAcquisitionEnabled,
+        autoAcquisitionBudget);
   }
 
   @Override

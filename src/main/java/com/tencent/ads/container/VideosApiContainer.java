@@ -23,6 +23,9 @@ import com.tencent.ads.model.VideosAddResponse;
 import com.tencent.ads.model.VideosAddResponseData;
 import com.tencent.ads.model.VideosGetResponse;
 import com.tencent.ads.model.VideosGetResponseData;
+import com.tencent.ads.model.VideosUpdateRequest;
+import com.tencent.ads.model.VideosUpdateResponse;
+import com.tencent.ads.model.VideosUpdateResponseData;
 import java.io.File;
 import java.util.List;
 
@@ -75,6 +78,21 @@ public class VideosApiContainer extends ApiContainer {
       List<String> fields)
       throws ApiException, TencentAdsResponseException {
     VideosGetResponse resp = api.videosGet(accountId, filtering, page, pageSize, fields);
+    handleResponse(gson.toJson(resp));
+    return resp.getData();
+  }
+
+  /**
+   * 修改视频文件名称
+   *
+   * @param data (required)
+   * @return VideosUpdateResponse
+   * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
+   *     response body
+   */
+  public VideosUpdateResponseData videosUpdate(VideosUpdateRequest data)
+      throws ApiException, TencentAdsResponseException {
+    VideosUpdateResponse resp = api.videosUpdate(data);
     handleResponse(gson.toJson(resp));
     return resp.getData();
   }

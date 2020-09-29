@@ -51,6 +51,9 @@ public class ConversionsGetListStruct {
   @SerializedName("user_action_set_id")
   private Long userActionSetId = null;
 
+  @SerializedName("user_action_set_key")
+  private String userActionSetKey = null;
+
   @SerializedName("site_set_enable")
   private Boolean siteSetEnable = null;
 
@@ -252,6 +255,25 @@ public class ConversionsGetListStruct {
     this.userActionSetId = userActionSetId;
   }
 
+  public ConversionsGetListStruct userActionSetKey(String userActionSetKey) {
+    this.userActionSetKey = userActionSetKey;
+    return this;
+  }
+
+  /**
+   * Get userActionSetKey
+   *
+   * @return userActionSetKey
+   */
+  @ApiModelProperty(value = "")
+  public String getUserActionSetKey() {
+    return userActionSetKey;
+  }
+
+  public void setUserActionSetKey(String userActionSetKey) {
+    this.userActionSetKey = userActionSetKey;
+  }
+
   public ConversionsGetListStruct siteSetEnable(Boolean siteSetEnable) {
     this.siteSetEnable = siteSetEnable;
     return this;
@@ -331,6 +353,7 @@ public class ConversionsGetListStruct {
         && Objects.equals(
             this.deepWorthOptimizationGoal, conversionsGetListStruct.deepWorthOptimizationGoal)
         && Objects.equals(this.userActionSetId, conversionsGetListStruct.userActionSetId)
+        && Objects.equals(this.userActionSetKey, conversionsGetListStruct.userActionSetKey)
         && Objects.equals(this.siteSetEnable, conversionsGetListStruct.siteSetEnable)
         && Objects.equals(this.isDeleted, conversionsGetListStruct.isDeleted)
         && Objects.equals(this.accessStatus, conversionsGetListStruct.accessStatus);
@@ -349,6 +372,7 @@ public class ConversionsGetListStruct {
         deepBehaviorOptimizationGoal,
         deepWorthOptimizationGoal,
         userActionSetId,
+        userActionSetKey,
         siteSetEnable,
         isDeleted,
         accessStatus);

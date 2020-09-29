@@ -69,7 +69,7 @@ public class AdvertiserGetListStruct {
   private Long agencyAccountId = null;
 
   @SerializedName("operators")
-  private List<OperatorStruct> operators = null;
+  private List<AdvertiserOperatorStruct> operators = null;
 
   @SerializedName("account_id")
   private Long accountId = null;
@@ -418,14 +418,14 @@ public class AdvertiserGetListStruct {
     this.agencyAccountId = agencyAccountId;
   }
 
-  public AdvertiserGetListStruct operators(List<OperatorStruct> operators) {
+  public AdvertiserGetListStruct operators(List<AdvertiserOperatorStruct> operators) {
     this.operators = operators;
     return this;
   }
 
-  public AdvertiserGetListStruct addOperatorsItem(OperatorStruct operatorsItem) {
+  public AdvertiserGetListStruct addOperatorsItem(AdvertiserOperatorStruct operatorsItem) {
     if (this.operators == null) {
-      this.operators = new ArrayList<OperatorStruct>();
+      this.operators = new ArrayList<AdvertiserOperatorStruct>();
     }
     this.operators.add(operatorsItem);
     return this;
@@ -437,11 +437,11 @@ public class AdvertiserGetListStruct {
    * @return operators
    */
   @ApiModelProperty(value = "")
-  public List<OperatorStruct> getOperators() {
+  public List<AdvertiserOperatorStruct> getOperators() {
     return operators;
   }
 
-  public void setOperators(List<OperatorStruct> operators) {
+  public void setOperators(List<AdvertiserOperatorStruct> operators) {
     this.operators = operators;
   }
 

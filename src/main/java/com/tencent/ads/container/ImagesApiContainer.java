@@ -23,6 +23,9 @@ import com.tencent.ads.model.ImagesAddResponse;
 import com.tencent.ads.model.ImagesAddResponseData;
 import com.tencent.ads.model.ImagesGetResponse;
 import com.tencent.ads.model.ImagesGetResponseData;
+import com.tencent.ads.model.ImagesUpdateRequest;
+import com.tencent.ads.model.ImagesUpdateResponse;
+import com.tencent.ads.model.ImagesUpdateResponseData;
 import java.io.File;
 import java.util.List;
 
@@ -77,6 +80,21 @@ public class ImagesApiContainer extends ApiContainer {
       List<String> fields)
       throws ApiException, TencentAdsResponseException {
     ImagesGetResponse resp = api.imagesGet(accountId, filtering, page, pageSize, fields);
+    handleResponse(gson.toJson(resp));
+    return resp.getData();
+  }
+
+  /**
+   * 修改图片名称
+   *
+   * @param data (required)
+   * @return ImagesUpdateResponse
+   * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
+   *     response body
+   */
+  public ImagesUpdateResponseData imagesUpdate(ImagesUpdateRequest data)
+      throws ApiException, TencentAdsResponseException {
+    ImagesUpdateResponse resp = api.imagesUpdate(data);
     handleResponse(gson.toJson(resp));
     return resp.getData();
   }

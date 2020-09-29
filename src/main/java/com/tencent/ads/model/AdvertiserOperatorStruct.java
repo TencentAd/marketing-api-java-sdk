@@ -20,7 +20,7 @@ import java.util.Objects;
 
 /** 运营人员结构 */
 @ApiModel(description = "运营人员结构")
-public class OperatorStruct {
+public class AdvertiserOperatorStruct {
   @SerializedName("operator_id")
   private Long operatorId = null;
 
@@ -36,7 +36,7 @@ public class OperatorStruct {
   @SerializedName("is_master")
   private Boolean isMaster = null;
 
-  public OperatorStruct operatorId(Long operatorId) {
+  public AdvertiserOperatorStruct operatorId(Long operatorId) {
     this.operatorId = operatorId;
     return this;
   }
@@ -55,7 +55,7 @@ public class OperatorStruct {
     this.operatorId = operatorId;
   }
 
-  public OperatorStruct operatorName(String operatorName) {
+  public AdvertiserOperatorStruct operatorName(String operatorName) {
     this.operatorName = operatorName;
     return this;
   }
@@ -74,7 +74,7 @@ public class OperatorStruct {
     this.operatorName = operatorName;
   }
 
-  public OperatorStruct qq(Long qq) {
+  public AdvertiserOperatorStruct qq(Long qq) {
     this.qq = qq;
     return this;
   }
@@ -93,7 +93,7 @@ public class OperatorStruct {
     this.qq = qq;
   }
 
-  public OperatorStruct wechatAccountId(String wechatAccountId) {
+  public AdvertiserOperatorStruct wechatAccountId(String wechatAccountId) {
     this.wechatAccountId = wechatAccountId;
     return this;
   }
@@ -112,7 +112,7 @@ public class OperatorStruct {
     this.wechatAccountId = wechatAccountId;
   }
 
-  public OperatorStruct isMaster(Boolean isMaster) {
+  public AdvertiserOperatorStruct isMaster(Boolean isMaster) {
     this.isMaster = isMaster;
     return this;
   }
@@ -139,12 +139,12 @@ public class OperatorStruct {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    OperatorStruct operatorStruct = (OperatorStruct) o;
-    return Objects.equals(this.operatorId, operatorStruct.operatorId)
-        && Objects.equals(this.operatorName, operatorStruct.operatorName)
-        && Objects.equals(this.qq, operatorStruct.qq)
-        && Objects.equals(this.wechatAccountId, operatorStruct.wechatAccountId)
-        && Objects.equals(this.isMaster, operatorStruct.isMaster);
+    AdvertiserOperatorStruct advertiserOperatorStruct = (AdvertiserOperatorStruct) o;
+    return Objects.equals(this.operatorId, advertiserOperatorStruct.operatorId)
+        && Objects.equals(this.operatorName, advertiserOperatorStruct.operatorName)
+        && Objects.equals(this.qq, advertiserOperatorStruct.qq)
+        && Objects.equals(this.wechatAccountId, advertiserOperatorStruct.wechatAccountId)
+        && Objects.equals(this.isMaster, advertiserOperatorStruct.isMaster);
   }
 
   @Override

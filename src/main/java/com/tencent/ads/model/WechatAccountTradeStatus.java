@@ -19,7 +19,7 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-/** 账户交易状态，当trade_type为ADVERTISER_TRANSFER时，此字段会返回 */
+/** 账户交易状态 */
 @JsonAdapter(WechatAccountTradeStatus.Adapter.class)
 public enum WechatAccountTradeStatus {
   PROCESSING("TRADE_STATUS_PROCESSING"),
