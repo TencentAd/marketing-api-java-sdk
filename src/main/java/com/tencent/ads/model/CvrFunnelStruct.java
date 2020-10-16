@@ -33,6 +33,9 @@ public class CvrFunnelStruct {
   @SerializedName("rank_category")
   private Long rankCategory = null;
 
+  @SerializedName("rank_second_category")
+  private Long rankSecondCategory = null;
+
   @SerializedName("rank_overall")
   private Long rankOverall = null;
 
@@ -112,6 +115,25 @@ public class CvrFunnelStruct {
     this.rankCategory = rankCategory;
   }
 
+  public CvrFunnelStruct rankSecondCategory(Long rankSecondCategory) {
+    this.rankSecondCategory = rankSecondCategory;
+    return this;
+  }
+
+  /**
+   * Get rankSecondCategory
+   *
+   * @return rankSecondCategory
+   */
+  @ApiModelProperty(value = "")
+  public Long getRankSecondCategory() {
+    return rankSecondCategory;
+  }
+
+  public void setRankSecondCategory(Long rankSecondCategory) {
+    this.rankSecondCategory = rankSecondCategory;
+  }
+
   public CvrFunnelStruct rankOverall(Long rankOverall) {
     this.rankOverall = rankOverall;
     return this;
@@ -144,12 +166,13 @@ public class CvrFunnelStruct {
         && Objects.equals(this.score, cvrFunnelStruct.score)
         && Objects.equals(this.scoreDesc, cvrFunnelStruct.scoreDesc)
         && Objects.equals(this.rankCategory, cvrFunnelStruct.rankCategory)
+        && Objects.equals(this.rankSecondCategory, cvrFunnelStruct.rankSecondCategory)
         && Objects.equals(this.rankOverall, cvrFunnelStruct.rankOverall);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(value, score, scoreDesc, rankCategory, rankOverall);
+    return Objects.hash(value, score, scoreDesc, rankCategory, rankSecondCategory, rankOverall);
   }
 
   @Override

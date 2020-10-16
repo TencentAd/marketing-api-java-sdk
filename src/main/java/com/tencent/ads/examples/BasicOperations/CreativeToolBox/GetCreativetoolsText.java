@@ -24,7 +24,7 @@ public class GetCreativetoolsText {
 
   public String keyword = null;
 
-  public Long filtering = null;
+  public List<Long> filtering = null;
 
   public Long number = null;
 

@@ -85,7 +85,7 @@ public class ImagesApiContainer extends ApiContainer {
   }
 
   /**
-   * 修改图片名称
+   * 修改图片信息
    *
    * @param data (required)
    * @return ImagesUpdateResponse

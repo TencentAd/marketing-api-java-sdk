@@ -83,7 +83,7 @@ public class VideosApiContainer extends ApiContainer {
   }
 
   /**
-   * 修改视频文件名称
+   * 修改视频信息
    *
    * @param data (required)
    * @return VideosUpdateResponse

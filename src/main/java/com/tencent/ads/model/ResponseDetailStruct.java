@@ -42,6 +42,9 @@ public class ResponseDetailStruct {
   @SerializedName("cpa_detail")
   private DetailCpaDetailStruct cpaDetail = null;
 
+  @SerializedName("creative_detail")
+  private DetailCreativeDetailStruct creativeDetail = null;
+
   @SerializedName("optimization")
   private OptimizeContentMainStruct optimization = null;
 
@@ -178,6 +181,25 @@ public class ResponseDetailStruct {
     this.cpaDetail = cpaDetail;
   }
 
+  public ResponseDetailStruct creativeDetail(DetailCreativeDetailStruct creativeDetail) {
+    this.creativeDetail = creativeDetail;
+    return this;
+  }
+
+  /**
+   * Get creativeDetail
+   *
+   * @return creativeDetail
+   */
+  @ApiModelProperty(value = "")
+  public DetailCreativeDetailStruct getCreativeDetail() {
+    return creativeDetail;
+  }
+
+  public void setCreativeDetail(DetailCreativeDetailStruct creativeDetail) {
+    this.creativeDetail = creativeDetail;
+  }
+
   public ResponseDetailStruct optimization(OptimizeContentMainStruct optimization) {
     this.optimization = optimization;
     return this;
@@ -213,6 +235,7 @@ public class ResponseDetailStruct {
         && Objects.equals(this.clickDetail, responseDetailStruct.clickDetail)
         && Objects.equals(this.conversionDetail, responseDetailStruct.conversionDetail)
         && Objects.equals(this.cpaDetail, responseDetailStruct.cpaDetail)
+        && Objects.equals(this.creativeDetail, responseDetailStruct.creativeDetail)
         && Objects.equals(this.optimization, responseDetailStruct.optimization);
   }
 
@@ -226,6 +249,7 @@ public class ResponseDetailStruct {
         clickDetail,
         conversionDetail,
         cpaDetail,
+        creativeDetail,
         optimization);
   }
 

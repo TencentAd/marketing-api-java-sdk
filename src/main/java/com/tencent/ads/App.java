@@ -94,6 +94,7 @@ public class App {
   @Inject ProductCategoriesListApiContainer productCategoriesListApiContainer;
   @Inject ProductItemsApiContainer productItemsApiContainer;
   @Inject ProductItemsDetailApiContainer productItemsDetailApiContainer;
+  @Inject ProductItemsVerticalsApiContainer productItemsVerticalsApiContainer;
   @Inject ProductsSystemStatusApiContainer productsSystemStatusApiContainer;
   @Inject ProfilesApiContainer profilesApiContainer;
   @Inject PromotedObjectsApiContainer promotedObjectsApiContainer;
@@ -433,6 +434,10 @@ public class App {
 
   public ProductItemsDetailApiContainer productItemsDetail() {
     return productItemsDetailApiContainer;
+  }
+
+  public ProductItemsVerticalsApiContainer productItemsVerticals() {
+    return productItemsVerticalsApiContainer;
   }
 
   public ProductsSystemStatusApiContainer productsSystemStatus() {

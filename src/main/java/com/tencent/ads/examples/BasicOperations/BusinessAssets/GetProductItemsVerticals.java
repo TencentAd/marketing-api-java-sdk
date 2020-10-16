@@ -1,23 +1,20 @@
-package com.tencent.ads.examples.BasicOperations.Tools;
+package com.tencent.ads.examples.BasicOperations.BusinessAssets;
 
 import com.tencent.ads.ApiContextConfig;
 import com.tencent.ads.TencentAds;
 import com.tencent.ads.exception.TencentAdsResponseException;
 import com.tencent.ads.exception.TencentAdsSDKException;
 import com.tencent.ads.model.*;
-import com.tencent.ads.model.ComplianceValidationGetRequest;
+import java.util.List;
 
-public class GetComplianceValidation {
+public class GetProductItemsVerticals {
   /** YOUR ACCESS TOKEN */
   public String ACCESS_TOKEN = "YOUR ACCESS TOKEN";
 
   /** TencentAds */
   public TencentAds tencentAds;
 
-  public Long accountId = null;
-  public ComplianceValidationGetRequest data = new ComplianceValidationGetRequest();
-  public SiteSet siteSet = SiteSet.QZONE;
-  public String text = "YOUR AD TEXT";
+  public List<String> fields = null;
 
   public void init() {
     this.tencentAds = TencentAds.getInstance();
@@ -27,26 +24,20 @@ public class GetComplianceValidation {
     this.buildParams();
   }
 
-  public void buildParams() {
-    data.setAccountId(accountId);
+  public void buildParams() {}
 
-    data.setSiteSet(siteSet);
-
-    data.setText(text);
-  }
-
-  public ComplianceValidationGetResponseData getComplianceValidation() throws Exception {
-    ComplianceValidationGetResponseData response =
-        tencentAds.complianceValidation().complianceValidationGet(data);
+  public ProductItemsVerticalsGetResponseData getProductItemsVerticals() throws Exception {
+    ProductItemsVerticalsGetResponseData response =
+        tencentAds.productItemsVerticals().productItemsVerticalsGet(fields);
     return response;
   }
 
   public static void main(String[] args) {
     try {
-      GetComplianceValidation getComplianceValidation = new GetComplianceValidation();
-      getComplianceValidation.init();
-      ComplianceValidationGetResponseData response =
-          getComplianceValidation.getComplianceValidation();
+      GetProductItemsVerticals getProductItemsVerticals = new GetProductItemsVerticals();
+      getProductItemsVerticals.init();
+      ProductItemsVerticalsGetResponseData response =
+          getProductItemsVerticals.getProductItemsVerticals();
     } catch (TencentAdsResponseException e) {
       e.printStackTrace();
     } catch (TencentAdsSDKException e) {

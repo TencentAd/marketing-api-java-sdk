@@ -70,7 +70,7 @@ public class CreativetoolsTextApi {
       Long categoryFirstLevel,
       Long categorySecondLevel,
       String keyword,
-      Long filtering,
+      List<Long> filtering,
       Long number,
       List<String> fields,
       final ProgressResponseBody.ProgressListener progressListener,
@@ -95,7 +95,8 @@ public class CreativetoolsTextApi {
           apiClient.parameterToPair("category_second_level", categorySecondLevel));
     if (keyword != null) localVarQueryParams.addAll(apiClient.parameterToPair("keyword", keyword));
     if (filtering != null)
-      localVarQueryParams.addAll(apiClient.parameterToPair("filtering", filtering));
+      localVarCollectionQueryParams.addAll(
+          apiClient.parameterToPairs("multi", "filtering", filtering));
     if (number != null) localVarQueryParams.addAll(apiClient.parameterToPair("number", number));
     if (fields != null)
       localVarCollectionQueryParams.addAll(apiClient.parameterToPairs("multi", "fields", fields));
@@ -150,7 +151,7 @@ public class CreativetoolsTextApi {
       Long categoryFirstLevel,
       Long categorySecondLevel,
       String keyword,
-      Long filtering,
+      List<Long> filtering,
       Long number,
       List<String> fields,
       final ProgressResponseBody.ProgressListener progressListener,
@@ -205,7 +206,7 @@ public class CreativetoolsTextApi {
       Long categoryFirstLevel,
       Long categorySecondLevel,
       String keyword,
-      Long filtering,
+      List<Long> filtering,
       Long number,
       List<String> fields)
       throws ApiException {
@@ -243,7 +244,7 @@ public class CreativetoolsTextApi {
       Long categoryFirstLevel,
       Long categorySecondLevel,
       String keyword,
-      Long filtering,
+      List<Long> filtering,
       Long number,
       List<String> fields)
       throws ApiException {
@@ -284,7 +285,7 @@ public class CreativetoolsTextApi {
       Long categoryFirstLevel,
       Long categorySecondLevel,
       String keyword,
-      Long filtering,
+      List<Long> filtering,
       Long number,
       List<String> fields,
       final ApiCallback<CreativetoolsTextGetResponse> callback)

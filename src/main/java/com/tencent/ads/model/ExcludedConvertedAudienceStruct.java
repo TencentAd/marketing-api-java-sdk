@@ -20,8 +20,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
-/** 排除已转化用户定向，（该定向灰度开放中） */
-@ApiModel(description = "排除已转化用户定向，（该定向灰度开放中）")
+/** 排除已转化用户定向 */
+@ApiModel(description = "排除已转化用户定向")
 public class ExcludedConvertedAudienceStruct {
   @SerializedName("excluded_dimension")
   private ExcludedConvertedAudience excludedDimension = null;

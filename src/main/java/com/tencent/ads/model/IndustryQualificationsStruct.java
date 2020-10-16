@@ -41,6 +41,9 @@ public class IndustryQualificationsStruct {
   @SerializedName("qualification_status")
   private QualificationStatus qualificationStatus = null;
 
+  @SerializedName("expired_date")
+  private String expiredDate = null;
+
   @SerializedName("reject_message")
   private String rejectMessage = null;
 
@@ -172,6 +175,25 @@ public class IndustryQualificationsStruct {
     this.qualificationStatus = qualificationStatus;
   }
 
+  public IndustryQualificationsStruct expiredDate(String expiredDate) {
+    this.expiredDate = expiredDate;
+    return this;
+  }
+
+  /**
+   * Get expiredDate
+   *
+   * @return expiredDate
+   */
+  @ApiModelProperty(value = "")
+  public String getExpiredDate() {
+    return expiredDate;
+  }
+
+  public void setExpiredDate(String expiredDate) {
+    this.expiredDate = expiredDate;
+  }
+
   public IndustryQualificationsStruct rejectMessage(String rejectMessage) {
     this.rejectMessage = rejectMessage;
     return this;
@@ -245,6 +267,7 @@ public class IndustryQualificationsStruct {
         && Objects.equals(this.imageIdList, industryQualificationsStruct.imageIdList)
         && Objects.equals(
             this.qualificationStatus, industryQualificationsStruct.qualificationStatus)
+        && Objects.equals(this.expiredDate, industryQualificationsStruct.expiredDate)
         && Objects.equals(this.rejectMessage, industryQualificationsStruct.rejectMessage)
         && Objects.equals(this.createdTime, industryQualificationsStruct.createdTime)
         && Objects.equals(this.lastModifiedTime, industryQualificationsStruct.lastModifiedTime);
@@ -259,6 +282,7 @@ public class IndustryQualificationsStruct {
         qualificationCode,
         imageIdList,
         qualificationStatus,
+        expiredDate,
         rejectMessage,
         createdTime,
         lastModifiedTime);

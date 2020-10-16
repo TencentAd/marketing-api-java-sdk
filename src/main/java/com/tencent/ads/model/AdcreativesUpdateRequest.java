@@ -99,6 +99,12 @@ public class AdcreativesUpdateRequest {
   @SerializedName("feeds_video_comment_switch")
   private Boolean feedsVideoCommentSwitch = null;
 
+  @SerializedName("webview_url")
+  private String webviewUrl = null;
+
+  @SerializedName("simple_canvas_sub_type")
+  private SimpleCanvasSubType simpleCanvasSubType = null;
+
   @SerializedName("floating_zone")
   private FloatingZone floatingZone = null;
 
@@ -624,6 +630,44 @@ public class AdcreativesUpdateRequest {
     this.feedsVideoCommentSwitch = feedsVideoCommentSwitch;
   }
 
+  public AdcreativesUpdateRequest webviewUrl(String webviewUrl) {
+    this.webviewUrl = webviewUrl;
+    return this;
+  }
+
+  /**
+   * Get webviewUrl
+   *
+   * @return webviewUrl
+   */
+  @ApiModelProperty(value = "")
+  public String getWebviewUrl() {
+    return webviewUrl;
+  }
+
+  public void setWebviewUrl(String webviewUrl) {
+    this.webviewUrl = webviewUrl;
+  }
+
+  public AdcreativesUpdateRequest simpleCanvasSubType(SimpleCanvasSubType simpleCanvasSubType) {
+    this.simpleCanvasSubType = simpleCanvasSubType;
+    return this;
+  }
+
+  /**
+   * Get simpleCanvasSubType
+   *
+   * @return simpleCanvasSubType
+   */
+  @ApiModelProperty(value = "")
+  public SimpleCanvasSubType getSimpleCanvasSubType() {
+    return simpleCanvasSubType;
+  }
+
+  public void setSimpleCanvasSubType(SimpleCanvasSubType simpleCanvasSubType) {
+    this.simpleCanvasSubType = simpleCanvasSubType;
+  }
+
   public AdcreativesUpdateRequest floatingZone(FloatingZone floatingZone) {
     this.floatingZone = floatingZone;
     return this;
@@ -743,6 +787,8 @@ public class AdcreativesUpdateRequest {
         && Objects.equals(this.videoEndPage, adcreativesUpdateRequest.videoEndPage)
         && Objects.equals(
             this.feedsVideoCommentSwitch, adcreativesUpdateRequest.feedsVideoCommentSwitch)
+        && Objects.equals(this.webviewUrl, adcreativesUpdateRequest.webviewUrl)
+        && Objects.equals(this.simpleCanvasSubType, adcreativesUpdateRequest.simpleCanvasSubType)
         && Objects.equals(this.floatingZone, adcreativesUpdateRequest.floatingZone)
         && Objects.equals(
             this.marketingPendantImageId, adcreativesUpdateRequest.marketingPendantImageId)
@@ -779,6 +825,8 @@ public class AdcreativesUpdateRequest {
         playablePageMaterialId,
         videoEndPage,
         feedsVideoCommentSwitch,
+        webviewUrl,
+        simpleCanvasSubType,
         floatingZone,
         marketingPendantImageId,
         accountId,

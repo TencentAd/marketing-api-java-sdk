@@ -578,7 +578,7 @@ public class VideosApi {
   }
 
   /**
-   * 修改视频文件名称
+   * 修改视频信息
    *
    * @param data (required)
    * @return VideosUpdateResponse
@@ -591,7 +591,7 @@ public class VideosApi {
   }
 
   /**
-   * 修改视频文件名称
+   * 修改视频信息
    *
    * @param data (required)
    * @return ApiResponse&lt;VideosUpdateResponse&gt;
@@ -606,7 +606,7 @@ public class VideosApi {
   }
 
   /**
-   * 修改视频文件名称 (asynchronously)
+   * 修改视频信息 (asynchronously)
    *
    * @param data (required)
    * @param callback The callback to be executed when the API call finishes

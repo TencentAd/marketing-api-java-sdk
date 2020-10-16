@@ -33,6 +33,9 @@ public class TargetingWidenessRateFunnelStruct {
   @SerializedName("rank_category")
   private Long rankCategory = null;
 
+  @SerializedName("rank_second_category")
+  private Long rankSecondCategory = null;
+
   @SerializedName("rank_overall")
   private Long rankOverall = null;
 
@@ -112,6 +115,25 @@ public class TargetingWidenessRateFunnelStruct {
     this.rankCategory = rankCategory;
   }
 
+  public TargetingWidenessRateFunnelStruct rankSecondCategory(Long rankSecondCategory) {
+    this.rankSecondCategory = rankSecondCategory;
+    return this;
+  }
+
+  /**
+   * Get rankSecondCategory
+   *
+   * @return rankSecondCategory
+   */
+  @ApiModelProperty(value = "")
+  public Long getRankSecondCategory() {
+    return rankSecondCategory;
+  }
+
+  public void setRankSecondCategory(Long rankSecondCategory) {
+    this.rankSecondCategory = rankSecondCategory;
+  }
+
   public TargetingWidenessRateFunnelStruct rankOverall(Long rankOverall) {
     this.rankOverall = rankOverall;
     return this;
@@ -145,12 +167,14 @@ public class TargetingWidenessRateFunnelStruct {
         && Objects.equals(this.score, targetingWidenessRateFunnelStruct.score)
         && Objects.equals(this.scoreDesc, targetingWidenessRateFunnelStruct.scoreDesc)
         && Objects.equals(this.rankCategory, targetingWidenessRateFunnelStruct.rankCategory)
+        && Objects.equals(
+            this.rankSecondCategory, targetingWidenessRateFunnelStruct.rankSecondCategory)
         && Objects.equals(this.rankOverall, targetingWidenessRateFunnelStruct.rankOverall);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(value, score, scoreDesc, rankCategory, rankOverall);
+    return Objects.hash(value, score, scoreDesc, rankCategory, rankSecondCategory, rankOverall);
   }
 
   @Override

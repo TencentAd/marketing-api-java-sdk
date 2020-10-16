@@ -1,4 +1,7 @@
 # 更新日志
+## 2020-10-16
+1. 发布Java SDK [1.1.8] 版
+  - 修复部分模型字段缺失，包括但不限于AdcreativesAddRequest.webviewUrl等
 
 ## 2020-09-29
 1. 发布Java SDK [1.1.7] 版

@@ -1,25 +1,23 @@
-package com.tencent.ads.examples.BasicOperations.BusinessAssets;
+package com.tencent.ads.examples.BasicOperations.CreativeToolBox;
 
 import com.tencent.ads.ApiContextConfig;
 import com.tencent.ads.TencentAds;
 import com.tencent.ads.exception.TencentAdsResponseException;
 import com.tencent.ads.exception.TencentAdsSDKException;
 import com.tencent.ads.model.*;
-import com.tencent.ads.model.ProductCatalogsAddRequest;
+import com.tencent.ads.model.ComplianceValidationGetRequest;
 
-public class AddProductCatalogs {
+public class GetComplianceValidation {
   /** YOUR ACCESS TOKEN */
   public String ACCESS_TOKEN = "YOUR ACCESS TOKEN";
 
   /** TencentAds */
   public TencentAds tencentAds;
 
-  public String catalogName = "SDK商品库5ede252bae6f6";
-  public ProductCatalogsAddRequest data = new ProductCatalogsAddRequest();
   public Long accountId = null;
-  public CatalogType catalogType = CatalogType.CATALOG_TYPE_STANDARD;
-  public CatalogIndustry industryType = CatalogIndustry.ECOMMERCE;
-  public CatalogScale catalogScaleType = CatalogScale.NORMAL;
+  public ComplianceValidationGetRequest data = new ComplianceValidationGetRequest();
+  public SiteSet siteSet = SiteSet.QZONE;
+  public String text = "YOUR AD TEXT";
 
   public void init() {
     this.tencentAds = TencentAds.getInstance();
@@ -30,27 +28,25 @@ public class AddProductCatalogs {
   }
 
   public void buildParams() {
-    data.setCatalogName(catalogName);
-
     data.setAccountId(accountId);
 
-    data.setCatalogType(catalogType);
+    data.setSiteSet(siteSet);
 
-    data.setIndustryType(industryType);
-
-    data.setCatalogScaleType(catalogScaleType);
+    data.setText(text);
   }
 
-  public ProductCatalogsAddResponseData addProductCatalogs() throws Exception {
-    ProductCatalogsAddResponseData response = tencentAds.productCatalogs().productCatalogsAdd(data);
+  public ComplianceValidationGetResponseData getComplianceValidation() throws Exception {
+    ComplianceValidationGetResponseData response =
+        tencentAds.complianceValidation().complianceValidationGet(data);
     return response;
   }
 
   public static void main(String[] args) {
     try {
-      AddProductCatalogs addProductCatalogs = new AddProductCatalogs();
-      addProductCatalogs.init();
-      ProductCatalogsAddResponseData response = addProductCatalogs.addProductCatalogs();
+      GetComplianceValidation getComplianceValidation = new GetComplianceValidation();
+      getComplianceValidation.init();
+      ComplianceValidationGetResponseData response =
+          getComplianceValidation.getComplianceValidation();
     } catch (TencentAdsResponseException e) {
       e.printStackTrace();
     } catch (TencentAdsSDKException e) {

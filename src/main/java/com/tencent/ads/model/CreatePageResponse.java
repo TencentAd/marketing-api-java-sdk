@@ -21,11 +21,11 @@ import java.util.Objects;
 /** 创建页面返回数据结构 */
 @ApiModel(description = "创建页面返回数据结构")
 public class CreatePageResponse {
-  @SerializedName("page_id")
-  private Long pageId = null;
+  @SerializedName("landingPageId")
+  private Long landingPageId = null;
 
-  @SerializedName("page_service_id")
-  private String pageServiceId = null;
+  @SerializedName("id")
+  private String id = null;
 
   @SerializedName("code")
   private Long code = null;
@@ -33,42 +33,42 @@ public class CreatePageResponse {
   @SerializedName("message")
   private String message = null;
 
-  public CreatePageResponse pageId(Long pageId) {
-    this.pageId = pageId;
+  public CreatePageResponse landingPageId(Long landingPageId) {
+    this.landingPageId = landingPageId;
     return this;
   }
 
   /**
-   * Get pageId
+   * Get landingPageId
    *
-   * @return pageId
+   * @return landingPageId
    */
   @ApiModelProperty(value = "")
-  public Long getPageId() {
-    return pageId;
+  public Long getLandingPageId() {
+    return landingPageId;
   }
 
-  public void setPageId(Long pageId) {
-    this.pageId = pageId;
+  public void setLandingPageId(Long landingPageId) {
+    this.landingPageId = landingPageId;
   }
 
-  public CreatePageResponse pageServiceId(String pageServiceId) {
-    this.pageServiceId = pageServiceId;
+  public CreatePageResponse id(String id) {
+    this.id = id;
     return this;
   }
 
   /**
-   * Get pageServiceId
+   * Get id
    *
-   * @return pageServiceId
+   * @return id
    */
   @ApiModelProperty(value = "")
-  public String getPageServiceId() {
-    return pageServiceId;
+  public String getId() {
+    return id;
   }
 
-  public void setPageServiceId(String pageServiceId) {
-    this.pageServiceId = pageServiceId;
+  public void setId(String id) {
+    this.id = id;
   }
 
   public CreatePageResponse code(Long code) {
@@ -118,15 +118,15 @@ public class CreatePageResponse {
       return false;
     }
     CreatePageResponse createPageResponse = (CreatePageResponse) o;
-    return Objects.equals(this.pageId, createPageResponse.pageId)
-        && Objects.equals(this.pageServiceId, createPageResponse.pageServiceId)
+    return Objects.equals(this.landingPageId, createPageResponse.landingPageId)
+        && Objects.equals(this.id, createPageResponse.id)
         && Objects.equals(this.code, createPageResponse.code)
         && Objects.equals(this.message, createPageResponse.message);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(pageId, pageServiceId, code, message);
+    return Objects.hash(landingPageId, id, code, message);
   }
 
   @Override

@@ -19,18 +19,22 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-/** 商品库行业类型 */
-@JsonAdapter(CatalogIndustry.Adapter.class)
-public enum CatalogIndustry {
-  ECOMMERCE("INDUSTRY_TYPE_ECOMMERCE"),
+/** 简版原生页子类型(灰度中)，仅在简版原生页下生效，其他情况改字段内容会被忽略 */
+@JsonAdapter(SimpleCanvasSubType.Adapter.class)
+public enum SimpleCanvasSubType {
+  UNKNOWN("SIMPLE_CANVAS_SUB_TYPE_UNKNOWN"),
 
-  READING("INDUSTRY_TYPE_READING"),
+  DEFAULT("SIMPLE_CANVAS_SUB_TYPE_DEFAULT"),
 
-  EDUCATION("INDUSTRY_TYPE_EDUCATION");
+  URL("SIMPLE_CANVAS_SUB_TYPE_URL"),
+
+  SLIDE_UP("SIMPLE_CANVAS_SUB_TYPE_SLIDE_UP"),
+
+  WEB_STORE("SIMPLE_CANVAS_SUB_TYPE_WEB_STORE");
 
   private String value;
 
-  CatalogIndustry(String value) {
+  SimpleCanvasSubType(String value) {
     this.value = value;
   }
 
@@ -43,8 +47,8 @@ public enum CatalogIndustry {
     return String.valueOf(value);
   }
 
-  public static CatalogIndustry fromValue(String text) {
-    for (CatalogIndustry b : CatalogIndustry.values()) {
+  public static SimpleCanvasSubType fromValue(String text) {
+    for (SimpleCanvasSubType b : SimpleCanvasSubType.values()) {
       if (String.valueOf(b.value).equals(text)) {
         return b;
       }
@@ -52,17 +56,17 @@ public enum CatalogIndustry {
     return null;
   }
 
-  public static class Adapter extends TypeAdapter<CatalogIndustry> {
+  public static class Adapter extends TypeAdapter<SimpleCanvasSubType> {
     @Override
-    public void write(final JsonWriter jsonWriter, final CatalogIndustry enumeration)
+    public void write(final JsonWriter jsonWriter, final SimpleCanvasSubType enumeration)
         throws IOException {
       jsonWriter.value(enumeration.getValue());
     }
 
     @Override
-    public CatalogIndustry read(final JsonReader jsonReader) throws IOException {
+    public SimpleCanvasSubType read(final JsonReader jsonReader) throws IOException {
       String value = jsonReader.nextString();
-      return CatalogIndustry.fromValue(String.valueOf(value));
+      return SimpleCanvasSubType.fromValue(String.valueOf(value));
     }
   }
 }

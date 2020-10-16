@@ -589,7 +589,7 @@ public class ImagesApi {
   }
 
   /**
-   * 修改图片名称
+   * 修改图片信息
    *
    * @param data (required)
    * @return ImagesUpdateResponse
@@ -602,7 +602,7 @@ public class ImagesApi {
   }
 
   /**
-   * 修改图片名称
+   * 修改图片信息
    *
    * @param data (required)
    * @return ApiResponse&lt;ImagesUpdateResponse&gt;
@@ -617,7 +617,7 @@ public class ImagesApi {
   }
 
   /**
-   * 修改图片名称 (asynchronously)
+   * 修改图片信息 (asynchronously)
    *
    * @param data (required)
    * @param callback The callback to be executed when the API call finishes

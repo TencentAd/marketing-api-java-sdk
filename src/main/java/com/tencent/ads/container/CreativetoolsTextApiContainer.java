@@ -47,7 +47,7 @@ public class CreativetoolsTextApiContainer extends ApiContainer {
       Long categoryFirstLevel,
       Long categorySecondLevel,
       String keyword,
-      Long filtering,
+      List<Long> filtering,
       Long number,
       List<String> fields)
       throws ApiException, TencentAdsResponseException {

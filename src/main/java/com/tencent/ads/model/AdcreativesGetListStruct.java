@@ -134,6 +134,12 @@ public class AdcreativesGetListStruct {
   @SerializedName("feeds_video_comment_switch")
   private Boolean feedsVideoCommentSwitch = null;
 
+  @SerializedName("webview_url")
+  private String webviewUrl = null;
+
+  @SerializedName("simple_canvas_sub_type")
+  private SimpleCanvasSubType simpleCanvasSubType = null;
+
   @SerializedName("floating_zone")
   private FloatingZone floatingZone = null;
 
@@ -877,6 +883,44 @@ public class AdcreativesGetListStruct {
     this.feedsVideoCommentSwitch = feedsVideoCommentSwitch;
   }
 
+  public AdcreativesGetListStruct webviewUrl(String webviewUrl) {
+    this.webviewUrl = webviewUrl;
+    return this;
+  }
+
+  /**
+   * Get webviewUrl
+   *
+   * @return webviewUrl
+   */
+  @ApiModelProperty(value = "")
+  public String getWebviewUrl() {
+    return webviewUrl;
+  }
+
+  public void setWebviewUrl(String webviewUrl) {
+    this.webviewUrl = webviewUrl;
+  }
+
+  public AdcreativesGetListStruct simpleCanvasSubType(SimpleCanvasSubType simpleCanvasSubType) {
+    this.simpleCanvasSubType = simpleCanvasSubType;
+    return this;
+  }
+
+  /**
+   * Get simpleCanvasSubType
+   *
+   * @return simpleCanvasSubType
+   */
+  @ApiModelProperty(value = "")
+  public SimpleCanvasSubType getSimpleCanvasSubType() {
+    return simpleCanvasSubType;
+  }
+
+  public void setSimpleCanvasSubType(SimpleCanvasSubType simpleCanvasSubType) {
+    this.simpleCanvasSubType = simpleCanvasSubType;
+  }
+
   public AdcreativesGetListStruct floatingZone(FloatingZone floatingZone) {
     this.floatingZone = floatingZone;
     return this;
@@ -1008,6 +1052,8 @@ public class AdcreativesGetListStruct {
         && Objects.equals(this.videoEndPage, adcreativesGetListStruct.videoEndPage)
         && Objects.equals(
             this.feedsVideoCommentSwitch, adcreativesGetListStruct.feedsVideoCommentSwitch)
+        && Objects.equals(this.webviewUrl, adcreativesGetListStruct.webviewUrl)
+        && Objects.equals(this.simpleCanvasSubType, adcreativesGetListStruct.simpleCanvasSubType)
         && Objects.equals(this.floatingZone, adcreativesGetListStruct.floatingZone)
         && Objects.equals(
             this.marketingPendantImageId, adcreativesGetListStruct.marketingPendantImageId)
@@ -1055,6 +1101,8 @@ public class AdcreativesGetListStruct {
         playablePageMaterialId,
         videoEndPage,
         feedsVideoCommentSwitch,
+        webviewUrl,
+        simpleCanvasSubType,
         floatingZone,
         marketingPendantImageId,
         adcreativeTemplateId,
