@@ -120,6 +120,9 @@ public class AdcreativesAddRequest {
   @SerializedName("marketing_pendant_image_id")
   private String marketingPendantImageId = null;
 
+  @SerializedName("countdown_switch")
+  private Boolean countdownSwitch = null;
+
   @SerializedName("account_id")
   private Long accountId = null;
 
@@ -781,6 +784,25 @@ public class AdcreativesAddRequest {
     this.marketingPendantImageId = marketingPendantImageId;
   }
 
+  public AdcreativesAddRequest countdownSwitch(Boolean countdownSwitch) {
+    this.countdownSwitch = countdownSwitch;
+    return this;
+  }
+
+  /**
+   * Get countdownSwitch
+   *
+   * @return countdownSwitch
+   */
+  @ApiModelProperty(value = "")
+  public Boolean isCountdownSwitch() {
+    return countdownSwitch;
+  }
+
+  public void setCountdownSwitch(Boolean countdownSwitch) {
+    this.countdownSwitch = countdownSwitch;
+  }
+
   public AdcreativesAddRequest accountId(Long accountId) {
     this.accountId = accountId;
     return this;
@@ -884,6 +906,7 @@ public class AdcreativesAddRequest {
         && Objects.equals(this.floatingZone, adcreativesAddRequest.floatingZone)
         && Objects.equals(
             this.marketingPendantImageId, adcreativesAddRequest.marketingPendantImageId)
+        && Objects.equals(this.countdownSwitch, adcreativesAddRequest.countdownSwitch)
         && Objects.equals(this.accountId, adcreativesAddRequest.accountId)
         && Objects.equals(this.adcreativeTemplateId, adcreativesAddRequest.adcreativeTemplateId)
         && Objects.equals(this.adcreativeElements, adcreativesAddRequest.adcreativeElements);
@@ -925,6 +948,7 @@ public class AdcreativesAddRequest {
         simpleCanvasSubType,
         floatingZone,
         marketingPendantImageId,
+        countdownSwitch,
         accountId,
         adcreativeTemplateId,
         adcreativeElements);

@@ -30,6 +30,12 @@ public class PageElementsStruct {
   @SerializedName("element_goods")
   private ElementGoods elementGoods = null;
 
+  @SerializedName("element_swipe")
+  private ElementSwipe elementSwipe = null;
+
+  @SerializedName("element_webview")
+  private ElementWebview elementWebview = null;
+
   @SerializedName("image_spec")
   private ElementImage imageSpec = null;
 
@@ -103,6 +109,44 @@ public class PageElementsStruct {
 
   public void setElementGoods(ElementGoods elementGoods) {
     this.elementGoods = elementGoods;
+  }
+
+  public PageElementsStruct elementSwipe(ElementSwipe elementSwipe) {
+    this.elementSwipe = elementSwipe;
+    return this;
+  }
+
+  /**
+   * Get elementSwipe
+   *
+   * @return elementSwipe
+   */
+  @ApiModelProperty(value = "")
+  public ElementSwipe getElementSwipe() {
+    return elementSwipe;
+  }
+
+  public void setElementSwipe(ElementSwipe elementSwipe) {
+    this.elementSwipe = elementSwipe;
+  }
+
+  public PageElementsStruct elementWebview(ElementWebview elementWebview) {
+    this.elementWebview = elementWebview;
+    return this;
+  }
+
+  /**
+   * Get elementWebview
+   *
+   * @return elementWebview
+   */
+  @ApiModelProperty(value = "")
+  public ElementWebview getElementWebview() {
+    return elementWebview;
+  }
+
+  public void setElementWebview(ElementWebview elementWebview) {
+    this.elementWebview = elementWebview;
   }
 
   public PageElementsStruct imageSpec(ElementImage imageSpec) {
@@ -231,6 +275,8 @@ public class PageElementsStruct {
     return Objects.equals(this.elementShelf, pageElementsStruct.elementShelf)
         && Objects.equals(this.elementFloat, pageElementsStruct.elementFloat)
         && Objects.equals(this.elementGoods, pageElementsStruct.elementGoods)
+        && Objects.equals(this.elementSwipe, pageElementsStruct.elementSwipe)
+        && Objects.equals(this.elementWebview, pageElementsStruct.elementWebview)
         && Objects.equals(this.imageSpec, pageElementsStruct.imageSpec)
         && Objects.equals(this.videoSpec, pageElementsStruct.videoSpec)
         && Objects.equals(this.textSpec, pageElementsStruct.textSpec)
@@ -245,6 +291,8 @@ public class PageElementsStruct {
         elementShelf,
         elementFloat,
         elementGoods,
+        elementSwipe,
+        elementWebview,
         imageSpec,
         videoSpec,
         textSpec,

@@ -39,10 +39,10 @@ public class CtrLevelStruct {
   private String rankSecondCategory = null;
 
   @SerializedName("self_trends")
-  private List<String> selfTrends = null;
+  private List<PointStruct> selfTrends = null;
 
   @SerializedName("benchmark_trends")
-  private List<String> benchmarkTrends = null;
+  private List<PointStruct> benchmarkTrends = null;
 
   public CtrLevelStruct value(String value) {
     this.value = value;
@@ -139,14 +139,14 @@ public class CtrLevelStruct {
     this.rankSecondCategory = rankSecondCategory;
   }
 
-  public CtrLevelStruct selfTrends(List<String> selfTrends) {
+  public CtrLevelStruct selfTrends(List<PointStruct> selfTrends) {
     this.selfTrends = selfTrends;
     return this;
   }
 
-  public CtrLevelStruct addSelfTrendsItem(String selfTrendsItem) {
+  public CtrLevelStruct addSelfTrendsItem(PointStruct selfTrendsItem) {
     if (this.selfTrends == null) {
-      this.selfTrends = new ArrayList<String>();
+      this.selfTrends = new ArrayList<PointStruct>();
     }
     this.selfTrends.add(selfTrendsItem);
     return this;
@@ -158,22 +158,22 @@ public class CtrLevelStruct {
    * @return selfTrends
    */
   @ApiModelProperty(value = "")
-  public List<String> getSelfTrends() {
+  public List<PointStruct> getSelfTrends() {
     return selfTrends;
   }
 
-  public void setSelfTrends(List<String> selfTrends) {
+  public void setSelfTrends(List<PointStruct> selfTrends) {
     this.selfTrends = selfTrends;
   }
 
-  public CtrLevelStruct benchmarkTrends(List<String> benchmarkTrends) {
+  public CtrLevelStruct benchmarkTrends(List<PointStruct> benchmarkTrends) {
     this.benchmarkTrends = benchmarkTrends;
     return this;
   }
 
-  public CtrLevelStruct addBenchmarkTrendsItem(String benchmarkTrendsItem) {
+  public CtrLevelStruct addBenchmarkTrendsItem(PointStruct benchmarkTrendsItem) {
     if (this.benchmarkTrends == null) {
-      this.benchmarkTrends = new ArrayList<String>();
+      this.benchmarkTrends = new ArrayList<PointStruct>();
     }
     this.benchmarkTrends.add(benchmarkTrendsItem);
     return this;
@@ -185,11 +185,11 @@ public class CtrLevelStruct {
    * @return benchmarkTrends
    */
   @ApiModelProperty(value = "")
-  public List<String> getBenchmarkTrends() {
+  public List<PointStruct> getBenchmarkTrends() {
     return benchmarkTrends;
   }
 
-  public void setBenchmarkTrends(List<String> benchmarkTrends) {
+  public void setBenchmarkTrends(List<PointStruct> benchmarkTrends) {
     this.benchmarkTrends = benchmarkTrends;
   }
 

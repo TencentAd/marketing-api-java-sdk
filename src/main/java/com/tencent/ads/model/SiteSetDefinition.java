@@ -98,7 +98,9 @@ public enum SiteSetDefinition {
 
   MINI_GAME_QQ("SITE_SET_MINI_GAME_QQ"),
 
-  MOBILE_GAME("SITE_SET_MOBILE_GAME");
+  MOBILE_GAME("SITE_SET_MOBILE_GAME"),
+
+  TENCENT_VIDEO_OTT("SITE_SET_TENCENT_VIDEO_OTT");
 
   private String value;
 

@@ -39,13 +39,17 @@ public class App {
   @Inject AsyncTasksApiContainer asyncTasksApiContainer;
   @Inject AudienceGrantRelationsApiContainer audienceGrantRelationsApiContainer;
   @Inject AuthorizationApiContainer authorizationApiContainer;
+  @Inject BatchAsyncRequestSpecificationApiContainer batchAsyncRequestSpecificationApiContainer;
+  @Inject BatchAsyncRequestsApiContainer batchAsyncRequestsApiContainer;
   @Inject BatchOperationApiContainer batchOperationApiContainer;
   @Inject BatchRequestsApiContainer batchRequestsApiContainer;
   @Inject BidSimulationApiContainer bidSimulationApiContainer;
   @Inject BrandApiContainer brandApiContainer;
   @Inject BusinessManagerRelationsApiContainer businessManagerRelationsApiContainer;
+  @Inject BusinessMdmAccountRelationsApiContainer businessMdmAccountRelationsApiContainer;
   @Inject CampaignsApiContainer campaignsApiContainer;
   @Inject CapabilitiesApiContainer capabilitiesApiContainer;
+  @Inject ChannelsApiContainer channelsApiContainer;
   @Inject ComplianceValidationApiContainer complianceValidationApiContainer;
   @Inject ConversionsApiContainer conversionsApiContainer;
   @Inject CreativetoolsTextApiContainer creativetoolsTextApiContainer;
@@ -77,9 +81,9 @@ public class App {
   @Inject LabelAudiencesApiContainer labelAudiencesApiContainer;
   @Inject LabelsApiContainer labelsApiContainer;
   @Inject LeadCluesApiContainer leadCluesApiContainer;
-  @Inject LeadsApiContainer leadsApiContainer;
   @Inject LeadsFormApiContainer leadsFormApiContainer;
   @Inject LeadsFormListApiContainer leadsFormListApiContainer;
+  @Inject LocalApiContainer localApiContainer;
   @Inject LocalEndadsmanuallyApiContainer localEndadsmanuallyApiContainer;
   @Inject LocalEstimatedamountApiContainer localEstimatedamountApiContainer;
   @Inject LocalStoresApiContainer localStoresApiContainer;
@@ -100,6 +104,8 @@ public class App {
   @Inject PromotedObjectsApiContainer promotedObjectsApiContainer;
   @Inject QualificationsApiContainer qualificationsApiContainer;
   @Inject RealtimeCostApiContainer realtimeCostApiContainer;
+  @Inject ReportApiContainer reportApiContainer;
+  @Inject ShopApiContainer shopApiContainer;
   @Inject SplitTestsApiContainer splitTestsApiContainer;
   @Inject SystemStatusApiContainer systemStatusApiContainer;
   @Inject TargetingTagReportsApiContainer targetingTagReportsApiContainer;
@@ -112,6 +118,9 @@ public class App {
   @Inject UserActionsApiContainer userActionsApiContainer;
   @Inject UserPropertiesApiContainer userPropertiesApiContainer;
   @Inject UserPropertySetsApiContainer userPropertySetsApiContainer;
+  @Inject VideomakerAutoadjustmentsApiContainer videomakerAutoadjustmentsApiContainer;
+  @Inject VideomakerSubtitlesApiContainer videomakerSubtitlesApiContainer;
+  @Inject VideomakerTasksApiContainer videomakerTasksApiContainer;
   @Inject VideosApiContainer videosApiContainer;
   @Inject WechatAdFollowersApiContainer wechatAdFollowersApiContainer;
   @Inject WechatAdLabelsApiContainer wechatAdLabelsApiContainer;
@@ -124,7 +133,6 @@ public class App {
   @Inject WechatFundStatementsDetailedApiContainer wechatFundStatementsDetailedApiContainer;
   @Inject WechatFundTransferApiContainer wechatFundTransferApiContainer;
   @Inject WechatFundsApiContainer wechatFundsApiContainer;
-  @Inject WechatLeadsApiContainer wechatLeadsApiContainer;
   @Inject WechatPagesApiContainer wechatPagesApiContainer;
   @Inject WechatQualificationsApiContainer wechatQualificationsApiContainer;
   @Inject XijingPageApiContainer xijingPageApiContainer;
@@ -216,6 +224,14 @@ public class App {
     return authorizationApiContainer;
   }
 
+  public BatchAsyncRequestSpecificationApiContainer batchAsyncRequestSpecification() {
+    return batchAsyncRequestSpecificationApiContainer;
+  }
+
+  public BatchAsyncRequestsApiContainer batchAsyncRequests() {
+    return batchAsyncRequestsApiContainer;
+  }
+
   public BatchOperationApiContainer batchOperation() {
     return batchOperationApiContainer;
   }
@@ -236,12 +252,20 @@ public class App {
     return businessManagerRelationsApiContainer;
   }
 
+  public BusinessMdmAccountRelationsApiContainer businessMdmAccountRelations() {
+    return businessMdmAccountRelationsApiContainer;
+  }
+
   public CampaignsApiContainer campaigns() {
     return campaignsApiContainer;
   }
 
   public CapabilitiesApiContainer capabilities() {
     return capabilitiesApiContainer;
+  }
+
+  public ChannelsApiContainer channels() {
+    return channelsApiContainer;
   }
 
   public ComplianceValidationApiContainer complianceValidation() {
@@ -368,16 +392,16 @@ public class App {
     return leadCluesApiContainer;
   }
 
-  public LeadsApiContainer leads() {
-    return leadsApiContainer;
-  }
-
   public LeadsFormApiContainer leadsForm() {
     return leadsFormApiContainer;
   }
 
   public LeadsFormListApiContainer leadsFormList() {
     return leadsFormListApiContainer;
+  }
+
+  public LocalApiContainer local() {
+    return localApiContainer;
   }
 
   public LocalEndadsmanuallyApiContainer localEndadsmanually() {
@@ -460,6 +484,14 @@ public class App {
     return realtimeCostApiContainer;
   }
 
+  public ReportApiContainer report() {
+    return reportApiContainer;
+  }
+
+  public ShopApiContainer shop() {
+    return shopApiContainer;
+  }
+
   public SplitTestsApiContainer splitTests() {
     return splitTestsApiContainer;
   }
@@ -508,6 +540,18 @@ public class App {
     return userPropertySetsApiContainer;
   }
 
+  public VideomakerAutoadjustmentsApiContainer videomakerAutoadjustments() {
+    return videomakerAutoadjustmentsApiContainer;
+  }
+
+  public VideomakerSubtitlesApiContainer videomakerSubtitles() {
+    return videomakerSubtitlesApiContainer;
+  }
+
+  public VideomakerTasksApiContainer videomakerTasks() {
+    return videomakerTasksApiContainer;
+  }
+
   public VideosApiContainer videos() {
     return videosApiContainer;
   }
@@ -554,10 +598,6 @@ public class App {
 
   public WechatFundsApiContainer wechatFunds() {
     return wechatFundsApiContainer;
-  }
-
-  public WechatLeadsApiContainer wechatLeads() {
-    return wechatLeadsApiContainer;
   }
 
   public WechatPagesApiContainer wechatPages() {

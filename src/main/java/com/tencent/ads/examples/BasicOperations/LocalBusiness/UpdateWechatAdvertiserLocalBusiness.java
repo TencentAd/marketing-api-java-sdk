@@ -27,17 +27,17 @@ public class UpdateWechatAdvertiserLocalBusiness {
 
   public String contactPersonCardId = null;
 
-  public String contactPersonTele = null;
-
   public String corporation = null;
 
   public String corporationLicence = null;
 
-  public String businessContent = null;
-
   public Long industryId = null;
 
   public Long accountId = null;
+
+  public String contactPersonTele = null;
+
+  public String businessContent = null;
 
   public void init() {
     this.tencentAds = TencentAds.getInstance();
@@ -61,12 +61,12 @@ public class UpdateWechatAdvertiserLocalBusiness {
                 contactPerson,
                 contactPersonMobile,
                 contactPersonCardId,
-                contactPersonTele,
                 corporation,
                 corporationLicence,
-                businessContent,
                 industryId,
-                accountId);
+                accountId,
+                contactPersonTele,
+                businessContent);
     return response;
   }
 

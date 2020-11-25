@@ -59,6 +59,9 @@ public class AdgroupsGetListStruct {
   @SerializedName("app_android_channel_package_id")
   private String appAndroidChannelPackageId = null;
 
+  @SerializedName("mini_game_program_id")
+  private String miniGameProgramId = null;
+
   @SerializedName("targeting_id")
   private Long targetingId = null;
 
@@ -97,6 +100,9 @@ public class AdgroupsGetListStruct {
 
   @SerializedName("last_modified_time")
   private Long lastModifiedTime = null;
+
+  @SerializedName("ad_count")
+  private Long adCount = null;
 
   @SerializedName("dynamic_ad_spec")
   private DynamicAdSpec dynamicAdSpec = null;
@@ -143,6 +149,9 @@ public class AdgroupsGetListStruct {
   @SerializedName("deep_optimization_action_type")
   private DeepOptimizationActionType deepOptimizationActionType = null;
 
+  @SerializedName("poi_list")
+  private List<String> poiList = null;
+
   @SerializedName("conversion_id")
   private Long conversionId = null;
 
@@ -172,6 +181,9 @@ public class AdgroupsGetListStruct {
 
   @SerializedName("auto_acquisition_budget")
   private Long autoAcquisitionBudget = null;
+
+  @SerializedName("auto_derived_creative_enabled")
+  private Boolean autoDerivedCreativeEnabled = null;
 
   public AdgroupsGetListStruct campaignId(Long campaignId) {
     this.campaignId = campaignId;
@@ -407,6 +419,25 @@ public class AdgroupsGetListStruct {
 
   public void setAppAndroidChannelPackageId(String appAndroidChannelPackageId) {
     this.appAndroidChannelPackageId = appAndroidChannelPackageId;
+  }
+
+  public AdgroupsGetListStruct miniGameProgramId(String miniGameProgramId) {
+    this.miniGameProgramId = miniGameProgramId;
+    return this;
+  }
+
+  /**
+   * Get miniGameProgramId
+   *
+   * @return miniGameProgramId
+   */
+  @ApiModelProperty(value = "")
+  public String getMiniGameProgramId() {
+    return miniGameProgramId;
+  }
+
+  public void setMiniGameProgramId(String miniGameProgramId) {
+    this.miniGameProgramId = miniGameProgramId;
   }
 
   public AdgroupsGetListStruct targetingId(Long targetingId) {
@@ -655,6 +686,25 @@ public class AdgroupsGetListStruct {
 
   public void setLastModifiedTime(Long lastModifiedTime) {
     this.lastModifiedTime = lastModifiedTime;
+  }
+
+  public AdgroupsGetListStruct adCount(Long adCount) {
+    this.adCount = adCount;
+    return this;
+  }
+
+  /**
+   * Get adCount
+   *
+   * @return adCount
+   */
+  @ApiModelProperty(value = "")
+  public Long getAdCount() {
+    return adCount;
+  }
+
+  public void setAdCount(Long adCount) {
+    this.adCount = adCount;
   }
 
   public AdgroupsGetListStruct dynamicAdSpec(DynamicAdSpec dynamicAdSpec) {
@@ -977,6 +1027,33 @@ public class AdgroupsGetListStruct {
     this.deepOptimizationActionType = deepOptimizationActionType;
   }
 
+  public AdgroupsGetListStruct poiList(List<String> poiList) {
+    this.poiList = poiList;
+    return this;
+  }
+
+  public AdgroupsGetListStruct addPoiListItem(String poiListItem) {
+    if (this.poiList == null) {
+      this.poiList = new ArrayList<String>();
+    }
+    this.poiList.add(poiListItem);
+    return this;
+  }
+
+  /**
+   * Get poiList
+   *
+   * @return poiList
+   */
+  @ApiModelProperty(value = "")
+  public List<String> getPoiList() {
+    return poiList;
+  }
+
+  public void setPoiList(List<String> poiList) {
+    this.poiList = poiList;
+  }
+
   public AdgroupsGetListStruct conversionId(Long conversionId) {
     this.conversionId = conversionId;
     return this;
@@ -1168,6 +1245,25 @@ public class AdgroupsGetListStruct {
     this.autoAcquisitionBudget = autoAcquisitionBudget;
   }
 
+  public AdgroupsGetListStruct autoDerivedCreativeEnabled(Boolean autoDerivedCreativeEnabled) {
+    this.autoDerivedCreativeEnabled = autoDerivedCreativeEnabled;
+    return this;
+  }
+
+  /**
+   * Get autoDerivedCreativeEnabled
+   *
+   * @return autoDerivedCreativeEnabled
+   */
+  @ApiModelProperty(value = "")
+  public Boolean isAutoDerivedCreativeEnabled() {
+    return autoDerivedCreativeEnabled;
+  }
+
+  public void setAutoDerivedCreativeEnabled(Boolean autoDerivedCreativeEnabled) {
+    this.autoDerivedCreativeEnabled = autoDerivedCreativeEnabled;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -1190,6 +1286,7 @@ public class AdgroupsGetListStruct {
         && Objects.equals(this.promotedObjectId, adgroupsGetListStruct.promotedObjectId)
         && Objects.equals(
             this.appAndroidChannelPackageId, adgroupsGetListStruct.appAndroidChannelPackageId)
+        && Objects.equals(this.miniGameProgramId, adgroupsGetListStruct.miniGameProgramId)
         && Objects.equals(this.targetingId, adgroupsGetListStruct.targetingId)
         && Objects.equals(this.targeting, adgroupsGetListStruct.targeting)
         && Objects.equals(this.targetingTranslation, adgroupsGetListStruct.targetingTranslation)
@@ -1204,6 +1301,7 @@ public class AdgroupsGetListStruct {
         && Objects.equals(this.customizedCategory, adgroupsGetListStruct.customizedCategory)
         && Objects.equals(this.createdTime, adgroupsGetListStruct.createdTime)
         && Objects.equals(this.lastModifiedTime, adgroupsGetListStruct.lastModifiedTime)
+        && Objects.equals(this.adCount, adgroupsGetListStruct.adCount)
         && Objects.equals(this.dynamicAdSpec, adgroupsGetListStruct.dynamicAdSpec)
         && Objects.equals(this.userActionSets, adgroupsGetListStruct.userActionSets)
         && Objects.equals(
@@ -1221,6 +1319,7 @@ public class AdgroupsGetListStruct {
         && Objects.equals(this.deepConversionSpec, adgroupsGetListStruct.deepConversionSpec)
         && Objects.equals(
             this.deepOptimizationActionType, adgroupsGetListStruct.deepOptimizationActionType)
+        && Objects.equals(this.poiList, adgroupsGetListStruct.poiList)
         && Objects.equals(this.conversionId, adgroupsGetListStruct.conversionId)
         && Objects.equals(
             this.deepConversionBehaviorBid, adgroupsGetListStruct.deepConversionBehaviorBid)
@@ -1234,7 +1333,9 @@ public class AdgroupsGetListStruct {
         && Objects.equals(this.status, adgroupsGetListStruct.status)
         && Objects.equals(this.bidAdjustment, adgroupsGetListStruct.bidAdjustment)
         && Objects.equals(this.autoAcquisitionEnabled, adgroupsGetListStruct.autoAcquisitionEnabled)
-        && Objects.equals(this.autoAcquisitionBudget, adgroupsGetListStruct.autoAcquisitionBudget);
+        && Objects.equals(this.autoAcquisitionBudget, adgroupsGetListStruct.autoAcquisitionBudget)
+        && Objects.equals(
+            this.autoDerivedCreativeEnabled, adgroupsGetListStruct.autoDerivedCreativeEnabled);
   }
 
   @Override
@@ -1252,6 +1353,7 @@ public class AdgroupsGetListStruct {
         promotedObjectType,
         promotedObjectId,
         appAndroidChannelPackageId,
+        miniGameProgramId,
         targetingId,
         targeting,
         targetingTranslation,
@@ -1265,6 +1367,7 @@ public class AdgroupsGetListStruct {
         customizedCategory,
         createdTime,
         lastModifiedTime,
+        adCount,
         dynamicAdSpec,
         userActionSets,
         additionalUserActionSets,
@@ -1280,6 +1383,7 @@ public class AdgroupsGetListStruct {
         expandTargeting,
         deepConversionSpec,
         deepOptimizationActionType,
+        poiList,
         conversionId,
         deepConversionBehaviorBid,
         deepConversionWorthRate,
@@ -1289,7 +1393,8 @@ public class AdgroupsGetListStruct {
         status,
         bidAdjustment,
         autoAcquisitionEnabled,
-        autoAcquisitionBudget);
+        autoAcquisitionBudget,
+        autoDerivedCreativeEnabled);
   }
 
   @Override

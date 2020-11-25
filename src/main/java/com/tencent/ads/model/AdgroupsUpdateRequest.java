@@ -90,6 +90,9 @@ public class AdgroupsUpdateRequest {
   @SerializedName("deep_conversion_spec")
   private DeepConversionSpec deepConversionSpec = null;
 
+  @SerializedName("poi_list")
+  private List<String> poiList = null;
+
   @SerializedName("deep_conversion_behavior_bid")
   private Long deepConversionBehaviorBid = null;
 
@@ -574,6 +577,33 @@ public class AdgroupsUpdateRequest {
     this.deepConversionSpec = deepConversionSpec;
   }
 
+  public AdgroupsUpdateRequest poiList(List<String> poiList) {
+    this.poiList = poiList;
+    return this;
+  }
+
+  public AdgroupsUpdateRequest addPoiListItem(String poiListItem) {
+    if (this.poiList == null) {
+      this.poiList = new ArrayList<String>();
+    }
+    this.poiList.add(poiListItem);
+    return this;
+  }
+
+  /**
+   * Get poiList
+   *
+   * @return poiList
+   */
+  @ApiModelProperty(value = "")
+  public List<String> getPoiList() {
+    return poiList;
+  }
+
+  public void setPoiList(List<String> poiList) {
+    this.poiList = poiList;
+  }
+
   public AdgroupsUpdateRequest deepConversionBehaviorBid(Long deepConversionBehaviorBid) {
     this.deepConversionBehaviorBid = deepConversionBehaviorBid;
     return this;
@@ -741,6 +771,7 @@ public class AdgroupsUpdateRequest {
         && Objects.equals(this.expandEnabled, adgroupsUpdateRequest.expandEnabled)
         && Objects.equals(this.expandTargeting, adgroupsUpdateRequest.expandTargeting)
         && Objects.equals(this.deepConversionSpec, adgroupsUpdateRequest.deepConversionSpec)
+        && Objects.equals(this.poiList, adgroupsUpdateRequest.poiList)
         && Objects.equals(
             this.deepConversionBehaviorBid, adgroupsUpdateRequest.deepConversionBehaviorBid)
         && Objects.equals(
@@ -778,6 +809,7 @@ public class AdgroupsUpdateRequest {
         expandEnabled,
         expandTargeting,
         deepConversionSpec,
+        poiList,
         deepConversionBehaviorBid,
         deepConversionWorthRate,
         bidMode,

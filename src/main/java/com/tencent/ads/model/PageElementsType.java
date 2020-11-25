@@ -42,7 +42,13 @@ public enum PageElementsType {
 
   FLOAT_BUTTON("FLOAT_BUTTON"),
 
-  GOODS("GOODS");
+  GOODS("GOODS"),
+
+  COMMON_COMPONENT("COMMON_COMPONENT"),
+
+  SWIPE_WEBVIEW("SWIPE_WEBVIEW"),
+
+  WEBVIEW("WEBVIEW");
 
   private String value;
 

@@ -40,6 +40,8 @@ public class XijingPageListApiContainer extends ApiContainer {
    * @param pageIndex (optional)
    * @param pagePublishStatus (optional)
    * @param pageStatus (optional)
+   * @param pageSource (optional)
+   * @param pageOwnerId (optional)
    * @param fields 返回参数的字段列表 (optional)
    * @return XijingPageListGetResponse
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
@@ -57,6 +59,8 @@ public class XijingPageListApiContainer extends ApiContainer {
       Long pageIndex,
       String pagePublishStatus,
       String pageStatus,
+      String pageSource,
+      Long pageOwnerId,
       List<String> fields)
       throws ApiException, TencentAdsResponseException {
     XijingPageListGetResponse resp =
@@ -72,6 +76,8 @@ public class XijingPageListApiContainer extends ApiContainer {
             pageIndex,
             pagePublishStatus,
             pageStatus,
+            pageSource,
+            pageOwnerId,
             fields);
     handleResponse(gson.toJson(resp));
     return resp.getData();

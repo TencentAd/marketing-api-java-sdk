@@ -321,6 +321,9 @@ public class DailyReportsGetListStruct {
   @SerializedName("external_form_reservation_count")
   private Long externalFormReservationCount = null;
 
+  @SerializedName("app_ad_paying_users")
+  private Long appAdPayingUsers = null;
+
   @SerializedName("ad_pur_val_web")
   private Long adPurValWeb = null;
 
@@ -407,6 +410,9 @@ public class DailyReportsGetListStruct {
 
   @SerializedName("app_ad_pur_arpu_cost")
   private Long appAdPurArpuCost = null;
+
+  @SerializedName("app_ad_pur_arppu_cost")
+  private Long appAdPurArppuCost = null;
 
   @SerializedName("web_ad_pur_arpu_cost")
   private Long webAdPurArpuCost = null;
@@ -504,11 +510,20 @@ public class DailyReportsGetListStruct {
   @SerializedName("landing_page_click_count")
   private Long landingPageClickCount = null;
 
+  @SerializedName("web_cart_amount")
+  private Long webCartAmount = null;
+
   @SerializedName("scan_follow_count")
   private Long scanFollowCount = null;
 
-  @SerializedName("web_cart_amount")
-  private Long webCartAmount = null;
+  @SerializedName("scan_follow_user_count")
+  private Long scanFollowUserCount = null;
+
+  @SerializedName("scan_follow_user_cost")
+  private Long scanFollowUserCost = null;
+
+  @SerializedName("scan_follow_user_rate")
+  private Double scanFollowUserRate = null;
 
   @SerializedName("app_order_amount")
   private Long appOrderAmount = null;
@@ -602,6 +617,15 @@ public class DailyReportsGetListStruct {
 
   @SerializedName("lan_button_click_count")
   private Long lanButtonClickCount = null;
+
+  @SerializedName("lan_jump_button_clickers")
+  private Long lanJumpButtonClickers = null;
+
+  @SerializedName("lan_jump_button_click_cost")
+  private Long lanJumpButtonClickCost = null;
+
+  @SerializedName("lan_jump_button_ctr")
+  private Double lanJumpButtonCtr = null;
 
   @SerializedName("lan_button_click_cost")
   private Long lanButtonClickCost = null;
@@ -750,6 +774,12 @@ public class DailyReportsGetListStruct {
   @SerializedName("pre_cre_app_cost")
   private Long preCreAppCost = null;
 
+  @SerializedName("request_conversions_count")
+  private Long requestConversionsCount = null;
+
+  @SerializedName("request_conversions_cost")
+  private Long requestConversionsCost = null;
+
   @SerializedName("income_roi_1")
   private Double incomeRoi1 = null;
 
@@ -761,6 +791,21 @@ public class DailyReportsGetListStruct {
 
   @SerializedName("income_roi_14")
   private Double incomeRoi14 = null;
+
+  @SerializedName("activated_total_payment_cost")
+  private Long activatedTotalPaymentCost = null;
+
+  @SerializedName("payment_amount_activated_d3")
+  private Long paymentAmountActivatedD3 = null;
+
+  @SerializedName("payment_amount_activated_d7")
+  private Long paymentAmountActivatedD7 = null;
+
+  @SerializedName("payment_amount_activated_d14")
+  private Long paymentAmountActivatedD14 = null;
+
+  @SerializedName("payment_amount_activated_d30")
+  private Long paymentAmountActivatedD30 = null;
 
   @SerializedName("first_day_pay_count")
   private Long firstDayPayCount = null;
@@ -774,8 +819,26 @@ public class DailyReportsGetListStruct {
   @SerializedName("first_day_first_pay_count")
   private Long firstDayFirstPayCount = null;
 
+  @SerializedName("payment_cost_activated_d1")
+  private Long paymentCostActivatedD1 = null;
+
   @SerializedName("first_day_pay_amount")
   private Long firstDayPayAmount = null;
+
+  @SerializedName("roi_activated_d1")
+  private Double roiActivatedD1 = null;
+
+  @SerializedName("roi_activated_d3")
+  private Double roiActivatedD3 = null;
+
+  @SerializedName("roi_activated_d7")
+  private Double roiActivatedD7 = null;
+
+  @SerializedName("roi_activated_d14")
+  private Double roiActivatedD14 = null;
+
+  @SerializedName("roi_activated_d30")
+  private Double roiActivatedD30 = null;
 
   @SerializedName("first_day_first_pay_rate")
   private Double firstDayFirstPayRate = null;
@@ -783,11 +846,20 @@ public class DailyReportsGetListStruct {
   @SerializedName("campaign_id")
   private Long campaignId = null;
 
+  @SerializedName("campaign_name")
+  private String campaignName = null;
+
   @SerializedName("adgroup_id")
   private Long adgroupId = null;
 
+  @SerializedName("adgroup_name")
+  private String adgroupName = null;
+
   @SerializedName("ad_id")
   private Long adId = null;
+
+  @SerializedName("ad_name")
+  private String adName = null;
 
   @SerializedName("promoted_object_type")
   private String promotedObjectType = null;
@@ -2935,6 +3007,25 @@ public class DailyReportsGetListStruct {
     this.externalFormReservationCount = externalFormReservationCount;
   }
 
+  public DailyReportsGetListStruct appAdPayingUsers(Long appAdPayingUsers) {
+    this.appAdPayingUsers = appAdPayingUsers;
+    return this;
+  }
+
+  /**
+   * Get appAdPayingUsers
+   *
+   * @return appAdPayingUsers
+   */
+  @ApiModelProperty(value = "")
+  public Long getAppAdPayingUsers() {
+    return appAdPayingUsers;
+  }
+
+  public void setAppAdPayingUsers(Long appAdPayingUsers) {
+    this.appAdPayingUsers = appAdPayingUsers;
+  }
+
   public DailyReportsGetListStruct adPurValWeb(Long adPurValWeb) {
     this.adPurValWeb = adPurValWeb;
     return this;
@@ -3484,6 +3575,25 @@ public class DailyReportsGetListStruct {
 
   public void setAppAdPurArpuCost(Long appAdPurArpuCost) {
     this.appAdPurArpuCost = appAdPurArpuCost;
+  }
+
+  public DailyReportsGetListStruct appAdPurArppuCost(Long appAdPurArppuCost) {
+    this.appAdPurArppuCost = appAdPurArppuCost;
+    return this;
+  }
+
+  /**
+   * Get appAdPurArppuCost
+   *
+   * @return appAdPurArppuCost
+   */
+  @ApiModelProperty(value = "")
+  public Long getAppAdPurArppuCost() {
+    return appAdPurArppuCost;
+  }
+
+  public void setAppAdPurArppuCost(Long appAdPurArppuCost) {
+    this.appAdPurArppuCost = appAdPurArppuCost;
   }
 
   public DailyReportsGetListStruct webAdPurArpuCost(Long webAdPurArpuCost) {
@@ -4094,6 +4204,25 @@ public class DailyReportsGetListStruct {
     this.landingPageClickCount = landingPageClickCount;
   }
 
+  public DailyReportsGetListStruct webCartAmount(Long webCartAmount) {
+    this.webCartAmount = webCartAmount;
+    return this;
+  }
+
+  /**
+   * Get webCartAmount
+   *
+   * @return webCartAmount
+   */
+  @ApiModelProperty(value = "")
+  public Long getWebCartAmount() {
+    return webCartAmount;
+  }
+
+  public void setWebCartAmount(Long webCartAmount) {
+    this.webCartAmount = webCartAmount;
+  }
+
   public DailyReportsGetListStruct scanFollowCount(Long scanFollowCount) {
     this.scanFollowCount = scanFollowCount;
     return this;
@@ -4113,23 +4242,61 @@ public class DailyReportsGetListStruct {
     this.scanFollowCount = scanFollowCount;
   }
 
-  public DailyReportsGetListStruct webCartAmount(Long webCartAmount) {
-    this.webCartAmount = webCartAmount;
+  public DailyReportsGetListStruct scanFollowUserCount(Long scanFollowUserCount) {
+    this.scanFollowUserCount = scanFollowUserCount;
     return this;
   }
 
   /**
-   * Get webCartAmount
+   * Get scanFollowUserCount
    *
-   * @return webCartAmount
+   * @return scanFollowUserCount
    */
   @ApiModelProperty(value = "")
-  public Long getWebCartAmount() {
-    return webCartAmount;
+  public Long getScanFollowUserCount() {
+    return scanFollowUserCount;
   }
 
-  public void setWebCartAmount(Long webCartAmount) {
-    this.webCartAmount = webCartAmount;
+  public void setScanFollowUserCount(Long scanFollowUserCount) {
+    this.scanFollowUserCount = scanFollowUserCount;
+  }
+
+  public DailyReportsGetListStruct scanFollowUserCost(Long scanFollowUserCost) {
+    this.scanFollowUserCost = scanFollowUserCost;
+    return this;
+  }
+
+  /**
+   * Get scanFollowUserCost
+   *
+   * @return scanFollowUserCost
+   */
+  @ApiModelProperty(value = "")
+  public Long getScanFollowUserCost() {
+    return scanFollowUserCost;
+  }
+
+  public void setScanFollowUserCost(Long scanFollowUserCost) {
+    this.scanFollowUserCost = scanFollowUserCost;
+  }
+
+  public DailyReportsGetListStruct scanFollowUserRate(Double scanFollowUserRate) {
+    this.scanFollowUserRate = scanFollowUserRate;
+    return this;
+  }
+
+  /**
+   * Get scanFollowUserRate
+   *
+   * @return scanFollowUserRate
+   */
+  @ApiModelProperty(value = "")
+  public Double getScanFollowUserRate() {
+    return scanFollowUserRate;
+  }
+
+  public void setScanFollowUserRate(Double scanFollowUserRate) {
+    this.scanFollowUserRate = scanFollowUserRate;
   }
 
   public DailyReportsGetListStruct appOrderAmount(Long appOrderAmount) {
@@ -4719,6 +4886,63 @@ public class DailyReportsGetListStruct {
 
   public void setLanButtonClickCount(Long lanButtonClickCount) {
     this.lanButtonClickCount = lanButtonClickCount;
+  }
+
+  public DailyReportsGetListStruct lanJumpButtonClickers(Long lanJumpButtonClickers) {
+    this.lanJumpButtonClickers = lanJumpButtonClickers;
+    return this;
+  }
+
+  /**
+   * Get lanJumpButtonClickers
+   *
+   * @return lanJumpButtonClickers
+   */
+  @ApiModelProperty(value = "")
+  public Long getLanJumpButtonClickers() {
+    return lanJumpButtonClickers;
+  }
+
+  public void setLanJumpButtonClickers(Long lanJumpButtonClickers) {
+    this.lanJumpButtonClickers = lanJumpButtonClickers;
+  }
+
+  public DailyReportsGetListStruct lanJumpButtonClickCost(Long lanJumpButtonClickCost) {
+    this.lanJumpButtonClickCost = lanJumpButtonClickCost;
+    return this;
+  }
+
+  /**
+   * Get lanJumpButtonClickCost
+   *
+   * @return lanJumpButtonClickCost
+   */
+  @ApiModelProperty(value = "")
+  public Long getLanJumpButtonClickCost() {
+    return lanJumpButtonClickCost;
+  }
+
+  public void setLanJumpButtonClickCost(Long lanJumpButtonClickCost) {
+    this.lanJumpButtonClickCost = lanJumpButtonClickCost;
+  }
+
+  public DailyReportsGetListStruct lanJumpButtonCtr(Double lanJumpButtonCtr) {
+    this.lanJumpButtonCtr = lanJumpButtonCtr;
+    return this;
+  }
+
+  /**
+   * Get lanJumpButtonCtr
+   *
+   * @return lanJumpButtonCtr
+   */
+  @ApiModelProperty(value = "")
+  public Double getLanJumpButtonCtr() {
+    return lanJumpButtonCtr;
+  }
+
+  public void setLanJumpButtonCtr(Double lanJumpButtonCtr) {
+    this.lanJumpButtonCtr = lanJumpButtonCtr;
   }
 
   public DailyReportsGetListStruct lanButtonClickCost(Long lanButtonClickCost) {
@@ -5652,6 +5876,44 @@ public class DailyReportsGetListStruct {
     this.preCreAppCost = preCreAppCost;
   }
 
+  public DailyReportsGetListStruct requestConversionsCount(Long requestConversionsCount) {
+    this.requestConversionsCount = requestConversionsCount;
+    return this;
+  }
+
+  /**
+   * Get requestConversionsCount
+   *
+   * @return requestConversionsCount
+   */
+  @ApiModelProperty(value = "")
+  public Long getRequestConversionsCount() {
+    return requestConversionsCount;
+  }
+
+  public void setRequestConversionsCount(Long requestConversionsCount) {
+    this.requestConversionsCount = requestConversionsCount;
+  }
+
+  public DailyReportsGetListStruct requestConversionsCost(Long requestConversionsCost) {
+    this.requestConversionsCost = requestConversionsCost;
+    return this;
+  }
+
+  /**
+   * Get requestConversionsCost
+   *
+   * @return requestConversionsCost
+   */
+  @ApiModelProperty(value = "")
+  public Long getRequestConversionsCost() {
+    return requestConversionsCost;
+  }
+
+  public void setRequestConversionsCost(Long requestConversionsCost) {
+    this.requestConversionsCost = requestConversionsCost;
+  }
+
   public DailyReportsGetListStruct incomeRoi1(Double incomeRoi1) {
     this.incomeRoi1 = incomeRoi1;
     return this;
@@ -5726,6 +5988,101 @@ public class DailyReportsGetListStruct {
 
   public void setIncomeRoi14(Double incomeRoi14) {
     this.incomeRoi14 = incomeRoi14;
+  }
+
+  public DailyReportsGetListStruct activatedTotalPaymentCost(Long activatedTotalPaymentCost) {
+    this.activatedTotalPaymentCost = activatedTotalPaymentCost;
+    return this;
+  }
+
+  /**
+   * Get activatedTotalPaymentCost
+   *
+   * @return activatedTotalPaymentCost
+   */
+  @ApiModelProperty(value = "")
+  public Long getActivatedTotalPaymentCost() {
+    return activatedTotalPaymentCost;
+  }
+
+  public void setActivatedTotalPaymentCost(Long activatedTotalPaymentCost) {
+    this.activatedTotalPaymentCost = activatedTotalPaymentCost;
+  }
+
+  public DailyReportsGetListStruct paymentAmountActivatedD3(Long paymentAmountActivatedD3) {
+    this.paymentAmountActivatedD3 = paymentAmountActivatedD3;
+    return this;
+  }
+
+  /**
+   * Get paymentAmountActivatedD3
+   *
+   * @return paymentAmountActivatedD3
+   */
+  @ApiModelProperty(value = "")
+  public Long getPaymentAmountActivatedD3() {
+    return paymentAmountActivatedD3;
+  }
+
+  public void setPaymentAmountActivatedD3(Long paymentAmountActivatedD3) {
+    this.paymentAmountActivatedD3 = paymentAmountActivatedD3;
+  }
+
+  public DailyReportsGetListStruct paymentAmountActivatedD7(Long paymentAmountActivatedD7) {
+    this.paymentAmountActivatedD7 = paymentAmountActivatedD7;
+    return this;
+  }
+
+  /**
+   * Get paymentAmountActivatedD7
+   *
+   * @return paymentAmountActivatedD7
+   */
+  @ApiModelProperty(value = "")
+  public Long getPaymentAmountActivatedD7() {
+    return paymentAmountActivatedD7;
+  }
+
+  public void setPaymentAmountActivatedD7(Long paymentAmountActivatedD7) {
+    this.paymentAmountActivatedD7 = paymentAmountActivatedD7;
+  }
+
+  public DailyReportsGetListStruct paymentAmountActivatedD14(Long paymentAmountActivatedD14) {
+    this.paymentAmountActivatedD14 = paymentAmountActivatedD14;
+    return this;
+  }
+
+  /**
+   * Get paymentAmountActivatedD14
+   *
+   * @return paymentAmountActivatedD14
+   */
+  @ApiModelProperty(value = "")
+  public Long getPaymentAmountActivatedD14() {
+    return paymentAmountActivatedD14;
+  }
+
+  public void setPaymentAmountActivatedD14(Long paymentAmountActivatedD14) {
+    this.paymentAmountActivatedD14 = paymentAmountActivatedD14;
+  }
+
+  public DailyReportsGetListStruct paymentAmountActivatedD30(Long paymentAmountActivatedD30) {
+    this.paymentAmountActivatedD30 = paymentAmountActivatedD30;
+    return this;
+  }
+
+  /**
+   * Get paymentAmountActivatedD30
+   *
+   * @return paymentAmountActivatedD30
+   */
+  @ApiModelProperty(value = "")
+  public Long getPaymentAmountActivatedD30() {
+    return paymentAmountActivatedD30;
+  }
+
+  public void setPaymentAmountActivatedD30(Long paymentAmountActivatedD30) {
+    this.paymentAmountActivatedD30 = paymentAmountActivatedD30;
   }
 
   public DailyReportsGetListStruct firstDayPayCount(Long firstDayPayCount) {
@@ -5804,6 +6161,25 @@ public class DailyReportsGetListStruct {
     this.firstDayFirstPayCount = firstDayFirstPayCount;
   }
 
+  public DailyReportsGetListStruct paymentCostActivatedD1(Long paymentCostActivatedD1) {
+    this.paymentCostActivatedD1 = paymentCostActivatedD1;
+    return this;
+  }
+
+  /**
+   * Get paymentCostActivatedD1
+   *
+   * @return paymentCostActivatedD1
+   */
+  @ApiModelProperty(value = "")
+  public Long getPaymentCostActivatedD1() {
+    return paymentCostActivatedD1;
+  }
+
+  public void setPaymentCostActivatedD1(Long paymentCostActivatedD1) {
+    this.paymentCostActivatedD1 = paymentCostActivatedD1;
+  }
+
   public DailyReportsGetListStruct firstDayPayAmount(Long firstDayPayAmount) {
     this.firstDayPayAmount = firstDayPayAmount;
     return this;
@@ -5821,6 +6197,101 @@ public class DailyReportsGetListStruct {
 
   public void setFirstDayPayAmount(Long firstDayPayAmount) {
     this.firstDayPayAmount = firstDayPayAmount;
+  }
+
+  public DailyReportsGetListStruct roiActivatedD1(Double roiActivatedD1) {
+    this.roiActivatedD1 = roiActivatedD1;
+    return this;
+  }
+
+  /**
+   * Get roiActivatedD1
+   *
+   * @return roiActivatedD1
+   */
+  @ApiModelProperty(value = "")
+  public Double getRoiActivatedD1() {
+    return roiActivatedD1;
+  }
+
+  public void setRoiActivatedD1(Double roiActivatedD1) {
+    this.roiActivatedD1 = roiActivatedD1;
+  }
+
+  public DailyReportsGetListStruct roiActivatedD3(Double roiActivatedD3) {
+    this.roiActivatedD3 = roiActivatedD3;
+    return this;
+  }
+
+  /**
+   * Get roiActivatedD3
+   *
+   * @return roiActivatedD3
+   */
+  @ApiModelProperty(value = "")
+  public Double getRoiActivatedD3() {
+    return roiActivatedD3;
+  }
+
+  public void setRoiActivatedD3(Double roiActivatedD3) {
+    this.roiActivatedD3 = roiActivatedD3;
+  }
+
+  public DailyReportsGetListStruct roiActivatedD7(Double roiActivatedD7) {
+    this.roiActivatedD7 = roiActivatedD7;
+    return this;
+  }
+
+  /**
+   * Get roiActivatedD7
+   *
+   * @return roiActivatedD7
+   */
+  @ApiModelProperty(value = "")
+  public Double getRoiActivatedD7() {
+    return roiActivatedD7;
+  }
+
+  public void setRoiActivatedD7(Double roiActivatedD7) {
+    this.roiActivatedD7 = roiActivatedD7;
+  }
+
+  public DailyReportsGetListStruct roiActivatedD14(Double roiActivatedD14) {
+    this.roiActivatedD14 = roiActivatedD14;
+    return this;
+  }
+
+  /**
+   * Get roiActivatedD14
+   *
+   * @return roiActivatedD14
+   */
+  @ApiModelProperty(value = "")
+  public Double getRoiActivatedD14() {
+    return roiActivatedD14;
+  }
+
+  public void setRoiActivatedD14(Double roiActivatedD14) {
+    this.roiActivatedD14 = roiActivatedD14;
+  }
+
+  public DailyReportsGetListStruct roiActivatedD30(Double roiActivatedD30) {
+    this.roiActivatedD30 = roiActivatedD30;
+    return this;
+  }
+
+  /**
+   * Get roiActivatedD30
+   *
+   * @return roiActivatedD30
+   */
+  @ApiModelProperty(value = "")
+  public Double getRoiActivatedD30() {
+    return roiActivatedD30;
+  }
+
+  public void setRoiActivatedD30(Double roiActivatedD30) {
+    this.roiActivatedD30 = roiActivatedD30;
   }
 
   public DailyReportsGetListStruct firstDayFirstPayRate(Double firstDayFirstPayRate) {
@@ -5861,6 +6332,25 @@ public class DailyReportsGetListStruct {
     this.campaignId = campaignId;
   }
 
+  public DailyReportsGetListStruct campaignName(String campaignName) {
+    this.campaignName = campaignName;
+    return this;
+  }
+
+  /**
+   * Get campaignName
+   *
+   * @return campaignName
+   */
+  @ApiModelProperty(value = "")
+  public String getCampaignName() {
+    return campaignName;
+  }
+
+  public void setCampaignName(String campaignName) {
+    this.campaignName = campaignName;
+  }
+
   public DailyReportsGetListStruct adgroupId(Long adgroupId) {
     this.adgroupId = adgroupId;
     return this;
@@ -5880,6 +6370,25 @@ public class DailyReportsGetListStruct {
     this.adgroupId = adgroupId;
   }
 
+  public DailyReportsGetListStruct adgroupName(String adgroupName) {
+    this.adgroupName = adgroupName;
+    return this;
+  }
+
+  /**
+   * Get adgroupName
+   *
+   * @return adgroupName
+   */
+  @ApiModelProperty(value = "")
+  public String getAdgroupName() {
+    return adgroupName;
+  }
+
+  public void setAdgroupName(String adgroupName) {
+    this.adgroupName = adgroupName;
+  }
+
   public DailyReportsGetListStruct adId(Long adId) {
     this.adId = adId;
     return this;
@@ -5897,6 +6406,25 @@ public class DailyReportsGetListStruct {
 
   public void setAdId(Long adId) {
     this.adId = adId;
+  }
+
+  public DailyReportsGetListStruct adName(String adName) {
+    this.adName = adName;
+    return this;
+  }
+
+  /**
+   * Get adName
+   *
+   * @return adName
+   */
+  @ApiModelProperty(value = "")
+  public String getAdName() {
+    return adName;
+  }
+
+  public void setAdName(String adName) {
+    this.adName = adName;
   }
 
   public DailyReportsGetListStruct promotedObjectType(String promotedObjectType) {
@@ -7598,6 +8126,7 @@ public class DailyReportsGetListStruct {
         && Objects.equals(
             this.externalFormReservationCount,
             dailyReportsGetListStruct.externalFormReservationCount)
+        && Objects.equals(this.appAdPayingUsers, dailyReportsGetListStruct.appAdPayingUsers)
         && Objects.equals(this.adPurValWeb, dailyReportsGetListStruct.adPurValWeb)
         && Objects.equals(this.adPurValApp, dailyReportsGetListStruct.adPurValApp)
         && Objects.equals(this.gameCreateRoleCount, dailyReportsGetListStruct.gameCreateRoleCount)
@@ -7636,6 +8165,7 @@ public class DailyReportsGetListStruct {
         && Objects.equals(this.webArppuCost, dailyReportsGetListStruct.webArppuCost)
         && Objects.equals(this.webArpuCost, dailyReportsGetListStruct.webArpuCost)
         && Objects.equals(this.appAdPurArpuCost, dailyReportsGetListStruct.appAdPurArpuCost)
+        && Objects.equals(this.appAdPurArppuCost, dailyReportsGetListStruct.appAdPurArppuCost)
         && Objects.equals(this.webAdPurArpuCost, dailyReportsGetListStruct.webAdPurArpuCost)
         && Objects.equals(this.cheoutFd, dailyReportsGetListStruct.cheoutFd)
         && Objects.equals(this.cheoutTd, dailyReportsGetListStruct.cheoutTd)
@@ -7669,8 +8199,11 @@ public class DailyReportsGetListStruct {
         && Objects.equals(this.firstPayCost, dailyReportsGetListStruct.firstPayCost)
         && Objects.equals(
             this.landingPageClickCount, dailyReportsGetListStruct.landingPageClickCount)
-        && Objects.equals(this.scanFollowCount, dailyReportsGetListStruct.scanFollowCount)
         && Objects.equals(this.webCartAmount, dailyReportsGetListStruct.webCartAmount)
+        && Objects.equals(this.scanFollowCount, dailyReportsGetListStruct.scanFollowCount)
+        && Objects.equals(this.scanFollowUserCount, dailyReportsGetListStruct.scanFollowUserCount)
+        && Objects.equals(this.scanFollowUserCost, dailyReportsGetListStruct.scanFollowUserCost)
+        && Objects.equals(this.scanFollowUserRate, dailyReportsGetListStruct.scanFollowUserRate)
         && Objects.equals(this.appOrderAmount, dailyReportsGetListStruct.appOrderAmount)
         && Objects.equals(this.webOrderAmount, dailyReportsGetListStruct.webOrderAmount)
         && Objects.equals(this.phoneConsultCount, dailyReportsGetListStruct.phoneConsultCount)
@@ -7702,6 +8235,11 @@ public class DailyReportsGetListStruct {
         && Objects.equals(this.clickPoiCount, dailyReportsGetListStruct.clickPoiCount)
         && Objects.equals(this.videoInnerPlayCount, dailyReportsGetListStruct.videoInnerPlayCount)
         && Objects.equals(this.lanButtonClickCount, dailyReportsGetListStruct.lanButtonClickCount)
+        && Objects.equals(
+            this.lanJumpButtonClickers, dailyReportsGetListStruct.lanJumpButtonClickers)
+        && Objects.equals(
+            this.lanJumpButtonClickCost, dailyReportsGetListStruct.lanJumpButtonClickCost)
+        && Objects.equals(this.lanJumpButtonCtr, dailyReportsGetListStruct.lanJumpButtonCtr)
         && Objects.equals(this.lanButtonClickCost, dailyReportsGetListStruct.lanButtonClickCost)
         && Objects.equals(this.cpnClickButtonCount, dailyReportsGetListStruct.cpnClickButtonCount)
         && Objects.equals(this.cpnClickButtonUv, dailyReportsGetListStruct.cpnClickButtonUv)
@@ -7766,20 +8304,44 @@ public class DailyReportsGetListStruct {
         && Objects.equals(this.creAppCost, dailyReportsGetListStruct.creAppCost)
         && Objects.equals(this.preCreWebCost, dailyReportsGetListStruct.preCreWebCost)
         && Objects.equals(this.preCreAppCost, dailyReportsGetListStruct.preCreAppCost)
+        && Objects.equals(
+            this.requestConversionsCount, dailyReportsGetListStruct.requestConversionsCount)
+        && Objects.equals(
+            this.requestConversionsCost, dailyReportsGetListStruct.requestConversionsCost)
         && Objects.equals(this.incomeRoi1, dailyReportsGetListStruct.incomeRoi1)
         && Objects.equals(this.incomeRoi3, dailyReportsGetListStruct.incomeRoi3)
         && Objects.equals(this.incomeRoi7, dailyReportsGetListStruct.incomeRoi7)
         && Objects.equals(this.incomeRoi14, dailyReportsGetListStruct.incomeRoi14)
+        && Objects.equals(
+            this.activatedTotalPaymentCost, dailyReportsGetListStruct.activatedTotalPaymentCost)
+        && Objects.equals(
+            this.paymentAmountActivatedD3, dailyReportsGetListStruct.paymentAmountActivatedD3)
+        && Objects.equals(
+            this.paymentAmountActivatedD7, dailyReportsGetListStruct.paymentAmountActivatedD7)
+        && Objects.equals(
+            this.paymentAmountActivatedD14, dailyReportsGetListStruct.paymentAmountActivatedD14)
+        && Objects.equals(
+            this.paymentAmountActivatedD30, dailyReportsGetListStruct.paymentAmountActivatedD30)
         && Objects.equals(this.firstDayPayCount, dailyReportsGetListStruct.firstDayPayCount)
         && Objects.equals(this.firstDayPayCost, dailyReportsGetListStruct.firstDayPayCost)
         && Objects.equals(this.firstDayFirstPayCost, dailyReportsGetListStruct.firstDayFirstPayCost)
         && Objects.equals(
             this.firstDayFirstPayCount, dailyReportsGetListStruct.firstDayFirstPayCount)
+        && Objects.equals(
+            this.paymentCostActivatedD1, dailyReportsGetListStruct.paymentCostActivatedD1)
         && Objects.equals(this.firstDayPayAmount, dailyReportsGetListStruct.firstDayPayAmount)
+        && Objects.equals(this.roiActivatedD1, dailyReportsGetListStruct.roiActivatedD1)
+        && Objects.equals(this.roiActivatedD3, dailyReportsGetListStruct.roiActivatedD3)
+        && Objects.equals(this.roiActivatedD7, dailyReportsGetListStruct.roiActivatedD7)
+        && Objects.equals(this.roiActivatedD14, dailyReportsGetListStruct.roiActivatedD14)
+        && Objects.equals(this.roiActivatedD30, dailyReportsGetListStruct.roiActivatedD30)
         && Objects.equals(this.firstDayFirstPayRate, dailyReportsGetListStruct.firstDayFirstPayRate)
         && Objects.equals(this.campaignId, dailyReportsGetListStruct.campaignId)
+        && Objects.equals(this.campaignName, dailyReportsGetListStruct.campaignName)
         && Objects.equals(this.adgroupId, dailyReportsGetListStruct.adgroupId)
+        && Objects.equals(this.adgroupName, dailyReportsGetListStruct.adgroupName)
         && Objects.equals(this.adId, dailyReportsGetListStruct.adId)
+        && Objects.equals(this.adName, dailyReportsGetListStruct.adName)
         && Objects.equals(this.promotedObjectType, dailyReportsGetListStruct.promotedObjectType)
         && Objects.equals(this.promotedObjectId, dailyReportsGetListStruct.promotedObjectId)
         && Objects.equals(this.unionPositionId, dailyReportsGetListStruct.unionPositionId)
@@ -8020,6 +8582,7 @@ public class DailyReportsGetListStruct {
         intePhoneCount,
         phoneCallCount,
         externalFormReservationCount,
+        appAdPayingUsers,
         adPurValWeb,
         adPurValApp,
         gameCreateRoleCount,
@@ -8049,6 +8612,7 @@ public class DailyReportsGetListStruct {
         webArppuCost,
         webArpuCost,
         appAdPurArpuCost,
+        appAdPurArppuCost,
         webAdPurArpuCost,
         cheoutFd,
         cheoutTd,
@@ -8081,8 +8645,11 @@ public class DailyReportsGetListStruct {
         withdrDepAppVal,
         firstPayCost,
         landingPageClickCount,
-        scanFollowCount,
         webCartAmount,
+        scanFollowCount,
+        scanFollowUserCount,
+        scanFollowUserCost,
+        scanFollowUserRate,
         appOrderAmount,
         webOrderAmount,
         phoneConsultCount,
@@ -8114,6 +8681,9 @@ public class DailyReportsGetListStruct {
         clickPoiCount,
         videoInnerPlayCount,
         lanButtonClickCount,
+        lanJumpButtonClickers,
+        lanJumpButtonClickCost,
+        lanJumpButtonCtr,
         lanButtonClickCost,
         cpnClickButtonCount,
         cpnClickButtonUv,
@@ -8163,19 +8733,35 @@ public class DailyReportsGetListStruct {
         creAppCost,
         preCreWebCost,
         preCreAppCost,
+        requestConversionsCount,
+        requestConversionsCost,
         incomeRoi1,
         incomeRoi3,
         incomeRoi7,
         incomeRoi14,
+        activatedTotalPaymentCost,
+        paymentAmountActivatedD3,
+        paymentAmountActivatedD7,
+        paymentAmountActivatedD14,
+        paymentAmountActivatedD30,
         firstDayPayCount,
         firstDayPayCost,
         firstDayFirstPayCost,
         firstDayFirstPayCount,
+        paymentCostActivatedD1,
         firstDayPayAmount,
+        roiActivatedD1,
+        roiActivatedD3,
+        roiActivatedD7,
+        roiActivatedD14,
+        roiActivatedD30,
         firstDayFirstPayRate,
         campaignId,
+        campaignName,
         adgroupId,
+        adgroupName,
         adId,
+        adName,
         promotedObjectType,
         promotedObjectId,
         unionPositionId,

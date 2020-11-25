@@ -58,6 +58,12 @@ public class WechatAdvertiserLocalBusinessGetResponseData {
   @SerializedName("business_id")
   private String businessId = null;
 
+  @SerializedName("reject_message")
+  private String rejectMessage = null;
+
+  @SerializedName("review_status")
+  private WechatLocalBusinessReviewStatus reviewStatus = null;
+
   public WechatAdvertiserLocalBusinessGetResponseData headImageUrl(String headImageUrl) {
     this.headImageUrl = headImageUrl;
     return this;
@@ -308,6 +314,45 @@ public class WechatAdvertiserLocalBusinessGetResponseData {
     this.businessId = businessId;
   }
 
+  public WechatAdvertiserLocalBusinessGetResponseData rejectMessage(String rejectMessage) {
+    this.rejectMessage = rejectMessage;
+    return this;
+  }
+
+  /**
+   * Get rejectMessage
+   *
+   * @return rejectMessage
+   */
+  @ApiModelProperty(value = "")
+  public String getRejectMessage() {
+    return rejectMessage;
+  }
+
+  public void setRejectMessage(String rejectMessage) {
+    this.rejectMessage = rejectMessage;
+  }
+
+  public WechatAdvertiserLocalBusinessGetResponseData reviewStatus(
+      WechatLocalBusinessReviewStatus reviewStatus) {
+    this.reviewStatus = reviewStatus;
+    return this;
+  }
+
+  /**
+   * Get reviewStatus
+   *
+   * @return reviewStatus
+   */
+  @ApiModelProperty(value = "")
+  public WechatLocalBusinessReviewStatus getReviewStatus() {
+    return reviewStatus;
+  }
+
+  public void setReviewStatus(WechatLocalBusinessReviewStatus reviewStatus) {
+    this.reviewStatus = reviewStatus;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -342,7 +387,11 @@ public class WechatAdvertiserLocalBusinessGetResponseData {
             this.businessContent, wechatAdvertiserLocalBusinessGetResponseData.businessContent)
         && Objects.equals(this.industryId, wechatAdvertiserLocalBusinessGetResponseData.industryId)
         && Objects.equals(this.accountId, wechatAdvertiserLocalBusinessGetResponseData.accountId)
-        && Objects.equals(this.businessId, wechatAdvertiserLocalBusinessGetResponseData.businessId);
+        && Objects.equals(this.businessId, wechatAdvertiserLocalBusinessGetResponseData.businessId)
+        && Objects.equals(
+            this.rejectMessage, wechatAdvertiserLocalBusinessGetResponseData.rejectMessage)
+        && Objects.equals(
+            this.reviewStatus, wechatAdvertiserLocalBusinessGetResponseData.reviewStatus);
   }
 
   @Override
@@ -360,7 +409,9 @@ public class WechatAdvertiserLocalBusinessGetResponseData {
         businessContent,
         industryId,
         accountId,
-        businessId);
+        businessId,
+        rejectMessage,
+        reviewStatus);
   }
 
   @Override

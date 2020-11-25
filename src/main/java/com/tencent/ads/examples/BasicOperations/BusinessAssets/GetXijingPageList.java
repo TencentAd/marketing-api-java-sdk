@@ -36,6 +36,10 @@ public class GetXijingPageList {
 
   public String pageStatus = null;
 
+  public String pageSource = null;
+
+  public Long pageOwnerId = null;
+
   public List<String> fields = null;
 
   public void init() {
@@ -64,6 +68,8 @@ public class GetXijingPageList {
                 pageIndex,
                 pagePublishStatus,
                 pageStatus,
+                pageSource,
+                pageOwnerId,
                 fields);
     return response;
   }

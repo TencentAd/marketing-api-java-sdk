@@ -27,13 +27,13 @@ public class CompetePcvrTrendsStruct {
   private Long score = null;
 
   @SerializedName("self_avg")
-  private List<String> selfAvg = null;
+  private List<PointStruct> selfAvg = null;
 
   @SerializedName("self_chose_avg")
-  private List<String> selfChoseAvg = null;
+  private List<PointStruct> selfChoseAvg = null;
 
   @SerializedName("winner_chose_avg")
-  private List<String> winnerChoseAvg = null;
+  private List<PointStruct> winnerChoseAvg = null;
 
   @SerializedName("conclusion")
   private String conclusion = null;
@@ -57,14 +57,14 @@ public class CompetePcvrTrendsStruct {
     this.score = score;
   }
 
-  public CompetePcvrTrendsStruct selfAvg(List<String> selfAvg) {
+  public CompetePcvrTrendsStruct selfAvg(List<PointStruct> selfAvg) {
     this.selfAvg = selfAvg;
     return this;
   }
 
-  public CompetePcvrTrendsStruct addSelfAvgItem(String selfAvgItem) {
+  public CompetePcvrTrendsStruct addSelfAvgItem(PointStruct selfAvgItem) {
     if (this.selfAvg == null) {
-      this.selfAvg = new ArrayList<String>();
+      this.selfAvg = new ArrayList<PointStruct>();
     }
     this.selfAvg.add(selfAvgItem);
     return this;
@@ -76,22 +76,22 @@ public class CompetePcvrTrendsStruct {
    * @return selfAvg
    */
   @ApiModelProperty(value = "")
-  public List<String> getSelfAvg() {
+  public List<PointStruct> getSelfAvg() {
     return selfAvg;
   }
 
-  public void setSelfAvg(List<String> selfAvg) {
+  public void setSelfAvg(List<PointStruct> selfAvg) {
     this.selfAvg = selfAvg;
   }
 
-  public CompetePcvrTrendsStruct selfChoseAvg(List<String> selfChoseAvg) {
+  public CompetePcvrTrendsStruct selfChoseAvg(List<PointStruct> selfChoseAvg) {
     this.selfChoseAvg = selfChoseAvg;
     return this;
   }
 
-  public CompetePcvrTrendsStruct addSelfChoseAvgItem(String selfChoseAvgItem) {
+  public CompetePcvrTrendsStruct addSelfChoseAvgItem(PointStruct selfChoseAvgItem) {
     if (this.selfChoseAvg == null) {
-      this.selfChoseAvg = new ArrayList<String>();
+      this.selfChoseAvg = new ArrayList<PointStruct>();
     }
     this.selfChoseAvg.add(selfChoseAvgItem);
     return this;
@@ -103,22 +103,22 @@ public class CompetePcvrTrendsStruct {
    * @return selfChoseAvg
    */
   @ApiModelProperty(value = "")
-  public List<String> getSelfChoseAvg() {
+  public List<PointStruct> getSelfChoseAvg() {
     return selfChoseAvg;
   }
 
-  public void setSelfChoseAvg(List<String> selfChoseAvg) {
+  public void setSelfChoseAvg(List<PointStruct> selfChoseAvg) {
     this.selfChoseAvg = selfChoseAvg;
   }
 
-  public CompetePcvrTrendsStruct winnerChoseAvg(List<String> winnerChoseAvg) {
+  public CompetePcvrTrendsStruct winnerChoseAvg(List<PointStruct> winnerChoseAvg) {
     this.winnerChoseAvg = winnerChoseAvg;
     return this;
   }
 
-  public CompetePcvrTrendsStruct addWinnerChoseAvgItem(String winnerChoseAvgItem) {
+  public CompetePcvrTrendsStruct addWinnerChoseAvgItem(PointStruct winnerChoseAvgItem) {
     if (this.winnerChoseAvg == null) {
-      this.winnerChoseAvg = new ArrayList<String>();
+      this.winnerChoseAvg = new ArrayList<PointStruct>();
     }
     this.winnerChoseAvg.add(winnerChoseAvgItem);
     return this;
@@ -130,11 +130,11 @@ public class CompetePcvrTrendsStruct {
    * @return winnerChoseAvg
    */
   @ApiModelProperty(value = "")
-  public List<String> getWinnerChoseAvg() {
+  public List<PointStruct> getWinnerChoseAvg() {
     return winnerChoseAvg;
   }
 
-  public void setWinnerChoseAvg(List<String> winnerChoseAvg) {
+  public void setWinnerChoseAvg(List<PointStruct> winnerChoseAvg) {
     this.winnerChoseAvg = winnerChoseAvg;
   }
 

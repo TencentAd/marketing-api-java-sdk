@@ -37,6 +37,9 @@ public class AssetPermissionsDeleteRequest {
   @SerializedName("licensing_id_type")
   private AssetAccountType licensingIdType = null;
 
+  @SerializedName("path_id")
+  private Long pathId = null;
+
   public AssetPermissionsDeleteRequest accountId(Long accountId) {
     this.accountId = accountId;
     return this;
@@ -152,6 +155,25 @@ public class AssetPermissionsDeleteRequest {
     this.licensingIdType = licensingIdType;
   }
 
+  public AssetPermissionsDeleteRequest pathId(Long pathId) {
+    this.pathId = pathId;
+    return this;
+  }
+
+  /**
+   * Get pathId
+   *
+   * @return pathId
+   */
+  @ApiModelProperty(value = "")
+  public Long getPathId() {
+    return pathId;
+  }
+
+  public void setPathId(Long pathId) {
+    this.pathId = pathId;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -167,7 +189,8 @@ public class AssetPermissionsDeleteRequest {
         && Objects.equals(
             this.assetPermissionGrantType, assetPermissionsDeleteRequest.assetPermissionGrantType)
         && Objects.equals(this.assetId, assetPermissionsDeleteRequest.assetId)
-        && Objects.equals(this.licensingIdType, assetPermissionsDeleteRequest.licensingIdType);
+        && Objects.equals(this.licensingIdType, assetPermissionsDeleteRequest.licensingIdType)
+        && Objects.equals(this.pathId, assetPermissionsDeleteRequest.pathId);
   }
 
   @Override
@@ -178,7 +201,8 @@ public class AssetPermissionsDeleteRequest {
         assetType,
         assetPermissionGrantType,
         assetId,
-        licensingIdType);
+        licensingIdType,
+        pathId);
   }
 
   @Override

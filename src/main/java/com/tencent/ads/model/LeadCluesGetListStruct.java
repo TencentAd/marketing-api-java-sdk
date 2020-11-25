@@ -141,6 +141,12 @@ public class LeadCluesGetListStruct {
   @SerializedName("leads_tags")
   private String leadsTags = null;
 
+  @SerializedName("shop_name")
+  private String shopName = null;
+
+  @SerializedName("shop_address")
+  private String shopAddress = null;
+
   public LeadCluesGetListStruct accountId(Long accountId) {
     this.accountId = accountId;
     return this;
@@ -901,6 +907,44 @@ public class LeadCluesGetListStruct {
     this.leadsTags = leadsTags;
   }
 
+  public LeadCluesGetListStruct shopName(String shopName) {
+    this.shopName = shopName;
+    return this;
+  }
+
+  /**
+   * Get shopName
+   *
+   * @return shopName
+   */
+  @ApiModelProperty(value = "")
+  public String getShopName() {
+    return shopName;
+  }
+
+  public void setShopName(String shopName) {
+    this.shopName = shopName;
+  }
+
+  public LeadCluesGetListStruct shopAddress(String shopAddress) {
+    this.shopAddress = shopAddress;
+    return this;
+  }
+
+  /**
+   * Get shopAddress
+   *
+   * @return shopAddress
+   */
+  @ApiModelProperty(value = "")
+  public String getShopAddress() {
+    return shopAddress;
+  }
+
+  public void setShopAddress(String shopAddress) {
+    this.shopAddress = shopAddress;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -949,7 +993,9 @@ public class LeadCluesGetListStruct {
         && Objects.equals(this.posType, leadCluesGetListStruct.posType)
         && Objects.equals(this.leadsCreateTime, leadCluesGetListStruct.leadsCreateTime)
         && Objects.equals(this.leadsActionTime, leadCluesGetListStruct.leadsActionTime)
-        && Objects.equals(this.leadsTags, leadCluesGetListStruct.leadsTags);
+        && Objects.equals(this.leadsTags, leadCluesGetListStruct.leadsTags)
+        && Objects.equals(this.shopName, leadCluesGetListStruct.shopName)
+        && Objects.equals(this.shopAddress, leadCluesGetListStruct.shopAddress);
   }
 
   @Override
@@ -994,7 +1040,9 @@ public class LeadCluesGetListStruct {
         posType,
         leadsCreateTime,
         leadsActionTime,
-        leadsTags);
+        leadsTags,
+        shopName,
+        shopAddress);
   }
 
   @Override

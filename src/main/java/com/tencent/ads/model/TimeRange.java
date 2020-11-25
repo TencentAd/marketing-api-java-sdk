@@ -18,8 +18,8 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.util.Objects;
 
-/** 起止时间范围 */
-@ApiModel(description = "起止时间范围")
+/** 时间范围，根据表单最后提交时间进行查询。最长跨度1年 */
+@ApiModel(description = "时间范围，根据表单最后提交时间进行查询。最长跨度1年")
 public class TimeRange {
   @SerializedName("start_time")
   private Long startTime = null;

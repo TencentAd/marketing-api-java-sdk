@@ -14,7 +14,7 @@ public class TencentAds extends CustomApp {
 
   private static String basePath = "https://sandbox-api.e.qq.com/v1.3";
 
-  private static final String SDK_VERSION = "1.1.8";
+  private static final String SDK_VERSION = "1.1.9";
 
   private TencentAds() {}
 

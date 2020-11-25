@@ -48,6 +48,12 @@ public class ImagesGetListStruct {
   @SerializedName("product_outer_id")
   private String productOuterId = null;
 
+  @SerializedName("source_reference_id")
+  private String sourceReferenceId = null;
+
+  @SerializedName("owner_account_id")
+  private String ownerAccountId = null;
+
   @SerializedName("width")
   private Long width = null;
 
@@ -234,6 +240,44 @@ public class ImagesGetListStruct {
     this.productOuterId = productOuterId;
   }
 
+  public ImagesGetListStruct sourceReferenceId(String sourceReferenceId) {
+    this.sourceReferenceId = sourceReferenceId;
+    return this;
+  }
+
+  /**
+   * Get sourceReferenceId
+   *
+   * @return sourceReferenceId
+   */
+  @ApiModelProperty(value = "")
+  public String getSourceReferenceId() {
+    return sourceReferenceId;
+  }
+
+  public void setSourceReferenceId(String sourceReferenceId) {
+    this.sourceReferenceId = sourceReferenceId;
+  }
+
+  public ImagesGetListStruct ownerAccountId(String ownerAccountId) {
+    this.ownerAccountId = ownerAccountId;
+    return this;
+  }
+
+  /**
+   * Get ownerAccountId
+   *
+   * @return ownerAccountId
+   */
+  @ApiModelProperty(value = "")
+  public String getOwnerAccountId() {
+    return ownerAccountId;
+  }
+
+  public void setOwnerAccountId(String ownerAccountId) {
+    this.ownerAccountId = ownerAccountId;
+  }
+
   public ImagesGetListStruct width(Long width) {
     this.width = width;
     return this;
@@ -347,6 +391,8 @@ public class ImagesGetListStruct {
         && Objects.equals(this.lastModifiedTime, imagesGetListStruct.lastModifiedTime)
         && Objects.equals(this.productCatalogId, imagesGetListStruct.productCatalogId)
         && Objects.equals(this.productOuterId, imagesGetListStruct.productOuterId)
+        && Objects.equals(this.sourceReferenceId, imagesGetListStruct.sourceReferenceId)
+        && Objects.equals(this.ownerAccountId, imagesGetListStruct.ownerAccountId)
         && Objects.equals(this.width, imagesGetListStruct.width)
         && Objects.equals(this.height, imagesGetListStruct.height)
         && Objects.equals(this.fileSize, imagesGetListStruct.fileSize)
@@ -366,6 +412,8 @@ public class ImagesGetListStruct {
         lastModifiedTime,
         productCatalogId,
         productOuterId,
+        sourceReferenceId,
+        ownerAccountId,
         width,
         height,
         fileSize,

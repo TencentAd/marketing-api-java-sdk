@@ -27,7 +27,7 @@ public class CompeteUserAcceptanceStruct {
   private Long score = null;
 
   @SerializedName("acceptance")
-  private List<String> acceptance = null;
+  private List<CompeteAttributionStruct> acceptance = null;
 
   @SerializedName("conclusion")
   private String conclusion = null;
@@ -54,14 +54,14 @@ public class CompeteUserAcceptanceStruct {
     this.score = score;
   }
 
-  public CompeteUserAcceptanceStruct acceptance(List<String> acceptance) {
+  public CompeteUserAcceptanceStruct acceptance(List<CompeteAttributionStruct> acceptance) {
     this.acceptance = acceptance;
     return this;
   }
 
-  public CompeteUserAcceptanceStruct addAcceptanceItem(String acceptanceItem) {
+  public CompeteUserAcceptanceStruct addAcceptanceItem(CompeteAttributionStruct acceptanceItem) {
     if (this.acceptance == null) {
-      this.acceptance = new ArrayList<String>();
+      this.acceptance = new ArrayList<CompeteAttributionStruct>();
     }
     this.acceptance.add(acceptanceItem);
     return this;
@@ -73,11 +73,11 @@ public class CompeteUserAcceptanceStruct {
    * @return acceptance
    */
   @ApiModelProperty(value = "")
-  public List<String> getAcceptance() {
+  public List<CompeteAttributionStruct> getAcceptance() {
     return acceptance;
   }
 
-  public void setAcceptance(List<String> acceptance) {
+  public void setAcceptance(List<CompeteAttributionStruct> acceptance) {
     this.acceptance = acceptance;
   }
 

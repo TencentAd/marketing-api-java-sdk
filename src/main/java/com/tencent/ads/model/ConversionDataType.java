@@ -19,7 +19,7 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-/** 数据展示数据类型 */
+/** 数据展示的数据类型 */
 @JsonAdapter(ConversionDataType.Adapter.class)
 public enum ConversionDataType {
   DEFAULT("CONVERSION_DATA_DEFAULT"),

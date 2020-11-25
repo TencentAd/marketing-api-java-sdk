@@ -62,6 +62,8 @@ public class XijingPageListApi {
    * @param pageIndex (optional)
    * @param pagePublishStatus (optional)
    * @param pageStatus (optional)
+   * @param pageSource (optional)
+   * @param pageOwnerId (optional)
    * @param fields 返回参数的字段列表 (optional)
    * @param progressListener Progress listener
    * @param progressRequestListener Progress request listener
@@ -80,6 +82,8 @@ public class XijingPageListApi {
       Long pageIndex,
       String pagePublishStatus,
       String pageStatus,
+      String pageSource,
+      Long pageOwnerId,
       List<String> fields,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener)
@@ -115,6 +119,10 @@ public class XijingPageListApi {
           apiClient.parameterToPair("page_publish_status", pagePublishStatus));
     if (pageStatus != null)
       localVarQueryParams.addAll(apiClient.parameterToPair("page_status", pageStatus));
+    if (pageSource != null)
+      localVarQueryParams.addAll(apiClient.parameterToPair("page_source", pageSource));
+    if (pageOwnerId != null)
+      localVarQueryParams.addAll(apiClient.parameterToPair("page_owner_id", pageOwnerId));
     if (fields != null)
       localVarCollectionQueryParams.addAll(apiClient.parameterToPairs("multi", "fields", fields));
 
@@ -174,6 +182,8 @@ public class XijingPageListApi {
       Long pageIndex,
       String pagePublishStatus,
       String pageStatus,
+      String pageSource,
+      Long pageOwnerId,
       List<String> fields,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener)
@@ -198,6 +208,8 @@ public class XijingPageListApi {
             pageIndex,
             pagePublishStatus,
             pageStatus,
+            pageSource,
+            pageOwnerId,
             fields,
             progressListener,
             progressRequestListener);
@@ -218,6 +230,8 @@ public class XijingPageListApi {
    * @param pageIndex (optional)
    * @param pagePublishStatus (optional)
    * @param pageStatus (optional)
+   * @param pageSource (optional)
+   * @param pageOwnerId (optional)
    * @param fields 返回参数的字段列表 (optional)
    * @return XijingPageListGetResponse
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
@@ -235,6 +249,8 @@ public class XijingPageListApi {
       Long pageIndex,
       String pagePublishStatus,
       String pageStatus,
+      String pageSource,
+      Long pageOwnerId,
       List<String> fields)
       throws ApiException {
     ApiResponse<XijingPageListGetResponse> resp =
@@ -250,6 +266,8 @@ public class XijingPageListApi {
             pageIndex,
             pagePublishStatus,
             pageStatus,
+            pageSource,
+            pageOwnerId,
             fields);
     return resp.getData();
   }
@@ -268,6 +286,8 @@ public class XijingPageListApi {
    * @param pageIndex (optional)
    * @param pagePublishStatus (optional)
    * @param pageStatus (optional)
+   * @param pageSource (optional)
+   * @param pageOwnerId (optional)
    * @param fields 返回参数的字段列表 (optional)
    * @return ApiResponse&lt;XijingPageListGetResponse&gt;
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
@@ -285,6 +305,8 @@ public class XijingPageListApi {
       Long pageIndex,
       String pagePublishStatus,
       String pageStatus,
+      String pageSource,
+      Long pageOwnerId,
       List<String> fields)
       throws ApiException {
     com.squareup.okhttp.Call call =
@@ -300,6 +322,8 @@ public class XijingPageListApi {
             pageIndex,
             pagePublishStatus,
             pageStatus,
+            pageSource,
+            pageOwnerId,
             fields,
             null,
             null);
@@ -321,6 +345,8 @@ public class XijingPageListApi {
    * @param pageIndex (optional)
    * @param pagePublishStatus (optional)
    * @param pageStatus (optional)
+   * @param pageSource (optional)
+   * @param pageOwnerId (optional)
    * @param fields 返回参数的字段列表 (optional)
    * @param callback The callback to be executed when the API call finishes
    * @return The request call
@@ -338,6 +364,8 @@ public class XijingPageListApi {
       Long pageIndex,
       String pagePublishStatus,
       String pageStatus,
+      String pageSource,
+      Long pageOwnerId,
       List<String> fields,
       final ApiCallback<XijingPageListGetResponse> callback)
       throws ApiException {
@@ -376,6 +404,8 @@ public class XijingPageListApi {
             pageIndex,
             pagePublishStatus,
             pageStatus,
+            pageSource,
+            pageOwnerId,
             fields,
             progressListener,
             progressRequestListener);

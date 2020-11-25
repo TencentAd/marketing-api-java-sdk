@@ -111,6 +111,12 @@ public class VideosGetListStruct {
   @SerializedName("product_outer_id")
   private String productOuterId = null;
 
+  @SerializedName("source_reference_id")
+  private String sourceReferenceId = null;
+
+  @SerializedName("owner_account_id")
+  private String ownerAccountId = null;
+
   public VideosGetListStruct videoId(Long videoId) {
     this.videoId = videoId;
     return this;
@@ -681,6 +687,44 @@ public class VideosGetListStruct {
     this.productOuterId = productOuterId;
   }
 
+  public VideosGetListStruct sourceReferenceId(String sourceReferenceId) {
+    this.sourceReferenceId = sourceReferenceId;
+    return this;
+  }
+
+  /**
+   * Get sourceReferenceId
+   *
+   * @return sourceReferenceId
+   */
+  @ApiModelProperty(value = "")
+  public String getSourceReferenceId() {
+    return sourceReferenceId;
+  }
+
+  public void setSourceReferenceId(String sourceReferenceId) {
+    this.sourceReferenceId = sourceReferenceId;
+  }
+
+  public VideosGetListStruct ownerAccountId(String ownerAccountId) {
+    this.ownerAccountId = ownerAccountId;
+    return this;
+  }
+
+  /**
+   * Get ownerAccountId
+   *
+   * @return ownerAccountId
+   */
+  @ApiModelProperty(value = "")
+  public String getOwnerAccountId() {
+    return ownerAccountId;
+  }
+
+  public void setOwnerAccountId(String ownerAccountId) {
+    this.ownerAccountId = ownerAccountId;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -721,7 +765,9 @@ public class VideosGetListStruct {
             this.audioDurationMillisecond, videosGetListStruct.audioDurationMillisecond)
         && Objects.equals(this.sourceType, videosGetListStruct.sourceType)
         && Objects.equals(this.productCatalogId, videosGetListStruct.productCatalogId)
-        && Objects.equals(this.productOuterId, videosGetListStruct.productOuterId);
+        && Objects.equals(this.productOuterId, videosGetListStruct.productOuterId)
+        && Objects.equals(this.sourceReferenceId, videosGetListStruct.sourceReferenceId)
+        && Objects.equals(this.ownerAccountId, videosGetListStruct.ownerAccountId);
   }
 
   @Override
@@ -756,7 +802,9 @@ public class VideosGetListStruct {
         audioDurationMillisecond,
         sourceType,
         productCatalogId,
-        productOuterId);
+        productOuterId,
+        sourceReferenceId,
+        ownerAccountId);
   }
 
   @Override

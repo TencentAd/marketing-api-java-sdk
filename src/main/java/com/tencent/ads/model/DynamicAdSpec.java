@@ -27,6 +27,9 @@ public class DynamicAdSpec {
   @SerializedName("product_mode")
   private ProductMode productMode = null;
 
+  @SerializedName("product_source")
+  private String productSource = null;
+
   public DynamicAdSpec productCatalogId(Long productCatalogId) {
     this.productCatalogId = productCatalogId;
     return this;
@@ -65,6 +68,25 @@ public class DynamicAdSpec {
     this.productMode = productMode;
   }
 
+  public DynamicAdSpec productSource(String productSource) {
+    this.productSource = productSource;
+    return this;
+  }
+
+  /**
+   * Get productSource
+   *
+   * @return productSource
+   */
+  @ApiModelProperty(value = "")
+  public String getProductSource() {
+    return productSource;
+  }
+
+  public void setProductSource(String productSource) {
+    this.productSource = productSource;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -75,12 +97,13 @@ public class DynamicAdSpec {
     }
     DynamicAdSpec dynamicAdSpec = (DynamicAdSpec) o;
     return Objects.equals(this.productCatalogId, dynamicAdSpec.productCatalogId)
-        && Objects.equals(this.productMode, dynamicAdSpec.productMode);
+        && Objects.equals(this.productMode, dynamicAdSpec.productMode)
+        && Objects.equals(this.productSource, dynamicAdSpec.productSource);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(productCatalogId, productMode);
+    return Objects.hash(productCatalogId, productMode, productSource);
   }
 
   @Override

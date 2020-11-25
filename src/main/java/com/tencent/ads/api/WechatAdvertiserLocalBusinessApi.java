@@ -60,12 +60,12 @@ public class WechatAdvertiserLocalBusinessApi {
    * @param contactPerson (required)
    * @param contactPersonMobile (required)
    * @param contactPersonCardId (required)
-   * @param contactPersonTele (required)
    * @param corporation (required)
    * @param corporationLicence (required)
-   * @param businessContent (required)
    * @param industryId (required)
    * @param businessId (required)
+   * @param contactPersonTele (optional)
+   * @param businessContent (optional)
    * @param progressListener Progress listener
    * @param progressRequestListener Progress request listener
    * @return Call to execute
@@ -78,12 +78,12 @@ public class WechatAdvertiserLocalBusinessApi {
       String contactPerson,
       String contactPersonMobile,
       String contactPersonCardId,
-      String contactPersonTele,
       String corporation,
       String corporationLicence,
-      String businessContent,
       Long industryId,
       String businessId,
+      String contactPersonTele,
+      String businessContent,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener)
       throws ApiException {
@@ -161,12 +161,12 @@ public class WechatAdvertiserLocalBusinessApi {
       String contactPerson,
       String contactPersonMobile,
       String contactPersonCardId,
-      String contactPersonTele,
       String corporation,
       String corporationLicence,
-      String businessContent,
       Long industryId,
       String businessId,
+      String contactPersonTele,
+      String businessContent,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener)
       throws ApiException {
@@ -207,12 +207,6 @@ public class WechatAdvertiserLocalBusinessApi {
           "Missing the required parameter 'contactPersonCardId' when calling wechatAdvertiserLocalBusinessAdd(Async)");
     }
 
-    // verify the required parameter 'contactPersonTele' is set
-    if (contactPersonTele == null) {
-      throw new ApiException(
-          "Missing the required parameter 'contactPersonTele' when calling wechatAdvertiserLocalBusinessAdd(Async)");
-    }
-
     // verify the required parameter 'corporation' is set
     if (corporation == null) {
       throw new ApiException(
@@ -223,12 +217,6 @@ public class WechatAdvertiserLocalBusinessApi {
     if (corporationLicence == null) {
       throw new ApiException(
           "Missing the required parameter 'corporationLicence' when calling wechatAdvertiserLocalBusinessAdd(Async)");
-    }
-
-    // verify the required parameter 'businessContent' is set
-    if (businessContent == null) {
-      throw new ApiException(
-          "Missing the required parameter 'businessContent' when calling wechatAdvertiserLocalBusinessAdd(Async)");
     }
 
     // verify the required parameter 'industryId' is set
@@ -251,12 +239,12 @@ public class WechatAdvertiserLocalBusinessApi {
             contactPerson,
             contactPersonMobile,
             contactPersonCardId,
-            contactPersonTele,
             corporation,
             corporationLicence,
-            businessContent,
             industryId,
             businessId,
+            contactPersonTele,
+            businessContent,
             progressListener,
             progressRequestListener);
     return call;
@@ -271,12 +259,12 @@ public class WechatAdvertiserLocalBusinessApi {
    * @param contactPerson (required)
    * @param contactPersonMobile (required)
    * @param contactPersonCardId (required)
-   * @param contactPersonTele (required)
    * @param corporation (required)
    * @param corporationLicence (required)
-   * @param businessContent (required)
    * @param industryId (required)
    * @param businessId (required)
+   * @param contactPersonTele (optional)
+   * @param businessContent (optional)
    * @return WechatAdvertiserLocalBusinessAddResponse
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
@@ -288,12 +276,12 @@ public class WechatAdvertiserLocalBusinessApi {
       String contactPerson,
       String contactPersonMobile,
       String contactPersonCardId,
-      String contactPersonTele,
       String corporation,
       String corporationLicence,
-      String businessContent,
       Long industryId,
-      String businessId)
+      String businessId,
+      String contactPersonTele,
+      String businessContent)
       throws ApiException {
     ApiResponse<WechatAdvertiserLocalBusinessAddResponse> resp =
         wechatAdvertiserLocalBusinessAddWithHttpInfo(
@@ -303,12 +291,12 @@ public class WechatAdvertiserLocalBusinessApi {
             contactPerson,
             contactPersonMobile,
             contactPersonCardId,
-            contactPersonTele,
             corporation,
             corporationLicence,
-            businessContent,
             industryId,
-            businessId);
+            businessId,
+            contactPersonTele,
+            businessContent);
     return resp.getData();
   }
 
@@ -321,12 +309,12 @@ public class WechatAdvertiserLocalBusinessApi {
    * @param contactPerson (required)
    * @param contactPersonMobile (required)
    * @param contactPersonCardId (required)
-   * @param contactPersonTele (required)
    * @param corporation (required)
    * @param corporationLicence (required)
-   * @param businessContent (required)
    * @param industryId (required)
    * @param businessId (required)
+   * @param contactPersonTele (optional)
+   * @param businessContent (optional)
    * @return ApiResponse&lt;WechatAdvertiserLocalBusinessAddResponse&gt;
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
@@ -339,12 +327,12 @@ public class WechatAdvertiserLocalBusinessApi {
           String contactPerson,
           String contactPersonMobile,
           String contactPersonCardId,
-          String contactPersonTele,
           String corporation,
           String corporationLicence,
-          String businessContent,
           Long industryId,
-          String businessId)
+          String businessId,
+          String contactPersonTele,
+          String businessContent)
           throws ApiException {
     com.squareup.okhttp.Call call =
         wechatAdvertiserLocalBusinessAddValidateBeforeCall(
@@ -354,12 +342,12 @@ public class WechatAdvertiserLocalBusinessApi {
             contactPerson,
             contactPersonMobile,
             contactPersonCardId,
-            contactPersonTele,
             corporation,
             corporationLicence,
-            businessContent,
             industryId,
             businessId,
+            contactPersonTele,
+            businessContent,
             null,
             null);
     Type localVarReturnType =
@@ -376,12 +364,12 @@ public class WechatAdvertiserLocalBusinessApi {
    * @param contactPerson (required)
    * @param contactPersonMobile (required)
    * @param contactPersonCardId (required)
-   * @param contactPersonTele (required)
    * @param corporation (required)
    * @param corporationLicence (required)
-   * @param businessContent (required)
    * @param industryId (required)
    * @param businessId (required)
+   * @param contactPersonTele (optional)
+   * @param businessContent (optional)
    * @param callback The callback to be executed when the API call finishes
    * @return The request call
    * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -393,12 +381,12 @@ public class WechatAdvertiserLocalBusinessApi {
       String contactPerson,
       String contactPersonMobile,
       String contactPersonCardId,
-      String contactPersonTele,
       String corporation,
       String corporationLicence,
-      String businessContent,
       Long industryId,
       String businessId,
+      String contactPersonTele,
+      String businessContent,
       final ApiCallback<WechatAdvertiserLocalBusinessAddResponse> callback)
       throws ApiException {
 
@@ -431,12 +419,12 @@ public class WechatAdvertiserLocalBusinessApi {
             contactPerson,
             contactPersonMobile,
             contactPersonCardId,
-            contactPersonTele,
             corporation,
             corporationLicence,
-            businessContent,
             industryId,
             businessId,
+            contactPersonTele,
+            businessContent,
             progressListener,
             progressRequestListener);
     Type localVarReturnType =
@@ -623,12 +611,12 @@ public class WechatAdvertiserLocalBusinessApi {
    * @param contactPerson (required)
    * @param contactPersonMobile (required)
    * @param contactPersonCardId (required)
-   * @param contactPersonTele (required)
    * @param corporation (required)
    * @param corporationLicence (required)
-   * @param businessContent (required)
    * @param industryId (required)
    * @param accountId (required)
+   * @param contactPersonTele (optional)
+   * @param businessContent (optional)
    * @param progressListener Progress listener
    * @param progressRequestListener Progress request listener
    * @return Call to execute
@@ -641,12 +629,12 @@ public class WechatAdvertiserLocalBusinessApi {
       String contactPerson,
       String contactPersonMobile,
       String contactPersonCardId,
-      String contactPersonTele,
       String corporation,
       String corporationLicence,
-      String businessContent,
       Long industryId,
       Long accountId,
+      String contactPersonTele,
+      String businessContent,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener)
       throws ApiException {
@@ -724,12 +712,12 @@ public class WechatAdvertiserLocalBusinessApi {
       String contactPerson,
       String contactPersonMobile,
       String contactPersonCardId,
-      String contactPersonTele,
       String corporation,
       String corporationLicence,
-      String businessContent,
       Long industryId,
       Long accountId,
+      String contactPersonTele,
+      String businessContent,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener)
       throws ApiException {
@@ -770,12 +758,6 @@ public class WechatAdvertiserLocalBusinessApi {
           "Missing the required parameter 'contactPersonCardId' when calling wechatAdvertiserLocalBusinessUpdate(Async)");
     }
 
-    // verify the required parameter 'contactPersonTele' is set
-    if (contactPersonTele == null) {
-      throw new ApiException(
-          "Missing the required parameter 'contactPersonTele' when calling wechatAdvertiserLocalBusinessUpdate(Async)");
-    }
-
     // verify the required parameter 'corporation' is set
     if (corporation == null) {
       throw new ApiException(
@@ -786,12 +768,6 @@ public class WechatAdvertiserLocalBusinessApi {
     if (corporationLicence == null) {
       throw new ApiException(
           "Missing the required parameter 'corporationLicence' when calling wechatAdvertiserLocalBusinessUpdate(Async)");
-    }
-
-    // verify the required parameter 'businessContent' is set
-    if (businessContent == null) {
-      throw new ApiException(
-          "Missing the required parameter 'businessContent' when calling wechatAdvertiserLocalBusinessUpdate(Async)");
     }
 
     // verify the required parameter 'industryId' is set
@@ -814,12 +790,12 @@ public class WechatAdvertiserLocalBusinessApi {
             contactPerson,
             contactPersonMobile,
             contactPersonCardId,
-            contactPersonTele,
             corporation,
             corporationLicence,
-            businessContent,
             industryId,
             accountId,
+            contactPersonTele,
+            businessContent,
             progressListener,
             progressRequestListener);
     return call;
@@ -834,12 +810,12 @@ public class WechatAdvertiserLocalBusinessApi {
    * @param contactPerson (required)
    * @param contactPersonMobile (required)
    * @param contactPersonCardId (required)
-   * @param contactPersonTele (required)
    * @param corporation (required)
    * @param corporationLicence (required)
-   * @param businessContent (required)
    * @param industryId (required)
    * @param accountId (required)
+   * @param contactPersonTele (optional)
+   * @param businessContent (optional)
    * @return WechatAdvertiserLocalBusinessUpdateResponse
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
@@ -851,12 +827,12 @@ public class WechatAdvertiserLocalBusinessApi {
       String contactPerson,
       String contactPersonMobile,
       String contactPersonCardId,
-      String contactPersonTele,
       String corporation,
       String corporationLicence,
-      String businessContent,
       Long industryId,
-      Long accountId)
+      Long accountId,
+      String contactPersonTele,
+      String businessContent)
       throws ApiException {
     ApiResponse<WechatAdvertiserLocalBusinessUpdateResponse> resp =
         wechatAdvertiserLocalBusinessUpdateWithHttpInfo(
@@ -866,12 +842,12 @@ public class WechatAdvertiserLocalBusinessApi {
             contactPerson,
             contactPersonMobile,
             contactPersonCardId,
-            contactPersonTele,
             corporation,
             corporationLicence,
-            businessContent,
             industryId,
-            accountId);
+            accountId,
+            contactPersonTele,
+            businessContent);
     return resp.getData();
   }
 
@@ -884,12 +860,12 @@ public class WechatAdvertiserLocalBusinessApi {
    * @param contactPerson (required)
    * @param contactPersonMobile (required)
    * @param contactPersonCardId (required)
-   * @param contactPersonTele (required)
    * @param corporation (required)
    * @param corporationLicence (required)
-   * @param businessContent (required)
    * @param industryId (required)
    * @param accountId (required)
+   * @param contactPersonTele (optional)
+   * @param businessContent (optional)
    * @return ApiResponse&lt;WechatAdvertiserLocalBusinessUpdateResponse&gt;
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
@@ -902,12 +878,12 @@ public class WechatAdvertiserLocalBusinessApi {
           String contactPerson,
           String contactPersonMobile,
           String contactPersonCardId,
-          String contactPersonTele,
           String corporation,
           String corporationLicence,
-          String businessContent,
           Long industryId,
-          Long accountId)
+          Long accountId,
+          String contactPersonTele,
+          String businessContent)
           throws ApiException {
     com.squareup.okhttp.Call call =
         wechatAdvertiserLocalBusinessUpdateValidateBeforeCall(
@@ -917,12 +893,12 @@ public class WechatAdvertiserLocalBusinessApi {
             contactPerson,
             contactPersonMobile,
             contactPersonCardId,
-            contactPersonTele,
             corporation,
             corporationLicence,
-            businessContent,
             industryId,
             accountId,
+            contactPersonTele,
+            businessContent,
             null,
             null);
     Type localVarReturnType =
@@ -939,12 +915,12 @@ public class WechatAdvertiserLocalBusinessApi {
    * @param contactPerson (required)
    * @param contactPersonMobile (required)
    * @param contactPersonCardId (required)
-   * @param contactPersonTele (required)
    * @param corporation (required)
    * @param corporationLicence (required)
-   * @param businessContent (required)
    * @param industryId (required)
    * @param accountId (required)
+   * @param contactPersonTele (optional)
+   * @param businessContent (optional)
    * @param callback The callback to be executed when the API call finishes
    * @return The request call
    * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -956,12 +932,12 @@ public class WechatAdvertiserLocalBusinessApi {
       String contactPerson,
       String contactPersonMobile,
       String contactPersonCardId,
-      String contactPersonTele,
       String corporation,
       String corporationLicence,
-      String businessContent,
       Long industryId,
       Long accountId,
+      String contactPersonTele,
+      String businessContent,
       final ApiCallback<WechatAdvertiserLocalBusinessUpdateResponse> callback)
       throws ApiException {
 
@@ -994,12 +970,12 @@ public class WechatAdvertiserLocalBusinessApi {
             contactPerson,
             contactPersonMobile,
             contactPersonCardId,
-            contactPersonTele,
             corporation,
             corporationLicence,
-            businessContent,
             industryId,
             accountId,
+            contactPersonTele,
+            businessContent,
             progressListener,
             progressRequestListener);
     Type localVarReturnType =

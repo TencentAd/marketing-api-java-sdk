@@ -19,7 +19,7 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-/** 数据展示转化数据量类型，仅投朋友圈流量且conversion_data_type为CONVERSION_DATA_ADMETRIC时可设置 */
+/** 数据展示转化行为 */
 @JsonAdapter(ConversionTargetType.Adapter.class)
 public enum ConversionTargetType {
   DEFAULT("CONVERSION_TARGET_DEFAULT"),
@@ -38,7 +38,31 @@ public enum ConversionTargetType {
 
   DOWNLOAD("CONVERSION_TARGET_DOWNLOAD"),
 
-  PLAYING("CONVERSION_TARGET_PLAYING");
+  PLAYING("CONVERSION_TARGET_PLAYING"),
+
+  CLICK("CONVERSION_TARGET_CLICK"),
+
+  SEE("CONVERSION_TARGET_SEE"),
+
+  INVOLVE("CONVERSION_TARGET_INVOLVE"),
+
+  OPEN("CONVERSION_TARGET_OPEN"),
+
+  PURCHASE("CONVERSION_TARGET_PURCHASE"),
+
+  BROWSE("CONVERSION_TARGET_BROWSE"),
+
+  TRY("CONVERSION_TARGET_TRY"),
+
+  DRIVE("CONVERSION_TARGET_DRIVE"),
+
+  ENTER("CONVERSION_TARGET_ENTER"),
+
+  READ("CONVERSION_TARGET_READ"),
+
+  FOLLOW("CONVERSION_TARGET_FOLLOW"),
+
+  USE("CONVERSION_TARGET_USE");
 
   private String value;
 

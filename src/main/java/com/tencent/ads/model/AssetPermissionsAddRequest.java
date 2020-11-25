@@ -36,6 +36,12 @@ public class AssetPermissionsAddRequest {
   @SerializedName("licensing_id_type")
   private AssetAccountType licensingIdType = null;
 
+  @SerializedName("path_id")
+  private Long pathId = null;
+
+  @SerializedName("permission_list")
+  private List<String> permissionList = null;
+
   public AssetPermissionsAddRequest accountId(Long accountId) {
     this.accountId = accountId;
     return this;
@@ -149,6 +155,52 @@ public class AssetPermissionsAddRequest {
     this.licensingIdType = licensingIdType;
   }
 
+  public AssetPermissionsAddRequest pathId(Long pathId) {
+    this.pathId = pathId;
+    return this;
+  }
+
+  /**
+   * Get pathId
+   *
+   * @return pathId
+   */
+  @ApiModelProperty(value = "")
+  public Long getPathId() {
+    return pathId;
+  }
+
+  public void setPathId(Long pathId) {
+    this.pathId = pathId;
+  }
+
+  public AssetPermissionsAddRequest permissionList(List<String> permissionList) {
+    this.permissionList = permissionList;
+    return this;
+  }
+
+  public AssetPermissionsAddRequest addPermissionListItem(String permissionListItem) {
+    if (this.permissionList == null) {
+      this.permissionList = new ArrayList<String>();
+    }
+    this.permissionList.add(permissionListItem);
+    return this;
+  }
+
+  /**
+   * Get permissionList
+   *
+   * @return permissionList
+   */
+  @ApiModelProperty(value = "")
+  public List<String> getPermissionList() {
+    return permissionList;
+  }
+
+  public void setPermissionList(List<String> permissionList) {
+    this.permissionList = permissionList;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -163,13 +215,21 @@ public class AssetPermissionsAddRequest {
         && Objects.equals(this.assetPermissionSpec, assetPermissionsAddRequest.assetPermissionSpec)
         && Objects.equals(
             this.licensingAccountIdList, assetPermissionsAddRequest.licensingAccountIdList)
-        && Objects.equals(this.licensingIdType, assetPermissionsAddRequest.licensingIdType);
+        && Objects.equals(this.licensingIdType, assetPermissionsAddRequest.licensingIdType)
+        && Objects.equals(this.pathId, assetPermissionsAddRequest.pathId)
+        && Objects.equals(this.permissionList, assetPermissionsAddRequest.permissionList);
   }
 
   @Override
   public int hashCode() {
     return Objects.hash(
-        accountId, assetType, assetPermissionSpec, licensingAccountIdList, licensingIdType);
+        accountId,
+        assetType,
+        assetPermissionSpec,
+        licensingAccountIdList,
+        licensingIdType,
+        pathId,
+        permissionList);
   }
 
   @Override

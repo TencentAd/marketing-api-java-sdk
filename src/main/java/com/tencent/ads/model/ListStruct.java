@@ -31,7 +31,7 @@ public class ListStruct {
   private Long wechatQualificationId = null;
 
   @SerializedName("review_status")
-  private String reviewStatus = null;
+  private LocalBusinessQualificationReviewStatus reviewStatus = null;
 
   @SerializedName("audit_message")
   private String auditMessage = null;
@@ -93,7 +93,7 @@ public class ListStruct {
     this.wechatQualificationId = wechatQualificationId;
   }
 
-  public ListStruct reviewStatus(String reviewStatus) {
+  public ListStruct reviewStatus(LocalBusinessQualificationReviewStatus reviewStatus) {
     this.reviewStatus = reviewStatus;
     return this;
   }
@@ -104,11 +104,11 @@ public class ListStruct {
    * @return reviewStatus
    */
   @ApiModelProperty(value = "")
-  public String getReviewStatus() {
+  public LocalBusinessQualificationReviewStatus getReviewStatus() {
     return reviewStatus;
   }
 
-  public void setReviewStatus(String reviewStatus) {
+  public void setReviewStatus(LocalBusinessQualificationReviewStatus reviewStatus) {
     this.reviewStatus = reviewStatus;
   }
 

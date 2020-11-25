@@ -39,10 +39,10 @@ public class EffectivePlayRateStruct {
   private String rankSecondCategory = null;
 
   @SerializedName("self_trends")
-  private List<String> selfTrends = null;
+  private List<PointStruct> selfTrends = null;
 
   @SerializedName("benchmark_trends")
-  private List<String> benchmarkTrends = null;
+  private List<PointStruct> benchmarkTrends = null;
 
   public EffectivePlayRateStruct value(String value) {
     this.value = value;
@@ -139,14 +139,14 @@ public class EffectivePlayRateStruct {
     this.rankSecondCategory = rankSecondCategory;
   }
 
-  public EffectivePlayRateStruct selfTrends(List<String> selfTrends) {
+  public EffectivePlayRateStruct selfTrends(List<PointStruct> selfTrends) {
     this.selfTrends = selfTrends;
     return this;
   }
 
-  public EffectivePlayRateStruct addSelfTrendsItem(String selfTrendsItem) {
+  public EffectivePlayRateStruct addSelfTrendsItem(PointStruct selfTrendsItem) {
     if (this.selfTrends == null) {
-      this.selfTrends = new ArrayList<String>();
+      this.selfTrends = new ArrayList<PointStruct>();
     }
     this.selfTrends.add(selfTrendsItem);
     return this;
@@ -158,22 +158,22 @@ public class EffectivePlayRateStruct {
    * @return selfTrends
    */
   @ApiModelProperty(value = "")
-  public List<String> getSelfTrends() {
+  public List<PointStruct> getSelfTrends() {
     return selfTrends;
   }
 
-  public void setSelfTrends(List<String> selfTrends) {
+  public void setSelfTrends(List<PointStruct> selfTrends) {
     this.selfTrends = selfTrends;
   }
 
-  public EffectivePlayRateStruct benchmarkTrends(List<String> benchmarkTrends) {
+  public EffectivePlayRateStruct benchmarkTrends(List<PointStruct> benchmarkTrends) {
     this.benchmarkTrends = benchmarkTrends;
     return this;
   }
 
-  public EffectivePlayRateStruct addBenchmarkTrendsItem(String benchmarkTrendsItem) {
+  public EffectivePlayRateStruct addBenchmarkTrendsItem(PointStruct benchmarkTrendsItem) {
     if (this.benchmarkTrends == null) {
-      this.benchmarkTrends = new ArrayList<String>();
+      this.benchmarkTrends = new ArrayList<PointStruct>();
     }
     this.benchmarkTrends.add(benchmarkTrendsItem);
     return this;
@@ -185,11 +185,11 @@ public class EffectivePlayRateStruct {
    * @return benchmarkTrends
    */
   @ApiModelProperty(value = "")
-  public List<String> getBenchmarkTrends() {
+  public List<PointStruct> getBenchmarkTrends() {
     return benchmarkTrends;
   }
 
-  public void setBenchmarkTrends(List<String> benchmarkTrends) {
+  public void setBenchmarkTrends(List<PointStruct> benchmarkTrends) {
     this.benchmarkTrends = benchmarkTrends;
   }
 

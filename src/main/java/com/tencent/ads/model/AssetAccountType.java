@@ -19,7 +19,7 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-/** 被授权账号类型，素材授权功能目前白名单灰度中，若要使用可联系运营开通 */
+/** 被授权账号类型 */
 @JsonAdapter(AssetAccountType.Adapter.class)
 public enum AssetAccountType {
   ACCOUNT_BM("ASSET_TYPE_ACCOUNT_BM"),

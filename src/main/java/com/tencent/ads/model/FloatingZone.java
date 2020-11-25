@@ -36,9 +36,6 @@ public class FloatingZone {
   @SerializedName("floating_zone_button_text")
   private String floatingZoneButtonText = null;
 
-  @SerializedName("floating_zone_show_app_property_switch")
-  private Boolean floatingZoneShowAppPropertySwitch = null;
-
   public FloatingZone floatingZoneSwitch(Boolean floatingZoneSwitch) {
     this.floatingZoneSwitch = floatingZoneSwitch;
     return this;
@@ -134,25 +131,6 @@ public class FloatingZone {
     this.floatingZoneButtonText = floatingZoneButtonText;
   }
 
-  public FloatingZone floatingZoneShowAppPropertySwitch(Boolean floatingZoneShowAppPropertySwitch) {
-    this.floatingZoneShowAppPropertySwitch = floatingZoneShowAppPropertySwitch;
-    return this;
-  }
-
-  /**
-   * Get floatingZoneShowAppPropertySwitch
-   *
-   * @return floatingZoneShowAppPropertySwitch
-   */
-  @ApiModelProperty(value = "")
-  public Boolean isFloatingZoneShowAppPropertySwitch() {
-    return floatingZoneShowAppPropertySwitch;
-  }
-
-  public void setFloatingZoneShowAppPropertySwitch(Boolean floatingZoneShowAppPropertySwitch) {
-    this.floatingZoneShowAppPropertySwitch = floatingZoneShowAppPropertySwitch;
-  }
-
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -166,9 +144,7 @@ public class FloatingZone {
         && Objects.equals(this.floatingZoneImageId, floatingZone.floatingZoneImageId)
         && Objects.equals(this.floatingZoneName, floatingZone.floatingZoneName)
         && Objects.equals(this.floatingZoneDesc, floatingZone.floatingZoneDesc)
-        && Objects.equals(this.floatingZoneButtonText, floatingZone.floatingZoneButtonText)
-        && Objects.equals(
-            this.floatingZoneShowAppPropertySwitch, floatingZone.floatingZoneShowAppPropertySwitch);
+        && Objects.equals(this.floatingZoneButtonText, floatingZone.floatingZoneButtonText);
   }
 
   @Override
@@ -178,8 +154,7 @@ public class FloatingZone {
         floatingZoneImageId,
         floatingZoneName,
         floatingZoneDesc,
-        floatingZoneButtonText,
-        floatingZoneShowAppPropertySwitch);
+        floatingZoneButtonText);
   }
 
   @Override

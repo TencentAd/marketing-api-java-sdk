@@ -117,6 +117,9 @@ public class AdgroupsAddRequest {
   @SerializedName("deep_optimization_action_type")
   private DeepOptimizationActionType deepOptimizationActionType = null;
 
+  @SerializedName("poi_list")
+  private List<String> poiList = null;
+
   @SerializedName("conversion_id")
   private Long conversionId = null;
 
@@ -137,6 +140,9 @@ public class AdgroupsAddRequest {
 
   @SerializedName("auto_acquisition_budget")
   private Long autoAcquisitionBudget = null;
+
+  @SerializedName("auto_derived_creative_enabled")
+  private Boolean autoDerivedCreativeEnabled = null;
 
   @SerializedName("account_id")
   private Long accountId = null;
@@ -792,6 +798,33 @@ public class AdgroupsAddRequest {
     this.deepOptimizationActionType = deepOptimizationActionType;
   }
 
+  public AdgroupsAddRequest poiList(List<String> poiList) {
+    this.poiList = poiList;
+    return this;
+  }
+
+  public AdgroupsAddRequest addPoiListItem(String poiListItem) {
+    if (this.poiList == null) {
+      this.poiList = new ArrayList<String>();
+    }
+    this.poiList.add(poiListItem);
+    return this;
+  }
+
+  /**
+   * Get poiList
+   *
+   * @return poiList
+   */
+  @ApiModelProperty(value = "")
+  public List<String> getPoiList() {
+    return poiList;
+  }
+
+  public void setPoiList(List<String> poiList) {
+    this.poiList = poiList;
+  }
+
   public AdgroupsAddRequest conversionId(Long conversionId) {
     this.conversionId = conversionId;
     return this;
@@ -925,6 +958,25 @@ public class AdgroupsAddRequest {
     this.autoAcquisitionBudget = autoAcquisitionBudget;
   }
 
+  public AdgroupsAddRequest autoDerivedCreativeEnabled(Boolean autoDerivedCreativeEnabled) {
+    this.autoDerivedCreativeEnabled = autoDerivedCreativeEnabled;
+    return this;
+  }
+
+  /**
+   * Get autoDerivedCreativeEnabled
+   *
+   * @return autoDerivedCreativeEnabled
+   */
+  @ApiModelProperty(value = "")
+  public Boolean isAutoDerivedCreativeEnabled() {
+    return autoDerivedCreativeEnabled;
+  }
+
+  public void setAutoDerivedCreativeEnabled(Boolean autoDerivedCreativeEnabled) {
+    this.autoDerivedCreativeEnabled = autoDerivedCreativeEnabled;
+  }
+
   public AdgroupsAddRequest accountId(Long accountId) {
     this.accountId = accountId;
     return this;
@@ -988,6 +1040,7 @@ public class AdgroupsAddRequest {
         && Objects.equals(this.deepConversionSpec, adgroupsAddRequest.deepConversionSpec)
         && Objects.equals(
             this.deepOptimizationActionType, adgroupsAddRequest.deepOptimizationActionType)
+        && Objects.equals(this.poiList, adgroupsAddRequest.poiList)
         && Objects.equals(this.conversionId, adgroupsAddRequest.conversionId)
         && Objects.equals(
             this.deepConversionBehaviorBid, adgroupsAddRequest.deepConversionBehaviorBid)
@@ -996,6 +1049,8 @@ public class AdgroupsAddRequest {
         && Objects.equals(this.bidAdjustment, adgroupsAddRequest.bidAdjustment)
         && Objects.equals(this.autoAcquisitionEnabled, adgroupsAddRequest.autoAcquisitionEnabled)
         && Objects.equals(this.autoAcquisitionBudget, adgroupsAddRequest.autoAcquisitionBudget)
+        && Objects.equals(
+            this.autoDerivedCreativeEnabled, adgroupsAddRequest.autoDerivedCreativeEnabled)
         && Objects.equals(this.accountId, adgroupsAddRequest.accountId);
   }
 
@@ -1034,6 +1089,7 @@ public class AdgroupsAddRequest {
         expandTargeting,
         deepConversionSpec,
         deepOptimizationActionType,
+        poiList,
         conversionId,
         deepConversionBehaviorBid,
         deepConversionWorthRate,
@@ -1041,6 +1097,7 @@ public class AdgroupsAddRequest {
         bidAdjustment,
         autoAcquisitionEnabled,
         autoAcquisitionBudget,
+        autoDerivedCreativeEnabled,
         accountId);
   }
 

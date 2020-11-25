@@ -38,6 +38,9 @@ public class AdQualificationsStruct {
   @SerializedName("expired_date")
   private String expiredDate = null;
 
+  @SerializedName("is_mdm_shared")
+  private AdQualificationSharedStatus isMdmShared = null;
+
   @SerializedName("reject_message")
   private String rejectMessage = null;
 
@@ -150,6 +153,25 @@ public class AdQualificationsStruct {
     this.expiredDate = expiredDate;
   }
 
+  public AdQualificationsStruct isMdmShared(AdQualificationSharedStatus isMdmShared) {
+    this.isMdmShared = isMdmShared;
+    return this;
+  }
+
+  /**
+   * Get isMdmShared
+   *
+   * @return isMdmShared
+   */
+  @ApiModelProperty(value = "")
+  public AdQualificationSharedStatus getIsMdmShared() {
+    return isMdmShared;
+  }
+
+  public void setIsMdmShared(AdQualificationSharedStatus isMdmShared) {
+    this.isMdmShared = isMdmShared;
+  }
+
   public AdQualificationsStruct rejectMessage(String rejectMessage) {
     this.rejectMessage = rejectMessage;
     return this;
@@ -221,6 +243,7 @@ public class AdQualificationsStruct {
         && Objects.equals(this.imageIdList, adQualificationsStruct.imageIdList)
         && Objects.equals(this.qualificationStatus, adQualificationsStruct.qualificationStatus)
         && Objects.equals(this.expiredDate, adQualificationsStruct.expiredDate)
+        && Objects.equals(this.isMdmShared, adQualificationsStruct.isMdmShared)
         && Objects.equals(this.rejectMessage, adQualificationsStruct.rejectMessage)
         && Objects.equals(this.createdTime, adQualificationsStruct.createdTime)
         && Objects.equals(this.lastModifiedTime, adQualificationsStruct.lastModifiedTime);
@@ -234,6 +257,7 @@ public class AdQualificationsStruct {
         imageIdList,
         qualificationStatus,
         expiredDate,
+        isMdmShared,
         rejectMessage,
         createdTime,
         lastModifiedTime);

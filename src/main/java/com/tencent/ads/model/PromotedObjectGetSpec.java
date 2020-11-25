@@ -42,6 +42,9 @@ public class PromotedObjectGetSpec {
   @SerializedName("dianping_shop")
   private ProductTypeDianpingShop dianpingShop = null;
 
+  @SerializedName("mini_game_wechat_spec")
+  private MiniGameWechatSpec miniGameWechatSpec = null;
+
   @SerializedName("qq_browser_mini_program")
   private QqBrowserMiniProgram qqBrowserMiniProgram = null;
 
@@ -181,6 +184,25 @@ public class PromotedObjectGetSpec {
     this.dianpingShop = dianpingShop;
   }
 
+  public PromotedObjectGetSpec miniGameWechatSpec(MiniGameWechatSpec miniGameWechatSpec) {
+    this.miniGameWechatSpec = miniGameWechatSpec;
+    return this;
+  }
+
+  /**
+   * Get miniGameWechatSpec
+   *
+   * @return miniGameWechatSpec
+   */
+  @ApiModelProperty(value = "")
+  public MiniGameWechatSpec getMiniGameWechatSpec() {
+    return miniGameWechatSpec;
+  }
+
+  public void setMiniGameWechatSpec(MiniGameWechatSpec miniGameWechatSpec) {
+    this.miniGameWechatSpec = miniGameWechatSpec;
+  }
+
   public PromotedObjectGetSpec qqBrowserMiniProgram(QqBrowserMiniProgram qqBrowserMiniProgram) {
     this.qqBrowserMiniProgram = qqBrowserMiniProgram;
     return this;
@@ -235,6 +257,7 @@ public class PromotedObjectGetSpec {
         && Objects.equals(this.appAndroidUnionSpec, promotedObjectGetSpec.appAndroidUnionSpec)
         && Objects.equals(this.appAndroidMyappSpec, promotedObjectGetSpec.appAndroidMyappSpec)
         && Objects.equals(this.dianpingShop, promotedObjectGetSpec.dianpingShop)
+        && Objects.equals(this.miniGameWechatSpec, promotedObjectGetSpec.miniGameWechatSpec)
         && Objects.equals(this.qqBrowserMiniProgram, promotedObjectGetSpec.qqBrowserMiniProgram)
         && Objects.equals(this.localAdsSpec, promotedObjectGetSpec.localAdsSpec);
   }
@@ -249,6 +272,7 @@ public class PromotedObjectGetSpec {
         appAndroidUnionSpec,
         appAndroidMyappSpec,
         dianpingShop,
+        miniGameWechatSpec,
         qqBrowserMiniProgram,
         localAdsSpec);
   }

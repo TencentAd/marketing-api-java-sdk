@@ -1,4 +1,8 @@
 # 更新日志
+## 2020-11-24
+1. 发布Java SDK [1.1.9] 版
+  - 新增MarketingApi接口，包括创意工具模块等
+  
 ## 2020-10-16
 1. 发布Java SDK [1.1.8] 版
   - 修复部分模型字段缺失，包括但不限于AdcreativesAddRequest.webviewUrl等

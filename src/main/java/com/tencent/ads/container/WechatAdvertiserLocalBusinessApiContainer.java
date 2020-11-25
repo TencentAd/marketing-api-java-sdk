@@ -39,12 +39,12 @@ public class WechatAdvertiserLocalBusinessApiContainer extends ApiContainer {
    * @param contactPerson (required)
    * @param contactPersonMobile (required)
    * @param contactPersonCardId (required)
-   * @param contactPersonTele (required)
    * @param corporation (required)
    * @param corporationLicence (required)
-   * @param businessContent (required)
    * @param industryId (required)
    * @param businessId (required)
+   * @param contactPersonTele (optional)
+   * @param businessContent (optional)
    * @return WechatAdvertiserLocalBusinessAddResponse
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
@@ -56,12 +56,12 @@ public class WechatAdvertiserLocalBusinessApiContainer extends ApiContainer {
       String contactPerson,
       String contactPersonMobile,
       String contactPersonCardId,
-      String contactPersonTele,
       String corporation,
       String corporationLicence,
-      String businessContent,
       Long industryId,
-      String businessId)
+      String businessId,
+      String contactPersonTele,
+      String businessContent)
       throws ApiException, TencentAdsResponseException {
     WechatAdvertiserLocalBusinessAddResponse resp =
         api.wechatAdvertiserLocalBusinessAdd(
@@ -71,12 +71,12 @@ public class WechatAdvertiserLocalBusinessApiContainer extends ApiContainer {
             contactPerson,
             contactPersonMobile,
             contactPersonCardId,
-            contactPersonTele,
             corporation,
             corporationLicence,
-            businessContent,
             industryId,
-            businessId);
+            businessId,
+            contactPersonTele,
+            businessContent);
     handleResponse(gson.toJson(resp));
     return resp.getData();
   }
@@ -107,12 +107,12 @@ public class WechatAdvertiserLocalBusinessApiContainer extends ApiContainer {
    * @param contactPerson (required)
    * @param contactPersonMobile (required)
    * @param contactPersonCardId (required)
-   * @param contactPersonTele (required)
    * @param corporation (required)
    * @param corporationLicence (required)
-   * @param businessContent (required)
    * @param industryId (required)
    * @param accountId (required)
+   * @param contactPersonTele (optional)
+   * @param businessContent (optional)
    * @return WechatAdvertiserLocalBusinessUpdateResponse
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
@@ -124,12 +124,12 @@ public class WechatAdvertiserLocalBusinessApiContainer extends ApiContainer {
       String contactPerson,
       String contactPersonMobile,
       String contactPersonCardId,
-      String contactPersonTele,
       String corporation,
       String corporationLicence,
-      String businessContent,
       Long industryId,
-      Long accountId)
+      Long accountId,
+      String contactPersonTele,
+      String businessContent)
       throws ApiException, TencentAdsResponseException {
     WechatAdvertiserLocalBusinessUpdateResponse resp =
         api.wechatAdvertiserLocalBusinessUpdate(
@@ -139,12 +139,12 @@ public class WechatAdvertiserLocalBusinessApiContainer extends ApiContainer {
             contactPerson,
             contactPersonMobile,
             contactPersonCardId,
-            contactPersonTele,
             corporation,
             corporationLicence,
-            businessContent,
             industryId,
-            accountId);
+            accountId,
+            contactPersonTele,
+            businessContent);
     handleResponse(gson.toJson(resp));
 
     return resp;

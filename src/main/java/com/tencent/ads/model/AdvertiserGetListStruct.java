@@ -65,6 +65,12 @@ public class AdvertiserGetListStruct {
   @SerializedName("websites")
   private List<WebsiteReadStruct> websites = null;
 
+  @SerializedName("mdm_id")
+  private Long mdmId = null;
+
+  @SerializedName("mdm_name")
+  private String mdmName = null;
+
   @SerializedName("agency_account_id")
   private Long agencyAccountId = null;
 
@@ -399,6 +405,44 @@ public class AdvertiserGetListStruct {
     this.websites = websites;
   }
 
+  public AdvertiserGetListStruct mdmId(Long mdmId) {
+    this.mdmId = mdmId;
+    return this;
+  }
+
+  /**
+   * Get mdmId
+   *
+   * @return mdmId
+   */
+  @ApiModelProperty(value = "")
+  public Long getMdmId() {
+    return mdmId;
+  }
+
+  public void setMdmId(Long mdmId) {
+    this.mdmId = mdmId;
+  }
+
+  public AdvertiserGetListStruct mdmName(String mdmName) {
+    this.mdmName = mdmName;
+    return this;
+  }
+
+  /**
+   * Get mdmName
+   *
+   * @return mdmName
+   */
+  @ApiModelProperty(value = "")
+  public String getMdmName() {
+    return mdmName;
+  }
+
+  public void setMdmName(String mdmName) {
+    this.mdmName = mdmName;
+  }
+
   public AdvertiserGetListStruct agencyAccountId(Long agencyAccountId) {
     this.agencyAccountId = agencyAccountId;
     return this;
@@ -700,6 +744,8 @@ public class AdvertiserGetListStruct {
         && Objects.equals(this.contactPersonMobile, advertiserGetListStruct.contactPersonMobile)
         && Objects.equals(this.wechatSpec, advertiserGetListStruct.wechatSpec)
         && Objects.equals(this.websites, advertiserGetListStruct.websites)
+        && Objects.equals(this.mdmId, advertiserGetListStruct.mdmId)
+        && Objects.equals(this.mdmName, advertiserGetListStruct.mdmName)
         && Objects.equals(this.agencyAccountId, advertiserGetListStruct.agencyAccountId)
         && Objects.equals(this.operators, advertiserGetListStruct.operators)
         && Objects.equals(this.accountId, advertiserGetListStruct.accountId)
@@ -733,6 +779,8 @@ public class AdvertiserGetListStruct {
         contactPersonMobile,
         wechatSpec,
         websites,
+        mdmId,
+        mdmName,
         agencyAccountId,
         operators,
         accountId,

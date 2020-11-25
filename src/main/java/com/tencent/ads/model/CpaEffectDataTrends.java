@@ -27,10 +27,10 @@ public class CpaEffectDataTrends {
   private Long rank = null;
 
   @SerializedName("target_cpa")
-  private List<String> targetCpa = null;
+  private List<PointStruct> targetCpa = null;
 
   @SerializedName("real_cpa")
-  private List<String> realCpa = null;
+  private List<PointStruct> realCpa = null;
 
   public CpaEffectDataTrends rank(Long rank) {
     this.rank = rank;
@@ -51,14 +51,14 @@ public class CpaEffectDataTrends {
     this.rank = rank;
   }
 
-  public CpaEffectDataTrends targetCpa(List<String> targetCpa) {
+  public CpaEffectDataTrends targetCpa(List<PointStruct> targetCpa) {
     this.targetCpa = targetCpa;
     return this;
   }
 
-  public CpaEffectDataTrends addTargetCpaItem(String targetCpaItem) {
+  public CpaEffectDataTrends addTargetCpaItem(PointStruct targetCpaItem) {
     if (this.targetCpa == null) {
-      this.targetCpa = new ArrayList<String>();
+      this.targetCpa = new ArrayList<PointStruct>();
     }
     this.targetCpa.add(targetCpaItem);
     return this;
@@ -70,22 +70,22 @@ public class CpaEffectDataTrends {
    * @return targetCpa
    */
   @ApiModelProperty(value = "")
-  public List<String> getTargetCpa() {
+  public List<PointStruct> getTargetCpa() {
     return targetCpa;
   }
 
-  public void setTargetCpa(List<String> targetCpa) {
+  public void setTargetCpa(List<PointStruct> targetCpa) {
     this.targetCpa = targetCpa;
   }
 
-  public CpaEffectDataTrends realCpa(List<String> realCpa) {
+  public CpaEffectDataTrends realCpa(List<PointStruct> realCpa) {
     this.realCpa = realCpa;
     return this;
   }
 
-  public CpaEffectDataTrends addRealCpaItem(String realCpaItem) {
+  public CpaEffectDataTrends addRealCpaItem(PointStruct realCpaItem) {
     if (this.realCpa == null) {
-      this.realCpa = new ArrayList<String>();
+      this.realCpa = new ArrayList<PointStruct>();
     }
     this.realCpa.add(realCpaItem);
     return this;
@@ -97,11 +97,11 @@ public class CpaEffectDataTrends {
    * @return realCpa
    */
   @ApiModelProperty(value = "")
-  public List<String> getRealCpa() {
+  public List<PointStruct> getRealCpa() {
     return realCpa;
   }
 
-  public void setRealCpa(List<String> realCpa) {
+  public void setRealCpa(List<PointStruct> realCpa) {
     this.realCpa = realCpa;
   }
 

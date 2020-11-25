@@ -30,7 +30,7 @@ public class DetailTargetDetailStruct {
   private Long score = null;
 
   @SerializedName("trends")
-  private List<String> trends = null;
+  private List<PointStruct> trends = null;
 
   @SerializedName("conclusion")
   private String conclusion = null;
@@ -73,14 +73,14 @@ public class DetailTargetDetailStruct {
     this.score = score;
   }
 
-  public DetailTargetDetailStruct trends(List<String> trends) {
+  public DetailTargetDetailStruct trends(List<PointStruct> trends) {
     this.trends = trends;
     return this;
   }
 
-  public DetailTargetDetailStruct addTrendsItem(String trendsItem) {
+  public DetailTargetDetailStruct addTrendsItem(PointStruct trendsItem) {
     if (this.trends == null) {
-      this.trends = new ArrayList<String>();
+      this.trends = new ArrayList<PointStruct>();
     }
     this.trends.add(trendsItem);
     return this;
@@ -92,11 +92,11 @@ public class DetailTargetDetailStruct {
    * @return trends
    */
   @ApiModelProperty(value = "")
-  public List<String> getTrends() {
+  public List<PointStruct> getTrends() {
     return trends;
   }
 
-  public void setTrends(List<String> trends) {
+  public void setTrends(List<PointStruct> trends) {
     this.trends = trends;
   }
 
