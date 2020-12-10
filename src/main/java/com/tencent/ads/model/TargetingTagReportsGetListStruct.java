@@ -291,6 +291,15 @@ public class TargetingTagReportsGetListStruct {
   @SerializedName("add_desktop_cost")
   private Long addDesktopCost = null;
 
+  @SerializedName("store_visitor")
+  private Long storeVisitor = null;
+
+  @SerializedName("try_out_user")
+  private Long tryOutUser = null;
+
+  @SerializedName("consult_leave_info_users")
+  private Long consultLeaveInfoUsers = null;
+
   @SerializedName("age")
   private String age = null;
 
@@ -2576,6 +2585,63 @@ public class TargetingTagReportsGetListStruct {
 
   public void setAddDesktopCost(Long addDesktopCost) {
     this.addDesktopCost = addDesktopCost;
+  }
+
+  public TargetingTagReportsGetListStruct storeVisitor(Long storeVisitor) {
+    this.storeVisitor = storeVisitor;
+    return this;
+  }
+
+  /**
+   * Get storeVisitor
+   *
+   * @return storeVisitor
+   */
+  @ApiModelProperty(value = "")
+  public Long getStoreVisitor() {
+    return storeVisitor;
+  }
+
+  public void setStoreVisitor(Long storeVisitor) {
+    this.storeVisitor = storeVisitor;
+  }
+
+  public TargetingTagReportsGetListStruct tryOutUser(Long tryOutUser) {
+    this.tryOutUser = tryOutUser;
+    return this;
+  }
+
+  /**
+   * Get tryOutUser
+   *
+   * @return tryOutUser
+   */
+  @ApiModelProperty(value = "")
+  public Long getTryOutUser() {
+    return tryOutUser;
+  }
+
+  public void setTryOutUser(Long tryOutUser) {
+    this.tryOutUser = tryOutUser;
+  }
+
+  public TargetingTagReportsGetListStruct consultLeaveInfoUsers(Long consultLeaveInfoUsers) {
+    this.consultLeaveInfoUsers = consultLeaveInfoUsers;
+    return this;
+  }
+
+  /**
+   * Get consultLeaveInfoUsers
+   *
+   * @return consultLeaveInfoUsers
+   */
+  @ApiModelProperty(value = "")
+  public Long getConsultLeaveInfoUsers() {
+    return consultLeaveInfoUsers;
+  }
+
+  public void setConsultLeaveInfoUsers(Long consultLeaveInfoUsers) {
+    this.consultLeaveInfoUsers = consultLeaveInfoUsers;
   }
 
   public TargetingTagReportsGetListStruct age(String age) {
@@ -6354,6 +6420,10 @@ public class TargetingTagReportsGetListStruct {
         && Objects.equals(this.fromFollowCost, targetingTagReportsGetListStruct.fromFollowCost)
         && Objects.equals(this.addDesktopPv, targetingTagReportsGetListStruct.addDesktopPv)
         && Objects.equals(this.addDesktopCost, targetingTagReportsGetListStruct.addDesktopCost)
+        && Objects.equals(this.storeVisitor, targetingTagReportsGetListStruct.storeVisitor)
+        && Objects.equals(this.tryOutUser, targetingTagReportsGetListStruct.tryOutUser)
+        && Objects.equals(
+            this.consultLeaveInfoUsers, targetingTagReportsGetListStruct.consultLeaveInfoUsers)
         && Objects.equals(this.age, targetingTagReportsGetListStruct.age)
         && Objects.equals(this.regionId, targetingTagReportsGetListStruct.regionId)
         && Objects.equals(this.cityId, targetingTagReportsGetListStruct.cityId)
@@ -6730,6 +6800,9 @@ public class TargetingTagReportsGetListStruct {
         fromFollowCost,
         addDesktopPv,
         addDesktopCost,
+        storeVisitor,
+        tryOutUser,
+        consultLeaveInfoUsers,
         age,
         regionId,
         cityId,

@@ -19,20 +19,28 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-/** 商品库行业类型 */
-@JsonAdapter(CatalogIndustry.Adapter.class)
-public enum CatalogIndustry {
-  ECOMMERCE("INDUSTRY_TYPE_ECOMMERCE"),
+/** 服装套数 */
+@JsonAdapter(ClothCount.Adapter.class)
+public enum ClothCount {
+  _1("CLOTH_COUNT_1"),
 
-  READING("INDUSTRY_TYPE_READING"),
+  _2("CLOTH_COUNT_2"),
 
-  EDUCATION("INDUSTRY_TYPE_EDUCATION"),
+  _3("CLOTH_COUNT_3"),
 
-  WEDDING("INDUSTRY_TYPE_WEDDING");
+  _4("CLOTH_COUNT_4"),
+
+  _5("CLOTH_COUNT_5"),
+
+  _6("CLOTH_COUNT_6"),
+
+  _7("CLOTH_COUNT_7"),
+
+  N("CLOTH_COUNT_N");
 
   private String value;
 
-  CatalogIndustry(String value) {
+  ClothCount(String value) {
     this.value = value;
   }
 
@@ -45,8 +53,8 @@ public enum CatalogIndustry {
     return String.valueOf(value);
   }
 
-  public static CatalogIndustry fromValue(String text) {
-    for (CatalogIndustry b : CatalogIndustry.values()) {
+  public static ClothCount fromValue(String text) {
+    for (ClothCount b : ClothCount.values()) {
       if (String.valueOf(b.value).equals(text)) {
         return b;
       }
@@ -54,17 +62,17 @@ public enum CatalogIndustry {
     return null;
   }
 
-  public static class Adapter extends TypeAdapter<CatalogIndustry> {
+  public static class Adapter extends TypeAdapter<ClothCount> {
     @Override
-    public void write(final JsonWriter jsonWriter, final CatalogIndustry enumeration)
+    public void write(final JsonWriter jsonWriter, final ClothCount enumeration)
         throws IOException {
       jsonWriter.value(enumeration.getValue());
     }
 
     @Override
-    public CatalogIndustry read(final JsonReader jsonReader) throws IOException {
+    public ClothCount read(final JsonReader jsonReader) throws IOException {
       String value = jsonReader.nextString();
-      return CatalogIndustry.fromValue(String.valueOf(value));
+      return ClothCount.fromValue(String.valueOf(value));
     }
   }
 }

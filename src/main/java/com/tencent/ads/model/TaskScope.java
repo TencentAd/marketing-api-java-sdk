@@ -32,7 +32,9 @@ public enum TaskScope {
 
   SCHEDULED_TASK("TASK_SCOPE_SCHEDULED_TASK"),
 
-  AD("TASK_SCOPE_AD");
+  AD("TASK_SCOPE_AD"),
+
+  ADCREATIVE("TASK_SCOPE_ADCREATIVE");
 
   private String value;
 

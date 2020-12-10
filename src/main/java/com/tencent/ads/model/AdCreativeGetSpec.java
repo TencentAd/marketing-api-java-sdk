@@ -31,7 +31,7 @@ public class AdCreativeGetSpec {
   private DpAdcreativeCreativeElementsMp adcreativeElements = null;
 
   @SerializedName("page_type")
-  private DpApiDestinationType pageType = null;
+  private DestinationType pageType = null;
 
   @SerializedName("page_spec")
   private DpPageSpec pageSpec = null;
@@ -93,7 +93,7 @@ public class AdCreativeGetSpec {
     this.adcreativeElements = adcreativeElements;
   }
 
-  public AdCreativeGetSpec pageType(DpApiDestinationType pageType) {
+  public AdCreativeGetSpec pageType(DestinationType pageType) {
     this.pageType = pageType;
     return this;
   }
@@ -104,11 +104,11 @@ public class AdCreativeGetSpec {
    * @return pageType
    */
   @ApiModelProperty(value = "")
-  public DpApiDestinationType getPageType() {
+  public DestinationType getPageType() {
     return pageType;
   }
 
-  public void setPageType(DpApiDestinationType pageType) {
+  public void setPageType(DestinationType pageType) {
     this.pageType = pageType;
   }
 

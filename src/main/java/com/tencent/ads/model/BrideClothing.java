@@ -19,20 +19,28 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-/** 商品库行业类型 */
-@JsonAdapter(CatalogIndustry.Adapter.class)
-public enum CatalogIndustry {
-  ECOMMERCE("INDUSTRY_TYPE_ECOMMERCE"),
+/** 新娘服装 */
+@JsonAdapter(BrideClothing.Adapter.class)
+public enum BrideClothing {
+  _1("BRIDE_CLOTHING_1"),
 
-  READING("INDUSTRY_TYPE_READING"),
+  _2("BRIDE_CLOTHING_2"),
 
-  EDUCATION("INDUSTRY_TYPE_EDUCATION"),
+  _3("BRIDE_CLOTHING_3"),
 
-  WEDDING("INDUSTRY_TYPE_WEDDING");
+  _4("BRIDE_CLOTHING_4"),
+
+  _5("BRIDE_CLOTHING_5"),
+
+  _6("BRIDE_CLOTHING_6"),
+
+  _7("BRIDE_CLOTHING_7"),
+
+  N("BRIDE_CLOTHING_N");
 
   private String value;
 
-  CatalogIndustry(String value) {
+  BrideClothing(String value) {
     this.value = value;
   }
 
@@ -45,8 +53,8 @@ public enum CatalogIndustry {
     return String.valueOf(value);
   }
 
-  public static CatalogIndustry fromValue(String text) {
-    for (CatalogIndustry b : CatalogIndustry.values()) {
+  public static BrideClothing fromValue(String text) {
+    for (BrideClothing b : BrideClothing.values()) {
       if (String.valueOf(b.value).equals(text)) {
         return b;
       }
@@ -54,17 +62,17 @@ public enum CatalogIndustry {
     return null;
   }
 
-  public static class Adapter extends TypeAdapter<CatalogIndustry> {
+  public static class Adapter extends TypeAdapter<BrideClothing> {
     @Override
-    public void write(final JsonWriter jsonWriter, final CatalogIndustry enumeration)
+    public void write(final JsonWriter jsonWriter, final BrideClothing enumeration)
         throws IOException {
       jsonWriter.value(enumeration.getValue());
     }
 
     @Override
-    public CatalogIndustry read(final JsonReader jsonReader) throws IOException {
+    public BrideClothing read(final JsonReader jsonReader) throws IOException {
       String value = jsonReader.nextString();
-      return CatalogIndustry.fromValue(String.valueOf(value));
+      return BrideClothing.fromValue(String.valueOf(value));
     }
   }
 }

@@ -19,20 +19,28 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-/** 商品库行业类型 */
-@JsonAdapter(CatalogIndustry.Adapter.class)
-public enum CatalogIndustry {
-  ECOMMERCE("INDUSTRY_TYPE_ECOMMERCE"),
+/** 内景数量 */
+@JsonAdapter(ShootingSceneInCount.Adapter.class)
+public enum ShootingSceneInCount {
+  _1("SHOOTING_SCENE_IN_COUNT_1"),
 
-  READING("INDUSTRY_TYPE_READING"),
+  _2("SHOOTING_SCENE_IN_COUNT_2"),
 
-  EDUCATION("INDUSTRY_TYPE_EDUCATION"),
+  _3("SHOOTING_SCENE_IN_COUNT_3"),
 
-  WEDDING("INDUSTRY_TYPE_WEDDING");
+  _4("SHOOTING_SCENE_IN_COUNT_4"),
+
+  _5("SHOOTING_SCENE_IN_COUNT_5"),
+
+  _6("SHOOTING_SCENE_IN_COUNT_6"),
+
+  _7("SHOOTING_SCENE_IN_COUNT_7"),
+
+  N("SHOOTING_SCENE_IN_COUNT_N");
 
   private String value;
 
-  CatalogIndustry(String value) {
+  ShootingSceneInCount(String value) {
     this.value = value;
   }
 
@@ -45,8 +53,8 @@ public enum CatalogIndustry {
     return String.valueOf(value);
   }
 
-  public static CatalogIndustry fromValue(String text) {
-    for (CatalogIndustry b : CatalogIndustry.values()) {
+  public static ShootingSceneInCount fromValue(String text) {
+    for (ShootingSceneInCount b : ShootingSceneInCount.values()) {
       if (String.valueOf(b.value).equals(text)) {
         return b;
       }
@@ -54,17 +62,17 @@ public enum CatalogIndustry {
     return null;
   }
 
-  public static class Adapter extends TypeAdapter<CatalogIndustry> {
+  public static class Adapter extends TypeAdapter<ShootingSceneInCount> {
     @Override
-    public void write(final JsonWriter jsonWriter, final CatalogIndustry enumeration)
+    public void write(final JsonWriter jsonWriter, final ShootingSceneInCount enumeration)
         throws IOException {
       jsonWriter.value(enumeration.getValue());
     }
 
     @Override
-    public CatalogIndustry read(final JsonReader jsonReader) throws IOException {
+    public ShootingSceneInCount read(final JsonReader jsonReader) throws IOException {
       String value = jsonReader.nextString();
-      return CatalogIndustry.fromValue(String.valueOf(value));
+      return ShootingSceneInCount.fromValue(String.valueOf(value));
     }
   }
 }

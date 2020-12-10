@@ -47,6 +47,9 @@ public class DynamicCreativeElementsRead {
   @SerializedName("image_options")
   private List<String> imageOptions = null;
 
+  @SerializedName("image_list_options")
+  private List<ImageListOptions> imageListOptions = null;
+
   @SerializedName("title_options")
   private List<String> titleOptions = null;
 
@@ -55,6 +58,9 @@ public class DynamicCreativeElementsRead {
 
   @SerializedName("video_options")
   private List<String> videoOptions = null;
+
+  @SerializedName("short_video_struct_options")
+  private List<ShortVideoStruct> shortVideoStructOptions = null;
 
   @SerializedName("deep_link_type")
   private String deepLinkType = null;
@@ -372,6 +378,34 @@ public class DynamicCreativeElementsRead {
     this.imageOptions = imageOptions;
   }
 
+  public DynamicCreativeElementsRead imageListOptions(List<ImageListOptions> imageListOptions) {
+    this.imageListOptions = imageListOptions;
+    return this;
+  }
+
+  public DynamicCreativeElementsRead addImageListOptionsItem(
+      ImageListOptions imageListOptionsItem) {
+    if (this.imageListOptions == null) {
+      this.imageListOptions = new ArrayList<ImageListOptions>();
+    }
+    this.imageListOptions.add(imageListOptionsItem);
+    return this;
+  }
+
+  /**
+   * Get imageListOptions
+   *
+   * @return imageListOptions
+   */
+  @ApiModelProperty(value = "")
+  public List<ImageListOptions> getImageListOptions() {
+    return imageListOptions;
+  }
+
+  public void setImageListOptions(List<ImageListOptions> imageListOptions) {
+    this.imageListOptions = imageListOptions;
+  }
+
   public DynamicCreativeElementsRead titleOptions(List<String> titleOptions) {
     this.titleOptions = titleOptions;
     return this;
@@ -451,6 +485,35 @@ public class DynamicCreativeElementsRead {
 
   public void setVideoOptions(List<String> videoOptions) {
     this.videoOptions = videoOptions;
+  }
+
+  public DynamicCreativeElementsRead shortVideoStructOptions(
+      List<ShortVideoStruct> shortVideoStructOptions) {
+    this.shortVideoStructOptions = shortVideoStructOptions;
+    return this;
+  }
+
+  public DynamicCreativeElementsRead addShortVideoStructOptionsItem(
+      ShortVideoStruct shortVideoStructOptionsItem) {
+    if (this.shortVideoStructOptions == null) {
+      this.shortVideoStructOptions = new ArrayList<ShortVideoStruct>();
+    }
+    this.shortVideoStructOptions.add(shortVideoStructOptionsItem);
+    return this;
+  }
+
+  /**
+   * Get shortVideoStructOptions
+   *
+   * @return shortVideoStructOptions
+   */
+  @ApiModelProperty(value = "")
+  public List<ShortVideoStruct> getShortVideoStructOptions() {
+    return shortVideoStructOptions;
+  }
+
+  public void setShortVideoStructOptions(List<ShortVideoStruct> shortVideoStructOptions) {
+    this.shortVideoStructOptions = shortVideoStructOptions;
   }
 
   public DynamicCreativeElementsRead deepLinkType(String deepLinkType) {
@@ -1494,9 +1557,12 @@ public class DynamicCreativeElementsRead {
         && Objects.equals(this.corporate, dynamicCreativeElementsRead.corporate)
         && Objects.equals(this.video, dynamicCreativeElementsRead.video)
         && Objects.equals(this.imageOptions, dynamicCreativeElementsRead.imageOptions)
+        && Objects.equals(this.imageListOptions, dynamicCreativeElementsRead.imageListOptions)
         && Objects.equals(this.titleOptions, dynamicCreativeElementsRead.titleOptions)
         && Objects.equals(this.descriptionOptions, dynamicCreativeElementsRead.descriptionOptions)
         && Objects.equals(this.videoOptions, dynamicCreativeElementsRead.videoOptions)
+        && Objects.equals(
+            this.shortVideoStructOptions, dynamicCreativeElementsRead.shortVideoStructOptions)
         && Objects.equals(this.deepLinkType, dynamicCreativeElementsRead.deepLinkType)
         && Objects.equals(this.linkNameType, dynamicCreativeElementsRead.linkNameType)
         && Objects.equals(this.imageList, dynamicCreativeElementsRead.imageList)
@@ -1568,9 +1634,11 @@ public class DynamicCreativeElementsRead {
         corporate,
         video,
         imageOptions,
+        imageListOptions,
         titleOptions,
         descriptionOptions,
         videoOptions,
+        shortVideoStructOptions,
         deepLinkType,
         linkNameType,
         imageList,

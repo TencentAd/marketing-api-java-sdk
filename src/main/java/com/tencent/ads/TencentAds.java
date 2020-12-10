@@ -14,7 +14,7 @@ public class TencentAds extends CustomApp {
 
   private static String basePath = "https://sandbox-api.e.qq.com/v1.3";
 
-  private static final String SDK_VERSION = "1.1.9";
+  private static final String SDK_VERSION = "1.1.10";
 
   private TencentAds() {}
 
@@ -68,9 +68,16 @@ public class TencentAds extends CustomApp {
     this.setHost(basePath);
   }
 
-  public void setIpPort(String ip, int port) {
-    basePath = SCHEMA + "://" + ip + ":" + port + "/" + API_VERSION;
+  public void setIpPort(String ip, int port, boolean useHttps) {
+    if (useHttps) {
+      basePath = "https://" + ip + ":" + port + "/" + API_VERSION;
+    } else {
+      basePath = "http://" + ip + ":" + port + "/" + API_VERSION;
+    }
     this.setHost(basePath);
+    Map<String, String> monitorHeader = new HashMap<>();
+    monitorHeader.put("Host", "api.e.qq.com");
+    setHeader(monitorHeader);
   }
 
   public void setHeader(Map<String, String> headerMap) {

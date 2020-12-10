@@ -768,6 +768,15 @@ public class HourlyReportsGetListStruct {
   @SerializedName("pre_cre_app_cost")
   private Long preCreAppCost = null;
 
+  @SerializedName("store_visitor")
+  private Long storeVisitor = null;
+
+  @SerializedName("try_out_user")
+  private Long tryOutUser = null;
+
+  @SerializedName("consult_leave_info_users")
+  private Long consultLeaveInfoUsers = null;
+
   @SerializedName("request_conversions_count")
   private Long requestConversionsCount = null;
 
@@ -5809,6 +5818,63 @@ public class HourlyReportsGetListStruct {
     this.preCreAppCost = preCreAppCost;
   }
 
+  public HourlyReportsGetListStruct storeVisitor(Long storeVisitor) {
+    this.storeVisitor = storeVisitor;
+    return this;
+  }
+
+  /**
+   * Get storeVisitor
+   *
+   * @return storeVisitor
+   */
+  @ApiModelProperty(value = "")
+  public Long getStoreVisitor() {
+    return storeVisitor;
+  }
+
+  public void setStoreVisitor(Long storeVisitor) {
+    this.storeVisitor = storeVisitor;
+  }
+
+  public HourlyReportsGetListStruct tryOutUser(Long tryOutUser) {
+    this.tryOutUser = tryOutUser;
+    return this;
+  }
+
+  /**
+   * Get tryOutUser
+   *
+   * @return tryOutUser
+   */
+  @ApiModelProperty(value = "")
+  public Long getTryOutUser() {
+    return tryOutUser;
+  }
+
+  public void setTryOutUser(Long tryOutUser) {
+    this.tryOutUser = tryOutUser;
+  }
+
+  public HourlyReportsGetListStruct consultLeaveInfoUsers(Long consultLeaveInfoUsers) {
+    this.consultLeaveInfoUsers = consultLeaveInfoUsers;
+    return this;
+  }
+
+  /**
+   * Get consultLeaveInfoUsers
+   *
+   * @return consultLeaveInfoUsers
+   */
+  @ApiModelProperty(value = "")
+  public Long getConsultLeaveInfoUsers() {
+    return consultLeaveInfoUsers;
+  }
+
+  public void setConsultLeaveInfoUsers(Long consultLeaveInfoUsers) {
+    this.consultLeaveInfoUsers = consultLeaveInfoUsers;
+  }
+
   public HourlyReportsGetListStruct requestConversionsCount(Long requestConversionsCount) {
     this.requestConversionsCount = requestConversionsCount;
     return this;
@@ -8097,6 +8163,10 @@ public class HourlyReportsGetListStruct {
         && Objects.equals(this.creAppCost, hourlyReportsGetListStruct.creAppCost)
         && Objects.equals(this.preCreWebCost, hourlyReportsGetListStruct.preCreWebCost)
         && Objects.equals(this.preCreAppCost, hourlyReportsGetListStruct.preCreAppCost)
+        && Objects.equals(this.storeVisitor, hourlyReportsGetListStruct.storeVisitor)
+        && Objects.equals(this.tryOutUser, hourlyReportsGetListStruct.tryOutUser)
+        && Objects.equals(
+            this.consultLeaveInfoUsers, hourlyReportsGetListStruct.consultLeaveInfoUsers)
         && Objects.equals(
             this.requestConversionsCount, hourlyReportsGetListStruct.requestConversionsCount)
         && Objects.equals(
@@ -8524,6 +8594,9 @@ public class HourlyReportsGetListStruct {
         creAppCost,
         preCreWebCost,
         preCreAppCost,
+        storeVisitor,
+        tryOutUser,
+        consultLeaveInfoUsers,
         requestConversionsCount,
         requestConversionsCost,
         incomeRoi1,

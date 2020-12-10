@@ -44,6 +44,9 @@ public class RevisedAdcreativeElements {
   @SerializedName("video")
   private String video = null;
 
+  @SerializedName("deep_link_type")
+  private String deepLinkType = null;
+
   @SerializedName("link_name_type")
   private LinkNameTypeMP linkNameType = null;
 
@@ -61,6 +64,9 @@ public class RevisedAdcreativeElements {
 
   @SerializedName("bottom_text")
   private String bottomText = null;
+
+  @SerializedName("countdown")
+  private Long countdown = null;
 
   @SerializedName("mini_program_id")
   private String miniProgramId = null;
@@ -107,6 +113,9 @@ public class RevisedAdcreativeElements {
   @SerializedName("video_popup_button")
   private AdcreativeVideoPopupButton videoPopupButton = null;
 
+  @SerializedName("button_url")
+  private String buttonUrl = null;
+
   @SerializedName("brand")
   private AdCreativeBrand brand = null;
 
@@ -124,9 +133,6 @@ public class RevisedAdcreativeElements {
 
   @SerializedName("end_page")
   private AdCreativeEndPage endPage = null;
-
-  @SerializedName("countdown_expiring_timestamp")
-  private Long countdownExpiringTimestamp = null;
 
   public RevisedAdcreativeElements image(String image) {
     this.image = image;
@@ -261,6 +267,25 @@ public class RevisedAdcreativeElements {
     this.video = video;
   }
 
+  public RevisedAdcreativeElements deepLinkType(String deepLinkType) {
+    this.deepLinkType = deepLinkType;
+    return this;
+  }
+
+  /**
+   * Get deepLinkType
+   *
+   * @return deepLinkType
+   */
+  @ApiModelProperty(value = "")
+  public String getDeepLinkType() {
+    return deepLinkType;
+  }
+
+  public void setDeepLinkType(String deepLinkType) {
+    this.deepLinkType = deepLinkType;
+  }
+
   public RevisedAdcreativeElements linkNameType(LinkNameTypeMP linkNameType) {
     this.linkNameType = linkNameType;
     return this;
@@ -391,6 +416,25 @@ public class RevisedAdcreativeElements {
 
   public void setBottomText(String bottomText) {
     this.bottomText = bottomText;
+  }
+
+  public RevisedAdcreativeElements countdown(Long countdown) {
+    this.countdown = countdown;
+    return this;
+  }
+
+  /**
+   * Get countdown
+   *
+   * @return countdown
+   */
+  @ApiModelProperty(value = "")
+  public Long getCountdown() {
+    return countdown;
+  }
+
+  public void setCountdown(Long countdown) {
+    this.countdown = countdown;
   }
 
   public RevisedAdcreativeElements miniProgramId(String miniProgramId) {
@@ -694,6 +738,25 @@ public class RevisedAdcreativeElements {
     this.videoPopupButton = videoPopupButton;
   }
 
+  public RevisedAdcreativeElements buttonUrl(String buttonUrl) {
+    this.buttonUrl = buttonUrl;
+    return this;
+  }
+
+  /**
+   * Get buttonUrl
+   *
+   * @return buttonUrl
+   */
+  @ApiModelProperty(value = "")
+  public String getButtonUrl() {
+    return buttonUrl;
+  }
+
+  public void setButtonUrl(String buttonUrl) {
+    this.buttonUrl = buttonUrl;
+  }
+
   public RevisedAdcreativeElements brand(AdCreativeBrand brand) {
     this.brand = brand;
     return this;
@@ -808,25 +871,6 @@ public class RevisedAdcreativeElements {
     this.endPage = endPage;
   }
 
-  public RevisedAdcreativeElements countdownExpiringTimestamp(Long countdownExpiringTimestamp) {
-    this.countdownExpiringTimestamp = countdownExpiringTimestamp;
-    return this;
-  }
-
-  /**
-   * Get countdownExpiringTimestamp
-   *
-   * @return countdownExpiringTimestamp
-   */
-  @ApiModelProperty(value = "")
-  public Long getCountdownExpiringTimestamp() {
-    return countdownExpiringTimestamp;
-  }
-
-  public void setCountdownExpiringTimestamp(Long countdownExpiringTimestamp) {
-    this.countdownExpiringTimestamp = countdownExpiringTimestamp;
-  }
-
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -843,12 +887,14 @@ public class RevisedAdcreativeElements {
         && Objects.equals(this.description, revisedAdcreativeElements.description)
         && Objects.equals(this.corporate, revisedAdcreativeElements.corporate)
         && Objects.equals(this.video, revisedAdcreativeElements.video)
+        && Objects.equals(this.deepLinkType, revisedAdcreativeElements.deepLinkType)
         && Objects.equals(this.linkNameType, revisedAdcreativeElements.linkNameType)
         && Objects.equals(this.imageList, revisedAdcreativeElements.imageList)
         && Objects.equals(this.elementStory, revisedAdcreativeElements.elementStory)
         && Objects.equals(this.url, revisedAdcreativeElements.url)
         && Objects.equals(this.buttonText, revisedAdcreativeElements.buttonText)
         && Objects.equals(this.bottomText, revisedAdcreativeElements.bottomText)
+        && Objects.equals(this.countdown, revisedAdcreativeElements.countdown)
         && Objects.equals(this.miniProgramId, revisedAdcreativeElements.miniProgramId)
         && Objects.equals(this.miniProgramPath, revisedAdcreativeElements.miniProgramPath)
         && Objects.equals(this.label, revisedAdcreativeElements.label)
@@ -864,14 +910,13 @@ public class RevisedAdcreativeElements {
         && Objects.equals(this.cardContent, revisedAdcreativeElements.cardContent)
         && Objects.equals(this.videoPopupUrl, revisedAdcreativeElements.videoPopupUrl)
         && Objects.equals(this.videoPopupButton, revisedAdcreativeElements.videoPopupButton)
+        && Objects.equals(this.buttonUrl, revisedAdcreativeElements.buttonUrl)
         && Objects.equals(this.brand, revisedAdcreativeElements.brand)
         && Objects.equals(this.caption, revisedAdcreativeElements.caption)
         && Objects.equals(this.labelledImg, revisedAdcreativeElements.labelledImg)
         && Objects.equals(this.fullScreenImage, revisedAdcreativeElements.fullScreenImage)
         && Objects.equals(this.zipUrl, revisedAdcreativeElements.zipUrl)
-        && Objects.equals(this.endPage, revisedAdcreativeElements.endPage)
-        && Objects.equals(
-            this.countdownExpiringTimestamp, revisedAdcreativeElements.countdownExpiringTimestamp);
+        && Objects.equals(this.endPage, revisedAdcreativeElements.endPage);
   }
 
   @Override
@@ -884,12 +929,14 @@ public class RevisedAdcreativeElements {
         description,
         corporate,
         video,
+        deepLinkType,
         linkNameType,
         imageList,
         elementStory,
         url,
         buttonText,
         bottomText,
+        countdown,
         miniProgramId,
         miniProgramPath,
         label,
@@ -905,13 +952,13 @@ public class RevisedAdcreativeElements {
         cardContent,
         videoPopupUrl,
         videoPopupButton,
+        buttonUrl,
         brand,
         caption,
         labelledImg,
         fullScreenImage,
         zipUrl,
-        endPage,
-        countdownExpiringTimestamp);
+        endPage);
   }
 
   @Override

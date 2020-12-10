@@ -269,6 +269,69 @@ public class ProductItemSpec {
   @SerializedName("custom_data")
   private String customData = null;
 
+  @SerializedName("shooting_pic_count")
+  private Long shootingPicCount = null;
+
+  @SerializedName("fineedit_count")
+  private Long fineeditCount = null;
+
+  @SerializedName("album_photo_count")
+  private Long albumPhotoCount = null;
+
+  @SerializedName("album_count")
+  private Long albumCount = null;
+
+  @SerializedName("frame_count")
+  private Long frameCount = null;
+
+  @SerializedName("country")
+  private String country = null;
+
+  @SerializedName("province")
+  private String province = null;
+
+  @SerializedName("city")
+  private String city = null;
+
+  @SerializedName("district")
+  private String district = null;
+
+  @SerializedName("address")
+  private List<String> address = null;
+
+  @SerializedName("shooting_scene_in_count")
+  private ShootingSceneInCount shootingSceneInCount = null;
+
+  @SerializedName("shooting_scene_out_count")
+  private ShootingSceneOutCount shootingSceneOutCount = null;
+
+  @SerializedName("bride_clothing")
+  private BrideClothing brideClothing = null;
+
+  @SerializedName("groom_clothing")
+  private GroomClothing groomClothing = null;
+
+  @SerializedName("cloth_count")
+  private ClothCount clothCount = null;
+
+  @SerializedName("shooting_scene")
+  private ShootingScene shootingScene = null;
+
+  @SerializedName("set_special")
+  private List<String> setSpecial = null;
+
+  @SerializedName("shooting_style_com")
+  private List<String> shootingStyleCom = null;
+
+  @SerializedName("shooting_scene_detail")
+  private List<String> shootingSceneDetail = null;
+
+  @SerializedName("tour_place_domestic")
+  private TourPlaceDomestic tourPlaceDomestic = null;
+
+  @SerializedName("tour_place_foreign")
+  private TourPlaceForeign tourPlaceForeign = null;
+
   public ProductItemSpec productOuterId(String productOuterId) {
     this.productOuterId = productOuterId;
     return this;
@@ -1875,6 +1938,437 @@ public class ProductItemSpec {
     this.customData = customData;
   }
 
+  public ProductItemSpec shootingPicCount(Long shootingPicCount) {
+    this.shootingPicCount = shootingPicCount;
+    return this;
+  }
+
+  /**
+   * Get shootingPicCount
+   *
+   * @return shootingPicCount
+   */
+  @ApiModelProperty(value = "")
+  public Long getShootingPicCount() {
+    return shootingPicCount;
+  }
+
+  public void setShootingPicCount(Long shootingPicCount) {
+    this.shootingPicCount = shootingPicCount;
+  }
+
+  public ProductItemSpec fineeditCount(Long fineeditCount) {
+    this.fineeditCount = fineeditCount;
+    return this;
+  }
+
+  /**
+   * Get fineeditCount
+   *
+   * @return fineeditCount
+   */
+  @ApiModelProperty(value = "")
+  public Long getFineeditCount() {
+    return fineeditCount;
+  }
+
+  public void setFineeditCount(Long fineeditCount) {
+    this.fineeditCount = fineeditCount;
+  }
+
+  public ProductItemSpec albumPhotoCount(Long albumPhotoCount) {
+    this.albumPhotoCount = albumPhotoCount;
+    return this;
+  }
+
+  /**
+   * Get albumPhotoCount
+   *
+   * @return albumPhotoCount
+   */
+  @ApiModelProperty(value = "")
+  public Long getAlbumPhotoCount() {
+    return albumPhotoCount;
+  }
+
+  public void setAlbumPhotoCount(Long albumPhotoCount) {
+    this.albumPhotoCount = albumPhotoCount;
+  }
+
+  public ProductItemSpec albumCount(Long albumCount) {
+    this.albumCount = albumCount;
+    return this;
+  }
+
+  /**
+   * Get albumCount
+   *
+   * @return albumCount
+   */
+  @ApiModelProperty(value = "")
+  public Long getAlbumCount() {
+    return albumCount;
+  }
+
+  public void setAlbumCount(Long albumCount) {
+    this.albumCount = albumCount;
+  }
+
+  public ProductItemSpec frameCount(Long frameCount) {
+    this.frameCount = frameCount;
+    return this;
+  }
+
+  /**
+   * Get frameCount
+   *
+   * @return frameCount
+   */
+  @ApiModelProperty(value = "")
+  public Long getFrameCount() {
+    return frameCount;
+  }
+
+  public void setFrameCount(Long frameCount) {
+    this.frameCount = frameCount;
+  }
+
+  public ProductItemSpec country(String country) {
+    this.country = country;
+    return this;
+  }
+
+  /**
+   * Get country
+   *
+   * @return country
+   */
+  @ApiModelProperty(value = "")
+  public String getCountry() {
+    return country;
+  }
+
+  public void setCountry(String country) {
+    this.country = country;
+  }
+
+  public ProductItemSpec province(String province) {
+    this.province = province;
+    return this;
+  }
+
+  /**
+   * Get province
+   *
+   * @return province
+   */
+  @ApiModelProperty(value = "")
+  public String getProvince() {
+    return province;
+  }
+
+  public void setProvince(String province) {
+    this.province = province;
+  }
+
+  public ProductItemSpec city(String city) {
+    this.city = city;
+    return this;
+  }
+
+  /**
+   * Get city
+   *
+   * @return city
+   */
+  @ApiModelProperty(value = "")
+  public String getCity() {
+    return city;
+  }
+
+  public void setCity(String city) {
+    this.city = city;
+  }
+
+  public ProductItemSpec district(String district) {
+    this.district = district;
+    return this;
+  }
+
+  /**
+   * Get district
+   *
+   * @return district
+   */
+  @ApiModelProperty(value = "")
+  public String getDistrict() {
+    return district;
+  }
+
+  public void setDistrict(String district) {
+    this.district = district;
+  }
+
+  public ProductItemSpec address(List<String> address) {
+    this.address = address;
+    return this;
+  }
+
+  public ProductItemSpec addAddressItem(String addressItem) {
+    if (this.address == null) {
+      this.address = new ArrayList<String>();
+    }
+    this.address.add(addressItem);
+    return this;
+  }
+
+  /**
+   * Get address
+   *
+   * @return address
+   */
+  @ApiModelProperty(value = "")
+  public List<String> getAddress() {
+    return address;
+  }
+
+  public void setAddress(List<String> address) {
+    this.address = address;
+  }
+
+  public ProductItemSpec shootingSceneInCount(ShootingSceneInCount shootingSceneInCount) {
+    this.shootingSceneInCount = shootingSceneInCount;
+    return this;
+  }
+
+  /**
+   * Get shootingSceneInCount
+   *
+   * @return shootingSceneInCount
+   */
+  @ApiModelProperty(value = "")
+  public ShootingSceneInCount getShootingSceneInCount() {
+    return shootingSceneInCount;
+  }
+
+  public void setShootingSceneInCount(ShootingSceneInCount shootingSceneInCount) {
+    this.shootingSceneInCount = shootingSceneInCount;
+  }
+
+  public ProductItemSpec shootingSceneOutCount(ShootingSceneOutCount shootingSceneOutCount) {
+    this.shootingSceneOutCount = shootingSceneOutCount;
+    return this;
+  }
+
+  /**
+   * Get shootingSceneOutCount
+   *
+   * @return shootingSceneOutCount
+   */
+  @ApiModelProperty(value = "")
+  public ShootingSceneOutCount getShootingSceneOutCount() {
+    return shootingSceneOutCount;
+  }
+
+  public void setShootingSceneOutCount(ShootingSceneOutCount shootingSceneOutCount) {
+    this.shootingSceneOutCount = shootingSceneOutCount;
+  }
+
+  public ProductItemSpec brideClothing(BrideClothing brideClothing) {
+    this.brideClothing = brideClothing;
+    return this;
+  }
+
+  /**
+   * Get brideClothing
+   *
+   * @return brideClothing
+   */
+  @ApiModelProperty(value = "")
+  public BrideClothing getBrideClothing() {
+    return brideClothing;
+  }
+
+  public void setBrideClothing(BrideClothing brideClothing) {
+    this.brideClothing = brideClothing;
+  }
+
+  public ProductItemSpec groomClothing(GroomClothing groomClothing) {
+    this.groomClothing = groomClothing;
+    return this;
+  }
+
+  /**
+   * Get groomClothing
+   *
+   * @return groomClothing
+   */
+  @ApiModelProperty(value = "")
+  public GroomClothing getGroomClothing() {
+    return groomClothing;
+  }
+
+  public void setGroomClothing(GroomClothing groomClothing) {
+    this.groomClothing = groomClothing;
+  }
+
+  public ProductItemSpec clothCount(ClothCount clothCount) {
+    this.clothCount = clothCount;
+    return this;
+  }
+
+  /**
+   * Get clothCount
+   *
+   * @return clothCount
+   */
+  @ApiModelProperty(value = "")
+  public ClothCount getClothCount() {
+    return clothCount;
+  }
+
+  public void setClothCount(ClothCount clothCount) {
+    this.clothCount = clothCount;
+  }
+
+  public ProductItemSpec shootingScene(ShootingScene shootingScene) {
+    this.shootingScene = shootingScene;
+    return this;
+  }
+
+  /**
+   * Get shootingScene
+   *
+   * @return shootingScene
+   */
+  @ApiModelProperty(value = "")
+  public ShootingScene getShootingScene() {
+    return shootingScene;
+  }
+
+  public void setShootingScene(ShootingScene shootingScene) {
+    this.shootingScene = shootingScene;
+  }
+
+  public ProductItemSpec setSpecial(List<String> setSpecial) {
+    this.setSpecial = setSpecial;
+    return this;
+  }
+
+  public ProductItemSpec addSetSpecialItem(String setSpecialItem) {
+    if (this.setSpecial == null) {
+      this.setSpecial = new ArrayList<String>();
+    }
+    this.setSpecial.add(setSpecialItem);
+    return this;
+  }
+
+  /**
+   * Get setSpecial
+   *
+   * @return setSpecial
+   */
+  @ApiModelProperty(value = "")
+  public List<String> getSetSpecial() {
+    return setSpecial;
+  }
+
+  public void setSetSpecial(List<String> setSpecial) {
+    this.setSpecial = setSpecial;
+  }
+
+  public ProductItemSpec shootingStyleCom(List<String> shootingStyleCom) {
+    this.shootingStyleCom = shootingStyleCom;
+    return this;
+  }
+
+  public ProductItemSpec addShootingStyleComItem(String shootingStyleComItem) {
+    if (this.shootingStyleCom == null) {
+      this.shootingStyleCom = new ArrayList<String>();
+    }
+    this.shootingStyleCom.add(shootingStyleComItem);
+    return this;
+  }
+
+  /**
+   * Get shootingStyleCom
+   *
+   * @return shootingStyleCom
+   */
+  @ApiModelProperty(value = "")
+  public List<String> getShootingStyleCom() {
+    return shootingStyleCom;
+  }
+
+  public void setShootingStyleCom(List<String> shootingStyleCom) {
+    this.shootingStyleCom = shootingStyleCom;
+  }
+
+  public ProductItemSpec shootingSceneDetail(List<String> shootingSceneDetail) {
+    this.shootingSceneDetail = shootingSceneDetail;
+    return this;
+  }
+
+  public ProductItemSpec addShootingSceneDetailItem(String shootingSceneDetailItem) {
+    if (this.shootingSceneDetail == null) {
+      this.shootingSceneDetail = new ArrayList<String>();
+    }
+    this.shootingSceneDetail.add(shootingSceneDetailItem);
+    return this;
+  }
+
+  /**
+   * Get shootingSceneDetail
+   *
+   * @return shootingSceneDetail
+   */
+  @ApiModelProperty(value = "")
+  public List<String> getShootingSceneDetail() {
+    return shootingSceneDetail;
+  }
+
+  public void setShootingSceneDetail(List<String> shootingSceneDetail) {
+    this.shootingSceneDetail = shootingSceneDetail;
+  }
+
+  public ProductItemSpec tourPlaceDomestic(TourPlaceDomestic tourPlaceDomestic) {
+    this.tourPlaceDomestic = tourPlaceDomestic;
+    return this;
+  }
+
+  /**
+   * Get tourPlaceDomestic
+   *
+   * @return tourPlaceDomestic
+   */
+  @ApiModelProperty(value = "")
+  public TourPlaceDomestic getTourPlaceDomestic() {
+    return tourPlaceDomestic;
+  }
+
+  public void setTourPlaceDomestic(TourPlaceDomestic tourPlaceDomestic) {
+    this.tourPlaceDomestic = tourPlaceDomestic;
+  }
+
+  public ProductItemSpec tourPlaceForeign(TourPlaceForeign tourPlaceForeign) {
+    this.tourPlaceForeign = tourPlaceForeign;
+    return this;
+  }
+
+  /**
+   * Get tourPlaceForeign
+   *
+   * @return tourPlaceForeign
+   */
+  @ApiModelProperty(value = "")
+  public TourPlaceForeign getTourPlaceForeign() {
+    return tourPlaceForeign;
+  }
+
+  public void setTourPlaceForeign(TourPlaceForeign tourPlaceForeign) {
+    this.tourPlaceForeign = tourPlaceForeign;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -1965,7 +2459,28 @@ public class ProductItemSpec {
         && Objects.equals(this.makeMoneyOnline, productItemSpec.makeMoneyOnline)
         && Objects.equals(this.liveBroadcast, productItemSpec.liveBroadcast)
         && Objects.equals(this.platformAttribute, productItemSpec.platformAttribute)
-        && Objects.equals(this.customData, productItemSpec.customData);
+        && Objects.equals(this.customData, productItemSpec.customData)
+        && Objects.equals(this.shootingPicCount, productItemSpec.shootingPicCount)
+        && Objects.equals(this.fineeditCount, productItemSpec.fineeditCount)
+        && Objects.equals(this.albumPhotoCount, productItemSpec.albumPhotoCount)
+        && Objects.equals(this.albumCount, productItemSpec.albumCount)
+        && Objects.equals(this.frameCount, productItemSpec.frameCount)
+        && Objects.equals(this.country, productItemSpec.country)
+        && Objects.equals(this.province, productItemSpec.province)
+        && Objects.equals(this.city, productItemSpec.city)
+        && Objects.equals(this.district, productItemSpec.district)
+        && Objects.equals(this.address, productItemSpec.address)
+        && Objects.equals(this.shootingSceneInCount, productItemSpec.shootingSceneInCount)
+        && Objects.equals(this.shootingSceneOutCount, productItemSpec.shootingSceneOutCount)
+        && Objects.equals(this.brideClothing, productItemSpec.brideClothing)
+        && Objects.equals(this.groomClothing, productItemSpec.groomClothing)
+        && Objects.equals(this.clothCount, productItemSpec.clothCount)
+        && Objects.equals(this.shootingScene, productItemSpec.shootingScene)
+        && Objects.equals(this.setSpecial, productItemSpec.setSpecial)
+        && Objects.equals(this.shootingStyleCom, productItemSpec.shootingStyleCom)
+        && Objects.equals(this.shootingSceneDetail, productItemSpec.shootingSceneDetail)
+        && Objects.equals(this.tourPlaceDomestic, productItemSpec.tourPlaceDomestic)
+        && Objects.equals(this.tourPlaceForeign, productItemSpec.tourPlaceForeign);
   }
 
   @Override
@@ -2052,7 +2567,28 @@ public class ProductItemSpec {
         makeMoneyOnline,
         liveBroadcast,
         platformAttribute,
-        customData);
+        customData,
+        shootingPicCount,
+        fineeditCount,
+        albumPhotoCount,
+        albumCount,
+        frameCount,
+        country,
+        province,
+        city,
+        district,
+        address,
+        shootingSceneInCount,
+        shootingSceneOutCount,
+        brideClothing,
+        groomClothing,
+        clothCount,
+        shootingScene,
+        setSpecial,
+        shootingStyleCom,
+        shootingSceneDetail,
+        tourPlaceDomestic,
+        tourPlaceForeign);
   }
 
   @Override

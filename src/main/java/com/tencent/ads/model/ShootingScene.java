@@ -19,20 +19,18 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-/** 商品库行业类型 */
-@JsonAdapter(CatalogIndustry.Adapter.class)
-public enum CatalogIndustry {
-  ECOMMERCE("INDUSTRY_TYPE_ECOMMERCE"),
+/** 拍摄场景 */
+@JsonAdapter(ShootingScene.Adapter.class)
+public enum ShootingScene {
+  IN("SHOOTING_SCENE_IN"),
 
-  READING("INDUSTRY_TYPE_READING"),
+  OUT("SHOOTING_SCENE_OUT"),
 
-  EDUCATION("INDUSTRY_TYPE_EDUCATION"),
-
-  WEDDING("INDUSTRY_TYPE_WEDDING");
+  BOTH("SHOOTING_SCENE_BOTH");
 
   private String value;
 
-  CatalogIndustry(String value) {
+  ShootingScene(String value) {
     this.value = value;
   }
 
@@ -45,8 +43,8 @@ public enum CatalogIndustry {
     return String.valueOf(value);
   }
 
-  public static CatalogIndustry fromValue(String text) {
-    for (CatalogIndustry b : CatalogIndustry.values()) {
+  public static ShootingScene fromValue(String text) {
+    for (ShootingScene b : ShootingScene.values()) {
       if (String.valueOf(b.value).equals(text)) {
         return b;
       }
@@ -54,17 +52,17 @@ public enum CatalogIndustry {
     return null;
   }
 
-  public static class Adapter extends TypeAdapter<CatalogIndustry> {
+  public static class Adapter extends TypeAdapter<ShootingScene> {
     @Override
-    public void write(final JsonWriter jsonWriter, final CatalogIndustry enumeration)
+    public void write(final JsonWriter jsonWriter, final ShootingScene enumeration)
         throws IOException {
       jsonWriter.value(enumeration.getValue());
     }
 
     @Override
-    public CatalogIndustry read(final JsonReader jsonReader) throws IOException {
+    public ShootingScene read(final JsonReader jsonReader) throws IOException {
       String value = jsonReader.nextString();
-      return CatalogIndustry.fromValue(String.valueOf(value));
+      return ShootingScene.fromValue(String.valueOf(value));
     }
   }
 }

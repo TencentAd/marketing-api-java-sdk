@@ -774,6 +774,15 @@ public class DailyReportsGetListStruct {
   @SerializedName("pre_cre_app_cost")
   private Long preCreAppCost = null;
 
+  @SerializedName("store_visitor")
+  private Long storeVisitor = null;
+
+  @SerializedName("try_out_user")
+  private Long tryOutUser = null;
+
+  @SerializedName("consult_leave_info_users")
+  private Long consultLeaveInfoUsers = null;
+
   @SerializedName("request_conversions_count")
   private Long requestConversionsCount = null;
 
@@ -899,6 +908,30 @@ public class DailyReportsGetListStruct {
 
   @SerializedName("signature")
   private String signature = null;
+
+  @SerializedName("product_catalog_id")
+  private Long productCatalogId = null;
+
+  @SerializedName("product_outer_id")
+  private String productOuterId = null;
+
+  @SerializedName("brand_id")
+  private Long brandId = null;
+
+  @SerializedName("product_set_id")
+  private Long productSetId = null;
+
+  @SerializedName("shop_id")
+  private Long shopId = null;
+
+  @SerializedName("first_category_id")
+  private Long firstCategoryId = null;
+
+  @SerializedName("second_category_id")
+  private Long secondCategoryId = null;
+
+  @SerializedName("third_category_id")
+  private Long thirdCategoryId = null;
 
   @SerializedName("wechat_account_id")
   private String wechatAccountId = null;
@@ -5876,6 +5909,63 @@ public class DailyReportsGetListStruct {
     this.preCreAppCost = preCreAppCost;
   }
 
+  public DailyReportsGetListStruct storeVisitor(Long storeVisitor) {
+    this.storeVisitor = storeVisitor;
+    return this;
+  }
+
+  /**
+   * Get storeVisitor
+   *
+   * @return storeVisitor
+   */
+  @ApiModelProperty(value = "")
+  public Long getStoreVisitor() {
+    return storeVisitor;
+  }
+
+  public void setStoreVisitor(Long storeVisitor) {
+    this.storeVisitor = storeVisitor;
+  }
+
+  public DailyReportsGetListStruct tryOutUser(Long tryOutUser) {
+    this.tryOutUser = tryOutUser;
+    return this;
+  }
+
+  /**
+   * Get tryOutUser
+   *
+   * @return tryOutUser
+   */
+  @ApiModelProperty(value = "")
+  public Long getTryOutUser() {
+    return tryOutUser;
+  }
+
+  public void setTryOutUser(Long tryOutUser) {
+    this.tryOutUser = tryOutUser;
+  }
+
+  public DailyReportsGetListStruct consultLeaveInfoUsers(Long consultLeaveInfoUsers) {
+    this.consultLeaveInfoUsers = consultLeaveInfoUsers;
+    return this;
+  }
+
+  /**
+   * Get consultLeaveInfoUsers
+   *
+   * @return consultLeaveInfoUsers
+   */
+  @ApiModelProperty(value = "")
+  public Long getConsultLeaveInfoUsers() {
+    return consultLeaveInfoUsers;
+  }
+
+  public void setConsultLeaveInfoUsers(Long consultLeaveInfoUsers) {
+    this.consultLeaveInfoUsers = consultLeaveInfoUsers;
+  }
+
   public DailyReportsGetListStruct requestConversionsCount(Long requestConversionsCount) {
     this.requestConversionsCount = requestConversionsCount;
     return this;
@@ -6672,6 +6762,158 @@ public class DailyReportsGetListStruct {
 
   public void setSignature(String signature) {
     this.signature = signature;
+  }
+
+  public DailyReportsGetListStruct productCatalogId(Long productCatalogId) {
+    this.productCatalogId = productCatalogId;
+    return this;
+  }
+
+  /**
+   * Get productCatalogId
+   *
+   * @return productCatalogId
+   */
+  @ApiModelProperty(value = "")
+  public Long getProductCatalogId() {
+    return productCatalogId;
+  }
+
+  public void setProductCatalogId(Long productCatalogId) {
+    this.productCatalogId = productCatalogId;
+  }
+
+  public DailyReportsGetListStruct productOuterId(String productOuterId) {
+    this.productOuterId = productOuterId;
+    return this;
+  }
+
+  /**
+   * Get productOuterId
+   *
+   * @return productOuterId
+   */
+  @ApiModelProperty(value = "")
+  public String getProductOuterId() {
+    return productOuterId;
+  }
+
+  public void setProductOuterId(String productOuterId) {
+    this.productOuterId = productOuterId;
+  }
+
+  public DailyReportsGetListStruct brandId(Long brandId) {
+    this.brandId = brandId;
+    return this;
+  }
+
+  /**
+   * Get brandId
+   *
+   * @return brandId
+   */
+  @ApiModelProperty(value = "")
+  public Long getBrandId() {
+    return brandId;
+  }
+
+  public void setBrandId(Long brandId) {
+    this.brandId = brandId;
+  }
+
+  public DailyReportsGetListStruct productSetId(Long productSetId) {
+    this.productSetId = productSetId;
+    return this;
+  }
+
+  /**
+   * Get productSetId
+   *
+   * @return productSetId
+   */
+  @ApiModelProperty(value = "")
+  public Long getProductSetId() {
+    return productSetId;
+  }
+
+  public void setProductSetId(Long productSetId) {
+    this.productSetId = productSetId;
+  }
+
+  public DailyReportsGetListStruct shopId(Long shopId) {
+    this.shopId = shopId;
+    return this;
+  }
+
+  /**
+   * Get shopId
+   *
+   * @return shopId
+   */
+  @ApiModelProperty(value = "")
+  public Long getShopId() {
+    return shopId;
+  }
+
+  public void setShopId(Long shopId) {
+    this.shopId = shopId;
+  }
+
+  public DailyReportsGetListStruct firstCategoryId(Long firstCategoryId) {
+    this.firstCategoryId = firstCategoryId;
+    return this;
+  }
+
+  /**
+   * Get firstCategoryId
+   *
+   * @return firstCategoryId
+   */
+  @ApiModelProperty(value = "")
+  public Long getFirstCategoryId() {
+    return firstCategoryId;
+  }
+
+  public void setFirstCategoryId(Long firstCategoryId) {
+    this.firstCategoryId = firstCategoryId;
+  }
+
+  public DailyReportsGetListStruct secondCategoryId(Long secondCategoryId) {
+    this.secondCategoryId = secondCategoryId;
+    return this;
+  }
+
+  /**
+   * Get secondCategoryId
+   *
+   * @return secondCategoryId
+   */
+  @ApiModelProperty(value = "")
+  public Long getSecondCategoryId() {
+    return secondCategoryId;
+  }
+
+  public void setSecondCategoryId(Long secondCategoryId) {
+    this.secondCategoryId = secondCategoryId;
+  }
+
+  public DailyReportsGetListStruct thirdCategoryId(Long thirdCategoryId) {
+    this.thirdCategoryId = thirdCategoryId;
+    return this;
+  }
+
+  /**
+   * Get thirdCategoryId
+   *
+   * @return thirdCategoryId
+   */
+  @ApiModelProperty(value = "")
+  public Long getThirdCategoryId() {
+    return thirdCategoryId;
+  }
+
+  public void setThirdCategoryId(Long thirdCategoryId) {
+    this.thirdCategoryId = thirdCategoryId;
   }
 
   public DailyReportsGetListStruct wechatAccountId(String wechatAccountId) {
@@ -8304,6 +8546,10 @@ public class DailyReportsGetListStruct {
         && Objects.equals(this.creAppCost, dailyReportsGetListStruct.creAppCost)
         && Objects.equals(this.preCreWebCost, dailyReportsGetListStruct.preCreWebCost)
         && Objects.equals(this.preCreAppCost, dailyReportsGetListStruct.preCreAppCost)
+        && Objects.equals(this.storeVisitor, dailyReportsGetListStruct.storeVisitor)
+        && Objects.equals(this.tryOutUser, dailyReportsGetListStruct.tryOutUser)
+        && Objects.equals(
+            this.consultLeaveInfoUsers, dailyReportsGetListStruct.consultLeaveInfoUsers)
         && Objects.equals(
             this.requestConversionsCount, dailyReportsGetListStruct.requestConversionsCount)
         && Objects.equals(
@@ -8355,6 +8601,14 @@ public class DailyReportsGetListStruct {
         && Objects.equals(this.siteSet, dailyReportsGetListStruct.siteSet)
         && Objects.equals(this.materialId, dailyReportsGetListStruct.materialId)
         && Objects.equals(this.signature, dailyReportsGetListStruct.signature)
+        && Objects.equals(this.productCatalogId, dailyReportsGetListStruct.productCatalogId)
+        && Objects.equals(this.productOuterId, dailyReportsGetListStruct.productOuterId)
+        && Objects.equals(this.brandId, dailyReportsGetListStruct.brandId)
+        && Objects.equals(this.productSetId, dailyReportsGetListStruct.productSetId)
+        && Objects.equals(this.shopId, dailyReportsGetListStruct.shopId)
+        && Objects.equals(this.firstCategoryId, dailyReportsGetListStruct.firstCategoryId)
+        && Objects.equals(this.secondCategoryId, dailyReportsGetListStruct.secondCategoryId)
+        && Objects.equals(this.thirdCategoryId, dailyReportsGetListStruct.thirdCategoryId)
         && Objects.equals(this.wechatAccountId, dailyReportsGetListStruct.wechatAccountId)
         && Objects.equals(this.wechatAgencyId, dailyReportsGetListStruct.wechatAgencyId)
         && Objects.equals(this.costDeviationRate, dailyReportsGetListStruct.costDeviationRate)
@@ -8733,6 +8987,9 @@ public class DailyReportsGetListStruct {
         creAppCost,
         preCreWebCost,
         preCreAppCost,
+        storeVisitor,
+        tryOutUser,
+        consultLeaveInfoUsers,
         requestConversionsCount,
         requestConversionsCost,
         incomeRoi1,
@@ -8775,6 +9032,14 @@ public class DailyReportsGetListStruct {
         siteSet,
         materialId,
         signature,
+        productCatalogId,
+        productOuterId,
+        brandId,
+        productSetId,
+        shopId,
+        firstCategoryId,
+        secondCategoryId,
+        thirdCategoryId,
         wechatAccountId,
         wechatAgencyId,
         costDeviationRate,
