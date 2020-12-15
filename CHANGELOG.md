@@ -1,4 +1,9 @@
 # 更新日志
+## 2020-12-14
+1. 发布Java SDK [1.1.11] 版
+  - 新增MarketingApi接口
+  - 修复接口 附加创意-获取表单组件详情-select_elements的定义
+  
 ## 2020-12-08
 1. 发布Java SDK [1.1.10] 版
   - 新增MarketingApi接口，跟接口文档保持同步

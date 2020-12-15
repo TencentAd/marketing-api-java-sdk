@@ -21,20 +21,67 @@ import java.util.Objects;
 /** 返回结构 */
 @ApiModel(description = "返回结构")
 public class FundStatementsDetailedGetListStruct {
+  @SerializedName("account_id")
+  private Long accountId = null;
+
+  @SerializedName("balance")
+  private Long balance = null;
+
   @SerializedName("time")
   private Long time = null;
 
   @SerializedName("external_bill_no")
   private String externalBillNo = null;
 
-  @SerializedName("trade_type")
-  private TradeType tradeType = null;
+  @SerializedName("trade_type_ext")
+  private TradeTypeExt tradeTypeExt = null;
 
   @SerializedName("amount")
   private Long amount = null;
 
   @SerializedName("description")
   private String description = null;
+
+  @SerializedName("fund_type")
+  private AccountTypeMap fundType = null;
+
+  public FundStatementsDetailedGetListStruct accountId(Long accountId) {
+    this.accountId = accountId;
+    return this;
+  }
+
+  /**
+   * Get accountId
+   *
+   * @return accountId
+   */
+  @ApiModelProperty(value = "")
+  public Long getAccountId() {
+    return accountId;
+  }
+
+  public void setAccountId(Long accountId) {
+    this.accountId = accountId;
+  }
+
+  public FundStatementsDetailedGetListStruct balance(Long balance) {
+    this.balance = balance;
+    return this;
+  }
+
+  /**
+   * Get balance
+   *
+   * @return balance
+   */
+  @ApiModelProperty(value = "")
+  public Long getBalance() {
+    return balance;
+  }
+
+  public void setBalance(Long balance) {
+    this.balance = balance;
+  }
 
   public FundStatementsDetailedGetListStruct time(Long time) {
     this.time = time;
@@ -74,23 +121,23 @@ public class FundStatementsDetailedGetListStruct {
     this.externalBillNo = externalBillNo;
   }
 
-  public FundStatementsDetailedGetListStruct tradeType(TradeType tradeType) {
-    this.tradeType = tradeType;
+  public FundStatementsDetailedGetListStruct tradeTypeExt(TradeTypeExt tradeTypeExt) {
+    this.tradeTypeExt = tradeTypeExt;
     return this;
   }
 
   /**
-   * Get tradeType
+   * Get tradeTypeExt
    *
-   * @return tradeType
+   * @return tradeTypeExt
    */
   @ApiModelProperty(value = "")
-  public TradeType getTradeType() {
-    return tradeType;
+  public TradeTypeExt getTradeTypeExt() {
+    return tradeTypeExt;
   }
 
-  public void setTradeType(TradeType tradeType) {
-    this.tradeType = tradeType;
+  public void setTradeTypeExt(TradeTypeExt tradeTypeExt) {
+    this.tradeTypeExt = tradeTypeExt;
   }
 
   public FundStatementsDetailedGetListStruct amount(Long amount) {
@@ -131,6 +178,25 @@ public class FundStatementsDetailedGetListStruct {
     this.description = description;
   }
 
+  public FundStatementsDetailedGetListStruct fundType(AccountTypeMap fundType) {
+    this.fundType = fundType;
+    return this;
+  }
+
+  /**
+   * Get fundType
+   *
+   * @return fundType
+   */
+  @ApiModelProperty(value = "")
+  public AccountTypeMap getFundType() {
+    return fundType;
+  }
+
+  public void setFundType(AccountTypeMap fundType) {
+    this.fundType = fundType;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -141,16 +207,20 @@ public class FundStatementsDetailedGetListStruct {
     }
     FundStatementsDetailedGetListStruct fundStatementsDetailedGetListStruct =
         (FundStatementsDetailedGetListStruct) o;
-    return Objects.equals(this.time, fundStatementsDetailedGetListStruct.time)
+    return Objects.equals(this.accountId, fundStatementsDetailedGetListStruct.accountId)
+        && Objects.equals(this.balance, fundStatementsDetailedGetListStruct.balance)
+        && Objects.equals(this.time, fundStatementsDetailedGetListStruct.time)
         && Objects.equals(this.externalBillNo, fundStatementsDetailedGetListStruct.externalBillNo)
-        && Objects.equals(this.tradeType, fundStatementsDetailedGetListStruct.tradeType)
+        && Objects.equals(this.tradeTypeExt, fundStatementsDetailedGetListStruct.tradeTypeExt)
         && Objects.equals(this.amount, fundStatementsDetailedGetListStruct.amount)
-        && Objects.equals(this.description, fundStatementsDetailedGetListStruct.description);
+        && Objects.equals(this.description, fundStatementsDetailedGetListStruct.description)
+        && Objects.equals(this.fundType, fundStatementsDetailedGetListStruct.fundType);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(time, externalBillNo, tradeType, amount, description);
+    return Objects.hash(
+        accountId, balance, time, externalBillNo, tradeTypeExt, amount, description, fundType);
   }
 
   @Override

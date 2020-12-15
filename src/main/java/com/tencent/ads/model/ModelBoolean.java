@@ -19,32 +19,16 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-/** 商品库行业类型 */
-@JsonAdapter(CatalogIndustry.Adapter.class)
-public enum CatalogIndustry {
-  ECOMMERCE("INDUSTRY_TYPE_ECOMMERCE"),
+/** 是否重复转账 */
+@JsonAdapter(ModelBoolean.Adapter.class)
+public enum ModelBoolean {
+  NO("NO"),
 
-  READING("INDUSTRY_TYPE_READING"),
-
-  EDUCATION("INDUSTRY_TYPE_EDUCATION"),
-
-  WEDDING("INDUSTRY_TYPE_WEDDING"),
-
-  VIDEO("INDUSTRY_TYPE_VIDEO"),
-
-  INSURANCE("INDUSTRY_TYPE_INSURANCE"),
-
-  LOAN("INDUSTRY_TYPE_LOAN"),
-
-  FINANCIAL("INDUSTRY_TYPE_FINANCIAL"),
-
-  BANKCARD("INDUSTRY_TYPE_BANKCARD"),
-
-  SECURITIES("INDUSTRY_TYPE_SECURITIES");
+  YES("YES");
 
   private String value;
 
-  CatalogIndustry(String value) {
+  ModelBoolean(String value) {
     this.value = value;
   }
 
@@ -57,8 +41,8 @@ public enum CatalogIndustry {
     return String.valueOf(value);
   }
 
-  public static CatalogIndustry fromValue(String text) {
-    for (CatalogIndustry b : CatalogIndustry.values()) {
+  public static ModelBoolean fromValue(String text) {
+    for (ModelBoolean b : ModelBoolean.values()) {
       if (String.valueOf(b.value).equals(text)) {
         return b;
       }
@@ -66,17 +50,17 @@ public enum CatalogIndustry {
     return null;
   }
 
-  public static class Adapter extends TypeAdapter<CatalogIndustry> {
+  public static class Adapter extends TypeAdapter<ModelBoolean> {
     @Override
-    public void write(final JsonWriter jsonWriter, final CatalogIndustry enumeration)
+    public void write(final JsonWriter jsonWriter, final ModelBoolean enumeration)
         throws IOException {
       jsonWriter.value(enumeration.getValue());
     }
 
     @Override
-    public CatalogIndustry read(final JsonReader jsonReader) throws IOException {
+    public ModelBoolean read(final JsonReader jsonReader) throws IOException {
       String value = jsonReader.nextString();
-      return CatalogIndustry.fromValue(String.valueOf(value));
+      return ModelBoolean.fromValue(String.valueOf(value));
     }
   }
 }

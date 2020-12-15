@@ -16,6 +16,8 @@ import com.google.gson.Gson;
 import com.google.gson.annotations.SerializedName;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Objects;
 
 /** 表单项 */
@@ -31,7 +33,7 @@ public class ControlListItemDetailData {
   private String placeholder = null;
 
   @SerializedName("select_elements")
-  private String selectElements = null;
+  private List<ConfigsDetailDataArrayItem> selectElements = null;
 
   public ControlListItemDetailData itemName(String itemName) {
     this.itemName = itemName;
@@ -90,8 +92,17 @@ public class ControlListItemDetailData {
     this.placeholder = placeholder;
   }
 
-  public ControlListItemDetailData selectElements(String selectElements) {
+  public ControlListItemDetailData selectElements(List<ConfigsDetailDataArrayItem> selectElements) {
     this.selectElements = selectElements;
+    return this;
+  }
+
+  public ControlListItemDetailData addSelectElementsItem(
+      ConfigsDetailDataArrayItem selectElementsItem) {
+    if (this.selectElements == null) {
+      this.selectElements = new ArrayList<ConfigsDetailDataArrayItem>();
+    }
+    this.selectElements.add(selectElementsItem);
     return this;
   }
 
@@ -101,11 +112,11 @@ public class ControlListItemDetailData {
    * @return selectElements
    */
   @ApiModelProperty(value = "")
-  public String getSelectElements() {
+  public List<ConfigsDetailDataArrayItem> getSelectElements() {
     return selectElements;
   }
 
-  public void setSelectElements(String selectElements) {
+  public void setSelectElements(List<ConfigsDetailDataArrayItem> selectElements) {
     this.selectElements = selectElements;
   }
 

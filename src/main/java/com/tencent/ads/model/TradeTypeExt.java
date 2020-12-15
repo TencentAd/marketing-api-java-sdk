@@ -19,32 +19,22 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-/** 商品库行业类型 */
-@JsonAdapter(CatalogIndustry.Adapter.class)
-public enum CatalogIndustry {
-  ECOMMERCE("INDUSTRY_TYPE_ECOMMERCE"),
+/** 交易类型 */
+@JsonAdapter(TradeTypeExt.Adapter.class)
+public enum TradeTypeExt {
+  CHARGE("CHARGE"),
 
-  READING("INDUSTRY_TYPE_READING"),
+  TRANSFER_IN("TRANSFER_IN"),
 
-  EDUCATION("INDUSTRY_TYPE_EDUCATION"),
+  PAY("PAY"),
 
-  WEDDING("INDUSTRY_TYPE_WEDDING"),
+  TRANSFER_BACK("TRANSFER_BACK"),
 
-  VIDEO("INDUSTRY_TYPE_VIDEO"),
-
-  INSURANCE("INDUSTRY_TYPE_INSURANCE"),
-
-  LOAN("INDUSTRY_TYPE_LOAN"),
-
-  FINANCIAL("INDUSTRY_TYPE_FINANCIAL"),
-
-  BANKCARD("INDUSTRY_TYPE_BANKCARD"),
-
-  SECURITIES("INDUSTRY_TYPE_SECURITIES");
+  EXPIRE("EXPIRE");
 
   private String value;
 
-  CatalogIndustry(String value) {
+  TradeTypeExt(String value) {
     this.value = value;
   }
 
@@ -57,8 +47,8 @@ public enum CatalogIndustry {
     return String.valueOf(value);
   }
 
-  public static CatalogIndustry fromValue(String text) {
-    for (CatalogIndustry b : CatalogIndustry.values()) {
+  public static TradeTypeExt fromValue(String text) {
+    for (TradeTypeExt b : TradeTypeExt.values()) {
       if (String.valueOf(b.value).equals(text)) {
         return b;
       }
@@ -66,17 +56,17 @@ public enum CatalogIndustry {
     return null;
   }
 
-  public static class Adapter extends TypeAdapter<CatalogIndustry> {
+  public static class Adapter extends TypeAdapter<TradeTypeExt> {
     @Override
-    public void write(final JsonWriter jsonWriter, final CatalogIndustry enumeration)
+    public void write(final JsonWriter jsonWriter, final TradeTypeExt enumeration)
         throws IOException {
       jsonWriter.value(enumeration.getValue());
     }
 
     @Override
-    public CatalogIndustry read(final JsonReader jsonReader) throws IOException {
+    public TradeTypeExt read(final JsonReader jsonReader) throws IOException {
       String value = jsonReader.nextString();
-      return CatalogIndustry.fromValue(String.valueOf(value));
+      return TradeTypeExt.fromValue(String.valueOf(value));
     }
   }
 }

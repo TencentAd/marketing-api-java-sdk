@@ -30,6 +30,9 @@ public class App {
   @Inject AdgroupsApiContainer adgroupsApiContainer;
   @Inject AdsApiContainer adsApiContainer;
   @Inject AdvertiserApiContainer advertiserApiContainer;
+  @Inject AgencyInnerTransferApiContainer agencyInnerTransferApiContainer;
+  @Inject AgencyPeerTransferApiContainer agencyPeerTransferApiContainer;
+  @Inject AgencyRealtimeCostApiContainer agencyRealtimeCostApiContainer;
   @Inject AndroidChannelPackagesApiContainer androidChannelPackagesApiContainer;
   @Inject AndroidUnionChannelPackagesApiContainer androidUnionChannelPackagesApiContainer;
   @Inject AssetPermissionsApiContainer assetPermissionsApiContainer;
@@ -186,6 +189,18 @@ public class App {
 
   public AdvertiserApiContainer advertiser() {
     return advertiserApiContainer;
+  }
+
+  public AgencyInnerTransferApiContainer agencyInnerTransfer() {
+    return agencyInnerTransferApiContainer;
+  }
+
+  public AgencyPeerTransferApiContainer agencyPeerTransfer() {
+    return agencyPeerTransferApiContainer;
+  }
+
+  public AgencyRealtimeCostApiContainer agencyRealtimeCost() {
+    return agencyRealtimeCostApiContainer;
   }
 
   public AndroidChannelPackagesApiContainer androidChannelPackages() {
