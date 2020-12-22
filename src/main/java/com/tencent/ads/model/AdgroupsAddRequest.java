@@ -141,6 +141,9 @@ public class AdgroupsAddRequest {
   @SerializedName("auto_acquisition_budget")
   private Long autoAcquisitionBudget = null;
 
+  @SerializedName("creative_display_type")
+  private CreativeDisplayType creativeDisplayType = null;
+
   @SerializedName("auto_derived_creative_enabled")
   private Boolean autoDerivedCreativeEnabled = null;
 
@@ -958,6 +961,25 @@ public class AdgroupsAddRequest {
     this.autoAcquisitionBudget = autoAcquisitionBudget;
   }
 
+  public AdgroupsAddRequest creativeDisplayType(CreativeDisplayType creativeDisplayType) {
+    this.creativeDisplayType = creativeDisplayType;
+    return this;
+  }
+
+  /**
+   * Get creativeDisplayType
+   *
+   * @return creativeDisplayType
+   */
+  @ApiModelProperty(value = "")
+  public CreativeDisplayType getCreativeDisplayType() {
+    return creativeDisplayType;
+  }
+
+  public void setCreativeDisplayType(CreativeDisplayType creativeDisplayType) {
+    this.creativeDisplayType = creativeDisplayType;
+  }
+
   public AdgroupsAddRequest autoDerivedCreativeEnabled(Boolean autoDerivedCreativeEnabled) {
     this.autoDerivedCreativeEnabled = autoDerivedCreativeEnabled;
     return this;
@@ -1049,6 +1071,7 @@ public class AdgroupsAddRequest {
         && Objects.equals(this.bidAdjustment, adgroupsAddRequest.bidAdjustment)
         && Objects.equals(this.autoAcquisitionEnabled, adgroupsAddRequest.autoAcquisitionEnabled)
         && Objects.equals(this.autoAcquisitionBudget, adgroupsAddRequest.autoAcquisitionBudget)
+        && Objects.equals(this.creativeDisplayType, adgroupsAddRequest.creativeDisplayType)
         && Objects.equals(
             this.autoDerivedCreativeEnabled, adgroupsAddRequest.autoDerivedCreativeEnabled)
         && Objects.equals(this.accountId, adgroupsAddRequest.accountId);
@@ -1097,6 +1120,7 @@ public class AdgroupsAddRequest {
         bidAdjustment,
         autoAcquisitionEnabled,
         autoAcquisitionBudget,
+        creativeDisplayType,
         autoDerivedCreativeEnabled,
         accountId);
   }

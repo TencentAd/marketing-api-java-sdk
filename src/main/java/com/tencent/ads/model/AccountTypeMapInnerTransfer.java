@@ -19,16 +19,16 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-/** 人群授权的范围。仅支持 &#39;GRANT_SCOPE_TYPE_ACCOUNT&#39; 枚举值。授权给BM内全部账号功能不再在此接口中支持实现 */
-@JsonAdapter(AudienceGrantScopeType.Adapter.class)
-public enum AudienceGrantScopeType {
-  BUSINESS("GRANT_SCOPE_TYPE_BUSINESS"),
+/** 转出的资金账户类型 */
+@JsonAdapter(AccountTypeMapInnerTransfer.Adapter.class)
+public enum AccountTypeMapInnerTransfer {
+  GIFT("FUND_TYPE_GIFT"),
 
-  ACCOUNT("GRANT_SCOPE_TYPE_ACCOUNT");
+  SHARED("FUND_TYPE_SHARED");
 
   private String value;
 
-  AudienceGrantScopeType(String value) {
+  AccountTypeMapInnerTransfer(String value) {
     this.value = value;
   }
 
@@ -41,8 +41,8 @@ public enum AudienceGrantScopeType {
     return String.valueOf(value);
   }
 
-  public static AudienceGrantScopeType fromValue(String text) {
-    for (AudienceGrantScopeType b : AudienceGrantScopeType.values()) {
+  public static AccountTypeMapInnerTransfer fromValue(String text) {
+    for (AccountTypeMapInnerTransfer b : AccountTypeMapInnerTransfer.values()) {
       if (String.valueOf(b.value).equals(text)) {
         return b;
       }
@@ -50,17 +50,17 @@ public enum AudienceGrantScopeType {
     return null;
   }
 
-  public static class Adapter extends TypeAdapter<AudienceGrantScopeType> {
+  public static class Adapter extends TypeAdapter<AccountTypeMapInnerTransfer> {
     @Override
-    public void write(final JsonWriter jsonWriter, final AudienceGrantScopeType enumeration)
+    public void write(final JsonWriter jsonWriter, final AccountTypeMapInnerTransfer enumeration)
         throws IOException {
       jsonWriter.value(enumeration.getValue());
     }
 
     @Override
-    public AudienceGrantScopeType read(final JsonReader jsonReader) throws IOException {
+    public AccountTypeMapInnerTransfer read(final JsonReader jsonReader) throws IOException {
       String value = jsonReader.nextString();
-      return AudienceGrantScopeType.fromValue(String.valueOf(value));
+      return AccountTypeMapInnerTransfer.fromValue(String.valueOf(value));
     }
   }
 }

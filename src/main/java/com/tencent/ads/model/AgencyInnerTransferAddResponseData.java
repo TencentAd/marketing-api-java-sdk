@@ -20,10 +20,10 @@ import java.util.Objects;
 /** AgencyInnerTransferAddResponseData */
 public class AgencyInnerTransferAddResponseData {
   @SerializedName("fund_type_from")
-  private AccountTypeMap fundTypeFrom = null;
+  private AccountTypeMapInnerTransfer fundTypeFrom = null;
 
   @SerializedName("fund_type_to")
-  private AccountTypeMap fundTypeTo = null;
+  private AccountTypeMapInnerTransfer fundTypeTo = null;
 
   @SerializedName("amount")
   private Long amount = null;
@@ -37,7 +37,7 @@ public class AgencyInnerTransferAddResponseData {
   @SerializedName("time")
   private Long time = null;
 
-  public AgencyInnerTransferAddResponseData fundTypeFrom(AccountTypeMap fundTypeFrom) {
+  public AgencyInnerTransferAddResponseData fundTypeFrom(AccountTypeMapInnerTransfer fundTypeFrom) {
     this.fundTypeFrom = fundTypeFrom;
     return this;
   }
@@ -48,15 +48,15 @@ public class AgencyInnerTransferAddResponseData {
    * @return fundTypeFrom
    */
   @ApiModelProperty(value = "")
-  public AccountTypeMap getFundTypeFrom() {
+  public AccountTypeMapInnerTransfer getFundTypeFrom() {
     return fundTypeFrom;
   }
 
-  public void setFundTypeFrom(AccountTypeMap fundTypeFrom) {
+  public void setFundTypeFrom(AccountTypeMapInnerTransfer fundTypeFrom) {
     this.fundTypeFrom = fundTypeFrom;
   }
 
-  public AgencyInnerTransferAddResponseData fundTypeTo(AccountTypeMap fundTypeTo) {
+  public AgencyInnerTransferAddResponseData fundTypeTo(AccountTypeMapInnerTransfer fundTypeTo) {
     this.fundTypeTo = fundTypeTo;
     return this;
   }
@@ -67,11 +67,11 @@ public class AgencyInnerTransferAddResponseData {
    * @return fundTypeTo
    */
   @ApiModelProperty(value = "")
-  public AccountTypeMap getFundTypeTo() {
+  public AccountTypeMapInnerTransfer getFundTypeTo() {
     return fundTypeTo;
   }
 
-  public void setFundTypeTo(AccountTypeMap fundTypeTo) {
+  public void setFundTypeTo(AccountTypeMapInnerTransfer fundTypeTo) {
     this.fundTypeTo = fundTypeTo;
   }
 

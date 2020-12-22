@@ -777,6 +777,33 @@ public class HourlyReportsGetListStruct {
   @SerializedName("consult_leave_info_users")
   private Long consultLeaveInfoUsers = null;
 
+  @SerializedName("active_page_views")
+  private Long activePageViews = null;
+
+  @SerializedName("active_page_viewers")
+  private Long activePageViewers = null;
+
+  @SerializedName("active_page_interaction_amount")
+  private Long activePageInteractionAmount = null;
+
+  @SerializedName("active_page_interaction_users")
+  private Long activePageInteractionUsers = null;
+
+  @SerializedName("join_chat_group_amount")
+  private Long joinChatGroupAmount = null;
+
+  @SerializedName("guide_to_follow_page_views")
+  private Long guideToFollowPageViews = null;
+
+  @SerializedName("guide_to_follow_page_viewers")
+  private Long guideToFollowPageViewers = null;
+
+  @SerializedName("guide_to_follow_page_interaction_amount")
+  private Long guideToFollowPageInteractionAmount = null;
+
+  @SerializedName("guide_to_follow_page_interaction_users")
+  private Long guideToFollowPageInteractionUsers = null;
+
   @SerializedName("request_conversions_count")
   private Long requestConversionsCount = null;
 
@@ -5875,6 +5902,179 @@ public class HourlyReportsGetListStruct {
     this.consultLeaveInfoUsers = consultLeaveInfoUsers;
   }
 
+  public HourlyReportsGetListStruct activePageViews(Long activePageViews) {
+    this.activePageViews = activePageViews;
+    return this;
+  }
+
+  /**
+   * Get activePageViews
+   *
+   * @return activePageViews
+   */
+  @ApiModelProperty(value = "")
+  public Long getActivePageViews() {
+    return activePageViews;
+  }
+
+  public void setActivePageViews(Long activePageViews) {
+    this.activePageViews = activePageViews;
+  }
+
+  public HourlyReportsGetListStruct activePageViewers(Long activePageViewers) {
+    this.activePageViewers = activePageViewers;
+    return this;
+  }
+
+  /**
+   * Get activePageViewers
+   *
+   * @return activePageViewers
+   */
+  @ApiModelProperty(value = "")
+  public Long getActivePageViewers() {
+    return activePageViewers;
+  }
+
+  public void setActivePageViewers(Long activePageViewers) {
+    this.activePageViewers = activePageViewers;
+  }
+
+  public HourlyReportsGetListStruct activePageInteractionAmount(Long activePageInteractionAmount) {
+    this.activePageInteractionAmount = activePageInteractionAmount;
+    return this;
+  }
+
+  /**
+   * Get activePageInteractionAmount
+   *
+   * @return activePageInteractionAmount
+   */
+  @ApiModelProperty(value = "")
+  public Long getActivePageInteractionAmount() {
+    return activePageInteractionAmount;
+  }
+
+  public void setActivePageInteractionAmount(Long activePageInteractionAmount) {
+    this.activePageInteractionAmount = activePageInteractionAmount;
+  }
+
+  public HourlyReportsGetListStruct activePageInteractionUsers(Long activePageInteractionUsers) {
+    this.activePageInteractionUsers = activePageInteractionUsers;
+    return this;
+  }
+
+  /**
+   * Get activePageInteractionUsers
+   *
+   * @return activePageInteractionUsers
+   */
+  @ApiModelProperty(value = "")
+  public Long getActivePageInteractionUsers() {
+    return activePageInteractionUsers;
+  }
+
+  public void setActivePageInteractionUsers(Long activePageInteractionUsers) {
+    this.activePageInteractionUsers = activePageInteractionUsers;
+  }
+
+  public HourlyReportsGetListStruct joinChatGroupAmount(Long joinChatGroupAmount) {
+    this.joinChatGroupAmount = joinChatGroupAmount;
+    return this;
+  }
+
+  /**
+   * Get joinChatGroupAmount
+   *
+   * @return joinChatGroupAmount
+   */
+  @ApiModelProperty(value = "")
+  public Long getJoinChatGroupAmount() {
+    return joinChatGroupAmount;
+  }
+
+  public void setJoinChatGroupAmount(Long joinChatGroupAmount) {
+    this.joinChatGroupAmount = joinChatGroupAmount;
+  }
+
+  public HourlyReportsGetListStruct guideToFollowPageViews(Long guideToFollowPageViews) {
+    this.guideToFollowPageViews = guideToFollowPageViews;
+    return this;
+  }
+
+  /**
+   * Get guideToFollowPageViews
+   *
+   * @return guideToFollowPageViews
+   */
+  @ApiModelProperty(value = "")
+  public Long getGuideToFollowPageViews() {
+    return guideToFollowPageViews;
+  }
+
+  public void setGuideToFollowPageViews(Long guideToFollowPageViews) {
+    this.guideToFollowPageViews = guideToFollowPageViews;
+  }
+
+  public HourlyReportsGetListStruct guideToFollowPageViewers(Long guideToFollowPageViewers) {
+    this.guideToFollowPageViewers = guideToFollowPageViewers;
+    return this;
+  }
+
+  /**
+   * Get guideToFollowPageViewers
+   *
+   * @return guideToFollowPageViewers
+   */
+  @ApiModelProperty(value = "")
+  public Long getGuideToFollowPageViewers() {
+    return guideToFollowPageViewers;
+  }
+
+  public void setGuideToFollowPageViewers(Long guideToFollowPageViewers) {
+    this.guideToFollowPageViewers = guideToFollowPageViewers;
+  }
+
+  public HourlyReportsGetListStruct guideToFollowPageInteractionAmount(
+      Long guideToFollowPageInteractionAmount) {
+    this.guideToFollowPageInteractionAmount = guideToFollowPageInteractionAmount;
+    return this;
+  }
+
+  /**
+   * Get guideToFollowPageInteractionAmount
+   *
+   * @return guideToFollowPageInteractionAmount
+   */
+  @ApiModelProperty(value = "")
+  public Long getGuideToFollowPageInteractionAmount() {
+    return guideToFollowPageInteractionAmount;
+  }
+
+  public void setGuideToFollowPageInteractionAmount(Long guideToFollowPageInteractionAmount) {
+    this.guideToFollowPageInteractionAmount = guideToFollowPageInteractionAmount;
+  }
+
+  public HourlyReportsGetListStruct guideToFollowPageInteractionUsers(
+      Long guideToFollowPageInteractionUsers) {
+    this.guideToFollowPageInteractionUsers = guideToFollowPageInteractionUsers;
+    return this;
+  }
+
+  /**
+   * Get guideToFollowPageInteractionUsers
+   *
+   * @return guideToFollowPageInteractionUsers
+   */
+  @ApiModelProperty(value = "")
+  public Long getGuideToFollowPageInteractionUsers() {
+    return guideToFollowPageInteractionUsers;
+  }
+
+  public void setGuideToFollowPageInteractionUsers(Long guideToFollowPageInteractionUsers) {
+    this.guideToFollowPageInteractionUsers = guideToFollowPageInteractionUsers;
+  }
+
   public HourlyReportsGetListStruct requestConversionsCount(Long requestConversionsCount) {
     this.requestConversionsCount = requestConversionsCount;
     return this;
@@ -8167,6 +8367,24 @@ public class HourlyReportsGetListStruct {
         && Objects.equals(this.tryOutUser, hourlyReportsGetListStruct.tryOutUser)
         && Objects.equals(
             this.consultLeaveInfoUsers, hourlyReportsGetListStruct.consultLeaveInfoUsers)
+        && Objects.equals(this.activePageViews, hourlyReportsGetListStruct.activePageViews)
+        && Objects.equals(this.activePageViewers, hourlyReportsGetListStruct.activePageViewers)
+        && Objects.equals(
+            this.activePageInteractionAmount,
+            hourlyReportsGetListStruct.activePageInteractionAmount)
+        && Objects.equals(
+            this.activePageInteractionUsers, hourlyReportsGetListStruct.activePageInteractionUsers)
+        && Objects.equals(this.joinChatGroupAmount, hourlyReportsGetListStruct.joinChatGroupAmount)
+        && Objects.equals(
+            this.guideToFollowPageViews, hourlyReportsGetListStruct.guideToFollowPageViews)
+        && Objects.equals(
+            this.guideToFollowPageViewers, hourlyReportsGetListStruct.guideToFollowPageViewers)
+        && Objects.equals(
+            this.guideToFollowPageInteractionAmount,
+            hourlyReportsGetListStruct.guideToFollowPageInteractionAmount)
+        && Objects.equals(
+            this.guideToFollowPageInteractionUsers,
+            hourlyReportsGetListStruct.guideToFollowPageInteractionUsers)
         && Objects.equals(
             this.requestConversionsCount, hourlyReportsGetListStruct.requestConversionsCount)
         && Objects.equals(
@@ -8597,6 +8815,15 @@ public class HourlyReportsGetListStruct {
         storeVisitor,
         tryOutUser,
         consultLeaveInfoUsers,
+        activePageViews,
+        activePageViewers,
+        activePageInteractionAmount,
+        activePageInteractionUsers,
+        joinChatGroupAmount,
+        guideToFollowPageViews,
+        guideToFollowPageViewers,
+        guideToFollowPageInteractionAmount,
+        guideToFollowPageInteractionUsers,
         requestConversionsCount,
         requestConversionsCost,
         incomeRoi1,

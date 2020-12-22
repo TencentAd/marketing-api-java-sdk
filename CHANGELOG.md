@@ -1,4 +1,8 @@
 # 更新日志
+## 2020-12-22
+1. 发布Java SDK [1.1.12] 版
+  - 新增MarketingApi接口，更新模型
+  
 ## 2020-12-14
 1. 发布Java SDK [1.1.11] 版
   - 新增MarketingApi接口

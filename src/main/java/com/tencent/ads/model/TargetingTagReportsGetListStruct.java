@@ -300,6 +300,33 @@ public class TargetingTagReportsGetListStruct {
   @SerializedName("consult_leave_info_users")
   private Long consultLeaveInfoUsers = null;
 
+  @SerializedName("active_page_views")
+  private Long activePageViews = null;
+
+  @SerializedName("active_page_viewers")
+  private Long activePageViewers = null;
+
+  @SerializedName("active_page_interaction_amount")
+  private Long activePageInteractionAmount = null;
+
+  @SerializedName("active_page_interaction_users")
+  private Long activePageInteractionUsers = null;
+
+  @SerializedName("join_chat_group_amount")
+  private Long joinChatGroupAmount = null;
+
+  @SerializedName("guide_to_follow_page_views")
+  private Long guideToFollowPageViews = null;
+
+  @SerializedName("guide_to_follow_page_viewers")
+  private Long guideToFollowPageViewers = null;
+
+  @SerializedName("guide_to_follow_page_interaction_amount")
+  private Long guideToFollowPageInteractionAmount = null;
+
+  @SerializedName("guide_to_follow_page_interaction_users")
+  private Long guideToFollowPageInteractionUsers = null;
+
   @SerializedName("age")
   private String age = null;
 
@@ -2642,6 +2669,181 @@ public class TargetingTagReportsGetListStruct {
 
   public void setConsultLeaveInfoUsers(Long consultLeaveInfoUsers) {
     this.consultLeaveInfoUsers = consultLeaveInfoUsers;
+  }
+
+  public TargetingTagReportsGetListStruct activePageViews(Long activePageViews) {
+    this.activePageViews = activePageViews;
+    return this;
+  }
+
+  /**
+   * Get activePageViews
+   *
+   * @return activePageViews
+   */
+  @ApiModelProperty(value = "")
+  public Long getActivePageViews() {
+    return activePageViews;
+  }
+
+  public void setActivePageViews(Long activePageViews) {
+    this.activePageViews = activePageViews;
+  }
+
+  public TargetingTagReportsGetListStruct activePageViewers(Long activePageViewers) {
+    this.activePageViewers = activePageViewers;
+    return this;
+  }
+
+  /**
+   * Get activePageViewers
+   *
+   * @return activePageViewers
+   */
+  @ApiModelProperty(value = "")
+  public Long getActivePageViewers() {
+    return activePageViewers;
+  }
+
+  public void setActivePageViewers(Long activePageViewers) {
+    this.activePageViewers = activePageViewers;
+  }
+
+  public TargetingTagReportsGetListStruct activePageInteractionAmount(
+      Long activePageInteractionAmount) {
+    this.activePageInteractionAmount = activePageInteractionAmount;
+    return this;
+  }
+
+  /**
+   * Get activePageInteractionAmount
+   *
+   * @return activePageInteractionAmount
+   */
+  @ApiModelProperty(value = "")
+  public Long getActivePageInteractionAmount() {
+    return activePageInteractionAmount;
+  }
+
+  public void setActivePageInteractionAmount(Long activePageInteractionAmount) {
+    this.activePageInteractionAmount = activePageInteractionAmount;
+  }
+
+  public TargetingTagReportsGetListStruct activePageInteractionUsers(
+      Long activePageInteractionUsers) {
+    this.activePageInteractionUsers = activePageInteractionUsers;
+    return this;
+  }
+
+  /**
+   * Get activePageInteractionUsers
+   *
+   * @return activePageInteractionUsers
+   */
+  @ApiModelProperty(value = "")
+  public Long getActivePageInteractionUsers() {
+    return activePageInteractionUsers;
+  }
+
+  public void setActivePageInteractionUsers(Long activePageInteractionUsers) {
+    this.activePageInteractionUsers = activePageInteractionUsers;
+  }
+
+  public TargetingTagReportsGetListStruct joinChatGroupAmount(Long joinChatGroupAmount) {
+    this.joinChatGroupAmount = joinChatGroupAmount;
+    return this;
+  }
+
+  /**
+   * Get joinChatGroupAmount
+   *
+   * @return joinChatGroupAmount
+   */
+  @ApiModelProperty(value = "")
+  public Long getJoinChatGroupAmount() {
+    return joinChatGroupAmount;
+  }
+
+  public void setJoinChatGroupAmount(Long joinChatGroupAmount) {
+    this.joinChatGroupAmount = joinChatGroupAmount;
+  }
+
+  public TargetingTagReportsGetListStruct guideToFollowPageViews(Long guideToFollowPageViews) {
+    this.guideToFollowPageViews = guideToFollowPageViews;
+    return this;
+  }
+
+  /**
+   * Get guideToFollowPageViews
+   *
+   * @return guideToFollowPageViews
+   */
+  @ApiModelProperty(value = "")
+  public Long getGuideToFollowPageViews() {
+    return guideToFollowPageViews;
+  }
+
+  public void setGuideToFollowPageViews(Long guideToFollowPageViews) {
+    this.guideToFollowPageViews = guideToFollowPageViews;
+  }
+
+  public TargetingTagReportsGetListStruct guideToFollowPageViewers(Long guideToFollowPageViewers) {
+    this.guideToFollowPageViewers = guideToFollowPageViewers;
+    return this;
+  }
+
+  /**
+   * Get guideToFollowPageViewers
+   *
+   * @return guideToFollowPageViewers
+   */
+  @ApiModelProperty(value = "")
+  public Long getGuideToFollowPageViewers() {
+    return guideToFollowPageViewers;
+  }
+
+  public void setGuideToFollowPageViewers(Long guideToFollowPageViewers) {
+    this.guideToFollowPageViewers = guideToFollowPageViewers;
+  }
+
+  public TargetingTagReportsGetListStruct guideToFollowPageInteractionAmount(
+      Long guideToFollowPageInteractionAmount) {
+    this.guideToFollowPageInteractionAmount = guideToFollowPageInteractionAmount;
+    return this;
+  }
+
+  /**
+   * Get guideToFollowPageInteractionAmount
+   *
+   * @return guideToFollowPageInteractionAmount
+   */
+  @ApiModelProperty(value = "")
+  public Long getGuideToFollowPageInteractionAmount() {
+    return guideToFollowPageInteractionAmount;
+  }
+
+  public void setGuideToFollowPageInteractionAmount(Long guideToFollowPageInteractionAmount) {
+    this.guideToFollowPageInteractionAmount = guideToFollowPageInteractionAmount;
+  }
+
+  public TargetingTagReportsGetListStruct guideToFollowPageInteractionUsers(
+      Long guideToFollowPageInteractionUsers) {
+    this.guideToFollowPageInteractionUsers = guideToFollowPageInteractionUsers;
+    return this;
+  }
+
+  /**
+   * Get guideToFollowPageInteractionUsers
+   *
+   * @return guideToFollowPageInteractionUsers
+   */
+  @ApiModelProperty(value = "")
+  public Long getGuideToFollowPageInteractionUsers() {
+    return guideToFollowPageInteractionUsers;
+  }
+
+  public void setGuideToFollowPageInteractionUsers(Long guideToFollowPageInteractionUsers) {
+    this.guideToFollowPageInteractionUsers = guideToFollowPageInteractionUsers;
   }
 
   public TargetingTagReportsGetListStruct age(String age) {
@@ -6424,6 +6626,28 @@ public class TargetingTagReportsGetListStruct {
         && Objects.equals(this.tryOutUser, targetingTagReportsGetListStruct.tryOutUser)
         && Objects.equals(
             this.consultLeaveInfoUsers, targetingTagReportsGetListStruct.consultLeaveInfoUsers)
+        && Objects.equals(this.activePageViews, targetingTagReportsGetListStruct.activePageViews)
+        && Objects.equals(
+            this.activePageViewers, targetingTagReportsGetListStruct.activePageViewers)
+        && Objects.equals(
+            this.activePageInteractionAmount,
+            targetingTagReportsGetListStruct.activePageInteractionAmount)
+        && Objects.equals(
+            this.activePageInteractionUsers,
+            targetingTagReportsGetListStruct.activePageInteractionUsers)
+        && Objects.equals(
+            this.joinChatGroupAmount, targetingTagReportsGetListStruct.joinChatGroupAmount)
+        && Objects.equals(
+            this.guideToFollowPageViews, targetingTagReportsGetListStruct.guideToFollowPageViews)
+        && Objects.equals(
+            this.guideToFollowPageViewers,
+            targetingTagReportsGetListStruct.guideToFollowPageViewers)
+        && Objects.equals(
+            this.guideToFollowPageInteractionAmount,
+            targetingTagReportsGetListStruct.guideToFollowPageInteractionAmount)
+        && Objects.equals(
+            this.guideToFollowPageInteractionUsers,
+            targetingTagReportsGetListStruct.guideToFollowPageInteractionUsers)
         && Objects.equals(this.age, targetingTagReportsGetListStruct.age)
         && Objects.equals(this.regionId, targetingTagReportsGetListStruct.regionId)
         && Objects.equals(this.cityId, targetingTagReportsGetListStruct.cityId)
@@ -6803,6 +7027,15 @@ public class TargetingTagReportsGetListStruct {
         storeVisitor,
         tryOutUser,
         consultLeaveInfoUsers,
+        activePageViews,
+        activePageViewers,
+        activePageInteractionAmount,
+        activePageInteractionUsers,
+        joinChatGroupAmount,
+        guideToFollowPageViews,
+        guideToFollowPageViewers,
+        guideToFollowPageInteractionAmount,
+        guideToFollowPageInteractionUsers,
         age,
         regionId,
         cityId,
