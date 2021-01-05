@@ -53,9 +53,6 @@ public class AdcreativeCreativeElementsRead {
   @SerializedName("element_story")
   private List<AdcreativeElementStoryArrayItem> elementStory = null;
 
-  @SerializedName("multi_share_optimization_enabled")
-  private Boolean multiShareOptimizationEnabled = null;
-
   @SerializedName("url")
   private String url = null;
 
@@ -181,6 +178,9 @@ public class AdcreativeCreativeElementsRead {
 
   @SerializedName("end_page")
   private AdCreativeEndPage endPage = null;
+
+  @SerializedName("shop_image")
+  private String shopImage = null;
 
   @SerializedName("countdown_expiring_timestamp")
   private Long countdownExpiringTimestamp = null;
@@ -391,26 +391,6 @@ public class AdcreativeCreativeElementsRead {
 
   public void setElementStory(List<AdcreativeElementStoryArrayItem> elementStory) {
     this.elementStory = elementStory;
-  }
-
-  public AdcreativeCreativeElementsRead multiShareOptimizationEnabled(
-      Boolean multiShareOptimizationEnabled) {
-    this.multiShareOptimizationEnabled = multiShareOptimizationEnabled;
-    return this;
-  }
-
-  /**
-   * Get multiShareOptimizationEnabled
-   *
-   * @return multiShareOptimizationEnabled
-   */
-  @ApiModelProperty(value = "")
-  public Boolean isMultiShareOptimizationEnabled() {
-    return multiShareOptimizationEnabled;
-  }
-
-  public void setMultiShareOptimizationEnabled(Boolean multiShareOptimizationEnabled) {
-    this.multiShareOptimizationEnabled = multiShareOptimizationEnabled;
   }
 
   public AdcreativeCreativeElementsRead url(String url) {
@@ -1228,6 +1208,25 @@ public class AdcreativeCreativeElementsRead {
     this.endPage = endPage;
   }
 
+  public AdcreativeCreativeElementsRead shopImage(String shopImage) {
+    this.shopImage = shopImage;
+    return this;
+  }
+
+  /**
+   * Get shopImage
+   *
+   * @return shopImage
+   */
+  @ApiModelProperty(value = "")
+  public String getShopImage() {
+    return shopImage;
+  }
+
+  public void setShopImage(String shopImage) {
+    this.shopImage = shopImage;
+  }
+
   public AdcreativeCreativeElementsRead countdownExpiringTimestamp(
       Long countdownExpiringTimestamp) {
     this.countdownExpiringTimestamp = countdownExpiringTimestamp;
@@ -1268,9 +1267,6 @@ public class AdcreativeCreativeElementsRead {
         && Objects.equals(this.linkNameType, adcreativeCreativeElementsRead.linkNameType)
         && Objects.equals(this.imageList, adcreativeCreativeElementsRead.imageList)
         && Objects.equals(this.elementStory, adcreativeCreativeElementsRead.elementStory)
-        && Objects.equals(
-            this.multiShareOptimizationEnabled,
-            adcreativeCreativeElementsRead.multiShareOptimizationEnabled)
         && Objects.equals(this.url, adcreativeCreativeElementsRead.url)
         && Objects.equals(this.buttonText, adcreativeCreativeElementsRead.buttonText)
         && Objects.equals(this.bottomText, adcreativeCreativeElementsRead.bottomText)
@@ -1315,6 +1311,7 @@ public class AdcreativeCreativeElementsRead {
         && Objects.equals(this.fullScreenImage, adcreativeCreativeElementsRead.fullScreenImage)
         && Objects.equals(this.zipUrl, adcreativeCreativeElementsRead.zipUrl)
         && Objects.equals(this.endPage, adcreativeCreativeElementsRead.endPage)
+        && Objects.equals(this.shopImage, adcreativeCreativeElementsRead.shopImage)
         && Objects.equals(
             this.countdownExpiringTimestamp,
             adcreativeCreativeElementsRead.countdownExpiringTimestamp);
@@ -1333,7 +1330,6 @@ public class AdcreativeCreativeElementsRead {
         linkNameType,
         imageList,
         elementStory,
-        multiShareOptimizationEnabled,
         url,
         buttonText,
         bottomText,
@@ -1376,6 +1372,7 @@ public class AdcreativeCreativeElementsRead {
         fullScreenImage,
         zipUrl,
         endPage,
+        shopImage,
         countdownExpiringTimestamp);
   }
 

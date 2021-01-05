@@ -104,9 +104,6 @@ public class AdcreativesGetListStruct {
   @SerializedName("is_dynamic_creative")
   private Boolean isDynamicCreative = null;
 
-  @SerializedName("multi_share_optimization_enabled")
-  private Boolean multiShareOptimizationEnabled = null;
-
   @SerializedName("component_id")
   private Long componentId = null;
 
@@ -678,26 +675,6 @@ public class AdcreativesGetListStruct {
     this.isDynamicCreative = isDynamicCreative;
   }
 
-  public AdcreativesGetListStruct multiShareOptimizationEnabled(
-      Boolean multiShareOptimizationEnabled) {
-    this.multiShareOptimizationEnabled = multiShareOptimizationEnabled;
-    return this;
-  }
-
-  /**
-   * Get multiShareOptimizationEnabled
-   *
-   * @return multiShareOptimizationEnabled
-   */
-  @ApiModelProperty(value = "")
-  public Boolean isMultiShareOptimizationEnabled() {
-    return multiShareOptimizationEnabled;
-  }
-
-  public void setMultiShareOptimizationEnabled(Boolean multiShareOptimizationEnabled) {
-    this.multiShareOptimizationEnabled = multiShareOptimizationEnabled;
-  }
-
   public AdcreativesGetListStruct componentId(Long componentId) {
     this.componentId = componentId;
     return this;
@@ -1059,9 +1036,6 @@ public class AdcreativesGetListStruct {
             this.dynamicAdcreativeSpec, adcreativesGetListStruct.dynamicAdcreativeSpec)
         && Objects.equals(this.isDeleted, adcreativesGetListStruct.isDeleted)
         && Objects.equals(this.isDynamicCreative, adcreativesGetListStruct.isDynamicCreative)
-        && Objects.equals(
-            this.multiShareOptimizationEnabled,
-            adcreativesGetListStruct.multiShareOptimizationEnabled)
         && Objects.equals(this.componentId, adcreativesGetListStruct.componentId)
         && Objects.equals(this.onlineEnabled, adcreativesGetListStruct.onlineEnabled)
         && Objects.equals(
@@ -1114,7 +1088,6 @@ public class AdcreativesGetListStruct {
         dynamicAdcreativeSpec,
         isDeleted,
         isDynamicCreative,
-        multiShareOptimizationEnabled,
         componentId,
         onlineEnabled,
         revisedAdcreativeSpec,

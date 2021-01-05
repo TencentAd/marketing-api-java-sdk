@@ -84,9 +84,6 @@ public class AdcreativesAddRequest {
   @SerializedName("dynamic_adcreative_spec")
   private DynamicAdcreativeSpec dynamicAdcreativeSpec = null;
 
-  @SerializedName("multi_share_optimization_enabled")
-  private Boolean multiShareOptimizationEnabled = null;
-
   @SerializedName("component_id")
   private Long componentId = null;
 
@@ -539,26 +536,6 @@ public class AdcreativesAddRequest {
     this.dynamicAdcreativeSpec = dynamicAdcreativeSpec;
   }
 
-  public AdcreativesAddRequest multiShareOptimizationEnabled(
-      Boolean multiShareOptimizationEnabled) {
-    this.multiShareOptimizationEnabled = multiShareOptimizationEnabled;
-    return this;
-  }
-
-  /**
-   * Get multiShareOptimizationEnabled
-   *
-   * @return multiShareOptimizationEnabled
-   */
-  @ApiModelProperty(value = "")
-  public Boolean isMultiShareOptimizationEnabled() {
-    return multiShareOptimizationEnabled;
-  }
-
-  public void setMultiShareOptimizationEnabled(Boolean multiShareOptimizationEnabled) {
-    this.multiShareOptimizationEnabled = multiShareOptimizationEnabled;
-  }
-
   public AdcreativesAddRequest componentId(Long componentId) {
     this.componentId = componentId;
     return this;
@@ -891,8 +868,6 @@ public class AdcreativesAddRequest {
         && Objects.equals(this.profileId, adcreativesAddRequest.profileId)
         && Objects.equals(this.shareContentSpec, adcreativesAddRequest.shareContentSpec)
         && Objects.equals(this.dynamicAdcreativeSpec, adcreativesAddRequest.dynamicAdcreativeSpec)
-        && Objects.equals(
-            this.multiShareOptimizationEnabled, adcreativesAddRequest.multiShareOptimizationEnabled)
         && Objects.equals(this.componentId, adcreativesAddRequest.componentId)
         && Objects.equals(this.category, adcreativesAddRequest.category)
         && Objects.equals(this.label, adcreativesAddRequest.label)
@@ -936,7 +911,6 @@ public class AdcreativesAddRequest {
         profileId,
         shareContentSpec,
         dynamicAdcreativeSpec,
-        multiShareOptimizationEnabled,
         componentId,
         category,
         label,

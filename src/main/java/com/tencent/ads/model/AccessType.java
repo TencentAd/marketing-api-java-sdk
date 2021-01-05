@@ -19,12 +19,14 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-/** 上报方式 */
+/** 上报方式, SDK上报方式仅支持安卓和ios转化场景，JS上报方式仅支持网页转化场景 */
 @JsonAdapter(AccessType.Adapter.class)
 public enum AccessType {
   SDK("ACCESS_TYPE_SDK"),
 
-  API("ACCESS_TYPE_API");
+  API("ACCESS_TYPE_API"),
+
+  JS("ACCESS_TYPE_JS");
 
   private String value;
 

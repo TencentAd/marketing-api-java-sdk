@@ -39,6 +39,12 @@ public class MetricDetailData {
   @SerializedName("purchase")
   private Long purchase = null;
 
+  @SerializedName("promotion_claim_offer_pv")
+  private Long promotionClaimOfferPv = null;
+
+  @SerializedName("page_visit_store_pv")
+  private Long pageVisitStorePv = null;
+
   public MetricDetailData cost(Long cost) {
     this.cost = cost;
     return this;
@@ -153,6 +159,44 @@ public class MetricDetailData {
     this.purchase = purchase;
   }
 
+  public MetricDetailData promotionClaimOfferPv(Long promotionClaimOfferPv) {
+    this.promotionClaimOfferPv = promotionClaimOfferPv;
+    return this;
+  }
+
+  /**
+   * Get promotionClaimOfferPv
+   *
+   * @return promotionClaimOfferPv
+   */
+  @ApiModelProperty(value = "")
+  public Long getPromotionClaimOfferPv() {
+    return promotionClaimOfferPv;
+  }
+
+  public void setPromotionClaimOfferPv(Long promotionClaimOfferPv) {
+    this.promotionClaimOfferPv = promotionClaimOfferPv;
+  }
+
+  public MetricDetailData pageVisitStorePv(Long pageVisitStorePv) {
+    this.pageVisitStorePv = pageVisitStorePv;
+    return this;
+  }
+
+  /**
+   * Get pageVisitStorePv
+   *
+   * @return pageVisitStorePv
+   */
+  @ApiModelProperty(value = "")
+  public Long getPageVisitStorePv() {
+    return pageVisitStorePv;
+  }
+
+  public void setPageVisitStorePv(Long pageVisitStorePv) {
+    this.pageVisitStorePv = pageVisitStorePv;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -167,13 +211,22 @@ public class MetricDetailData {
         && Objects.equals(this.canvasCpnCouponsGetPv, metricDetailData.canvasCpnCouponsGetPv)
         && Objects.equals(this.canvasCpnCouponsCost, metricDetailData.canvasCpnCouponsCost)
         && Objects.equals(this.canvasCpnCouponsUsePv, metricDetailData.canvasCpnCouponsUsePv)
-        && Objects.equals(this.purchase, metricDetailData.purchase);
+        && Objects.equals(this.purchase, metricDetailData.purchase)
+        && Objects.equals(this.promotionClaimOfferPv, metricDetailData.promotionClaimOfferPv)
+        && Objects.equals(this.pageVisitStorePv, metricDetailData.pageVisitStorePv);
   }
 
   @Override
   public int hashCode() {
     return Objects.hash(
-        cost, expPv, canvasCpnCouponsGetPv, canvasCpnCouponsCost, canvasCpnCouponsUsePv, purchase);
+        cost,
+        expPv,
+        canvasCpnCouponsGetPv,
+        canvasCpnCouponsCost,
+        canvasCpnCouponsUsePv,
+        purchase,
+        promotionClaimOfferPv,
+        pageVisitStorePv);
   }
 
   @Override

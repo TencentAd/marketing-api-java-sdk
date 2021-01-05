@@ -134,6 +134,9 @@ public class RevisedAdcreativeElements {
   @SerializedName("end_page")
   private AdCreativeEndPage endPage = null;
 
+  @SerializedName("shop_image")
+  private String shopImage = null;
+
   public RevisedAdcreativeElements image(String image) {
     this.image = image;
     return this;
@@ -871,6 +874,25 @@ public class RevisedAdcreativeElements {
     this.endPage = endPage;
   }
 
+  public RevisedAdcreativeElements shopImage(String shopImage) {
+    this.shopImage = shopImage;
+    return this;
+  }
+
+  /**
+   * Get shopImage
+   *
+   * @return shopImage
+   */
+  @ApiModelProperty(value = "")
+  public String getShopImage() {
+    return shopImage;
+  }
+
+  public void setShopImage(String shopImage) {
+    this.shopImage = shopImage;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -916,7 +938,8 @@ public class RevisedAdcreativeElements {
         && Objects.equals(this.labelledImg, revisedAdcreativeElements.labelledImg)
         && Objects.equals(this.fullScreenImage, revisedAdcreativeElements.fullScreenImage)
         && Objects.equals(this.zipUrl, revisedAdcreativeElements.zipUrl)
-        && Objects.equals(this.endPage, revisedAdcreativeElements.endPage);
+        && Objects.equals(this.endPage, revisedAdcreativeElements.endPage)
+        && Objects.equals(this.shopImage, revisedAdcreativeElements.shopImage);
   }
 
   @Override
@@ -958,7 +981,8 @@ public class RevisedAdcreativeElements {
         labelledImg,
         fullScreenImage,
         zipUrl,
-        endPage);
+        endPage,
+        shopImage);
   }
 
   @Override

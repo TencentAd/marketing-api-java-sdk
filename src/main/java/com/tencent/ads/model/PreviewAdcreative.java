@@ -71,9 +71,6 @@ public class PreviewAdcreative {
   @SerializedName("is_dynamic_creative")
   private Boolean isDynamicCreative = null;
 
-  @SerializedName("multi_share_optimization_enabled")
-  private Boolean multiShareOptimizationEnabled = null;
-
   @SerializedName("component_id")
   private Long componentId = null;
 
@@ -425,25 +422,6 @@ public class PreviewAdcreative {
     this.isDynamicCreative = isDynamicCreative;
   }
 
-  public PreviewAdcreative multiShareOptimizationEnabled(Boolean multiShareOptimizationEnabled) {
-    this.multiShareOptimizationEnabled = multiShareOptimizationEnabled;
-    return this;
-  }
-
-  /**
-   * Get multiShareOptimizationEnabled
-   *
-   * @return multiShareOptimizationEnabled
-   */
-  @ApiModelProperty(value = "")
-  public Boolean isMultiShareOptimizationEnabled() {
-    return multiShareOptimizationEnabled;
-  }
-
-  public void setMultiShareOptimizationEnabled(Boolean multiShareOptimizationEnabled) {
-    this.multiShareOptimizationEnabled = multiShareOptimizationEnabled;
-  }
-
   public PreviewAdcreative componentId(Long componentId) {
     this.componentId = componentId;
     return this;
@@ -733,8 +711,6 @@ public class PreviewAdcreative {
         && Objects.equals(this.dynamicAdcreativeSpec, previewAdcreative.dynamicAdcreativeSpec)
         && Objects.equals(this.isDeleted, previewAdcreative.isDeleted)
         && Objects.equals(this.isDynamicCreative, previewAdcreative.isDynamicCreative)
-        && Objects.equals(
-            this.multiShareOptimizationEnabled, previewAdcreative.multiShareOptimizationEnabled)
         && Objects.equals(this.componentId, previewAdcreative.componentId)
         && Objects.equals(this.onlineEnabled, previewAdcreative.onlineEnabled)
         && Objects.equals(this.revisedAdcreativeSpec, previewAdcreative.revisedAdcreativeSpec)
@@ -769,7 +745,6 @@ public class PreviewAdcreative {
         dynamicAdcreativeSpec,
         isDeleted,
         isDynamicCreative,
-        multiShareOptimizationEnabled,
         componentId,
         onlineEnabled,
         revisedAdcreativeSpec,

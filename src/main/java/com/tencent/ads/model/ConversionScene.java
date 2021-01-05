@@ -19,12 +19,16 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-/** 转化场景 */
+/** 转化场景，网页及微信小程序转化场景无需输入推广目标id */
 @JsonAdapter(ConversionScene.Adapter.class)
 public enum ConversionScene {
   ANDROID("CONVERSION_SCENE_ANDROID"),
 
-  IOS("CONVERSION_SCENE_IOS");
+  IOS("CONVERSION_SCENE_IOS"),
+
+  WEB("CONVERSION_SCENE_WEB"),
+
+  WECHAT_MINI_PROGRAM("CONVERSION_SCENE_WECHAT_MINI_PROGRAM");
 
   private String value;
 

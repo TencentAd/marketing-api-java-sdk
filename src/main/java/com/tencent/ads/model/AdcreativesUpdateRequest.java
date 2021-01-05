@@ -66,9 +66,6 @@ public class AdcreativesUpdateRequest {
   @SerializedName("share_content_spec")
   private ShareContentSpec shareContentSpec = null;
 
-  @SerializedName("multi_share_optimization_enabled")
-  private Boolean multiShareOptimizationEnabled = null;
-
   @SerializedName("profile_id")
   private Long profileId = null;
 
@@ -404,26 +401,6 @@ public class AdcreativesUpdateRequest {
 
   public void setShareContentSpec(ShareContentSpec shareContentSpec) {
     this.shareContentSpec = shareContentSpec;
-  }
-
-  public AdcreativesUpdateRequest multiShareOptimizationEnabled(
-      Boolean multiShareOptimizationEnabled) {
-    this.multiShareOptimizationEnabled = multiShareOptimizationEnabled;
-    return this;
-  }
-
-  /**
-   * Get multiShareOptimizationEnabled
-   *
-   * @return multiShareOptimizationEnabled
-   */
-  @ApiModelProperty(value = "")
-  public Boolean isMultiShareOptimizationEnabled() {
-    return multiShareOptimizationEnabled;
-  }
-
-  public void setMultiShareOptimizationEnabled(Boolean multiShareOptimizationEnabled) {
-    this.multiShareOptimizationEnabled = multiShareOptimizationEnabled;
   }
 
   public AdcreativesUpdateRequest profileId(Long profileId) {
@@ -793,9 +770,6 @@ public class AdcreativesUpdateRequest {
         && Objects.equals(this.iosDeepLinkAppId, adcreativesUpdateRequest.iosDeepLinkAppId)
         && Objects.equals(this.universalLinkUrl, adcreativesUpdateRequest.universalLinkUrl)
         && Objects.equals(this.shareContentSpec, adcreativesUpdateRequest.shareContentSpec)
-        && Objects.equals(
-            this.multiShareOptimizationEnabled,
-            adcreativesUpdateRequest.multiShareOptimizationEnabled)
         && Objects.equals(this.profileId, adcreativesUpdateRequest.profileId)
         && Objects.equals(this.componentId, adcreativesUpdateRequest.componentId)
         && Objects.equals(this.onlineEnabled, adcreativesUpdateRequest.onlineEnabled)
@@ -837,7 +811,6 @@ public class AdcreativesUpdateRequest {
         iosDeepLinkAppId,
         universalLinkUrl,
         shareContentSpec,
-        multiShareOptimizationEnabled,
         profileId,
         componentId,
         onlineEnabled,

@@ -134,6 +134,9 @@ public class DynamicCreativeElements {
   @SerializedName("caption")
   private String caption = null;
 
+  @SerializedName("shop_image")
+  private String shopImage = null;
+
   @SerializedName("countdown_expiring_timestamp")
   private Long countdownExpiringTimestamp = null;
 
@@ -923,6 +926,25 @@ public class DynamicCreativeElements {
     this.caption = caption;
   }
 
+  public DynamicCreativeElements shopImage(String shopImage) {
+    this.shopImage = shopImage;
+    return this;
+  }
+
+  /**
+   * Get shopImage
+   *
+   * @return shopImage
+   */
+  @ApiModelProperty(value = "")
+  public String getShopImage() {
+    return shopImage;
+  }
+
+  public void setShopImage(String shopImage) {
+    this.shopImage = shopImage;
+  }
+
   public DynamicCreativeElements countdownExpiringTimestamp(Long countdownExpiringTimestamp) {
     this.countdownExpiringTimestamp = countdownExpiringTimestamp;
     return this;
@@ -989,6 +1011,7 @@ public class DynamicCreativeElements {
         && Objects.equals(this.buttonUrl, dynamicCreativeElements.buttonUrl)
         && Objects.equals(this.brand, dynamicCreativeElements.brand)
         && Objects.equals(this.caption, dynamicCreativeElements.caption)
+        && Objects.equals(this.shopImage, dynamicCreativeElements.shopImage)
         && Objects.equals(
             this.countdownExpiringTimestamp, dynamicCreativeElements.countdownExpiringTimestamp);
   }
@@ -1033,6 +1056,7 @@ public class DynamicCreativeElements {
         buttonUrl,
         brand,
         caption,
+        shopImage,
         countdownExpiringTimestamp);
   }
 

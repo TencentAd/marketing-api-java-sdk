@@ -40,6 +40,12 @@ public class ConversionsAddRequest {
   @SerializedName("feedback_url")
   private String feedbackUrl = null;
 
+  @SerializedName("landing_page_url")
+  private String landingPageUrl = null;
+
+  @SerializedName("mini_program_id")
+  private String miniProgramId = null;
+
   @SerializedName("self_attributed")
   private Boolean selfAttributed = null;
 
@@ -188,6 +194,44 @@ public class ConversionsAddRequest {
     this.feedbackUrl = feedbackUrl;
   }
 
+  public ConversionsAddRequest landingPageUrl(String landingPageUrl) {
+    this.landingPageUrl = landingPageUrl;
+    return this;
+  }
+
+  /**
+   * Get landingPageUrl
+   *
+   * @return landingPageUrl
+   */
+  @ApiModelProperty(value = "")
+  public String getLandingPageUrl() {
+    return landingPageUrl;
+  }
+
+  public void setLandingPageUrl(String landingPageUrl) {
+    this.landingPageUrl = landingPageUrl;
+  }
+
+  public ConversionsAddRequest miniProgramId(String miniProgramId) {
+    this.miniProgramId = miniProgramId;
+    return this;
+  }
+
+  /**
+   * Get miniProgramId
+   *
+   * @return miniProgramId
+   */
+  @ApiModelProperty(value = "")
+  public String getMiniProgramId() {
+    return miniProgramId;
+  }
+
+  public void setMiniProgramId(String miniProgramId) {
+    this.miniProgramId = miniProgramId;
+  }
+
   public ConversionsAddRequest selfAttributed(Boolean selfAttributed) {
     this.selfAttributed = selfAttributed;
     return this;
@@ -301,6 +345,8 @@ public class ConversionsAddRequest {
         && Objects.equals(this.promotedObjectId, conversionsAddRequest.promotedObjectId)
         && Objects.equals(this.claimType, conversionsAddRequest.claimType)
         && Objects.equals(this.feedbackUrl, conversionsAddRequest.feedbackUrl)
+        && Objects.equals(this.landingPageUrl, conversionsAddRequest.landingPageUrl)
+        && Objects.equals(this.miniProgramId, conversionsAddRequest.miniProgramId)
         && Objects.equals(this.selfAttributed, conversionsAddRequest.selfAttributed)
         && Objects.equals(this.optimizationGoal, conversionsAddRequest.optimizationGoal)
         && Objects.equals(
@@ -320,6 +366,8 @@ public class ConversionsAddRequest {
         promotedObjectId,
         claimType,
         feedbackUrl,
+        landingPageUrl,
+        miniProgramId,
         selfAttributed,
         optimizationGoal,
         deepBehaviorOptimizationGoal,

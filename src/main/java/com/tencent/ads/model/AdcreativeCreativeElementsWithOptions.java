@@ -137,6 +137,9 @@ public class AdcreativeCreativeElementsWithOptions {
   @SerializedName("end_page")
   private AdCreativeEndPage endPage = null;
 
+  @SerializedName("shop_image")
+  private String shopImage = null;
+
   @SerializedName("countdown_expiring_timestamp")
   private Long countdownExpiringTimestamp = null;
 
@@ -931,6 +934,25 @@ public class AdcreativeCreativeElementsWithOptions {
     this.endPage = endPage;
   }
 
+  public AdcreativeCreativeElementsWithOptions shopImage(String shopImage) {
+    this.shopImage = shopImage;
+    return this;
+  }
+
+  /**
+   * Get shopImage
+   *
+   * @return shopImage
+   */
+  @ApiModelProperty(value = "")
+  public String getShopImage() {
+    return shopImage;
+  }
+
+  public void setShopImage(String shopImage) {
+    this.shopImage = shopImage;
+  }
+
   public AdcreativeCreativeElementsWithOptions countdownExpiringTimestamp(
       Long countdownExpiringTimestamp) {
     this.countdownExpiringTimestamp = countdownExpiringTimestamp;
@@ -1007,6 +1029,7 @@ public class AdcreativeCreativeElementsWithOptions {
             this.fullScreenImage, adcreativeCreativeElementsWithOptions.fullScreenImage)
         && Objects.equals(this.zipUrl, adcreativeCreativeElementsWithOptions.zipUrl)
         && Objects.equals(this.endPage, adcreativeCreativeElementsWithOptions.endPage)
+        && Objects.equals(this.shopImage, adcreativeCreativeElementsWithOptions.shopImage)
         && Objects.equals(
             this.countdownExpiringTimestamp,
             adcreativeCreativeElementsWithOptions.countdownExpiringTimestamp);
@@ -1053,6 +1076,7 @@ public class AdcreativeCreativeElementsWithOptions {
         fullScreenImage,
         zipUrl,
         endPage,
+        shopImage,
         countdownExpiringTimestamp);
   }
 

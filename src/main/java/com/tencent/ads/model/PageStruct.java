@@ -42,8 +42,8 @@ public class PageStruct {
   @SerializedName("page_last_modify_time")
   private String pageLastModifyTime = null;
 
-  @SerializedName("page_account_id")
-  private Long pageAccountId = null;
+  @SerializedName("page_owner_id")
+  private Long pageOwnerId = null;
 
   public PageStruct pageId(Long pageId) {
     this.pageId = pageId;
@@ -178,23 +178,23 @@ public class PageStruct {
     this.pageLastModifyTime = pageLastModifyTime;
   }
 
-  public PageStruct pageAccountId(Long pageAccountId) {
-    this.pageAccountId = pageAccountId;
+  public PageStruct pageOwnerId(Long pageOwnerId) {
+    this.pageOwnerId = pageOwnerId;
     return this;
   }
 
   /**
-   * Get pageAccountId
+   * Get pageOwnerId
    *
-   * @return pageAccountId
+   * @return pageOwnerId
    */
   @ApiModelProperty(value = "")
-  public Long getPageAccountId() {
-    return pageAccountId;
+  public Long getPageOwnerId() {
+    return pageOwnerId;
   }
 
-  public void setPageAccountId(Long pageAccountId) {
-    this.pageAccountId = pageAccountId;
+  public void setPageOwnerId(Long pageOwnerId) {
+    this.pageOwnerId = pageOwnerId;
   }
 
   @Override
@@ -213,7 +213,7 @@ public class PageStruct {
         && Objects.equals(this.pagePublishStatus, pageStruct.pagePublishStatus)
         && Objects.equals(this.pageStatus, pageStruct.pageStatus)
         && Objects.equals(this.pageLastModifyTime, pageStruct.pageLastModifyTime)
-        && Objects.equals(this.pageAccountId, pageStruct.pageAccountId);
+        && Objects.equals(this.pageOwnerId, pageStruct.pageOwnerId);
   }
 
   @Override
@@ -226,7 +226,7 @@ public class PageStruct {
         pagePublishStatus,
         pageStatus,
         pageLastModifyTime,
-        pageAccountId);
+        pageOwnerId);
   }
 
   @Override
