@@ -33,15 +33,16 @@ public class VideomakerSubtitlesApiContainer extends ApiContainer {
    * @param videoId (optional)
    * @param videoFile (optional)
    * @param signature (optional)
+   * @param onlySubtitleFile (optional)
    * @return VideomakerSubtitlesAddResponse
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
   public VideomakerSubtitlesAddResponseData videomakerSubtitlesAdd(
-      Long accountId, String videoId, File videoFile, String signature)
+      Long accountId, String videoId, File videoFile, String signature, Boolean onlySubtitleFile)
       throws ApiException, TencentAdsResponseException {
     VideomakerSubtitlesAddResponse resp =
-        api.videomakerSubtitlesAdd(accountId, videoId, videoFile, signature);
+        api.videomakerSubtitlesAdd(accountId, videoId, videoFile, signature, onlySubtitleFile);
     handleResponse(gson.toJson(resp));
     return resp.getData();
   }

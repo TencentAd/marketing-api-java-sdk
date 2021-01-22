@@ -83,6 +83,9 @@ public class DynamicCreativesGetListStruct {
   @SerializedName("union_market_switch")
   private Boolean unionMarketSwitch = null;
 
+  @SerializedName("video_end_page")
+  private VideoEndPageSpec videoEndPage = null;
+
   public DynamicCreativesGetListStruct dynamicCreativeId(Long dynamicCreativeId) {
     this.dynamicCreativeId = dynamicCreativeId;
     return this;
@@ -472,6 +475,25 @@ public class DynamicCreativesGetListStruct {
     this.unionMarketSwitch = unionMarketSwitch;
   }
 
+  public DynamicCreativesGetListStruct videoEndPage(VideoEndPageSpec videoEndPage) {
+    this.videoEndPage = videoEndPage;
+    return this;
+  }
+
+  /**
+   * Get videoEndPage
+   *
+   * @return videoEndPage
+   */
+  @ApiModelProperty(value = "")
+  public VideoEndPageSpec getVideoEndPage() {
+    return videoEndPage;
+  }
+
+  public void setVideoEndPage(VideoEndPageSpec videoEndPage) {
+    this.videoEndPage = videoEndPage;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -506,7 +528,8 @@ public class DynamicCreativesGetListStruct {
         && Objects.equals(this.clickTrackingUrl, dynamicCreativesGetListStruct.clickTrackingUrl)
         && Objects.equals(
             this.feedsVideoCommentSwitch, dynamicCreativesGetListStruct.feedsVideoCommentSwitch)
-        && Objects.equals(this.unionMarketSwitch, dynamicCreativesGetListStruct.unionMarketSwitch);
+        && Objects.equals(this.unionMarketSwitch, dynamicCreativesGetListStruct.unionMarketSwitch)
+        && Objects.equals(this.videoEndPage, dynamicCreativesGetListStruct.videoEndPage);
   }
 
   @Override
@@ -531,7 +554,8 @@ public class DynamicCreativesGetListStruct {
         impressionTrackingUrl,
         clickTrackingUrl,
         feedsVideoCommentSwitch,
-        unionMarketSwitch);
+        unionMarketSwitch,
+        videoEndPage);
   }
 
   @Override

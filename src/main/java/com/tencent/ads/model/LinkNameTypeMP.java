@@ -88,7 +88,13 @@ public enum LinkNameTypeMP {
 
   WATCH_LIVE("WATCH_LIVE"),
 
-  RESERVE_NOW("RESERVE_NOW");
+  RESERVE_NOW("RESERVE_NOW"),
+
+  OPEN_APP("OPEN_APP"),
+
+  ALREADY_INSTALL("ALREADY_INSTALL"),
+
+  RESERVE_LIVE("RESERVE_LIVE");
 
   private String value;
 

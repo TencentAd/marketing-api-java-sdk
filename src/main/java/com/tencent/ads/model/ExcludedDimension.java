@@ -25,8 +25,8 @@ import java.io.IOException;
  * 同商品，仅当SDPA商品广告下使用，不支持自定义转化行为默认排除已下单、和已付费用户，不限制出价方式；&lt;br/&gt;
  * 非同应用、非同商品，没有选择自定义转化行为（excluded_dimension）时 ，使用该定向出价需要满足是oCPC、oCPM广告；
  */
-@JsonAdapter(ExcludedConvertedAudience.Adapter.class)
-public enum ExcludedConvertedAudience {
+@JsonAdapter(ExcludedDimension.Adapter.class)
+public enum ExcludedDimension {
   CAMPAIGN("EXCLUDED_DIMENSION_CAMPAIGN"),
 
   UID("EXCLUDED_DIMENSION_UID"),
@@ -41,7 +41,7 @@ public enum ExcludedConvertedAudience {
 
   private String value;
 
-  ExcludedConvertedAudience(String value) {
+  ExcludedDimension(String value) {
     this.value = value;
   }
 
@@ -54,8 +54,8 @@ public enum ExcludedConvertedAudience {
     return String.valueOf(value);
   }
 
-  public static ExcludedConvertedAudience fromValue(String text) {
-    for (ExcludedConvertedAudience b : ExcludedConvertedAudience.values()) {
+  public static ExcludedDimension fromValue(String text) {
+    for (ExcludedDimension b : ExcludedDimension.values()) {
       if (String.valueOf(b.value).equals(text)) {
         return b;
       }
@@ -63,17 +63,17 @@ public enum ExcludedConvertedAudience {
     return null;
   }
 
-  public static class Adapter extends TypeAdapter<ExcludedConvertedAudience> {
+  public static class Adapter extends TypeAdapter<ExcludedDimension> {
     @Override
-    public void write(final JsonWriter jsonWriter, final ExcludedConvertedAudience enumeration)
+    public void write(final JsonWriter jsonWriter, final ExcludedDimension enumeration)
         throws IOException {
       jsonWriter.value(enumeration.getValue());
     }
 
     @Override
-    public ExcludedConvertedAudience read(final JsonReader jsonReader) throws IOException {
+    public ExcludedDimension read(final JsonReader jsonReader) throws IOException {
       String value = jsonReader.nextString();
-      return ExcludedConvertedAudience.fromValue(String.valueOf(value));
+      return ExcludedDimension.fromValue(String.valueOf(value));
     }
   }
 }

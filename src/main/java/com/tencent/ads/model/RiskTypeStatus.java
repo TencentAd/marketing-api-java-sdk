@@ -19,28 +19,22 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-/** 任务状态 */
-@JsonAdapter(TaskStatus.Adapter.class)
-public enum TaskStatus {
-  PENDING("TASK_STATUS_PENDING"),
+/** 风险等级类型 */
+@JsonAdapter(RiskTypeStatus.Adapter.class)
+public enum RiskTypeStatus {
+  CONSERVATIVE("RISK_CONSERVATIVE"),
 
-  PROCESSING("TASK_STATUS_PROCESSING"),
+  STEADY("RISK_STEADY"),
 
-  EXPIRED("TASK_STATUS_EXPIRED"),
+  BALANCE("RISK_BALANCE"),
 
-  COMPLETED("TASK_STATUS_COMPLETED"),
+  RADICAL("RISK_RADICAL"),
 
-  CANCELLED("TASK_STATUS_CANCELLED"),
-
-  FAIL("TASK_STATUS_FAIL"),
-
-  DELETED("TASK_STATUS_DELETED"),
-
-  DRAFT("TASK_STATUS_DRAFT");
+  OTHER("RISK_OTHER");
 
   private String value;
 
-  TaskStatus(String value) {
+  RiskTypeStatus(String value) {
     this.value = value;
   }
 
@@ -53,8 +47,8 @@ public enum TaskStatus {
     return String.valueOf(value);
   }
 
-  public static TaskStatus fromValue(String text) {
-    for (TaskStatus b : TaskStatus.values()) {
+  public static RiskTypeStatus fromValue(String text) {
+    for (RiskTypeStatus b : RiskTypeStatus.values()) {
       if (String.valueOf(b.value).equals(text)) {
         return b;
       }
@@ -62,17 +56,17 @@ public enum TaskStatus {
     return null;
   }
 
-  public static class Adapter extends TypeAdapter<TaskStatus> {
+  public static class Adapter extends TypeAdapter<RiskTypeStatus> {
     @Override
-    public void write(final JsonWriter jsonWriter, final TaskStatus enumeration)
+    public void write(final JsonWriter jsonWriter, final RiskTypeStatus enumeration)
         throws IOException {
       jsonWriter.value(enumeration.getValue());
     }
 
     @Override
-    public TaskStatus read(final JsonReader jsonReader) throws IOException {
+    public RiskTypeStatus read(final JsonReader jsonReader) throws IOException {
       String value = jsonReader.nextString();
-      return TaskStatus.fromValue(String.valueOf(value));
+      return RiskTypeStatus.fromValue(String.valueOf(value));
     }
   }
 }

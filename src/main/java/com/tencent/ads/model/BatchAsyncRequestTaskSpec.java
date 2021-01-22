@@ -54,6 +54,9 @@ public class BatchAsyncRequestTaskSpec {
   @SerializedName("delete_ad_spec")
   private List<DeleteAdItem> deleteAdSpec = null;
 
+  @SerializedName("targetings_share_spec")
+  private List<TargetingsShareItem> targetingsShareSpec = null;
+
   public BatchAsyncRequestTaskSpec updateUnionPositionPackageSpec(
       List<UpdateUnionPositionPackageItem> updateUnionPositionPackageSpec) {
     this.updateUnionPositionPackageSpec = updateUnionPositionPackageSpec;
@@ -352,6 +355,35 @@ public class BatchAsyncRequestTaskSpec {
     this.deleteAdSpec = deleteAdSpec;
   }
 
+  public BatchAsyncRequestTaskSpec targetingsShareSpec(
+      List<TargetingsShareItem> targetingsShareSpec) {
+    this.targetingsShareSpec = targetingsShareSpec;
+    return this;
+  }
+
+  public BatchAsyncRequestTaskSpec addTargetingsShareSpecItem(
+      TargetingsShareItem targetingsShareSpecItem) {
+    if (this.targetingsShareSpec == null) {
+      this.targetingsShareSpec = new ArrayList<TargetingsShareItem>();
+    }
+    this.targetingsShareSpec.add(targetingsShareSpecItem);
+    return this;
+  }
+
+  /**
+   * Get targetingsShareSpec
+   *
+   * @return targetingsShareSpec
+   */
+  @ApiModelProperty(value = "")
+  public List<TargetingsShareItem> getTargetingsShareSpec() {
+    return targetingsShareSpec;
+  }
+
+  public void setTargetingsShareSpec(List<TargetingsShareItem> targetingsShareSpec) {
+    this.targetingsShareSpec = targetingsShareSpec;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -381,7 +413,8 @@ public class BatchAsyncRequestTaskSpec {
             this.updateCampaignSpeedModeSpec, batchAsyncRequestTaskSpec.updateCampaignSpeedModeSpec)
         && Objects.equals(this.deleteCampaignSpec, batchAsyncRequestTaskSpec.deleteCampaignSpec)
         && Objects.equals(this.deleteAdgroupSpec, batchAsyncRequestTaskSpec.deleteAdgroupSpec)
-        && Objects.equals(this.deleteAdSpec, batchAsyncRequestTaskSpec.deleteAdSpec);
+        && Objects.equals(this.deleteAdSpec, batchAsyncRequestTaskSpec.deleteAdSpec)
+        && Objects.equals(this.targetingsShareSpec, batchAsyncRequestTaskSpec.targetingsShareSpec);
   }
 
   @Override
@@ -396,7 +429,8 @@ public class BatchAsyncRequestTaskSpec {
         updateCampaignSpeedModeSpec,
         deleteCampaignSpec,
         deleteAdgroupSpec,
-        deleteAdSpec);
+        deleteAdSpec,
+        targetingsShareSpec);
   }
 
   @Override

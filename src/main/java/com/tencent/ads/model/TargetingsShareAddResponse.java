@@ -19,8 +19,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
-/** ReportJdOfflineReportStatusResponse */
-public class ReportJdOfflineReportStatusResponse {
+/** TargetingsShareAddResponse */
+public class TargetingsShareAddResponse {
   @SerializedName("code")
   private Long code = null;
 
@@ -34,9 +34,9 @@ public class ReportJdOfflineReportStatusResponse {
   private List<ApiErrorStruct> errors = null;
 
   @SerializedName("data")
-  private ReportJdOfflineReportStatusResponseData data = null;
+  private TargetingsShareAddResponseData data = null;
 
-  public ReportJdOfflineReportStatusResponse code(Long code) {
+  public TargetingsShareAddResponse code(Long code) {
     this.code = code;
     return this;
   }
@@ -55,7 +55,7 @@ public class ReportJdOfflineReportStatusResponse {
     this.code = code;
   }
 
-  public ReportJdOfflineReportStatusResponse message(String message) {
+  public TargetingsShareAddResponse message(String message) {
     this.message = message;
     return this;
   }
@@ -74,7 +74,7 @@ public class ReportJdOfflineReportStatusResponse {
     this.message = message;
   }
 
-  public ReportJdOfflineReportStatusResponse messageCn(String messageCn) {
+  public TargetingsShareAddResponse messageCn(String messageCn) {
     this.messageCn = messageCn;
     return this;
   }
@@ -93,12 +93,12 @@ public class ReportJdOfflineReportStatusResponse {
     this.messageCn = messageCn;
   }
 
-  public ReportJdOfflineReportStatusResponse errors(List<ApiErrorStruct> errors) {
+  public TargetingsShareAddResponse errors(List<ApiErrorStruct> errors) {
     this.errors = errors;
     return this;
   }
 
-  public ReportJdOfflineReportStatusResponse addErrorsItem(ApiErrorStruct errorsItem) {
+  public TargetingsShareAddResponse addErrorsItem(ApiErrorStruct errorsItem) {
     if (this.errors == null) {
       this.errors = new ArrayList<ApiErrorStruct>();
     }
@@ -120,7 +120,7 @@ public class ReportJdOfflineReportStatusResponse {
     this.errors = errors;
   }
 
-  public ReportJdOfflineReportStatusResponse data(ReportJdOfflineReportStatusResponseData data) {
+  public TargetingsShareAddResponse data(TargetingsShareAddResponseData data) {
     this.data = data;
     return this;
   }
@@ -131,11 +131,11 @@ public class ReportJdOfflineReportStatusResponse {
    * @return data
    */
   @ApiModelProperty(value = "")
-  public ReportJdOfflineReportStatusResponseData getData() {
+  public TargetingsShareAddResponseData getData() {
     return data;
   }
 
-  public void setData(ReportJdOfflineReportStatusResponseData data) {
+  public void setData(TargetingsShareAddResponseData data) {
     this.data = data;
   }
 
@@ -147,13 +147,12 @@ public class ReportJdOfflineReportStatusResponse {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    ReportJdOfflineReportStatusResponse reportJdOfflineReportStatusResponse =
-        (ReportJdOfflineReportStatusResponse) o;
-    return Objects.equals(this.code, reportJdOfflineReportStatusResponse.code)
-        && Objects.equals(this.message, reportJdOfflineReportStatusResponse.message)
-        && Objects.equals(this.messageCn, reportJdOfflineReportStatusResponse.messageCn)
-        && Objects.equals(this.errors, reportJdOfflineReportStatusResponse.errors)
-        && Objects.equals(this.data, reportJdOfflineReportStatusResponse.data);
+    TargetingsShareAddResponse targetingsShareAddResponse = (TargetingsShareAddResponse) o;
+    return Objects.equals(this.code, targetingsShareAddResponse.code)
+        && Objects.equals(this.message, targetingsShareAddResponse.message)
+        && Objects.equals(this.messageCn, targetingsShareAddResponse.messageCn)
+        && Objects.equals(this.errors, targetingsShareAddResponse.errors)
+        && Objects.equals(this.data, targetingsShareAddResponse.data);
   }
 
   @Override

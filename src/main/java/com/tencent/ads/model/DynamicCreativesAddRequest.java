@@ -69,6 +69,9 @@ public class DynamicCreativesAddRequest {
   @SerializedName("dynamic_adcreative_spec")
   private DynamicAdcreativeSpec dynamicAdcreativeSpec = null;
 
+  @SerializedName("video_end_page")
+  private VideoEndPageSpec videoEndPage = null;
+
   @SerializedName("account_id")
   private Long accountId = null;
 
@@ -386,6 +389,25 @@ public class DynamicCreativesAddRequest {
     this.dynamicAdcreativeSpec = dynamicAdcreativeSpec;
   }
 
+  public DynamicCreativesAddRequest videoEndPage(VideoEndPageSpec videoEndPage) {
+    this.videoEndPage = videoEndPage;
+    return this;
+  }
+
+  /**
+   * Get videoEndPage
+   *
+   * @return videoEndPage
+   */
+  @ApiModelProperty(value = "")
+  public VideoEndPageSpec getVideoEndPage() {
+    return videoEndPage;
+  }
+
+  public void setVideoEndPage(VideoEndPageSpec videoEndPage) {
+    this.videoEndPage = videoEndPage;
+  }
+
   public DynamicCreativesAddRequest accountId(Long accountId) {
     this.accountId = accountId;
     return this;
@@ -436,6 +458,7 @@ public class DynamicCreativesAddRequest {
         && Objects.equals(this.unionMarketSwitch, dynamicCreativesAddRequest.unionMarketSwitch)
         && Objects.equals(
             this.dynamicAdcreativeSpec, dynamicCreativesAddRequest.dynamicAdcreativeSpec)
+        && Objects.equals(this.videoEndPage, dynamicCreativesAddRequest.videoEndPage)
         && Objects.equals(this.accountId, dynamicCreativesAddRequest.accountId);
   }
 
@@ -458,6 +481,7 @@ public class DynamicCreativesAddRequest {
         feedsVideoCommentSwitch,
         unionMarketSwitch,
         dynamicAdcreativeSpec,
+        videoEndPage,
         accountId);
   }
 

@@ -45,6 +45,21 @@ public class PageStruct {
   @SerializedName("page_owner_id")
   private Long pageOwnerId = null;
 
+  @SerializedName("publish_url")
+  private String publishUrl = null;
+
+  @SerializedName("reject_reason")
+  private String rejectReason = null;
+
+  @SerializedName("playable_type")
+  private PlayableType playableType = null;
+
+  @SerializedName("publish_app_id")
+  private PublishAppId publishAppId = null;
+
+  @SerializedName("unpublish_app_id")
+  private UnpublishAppId unpublishAppId = null;
+
   public PageStruct pageId(Long pageId) {
     this.pageId = pageId;
     return this;
@@ -197,6 +212,101 @@ public class PageStruct {
     this.pageOwnerId = pageOwnerId;
   }
 
+  public PageStruct publishUrl(String publishUrl) {
+    this.publishUrl = publishUrl;
+    return this;
+  }
+
+  /**
+   * Get publishUrl
+   *
+   * @return publishUrl
+   */
+  @ApiModelProperty(value = "")
+  public String getPublishUrl() {
+    return publishUrl;
+  }
+
+  public void setPublishUrl(String publishUrl) {
+    this.publishUrl = publishUrl;
+  }
+
+  public PageStruct rejectReason(String rejectReason) {
+    this.rejectReason = rejectReason;
+    return this;
+  }
+
+  /**
+   * Get rejectReason
+   *
+   * @return rejectReason
+   */
+  @ApiModelProperty(value = "")
+  public String getRejectReason() {
+    return rejectReason;
+  }
+
+  public void setRejectReason(String rejectReason) {
+    this.rejectReason = rejectReason;
+  }
+
+  public PageStruct playableType(PlayableType playableType) {
+    this.playableType = playableType;
+    return this;
+  }
+
+  /**
+   * Get playableType
+   *
+   * @return playableType
+   */
+  @ApiModelProperty(value = "")
+  public PlayableType getPlayableType() {
+    return playableType;
+  }
+
+  public void setPlayableType(PlayableType playableType) {
+    this.playableType = playableType;
+  }
+
+  public PageStruct publishAppId(PublishAppId publishAppId) {
+    this.publishAppId = publishAppId;
+    return this;
+  }
+
+  /**
+   * Get publishAppId
+   *
+   * @return publishAppId
+   */
+  @ApiModelProperty(value = "")
+  public PublishAppId getPublishAppId() {
+    return publishAppId;
+  }
+
+  public void setPublishAppId(PublishAppId publishAppId) {
+    this.publishAppId = publishAppId;
+  }
+
+  public PageStruct unpublishAppId(UnpublishAppId unpublishAppId) {
+    this.unpublishAppId = unpublishAppId;
+    return this;
+  }
+
+  /**
+   * Get unpublishAppId
+   *
+   * @return unpublishAppId
+   */
+  @ApiModelProperty(value = "")
+  public UnpublishAppId getUnpublishAppId() {
+    return unpublishAppId;
+  }
+
+  public void setUnpublishAppId(UnpublishAppId unpublishAppId) {
+    this.unpublishAppId = unpublishAppId;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -213,7 +323,12 @@ public class PageStruct {
         && Objects.equals(this.pagePublishStatus, pageStruct.pagePublishStatus)
         && Objects.equals(this.pageStatus, pageStruct.pageStatus)
         && Objects.equals(this.pageLastModifyTime, pageStruct.pageLastModifyTime)
-        && Objects.equals(this.pageOwnerId, pageStruct.pageOwnerId);
+        && Objects.equals(this.pageOwnerId, pageStruct.pageOwnerId)
+        && Objects.equals(this.publishUrl, pageStruct.publishUrl)
+        && Objects.equals(this.rejectReason, pageStruct.rejectReason)
+        && Objects.equals(this.playableType, pageStruct.playableType)
+        && Objects.equals(this.publishAppId, pageStruct.publishAppId)
+        && Objects.equals(this.unpublishAppId, pageStruct.unpublishAppId);
   }
 
   @Override
@@ -226,7 +341,12 @@ public class PageStruct {
         pagePublishStatus,
         pageStatus,
         pageLastModifyTime,
-        pageOwnerId);
+        pageOwnerId,
+        publishUrl,
+        rejectReason,
+        playableType,
+        publishAppId,
+        unpublishAppId);
   }
 
   @Override

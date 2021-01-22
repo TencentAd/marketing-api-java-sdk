@@ -19,8 +19,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
-/** ReportJdCreativeTemplateHourlyReportResponse */
-public class ReportJdCreativeTemplateHourlyReportResponse {
+/** TargetingsShareGetResponse */
+public class TargetingsShareGetResponse {
   @SerializedName("code")
   private Long code = null;
 
@@ -34,9 +34,9 @@ public class ReportJdCreativeTemplateHourlyReportResponse {
   private List<ApiErrorStruct> errors = null;
 
   @SerializedName("data")
-  private ReportJdCreativeTemplateHourlyReportResponseData data = null;
+  private TargetingsShareGetResponseData data = null;
 
-  public ReportJdCreativeTemplateHourlyReportResponse code(Long code) {
+  public TargetingsShareGetResponse code(Long code) {
     this.code = code;
     return this;
   }
@@ -55,7 +55,7 @@ public class ReportJdCreativeTemplateHourlyReportResponse {
     this.code = code;
   }
 
-  public ReportJdCreativeTemplateHourlyReportResponse message(String message) {
+  public TargetingsShareGetResponse message(String message) {
     this.message = message;
     return this;
   }
@@ -74,7 +74,7 @@ public class ReportJdCreativeTemplateHourlyReportResponse {
     this.message = message;
   }
 
-  public ReportJdCreativeTemplateHourlyReportResponse messageCn(String messageCn) {
+  public TargetingsShareGetResponse messageCn(String messageCn) {
     this.messageCn = messageCn;
     return this;
   }
@@ -93,12 +93,12 @@ public class ReportJdCreativeTemplateHourlyReportResponse {
     this.messageCn = messageCn;
   }
 
-  public ReportJdCreativeTemplateHourlyReportResponse errors(List<ApiErrorStruct> errors) {
+  public TargetingsShareGetResponse errors(List<ApiErrorStruct> errors) {
     this.errors = errors;
     return this;
   }
 
-  public ReportJdCreativeTemplateHourlyReportResponse addErrorsItem(ApiErrorStruct errorsItem) {
+  public TargetingsShareGetResponse addErrorsItem(ApiErrorStruct errorsItem) {
     if (this.errors == null) {
       this.errors = new ArrayList<ApiErrorStruct>();
     }
@@ -120,8 +120,7 @@ public class ReportJdCreativeTemplateHourlyReportResponse {
     this.errors = errors;
   }
 
-  public ReportJdCreativeTemplateHourlyReportResponse data(
-      ReportJdCreativeTemplateHourlyReportResponseData data) {
+  public TargetingsShareGetResponse data(TargetingsShareGetResponseData data) {
     this.data = data;
     return this;
   }
@@ -132,11 +131,11 @@ public class ReportJdCreativeTemplateHourlyReportResponse {
    * @return data
    */
   @ApiModelProperty(value = "")
-  public ReportJdCreativeTemplateHourlyReportResponseData getData() {
+  public TargetingsShareGetResponseData getData() {
     return data;
   }
 
-  public void setData(ReportJdCreativeTemplateHourlyReportResponseData data) {
+  public void setData(TargetingsShareGetResponseData data) {
     this.data = data;
   }
 
@@ -148,13 +147,12 @@ public class ReportJdCreativeTemplateHourlyReportResponse {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    ReportJdCreativeTemplateHourlyReportResponse reportJdCreativeTemplateHourlyReportResponse =
-        (ReportJdCreativeTemplateHourlyReportResponse) o;
-    return Objects.equals(this.code, reportJdCreativeTemplateHourlyReportResponse.code)
-        && Objects.equals(this.message, reportJdCreativeTemplateHourlyReportResponse.message)
-        && Objects.equals(this.messageCn, reportJdCreativeTemplateHourlyReportResponse.messageCn)
-        && Objects.equals(this.errors, reportJdCreativeTemplateHourlyReportResponse.errors)
-        && Objects.equals(this.data, reportJdCreativeTemplateHourlyReportResponse.data);
+    TargetingsShareGetResponse targetingsShareGetResponse = (TargetingsShareGetResponse) o;
+    return Objects.equals(this.code, targetingsShareGetResponse.code)
+        && Objects.equals(this.message, targetingsShareGetResponse.message)
+        && Objects.equals(this.messageCn, targetingsShareGetResponse.messageCn)
+        && Objects.equals(this.errors, targetingsShareGetResponse.errors)
+        && Objects.equals(this.data, targetingsShareGetResponse.data);
   }
 
   @Override

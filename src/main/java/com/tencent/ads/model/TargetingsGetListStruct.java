@@ -48,6 +48,15 @@ public class TargetingsGetListStruct {
   @SerializedName("targeting_translation")
   private String targetingTranslation = null;
 
+  @SerializedName("targeting_source_type")
+  private TargetingPkgSourceType targetingSourceType = null;
+
+  @SerializedName("share_from_account_id")
+  private Long shareFromAccountId = null;
+
+  @SerializedName("share_from_targeting_id")
+  private Long shareFromTargetingId = null;
+
   @SerializedName("targeting")
   private ReadTargetingSetting targeting = null;
 
@@ -223,6 +232,63 @@ public class TargetingsGetListStruct {
     this.targetingTranslation = targetingTranslation;
   }
 
+  public TargetingsGetListStruct targetingSourceType(TargetingPkgSourceType targetingSourceType) {
+    this.targetingSourceType = targetingSourceType;
+    return this;
+  }
+
+  /**
+   * Get targetingSourceType
+   *
+   * @return targetingSourceType
+   */
+  @ApiModelProperty(value = "")
+  public TargetingPkgSourceType getTargetingSourceType() {
+    return targetingSourceType;
+  }
+
+  public void setTargetingSourceType(TargetingPkgSourceType targetingSourceType) {
+    this.targetingSourceType = targetingSourceType;
+  }
+
+  public TargetingsGetListStruct shareFromAccountId(Long shareFromAccountId) {
+    this.shareFromAccountId = shareFromAccountId;
+    return this;
+  }
+
+  /**
+   * Get shareFromAccountId
+   *
+   * @return shareFromAccountId
+   */
+  @ApiModelProperty(value = "")
+  public Long getShareFromAccountId() {
+    return shareFromAccountId;
+  }
+
+  public void setShareFromAccountId(Long shareFromAccountId) {
+    this.shareFromAccountId = shareFromAccountId;
+  }
+
+  public TargetingsGetListStruct shareFromTargetingId(Long shareFromTargetingId) {
+    this.shareFromTargetingId = shareFromTargetingId;
+    return this;
+  }
+
+  /**
+   * Get shareFromTargetingId
+   *
+   * @return shareFromTargetingId
+   */
+  @ApiModelProperty(value = "")
+  public Long getShareFromTargetingId() {
+    return shareFromTargetingId;
+  }
+
+  public void setShareFromTargetingId(Long shareFromTargetingId) {
+    this.shareFromTargetingId = shareFromTargetingId;
+  }
+
   public TargetingsGetListStruct targeting(ReadTargetingSetting targeting) {
     this.targeting = targeting;
     return this;
@@ -262,6 +328,9 @@ public class TargetingsGetListStruct {
         && Objects.equals(this.lastModifiedTime, targetingsGetListStruct.lastModifiedTime)
         && Objects.equals(this.adLockStatus, targetingsGetListStruct.adLockStatus)
         && Objects.equals(this.targetingTranslation, targetingsGetListStruct.targetingTranslation)
+        && Objects.equals(this.targetingSourceType, targetingsGetListStruct.targetingSourceType)
+        && Objects.equals(this.shareFromAccountId, targetingsGetListStruct.shareFromAccountId)
+        && Objects.equals(this.shareFromTargetingId, targetingsGetListStruct.shareFromTargetingId)
         && Objects.equals(this.targeting, targetingsGetListStruct.targeting);
   }
 
@@ -277,6 +346,9 @@ public class TargetingsGetListStruct {
         lastModifiedTime,
         adLockStatus,
         targetingTranslation,
+        targetingSourceType,
+        shareFromAccountId,
+        shareFromTargetingId,
         targeting);
   }
 

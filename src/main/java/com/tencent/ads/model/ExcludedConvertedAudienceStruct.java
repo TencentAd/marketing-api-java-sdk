@@ -24,13 +24,12 @@ import java.util.Objects;
 @ApiModel(description = "排除已转化用户定向")
 public class ExcludedConvertedAudienceStruct {
   @SerializedName("excluded_dimension")
-  private ExcludedConvertedAudience excludedDimension = null;
+  private ExcludedDimension excludedDimension = null;
 
   @SerializedName("conversion_behavior_list")
   private List<String> conversionBehaviorList = null;
 
-  public ExcludedConvertedAudienceStruct excludedDimension(
-      ExcludedConvertedAudience excludedDimension) {
+  public ExcludedConvertedAudienceStruct excludedDimension(ExcludedDimension excludedDimension) {
     this.excludedDimension = excludedDimension;
     return this;
   }
@@ -41,11 +40,11 @@ public class ExcludedConvertedAudienceStruct {
    * @return excludedDimension
    */
   @ApiModelProperty(value = "")
-  public ExcludedConvertedAudience getExcludedDimension() {
+  public ExcludedDimension getExcludedDimension() {
     return excludedDimension;
   }
 
-  public void setExcludedDimension(ExcludedConvertedAudience excludedDimension) {
+  public void setExcludedDimension(ExcludedDimension excludedDimension) {
     this.excludedDimension = excludedDimension;
   }
 

@@ -182,8 +182,8 @@ public class ProductItemSpec {
   @SerializedName("brand_id")
   private Long brandId = null;
 
-  @SerializedName("brand_name")
-  private String brandName = null;
+  @SerializedName("product_brand")
+  private String productBrand = null;
 
   @SerializedName("brand_url")
   private String brandUrl = null;
@@ -331,6 +331,21 @@ public class ProductItemSpec {
 
   @SerializedName("tour_place_foreign")
   private TourPlaceForeign tourPlaceForeign = null;
+
+  @SerializedName("max_insurance_quota")
+  private Double maxInsuranceQuota = null;
+
+  @SerializedName("first_month_insurance_fee")
+  private Double firstMonthInsuranceFee = null;
+
+  @SerializedName("max_quota")
+  private Double maxQuota = null;
+
+  @SerializedName("annualized_rate_of_return")
+  private Double annualizedRateOfReturn = null;
+
+  @SerializedName("risk_type")
+  private RiskTypeStatus riskType = null;
 
   public ProductItemSpec productOuterId(String productOuterId) {
     this.productOuterId = productOuterId;
@@ -1363,23 +1378,23 @@ public class ProductItemSpec {
     this.brandId = brandId;
   }
 
-  public ProductItemSpec brandName(String brandName) {
-    this.brandName = brandName;
+  public ProductItemSpec productBrand(String productBrand) {
+    this.productBrand = productBrand;
     return this;
   }
 
   /**
-   * Get brandName
+   * Get productBrand
    *
-   * @return brandName
+   * @return productBrand
    */
   @ApiModelProperty(value = "")
-  public String getBrandName() {
-    return brandName;
+  public String getProductBrand() {
+    return productBrand;
   }
 
-  public void setBrandName(String brandName) {
-    this.brandName = brandName;
+  public void setProductBrand(String productBrand) {
+    this.productBrand = productBrand;
   }
 
   public ProductItemSpec brandUrl(String brandUrl) {
@@ -2369,6 +2384,101 @@ public class ProductItemSpec {
     this.tourPlaceForeign = tourPlaceForeign;
   }
 
+  public ProductItemSpec maxInsuranceQuota(Double maxInsuranceQuota) {
+    this.maxInsuranceQuota = maxInsuranceQuota;
+    return this;
+  }
+
+  /**
+   * Get maxInsuranceQuota
+   *
+   * @return maxInsuranceQuota
+   */
+  @ApiModelProperty(value = "")
+  public Double getMaxInsuranceQuota() {
+    return maxInsuranceQuota;
+  }
+
+  public void setMaxInsuranceQuota(Double maxInsuranceQuota) {
+    this.maxInsuranceQuota = maxInsuranceQuota;
+  }
+
+  public ProductItemSpec firstMonthInsuranceFee(Double firstMonthInsuranceFee) {
+    this.firstMonthInsuranceFee = firstMonthInsuranceFee;
+    return this;
+  }
+
+  /**
+   * Get firstMonthInsuranceFee
+   *
+   * @return firstMonthInsuranceFee
+   */
+  @ApiModelProperty(value = "")
+  public Double getFirstMonthInsuranceFee() {
+    return firstMonthInsuranceFee;
+  }
+
+  public void setFirstMonthInsuranceFee(Double firstMonthInsuranceFee) {
+    this.firstMonthInsuranceFee = firstMonthInsuranceFee;
+  }
+
+  public ProductItemSpec maxQuota(Double maxQuota) {
+    this.maxQuota = maxQuota;
+    return this;
+  }
+
+  /**
+   * Get maxQuota
+   *
+   * @return maxQuota
+   */
+  @ApiModelProperty(value = "")
+  public Double getMaxQuota() {
+    return maxQuota;
+  }
+
+  public void setMaxQuota(Double maxQuota) {
+    this.maxQuota = maxQuota;
+  }
+
+  public ProductItemSpec annualizedRateOfReturn(Double annualizedRateOfReturn) {
+    this.annualizedRateOfReturn = annualizedRateOfReturn;
+    return this;
+  }
+
+  /**
+   * Get annualizedRateOfReturn
+   *
+   * @return annualizedRateOfReturn
+   */
+  @ApiModelProperty(value = "")
+  public Double getAnnualizedRateOfReturn() {
+    return annualizedRateOfReturn;
+  }
+
+  public void setAnnualizedRateOfReturn(Double annualizedRateOfReturn) {
+    this.annualizedRateOfReturn = annualizedRateOfReturn;
+  }
+
+  public ProductItemSpec riskType(RiskTypeStatus riskType) {
+    this.riskType = riskType;
+    return this;
+  }
+
+  /**
+   * Get riskType
+   *
+   * @return riskType
+   */
+  @ApiModelProperty(value = "")
+  public RiskTypeStatus getRiskType() {
+    return riskType;
+  }
+
+  public void setRiskType(RiskTypeStatus riskType) {
+    this.riskType = riskType;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -2431,7 +2541,7 @@ public class ProductItemSpec {
         && Objects.equals(this.thirdCategoryUrl, productItemSpec.thirdCategoryUrl)
         && Objects.equals(this.fourthCategoryUrl, productItemSpec.fourthCategoryUrl)
         && Objects.equals(this.brandId, productItemSpec.brandId)
-        && Objects.equals(this.brandName, productItemSpec.brandName)
+        && Objects.equals(this.productBrand, productItemSpec.productBrand)
         && Objects.equals(this.brandUrl, productItemSpec.brandUrl)
         && Objects.equals(this.promotionId, productItemSpec.promotionId)
         && Objects.equals(this.promotionName, productItemSpec.promotionName)
@@ -2480,7 +2590,12 @@ public class ProductItemSpec {
         && Objects.equals(this.shootingStyleCom, productItemSpec.shootingStyleCom)
         && Objects.equals(this.shootingSceneDetail, productItemSpec.shootingSceneDetail)
         && Objects.equals(this.tourPlaceDomestic, productItemSpec.tourPlaceDomestic)
-        && Objects.equals(this.tourPlaceForeign, productItemSpec.tourPlaceForeign);
+        && Objects.equals(this.tourPlaceForeign, productItemSpec.tourPlaceForeign)
+        && Objects.equals(this.maxInsuranceQuota, productItemSpec.maxInsuranceQuota)
+        && Objects.equals(this.firstMonthInsuranceFee, productItemSpec.firstMonthInsuranceFee)
+        && Objects.equals(this.maxQuota, productItemSpec.maxQuota)
+        && Objects.equals(this.annualizedRateOfReturn, productItemSpec.annualizedRateOfReturn)
+        && Objects.equals(this.riskType, productItemSpec.riskType);
   }
 
   @Override
@@ -2539,7 +2654,7 @@ public class ProductItemSpec {
         thirdCategoryUrl,
         fourthCategoryUrl,
         brandId,
-        brandName,
+        productBrand,
         brandUrl,
         promotionId,
         promotionName,
@@ -2588,7 +2703,12 @@ public class ProductItemSpec {
         shootingStyleCom,
         shootingSceneDetail,
         tourPlaceDomestic,
-        tourPlaceForeign);
+        tourPlaceForeign,
+        maxInsuranceQuota,
+        firstMonthInsuranceFee,
+        maxQuota,
+        annualizedRateOfReturn,
+        riskType);
   }
 
   @Override

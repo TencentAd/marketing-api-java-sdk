@@ -43,6 +43,9 @@ public class DynamicCreativesUpdateRequest {
   @SerializedName("union_market_switch")
   private Boolean unionMarketSwitch = null;
 
+  @SerializedName("video_end_page")
+  private VideoEndPageSpec videoEndPage = null;
+
   @SerializedName("account_id")
   private Long accountId = null;
 
@@ -199,6 +202,25 @@ public class DynamicCreativesUpdateRequest {
     this.unionMarketSwitch = unionMarketSwitch;
   }
 
+  public DynamicCreativesUpdateRequest videoEndPage(VideoEndPageSpec videoEndPage) {
+    this.videoEndPage = videoEndPage;
+    return this;
+  }
+
+  /**
+   * Get videoEndPage
+   *
+   * @return videoEndPage
+   */
+  @ApiModelProperty(value = "")
+  public VideoEndPageSpec getVideoEndPage() {
+    return videoEndPage;
+  }
+
+  public void setVideoEndPage(VideoEndPageSpec videoEndPage) {
+    this.videoEndPage = videoEndPage;
+  }
+
   public DynamicCreativesUpdateRequest accountId(Long accountId) {
     this.accountId = accountId;
     return this;
@@ -239,6 +261,7 @@ public class DynamicCreativesUpdateRequest {
         && Objects.equals(
             this.feedsVideoCommentSwitch, dynamicCreativesUpdateRequest.feedsVideoCommentSwitch)
         && Objects.equals(this.unionMarketSwitch, dynamicCreativesUpdateRequest.unionMarketSwitch)
+        && Objects.equals(this.videoEndPage, dynamicCreativesUpdateRequest.videoEndPage)
         && Objects.equals(this.accountId, dynamicCreativesUpdateRequest.accountId);
   }
 
@@ -253,6 +276,7 @@ public class DynamicCreativesUpdateRequest {
         clickTrackingUrl,
         feedsVideoCommentSwitch,
         unionMarketSwitch,
+        videoEndPage,
         accountId);
   }
 

@@ -21,17 +21,9 @@ import com.tencent.ads.exception.TencentAdsResponseException;
 import com.tencent.ads.model.ReportConversionsPredictRequest;
 import com.tencent.ads.model.ReportConversionsPredictResponse;
 import com.tencent.ads.model.ReportConversionsPredictResponseData;
-import com.tencent.ads.model.ReportJdCreativeTemplateHourlyReportRequest;
-import com.tencent.ads.model.ReportJdCreativeTemplateHourlyReportResponse;
-import com.tencent.ads.model.ReportJdCreativeTemplateHourlyReportResponseData;
-import com.tencent.ads.model.ReportJdOfflineReportFileResponse;
-import com.tencent.ads.model.ReportJdOfflineReportStatusRequest;
-import com.tencent.ads.model.ReportJdOfflineReportStatusResponse;
-import com.tencent.ads.model.ReportJdOfflineReportStatusResponseData;
 import com.tencent.ads.model.ReportVideoFrameRequest;
 import com.tencent.ads.model.ReportVideoFrameResponse;
 import com.tencent.ads.model.ReportVideoFrameResponseData;
-import java.util.List;
 
 public class ReportApiContainer extends ApiContainer {
 
@@ -48,61 +40,6 @@ public class ReportApiContainer extends ApiContainer {
   public ReportConversionsPredictResponseData reportConversionsPredict(
       ReportConversionsPredictRequest data) throws ApiException, TencentAdsResponseException {
     ReportConversionsPredictResponse resp = api.reportConversionsPredict(data);
-    handleResponse(gson.toJson(resp));
-    return resp.getData();
-  }
-
-  /**
-   * 获取京东创意形式小时报表
-   *
-   * @param data (required)
-   * @return ReportJdCreativeTemplateHourlyReportResponse
-   * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
-   *     response body
-   */
-  public ReportJdCreativeTemplateHourlyReportResponseData reportJdCreativeTemplateHourlyReport(
-      ReportJdCreativeTemplateHourlyReportRequest data)
-      throws ApiException, TencentAdsResponseException {
-    ReportJdCreativeTemplateHourlyReportResponse resp =
-        api.reportJdCreativeTemplateHourlyReport(data);
-    handleResponse(gson.toJson(resp));
-    return resp.getData();
-  }
-
-  /**
-   * 获取京东离线报表文件
-   *
-   * @param accountId (required)
-   * @param task (required)
-   * @param date (required)
-   * @param hour (optional)
-   * @param timeFrame (optional)
-   * @param fields 返回参数的字段列表 (optional)
-   * @return ReportJdOfflineReportFileResponse
-   * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
-   *     response body
-   */
-  public ReportJdOfflineReportFileResponse reportJdOfflineReportFile(
-      Long accountId, String task, String date, String hour, String timeFrame, List<String> fields)
-      throws ApiException, TencentAdsResponseException {
-    ReportJdOfflineReportFileResponse resp =
-        api.reportJdOfflineReportFile(accountId, task, date, hour, timeFrame, fields);
-    handleResponse(gson.toJson(resp));
-
-    return resp;
-  }
-
-  /**
-   * 获取京东离线报表文件状态
-   *
-   * @param data (required)
-   * @return ReportJdOfflineReportStatusResponse
-   * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
-   *     response body
-   */
-  public ReportJdOfflineReportStatusResponseData reportJdOfflineReportStatus(
-      ReportJdOfflineReportStatusRequest data) throws ApiException, TencentAdsResponseException {
-    ReportJdOfflineReportStatusResponse resp = api.reportJdOfflineReportStatus(data);
     handleResponse(gson.toJson(resp));
     return resp.getData();
   }

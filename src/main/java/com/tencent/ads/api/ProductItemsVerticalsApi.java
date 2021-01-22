@@ -128,7 +128,7 @@ public class ProductItemsVerticalsApi {
   }
 
   /**
-   * 商品列表
+   * 行业列表
    *
    * @param fields 返回参数的字段列表 (optional)
    * @return ProductItemsVerticalsGetResponse
@@ -143,7 +143,7 @@ public class ProductItemsVerticalsApi {
   }
 
   /**
-   * 商品列表
+   * 行业列表
    *
    * @param fields 返回参数的字段列表 (optional)
    * @return ApiResponse&lt;ProductItemsVerticalsGetResponse&gt;
@@ -158,7 +158,7 @@ public class ProductItemsVerticalsApi {
   }
 
   /**
-   * 商品列表 (asynchronously)
+   * 行业列表 (asynchronously)
    *
    * @param fields 返回参数的字段列表 (optional)
    * @param callback The callback to be executed when the API call finishes

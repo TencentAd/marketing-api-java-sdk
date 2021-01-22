@@ -21,10 +21,9 @@ import com.tencent.ads.Configuration;
 import com.tencent.ads.Pair;
 import com.tencent.ads.ProgressRequestBody;
 import com.tencent.ads.ProgressResponseBody;
-import com.tencent.ads.model.ReportConversionsPredictRequest;
-import com.tencent.ads.model.ReportConversionsPredictResponse;
-import com.tencent.ads.model.ReportVideoFrameRequest;
-import com.tencent.ads.model.ReportVideoFrameResponse;
+import com.tencent.ads.model.TargetingsShareAddRequest;
+import com.tencent.ads.model.TargetingsShareAddResponse;
+import com.tencent.ads.model.TargetingsShareGetResponse;
 import java.io.IOException;
 import java.lang.reflect.Type;
 import java.util.ArrayList;
@@ -32,14 +31,14 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class ReportApi {
+public class TargetingsShareApi {
   private ApiClient apiClient;
 
-  public ReportApi() {
+  public TargetingsShareApi() {
     this(Configuration.getDefaultApiClient());
   }
 
-  public ReportApi(ApiClient apiClient) {
+  public TargetingsShareApi(ApiClient apiClient) {
     this.apiClient = apiClient;
   }
 
@@ -52,7 +51,7 @@ public class ReportApi {
   }
 
   /**
-   * Build call for reportConversionsPredict
+   * Build call for targetingsShareAdd
    *
    * @param data (required)
    * @param progressListener Progress listener
@@ -60,15 +59,15 @@ public class ReportApi {
    * @return Call to execute
    * @throws ApiException If fail to serialize the request body object
    */
-  public com.squareup.okhttp.Call reportConversionsPredictCall(
-      ReportConversionsPredictRequest data,
+  public com.squareup.okhttp.Call targetingsShareAddCall(
+      TargetingsShareAddRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener)
       throws ApiException {
     Object localVarPostBody = data;
 
     // create path and map variables
-    String localVarPath = "/report/conversions_predict";
+    String localVarPath = "/targetings_share/add";
 
     List<Pair> localVarQueryParams = new ArrayList<Pair>();
     List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -117,8 +116,8 @@ public class ReportApi {
   }
 
   @SuppressWarnings("rawtypes")
-  private com.squareup.okhttp.Call reportConversionsPredictValidateBeforeCall(
-      ReportConversionsPredictRequest data,
+  private com.squareup.okhttp.Call targetingsShareAddValidateBeforeCall(
+      TargetingsShareAddRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener)
       throws ApiException {
@@ -126,54 +125,53 @@ public class ReportApi {
     // verify the required parameter 'data' is set
     if (data == null) {
       throw new ApiException(
-          "Missing the required parameter 'data' when calling reportConversionsPredict(Async)");
+          "Missing the required parameter 'data' when calling targetingsShareAdd(Async)");
     }
 
     com.squareup.okhttp.Call call =
-        reportConversionsPredictCall(data, progressListener, progressRequestListener);
+        targetingsShareAddCall(data, progressListener, progressRequestListener);
     return call;
   }
 
   /**
-   * 获取当日转化效果预估数据
+   * 分享定向
    *
    * @param data (required)
-   * @return ReportConversionsPredictResponse
+   * @return TargetingsShareAddResponse
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
-  public ReportConversionsPredictResponse reportConversionsPredict(
-      ReportConversionsPredictRequest data) throws ApiException {
-    ApiResponse<ReportConversionsPredictResponse> resp = reportConversionsPredictWithHttpInfo(data);
+  public TargetingsShareAddResponse targetingsShareAdd(TargetingsShareAddRequest data)
+      throws ApiException {
+    ApiResponse<TargetingsShareAddResponse> resp = targetingsShareAddWithHttpInfo(data);
     return resp.getData();
   }
 
   /**
-   * 获取当日转化效果预估数据
+   * 分享定向
    *
    * @param data (required)
-   * @return ApiResponse&lt;ReportConversionsPredictResponse&gt;
+   * @return ApiResponse&lt;TargetingsShareAddResponse&gt;
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
-  public ApiResponse<ReportConversionsPredictResponse> reportConversionsPredictWithHttpInfo(
-      ReportConversionsPredictRequest data) throws ApiException {
-    com.squareup.okhttp.Call call = reportConversionsPredictValidateBeforeCall(data, null, null);
-    Type localVarReturnType = new TypeToken<ReportConversionsPredictResponse>() {}.getType();
+  public ApiResponse<TargetingsShareAddResponse> targetingsShareAddWithHttpInfo(
+      TargetingsShareAddRequest data) throws ApiException {
+    com.squareup.okhttp.Call call = targetingsShareAddValidateBeforeCall(data, null, null);
+    Type localVarReturnType = new TypeToken<TargetingsShareAddResponse>() {}.getType();
     return apiClient.execute(call, localVarReturnType);
   }
 
   /**
-   * 获取当日转化效果预估数据 (asynchronously)
+   * 分享定向 (asynchronously)
    *
    * @param data (required)
    * @param callback The callback to be executed when the API call finishes
    * @return The request call
    * @throws ApiException If fail to process the API call, e.g. serializing the request body object
    */
-  public com.squareup.okhttp.Call reportConversionsPredictAsync(
-      ReportConversionsPredictRequest data,
-      final ApiCallback<ReportConversionsPredictResponse> callback)
+  public com.squareup.okhttp.Call targetingsShareAddAsync(
+      TargetingsShareAddRequest data, final ApiCallback<TargetingsShareAddResponse> callback)
       throws ApiException {
 
     ProgressResponseBody.ProgressListener progressListener = null;
@@ -198,32 +196,49 @@ public class ReportApi {
     }
 
     com.squareup.okhttp.Call call =
-        reportConversionsPredictValidateBeforeCall(data, progressListener, progressRequestListener);
-    Type localVarReturnType = new TypeToken<ReportConversionsPredictResponse>() {}.getType();
+        targetingsShareAddValidateBeforeCall(data, progressListener, progressRequestListener);
+    Type localVarReturnType = new TypeToken<TargetingsShareAddResponse>() {}.getType();
     apiClient.executeAsync(call, localVarReturnType, callback);
     return call;
   }
   /**
-   * Build call for reportVideoFrame
+   * Build call for targetingsShareGet
    *
-   * @param data (required)
+   * @param accountId (required)
+   * @param targetingId (required)
+   * @param page (optional)
+   * @param pageSize (optional)
+   * @param fields 返回参数的字段列表 (optional)
    * @param progressListener Progress listener
    * @param progressRequestListener Progress request listener
    * @return Call to execute
    * @throws ApiException If fail to serialize the request body object
    */
-  public com.squareup.okhttp.Call reportVideoFrameCall(
-      ReportVideoFrameRequest data,
+  public com.squareup.okhttp.Call targetingsShareGetCall(
+      Long accountId,
+      Long targetingId,
+      Long page,
+      Long pageSize,
+      List<String> fields,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener)
       throws ApiException {
-    Object localVarPostBody = data;
+    Object localVarPostBody = null;
 
     // create path and map variables
-    String localVarPath = "/report/video_frame";
+    String localVarPath = "/targetings_share/get";
 
     List<Pair> localVarQueryParams = new ArrayList<Pair>();
     List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+    if (accountId != null)
+      localVarQueryParams.addAll(apiClient.parameterToPair("account_id", accountId));
+    if (targetingId != null)
+      localVarQueryParams.addAll(apiClient.parameterToPair("targeting_id", targetingId));
+    if (page != null) localVarQueryParams.addAll(apiClient.parameterToPair("page", page));
+    if (pageSize != null)
+      localVarQueryParams.addAll(apiClient.parameterToPair("page_size", pageSize));
+    if (fields != null)
+      localVarCollectionQueryParams.addAll(apiClient.parameterToPairs("multi", "fields", fields));
 
     Map<String, String> localVarHeaderParams = new HashMap<String, String>();
 
@@ -233,7 +248,7 @@ public class ReportApi {
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
     if (localVarAccept != null) localVarHeaderParams.put("Accept", localVarAccept);
 
-    final String[] localVarContentTypes = {"application/json", "application/xml"};
+    final String[] localVarContentTypes = {"text/plain"};
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
     localVarHeaderParams.put("Content-Type", localVarContentType);
 
@@ -258,7 +273,7 @@ public class ReportApi {
     String[] localVarAuthNames = new String[] {"accessToken", "nonce", "timestamp"};
     return apiClient.buildCall(
         localVarPath,
-        "POST",
+        "GET",
         localVarQueryParams,
         localVarCollectionQueryParams,
         localVarPostBody,
@@ -269,62 +284,101 @@ public class ReportApi {
   }
 
   @SuppressWarnings("rawtypes")
-  private com.squareup.okhttp.Call reportVideoFrameValidateBeforeCall(
-      ReportVideoFrameRequest data,
+  private com.squareup.okhttp.Call targetingsShareGetValidateBeforeCall(
+      Long accountId,
+      Long targetingId,
+      Long page,
+      Long pageSize,
+      List<String> fields,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener)
       throws ApiException {
 
-    // verify the required parameter 'data' is set
-    if (data == null) {
+    // verify the required parameter 'accountId' is set
+    if (accountId == null) {
       throw new ApiException(
-          "Missing the required parameter 'data' when calling reportVideoFrame(Async)");
+          "Missing the required parameter 'accountId' when calling targetingsShareGet(Async)");
+    }
+
+    // verify the required parameter 'targetingId' is set
+    if (targetingId == null) {
+      throw new ApiException(
+          "Missing the required parameter 'targetingId' when calling targetingsShareGet(Async)");
     }
 
     com.squareup.okhttp.Call call =
-        reportVideoFrameCall(data, progressListener, progressRequestListener);
+        targetingsShareGetCall(
+            accountId,
+            targetingId,
+            page,
+            pageSize,
+            fields,
+            progressListener,
+            progressRequestListener);
     return call;
   }
 
   /**
-   * 视频流失分析接口
+   * 获取定向分享记录
    *
-   * @param data (required)
-   * @return ReportVideoFrameResponse
+   * @param accountId (required)
+   * @param targetingId (required)
+   * @param page (optional)
+   * @param pageSize (optional)
+   * @param fields 返回参数的字段列表 (optional)
+   * @return TargetingsShareGetResponse
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
-  public ReportVideoFrameResponse reportVideoFrame(ReportVideoFrameRequest data)
+  public TargetingsShareGetResponse targetingsShareGet(
+      Long accountId, Long targetingId, Long page, Long pageSize, List<String> fields)
       throws ApiException {
-    ApiResponse<ReportVideoFrameResponse> resp = reportVideoFrameWithHttpInfo(data);
+    ApiResponse<TargetingsShareGetResponse> resp =
+        targetingsShareGetWithHttpInfo(accountId, targetingId, page, pageSize, fields);
     return resp.getData();
   }
 
   /**
-   * 视频流失分析接口
+   * 获取定向分享记录
    *
-   * @param data (required)
-   * @return ApiResponse&lt;ReportVideoFrameResponse&gt;
+   * @param accountId (required)
+   * @param targetingId (required)
+   * @param page (optional)
+   * @param pageSize (optional)
+   * @param fields 返回参数的字段列表 (optional)
+   * @return ApiResponse&lt;TargetingsShareGetResponse&gt;
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
-  public ApiResponse<ReportVideoFrameResponse> reportVideoFrameWithHttpInfo(
-      ReportVideoFrameRequest data) throws ApiException {
-    com.squareup.okhttp.Call call = reportVideoFrameValidateBeforeCall(data, null, null);
-    Type localVarReturnType = new TypeToken<ReportVideoFrameResponse>() {}.getType();
+  public ApiResponse<TargetingsShareGetResponse> targetingsShareGetWithHttpInfo(
+      Long accountId, Long targetingId, Long page, Long pageSize, List<String> fields)
+      throws ApiException {
+    com.squareup.okhttp.Call call =
+        targetingsShareGetValidateBeforeCall(
+            accountId, targetingId, page, pageSize, fields, null, null);
+    Type localVarReturnType = new TypeToken<TargetingsShareGetResponse>() {}.getType();
     return apiClient.execute(call, localVarReturnType);
   }
 
   /**
-   * 视频流失分析接口 (asynchronously)
+   * 获取定向分享记录 (asynchronously)
    *
-   * @param data (required)
+   * @param accountId (required)
+   * @param targetingId (required)
+   * @param page (optional)
+   * @param pageSize (optional)
+   * @param fields 返回参数的字段列表 (optional)
    * @param callback The callback to be executed when the API call finishes
    * @return The request call
    * @throws ApiException If fail to process the API call, e.g. serializing the request body object
    */
-  public com.squareup.okhttp.Call reportVideoFrameAsync(
-      ReportVideoFrameRequest data, final ApiCallback<ReportVideoFrameResponse> callback)
+  public com.squareup.okhttp.Call targetingsShareGetAsync(
+      Long accountId,
+      Long targetingId,
+      Long page,
+      Long pageSize,
+      List<String> fields,
+      final ApiCallback<TargetingsShareGetResponse> callback)
       throws ApiException {
 
     ProgressResponseBody.ProgressListener progressListener = null;
@@ -349,8 +403,15 @@ public class ReportApi {
     }
 
     com.squareup.okhttp.Call call =
-        reportVideoFrameValidateBeforeCall(data, progressListener, progressRequestListener);
-    Type localVarReturnType = new TypeToken<ReportVideoFrameResponse>() {}.getType();
+        targetingsShareGetValidateBeforeCall(
+            accountId,
+            targetingId,
+            page,
+            pageSize,
+            fields,
+            progressListener,
+            progressRequestListener);
+    Type localVarReturnType = new TypeToken<TargetingsShareGetResponse>() {}.getType();
     apiClient.executeAsync(call, localVarReturnType, callback);
     return call;
   }

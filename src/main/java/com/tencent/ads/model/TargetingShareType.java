@@ -19,28 +19,16 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-/** 任务状态 */
-@JsonAdapter(TaskStatus.Adapter.class)
-public enum TaskStatus {
-  PENDING("TASK_STATUS_PENDING"),
+/** 分享类型，支持同商务管家或者同主体 */
+@JsonAdapter(TargetingShareType.Adapter.class)
+public enum TargetingShareType {
+  BUSINESS("SHARE_TYPE_SAME_BUSINESS"),
 
-  PROCESSING("TASK_STATUS_PROCESSING"),
-
-  EXPIRED("TASK_STATUS_EXPIRED"),
-
-  COMPLETED("TASK_STATUS_COMPLETED"),
-
-  CANCELLED("TASK_STATUS_CANCELLED"),
-
-  FAIL("TASK_STATUS_FAIL"),
-
-  DELETED("TASK_STATUS_DELETED"),
-
-  DRAFT("TASK_STATUS_DRAFT");
+  MDM("SHARE_TYPE_SAME_MDM");
 
   private String value;
 
-  TaskStatus(String value) {
+  TargetingShareType(String value) {
     this.value = value;
   }
 
@@ -53,8 +41,8 @@ public enum TaskStatus {
     return String.valueOf(value);
   }
 
-  public static TaskStatus fromValue(String text) {
-    for (TaskStatus b : TaskStatus.values()) {
+  public static TargetingShareType fromValue(String text) {
+    for (TargetingShareType b : TargetingShareType.values()) {
       if (String.valueOf(b.value).equals(text)) {
         return b;
       }
@@ -62,17 +50,17 @@ public enum TaskStatus {
     return null;
   }
 
-  public static class Adapter extends TypeAdapter<TaskStatus> {
+  public static class Adapter extends TypeAdapter<TargetingShareType> {
     @Override
-    public void write(final JsonWriter jsonWriter, final TaskStatus enumeration)
+    public void write(final JsonWriter jsonWriter, final TargetingShareType enumeration)
         throws IOException {
       jsonWriter.value(enumeration.getValue());
     }
 
     @Override
-    public TaskStatus read(final JsonReader jsonReader) throws IOException {
+    public TargetingShareType read(final JsonReader jsonReader) throws IOException {
       String value = jsonReader.nextString();
-      return TaskStatus.fromValue(String.valueOf(value));
+      return TargetingShareType.fromValue(String.valueOf(value));
     }
   }
 }

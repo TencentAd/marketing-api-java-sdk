@@ -1,31 +1,20 @@
-package com.tencent.ads.examples.BasicOperations.Insights;
+package com.tencent.ads.examples.BasicOperations.AdsManagement;
 
 import com.tencent.ads.ApiContextConfig;
 import com.tencent.ads.TencentAds;
 import com.tencent.ads.exception.TencentAdsResponseException;
 import com.tencent.ads.exception.TencentAdsSDKException;
 import com.tencent.ads.model.*;
-import com.tencent.ads.model.ReportJdOfflineReportFileResponse;
-import java.util.List;
+import com.tencent.ads.model.TargetingsShareAddRequest;
 
-public class JdOfflineReportFileReport {
+public class AddTargetingsShare {
   /** YOUR ACCESS TOKEN */
   public String ACCESS_TOKEN = "YOUR ACCESS TOKEN";
 
   /** TencentAds */
   public TencentAds tencentAds;
 
-  public Long accountId = null;
-
-  public String task = null;
-
-  public String date = null;
-
-  public String hour = null;
-
-  public String timeFrame = null;
-
-  public List<String> fields = null;
+  public TargetingsShareAddRequest data = null;
 
   public void init() {
     this.tencentAds = TencentAds.getInstance();
@@ -37,19 +26,16 @@ public class JdOfflineReportFileReport {
 
   public void buildParams() {}
 
-  public ReportJdOfflineReportFileResponse jdofflinefileReport() throws Exception {
-    ReportJdOfflineReportFileResponse response =
-        tencentAds
-            .report()
-            .reportJdOfflineReportFile(accountId, task, date, hour, timeFrame, fields);
+  public TargetingsShareAddResponseData addTargetingsShare() throws Exception {
+    TargetingsShareAddResponseData response = tencentAds.targetingsShare().targetingsShareAdd(data);
     return response;
   }
 
   public static void main(String[] args) {
     try {
-      JdOfflineReportFileReport jdofflinefileReport = new JdOfflineReportFileReport();
-      jdofflinefileReport.init();
-      ReportJdOfflineReportFileResponse response = jdofflinefileReport.jdofflinefileReport();
+      AddTargetingsShare addTargetingsShare = new AddTargetingsShare();
+      addTargetingsShare.init();
+      TargetingsShareAddResponseData response = addTargetingsShare.addTargetingsShare();
     } catch (TencentAdsResponseException e) {
       e.printStackTrace();
     } catch (TencentAdsSDKException e) {

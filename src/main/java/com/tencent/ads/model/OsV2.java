@@ -19,28 +19,16 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-/** 任务状态 */
-@JsonAdapter(TaskStatus.Adapter.class)
-public enum TaskStatus {
-  PENDING("TASK_STATUS_PENDING"),
+/** 操作系统 */
+@JsonAdapter(OsV2.Adapter.class)
+public enum OsV2 {
+  IOS("IOS"),
 
-  PROCESSING("TASK_STATUS_PROCESSING"),
-
-  EXPIRED("TASK_STATUS_EXPIRED"),
-
-  COMPLETED("TASK_STATUS_COMPLETED"),
-
-  CANCELLED("TASK_STATUS_CANCELLED"),
-
-  FAIL("TASK_STATUS_FAIL"),
-
-  DELETED("TASK_STATUS_DELETED"),
-
-  DRAFT("TASK_STATUS_DRAFT");
+  ANDROID("ANDROID");
 
   private String value;
 
-  TaskStatus(String value) {
+  OsV2(String value) {
     this.value = value;
   }
 
@@ -53,8 +41,8 @@ public enum TaskStatus {
     return String.valueOf(value);
   }
 
-  public static TaskStatus fromValue(String text) {
-    for (TaskStatus b : TaskStatus.values()) {
+  public static OsV2 fromValue(String text) {
+    for (OsV2 b : OsV2.values()) {
       if (String.valueOf(b.value).equals(text)) {
         return b;
       }
@@ -62,17 +50,16 @@ public enum TaskStatus {
     return null;
   }
 
-  public static class Adapter extends TypeAdapter<TaskStatus> {
+  public static class Adapter extends TypeAdapter<OsV2> {
     @Override
-    public void write(final JsonWriter jsonWriter, final TaskStatus enumeration)
-        throws IOException {
+    public void write(final JsonWriter jsonWriter, final OsV2 enumeration) throws IOException {
       jsonWriter.value(enumeration.getValue());
     }
 
     @Override
-    public TaskStatus read(final JsonReader jsonReader) throws IOException {
+    public OsV2 read(final JsonReader jsonReader) throws IOException {
       String value = jsonReader.nextString();
-      return TaskStatus.fromValue(String.valueOf(value));
+      return OsV2.fromValue(String.valueOf(value));
     }
   }
 }

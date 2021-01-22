@@ -1,20 +1,28 @@
-package com.tencent.ads.examples.BasicOperations.Insights;
+package com.tencent.ads.examples.BasicOperations.AdsManagement;
 
 import com.tencent.ads.ApiContextConfig;
 import com.tencent.ads.TencentAds;
 import com.tencent.ads.exception.TencentAdsResponseException;
 import com.tencent.ads.exception.TencentAdsSDKException;
 import com.tencent.ads.model.*;
-import com.tencent.ads.model.ReportJdOfflineReportStatusRequest;
+import java.util.List;
 
-public class JdOfflineReportStatusReport {
+public class GetTargetingsShare {
   /** YOUR ACCESS TOKEN */
   public String ACCESS_TOKEN = "YOUR ACCESS TOKEN";
 
   /** TencentAds */
   public TencentAds tencentAds;
 
-  public ReportJdOfflineReportStatusRequest data = null;
+  public Long accountId = null;
+
+  public Long targetingId = null;
+
+  public Long page = null;
+
+  public Long pageSize = null;
+
+  public List<String> fields = null;
 
   public void init() {
     this.tencentAds = TencentAds.getInstance();
@@ -26,18 +34,19 @@ public class JdOfflineReportStatusReport {
 
   public void buildParams() {}
 
-  public ReportJdOfflineReportStatusResponseData jdofflinestatusReport() throws Exception {
-    ReportJdOfflineReportStatusResponseData response =
-        tencentAds.report().reportJdOfflineReportStatus(data);
+  public TargetingsShareGetResponseData getTargetingsShare() throws Exception {
+    TargetingsShareGetResponseData response =
+        tencentAds
+            .targetingsShare()
+            .targetingsShareGet(accountId, targetingId, page, pageSize, fields);
     return response;
   }
 
   public static void main(String[] args) {
     try {
-      JdOfflineReportStatusReport jdofflinestatusReport = new JdOfflineReportStatusReport();
-      jdofflinestatusReport.init();
-      ReportJdOfflineReportStatusResponseData response =
-          jdofflinestatusReport.jdofflinestatusReport();
+      GetTargetingsShare getTargetingsShare = new GetTargetingsShare();
+      getTargetingsShare.init();
+      TargetingsShareGetResponseData response = getTargetingsShare.getTargetingsShare();
     } catch (TencentAdsResponseException e) {
       e.printStackTrace();
     } catch (TencentAdsSDKException e) {

@@ -31,6 +31,9 @@ public class VideomakerTasksGetResponseData {
   @SerializedName("video_id")
   private String videoId = null;
 
+  @SerializedName("other_data")
+  private OtherData otherData = null;
+
   public VideomakerTasksGetResponseData code(Long code) {
     this.code = code;
     return this;
@@ -107,6 +110,25 @@ public class VideomakerTasksGetResponseData {
     this.videoId = videoId;
   }
 
+  public VideomakerTasksGetResponseData otherData(OtherData otherData) {
+    this.otherData = otherData;
+    return this;
+  }
+
+  /**
+   * Get otherData
+   *
+   * @return otherData
+   */
+  @ApiModelProperty(value = "")
+  public OtherData getOtherData() {
+    return otherData;
+  }
+
+  public void setOtherData(OtherData otherData) {
+    this.otherData = otherData;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -120,12 +142,13 @@ public class VideomakerTasksGetResponseData {
     return Objects.equals(this.code, videomakerTasksGetResponseData.code)
         && Objects.equals(this.taskId, videomakerTasksGetResponseData.taskId)
         && Objects.equals(this.status, videomakerTasksGetResponseData.status)
-        && Objects.equals(this.videoId, videomakerTasksGetResponseData.videoId);
+        && Objects.equals(this.videoId, videomakerTasksGetResponseData.videoId)
+        && Objects.equals(this.otherData, videomakerTasksGetResponseData.otherData);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(code, taskId, status, videoId);
+    return Objects.hash(code, taskId, status, videoId, otherData);
   }
 
   @Override

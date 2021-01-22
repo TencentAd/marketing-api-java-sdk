@@ -18,11 +18,11 @@
 <dependency>
   <groupId>com.tencent.ads</groupId>
   <artifactId>marketing-api-java-sdk</artifactId>
-  <version>1.1.13</version>
+  <version>1.1.14</version>
 </dependency>
 ```
 
-- 或者您也可以手动下载[Java压缩包文件](https://i.gtimg.cn/qzone/biz/gdt/lib/mkt-sdk/ams-marketing-sdk-java.zip?version=1.1.13)，解压后可以得到一个Java SDK的源码项目。SDK下载地址：[ams-marketing-sdk-java-1.1.13.zip](https://i.gtimg.cn/qzone/biz/gdt/lib/mkt-sdk/ams-marketing-sdk-java.zip?version=1.1.13)
+- 或者您也可以手动下载[Java压缩包文件](https://i.gtimg.cn/qzone/biz/gdt/lib/mkt-sdk/ams-marketing-sdk-java.zip?version=1.1.14)，解压后可以得到一个Java SDK的源码项目。SDK下载地址：[ams-marketing-sdk-java-1.1.14.zip](https://i.gtimg.cn/qzone/biz/gdt/lib/mkt-sdk/ams-marketing-sdk-java.zip?version=1.1.14)
 
   1. 解压文件，默认解压到目录ams-marketing-sdk-java
   2. 执行mvn clean install，将包安装到你本地的Maven资源库中。
@@ -35,7 +35,7 @@ mvn clean install
         <dependency>
             <groupId>com.tencent.ads</groupId>
             <artifactId>marketing-api-java-sdk</artifactId>
-            <version>1.1.13</version>
+            <version>1.1.14</version>
         </dependency>
 ```
 

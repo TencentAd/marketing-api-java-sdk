@@ -22,6 +22,8 @@ public class AddVideomakerSubtitles {
 
   public String signature = null;
 
+  public Boolean onlySubtitleFile = null;
+
   public void init() {
     this.tencentAds = TencentAds.getInstance();
     this.tencentAds.init(
@@ -36,7 +38,7 @@ public class AddVideomakerSubtitles {
     VideomakerSubtitlesAddResponseData response =
         tencentAds
             .videomakerSubtitles()
-            .videomakerSubtitlesAdd(accountId, videoId, videoFile, signature);
+            .videomakerSubtitlesAdd(accountId, videoId, videoFile, signature, onlySubtitleFile);
     return response;
   }
 

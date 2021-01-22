@@ -19,22 +19,22 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
-/** ReportJdCreativeTemplateHourlyReportResponseData */
-public class ReportJdCreativeTemplateHourlyReportResponseData {
+/** TargetingsShareGetResponseData */
+public class TargetingsShareGetResponseData {
   @SerializedName("list")
-  private List<CollectionStruct> list = null;
+  private List<TargetingsShareGetListStruct> list = null;
 
   @SerializedName("page_info")
   private Conf pageInfo = null;
 
-  public ReportJdCreativeTemplateHourlyReportResponseData list(List<CollectionStruct> list) {
+  public TargetingsShareGetResponseData list(List<TargetingsShareGetListStruct> list) {
     this.list = list;
     return this;
   }
 
-  public ReportJdCreativeTemplateHourlyReportResponseData addListItem(CollectionStruct listItem) {
+  public TargetingsShareGetResponseData addListItem(TargetingsShareGetListStruct listItem) {
     if (this.list == null) {
-      this.list = new ArrayList<CollectionStruct>();
+      this.list = new ArrayList<TargetingsShareGetListStruct>();
     }
     this.list.add(listItem);
     return this;
@@ -46,15 +46,15 @@ public class ReportJdCreativeTemplateHourlyReportResponseData {
    * @return list
    */
   @ApiModelProperty(value = "")
-  public List<CollectionStruct> getList() {
+  public List<TargetingsShareGetListStruct> getList() {
     return list;
   }
 
-  public void setList(List<CollectionStruct> list) {
+  public void setList(List<TargetingsShareGetListStruct> list) {
     this.list = list;
   }
 
-  public ReportJdCreativeTemplateHourlyReportResponseData pageInfo(Conf pageInfo) {
+  public TargetingsShareGetResponseData pageInfo(Conf pageInfo) {
     this.pageInfo = pageInfo;
     return this;
   }
@@ -81,11 +81,10 @@ public class ReportJdCreativeTemplateHourlyReportResponseData {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    ReportJdCreativeTemplateHourlyReportResponseData
-        reportJdCreativeTemplateHourlyReportResponseData =
-            (ReportJdCreativeTemplateHourlyReportResponseData) o;
-    return Objects.equals(this.list, reportJdCreativeTemplateHourlyReportResponseData.list)
-        && Objects.equals(this.pageInfo, reportJdCreativeTemplateHourlyReportResponseData.pageInfo);
+    TargetingsShareGetResponseData targetingsShareGetResponseData =
+        (TargetingsShareGetResponseData) o;
+    return Objects.equals(this.list, targetingsShareGetResponseData.list)
+        && Objects.equals(this.pageInfo, targetingsShareGetResponseData.pageInfo);
   }
 
   @Override

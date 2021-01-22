@@ -19,28 +19,24 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-/** 任务状态 */
-@JsonAdapter(TaskStatus.Adapter.class)
-public enum TaskStatus {
-  PENDING("TASK_STATUS_PENDING"),
+/** 互动落地页类型 */
+@JsonAdapter(PlayableType.Adapter.class)
+public enum PlayableType {
+  NOT_INTERACT("NOT_INTERACT"),
 
-  PROCESSING("TASK_STATUS_PROCESSING"),
+  INLINE("INLINE"),
 
-  EXPIRED("TASK_STATUS_EXPIRED"),
+  TEMPLATE_GAME("TEMPLATE_GAME"),
 
-  COMPLETED("TASK_STATUS_COMPLETED"),
+  TEMPLATE_VIDEO("TEMPLATE_VIDEO"),
 
-  CANCELLED("TASK_STATUS_CANCELLED"),
+  TEMPLATE_WEB("TEMPLATE_WEB"),
 
-  FAIL("TASK_STATUS_FAIL"),
-
-  DELETED("TASK_STATUS_DELETED"),
-
-  DRAFT("TASK_STATUS_DRAFT");
+  COMPRESSED_PACKAGE("COMPRESSED_PACKAGE");
 
   private String value;
 
-  TaskStatus(String value) {
+  PlayableType(String value) {
     this.value = value;
   }
 
@@ -53,8 +49,8 @@ public enum TaskStatus {
     return String.valueOf(value);
   }
 
-  public static TaskStatus fromValue(String text) {
-    for (TaskStatus b : TaskStatus.values()) {
+  public static PlayableType fromValue(String text) {
+    for (PlayableType b : PlayableType.values()) {
       if (String.valueOf(b.value).equals(text)) {
         return b;
       }
@@ -62,17 +58,17 @@ public enum TaskStatus {
     return null;
   }
 
-  public static class Adapter extends TypeAdapter<TaskStatus> {
+  public static class Adapter extends TypeAdapter<PlayableType> {
     @Override
-    public void write(final JsonWriter jsonWriter, final TaskStatus enumeration)
+    public void write(final JsonWriter jsonWriter, final PlayableType enumeration)
         throws IOException {
       jsonWriter.value(enumeration.getValue());
     }
 
     @Override
-    public TaskStatus read(final JsonReader jsonReader) throws IOException {
+    public PlayableType read(final JsonReader jsonReader) throws IOException {
       String value = jsonReader.nextString();
-      return TaskStatus.fromValue(String.valueOf(value));
+      return PlayableType.fromValue(String.valueOf(value));
     }
   }
 }

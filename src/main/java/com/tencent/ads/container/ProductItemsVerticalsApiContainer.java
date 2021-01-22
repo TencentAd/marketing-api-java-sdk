@@ -27,7 +27,7 @@ public class ProductItemsVerticalsApiContainer extends ApiContainer {
   @Inject ProductItemsVerticalsApi api;
 
   /**
-   * 商品列表
+   * 行业列表
    *
    * @param fields 返回参数的字段列表 (optional)
    * @return ProductItemsVerticalsGetResponse

@@ -43,6 +43,8 @@ public class JSON {
   private OffsetDateTimeTypeAdapter offsetDateTimeTypeAdapter = new OffsetDateTimeTypeAdapter();
   private LocalDateTypeAdapter localDateTypeAdapter = new LocalDateTypeAdapter();
   private ByteArrayAdapter byteArrayAdapter = new ByteArrayAdapter();
+  private IntegerTypeAdapter integerTypeAdapter = new IntegerTypeAdapter();
+  private LongTypeAdapter longTypeAdapter = new LongTypeAdapter();
 
   public static GsonBuilder createGson() {
     GsonFireBuilder fireBuilder = new GsonFireBuilder();
@@ -77,6 +79,8 @@ public class JSON {
             .registerTypeAdapter(OffsetDateTime.class, offsetDateTimeTypeAdapter)
             .registerTypeAdapter(LocalDate.class, localDateTypeAdapter)
             .registerTypeAdapter(byte[].class, byteArrayAdapter)
+            .registerTypeAdapter(Integer.class, integerTypeAdapter)
+            .registerTypeAdapter(Long.class, longTypeAdapter)
             .create();
   }
 
@@ -365,6 +369,74 @@ public class JSON {
         }
       } catch (IllegalArgumentException e) {
         throw new JsonParseException(e);
+      }
+    }
+  }
+
+  /**
+   * Gson TypeAdapter for java.lang.Integer type If the field is null or empty string, null will be returned.
+   */
+  public static class IntegerTypeAdapter extends TypeAdapter<Integer> {
+
+    public IntegerTypeAdapter() {}
+
+    @Override
+    public void write(JsonWriter out, Integer intValue) throws IOException {
+      if (intValue == null) {
+        out.nullValue();
+        return;
+      }
+      out.value(intValue);
+    }
+
+    @Override
+    public Integer read(JsonReader in) throws IOException {
+      switch (in.peek()) {
+        case NULL:
+          in.nextNull();
+          return null;
+        default:
+          String value = in.nextString();
+          try {
+            Integer result = Integer.valueOf(value);
+            return result;
+          } catch (NumberFormatException e) {
+            return null;
+          }
+      }
+    }
+  }
+
+  /**
+   * Gson TypeAdapter for java.lang.Long type If the field is null or empty string, null will be returned.
+   */
+  public static class LongTypeAdapter extends TypeAdapter<Long> {
+
+    public LongTypeAdapter() {}
+
+    @Override
+    public void write(JsonWriter out, Long longValue) throws IOException {
+      if (longValue == null) {
+        out.nullValue();
+        return;
+      }
+      out.value(longValue);
+    }
+
+    @Override
+    public Long read(JsonReader in) throws IOException {
+      switch (in.peek()) {
+        case NULL:
+          in.nextNull();
+          return null;
+        default:
+          String value = in.nextString();
+          try {
+            Long result = Long.valueOf(value);
+            return result;
+          } catch (NumberFormatException e) {
+            return null;
+          }
       }
     }
   }

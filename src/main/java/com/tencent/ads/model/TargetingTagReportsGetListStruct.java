@@ -345,6 +345,9 @@ public class TargetingTagReportsGetListStruct {
   @SerializedName("mini_game_paying_amount")
   private Long miniGamePayingAmount = null;
 
+  @SerializedName("mini_game_first_paying_users")
+  private Long miniGameFirstPayingUsers = null;
+
   @SerializedName("mini_game_create_role_users")
   private Long miniGameCreateRoleUsers = null;
 
@@ -359,6 +362,24 @@ public class TargetingTagReportsGetListStruct {
 
   @SerializedName("mini_game_key_page_view_cost")
   private Long miniGameKeyPageViewCost = null;
+
+  @SerializedName("mini_game_ad_monetization_amount")
+  private Long miniGameAdMonetizationAmount = null;
+
+  @SerializedName("mini_game_paying_amount_by_upload")
+  private Long miniGamePayingAmountByUpload = null;
+
+  @SerializedName("mini_game_paying_count_by_upload")
+  private Long miniGamePayingCountByUpload = null;
+
+  @SerializedName("consult_leave_info_cost")
+  private Long consultLeaveInfoCost = null;
+
+  @SerializedName("purchase_amount_with_coupon")
+  private Long purchaseAmountWithCoupon = null;
+
+  @SerializedName("purchase_amount_with_coupon_cost")
+  private Long purchaseAmountWithCouponCost = null;
 
   @SerializedName("age")
   private String age = null;
@@ -954,11 +975,11 @@ public class TargetingTagReportsGetListStruct {
   @SerializedName("mini_game_paying_amount_d1")
   private Long miniGamePayingAmountD1 = null;
 
-  @SerializedName("mini_game_first_paying_users")
-  private Long miniGameFirstPayingUsers = null;
-
   @SerializedName("mini_game_first_day_paying_roi")
   private Double miniGameFirstDayPayingRoi = null;
+
+  @SerializedName("mini_game_paying_amount_d1_by_upload")
+  private Long miniGamePayingAmountD1ByUpload = null;
 
   public TargetingTagReportsGetListStruct date(String date) {
     this.date = date;
@@ -3021,6 +3042,25 @@ public class TargetingTagReportsGetListStruct {
     this.miniGamePayingAmount = miniGamePayingAmount;
   }
 
+  public TargetingTagReportsGetListStruct miniGameFirstPayingUsers(Long miniGameFirstPayingUsers) {
+    this.miniGameFirstPayingUsers = miniGameFirstPayingUsers;
+    return this;
+  }
+
+  /**
+   * Get miniGameFirstPayingUsers
+   *
+   * @return miniGameFirstPayingUsers
+   */
+  @ApiModelProperty(value = "")
+  public Long getMiniGameFirstPayingUsers() {
+    return miniGameFirstPayingUsers;
+  }
+
+  public void setMiniGameFirstPayingUsers(Long miniGameFirstPayingUsers) {
+    this.miniGameFirstPayingUsers = miniGameFirstPayingUsers;
+  }
+
   public TargetingTagReportsGetListStruct miniGameCreateRoleUsers(Long miniGameCreateRoleUsers) {
     this.miniGameCreateRoleUsers = miniGameCreateRoleUsers;
     return this;
@@ -3114,6 +3154,124 @@ public class TargetingTagReportsGetListStruct {
 
   public void setMiniGameKeyPageViewCost(Long miniGameKeyPageViewCost) {
     this.miniGameKeyPageViewCost = miniGameKeyPageViewCost;
+  }
+
+  public TargetingTagReportsGetListStruct miniGameAdMonetizationAmount(
+      Long miniGameAdMonetizationAmount) {
+    this.miniGameAdMonetizationAmount = miniGameAdMonetizationAmount;
+    return this;
+  }
+
+  /**
+   * Get miniGameAdMonetizationAmount
+   *
+   * @return miniGameAdMonetizationAmount
+   */
+  @ApiModelProperty(value = "")
+  public Long getMiniGameAdMonetizationAmount() {
+    return miniGameAdMonetizationAmount;
+  }
+
+  public void setMiniGameAdMonetizationAmount(Long miniGameAdMonetizationAmount) {
+    this.miniGameAdMonetizationAmount = miniGameAdMonetizationAmount;
+  }
+
+  public TargetingTagReportsGetListStruct miniGamePayingAmountByUpload(
+      Long miniGamePayingAmountByUpload) {
+    this.miniGamePayingAmountByUpload = miniGamePayingAmountByUpload;
+    return this;
+  }
+
+  /**
+   * Get miniGamePayingAmountByUpload
+   *
+   * @return miniGamePayingAmountByUpload
+   */
+  @ApiModelProperty(value = "")
+  public Long getMiniGamePayingAmountByUpload() {
+    return miniGamePayingAmountByUpload;
+  }
+
+  public void setMiniGamePayingAmountByUpload(Long miniGamePayingAmountByUpload) {
+    this.miniGamePayingAmountByUpload = miniGamePayingAmountByUpload;
+  }
+
+  public TargetingTagReportsGetListStruct miniGamePayingCountByUpload(
+      Long miniGamePayingCountByUpload) {
+    this.miniGamePayingCountByUpload = miniGamePayingCountByUpload;
+    return this;
+  }
+
+  /**
+   * Get miniGamePayingCountByUpload
+   *
+   * @return miniGamePayingCountByUpload
+   */
+  @ApiModelProperty(value = "")
+  public Long getMiniGamePayingCountByUpload() {
+    return miniGamePayingCountByUpload;
+  }
+
+  public void setMiniGamePayingCountByUpload(Long miniGamePayingCountByUpload) {
+    this.miniGamePayingCountByUpload = miniGamePayingCountByUpload;
+  }
+
+  public TargetingTagReportsGetListStruct consultLeaveInfoCost(Long consultLeaveInfoCost) {
+    this.consultLeaveInfoCost = consultLeaveInfoCost;
+    return this;
+  }
+
+  /**
+   * Get consultLeaveInfoCost
+   *
+   * @return consultLeaveInfoCost
+   */
+  @ApiModelProperty(value = "")
+  public Long getConsultLeaveInfoCost() {
+    return consultLeaveInfoCost;
+  }
+
+  public void setConsultLeaveInfoCost(Long consultLeaveInfoCost) {
+    this.consultLeaveInfoCost = consultLeaveInfoCost;
+  }
+
+  public TargetingTagReportsGetListStruct purchaseAmountWithCoupon(Long purchaseAmountWithCoupon) {
+    this.purchaseAmountWithCoupon = purchaseAmountWithCoupon;
+    return this;
+  }
+
+  /**
+   * Get purchaseAmountWithCoupon
+   *
+   * @return purchaseAmountWithCoupon
+   */
+  @ApiModelProperty(value = "")
+  public Long getPurchaseAmountWithCoupon() {
+    return purchaseAmountWithCoupon;
+  }
+
+  public void setPurchaseAmountWithCoupon(Long purchaseAmountWithCoupon) {
+    this.purchaseAmountWithCoupon = purchaseAmountWithCoupon;
+  }
+
+  public TargetingTagReportsGetListStruct purchaseAmountWithCouponCost(
+      Long purchaseAmountWithCouponCost) {
+    this.purchaseAmountWithCouponCost = purchaseAmountWithCouponCost;
+    return this;
+  }
+
+  /**
+   * Get purchaseAmountWithCouponCost
+   *
+   * @return purchaseAmountWithCouponCost
+   */
+  @ApiModelProperty(value = "")
+  public Long getPurchaseAmountWithCouponCost() {
+    return purchaseAmountWithCouponCost;
+  }
+
+  public void setPurchaseAmountWithCouponCost(Long purchaseAmountWithCouponCost) {
+    this.purchaseAmountWithCouponCost = purchaseAmountWithCouponCost;
   }
 
   public TargetingTagReportsGetListStruct age(String age) {
@@ -6894,25 +7052,6 @@ public class TargetingTagReportsGetListStruct {
     this.miniGamePayingAmountD1 = miniGamePayingAmountD1;
   }
 
-  public TargetingTagReportsGetListStruct miniGameFirstPayingUsers(Long miniGameFirstPayingUsers) {
-    this.miniGameFirstPayingUsers = miniGameFirstPayingUsers;
-    return this;
-  }
-
-  /**
-   * Get miniGameFirstPayingUsers
-   *
-   * @return miniGameFirstPayingUsers
-   */
-  @ApiModelProperty(value = "")
-  public Long getMiniGameFirstPayingUsers() {
-    return miniGameFirstPayingUsers;
-  }
-
-  public void setMiniGameFirstPayingUsers(Long miniGameFirstPayingUsers) {
-    this.miniGameFirstPayingUsers = miniGameFirstPayingUsers;
-  }
-
   public TargetingTagReportsGetListStruct miniGameFirstDayPayingRoi(
       Double miniGameFirstDayPayingRoi) {
     this.miniGameFirstDayPayingRoi = miniGameFirstDayPayingRoi;
@@ -6931,6 +7070,26 @@ public class TargetingTagReportsGetListStruct {
 
   public void setMiniGameFirstDayPayingRoi(Double miniGameFirstDayPayingRoi) {
     this.miniGameFirstDayPayingRoi = miniGameFirstDayPayingRoi;
+  }
+
+  public TargetingTagReportsGetListStruct miniGamePayingAmountD1ByUpload(
+      Long miniGamePayingAmountD1ByUpload) {
+    this.miniGamePayingAmountD1ByUpload = miniGamePayingAmountD1ByUpload;
+    return this;
+  }
+
+  /**
+   * Get miniGamePayingAmountD1ByUpload
+   *
+   * @return miniGamePayingAmountD1ByUpload
+   */
+  @ApiModelProperty(value = "")
+  public Long getMiniGamePayingAmountD1ByUpload() {
+    return miniGamePayingAmountD1ByUpload;
+  }
+
+  public void setMiniGamePayingAmountD1ByUpload(Long miniGamePayingAmountD1ByUpload) {
+    this.miniGamePayingAmountD1ByUpload = miniGamePayingAmountD1ByUpload;
   }
 
   @Override
@@ -7108,6 +7267,9 @@ public class TargetingTagReportsGetListStruct {
         && Objects.equals(
             this.miniGamePayingAmount, targetingTagReportsGetListStruct.miniGamePayingAmount)
         && Objects.equals(
+            this.miniGameFirstPayingUsers,
+            targetingTagReportsGetListStruct.miniGameFirstPayingUsers)
+        && Objects.equals(
             this.miniGameCreateRoleUsers, targetingTagReportsGetListStruct.miniGameCreateRoleUsers)
         && Objects.equals(
             this.miniGameCreateRoleCost, targetingTagReportsGetListStruct.miniGameCreateRoleCost)
@@ -7117,6 +7279,23 @@ public class TargetingTagReportsGetListStruct {
             this.miniGameKeyPageViewers, targetingTagReportsGetListStruct.miniGameKeyPageViewers)
         && Objects.equals(
             this.miniGameKeyPageViewCost, targetingTagReportsGetListStruct.miniGameKeyPageViewCost)
+        && Objects.equals(
+            this.miniGameAdMonetizationAmount,
+            targetingTagReportsGetListStruct.miniGameAdMonetizationAmount)
+        && Objects.equals(
+            this.miniGamePayingAmountByUpload,
+            targetingTagReportsGetListStruct.miniGamePayingAmountByUpload)
+        && Objects.equals(
+            this.miniGamePayingCountByUpload,
+            targetingTagReportsGetListStruct.miniGamePayingCountByUpload)
+        && Objects.equals(
+            this.consultLeaveInfoCost, targetingTagReportsGetListStruct.consultLeaveInfoCost)
+        && Objects.equals(
+            this.purchaseAmountWithCoupon,
+            targetingTagReportsGetListStruct.purchaseAmountWithCoupon)
+        && Objects.equals(
+            this.purchaseAmountWithCouponCost,
+            targetingTagReportsGetListStruct.purchaseAmountWithCouponCost)
         && Objects.equals(this.age, targetingTagReportsGetListStruct.age)
         && Objects.equals(this.regionId, targetingTagReportsGetListStruct.regionId)
         && Objects.equals(this.cityId, targetingTagReportsGetListStruct.cityId)
@@ -7417,11 +7596,11 @@ public class TargetingTagReportsGetListStruct {
         && Objects.equals(
             this.miniGamePayingAmountD1, targetingTagReportsGetListStruct.miniGamePayingAmountD1)
         && Objects.equals(
-            this.miniGameFirstPayingUsers,
-            targetingTagReportsGetListStruct.miniGameFirstPayingUsers)
-        && Objects.equals(
             this.miniGameFirstDayPayingRoi,
-            targetingTagReportsGetListStruct.miniGameFirstDayPayingRoi);
+            targetingTagReportsGetListStruct.miniGameFirstDayPayingRoi)
+        && Objects.equals(
+            this.miniGamePayingAmountD1ByUpload,
+            targetingTagReportsGetListStruct.miniGamePayingAmountD1ByUpload);
   }
 
   @Override
@@ -7535,11 +7714,18 @@ public class TargetingTagReportsGetListStruct {
         miniGameAdMonetizationUsers,
         miniGamePayingCount,
         miniGamePayingAmount,
+        miniGameFirstPayingUsers,
         miniGameCreateRoleUsers,
         miniGameCreateRoleCost,
         miniGameRetentionD1,
         miniGameKeyPageViewers,
         miniGameKeyPageViewCost,
+        miniGameAdMonetizationAmount,
+        miniGamePayingAmountByUpload,
+        miniGamePayingCountByUpload,
+        consultLeaveInfoCost,
+        purchaseAmountWithCoupon,
+        purchaseAmountWithCouponCost,
         age,
         regionId,
         cityId,
@@ -7738,8 +7924,8 @@ public class TargetingTagReportsGetListStruct {
         miniGameFirstDayAdPayingArpu,
         miniGamePayingUsersD1,
         miniGamePayingAmountD1,
-        miniGameFirstPayingUsers,
-        miniGameFirstDayPayingRoi);
+        miniGameFirstDayPayingRoi,
+        miniGamePayingAmountD1ByUpload);
   }
 
   @Override

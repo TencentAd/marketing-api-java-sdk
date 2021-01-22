@@ -40,6 +40,10 @@ public class GetXijingPageList {
 
   public Long pageOwnerId = null;
 
+  public Long appId = null;
+
+  public String appType = null;
+
   public List<String> fields = null;
 
   public void init() {
@@ -70,6 +74,8 @@ public class GetXijingPageList {
                 pageStatus,
                 pageSource,
                 pageOwnerId,
+                appId,
+                appType,
                 fields);
     return response;
   }
