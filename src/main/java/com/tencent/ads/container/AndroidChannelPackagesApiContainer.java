@@ -20,6 +20,7 @@ import com.tencent.ads.api.AndroidChannelPackagesApi;
 import com.tencent.ads.exception.TencentAdsResponseException;
 import com.tencent.ads.model.AndroidChannelPackagesGetResponse;
 import com.tencent.ads.model.AndroidChannelPackagesGetResponseData;
+import com.tencent.ads.model.FilteringStruct;
 import java.util.List;
 
 public class AndroidChannelPackagesApiContainer extends ApiContainer {
@@ -30,8 +31,9 @@ public class AndroidChannelPackagesApiContainer extends ApiContainer {
    * 获取应用宝渠道包
    *
    * @param accountId (required)
-   * @param myappAuthKey (required)
    * @param androidAppId (required)
+   * @param myappAuthKey (optional)
+   * @param filtering (optional)
    * @param page (optional)
    * @param pageSize (optional)
    * @param fields 返回参数的字段列表 (optional)
@@ -41,15 +43,16 @@ public class AndroidChannelPackagesApiContainer extends ApiContainer {
    */
   public AndroidChannelPackagesGetResponseData androidChannelPackagesGet(
       Long accountId,
-      String myappAuthKey,
       Long androidAppId,
+      String myappAuthKey,
+      List<FilteringStruct> filtering,
       Long page,
       Long pageSize,
       List<String> fields)
       throws ApiException, TencentAdsResponseException {
     AndroidChannelPackagesGetResponse resp =
         api.androidChannelPackagesGet(
-            accountId, myappAuthKey, androidAppId, page, pageSize, fields);
+            accountId, androidAppId, myappAuthKey, filtering, page, pageSize, fields);
     handleResponse(gson.toJson(resp));
     return resp.getData();
   }

@@ -27,6 +27,9 @@ public class LeadCluesGetListStruct {
   @SerializedName("leads_id")
   private Long leadsId = null;
 
+  @SerializedName("outer_leads_id")
+  private String outerLeadsId = null;
+
   @SerializedName("click_id")
   private String clickId = null;
 
@@ -73,7 +76,7 @@ public class LeadCluesGetListStruct {
   private String pageUrl = null;
 
   @SerializedName("leads_type")
-  private String leadsType = null;
+  private LeadCluesLeadsType leadsType = null;
 
   @SerializedName("leads_source")
   private String leadsSource = null;
@@ -83,6 +86,18 @@ public class LeadCluesGetListStruct {
 
   @SerializedName("leads_follow_tag")
   private String leadsFollowTag = null;
+
+  @SerializedName("outer_leads_convert_type")
+  private String outerLeadsConvertType = null;
+
+  @SerializedName("outer_leads_ineffect_reason")
+  private String outerLeadsIneffectReason = null;
+
+  @SerializedName("leads_user_id")
+  private String leadsUserId = null;
+
+  @SerializedName("leads_user_type")
+  private LeadsUserType leadsUserType = null;
 
   @SerializedName("leads_name")
   private String leadsName = null;
@@ -106,7 +121,7 @@ public class LeadCluesGetListStruct {
   private String leadsWechat = null;
 
   @SerializedName("leads_gender")
-  private String leadsGender = null;
+  private LeadCluesGenderType leadsGender = null;
 
   @SerializedName("nationality")
   private String nationality = null;
@@ -183,6 +198,25 @@ public class LeadCluesGetListStruct {
 
   public void setLeadsId(Long leadsId) {
     this.leadsId = leadsId;
+  }
+
+  public LeadCluesGetListStruct outerLeadsId(String outerLeadsId) {
+    this.outerLeadsId = outerLeadsId;
+    return this;
+  }
+
+  /**
+   * Get outerLeadsId
+   *
+   * @return outerLeadsId
+   */
+  @ApiModelProperty(value = "")
+  public String getOuterLeadsId() {
+    return outerLeadsId;
+  }
+
+  public void setOuterLeadsId(String outerLeadsId) {
+    this.outerLeadsId = outerLeadsId;
   }
 
   public LeadCluesGetListStruct clickId(String clickId) {
@@ -470,7 +504,7 @@ public class LeadCluesGetListStruct {
     this.pageUrl = pageUrl;
   }
 
-  public LeadCluesGetListStruct leadsType(String leadsType) {
+  public LeadCluesGetListStruct leadsType(LeadCluesLeadsType leadsType) {
     this.leadsType = leadsType;
     return this;
   }
@@ -481,11 +515,11 @@ public class LeadCluesGetListStruct {
    * @return leadsType
    */
   @ApiModelProperty(value = "")
-  public String getLeadsType() {
+  public LeadCluesLeadsType getLeadsType() {
     return leadsType;
   }
 
-  public void setLeadsType(String leadsType) {
+  public void setLeadsType(LeadCluesLeadsType leadsType) {
     this.leadsType = leadsType;
   }
 
@@ -544,6 +578,82 @@ public class LeadCluesGetListStruct {
 
   public void setLeadsFollowTag(String leadsFollowTag) {
     this.leadsFollowTag = leadsFollowTag;
+  }
+
+  public LeadCluesGetListStruct outerLeadsConvertType(String outerLeadsConvertType) {
+    this.outerLeadsConvertType = outerLeadsConvertType;
+    return this;
+  }
+
+  /**
+   * Get outerLeadsConvertType
+   *
+   * @return outerLeadsConvertType
+   */
+  @ApiModelProperty(value = "")
+  public String getOuterLeadsConvertType() {
+    return outerLeadsConvertType;
+  }
+
+  public void setOuterLeadsConvertType(String outerLeadsConvertType) {
+    this.outerLeadsConvertType = outerLeadsConvertType;
+  }
+
+  public LeadCluesGetListStruct outerLeadsIneffectReason(String outerLeadsIneffectReason) {
+    this.outerLeadsIneffectReason = outerLeadsIneffectReason;
+    return this;
+  }
+
+  /**
+   * Get outerLeadsIneffectReason
+   *
+   * @return outerLeadsIneffectReason
+   */
+  @ApiModelProperty(value = "")
+  public String getOuterLeadsIneffectReason() {
+    return outerLeadsIneffectReason;
+  }
+
+  public void setOuterLeadsIneffectReason(String outerLeadsIneffectReason) {
+    this.outerLeadsIneffectReason = outerLeadsIneffectReason;
+  }
+
+  public LeadCluesGetListStruct leadsUserId(String leadsUserId) {
+    this.leadsUserId = leadsUserId;
+    return this;
+  }
+
+  /**
+   * Get leadsUserId
+   *
+   * @return leadsUserId
+   */
+  @ApiModelProperty(value = "")
+  public String getLeadsUserId() {
+    return leadsUserId;
+  }
+
+  public void setLeadsUserId(String leadsUserId) {
+    this.leadsUserId = leadsUserId;
+  }
+
+  public LeadCluesGetListStruct leadsUserType(LeadsUserType leadsUserType) {
+    this.leadsUserType = leadsUserType;
+    return this;
+  }
+
+  /**
+   * Get leadsUserType
+   *
+   * @return leadsUserType
+   */
+  @ApiModelProperty(value = "")
+  public LeadsUserType getLeadsUserType() {
+    return leadsUserType;
+  }
+
+  public void setLeadsUserType(LeadsUserType leadsUserType) {
+    this.leadsUserType = leadsUserType;
   }
 
   public LeadCluesGetListStruct leadsName(String leadsName) {
@@ -679,7 +789,7 @@ public class LeadCluesGetListStruct {
     this.leadsWechat = leadsWechat;
   }
 
-  public LeadCluesGetListStruct leadsGender(String leadsGender) {
+  public LeadCluesGetListStruct leadsGender(LeadCluesGenderType leadsGender) {
     this.leadsGender = leadsGender;
     return this;
   }
@@ -690,11 +800,11 @@ public class LeadCluesGetListStruct {
    * @return leadsGender
    */
   @ApiModelProperty(value = "")
-  public String getLeadsGender() {
+  public LeadCluesGenderType getLeadsGender() {
     return leadsGender;
   }
 
-  public void setLeadsGender(String leadsGender) {
+  public void setLeadsGender(LeadCluesGenderType leadsGender) {
     this.leadsGender = leadsGender;
   }
 
@@ -956,6 +1066,7 @@ public class LeadCluesGetListStruct {
     LeadCluesGetListStruct leadCluesGetListStruct = (LeadCluesGetListStruct) o;
     return Objects.equals(this.accountId, leadCluesGetListStruct.accountId)
         && Objects.equals(this.leadsId, leadCluesGetListStruct.leadsId)
+        && Objects.equals(this.outerLeadsId, leadCluesGetListStruct.outerLeadsId)
         && Objects.equals(this.clickId, leadCluesGetListStruct.clickId)
         && Objects.equals(this.wechatAppid, leadCluesGetListStruct.wechatAppid)
         && Objects.equals(this.agencyId, leadCluesGetListStruct.agencyId)
@@ -975,6 +1086,11 @@ public class LeadCluesGetListStruct {
         && Objects.equals(this.leadsSource, leadCluesGetListStruct.leadsSource)
         && Objects.equals(this.leadsPotentialScore, leadCluesGetListStruct.leadsPotentialScore)
         && Objects.equals(this.leadsFollowTag, leadCluesGetListStruct.leadsFollowTag)
+        && Objects.equals(this.outerLeadsConvertType, leadCluesGetListStruct.outerLeadsConvertType)
+        && Objects.equals(
+            this.outerLeadsIneffectReason, leadCluesGetListStruct.outerLeadsIneffectReason)
+        && Objects.equals(this.leadsUserId, leadCluesGetListStruct.leadsUserId)
+        && Objects.equals(this.leadsUserType, leadCluesGetListStruct.leadsUserType)
         && Objects.equals(this.leadsName, leadCluesGetListStruct.leadsName)
         && Objects.equals(this.leadsTelephone, leadCluesGetListStruct.leadsTelephone)
         && Objects.equals(this.telephoneLocation, leadCluesGetListStruct.telephoneLocation)
@@ -1003,6 +1119,7 @@ public class LeadCluesGetListStruct {
     return Objects.hash(
         accountId,
         leadsId,
+        outerLeadsId,
         clickId,
         wechatAppid,
         agencyId,
@@ -1022,6 +1139,10 @@ public class LeadCluesGetListStruct {
         leadsSource,
         leadsPotentialScore,
         leadsFollowTag,
+        outerLeadsConvertType,
+        outerLeadsIneffectReason,
+        leadsUserId,
+        leadsUserType,
         leadsName,
         leadsTelephone,
         telephoneLocation,

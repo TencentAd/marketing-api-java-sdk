@@ -59,6 +59,9 @@ public class DynamicCreativesGetListStruct {
   @SerializedName("promoted_object_id")
   private String promotedObjectId = null;
 
+  @SerializedName("profile_id")
+  private Long profileId = null;
+
   @SerializedName("created_time")
   private Long createdTime = null;
 
@@ -323,6 +326,25 @@ public class DynamicCreativesGetListStruct {
     this.promotedObjectId = promotedObjectId;
   }
 
+  public DynamicCreativesGetListStruct profileId(Long profileId) {
+    this.profileId = profileId;
+    return this;
+  }
+
+  /**
+   * Get profileId
+   *
+   * @return profileId
+   */
+  @ApiModelProperty(value = "")
+  public Long getProfileId() {
+    return profileId;
+  }
+
+  public void setProfileId(Long profileId) {
+    this.profileId = profileId;
+  }
+
   public DynamicCreativesGetListStruct createdTime(Long createdTime) {
     this.createdTime = createdTime;
     return this;
@@ -519,6 +541,7 @@ public class DynamicCreativesGetListStruct {
         && Objects.equals(this.siteSet, dynamicCreativesGetListStruct.siteSet)
         && Objects.equals(this.promotedObjectType, dynamicCreativesGetListStruct.promotedObjectType)
         && Objects.equals(this.promotedObjectId, dynamicCreativesGetListStruct.promotedObjectId)
+        && Objects.equals(this.profileId, dynamicCreativesGetListStruct.profileId)
         && Objects.equals(this.createdTime, dynamicCreativesGetListStruct.createdTime)
         && Objects.equals(this.lastModifiedTime, dynamicCreativesGetListStruct.lastModifiedTime)
         && Objects.equals(this.isDeleted, dynamicCreativesGetListStruct.isDeleted)
@@ -547,6 +570,7 @@ public class DynamicCreativesGetListStruct {
         siteSet,
         promotedObjectType,
         promotedObjectId,
+        profileId,
         createdTime,
         lastModifiedTime,
         isDeleted,

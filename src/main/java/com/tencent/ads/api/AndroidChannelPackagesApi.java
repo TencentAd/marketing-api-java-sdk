@@ -22,6 +22,7 @@ import com.tencent.ads.Pair;
 import com.tencent.ads.ProgressRequestBody;
 import com.tencent.ads.ProgressResponseBody;
 import com.tencent.ads.model.AndroidChannelPackagesGetResponse;
+import com.tencent.ads.model.FilteringStruct;
 import java.io.IOException;
 import java.lang.reflect.Type;
 import java.util.ArrayList;
@@ -52,8 +53,9 @@ public class AndroidChannelPackagesApi {
    * Build call for androidChannelPackagesGet
    *
    * @param accountId (required)
-   * @param myappAuthKey (required)
    * @param androidAppId (required)
+   * @param myappAuthKey (optional)
+   * @param filtering (optional)
    * @param page (optional)
    * @param pageSize (optional)
    * @param fields 返回参数的字段列表 (optional)
@@ -64,8 +66,9 @@ public class AndroidChannelPackagesApi {
    */
   public com.squareup.okhttp.Call androidChannelPackagesGetCall(
       Long accountId,
-      String myappAuthKey,
       Long androidAppId,
+      String myappAuthKey,
+      List<FilteringStruct> filtering,
       Long page,
       Long pageSize,
       List<String> fields,
@@ -85,6 +88,9 @@ public class AndroidChannelPackagesApi {
       localVarQueryParams.addAll(apiClient.parameterToPair("myapp_auth_key", myappAuthKey));
     if (androidAppId != null)
       localVarQueryParams.addAll(apiClient.parameterToPair("android_app_id", androidAppId));
+    if (filtering != null)
+      localVarCollectionQueryParams.addAll(
+          apiClient.parameterToPairs("multi", "filtering", filtering));
     if (page != null) localVarQueryParams.addAll(apiClient.parameterToPair("page", page));
     if (pageSize != null)
       localVarQueryParams.addAll(apiClient.parameterToPair("page_size", pageSize));
@@ -137,8 +143,9 @@ public class AndroidChannelPackagesApi {
   @SuppressWarnings("rawtypes")
   private com.squareup.okhttp.Call androidChannelPackagesGetValidateBeforeCall(
       Long accountId,
-      String myappAuthKey,
       Long androidAppId,
+      String myappAuthKey,
+      List<FilteringStruct> filtering,
       Long page,
       Long pageSize,
       List<String> fields,
@@ -152,12 +159,6 @@ public class AndroidChannelPackagesApi {
           "Missing the required parameter 'accountId' when calling androidChannelPackagesGet(Async)");
     }
 
-    // verify the required parameter 'myappAuthKey' is set
-    if (myappAuthKey == null) {
-      throw new ApiException(
-          "Missing the required parameter 'myappAuthKey' when calling androidChannelPackagesGet(Async)");
-    }
-
     // verify the required parameter 'androidAppId' is set
     if (androidAppId == null) {
       throw new ApiException(
@@ -167,8 +168,9 @@ public class AndroidChannelPackagesApi {
     com.squareup.okhttp.Call call =
         androidChannelPackagesGetCall(
             accountId,
-            myappAuthKey,
             androidAppId,
+            myappAuthKey,
+            filtering,
             page,
             pageSize,
             fields,
@@ -181,8 +183,9 @@ public class AndroidChannelPackagesApi {
    * 获取应用宝渠道包
    *
    * @param accountId (required)
-   * @param myappAuthKey (required)
    * @param androidAppId (required)
+   * @param myappAuthKey (optional)
+   * @param filtering (optional)
    * @param page (optional)
    * @param pageSize (optional)
    * @param fields 返回参数的字段列表 (optional)
@@ -192,15 +195,16 @@ public class AndroidChannelPackagesApi {
    */
   public AndroidChannelPackagesGetResponse androidChannelPackagesGet(
       Long accountId,
-      String myappAuthKey,
       Long androidAppId,
+      String myappAuthKey,
+      List<FilteringStruct> filtering,
       Long page,
       Long pageSize,
       List<String> fields)
       throws ApiException {
     ApiResponse<AndroidChannelPackagesGetResponse> resp =
         androidChannelPackagesGetWithHttpInfo(
-            accountId, myappAuthKey, androidAppId, page, pageSize, fields);
+            accountId, androidAppId, myappAuthKey, filtering, page, pageSize, fields);
     return resp.getData();
   }
 
@@ -208,8 +212,9 @@ public class AndroidChannelPackagesApi {
    * 获取应用宝渠道包
    *
    * @param accountId (required)
-   * @param myappAuthKey (required)
    * @param androidAppId (required)
+   * @param myappAuthKey (optional)
+   * @param filtering (optional)
    * @param page (optional)
    * @param pageSize (optional)
    * @param fields 返回参数的字段列表 (optional)
@@ -219,15 +224,16 @@ public class AndroidChannelPackagesApi {
    */
   public ApiResponse<AndroidChannelPackagesGetResponse> androidChannelPackagesGetWithHttpInfo(
       Long accountId,
-      String myappAuthKey,
       Long androidAppId,
+      String myappAuthKey,
+      List<FilteringStruct> filtering,
       Long page,
       Long pageSize,
       List<String> fields)
       throws ApiException {
     com.squareup.okhttp.Call call =
         androidChannelPackagesGetValidateBeforeCall(
-            accountId, myappAuthKey, androidAppId, page, pageSize, fields, null, null);
+            accountId, androidAppId, myappAuthKey, filtering, page, pageSize, fields, null, null);
     Type localVarReturnType = new TypeToken<AndroidChannelPackagesGetResponse>() {}.getType();
     return apiClient.execute(call, localVarReturnType);
   }
@@ -236,8 +242,9 @@ public class AndroidChannelPackagesApi {
    * 获取应用宝渠道包 (asynchronously)
    *
    * @param accountId (required)
-   * @param myappAuthKey (required)
    * @param androidAppId (required)
+   * @param myappAuthKey (optional)
+   * @param filtering (optional)
    * @param page (optional)
    * @param pageSize (optional)
    * @param fields 返回参数的字段列表 (optional)
@@ -247,8 +254,9 @@ public class AndroidChannelPackagesApi {
    */
   public com.squareup.okhttp.Call androidChannelPackagesGetAsync(
       Long accountId,
-      String myappAuthKey,
       Long androidAppId,
+      String myappAuthKey,
+      List<FilteringStruct> filtering,
       Long page,
       Long pageSize,
       List<String> fields,
@@ -279,8 +287,9 @@ public class AndroidChannelPackagesApi {
     com.squareup.okhttp.Call call =
         androidChannelPackagesGetValidateBeforeCall(
             accountId,
-            myappAuthKey,
             androidAppId,
+            myappAuthKey,
+            filtering,
             page,
             pageSize,
             fields,

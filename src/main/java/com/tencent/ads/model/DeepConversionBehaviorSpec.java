@@ -22,12 +22,12 @@ import java.util.Objects;
 @ApiModel(description = "oCPC/oCPM 优化转化行为配置")
 public class DeepConversionBehaviorSpec {
   @SerializedName("goal")
-  private DeepConversionBehaviorGoal goal = null;
+  private OptimizationGoal goal = null;
 
   @SerializedName("bid_amount")
   private Long bidAmount = null;
 
-  public DeepConversionBehaviorSpec goal(DeepConversionBehaviorGoal goal) {
+  public DeepConversionBehaviorSpec goal(OptimizationGoal goal) {
     this.goal = goal;
     return this;
   }
@@ -38,11 +38,11 @@ public class DeepConversionBehaviorSpec {
    * @return goal
    */
   @ApiModelProperty(value = "")
-  public DeepConversionBehaviorGoal getGoal() {
+  public OptimizationGoal getGoal() {
     return goal;
   }
 
-  public void setGoal(DeepConversionBehaviorGoal goal) {
+  public void setGoal(OptimizationGoal goal) {
     this.goal = goal;
   }
 

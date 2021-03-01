@@ -5,6 +5,7 @@ import com.tencent.ads.TencentAds;
 import com.tencent.ads.exception.TencentAdsResponseException;
 import com.tencent.ads.exception.TencentAdsSDKException;
 import com.tencent.ads.model.*;
+import com.tencent.ads.model.FilteringStruct;
 import java.util.Arrays;
 import java.util.List;
 
@@ -17,9 +18,11 @@ public class GetAndroidChannelPackages {
 
   public Long accountId = null;
 
+  public Long androidAppId = null;
+
   public String myappAuthKey = "YOUR MYAPP AUTH KEY";
 
-  public Long androidAppId = null;
+  public List<FilteringStruct> filtering = null;
 
   public Long page = null;
 
@@ -52,7 +55,7 @@ public class GetAndroidChannelPackages {
         tencentAds
             .androidChannelPackages()
             .androidChannelPackagesGet(
-                accountId, myappAuthKey, androidAppId, page, pageSize, fields);
+                accountId, androidAppId, myappAuthKey, filtering, page, pageSize, fields);
     return response;
   }
 

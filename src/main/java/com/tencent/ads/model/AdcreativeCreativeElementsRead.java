@@ -63,7 +63,7 @@ public class AdcreativeCreativeElementsRead {
   private String bottomText = null;
 
   @SerializedName("label")
-  private List<AdcreativeLabel> label = null;
+  private List<CreativeLabel> label = null;
 
   @SerializedName("product_tags")
   private List<String> productTags = null;
@@ -450,14 +450,14 @@ public class AdcreativeCreativeElementsRead {
     this.bottomText = bottomText;
   }
 
-  public AdcreativeCreativeElementsRead label(List<AdcreativeLabel> label) {
+  public AdcreativeCreativeElementsRead label(List<CreativeLabel> label) {
     this.label = label;
     return this;
   }
 
-  public AdcreativeCreativeElementsRead addLabelItem(AdcreativeLabel labelItem) {
+  public AdcreativeCreativeElementsRead addLabelItem(CreativeLabel labelItem) {
     if (this.label == null) {
-      this.label = new ArrayList<AdcreativeLabel>();
+      this.label = new ArrayList<CreativeLabel>();
     }
     this.label.add(labelItem);
     return this;
@@ -469,11 +469,11 @@ public class AdcreativeCreativeElementsRead {
    * @return label
    */
   @ApiModelProperty(value = "")
-  public List<AdcreativeLabel> getLabel() {
+  public List<CreativeLabel> getLabel() {
     return label;
   }
 
-  public void setLabel(List<AdcreativeLabel> label) {
+  public void setLabel(List<CreativeLabel> label) {
     this.label = label;
   }
 

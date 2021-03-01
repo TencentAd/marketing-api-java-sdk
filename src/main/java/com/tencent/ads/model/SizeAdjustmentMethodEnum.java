@@ -19,7 +19,7 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-/** 调整尺寸方式：高斯模糊、指定颜色、智能裁剪、智能取图 */
+/** 调整尺寸方式：高斯模糊、指定颜色、智能裁剪、智能取图、指定图片 */
 @JsonAdapter(SizeAdjustmentMethodEnum.Adapter.class)
 public enum SizeAdjustmentMethodEnum {
   GAUSSIAN("GAUSSIAN"),
@@ -28,7 +28,9 @@ public enum SizeAdjustmentMethodEnum {
 
   SMART_CLIP("SMART_CLIP"),
 
-  SMART_IMAGE("SMART_IMAGE");
+  SMART_IMAGE("SMART_IMAGE"),
+
+  IMAGE("IMAGE");
 
   private String value;
 

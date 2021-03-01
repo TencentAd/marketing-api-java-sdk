@@ -5,6 +5,7 @@ import com.tencent.ads.TencentAds;
 import com.tencent.ads.exception.TencentAdsResponseException;
 import com.tencent.ads.exception.TencentAdsSDKException;
 import com.tencent.ads.model.*;
+import com.tencent.ads.model.FilteringStruct;
 import java.util.List;
 
 public class GetAndroidUnionChannelPackages {
@@ -17,6 +18,8 @@ public class GetAndroidUnionChannelPackages {
   public Long accountId = null;
 
   public Long androidUnionAppId = null;
+
+  public List<FilteringStruct> filtering = null;
 
   public Long page = null;
 
@@ -39,7 +42,8 @@ public class GetAndroidUnionChannelPackages {
     AndroidUnionChannelPackagesGetResponseData response =
         tencentAds
             .androidUnionChannelPackages()
-            .androidUnionChannelPackagesGet(accountId, androidUnionAppId, page, pageSize, fields);
+            .androidUnionChannelPackagesGet(
+                accountId, androidUnionAppId, filtering, page, pageSize, fields);
     return response;
   }
 

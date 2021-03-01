@@ -26,6 +26,7 @@ import com.tencent.ads.model.AndroidUnionChannelPackagesGetResponseData;
 import com.tencent.ads.model.AndroidUnionChannelPackagesUpdateRequest;
 import com.tencent.ads.model.AndroidUnionChannelPackagesUpdateResponse;
 import com.tencent.ads.model.AndroidUnionChannelPackagesUpdateResponseData;
+import com.tencent.ads.model.FilteringStruct;
 import java.util.List;
 
 public class AndroidUnionChannelPackagesApiContainer extends ApiContainer {
@@ -52,6 +53,7 @@ public class AndroidUnionChannelPackagesApiContainer extends ApiContainer {
    *
    * @param accountId (required)
    * @param androidUnionAppId (required)
+   * @param filtering (optional)
    * @param page (optional)
    * @param pageSize (optional)
    * @param fields 返回参数的字段列表 (optional)
@@ -60,10 +62,16 @@ public class AndroidUnionChannelPackagesApiContainer extends ApiContainer {
    *     response body
    */
   public AndroidUnionChannelPackagesGetResponseData androidUnionChannelPackagesGet(
-      Long accountId, Long androidUnionAppId, Long page, Long pageSize, List<String> fields)
+      Long accountId,
+      Long androidUnionAppId,
+      List<FilteringStruct> filtering,
+      Long page,
+      Long pageSize,
+      List<String> fields)
       throws ApiException, TencentAdsResponseException {
     AndroidUnionChannelPackagesGetResponse resp =
-        api.androidUnionChannelPackagesGet(accountId, androidUnionAppId, page, pageSize, fields);
+        api.androidUnionChannelPackagesGet(
+            accountId, androidUnionAppId, filtering, page, pageSize, fields);
     handleResponse(gson.toJson(resp));
     return resp.getData();
   }

@@ -22,6 +22,8 @@ import java.io.IOException;
 /** 资产类型 */
 @JsonAdapter(AssetType.Adapter.class)
 public enum AssetType {
+  NDMP("ASSET_TYPE_NDMP"),
+
   XIJING("ASSET_TYPE_XIJING"),
 
   CANVAS_WECHAT("ASSET_TYPE_CANVAS_WECHAT"),

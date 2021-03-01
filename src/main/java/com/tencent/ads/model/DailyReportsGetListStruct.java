@@ -864,6 +864,9 @@ public class DailyReportsGetListStruct {
   @SerializedName("purchase_amount_with_coupon_cost")
   private Long purchaseAmountWithCouponCost = null;
 
+  @SerializedName("mini_game_paying_amount_click_d1_by_upload")
+  private Long miniGamePayingAmountClickD1ByUpload = null;
+
   @SerializedName("request_conversions_count")
   private Long requestConversionsCount = null;
 
@@ -6595,6 +6598,26 @@ public class DailyReportsGetListStruct {
     this.purchaseAmountWithCouponCost = purchaseAmountWithCouponCost;
   }
 
+  public DailyReportsGetListStruct miniGamePayingAmountClickD1ByUpload(
+      Long miniGamePayingAmountClickD1ByUpload) {
+    this.miniGamePayingAmountClickD1ByUpload = miniGamePayingAmountClickD1ByUpload;
+    return this;
+  }
+
+  /**
+   * Get miniGamePayingAmountClickD1ByUpload
+   *
+   * @return miniGamePayingAmountClickD1ByUpload
+   */
+  @ApiModelProperty(value = "")
+  public Long getMiniGamePayingAmountClickD1ByUpload() {
+    return miniGamePayingAmountClickD1ByUpload;
+  }
+
+  public void setMiniGamePayingAmountClickD1ByUpload(Long miniGamePayingAmountClickD1ByUpload) {
+    this.miniGamePayingAmountClickD1ByUpload = miniGamePayingAmountClickD1ByUpload;
+  }
+
   public DailyReportsGetListStruct requestConversionsCount(Long requestConversionsCount) {
     this.requestConversionsCount = requestConversionsCount;
     return this;
@@ -9442,6 +9465,9 @@ public class DailyReportsGetListStruct {
             this.purchaseAmountWithCouponCost,
             dailyReportsGetListStruct.purchaseAmountWithCouponCost)
         && Objects.equals(
+            this.miniGamePayingAmountClickD1ByUpload,
+            dailyReportsGetListStruct.miniGamePayingAmountClickD1ByUpload)
+        && Objects.equals(
             this.requestConversionsCount, dailyReportsGetListStruct.requestConversionsCount)
         && Objects.equals(
             this.requestConversionsCost, dailyReportsGetListStruct.requestConversionsCost)
@@ -9934,6 +9960,7 @@ public class DailyReportsGetListStruct {
         consultLeaveInfoCost,
         purchaseAmountWithCoupon,
         purchaseAmountWithCouponCost,
+        miniGamePayingAmountClickD1ByUpload,
         requestConversionsCount,
         requestConversionsCost,
         incomeRoi1,

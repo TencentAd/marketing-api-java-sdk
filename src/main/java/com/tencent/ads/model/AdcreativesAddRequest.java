@@ -120,6 +120,9 @@ public class AdcreativesAddRequest {
   @SerializedName("countdown_switch")
   private Boolean countdownSwitch = null;
 
+  @SerializedName("page_track_url")
+  private String pageTrackUrl = null;
+
   @SerializedName("account_id")
   private Long accountId = null;
 
@@ -780,6 +783,25 @@ public class AdcreativesAddRequest {
     this.countdownSwitch = countdownSwitch;
   }
 
+  public AdcreativesAddRequest pageTrackUrl(String pageTrackUrl) {
+    this.pageTrackUrl = pageTrackUrl;
+    return this;
+  }
+
+  /**
+   * Get pageTrackUrl
+   *
+   * @return pageTrackUrl
+   */
+  @ApiModelProperty(value = "")
+  public String getPageTrackUrl() {
+    return pageTrackUrl;
+  }
+
+  public void setPageTrackUrl(String pageTrackUrl) {
+    this.pageTrackUrl = pageTrackUrl;
+  }
+
   public AdcreativesAddRequest accountId(Long accountId) {
     this.accountId = accountId;
     return this;
@@ -882,6 +904,7 @@ public class AdcreativesAddRequest {
         && Objects.equals(
             this.marketingPendantImageId, adcreativesAddRequest.marketingPendantImageId)
         && Objects.equals(this.countdownSwitch, adcreativesAddRequest.countdownSwitch)
+        && Objects.equals(this.pageTrackUrl, adcreativesAddRequest.pageTrackUrl)
         && Objects.equals(this.accountId, adcreativesAddRequest.accountId)
         && Objects.equals(this.adcreativeTemplateId, adcreativesAddRequest.adcreativeTemplateId)
         && Objects.equals(this.adcreativeElements, adcreativesAddRequest.adcreativeElements);
@@ -923,6 +946,7 @@ public class AdcreativesAddRequest {
         floatingZone,
         marketingPendantImageId,
         countdownSwitch,
+        pageTrackUrl,
         accountId,
         adcreativeTemplateId,
         adcreativeElements);

@@ -54,6 +54,7 @@ public class OptimizationGoalPermissionsApi {
    * @param accountId (required)
    * @param siteSet (required)
    * @param promotedObjectType (required)
+   * @param bidMode (optional)
    * @param fields 返回参数的字段列表 (optional)
    * @param progressListener Progress listener
    * @param progressRequestListener Progress request listener
@@ -64,6 +65,7 @@ public class OptimizationGoalPermissionsApi {
       Long accountId,
       List<String> siteSet,
       String promotedObjectType,
+      String bidMode,
       List<String> fields,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener)
@@ -80,6 +82,7 @@ public class OptimizationGoalPermissionsApi {
     if (siteSet != null)
       localVarCollectionQueryParams.addAll(
           apiClient.parameterToPairs("multi", "site_set", siteSet));
+    if (bidMode != null) localVarQueryParams.addAll(apiClient.parameterToPair("bid_mode", bidMode));
     if (promotedObjectType != null)
       localVarQueryParams.addAll(
           apiClient.parameterToPair("promoted_object_type", promotedObjectType));
@@ -134,6 +137,7 @@ public class OptimizationGoalPermissionsApi {
       Long accountId,
       List<String> siteSet,
       String promotedObjectType,
+      String bidMode,
       List<String> fields,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener)
@@ -162,6 +166,7 @@ public class OptimizationGoalPermissionsApi {
             accountId,
             siteSet,
             promotedObjectType,
+            bidMode,
             fields,
             progressListener,
             progressRequestListener);
@@ -174,16 +179,22 @@ public class OptimizationGoalPermissionsApi {
    * @param accountId (required)
    * @param siteSet (required)
    * @param promotedObjectType (required)
+   * @param bidMode (optional)
    * @param fields 返回参数的字段列表 (optional)
    * @return OptimizationGoalPermissionsGetResponse
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
   public OptimizationGoalPermissionsGetResponse optimizationGoalPermissionsGet(
-      Long accountId, List<String> siteSet, String promotedObjectType, List<String> fields)
+      Long accountId,
+      List<String> siteSet,
+      String promotedObjectType,
+      String bidMode,
+      List<String> fields)
       throws ApiException {
     ApiResponse<OptimizationGoalPermissionsGetResponse> resp =
-        optimizationGoalPermissionsGetWithHttpInfo(accountId, siteSet, promotedObjectType, fields);
+        optimizationGoalPermissionsGetWithHttpInfo(
+            accountId, siteSet, promotedObjectType, bidMode, fields);
     return resp.getData();
   }
 
@@ -193,6 +204,7 @@ public class OptimizationGoalPermissionsApi {
    * @param accountId (required)
    * @param siteSet (required)
    * @param promotedObjectType (required)
+   * @param bidMode (optional)
    * @param fields 返回参数的字段列表 (optional)
    * @return ApiResponse&lt;OptimizationGoalPermissionsGetResponse&gt;
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
@@ -200,11 +212,15 @@ public class OptimizationGoalPermissionsApi {
    */
   public ApiResponse<OptimizationGoalPermissionsGetResponse>
       optimizationGoalPermissionsGetWithHttpInfo(
-          Long accountId, List<String> siteSet, String promotedObjectType, List<String> fields)
+          Long accountId,
+          List<String> siteSet,
+          String promotedObjectType,
+          String bidMode,
+          List<String> fields)
           throws ApiException {
     com.squareup.okhttp.Call call =
         optimizationGoalPermissionsGetValidateBeforeCall(
-            accountId, siteSet, promotedObjectType, fields, null, null);
+            accountId, siteSet, promotedObjectType, bidMode, fields, null, null);
     Type localVarReturnType = new TypeToken<OptimizationGoalPermissionsGetResponse>() {}.getType();
     return apiClient.execute(call, localVarReturnType);
   }
@@ -215,6 +231,7 @@ public class OptimizationGoalPermissionsApi {
    * @param accountId (required)
    * @param siteSet (required)
    * @param promotedObjectType (required)
+   * @param bidMode (optional)
    * @param fields 返回参数的字段列表 (optional)
    * @param callback The callback to be executed when the API call finishes
    * @return The request call
@@ -224,6 +241,7 @@ public class OptimizationGoalPermissionsApi {
       Long accountId,
       List<String> siteSet,
       String promotedObjectType,
+      String bidMode,
       List<String> fields,
       final ApiCallback<OptimizationGoalPermissionsGetResponse> callback)
       throws ApiException {
@@ -254,6 +272,7 @@ public class OptimizationGoalPermissionsApi {
             accountId,
             siteSet,
             promotedObjectType,
+            bidMode,
             fields,
             progressListener,
             progressRequestListener);

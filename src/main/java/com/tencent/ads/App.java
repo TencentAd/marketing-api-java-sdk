@@ -20,6 +20,7 @@ import com.tencent.ads.guice.GuiceModule;
 public class App {
 
   @Inject AdDiagnosisApiContainer adDiagnosisApiContainer;
+  @Inject AdLabelApiContainer adLabelApiContainer;
   @Inject AdcreativePreviewsApiContainer adcreativePreviewsApiContainer;
   @Inject AdcreativeTemplateDetailApiContainer adcreativeTemplateDetailApiContainer;
   @Inject AdcreativeTemplatePreviewApiContainer adcreativeTemplatePreviewApiContainer;
@@ -36,6 +37,7 @@ public class App {
   @Inject AndroidChannelPackagesApiContainer androidChannelPackagesApiContainer;
   @Inject AndroidUnionChannelPackagesApiContainer androidUnionChannelPackagesApiContainer;
   @Inject AssetPermissionsApiContainer assetPermissionsApiContainer;
+  @Inject AssetPrePermissionsApiContainer assetPrePermissionsApiContainer;
   @Inject AsyncReportFilesApiContainer asyncReportFilesApiContainer;
   @Inject AsyncReportsApiContainer asyncReportsApiContainer;
   @Inject AsyncTaskFilesApiContainer asyncTaskFilesApiContainer;
@@ -68,6 +70,7 @@ public class App {
   @Inject DailyCostApiContainer dailyCostApiContainer;
   @Inject DailyReportsApiContainer dailyReportsApiContainer;
   @Inject DiagnosisApiContainer diagnosisApiContainer;
+  @Inject DplabelAdLabelApiContainer dplabelAdLabelApiContainer;
   @Inject DynamicAdImagesApiContainer dynamicAdImagesApiContainer;
   @Inject DynamicAdTemplatesApiContainer dynamicAdTemplatesApiContainer;
   @Inject DynamicAdVideoApiContainer dynamicAdVideoApiContainer;
@@ -94,6 +97,7 @@ public class App {
   @Inject LocalStoresSearchInfoApiContainer localStoresSearchInfoApiContainer;
   @Inject OauthApiContainer oauthApiContainer;
   @Inject OptimizationGoalPermissionsApiContainer optimizationGoalPermissionsApiContainer;
+  @Inject OuterCluesApiContainer outerCluesApiContainer;
   @Inject PagesApiContainer pagesApiContainer;
   @Inject PlayablePagesApiContainer playablePagesApiContainer;
   @Inject ProductCatalogsApiContainer productCatalogsApiContainer;
@@ -125,6 +129,7 @@ public class App {
   @Inject VideomakerAutoadjustmentsApiContainer videomakerAutoadjustmentsApiContainer;
   @Inject VideomakerSubtitlesApiContainer videomakerSubtitlesApiContainer;
   @Inject VideomakerTasksApiContainer videomakerTasksApiContainer;
+  @Inject VideomakerVideocapturesApiContainer videomakerVideocapturesApiContainer;
   @Inject VideosApiContainer videosApiContainer;
   @Inject WechatAdFollowersApiContainer wechatAdFollowersApiContainer;
   @Inject WechatAdLabelsApiContainer wechatAdLabelsApiContainer;
@@ -150,6 +155,10 @@ public class App {
 
   public AdDiagnosisApiContainer adDiagnosis() {
     return adDiagnosisApiContainer;
+  }
+
+  public AdLabelApiContainer adLabel() {
+    return adLabelApiContainer;
   }
 
   public AdcreativePreviewsApiContainer adcreativePreviews() {
@@ -214,6 +223,10 @@ public class App {
 
   public AssetPermissionsApiContainer assetPermissions() {
     return assetPermissionsApiContainer;
+  }
+
+  public AssetPrePermissionsApiContainer assetPrePermissions() {
+    return assetPrePermissionsApiContainer;
   }
 
   public AsyncReportFilesApiContainer asyncReportFiles() {
@@ -344,6 +357,10 @@ public class App {
     return diagnosisApiContainer;
   }
 
+  public DplabelAdLabelApiContainer dplabelAdLabel() {
+    return dplabelAdLabelApiContainer;
+  }
+
   public DynamicAdImagesApiContainer dynamicAdImages() {
     return dynamicAdImagesApiContainer;
   }
@@ -446,6 +463,10 @@ public class App {
 
   public OptimizationGoalPermissionsApiContainer optimizationGoalPermissions() {
     return optimizationGoalPermissionsApiContainer;
+  }
+
+  public OuterCluesApiContainer outerClues() {
+    return outerCluesApiContainer;
   }
 
   public PagesApiContainer pages() {
@@ -570,6 +591,10 @@ public class App {
 
   public VideomakerTasksApiContainer videomakerTasks() {
     return videomakerTasksApiContainer;
+  }
+
+  public VideomakerVideocapturesApiContainer videomakerVideocaptures() {
+    return videomakerVideocapturesApiContainer;
   }
 
   public VideosApiContainer videos() {

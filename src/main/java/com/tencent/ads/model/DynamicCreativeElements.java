@@ -90,7 +90,7 @@ public class DynamicCreativeElements {
   private String miniProgramPath = null;
 
   @SerializedName("label")
-  private List<AdcreativeLabel> label = null;
+  private List<CreativeLabel> label = null;
 
   @SerializedName("product_tags")
   private List<String> productTags = null;
@@ -625,14 +625,14 @@ public class DynamicCreativeElements {
     this.miniProgramPath = miniProgramPath;
   }
 
-  public DynamicCreativeElements label(List<AdcreativeLabel> label) {
+  public DynamicCreativeElements label(List<CreativeLabel> label) {
     this.label = label;
     return this;
   }
 
-  public DynamicCreativeElements addLabelItem(AdcreativeLabel labelItem) {
+  public DynamicCreativeElements addLabelItem(CreativeLabel labelItem) {
     if (this.label == null) {
-      this.label = new ArrayList<AdcreativeLabel>();
+      this.label = new ArrayList<CreativeLabel>();
     }
     this.label.add(labelItem);
     return this;
@@ -644,11 +644,11 @@ public class DynamicCreativeElements {
    * @return label
    */
   @ApiModelProperty(value = "")
-  public List<AdcreativeLabel> getLabel() {
+  public List<CreativeLabel> getLabel() {
     return label;
   }
 
-  public void setLabel(List<AdcreativeLabel> label) {
+  public void setLabel(List<CreativeLabel> label) {
     this.label = label;
   }
 

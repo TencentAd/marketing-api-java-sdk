@@ -30,6 +30,12 @@ public class SizeAdjustment {
   @SerializedName("color")
   private String color = null;
 
+  @SerializedName("bg_image_id1")
+  private String bgImageId1 = null;
+
+  @SerializedName("bg_image_id2")
+  private String bgImageId2 = null;
+
   public SizeAdjustment targetSize(SizeType targetSize) {
     this.targetSize = targetSize;
     return this;
@@ -87,6 +93,44 @@ public class SizeAdjustment {
     this.color = color;
   }
 
+  public SizeAdjustment bgImageId1(String bgImageId1) {
+    this.bgImageId1 = bgImageId1;
+    return this;
+  }
+
+  /**
+   * Get bgImageId1
+   *
+   * @return bgImageId1
+   */
+  @ApiModelProperty(value = "")
+  public String getBgImageId1() {
+    return bgImageId1;
+  }
+
+  public void setBgImageId1(String bgImageId1) {
+    this.bgImageId1 = bgImageId1;
+  }
+
+  public SizeAdjustment bgImageId2(String bgImageId2) {
+    this.bgImageId2 = bgImageId2;
+    return this;
+  }
+
+  /**
+   * Get bgImageId2
+   *
+   * @return bgImageId2
+   */
+  @ApiModelProperty(value = "")
+  public String getBgImageId2() {
+    return bgImageId2;
+  }
+
+  public void setBgImageId2(String bgImageId2) {
+    this.bgImageId2 = bgImageId2;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -98,12 +142,14 @@ public class SizeAdjustment {
     SizeAdjustment sizeAdjustment = (SizeAdjustment) o;
     return Objects.equals(this.targetSize, sizeAdjustment.targetSize)
         && Objects.equals(this.sizeAdjustmentMethod, sizeAdjustment.sizeAdjustmentMethod)
-        && Objects.equals(this.color, sizeAdjustment.color);
+        && Objects.equals(this.color, sizeAdjustment.color)
+        && Objects.equals(this.bgImageId1, sizeAdjustment.bgImageId1)
+        && Objects.equals(this.bgImageId2, sizeAdjustment.bgImageId2);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(targetSize, sizeAdjustmentMethod, color);
+    return Objects.hash(targetSize, sizeAdjustmentMethod, color, bgImageId1, bgImageId2);
   }
 
   @Override

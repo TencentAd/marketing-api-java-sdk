@@ -54,8 +54,30 @@ public class BatchAsyncRequestTaskSpec {
   @SerializedName("delete_ad_spec")
   private List<DeleteAdItem> deleteAdSpec = null;
 
+  @SerializedName("update_adgroup_deep_conversion_worth_rate_spec")
+  private List<UpdateAdgroupDeepConversionWorthRateItem> updateAdgroupDeepConversionWorthRateSpec =
+      null;
+
+  @SerializedName("update_adcreative_deep_link_url_spec")
+  private List<UpdateAdcreativeDeepLinkUrlItem> updateAdcreativeDeepLinkUrlSpec = null;
+
   @SerializedName("targetings_share_spec")
   private List<TargetingsShareItem> targetingsShareSpec = null;
+
+  @SerializedName("update_campaign_configured_status_spec")
+  private List<UpdateCampaignConfiguredStatusItem> updateCampaignConfiguredStatusSpec = null;
+
+  @SerializedName("update_campaign_daily_budget_spec")
+  private List<UpdateCampaignDailyBudgetItem> updateCampaignDailyBudgetSpec = null;
+
+  @SerializedName("update_adgroup_configured_status_spec")
+  private List<UpdateAdgroupConfiguredStatusItem> updateAdgroupConfiguredStatusSpec = null;
+
+  @SerializedName("update_adgroup_daily_budget_spec")
+  private List<UpdateAdgroupDailyBudgetItem> updateAdgroupDailyBudgetSpec = null;
+
+  @SerializedName("update_ad_configured_status_spec")
+  private List<UpdateAdConfiguredStatusItem> updateAdConfiguredStatusSpec = null;
 
   public BatchAsyncRequestTaskSpec updateUnionPositionPackageSpec(
       List<UpdateUnionPositionPackageItem> updateUnionPositionPackageSpec) {
@@ -355,6 +377,68 @@ public class BatchAsyncRequestTaskSpec {
     this.deleteAdSpec = deleteAdSpec;
   }
 
+  public BatchAsyncRequestTaskSpec updateAdgroupDeepConversionWorthRateSpec(
+      List<UpdateAdgroupDeepConversionWorthRateItem> updateAdgroupDeepConversionWorthRateSpec) {
+    this.updateAdgroupDeepConversionWorthRateSpec = updateAdgroupDeepConversionWorthRateSpec;
+    return this;
+  }
+
+  public BatchAsyncRequestTaskSpec addUpdateAdgroupDeepConversionWorthRateSpecItem(
+      UpdateAdgroupDeepConversionWorthRateItem updateAdgroupDeepConversionWorthRateSpecItem) {
+    if (this.updateAdgroupDeepConversionWorthRateSpec == null) {
+      this.updateAdgroupDeepConversionWorthRateSpec =
+          new ArrayList<UpdateAdgroupDeepConversionWorthRateItem>();
+    }
+    this.updateAdgroupDeepConversionWorthRateSpec.add(updateAdgroupDeepConversionWorthRateSpecItem);
+    return this;
+  }
+
+  /**
+   * Get updateAdgroupDeepConversionWorthRateSpec
+   *
+   * @return updateAdgroupDeepConversionWorthRateSpec
+   */
+  @ApiModelProperty(value = "")
+  public List<UpdateAdgroupDeepConversionWorthRateItem>
+      getUpdateAdgroupDeepConversionWorthRateSpec() {
+    return updateAdgroupDeepConversionWorthRateSpec;
+  }
+
+  public void setUpdateAdgroupDeepConversionWorthRateSpec(
+      List<UpdateAdgroupDeepConversionWorthRateItem> updateAdgroupDeepConversionWorthRateSpec) {
+    this.updateAdgroupDeepConversionWorthRateSpec = updateAdgroupDeepConversionWorthRateSpec;
+  }
+
+  public BatchAsyncRequestTaskSpec updateAdcreativeDeepLinkUrlSpec(
+      List<UpdateAdcreativeDeepLinkUrlItem> updateAdcreativeDeepLinkUrlSpec) {
+    this.updateAdcreativeDeepLinkUrlSpec = updateAdcreativeDeepLinkUrlSpec;
+    return this;
+  }
+
+  public BatchAsyncRequestTaskSpec addUpdateAdcreativeDeepLinkUrlSpecItem(
+      UpdateAdcreativeDeepLinkUrlItem updateAdcreativeDeepLinkUrlSpecItem) {
+    if (this.updateAdcreativeDeepLinkUrlSpec == null) {
+      this.updateAdcreativeDeepLinkUrlSpec = new ArrayList<UpdateAdcreativeDeepLinkUrlItem>();
+    }
+    this.updateAdcreativeDeepLinkUrlSpec.add(updateAdcreativeDeepLinkUrlSpecItem);
+    return this;
+  }
+
+  /**
+   * Get updateAdcreativeDeepLinkUrlSpec
+   *
+   * @return updateAdcreativeDeepLinkUrlSpec
+   */
+  @ApiModelProperty(value = "")
+  public List<UpdateAdcreativeDeepLinkUrlItem> getUpdateAdcreativeDeepLinkUrlSpec() {
+    return updateAdcreativeDeepLinkUrlSpec;
+  }
+
+  public void setUpdateAdcreativeDeepLinkUrlSpec(
+      List<UpdateAdcreativeDeepLinkUrlItem> updateAdcreativeDeepLinkUrlSpec) {
+    this.updateAdcreativeDeepLinkUrlSpec = updateAdcreativeDeepLinkUrlSpec;
+  }
+
   public BatchAsyncRequestTaskSpec targetingsShareSpec(
       List<TargetingsShareItem> targetingsShareSpec) {
     this.targetingsShareSpec = targetingsShareSpec;
@@ -382,6 +466,156 @@ public class BatchAsyncRequestTaskSpec {
 
   public void setTargetingsShareSpec(List<TargetingsShareItem> targetingsShareSpec) {
     this.targetingsShareSpec = targetingsShareSpec;
+  }
+
+  public BatchAsyncRequestTaskSpec updateCampaignConfiguredStatusSpec(
+      List<UpdateCampaignConfiguredStatusItem> updateCampaignConfiguredStatusSpec) {
+    this.updateCampaignConfiguredStatusSpec = updateCampaignConfiguredStatusSpec;
+    return this;
+  }
+
+  public BatchAsyncRequestTaskSpec addUpdateCampaignConfiguredStatusSpecItem(
+      UpdateCampaignConfiguredStatusItem updateCampaignConfiguredStatusSpecItem) {
+    if (this.updateCampaignConfiguredStatusSpec == null) {
+      this.updateCampaignConfiguredStatusSpec = new ArrayList<UpdateCampaignConfiguredStatusItem>();
+    }
+    this.updateCampaignConfiguredStatusSpec.add(updateCampaignConfiguredStatusSpecItem);
+    return this;
+  }
+
+  /**
+   * Get updateCampaignConfiguredStatusSpec
+   *
+   * @return updateCampaignConfiguredStatusSpec
+   */
+  @ApiModelProperty(value = "")
+  public List<UpdateCampaignConfiguredStatusItem> getUpdateCampaignConfiguredStatusSpec() {
+    return updateCampaignConfiguredStatusSpec;
+  }
+
+  public void setUpdateCampaignConfiguredStatusSpec(
+      List<UpdateCampaignConfiguredStatusItem> updateCampaignConfiguredStatusSpec) {
+    this.updateCampaignConfiguredStatusSpec = updateCampaignConfiguredStatusSpec;
+  }
+
+  public BatchAsyncRequestTaskSpec updateCampaignDailyBudgetSpec(
+      List<UpdateCampaignDailyBudgetItem> updateCampaignDailyBudgetSpec) {
+    this.updateCampaignDailyBudgetSpec = updateCampaignDailyBudgetSpec;
+    return this;
+  }
+
+  public BatchAsyncRequestTaskSpec addUpdateCampaignDailyBudgetSpecItem(
+      UpdateCampaignDailyBudgetItem updateCampaignDailyBudgetSpecItem) {
+    if (this.updateCampaignDailyBudgetSpec == null) {
+      this.updateCampaignDailyBudgetSpec = new ArrayList<UpdateCampaignDailyBudgetItem>();
+    }
+    this.updateCampaignDailyBudgetSpec.add(updateCampaignDailyBudgetSpecItem);
+    return this;
+  }
+
+  /**
+   * Get updateCampaignDailyBudgetSpec
+   *
+   * @return updateCampaignDailyBudgetSpec
+   */
+  @ApiModelProperty(value = "")
+  public List<UpdateCampaignDailyBudgetItem> getUpdateCampaignDailyBudgetSpec() {
+    return updateCampaignDailyBudgetSpec;
+  }
+
+  public void setUpdateCampaignDailyBudgetSpec(
+      List<UpdateCampaignDailyBudgetItem> updateCampaignDailyBudgetSpec) {
+    this.updateCampaignDailyBudgetSpec = updateCampaignDailyBudgetSpec;
+  }
+
+  public BatchAsyncRequestTaskSpec updateAdgroupConfiguredStatusSpec(
+      List<UpdateAdgroupConfiguredStatusItem> updateAdgroupConfiguredStatusSpec) {
+    this.updateAdgroupConfiguredStatusSpec = updateAdgroupConfiguredStatusSpec;
+    return this;
+  }
+
+  public BatchAsyncRequestTaskSpec addUpdateAdgroupConfiguredStatusSpecItem(
+      UpdateAdgroupConfiguredStatusItem updateAdgroupConfiguredStatusSpecItem) {
+    if (this.updateAdgroupConfiguredStatusSpec == null) {
+      this.updateAdgroupConfiguredStatusSpec = new ArrayList<UpdateAdgroupConfiguredStatusItem>();
+    }
+    this.updateAdgroupConfiguredStatusSpec.add(updateAdgroupConfiguredStatusSpecItem);
+    return this;
+  }
+
+  /**
+   * Get updateAdgroupConfiguredStatusSpec
+   *
+   * @return updateAdgroupConfiguredStatusSpec
+   */
+  @ApiModelProperty(value = "")
+  public List<UpdateAdgroupConfiguredStatusItem> getUpdateAdgroupConfiguredStatusSpec() {
+    return updateAdgroupConfiguredStatusSpec;
+  }
+
+  public void setUpdateAdgroupConfiguredStatusSpec(
+      List<UpdateAdgroupConfiguredStatusItem> updateAdgroupConfiguredStatusSpec) {
+    this.updateAdgroupConfiguredStatusSpec = updateAdgroupConfiguredStatusSpec;
+  }
+
+  public BatchAsyncRequestTaskSpec updateAdgroupDailyBudgetSpec(
+      List<UpdateAdgroupDailyBudgetItem> updateAdgroupDailyBudgetSpec) {
+    this.updateAdgroupDailyBudgetSpec = updateAdgroupDailyBudgetSpec;
+    return this;
+  }
+
+  public BatchAsyncRequestTaskSpec addUpdateAdgroupDailyBudgetSpecItem(
+      UpdateAdgroupDailyBudgetItem updateAdgroupDailyBudgetSpecItem) {
+    if (this.updateAdgroupDailyBudgetSpec == null) {
+      this.updateAdgroupDailyBudgetSpec = new ArrayList<UpdateAdgroupDailyBudgetItem>();
+    }
+    this.updateAdgroupDailyBudgetSpec.add(updateAdgroupDailyBudgetSpecItem);
+    return this;
+  }
+
+  /**
+   * Get updateAdgroupDailyBudgetSpec
+   *
+   * @return updateAdgroupDailyBudgetSpec
+   */
+  @ApiModelProperty(value = "")
+  public List<UpdateAdgroupDailyBudgetItem> getUpdateAdgroupDailyBudgetSpec() {
+    return updateAdgroupDailyBudgetSpec;
+  }
+
+  public void setUpdateAdgroupDailyBudgetSpec(
+      List<UpdateAdgroupDailyBudgetItem> updateAdgroupDailyBudgetSpec) {
+    this.updateAdgroupDailyBudgetSpec = updateAdgroupDailyBudgetSpec;
+  }
+
+  public BatchAsyncRequestTaskSpec updateAdConfiguredStatusSpec(
+      List<UpdateAdConfiguredStatusItem> updateAdConfiguredStatusSpec) {
+    this.updateAdConfiguredStatusSpec = updateAdConfiguredStatusSpec;
+    return this;
+  }
+
+  public BatchAsyncRequestTaskSpec addUpdateAdConfiguredStatusSpecItem(
+      UpdateAdConfiguredStatusItem updateAdConfiguredStatusSpecItem) {
+    if (this.updateAdConfiguredStatusSpec == null) {
+      this.updateAdConfiguredStatusSpec = new ArrayList<UpdateAdConfiguredStatusItem>();
+    }
+    this.updateAdConfiguredStatusSpec.add(updateAdConfiguredStatusSpecItem);
+    return this;
+  }
+
+  /**
+   * Get updateAdConfiguredStatusSpec
+   *
+   * @return updateAdConfiguredStatusSpec
+   */
+  @ApiModelProperty(value = "")
+  public List<UpdateAdConfiguredStatusItem> getUpdateAdConfiguredStatusSpec() {
+    return updateAdConfiguredStatusSpec;
+  }
+
+  public void setUpdateAdConfiguredStatusSpec(
+      List<UpdateAdConfiguredStatusItem> updateAdConfiguredStatusSpec) {
+    this.updateAdConfiguredStatusSpec = updateAdConfiguredStatusSpec;
   }
 
   @Override
@@ -414,7 +648,28 @@ public class BatchAsyncRequestTaskSpec {
         && Objects.equals(this.deleteCampaignSpec, batchAsyncRequestTaskSpec.deleteCampaignSpec)
         && Objects.equals(this.deleteAdgroupSpec, batchAsyncRequestTaskSpec.deleteAdgroupSpec)
         && Objects.equals(this.deleteAdSpec, batchAsyncRequestTaskSpec.deleteAdSpec)
-        && Objects.equals(this.targetingsShareSpec, batchAsyncRequestTaskSpec.targetingsShareSpec);
+        && Objects.equals(
+            this.updateAdgroupDeepConversionWorthRateSpec,
+            batchAsyncRequestTaskSpec.updateAdgroupDeepConversionWorthRateSpec)
+        && Objects.equals(
+            this.updateAdcreativeDeepLinkUrlSpec,
+            batchAsyncRequestTaskSpec.updateAdcreativeDeepLinkUrlSpec)
+        && Objects.equals(this.targetingsShareSpec, batchAsyncRequestTaskSpec.targetingsShareSpec)
+        && Objects.equals(
+            this.updateCampaignConfiguredStatusSpec,
+            batchAsyncRequestTaskSpec.updateCampaignConfiguredStatusSpec)
+        && Objects.equals(
+            this.updateCampaignDailyBudgetSpec,
+            batchAsyncRequestTaskSpec.updateCampaignDailyBudgetSpec)
+        && Objects.equals(
+            this.updateAdgroupConfiguredStatusSpec,
+            batchAsyncRequestTaskSpec.updateAdgroupConfiguredStatusSpec)
+        && Objects.equals(
+            this.updateAdgroupDailyBudgetSpec,
+            batchAsyncRequestTaskSpec.updateAdgroupDailyBudgetSpec)
+        && Objects.equals(
+            this.updateAdConfiguredStatusSpec,
+            batchAsyncRequestTaskSpec.updateAdConfiguredStatusSpec);
   }
 
   @Override
@@ -430,7 +685,14 @@ public class BatchAsyncRequestTaskSpec {
         deleteCampaignSpec,
         deleteAdgroupSpec,
         deleteAdSpec,
-        targetingsShareSpec);
+        updateAdgroupDeepConversionWorthRateSpec,
+        updateAdcreativeDeepLinkUrlSpec,
+        targetingsShareSpec,
+        updateCampaignConfiguredStatusSpec,
+        updateCampaignDailyBudgetSpec,
+        updateAdgroupConfiguredStatusSpec,
+        updateAdgroupDailyBudgetSpec,
+        updateAdConfiguredStatusSpec);
   }
 
   @Override

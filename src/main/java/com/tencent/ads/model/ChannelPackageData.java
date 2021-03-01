@@ -27,6 +27,9 @@ public class ChannelPackageData {
   @SerializedName("package_name")
   private String packageName = null;
 
+  @SerializedName("package_download_url")
+  private String packageDownloadUrl = null;
+
   @SerializedName("channel_package_id")
   private String channelPackageId = null;
 
@@ -84,6 +87,25 @@ public class ChannelPackageData {
 
   public void setPackageName(String packageName) {
     this.packageName = packageName;
+  }
+
+  public ChannelPackageData packageDownloadUrl(String packageDownloadUrl) {
+    this.packageDownloadUrl = packageDownloadUrl;
+    return this;
+  }
+
+  /**
+   * Get packageDownloadUrl
+   *
+   * @return packageDownloadUrl
+   */
+  @ApiModelProperty(value = "")
+  public String getPackageDownloadUrl() {
+    return packageDownloadUrl;
+  }
+
+  public void setPackageDownloadUrl(String packageDownloadUrl) {
+    this.packageDownloadUrl = packageDownloadUrl;
   }
 
   public ChannelPackageData channelPackageId(String channelPackageId) {
@@ -230,6 +252,7 @@ public class ChannelPackageData {
     ChannelPackageData channelPackageData = (ChannelPackageData) o;
     return Objects.equals(this.androidAppId, channelPackageData.androidAppId)
         && Objects.equals(this.packageName, channelPackageData.packageName)
+        && Objects.equals(this.packageDownloadUrl, channelPackageData.packageDownloadUrl)
         && Objects.equals(this.channelPackageId, channelPackageData.channelPackageId)
         && Objects.equals(this.versionCode, channelPackageData.versionCode)
         && Objects.equals(this.versionName, channelPackageData.versionName)
@@ -244,6 +267,7 @@ public class ChannelPackageData {
     return Objects.hash(
         androidAppId,
         packageName,
+        packageDownloadUrl,
         channelPackageId,
         versionCode,
         versionName,

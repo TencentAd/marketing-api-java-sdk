@@ -66,6 +66,9 @@ public class DynamicCreativesAddRequest {
   @SerializedName("union_market_switch")
   private Boolean unionMarketSwitch = null;
 
+  @SerializedName("profile_id")
+  private Long profileId = null;
+
   @SerializedName("dynamic_adcreative_spec")
   private DynamicAdcreativeSpec dynamicAdcreativeSpec = null;
 
@@ -369,6 +372,25 @@ public class DynamicCreativesAddRequest {
     this.unionMarketSwitch = unionMarketSwitch;
   }
 
+  public DynamicCreativesAddRequest profileId(Long profileId) {
+    this.profileId = profileId;
+    return this;
+  }
+
+  /**
+   * Get profileId
+   *
+   * @return profileId
+   */
+  @ApiModelProperty(value = "")
+  public Long getProfileId() {
+    return profileId;
+  }
+
+  public void setProfileId(Long profileId) {
+    this.profileId = profileId;
+  }
+
   public DynamicCreativesAddRequest dynamicAdcreativeSpec(
       DynamicAdcreativeSpec dynamicAdcreativeSpec) {
     this.dynamicAdcreativeSpec = dynamicAdcreativeSpec;
@@ -456,6 +478,7 @@ public class DynamicCreativesAddRequest {
         && Objects.equals(
             this.feedsVideoCommentSwitch, dynamicCreativesAddRequest.feedsVideoCommentSwitch)
         && Objects.equals(this.unionMarketSwitch, dynamicCreativesAddRequest.unionMarketSwitch)
+        && Objects.equals(this.profileId, dynamicCreativesAddRequest.profileId)
         && Objects.equals(
             this.dynamicAdcreativeSpec, dynamicCreativesAddRequest.dynamicAdcreativeSpec)
         && Objects.equals(this.videoEndPage, dynamicCreativesAddRequest.videoEndPage)
@@ -480,6 +503,7 @@ public class DynamicCreativesAddRequest {
         clickTrackingUrl,
         feedsVideoCommentSwitch,
         unionMarketSwitch,
+        profileId,
         dynamicAdcreativeSpec,
         videoEndPage,
         accountId);

@@ -146,6 +146,9 @@ public class AdcreativesGetListStruct {
   @SerializedName("countdown_switch")
   private Boolean countdownSwitch = null;
 
+  @SerializedName("page_track_url")
+  private String pageTrackUrl = null;
+
   @SerializedName("adcreative_template_id")
   private Long adcreativeTemplateId = null;
 
@@ -958,6 +961,25 @@ public class AdcreativesGetListStruct {
     this.countdownSwitch = countdownSwitch;
   }
 
+  public AdcreativesGetListStruct pageTrackUrl(String pageTrackUrl) {
+    this.pageTrackUrl = pageTrackUrl;
+    return this;
+  }
+
+  /**
+   * Get pageTrackUrl
+   *
+   * @return pageTrackUrl
+   */
+  @ApiModelProperty(value = "")
+  public String getPageTrackUrl() {
+    return pageTrackUrl;
+  }
+
+  public void setPageTrackUrl(String pageTrackUrl) {
+    this.pageTrackUrl = pageTrackUrl;
+  }
+
   public AdcreativesGetListStruct adcreativeTemplateId(Long adcreativeTemplateId) {
     this.adcreativeTemplateId = adcreativeTemplateId;
     return this;
@@ -1054,6 +1076,7 @@ public class AdcreativesGetListStruct {
         && Objects.equals(
             this.marketingPendantImageId, adcreativesGetListStruct.marketingPendantImageId)
         && Objects.equals(this.countdownSwitch, adcreativesGetListStruct.countdownSwitch)
+        && Objects.equals(this.pageTrackUrl, adcreativesGetListStruct.pageTrackUrl)
         && Objects.equals(this.adcreativeTemplateId, adcreativesGetListStruct.adcreativeTemplateId)
         && Objects.equals(this.adcreativeElements, adcreativesGetListStruct.adcreativeElements);
   }
@@ -1102,6 +1125,7 @@ public class AdcreativesGetListStruct {
         floatingZone,
         marketingPendantImageId,
         countdownSwitch,
+        pageTrackUrl,
         adcreativeTemplateId,
         adcreativeElements);
   }

@@ -26,6 +26,7 @@ import com.tencent.ads.model.AndroidUnionChannelPackagesAddResponse;
 import com.tencent.ads.model.AndroidUnionChannelPackagesGetResponse;
 import com.tencent.ads.model.AndroidUnionChannelPackagesUpdateRequest;
 import com.tencent.ads.model.AndroidUnionChannelPackagesUpdateResponse;
+import com.tencent.ads.model.FilteringStruct;
 import java.io.IOException;
 import java.lang.reflect.Type;
 import java.util.ArrayList;
@@ -213,6 +214,7 @@ public class AndroidUnionChannelPackagesApi {
    *
    * @param accountId (required)
    * @param androidUnionAppId (required)
+   * @param filtering (optional)
    * @param page (optional)
    * @param pageSize (optional)
    * @param fields 返回参数的字段列表 (optional)
@@ -224,6 +226,7 @@ public class AndroidUnionChannelPackagesApi {
   public com.squareup.okhttp.Call androidUnionChannelPackagesGetCall(
       Long accountId,
       Long androidUnionAppId,
+      List<FilteringStruct> filtering,
       Long page,
       Long pageSize,
       List<String> fields,
@@ -242,6 +245,9 @@ public class AndroidUnionChannelPackagesApi {
     if (androidUnionAppId != null)
       localVarQueryParams.addAll(
           apiClient.parameterToPair("android_union_app_id", androidUnionAppId));
+    if (filtering != null)
+      localVarCollectionQueryParams.addAll(
+          apiClient.parameterToPairs("multi", "filtering", filtering));
     if (page != null) localVarQueryParams.addAll(apiClient.parameterToPair("page", page));
     if (pageSize != null)
       localVarQueryParams.addAll(apiClient.parameterToPair("page_size", pageSize));
@@ -295,6 +301,7 @@ public class AndroidUnionChannelPackagesApi {
   private com.squareup.okhttp.Call androidUnionChannelPackagesGetValidateBeforeCall(
       Long accountId,
       Long androidUnionAppId,
+      List<FilteringStruct> filtering,
       Long page,
       Long pageSize,
       List<String> fields,
@@ -318,6 +325,7 @@ public class AndroidUnionChannelPackagesApi {
         androidUnionChannelPackagesGetCall(
             accountId,
             androidUnionAppId,
+            filtering,
             page,
             pageSize,
             fields,
@@ -331,6 +339,7 @@ public class AndroidUnionChannelPackagesApi {
    *
    * @param accountId (required)
    * @param androidUnionAppId (required)
+   * @param filtering (optional)
    * @param page (optional)
    * @param pageSize (optional)
    * @param fields 返回参数的字段列表 (optional)
@@ -339,11 +348,16 @@ public class AndroidUnionChannelPackagesApi {
    *     response body
    */
   public AndroidUnionChannelPackagesGetResponse androidUnionChannelPackagesGet(
-      Long accountId, Long androidUnionAppId, Long page, Long pageSize, List<String> fields)
+      Long accountId,
+      Long androidUnionAppId,
+      List<FilteringStruct> filtering,
+      Long page,
+      Long pageSize,
+      List<String> fields)
       throws ApiException {
     ApiResponse<AndroidUnionChannelPackagesGetResponse> resp =
         androidUnionChannelPackagesGetWithHttpInfo(
-            accountId, androidUnionAppId, page, pageSize, fields);
+            accountId, androidUnionAppId, filtering, page, pageSize, fields);
     return resp.getData();
   }
 
@@ -352,6 +366,7 @@ public class AndroidUnionChannelPackagesApi {
    *
    * @param accountId (required)
    * @param androidUnionAppId (required)
+   * @param filtering (optional)
    * @param page (optional)
    * @param pageSize (optional)
    * @param fields 返回参数的字段列表 (optional)
@@ -361,11 +376,16 @@ public class AndroidUnionChannelPackagesApi {
    */
   public ApiResponse<AndroidUnionChannelPackagesGetResponse>
       androidUnionChannelPackagesGetWithHttpInfo(
-          Long accountId, Long androidUnionAppId, Long page, Long pageSize, List<String> fields)
+          Long accountId,
+          Long androidUnionAppId,
+          List<FilteringStruct> filtering,
+          Long page,
+          Long pageSize,
+          List<String> fields)
           throws ApiException {
     com.squareup.okhttp.Call call =
         androidUnionChannelPackagesGetValidateBeforeCall(
-            accountId, androidUnionAppId, page, pageSize, fields, null, null);
+            accountId, androidUnionAppId, filtering, page, pageSize, fields, null, null);
     Type localVarReturnType = new TypeToken<AndroidUnionChannelPackagesGetResponse>() {}.getType();
     return apiClient.execute(call, localVarReturnType);
   }
@@ -375,6 +395,7 @@ public class AndroidUnionChannelPackagesApi {
    *
    * @param accountId (required)
    * @param androidUnionAppId (required)
+   * @param filtering (optional)
    * @param page (optional)
    * @param pageSize (optional)
    * @param fields 返回参数的字段列表 (optional)
@@ -385,6 +406,7 @@ public class AndroidUnionChannelPackagesApi {
   public com.squareup.okhttp.Call androidUnionChannelPackagesGetAsync(
       Long accountId,
       Long androidUnionAppId,
+      List<FilteringStruct> filtering,
       Long page,
       Long pageSize,
       List<String> fields,
@@ -416,6 +438,7 @@ public class AndroidUnionChannelPackagesApi {
         androidUnionChannelPackagesGetValidateBeforeCall(
             accountId,
             androidUnionAppId,
+            filtering,
             page,
             pageSize,
             fields,
