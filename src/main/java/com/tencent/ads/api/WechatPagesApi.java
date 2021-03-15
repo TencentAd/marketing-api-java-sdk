@@ -358,6 +358,7 @@ public class WechatPagesApi {
    * Build call for wechatPagesGet
    *
    * @param accountId (required)
+   * @param ownerUid (optional)
    * @param filtering (optional)
    * @param page (optional)
    * @param pageSize (optional)
@@ -369,6 +370,7 @@ public class WechatPagesApi {
    */
   public com.squareup.okhttp.Call wechatPagesGetCall(
       Long accountId,
+      Long ownerUid,
       List<FilteringStruct> filtering,
       Long page,
       Long pageSize,
@@ -385,6 +387,8 @@ public class WechatPagesApi {
     List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
     if (accountId != null)
       localVarQueryParams.addAll(apiClient.parameterToPair("account_id", accountId));
+    if (ownerUid != null)
+      localVarQueryParams.addAll(apiClient.parameterToPair("owner_uid", ownerUid));
     if (filtering != null)
       localVarCollectionQueryParams.addAll(
           apiClient.parameterToPairs("multi", "filtering", filtering));
@@ -440,6 +444,7 @@ public class WechatPagesApi {
   @SuppressWarnings("rawtypes")
   private com.squareup.okhttp.Call wechatPagesGetValidateBeforeCall(
       Long accountId,
+      Long ownerUid,
       List<FilteringStruct> filtering,
       Long page,
       Long pageSize,
@@ -457,6 +462,7 @@ public class WechatPagesApi {
     com.squareup.okhttp.Call call =
         wechatPagesGetCall(
             accountId,
+            ownerUid,
             filtering,
             page,
             pageSize,
@@ -470,6 +476,7 @@ public class WechatPagesApi {
    * 获取微信落地页列表
    *
    * @param accountId (required)
+   * @param ownerUid (optional)
    * @param filtering (optional)
    * @param page (optional)
    * @param pageSize (optional)
@@ -480,13 +487,14 @@ public class WechatPagesApi {
    */
   public WechatPagesGetResponse wechatPagesGet(
       Long accountId,
+      Long ownerUid,
       List<FilteringStruct> filtering,
       Long page,
       Long pageSize,
       List<String> fields)
       throws ApiException {
     ApiResponse<WechatPagesGetResponse> resp =
-        wechatPagesGetWithHttpInfo(accountId, filtering, page, pageSize, fields);
+        wechatPagesGetWithHttpInfo(accountId, ownerUid, filtering, page, pageSize, fields);
     return resp.getData();
   }
 
@@ -494,6 +502,7 @@ public class WechatPagesApi {
    * 获取微信落地页列表
    *
    * @param accountId (required)
+   * @param ownerUid (optional)
    * @param filtering (optional)
    * @param page (optional)
    * @param pageSize (optional)
@@ -504,13 +513,15 @@ public class WechatPagesApi {
    */
   public ApiResponse<WechatPagesGetResponse> wechatPagesGetWithHttpInfo(
       Long accountId,
+      Long ownerUid,
       List<FilteringStruct> filtering,
       Long page,
       Long pageSize,
       List<String> fields)
       throws ApiException {
     com.squareup.okhttp.Call call =
-        wechatPagesGetValidateBeforeCall(accountId, filtering, page, pageSize, fields, null, null);
+        wechatPagesGetValidateBeforeCall(
+            accountId, ownerUid, filtering, page, pageSize, fields, null, null);
     Type localVarReturnType = new TypeToken<WechatPagesGetResponse>() {}.getType();
     return apiClient.execute(call, localVarReturnType);
   }
@@ -519,6 +530,7 @@ public class WechatPagesApi {
    * 获取微信落地页列表 (asynchronously)
    *
    * @param accountId (required)
+   * @param ownerUid (optional)
    * @param filtering (optional)
    * @param page (optional)
    * @param pageSize (optional)
@@ -529,6 +541,7 @@ public class WechatPagesApi {
    */
   public com.squareup.okhttp.Call wechatPagesGetAsync(
       Long accountId,
+      Long ownerUid,
       List<FilteringStruct> filtering,
       Long page,
       Long pageSize,
@@ -560,6 +573,7 @@ public class WechatPagesApi {
     com.squareup.okhttp.Call call =
         wechatPagesGetValidateBeforeCall(
             accountId,
+            ownerUid,
             filtering,
             page,
             pageSize,

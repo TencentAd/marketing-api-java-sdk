@@ -5,8 +5,8 @@ import com.tencent.ads.TencentAds;
 import com.tencent.ads.exception.TencentAdsResponseException;
 import com.tencent.ads.exception.TencentAdsSDKException;
 import com.tencent.ads.model.*;
-import com.tencent.ads.model.DateRange;
 import com.tencent.ads.model.FilteringStruct;
+import com.tencent.ads.model.ReportDateRange;
 import java.util.Arrays;
 import java.util.List;
 
@@ -19,7 +19,7 @@ public class GetWechatFundStatementsDetailed {
 
   public String tradeType = "ADVERTISER_CHARGE";
 
-  public DateRange dateRange = new DateRange();
+  public ReportDateRange dateRange = new ReportDateRange();
 
   public List<FilteringStruct> filtering = null;
 

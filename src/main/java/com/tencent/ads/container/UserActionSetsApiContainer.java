@@ -50,16 +50,35 @@ public class UserActionSetsApiContainer extends ApiContainer {
    * @param accountId (required)
    * @param userActionSetId (optional)
    * @param type (optional)
+   * @param mobileAppId (optional)
+   * @param wechatAppId (optional)
+   * @param name (optional)
+   * @param includePermission (optional)
    * @param fields 返回参数的字段列表 (optional)
    * @return UserActionSetsGetResponse
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
   public UserActionSetsGetResponseData userActionSetsGet(
-      Long accountId, Long userActionSetId, List<String> type, List<String> fields)
+      Long accountId,
+      Long userActionSetId,
+      List<String> type,
+      Long mobileAppId,
+      String wechatAppId,
+      String name,
+      Boolean includePermission,
+      List<String> fields)
       throws ApiException, TencentAdsResponseException {
     UserActionSetsGetResponse resp =
-        api.userActionSetsGet(accountId, userActionSetId, type, fields);
+        api.userActionSetsGet(
+            accountId,
+            userActionSetId,
+            type,
+            mobileAppId,
+            wechatAppId,
+            name,
+            includePermission,
+            fields);
     handleResponse(gson.toJson(resp));
     return resp.getData();
   }

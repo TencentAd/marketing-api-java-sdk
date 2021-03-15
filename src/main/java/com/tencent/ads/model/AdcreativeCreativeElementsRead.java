@@ -182,6 +182,9 @@ public class AdcreativeCreativeElementsRead {
   @SerializedName("shop_image")
   private String shopImage = null;
 
+  @SerializedName("head_line")
+  private String headLine = null;
+
   @SerializedName("countdown_expiring_timestamp")
   private Long countdownExpiringTimestamp = null;
 
@@ -1227,6 +1230,25 @@ public class AdcreativeCreativeElementsRead {
     this.shopImage = shopImage;
   }
 
+  public AdcreativeCreativeElementsRead headLine(String headLine) {
+    this.headLine = headLine;
+    return this;
+  }
+
+  /**
+   * Get headLine
+   *
+   * @return headLine
+   */
+  @ApiModelProperty(value = "")
+  public String getHeadLine() {
+    return headLine;
+  }
+
+  public void setHeadLine(String headLine) {
+    this.headLine = headLine;
+  }
+
   public AdcreativeCreativeElementsRead countdownExpiringTimestamp(
       Long countdownExpiringTimestamp) {
     this.countdownExpiringTimestamp = countdownExpiringTimestamp;
@@ -1312,6 +1334,7 @@ public class AdcreativeCreativeElementsRead {
         && Objects.equals(this.zipUrl, adcreativeCreativeElementsRead.zipUrl)
         && Objects.equals(this.endPage, adcreativeCreativeElementsRead.endPage)
         && Objects.equals(this.shopImage, adcreativeCreativeElementsRead.shopImage)
+        && Objects.equals(this.headLine, adcreativeCreativeElementsRead.headLine)
         && Objects.equals(
             this.countdownExpiringTimestamp,
             adcreativeCreativeElementsRead.countdownExpiringTimestamp);
@@ -1373,6 +1396,7 @@ public class AdcreativeCreativeElementsRead {
         zipUrl,
         endPage,
         shopImage,
+        headLine,
         countdownExpiringTimestamp);
   }
 

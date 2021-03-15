@@ -1,15 +1,13 @@
-package com.tencent.ads.examples.BasicOperations.BusinessAssets;
+package com.tencent.ads.examples.BasicOperations.Tools;
 
 import com.tencent.ads.ApiContextConfig;
 import com.tencent.ads.TencentAds;
 import com.tencent.ads.exception.TencentAdsResponseException;
 import com.tencent.ads.exception.TencentAdsSDKException;
 import com.tencent.ads.model.*;
-import com.tencent.ads.model.FilteringStruct;
-import java.util.Arrays;
 import java.util.List;
 
-public class GetWechatPages {
+public class GetWechatPagesGrantinfo {
   /** YOUR ACCESS TOKEN */
   public String ACCESS_TOKEN = "YOUR ACCESS TOKEN";
 
@@ -18,25 +16,13 @@ public class GetWechatPages {
 
   public Long accountId = null;
 
-  public Long ownerUid = null;
-
-  public List<FilteringStruct> filtering = null;
+  public String searchKey = null;
 
   public Long page = null;
 
   public Long pageSize = null;
 
-  public List<String> fields =
-      Arrays.asList(
-          "page_id",
-          "page_name",
-          "created_time",
-          "last_modified_time",
-          "page_template_id",
-          "page_elements_spec_list",
-          "share_content_spec",
-          "preview_url",
-          "page_type");
+  public List<String> fields = null;
 
   public void init() {
     this.tencentAds = TencentAds.getInstance();
@@ -48,19 +34,20 @@ public class GetWechatPages {
 
   public void buildParams() {}
 
-  public WechatPagesGetResponseData getWechatPages() throws Exception {
-    WechatPagesGetResponseData response =
+  public WechatPagesGrantinfoGetResponseData getWechatPagesGrantinfo() throws Exception {
+    WechatPagesGrantinfoGetResponseData response =
         tencentAds
-            .wechatPages()
-            .wechatPagesGet(accountId, ownerUid, filtering, page, pageSize, fields);
+            .wechatPagesGrantinfo()
+            .wechatPagesGrantinfoGet(accountId, searchKey, page, pageSize, fields);
     return response;
   }
 
   public static void main(String[] args) {
     try {
-      GetWechatPages getWechatPages = new GetWechatPages();
-      getWechatPages.init();
-      WechatPagesGetResponseData response = getWechatPages.getWechatPages();
+      GetWechatPagesGrantinfo getWechatPagesGrantinfo = new GetWechatPagesGrantinfo();
+      getWechatPagesGrantinfo.init();
+      WechatPagesGrantinfoGetResponseData response =
+          getWechatPagesGrantinfo.getWechatPagesGrantinfo();
     } catch (TencentAdsResponseException e) {
       e.printStackTrace();
     } catch (TencentAdsSDKException e) {

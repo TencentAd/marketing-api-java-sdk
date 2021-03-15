@@ -137,6 +137,9 @@ public class DynamicCreativeElements {
   @SerializedName("shop_image")
   private String shopImage = null;
 
+  @SerializedName("head_line")
+  private String headLine = null;
+
   @SerializedName("countdown_expiring_timestamp")
   private Long countdownExpiringTimestamp = null;
 
@@ -945,6 +948,25 @@ public class DynamicCreativeElements {
     this.shopImage = shopImage;
   }
 
+  public DynamicCreativeElements headLine(String headLine) {
+    this.headLine = headLine;
+    return this;
+  }
+
+  /**
+   * Get headLine
+   *
+   * @return headLine
+   */
+  @ApiModelProperty(value = "")
+  public String getHeadLine() {
+    return headLine;
+  }
+
+  public void setHeadLine(String headLine) {
+    this.headLine = headLine;
+  }
+
   public DynamicCreativeElements countdownExpiringTimestamp(Long countdownExpiringTimestamp) {
     this.countdownExpiringTimestamp = countdownExpiringTimestamp;
     return this;
@@ -1012,6 +1034,7 @@ public class DynamicCreativeElements {
         && Objects.equals(this.brand, dynamicCreativeElements.brand)
         && Objects.equals(this.caption, dynamicCreativeElements.caption)
         && Objects.equals(this.shopImage, dynamicCreativeElements.shopImage)
+        && Objects.equals(this.headLine, dynamicCreativeElements.headLine)
         && Objects.equals(
             this.countdownExpiringTimestamp, dynamicCreativeElements.countdownExpiringTimestamp);
   }
@@ -1057,6 +1080,7 @@ public class DynamicCreativeElements {
         brand,
         caption,
         shopImage,
+        headLine,
         countdownExpiringTimestamp);
   }
 

@@ -207,6 +207,10 @@ public class UserActionSetsApi {
    * @param accountId (required)
    * @param userActionSetId (optional)
    * @param type (optional)
+   * @param mobileAppId (optional)
+   * @param wechatAppId (optional)
+   * @param name (optional)
+   * @param includePermission (optional)
    * @param fields 返回参数的字段列表 (optional)
    * @param progressListener Progress listener
    * @param progressRequestListener Progress request listener
@@ -217,6 +221,10 @@ public class UserActionSetsApi {
       Long accountId,
       Long userActionSetId,
       List<String> type,
+      Long mobileAppId,
+      String wechatAppId,
+      String name,
+      Boolean includePermission,
       List<String> fields,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener)
@@ -234,6 +242,14 @@ public class UserActionSetsApi {
       localVarQueryParams.addAll(apiClient.parameterToPair("user_action_set_id", userActionSetId));
     if (type != null)
       localVarCollectionQueryParams.addAll(apiClient.parameterToPairs("multi", "type", type));
+    if (mobileAppId != null)
+      localVarQueryParams.addAll(apiClient.parameterToPair("mobile_app_id", mobileAppId));
+    if (wechatAppId != null)
+      localVarQueryParams.addAll(apiClient.parameterToPair("wechat_app_id", wechatAppId));
+    if (name != null) localVarQueryParams.addAll(apiClient.parameterToPair("name", name));
+    if (includePermission != null)
+      localVarQueryParams.addAll(
+          apiClient.parameterToPair("include_permission", includePermission));
     if (fields != null)
       localVarCollectionQueryParams.addAll(apiClient.parameterToPairs("multi", "fields", fields));
 
@@ -285,6 +301,10 @@ public class UserActionSetsApi {
       Long accountId,
       Long userActionSetId,
       List<String> type,
+      Long mobileAppId,
+      String wechatAppId,
+      String name,
+      Boolean includePermission,
       List<String> fields,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener)
@@ -298,7 +318,16 @@ public class UserActionSetsApi {
 
     com.squareup.okhttp.Call call =
         userActionSetsGetCall(
-            accountId, userActionSetId, type, fields, progressListener, progressRequestListener);
+            accountId,
+            userActionSetId,
+            type,
+            mobileAppId,
+            wechatAppId,
+            name,
+            includePermission,
+            fields,
+            progressListener,
+            progressRequestListener);
     return call;
   }
 
@@ -308,16 +337,35 @@ public class UserActionSetsApi {
    * @param accountId (required)
    * @param userActionSetId (optional)
    * @param type (optional)
+   * @param mobileAppId (optional)
+   * @param wechatAppId (optional)
+   * @param name (optional)
+   * @param includePermission (optional)
    * @param fields 返回参数的字段列表 (optional)
    * @return UserActionSetsGetResponse
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
   public UserActionSetsGetResponse userActionSetsGet(
-      Long accountId, Long userActionSetId, List<String> type, List<String> fields)
+      Long accountId,
+      Long userActionSetId,
+      List<String> type,
+      Long mobileAppId,
+      String wechatAppId,
+      String name,
+      Boolean includePermission,
+      List<String> fields)
       throws ApiException {
     ApiResponse<UserActionSetsGetResponse> resp =
-        userActionSetsGetWithHttpInfo(accountId, userActionSetId, type, fields);
+        userActionSetsGetWithHttpInfo(
+            accountId,
+            userActionSetId,
+            type,
+            mobileAppId,
+            wechatAppId,
+            name,
+            includePermission,
+            fields);
     return resp.getData();
   }
 
@@ -327,16 +375,37 @@ public class UserActionSetsApi {
    * @param accountId (required)
    * @param userActionSetId (optional)
    * @param type (optional)
+   * @param mobileAppId (optional)
+   * @param wechatAppId (optional)
+   * @param name (optional)
+   * @param includePermission (optional)
    * @param fields 返回参数的字段列表 (optional)
    * @return ApiResponse&lt;UserActionSetsGetResponse&gt;
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
   public ApiResponse<UserActionSetsGetResponse> userActionSetsGetWithHttpInfo(
-      Long accountId, Long userActionSetId, List<String> type, List<String> fields)
+      Long accountId,
+      Long userActionSetId,
+      List<String> type,
+      Long mobileAppId,
+      String wechatAppId,
+      String name,
+      Boolean includePermission,
+      List<String> fields)
       throws ApiException {
     com.squareup.okhttp.Call call =
-        userActionSetsGetValidateBeforeCall(accountId, userActionSetId, type, fields, null, null);
+        userActionSetsGetValidateBeforeCall(
+            accountId,
+            userActionSetId,
+            type,
+            mobileAppId,
+            wechatAppId,
+            name,
+            includePermission,
+            fields,
+            null,
+            null);
     Type localVarReturnType = new TypeToken<UserActionSetsGetResponse>() {}.getType();
     return apiClient.execute(call, localVarReturnType);
   }
@@ -347,6 +416,10 @@ public class UserActionSetsApi {
    * @param accountId (required)
    * @param userActionSetId (optional)
    * @param type (optional)
+   * @param mobileAppId (optional)
+   * @param wechatAppId (optional)
+   * @param name (optional)
+   * @param includePermission (optional)
    * @param fields 返回参数的字段列表 (optional)
    * @param callback The callback to be executed when the API call finishes
    * @return The request call
@@ -356,6 +429,10 @@ public class UserActionSetsApi {
       Long accountId,
       Long userActionSetId,
       List<String> type,
+      Long mobileAppId,
+      String wechatAppId,
+      String name,
+      Boolean includePermission,
       List<String> fields,
       final ApiCallback<UserActionSetsGetResponse> callback)
       throws ApiException {
@@ -383,7 +460,16 @@ public class UserActionSetsApi {
 
     com.squareup.okhttp.Call call =
         userActionSetsGetValidateBeforeCall(
-            accountId, userActionSetId, type, fields, progressListener, progressRequestListener);
+            accountId,
+            userActionSetId,
+            type,
+            mobileAppId,
+            wechatAppId,
+            name,
+            includePermission,
+            fields,
+            progressListener,
+            progressRequestListener);
     Type localVarReturnType = new TypeToken<UserActionSetsGetResponse>() {}.getType();
     apiClient.executeAsync(call, localVarReturnType, callback);
     return call;

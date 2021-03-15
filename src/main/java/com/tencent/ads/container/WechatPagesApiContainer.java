@@ -67,6 +67,7 @@ public class WechatPagesApiContainer extends ApiContainer {
    * 获取微信落地页列表
    *
    * @param accountId (required)
+   * @param ownerUid (optional)
    * @param filtering (optional)
    * @param page (optional)
    * @param pageSize (optional)
@@ -77,12 +78,14 @@ public class WechatPagesApiContainer extends ApiContainer {
    */
   public WechatPagesGetResponseData wechatPagesGet(
       Long accountId,
+      Long ownerUid,
       List<FilteringStruct> filtering,
       Long page,
       Long pageSize,
       List<String> fields)
       throws ApiException, TencentAdsResponseException {
-    WechatPagesGetResponse resp = api.wechatPagesGet(accountId, filtering, page, pageSize, fields);
+    WechatPagesGetResponse resp =
+        api.wechatPagesGet(accountId, ownerUid, filtering, page, pageSize, fields);
     handleResponse(gson.toJson(resp));
     return resp.getData();
   }

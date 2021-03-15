@@ -42,6 +42,9 @@ public class UserActionSet {
   @SerializedName("created_time")
   private String createdTime = null;
 
+  @SerializedName("access_way")
+  private ActionSetAccessWayType accessWay = null;
+
   public UserActionSet userActionSetId(Long userActionSetId) {
     this.userActionSetId = userActionSetId;
     return this;
@@ -175,6 +178,25 @@ public class UserActionSet {
     this.createdTime = createdTime;
   }
 
+  public UserActionSet accessWay(ActionSetAccessWayType accessWay) {
+    this.accessWay = accessWay;
+    return this;
+  }
+
+  /**
+   * Get accessWay
+   *
+   * @return accessWay
+   */
+  @ApiModelProperty(value = "")
+  public ActionSetAccessWayType getAccessWay() {
+    return accessWay;
+  }
+
+  public void setAccessWay(ActionSetAccessWayType accessWay) {
+    this.accessWay = accessWay;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -190,13 +212,21 @@ public class UserActionSet {
         && Objects.equals(this.name, userActionSet.name)
         && Objects.equals(this.description, userActionSet.description)
         && Objects.equals(this.activateStatus, userActionSet.activateStatus)
-        && Objects.equals(this.createdTime, userActionSet.createdTime);
+        && Objects.equals(this.createdTime, userActionSet.createdTime)
+        && Objects.equals(this.accessWay, userActionSet.accessWay);
   }
 
   @Override
   public int hashCode() {
     return Objects.hash(
-        userActionSetId, type, mobileAppId, name, description, activateStatus, createdTime);
+        userActionSetId,
+        type,
+        mobileAppId,
+        name,
+        description,
+        activateStatus,
+        createdTime,
+        accessWay);
   }
 
   @Override

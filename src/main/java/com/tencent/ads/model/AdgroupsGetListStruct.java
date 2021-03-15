@@ -188,6 +188,12 @@ public class AdgroupsGetListStruct {
   @SerializedName("auto_derived_creative_enabled")
   private Boolean autoDerivedCreativeEnabled = null;
 
+  @SerializedName("smart_bid_type")
+  private SmartBidType smartBidType = null;
+
+  @SerializedName("smart_cost_cap")
+  private Long smartCostCap = null;
+
   public AdgroupsGetListStruct campaignId(Long campaignId) {
     this.campaignId = campaignId;
     return this;
@@ -1286,6 +1292,44 @@ public class AdgroupsGetListStruct {
     this.autoDerivedCreativeEnabled = autoDerivedCreativeEnabled;
   }
 
+  public AdgroupsGetListStruct smartBidType(SmartBidType smartBidType) {
+    this.smartBidType = smartBidType;
+    return this;
+  }
+
+  /**
+   * Get smartBidType
+   *
+   * @return smartBidType
+   */
+  @ApiModelProperty(value = "")
+  public SmartBidType getSmartBidType() {
+    return smartBidType;
+  }
+
+  public void setSmartBidType(SmartBidType smartBidType) {
+    this.smartBidType = smartBidType;
+  }
+
+  public AdgroupsGetListStruct smartCostCap(Long smartCostCap) {
+    this.smartCostCap = smartCostCap;
+    return this;
+  }
+
+  /**
+   * Get smartCostCap
+   *
+   * @return smartCostCap
+   */
+  @ApiModelProperty(value = "")
+  public Long getSmartCostCap() {
+    return smartCostCap;
+  }
+
+  public void setSmartCostCap(Long smartCostCap) {
+    this.smartCostCap = smartCostCap;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -1358,7 +1402,9 @@ public class AdgroupsGetListStruct {
         && Objects.equals(this.autoAcquisitionBudget, adgroupsGetListStruct.autoAcquisitionBudget)
         && Objects.equals(this.creativeDisplayType, adgroupsGetListStruct.creativeDisplayType)
         && Objects.equals(
-            this.autoDerivedCreativeEnabled, adgroupsGetListStruct.autoDerivedCreativeEnabled);
+            this.autoDerivedCreativeEnabled, adgroupsGetListStruct.autoDerivedCreativeEnabled)
+        && Objects.equals(this.smartBidType, adgroupsGetListStruct.smartBidType)
+        && Objects.equals(this.smartCostCap, adgroupsGetListStruct.smartCostCap);
   }
 
   @Override
@@ -1418,7 +1464,9 @@ public class AdgroupsGetListStruct {
         autoAcquisitionEnabled,
         autoAcquisitionBudget,
         creativeDisplayType,
-        autoDerivedCreativeEnabled);
+        autoDerivedCreativeEnabled,
+        smartBidType,
+        smartCostCap);
   }
 
   @Override

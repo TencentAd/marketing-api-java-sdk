@@ -18,8 +18,8 @@ import com.tencent.ads.ApiException;
 import com.tencent.ads.anno.*;
 import com.tencent.ads.api.WechatFundStatementsDetailedApi;
 import com.tencent.ads.exception.TencentAdsResponseException;
-import com.tencent.ads.model.DateRange;
 import com.tencent.ads.model.FilteringStruct;
+import com.tencent.ads.model.ReportDateRange;
 import com.tencent.ads.model.WechatFundStatementsDetailedGetResponse;
 import com.tencent.ads.model.WechatFundStatementsDetailedGetResponseData;
 import java.util.List;
@@ -43,7 +43,7 @@ public class WechatFundStatementsDetailedApiContainer extends ApiContainer {
    */
   public WechatFundStatementsDetailedGetResponseData wechatFundStatementsDetailedGet(
       String tradeType,
-      DateRange dateRange,
+      ReportDateRange dateRange,
       List<FilteringStruct> filtering,
       Long page,
       Long pageSize,

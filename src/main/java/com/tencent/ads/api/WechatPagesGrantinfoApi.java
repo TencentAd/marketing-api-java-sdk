@@ -21,9 +21,7 @@ import com.tencent.ads.Configuration;
 import com.tencent.ads.Pair;
 import com.tencent.ads.ProgressRequestBody;
 import com.tencent.ads.ProgressResponseBody;
-import com.tencent.ads.model.FilteringStruct;
-import com.tencent.ads.model.ReportDateRange;
-import com.tencent.ads.model.WechatFundStatementsDetailedGetResponse;
+import com.tencent.ads.model.WechatPagesGrantinfoGetResponse;
 import java.io.IOException;
 import java.lang.reflect.Type;
 import java.util.ArrayList;
@@ -31,14 +29,14 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class WechatFundStatementsDetailedApi {
+public class WechatPagesGrantinfoApi {
   private ApiClient apiClient;
 
-  public WechatFundStatementsDetailedApi() {
+  public WechatPagesGrantinfoApi() {
     this(Configuration.getDefaultApiClient());
   }
 
-  public WechatFundStatementsDetailedApi(ApiClient apiClient) {
+  public WechatPagesGrantinfoApi(ApiClient apiClient) {
     this.apiClient = apiClient;
   }
 
@@ -51,11 +49,10 @@ public class WechatFundStatementsDetailedApi {
   }
 
   /**
-   * Build call for wechatFundStatementsDetailedGet
+   * Build call for wechatPagesGrantinfoGet
    *
-   * @param tradeType (required)
-   * @param dateRange (required)
-   * @param filtering (optional)
+   * @param accountId (required)
+   * @param searchKey (optional)
    * @param page (optional)
    * @param pageSize (optional)
    * @param fields 返回参数的字段列表 (optional)
@@ -64,10 +61,9 @@ public class WechatFundStatementsDetailedApi {
    * @return Call to execute
    * @throws ApiException If fail to serialize the request body object
    */
-  public com.squareup.okhttp.Call wechatFundStatementsDetailedGetCall(
-      String tradeType,
-      ReportDateRange dateRange,
-      List<FilteringStruct> filtering,
+  public com.squareup.okhttp.Call wechatPagesGrantinfoGetCall(
+      Long accountId,
+      String searchKey,
       Long page,
       Long pageSize,
       List<String> fields,
@@ -77,17 +73,14 @@ public class WechatFundStatementsDetailedApi {
     Object localVarPostBody = null;
 
     // create path and map variables
-    String localVarPath = "/wechat_fund_statements_detailed/get";
+    String localVarPath = "/wechat_pages_grantinfo/get";
 
     List<Pair> localVarQueryParams = new ArrayList<Pair>();
     List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
-    if (tradeType != null)
-      localVarQueryParams.addAll(apiClient.parameterToPair("trade_type", tradeType));
-    if (dateRange != null)
-      localVarQueryParams.addAll(apiClient.parameterToPair("date_range", dateRange));
-    if (filtering != null)
-      localVarCollectionQueryParams.addAll(
-          apiClient.parameterToPairs("multi", "filtering", filtering));
+    if (accountId != null)
+      localVarQueryParams.addAll(apiClient.parameterToPair("account_id", accountId));
+    if (searchKey != null)
+      localVarQueryParams.addAll(apiClient.parameterToPair("search_key", searchKey));
     if (page != null) localVarQueryParams.addAll(apiClient.parameterToPair("page", page));
     if (pageSize != null)
       localVarQueryParams.addAll(apiClient.parameterToPair("page_size", pageSize));
@@ -138,10 +131,9 @@ public class WechatFundStatementsDetailedApi {
   }
 
   @SuppressWarnings("rawtypes")
-  private com.squareup.okhttp.Call wechatFundStatementsDetailedGetValidateBeforeCall(
-      String tradeType,
-      ReportDateRange dateRange,
-      List<FilteringStruct> filtering,
+  private com.squareup.okhttp.Call wechatPagesGrantinfoGetValidateBeforeCall(
+      Long accountId,
+      String searchKey,
       Long page,
       Long pageSize,
       List<String> fields,
@@ -149,23 +141,16 @@ public class WechatFundStatementsDetailedApi {
       final ProgressRequestBody.ProgressRequestListener progressRequestListener)
       throws ApiException {
 
-    // verify the required parameter 'tradeType' is set
-    if (tradeType == null) {
+    // verify the required parameter 'accountId' is set
+    if (accountId == null) {
       throw new ApiException(
-          "Missing the required parameter 'tradeType' when calling wechatFundStatementsDetailedGet(Async)");
-    }
-
-    // verify the required parameter 'dateRange' is set
-    if (dateRange == null) {
-      throw new ApiException(
-          "Missing the required parameter 'dateRange' when calling wechatFundStatementsDetailedGet(Async)");
+          "Missing the required parameter 'accountId' when calling wechatPagesGrantinfoGet(Async)");
     }
 
     com.squareup.okhttp.Call call =
-        wechatFundStatementsDetailedGetCall(
-            tradeType,
-            dateRange,
-            filtering,
+        wechatPagesGrantinfoGetCall(
+            accountId,
+            searchKey,
             page,
             pageSize,
             fields,
@@ -175,67 +160,52 @@ public class WechatFundStatementsDetailedApi {
   }
 
   /**
-   * 获取微信资金账户流水信息
+   * 获取原生页授权方信息
    *
-   * @param tradeType (required)
-   * @param dateRange (required)
-   * @param filtering (optional)
+   * @param accountId (required)
+   * @param searchKey (optional)
    * @param page (optional)
    * @param pageSize (optional)
    * @param fields 返回参数的字段列表 (optional)
-   * @return WechatFundStatementsDetailedGetResponse
+   * @return WechatPagesGrantinfoGetResponse
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
-  public WechatFundStatementsDetailedGetResponse wechatFundStatementsDetailedGet(
-      String tradeType,
-      ReportDateRange dateRange,
-      List<FilteringStruct> filtering,
-      Long page,
-      Long pageSize,
-      List<String> fields)
+  public WechatPagesGrantinfoGetResponse wechatPagesGrantinfoGet(
+      Long accountId, String searchKey, Long page, Long pageSize, List<String> fields)
       throws ApiException {
-    ApiResponse<WechatFundStatementsDetailedGetResponse> resp =
-        wechatFundStatementsDetailedGetWithHttpInfo(
-            tradeType, dateRange, filtering, page, pageSize, fields);
+    ApiResponse<WechatPagesGrantinfoGetResponse> resp =
+        wechatPagesGrantinfoGetWithHttpInfo(accountId, searchKey, page, pageSize, fields);
     return resp.getData();
   }
 
   /**
-   * 获取微信资金账户流水信息
+   * 获取原生页授权方信息
    *
-   * @param tradeType (required)
-   * @param dateRange (required)
-   * @param filtering (optional)
+   * @param accountId (required)
+   * @param searchKey (optional)
    * @param page (optional)
    * @param pageSize (optional)
    * @param fields 返回参数的字段列表 (optional)
-   * @return ApiResponse&lt;WechatFundStatementsDetailedGetResponse&gt;
+   * @return ApiResponse&lt;WechatPagesGrantinfoGetResponse&gt;
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
-  public ApiResponse<WechatFundStatementsDetailedGetResponse>
-      wechatFundStatementsDetailedGetWithHttpInfo(
-          String tradeType,
-          ReportDateRange dateRange,
-          List<FilteringStruct> filtering,
-          Long page,
-          Long pageSize,
-          List<String> fields)
-          throws ApiException {
+  public ApiResponse<WechatPagesGrantinfoGetResponse> wechatPagesGrantinfoGetWithHttpInfo(
+      Long accountId, String searchKey, Long page, Long pageSize, List<String> fields)
+      throws ApiException {
     com.squareup.okhttp.Call call =
-        wechatFundStatementsDetailedGetValidateBeforeCall(
-            tradeType, dateRange, filtering, page, pageSize, fields, null, null);
-    Type localVarReturnType = new TypeToken<WechatFundStatementsDetailedGetResponse>() {}.getType();
+        wechatPagesGrantinfoGetValidateBeforeCall(
+            accountId, searchKey, page, pageSize, fields, null, null);
+    Type localVarReturnType = new TypeToken<WechatPagesGrantinfoGetResponse>() {}.getType();
     return apiClient.execute(call, localVarReturnType);
   }
 
   /**
-   * 获取微信资金账户流水信息 (asynchronously)
+   * 获取原生页授权方信息 (asynchronously)
    *
-   * @param tradeType (required)
-   * @param dateRange (required)
-   * @param filtering (optional)
+   * @param accountId (required)
+   * @param searchKey (optional)
    * @param page (optional)
    * @param pageSize (optional)
    * @param fields 返回参数的字段列表 (optional)
@@ -243,14 +213,13 @@ public class WechatFundStatementsDetailedApi {
    * @return The request call
    * @throws ApiException If fail to process the API call, e.g. serializing the request body object
    */
-  public com.squareup.okhttp.Call wechatFundStatementsDetailedGetAsync(
-      String tradeType,
-      ReportDateRange dateRange,
-      List<FilteringStruct> filtering,
+  public com.squareup.okhttp.Call wechatPagesGrantinfoGetAsync(
+      Long accountId,
+      String searchKey,
       Long page,
       Long pageSize,
       List<String> fields,
-      final ApiCallback<WechatFundStatementsDetailedGetResponse> callback)
+      final ApiCallback<WechatPagesGrantinfoGetResponse> callback)
       throws ApiException {
 
     ProgressResponseBody.ProgressListener progressListener = null;
@@ -275,16 +244,15 @@ public class WechatFundStatementsDetailedApi {
     }
 
     com.squareup.okhttp.Call call =
-        wechatFundStatementsDetailedGetValidateBeforeCall(
-            tradeType,
-            dateRange,
-            filtering,
+        wechatPagesGrantinfoGetValidateBeforeCall(
+            accountId,
+            searchKey,
             page,
             pageSize,
             fields,
             progressListener,
             progressRequestListener);
-    Type localVarReturnType = new TypeToken<WechatFundStatementsDetailedGetResponse>() {}.getType();
+    Type localVarReturnType = new TypeToken<WechatPagesGrantinfoGetResponse>() {}.getType();
     apiClient.executeAsync(call, localVarReturnType, callback);
     return call;
   }

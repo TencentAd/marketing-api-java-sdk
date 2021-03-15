@@ -147,6 +147,9 @@ public class AdgroupsAddRequest {
   @SerializedName("auto_derived_creative_enabled")
   private Boolean autoDerivedCreativeEnabled = null;
 
+  @SerializedName("smart_bid_type")
+  private SmartBidType smartBidType = null;
+
   @SerializedName("account_id")
   private Long accountId = null;
 
@@ -999,6 +1002,25 @@ public class AdgroupsAddRequest {
     this.autoDerivedCreativeEnabled = autoDerivedCreativeEnabled;
   }
 
+  public AdgroupsAddRequest smartBidType(SmartBidType smartBidType) {
+    this.smartBidType = smartBidType;
+    return this;
+  }
+
+  /**
+   * Get smartBidType
+   *
+   * @return smartBidType
+   */
+  @ApiModelProperty(value = "")
+  public SmartBidType getSmartBidType() {
+    return smartBidType;
+  }
+
+  public void setSmartBidType(SmartBidType smartBidType) {
+    this.smartBidType = smartBidType;
+  }
+
   public AdgroupsAddRequest accountId(Long accountId) {
     this.accountId = accountId;
     return this;
@@ -1074,6 +1096,7 @@ public class AdgroupsAddRequest {
         && Objects.equals(this.creativeDisplayType, adgroupsAddRequest.creativeDisplayType)
         && Objects.equals(
             this.autoDerivedCreativeEnabled, adgroupsAddRequest.autoDerivedCreativeEnabled)
+        && Objects.equals(this.smartBidType, adgroupsAddRequest.smartBidType)
         && Objects.equals(this.accountId, adgroupsAddRequest.accountId);
   }
 
@@ -1122,6 +1145,7 @@ public class AdgroupsAddRequest {
         autoAcquisitionBudget,
         creativeDisplayType,
         autoDerivedCreativeEnabled,
+        smartBidType,
         accountId);
   }
 

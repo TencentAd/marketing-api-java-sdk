@@ -215,6 +215,9 @@ public class DynamicCreativeElementsRead {
   @SerializedName("shop_image")
   private String shopImage = null;
 
+  @SerializedName("head_line")
+  private String headLine = null;
+
   @SerializedName("countdown_expiring_timestamp")
   private Long countdownExpiringTimestamp = null;
 
@@ -1520,6 +1523,25 @@ public class DynamicCreativeElementsRead {
     this.shopImage = shopImage;
   }
 
+  public DynamicCreativeElementsRead headLine(String headLine) {
+    this.headLine = headLine;
+    return this;
+  }
+
+  /**
+   * Get headLine
+   *
+   * @return headLine
+   */
+  @ApiModelProperty(value = "")
+  public String getHeadLine() {
+    return headLine;
+  }
+
+  public void setHeadLine(String headLine) {
+    this.headLine = headLine;
+  }
+
   public DynamicCreativeElementsRead countdownExpiringTimestamp(Long countdownExpiringTimestamp) {
     this.countdownExpiringTimestamp = countdownExpiringTimestamp;
     return this;
@@ -1615,6 +1637,7 @@ public class DynamicCreativeElementsRead {
         && Objects.equals(this.bannerContent, dynamicCreativeElementsRead.bannerContent)
         && Objects.equals(this.cardContent, dynamicCreativeElementsRead.cardContent)
         && Objects.equals(this.shopImage, dynamicCreativeElementsRead.shopImage)
+        && Objects.equals(this.headLine, dynamicCreativeElementsRead.headLine)
         && Objects.equals(
             this.countdownExpiringTimestamp,
             dynamicCreativeElementsRead.countdownExpiringTimestamp);
@@ -1687,6 +1710,7 @@ public class DynamicCreativeElementsRead {
         bannerContent,
         cardContent,
         shopImage,
+        headLine,
         countdownExpiringTimestamp);
   }
 

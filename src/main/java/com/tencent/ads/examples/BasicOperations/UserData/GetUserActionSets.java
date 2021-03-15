@@ -21,6 +21,14 @@ public class GetUserActionSets {
 
   public List<String> type = null;
 
+  public Long mobileAppId = null;
+
+  public String wechatAppId = null;
+
+  public String name = null;
+
+  public Boolean includePermission = null;
+
   public List<String> fields =
       Arrays.asList(
           "user_action_set_id",
@@ -43,7 +51,17 @@ public class GetUserActionSets {
 
   public UserActionSetsGetResponseData getUserActionSets() throws Exception {
     UserActionSetsGetResponseData response =
-        tencentAds.userActionSets().userActionSetsGet(accountId, userActionSetId, type, fields);
+        tencentAds
+            .userActionSets()
+            .userActionSetsGet(
+                accountId,
+                userActionSetId,
+                type,
+                mobileAppId,
+                wechatAppId,
+                name,
+                includePermission,
+                fields);
     return response;
   }
 
