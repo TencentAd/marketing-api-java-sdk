@@ -51,6 +51,9 @@ public class ElementButtonRead {
   @SerializedName("service_spec")
   private ServiceSpec serviceSpec = null;
 
+  @SerializedName("wecom_spec")
+  private WecomSpec wecomSpec = null;
+
   public ElementButtonRead title(String title) {
     this.title = title;
     return this;
@@ -241,6 +244,25 @@ public class ElementButtonRead {
     this.serviceSpec = serviceSpec;
   }
 
+  public ElementButtonRead wecomSpec(WecomSpec wecomSpec) {
+    this.wecomSpec = wecomSpec;
+    return this;
+  }
+
+  /**
+   * Get wecomSpec
+   *
+   * @return wecomSpec
+   */
+  @ApiModelProperty(value = "")
+  public WecomSpec getWecomSpec() {
+    return wecomSpec;
+  }
+
+  public void setWecomSpec(WecomSpec wecomSpec) {
+    this.wecomSpec = wecomSpec;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -259,7 +281,8 @@ public class ElementButtonRead {
         && Objects.equals(this.fengyeSpec, elementButtonRead.fengyeSpec)
         && Objects.equals(this.cardSpec, elementButtonRead.cardSpec)
         && Objects.equals(this.followSpec, elementButtonRead.followSpec)
-        && Objects.equals(this.serviceSpec, elementButtonRead.serviceSpec);
+        && Objects.equals(this.serviceSpec, elementButtonRead.serviceSpec)
+        && Objects.equals(this.wecomSpec, elementButtonRead.wecomSpec);
   }
 
   @Override
@@ -274,7 +297,8 @@ public class ElementButtonRead {
         fengyeSpec,
         cardSpec,
         followSpec,
-        serviceSpec);
+        serviceSpec,
+        wecomSpec);
   }
 
   @Override

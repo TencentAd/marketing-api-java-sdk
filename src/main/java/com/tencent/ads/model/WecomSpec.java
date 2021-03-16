@@ -18,73 +18,51 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.util.Objects;
 
-/** 类目信息 */
-@ApiModel(description = "类目信息")
-public class Category {
-  @SerializedName("level")
-  private OcpaCategoryLevel level = null;
+/** 企业微信组件信息 */
+@ApiModel(description = "企业微信组件信息")
+public class WecomSpec {
+  @SerializedName("title")
+  private String title = null;
 
-  @SerializedName("id")
-  private Long id = null;
+  @SerializedName("groupid")
+  private Long groupid = null;
 
-  @SerializedName("name")
-  private String name = null;
-
-  public Category level(OcpaCategoryLevel level) {
-    this.level = level;
+  public WecomSpec title(String title) {
+    this.title = title;
     return this;
   }
 
   /**
-   * Get level
+   * Get title
    *
-   * @return level
+   * @return title
    */
   @ApiModelProperty(value = "")
-  public OcpaCategoryLevel getLevel() {
-    return level;
+  public String getTitle() {
+    return title;
   }
 
-  public void setLevel(OcpaCategoryLevel level) {
-    this.level = level;
+  public void setTitle(String title) {
+    this.title = title;
   }
 
-  public Category id(Long id) {
-    this.id = id;
+  public WecomSpec groupid(Long groupid) {
+    this.groupid = groupid;
     return this;
   }
 
   /**
-   * Get id
+   * Get groupid
    *
-   * @return id
+   * @return groupid
    */
   @ApiModelProperty(value = "")
-  public Long getId() {
-    return id;
+  public Long getGroupid() {
+    return groupid;
   }
 
-  public void setId(Long id) {
-    this.id = id;
-  }
-
-  public Category name(String name) {
-    this.name = name;
-    return this;
-  }
-
-  /**
-   * Get name
-   *
-   * @return name
-   */
-  @ApiModelProperty(value = "")
-  public String getName() {
-    return name;
-  }
-
-  public void setName(String name) {
-    this.name = name;
+  public void setGroupid(Long groupid) {
+    this.groupid = groupid;
   }
 
   @Override
@@ -95,15 +73,14 @@ public class Category {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    Category category = (Category) o;
-    return Objects.equals(this.level, category.level)
-        && Objects.equals(this.id, category.id)
-        && Objects.equals(this.name, category.name);
+    WecomSpec wecomSpec = (WecomSpec) o;
+    return Objects.equals(this.title, wecomSpec.title)
+        && Objects.equals(this.groupid, wecomSpec.groupid);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(level, id, name);
+    return Objects.hash(title, groupid);
   }
 
   @Override

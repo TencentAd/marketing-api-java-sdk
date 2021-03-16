@@ -25,9 +25,6 @@ public class PromotedObjectsUpdateRequest {
   @SerializedName("promoted_object_id")
   private String promotedObjectId = null;
 
-  @SerializedName("promoted_object_spec")
-  private PromotedObjectSpec promotedObjectSpec = null;
-
   @SerializedName("account_id")
   private Long accountId = null;
 
@@ -69,25 +66,6 @@ public class PromotedObjectsUpdateRequest {
     this.promotedObjectId = promotedObjectId;
   }
 
-  public PromotedObjectsUpdateRequest promotedObjectSpec(PromotedObjectSpec promotedObjectSpec) {
-    this.promotedObjectSpec = promotedObjectSpec;
-    return this;
-  }
-
-  /**
-   * Get promotedObjectSpec
-   *
-   * @return promotedObjectSpec
-   */
-  @ApiModelProperty(value = "")
-  public PromotedObjectSpec getPromotedObjectSpec() {
-    return promotedObjectSpec;
-  }
-
-  public void setPromotedObjectSpec(PromotedObjectSpec promotedObjectSpec) {
-    this.promotedObjectSpec = promotedObjectSpec;
-  }
-
   public PromotedObjectsUpdateRequest accountId(Long accountId) {
     this.accountId = accountId;
     return this;
@@ -118,13 +96,12 @@ public class PromotedObjectsUpdateRequest {
     PromotedObjectsUpdateRequest promotedObjectsUpdateRequest = (PromotedObjectsUpdateRequest) o;
     return Objects.equals(this.promotedObjectType, promotedObjectsUpdateRequest.promotedObjectType)
         && Objects.equals(this.promotedObjectId, promotedObjectsUpdateRequest.promotedObjectId)
-        && Objects.equals(this.promotedObjectSpec, promotedObjectsUpdateRequest.promotedObjectSpec)
         && Objects.equals(this.accountId, promotedObjectsUpdateRequest.accountId);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(promotedObjectType, promotedObjectId, promotedObjectSpec, accountId);
+    return Objects.hash(promotedObjectType, promotedObjectId, accountId);
   }
 
   @Override

@@ -31,7 +31,7 @@ public class PromotedObjectsGetListStruct {
   private ProductPromotedObjectTypeSelect promotedObjectType = null;
 
   @SerializedName("promoted_object_spec")
-  private PromotedObjectGetSpec promotedObjectSpec = null;
+  private PromotedObjectSpecRead promotedObjectSpec = null;
 
   @SerializedName("created_time")
   private Long createdTime = null;
@@ -97,7 +97,8 @@ public class PromotedObjectsGetListStruct {
     this.promotedObjectType = promotedObjectType;
   }
 
-  public PromotedObjectsGetListStruct promotedObjectSpec(PromotedObjectGetSpec promotedObjectSpec) {
+  public PromotedObjectsGetListStruct promotedObjectSpec(
+      PromotedObjectSpecRead promotedObjectSpec) {
     this.promotedObjectSpec = promotedObjectSpec;
     return this;
   }
@@ -108,11 +109,11 @@ public class PromotedObjectsGetListStruct {
    * @return promotedObjectSpec
    */
   @ApiModelProperty(value = "")
-  public PromotedObjectGetSpec getPromotedObjectSpec() {
+  public PromotedObjectSpecRead getPromotedObjectSpec() {
     return promotedObjectSpec;
   }
 
-  public void setPromotedObjectSpec(PromotedObjectGetSpec promotedObjectSpec) {
+  public void setPromotedObjectSpec(PromotedObjectSpecRead promotedObjectSpec) {
     this.promotedObjectSpec = promotedObjectSpec;
   }
 

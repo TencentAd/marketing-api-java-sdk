@@ -20,7 +20,7 @@ import java.util.Objects;
 
 /** 本地门店信息 */
 @ApiModel(description = "本地门店信息")
-public class LocalAdsSpec {
+public class LocalAdsSpecRead {
   @SerializedName("shop_name")
   private String shopName = null;
 
@@ -33,7 +33,7 @@ public class LocalAdsSpec {
   @SerializedName("system_industry_id")
   private String systemIndustryId = null;
 
-  public LocalAdsSpec shopName(String shopName) {
+  public LocalAdsSpecRead shopName(String shopName) {
     this.shopName = shopName;
     return this;
   }
@@ -52,7 +52,7 @@ public class LocalAdsSpec {
     this.shopName = shopName;
   }
 
-  public LocalAdsSpec address(String address) {
+  public LocalAdsSpecRead address(String address) {
     this.address = address;
     return this;
   }
@@ -71,7 +71,7 @@ public class LocalAdsSpec {
     this.address = address;
   }
 
-  public LocalAdsSpec telphone(String telphone) {
+  public LocalAdsSpecRead telphone(String telphone) {
     this.telphone = telphone;
     return this;
   }
@@ -90,7 +90,7 @@ public class LocalAdsSpec {
     this.telphone = telphone;
   }
 
-  public LocalAdsSpec systemIndustryId(String systemIndustryId) {
+  public LocalAdsSpecRead systemIndustryId(String systemIndustryId) {
     this.systemIndustryId = systemIndustryId;
     return this;
   }
@@ -117,11 +117,11 @@ public class LocalAdsSpec {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    LocalAdsSpec localAdsSpec = (LocalAdsSpec) o;
-    return Objects.equals(this.shopName, localAdsSpec.shopName)
-        && Objects.equals(this.address, localAdsSpec.address)
-        && Objects.equals(this.telphone, localAdsSpec.telphone)
-        && Objects.equals(this.systemIndustryId, localAdsSpec.systemIndustryId);
+    LocalAdsSpecRead localAdsSpecRead = (LocalAdsSpecRead) o;
+    return Objects.equals(this.shopName, localAdsSpecRead.shopName)
+        && Objects.equals(this.address, localAdsSpecRead.address)
+        && Objects.equals(this.telphone, localAdsSpecRead.telphone)
+        && Objects.equals(this.systemIndustryId, localAdsSpecRead.systemIndustryId);
   }
 
   @Override

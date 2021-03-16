@@ -20,7 +20,7 @@ import java.util.Objects;
 
 /** 推广目标详细信息 */
 @ApiModel(description = "推广目标详细信息")
-public class PromotedObjectGetSpec {
+public class PromotedObjectSpecRead {
   @SerializedName("jd_item")
   private EcInfo jdItem = null;
 
@@ -49,9 +49,9 @@ public class PromotedObjectGetSpec {
   private QqBrowserMiniProgram qqBrowserMiniProgram = null;
 
   @SerializedName("local_ads_spec")
-  private LocalAdsSpec localAdsSpec = null;
+  private LocalAdsSpecRead localAdsSpec = null;
 
-  public PromotedObjectGetSpec jdItem(EcInfo jdItem) {
+  public PromotedObjectSpecRead jdItem(EcInfo jdItem) {
     this.jdItem = jdItem;
     return this;
   }
@@ -70,7 +70,7 @@ public class PromotedObjectGetSpec {
     this.jdItem = jdItem;
   }
 
-  public PromotedObjectGetSpec jdShop(EcInfo jdShop) {
+  public PromotedObjectSpecRead jdShop(EcInfo jdShop) {
     this.jdShop = jdShop;
     return this;
   }
@@ -89,7 +89,7 @@ public class PromotedObjectGetSpec {
     this.jdShop = jdShop;
   }
 
-  public PromotedObjectGetSpec appIosSpec(PromotedObjectAppIosSpec appIosSpec) {
+  public PromotedObjectSpecRead appIosSpec(PromotedObjectAppIosSpec appIosSpec) {
     this.appIosSpec = appIosSpec;
     return this;
   }
@@ -108,7 +108,7 @@ public class PromotedObjectGetSpec {
     this.appIosSpec = appIosSpec;
   }
 
-  public PromotedObjectGetSpec appAndroidSpec(PromotedObjectAppAndroidSpec appAndroidSpec) {
+  public PromotedObjectSpecRead appAndroidSpec(PromotedObjectAppAndroidSpec appAndroidSpec) {
     this.appAndroidSpec = appAndroidSpec;
     return this;
   }
@@ -127,7 +127,7 @@ public class PromotedObjectGetSpec {
     this.appAndroidSpec = appAndroidSpec;
   }
 
-  public PromotedObjectGetSpec appAndroidUnionSpec(AppAndroidUnionSpec appAndroidUnionSpec) {
+  public PromotedObjectSpecRead appAndroidUnionSpec(AppAndroidUnionSpec appAndroidUnionSpec) {
     this.appAndroidUnionSpec = appAndroidUnionSpec;
     return this;
   }
@@ -146,7 +146,7 @@ public class PromotedObjectGetSpec {
     this.appAndroidUnionSpec = appAndroidUnionSpec;
   }
 
-  public PromotedObjectGetSpec appAndroidMyappSpec(AppAndroidMyappSpec appAndroidMyappSpec) {
+  public PromotedObjectSpecRead appAndroidMyappSpec(AppAndroidMyappSpec appAndroidMyappSpec) {
     this.appAndroidMyappSpec = appAndroidMyappSpec;
     return this;
   }
@@ -165,7 +165,7 @@ public class PromotedObjectGetSpec {
     this.appAndroidMyappSpec = appAndroidMyappSpec;
   }
 
-  public PromotedObjectGetSpec dianpingShop(ProductTypeDianpingShop dianpingShop) {
+  public PromotedObjectSpecRead dianpingShop(ProductTypeDianpingShop dianpingShop) {
     this.dianpingShop = dianpingShop;
     return this;
   }
@@ -184,7 +184,7 @@ public class PromotedObjectGetSpec {
     this.dianpingShop = dianpingShop;
   }
 
-  public PromotedObjectGetSpec miniGameWechatSpec(MiniGameWechatSpec miniGameWechatSpec) {
+  public PromotedObjectSpecRead miniGameWechatSpec(MiniGameWechatSpec miniGameWechatSpec) {
     this.miniGameWechatSpec = miniGameWechatSpec;
     return this;
   }
@@ -203,7 +203,7 @@ public class PromotedObjectGetSpec {
     this.miniGameWechatSpec = miniGameWechatSpec;
   }
 
-  public PromotedObjectGetSpec qqBrowserMiniProgram(QqBrowserMiniProgram qqBrowserMiniProgram) {
+  public PromotedObjectSpecRead qqBrowserMiniProgram(QqBrowserMiniProgram qqBrowserMiniProgram) {
     this.qqBrowserMiniProgram = qqBrowserMiniProgram;
     return this;
   }
@@ -222,7 +222,7 @@ public class PromotedObjectGetSpec {
     this.qqBrowserMiniProgram = qqBrowserMiniProgram;
   }
 
-  public PromotedObjectGetSpec localAdsSpec(LocalAdsSpec localAdsSpec) {
+  public PromotedObjectSpecRead localAdsSpec(LocalAdsSpecRead localAdsSpec) {
     this.localAdsSpec = localAdsSpec;
     return this;
   }
@@ -233,11 +233,11 @@ public class PromotedObjectGetSpec {
    * @return localAdsSpec
    */
   @ApiModelProperty(value = "")
-  public LocalAdsSpec getLocalAdsSpec() {
+  public LocalAdsSpecRead getLocalAdsSpec() {
     return localAdsSpec;
   }
 
-  public void setLocalAdsSpec(LocalAdsSpec localAdsSpec) {
+  public void setLocalAdsSpec(LocalAdsSpecRead localAdsSpec) {
     this.localAdsSpec = localAdsSpec;
   }
 
@@ -249,17 +249,17 @@ public class PromotedObjectGetSpec {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    PromotedObjectGetSpec promotedObjectGetSpec = (PromotedObjectGetSpec) o;
-    return Objects.equals(this.jdItem, promotedObjectGetSpec.jdItem)
-        && Objects.equals(this.jdShop, promotedObjectGetSpec.jdShop)
-        && Objects.equals(this.appIosSpec, promotedObjectGetSpec.appIosSpec)
-        && Objects.equals(this.appAndroidSpec, promotedObjectGetSpec.appAndroidSpec)
-        && Objects.equals(this.appAndroidUnionSpec, promotedObjectGetSpec.appAndroidUnionSpec)
-        && Objects.equals(this.appAndroidMyappSpec, promotedObjectGetSpec.appAndroidMyappSpec)
-        && Objects.equals(this.dianpingShop, promotedObjectGetSpec.dianpingShop)
-        && Objects.equals(this.miniGameWechatSpec, promotedObjectGetSpec.miniGameWechatSpec)
-        && Objects.equals(this.qqBrowserMiniProgram, promotedObjectGetSpec.qqBrowserMiniProgram)
-        && Objects.equals(this.localAdsSpec, promotedObjectGetSpec.localAdsSpec);
+    PromotedObjectSpecRead promotedObjectSpecRead = (PromotedObjectSpecRead) o;
+    return Objects.equals(this.jdItem, promotedObjectSpecRead.jdItem)
+        && Objects.equals(this.jdShop, promotedObjectSpecRead.jdShop)
+        && Objects.equals(this.appIosSpec, promotedObjectSpecRead.appIosSpec)
+        && Objects.equals(this.appAndroidSpec, promotedObjectSpecRead.appAndroidSpec)
+        && Objects.equals(this.appAndroidUnionSpec, promotedObjectSpecRead.appAndroidUnionSpec)
+        && Objects.equals(this.appAndroidMyappSpec, promotedObjectSpecRead.appAndroidMyappSpec)
+        && Objects.equals(this.dianpingShop, promotedObjectSpecRead.dianpingShop)
+        && Objects.equals(this.miniGameWechatSpec, promotedObjectSpecRead.miniGameWechatSpec)
+        && Objects.equals(this.qqBrowserMiniProgram, promotedObjectSpecRead.qqBrowserMiniProgram)
+        && Objects.equals(this.localAdsSpec, promotedObjectSpecRead.localAdsSpec);
   }
 
   @Override
