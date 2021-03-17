@@ -98,6 +98,7 @@ public class App {
   @Inject OauthApiContainer oauthApiContainer;
   @Inject OptimizationGoalPermissionsApiContainer optimizationGoalPermissionsApiContainer;
   @Inject OuterCluesApiContainer outerCluesApiContainer;
+  @Inject OuterCluesContactApiContainer outerCluesContactApiContainer;
   @Inject PagesApiContainer pagesApiContainer;
   @Inject PlayablePagesApiContainer playablePagesApiContainer;
   @Inject ProductCatalogsApiContainer productCatalogsApiContainer;
@@ -469,6 +470,10 @@ public class App {
 
   public OuterCluesApiContainer outerClues() {
     return outerCluesApiContainer;
+  }
+
+  public OuterCluesContactApiContainer outerCluesContact() {
+    return outerCluesContactApiContainer;
   }
 
   public PagesApiContainer pages() {

@@ -36,9 +36,6 @@ public class ActionsUserId {
   @SerializedName("sha256_phone")
   private String sha256Phone = null;
 
-  @SerializedName("qaid")
-  private String qaid = null;
-
   @SerializedName("hash_android_id")
   private String hashAndroidId = null;
 
@@ -150,25 +147,6 @@ public class ActionsUserId {
 
   public void setSha256Phone(String sha256Phone) {
     this.sha256Phone = sha256Phone;
-  }
-
-  public ActionsUserId qaid(String qaid) {
-    this.qaid = qaid;
-    return this;
-  }
-
-  /**
-   * Get qaid
-   *
-   * @return qaid
-   */
-  @ApiModelProperty(value = "")
-  public String getQaid() {
-    return qaid;
-  }
-
-  public void setQaid(String qaid) {
-    this.qaid = qaid;
   }
 
   public ActionsUserId hashAndroidId(String hashAndroidId) {
@@ -299,7 +277,6 @@ public class ActionsUserId {
         && Objects.equals(this.gdtOpenid, actionsUserId.gdtOpenid)
         && Objects.equals(this.hashPhone, actionsUserId.hashPhone)
         && Objects.equals(this.sha256Phone, actionsUserId.sha256Phone)
-        && Objects.equals(this.qaid, actionsUserId.qaid)
         && Objects.equals(this.hashAndroidId, actionsUserId.hashAndroidId)
         && Objects.equals(this.hashMac, actionsUserId.hashMac)
         && Objects.equals(this.oaid, actionsUserId.oaid)
@@ -316,7 +293,6 @@ public class ActionsUserId {
         gdtOpenid,
         hashPhone,
         sha256Phone,
-        qaid,
         hashAndroidId,
         hashMac,
         oaid,

@@ -19,15 +19,15 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
-/** OuterCluesUpdateRequest */
-public class OuterCluesUpdateRequest {
+/** OuterCluesContactUpdateRequest */
+public class OuterCluesContactUpdateRequest {
   @SerializedName("account_id")
   private Long accountId = null;
 
-  @SerializedName("leads_conversion_status_list")
-  private List<OuterLeadsStatusInfoStruct> leadsConversionStatusList = null;
+  @SerializedName("leads_contact_list")
+  private List<LeadsContactInfoStruct> leadsContactList = null;
 
-  public OuterCluesUpdateRequest accountId(Long accountId) {
+  public OuterCluesContactUpdateRequest accountId(Long accountId) {
     this.accountId = accountId;
     return this;
   }
@@ -46,34 +46,33 @@ public class OuterCluesUpdateRequest {
     this.accountId = accountId;
   }
 
-  public OuterCluesUpdateRequest leadsConversionStatusList(
-      List<OuterLeadsStatusInfoStruct> leadsConversionStatusList) {
-    this.leadsConversionStatusList = leadsConversionStatusList;
+  public OuterCluesContactUpdateRequest leadsContactList(
+      List<LeadsContactInfoStruct> leadsContactList) {
+    this.leadsContactList = leadsContactList;
     return this;
   }
 
-  public OuterCluesUpdateRequest addLeadsConversionStatusListItem(
-      OuterLeadsStatusInfoStruct leadsConversionStatusListItem) {
-    if (this.leadsConversionStatusList == null) {
-      this.leadsConversionStatusList = new ArrayList<OuterLeadsStatusInfoStruct>();
+  public OuterCluesContactUpdateRequest addLeadsContactListItem(
+      LeadsContactInfoStruct leadsContactListItem) {
+    if (this.leadsContactList == null) {
+      this.leadsContactList = new ArrayList<LeadsContactInfoStruct>();
     }
-    this.leadsConversionStatusList.add(leadsConversionStatusListItem);
+    this.leadsContactList.add(leadsContactListItem);
     return this;
   }
 
   /**
-   * Get leadsConversionStatusList
+   * Get leadsContactList
    *
-   * @return leadsConversionStatusList
+   * @return leadsContactList
    */
   @ApiModelProperty(value = "")
-  public List<OuterLeadsStatusInfoStruct> getLeadsConversionStatusList() {
-    return leadsConversionStatusList;
+  public List<LeadsContactInfoStruct> getLeadsContactList() {
+    return leadsContactList;
   }
 
-  public void setLeadsConversionStatusList(
-      List<OuterLeadsStatusInfoStruct> leadsConversionStatusList) {
-    this.leadsConversionStatusList = leadsConversionStatusList;
+  public void setLeadsContactList(List<LeadsContactInfoStruct> leadsContactList) {
+    this.leadsContactList = leadsContactList;
   }
 
   @Override
@@ -84,15 +83,15 @@ public class OuterCluesUpdateRequest {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    OuterCluesUpdateRequest outerCluesUpdateRequest = (OuterCluesUpdateRequest) o;
-    return Objects.equals(this.accountId, outerCluesUpdateRequest.accountId)
-        && Objects.equals(
-            this.leadsConversionStatusList, outerCluesUpdateRequest.leadsConversionStatusList);
+    OuterCluesContactUpdateRequest outerCluesContactUpdateRequest =
+        (OuterCluesContactUpdateRequest) o;
+    return Objects.equals(this.accountId, outerCluesContactUpdateRequest.accountId)
+        && Objects.equals(this.leadsContactList, outerCluesContactUpdateRequest.leadsContactList);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(accountId, leadsConversionStatusList);
+    return Objects.hash(accountId, leadsContactList);
   }
 
   @Override

@@ -33,11 +33,8 @@ public class LeadsImportInfoStruct {
   @SerializedName("leads_user_type")
   private LeadsUserType leadsUserType = null;
 
-  @SerializedName("leads_name")
-  private String leadsName = null;
-
-  @SerializedName("leads_gender")
-  private LeadCluesGenderType leadsGender = null;
+  @SerializedName("leads_user_wechat_appid")
+  private String leadsUserWechatAppid = null;
 
   @SerializedName("leads_tel")
   private String leadsTel = null;
@@ -47,6 +44,12 @@ public class LeadsImportInfoStruct {
 
   @SerializedName("leads_wechat")
   private String leadsWechat = null;
+
+  @SerializedName("leads_name")
+  private String leadsName = null;
+
+  @SerializedName("leads_gender")
+  private LeadCluesGenderType leadsGender = null;
 
   @SerializedName("leads_email")
   private String leadsEmail = null;
@@ -142,42 +145,23 @@ public class LeadsImportInfoStruct {
     this.leadsUserType = leadsUserType;
   }
 
-  public LeadsImportInfoStruct leadsName(String leadsName) {
-    this.leadsName = leadsName;
+  public LeadsImportInfoStruct leadsUserWechatAppid(String leadsUserWechatAppid) {
+    this.leadsUserWechatAppid = leadsUserWechatAppid;
     return this;
   }
 
   /**
-   * Get leadsName
+   * Get leadsUserWechatAppid
    *
-   * @return leadsName
+   * @return leadsUserWechatAppid
    */
   @ApiModelProperty(value = "")
-  public String getLeadsName() {
-    return leadsName;
+  public String getLeadsUserWechatAppid() {
+    return leadsUserWechatAppid;
   }
 
-  public void setLeadsName(String leadsName) {
-    this.leadsName = leadsName;
-  }
-
-  public LeadsImportInfoStruct leadsGender(LeadCluesGenderType leadsGender) {
-    this.leadsGender = leadsGender;
-    return this;
-  }
-
-  /**
-   * Get leadsGender
-   *
-   * @return leadsGender
-   */
-  @ApiModelProperty(value = "")
-  public LeadCluesGenderType getLeadsGender() {
-    return leadsGender;
-  }
-
-  public void setLeadsGender(LeadCluesGenderType leadsGender) {
-    this.leadsGender = leadsGender;
+  public void setLeadsUserWechatAppid(String leadsUserWechatAppid) {
+    this.leadsUserWechatAppid = leadsUserWechatAppid;
   }
 
   public LeadsImportInfoStruct leadsTel(String leadsTel) {
@@ -235,6 +219,44 @@ public class LeadsImportInfoStruct {
 
   public void setLeadsWechat(String leadsWechat) {
     this.leadsWechat = leadsWechat;
+  }
+
+  public LeadsImportInfoStruct leadsName(String leadsName) {
+    this.leadsName = leadsName;
+    return this;
+  }
+
+  /**
+   * Get leadsName
+   *
+   * @return leadsName
+   */
+  @ApiModelProperty(value = "")
+  public String getLeadsName() {
+    return leadsName;
+  }
+
+  public void setLeadsName(String leadsName) {
+    this.leadsName = leadsName;
+  }
+
+  public LeadsImportInfoStruct leadsGender(LeadCluesGenderType leadsGender) {
+    this.leadsGender = leadsGender;
+    return this;
+  }
+
+  /**
+   * Get leadsGender
+   *
+   * @return leadsGender
+   */
+  @ApiModelProperty(value = "")
+  public LeadCluesGenderType getLeadsGender() {
+    return leadsGender;
+  }
+
+  public void setLeadsGender(LeadCluesGenderType leadsGender) {
+    this.leadsGender = leadsGender;
   }
 
   public LeadsImportInfoStruct leadsEmail(String leadsEmail) {
@@ -364,11 +386,12 @@ public class LeadsImportInfoStruct {
         && Objects.equals(this.leadsType, leadsImportInfoStruct.leadsType)
         && Objects.equals(this.leadsUserId, leadsImportInfoStruct.leadsUserId)
         && Objects.equals(this.leadsUserType, leadsImportInfoStruct.leadsUserType)
-        && Objects.equals(this.leadsName, leadsImportInfoStruct.leadsName)
-        && Objects.equals(this.leadsGender, leadsImportInfoStruct.leadsGender)
+        && Objects.equals(this.leadsUserWechatAppid, leadsImportInfoStruct.leadsUserWechatAppid)
         && Objects.equals(this.leadsTel, leadsImportInfoStruct.leadsTel)
         && Objects.equals(this.leadsQq, leadsImportInfoStruct.leadsQq)
         && Objects.equals(this.leadsWechat, leadsImportInfoStruct.leadsWechat)
+        && Objects.equals(this.leadsName, leadsImportInfoStruct.leadsName)
+        && Objects.equals(this.leadsGender, leadsImportInfoStruct.leadsGender)
         && Objects.equals(this.leadsEmail, leadsImportInfoStruct.leadsEmail)
         && Objects.equals(this.leadsArea, leadsImportInfoStruct.leadsArea)
         && Objects.equals(this.bundle, leadsImportInfoStruct.bundle)
@@ -385,11 +408,12 @@ public class LeadsImportInfoStruct {
         leadsType,
         leadsUserId,
         leadsUserType,
-        leadsName,
-        leadsGender,
+        leadsUserWechatAppid,
         leadsTel,
         leadsQq,
         leadsWechat,
+        leadsName,
+        leadsGender,
         leadsEmail,
         leadsArea,
         bundle,

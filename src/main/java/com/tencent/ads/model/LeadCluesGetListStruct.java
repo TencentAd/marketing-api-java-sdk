@@ -99,6 +99,9 @@ public class LeadCluesGetListStruct {
   @SerializedName("leads_user_type")
   private LeadsUserType leadsUserType = null;
 
+  @SerializedName("leads_user_wechat_appid")
+  private String leadsUserWechatAppid = null;
+
   @SerializedName("leads_name")
   private String leadsName = null;
 
@@ -656,6 +659,25 @@ public class LeadCluesGetListStruct {
     this.leadsUserType = leadsUserType;
   }
 
+  public LeadCluesGetListStruct leadsUserWechatAppid(String leadsUserWechatAppid) {
+    this.leadsUserWechatAppid = leadsUserWechatAppid;
+    return this;
+  }
+
+  /**
+   * Get leadsUserWechatAppid
+   *
+   * @return leadsUserWechatAppid
+   */
+  @ApiModelProperty(value = "")
+  public String getLeadsUserWechatAppid() {
+    return leadsUserWechatAppid;
+  }
+
+  public void setLeadsUserWechatAppid(String leadsUserWechatAppid) {
+    this.leadsUserWechatAppid = leadsUserWechatAppid;
+  }
+
   public LeadCluesGetListStruct leadsName(String leadsName) {
     this.leadsName = leadsName;
     return this;
@@ -1091,6 +1113,7 @@ public class LeadCluesGetListStruct {
             this.outerLeadsIneffectReason, leadCluesGetListStruct.outerLeadsIneffectReason)
         && Objects.equals(this.leadsUserId, leadCluesGetListStruct.leadsUserId)
         && Objects.equals(this.leadsUserType, leadCluesGetListStruct.leadsUserType)
+        && Objects.equals(this.leadsUserWechatAppid, leadCluesGetListStruct.leadsUserWechatAppid)
         && Objects.equals(this.leadsName, leadCluesGetListStruct.leadsName)
         && Objects.equals(this.leadsTelephone, leadCluesGetListStruct.leadsTelephone)
         && Objects.equals(this.telephoneLocation, leadCluesGetListStruct.telephoneLocation)
@@ -1143,6 +1166,7 @@ public class LeadCluesGetListStruct {
         outerLeadsIneffectReason,
         leadsUserId,
         leadsUserType,
+        leadsUserWechatAppid,
         leadsName,
         leadsTelephone,
         telephoneLocation,

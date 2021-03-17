@@ -21,9 +21,6 @@ import java.util.Objects;
 /** 回传信息结构 */
 @ApiModel(description = "回传信息结构")
 public class OuterLeadsStatusInfoStruct {
-  @SerializedName("account_id")
-  private Long accountId = null;
-
   @SerializedName("outer_leads_id")
   private String outerLeadsId = null;
 
@@ -32,25 +29,6 @@ public class OuterLeadsStatusInfoStruct {
 
   @SerializedName("outer_leads_ineffect_reason")
   private String outerLeadsIneffectReason = null;
-
-  public OuterLeadsStatusInfoStruct accountId(Long accountId) {
-    this.accountId = accountId;
-    return this;
-  }
-
-  /**
-   * Get accountId
-   *
-   * @return accountId
-   */
-  @ApiModelProperty(value = "")
-  public Long getAccountId() {
-    return accountId;
-  }
-
-  public void setAccountId(Long accountId) {
-    this.accountId = accountId;
-  }
 
   public OuterLeadsStatusInfoStruct outerLeadsId(String outerLeadsId) {
     this.outerLeadsId = outerLeadsId;
@@ -118,8 +96,7 @@ public class OuterLeadsStatusInfoStruct {
       return false;
     }
     OuterLeadsStatusInfoStruct outerLeadsStatusInfoStruct = (OuterLeadsStatusInfoStruct) o;
-    return Objects.equals(this.accountId, outerLeadsStatusInfoStruct.accountId)
-        && Objects.equals(this.outerLeadsId, outerLeadsStatusInfoStruct.outerLeadsId)
+    return Objects.equals(this.outerLeadsId, outerLeadsStatusInfoStruct.outerLeadsId)
         && Objects.equals(
             this.outerLeadsConvertType, outerLeadsStatusInfoStruct.outerLeadsConvertType)
         && Objects.equals(
@@ -128,7 +105,7 @@ public class OuterLeadsStatusInfoStruct {
 
   @Override
   public int hashCode() {
-    return Objects.hash(accountId, outerLeadsId, outerLeadsConvertType, outerLeadsIneffectReason);
+    return Objects.hash(outerLeadsId, outerLeadsConvertType, outerLeadsIneffectReason);
   }
 
   @Override

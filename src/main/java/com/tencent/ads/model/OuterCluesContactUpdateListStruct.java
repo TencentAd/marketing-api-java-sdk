@@ -20,11 +20,11 @@ import java.util.Objects;
 
 /** 返回结构 */
 @ApiModel(description = "返回结构")
-public class OuterCluesUpdateListStruct {
+public class OuterCluesContactUpdateListStruct {
   @SerializedName("outer_leads_id")
   private String outerLeadsId = null;
 
-  public OuterCluesUpdateListStruct outerLeadsId(String outerLeadsId) {
+  public OuterCluesContactUpdateListStruct outerLeadsId(String outerLeadsId) {
     this.outerLeadsId = outerLeadsId;
     return this;
   }
@@ -51,8 +51,9 @@ public class OuterCluesUpdateListStruct {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    OuterCluesUpdateListStruct outerCluesUpdateListStruct = (OuterCluesUpdateListStruct) o;
-    return Objects.equals(this.outerLeadsId, outerCluesUpdateListStruct.outerLeadsId);
+    OuterCluesContactUpdateListStruct outerCluesContactUpdateListStruct =
+        (OuterCluesContactUpdateListStruct) o;
+    return Objects.equals(this.outerLeadsId, outerCluesContactUpdateListStruct.outerLeadsId);
   }
 
   @Override
