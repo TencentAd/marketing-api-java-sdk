@@ -32,6 +32,9 @@ public class XijingPageByComponentsAddPagesStruct {
   @SerializedName("page_title")
   private String pageTitle = null;
 
+  @SerializedName("clipboard")
+  private String clipboard = null;
+
   @SerializedName("mobile_app_id")
   private String mobileAppId = null;
 
@@ -99,6 +102,25 @@ public class XijingPageByComponentsAddPagesStruct {
 
   public void setPageTitle(String pageTitle) {
     this.pageTitle = pageTitle;
+  }
+
+  public XijingPageByComponentsAddPagesStruct clipboard(String clipboard) {
+    this.clipboard = clipboard;
+    return this;
+  }
+
+  /**
+   * Get clipboard
+   *
+   * @return clipboard
+   */
+  @ApiModelProperty(value = "")
+  public String getClipboard() {
+    return clipboard;
+  }
+
+  public void setClipboard(String clipboard) {
+    this.clipboard = clipboard;
   }
 
   public XijingPageByComponentsAddPagesStruct mobileAppId(String mobileAppId) {
@@ -199,6 +221,7 @@ public class XijingPageByComponentsAddPagesStruct {
     return Objects.equals(this.pageType, xijingPageByComponentsAddPagesStruct.pageType)
         && Objects.equals(this.pageName, xijingPageByComponentsAddPagesStruct.pageName)
         && Objects.equals(this.pageTitle, xijingPageByComponentsAddPagesStruct.pageTitle)
+        && Objects.equals(this.clipboard, xijingPageByComponentsAddPagesStruct.clipboard)
         && Objects.equals(this.mobileAppId, xijingPageByComponentsAddPagesStruct.mobileAppId)
         && Objects.equals(this.bgColor, xijingPageByComponentsAddPagesStruct.bgColor)
         && Objects.equals(this.bgImageId, xijingPageByComponentsAddPagesStruct.bgImageId)
@@ -209,7 +232,14 @@ public class XijingPageByComponentsAddPagesStruct {
   @Override
   public int hashCode() {
     return Objects.hash(
-        pageType, pageName, pageTitle, mobileAppId, bgColor, bgImageId, componentSpecList);
+        pageType,
+        pageName,
+        pageTitle,
+        clipboard,
+        mobileAppId,
+        bgColor,
+        bgImageId,
+        componentSpecList);
   }
 
   @Override
