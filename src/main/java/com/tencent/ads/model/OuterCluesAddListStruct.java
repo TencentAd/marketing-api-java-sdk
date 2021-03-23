@@ -13,35 +13,12 @@
 package com.tencent.ads.model;
 
 import com.google.gson.Gson;
-import com.google.gson.annotations.SerializedName;
 import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.Objects;
 
 /** 返回结构 */
 @ApiModel(description = "返回结构")
 public class OuterCluesAddListStruct {
-  @SerializedName("outer_leads_id")
-  private String outerLeadsId = null;
-
-  public OuterCluesAddListStruct outerLeadsId(String outerLeadsId) {
-    this.outerLeadsId = outerLeadsId;
-    return this;
-  }
-
-  /**
-   * Get outerLeadsId
-   *
-   * @return outerLeadsId
-   */
-  @ApiModelProperty(value = "")
-  public String getOuterLeadsId() {
-    return outerLeadsId;
-  }
-
-  public void setOuterLeadsId(String outerLeadsId) {
-    this.outerLeadsId = outerLeadsId;
-  }
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -51,13 +28,12 @@ public class OuterCluesAddListStruct {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    OuterCluesAddListStruct outerCluesAddListStruct = (OuterCluesAddListStruct) o;
-    return Objects.equals(this.outerLeadsId, outerCluesAddListStruct.outerLeadsId);
+    return true;
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(outerLeadsId);
+    return Objects.hash();
   }
 
   @Override

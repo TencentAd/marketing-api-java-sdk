@@ -117,6 +117,9 @@ public class VideosGetListStruct {
   @SerializedName("owner_account_id")
   private String ownerAccountId = null;
 
+  @SerializedName("status")
+  private MediaStatusType status = null;
+
   public VideosGetListStruct videoId(Long videoId) {
     this.videoId = videoId;
     return this;
@@ -725,6 +728,25 @@ public class VideosGetListStruct {
     this.ownerAccountId = ownerAccountId;
   }
 
+  public VideosGetListStruct status(MediaStatusType status) {
+    this.status = status;
+    return this;
+  }
+
+  /**
+   * Get status
+   *
+   * @return status
+   */
+  @ApiModelProperty(value = "")
+  public MediaStatusType getStatus() {
+    return status;
+  }
+
+  public void setStatus(MediaStatusType status) {
+    this.status = status;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -767,7 +789,8 @@ public class VideosGetListStruct {
         && Objects.equals(this.productCatalogId, videosGetListStruct.productCatalogId)
         && Objects.equals(this.productOuterId, videosGetListStruct.productOuterId)
         && Objects.equals(this.sourceReferenceId, videosGetListStruct.sourceReferenceId)
-        && Objects.equals(this.ownerAccountId, videosGetListStruct.ownerAccountId);
+        && Objects.equals(this.ownerAccountId, videosGetListStruct.ownerAccountId)
+        && Objects.equals(this.status, videosGetListStruct.status);
   }
 
   @Override
@@ -804,7 +827,8 @@ public class VideosGetListStruct {
         productCatalogId,
         productOuterId,
         sourceReferenceId,
-        ownerAccountId);
+        ownerAccountId,
+        status);
   }
 
   @Override

@@ -48,7 +48,7 @@ public class XijingPageApiContainer extends ApiContainer {
   }
 
   /**
-   * 蹊径-送审落地页
+   * 蹊径-删除落地页
    *
    * @param data (required)
    * @return XijingPageDeleteResponse

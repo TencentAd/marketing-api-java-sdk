@@ -287,7 +287,7 @@ public class XijingPageApi {
   }
 
   /**
-   * 蹊径-送审落地页
+   * 蹊径-删除落地页
    *
    * @param data (required)
    * @return XijingPageDeleteResponse
@@ -301,7 +301,7 @@ public class XijingPageApi {
   }
 
   /**
-   * 蹊径-送审落地页
+   * 蹊径-删除落地页
    *
    * @param data (required)
    * @return ApiResponse&lt;XijingPageDeleteResponse&gt;
@@ -316,7 +316,7 @@ public class XijingPageApi {
   }
 
   /**
-   * 蹊径-送审落地页 (asynchronously)
+   * 蹊径-删除落地页 (asynchronously)
    *
    * @param data (required)
    * @param callback The callback to be executed when the API call finishes

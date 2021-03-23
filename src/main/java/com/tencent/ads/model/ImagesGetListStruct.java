@@ -54,6 +54,9 @@ public class ImagesGetListStruct {
   @SerializedName("owner_account_id")
   private String ownerAccountId = null;
 
+  @SerializedName("status")
+  private MediaStatusType status = null;
+
   @SerializedName("width")
   private Long width = null;
 
@@ -278,6 +281,25 @@ public class ImagesGetListStruct {
     this.ownerAccountId = ownerAccountId;
   }
 
+  public ImagesGetListStruct status(MediaStatusType status) {
+    this.status = status;
+    return this;
+  }
+
+  /**
+   * Get status
+   *
+   * @return status
+   */
+  @ApiModelProperty(value = "")
+  public MediaStatusType getStatus() {
+    return status;
+  }
+
+  public void setStatus(MediaStatusType status) {
+    this.status = status;
+  }
+
   public ImagesGetListStruct width(Long width) {
     this.width = width;
     return this;
@@ -393,6 +415,7 @@ public class ImagesGetListStruct {
         && Objects.equals(this.productOuterId, imagesGetListStruct.productOuterId)
         && Objects.equals(this.sourceReferenceId, imagesGetListStruct.sourceReferenceId)
         && Objects.equals(this.ownerAccountId, imagesGetListStruct.ownerAccountId)
+        && Objects.equals(this.status, imagesGetListStruct.status)
         && Objects.equals(this.width, imagesGetListStruct.width)
         && Objects.equals(this.height, imagesGetListStruct.height)
         && Objects.equals(this.fileSize, imagesGetListStruct.fileSize)
@@ -414,6 +437,7 @@ public class ImagesGetListStruct {
         productOuterId,
         sourceReferenceId,
         ownerAccountId,
+        status,
         width,
         height,
         fileSize,

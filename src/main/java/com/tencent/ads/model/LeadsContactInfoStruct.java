@@ -21,6 +21,9 @@ import java.util.Objects;
 /** 回传信息结构 */
 @ApiModel(description = "回传信息结构")
 public class LeadsContactInfoStruct {
+  @SerializedName("outer_leads_id")
+  private String outerLeadsId = null;
+
   @SerializedName("leads_user_type")
   private LeadsUserType leadsUserType = null;
 
@@ -53,6 +56,25 @@ public class LeadsContactInfoStruct {
 
   @SerializedName("bundle")
   private String bundle = null;
+
+  public LeadsContactInfoStruct outerLeadsId(String outerLeadsId) {
+    this.outerLeadsId = outerLeadsId;
+    return this;
+  }
+
+  /**
+   * Get outerLeadsId
+   *
+   * @return outerLeadsId
+   */
+  @ApiModelProperty(value = "")
+  public String getOuterLeadsId() {
+    return outerLeadsId;
+  }
+
+  public void setOuterLeadsId(String outerLeadsId) {
+    this.outerLeadsId = outerLeadsId;
+  }
 
   public LeadsContactInfoStruct leadsUserType(LeadsUserType leadsUserType) {
     this.leadsUserType = leadsUserType;
@@ -272,7 +294,8 @@ public class LeadsContactInfoStruct {
       return false;
     }
     LeadsContactInfoStruct leadsContactInfoStruct = (LeadsContactInfoStruct) o;
-    return Objects.equals(this.leadsUserType, leadsContactInfoStruct.leadsUserType)
+    return Objects.equals(this.outerLeadsId, leadsContactInfoStruct.outerLeadsId)
+        && Objects.equals(this.leadsUserType, leadsContactInfoStruct.leadsUserType)
         && Objects.equals(this.leadsUserWechatAppid, leadsContactInfoStruct.leadsUserWechatAppid)
         && Objects.equals(this.leadsUserId, leadsContactInfoStruct.leadsUserId)
         && Objects.equals(this.leadsTel, leadsContactInfoStruct.leadsTel)
@@ -288,6 +311,7 @@ public class LeadsContactInfoStruct {
   @Override
   public int hashCode() {
     return Objects.hash(
+        outerLeadsId,
         leadsUserType,
         leadsUserWechatAppid,
         leadsUserId,
