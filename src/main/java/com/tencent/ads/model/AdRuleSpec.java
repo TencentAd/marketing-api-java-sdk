@@ -38,11 +38,11 @@ public class AdRuleSpec {
   @SerializedName("campaign_id_list")
   private List<Long> campaignIdList = null;
 
-  @SerializedName("product_list")
-  private List<AdProduct> productList = null;
-
   @SerializedName("adgroup_id_list")
   private List<Long> adgroupIdList = null;
+
+  @SerializedName("promoted_object_list")
+  private List<AdProduct> promotedObjectList = null;
 
   public AdRuleSpec ruleType(AdRuleType ruleType) {
     this.ruleType = ruleType;
@@ -155,33 +155,6 @@ public class AdRuleSpec {
     this.campaignIdList = campaignIdList;
   }
 
-  public AdRuleSpec productList(List<AdProduct> productList) {
-    this.productList = productList;
-    return this;
-  }
-
-  public AdRuleSpec addProductListItem(AdProduct productListItem) {
-    if (this.productList == null) {
-      this.productList = new ArrayList<AdProduct>();
-    }
-    this.productList.add(productListItem);
-    return this;
-  }
-
-  /**
-   * Get productList
-   *
-   * @return productList
-   */
-  @ApiModelProperty(value = "")
-  public List<AdProduct> getProductList() {
-    return productList;
-  }
-
-  public void setProductList(List<AdProduct> productList) {
-    this.productList = productList;
-  }
-
   public AdRuleSpec adgroupIdList(List<Long> adgroupIdList) {
     this.adgroupIdList = adgroupIdList;
     return this;
@@ -209,6 +182,33 @@ public class AdRuleSpec {
     this.adgroupIdList = adgroupIdList;
   }
 
+  public AdRuleSpec promotedObjectList(List<AdProduct> promotedObjectList) {
+    this.promotedObjectList = promotedObjectList;
+    return this;
+  }
+
+  public AdRuleSpec addPromotedObjectListItem(AdProduct promotedObjectListItem) {
+    if (this.promotedObjectList == null) {
+      this.promotedObjectList = new ArrayList<AdProduct>();
+    }
+    this.promotedObjectList.add(promotedObjectListItem);
+    return this;
+  }
+
+  /**
+   * Get promotedObjectList
+   *
+   * @return promotedObjectList
+   */
+  @ApiModelProperty(value = "")
+  public List<AdProduct> getPromotedObjectList() {
+    return promotedObjectList;
+  }
+
+  public void setPromotedObjectList(List<AdProduct> promotedObjectList) {
+    this.promotedObjectList = promotedObjectList;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -223,14 +223,20 @@ public class AdRuleSpec {
         && Objects.equals(this.startDate, adRuleSpec.startDate)
         && Objects.equals(this.endDate, adRuleSpec.endDate)
         && Objects.equals(this.campaignIdList, adRuleSpec.campaignIdList)
-        && Objects.equals(this.productList, adRuleSpec.productList)
-        && Objects.equals(this.adgroupIdList, adRuleSpec.adgroupIdList);
+        && Objects.equals(this.adgroupIdList, adRuleSpec.adgroupIdList)
+        && Objects.equals(this.promotedObjectList, adRuleSpec.promotedObjectList);
   }
 
   @Override
   public int hashCode() {
     return Objects.hash(
-        ruleType, conversionType, startDate, endDate, campaignIdList, productList, adgroupIdList);
+        ruleType,
+        conversionType,
+        startDate,
+        endDate,
+        campaignIdList,
+        adgroupIdList,
+        promotedObjectList);
   }
 
   @Override
