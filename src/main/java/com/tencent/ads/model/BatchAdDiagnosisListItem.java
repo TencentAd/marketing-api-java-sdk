@@ -78,6 +78,27 @@ public class BatchAdDiagnosisListItem {
   @SerializedName("detail")
   private ResponseDetailStruct detail = null;
 
+  @SerializedName("auto_acquisition_status")
+  private AutoAcquisitionStatus autoAcquisitionStatus = null;
+
+  @SerializedName("auto_acquisition_status_name")
+  private String autoAcquisitionStatusName = null;
+
+  @SerializedName("auto_acquisition_status_desc")
+  private String autoAcquisitionStatusDesc = null;
+
+  @SerializedName("auto_acquisition_begin_time")
+  private String autoAcquisitionBeginTime = null;
+
+  @SerializedName("auto_acquisition_end_time")
+  private String autoAcquisitionEndTime = null;
+
+  @SerializedName("is_potential")
+  private Boolean isPotential = null;
+
+  @SerializedName("potential_detail")
+  private ResponsePotentialStruct potentialDetail = null;
+
   public BatchAdDiagnosisListItem adgroupId(Long adgroupId) {
     this.adgroupId = adgroupId;
     return this;
@@ -439,6 +460,140 @@ public class BatchAdDiagnosisListItem {
     this.detail = detail;
   }
 
+  public BatchAdDiagnosisListItem autoAcquisitionStatus(
+      AutoAcquisitionStatus autoAcquisitionStatus) {
+    this.autoAcquisitionStatus = autoAcquisitionStatus;
+    return this;
+  }
+
+  /**
+   * Get autoAcquisitionStatus
+   *
+   * @return autoAcquisitionStatus
+   */
+  @ApiModelProperty(value = "")
+  public AutoAcquisitionStatus getAutoAcquisitionStatus() {
+    return autoAcquisitionStatus;
+  }
+
+  public void setAutoAcquisitionStatus(AutoAcquisitionStatus autoAcquisitionStatus) {
+    this.autoAcquisitionStatus = autoAcquisitionStatus;
+  }
+
+  public BatchAdDiagnosisListItem autoAcquisitionStatusName(String autoAcquisitionStatusName) {
+    this.autoAcquisitionStatusName = autoAcquisitionStatusName;
+    return this;
+  }
+
+  /**
+   * Get autoAcquisitionStatusName
+   *
+   * @return autoAcquisitionStatusName
+   */
+  @ApiModelProperty(value = "")
+  public String getAutoAcquisitionStatusName() {
+    return autoAcquisitionStatusName;
+  }
+
+  public void setAutoAcquisitionStatusName(String autoAcquisitionStatusName) {
+    this.autoAcquisitionStatusName = autoAcquisitionStatusName;
+  }
+
+  public BatchAdDiagnosisListItem autoAcquisitionStatusDesc(String autoAcquisitionStatusDesc) {
+    this.autoAcquisitionStatusDesc = autoAcquisitionStatusDesc;
+    return this;
+  }
+
+  /**
+   * Get autoAcquisitionStatusDesc
+   *
+   * @return autoAcquisitionStatusDesc
+   */
+  @ApiModelProperty(value = "")
+  public String getAutoAcquisitionStatusDesc() {
+    return autoAcquisitionStatusDesc;
+  }
+
+  public void setAutoAcquisitionStatusDesc(String autoAcquisitionStatusDesc) {
+    this.autoAcquisitionStatusDesc = autoAcquisitionStatusDesc;
+  }
+
+  public BatchAdDiagnosisListItem autoAcquisitionBeginTime(String autoAcquisitionBeginTime) {
+    this.autoAcquisitionBeginTime = autoAcquisitionBeginTime;
+    return this;
+  }
+
+  /**
+   * Get autoAcquisitionBeginTime
+   *
+   * @return autoAcquisitionBeginTime
+   */
+  @ApiModelProperty(value = "")
+  public String getAutoAcquisitionBeginTime() {
+    return autoAcquisitionBeginTime;
+  }
+
+  public void setAutoAcquisitionBeginTime(String autoAcquisitionBeginTime) {
+    this.autoAcquisitionBeginTime = autoAcquisitionBeginTime;
+  }
+
+  public BatchAdDiagnosisListItem autoAcquisitionEndTime(String autoAcquisitionEndTime) {
+    this.autoAcquisitionEndTime = autoAcquisitionEndTime;
+    return this;
+  }
+
+  /**
+   * Get autoAcquisitionEndTime
+   *
+   * @return autoAcquisitionEndTime
+   */
+  @ApiModelProperty(value = "")
+  public String getAutoAcquisitionEndTime() {
+    return autoAcquisitionEndTime;
+  }
+
+  public void setAutoAcquisitionEndTime(String autoAcquisitionEndTime) {
+    this.autoAcquisitionEndTime = autoAcquisitionEndTime;
+  }
+
+  public BatchAdDiagnosisListItem isPotential(Boolean isPotential) {
+    this.isPotential = isPotential;
+    return this;
+  }
+
+  /**
+   * Get isPotential
+   *
+   * @return isPotential
+   */
+  @ApiModelProperty(value = "")
+  public Boolean isIsPotential() {
+    return isPotential;
+  }
+
+  public void setIsPotential(Boolean isPotential) {
+    this.isPotential = isPotential;
+  }
+
+  public BatchAdDiagnosisListItem potentialDetail(ResponsePotentialStruct potentialDetail) {
+    this.potentialDetail = potentialDetail;
+    return this;
+  }
+
+  /**
+   * Get potentialDetail
+   *
+   * @return potentialDetail
+   */
+  @ApiModelProperty(value = "")
+  public ResponsePotentialStruct getPotentialDetail() {
+    return potentialDetail;
+  }
+
+  public void setPotentialDetail(ResponsePotentialStruct potentialDetail) {
+    this.potentialDetail = potentialDetail;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -469,7 +624,19 @@ public class BatchAdDiagnosisListItem {
         && Objects.equals(this.learningStatusDesc, batchAdDiagnosisListItem.learningStatusDesc)
         && Objects.equals(
             this.exposureCompeteScoreDesc, batchAdDiagnosisListItem.exposureCompeteScoreDesc)
-        && Objects.equals(this.detail, batchAdDiagnosisListItem.detail);
+        && Objects.equals(this.detail, batchAdDiagnosisListItem.detail)
+        && Objects.equals(
+            this.autoAcquisitionStatus, batchAdDiagnosisListItem.autoAcquisitionStatus)
+        && Objects.equals(
+            this.autoAcquisitionStatusName, batchAdDiagnosisListItem.autoAcquisitionStatusName)
+        && Objects.equals(
+            this.autoAcquisitionStatusDesc, batchAdDiagnosisListItem.autoAcquisitionStatusDesc)
+        && Objects.equals(
+            this.autoAcquisitionBeginTime, batchAdDiagnosisListItem.autoAcquisitionBeginTime)
+        && Objects.equals(
+            this.autoAcquisitionEndTime, batchAdDiagnosisListItem.autoAcquisitionEndTime)
+        && Objects.equals(this.isPotential, batchAdDiagnosisListItem.isPotential)
+        && Objects.equals(this.potentialDetail, batchAdDiagnosisListItem.potentialDetail);
   }
 
   @Override
@@ -493,7 +660,14 @@ public class BatchAdDiagnosisListItem {
         operateSuggestionDesc,
         learningStatusDesc,
         exposureCompeteScoreDesc,
-        detail);
+        detail,
+        autoAcquisitionStatus,
+        autoAcquisitionStatusName,
+        autoAcquisitionStatusDesc,
+        autoAcquisitionBeginTime,
+        autoAcquisitionEndTime,
+        isPotential,
+        potentialDetail);
   }
 
   @Override

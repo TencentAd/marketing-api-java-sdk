@@ -129,6 +129,6 @@ public class TencentAds extends CustomApp {
    * @param writeTimeout
    */
   public void setWriteTimeout(int writeTimeout) {
-    defaultApiClient.setReadTimeout(writeTimeout);
+    defaultApiClient.setWriteTimeout(writeTimeout);
   }
 }
