@@ -30,9 +30,6 @@ public class CustomAudience {
   @SerializedName("name")
   private String name = null;
 
-  @SerializedName("outer_audience_id")
-  private String outerAudienceId = null;
-
   @SerializedName("description")
   private String description = null;
 
@@ -56,6 +53,9 @@ public class CustomAudience {
 
   @SerializedName("audience_spec")
   private AudienceSpec audienceSpec = null;
+
+  @SerializedName("external_audience_id")
+  private String externalAudienceId = null;
 
   public CustomAudience audienceId(Long audienceId) {
     this.audienceId = audienceId;
@@ -112,25 +112,6 @@ public class CustomAudience {
 
   public void setName(String name) {
     this.name = name;
-  }
-
-  public CustomAudience outerAudienceId(String outerAudienceId) {
-    this.outerAudienceId = outerAudienceId;
-    return this;
-  }
-
-  /**
-   * Get outerAudienceId
-   *
-   * @return outerAudienceId
-   */
-  @ApiModelProperty(value = "")
-  public String getOuterAudienceId() {
-    return outerAudienceId;
-  }
-
-  public void setOuterAudienceId(String outerAudienceId) {
-    this.outerAudienceId = outerAudienceId;
   }
 
   public CustomAudience description(String description) {
@@ -285,6 +266,25 @@ public class CustomAudience {
     this.audienceSpec = audienceSpec;
   }
 
+  public CustomAudience externalAudienceId(String externalAudienceId) {
+    this.externalAudienceId = externalAudienceId;
+    return this;
+  }
+
+  /**
+   * Get externalAudienceId
+   *
+   * @return externalAudienceId
+   */
+  @ApiModelProperty(value = "")
+  public String getExternalAudienceId() {
+    return externalAudienceId;
+  }
+
+  public void setExternalAudienceId(String externalAudienceId) {
+    this.externalAudienceId = externalAudienceId;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -297,7 +297,6 @@ public class CustomAudience {
     return Objects.equals(this.audienceId, customAudience.audienceId)
         && Objects.equals(this.accountId, customAudience.accountId)
         && Objects.equals(this.name, customAudience.name)
-        && Objects.equals(this.outerAudienceId, customAudience.outerAudienceId)
         && Objects.equals(this.description, customAudience.description)
         && Objects.equals(this.type, customAudience.type)
         && Objects.equals(this.status, customAudience.status)
@@ -305,7 +304,8 @@ public class CustomAudience {
         && Objects.equals(this.userCount, customAudience.userCount)
         && Objects.equals(this.createdTime, customAudience.createdTime)
         && Objects.equals(this.lastModifiedTime, customAudience.lastModifiedTime)
-        && Objects.equals(this.audienceSpec, customAudience.audienceSpec);
+        && Objects.equals(this.audienceSpec, customAudience.audienceSpec)
+        && Objects.equals(this.externalAudienceId, customAudience.externalAudienceId);
   }
 
   @Override
@@ -314,7 +314,6 @@ public class CustomAudience {
         audienceId,
         accountId,
         name,
-        outerAudienceId,
         description,
         type,
         status,
@@ -322,7 +321,8 @@ public class CustomAudience {
         userCount,
         createdTime,
         lastModifiedTime,
-        audienceSpec);
+        audienceSpec,
+        externalAudienceId);
   }
 
   @Override

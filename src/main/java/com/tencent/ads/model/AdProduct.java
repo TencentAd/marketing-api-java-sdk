@@ -21,48 +21,48 @@ import java.util.Objects;
 /** 推广目标信息 */
 @ApiModel(description = "推广目标信息")
 public class AdProduct {
-  @SerializedName("product_type")
-  private AudienceProductType productType = null;
+  @SerializedName("promoted_object_type")
+  private AudienceProductType promotedObjectType = null;
 
-  @SerializedName("product_refs_id")
-  private String productRefsId = null;
+  @SerializedName("promoted_object_id")
+  private String promotedObjectId = null;
 
-  public AdProduct productType(AudienceProductType productType) {
-    this.productType = productType;
+  public AdProduct promotedObjectType(AudienceProductType promotedObjectType) {
+    this.promotedObjectType = promotedObjectType;
     return this;
   }
 
   /**
-   * Get productType
+   * Get promotedObjectType
    *
-   * @return productType
+   * @return promotedObjectType
    */
   @ApiModelProperty(value = "")
-  public AudienceProductType getProductType() {
-    return productType;
+  public AudienceProductType getPromotedObjectType() {
+    return promotedObjectType;
   }
 
-  public void setProductType(AudienceProductType productType) {
-    this.productType = productType;
+  public void setPromotedObjectType(AudienceProductType promotedObjectType) {
+    this.promotedObjectType = promotedObjectType;
   }
 
-  public AdProduct productRefsId(String productRefsId) {
-    this.productRefsId = productRefsId;
+  public AdProduct promotedObjectId(String promotedObjectId) {
+    this.promotedObjectId = promotedObjectId;
     return this;
   }
 
   /**
-   * Get productRefsId
+   * Get promotedObjectId
    *
-   * @return productRefsId
+   * @return promotedObjectId
    */
   @ApiModelProperty(value = "")
-  public String getProductRefsId() {
-    return productRefsId;
+  public String getPromotedObjectId() {
+    return promotedObjectId;
   }
 
-  public void setProductRefsId(String productRefsId) {
-    this.productRefsId = productRefsId;
+  public void setPromotedObjectId(String promotedObjectId) {
+    this.promotedObjectId = promotedObjectId;
   }
 
   @Override
@@ -74,13 +74,13 @@ public class AdProduct {
       return false;
     }
     AdProduct adProduct = (AdProduct) o;
-    return Objects.equals(this.productType, adProduct.productType)
-        && Objects.equals(this.productRefsId, adProduct.productRefsId);
+    return Objects.equals(this.promotedObjectType, adProduct.promotedObjectType)
+        && Objects.equals(this.promotedObjectId, adProduct.promotedObjectId);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(productType, productRefsId);
+    return Objects.hash(promotedObjectType, promotedObjectId);
   }
 
   @Override

@@ -28,9 +28,6 @@ public class CustomAudiencesAddRequest {
   @SerializedName("type")
   private AudienceType type = null;
 
-  @SerializedName("outer_audience_id")
-  private String outerAudienceId = null;
-
   @SerializedName("description")
   private String description = null;
 
@@ -39,6 +36,9 @@ public class CustomAudiencesAddRequest {
 
   @SerializedName("platform")
   private DataPlatform platform = null;
+
+  @SerializedName("external_audience_id")
+  private String externalAudienceId = null;
 
   public CustomAudiencesAddRequest accountId(Long accountId) {
     this.accountId = accountId;
@@ -95,25 +95,6 @@ public class CustomAudiencesAddRequest {
 
   public void setType(AudienceType type) {
     this.type = type;
-  }
-
-  public CustomAudiencesAddRequest outerAudienceId(String outerAudienceId) {
-    this.outerAudienceId = outerAudienceId;
-    return this;
-  }
-
-  /**
-   * Get outerAudienceId
-   *
-   * @return outerAudienceId
-   */
-  @ApiModelProperty(value = "")
-  public String getOuterAudienceId() {
-    return outerAudienceId;
-  }
-
-  public void setOuterAudienceId(String outerAudienceId) {
-    this.outerAudienceId = outerAudienceId;
   }
 
   public CustomAudiencesAddRequest description(String description) {
@@ -173,6 +154,25 @@ public class CustomAudiencesAddRequest {
     this.platform = platform;
   }
 
+  public CustomAudiencesAddRequest externalAudienceId(String externalAudienceId) {
+    this.externalAudienceId = externalAudienceId;
+    return this;
+  }
+
+  /**
+   * Get externalAudienceId
+   *
+   * @return externalAudienceId
+   */
+  @ApiModelProperty(value = "")
+  public String getExternalAudienceId() {
+    return externalAudienceId;
+  }
+
+  public void setExternalAudienceId(String externalAudienceId) {
+    this.externalAudienceId = externalAudienceId;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -185,16 +185,16 @@ public class CustomAudiencesAddRequest {
     return Objects.equals(this.accountId, customAudiencesAddRequest.accountId)
         && Objects.equals(this.name, customAudiencesAddRequest.name)
         && Objects.equals(this.type, customAudiencesAddRequest.type)
-        && Objects.equals(this.outerAudienceId, customAudiencesAddRequest.outerAudienceId)
         && Objects.equals(this.description, customAudiencesAddRequest.description)
         && Objects.equals(this.audienceSpec, customAudiencesAddRequest.audienceSpec)
-        && Objects.equals(this.platform, customAudiencesAddRequest.platform);
+        && Objects.equals(this.platform, customAudiencesAddRequest.platform)
+        && Objects.equals(this.externalAudienceId, customAudiencesAddRequest.externalAudienceId);
   }
 
   @Override
   public int hashCode() {
     return Objects.hash(
-        accountId, name, type, outerAudienceId, description, audienceSpec, platform);
+        accountId, name, type, description, audienceSpec, platform, externalAudienceId);
   }
 
   @Override
