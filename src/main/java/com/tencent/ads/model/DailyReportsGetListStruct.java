@@ -867,6 +867,15 @@ public class DailyReportsGetListStruct {
   @SerializedName("mini_game_paying_amount_click_d1_by_upload")
   private Long miniGamePayingAmountClickD1ByUpload = null;
 
+  @SerializedName("mini_game_retention_d1_rate")
+  private Double miniGameRetentionD1Rate = null;
+
+  @SerializedName("mini_game_retention_d1_cost")
+  private Long miniGameRetentionD1Cost = null;
+
+  @SerializedName("key_page_view_rate")
+  private Double keyPageViewRate = null;
+
   @SerializedName("request_conversions_count")
   private Long requestConversionsCount = null;
 
@@ -6618,6 +6627,63 @@ public class DailyReportsGetListStruct {
     this.miniGamePayingAmountClickD1ByUpload = miniGamePayingAmountClickD1ByUpload;
   }
 
+  public DailyReportsGetListStruct miniGameRetentionD1Rate(Double miniGameRetentionD1Rate) {
+    this.miniGameRetentionD1Rate = miniGameRetentionD1Rate;
+    return this;
+  }
+
+  /**
+   * Get miniGameRetentionD1Rate
+   *
+   * @return miniGameRetentionD1Rate
+   */
+  @ApiModelProperty(value = "")
+  public Double getMiniGameRetentionD1Rate() {
+    return miniGameRetentionD1Rate;
+  }
+
+  public void setMiniGameRetentionD1Rate(Double miniGameRetentionD1Rate) {
+    this.miniGameRetentionD1Rate = miniGameRetentionD1Rate;
+  }
+
+  public DailyReportsGetListStruct miniGameRetentionD1Cost(Long miniGameRetentionD1Cost) {
+    this.miniGameRetentionD1Cost = miniGameRetentionD1Cost;
+    return this;
+  }
+
+  /**
+   * Get miniGameRetentionD1Cost
+   *
+   * @return miniGameRetentionD1Cost
+   */
+  @ApiModelProperty(value = "")
+  public Long getMiniGameRetentionD1Cost() {
+    return miniGameRetentionD1Cost;
+  }
+
+  public void setMiniGameRetentionD1Cost(Long miniGameRetentionD1Cost) {
+    this.miniGameRetentionD1Cost = miniGameRetentionD1Cost;
+  }
+
+  public DailyReportsGetListStruct keyPageViewRate(Double keyPageViewRate) {
+    this.keyPageViewRate = keyPageViewRate;
+    return this;
+  }
+
+  /**
+   * Get keyPageViewRate
+   *
+   * @return keyPageViewRate
+   */
+  @ApiModelProperty(value = "")
+  public Double getKeyPageViewRate() {
+    return keyPageViewRate;
+  }
+
+  public void setKeyPageViewRate(Double keyPageViewRate) {
+    this.keyPageViewRate = keyPageViewRate;
+  }
+
   public DailyReportsGetListStruct requestConversionsCount(Long requestConversionsCount) {
     this.requestConversionsCount = requestConversionsCount;
     return this;
@@ -9468,6 +9534,11 @@ public class DailyReportsGetListStruct {
             this.miniGamePayingAmountClickD1ByUpload,
             dailyReportsGetListStruct.miniGamePayingAmountClickD1ByUpload)
         && Objects.equals(
+            this.miniGameRetentionD1Rate, dailyReportsGetListStruct.miniGameRetentionD1Rate)
+        && Objects.equals(
+            this.miniGameRetentionD1Cost, dailyReportsGetListStruct.miniGameRetentionD1Cost)
+        && Objects.equals(this.keyPageViewRate, dailyReportsGetListStruct.keyPageViewRate)
+        && Objects.equals(
             this.requestConversionsCount, dailyReportsGetListStruct.requestConversionsCount)
         && Objects.equals(
             this.requestConversionsCost, dailyReportsGetListStruct.requestConversionsCost)
@@ -9961,6 +10032,9 @@ public class DailyReportsGetListStruct {
         purchaseAmountWithCoupon,
         purchaseAmountWithCouponCost,
         miniGamePayingAmountClickD1ByUpload,
+        miniGameRetentionD1Rate,
+        miniGameRetentionD1Cost,
+        keyPageViewRate,
         requestConversionsCount,
         requestConversionsCost,
         incomeRoi1,

@@ -27,6 +27,9 @@ public class MiniGameProgramSpec {
   @SerializedName("mini_game_program_id")
   private String miniGameProgramId = null;
 
+  @SerializedName("mini_game_program_path")
+  private String miniGameProgramPath = null;
+
   public MiniGameProgramSpec title(String title) {
     this.title = title;
     return this;
@@ -65,6 +68,25 @@ public class MiniGameProgramSpec {
     this.miniGameProgramId = miniGameProgramId;
   }
 
+  public MiniGameProgramSpec miniGameProgramPath(String miniGameProgramPath) {
+    this.miniGameProgramPath = miniGameProgramPath;
+    return this;
+  }
+
+  /**
+   * Get miniGameProgramPath
+   *
+   * @return miniGameProgramPath
+   */
+  @ApiModelProperty(value = "")
+  public String getMiniGameProgramPath() {
+    return miniGameProgramPath;
+  }
+
+  public void setMiniGameProgramPath(String miniGameProgramPath) {
+    this.miniGameProgramPath = miniGameProgramPath;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -75,12 +97,13 @@ public class MiniGameProgramSpec {
     }
     MiniGameProgramSpec miniGameProgramSpec = (MiniGameProgramSpec) o;
     return Objects.equals(this.title, miniGameProgramSpec.title)
-        && Objects.equals(this.miniGameProgramId, miniGameProgramSpec.miniGameProgramId);
+        && Objects.equals(this.miniGameProgramId, miniGameProgramSpec.miniGameProgramId)
+        && Objects.equals(this.miniGameProgramPath, miniGameProgramSpec.miniGameProgramPath);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(title, miniGameProgramId);
+    return Objects.hash(title, miniGameProgramId, miniGameProgramPath);
   }
 
   @Override

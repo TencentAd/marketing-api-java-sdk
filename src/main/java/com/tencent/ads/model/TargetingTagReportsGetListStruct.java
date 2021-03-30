@@ -531,6 +531,15 @@ public class TargetingTagReportsGetListStruct {
   @SerializedName("mini_game_paying_amount_click_d1_by_upload")
   private Long miniGamePayingAmountClickD1ByUpload = null;
 
+  @SerializedName("mini_game_retention_d1_rate")
+  private Double miniGameRetentionD1Rate = null;
+
+  @SerializedName("mini_game_retention_d1_cost")
+  private Long miniGameRetentionD1Cost = null;
+
+  @SerializedName("key_page_view_rate")
+  private Double keyPageViewRate = null;
+
   @SerializedName("age")
   private String age = null;
 
@@ -4270,6 +4279,63 @@ public class TargetingTagReportsGetListStruct {
     this.miniGamePayingAmountClickD1ByUpload = miniGamePayingAmountClickD1ByUpload;
   }
 
+  public TargetingTagReportsGetListStruct miniGameRetentionD1Rate(Double miniGameRetentionD1Rate) {
+    this.miniGameRetentionD1Rate = miniGameRetentionD1Rate;
+    return this;
+  }
+
+  /**
+   * Get miniGameRetentionD1Rate
+   *
+   * @return miniGameRetentionD1Rate
+   */
+  @ApiModelProperty(value = "")
+  public Double getMiniGameRetentionD1Rate() {
+    return miniGameRetentionD1Rate;
+  }
+
+  public void setMiniGameRetentionD1Rate(Double miniGameRetentionD1Rate) {
+    this.miniGameRetentionD1Rate = miniGameRetentionD1Rate;
+  }
+
+  public TargetingTagReportsGetListStruct miniGameRetentionD1Cost(Long miniGameRetentionD1Cost) {
+    this.miniGameRetentionD1Cost = miniGameRetentionD1Cost;
+    return this;
+  }
+
+  /**
+   * Get miniGameRetentionD1Cost
+   *
+   * @return miniGameRetentionD1Cost
+   */
+  @ApiModelProperty(value = "")
+  public Long getMiniGameRetentionD1Cost() {
+    return miniGameRetentionD1Cost;
+  }
+
+  public void setMiniGameRetentionD1Cost(Long miniGameRetentionD1Cost) {
+    this.miniGameRetentionD1Cost = miniGameRetentionD1Cost;
+  }
+
+  public TargetingTagReportsGetListStruct keyPageViewRate(Double keyPageViewRate) {
+    this.keyPageViewRate = keyPageViewRate;
+    return this;
+  }
+
+  /**
+   * Get keyPageViewRate
+   *
+   * @return keyPageViewRate
+   */
+  @ApiModelProperty(value = "")
+  public Double getKeyPageViewRate() {
+    return keyPageViewRate;
+  }
+
+  public void setKeyPageViewRate(Double keyPageViewRate) {
+    this.keyPageViewRate = keyPageViewRate;
+  }
+
   public TargetingTagReportsGetListStruct age(String age) {
     this.age = age;
     return this;
@@ -7700,6 +7766,11 @@ public class TargetingTagReportsGetListStruct {
         && Objects.equals(
             this.miniGamePayingAmountClickD1ByUpload,
             targetingTagReportsGetListStruct.miniGamePayingAmountClickD1ByUpload)
+        && Objects.equals(
+            this.miniGameRetentionD1Rate, targetingTagReportsGetListStruct.miniGameRetentionD1Rate)
+        && Objects.equals(
+            this.miniGameRetentionD1Cost, targetingTagReportsGetListStruct.miniGameRetentionD1Cost)
+        && Objects.equals(this.keyPageViewRate, targetingTagReportsGetListStruct.keyPageViewRate)
         && Objects.equals(this.age, targetingTagReportsGetListStruct.age)
         && Objects.equals(this.regionId, targetingTagReportsGetListStruct.regionId)
         && Objects.equals(this.cityId, targetingTagReportsGetListStruct.cityId)
@@ -8133,6 +8204,9 @@ public class TargetingTagReportsGetListStruct {
         purchaseAmountWithCoupon,
         purchaseAmountWithCouponCost,
         miniGamePayingAmountClickD1ByUpload,
+        miniGameRetentionD1Rate,
+        miniGameRetentionD1Cost,
+        keyPageViewRate,
         age,
         regionId,
         cityId,

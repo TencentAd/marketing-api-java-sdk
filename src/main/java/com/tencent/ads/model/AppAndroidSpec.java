@@ -30,6 +30,9 @@ public class AppAndroidSpec {
   @SerializedName("app_android_channel_package_id")
   private String appAndroidChannelPackageId = null;
 
+  @SerializedName("app_market_package")
+  private String appMarketPackage = null;
+
   public AppAndroidSpec deepLinkUrl(String deepLinkUrl) {
     this.deepLinkUrl = deepLinkUrl;
     return this;
@@ -87,6 +90,25 @@ public class AppAndroidSpec {
     this.appAndroidChannelPackageId = appAndroidChannelPackageId;
   }
 
+  public AppAndroidSpec appMarketPackage(String appMarketPackage) {
+    this.appMarketPackage = appMarketPackage;
+    return this;
+  }
+
+  /**
+   * Get appMarketPackage
+   *
+   * @return appMarketPackage
+   */
+  @ApiModelProperty(value = "")
+  public String getAppMarketPackage() {
+    return appMarketPackage;
+  }
+
+  public void setAppMarketPackage(String appMarketPackage) {
+    this.appMarketPackage = appMarketPackage;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -99,12 +121,13 @@ public class AppAndroidSpec {
     return Objects.equals(this.deepLinkUrl, appAndroidSpec.deepLinkUrl)
         && Objects.equals(this.appAndroidId, appAndroidSpec.appAndroidId)
         && Objects.equals(
-            this.appAndroidChannelPackageId, appAndroidSpec.appAndroidChannelPackageId);
+            this.appAndroidChannelPackageId, appAndroidSpec.appAndroidChannelPackageId)
+        && Objects.equals(this.appMarketPackage, appAndroidSpec.appMarketPackage);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(deepLinkUrl, appAndroidId, appAndroidChannelPackageId);
+    return Objects.hash(deepLinkUrl, appAndroidId, appAndroidChannelPackageId, appMarketPackage);
   }
 
   @Override
