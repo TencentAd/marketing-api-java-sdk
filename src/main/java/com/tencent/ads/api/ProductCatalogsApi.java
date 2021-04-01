@@ -205,6 +205,8 @@ public class ProductCatalogsApi {
    * Build call for productCatalogsGet
    *
    * @param accountId (required)
+   * @param catalogId (optional)
+   * @param catalogName (optional)
    * @param page (optional)
    * @param pageSize (optional)
    * @param fields 返回参数的字段列表 (optional)
@@ -215,6 +217,8 @@ public class ProductCatalogsApi {
    */
   public com.squareup.okhttp.Call productCatalogsGetCall(
       Long accountId,
+      Long catalogId,
+      String catalogName,
       Long page,
       Long pageSize,
       List<String> fields,
@@ -230,6 +234,10 @@ public class ProductCatalogsApi {
     List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
     if (accountId != null)
       localVarQueryParams.addAll(apiClient.parameterToPair("account_id", accountId));
+    if (catalogId != null)
+      localVarQueryParams.addAll(apiClient.parameterToPair("catalog_id", catalogId));
+    if (catalogName != null)
+      localVarQueryParams.addAll(apiClient.parameterToPair("catalog_name", catalogName));
     if (page != null) localVarQueryParams.addAll(apiClient.parameterToPair("page", page));
     if (pageSize != null)
       localVarQueryParams.addAll(apiClient.parameterToPair("page_size", pageSize));
@@ -282,6 +290,8 @@ public class ProductCatalogsApi {
   @SuppressWarnings("rawtypes")
   private com.squareup.okhttp.Call productCatalogsGetValidateBeforeCall(
       Long accountId,
+      Long catalogId,
+      String catalogName,
       Long page,
       Long pageSize,
       List<String> fields,
@@ -297,14 +307,23 @@ public class ProductCatalogsApi {
 
     com.squareup.okhttp.Call call =
         productCatalogsGetCall(
-            accountId, page, pageSize, fields, progressListener, progressRequestListener);
+            accountId,
+            catalogId,
+            catalogName,
+            page,
+            pageSize,
+            fields,
+            progressListener,
+            progressRequestListener);
     return call;
   }
 
   /**
-   * 获取商品目录信息
+   * 获取商品库
    *
    * @param accountId (required)
+   * @param catalogId (optional)
+   * @param catalogName (optional)
    * @param page (optional)
    * @param pageSize (optional)
    * @param fields 返回参数的字段列表 (optional)
@@ -313,16 +332,24 @@ public class ProductCatalogsApi {
    *     response body
    */
   public ProductCatalogsGetResponse productCatalogsGet(
-      Long accountId, Long page, Long pageSize, List<String> fields) throws ApiException {
+      Long accountId,
+      Long catalogId,
+      String catalogName,
+      Long page,
+      Long pageSize,
+      List<String> fields)
+      throws ApiException {
     ApiResponse<ProductCatalogsGetResponse> resp =
-        productCatalogsGetWithHttpInfo(accountId, page, pageSize, fields);
+        productCatalogsGetWithHttpInfo(accountId, catalogId, catalogName, page, pageSize, fields);
     return resp.getData();
   }
 
   /**
-   * 获取商品目录信息
+   * 获取商品库
    *
    * @param accountId (required)
+   * @param catalogId (optional)
+   * @param catalogName (optional)
    * @param page (optional)
    * @param pageSize (optional)
    * @param fields 返回参数的字段列表 (optional)
@@ -331,17 +358,26 @@ public class ProductCatalogsApi {
    *     response body
    */
   public ApiResponse<ProductCatalogsGetResponse> productCatalogsGetWithHttpInfo(
-      Long accountId, Long page, Long pageSize, List<String> fields) throws ApiException {
+      Long accountId,
+      Long catalogId,
+      String catalogName,
+      Long page,
+      Long pageSize,
+      List<String> fields)
+      throws ApiException {
     com.squareup.okhttp.Call call =
-        productCatalogsGetValidateBeforeCall(accountId, page, pageSize, fields, null, null);
+        productCatalogsGetValidateBeforeCall(
+            accountId, catalogId, catalogName, page, pageSize, fields, null, null);
     Type localVarReturnType = new TypeToken<ProductCatalogsGetResponse>() {}.getType();
     return apiClient.execute(call, localVarReturnType);
   }
 
   /**
-   * 获取商品目录信息 (asynchronously)
+   * 获取商品库 (asynchronously)
    *
    * @param accountId (required)
+   * @param catalogId (optional)
+   * @param catalogName (optional)
    * @param page (optional)
    * @param pageSize (optional)
    * @param fields 返回参数的字段列表 (optional)
@@ -351,6 +387,8 @@ public class ProductCatalogsApi {
    */
   public com.squareup.okhttp.Call productCatalogsGetAsync(
       Long accountId,
+      Long catalogId,
+      String catalogName,
       Long page,
       Long pageSize,
       List<String> fields,
@@ -380,7 +418,14 @@ public class ProductCatalogsApi {
 
     com.squareup.okhttp.Call call =
         productCatalogsGetValidateBeforeCall(
-            accountId, page, pageSize, fields, progressListener, progressRequestListener);
+            accountId,
+            catalogId,
+            catalogName,
+            page,
+            pageSize,
+            fields,
+            progressListener,
+            progressRequestListener);
     Type localVarReturnType = new TypeToken<ProductCatalogsGetResponse>() {}.getType();
     apiClient.executeAsync(call, localVarReturnType, callback);
     return call;

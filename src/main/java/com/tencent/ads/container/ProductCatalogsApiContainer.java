@@ -45,9 +45,11 @@ public class ProductCatalogsApiContainer extends ApiContainer {
   }
 
   /**
-   * 获取商品目录信息
+   * 获取商品库
    *
    * @param accountId (required)
+   * @param catalogId (optional)
+   * @param catalogName (optional)
    * @param page (optional)
    * @param pageSize (optional)
    * @param fields 返回参数的字段列表 (optional)
@@ -56,9 +58,15 @@ public class ProductCatalogsApiContainer extends ApiContainer {
    *     response body
    */
   public ProductCatalogsGetResponseData productCatalogsGet(
-      Long accountId, Long page, Long pageSize, List<String> fields)
+      Long accountId,
+      Long catalogId,
+      String catalogName,
+      Long page,
+      Long pageSize,
+      List<String> fields)
       throws ApiException, TencentAdsResponseException {
-    ProductCatalogsGetResponse resp = api.productCatalogsGet(accountId, page, pageSize, fields);
+    ProductCatalogsGetResponse resp =
+        api.productCatalogsGet(accountId, catalogId, catalogName, page, pageSize, fields);
     handleResponse(gson.toJson(resp));
     return resp.getData();
   }

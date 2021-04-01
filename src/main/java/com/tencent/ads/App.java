@@ -107,13 +107,13 @@ public class App {
   @Inject ProductItemsApiContainer productItemsApiContainer;
   @Inject ProductItemsDetailApiContainer productItemsDetailApiContainer;
   @Inject ProductItemsVerticalsApiContainer productItemsVerticalsApiContainer;
+  @Inject ProductSeriesApiContainer productSeriesApiContainer;
   @Inject ProductsSystemStatusApiContainer productsSystemStatusApiContainer;
   @Inject ProfilesApiContainer profilesApiContainer;
   @Inject PromotedObjectsApiContainer promotedObjectsApiContainer;
   @Inject QualificationsApiContainer qualificationsApiContainer;
   @Inject RealtimeCostApiContainer realtimeCostApiContainer;
   @Inject ReportApiContainer reportApiContainer;
-  @Inject SceneSpecTagsApiContainer sceneSpecTagsApiContainer;
   @Inject ShopApiContainer shopApiContainer;
   @Inject SplitTestsApiContainer splitTestsApiContainer;
   @Inject SystemStatusApiContainer systemStatusApiContainer;
@@ -510,6 +510,10 @@ public class App {
     return productItemsVerticalsApiContainer;
   }
 
+  public ProductSeriesApiContainer productSeries() {
+    return productSeriesApiContainer;
+  }
+
   public ProductsSystemStatusApiContainer productsSystemStatus() {
     return productsSystemStatusApiContainer;
   }
@@ -532,10 +536,6 @@ public class App {
 
   public ReportApiContainer report() {
     return reportApiContainer;
-  }
-
-  public SceneSpecTagsApiContainer sceneSpecTags() {
-    return sceneSpecTagsApiContainer;
   }
 
   public ShopApiContainer shop() {

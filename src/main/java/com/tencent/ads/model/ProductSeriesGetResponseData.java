@@ -19,19 +19,22 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
-/** SceneSpecTagsGetResponseData */
-public class SceneSpecTagsGetResponseData {
+/** ProductSeriesGetResponseData */
+public class ProductSeriesGetResponseData {
   @SerializedName("list")
-  private List<SceneSpecTagsGetListStruct> list = null;
+  private List<ProductSeriesStruct> list = null;
 
-  public SceneSpecTagsGetResponseData list(List<SceneSpecTagsGetListStruct> list) {
+  @SerializedName("page_info")
+  private Conf pageInfo = null;
+
+  public ProductSeriesGetResponseData list(List<ProductSeriesStruct> list) {
     this.list = list;
     return this;
   }
 
-  public SceneSpecTagsGetResponseData addListItem(SceneSpecTagsGetListStruct listItem) {
+  public ProductSeriesGetResponseData addListItem(ProductSeriesStruct listItem) {
     if (this.list == null) {
-      this.list = new ArrayList<SceneSpecTagsGetListStruct>();
+      this.list = new ArrayList<ProductSeriesStruct>();
     }
     this.list.add(listItem);
     return this;
@@ -43,12 +46,31 @@ public class SceneSpecTagsGetResponseData {
    * @return list
    */
   @ApiModelProperty(value = "")
-  public List<SceneSpecTagsGetListStruct> getList() {
+  public List<ProductSeriesStruct> getList() {
     return list;
   }
 
-  public void setList(List<SceneSpecTagsGetListStruct> list) {
+  public void setList(List<ProductSeriesStruct> list) {
     this.list = list;
+  }
+
+  public ProductSeriesGetResponseData pageInfo(Conf pageInfo) {
+    this.pageInfo = pageInfo;
+    return this;
+  }
+
+  /**
+   * Get pageInfo
+   *
+   * @return pageInfo
+   */
+  @ApiModelProperty(value = "")
+  public Conf getPageInfo() {
+    return pageInfo;
+  }
+
+  public void setPageInfo(Conf pageInfo) {
+    this.pageInfo = pageInfo;
   }
 
   @Override
@@ -59,13 +81,14 @@ public class SceneSpecTagsGetResponseData {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    SceneSpecTagsGetResponseData sceneSpecTagsGetResponseData = (SceneSpecTagsGetResponseData) o;
-    return Objects.equals(this.list, sceneSpecTagsGetResponseData.list);
+    ProductSeriesGetResponseData productSeriesGetResponseData = (ProductSeriesGetResponseData) o;
+    return Objects.equals(this.list, productSeriesGetResponseData.list)
+        && Objects.equals(this.pageInfo, productSeriesGetResponseData.pageInfo);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(list);
+    return Objects.hash(list, pageInfo);
   }
 
   @Override

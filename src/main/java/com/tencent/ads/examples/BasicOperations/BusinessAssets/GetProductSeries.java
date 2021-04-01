@@ -1,22 +1,29 @@
-package com.tencent.ads.examples.BasicOperations.Tools;
+package com.tencent.ads.examples.BasicOperations.BusinessAssets;
 
 import com.tencent.ads.ApiContextConfig;
 import com.tencent.ads.TencentAds;
 import com.tencent.ads.exception.TencentAdsResponseException;
 import com.tencent.ads.exception.TencentAdsSDKException;
 import com.tencent.ads.model.*;
+import com.tencent.ads.model.ProductSeriesSearchFilteringStruct;
 import java.util.List;
 
-public class GetSceneSpecTags {
+public class GetProductSeries {
   /** YOUR ACCESS TOKEN */
   public String ACCESS_TOKEN = "YOUR ACCESS TOKEN";
 
   /** TencentAds */
   public TencentAds tencentAds;
 
-  public String type = null;
-
   public Long accountId = null;
+
+  public Long catalogId = null;
+
+  public List<ProductSeriesSearchFilteringStruct> filtering = null;
+
+  public Long page = null;
+
+  public Long pageSize = null;
 
   public List<String> fields = null;
 
@@ -30,17 +37,19 @@ public class GetSceneSpecTags {
 
   public void buildParams() {}
 
-  public SceneSpecTagsGetResponseData getSceneSpecTags() throws Exception {
-    SceneSpecTagsGetResponseData response =
-        tencentAds.sceneSpecTags().sceneSpecTagsGet(type, accountId, fields);
+  public ProductSeriesGetResponseData getProductSeries() throws Exception {
+    ProductSeriesGetResponseData response =
+        tencentAds
+            .productSeries()
+            .productSeriesGet(accountId, catalogId, filtering, page, pageSize, fields);
     return response;
   }
 
   public static void main(String[] args) {
     try {
-      GetSceneSpecTags getSceneSpecTags = new GetSceneSpecTags();
-      getSceneSpecTags.init();
-      SceneSpecTagsGetResponseData response = getSceneSpecTags.getSceneSpecTags();
+      GetProductSeries getProductSeries = new GetProductSeries();
+      getProductSeries.init();
+      ProductSeriesGetResponseData response = getProductSeries.getProductSeries();
     } catch (TencentAdsResponseException e) {
       e.printStackTrace();
     } catch (TencentAdsSDKException e) {

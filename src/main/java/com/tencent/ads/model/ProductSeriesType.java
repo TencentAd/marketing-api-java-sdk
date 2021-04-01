@@ -19,23 +19,16 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-/**
- * 商品库状态，详见 &lt;a href&#x3D;&#39;catalog_status&#39;
- * target&#x3D;&#39;_blank&#39;&gt;[商品库状态]&lt;/a&gt;
- */
-@JsonAdapter(CatalogStatus.Adapter.class)
-public enum CatalogStatus {
-  PREPARE("PRODUCT_CATALOG_STATUS_PREPARE"),
+/** 商品系列类型 */
+@JsonAdapter(ProductSeriesType.Adapter.class)
+public enum ProductSeriesType {
+  CUSTOMIZED("PRODUCT_SERIES_TYPE_CUSTOMIZED"),
 
-  NORMAL("PRODUCT_CATALOG_STATUS_NORMAL"),
-
-  SUSPEND("PRODUCT_CATALOG_STATUS_SUSPEND"),
-
-  DELETED("PRODUCT_CATALOG_STATUS_DELETED");
+  UNLIMITED("PRODUCT_SERIES_TYPE_UNLIMITED");
 
   private String value;
 
-  CatalogStatus(String value) {
+  ProductSeriesType(String value) {
     this.value = value;
   }
 
@@ -48,8 +41,8 @@ public enum CatalogStatus {
     return String.valueOf(value);
   }
 
-  public static CatalogStatus fromValue(String text) {
-    for (CatalogStatus b : CatalogStatus.values()) {
+  public static ProductSeriesType fromValue(String text) {
+    for (ProductSeriesType b : ProductSeriesType.values()) {
       if (String.valueOf(b.value).equals(text)) {
         return b;
       }
@@ -57,17 +50,17 @@ public enum CatalogStatus {
     return null;
   }
 
-  public static class Adapter extends TypeAdapter<CatalogStatus> {
+  public static class Adapter extends TypeAdapter<ProductSeriesType> {
     @Override
-    public void write(final JsonWriter jsonWriter, final CatalogStatus enumeration)
+    public void write(final JsonWriter jsonWriter, final ProductSeriesType enumeration)
         throws IOException {
       jsonWriter.value(enumeration.getValue());
     }
 
     @Override
-    public CatalogStatus read(final JsonReader jsonReader) throws IOException {
+    public ProductSeriesType read(final JsonReader jsonReader) throws IOException {
       String value = jsonReader.nextString();
-      return CatalogStatus.fromValue(String.valueOf(value));
+      return ProductSeriesType.fromValue(String.valueOf(value));
     }
   }
 }

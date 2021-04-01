@@ -19,8 +19,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
-/** SceneSpecTagsGetResponse */
-public class SceneSpecTagsGetResponse {
+/** ProductSeriesGetResponse */
+public class ProductSeriesGetResponse {
   @SerializedName("code")
   private Long code = null;
 
@@ -34,9 +34,9 @@ public class SceneSpecTagsGetResponse {
   private List<ApiErrorStruct> errors = null;
 
   @SerializedName("data")
-  private SceneSpecTagsGetResponseData data = null;
+  private ProductSeriesGetResponseData data = null;
 
-  public SceneSpecTagsGetResponse code(Long code) {
+  public ProductSeriesGetResponse code(Long code) {
     this.code = code;
     return this;
   }
@@ -55,7 +55,7 @@ public class SceneSpecTagsGetResponse {
     this.code = code;
   }
 
-  public SceneSpecTagsGetResponse message(String message) {
+  public ProductSeriesGetResponse message(String message) {
     this.message = message;
     return this;
   }
@@ -74,7 +74,7 @@ public class SceneSpecTagsGetResponse {
     this.message = message;
   }
 
-  public SceneSpecTagsGetResponse messageCn(String messageCn) {
+  public ProductSeriesGetResponse messageCn(String messageCn) {
     this.messageCn = messageCn;
     return this;
   }
@@ -93,12 +93,12 @@ public class SceneSpecTagsGetResponse {
     this.messageCn = messageCn;
   }
 
-  public SceneSpecTagsGetResponse errors(List<ApiErrorStruct> errors) {
+  public ProductSeriesGetResponse errors(List<ApiErrorStruct> errors) {
     this.errors = errors;
     return this;
   }
 
-  public SceneSpecTagsGetResponse addErrorsItem(ApiErrorStruct errorsItem) {
+  public ProductSeriesGetResponse addErrorsItem(ApiErrorStruct errorsItem) {
     if (this.errors == null) {
       this.errors = new ArrayList<ApiErrorStruct>();
     }
@@ -120,7 +120,7 @@ public class SceneSpecTagsGetResponse {
     this.errors = errors;
   }
 
-  public SceneSpecTagsGetResponse data(SceneSpecTagsGetResponseData data) {
+  public ProductSeriesGetResponse data(ProductSeriesGetResponseData data) {
     this.data = data;
     return this;
   }
@@ -131,11 +131,11 @@ public class SceneSpecTagsGetResponse {
    * @return data
    */
   @ApiModelProperty(value = "")
-  public SceneSpecTagsGetResponseData getData() {
+  public ProductSeriesGetResponseData getData() {
     return data;
   }
 
-  public void setData(SceneSpecTagsGetResponseData data) {
+  public void setData(ProductSeriesGetResponseData data) {
     this.data = data;
   }
 
@@ -147,12 +147,12 @@ public class SceneSpecTagsGetResponse {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    SceneSpecTagsGetResponse sceneSpecTagsGetResponse = (SceneSpecTagsGetResponse) o;
-    return Objects.equals(this.code, sceneSpecTagsGetResponse.code)
-        && Objects.equals(this.message, sceneSpecTagsGetResponse.message)
-        && Objects.equals(this.messageCn, sceneSpecTagsGetResponse.messageCn)
-        && Objects.equals(this.errors, sceneSpecTagsGetResponse.errors)
-        && Objects.equals(this.data, sceneSpecTagsGetResponse.data);
+    ProductSeriesGetResponse productSeriesGetResponse = (ProductSeriesGetResponse) o;
+    return Objects.equals(this.code, productSeriesGetResponse.code)
+        && Objects.equals(this.message, productSeriesGetResponse.message)
+        && Objects.equals(this.messageCn, productSeriesGetResponse.messageCn)
+        && Objects.equals(this.errors, productSeriesGetResponse.errors)
+        && Objects.equals(this.data, productSeriesGetResponse.data);
   }
 
   @Override

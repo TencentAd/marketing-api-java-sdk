@@ -17,6 +17,10 @@ public class GetProductCatalogs {
 
   public Long accountId = null;
 
+  public Long catalogId = null;
+
+  public String catalogName = null;
+
   public Long page = null;
 
   public Long pageSize = null;
@@ -43,7 +47,9 @@ public class GetProductCatalogs {
 
   public ProductCatalogsGetResponseData getProductCatalogs() throws Exception {
     ProductCatalogsGetResponseData response =
-        tencentAds.productCatalogs().productCatalogsGet(accountId, page, pageSize, fields);
+        tencentAds
+            .productCatalogs()
+            .productCatalogsGet(accountId, catalogId, catalogName, page, pageSize, fields);
     return response;
   }
 

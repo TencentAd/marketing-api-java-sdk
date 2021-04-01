@@ -19,23 +19,16 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-/**
- * 商品库状态，详见 &lt;a href&#x3D;&#39;catalog_status&#39;
- * target&#x3D;&#39;_blank&#39;&gt;[商品库状态]&lt;/a&gt;
- */
-@JsonAdapter(CatalogStatus.Adapter.class)
-public enum CatalogStatus {
-  PREPARE("PRODUCT_CATALOG_STATUS_PREPARE"),
+/** 商品系列逻辑操作符,详见枚举值 */
+@JsonAdapter(ProductSeriesSpecLogicOperator.Adapter.class)
+public enum ProductSeriesSpecLogicOperator {
+  OR("LOGIC_OPERATOR_OR"),
 
-  NORMAL("PRODUCT_CATALOG_STATUS_NORMAL"),
-
-  SUSPEND("PRODUCT_CATALOG_STATUS_SUSPEND"),
-
-  DELETED("PRODUCT_CATALOG_STATUS_DELETED");
+  AND("LOGIC_OPERATOR_AND");
 
   private String value;
 
-  CatalogStatus(String value) {
+  ProductSeriesSpecLogicOperator(String value) {
     this.value = value;
   }
 
@@ -48,8 +41,8 @@ public enum CatalogStatus {
     return String.valueOf(value);
   }
 
-  public static CatalogStatus fromValue(String text) {
-    for (CatalogStatus b : CatalogStatus.values()) {
+  public static ProductSeriesSpecLogicOperator fromValue(String text) {
+    for (ProductSeriesSpecLogicOperator b : ProductSeriesSpecLogicOperator.values()) {
       if (String.valueOf(b.value).equals(text)) {
         return b;
       }
@@ -57,17 +50,17 @@ public enum CatalogStatus {
     return null;
   }
 
-  public static class Adapter extends TypeAdapter<CatalogStatus> {
+  public static class Adapter extends TypeAdapter<ProductSeriesSpecLogicOperator> {
     @Override
-    public void write(final JsonWriter jsonWriter, final CatalogStatus enumeration)
+    public void write(final JsonWriter jsonWriter, final ProductSeriesSpecLogicOperator enumeration)
         throws IOException {
       jsonWriter.value(enumeration.getValue());
     }
 
     @Override
-    public CatalogStatus read(final JsonReader jsonReader) throws IOException {
+    public ProductSeriesSpecLogicOperator read(final JsonReader jsonReader) throws IOException {
       String value = jsonReader.nextString();
-      return CatalogStatus.fromValue(String.valueOf(value));
+      return ProductSeriesSpecLogicOperator.fromValue(String.valueOf(value));
     }
   }
 }

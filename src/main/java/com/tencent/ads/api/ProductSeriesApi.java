@@ -21,7 +21,8 @@ import com.tencent.ads.Configuration;
 import com.tencent.ads.Pair;
 import com.tencent.ads.ProgressRequestBody;
 import com.tencent.ads.ProgressResponseBody;
-import com.tencent.ads.model.SceneSpecTagsGetResponse;
+import com.tencent.ads.model.ProductSeriesGetResponse;
+import com.tencent.ads.model.ProductSeriesSearchFilteringStruct;
 import java.io.IOException;
 import java.lang.reflect.Type;
 import java.util.ArrayList;
@@ -29,14 +30,14 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class SceneSpecTagsApi {
+public class ProductSeriesApi {
   private ApiClient apiClient;
 
-  public SceneSpecTagsApi() {
+  public ProductSeriesApi() {
     this(Configuration.getDefaultApiClient());
   }
 
-  public SceneSpecTagsApi(ApiClient apiClient) {
+  public ProductSeriesApi(ApiClient apiClient) {
     this.apiClient = apiClient;
   }
 
@@ -49,19 +50,25 @@ public class SceneSpecTagsApi {
   }
 
   /**
-   * Build call for sceneSpecTagsGet
+   * Build call for productSeriesGet
    *
-   * @param type (required)
-   * @param accountId (optional)
+   * @param accountId (required)
+   * @param catalogId (required)
+   * @param filtering (optional)
+   * @param page (optional)
+   * @param pageSize (optional)
    * @param fields 返回参数的字段列表 (optional)
    * @param progressListener Progress listener
    * @param progressRequestListener Progress request listener
    * @return Call to execute
    * @throws ApiException If fail to serialize the request body object
    */
-  public com.squareup.okhttp.Call sceneSpecTagsGetCall(
-      String type,
+  public com.squareup.okhttp.Call productSeriesGetCall(
       Long accountId,
+      Long catalogId,
+      List<ProductSeriesSearchFilteringStruct> filtering,
+      Long page,
+      Long pageSize,
       List<String> fields,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener)
@@ -69,13 +76,20 @@ public class SceneSpecTagsApi {
     Object localVarPostBody = null;
 
     // create path and map variables
-    String localVarPath = "/scene_spec_tags/get";
+    String localVarPath = "/product_series/get";
 
     List<Pair> localVarQueryParams = new ArrayList<Pair>();
     List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
     if (accountId != null)
       localVarQueryParams.addAll(apiClient.parameterToPair("account_id", accountId));
-    if (type != null) localVarQueryParams.addAll(apiClient.parameterToPair("type", type));
+    if (catalogId != null)
+      localVarQueryParams.addAll(apiClient.parameterToPair("catalog_id", catalogId));
+    if (filtering != null)
+      localVarCollectionQueryParams.addAll(
+          apiClient.parameterToPairs("multi", "filtering", filtering));
+    if (page != null) localVarQueryParams.addAll(apiClient.parameterToPair("page", page));
+    if (pageSize != null)
+      localVarQueryParams.addAll(apiClient.parameterToPair("page_size", pageSize));
     if (fields != null)
       localVarCollectionQueryParams.addAll(apiClient.parameterToPairs("multi", "fields", fields));
 
@@ -123,75 +137,117 @@ public class SceneSpecTagsApi {
   }
 
   @SuppressWarnings("rawtypes")
-  private com.squareup.okhttp.Call sceneSpecTagsGetValidateBeforeCall(
-      String type,
+  private com.squareup.okhttp.Call productSeriesGetValidateBeforeCall(
       Long accountId,
+      Long catalogId,
+      List<ProductSeriesSearchFilteringStruct> filtering,
+      Long page,
+      Long pageSize,
       List<String> fields,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener)
       throws ApiException {
 
-    // verify the required parameter 'type' is set
-    if (type == null) {
+    // verify the required parameter 'accountId' is set
+    if (accountId == null) {
       throw new ApiException(
-          "Missing the required parameter 'type' when calling sceneSpecTagsGet(Async)");
+          "Missing the required parameter 'accountId' when calling productSeriesGet(Async)");
+    }
+
+    // verify the required parameter 'catalogId' is set
+    if (catalogId == null) {
+      throw new ApiException(
+          "Missing the required parameter 'catalogId' when calling productSeriesGet(Async)");
     }
 
     com.squareup.okhttp.Call call =
-        sceneSpecTagsGetCall(type, accountId, fields, progressListener, progressRequestListener);
+        productSeriesGetCall(
+            accountId,
+            catalogId,
+            filtering,
+            page,
+            pageSize,
+            fields,
+            progressListener,
+            progressRequestListener);
     return call;
   }
 
   /**
-   * 获取场景定向标签
+   * 获取商品系列
    *
-   * @param type (required)
-   * @param accountId (optional)
+   * @param accountId (required)
+   * @param catalogId (required)
+   * @param filtering (optional)
+   * @param page (optional)
+   * @param pageSize (optional)
    * @param fields 返回参数的字段列表 (optional)
-   * @return SceneSpecTagsGetResponse
+   * @return ProductSeriesGetResponse
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
-  public SceneSpecTagsGetResponse sceneSpecTagsGet(String type, Long accountId, List<String> fields)
+  public ProductSeriesGetResponse productSeriesGet(
+      Long accountId,
+      Long catalogId,
+      List<ProductSeriesSearchFilteringStruct> filtering,
+      Long page,
+      Long pageSize,
+      List<String> fields)
       throws ApiException {
-    ApiResponse<SceneSpecTagsGetResponse> resp =
-        sceneSpecTagsGetWithHttpInfo(type, accountId, fields);
+    ApiResponse<ProductSeriesGetResponse> resp =
+        productSeriesGetWithHttpInfo(accountId, catalogId, filtering, page, pageSize, fields);
     return resp.getData();
   }
 
   /**
-   * 获取场景定向标签
+   * 获取商品系列
    *
-   * @param type (required)
-   * @param accountId (optional)
+   * @param accountId (required)
+   * @param catalogId (required)
+   * @param filtering (optional)
+   * @param page (optional)
+   * @param pageSize (optional)
    * @param fields 返回参数的字段列表 (optional)
-   * @return ApiResponse&lt;SceneSpecTagsGetResponse&gt;
+   * @return ApiResponse&lt;ProductSeriesGetResponse&gt;
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
-  public ApiResponse<SceneSpecTagsGetResponse> sceneSpecTagsGetWithHttpInfo(
-      String type, Long accountId, List<String> fields) throws ApiException {
+  public ApiResponse<ProductSeriesGetResponse> productSeriesGetWithHttpInfo(
+      Long accountId,
+      Long catalogId,
+      List<ProductSeriesSearchFilteringStruct> filtering,
+      Long page,
+      Long pageSize,
+      List<String> fields)
+      throws ApiException {
     com.squareup.okhttp.Call call =
-        sceneSpecTagsGetValidateBeforeCall(type, accountId, fields, null, null);
-    Type localVarReturnType = new TypeToken<SceneSpecTagsGetResponse>() {}.getType();
+        productSeriesGetValidateBeforeCall(
+            accountId, catalogId, filtering, page, pageSize, fields, null, null);
+    Type localVarReturnType = new TypeToken<ProductSeriesGetResponse>() {}.getType();
     return apiClient.execute(call, localVarReturnType);
   }
 
   /**
-   * 获取场景定向标签 (asynchronously)
+   * 获取商品系列 (asynchronously)
    *
-   * @param type (required)
-   * @param accountId (optional)
+   * @param accountId (required)
+   * @param catalogId (required)
+   * @param filtering (optional)
+   * @param page (optional)
+   * @param pageSize (optional)
    * @param fields 返回参数的字段列表 (optional)
    * @param callback The callback to be executed when the API call finishes
    * @return The request call
    * @throws ApiException If fail to process the API call, e.g. serializing the request body object
    */
-  public com.squareup.okhttp.Call sceneSpecTagsGetAsync(
-      String type,
+  public com.squareup.okhttp.Call productSeriesGetAsync(
       Long accountId,
+      Long catalogId,
+      List<ProductSeriesSearchFilteringStruct> filtering,
+      Long page,
+      Long pageSize,
       List<String> fields,
-      final ApiCallback<SceneSpecTagsGetResponse> callback)
+      final ApiCallback<ProductSeriesGetResponse> callback)
       throws ApiException {
 
     ProgressResponseBody.ProgressListener progressListener = null;
@@ -216,9 +272,16 @@ public class SceneSpecTagsApi {
     }
 
     com.squareup.okhttp.Call call =
-        sceneSpecTagsGetValidateBeforeCall(
-            type, accountId, fields, progressListener, progressRequestListener);
-    Type localVarReturnType = new TypeToken<SceneSpecTagsGetResponse>() {}.getType();
+        productSeriesGetValidateBeforeCall(
+            accountId,
+            catalogId,
+            filtering,
+            page,
+            pageSize,
+            fields,
+            progressListener,
+            progressRequestListener);
+    Type localVarReturnType = new TypeToken<ProductSeriesGetResponse>() {}.getType();
     apiClient.executeAsync(call, localVarReturnType, callback);
     return call;
   }

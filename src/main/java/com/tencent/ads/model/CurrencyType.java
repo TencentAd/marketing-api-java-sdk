@@ -19,20 +19,16 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-/** 场景定向标签类型 */
-@JsonAdapter(SceneSpecTagsType.Adapter.class)
-public enum SceneSpecTagsType {
-  WECHAT_POSITION("WECHAT_POSITION"),
+/** 字段取值货币类型 */
+@JsonAdapter(CurrencyType.Adapter.class)
+public enum CurrencyType {
+  UNKNOWN("CURRENCY_TYPE_UNKNOWN"),
 
-  OFFICIAL_ACCOUNT_MEDIA_CATEGORY("OFFICIAL_ACCOUNT_MEDIA_CATEGORY"),
-
-  MINI_PROGRAM_AND_MINI_GAME("MINI_PROGRAM_AND_MINI_GAME"),
-
-  PAY_SCENE("PAY_SCENE");
+  CNY("CURRENCY_TYPE_CNY");
 
   private String value;
 
-  SceneSpecTagsType(String value) {
+  CurrencyType(String value) {
     this.value = value;
   }
 
@@ -45,8 +41,8 @@ public enum SceneSpecTagsType {
     return String.valueOf(value);
   }
 
-  public static SceneSpecTagsType fromValue(String text) {
-    for (SceneSpecTagsType b : SceneSpecTagsType.values()) {
+  public static CurrencyType fromValue(String text) {
+    for (CurrencyType b : CurrencyType.values()) {
       if (String.valueOf(b.value).equals(text)) {
         return b;
       }
@@ -54,17 +50,17 @@ public enum SceneSpecTagsType {
     return null;
   }
 
-  public static class Adapter extends TypeAdapter<SceneSpecTagsType> {
+  public static class Adapter extends TypeAdapter<CurrencyType> {
     @Override
-    public void write(final JsonWriter jsonWriter, final SceneSpecTagsType enumeration)
+    public void write(final JsonWriter jsonWriter, final CurrencyType enumeration)
         throws IOException {
       jsonWriter.value(enumeration.getValue());
     }
 
     @Override
-    public SceneSpecTagsType read(final JsonReader jsonReader) throws IOException {
+    public CurrencyType read(final JsonReader jsonReader) throws IOException {
       String value = jsonReader.nextString();
-      return SceneSpecTagsType.fromValue(String.valueOf(value));
+      return CurrencyType.fromValue(String.valueOf(value));
     }
   }
 }

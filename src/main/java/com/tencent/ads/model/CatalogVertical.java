@@ -20,8 +20,8 @@ import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
 /**
- * 商品目录行业类型，详见 &lt;a href&#x3D;&#39;catalog_vertical&#39;
- * target&#x3D;&#39;_blank&#39;&gt;[商品目录行业类型]&lt;/a&gt;
+ * 商品库行业类型，详见 &lt;a href&#x3D;&#39;catalog_vertical&#39;
+ * target&#x3D;&#39;_blank&#39;&gt;[商品库行业类型]&lt;/a&gt;
  */
 @JsonAdapter(CatalogVertical.Adapter.class)
 public enum CatalogVertical {
