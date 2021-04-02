@@ -44,6 +44,8 @@ public class GetXijingPageList {
 
   public String appType = null;
 
+  public String queryType = null;
+
   public List<String> fields = null;
 
   public void init() {
@@ -76,6 +78,7 @@ public class GetXijingPageList {
                 pageOwnerId,
                 appId,
                 appType,
+                queryType,
                 fields);
     return response;
   }

@@ -66,6 +66,7 @@ public class XijingPageListApi {
    * @param pageOwnerId (optional)
    * @param appId (optional)
    * @param appType (optional)
+   * @param queryType (optional)
    * @param fields 返回参数的字段列表 (optional)
    * @param progressListener Progress listener
    * @param progressRequestListener Progress request listener
@@ -88,6 +89,7 @@ public class XijingPageListApi {
       Long pageOwnerId,
       Long appId,
       String appType,
+      String queryType,
       List<String> fields,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener)
@@ -129,6 +131,8 @@ public class XijingPageListApi {
       localVarQueryParams.addAll(apiClient.parameterToPair("page_owner_id", pageOwnerId));
     if (appId != null) localVarQueryParams.addAll(apiClient.parameterToPair("app_id", appId));
     if (appType != null) localVarQueryParams.addAll(apiClient.parameterToPair("app_type", appType));
+    if (queryType != null)
+      localVarQueryParams.addAll(apiClient.parameterToPair("query_type", queryType));
     if (fields != null)
       localVarCollectionQueryParams.addAll(apiClient.parameterToPairs("multi", "fields", fields));
 
@@ -192,6 +196,7 @@ public class XijingPageListApi {
       Long pageOwnerId,
       Long appId,
       String appType,
+      String queryType,
       List<String> fields,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener)
@@ -220,6 +225,7 @@ public class XijingPageListApi {
             pageOwnerId,
             appId,
             appType,
+            queryType,
             fields,
             progressListener,
             progressRequestListener);
@@ -244,6 +250,7 @@ public class XijingPageListApi {
    * @param pageOwnerId (optional)
    * @param appId (optional)
    * @param appType (optional)
+   * @param queryType (optional)
    * @param fields 返回参数的字段列表 (optional)
    * @return XijingPageListGetResponse
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
@@ -265,6 +272,7 @@ public class XijingPageListApi {
       Long pageOwnerId,
       Long appId,
       String appType,
+      String queryType,
       List<String> fields)
       throws ApiException {
     ApiResponse<XijingPageListGetResponse> resp =
@@ -284,6 +292,7 @@ public class XijingPageListApi {
             pageOwnerId,
             appId,
             appType,
+            queryType,
             fields);
     return resp.getData();
   }
@@ -306,6 +315,7 @@ public class XijingPageListApi {
    * @param pageOwnerId (optional)
    * @param appId (optional)
    * @param appType (optional)
+   * @param queryType (optional)
    * @param fields 返回参数的字段列表 (optional)
    * @return ApiResponse&lt;XijingPageListGetResponse&gt;
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
@@ -327,6 +337,7 @@ public class XijingPageListApi {
       Long pageOwnerId,
       Long appId,
       String appType,
+      String queryType,
       List<String> fields)
       throws ApiException {
     com.squareup.okhttp.Call call =
@@ -346,6 +357,7 @@ public class XijingPageListApi {
             pageOwnerId,
             appId,
             appType,
+            queryType,
             fields,
             null,
             null);
@@ -371,6 +383,7 @@ public class XijingPageListApi {
    * @param pageOwnerId (optional)
    * @param appId (optional)
    * @param appType (optional)
+   * @param queryType (optional)
    * @param fields 返回参数的字段列表 (optional)
    * @param callback The callback to be executed when the API call finishes
    * @return The request call
@@ -392,6 +405,7 @@ public class XijingPageListApi {
       Long pageOwnerId,
       Long appId,
       String appType,
+      String queryType,
       List<String> fields,
       final ApiCallback<XijingPageListGetResponse> callback)
       throws ApiException {
@@ -434,6 +448,7 @@ public class XijingPageListApi {
             pageOwnerId,
             appId,
             appType,
+            queryType,
             fields,
             progressListener,
             progressRequestListener);

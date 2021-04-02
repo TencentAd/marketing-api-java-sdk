@@ -151,6 +151,7 @@ public class App {
   @Inject WechatQualificationsApiContainer wechatQualificationsApiContainer;
   @Inject XijingPageApiContainer xijingPageApiContainer;
   @Inject XijingPageByComponentsApiContainer xijingPageByComponentsApiContainer;
+  @Inject XijingPageInteractiveApiContainer xijingPageInteractiveApiContainer;
   @Inject XijingPageListApiContainer xijingPageListApiContainer;
   @Inject XijingTemplateApiContainer xijingTemplateApiContainer;
 
@@ -684,6 +685,10 @@ public class App {
 
   public XijingPageByComponentsApiContainer xijingPageByComponents() {
     return xijingPageByComponentsApiContainer;
+  }
+
+  public XijingPageInteractiveApiContainer xijingPageInteractive() {
+    return xijingPageInteractiveApiContainer;
   }
 
   public XijingPageListApiContainer xijingPageList() {
