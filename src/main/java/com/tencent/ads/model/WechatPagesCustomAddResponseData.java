@@ -22,9 +22,6 @@ public class WechatPagesCustomAddResponseData {
   @SerializedName("page_id")
   private Long pageId = null;
 
-  @SerializedName("page_url")
-  private String pageUrl = null;
-
   public WechatPagesCustomAddResponseData pageId(Long pageId) {
     this.pageId = pageId;
     return this;
@@ -44,25 +41,6 @@ public class WechatPagesCustomAddResponseData {
     this.pageId = pageId;
   }
 
-  public WechatPagesCustomAddResponseData pageUrl(String pageUrl) {
-    this.pageUrl = pageUrl;
-    return this;
-  }
-
-  /**
-   * Get pageUrl
-   *
-   * @return pageUrl
-   */
-  @ApiModelProperty(value = "")
-  public String getPageUrl() {
-    return pageUrl;
-  }
-
-  public void setPageUrl(String pageUrl) {
-    this.pageUrl = pageUrl;
-  }
-
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -73,13 +51,12 @@ public class WechatPagesCustomAddResponseData {
     }
     WechatPagesCustomAddResponseData wechatPagesCustomAddResponseData =
         (WechatPagesCustomAddResponseData) o;
-    return Objects.equals(this.pageId, wechatPagesCustomAddResponseData.pageId)
-        && Objects.equals(this.pageUrl, wechatPagesCustomAddResponseData.pageUrl);
+    return Objects.equals(this.pageId, wechatPagesCustomAddResponseData.pageId);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(pageId, pageUrl);
+    return Objects.hash(pageId);
   }
 
   @Override

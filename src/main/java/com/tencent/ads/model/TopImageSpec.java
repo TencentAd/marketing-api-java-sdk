@@ -19,12 +19,12 @@ import io.swagger.annotations.ApiModelProperty;
 import java.util.Objects;
 
 /**
- * 顶部图片组件元素&lt;br&gt; 图片大小: 不超过300KB&lt;br&gt; 图片尺寸: 朋友圈常规广告 800*800,&lt;br&gt; 朋友圈卡片广告800*450.
- * &lt;br&gt; 公众号及其他广告位 800*800/640*800/800*640/800*450
+ * 顶部图片组件元素&lt;br&gt; 图片大小: 不超过300KB&lt;br&gt; 图片尺寸: 朋友圈常规广告 800*800, 朋友圈卡片广告800*450. &lt;br&gt;
+ * 公众号及其他广告位 800*800/640*800/800*640/800*450
  */
 @ApiModel(
     description =
-        "顶部图片组件元素<br>        图片大小: 不超过300KB<br>        图片尺寸: 朋友圈常规广告 800*800,<br>        朋友圈卡片广告800*450. <br>        公众号及其他广告位 800*800/640*800/800*640/800*450")
+        "顶部图片组件元素<br>        图片大小: 不超过300KB<br>        图片尺寸: 朋友圈常规广告 800*800, 朋友圈卡片广告800*450. <br>        公众号及其他广告位 800*800/640*800/800*640/800*450")
 public class TopImageSpec {
   @SerializedName("image_id")
   private String imageId = null;

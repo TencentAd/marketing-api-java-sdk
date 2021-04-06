@@ -47,8 +47,8 @@ public class CanvasFloatButtonSpecType {
   @SerializedName("disappear_type")
   private Long disappearType = null;
 
-  @SerializedName("forbid_page")
-  private List<Long> forbidPage = null;
+  @SerializedName("forbid_page_list")
+  private List<Long> forbidPageList = null;
 
   @SerializedName("element_type")
   private CanvasFloatElementType elementType = null;
@@ -208,31 +208,31 @@ public class CanvasFloatButtonSpecType {
     this.disappearType = disappearType;
   }
 
-  public CanvasFloatButtonSpecType forbidPage(List<Long> forbidPage) {
-    this.forbidPage = forbidPage;
+  public CanvasFloatButtonSpecType forbidPageList(List<Long> forbidPageList) {
+    this.forbidPageList = forbidPageList;
     return this;
   }
 
-  public CanvasFloatButtonSpecType addForbidPageItem(Long forbidPageItem) {
-    if (this.forbidPage == null) {
-      this.forbidPage = new ArrayList<Long>();
+  public CanvasFloatButtonSpecType addForbidPageListItem(Long forbidPageListItem) {
+    if (this.forbidPageList == null) {
+      this.forbidPageList = new ArrayList<Long>();
     }
-    this.forbidPage.add(forbidPageItem);
+    this.forbidPageList.add(forbidPageListItem);
     return this;
   }
 
   /**
-   * Get forbidPage
+   * Get forbidPageList
    *
-   * @return forbidPage
+   * @return forbidPageList
    */
   @ApiModelProperty(value = "")
-  public List<Long> getForbidPage() {
-    return forbidPage;
+  public List<Long> getForbidPageList() {
+    return forbidPageList;
   }
 
-  public void setForbidPage(List<Long> forbidPage) {
-    this.forbidPage = forbidPage;
+  public void setForbidPageList(List<Long> forbidPageList) {
+    this.forbidPageList = forbidPageList;
   }
 
   public CanvasFloatButtonSpecType elementType(CanvasFloatElementType elementType) {
@@ -290,7 +290,7 @@ public class CanvasFloatButtonSpecType {
         && Objects.equals(this.descColor, canvasFloatButtonSpecType.descColor)
         && Objects.equals(this.appearType, canvasFloatButtonSpecType.appearType)
         && Objects.equals(this.disappearType, canvasFloatButtonSpecType.disappearType)
-        && Objects.equals(this.forbidPage, canvasFloatButtonSpecType.forbidPage)
+        && Objects.equals(this.forbidPageList, canvasFloatButtonSpecType.forbidPageList)
         && Objects.equals(this.elementType, canvasFloatButtonSpecType.elementType)
         && Objects.equals(this.appDownloadSpec, canvasFloatButtonSpecType.appDownloadSpec);
   }
@@ -306,7 +306,7 @@ public class CanvasFloatButtonSpecType {
         descColor,
         appearType,
         disappearType,
-        forbidPage,
+        forbidPageList,
         elementType,
         appDownloadSpec);
   }

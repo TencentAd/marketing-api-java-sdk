@@ -22,9 +22,9 @@
 </dependency>
 ```
 
-- 或者您也可以手动下载[Java压缩包文件](https://github.com/TencentAd/marketing-api-java-sdk/archive/v1.1.18.zip)，解压后可以得到一个Java SDK的源码项目。SDK下载地址：[ams-marketing-sdk-java-1.1.18.zip](https://github.com/TencentAd/marketing-api-java-sdk/archive/v1.1.18.zip)
+- 或者您也可以手动下载[Java压缩包文件](https://github.com/TencentAd/marketing-api-java-sdk/archive/v1.1.18.zip)，解压后可以得到一个Java SDK的源码项目。SDK下载地址：[ams-marketing-sdk-java.zip](https://github.com/TencentAd/marketing-api-java-sdk/archive/v1.1.18.zip)
 
-  1. 解压文件，默认解压到目录ams-marketing-sdk-java
+  1. 解压文件，默认解压到目录ams-marketing-sdk-java。
   2. 执行mvn clean install，将包安装到你本地的Maven资源库中。
 ```bash
 cd ams-marketing-sdk-java

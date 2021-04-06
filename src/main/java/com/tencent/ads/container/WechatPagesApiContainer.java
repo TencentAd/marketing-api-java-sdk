@@ -34,7 +34,7 @@ public class WechatPagesApiContainer extends ApiContainer {
   @Inject WechatPagesApi api;
 
   /**
-   * 创建微信落地页
+   * 基于模板创建微信原生页
    *
    * @param data (required)
    * @return WechatPagesAddResponse

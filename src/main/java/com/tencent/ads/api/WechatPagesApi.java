@@ -137,7 +137,7 @@ public class WechatPagesApi {
   }
 
   /**
-   * 创建微信落地页
+   * 基于模板创建微信原生页
    *
    * @param data (required)
    * @return WechatPagesAddResponse
@@ -150,7 +150,7 @@ public class WechatPagesApi {
   }
 
   /**
-   * 创建微信落地页
+   * 基于模板创建微信原生页
    *
    * @param data (required)
    * @return ApiResponse&lt;WechatPagesAddResponse&gt;
@@ -165,7 +165,7 @@ public class WechatPagesApi {
   }
 
   /**
-   * 创建微信落地页 (asynchronously)
+   * 基于模板创建微信原生页 (asynchronously)
    *
    * @param data (required)
    * @param callback The callback to be executed when the API call finishes
