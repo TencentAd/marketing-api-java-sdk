@@ -20,14 +20,14 @@ import java.util.Objects;
 
 /** 落地页信息 */
 @ApiModel(description = "落地页信息")
-public class DynamicPageSpec {
+public class DynamicCreativePageSpec {
   @SerializedName("page_id")
   private Long pageId = null;
 
   @SerializedName("page_url")
   private String pageUrl = null;
 
-  public DynamicPageSpec pageId(Long pageId) {
+  public DynamicCreativePageSpec pageId(Long pageId) {
     this.pageId = pageId;
     return this;
   }
@@ -46,7 +46,7 @@ public class DynamicPageSpec {
     this.pageId = pageId;
   }
 
-  public DynamicPageSpec pageUrl(String pageUrl) {
+  public DynamicCreativePageSpec pageUrl(String pageUrl) {
     this.pageUrl = pageUrl;
     return this;
   }
@@ -73,9 +73,9 @@ public class DynamicPageSpec {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    DynamicPageSpec dynamicPageSpec = (DynamicPageSpec) o;
-    return Objects.equals(this.pageId, dynamicPageSpec.pageId)
-        && Objects.equals(this.pageUrl, dynamicPageSpec.pageUrl);
+    DynamicCreativePageSpec dynamicCreativePageSpec = (DynamicCreativePageSpec) o;
+    return Objects.equals(this.pageId, dynamicCreativePageSpec.pageId)
+        && Objects.equals(this.pageUrl, dynamicCreativePageSpec.pageUrl);
   }
 
   @Override

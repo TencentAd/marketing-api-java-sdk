@@ -48,6 +48,9 @@ public class PagesGetListStruct {
   @SerializedName("playable_type")
   private PlayableType playableType = null;
 
+  @SerializedName("page_status")
+  private PageStatus pageStatus = null;
+
   public PagesGetListStruct pageId(Long pageId) {
     this.pageId = pageId;
     return this;
@@ -219,6 +222,25 @@ public class PagesGetListStruct {
     this.playableType = playableType;
   }
 
+  public PagesGetListStruct pageStatus(PageStatus pageStatus) {
+    this.pageStatus = pageStatus;
+    return this;
+  }
+
+  /**
+   * Get pageStatus
+   *
+   * @return pageStatus
+   */
+  @ApiModelProperty(value = "")
+  public PageStatus getPageStatus() {
+    return pageStatus;
+  }
+
+  public void setPageStatus(PageStatus pageStatus) {
+    this.pageStatus = pageStatus;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -236,7 +258,8 @@ public class PagesGetListStruct {
         && Objects.equals(this.promotedObjectId, pagesGetListStruct.promotedObjectId)
         && Objects.equals(this.productCatalogId, pagesGetListStruct.productCatalogId)
         && Objects.equals(this.pageType, pagesGetListStruct.pageType)
-        && Objects.equals(this.playableType, pagesGetListStruct.playableType);
+        && Objects.equals(this.playableType, pagesGetListStruct.playableType)
+        && Objects.equals(this.pageStatus, pagesGetListStruct.pageStatus);
   }
 
   @Override
@@ -250,7 +273,8 @@ public class PagesGetListStruct {
         promotedObjectId,
         productCatalogId,
         pageType,
-        playableType);
+        playableType,
+        pageStatus);
   }
 
   @Override

@@ -33,7 +33,7 @@ public class GeoLocations {
   private List<Long> businessDistricts = null;
 
   @SerializedName("custom_locations")
-  private List<CustomLocationsItem> customLocations = null;
+  private List<CustomLocationsItemWithName> customLocations = null;
 
   public GeoLocations locationTypes(List<String> locationTypes) {
     this.locationTypes = locationTypes;
@@ -116,14 +116,14 @@ public class GeoLocations {
     this.businessDistricts = businessDistricts;
   }
 
-  public GeoLocations customLocations(List<CustomLocationsItem> customLocations) {
+  public GeoLocations customLocations(List<CustomLocationsItemWithName> customLocations) {
     this.customLocations = customLocations;
     return this;
   }
 
-  public GeoLocations addCustomLocationsItem(CustomLocationsItem customLocationsItem) {
+  public GeoLocations addCustomLocationsItem(CustomLocationsItemWithName customLocationsItem) {
     if (this.customLocations == null) {
-      this.customLocations = new ArrayList<CustomLocationsItem>();
+      this.customLocations = new ArrayList<CustomLocationsItemWithName>();
     }
     this.customLocations.add(customLocationsItem);
     return this;
@@ -135,11 +135,11 @@ public class GeoLocations {
    * @return customLocations
    */
   @ApiModelProperty(value = "")
-  public List<CustomLocationsItem> getCustomLocations() {
+  public List<CustomLocationsItemWithName> getCustomLocations() {
     return customLocations;
   }
 
-  public void setCustomLocations(List<CustomLocationsItem> customLocations) {
+  public void setCustomLocations(List<CustomLocationsItemWithName> customLocations) {
     this.customLocations = customLocations;
   }
 

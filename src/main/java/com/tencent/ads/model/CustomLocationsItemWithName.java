@@ -20,7 +20,7 @@ import java.util.Objects;
 
 /** option_list_item */
 @ApiModel(description = "option_list_item")
-public class CustomLocationsItem {
+public class CustomLocationsItemWithName {
   @SerializedName("longitude")
   private Double longitude = null;
 
@@ -30,7 +30,7 @@ public class CustomLocationsItem {
   @SerializedName("radius")
   private Long radius = null;
 
-  public CustomLocationsItem longitude(Double longitude) {
+  public CustomLocationsItemWithName longitude(Double longitude) {
     this.longitude = longitude;
     return this;
   }
@@ -49,7 +49,7 @@ public class CustomLocationsItem {
     this.longitude = longitude;
   }
 
-  public CustomLocationsItem latitude(Double latitude) {
+  public CustomLocationsItemWithName latitude(Double latitude) {
     this.latitude = latitude;
     return this;
   }
@@ -68,7 +68,7 @@ public class CustomLocationsItem {
     this.latitude = latitude;
   }
 
-  public CustomLocationsItem radius(Long radius) {
+  public CustomLocationsItemWithName radius(Long radius) {
     this.radius = radius;
     return this;
   }
@@ -95,10 +95,10 @@ public class CustomLocationsItem {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    CustomLocationsItem customLocationsItem = (CustomLocationsItem) o;
-    return Objects.equals(this.longitude, customLocationsItem.longitude)
-        && Objects.equals(this.latitude, customLocationsItem.latitude)
-        && Objects.equals(this.radius, customLocationsItem.radius);
+    CustomLocationsItemWithName customLocationsItemWithName = (CustomLocationsItemWithName) o;
+    return Objects.equals(this.longitude, customLocationsItemWithName.longitude)
+        && Objects.equals(this.latitude, customLocationsItemWithName.latitude)
+        && Objects.equals(this.radius, customLocationsItemWithName.radius);
   }
 
   @Override

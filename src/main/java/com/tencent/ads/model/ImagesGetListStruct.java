@@ -36,6 +36,9 @@ public class ImagesGetListStruct {
   @SerializedName("source_type")
   private ImageSourceType sourceType = null;
 
+  @SerializedName("image_usage")
+  private ImageUsage imageUsage = null;
+
   @SerializedName("created_time")
   private Long createdTime = null;
 
@@ -165,6 +168,25 @@ public class ImagesGetListStruct {
 
   public void setSourceType(ImageSourceType sourceType) {
     this.sourceType = sourceType;
+  }
+
+  public ImagesGetListStruct imageUsage(ImageUsage imageUsage) {
+    this.imageUsage = imageUsage;
+    return this;
+  }
+
+  /**
+   * Get imageUsage
+   *
+   * @return imageUsage
+   */
+  @ApiModelProperty(value = "")
+  public ImageUsage getImageUsage() {
+    return imageUsage;
+  }
+
+  public void setImageUsage(ImageUsage imageUsage) {
+    this.imageUsage = imageUsage;
   }
 
   public ImagesGetListStruct createdTime(Long createdTime) {
@@ -409,6 +431,7 @@ public class ImagesGetListStruct {
         && Objects.equals(this.sourceSignature, imagesGetListStruct.sourceSignature)
         && Objects.equals(this.previewUrl, imagesGetListStruct.previewUrl)
         && Objects.equals(this.sourceType, imagesGetListStruct.sourceType)
+        && Objects.equals(this.imageUsage, imagesGetListStruct.imageUsage)
         && Objects.equals(this.createdTime, imagesGetListStruct.createdTime)
         && Objects.equals(this.lastModifiedTime, imagesGetListStruct.lastModifiedTime)
         && Objects.equals(this.productCatalogId, imagesGetListStruct.productCatalogId)
@@ -431,6 +454,7 @@ public class ImagesGetListStruct {
         sourceSignature,
         previewUrl,
         sourceType,
+        imageUsage,
         createdTime,
         lastModifiedTime,
         productCatalogId,

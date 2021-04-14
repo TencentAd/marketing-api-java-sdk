@@ -32,6 +32,9 @@ public class XijingPageAddPagesStruct {
   @SerializedName("page_title")
   private String pageTitle = null;
 
+  @SerializedName("clipboard")
+  private String clipboard = null;
+
   @SerializedName("mobile_app_id")
   private String mobileAppId = null;
 
@@ -96,6 +99,25 @@ public class XijingPageAddPagesStruct {
 
   public void setPageTitle(String pageTitle) {
     this.pageTitle = pageTitle;
+  }
+
+  public XijingPageAddPagesStruct clipboard(String clipboard) {
+    this.clipboard = clipboard;
+    return this;
+  }
+
+  /**
+   * Get clipboard
+   *
+   * @return clipboard
+   */
+  @ApiModelProperty(value = "")
+  public String getClipboard() {
+    return clipboard;
+  }
+
+  public void setClipboard(String clipboard) {
+    this.clipboard = clipboard;
   }
 
   public XijingPageAddPagesStruct mobileAppId(String mobileAppId) {
@@ -175,6 +197,7 @@ public class XijingPageAddPagesStruct {
     return Objects.equals(this.pageType, xijingPageAddPagesStruct.pageType)
         && Objects.equals(this.pageName, xijingPageAddPagesStruct.pageName)
         && Objects.equals(this.pageTitle, xijingPageAddPagesStruct.pageTitle)
+        && Objects.equals(this.clipboard, xijingPageAddPagesStruct.clipboard)
         && Objects.equals(this.mobileAppId, xijingPageAddPagesStruct.mobileAppId)
         && Objects.equals(this.pageTemplateId, xijingPageAddPagesStruct.pageTemplateId)
         && Objects.equals(this.componentSpecList, xijingPageAddPagesStruct.componentSpecList);
@@ -183,7 +206,7 @@ public class XijingPageAddPagesStruct {
   @Override
   public int hashCode() {
     return Objects.hash(
-        pageType, pageName, pageTitle, mobileAppId, pageTemplateId, componentSpecList);
+        pageType, pageName, pageTitle, clipboard, mobileAppId, pageTemplateId, componentSpecList);
   }
 
   @Override

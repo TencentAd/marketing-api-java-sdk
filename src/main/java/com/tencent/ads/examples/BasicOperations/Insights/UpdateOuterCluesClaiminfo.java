@@ -1,32 +1,20 @@
-package com.tencent.ads.examples.BasicOperations.BusinessAssets;
+package com.tencent.ads.examples.BasicOperations.Insights;
 
 import com.tencent.ads.ApiContextConfig;
 import com.tencent.ads.TencentAds;
 import com.tencent.ads.exception.TencentAdsResponseException;
 import com.tencent.ads.exception.TencentAdsSDKException;
 import com.tencent.ads.model.*;
-import java.io.File;
+import com.tencent.ads.model.OuterCluesClaiminfoUpdateRequest;
 
-public class AddImages {
+public class UpdateOuterCluesClaiminfo {
   /** YOUR ACCESS TOKEN */
   public String ACCESS_TOKEN = "YOUR ACCESS TOKEN";
 
   /** TencentAds */
   public TencentAds tencentAds;
 
-  public Long accountId = null;
-
-  public String uploadType = "UPLOAD_TYPE_FILE";
-
-  public String signature = null;
-
-  public File file = new File("YOUR IMAGE FILE PATH");
-
-  public String bytes = null;
-
-  public String imageUsage = null;
-
-  public String description = null;
+  public OuterCluesClaiminfoUpdateRequest data = null;
 
   public void init() {
     this.tencentAds = TencentAds.getInstance();
@@ -38,19 +26,18 @@ public class AddImages {
 
   public void buildParams() {}
 
-  public ImagesAddResponseData addImages() throws Exception {
-    ImagesAddResponseData response =
-        tencentAds
-            .images()
-            .imagesAdd(accountId, uploadType, signature, file, bytes, imageUsage, description);
+  public OuterCluesClaiminfoUpdateResponseData updateOuterCluesClaiminfo() throws Exception {
+    OuterCluesClaiminfoUpdateResponseData response =
+        tencentAds.outerCluesClaiminfo().outerCluesClaiminfoUpdate(data);
     return response;
   }
 
   public static void main(String[] args) {
     try {
-      AddImages addImages = new AddImages();
-      addImages.init();
-      ImagesAddResponseData response = addImages.addImages();
+      UpdateOuterCluesClaiminfo updateOuterCluesClaiminfo = new UpdateOuterCluesClaiminfo();
+      updateOuterCluesClaiminfo.init();
+      OuterCluesClaiminfoUpdateResponseData response =
+          updateOuterCluesClaiminfo.updateOuterCluesClaiminfo();
     } catch (TencentAdsResponseException e) {
       e.printStackTrace();
     } catch (TencentAdsSDKException e) {

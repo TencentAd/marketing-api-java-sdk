@@ -59,6 +59,9 @@ public class WechatPagesGetListStruct {
   @SerializedName("owner_uid")
   private Long ownerUid = null;
 
+  @SerializedName("page_status")
+  private PageStatus pageStatus = null;
+
   @SerializedName("page_elements_spec_list")
   private List<PageElementsStruct> pageElementsSpecList = null;
 
@@ -291,6 +294,25 @@ public class WechatPagesGetListStruct {
     this.ownerUid = ownerUid;
   }
 
+  public WechatPagesGetListStruct pageStatus(PageStatus pageStatus) {
+    this.pageStatus = pageStatus;
+    return this;
+  }
+
+  /**
+   * Get pageStatus
+   *
+   * @return pageStatus
+   */
+  @ApiModelProperty(value = "")
+  public PageStatus getPageStatus() {
+    return pageStatus;
+  }
+
+  public void setPageStatus(PageStatus pageStatus) {
+    this.pageStatus = pageStatus;
+  }
+
   public WechatPagesGetListStruct pageElementsSpecList(
       List<PageElementsStruct> pageElementsSpecList) {
     this.pageElementsSpecList = pageElementsSpecList;
@@ -341,6 +363,7 @@ public class WechatPagesGetListStruct {
         && Objects.equals(this.videoResourceStatus, wechatPagesGetListStruct.videoResourceStatus)
         && Objects.equals(this.canvasType, wechatPagesGetListStruct.canvasType)
         && Objects.equals(this.ownerUid, wechatPagesGetListStruct.ownerUid)
+        && Objects.equals(this.pageStatus, wechatPagesGetListStruct.pageStatus)
         && Objects.equals(this.pageElementsSpecList, wechatPagesGetListStruct.pageElementsSpecList);
   }
 
@@ -359,6 +382,7 @@ public class WechatPagesGetListStruct {
         videoResourceStatus,
         canvasType,
         ownerUid,
+        pageStatus,
         pageElementsSpecList);
   }
 

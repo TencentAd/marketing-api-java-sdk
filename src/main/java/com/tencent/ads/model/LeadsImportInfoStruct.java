@@ -69,6 +69,18 @@ public class LeadsImportInfoStruct {
   @SerializedName("outer_leads_ineffect_reason")
   private String outerLeadsIneffectReason = null;
 
+  @SerializedName("memo")
+  private String memo = null;
+
+  @SerializedName("campaign_id")
+  private Long campaignId = null;
+
+  @SerializedName("adgroup_id")
+  private Long adgroupId = null;
+
+  @SerializedName("wechat_agency_id")
+  private String wechatAgencyId = null;
+
   public LeadsImportInfoStruct outerLeadsId(String outerLeadsId) {
     this.outerLeadsId = outerLeadsId;
     return this;
@@ -373,6 +385,82 @@ public class LeadsImportInfoStruct {
     this.outerLeadsIneffectReason = outerLeadsIneffectReason;
   }
 
+  public LeadsImportInfoStruct memo(String memo) {
+    this.memo = memo;
+    return this;
+  }
+
+  /**
+   * Get memo
+   *
+   * @return memo
+   */
+  @ApiModelProperty(value = "")
+  public String getMemo() {
+    return memo;
+  }
+
+  public void setMemo(String memo) {
+    this.memo = memo;
+  }
+
+  public LeadsImportInfoStruct campaignId(Long campaignId) {
+    this.campaignId = campaignId;
+    return this;
+  }
+
+  /**
+   * Get campaignId
+   *
+   * @return campaignId
+   */
+  @ApiModelProperty(value = "")
+  public Long getCampaignId() {
+    return campaignId;
+  }
+
+  public void setCampaignId(Long campaignId) {
+    this.campaignId = campaignId;
+  }
+
+  public LeadsImportInfoStruct adgroupId(Long adgroupId) {
+    this.adgroupId = adgroupId;
+    return this;
+  }
+
+  /**
+   * Get adgroupId
+   *
+   * @return adgroupId
+   */
+  @ApiModelProperty(value = "")
+  public Long getAdgroupId() {
+    return adgroupId;
+  }
+
+  public void setAdgroupId(Long adgroupId) {
+    this.adgroupId = adgroupId;
+  }
+
+  public LeadsImportInfoStruct wechatAgencyId(String wechatAgencyId) {
+    this.wechatAgencyId = wechatAgencyId;
+    return this;
+  }
+
+  /**
+   * Get wechatAgencyId
+   *
+   * @return wechatAgencyId
+   */
+  @ApiModelProperty(value = "")
+  public String getWechatAgencyId() {
+    return wechatAgencyId;
+  }
+
+  public void setWechatAgencyId(String wechatAgencyId) {
+    this.wechatAgencyId = wechatAgencyId;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -398,7 +486,11 @@ public class LeadsImportInfoStruct {
         && Objects.equals(this.clickId, leadsImportInfoStruct.clickId)
         && Objects.equals(this.outerLeadsConvertType, leadsImportInfoStruct.outerLeadsConvertType)
         && Objects.equals(
-            this.outerLeadsIneffectReason, leadsImportInfoStruct.outerLeadsIneffectReason);
+            this.outerLeadsIneffectReason, leadsImportInfoStruct.outerLeadsIneffectReason)
+        && Objects.equals(this.memo, leadsImportInfoStruct.memo)
+        && Objects.equals(this.campaignId, leadsImportInfoStruct.campaignId)
+        && Objects.equals(this.adgroupId, leadsImportInfoStruct.adgroupId)
+        && Objects.equals(this.wechatAgencyId, leadsImportInfoStruct.wechatAgencyId);
   }
 
   @Override
@@ -419,7 +511,11 @@ public class LeadsImportInfoStruct {
         bundle,
         clickId,
         outerLeadsConvertType,
-        outerLeadsIneffectReason);
+        outerLeadsIneffectReason,
+        memo,
+        campaignId,
+        adgroupId,
+        wechatAgencyId);
   }
 
   @Override

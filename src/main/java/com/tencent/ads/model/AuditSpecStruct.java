@@ -16,6 +16,8 @@ import com.google.gson.Gson;
 import com.google.gson.annotations.SerializedName;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Objects;
 
 /** 多版位的审核结果信息 */
@@ -29,6 +31,9 @@ public class AuditSpecStruct {
 
   @SerializedName("reject_message")
   private String rejectMessage = null;
+
+  @SerializedName("element_reject_detail_info")
+  private List<ElementRejectDetailInfo> elementRejectDetailInfo = null;
 
   public AuditSpecStruct siteSet(SiteSetDefinition siteSet) {
     this.siteSet = siteSet;
@@ -87,6 +92,35 @@ public class AuditSpecStruct {
     this.rejectMessage = rejectMessage;
   }
 
+  public AuditSpecStruct elementRejectDetailInfo(
+      List<ElementRejectDetailInfo> elementRejectDetailInfo) {
+    this.elementRejectDetailInfo = elementRejectDetailInfo;
+    return this;
+  }
+
+  public AuditSpecStruct addElementRejectDetailInfoItem(
+      ElementRejectDetailInfo elementRejectDetailInfoItem) {
+    if (this.elementRejectDetailInfo == null) {
+      this.elementRejectDetailInfo = new ArrayList<ElementRejectDetailInfo>();
+    }
+    this.elementRejectDetailInfo.add(elementRejectDetailInfoItem);
+    return this;
+  }
+
+  /**
+   * Get elementRejectDetailInfo
+   *
+   * @return elementRejectDetailInfo
+   */
+  @ApiModelProperty(value = "")
+  public List<ElementRejectDetailInfo> getElementRejectDetailInfo() {
+    return elementRejectDetailInfo;
+  }
+
+  public void setElementRejectDetailInfo(List<ElementRejectDetailInfo> elementRejectDetailInfo) {
+    this.elementRejectDetailInfo = elementRejectDetailInfo;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -98,12 +132,13 @@ public class AuditSpecStruct {
     AuditSpecStruct auditSpecStruct = (AuditSpecStruct) o;
     return Objects.equals(this.siteSet, auditSpecStruct.siteSet)
         && Objects.equals(this.systemStatus, auditSpecStruct.systemStatus)
-        && Objects.equals(this.rejectMessage, auditSpecStruct.rejectMessage);
+        && Objects.equals(this.rejectMessage, auditSpecStruct.rejectMessage)
+        && Objects.equals(this.elementRejectDetailInfo, auditSpecStruct.elementRejectDetailInfo);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(siteSet, systemStatus, rejectMessage);
+    return Objects.hash(siteSet, systemStatus, rejectMessage, elementRejectDetailInfo);
   }
 
   @Override

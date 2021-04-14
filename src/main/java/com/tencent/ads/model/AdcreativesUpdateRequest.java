@@ -111,6 +111,9 @@ public class AdcreativesUpdateRequest {
   @SerializedName("countdown_switch")
   private Boolean countdownSwitch = null;
 
+  @SerializedName("dynamic_adcreative_spec")
+  private DynamicAdcreativeSpec dynamicAdcreativeSpec = null;
+
   @SerializedName("account_id")
   private Long accountId = null;
 
@@ -705,6 +708,26 @@ public class AdcreativesUpdateRequest {
     this.countdownSwitch = countdownSwitch;
   }
 
+  public AdcreativesUpdateRequest dynamicAdcreativeSpec(
+      DynamicAdcreativeSpec dynamicAdcreativeSpec) {
+    this.dynamicAdcreativeSpec = dynamicAdcreativeSpec;
+    return this;
+  }
+
+  /**
+   * Get dynamicAdcreativeSpec
+   *
+   * @return dynamicAdcreativeSpec
+   */
+  @ApiModelProperty(value = "")
+  public DynamicAdcreativeSpec getDynamicAdcreativeSpec() {
+    return dynamicAdcreativeSpec;
+  }
+
+  public void setDynamicAdcreativeSpec(DynamicAdcreativeSpec dynamicAdcreativeSpec) {
+    this.dynamicAdcreativeSpec = dynamicAdcreativeSpec;
+  }
+
   public AdcreativesUpdateRequest accountId(Long accountId) {
     this.accountId = accountId;
     return this;
@@ -789,6 +812,8 @@ public class AdcreativesUpdateRequest {
         && Objects.equals(
             this.marketingPendantImageId, adcreativesUpdateRequest.marketingPendantImageId)
         && Objects.equals(this.countdownSwitch, adcreativesUpdateRequest.countdownSwitch)
+        && Objects.equals(
+            this.dynamicAdcreativeSpec, adcreativesUpdateRequest.dynamicAdcreativeSpec)
         && Objects.equals(this.accountId, adcreativesUpdateRequest.accountId)
         && Objects.equals(this.adcreativeElements, adcreativesUpdateRequest.adcreativeElements);
   }
@@ -826,6 +851,7 @@ public class AdcreativesUpdateRequest {
         floatingZone,
         marketingPendantImageId,
         countdownSwitch,
+        dynamicAdcreativeSpec,
         accountId,
         adcreativeElements);
   }

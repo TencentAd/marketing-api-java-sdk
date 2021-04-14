@@ -114,6 +114,9 @@ public class AdgroupsUpdateRequest {
   @SerializedName("auto_derived_creative_enabled")
   private Boolean autoDerivedCreativeEnabled = null;
 
+  @SerializedName("dynamic_ad_spec")
+  private DynamicAdSpec dynamicAdSpec = null;
+
   @SerializedName("account_id")
   private Long accountId = null;
 
@@ -740,6 +743,25 @@ public class AdgroupsUpdateRequest {
     this.autoDerivedCreativeEnabled = autoDerivedCreativeEnabled;
   }
 
+  public AdgroupsUpdateRequest dynamicAdSpec(DynamicAdSpec dynamicAdSpec) {
+    this.dynamicAdSpec = dynamicAdSpec;
+    return this;
+  }
+
+  /**
+   * Get dynamicAdSpec
+   *
+   * @return dynamicAdSpec
+   */
+  @ApiModelProperty(value = "")
+  public DynamicAdSpec getDynamicAdSpec() {
+    return dynamicAdSpec;
+  }
+
+  public void setDynamicAdSpec(DynamicAdSpec dynamicAdSpec) {
+    this.dynamicAdSpec = dynamicAdSpec;
+  }
+
   public AdgroupsUpdateRequest accountId(Long accountId) {
     this.accountId = accountId;
     return this;
@@ -804,6 +826,7 @@ public class AdgroupsUpdateRequest {
         && Objects.equals(this.autoAcquisitionBudget, adgroupsUpdateRequest.autoAcquisitionBudget)
         && Objects.equals(
             this.autoDerivedCreativeEnabled, adgroupsUpdateRequest.autoDerivedCreativeEnabled)
+        && Objects.equals(this.dynamicAdSpec, adgroupsUpdateRequest.dynamicAdSpec)
         && Objects.equals(this.accountId, adgroupsUpdateRequest.accountId);
   }
 
@@ -841,6 +864,7 @@ public class AdgroupsUpdateRequest {
         autoAcquisitionEnabled,
         autoAcquisitionBudget,
         autoDerivedCreativeEnabled,
+        dynamicAdSpec,
         accountId);
   }
 

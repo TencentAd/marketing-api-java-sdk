@@ -20,11 +20,14 @@ import java.util.Objects;
 
 /** 返回结构 */
 @ApiModel(description = "返回结构")
-public class OuterCluesAddListStruct {
+public class SuccessLeadsIdListRespStruct {
   @SerializedName("outer_leads_id")
   private String outerLeadsId = null;
 
-  public OuterCluesAddListStruct outerLeadsId(String outerLeadsId) {
+  @SerializedName("leads_id")
+  private Long leadsId = null;
+
+  public SuccessLeadsIdListRespStruct outerLeadsId(String outerLeadsId) {
     this.outerLeadsId = outerLeadsId;
     return this;
   }
@@ -43,6 +46,25 @@ public class OuterCluesAddListStruct {
     this.outerLeadsId = outerLeadsId;
   }
 
+  public SuccessLeadsIdListRespStruct leadsId(Long leadsId) {
+    this.leadsId = leadsId;
+    return this;
+  }
+
+  /**
+   * Get leadsId
+   *
+   * @return leadsId
+   */
+  @ApiModelProperty(value = "")
+  public Long getLeadsId() {
+    return leadsId;
+  }
+
+  public void setLeadsId(Long leadsId) {
+    this.leadsId = leadsId;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -51,13 +73,14 @@ public class OuterCluesAddListStruct {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    OuterCluesAddListStruct outerCluesAddListStruct = (OuterCluesAddListStruct) o;
-    return Objects.equals(this.outerLeadsId, outerCluesAddListStruct.outerLeadsId);
+    SuccessLeadsIdListRespStruct successLeadsIdListRespStruct = (SuccessLeadsIdListRespStruct) o;
+    return Objects.equals(this.outerLeadsId, successLeadsIdListRespStruct.outerLeadsId)
+        && Objects.equals(this.leadsId, successLeadsIdListRespStruct.leadsId);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(outerLeadsId);
+    return Objects.hash(outerLeadsId, leadsId);
   }
 
   @Override

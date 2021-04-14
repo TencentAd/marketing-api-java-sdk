@@ -19,18 +19,18 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-/** 任务状态枚举 */
-@JsonAdapter(Status.Adapter.class)
-public enum Status {
-  PROCESSING("TASK_STATUS_PROCESSING"),
+/** 图片用途 */
+@JsonAdapter(ImageUsage.Adapter.class)
+public enum ImageUsage {
+  DEFAULT("IMAGE_USAGE_DEFAULT"),
 
-  SUCCESS("TASK_STATUS_SUCCESS"),
+  MARKETING_PENDANT("IMAGE_USAGE_MARKETING_PENDANT"),
 
-  FAIL("TASK_STATUS_FAIL");
+  SHOP_IMG("IMAGE_USAGE_SHOP_IMG");
 
   private String value;
 
-  Status(String value) {
+  ImageUsage(String value) {
     this.value = value;
   }
 
@@ -43,8 +43,8 @@ public enum Status {
     return String.valueOf(value);
   }
 
-  public static Status fromValue(String text) {
-    for (Status b : Status.values()) {
+  public static ImageUsage fromValue(String text) {
+    for (ImageUsage b : ImageUsage.values()) {
       if (String.valueOf(b.value).equals(text)) {
         return b;
       }
@@ -52,16 +52,17 @@ public enum Status {
     return null;
   }
 
-  public static class Adapter extends TypeAdapter<Status> {
+  public static class Adapter extends TypeAdapter<ImageUsage> {
     @Override
-    public void write(final JsonWriter jsonWriter, final Status enumeration) throws IOException {
+    public void write(final JsonWriter jsonWriter, final ImageUsage enumeration)
+        throws IOException {
       jsonWriter.value(enumeration.getValue());
     }
 
     @Override
-    public Status read(final JsonReader jsonReader) throws IOException {
+    public ImageUsage read(final JsonReader jsonReader) throws IOException {
       String value = jsonReader.nextString();
-      return Status.fromValue(String.valueOf(value));
+      return ImageUsage.fromValue(String.valueOf(value));
     }
   }
 }

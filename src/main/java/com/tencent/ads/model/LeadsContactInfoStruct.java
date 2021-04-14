@@ -57,6 +57,9 @@ public class LeadsContactInfoStruct {
   @SerializedName("bundle")
   private String bundle = null;
 
+  @SerializedName("memo")
+  private String memo = null;
+
   public LeadsContactInfoStruct outerLeadsId(String outerLeadsId) {
     this.outerLeadsId = outerLeadsId;
     return this;
@@ -285,6 +288,25 @@ public class LeadsContactInfoStruct {
     this.bundle = bundle;
   }
 
+  public LeadsContactInfoStruct memo(String memo) {
+    this.memo = memo;
+    return this;
+  }
+
+  /**
+   * Get memo
+   *
+   * @return memo
+   */
+  @ApiModelProperty(value = "")
+  public String getMemo() {
+    return memo;
+  }
+
+  public void setMemo(String memo) {
+    this.memo = memo;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -305,7 +327,8 @@ public class LeadsContactInfoStruct {
         && Objects.equals(this.leadsGender, leadsContactInfoStruct.leadsGender)
         && Objects.equals(this.leadsEmail, leadsContactInfoStruct.leadsEmail)
         && Objects.equals(this.leadsArea, leadsContactInfoStruct.leadsArea)
-        && Objects.equals(this.bundle, leadsContactInfoStruct.bundle);
+        && Objects.equals(this.bundle, leadsContactInfoStruct.bundle)
+        && Objects.equals(this.memo, leadsContactInfoStruct.memo);
   }
 
   @Override
@@ -322,7 +345,8 @@ public class LeadsContactInfoStruct {
         leadsGender,
         leadsEmail,
         leadsArea,
-        bundle);
+        bundle,
+        memo);
   }
 
   @Override

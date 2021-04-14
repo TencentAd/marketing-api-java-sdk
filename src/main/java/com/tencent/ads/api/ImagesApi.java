@@ -61,6 +61,7 @@ public class ImagesApi {
    * @param signature (required)
    * @param file (optional)
    * @param bytes (optional)
+   * @param imageUsage (optional)
    * @param description (optional)
    * @param progressListener Progress listener
    * @param progressRequestListener Progress request listener
@@ -73,6 +74,7 @@ public class ImagesApi {
       String signature,
       File file,
       String bytes,
+      String imageUsage,
       String description,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener)
@@ -93,6 +95,7 @@ public class ImagesApi {
     if (signature != null) localVarFormParams.put("signature", signature);
     if (file != null) localVarFormParams.put("file", file);
     if (bytes != null) localVarFormParams.put("bytes", bytes);
+    if (imageUsage != null) localVarFormParams.put("image_usage", imageUsage);
     if (description != null) localVarFormParams.put("description", description);
 
     final String[] localVarAccepts = {"application/json"};
@@ -141,6 +144,7 @@ public class ImagesApi {
       String signature,
       File file,
       String bytes,
+      String imageUsage,
       String description,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener)
@@ -171,6 +175,7 @@ public class ImagesApi {
             signature,
             file,
             bytes,
+            imageUsage,
             description,
             progressListener,
             progressRequestListener);
@@ -185,6 +190,7 @@ public class ImagesApi {
    * @param signature (required)
    * @param file (optional)
    * @param bytes (optional)
+   * @param imageUsage (optional)
    * @param description (optional)
    * @return ImagesAddResponse
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
@@ -196,10 +202,12 @@ public class ImagesApi {
       String signature,
       File file,
       String bytes,
+      String imageUsage,
       String description)
       throws ApiException {
     ApiResponse<ImagesAddResponse> resp =
-        imagesAddWithHttpInfo(accountId, uploadType, signature, file, bytes, description);
+        imagesAddWithHttpInfo(
+            accountId, uploadType, signature, file, bytes, imageUsage, description);
     return resp.getData();
   }
 
@@ -211,6 +219,7 @@ public class ImagesApi {
    * @param signature (required)
    * @param file (optional)
    * @param bytes (optional)
+   * @param imageUsage (optional)
    * @param description (optional)
    * @return ApiResponse&lt;ImagesAddResponse&gt;
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
@@ -222,11 +231,12 @@ public class ImagesApi {
       String signature,
       File file,
       String bytes,
+      String imageUsage,
       String description)
       throws ApiException {
     com.squareup.okhttp.Call call =
         imagesAddValidateBeforeCall(
-            accountId, uploadType, signature, file, bytes, description, null, null);
+            accountId, uploadType, signature, file, bytes, imageUsage, description, null, null);
     Type localVarReturnType = new TypeToken<ImagesAddResponse>() {}.getType();
     return apiClient.execute(call, localVarReturnType);
   }
@@ -239,6 +249,7 @@ public class ImagesApi {
    * @param signature (required)
    * @param file (optional)
    * @param bytes (optional)
+   * @param imageUsage (optional)
    * @param description (optional)
    * @param callback The callback to be executed when the API call finishes
    * @return The request call
@@ -250,6 +261,7 @@ public class ImagesApi {
       String signature,
       File file,
       String bytes,
+      String imageUsage,
       String description,
       final ApiCallback<ImagesAddResponse> callback)
       throws ApiException {
@@ -282,6 +294,7 @@ public class ImagesApi {
             signature,
             file,
             bytes,
+            imageUsage,
             description,
             progressListener,
             progressRequestListener);

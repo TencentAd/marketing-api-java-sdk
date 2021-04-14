@@ -24,6 +24,9 @@ public class OuterCluesAddResponseData {
   @SerializedName("fail_outer_lead_id_list")
   private List<OuterCluesAddListStruct> failOuterLeadIdList = null;
 
+  @SerializedName("success_lead_id_list")
+  private List<SuccessLeadsIdListRespStruct> successLeadIdList = null;
+
   public OuterCluesAddResponseData failOuterLeadIdList(
       List<OuterCluesAddListStruct> failOuterLeadIdList) {
     this.failOuterLeadIdList = failOuterLeadIdList;
@@ -53,6 +56,35 @@ public class OuterCluesAddResponseData {
     this.failOuterLeadIdList = failOuterLeadIdList;
   }
 
+  public OuterCluesAddResponseData successLeadIdList(
+      List<SuccessLeadsIdListRespStruct> successLeadIdList) {
+    this.successLeadIdList = successLeadIdList;
+    return this;
+  }
+
+  public OuterCluesAddResponseData addSuccessLeadIdListItem(
+      SuccessLeadsIdListRespStruct successLeadIdListItem) {
+    if (this.successLeadIdList == null) {
+      this.successLeadIdList = new ArrayList<SuccessLeadsIdListRespStruct>();
+    }
+    this.successLeadIdList.add(successLeadIdListItem);
+    return this;
+  }
+
+  /**
+   * Get successLeadIdList
+   *
+   * @return successLeadIdList
+   */
+  @ApiModelProperty(value = "")
+  public List<SuccessLeadsIdListRespStruct> getSuccessLeadIdList() {
+    return successLeadIdList;
+  }
+
+  public void setSuccessLeadIdList(List<SuccessLeadsIdListRespStruct> successLeadIdList) {
+    this.successLeadIdList = successLeadIdList;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -62,12 +94,13 @@ public class OuterCluesAddResponseData {
       return false;
     }
     OuterCluesAddResponseData outerCluesAddResponseData = (OuterCluesAddResponseData) o;
-    return Objects.equals(this.failOuterLeadIdList, outerCluesAddResponseData.failOuterLeadIdList);
+    return Objects.equals(this.failOuterLeadIdList, outerCluesAddResponseData.failOuterLeadIdList)
+        && Objects.equals(this.successLeadIdList, outerCluesAddResponseData.successLeadIdList);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(failOuterLeadIdList);
+    return Objects.hash(failOuterLeadIdList, successLeadIdList);
   }
 
   @Override

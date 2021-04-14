@@ -49,7 +49,7 @@ public class DynamicCreativesAddRequest {
   private String promotedObjectId = null;
 
   @SerializedName("page_spec")
-  private DynamicPageSpec pageSpec = null;
+  private DynamicCreativePageSpec pageSpec = null;
 
   @SerializedName("deep_link_url")
   private String deepLinkUrl = null;
@@ -70,7 +70,7 @@ public class DynamicCreativesAddRequest {
   private Long profileId = null;
 
   @SerializedName("dynamic_adcreative_spec")
-  private DynamicAdcreativeSpec dynamicAdcreativeSpec = null;
+  private DynamicAdcreativeSpecForDc dynamicAdcreativeSpec = null;
 
   @SerializedName("video_end_page")
   private VideoEndPageSpec videoEndPage = null;
@@ -258,7 +258,7 @@ public class DynamicCreativesAddRequest {
     this.promotedObjectId = promotedObjectId;
   }
 
-  public DynamicCreativesAddRequest pageSpec(DynamicPageSpec pageSpec) {
+  public DynamicCreativesAddRequest pageSpec(DynamicCreativePageSpec pageSpec) {
     this.pageSpec = pageSpec;
     return this;
   }
@@ -269,11 +269,11 @@ public class DynamicCreativesAddRequest {
    * @return pageSpec
    */
   @ApiModelProperty(value = "")
-  public DynamicPageSpec getPageSpec() {
+  public DynamicCreativePageSpec getPageSpec() {
     return pageSpec;
   }
 
-  public void setPageSpec(DynamicPageSpec pageSpec) {
+  public void setPageSpec(DynamicCreativePageSpec pageSpec) {
     this.pageSpec = pageSpec;
   }
 
@@ -392,7 +392,7 @@ public class DynamicCreativesAddRequest {
   }
 
   public DynamicCreativesAddRequest dynamicAdcreativeSpec(
-      DynamicAdcreativeSpec dynamicAdcreativeSpec) {
+      DynamicAdcreativeSpecForDc dynamicAdcreativeSpec) {
     this.dynamicAdcreativeSpec = dynamicAdcreativeSpec;
     return this;
   }
@@ -403,11 +403,11 @@ public class DynamicCreativesAddRequest {
    * @return dynamicAdcreativeSpec
    */
   @ApiModelProperty(value = "")
-  public DynamicAdcreativeSpec getDynamicAdcreativeSpec() {
+  public DynamicAdcreativeSpecForDc getDynamicAdcreativeSpec() {
     return dynamicAdcreativeSpec;
   }
 
-  public void setDynamicAdcreativeSpec(DynamicAdcreativeSpec dynamicAdcreativeSpec) {
+  public void setDynamicAdcreativeSpec(DynamicAdcreativeSpecForDc dynamicAdcreativeSpec) {
     this.dynamicAdcreativeSpec = dynamicAdcreativeSpec;
   }
 

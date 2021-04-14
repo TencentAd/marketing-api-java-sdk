@@ -48,7 +48,7 @@ public class AddDynamicCreatives {
 
     data.setPageType(pageType);
 
-    DynamicPageSpec pageSpec = new DynamicPageSpec();
+    DynamicCreativePageSpec pageSpec = new DynamicCreativePageSpec();
     pageSpec.setPageUrl(pageUrl);
     data.setPageSpec(pageSpec);
 

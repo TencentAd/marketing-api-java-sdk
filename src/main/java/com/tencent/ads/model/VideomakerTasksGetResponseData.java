@@ -26,7 +26,7 @@ public class VideomakerTasksGetResponseData {
   private String taskId = null;
 
   @SerializedName("status")
-  private Status status = null;
+  private AdStatus status = null;
 
   @SerializedName("video_id")
   private String videoId = null;
@@ -72,7 +72,7 @@ public class VideomakerTasksGetResponseData {
     this.taskId = taskId;
   }
 
-  public VideomakerTasksGetResponseData status(Status status) {
+  public VideomakerTasksGetResponseData status(AdStatus status) {
     this.status = status;
     return this;
   }
@@ -83,11 +83,11 @@ public class VideomakerTasksGetResponseData {
    * @return status
    */
   @ApiModelProperty(value = "")
-  public Status getStatus() {
+  public AdStatus getStatus() {
     return status;
   }
 
-  public void setStatus(Status status) {
+  public void setStatus(AdStatus status) {
     this.status = status;
   }
 

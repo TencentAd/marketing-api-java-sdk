@@ -42,7 +42,7 @@ public class DynamicCreativesGetListStruct {
   private PageTypeRead pageType = null;
 
   @SerializedName("page_spec")
-  private DynamicPageSpec pageSpec = null;
+  private DynamicCreativePageSpec pageSpec = null;
 
   @SerializedName("deep_link_url")
   private String deepLinkUrl = null;
@@ -204,7 +204,7 @@ public class DynamicCreativesGetListStruct {
     this.pageType = pageType;
   }
 
-  public DynamicCreativesGetListStruct pageSpec(DynamicPageSpec pageSpec) {
+  public DynamicCreativesGetListStruct pageSpec(DynamicCreativePageSpec pageSpec) {
     this.pageSpec = pageSpec;
     return this;
   }
@@ -215,11 +215,11 @@ public class DynamicCreativesGetListStruct {
    * @return pageSpec
    */
   @ApiModelProperty(value = "")
-  public DynamicPageSpec getPageSpec() {
+  public DynamicCreativePageSpec getPageSpec() {
     return pageSpec;
   }
 
-  public void setPageSpec(DynamicPageSpec pageSpec) {
+  public void setPageSpec(DynamicCreativePageSpec pageSpec) {
     this.pageSpec = pageSpec;
   }
 
