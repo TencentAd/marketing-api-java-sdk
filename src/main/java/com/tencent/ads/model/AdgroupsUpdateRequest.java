@@ -114,6 +114,9 @@ public class AdgroupsUpdateRequest {
   @SerializedName("auto_derived_creative_enabled")
   private Boolean autoDerivedCreativeEnabled = null;
 
+  @SerializedName("user_action_sets")
+  private List<UserActionSetStruct> userActionSets = null;
+
   @SerializedName("dynamic_ad_spec")
   private DynamicAdSpec dynamicAdSpec = null;
 
@@ -743,6 +746,33 @@ public class AdgroupsUpdateRequest {
     this.autoDerivedCreativeEnabled = autoDerivedCreativeEnabled;
   }
 
+  public AdgroupsUpdateRequest userActionSets(List<UserActionSetStruct> userActionSets) {
+    this.userActionSets = userActionSets;
+    return this;
+  }
+
+  public AdgroupsUpdateRequest addUserActionSetsItem(UserActionSetStruct userActionSetsItem) {
+    if (this.userActionSets == null) {
+      this.userActionSets = new ArrayList<UserActionSetStruct>();
+    }
+    this.userActionSets.add(userActionSetsItem);
+    return this;
+  }
+
+  /**
+   * Get userActionSets
+   *
+   * @return userActionSets
+   */
+  @ApiModelProperty(value = "")
+  public List<UserActionSetStruct> getUserActionSets() {
+    return userActionSets;
+  }
+
+  public void setUserActionSets(List<UserActionSetStruct> userActionSets) {
+    this.userActionSets = userActionSets;
+  }
+
   public AdgroupsUpdateRequest dynamicAdSpec(DynamicAdSpec dynamicAdSpec) {
     this.dynamicAdSpec = dynamicAdSpec;
     return this;
@@ -826,6 +856,7 @@ public class AdgroupsUpdateRequest {
         && Objects.equals(this.autoAcquisitionBudget, adgroupsUpdateRequest.autoAcquisitionBudget)
         && Objects.equals(
             this.autoDerivedCreativeEnabled, adgroupsUpdateRequest.autoDerivedCreativeEnabled)
+        && Objects.equals(this.userActionSets, adgroupsUpdateRequest.userActionSets)
         && Objects.equals(this.dynamicAdSpec, adgroupsUpdateRequest.dynamicAdSpec)
         && Objects.equals(this.accountId, adgroupsUpdateRequest.accountId);
   }
@@ -864,6 +895,7 @@ public class AdgroupsUpdateRequest {
         autoAcquisitionEnabled,
         autoAcquisitionBudget,
         autoDerivedCreativeEnabled,
+        userActionSets,
         dynamicAdSpec,
         accountId);
   }
