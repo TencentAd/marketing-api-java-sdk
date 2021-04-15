@@ -41,6 +41,9 @@ public class AdgroupGetSpec {
   @SerializedName("calc_status")
   private CalculateStatus calcStatus = null;
 
+  @SerializedName("metric_detail")
+  private MetricDetailData metricDetail = null;
+
   @SerializedName("reject_message")
   private String rejectMessage = null;
 
@@ -164,6 +167,25 @@ public class AdgroupGetSpec {
     this.calcStatus = calcStatus;
   }
 
+  public AdgroupGetSpec metricDetail(MetricDetailData metricDetail) {
+    this.metricDetail = metricDetail;
+    return this;
+  }
+
+  /**
+   * Get metricDetail
+   *
+   * @return metricDetail
+   */
+  @ApiModelProperty(value = "")
+  public MetricDetailData getMetricDetail() {
+    return metricDetail;
+  }
+
+  public void setMetricDetail(MetricDetailData metricDetail) {
+    this.metricDetail = metricDetail;
+  }
+
   public AdgroupGetSpec rejectMessage(String rejectMessage) {
     this.rejectMessage = rejectMessage;
     return this;
@@ -252,6 +274,7 @@ public class AdgroupGetSpec {
         && Objects.equals(this.beginDate, adgroupGetSpec.beginDate)
         && Objects.equals(this.targeting, adgroupGetSpec.targeting)
         && Objects.equals(this.calcStatus, adgroupGetSpec.calcStatus)
+        && Objects.equals(this.metricDetail, adgroupGetSpec.metricDetail)
         && Objects.equals(this.rejectMessage, adgroupGetSpec.rejectMessage)
         && Objects.equals(this.poiList, adgroupGetSpec.poiList)
         && Objects.equals(this.coldStartAudience, adgroupGetSpec.coldStartAudience);
@@ -266,6 +289,7 @@ public class AdgroupGetSpec {
         beginDate,
         targeting,
         calcStatus,
+        metricDetail,
         rejectMessage,
         poiList,
         coldStartAudience);
