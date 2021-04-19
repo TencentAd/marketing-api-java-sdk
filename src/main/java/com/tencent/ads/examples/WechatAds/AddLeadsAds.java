@@ -199,6 +199,7 @@ public class AddLeadsAds {
                 SignatureUtils.getMD5Checksum(imageFile),
                 new File(imageFile),
                 null,
+                null,
                 null);
     if (responseData != null) {
       return responseData.getImageId();

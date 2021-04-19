@@ -239,7 +239,8 @@ public class AddDynamicProductAds {
     ImagesAddResponseData responseData =
         tencentAds
             .images()
-            .imagesAdd(ACCOUNT_ID, uploadType, imageSignature, new File(imageFile), null, null);
+            .imagesAdd(
+                ACCOUNT_ID, uploadType, imageSignature, new File(imageFile), null, null, null);
 
     return responseData.getImageId();
   }
