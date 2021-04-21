@@ -282,21 +282,6 @@ public class TargetingTagReportsGetListStruct {
   @SerializedName("comment_cost")
   private Long commentCost = null;
 
-  @SerializedName("cost1")
-  private Long cost1 = null;
-
-  @SerializedName("cost2")
-  private Long cost2 = null;
-
-  @SerializedName("cost3")
-  private Long cost3 = null;
-
-  @SerializedName("cost4")
-  private Long cost4 = null;
-
-  @SerializedName("credit_cost")
-  private Long creditCost = null;
-
   @SerializedName("ad_pur_val_app")
   private Long adPurValApp = null;
 
@@ -539,6 +524,24 @@ public class TargetingTagReportsGetListStruct {
 
   @SerializedName("key_page_view_rate")
   private Double keyPageViewRate = null;
+
+  @SerializedName("wechat_cost_stage1")
+  private Long wechatCostStage1 = null;
+
+  @SerializedName("wechat_cost_stage2")
+  private Long wechatCostStage2 = null;
+
+  @SerializedName("wechat_deep_conversions_count_stage1")
+  private Long wechatDeepConversionsCountStage1 = null;
+
+  @SerializedName("wechat_deep_conversions_count_stage2")
+  private Long wechatDeepConversionsCountStage2 = null;
+
+  @SerializedName("wechat_shallow_conversions_count_stage1")
+  private Long wechatShallowConversionsCountStage1 = null;
+
+  @SerializedName("wechat_shallow_conversions_count_stage2")
+  private Long wechatShallowConversionsCountStage2 = null;
 
   @SerializedName("age")
   private String age = null;
@@ -2692,101 +2695,6 @@ public class TargetingTagReportsGetListStruct {
     this.commentCost = commentCost;
   }
 
-  public TargetingTagReportsGetListStruct cost1(Long cost1) {
-    this.cost1 = cost1;
-    return this;
-  }
-
-  /**
-   * Get cost1
-   *
-   * @return cost1
-   */
-  @ApiModelProperty(value = "")
-  public Long getCost1() {
-    return cost1;
-  }
-
-  public void setCost1(Long cost1) {
-    this.cost1 = cost1;
-  }
-
-  public TargetingTagReportsGetListStruct cost2(Long cost2) {
-    this.cost2 = cost2;
-    return this;
-  }
-
-  /**
-   * Get cost2
-   *
-   * @return cost2
-   */
-  @ApiModelProperty(value = "")
-  public Long getCost2() {
-    return cost2;
-  }
-
-  public void setCost2(Long cost2) {
-    this.cost2 = cost2;
-  }
-
-  public TargetingTagReportsGetListStruct cost3(Long cost3) {
-    this.cost3 = cost3;
-    return this;
-  }
-
-  /**
-   * Get cost3
-   *
-   * @return cost3
-   */
-  @ApiModelProperty(value = "")
-  public Long getCost3() {
-    return cost3;
-  }
-
-  public void setCost3(Long cost3) {
-    this.cost3 = cost3;
-  }
-
-  public TargetingTagReportsGetListStruct cost4(Long cost4) {
-    this.cost4 = cost4;
-    return this;
-  }
-
-  /**
-   * Get cost4
-   *
-   * @return cost4
-   */
-  @ApiModelProperty(value = "")
-  public Long getCost4() {
-    return cost4;
-  }
-
-  public void setCost4(Long cost4) {
-    this.cost4 = cost4;
-  }
-
-  public TargetingTagReportsGetListStruct creditCost(Long creditCost) {
-    this.creditCost = creditCost;
-    return this;
-  }
-
-  /**
-   * Get creditCost
-   *
-   * @return creditCost
-   */
-  @ApiModelProperty(value = "")
-  public Long getCreditCost() {
-    return creditCost;
-  }
-
-  public void setCreditCost(Long creditCost) {
-    this.creditCost = creditCost;
-  }
-
   public TargetingTagReportsGetListStruct adPurValApp(Long adPurValApp) {
     this.adPurValApp = adPurValApp;
     return this;
@@ -4334,6 +4242,124 @@ public class TargetingTagReportsGetListStruct {
 
   public void setKeyPageViewRate(Double keyPageViewRate) {
     this.keyPageViewRate = keyPageViewRate;
+  }
+
+  public TargetingTagReportsGetListStruct wechatCostStage1(Long wechatCostStage1) {
+    this.wechatCostStage1 = wechatCostStage1;
+    return this;
+  }
+
+  /**
+   * Get wechatCostStage1
+   *
+   * @return wechatCostStage1
+   */
+  @ApiModelProperty(value = "")
+  public Long getWechatCostStage1() {
+    return wechatCostStage1;
+  }
+
+  public void setWechatCostStage1(Long wechatCostStage1) {
+    this.wechatCostStage1 = wechatCostStage1;
+  }
+
+  public TargetingTagReportsGetListStruct wechatCostStage2(Long wechatCostStage2) {
+    this.wechatCostStage2 = wechatCostStage2;
+    return this;
+  }
+
+  /**
+   * Get wechatCostStage2
+   *
+   * @return wechatCostStage2
+   */
+  @ApiModelProperty(value = "")
+  public Long getWechatCostStage2() {
+    return wechatCostStage2;
+  }
+
+  public void setWechatCostStage2(Long wechatCostStage2) {
+    this.wechatCostStage2 = wechatCostStage2;
+  }
+
+  public TargetingTagReportsGetListStruct wechatDeepConversionsCountStage1(
+      Long wechatDeepConversionsCountStage1) {
+    this.wechatDeepConversionsCountStage1 = wechatDeepConversionsCountStage1;
+    return this;
+  }
+
+  /**
+   * Get wechatDeepConversionsCountStage1
+   *
+   * @return wechatDeepConversionsCountStage1
+   */
+  @ApiModelProperty(value = "")
+  public Long getWechatDeepConversionsCountStage1() {
+    return wechatDeepConversionsCountStage1;
+  }
+
+  public void setWechatDeepConversionsCountStage1(Long wechatDeepConversionsCountStage1) {
+    this.wechatDeepConversionsCountStage1 = wechatDeepConversionsCountStage1;
+  }
+
+  public TargetingTagReportsGetListStruct wechatDeepConversionsCountStage2(
+      Long wechatDeepConversionsCountStage2) {
+    this.wechatDeepConversionsCountStage2 = wechatDeepConversionsCountStage2;
+    return this;
+  }
+
+  /**
+   * Get wechatDeepConversionsCountStage2
+   *
+   * @return wechatDeepConversionsCountStage2
+   */
+  @ApiModelProperty(value = "")
+  public Long getWechatDeepConversionsCountStage2() {
+    return wechatDeepConversionsCountStage2;
+  }
+
+  public void setWechatDeepConversionsCountStage2(Long wechatDeepConversionsCountStage2) {
+    this.wechatDeepConversionsCountStage2 = wechatDeepConversionsCountStage2;
+  }
+
+  public TargetingTagReportsGetListStruct wechatShallowConversionsCountStage1(
+      Long wechatShallowConversionsCountStage1) {
+    this.wechatShallowConversionsCountStage1 = wechatShallowConversionsCountStage1;
+    return this;
+  }
+
+  /**
+   * Get wechatShallowConversionsCountStage1
+   *
+   * @return wechatShallowConversionsCountStage1
+   */
+  @ApiModelProperty(value = "")
+  public Long getWechatShallowConversionsCountStage1() {
+    return wechatShallowConversionsCountStage1;
+  }
+
+  public void setWechatShallowConversionsCountStage1(Long wechatShallowConversionsCountStage1) {
+    this.wechatShallowConversionsCountStage1 = wechatShallowConversionsCountStage1;
+  }
+
+  public TargetingTagReportsGetListStruct wechatShallowConversionsCountStage2(
+      Long wechatShallowConversionsCountStage2) {
+    this.wechatShallowConversionsCountStage2 = wechatShallowConversionsCountStage2;
+    return this;
+  }
+
+  /**
+   * Get wechatShallowConversionsCountStage2
+   *
+   * @return wechatShallowConversionsCountStage2
+   */
+  @ApiModelProperty(value = "")
+  public Long getWechatShallowConversionsCountStage2() {
+    return wechatShallowConversionsCountStage2;
+  }
+
+  public void setWechatShallowConversionsCountStage2(Long wechatShallowConversionsCountStage2) {
+    this.wechatShallowConversionsCountStage2 = wechatShallowConversionsCountStage2;
   }
 
   public TargetingTagReportsGetListStruct age(String age) {
@@ -7622,11 +7648,6 @@ public class TargetingTagReportsGetListStruct {
         && Objects.equals(this.praiseCost, targetingTagReportsGetListStruct.praiseCost)
         && Objects.equals(this.commentCount, targetingTagReportsGetListStruct.commentCount)
         && Objects.equals(this.commentCost, targetingTagReportsGetListStruct.commentCost)
-        && Objects.equals(this.cost1, targetingTagReportsGetListStruct.cost1)
-        && Objects.equals(this.cost2, targetingTagReportsGetListStruct.cost2)
-        && Objects.equals(this.cost3, targetingTagReportsGetListStruct.cost3)
-        && Objects.equals(this.cost4, targetingTagReportsGetListStruct.cost4)
-        && Objects.equals(this.creditCost, targetingTagReportsGetListStruct.creditCost)
         && Objects.equals(this.adPurValApp, targetingTagReportsGetListStruct.adPurValApp)
         && Objects.equals(this.fromFollowUv, targetingTagReportsGetListStruct.fromFollowUv)
         && Objects.equals(this.fromFollowCost, targetingTagReportsGetListStruct.fromFollowCost)
@@ -7771,6 +7792,20 @@ public class TargetingTagReportsGetListStruct {
         && Objects.equals(
             this.miniGameRetentionD1Cost, targetingTagReportsGetListStruct.miniGameRetentionD1Cost)
         && Objects.equals(this.keyPageViewRate, targetingTagReportsGetListStruct.keyPageViewRate)
+        && Objects.equals(this.wechatCostStage1, targetingTagReportsGetListStruct.wechatCostStage1)
+        && Objects.equals(this.wechatCostStage2, targetingTagReportsGetListStruct.wechatCostStage2)
+        && Objects.equals(
+            this.wechatDeepConversionsCountStage1,
+            targetingTagReportsGetListStruct.wechatDeepConversionsCountStage1)
+        && Objects.equals(
+            this.wechatDeepConversionsCountStage2,
+            targetingTagReportsGetListStruct.wechatDeepConversionsCountStage2)
+        && Objects.equals(
+            this.wechatShallowConversionsCountStage1,
+            targetingTagReportsGetListStruct.wechatShallowConversionsCountStage1)
+        && Objects.equals(
+            this.wechatShallowConversionsCountStage2,
+            targetingTagReportsGetListStruct.wechatShallowConversionsCountStage2)
         && Objects.equals(this.age, targetingTagReportsGetListStruct.age)
         && Objects.equals(this.regionId, targetingTagReportsGetListStruct.regionId)
         && Objects.equals(this.cityId, targetingTagReportsGetListStruct.cityId)
@@ -8121,11 +8156,6 @@ public class TargetingTagReportsGetListStruct {
         praiseCost,
         commentCount,
         commentCost,
-        cost1,
-        cost2,
-        cost3,
-        cost4,
-        creditCost,
         adPurValApp,
         fromFollowUv,
         fromFollowCost,
@@ -8207,6 +8237,12 @@ public class TargetingTagReportsGetListStruct {
         miniGameRetentionD1Rate,
         miniGameRetentionD1Cost,
         keyPageViewRate,
+        wechatCostStage1,
+        wechatCostStage2,
+        wechatDeepConversionsCountStage1,
+        wechatDeepConversionsCountStage2,
+        wechatShallowConversionsCountStage1,
+        wechatShallowConversionsCountStage2,
         age,
         regionId,
         cityId,

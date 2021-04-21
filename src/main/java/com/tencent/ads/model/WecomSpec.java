@@ -27,6 +27,9 @@ public class WecomSpec {
   @SerializedName("groupid")
   private Long groupid = null;
 
+  @SerializedName("setid")
+  private Long setid = null;
+
   public WecomSpec title(String title) {
     this.title = title;
     return this;
@@ -65,6 +68,25 @@ public class WecomSpec {
     this.groupid = groupid;
   }
 
+  public WecomSpec setid(Long setid) {
+    this.setid = setid;
+    return this;
+  }
+
+  /**
+   * Get setid
+   *
+   * @return setid
+   */
+  @ApiModelProperty(value = "")
+  public Long getSetid() {
+    return setid;
+  }
+
+  public void setSetid(Long setid) {
+    this.setid = setid;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -75,12 +97,13 @@ public class WecomSpec {
     }
     WecomSpec wecomSpec = (WecomSpec) o;
     return Objects.equals(this.title, wecomSpec.title)
-        && Objects.equals(this.groupid, wecomSpec.groupid);
+        && Objects.equals(this.groupid, wecomSpec.groupid)
+        && Objects.equals(this.setid, wecomSpec.setid);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(title, groupid);
+    return Objects.hash(title, groupid, setid);
   }
 
   @Override

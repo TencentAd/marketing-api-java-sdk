@@ -36,6 +36,7 @@ public class App {
   @Inject AgencyRealtimeCostApiContainer agencyRealtimeCostApiContainer;
   @Inject AndroidChannelPackagesApiContainer androidChannelPackagesApiContainer;
   @Inject AndroidUnionChannelPackagesApiContainer androidUnionChannelPackagesApiContainer;
+  @Inject AppAndroidChannelPackagesApiContainer appAndroidChannelPackagesApiContainer;
   @Inject AssetPermissionsApiContainer assetPermissionsApiContainer;
   @Inject AssetPrePermissionsApiContainer assetPrePermissionsApiContainer;
   @Inject AsyncReportFilesApiContainer asyncReportFilesApiContainer;
@@ -226,6 +227,10 @@ public class App {
 
   public AndroidUnionChannelPackagesApiContainer androidUnionChannelPackages() {
     return androidUnionChannelPackagesApiContainer;
+  }
+
+  public AppAndroidChannelPackagesApiContainer appAndroidChannelPackages() {
+    return appAndroidChannelPackagesApiContainer;
   }
 
   public AssetPermissionsApiContainer assetPermissions() {

@@ -876,6 +876,24 @@ public class DailyReportsGetListStruct {
   @SerializedName("key_page_view_rate")
   private Double keyPageViewRate = null;
 
+  @SerializedName("wechat_cost_stage1")
+  private Long wechatCostStage1 = null;
+
+  @SerializedName("wechat_cost_stage2")
+  private Long wechatCostStage2 = null;
+
+  @SerializedName("wechat_deep_conversions_count_stage1")
+  private Long wechatDeepConversionsCountStage1 = null;
+
+  @SerializedName("wechat_deep_conversions_count_stage2")
+  private Long wechatDeepConversionsCountStage2 = null;
+
+  @SerializedName("wechat_shallow_conversions_count_stage1")
+  private Long wechatShallowConversionsCountStage1 = null;
+
+  @SerializedName("wechat_shallow_conversions_count_stage2")
+  private Long wechatShallowConversionsCountStage2 = null;
+
   @SerializedName("request_conversions_count")
   private Long requestConversionsCount = null;
 
@@ -6684,6 +6702,124 @@ public class DailyReportsGetListStruct {
     this.keyPageViewRate = keyPageViewRate;
   }
 
+  public DailyReportsGetListStruct wechatCostStage1(Long wechatCostStage1) {
+    this.wechatCostStage1 = wechatCostStage1;
+    return this;
+  }
+
+  /**
+   * Get wechatCostStage1
+   *
+   * @return wechatCostStage1
+   */
+  @ApiModelProperty(value = "")
+  public Long getWechatCostStage1() {
+    return wechatCostStage1;
+  }
+
+  public void setWechatCostStage1(Long wechatCostStage1) {
+    this.wechatCostStage1 = wechatCostStage1;
+  }
+
+  public DailyReportsGetListStruct wechatCostStage2(Long wechatCostStage2) {
+    this.wechatCostStage2 = wechatCostStage2;
+    return this;
+  }
+
+  /**
+   * Get wechatCostStage2
+   *
+   * @return wechatCostStage2
+   */
+  @ApiModelProperty(value = "")
+  public Long getWechatCostStage2() {
+    return wechatCostStage2;
+  }
+
+  public void setWechatCostStage2(Long wechatCostStage2) {
+    this.wechatCostStage2 = wechatCostStage2;
+  }
+
+  public DailyReportsGetListStruct wechatDeepConversionsCountStage1(
+      Long wechatDeepConversionsCountStage1) {
+    this.wechatDeepConversionsCountStage1 = wechatDeepConversionsCountStage1;
+    return this;
+  }
+
+  /**
+   * Get wechatDeepConversionsCountStage1
+   *
+   * @return wechatDeepConversionsCountStage1
+   */
+  @ApiModelProperty(value = "")
+  public Long getWechatDeepConversionsCountStage1() {
+    return wechatDeepConversionsCountStage1;
+  }
+
+  public void setWechatDeepConversionsCountStage1(Long wechatDeepConversionsCountStage1) {
+    this.wechatDeepConversionsCountStage1 = wechatDeepConversionsCountStage1;
+  }
+
+  public DailyReportsGetListStruct wechatDeepConversionsCountStage2(
+      Long wechatDeepConversionsCountStage2) {
+    this.wechatDeepConversionsCountStage2 = wechatDeepConversionsCountStage2;
+    return this;
+  }
+
+  /**
+   * Get wechatDeepConversionsCountStage2
+   *
+   * @return wechatDeepConversionsCountStage2
+   */
+  @ApiModelProperty(value = "")
+  public Long getWechatDeepConversionsCountStage2() {
+    return wechatDeepConversionsCountStage2;
+  }
+
+  public void setWechatDeepConversionsCountStage2(Long wechatDeepConversionsCountStage2) {
+    this.wechatDeepConversionsCountStage2 = wechatDeepConversionsCountStage2;
+  }
+
+  public DailyReportsGetListStruct wechatShallowConversionsCountStage1(
+      Long wechatShallowConversionsCountStage1) {
+    this.wechatShallowConversionsCountStage1 = wechatShallowConversionsCountStage1;
+    return this;
+  }
+
+  /**
+   * Get wechatShallowConversionsCountStage1
+   *
+   * @return wechatShallowConversionsCountStage1
+   */
+  @ApiModelProperty(value = "")
+  public Long getWechatShallowConversionsCountStage1() {
+    return wechatShallowConversionsCountStage1;
+  }
+
+  public void setWechatShallowConversionsCountStage1(Long wechatShallowConversionsCountStage1) {
+    this.wechatShallowConversionsCountStage1 = wechatShallowConversionsCountStage1;
+  }
+
+  public DailyReportsGetListStruct wechatShallowConversionsCountStage2(
+      Long wechatShallowConversionsCountStage2) {
+    this.wechatShallowConversionsCountStage2 = wechatShallowConversionsCountStage2;
+    return this;
+  }
+
+  /**
+   * Get wechatShallowConversionsCountStage2
+   *
+   * @return wechatShallowConversionsCountStage2
+   */
+  @ApiModelProperty(value = "")
+  public Long getWechatShallowConversionsCountStage2() {
+    return wechatShallowConversionsCountStage2;
+  }
+
+  public void setWechatShallowConversionsCountStage2(Long wechatShallowConversionsCountStage2) {
+    this.wechatShallowConversionsCountStage2 = wechatShallowConversionsCountStage2;
+  }
+
   public DailyReportsGetListStruct requestConversionsCount(Long requestConversionsCount) {
     this.requestConversionsCount = requestConversionsCount;
     return this;
@@ -9538,6 +9674,20 @@ public class DailyReportsGetListStruct {
         && Objects.equals(
             this.miniGameRetentionD1Cost, dailyReportsGetListStruct.miniGameRetentionD1Cost)
         && Objects.equals(this.keyPageViewRate, dailyReportsGetListStruct.keyPageViewRate)
+        && Objects.equals(this.wechatCostStage1, dailyReportsGetListStruct.wechatCostStage1)
+        && Objects.equals(this.wechatCostStage2, dailyReportsGetListStruct.wechatCostStage2)
+        && Objects.equals(
+            this.wechatDeepConversionsCountStage1,
+            dailyReportsGetListStruct.wechatDeepConversionsCountStage1)
+        && Objects.equals(
+            this.wechatDeepConversionsCountStage2,
+            dailyReportsGetListStruct.wechatDeepConversionsCountStage2)
+        && Objects.equals(
+            this.wechatShallowConversionsCountStage1,
+            dailyReportsGetListStruct.wechatShallowConversionsCountStage1)
+        && Objects.equals(
+            this.wechatShallowConversionsCountStage2,
+            dailyReportsGetListStruct.wechatShallowConversionsCountStage2)
         && Objects.equals(
             this.requestConversionsCount, dailyReportsGetListStruct.requestConversionsCount)
         && Objects.equals(
@@ -10035,6 +10185,12 @@ public class DailyReportsGetListStruct {
         miniGameRetentionD1Rate,
         miniGameRetentionD1Cost,
         keyPageViewRate,
+        wechatCostStage1,
+        wechatCostStage2,
+        wechatDeepConversionsCountStage1,
+        wechatDeepConversionsCountStage2,
+        wechatShallowConversionsCountStage1,
+        wechatShallowConversionsCountStage2,
         requestConversionsCount,
         requestConversionsCost,
         incomeRoi1,
