@@ -894,11 +894,26 @@ public class DailyReportsGetListStruct {
   @SerializedName("wechat_shallow_conversions_count_stage2")
   private Long wechatShallowConversionsCountStage2 = null;
 
+  @SerializedName("register_activate_rate")
+  private Double registerActivateRate = null;
+
   @SerializedName("request_conversions_count")
   private Long requestConversionsCount = null;
 
   @SerializedName("request_conversions_cost")
   private Long requestConversionsCost = null;
+
+  @SerializedName("income_val_1")
+  private Long incomeVal1 = null;
+
+  @SerializedName("income_val_3")
+  private Long incomeVal3 = null;
+
+  @SerializedName("income_val_7")
+  private Long incomeVal7 = null;
+
+  @SerializedName("income_val_14")
+  private Long incomeVal14 = null;
 
   @SerializedName("income_roi_1")
   private Double incomeRoi1 = null;
@@ -6820,6 +6835,25 @@ public class DailyReportsGetListStruct {
     this.wechatShallowConversionsCountStage2 = wechatShallowConversionsCountStage2;
   }
 
+  public DailyReportsGetListStruct registerActivateRate(Double registerActivateRate) {
+    this.registerActivateRate = registerActivateRate;
+    return this;
+  }
+
+  /**
+   * Get registerActivateRate
+   *
+   * @return registerActivateRate
+   */
+  @ApiModelProperty(value = "")
+  public Double getRegisterActivateRate() {
+    return registerActivateRate;
+  }
+
+  public void setRegisterActivateRate(Double registerActivateRate) {
+    this.registerActivateRate = registerActivateRate;
+  }
+
   public DailyReportsGetListStruct requestConversionsCount(Long requestConversionsCount) {
     this.requestConversionsCount = requestConversionsCount;
     return this;
@@ -6856,6 +6890,82 @@ public class DailyReportsGetListStruct {
 
   public void setRequestConversionsCost(Long requestConversionsCost) {
     this.requestConversionsCost = requestConversionsCost;
+  }
+
+  public DailyReportsGetListStruct incomeVal1(Long incomeVal1) {
+    this.incomeVal1 = incomeVal1;
+    return this;
+  }
+
+  /**
+   * Get incomeVal1
+   *
+   * @return incomeVal1
+   */
+  @ApiModelProperty(value = "")
+  public Long getIncomeVal1() {
+    return incomeVal1;
+  }
+
+  public void setIncomeVal1(Long incomeVal1) {
+    this.incomeVal1 = incomeVal1;
+  }
+
+  public DailyReportsGetListStruct incomeVal3(Long incomeVal3) {
+    this.incomeVal3 = incomeVal3;
+    return this;
+  }
+
+  /**
+   * Get incomeVal3
+   *
+   * @return incomeVal3
+   */
+  @ApiModelProperty(value = "")
+  public Long getIncomeVal3() {
+    return incomeVal3;
+  }
+
+  public void setIncomeVal3(Long incomeVal3) {
+    this.incomeVal3 = incomeVal3;
+  }
+
+  public DailyReportsGetListStruct incomeVal7(Long incomeVal7) {
+    this.incomeVal7 = incomeVal7;
+    return this;
+  }
+
+  /**
+   * Get incomeVal7
+   *
+   * @return incomeVal7
+   */
+  @ApiModelProperty(value = "")
+  public Long getIncomeVal7() {
+    return incomeVal7;
+  }
+
+  public void setIncomeVal7(Long incomeVal7) {
+    this.incomeVal7 = incomeVal7;
+  }
+
+  public DailyReportsGetListStruct incomeVal14(Long incomeVal14) {
+    this.incomeVal14 = incomeVal14;
+    return this;
+  }
+
+  /**
+   * Get incomeVal14
+   *
+   * @return incomeVal14
+   */
+  @ApiModelProperty(value = "")
+  public Long getIncomeVal14() {
+    return incomeVal14;
+  }
+
+  public void setIncomeVal14(Long incomeVal14) {
+    this.incomeVal14 = incomeVal14;
   }
 
   public DailyReportsGetListStruct incomeRoi1(Double incomeRoi1) {
@@ -9688,10 +9798,15 @@ public class DailyReportsGetListStruct {
         && Objects.equals(
             this.wechatShallowConversionsCountStage2,
             dailyReportsGetListStruct.wechatShallowConversionsCountStage2)
+        && Objects.equals(this.registerActivateRate, dailyReportsGetListStruct.registerActivateRate)
         && Objects.equals(
             this.requestConversionsCount, dailyReportsGetListStruct.requestConversionsCount)
         && Objects.equals(
             this.requestConversionsCost, dailyReportsGetListStruct.requestConversionsCost)
+        && Objects.equals(this.incomeVal1, dailyReportsGetListStruct.incomeVal1)
+        && Objects.equals(this.incomeVal3, dailyReportsGetListStruct.incomeVal3)
+        && Objects.equals(this.incomeVal7, dailyReportsGetListStruct.incomeVal7)
+        && Objects.equals(this.incomeVal14, dailyReportsGetListStruct.incomeVal14)
         && Objects.equals(this.incomeRoi1, dailyReportsGetListStruct.incomeRoi1)
         && Objects.equals(this.incomeRoi3, dailyReportsGetListStruct.incomeRoi3)
         && Objects.equals(this.incomeRoi7, dailyReportsGetListStruct.incomeRoi7)
@@ -10191,8 +10306,13 @@ public class DailyReportsGetListStruct {
         wechatDeepConversionsCountStage2,
         wechatShallowConversionsCountStage1,
         wechatShallowConversionsCountStage2,
+        registerActivateRate,
         requestConversionsCount,
         requestConversionsCost,
+        incomeVal1,
+        incomeVal3,
+        incomeVal7,
+        incomeVal14,
         incomeRoi1,
         incomeRoi3,
         incomeRoi7,
