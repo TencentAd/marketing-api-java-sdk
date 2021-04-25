@@ -1035,6 +1035,9 @@ public class HourlyReportsGetListStruct {
   @SerializedName("promoted_object_id")
   private String promotedObjectId = null;
 
+  @SerializedName("activate_register_rate")
+  private Double activateRegisterRate = null;
+
   @SerializedName("wechat_account_id")
   private String wechatAccountId = null;
 
@@ -7683,6 +7686,25 @@ public class HourlyReportsGetListStruct {
     this.promotedObjectId = promotedObjectId;
   }
 
+  public HourlyReportsGetListStruct activateRegisterRate(Double activateRegisterRate) {
+    this.activateRegisterRate = activateRegisterRate;
+    return this;
+  }
+
+  /**
+   * Get activateRegisterRate
+   *
+   * @return activateRegisterRate
+   */
+  @ApiModelProperty(value = "")
+  public Double getActivateRegisterRate() {
+    return activateRegisterRate;
+  }
+
+  public void setActivateRegisterRate(Double activateRegisterRate) {
+    this.activateRegisterRate = activateRegisterRate;
+  }
+
   public HourlyReportsGetListStruct wechatAccountId(String wechatAccountId) {
     this.wechatAccountId = wechatAccountId;
     return this;
@@ -9504,6 +9526,8 @@ public class HourlyReportsGetListStruct {
         && Objects.equals(this.adName, hourlyReportsGetListStruct.adName)
         && Objects.equals(this.promotedObjectType, hourlyReportsGetListStruct.promotedObjectType)
         && Objects.equals(this.promotedObjectId, hourlyReportsGetListStruct.promotedObjectId)
+        && Objects.equals(
+            this.activateRegisterRate, hourlyReportsGetListStruct.activateRegisterRate)
         && Objects.equals(this.wechatAccountId, hourlyReportsGetListStruct.wechatAccountId)
         && Objects.equals(this.wechatAgencyId, hourlyReportsGetListStruct.wechatAgencyId)
         && Objects.equals(this.costDeviationRate, hourlyReportsGetListStruct.costDeviationRate)
@@ -9976,6 +10000,7 @@ public class HourlyReportsGetListStruct {
         adName,
         promotedObjectType,
         promotedObjectId,
+        activateRegisterRate,
         wechatAccountId,
         wechatAgencyId,
         costDeviationRate,

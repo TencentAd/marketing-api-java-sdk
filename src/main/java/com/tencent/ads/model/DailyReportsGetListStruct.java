@@ -1068,6 +1068,9 @@ public class DailyReportsGetListStruct {
   @SerializedName("signature")
   private String signature = null;
 
+  @SerializedName("activate_register_rate")
+  private Double activateRegisterRate = null;
+
   @SerializedName("product_catalog_id")
   private Long productCatalogId = null;
 
@@ -7940,6 +7943,25 @@ public class DailyReportsGetListStruct {
     this.signature = signature;
   }
 
+  public DailyReportsGetListStruct activateRegisterRate(Double activateRegisterRate) {
+    this.activateRegisterRate = activateRegisterRate;
+    return this;
+  }
+
+  /**
+   * Get activateRegisterRate
+   *
+   * @return activateRegisterRate
+   */
+  @ApiModelProperty(value = "")
+  public Double getActivateRegisterRate() {
+    return activateRegisterRate;
+  }
+
+  public void setActivateRegisterRate(Double activateRegisterRate) {
+    this.activateRegisterRate = activateRegisterRate;
+  }
+
   public DailyReportsGetListStruct productCatalogId(Long productCatalogId) {
     this.productCatalogId = productCatalogId;
     return this;
@@ -9880,6 +9902,7 @@ public class DailyReportsGetListStruct {
         && Objects.equals(this.siteSet, dailyReportsGetListStruct.siteSet)
         && Objects.equals(this.materialId, dailyReportsGetListStruct.materialId)
         && Objects.equals(this.signature, dailyReportsGetListStruct.signature)
+        && Objects.equals(this.activateRegisterRate, dailyReportsGetListStruct.activateRegisterRate)
         && Objects.equals(this.productCatalogId, dailyReportsGetListStruct.productCatalogId)
         && Objects.equals(this.productOuterId, dailyReportsGetListStruct.productOuterId)
         && Objects.equals(this.brandId, dailyReportsGetListStruct.brandId)
@@ -10364,6 +10387,7 @@ public class DailyReportsGetListStruct {
         siteSet,
         materialId,
         signature,
+        activateRegisterRate,
         productCatalogId,
         productOuterId,
         brandId,

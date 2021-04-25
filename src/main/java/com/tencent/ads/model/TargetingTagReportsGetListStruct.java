@@ -114,6 +114,9 @@ public class TargetingTagReportsGetListStruct {
   @SerializedName("platform_shop_navigation_count")
   private Long platformShopNavigationCount = null;
 
+  @SerializedName("platform_shop_navigation_cost")
+  private Long platformShopNavigationCost = null;
+
   @SerializedName("web_application_count")
   private Long webApplicationCount = null;
 
@@ -276,6 +279,9 @@ public class TargetingTagReportsGetListStruct {
   @SerializedName("platform_coupon_click_count")
   private Long platformCouponClickCount = null;
 
+  @SerializedName("platform_coupon_get_rate")
+  private Double platformCouponGetRate = null;
+
   @SerializedName("follow_count")
   private Long followCount = null;
 
@@ -335,6 +341,9 @@ public class TargetingTagReportsGetListStruct {
 
   @SerializedName("effective_leads_count")
   private Long effectiveLeadsCount = null;
+
+  @SerializedName("effective_cost")
+  private Long effectiveCost = null;
 
   @SerializedName("effective_reserve_count")
   private Long effectiveReserveCount = null;
@@ -402,6 +411,12 @@ public class TargetingTagReportsGetListStruct {
   @SerializedName("app_ad_pur_arpu_cost")
   private Long appAdPurArpuCost = null;
 
+  @SerializedName("app_ad_pur_arppu_cost")
+  private Long appAdPurArppuCost = null;
+
+  @SerializedName("web_ad_pur_arpu_cost")
+  private Long webAdPurArpuCost = null;
+
   @SerializedName("cheout_fd")
   private Long cheoutFd = null;
 
@@ -416,6 +431,21 @@ public class TargetingTagReportsGetListStruct {
 
   @SerializedName("cheout_om")
   private Long cheoutOm = null;
+
+  @SerializedName("cheout_fd_reward")
+  private Double cheoutFdReward = null;
+
+  @SerializedName("cheout_td_reward")
+  private Double cheoutTdReward = null;
+
+  @SerializedName("cheout_ow_reward")
+  private Double cheoutOwReward = null;
+
+  @SerializedName("cheout_tw_reward")
+  private Double cheoutTwReward = null;
+
+  @SerializedName("cheout_om_reward")
+  private Double cheoutOmReward = null;
 
   @SerializedName("cheout_total_reward")
   private Double cheoutTotalReward = null;
@@ -434,6 +464,9 @@ public class TargetingTagReportsGetListStruct {
 
   @SerializedName("first_pay_count")
   private Long firstPayCount = null;
+
+  @SerializedName("first_pay_rate")
+  private Double firstPayRate = null;
 
   @SerializedName("pre_cre_web")
   private Long preCreWeb = null;
@@ -471,6 +504,9 @@ public class TargetingTagReportsGetListStruct {
   @SerializedName("withdr_dep_app_val")
   private Long withdrDepAppVal = null;
 
+  @SerializedName("first_pay_cost")
+  private Long firstPayCost = null;
+
   @SerializedName("landing_page_click_count")
   private Long landingPageClickCount = null;
 
@@ -482,6 +518,12 @@ public class TargetingTagReportsGetListStruct {
 
   @SerializedName("scan_follow_user_count")
   private Long scanFollowUserCount = null;
+
+  @SerializedName("scan_follow_user_cost")
+  private Long scanFollowUserCost = null;
+
+  @SerializedName("scan_follow_user_rate")
+  private Double scanFollowUserRate = null;
 
   @SerializedName("app_order_amount")
   private Long appOrderAmount = null;
@@ -497,6 +539,9 @@ public class TargetingTagReportsGetListStruct {
 
   @SerializedName("lottery_leads_count")
   private Long lotteryLeadsCount = null;
+
+  @SerializedName("lottery_leads_cost")
+  private Long lotteryLeadsCost = null;
 
   @SerializedName("conversions_count")
   private Long conversionsCount = null;
@@ -527,6 +572,18 @@ public class TargetingTagReportsGetListStruct {
 
   @SerializedName("memcard_app_count")
   private Long memcardAppCount = null;
+
+  @SerializedName("first_memcard_web_rate")
+  private Double firstMemcardWebRate = null;
+
+  @SerializedName("first_memcard_app_rate")
+  private Double firstMemcardAppRate = null;
+
+  @SerializedName("first_memcard_web_cost")
+  private Long firstMemcardWebCost = null;
+
+  @SerializedName("first_memcard_app_cost")
+  private Long firstMemcardAppCost = null;
 
   @SerializedName("valuable_click_count")
   private Long valuableClickCount = null;
@@ -563,6 +620,12 @@ public class TargetingTagReportsGetListStruct {
 
   @SerializedName("lan_jump_button_clickers")
   private Long lanJumpButtonClickers = null;
+
+  @SerializedName("lan_jump_button_click_cost")
+  private Long lanJumpButtonClickCost = null;
+
+  @SerializedName("lan_jump_button_ctr")
+  private Double lanJumpButtonCtr = null;
 
   @SerializedName("lan_button_click_cost")
   private Long lanButtonClickCost = null;
@@ -672,8 +735,17 @@ public class TargetingTagReportsGetListStruct {
   @SerializedName("video_outer_play100_count")
   private Long videoOuterPlay100Count = null;
 
+  @SerializedName("video_outer_play_time_count")
+  private Double videoOuterPlayTimeCount = null;
+
   @SerializedName("video_outer_play_time_avg_rate")
   private Double videoOuterPlayTimeAvgRate = null;
+
+  @SerializedName("video_outer_play_rate")
+  private Double videoOuterPlayRate = null;
+
+  @SerializedName("video_outer_play_cost")
+  private Long videoOuterPlayCost = null;
 
   @SerializedName("video_outer_play_count")
   private Long videoOuterPlayCount = null;
@@ -686,6 +758,21 @@ public class TargetingTagReportsGetListStruct {
 
   @SerializedName("video_outer_play7s_count")
   private Long videoOuterPlay7sCount = null;
+
+  @SerializedName("effect_leads_purchase_cost")
+  private Long effectLeadsPurchaseCost = null;
+
+  @SerializedName("cre_web_cost")
+  private Long creWebCost = null;
+
+  @SerializedName("cre_app_cost")
+  private Long creAppCost = null;
+
+  @SerializedName("pre_cre_web_cost")
+  private Long preCreWebCost = null;
+
+  @SerializedName("pre_cre_app_cost")
+  private Long preCreAppCost = null;
 
   @SerializedName("store_visitor")
   private Long storeVisitor = null;
@@ -807,11 +894,14 @@ public class TargetingTagReportsGetListStruct {
   @SerializedName("wechat_shallow_conversions_count_stage2")
   private Long wechatShallowConversionsCountStage2 = null;
 
-  @SerializedName("register_activate_rate")
-  private Double registerActivateRate = null;
+  @SerializedName("activate_register_rate")
+  private Double activateRegisterRate = null;
 
   @SerializedName("age")
   private String age = null;
+
+  @SerializedName("register_activate_rate")
+  private Double registerActivateRate = null;
 
   @SerializedName("region_id")
   private Long regionId = null;
@@ -885,60 +975,6 @@ public class TargetingTagReportsGetListStruct {
   @SerializedName("behavior_intensity")
   private String behaviorIntensity = null;
 
-  @SerializedName("platform_shop_navigation_cost")
-  private Long platformShopNavigationCost = null;
-
-  @SerializedName("platform_coupon_get_rate")
-  private Double platformCouponGetRate = null;
-
-  @SerializedName("effective_cost")
-  private Long effectiveCost = null;
-
-  @SerializedName("app_ad_pur_arppu_cost")
-  private Long appAdPurArppuCost = null;
-
-  @SerializedName("web_ad_pur_arpu_cost")
-  private Long webAdPurArpuCost = null;
-
-  @SerializedName("cheout_fd_reward")
-  private Double cheoutFdReward = null;
-
-  @SerializedName("cheout_td_reward")
-  private Double cheoutTdReward = null;
-
-  @SerializedName("cheout_ow_reward")
-  private Double cheoutOwReward = null;
-
-  @SerializedName("cheout_tw_reward")
-  private Double cheoutTwReward = null;
-
-  @SerializedName("cheout_om_reward")
-  private Double cheoutOmReward = null;
-
-  @SerializedName("first_pay_rate")
-  private Double firstPayRate = null;
-
-  @SerializedName("first_pay_cost")
-  private Long firstPayCost = null;
-
-  @SerializedName("scan_follow_user_cost")
-  private Long scanFollowUserCost = null;
-
-  @SerializedName("scan_follow_user_rate")
-  private Double scanFollowUserRate = null;
-
-  @SerializedName("cre_web_cost")
-  private Long creWebCost = null;
-
-  @SerializedName("cre_app_cost")
-  private Long creAppCost = null;
-
-  @SerializedName("pre_cre_web_cost")
-  private Long preCreWebCost = null;
-
-  @SerializedName("pre_cre_app_cost")
-  private Long preCreAppCost = null;
-
   @SerializedName("gender_name")
   private String genderName = null;
 
@@ -962,15 +998,6 @@ public class TargetingTagReportsGetListStruct {
 
   @SerializedName("promoted_object_id")
   private String promotedObjectId = null;
-
-  @SerializedName("lan_jump_button_click_cost")
-  private Long lanJumpButtonClickCost = null;
-
-  @SerializedName("lan_jump_button_ctr")
-  private Double lanJumpButtonCtr = null;
-
-  @SerializedName("effect_leads_purchase_cost")
-  private Long effectLeadsPurchaseCost = null;
 
   @SerializedName("request_conversions_count")
   private Long requestConversionsCount = null;
@@ -1671,6 +1698,26 @@ public class TargetingTagReportsGetListStruct {
 
   public void setPlatformShopNavigationCount(Long platformShopNavigationCount) {
     this.platformShopNavigationCount = platformShopNavigationCount;
+  }
+
+  public TargetingTagReportsGetListStruct platformShopNavigationCost(
+      Long platformShopNavigationCost) {
+    this.platformShopNavigationCost = platformShopNavigationCost;
+    return this;
+  }
+
+  /**
+   * Get platformShopNavigationCost
+   *
+   * @return platformShopNavigationCost
+   */
+  @ApiModelProperty(value = "")
+  public Long getPlatformShopNavigationCost() {
+    return platformShopNavigationCost;
+  }
+
+  public void setPlatformShopNavigationCost(Long platformShopNavigationCost) {
+    this.platformShopNavigationCost = platformShopNavigationCost;
   }
 
   public TargetingTagReportsGetListStruct webApplicationCount(Long webApplicationCount) {
@@ -2702,6 +2749,25 @@ public class TargetingTagReportsGetListStruct {
     this.platformCouponClickCount = platformCouponClickCount;
   }
 
+  public TargetingTagReportsGetListStruct platformCouponGetRate(Double platformCouponGetRate) {
+    this.platformCouponGetRate = platformCouponGetRate;
+    return this;
+  }
+
+  /**
+   * Get platformCouponGetRate
+   *
+   * @return platformCouponGetRate
+   */
+  @ApiModelProperty(value = "")
+  public Double getPlatformCouponGetRate() {
+    return platformCouponGetRate;
+  }
+
+  public void setPlatformCouponGetRate(Double platformCouponGetRate) {
+    this.platformCouponGetRate = platformCouponGetRate;
+  }
+
   public TargetingTagReportsGetListStruct followCount(Long followCount) {
     this.followCount = followCount;
     return this;
@@ -3081,6 +3147,25 @@ public class TargetingTagReportsGetListStruct {
 
   public void setEffectiveLeadsCount(Long effectiveLeadsCount) {
     this.effectiveLeadsCount = effectiveLeadsCount;
+  }
+
+  public TargetingTagReportsGetListStruct effectiveCost(Long effectiveCost) {
+    this.effectiveCost = effectiveCost;
+    return this;
+  }
+
+  /**
+   * Get effectiveCost
+   *
+   * @return effectiveCost
+   */
+  @ApiModelProperty(value = "")
+  public Long getEffectiveCost() {
+    return effectiveCost;
+  }
+
+  public void setEffectiveCost(Long effectiveCost) {
+    this.effectiveCost = effectiveCost;
   }
 
   public TargetingTagReportsGetListStruct effectiveReserveCount(Long effectiveReserveCount) {
@@ -3503,6 +3588,44 @@ public class TargetingTagReportsGetListStruct {
     this.appAdPurArpuCost = appAdPurArpuCost;
   }
 
+  public TargetingTagReportsGetListStruct appAdPurArppuCost(Long appAdPurArppuCost) {
+    this.appAdPurArppuCost = appAdPurArppuCost;
+    return this;
+  }
+
+  /**
+   * Get appAdPurArppuCost
+   *
+   * @return appAdPurArppuCost
+   */
+  @ApiModelProperty(value = "")
+  public Long getAppAdPurArppuCost() {
+    return appAdPurArppuCost;
+  }
+
+  public void setAppAdPurArppuCost(Long appAdPurArppuCost) {
+    this.appAdPurArppuCost = appAdPurArppuCost;
+  }
+
+  public TargetingTagReportsGetListStruct webAdPurArpuCost(Long webAdPurArpuCost) {
+    this.webAdPurArpuCost = webAdPurArpuCost;
+    return this;
+  }
+
+  /**
+   * Get webAdPurArpuCost
+   *
+   * @return webAdPurArpuCost
+   */
+  @ApiModelProperty(value = "")
+  public Long getWebAdPurArpuCost() {
+    return webAdPurArpuCost;
+  }
+
+  public void setWebAdPurArpuCost(Long webAdPurArpuCost) {
+    this.webAdPurArpuCost = webAdPurArpuCost;
+  }
+
   public TargetingTagReportsGetListStruct cheoutFd(Long cheoutFd) {
     this.cheoutFd = cheoutFd;
     return this;
@@ -3596,6 +3719,101 @@ public class TargetingTagReportsGetListStruct {
 
   public void setCheoutOm(Long cheoutOm) {
     this.cheoutOm = cheoutOm;
+  }
+
+  public TargetingTagReportsGetListStruct cheoutFdReward(Double cheoutFdReward) {
+    this.cheoutFdReward = cheoutFdReward;
+    return this;
+  }
+
+  /**
+   * Get cheoutFdReward
+   *
+   * @return cheoutFdReward
+   */
+  @ApiModelProperty(value = "")
+  public Double getCheoutFdReward() {
+    return cheoutFdReward;
+  }
+
+  public void setCheoutFdReward(Double cheoutFdReward) {
+    this.cheoutFdReward = cheoutFdReward;
+  }
+
+  public TargetingTagReportsGetListStruct cheoutTdReward(Double cheoutTdReward) {
+    this.cheoutTdReward = cheoutTdReward;
+    return this;
+  }
+
+  /**
+   * Get cheoutTdReward
+   *
+   * @return cheoutTdReward
+   */
+  @ApiModelProperty(value = "")
+  public Double getCheoutTdReward() {
+    return cheoutTdReward;
+  }
+
+  public void setCheoutTdReward(Double cheoutTdReward) {
+    this.cheoutTdReward = cheoutTdReward;
+  }
+
+  public TargetingTagReportsGetListStruct cheoutOwReward(Double cheoutOwReward) {
+    this.cheoutOwReward = cheoutOwReward;
+    return this;
+  }
+
+  /**
+   * Get cheoutOwReward
+   *
+   * @return cheoutOwReward
+   */
+  @ApiModelProperty(value = "")
+  public Double getCheoutOwReward() {
+    return cheoutOwReward;
+  }
+
+  public void setCheoutOwReward(Double cheoutOwReward) {
+    this.cheoutOwReward = cheoutOwReward;
+  }
+
+  public TargetingTagReportsGetListStruct cheoutTwReward(Double cheoutTwReward) {
+    this.cheoutTwReward = cheoutTwReward;
+    return this;
+  }
+
+  /**
+   * Get cheoutTwReward
+   *
+   * @return cheoutTwReward
+   */
+  @ApiModelProperty(value = "")
+  public Double getCheoutTwReward() {
+    return cheoutTwReward;
+  }
+
+  public void setCheoutTwReward(Double cheoutTwReward) {
+    this.cheoutTwReward = cheoutTwReward;
+  }
+
+  public TargetingTagReportsGetListStruct cheoutOmReward(Double cheoutOmReward) {
+    this.cheoutOmReward = cheoutOmReward;
+    return this;
+  }
+
+  /**
+   * Get cheoutOmReward
+   *
+   * @return cheoutOmReward
+   */
+  @ApiModelProperty(value = "")
+  public Double getCheoutOmReward() {
+    return cheoutOmReward;
+  }
+
+  public void setCheoutOmReward(Double cheoutOmReward) {
+    this.cheoutOmReward = cheoutOmReward;
   }
 
   public TargetingTagReportsGetListStruct cheoutTotalReward(Double cheoutTotalReward) {
@@ -3710,6 +3928,25 @@ public class TargetingTagReportsGetListStruct {
 
   public void setFirstPayCount(Long firstPayCount) {
     this.firstPayCount = firstPayCount;
+  }
+
+  public TargetingTagReportsGetListStruct firstPayRate(Double firstPayRate) {
+    this.firstPayRate = firstPayRate;
+    return this;
+  }
+
+  /**
+   * Get firstPayRate
+   *
+   * @return firstPayRate
+   */
+  @ApiModelProperty(value = "")
+  public Double getFirstPayRate() {
+    return firstPayRate;
+  }
+
+  public void setFirstPayRate(Double firstPayRate) {
+    this.firstPayRate = firstPayRate;
   }
 
   public TargetingTagReportsGetListStruct preCreWeb(Long preCreWeb) {
@@ -3940,6 +4177,25 @@ public class TargetingTagReportsGetListStruct {
     this.withdrDepAppVal = withdrDepAppVal;
   }
 
+  public TargetingTagReportsGetListStruct firstPayCost(Long firstPayCost) {
+    this.firstPayCost = firstPayCost;
+    return this;
+  }
+
+  /**
+   * Get firstPayCost
+   *
+   * @return firstPayCost
+   */
+  @ApiModelProperty(value = "")
+  public Long getFirstPayCost() {
+    return firstPayCost;
+  }
+
+  public void setFirstPayCost(Long firstPayCost) {
+    this.firstPayCost = firstPayCost;
+  }
+
   public TargetingTagReportsGetListStruct landingPageClickCount(Long landingPageClickCount) {
     this.landingPageClickCount = landingPageClickCount;
     return this;
@@ -4014,6 +4270,44 @@ public class TargetingTagReportsGetListStruct {
 
   public void setScanFollowUserCount(Long scanFollowUserCount) {
     this.scanFollowUserCount = scanFollowUserCount;
+  }
+
+  public TargetingTagReportsGetListStruct scanFollowUserCost(Long scanFollowUserCost) {
+    this.scanFollowUserCost = scanFollowUserCost;
+    return this;
+  }
+
+  /**
+   * Get scanFollowUserCost
+   *
+   * @return scanFollowUserCost
+   */
+  @ApiModelProperty(value = "")
+  public Long getScanFollowUserCost() {
+    return scanFollowUserCost;
+  }
+
+  public void setScanFollowUserCost(Long scanFollowUserCost) {
+    this.scanFollowUserCost = scanFollowUserCost;
+  }
+
+  public TargetingTagReportsGetListStruct scanFollowUserRate(Double scanFollowUserRate) {
+    this.scanFollowUserRate = scanFollowUserRate;
+    return this;
+  }
+
+  /**
+   * Get scanFollowUserRate
+   *
+   * @return scanFollowUserRate
+   */
+  @ApiModelProperty(value = "")
+  public Double getScanFollowUserRate() {
+    return scanFollowUserRate;
+  }
+
+  public void setScanFollowUserRate(Double scanFollowUserRate) {
+    this.scanFollowUserRate = scanFollowUserRate;
   }
 
   public TargetingTagReportsGetListStruct appOrderAmount(Long appOrderAmount) {
@@ -4109,6 +4403,25 @@ public class TargetingTagReportsGetListStruct {
 
   public void setLotteryLeadsCount(Long lotteryLeadsCount) {
     this.lotteryLeadsCount = lotteryLeadsCount;
+  }
+
+  public TargetingTagReportsGetListStruct lotteryLeadsCost(Long lotteryLeadsCost) {
+    this.lotteryLeadsCost = lotteryLeadsCost;
+    return this;
+  }
+
+  /**
+   * Get lotteryLeadsCost
+   *
+   * @return lotteryLeadsCost
+   */
+  @ApiModelProperty(value = "")
+  public Long getLotteryLeadsCost() {
+    return lotteryLeadsCost;
+  }
+
+  public void setLotteryLeadsCost(Long lotteryLeadsCost) {
+    this.lotteryLeadsCost = lotteryLeadsCost;
   }
 
   public TargetingTagReportsGetListStruct conversionsCount(Long conversionsCount) {
@@ -4299,6 +4612,82 @@ public class TargetingTagReportsGetListStruct {
 
   public void setMemcardAppCount(Long memcardAppCount) {
     this.memcardAppCount = memcardAppCount;
+  }
+
+  public TargetingTagReportsGetListStruct firstMemcardWebRate(Double firstMemcardWebRate) {
+    this.firstMemcardWebRate = firstMemcardWebRate;
+    return this;
+  }
+
+  /**
+   * Get firstMemcardWebRate
+   *
+   * @return firstMemcardWebRate
+   */
+  @ApiModelProperty(value = "")
+  public Double getFirstMemcardWebRate() {
+    return firstMemcardWebRate;
+  }
+
+  public void setFirstMemcardWebRate(Double firstMemcardWebRate) {
+    this.firstMemcardWebRate = firstMemcardWebRate;
+  }
+
+  public TargetingTagReportsGetListStruct firstMemcardAppRate(Double firstMemcardAppRate) {
+    this.firstMemcardAppRate = firstMemcardAppRate;
+    return this;
+  }
+
+  /**
+   * Get firstMemcardAppRate
+   *
+   * @return firstMemcardAppRate
+   */
+  @ApiModelProperty(value = "")
+  public Double getFirstMemcardAppRate() {
+    return firstMemcardAppRate;
+  }
+
+  public void setFirstMemcardAppRate(Double firstMemcardAppRate) {
+    this.firstMemcardAppRate = firstMemcardAppRate;
+  }
+
+  public TargetingTagReportsGetListStruct firstMemcardWebCost(Long firstMemcardWebCost) {
+    this.firstMemcardWebCost = firstMemcardWebCost;
+    return this;
+  }
+
+  /**
+   * Get firstMemcardWebCost
+   *
+   * @return firstMemcardWebCost
+   */
+  @ApiModelProperty(value = "")
+  public Long getFirstMemcardWebCost() {
+    return firstMemcardWebCost;
+  }
+
+  public void setFirstMemcardWebCost(Long firstMemcardWebCost) {
+    this.firstMemcardWebCost = firstMemcardWebCost;
+  }
+
+  public TargetingTagReportsGetListStruct firstMemcardAppCost(Long firstMemcardAppCost) {
+    this.firstMemcardAppCost = firstMemcardAppCost;
+    return this;
+  }
+
+  /**
+   * Get firstMemcardAppCost
+   *
+   * @return firstMemcardAppCost
+   */
+  @ApiModelProperty(value = "")
+  public Long getFirstMemcardAppCost() {
+    return firstMemcardAppCost;
+  }
+
+  public void setFirstMemcardAppCost(Long firstMemcardAppCost) {
+    this.firstMemcardAppCost = firstMemcardAppCost;
   }
 
   public TargetingTagReportsGetListStruct valuableClickCount(Long valuableClickCount) {
@@ -4527,6 +4916,44 @@ public class TargetingTagReportsGetListStruct {
 
   public void setLanJumpButtonClickers(Long lanJumpButtonClickers) {
     this.lanJumpButtonClickers = lanJumpButtonClickers;
+  }
+
+  public TargetingTagReportsGetListStruct lanJumpButtonClickCost(Long lanJumpButtonClickCost) {
+    this.lanJumpButtonClickCost = lanJumpButtonClickCost;
+    return this;
+  }
+
+  /**
+   * Get lanJumpButtonClickCost
+   *
+   * @return lanJumpButtonClickCost
+   */
+  @ApiModelProperty(value = "")
+  public Long getLanJumpButtonClickCost() {
+    return lanJumpButtonClickCost;
+  }
+
+  public void setLanJumpButtonClickCost(Long lanJumpButtonClickCost) {
+    this.lanJumpButtonClickCost = lanJumpButtonClickCost;
+  }
+
+  public TargetingTagReportsGetListStruct lanJumpButtonCtr(Double lanJumpButtonCtr) {
+    this.lanJumpButtonCtr = lanJumpButtonCtr;
+    return this;
+  }
+
+  /**
+   * Get lanJumpButtonCtr
+   *
+   * @return lanJumpButtonCtr
+   */
+  @ApiModelProperty(value = "")
+  public Double getLanJumpButtonCtr() {
+    return lanJumpButtonCtr;
+  }
+
+  public void setLanJumpButtonCtr(Double lanJumpButtonCtr) {
+    this.lanJumpButtonCtr = lanJumpButtonCtr;
   }
 
   public TargetingTagReportsGetListStruct lanButtonClickCost(Long lanButtonClickCost) {
@@ -5214,6 +5641,25 @@ public class TargetingTagReportsGetListStruct {
     this.videoOuterPlay100Count = videoOuterPlay100Count;
   }
 
+  public TargetingTagReportsGetListStruct videoOuterPlayTimeCount(Double videoOuterPlayTimeCount) {
+    this.videoOuterPlayTimeCount = videoOuterPlayTimeCount;
+    return this;
+  }
+
+  /**
+   * Get videoOuterPlayTimeCount
+   *
+   * @return videoOuterPlayTimeCount
+   */
+  @ApiModelProperty(value = "")
+  public Double getVideoOuterPlayTimeCount() {
+    return videoOuterPlayTimeCount;
+  }
+
+  public void setVideoOuterPlayTimeCount(Double videoOuterPlayTimeCount) {
+    this.videoOuterPlayTimeCount = videoOuterPlayTimeCount;
+  }
+
   public TargetingTagReportsGetListStruct videoOuterPlayTimeAvgRate(
       Double videoOuterPlayTimeAvgRate) {
     this.videoOuterPlayTimeAvgRate = videoOuterPlayTimeAvgRate;
@@ -5232,6 +5678,44 @@ public class TargetingTagReportsGetListStruct {
 
   public void setVideoOuterPlayTimeAvgRate(Double videoOuterPlayTimeAvgRate) {
     this.videoOuterPlayTimeAvgRate = videoOuterPlayTimeAvgRate;
+  }
+
+  public TargetingTagReportsGetListStruct videoOuterPlayRate(Double videoOuterPlayRate) {
+    this.videoOuterPlayRate = videoOuterPlayRate;
+    return this;
+  }
+
+  /**
+   * Get videoOuterPlayRate
+   *
+   * @return videoOuterPlayRate
+   */
+  @ApiModelProperty(value = "")
+  public Double getVideoOuterPlayRate() {
+    return videoOuterPlayRate;
+  }
+
+  public void setVideoOuterPlayRate(Double videoOuterPlayRate) {
+    this.videoOuterPlayRate = videoOuterPlayRate;
+  }
+
+  public TargetingTagReportsGetListStruct videoOuterPlayCost(Long videoOuterPlayCost) {
+    this.videoOuterPlayCost = videoOuterPlayCost;
+    return this;
+  }
+
+  /**
+   * Get videoOuterPlayCost
+   *
+   * @return videoOuterPlayCost
+   */
+  @ApiModelProperty(value = "")
+  public Long getVideoOuterPlayCost() {
+    return videoOuterPlayCost;
+  }
+
+  public void setVideoOuterPlayCost(Long videoOuterPlayCost) {
+    this.videoOuterPlayCost = videoOuterPlayCost;
   }
 
   public TargetingTagReportsGetListStruct videoOuterPlayCount(Long videoOuterPlayCount) {
@@ -5308,6 +5792,101 @@ public class TargetingTagReportsGetListStruct {
 
   public void setVideoOuterPlay7sCount(Long videoOuterPlay7sCount) {
     this.videoOuterPlay7sCount = videoOuterPlay7sCount;
+  }
+
+  public TargetingTagReportsGetListStruct effectLeadsPurchaseCost(Long effectLeadsPurchaseCost) {
+    this.effectLeadsPurchaseCost = effectLeadsPurchaseCost;
+    return this;
+  }
+
+  /**
+   * Get effectLeadsPurchaseCost
+   *
+   * @return effectLeadsPurchaseCost
+   */
+  @ApiModelProperty(value = "")
+  public Long getEffectLeadsPurchaseCost() {
+    return effectLeadsPurchaseCost;
+  }
+
+  public void setEffectLeadsPurchaseCost(Long effectLeadsPurchaseCost) {
+    this.effectLeadsPurchaseCost = effectLeadsPurchaseCost;
+  }
+
+  public TargetingTagReportsGetListStruct creWebCost(Long creWebCost) {
+    this.creWebCost = creWebCost;
+    return this;
+  }
+
+  /**
+   * Get creWebCost
+   *
+   * @return creWebCost
+   */
+  @ApiModelProperty(value = "")
+  public Long getCreWebCost() {
+    return creWebCost;
+  }
+
+  public void setCreWebCost(Long creWebCost) {
+    this.creWebCost = creWebCost;
+  }
+
+  public TargetingTagReportsGetListStruct creAppCost(Long creAppCost) {
+    this.creAppCost = creAppCost;
+    return this;
+  }
+
+  /**
+   * Get creAppCost
+   *
+   * @return creAppCost
+   */
+  @ApiModelProperty(value = "")
+  public Long getCreAppCost() {
+    return creAppCost;
+  }
+
+  public void setCreAppCost(Long creAppCost) {
+    this.creAppCost = creAppCost;
+  }
+
+  public TargetingTagReportsGetListStruct preCreWebCost(Long preCreWebCost) {
+    this.preCreWebCost = preCreWebCost;
+    return this;
+  }
+
+  /**
+   * Get preCreWebCost
+   *
+   * @return preCreWebCost
+   */
+  @ApiModelProperty(value = "")
+  public Long getPreCreWebCost() {
+    return preCreWebCost;
+  }
+
+  public void setPreCreWebCost(Long preCreWebCost) {
+    this.preCreWebCost = preCreWebCost;
+  }
+
+  public TargetingTagReportsGetListStruct preCreAppCost(Long preCreAppCost) {
+    this.preCreAppCost = preCreAppCost;
+    return this;
+  }
+
+  /**
+   * Get preCreAppCost
+   *
+   * @return preCreAppCost
+   */
+  @ApiModelProperty(value = "")
+  public Long getPreCreAppCost() {
+    return preCreAppCost;
+  }
+
+  public void setPreCreAppCost(Long preCreAppCost) {
+    this.preCreAppCost = preCreAppCost;
   }
 
   public TargetingTagReportsGetListStruct storeVisitor(Long storeVisitor) {
@@ -6084,23 +6663,23 @@ public class TargetingTagReportsGetListStruct {
     this.wechatShallowConversionsCountStage2 = wechatShallowConversionsCountStage2;
   }
 
-  public TargetingTagReportsGetListStruct registerActivateRate(Double registerActivateRate) {
-    this.registerActivateRate = registerActivateRate;
+  public TargetingTagReportsGetListStruct activateRegisterRate(Double activateRegisterRate) {
+    this.activateRegisterRate = activateRegisterRate;
     return this;
   }
 
   /**
-   * Get registerActivateRate
+   * Get activateRegisterRate
    *
-   * @return registerActivateRate
+   * @return activateRegisterRate
    */
   @ApiModelProperty(value = "")
-  public Double getRegisterActivateRate() {
-    return registerActivateRate;
+  public Double getActivateRegisterRate() {
+    return activateRegisterRate;
   }
 
-  public void setRegisterActivateRate(Double registerActivateRate) {
-    this.registerActivateRate = registerActivateRate;
+  public void setActivateRegisterRate(Double activateRegisterRate) {
+    this.activateRegisterRate = activateRegisterRate;
   }
 
   public TargetingTagReportsGetListStruct age(String age) {
@@ -6120,6 +6699,25 @@ public class TargetingTagReportsGetListStruct {
 
   public void setAge(String age) {
     this.age = age;
+  }
+
+  public TargetingTagReportsGetListStruct registerActivateRate(Double registerActivateRate) {
+    this.registerActivateRate = registerActivateRate;
+    return this;
+  }
+
+  /**
+   * Get registerActivateRate
+   *
+   * @return registerActivateRate
+   */
+  @ApiModelProperty(value = "")
+  public Double getRegisterActivateRate() {
+    return registerActivateRate;
+  }
+
+  public void setRegisterActivateRate(Double registerActivateRate) {
+    this.registerActivateRate = registerActivateRate;
   }
 
   public TargetingTagReportsGetListStruct regionId(Long regionId) {
@@ -6579,349 +7177,6 @@ public class TargetingTagReportsGetListStruct {
     this.behaviorIntensity = behaviorIntensity;
   }
 
-  public TargetingTagReportsGetListStruct platformShopNavigationCost(
-      Long platformShopNavigationCost) {
-    this.platformShopNavigationCost = platformShopNavigationCost;
-    return this;
-  }
-
-  /**
-   * Get platformShopNavigationCost
-   *
-   * @return platformShopNavigationCost
-   */
-  @ApiModelProperty(value = "")
-  public Long getPlatformShopNavigationCost() {
-    return platformShopNavigationCost;
-  }
-
-  public void setPlatformShopNavigationCost(Long platformShopNavigationCost) {
-    this.platformShopNavigationCost = platformShopNavigationCost;
-  }
-
-  public TargetingTagReportsGetListStruct platformCouponGetRate(Double platformCouponGetRate) {
-    this.platformCouponGetRate = platformCouponGetRate;
-    return this;
-  }
-
-  /**
-   * Get platformCouponGetRate
-   *
-   * @return platformCouponGetRate
-   */
-  @ApiModelProperty(value = "")
-  public Double getPlatformCouponGetRate() {
-    return platformCouponGetRate;
-  }
-
-  public void setPlatformCouponGetRate(Double platformCouponGetRate) {
-    this.platformCouponGetRate = platformCouponGetRate;
-  }
-
-  public TargetingTagReportsGetListStruct effectiveCost(Long effectiveCost) {
-    this.effectiveCost = effectiveCost;
-    return this;
-  }
-
-  /**
-   * Get effectiveCost
-   *
-   * @return effectiveCost
-   */
-  @ApiModelProperty(value = "")
-  public Long getEffectiveCost() {
-    return effectiveCost;
-  }
-
-  public void setEffectiveCost(Long effectiveCost) {
-    this.effectiveCost = effectiveCost;
-  }
-
-  public TargetingTagReportsGetListStruct appAdPurArppuCost(Long appAdPurArppuCost) {
-    this.appAdPurArppuCost = appAdPurArppuCost;
-    return this;
-  }
-
-  /**
-   * Get appAdPurArppuCost
-   *
-   * @return appAdPurArppuCost
-   */
-  @ApiModelProperty(value = "")
-  public Long getAppAdPurArppuCost() {
-    return appAdPurArppuCost;
-  }
-
-  public void setAppAdPurArppuCost(Long appAdPurArppuCost) {
-    this.appAdPurArppuCost = appAdPurArppuCost;
-  }
-
-  public TargetingTagReportsGetListStruct webAdPurArpuCost(Long webAdPurArpuCost) {
-    this.webAdPurArpuCost = webAdPurArpuCost;
-    return this;
-  }
-
-  /**
-   * Get webAdPurArpuCost
-   *
-   * @return webAdPurArpuCost
-   */
-  @ApiModelProperty(value = "")
-  public Long getWebAdPurArpuCost() {
-    return webAdPurArpuCost;
-  }
-
-  public void setWebAdPurArpuCost(Long webAdPurArpuCost) {
-    this.webAdPurArpuCost = webAdPurArpuCost;
-  }
-
-  public TargetingTagReportsGetListStruct cheoutFdReward(Double cheoutFdReward) {
-    this.cheoutFdReward = cheoutFdReward;
-    return this;
-  }
-
-  /**
-   * Get cheoutFdReward
-   *
-   * @return cheoutFdReward
-   */
-  @ApiModelProperty(value = "")
-  public Double getCheoutFdReward() {
-    return cheoutFdReward;
-  }
-
-  public void setCheoutFdReward(Double cheoutFdReward) {
-    this.cheoutFdReward = cheoutFdReward;
-  }
-
-  public TargetingTagReportsGetListStruct cheoutTdReward(Double cheoutTdReward) {
-    this.cheoutTdReward = cheoutTdReward;
-    return this;
-  }
-
-  /**
-   * Get cheoutTdReward
-   *
-   * @return cheoutTdReward
-   */
-  @ApiModelProperty(value = "")
-  public Double getCheoutTdReward() {
-    return cheoutTdReward;
-  }
-
-  public void setCheoutTdReward(Double cheoutTdReward) {
-    this.cheoutTdReward = cheoutTdReward;
-  }
-
-  public TargetingTagReportsGetListStruct cheoutOwReward(Double cheoutOwReward) {
-    this.cheoutOwReward = cheoutOwReward;
-    return this;
-  }
-
-  /**
-   * Get cheoutOwReward
-   *
-   * @return cheoutOwReward
-   */
-  @ApiModelProperty(value = "")
-  public Double getCheoutOwReward() {
-    return cheoutOwReward;
-  }
-
-  public void setCheoutOwReward(Double cheoutOwReward) {
-    this.cheoutOwReward = cheoutOwReward;
-  }
-
-  public TargetingTagReportsGetListStruct cheoutTwReward(Double cheoutTwReward) {
-    this.cheoutTwReward = cheoutTwReward;
-    return this;
-  }
-
-  /**
-   * Get cheoutTwReward
-   *
-   * @return cheoutTwReward
-   */
-  @ApiModelProperty(value = "")
-  public Double getCheoutTwReward() {
-    return cheoutTwReward;
-  }
-
-  public void setCheoutTwReward(Double cheoutTwReward) {
-    this.cheoutTwReward = cheoutTwReward;
-  }
-
-  public TargetingTagReportsGetListStruct cheoutOmReward(Double cheoutOmReward) {
-    this.cheoutOmReward = cheoutOmReward;
-    return this;
-  }
-
-  /**
-   * Get cheoutOmReward
-   *
-   * @return cheoutOmReward
-   */
-  @ApiModelProperty(value = "")
-  public Double getCheoutOmReward() {
-    return cheoutOmReward;
-  }
-
-  public void setCheoutOmReward(Double cheoutOmReward) {
-    this.cheoutOmReward = cheoutOmReward;
-  }
-
-  public TargetingTagReportsGetListStruct firstPayRate(Double firstPayRate) {
-    this.firstPayRate = firstPayRate;
-    return this;
-  }
-
-  /**
-   * Get firstPayRate
-   *
-   * @return firstPayRate
-   */
-  @ApiModelProperty(value = "")
-  public Double getFirstPayRate() {
-    return firstPayRate;
-  }
-
-  public void setFirstPayRate(Double firstPayRate) {
-    this.firstPayRate = firstPayRate;
-  }
-
-  public TargetingTagReportsGetListStruct firstPayCost(Long firstPayCost) {
-    this.firstPayCost = firstPayCost;
-    return this;
-  }
-
-  /**
-   * Get firstPayCost
-   *
-   * @return firstPayCost
-   */
-  @ApiModelProperty(value = "")
-  public Long getFirstPayCost() {
-    return firstPayCost;
-  }
-
-  public void setFirstPayCost(Long firstPayCost) {
-    this.firstPayCost = firstPayCost;
-  }
-
-  public TargetingTagReportsGetListStruct scanFollowUserCost(Long scanFollowUserCost) {
-    this.scanFollowUserCost = scanFollowUserCost;
-    return this;
-  }
-
-  /**
-   * Get scanFollowUserCost
-   *
-   * @return scanFollowUserCost
-   */
-  @ApiModelProperty(value = "")
-  public Long getScanFollowUserCost() {
-    return scanFollowUserCost;
-  }
-
-  public void setScanFollowUserCost(Long scanFollowUserCost) {
-    this.scanFollowUserCost = scanFollowUserCost;
-  }
-
-  public TargetingTagReportsGetListStruct scanFollowUserRate(Double scanFollowUserRate) {
-    this.scanFollowUserRate = scanFollowUserRate;
-    return this;
-  }
-
-  /**
-   * Get scanFollowUserRate
-   *
-   * @return scanFollowUserRate
-   */
-  @ApiModelProperty(value = "")
-  public Double getScanFollowUserRate() {
-    return scanFollowUserRate;
-  }
-
-  public void setScanFollowUserRate(Double scanFollowUserRate) {
-    this.scanFollowUserRate = scanFollowUserRate;
-  }
-
-  public TargetingTagReportsGetListStruct creWebCost(Long creWebCost) {
-    this.creWebCost = creWebCost;
-    return this;
-  }
-
-  /**
-   * Get creWebCost
-   *
-   * @return creWebCost
-   */
-  @ApiModelProperty(value = "")
-  public Long getCreWebCost() {
-    return creWebCost;
-  }
-
-  public void setCreWebCost(Long creWebCost) {
-    this.creWebCost = creWebCost;
-  }
-
-  public TargetingTagReportsGetListStruct creAppCost(Long creAppCost) {
-    this.creAppCost = creAppCost;
-    return this;
-  }
-
-  /**
-   * Get creAppCost
-   *
-   * @return creAppCost
-   */
-  @ApiModelProperty(value = "")
-  public Long getCreAppCost() {
-    return creAppCost;
-  }
-
-  public void setCreAppCost(Long creAppCost) {
-    this.creAppCost = creAppCost;
-  }
-
-  public TargetingTagReportsGetListStruct preCreWebCost(Long preCreWebCost) {
-    this.preCreWebCost = preCreWebCost;
-    return this;
-  }
-
-  /**
-   * Get preCreWebCost
-   *
-   * @return preCreWebCost
-   */
-  @ApiModelProperty(value = "")
-  public Long getPreCreWebCost() {
-    return preCreWebCost;
-  }
-
-  public void setPreCreWebCost(Long preCreWebCost) {
-    this.preCreWebCost = preCreWebCost;
-  }
-
-  public TargetingTagReportsGetListStruct preCreAppCost(Long preCreAppCost) {
-    this.preCreAppCost = preCreAppCost;
-    return this;
-  }
-
-  /**
-   * Get preCreAppCost
-   *
-   * @return preCreAppCost
-   */
-  @ApiModelProperty(value = "")
-  public Long getPreCreAppCost() {
-    return preCreAppCost;
-  }
-
-  public void setPreCreAppCost(Long preCreAppCost) {
-    this.preCreAppCost = preCreAppCost;
-  }
-
   public TargetingTagReportsGetListStruct genderName(String genderName) {
     this.genderName = genderName;
     return this;
@@ -7072,63 +7327,6 @@ public class TargetingTagReportsGetListStruct {
 
   public void setPromotedObjectId(String promotedObjectId) {
     this.promotedObjectId = promotedObjectId;
-  }
-
-  public TargetingTagReportsGetListStruct lanJumpButtonClickCost(Long lanJumpButtonClickCost) {
-    this.lanJumpButtonClickCost = lanJumpButtonClickCost;
-    return this;
-  }
-
-  /**
-   * Get lanJumpButtonClickCost
-   *
-   * @return lanJumpButtonClickCost
-   */
-  @ApiModelProperty(value = "")
-  public Long getLanJumpButtonClickCost() {
-    return lanJumpButtonClickCost;
-  }
-
-  public void setLanJumpButtonClickCost(Long lanJumpButtonClickCost) {
-    this.lanJumpButtonClickCost = lanJumpButtonClickCost;
-  }
-
-  public TargetingTagReportsGetListStruct lanJumpButtonCtr(Double lanJumpButtonCtr) {
-    this.lanJumpButtonCtr = lanJumpButtonCtr;
-    return this;
-  }
-
-  /**
-   * Get lanJumpButtonCtr
-   *
-   * @return lanJumpButtonCtr
-   */
-  @ApiModelProperty(value = "")
-  public Double getLanJumpButtonCtr() {
-    return lanJumpButtonCtr;
-  }
-
-  public void setLanJumpButtonCtr(Double lanJumpButtonCtr) {
-    this.lanJumpButtonCtr = lanJumpButtonCtr;
-  }
-
-  public TargetingTagReportsGetListStruct effectLeadsPurchaseCost(Long effectLeadsPurchaseCost) {
-    this.effectLeadsPurchaseCost = effectLeadsPurchaseCost;
-    return this;
-  }
-
-  /**
-   * Get effectLeadsPurchaseCost
-   *
-   * @return effectLeadsPurchaseCost
-   */
-  @ApiModelProperty(value = "")
-  public Long getEffectLeadsPurchaseCost() {
-    return effectLeadsPurchaseCost;
-  }
-
-  public void setEffectLeadsPurchaseCost(Long effectLeadsPurchaseCost) {
-    this.effectLeadsPurchaseCost = effectLeadsPurchaseCost;
   }
 
   public TargetingTagReportsGetListStruct requestConversionsCount(Long requestConversionsCount) {
@@ -7885,6 +8083,9 @@ public class TargetingTagReportsGetListStruct {
             this.platformShopNavigationCount,
             targetingTagReportsGetListStruct.platformShopNavigationCount)
         && Objects.equals(
+            this.platformShopNavigationCost,
+            targetingTagReportsGetListStruct.platformShopNavigationCost)
+        && Objects.equals(
             this.webApplicationCount, targetingTagReportsGetListStruct.webApplicationCount)
         && Objects.equals(
             this.webApplicationCost, targetingTagReportsGetListStruct.webApplicationCost)
@@ -7964,6 +8165,8 @@ public class TargetingTagReportsGetListStruct {
         && Objects.equals(
             this.platformCouponClickCount,
             targetingTagReportsGetListStruct.platformCouponClickCount)
+        && Objects.equals(
+            this.platformCouponGetRate, targetingTagReportsGetListStruct.platformCouponGetRate)
         && Objects.equals(this.followCount, targetingTagReportsGetListStruct.followCount)
         && Objects.equals(this.followCost, targetingTagReportsGetListStruct.followCost)
         && Objects.equals(this.forwardCount, targetingTagReportsGetListStruct.forwardCount)
@@ -7990,6 +8193,7 @@ public class TargetingTagReportsGetListStruct {
             this.gameTutorialFinishCount, targetingTagReportsGetListStruct.gameTutorialFinishCount)
         && Objects.equals(
             this.effectiveLeadsCount, targetingTagReportsGetListStruct.effectiveLeadsCount)
+        && Objects.equals(this.effectiveCost, targetingTagReportsGetListStruct.effectiveCost)
         && Objects.equals(
             this.effectiveReserveCount, targetingTagReportsGetListStruct.effectiveReserveCount)
         && Objects.equals(
@@ -8024,11 +8228,19 @@ public class TargetingTagReportsGetListStruct {
         && Objects.equals(this.webArppuCost, targetingTagReportsGetListStruct.webArppuCost)
         && Objects.equals(this.webArpuCost, targetingTagReportsGetListStruct.webArpuCost)
         && Objects.equals(this.appAdPurArpuCost, targetingTagReportsGetListStruct.appAdPurArpuCost)
+        && Objects.equals(
+            this.appAdPurArppuCost, targetingTagReportsGetListStruct.appAdPurArppuCost)
+        && Objects.equals(this.webAdPurArpuCost, targetingTagReportsGetListStruct.webAdPurArpuCost)
         && Objects.equals(this.cheoutFd, targetingTagReportsGetListStruct.cheoutFd)
         && Objects.equals(this.cheoutTd, targetingTagReportsGetListStruct.cheoutTd)
         && Objects.equals(this.cheoutOw, targetingTagReportsGetListStruct.cheoutOw)
         && Objects.equals(this.cheoutTw, targetingTagReportsGetListStruct.cheoutTw)
         && Objects.equals(this.cheoutOm, targetingTagReportsGetListStruct.cheoutOm)
+        && Objects.equals(this.cheoutFdReward, targetingTagReportsGetListStruct.cheoutFdReward)
+        && Objects.equals(this.cheoutTdReward, targetingTagReportsGetListStruct.cheoutTdReward)
+        && Objects.equals(this.cheoutOwReward, targetingTagReportsGetListStruct.cheoutOwReward)
+        && Objects.equals(this.cheoutTwReward, targetingTagReportsGetListStruct.cheoutTwReward)
+        && Objects.equals(this.cheoutOmReward, targetingTagReportsGetListStruct.cheoutOmReward)
         && Objects.equals(
             this.cheoutTotalReward, targetingTagReportsGetListStruct.cheoutTotalReward)
         && Objects.equals(this.fromFollowUv, targetingTagReportsGetListStruct.fromFollowUv)
@@ -8036,6 +8248,7 @@ public class TargetingTagReportsGetListStruct {
         && Objects.equals(this.addDesktopPv, targetingTagReportsGetListStruct.addDesktopPv)
         && Objects.equals(this.addDesktopCost, targetingTagReportsGetListStruct.addDesktopCost)
         && Objects.equals(this.firstPayCount, targetingTagReportsGetListStruct.firstPayCount)
+        && Objects.equals(this.firstPayRate, targetingTagReportsGetListStruct.firstPayRate)
         && Objects.equals(this.preCreWeb, targetingTagReportsGetListStruct.preCreWeb)
         && Objects.equals(this.preCreApp, targetingTagReportsGetListStruct.preCreApp)
         && Objects.equals(this.preCreWebVal, targetingTagReportsGetListStruct.preCreWebVal)
@@ -8048,12 +8261,17 @@ public class TargetingTagReportsGetListStruct {
         && Objects.equals(this.withdrDepApp, targetingTagReportsGetListStruct.withdrDepApp)
         && Objects.equals(this.withdrDepWebVal, targetingTagReportsGetListStruct.withdrDepWebVal)
         && Objects.equals(this.withdrDepAppVal, targetingTagReportsGetListStruct.withdrDepAppVal)
+        && Objects.equals(this.firstPayCost, targetingTagReportsGetListStruct.firstPayCost)
         && Objects.equals(
             this.landingPageClickCount, targetingTagReportsGetListStruct.landingPageClickCount)
         && Objects.equals(this.webCartAmount, targetingTagReportsGetListStruct.webCartAmount)
         && Objects.equals(this.scanFollowCount, targetingTagReportsGetListStruct.scanFollowCount)
         && Objects.equals(
             this.scanFollowUserCount, targetingTagReportsGetListStruct.scanFollowUserCount)
+        && Objects.equals(
+            this.scanFollowUserCost, targetingTagReportsGetListStruct.scanFollowUserCost)
+        && Objects.equals(
+            this.scanFollowUserRate, targetingTagReportsGetListStruct.scanFollowUserRate)
         && Objects.equals(this.appOrderAmount, targetingTagReportsGetListStruct.appOrderAmount)
         && Objects.equals(this.webOrderAmount, targetingTagReportsGetListStruct.webOrderAmount)
         && Objects.equals(
@@ -8061,6 +8279,7 @@ public class TargetingTagReportsGetListStruct {
         && Objects.equals(this.toolConsultCount, targetingTagReportsGetListStruct.toolConsultCount)
         && Objects.equals(
             this.lotteryLeadsCount, targetingTagReportsGetListStruct.lotteryLeadsCount)
+        && Objects.equals(this.lotteryLeadsCost, targetingTagReportsGetListStruct.lotteryLeadsCost)
         && Objects.equals(this.conversionsCount, targetingTagReportsGetListStruct.conversionsCount)
         && Objects.equals(this.conversionsRate, targetingTagReportsGetListStruct.conversionsRate)
         && Objects.equals(this.conversionsCost, targetingTagReportsGetListStruct.conversionsCost)
@@ -8076,6 +8295,14 @@ public class TargetingTagReportsGetListStruct {
             this.firstMemcardAppCount, targetingTagReportsGetListStruct.firstMemcardAppCount)
         && Objects.equals(this.memcardWebCount, targetingTagReportsGetListStruct.memcardWebCount)
         && Objects.equals(this.memcardAppCount, targetingTagReportsGetListStruct.memcardAppCount)
+        && Objects.equals(
+            this.firstMemcardWebRate, targetingTagReportsGetListStruct.firstMemcardWebRate)
+        && Objects.equals(
+            this.firstMemcardAppRate, targetingTagReportsGetListStruct.firstMemcardAppRate)
+        && Objects.equals(
+            this.firstMemcardWebCost, targetingTagReportsGetListStruct.firstMemcardWebCost)
+        && Objects.equals(
+            this.firstMemcardAppCost, targetingTagReportsGetListStruct.firstMemcardAppCost)
         && Objects.equals(
             this.valuableClickCount, targetingTagReportsGetListStruct.valuableClickCount)
         && Objects.equals(
@@ -8094,6 +8321,9 @@ public class TargetingTagReportsGetListStruct {
             this.lanButtonClickCount, targetingTagReportsGetListStruct.lanButtonClickCount)
         && Objects.equals(
             this.lanJumpButtonClickers, targetingTagReportsGetListStruct.lanJumpButtonClickers)
+        && Objects.equals(
+            this.lanJumpButtonClickCost, targetingTagReportsGetListStruct.lanJumpButtonClickCost)
+        && Objects.equals(this.lanJumpButtonCtr, targetingTagReportsGetListStruct.lanJumpButtonCtr)
         && Objects.equals(
             this.lanButtonClickCost, targetingTagReportsGetListStruct.lanButtonClickCost)
         && Objects.equals(
@@ -8153,8 +8383,14 @@ public class TargetingTagReportsGetListStruct {
         && Objects.equals(
             this.videoOuterPlay100Count, targetingTagReportsGetListStruct.videoOuterPlay100Count)
         && Objects.equals(
+            this.videoOuterPlayTimeCount, targetingTagReportsGetListStruct.videoOuterPlayTimeCount)
+        && Objects.equals(
             this.videoOuterPlayTimeAvgRate,
             targetingTagReportsGetListStruct.videoOuterPlayTimeAvgRate)
+        && Objects.equals(
+            this.videoOuterPlayRate, targetingTagReportsGetListStruct.videoOuterPlayRate)
+        && Objects.equals(
+            this.videoOuterPlayCost, targetingTagReportsGetListStruct.videoOuterPlayCost)
         && Objects.equals(
             this.videoOuterPlayCount, targetingTagReportsGetListStruct.videoOuterPlayCount)
         && Objects.equals(
@@ -8163,6 +8399,12 @@ public class TargetingTagReportsGetListStruct {
             this.videoOuterPlay5sCount, targetingTagReportsGetListStruct.videoOuterPlay5sCount)
         && Objects.equals(
             this.videoOuterPlay7sCount, targetingTagReportsGetListStruct.videoOuterPlay7sCount)
+        && Objects.equals(
+            this.effectLeadsPurchaseCost, targetingTagReportsGetListStruct.effectLeadsPurchaseCost)
+        && Objects.equals(this.creWebCost, targetingTagReportsGetListStruct.creWebCost)
+        && Objects.equals(this.creAppCost, targetingTagReportsGetListStruct.creAppCost)
+        && Objects.equals(this.preCreWebCost, targetingTagReportsGetListStruct.preCreWebCost)
+        && Objects.equals(this.preCreAppCost, targetingTagReportsGetListStruct.preCreAppCost)
         && Objects.equals(this.storeVisitor, targetingTagReportsGetListStruct.storeVisitor)
         && Objects.equals(this.tryOutUser, targetingTagReportsGetListStruct.tryOutUser)
         && Objects.equals(
@@ -8255,8 +8497,10 @@ public class TargetingTagReportsGetListStruct {
             this.wechatShallowConversionsCountStage2,
             targetingTagReportsGetListStruct.wechatShallowConversionsCountStage2)
         && Objects.equals(
-            this.registerActivateRate, targetingTagReportsGetListStruct.registerActivateRate)
+            this.activateRegisterRate, targetingTagReportsGetListStruct.activateRegisterRate)
         && Objects.equals(this.age, targetingTagReportsGetListStruct.age)
+        && Objects.equals(
+            this.registerActivateRate, targetingTagReportsGetListStruct.registerActivateRate)
         && Objects.equals(this.regionId, targetingTagReportsGetListStruct.regionId)
         && Objects.equals(this.cityId, targetingTagReportsGetListStruct.cityId)
         && Objects.equals(this.province, targetingTagReportsGetListStruct.province)
@@ -8289,30 +8533,6 @@ public class TargetingTagReportsGetListStruct {
             this.behaviorTimeWindow, targetingTagReportsGetListStruct.behaviorTimeWindow)
         && Objects.equals(
             this.behaviorIntensity, targetingTagReportsGetListStruct.behaviorIntensity)
-        && Objects.equals(
-            this.platformShopNavigationCost,
-            targetingTagReportsGetListStruct.platformShopNavigationCost)
-        && Objects.equals(
-            this.platformCouponGetRate, targetingTagReportsGetListStruct.platformCouponGetRate)
-        && Objects.equals(this.effectiveCost, targetingTagReportsGetListStruct.effectiveCost)
-        && Objects.equals(
-            this.appAdPurArppuCost, targetingTagReportsGetListStruct.appAdPurArppuCost)
-        && Objects.equals(this.webAdPurArpuCost, targetingTagReportsGetListStruct.webAdPurArpuCost)
-        && Objects.equals(this.cheoutFdReward, targetingTagReportsGetListStruct.cheoutFdReward)
-        && Objects.equals(this.cheoutTdReward, targetingTagReportsGetListStruct.cheoutTdReward)
-        && Objects.equals(this.cheoutOwReward, targetingTagReportsGetListStruct.cheoutOwReward)
-        && Objects.equals(this.cheoutTwReward, targetingTagReportsGetListStruct.cheoutTwReward)
-        && Objects.equals(this.cheoutOmReward, targetingTagReportsGetListStruct.cheoutOmReward)
-        && Objects.equals(this.firstPayRate, targetingTagReportsGetListStruct.firstPayRate)
-        && Objects.equals(this.firstPayCost, targetingTagReportsGetListStruct.firstPayCost)
-        && Objects.equals(
-            this.scanFollowUserCost, targetingTagReportsGetListStruct.scanFollowUserCost)
-        && Objects.equals(
-            this.scanFollowUserRate, targetingTagReportsGetListStruct.scanFollowUserRate)
-        && Objects.equals(this.creWebCost, targetingTagReportsGetListStruct.creWebCost)
-        && Objects.equals(this.creAppCost, targetingTagReportsGetListStruct.creAppCost)
-        && Objects.equals(this.preCreWebCost, targetingTagReportsGetListStruct.preCreWebCost)
-        && Objects.equals(this.preCreAppCost, targetingTagReportsGetListStruct.preCreAppCost)
         && Objects.equals(this.genderName, targetingTagReportsGetListStruct.genderName)
         && Objects.equals(this.accountId, targetingTagReportsGetListStruct.accountId)
         && Objects.equals(this.campaignId, targetingTagReportsGetListStruct.campaignId)
@@ -8322,11 +8542,6 @@ public class TargetingTagReportsGetListStruct {
         && Objects.equals(
             this.promotedObjectType, targetingTagReportsGetListStruct.promotedObjectType)
         && Objects.equals(this.promotedObjectId, targetingTagReportsGetListStruct.promotedObjectId)
-        && Objects.equals(
-            this.lanJumpButtonClickCost, targetingTagReportsGetListStruct.lanJumpButtonClickCost)
-        && Objects.equals(this.lanJumpButtonCtr, targetingTagReportsGetListStruct.lanJumpButtonCtr)
-        && Objects.equals(
-            this.effectLeadsPurchaseCost, targetingTagReportsGetListStruct.effectLeadsPurchaseCost)
         && Objects.equals(
             this.requestConversionsCount, targetingTagReportsGetListStruct.requestConversionsCount)
         && Objects.equals(
@@ -8431,6 +8646,7 @@ public class TargetingTagReportsGetListStruct {
         platformPageNavigationCount,
         platformPageNavigationCost,
         platformShopNavigationCount,
+        platformShopNavigationCost,
         webApplicationCount,
         webApplicationCost,
         pageReservationCount,
@@ -8485,6 +8701,7 @@ public class TargetingTagReportsGetListStruct {
         appCheckoutAmount,
         appCheckoutCost,
         platformCouponClickCount,
+        platformCouponGetRate,
         followCount,
         followCost,
         forwardCount,
@@ -8505,6 +8722,7 @@ public class TargetingTagReportsGetListStruct {
         gameAuthorizeCount,
         gameTutorialFinishCount,
         effectiveLeadsCount,
+        effectiveCost,
         effectiveReserveCount,
         effectiveConsultCount,
         effectivePhoneCount,
@@ -8527,17 +8745,25 @@ public class TargetingTagReportsGetListStruct {
         webArppuCost,
         webArpuCost,
         appAdPurArpuCost,
+        appAdPurArppuCost,
+        webAdPurArpuCost,
         cheoutFd,
         cheoutTd,
         cheoutOw,
         cheoutTw,
         cheoutOm,
+        cheoutFdReward,
+        cheoutTdReward,
+        cheoutOwReward,
+        cheoutTwReward,
+        cheoutOmReward,
         cheoutTotalReward,
         fromFollowUv,
         fromFollowCost,
         addDesktopPv,
         addDesktopCost,
         firstPayCount,
+        firstPayRate,
         preCreWeb,
         preCreApp,
         preCreWebVal,
@@ -8550,15 +8776,19 @@ public class TargetingTagReportsGetListStruct {
         withdrDepApp,
         withdrDepWebVal,
         withdrDepAppVal,
+        firstPayCost,
         landingPageClickCount,
         webCartAmount,
         scanFollowCount,
         scanFollowUserCount,
+        scanFollowUserCost,
+        scanFollowUserRate,
         appOrderAmount,
         webOrderAmount,
         phoneConsultCount,
         toolConsultCount,
         lotteryLeadsCount,
+        lotteryLeadsCost,
         conversionsCount,
         conversionsRate,
         conversionsCost,
@@ -8569,6 +8799,10 @@ public class TargetingTagReportsGetListStruct {
         firstMemcardAppCount,
         memcardWebCount,
         memcardAppCount,
+        firstMemcardWebRate,
+        firstMemcardAppRate,
+        firstMemcardWebCost,
+        firstMemcardAppCost,
         valuableClickCount,
         valuableClickRate,
         valuableClickCost,
@@ -8581,6 +8815,8 @@ public class TargetingTagReportsGetListStruct {
         videoInnerPlayCount,
         lanButtonClickCount,
         lanJumpButtonClickers,
+        lanJumpButtonClickCost,
+        lanJumpButtonCtr,
         lanButtonClickCost,
         cpnClickButtonCount,
         cpnClickButtonUv,
@@ -8617,11 +8853,19 @@ public class TargetingTagReportsGetListStruct {
         videoOuterPlay75Count,
         videoOuterPlay95Count,
         videoOuterPlay100Count,
+        videoOuterPlayTimeCount,
         videoOuterPlayTimeAvgRate,
+        videoOuterPlayRate,
+        videoOuterPlayCost,
         videoOuterPlayCount,
         videoOuterPlay3sCount,
         videoOuterPlay5sCount,
         videoOuterPlay7sCount,
+        effectLeadsPurchaseCost,
+        creWebCost,
+        creAppCost,
+        preCreWebCost,
+        preCreAppCost,
         storeVisitor,
         tryOutUser,
         consultLeaveInfoUsers,
@@ -8662,8 +8906,9 @@ public class TargetingTagReportsGetListStruct {
         wechatDeepConversionsCountStage2,
         wechatShallowConversionsCountStage1,
         wechatShallowConversionsCountStage2,
-        registerActivateRate,
+        activateRegisterRate,
         age,
+        registerActivateRate,
         regionId,
         cityId,
         province,
@@ -8688,24 +8933,6 @@ public class TargetingTagReportsGetListStruct {
         behaviorScene,
         behaviorTimeWindow,
         behaviorIntensity,
-        platformShopNavigationCost,
-        platformCouponGetRate,
-        effectiveCost,
-        appAdPurArppuCost,
-        webAdPurArpuCost,
-        cheoutFdReward,
-        cheoutTdReward,
-        cheoutOwReward,
-        cheoutTwReward,
-        cheoutOmReward,
-        firstPayRate,
-        firstPayCost,
-        scanFollowUserCost,
-        scanFollowUserRate,
-        creWebCost,
-        creAppCost,
-        preCreWebCost,
-        preCreAppCost,
         genderName,
         accountId,
         campaignId,
@@ -8714,9 +8941,6 @@ public class TargetingTagReportsGetListStruct {
         audienceId,
         promotedObjectType,
         promotedObjectId,
-        lanJumpButtonClickCost,
-        lanJumpButtonCtr,
-        effectLeadsPurchaseCost,
         requestConversionsCount,
         requestConversionsCost,
         incomeVal1,

@@ -44,6 +44,9 @@ public class SceneTargeting {
   @SerializedName("display_scene")
   private List<String> displayScene = null;
 
+  @SerializedName("mobile_union_category")
+  private List<Long> mobileUnionCategory = null;
+
   public SceneTargeting mobileUnion(List<String> mobileUnion) {
     this.mobileUnion = mobileUnion;
     return this;
@@ -233,6 +236,33 @@ public class SceneTargeting {
     this.displayScene = displayScene;
   }
 
+  public SceneTargeting mobileUnionCategory(List<Long> mobileUnionCategory) {
+    this.mobileUnionCategory = mobileUnionCategory;
+    return this;
+  }
+
+  public SceneTargeting addMobileUnionCategoryItem(Long mobileUnionCategoryItem) {
+    if (this.mobileUnionCategory == null) {
+      this.mobileUnionCategory = new ArrayList<Long>();
+    }
+    this.mobileUnionCategory.add(mobileUnionCategoryItem);
+    return this;
+  }
+
+  /**
+   * Get mobileUnionCategory
+   *
+   * @return mobileUnionCategory
+   */
+  @ApiModelProperty(value = "")
+  public List<Long> getMobileUnionCategory() {
+    return mobileUnionCategory;
+  }
+
+  public void setMobileUnionCategory(List<Long> mobileUnionCategory) {
+    this.mobileUnionCategory = mobileUnionCategory;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -249,7 +279,8 @@ public class SceneTargeting {
         && Objects.equals(
             this.excludeUnionPositionPackage, sceneTargeting.excludeUnionPositionPackage)
         && Objects.equals(this.tencentNews, sceneTargeting.tencentNews)
-        && Objects.equals(this.displayScene, sceneTargeting.displayScene);
+        && Objects.equals(this.displayScene, sceneTargeting.displayScene)
+        && Objects.equals(this.mobileUnionCategory, sceneTargeting.mobileUnionCategory);
   }
 
   @Override
@@ -261,7 +292,8 @@ public class SceneTargeting {
         unionPositionPackage,
         excludeUnionPositionPackage,
         tencentNews,
-        displayScene);
+        displayScene,
+        mobileUnionCategory);
   }
 
   @Override

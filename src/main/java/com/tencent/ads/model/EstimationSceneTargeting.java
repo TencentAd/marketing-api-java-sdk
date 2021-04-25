@@ -26,6 +26,9 @@ public class EstimationSceneTargeting {
   @SerializedName("display_scene")
   private List<String> displayScene = null;
 
+  @SerializedName("mobile_union_category")
+  private List<Long> mobileUnionCategory = null;
+
   @SerializedName("mobile_union")
   private List<String> mobileUnion = null;
 
@@ -60,6 +63,33 @@ public class EstimationSceneTargeting {
 
   public void setDisplayScene(List<String> displayScene) {
     this.displayScene = displayScene;
+  }
+
+  public EstimationSceneTargeting mobileUnionCategory(List<Long> mobileUnionCategory) {
+    this.mobileUnionCategory = mobileUnionCategory;
+    return this;
+  }
+
+  public EstimationSceneTargeting addMobileUnionCategoryItem(Long mobileUnionCategoryItem) {
+    if (this.mobileUnionCategory == null) {
+      this.mobileUnionCategory = new ArrayList<Long>();
+    }
+    this.mobileUnionCategory.add(mobileUnionCategoryItem);
+    return this;
+  }
+
+  /**
+   * Get mobileUnionCategory
+   *
+   * @return mobileUnionCategory
+   */
+  @ApiModelProperty(value = "")
+  public List<Long> getMobileUnionCategory() {
+    return mobileUnionCategory;
+  }
+
+  public void setMobileUnionCategory(List<Long> mobileUnionCategory) {
+    this.mobileUnionCategory = mobileUnionCategory;
   }
 
   public EstimationSceneTargeting mobileUnion(List<String> mobileUnion) {
@@ -153,6 +183,7 @@ public class EstimationSceneTargeting {
     }
     EstimationSceneTargeting estimationSceneTargeting = (EstimationSceneTargeting) o;
     return Objects.equals(this.displayScene, estimationSceneTargeting.displayScene)
+        && Objects.equals(this.mobileUnionCategory, estimationSceneTargeting.mobileUnionCategory)
         && Objects.equals(this.mobileUnion, estimationSceneTargeting.mobileUnion)
         && Objects.equals(this.excludeMobileUnion, estimationSceneTargeting.excludeMobileUnion)
         && Objects.equals(this.mobileUnionIndustry, estimationSceneTargeting.mobileUnionIndustry);
@@ -160,7 +191,8 @@ public class EstimationSceneTargeting {
 
   @Override
   public int hashCode() {
-    return Objects.hash(displayScene, mobileUnion, excludeMobileUnion, mobileUnionIndustry);
+    return Objects.hash(
+        displayScene, mobileUnionCategory, mobileUnion, excludeMobileUnion, mobileUnionIndustry);
   }
 
   @Override
