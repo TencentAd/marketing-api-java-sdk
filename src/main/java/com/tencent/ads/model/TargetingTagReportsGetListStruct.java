@@ -900,9 +900,6 @@ public class TargetingTagReportsGetListStruct {
   @SerializedName("age")
   private String age = null;
 
-  @SerializedName("register_activate_rate")
-  private Double registerActivateRate = null;
-
   @SerializedName("region_id")
   private Long regionId = null;
 
@@ -6701,25 +6698,6 @@ public class TargetingTagReportsGetListStruct {
     this.age = age;
   }
 
-  public TargetingTagReportsGetListStruct registerActivateRate(Double registerActivateRate) {
-    this.registerActivateRate = registerActivateRate;
-    return this;
-  }
-
-  /**
-   * Get registerActivateRate
-   *
-   * @return registerActivateRate
-   */
-  @ApiModelProperty(value = "")
-  public Double getRegisterActivateRate() {
-    return registerActivateRate;
-  }
-
-  public void setRegisterActivateRate(Double registerActivateRate) {
-    this.registerActivateRate = registerActivateRate;
-  }
-
   public TargetingTagReportsGetListStruct regionId(Long regionId) {
     this.regionId = regionId;
     return this;
@@ -8499,8 +8477,6 @@ public class TargetingTagReportsGetListStruct {
         && Objects.equals(
             this.activateRegisterRate, targetingTagReportsGetListStruct.activateRegisterRate)
         && Objects.equals(this.age, targetingTagReportsGetListStruct.age)
-        && Objects.equals(
-            this.registerActivateRate, targetingTagReportsGetListStruct.registerActivateRate)
         && Objects.equals(this.regionId, targetingTagReportsGetListStruct.regionId)
         && Objects.equals(this.cityId, targetingTagReportsGetListStruct.cityId)
         && Objects.equals(this.province, targetingTagReportsGetListStruct.province)
@@ -8908,7 +8884,6 @@ public class TargetingTagReportsGetListStruct {
         wechatShallowConversionsCountStage2,
         activateRegisterRate,
         age,
-        registerActivateRate,
         regionId,
         cityId,
         province,

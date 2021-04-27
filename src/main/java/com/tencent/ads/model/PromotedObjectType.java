@@ -19,7 +19,7 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-/** 推广目标类型 */
+/** 支持商品类型 */
 @JsonAdapter(PromotedObjectType.Adapter.class)
 public enum PromotedObjectType {
   APP_ANDROID("PROMOTED_OBJECT_TYPE_APP_ANDROID"),

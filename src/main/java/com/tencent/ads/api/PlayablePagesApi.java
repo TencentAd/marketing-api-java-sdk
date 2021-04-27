@@ -157,7 +157,7 @@ public class PlayablePagesApi {
   }
 
   /**
-   * 添加互动推广页
+   * 添加互动推广页（待废弃,详见公告）
    *
    * @param accountId (required)
    * @param playablePageName (required)
@@ -174,7 +174,7 @@ public class PlayablePagesApi {
   }
 
   /**
-   * 添加互动推广页
+   * 添加互动推广页（待废弃,详见公告）
    *
    * @param accountId (required)
    * @param playablePageName (required)
@@ -192,7 +192,7 @@ public class PlayablePagesApi {
   }
 
   /**
-   * 添加互动推广页 (asynchronously)
+   * 添加互动推广页（待废弃,详见公告） (asynchronously)
    *
    * @param accountId (required)
    * @param playablePageName (required)

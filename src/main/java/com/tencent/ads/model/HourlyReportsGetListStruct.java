@@ -888,8 +888,8 @@ public class HourlyReportsGetListStruct {
   @SerializedName("wechat_shallow_conversions_count_stage2")
   private Long wechatShallowConversionsCountStage2 = null;
 
-  @SerializedName("register_activate_rate")
-  private Double registerActivateRate = null;
+  @SerializedName("activate_register_rate")
+  private Double activateRegisterRate = null;
 
   @SerializedName("request_conversions_count")
   private Long requestConversionsCount = null;
@@ -1034,9 +1034,6 @@ public class HourlyReportsGetListStruct {
 
   @SerializedName("promoted_object_id")
   private String promotedObjectId = null;
-
-  @SerializedName("activate_register_rate")
-  private Double activateRegisterRate = null;
 
   @SerializedName("wechat_account_id")
   private String wechatAccountId = null;
@@ -6750,23 +6747,23 @@ public class HourlyReportsGetListStruct {
     this.wechatShallowConversionsCountStage2 = wechatShallowConversionsCountStage2;
   }
 
-  public HourlyReportsGetListStruct registerActivateRate(Double registerActivateRate) {
-    this.registerActivateRate = registerActivateRate;
+  public HourlyReportsGetListStruct activateRegisterRate(Double activateRegisterRate) {
+    this.activateRegisterRate = activateRegisterRate;
     return this;
   }
 
   /**
-   * Get registerActivateRate
+   * Get activateRegisterRate
    *
-   * @return registerActivateRate
+   * @return activateRegisterRate
    */
   @ApiModelProperty(value = "")
-  public Double getRegisterActivateRate() {
-    return registerActivateRate;
+  public Double getActivateRegisterRate() {
+    return activateRegisterRate;
   }
 
-  public void setRegisterActivateRate(Double registerActivateRate) {
-    this.registerActivateRate = registerActivateRate;
+  public void setActivateRegisterRate(Double activateRegisterRate) {
+    this.activateRegisterRate = activateRegisterRate;
   }
 
   public HourlyReportsGetListStruct requestConversionsCount(Long requestConversionsCount) {
@@ -7684,25 +7681,6 @@ public class HourlyReportsGetListStruct {
 
   public void setPromotedObjectId(String promotedObjectId) {
     this.promotedObjectId = promotedObjectId;
-  }
-
-  public HourlyReportsGetListStruct activateRegisterRate(Double activateRegisterRate) {
-    this.activateRegisterRate = activateRegisterRate;
-    return this;
-  }
-
-  /**
-   * Get activateRegisterRate
-   *
-   * @return activateRegisterRate
-   */
-  @ApiModelProperty(value = "")
-  public Double getActivateRegisterRate() {
-    return activateRegisterRate;
-  }
-
-  public void setActivateRegisterRate(Double activateRegisterRate) {
-    this.activateRegisterRate = activateRegisterRate;
   }
 
   public HourlyReportsGetListStruct wechatAccountId(String wechatAccountId) {
@@ -9450,7 +9428,7 @@ public class HourlyReportsGetListStruct {
             this.wechatShallowConversionsCountStage2,
             hourlyReportsGetListStruct.wechatShallowConversionsCountStage2)
         && Objects.equals(
-            this.registerActivateRate, hourlyReportsGetListStruct.registerActivateRate)
+            this.activateRegisterRate, hourlyReportsGetListStruct.activateRegisterRate)
         && Objects.equals(
             this.requestConversionsCount, hourlyReportsGetListStruct.requestConversionsCount)
         && Objects.equals(
@@ -9526,8 +9504,6 @@ public class HourlyReportsGetListStruct {
         && Objects.equals(this.adName, hourlyReportsGetListStruct.adName)
         && Objects.equals(this.promotedObjectType, hourlyReportsGetListStruct.promotedObjectType)
         && Objects.equals(this.promotedObjectId, hourlyReportsGetListStruct.promotedObjectId)
-        && Objects.equals(
-            this.activateRegisterRate, hourlyReportsGetListStruct.activateRegisterRate)
         && Objects.equals(this.wechatAccountId, hourlyReportsGetListStruct.wechatAccountId)
         && Objects.equals(this.wechatAgencyId, hourlyReportsGetListStruct.wechatAgencyId)
         && Objects.equals(this.costDeviationRate, hourlyReportsGetListStruct.costDeviationRate)
@@ -9951,7 +9927,7 @@ public class HourlyReportsGetListStruct {
         wechatDeepConversionsCountStage2,
         wechatShallowConversionsCountStage1,
         wechatShallowConversionsCountStage2,
-        registerActivateRate,
+        activateRegisterRate,
         requestConversionsCount,
         requestConversionsCost,
         incomeVal1,
@@ -10000,7 +9976,6 @@ public class HourlyReportsGetListStruct {
         adName,
         promotedObjectType,
         promotedObjectId,
-        activateRegisterRate,
         wechatAccountId,
         wechatAgencyId,
         costDeviationRate,

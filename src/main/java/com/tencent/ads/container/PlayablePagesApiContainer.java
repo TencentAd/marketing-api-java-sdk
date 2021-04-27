@@ -31,7 +31,7 @@ public class PlayablePagesApiContainer extends ApiContainer {
   @Inject PlayablePagesApi api;
 
   /**
-   * 添加互动推广页
+   * 添加互动推广页（待废弃,详见公告）
    *
    * @param accountId (required)
    * @param playablePageName (required)

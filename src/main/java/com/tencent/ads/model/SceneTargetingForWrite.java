@@ -44,6 +44,9 @@ public class SceneTargetingForWrite {
   @SerializedName("display_scene")
   private List<String> displayScene = null;
 
+  @SerializedName("mobile_union_category")
+  private List<Long> mobileUnionCategory = null;
+
   public SceneTargetingForWrite mobileUnion(List<String> mobileUnion) {
     this.mobileUnion = mobileUnion;
     return this;
@@ -235,6 +238,33 @@ public class SceneTargetingForWrite {
     this.displayScene = displayScene;
   }
 
+  public SceneTargetingForWrite mobileUnionCategory(List<Long> mobileUnionCategory) {
+    this.mobileUnionCategory = mobileUnionCategory;
+    return this;
+  }
+
+  public SceneTargetingForWrite addMobileUnionCategoryItem(Long mobileUnionCategoryItem) {
+    if (this.mobileUnionCategory == null) {
+      this.mobileUnionCategory = new ArrayList<Long>();
+    }
+    this.mobileUnionCategory.add(mobileUnionCategoryItem);
+    return this;
+  }
+
+  /**
+   * Get mobileUnionCategory
+   *
+   * @return mobileUnionCategory
+   */
+  @ApiModelProperty(value = "")
+  public List<Long> getMobileUnionCategory() {
+    return mobileUnionCategory;
+  }
+
+  public void setMobileUnionCategory(List<Long> mobileUnionCategory) {
+    this.mobileUnionCategory = mobileUnionCategory;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -251,7 +281,8 @@ public class SceneTargetingForWrite {
         && Objects.equals(
             this.excludeUnionPositionPackage, sceneTargetingForWrite.excludeUnionPositionPackage)
         && Objects.equals(this.tencentNews, sceneTargetingForWrite.tencentNews)
-        && Objects.equals(this.displayScene, sceneTargetingForWrite.displayScene);
+        && Objects.equals(this.displayScene, sceneTargetingForWrite.displayScene)
+        && Objects.equals(this.mobileUnionCategory, sceneTargetingForWrite.mobileUnionCategory);
   }
 
   @Override
@@ -263,7 +294,8 @@ public class SceneTargetingForWrite {
         unionPositionPackage,
         excludeUnionPositionPackage,
         tencentNews,
-        displayScene);
+        displayScene,
+        mobileUnionCategory);
   }
 
   @Override
