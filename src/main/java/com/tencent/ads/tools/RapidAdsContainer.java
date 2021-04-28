@@ -168,8 +168,10 @@ public class RapidAdsContainer extends ApiContainer {
 
   protected void addNameValuePair(List<NameValuePair> params, JsonElement element, String prefix) {
     if (element.isJsonArray()) {
+      int index = 0;
       for (JsonElement listElement : element.getAsJsonArray()) {
-        addNameValuePair(params, listElement, prefix + "[]");
+        addNameValuePair(params, listElement, prefix + "[" + index + "]");
+        index++;
       }
     } else if (element.isJsonPrimitive()) {
       params.add(new BasicNameValuePair(prefix, element.getAsString()));
