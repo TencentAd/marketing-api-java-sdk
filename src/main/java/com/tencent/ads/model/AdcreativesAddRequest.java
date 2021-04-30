@@ -123,6 +123,9 @@ public class AdcreativesAddRequest {
   @SerializedName("page_track_url")
   private String pageTrackUrl = null;
 
+  @SerializedName("barrage_list")
+  private List<BarrageListCreateStruct> barrageList = null;
+
   @SerializedName("account_id")
   private Long accountId = null;
 
@@ -802,6 +805,33 @@ public class AdcreativesAddRequest {
     this.pageTrackUrl = pageTrackUrl;
   }
 
+  public AdcreativesAddRequest barrageList(List<BarrageListCreateStruct> barrageList) {
+    this.barrageList = barrageList;
+    return this;
+  }
+
+  public AdcreativesAddRequest addBarrageListItem(BarrageListCreateStruct barrageListItem) {
+    if (this.barrageList == null) {
+      this.barrageList = new ArrayList<BarrageListCreateStruct>();
+    }
+    this.barrageList.add(barrageListItem);
+    return this;
+  }
+
+  /**
+   * Get barrageList
+   *
+   * @return barrageList
+   */
+  @ApiModelProperty(value = "")
+  public List<BarrageListCreateStruct> getBarrageList() {
+    return barrageList;
+  }
+
+  public void setBarrageList(List<BarrageListCreateStruct> barrageList) {
+    this.barrageList = barrageList;
+  }
+
   public AdcreativesAddRequest accountId(Long accountId) {
     this.accountId = accountId;
     return this;
@@ -905,6 +935,7 @@ public class AdcreativesAddRequest {
             this.marketingPendantImageId, adcreativesAddRequest.marketingPendantImageId)
         && Objects.equals(this.countdownSwitch, adcreativesAddRequest.countdownSwitch)
         && Objects.equals(this.pageTrackUrl, adcreativesAddRequest.pageTrackUrl)
+        && Objects.equals(this.barrageList, adcreativesAddRequest.barrageList)
         && Objects.equals(this.accountId, adcreativesAddRequest.accountId)
         && Objects.equals(this.adcreativeTemplateId, adcreativesAddRequest.adcreativeTemplateId)
         && Objects.equals(this.adcreativeElements, adcreativesAddRequest.adcreativeElements);
@@ -947,6 +978,7 @@ public class AdcreativesAddRequest {
         marketingPendantImageId,
         countdownSwitch,
         pageTrackUrl,
+        barrageList,
         accountId,
         adcreativeTemplateId,
         adcreativeElements);

@@ -111,6 +111,9 @@ public class AdcreativesUpdateRequest {
   @SerializedName("countdown_switch")
   private Boolean countdownSwitch = null;
 
+  @SerializedName("barrage_list")
+  private List<BarrageListCreateStruct> barrageList = null;
+
   @SerializedName("dynamic_adcreative_spec")
   private DynamicAdcreativeSpec dynamicAdcreativeSpec = null;
 
@@ -708,6 +711,33 @@ public class AdcreativesUpdateRequest {
     this.countdownSwitch = countdownSwitch;
   }
 
+  public AdcreativesUpdateRequest barrageList(List<BarrageListCreateStruct> barrageList) {
+    this.barrageList = barrageList;
+    return this;
+  }
+
+  public AdcreativesUpdateRequest addBarrageListItem(BarrageListCreateStruct barrageListItem) {
+    if (this.barrageList == null) {
+      this.barrageList = new ArrayList<BarrageListCreateStruct>();
+    }
+    this.barrageList.add(barrageListItem);
+    return this;
+  }
+
+  /**
+   * Get barrageList
+   *
+   * @return barrageList
+   */
+  @ApiModelProperty(value = "")
+  public List<BarrageListCreateStruct> getBarrageList() {
+    return barrageList;
+  }
+
+  public void setBarrageList(List<BarrageListCreateStruct> barrageList) {
+    this.barrageList = barrageList;
+  }
+
   public AdcreativesUpdateRequest dynamicAdcreativeSpec(
       DynamicAdcreativeSpec dynamicAdcreativeSpec) {
     this.dynamicAdcreativeSpec = dynamicAdcreativeSpec;
@@ -812,6 +842,7 @@ public class AdcreativesUpdateRequest {
         && Objects.equals(
             this.marketingPendantImageId, adcreativesUpdateRequest.marketingPendantImageId)
         && Objects.equals(this.countdownSwitch, adcreativesUpdateRequest.countdownSwitch)
+        && Objects.equals(this.barrageList, adcreativesUpdateRequest.barrageList)
         && Objects.equals(
             this.dynamicAdcreativeSpec, adcreativesUpdateRequest.dynamicAdcreativeSpec)
         && Objects.equals(this.accountId, adcreativesUpdateRequest.accountId)
@@ -851,6 +882,7 @@ public class AdcreativesUpdateRequest {
         floatingZone,
         marketingPendantImageId,
         countdownSwitch,
+        barrageList,
         dynamicAdcreativeSpec,
         accountId,
         adcreativeElements);

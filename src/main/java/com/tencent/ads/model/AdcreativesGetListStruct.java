@@ -149,6 +149,9 @@ public class AdcreativesGetListStruct {
   @SerializedName("page_track_url")
   private String pageTrackUrl = null;
 
+  @SerializedName("barrage_list")
+  private List<BarrageListReadStruct> barrageList = null;
+
   @SerializedName("adcreative_template_id")
   private Long adcreativeTemplateId = null;
 
@@ -980,6 +983,33 @@ public class AdcreativesGetListStruct {
     this.pageTrackUrl = pageTrackUrl;
   }
 
+  public AdcreativesGetListStruct barrageList(List<BarrageListReadStruct> barrageList) {
+    this.barrageList = barrageList;
+    return this;
+  }
+
+  public AdcreativesGetListStruct addBarrageListItem(BarrageListReadStruct barrageListItem) {
+    if (this.barrageList == null) {
+      this.barrageList = new ArrayList<BarrageListReadStruct>();
+    }
+    this.barrageList.add(barrageListItem);
+    return this;
+  }
+
+  /**
+   * Get barrageList
+   *
+   * @return barrageList
+   */
+  @ApiModelProperty(value = "")
+  public List<BarrageListReadStruct> getBarrageList() {
+    return barrageList;
+  }
+
+  public void setBarrageList(List<BarrageListReadStruct> barrageList) {
+    this.barrageList = barrageList;
+  }
+
   public AdcreativesGetListStruct adcreativeTemplateId(Long adcreativeTemplateId) {
     this.adcreativeTemplateId = adcreativeTemplateId;
     return this;
@@ -1077,6 +1107,7 @@ public class AdcreativesGetListStruct {
             this.marketingPendantImageId, adcreativesGetListStruct.marketingPendantImageId)
         && Objects.equals(this.countdownSwitch, adcreativesGetListStruct.countdownSwitch)
         && Objects.equals(this.pageTrackUrl, adcreativesGetListStruct.pageTrackUrl)
+        && Objects.equals(this.barrageList, adcreativesGetListStruct.barrageList)
         && Objects.equals(this.adcreativeTemplateId, adcreativesGetListStruct.adcreativeTemplateId)
         && Objects.equals(this.adcreativeElements, adcreativesGetListStruct.adcreativeElements);
   }
@@ -1126,6 +1157,7 @@ public class AdcreativesGetListStruct {
         marketingPendantImageId,
         countdownSwitch,
         pageTrackUrl,
+        barrageList,
         adcreativeTemplateId,
         adcreativeElements);
   }

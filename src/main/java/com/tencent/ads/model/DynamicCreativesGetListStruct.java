@@ -89,6 +89,9 @@ public class DynamicCreativesGetListStruct {
   @SerializedName("video_end_page")
   private VideoEndPageSpec videoEndPage = null;
 
+  @SerializedName("barrage_list")
+  private List<BarrageListReadStruct> barrageList = null;
+
   public DynamicCreativesGetListStruct dynamicCreativeId(Long dynamicCreativeId) {
     this.dynamicCreativeId = dynamicCreativeId;
     return this;
@@ -516,6 +519,33 @@ public class DynamicCreativesGetListStruct {
     this.videoEndPage = videoEndPage;
   }
 
+  public DynamicCreativesGetListStruct barrageList(List<BarrageListReadStruct> barrageList) {
+    this.barrageList = barrageList;
+    return this;
+  }
+
+  public DynamicCreativesGetListStruct addBarrageListItem(BarrageListReadStruct barrageListItem) {
+    if (this.barrageList == null) {
+      this.barrageList = new ArrayList<BarrageListReadStruct>();
+    }
+    this.barrageList.add(barrageListItem);
+    return this;
+  }
+
+  /**
+   * Get barrageList
+   *
+   * @return barrageList
+   */
+  @ApiModelProperty(value = "")
+  public List<BarrageListReadStruct> getBarrageList() {
+    return barrageList;
+  }
+
+  public void setBarrageList(List<BarrageListReadStruct> barrageList) {
+    this.barrageList = barrageList;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -552,7 +582,8 @@ public class DynamicCreativesGetListStruct {
         && Objects.equals(
             this.feedsVideoCommentSwitch, dynamicCreativesGetListStruct.feedsVideoCommentSwitch)
         && Objects.equals(this.unionMarketSwitch, dynamicCreativesGetListStruct.unionMarketSwitch)
-        && Objects.equals(this.videoEndPage, dynamicCreativesGetListStruct.videoEndPage);
+        && Objects.equals(this.videoEndPage, dynamicCreativesGetListStruct.videoEndPage)
+        && Objects.equals(this.barrageList, dynamicCreativesGetListStruct.barrageList);
   }
 
   @Override
@@ -579,7 +610,8 @@ public class DynamicCreativesGetListStruct {
         clickTrackingUrl,
         feedsVideoCommentSwitch,
         unionMarketSwitch,
-        videoEndPage);
+        videoEndPage,
+        barrageList);
   }
 
   @Override

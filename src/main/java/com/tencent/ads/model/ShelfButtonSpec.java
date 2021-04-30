@@ -30,6 +30,9 @@ public class ShelfButtonSpec {
   @SerializedName("mini_program_spec")
   private MiniProgramSpec miniProgramSpec = null;
 
+  @SerializedName("wecom_spec")
+  private WecomSpec wecomSpec = null;
+
   public ShelfButtonSpec linkSpec(LinkSpec linkSpec) {
     this.linkSpec = linkSpec;
     return this;
@@ -87,6 +90,25 @@ public class ShelfButtonSpec {
     this.miniProgramSpec = miniProgramSpec;
   }
 
+  public ShelfButtonSpec wecomSpec(WecomSpec wecomSpec) {
+    this.wecomSpec = wecomSpec;
+    return this;
+  }
+
+  /**
+   * Get wecomSpec
+   *
+   * @return wecomSpec
+   */
+  @ApiModelProperty(value = "")
+  public WecomSpec getWecomSpec() {
+    return wecomSpec;
+  }
+
+  public void setWecomSpec(WecomSpec wecomSpec) {
+    this.wecomSpec = wecomSpec;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -98,12 +120,13 @@ public class ShelfButtonSpec {
     ShelfButtonSpec shelfButtonSpec = (ShelfButtonSpec) o;
     return Objects.equals(this.linkSpec, shelfButtonSpec.linkSpec)
         && Objects.equals(this.appDownloadSpec, shelfButtonSpec.appDownloadSpec)
-        && Objects.equals(this.miniProgramSpec, shelfButtonSpec.miniProgramSpec);
+        && Objects.equals(this.miniProgramSpec, shelfButtonSpec.miniProgramSpec)
+        && Objects.equals(this.wecomSpec, shelfButtonSpec.wecomSpec);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(linkSpec, appDownloadSpec, miniProgramSpec);
+    return Objects.hash(linkSpec, appDownloadSpec, miniProgramSpec, wecomSpec);
   }
 
   @Override

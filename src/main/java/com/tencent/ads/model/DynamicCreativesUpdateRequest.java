@@ -15,6 +15,8 @@ package com.tencent.ads.model;
 import com.google.gson.Gson;
 import com.google.gson.annotations.SerializedName;
 import io.swagger.annotations.ApiModelProperty;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Objects;
 
 /** DynamicCreativesUpdateRequest */
@@ -48,6 +50,9 @@ public class DynamicCreativesUpdateRequest {
 
   @SerializedName("video_end_page")
   private VideoEndPageSpec videoEndPage = null;
+
+  @SerializedName("barrage_list")
+  private List<BarrageListCreateStruct> barrageList = null;
 
   @SerializedName("account_id")
   private Long accountId = null;
@@ -243,6 +248,33 @@ public class DynamicCreativesUpdateRequest {
     this.videoEndPage = videoEndPage;
   }
 
+  public DynamicCreativesUpdateRequest barrageList(List<BarrageListCreateStruct> barrageList) {
+    this.barrageList = barrageList;
+    return this;
+  }
+
+  public DynamicCreativesUpdateRequest addBarrageListItem(BarrageListCreateStruct barrageListItem) {
+    if (this.barrageList == null) {
+      this.barrageList = new ArrayList<BarrageListCreateStruct>();
+    }
+    this.barrageList.add(barrageListItem);
+    return this;
+  }
+
+  /**
+   * Get barrageList
+   *
+   * @return barrageList
+   */
+  @ApiModelProperty(value = "")
+  public List<BarrageListCreateStruct> getBarrageList() {
+    return barrageList;
+  }
+
+  public void setBarrageList(List<BarrageListCreateStruct> barrageList) {
+    this.barrageList = barrageList;
+  }
+
   public DynamicCreativesUpdateRequest accountId(Long accountId) {
     this.accountId = accountId;
     return this;
@@ -285,6 +317,7 @@ public class DynamicCreativesUpdateRequest {
         && Objects.equals(this.unionMarketSwitch, dynamicCreativesUpdateRequest.unionMarketSwitch)
         && Objects.equals(this.profileId, dynamicCreativesUpdateRequest.profileId)
         && Objects.equals(this.videoEndPage, dynamicCreativesUpdateRequest.videoEndPage)
+        && Objects.equals(this.barrageList, dynamicCreativesUpdateRequest.barrageList)
         && Objects.equals(this.accountId, dynamicCreativesUpdateRequest.accountId);
   }
 
@@ -301,6 +334,7 @@ public class DynamicCreativesUpdateRequest {
         unionMarketSwitch,
         profileId,
         videoEndPage,
+        barrageList,
         accountId);
   }
 

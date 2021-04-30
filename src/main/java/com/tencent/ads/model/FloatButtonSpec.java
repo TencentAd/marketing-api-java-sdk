@@ -45,6 +45,9 @@ public class FloatButtonSpec {
   @SerializedName("service_spec")
   private ServiceSpec serviceSpec = null;
 
+  @SerializedName("wecom_spec")
+  private WecomSpec wecomSpec = null;
+
   public FloatButtonSpec linkSpec(LinkSpec linkSpec) {
     this.linkSpec = linkSpec;
     return this;
@@ -197,6 +200,25 @@ public class FloatButtonSpec {
     this.serviceSpec = serviceSpec;
   }
 
+  public FloatButtonSpec wecomSpec(WecomSpec wecomSpec) {
+    this.wecomSpec = wecomSpec;
+    return this;
+  }
+
+  /**
+   * Get wecomSpec
+   *
+   * @return wecomSpec
+   */
+  @ApiModelProperty(value = "")
+  public WecomSpec getWecomSpec() {
+    return wecomSpec;
+  }
+
+  public void setWecomSpec(WecomSpec wecomSpec) {
+    this.wecomSpec = wecomSpec;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -213,7 +235,8 @@ public class FloatButtonSpec {
         && Objects.equals(this.fengyeSpec, floatButtonSpec.fengyeSpec)
         && Objects.equals(this.cardSpec, floatButtonSpec.cardSpec)
         && Objects.equals(this.followSpec, floatButtonSpec.followSpec)
-        && Objects.equals(this.serviceSpec, floatButtonSpec.serviceSpec);
+        && Objects.equals(this.serviceSpec, floatButtonSpec.serviceSpec)
+        && Objects.equals(this.wecomSpec, floatButtonSpec.wecomSpec);
   }
 
   @Override
@@ -226,7 +249,8 @@ public class FloatButtonSpec {
         fengyeSpec,
         cardSpec,
         followSpec,
-        serviceSpec);
+        serviceSpec,
+        wecomSpec);
   }
 
   @Override

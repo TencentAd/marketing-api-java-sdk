@@ -46,6 +46,8 @@ public class App {
   @Inject AsyncTasksApiContainer asyncTasksApiContainer;
   @Inject AudienceGrantRelationsApiContainer audienceGrantRelationsApiContainer;
   @Inject AuthorizationApiContainer authorizationApiContainer;
+  @Inject BarrageApiContainer barrageApiContainer;
+  @Inject BarrageRecommendApiContainer barrageRecommendApiContainer;
   @Inject BatchAsyncRequestSpecificationApiContainer batchAsyncRequestSpecificationApiContainer;
   @Inject BatchAsyncRequestsApiContainer batchAsyncRequestsApiContainer;
   @Inject BatchOperationApiContainer batchOperationApiContainer;
@@ -269,6 +271,14 @@ public class App {
 
   public AuthorizationApiContainer authorization() {
     return authorizationApiContainer;
+  }
+
+  public BarrageApiContainer barrage() {
+    return barrageApiContainer;
+  }
+
+  public BarrageRecommendApiContainer barrageRecommend() {
+    return barrageRecommendApiContainer;
   }
 
   public BatchAsyncRequestSpecificationApiContainer batchAsyncRequestSpecification() {
