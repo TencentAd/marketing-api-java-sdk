@@ -18,8 +18,8 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.util.Objects;
 
-/** 分享信息，仅在部分朋友圈创意形式下设置有效，具体可通过创意形式查询工具或 adcreative_templates/get 接口进行查询 */
-@ApiModel(description = "分享信息，仅在部分朋友圈创意形式下设置有效，具体可通过创意形式查询工具或 adcreative_templates/get 接口进行查询")
+/** 简版原生页分享信息，仅在部分朋友圈创意形式下设置有效，具体可通过创意形式查询工具或 adcreative_templates/get 接口进行查询 */
+@ApiModel(description = "简版原生页分享信息，仅在部分朋友圈创意形式下设置有效，具体可通过创意形式查询工具或 adcreative_templates/get 接口进行查询")
 public class ShareContentSpec {
   @SerializedName("share_title")
   private String shareTitle = null;
