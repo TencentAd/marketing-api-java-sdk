@@ -47,6 +47,12 @@ public class SceneTargeting {
   @SerializedName("mobile_union_category")
   private List<Long> mobileUnionCategory = null;
 
+  @SerializedName("wechat_scene")
+  private WechatScene wechatScene = null;
+
+  @SerializedName("wechat_position")
+  private List<Long> wechatPosition = null;
+
   public SceneTargeting mobileUnion(List<String> mobileUnion) {
     this.mobileUnion = mobileUnion;
     return this;
@@ -263,6 +269,52 @@ public class SceneTargeting {
     this.mobileUnionCategory = mobileUnionCategory;
   }
 
+  public SceneTargeting wechatScene(WechatScene wechatScene) {
+    this.wechatScene = wechatScene;
+    return this;
+  }
+
+  /**
+   * Get wechatScene
+   *
+   * @return wechatScene
+   */
+  @ApiModelProperty(value = "")
+  public WechatScene getWechatScene() {
+    return wechatScene;
+  }
+
+  public void setWechatScene(WechatScene wechatScene) {
+    this.wechatScene = wechatScene;
+  }
+
+  public SceneTargeting wechatPosition(List<Long> wechatPosition) {
+    this.wechatPosition = wechatPosition;
+    return this;
+  }
+
+  public SceneTargeting addWechatPositionItem(Long wechatPositionItem) {
+    if (this.wechatPosition == null) {
+      this.wechatPosition = new ArrayList<Long>();
+    }
+    this.wechatPosition.add(wechatPositionItem);
+    return this;
+  }
+
+  /**
+   * Get wechatPosition
+   *
+   * @return wechatPosition
+   */
+  @ApiModelProperty(value = "")
+  public List<Long> getWechatPosition() {
+    return wechatPosition;
+  }
+
+  public void setWechatPosition(List<Long> wechatPosition) {
+    this.wechatPosition = wechatPosition;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -280,7 +332,9 @@ public class SceneTargeting {
             this.excludeUnionPositionPackage, sceneTargeting.excludeUnionPositionPackage)
         && Objects.equals(this.tencentNews, sceneTargeting.tencentNews)
         && Objects.equals(this.displayScene, sceneTargeting.displayScene)
-        && Objects.equals(this.mobileUnionCategory, sceneTargeting.mobileUnionCategory);
+        && Objects.equals(this.mobileUnionCategory, sceneTargeting.mobileUnionCategory)
+        && Objects.equals(this.wechatScene, sceneTargeting.wechatScene)
+        && Objects.equals(this.wechatPosition, sceneTargeting.wechatPosition);
   }
 
   @Override
@@ -293,7 +347,9 @@ public class SceneTargeting {
         excludeUnionPositionPackage,
         tencentNews,
         displayScene,
-        mobileUnionCategory);
+        mobileUnionCategory,
+        wechatScene,
+        wechatPosition);
   }
 
   @Override

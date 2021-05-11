@@ -63,6 +63,9 @@ public class ConversionsGetListStruct {
   @SerializedName("access_status")
   private AccessStatus accessStatus = null;
 
+  @SerializedName("create_source_type")
+  private CreateSourceType createSourceType = null;
+
   public ConversionsGetListStruct conversionId(Long conversionId) {
     this.conversionId = conversionId;
     return this;
@@ -331,6 +334,25 @@ public class ConversionsGetListStruct {
     this.accessStatus = accessStatus;
   }
 
+  public ConversionsGetListStruct createSourceType(CreateSourceType createSourceType) {
+    this.createSourceType = createSourceType;
+    return this;
+  }
+
+  /**
+   * Get createSourceType
+   *
+   * @return createSourceType
+   */
+  @ApiModelProperty(value = "")
+  public CreateSourceType getCreateSourceType() {
+    return createSourceType;
+  }
+
+  public void setCreateSourceType(CreateSourceType createSourceType) {
+    this.createSourceType = createSourceType;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -356,7 +378,8 @@ public class ConversionsGetListStruct {
         && Objects.equals(this.userActionSetKey, conversionsGetListStruct.userActionSetKey)
         && Objects.equals(this.siteSetEnable, conversionsGetListStruct.siteSetEnable)
         && Objects.equals(this.isDeleted, conversionsGetListStruct.isDeleted)
-        && Objects.equals(this.accessStatus, conversionsGetListStruct.accessStatus);
+        && Objects.equals(this.accessStatus, conversionsGetListStruct.accessStatus)
+        && Objects.equals(this.createSourceType, conversionsGetListStruct.createSourceType);
   }
 
   @Override
@@ -375,7 +398,8 @@ public class ConversionsGetListStruct {
         userActionSetKey,
         siteSetEnable,
         isDeleted,
-        accessStatus);
+        accessStatus,
+        createSourceType);
   }
 
   @Override

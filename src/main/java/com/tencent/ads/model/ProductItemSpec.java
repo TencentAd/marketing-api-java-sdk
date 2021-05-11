@@ -110,9 +110,6 @@ public class ProductItemSpec {
   @SerializedName("product_short_name")
   private String productShortName = null;
 
-  @SerializedName("product_sale_status")
-  private ProductSaleStatus productSaleStatus = null;
-
   @SerializedName("price")
   private Double price = null;
 
@@ -912,25 +909,6 @@ public class ProductItemSpec {
 
   public void setProductShortName(String productShortName) {
     this.productShortName = productShortName;
-  }
-
-  public ProductItemSpec productSaleStatus(ProductSaleStatus productSaleStatus) {
-    this.productSaleStatus = productSaleStatus;
-    return this;
-  }
-
-  /**
-   * Get productSaleStatus
-   *
-   * @return productSaleStatus
-   */
-  @ApiModelProperty(value = "")
-  public ProductSaleStatus getProductSaleStatus() {
-    return productSaleStatus;
-  }
-
-  public void setProductSaleStatus(ProductSaleStatus productSaleStatus) {
-    this.productSaleStatus = productSaleStatus;
   }
 
   public ProductItemSpec price(Double price) {
@@ -2517,7 +2495,6 @@ public class ProductItemSpec {
         && Objects.equals(this.universalLink, productItemSpec.universalLink)
         && Objects.equals(this.additionalUniversalLink, productItemSpec.additionalUniversalLink)
         && Objects.equals(this.productShortName, productItemSpec.productShortName)
-        && Objects.equals(this.productSaleStatus, productItemSpec.productSaleStatus)
         && Objects.equals(this.price, productItemSpec.price)
         && Objects.equals(this.originalPrice, productItemSpec.originalPrice)
         && Objects.equals(this.discount, productItemSpec.discount)
@@ -2630,7 +2607,6 @@ public class ProductItemSpec {
         universalLink,
         additionalUniversalLink,
         productShortName,
-        productSaleStatus,
         price,
         originalPrice,
         discount,
