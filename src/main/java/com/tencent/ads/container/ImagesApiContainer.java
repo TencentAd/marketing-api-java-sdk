@@ -21,6 +21,9 @@ import com.tencent.ads.exception.TencentAdsResponseException;
 import com.tencent.ads.model.FilteringStruct;
 import com.tencent.ads.model.ImagesAddResponse;
 import com.tencent.ads.model.ImagesAddResponseData;
+import com.tencent.ads.model.ImagesDeleteRequest;
+import com.tencent.ads.model.ImagesDeleteResponse;
+import com.tencent.ads.model.ImagesDeleteResponseData;
 import com.tencent.ads.model.ImagesGetResponse;
 import com.tencent.ads.model.ImagesGetResponseData;
 import com.tencent.ads.model.ImagesUpdateRequest;
@@ -58,6 +61,21 @@ public class ImagesApiContainer extends ApiContainer {
       throws ApiException, TencentAdsResponseException {
     ImagesAddResponse resp =
         api.imagesAdd(accountId, uploadType, signature, file, bytes, imageUsage, description);
+    handleResponse(gson.toJson(resp));
+    return resp.getData();
+  }
+
+  /**
+   * 删除图片
+   *
+   * @param data (required)
+   * @return ImagesDeleteResponse
+   * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
+   *     response body
+   */
+  public ImagesDeleteResponseData imagesDelete(ImagesDeleteRequest data)
+      throws ApiException, TencentAdsResponseException {
+    ImagesDeleteResponse resp = api.imagesDelete(data);
     handleResponse(gson.toJson(resp));
     return resp.getData();
   }

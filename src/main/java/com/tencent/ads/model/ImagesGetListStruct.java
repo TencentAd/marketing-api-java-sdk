@@ -60,6 +60,9 @@ public class ImagesGetListStruct {
   @SerializedName("status")
   private MediaStatusType status = null;
 
+  @SerializedName("sample_aspect_ratio")
+  private String sampleAspectRatio = null;
+
   @SerializedName("width")
   private Long width = null;
 
@@ -322,6 +325,25 @@ public class ImagesGetListStruct {
     this.status = status;
   }
 
+  public ImagesGetListStruct sampleAspectRatio(String sampleAspectRatio) {
+    this.sampleAspectRatio = sampleAspectRatio;
+    return this;
+  }
+
+  /**
+   * Get sampleAspectRatio
+   *
+   * @return sampleAspectRatio
+   */
+  @ApiModelProperty(value = "")
+  public String getSampleAspectRatio() {
+    return sampleAspectRatio;
+  }
+
+  public void setSampleAspectRatio(String sampleAspectRatio) {
+    this.sampleAspectRatio = sampleAspectRatio;
+  }
+
   public ImagesGetListStruct width(Long width) {
     this.width = width;
     return this;
@@ -439,6 +461,7 @@ public class ImagesGetListStruct {
         && Objects.equals(this.sourceReferenceId, imagesGetListStruct.sourceReferenceId)
         && Objects.equals(this.ownerAccountId, imagesGetListStruct.ownerAccountId)
         && Objects.equals(this.status, imagesGetListStruct.status)
+        && Objects.equals(this.sampleAspectRatio, imagesGetListStruct.sampleAspectRatio)
         && Objects.equals(this.width, imagesGetListStruct.width)
         && Objects.equals(this.height, imagesGetListStruct.height)
         && Objects.equals(this.fileSize, imagesGetListStruct.fileSize)
@@ -462,6 +485,7 @@ public class ImagesGetListStruct {
         sourceReferenceId,
         ownerAccountId,
         status,
+        sampleAspectRatio,
         width,
         height,
         fileSize,

@@ -21,6 +21,9 @@ import com.tencent.ads.exception.TencentAdsResponseException;
 import com.tencent.ads.model.FilteringStruct;
 import com.tencent.ads.model.VideosAddResponse;
 import com.tencent.ads.model.VideosAddResponseData;
+import com.tencent.ads.model.VideosDeleteRequest;
+import com.tencent.ads.model.VideosDeleteResponse;
+import com.tencent.ads.model.VideosDeleteResponseData;
 import com.tencent.ads.model.VideosGetResponse;
 import com.tencent.ads.model.VideosGetResponseData;
 import com.tencent.ads.model.VideosUpdateRequest;
@@ -54,6 +57,21 @@ public class VideosApiContainer extends ApiContainer {
       throws ApiException, TencentAdsResponseException {
     VideosAddResponse resp =
         api.videosAdd(accountId, videoFile, signature, description, adcreativeTemplateId);
+    handleResponse(gson.toJson(resp));
+    return resp.getData();
+  }
+
+  /**
+   * 删除视频
+   *
+   * @param data (required)
+   * @return VideosDeleteResponse
+   * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
+   *     response body
+   */
+  public VideosDeleteResponseData videosDelete(VideosDeleteRequest data)
+      throws ApiException, TencentAdsResponseException {
+    VideosDeleteResponse resp = api.videosDelete(data);
     handleResponse(gson.toJson(resp));
     return resp.getData();
   }

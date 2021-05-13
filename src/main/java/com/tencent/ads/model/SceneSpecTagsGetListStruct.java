@@ -27,8 +27,8 @@ public class SceneSpecTagsGetListStruct {
   @SerializedName("name")
   private String name = null;
 
-  @SerializedName("desc")
-  private String desc = null;
+  @SerializedName("description")
+  private String description = null;
 
   @SerializedName("parent_id")
   private Long parentId = null;
@@ -74,23 +74,23 @@ public class SceneSpecTagsGetListStruct {
     this.name = name;
   }
 
-  public SceneSpecTagsGetListStruct desc(String desc) {
-    this.desc = desc;
+  public SceneSpecTagsGetListStruct description(String description) {
+    this.description = description;
     return this;
   }
 
   /**
-   * Get desc
+   * Get description
    *
-   * @return desc
+   * @return description
    */
   @ApiModelProperty(value = "")
-  public String getDesc() {
-    return desc;
+  public String getDescription() {
+    return description;
   }
 
-  public void setDesc(String desc) {
-    this.desc = desc;
+  public void setDescription(String description) {
+    this.description = description;
   }
 
   public SceneSpecTagsGetListStruct parentId(Long parentId) {
@@ -142,14 +142,14 @@ public class SceneSpecTagsGetListStruct {
     SceneSpecTagsGetListStruct sceneSpecTagsGetListStruct = (SceneSpecTagsGetListStruct) o;
     return Objects.equals(this.id, sceneSpecTagsGetListStruct.id)
         && Objects.equals(this.name, sceneSpecTagsGetListStruct.name)
-        && Objects.equals(this.desc, sceneSpecTagsGetListStruct.desc)
+        && Objects.equals(this.description, sceneSpecTagsGetListStruct.description)
         && Objects.equals(this.parentId, sceneSpecTagsGetListStruct.parentId)
         && Objects.equals(this.targetingName, sceneSpecTagsGetListStruct.targetingName);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, name, desc, parentId, targetingName);
+    return Objects.hash(id, name, description, parentId, targetingName);
   }
 
   @Override
