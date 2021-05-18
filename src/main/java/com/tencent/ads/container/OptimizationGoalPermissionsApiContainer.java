@@ -33,6 +33,7 @@ public class OptimizationGoalPermissionsApiContainer extends ApiContainer {
    * @param siteSet (required)
    * @param promotedObjectType (required)
    * @param bidMode (optional)
+   * @param promotedObjectId (optional)
    * @param fields 返回参数的字段列表 (optional)
    * @return OptimizationGoalPermissionsGetResponse
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
@@ -43,10 +44,12 @@ public class OptimizationGoalPermissionsApiContainer extends ApiContainer {
       List<String> siteSet,
       String promotedObjectType,
       String bidMode,
+      String promotedObjectId,
       List<String> fields)
       throws ApiException, TencentAdsResponseException {
     OptimizationGoalPermissionsGetResponse resp =
-        api.optimizationGoalPermissionsGet(accountId, siteSet, promotedObjectType, bidMode, fields);
+        api.optimizationGoalPermissionsGet(
+            accountId, siteSet, promotedObjectType, bidMode, promotedObjectId, fields);
     handleResponse(gson.toJson(resp));
     return resp.getData();
   }

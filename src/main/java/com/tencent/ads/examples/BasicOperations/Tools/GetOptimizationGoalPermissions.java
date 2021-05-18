@@ -22,6 +22,8 @@ public class GetOptimizationGoalPermissions {
 
   public String bidMode = null;
 
+  public String promotedObjectId = null;
+
   public List<String> fields = null;
 
   public void init() {
@@ -40,7 +42,7 @@ public class GetOptimizationGoalPermissions {
         tencentAds
             .optimizationGoalPermissions()
             .optimizationGoalPermissionsGet(
-                accountId, siteSet, promotedObjectType, bidMode, fields);
+                accountId, siteSet, promotedObjectType, bidMode, promotedObjectId, fields);
     return response;
   }
 

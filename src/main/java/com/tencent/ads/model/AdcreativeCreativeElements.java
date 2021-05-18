@@ -44,6 +44,9 @@ public class AdcreativeCreativeElements {
   @SerializedName("video")
   private String video = null;
 
+  @SerializedName("deep_link_type")
+  private String deepLinkType = null;
+
   @SerializedName("link_name_type")
   private LinkNameType linkNameType = null;
 
@@ -97,6 +100,9 @@ public class AdcreativeCreativeElements {
 
   @SerializedName("video_popup_button")
   private AdcreativeVideoPopupButton videoPopupButton = null;
+
+  @SerializedName("button_url")
+  private String buttonUrl = null;
 
   @SerializedName("brand")
   private AdCreativeBrand brand = null;
@@ -256,6 +262,25 @@ public class AdcreativeCreativeElements {
 
   public void setVideo(String video) {
     this.video = video;
+  }
+
+  public AdcreativeCreativeElements deepLinkType(String deepLinkType) {
+    this.deepLinkType = deepLinkType;
+    return this;
+  }
+
+  /**
+   * Get deepLinkType
+   *
+   * @return deepLinkType
+   */
+  @ApiModelProperty(value = "")
+  public String getDeepLinkType() {
+    return deepLinkType;
+  }
+
+  public void setDeepLinkType(String deepLinkType) {
+    this.deepLinkType = deepLinkType;
   }
 
   public AdcreativeCreativeElements linkNameType(LinkNameType linkNameType) {
@@ -634,6 +659,25 @@ public class AdcreativeCreativeElements {
     this.videoPopupButton = videoPopupButton;
   }
 
+  public AdcreativeCreativeElements buttonUrl(String buttonUrl) {
+    this.buttonUrl = buttonUrl;
+    return this;
+  }
+
+  /**
+   * Get buttonUrl
+   *
+   * @return buttonUrl
+   */
+  @ApiModelProperty(value = "")
+  public String getButtonUrl() {
+    return buttonUrl;
+  }
+
+  public void setButtonUrl(String buttonUrl) {
+    this.buttonUrl = buttonUrl;
+  }
+
   public AdcreativeCreativeElements brand(AdCreativeBrand brand) {
     this.brand = brand;
     return this;
@@ -821,6 +865,7 @@ public class AdcreativeCreativeElements {
         && Objects.equals(this.description, adcreativeCreativeElements.description)
         && Objects.equals(this.corporate, adcreativeCreativeElements.corporate)
         && Objects.equals(this.video, adcreativeCreativeElements.video)
+        && Objects.equals(this.deepLinkType, adcreativeCreativeElements.deepLinkType)
         && Objects.equals(this.linkNameType, adcreativeCreativeElements.linkNameType)
         && Objects.equals(this.imageList, adcreativeCreativeElements.imageList)
         && Objects.equals(this.elementStory, adcreativeCreativeElements.elementStory)
@@ -839,6 +884,7 @@ public class AdcreativeCreativeElements {
         && Objects.equals(this.bannerContent, adcreativeCreativeElements.bannerContent)
         && Objects.equals(this.cardContent, adcreativeCreativeElements.cardContent)
         && Objects.equals(this.videoPopupButton, adcreativeCreativeElements.videoPopupButton)
+        && Objects.equals(this.buttonUrl, adcreativeCreativeElements.buttonUrl)
         && Objects.equals(this.brand, adcreativeCreativeElements.brand)
         && Objects.equals(this.caption, adcreativeCreativeElements.caption)
         && Objects.equals(this.labelledImg, adcreativeCreativeElements.labelledImg)
@@ -861,6 +907,7 @@ public class AdcreativeCreativeElements {
         description,
         corporate,
         video,
+        deepLinkType,
         linkNameType,
         imageList,
         elementStory,
@@ -879,6 +926,7 @@ public class AdcreativeCreativeElements {
         bannerContent,
         cardContent,
         videoPopupButton,
+        buttonUrl,
         brand,
         caption,
         labelledImg,

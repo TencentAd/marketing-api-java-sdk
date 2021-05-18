@@ -44,6 +44,9 @@ public class AdcreativeCreativeElementsReadMp {
   @SerializedName("video")
   private String video = null;
 
+  @SerializedName("deep_link_type")
+  private String deepLinkType = null;
+
   @SerializedName("link_name_type")
   private LinkNameTypeMP linkNameType = null;
 
@@ -106,6 +109,9 @@ public class AdcreativeCreativeElementsReadMp {
 
   @SerializedName("video_popup_button_url")
   private String videoPopupButtonUrl = null;
+
+  @SerializedName("button_url")
+  private String buttonUrl = null;
 
   @SerializedName("long_video1")
   private String longVideo1 = null;
@@ -319,6 +325,25 @@ public class AdcreativeCreativeElementsReadMp {
 
   public void setVideo(String video) {
     this.video = video;
+  }
+
+  public AdcreativeCreativeElementsReadMp deepLinkType(String deepLinkType) {
+    this.deepLinkType = deepLinkType;
+    return this;
+  }
+
+  /**
+   * Get deepLinkType
+   *
+   * @return deepLinkType
+   */
+  @ApiModelProperty(value = "")
+  public String getDeepLinkType() {
+    return deepLinkType;
+  }
+
+  public void setDeepLinkType(String deepLinkType) {
+    this.deepLinkType = deepLinkType;
   }
 
   public AdcreativeCreativeElementsReadMp linkNameType(LinkNameTypeMP linkNameType) {
@@ -753,6 +778,25 @@ public class AdcreativeCreativeElementsReadMp {
 
   public void setVideoPopupButtonUrl(String videoPopupButtonUrl) {
     this.videoPopupButtonUrl = videoPopupButtonUrl;
+  }
+
+  public AdcreativeCreativeElementsReadMp buttonUrl(String buttonUrl) {
+    this.buttonUrl = buttonUrl;
+    return this;
+  }
+
+  /**
+   * Get buttonUrl
+   *
+   * @return buttonUrl
+   */
+  @ApiModelProperty(value = "")
+  public String getButtonUrl() {
+    return buttonUrl;
+  }
+
+  public void setButtonUrl(String buttonUrl) {
+    this.buttonUrl = buttonUrl;
   }
 
   public AdcreativeCreativeElementsReadMp longVideo1(String longVideo1) {
@@ -1286,6 +1330,7 @@ public class AdcreativeCreativeElementsReadMp {
         && Objects.equals(this.description, adcreativeCreativeElementsReadMp.description)
         && Objects.equals(this.corporate, adcreativeCreativeElementsReadMp.corporate)
         && Objects.equals(this.video, adcreativeCreativeElementsReadMp.video)
+        && Objects.equals(this.deepLinkType, adcreativeCreativeElementsReadMp.deepLinkType)
         && Objects.equals(this.linkNameType, adcreativeCreativeElementsReadMp.linkNameType)
         && Objects.equals(this.imageList, adcreativeCreativeElementsReadMp.imageList)
         && Objects.equals(this.elementStory, adcreativeCreativeElementsReadMp.elementStory)
@@ -1309,6 +1354,7 @@ public class AdcreativeCreativeElementsReadMp {
             this.videoPopupButtonText, adcreativeCreativeElementsReadMp.videoPopupButtonText)
         && Objects.equals(
             this.videoPopupButtonUrl, adcreativeCreativeElementsReadMp.videoPopupButtonUrl)
+        && Objects.equals(this.buttonUrl, adcreativeCreativeElementsReadMp.buttonUrl)
         && Objects.equals(this.longVideo1, adcreativeCreativeElementsReadMp.longVideo1)
         && Objects.equals(this.longVideo2, adcreativeCreativeElementsReadMp.longVideo2)
         && Objects.equals(this.shortVideoStruct, adcreativeCreativeElementsReadMp.shortVideoStruct)
@@ -1350,6 +1396,7 @@ public class AdcreativeCreativeElementsReadMp {
         description,
         corporate,
         video,
+        deepLinkType,
         linkNameType,
         imageList,
         elementStory,
@@ -1371,6 +1418,7 @@ public class AdcreativeCreativeElementsReadMp {
         videoPopupButton,
         videoPopupButtonText,
         videoPopupButtonUrl,
+        buttonUrl,
         longVideo1,
         longVideo2,
         shortVideoStruct,
