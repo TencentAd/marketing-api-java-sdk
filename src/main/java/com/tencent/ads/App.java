@@ -119,6 +119,7 @@ public class App {
   @Inject QualificationsApiContainer qualificationsApiContainer;
   @Inject RealtimeCostApiContainer realtimeCostApiContainer;
   @Inject ReportApiContainer reportApiContainer;
+  @Inject ReviewElementPrereviewResultsApiContainer reviewElementPrereviewResultsApiContainer;
   @Inject SceneSpecTagsApiContainer sceneSpecTagsApiContainer;
   @Inject ShopApiContainer shopApiContainer;
   @Inject SplitTestsApiContainer splitTestsApiContainer;
@@ -564,6 +565,10 @@ public class App {
 
   public ReportApiContainer report() {
     return reportApiContainer;
+  }
+
+  public ReviewElementPrereviewResultsApiContainer reviewElementPrereviewResults() {
+    return reviewElementPrereviewResultsApiContainer;
   }
 
   public SceneSpecTagsApiContainer sceneSpecTags() {
