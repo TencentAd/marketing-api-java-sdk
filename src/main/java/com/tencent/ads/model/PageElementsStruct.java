@@ -36,6 +36,9 @@ public class PageElementsStruct {
   @SerializedName("element_webview")
   private ElementWebview elementWebview = null;
 
+  @SerializedName("element_animate_float")
+  private ElementAnimateFloat elementAnimateFloat = null;
+
   @SerializedName("image_spec")
   private ElementImage imageSpec = null;
 
@@ -147,6 +150,25 @@ public class PageElementsStruct {
 
   public void setElementWebview(ElementWebview elementWebview) {
     this.elementWebview = elementWebview;
+  }
+
+  public PageElementsStruct elementAnimateFloat(ElementAnimateFloat elementAnimateFloat) {
+    this.elementAnimateFloat = elementAnimateFloat;
+    return this;
+  }
+
+  /**
+   * Get elementAnimateFloat
+   *
+   * @return elementAnimateFloat
+   */
+  @ApiModelProperty(value = "")
+  public ElementAnimateFloat getElementAnimateFloat() {
+    return elementAnimateFloat;
+  }
+
+  public void setElementAnimateFloat(ElementAnimateFloat elementAnimateFloat) {
+    this.elementAnimateFloat = elementAnimateFloat;
   }
 
   public PageElementsStruct imageSpec(ElementImage imageSpec) {
@@ -277,6 +299,7 @@ public class PageElementsStruct {
         && Objects.equals(this.elementGoods, pageElementsStruct.elementGoods)
         && Objects.equals(this.elementSwipe, pageElementsStruct.elementSwipe)
         && Objects.equals(this.elementWebview, pageElementsStruct.elementWebview)
+        && Objects.equals(this.elementAnimateFloat, pageElementsStruct.elementAnimateFloat)
         && Objects.equals(this.imageSpec, pageElementsStruct.imageSpec)
         && Objects.equals(this.videoSpec, pageElementsStruct.videoSpec)
         && Objects.equals(this.textSpec, pageElementsStruct.textSpec)
@@ -293,6 +316,7 @@ public class PageElementsStruct {
         elementGoods,
         elementSwipe,
         elementWebview,
+        elementAnimateFloat,
         imageSpec,
         videoSpec,
         textSpec,

@@ -891,6 +891,18 @@ public class HourlyReportsGetListStruct {
   @SerializedName("activate_register_rate")
   private Double activateRegisterRate = null;
 
+  @SerializedName("key_behavior_conversions_count")
+  private Long keyBehaviorConversionsCount = null;
+
+  @SerializedName("key_behavior_conversions_cost")
+  private Long keyBehaviorConversionsCost = null;
+
+  @SerializedName("key_behavior_conversions_rate")
+  private Double keyBehaviorConversionsRate = null;
+
+  @SerializedName("first_day_order_roi")
+  private Double firstDayOrderRoi = null;
+
   @SerializedName("request_conversions_count")
   private Long requestConversionsCount = null;
 
@@ -6766,6 +6778,82 @@ public class HourlyReportsGetListStruct {
     this.activateRegisterRate = activateRegisterRate;
   }
 
+  public HourlyReportsGetListStruct keyBehaviorConversionsCount(Long keyBehaviorConversionsCount) {
+    this.keyBehaviorConversionsCount = keyBehaviorConversionsCount;
+    return this;
+  }
+
+  /**
+   * Get keyBehaviorConversionsCount
+   *
+   * @return keyBehaviorConversionsCount
+   */
+  @ApiModelProperty(value = "")
+  public Long getKeyBehaviorConversionsCount() {
+    return keyBehaviorConversionsCount;
+  }
+
+  public void setKeyBehaviorConversionsCount(Long keyBehaviorConversionsCount) {
+    this.keyBehaviorConversionsCount = keyBehaviorConversionsCount;
+  }
+
+  public HourlyReportsGetListStruct keyBehaviorConversionsCost(Long keyBehaviorConversionsCost) {
+    this.keyBehaviorConversionsCost = keyBehaviorConversionsCost;
+    return this;
+  }
+
+  /**
+   * Get keyBehaviorConversionsCost
+   *
+   * @return keyBehaviorConversionsCost
+   */
+  @ApiModelProperty(value = "")
+  public Long getKeyBehaviorConversionsCost() {
+    return keyBehaviorConversionsCost;
+  }
+
+  public void setKeyBehaviorConversionsCost(Long keyBehaviorConversionsCost) {
+    this.keyBehaviorConversionsCost = keyBehaviorConversionsCost;
+  }
+
+  public HourlyReportsGetListStruct keyBehaviorConversionsRate(Double keyBehaviorConversionsRate) {
+    this.keyBehaviorConversionsRate = keyBehaviorConversionsRate;
+    return this;
+  }
+
+  /**
+   * Get keyBehaviorConversionsRate
+   *
+   * @return keyBehaviorConversionsRate
+   */
+  @ApiModelProperty(value = "")
+  public Double getKeyBehaviorConversionsRate() {
+    return keyBehaviorConversionsRate;
+  }
+
+  public void setKeyBehaviorConversionsRate(Double keyBehaviorConversionsRate) {
+    this.keyBehaviorConversionsRate = keyBehaviorConversionsRate;
+  }
+
+  public HourlyReportsGetListStruct firstDayOrderRoi(Double firstDayOrderRoi) {
+    this.firstDayOrderRoi = firstDayOrderRoi;
+    return this;
+  }
+
+  /**
+   * Get firstDayOrderRoi
+   *
+   * @return firstDayOrderRoi
+   */
+  @ApiModelProperty(value = "")
+  public Double getFirstDayOrderRoi() {
+    return firstDayOrderRoi;
+  }
+
+  public void setFirstDayOrderRoi(Double firstDayOrderRoi) {
+    this.firstDayOrderRoi = firstDayOrderRoi;
+  }
+
   public HourlyReportsGetListStruct requestConversionsCount(Long requestConversionsCount) {
     this.requestConversionsCount = requestConversionsCount;
     return this;
@@ -9430,6 +9518,14 @@ public class HourlyReportsGetListStruct {
         && Objects.equals(
             this.activateRegisterRate, hourlyReportsGetListStruct.activateRegisterRate)
         && Objects.equals(
+            this.keyBehaviorConversionsCount,
+            hourlyReportsGetListStruct.keyBehaviorConversionsCount)
+        && Objects.equals(
+            this.keyBehaviorConversionsCost, hourlyReportsGetListStruct.keyBehaviorConversionsCost)
+        && Objects.equals(
+            this.keyBehaviorConversionsRate, hourlyReportsGetListStruct.keyBehaviorConversionsRate)
+        && Objects.equals(this.firstDayOrderRoi, hourlyReportsGetListStruct.firstDayOrderRoi)
+        && Objects.equals(
             this.requestConversionsCount, hourlyReportsGetListStruct.requestConversionsCount)
         && Objects.equals(
             this.requestConversionsCost, hourlyReportsGetListStruct.requestConversionsCost)
@@ -9928,6 +10024,10 @@ public class HourlyReportsGetListStruct {
         wechatShallowConversionsCountStage1,
         wechatShallowConversionsCountStage2,
         activateRegisterRate,
+        keyBehaviorConversionsCount,
+        keyBehaviorConversionsCost,
+        keyBehaviorConversionsRate,
+        firstDayOrderRoi,
         requestConversionsCount,
         requestConversionsCost,
         incomeVal1,

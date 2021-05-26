@@ -897,6 +897,18 @@ public class TargetingTagReportsGetListStruct {
   @SerializedName("activate_register_rate")
   private Double activateRegisterRate = null;
 
+  @SerializedName("key_behavior_conversions_count")
+  private Long keyBehaviorConversionsCount = null;
+
+  @SerializedName("key_behavior_conversions_cost")
+  private Long keyBehaviorConversionsCost = null;
+
+  @SerializedName("key_behavior_conversions_rate")
+  private Double keyBehaviorConversionsRate = null;
+
+  @SerializedName("first_day_order_roi")
+  private Double firstDayOrderRoi = null;
+
   @SerializedName("age")
   private String age = null;
 
@@ -6679,6 +6691,85 @@ public class TargetingTagReportsGetListStruct {
     this.activateRegisterRate = activateRegisterRate;
   }
 
+  public TargetingTagReportsGetListStruct keyBehaviorConversionsCount(
+      Long keyBehaviorConversionsCount) {
+    this.keyBehaviorConversionsCount = keyBehaviorConversionsCount;
+    return this;
+  }
+
+  /**
+   * Get keyBehaviorConversionsCount
+   *
+   * @return keyBehaviorConversionsCount
+   */
+  @ApiModelProperty(value = "")
+  public Long getKeyBehaviorConversionsCount() {
+    return keyBehaviorConversionsCount;
+  }
+
+  public void setKeyBehaviorConversionsCount(Long keyBehaviorConversionsCount) {
+    this.keyBehaviorConversionsCount = keyBehaviorConversionsCount;
+  }
+
+  public TargetingTagReportsGetListStruct keyBehaviorConversionsCost(
+      Long keyBehaviorConversionsCost) {
+    this.keyBehaviorConversionsCost = keyBehaviorConversionsCost;
+    return this;
+  }
+
+  /**
+   * Get keyBehaviorConversionsCost
+   *
+   * @return keyBehaviorConversionsCost
+   */
+  @ApiModelProperty(value = "")
+  public Long getKeyBehaviorConversionsCost() {
+    return keyBehaviorConversionsCost;
+  }
+
+  public void setKeyBehaviorConversionsCost(Long keyBehaviorConversionsCost) {
+    this.keyBehaviorConversionsCost = keyBehaviorConversionsCost;
+  }
+
+  public TargetingTagReportsGetListStruct keyBehaviorConversionsRate(
+      Double keyBehaviorConversionsRate) {
+    this.keyBehaviorConversionsRate = keyBehaviorConversionsRate;
+    return this;
+  }
+
+  /**
+   * Get keyBehaviorConversionsRate
+   *
+   * @return keyBehaviorConversionsRate
+   */
+  @ApiModelProperty(value = "")
+  public Double getKeyBehaviorConversionsRate() {
+    return keyBehaviorConversionsRate;
+  }
+
+  public void setKeyBehaviorConversionsRate(Double keyBehaviorConversionsRate) {
+    this.keyBehaviorConversionsRate = keyBehaviorConversionsRate;
+  }
+
+  public TargetingTagReportsGetListStruct firstDayOrderRoi(Double firstDayOrderRoi) {
+    this.firstDayOrderRoi = firstDayOrderRoi;
+    return this;
+  }
+
+  /**
+   * Get firstDayOrderRoi
+   *
+   * @return firstDayOrderRoi
+   */
+  @ApiModelProperty(value = "")
+  public Double getFirstDayOrderRoi() {
+    return firstDayOrderRoi;
+  }
+
+  public void setFirstDayOrderRoi(Double firstDayOrderRoi) {
+    this.firstDayOrderRoi = firstDayOrderRoi;
+  }
+
   public TargetingTagReportsGetListStruct age(String age) {
     this.age = age;
     return this;
@@ -8476,6 +8567,16 @@ public class TargetingTagReportsGetListStruct {
             targetingTagReportsGetListStruct.wechatShallowConversionsCountStage2)
         && Objects.equals(
             this.activateRegisterRate, targetingTagReportsGetListStruct.activateRegisterRate)
+        && Objects.equals(
+            this.keyBehaviorConversionsCount,
+            targetingTagReportsGetListStruct.keyBehaviorConversionsCount)
+        && Objects.equals(
+            this.keyBehaviorConversionsCost,
+            targetingTagReportsGetListStruct.keyBehaviorConversionsCost)
+        && Objects.equals(
+            this.keyBehaviorConversionsRate,
+            targetingTagReportsGetListStruct.keyBehaviorConversionsRate)
+        && Objects.equals(this.firstDayOrderRoi, targetingTagReportsGetListStruct.firstDayOrderRoi)
         && Objects.equals(this.age, targetingTagReportsGetListStruct.age)
         && Objects.equals(this.regionId, targetingTagReportsGetListStruct.regionId)
         && Objects.equals(this.cityId, targetingTagReportsGetListStruct.cityId)
@@ -8883,6 +8984,10 @@ public class TargetingTagReportsGetListStruct {
         wechatShallowConversionsCountStage1,
         wechatShallowConversionsCountStage2,
         activateRegisterRate,
+        keyBehaviorConversionsCount,
+        keyBehaviorConversionsCost,
+        keyBehaviorConversionsRate,
+        firstDayOrderRoi,
         age,
         regionId,
         cityId,

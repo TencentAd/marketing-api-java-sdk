@@ -48,7 +48,9 @@ public enum PageElementsType {
 
   SWIPE_WEBVIEW("SWIPE_WEBVIEW"),
 
-  WEBVIEW("WEBVIEW");
+  WEBVIEW("WEBVIEW"),
+
+  ANIMATE_FLOAT_BUTTON("ANIMATE_FLOAT_BUTTON");
 
   private String value;
 

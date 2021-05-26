@@ -33,7 +33,6 @@ public class App {
   @Inject AdsApiContainer adsApiContainer;
   @Inject AdvertiserApiContainer advertiserApiContainer;
   @Inject AgencyInnerTransferApiContainer agencyInnerTransferApiContainer;
-  @Inject AgencyPeerTransferApiContainer agencyPeerTransferApiContainer;
   @Inject AgencyRealtimeCostApiContainer agencyRealtimeCostApiContainer;
   @Inject AndroidChannelPackagesApiContainer androidChannelPackagesApiContainer;
   @Inject AndroidUnionChannelPackagesApiContainer androidUnionChannelPackagesApiContainer;
@@ -119,7 +118,6 @@ public class App {
   @Inject QualificationsApiContainer qualificationsApiContainer;
   @Inject RealtimeCostApiContainer realtimeCostApiContainer;
   @Inject ReportApiContainer reportApiContainer;
-  @Inject ReviewElementPrereviewResultsApiContainer reviewElementPrereviewResultsApiContainer;
   @Inject SceneSpecTagsApiContainer sceneSpecTagsApiContainer;
   @Inject ShopApiContainer shopApiContainer;
   @Inject SplitTestsApiContainer splitTestsApiContainer;
@@ -221,10 +219,6 @@ public class App {
 
   public AgencyInnerTransferApiContainer agencyInnerTransfer() {
     return agencyInnerTransferApiContainer;
-  }
-
-  public AgencyPeerTransferApiContainer agencyPeerTransfer() {
-    return agencyPeerTransferApiContainer;
   }
 
   public AgencyRealtimeCostApiContainer agencyRealtimeCost() {
@@ -565,10 +559,6 @@ public class App {
 
   public ReportApiContainer report() {
     return reportApiContainer;
-  }
-
-  public ReviewElementPrereviewResultsApiContainer reviewElementPrereviewResults() {
-    return reviewElementPrereviewResultsApiContainer;
   }
 
   public SceneSpecTagsApiContainer sceneSpecTags() {

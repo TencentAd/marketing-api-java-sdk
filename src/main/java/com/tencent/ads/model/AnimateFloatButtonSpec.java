@@ -18,20 +18,17 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.util.Objects;
 
-/** 按钮组件元素 */
-@ApiModel(description = "按钮组件元素")
-public class ElementButtonRead {
-  @SerializedName("title")
-  private String title = null;
+/** 动画悬浮组件按钮 */
+@ApiModel(description = "动画悬浮组件按钮")
+public class AnimateFloatButtonSpec {
+  @SerializedName("link_spec")
+  private LinkSpec linkSpec = null;
 
-  @SerializedName("url")
-  private String url = null;
+  @SerializedName("app_download_spec")
+  private AppDownloadSpec appDownloadSpec = null;
 
-  @SerializedName("app_ios_spec")
-  private AppIosSpec appIosSpec = null;
-
-  @SerializedName("app_android_spec")
-  private AppAndroidSpec appAndroidSpec = null;
+  @SerializedName("follow_spec")
+  private FollowSpec followSpec = null;
 
   @SerializedName("mini_program_spec")
   private MiniProgramSpec miniProgramSpec = null;
@@ -45,171 +42,51 @@ public class ElementButtonRead {
   @SerializedName("card_spec")
   private CardSpec cardSpec = null;
 
-  @SerializedName("follow_spec")
-  private FollowSpec followSpec = null;
-
   @SerializedName("service_spec")
   private ServiceSpec serviceSpec = null;
 
   @SerializedName("wecom_spec")
   private WecomSpec wecomSpec = null;
 
-  @SerializedName("use_icon")
-  private Long useIcon = null;
-
-  public ElementButtonRead title(String title) {
-    this.title = title;
+  public AnimateFloatButtonSpec linkSpec(LinkSpec linkSpec) {
+    this.linkSpec = linkSpec;
     return this;
   }
 
   /**
-   * Get title
+   * Get linkSpec
    *
-   * @return title
+   * @return linkSpec
    */
   @ApiModelProperty(value = "")
-  public String getTitle() {
-    return title;
+  public LinkSpec getLinkSpec() {
+    return linkSpec;
   }
 
-  public void setTitle(String title) {
-    this.title = title;
+  public void setLinkSpec(LinkSpec linkSpec) {
+    this.linkSpec = linkSpec;
   }
 
-  public ElementButtonRead url(String url) {
-    this.url = url;
+  public AnimateFloatButtonSpec appDownloadSpec(AppDownloadSpec appDownloadSpec) {
+    this.appDownloadSpec = appDownloadSpec;
     return this;
   }
 
   /**
-   * Get url
+   * Get appDownloadSpec
    *
-   * @return url
+   * @return appDownloadSpec
    */
   @ApiModelProperty(value = "")
-  public String getUrl() {
-    return url;
+  public AppDownloadSpec getAppDownloadSpec() {
+    return appDownloadSpec;
   }
 
-  public void setUrl(String url) {
-    this.url = url;
+  public void setAppDownloadSpec(AppDownloadSpec appDownloadSpec) {
+    this.appDownloadSpec = appDownloadSpec;
   }
 
-  public ElementButtonRead appIosSpec(AppIosSpec appIosSpec) {
-    this.appIosSpec = appIosSpec;
-    return this;
-  }
-
-  /**
-   * Get appIosSpec
-   *
-   * @return appIosSpec
-   */
-  @ApiModelProperty(value = "")
-  public AppIosSpec getAppIosSpec() {
-    return appIosSpec;
-  }
-
-  public void setAppIosSpec(AppIosSpec appIosSpec) {
-    this.appIosSpec = appIosSpec;
-  }
-
-  public ElementButtonRead appAndroidSpec(AppAndroidSpec appAndroidSpec) {
-    this.appAndroidSpec = appAndroidSpec;
-    return this;
-  }
-
-  /**
-   * Get appAndroidSpec
-   *
-   * @return appAndroidSpec
-   */
-  @ApiModelProperty(value = "")
-  public AppAndroidSpec getAppAndroidSpec() {
-    return appAndroidSpec;
-  }
-
-  public void setAppAndroidSpec(AppAndroidSpec appAndroidSpec) {
-    this.appAndroidSpec = appAndroidSpec;
-  }
-
-  public ElementButtonRead miniProgramSpec(MiniProgramSpec miniProgramSpec) {
-    this.miniProgramSpec = miniProgramSpec;
-    return this;
-  }
-
-  /**
-   * Get miniProgramSpec
-   *
-   * @return miniProgramSpec
-   */
-  @ApiModelProperty(value = "")
-  public MiniProgramSpec getMiniProgramSpec() {
-    return miniProgramSpec;
-  }
-
-  public void setMiniProgramSpec(MiniProgramSpec miniProgramSpec) {
-    this.miniProgramSpec = miniProgramSpec;
-  }
-
-  public ElementButtonRead miniGameProgramSpec(MiniGameProgramSpec miniGameProgramSpec) {
-    this.miniGameProgramSpec = miniGameProgramSpec;
-    return this;
-  }
-
-  /**
-   * Get miniGameProgramSpec
-   *
-   * @return miniGameProgramSpec
-   */
-  @ApiModelProperty(value = "")
-  public MiniGameProgramSpec getMiniGameProgramSpec() {
-    return miniGameProgramSpec;
-  }
-
-  public void setMiniGameProgramSpec(MiniGameProgramSpec miniGameProgramSpec) {
-    this.miniGameProgramSpec = miniGameProgramSpec;
-  }
-
-  public ElementButtonRead fengyeSpec(FengyeSpec fengyeSpec) {
-    this.fengyeSpec = fengyeSpec;
-    return this;
-  }
-
-  /**
-   * Get fengyeSpec
-   *
-   * @return fengyeSpec
-   */
-  @ApiModelProperty(value = "")
-  public FengyeSpec getFengyeSpec() {
-    return fengyeSpec;
-  }
-
-  public void setFengyeSpec(FengyeSpec fengyeSpec) {
-    this.fengyeSpec = fengyeSpec;
-  }
-
-  public ElementButtonRead cardSpec(CardSpec cardSpec) {
-    this.cardSpec = cardSpec;
-    return this;
-  }
-
-  /**
-   * Get cardSpec
-   *
-   * @return cardSpec
-   */
-  @ApiModelProperty(value = "")
-  public CardSpec getCardSpec() {
-    return cardSpec;
-  }
-
-  public void setCardSpec(CardSpec cardSpec) {
-    this.cardSpec = cardSpec;
-  }
-
-  public ElementButtonRead followSpec(FollowSpec followSpec) {
+  public AnimateFloatButtonSpec followSpec(FollowSpec followSpec) {
     this.followSpec = followSpec;
     return this;
   }
@@ -228,7 +105,83 @@ public class ElementButtonRead {
     this.followSpec = followSpec;
   }
 
-  public ElementButtonRead serviceSpec(ServiceSpec serviceSpec) {
+  public AnimateFloatButtonSpec miniProgramSpec(MiniProgramSpec miniProgramSpec) {
+    this.miniProgramSpec = miniProgramSpec;
+    return this;
+  }
+
+  /**
+   * Get miniProgramSpec
+   *
+   * @return miniProgramSpec
+   */
+  @ApiModelProperty(value = "")
+  public MiniProgramSpec getMiniProgramSpec() {
+    return miniProgramSpec;
+  }
+
+  public void setMiniProgramSpec(MiniProgramSpec miniProgramSpec) {
+    this.miniProgramSpec = miniProgramSpec;
+  }
+
+  public AnimateFloatButtonSpec miniGameProgramSpec(MiniGameProgramSpec miniGameProgramSpec) {
+    this.miniGameProgramSpec = miniGameProgramSpec;
+    return this;
+  }
+
+  /**
+   * Get miniGameProgramSpec
+   *
+   * @return miniGameProgramSpec
+   */
+  @ApiModelProperty(value = "")
+  public MiniGameProgramSpec getMiniGameProgramSpec() {
+    return miniGameProgramSpec;
+  }
+
+  public void setMiniGameProgramSpec(MiniGameProgramSpec miniGameProgramSpec) {
+    this.miniGameProgramSpec = miniGameProgramSpec;
+  }
+
+  public AnimateFloatButtonSpec fengyeSpec(FengyeSpec fengyeSpec) {
+    this.fengyeSpec = fengyeSpec;
+    return this;
+  }
+
+  /**
+   * Get fengyeSpec
+   *
+   * @return fengyeSpec
+   */
+  @ApiModelProperty(value = "")
+  public FengyeSpec getFengyeSpec() {
+    return fengyeSpec;
+  }
+
+  public void setFengyeSpec(FengyeSpec fengyeSpec) {
+    this.fengyeSpec = fengyeSpec;
+  }
+
+  public AnimateFloatButtonSpec cardSpec(CardSpec cardSpec) {
+    this.cardSpec = cardSpec;
+    return this;
+  }
+
+  /**
+   * Get cardSpec
+   *
+   * @return cardSpec
+   */
+  @ApiModelProperty(value = "")
+  public CardSpec getCardSpec() {
+    return cardSpec;
+  }
+
+  public void setCardSpec(CardSpec cardSpec) {
+    this.cardSpec = cardSpec;
+  }
+
+  public AnimateFloatButtonSpec serviceSpec(ServiceSpec serviceSpec) {
     this.serviceSpec = serviceSpec;
     return this;
   }
@@ -247,7 +200,7 @@ public class ElementButtonRead {
     this.serviceSpec = serviceSpec;
   }
 
-  public ElementButtonRead wecomSpec(WecomSpec wecomSpec) {
+  public AnimateFloatButtonSpec wecomSpec(WecomSpec wecomSpec) {
     this.wecomSpec = wecomSpec;
     return this;
   }
@@ -266,25 +219,6 @@ public class ElementButtonRead {
     this.wecomSpec = wecomSpec;
   }
 
-  public ElementButtonRead useIcon(Long useIcon) {
-    this.useIcon = useIcon;
-    return this;
-  }
-
-  /**
-   * Get useIcon
-   *
-   * @return useIcon
-   */
-  @ApiModelProperty(value = "")
-  public Long getUseIcon() {
-    return useIcon;
-  }
-
-  public void setUseIcon(Long useIcon) {
-    this.useIcon = useIcon;
-  }
-
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -293,36 +227,30 @@ public class ElementButtonRead {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    ElementButtonRead elementButtonRead = (ElementButtonRead) o;
-    return Objects.equals(this.title, elementButtonRead.title)
-        && Objects.equals(this.url, elementButtonRead.url)
-        && Objects.equals(this.appIosSpec, elementButtonRead.appIosSpec)
-        && Objects.equals(this.appAndroidSpec, elementButtonRead.appAndroidSpec)
-        && Objects.equals(this.miniProgramSpec, elementButtonRead.miniProgramSpec)
-        && Objects.equals(this.miniGameProgramSpec, elementButtonRead.miniGameProgramSpec)
-        && Objects.equals(this.fengyeSpec, elementButtonRead.fengyeSpec)
-        && Objects.equals(this.cardSpec, elementButtonRead.cardSpec)
-        && Objects.equals(this.followSpec, elementButtonRead.followSpec)
-        && Objects.equals(this.serviceSpec, elementButtonRead.serviceSpec)
-        && Objects.equals(this.wecomSpec, elementButtonRead.wecomSpec)
-        && Objects.equals(this.useIcon, elementButtonRead.useIcon);
+    AnimateFloatButtonSpec animateFloatButtonSpec = (AnimateFloatButtonSpec) o;
+    return Objects.equals(this.linkSpec, animateFloatButtonSpec.linkSpec)
+        && Objects.equals(this.appDownloadSpec, animateFloatButtonSpec.appDownloadSpec)
+        && Objects.equals(this.followSpec, animateFloatButtonSpec.followSpec)
+        && Objects.equals(this.miniProgramSpec, animateFloatButtonSpec.miniProgramSpec)
+        && Objects.equals(this.miniGameProgramSpec, animateFloatButtonSpec.miniGameProgramSpec)
+        && Objects.equals(this.fengyeSpec, animateFloatButtonSpec.fengyeSpec)
+        && Objects.equals(this.cardSpec, animateFloatButtonSpec.cardSpec)
+        && Objects.equals(this.serviceSpec, animateFloatButtonSpec.serviceSpec)
+        && Objects.equals(this.wecomSpec, animateFloatButtonSpec.wecomSpec);
   }
 
   @Override
   public int hashCode() {
     return Objects.hash(
-        title,
-        url,
-        appIosSpec,
-        appAndroidSpec,
+        linkSpec,
+        appDownloadSpec,
+        followSpec,
         miniProgramSpec,
         miniGameProgramSpec,
         fengyeSpec,
         cardSpec,
-        followSpec,
         serviceSpec,
-        wecomSpec,
-        useIcon);
+        wecomSpec);
   }
 
   @Override
