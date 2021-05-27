@@ -22,7 +22,7 @@ public class GetXijingPageList {
 
   public String pageName = null;
 
-  public String pageType = null;
+  public List<String> pageType = null;
 
   public String pageLastModifyStartTime = null;
 
@@ -32,9 +32,9 @@ public class GetXijingPageList {
 
   public Long pageIndex = null;
 
-  public String pagePublishStatus = null;
+  public List<String> pagePublishStatus = null;
 
-  public String pageStatus = null;
+  public List<String> pageStatus = null;
 
   public String pageSource = null;
 

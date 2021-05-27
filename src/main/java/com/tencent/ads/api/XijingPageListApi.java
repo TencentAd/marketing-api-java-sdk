@@ -78,13 +78,13 @@ public class XijingPageListApi {
       Long pageId,
       String pageServiceId,
       String pageName,
-      String pageType,
+      List<String> pageType,
       String pageLastModifyStartTime,
       String pageLastModifyEndTime,
       Long pageSize,
       Long pageIndex,
-      String pagePublishStatus,
-      String pageStatus,
+      List<String> pagePublishStatus,
+      List<String> pageStatus,
       String pageSource,
       Long pageOwnerId,
       Long appId,
@@ -109,7 +109,8 @@ public class XijingPageListApi {
     if (pageName != null)
       localVarQueryParams.addAll(apiClient.parameterToPair("page_name", pageName));
     if (pageType != null)
-      localVarQueryParams.addAll(apiClient.parameterToPair("page_type", pageType));
+      localVarCollectionQueryParams.addAll(
+          apiClient.parameterToPairs("multi", "page_type", pageType));
     if (pageLastModifyStartTime != null)
       localVarQueryParams.addAll(
           apiClient.parameterToPair("page_last_modify_start_time", pageLastModifyStartTime));
@@ -121,10 +122,11 @@ public class XijingPageListApi {
     if (pageIndex != null)
       localVarQueryParams.addAll(apiClient.parameterToPair("page_index", pageIndex));
     if (pagePublishStatus != null)
-      localVarQueryParams.addAll(
-          apiClient.parameterToPair("page_publish_status", pagePublishStatus));
+      localVarCollectionQueryParams.addAll(
+          apiClient.parameterToPairs("multi", "page_publish_status", pagePublishStatus));
     if (pageStatus != null)
-      localVarQueryParams.addAll(apiClient.parameterToPair("page_status", pageStatus));
+      localVarCollectionQueryParams.addAll(
+          apiClient.parameterToPairs("multi", "page_status", pageStatus));
     if (pageSource != null)
       localVarQueryParams.addAll(apiClient.parameterToPair("page_source", pageSource));
     if (pageOwnerId != null)
@@ -185,13 +187,13 @@ public class XijingPageListApi {
       Long pageId,
       String pageServiceId,
       String pageName,
-      String pageType,
+      List<String> pageType,
       String pageLastModifyStartTime,
       String pageLastModifyEndTime,
       Long pageSize,
       Long pageIndex,
-      String pagePublishStatus,
-      String pageStatus,
+      List<String> pagePublishStatus,
+      List<String> pageStatus,
       String pageSource,
       Long pageOwnerId,
       Long appId,
@@ -261,13 +263,13 @@ public class XijingPageListApi {
       Long pageId,
       String pageServiceId,
       String pageName,
-      String pageType,
+      List<String> pageType,
       String pageLastModifyStartTime,
       String pageLastModifyEndTime,
       Long pageSize,
       Long pageIndex,
-      String pagePublishStatus,
-      String pageStatus,
+      List<String> pagePublishStatus,
+      List<String> pageStatus,
       String pageSource,
       Long pageOwnerId,
       Long appId,
@@ -326,13 +328,13 @@ public class XijingPageListApi {
       Long pageId,
       String pageServiceId,
       String pageName,
-      String pageType,
+      List<String> pageType,
       String pageLastModifyStartTime,
       String pageLastModifyEndTime,
       Long pageSize,
       Long pageIndex,
-      String pagePublishStatus,
-      String pageStatus,
+      List<String> pagePublishStatus,
+      List<String> pageStatus,
       String pageSource,
       Long pageOwnerId,
       Long appId,
@@ -394,13 +396,13 @@ public class XijingPageListApi {
       Long pageId,
       String pageServiceId,
       String pageName,
-      String pageType,
+      List<String> pageType,
       String pageLastModifyStartTime,
       String pageLastModifyEndTime,
       Long pageSize,
       Long pageIndex,
-      String pagePublishStatus,
-      String pageStatus,
+      List<String> pagePublishStatus,
+      List<String> pageStatus,
       String pageSource,
       Long pageOwnerId,
       Long appId,
