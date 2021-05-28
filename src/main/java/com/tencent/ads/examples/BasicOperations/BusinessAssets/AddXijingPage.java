@@ -6,6 +6,7 @@ import com.tencent.ads.exception.TencentAdsResponseException;
 import com.tencent.ads.exception.TencentAdsSDKException;
 import com.tencent.ads.model.*;
 import com.tencent.ads.model.XijingPageAddRequest;
+import com.tencent.ads.model.XijingPageAddResponse;
 
 public class AddXijingPage {
   /** YOUR ACCESS TOKEN */
@@ -26,8 +27,8 @@ public class AddXijingPage {
 
   public void buildParams() {}
 
-  public XijingPageAddResponseData addXijingPage() throws Exception {
-    XijingPageAddResponseData response = tencentAds.xijingPage().xijingPageAdd(data);
+  public XijingPageAddResponse addXijingPage() throws Exception {
+    XijingPageAddResponse response = tencentAds.xijingPage().xijingPageAdd(data);
     return response;
   }
 
@@ -35,7 +36,7 @@ public class AddXijingPage {
     try {
       AddXijingPage addXijingPage = new AddXijingPage();
       addXijingPage.init();
-      XijingPageAddResponseData response = addXijingPage.addXijingPage();
+      XijingPageAddResponse response = addXijingPage.addXijingPage();
     } catch (TencentAdsResponseException e) {
       e.printStackTrace();
     } catch (TencentAdsSDKException e) {

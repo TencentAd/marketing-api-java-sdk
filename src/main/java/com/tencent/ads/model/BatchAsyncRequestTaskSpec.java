@@ -82,6 +82,9 @@ public class BatchAsyncRequestTaskSpec {
   @SerializedName("update_adgroup_auto_acquisition_spec")
   private List<UpdateAdgroupAutoAcquisitionItem> updateAdgroupAutoAcquisitionSpec = null;
 
+  @SerializedName("update_adcreative_landing_page_spec")
+  private List<UpdateAdcreativeLandingPageItem> updateAdcreativeLandingPageSpec = null;
+
   public BatchAsyncRequestTaskSpec updateUnionPositionPackageSpec(
       List<UpdateUnionPositionPackageItem> updateUnionPositionPackageSpec) {
     this.updateUnionPositionPackageSpec = updateUnionPositionPackageSpec;
@@ -651,6 +654,36 @@ public class BatchAsyncRequestTaskSpec {
     this.updateAdgroupAutoAcquisitionSpec = updateAdgroupAutoAcquisitionSpec;
   }
 
+  public BatchAsyncRequestTaskSpec updateAdcreativeLandingPageSpec(
+      List<UpdateAdcreativeLandingPageItem> updateAdcreativeLandingPageSpec) {
+    this.updateAdcreativeLandingPageSpec = updateAdcreativeLandingPageSpec;
+    return this;
+  }
+
+  public BatchAsyncRequestTaskSpec addUpdateAdcreativeLandingPageSpecItem(
+      UpdateAdcreativeLandingPageItem updateAdcreativeLandingPageSpecItem) {
+    if (this.updateAdcreativeLandingPageSpec == null) {
+      this.updateAdcreativeLandingPageSpec = new ArrayList<UpdateAdcreativeLandingPageItem>();
+    }
+    this.updateAdcreativeLandingPageSpec.add(updateAdcreativeLandingPageSpecItem);
+    return this;
+  }
+
+  /**
+   * Get updateAdcreativeLandingPageSpec
+   *
+   * @return updateAdcreativeLandingPageSpec
+   */
+  @ApiModelProperty(value = "")
+  public List<UpdateAdcreativeLandingPageItem> getUpdateAdcreativeLandingPageSpec() {
+    return updateAdcreativeLandingPageSpec;
+  }
+
+  public void setUpdateAdcreativeLandingPageSpec(
+      List<UpdateAdcreativeLandingPageItem> updateAdcreativeLandingPageSpec) {
+    this.updateAdcreativeLandingPageSpec = updateAdcreativeLandingPageSpec;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -705,7 +738,10 @@ public class BatchAsyncRequestTaskSpec {
             batchAsyncRequestTaskSpec.updateAdConfiguredStatusSpec)
         && Objects.equals(
             this.updateAdgroupAutoAcquisitionSpec,
-            batchAsyncRequestTaskSpec.updateAdgroupAutoAcquisitionSpec);
+            batchAsyncRequestTaskSpec.updateAdgroupAutoAcquisitionSpec)
+        && Objects.equals(
+            this.updateAdcreativeLandingPageSpec,
+            batchAsyncRequestTaskSpec.updateAdcreativeLandingPageSpec);
   }
 
   @Override
@@ -729,7 +765,8 @@ public class BatchAsyncRequestTaskSpec {
         updateAdgroupConfiguredStatusSpec,
         updateAdgroupDailyBudgetSpec,
         updateAdConfiguredStatusSpec,
-        updateAdgroupAutoAcquisitionSpec);
+        updateAdgroupAutoAcquisitionSpec,
+        updateAdcreativeLandingPageSpec);
   }
 
   @Override

@@ -20,13 +20,10 @@ import com.tencent.ads.api.XijingPageApi;
 import com.tencent.ads.exception.TencentAdsResponseException;
 import com.tencent.ads.model.XijingPageAddRequest;
 import com.tencent.ads.model.XijingPageAddResponse;
-import com.tencent.ads.model.XijingPageAddResponseData;
 import com.tencent.ads.model.XijingPageDeleteRequest;
 import com.tencent.ads.model.XijingPageDeleteResponse;
-import com.tencent.ads.model.XijingPageDeleteResponseData;
 import com.tencent.ads.model.XijingPageUpdateRequest;
 import com.tencent.ads.model.XijingPageUpdateResponse;
-import com.tencent.ads.model.XijingPageUpdateResponseData;
 
 public class XijingPageApiContainer extends ApiContainer {
 
@@ -40,11 +37,12 @@ public class XijingPageApiContainer extends ApiContainer {
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
-  public XijingPageAddResponseData xijingPageAdd(XijingPageAddRequest data)
+  public XijingPageAddResponse xijingPageAdd(XijingPageAddRequest data)
       throws ApiException, TencentAdsResponseException {
     XijingPageAddResponse resp = api.xijingPageAdd(data);
     handleResponse(gson.toJson(resp));
-    return resp.getData();
+
+    return resp;
   }
 
   /**
@@ -55,11 +53,12 @@ public class XijingPageApiContainer extends ApiContainer {
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
-  public XijingPageDeleteResponseData xijingPageDelete(XijingPageDeleteRequest data)
+  public XijingPageDeleteResponse xijingPageDelete(XijingPageDeleteRequest data)
       throws ApiException, TencentAdsResponseException {
     XijingPageDeleteResponse resp = api.xijingPageDelete(data);
     handleResponse(gson.toJson(resp));
-    return resp.getData();
+
+    return resp;
   }
 
   /**
@@ -70,10 +69,11 @@ public class XijingPageApiContainer extends ApiContainer {
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
-  public XijingPageUpdateResponseData xijingPageUpdate(XijingPageUpdateRequest data)
+  public XijingPageUpdateResponse xijingPageUpdate(XijingPageUpdateRequest data)
       throws ApiException, TencentAdsResponseException {
     XijingPageUpdateResponse resp = api.xijingPageUpdate(data);
     handleResponse(gson.toJson(resp));
-    return resp.getData();
+
+    return resp;
   }
 }

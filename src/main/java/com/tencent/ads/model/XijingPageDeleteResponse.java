@@ -34,7 +34,7 @@ public class XijingPageDeleteResponse {
   private List<ApiErrorStruct> errors = null;
 
   @SerializedName("data")
-  private XijingPageDeleteResponseData data = null;
+  private List<PageOperateResponses> data = null;
 
   public XijingPageDeleteResponse code(Long code) {
     this.code = code;
@@ -120,8 +120,16 @@ public class XijingPageDeleteResponse {
     this.errors = errors;
   }
 
-  public XijingPageDeleteResponse data(XijingPageDeleteResponseData data) {
+  public XijingPageDeleteResponse data(List<PageOperateResponses> data) {
     this.data = data;
+    return this;
+  }
+
+  public XijingPageDeleteResponse addDataItem(PageOperateResponses dataItem) {
+    if (this.data == null) {
+      this.data = new ArrayList<PageOperateResponses>();
+    }
+    this.data.add(dataItem);
     return this;
   }
 
@@ -131,11 +139,11 @@ public class XijingPageDeleteResponse {
    * @return data
    */
   @ApiModelProperty(value = "")
-  public XijingPageDeleteResponseData getData() {
+  public List<PageOperateResponses> getData() {
     return data;
   }
 
-  public void setData(XijingPageDeleteResponseData data) {
+  public void setData(List<PageOperateResponses> data) {
     this.data = data;
   }
 

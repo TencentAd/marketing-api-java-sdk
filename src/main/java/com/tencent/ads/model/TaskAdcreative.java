@@ -14,41 +14,55 @@ package com.tencent.ads.model;
 
 import com.google.gson.Gson;
 import com.google.gson.annotations.SerializedName;
+import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Objects;
 
-/** XijingPageDeleteResponseData */
-public class XijingPageDeleteResponseData {
-  @SerializedName("list")
-  private List<PageOperateResponses> list = null;
+/** 广告创意 */
+@ApiModel(description = "广告创意")
+public class TaskAdcreative {
+  @SerializedName("page_type")
+  private DestinationType pageType = null;
 
-  public XijingPageDeleteResponseData list(List<PageOperateResponses> list) {
-    this.list = list;
-    return this;
-  }
+  @SerializedName("page_spec")
+  private TaskPageSpec pageSpec = null;
 
-  public XijingPageDeleteResponseData addListItem(PageOperateResponses listItem) {
-    if (this.list == null) {
-      this.list = new ArrayList<PageOperateResponses>();
-    }
-    this.list.add(listItem);
+  public TaskAdcreative pageType(DestinationType pageType) {
+    this.pageType = pageType;
     return this;
   }
 
   /**
-   * Get list
+   * Get pageType
    *
-   * @return list
+   * @return pageType
    */
   @ApiModelProperty(value = "")
-  public List<PageOperateResponses> getList() {
-    return list;
+  public DestinationType getPageType() {
+    return pageType;
   }
 
-  public void setList(List<PageOperateResponses> list) {
-    this.list = list;
+  public void setPageType(DestinationType pageType) {
+    this.pageType = pageType;
+  }
+
+  public TaskAdcreative pageSpec(TaskPageSpec pageSpec) {
+    this.pageSpec = pageSpec;
+    return this;
+  }
+
+  /**
+   * Get pageSpec
+   *
+   * @return pageSpec
+   */
+  @ApiModelProperty(value = "")
+  public TaskPageSpec getPageSpec() {
+    return pageSpec;
+  }
+
+  public void setPageSpec(TaskPageSpec pageSpec) {
+    this.pageSpec = pageSpec;
   }
 
   @Override
@@ -59,13 +73,14 @@ public class XijingPageDeleteResponseData {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    XijingPageDeleteResponseData xijingPageDeleteResponseData = (XijingPageDeleteResponseData) o;
-    return Objects.equals(this.list, xijingPageDeleteResponseData.list);
+    TaskAdcreative taskAdcreative = (TaskAdcreative) o;
+    return Objects.equals(this.pageType, taskAdcreative.pageType)
+        && Objects.equals(this.pageSpec, taskAdcreative.pageSpec);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(list);
+    return Objects.hash(pageType, pageSpec);
   }
 
   @Override

@@ -6,6 +6,7 @@ import com.tencent.ads.exception.TencentAdsResponseException;
 import com.tencent.ads.exception.TencentAdsSDKException;
 import com.tencent.ads.model.*;
 import com.tencent.ads.model.XijingPageDeleteRequest;
+import com.tencent.ads.model.XijingPageDeleteResponse;
 
 public class DeleteXijingPage {
   /** YOUR ACCESS TOKEN */
@@ -26,8 +27,8 @@ public class DeleteXijingPage {
 
   public void buildParams() {}
 
-  public XijingPageDeleteResponseData deleteXijingPage() throws Exception {
-    XijingPageDeleteResponseData response = tencentAds.xijingPage().xijingPageDelete(data);
+  public XijingPageDeleteResponse deleteXijingPage() throws Exception {
+    XijingPageDeleteResponse response = tencentAds.xijingPage().xijingPageDelete(data);
     return response;
   }
 
@@ -35,7 +36,7 @@ public class DeleteXijingPage {
     try {
       DeleteXijingPage deleteXijingPage = new DeleteXijingPage();
       deleteXijingPage.init();
-      XijingPageDeleteResponseData response = deleteXijingPage.deleteXijingPage();
+      XijingPageDeleteResponse response = deleteXijingPage.deleteXijingPage();
     } catch (TencentAdsResponseException e) {
       e.printStackTrace();
     } catch (TencentAdsSDKException e) {

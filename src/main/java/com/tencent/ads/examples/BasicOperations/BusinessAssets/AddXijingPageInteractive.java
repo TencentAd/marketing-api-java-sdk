@@ -5,6 +5,7 @@ import com.tencent.ads.TencentAds;
 import com.tencent.ads.exception.TencentAdsResponseException;
 import com.tencent.ads.exception.TencentAdsSDKException;
 import com.tencent.ads.model.*;
+import com.tencent.ads.model.XijingPageInteractiveAddResponse;
 import java.io.File;
 
 public class AddXijingPageInteractive {
@@ -40,8 +41,8 @@ public class AddXijingPageInteractive {
 
   public void buildParams() {}
 
-  public XijingPageInteractiveAddResponseData addXijingPageInteractive() throws Exception {
-    XijingPageInteractiveAddResponseData response =
+  public XijingPageInteractiveAddResponse addXijingPageInteractive() throws Exception {
+    XijingPageInteractiveAddResponse response =
         tencentAds
             .xijingPageInteractive()
             .xijingPageInteractiveAdd(
@@ -60,7 +61,7 @@ public class AddXijingPageInteractive {
     try {
       AddXijingPageInteractive addXijingPageInteractive = new AddXijingPageInteractive();
       addXijingPageInteractive.init();
-      XijingPageInteractiveAddResponseData response =
+      XijingPageInteractiveAddResponse response =
           addXijingPageInteractive.addXijingPageInteractive();
     } catch (TencentAdsResponseException e) {
       e.printStackTrace();

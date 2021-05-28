@@ -19,7 +19,6 @@ import com.tencent.ads.anno.*;
 import com.tencent.ads.api.XijingPageInteractiveApi;
 import com.tencent.ads.exception.TencentAdsResponseException;
 import com.tencent.ads.model.XijingPageInteractiveAddResponse;
-import com.tencent.ads.model.XijingPageInteractiveAddResponseData;
 import java.io.File;
 
 public class XijingPageInteractiveApiContainer extends ApiContainer {
@@ -41,7 +40,7 @@ public class XijingPageInteractiveApiContainer extends ApiContainer {
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
-  public XijingPageInteractiveAddResponseData xijingPageInteractiveAdd(
+  public XijingPageInteractiveAddResponse xijingPageInteractiveAdd(
       Long accountId,
       Long isAutoSubmit,
       String pageType,
@@ -62,6 +61,7 @@ public class XijingPageInteractiveApiContainer extends ApiContainer {
             mobileAppId,
             file);
     handleResponse(gson.toJson(resp));
-    return resp.getData();
+
+    return resp;
   }
 }

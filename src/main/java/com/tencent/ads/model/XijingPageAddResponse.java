@@ -34,7 +34,7 @@ public class XijingPageAddResponse {
   private List<ApiErrorStruct> errors = null;
 
   @SerializedName("data")
-  private XijingPageAddResponseData data = null;
+  private List<CreatePageResponse> data = null;
 
   public XijingPageAddResponse code(Long code) {
     this.code = code;
@@ -120,8 +120,16 @@ public class XijingPageAddResponse {
     this.errors = errors;
   }
 
-  public XijingPageAddResponse data(XijingPageAddResponseData data) {
+  public XijingPageAddResponse data(List<CreatePageResponse> data) {
     this.data = data;
+    return this;
+  }
+
+  public XijingPageAddResponse addDataItem(CreatePageResponse dataItem) {
+    if (this.data == null) {
+      this.data = new ArrayList<CreatePageResponse>();
+    }
+    this.data.add(dataItem);
     return this;
   }
 
@@ -131,11 +139,11 @@ public class XijingPageAddResponse {
    * @return data
    */
   @ApiModelProperty(value = "")
-  public XijingPageAddResponseData getData() {
+  public List<CreatePageResponse> getData() {
     return data;
   }
 
-  public void setData(XijingPageAddResponseData data) {
+  public void setData(List<CreatePageResponse> data) {
     this.data = data;
   }
 

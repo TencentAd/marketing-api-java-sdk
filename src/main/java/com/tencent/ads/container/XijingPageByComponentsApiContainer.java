@@ -20,7 +20,6 @@ import com.tencent.ads.api.XijingPageByComponentsApi;
 import com.tencent.ads.exception.TencentAdsResponseException;
 import com.tencent.ads.model.XijingPageByComponentsAddRequest;
 import com.tencent.ads.model.XijingPageByComponentsAddResponse;
-import com.tencent.ads.model.XijingPageByComponentsAddResponseData;
 
 public class XijingPageByComponentsApiContainer extends ApiContainer {
 
@@ -34,10 +33,11 @@ public class XijingPageByComponentsApiContainer extends ApiContainer {
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
-  public XijingPageByComponentsAddResponseData xijingPageByComponentsAdd(
+  public XijingPageByComponentsAddResponse xijingPageByComponentsAdd(
       XijingPageByComponentsAddRequest data) throws ApiException, TencentAdsResponseException {
     XijingPageByComponentsAddResponse resp = api.xijingPageByComponentsAdd(data);
     handleResponse(gson.toJson(resp));
-    return resp.getData();
+
+    return resp;
   }
 }
