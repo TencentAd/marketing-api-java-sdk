@@ -19,48 +19,114 @@ import java.util.Objects;
 
 /** LocalEstimatedamountGetResponseData */
 public class LocalEstimatedamountGetResponseData {
-  @SerializedName("estimated_views")
-  private Long estimatedViews = null;
+  @SerializedName("min_estimated_exposure")
+  private Long minEstimatedExposure = null;
 
-  @SerializedName("estimated_coupon_amount")
-  private Long estimatedCouponAmount = null;
+  @SerializedName("max_estimated_exposure")
+  private Long maxEstimatedExposure = null;
 
-  public LocalEstimatedamountGetResponseData estimatedViews(Long estimatedViews) {
-    this.estimatedViews = estimatedViews;
+  @SerializedName("min_estimated_conv")
+  private Long minEstimatedConv = null;
+
+  @SerializedName("max_estimated_conv")
+  private Long maxEstimatedConv = null;
+
+  @SerializedName("suggestion")
+  private String suggestion = null;
+
+  public LocalEstimatedamountGetResponseData minEstimatedExposure(Long minEstimatedExposure) {
+    this.minEstimatedExposure = minEstimatedExposure;
     return this;
   }
 
   /**
-   * Get estimatedViews
+   * Get minEstimatedExposure
    *
-   * @return estimatedViews
+   * @return minEstimatedExposure
    */
   @ApiModelProperty(value = "")
-  public Long getEstimatedViews() {
-    return estimatedViews;
+  public Long getMinEstimatedExposure() {
+    return minEstimatedExposure;
   }
 
-  public void setEstimatedViews(Long estimatedViews) {
-    this.estimatedViews = estimatedViews;
+  public void setMinEstimatedExposure(Long minEstimatedExposure) {
+    this.minEstimatedExposure = minEstimatedExposure;
   }
 
-  public LocalEstimatedamountGetResponseData estimatedCouponAmount(Long estimatedCouponAmount) {
-    this.estimatedCouponAmount = estimatedCouponAmount;
+  public LocalEstimatedamountGetResponseData maxEstimatedExposure(Long maxEstimatedExposure) {
+    this.maxEstimatedExposure = maxEstimatedExposure;
     return this;
   }
 
   /**
-   * Get estimatedCouponAmount
+   * Get maxEstimatedExposure
    *
-   * @return estimatedCouponAmount
+   * @return maxEstimatedExposure
    */
   @ApiModelProperty(value = "")
-  public Long getEstimatedCouponAmount() {
-    return estimatedCouponAmount;
+  public Long getMaxEstimatedExposure() {
+    return maxEstimatedExposure;
   }
 
-  public void setEstimatedCouponAmount(Long estimatedCouponAmount) {
-    this.estimatedCouponAmount = estimatedCouponAmount;
+  public void setMaxEstimatedExposure(Long maxEstimatedExposure) {
+    this.maxEstimatedExposure = maxEstimatedExposure;
+  }
+
+  public LocalEstimatedamountGetResponseData minEstimatedConv(Long minEstimatedConv) {
+    this.minEstimatedConv = minEstimatedConv;
+    return this;
+  }
+
+  /**
+   * Get minEstimatedConv
+   *
+   * @return minEstimatedConv
+   */
+  @ApiModelProperty(value = "")
+  public Long getMinEstimatedConv() {
+    return minEstimatedConv;
+  }
+
+  public void setMinEstimatedConv(Long minEstimatedConv) {
+    this.minEstimatedConv = minEstimatedConv;
+  }
+
+  public LocalEstimatedamountGetResponseData maxEstimatedConv(Long maxEstimatedConv) {
+    this.maxEstimatedConv = maxEstimatedConv;
+    return this;
+  }
+
+  /**
+   * Get maxEstimatedConv
+   *
+   * @return maxEstimatedConv
+   */
+  @ApiModelProperty(value = "")
+  public Long getMaxEstimatedConv() {
+    return maxEstimatedConv;
+  }
+
+  public void setMaxEstimatedConv(Long maxEstimatedConv) {
+    this.maxEstimatedConv = maxEstimatedConv;
+  }
+
+  public LocalEstimatedamountGetResponseData suggestion(String suggestion) {
+    this.suggestion = suggestion;
+    return this;
+  }
+
+  /**
+   * Get suggestion
+   *
+   * @return suggestion
+   */
+  @ApiModelProperty(value = "")
+  public String getSuggestion() {
+    return suggestion;
+  }
+
+  public void setSuggestion(String suggestion) {
+    this.suggestion = suggestion;
   }
 
   @Override
@@ -73,14 +139,21 @@ public class LocalEstimatedamountGetResponseData {
     }
     LocalEstimatedamountGetResponseData localEstimatedamountGetResponseData =
         (LocalEstimatedamountGetResponseData) o;
-    return Objects.equals(this.estimatedViews, localEstimatedamountGetResponseData.estimatedViews)
+    return Objects.equals(
+            this.minEstimatedExposure, localEstimatedamountGetResponseData.minEstimatedExposure)
         && Objects.equals(
-            this.estimatedCouponAmount, localEstimatedamountGetResponseData.estimatedCouponAmount);
+            this.maxEstimatedExposure, localEstimatedamountGetResponseData.maxEstimatedExposure)
+        && Objects.equals(
+            this.minEstimatedConv, localEstimatedamountGetResponseData.minEstimatedConv)
+        && Objects.equals(
+            this.maxEstimatedConv, localEstimatedamountGetResponseData.maxEstimatedConv)
+        && Objects.equals(this.suggestion, localEstimatedamountGetResponseData.suggestion);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(estimatedViews, estimatedCouponAmount);
+    return Objects.hash(
+        minEstimatedExposure, maxEstimatedExposure, minEstimatedConv, maxEstimatedConv, suggestion);
   }
 
   @Override

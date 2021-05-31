@@ -18,51 +18,51 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.util.Objects;
 
-/** 落地页信息 */
-@ApiModel(description = "落地页信息")
-public class DpPageSpec {
-  @SerializedName("mini_program_spec")
-  private DpMiniProgramSpec miniProgramSpec = null;
+/** 日期范围 */
+@ApiModel(description = "日期范围")
+public class DpDateRange {
+  @SerializedName("start_date")
+  private String startDate = null;
 
-  @SerializedName("alita_page_spec")
-  private DpAlitaPageSpec alitaPageSpec = null;
+  @SerializedName("end_date")
+  private String endDate = null;
 
-  public DpPageSpec miniProgramSpec(DpMiniProgramSpec miniProgramSpec) {
-    this.miniProgramSpec = miniProgramSpec;
+  public DpDateRange startDate(String startDate) {
+    this.startDate = startDate;
     return this;
   }
 
   /**
-   * Get miniProgramSpec
+   * Get startDate
    *
-   * @return miniProgramSpec
+   * @return startDate
    */
   @ApiModelProperty(value = "")
-  public DpMiniProgramSpec getMiniProgramSpec() {
-    return miniProgramSpec;
+  public String getStartDate() {
+    return startDate;
   }
 
-  public void setMiniProgramSpec(DpMiniProgramSpec miniProgramSpec) {
-    this.miniProgramSpec = miniProgramSpec;
+  public void setStartDate(String startDate) {
+    this.startDate = startDate;
   }
 
-  public DpPageSpec alitaPageSpec(DpAlitaPageSpec alitaPageSpec) {
-    this.alitaPageSpec = alitaPageSpec;
+  public DpDateRange endDate(String endDate) {
+    this.endDate = endDate;
     return this;
   }
 
   /**
-   * Get alitaPageSpec
+   * Get endDate
    *
-   * @return alitaPageSpec
+   * @return endDate
    */
   @ApiModelProperty(value = "")
-  public DpAlitaPageSpec getAlitaPageSpec() {
-    return alitaPageSpec;
+  public String getEndDate() {
+    return endDate;
   }
 
-  public void setAlitaPageSpec(DpAlitaPageSpec alitaPageSpec) {
-    this.alitaPageSpec = alitaPageSpec;
+  public void setEndDate(String endDate) {
+    this.endDate = endDate;
   }
 
   @Override
@@ -73,14 +73,14 @@ public class DpPageSpec {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    DpPageSpec dpPageSpec = (DpPageSpec) o;
-    return Objects.equals(this.miniProgramSpec, dpPageSpec.miniProgramSpec)
-        && Objects.equals(this.alitaPageSpec, dpPageSpec.alitaPageSpec);
+    DpDateRange dpDateRange = (DpDateRange) o;
+    return Objects.equals(this.startDate, dpDateRange.startDate)
+        && Objects.equals(this.endDate, dpDateRange.endDate);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(miniProgramSpec, alitaPageSpec);
+    return Objects.hash(startDate, endDate);
   }
 
   @Override

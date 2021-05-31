@@ -25,7 +25,7 @@ public class LocalGetRequest {
   private Long accountId = null;
 
   @SerializedName("date_range")
-  private DateRange dateRange = null;
+  private DpDateRange dateRange = null;
 
   @SerializedName("filtering")
   private List<FilteringStruct> filtering = null;
@@ -58,7 +58,7 @@ public class LocalGetRequest {
     this.accountId = accountId;
   }
 
-  public LocalGetRequest dateRange(DateRange dateRange) {
+  public LocalGetRequest dateRange(DpDateRange dateRange) {
     this.dateRange = dateRange;
     return this;
   }
@@ -69,11 +69,11 @@ public class LocalGetRequest {
    * @return dateRange
    */
   @ApiModelProperty(value = "")
-  public DateRange getDateRange() {
+  public DpDateRange getDateRange() {
     return dateRange;
   }
 
-  public void setDateRange(DateRange dateRange) {
+  public void setDateRange(DpDateRange dateRange) {
     this.dateRange = dateRange;
   }
 

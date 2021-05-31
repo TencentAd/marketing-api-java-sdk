@@ -19,20 +19,20 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-/** 套餐等级, 设置总预算和广告结束时间后该字段可不填 */
-@JsonAdapter(PackageLevel.Adapter.class)
-public enum PackageLevel {
-  UNKNOWN("PACKAGE_LEVEL_UNKNOWN"),
+/** 附近推模式 */
+@JsonAdapter(EcoLocalBusinessMode.Adapter.class)
+public enum EcoLocalBusinessMode {
+  DEFAULT("LOCAL_BUSINESS_MODE_DEFAULT"),
 
-  _2000("PACKAGE_LEVEL_2000"),
+  LEADS_COUPON("LOCAL_BUSINESS_MODE_LEADS_COUPON"),
 
-  _5000("PACKAGE_LEVEL_5000"),
+  LEADS_RESERVATION("LOCAL_BUSINESS_MODE_LEADS_RESERVATION"),
 
-  _9000("PACKAGE_LEVEL_9000");
+  SHOP_VOUCHER("LOCAL_BUSINESS_MODE_SHOP_VOUCHER");
 
   private String value;
 
-  PackageLevel(String value) {
+  EcoLocalBusinessMode(String value) {
     this.value = value;
   }
 
@@ -45,8 +45,8 @@ public enum PackageLevel {
     return String.valueOf(value);
   }
 
-  public static PackageLevel fromValue(String text) {
-    for (PackageLevel b : PackageLevel.values()) {
+  public static EcoLocalBusinessMode fromValue(String text) {
+    for (EcoLocalBusinessMode b : EcoLocalBusinessMode.values()) {
       if (String.valueOf(b.value).equals(text)) {
         return b;
       }
@@ -54,17 +54,17 @@ public enum PackageLevel {
     return null;
   }
 
-  public static class Adapter extends TypeAdapter<PackageLevel> {
+  public static class Adapter extends TypeAdapter<EcoLocalBusinessMode> {
     @Override
-    public void write(final JsonWriter jsonWriter, final PackageLevel enumeration)
+    public void write(final JsonWriter jsonWriter, final EcoLocalBusinessMode enumeration)
         throws IOException {
       jsonWriter.value(enumeration.getValue());
     }
 
     @Override
-    public PackageLevel read(final JsonReader jsonReader) throws IOException {
+    public EcoLocalBusinessMode read(final JsonReader jsonReader) throws IOException {
       String value = jsonReader.nextString();
-      return PackageLevel.fromValue(String.valueOf(value));
+      return EcoLocalBusinessMode.fromValue(String.valueOf(value));
     }
   }
 }

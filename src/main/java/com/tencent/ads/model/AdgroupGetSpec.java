@@ -35,6 +35,15 @@ public class AdgroupGetSpec {
   @SerializedName("begin_date")
   private String beginDate = null;
 
+  @SerializedName("end_date")
+  private String endDate = null;
+
+  @SerializedName("optimization_goal")
+  private OptimizationGoal optimizationGoal = null;
+
+  @SerializedName("total_budget")
+  private Long totalBudget = null;
+
   @SerializedName("targeting")
   private DpWriteTargetingSetting targeting = null;
 
@@ -52,6 +61,12 @@ public class AdgroupGetSpec {
 
   @SerializedName("cold_start_audience")
   private List<Long> coldStartAudience = null;
+
+  @SerializedName("poi_radius")
+  private Long poiRadius = null;
+
+  @SerializedName("local_business_mode")
+  private EcoLocalBusinessMode localBusinessMode = null;
 
   public AdgroupGetSpec adgroupId(Long adgroupId) {
     this.adgroupId = adgroupId;
@@ -127,6 +142,63 @@ public class AdgroupGetSpec {
 
   public void setBeginDate(String beginDate) {
     this.beginDate = beginDate;
+  }
+
+  public AdgroupGetSpec endDate(String endDate) {
+    this.endDate = endDate;
+    return this;
+  }
+
+  /**
+   * Get endDate
+   *
+   * @return endDate
+   */
+  @ApiModelProperty(value = "")
+  public String getEndDate() {
+    return endDate;
+  }
+
+  public void setEndDate(String endDate) {
+    this.endDate = endDate;
+  }
+
+  public AdgroupGetSpec optimizationGoal(OptimizationGoal optimizationGoal) {
+    this.optimizationGoal = optimizationGoal;
+    return this;
+  }
+
+  /**
+   * Get optimizationGoal
+   *
+   * @return optimizationGoal
+   */
+  @ApiModelProperty(value = "")
+  public OptimizationGoal getOptimizationGoal() {
+    return optimizationGoal;
+  }
+
+  public void setOptimizationGoal(OptimizationGoal optimizationGoal) {
+    this.optimizationGoal = optimizationGoal;
+  }
+
+  public AdgroupGetSpec totalBudget(Long totalBudget) {
+    this.totalBudget = totalBudget;
+    return this;
+  }
+
+  /**
+   * Get totalBudget
+   *
+   * @return totalBudget
+   */
+  @ApiModelProperty(value = "")
+  public Long getTotalBudget() {
+    return totalBudget;
+  }
+
+  public void setTotalBudget(Long totalBudget) {
+    this.totalBudget = totalBudget;
   }
 
   public AdgroupGetSpec targeting(DpWriteTargetingSetting targeting) {
@@ -259,6 +331,44 @@ public class AdgroupGetSpec {
     this.coldStartAudience = coldStartAudience;
   }
 
+  public AdgroupGetSpec poiRadius(Long poiRadius) {
+    this.poiRadius = poiRadius;
+    return this;
+  }
+
+  /**
+   * Get poiRadius
+   *
+   * @return poiRadius
+   */
+  @ApiModelProperty(value = "")
+  public Long getPoiRadius() {
+    return poiRadius;
+  }
+
+  public void setPoiRadius(Long poiRadius) {
+    this.poiRadius = poiRadius;
+  }
+
+  public AdgroupGetSpec localBusinessMode(EcoLocalBusinessMode localBusinessMode) {
+    this.localBusinessMode = localBusinessMode;
+    return this;
+  }
+
+  /**
+   * Get localBusinessMode
+   *
+   * @return localBusinessMode
+   */
+  @ApiModelProperty(value = "")
+  public EcoLocalBusinessMode getLocalBusinessMode() {
+    return localBusinessMode;
+  }
+
+  public void setLocalBusinessMode(EcoLocalBusinessMode localBusinessMode) {
+    this.localBusinessMode = localBusinessMode;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -272,12 +382,17 @@ public class AdgroupGetSpec {
         && Objects.equals(this.configuredStatus, adgroupGetSpec.configuredStatus)
         && Objects.equals(this.adgroupName, adgroupGetSpec.adgroupName)
         && Objects.equals(this.beginDate, adgroupGetSpec.beginDate)
+        && Objects.equals(this.endDate, adgroupGetSpec.endDate)
+        && Objects.equals(this.optimizationGoal, adgroupGetSpec.optimizationGoal)
+        && Objects.equals(this.totalBudget, adgroupGetSpec.totalBudget)
         && Objects.equals(this.targeting, adgroupGetSpec.targeting)
         && Objects.equals(this.calcStatus, adgroupGetSpec.calcStatus)
         && Objects.equals(this.metricDetail, adgroupGetSpec.metricDetail)
         && Objects.equals(this.rejectMessage, adgroupGetSpec.rejectMessage)
         && Objects.equals(this.poiList, adgroupGetSpec.poiList)
-        && Objects.equals(this.coldStartAudience, adgroupGetSpec.coldStartAudience);
+        && Objects.equals(this.coldStartAudience, adgroupGetSpec.coldStartAudience)
+        && Objects.equals(this.poiRadius, adgroupGetSpec.poiRadius)
+        && Objects.equals(this.localBusinessMode, adgroupGetSpec.localBusinessMode);
   }
 
   @Override
@@ -287,12 +402,17 @@ public class AdgroupGetSpec {
         configuredStatus,
         adgroupName,
         beginDate,
+        endDate,
+        optimizationGoal,
+        totalBudget,
         targeting,
         calcStatus,
         metricDetail,
         rejectMessage,
         poiList,
-        coldStartAudience);
+        coldStartAudience,
+        poiRadius,
+        localBusinessMode);
   }
 
   @Override

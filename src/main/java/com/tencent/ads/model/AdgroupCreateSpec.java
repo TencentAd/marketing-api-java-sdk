@@ -29,17 +29,29 @@ public class AdgroupCreateSpec {
   @SerializedName("begin_date")
   private String beginDate = null;
 
+  @SerializedName("end_date")
+  private String endDate = null;
+
+  @SerializedName("optimization_goal")
+  private OptimizationGoal optimizationGoal = null;
+
+  @SerializedName("total_budget")
+  private Long totalBudget = null;
+
   @SerializedName("targeting")
   private DpWriteTargetingSetting targeting = null;
 
   @SerializedName("poi_list")
   private List<String> poiList = null;
 
+  @SerializedName("poi_radius")
+  private Long poiRadius = null;
+
   @SerializedName("package_level")
   private PackageLevel packageLevel = null;
 
-  @SerializedName("cold_start_audience")
-  private List<Long> coldStartAudience = null;
+  @SerializedName("local_business_mode")
+  private EcoLocalBusinessMode localBusinessMode = null;
 
   public AdgroupCreateSpec adgroupName(String adgroupName) {
     this.adgroupName = adgroupName;
@@ -77,6 +89,63 @@ public class AdgroupCreateSpec {
 
   public void setBeginDate(String beginDate) {
     this.beginDate = beginDate;
+  }
+
+  public AdgroupCreateSpec endDate(String endDate) {
+    this.endDate = endDate;
+    return this;
+  }
+
+  /**
+   * Get endDate
+   *
+   * @return endDate
+   */
+  @ApiModelProperty(value = "")
+  public String getEndDate() {
+    return endDate;
+  }
+
+  public void setEndDate(String endDate) {
+    this.endDate = endDate;
+  }
+
+  public AdgroupCreateSpec optimizationGoal(OptimizationGoal optimizationGoal) {
+    this.optimizationGoal = optimizationGoal;
+    return this;
+  }
+
+  /**
+   * Get optimizationGoal
+   *
+   * @return optimizationGoal
+   */
+  @ApiModelProperty(value = "")
+  public OptimizationGoal getOptimizationGoal() {
+    return optimizationGoal;
+  }
+
+  public void setOptimizationGoal(OptimizationGoal optimizationGoal) {
+    this.optimizationGoal = optimizationGoal;
+  }
+
+  public AdgroupCreateSpec totalBudget(Long totalBudget) {
+    this.totalBudget = totalBudget;
+    return this;
+  }
+
+  /**
+   * Get totalBudget
+   *
+   * @return totalBudget
+   */
+  @ApiModelProperty(value = "")
+  public Long getTotalBudget() {
+    return totalBudget;
+  }
+
+  public void setTotalBudget(Long totalBudget) {
+    this.totalBudget = totalBudget;
   }
 
   public AdgroupCreateSpec targeting(DpWriteTargetingSetting targeting) {
@@ -125,6 +194,25 @@ public class AdgroupCreateSpec {
     this.poiList = poiList;
   }
 
+  public AdgroupCreateSpec poiRadius(Long poiRadius) {
+    this.poiRadius = poiRadius;
+    return this;
+  }
+
+  /**
+   * Get poiRadius
+   *
+   * @return poiRadius
+   */
+  @ApiModelProperty(value = "")
+  public Long getPoiRadius() {
+    return poiRadius;
+  }
+
+  public void setPoiRadius(Long poiRadius) {
+    this.poiRadius = poiRadius;
+  }
+
   public AdgroupCreateSpec packageLevel(PackageLevel packageLevel) {
     this.packageLevel = packageLevel;
     return this;
@@ -144,31 +232,23 @@ public class AdgroupCreateSpec {
     this.packageLevel = packageLevel;
   }
 
-  public AdgroupCreateSpec coldStartAudience(List<Long> coldStartAudience) {
-    this.coldStartAudience = coldStartAudience;
-    return this;
-  }
-
-  public AdgroupCreateSpec addColdStartAudienceItem(Long coldStartAudienceItem) {
-    if (this.coldStartAudience == null) {
-      this.coldStartAudience = new ArrayList<Long>();
-    }
-    this.coldStartAudience.add(coldStartAudienceItem);
+  public AdgroupCreateSpec localBusinessMode(EcoLocalBusinessMode localBusinessMode) {
+    this.localBusinessMode = localBusinessMode;
     return this;
   }
 
   /**
-   * Get coldStartAudience
+   * Get localBusinessMode
    *
-   * @return coldStartAudience
+   * @return localBusinessMode
    */
   @ApiModelProperty(value = "")
-  public List<Long> getColdStartAudience() {
-    return coldStartAudience;
+  public EcoLocalBusinessMode getLocalBusinessMode() {
+    return localBusinessMode;
   }
 
-  public void setColdStartAudience(List<Long> coldStartAudience) {
-    this.coldStartAudience = coldStartAudience;
+  public void setLocalBusinessMode(EcoLocalBusinessMode localBusinessMode) {
+    this.localBusinessMode = localBusinessMode;
   }
 
   @Override
@@ -182,16 +262,29 @@ public class AdgroupCreateSpec {
     AdgroupCreateSpec adgroupCreateSpec = (AdgroupCreateSpec) o;
     return Objects.equals(this.adgroupName, adgroupCreateSpec.adgroupName)
         && Objects.equals(this.beginDate, adgroupCreateSpec.beginDate)
+        && Objects.equals(this.endDate, adgroupCreateSpec.endDate)
+        && Objects.equals(this.optimizationGoal, adgroupCreateSpec.optimizationGoal)
+        && Objects.equals(this.totalBudget, adgroupCreateSpec.totalBudget)
         && Objects.equals(this.targeting, adgroupCreateSpec.targeting)
         && Objects.equals(this.poiList, adgroupCreateSpec.poiList)
+        && Objects.equals(this.poiRadius, adgroupCreateSpec.poiRadius)
         && Objects.equals(this.packageLevel, adgroupCreateSpec.packageLevel)
-        && Objects.equals(this.coldStartAudience, adgroupCreateSpec.coldStartAudience);
+        && Objects.equals(this.localBusinessMode, adgroupCreateSpec.localBusinessMode);
   }
 
   @Override
   public int hashCode() {
     return Objects.hash(
-        adgroupName, beginDate, targeting, poiList, packageLevel, coldStartAudience);
+        adgroupName,
+        beginDate,
+        endDate,
+        optimizationGoal,
+        totalBudget,
+        targeting,
+        poiList,
+        poiRadius,
+        packageLevel,
+        localBusinessMode);
   }
 
   @Override

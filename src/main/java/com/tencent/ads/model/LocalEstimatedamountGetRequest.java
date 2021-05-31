@@ -15,6 +15,8 @@ package com.tencent.ads.model;
 import com.google.gson.Gson;
 import com.google.gson.annotations.SerializedName;
 import io.swagger.annotations.ApiModelProperty;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Objects;
 
 /** LocalEstimatedamountGetRequest */
@@ -27,6 +29,33 @@ public class LocalEstimatedamountGetRequest {
 
   @SerializedName("package_level")
   private PackageLevel packageLevel = null;
+
+  @SerializedName("poi_list")
+  private List<String> poiList = null;
+
+  @SerializedName("optimization_goal")
+  private OptimizationGoal optimizationGoal = null;
+
+  @SerializedName("radius")
+  private Long radius = null;
+
+  @SerializedName("age")
+  private List<AgeStruct> age = null;
+
+  @SerializedName("gender")
+  private List<String> gender = null;
+
+  @SerializedName("begin_time")
+  private String beginTime = null;
+
+  @SerializedName("end_time")
+  private String endTime = null;
+
+  @SerializedName("budget")
+  private Long budget = null;
+
+  @SerializedName("local_business_mode")
+  private EcoLocalBusinessMode localBusinessMode = null;
 
   public LocalEstimatedamountGetRequest accountId(Long accountId) {
     this.accountId = accountId;
@@ -85,6 +114,201 @@ public class LocalEstimatedamountGetRequest {
     this.packageLevel = packageLevel;
   }
 
+  public LocalEstimatedamountGetRequest poiList(List<String> poiList) {
+    this.poiList = poiList;
+    return this;
+  }
+
+  public LocalEstimatedamountGetRequest addPoiListItem(String poiListItem) {
+    if (this.poiList == null) {
+      this.poiList = new ArrayList<String>();
+    }
+    this.poiList.add(poiListItem);
+    return this;
+  }
+
+  /**
+   * Get poiList
+   *
+   * @return poiList
+   */
+  @ApiModelProperty(value = "")
+  public List<String> getPoiList() {
+    return poiList;
+  }
+
+  public void setPoiList(List<String> poiList) {
+    this.poiList = poiList;
+  }
+
+  public LocalEstimatedamountGetRequest optimizationGoal(OptimizationGoal optimizationGoal) {
+    this.optimizationGoal = optimizationGoal;
+    return this;
+  }
+
+  /**
+   * Get optimizationGoal
+   *
+   * @return optimizationGoal
+   */
+  @ApiModelProperty(value = "")
+  public OptimizationGoal getOptimizationGoal() {
+    return optimizationGoal;
+  }
+
+  public void setOptimizationGoal(OptimizationGoal optimizationGoal) {
+    this.optimizationGoal = optimizationGoal;
+  }
+
+  public LocalEstimatedamountGetRequest radius(Long radius) {
+    this.radius = radius;
+    return this;
+  }
+
+  /**
+   * Get radius
+   *
+   * @return radius
+   */
+  @ApiModelProperty(value = "")
+  public Long getRadius() {
+    return radius;
+  }
+
+  public void setRadius(Long radius) {
+    this.radius = radius;
+  }
+
+  public LocalEstimatedamountGetRequest age(List<AgeStruct> age) {
+    this.age = age;
+    return this;
+  }
+
+  public LocalEstimatedamountGetRequest addAgeItem(AgeStruct ageItem) {
+    if (this.age == null) {
+      this.age = new ArrayList<AgeStruct>();
+    }
+    this.age.add(ageItem);
+    return this;
+  }
+
+  /**
+   * Get age
+   *
+   * @return age
+   */
+  @ApiModelProperty(value = "")
+  public List<AgeStruct> getAge() {
+    return age;
+  }
+
+  public void setAge(List<AgeStruct> age) {
+    this.age = age;
+  }
+
+  public LocalEstimatedamountGetRequest gender(List<String> gender) {
+    this.gender = gender;
+    return this;
+  }
+
+  public LocalEstimatedamountGetRequest addGenderItem(String genderItem) {
+    if (this.gender == null) {
+      this.gender = new ArrayList<String>();
+    }
+    this.gender.add(genderItem);
+    return this;
+  }
+
+  /**
+   * Get gender
+   *
+   * @return gender
+   */
+  @ApiModelProperty(value = "")
+  public List<String> getGender() {
+    return gender;
+  }
+
+  public void setGender(List<String> gender) {
+    this.gender = gender;
+  }
+
+  public LocalEstimatedamountGetRequest beginTime(String beginTime) {
+    this.beginTime = beginTime;
+    return this;
+  }
+
+  /**
+   * Get beginTime
+   *
+   * @return beginTime
+   */
+  @ApiModelProperty(value = "")
+  public String getBeginTime() {
+    return beginTime;
+  }
+
+  public void setBeginTime(String beginTime) {
+    this.beginTime = beginTime;
+  }
+
+  public LocalEstimatedamountGetRequest endTime(String endTime) {
+    this.endTime = endTime;
+    return this;
+  }
+
+  /**
+   * Get endTime
+   *
+   * @return endTime
+   */
+  @ApiModelProperty(value = "")
+  public String getEndTime() {
+    return endTime;
+  }
+
+  public void setEndTime(String endTime) {
+    this.endTime = endTime;
+  }
+
+  public LocalEstimatedamountGetRequest budget(Long budget) {
+    this.budget = budget;
+    return this;
+  }
+
+  /**
+   * Get budget
+   *
+   * @return budget
+   */
+  @ApiModelProperty(value = "")
+  public Long getBudget() {
+    return budget;
+  }
+
+  public void setBudget(Long budget) {
+    this.budget = budget;
+  }
+
+  public LocalEstimatedamountGetRequest localBusinessMode(EcoLocalBusinessMode localBusinessMode) {
+    this.localBusinessMode = localBusinessMode;
+    return this;
+  }
+
+  /**
+   * Get localBusinessMode
+   *
+   * @return localBusinessMode
+   */
+  @ApiModelProperty(value = "")
+  public EcoLocalBusinessMode getLocalBusinessMode() {
+    return localBusinessMode;
+  }
+
+  public void setLocalBusinessMode(EcoLocalBusinessMode localBusinessMode) {
+    this.localBusinessMode = localBusinessMode;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -97,12 +321,33 @@ public class LocalEstimatedamountGetRequest {
         (LocalEstimatedamountGetRequest) o;
     return Objects.equals(this.accountId, localEstimatedamountGetRequest.accountId)
         && Objects.equals(this.cityLevel, localEstimatedamountGetRequest.cityLevel)
-        && Objects.equals(this.packageLevel, localEstimatedamountGetRequest.packageLevel);
+        && Objects.equals(this.packageLevel, localEstimatedamountGetRequest.packageLevel)
+        && Objects.equals(this.poiList, localEstimatedamountGetRequest.poiList)
+        && Objects.equals(this.optimizationGoal, localEstimatedamountGetRequest.optimizationGoal)
+        && Objects.equals(this.radius, localEstimatedamountGetRequest.radius)
+        && Objects.equals(this.age, localEstimatedamountGetRequest.age)
+        && Objects.equals(this.gender, localEstimatedamountGetRequest.gender)
+        && Objects.equals(this.beginTime, localEstimatedamountGetRequest.beginTime)
+        && Objects.equals(this.endTime, localEstimatedamountGetRequest.endTime)
+        && Objects.equals(this.budget, localEstimatedamountGetRequest.budget)
+        && Objects.equals(this.localBusinessMode, localEstimatedamountGetRequest.localBusinessMode);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(accountId, cityLevel, packageLevel);
+    return Objects.hash(
+        accountId,
+        cityLevel,
+        packageLevel,
+        poiList,
+        optimizationGoal,
+        radius,
+        age,
+        gender,
+        beginTime,
+        endTime,
+        budget,
+        localBusinessMode);
   }
 
   @Override

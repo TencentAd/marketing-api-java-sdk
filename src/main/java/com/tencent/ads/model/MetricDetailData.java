@@ -45,6 +45,36 @@ public class MetricDetailData {
   @SerializedName("page_visit_store_pv")
   private Long pageVisitStorePv = null;
 
+  @SerializedName("weapp_exp_pv")
+  private Long weappExpPv = null;
+
+  @SerializedName("promotion_claim_offer_cost")
+  private Long promotionClaimOfferCost = null;
+
+  @SerializedName("page_visit_store_amount")
+  private Long pageVisitStoreAmount = null;
+
+  @SerializedName("buy_coupons_pv")
+  private Long buyCouponsPv = null;
+
+  @SerializedName("buy_coupons_cost")
+  private Long buyCouponsCost = null;
+
+  @SerializedName("quest_reservation_uv")
+  private Long questReservationUv = null;
+
+  @SerializedName("cvs_exp_pv")
+  private Long cvsExpPv = null;
+
+  @SerializedName("cvs_exp_cost")
+  private Long cvsExpCost = null;
+
+  @SerializedName("weapp_exp_cost")
+  private Long weappExpCost = null;
+
+  @SerializedName("quest_reservation_uv_cost")
+  private Long questReservationUvCost = null;
+
   public MetricDetailData cost(Long cost) {
     this.cost = cost;
     return this;
@@ -197,6 +227,196 @@ public class MetricDetailData {
     this.pageVisitStorePv = pageVisitStorePv;
   }
 
+  public MetricDetailData weappExpPv(Long weappExpPv) {
+    this.weappExpPv = weappExpPv;
+    return this;
+  }
+
+  /**
+   * Get weappExpPv
+   *
+   * @return weappExpPv
+   */
+  @ApiModelProperty(value = "")
+  public Long getWeappExpPv() {
+    return weappExpPv;
+  }
+
+  public void setWeappExpPv(Long weappExpPv) {
+    this.weappExpPv = weappExpPv;
+  }
+
+  public MetricDetailData promotionClaimOfferCost(Long promotionClaimOfferCost) {
+    this.promotionClaimOfferCost = promotionClaimOfferCost;
+    return this;
+  }
+
+  /**
+   * Get promotionClaimOfferCost
+   *
+   * @return promotionClaimOfferCost
+   */
+  @ApiModelProperty(value = "")
+  public Long getPromotionClaimOfferCost() {
+    return promotionClaimOfferCost;
+  }
+
+  public void setPromotionClaimOfferCost(Long promotionClaimOfferCost) {
+    this.promotionClaimOfferCost = promotionClaimOfferCost;
+  }
+
+  public MetricDetailData pageVisitStoreAmount(Long pageVisitStoreAmount) {
+    this.pageVisitStoreAmount = pageVisitStoreAmount;
+    return this;
+  }
+
+  /**
+   * Get pageVisitStoreAmount
+   *
+   * @return pageVisitStoreAmount
+   */
+  @ApiModelProperty(value = "")
+  public Long getPageVisitStoreAmount() {
+    return pageVisitStoreAmount;
+  }
+
+  public void setPageVisitStoreAmount(Long pageVisitStoreAmount) {
+    this.pageVisitStoreAmount = pageVisitStoreAmount;
+  }
+
+  public MetricDetailData buyCouponsPv(Long buyCouponsPv) {
+    this.buyCouponsPv = buyCouponsPv;
+    return this;
+  }
+
+  /**
+   * Get buyCouponsPv
+   *
+   * @return buyCouponsPv
+   */
+  @ApiModelProperty(value = "")
+  public Long getBuyCouponsPv() {
+    return buyCouponsPv;
+  }
+
+  public void setBuyCouponsPv(Long buyCouponsPv) {
+    this.buyCouponsPv = buyCouponsPv;
+  }
+
+  public MetricDetailData buyCouponsCost(Long buyCouponsCost) {
+    this.buyCouponsCost = buyCouponsCost;
+    return this;
+  }
+
+  /**
+   * Get buyCouponsCost
+   *
+   * @return buyCouponsCost
+   */
+  @ApiModelProperty(value = "")
+  public Long getBuyCouponsCost() {
+    return buyCouponsCost;
+  }
+
+  public void setBuyCouponsCost(Long buyCouponsCost) {
+    this.buyCouponsCost = buyCouponsCost;
+  }
+
+  public MetricDetailData questReservationUv(Long questReservationUv) {
+    this.questReservationUv = questReservationUv;
+    return this;
+  }
+
+  /**
+   * Get questReservationUv
+   *
+   * @return questReservationUv
+   */
+  @ApiModelProperty(value = "")
+  public Long getQuestReservationUv() {
+    return questReservationUv;
+  }
+
+  public void setQuestReservationUv(Long questReservationUv) {
+    this.questReservationUv = questReservationUv;
+  }
+
+  public MetricDetailData cvsExpPv(Long cvsExpPv) {
+    this.cvsExpPv = cvsExpPv;
+    return this;
+  }
+
+  /**
+   * Get cvsExpPv
+   *
+   * @return cvsExpPv
+   */
+  @ApiModelProperty(value = "")
+  public Long getCvsExpPv() {
+    return cvsExpPv;
+  }
+
+  public void setCvsExpPv(Long cvsExpPv) {
+    this.cvsExpPv = cvsExpPv;
+  }
+
+  public MetricDetailData cvsExpCost(Long cvsExpCost) {
+    this.cvsExpCost = cvsExpCost;
+    return this;
+  }
+
+  /**
+   * Get cvsExpCost
+   *
+   * @return cvsExpCost
+   */
+  @ApiModelProperty(value = "")
+  public Long getCvsExpCost() {
+    return cvsExpCost;
+  }
+
+  public void setCvsExpCost(Long cvsExpCost) {
+    this.cvsExpCost = cvsExpCost;
+  }
+
+  public MetricDetailData weappExpCost(Long weappExpCost) {
+    this.weappExpCost = weappExpCost;
+    return this;
+  }
+
+  /**
+   * Get weappExpCost
+   *
+   * @return weappExpCost
+   */
+  @ApiModelProperty(value = "")
+  public Long getWeappExpCost() {
+    return weappExpCost;
+  }
+
+  public void setWeappExpCost(Long weappExpCost) {
+    this.weappExpCost = weappExpCost;
+  }
+
+  public MetricDetailData questReservationUvCost(Long questReservationUvCost) {
+    this.questReservationUvCost = questReservationUvCost;
+    return this;
+  }
+
+  /**
+   * Get questReservationUvCost
+   *
+   * @return questReservationUvCost
+   */
+  @ApiModelProperty(value = "")
+  public Long getQuestReservationUvCost() {
+    return questReservationUvCost;
+  }
+
+  public void setQuestReservationUvCost(Long questReservationUvCost) {
+    this.questReservationUvCost = questReservationUvCost;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -213,7 +433,17 @@ public class MetricDetailData {
         && Objects.equals(this.canvasCpnCouponsUsePv, metricDetailData.canvasCpnCouponsUsePv)
         && Objects.equals(this.purchase, metricDetailData.purchase)
         && Objects.equals(this.promotionClaimOfferPv, metricDetailData.promotionClaimOfferPv)
-        && Objects.equals(this.pageVisitStorePv, metricDetailData.pageVisitStorePv);
+        && Objects.equals(this.pageVisitStorePv, metricDetailData.pageVisitStorePv)
+        && Objects.equals(this.weappExpPv, metricDetailData.weappExpPv)
+        && Objects.equals(this.promotionClaimOfferCost, metricDetailData.promotionClaimOfferCost)
+        && Objects.equals(this.pageVisitStoreAmount, metricDetailData.pageVisitStoreAmount)
+        && Objects.equals(this.buyCouponsPv, metricDetailData.buyCouponsPv)
+        && Objects.equals(this.buyCouponsCost, metricDetailData.buyCouponsCost)
+        && Objects.equals(this.questReservationUv, metricDetailData.questReservationUv)
+        && Objects.equals(this.cvsExpPv, metricDetailData.cvsExpPv)
+        && Objects.equals(this.cvsExpCost, metricDetailData.cvsExpCost)
+        && Objects.equals(this.weappExpCost, metricDetailData.weappExpCost)
+        && Objects.equals(this.questReservationUvCost, metricDetailData.questReservationUvCost);
   }
 
   @Override
@@ -226,7 +456,17 @@ public class MetricDetailData {
         canvasCpnCouponsUsePv,
         purchase,
         promotionClaimOfferPv,
-        pageVisitStorePv);
+        pageVisitStorePv,
+        weappExpPv,
+        promotionClaimOfferCost,
+        pageVisitStoreAmount,
+        buyCouponsPv,
+        buyCouponsCost,
+        questReservationUv,
+        cvsExpPv,
+        cvsExpCost,
+        weappExpCost,
+        questReservationUvCost);
   }
 
   @Override

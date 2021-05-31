@@ -38,8 +38,8 @@ public class AdgroupUpdateSpec {
   @SerializedName("poi_list")
   private List<String> poiList = null;
 
-  @SerializedName("cold_start_audience")
-  private List<Long> coldStartAudience = null;
+  @SerializedName("poi_radius")
+  private Long poiRadius = null;
 
   public AdgroupUpdateSpec adgroupName(String adgroupName) {
     this.adgroupName = adgroupName;
@@ -144,31 +144,23 @@ public class AdgroupUpdateSpec {
     this.poiList = poiList;
   }
 
-  public AdgroupUpdateSpec coldStartAudience(List<Long> coldStartAudience) {
-    this.coldStartAudience = coldStartAudience;
-    return this;
-  }
-
-  public AdgroupUpdateSpec addColdStartAudienceItem(Long coldStartAudienceItem) {
-    if (this.coldStartAudience == null) {
-      this.coldStartAudience = new ArrayList<Long>();
-    }
-    this.coldStartAudience.add(coldStartAudienceItem);
+  public AdgroupUpdateSpec poiRadius(Long poiRadius) {
+    this.poiRadius = poiRadius;
     return this;
   }
 
   /**
-   * Get coldStartAudience
+   * Get poiRadius
    *
-   * @return coldStartAudience
+   * @return poiRadius
    */
   @ApiModelProperty(value = "")
-  public List<Long> getColdStartAudience() {
-    return coldStartAudience;
+  public Long getPoiRadius() {
+    return poiRadius;
   }
 
-  public void setColdStartAudience(List<Long> coldStartAudience) {
-    this.coldStartAudience = coldStartAudience;
+  public void setPoiRadius(Long poiRadius) {
+    this.poiRadius = poiRadius;
   }
 
   @Override
@@ -185,13 +177,12 @@ public class AdgroupUpdateSpec {
         && Objects.equals(this.configuredStatus, adgroupUpdateSpec.configuredStatus)
         && Objects.equals(this.targeting, adgroupUpdateSpec.targeting)
         && Objects.equals(this.poiList, adgroupUpdateSpec.poiList)
-        && Objects.equals(this.coldStartAudience, adgroupUpdateSpec.coldStartAudience);
+        && Objects.equals(this.poiRadius, adgroupUpdateSpec.poiRadius);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(
-        adgroupName, beginDate, configuredStatus, targeting, poiList, coldStartAudience);
+    return Objects.hash(adgroupName, beginDate, configuredStatus, targeting, poiList, poiRadius);
   }
 
   @Override

@@ -33,12 +33,6 @@ public class AdCreativeCreateSpec {
   @SerializedName("page_spec")
   private DpPageSpec pageSpec = null;
 
-  @SerializedName("button_tips")
-  private String buttonTips = null;
-
-  @SerializedName("coupon_title")
-  private String couponTitle = null;
-
   public AdCreativeCreateSpec adcreativeName(String adcreativeName) {
     this.adcreativeName = adcreativeName;
     return this;
@@ -116,44 +110,6 @@ public class AdCreativeCreateSpec {
     this.pageSpec = pageSpec;
   }
 
-  public AdCreativeCreateSpec buttonTips(String buttonTips) {
-    this.buttonTips = buttonTips;
-    return this;
-  }
-
-  /**
-   * Get buttonTips
-   *
-   * @return buttonTips
-   */
-  @ApiModelProperty(value = "")
-  public String getButtonTips() {
-    return buttonTips;
-  }
-
-  public void setButtonTips(String buttonTips) {
-    this.buttonTips = buttonTips;
-  }
-
-  public AdCreativeCreateSpec couponTitle(String couponTitle) {
-    this.couponTitle = couponTitle;
-    return this;
-  }
-
-  /**
-   * Get couponTitle
-   *
-   * @return couponTitle
-   */
-  @ApiModelProperty(value = "")
-  public String getCouponTitle() {
-    return couponTitle;
-  }
-
-  public void setCouponTitle(String couponTitle) {
-    this.couponTitle = couponTitle;
-  }
-
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -166,15 +122,12 @@ public class AdCreativeCreateSpec {
     return Objects.equals(this.adcreativeName, adCreativeCreateSpec.adcreativeName)
         && Objects.equals(this.adcreativeElements, adCreativeCreateSpec.adcreativeElements)
         && Objects.equals(this.pageType, adCreativeCreateSpec.pageType)
-        && Objects.equals(this.pageSpec, adCreativeCreateSpec.pageSpec)
-        && Objects.equals(this.buttonTips, adCreativeCreateSpec.buttonTips)
-        && Objects.equals(this.couponTitle, adCreativeCreateSpec.couponTitle);
+        && Objects.equals(this.pageSpec, adCreativeCreateSpec.pageSpec);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(
-        adcreativeName, adcreativeElements, pageType, pageSpec, buttonTips, couponTitle);
+    return Objects.hash(adcreativeName, adcreativeElements, pageType, pageSpec);
   }
 
   @Override
