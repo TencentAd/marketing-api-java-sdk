@@ -66,6 +66,9 @@ public class ConversionsGetListStruct {
   @SerializedName("create_source_type")
   private CreateSourceType createSourceType = null;
 
+  @SerializedName("app_android_channel_package_id")
+  private String appAndroidChannelPackageId = null;
+
   public ConversionsGetListStruct conversionId(Long conversionId) {
     this.conversionId = conversionId;
     return this;
@@ -353,6 +356,25 @@ public class ConversionsGetListStruct {
     this.createSourceType = createSourceType;
   }
 
+  public ConversionsGetListStruct appAndroidChannelPackageId(String appAndroidChannelPackageId) {
+    this.appAndroidChannelPackageId = appAndroidChannelPackageId;
+    return this;
+  }
+
+  /**
+   * Get appAndroidChannelPackageId
+   *
+   * @return appAndroidChannelPackageId
+   */
+  @ApiModelProperty(value = "")
+  public String getAppAndroidChannelPackageId() {
+    return appAndroidChannelPackageId;
+  }
+
+  public void setAppAndroidChannelPackageId(String appAndroidChannelPackageId) {
+    this.appAndroidChannelPackageId = appAndroidChannelPackageId;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -379,7 +401,9 @@ public class ConversionsGetListStruct {
         && Objects.equals(this.siteSetEnable, conversionsGetListStruct.siteSetEnable)
         && Objects.equals(this.isDeleted, conversionsGetListStruct.isDeleted)
         && Objects.equals(this.accessStatus, conversionsGetListStruct.accessStatus)
-        && Objects.equals(this.createSourceType, conversionsGetListStruct.createSourceType);
+        && Objects.equals(this.createSourceType, conversionsGetListStruct.createSourceType)
+        && Objects.equals(
+            this.appAndroidChannelPackageId, conversionsGetListStruct.appAndroidChannelPackageId);
   }
 
   @Override
@@ -399,7 +423,8 @@ public class ConversionsGetListStruct {
         siteSetEnable,
         isDeleted,
         accessStatus,
-        createSourceType);
+        createSourceType,
+        appAndroidChannelPackageId);
   }
 
   @Override

@@ -13,12 +13,35 @@
 package com.tencent.ads.model;
 
 import com.google.gson.Gson;
+import com.google.gson.annotations.SerializedName;
 import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
 import java.util.Objects;
 
 /** 返回结构 */
 @ApiModel(description = "返回结构")
 public class OuterCluesUpdateListStruct {
+  @SerializedName("index")
+  private Long index = null;
+
+  public OuterCluesUpdateListStruct index(Long index) {
+    this.index = index;
+    return this;
+  }
+
+  /**
+   * Get index
+   *
+   * @return index
+   */
+  @ApiModelProperty(value = "")
+  public Long getIndex() {
+    return index;
+  }
+
+  public void setIndex(Long index) {
+    this.index = index;
+  }
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -28,12 +51,13 @@ public class OuterCluesUpdateListStruct {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    return true;
+    OuterCluesUpdateListStruct outerCluesUpdateListStruct = (OuterCluesUpdateListStruct) o;
+    return Objects.equals(this.index, outerCluesUpdateListStruct.index);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash();
+    return Objects.hash(index);
   }
 
   @Override

@@ -34,6 +34,9 @@ public class ConversionsAddRequest {
   @SerializedName("promoted_object_id")
   private String promotedObjectId = null;
 
+  @SerializedName("app_android_channel_package_id")
+  private String appAndroidChannelPackageId = null;
+
   @SerializedName("claim_type")
   private ClaimType claimType = null;
 
@@ -154,6 +157,25 @@ public class ConversionsAddRequest {
 
   public void setPromotedObjectId(String promotedObjectId) {
     this.promotedObjectId = promotedObjectId;
+  }
+
+  public ConversionsAddRequest appAndroidChannelPackageId(String appAndroidChannelPackageId) {
+    this.appAndroidChannelPackageId = appAndroidChannelPackageId;
+    return this;
+  }
+
+  /**
+   * Get appAndroidChannelPackageId
+   *
+   * @return appAndroidChannelPackageId
+   */
+  @ApiModelProperty(value = "")
+  public String getAppAndroidChannelPackageId() {
+    return appAndroidChannelPackageId;
+  }
+
+  public void setAppAndroidChannelPackageId(String appAndroidChannelPackageId) {
+    this.appAndroidChannelPackageId = appAndroidChannelPackageId;
   }
 
   public ConversionsAddRequest claimType(ClaimType claimType) {
@@ -343,6 +365,8 @@ public class ConversionsAddRequest {
         && Objects.equals(this.accessType, conversionsAddRequest.accessType)
         && Objects.equals(this.conversionScene, conversionsAddRequest.conversionScene)
         && Objects.equals(this.promotedObjectId, conversionsAddRequest.promotedObjectId)
+        && Objects.equals(
+            this.appAndroidChannelPackageId, conversionsAddRequest.appAndroidChannelPackageId)
         && Objects.equals(this.claimType, conversionsAddRequest.claimType)
         && Objects.equals(this.feedbackUrl, conversionsAddRequest.feedbackUrl)
         && Objects.equals(this.landingPageUrl, conversionsAddRequest.landingPageUrl)
@@ -364,6 +388,7 @@ public class ConversionsAddRequest {
         accessType,
         conversionScene,
         promotedObjectId,
+        appAndroidChannelPackageId,
         claimType,
         feedbackUrl,
         landingPageUrl,

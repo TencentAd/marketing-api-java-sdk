@@ -140,6 +140,9 @@ public class ReadTargetingSetting {
   @SerializedName("deprecated_region")
   private List<Long> deprecatedRegion = null;
 
+  @SerializedName("excluded_converted_audience")
+  private ExcludedConvertedAudienceStruct excludedConvertedAudience = null;
+
   public ReadTargetingSetting age(List<AgeStruct> age) {
     this.age = age;
     return this;
@@ -1152,6 +1155,27 @@ public class ReadTargetingSetting {
     this.deprecatedRegion = deprecatedRegion;
   }
 
+  public ReadTargetingSetting excludedConvertedAudience(
+      ExcludedConvertedAudienceStruct excludedConvertedAudience) {
+    this.excludedConvertedAudience = excludedConvertedAudience;
+    return this;
+  }
+
+  /**
+   * Get excludedConvertedAudience
+   *
+   * @return excludedConvertedAudience
+   */
+  @ApiModelProperty(value = "")
+  public ExcludedConvertedAudienceStruct getExcludedConvertedAudience() {
+    return excludedConvertedAudience;
+  }
+
+  public void setExcludedConvertedAudience(
+      ExcludedConvertedAudienceStruct excludedConvertedAudience) {
+    this.excludedConvertedAudience = excludedConvertedAudience;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -1204,7 +1228,9 @@ public class ReadTargetingSetting {
         && Objects.equals(
             this.deprecatedExcludedCustomAudience,
             readTargetingSetting.deprecatedExcludedCustomAudience)
-        && Objects.equals(this.deprecatedRegion, readTargetingSetting.deprecatedRegion);
+        && Objects.equals(this.deprecatedRegion, readTargetingSetting.deprecatedRegion)
+        && Objects.equals(
+            this.excludedConvertedAudience, readTargetingSetting.excludedConvertedAudience);
   }
 
   @Override
@@ -1248,7 +1274,8 @@ public class ReadTargetingSetting {
         paidUser,
         deprecatedCustomAudience,
         deprecatedExcludedCustomAudience,
-        deprecatedRegion);
+        deprecatedRegion,
+        excludedConvertedAudience);
   }
 
   @Override

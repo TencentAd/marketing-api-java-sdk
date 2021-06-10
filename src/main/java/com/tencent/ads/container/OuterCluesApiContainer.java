@@ -45,7 +45,7 @@ public class OuterCluesApiContainer extends ApiContainer {
   }
 
   /**
-   * 回传线索状态
+   * 更新线索状态
    *
    * @param data (required)
    * @return OuterCluesUpdateResponse

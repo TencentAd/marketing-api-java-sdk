@@ -24,8 +24,14 @@ public class ActionsUserId {
   @SerializedName("hash_imei")
   private String hashImei = null;
 
+  @SerializedName("md5_sha256_imei")
+  private String md5Sha256Imei = null;
+
   @SerializedName("hash_idfa")
   private String hashIdfa = null;
+
+  @SerializedName("md5_sha256_idfa")
+  private String md5Sha256Idfa = null;
 
   @SerializedName("gdt_openid")
   private String gdtOpenid = null;
@@ -44,6 +50,9 @@ public class ActionsUserId {
 
   @SerializedName("oaid")
   private String oaid = null;
+
+  @SerializedName("md5_sha256_oaid")
+  private String md5Sha256Oaid = null;
 
   @SerializedName("wechat_openid")
   private String wechatOpenid = null;
@@ -73,6 +82,25 @@ public class ActionsUserId {
     this.hashImei = hashImei;
   }
 
+  public ActionsUserId md5Sha256Imei(String md5Sha256Imei) {
+    this.md5Sha256Imei = md5Sha256Imei;
+    return this;
+  }
+
+  /**
+   * Get md5Sha256Imei
+   *
+   * @return md5Sha256Imei
+   */
+  @ApiModelProperty(value = "")
+  public String getMd5Sha256Imei() {
+    return md5Sha256Imei;
+  }
+
+  public void setMd5Sha256Imei(String md5Sha256Imei) {
+    this.md5Sha256Imei = md5Sha256Imei;
+  }
+
   public ActionsUserId hashIdfa(String hashIdfa) {
     this.hashIdfa = hashIdfa;
     return this;
@@ -90,6 +118,25 @@ public class ActionsUserId {
 
   public void setHashIdfa(String hashIdfa) {
     this.hashIdfa = hashIdfa;
+  }
+
+  public ActionsUserId md5Sha256Idfa(String md5Sha256Idfa) {
+    this.md5Sha256Idfa = md5Sha256Idfa;
+    return this;
+  }
+
+  /**
+   * Get md5Sha256Idfa
+   *
+   * @return md5Sha256Idfa
+   */
+  @ApiModelProperty(value = "")
+  public String getMd5Sha256Idfa() {
+    return md5Sha256Idfa;
+  }
+
+  public void setMd5Sha256Idfa(String md5Sha256Idfa) {
+    this.md5Sha256Idfa = md5Sha256Idfa;
   }
 
   public ActionsUserId gdtOpenid(String gdtOpenid) {
@@ -206,6 +253,25 @@ public class ActionsUserId {
     this.oaid = oaid;
   }
 
+  public ActionsUserId md5Sha256Oaid(String md5Sha256Oaid) {
+    this.md5Sha256Oaid = md5Sha256Oaid;
+    return this;
+  }
+
+  /**
+   * Get md5Sha256Oaid
+   *
+   * @return md5Sha256Oaid
+   */
+  @ApiModelProperty(value = "")
+  public String getMd5Sha256Oaid() {
+    return md5Sha256Oaid;
+  }
+
+  public void setMd5Sha256Oaid(String md5Sha256Oaid) {
+    this.md5Sha256Oaid = md5Sha256Oaid;
+  }
+
   public ActionsUserId wechatOpenid(String wechatOpenid) {
     this.wechatOpenid = wechatOpenid;
     return this;
@@ -273,13 +339,16 @@ public class ActionsUserId {
     }
     ActionsUserId actionsUserId = (ActionsUserId) o;
     return Objects.equals(this.hashImei, actionsUserId.hashImei)
+        && Objects.equals(this.md5Sha256Imei, actionsUserId.md5Sha256Imei)
         && Objects.equals(this.hashIdfa, actionsUserId.hashIdfa)
+        && Objects.equals(this.md5Sha256Idfa, actionsUserId.md5Sha256Idfa)
         && Objects.equals(this.gdtOpenid, actionsUserId.gdtOpenid)
         && Objects.equals(this.hashPhone, actionsUserId.hashPhone)
         && Objects.equals(this.sha256Phone, actionsUserId.sha256Phone)
         && Objects.equals(this.hashAndroidId, actionsUserId.hashAndroidId)
         && Objects.equals(this.hashMac, actionsUserId.hashMac)
         && Objects.equals(this.oaid, actionsUserId.oaid)
+        && Objects.equals(this.md5Sha256Oaid, actionsUserId.md5Sha256Oaid)
         && Objects.equals(this.wechatOpenid, actionsUserId.wechatOpenid)
         && Objects.equals(this.wechatUnionid, actionsUserId.wechatUnionid)
         && Objects.equals(this.wechatAppId, actionsUserId.wechatAppId);
@@ -289,13 +358,16 @@ public class ActionsUserId {
   public int hashCode() {
     return Objects.hash(
         hashImei,
+        md5Sha256Imei,
         hashIdfa,
+        md5Sha256Idfa,
         gdtOpenid,
         hashPhone,
         sha256Phone,
         hashAndroidId,
         hashMac,
         oaid,
+        md5Sha256Oaid,
         wechatOpenid,
         wechatUnionid,
         wechatAppId);

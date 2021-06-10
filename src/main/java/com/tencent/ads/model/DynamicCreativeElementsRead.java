@@ -86,6 +86,15 @@ public class DynamicCreativeElementsRead {
   @SerializedName("activity_type")
   private String activityType = null;
 
+  @SerializedName("countdown_begin")
+  private Long countdownBegin = null;
+
+  @SerializedName("countdown_price")
+  private String countdownPrice = null;
+
+  @SerializedName("countdown_time_type")
+  private AdCreativeCountdownTimeType countdownTimeType = null;
+
   @SerializedName("mini_program_id")
   private String miniProgramId = null;
 
@@ -687,6 +696,64 @@ public class DynamicCreativeElementsRead {
 
   public void setActivityType(String activityType) {
     this.activityType = activityType;
+  }
+
+  public DynamicCreativeElementsRead countdownBegin(Long countdownBegin) {
+    this.countdownBegin = countdownBegin;
+    return this;
+  }
+
+  /**
+   * Get countdownBegin
+   *
+   * @return countdownBegin
+   */
+  @ApiModelProperty(value = "")
+  public Long getCountdownBegin() {
+    return countdownBegin;
+  }
+
+  public void setCountdownBegin(Long countdownBegin) {
+    this.countdownBegin = countdownBegin;
+  }
+
+  public DynamicCreativeElementsRead countdownPrice(String countdownPrice) {
+    this.countdownPrice = countdownPrice;
+    return this;
+  }
+
+  /**
+   * Get countdownPrice
+   *
+   * @return countdownPrice
+   */
+  @ApiModelProperty(value = "")
+  public String getCountdownPrice() {
+    return countdownPrice;
+  }
+
+  public void setCountdownPrice(String countdownPrice) {
+    this.countdownPrice = countdownPrice;
+  }
+
+  public DynamicCreativeElementsRead countdownTimeType(
+      AdCreativeCountdownTimeType countdownTimeType) {
+    this.countdownTimeType = countdownTimeType;
+    return this;
+  }
+
+  /**
+   * Get countdownTimeType
+   *
+   * @return countdownTimeType
+   */
+  @ApiModelProperty(value = "")
+  public AdCreativeCountdownTimeType getCountdownTimeType() {
+    return countdownTimeType;
+  }
+
+  public void setCountdownTimeType(AdCreativeCountdownTimeType countdownTimeType) {
+    this.countdownTimeType = countdownTimeType;
   }
 
   public DynamicCreativeElementsRead miniProgramId(String miniProgramId) {
@@ -1592,6 +1659,9 @@ public class DynamicCreativeElementsRead {
         && Objects.equals(this.buttonText, dynamicCreativeElementsRead.buttonText)
         && Objects.equals(this.bottomText, dynamicCreativeElementsRead.bottomText)
         && Objects.equals(this.activityType, dynamicCreativeElementsRead.activityType)
+        && Objects.equals(this.countdownBegin, dynamicCreativeElementsRead.countdownBegin)
+        && Objects.equals(this.countdownPrice, dynamicCreativeElementsRead.countdownPrice)
+        && Objects.equals(this.countdownTimeType, dynamicCreativeElementsRead.countdownTimeType)
         && Objects.equals(this.miniProgramId, dynamicCreativeElementsRead.miniProgramId)
         && Objects.equals(this.miniProgramPath, dynamicCreativeElementsRead.miniProgramPath)
         && Objects.equals(this.label, dynamicCreativeElementsRead.label)
@@ -1667,6 +1737,9 @@ public class DynamicCreativeElementsRead {
         buttonText,
         bottomText,
         activityType,
+        countdownBegin,
+        countdownPrice,
+        countdownTimeType,
         miniProgramId,
         miniProgramPath,
         label,

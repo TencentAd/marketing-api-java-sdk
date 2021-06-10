@@ -24,6 +24,21 @@ public class LeadsImportInfoStruct {
   @SerializedName("outer_leads_id")
   private String outerLeadsId = null;
 
+  @SerializedName("leads_id")
+  private Long leadsId = null;
+
+  @SerializedName("leads_tel")
+  private String leadsTel = null;
+
+  @SerializedName("leads_qq")
+  private Long leadsQq = null;
+
+  @SerializedName("leads_wechat")
+  private String leadsWechat = null;
+
+  @SerializedName("click_id")
+  private String clickId = null;
+
   @SerializedName("leads_type")
   private LeadCluesLeadsType leadsType = null;
 
@@ -35,15 +50,6 @@ public class LeadsImportInfoStruct {
 
   @SerializedName("leads_user_wechat_appid")
   private String leadsUserWechatAppid = null;
-
-  @SerializedName("leads_tel")
-  private String leadsTel = null;
-
-  @SerializedName("leads_qq")
-  private Long leadsQq = null;
-
-  @SerializedName("leads_wechat")
-  private String leadsWechat = null;
 
   @SerializedName("leads_name")
   private String leadsName = null;
@@ -60,26 +66,17 @@ public class LeadsImportInfoStruct {
   @SerializedName("bundle")
   private String bundle = null;
 
-  @SerializedName("click_id")
-  private String clickId = null;
-
   @SerializedName("outer_leads_convert_type")
   private String outerLeadsConvertType = null;
 
   @SerializedName("outer_leads_ineffect_reason")
   private String outerLeadsIneffectReason = null;
 
+  @SerializedName("outer_leads_comefrom")
+  private ActionChannelType outerLeadsComefrom = null;
+
   @SerializedName("memo")
   private String memo = null;
-
-  @SerializedName("campaign_id")
-  private Long campaignId = null;
-
-  @SerializedName("adgroup_id")
-  private Long adgroupId = null;
-
-  @SerializedName("wechat_agency_id")
-  private String wechatAgencyId = null;
 
   public LeadsImportInfoStruct outerLeadsId(String outerLeadsId) {
     this.outerLeadsId = outerLeadsId;
@@ -98,6 +95,101 @@ public class LeadsImportInfoStruct {
 
   public void setOuterLeadsId(String outerLeadsId) {
     this.outerLeadsId = outerLeadsId;
+  }
+
+  public LeadsImportInfoStruct leadsId(Long leadsId) {
+    this.leadsId = leadsId;
+    return this;
+  }
+
+  /**
+   * Get leadsId
+   *
+   * @return leadsId
+   */
+  @ApiModelProperty(value = "")
+  public Long getLeadsId() {
+    return leadsId;
+  }
+
+  public void setLeadsId(Long leadsId) {
+    this.leadsId = leadsId;
+  }
+
+  public LeadsImportInfoStruct leadsTel(String leadsTel) {
+    this.leadsTel = leadsTel;
+    return this;
+  }
+
+  /**
+   * Get leadsTel
+   *
+   * @return leadsTel
+   */
+  @ApiModelProperty(value = "")
+  public String getLeadsTel() {
+    return leadsTel;
+  }
+
+  public void setLeadsTel(String leadsTel) {
+    this.leadsTel = leadsTel;
+  }
+
+  public LeadsImportInfoStruct leadsQq(Long leadsQq) {
+    this.leadsQq = leadsQq;
+    return this;
+  }
+
+  /**
+   * Get leadsQq
+   *
+   * @return leadsQq
+   */
+  @ApiModelProperty(value = "")
+  public Long getLeadsQq() {
+    return leadsQq;
+  }
+
+  public void setLeadsQq(Long leadsQq) {
+    this.leadsQq = leadsQq;
+  }
+
+  public LeadsImportInfoStruct leadsWechat(String leadsWechat) {
+    this.leadsWechat = leadsWechat;
+    return this;
+  }
+
+  /**
+   * Get leadsWechat
+   *
+   * @return leadsWechat
+   */
+  @ApiModelProperty(value = "")
+  public String getLeadsWechat() {
+    return leadsWechat;
+  }
+
+  public void setLeadsWechat(String leadsWechat) {
+    this.leadsWechat = leadsWechat;
+  }
+
+  public LeadsImportInfoStruct clickId(String clickId) {
+    this.clickId = clickId;
+    return this;
+  }
+
+  /**
+   * Get clickId
+   *
+   * @return clickId
+   */
+  @ApiModelProperty(value = "")
+  public String getClickId() {
+    return clickId;
+  }
+
+  public void setClickId(String clickId) {
+    this.clickId = clickId;
   }
 
   public LeadsImportInfoStruct leadsType(LeadCluesLeadsType leadsType) {
@@ -174,63 +266,6 @@ public class LeadsImportInfoStruct {
 
   public void setLeadsUserWechatAppid(String leadsUserWechatAppid) {
     this.leadsUserWechatAppid = leadsUserWechatAppid;
-  }
-
-  public LeadsImportInfoStruct leadsTel(String leadsTel) {
-    this.leadsTel = leadsTel;
-    return this;
-  }
-
-  /**
-   * Get leadsTel
-   *
-   * @return leadsTel
-   */
-  @ApiModelProperty(value = "")
-  public String getLeadsTel() {
-    return leadsTel;
-  }
-
-  public void setLeadsTel(String leadsTel) {
-    this.leadsTel = leadsTel;
-  }
-
-  public LeadsImportInfoStruct leadsQq(Long leadsQq) {
-    this.leadsQq = leadsQq;
-    return this;
-  }
-
-  /**
-   * Get leadsQq
-   *
-   * @return leadsQq
-   */
-  @ApiModelProperty(value = "")
-  public Long getLeadsQq() {
-    return leadsQq;
-  }
-
-  public void setLeadsQq(Long leadsQq) {
-    this.leadsQq = leadsQq;
-  }
-
-  public LeadsImportInfoStruct leadsWechat(String leadsWechat) {
-    this.leadsWechat = leadsWechat;
-    return this;
-  }
-
-  /**
-   * Get leadsWechat
-   *
-   * @return leadsWechat
-   */
-  @ApiModelProperty(value = "")
-  public String getLeadsWechat() {
-    return leadsWechat;
-  }
-
-  public void setLeadsWechat(String leadsWechat) {
-    this.leadsWechat = leadsWechat;
   }
 
   public LeadsImportInfoStruct leadsName(String leadsName) {
@@ -328,25 +363,6 @@ public class LeadsImportInfoStruct {
     this.bundle = bundle;
   }
 
-  public LeadsImportInfoStruct clickId(String clickId) {
-    this.clickId = clickId;
-    return this;
-  }
-
-  /**
-   * Get clickId
-   *
-   * @return clickId
-   */
-  @ApiModelProperty(value = "")
-  public String getClickId() {
-    return clickId;
-  }
-
-  public void setClickId(String clickId) {
-    this.clickId = clickId;
-  }
-
   public LeadsImportInfoStruct outerLeadsConvertType(String outerLeadsConvertType) {
     this.outerLeadsConvertType = outerLeadsConvertType;
     return this;
@@ -385,6 +401,25 @@ public class LeadsImportInfoStruct {
     this.outerLeadsIneffectReason = outerLeadsIneffectReason;
   }
 
+  public LeadsImportInfoStruct outerLeadsComefrom(ActionChannelType outerLeadsComefrom) {
+    this.outerLeadsComefrom = outerLeadsComefrom;
+    return this;
+  }
+
+  /**
+   * Get outerLeadsComefrom
+   *
+   * @return outerLeadsComefrom
+   */
+  @ApiModelProperty(value = "")
+  public ActionChannelType getOuterLeadsComefrom() {
+    return outerLeadsComefrom;
+  }
+
+  public void setOuterLeadsComefrom(ActionChannelType outerLeadsComefrom) {
+    this.outerLeadsComefrom = outerLeadsComefrom;
+  }
+
   public LeadsImportInfoStruct memo(String memo) {
     this.memo = memo;
     return this;
@@ -404,63 +439,6 @@ public class LeadsImportInfoStruct {
     this.memo = memo;
   }
 
-  public LeadsImportInfoStruct campaignId(Long campaignId) {
-    this.campaignId = campaignId;
-    return this;
-  }
-
-  /**
-   * Get campaignId
-   *
-   * @return campaignId
-   */
-  @ApiModelProperty(value = "")
-  public Long getCampaignId() {
-    return campaignId;
-  }
-
-  public void setCampaignId(Long campaignId) {
-    this.campaignId = campaignId;
-  }
-
-  public LeadsImportInfoStruct adgroupId(Long adgroupId) {
-    this.adgroupId = adgroupId;
-    return this;
-  }
-
-  /**
-   * Get adgroupId
-   *
-   * @return adgroupId
-   */
-  @ApiModelProperty(value = "")
-  public Long getAdgroupId() {
-    return adgroupId;
-  }
-
-  public void setAdgroupId(Long adgroupId) {
-    this.adgroupId = adgroupId;
-  }
-
-  public LeadsImportInfoStruct wechatAgencyId(String wechatAgencyId) {
-    this.wechatAgencyId = wechatAgencyId;
-    return this;
-  }
-
-  /**
-   * Get wechatAgencyId
-   *
-   * @return wechatAgencyId
-   */
-  @ApiModelProperty(value = "")
-  public String getWechatAgencyId() {
-    return wechatAgencyId;
-  }
-
-  public void setWechatAgencyId(String wechatAgencyId) {
-    this.wechatAgencyId = wechatAgencyId;
-  }
-
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -471,51 +449,49 @@ public class LeadsImportInfoStruct {
     }
     LeadsImportInfoStruct leadsImportInfoStruct = (LeadsImportInfoStruct) o;
     return Objects.equals(this.outerLeadsId, leadsImportInfoStruct.outerLeadsId)
+        && Objects.equals(this.leadsId, leadsImportInfoStruct.leadsId)
+        && Objects.equals(this.leadsTel, leadsImportInfoStruct.leadsTel)
+        && Objects.equals(this.leadsQq, leadsImportInfoStruct.leadsQq)
+        && Objects.equals(this.leadsWechat, leadsImportInfoStruct.leadsWechat)
+        && Objects.equals(this.clickId, leadsImportInfoStruct.clickId)
         && Objects.equals(this.leadsType, leadsImportInfoStruct.leadsType)
         && Objects.equals(this.leadsUserId, leadsImportInfoStruct.leadsUserId)
         && Objects.equals(this.leadsUserType, leadsImportInfoStruct.leadsUserType)
         && Objects.equals(this.leadsUserWechatAppid, leadsImportInfoStruct.leadsUserWechatAppid)
-        && Objects.equals(this.leadsTel, leadsImportInfoStruct.leadsTel)
-        && Objects.equals(this.leadsQq, leadsImportInfoStruct.leadsQq)
-        && Objects.equals(this.leadsWechat, leadsImportInfoStruct.leadsWechat)
         && Objects.equals(this.leadsName, leadsImportInfoStruct.leadsName)
         && Objects.equals(this.leadsGender, leadsImportInfoStruct.leadsGender)
         && Objects.equals(this.leadsEmail, leadsImportInfoStruct.leadsEmail)
         && Objects.equals(this.leadsArea, leadsImportInfoStruct.leadsArea)
         && Objects.equals(this.bundle, leadsImportInfoStruct.bundle)
-        && Objects.equals(this.clickId, leadsImportInfoStruct.clickId)
         && Objects.equals(this.outerLeadsConvertType, leadsImportInfoStruct.outerLeadsConvertType)
         && Objects.equals(
             this.outerLeadsIneffectReason, leadsImportInfoStruct.outerLeadsIneffectReason)
-        && Objects.equals(this.memo, leadsImportInfoStruct.memo)
-        && Objects.equals(this.campaignId, leadsImportInfoStruct.campaignId)
-        && Objects.equals(this.adgroupId, leadsImportInfoStruct.adgroupId)
-        && Objects.equals(this.wechatAgencyId, leadsImportInfoStruct.wechatAgencyId);
+        && Objects.equals(this.outerLeadsComefrom, leadsImportInfoStruct.outerLeadsComefrom)
+        && Objects.equals(this.memo, leadsImportInfoStruct.memo);
   }
 
   @Override
   public int hashCode() {
     return Objects.hash(
         outerLeadsId,
+        leadsId,
+        leadsTel,
+        leadsQq,
+        leadsWechat,
+        clickId,
         leadsType,
         leadsUserId,
         leadsUserType,
         leadsUserWechatAppid,
-        leadsTel,
-        leadsQq,
-        leadsWechat,
         leadsName,
         leadsGender,
         leadsEmail,
         leadsArea,
         bundle,
-        clickId,
         outerLeadsConvertType,
         outerLeadsIneffectReason,
-        memo,
-        campaignId,
-        adgroupId,
-        wechatAgencyId);
+        outerLeadsComefrom,
+        memo);
   }
 
   @Override

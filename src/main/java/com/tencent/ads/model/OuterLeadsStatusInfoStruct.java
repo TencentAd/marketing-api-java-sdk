@@ -24,6 +24,21 @@ public class OuterLeadsStatusInfoStruct {
   @SerializedName("outer_leads_id")
   private String outerLeadsId = null;
 
+  @SerializedName("leads_id")
+  private Long leadsId = null;
+
+  @SerializedName("leads_tel")
+  private String leadsTel = null;
+
+  @SerializedName("leads_qq")
+  private Long leadsQq = null;
+
+  @SerializedName("leads_wechat")
+  private String leadsWechat = null;
+
+  @SerializedName("click_id")
+  private String clickId = null;
+
   @SerializedName("outer_leads_convert_type")
   private String outerLeadsConvertType = null;
 
@@ -47,6 +62,101 @@ public class OuterLeadsStatusInfoStruct {
 
   public void setOuterLeadsId(String outerLeadsId) {
     this.outerLeadsId = outerLeadsId;
+  }
+
+  public OuterLeadsStatusInfoStruct leadsId(Long leadsId) {
+    this.leadsId = leadsId;
+    return this;
+  }
+
+  /**
+   * Get leadsId
+   *
+   * @return leadsId
+   */
+  @ApiModelProperty(value = "")
+  public Long getLeadsId() {
+    return leadsId;
+  }
+
+  public void setLeadsId(Long leadsId) {
+    this.leadsId = leadsId;
+  }
+
+  public OuterLeadsStatusInfoStruct leadsTel(String leadsTel) {
+    this.leadsTel = leadsTel;
+    return this;
+  }
+
+  /**
+   * Get leadsTel
+   *
+   * @return leadsTel
+   */
+  @ApiModelProperty(value = "")
+  public String getLeadsTel() {
+    return leadsTel;
+  }
+
+  public void setLeadsTel(String leadsTel) {
+    this.leadsTel = leadsTel;
+  }
+
+  public OuterLeadsStatusInfoStruct leadsQq(Long leadsQq) {
+    this.leadsQq = leadsQq;
+    return this;
+  }
+
+  /**
+   * Get leadsQq
+   *
+   * @return leadsQq
+   */
+  @ApiModelProperty(value = "")
+  public Long getLeadsQq() {
+    return leadsQq;
+  }
+
+  public void setLeadsQq(Long leadsQq) {
+    this.leadsQq = leadsQq;
+  }
+
+  public OuterLeadsStatusInfoStruct leadsWechat(String leadsWechat) {
+    this.leadsWechat = leadsWechat;
+    return this;
+  }
+
+  /**
+   * Get leadsWechat
+   *
+   * @return leadsWechat
+   */
+  @ApiModelProperty(value = "")
+  public String getLeadsWechat() {
+    return leadsWechat;
+  }
+
+  public void setLeadsWechat(String leadsWechat) {
+    this.leadsWechat = leadsWechat;
+  }
+
+  public OuterLeadsStatusInfoStruct clickId(String clickId) {
+    this.clickId = clickId;
+    return this;
+  }
+
+  /**
+   * Get clickId
+   *
+   * @return clickId
+   */
+  @ApiModelProperty(value = "")
+  public String getClickId() {
+    return clickId;
+  }
+
+  public void setClickId(String clickId) {
+    this.clickId = clickId;
   }
 
   public OuterLeadsStatusInfoStruct outerLeadsConvertType(String outerLeadsConvertType) {
@@ -97,6 +207,11 @@ public class OuterLeadsStatusInfoStruct {
     }
     OuterLeadsStatusInfoStruct outerLeadsStatusInfoStruct = (OuterLeadsStatusInfoStruct) o;
     return Objects.equals(this.outerLeadsId, outerLeadsStatusInfoStruct.outerLeadsId)
+        && Objects.equals(this.leadsId, outerLeadsStatusInfoStruct.leadsId)
+        && Objects.equals(this.leadsTel, outerLeadsStatusInfoStruct.leadsTel)
+        && Objects.equals(this.leadsQq, outerLeadsStatusInfoStruct.leadsQq)
+        && Objects.equals(this.leadsWechat, outerLeadsStatusInfoStruct.leadsWechat)
+        && Objects.equals(this.clickId, outerLeadsStatusInfoStruct.clickId)
         && Objects.equals(
             this.outerLeadsConvertType, outerLeadsStatusInfoStruct.outerLeadsConvertType)
         && Objects.equals(
@@ -105,7 +220,15 @@ public class OuterLeadsStatusInfoStruct {
 
   @Override
   public int hashCode() {
-    return Objects.hash(outerLeadsId, outerLeadsConvertType, outerLeadsIneffectReason);
+    return Objects.hash(
+        outerLeadsId,
+        leadsId,
+        leadsTel,
+        leadsQq,
+        leadsWechat,
+        clickId,
+        outerLeadsConvertType,
+        outerLeadsIneffectReason);
   }
 
   @Override

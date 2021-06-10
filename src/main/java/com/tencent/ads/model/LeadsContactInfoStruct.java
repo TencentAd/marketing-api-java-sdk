@@ -24,6 +24,12 @@ public class LeadsContactInfoStruct {
   @SerializedName("outer_leads_id")
   private String outerLeadsId = null;
 
+  @SerializedName("leads_id")
+  private Long leadsId = null;
+
+  @SerializedName("click_id")
+  private String clickId = null;
+
   @SerializedName("leads_user_type")
   private LeadsUserType leadsUserType = null;
 
@@ -77,6 +83,44 @@ public class LeadsContactInfoStruct {
 
   public void setOuterLeadsId(String outerLeadsId) {
     this.outerLeadsId = outerLeadsId;
+  }
+
+  public LeadsContactInfoStruct leadsId(Long leadsId) {
+    this.leadsId = leadsId;
+    return this;
+  }
+
+  /**
+   * Get leadsId
+   *
+   * @return leadsId
+   */
+  @ApiModelProperty(value = "")
+  public Long getLeadsId() {
+    return leadsId;
+  }
+
+  public void setLeadsId(Long leadsId) {
+    this.leadsId = leadsId;
+  }
+
+  public LeadsContactInfoStruct clickId(String clickId) {
+    this.clickId = clickId;
+    return this;
+  }
+
+  /**
+   * Get clickId
+   *
+   * @return clickId
+   */
+  @ApiModelProperty(value = "")
+  public String getClickId() {
+    return clickId;
+  }
+
+  public void setClickId(String clickId) {
+    this.clickId = clickId;
   }
 
   public LeadsContactInfoStruct leadsUserType(LeadsUserType leadsUserType) {
@@ -317,6 +361,8 @@ public class LeadsContactInfoStruct {
     }
     LeadsContactInfoStruct leadsContactInfoStruct = (LeadsContactInfoStruct) o;
     return Objects.equals(this.outerLeadsId, leadsContactInfoStruct.outerLeadsId)
+        && Objects.equals(this.leadsId, leadsContactInfoStruct.leadsId)
+        && Objects.equals(this.clickId, leadsContactInfoStruct.clickId)
         && Objects.equals(this.leadsUserType, leadsContactInfoStruct.leadsUserType)
         && Objects.equals(this.leadsUserWechatAppid, leadsContactInfoStruct.leadsUserWechatAppid)
         && Objects.equals(this.leadsUserId, leadsContactInfoStruct.leadsUserId)
@@ -335,6 +381,8 @@ public class LeadsContactInfoStruct {
   public int hashCode() {
     return Objects.hash(
         outerLeadsId,
+        leadsId,
+        clickId,
         leadsUserType,
         leadsUserWechatAppid,
         leadsUserId,

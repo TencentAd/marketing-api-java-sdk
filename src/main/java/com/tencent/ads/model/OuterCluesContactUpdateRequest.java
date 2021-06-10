@@ -24,6 +24,9 @@ public class OuterCluesContactUpdateRequest {
   @SerializedName("account_id")
   private Long accountId = null;
 
+  @SerializedName("match_type")
+  private LeadsMatchType matchType = null;
+
   @SerializedName("leads_contact_list")
   private List<LeadsContactInfoStruct> leadsContactList = null;
 
@@ -44,6 +47,25 @@ public class OuterCluesContactUpdateRequest {
 
   public void setAccountId(Long accountId) {
     this.accountId = accountId;
+  }
+
+  public OuterCluesContactUpdateRequest matchType(LeadsMatchType matchType) {
+    this.matchType = matchType;
+    return this;
+  }
+
+  /**
+   * Get matchType
+   *
+   * @return matchType
+   */
+  @ApiModelProperty(value = "")
+  public LeadsMatchType getMatchType() {
+    return matchType;
+  }
+
+  public void setMatchType(LeadsMatchType matchType) {
+    this.matchType = matchType;
   }
 
   public OuterCluesContactUpdateRequest leadsContactList(
@@ -86,12 +108,13 @@ public class OuterCluesContactUpdateRequest {
     OuterCluesContactUpdateRequest outerCluesContactUpdateRequest =
         (OuterCluesContactUpdateRequest) o;
     return Objects.equals(this.accountId, outerCluesContactUpdateRequest.accountId)
+        && Objects.equals(this.matchType, outerCluesContactUpdateRequest.matchType)
         && Objects.equals(this.leadsContactList, outerCluesContactUpdateRequest.leadsContactList);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(accountId, leadsContactList);
+    return Objects.hash(accountId, matchType, leadsContactList);
   }
 
   @Override

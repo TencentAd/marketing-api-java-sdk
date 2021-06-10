@@ -48,6 +48,9 @@ public class UnionChannelPackageData {
   @SerializedName("system_message")
   private String systemMessage = null;
 
+  @SerializedName("customized_channel_id")
+  private String customizedChannelId = null;
+
   public UnionChannelPackageData androidUnionAppId(Long androidUnionAppId) {
     this.androidUnionAppId = androidUnionAppId;
     return this;
@@ -219,6 +222,25 @@ public class UnionChannelPackageData {
     this.systemMessage = systemMessage;
   }
 
+  public UnionChannelPackageData customizedChannelId(String customizedChannelId) {
+    this.customizedChannelId = customizedChannelId;
+    return this;
+  }
+
+  /**
+   * Get customizedChannelId
+   *
+   * @return customizedChannelId
+   */
+  @ApiModelProperty(value = "")
+  public String getCustomizedChannelId() {
+    return customizedChannelId;
+  }
+
+  public void setCustomizedChannelId(String customizedChannelId) {
+    this.customizedChannelId = customizedChannelId;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -236,7 +258,8 @@ public class UnionChannelPackageData {
         && Objects.equals(this.createdTime, unionChannelPackageData.createdTime)
         && Objects.equals(this.lastModifiedTime, unionChannelPackageData.lastModifiedTime)
         && Objects.equals(this.systemStatus, unionChannelPackageData.systemStatus)
-        && Objects.equals(this.systemMessage, unionChannelPackageData.systemMessage);
+        && Objects.equals(this.systemMessage, unionChannelPackageData.systemMessage)
+        && Objects.equals(this.customizedChannelId, unionChannelPackageData.customizedChannelId);
   }
 
   @Override
@@ -250,7 +273,8 @@ public class UnionChannelPackageData {
         createdTime,
         lastModifiedTime,
         systemStatus,
-        systemMessage);
+        systemMessage,
+        customizedChannelId);
   }
 
   @Override

@@ -285,7 +285,7 @@ public class OuterCluesApi {
   }
 
   /**
-   * 回传线索状态
+   * 更新线索状态
    *
    * @param data (required)
    * @return OuterCluesUpdateResponse
@@ -299,7 +299,7 @@ public class OuterCluesApi {
   }
 
   /**
-   * 回传线索状态
+   * 更新线索状态
    *
    * @param data (required)
    * @return ApiResponse&lt;OuterCluesUpdateResponse&gt;
@@ -314,7 +314,7 @@ public class OuterCluesApi {
   }
 
   /**
-   * 回传线索状态 (asynchronously)
+   * 更新线索状态 (asynchronously)
    *
    * @param data (required)
    * @param callback The callback to be executed when the API call finishes

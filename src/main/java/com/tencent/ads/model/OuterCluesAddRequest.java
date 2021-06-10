@@ -24,6 +24,9 @@ public class OuterCluesAddRequest {
   @SerializedName("account_id")
   private Long accountId = null;
 
+  @SerializedName("match_type")
+  private LeadsMatchType matchType = null;
+
   @SerializedName("leads_info_list")
   private List<LeadsImportInfoStruct> leadsInfoList = null;
 
@@ -44,6 +47,25 @@ public class OuterCluesAddRequest {
 
   public void setAccountId(Long accountId) {
     this.accountId = accountId;
+  }
+
+  public OuterCluesAddRequest matchType(LeadsMatchType matchType) {
+    this.matchType = matchType;
+    return this;
+  }
+
+  /**
+   * Get matchType
+   *
+   * @return matchType
+   */
+  @ApiModelProperty(value = "")
+  public LeadsMatchType getMatchType() {
+    return matchType;
+  }
+
+  public void setMatchType(LeadsMatchType matchType) {
+    this.matchType = matchType;
   }
 
   public OuterCluesAddRequest leadsInfoList(List<LeadsImportInfoStruct> leadsInfoList) {
@@ -83,12 +105,13 @@ public class OuterCluesAddRequest {
     }
     OuterCluesAddRequest outerCluesAddRequest = (OuterCluesAddRequest) o;
     return Objects.equals(this.accountId, outerCluesAddRequest.accountId)
+        && Objects.equals(this.matchType, outerCluesAddRequest.matchType)
         && Objects.equals(this.leadsInfoList, outerCluesAddRequest.leadsInfoList);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(accountId, leadsInfoList);
+    return Objects.hash(accountId, matchType, leadsInfoList);
   }
 
   @Override

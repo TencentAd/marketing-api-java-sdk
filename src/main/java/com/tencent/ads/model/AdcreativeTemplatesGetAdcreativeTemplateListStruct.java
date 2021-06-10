@@ -62,6 +62,9 @@ public class AdcreativeTemplatesGetAdcreativeTemplateListStruct {
   @SerializedName("support_page_type")
   private List<String> supportPageType = null;
 
+  @SerializedName("landing_page_config")
+  private LandingPageConfig landingPageConfig = null;
+
   @SerializedName("support_billing_spec_list")
   private List<SupportBillingSpec> supportBillingSpecList = null;
 
@@ -375,6 +378,26 @@ public class AdcreativeTemplatesGetAdcreativeTemplateListStruct {
     this.supportPageType = supportPageType;
   }
 
+  public AdcreativeTemplatesGetAdcreativeTemplateListStruct landingPageConfig(
+      LandingPageConfig landingPageConfig) {
+    this.landingPageConfig = landingPageConfig;
+    return this;
+  }
+
+  /**
+   * Get landingPageConfig
+   *
+   * @return landingPageConfig
+   */
+  @ApiModelProperty(value = "")
+  public LandingPageConfig getLandingPageConfig() {
+    return landingPageConfig;
+  }
+
+  public void setLandingPageConfig(LandingPageConfig landingPageConfig) {
+    this.landingPageConfig = landingPageConfig;
+  }
+
   public AdcreativeTemplatesGetAdcreativeTemplateListStruct supportBillingSpecList(
       List<SupportBillingSpec> supportBillingSpecList) {
     this.supportBillingSpecList = supportBillingSpecList;
@@ -502,6 +525,9 @@ public class AdcreativeTemplatesGetAdcreativeTemplateListStruct {
             this.supportPageType,
             adcreativeTemplatesGetAdcreativeTemplateListStruct.supportPageType)
         && Objects.equals(
+            this.landingPageConfig,
+            adcreativeTemplatesGetAdcreativeTemplateListStruct.landingPageConfig)
+        && Objects.equals(
             this.supportBillingSpecList,
             adcreativeTemplatesGetAdcreativeTemplateListStruct.supportBillingSpecList)
         && Objects.equals(
@@ -528,6 +554,7 @@ public class AdcreativeTemplatesGetAdcreativeTemplateListStruct {
         adcreativeAttributes,
         adcreativeElements,
         supportPageType,
+        landingPageConfig,
         supportBillingSpecList,
         supportDynamicAbilitySpecList,
         supportBidModeList);

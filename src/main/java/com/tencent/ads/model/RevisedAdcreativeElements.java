@@ -65,8 +65,17 @@ public class RevisedAdcreativeElements {
   @SerializedName("bottom_text")
   private String bottomText = null;
 
+  @SerializedName("countdown_begin")
+  private Long countdownBegin = null;
+
   @SerializedName("countdown")
   private Long countdown = null;
+
+  @SerializedName("countdown_price")
+  private String countdownPrice = null;
+
+  @SerializedName("countdown_time_type")
+  private AdCreativeCountdownTimeType countdownTimeType = null;
 
   @SerializedName("mini_program_id")
   private String miniProgramId = null;
@@ -424,6 +433,25 @@ public class RevisedAdcreativeElements {
     this.bottomText = bottomText;
   }
 
+  public RevisedAdcreativeElements countdownBegin(Long countdownBegin) {
+    this.countdownBegin = countdownBegin;
+    return this;
+  }
+
+  /**
+   * Get countdownBegin
+   *
+   * @return countdownBegin
+   */
+  @ApiModelProperty(value = "")
+  public Long getCountdownBegin() {
+    return countdownBegin;
+  }
+
+  public void setCountdownBegin(Long countdownBegin) {
+    this.countdownBegin = countdownBegin;
+  }
+
   public RevisedAdcreativeElements countdown(Long countdown) {
     this.countdown = countdown;
     return this;
@@ -441,6 +469,45 @@ public class RevisedAdcreativeElements {
 
   public void setCountdown(Long countdown) {
     this.countdown = countdown;
+  }
+
+  public RevisedAdcreativeElements countdownPrice(String countdownPrice) {
+    this.countdownPrice = countdownPrice;
+    return this;
+  }
+
+  /**
+   * Get countdownPrice
+   *
+   * @return countdownPrice
+   */
+  @ApiModelProperty(value = "")
+  public String getCountdownPrice() {
+    return countdownPrice;
+  }
+
+  public void setCountdownPrice(String countdownPrice) {
+    this.countdownPrice = countdownPrice;
+  }
+
+  public RevisedAdcreativeElements countdownTimeType(
+      AdCreativeCountdownTimeType countdownTimeType) {
+    this.countdownTimeType = countdownTimeType;
+    return this;
+  }
+
+  /**
+   * Get countdownTimeType
+   *
+   * @return countdownTimeType
+   */
+  @ApiModelProperty(value = "")
+  public AdCreativeCountdownTimeType getCountdownTimeType() {
+    return countdownTimeType;
+  }
+
+  public void setCountdownTimeType(AdCreativeCountdownTimeType countdownTimeType) {
+    this.countdownTimeType = countdownTimeType;
   }
 
   public RevisedAdcreativeElements miniProgramId(String miniProgramId) {
@@ -938,7 +1005,10 @@ public class RevisedAdcreativeElements {
         && Objects.equals(this.url, revisedAdcreativeElements.url)
         && Objects.equals(this.buttonText, revisedAdcreativeElements.buttonText)
         && Objects.equals(this.bottomText, revisedAdcreativeElements.bottomText)
+        && Objects.equals(this.countdownBegin, revisedAdcreativeElements.countdownBegin)
         && Objects.equals(this.countdown, revisedAdcreativeElements.countdown)
+        && Objects.equals(this.countdownPrice, revisedAdcreativeElements.countdownPrice)
+        && Objects.equals(this.countdownTimeType, revisedAdcreativeElements.countdownTimeType)
         && Objects.equals(this.miniProgramId, revisedAdcreativeElements.miniProgramId)
         && Objects.equals(this.miniProgramPath, revisedAdcreativeElements.miniProgramPath)
         && Objects.equals(this.label, revisedAdcreativeElements.label)
@@ -982,7 +1052,10 @@ public class RevisedAdcreativeElements {
         url,
         buttonText,
         bottomText,
+        countdownBegin,
         countdown,
+        countdownPrice,
+        countdownTimeType,
         miniProgramId,
         miniProgramPath,
         label,

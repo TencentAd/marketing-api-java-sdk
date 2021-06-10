@@ -119,6 +119,9 @@ public class WriteTargetingSetting {
   @SerializedName("mobile_union_category")
   private List<Long> mobileUnionCategory = null;
 
+  @SerializedName("excluded_converted_audience")
+  private ExcludedConvertedAudienceStruct excludedConvertedAudience = null;
+
   public WriteTargetingSetting age(List<AgeStruct> age) {
     this.age = age;
     return this;
@@ -956,6 +959,27 @@ public class WriteTargetingSetting {
     this.mobileUnionCategory = mobileUnionCategory;
   }
 
+  public WriteTargetingSetting excludedConvertedAudience(
+      ExcludedConvertedAudienceStruct excludedConvertedAudience) {
+    this.excludedConvertedAudience = excludedConvertedAudience;
+    return this;
+  }
+
+  /**
+   * Get excludedConvertedAudience
+   *
+   * @return excludedConvertedAudience
+   */
+  @ApiModelProperty(value = "")
+  public ExcludedConvertedAudienceStruct getExcludedConvertedAudience() {
+    return excludedConvertedAudience;
+  }
+
+  public void setExcludedConvertedAudience(
+      ExcludedConvertedAudienceStruct excludedConvertedAudience) {
+    this.excludedConvertedAudience = excludedConvertedAudience;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -998,7 +1022,9 @@ public class WriteTargetingSetting {
         && Objects.equals(this.behaviorOrInterest, writeTargetingSetting.behaviorOrInterest)
         && Objects.equals(
             this.wechatOfficialAccountCategory, writeTargetingSetting.wechatOfficialAccountCategory)
-        && Objects.equals(this.mobileUnionCategory, writeTargetingSetting.mobileUnionCategory);
+        && Objects.equals(this.mobileUnionCategory, writeTargetingSetting.mobileUnionCategory)
+        && Objects.equals(
+            this.excludedConvertedAudience, writeTargetingSetting.excludedConvertedAudience);
   }
 
   @Override
@@ -1035,7 +1061,8 @@ public class WriteTargetingSetting {
         excludedCustomAudience,
         behaviorOrInterest,
         wechatOfficialAccountCategory,
-        mobileUnionCategory);
+        mobileUnionCategory,
+        excludedConvertedAudience);
   }
 
   @Override

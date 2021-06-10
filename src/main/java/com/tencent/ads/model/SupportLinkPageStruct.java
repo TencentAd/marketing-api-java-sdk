@@ -18,51 +18,51 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.util.Objects;
 
-/** 返回结构 */
-@ApiModel(description = "返回结构")
-public class OuterCluesAddListStruct {
-  @SerializedName("index")
-  private Long index = null;
+/** 文字链支持落地页结构 */
+@ApiModel(description = "文字链支持落地页结构")
+public class SupportLinkPageStruct {
+  @SerializedName("link_page_type")
+  private String linkPageType = null;
 
-  @SerializedName("outer_leads_id")
-  private String outerLeadsId = null;
+  @SerializedName("description")
+  private String description = null;
 
-  public OuterCluesAddListStruct index(Long index) {
-    this.index = index;
+  public SupportLinkPageStruct linkPageType(String linkPageType) {
+    this.linkPageType = linkPageType;
     return this;
   }
 
   /**
-   * Get index
+   * Get linkPageType
    *
-   * @return index
+   * @return linkPageType
    */
   @ApiModelProperty(value = "")
-  public Long getIndex() {
-    return index;
+  public String getLinkPageType() {
+    return linkPageType;
   }
 
-  public void setIndex(Long index) {
-    this.index = index;
+  public void setLinkPageType(String linkPageType) {
+    this.linkPageType = linkPageType;
   }
 
-  public OuterCluesAddListStruct outerLeadsId(String outerLeadsId) {
-    this.outerLeadsId = outerLeadsId;
+  public SupportLinkPageStruct description(String description) {
+    this.description = description;
     return this;
   }
 
   /**
-   * Get outerLeadsId
+   * Get description
    *
-   * @return outerLeadsId
+   * @return description
    */
   @ApiModelProperty(value = "")
-  public String getOuterLeadsId() {
-    return outerLeadsId;
+  public String getDescription() {
+    return description;
   }
 
-  public void setOuterLeadsId(String outerLeadsId) {
-    this.outerLeadsId = outerLeadsId;
+  public void setDescription(String description) {
+    this.description = description;
   }
 
   @Override
@@ -73,14 +73,14 @@ public class OuterCluesAddListStruct {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    OuterCluesAddListStruct outerCluesAddListStruct = (OuterCluesAddListStruct) o;
-    return Objects.equals(this.index, outerCluesAddListStruct.index)
-        && Objects.equals(this.outerLeadsId, outerCluesAddListStruct.outerLeadsId);
+    SupportLinkPageStruct supportLinkPageStruct = (SupportLinkPageStruct) o;
+    return Objects.equals(this.linkPageType, supportLinkPageStruct.linkPageType)
+        && Objects.equals(this.description, supportLinkPageStruct.description);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(index, outerLeadsId);
+    return Objects.hash(linkPageType, description);
   }
 
   @Override

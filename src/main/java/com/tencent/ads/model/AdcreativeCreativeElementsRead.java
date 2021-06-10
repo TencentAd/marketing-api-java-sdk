@@ -65,6 +65,15 @@ public class AdcreativeCreativeElementsRead {
   @SerializedName("bottom_text")
   private String bottomText = null;
 
+  @SerializedName("countdown_begin")
+  private Long countdownBegin = null;
+
+  @SerializedName("countdown_price")
+  private String countdownPrice = null;
+
+  @SerializedName("countdown_time_type")
+  private AdCreativeCountdownTimeType countdownTimeType = null;
+
   @SerializedName("label")
   private List<CreativeLabel> label = null;
 
@@ -476,6 +485,64 @@ public class AdcreativeCreativeElementsRead {
 
   public void setBottomText(String bottomText) {
     this.bottomText = bottomText;
+  }
+
+  public AdcreativeCreativeElementsRead countdownBegin(Long countdownBegin) {
+    this.countdownBegin = countdownBegin;
+    return this;
+  }
+
+  /**
+   * Get countdownBegin
+   *
+   * @return countdownBegin
+   */
+  @ApiModelProperty(value = "")
+  public Long getCountdownBegin() {
+    return countdownBegin;
+  }
+
+  public void setCountdownBegin(Long countdownBegin) {
+    this.countdownBegin = countdownBegin;
+  }
+
+  public AdcreativeCreativeElementsRead countdownPrice(String countdownPrice) {
+    this.countdownPrice = countdownPrice;
+    return this;
+  }
+
+  /**
+   * Get countdownPrice
+   *
+   * @return countdownPrice
+   */
+  @ApiModelProperty(value = "")
+  public String getCountdownPrice() {
+    return countdownPrice;
+  }
+
+  public void setCountdownPrice(String countdownPrice) {
+    this.countdownPrice = countdownPrice;
+  }
+
+  public AdcreativeCreativeElementsRead countdownTimeType(
+      AdCreativeCountdownTimeType countdownTimeType) {
+    this.countdownTimeType = countdownTimeType;
+    return this;
+  }
+
+  /**
+   * Get countdownTimeType
+   *
+   * @return countdownTimeType
+   */
+  @ApiModelProperty(value = "")
+  public AdCreativeCountdownTimeType getCountdownTimeType() {
+    return countdownTimeType;
+  }
+
+  public void setCountdownTimeType(AdCreativeCountdownTimeType countdownTimeType) {
+    this.countdownTimeType = countdownTimeType;
   }
 
   public AdcreativeCreativeElementsRead label(List<CreativeLabel> label) {
@@ -1337,6 +1404,9 @@ public class AdcreativeCreativeElementsRead {
         && Objects.equals(this.url, adcreativeCreativeElementsRead.url)
         && Objects.equals(this.buttonText, adcreativeCreativeElementsRead.buttonText)
         && Objects.equals(this.bottomText, adcreativeCreativeElementsRead.bottomText)
+        && Objects.equals(this.countdownBegin, adcreativeCreativeElementsRead.countdownBegin)
+        && Objects.equals(this.countdownPrice, adcreativeCreativeElementsRead.countdownPrice)
+        && Objects.equals(this.countdownTimeType, adcreativeCreativeElementsRead.countdownTimeType)
         && Objects.equals(this.label, adcreativeCreativeElementsRead.label)
         && Objects.equals(this.productTags, adcreativeCreativeElementsRead.productTags)
         && Objects.equals(this.logoDescription, adcreativeCreativeElementsRead.logoDescription)
@@ -1403,6 +1473,9 @@ public class AdcreativeCreativeElementsRead {
         url,
         buttonText,
         bottomText,
+        countdownBegin,
+        countdownPrice,
+        countdownTimeType,
         label,
         productTags,
         logoDescription,

@@ -28,6 +28,9 @@ public class AndroidUnionChannelPackagesAddRequest {
   @SerializedName("package_origin_url")
   private String packageOriginUrl = null;
 
+  @SerializedName("customized_channel_id")
+  private String customizedChannelId = null;
+
   @SerializedName("account_id")
   private Long accountId = null;
 
@@ -88,6 +91,25 @@ public class AndroidUnionChannelPackagesAddRequest {
     this.packageOriginUrl = packageOriginUrl;
   }
 
+  public AndroidUnionChannelPackagesAddRequest customizedChannelId(String customizedChannelId) {
+    this.customizedChannelId = customizedChannelId;
+    return this;
+  }
+
+  /**
+   * Get customizedChannelId
+   *
+   * @return customizedChannelId
+   */
+  @ApiModelProperty(value = "")
+  public String getCustomizedChannelId() {
+    return customizedChannelId;
+  }
+
+  public void setCustomizedChannelId(String customizedChannelId) {
+    this.customizedChannelId = customizedChannelId;
+  }
+
   public AndroidUnionChannelPackagesAddRequest accountId(Long accountId) {
     this.accountId = accountId;
     return this;
@@ -122,12 +144,15 @@ public class AndroidUnionChannelPackagesAddRequest {
         && Objects.equals(this.packageName, androidUnionChannelPackagesAddRequest.packageName)
         && Objects.equals(
             this.packageOriginUrl, androidUnionChannelPackagesAddRequest.packageOriginUrl)
+        && Objects.equals(
+            this.customizedChannelId, androidUnionChannelPackagesAddRequest.customizedChannelId)
         && Objects.equals(this.accountId, androidUnionChannelPackagesAddRequest.accountId);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(androidUnionAppId, packageName, packageOriginUrl, accountId);
+    return Objects.hash(
+        androidUnionAppId, packageName, packageOriginUrl, customizedChannelId, accountId);
   }
 
   @Override

@@ -21,8 +21,30 @@ import java.util.Objects;
 /** 返回结构 */
 @ApiModel(description = "返回结构")
 public class OuterCluesContactUpdateListStruct {
+  @SerializedName("index")
+  private Long index = null;
+
   @SerializedName("outer_leads_id")
   private String outerLeadsId = null;
+
+  public OuterCluesContactUpdateListStruct index(Long index) {
+    this.index = index;
+    return this;
+  }
+
+  /**
+   * Get index
+   *
+   * @return index
+   */
+  @ApiModelProperty(value = "")
+  public Long getIndex() {
+    return index;
+  }
+
+  public void setIndex(Long index) {
+    this.index = index;
+  }
 
   public OuterCluesContactUpdateListStruct outerLeadsId(String outerLeadsId) {
     this.outerLeadsId = outerLeadsId;
@@ -53,12 +75,13 @@ public class OuterCluesContactUpdateListStruct {
     }
     OuterCluesContactUpdateListStruct outerCluesContactUpdateListStruct =
         (OuterCluesContactUpdateListStruct) o;
-    return Objects.equals(this.outerLeadsId, outerCluesContactUpdateListStruct.outerLeadsId);
+    return Objects.equals(this.index, outerCluesContactUpdateListStruct.index)
+        && Objects.equals(this.outerLeadsId, outerCluesContactUpdateListStruct.outerLeadsId);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(outerLeadsId);
+    return Objects.hash(index, outerLeadsId);
   }
 
   @Override

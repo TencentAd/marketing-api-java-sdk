@@ -21,11 +21,33 @@ import java.util.Objects;
 /** 返回结构 */
 @ApiModel(description = "返回结构")
 public class SuccessLeadsIdListRespStruct {
+  @SerializedName("index")
+  private Long index = null;
+
   @SerializedName("outer_leads_id")
   private String outerLeadsId = null;
 
   @SerializedName("leads_id")
   private Long leadsId = null;
+
+  public SuccessLeadsIdListRespStruct index(Long index) {
+    this.index = index;
+    return this;
+  }
+
+  /**
+   * Get index
+   *
+   * @return index
+   */
+  @ApiModelProperty(value = "")
+  public Long getIndex() {
+    return index;
+  }
+
+  public void setIndex(Long index) {
+    this.index = index;
+  }
 
   public SuccessLeadsIdListRespStruct outerLeadsId(String outerLeadsId) {
     this.outerLeadsId = outerLeadsId;
@@ -74,13 +96,14 @@ public class SuccessLeadsIdListRespStruct {
       return false;
     }
     SuccessLeadsIdListRespStruct successLeadsIdListRespStruct = (SuccessLeadsIdListRespStruct) o;
-    return Objects.equals(this.outerLeadsId, successLeadsIdListRespStruct.outerLeadsId)
+    return Objects.equals(this.index, successLeadsIdListRespStruct.index)
+        && Objects.equals(this.outerLeadsId, successLeadsIdListRespStruct.outerLeadsId)
         && Objects.equals(this.leadsId, successLeadsIdListRespStruct.leadsId);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(outerLeadsId, leadsId);
+    return Objects.hash(index, outerLeadsId, leadsId);
   }
 
   @Override

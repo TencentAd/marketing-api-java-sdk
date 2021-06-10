@@ -56,6 +56,9 @@ public class AdcreativeTemplateDetailGetAdcreativeTemplateListStruct {
   @SerializedName("support_page_type")
   private List<String> supportPageType = null;
 
+  @SerializedName("landing_page_config")
+  private LandingPageConfig landingPageConfig = null;
+
   @SerializedName("unsupport_billing_spec_list")
   private List<UnsupportBillingSpec> unsupportBillingSpecList = null;
 
@@ -351,6 +354,26 @@ public class AdcreativeTemplateDetailGetAdcreativeTemplateListStruct {
     this.supportPageType = supportPageType;
   }
 
+  public AdcreativeTemplateDetailGetAdcreativeTemplateListStruct landingPageConfig(
+      LandingPageConfig landingPageConfig) {
+    this.landingPageConfig = landingPageConfig;
+    return this;
+  }
+
+  /**
+   * Get landingPageConfig
+   *
+   * @return landingPageConfig
+   */
+  @ApiModelProperty(value = "")
+  public LandingPageConfig getLandingPageConfig() {
+    return landingPageConfig;
+  }
+
+  public void setLandingPageConfig(LandingPageConfig landingPageConfig) {
+    this.landingPageConfig = landingPageConfig;
+  }
+
   public AdcreativeTemplateDetailGetAdcreativeTemplateListStruct unsupportBillingSpecList(
       List<UnsupportBillingSpec> unsupportBillingSpecList) {
     this.unsupportBillingSpecList = unsupportBillingSpecList;
@@ -593,6 +616,9 @@ public class AdcreativeTemplateDetailGetAdcreativeTemplateListStruct {
             this.supportPageType,
             adcreativeTemplateDetailGetAdcreativeTemplateListStruct.supportPageType)
         && Objects.equals(
+            this.landingPageConfig,
+            adcreativeTemplateDetailGetAdcreativeTemplateListStruct.landingPageConfig)
+        && Objects.equals(
             this.unsupportBillingSpecList,
             adcreativeTemplateDetailGetAdcreativeTemplateListStruct.unsupportBillingSpecList)
         && Objects.equals(
@@ -630,6 +656,7 @@ public class AdcreativeTemplateDetailGetAdcreativeTemplateListStruct {
         adcreativeElements,
         supportBillingSpecList,
         supportPageType,
+        landingPageConfig,
         unsupportBillingSpecList,
         unsupportAdAttributesSpecList,
         unsupportAdcreativeAttributesSpecList,

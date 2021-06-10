@@ -83,6 +83,15 @@ public class DynamicCreativeElements {
   @SerializedName("bottom_text")
   private String bottomText = null;
 
+  @SerializedName("countdown_begin")
+  private Long countdownBegin = null;
+
+  @SerializedName("countdown_price")
+  private String countdownPrice = null;
+
+  @SerializedName("countdown_time_type")
+  private AdCreativeCountdownTimeType countdownTimeType = null;
+
   @SerializedName("mini_program_id")
   private String miniProgramId = null;
 
@@ -590,6 +599,63 @@ public class DynamicCreativeElements {
     this.bottomText = bottomText;
   }
 
+  public DynamicCreativeElements countdownBegin(Long countdownBegin) {
+    this.countdownBegin = countdownBegin;
+    return this;
+  }
+
+  /**
+   * Get countdownBegin
+   *
+   * @return countdownBegin
+   */
+  @ApiModelProperty(value = "")
+  public Long getCountdownBegin() {
+    return countdownBegin;
+  }
+
+  public void setCountdownBegin(Long countdownBegin) {
+    this.countdownBegin = countdownBegin;
+  }
+
+  public DynamicCreativeElements countdownPrice(String countdownPrice) {
+    this.countdownPrice = countdownPrice;
+    return this;
+  }
+
+  /**
+   * Get countdownPrice
+   *
+   * @return countdownPrice
+   */
+  @ApiModelProperty(value = "")
+  public String getCountdownPrice() {
+    return countdownPrice;
+  }
+
+  public void setCountdownPrice(String countdownPrice) {
+    this.countdownPrice = countdownPrice;
+  }
+
+  public DynamicCreativeElements countdownTimeType(AdCreativeCountdownTimeType countdownTimeType) {
+    this.countdownTimeType = countdownTimeType;
+    return this;
+  }
+
+  /**
+   * Get countdownTimeType
+   *
+   * @return countdownTimeType
+   */
+  @ApiModelProperty(value = "")
+  public AdCreativeCountdownTimeType getCountdownTimeType() {
+    return countdownTimeType;
+  }
+
+  public void setCountdownTimeType(AdCreativeCountdownTimeType countdownTimeType) {
+    this.countdownTimeType = countdownTimeType;
+  }
+
   public DynamicCreativeElements miniProgramId(String miniProgramId) {
     this.miniProgramId = miniProgramId;
     return this;
@@ -1016,6 +1082,9 @@ public class DynamicCreativeElements {
         && Objects.equals(this.url, dynamicCreativeElements.url)
         && Objects.equals(this.buttonText, dynamicCreativeElements.buttonText)
         && Objects.equals(this.bottomText, dynamicCreativeElements.bottomText)
+        && Objects.equals(this.countdownBegin, dynamicCreativeElements.countdownBegin)
+        && Objects.equals(this.countdownPrice, dynamicCreativeElements.countdownPrice)
+        && Objects.equals(this.countdownTimeType, dynamicCreativeElements.countdownTimeType)
         && Objects.equals(this.miniProgramId, dynamicCreativeElements.miniProgramId)
         && Objects.equals(this.miniProgramPath, dynamicCreativeElements.miniProgramPath)
         && Objects.equals(this.label, dynamicCreativeElements.label)
@@ -1062,6 +1131,9 @@ public class DynamicCreativeElements {
         url,
         buttonText,
         bottomText,
+        countdownBegin,
+        countdownPrice,
+        countdownTimeType,
         miniProgramId,
         miniProgramPath,
         label,
