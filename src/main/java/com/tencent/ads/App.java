@@ -65,7 +65,6 @@ public class App {
   @Inject CustomAudienceInsightsApiContainer customAudienceInsightsApiContainer;
   @Inject CustomAudienceReportsApiContainer customAudienceReportsApiContainer;
   @Inject CustomAudiencesApiContainer customAudiencesApiContainer;
-  @Inject CustomDataSaltApiContainer customDataSaltApiContainer;
   @Inject CustomFeaturesApiContainer customFeaturesApiContainer;
   @Inject CustomTagFilesApiContainer customTagFilesApiContainer;
   @Inject CustomTagsApiContainer customTagsApiContainer;
@@ -345,10 +344,6 @@ public class App {
 
   public CustomAudiencesApiContainer customAudiences() {
     return customAudiencesApiContainer;
-  }
-
-  public CustomDataSaltApiContainer customDataSalt() {
-    return customDataSaltApiContainer;
   }
 
   public CustomFeaturesApiContainer customFeatures() {

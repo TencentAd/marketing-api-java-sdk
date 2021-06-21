@@ -48,7 +48,7 @@ public class DynamicCreativeElements {
   private List<String> imageOptions = null;
 
   @SerializedName("image_list_options")
-  private List<ImageListOptions> imageListOptions = null;
+  private List<AdcreativeImageList> imageListOptions = null;
 
   @SerializedName("title_options")
   private List<String> titleOptions = null;
@@ -312,14 +312,14 @@ public class DynamicCreativeElements {
     this.imageOptions = imageOptions;
   }
 
-  public DynamicCreativeElements imageListOptions(List<ImageListOptions> imageListOptions) {
+  public DynamicCreativeElements imageListOptions(List<AdcreativeImageList> imageListOptions) {
     this.imageListOptions = imageListOptions;
     return this;
   }
 
-  public DynamicCreativeElements addImageListOptionsItem(ImageListOptions imageListOptionsItem) {
+  public DynamicCreativeElements addImageListOptionsItem(AdcreativeImageList imageListOptionsItem) {
     if (this.imageListOptions == null) {
-      this.imageListOptions = new ArrayList<ImageListOptions>();
+      this.imageListOptions = new ArrayList<AdcreativeImageList>();
     }
     this.imageListOptions.add(imageListOptionsItem);
     return this;
@@ -331,11 +331,11 @@ public class DynamicCreativeElements {
    * @return imageListOptions
    */
   @ApiModelProperty(value = "")
-  public List<ImageListOptions> getImageListOptions() {
+  public List<AdcreativeImageList> getImageListOptions() {
     return imageListOptions;
   }
 
-  public void setImageListOptions(List<ImageListOptions> imageListOptions) {
+  public void setImageListOptions(List<AdcreativeImageList> imageListOptions) {
     this.imageListOptions = imageListOptions;
   }
 
