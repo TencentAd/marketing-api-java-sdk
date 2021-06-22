@@ -24,6 +24,9 @@ public class Memo {
   @SerializedName("wechat_fund_spec")
   private WechatFundSpec wechatFundSpec = null;
 
+  @SerializedName("local_wechat_fund_spec")
+  private LocalWechatFundSpec localWechatFundSpec = null;
+
   public Memo wechatFundSpec(WechatFundSpec wechatFundSpec) {
     this.wechatFundSpec = wechatFundSpec;
     return this;
@@ -43,6 +46,25 @@ public class Memo {
     this.wechatFundSpec = wechatFundSpec;
   }
 
+  public Memo localWechatFundSpec(LocalWechatFundSpec localWechatFundSpec) {
+    this.localWechatFundSpec = localWechatFundSpec;
+    return this;
+  }
+
+  /**
+   * Get localWechatFundSpec
+   *
+   * @return localWechatFundSpec
+   */
+  @ApiModelProperty(value = "")
+  public LocalWechatFundSpec getLocalWechatFundSpec() {
+    return localWechatFundSpec;
+  }
+
+  public void setLocalWechatFundSpec(LocalWechatFundSpec localWechatFundSpec) {
+    this.localWechatFundSpec = localWechatFundSpec;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -52,12 +74,13 @@ public class Memo {
       return false;
     }
     Memo memo = (Memo) o;
-    return Objects.equals(this.wechatFundSpec, memo.wechatFundSpec);
+    return Objects.equals(this.wechatFundSpec, memo.wechatFundSpec)
+        && Objects.equals(this.localWechatFundSpec, memo.localWechatFundSpec);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(wechatFundSpec);
+    return Objects.hash(wechatFundSpec, localWechatFundSpec);
   }
 
   @Override

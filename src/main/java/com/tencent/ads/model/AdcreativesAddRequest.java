@@ -46,7 +46,7 @@ public class AdcreativesAddRequest {
   private LinkPageType linkPageType = null;
 
   @SerializedName("link_name_type")
-  private LinkNameTypeMP linkNameType = null;
+  private LinkNameType linkNameType = null;
 
   @SerializedName("link_page_spec")
   private LinkPageSpec linkPageSpec = null;
@@ -295,7 +295,7 @@ public class AdcreativesAddRequest {
     this.linkPageType = linkPageType;
   }
 
-  public AdcreativesAddRequest linkNameType(LinkNameTypeMP linkNameType) {
+  public AdcreativesAddRequest linkNameType(LinkNameType linkNameType) {
     this.linkNameType = linkNameType;
     return this;
   }
@@ -306,11 +306,11 @@ public class AdcreativesAddRequest {
    * @return linkNameType
    */
   @ApiModelProperty(value = "")
-  public LinkNameTypeMP getLinkNameType() {
+  public LinkNameType getLinkNameType() {
     return linkNameType;
   }
 
-  public void setLinkNameType(LinkNameTypeMP linkNameType) {
+  public void setLinkNameType(LinkNameType linkNameType) {
     this.linkNameType = linkNameType;
   }
 

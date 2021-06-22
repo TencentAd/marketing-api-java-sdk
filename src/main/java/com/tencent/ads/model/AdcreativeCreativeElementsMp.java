@@ -48,7 +48,7 @@ public class AdcreativeCreativeElementsMp {
   private String deepLinkType = null;
 
   @SerializedName("link_name_type")
-  private LinkNameTypeMP linkNameType = null;
+  private LinkNameType linkNameType = null;
 
   @SerializedName("image_list")
   private List<String> imageList = null;
@@ -292,7 +292,7 @@ public class AdcreativeCreativeElementsMp {
     this.deepLinkType = deepLinkType;
   }
 
-  public AdcreativeCreativeElementsMp linkNameType(LinkNameTypeMP linkNameType) {
+  public AdcreativeCreativeElementsMp linkNameType(LinkNameType linkNameType) {
     this.linkNameType = linkNameType;
     return this;
   }
@@ -303,11 +303,11 @@ public class AdcreativeCreativeElementsMp {
    * @return linkNameType
    */
   @ApiModelProperty(value = "")
-  public LinkNameTypeMP getLinkNameType() {
+  public LinkNameType getLinkNameType() {
     return linkNameType;
   }
 
-  public void setLinkNameType(LinkNameTypeMP linkNameType) {
+  public void setLinkNameType(LinkNameType linkNameType) {
     this.linkNameType = linkNameType;
   }
 
