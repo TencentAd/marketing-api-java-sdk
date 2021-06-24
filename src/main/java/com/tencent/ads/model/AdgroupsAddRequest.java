@@ -150,6 +150,9 @@ public class AdgroupsAddRequest {
   @SerializedName("smart_bid_type")
   private SmartBidType smartBidType = null;
 
+  @SerializedName("marketing_scene")
+  private MarketingScene marketingScene = null;
+
   @SerializedName("account_id")
   private Long accountId = null;
 
@@ -1021,6 +1024,25 @@ public class AdgroupsAddRequest {
     this.smartBidType = smartBidType;
   }
 
+  public AdgroupsAddRequest marketingScene(MarketingScene marketingScene) {
+    this.marketingScene = marketingScene;
+    return this;
+  }
+
+  /**
+   * Get marketingScene
+   *
+   * @return marketingScene
+   */
+  @ApiModelProperty(value = "")
+  public MarketingScene getMarketingScene() {
+    return marketingScene;
+  }
+
+  public void setMarketingScene(MarketingScene marketingScene) {
+    this.marketingScene = marketingScene;
+  }
+
   public AdgroupsAddRequest accountId(Long accountId) {
     this.accountId = accountId;
     return this;
@@ -1097,6 +1119,7 @@ public class AdgroupsAddRequest {
         && Objects.equals(
             this.autoDerivedCreativeEnabled, adgroupsAddRequest.autoDerivedCreativeEnabled)
         && Objects.equals(this.smartBidType, adgroupsAddRequest.smartBidType)
+        && Objects.equals(this.marketingScene, adgroupsAddRequest.marketingScene)
         && Objects.equals(this.accountId, adgroupsAddRequest.accountId);
   }
 
@@ -1146,6 +1169,7 @@ public class AdgroupsAddRequest {
         creativeDisplayType,
         autoDerivedCreativeEnabled,
         smartBidType,
+        marketingScene,
         accountId);
   }
 

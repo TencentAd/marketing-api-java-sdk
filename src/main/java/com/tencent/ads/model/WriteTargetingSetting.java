@@ -113,12 +113,6 @@ public class WriteTargetingSetting {
   @SerializedName("behavior_or_interest")
   private BehaviorOrInterest behaviorOrInterest = null;
 
-  @SerializedName("wechat_official_account_category")
-  private List<Long> wechatOfficialAccountCategory = null;
-
-  @SerializedName("mobile_union_category")
-  private List<Long> mobileUnionCategory = null;
-
   @SerializedName("excluded_converted_audience")
   private ExcludedConvertedAudienceStruct excludedConvertedAudience = null;
 
@@ -903,62 +897,6 @@ public class WriteTargetingSetting {
     this.behaviorOrInterest = behaviorOrInterest;
   }
 
-  public WriteTargetingSetting wechatOfficialAccountCategory(
-      List<Long> wechatOfficialAccountCategory) {
-    this.wechatOfficialAccountCategory = wechatOfficialAccountCategory;
-    return this;
-  }
-
-  public WriteTargetingSetting addWechatOfficialAccountCategoryItem(
-      Long wechatOfficialAccountCategoryItem) {
-    if (this.wechatOfficialAccountCategory == null) {
-      this.wechatOfficialAccountCategory = new ArrayList<Long>();
-    }
-    this.wechatOfficialAccountCategory.add(wechatOfficialAccountCategoryItem);
-    return this;
-  }
-
-  /**
-   * Get wechatOfficialAccountCategory
-   *
-   * @return wechatOfficialAccountCategory
-   */
-  @ApiModelProperty(value = "")
-  public List<Long> getWechatOfficialAccountCategory() {
-    return wechatOfficialAccountCategory;
-  }
-
-  public void setWechatOfficialAccountCategory(List<Long> wechatOfficialAccountCategory) {
-    this.wechatOfficialAccountCategory = wechatOfficialAccountCategory;
-  }
-
-  public WriteTargetingSetting mobileUnionCategory(List<Long> mobileUnionCategory) {
-    this.mobileUnionCategory = mobileUnionCategory;
-    return this;
-  }
-
-  public WriteTargetingSetting addMobileUnionCategoryItem(Long mobileUnionCategoryItem) {
-    if (this.mobileUnionCategory == null) {
-      this.mobileUnionCategory = new ArrayList<Long>();
-    }
-    this.mobileUnionCategory.add(mobileUnionCategoryItem);
-    return this;
-  }
-
-  /**
-   * Get mobileUnionCategory
-   *
-   * @return mobileUnionCategory
-   */
-  @ApiModelProperty(value = "")
-  public List<Long> getMobileUnionCategory() {
-    return mobileUnionCategory;
-  }
-
-  public void setMobileUnionCategory(List<Long> mobileUnionCategory) {
-    this.mobileUnionCategory = mobileUnionCategory;
-  }
-
   public WriteTargetingSetting excludedConvertedAudience(
       ExcludedConvertedAudienceStruct excludedConvertedAudience) {
     this.excludedConvertedAudience = excludedConvertedAudience;
@@ -1021,9 +959,6 @@ public class WriteTargetingSetting {
         && Objects.equals(this.excludedCustomAudience, writeTargetingSetting.excludedCustomAudience)
         && Objects.equals(this.behaviorOrInterest, writeTargetingSetting.behaviorOrInterest)
         && Objects.equals(
-            this.wechatOfficialAccountCategory, writeTargetingSetting.wechatOfficialAccountCategory)
-        && Objects.equals(this.mobileUnionCategory, writeTargetingSetting.mobileUnionCategory)
-        && Objects.equals(
             this.excludedConvertedAudience, writeTargetingSetting.excludedConvertedAudience);
   }
 
@@ -1060,8 +995,6 @@ public class WriteTargetingSetting {
         customAudience,
         excludedCustomAudience,
         behaviorOrInterest,
-        wechatOfficialAccountCategory,
-        mobileUnionCategory,
         excludedConvertedAudience);
   }
 

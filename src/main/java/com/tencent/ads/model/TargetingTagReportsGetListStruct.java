@@ -909,6 +909,21 @@ public class TargetingTagReportsGetListStruct {
   @SerializedName("first_day_order_roi")
   private Double firstDayOrderRoi = null;
 
+  @SerializedName("mini_game_ad_monetization_cost")
+  private Long miniGameAdMonetizationCost = null;
+
+  @SerializedName("mini_game_ad_monetization_roi")
+  private Double miniGameAdMonetizationRoi = null;
+
+  @SerializedName("mini_game_ad_monetization_arpu")
+  private Long miniGameAdMonetizationArpu = null;
+
+  @SerializedName("mini_game_paying_roi")
+  private Long miniGamePayingRoi = null;
+
+  @SerializedName("mini_game_paying_arpu")
+  private Long miniGamePayingArpu = null;
+
   @SerializedName("age")
   private String age = null;
 
@@ -1115,6 +1130,45 @@ public class TargetingTagReportsGetListStruct {
 
   @SerializedName("mini_game_paying_amount_d1_by_upload")
   private Long miniGamePayingAmountD1ByUpload = null;
+
+  @SerializedName("mixed_monetization_roi_d1")
+  private Double mixedMonetizationRoiD1 = null;
+
+  @SerializedName("mixed_monetization_roi_d3")
+  private Double mixedMonetizationRoiD3 = null;
+
+  @SerializedName("mixed_monetization_roi_d7")
+  private Double mixedMonetizationRoiD7 = null;
+
+  @SerializedName("mixed_monetization_roi_d14")
+  private Double mixedMonetizationRoiD14 = null;
+
+  @SerializedName("mini_game_mixed_monetization_roi_d1")
+  private Double miniGameMixedMonetizationRoiD1 = null;
+
+  @SerializedName("mini_game_mixed_monetization_roi_d3")
+  private Double miniGameMixedMonetizationRoiD3 = null;
+
+  @SerializedName("mini_game_mixed_monetization_roi_d7")
+  private Double miniGameMixedMonetizationRoiD7 = null;
+
+  @SerializedName("mini_game_mixed_monetization_roi_d14")
+  private Double miniGameMixedMonetizationRoiD14 = null;
+
+  @SerializedName("ad_paying_users_d1")
+  private Long adPayingUsersD1 = null;
+
+  @SerializedName("ad_paying_cost_d1")
+  private Long adPayingCostD1 = null;
+
+  @SerializedName("ad_pur_arpu_cost_d1")
+  private Long adPurArpuCostD1 = null;
+
+  @SerializedName("ad_monetization_penetration_rat_d1")
+  private Double adMonetizationPenetrationRatD1 = null;
+
+  @SerializedName("mini_game_paying_arpu_d1")
+  private Long miniGamePayingArpuD1 = null;
 
   public TargetingTagReportsGetListStruct date(String date) {
     this.date = date;
@@ -6770,6 +6824,104 @@ public class TargetingTagReportsGetListStruct {
     this.firstDayOrderRoi = firstDayOrderRoi;
   }
 
+  public TargetingTagReportsGetListStruct miniGameAdMonetizationCost(
+      Long miniGameAdMonetizationCost) {
+    this.miniGameAdMonetizationCost = miniGameAdMonetizationCost;
+    return this;
+  }
+
+  /**
+   * Get miniGameAdMonetizationCost
+   *
+   * @return miniGameAdMonetizationCost
+   */
+  @ApiModelProperty(value = "")
+  public Long getMiniGameAdMonetizationCost() {
+    return miniGameAdMonetizationCost;
+  }
+
+  public void setMiniGameAdMonetizationCost(Long miniGameAdMonetizationCost) {
+    this.miniGameAdMonetizationCost = miniGameAdMonetizationCost;
+  }
+
+  public TargetingTagReportsGetListStruct miniGameAdMonetizationRoi(
+      Double miniGameAdMonetizationRoi) {
+    this.miniGameAdMonetizationRoi = miniGameAdMonetizationRoi;
+    return this;
+  }
+
+  /**
+   * Get miniGameAdMonetizationRoi
+   *
+   * @return miniGameAdMonetizationRoi
+   */
+  @ApiModelProperty(value = "")
+  public Double getMiniGameAdMonetizationRoi() {
+    return miniGameAdMonetizationRoi;
+  }
+
+  public void setMiniGameAdMonetizationRoi(Double miniGameAdMonetizationRoi) {
+    this.miniGameAdMonetizationRoi = miniGameAdMonetizationRoi;
+  }
+
+  public TargetingTagReportsGetListStruct miniGameAdMonetizationArpu(
+      Long miniGameAdMonetizationArpu) {
+    this.miniGameAdMonetizationArpu = miniGameAdMonetizationArpu;
+    return this;
+  }
+
+  /**
+   * Get miniGameAdMonetizationArpu
+   *
+   * @return miniGameAdMonetizationArpu
+   */
+  @ApiModelProperty(value = "")
+  public Long getMiniGameAdMonetizationArpu() {
+    return miniGameAdMonetizationArpu;
+  }
+
+  public void setMiniGameAdMonetizationArpu(Long miniGameAdMonetizationArpu) {
+    this.miniGameAdMonetizationArpu = miniGameAdMonetizationArpu;
+  }
+
+  public TargetingTagReportsGetListStruct miniGamePayingRoi(Long miniGamePayingRoi) {
+    this.miniGamePayingRoi = miniGamePayingRoi;
+    return this;
+  }
+
+  /**
+   * Get miniGamePayingRoi
+   *
+   * @return miniGamePayingRoi
+   */
+  @ApiModelProperty(value = "")
+  public Long getMiniGamePayingRoi() {
+    return miniGamePayingRoi;
+  }
+
+  public void setMiniGamePayingRoi(Long miniGamePayingRoi) {
+    this.miniGamePayingRoi = miniGamePayingRoi;
+  }
+
+  public TargetingTagReportsGetListStruct miniGamePayingArpu(Long miniGamePayingArpu) {
+    this.miniGamePayingArpu = miniGamePayingArpu;
+    return this;
+  }
+
+  /**
+   * Get miniGamePayingArpu
+   *
+   * @return miniGamePayingArpu
+   */
+  @ApiModelProperty(value = "")
+  public Long getMiniGamePayingArpu() {
+    return miniGamePayingArpu;
+  }
+
+  public void setMiniGamePayingArpu(Long miniGamePayingArpu) {
+    this.miniGamePayingArpu = miniGamePayingArpu;
+  }
+
   public TargetingTagReportsGetListStruct age(String age) {
     this.age = age;
     return this;
@@ -8091,6 +8243,258 @@ public class TargetingTagReportsGetListStruct {
     this.miniGamePayingAmountD1ByUpload = miniGamePayingAmountD1ByUpload;
   }
 
+  public TargetingTagReportsGetListStruct mixedMonetizationRoiD1(Double mixedMonetizationRoiD1) {
+    this.mixedMonetizationRoiD1 = mixedMonetizationRoiD1;
+    return this;
+  }
+
+  /**
+   * Get mixedMonetizationRoiD1
+   *
+   * @return mixedMonetizationRoiD1
+   */
+  @ApiModelProperty(value = "")
+  public Double getMixedMonetizationRoiD1() {
+    return mixedMonetizationRoiD1;
+  }
+
+  public void setMixedMonetizationRoiD1(Double mixedMonetizationRoiD1) {
+    this.mixedMonetizationRoiD1 = mixedMonetizationRoiD1;
+  }
+
+  public TargetingTagReportsGetListStruct mixedMonetizationRoiD3(Double mixedMonetizationRoiD3) {
+    this.mixedMonetizationRoiD3 = mixedMonetizationRoiD3;
+    return this;
+  }
+
+  /**
+   * Get mixedMonetizationRoiD3
+   *
+   * @return mixedMonetizationRoiD3
+   */
+  @ApiModelProperty(value = "")
+  public Double getMixedMonetizationRoiD3() {
+    return mixedMonetizationRoiD3;
+  }
+
+  public void setMixedMonetizationRoiD3(Double mixedMonetizationRoiD3) {
+    this.mixedMonetizationRoiD3 = mixedMonetizationRoiD3;
+  }
+
+  public TargetingTagReportsGetListStruct mixedMonetizationRoiD7(Double mixedMonetizationRoiD7) {
+    this.mixedMonetizationRoiD7 = mixedMonetizationRoiD7;
+    return this;
+  }
+
+  /**
+   * Get mixedMonetizationRoiD7
+   *
+   * @return mixedMonetizationRoiD7
+   */
+  @ApiModelProperty(value = "")
+  public Double getMixedMonetizationRoiD7() {
+    return mixedMonetizationRoiD7;
+  }
+
+  public void setMixedMonetizationRoiD7(Double mixedMonetizationRoiD7) {
+    this.mixedMonetizationRoiD7 = mixedMonetizationRoiD7;
+  }
+
+  public TargetingTagReportsGetListStruct mixedMonetizationRoiD14(Double mixedMonetizationRoiD14) {
+    this.mixedMonetizationRoiD14 = mixedMonetizationRoiD14;
+    return this;
+  }
+
+  /**
+   * Get mixedMonetizationRoiD14
+   *
+   * @return mixedMonetizationRoiD14
+   */
+  @ApiModelProperty(value = "")
+  public Double getMixedMonetizationRoiD14() {
+    return mixedMonetizationRoiD14;
+  }
+
+  public void setMixedMonetizationRoiD14(Double mixedMonetizationRoiD14) {
+    this.mixedMonetizationRoiD14 = mixedMonetizationRoiD14;
+  }
+
+  public TargetingTagReportsGetListStruct miniGameMixedMonetizationRoiD1(
+      Double miniGameMixedMonetizationRoiD1) {
+    this.miniGameMixedMonetizationRoiD1 = miniGameMixedMonetizationRoiD1;
+    return this;
+  }
+
+  /**
+   * Get miniGameMixedMonetizationRoiD1
+   *
+   * @return miniGameMixedMonetizationRoiD1
+   */
+  @ApiModelProperty(value = "")
+  public Double getMiniGameMixedMonetizationRoiD1() {
+    return miniGameMixedMonetizationRoiD1;
+  }
+
+  public void setMiniGameMixedMonetizationRoiD1(Double miniGameMixedMonetizationRoiD1) {
+    this.miniGameMixedMonetizationRoiD1 = miniGameMixedMonetizationRoiD1;
+  }
+
+  public TargetingTagReportsGetListStruct miniGameMixedMonetizationRoiD3(
+      Double miniGameMixedMonetizationRoiD3) {
+    this.miniGameMixedMonetizationRoiD3 = miniGameMixedMonetizationRoiD3;
+    return this;
+  }
+
+  /**
+   * Get miniGameMixedMonetizationRoiD3
+   *
+   * @return miniGameMixedMonetizationRoiD3
+   */
+  @ApiModelProperty(value = "")
+  public Double getMiniGameMixedMonetizationRoiD3() {
+    return miniGameMixedMonetizationRoiD3;
+  }
+
+  public void setMiniGameMixedMonetizationRoiD3(Double miniGameMixedMonetizationRoiD3) {
+    this.miniGameMixedMonetizationRoiD3 = miniGameMixedMonetizationRoiD3;
+  }
+
+  public TargetingTagReportsGetListStruct miniGameMixedMonetizationRoiD7(
+      Double miniGameMixedMonetizationRoiD7) {
+    this.miniGameMixedMonetizationRoiD7 = miniGameMixedMonetizationRoiD7;
+    return this;
+  }
+
+  /**
+   * Get miniGameMixedMonetizationRoiD7
+   *
+   * @return miniGameMixedMonetizationRoiD7
+   */
+  @ApiModelProperty(value = "")
+  public Double getMiniGameMixedMonetizationRoiD7() {
+    return miniGameMixedMonetizationRoiD7;
+  }
+
+  public void setMiniGameMixedMonetizationRoiD7(Double miniGameMixedMonetizationRoiD7) {
+    this.miniGameMixedMonetizationRoiD7 = miniGameMixedMonetizationRoiD7;
+  }
+
+  public TargetingTagReportsGetListStruct miniGameMixedMonetizationRoiD14(
+      Double miniGameMixedMonetizationRoiD14) {
+    this.miniGameMixedMonetizationRoiD14 = miniGameMixedMonetizationRoiD14;
+    return this;
+  }
+
+  /**
+   * Get miniGameMixedMonetizationRoiD14
+   *
+   * @return miniGameMixedMonetizationRoiD14
+   */
+  @ApiModelProperty(value = "")
+  public Double getMiniGameMixedMonetizationRoiD14() {
+    return miniGameMixedMonetizationRoiD14;
+  }
+
+  public void setMiniGameMixedMonetizationRoiD14(Double miniGameMixedMonetizationRoiD14) {
+    this.miniGameMixedMonetizationRoiD14 = miniGameMixedMonetizationRoiD14;
+  }
+
+  public TargetingTagReportsGetListStruct adPayingUsersD1(Long adPayingUsersD1) {
+    this.adPayingUsersD1 = adPayingUsersD1;
+    return this;
+  }
+
+  /**
+   * Get adPayingUsersD1
+   *
+   * @return adPayingUsersD1
+   */
+  @ApiModelProperty(value = "")
+  public Long getAdPayingUsersD1() {
+    return adPayingUsersD1;
+  }
+
+  public void setAdPayingUsersD1(Long adPayingUsersD1) {
+    this.adPayingUsersD1 = adPayingUsersD1;
+  }
+
+  public TargetingTagReportsGetListStruct adPayingCostD1(Long adPayingCostD1) {
+    this.adPayingCostD1 = adPayingCostD1;
+    return this;
+  }
+
+  /**
+   * Get adPayingCostD1
+   *
+   * @return adPayingCostD1
+   */
+  @ApiModelProperty(value = "")
+  public Long getAdPayingCostD1() {
+    return adPayingCostD1;
+  }
+
+  public void setAdPayingCostD1(Long adPayingCostD1) {
+    this.adPayingCostD1 = adPayingCostD1;
+  }
+
+  public TargetingTagReportsGetListStruct adPurArpuCostD1(Long adPurArpuCostD1) {
+    this.adPurArpuCostD1 = adPurArpuCostD1;
+    return this;
+  }
+
+  /**
+   * Get adPurArpuCostD1
+   *
+   * @return adPurArpuCostD1
+   */
+  @ApiModelProperty(value = "")
+  public Long getAdPurArpuCostD1() {
+    return adPurArpuCostD1;
+  }
+
+  public void setAdPurArpuCostD1(Long adPurArpuCostD1) {
+    this.adPurArpuCostD1 = adPurArpuCostD1;
+  }
+
+  public TargetingTagReportsGetListStruct adMonetizationPenetrationRatD1(
+      Double adMonetizationPenetrationRatD1) {
+    this.adMonetizationPenetrationRatD1 = adMonetizationPenetrationRatD1;
+    return this;
+  }
+
+  /**
+   * Get adMonetizationPenetrationRatD1
+   *
+   * @return adMonetizationPenetrationRatD1
+   */
+  @ApiModelProperty(value = "")
+  public Double getAdMonetizationPenetrationRatD1() {
+    return adMonetizationPenetrationRatD1;
+  }
+
+  public void setAdMonetizationPenetrationRatD1(Double adMonetizationPenetrationRatD1) {
+    this.adMonetizationPenetrationRatD1 = adMonetizationPenetrationRatD1;
+  }
+
+  public TargetingTagReportsGetListStruct miniGamePayingArpuD1(Long miniGamePayingArpuD1) {
+    this.miniGamePayingArpuD1 = miniGamePayingArpuD1;
+    return this;
+  }
+
+  /**
+   * Get miniGamePayingArpuD1
+   *
+   * @return miniGamePayingArpuD1
+   */
+  @ApiModelProperty(value = "")
+  public Long getMiniGamePayingArpuD1() {
+    return miniGamePayingArpuD1;
+  }
+
+  public void setMiniGamePayingArpuD1(Long miniGamePayingArpuD1) {
+    this.miniGamePayingArpuD1 = miniGamePayingArpuD1;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -8577,6 +8981,19 @@ public class TargetingTagReportsGetListStruct {
             this.keyBehaviorConversionsRate,
             targetingTagReportsGetListStruct.keyBehaviorConversionsRate)
         && Objects.equals(this.firstDayOrderRoi, targetingTagReportsGetListStruct.firstDayOrderRoi)
+        && Objects.equals(
+            this.miniGameAdMonetizationCost,
+            targetingTagReportsGetListStruct.miniGameAdMonetizationCost)
+        && Objects.equals(
+            this.miniGameAdMonetizationRoi,
+            targetingTagReportsGetListStruct.miniGameAdMonetizationRoi)
+        && Objects.equals(
+            this.miniGameAdMonetizationArpu,
+            targetingTagReportsGetListStruct.miniGameAdMonetizationArpu)
+        && Objects.equals(
+            this.miniGamePayingRoi, targetingTagReportsGetListStruct.miniGamePayingRoi)
+        && Objects.equals(
+            this.miniGamePayingArpu, targetingTagReportsGetListStruct.miniGamePayingArpu)
         && Objects.equals(this.age, targetingTagReportsGetListStruct.age)
         && Objects.equals(this.regionId, targetingTagReportsGetListStruct.regionId)
         && Objects.equals(this.cityId, targetingTagReportsGetListStruct.cityId)
@@ -8686,7 +9103,35 @@ public class TargetingTagReportsGetListStruct {
             targetingTagReportsGetListStruct.miniGameFirstDayPayingRoi)
         && Objects.equals(
             this.miniGamePayingAmountD1ByUpload,
-            targetingTagReportsGetListStruct.miniGamePayingAmountD1ByUpload);
+            targetingTagReportsGetListStruct.miniGamePayingAmountD1ByUpload)
+        && Objects.equals(
+            this.mixedMonetizationRoiD1, targetingTagReportsGetListStruct.mixedMonetizationRoiD1)
+        && Objects.equals(
+            this.mixedMonetizationRoiD3, targetingTagReportsGetListStruct.mixedMonetizationRoiD3)
+        && Objects.equals(
+            this.mixedMonetizationRoiD7, targetingTagReportsGetListStruct.mixedMonetizationRoiD7)
+        && Objects.equals(
+            this.mixedMonetizationRoiD14, targetingTagReportsGetListStruct.mixedMonetizationRoiD14)
+        && Objects.equals(
+            this.miniGameMixedMonetizationRoiD1,
+            targetingTagReportsGetListStruct.miniGameMixedMonetizationRoiD1)
+        && Objects.equals(
+            this.miniGameMixedMonetizationRoiD3,
+            targetingTagReportsGetListStruct.miniGameMixedMonetizationRoiD3)
+        && Objects.equals(
+            this.miniGameMixedMonetizationRoiD7,
+            targetingTagReportsGetListStruct.miniGameMixedMonetizationRoiD7)
+        && Objects.equals(
+            this.miniGameMixedMonetizationRoiD14,
+            targetingTagReportsGetListStruct.miniGameMixedMonetizationRoiD14)
+        && Objects.equals(this.adPayingUsersD1, targetingTagReportsGetListStruct.adPayingUsersD1)
+        && Objects.equals(this.adPayingCostD1, targetingTagReportsGetListStruct.adPayingCostD1)
+        && Objects.equals(this.adPurArpuCostD1, targetingTagReportsGetListStruct.adPurArpuCostD1)
+        && Objects.equals(
+            this.adMonetizationPenetrationRatD1,
+            targetingTagReportsGetListStruct.adMonetizationPenetrationRatD1)
+        && Objects.equals(
+            this.miniGamePayingArpuD1, targetingTagReportsGetListStruct.miniGamePayingArpuD1);
   }
 
   @Override
@@ -8988,6 +9433,11 @@ public class TargetingTagReportsGetListStruct {
         keyBehaviorConversionsCost,
         keyBehaviorConversionsRate,
         firstDayOrderRoi,
+        miniGameAdMonetizationCost,
+        miniGameAdMonetizationRoi,
+        miniGameAdMonetizationArpu,
+        miniGamePayingRoi,
+        miniGamePayingArpu,
         age,
         regionId,
         cityId,
@@ -9056,7 +9506,20 @@ public class TargetingTagReportsGetListStruct {
         miniGamePayingUsersD1,
         miniGamePayingAmountD1,
         miniGameFirstDayPayingRoi,
-        miniGamePayingAmountD1ByUpload);
+        miniGamePayingAmountD1ByUpload,
+        mixedMonetizationRoiD1,
+        mixedMonetizationRoiD3,
+        mixedMonetizationRoiD7,
+        mixedMonetizationRoiD14,
+        miniGameMixedMonetizationRoiD1,
+        miniGameMixedMonetizationRoiD3,
+        miniGameMixedMonetizationRoiD7,
+        miniGameMixedMonetizationRoiD14,
+        adPayingUsersD1,
+        adPayingCostD1,
+        adPurArpuCostD1,
+        adMonetizationPenetrationRatD1,
+        miniGamePayingArpuD1);
   }
 
   @Override

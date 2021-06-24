@@ -194,6 +194,9 @@ public class AdgroupsGetListStruct {
   @SerializedName("smart_cost_cap")
   private Long smartCostCap = null;
 
+  @SerializedName("marketing_scene")
+  private MarketingScene marketingScene = null;
+
   public AdgroupsGetListStruct campaignId(Long campaignId) {
     this.campaignId = campaignId;
     return this;
@@ -1330,6 +1333,25 @@ public class AdgroupsGetListStruct {
     this.smartCostCap = smartCostCap;
   }
 
+  public AdgroupsGetListStruct marketingScene(MarketingScene marketingScene) {
+    this.marketingScene = marketingScene;
+    return this;
+  }
+
+  /**
+   * Get marketingScene
+   *
+   * @return marketingScene
+   */
+  @ApiModelProperty(value = "")
+  public MarketingScene getMarketingScene() {
+    return marketingScene;
+  }
+
+  public void setMarketingScene(MarketingScene marketingScene) {
+    this.marketingScene = marketingScene;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -1404,7 +1426,8 @@ public class AdgroupsGetListStruct {
         && Objects.equals(
             this.autoDerivedCreativeEnabled, adgroupsGetListStruct.autoDerivedCreativeEnabled)
         && Objects.equals(this.smartBidType, adgroupsGetListStruct.smartBidType)
-        && Objects.equals(this.smartCostCap, adgroupsGetListStruct.smartCostCap);
+        && Objects.equals(this.smartCostCap, adgroupsGetListStruct.smartCostCap)
+        && Objects.equals(this.marketingScene, adgroupsGetListStruct.marketingScene);
   }
 
   @Override
@@ -1466,7 +1489,8 @@ public class AdgroupsGetListStruct {
         creativeDisplayType,
         autoDerivedCreativeEnabled,
         smartBidType,
-        smartCostCap);
+        smartCostCap,
+        marketingScene);
   }
 
   @Override
