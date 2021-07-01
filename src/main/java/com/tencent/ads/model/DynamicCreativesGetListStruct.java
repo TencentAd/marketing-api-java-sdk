@@ -92,6 +92,9 @@ public class DynamicCreativesGetListStruct {
   @SerializedName("barrage_list")
   private List<BarrageListReadStruct> barrageList = null;
 
+  @SerializedName("dynamic_creative_group_used")
+  private DynamicCreativeGroupUsed dynamicCreativeGroupUsed = null;
+
   public DynamicCreativesGetListStruct dynamicCreativeId(Long dynamicCreativeId) {
     this.dynamicCreativeId = dynamicCreativeId;
     return this;
@@ -546,6 +549,26 @@ public class DynamicCreativesGetListStruct {
     this.barrageList = barrageList;
   }
 
+  public DynamicCreativesGetListStruct dynamicCreativeGroupUsed(
+      DynamicCreativeGroupUsed dynamicCreativeGroupUsed) {
+    this.dynamicCreativeGroupUsed = dynamicCreativeGroupUsed;
+    return this;
+  }
+
+  /**
+   * Get dynamicCreativeGroupUsed
+   *
+   * @return dynamicCreativeGroupUsed
+   */
+  @ApiModelProperty(value = "")
+  public DynamicCreativeGroupUsed getDynamicCreativeGroupUsed() {
+    return dynamicCreativeGroupUsed;
+  }
+
+  public void setDynamicCreativeGroupUsed(DynamicCreativeGroupUsed dynamicCreativeGroupUsed) {
+    this.dynamicCreativeGroupUsed = dynamicCreativeGroupUsed;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -583,7 +606,9 @@ public class DynamicCreativesGetListStruct {
             this.feedsVideoCommentSwitch, dynamicCreativesGetListStruct.feedsVideoCommentSwitch)
         && Objects.equals(this.unionMarketSwitch, dynamicCreativesGetListStruct.unionMarketSwitch)
         && Objects.equals(this.videoEndPage, dynamicCreativesGetListStruct.videoEndPage)
-        && Objects.equals(this.barrageList, dynamicCreativesGetListStruct.barrageList);
+        && Objects.equals(this.barrageList, dynamicCreativesGetListStruct.barrageList)
+        && Objects.equals(
+            this.dynamicCreativeGroupUsed, dynamicCreativesGetListStruct.dynamicCreativeGroupUsed);
   }
 
   @Override
@@ -611,7 +636,8 @@ public class DynamicCreativesGetListStruct {
         feedsVideoCommentSwitch,
         unionMarketSwitch,
         videoEndPage,
-        barrageList);
+        barrageList,
+        dynamicCreativeGroupUsed);
   }
 
   @Override

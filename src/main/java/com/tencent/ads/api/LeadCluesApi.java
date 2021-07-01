@@ -285,7 +285,7 @@ public class LeadCluesApi {
   }
 
   /**
-   * 回传线索信息
+   * 回传线索状态
    *
    * @param data (required)
    * @return LeadCluesUpdateResponse
@@ -298,7 +298,7 @@ public class LeadCluesApi {
   }
 
   /**
-   * 回传线索信息
+   * 回传线索状态
    *
    * @param data (required)
    * @return ApiResponse&lt;LeadCluesUpdateResponse&gt;
@@ -313,7 +313,7 @@ public class LeadCluesApi {
   }
 
   /**
-   * 回传线索信息 (asynchronously)
+   * 回传线索状态 (asynchronously)
    *
    * @param data (required)
    * @param callback The callback to be executed when the API call finishes

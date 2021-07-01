@@ -36,6 +36,9 @@ public class PageSpec {
   @SerializedName("override_canvas_head_option")
   private OverrideCanvasHeadOption overrideCanvasHeadOption = null;
 
+  @SerializedName("dynamic_product_spec")
+  private DynamicProductSpec dynamicProductSpec = null;
+
   public PageSpec pageId(Long pageId) {
     this.pageId = pageId;
     return this;
@@ -131,6 +134,25 @@ public class PageSpec {
     this.overrideCanvasHeadOption = overrideCanvasHeadOption;
   }
 
+  public PageSpec dynamicProductSpec(DynamicProductSpec dynamicProductSpec) {
+    this.dynamicProductSpec = dynamicProductSpec;
+    return this;
+  }
+
+  /**
+   * Get dynamicProductSpec
+   *
+   * @return dynamicProductSpec
+   */
+  @ApiModelProperty(value = "")
+  public DynamicProductSpec getDynamicProductSpec() {
+    return dynamicProductSpec;
+  }
+
+  public void setDynamicProductSpec(DynamicProductSpec dynamicProductSpec) {
+    this.dynamicProductSpec = dynamicProductSpec;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -144,12 +166,19 @@ public class PageSpec {
         && Objects.equals(this.pageUrl, pageSpec.pageUrl)
         && Objects.equals(this.miniProgramSpec, pageSpec.miniProgramSpec)
         && Objects.equals(this.miniGameSpec, pageSpec.miniGameSpec)
-        && Objects.equals(this.overrideCanvasHeadOption, pageSpec.overrideCanvasHeadOption);
+        && Objects.equals(this.overrideCanvasHeadOption, pageSpec.overrideCanvasHeadOption)
+        && Objects.equals(this.dynamicProductSpec, pageSpec.dynamicProductSpec);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(pageId, pageUrl, miniProgramSpec, miniGameSpec, overrideCanvasHeadOption);
+    return Objects.hash(
+        pageId,
+        pageUrl,
+        miniProgramSpec,
+        miniGameSpec,
+        overrideCanvasHeadOption,
+        dynamicProductSpec);
   }
 
   @Override

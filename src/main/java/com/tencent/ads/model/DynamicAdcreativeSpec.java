@@ -30,6 +30,12 @@ public class DynamicAdcreativeSpec {
   @SerializedName("product_source")
   private String productSource = null;
 
+  @SerializedName("product_exposure_quantity_mode")
+  private ProductItemsQuantity productExposureQuantityMode = null;
+
+  @SerializedName("landing_page_url_type")
+  private LandingPageUrlType landingPageUrlType = null;
+
   public DynamicAdcreativeSpec productCatalogId(Long productCatalogId) {
     this.productCatalogId = productCatalogId;
     return this;
@@ -87,6 +93,45 @@ public class DynamicAdcreativeSpec {
     this.productSource = productSource;
   }
 
+  public DynamicAdcreativeSpec productExposureQuantityMode(
+      ProductItemsQuantity productExposureQuantityMode) {
+    this.productExposureQuantityMode = productExposureQuantityMode;
+    return this;
+  }
+
+  /**
+   * Get productExposureQuantityMode
+   *
+   * @return productExposureQuantityMode
+   */
+  @ApiModelProperty(value = "")
+  public ProductItemsQuantity getProductExposureQuantityMode() {
+    return productExposureQuantityMode;
+  }
+
+  public void setProductExposureQuantityMode(ProductItemsQuantity productExposureQuantityMode) {
+    this.productExposureQuantityMode = productExposureQuantityMode;
+  }
+
+  public DynamicAdcreativeSpec landingPageUrlType(LandingPageUrlType landingPageUrlType) {
+    this.landingPageUrlType = landingPageUrlType;
+    return this;
+  }
+
+  /**
+   * Get landingPageUrlType
+   *
+   * @return landingPageUrlType
+   */
+  @ApiModelProperty(value = "")
+  public LandingPageUrlType getLandingPageUrlType() {
+    return landingPageUrlType;
+  }
+
+  public void setLandingPageUrlType(LandingPageUrlType landingPageUrlType) {
+    this.landingPageUrlType = landingPageUrlType;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -98,12 +143,20 @@ public class DynamicAdcreativeSpec {
     DynamicAdcreativeSpec dynamicAdcreativeSpec = (DynamicAdcreativeSpec) o;
     return Objects.equals(this.productCatalogId, dynamicAdcreativeSpec.productCatalogId)
         && Objects.equals(this.productMode, dynamicAdcreativeSpec.productMode)
-        && Objects.equals(this.productSource, dynamicAdcreativeSpec.productSource);
+        && Objects.equals(this.productSource, dynamicAdcreativeSpec.productSource)
+        && Objects.equals(
+            this.productExposureQuantityMode, dynamicAdcreativeSpec.productExposureQuantityMode)
+        && Objects.equals(this.landingPageUrlType, dynamicAdcreativeSpec.landingPageUrlType);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(productCatalogId, productMode, productSource);
+    return Objects.hash(
+        productCatalogId,
+        productMode,
+        productSource,
+        productExposureQuantityMode,
+        landingPageUrlType);
   }
 
   @Override

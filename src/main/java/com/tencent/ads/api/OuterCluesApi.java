@@ -135,7 +135,7 @@ public class OuterCluesApi {
   }
 
   /**
-   * 第三方线索导入
+   * 外部线索数据导入
    *
    * @param data (required)
    * @return OuterCluesAddResponse
@@ -148,7 +148,7 @@ public class OuterCluesApi {
   }
 
   /**
-   * 第三方线索导入
+   * 外部线索数据导入
    *
    * @param data (required)
    * @return ApiResponse&lt;OuterCluesAddResponse&gt;
@@ -163,7 +163,7 @@ public class OuterCluesApi {
   }
 
   /**
-   * 第三方线索导入 (asynchronously)
+   * 外部线索数据导入 (asynchronously)
    *
    * @param data (required)
    * @param callback The callback to be executed when the API call finishes
@@ -285,7 +285,7 @@ public class OuterCluesApi {
   }
 
   /**
-   * 更新线索状态
+   * 外部线索状态更新
    *
    * @param data (required)
    * @return OuterCluesUpdateResponse
@@ -299,7 +299,7 @@ public class OuterCluesApi {
   }
 
   /**
-   * 更新线索状态
+   * 外部线索状态更新
    *
    * @param data (required)
    * @return ApiResponse&lt;OuterCluesUpdateResponse&gt;
@@ -314,7 +314,7 @@ public class OuterCluesApi {
   }
 
   /**
-   * 更新线索状态 (asynchronously)
+   * 外部线索状态更新 (asynchronously)
    *
    * @param data (required)
    * @param callback The callback to be executed when the API call finishes

@@ -44,7 +44,7 @@ public class LeadCluesApiContainer extends ApiContainer {
   }
 
   /**
-   * 回传线索信息
+   * 回传线索状态
    *
    * @param data (required)
    * @return LeadCluesUpdateResponse

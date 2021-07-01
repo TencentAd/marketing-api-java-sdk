@@ -73,7 +73,7 @@ public class ProductItemsGetListStruct {
   private String customData = null;
 
   @SerializedName("is_video")
-  private String isVideo = null;
+  private Boolean isVideo = null;
 
   @SerializedName("data_source")
   private String dataSource = null;
@@ -404,7 +404,7 @@ public class ProductItemsGetListStruct {
     this.customData = customData;
   }
 
-  public ProductItemsGetListStruct isVideo(String isVideo) {
+  public ProductItemsGetListStruct isVideo(Boolean isVideo) {
     this.isVideo = isVideo;
     return this;
   }
@@ -415,11 +415,11 @@ public class ProductItemsGetListStruct {
    * @return isVideo
    */
   @ApiModelProperty(value = "")
-  public String getIsVideo() {
+  public Boolean isIsVideo() {
     return isVideo;
   }
 
-  public void setIsVideo(String isVideo) {
+  public void setIsVideo(Boolean isVideo) {
     this.isVideo = isVideo;
   }
 

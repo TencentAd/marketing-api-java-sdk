@@ -16,6 +16,8 @@ import com.google.gson.Gson;
 import com.google.gson.annotations.SerializedName;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Objects;
 
 /** 动态商品广告属性 */
@@ -29,6 +31,9 @@ public class DynamicAdSpec {
 
   @SerializedName("product_source")
   private String productSource = null;
+
+  @SerializedName("product_recommend_methods")
+  private List<Long> productRecommendMethods = null;
 
   public DynamicAdSpec productCatalogId(Long productCatalogId) {
     this.productCatalogId = productCatalogId;
@@ -87,6 +92,33 @@ public class DynamicAdSpec {
     this.productSource = productSource;
   }
 
+  public DynamicAdSpec productRecommendMethods(List<Long> productRecommendMethods) {
+    this.productRecommendMethods = productRecommendMethods;
+    return this;
+  }
+
+  public DynamicAdSpec addProductRecommendMethodsItem(Long productRecommendMethodsItem) {
+    if (this.productRecommendMethods == null) {
+      this.productRecommendMethods = new ArrayList<Long>();
+    }
+    this.productRecommendMethods.add(productRecommendMethodsItem);
+    return this;
+  }
+
+  /**
+   * Get productRecommendMethods
+   *
+   * @return productRecommendMethods
+   */
+  @ApiModelProperty(value = "")
+  public List<Long> getProductRecommendMethods() {
+    return productRecommendMethods;
+  }
+
+  public void setProductRecommendMethods(List<Long> productRecommendMethods) {
+    this.productRecommendMethods = productRecommendMethods;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -98,12 +130,13 @@ public class DynamicAdSpec {
     DynamicAdSpec dynamicAdSpec = (DynamicAdSpec) o;
     return Objects.equals(this.productCatalogId, dynamicAdSpec.productCatalogId)
         && Objects.equals(this.productMode, dynamicAdSpec.productMode)
-        && Objects.equals(this.productSource, dynamicAdSpec.productSource);
+        && Objects.equals(this.productSource, dynamicAdSpec.productSource)
+        && Objects.equals(this.productRecommendMethods, dynamicAdSpec.productRecommendMethods);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(productCatalogId, productMode, productSource);
+    return Objects.hash(productCatalogId, productMode, productSource, productRecommendMethods);
   }
 
   @Override

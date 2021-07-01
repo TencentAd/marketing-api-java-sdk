@@ -45,7 +45,7 @@ public class AdcreativesGetListStruct {
   private LinkPageType linkPageType = null;
 
   @SerializedName("link_name_type")
-  private LinkNameType linkNameType = null;
+  private LinkUrlLinkNameType linkNameType = null;
 
   @SerializedName("link_page_spec")
   private LinkPageSpec linkPageSpec = null;
@@ -291,7 +291,7 @@ public class AdcreativesGetListStruct {
     this.linkPageType = linkPageType;
   }
 
-  public AdcreativesGetListStruct linkNameType(LinkNameType linkNameType) {
+  public AdcreativesGetListStruct linkNameType(LinkUrlLinkNameType linkNameType) {
     this.linkNameType = linkNameType;
     return this;
   }
@@ -302,11 +302,11 @@ public class AdcreativesGetListStruct {
    * @return linkNameType
    */
   @ApiModelProperty(value = "")
-  public LinkNameType getLinkNameType() {
+  public LinkUrlLinkNameType getLinkNameType() {
     return linkNameType;
   }
 
-  public void setLinkNameType(LinkNameType linkNameType) {
+  public void setLinkNameType(LinkUrlLinkNameType linkNameType) {
     this.linkNameType = linkNameType;
   }
 

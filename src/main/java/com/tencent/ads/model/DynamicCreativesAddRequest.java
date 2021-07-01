@@ -78,6 +78,9 @@ public class DynamicCreativesAddRequest {
   @SerializedName("barrage_list")
   private List<BarrageListCreateStruct> barrageList = null;
 
+  @SerializedName("dynamic_creative_group_used")
+  private DynamicCreativeGroupUsed dynamicCreativeGroupUsed = null;
+
   @SerializedName("account_id")
   private Long accountId = null;
 
@@ -460,6 +463,26 @@ public class DynamicCreativesAddRequest {
     this.barrageList = barrageList;
   }
 
+  public DynamicCreativesAddRequest dynamicCreativeGroupUsed(
+      DynamicCreativeGroupUsed dynamicCreativeGroupUsed) {
+    this.dynamicCreativeGroupUsed = dynamicCreativeGroupUsed;
+    return this;
+  }
+
+  /**
+   * Get dynamicCreativeGroupUsed
+   *
+   * @return dynamicCreativeGroupUsed
+   */
+  @ApiModelProperty(value = "")
+  public DynamicCreativeGroupUsed getDynamicCreativeGroupUsed() {
+    return dynamicCreativeGroupUsed;
+  }
+
+  public void setDynamicCreativeGroupUsed(DynamicCreativeGroupUsed dynamicCreativeGroupUsed) {
+    this.dynamicCreativeGroupUsed = dynamicCreativeGroupUsed;
+  }
+
   public DynamicCreativesAddRequest accountId(Long accountId) {
     this.accountId = accountId;
     return this;
@@ -513,6 +536,8 @@ public class DynamicCreativesAddRequest {
             this.dynamicAdcreativeSpec, dynamicCreativesAddRequest.dynamicAdcreativeSpec)
         && Objects.equals(this.videoEndPage, dynamicCreativesAddRequest.videoEndPage)
         && Objects.equals(this.barrageList, dynamicCreativesAddRequest.barrageList)
+        && Objects.equals(
+            this.dynamicCreativeGroupUsed, dynamicCreativesAddRequest.dynamicCreativeGroupUsed)
         && Objects.equals(this.accountId, dynamicCreativesAddRequest.accountId);
   }
 
@@ -538,6 +563,7 @@ public class DynamicCreativesAddRequest {
         dynamicAdcreativeSpec,
         videoEndPage,
         barrageList,
+        dynamicCreativeGroupUsed,
         accountId);
   }
 

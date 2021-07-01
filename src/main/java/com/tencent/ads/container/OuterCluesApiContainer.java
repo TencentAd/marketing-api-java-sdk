@@ -30,7 +30,7 @@ public class OuterCluesApiContainer extends ApiContainer {
   @Inject OuterCluesApi api;
 
   /**
-   * 第三方线索导入
+   * 外部线索数据导入
    *
    * @param data (required)
    * @return OuterCluesAddResponse
@@ -45,7 +45,7 @@ public class OuterCluesApiContainer extends ApiContainer {
   }
 
   /**
-   * 更新线索状态
+   * 外部线索状态更新
    *
    * @param data (required)
    * @return OuterCluesUpdateResponse
