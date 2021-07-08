@@ -34,6 +34,9 @@ public class CampaignsAddRequest {
   @SerializedName("daily_budget")
   private Long dailyBudget = null;
 
+  @SerializedName("total_budget")
+  private Long totalBudget = null;
+
   @SerializedName("configured_status")
   private AdStatus configuredStatus = null;
 
@@ -135,6 +138,25 @@ public class CampaignsAddRequest {
     this.dailyBudget = dailyBudget;
   }
 
+  public CampaignsAddRequest totalBudget(Long totalBudget) {
+    this.totalBudget = totalBudget;
+    return this;
+  }
+
+  /**
+   * Get totalBudget
+   *
+   * @return totalBudget
+   */
+  @ApiModelProperty(value = "")
+  public Long getTotalBudget() {
+    return totalBudget;
+  }
+
+  public void setTotalBudget(Long totalBudget) {
+    this.totalBudget = totalBudget;
+  }
+
   public CampaignsAddRequest configuredStatus(AdStatus configuredStatus) {
     this.configuredStatus = configuredStatus;
     return this;
@@ -187,6 +209,7 @@ public class CampaignsAddRequest {
         && Objects.equals(this.campaignType, campaignsAddRequest.campaignType)
         && Objects.equals(this.promotedObjectType, campaignsAddRequest.promotedObjectType)
         && Objects.equals(this.dailyBudget, campaignsAddRequest.dailyBudget)
+        && Objects.equals(this.totalBudget, campaignsAddRequest.totalBudget)
         && Objects.equals(this.configuredStatus, campaignsAddRequest.configuredStatus)
         && Objects.equals(this.speedMode, campaignsAddRequest.speedMode);
   }
@@ -199,6 +222,7 @@ public class CampaignsAddRequest {
         campaignType,
         promotedObjectType,
         dailyBudget,
+        totalBudget,
         configuredStatus,
         speedMode);
   }

@@ -197,6 +197,9 @@ public class AdgroupsGetListStruct {
   @SerializedName("marketing_scene")
   private MarketingScene marketingScene = null;
 
+  @SerializedName("deep_optimization_type")
+  private DeepOptimizationType deepOptimizationType = null;
+
   public AdgroupsGetListStruct campaignId(Long campaignId) {
     this.campaignId = campaignId;
     return this;
@@ -1352,6 +1355,25 @@ public class AdgroupsGetListStruct {
     this.marketingScene = marketingScene;
   }
 
+  public AdgroupsGetListStruct deepOptimizationType(DeepOptimizationType deepOptimizationType) {
+    this.deepOptimizationType = deepOptimizationType;
+    return this;
+  }
+
+  /**
+   * Get deepOptimizationType
+   *
+   * @return deepOptimizationType
+   */
+  @ApiModelProperty(value = "")
+  public DeepOptimizationType getDeepOptimizationType() {
+    return deepOptimizationType;
+  }
+
+  public void setDeepOptimizationType(DeepOptimizationType deepOptimizationType) {
+    this.deepOptimizationType = deepOptimizationType;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -1427,7 +1449,8 @@ public class AdgroupsGetListStruct {
             this.autoDerivedCreativeEnabled, adgroupsGetListStruct.autoDerivedCreativeEnabled)
         && Objects.equals(this.smartBidType, adgroupsGetListStruct.smartBidType)
         && Objects.equals(this.smartCostCap, adgroupsGetListStruct.smartCostCap)
-        && Objects.equals(this.marketingScene, adgroupsGetListStruct.marketingScene);
+        && Objects.equals(this.marketingScene, adgroupsGetListStruct.marketingScene)
+        && Objects.equals(this.deepOptimizationType, adgroupsGetListStruct.deepOptimizationType);
   }
 
   @Override
@@ -1490,7 +1513,8 @@ public class AdgroupsGetListStruct {
         autoDerivedCreativeEnabled,
         smartBidType,
         smartCostCap,
-        marketingScene);
+        marketingScene,
+        deepOptimizationType);
   }
 
   @Override

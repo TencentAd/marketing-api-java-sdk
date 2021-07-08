@@ -39,6 +39,9 @@ public class CampaignsGetListStruct {
   @SerializedName("daily_budget")
   private Long dailyBudget = null;
 
+  @SerializedName("total_budget")
+  private Long totalBudget = null;
+
   @SerializedName("budget_reach_date")
   private Long budgetReachDate = null;
 
@@ -171,6 +174,25 @@ public class CampaignsGetListStruct {
     this.dailyBudget = dailyBudget;
   }
 
+  public CampaignsGetListStruct totalBudget(Long totalBudget) {
+    this.totalBudget = totalBudget;
+    return this;
+  }
+
+  /**
+   * Get totalBudget
+   *
+   * @return totalBudget
+   */
+  @ApiModelProperty(value = "")
+  public Long getTotalBudget() {
+    return totalBudget;
+  }
+
+  public void setTotalBudget(Long totalBudget) {
+    this.totalBudget = totalBudget;
+  }
+
   public CampaignsGetListStruct budgetReachDate(Long budgetReachDate) {
     this.budgetReachDate = budgetReachDate;
     return this;
@@ -300,6 +322,7 @@ public class CampaignsGetListStruct {
         && Objects.equals(this.campaignType, campaignsGetListStruct.campaignType)
         && Objects.equals(this.promotedObjectType, campaignsGetListStruct.promotedObjectType)
         && Objects.equals(this.dailyBudget, campaignsGetListStruct.dailyBudget)
+        && Objects.equals(this.totalBudget, campaignsGetListStruct.totalBudget)
         && Objects.equals(this.budgetReachDate, campaignsGetListStruct.budgetReachDate)
         && Objects.equals(this.createdTime, campaignsGetListStruct.createdTime)
         && Objects.equals(this.lastModifiedTime, campaignsGetListStruct.lastModifiedTime)
@@ -317,6 +340,7 @@ public class CampaignsGetListStruct {
         campaignType,
         promotedObjectType,
         dailyBudget,
+        totalBudget,
         budgetReachDate,
         createdTime,
         lastModifiedTime,

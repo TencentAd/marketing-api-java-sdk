@@ -19,7 +19,7 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-/** 资金账户类型 */
+/** 资金账户类型，注意非微信资金账户类型 */
 @JsonAdapter(WechatMpOpenFundType.Adapter.class)
 public enum WechatMpOpenFundType {
   UNSUPPORTED("FUND_TYPE_UNSUPPORTED"),

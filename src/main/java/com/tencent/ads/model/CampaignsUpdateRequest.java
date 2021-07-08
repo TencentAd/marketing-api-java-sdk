@@ -31,6 +31,9 @@ public class CampaignsUpdateRequest {
   @SerializedName("daily_budget")
   private Long dailyBudget = null;
 
+  @SerializedName("total_budget")
+  private Long totalBudget = null;
+
   @SerializedName("configured_status")
   private AdStatus configuredStatus = null;
 
@@ -120,6 +123,25 @@ public class CampaignsUpdateRequest {
 
   public void setDailyBudget(Long dailyBudget) {
     this.dailyBudget = dailyBudget;
+  }
+
+  public CampaignsUpdateRequest totalBudget(Long totalBudget) {
+    this.totalBudget = totalBudget;
+    return this;
+  }
+
+  /**
+   * Get totalBudget
+   *
+   * @return totalBudget
+   */
+  @ApiModelProperty(value = "")
+  public Long getTotalBudget() {
+    return totalBudget;
+  }
+
+  public void setTotalBudget(Long totalBudget) {
+    this.totalBudget = totalBudget;
   }
 
   public CampaignsUpdateRequest configuredStatus(AdStatus configuredStatus) {
@@ -230,6 +252,7 @@ public class CampaignsUpdateRequest {
         && Objects.equals(this.campaignId, campaignsUpdateRequest.campaignId)
         && Objects.equals(this.campaignName, campaignsUpdateRequest.campaignName)
         && Objects.equals(this.dailyBudget, campaignsUpdateRequest.dailyBudget)
+        && Objects.equals(this.totalBudget, campaignsUpdateRequest.totalBudget)
         && Objects.equals(this.configuredStatus, campaignsUpdateRequest.configuredStatus)
         && Objects.equals(this.speedMode, campaignsUpdateRequest.speedMode)
         && Objects.equals(this.beginDate, campaignsUpdateRequest.beginDate)
@@ -244,6 +267,7 @@ public class CampaignsUpdateRequest {
         campaignId,
         campaignName,
         dailyBudget,
+        totalBudget,
         configuredStatus,
         speedMode,
         beginDate,
