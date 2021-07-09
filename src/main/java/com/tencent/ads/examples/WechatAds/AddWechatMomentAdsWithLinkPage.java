@@ -246,7 +246,7 @@ public class AddWechatMomentAdsWithLinkPage {
       String adTitle)
       throws ApiException {
     String adcreativeName = "SDK sample adcreative " + UUID.randomUUID().toString();
-    LinkNameTypeMP linkNameType = LinkNameTypeMP.VIEW_DETAILS;
+    LinkNameType linkNameType = LinkNameType.VIEW_DETAILS;
     DestinationType pageType = DestinationType.CANVAS_WECHAT; // 'PAGE_TYPE_CANVAS_WECHAT';
 
     AdcreativesAddResponseData responseData =
@@ -271,7 +271,7 @@ public class AddWechatMomentAdsWithLinkPage {
                                 OverrideCanvasHeadOption.CANVAS_OVERRIDE_CREATIVE))
                     .linkPageSpec(new LinkPageSpec().pageId(WECHAT_PAGE_ID))
                     .linkPageType(LinkPageType.CANVAS_WECHAT)
-                    .linkNameType(LinkNameTypeMP.DOWNLOAD_APP)
+                    .linkNameType(LinkUrlLinkNameType.DOWNLOAD_APP)
                     .siteSet(siteSet)
                     .profileId(PROFILE_ID)
                     .promotedObjectId(promotedObjectId));

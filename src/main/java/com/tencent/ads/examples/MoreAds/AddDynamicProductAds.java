@@ -25,7 +25,7 @@ import com.tencent.ads.model.DynamicAdcreativeSpec;
 import com.tencent.ads.model.FilteringStruct;
 import com.tencent.ads.model.GeoLocations;
 import com.tencent.ads.model.ImagesAddResponseData;
-import com.tencent.ads.model.LinkNameTypeMP;
+import com.tencent.ads.model.LinkNameType;
 import com.tencent.ads.model.OptimizationGoal;
 import com.tencent.ads.model.PageSpec;
 import com.tencent.ads.model.ProductMode;
@@ -257,7 +257,7 @@ public class AddDynamicProductAds {
       String adTitle)
       throws ApiException {
     String adcreativeName = "SDK sample adcreative " + UUID.randomUUID().toString();
-    LinkNameTypeMP linkNameType = LinkNameTypeMP.VIEW_DETAILS;
+    LinkNameType linkNameType = LinkNameType.VIEW_DETAILS;
     DestinationType pageType = DestinationType.DEFAULT;
 
     AdcreativesAddResponseData responseData =

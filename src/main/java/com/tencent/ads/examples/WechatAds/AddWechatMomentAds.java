@@ -21,7 +21,7 @@ import com.tencent.ads.model.DestinationType;
 import com.tencent.ads.model.FilteringStruct;
 import com.tencent.ads.model.GeoLocations;
 import com.tencent.ads.model.ImagesAddResponseData;
-import com.tencent.ads.model.LinkNameTypeMP;
+import com.tencent.ads.model.LinkNameType;
 import com.tencent.ads.model.OptimizationGoal;
 import com.tencent.ads.model.PageSpec;
 import com.tencent.ads.model.PromotedObjectType;
@@ -258,7 +258,7 @@ public class AddWechatMomentAds {
       String adTitle)
       throws ApiException {
     String adcreativeName = "SDK sample adcreative " + UUID.randomUUID().toString();
-    LinkNameTypeMP linkNameType = LinkNameTypeMP.VIEW_DETAILS;
+    LinkNameType linkNameType = LinkNameType.VIEW_DETAILS;
     DestinationType pageType = DestinationType.DEFAULT; // 'PAGE_TYPE_FULL_SCREEN_WECHAT';
     String linkPageType = "LANK_PAGE_TYPE_IOS_APP_WECHAT";
 
