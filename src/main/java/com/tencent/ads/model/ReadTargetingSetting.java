@@ -83,9 +83,6 @@ public class ReadTargetingSetting {
   @SerializedName("app_install_status")
   private List<String> appInstallStatus = null;
 
-  @SerializedName("mini_game_qq_status")
-  private List<String> miniGameQqStatus = null;
-
   @SerializedName("consumption_status")
   private List<String> consumptionStatus = null;
 
@@ -667,33 +664,6 @@ public class ReadTargetingSetting {
     this.appInstallStatus = appInstallStatus;
   }
 
-  public ReadTargetingSetting miniGameQqStatus(List<String> miniGameQqStatus) {
-    this.miniGameQqStatus = miniGameQqStatus;
-    return this;
-  }
-
-  public ReadTargetingSetting addMiniGameQqStatusItem(String miniGameQqStatusItem) {
-    if (this.miniGameQqStatus == null) {
-      this.miniGameQqStatus = new ArrayList<String>();
-    }
-    this.miniGameQqStatus.add(miniGameQqStatusItem);
-    return this;
-  }
-
-  /**
-   * Get miniGameQqStatus
-   *
-   * @return miniGameQqStatus
-   */
-  @ApiModelProperty(value = "")
-  public List<String> getMiniGameQqStatus() {
-    return miniGameQqStatus;
-  }
-
-  public void setMiniGameQqStatus(List<String> miniGameQqStatus) {
-    this.miniGameQqStatus = miniGameQqStatus;
-  }
-
   public ReadTargetingSetting consumptionStatus(List<String> consumptionStatus) {
     this.consumptionStatus = consumptionStatus;
     return this;
@@ -1205,7 +1175,6 @@ public class ReadTargetingSetting {
         && Objects.equals(this.temperature, readTargetingSetting.temperature)
         && Objects.equals(this.airQualityIndex, readTargetingSetting.airQualityIndex)
         && Objects.equals(this.appInstallStatus, readTargetingSetting.appInstallStatus)
-        && Objects.equals(this.miniGameQqStatus, readTargetingSetting.miniGameQqStatus)
         && Objects.equals(this.consumptionStatus, readTargetingSetting.consumptionStatus)
         && Objects.equals(this.gameConsumptionLevel, readTargetingSetting.gameConsumptionLevel)
         && Objects.equals(
@@ -1256,7 +1225,6 @@ public class ReadTargetingSetting {
         temperature,
         airQualityIndex,
         appInstallStatus,
-        miniGameQqStatus,
         consumptionStatus,
         gameConsumptionLevel,
         residentialCommunityPrice,

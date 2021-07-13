@@ -78,12 +78,6 @@ public class AdcreativesUpdateRequest {
   @SerializedName("revised_adcreative_spec")
   private RevisedAdcreativeSpec revisedAdcreativeSpec = null;
 
-  @SerializedName("category")
-  private List<Long> category = null;
-
-  @SerializedName("label")
-  private List<String> label = null;
-
   @SerializedName("union_market_switch")
   private Boolean unionMarketSwitch = null;
 
@@ -486,60 +480,6 @@ public class AdcreativesUpdateRequest {
     this.revisedAdcreativeSpec = revisedAdcreativeSpec;
   }
 
-  public AdcreativesUpdateRequest category(List<Long> category) {
-    this.category = category;
-    return this;
-  }
-
-  public AdcreativesUpdateRequest addCategoryItem(Long categoryItem) {
-    if (this.category == null) {
-      this.category = new ArrayList<Long>();
-    }
-    this.category.add(categoryItem);
-    return this;
-  }
-
-  /**
-   * Get category
-   *
-   * @return category
-   */
-  @ApiModelProperty(value = "")
-  public List<Long> getCategory() {
-    return category;
-  }
-
-  public void setCategory(List<Long> category) {
-    this.category = category;
-  }
-
-  public AdcreativesUpdateRequest label(List<String> label) {
-    this.label = label;
-    return this;
-  }
-
-  public AdcreativesUpdateRequest addLabelItem(String labelItem) {
-    if (this.label == null) {
-      this.label = new ArrayList<String>();
-    }
-    this.label.add(labelItem);
-    return this;
-  }
-
-  /**
-   * Get label
-   *
-   * @return label
-   */
-  @ApiModelProperty(value = "")
-  public List<String> getLabel() {
-    return label;
-  }
-
-  public void setLabel(List<String> label) {
-    this.label = label;
-  }
-
   public AdcreativesUpdateRequest unionMarketSwitch(Boolean unionMarketSwitch) {
     this.unionMarketSwitch = unionMarketSwitch;
     return this;
@@ -828,8 +768,6 @@ public class AdcreativesUpdateRequest {
         && Objects.equals(this.onlineEnabled, adcreativesUpdateRequest.onlineEnabled)
         && Objects.equals(
             this.revisedAdcreativeSpec, adcreativesUpdateRequest.revisedAdcreativeSpec)
-        && Objects.equals(this.category, adcreativesUpdateRequest.category)
-        && Objects.equals(this.label, adcreativesUpdateRequest.label)
         && Objects.equals(this.unionMarketSwitch, adcreativesUpdateRequest.unionMarketSwitch)
         && Objects.equals(
             this.playablePageMaterialId, adcreativesUpdateRequest.playablePageMaterialId)
@@ -871,8 +809,6 @@ public class AdcreativesUpdateRequest {
         componentId,
         onlineEnabled,
         revisedAdcreativeSpec,
-        category,
-        label,
         unionMarketSwitch,
         playablePageMaterialId,
         videoEndPage,

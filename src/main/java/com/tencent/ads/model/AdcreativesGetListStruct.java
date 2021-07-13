@@ -113,12 +113,6 @@ public class AdcreativesGetListStruct {
   @SerializedName("revised_adcreative_spec")
   private RevisedAdcreativeSpec revisedAdcreativeSpec = null;
 
-  @SerializedName("category")
-  private List<Long> category = null;
-
-  @SerializedName("label")
-  private List<String> label = null;
-
   @SerializedName("union_market_switch")
   private Boolean unionMarketSwitch = null;
 
@@ -739,60 +733,6 @@ public class AdcreativesGetListStruct {
     this.revisedAdcreativeSpec = revisedAdcreativeSpec;
   }
 
-  public AdcreativesGetListStruct category(List<Long> category) {
-    this.category = category;
-    return this;
-  }
-
-  public AdcreativesGetListStruct addCategoryItem(Long categoryItem) {
-    if (this.category == null) {
-      this.category = new ArrayList<Long>();
-    }
-    this.category.add(categoryItem);
-    return this;
-  }
-
-  /**
-   * Get category
-   *
-   * @return category
-   */
-  @ApiModelProperty(value = "")
-  public List<Long> getCategory() {
-    return category;
-  }
-
-  public void setCategory(List<Long> category) {
-    this.category = category;
-  }
-
-  public AdcreativesGetListStruct label(List<String> label) {
-    this.label = label;
-    return this;
-  }
-
-  public AdcreativesGetListStruct addLabelItem(String labelItem) {
-    if (this.label == null) {
-      this.label = new ArrayList<String>();
-    }
-    this.label.add(labelItem);
-    return this;
-  }
-
-  /**
-   * Get label
-   *
-   * @return label
-   */
-  @ApiModelProperty(value = "")
-  public List<String> getLabel() {
-    return label;
-  }
-
-  public void setLabel(List<String> label) {
-    this.label = label;
-  }
-
   public AdcreativesGetListStruct unionMarketSwitch(Boolean unionMarketSwitch) {
     this.unionMarketSwitch = unionMarketSwitch;
     return this;
@@ -1092,8 +1032,6 @@ public class AdcreativesGetListStruct {
         && Objects.equals(this.onlineEnabled, adcreativesGetListStruct.onlineEnabled)
         && Objects.equals(
             this.revisedAdcreativeSpec, adcreativesGetListStruct.revisedAdcreativeSpec)
-        && Objects.equals(this.category, adcreativesGetListStruct.category)
-        && Objects.equals(this.label, adcreativesGetListStruct.label)
         && Objects.equals(this.unionMarketSwitch, adcreativesGetListStruct.unionMarketSwitch)
         && Objects.equals(
             this.playablePageMaterialId, adcreativesGetListStruct.playablePageMaterialId)
@@ -1145,8 +1083,6 @@ public class AdcreativesGetListStruct {
         componentId,
         onlineEnabled,
         revisedAdcreativeSpec,
-        category,
-        label,
         unionMarketSwitch,
         playablePageMaterialId,
         videoEndPage,

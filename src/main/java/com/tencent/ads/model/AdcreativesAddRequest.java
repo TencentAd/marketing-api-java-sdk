@@ -87,12 +87,6 @@ public class AdcreativesAddRequest {
   @SerializedName("component_id")
   private Long componentId = null;
 
-  @SerializedName("category")
-  private List<Long> category = null;
-
-  @SerializedName("label")
-  private List<String> label = null;
-
   @SerializedName("union_market_switch")
   private Boolean unionMarketSwitch = null;
 
@@ -561,60 +555,6 @@ public class AdcreativesAddRequest {
     this.componentId = componentId;
   }
 
-  public AdcreativesAddRequest category(List<Long> category) {
-    this.category = category;
-    return this;
-  }
-
-  public AdcreativesAddRequest addCategoryItem(Long categoryItem) {
-    if (this.category == null) {
-      this.category = new ArrayList<Long>();
-    }
-    this.category.add(categoryItem);
-    return this;
-  }
-
-  /**
-   * Get category
-   *
-   * @return category
-   */
-  @ApiModelProperty(value = "")
-  public List<Long> getCategory() {
-    return category;
-  }
-
-  public void setCategory(List<Long> category) {
-    this.category = category;
-  }
-
-  public AdcreativesAddRequest label(List<String> label) {
-    this.label = label;
-    return this;
-  }
-
-  public AdcreativesAddRequest addLabelItem(String labelItem) {
-    if (this.label == null) {
-      this.label = new ArrayList<String>();
-    }
-    this.label.add(labelItem);
-    return this;
-  }
-
-  /**
-   * Get label
-   *
-   * @return label
-   */
-  @ApiModelProperty(value = "")
-  public List<String> getLabel() {
-    return label;
-  }
-
-  public void setLabel(List<String> label) {
-    this.label = label;
-  }
-
   public AdcreativesAddRequest unionMarketSwitch(Boolean unionMarketSwitch) {
     this.unionMarketSwitch = unionMarketSwitch;
     return this;
@@ -921,8 +861,6 @@ public class AdcreativesAddRequest {
         && Objects.equals(this.shareContentSpec, adcreativesAddRequest.shareContentSpec)
         && Objects.equals(this.dynamicAdcreativeSpec, adcreativesAddRequest.dynamicAdcreativeSpec)
         && Objects.equals(this.componentId, adcreativesAddRequest.componentId)
-        && Objects.equals(this.category, adcreativesAddRequest.category)
-        && Objects.equals(this.label, adcreativesAddRequest.label)
         && Objects.equals(this.unionMarketSwitch, adcreativesAddRequest.unionMarketSwitch)
         && Objects.equals(this.playablePageMaterialId, adcreativesAddRequest.playablePageMaterialId)
         && Objects.equals(this.videoEndPage, adcreativesAddRequest.videoEndPage)
@@ -966,8 +904,6 @@ public class AdcreativesAddRequest {
         shareContentSpec,
         dynamicAdcreativeSpec,
         componentId,
-        category,
-        label,
         unionMarketSwitch,
         playablePageMaterialId,
         videoEndPage,
