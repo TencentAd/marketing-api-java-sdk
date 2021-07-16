@@ -65,6 +65,9 @@ public class RevisedAdcreativeElements {
   @SerializedName("bottom_text")
   private String bottomText = null;
 
+  @SerializedName("excitation_text")
+  private String excitationText = null;
+
   @SerializedName("countdown_begin")
   private Long countdownBegin = null;
 
@@ -431,6 +434,25 @@ public class RevisedAdcreativeElements {
 
   public void setBottomText(String bottomText) {
     this.bottomText = bottomText;
+  }
+
+  public RevisedAdcreativeElements excitationText(String excitationText) {
+    this.excitationText = excitationText;
+    return this;
+  }
+
+  /**
+   * Get excitationText
+   *
+   * @return excitationText
+   */
+  @ApiModelProperty(value = "")
+  public String getExcitationText() {
+    return excitationText;
+  }
+
+  public void setExcitationText(String excitationText) {
+    this.excitationText = excitationText;
   }
 
   public RevisedAdcreativeElements countdownBegin(Long countdownBegin) {
@@ -1005,6 +1027,7 @@ public class RevisedAdcreativeElements {
         && Objects.equals(this.url, revisedAdcreativeElements.url)
         && Objects.equals(this.buttonText, revisedAdcreativeElements.buttonText)
         && Objects.equals(this.bottomText, revisedAdcreativeElements.bottomText)
+        && Objects.equals(this.excitationText, revisedAdcreativeElements.excitationText)
         && Objects.equals(this.countdownBegin, revisedAdcreativeElements.countdownBegin)
         && Objects.equals(this.countdown, revisedAdcreativeElements.countdown)
         && Objects.equals(this.countdownPrice, revisedAdcreativeElements.countdownPrice)
@@ -1052,6 +1075,7 @@ public class RevisedAdcreativeElements {
         url,
         buttonText,
         bottomText,
+        excitationText,
         countdownBegin,
         countdown,
         countdownPrice,

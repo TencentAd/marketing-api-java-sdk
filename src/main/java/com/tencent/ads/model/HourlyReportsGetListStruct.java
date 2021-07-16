@@ -324,6 +324,21 @@ public class HourlyReportsGetListStruct {
   @SerializedName("ad_pur_val_app")
   private Long adPurValApp = null;
 
+  @SerializedName("order_24h_count")
+  private Long order24hCount = null;
+
+  @SerializedName("order_24h_rate")
+  private Double order24hRate = null;
+
+  @SerializedName("order_24h_cost")
+  private Long order24hCost = null;
+
+  @SerializedName("order_24h_amount")
+  private Long order24hAmount = null;
+
+  @SerializedName("order_24h_roi")
+  private Double order24hRoi = null;
+
   @SerializedName("game_create_role_count")
   private Long gameCreateRoleCount = null;
 
@@ -913,7 +928,7 @@ public class HourlyReportsGetListStruct {
   private Long miniGameAdMonetizationArpu = null;
 
   @SerializedName("mini_game_paying_roi")
-  private Long miniGamePayingRoi = null;
+  private Double miniGamePayingRoi = null;
 
   @SerializedName("mini_game_paying_arpu")
   private Long miniGamePayingArpu = null;
@@ -3229,6 +3244,101 @@ public class HourlyReportsGetListStruct {
 
   public void setAdPurValApp(Long adPurValApp) {
     this.adPurValApp = adPurValApp;
+  }
+
+  public HourlyReportsGetListStruct order24hCount(Long order24hCount) {
+    this.order24hCount = order24hCount;
+    return this;
+  }
+
+  /**
+   * Get order24hCount
+   *
+   * @return order24hCount
+   */
+  @ApiModelProperty(value = "")
+  public Long getOrder24hCount() {
+    return order24hCount;
+  }
+
+  public void setOrder24hCount(Long order24hCount) {
+    this.order24hCount = order24hCount;
+  }
+
+  public HourlyReportsGetListStruct order24hRate(Double order24hRate) {
+    this.order24hRate = order24hRate;
+    return this;
+  }
+
+  /**
+   * Get order24hRate
+   *
+   * @return order24hRate
+   */
+  @ApiModelProperty(value = "")
+  public Double getOrder24hRate() {
+    return order24hRate;
+  }
+
+  public void setOrder24hRate(Double order24hRate) {
+    this.order24hRate = order24hRate;
+  }
+
+  public HourlyReportsGetListStruct order24hCost(Long order24hCost) {
+    this.order24hCost = order24hCost;
+    return this;
+  }
+
+  /**
+   * Get order24hCost
+   *
+   * @return order24hCost
+   */
+  @ApiModelProperty(value = "")
+  public Long getOrder24hCost() {
+    return order24hCost;
+  }
+
+  public void setOrder24hCost(Long order24hCost) {
+    this.order24hCost = order24hCost;
+  }
+
+  public HourlyReportsGetListStruct order24hAmount(Long order24hAmount) {
+    this.order24hAmount = order24hAmount;
+    return this;
+  }
+
+  /**
+   * Get order24hAmount
+   *
+   * @return order24hAmount
+   */
+  @ApiModelProperty(value = "")
+  public Long getOrder24hAmount() {
+    return order24hAmount;
+  }
+
+  public void setOrder24hAmount(Long order24hAmount) {
+    this.order24hAmount = order24hAmount;
+  }
+
+  public HourlyReportsGetListStruct order24hRoi(Double order24hRoi) {
+    this.order24hRoi = order24hRoi;
+    return this;
+  }
+
+  /**
+   * Get order24hRoi
+   *
+   * @return order24hRoi
+   */
+  @ApiModelProperty(value = "")
+  public Double getOrder24hRoi() {
+    return order24hRoi;
+  }
+
+  public void setOrder24hRoi(Double order24hRoi) {
+    this.order24hRoi = order24hRoi;
   }
 
   public HourlyReportsGetListStruct gameCreateRoleCount(Long gameCreateRoleCount) {
@@ -6965,7 +7075,7 @@ public class HourlyReportsGetListStruct {
     this.miniGameAdMonetizationArpu = miniGameAdMonetizationArpu;
   }
 
-  public HourlyReportsGetListStruct miniGamePayingRoi(Long miniGamePayingRoi) {
+  public HourlyReportsGetListStruct miniGamePayingRoi(Double miniGamePayingRoi) {
     this.miniGamePayingRoi = miniGamePayingRoi;
     return this;
   }
@@ -6976,11 +7086,11 @@ public class HourlyReportsGetListStruct {
    * @return miniGamePayingRoi
    */
   @ApiModelProperty(value = "")
-  public Long getMiniGamePayingRoi() {
+  public Double getMiniGamePayingRoi() {
     return miniGamePayingRoi;
   }
 
-  public void setMiniGamePayingRoi(Long miniGamePayingRoi) {
+  public void setMiniGamePayingRoi(Double miniGamePayingRoi) {
     this.miniGamePayingRoi = miniGamePayingRoi;
   }
 
@@ -9655,6 +9765,11 @@ public class HourlyReportsGetListStruct {
         && Objects.equals(this.appAdPayingUsers, hourlyReportsGetListStruct.appAdPayingUsers)
         && Objects.equals(this.adPurValWeb, hourlyReportsGetListStruct.adPurValWeb)
         && Objects.equals(this.adPurValApp, hourlyReportsGetListStruct.adPurValApp)
+        && Objects.equals(this.order24hCount, hourlyReportsGetListStruct.order24hCount)
+        && Objects.equals(this.order24hRate, hourlyReportsGetListStruct.order24hRate)
+        && Objects.equals(this.order24hCost, hourlyReportsGetListStruct.order24hCost)
+        && Objects.equals(this.order24hAmount, hourlyReportsGetListStruct.order24hAmount)
+        && Objects.equals(this.order24hRoi, hourlyReportsGetListStruct.order24hRoi)
         && Objects.equals(this.gameCreateRoleCount, hourlyReportsGetListStruct.gameCreateRoleCount)
         && Objects.equals(this.gameAuthorizeCount, hourlyReportsGetListStruct.gameAuthorizeCount)
         && Objects.equals(
@@ -10272,6 +10387,11 @@ public class HourlyReportsGetListStruct {
         appAdPayingUsers,
         adPurValWeb,
         adPurValApp,
+        order24hCount,
+        order24hRate,
+        order24hCost,
+        order24hAmount,
+        order24hRoi,
         gameCreateRoleCount,
         gameAuthorizeCount,
         gameTutorialFinishCount,

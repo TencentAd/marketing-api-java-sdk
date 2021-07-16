@@ -121,6 +121,7 @@ public class App {
   @Inject SystemStatusApiContainer systemStatusApiContainer;
   @Inject TargetingTagReportsApiContainer targetingTagReportsApiContainer;
   @Inject TargetingTagsApiContainer targetingTagsApiContainer;
+  @Inject TargetingTagsUvApiContainer targetingTagsUvApiContainer;
   @Inject TargetingsApiContainer targetingsApiContainer;
   @Inject TargetingsShareApiContainer targetingsShareApiContainer;
   @Inject TrackingReportsApiContainer trackingReportsApiContainer;
@@ -567,6 +568,10 @@ public class App {
 
   public TargetingTagsApiContainer targetingTags() {
     return targetingTagsApiContainer;
+  }
+
+  public TargetingTagsUvApiContainer targetingTagsUv() {
+    return targetingTagsUvApiContainer;
   }
 
   public TargetingsApiContainer targetings() {
