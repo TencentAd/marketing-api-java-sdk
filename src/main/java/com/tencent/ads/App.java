@@ -68,6 +68,7 @@ public class App {
   @Inject CustomFeaturesApiContainer customFeaturesApiContainer;
   @Inject CustomTagFilesApiContainer customTagFilesApiContainer;
   @Inject CustomTagsApiContainer customTagsApiContainer;
+  @Inject DailyBalanceReportApiContainer dailyBalanceReportApiContainer;
   @Inject DailyCostApiContainer dailyCostApiContainer;
   @Inject DailyReportsApiContainer dailyReportsApiContainer;
   @Inject DiagnosisApiContainer diagnosisApiContainer;
@@ -356,6 +357,10 @@ public class App {
 
   public CustomTagsApiContainer customTags() {
     return customTagsApiContainer;
+  }
+
+  public DailyBalanceReportApiContainer dailyBalanceReport() {
+    return dailyBalanceReportApiContainer;
   }
 
   public DailyCostApiContainer dailyCost() {
