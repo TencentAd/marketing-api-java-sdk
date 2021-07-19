@@ -30,6 +30,8 @@ public enum BidMode {
 
   OCPC("BID_MODE_OCPC"),
 
+  OCPA("BID_MODE_OCPA"),
+
   OCPM("BID_MODE_OCPM");
 
   private String value;
