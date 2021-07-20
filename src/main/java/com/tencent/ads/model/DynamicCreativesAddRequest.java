@@ -81,6 +81,9 @@ public class DynamicCreativesAddRequest {
   @SerializedName("dynamic_creative_group_used")
   private DynamicCreativeGroupUsed dynamicCreativeGroupUsed = null;
 
+  @SerializedName("app_gift_pack_code")
+  private AppGiftPackCode appGiftPackCode = null;
+
   @SerializedName("account_id")
   private Long accountId = null;
 
@@ -483,6 +486,25 @@ public class DynamicCreativesAddRequest {
     this.dynamicCreativeGroupUsed = dynamicCreativeGroupUsed;
   }
 
+  public DynamicCreativesAddRequest appGiftPackCode(AppGiftPackCode appGiftPackCode) {
+    this.appGiftPackCode = appGiftPackCode;
+    return this;
+  }
+
+  /**
+   * Get appGiftPackCode
+   *
+   * @return appGiftPackCode
+   */
+  @ApiModelProperty(value = "")
+  public AppGiftPackCode getAppGiftPackCode() {
+    return appGiftPackCode;
+  }
+
+  public void setAppGiftPackCode(AppGiftPackCode appGiftPackCode) {
+    this.appGiftPackCode = appGiftPackCode;
+  }
+
   public DynamicCreativesAddRequest accountId(Long accountId) {
     this.accountId = accountId;
     return this;
@@ -538,6 +560,7 @@ public class DynamicCreativesAddRequest {
         && Objects.equals(this.barrageList, dynamicCreativesAddRequest.barrageList)
         && Objects.equals(
             this.dynamicCreativeGroupUsed, dynamicCreativesAddRequest.dynamicCreativeGroupUsed)
+        && Objects.equals(this.appGiftPackCode, dynamicCreativesAddRequest.appGiftPackCode)
         && Objects.equals(this.accountId, dynamicCreativesAddRequest.accountId);
   }
 
@@ -564,6 +587,7 @@ public class DynamicCreativesAddRequest {
         videoEndPage,
         barrageList,
         dynamicCreativeGroupUsed,
+        appGiftPackCode,
         accountId);
   }
 

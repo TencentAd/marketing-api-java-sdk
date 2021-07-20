@@ -111,6 +111,9 @@ public class AdcreativesUpdateRequest {
   @SerializedName("dynamic_adcreative_spec")
   private DynamicAdcreativeSpec dynamicAdcreativeSpec = null;
 
+  @SerializedName("app_gift_pack_code")
+  private AppGiftPackCode appGiftPackCode = null;
+
   @SerializedName("account_id")
   private Long accountId = null;
 
@@ -698,6 +701,25 @@ public class AdcreativesUpdateRequest {
     this.dynamicAdcreativeSpec = dynamicAdcreativeSpec;
   }
 
+  public AdcreativesUpdateRequest appGiftPackCode(AppGiftPackCode appGiftPackCode) {
+    this.appGiftPackCode = appGiftPackCode;
+    return this;
+  }
+
+  /**
+   * Get appGiftPackCode
+   *
+   * @return appGiftPackCode
+   */
+  @ApiModelProperty(value = "")
+  public AppGiftPackCode getAppGiftPackCode() {
+    return appGiftPackCode;
+  }
+
+  public void setAppGiftPackCode(AppGiftPackCode appGiftPackCode) {
+    this.appGiftPackCode = appGiftPackCode;
+  }
+
   public AdcreativesUpdateRequest accountId(Long accountId) {
     this.accountId = accountId;
     return this;
@@ -783,6 +805,7 @@ public class AdcreativesUpdateRequest {
         && Objects.equals(this.barrageList, adcreativesUpdateRequest.barrageList)
         && Objects.equals(
             this.dynamicAdcreativeSpec, adcreativesUpdateRequest.dynamicAdcreativeSpec)
+        && Objects.equals(this.appGiftPackCode, adcreativesUpdateRequest.appGiftPackCode)
         && Objects.equals(this.accountId, adcreativesUpdateRequest.accountId)
         && Objects.equals(this.adcreativeElements, adcreativesUpdateRequest.adcreativeElements);
   }
@@ -820,6 +843,7 @@ public class AdcreativesUpdateRequest {
         countdownSwitch,
         barrageList,
         dynamicAdcreativeSpec,
+        appGiftPackCode,
         accountId,
         adcreativeElements);
   }

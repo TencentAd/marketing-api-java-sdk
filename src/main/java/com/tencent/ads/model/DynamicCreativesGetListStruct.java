@@ -95,6 +95,9 @@ public class DynamicCreativesGetListStruct {
   @SerializedName("dynamic_creative_group_used")
   private DynamicCreativeGroupUsed dynamicCreativeGroupUsed = null;
 
+  @SerializedName("app_gift_pack_code")
+  private AppGiftPackCode appGiftPackCode = null;
+
   public DynamicCreativesGetListStruct dynamicCreativeId(Long dynamicCreativeId) {
     this.dynamicCreativeId = dynamicCreativeId;
     return this;
@@ -569,6 +572,25 @@ public class DynamicCreativesGetListStruct {
     this.dynamicCreativeGroupUsed = dynamicCreativeGroupUsed;
   }
 
+  public DynamicCreativesGetListStruct appGiftPackCode(AppGiftPackCode appGiftPackCode) {
+    this.appGiftPackCode = appGiftPackCode;
+    return this;
+  }
+
+  /**
+   * Get appGiftPackCode
+   *
+   * @return appGiftPackCode
+   */
+  @ApiModelProperty(value = "")
+  public AppGiftPackCode getAppGiftPackCode() {
+    return appGiftPackCode;
+  }
+
+  public void setAppGiftPackCode(AppGiftPackCode appGiftPackCode) {
+    this.appGiftPackCode = appGiftPackCode;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -608,7 +630,8 @@ public class DynamicCreativesGetListStruct {
         && Objects.equals(this.videoEndPage, dynamicCreativesGetListStruct.videoEndPage)
         && Objects.equals(this.barrageList, dynamicCreativesGetListStruct.barrageList)
         && Objects.equals(
-            this.dynamicCreativeGroupUsed, dynamicCreativesGetListStruct.dynamicCreativeGroupUsed);
+            this.dynamicCreativeGroupUsed, dynamicCreativesGetListStruct.dynamicCreativeGroupUsed)
+        && Objects.equals(this.appGiftPackCode, dynamicCreativesGetListStruct.appGiftPackCode);
   }
 
   @Override
@@ -637,7 +660,8 @@ public class DynamicCreativesGetListStruct {
         unionMarketSwitch,
         videoEndPage,
         barrageList,
-        dynamicCreativeGroupUsed);
+        dynamicCreativeGroupUsed,
+        appGiftPackCode);
   }
 
   @Override

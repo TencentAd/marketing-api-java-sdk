@@ -54,6 +54,9 @@ public class DynamicCreativesUpdateRequest {
   @SerializedName("barrage_list")
   private List<BarrageListCreateStruct> barrageList = null;
 
+  @SerializedName("app_gift_pack_code")
+  private AppGiftPackCode appGiftPackCode = null;
+
   @SerializedName("account_id")
   private Long accountId = null;
 
@@ -275,6 +278,25 @@ public class DynamicCreativesUpdateRequest {
     this.barrageList = barrageList;
   }
 
+  public DynamicCreativesUpdateRequest appGiftPackCode(AppGiftPackCode appGiftPackCode) {
+    this.appGiftPackCode = appGiftPackCode;
+    return this;
+  }
+
+  /**
+   * Get appGiftPackCode
+   *
+   * @return appGiftPackCode
+   */
+  @ApiModelProperty(value = "")
+  public AppGiftPackCode getAppGiftPackCode() {
+    return appGiftPackCode;
+  }
+
+  public void setAppGiftPackCode(AppGiftPackCode appGiftPackCode) {
+    this.appGiftPackCode = appGiftPackCode;
+  }
+
   public DynamicCreativesUpdateRequest accountId(Long accountId) {
     this.accountId = accountId;
     return this;
@@ -318,6 +340,7 @@ public class DynamicCreativesUpdateRequest {
         && Objects.equals(this.profileId, dynamicCreativesUpdateRequest.profileId)
         && Objects.equals(this.videoEndPage, dynamicCreativesUpdateRequest.videoEndPage)
         && Objects.equals(this.barrageList, dynamicCreativesUpdateRequest.barrageList)
+        && Objects.equals(this.appGiftPackCode, dynamicCreativesUpdateRequest.appGiftPackCode)
         && Objects.equals(this.accountId, dynamicCreativesUpdateRequest.accountId);
   }
 
@@ -335,6 +358,7 @@ public class DynamicCreativesUpdateRequest {
         profileId,
         videoEndPage,
         barrageList,
+        appGiftPackCode,
         accountId);
   }
 

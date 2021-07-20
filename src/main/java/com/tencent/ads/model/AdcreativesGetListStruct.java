@@ -146,6 +146,9 @@ public class AdcreativesGetListStruct {
   @SerializedName("barrage_list")
   private List<BarrageListReadStruct> barrageList = null;
 
+  @SerializedName("app_gift_pack_code")
+  private AppGiftPackCode appGiftPackCode = null;
+
   @SerializedName("adcreative_template_id")
   private Long adcreativeTemplateId = null;
 
@@ -950,6 +953,25 @@ public class AdcreativesGetListStruct {
     this.barrageList = barrageList;
   }
 
+  public AdcreativesGetListStruct appGiftPackCode(AppGiftPackCode appGiftPackCode) {
+    this.appGiftPackCode = appGiftPackCode;
+    return this;
+  }
+
+  /**
+   * Get appGiftPackCode
+   *
+   * @return appGiftPackCode
+   */
+  @ApiModelProperty(value = "")
+  public AppGiftPackCode getAppGiftPackCode() {
+    return appGiftPackCode;
+  }
+
+  public void setAppGiftPackCode(AppGiftPackCode appGiftPackCode) {
+    this.appGiftPackCode = appGiftPackCode;
+  }
+
   public AdcreativesGetListStruct adcreativeTemplateId(Long adcreativeTemplateId) {
     this.adcreativeTemplateId = adcreativeTemplateId;
     return this;
@@ -1046,6 +1068,7 @@ public class AdcreativesGetListStruct {
         && Objects.equals(this.countdownSwitch, adcreativesGetListStruct.countdownSwitch)
         && Objects.equals(this.pageTrackUrl, adcreativesGetListStruct.pageTrackUrl)
         && Objects.equals(this.barrageList, adcreativesGetListStruct.barrageList)
+        && Objects.equals(this.appGiftPackCode, adcreativesGetListStruct.appGiftPackCode)
         && Objects.equals(this.adcreativeTemplateId, adcreativesGetListStruct.adcreativeTemplateId)
         && Objects.equals(this.adcreativeElements, adcreativesGetListStruct.adcreativeElements);
   }
@@ -1094,6 +1117,7 @@ public class AdcreativesGetListStruct {
         countdownSwitch,
         pageTrackUrl,
         barrageList,
+        appGiftPackCode,
         adcreativeTemplateId,
         adcreativeElements);
   }

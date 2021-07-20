@@ -120,6 +120,9 @@ public class AdcreativesAddRequest {
   @SerializedName("barrage_list")
   private List<BarrageListCreateStruct> barrageList = null;
 
+  @SerializedName("app_gift_pack_code")
+  private AppGiftPackCode appGiftPackCode = null;
+
   @SerializedName("account_id")
   private Long accountId = null;
 
@@ -772,6 +775,25 @@ public class AdcreativesAddRequest {
     this.barrageList = barrageList;
   }
 
+  public AdcreativesAddRequest appGiftPackCode(AppGiftPackCode appGiftPackCode) {
+    this.appGiftPackCode = appGiftPackCode;
+    return this;
+  }
+
+  /**
+   * Get appGiftPackCode
+   *
+   * @return appGiftPackCode
+   */
+  @ApiModelProperty(value = "")
+  public AppGiftPackCode getAppGiftPackCode() {
+    return appGiftPackCode;
+  }
+
+  public void setAppGiftPackCode(AppGiftPackCode appGiftPackCode) {
+    this.appGiftPackCode = appGiftPackCode;
+  }
+
   public AdcreativesAddRequest accountId(Long accountId) {
     this.accountId = accountId;
     return this;
@@ -874,6 +896,7 @@ public class AdcreativesAddRequest {
         && Objects.equals(this.countdownSwitch, adcreativesAddRequest.countdownSwitch)
         && Objects.equals(this.pageTrackUrl, adcreativesAddRequest.pageTrackUrl)
         && Objects.equals(this.barrageList, adcreativesAddRequest.barrageList)
+        && Objects.equals(this.appGiftPackCode, adcreativesAddRequest.appGiftPackCode)
         && Objects.equals(this.accountId, adcreativesAddRequest.accountId)
         && Objects.equals(this.adcreativeTemplateId, adcreativesAddRequest.adcreativeTemplateId)
         && Objects.equals(this.adcreativeElements, adcreativesAddRequest.adcreativeElements);
@@ -915,6 +938,7 @@ public class AdcreativesAddRequest {
         countdownSwitch,
         pageTrackUrl,
         barrageList,
+        appGiftPackCode,
         accountId,
         adcreativeTemplateId,
         adcreativeElements);

@@ -197,6 +197,9 @@ public class AdgroupsGetListStruct {
   @SerializedName("marketing_scene")
   private MarketingScene marketingScene = null;
 
+  @SerializedName("custom_adgroup_tag")
+  private List<String> customAdgroupTag = null;
+
   @SerializedName("deep_optimization_type")
   private DeepOptimizationType deepOptimizationType = null;
 
@@ -1355,6 +1358,33 @@ public class AdgroupsGetListStruct {
     this.marketingScene = marketingScene;
   }
 
+  public AdgroupsGetListStruct customAdgroupTag(List<String> customAdgroupTag) {
+    this.customAdgroupTag = customAdgroupTag;
+    return this;
+  }
+
+  public AdgroupsGetListStruct addCustomAdgroupTagItem(String customAdgroupTagItem) {
+    if (this.customAdgroupTag == null) {
+      this.customAdgroupTag = new ArrayList<String>();
+    }
+    this.customAdgroupTag.add(customAdgroupTagItem);
+    return this;
+  }
+
+  /**
+   * Get customAdgroupTag
+   *
+   * @return customAdgroupTag
+   */
+  @ApiModelProperty(value = "")
+  public List<String> getCustomAdgroupTag() {
+    return customAdgroupTag;
+  }
+
+  public void setCustomAdgroupTag(List<String> customAdgroupTag) {
+    this.customAdgroupTag = customAdgroupTag;
+  }
+
   public AdgroupsGetListStruct deepOptimizationType(DeepOptimizationType deepOptimizationType) {
     this.deepOptimizationType = deepOptimizationType;
     return this;
@@ -1450,6 +1480,7 @@ public class AdgroupsGetListStruct {
         && Objects.equals(this.smartBidType, adgroupsGetListStruct.smartBidType)
         && Objects.equals(this.smartCostCap, adgroupsGetListStruct.smartCostCap)
         && Objects.equals(this.marketingScene, adgroupsGetListStruct.marketingScene)
+        && Objects.equals(this.customAdgroupTag, adgroupsGetListStruct.customAdgroupTag)
         && Objects.equals(this.deepOptimizationType, adgroupsGetListStruct.deepOptimizationType);
   }
 
@@ -1514,6 +1545,7 @@ public class AdgroupsGetListStruct {
         smartBidType,
         smartCostCap,
         marketingScene,
+        customAdgroupTag,
         deepOptimizationType);
   }
 

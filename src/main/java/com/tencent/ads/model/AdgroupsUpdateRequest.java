@@ -120,6 +120,9 @@ public class AdgroupsUpdateRequest {
   @SerializedName("dynamic_ad_spec")
   private DynamicAdSpec dynamicAdSpec = null;
 
+  @SerializedName("custom_adgroup_tag")
+  private List<String> customAdgroupTag = null;
+
   @SerializedName("deep_optimization_type")
   private DeepOptimizationType deepOptimizationType = null;
 
@@ -795,6 +798,33 @@ public class AdgroupsUpdateRequest {
     this.dynamicAdSpec = dynamicAdSpec;
   }
 
+  public AdgroupsUpdateRequest customAdgroupTag(List<String> customAdgroupTag) {
+    this.customAdgroupTag = customAdgroupTag;
+    return this;
+  }
+
+  public AdgroupsUpdateRequest addCustomAdgroupTagItem(String customAdgroupTagItem) {
+    if (this.customAdgroupTag == null) {
+      this.customAdgroupTag = new ArrayList<String>();
+    }
+    this.customAdgroupTag.add(customAdgroupTagItem);
+    return this;
+  }
+
+  /**
+   * Get customAdgroupTag
+   *
+   * @return customAdgroupTag
+   */
+  @ApiModelProperty(value = "")
+  public List<String> getCustomAdgroupTag() {
+    return customAdgroupTag;
+  }
+
+  public void setCustomAdgroupTag(List<String> customAdgroupTag) {
+    this.customAdgroupTag = customAdgroupTag;
+  }
+
   public AdgroupsUpdateRequest deepOptimizationType(DeepOptimizationType deepOptimizationType) {
     this.deepOptimizationType = deepOptimizationType;
     return this;
@@ -880,6 +910,7 @@ public class AdgroupsUpdateRequest {
             this.autoDerivedCreativeEnabled, adgroupsUpdateRequest.autoDerivedCreativeEnabled)
         && Objects.equals(this.userActionSets, adgroupsUpdateRequest.userActionSets)
         && Objects.equals(this.dynamicAdSpec, adgroupsUpdateRequest.dynamicAdSpec)
+        && Objects.equals(this.customAdgroupTag, adgroupsUpdateRequest.customAdgroupTag)
         && Objects.equals(this.deepOptimizationType, adgroupsUpdateRequest.deepOptimizationType)
         && Objects.equals(this.accountId, adgroupsUpdateRequest.accountId);
   }
@@ -920,6 +951,7 @@ public class AdgroupsUpdateRequest {
         autoDerivedCreativeEnabled,
         userActionSets,
         dynamicAdSpec,
+        customAdgroupTag,
         deepOptimizationType,
         accountId);
   }

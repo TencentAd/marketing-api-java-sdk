@@ -153,6 +153,9 @@ public class AdgroupsAddRequest {
   @SerializedName("marketing_scene")
   private MarketingScene marketingScene = null;
 
+  @SerializedName("custom_adgroup_tag")
+  private List<String> customAdgroupTag = null;
+
   @SerializedName("deep_optimization_type")
   private DeepOptimizationType deepOptimizationType = null;
 
@@ -1046,6 +1049,33 @@ public class AdgroupsAddRequest {
     this.marketingScene = marketingScene;
   }
 
+  public AdgroupsAddRequest customAdgroupTag(List<String> customAdgroupTag) {
+    this.customAdgroupTag = customAdgroupTag;
+    return this;
+  }
+
+  public AdgroupsAddRequest addCustomAdgroupTagItem(String customAdgroupTagItem) {
+    if (this.customAdgroupTag == null) {
+      this.customAdgroupTag = new ArrayList<String>();
+    }
+    this.customAdgroupTag.add(customAdgroupTagItem);
+    return this;
+  }
+
+  /**
+   * Get customAdgroupTag
+   *
+   * @return customAdgroupTag
+   */
+  @ApiModelProperty(value = "")
+  public List<String> getCustomAdgroupTag() {
+    return customAdgroupTag;
+  }
+
+  public void setCustomAdgroupTag(List<String> customAdgroupTag) {
+    this.customAdgroupTag = customAdgroupTag;
+  }
+
   public AdgroupsAddRequest deepOptimizationType(DeepOptimizationType deepOptimizationType) {
     this.deepOptimizationType = deepOptimizationType;
     return this;
@@ -1142,6 +1172,7 @@ public class AdgroupsAddRequest {
             this.autoDerivedCreativeEnabled, adgroupsAddRequest.autoDerivedCreativeEnabled)
         && Objects.equals(this.smartBidType, adgroupsAddRequest.smartBidType)
         && Objects.equals(this.marketingScene, adgroupsAddRequest.marketingScene)
+        && Objects.equals(this.customAdgroupTag, adgroupsAddRequest.customAdgroupTag)
         && Objects.equals(this.deepOptimizationType, adgroupsAddRequest.deepOptimizationType)
         && Objects.equals(this.accountId, adgroupsAddRequest.accountId);
   }
@@ -1193,6 +1224,7 @@ public class AdgroupsAddRequest {
         autoDerivedCreativeEnabled,
         smartBidType,
         marketingScene,
+        customAdgroupTag,
         deepOptimizationType,
         accountId);
   }
