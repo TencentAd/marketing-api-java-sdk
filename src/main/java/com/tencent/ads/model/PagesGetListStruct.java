@@ -51,6 +51,12 @@ public class PagesGetListStruct {
   @SerializedName("page_status")
   private PageStatus pageStatus = null;
 
+  @SerializedName("fengye_sub_type")
+  private LandingPageFengyeSubType fengyeSubType = null;
+
+  @SerializedName("owner_uid")
+  private Long ownerUid = null;
+
   public PagesGetListStruct pageId(Long pageId) {
     this.pageId = pageId;
     return this;
@@ -241,6 +247,44 @@ public class PagesGetListStruct {
     this.pageStatus = pageStatus;
   }
 
+  public PagesGetListStruct fengyeSubType(LandingPageFengyeSubType fengyeSubType) {
+    this.fengyeSubType = fengyeSubType;
+    return this;
+  }
+
+  /**
+   * Get fengyeSubType
+   *
+   * @return fengyeSubType
+   */
+  @ApiModelProperty(value = "")
+  public LandingPageFengyeSubType getFengyeSubType() {
+    return fengyeSubType;
+  }
+
+  public void setFengyeSubType(LandingPageFengyeSubType fengyeSubType) {
+    this.fengyeSubType = fengyeSubType;
+  }
+
+  public PagesGetListStruct ownerUid(Long ownerUid) {
+    this.ownerUid = ownerUid;
+    return this;
+  }
+
+  /**
+   * Get ownerUid
+   *
+   * @return ownerUid
+   */
+  @ApiModelProperty(value = "")
+  public Long getOwnerUid() {
+    return ownerUid;
+  }
+
+  public void setOwnerUid(Long ownerUid) {
+    this.ownerUid = ownerUid;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -259,7 +303,9 @@ public class PagesGetListStruct {
         && Objects.equals(this.productCatalogId, pagesGetListStruct.productCatalogId)
         && Objects.equals(this.pageType, pagesGetListStruct.pageType)
         && Objects.equals(this.playableType, pagesGetListStruct.playableType)
-        && Objects.equals(this.pageStatus, pagesGetListStruct.pageStatus);
+        && Objects.equals(this.pageStatus, pagesGetListStruct.pageStatus)
+        && Objects.equals(this.fengyeSubType, pagesGetListStruct.fengyeSubType)
+        && Objects.equals(this.ownerUid, pagesGetListStruct.ownerUid);
   }
 
   @Override
@@ -274,7 +320,9 @@ public class PagesGetListStruct {
         productCatalogId,
         pageType,
         playableType,
-        pageStatus);
+        pageStatus,
+        fengyeSubType,
+        ownerUid);
   }
 
   @Override

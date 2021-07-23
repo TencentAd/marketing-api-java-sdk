@@ -24,6 +24,8 @@ public class AddVideomakerVideocaptures {
 
   public Long number = null;
 
+  public Boolean returnImageIds = null;
+
   public void init() {
     this.tencentAds = TencentAds.getInstance();
     this.tencentAds.init(
@@ -38,7 +40,8 @@ public class AddVideomakerVideocaptures {
     VideomakerVideocapturesAddResponseData response =
         tencentAds
             .videomakerVideocaptures()
-            .videomakerVideocapturesAdd(accountId, videoId, videoFile, signature, number);
+            .videomakerVideocapturesAdd(
+                accountId, videoId, videoFile, signature, number, returnImageIds);
     return response;
   }
 

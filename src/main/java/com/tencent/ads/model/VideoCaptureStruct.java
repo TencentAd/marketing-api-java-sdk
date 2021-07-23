@@ -27,6 +27,9 @@ public class VideoCaptureStruct {
   @SerializedName("image_type")
   private VideoCaptureImageType imageType = null;
 
+  @SerializedName("image_id")
+  private String imageId = null;
+
   public VideoCaptureStruct imageUrl(String imageUrl) {
     this.imageUrl = imageUrl;
     return this;
@@ -65,6 +68,25 @@ public class VideoCaptureStruct {
     this.imageType = imageType;
   }
 
+  public VideoCaptureStruct imageId(String imageId) {
+    this.imageId = imageId;
+    return this;
+  }
+
+  /**
+   * Get imageId
+   *
+   * @return imageId
+   */
+  @ApiModelProperty(value = "")
+  public String getImageId() {
+    return imageId;
+  }
+
+  public void setImageId(String imageId) {
+    this.imageId = imageId;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -75,12 +97,13 @@ public class VideoCaptureStruct {
     }
     VideoCaptureStruct videoCaptureStruct = (VideoCaptureStruct) o;
     return Objects.equals(this.imageUrl, videoCaptureStruct.imageUrl)
-        && Objects.equals(this.imageType, videoCaptureStruct.imageType);
+        && Objects.equals(this.imageType, videoCaptureStruct.imageType)
+        && Objects.equals(this.imageId, videoCaptureStruct.imageId);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(imageUrl, imageType);
+    return Objects.hash(imageUrl, imageType, imageId);
   }
 
   @Override

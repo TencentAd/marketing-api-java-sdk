@@ -57,6 +57,7 @@ public class VideomakerVideocapturesApi {
    * @param videoFile (optional)
    * @param signature (optional)
    * @param number (optional)
+   * @param returnImageIds (optional)
    * @param progressListener Progress listener
    * @param progressRequestListener Progress request listener
    * @return Call to execute
@@ -68,6 +69,7 @@ public class VideomakerVideocapturesApi {
       File videoFile,
       String signature,
       Long number,
+      Boolean returnImageIds,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener)
       throws ApiException {
@@ -87,6 +89,7 @@ public class VideomakerVideocapturesApi {
     if (videoFile != null) localVarFormParams.put("video_file", videoFile);
     if (signature != null) localVarFormParams.put("signature", signature);
     if (number != null) localVarFormParams.put("number", number);
+    if (returnImageIds != null) localVarFormParams.put("return_image_ids", returnImageIds);
 
     final String[] localVarAccepts = {"application/json"};
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
@@ -134,6 +137,7 @@ public class VideomakerVideocapturesApi {
       File videoFile,
       String signature,
       Long number,
+      Boolean returnImageIds,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener)
       throws ApiException {
@@ -151,6 +155,7 @@ public class VideomakerVideocapturesApi {
             videoFile,
             signature,
             number,
+            returnImageIds,
             progressListener,
             progressRequestListener);
     return call;
@@ -164,15 +169,22 @@ public class VideomakerVideocapturesApi {
    * @param videoFile (optional)
    * @param signature (optional)
    * @param number (optional)
+   * @param returnImageIds (optional)
    * @return VideomakerVideocapturesAddResponse
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
   public VideomakerVideocapturesAddResponse videomakerVideocapturesAdd(
-      Long accountId, String videoId, File videoFile, String signature, Long number)
+      Long accountId,
+      String videoId,
+      File videoFile,
+      String signature,
+      Long number,
+      Boolean returnImageIds)
       throws ApiException {
     ApiResponse<VideomakerVideocapturesAddResponse> resp =
-        videomakerVideocapturesAddWithHttpInfo(accountId, videoId, videoFile, signature, number);
+        videomakerVideocapturesAddWithHttpInfo(
+            accountId, videoId, videoFile, signature, number, returnImageIds);
     return resp.getData();
   }
 
@@ -184,16 +196,22 @@ public class VideomakerVideocapturesApi {
    * @param videoFile (optional)
    * @param signature (optional)
    * @param number (optional)
+   * @param returnImageIds (optional)
    * @return ApiResponse&lt;VideomakerVideocapturesAddResponse&gt;
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
   public ApiResponse<VideomakerVideocapturesAddResponse> videomakerVideocapturesAddWithHttpInfo(
-      Long accountId, String videoId, File videoFile, String signature, Long number)
+      Long accountId,
+      String videoId,
+      File videoFile,
+      String signature,
+      Long number,
+      Boolean returnImageIds)
       throws ApiException {
     com.squareup.okhttp.Call call =
         videomakerVideocapturesAddValidateBeforeCall(
-            accountId, videoId, videoFile, signature, number, null, null);
+            accountId, videoId, videoFile, signature, number, returnImageIds, null, null);
     Type localVarReturnType = new TypeToken<VideomakerVideocapturesAddResponse>() {}.getType();
     return apiClient.execute(call, localVarReturnType);
   }
@@ -206,6 +224,7 @@ public class VideomakerVideocapturesApi {
    * @param videoFile (optional)
    * @param signature (optional)
    * @param number (optional)
+   * @param returnImageIds (optional)
    * @param callback The callback to be executed when the API call finishes
    * @return The request call
    * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -216,6 +235,7 @@ public class VideomakerVideocapturesApi {
       File videoFile,
       String signature,
       Long number,
+      Boolean returnImageIds,
       final ApiCallback<VideomakerVideocapturesAddResponse> callback)
       throws ApiException {
 
@@ -247,6 +267,7 @@ public class VideomakerVideocapturesApi {
             videoFile,
             signature,
             number,
+            returnImageIds,
             progressListener,
             progressRequestListener);
     Type localVarReturnType = new TypeToken<VideomakerVideocapturesAddResponse>() {}.getType();

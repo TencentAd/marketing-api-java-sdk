@@ -34,15 +34,22 @@ public class VideomakerVideocapturesApiContainer extends ApiContainer {
    * @param videoFile (optional)
    * @param signature (optional)
    * @param number (optional)
+   * @param returnImageIds (optional)
    * @return VideomakerVideocapturesAddResponse
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
   public VideomakerVideocapturesAddResponseData videomakerVideocapturesAdd(
-      Long accountId, String videoId, File videoFile, String signature, Long number)
+      Long accountId,
+      String videoId,
+      File videoFile,
+      String signature,
+      Long number,
+      Boolean returnImageIds)
       throws ApiException, TencentAdsResponseException {
     VideomakerVideocapturesAddResponse resp =
-        api.videomakerVideocapturesAdd(accountId, videoId, videoFile, signature, number);
+        api.videomakerVideocapturesAdd(
+            accountId, videoId, videoFile, signature, number, returnImageIds);
     handleResponse(gson.toJson(resp));
     return resp.getData();
   }
