@@ -20,9 +20,9 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
-/** 成本趋势 */
-@ApiModel(description = "成本趋势")
-public class CpaEffectDataTrends {
+/** 深浅成本趋势 */
+@ApiModel(description = "深浅成本趋势")
+public class CpaEffectDataTrendsItem {
   @SerializedName("rank")
   private Long rank = null;
 
@@ -32,7 +32,7 @@ public class CpaEffectDataTrends {
   @SerializedName("real_cpa")
   private List<PointStruct> realCpa = null;
 
-  public CpaEffectDataTrends rank(Long rank) {
+  public CpaEffectDataTrendsItem rank(Long rank) {
     this.rank = rank;
     return this;
   }
@@ -51,12 +51,12 @@ public class CpaEffectDataTrends {
     this.rank = rank;
   }
 
-  public CpaEffectDataTrends targetCpa(List<PointStruct> targetCpa) {
+  public CpaEffectDataTrendsItem targetCpa(List<PointStruct> targetCpa) {
     this.targetCpa = targetCpa;
     return this;
   }
 
-  public CpaEffectDataTrends addTargetCpaItem(PointStruct targetCpaItem) {
+  public CpaEffectDataTrendsItem addTargetCpaItem(PointStruct targetCpaItem) {
     if (this.targetCpa == null) {
       this.targetCpa = new ArrayList<PointStruct>();
     }
@@ -78,12 +78,12 @@ public class CpaEffectDataTrends {
     this.targetCpa = targetCpa;
   }
 
-  public CpaEffectDataTrends realCpa(List<PointStruct> realCpa) {
+  public CpaEffectDataTrendsItem realCpa(List<PointStruct> realCpa) {
     this.realCpa = realCpa;
     return this;
   }
 
-  public CpaEffectDataTrends addRealCpaItem(PointStruct realCpaItem) {
+  public CpaEffectDataTrendsItem addRealCpaItem(PointStruct realCpaItem) {
     if (this.realCpa == null) {
       this.realCpa = new ArrayList<PointStruct>();
     }
@@ -113,10 +113,10 @@ public class CpaEffectDataTrends {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    CpaEffectDataTrends cpaEffectDataTrends = (CpaEffectDataTrends) o;
-    return Objects.equals(this.rank, cpaEffectDataTrends.rank)
-        && Objects.equals(this.targetCpa, cpaEffectDataTrends.targetCpa)
-        && Objects.equals(this.realCpa, cpaEffectDataTrends.realCpa);
+    CpaEffectDataTrendsItem cpaEffectDataTrendsItem = (CpaEffectDataTrendsItem) o;
+    return Objects.equals(this.rank, cpaEffectDataTrendsItem.rank)
+        && Objects.equals(this.targetCpa, cpaEffectDataTrendsItem.targetCpa)
+        && Objects.equals(this.realCpa, cpaEffectDataTrendsItem.realCpa);
   }
 
   @Override

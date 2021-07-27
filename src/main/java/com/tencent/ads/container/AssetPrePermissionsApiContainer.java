@@ -33,6 +33,8 @@ public class AssetPrePermissionsApiContainer extends ApiContainer {
    *
    * @param accountId (required)
    * @param assetType (required)
+   * @param assetId (optional)
+   * @param assetName (optional)
    * @param pathType (optional)
    * @param page (optional)
    * @param pageSize (optional)
@@ -44,13 +46,16 @@ public class AssetPrePermissionsApiContainer extends ApiContainer {
   public AssetPrePermissionsGetResponseData assetPrePermissionsGet(
       Long accountId,
       String assetType,
+      Long assetId,
+      String assetName,
       String pathType,
       Long page,
       Long pageSize,
       List<String> fields)
       throws ApiException, TencentAdsResponseException {
     AssetPrePermissionsGetResponse resp =
-        api.assetPrePermissionsGet(accountId, assetType, pathType, page, pageSize, fields);
+        api.assetPrePermissionsGet(
+            accountId, assetType, assetId, assetName, pathType, page, pageSize, fields);
     handleResponse(gson.toJson(resp));
     return resp.getData();
   }

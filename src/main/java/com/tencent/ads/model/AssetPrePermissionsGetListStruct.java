@@ -32,6 +32,9 @@ public class AssetPrePermissionsGetListStruct {
   @SerializedName("asset_id")
   private Long assetId = null;
 
+  @SerializedName("asset_name")
+  private String assetName = null;
+
   @SerializedName("asset_type")
   private AssetType assetType = null;
 
@@ -105,6 +108,25 @@ public class AssetPrePermissionsGetListStruct {
 
   public void setAssetId(Long assetId) {
     this.assetId = assetId;
+  }
+
+  public AssetPrePermissionsGetListStruct assetName(String assetName) {
+    this.assetName = assetName;
+    return this;
+  }
+
+  /**
+   * Get assetName
+   *
+   * @return assetName
+   */
+  @ApiModelProperty(value = "")
+  public String getAssetName() {
+    return assetName;
+  }
+
+  public void setAssetName(String assetName) {
+    this.assetName = assetName;
   }
 
   public AssetPrePermissionsGetListStruct assetType(AssetType assetType) {
@@ -242,6 +264,7 @@ public class AssetPrePermissionsGetListStruct {
     return Objects.equals(this.accountId, assetPrePermissionsGetListStruct.accountId)
         && Objects.equals(this.ownerAccountId, assetPrePermissionsGetListStruct.ownerAccountId)
         && Objects.equals(this.assetId, assetPrePermissionsGetListStruct.assetId)
+        && Objects.equals(this.assetName, assetPrePermissionsGetListStruct.assetName)
         && Objects.equals(this.assetType, assetPrePermissionsGetListStruct.assetType)
         && Objects.equals(this.pathId, assetPrePermissionsGetListStruct.pathId)
         && Objects.equals(this.pathType, assetPrePermissionsGetListStruct.pathType)
@@ -256,6 +279,7 @@ public class AssetPrePermissionsGetListStruct {
         accountId,
         ownerAccountId,
         assetId,
+        assetName,
         assetType,
         pathId,
         pathType,

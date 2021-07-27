@@ -93,9 +93,6 @@ public class AdgroupsAddRequest {
   @SerializedName("dynamic_creative_id")
   private Long dynamicCreativeId = null;
 
-  @SerializedName("is_rewarded_video_ad")
-  private Boolean isRewardedVideoAd = null;
-
   @SerializedName("bid_strategy")
   private BidStrategy bidStrategy = null;
 
@@ -644,25 +641,6 @@ public class AdgroupsAddRequest {
     this.dynamicCreativeId = dynamicCreativeId;
   }
 
-  public AdgroupsAddRequest isRewardedVideoAd(Boolean isRewardedVideoAd) {
-    this.isRewardedVideoAd = isRewardedVideoAd;
-    return this;
-  }
-
-  /**
-   * Get isRewardedVideoAd
-   *
-   * @return isRewardedVideoAd
-   */
-  @ApiModelProperty(value = "")
-  public Boolean isIsRewardedVideoAd() {
-    return isRewardedVideoAd;
-  }
-
-  public void setIsRewardedVideoAd(Boolean isRewardedVideoAd) {
-    this.isRewardedVideoAd = isRewardedVideoAd;
-  }
-
   public AdgroupsAddRequest bidStrategy(BidStrategy bidStrategy) {
     this.bidStrategy = bidStrategy;
     return this;
@@ -1149,7 +1127,6 @@ public class AdgroupsAddRequest {
         && Objects.equals(
             this.additionalUserActionSets, adgroupsAddRequest.additionalUserActionSets)
         && Objects.equals(this.dynamicCreativeId, adgroupsAddRequest.dynamicCreativeId)
-        && Objects.equals(this.isRewardedVideoAd, adgroupsAddRequest.isRewardedVideoAd)
         && Objects.equals(this.bidStrategy, adgroupsAddRequest.bidStrategy)
         && Objects.equals(this.coldStartAudience, adgroupsAddRequest.coldStartAudience)
         && Objects.equals(this.autoAudience, adgroupsAddRequest.autoAudience)
@@ -1204,7 +1181,6 @@ public class AdgroupsAddRequest {
         userActionSets,
         additionalUserActionSets,
         dynamicCreativeId,
-        isRewardedVideoAd,
         bidStrategy,
         coldStartAudience,
         autoAudience,

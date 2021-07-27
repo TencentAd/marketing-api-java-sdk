@@ -18,6 +18,10 @@ public class GetAssetPrePermissions {
 
   public String assetType = null;
 
+  public Long assetId = null;
+
+  public String assetName = null;
+
   public String pathType = null;
 
   public Long page = null;
@@ -40,7 +44,8 @@ public class GetAssetPrePermissions {
     AssetPrePermissionsGetResponseData response =
         tencentAds
             .assetPrePermissions()
-            .assetPrePermissionsGet(accountId, assetType, pathType, page, pageSize, fields);
+            .assetPrePermissionsGet(
+                accountId, assetType, assetId, assetName, pathType, page, pageSize, fields);
     return response;
   }
 

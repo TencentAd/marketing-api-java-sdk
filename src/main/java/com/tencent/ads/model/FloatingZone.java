@@ -36,6 +36,12 @@ public class FloatingZone {
   @SerializedName("floating_zone_button_text")
   private String floatingZoneButtonText = null;
 
+  @SerializedName("floating_zone_type")
+  private FloatingZoneType floatingZoneType = null;
+
+  @SerializedName("floating_zone_single_image_id")
+  private String floatingZoneSingleImageId = null;
+
   public FloatingZone floatingZoneSwitch(Boolean floatingZoneSwitch) {
     this.floatingZoneSwitch = floatingZoneSwitch;
     return this;
@@ -131,6 +137,44 @@ public class FloatingZone {
     this.floatingZoneButtonText = floatingZoneButtonText;
   }
 
+  public FloatingZone floatingZoneType(FloatingZoneType floatingZoneType) {
+    this.floatingZoneType = floatingZoneType;
+    return this;
+  }
+
+  /**
+   * Get floatingZoneType
+   *
+   * @return floatingZoneType
+   */
+  @ApiModelProperty(value = "")
+  public FloatingZoneType getFloatingZoneType() {
+    return floatingZoneType;
+  }
+
+  public void setFloatingZoneType(FloatingZoneType floatingZoneType) {
+    this.floatingZoneType = floatingZoneType;
+  }
+
+  public FloatingZone floatingZoneSingleImageId(String floatingZoneSingleImageId) {
+    this.floatingZoneSingleImageId = floatingZoneSingleImageId;
+    return this;
+  }
+
+  /**
+   * Get floatingZoneSingleImageId
+   *
+   * @return floatingZoneSingleImageId
+   */
+  @ApiModelProperty(value = "")
+  public String getFloatingZoneSingleImageId() {
+    return floatingZoneSingleImageId;
+  }
+
+  public void setFloatingZoneSingleImageId(String floatingZoneSingleImageId) {
+    this.floatingZoneSingleImageId = floatingZoneSingleImageId;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -144,7 +188,9 @@ public class FloatingZone {
         && Objects.equals(this.floatingZoneImageId, floatingZone.floatingZoneImageId)
         && Objects.equals(this.floatingZoneName, floatingZone.floatingZoneName)
         && Objects.equals(this.floatingZoneDesc, floatingZone.floatingZoneDesc)
-        && Objects.equals(this.floatingZoneButtonText, floatingZone.floatingZoneButtonText);
+        && Objects.equals(this.floatingZoneButtonText, floatingZone.floatingZoneButtonText)
+        && Objects.equals(this.floatingZoneType, floatingZone.floatingZoneType)
+        && Objects.equals(this.floatingZoneSingleImageId, floatingZone.floatingZoneSingleImageId);
   }
 
   @Override
@@ -154,7 +200,9 @@ public class FloatingZone {
         floatingZoneImageId,
         floatingZoneName,
         floatingZoneDesc,
-        floatingZoneButtonText);
+        floatingZoneButtonText,
+        floatingZoneType,
+        floatingZoneSingleImageId);
   }
 
   @Override

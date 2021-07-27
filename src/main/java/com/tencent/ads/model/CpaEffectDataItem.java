@@ -18,9 +18,9 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.util.Objects;
 
-/** 效果数据（成本） */
-@ApiModel(description = "效果数据（成本）")
-public class CpaEffectDataStruct {
+/** 深浅效果数据（成本） */
+@ApiModel(description = "深浅效果数据（成本）")
+public class CpaEffectDataItem {
   @SerializedName("rank")
   private Long rank = null;
 
@@ -45,7 +45,7 @@ public class CpaEffectDataStruct {
   @SerializedName("industry_avg_targetcpa")
   private Long industryAvgTargetcpa = null;
 
-  public CpaEffectDataStruct rank(Long rank) {
+  public CpaEffectDataItem rank(Long rank) {
     this.rank = rank;
     return this;
   }
@@ -64,7 +64,7 @@ public class CpaEffectDataStruct {
     this.rank = rank;
   }
 
-  public CpaEffectDataStruct conversionCount(Long conversionCount) {
+  public CpaEffectDataItem conversionCount(Long conversionCount) {
     this.conversionCount = conversionCount;
     return this;
   }
@@ -83,7 +83,7 @@ public class CpaEffectDataStruct {
     this.conversionCount = conversionCount;
   }
 
-  public CpaEffectDataStruct cvr(Double cvr) {
+  public CpaEffectDataItem cvr(Double cvr) {
     this.cvr = cvr;
     return this;
   }
@@ -102,7 +102,7 @@ public class CpaEffectDataStruct {
     this.cvr = cvr;
   }
 
-  public CpaEffectDataStruct targetCpa(Double targetCpa) {
+  public CpaEffectDataItem targetCpa(Double targetCpa) {
     this.targetCpa = targetCpa;
     return this;
   }
@@ -121,7 +121,7 @@ public class CpaEffectDataStruct {
     this.targetCpa = targetCpa;
   }
 
-  public CpaEffectDataStruct realCpa(Double realCpa) {
+  public CpaEffectDataItem realCpa(Double realCpa) {
     this.realCpa = realCpa;
     return this;
   }
@@ -140,7 +140,7 @@ public class CpaEffectDataStruct {
     this.realCpa = realCpa;
   }
 
-  public CpaEffectDataStruct cpaBias(Double cpaBias) {
+  public CpaEffectDataItem cpaBias(Double cpaBias) {
     this.cpaBias = cpaBias;
     return this;
   }
@@ -159,7 +159,7 @@ public class CpaEffectDataStruct {
     this.cpaBias = cpaBias;
   }
 
-  public CpaEffectDataStruct industryTopTargetcpa(Long industryTopTargetcpa) {
+  public CpaEffectDataItem industryTopTargetcpa(Long industryTopTargetcpa) {
     this.industryTopTargetcpa = industryTopTargetcpa;
     return this;
   }
@@ -178,7 +178,7 @@ public class CpaEffectDataStruct {
     this.industryTopTargetcpa = industryTopTargetcpa;
   }
 
-  public CpaEffectDataStruct industryAvgTargetcpa(Long industryAvgTargetcpa) {
+  public CpaEffectDataItem industryAvgTargetcpa(Long industryAvgTargetcpa) {
     this.industryAvgTargetcpa = industryAvgTargetcpa;
     return this;
   }
@@ -205,15 +205,15 @@ public class CpaEffectDataStruct {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    CpaEffectDataStruct cpaEffectDataStruct = (CpaEffectDataStruct) o;
-    return Objects.equals(this.rank, cpaEffectDataStruct.rank)
-        && Objects.equals(this.conversionCount, cpaEffectDataStruct.conversionCount)
-        && Objects.equals(this.cvr, cpaEffectDataStruct.cvr)
-        && Objects.equals(this.targetCpa, cpaEffectDataStruct.targetCpa)
-        && Objects.equals(this.realCpa, cpaEffectDataStruct.realCpa)
-        && Objects.equals(this.cpaBias, cpaEffectDataStruct.cpaBias)
-        && Objects.equals(this.industryTopTargetcpa, cpaEffectDataStruct.industryTopTargetcpa)
-        && Objects.equals(this.industryAvgTargetcpa, cpaEffectDataStruct.industryAvgTargetcpa);
+    CpaEffectDataItem cpaEffectDataItem = (CpaEffectDataItem) o;
+    return Objects.equals(this.rank, cpaEffectDataItem.rank)
+        && Objects.equals(this.conversionCount, cpaEffectDataItem.conversionCount)
+        && Objects.equals(this.cvr, cpaEffectDataItem.cvr)
+        && Objects.equals(this.targetCpa, cpaEffectDataItem.targetCpa)
+        && Objects.equals(this.realCpa, cpaEffectDataItem.realCpa)
+        && Objects.equals(this.cpaBias, cpaEffectDataItem.cpaBias)
+        && Objects.equals(this.industryTopTargetcpa, cpaEffectDataItem.industryTopTargetcpa)
+        && Objects.equals(this.industryAvgTargetcpa, cpaEffectDataItem.industryAvgTargetcpa);
   }
 
   @Override

@@ -42,6 +42,9 @@ public class UserActionSetsAddRequest {
   @SerializedName("usages")
   private List<String> usages = null;
 
+  @SerializedName("enable_conversion_claim")
+  private Boolean enableConversionClaim = null;
+
   public UserActionSetsAddRequest accountId(Long accountId) {
     this.accountId = accountId;
     return this;
@@ -183,6 +186,25 @@ public class UserActionSetsAddRequest {
     this.usages = usages;
   }
 
+  public UserActionSetsAddRequest enableConversionClaim(Boolean enableConversionClaim) {
+    this.enableConversionClaim = enableConversionClaim;
+    return this;
+  }
+
+  /**
+   * Get enableConversionClaim
+   *
+   * @return enableConversionClaim
+   */
+  @ApiModelProperty(value = "")
+  public Boolean isEnableConversionClaim() {
+    return enableConversionClaim;
+  }
+
+  public void setEnableConversionClaim(Boolean enableConversionClaim) {
+    this.enableConversionClaim = enableConversionClaim;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -198,12 +220,22 @@ public class UserActionSetsAddRequest {
         && Objects.equals(this.wechatAppId, userActionSetsAddRequest.wechatAppId)
         && Objects.equals(this.name, userActionSetsAddRequest.name)
         && Objects.equals(this.description, userActionSetsAddRequest.description)
-        && Objects.equals(this.usages, userActionSetsAddRequest.usages);
+        && Objects.equals(this.usages, userActionSetsAddRequest.usages)
+        && Objects.equals(
+            this.enableConversionClaim, userActionSetsAddRequest.enableConversionClaim);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(accountId, type, mobileAppId, wechatAppId, name, description, usages);
+    return Objects.hash(
+        accountId,
+        type,
+        mobileAppId,
+        wechatAppId,
+        name,
+        description,
+        usages,
+        enableConversionClaim);
   }
 
   @Override

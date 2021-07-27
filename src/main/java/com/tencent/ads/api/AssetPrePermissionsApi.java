@@ -55,6 +55,8 @@ public class AssetPrePermissionsApi {
    *
    * @param accountId (required)
    * @param assetType (required)
+   * @param assetId (optional)
+   * @param assetName (optional)
    * @param pathType (optional)
    * @param page (optional)
    * @param pageSize (optional)
@@ -67,6 +69,8 @@ public class AssetPrePermissionsApi {
   public com.squareup.okhttp.Call assetPrePermissionsGetCall(
       Long accountId,
       String assetType,
+      Long assetId,
+      String assetName,
       String pathType,
       Long page,
       Long pageSize,
@@ -85,6 +89,9 @@ public class AssetPrePermissionsApi {
       localVarQueryParams.addAll(apiClient.parameterToPair("account_id", accountId));
     if (assetType != null)
       localVarQueryParams.addAll(apiClient.parameterToPair("asset_type", assetType));
+    if (assetId != null) localVarQueryParams.addAll(apiClient.parameterToPair("asset_id", assetId));
+    if (assetName != null)
+      localVarQueryParams.addAll(apiClient.parameterToPair("asset_name", assetName));
     if (pathType != null)
       localVarQueryParams.addAll(apiClient.parameterToPair("path_type", pathType));
     if (page != null) localVarQueryParams.addAll(apiClient.parameterToPair("page", page));
@@ -140,6 +147,8 @@ public class AssetPrePermissionsApi {
   private com.squareup.okhttp.Call assetPrePermissionsGetValidateBeforeCall(
       Long accountId,
       String assetType,
+      Long assetId,
+      String assetName,
       String pathType,
       Long page,
       Long pageSize,
@@ -164,6 +173,8 @@ public class AssetPrePermissionsApi {
         assetPrePermissionsGetCall(
             accountId,
             assetType,
+            assetId,
+            assetName,
             pathType,
             page,
             pageSize,
@@ -178,6 +189,8 @@ public class AssetPrePermissionsApi {
    *
    * @param accountId (required)
    * @param assetType (required)
+   * @param assetId (optional)
+   * @param assetName (optional)
    * @param pathType (optional)
    * @param page (optional)
    * @param pageSize (optional)
@@ -189,13 +202,16 @@ public class AssetPrePermissionsApi {
   public AssetPrePermissionsGetResponse assetPrePermissionsGet(
       Long accountId,
       String assetType,
+      Long assetId,
+      String assetName,
       String pathType,
       Long page,
       Long pageSize,
       List<String> fields)
       throws ApiException {
     ApiResponse<AssetPrePermissionsGetResponse> resp =
-        assetPrePermissionsGetWithHttpInfo(accountId, assetType, pathType, page, pageSize, fields);
+        assetPrePermissionsGetWithHttpInfo(
+            accountId, assetType, assetId, assetName, pathType, page, pageSize, fields);
     return resp.getData();
   }
 
@@ -204,6 +220,8 @@ public class AssetPrePermissionsApi {
    *
    * @param accountId (required)
    * @param assetType (required)
+   * @param assetId (optional)
+   * @param assetName (optional)
    * @param pathType (optional)
    * @param page (optional)
    * @param pageSize (optional)
@@ -215,6 +233,8 @@ public class AssetPrePermissionsApi {
   public ApiResponse<AssetPrePermissionsGetResponse> assetPrePermissionsGetWithHttpInfo(
       Long accountId,
       String assetType,
+      Long assetId,
+      String assetName,
       String pathType,
       Long page,
       Long pageSize,
@@ -222,7 +242,7 @@ public class AssetPrePermissionsApi {
       throws ApiException {
     com.squareup.okhttp.Call call =
         assetPrePermissionsGetValidateBeforeCall(
-            accountId, assetType, pathType, page, pageSize, fields, null, null);
+            accountId, assetType, assetId, assetName, pathType, page, pageSize, fields, null, null);
     Type localVarReturnType = new TypeToken<AssetPrePermissionsGetResponse>() {}.getType();
     return apiClient.execute(call, localVarReturnType);
   }
@@ -232,6 +252,8 @@ public class AssetPrePermissionsApi {
    *
    * @param accountId (required)
    * @param assetType (required)
+   * @param assetId (optional)
+   * @param assetName (optional)
    * @param pathType (optional)
    * @param page (optional)
    * @param pageSize (optional)
@@ -243,6 +265,8 @@ public class AssetPrePermissionsApi {
   public com.squareup.okhttp.Call assetPrePermissionsGetAsync(
       Long accountId,
       String assetType,
+      Long assetId,
+      String assetName,
       String pathType,
       Long page,
       Long pageSize,
@@ -275,6 +299,8 @@ public class AssetPrePermissionsApi {
         assetPrePermissionsGetValidateBeforeCall(
             accountId,
             assetType,
+            assetId,
+            assetName,
             pathType,
             page,
             pageSize,

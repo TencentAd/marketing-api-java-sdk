@@ -16,6 +16,8 @@ import com.google.gson.Gson;
 import com.google.gson.annotations.SerializedName;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Objects;
 
 /** UserActionSet返回结构 */
@@ -44,6 +46,15 @@ public class UserActionSet {
 
   @SerializedName("access_way")
   private ActionSetAccessWayType accessWay = null;
+
+  @SerializedName("usages")
+  private List<String> usages = null;
+
+  @SerializedName("enable_conversion_claim")
+  private Boolean enableConversionClaim = null;
+
+  @SerializedName("permission")
+  private Permission permission = null;
 
   public UserActionSet userActionSetId(Long userActionSetId) {
     this.userActionSetId = userActionSetId;
@@ -197,6 +208,71 @@ public class UserActionSet {
     this.accessWay = accessWay;
   }
 
+  public UserActionSet usages(List<String> usages) {
+    this.usages = usages;
+    return this;
+  }
+
+  public UserActionSet addUsagesItem(String usagesItem) {
+    if (this.usages == null) {
+      this.usages = new ArrayList<String>();
+    }
+    this.usages.add(usagesItem);
+    return this;
+  }
+
+  /**
+   * Get usages
+   *
+   * @return usages
+   */
+  @ApiModelProperty(value = "")
+  public List<String> getUsages() {
+    return usages;
+  }
+
+  public void setUsages(List<String> usages) {
+    this.usages = usages;
+  }
+
+  public UserActionSet enableConversionClaim(Boolean enableConversionClaim) {
+    this.enableConversionClaim = enableConversionClaim;
+    return this;
+  }
+
+  /**
+   * Get enableConversionClaim
+   *
+   * @return enableConversionClaim
+   */
+  @ApiModelProperty(value = "")
+  public Boolean isEnableConversionClaim() {
+    return enableConversionClaim;
+  }
+
+  public void setEnableConversionClaim(Boolean enableConversionClaim) {
+    this.enableConversionClaim = enableConversionClaim;
+  }
+
+  public UserActionSet permission(Permission permission) {
+    this.permission = permission;
+    return this;
+  }
+
+  /**
+   * Get permission
+   *
+   * @return permission
+   */
+  @ApiModelProperty(value = "")
+  public Permission getPermission() {
+    return permission;
+  }
+
+  public void setPermission(Permission permission) {
+    this.permission = permission;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -213,7 +289,10 @@ public class UserActionSet {
         && Objects.equals(this.description, userActionSet.description)
         && Objects.equals(this.activateStatus, userActionSet.activateStatus)
         && Objects.equals(this.createdTime, userActionSet.createdTime)
-        && Objects.equals(this.accessWay, userActionSet.accessWay);
+        && Objects.equals(this.accessWay, userActionSet.accessWay)
+        && Objects.equals(this.usages, userActionSet.usages)
+        && Objects.equals(this.enableConversionClaim, userActionSet.enableConversionClaim)
+        && Objects.equals(this.permission, userActionSet.permission);
   }
 
   @Override
@@ -226,7 +305,10 @@ public class UserActionSet {
         description,
         activateStatus,
         createdTime,
-        accessWay);
+        accessWay,
+        usages,
+        enableConversionClaim,
+        permission);
   }
 
   @Override

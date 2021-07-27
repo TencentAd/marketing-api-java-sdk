@@ -16,19 +16,29 @@ import com.google.gson.Gson;
 import com.google.gson.annotations.SerializedName;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Objects;
 
 /** 诊断详情-成本明细 */
 @ApiModel(description = "诊断详情-成本明细")
 public class DetailCpaDetailStruct {
   @SerializedName("effect_data")
-  private CpaEffectDataStruct effectData = null;
+  private List<CpaEffectDataItem> effectData = null;
 
   @SerializedName("effect_data_trends")
-  private CpaEffectDataTrends effectDataTrends = null;
+  private List<CpaEffectDataTrendsItem> effectDataTrends = null;
 
-  public DetailCpaDetailStruct effectData(CpaEffectDataStruct effectData) {
+  public DetailCpaDetailStruct effectData(List<CpaEffectDataItem> effectData) {
     this.effectData = effectData;
+    return this;
+  }
+
+  public DetailCpaDetailStruct addEffectDataItem(CpaEffectDataItem effectDataItem) {
+    if (this.effectData == null) {
+      this.effectData = new ArrayList<CpaEffectDataItem>();
+    }
+    this.effectData.add(effectDataItem);
     return this;
   }
 
@@ -38,16 +48,25 @@ public class DetailCpaDetailStruct {
    * @return effectData
    */
   @ApiModelProperty(value = "")
-  public CpaEffectDataStruct getEffectData() {
+  public List<CpaEffectDataItem> getEffectData() {
     return effectData;
   }
 
-  public void setEffectData(CpaEffectDataStruct effectData) {
+  public void setEffectData(List<CpaEffectDataItem> effectData) {
     this.effectData = effectData;
   }
 
-  public DetailCpaDetailStruct effectDataTrends(CpaEffectDataTrends effectDataTrends) {
+  public DetailCpaDetailStruct effectDataTrends(List<CpaEffectDataTrendsItem> effectDataTrends) {
     this.effectDataTrends = effectDataTrends;
+    return this;
+  }
+
+  public DetailCpaDetailStruct addEffectDataTrendsItem(
+      CpaEffectDataTrendsItem effectDataTrendsItem) {
+    if (this.effectDataTrends == null) {
+      this.effectDataTrends = new ArrayList<CpaEffectDataTrendsItem>();
+    }
+    this.effectDataTrends.add(effectDataTrendsItem);
     return this;
   }
 
@@ -57,11 +76,11 @@ public class DetailCpaDetailStruct {
    * @return effectDataTrends
    */
   @ApiModelProperty(value = "")
-  public CpaEffectDataTrends getEffectDataTrends() {
+  public List<CpaEffectDataTrendsItem> getEffectDataTrends() {
     return effectDataTrends;
   }
 
-  public void setEffectDataTrends(CpaEffectDataTrends effectDataTrends) {
+  public void setEffectDataTrends(List<CpaEffectDataTrendsItem> effectDataTrends) {
     this.effectDataTrends = effectDataTrends;
   }
 
