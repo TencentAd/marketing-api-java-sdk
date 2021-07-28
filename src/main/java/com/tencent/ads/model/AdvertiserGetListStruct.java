@@ -77,6 +77,9 @@ public class AdvertiserGetListStruct {
   @SerializedName("operators")
   private List<AdvertiserOperatorStruct> operators = null;
 
+  @SerializedName("memo")
+  private String memo = null;
+
   @SerializedName("account_id")
   private Long accountId = null;
 
@@ -489,6 +492,25 @@ public class AdvertiserGetListStruct {
     this.operators = operators;
   }
 
+  public AdvertiserGetListStruct memo(String memo) {
+    this.memo = memo;
+    return this;
+  }
+
+  /**
+   * Get memo
+   *
+   * @return memo
+   */
+  @ApiModelProperty(value = "")
+  public String getMemo() {
+    return memo;
+  }
+
+  public void setMemo(String memo) {
+    this.memo = memo;
+  }
+
   public AdvertiserGetListStruct accountId(Long accountId) {
     this.accountId = accountId;
     return this;
@@ -748,6 +770,7 @@ public class AdvertiserGetListStruct {
         && Objects.equals(this.mdmName, advertiserGetListStruct.mdmName)
         && Objects.equals(this.agencyAccountId, advertiserGetListStruct.agencyAccountId)
         && Objects.equals(this.operators, advertiserGetListStruct.operators)
+        && Objects.equals(this.memo, advertiserGetListStruct.memo)
         && Objects.equals(this.accountId, advertiserGetListStruct.accountId)
         && Objects.equals(this.adQualificationImage, advertiserGetListStruct.adQualificationImage)
         && Objects.equals(this.certificationImage, advertiserGetListStruct.certificationImage)
@@ -783,6 +806,7 @@ public class AdvertiserGetListStruct {
         mdmName,
         agencyAccountId,
         operators,
+        memo,
         accountId,
         adQualificationImage,
         certificationImage,
