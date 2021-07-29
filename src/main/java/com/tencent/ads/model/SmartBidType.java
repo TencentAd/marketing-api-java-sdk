@@ -19,7 +19,10 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-/** 出价类型， 当出价类型为SMART_BID_TYPE_SYSTEMATIC时，不可传入bid_amount，暂不支持微信流量，功能灰度开放中。 */
+/**
+ * 出价类型，
+ * 当出价类型为SMART_BID_TYPE_SYSTEMATIC时，不可传入bid_amount，暂不支持微信流量，功能灰度开放中。smart_bid_type出价类型仅支持oCPX广告使用
+ */
 @JsonAdapter(SmartBidType.Adapter.class)
 public enum SmartBidType {
   CUSTOM("SMART_BID_TYPE_CUSTOM"),

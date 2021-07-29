@@ -54,7 +54,9 @@ public enum CompeteAttribution {
 
   INNER_COMPETE("ATTRIBUTE_INNER_COMPETE"),
 
-  PCVR("ATTRIBUTE_PCVR");
+  PCVR("ATTRIBUTE_PCVR"),
+
+  OPT_KNOCK_OUT("ATTRIBUTE_OPT_KNOCK_OUT");
 
   private String value;
 

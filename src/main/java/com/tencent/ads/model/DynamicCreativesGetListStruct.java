@@ -68,6 +68,9 @@ public class DynamicCreativesGetListStruct {
   @SerializedName("last_modified_time")
   private Long lastModifiedTime = null;
 
+  @SerializedName("dynamic_adcreative_spec")
+  private DynamicAdcreativeSpecForDc dynamicAdcreativeSpec = null;
+
   @SerializedName("is_deleted")
   private Boolean isDeleted = null;
 
@@ -392,6 +395,26 @@ public class DynamicCreativesGetListStruct {
     this.lastModifiedTime = lastModifiedTime;
   }
 
+  public DynamicCreativesGetListStruct dynamicAdcreativeSpec(
+      DynamicAdcreativeSpecForDc dynamicAdcreativeSpec) {
+    this.dynamicAdcreativeSpec = dynamicAdcreativeSpec;
+    return this;
+  }
+
+  /**
+   * Get dynamicAdcreativeSpec
+   *
+   * @return dynamicAdcreativeSpec
+   */
+  @ApiModelProperty(value = "")
+  public DynamicAdcreativeSpecForDc getDynamicAdcreativeSpec() {
+    return dynamicAdcreativeSpec;
+  }
+
+  public void setDynamicAdcreativeSpec(DynamicAdcreativeSpecForDc dynamicAdcreativeSpec) {
+    this.dynamicAdcreativeSpec = dynamicAdcreativeSpec;
+  }
+
   public DynamicCreativesGetListStruct isDeleted(Boolean isDeleted) {
     this.isDeleted = isDeleted;
     return this;
@@ -619,6 +642,8 @@ public class DynamicCreativesGetListStruct {
         && Objects.equals(this.profileId, dynamicCreativesGetListStruct.profileId)
         && Objects.equals(this.createdTime, dynamicCreativesGetListStruct.createdTime)
         && Objects.equals(this.lastModifiedTime, dynamicCreativesGetListStruct.lastModifiedTime)
+        && Objects.equals(
+            this.dynamicAdcreativeSpec, dynamicCreativesGetListStruct.dynamicAdcreativeSpec)
         && Objects.equals(this.isDeleted, dynamicCreativesGetListStruct.isDeleted)
         && Objects.equals(this.campaignType, dynamicCreativesGetListStruct.campaignType)
         && Objects.equals(
@@ -652,6 +677,7 @@ public class DynamicCreativesGetListStruct {
         profileId,
         createdTime,
         lastModifiedTime,
+        dynamicAdcreativeSpec,
         isDeleted,
         campaignType,
         impressionTrackingUrl,
