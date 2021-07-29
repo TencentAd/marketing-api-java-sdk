@@ -132,6 +132,9 @@ public class HourlyReportsGetListStruct {
   @SerializedName("page_reservation_cost")
   private Long pageReservationCost = null;
 
+  @SerializedName("page_reservation_cost_with_people")
+  private Long pageReservationCostWithPeople = null;
+
   @SerializedName("add_to_cart_price")
   private Long addToCartPrice = null;
 
@@ -275,6 +278,27 @@ public class HourlyReportsGetListStruct {
 
   @SerializedName("platform_coupon_get_rate")
   private Double platformCouponGetRate = null;
+
+  @SerializedName("coupon_usage_number")
+  private Long couponUsageNumber = null;
+
+  @SerializedName("coupon_usage_cost")
+  private Long couponUsageCost = null;
+
+  @SerializedName("coupon_usage_rate")
+  private Double couponUsageRate = null;
+
+  @SerializedName("coupon_purchase_rate")
+  private Double couponPurchaseRate = null;
+
+  @SerializedName("coupon_get_count_by_platform")
+  private Long couponGetCountByPlatform = null;
+
+  @SerializedName("coupon_get_cost_by_platform")
+  private Long couponGetCostByPlatform = null;
+
+  @SerializedName("coupon_get_rate")
+  private Double couponGetRate = null;
 
   @SerializedName("follow_count")
   private Long followCount = null;
@@ -807,6 +831,12 @@ public class HourlyReportsGetListStruct {
   @SerializedName("join_chat_group_amount")
   private Long joinChatGroupAmount = null;
 
+  @SerializedName("join_chat_group_number_of_people")
+  private Long joinChatGroupNumberOfPeople = null;
+
+  @SerializedName("join_chat_group_cost_by_people")
+  private Long joinChatGroupCostByPeople = null;
+
   @SerializedName("guide_to_follow_page_views")
   private Long guideToFollowPageViews = null;
 
@@ -1008,6 +1038,15 @@ public class HourlyReportsGetListStruct {
   @SerializedName("roi_activated_d14")
   private Double roiActivatedD14 = null;
 
+  @SerializedName("first_day_ad_pur_arppu_cost")
+  private Long firstDayAdPurArppuCost = null;
+
+  @SerializedName("first_day_pay_amount_arpu")
+  private Long firstDayPayAmountArpu = null;
+
+  @SerializedName("first_day_pay_amount_arppu")
+  private Long firstDayPayAmountArppu = null;
+
   @SerializedName("roi_activated_d30")
   private Double roiActivatedD30 = null;
 
@@ -1056,14 +1095,26 @@ public class HourlyReportsGetListStruct {
   @SerializedName("mini_game_mixed_monetization_roi_d1")
   private Double miniGameMixedMonetizationRoiD1 = null;
 
+  @SerializedName("mini_game_mixed_monetization_roi_d1_by_reporting")
+  private Double miniGameMixedMonetizationRoiD1ByReporting = null;
+
   @SerializedName("mini_game_mixed_monetization_roi_d3")
   private Double miniGameMixedMonetizationRoiD3 = null;
+
+  @SerializedName("mini_game_mixed_monetization_roi_d3_reporting")
+  private Double miniGameMixedMonetizationRoiD3Reporting = null;
 
   @SerializedName("mini_game_mixed_monetization_roi_d7")
   private Double miniGameMixedMonetizationRoiD7 = null;
 
+  @SerializedName("mini_game_mixed_monetization_roi_d7_by_reporting")
+  private Double miniGameMixedMonetizationRoiD7ByReporting = null;
+
   @SerializedName("mini_game_mixed_monetization_roi_d14")
   private Double miniGameMixedMonetizationRoiD14 = null;
+
+  @SerializedName("mini_game_mixed_monetization_roi_d14_by_reporting")
+  private Double miniGameMixedMonetizationRoiD14ByReporting = null;
 
   @SerializedName("ad_paying_users_d1")
   private Long adPayingUsersD1 = null;
@@ -1307,9 +1358,6 @@ public class HourlyReportsGetListStruct {
 
   @SerializedName("coupon_get_cost")
   private Long couponGetCost = null;
-
-  @SerializedName("coupon_get_rate")
-  private Double couponGetRate = null;
 
   @SerializedName("coupon_use_count")
   private Long couponUseCount = null;
@@ -2027,6 +2075,26 @@ public class HourlyReportsGetListStruct {
 
   public void setPageReservationCost(Long pageReservationCost) {
     this.pageReservationCost = pageReservationCost;
+  }
+
+  public HourlyReportsGetListStruct pageReservationCostWithPeople(
+      Long pageReservationCostWithPeople) {
+    this.pageReservationCostWithPeople = pageReservationCostWithPeople;
+    return this;
+  }
+
+  /**
+   * Get pageReservationCostWithPeople
+   *
+   * @return pageReservationCostWithPeople
+   */
+  @ApiModelProperty(value = "")
+  public Long getPageReservationCostWithPeople() {
+    return pageReservationCostWithPeople;
+  }
+
+  public void setPageReservationCostWithPeople(Long pageReservationCostWithPeople) {
+    this.pageReservationCostWithPeople = pageReservationCostWithPeople;
   }
 
   public HourlyReportsGetListStruct addToCartPrice(Long addToCartPrice) {
@@ -2939,6 +3007,139 @@ public class HourlyReportsGetListStruct {
 
   public void setPlatformCouponGetRate(Double platformCouponGetRate) {
     this.platformCouponGetRate = platformCouponGetRate;
+  }
+
+  public HourlyReportsGetListStruct couponUsageNumber(Long couponUsageNumber) {
+    this.couponUsageNumber = couponUsageNumber;
+    return this;
+  }
+
+  /**
+   * Get couponUsageNumber
+   *
+   * @return couponUsageNumber
+   */
+  @ApiModelProperty(value = "")
+  public Long getCouponUsageNumber() {
+    return couponUsageNumber;
+  }
+
+  public void setCouponUsageNumber(Long couponUsageNumber) {
+    this.couponUsageNumber = couponUsageNumber;
+  }
+
+  public HourlyReportsGetListStruct couponUsageCost(Long couponUsageCost) {
+    this.couponUsageCost = couponUsageCost;
+    return this;
+  }
+
+  /**
+   * Get couponUsageCost
+   *
+   * @return couponUsageCost
+   */
+  @ApiModelProperty(value = "")
+  public Long getCouponUsageCost() {
+    return couponUsageCost;
+  }
+
+  public void setCouponUsageCost(Long couponUsageCost) {
+    this.couponUsageCost = couponUsageCost;
+  }
+
+  public HourlyReportsGetListStruct couponUsageRate(Double couponUsageRate) {
+    this.couponUsageRate = couponUsageRate;
+    return this;
+  }
+
+  /**
+   * Get couponUsageRate
+   *
+   * @return couponUsageRate
+   */
+  @ApiModelProperty(value = "")
+  public Double getCouponUsageRate() {
+    return couponUsageRate;
+  }
+
+  public void setCouponUsageRate(Double couponUsageRate) {
+    this.couponUsageRate = couponUsageRate;
+  }
+
+  public HourlyReportsGetListStruct couponPurchaseRate(Double couponPurchaseRate) {
+    this.couponPurchaseRate = couponPurchaseRate;
+    return this;
+  }
+
+  /**
+   * Get couponPurchaseRate
+   *
+   * @return couponPurchaseRate
+   */
+  @ApiModelProperty(value = "")
+  public Double getCouponPurchaseRate() {
+    return couponPurchaseRate;
+  }
+
+  public void setCouponPurchaseRate(Double couponPurchaseRate) {
+    this.couponPurchaseRate = couponPurchaseRate;
+  }
+
+  public HourlyReportsGetListStruct couponGetCountByPlatform(Long couponGetCountByPlatform) {
+    this.couponGetCountByPlatform = couponGetCountByPlatform;
+    return this;
+  }
+
+  /**
+   * Get couponGetCountByPlatform
+   *
+   * @return couponGetCountByPlatform
+   */
+  @ApiModelProperty(value = "")
+  public Long getCouponGetCountByPlatform() {
+    return couponGetCountByPlatform;
+  }
+
+  public void setCouponGetCountByPlatform(Long couponGetCountByPlatform) {
+    this.couponGetCountByPlatform = couponGetCountByPlatform;
+  }
+
+  public HourlyReportsGetListStruct couponGetCostByPlatform(Long couponGetCostByPlatform) {
+    this.couponGetCostByPlatform = couponGetCostByPlatform;
+    return this;
+  }
+
+  /**
+   * Get couponGetCostByPlatform
+   *
+   * @return couponGetCostByPlatform
+   */
+  @ApiModelProperty(value = "")
+  public Long getCouponGetCostByPlatform() {
+    return couponGetCostByPlatform;
+  }
+
+  public void setCouponGetCostByPlatform(Long couponGetCostByPlatform) {
+    this.couponGetCostByPlatform = couponGetCostByPlatform;
+  }
+
+  public HourlyReportsGetListStruct couponGetRate(Double couponGetRate) {
+    this.couponGetRate = couponGetRate;
+    return this;
+  }
+
+  /**
+   * Get couponGetRate
+   *
+   * @return couponGetRate
+   */
+  @ApiModelProperty(value = "")
+  public Double getCouponGetRate() {
+    return couponGetRate;
+  }
+
+  public void setCouponGetRate(Double couponGetRate) {
+    this.couponGetRate = couponGetRate;
   }
 
   public HourlyReportsGetListStruct followCount(Long followCount) {
@@ -6305,6 +6506,44 @@ public class HourlyReportsGetListStruct {
     this.joinChatGroupAmount = joinChatGroupAmount;
   }
 
+  public HourlyReportsGetListStruct joinChatGroupNumberOfPeople(Long joinChatGroupNumberOfPeople) {
+    this.joinChatGroupNumberOfPeople = joinChatGroupNumberOfPeople;
+    return this;
+  }
+
+  /**
+   * Get joinChatGroupNumberOfPeople
+   *
+   * @return joinChatGroupNumberOfPeople
+   */
+  @ApiModelProperty(value = "")
+  public Long getJoinChatGroupNumberOfPeople() {
+    return joinChatGroupNumberOfPeople;
+  }
+
+  public void setJoinChatGroupNumberOfPeople(Long joinChatGroupNumberOfPeople) {
+    this.joinChatGroupNumberOfPeople = joinChatGroupNumberOfPeople;
+  }
+
+  public HourlyReportsGetListStruct joinChatGroupCostByPeople(Long joinChatGroupCostByPeople) {
+    this.joinChatGroupCostByPeople = joinChatGroupCostByPeople;
+    return this;
+  }
+
+  /**
+   * Get joinChatGroupCostByPeople
+   *
+   * @return joinChatGroupCostByPeople
+   */
+  @ApiModelProperty(value = "")
+  public Long getJoinChatGroupCostByPeople() {
+    return joinChatGroupCostByPeople;
+  }
+
+  public void setJoinChatGroupCostByPeople(Long joinChatGroupCostByPeople) {
+    this.joinChatGroupCostByPeople = joinChatGroupCostByPeople;
+  }
+
   public HourlyReportsGetListStruct guideToFollowPageViews(Long guideToFollowPageViews) {
     this.guideToFollowPageViews = guideToFollowPageViews;
     return this;
@@ -7588,6 +7827,63 @@ public class HourlyReportsGetListStruct {
     this.roiActivatedD14 = roiActivatedD14;
   }
 
+  public HourlyReportsGetListStruct firstDayAdPurArppuCost(Long firstDayAdPurArppuCost) {
+    this.firstDayAdPurArppuCost = firstDayAdPurArppuCost;
+    return this;
+  }
+
+  /**
+   * Get firstDayAdPurArppuCost
+   *
+   * @return firstDayAdPurArppuCost
+   */
+  @ApiModelProperty(value = "")
+  public Long getFirstDayAdPurArppuCost() {
+    return firstDayAdPurArppuCost;
+  }
+
+  public void setFirstDayAdPurArppuCost(Long firstDayAdPurArppuCost) {
+    this.firstDayAdPurArppuCost = firstDayAdPurArppuCost;
+  }
+
+  public HourlyReportsGetListStruct firstDayPayAmountArpu(Long firstDayPayAmountArpu) {
+    this.firstDayPayAmountArpu = firstDayPayAmountArpu;
+    return this;
+  }
+
+  /**
+   * Get firstDayPayAmountArpu
+   *
+   * @return firstDayPayAmountArpu
+   */
+  @ApiModelProperty(value = "")
+  public Long getFirstDayPayAmountArpu() {
+    return firstDayPayAmountArpu;
+  }
+
+  public void setFirstDayPayAmountArpu(Long firstDayPayAmountArpu) {
+    this.firstDayPayAmountArpu = firstDayPayAmountArpu;
+  }
+
+  public HourlyReportsGetListStruct firstDayPayAmountArppu(Long firstDayPayAmountArppu) {
+    this.firstDayPayAmountArppu = firstDayPayAmountArppu;
+    return this;
+  }
+
+  /**
+   * Get firstDayPayAmountArppu
+   *
+   * @return firstDayPayAmountArppu
+   */
+  @ApiModelProperty(value = "")
+  public Long getFirstDayPayAmountArppu() {
+    return firstDayPayAmountArppu;
+  }
+
+  public void setFirstDayPayAmountArppu(Long firstDayPayAmountArppu) {
+    this.firstDayPayAmountArppu = firstDayPayAmountArppu;
+  }
+
   public HourlyReportsGetListStruct roiActivatedD30(Double roiActivatedD30) {
     this.roiActivatedD30 = roiActivatedD30;
     return this;
@@ -7898,6 +8194,27 @@ public class HourlyReportsGetListStruct {
     this.miniGameMixedMonetizationRoiD1 = miniGameMixedMonetizationRoiD1;
   }
 
+  public HourlyReportsGetListStruct miniGameMixedMonetizationRoiD1ByReporting(
+      Double miniGameMixedMonetizationRoiD1ByReporting) {
+    this.miniGameMixedMonetizationRoiD1ByReporting = miniGameMixedMonetizationRoiD1ByReporting;
+    return this;
+  }
+
+  /**
+   * Get miniGameMixedMonetizationRoiD1ByReporting
+   *
+   * @return miniGameMixedMonetizationRoiD1ByReporting
+   */
+  @ApiModelProperty(value = "")
+  public Double getMiniGameMixedMonetizationRoiD1ByReporting() {
+    return miniGameMixedMonetizationRoiD1ByReporting;
+  }
+
+  public void setMiniGameMixedMonetizationRoiD1ByReporting(
+      Double miniGameMixedMonetizationRoiD1ByReporting) {
+    this.miniGameMixedMonetizationRoiD1ByReporting = miniGameMixedMonetizationRoiD1ByReporting;
+  }
+
   public HourlyReportsGetListStruct miniGameMixedMonetizationRoiD3(
       Double miniGameMixedMonetizationRoiD3) {
     this.miniGameMixedMonetizationRoiD3 = miniGameMixedMonetizationRoiD3;
@@ -7916,6 +8233,27 @@ public class HourlyReportsGetListStruct {
 
   public void setMiniGameMixedMonetizationRoiD3(Double miniGameMixedMonetizationRoiD3) {
     this.miniGameMixedMonetizationRoiD3 = miniGameMixedMonetizationRoiD3;
+  }
+
+  public HourlyReportsGetListStruct miniGameMixedMonetizationRoiD3Reporting(
+      Double miniGameMixedMonetizationRoiD3Reporting) {
+    this.miniGameMixedMonetizationRoiD3Reporting = miniGameMixedMonetizationRoiD3Reporting;
+    return this;
+  }
+
+  /**
+   * Get miniGameMixedMonetizationRoiD3Reporting
+   *
+   * @return miniGameMixedMonetizationRoiD3Reporting
+   */
+  @ApiModelProperty(value = "")
+  public Double getMiniGameMixedMonetizationRoiD3Reporting() {
+    return miniGameMixedMonetizationRoiD3Reporting;
+  }
+
+  public void setMiniGameMixedMonetizationRoiD3Reporting(
+      Double miniGameMixedMonetizationRoiD3Reporting) {
+    this.miniGameMixedMonetizationRoiD3Reporting = miniGameMixedMonetizationRoiD3Reporting;
   }
 
   public HourlyReportsGetListStruct miniGameMixedMonetizationRoiD7(
@@ -7938,6 +8276,27 @@ public class HourlyReportsGetListStruct {
     this.miniGameMixedMonetizationRoiD7 = miniGameMixedMonetizationRoiD7;
   }
 
+  public HourlyReportsGetListStruct miniGameMixedMonetizationRoiD7ByReporting(
+      Double miniGameMixedMonetizationRoiD7ByReporting) {
+    this.miniGameMixedMonetizationRoiD7ByReporting = miniGameMixedMonetizationRoiD7ByReporting;
+    return this;
+  }
+
+  /**
+   * Get miniGameMixedMonetizationRoiD7ByReporting
+   *
+   * @return miniGameMixedMonetizationRoiD7ByReporting
+   */
+  @ApiModelProperty(value = "")
+  public Double getMiniGameMixedMonetizationRoiD7ByReporting() {
+    return miniGameMixedMonetizationRoiD7ByReporting;
+  }
+
+  public void setMiniGameMixedMonetizationRoiD7ByReporting(
+      Double miniGameMixedMonetizationRoiD7ByReporting) {
+    this.miniGameMixedMonetizationRoiD7ByReporting = miniGameMixedMonetizationRoiD7ByReporting;
+  }
+
   public HourlyReportsGetListStruct miniGameMixedMonetizationRoiD14(
       Double miniGameMixedMonetizationRoiD14) {
     this.miniGameMixedMonetizationRoiD14 = miniGameMixedMonetizationRoiD14;
@@ -7956,6 +8315,27 @@ public class HourlyReportsGetListStruct {
 
   public void setMiniGameMixedMonetizationRoiD14(Double miniGameMixedMonetizationRoiD14) {
     this.miniGameMixedMonetizationRoiD14 = miniGameMixedMonetizationRoiD14;
+  }
+
+  public HourlyReportsGetListStruct miniGameMixedMonetizationRoiD14ByReporting(
+      Double miniGameMixedMonetizationRoiD14ByReporting) {
+    this.miniGameMixedMonetizationRoiD14ByReporting = miniGameMixedMonetizationRoiD14ByReporting;
+    return this;
+  }
+
+  /**
+   * Get miniGameMixedMonetizationRoiD14ByReporting
+   *
+   * @return miniGameMixedMonetizationRoiD14ByReporting
+   */
+  @ApiModelProperty(value = "")
+  public Double getMiniGameMixedMonetizationRoiD14ByReporting() {
+    return miniGameMixedMonetizationRoiD14ByReporting;
+  }
+
+  public void setMiniGameMixedMonetizationRoiD14ByReporting(
+      Double miniGameMixedMonetizationRoiD14ByReporting) {
+    this.miniGameMixedMonetizationRoiD14ByReporting = miniGameMixedMonetizationRoiD14ByReporting;
   }
 
   public HourlyReportsGetListStruct adPayingUsersD1(Long adPayingUsersD1) {
@@ -9512,25 +9892,6 @@ public class HourlyReportsGetListStruct {
     this.couponGetCost = couponGetCost;
   }
 
-  public HourlyReportsGetListStruct couponGetRate(Double couponGetRate) {
-    this.couponGetRate = couponGetRate;
-    return this;
-  }
-
-  /**
-   * Get couponGetRate
-   *
-   * @return couponGetRate
-   */
-  @ApiModelProperty(value = "")
-  public Double getCouponGetRate() {
-    return couponGetRate;
-  }
-
-  public void setCouponGetRate(Double couponGetRate) {
-    this.couponGetRate = couponGetRate;
-  }
-
   public HourlyReportsGetListStruct couponUseCount(Long couponUseCount) {
     this.couponUseCount = couponUseCount;
     return this;
@@ -9689,6 +10050,9 @@ public class HourlyReportsGetListStruct {
             this.pageReservationCount, hourlyReportsGetListStruct.pageReservationCount)
         && Objects.equals(this.pageReservationRate, hourlyReportsGetListStruct.pageReservationRate)
         && Objects.equals(this.pageReservationCost, hourlyReportsGetListStruct.pageReservationCost)
+        && Objects.equals(
+            this.pageReservationCostWithPeople,
+            hourlyReportsGetListStruct.pageReservationCostWithPeople)
         && Objects.equals(this.addToCartPrice, hourlyReportsGetListStruct.addToCartPrice)
         && Objects.equals(
             this.ownPageCouponGetCount, hourlyReportsGetListStruct.ownPageCouponGetCount)
@@ -9747,6 +10111,15 @@ public class HourlyReportsGetListStruct {
             this.platformCouponClickCount, hourlyReportsGetListStruct.platformCouponClickCount)
         && Objects.equals(
             this.platformCouponGetRate, hourlyReportsGetListStruct.platformCouponGetRate)
+        && Objects.equals(this.couponUsageNumber, hourlyReportsGetListStruct.couponUsageNumber)
+        && Objects.equals(this.couponUsageCost, hourlyReportsGetListStruct.couponUsageCost)
+        && Objects.equals(this.couponUsageRate, hourlyReportsGetListStruct.couponUsageRate)
+        && Objects.equals(this.couponPurchaseRate, hourlyReportsGetListStruct.couponPurchaseRate)
+        && Objects.equals(
+            this.couponGetCountByPlatform, hourlyReportsGetListStruct.couponGetCountByPlatform)
+        && Objects.equals(
+            this.couponGetCostByPlatform, hourlyReportsGetListStruct.couponGetCostByPlatform)
+        && Objects.equals(this.couponGetRate, hourlyReportsGetListStruct.couponGetRate)
         && Objects.equals(this.followCount, hourlyReportsGetListStruct.followCount)
         && Objects.equals(this.followCost, hourlyReportsGetListStruct.followCost)
         && Objects.equals(this.forwardCount, hourlyReportsGetListStruct.forwardCount)
@@ -9961,6 +10334,11 @@ public class HourlyReportsGetListStruct {
             this.activePageInteractionUsers, hourlyReportsGetListStruct.activePageInteractionUsers)
         && Objects.equals(this.joinChatGroupAmount, hourlyReportsGetListStruct.joinChatGroupAmount)
         && Objects.equals(
+            this.joinChatGroupNumberOfPeople,
+            hourlyReportsGetListStruct.joinChatGroupNumberOfPeople)
+        && Objects.equals(
+            this.joinChatGroupCostByPeople, hourlyReportsGetListStruct.joinChatGroupCostByPeople)
+        && Objects.equals(
             this.guideToFollowPageViews, hourlyReportsGetListStruct.guideToFollowPageViews)
         && Objects.equals(
             this.guideToFollowPageViewers, hourlyReportsGetListStruct.guideToFollowPageViewers)
@@ -10084,6 +10462,12 @@ public class HourlyReportsGetListStruct {
         && Objects.equals(this.roiActivatedD3, hourlyReportsGetListStruct.roiActivatedD3)
         && Objects.equals(this.roiActivatedD7, hourlyReportsGetListStruct.roiActivatedD7)
         && Objects.equals(this.roiActivatedD14, hourlyReportsGetListStruct.roiActivatedD14)
+        && Objects.equals(
+            this.firstDayAdPurArppuCost, hourlyReportsGetListStruct.firstDayAdPurArppuCost)
+        && Objects.equals(
+            this.firstDayPayAmountArpu, hourlyReportsGetListStruct.firstDayPayAmountArpu)
+        && Objects.equals(
+            this.firstDayPayAmountArppu, hourlyReportsGetListStruct.firstDayPayAmountArppu)
         && Objects.equals(this.roiActivatedD30, hourlyReportsGetListStruct.roiActivatedD30)
         && Objects.equals(
             this.firstDayFirstPayRate, hourlyReportsGetListStruct.firstDayFirstPayRate)
@@ -10121,14 +10505,26 @@ public class HourlyReportsGetListStruct {
             this.miniGameMixedMonetizationRoiD1,
             hourlyReportsGetListStruct.miniGameMixedMonetizationRoiD1)
         && Objects.equals(
+            this.miniGameMixedMonetizationRoiD1ByReporting,
+            hourlyReportsGetListStruct.miniGameMixedMonetizationRoiD1ByReporting)
+        && Objects.equals(
             this.miniGameMixedMonetizationRoiD3,
             hourlyReportsGetListStruct.miniGameMixedMonetizationRoiD3)
+        && Objects.equals(
+            this.miniGameMixedMonetizationRoiD3Reporting,
+            hourlyReportsGetListStruct.miniGameMixedMonetizationRoiD3Reporting)
         && Objects.equals(
             this.miniGameMixedMonetizationRoiD7,
             hourlyReportsGetListStruct.miniGameMixedMonetizationRoiD7)
         && Objects.equals(
+            this.miniGameMixedMonetizationRoiD7ByReporting,
+            hourlyReportsGetListStruct.miniGameMixedMonetizationRoiD7ByReporting)
+        && Objects.equals(
             this.miniGameMixedMonetizationRoiD14,
             hourlyReportsGetListStruct.miniGameMixedMonetizationRoiD14)
+        && Objects.equals(
+            this.miniGameMixedMonetizationRoiD14ByReporting,
+            hourlyReportsGetListStruct.miniGameMixedMonetizationRoiD14ByReporting)
         && Objects.equals(this.adPayingUsersD1, hourlyReportsGetListStruct.adPayingUsersD1)
         && Objects.equals(this.adPayingCostD1, hourlyReportsGetListStruct.adPayingCostD1)
         && Objects.equals(this.adPurArpuCostD1, hourlyReportsGetListStruct.adPurArpuCostD1)
@@ -10273,7 +10669,6 @@ public class HourlyReportsGetListStruct {
             this.officialAccountCreditUserCount,
             hourlyReportsGetListStruct.officialAccountCreditUserCount)
         && Objects.equals(this.couponGetCost, hourlyReportsGetListStruct.couponGetCost)
-        && Objects.equals(this.couponGetRate, hourlyReportsGetListStruct.couponGetRate)
         && Objects.equals(this.couponUseCount, hourlyReportsGetListStruct.couponUseCount)
         && Objects.equals(this.forwardUserCount, hourlyReportsGetListStruct.forwardUserCount)
         && Objects.equals(
@@ -10323,6 +10718,7 @@ public class HourlyReportsGetListStruct {
         pageReservationCount,
         pageReservationRate,
         pageReservationCost,
+        pageReservationCostWithPeople,
         addToCartPrice,
         ownPageCouponGetCount,
         ownPageCouponGetCost,
@@ -10371,6 +10767,13 @@ public class HourlyReportsGetListStruct {
         appCheckoutCost,
         platformCouponClickCount,
         platformCouponGetRate,
+        couponUsageNumber,
+        couponUsageCost,
+        couponUsageRate,
+        couponPurchaseRate,
+        couponGetCountByPlatform,
+        couponGetCostByPlatform,
+        couponGetRate,
         followCount,
         followCost,
         forwardCount,
@@ -10548,6 +10951,8 @@ public class HourlyReportsGetListStruct {
         activePageInteractionAmount,
         activePageInteractionUsers,
         joinChatGroupAmount,
+        joinChatGroupNumberOfPeople,
+        joinChatGroupCostByPeople,
         guideToFollowPageViews,
         guideToFollowPageViewers,
         guideToFollowPageInteractionAmount,
@@ -10615,6 +11020,9 @@ public class HourlyReportsGetListStruct {
         roiActivatedD3,
         roiActivatedD7,
         roiActivatedD14,
+        firstDayAdPurArppuCost,
+        firstDayPayAmountArpu,
+        firstDayPayAmountArppu,
         roiActivatedD30,
         firstDayFirstPayRate,
         miniGameFirstDayAdMonetizationUsers,
@@ -10631,9 +11039,13 @@ public class HourlyReportsGetListStruct {
         mixedMonetizationRoiD7,
         mixedMonetizationRoiD14,
         miniGameMixedMonetizationRoiD1,
+        miniGameMixedMonetizationRoiD1ByReporting,
         miniGameMixedMonetizationRoiD3,
+        miniGameMixedMonetizationRoiD3Reporting,
         miniGameMixedMonetizationRoiD7,
+        miniGameMixedMonetizationRoiD7ByReporting,
         miniGameMixedMonetizationRoiD14,
+        miniGameMixedMonetizationRoiD14ByReporting,
         adPayingUsersD1,
         adPayingCostD1,
         adPurArpuCostD1,
@@ -10715,7 +11127,6 @@ public class HourlyReportsGetListStruct {
         officialAccountCreditApplyUserCount,
         officialAccountCreditUserCount,
         couponGetCost,
-        couponGetRate,
         couponUseCount,
         forwardUserCount,
         videoOuterPlayUserCount,

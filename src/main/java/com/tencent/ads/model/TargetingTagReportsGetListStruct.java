@@ -132,6 +132,9 @@ public class TargetingTagReportsGetListStruct {
   @SerializedName("page_reservation_cost")
   private Long pageReservationCost = null;
 
+  @SerializedName("page_reservation_cost_with_people")
+  private Long pageReservationCostWithPeople = null;
+
   @SerializedName("web_add_to_cart_count")
   private Long webAddToCartCount = null;
 
@@ -281,6 +284,27 @@ public class TargetingTagReportsGetListStruct {
 
   @SerializedName("platform_coupon_get_rate")
   private Double platformCouponGetRate = null;
+
+  @SerializedName("coupon_usage_number")
+  private Long couponUsageNumber = null;
+
+  @SerializedName("coupon_usage_cost")
+  private Long couponUsageCost = null;
+
+  @SerializedName("coupon_usage_rate")
+  private Double couponUsageRate = null;
+
+  @SerializedName("coupon_purchase_rate")
+  private Double couponPurchaseRate = null;
+
+  @SerializedName("coupon_get_count_by_platform")
+  private Long couponGetCountByPlatform = null;
+
+  @SerializedName("coupon_get_cost_by_platform")
+  private Long couponGetCostByPlatform = null;
+
+  @SerializedName("coupon_get_rate")
+  private Double couponGetRate = null;
 
   @SerializedName("follow_count")
   private Long followCount = null;
@@ -813,6 +837,12 @@ public class TargetingTagReportsGetListStruct {
   @SerializedName("join_chat_group_amount")
   private Long joinChatGroupAmount = null;
 
+  @SerializedName("join_chat_group_number_of_people")
+  private Long joinChatGroupNumberOfPeople = null;
+
+  @SerializedName("join_chat_group_cost_by_people")
+  private Long joinChatGroupCostByPeople = null;
+
   @SerializedName("guide_to_follow_page_views")
   private Long guideToFollowPageViews = null;
 
@@ -1113,6 +1143,15 @@ public class TargetingTagReportsGetListStruct {
   @SerializedName("roi_activated_d14")
   private Double roiActivatedD14 = null;
 
+  @SerializedName("first_day_ad_pur_arppu_cost")
+  private Long firstDayAdPurArppuCost = null;
+
+  @SerializedName("first_day_pay_amount_arpu")
+  private Long firstDayPayAmountArpu = null;
+
+  @SerializedName("first_day_pay_amount_arppu")
+  private Long firstDayPayAmountArppu = null;
+
   @SerializedName("roi_activated_d30")
   private Double roiActivatedD30 = null;
 
@@ -1161,14 +1200,26 @@ public class TargetingTagReportsGetListStruct {
   @SerializedName("mini_game_mixed_monetization_roi_d1")
   private Double miniGameMixedMonetizationRoiD1 = null;
 
+  @SerializedName("mini_game_mixed_monetization_roi_d1_by_reporting")
+  private Double miniGameMixedMonetizationRoiD1ByReporting = null;
+
   @SerializedName("mini_game_mixed_monetization_roi_d3")
   private Double miniGameMixedMonetizationRoiD3 = null;
+
+  @SerializedName("mini_game_mixed_monetization_roi_d3_reporting")
+  private Double miniGameMixedMonetizationRoiD3Reporting = null;
 
   @SerializedName("mini_game_mixed_monetization_roi_d7")
   private Double miniGameMixedMonetizationRoiD7 = null;
 
+  @SerializedName("mini_game_mixed_monetization_roi_d7_by_reporting")
+  private Double miniGameMixedMonetizationRoiD7ByReporting = null;
+
   @SerializedName("mini_game_mixed_monetization_roi_d14")
   private Double miniGameMixedMonetizationRoiD14 = null;
+
+  @SerializedName("mini_game_mixed_monetization_roi_d14_by_reporting")
+  private Double miniGameMixedMonetizationRoiD14ByReporting = null;
 
   @SerializedName("ad_paying_users_d1")
   private Long adPayingUsersD1 = null;
@@ -1891,6 +1942,26 @@ public class TargetingTagReportsGetListStruct {
 
   public void setPageReservationCost(Long pageReservationCost) {
     this.pageReservationCost = pageReservationCost;
+  }
+
+  public TargetingTagReportsGetListStruct pageReservationCostWithPeople(
+      Long pageReservationCostWithPeople) {
+    this.pageReservationCostWithPeople = pageReservationCostWithPeople;
+    return this;
+  }
+
+  /**
+   * Get pageReservationCostWithPeople
+   *
+   * @return pageReservationCostWithPeople
+   */
+  @ApiModelProperty(value = "")
+  public Long getPageReservationCostWithPeople() {
+    return pageReservationCostWithPeople;
+  }
+
+  public void setPageReservationCostWithPeople(Long pageReservationCostWithPeople) {
+    this.pageReservationCostWithPeople = pageReservationCostWithPeople;
   }
 
   public TargetingTagReportsGetListStruct webAddToCartCount(Long webAddToCartCount) {
@@ -2844,6 +2915,139 @@ public class TargetingTagReportsGetListStruct {
 
   public void setPlatformCouponGetRate(Double platformCouponGetRate) {
     this.platformCouponGetRate = platformCouponGetRate;
+  }
+
+  public TargetingTagReportsGetListStruct couponUsageNumber(Long couponUsageNumber) {
+    this.couponUsageNumber = couponUsageNumber;
+    return this;
+  }
+
+  /**
+   * Get couponUsageNumber
+   *
+   * @return couponUsageNumber
+   */
+  @ApiModelProperty(value = "")
+  public Long getCouponUsageNumber() {
+    return couponUsageNumber;
+  }
+
+  public void setCouponUsageNumber(Long couponUsageNumber) {
+    this.couponUsageNumber = couponUsageNumber;
+  }
+
+  public TargetingTagReportsGetListStruct couponUsageCost(Long couponUsageCost) {
+    this.couponUsageCost = couponUsageCost;
+    return this;
+  }
+
+  /**
+   * Get couponUsageCost
+   *
+   * @return couponUsageCost
+   */
+  @ApiModelProperty(value = "")
+  public Long getCouponUsageCost() {
+    return couponUsageCost;
+  }
+
+  public void setCouponUsageCost(Long couponUsageCost) {
+    this.couponUsageCost = couponUsageCost;
+  }
+
+  public TargetingTagReportsGetListStruct couponUsageRate(Double couponUsageRate) {
+    this.couponUsageRate = couponUsageRate;
+    return this;
+  }
+
+  /**
+   * Get couponUsageRate
+   *
+   * @return couponUsageRate
+   */
+  @ApiModelProperty(value = "")
+  public Double getCouponUsageRate() {
+    return couponUsageRate;
+  }
+
+  public void setCouponUsageRate(Double couponUsageRate) {
+    this.couponUsageRate = couponUsageRate;
+  }
+
+  public TargetingTagReportsGetListStruct couponPurchaseRate(Double couponPurchaseRate) {
+    this.couponPurchaseRate = couponPurchaseRate;
+    return this;
+  }
+
+  /**
+   * Get couponPurchaseRate
+   *
+   * @return couponPurchaseRate
+   */
+  @ApiModelProperty(value = "")
+  public Double getCouponPurchaseRate() {
+    return couponPurchaseRate;
+  }
+
+  public void setCouponPurchaseRate(Double couponPurchaseRate) {
+    this.couponPurchaseRate = couponPurchaseRate;
+  }
+
+  public TargetingTagReportsGetListStruct couponGetCountByPlatform(Long couponGetCountByPlatform) {
+    this.couponGetCountByPlatform = couponGetCountByPlatform;
+    return this;
+  }
+
+  /**
+   * Get couponGetCountByPlatform
+   *
+   * @return couponGetCountByPlatform
+   */
+  @ApiModelProperty(value = "")
+  public Long getCouponGetCountByPlatform() {
+    return couponGetCountByPlatform;
+  }
+
+  public void setCouponGetCountByPlatform(Long couponGetCountByPlatform) {
+    this.couponGetCountByPlatform = couponGetCountByPlatform;
+  }
+
+  public TargetingTagReportsGetListStruct couponGetCostByPlatform(Long couponGetCostByPlatform) {
+    this.couponGetCostByPlatform = couponGetCostByPlatform;
+    return this;
+  }
+
+  /**
+   * Get couponGetCostByPlatform
+   *
+   * @return couponGetCostByPlatform
+   */
+  @ApiModelProperty(value = "")
+  public Long getCouponGetCostByPlatform() {
+    return couponGetCostByPlatform;
+  }
+
+  public void setCouponGetCostByPlatform(Long couponGetCostByPlatform) {
+    this.couponGetCostByPlatform = couponGetCostByPlatform;
+  }
+
+  public TargetingTagReportsGetListStruct couponGetRate(Double couponGetRate) {
+    this.couponGetRate = couponGetRate;
+    return this;
+  }
+
+  /**
+   * Get couponGetRate
+   *
+   * @return couponGetRate
+   */
+  @ApiModelProperty(value = "")
+  public Double getCouponGetRate() {
+    return couponGetRate;
+  }
+
+  public void setCouponGetRate(Double couponGetRate) {
+    this.couponGetRate = couponGetRate;
   }
 
   public TargetingTagReportsGetListStruct followCount(Long followCount) {
@@ -6216,6 +6420,46 @@ public class TargetingTagReportsGetListStruct {
     this.joinChatGroupAmount = joinChatGroupAmount;
   }
 
+  public TargetingTagReportsGetListStruct joinChatGroupNumberOfPeople(
+      Long joinChatGroupNumberOfPeople) {
+    this.joinChatGroupNumberOfPeople = joinChatGroupNumberOfPeople;
+    return this;
+  }
+
+  /**
+   * Get joinChatGroupNumberOfPeople
+   *
+   * @return joinChatGroupNumberOfPeople
+   */
+  @ApiModelProperty(value = "")
+  public Long getJoinChatGroupNumberOfPeople() {
+    return joinChatGroupNumberOfPeople;
+  }
+
+  public void setJoinChatGroupNumberOfPeople(Long joinChatGroupNumberOfPeople) {
+    this.joinChatGroupNumberOfPeople = joinChatGroupNumberOfPeople;
+  }
+
+  public TargetingTagReportsGetListStruct joinChatGroupCostByPeople(
+      Long joinChatGroupCostByPeople) {
+    this.joinChatGroupCostByPeople = joinChatGroupCostByPeople;
+    return this;
+  }
+
+  /**
+   * Get joinChatGroupCostByPeople
+   *
+   * @return joinChatGroupCostByPeople
+   */
+  @ApiModelProperty(value = "")
+  public Long getJoinChatGroupCostByPeople() {
+    return joinChatGroupCostByPeople;
+  }
+
+  public void setJoinChatGroupCostByPeople(Long joinChatGroupCostByPeople) {
+    this.joinChatGroupCostByPeople = joinChatGroupCostByPeople;
+  }
+
   public TargetingTagReportsGetListStruct guideToFollowPageViews(Long guideToFollowPageViews) {
     this.guideToFollowPageViews = guideToFollowPageViews;
     return this;
@@ -8138,6 +8382,63 @@ public class TargetingTagReportsGetListStruct {
     this.roiActivatedD14 = roiActivatedD14;
   }
 
+  public TargetingTagReportsGetListStruct firstDayAdPurArppuCost(Long firstDayAdPurArppuCost) {
+    this.firstDayAdPurArppuCost = firstDayAdPurArppuCost;
+    return this;
+  }
+
+  /**
+   * Get firstDayAdPurArppuCost
+   *
+   * @return firstDayAdPurArppuCost
+   */
+  @ApiModelProperty(value = "")
+  public Long getFirstDayAdPurArppuCost() {
+    return firstDayAdPurArppuCost;
+  }
+
+  public void setFirstDayAdPurArppuCost(Long firstDayAdPurArppuCost) {
+    this.firstDayAdPurArppuCost = firstDayAdPurArppuCost;
+  }
+
+  public TargetingTagReportsGetListStruct firstDayPayAmountArpu(Long firstDayPayAmountArpu) {
+    this.firstDayPayAmountArpu = firstDayPayAmountArpu;
+    return this;
+  }
+
+  /**
+   * Get firstDayPayAmountArpu
+   *
+   * @return firstDayPayAmountArpu
+   */
+  @ApiModelProperty(value = "")
+  public Long getFirstDayPayAmountArpu() {
+    return firstDayPayAmountArpu;
+  }
+
+  public void setFirstDayPayAmountArpu(Long firstDayPayAmountArpu) {
+    this.firstDayPayAmountArpu = firstDayPayAmountArpu;
+  }
+
+  public TargetingTagReportsGetListStruct firstDayPayAmountArppu(Long firstDayPayAmountArppu) {
+    this.firstDayPayAmountArppu = firstDayPayAmountArppu;
+    return this;
+  }
+
+  /**
+   * Get firstDayPayAmountArppu
+   *
+   * @return firstDayPayAmountArppu
+   */
+  @ApiModelProperty(value = "")
+  public Long getFirstDayPayAmountArppu() {
+    return firstDayPayAmountArppu;
+  }
+
+  public void setFirstDayPayAmountArppu(Long firstDayPayAmountArppu) {
+    this.firstDayPayAmountArppu = firstDayPayAmountArppu;
+  }
+
   public TargetingTagReportsGetListStruct roiActivatedD30(Double roiActivatedD30) {
     this.roiActivatedD30 = roiActivatedD30;
     return this;
@@ -8449,6 +8750,27 @@ public class TargetingTagReportsGetListStruct {
     this.miniGameMixedMonetizationRoiD1 = miniGameMixedMonetizationRoiD1;
   }
 
+  public TargetingTagReportsGetListStruct miniGameMixedMonetizationRoiD1ByReporting(
+      Double miniGameMixedMonetizationRoiD1ByReporting) {
+    this.miniGameMixedMonetizationRoiD1ByReporting = miniGameMixedMonetizationRoiD1ByReporting;
+    return this;
+  }
+
+  /**
+   * Get miniGameMixedMonetizationRoiD1ByReporting
+   *
+   * @return miniGameMixedMonetizationRoiD1ByReporting
+   */
+  @ApiModelProperty(value = "")
+  public Double getMiniGameMixedMonetizationRoiD1ByReporting() {
+    return miniGameMixedMonetizationRoiD1ByReporting;
+  }
+
+  public void setMiniGameMixedMonetizationRoiD1ByReporting(
+      Double miniGameMixedMonetizationRoiD1ByReporting) {
+    this.miniGameMixedMonetizationRoiD1ByReporting = miniGameMixedMonetizationRoiD1ByReporting;
+  }
+
   public TargetingTagReportsGetListStruct miniGameMixedMonetizationRoiD3(
       Double miniGameMixedMonetizationRoiD3) {
     this.miniGameMixedMonetizationRoiD3 = miniGameMixedMonetizationRoiD3;
@@ -8467,6 +8789,27 @@ public class TargetingTagReportsGetListStruct {
 
   public void setMiniGameMixedMonetizationRoiD3(Double miniGameMixedMonetizationRoiD3) {
     this.miniGameMixedMonetizationRoiD3 = miniGameMixedMonetizationRoiD3;
+  }
+
+  public TargetingTagReportsGetListStruct miniGameMixedMonetizationRoiD3Reporting(
+      Double miniGameMixedMonetizationRoiD3Reporting) {
+    this.miniGameMixedMonetizationRoiD3Reporting = miniGameMixedMonetizationRoiD3Reporting;
+    return this;
+  }
+
+  /**
+   * Get miniGameMixedMonetizationRoiD3Reporting
+   *
+   * @return miniGameMixedMonetizationRoiD3Reporting
+   */
+  @ApiModelProperty(value = "")
+  public Double getMiniGameMixedMonetizationRoiD3Reporting() {
+    return miniGameMixedMonetizationRoiD3Reporting;
+  }
+
+  public void setMiniGameMixedMonetizationRoiD3Reporting(
+      Double miniGameMixedMonetizationRoiD3Reporting) {
+    this.miniGameMixedMonetizationRoiD3Reporting = miniGameMixedMonetizationRoiD3Reporting;
   }
 
   public TargetingTagReportsGetListStruct miniGameMixedMonetizationRoiD7(
@@ -8489,6 +8832,27 @@ public class TargetingTagReportsGetListStruct {
     this.miniGameMixedMonetizationRoiD7 = miniGameMixedMonetizationRoiD7;
   }
 
+  public TargetingTagReportsGetListStruct miniGameMixedMonetizationRoiD7ByReporting(
+      Double miniGameMixedMonetizationRoiD7ByReporting) {
+    this.miniGameMixedMonetizationRoiD7ByReporting = miniGameMixedMonetizationRoiD7ByReporting;
+    return this;
+  }
+
+  /**
+   * Get miniGameMixedMonetizationRoiD7ByReporting
+   *
+   * @return miniGameMixedMonetizationRoiD7ByReporting
+   */
+  @ApiModelProperty(value = "")
+  public Double getMiniGameMixedMonetizationRoiD7ByReporting() {
+    return miniGameMixedMonetizationRoiD7ByReporting;
+  }
+
+  public void setMiniGameMixedMonetizationRoiD7ByReporting(
+      Double miniGameMixedMonetizationRoiD7ByReporting) {
+    this.miniGameMixedMonetizationRoiD7ByReporting = miniGameMixedMonetizationRoiD7ByReporting;
+  }
+
   public TargetingTagReportsGetListStruct miniGameMixedMonetizationRoiD14(
       Double miniGameMixedMonetizationRoiD14) {
     this.miniGameMixedMonetizationRoiD14 = miniGameMixedMonetizationRoiD14;
@@ -8507,6 +8871,27 @@ public class TargetingTagReportsGetListStruct {
 
   public void setMiniGameMixedMonetizationRoiD14(Double miniGameMixedMonetizationRoiD14) {
     this.miniGameMixedMonetizationRoiD14 = miniGameMixedMonetizationRoiD14;
+  }
+
+  public TargetingTagReportsGetListStruct miniGameMixedMonetizationRoiD14ByReporting(
+      Double miniGameMixedMonetizationRoiD14ByReporting) {
+    this.miniGameMixedMonetizationRoiD14ByReporting = miniGameMixedMonetizationRoiD14ByReporting;
+    return this;
+  }
+
+  /**
+   * Get miniGameMixedMonetizationRoiD14ByReporting
+   *
+   * @return miniGameMixedMonetizationRoiD14ByReporting
+   */
+  @ApiModelProperty(value = "")
+  public Double getMiniGameMixedMonetizationRoiD14ByReporting() {
+    return miniGameMixedMonetizationRoiD14ByReporting;
+  }
+
+  public void setMiniGameMixedMonetizationRoiD14ByReporting(
+      Double miniGameMixedMonetizationRoiD14ByReporting) {
+    this.miniGameMixedMonetizationRoiD14ByReporting = miniGameMixedMonetizationRoiD14ByReporting;
   }
 
   public TargetingTagReportsGetListStruct adPayingUsersD1(Long adPayingUsersD1) {
@@ -8679,6 +9064,9 @@ public class TargetingTagReportsGetListStruct {
         && Objects.equals(
             this.pageReservationCost, targetingTagReportsGetListStruct.pageReservationCost)
         && Objects.equals(
+            this.pageReservationCostWithPeople,
+            targetingTagReportsGetListStruct.pageReservationCostWithPeople)
+        && Objects.equals(
             this.webAddToCartCount, targetingTagReportsGetListStruct.webAddToCartCount)
         && Objects.equals(this.webAddToCartCost, targetingTagReportsGetListStruct.webAddToCartCost)
         && Objects.equals(this.addToCartPrice, targetingTagReportsGetListStruct.addToCartPrice)
@@ -8750,6 +9138,18 @@ public class TargetingTagReportsGetListStruct {
             targetingTagReportsGetListStruct.platformCouponClickCount)
         && Objects.equals(
             this.platformCouponGetRate, targetingTagReportsGetListStruct.platformCouponGetRate)
+        && Objects.equals(
+            this.couponUsageNumber, targetingTagReportsGetListStruct.couponUsageNumber)
+        && Objects.equals(this.couponUsageCost, targetingTagReportsGetListStruct.couponUsageCost)
+        && Objects.equals(this.couponUsageRate, targetingTagReportsGetListStruct.couponUsageRate)
+        && Objects.equals(
+            this.couponPurchaseRate, targetingTagReportsGetListStruct.couponPurchaseRate)
+        && Objects.equals(
+            this.couponGetCountByPlatform,
+            targetingTagReportsGetListStruct.couponGetCountByPlatform)
+        && Objects.equals(
+            this.couponGetCostByPlatform, targetingTagReportsGetListStruct.couponGetCostByPlatform)
+        && Objects.equals(this.couponGetRate, targetingTagReportsGetListStruct.couponGetRate)
         && Objects.equals(this.followCount, targetingTagReportsGetListStruct.followCount)
         && Objects.equals(this.followCost, targetingTagReportsGetListStruct.followCost)
         && Objects.equals(this.forwardCount, targetingTagReportsGetListStruct.forwardCount)
@@ -9009,6 +9409,12 @@ public class TargetingTagReportsGetListStruct {
         && Objects.equals(
             this.joinChatGroupAmount, targetingTagReportsGetListStruct.joinChatGroupAmount)
         && Objects.equals(
+            this.joinChatGroupNumberOfPeople,
+            targetingTagReportsGetListStruct.joinChatGroupNumberOfPeople)
+        && Objects.equals(
+            this.joinChatGroupCostByPeople,
+            targetingTagReportsGetListStruct.joinChatGroupCostByPeople)
+        && Objects.equals(
             this.guideToFollowPageViews, targetingTagReportsGetListStruct.guideToFollowPageViews)
         && Objects.equals(
             this.guideToFollowPageViewers,
@@ -9192,6 +9598,12 @@ public class TargetingTagReportsGetListStruct {
         && Objects.equals(this.roiActivatedD3, targetingTagReportsGetListStruct.roiActivatedD3)
         && Objects.equals(this.roiActivatedD7, targetingTagReportsGetListStruct.roiActivatedD7)
         && Objects.equals(this.roiActivatedD14, targetingTagReportsGetListStruct.roiActivatedD14)
+        && Objects.equals(
+            this.firstDayAdPurArppuCost, targetingTagReportsGetListStruct.firstDayAdPurArppuCost)
+        && Objects.equals(
+            this.firstDayPayAmountArpu, targetingTagReportsGetListStruct.firstDayPayAmountArpu)
+        && Objects.equals(
+            this.firstDayPayAmountArppu, targetingTagReportsGetListStruct.firstDayPayAmountArppu)
         && Objects.equals(this.roiActivatedD30, targetingTagReportsGetListStruct.roiActivatedD30)
         && Objects.equals(
             this.firstDayFirstPayRate, targetingTagReportsGetListStruct.firstDayFirstPayRate)
@@ -9231,14 +9643,26 @@ public class TargetingTagReportsGetListStruct {
             this.miniGameMixedMonetizationRoiD1,
             targetingTagReportsGetListStruct.miniGameMixedMonetizationRoiD1)
         && Objects.equals(
+            this.miniGameMixedMonetizationRoiD1ByReporting,
+            targetingTagReportsGetListStruct.miniGameMixedMonetizationRoiD1ByReporting)
+        && Objects.equals(
             this.miniGameMixedMonetizationRoiD3,
             targetingTagReportsGetListStruct.miniGameMixedMonetizationRoiD3)
+        && Objects.equals(
+            this.miniGameMixedMonetizationRoiD3Reporting,
+            targetingTagReportsGetListStruct.miniGameMixedMonetizationRoiD3Reporting)
         && Objects.equals(
             this.miniGameMixedMonetizationRoiD7,
             targetingTagReportsGetListStruct.miniGameMixedMonetizationRoiD7)
         && Objects.equals(
+            this.miniGameMixedMonetizationRoiD7ByReporting,
+            targetingTagReportsGetListStruct.miniGameMixedMonetizationRoiD7ByReporting)
+        && Objects.equals(
             this.miniGameMixedMonetizationRoiD14,
             targetingTagReportsGetListStruct.miniGameMixedMonetizationRoiD14)
+        && Objects.equals(
+            this.miniGameMixedMonetizationRoiD14ByReporting,
+            targetingTagReportsGetListStruct.miniGameMixedMonetizationRoiD14ByReporting)
         && Objects.equals(this.adPayingUsersD1, targetingTagReportsGetListStruct.adPayingUsersD1)
         && Objects.equals(this.adPayingCostD1, targetingTagReportsGetListStruct.adPayingCostD1)
         && Objects.equals(this.adPurArpuCostD1, targetingTagReportsGetListStruct.adPurArpuCostD1)
@@ -9289,6 +9713,7 @@ public class TargetingTagReportsGetListStruct {
         pageReservationCount,
         pageReservationRate,
         pageReservationCost,
+        pageReservationCostWithPeople,
         webAddToCartCount,
         webAddToCartCost,
         addToCartPrice,
@@ -9339,6 +9764,13 @@ public class TargetingTagReportsGetListStruct {
         appCheckoutCost,
         platformCouponClickCount,
         platformCouponGetRate,
+        couponUsageNumber,
+        couponUsageCost,
+        couponUsageRate,
+        couponPurchaseRate,
+        couponGetCountByPlatform,
+        couponGetCostByPlatform,
+        couponGetRate,
         followCount,
         followCost,
         forwardCount,
@@ -9516,6 +9948,8 @@ public class TargetingTagReportsGetListStruct {
         activePageInteractionAmount,
         activePageInteractionUsers,
         joinChatGroupAmount,
+        joinChatGroupNumberOfPeople,
+        joinChatGroupCostByPeople,
         guideToFollowPageViews,
         guideToFollowPageViewers,
         guideToFollowPageInteractionAmount,
@@ -9616,6 +10050,9 @@ public class TargetingTagReportsGetListStruct {
         roiActivatedD3,
         roiActivatedD7,
         roiActivatedD14,
+        firstDayAdPurArppuCost,
+        firstDayPayAmountArpu,
+        firstDayPayAmountArppu,
         roiActivatedD30,
         firstDayFirstPayRate,
         miniGameFirstDayAdMonetizationUsers,
@@ -9632,9 +10069,13 @@ public class TargetingTagReportsGetListStruct {
         mixedMonetizationRoiD7,
         mixedMonetizationRoiD14,
         miniGameMixedMonetizationRoiD1,
+        miniGameMixedMonetizationRoiD1ByReporting,
         miniGameMixedMonetizationRoiD3,
+        miniGameMixedMonetizationRoiD3Reporting,
         miniGameMixedMonetizationRoiD7,
+        miniGameMixedMonetizationRoiD7ByReporting,
         miniGameMixedMonetizationRoiD14,
+        miniGameMixedMonetizationRoiD14ByReporting,
         adPayingUsersD1,
         adPayingCostD1,
         adPurArpuCostD1,
