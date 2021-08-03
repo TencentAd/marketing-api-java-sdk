@@ -27,7 +27,7 @@ public class TargetingTagsUvApiContainer extends ApiContainer {
   @Inject TargetingTagsUvApi api;
 
   /**
-   * 获取行为,兴趣,意向标签覆盖人群数
+   * 获取行为/兴趣/意向标签覆盖人群数
    *
    * @param accountId (required)
    * @param categoryType (required)

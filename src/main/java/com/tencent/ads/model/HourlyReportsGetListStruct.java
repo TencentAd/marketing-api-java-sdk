@@ -291,15 +291,6 @@ public class HourlyReportsGetListStruct {
   @SerializedName("coupon_purchase_rate")
   private Double couponPurchaseRate = null;
 
-  @SerializedName("coupon_get_count_by_platform")
-  private Long couponGetCountByPlatform = null;
-
-  @SerializedName("coupon_get_cost_by_platform")
-  private Long couponGetCostByPlatform = null;
-
-  @SerializedName("coupon_get_rate")
-  private Double couponGetRate = null;
-
   @SerializedName("follow_count")
   private Long followCount = null;
 
@@ -1101,8 +1092,8 @@ public class HourlyReportsGetListStruct {
   @SerializedName("mini_game_mixed_monetization_roi_d3")
   private Double miniGameMixedMonetizationRoiD3 = null;
 
-  @SerializedName("mini_game_mixed_monetization_roi_d3_reporting")
-  private Double miniGameMixedMonetizationRoiD3Reporting = null;
+  @SerializedName("mini_game_mixed_monetization_roi_d3_by_reporting")
+  private Double miniGameMixedMonetizationRoiD3ByReporting = null;
 
   @SerializedName("mini_game_mixed_monetization_roi_d7")
   private Double miniGameMixedMonetizationRoiD7 = null;
@@ -1358,6 +1349,9 @@ public class HourlyReportsGetListStruct {
 
   @SerializedName("coupon_get_cost")
   private Long couponGetCost = null;
+
+  @SerializedName("coupon_get_rate")
+  private Double couponGetRate = null;
 
   @SerializedName("coupon_use_count")
   private Long couponUseCount = null;
@@ -3083,63 +3077,6 @@ public class HourlyReportsGetListStruct {
 
   public void setCouponPurchaseRate(Double couponPurchaseRate) {
     this.couponPurchaseRate = couponPurchaseRate;
-  }
-
-  public HourlyReportsGetListStruct couponGetCountByPlatform(Long couponGetCountByPlatform) {
-    this.couponGetCountByPlatform = couponGetCountByPlatform;
-    return this;
-  }
-
-  /**
-   * Get couponGetCountByPlatform
-   *
-   * @return couponGetCountByPlatform
-   */
-  @ApiModelProperty(value = "")
-  public Long getCouponGetCountByPlatform() {
-    return couponGetCountByPlatform;
-  }
-
-  public void setCouponGetCountByPlatform(Long couponGetCountByPlatform) {
-    this.couponGetCountByPlatform = couponGetCountByPlatform;
-  }
-
-  public HourlyReportsGetListStruct couponGetCostByPlatform(Long couponGetCostByPlatform) {
-    this.couponGetCostByPlatform = couponGetCostByPlatform;
-    return this;
-  }
-
-  /**
-   * Get couponGetCostByPlatform
-   *
-   * @return couponGetCostByPlatform
-   */
-  @ApiModelProperty(value = "")
-  public Long getCouponGetCostByPlatform() {
-    return couponGetCostByPlatform;
-  }
-
-  public void setCouponGetCostByPlatform(Long couponGetCostByPlatform) {
-    this.couponGetCostByPlatform = couponGetCostByPlatform;
-  }
-
-  public HourlyReportsGetListStruct couponGetRate(Double couponGetRate) {
-    this.couponGetRate = couponGetRate;
-    return this;
-  }
-
-  /**
-   * Get couponGetRate
-   *
-   * @return couponGetRate
-   */
-  @ApiModelProperty(value = "")
-  public Double getCouponGetRate() {
-    return couponGetRate;
-  }
-
-  public void setCouponGetRate(Double couponGetRate) {
-    this.couponGetRate = couponGetRate;
   }
 
   public HourlyReportsGetListStruct followCount(Long followCount) {
@@ -8235,25 +8172,25 @@ public class HourlyReportsGetListStruct {
     this.miniGameMixedMonetizationRoiD3 = miniGameMixedMonetizationRoiD3;
   }
 
-  public HourlyReportsGetListStruct miniGameMixedMonetizationRoiD3Reporting(
-      Double miniGameMixedMonetizationRoiD3Reporting) {
-    this.miniGameMixedMonetizationRoiD3Reporting = miniGameMixedMonetizationRoiD3Reporting;
+  public HourlyReportsGetListStruct miniGameMixedMonetizationRoiD3ByReporting(
+      Double miniGameMixedMonetizationRoiD3ByReporting) {
+    this.miniGameMixedMonetizationRoiD3ByReporting = miniGameMixedMonetizationRoiD3ByReporting;
     return this;
   }
 
   /**
-   * Get miniGameMixedMonetizationRoiD3Reporting
+   * Get miniGameMixedMonetizationRoiD3ByReporting
    *
-   * @return miniGameMixedMonetizationRoiD3Reporting
+   * @return miniGameMixedMonetizationRoiD3ByReporting
    */
   @ApiModelProperty(value = "")
-  public Double getMiniGameMixedMonetizationRoiD3Reporting() {
-    return miniGameMixedMonetizationRoiD3Reporting;
+  public Double getMiniGameMixedMonetizationRoiD3ByReporting() {
+    return miniGameMixedMonetizationRoiD3ByReporting;
   }
 
-  public void setMiniGameMixedMonetizationRoiD3Reporting(
-      Double miniGameMixedMonetizationRoiD3Reporting) {
-    this.miniGameMixedMonetizationRoiD3Reporting = miniGameMixedMonetizationRoiD3Reporting;
+  public void setMiniGameMixedMonetizationRoiD3ByReporting(
+      Double miniGameMixedMonetizationRoiD3ByReporting) {
+    this.miniGameMixedMonetizationRoiD3ByReporting = miniGameMixedMonetizationRoiD3ByReporting;
   }
 
   public HourlyReportsGetListStruct miniGameMixedMonetizationRoiD7(
@@ -9892,6 +9829,25 @@ public class HourlyReportsGetListStruct {
     this.couponGetCost = couponGetCost;
   }
 
+  public HourlyReportsGetListStruct couponGetRate(Double couponGetRate) {
+    this.couponGetRate = couponGetRate;
+    return this;
+  }
+
+  /**
+   * Get couponGetRate
+   *
+   * @return couponGetRate
+   */
+  @ApiModelProperty(value = "")
+  public Double getCouponGetRate() {
+    return couponGetRate;
+  }
+
+  public void setCouponGetRate(Double couponGetRate) {
+    this.couponGetRate = couponGetRate;
+  }
+
   public HourlyReportsGetListStruct couponUseCount(Long couponUseCount) {
     this.couponUseCount = couponUseCount;
     return this;
@@ -10115,11 +10071,6 @@ public class HourlyReportsGetListStruct {
         && Objects.equals(this.couponUsageCost, hourlyReportsGetListStruct.couponUsageCost)
         && Objects.equals(this.couponUsageRate, hourlyReportsGetListStruct.couponUsageRate)
         && Objects.equals(this.couponPurchaseRate, hourlyReportsGetListStruct.couponPurchaseRate)
-        && Objects.equals(
-            this.couponGetCountByPlatform, hourlyReportsGetListStruct.couponGetCountByPlatform)
-        && Objects.equals(
-            this.couponGetCostByPlatform, hourlyReportsGetListStruct.couponGetCostByPlatform)
-        && Objects.equals(this.couponGetRate, hourlyReportsGetListStruct.couponGetRate)
         && Objects.equals(this.followCount, hourlyReportsGetListStruct.followCount)
         && Objects.equals(this.followCost, hourlyReportsGetListStruct.followCost)
         && Objects.equals(this.forwardCount, hourlyReportsGetListStruct.forwardCount)
@@ -10511,8 +10462,8 @@ public class HourlyReportsGetListStruct {
             this.miniGameMixedMonetizationRoiD3,
             hourlyReportsGetListStruct.miniGameMixedMonetizationRoiD3)
         && Objects.equals(
-            this.miniGameMixedMonetizationRoiD3Reporting,
-            hourlyReportsGetListStruct.miniGameMixedMonetizationRoiD3Reporting)
+            this.miniGameMixedMonetizationRoiD3ByReporting,
+            hourlyReportsGetListStruct.miniGameMixedMonetizationRoiD3ByReporting)
         && Objects.equals(
             this.miniGameMixedMonetizationRoiD7,
             hourlyReportsGetListStruct.miniGameMixedMonetizationRoiD7)
@@ -10669,6 +10620,7 @@ public class HourlyReportsGetListStruct {
             this.officialAccountCreditUserCount,
             hourlyReportsGetListStruct.officialAccountCreditUserCount)
         && Objects.equals(this.couponGetCost, hourlyReportsGetListStruct.couponGetCost)
+        && Objects.equals(this.couponGetRate, hourlyReportsGetListStruct.couponGetRate)
         && Objects.equals(this.couponUseCount, hourlyReportsGetListStruct.couponUseCount)
         && Objects.equals(this.forwardUserCount, hourlyReportsGetListStruct.forwardUserCount)
         && Objects.equals(
@@ -10771,9 +10723,6 @@ public class HourlyReportsGetListStruct {
         couponUsageCost,
         couponUsageRate,
         couponPurchaseRate,
-        couponGetCountByPlatform,
-        couponGetCostByPlatform,
-        couponGetRate,
         followCount,
         followCost,
         forwardCount,
@@ -11041,7 +10990,7 @@ public class HourlyReportsGetListStruct {
         miniGameMixedMonetizationRoiD1,
         miniGameMixedMonetizationRoiD1ByReporting,
         miniGameMixedMonetizationRoiD3,
-        miniGameMixedMonetizationRoiD3Reporting,
+        miniGameMixedMonetizationRoiD3ByReporting,
         miniGameMixedMonetizationRoiD7,
         miniGameMixedMonetizationRoiD7ByReporting,
         miniGameMixedMonetizationRoiD14,
@@ -11127,6 +11076,7 @@ public class HourlyReportsGetListStruct {
         officialAccountCreditApplyUserCount,
         officialAccountCreditUserCount,
         couponGetCost,
+        couponGetRate,
         couponUseCount,
         forwardUserCount,
         videoOuterPlayUserCount,
