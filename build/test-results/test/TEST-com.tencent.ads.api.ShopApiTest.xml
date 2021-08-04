@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.tencent.ads.api.ShopApiTest" tests="3" skipped="3" failures="0" errors="0" timestamp="2021-08-03T08:06:39" hostname="VM_147_58_centos" time="0.001">
+<testsuite name="com.tencent.ads.api.ShopApiTest" tests="3" skipped="3" failures="0" errors="0" timestamp="2021-08-04T07:37:22" hostname="VM_147_58_centos" time="0.0">
   <properties/>
   <testcase name="shopAddTest" classname="com.tencent.ads.api.ShopApiTest" time="0.0">
     <skipped/>
   </testcase>
-  <testcase name="shopUpdateTest" classname="com.tencent.ads.api.ShopApiTest" time="0.001">
+  <testcase name="shopUpdateTest" classname="com.tencent.ads.api.ShopApiTest" time="0.0">
     <skipped/>
   </testcase>
   <testcase name="shopGetTest" classname="com.tencent.ads.api.ShopApiTest" time="0.0">
