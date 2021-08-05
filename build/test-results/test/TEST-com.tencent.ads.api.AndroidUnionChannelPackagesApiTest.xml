@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.tencent.ads.api.AndroidUnionChannelPackagesApiTest" tests="3" skipped="3" failures="0" errors="0" timestamp="2021-08-04T07:37:23" hostname="VM_147_58_centos" time="0.001">
+<testsuite name="com.tencent.ads.api.AndroidUnionChannelPackagesApiTest" tests="3" skipped="3" failures="0" errors="0" timestamp="2021-08-05T01:59:43" hostname="VM_147_58_centos" time="0.0">
   <properties/>
   <testcase name="androidUnionChannelPackagesGetTest" classname="com.tencent.ads.api.AndroidUnionChannelPackagesApiTest" time="0.0">
     <skipped/>
