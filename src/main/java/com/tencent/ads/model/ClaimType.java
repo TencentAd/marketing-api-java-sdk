@@ -19,12 +19,16 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-/** 归因方式，SDK上报方式时归因方式只能为CLAIM_TYPE_ACTIVATION，JS上报方式时只能是CLAIM_TYPE_CLICK */
+/**
+ * 归因方式，SDK上报方式时归因方式只能为CLAIM_TYPE_ACTIVATION，JS上报方式时只能是CLAIM_TYPE_CLICK,微信小游戏推广仅支持CLAIM_TYPE_REGISTER，QQ小游戏推广仅支持是CLAIM_TYPE_CLICK
+ */
 @JsonAdapter(ClaimType.Adapter.class)
 public enum ClaimType {
   ACTIVATION("CLAIM_TYPE_ACTIVATION"),
 
-  CLICK("CLAIM_TYPE_CLICK");
+  CLICK("CLAIM_TYPE_CLICK"),
+
+  REGISTER("CLAIM_TYPE_REGISTER");
 
   private String value;
 
