@@ -55,7 +55,7 @@ public class LocalEstimatedamountGetRequest {
   private Long budget = null;
 
   @SerializedName("local_business_mode")
-  private EcoLocalBusinessMode localBusinessMode = null;
+  private ExEcoLocalBusinessMode localBusinessMode = null;
 
   public LocalEstimatedamountGetRequest accountId(Long accountId) {
     this.accountId = accountId;
@@ -290,7 +290,8 @@ public class LocalEstimatedamountGetRequest {
     this.budget = budget;
   }
 
-  public LocalEstimatedamountGetRequest localBusinessMode(EcoLocalBusinessMode localBusinessMode) {
+  public LocalEstimatedamountGetRequest localBusinessMode(
+      ExEcoLocalBusinessMode localBusinessMode) {
     this.localBusinessMode = localBusinessMode;
     return this;
   }
@@ -301,11 +302,11 @@ public class LocalEstimatedamountGetRequest {
    * @return localBusinessMode
    */
   @ApiModelProperty(value = "")
-  public EcoLocalBusinessMode getLocalBusinessMode() {
+  public ExEcoLocalBusinessMode getLocalBusinessMode() {
     return localBusinessMode;
   }
 
-  public void setLocalBusinessMode(EcoLocalBusinessMode localBusinessMode) {
+  public void setLocalBusinessMode(ExEcoLocalBusinessMode localBusinessMode) {
     this.localBusinessMode = localBusinessMode;
   }
 

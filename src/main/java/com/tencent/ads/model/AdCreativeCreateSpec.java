@@ -33,6 +33,9 @@ public class AdCreativeCreateSpec {
   @SerializedName("page_spec")
   private DpPageSpec pageSpec = null;
 
+  @SerializedName("profile_id")
+  private Long profileId = null;
+
   public AdCreativeCreateSpec adcreativeName(String adcreativeName) {
     this.adcreativeName = adcreativeName;
     return this;
@@ -110,6 +113,25 @@ public class AdCreativeCreateSpec {
     this.pageSpec = pageSpec;
   }
 
+  public AdCreativeCreateSpec profileId(Long profileId) {
+    this.profileId = profileId;
+    return this;
+  }
+
+  /**
+   * Get profileId
+   *
+   * @return profileId
+   */
+  @ApiModelProperty(value = "")
+  public Long getProfileId() {
+    return profileId;
+  }
+
+  public void setProfileId(Long profileId) {
+    this.profileId = profileId;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -122,12 +144,13 @@ public class AdCreativeCreateSpec {
     return Objects.equals(this.adcreativeName, adCreativeCreateSpec.adcreativeName)
         && Objects.equals(this.adcreativeElements, adCreativeCreateSpec.adcreativeElements)
         && Objects.equals(this.pageType, adCreativeCreateSpec.pageType)
-        && Objects.equals(this.pageSpec, adCreativeCreateSpec.pageSpec);
+        && Objects.equals(this.pageSpec, adCreativeCreateSpec.pageSpec)
+        && Objects.equals(this.profileId, adCreativeCreateSpec.profileId);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(adcreativeName, adcreativeElements, pageType, pageSpec);
+    return Objects.hash(adcreativeName, adcreativeElements, pageType, pageSpec, profileId);
   }
 
   @Override

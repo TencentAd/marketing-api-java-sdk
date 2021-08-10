@@ -21,6 +21,9 @@ import com.tencent.ads.exception.TencentAdsResponseException;
 import com.tencent.ads.model.BarrageAddRequest;
 import com.tencent.ads.model.BarrageAddResponse;
 import com.tencent.ads.model.BarrageAddResponseData;
+import com.tencent.ads.model.BarrageGetResponse;
+import com.tencent.ads.model.BarrageGetResponseData;
+import java.util.List;
 
 public class BarrageApiContainer extends ApiContainer {
 
@@ -37,6 +40,26 @@ public class BarrageApiContainer extends ApiContainer {
   public BarrageAddResponseData barrageAdd(BarrageAddRequest data)
       throws ApiException, TencentAdsResponseException {
     BarrageAddResponse resp = api.barrageAdd(data);
+    handleResponse(gson.toJson(resp));
+    return resp.getData();
+  }
+
+  /**
+   * 获取弹幕
+   *
+   * @param accountId (required)
+   * @param idList (optional)
+   * @param page (optional)
+   * @param pageSize (optional)
+   * @param fields 返回参数的字段列表 (optional)
+   * @return BarrageGetResponse
+   * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
+   *     response body
+   */
+  public BarrageGetResponseData barrageGet(
+      Long accountId, List<Long> idList, Long page, Long pageSize, List<String> fields)
+      throws ApiException, TencentAdsResponseException {
+    BarrageGetResponse resp = api.barrageGet(accountId, idList, page, pageSize, fields);
     handleResponse(gson.toJson(resp));
     return resp.getData();
   }

@@ -33,6 +33,9 @@ public class CustomAudience {
   @SerializedName("description")
   private String description = null;
 
+  @SerializedName("cooperated")
+  private Boolean cooperated = null;
+
   @SerializedName("type")
   private AudienceType type = null;
 
@@ -131,6 +134,25 @@ public class CustomAudience {
 
   public void setDescription(String description) {
     this.description = description;
+  }
+
+  public CustomAudience cooperated(Boolean cooperated) {
+    this.cooperated = cooperated;
+    return this;
+  }
+
+  /**
+   * Get cooperated
+   *
+   * @return cooperated
+   */
+  @ApiModelProperty(value = "")
+  public Boolean isCooperated() {
+    return cooperated;
+  }
+
+  public void setCooperated(Boolean cooperated) {
+    this.cooperated = cooperated;
   }
 
   public CustomAudience type(AudienceType type) {
@@ -298,6 +320,7 @@ public class CustomAudience {
         && Objects.equals(this.accountId, customAudience.accountId)
         && Objects.equals(this.name, customAudience.name)
         && Objects.equals(this.description, customAudience.description)
+        && Objects.equals(this.cooperated, customAudience.cooperated)
         && Objects.equals(this.type, customAudience.type)
         && Objects.equals(this.status, customAudience.status)
         && Objects.equals(this.errorCode, customAudience.errorCode)
@@ -315,6 +338,7 @@ public class CustomAudience {
         accountId,
         name,
         description,
+        cooperated,
         type,
         status,
         errorCode,

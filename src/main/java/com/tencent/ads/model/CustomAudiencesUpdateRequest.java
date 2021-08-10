@@ -31,6 +31,9 @@ public class CustomAudiencesUpdateRequest {
   @SerializedName("description")
   private String description = null;
 
+  @SerializedName("cooperated")
+  private Boolean cooperated = null;
+
   public CustomAudiencesUpdateRequest accountId(Long accountId) {
     this.accountId = accountId;
     return this;
@@ -107,6 +110,25 @@ public class CustomAudiencesUpdateRequest {
     this.description = description;
   }
 
+  public CustomAudiencesUpdateRequest cooperated(Boolean cooperated) {
+    this.cooperated = cooperated;
+    return this;
+  }
+
+  /**
+   * Get cooperated
+   *
+   * @return cooperated
+   */
+  @ApiModelProperty(value = "")
+  public Boolean isCooperated() {
+    return cooperated;
+  }
+
+  public void setCooperated(Boolean cooperated) {
+    this.cooperated = cooperated;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -119,12 +141,13 @@ public class CustomAudiencesUpdateRequest {
     return Objects.equals(this.accountId, customAudiencesUpdateRequest.accountId)
         && Objects.equals(this.audienceId, customAudiencesUpdateRequest.audienceId)
         && Objects.equals(this.name, customAudiencesUpdateRequest.name)
-        && Objects.equals(this.description, customAudiencesUpdateRequest.description);
+        && Objects.equals(this.description, customAudiencesUpdateRequest.description)
+        && Objects.equals(this.cooperated, customAudiencesUpdateRequest.cooperated);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(accountId, audienceId, name, description);
+    return Objects.hash(accountId, audienceId, name, description, cooperated);
   }
 
   @Override

@@ -24,6 +24,12 @@ public class MetricDetailData {
   @SerializedName("cost")
   private Long cost = null;
 
+  @SerializedName("valid_click_count")
+  private Long validClickCount = null;
+
+  @SerializedName("ctr")
+  private Double ctr = null;
+
   @SerializedName("exp_pv")
   private Long expPv = null;
 
@@ -92,6 +98,44 @@ public class MetricDetailData {
 
   public void setCost(Long cost) {
     this.cost = cost;
+  }
+
+  public MetricDetailData validClickCount(Long validClickCount) {
+    this.validClickCount = validClickCount;
+    return this;
+  }
+
+  /**
+   * Get validClickCount
+   *
+   * @return validClickCount
+   */
+  @ApiModelProperty(value = "")
+  public Long getValidClickCount() {
+    return validClickCount;
+  }
+
+  public void setValidClickCount(Long validClickCount) {
+    this.validClickCount = validClickCount;
+  }
+
+  public MetricDetailData ctr(Double ctr) {
+    this.ctr = ctr;
+    return this;
+  }
+
+  /**
+   * Get ctr
+   *
+   * @return ctr
+   */
+  @ApiModelProperty(value = "")
+  public Double getCtr() {
+    return ctr;
+  }
+
+  public void setCtr(Double ctr) {
+    this.ctr = ctr;
   }
 
   public MetricDetailData expPv(Long expPv) {
@@ -427,6 +471,8 @@ public class MetricDetailData {
     }
     MetricDetailData metricDetailData = (MetricDetailData) o;
     return Objects.equals(this.cost, metricDetailData.cost)
+        && Objects.equals(this.validClickCount, metricDetailData.validClickCount)
+        && Objects.equals(this.ctr, metricDetailData.ctr)
         && Objects.equals(this.expPv, metricDetailData.expPv)
         && Objects.equals(this.canvasCpnCouponsGetPv, metricDetailData.canvasCpnCouponsGetPv)
         && Objects.equals(this.canvasCpnCouponsCost, metricDetailData.canvasCpnCouponsCost)
@@ -450,6 +496,8 @@ public class MetricDetailData {
   public int hashCode() {
     return Objects.hash(
         cost,
+        validClickCount,
+        ctr,
         expPv,
         canvasCpnCouponsGetPv,
         canvasCpnCouponsCost,

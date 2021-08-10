@@ -31,6 +31,9 @@ public class CustomAudiencesAddRequest {
   @SerializedName("description")
   private String description = null;
 
+  @SerializedName("cooperated")
+  private Boolean cooperated = null;
+
   @SerializedName("audience_spec")
   private AudienceSpec audienceSpec = null;
 
@@ -116,6 +119,25 @@ public class CustomAudiencesAddRequest {
     this.description = description;
   }
 
+  public CustomAudiencesAddRequest cooperated(Boolean cooperated) {
+    this.cooperated = cooperated;
+    return this;
+  }
+
+  /**
+   * Get cooperated
+   *
+   * @return cooperated
+   */
+  @ApiModelProperty(value = "")
+  public Boolean isCooperated() {
+    return cooperated;
+  }
+
+  public void setCooperated(Boolean cooperated) {
+    this.cooperated = cooperated;
+  }
+
   public CustomAudiencesAddRequest audienceSpec(AudienceSpec audienceSpec) {
     this.audienceSpec = audienceSpec;
     return this;
@@ -186,6 +208,7 @@ public class CustomAudiencesAddRequest {
         && Objects.equals(this.name, customAudiencesAddRequest.name)
         && Objects.equals(this.type, customAudiencesAddRequest.type)
         && Objects.equals(this.description, customAudiencesAddRequest.description)
+        && Objects.equals(this.cooperated, customAudiencesAddRequest.cooperated)
         && Objects.equals(this.audienceSpec, customAudiencesAddRequest.audienceSpec)
         && Objects.equals(this.platform, customAudiencesAddRequest.platform)
         && Objects.equals(this.externalAudienceId, customAudiencesAddRequest.externalAudienceId);
@@ -194,7 +217,7 @@ public class CustomAudiencesAddRequest {
   @Override
   public int hashCode() {
     return Objects.hash(
-        accountId, name, type, description, audienceSpec, platform, externalAudienceId);
+        accountId, name, type, description, cooperated, audienceSpec, platform, externalAudienceId);
   }
 
   @Override
