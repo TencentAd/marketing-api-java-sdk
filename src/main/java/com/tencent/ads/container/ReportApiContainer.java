@@ -18,6 +18,9 @@ import com.tencent.ads.ApiException;
 import com.tencent.ads.anno.*;
 import com.tencent.ads.api.ReportApi;
 import com.tencent.ads.exception.TencentAdsResponseException;
+import com.tencent.ads.model.ReportAdUnionRequest;
+import com.tencent.ads.model.ReportAdUnionResponse;
+import com.tencent.ads.model.ReportAdUnionResponseData;
 import com.tencent.ads.model.ReportConversionsPredictRequest;
 import com.tencent.ads.model.ReportConversionsPredictResponse;
 import com.tencent.ads.model.ReportConversionsPredictResponseData;
@@ -28,6 +31,21 @@ import com.tencent.ads.model.ReportVideoFrameResponseData;
 public class ReportApiContainer extends ApiContainer {
 
   @Inject ReportApi api;
+
+  /**
+   * 联盟广告位报表接口
+   *
+   * @param data (required)
+   * @return ReportAdUnionResponse
+   * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
+   *     response body
+   */
+  public ReportAdUnionResponseData reportAdUnion(ReportAdUnionRequest data)
+      throws ApiException, TencentAdsResponseException {
+    ReportAdUnionResponse resp = api.reportAdUnion(data);
+    handleResponse(gson.toJson(resp));
+    return resp.getData();
+  }
 
   /**
    * 获取当日转化效果预估数据

@@ -19,7 +19,7 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-/** 视频/图片等素材的创建来源类型 */
+/** 视频/图片/原生页等素材的创建来源类型 */
 @JsonAdapter(WechatPageSourceType.Adapter.class)
 public enum WechatPageSourceType {
   EQQ("SOURCE_TYPE_EQQ"),
