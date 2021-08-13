@@ -33,6 +33,9 @@ public class AssetPermissionsAddResponse {
   @SerializedName("errors")
   private List<ApiErrorStruct> errors = null;
 
+  @SerializedName("data")
+  private AssetPermissionsAddResponseData data = null;
+
   public AssetPermissionsAddResponse code(Long code) {
     this.code = code;
     return this;
@@ -117,6 +120,25 @@ public class AssetPermissionsAddResponse {
     this.errors = errors;
   }
 
+  public AssetPermissionsAddResponse data(AssetPermissionsAddResponseData data) {
+    this.data = data;
+    return this;
+  }
+
+  /**
+   * Get data
+   *
+   * @return data
+   */
+  @ApiModelProperty(value = "")
+  public AssetPermissionsAddResponseData getData() {
+    return data;
+  }
+
+  public void setData(AssetPermissionsAddResponseData data) {
+    this.data = data;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -129,12 +151,13 @@ public class AssetPermissionsAddResponse {
     return Objects.equals(this.code, assetPermissionsAddResponse.code)
         && Objects.equals(this.message, assetPermissionsAddResponse.message)
         && Objects.equals(this.messageCn, assetPermissionsAddResponse.messageCn)
-        && Objects.equals(this.errors, assetPermissionsAddResponse.errors);
+        && Objects.equals(this.errors, assetPermissionsAddResponse.errors)
+        && Objects.equals(this.data, assetPermissionsAddResponse.data);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(code, message, messageCn, errors);
+    return Objects.hash(code, message, messageCn, errors, data);
   }
 
   @Override

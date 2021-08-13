@@ -21,6 +21,9 @@ import java.util.Objects;
 /** 返回结构 */
 @ApiModel(description = "返回结构")
 public class ProfilesGetListStruct {
+  @SerializedName("owner_id")
+  private Long ownerId = null;
+
   @SerializedName("profile_type")
   private ProfileType profileType = null;
 
@@ -56,6 +59,25 @@ public class ProfilesGetListStruct {
 
   @SerializedName("system_status")
   private SysStatus systemStatus = null;
+
+  public ProfilesGetListStruct ownerId(Long ownerId) {
+    this.ownerId = ownerId;
+    return this;
+  }
+
+  /**
+   * Get ownerId
+   *
+   * @return ownerId
+   */
+  @ApiModelProperty(value = "")
+  public Long getOwnerId() {
+    return ownerId;
+  }
+
+  public void setOwnerId(Long ownerId) {
+    this.ownerId = ownerId;
+  }
 
   public ProfilesGetListStruct profileType(ProfileType profileType) {
     this.profileType = profileType;
@@ -294,7 +316,8 @@ public class ProfilesGetListStruct {
       return false;
     }
     ProfilesGetListStruct profilesGetListStruct = (ProfilesGetListStruct) o;
-    return Objects.equals(this.profileType, profilesGetListStruct.profileType)
+    return Objects.equals(this.ownerId, profilesGetListStruct.ownerId)
+        && Objects.equals(this.profileType, profilesGetListStruct.profileType)
         && Objects.equals(this.profileId, profilesGetListStruct.profileId)
         && Objects.equals(this.promotedObjectType, profilesGetListStruct.promotedObjectType)
         && Objects.equals(this.promotedObjectId, profilesGetListStruct.promotedObjectId)
@@ -311,6 +334,7 @@ public class ProfilesGetListStruct {
   @Override
   public int hashCode() {
     return Objects.hash(
+        ownerId,
         profileType,
         profileId,
         promotedObjectType,

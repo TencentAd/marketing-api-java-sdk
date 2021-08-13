@@ -6,7 +6,6 @@ import com.tencent.ads.exception.TencentAdsResponseException;
 import com.tencent.ads.exception.TencentAdsSDKException;
 import com.tencent.ads.model.*;
 import com.tencent.ads.model.AssetPermissionsAddRequest;
-import com.tencent.ads.model.AssetPermissionsAddResponse;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -48,8 +47,9 @@ public class AddAssetPermissions {
     data.setAssetPermissionSpec(assetPermissionSpec);
   }
 
-  public AssetPermissionsAddResponse addAssetPermissions() throws Exception {
-    AssetPermissionsAddResponse response = tencentAds.assetPermissions().assetPermissionsAdd(data);
+  public AssetPermissionsAddResponseData addAssetPermissions() throws Exception {
+    AssetPermissionsAddResponseData response =
+        tencentAds.assetPermissions().assetPermissionsAdd(data);
     return response;
   }
 
@@ -57,7 +57,7 @@ public class AddAssetPermissions {
     try {
       AddAssetPermissions addAssetPermissions = new AddAssetPermissions();
       addAssetPermissions.init();
-      AssetPermissionsAddResponse response = addAssetPermissions.addAssetPermissions();
+      AssetPermissionsAddResponseData response = addAssetPermissions.addAssetPermissions();
     } catch (TencentAdsResponseException e) {
       e.printStackTrace();
     } catch (TencentAdsSDKException e) {
