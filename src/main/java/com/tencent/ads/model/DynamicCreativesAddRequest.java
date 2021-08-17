@@ -84,6 +84,9 @@ public class DynamicCreativesAddRequest {
   @SerializedName("app_gift_pack_code")
   private AppGiftPackCode appGiftPackCode = null;
 
+  @SerializedName("enable_breakthrough_siteset")
+  private Boolean enableBreakthroughSiteset = null;
+
   @SerializedName("account_id")
   private Long accountId = null;
 
@@ -505,6 +508,25 @@ public class DynamicCreativesAddRequest {
     this.appGiftPackCode = appGiftPackCode;
   }
 
+  public DynamicCreativesAddRequest enableBreakthroughSiteset(Boolean enableBreakthroughSiteset) {
+    this.enableBreakthroughSiteset = enableBreakthroughSiteset;
+    return this;
+  }
+
+  /**
+   * Get enableBreakthroughSiteset
+   *
+   * @return enableBreakthroughSiteset
+   */
+  @ApiModelProperty(value = "")
+  public Boolean isEnableBreakthroughSiteset() {
+    return enableBreakthroughSiteset;
+  }
+
+  public void setEnableBreakthroughSiteset(Boolean enableBreakthroughSiteset) {
+    this.enableBreakthroughSiteset = enableBreakthroughSiteset;
+  }
+
   public DynamicCreativesAddRequest accountId(Long accountId) {
     this.accountId = accountId;
     return this;
@@ -561,6 +583,8 @@ public class DynamicCreativesAddRequest {
         && Objects.equals(
             this.dynamicCreativeGroupUsed, dynamicCreativesAddRequest.dynamicCreativeGroupUsed)
         && Objects.equals(this.appGiftPackCode, dynamicCreativesAddRequest.appGiftPackCode)
+        && Objects.equals(
+            this.enableBreakthroughSiteset, dynamicCreativesAddRequest.enableBreakthroughSiteset)
         && Objects.equals(this.accountId, dynamicCreativesAddRequest.accountId);
   }
 
@@ -588,6 +612,7 @@ public class DynamicCreativesAddRequest {
         barrageList,
         dynamicCreativeGroupUsed,
         appGiftPackCode,
+        enableBreakthroughSiteset,
         accountId);
   }
 

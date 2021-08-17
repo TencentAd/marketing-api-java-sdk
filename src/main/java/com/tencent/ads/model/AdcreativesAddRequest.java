@@ -123,6 +123,9 @@ public class AdcreativesAddRequest {
   @SerializedName("app_gift_pack_code")
   private AppGiftPackCode appGiftPackCode = null;
 
+  @SerializedName("enable_breakthrough_siteset")
+  private Boolean enableBreakthroughSiteset = null;
+
   @SerializedName("account_id")
   private Long accountId = null;
 
@@ -794,6 +797,25 @@ public class AdcreativesAddRequest {
     this.appGiftPackCode = appGiftPackCode;
   }
 
+  public AdcreativesAddRequest enableBreakthroughSiteset(Boolean enableBreakthroughSiteset) {
+    this.enableBreakthroughSiteset = enableBreakthroughSiteset;
+    return this;
+  }
+
+  /**
+   * Get enableBreakthroughSiteset
+   *
+   * @return enableBreakthroughSiteset
+   */
+  @ApiModelProperty(value = "")
+  public Boolean isEnableBreakthroughSiteset() {
+    return enableBreakthroughSiteset;
+  }
+
+  public void setEnableBreakthroughSiteset(Boolean enableBreakthroughSiteset) {
+    this.enableBreakthroughSiteset = enableBreakthroughSiteset;
+  }
+
   public AdcreativesAddRequest accountId(Long accountId) {
     this.accountId = accountId;
     return this;
@@ -897,6 +919,8 @@ public class AdcreativesAddRequest {
         && Objects.equals(this.pageTrackUrl, adcreativesAddRequest.pageTrackUrl)
         && Objects.equals(this.barrageList, adcreativesAddRequest.barrageList)
         && Objects.equals(this.appGiftPackCode, adcreativesAddRequest.appGiftPackCode)
+        && Objects.equals(
+            this.enableBreakthroughSiteset, adcreativesAddRequest.enableBreakthroughSiteset)
         && Objects.equals(this.accountId, adcreativesAddRequest.accountId)
         && Objects.equals(this.adcreativeTemplateId, adcreativesAddRequest.adcreativeTemplateId)
         && Objects.equals(this.adcreativeElements, adcreativesAddRequest.adcreativeElements);
@@ -939,6 +963,7 @@ public class AdcreativesAddRequest {
         pageTrackUrl,
         barrageList,
         appGiftPackCode,
+        enableBreakthroughSiteset,
         accountId,
         adcreativeTemplateId,
         adcreativeElements);

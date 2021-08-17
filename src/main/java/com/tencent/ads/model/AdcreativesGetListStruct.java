@@ -149,6 +149,9 @@ public class AdcreativesGetListStruct {
   @SerializedName("app_gift_pack_code")
   private AppGiftPackCode appGiftPackCode = null;
 
+  @SerializedName("enable_breakthrough_siteset")
+  private Boolean enableBreakthroughSiteset = null;
+
   @SerializedName("adcreative_template_id")
   private Long adcreativeTemplateId = null;
 
@@ -972,6 +975,25 @@ public class AdcreativesGetListStruct {
     this.appGiftPackCode = appGiftPackCode;
   }
 
+  public AdcreativesGetListStruct enableBreakthroughSiteset(Boolean enableBreakthroughSiteset) {
+    this.enableBreakthroughSiteset = enableBreakthroughSiteset;
+    return this;
+  }
+
+  /**
+   * Get enableBreakthroughSiteset
+   *
+   * @return enableBreakthroughSiteset
+   */
+  @ApiModelProperty(value = "")
+  public Boolean isEnableBreakthroughSiteset() {
+    return enableBreakthroughSiteset;
+  }
+
+  public void setEnableBreakthroughSiteset(Boolean enableBreakthroughSiteset) {
+    this.enableBreakthroughSiteset = enableBreakthroughSiteset;
+  }
+
   public AdcreativesGetListStruct adcreativeTemplateId(Long adcreativeTemplateId) {
     this.adcreativeTemplateId = adcreativeTemplateId;
     return this;
@@ -1069,6 +1091,8 @@ public class AdcreativesGetListStruct {
         && Objects.equals(this.pageTrackUrl, adcreativesGetListStruct.pageTrackUrl)
         && Objects.equals(this.barrageList, adcreativesGetListStruct.barrageList)
         && Objects.equals(this.appGiftPackCode, adcreativesGetListStruct.appGiftPackCode)
+        && Objects.equals(
+            this.enableBreakthroughSiteset, adcreativesGetListStruct.enableBreakthroughSiteset)
         && Objects.equals(this.adcreativeTemplateId, adcreativesGetListStruct.adcreativeTemplateId)
         && Objects.equals(this.adcreativeElements, adcreativesGetListStruct.adcreativeElements);
   }
@@ -1118,6 +1142,7 @@ public class AdcreativesGetListStruct {
         pageTrackUrl,
         barrageList,
         appGiftPackCode,
+        enableBreakthroughSiteset,
         adcreativeTemplateId,
         adcreativeElements);
   }

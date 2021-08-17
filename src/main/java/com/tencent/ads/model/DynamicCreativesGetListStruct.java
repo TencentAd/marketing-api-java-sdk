@@ -101,6 +101,9 @@ public class DynamicCreativesGetListStruct {
   @SerializedName("app_gift_pack_code")
   private AppGiftPackCode appGiftPackCode = null;
 
+  @SerializedName("enable_breakthrough_siteset")
+  private Boolean enableBreakthroughSiteset = null;
+
   public DynamicCreativesGetListStruct dynamicCreativeId(Long dynamicCreativeId) {
     this.dynamicCreativeId = dynamicCreativeId;
     return this;
@@ -614,6 +617,26 @@ public class DynamicCreativesGetListStruct {
     this.appGiftPackCode = appGiftPackCode;
   }
 
+  public DynamicCreativesGetListStruct enableBreakthroughSiteset(
+      Boolean enableBreakthroughSiteset) {
+    this.enableBreakthroughSiteset = enableBreakthroughSiteset;
+    return this;
+  }
+
+  /**
+   * Get enableBreakthroughSiteset
+   *
+   * @return enableBreakthroughSiteset
+   */
+  @ApiModelProperty(value = "")
+  public Boolean isEnableBreakthroughSiteset() {
+    return enableBreakthroughSiteset;
+  }
+
+  public void setEnableBreakthroughSiteset(Boolean enableBreakthroughSiteset) {
+    this.enableBreakthroughSiteset = enableBreakthroughSiteset;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -656,7 +679,10 @@ public class DynamicCreativesGetListStruct {
         && Objects.equals(this.barrageList, dynamicCreativesGetListStruct.barrageList)
         && Objects.equals(
             this.dynamicCreativeGroupUsed, dynamicCreativesGetListStruct.dynamicCreativeGroupUsed)
-        && Objects.equals(this.appGiftPackCode, dynamicCreativesGetListStruct.appGiftPackCode);
+        && Objects.equals(this.appGiftPackCode, dynamicCreativesGetListStruct.appGiftPackCode)
+        && Objects.equals(
+            this.enableBreakthroughSiteset,
+            dynamicCreativesGetListStruct.enableBreakthroughSiteset);
   }
 
   @Override
@@ -687,7 +713,8 @@ public class DynamicCreativesGetListStruct {
         videoEndPage,
         barrageList,
         dynamicCreativeGroupUsed,
-        appGiftPackCode);
+        appGiftPackCode,
+        enableBreakthroughSiteset);
   }
 
   @Override
