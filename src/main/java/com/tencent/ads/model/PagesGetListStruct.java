@@ -57,6 +57,9 @@ public class PagesGetListStruct {
   @SerializedName("owner_uid")
   private Long ownerUid = null;
 
+  @SerializedName("quote_creative_material")
+  private Boolean quoteCreativeMaterial = null;
+
   public PagesGetListStruct pageId(Long pageId) {
     this.pageId = pageId;
     return this;
@@ -285,6 +288,25 @@ public class PagesGetListStruct {
     this.ownerUid = ownerUid;
   }
 
+  public PagesGetListStruct quoteCreativeMaterial(Boolean quoteCreativeMaterial) {
+    this.quoteCreativeMaterial = quoteCreativeMaterial;
+    return this;
+  }
+
+  /**
+   * Get quoteCreativeMaterial
+   *
+   * @return quoteCreativeMaterial
+   */
+  @ApiModelProperty(value = "")
+  public Boolean isQuoteCreativeMaterial() {
+    return quoteCreativeMaterial;
+  }
+
+  public void setQuoteCreativeMaterial(Boolean quoteCreativeMaterial) {
+    this.quoteCreativeMaterial = quoteCreativeMaterial;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -305,7 +327,8 @@ public class PagesGetListStruct {
         && Objects.equals(this.playableType, pagesGetListStruct.playableType)
         && Objects.equals(this.pageStatus, pagesGetListStruct.pageStatus)
         && Objects.equals(this.fengyeSubType, pagesGetListStruct.fengyeSubType)
-        && Objects.equals(this.ownerUid, pagesGetListStruct.ownerUid);
+        && Objects.equals(this.ownerUid, pagesGetListStruct.ownerUid)
+        && Objects.equals(this.quoteCreativeMaterial, pagesGetListStruct.quoteCreativeMaterial);
   }
 
   @Override
@@ -322,7 +345,8 @@ public class PagesGetListStruct {
         playableType,
         pageStatus,
         fengyeSubType,
-        ownerUid);
+        ownerUid,
+        quoteCreativeMaterial);
   }
 
   @Override

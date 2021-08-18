@@ -1170,14 +1170,8 @@ public class HourlyReportsGetListStruct {
   @SerializedName("compensation_amount")
   private Long compensationAmount = null;
 
-  @SerializedName("view_user_count")
-  private Long viewUserCount = null;
-
   @SerializedName("avg_view_per_user")
   private Double avgViewPerUser = null;
-
-  @SerializedName("click_user_count")
-  private Long clickUserCount = null;
 
   @SerializedName("image_click_user_count")
   private Long imageClickUserCount = null;
@@ -8675,25 +8669,6 @@ public class HourlyReportsGetListStruct {
     this.compensationAmount = compensationAmount;
   }
 
-  public HourlyReportsGetListStruct viewUserCount(Long viewUserCount) {
-    this.viewUserCount = viewUserCount;
-    return this;
-  }
-
-  /**
-   * Get viewUserCount
-   *
-   * @return viewUserCount
-   */
-  @ApiModelProperty(value = "")
-  public Long getViewUserCount() {
-    return viewUserCount;
-  }
-
-  public void setViewUserCount(Long viewUserCount) {
-    this.viewUserCount = viewUserCount;
-  }
-
   public HourlyReportsGetListStruct avgViewPerUser(Double avgViewPerUser) {
     this.avgViewPerUser = avgViewPerUser;
     return this;
@@ -8711,25 +8686,6 @@ public class HourlyReportsGetListStruct {
 
   public void setAvgViewPerUser(Double avgViewPerUser) {
     this.avgViewPerUser = avgViewPerUser;
-  }
-
-  public HourlyReportsGetListStruct clickUserCount(Long clickUserCount) {
-    this.clickUserCount = clickUserCount;
-    return this;
-  }
-
-  /**
-   * Get clickUserCount
-   *
-   * @return clickUserCount
-   */
-  @ApiModelProperty(value = "")
-  public Long getClickUserCount() {
-    return clickUserCount;
-  }
-
-  public void setClickUserCount(Long clickUserCount) {
-    this.clickUserCount = clickUserCount;
   }
 
   public HourlyReportsGetListStruct imageClickUserCount(Long imageClickUserCount) {
@@ -10503,9 +10459,7 @@ public class HourlyReportsGetListStruct {
         && Objects.equals(this.wechatAgencyId, hourlyReportsGetListStruct.wechatAgencyId)
         && Objects.equals(this.costDeviationRate, hourlyReportsGetListStruct.costDeviationRate)
         && Objects.equals(this.compensationAmount, hourlyReportsGetListStruct.compensationAmount)
-        && Objects.equals(this.viewUserCount, hourlyReportsGetListStruct.viewUserCount)
         && Objects.equals(this.avgViewPerUser, hourlyReportsGetListStruct.avgViewPerUser)
-        && Objects.equals(this.clickUserCount, hourlyReportsGetListStruct.clickUserCount)
         && Objects.equals(this.imageClickUserCount, hourlyReportsGetListStruct.imageClickUserCount)
         && Objects.equals(this.videoClickUserCount, hourlyReportsGetListStruct.videoClickUserCount)
         && Objects.equals(this.linkClickUserCount, hourlyReportsGetListStruct.linkClickUserCount)
@@ -11016,9 +10970,7 @@ public class HourlyReportsGetListStruct {
         wechatAgencyId,
         costDeviationRate,
         compensationAmount,
-        viewUserCount,
         avgViewPerUser,
-        clickUserCount,
         imageClickUserCount,
         videoClickUserCount,
         linkClickUserCount,
