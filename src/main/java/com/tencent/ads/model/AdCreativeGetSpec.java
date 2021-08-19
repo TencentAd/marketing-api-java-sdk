@@ -27,6 +27,9 @@ public class AdCreativeGetSpec {
   @SerializedName("adcreative_name")
   private String adcreativeName = null;
 
+  @SerializedName("creative_template_id")
+  private Long creativeTemplateId = null;
+
   @SerializedName("adcreative_elements")
   private DpAdcreativeCreativeElementsMp adcreativeElements = null;
 
@@ -75,6 +78,25 @@ public class AdCreativeGetSpec {
 
   public void setAdcreativeName(String adcreativeName) {
     this.adcreativeName = adcreativeName;
+  }
+
+  public AdCreativeGetSpec creativeTemplateId(Long creativeTemplateId) {
+    this.creativeTemplateId = creativeTemplateId;
+    return this;
+  }
+
+  /**
+   * Get creativeTemplateId
+   *
+   * @return creativeTemplateId
+   */
+  @ApiModelProperty(value = "")
+  public Long getCreativeTemplateId() {
+    return creativeTemplateId;
+  }
+
+  public void setCreativeTemplateId(Long creativeTemplateId) {
+    this.creativeTemplateId = creativeTemplateId;
   }
 
   public AdCreativeGetSpec adcreativeElements(DpAdcreativeCreativeElementsMp adcreativeElements) {
@@ -164,6 +186,7 @@ public class AdCreativeGetSpec {
     AdCreativeGetSpec adCreativeGetSpec = (AdCreativeGetSpec) o;
     return Objects.equals(this.adcreativeId, adCreativeGetSpec.adcreativeId)
         && Objects.equals(this.adcreativeName, adCreativeGetSpec.adcreativeName)
+        && Objects.equals(this.creativeTemplateId, adCreativeGetSpec.creativeTemplateId)
         && Objects.equals(this.adcreativeElements, adCreativeGetSpec.adcreativeElements)
         && Objects.equals(this.pageType, adCreativeGetSpec.pageType)
         && Objects.equals(this.pageSpec, adCreativeGetSpec.pageSpec)
@@ -173,7 +196,13 @@ public class AdCreativeGetSpec {
   @Override
   public int hashCode() {
     return Objects.hash(
-        adcreativeId, adcreativeName, adcreativeElements, pageType, pageSpec, profileId);
+        adcreativeId,
+        adcreativeName,
+        creativeTemplateId,
+        adcreativeElements,
+        pageType,
+        pageSpec,
+        profileId);
   }
 
   @Override
