@@ -29,6 +29,9 @@ public class DpWriteTargetingSetting {
   @SerializedName("gender")
   private List<String> gender = null;
 
+  @SerializedName("education")
+  private List<String> education = null;
+
   public DpWriteTargetingSetting age(List<AgeStruct> age) {
     this.age = age;
     return this;
@@ -83,6 +86,33 @@ public class DpWriteTargetingSetting {
     this.gender = gender;
   }
 
+  public DpWriteTargetingSetting education(List<String> education) {
+    this.education = education;
+    return this;
+  }
+
+  public DpWriteTargetingSetting addEducationItem(String educationItem) {
+    if (this.education == null) {
+      this.education = new ArrayList<String>();
+    }
+    this.education.add(educationItem);
+    return this;
+  }
+
+  /**
+   * Get education
+   *
+   * @return education
+   */
+  @ApiModelProperty(value = "")
+  public List<String> getEducation() {
+    return education;
+  }
+
+  public void setEducation(List<String> education) {
+    this.education = education;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -93,12 +123,13 @@ public class DpWriteTargetingSetting {
     }
     DpWriteTargetingSetting dpWriteTargetingSetting = (DpWriteTargetingSetting) o;
     return Objects.equals(this.age, dpWriteTargetingSetting.age)
-        && Objects.equals(this.gender, dpWriteTargetingSetting.gender);
+        && Objects.equals(this.gender, dpWriteTargetingSetting.gender)
+        && Objects.equals(this.education, dpWriteTargetingSetting.education);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(age, gender);
+    return Objects.hash(age, gender, education);
   }
 
   @Override

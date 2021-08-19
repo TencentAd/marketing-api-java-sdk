@@ -51,6 +51,24 @@ public class DynamicCreativesAddRequest {
   @SerializedName("page_spec")
   private DynamicCreativePageSpec pageSpec = null;
 
+  @SerializedName("link_page_type")
+  private LinkPageType linkPageType = null;
+
+  @SerializedName("link_name_type")
+  private LinkUrlLinkNameType linkNameType = null;
+
+  @SerializedName("link_page_spec")
+  private LinkPageSpec linkPageSpec = null;
+
+  @SerializedName("conversion_data_type")
+  private ConversionDataType conversionDataType = null;
+
+  @SerializedName("conversion_target_type")
+  private ConversionTargetType conversionTargetType = null;
+
+  @SerializedName("qq_mini_game_tracking_query_string")
+  private String qqMiniGameTrackingQueryString = null;
+
   @SerializedName("deep_link_url")
   private String deepLinkUrl = null;
 
@@ -66,20 +84,50 @@ public class DynamicCreativesAddRequest {
   @SerializedName("union_market_switch")
   private Boolean unionMarketSwitch = null;
 
+  @SerializedName("android_deep_link_app_id")
+  private String androidDeepLinkAppId = null;
+
+  @SerializedName("ios_deep_link_app_id")
+  private String iosDeepLinkAppId = null;
+
+  @SerializedName("universal_link_url")
+  private String universalLinkUrl = null;
+
   @SerializedName("profile_id")
   private Long profileId = null;
+
+  @SerializedName("share_content_spec")
+  private ShareContentSpec shareContentSpec = null;
 
   @SerializedName("dynamic_adcreative_spec")
   private DynamicAdcreativeSpecForDc dynamicAdcreativeSpec = null;
 
+  @SerializedName("component_id")
+  private Long componentId = null;
+
   @SerializedName("video_end_page")
   private VideoEndPageSpec videoEndPage = null;
+
+  @SerializedName("webview_url")
+  private String webviewUrl = null;
+
+  @SerializedName("simple_canvas_sub_type")
+  private SimpleCanvasSubType simpleCanvasSubType = null;
+
+  @SerializedName("floating_zone")
+  private FloatingZone floatingZone = null;
+
+  @SerializedName("marketing_pendant_image_id")
+  private String marketingPendantImageId = null;
 
   @SerializedName("barrage_list")
   private List<BarrageListCreateStruct> barrageList = null;
 
   @SerializedName("dynamic_creative_group_used")
   private DynamicCreativeGroupUsed dynamicCreativeGroupUsed = null;
+
+  @SerializedName("countdown_switch")
+  private Boolean countdownSwitch = null;
 
   @SerializedName("app_gift_pack_code")
   private AppGiftPackCode appGiftPackCode = null;
@@ -289,6 +337,122 @@ public class DynamicCreativesAddRequest {
     this.pageSpec = pageSpec;
   }
 
+  public DynamicCreativesAddRequest linkPageType(LinkPageType linkPageType) {
+    this.linkPageType = linkPageType;
+    return this;
+  }
+
+  /**
+   * Get linkPageType
+   *
+   * @return linkPageType
+   */
+  @ApiModelProperty(value = "")
+  public LinkPageType getLinkPageType() {
+    return linkPageType;
+  }
+
+  public void setLinkPageType(LinkPageType linkPageType) {
+    this.linkPageType = linkPageType;
+  }
+
+  public DynamicCreativesAddRequest linkNameType(LinkUrlLinkNameType linkNameType) {
+    this.linkNameType = linkNameType;
+    return this;
+  }
+
+  /**
+   * Get linkNameType
+   *
+   * @return linkNameType
+   */
+  @ApiModelProperty(value = "")
+  public LinkUrlLinkNameType getLinkNameType() {
+    return linkNameType;
+  }
+
+  public void setLinkNameType(LinkUrlLinkNameType linkNameType) {
+    this.linkNameType = linkNameType;
+  }
+
+  public DynamicCreativesAddRequest linkPageSpec(LinkPageSpec linkPageSpec) {
+    this.linkPageSpec = linkPageSpec;
+    return this;
+  }
+
+  /**
+   * Get linkPageSpec
+   *
+   * @return linkPageSpec
+   */
+  @ApiModelProperty(value = "")
+  public LinkPageSpec getLinkPageSpec() {
+    return linkPageSpec;
+  }
+
+  public void setLinkPageSpec(LinkPageSpec linkPageSpec) {
+    this.linkPageSpec = linkPageSpec;
+  }
+
+  public DynamicCreativesAddRequest conversionDataType(ConversionDataType conversionDataType) {
+    this.conversionDataType = conversionDataType;
+    return this;
+  }
+
+  /**
+   * Get conversionDataType
+   *
+   * @return conversionDataType
+   */
+  @ApiModelProperty(value = "")
+  public ConversionDataType getConversionDataType() {
+    return conversionDataType;
+  }
+
+  public void setConversionDataType(ConversionDataType conversionDataType) {
+    this.conversionDataType = conversionDataType;
+  }
+
+  public DynamicCreativesAddRequest conversionTargetType(
+      ConversionTargetType conversionTargetType) {
+    this.conversionTargetType = conversionTargetType;
+    return this;
+  }
+
+  /**
+   * Get conversionTargetType
+   *
+   * @return conversionTargetType
+   */
+  @ApiModelProperty(value = "")
+  public ConversionTargetType getConversionTargetType() {
+    return conversionTargetType;
+  }
+
+  public void setConversionTargetType(ConversionTargetType conversionTargetType) {
+    this.conversionTargetType = conversionTargetType;
+  }
+
+  public DynamicCreativesAddRequest qqMiniGameTrackingQueryString(
+      String qqMiniGameTrackingQueryString) {
+    this.qqMiniGameTrackingQueryString = qqMiniGameTrackingQueryString;
+    return this;
+  }
+
+  /**
+   * Get qqMiniGameTrackingQueryString
+   *
+   * @return qqMiniGameTrackingQueryString
+   */
+  @ApiModelProperty(value = "")
+  public String getQqMiniGameTrackingQueryString() {
+    return qqMiniGameTrackingQueryString;
+  }
+
+  public void setQqMiniGameTrackingQueryString(String qqMiniGameTrackingQueryString) {
+    this.qqMiniGameTrackingQueryString = qqMiniGameTrackingQueryString;
+  }
+
   public DynamicCreativesAddRequest deepLinkUrl(String deepLinkUrl) {
     this.deepLinkUrl = deepLinkUrl;
     return this;
@@ -384,6 +548,63 @@ public class DynamicCreativesAddRequest {
     this.unionMarketSwitch = unionMarketSwitch;
   }
 
+  public DynamicCreativesAddRequest androidDeepLinkAppId(String androidDeepLinkAppId) {
+    this.androidDeepLinkAppId = androidDeepLinkAppId;
+    return this;
+  }
+
+  /**
+   * Get androidDeepLinkAppId
+   *
+   * @return androidDeepLinkAppId
+   */
+  @ApiModelProperty(value = "")
+  public String getAndroidDeepLinkAppId() {
+    return androidDeepLinkAppId;
+  }
+
+  public void setAndroidDeepLinkAppId(String androidDeepLinkAppId) {
+    this.androidDeepLinkAppId = androidDeepLinkAppId;
+  }
+
+  public DynamicCreativesAddRequest iosDeepLinkAppId(String iosDeepLinkAppId) {
+    this.iosDeepLinkAppId = iosDeepLinkAppId;
+    return this;
+  }
+
+  /**
+   * Get iosDeepLinkAppId
+   *
+   * @return iosDeepLinkAppId
+   */
+  @ApiModelProperty(value = "")
+  public String getIosDeepLinkAppId() {
+    return iosDeepLinkAppId;
+  }
+
+  public void setIosDeepLinkAppId(String iosDeepLinkAppId) {
+    this.iosDeepLinkAppId = iosDeepLinkAppId;
+  }
+
+  public DynamicCreativesAddRequest universalLinkUrl(String universalLinkUrl) {
+    this.universalLinkUrl = universalLinkUrl;
+    return this;
+  }
+
+  /**
+   * Get universalLinkUrl
+   *
+   * @return universalLinkUrl
+   */
+  @ApiModelProperty(value = "")
+  public String getUniversalLinkUrl() {
+    return universalLinkUrl;
+  }
+
+  public void setUniversalLinkUrl(String universalLinkUrl) {
+    this.universalLinkUrl = universalLinkUrl;
+  }
+
   public DynamicCreativesAddRequest profileId(Long profileId) {
     this.profileId = profileId;
     return this;
@@ -401,6 +622,25 @@ public class DynamicCreativesAddRequest {
 
   public void setProfileId(Long profileId) {
     this.profileId = profileId;
+  }
+
+  public DynamicCreativesAddRequest shareContentSpec(ShareContentSpec shareContentSpec) {
+    this.shareContentSpec = shareContentSpec;
+    return this;
+  }
+
+  /**
+   * Get shareContentSpec
+   *
+   * @return shareContentSpec
+   */
+  @ApiModelProperty(value = "")
+  public ShareContentSpec getShareContentSpec() {
+    return shareContentSpec;
+  }
+
+  public void setShareContentSpec(ShareContentSpec shareContentSpec) {
+    this.shareContentSpec = shareContentSpec;
   }
 
   public DynamicCreativesAddRequest dynamicAdcreativeSpec(
@@ -423,6 +663,25 @@ public class DynamicCreativesAddRequest {
     this.dynamicAdcreativeSpec = dynamicAdcreativeSpec;
   }
 
+  public DynamicCreativesAddRequest componentId(Long componentId) {
+    this.componentId = componentId;
+    return this;
+  }
+
+  /**
+   * Get componentId
+   *
+   * @return componentId
+   */
+  @ApiModelProperty(value = "")
+  public Long getComponentId() {
+    return componentId;
+  }
+
+  public void setComponentId(Long componentId) {
+    this.componentId = componentId;
+  }
+
   public DynamicCreativesAddRequest videoEndPage(VideoEndPageSpec videoEndPage) {
     this.videoEndPage = videoEndPage;
     return this;
@@ -440,6 +699,82 @@ public class DynamicCreativesAddRequest {
 
   public void setVideoEndPage(VideoEndPageSpec videoEndPage) {
     this.videoEndPage = videoEndPage;
+  }
+
+  public DynamicCreativesAddRequest webviewUrl(String webviewUrl) {
+    this.webviewUrl = webviewUrl;
+    return this;
+  }
+
+  /**
+   * Get webviewUrl
+   *
+   * @return webviewUrl
+   */
+  @ApiModelProperty(value = "")
+  public String getWebviewUrl() {
+    return webviewUrl;
+  }
+
+  public void setWebviewUrl(String webviewUrl) {
+    this.webviewUrl = webviewUrl;
+  }
+
+  public DynamicCreativesAddRequest simpleCanvasSubType(SimpleCanvasSubType simpleCanvasSubType) {
+    this.simpleCanvasSubType = simpleCanvasSubType;
+    return this;
+  }
+
+  /**
+   * Get simpleCanvasSubType
+   *
+   * @return simpleCanvasSubType
+   */
+  @ApiModelProperty(value = "")
+  public SimpleCanvasSubType getSimpleCanvasSubType() {
+    return simpleCanvasSubType;
+  }
+
+  public void setSimpleCanvasSubType(SimpleCanvasSubType simpleCanvasSubType) {
+    this.simpleCanvasSubType = simpleCanvasSubType;
+  }
+
+  public DynamicCreativesAddRequest floatingZone(FloatingZone floatingZone) {
+    this.floatingZone = floatingZone;
+    return this;
+  }
+
+  /**
+   * Get floatingZone
+   *
+   * @return floatingZone
+   */
+  @ApiModelProperty(value = "")
+  public FloatingZone getFloatingZone() {
+    return floatingZone;
+  }
+
+  public void setFloatingZone(FloatingZone floatingZone) {
+    this.floatingZone = floatingZone;
+  }
+
+  public DynamicCreativesAddRequest marketingPendantImageId(String marketingPendantImageId) {
+    this.marketingPendantImageId = marketingPendantImageId;
+    return this;
+  }
+
+  /**
+   * Get marketingPendantImageId
+   *
+   * @return marketingPendantImageId
+   */
+  @ApiModelProperty(value = "")
+  public String getMarketingPendantImageId() {
+    return marketingPendantImageId;
+  }
+
+  public void setMarketingPendantImageId(String marketingPendantImageId) {
+    this.marketingPendantImageId = marketingPendantImageId;
   }
 
   public DynamicCreativesAddRequest barrageList(List<BarrageListCreateStruct> barrageList) {
@@ -487,6 +822,25 @@ public class DynamicCreativesAddRequest {
 
   public void setDynamicCreativeGroupUsed(DynamicCreativeGroupUsed dynamicCreativeGroupUsed) {
     this.dynamicCreativeGroupUsed = dynamicCreativeGroupUsed;
+  }
+
+  public DynamicCreativesAddRequest countdownSwitch(Boolean countdownSwitch) {
+    this.countdownSwitch = countdownSwitch;
+    return this;
+  }
+
+  /**
+   * Get countdownSwitch
+   *
+   * @return countdownSwitch
+   */
+  @ApiModelProperty(value = "")
+  public Boolean isCountdownSwitch() {
+    return countdownSwitch;
+  }
+
+  public void setCountdownSwitch(Boolean countdownSwitch) {
+    this.countdownSwitch = countdownSwitch;
   }
 
   public DynamicCreativesAddRequest appGiftPackCode(AppGiftPackCode appGiftPackCode) {
@@ -568,6 +922,15 @@ public class DynamicCreativesAddRequest {
         && Objects.equals(this.siteSet, dynamicCreativesAddRequest.siteSet)
         && Objects.equals(this.promotedObjectId, dynamicCreativesAddRequest.promotedObjectId)
         && Objects.equals(this.pageSpec, dynamicCreativesAddRequest.pageSpec)
+        && Objects.equals(this.linkPageType, dynamicCreativesAddRequest.linkPageType)
+        && Objects.equals(this.linkNameType, dynamicCreativesAddRequest.linkNameType)
+        && Objects.equals(this.linkPageSpec, dynamicCreativesAddRequest.linkPageSpec)
+        && Objects.equals(this.conversionDataType, dynamicCreativesAddRequest.conversionDataType)
+        && Objects.equals(
+            this.conversionTargetType, dynamicCreativesAddRequest.conversionTargetType)
+        && Objects.equals(
+            this.qqMiniGameTrackingQueryString,
+            dynamicCreativesAddRequest.qqMiniGameTrackingQueryString)
         && Objects.equals(this.deepLinkUrl, dynamicCreativesAddRequest.deepLinkUrl)
         && Objects.equals(
             this.impressionTrackingUrl, dynamicCreativesAddRequest.impressionTrackingUrl)
@@ -575,13 +938,25 @@ public class DynamicCreativesAddRequest {
         && Objects.equals(
             this.feedsVideoCommentSwitch, dynamicCreativesAddRequest.feedsVideoCommentSwitch)
         && Objects.equals(this.unionMarketSwitch, dynamicCreativesAddRequest.unionMarketSwitch)
+        && Objects.equals(
+            this.androidDeepLinkAppId, dynamicCreativesAddRequest.androidDeepLinkAppId)
+        && Objects.equals(this.iosDeepLinkAppId, dynamicCreativesAddRequest.iosDeepLinkAppId)
+        && Objects.equals(this.universalLinkUrl, dynamicCreativesAddRequest.universalLinkUrl)
         && Objects.equals(this.profileId, dynamicCreativesAddRequest.profileId)
+        && Objects.equals(this.shareContentSpec, dynamicCreativesAddRequest.shareContentSpec)
         && Objects.equals(
             this.dynamicAdcreativeSpec, dynamicCreativesAddRequest.dynamicAdcreativeSpec)
+        && Objects.equals(this.componentId, dynamicCreativesAddRequest.componentId)
         && Objects.equals(this.videoEndPage, dynamicCreativesAddRequest.videoEndPage)
+        && Objects.equals(this.webviewUrl, dynamicCreativesAddRequest.webviewUrl)
+        && Objects.equals(this.simpleCanvasSubType, dynamicCreativesAddRequest.simpleCanvasSubType)
+        && Objects.equals(this.floatingZone, dynamicCreativesAddRequest.floatingZone)
+        && Objects.equals(
+            this.marketingPendantImageId, dynamicCreativesAddRequest.marketingPendantImageId)
         && Objects.equals(this.barrageList, dynamicCreativesAddRequest.barrageList)
         && Objects.equals(
             this.dynamicCreativeGroupUsed, dynamicCreativesAddRequest.dynamicCreativeGroupUsed)
+        && Objects.equals(this.countdownSwitch, dynamicCreativesAddRequest.countdownSwitch)
         && Objects.equals(this.appGiftPackCode, dynamicCreativesAddRequest.appGiftPackCode)
         && Objects.equals(
             this.enableBreakthroughSiteset, dynamicCreativesAddRequest.enableBreakthroughSiteset)
@@ -601,16 +976,32 @@ public class DynamicCreativesAddRequest {
         siteSet,
         promotedObjectId,
         pageSpec,
+        linkPageType,
+        linkNameType,
+        linkPageSpec,
+        conversionDataType,
+        conversionTargetType,
+        qqMiniGameTrackingQueryString,
         deepLinkUrl,
         impressionTrackingUrl,
         clickTrackingUrl,
         feedsVideoCommentSwitch,
         unionMarketSwitch,
+        androidDeepLinkAppId,
+        iosDeepLinkAppId,
+        universalLinkUrl,
         profileId,
+        shareContentSpec,
         dynamicAdcreativeSpec,
+        componentId,
         videoEndPage,
+        webviewUrl,
+        simpleCanvasSubType,
+        floatingZone,
+        marketingPendantImageId,
         barrageList,
         dynamicCreativeGroupUsed,
+        countdownSwitch,
         appGiftPackCode,
         enableBreakthroughSiteset,
         accountId);

@@ -24,8 +24,8 @@ public class AdCreativeCreateSpec {
   @SerializedName("adcreative_name")
   private String adcreativeName = null;
 
-  @SerializedName("creative_template_id")
-  private Long creativeTemplateId = null;
+  @SerializedName("adcreative_template_id")
+  private Long adcreativeTemplateId = null;
 
   @SerializedName("adcreative_elements")
   private DpAdcreativeCreativeElementsMp adcreativeElements = null;
@@ -58,23 +58,23 @@ public class AdCreativeCreateSpec {
     this.adcreativeName = adcreativeName;
   }
 
-  public AdCreativeCreateSpec creativeTemplateId(Long creativeTemplateId) {
-    this.creativeTemplateId = creativeTemplateId;
+  public AdCreativeCreateSpec adcreativeTemplateId(Long adcreativeTemplateId) {
+    this.adcreativeTemplateId = adcreativeTemplateId;
     return this;
   }
 
   /**
-   * Get creativeTemplateId
+   * Get adcreativeTemplateId
    *
-   * @return creativeTemplateId
+   * @return adcreativeTemplateId
    */
   @ApiModelProperty(value = "")
-  public Long getCreativeTemplateId() {
-    return creativeTemplateId;
+  public Long getAdcreativeTemplateId() {
+    return adcreativeTemplateId;
   }
 
-  public void setCreativeTemplateId(Long creativeTemplateId) {
-    this.creativeTemplateId = creativeTemplateId;
+  public void setAdcreativeTemplateId(Long adcreativeTemplateId) {
+    this.adcreativeTemplateId = adcreativeTemplateId;
   }
 
   public AdCreativeCreateSpec adcreativeElements(
@@ -164,7 +164,7 @@ public class AdCreativeCreateSpec {
     }
     AdCreativeCreateSpec adCreativeCreateSpec = (AdCreativeCreateSpec) o;
     return Objects.equals(this.adcreativeName, adCreativeCreateSpec.adcreativeName)
-        && Objects.equals(this.creativeTemplateId, adCreativeCreateSpec.creativeTemplateId)
+        && Objects.equals(this.adcreativeTemplateId, adCreativeCreateSpec.adcreativeTemplateId)
         && Objects.equals(this.adcreativeElements, adCreativeCreateSpec.adcreativeElements)
         && Objects.equals(this.pageType, adCreativeCreateSpec.pageType)
         && Objects.equals(this.pageSpec, adCreativeCreateSpec.pageSpec)
@@ -174,7 +174,7 @@ public class AdCreativeCreateSpec {
   @Override
   public int hashCode() {
     return Objects.hash(
-        adcreativeName, creativeTemplateId, adcreativeElements, pageType, pageSpec, profileId);
+        adcreativeName, adcreativeTemplateId, adcreativeElements, pageType, pageSpec, profileId);
   }
 
   @Override

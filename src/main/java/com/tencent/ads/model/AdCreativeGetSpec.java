@@ -27,8 +27,8 @@ public class AdCreativeGetSpec {
   @SerializedName("adcreative_name")
   private String adcreativeName = null;
 
-  @SerializedName("creative_template_id")
-  private Long creativeTemplateId = null;
+  @SerializedName("adcreative_template_id")
+  private Long adcreativeTemplateId = null;
 
   @SerializedName("adcreative_elements")
   private DpAdcreativeCreativeElementsMp adcreativeElements = null;
@@ -80,23 +80,23 @@ public class AdCreativeGetSpec {
     this.adcreativeName = adcreativeName;
   }
 
-  public AdCreativeGetSpec creativeTemplateId(Long creativeTemplateId) {
-    this.creativeTemplateId = creativeTemplateId;
+  public AdCreativeGetSpec adcreativeTemplateId(Long adcreativeTemplateId) {
+    this.adcreativeTemplateId = adcreativeTemplateId;
     return this;
   }
 
   /**
-   * Get creativeTemplateId
+   * Get adcreativeTemplateId
    *
-   * @return creativeTemplateId
+   * @return adcreativeTemplateId
    */
   @ApiModelProperty(value = "")
-  public Long getCreativeTemplateId() {
-    return creativeTemplateId;
+  public Long getAdcreativeTemplateId() {
+    return adcreativeTemplateId;
   }
 
-  public void setCreativeTemplateId(Long creativeTemplateId) {
-    this.creativeTemplateId = creativeTemplateId;
+  public void setAdcreativeTemplateId(Long adcreativeTemplateId) {
+    this.adcreativeTemplateId = adcreativeTemplateId;
   }
 
   public AdCreativeGetSpec adcreativeElements(DpAdcreativeCreativeElementsMp adcreativeElements) {
@@ -186,7 +186,7 @@ public class AdCreativeGetSpec {
     AdCreativeGetSpec adCreativeGetSpec = (AdCreativeGetSpec) o;
     return Objects.equals(this.adcreativeId, adCreativeGetSpec.adcreativeId)
         && Objects.equals(this.adcreativeName, adCreativeGetSpec.adcreativeName)
-        && Objects.equals(this.creativeTemplateId, adCreativeGetSpec.creativeTemplateId)
+        && Objects.equals(this.adcreativeTemplateId, adCreativeGetSpec.adcreativeTemplateId)
         && Objects.equals(this.adcreativeElements, adCreativeGetSpec.adcreativeElements)
         && Objects.equals(this.pageType, adCreativeGetSpec.pageType)
         && Objects.equals(this.pageSpec, adCreativeGetSpec.pageSpec)
@@ -198,7 +198,7 @@ public class AdCreativeGetSpec {
     return Objects.hash(
         adcreativeId,
         adcreativeName,
-        creativeTemplateId,
+        adcreativeTemplateId,
         adcreativeElements,
         pageType,
         pageSpec,
