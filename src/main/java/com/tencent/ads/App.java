@@ -22,6 +22,7 @@ public class App {
   @Inject AdDiagnosisApiContainer adDiagnosisApiContainer;
   @Inject AdLabelApiContainer adLabelApiContainer;
   @Inject AdcreativePreviewsApiContainer adcreativePreviewsApiContainer;
+  @Inject AdcreativePreviewsQrcodeApiContainer adcreativePreviewsQrcodeApiContainer;
   @Inject AdcreativeTemplateDetailApiContainer adcreativeTemplateDetailApiContainer;
   @Inject AdcreativeTemplatePreviewApiContainer adcreativeTemplatePreviewApiContainer;
   @Inject AdcreativeTemplatePreviewsApiContainer adcreativeTemplatePreviewsApiContainer;
@@ -173,6 +174,10 @@ public class App {
 
   public AdcreativePreviewsApiContainer adcreativePreviews() {
     return adcreativePreviewsApiContainer;
+  }
+
+  public AdcreativePreviewsQrcodeApiContainer adcreativePreviewsQrcode() {
+    return adcreativePreviewsQrcodeApiContainer;
   }
 
   public AdcreativeTemplateDetailApiContainer adcreativeTemplateDetail() {
