@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.tencent.ads.api.OuterCluesApiTest" tests="2" skipped="2" failures="0" errors="0" timestamp="2021-08-23T03:03:57" hostname="VM_147_58_centos" time="0.0">
+<testsuite name="com.tencent.ads.api.OuterCluesApiTest" tests="2" skipped="2" failures="0" errors="0" timestamp="2021-08-23T08:34:28" hostname="VM_147_58_centos" time="0.0">
   <properties/>
   <testcase name="outerCluesAddTest" classname="com.tencent.ads.api.OuterCluesApiTest" time="0.0">
     <skipped/>
