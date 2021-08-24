@@ -222,6 +222,9 @@ public class TargetingTagReportsGetListStruct {
   @SerializedName("retention_rate")
   private Double retentionRate = null;
 
+  @SerializedName("app_key_page_retention_rate")
+  private Double appKeyPageRetentionRate = null;
+
   @SerializedName("retention_cost")
   private Long retentionCost = null;
 
@@ -2504,6 +2507,25 @@ public class TargetingTagReportsGetListStruct {
 
   public void setRetentionRate(Double retentionRate) {
     this.retentionRate = retentionRate;
+  }
+
+  public TargetingTagReportsGetListStruct appKeyPageRetentionRate(Double appKeyPageRetentionRate) {
+    this.appKeyPageRetentionRate = appKeyPageRetentionRate;
+    return this;
+  }
+
+  /**
+   * Get appKeyPageRetentionRate
+   *
+   * @return appKeyPageRetentionRate
+   */
+  @ApiModelProperty(value = "")
+  public Double getAppKeyPageRetentionRate() {
+    return appKeyPageRetentionRate;
+  }
+
+  public void setAppKeyPageRetentionRate(Double appKeyPageRetentionRate) {
+    this.appKeyPageRetentionRate = appKeyPageRetentionRate;
   }
 
   public TargetingTagReportsGetListStruct retentionCost(Long retentionCost) {
@@ -9036,6 +9058,8 @@ public class TargetingTagReportsGetListStruct {
         && Objects.equals(this.activatedCost, targetingTagReportsGetListStruct.activatedCost)
         && Objects.equals(this.retentionCount, targetingTagReportsGetListStruct.retentionCount)
         && Objects.equals(this.retentionRate, targetingTagReportsGetListStruct.retentionRate)
+        && Objects.equals(
+            this.appKeyPageRetentionRate, targetingTagReportsGetListStruct.appKeyPageRetentionRate)
         && Objects.equals(this.retentionCost, targetingTagReportsGetListStruct.retentionCost)
         && Objects.equals(this.keyPageViewCount, targetingTagReportsGetListStruct.keyPageViewCount)
         && Objects.equals(
@@ -9671,6 +9695,7 @@ public class TargetingTagReportsGetListStruct {
         activatedCost,
         retentionCount,
         retentionRate,
+        appKeyPageRetentionRate,
         retentionCost,
         keyPageViewCount,
         appCommodityPageViewCount,

@@ -216,6 +216,9 @@ public class HourlyReportsGetListStruct {
   @SerializedName("retention_rate")
   private Double retentionRate = null;
 
+  @SerializedName("app_key_page_retention_rate")
+  private Double appKeyPageRetentionRate = null;
+
   @SerializedName("retention_cost")
   private Long retentionCost = null;
 
@@ -2596,6 +2599,25 @@ public class HourlyReportsGetListStruct {
 
   public void setRetentionRate(Double retentionRate) {
     this.retentionRate = retentionRate;
+  }
+
+  public HourlyReportsGetListStruct appKeyPageRetentionRate(Double appKeyPageRetentionRate) {
+    this.appKeyPageRetentionRate = appKeyPageRetentionRate;
+    return this;
+  }
+
+  /**
+   * Get appKeyPageRetentionRate
+   *
+   * @return appKeyPageRetentionRate
+   */
+  @ApiModelProperty(value = "")
+  public Double getAppKeyPageRetentionRate() {
+    return appKeyPageRetentionRate;
+  }
+
+  public void setAppKeyPageRetentionRate(Double appKeyPageRetentionRate) {
+    this.appKeyPageRetentionRate = appKeyPageRetentionRate;
   }
 
   public HourlyReportsGetListStruct retentionCost(Long retentionCost) {
@@ -9996,6 +10018,8 @@ public class HourlyReportsGetListStruct {
         && Objects.equals(this.activatedCost, hourlyReportsGetListStruct.activatedCost)
         && Objects.equals(this.retentionCount, hourlyReportsGetListStruct.retentionCount)
         && Objects.equals(this.retentionRate, hourlyReportsGetListStruct.retentionRate)
+        && Objects.equals(
+            this.appKeyPageRetentionRate, hourlyReportsGetListStruct.appKeyPageRetentionRate)
         && Objects.equals(this.retentionCost, hourlyReportsGetListStruct.retentionCost)
         && Objects.equals(this.keyPageViewCount, hourlyReportsGetListStruct.keyPageViewCount)
         && Objects.equals(
@@ -10652,6 +10676,7 @@ public class HourlyReportsGetListStruct {
         activatedCost,
         retentionCount,
         retentionRate,
+        appKeyPageRetentionRate,
         retentionCost,
         keyPageViewCount,
         appCommodityPageViewCount,
