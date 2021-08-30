@@ -17,7 +17,7 @@ public class AddDynamicAdImages {
   public Long productCatalogId = null;
   public DynamicAdImagesAddRequest data = new DynamicAdImagesAddRequest();
   public Long accountId = null;
-  public ProductMode productMode = ProductMode.SINGLE;
+  public AdNum productMode = AdNum.SINGLE;
   public String productSource = "YOUR PRODUCT ID";
   public DynamicAdTemplateSize dynamicAdTemplateSize = DynamicAdTemplateSize._1280_720;
   public Long dynamicAdTemplateId = null;

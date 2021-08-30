@@ -57,6 +57,9 @@ public class ElementButtonRead {
   @SerializedName("use_icon")
   private Long useIcon = null;
 
+  @SerializedName("tel_spec")
+  private TelSpec telSpec = null;
+
   public ElementButtonRead title(String title) {
     this.title = title;
     return this;
@@ -285,6 +288,25 @@ public class ElementButtonRead {
     this.useIcon = useIcon;
   }
 
+  public ElementButtonRead telSpec(TelSpec telSpec) {
+    this.telSpec = telSpec;
+    return this;
+  }
+
+  /**
+   * Get telSpec
+   *
+   * @return telSpec
+   */
+  @ApiModelProperty(value = "")
+  public TelSpec getTelSpec() {
+    return telSpec;
+  }
+
+  public void setTelSpec(TelSpec telSpec) {
+    this.telSpec = telSpec;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -305,7 +327,8 @@ public class ElementButtonRead {
         && Objects.equals(this.followSpec, elementButtonRead.followSpec)
         && Objects.equals(this.serviceSpec, elementButtonRead.serviceSpec)
         && Objects.equals(this.wecomSpec, elementButtonRead.wecomSpec)
-        && Objects.equals(this.useIcon, elementButtonRead.useIcon);
+        && Objects.equals(this.useIcon, elementButtonRead.useIcon)
+        && Objects.equals(this.telSpec, elementButtonRead.telSpec);
   }
 
   @Override
@@ -322,7 +345,8 @@ public class ElementButtonRead {
         followSpec,
         serviceSpec,
         wecomSpec,
-        useIcon);
+        useIcon,
+        telSpec);
   }
 
   @Override

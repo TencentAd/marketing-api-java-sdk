@@ -153,9 +153,6 @@ public class AdgroupsAddRequest {
   @SerializedName("custom_adgroup_tag")
   private List<String> customAdgroupTag = null;
 
-  @SerializedName("deep_optimization_type")
-  private DeepOptimizationType deepOptimizationType = null;
-
   @SerializedName("account_id")
   private Long accountId = null;
 
@@ -1054,25 +1051,6 @@ public class AdgroupsAddRequest {
     this.customAdgroupTag = customAdgroupTag;
   }
 
-  public AdgroupsAddRequest deepOptimizationType(DeepOptimizationType deepOptimizationType) {
-    this.deepOptimizationType = deepOptimizationType;
-    return this;
-  }
-
-  /**
-   * Get deepOptimizationType
-   *
-   * @return deepOptimizationType
-   */
-  @ApiModelProperty(value = "")
-  public DeepOptimizationType getDeepOptimizationType() {
-    return deepOptimizationType;
-  }
-
-  public void setDeepOptimizationType(DeepOptimizationType deepOptimizationType) {
-    this.deepOptimizationType = deepOptimizationType;
-  }
-
   public AdgroupsAddRequest accountId(Long accountId) {
     this.accountId = accountId;
     return this;
@@ -1150,7 +1128,6 @@ public class AdgroupsAddRequest {
         && Objects.equals(this.smartBidType, adgroupsAddRequest.smartBidType)
         && Objects.equals(this.marketingScene, adgroupsAddRequest.marketingScene)
         && Objects.equals(this.customAdgroupTag, adgroupsAddRequest.customAdgroupTag)
-        && Objects.equals(this.deepOptimizationType, adgroupsAddRequest.deepOptimizationType)
         && Objects.equals(this.accountId, adgroupsAddRequest.accountId);
   }
 
@@ -1201,7 +1178,6 @@ public class AdgroupsAddRequest {
         smartBidType,
         marketingScene,
         customAdgroupTag,
-        deepOptimizationType,
         accountId);
   }
 

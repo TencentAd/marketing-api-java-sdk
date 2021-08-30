@@ -123,9 +123,6 @@ public class AdgroupsUpdateRequest {
   @SerializedName("custom_adgroup_tag")
   private List<String> customAdgroupTag = null;
 
-  @SerializedName("deep_optimization_type")
-  private DeepOptimizationType deepOptimizationType = null;
-
   @SerializedName("account_id")
   private Long accountId = null;
 
@@ -825,25 +822,6 @@ public class AdgroupsUpdateRequest {
     this.customAdgroupTag = customAdgroupTag;
   }
 
-  public AdgroupsUpdateRequest deepOptimizationType(DeepOptimizationType deepOptimizationType) {
-    this.deepOptimizationType = deepOptimizationType;
-    return this;
-  }
-
-  /**
-   * Get deepOptimizationType
-   *
-   * @return deepOptimizationType
-   */
-  @ApiModelProperty(value = "")
-  public DeepOptimizationType getDeepOptimizationType() {
-    return deepOptimizationType;
-  }
-
-  public void setDeepOptimizationType(DeepOptimizationType deepOptimizationType) {
-    this.deepOptimizationType = deepOptimizationType;
-  }
-
   public AdgroupsUpdateRequest accountId(Long accountId) {
     this.accountId = accountId;
     return this;
@@ -911,7 +889,6 @@ public class AdgroupsUpdateRequest {
         && Objects.equals(this.userActionSets, adgroupsUpdateRequest.userActionSets)
         && Objects.equals(this.dynamicAdSpec, adgroupsUpdateRequest.dynamicAdSpec)
         && Objects.equals(this.customAdgroupTag, adgroupsUpdateRequest.customAdgroupTag)
-        && Objects.equals(this.deepOptimizationType, adgroupsUpdateRequest.deepOptimizationType)
         && Objects.equals(this.accountId, adgroupsUpdateRequest.accountId);
   }
 
@@ -952,7 +929,6 @@ public class AdgroupsUpdateRequest {
         userActionSets,
         dynamicAdSpec,
         customAdgroupTag,
-        deepOptimizationType,
         accountId);
   }
 

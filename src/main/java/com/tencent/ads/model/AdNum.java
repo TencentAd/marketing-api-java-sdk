@@ -20,15 +20,15 @@ import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
 /** 用于投放的的商品数量 */
-@JsonAdapter(ProductMode.Adapter.class)
-public enum ProductMode {
+@JsonAdapter(AdNum.Adapter.class)
+public enum AdNum {
   SINGLE("SINGLE"),
 
   MULTIPLE("MULTIPLE");
 
   private String value;
 
-  ProductMode(String value) {
+  AdNum(String value) {
     this.value = value;
   }
 
@@ -41,8 +41,8 @@ public enum ProductMode {
     return String.valueOf(value);
   }
 
-  public static ProductMode fromValue(String text) {
-    for (ProductMode b : ProductMode.values()) {
+  public static AdNum fromValue(String text) {
+    for (AdNum b : AdNum.values()) {
       if (String.valueOf(b.value).equals(text)) {
         return b;
       }
@@ -50,17 +50,16 @@ public enum ProductMode {
     return null;
   }
 
-  public static class Adapter extends TypeAdapter<ProductMode> {
+  public static class Adapter extends TypeAdapter<AdNum> {
     @Override
-    public void write(final JsonWriter jsonWriter, final ProductMode enumeration)
-        throws IOException {
+    public void write(final JsonWriter jsonWriter, final AdNum enumeration) throws IOException {
       jsonWriter.value(enumeration.getValue());
     }
 
     @Override
-    public ProductMode read(final JsonReader jsonReader) throws IOException {
+    public AdNum read(final JsonReader jsonReader) throws IOException {
       String value = jsonReader.nextString();
-      return ProductMode.fromValue(String.valueOf(value));
+      return AdNum.fromValue(String.valueOf(value));
     }
   }
 }

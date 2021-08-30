@@ -69,6 +69,12 @@ public class ConversionsGetListStruct {
   @SerializedName("app_android_channel_package_id")
   private String appAndroidChannelPackageId = null;
 
+  @SerializedName("promoted_object_id")
+  private String promotedObjectId = null;
+
+  @SerializedName("conversion_scene")
+  private ConversionScene conversionScene = null;
+
   public ConversionsGetListStruct conversionId(Long conversionId) {
     this.conversionId = conversionId;
     return this;
@@ -375,6 +381,44 @@ public class ConversionsGetListStruct {
     this.appAndroidChannelPackageId = appAndroidChannelPackageId;
   }
 
+  public ConversionsGetListStruct promotedObjectId(String promotedObjectId) {
+    this.promotedObjectId = promotedObjectId;
+    return this;
+  }
+
+  /**
+   * Get promotedObjectId
+   *
+   * @return promotedObjectId
+   */
+  @ApiModelProperty(value = "")
+  public String getPromotedObjectId() {
+    return promotedObjectId;
+  }
+
+  public void setPromotedObjectId(String promotedObjectId) {
+    this.promotedObjectId = promotedObjectId;
+  }
+
+  public ConversionsGetListStruct conversionScene(ConversionScene conversionScene) {
+    this.conversionScene = conversionScene;
+    return this;
+  }
+
+  /**
+   * Get conversionScene
+   *
+   * @return conversionScene
+   */
+  @ApiModelProperty(value = "")
+  public ConversionScene getConversionScene() {
+    return conversionScene;
+  }
+
+  public void setConversionScene(ConversionScene conversionScene) {
+    this.conversionScene = conversionScene;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -403,7 +447,9 @@ public class ConversionsGetListStruct {
         && Objects.equals(this.accessStatus, conversionsGetListStruct.accessStatus)
         && Objects.equals(this.createSourceType, conversionsGetListStruct.createSourceType)
         && Objects.equals(
-            this.appAndroidChannelPackageId, conversionsGetListStruct.appAndroidChannelPackageId);
+            this.appAndroidChannelPackageId, conversionsGetListStruct.appAndroidChannelPackageId)
+        && Objects.equals(this.promotedObjectId, conversionsGetListStruct.promotedObjectId)
+        && Objects.equals(this.conversionScene, conversionsGetListStruct.conversionScene);
   }
 
   @Override
@@ -424,7 +470,9 @@ public class ConversionsGetListStruct {
         isDeleted,
         accessStatus,
         createSourceType,
-        appAndroidChannelPackageId);
+        appAndroidChannelPackageId,
+        promotedObjectId,
+        conversionScene);
   }
 
   @Override

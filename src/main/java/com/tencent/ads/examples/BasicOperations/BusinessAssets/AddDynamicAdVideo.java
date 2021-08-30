@@ -18,7 +18,7 @@ public class AddDynamicAdVideo {
   public DynamicAdVideoAddRequest data = new DynamicAdVideoAddRequest();
   public Long videoMaxDuration = 240L;
   public Long accountId = null;
-  public ProductMode productMode = ProductMode.SINGLE;
+  public AdNum productMode = AdNum.SINGLE;
   public String productSource = "YOUR PRODUCT ID";
   public Long dynamicAdTemplateId = null;
 

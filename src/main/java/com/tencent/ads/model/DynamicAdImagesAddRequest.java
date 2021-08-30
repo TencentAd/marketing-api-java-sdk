@@ -26,7 +26,7 @@ public class DynamicAdImagesAddRequest {
   private Long productCatalogId = null;
 
   @SerializedName("product_mode")
-  private ProductMode productMode = null;
+  private AdNum productMode = null;
 
   @SerializedName("product_source")
   private String productSource = null;
@@ -78,7 +78,7 @@ public class DynamicAdImagesAddRequest {
     this.productCatalogId = productCatalogId;
   }
 
-  public DynamicAdImagesAddRequest productMode(ProductMode productMode) {
+  public DynamicAdImagesAddRequest productMode(AdNum productMode) {
     this.productMode = productMode;
     return this;
   }
@@ -89,11 +89,11 @@ public class DynamicAdImagesAddRequest {
    * @return productMode
    */
   @ApiModelProperty(value = "")
-  public ProductMode getProductMode() {
+  public AdNum getProductMode() {
     return productMode;
   }
 
-  public void setProductMode(ProductMode productMode) {
+  public void setProductMode(AdNum productMode) {
     this.productMode = productMode;
   }
 

@@ -114,6 +114,8 @@ public class App {
   @Inject ProductsSystemStatusApiContainer productsSystemStatusApiContainer;
   @Inject ProfilesApiContainer profilesApiContainer;
   @Inject PromotedObjectsApiContainer promotedObjectsApiContainer;
+  @Inject PropertySetSchemasApiContainer propertySetSchemasApiContainer;
+  @Inject PropertySetsApiContainer propertySetsApiContainer;
   @Inject QualificationsApiContainer qualificationsApiContainer;
   @Inject RealtimeCostApiContainer realtimeCostApiContainer;
   @Inject ReportApiContainer reportApiContainer;
@@ -542,6 +544,14 @@ public class App {
 
   public PromotedObjectsApiContainer promotedObjects() {
     return promotedObjectsApiContainer;
+  }
+
+  public PropertySetSchemasApiContainer propertySetSchemas() {
+    return propertySetSchemasApiContainer;
+  }
+
+  public PropertySetsApiContainer propertySets() {
+    return propertySetsApiContainer;
   }
 
   public QualificationsApiContainer qualifications() {

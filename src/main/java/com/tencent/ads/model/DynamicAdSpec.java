@@ -27,7 +27,7 @@ public class DynamicAdSpec {
   private Long productCatalogId = null;
 
   @SerializedName("product_mode")
-  private ProductMode productMode = null;
+  private AdNum productMode = null;
 
   @SerializedName("product_source")
   private String productSource = null;
@@ -54,7 +54,7 @@ public class DynamicAdSpec {
     this.productCatalogId = productCatalogId;
   }
 
-  public DynamicAdSpec productMode(ProductMode productMode) {
+  public DynamicAdSpec productMode(AdNum productMode) {
     this.productMode = productMode;
     return this;
   }
@@ -65,11 +65,11 @@ public class DynamicAdSpec {
    * @return productMode
    */
   @ApiModelProperty(value = "")
-  public ProductMode getProductMode() {
+  public AdNum getProductMode() {
     return productMode;
   }
 
-  public void setProductMode(ProductMode productMode) {
+  public void setProductMode(AdNum productMode) {
     this.productMode = productMode;
   }
 
