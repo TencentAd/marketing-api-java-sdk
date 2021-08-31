@@ -23,12 +23,6 @@ import java.util.Objects;
 /** 场景定向 */
 @ApiModel(description = "场景定向")
 public class SceneTargetingForWrite {
-  @SerializedName("mobile_union")
-  private List<String> mobileUnion = null;
-
-  @SerializedName("exclude_mobile_union")
-  private List<String> excludeMobileUnion = null;
-
   @SerializedName("mobile_union_industry")
   private List<String> mobileUnionIndustry = null;
 
@@ -38,74 +32,20 @@ public class SceneTargetingForWrite {
   @SerializedName("exclude_union_position_package")
   private List<Long> excludeUnionPositionPackage = null;
 
-  @SerializedName("tencent_news")
-  private List<String> tencentNews = null;
-
   @SerializedName("display_scene")
   private List<String> displayScene = null;
 
   @SerializedName("mobile_union_category")
   private List<Long> mobileUnionCategory = null;
 
+  @SerializedName("tencent_news")
+  private List<String> tencentNews = null;
+
   @SerializedName("wechat_scene")
   private WechatScene wechatScene = null;
 
   @SerializedName("wechat_position")
   private List<Long> wechatPosition = null;
-
-  public SceneTargetingForWrite mobileUnion(List<String> mobileUnion) {
-    this.mobileUnion = mobileUnion;
-    return this;
-  }
-
-  public SceneTargetingForWrite addMobileUnionItem(String mobileUnionItem) {
-    if (this.mobileUnion == null) {
-      this.mobileUnion = new ArrayList<String>();
-    }
-    this.mobileUnion.add(mobileUnionItem);
-    return this;
-  }
-
-  /**
-   * Get mobileUnion
-   *
-   * @return mobileUnion
-   */
-  @ApiModelProperty(value = "")
-  public List<String> getMobileUnion() {
-    return mobileUnion;
-  }
-
-  public void setMobileUnion(List<String> mobileUnion) {
-    this.mobileUnion = mobileUnion;
-  }
-
-  public SceneTargetingForWrite excludeMobileUnion(List<String> excludeMobileUnion) {
-    this.excludeMobileUnion = excludeMobileUnion;
-    return this;
-  }
-
-  public SceneTargetingForWrite addExcludeMobileUnionItem(String excludeMobileUnionItem) {
-    if (this.excludeMobileUnion == null) {
-      this.excludeMobileUnion = new ArrayList<String>();
-    }
-    this.excludeMobileUnion.add(excludeMobileUnionItem);
-    return this;
-  }
-
-  /**
-   * Get excludeMobileUnion
-   *
-   * @return excludeMobileUnion
-   */
-  @ApiModelProperty(value = "")
-  public List<String> getExcludeMobileUnion() {
-    return excludeMobileUnion;
-  }
-
-  public void setExcludeMobileUnion(List<String> excludeMobileUnion) {
-    this.excludeMobileUnion = excludeMobileUnion;
-  }
 
   public SceneTargetingForWrite mobileUnionIndustry(List<String> mobileUnionIndustry) {
     this.mobileUnionIndustry = mobileUnionIndustry;
@@ -190,33 +130,6 @@ public class SceneTargetingForWrite {
     this.excludeUnionPositionPackage = excludeUnionPositionPackage;
   }
 
-  public SceneTargetingForWrite tencentNews(List<String> tencentNews) {
-    this.tencentNews = tencentNews;
-    return this;
-  }
-
-  public SceneTargetingForWrite addTencentNewsItem(String tencentNewsItem) {
-    if (this.tencentNews == null) {
-      this.tencentNews = new ArrayList<String>();
-    }
-    this.tencentNews.add(tencentNewsItem);
-    return this;
-  }
-
-  /**
-   * Get tencentNews
-   *
-   * @return tencentNews
-   */
-  @ApiModelProperty(value = "")
-  public List<String> getTencentNews() {
-    return tencentNews;
-  }
-
-  public void setTencentNews(List<String> tencentNews) {
-    this.tencentNews = tencentNews;
-  }
-
   public SceneTargetingForWrite displayScene(List<String> displayScene) {
     this.displayScene = displayScene;
     return this;
@@ -269,6 +182,33 @@ public class SceneTargetingForWrite {
 
   public void setMobileUnionCategory(List<Long> mobileUnionCategory) {
     this.mobileUnionCategory = mobileUnionCategory;
+  }
+
+  public SceneTargetingForWrite tencentNews(List<String> tencentNews) {
+    this.tencentNews = tencentNews;
+    return this;
+  }
+
+  public SceneTargetingForWrite addTencentNewsItem(String tencentNewsItem) {
+    if (this.tencentNews == null) {
+      this.tencentNews = new ArrayList<String>();
+    }
+    this.tencentNews.add(tencentNewsItem);
+    return this;
+  }
+
+  /**
+   * Get tencentNews
+   *
+   * @return tencentNews
+   */
+  @ApiModelProperty(value = "")
+  public List<String> getTencentNews() {
+    return tencentNews;
+  }
+
+  public void setTencentNews(List<String> tencentNews) {
+    this.tencentNews = tencentNews;
   }
 
   public SceneTargetingForWrite wechatScene(WechatScene wechatScene) {
@@ -326,15 +266,13 @@ public class SceneTargetingForWrite {
       return false;
     }
     SceneTargetingForWrite sceneTargetingForWrite = (SceneTargetingForWrite) o;
-    return Objects.equals(this.mobileUnion, sceneTargetingForWrite.mobileUnion)
-        && Objects.equals(this.excludeMobileUnion, sceneTargetingForWrite.excludeMobileUnion)
-        && Objects.equals(this.mobileUnionIndustry, sceneTargetingForWrite.mobileUnionIndustry)
+    return Objects.equals(this.mobileUnionIndustry, sceneTargetingForWrite.mobileUnionIndustry)
         && Objects.equals(this.unionPositionPackage, sceneTargetingForWrite.unionPositionPackage)
         && Objects.equals(
             this.excludeUnionPositionPackage, sceneTargetingForWrite.excludeUnionPositionPackage)
-        && Objects.equals(this.tencentNews, sceneTargetingForWrite.tencentNews)
         && Objects.equals(this.displayScene, sceneTargetingForWrite.displayScene)
         && Objects.equals(this.mobileUnionCategory, sceneTargetingForWrite.mobileUnionCategory)
+        && Objects.equals(this.tencentNews, sceneTargetingForWrite.tencentNews)
         && Objects.equals(this.wechatScene, sceneTargetingForWrite.wechatScene)
         && Objects.equals(this.wechatPosition, sceneTargetingForWrite.wechatPosition);
   }
@@ -342,14 +280,12 @@ public class SceneTargetingForWrite {
   @Override
   public int hashCode() {
     return Objects.hash(
-        mobileUnion,
-        excludeMobileUnion,
         mobileUnionIndustry,
         unionPositionPackage,
         excludeUnionPositionPackage,
-        tencentNews,
         displayScene,
         mobileUnionCategory,
+        tencentNews,
         wechatScene,
         wechatPosition);
   }

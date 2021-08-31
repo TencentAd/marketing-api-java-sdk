@@ -38,14 +38,14 @@ public class SceneTargeting {
   @SerializedName("exclude_union_position_package")
   private List<Long> excludeUnionPositionPackage = null;
 
-  @SerializedName("tencent_news")
-  private List<String> tencentNews = null;
-
   @SerializedName("display_scene")
   private List<String> displayScene = null;
 
   @SerializedName("mobile_union_category")
   private List<Long> mobileUnionCategory = null;
+
+  @SerializedName("tencent_news")
+  private List<String> tencentNews = null;
 
   @SerializedName("wechat_scene")
   private WechatScene wechatScene = null;
@@ -188,33 +188,6 @@ public class SceneTargeting {
     this.excludeUnionPositionPackage = excludeUnionPositionPackage;
   }
 
-  public SceneTargeting tencentNews(List<String> tencentNews) {
-    this.tencentNews = tencentNews;
-    return this;
-  }
-
-  public SceneTargeting addTencentNewsItem(String tencentNewsItem) {
-    if (this.tencentNews == null) {
-      this.tencentNews = new ArrayList<String>();
-    }
-    this.tencentNews.add(tencentNewsItem);
-    return this;
-  }
-
-  /**
-   * Get tencentNews
-   *
-   * @return tencentNews
-   */
-  @ApiModelProperty(value = "")
-  public List<String> getTencentNews() {
-    return tencentNews;
-  }
-
-  public void setTencentNews(List<String> tencentNews) {
-    this.tencentNews = tencentNews;
-  }
-
   public SceneTargeting displayScene(List<String> displayScene) {
     this.displayScene = displayScene;
     return this;
@@ -267,6 +240,33 @@ public class SceneTargeting {
 
   public void setMobileUnionCategory(List<Long> mobileUnionCategory) {
     this.mobileUnionCategory = mobileUnionCategory;
+  }
+
+  public SceneTargeting tencentNews(List<String> tencentNews) {
+    this.tencentNews = tencentNews;
+    return this;
+  }
+
+  public SceneTargeting addTencentNewsItem(String tencentNewsItem) {
+    if (this.tencentNews == null) {
+      this.tencentNews = new ArrayList<String>();
+    }
+    this.tencentNews.add(tencentNewsItem);
+    return this;
+  }
+
+  /**
+   * Get tencentNews
+   *
+   * @return tencentNews
+   */
+  @ApiModelProperty(value = "")
+  public List<String> getTencentNews() {
+    return tencentNews;
+  }
+
+  public void setTencentNews(List<String> tencentNews) {
+    this.tencentNews = tencentNews;
   }
 
   public SceneTargeting wechatScene(WechatScene wechatScene) {
@@ -330,9 +330,9 @@ public class SceneTargeting {
         && Objects.equals(this.unionPositionPackage, sceneTargeting.unionPositionPackage)
         && Objects.equals(
             this.excludeUnionPositionPackage, sceneTargeting.excludeUnionPositionPackage)
-        && Objects.equals(this.tencentNews, sceneTargeting.tencentNews)
         && Objects.equals(this.displayScene, sceneTargeting.displayScene)
         && Objects.equals(this.mobileUnionCategory, sceneTargeting.mobileUnionCategory)
+        && Objects.equals(this.tencentNews, sceneTargeting.tencentNews)
         && Objects.equals(this.wechatScene, sceneTargeting.wechatScene)
         && Objects.equals(this.wechatPosition, sceneTargeting.wechatPosition);
   }
@@ -345,9 +345,9 @@ public class SceneTargeting {
         mobileUnionIndustry,
         unionPositionPackage,
         excludeUnionPositionPackage,
-        tencentNews,
         displayScene,
         mobileUnionCategory,
+        tencentNews,
         wechatScene,
         wechatPosition);
   }

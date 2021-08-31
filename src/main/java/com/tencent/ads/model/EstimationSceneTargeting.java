@@ -29,12 +29,6 @@ public class EstimationSceneTargeting {
   @SerializedName("mobile_union_category")
   private List<Long> mobileUnionCategory = null;
 
-  @SerializedName("mobile_union")
-  private List<String> mobileUnion = null;
-
-  @SerializedName("exclude_mobile_union")
-  private List<String> excludeMobileUnion = null;
-
   @SerializedName("mobile_union_industry")
   private List<String> mobileUnionIndustry = null;
 
@@ -92,60 +86,6 @@ public class EstimationSceneTargeting {
     this.mobileUnionCategory = mobileUnionCategory;
   }
 
-  public EstimationSceneTargeting mobileUnion(List<String> mobileUnion) {
-    this.mobileUnion = mobileUnion;
-    return this;
-  }
-
-  public EstimationSceneTargeting addMobileUnionItem(String mobileUnionItem) {
-    if (this.mobileUnion == null) {
-      this.mobileUnion = new ArrayList<String>();
-    }
-    this.mobileUnion.add(mobileUnionItem);
-    return this;
-  }
-
-  /**
-   * Get mobileUnion
-   *
-   * @return mobileUnion
-   */
-  @ApiModelProperty(value = "")
-  public List<String> getMobileUnion() {
-    return mobileUnion;
-  }
-
-  public void setMobileUnion(List<String> mobileUnion) {
-    this.mobileUnion = mobileUnion;
-  }
-
-  public EstimationSceneTargeting excludeMobileUnion(List<String> excludeMobileUnion) {
-    this.excludeMobileUnion = excludeMobileUnion;
-    return this;
-  }
-
-  public EstimationSceneTargeting addExcludeMobileUnionItem(String excludeMobileUnionItem) {
-    if (this.excludeMobileUnion == null) {
-      this.excludeMobileUnion = new ArrayList<String>();
-    }
-    this.excludeMobileUnion.add(excludeMobileUnionItem);
-    return this;
-  }
-
-  /**
-   * Get excludeMobileUnion
-   *
-   * @return excludeMobileUnion
-   */
-  @ApiModelProperty(value = "")
-  public List<String> getExcludeMobileUnion() {
-    return excludeMobileUnion;
-  }
-
-  public void setExcludeMobileUnion(List<String> excludeMobileUnion) {
-    this.excludeMobileUnion = excludeMobileUnion;
-  }
-
   public EstimationSceneTargeting mobileUnionIndustry(List<String> mobileUnionIndustry) {
     this.mobileUnionIndustry = mobileUnionIndustry;
     return this;
@@ -184,15 +124,12 @@ public class EstimationSceneTargeting {
     EstimationSceneTargeting estimationSceneTargeting = (EstimationSceneTargeting) o;
     return Objects.equals(this.displayScene, estimationSceneTargeting.displayScene)
         && Objects.equals(this.mobileUnionCategory, estimationSceneTargeting.mobileUnionCategory)
-        && Objects.equals(this.mobileUnion, estimationSceneTargeting.mobileUnion)
-        && Objects.equals(this.excludeMobileUnion, estimationSceneTargeting.excludeMobileUnion)
         && Objects.equals(this.mobileUnionIndustry, estimationSceneTargeting.mobileUnionIndustry);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(
-        displayScene, mobileUnionCategory, mobileUnion, excludeMobileUnion, mobileUnionIndustry);
+    return Objects.hash(displayScene, mobileUnionCategory, mobileUnionIndustry);
   }
 
   @Override

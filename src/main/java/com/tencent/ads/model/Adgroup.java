@@ -28,7 +28,7 @@ public class Adgroup {
   private BillingEvent billingEvent = null;
 
   @SerializedName("scene_spec")
-  private SceneTargeting sceneSpec = null;
+  private SceneTargetingForWrite sceneSpec = null;
 
   @SerializedName("promoted_object_type")
   private PromotedObjectType promotedObjectType = null;
@@ -74,7 +74,7 @@ public class Adgroup {
     this.billingEvent = billingEvent;
   }
 
-  public Adgroup sceneSpec(SceneTargeting sceneSpec) {
+  public Adgroup sceneSpec(SceneTargetingForWrite sceneSpec) {
     this.sceneSpec = sceneSpec;
     return this;
   }
@@ -85,11 +85,11 @@ public class Adgroup {
    * @return sceneSpec
    */
   @ApiModelProperty(value = "")
-  public SceneTargeting getSceneSpec() {
+  public SceneTargetingForWrite getSceneSpec() {
     return sceneSpec;
   }
 
-  public void setSceneSpec(SceneTargeting sceneSpec) {
+  public void setSceneSpec(SceneTargetingForWrite sceneSpec) {
     this.sceneSpec = sceneSpec;
   }
 
