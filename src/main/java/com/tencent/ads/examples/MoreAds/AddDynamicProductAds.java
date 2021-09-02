@@ -6,6 +6,7 @@ import com.tencent.ads.TencentAds;
 import com.tencent.ads.exception.TencentAdsResponseException;
 import com.tencent.ads.exception.TencentAdsSDKException;
 import com.tencent.ads.model.AdCreativeBrand;
+import com.tencent.ads.model.AdNum;
 import com.tencent.ads.model.AdcreativeCreativeElementsMp;
 import com.tencent.ads.model.AdcreativeElementStoryArrayItem;
 import com.tencent.ads.model.AdcreativesAddRequest;
@@ -28,7 +29,6 @@ import com.tencent.ads.model.ImagesAddResponseData;
 import com.tencent.ads.model.LinkNameType;
 import com.tencent.ads.model.OptimizationGoal;
 import com.tencent.ads.model.PageSpec;
-import com.tencent.ads.model.ProductMode;
 import com.tencent.ads.model.PromotedObjectType;
 import com.tencent.ads.model.PromotedObjectsAddRequest;
 import com.tencent.ads.model.PromotedObjectsGetResponseData;
@@ -227,7 +227,7 @@ public class AddDynamicProductAds {
                     .dynamicAdSpec(
                         new DynamicAdSpec()
                             .productCatalogId(PRODUCT_CATALOG_ID)
-                            .productMode(ProductMode.SINGLE)));
+                            .productMode(AdNum.SINGLE)));
 
     return responseData.getAdgroupId();
   }
@@ -292,7 +292,7 @@ public class AddDynamicProductAds {
                     .dynamicAdcreativeSpec(
                         new DynamicAdcreativeSpec()
                             .productCatalogId(PRODUCT_CATALOG_ID)
-                            .productMode(ProductMode.SINGLE)
+                            .productMode(AdNum.SINGLE)
                             .productSource(PRODUCT_SOURCE))
                     .promotedObjectId(promotedObjectId));
 

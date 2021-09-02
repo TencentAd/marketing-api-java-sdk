@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.tencent.ads.api.CampaignsApiTest" tests="6" skipped="6" failures="0" errors="0" timestamp="2021-09-02T06:40:11" hostname="VM_147_58_centos" time="0.0">
+  <properties/>
+  <testcase name="campaignsAddTest" classname="com.tencent.ads.api.CampaignsApiTest" time="0.0">
+    <skipped/>
+  </testcase>
+  <testcase name="campaignsDeleteTest" classname="com.tencent.ads.api.CampaignsApiTest" time="0.0">
+    <skipped/>
+  </testcase>
+  <testcase name="campaignsGetTest" classname="com.tencent.ads.api.CampaignsApiTest" time="0.0">
+    <skipped/>
+  </testcase>
+  <testcase name="campaignsUpdateDailyBudgetTest" classname="com.tencent.ads.api.CampaignsApiTest" time="0.0">
+    <skipped/>
+  </testcase>
+  <testcase name="campaignsUpdateTest" classname="com.tencent.ads.api.CampaignsApiTest" time="0.0">
+    <skipped/>
+  </testcase>
+  <testcase name="campaignsUpdateConfiguredStatusTest" classname="com.tencent.ads.api.CampaignsApiTest" time="0.0">
+    <skipped/>
+  </testcase>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
