@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.tencent.ads.api.AdgroupsApiTest" tests="8" skipped="8" failures="0" errors="0" timestamp="2021-09-16T10:54:11" hostname="VM_147_58_centos" time="0.001">
+<testsuite name="com.tencent.ads.api.AdgroupsApiTest" tests="8" skipped="8" failures="0" errors="0" timestamp="2021-09-16T11:05:46" hostname="VM_147_58_centos" time="0.001">
   <properties/>
   <testcase name="adgroupsAddTest" classname="com.tencent.ads.api.AdgroupsApiTest" time="0.0">
     <skipped/>
@@ -7,7 +7,7 @@
   <testcase name="adgroupsGetTest" classname="com.tencent.ads.api.AdgroupsApiTest" time="0.0">
     <skipped/>
   </testcase>
-  <testcase name="adgroupsDeleteTest" classname="com.tencent.ads.api.AdgroupsApiTest" time="0.001">
+  <testcase name="adgroupsDeleteTest" classname="com.tencent.ads.api.AdgroupsApiTest" time="0.0">
     <skipped/>
   </testcase>
   <testcase name="adgroupsUpdateConfiguredStatusTest" classname="com.tencent.ads.api.AdgroupsApiTest" time="0.0">
