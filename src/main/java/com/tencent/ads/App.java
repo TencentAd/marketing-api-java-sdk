@@ -122,6 +122,7 @@ public class App {
   @Inject SceneSpecTagsApiContainer sceneSpecTagsApiContainer;
   @Inject ShopApiContainer shopApiContainer;
   @Inject SplitTestsApiContainer splitTestsApiContainer;
+  @Inject SubcustomerTransferApiContainer subcustomerTransferApiContainer;
   @Inject SystemStatusApiContainer systemStatusApiContainer;
   @Inject TargetingTagReportsApiContainer targetingTagReportsApiContainer;
   @Inject TargetingTagsApiContainer targetingTagsApiContainer;
@@ -576,6 +577,10 @@ public class App {
 
   public SplitTestsApiContainer splitTests() {
     return splitTestsApiContainer;
+  }
+
+  public SubcustomerTransferApiContainer subcustomerTransfer() {
+    return subcustomerTransferApiContainer;
   }
 
   public SystemStatusApiContainer systemStatus() {
