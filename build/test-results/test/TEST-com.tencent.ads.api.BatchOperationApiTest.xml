@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.tencent.ads.api.BatchOperationApiTest" tests="1" skipped="1" failures="0" errors="0" timestamp="2021-09-18T10:06:04" hostname="VM_147_58_centos" time="0.0">
+<testsuite name="com.tencent.ads.api.BatchOperationApiTest" tests="1" skipped="1" failures="0" errors="0" timestamp="2021-09-23T02:14:41" hostname="VM_147_58_centos" time="0.0">
   <properties/>
   <testcase name="batchOperationAddTest" classname="com.tencent.ads.api.BatchOperationApiTest" time="0.0">
     <skipped/>

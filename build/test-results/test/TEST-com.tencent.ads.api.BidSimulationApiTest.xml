@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.tencent.ads.api.BidSimulationApiTest" tests="1" skipped="1" failures="0" errors="0" timestamp="2021-09-18T10:06:04" hostname="VM_147_58_centos" time="0.0">
+<testsuite name="com.tencent.ads.api.BidSimulationApiTest" tests="1" skipped="1" failures="0" errors="0" timestamp="2021-09-23T02:14:40" hostname="VM_147_58_centos" time="0.001">
   <properties/>
-  <testcase name="bidSimulationGetTest" classname="com.tencent.ads.api.BidSimulationApiTest" time="0.0">
+  <testcase name="bidSimulationGetTest" classname="com.tencent.ads.api.BidSimulationApiTest" time="0.001">
     <skipped/>
   </testcase>
   <system-out><![CDATA[]]></system-out>
