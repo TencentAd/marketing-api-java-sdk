@@ -75,6 +75,9 @@ public class AdgroupsAddRequest {
   @SerializedName("scene_spec")
   private SceneTargetingForWrite sceneSpec = null;
 
+  @SerializedName("flow_optimization_enabled")
+  private Boolean flowOptimizationEnabled = null;
+
   @SerializedName("configured_status")
   private AdStatus configuredStatus = null;
 
@@ -504,6 +507,25 @@ public class AdgroupsAddRequest {
 
   public void setSceneSpec(SceneTargetingForWrite sceneSpec) {
     this.sceneSpec = sceneSpec;
+  }
+
+  public AdgroupsAddRequest flowOptimizationEnabled(Boolean flowOptimizationEnabled) {
+    this.flowOptimizationEnabled = flowOptimizationEnabled;
+    return this;
+  }
+
+  /**
+   * Get flowOptimizationEnabled
+   *
+   * @return flowOptimizationEnabled
+   */
+  @ApiModelProperty(value = "")
+  public Boolean isFlowOptimizationEnabled() {
+    return flowOptimizationEnabled;
+  }
+
+  public void setFlowOptimizationEnabled(Boolean flowOptimizationEnabled) {
+    this.flowOptimizationEnabled = flowOptimizationEnabled;
   }
 
   public AdgroupsAddRequest configuredStatus(AdStatus configuredStatus) {
@@ -1098,6 +1120,7 @@ public class AdgroupsAddRequest {
         && Objects.equals(this.targetingId, adgroupsAddRequest.targetingId)
         && Objects.equals(this.targeting, adgroupsAddRequest.targeting)
         && Objects.equals(this.sceneSpec, adgroupsAddRequest.sceneSpec)
+        && Objects.equals(this.flowOptimizationEnabled, adgroupsAddRequest.flowOptimizationEnabled)
         && Objects.equals(this.configuredStatus, adgroupsAddRequest.configuredStatus)
         && Objects.equals(this.customizedCategory, adgroupsAddRequest.customizedCategory)
         && Objects.equals(this.dynamicAdSpec, adgroupsAddRequest.dynamicAdSpec)
@@ -1152,6 +1175,7 @@ public class AdgroupsAddRequest {
         targetingId,
         targeting,
         sceneSpec,
+        flowOptimizationEnabled,
         configuredStatus,
         customizedCategory,
         dynamicAdSpec,

@@ -77,6 +77,9 @@ public class AdgroupsGetListStruct {
   @SerializedName("scene_spec")
   private SceneTargeting sceneSpec = null;
 
+  @SerializedName("flow_optimization_enabled")
+  private Boolean flowOptimizationEnabled = null;
+
   @SerializedName("begin_date")
   private String beginDate = null;
 
@@ -549,6 +552,25 @@ public class AdgroupsGetListStruct {
 
   public void setSceneSpec(SceneTargeting sceneSpec) {
     this.sceneSpec = sceneSpec;
+  }
+
+  public AdgroupsGetListStruct flowOptimizationEnabled(Boolean flowOptimizationEnabled) {
+    this.flowOptimizationEnabled = flowOptimizationEnabled;
+    return this;
+  }
+
+  /**
+   * Get flowOptimizationEnabled
+   *
+   * @return flowOptimizationEnabled
+   */
+  @ApiModelProperty(value = "")
+  public Boolean isFlowOptimizationEnabled() {
+    return flowOptimizationEnabled;
+  }
+
+  public void setFlowOptimizationEnabled(Boolean flowOptimizationEnabled) {
+    this.flowOptimizationEnabled = flowOptimizationEnabled;
   }
 
   public AdgroupsGetListStruct beginDate(String beginDate) {
@@ -1411,6 +1433,8 @@ public class AdgroupsGetListStruct {
         && Objects.equals(
             this.isIncludeUnsupportedTargeting, adgroupsGetListStruct.isIncludeUnsupportedTargeting)
         && Objects.equals(this.sceneSpec, adgroupsGetListStruct.sceneSpec)
+        && Objects.equals(
+            this.flowOptimizationEnabled, adgroupsGetListStruct.flowOptimizationEnabled)
         && Objects.equals(this.beginDate, adgroupsGetListStruct.beginDate)
         && Objects.equals(this.firstDayBeginTime, adgroupsGetListStruct.firstDayBeginTime)
         && Objects.equals(this.endDate, adgroupsGetListStruct.endDate)
@@ -1482,6 +1506,7 @@ public class AdgroupsGetListStruct {
         targetingTranslation,
         isIncludeUnsupportedTargeting,
         sceneSpec,
+        flowOptimizationEnabled,
         beginDate,
         firstDayBeginTime,
         endDate,
