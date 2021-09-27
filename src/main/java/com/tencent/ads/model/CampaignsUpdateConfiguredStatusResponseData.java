@@ -24,6 +24,9 @@ public class CampaignsUpdateConfiguredStatusResponseData {
   @SerializedName("list")
   private List<CampaignsUpdateConfiguredStatusListStruct> list = null;
 
+  @SerializedName("fail_id_list")
+  private List<Long> failIdList = null;
+
   public CampaignsUpdateConfiguredStatusResponseData list(
       List<CampaignsUpdateConfiguredStatusListStruct> list) {
     this.list = list;
@@ -53,6 +56,33 @@ public class CampaignsUpdateConfiguredStatusResponseData {
     this.list = list;
   }
 
+  public CampaignsUpdateConfiguredStatusResponseData failIdList(List<Long> failIdList) {
+    this.failIdList = failIdList;
+    return this;
+  }
+
+  public CampaignsUpdateConfiguredStatusResponseData addFailIdListItem(Long failIdListItem) {
+    if (this.failIdList == null) {
+      this.failIdList = new ArrayList<Long>();
+    }
+    this.failIdList.add(failIdListItem);
+    return this;
+  }
+
+  /**
+   * Get failIdList
+   *
+   * @return failIdList
+   */
+  @ApiModelProperty(value = "")
+  public List<Long> getFailIdList() {
+    return failIdList;
+  }
+
+  public void setFailIdList(List<Long> failIdList) {
+    this.failIdList = failIdList;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -63,12 +93,13 @@ public class CampaignsUpdateConfiguredStatusResponseData {
     }
     CampaignsUpdateConfiguredStatusResponseData campaignsUpdateConfiguredStatusResponseData =
         (CampaignsUpdateConfiguredStatusResponseData) o;
-    return Objects.equals(this.list, campaignsUpdateConfiguredStatusResponseData.list);
+    return Objects.equals(this.list, campaignsUpdateConfiguredStatusResponseData.list)
+        && Objects.equals(this.failIdList, campaignsUpdateConfiguredStatusResponseData.failIdList);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(list);
+    return Objects.hash(list, failIdList);
   }
 
   @Override
