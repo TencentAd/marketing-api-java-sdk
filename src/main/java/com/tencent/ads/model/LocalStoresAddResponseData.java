@@ -24,6 +24,9 @@ public class LocalStoresAddResponseData {
   @SerializedName("poi_list")
   private List<String> poiList = null;
 
+  @SerializedName("list")
+  private List<LocalStoresAddListStruct> list = null;
+
   public LocalStoresAddResponseData poiList(List<String> poiList) {
     this.poiList = poiList;
     return this;
@@ -51,6 +54,33 @@ public class LocalStoresAddResponseData {
     this.poiList = poiList;
   }
 
+  public LocalStoresAddResponseData list(List<LocalStoresAddListStruct> list) {
+    this.list = list;
+    return this;
+  }
+
+  public LocalStoresAddResponseData addListItem(LocalStoresAddListStruct listItem) {
+    if (this.list == null) {
+      this.list = new ArrayList<LocalStoresAddListStruct>();
+    }
+    this.list.add(listItem);
+    return this;
+  }
+
+  /**
+   * Get list
+   *
+   * @return list
+   */
+  @ApiModelProperty(value = "")
+  public List<LocalStoresAddListStruct> getList() {
+    return list;
+  }
+
+  public void setList(List<LocalStoresAddListStruct> list) {
+    this.list = list;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -60,12 +90,13 @@ public class LocalStoresAddResponseData {
       return false;
     }
     LocalStoresAddResponseData localStoresAddResponseData = (LocalStoresAddResponseData) o;
-    return Objects.equals(this.poiList, localStoresAddResponseData.poiList);
+    return Objects.equals(this.poiList, localStoresAddResponseData.poiList)
+        && Objects.equals(this.list, localStoresAddResponseData.list);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(poiList);
+    return Objects.hash(poiList, list);
   }
 
   @Override
