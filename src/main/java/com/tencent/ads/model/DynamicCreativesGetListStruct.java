@@ -104,6 +104,9 @@ public class DynamicCreativesGetListStruct {
   @SerializedName("enable_breakthrough_siteset")
   private Boolean enableBreakthroughSiteset = null;
 
+  @SerializedName("creative_template_version_type")
+  private CreativeTemplateVersionType creativeTemplateVersionType = null;
+
   public DynamicCreativesGetListStruct dynamicCreativeId(Long dynamicCreativeId) {
     this.dynamicCreativeId = dynamicCreativeId;
     return this;
@@ -637,6 +640,27 @@ public class DynamicCreativesGetListStruct {
     this.enableBreakthroughSiteset = enableBreakthroughSiteset;
   }
 
+  public DynamicCreativesGetListStruct creativeTemplateVersionType(
+      CreativeTemplateVersionType creativeTemplateVersionType) {
+    this.creativeTemplateVersionType = creativeTemplateVersionType;
+    return this;
+  }
+
+  /**
+   * Get creativeTemplateVersionType
+   *
+   * @return creativeTemplateVersionType
+   */
+  @ApiModelProperty(value = "")
+  public CreativeTemplateVersionType getCreativeTemplateVersionType() {
+    return creativeTemplateVersionType;
+  }
+
+  public void setCreativeTemplateVersionType(
+      CreativeTemplateVersionType creativeTemplateVersionType) {
+    this.creativeTemplateVersionType = creativeTemplateVersionType;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -681,8 +705,10 @@ public class DynamicCreativesGetListStruct {
             this.dynamicCreativeGroupUsed, dynamicCreativesGetListStruct.dynamicCreativeGroupUsed)
         && Objects.equals(this.appGiftPackCode, dynamicCreativesGetListStruct.appGiftPackCode)
         && Objects.equals(
-            this.enableBreakthroughSiteset,
-            dynamicCreativesGetListStruct.enableBreakthroughSiteset);
+            this.enableBreakthroughSiteset, dynamicCreativesGetListStruct.enableBreakthroughSiteset)
+        && Objects.equals(
+            this.creativeTemplateVersionType,
+            dynamicCreativesGetListStruct.creativeTemplateVersionType);
   }
 
   @Override
@@ -714,7 +740,8 @@ public class DynamicCreativesGetListStruct {
         barrageList,
         dynamicCreativeGroupUsed,
         appGiftPackCode,
-        enableBreakthroughSiteset);
+        enableBreakthroughSiteset,
+        creativeTemplateVersionType);
   }
 
   @Override

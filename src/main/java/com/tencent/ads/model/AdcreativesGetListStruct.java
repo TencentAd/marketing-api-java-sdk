@@ -152,6 +152,9 @@ public class AdcreativesGetListStruct {
   @SerializedName("enable_breakthrough_siteset")
   private Boolean enableBreakthroughSiteset = null;
 
+  @SerializedName("creative_template_version_type")
+  private CreativeTemplateVersionType creativeTemplateVersionType = null;
+
   @SerializedName("adcreative_template_id")
   private Long adcreativeTemplateId = null;
 
@@ -994,6 +997,27 @@ public class AdcreativesGetListStruct {
     this.enableBreakthroughSiteset = enableBreakthroughSiteset;
   }
 
+  public AdcreativesGetListStruct creativeTemplateVersionType(
+      CreativeTemplateVersionType creativeTemplateVersionType) {
+    this.creativeTemplateVersionType = creativeTemplateVersionType;
+    return this;
+  }
+
+  /**
+   * Get creativeTemplateVersionType
+   *
+   * @return creativeTemplateVersionType
+   */
+  @ApiModelProperty(value = "")
+  public CreativeTemplateVersionType getCreativeTemplateVersionType() {
+    return creativeTemplateVersionType;
+  }
+
+  public void setCreativeTemplateVersionType(
+      CreativeTemplateVersionType creativeTemplateVersionType) {
+    this.creativeTemplateVersionType = creativeTemplateVersionType;
+  }
+
   public AdcreativesGetListStruct adcreativeTemplateId(Long adcreativeTemplateId) {
     this.adcreativeTemplateId = adcreativeTemplateId;
     return this;
@@ -1093,6 +1117,8 @@ public class AdcreativesGetListStruct {
         && Objects.equals(this.appGiftPackCode, adcreativesGetListStruct.appGiftPackCode)
         && Objects.equals(
             this.enableBreakthroughSiteset, adcreativesGetListStruct.enableBreakthroughSiteset)
+        && Objects.equals(
+            this.creativeTemplateVersionType, adcreativesGetListStruct.creativeTemplateVersionType)
         && Objects.equals(this.adcreativeTemplateId, adcreativesGetListStruct.adcreativeTemplateId)
         && Objects.equals(this.adcreativeElements, adcreativesGetListStruct.adcreativeElements);
   }
@@ -1143,6 +1169,7 @@ public class AdcreativesGetListStruct {
         barrageList,
         appGiftPackCode,
         enableBreakthroughSiteset,
+        creativeTemplateVersionType,
         adcreativeTemplateId,
         adcreativeElements);
   }
