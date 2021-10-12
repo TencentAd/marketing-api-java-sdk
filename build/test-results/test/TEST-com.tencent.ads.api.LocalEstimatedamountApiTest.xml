@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.tencent.ads.api.LocalEstimatedamountApiTest" tests="1" skipped="1" failures="0" errors="0" timestamp="2021-10-08T06:18:37" hostname="VM_147_58_centos" time="0.0">
+<testsuite name="com.tencent.ads.api.LocalEstimatedamountApiTest" tests="1" skipped="1" failures="0" errors="0" timestamp="2021-10-12T02:06:04" hostname="VM_147_58_centos" time="0.0">
   <properties/>
   <testcase name="localEstimatedamountGetTest" classname="com.tencent.ads.api.LocalEstimatedamountApiTest" time="0.0">
     <skipped/>
