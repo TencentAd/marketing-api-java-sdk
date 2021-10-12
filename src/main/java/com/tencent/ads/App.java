@@ -114,6 +114,8 @@ public class App {
   @Inject ProductsSystemStatusApiContainer productsSystemStatusApiContainer;
   @Inject ProfilesApiContainer profilesApiContainer;
   @Inject PromotedObjectsApiContainer promotedObjectsApiContainer;
+  @Inject PropertyFileSessionsApiContainer propertyFileSessionsApiContainer;
+  @Inject PropertyFilesApiContainer propertyFilesApiContainer;
   @Inject PropertySetSchemasApiContainer propertySetSchemasApiContainer;
   @Inject PropertySetsApiContainer propertySetsApiContainer;
   @Inject QualificationsApiContainer qualificationsApiContainer;
@@ -545,6 +547,14 @@ public class App {
 
   public PromotedObjectsApiContainer promotedObjects() {
     return promotedObjectsApiContainer;
+  }
+
+  public PropertyFileSessionsApiContainer propertyFileSessions() {
+    return propertyFileSessionsApiContainer;
+  }
+
+  public PropertyFilesApiContainer propertyFiles() {
+    return propertyFilesApiContainer;
   }
 
   public PropertySetSchemasApiContainer propertySetSchemas() {
