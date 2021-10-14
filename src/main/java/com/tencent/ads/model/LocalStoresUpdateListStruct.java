@@ -20,7 +20,7 @@ import java.util.Objects;
 
 /** 返回结构 */
 @ApiModel(description = "返回结构")
-public class LocalStoresAddListStruct {
+public class LocalStoresUpdateListStruct {
   @SerializedName("poi_id")
   private String poiId = null;
 
@@ -42,16 +42,7 @@ public class LocalStoresAddListStruct {
   @SerializedName("wechat_ecosystem_accounts")
   private WechatEcosystemAccounts wechatEcosystemAccounts = null;
 
-  @SerializedName("created_time")
-  private Long createdTime = null;
-
-  @SerializedName("last_modified_time")
-  private Long lastModifiedTime = null;
-
-  @SerializedName("system_status")
-  private SysStatus systemStatus = null;
-
-  public LocalStoresAddListStruct poiId(String poiId) {
+  public LocalStoresUpdateListStruct poiId(String poiId) {
     this.poiId = poiId;
     return this;
   }
@@ -70,7 +61,7 @@ public class LocalStoresAddListStruct {
     this.poiId = poiId;
   }
 
-  public LocalStoresAddListStruct localStoreName(String localStoreName) {
+  public LocalStoresUpdateListStruct localStoreName(String localStoreName) {
     this.localStoreName = localStoreName;
     return this;
   }
@@ -89,7 +80,7 @@ public class LocalStoresAddListStruct {
     this.localStoreName = localStoreName;
   }
 
-  public LocalStoresAddListStruct localStoreProvince(String localStoreProvince) {
+  public LocalStoresUpdateListStruct localStoreProvince(String localStoreProvince) {
     this.localStoreProvince = localStoreProvince;
     return this;
   }
@@ -108,7 +99,7 @@ public class LocalStoresAddListStruct {
     this.localStoreProvince = localStoreProvince;
   }
 
-  public LocalStoresAddListStruct localStoreCity(String localStoreCity) {
+  public LocalStoresUpdateListStruct localStoreCity(String localStoreCity) {
     this.localStoreCity = localStoreCity;
     return this;
   }
@@ -127,7 +118,7 @@ public class LocalStoresAddListStruct {
     this.localStoreCity = localStoreCity;
   }
 
-  public LocalStoresAddListStruct localStoreAddress(String localStoreAddress) {
+  public LocalStoresUpdateListStruct localStoreAddress(String localStoreAddress) {
     this.localStoreAddress = localStoreAddress;
     return this;
   }
@@ -146,7 +137,7 @@ public class LocalStoresAddListStruct {
     this.localStoreAddress = localStoreAddress;
   }
 
-  public LocalStoresAddListStruct localStoreBizInfo(LocalStoreBizInfoStruct localStoreBizInfo) {
+  public LocalStoresUpdateListStruct localStoreBizInfo(LocalStoreBizInfoStruct localStoreBizInfo) {
     this.localStoreBizInfo = localStoreBizInfo;
     return this;
   }
@@ -165,7 +156,7 @@ public class LocalStoresAddListStruct {
     this.localStoreBizInfo = localStoreBizInfo;
   }
 
-  public LocalStoresAddListStruct wechatEcosystemAccounts(
+  public LocalStoresUpdateListStruct wechatEcosystemAccounts(
       WechatEcosystemAccounts wechatEcosystemAccounts) {
     this.wechatEcosystemAccounts = wechatEcosystemAccounts;
     return this;
@@ -185,63 +176,6 @@ public class LocalStoresAddListStruct {
     this.wechatEcosystemAccounts = wechatEcosystemAccounts;
   }
 
-  public LocalStoresAddListStruct createdTime(Long createdTime) {
-    this.createdTime = createdTime;
-    return this;
-  }
-
-  /**
-   * Get createdTime
-   *
-   * @return createdTime
-   */
-  @ApiModelProperty(value = "")
-  public Long getCreatedTime() {
-    return createdTime;
-  }
-
-  public void setCreatedTime(Long createdTime) {
-    this.createdTime = createdTime;
-  }
-
-  public LocalStoresAddListStruct lastModifiedTime(Long lastModifiedTime) {
-    this.lastModifiedTime = lastModifiedTime;
-    return this;
-  }
-
-  /**
-   * Get lastModifiedTime
-   *
-   * @return lastModifiedTime
-   */
-  @ApiModelProperty(value = "")
-  public Long getLastModifiedTime() {
-    return lastModifiedTime;
-  }
-
-  public void setLastModifiedTime(Long lastModifiedTime) {
-    this.lastModifiedTime = lastModifiedTime;
-  }
-
-  public LocalStoresAddListStruct systemStatus(SysStatus systemStatus) {
-    this.systemStatus = systemStatus;
-    return this;
-  }
-
-  /**
-   * Get systemStatus
-   *
-   * @return systemStatus
-   */
-  @ApiModelProperty(value = "")
-  public SysStatus getSystemStatus() {
-    return systemStatus;
-  }
-
-  public void setSystemStatus(SysStatus systemStatus) {
-    this.systemStatus = systemStatus;
-  }
-
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -250,18 +184,15 @@ public class LocalStoresAddListStruct {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    LocalStoresAddListStruct localStoresAddListStruct = (LocalStoresAddListStruct) o;
-    return Objects.equals(this.poiId, localStoresAddListStruct.poiId)
-        && Objects.equals(this.localStoreName, localStoresAddListStruct.localStoreName)
-        && Objects.equals(this.localStoreProvince, localStoresAddListStruct.localStoreProvince)
-        && Objects.equals(this.localStoreCity, localStoresAddListStruct.localStoreCity)
-        && Objects.equals(this.localStoreAddress, localStoresAddListStruct.localStoreAddress)
-        && Objects.equals(this.localStoreBizInfo, localStoresAddListStruct.localStoreBizInfo)
+    LocalStoresUpdateListStruct localStoresUpdateListStruct = (LocalStoresUpdateListStruct) o;
+    return Objects.equals(this.poiId, localStoresUpdateListStruct.poiId)
+        && Objects.equals(this.localStoreName, localStoresUpdateListStruct.localStoreName)
+        && Objects.equals(this.localStoreProvince, localStoresUpdateListStruct.localStoreProvince)
+        && Objects.equals(this.localStoreCity, localStoresUpdateListStruct.localStoreCity)
+        && Objects.equals(this.localStoreAddress, localStoresUpdateListStruct.localStoreAddress)
+        && Objects.equals(this.localStoreBizInfo, localStoresUpdateListStruct.localStoreBizInfo)
         && Objects.equals(
-            this.wechatEcosystemAccounts, localStoresAddListStruct.wechatEcosystemAccounts)
-        && Objects.equals(this.createdTime, localStoresAddListStruct.createdTime)
-        && Objects.equals(this.lastModifiedTime, localStoresAddListStruct.lastModifiedTime)
-        && Objects.equals(this.systemStatus, localStoresAddListStruct.systemStatus);
+            this.wechatEcosystemAccounts, localStoresUpdateListStruct.wechatEcosystemAccounts);
   }
 
   @Override
@@ -273,10 +204,7 @@ public class LocalStoresAddListStruct {
         localStoreCity,
         localStoreAddress,
         localStoreBizInfo,
-        wechatEcosystemAccounts,
-        createdTime,
-        lastModifiedTime,
-        systemStatus);
+        wechatEcosystemAccounts);
   }
 
   @Override

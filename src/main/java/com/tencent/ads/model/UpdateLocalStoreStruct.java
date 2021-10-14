@@ -20,7 +20,7 @@ import java.util.Objects;
 
 /** 校验成功的门店poi信息 */
 @ApiModel(description = "校验成功的门店poi信息")
-public class CreateLocalStoreStruct {
+public class UpdateLocalStoreStruct {
   @SerializedName("poi_id")
   private String poiId = null;
 
@@ -30,7 +30,7 @@ public class CreateLocalStoreStruct {
   @SerializedName("wechat_ecosystem_accounts")
   private WechatEcosystemAccounts wechatEcosystemAccounts = null;
 
-  public CreateLocalStoreStruct poiId(String poiId) {
+  public UpdateLocalStoreStruct poiId(String poiId) {
     this.poiId = poiId;
     return this;
   }
@@ -49,7 +49,7 @@ public class CreateLocalStoreStruct {
     this.poiId = poiId;
   }
 
-  public CreateLocalStoreStruct localStoreBizInfo(LocalStoreBizInfoStruct localStoreBizInfo) {
+  public UpdateLocalStoreStruct localStoreBizInfo(LocalStoreBizInfoStruct localStoreBizInfo) {
     this.localStoreBizInfo = localStoreBizInfo;
     return this;
   }
@@ -68,7 +68,7 @@ public class CreateLocalStoreStruct {
     this.localStoreBizInfo = localStoreBizInfo;
   }
 
-  public CreateLocalStoreStruct wechatEcosystemAccounts(
+  public UpdateLocalStoreStruct wechatEcosystemAccounts(
       WechatEcosystemAccounts wechatEcosystemAccounts) {
     this.wechatEcosystemAccounts = wechatEcosystemAccounts;
     return this;
@@ -96,11 +96,11 @@ public class CreateLocalStoreStruct {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    CreateLocalStoreStruct createLocalStoreStruct = (CreateLocalStoreStruct) o;
-    return Objects.equals(this.poiId, createLocalStoreStruct.poiId)
-        && Objects.equals(this.localStoreBizInfo, createLocalStoreStruct.localStoreBizInfo)
+    UpdateLocalStoreStruct updateLocalStoreStruct = (UpdateLocalStoreStruct) o;
+    return Objects.equals(this.poiId, updateLocalStoreStruct.poiId)
+        && Objects.equals(this.localStoreBizInfo, updateLocalStoreStruct.localStoreBizInfo)
         && Objects.equals(
-            this.wechatEcosystemAccounts, createLocalStoreStruct.wechatEcosystemAccounts);
+            this.wechatEcosystemAccounts, updateLocalStoreStruct.wechatEcosystemAccounts);
   }
 
   @Override

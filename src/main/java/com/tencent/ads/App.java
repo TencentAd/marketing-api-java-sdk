@@ -97,7 +97,9 @@ public class App {
   @Inject LocalEstimatedamountApiContainer localEstimatedamountApiContainer;
   @Inject LocalStoresApiContainer localStoresApiContainer;
   @Inject LocalStoresAddressParsingResultApiContainer localStoresAddressParsingResultApiContainer;
+  @Inject LocalStoresCategoriesApiContainer localStoresCategoriesApiContainer;
   @Inject LocalStoresSearchInfoApiContainer localStoresSearchInfoApiContainer;
+  @Inject LocalStoresWxpayMerchantsApiContainer localStoresWxpayMerchantsApiContainer;
   @Inject OauthApiContainer oauthApiContainer;
   @Inject OptimizationGoalPermissionsApiContainer optimizationGoalPermissionsApiContainer;
   @Inject OuterCluesApiContainer outerCluesApiContainer;
@@ -481,8 +483,16 @@ public class App {
     return localStoresAddressParsingResultApiContainer;
   }
 
+  public LocalStoresCategoriesApiContainer localStoresCategories() {
+    return localStoresCategoriesApiContainer;
+  }
+
   public LocalStoresSearchInfoApiContainer localStoresSearchInfo() {
     return localStoresSearchInfoApiContainer;
+  }
+
+  public LocalStoresWxpayMerchantsApiContainer localStoresWxpayMerchants() {
+    return localStoresWxpayMerchantsApiContainer;
   }
 
   public OauthApiContainer oauth() {

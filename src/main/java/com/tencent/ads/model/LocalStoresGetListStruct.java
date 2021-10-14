@@ -36,6 +36,12 @@ public class LocalStoresGetListStruct {
   @SerializedName("local_store_address")
   private String localStoreAddress = null;
 
+  @SerializedName("local_store_biz_info")
+  private LocalStoreBizInfoStruct localStoreBizInfo = null;
+
+  @SerializedName("wechat_ecosystem_accounts")
+  private WechatEcosystemAccounts wechatEcosystemAccounts = null;
+
   @SerializedName("created_time")
   private Long createdTime = null;
 
@@ -140,6 +146,45 @@ public class LocalStoresGetListStruct {
     this.localStoreAddress = localStoreAddress;
   }
 
+  public LocalStoresGetListStruct localStoreBizInfo(LocalStoreBizInfoStruct localStoreBizInfo) {
+    this.localStoreBizInfo = localStoreBizInfo;
+    return this;
+  }
+
+  /**
+   * Get localStoreBizInfo
+   *
+   * @return localStoreBizInfo
+   */
+  @ApiModelProperty(value = "")
+  public LocalStoreBizInfoStruct getLocalStoreBizInfo() {
+    return localStoreBizInfo;
+  }
+
+  public void setLocalStoreBizInfo(LocalStoreBizInfoStruct localStoreBizInfo) {
+    this.localStoreBizInfo = localStoreBizInfo;
+  }
+
+  public LocalStoresGetListStruct wechatEcosystemAccounts(
+      WechatEcosystemAccounts wechatEcosystemAccounts) {
+    this.wechatEcosystemAccounts = wechatEcosystemAccounts;
+    return this;
+  }
+
+  /**
+   * Get wechatEcosystemAccounts
+   *
+   * @return wechatEcosystemAccounts
+   */
+  @ApiModelProperty(value = "")
+  public WechatEcosystemAccounts getWechatEcosystemAccounts() {
+    return wechatEcosystemAccounts;
+  }
+
+  public void setWechatEcosystemAccounts(WechatEcosystemAccounts wechatEcosystemAccounts) {
+    this.wechatEcosystemAccounts = wechatEcosystemAccounts;
+  }
+
   public LocalStoresGetListStruct createdTime(Long createdTime) {
     this.createdTime = createdTime;
     return this;
@@ -211,6 +256,9 @@ public class LocalStoresGetListStruct {
         && Objects.equals(this.localStoreProvince, localStoresGetListStruct.localStoreProvince)
         && Objects.equals(this.localStoreCity, localStoresGetListStruct.localStoreCity)
         && Objects.equals(this.localStoreAddress, localStoresGetListStruct.localStoreAddress)
+        && Objects.equals(this.localStoreBizInfo, localStoresGetListStruct.localStoreBizInfo)
+        && Objects.equals(
+            this.wechatEcosystemAccounts, localStoresGetListStruct.wechatEcosystemAccounts)
         && Objects.equals(this.createdTime, localStoresGetListStruct.createdTime)
         && Objects.equals(this.lastModifiedTime, localStoresGetListStruct.lastModifiedTime)
         && Objects.equals(this.systemStatus, localStoresGetListStruct.systemStatus);
@@ -224,6 +272,8 @@ public class LocalStoresGetListStruct {
         localStoreProvince,
         localStoreCity,
         localStoreAddress,
+        localStoreBizInfo,
+        wechatEcosystemAccounts,
         createdTime,
         lastModifiedTime,
         systemStatus);

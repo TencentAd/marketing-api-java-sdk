@@ -27,6 +27,9 @@ import com.tencent.ads.model.LocalStoresDeleteResponse;
 import com.tencent.ads.model.LocalStoresDeleteResponseData;
 import com.tencent.ads.model.LocalStoresGetResponse;
 import com.tencent.ads.model.LocalStoresGetResponseData;
+import com.tencent.ads.model.LocalStoresUpdateRequest;
+import com.tencent.ads.model.LocalStoresUpdateResponse;
+import com.tencent.ads.model.LocalStoresUpdateResponseData;
 import java.util.List;
 
 public class LocalStoresApiContainer extends ApiContainer {
@@ -70,7 +73,7 @@ public class LocalStoresApiContainer extends ApiContainer {
    * @param filtering (optional)
    * @param page (optional)
    * @param pageSize (optional)
-   * @param fields 返回参数的字段列表 (optional)
+   * @param fields (optional)
    * @return LocalStoresGetResponse
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
@@ -83,6 +86,21 @@ public class LocalStoresApiContainer extends ApiContainer {
       List<String> fields)
       throws ApiException, TencentAdsResponseException {
     LocalStoresGetResponse resp = api.localStoresGet(accountId, filtering, page, pageSize, fields);
+    handleResponse(gson.toJson(resp));
+    return resp.getData();
+  }
+
+  /**
+   * 批量更新门店信息
+   *
+   * @param data (required)
+   * @return LocalStoresUpdateResponse
+   * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
+   *     response body
+   */
+  public LocalStoresUpdateResponseData localStoresUpdate(LocalStoresUpdateRequest data)
+      throws ApiException, TencentAdsResponseException {
+    LocalStoresUpdateResponse resp = api.localStoresUpdate(data);
     handleResponse(gson.toJson(resp));
     return resp.getData();
   }
