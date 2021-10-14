@@ -126,6 +126,9 @@ public class TargetingTagReportsGetListStruct {
   @SerializedName("page_reservation_count")
   private Long pageReservationCount = null;
 
+  @SerializedName("page_reservation_by_display_count")
+  private Long pageReservationByDisplayCount = null;
+
   @SerializedName("page_reservation_rate")
   private Double pageReservationRate = null;
 
@@ -159,14 +162,23 @@ public class TargetingTagReportsGetListStruct {
   @SerializedName("web_order_count")
   private Long webOrderCount = null;
 
+  @SerializedName("order_by_display_count")
+  private Long orderByDisplayCount = null;
+
   @SerializedName("web_order_rate")
   private Double webOrderRate = null;
+
+  @SerializedName("order_by_display_rate")
+  private Double orderByDisplayRate = null;
 
   @SerializedName("app_order_rate")
   private Double appOrderRate = null;
 
   @SerializedName("web_order_cost")
   private Long webOrderCost = null;
+
+  @SerializedName("order_by_display_cost")
+  private Long orderByDisplayCost = null;
 
   @SerializedName("web_checkout_amount")
   private Long webCheckoutAmount = null;
@@ -180,11 +192,17 @@ public class TargetingTagReportsGetListStruct {
   @SerializedName("order_amount")
   private Long orderAmount = null;
 
+  @SerializedName("order_by_display_amount")
+  private Long orderByDisplayAmount = null;
+
   @SerializedName("order_unit_price")
   private Long orderUnitPrice = null;
 
   @SerializedName("order_roi")
   private Double orderRoi = null;
+
+  @SerializedName("order_by_display_roi")
+  private Double orderByDisplayRoi = null;
 
   @SerializedName("deliver_count")
   private Long deliverCount = null;
@@ -231,8 +249,14 @@ public class TargetingTagReportsGetListStruct {
   @SerializedName("key_page_view_count")
   private Long keyPageViewCount = null;
 
+  @SerializedName("key_page_view_by_display_count")
+  private Long keyPageViewByDisplayCount = null;
+
   @SerializedName("app_commodity_page_view_count")
   private Long appCommodityPageViewCount = null;
+
+  @SerializedName("app_commodity_page_view_by_display_count")
+  private Long appCommodityPageViewByDisplayCount = null;
 
   @SerializedName("app_commodity_page_view_rate")
   private Double appCommodityPageViewRate = null;
@@ -245,6 +269,9 @@ public class TargetingTagReportsGetListStruct {
 
   @SerializedName("app_register_count")
   private Long appRegisterCount = null;
+
+  @SerializedName("register_by_display_count")
+  private Long registerByDisplayCount = null;
 
   @SerializedName("app_register_cost")
   private Long appRegisterCost = null;
@@ -275,6 +302,9 @@ public class TargetingTagReportsGetListStruct {
 
   @SerializedName("app_checkout_count")
   private Long appCheckoutCount = null;
+
+  @SerializedName("app_checkout_by_display_count")
+  private Long appCheckoutByDisplayCount = null;
 
   @SerializedName("app_checkout_amount")
   private Long appCheckoutAmount = null;
@@ -351,6 +381,9 @@ public class TargetingTagReportsGetListStruct {
   @SerializedName("order_24h_count")
   private Long order24hCount = null;
 
+  @SerializedName("order_24h_by_display_count")
+  private Long order24hByDisplayCount = null;
+
   @SerializedName("order_24h_rate")
   private Double order24hRate = null;
 
@@ -360,8 +393,14 @@ public class TargetingTagReportsGetListStruct {
   @SerializedName("order_24h_amount")
   private Long order24hAmount = null;
 
+  @SerializedName("order_24h_by_display_amount")
+  private Long order24hByDisplayAmount = null;
+
   @SerializedName("order_24h_roi")
   private Double order24hRoi = null;
+
+  @SerializedName("order_24h_by_display_roi")
+  private Double order24hByDisplayRoi = null;
 
   @SerializedName("game_create_role_count")
   private Long gameCreateRoleCount = null;
@@ -486,8 +525,14 @@ public class TargetingTagReportsGetListStruct {
   @SerializedName("from_follow_uv")
   private Long fromFollowUv = null;
 
+  @SerializedName("from_follow_by_display_uv")
+  private Long fromFollowByDisplayUv = null;
+
   @SerializedName("from_follow_cost")
   private Long fromFollowCost = null;
+
+  @SerializedName("from_follow_by_display_cost")
+  private Long fromFollowByDisplayCost = null;
 
   @SerializedName("add_desktop_pv")
   private Long addDesktopPv = null;
@@ -579,11 +624,20 @@ public class TargetingTagReportsGetListStruct {
   @SerializedName("conversions_count")
   private Long conversionsCount = null;
 
+  @SerializedName("conversions_by_display_count")
+  private Long conversionsByDisplayCount = null;
+
   @SerializedName("conversions_rate")
   private Double conversionsRate = null;
 
+  @SerializedName("conversions_by_display_rate")
+  private Double conversionsByDisplayRate = null;
+
   @SerializedName("conversions_cost")
   private Long conversionsCost = null;
+
+  @SerializedName("conversions_by_display_cost")
+  private Long conversionsByDisplayCost = null;
 
   @SerializedName("deep_conversions_count")
   private Long deepConversionsCount = null;
@@ -744,8 +798,14 @@ public class TargetingTagReportsGetListStruct {
   @SerializedName("first_day_order_count")
   private Long firstDayOrderCount = null;
 
+  @SerializedName("first_day_order_by_display_count")
+  private Long firstDayOrderByDisplayCount = null;
+
   @SerializedName("first_day_order_amount")
   private Long firstDayOrderAmount = null;
+
+  @SerializedName("first_day_order_by_display_amount")
+  private Long firstDayOrderByDisplayAmount = null;
 
   @SerializedName("add_wishlist_count")
   private Long addWishlistCount = null;
@@ -1900,6 +1960,26 @@ public class TargetingTagReportsGetListStruct {
     this.pageReservationCount = pageReservationCount;
   }
 
+  public TargetingTagReportsGetListStruct pageReservationByDisplayCount(
+      Long pageReservationByDisplayCount) {
+    this.pageReservationByDisplayCount = pageReservationByDisplayCount;
+    return this;
+  }
+
+  /**
+   * Get pageReservationByDisplayCount
+   *
+   * @return pageReservationByDisplayCount
+   */
+  @ApiModelProperty(value = "")
+  public Long getPageReservationByDisplayCount() {
+    return pageReservationByDisplayCount;
+  }
+
+  public void setPageReservationByDisplayCount(Long pageReservationByDisplayCount) {
+    this.pageReservationByDisplayCount = pageReservationByDisplayCount;
+  }
+
   public TargetingTagReportsGetListStruct pageReservationRate(Double pageReservationRate) {
     this.pageReservationRate = pageReservationRate;
     return this;
@@ -2110,6 +2190,25 @@ public class TargetingTagReportsGetListStruct {
     this.webOrderCount = webOrderCount;
   }
 
+  public TargetingTagReportsGetListStruct orderByDisplayCount(Long orderByDisplayCount) {
+    this.orderByDisplayCount = orderByDisplayCount;
+    return this;
+  }
+
+  /**
+   * Get orderByDisplayCount
+   *
+   * @return orderByDisplayCount
+   */
+  @ApiModelProperty(value = "")
+  public Long getOrderByDisplayCount() {
+    return orderByDisplayCount;
+  }
+
+  public void setOrderByDisplayCount(Long orderByDisplayCount) {
+    this.orderByDisplayCount = orderByDisplayCount;
+  }
+
   public TargetingTagReportsGetListStruct webOrderRate(Double webOrderRate) {
     this.webOrderRate = webOrderRate;
     return this;
@@ -2127,6 +2226,25 @@ public class TargetingTagReportsGetListStruct {
 
   public void setWebOrderRate(Double webOrderRate) {
     this.webOrderRate = webOrderRate;
+  }
+
+  public TargetingTagReportsGetListStruct orderByDisplayRate(Double orderByDisplayRate) {
+    this.orderByDisplayRate = orderByDisplayRate;
+    return this;
+  }
+
+  /**
+   * Get orderByDisplayRate
+   *
+   * @return orderByDisplayRate
+   */
+  @ApiModelProperty(value = "")
+  public Double getOrderByDisplayRate() {
+    return orderByDisplayRate;
+  }
+
+  public void setOrderByDisplayRate(Double orderByDisplayRate) {
+    this.orderByDisplayRate = orderByDisplayRate;
   }
 
   public TargetingTagReportsGetListStruct appOrderRate(Double appOrderRate) {
@@ -2165,6 +2283,25 @@ public class TargetingTagReportsGetListStruct {
 
   public void setWebOrderCost(Long webOrderCost) {
     this.webOrderCost = webOrderCost;
+  }
+
+  public TargetingTagReportsGetListStruct orderByDisplayCost(Long orderByDisplayCost) {
+    this.orderByDisplayCost = orderByDisplayCost;
+    return this;
+  }
+
+  /**
+   * Get orderByDisplayCost
+   *
+   * @return orderByDisplayCost
+   */
+  @ApiModelProperty(value = "")
+  public Long getOrderByDisplayCost() {
+    return orderByDisplayCost;
+  }
+
+  public void setOrderByDisplayCost(Long orderByDisplayCost) {
+    this.orderByDisplayCost = orderByDisplayCost;
   }
 
   public TargetingTagReportsGetListStruct webCheckoutAmount(Long webCheckoutAmount) {
@@ -2243,6 +2380,25 @@ public class TargetingTagReportsGetListStruct {
     this.orderAmount = orderAmount;
   }
 
+  public TargetingTagReportsGetListStruct orderByDisplayAmount(Long orderByDisplayAmount) {
+    this.orderByDisplayAmount = orderByDisplayAmount;
+    return this;
+  }
+
+  /**
+   * Get orderByDisplayAmount
+   *
+   * @return orderByDisplayAmount
+   */
+  @ApiModelProperty(value = "")
+  public Long getOrderByDisplayAmount() {
+    return orderByDisplayAmount;
+  }
+
+  public void setOrderByDisplayAmount(Long orderByDisplayAmount) {
+    this.orderByDisplayAmount = orderByDisplayAmount;
+  }
+
   public TargetingTagReportsGetListStruct orderUnitPrice(Long orderUnitPrice) {
     this.orderUnitPrice = orderUnitPrice;
     return this;
@@ -2279,6 +2435,25 @@ public class TargetingTagReportsGetListStruct {
 
   public void setOrderRoi(Double orderRoi) {
     this.orderRoi = orderRoi;
+  }
+
+  public TargetingTagReportsGetListStruct orderByDisplayRoi(Double orderByDisplayRoi) {
+    this.orderByDisplayRoi = orderByDisplayRoi;
+    return this;
+  }
+
+  /**
+   * Get orderByDisplayRoi
+   *
+   * @return orderByDisplayRoi
+   */
+  @ApiModelProperty(value = "")
+  public Double getOrderByDisplayRoi() {
+    return orderByDisplayRoi;
+  }
+
+  public void setOrderByDisplayRoi(Double orderByDisplayRoi) {
+    this.orderByDisplayRoi = orderByDisplayRoi;
   }
 
   public TargetingTagReportsGetListStruct deliverCount(Long deliverCount) {
@@ -2566,6 +2741,26 @@ public class TargetingTagReportsGetListStruct {
     this.keyPageViewCount = keyPageViewCount;
   }
 
+  public TargetingTagReportsGetListStruct keyPageViewByDisplayCount(
+      Long keyPageViewByDisplayCount) {
+    this.keyPageViewByDisplayCount = keyPageViewByDisplayCount;
+    return this;
+  }
+
+  /**
+   * Get keyPageViewByDisplayCount
+   *
+   * @return keyPageViewByDisplayCount
+   */
+  @ApiModelProperty(value = "")
+  public Long getKeyPageViewByDisplayCount() {
+    return keyPageViewByDisplayCount;
+  }
+
+  public void setKeyPageViewByDisplayCount(Long keyPageViewByDisplayCount) {
+    this.keyPageViewByDisplayCount = keyPageViewByDisplayCount;
+  }
+
   public TargetingTagReportsGetListStruct appCommodityPageViewCount(
       Long appCommodityPageViewCount) {
     this.appCommodityPageViewCount = appCommodityPageViewCount;
@@ -2584,6 +2779,26 @@ public class TargetingTagReportsGetListStruct {
 
   public void setAppCommodityPageViewCount(Long appCommodityPageViewCount) {
     this.appCommodityPageViewCount = appCommodityPageViewCount;
+  }
+
+  public TargetingTagReportsGetListStruct appCommodityPageViewByDisplayCount(
+      Long appCommodityPageViewByDisplayCount) {
+    this.appCommodityPageViewByDisplayCount = appCommodityPageViewByDisplayCount;
+    return this;
+  }
+
+  /**
+   * Get appCommodityPageViewByDisplayCount
+   *
+   * @return appCommodityPageViewByDisplayCount
+   */
+  @ApiModelProperty(value = "")
+  public Long getAppCommodityPageViewByDisplayCount() {
+    return appCommodityPageViewByDisplayCount;
+  }
+
+  public void setAppCommodityPageViewByDisplayCount(Long appCommodityPageViewByDisplayCount) {
+    this.appCommodityPageViewByDisplayCount = appCommodityPageViewByDisplayCount;
   }
 
   public TargetingTagReportsGetListStruct appCommodityPageViewRate(
@@ -2662,6 +2877,25 @@ public class TargetingTagReportsGetListStruct {
 
   public void setAppRegisterCount(Long appRegisterCount) {
     this.appRegisterCount = appRegisterCount;
+  }
+
+  public TargetingTagReportsGetListStruct registerByDisplayCount(Long registerByDisplayCount) {
+    this.registerByDisplayCount = registerByDisplayCount;
+    return this;
+  }
+
+  /**
+   * Get registerByDisplayCount
+   *
+   * @return registerByDisplayCount
+   */
+  @ApiModelProperty(value = "")
+  public Long getRegisterByDisplayCount() {
+    return registerByDisplayCount;
+  }
+
+  public void setRegisterByDisplayCount(Long registerByDisplayCount) {
+    this.registerByDisplayCount = registerByDisplayCount;
   }
 
   public TargetingTagReportsGetListStruct appRegisterCost(Long appRegisterCost) {
@@ -2852,6 +3086,26 @@ public class TargetingTagReportsGetListStruct {
 
   public void setAppCheckoutCount(Long appCheckoutCount) {
     this.appCheckoutCount = appCheckoutCount;
+  }
+
+  public TargetingTagReportsGetListStruct appCheckoutByDisplayCount(
+      Long appCheckoutByDisplayCount) {
+    this.appCheckoutByDisplayCount = appCheckoutByDisplayCount;
+    return this;
+  }
+
+  /**
+   * Get appCheckoutByDisplayCount
+   *
+   * @return appCheckoutByDisplayCount
+   */
+  @ApiModelProperty(value = "")
+  public Long getAppCheckoutByDisplayCount() {
+    return appCheckoutByDisplayCount;
+  }
+
+  public void setAppCheckoutByDisplayCount(Long appCheckoutByDisplayCount) {
+    this.appCheckoutByDisplayCount = appCheckoutByDisplayCount;
   }
 
   public TargetingTagReportsGetListStruct appCheckoutAmount(Long appCheckoutAmount) {
@@ -3330,6 +3584,25 @@ public class TargetingTagReportsGetListStruct {
     this.order24hCount = order24hCount;
   }
 
+  public TargetingTagReportsGetListStruct order24hByDisplayCount(Long order24hByDisplayCount) {
+    this.order24hByDisplayCount = order24hByDisplayCount;
+    return this;
+  }
+
+  /**
+   * Get order24hByDisplayCount
+   *
+   * @return order24hByDisplayCount
+   */
+  @ApiModelProperty(value = "")
+  public Long getOrder24hByDisplayCount() {
+    return order24hByDisplayCount;
+  }
+
+  public void setOrder24hByDisplayCount(Long order24hByDisplayCount) {
+    this.order24hByDisplayCount = order24hByDisplayCount;
+  }
+
   public TargetingTagReportsGetListStruct order24hRate(Double order24hRate) {
     this.order24hRate = order24hRate;
     return this;
@@ -3387,6 +3660,25 @@ public class TargetingTagReportsGetListStruct {
     this.order24hAmount = order24hAmount;
   }
 
+  public TargetingTagReportsGetListStruct order24hByDisplayAmount(Long order24hByDisplayAmount) {
+    this.order24hByDisplayAmount = order24hByDisplayAmount;
+    return this;
+  }
+
+  /**
+   * Get order24hByDisplayAmount
+   *
+   * @return order24hByDisplayAmount
+   */
+  @ApiModelProperty(value = "")
+  public Long getOrder24hByDisplayAmount() {
+    return order24hByDisplayAmount;
+  }
+
+  public void setOrder24hByDisplayAmount(Long order24hByDisplayAmount) {
+    this.order24hByDisplayAmount = order24hByDisplayAmount;
+  }
+
   public TargetingTagReportsGetListStruct order24hRoi(Double order24hRoi) {
     this.order24hRoi = order24hRoi;
     return this;
@@ -3404,6 +3696,25 @@ public class TargetingTagReportsGetListStruct {
 
   public void setOrder24hRoi(Double order24hRoi) {
     this.order24hRoi = order24hRoi;
+  }
+
+  public TargetingTagReportsGetListStruct order24hByDisplayRoi(Double order24hByDisplayRoi) {
+    this.order24hByDisplayRoi = order24hByDisplayRoi;
+    return this;
+  }
+
+  /**
+   * Get order24hByDisplayRoi
+   *
+   * @return order24hByDisplayRoi
+   */
+  @ApiModelProperty(value = "")
+  public Double getOrder24hByDisplayRoi() {
+    return order24hByDisplayRoi;
+  }
+
+  public void setOrder24hByDisplayRoi(Double order24hByDisplayRoi) {
+    this.order24hByDisplayRoi = order24hByDisplayRoi;
   }
 
   public TargetingTagReportsGetListStruct gameCreateRoleCount(Long gameCreateRoleCount) {
@@ -4187,6 +4498,25 @@ public class TargetingTagReportsGetListStruct {
     this.fromFollowUv = fromFollowUv;
   }
 
+  public TargetingTagReportsGetListStruct fromFollowByDisplayUv(Long fromFollowByDisplayUv) {
+    this.fromFollowByDisplayUv = fromFollowByDisplayUv;
+    return this;
+  }
+
+  /**
+   * Get fromFollowByDisplayUv
+   *
+   * @return fromFollowByDisplayUv
+   */
+  @ApiModelProperty(value = "")
+  public Long getFromFollowByDisplayUv() {
+    return fromFollowByDisplayUv;
+  }
+
+  public void setFromFollowByDisplayUv(Long fromFollowByDisplayUv) {
+    this.fromFollowByDisplayUv = fromFollowByDisplayUv;
+  }
+
   public TargetingTagReportsGetListStruct fromFollowCost(Long fromFollowCost) {
     this.fromFollowCost = fromFollowCost;
     return this;
@@ -4204,6 +4534,25 @@ public class TargetingTagReportsGetListStruct {
 
   public void setFromFollowCost(Long fromFollowCost) {
     this.fromFollowCost = fromFollowCost;
+  }
+
+  public TargetingTagReportsGetListStruct fromFollowByDisplayCost(Long fromFollowByDisplayCost) {
+    this.fromFollowByDisplayCost = fromFollowByDisplayCost;
+    return this;
+  }
+
+  /**
+   * Get fromFollowByDisplayCost
+   *
+   * @return fromFollowByDisplayCost
+   */
+  @ApiModelProperty(value = "")
+  public Long getFromFollowByDisplayCost() {
+    return fromFollowByDisplayCost;
+  }
+
+  public void setFromFollowByDisplayCost(Long fromFollowByDisplayCost) {
+    this.fromFollowByDisplayCost = fromFollowByDisplayCost;
   }
 
   public TargetingTagReportsGetListStruct addDesktopPv(Long addDesktopPv) {
@@ -4776,6 +5125,26 @@ public class TargetingTagReportsGetListStruct {
     this.conversionsCount = conversionsCount;
   }
 
+  public TargetingTagReportsGetListStruct conversionsByDisplayCount(
+      Long conversionsByDisplayCount) {
+    this.conversionsByDisplayCount = conversionsByDisplayCount;
+    return this;
+  }
+
+  /**
+   * Get conversionsByDisplayCount
+   *
+   * @return conversionsByDisplayCount
+   */
+  @ApiModelProperty(value = "")
+  public Long getConversionsByDisplayCount() {
+    return conversionsByDisplayCount;
+  }
+
+  public void setConversionsByDisplayCount(Long conversionsByDisplayCount) {
+    this.conversionsByDisplayCount = conversionsByDisplayCount;
+  }
+
   public TargetingTagReportsGetListStruct conversionsRate(Double conversionsRate) {
     this.conversionsRate = conversionsRate;
     return this;
@@ -4795,6 +5164,26 @@ public class TargetingTagReportsGetListStruct {
     this.conversionsRate = conversionsRate;
   }
 
+  public TargetingTagReportsGetListStruct conversionsByDisplayRate(
+      Double conversionsByDisplayRate) {
+    this.conversionsByDisplayRate = conversionsByDisplayRate;
+    return this;
+  }
+
+  /**
+   * Get conversionsByDisplayRate
+   *
+   * @return conversionsByDisplayRate
+   */
+  @ApiModelProperty(value = "")
+  public Double getConversionsByDisplayRate() {
+    return conversionsByDisplayRate;
+  }
+
+  public void setConversionsByDisplayRate(Double conversionsByDisplayRate) {
+    this.conversionsByDisplayRate = conversionsByDisplayRate;
+  }
+
   public TargetingTagReportsGetListStruct conversionsCost(Long conversionsCost) {
     this.conversionsCost = conversionsCost;
     return this;
@@ -4812,6 +5201,25 @@ public class TargetingTagReportsGetListStruct {
 
   public void setConversionsCost(Long conversionsCost) {
     this.conversionsCost = conversionsCost;
+  }
+
+  public TargetingTagReportsGetListStruct conversionsByDisplayCost(Long conversionsByDisplayCost) {
+    this.conversionsByDisplayCost = conversionsByDisplayCost;
+    return this;
+  }
+
+  /**
+   * Get conversionsByDisplayCost
+   *
+   * @return conversionsByDisplayCost
+   */
+  @ApiModelProperty(value = "")
+  public Long getConversionsByDisplayCost() {
+    return conversionsByDisplayCost;
+  }
+
+  public void setConversionsByDisplayCost(Long conversionsByDisplayCost) {
+    this.conversionsByDisplayCost = conversionsByDisplayCost;
   }
 
   public TargetingTagReportsGetListStruct deepConversionsCount(Long deepConversionsCount) {
@@ -5822,6 +6230,26 @@ public class TargetingTagReportsGetListStruct {
     this.firstDayOrderCount = firstDayOrderCount;
   }
 
+  public TargetingTagReportsGetListStruct firstDayOrderByDisplayCount(
+      Long firstDayOrderByDisplayCount) {
+    this.firstDayOrderByDisplayCount = firstDayOrderByDisplayCount;
+    return this;
+  }
+
+  /**
+   * Get firstDayOrderByDisplayCount
+   *
+   * @return firstDayOrderByDisplayCount
+   */
+  @ApiModelProperty(value = "")
+  public Long getFirstDayOrderByDisplayCount() {
+    return firstDayOrderByDisplayCount;
+  }
+
+  public void setFirstDayOrderByDisplayCount(Long firstDayOrderByDisplayCount) {
+    this.firstDayOrderByDisplayCount = firstDayOrderByDisplayCount;
+  }
+
   public TargetingTagReportsGetListStruct firstDayOrderAmount(Long firstDayOrderAmount) {
     this.firstDayOrderAmount = firstDayOrderAmount;
     return this;
@@ -5839,6 +6267,26 @@ public class TargetingTagReportsGetListStruct {
 
   public void setFirstDayOrderAmount(Long firstDayOrderAmount) {
     this.firstDayOrderAmount = firstDayOrderAmount;
+  }
+
+  public TargetingTagReportsGetListStruct firstDayOrderByDisplayAmount(
+      Long firstDayOrderByDisplayAmount) {
+    this.firstDayOrderByDisplayAmount = firstDayOrderByDisplayAmount;
+    return this;
+  }
+
+  /**
+   * Get firstDayOrderByDisplayAmount
+   *
+   * @return firstDayOrderByDisplayAmount
+   */
+  @ApiModelProperty(value = "")
+  public Long getFirstDayOrderByDisplayAmount() {
+    return firstDayOrderByDisplayAmount;
+  }
+
+  public void setFirstDayOrderByDisplayAmount(Long firstDayOrderByDisplayAmount) {
+    this.firstDayOrderByDisplayAmount = firstDayOrderByDisplayAmount;
   }
 
   public TargetingTagReportsGetListStruct addWishlistCount(Long addWishlistCount) {
@@ -9016,6 +9464,9 @@ public class TargetingTagReportsGetListStruct {
         && Objects.equals(
             this.pageReservationCount, targetingTagReportsGetListStruct.pageReservationCount)
         && Objects.equals(
+            this.pageReservationByDisplayCount,
+            targetingTagReportsGetListStruct.pageReservationByDisplayCount)
+        && Objects.equals(
             this.pageReservationRate, targetingTagReportsGetListStruct.pageReservationRate)
         && Objects.equals(
             this.pageReservationCost, targetingTagReportsGetListStruct.pageReservationCost)
@@ -9035,16 +9486,26 @@ public class TargetingTagReportsGetListStruct {
         && Objects.equals(
             this.platformCouponGetCost, targetingTagReportsGetListStruct.platformCouponGetCost)
         && Objects.equals(this.webOrderCount, targetingTagReportsGetListStruct.webOrderCount)
+        && Objects.equals(
+            this.orderByDisplayCount, targetingTagReportsGetListStruct.orderByDisplayCount)
         && Objects.equals(this.webOrderRate, targetingTagReportsGetListStruct.webOrderRate)
+        && Objects.equals(
+            this.orderByDisplayRate, targetingTagReportsGetListStruct.orderByDisplayRate)
         && Objects.equals(this.appOrderRate, targetingTagReportsGetListStruct.appOrderRate)
         && Objects.equals(this.webOrderCost, targetingTagReportsGetListStruct.webOrderCost)
+        && Objects.equals(
+            this.orderByDisplayCost, targetingTagReportsGetListStruct.orderByDisplayCost)
         && Objects.equals(
             this.webCheckoutAmount, targetingTagReportsGetListStruct.webCheckoutAmount)
         && Objects.equals(this.webCheckoutCount, targetingTagReportsGetListStruct.webCheckoutCount)
         && Objects.equals(this.webCheckoutCost, targetingTagReportsGetListStruct.webCheckoutCost)
         && Objects.equals(this.orderAmount, targetingTagReportsGetListStruct.orderAmount)
+        && Objects.equals(
+            this.orderByDisplayAmount, targetingTagReportsGetListStruct.orderByDisplayAmount)
         && Objects.equals(this.orderUnitPrice, targetingTagReportsGetListStruct.orderUnitPrice)
         && Objects.equals(this.orderRoi, targetingTagReportsGetListStruct.orderRoi)
+        && Objects.equals(
+            this.orderByDisplayRoi, targetingTagReportsGetListStruct.orderByDisplayRoi)
         && Objects.equals(this.deliverCount, targetingTagReportsGetListStruct.deliverCount)
         && Objects.equals(this.deliverCost, targetingTagReportsGetListStruct.deliverCost)
         && Objects.equals(this.signInCount, targetingTagReportsGetListStruct.signInCount)
@@ -9063,8 +9524,14 @@ public class TargetingTagReportsGetListStruct {
         && Objects.equals(this.retentionCost, targetingTagReportsGetListStruct.retentionCost)
         && Objects.equals(this.keyPageViewCount, targetingTagReportsGetListStruct.keyPageViewCount)
         && Objects.equals(
+            this.keyPageViewByDisplayCount,
+            targetingTagReportsGetListStruct.keyPageViewByDisplayCount)
+        && Objects.equals(
             this.appCommodityPageViewCount,
             targetingTagReportsGetListStruct.appCommodityPageViewCount)
+        && Objects.equals(
+            this.appCommodityPageViewByDisplayCount,
+            targetingTagReportsGetListStruct.appCommodityPageViewByDisplayCount)
         && Objects.equals(
             this.appCommodityPageViewRate,
             targetingTagReportsGetListStruct.appCommodityPageViewRate)
@@ -9075,6 +9542,8 @@ public class TargetingTagReportsGetListStruct {
             this.appCommodityPageViewCost,
             targetingTagReportsGetListStruct.appCommodityPageViewCost)
         && Objects.equals(this.appRegisterCount, targetingTagReportsGetListStruct.appRegisterCount)
+        && Objects.equals(
+            this.registerByDisplayCount, targetingTagReportsGetListStruct.registerByDisplayCount)
         && Objects.equals(this.appRegisterCost, targetingTagReportsGetListStruct.appRegisterCost)
         && Objects.equals(this.webRegisterCost, targetingTagReportsGetListStruct.webRegisterCost)
         && Objects.equals(
@@ -9088,6 +9557,9 @@ public class TargetingTagReportsGetListStruct {
         && Objects.equals(this.appOrderCount, targetingTagReportsGetListStruct.appOrderCount)
         && Objects.equals(this.appOrderCost, targetingTagReportsGetListStruct.appOrderCost)
         && Objects.equals(this.appCheckoutCount, targetingTagReportsGetListStruct.appCheckoutCount)
+        && Objects.equals(
+            this.appCheckoutByDisplayCount,
+            targetingTagReportsGetListStruct.appCheckoutByDisplayCount)
         && Objects.equals(
             this.appCheckoutAmount, targetingTagReportsGetListStruct.appCheckoutAmount)
         && Objects.equals(this.appCheckoutCost, targetingTagReportsGetListStruct.appCheckoutCost)
@@ -9121,10 +9593,16 @@ public class TargetingTagReportsGetListStruct {
         && Objects.equals(this.adPurValWeb, targetingTagReportsGetListStruct.adPurValWeb)
         && Objects.equals(this.adPurValApp, targetingTagReportsGetListStruct.adPurValApp)
         && Objects.equals(this.order24hCount, targetingTagReportsGetListStruct.order24hCount)
+        && Objects.equals(
+            this.order24hByDisplayCount, targetingTagReportsGetListStruct.order24hByDisplayCount)
         && Objects.equals(this.order24hRate, targetingTagReportsGetListStruct.order24hRate)
         && Objects.equals(this.order24hCost, targetingTagReportsGetListStruct.order24hCost)
         && Objects.equals(this.order24hAmount, targetingTagReportsGetListStruct.order24hAmount)
+        && Objects.equals(
+            this.order24hByDisplayAmount, targetingTagReportsGetListStruct.order24hByDisplayAmount)
         && Objects.equals(this.order24hRoi, targetingTagReportsGetListStruct.order24hRoi)
+        && Objects.equals(
+            this.order24hByDisplayRoi, targetingTagReportsGetListStruct.order24hByDisplayRoi)
         && Objects.equals(
             this.gameCreateRoleCount, targetingTagReportsGetListStruct.gameCreateRoleCount)
         && Objects.equals(
@@ -9184,7 +9662,11 @@ public class TargetingTagReportsGetListStruct {
         && Objects.equals(
             this.cheoutTotalReward, targetingTagReportsGetListStruct.cheoutTotalReward)
         && Objects.equals(this.fromFollowUv, targetingTagReportsGetListStruct.fromFollowUv)
+        && Objects.equals(
+            this.fromFollowByDisplayUv, targetingTagReportsGetListStruct.fromFollowByDisplayUv)
         && Objects.equals(this.fromFollowCost, targetingTagReportsGetListStruct.fromFollowCost)
+        && Objects.equals(
+            this.fromFollowByDisplayCost, targetingTagReportsGetListStruct.fromFollowByDisplayCost)
         && Objects.equals(this.addDesktopPv, targetingTagReportsGetListStruct.addDesktopPv)
         && Objects.equals(this.addDesktopCost, targetingTagReportsGetListStruct.addDesktopCost)
         && Objects.equals(this.firstPayCount, targetingTagReportsGetListStruct.firstPayCount)
@@ -9221,8 +9703,17 @@ public class TargetingTagReportsGetListStruct {
             this.lotteryLeadsCount, targetingTagReportsGetListStruct.lotteryLeadsCount)
         && Objects.equals(this.lotteryLeadsCost, targetingTagReportsGetListStruct.lotteryLeadsCost)
         && Objects.equals(this.conversionsCount, targetingTagReportsGetListStruct.conversionsCount)
+        && Objects.equals(
+            this.conversionsByDisplayCount,
+            targetingTagReportsGetListStruct.conversionsByDisplayCount)
         && Objects.equals(this.conversionsRate, targetingTagReportsGetListStruct.conversionsRate)
+        && Objects.equals(
+            this.conversionsByDisplayRate,
+            targetingTagReportsGetListStruct.conversionsByDisplayRate)
         && Objects.equals(this.conversionsCost, targetingTagReportsGetListStruct.conversionsCost)
+        && Objects.equals(
+            this.conversionsByDisplayCost,
+            targetingTagReportsGetListStruct.conversionsByDisplayCost)
         && Objects.equals(
             this.deepConversionsCount, targetingTagReportsGetListStruct.deepConversionsCount)
         && Objects.equals(
@@ -9308,7 +9799,13 @@ public class TargetingTagReportsGetListStruct {
         && Objects.equals(
             this.firstDayOrderCount, targetingTagReportsGetListStruct.firstDayOrderCount)
         && Objects.equals(
+            this.firstDayOrderByDisplayCount,
+            targetingTagReportsGetListStruct.firstDayOrderByDisplayCount)
+        && Objects.equals(
             this.firstDayOrderAmount, targetingTagReportsGetListStruct.firstDayOrderAmount)
+        && Objects.equals(
+            this.firstDayOrderByDisplayAmount,
+            targetingTagReportsGetListStruct.firstDayOrderByDisplayAmount)
         && Objects.equals(this.addWishlistCount, targetingTagReportsGetListStruct.addWishlistCount)
         && Objects.equals(
             this.videoOuterPlay10Count, targetingTagReportsGetListStruct.videoOuterPlay10Count)
@@ -9663,6 +10160,7 @@ public class TargetingTagReportsGetListStruct {
         webApplicationCount,
         webApplicationCost,
         pageReservationCount,
+        pageReservationByDisplayCount,
         pageReservationRate,
         pageReservationCost,
         pageReservationCostWithPeople,
@@ -9674,15 +10172,20 @@ public class TargetingTagReportsGetListStruct {
         platformCouponGetCount,
         platformCouponGetCost,
         webOrderCount,
+        orderByDisplayCount,
         webOrderRate,
+        orderByDisplayRate,
         appOrderRate,
         webOrderCost,
+        orderByDisplayCost,
         webCheckoutAmount,
         webCheckoutCount,
         webCheckoutCost,
         orderAmount,
+        orderByDisplayAmount,
         orderUnitPrice,
         orderRoi,
+        orderByDisplayRoi,
         deliverCount,
         deliverCost,
         signInCount,
@@ -9698,11 +10201,14 @@ public class TargetingTagReportsGetListStruct {
         appKeyPageRetentionRate,
         retentionCost,
         keyPageViewCount,
+        keyPageViewByDisplayCount,
         appCommodityPageViewCount,
+        appCommodityPageViewByDisplayCount,
         appCommodityPageViewRate,
         webCommodityPageViewRate,
         appCommodityPageViewCost,
         appRegisterCount,
+        registerByDisplayCount,
         appRegisterCost,
         webRegisterCost,
         appApplicationCount,
@@ -9713,6 +10219,7 @@ public class TargetingTagReportsGetListStruct {
         appOrderCount,
         appOrderCost,
         appCheckoutCount,
+        appCheckoutByDisplayCount,
         appCheckoutAmount,
         appCheckoutCost,
         platformCouponClickCount,
@@ -9738,10 +10245,13 @@ public class TargetingTagReportsGetListStruct {
         adPurValWeb,
         adPurValApp,
         order24hCount,
+        order24hByDisplayCount,
         order24hRate,
         order24hCost,
         order24hAmount,
+        order24hByDisplayAmount,
         order24hRoi,
+        order24hByDisplayRoi,
         gameCreateRoleCount,
         gameAuthorizeCount,
         gameTutorialFinishCount,
@@ -9783,7 +10293,9 @@ public class TargetingTagReportsGetListStruct {
         cheoutOmReward,
         cheoutTotalReward,
         fromFollowUv,
+        fromFollowByDisplayUv,
         fromFollowCost,
+        fromFollowByDisplayCost,
         addDesktopPv,
         addDesktopCost,
         firstPayCount,
@@ -9814,8 +10326,11 @@ public class TargetingTagReportsGetListStruct {
         lotteryLeadsCount,
         lotteryLeadsCost,
         conversionsCount,
+        conversionsByDisplayCount,
         conversionsRate,
+        conversionsByDisplayRate,
         conversionsCost,
+        conversionsByDisplayCost,
         deepConversionsCount,
         deepConversionsRate,
         deepConversionsCost,
@@ -9869,7 +10384,9 @@ public class TargetingTagReportsGetListStruct {
         wechatAppRegisterUv,
         noInterestCount,
         firstDayOrderCount,
+        firstDayOrderByDisplayCount,
         firstDayOrderAmount,
+        firstDayOrderByDisplayAmount,
         addWishlistCount,
         videoOuterPlay10Count,
         videoOuterPlay25Count,

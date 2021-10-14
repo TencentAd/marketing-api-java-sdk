@@ -126,6 +126,9 @@ public class DailyReportsGetListStruct {
   @SerializedName("page_reservation_count")
   private Long pageReservationCount = null;
 
+  @SerializedName("page_reservation_by_display_count")
+  private Long pageReservationByDisplayCount = null;
+
   @SerializedName("page_reservation_rate")
   private Double pageReservationRate = null;
 
@@ -159,14 +162,23 @@ public class DailyReportsGetListStruct {
   @SerializedName("web_order_count")
   private Long webOrderCount = null;
 
+  @SerializedName("order_by_display_count")
+  private Long orderByDisplayCount = null;
+
   @SerializedName("web_order_rate")
   private Double webOrderRate = null;
+
+  @SerializedName("order_by_display_rate")
+  private Double orderByDisplayRate = null;
 
   @SerializedName("app_order_rate")
   private Double appOrderRate = null;
 
   @SerializedName("web_order_cost")
   private Long webOrderCost = null;
+
+  @SerializedName("order_by_display_cost")
+  private Long orderByDisplayCost = null;
 
   @SerializedName("web_checkout_amount")
   private Long webCheckoutAmount = null;
@@ -180,11 +192,17 @@ public class DailyReportsGetListStruct {
   @SerializedName("order_amount")
   private Long orderAmount = null;
 
+  @SerializedName("order_by_display_amount")
+  private Long orderByDisplayAmount = null;
+
   @SerializedName("order_unit_price")
   private Long orderUnitPrice = null;
 
   @SerializedName("order_roi")
   private Double orderRoi = null;
+
+  @SerializedName("order_by_display_roi")
+  private Double orderByDisplayRoi = null;
 
   @SerializedName("deliver_count")
   private Long deliverCount = null;
@@ -231,8 +249,14 @@ public class DailyReportsGetListStruct {
   @SerializedName("key_page_view_count")
   private Long keyPageViewCount = null;
 
+  @SerializedName("key_page_view_by_display_count")
+  private Long keyPageViewByDisplayCount = null;
+
   @SerializedName("app_commodity_page_view_count")
   private Long appCommodityPageViewCount = null;
+
+  @SerializedName("app_commodity_page_view_by_display_count")
+  private Long appCommodityPageViewByDisplayCount = null;
 
   @SerializedName("app_commodity_page_view_rate")
   private Double appCommodityPageViewRate = null;
@@ -245,6 +269,9 @@ public class DailyReportsGetListStruct {
 
   @SerializedName("app_register_count")
   private Long appRegisterCount = null;
+
+  @SerializedName("register_by_display_count")
+  private Long registerByDisplayCount = null;
 
   @SerializedName("app_register_cost")
   private Long appRegisterCost = null;
@@ -275,6 +302,9 @@ public class DailyReportsGetListStruct {
 
   @SerializedName("app_checkout_count")
   private Long appCheckoutCount = null;
+
+  @SerializedName("app_checkout_by_display_count")
+  private Long appCheckoutByDisplayCount = null;
 
   @SerializedName("app_checkout_amount")
   private Long appCheckoutAmount = null;
@@ -351,6 +381,9 @@ public class DailyReportsGetListStruct {
   @SerializedName("order_24h_count")
   private Long order24hCount = null;
 
+  @SerializedName("order_24h_by_display_count")
+  private Long order24hByDisplayCount = null;
+
   @SerializedName("order_24h_rate")
   private Double order24hRate = null;
 
@@ -360,8 +393,14 @@ public class DailyReportsGetListStruct {
   @SerializedName("order_24h_amount")
   private Long order24hAmount = null;
 
+  @SerializedName("order_24h_by_display_amount")
+  private Long order24hByDisplayAmount = null;
+
   @SerializedName("order_24h_roi")
   private Double order24hRoi = null;
+
+  @SerializedName("order_24h_by_display_roi")
+  private Double order24hByDisplayRoi = null;
 
   @SerializedName("game_create_role_count")
   private Long gameCreateRoleCount = null;
@@ -486,8 +525,14 @@ public class DailyReportsGetListStruct {
   @SerializedName("from_follow_uv")
   private Long fromFollowUv = null;
 
+  @SerializedName("from_follow_by_display_uv")
+  private Long fromFollowByDisplayUv = null;
+
   @SerializedName("from_follow_cost")
   private Long fromFollowCost = null;
+
+  @SerializedName("from_follow_by_display_cost")
+  private Long fromFollowByDisplayCost = null;
 
   @SerializedName("add_desktop_pv")
   private Long addDesktopPv = null;
@@ -579,11 +624,20 @@ public class DailyReportsGetListStruct {
   @SerializedName("conversions_count")
   private Long conversionsCount = null;
 
+  @SerializedName("conversions_by_display_count")
+  private Long conversionsByDisplayCount = null;
+
   @SerializedName("conversions_rate")
   private Double conversionsRate = null;
 
+  @SerializedName("conversions_by_display_rate")
+  private Double conversionsByDisplayRate = null;
+
   @SerializedName("conversions_cost")
   private Long conversionsCost = null;
+
+  @SerializedName("conversions_by_display_cost")
+  private Long conversionsByDisplayCost = null;
 
   @SerializedName("deep_conversions_count")
   private Long deepConversionsCount = null;
@@ -744,8 +798,14 @@ public class DailyReportsGetListStruct {
   @SerializedName("first_day_order_count")
   private Long firstDayOrderCount = null;
 
+  @SerializedName("first_day_order_by_display_count")
+  private Long firstDayOrderByDisplayCount = null;
+
   @SerializedName("first_day_order_amount")
   private Long firstDayOrderAmount = null;
+
+  @SerializedName("first_day_order_by_display_amount")
+  private Long firstDayOrderByDisplayAmount = null;
 
   @SerializedName("add_wishlist_count")
   private Long addWishlistCount = null;
@@ -2090,6 +2150,26 @@ public class DailyReportsGetListStruct {
     this.pageReservationCount = pageReservationCount;
   }
 
+  public DailyReportsGetListStruct pageReservationByDisplayCount(
+      Long pageReservationByDisplayCount) {
+    this.pageReservationByDisplayCount = pageReservationByDisplayCount;
+    return this;
+  }
+
+  /**
+   * Get pageReservationByDisplayCount
+   *
+   * @return pageReservationByDisplayCount
+   */
+  @ApiModelProperty(value = "")
+  public Long getPageReservationByDisplayCount() {
+    return pageReservationByDisplayCount;
+  }
+
+  public void setPageReservationByDisplayCount(Long pageReservationByDisplayCount) {
+    this.pageReservationByDisplayCount = pageReservationByDisplayCount;
+  }
+
   public DailyReportsGetListStruct pageReservationRate(Double pageReservationRate) {
     this.pageReservationRate = pageReservationRate;
     return this;
@@ -2300,6 +2380,25 @@ public class DailyReportsGetListStruct {
     this.webOrderCount = webOrderCount;
   }
 
+  public DailyReportsGetListStruct orderByDisplayCount(Long orderByDisplayCount) {
+    this.orderByDisplayCount = orderByDisplayCount;
+    return this;
+  }
+
+  /**
+   * Get orderByDisplayCount
+   *
+   * @return orderByDisplayCount
+   */
+  @ApiModelProperty(value = "")
+  public Long getOrderByDisplayCount() {
+    return orderByDisplayCount;
+  }
+
+  public void setOrderByDisplayCount(Long orderByDisplayCount) {
+    this.orderByDisplayCount = orderByDisplayCount;
+  }
+
   public DailyReportsGetListStruct webOrderRate(Double webOrderRate) {
     this.webOrderRate = webOrderRate;
     return this;
@@ -2317,6 +2416,25 @@ public class DailyReportsGetListStruct {
 
   public void setWebOrderRate(Double webOrderRate) {
     this.webOrderRate = webOrderRate;
+  }
+
+  public DailyReportsGetListStruct orderByDisplayRate(Double orderByDisplayRate) {
+    this.orderByDisplayRate = orderByDisplayRate;
+    return this;
+  }
+
+  /**
+   * Get orderByDisplayRate
+   *
+   * @return orderByDisplayRate
+   */
+  @ApiModelProperty(value = "")
+  public Double getOrderByDisplayRate() {
+    return orderByDisplayRate;
+  }
+
+  public void setOrderByDisplayRate(Double orderByDisplayRate) {
+    this.orderByDisplayRate = orderByDisplayRate;
   }
 
   public DailyReportsGetListStruct appOrderRate(Double appOrderRate) {
@@ -2355,6 +2473,25 @@ public class DailyReportsGetListStruct {
 
   public void setWebOrderCost(Long webOrderCost) {
     this.webOrderCost = webOrderCost;
+  }
+
+  public DailyReportsGetListStruct orderByDisplayCost(Long orderByDisplayCost) {
+    this.orderByDisplayCost = orderByDisplayCost;
+    return this;
+  }
+
+  /**
+   * Get orderByDisplayCost
+   *
+   * @return orderByDisplayCost
+   */
+  @ApiModelProperty(value = "")
+  public Long getOrderByDisplayCost() {
+    return orderByDisplayCost;
+  }
+
+  public void setOrderByDisplayCost(Long orderByDisplayCost) {
+    this.orderByDisplayCost = orderByDisplayCost;
   }
 
   public DailyReportsGetListStruct webCheckoutAmount(Long webCheckoutAmount) {
@@ -2433,6 +2570,25 @@ public class DailyReportsGetListStruct {
     this.orderAmount = orderAmount;
   }
 
+  public DailyReportsGetListStruct orderByDisplayAmount(Long orderByDisplayAmount) {
+    this.orderByDisplayAmount = orderByDisplayAmount;
+    return this;
+  }
+
+  /**
+   * Get orderByDisplayAmount
+   *
+   * @return orderByDisplayAmount
+   */
+  @ApiModelProperty(value = "")
+  public Long getOrderByDisplayAmount() {
+    return orderByDisplayAmount;
+  }
+
+  public void setOrderByDisplayAmount(Long orderByDisplayAmount) {
+    this.orderByDisplayAmount = orderByDisplayAmount;
+  }
+
   public DailyReportsGetListStruct orderUnitPrice(Long orderUnitPrice) {
     this.orderUnitPrice = orderUnitPrice;
     return this;
@@ -2469,6 +2625,25 @@ public class DailyReportsGetListStruct {
 
   public void setOrderRoi(Double orderRoi) {
     this.orderRoi = orderRoi;
+  }
+
+  public DailyReportsGetListStruct orderByDisplayRoi(Double orderByDisplayRoi) {
+    this.orderByDisplayRoi = orderByDisplayRoi;
+    return this;
+  }
+
+  /**
+   * Get orderByDisplayRoi
+   *
+   * @return orderByDisplayRoi
+   */
+  @ApiModelProperty(value = "")
+  public Double getOrderByDisplayRoi() {
+    return orderByDisplayRoi;
+  }
+
+  public void setOrderByDisplayRoi(Double orderByDisplayRoi) {
+    this.orderByDisplayRoi = orderByDisplayRoi;
   }
 
   public DailyReportsGetListStruct deliverCount(Long deliverCount) {
@@ -2756,6 +2931,25 @@ public class DailyReportsGetListStruct {
     this.keyPageViewCount = keyPageViewCount;
   }
 
+  public DailyReportsGetListStruct keyPageViewByDisplayCount(Long keyPageViewByDisplayCount) {
+    this.keyPageViewByDisplayCount = keyPageViewByDisplayCount;
+    return this;
+  }
+
+  /**
+   * Get keyPageViewByDisplayCount
+   *
+   * @return keyPageViewByDisplayCount
+   */
+  @ApiModelProperty(value = "")
+  public Long getKeyPageViewByDisplayCount() {
+    return keyPageViewByDisplayCount;
+  }
+
+  public void setKeyPageViewByDisplayCount(Long keyPageViewByDisplayCount) {
+    this.keyPageViewByDisplayCount = keyPageViewByDisplayCount;
+  }
+
   public DailyReportsGetListStruct appCommodityPageViewCount(Long appCommodityPageViewCount) {
     this.appCommodityPageViewCount = appCommodityPageViewCount;
     return this;
@@ -2773,6 +2967,26 @@ public class DailyReportsGetListStruct {
 
   public void setAppCommodityPageViewCount(Long appCommodityPageViewCount) {
     this.appCommodityPageViewCount = appCommodityPageViewCount;
+  }
+
+  public DailyReportsGetListStruct appCommodityPageViewByDisplayCount(
+      Long appCommodityPageViewByDisplayCount) {
+    this.appCommodityPageViewByDisplayCount = appCommodityPageViewByDisplayCount;
+    return this;
+  }
+
+  /**
+   * Get appCommodityPageViewByDisplayCount
+   *
+   * @return appCommodityPageViewByDisplayCount
+   */
+  @ApiModelProperty(value = "")
+  public Long getAppCommodityPageViewByDisplayCount() {
+    return appCommodityPageViewByDisplayCount;
+  }
+
+  public void setAppCommodityPageViewByDisplayCount(Long appCommodityPageViewByDisplayCount) {
+    this.appCommodityPageViewByDisplayCount = appCommodityPageViewByDisplayCount;
   }
 
   public DailyReportsGetListStruct appCommodityPageViewRate(Double appCommodityPageViewRate) {
@@ -2849,6 +3063,25 @@ public class DailyReportsGetListStruct {
 
   public void setAppRegisterCount(Long appRegisterCount) {
     this.appRegisterCount = appRegisterCount;
+  }
+
+  public DailyReportsGetListStruct registerByDisplayCount(Long registerByDisplayCount) {
+    this.registerByDisplayCount = registerByDisplayCount;
+    return this;
+  }
+
+  /**
+   * Get registerByDisplayCount
+   *
+   * @return registerByDisplayCount
+   */
+  @ApiModelProperty(value = "")
+  public Long getRegisterByDisplayCount() {
+    return registerByDisplayCount;
+  }
+
+  public void setRegisterByDisplayCount(Long registerByDisplayCount) {
+    this.registerByDisplayCount = registerByDisplayCount;
   }
 
   public DailyReportsGetListStruct appRegisterCost(Long appRegisterCost) {
@@ -3039,6 +3272,25 @@ public class DailyReportsGetListStruct {
 
   public void setAppCheckoutCount(Long appCheckoutCount) {
     this.appCheckoutCount = appCheckoutCount;
+  }
+
+  public DailyReportsGetListStruct appCheckoutByDisplayCount(Long appCheckoutByDisplayCount) {
+    this.appCheckoutByDisplayCount = appCheckoutByDisplayCount;
+    return this;
+  }
+
+  /**
+   * Get appCheckoutByDisplayCount
+   *
+   * @return appCheckoutByDisplayCount
+   */
+  @ApiModelProperty(value = "")
+  public Long getAppCheckoutByDisplayCount() {
+    return appCheckoutByDisplayCount;
+  }
+
+  public void setAppCheckoutByDisplayCount(Long appCheckoutByDisplayCount) {
+    this.appCheckoutByDisplayCount = appCheckoutByDisplayCount;
   }
 
   public DailyReportsGetListStruct appCheckoutAmount(Long appCheckoutAmount) {
@@ -3516,6 +3768,25 @@ public class DailyReportsGetListStruct {
     this.order24hCount = order24hCount;
   }
 
+  public DailyReportsGetListStruct order24hByDisplayCount(Long order24hByDisplayCount) {
+    this.order24hByDisplayCount = order24hByDisplayCount;
+    return this;
+  }
+
+  /**
+   * Get order24hByDisplayCount
+   *
+   * @return order24hByDisplayCount
+   */
+  @ApiModelProperty(value = "")
+  public Long getOrder24hByDisplayCount() {
+    return order24hByDisplayCount;
+  }
+
+  public void setOrder24hByDisplayCount(Long order24hByDisplayCount) {
+    this.order24hByDisplayCount = order24hByDisplayCount;
+  }
+
   public DailyReportsGetListStruct order24hRate(Double order24hRate) {
     this.order24hRate = order24hRate;
     return this;
@@ -3573,6 +3844,25 @@ public class DailyReportsGetListStruct {
     this.order24hAmount = order24hAmount;
   }
 
+  public DailyReportsGetListStruct order24hByDisplayAmount(Long order24hByDisplayAmount) {
+    this.order24hByDisplayAmount = order24hByDisplayAmount;
+    return this;
+  }
+
+  /**
+   * Get order24hByDisplayAmount
+   *
+   * @return order24hByDisplayAmount
+   */
+  @ApiModelProperty(value = "")
+  public Long getOrder24hByDisplayAmount() {
+    return order24hByDisplayAmount;
+  }
+
+  public void setOrder24hByDisplayAmount(Long order24hByDisplayAmount) {
+    this.order24hByDisplayAmount = order24hByDisplayAmount;
+  }
+
   public DailyReportsGetListStruct order24hRoi(Double order24hRoi) {
     this.order24hRoi = order24hRoi;
     return this;
@@ -3590,6 +3880,25 @@ public class DailyReportsGetListStruct {
 
   public void setOrder24hRoi(Double order24hRoi) {
     this.order24hRoi = order24hRoi;
+  }
+
+  public DailyReportsGetListStruct order24hByDisplayRoi(Double order24hByDisplayRoi) {
+    this.order24hByDisplayRoi = order24hByDisplayRoi;
+    return this;
+  }
+
+  /**
+   * Get order24hByDisplayRoi
+   *
+   * @return order24hByDisplayRoi
+   */
+  @ApiModelProperty(value = "")
+  public Double getOrder24hByDisplayRoi() {
+    return order24hByDisplayRoi;
+  }
+
+  public void setOrder24hByDisplayRoi(Double order24hByDisplayRoi) {
+    this.order24hByDisplayRoi = order24hByDisplayRoi;
   }
 
   public DailyReportsGetListStruct gameCreateRoleCount(Long gameCreateRoleCount) {
@@ -4371,6 +4680,25 @@ public class DailyReportsGetListStruct {
     this.fromFollowUv = fromFollowUv;
   }
 
+  public DailyReportsGetListStruct fromFollowByDisplayUv(Long fromFollowByDisplayUv) {
+    this.fromFollowByDisplayUv = fromFollowByDisplayUv;
+    return this;
+  }
+
+  /**
+   * Get fromFollowByDisplayUv
+   *
+   * @return fromFollowByDisplayUv
+   */
+  @ApiModelProperty(value = "")
+  public Long getFromFollowByDisplayUv() {
+    return fromFollowByDisplayUv;
+  }
+
+  public void setFromFollowByDisplayUv(Long fromFollowByDisplayUv) {
+    this.fromFollowByDisplayUv = fromFollowByDisplayUv;
+  }
+
   public DailyReportsGetListStruct fromFollowCost(Long fromFollowCost) {
     this.fromFollowCost = fromFollowCost;
     return this;
@@ -4388,6 +4716,25 @@ public class DailyReportsGetListStruct {
 
   public void setFromFollowCost(Long fromFollowCost) {
     this.fromFollowCost = fromFollowCost;
+  }
+
+  public DailyReportsGetListStruct fromFollowByDisplayCost(Long fromFollowByDisplayCost) {
+    this.fromFollowByDisplayCost = fromFollowByDisplayCost;
+    return this;
+  }
+
+  /**
+   * Get fromFollowByDisplayCost
+   *
+   * @return fromFollowByDisplayCost
+   */
+  @ApiModelProperty(value = "")
+  public Long getFromFollowByDisplayCost() {
+    return fromFollowByDisplayCost;
+  }
+
+  public void setFromFollowByDisplayCost(Long fromFollowByDisplayCost) {
+    this.fromFollowByDisplayCost = fromFollowByDisplayCost;
   }
 
   public DailyReportsGetListStruct addDesktopPv(Long addDesktopPv) {
@@ -4960,6 +5307,25 @@ public class DailyReportsGetListStruct {
     this.conversionsCount = conversionsCount;
   }
 
+  public DailyReportsGetListStruct conversionsByDisplayCount(Long conversionsByDisplayCount) {
+    this.conversionsByDisplayCount = conversionsByDisplayCount;
+    return this;
+  }
+
+  /**
+   * Get conversionsByDisplayCount
+   *
+   * @return conversionsByDisplayCount
+   */
+  @ApiModelProperty(value = "")
+  public Long getConversionsByDisplayCount() {
+    return conversionsByDisplayCount;
+  }
+
+  public void setConversionsByDisplayCount(Long conversionsByDisplayCount) {
+    this.conversionsByDisplayCount = conversionsByDisplayCount;
+  }
+
   public DailyReportsGetListStruct conversionsRate(Double conversionsRate) {
     this.conversionsRate = conversionsRate;
     return this;
@@ -4979,6 +5345,25 @@ public class DailyReportsGetListStruct {
     this.conversionsRate = conversionsRate;
   }
 
+  public DailyReportsGetListStruct conversionsByDisplayRate(Double conversionsByDisplayRate) {
+    this.conversionsByDisplayRate = conversionsByDisplayRate;
+    return this;
+  }
+
+  /**
+   * Get conversionsByDisplayRate
+   *
+   * @return conversionsByDisplayRate
+   */
+  @ApiModelProperty(value = "")
+  public Double getConversionsByDisplayRate() {
+    return conversionsByDisplayRate;
+  }
+
+  public void setConversionsByDisplayRate(Double conversionsByDisplayRate) {
+    this.conversionsByDisplayRate = conversionsByDisplayRate;
+  }
+
   public DailyReportsGetListStruct conversionsCost(Long conversionsCost) {
     this.conversionsCost = conversionsCost;
     return this;
@@ -4996,6 +5381,25 @@ public class DailyReportsGetListStruct {
 
   public void setConversionsCost(Long conversionsCost) {
     this.conversionsCost = conversionsCost;
+  }
+
+  public DailyReportsGetListStruct conversionsByDisplayCost(Long conversionsByDisplayCost) {
+    this.conversionsByDisplayCost = conversionsByDisplayCost;
+    return this;
+  }
+
+  /**
+   * Get conversionsByDisplayCost
+   *
+   * @return conversionsByDisplayCost
+   */
+  @ApiModelProperty(value = "")
+  public Long getConversionsByDisplayCost() {
+    return conversionsByDisplayCost;
+  }
+
+  public void setConversionsByDisplayCost(Long conversionsByDisplayCost) {
+    this.conversionsByDisplayCost = conversionsByDisplayCost;
   }
 
   public DailyReportsGetListStruct deepConversionsCount(Long deepConversionsCount) {
@@ -6005,6 +6409,25 @@ public class DailyReportsGetListStruct {
     this.firstDayOrderCount = firstDayOrderCount;
   }
 
+  public DailyReportsGetListStruct firstDayOrderByDisplayCount(Long firstDayOrderByDisplayCount) {
+    this.firstDayOrderByDisplayCount = firstDayOrderByDisplayCount;
+    return this;
+  }
+
+  /**
+   * Get firstDayOrderByDisplayCount
+   *
+   * @return firstDayOrderByDisplayCount
+   */
+  @ApiModelProperty(value = "")
+  public Long getFirstDayOrderByDisplayCount() {
+    return firstDayOrderByDisplayCount;
+  }
+
+  public void setFirstDayOrderByDisplayCount(Long firstDayOrderByDisplayCount) {
+    this.firstDayOrderByDisplayCount = firstDayOrderByDisplayCount;
+  }
+
   public DailyReportsGetListStruct firstDayOrderAmount(Long firstDayOrderAmount) {
     this.firstDayOrderAmount = firstDayOrderAmount;
     return this;
@@ -6022,6 +6445,25 @@ public class DailyReportsGetListStruct {
 
   public void setFirstDayOrderAmount(Long firstDayOrderAmount) {
     this.firstDayOrderAmount = firstDayOrderAmount;
+  }
+
+  public DailyReportsGetListStruct firstDayOrderByDisplayAmount(Long firstDayOrderByDisplayAmount) {
+    this.firstDayOrderByDisplayAmount = firstDayOrderByDisplayAmount;
+    return this;
+  }
+
+  /**
+   * Get firstDayOrderByDisplayAmount
+   *
+   * @return firstDayOrderByDisplayAmount
+   */
+  @ApiModelProperty(value = "")
+  public Long getFirstDayOrderByDisplayAmount() {
+    return firstDayOrderByDisplayAmount;
+  }
+
+  public void setFirstDayOrderByDisplayAmount(Long firstDayOrderByDisplayAmount) {
+    this.firstDayOrderByDisplayAmount = firstDayOrderByDisplayAmount;
   }
 
   public DailyReportsGetListStruct addWishlistCount(Long addWishlistCount) {
@@ -10406,6 +10848,9 @@ public class DailyReportsGetListStruct {
         && Objects.equals(this.webApplicationCount, dailyReportsGetListStruct.webApplicationCount)
         && Objects.equals(this.webApplicationCost, dailyReportsGetListStruct.webApplicationCost)
         && Objects.equals(this.pageReservationCount, dailyReportsGetListStruct.pageReservationCount)
+        && Objects.equals(
+            this.pageReservationByDisplayCount,
+            dailyReportsGetListStruct.pageReservationByDisplayCount)
         && Objects.equals(this.pageReservationRate, dailyReportsGetListStruct.pageReservationRate)
         && Objects.equals(this.pageReservationCost, dailyReportsGetListStruct.pageReservationCost)
         && Objects.equals(
@@ -10422,15 +10867,20 @@ public class DailyReportsGetListStruct {
         && Objects.equals(
             this.platformCouponGetCost, dailyReportsGetListStruct.platformCouponGetCost)
         && Objects.equals(this.webOrderCount, dailyReportsGetListStruct.webOrderCount)
+        && Objects.equals(this.orderByDisplayCount, dailyReportsGetListStruct.orderByDisplayCount)
         && Objects.equals(this.webOrderRate, dailyReportsGetListStruct.webOrderRate)
+        && Objects.equals(this.orderByDisplayRate, dailyReportsGetListStruct.orderByDisplayRate)
         && Objects.equals(this.appOrderRate, dailyReportsGetListStruct.appOrderRate)
         && Objects.equals(this.webOrderCost, dailyReportsGetListStruct.webOrderCost)
+        && Objects.equals(this.orderByDisplayCost, dailyReportsGetListStruct.orderByDisplayCost)
         && Objects.equals(this.webCheckoutAmount, dailyReportsGetListStruct.webCheckoutAmount)
         && Objects.equals(this.webCheckoutCount, dailyReportsGetListStruct.webCheckoutCount)
         && Objects.equals(this.webCheckoutCost, dailyReportsGetListStruct.webCheckoutCost)
         && Objects.equals(this.orderAmount, dailyReportsGetListStruct.orderAmount)
+        && Objects.equals(this.orderByDisplayAmount, dailyReportsGetListStruct.orderByDisplayAmount)
         && Objects.equals(this.orderUnitPrice, dailyReportsGetListStruct.orderUnitPrice)
         && Objects.equals(this.orderRoi, dailyReportsGetListStruct.orderRoi)
+        && Objects.equals(this.orderByDisplayRoi, dailyReportsGetListStruct.orderByDisplayRoi)
         && Objects.equals(this.deliverCount, dailyReportsGetListStruct.deliverCount)
         && Objects.equals(this.deliverCost, dailyReportsGetListStruct.deliverCost)
         && Objects.equals(this.signInCount, dailyReportsGetListStruct.signInCount)
@@ -10448,7 +10898,12 @@ public class DailyReportsGetListStruct {
         && Objects.equals(this.retentionCost, dailyReportsGetListStruct.retentionCost)
         && Objects.equals(this.keyPageViewCount, dailyReportsGetListStruct.keyPageViewCount)
         && Objects.equals(
+            this.keyPageViewByDisplayCount, dailyReportsGetListStruct.keyPageViewByDisplayCount)
+        && Objects.equals(
             this.appCommodityPageViewCount, dailyReportsGetListStruct.appCommodityPageViewCount)
+        && Objects.equals(
+            this.appCommodityPageViewByDisplayCount,
+            dailyReportsGetListStruct.appCommodityPageViewByDisplayCount)
         && Objects.equals(
             this.appCommodityPageViewRate, dailyReportsGetListStruct.appCommodityPageViewRate)
         && Objects.equals(
@@ -10456,6 +10911,8 @@ public class DailyReportsGetListStruct {
         && Objects.equals(
             this.appCommodityPageViewCost, dailyReportsGetListStruct.appCommodityPageViewCost)
         && Objects.equals(this.appRegisterCount, dailyReportsGetListStruct.appRegisterCount)
+        && Objects.equals(
+            this.registerByDisplayCount, dailyReportsGetListStruct.registerByDisplayCount)
         && Objects.equals(this.appRegisterCost, dailyReportsGetListStruct.appRegisterCost)
         && Objects.equals(this.webRegisterCost, dailyReportsGetListStruct.webRegisterCost)
         && Objects.equals(this.appApplicationCount, dailyReportsGetListStruct.appApplicationCount)
@@ -10466,6 +10923,8 @@ public class DailyReportsGetListStruct {
         && Objects.equals(this.appOrderCount, dailyReportsGetListStruct.appOrderCount)
         && Objects.equals(this.appOrderCost, dailyReportsGetListStruct.appOrderCost)
         && Objects.equals(this.appCheckoutCount, dailyReportsGetListStruct.appCheckoutCount)
+        && Objects.equals(
+            this.appCheckoutByDisplayCount, dailyReportsGetListStruct.appCheckoutByDisplayCount)
         && Objects.equals(this.appCheckoutAmount, dailyReportsGetListStruct.appCheckoutAmount)
         && Objects.equals(this.appCheckoutCost, dailyReportsGetListStruct.appCheckoutCost)
         && Objects.equals(
@@ -10495,10 +10954,15 @@ public class DailyReportsGetListStruct {
         && Objects.equals(this.adPurValWeb, dailyReportsGetListStruct.adPurValWeb)
         && Objects.equals(this.adPurValApp, dailyReportsGetListStruct.adPurValApp)
         && Objects.equals(this.order24hCount, dailyReportsGetListStruct.order24hCount)
+        && Objects.equals(
+            this.order24hByDisplayCount, dailyReportsGetListStruct.order24hByDisplayCount)
         && Objects.equals(this.order24hRate, dailyReportsGetListStruct.order24hRate)
         && Objects.equals(this.order24hCost, dailyReportsGetListStruct.order24hCost)
         && Objects.equals(this.order24hAmount, dailyReportsGetListStruct.order24hAmount)
+        && Objects.equals(
+            this.order24hByDisplayAmount, dailyReportsGetListStruct.order24hByDisplayAmount)
         && Objects.equals(this.order24hRoi, dailyReportsGetListStruct.order24hRoi)
+        && Objects.equals(this.order24hByDisplayRoi, dailyReportsGetListStruct.order24hByDisplayRoi)
         && Objects.equals(this.gameCreateRoleCount, dailyReportsGetListStruct.gameCreateRoleCount)
         && Objects.equals(this.gameAuthorizeCount, dailyReportsGetListStruct.gameAuthorizeCount)
         && Objects.equals(
@@ -10549,7 +11013,11 @@ public class DailyReportsGetListStruct {
         && Objects.equals(this.cheoutOmReward, dailyReportsGetListStruct.cheoutOmReward)
         && Objects.equals(this.cheoutTotalReward, dailyReportsGetListStruct.cheoutTotalReward)
         && Objects.equals(this.fromFollowUv, dailyReportsGetListStruct.fromFollowUv)
+        && Objects.equals(
+            this.fromFollowByDisplayUv, dailyReportsGetListStruct.fromFollowByDisplayUv)
         && Objects.equals(this.fromFollowCost, dailyReportsGetListStruct.fromFollowCost)
+        && Objects.equals(
+            this.fromFollowByDisplayCost, dailyReportsGetListStruct.fromFollowByDisplayCost)
         && Objects.equals(this.addDesktopPv, dailyReportsGetListStruct.addDesktopPv)
         && Objects.equals(this.addDesktopCost, dailyReportsGetListStruct.addDesktopCost)
         && Objects.equals(this.firstPayCount, dailyReportsGetListStruct.firstPayCount)
@@ -10581,8 +11049,14 @@ public class DailyReportsGetListStruct {
         && Objects.equals(this.lotteryLeadsCount, dailyReportsGetListStruct.lotteryLeadsCount)
         && Objects.equals(this.lotteryLeadsCost, dailyReportsGetListStruct.lotteryLeadsCost)
         && Objects.equals(this.conversionsCount, dailyReportsGetListStruct.conversionsCount)
+        && Objects.equals(
+            this.conversionsByDisplayCount, dailyReportsGetListStruct.conversionsByDisplayCount)
         && Objects.equals(this.conversionsRate, dailyReportsGetListStruct.conversionsRate)
+        && Objects.equals(
+            this.conversionsByDisplayRate, dailyReportsGetListStruct.conversionsByDisplayRate)
         && Objects.equals(this.conversionsCost, dailyReportsGetListStruct.conversionsCost)
+        && Objects.equals(
+            this.conversionsByDisplayCost, dailyReportsGetListStruct.conversionsByDisplayCost)
         && Objects.equals(this.deepConversionsCount, dailyReportsGetListStruct.deepConversionsCount)
         && Objects.equals(this.deepConversionsRate, dailyReportsGetListStruct.deepConversionsRate)
         && Objects.equals(this.deepConversionsCost, dailyReportsGetListStruct.deepConversionsCost)
@@ -10641,7 +11115,12 @@ public class DailyReportsGetListStruct {
         && Objects.equals(this.wechatAppRegisterUv, dailyReportsGetListStruct.wechatAppRegisterUv)
         && Objects.equals(this.noInterestCount, dailyReportsGetListStruct.noInterestCount)
         && Objects.equals(this.firstDayOrderCount, dailyReportsGetListStruct.firstDayOrderCount)
+        && Objects.equals(
+            this.firstDayOrderByDisplayCount, dailyReportsGetListStruct.firstDayOrderByDisplayCount)
         && Objects.equals(this.firstDayOrderAmount, dailyReportsGetListStruct.firstDayOrderAmount)
+        && Objects.equals(
+            this.firstDayOrderByDisplayAmount,
+            dailyReportsGetListStruct.firstDayOrderByDisplayAmount)
         && Objects.equals(this.addWishlistCount, dailyReportsGetListStruct.addWishlistCount)
         && Objects.equals(
             this.videoOuterPlay10Count, dailyReportsGetListStruct.videoOuterPlay10Count)
@@ -11066,6 +11545,7 @@ public class DailyReportsGetListStruct {
         webApplicationCount,
         webApplicationCost,
         pageReservationCount,
+        pageReservationByDisplayCount,
         pageReservationRate,
         pageReservationCost,
         pageReservationCostWithPeople,
@@ -11077,15 +11557,20 @@ public class DailyReportsGetListStruct {
         platformCouponGetCount,
         platformCouponGetCost,
         webOrderCount,
+        orderByDisplayCount,
         webOrderRate,
+        orderByDisplayRate,
         appOrderRate,
         webOrderCost,
+        orderByDisplayCost,
         webCheckoutAmount,
         webCheckoutCount,
         webCheckoutCost,
         orderAmount,
+        orderByDisplayAmount,
         orderUnitPrice,
         orderRoi,
+        orderByDisplayRoi,
         deliverCount,
         deliverCost,
         signInCount,
@@ -11101,11 +11586,14 @@ public class DailyReportsGetListStruct {
         appKeyPageRetentionRate,
         retentionCost,
         keyPageViewCount,
+        keyPageViewByDisplayCount,
         appCommodityPageViewCount,
+        appCommodityPageViewByDisplayCount,
         appCommodityPageViewRate,
         webCommodityPageViewRate,
         appCommodityPageViewCost,
         appRegisterCount,
+        registerByDisplayCount,
         appRegisterCost,
         webRegisterCost,
         appApplicationCount,
@@ -11116,6 +11604,7 @@ public class DailyReportsGetListStruct {
         appOrderCount,
         appOrderCost,
         appCheckoutCount,
+        appCheckoutByDisplayCount,
         appCheckoutAmount,
         appCheckoutCost,
         platformCouponClickCount,
@@ -11141,10 +11630,13 @@ public class DailyReportsGetListStruct {
         adPurValWeb,
         adPurValApp,
         order24hCount,
+        order24hByDisplayCount,
         order24hRate,
         order24hCost,
         order24hAmount,
+        order24hByDisplayAmount,
         order24hRoi,
+        order24hByDisplayRoi,
         gameCreateRoleCount,
         gameAuthorizeCount,
         gameTutorialFinishCount,
@@ -11186,7 +11678,9 @@ public class DailyReportsGetListStruct {
         cheoutOmReward,
         cheoutTotalReward,
         fromFollowUv,
+        fromFollowByDisplayUv,
         fromFollowCost,
+        fromFollowByDisplayCost,
         addDesktopPv,
         addDesktopCost,
         firstPayCount,
@@ -11217,8 +11711,11 @@ public class DailyReportsGetListStruct {
         lotteryLeadsCount,
         lotteryLeadsCost,
         conversionsCount,
+        conversionsByDisplayCount,
         conversionsRate,
+        conversionsByDisplayRate,
         conversionsCost,
+        conversionsByDisplayCost,
         deepConversionsCount,
         deepConversionsRate,
         deepConversionsCost,
@@ -11272,7 +11769,9 @@ public class DailyReportsGetListStruct {
         wechatAppRegisterUv,
         noInterestCount,
         firstDayOrderCount,
+        firstDayOrderByDisplayCount,
         firstDayOrderAmount,
+        firstDayOrderByDisplayAmount,
         addWishlistCount,
         videoOuterPlay10Count,
         videoOuterPlay25Count,
