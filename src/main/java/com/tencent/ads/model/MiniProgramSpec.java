@@ -16,6 +16,8 @@ import com.google.gson.Gson;
 import com.google.gson.annotations.SerializedName;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Objects;
 
 /** 小程序信息 */
@@ -29,6 +31,9 @@ public class MiniProgramSpec {
 
   @SerializedName("mini_program_path")
   private String miniProgramPath = null;
+
+  @SerializedName("mini_program_paths")
+  private List<String> miniProgramPaths = null;
 
   public MiniProgramSpec title(String title) {
     this.title = title;
@@ -87,6 +92,33 @@ public class MiniProgramSpec {
     this.miniProgramPath = miniProgramPath;
   }
 
+  public MiniProgramSpec miniProgramPaths(List<String> miniProgramPaths) {
+    this.miniProgramPaths = miniProgramPaths;
+    return this;
+  }
+
+  public MiniProgramSpec addMiniProgramPathsItem(String miniProgramPathsItem) {
+    if (this.miniProgramPaths == null) {
+      this.miniProgramPaths = new ArrayList<String>();
+    }
+    this.miniProgramPaths.add(miniProgramPathsItem);
+    return this;
+  }
+
+  /**
+   * Get miniProgramPaths
+   *
+   * @return miniProgramPaths
+   */
+  @ApiModelProperty(value = "")
+  public List<String> getMiniProgramPaths() {
+    return miniProgramPaths;
+  }
+
+  public void setMiniProgramPaths(List<String> miniProgramPaths) {
+    this.miniProgramPaths = miniProgramPaths;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -98,12 +130,13 @@ public class MiniProgramSpec {
     MiniProgramSpec miniProgramSpec = (MiniProgramSpec) o;
     return Objects.equals(this.title, miniProgramSpec.title)
         && Objects.equals(this.miniProgramId, miniProgramSpec.miniProgramId)
-        && Objects.equals(this.miniProgramPath, miniProgramSpec.miniProgramPath);
+        && Objects.equals(this.miniProgramPath, miniProgramSpec.miniProgramPath)
+        && Objects.equals(this.miniProgramPaths, miniProgramSpec.miniProgramPaths);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(title, miniProgramId, miniProgramPath);
+    return Objects.hash(title, miniProgramId, miniProgramPath, miniProgramPaths);
   }
 
   @Override

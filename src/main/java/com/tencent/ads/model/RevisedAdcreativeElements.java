@@ -86,6 +86,9 @@ public class RevisedAdcreativeElements {
   @SerializedName("mini_program_path")
   private String miniProgramPath = null;
 
+  @SerializedName("mini_program_paths")
+  private List<String> miniProgramPaths = null;
+
   @SerializedName("label")
   private List<CreativeLabel> label = null;
 
@@ -151,6 +154,9 @@ public class RevisedAdcreativeElements {
 
   @SerializedName("head_line")
   private String headLine = null;
+
+  @SerializedName("shop_image_struct")
+  private AdCreativeShopImageStruct shopImageStruct = null;
 
   public RevisedAdcreativeElements image(String image) {
     this.image = image;
@@ -568,6 +574,33 @@ public class RevisedAdcreativeElements {
 
   public void setMiniProgramPath(String miniProgramPath) {
     this.miniProgramPath = miniProgramPath;
+  }
+
+  public RevisedAdcreativeElements miniProgramPaths(List<String> miniProgramPaths) {
+    this.miniProgramPaths = miniProgramPaths;
+    return this;
+  }
+
+  public RevisedAdcreativeElements addMiniProgramPathsItem(String miniProgramPathsItem) {
+    if (this.miniProgramPaths == null) {
+      this.miniProgramPaths = new ArrayList<String>();
+    }
+    this.miniProgramPaths.add(miniProgramPathsItem);
+    return this;
+  }
+
+  /**
+   * Get miniProgramPaths
+   *
+   * @return miniProgramPaths
+   */
+  @ApiModelProperty(value = "")
+  public List<String> getMiniProgramPaths() {
+    return miniProgramPaths;
+  }
+
+  public void setMiniProgramPaths(List<String> miniProgramPaths) {
+    this.miniProgramPaths = miniProgramPaths;
   }
 
   public RevisedAdcreativeElements label(List<CreativeLabel> label) {
@@ -1004,6 +1037,25 @@ public class RevisedAdcreativeElements {
     this.headLine = headLine;
   }
 
+  public RevisedAdcreativeElements shopImageStruct(AdCreativeShopImageStruct shopImageStruct) {
+    this.shopImageStruct = shopImageStruct;
+    return this;
+  }
+
+  /**
+   * Get shopImageStruct
+   *
+   * @return shopImageStruct
+   */
+  @ApiModelProperty(value = "")
+  public AdCreativeShopImageStruct getShopImageStruct() {
+    return shopImageStruct;
+  }
+
+  public void setShopImageStruct(AdCreativeShopImageStruct shopImageStruct) {
+    this.shopImageStruct = shopImageStruct;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -1034,6 +1086,7 @@ public class RevisedAdcreativeElements {
         && Objects.equals(this.countdownTimeType, revisedAdcreativeElements.countdownTimeType)
         && Objects.equals(this.miniProgramId, revisedAdcreativeElements.miniProgramId)
         && Objects.equals(this.miniProgramPath, revisedAdcreativeElements.miniProgramPath)
+        && Objects.equals(this.miniProgramPaths, revisedAdcreativeElements.miniProgramPaths)
         && Objects.equals(this.label, revisedAdcreativeElements.label)
         && Objects.equals(this.productTags, revisedAdcreativeElements.productTags)
         && Objects.equals(this.logoDescription, revisedAdcreativeElements.logoDescription)
@@ -1055,7 +1108,8 @@ public class RevisedAdcreativeElements {
         && Objects.equals(this.zipUrl, revisedAdcreativeElements.zipUrl)
         && Objects.equals(this.endPage, revisedAdcreativeElements.endPage)
         && Objects.equals(this.shopImage, revisedAdcreativeElements.shopImage)
-        && Objects.equals(this.headLine, revisedAdcreativeElements.headLine);
+        && Objects.equals(this.headLine, revisedAdcreativeElements.headLine)
+        && Objects.equals(this.shopImageStruct, revisedAdcreativeElements.shopImageStruct);
   }
 
   @Override
@@ -1082,6 +1136,7 @@ public class RevisedAdcreativeElements {
         countdownTimeType,
         miniProgramId,
         miniProgramPath,
+        miniProgramPaths,
         label,
         productTags,
         logoDescription,
@@ -1103,7 +1158,8 @@ public class RevisedAdcreativeElements {
         zipUrl,
         endPage,
         shopImage,
-        headLine);
+        headLine,
+        shopImageStruct);
   }
 
   @Override

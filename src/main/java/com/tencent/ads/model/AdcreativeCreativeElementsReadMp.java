@@ -203,6 +203,9 @@ public class AdcreativeCreativeElementsReadMp {
   @SerializedName("head_line")
   private String headLine = null;
 
+  @SerializedName("shop_image_struct")
+  private AdCreativeShopImageStruct shopImageStruct = null;
+
   @SerializedName("countdown_expiring_timestamp")
   private Long countdownExpiringTimestamp = null;
 
@@ -1382,6 +1385,26 @@ public class AdcreativeCreativeElementsReadMp {
     this.headLine = headLine;
   }
 
+  public AdcreativeCreativeElementsReadMp shopImageStruct(
+      AdCreativeShopImageStruct shopImageStruct) {
+    this.shopImageStruct = shopImageStruct;
+    return this;
+  }
+
+  /**
+   * Get shopImageStruct
+   *
+   * @return shopImageStruct
+   */
+  @ApiModelProperty(value = "")
+  public AdCreativeShopImageStruct getShopImageStruct() {
+    return shopImageStruct;
+  }
+
+  public void setShopImageStruct(AdCreativeShopImageStruct shopImageStruct) {
+    this.shopImageStruct = shopImageStruct;
+  }
+
   public AdcreativeCreativeElementsReadMp countdownExpiringTimestamp(
       Long countdownExpiringTimestamp) {
     this.countdownExpiringTimestamp = countdownExpiringTimestamp;
@@ -1475,6 +1498,7 @@ public class AdcreativeCreativeElementsReadMp {
         && Objects.equals(this.endPage, adcreativeCreativeElementsReadMp.endPage)
         && Objects.equals(this.shopImage, adcreativeCreativeElementsReadMp.shopImage)
         && Objects.equals(this.headLine, adcreativeCreativeElementsReadMp.headLine)
+        && Objects.equals(this.shopImageStruct, adcreativeCreativeElementsReadMp.shopImageStruct)
         && Objects.equals(
             this.countdownExpiringTimestamp,
             adcreativeCreativeElementsReadMp.countdownExpiringTimestamp);
@@ -1543,6 +1567,7 @@ public class AdcreativeCreativeElementsReadMp {
         endPage,
         shopImage,
         headLine,
+        shopImageStruct,
         countdownExpiringTimestamp);
   }
 

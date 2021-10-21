@@ -227,6 +227,9 @@ public class DynamicCreativeElementsRead {
   @SerializedName("head_line")
   private String headLine = null;
 
+  @SerializedName("shop_image_struct")
+  private AdCreativeShopImageStruct shopImageStruct = null;
+
   @SerializedName("countdown_expiring_timestamp")
   private Long countdownExpiringTimestamp = null;
 
@@ -1609,6 +1612,25 @@ public class DynamicCreativeElementsRead {
     this.headLine = headLine;
   }
 
+  public DynamicCreativeElementsRead shopImageStruct(AdCreativeShopImageStruct shopImageStruct) {
+    this.shopImageStruct = shopImageStruct;
+    return this;
+  }
+
+  /**
+   * Get shopImageStruct
+   *
+   * @return shopImageStruct
+   */
+  @ApiModelProperty(value = "")
+  public AdCreativeShopImageStruct getShopImageStruct() {
+    return shopImageStruct;
+  }
+
+  public void setShopImageStruct(AdCreativeShopImageStruct shopImageStruct) {
+    this.shopImageStruct = shopImageStruct;
+  }
+
   public DynamicCreativeElementsRead countdownExpiringTimestamp(Long countdownExpiringTimestamp) {
     this.countdownExpiringTimestamp = countdownExpiringTimestamp;
     return this;
@@ -1708,6 +1730,7 @@ public class DynamicCreativeElementsRead {
         && Objects.equals(this.cardContent, dynamicCreativeElementsRead.cardContent)
         && Objects.equals(this.shopImage, dynamicCreativeElementsRead.shopImage)
         && Objects.equals(this.headLine, dynamicCreativeElementsRead.headLine)
+        && Objects.equals(this.shopImageStruct, dynamicCreativeElementsRead.shopImageStruct)
         && Objects.equals(
             this.countdownExpiringTimestamp,
             dynamicCreativeElementsRead.countdownExpiringTimestamp);
@@ -1784,6 +1807,7 @@ public class DynamicCreativeElementsRead {
         cardContent,
         shopImage,
         headLine,
+        shopImageStruct,
         countdownExpiringTimestamp);
   }
 
