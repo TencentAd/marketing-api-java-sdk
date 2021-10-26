@@ -81,6 +81,27 @@ public class MetricDetailData {
   @SerializedName("quest_reservation_uv_cost")
   private Long questReservationUvCost = null;
 
+  @SerializedName("reach_store_pay_gmv")
+  private Long reachStorePayGmv = null;
+
+  @SerializedName("reach_store_pay_uv")
+  private Long reachStorePayUv = null;
+
+  @SerializedName("reach_store_pay_pv")
+  private Long reachStorePayPv = null;
+
+  @SerializedName("reach_store_pay_roi")
+  private Double reachStorePayRoi = null;
+
+  @SerializedName("clk_pv_avg")
+  private Double clkPvAvg = null;
+
+  @SerializedName("reach_store_pay_arpu")
+  private Double reachStorePayArpu = null;
+
+  @SerializedName("click_user_count")
+  private Long clickUserCount = null;
+
   public MetricDetailData cost(Long cost) {
     this.cost = cost;
     return this;
@@ -461,6 +482,139 @@ public class MetricDetailData {
     this.questReservationUvCost = questReservationUvCost;
   }
 
+  public MetricDetailData reachStorePayGmv(Long reachStorePayGmv) {
+    this.reachStorePayGmv = reachStorePayGmv;
+    return this;
+  }
+
+  /**
+   * Get reachStorePayGmv
+   *
+   * @return reachStorePayGmv
+   */
+  @ApiModelProperty(value = "")
+  public Long getReachStorePayGmv() {
+    return reachStorePayGmv;
+  }
+
+  public void setReachStorePayGmv(Long reachStorePayGmv) {
+    this.reachStorePayGmv = reachStorePayGmv;
+  }
+
+  public MetricDetailData reachStorePayUv(Long reachStorePayUv) {
+    this.reachStorePayUv = reachStorePayUv;
+    return this;
+  }
+
+  /**
+   * Get reachStorePayUv
+   *
+   * @return reachStorePayUv
+   */
+  @ApiModelProperty(value = "")
+  public Long getReachStorePayUv() {
+    return reachStorePayUv;
+  }
+
+  public void setReachStorePayUv(Long reachStorePayUv) {
+    this.reachStorePayUv = reachStorePayUv;
+  }
+
+  public MetricDetailData reachStorePayPv(Long reachStorePayPv) {
+    this.reachStorePayPv = reachStorePayPv;
+    return this;
+  }
+
+  /**
+   * Get reachStorePayPv
+   *
+   * @return reachStorePayPv
+   */
+  @ApiModelProperty(value = "")
+  public Long getReachStorePayPv() {
+    return reachStorePayPv;
+  }
+
+  public void setReachStorePayPv(Long reachStorePayPv) {
+    this.reachStorePayPv = reachStorePayPv;
+  }
+
+  public MetricDetailData reachStorePayRoi(Double reachStorePayRoi) {
+    this.reachStorePayRoi = reachStorePayRoi;
+    return this;
+  }
+
+  /**
+   * Get reachStorePayRoi
+   *
+   * @return reachStorePayRoi
+   */
+  @ApiModelProperty(value = "")
+  public Double getReachStorePayRoi() {
+    return reachStorePayRoi;
+  }
+
+  public void setReachStorePayRoi(Double reachStorePayRoi) {
+    this.reachStorePayRoi = reachStorePayRoi;
+  }
+
+  public MetricDetailData clkPvAvg(Double clkPvAvg) {
+    this.clkPvAvg = clkPvAvg;
+    return this;
+  }
+
+  /**
+   * Get clkPvAvg
+   *
+   * @return clkPvAvg
+   */
+  @ApiModelProperty(value = "")
+  public Double getClkPvAvg() {
+    return clkPvAvg;
+  }
+
+  public void setClkPvAvg(Double clkPvAvg) {
+    this.clkPvAvg = clkPvAvg;
+  }
+
+  public MetricDetailData reachStorePayArpu(Double reachStorePayArpu) {
+    this.reachStorePayArpu = reachStorePayArpu;
+    return this;
+  }
+
+  /**
+   * Get reachStorePayArpu
+   *
+   * @return reachStorePayArpu
+   */
+  @ApiModelProperty(value = "")
+  public Double getReachStorePayArpu() {
+    return reachStorePayArpu;
+  }
+
+  public void setReachStorePayArpu(Double reachStorePayArpu) {
+    this.reachStorePayArpu = reachStorePayArpu;
+  }
+
+  public MetricDetailData clickUserCount(Long clickUserCount) {
+    this.clickUserCount = clickUserCount;
+    return this;
+  }
+
+  /**
+   * Get clickUserCount
+   *
+   * @return clickUserCount
+   */
+  @ApiModelProperty(value = "")
+  public Long getClickUserCount() {
+    return clickUserCount;
+  }
+
+  public void setClickUserCount(Long clickUserCount) {
+    this.clickUserCount = clickUserCount;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -489,7 +643,14 @@ public class MetricDetailData {
         && Objects.equals(this.cvsExpPv, metricDetailData.cvsExpPv)
         && Objects.equals(this.cvsExpCost, metricDetailData.cvsExpCost)
         && Objects.equals(this.weappExpCost, metricDetailData.weappExpCost)
-        && Objects.equals(this.questReservationUvCost, metricDetailData.questReservationUvCost);
+        && Objects.equals(this.questReservationUvCost, metricDetailData.questReservationUvCost)
+        && Objects.equals(this.reachStorePayGmv, metricDetailData.reachStorePayGmv)
+        && Objects.equals(this.reachStorePayUv, metricDetailData.reachStorePayUv)
+        && Objects.equals(this.reachStorePayPv, metricDetailData.reachStorePayPv)
+        && Objects.equals(this.reachStorePayRoi, metricDetailData.reachStorePayRoi)
+        && Objects.equals(this.clkPvAvg, metricDetailData.clkPvAvg)
+        && Objects.equals(this.reachStorePayArpu, metricDetailData.reachStorePayArpu)
+        && Objects.equals(this.clickUserCount, metricDetailData.clickUserCount);
   }
 
   @Override
@@ -514,7 +675,14 @@ public class MetricDetailData {
         cvsExpPv,
         cvsExpCost,
         weappExpCost,
-        questReservationUvCost);
+        questReservationUvCost,
+        reachStorePayGmv,
+        reachStorePayUv,
+        reachStorePayPv,
+        reachStorePayRoi,
+        clkPvAvg,
+        reachStorePayArpu,
+        clickUserCount);
   }
 
   @Override

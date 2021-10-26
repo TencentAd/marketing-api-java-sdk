@@ -24,6 +24,9 @@ import com.tencent.ads.model.ReportAdUnionResponseData;
 import com.tencent.ads.model.ReportConversionsPredictRequest;
 import com.tencent.ads.model.ReportConversionsPredictResponse;
 import com.tencent.ads.model.ReportConversionsPredictResponseData;
+import com.tencent.ads.model.ReportLandingPageRequest;
+import com.tencent.ads.model.ReportLandingPageResponse;
+import com.tencent.ads.model.ReportLandingPageResponseData;
 import com.tencent.ads.model.ReportVideoFrameRequest;
 import com.tencent.ads.model.ReportVideoFrameResponse;
 import com.tencent.ads.model.ReportVideoFrameResponseData;
@@ -58,6 +61,21 @@ public class ReportApiContainer extends ApiContainer {
   public ReportConversionsPredictResponseData reportConversionsPredict(
       ReportConversionsPredictRequest data) throws ApiException, TencentAdsResponseException {
     ReportConversionsPredictResponse resp = api.reportConversionsPredict(data);
+    handleResponse(gson.toJson(resp));
+    return resp.getData();
+  }
+
+  /**
+   * 落地页报表数据接口
+   *
+   * @param data (required)
+   * @return ReportLandingPageResponse
+   * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
+   *     response body
+   */
+  public ReportLandingPageResponseData reportLandingPage(ReportLandingPageRequest data)
+      throws ApiException, TencentAdsResponseException {
+    ReportLandingPageResponse resp = api.reportLandingPage(data);
     handleResponse(gson.toJson(resp));
     return resp.getData();
   }
