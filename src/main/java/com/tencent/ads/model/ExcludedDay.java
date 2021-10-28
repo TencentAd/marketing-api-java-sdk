@@ -19,20 +19,24 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-/** 动态商品模板所属类型 */
-@JsonAdapter(DynamicAdTemplateOwnershipType.Adapter.class)
-public enum DynamicAdTemplateOwnershipType {
-  PRIVATE_TEMPLATE("PRIVATE_TEMPLATE"),
+/** 排除天数 */
+@JsonAdapter(ExcludedDay.Adapter.class)
+public enum ExcludedDay {
+  SEVEN_DAY("EXCLUDED_DAY_SEVEN_DAY"),
 
-  PUBLIC_TEMPLATE("PUBLIC_TEMPLATE"),
+  ONE_MONTH("EXCLUDED_DAY_ONE_MONTH"),
 
-  SELF_OWNED_TEMPLATE("SELF_OWNED_TEMPLATE"),
+  TWO_MONTH("EXCLUDED_DAY_TWO_MONTH"),
 
-  GRANTED_TEMPLATE("GRANTED_TEMPLATE");
+  THREE_MONTH("EXCLUDED_DAY_THREE_MONTH"),
+
+  SIX_MONTH("EXCLUDED_DAY_SIX_MONTH"),
+
+  ONE_DAY("EXCLUDED_DAY_ONE_DAY");
 
   private String value;
 
-  DynamicAdTemplateOwnershipType(String value) {
+  ExcludedDay(String value) {
     this.value = value;
   }
 
@@ -45,8 +49,8 @@ public enum DynamicAdTemplateOwnershipType {
     return String.valueOf(value);
   }
 
-  public static DynamicAdTemplateOwnershipType fromValue(String text) {
-    for (DynamicAdTemplateOwnershipType b : DynamicAdTemplateOwnershipType.values()) {
+  public static ExcludedDay fromValue(String text) {
+    for (ExcludedDay b : ExcludedDay.values()) {
       if (String.valueOf(b.value).equals(text)) {
         return b;
       }
@@ -54,17 +58,17 @@ public enum DynamicAdTemplateOwnershipType {
     return null;
   }
 
-  public static class Adapter extends TypeAdapter<DynamicAdTemplateOwnershipType> {
+  public static class Adapter extends TypeAdapter<ExcludedDay> {
     @Override
-    public void write(final JsonWriter jsonWriter, final DynamicAdTemplateOwnershipType enumeration)
+    public void write(final JsonWriter jsonWriter, final ExcludedDay enumeration)
         throws IOException {
       jsonWriter.value(enumeration.getValue());
     }
 
     @Override
-    public DynamicAdTemplateOwnershipType read(final JsonReader jsonReader) throws IOException {
+    public ExcludedDay read(final JsonReader jsonReader) throws IOException {
       String value = jsonReader.nextString();
-      return DynamicAdTemplateOwnershipType.fromValue(String.valueOf(value));
+      return ExcludedDay.fromValue(String.valueOf(value));
     }
   }
 }
