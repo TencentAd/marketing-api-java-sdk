@@ -33,6 +33,9 @@ public class XijingTemplateGetResponseData {
   @SerializedName("clipboard")
   private String clipboard = null;
 
+  @SerializedName("page_deeplink")
+  private String pageDeeplink = null;
+
   @SerializedName("page_title")
   private String pageTitle = null;
 
@@ -118,6 +121,25 @@ public class XijingTemplateGetResponseData {
     this.clipboard = clipboard;
   }
 
+  public XijingTemplateGetResponseData pageDeeplink(String pageDeeplink) {
+    this.pageDeeplink = pageDeeplink;
+    return this;
+  }
+
+  /**
+   * Get pageDeeplink
+   *
+   * @return pageDeeplink
+   */
+  @ApiModelProperty(value = "")
+  public String getPageDeeplink() {
+    return pageDeeplink;
+  }
+
+  public void setPageDeeplink(String pageDeeplink) {
+    this.pageDeeplink = pageDeeplink;
+  }
+
   public XijingTemplateGetResponseData pageTitle(String pageTitle) {
     this.pageTitle = pageTitle;
     return this;
@@ -196,6 +218,7 @@ public class XijingTemplateGetResponseData {
         && Objects.equals(this.pageType, xijingTemplateGetResponseData.pageType)
         && Objects.equals(this.pageName, xijingTemplateGetResponseData.pageName)
         && Objects.equals(this.clipboard, xijingTemplateGetResponseData.clipboard)
+        && Objects.equals(this.pageDeeplink, xijingTemplateGetResponseData.pageDeeplink)
         && Objects.equals(this.pageTitle, xijingTemplateGetResponseData.pageTitle)
         && Objects.equals(this.componentSpecList, xijingTemplateGetResponseData.componentSpecList)
         && Objects.equals(this.mobileAppId, xijingTemplateGetResponseData.mobileAppId);
@@ -204,7 +227,14 @@ public class XijingTemplateGetResponseData {
   @Override
   public int hashCode() {
     return Objects.hash(
-        pageTemplateId, pageType, pageName, clipboard, pageTitle, componentSpecList, mobileAppId);
+        pageTemplateId,
+        pageType,
+        pageName,
+        clipboard,
+        pageDeeplink,
+        pageTitle,
+        componentSpecList,
+        mobileAppId);
   }
 
   @Override

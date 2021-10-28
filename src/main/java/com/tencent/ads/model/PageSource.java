@@ -19,7 +19,7 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-/** 查询类型 */
+/** 查询类型,默认值OWNER。 */
 @JsonAdapter(PageSource.Adapter.class)
 public enum PageSource {
   GRANT("GRANT"),

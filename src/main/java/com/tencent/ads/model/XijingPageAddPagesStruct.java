@@ -35,6 +35,9 @@ public class XijingPageAddPagesStruct {
   @SerializedName("clipboard")
   private String clipboard = null;
 
+  @SerializedName("page_deeplink")
+  private String pageDeeplink = null;
+
   @SerializedName("mobile_app_id")
   private String mobileAppId = null;
 
@@ -120,6 +123,25 @@ public class XijingPageAddPagesStruct {
     this.clipboard = clipboard;
   }
 
+  public XijingPageAddPagesStruct pageDeeplink(String pageDeeplink) {
+    this.pageDeeplink = pageDeeplink;
+    return this;
+  }
+
+  /**
+   * Get pageDeeplink
+   *
+   * @return pageDeeplink
+   */
+  @ApiModelProperty(value = "")
+  public String getPageDeeplink() {
+    return pageDeeplink;
+  }
+
+  public void setPageDeeplink(String pageDeeplink) {
+    this.pageDeeplink = pageDeeplink;
+  }
+
   public XijingPageAddPagesStruct mobileAppId(String mobileAppId) {
     this.mobileAppId = mobileAppId;
     return this;
@@ -198,6 +220,7 @@ public class XijingPageAddPagesStruct {
         && Objects.equals(this.pageName, xijingPageAddPagesStruct.pageName)
         && Objects.equals(this.pageTitle, xijingPageAddPagesStruct.pageTitle)
         && Objects.equals(this.clipboard, xijingPageAddPagesStruct.clipboard)
+        && Objects.equals(this.pageDeeplink, xijingPageAddPagesStruct.pageDeeplink)
         && Objects.equals(this.mobileAppId, xijingPageAddPagesStruct.mobileAppId)
         && Objects.equals(this.pageTemplateId, xijingPageAddPagesStruct.pageTemplateId)
         && Objects.equals(this.componentSpecList, xijingPageAddPagesStruct.componentSpecList);
@@ -206,7 +229,14 @@ public class XijingPageAddPagesStruct {
   @Override
   public int hashCode() {
     return Objects.hash(
-        pageType, pageName, pageTitle, clipboard, mobileAppId, pageTemplateId, componentSpecList);
+        pageType,
+        pageName,
+        pageTitle,
+        clipboard,
+        pageDeeplink,
+        mobileAppId,
+        pageTemplateId,
+        componentSpecList);
   }
 
   @Override

@@ -35,6 +35,9 @@ public class XijingPageByComponentsAddPagesStruct {
   @SerializedName("clipboard")
   private String clipboard = null;
 
+  @SerializedName("page_deeplink")
+  private String pageDeeplink = null;
+
   @SerializedName("mobile_app_id")
   private String mobileAppId = null;
 
@@ -121,6 +124,25 @@ public class XijingPageByComponentsAddPagesStruct {
 
   public void setClipboard(String clipboard) {
     this.clipboard = clipboard;
+  }
+
+  public XijingPageByComponentsAddPagesStruct pageDeeplink(String pageDeeplink) {
+    this.pageDeeplink = pageDeeplink;
+    return this;
+  }
+
+  /**
+   * Get pageDeeplink
+   *
+   * @return pageDeeplink
+   */
+  @ApiModelProperty(value = "")
+  public String getPageDeeplink() {
+    return pageDeeplink;
+  }
+
+  public void setPageDeeplink(String pageDeeplink) {
+    this.pageDeeplink = pageDeeplink;
   }
 
   public XijingPageByComponentsAddPagesStruct mobileAppId(String mobileAppId) {
@@ -222,6 +244,7 @@ public class XijingPageByComponentsAddPagesStruct {
         && Objects.equals(this.pageName, xijingPageByComponentsAddPagesStruct.pageName)
         && Objects.equals(this.pageTitle, xijingPageByComponentsAddPagesStruct.pageTitle)
         && Objects.equals(this.clipboard, xijingPageByComponentsAddPagesStruct.clipboard)
+        && Objects.equals(this.pageDeeplink, xijingPageByComponentsAddPagesStruct.pageDeeplink)
         && Objects.equals(this.mobileAppId, xijingPageByComponentsAddPagesStruct.mobileAppId)
         && Objects.equals(this.bgColor, xijingPageByComponentsAddPagesStruct.bgColor)
         && Objects.equals(this.bgImageId, xijingPageByComponentsAddPagesStruct.bgImageId)
@@ -236,6 +259,7 @@ public class XijingPageByComponentsAddPagesStruct {
         pageName,
         pageTitle,
         clipboard,
+        pageDeeplink,
         mobileAppId,
         bgColor,
         bgImageId,

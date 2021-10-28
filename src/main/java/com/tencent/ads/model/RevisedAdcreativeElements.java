@@ -158,6 +158,9 @@ public class RevisedAdcreativeElements {
   @SerializedName("shop_image_struct")
   private AdCreativeShopImageStruct shopImageStruct = null;
 
+  @SerializedName("chosen_button")
+  private ChosenButton chosenButton = null;
+
   public RevisedAdcreativeElements image(String image) {
     this.image = image;
     return this;
@@ -1056,6 +1059,25 @@ public class RevisedAdcreativeElements {
     this.shopImageStruct = shopImageStruct;
   }
 
+  public RevisedAdcreativeElements chosenButton(ChosenButton chosenButton) {
+    this.chosenButton = chosenButton;
+    return this;
+  }
+
+  /**
+   * Get chosenButton
+   *
+   * @return chosenButton
+   */
+  @ApiModelProperty(value = "")
+  public ChosenButton getChosenButton() {
+    return chosenButton;
+  }
+
+  public void setChosenButton(ChosenButton chosenButton) {
+    this.chosenButton = chosenButton;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -1109,7 +1131,8 @@ public class RevisedAdcreativeElements {
         && Objects.equals(this.endPage, revisedAdcreativeElements.endPage)
         && Objects.equals(this.shopImage, revisedAdcreativeElements.shopImage)
         && Objects.equals(this.headLine, revisedAdcreativeElements.headLine)
-        && Objects.equals(this.shopImageStruct, revisedAdcreativeElements.shopImageStruct);
+        && Objects.equals(this.shopImageStruct, revisedAdcreativeElements.shopImageStruct)
+        && Objects.equals(this.chosenButton, revisedAdcreativeElements.chosenButton);
   }
 
   @Override
@@ -1159,7 +1182,8 @@ public class RevisedAdcreativeElements {
         endPage,
         shopImage,
         headLine,
-        shopImageStruct);
+        shopImageStruct,
+        chosenButton);
   }
 
   @Override

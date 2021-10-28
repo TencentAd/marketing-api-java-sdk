@@ -230,6 +230,9 @@ public class DynamicCreativeElementsRead {
   @SerializedName("shop_image_struct")
   private AdCreativeShopImageStruct shopImageStruct = null;
 
+  @SerializedName("chosen_button")
+  private ChosenButton chosenButton = null;
+
   @SerializedName("countdown_expiring_timestamp")
   private Long countdownExpiringTimestamp = null;
 
@@ -1631,6 +1634,25 @@ public class DynamicCreativeElementsRead {
     this.shopImageStruct = shopImageStruct;
   }
 
+  public DynamicCreativeElementsRead chosenButton(ChosenButton chosenButton) {
+    this.chosenButton = chosenButton;
+    return this;
+  }
+
+  /**
+   * Get chosenButton
+   *
+   * @return chosenButton
+   */
+  @ApiModelProperty(value = "")
+  public ChosenButton getChosenButton() {
+    return chosenButton;
+  }
+
+  public void setChosenButton(ChosenButton chosenButton) {
+    this.chosenButton = chosenButton;
+  }
+
   public DynamicCreativeElementsRead countdownExpiringTimestamp(Long countdownExpiringTimestamp) {
     this.countdownExpiringTimestamp = countdownExpiringTimestamp;
     return this;
@@ -1731,6 +1753,7 @@ public class DynamicCreativeElementsRead {
         && Objects.equals(this.shopImage, dynamicCreativeElementsRead.shopImage)
         && Objects.equals(this.headLine, dynamicCreativeElementsRead.headLine)
         && Objects.equals(this.shopImageStruct, dynamicCreativeElementsRead.shopImageStruct)
+        && Objects.equals(this.chosenButton, dynamicCreativeElementsRead.chosenButton)
         && Objects.equals(
             this.countdownExpiringTimestamp,
             dynamicCreativeElementsRead.countdownExpiringTimestamp);
@@ -1808,6 +1831,7 @@ public class DynamicCreativeElementsRead {
         shopImage,
         headLine,
         shopImageStruct,
+        chosenButton,
         countdownExpiringTimestamp);
   }
 
