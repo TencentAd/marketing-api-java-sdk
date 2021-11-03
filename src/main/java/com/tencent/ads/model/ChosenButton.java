@@ -21,92 +21,92 @@ import java.util.Objects;
 /** 选择按钮 */
 @ApiModel(description = "选择按钮")
 public class ChosenButton {
-  @SerializedName("left_button_txt")
-  private String leftButtonTxt = null;
+  @SerializedName("chosen_button_text1")
+  private String chosenButtonText1 = null;
 
-  @SerializedName("left_button_landing_page")
-  private LandingPageStructure leftButtonLandingPage = null;
+  @SerializedName("chosen_button_landing_page1")
+  private LandingPageStructure chosenButtonLandingPage1 = null;
 
-  @SerializedName("right_button_txt")
-  private String rightButtonTxt = null;
+  @SerializedName("chosen_button_text2")
+  private String chosenButtonText2 = null;
 
-  @SerializedName("right_button_landing_page")
-  private LandingPageStructure rightButtonLandingPage = null;
+  @SerializedName("chosen_button_landing_page2")
+  private LandingPageStructure chosenButtonLandingPage2 = null;
 
-  public ChosenButton leftButtonTxt(String leftButtonTxt) {
-    this.leftButtonTxt = leftButtonTxt;
+  public ChosenButton chosenButtonText1(String chosenButtonText1) {
+    this.chosenButtonText1 = chosenButtonText1;
     return this;
   }
 
   /**
-   * Get leftButtonTxt
+   * Get chosenButtonText1
    *
-   * @return leftButtonTxt
+   * @return chosenButtonText1
    */
   @ApiModelProperty(value = "")
-  public String getLeftButtonTxt() {
-    return leftButtonTxt;
+  public String getChosenButtonText1() {
+    return chosenButtonText1;
   }
 
-  public void setLeftButtonTxt(String leftButtonTxt) {
-    this.leftButtonTxt = leftButtonTxt;
+  public void setChosenButtonText1(String chosenButtonText1) {
+    this.chosenButtonText1 = chosenButtonText1;
   }
 
-  public ChosenButton leftButtonLandingPage(LandingPageStructure leftButtonLandingPage) {
-    this.leftButtonLandingPage = leftButtonLandingPage;
+  public ChosenButton chosenButtonLandingPage1(LandingPageStructure chosenButtonLandingPage1) {
+    this.chosenButtonLandingPage1 = chosenButtonLandingPage1;
     return this;
   }
 
   /**
-   * Get leftButtonLandingPage
+   * Get chosenButtonLandingPage1
    *
-   * @return leftButtonLandingPage
+   * @return chosenButtonLandingPage1
    */
   @ApiModelProperty(value = "")
-  public LandingPageStructure getLeftButtonLandingPage() {
-    return leftButtonLandingPage;
+  public LandingPageStructure getChosenButtonLandingPage1() {
+    return chosenButtonLandingPage1;
   }
 
-  public void setLeftButtonLandingPage(LandingPageStructure leftButtonLandingPage) {
-    this.leftButtonLandingPage = leftButtonLandingPage;
+  public void setChosenButtonLandingPage1(LandingPageStructure chosenButtonLandingPage1) {
+    this.chosenButtonLandingPage1 = chosenButtonLandingPage1;
   }
 
-  public ChosenButton rightButtonTxt(String rightButtonTxt) {
-    this.rightButtonTxt = rightButtonTxt;
+  public ChosenButton chosenButtonText2(String chosenButtonText2) {
+    this.chosenButtonText2 = chosenButtonText2;
     return this;
   }
 
   /**
-   * Get rightButtonTxt
+   * Get chosenButtonText2
    *
-   * @return rightButtonTxt
+   * @return chosenButtonText2
    */
   @ApiModelProperty(value = "")
-  public String getRightButtonTxt() {
-    return rightButtonTxt;
+  public String getChosenButtonText2() {
+    return chosenButtonText2;
   }
 
-  public void setRightButtonTxt(String rightButtonTxt) {
-    this.rightButtonTxt = rightButtonTxt;
+  public void setChosenButtonText2(String chosenButtonText2) {
+    this.chosenButtonText2 = chosenButtonText2;
   }
 
-  public ChosenButton rightButtonLandingPage(LandingPageStructure rightButtonLandingPage) {
-    this.rightButtonLandingPage = rightButtonLandingPage;
+  public ChosenButton chosenButtonLandingPage2(LandingPageStructure chosenButtonLandingPage2) {
+    this.chosenButtonLandingPage2 = chosenButtonLandingPage2;
     return this;
   }
 
   /**
-   * Get rightButtonLandingPage
+   * Get chosenButtonLandingPage2
    *
-   * @return rightButtonLandingPage
+   * @return chosenButtonLandingPage2
    */
   @ApiModelProperty(value = "")
-  public LandingPageStructure getRightButtonLandingPage() {
-    return rightButtonLandingPage;
+  public LandingPageStructure getChosenButtonLandingPage2() {
+    return chosenButtonLandingPage2;
   }
 
-  public void setRightButtonLandingPage(LandingPageStructure rightButtonLandingPage) {
-    this.rightButtonLandingPage = rightButtonLandingPage;
+  public void setChosenButtonLandingPage2(LandingPageStructure chosenButtonLandingPage2) {
+    this.chosenButtonLandingPage2 = chosenButtonLandingPage2;
   }
 
   @Override
@@ -118,16 +118,16 @@ public class ChosenButton {
       return false;
     }
     ChosenButton chosenButton = (ChosenButton) o;
-    return Objects.equals(this.leftButtonTxt, chosenButton.leftButtonTxt)
-        && Objects.equals(this.leftButtonLandingPage, chosenButton.leftButtonLandingPage)
-        && Objects.equals(this.rightButtonTxt, chosenButton.rightButtonTxt)
-        && Objects.equals(this.rightButtonLandingPage, chosenButton.rightButtonLandingPage);
+    return Objects.equals(this.chosenButtonText1, chosenButton.chosenButtonText1)
+        && Objects.equals(this.chosenButtonLandingPage1, chosenButton.chosenButtonLandingPage1)
+        && Objects.equals(this.chosenButtonText2, chosenButton.chosenButtonText2)
+        && Objects.equals(this.chosenButtonLandingPage2, chosenButton.chosenButtonLandingPage2);
   }
 
   @Override
   public int hashCode() {
     return Objects.hash(
-        leftButtonTxt, leftButtonLandingPage, rightButtonTxt, rightButtonLandingPage);
+        chosenButtonText1, chosenButtonLandingPage1, chosenButtonText2, chosenButtonLandingPage2);
   }
 
   @Override

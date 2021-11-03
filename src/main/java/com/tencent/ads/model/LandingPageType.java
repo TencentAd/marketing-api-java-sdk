@@ -22,6 +22,8 @@ import java.io.IOException;
 /** 落地页页面类型 */
 @JsonAdapter(LandingPageType.Adapter.class)
 public enum LandingPageType {
+  LANDING_PAGE_TYPE_UNKNOWN("LANDING_PAGE_TYPE_UNKNOWN"),
+
   LANDING_PAGE_TYPE_ANDROID_APP("LANDING_PAGE_TYPE_ANDROID_APP"),
 
   LANDING_PAGE_TYPE_IOS_APP("LANDING_PAGE_TYPE_IOS_APP"),
@@ -163,9 +165,7 @@ public enum LandingPageType {
 
   DEEP_LINK_IOS("DEEP_LINK_IOS"),
 
-  DEEP_LINK_ANDROID("DEEP_LINK_ANDROID"),
-
-  LANDING_PAGE_TYPE_UNKNOWN("LANDING_PAGE_TYPE_UNKNOWN");
+  DEEP_LINK_ANDROID("DEEP_LINK_ANDROID");
 
   private String value;
 

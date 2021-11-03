@@ -26,12 +26,6 @@ public class EstimationSceneTargeting {
   @SerializedName("display_scene")
   private List<String> displayScene = null;
 
-  @SerializedName("mobile_union_category")
-  private List<Long> mobileUnionCategory = null;
-
-  @SerializedName("mobile_union_industry")
-  private List<String> mobileUnionIndustry = null;
-
   public EstimationSceneTargeting displayScene(List<String> displayScene) {
     this.displayScene = displayScene;
     return this;
@@ -59,60 +53,6 @@ public class EstimationSceneTargeting {
     this.displayScene = displayScene;
   }
 
-  public EstimationSceneTargeting mobileUnionCategory(List<Long> mobileUnionCategory) {
-    this.mobileUnionCategory = mobileUnionCategory;
-    return this;
-  }
-
-  public EstimationSceneTargeting addMobileUnionCategoryItem(Long mobileUnionCategoryItem) {
-    if (this.mobileUnionCategory == null) {
-      this.mobileUnionCategory = new ArrayList<Long>();
-    }
-    this.mobileUnionCategory.add(mobileUnionCategoryItem);
-    return this;
-  }
-
-  /**
-   * Get mobileUnionCategory
-   *
-   * @return mobileUnionCategory
-   */
-  @ApiModelProperty(value = "")
-  public List<Long> getMobileUnionCategory() {
-    return mobileUnionCategory;
-  }
-
-  public void setMobileUnionCategory(List<Long> mobileUnionCategory) {
-    this.mobileUnionCategory = mobileUnionCategory;
-  }
-
-  public EstimationSceneTargeting mobileUnionIndustry(List<String> mobileUnionIndustry) {
-    this.mobileUnionIndustry = mobileUnionIndustry;
-    return this;
-  }
-
-  public EstimationSceneTargeting addMobileUnionIndustryItem(String mobileUnionIndustryItem) {
-    if (this.mobileUnionIndustry == null) {
-      this.mobileUnionIndustry = new ArrayList<String>();
-    }
-    this.mobileUnionIndustry.add(mobileUnionIndustryItem);
-    return this;
-  }
-
-  /**
-   * Get mobileUnionIndustry
-   *
-   * @return mobileUnionIndustry
-   */
-  @ApiModelProperty(value = "")
-  public List<String> getMobileUnionIndustry() {
-    return mobileUnionIndustry;
-  }
-
-  public void setMobileUnionIndustry(List<String> mobileUnionIndustry) {
-    this.mobileUnionIndustry = mobileUnionIndustry;
-  }
-
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -122,14 +62,12 @@ public class EstimationSceneTargeting {
       return false;
     }
     EstimationSceneTargeting estimationSceneTargeting = (EstimationSceneTargeting) o;
-    return Objects.equals(this.displayScene, estimationSceneTargeting.displayScene)
-        && Objects.equals(this.mobileUnionCategory, estimationSceneTargeting.mobileUnionCategory)
-        && Objects.equals(this.mobileUnionIndustry, estimationSceneTargeting.mobileUnionIndustry);
+    return Objects.equals(this.displayScene, estimationSceneTargeting.displayScene);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(displayScene, mobileUnionCategory, mobileUnionIndustry);
+    return Objects.hash(displayScene);
   }
 
   @Override

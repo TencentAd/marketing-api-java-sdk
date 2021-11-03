@@ -23,9 +23,6 @@ import java.util.Objects;
 /** 场景定向 */
 @ApiModel(description = "场景定向")
 public class SceneTargetingForWrite {
-  @SerializedName("mobile_union_industry")
-  private List<String> mobileUnionIndustry = null;
-
   @SerializedName("union_position_package")
   private List<Long> unionPositionPackage = null;
 
@@ -35,9 +32,6 @@ public class SceneTargetingForWrite {
   @SerializedName("display_scene")
   private List<String> displayScene = null;
 
-  @SerializedName("mobile_union_category")
-  private List<Long> mobileUnionCategory = null;
-
   @SerializedName("tencent_news")
   private List<String> tencentNews = null;
 
@@ -46,33 +40,6 @@ public class SceneTargetingForWrite {
 
   @SerializedName("wechat_position")
   private List<Long> wechatPosition = null;
-
-  public SceneTargetingForWrite mobileUnionIndustry(List<String> mobileUnionIndustry) {
-    this.mobileUnionIndustry = mobileUnionIndustry;
-    return this;
-  }
-
-  public SceneTargetingForWrite addMobileUnionIndustryItem(String mobileUnionIndustryItem) {
-    if (this.mobileUnionIndustry == null) {
-      this.mobileUnionIndustry = new ArrayList<String>();
-    }
-    this.mobileUnionIndustry.add(mobileUnionIndustryItem);
-    return this;
-  }
-
-  /**
-   * Get mobileUnionIndustry
-   *
-   * @return mobileUnionIndustry
-   */
-  @ApiModelProperty(value = "")
-  public List<String> getMobileUnionIndustry() {
-    return mobileUnionIndustry;
-  }
-
-  public void setMobileUnionIndustry(List<String> mobileUnionIndustry) {
-    this.mobileUnionIndustry = mobileUnionIndustry;
-  }
 
   public SceneTargetingForWrite unionPositionPackage(List<Long> unionPositionPackage) {
     this.unionPositionPackage = unionPositionPackage;
@@ -157,33 +124,6 @@ public class SceneTargetingForWrite {
     this.displayScene = displayScene;
   }
 
-  public SceneTargetingForWrite mobileUnionCategory(List<Long> mobileUnionCategory) {
-    this.mobileUnionCategory = mobileUnionCategory;
-    return this;
-  }
-
-  public SceneTargetingForWrite addMobileUnionCategoryItem(Long mobileUnionCategoryItem) {
-    if (this.mobileUnionCategory == null) {
-      this.mobileUnionCategory = new ArrayList<Long>();
-    }
-    this.mobileUnionCategory.add(mobileUnionCategoryItem);
-    return this;
-  }
-
-  /**
-   * Get mobileUnionCategory
-   *
-   * @return mobileUnionCategory
-   */
-  @ApiModelProperty(value = "")
-  public List<Long> getMobileUnionCategory() {
-    return mobileUnionCategory;
-  }
-
-  public void setMobileUnionCategory(List<Long> mobileUnionCategory) {
-    this.mobileUnionCategory = mobileUnionCategory;
-  }
-
   public SceneTargetingForWrite tencentNews(List<String> tencentNews) {
     this.tencentNews = tencentNews;
     return this;
@@ -266,12 +206,10 @@ public class SceneTargetingForWrite {
       return false;
     }
     SceneTargetingForWrite sceneTargetingForWrite = (SceneTargetingForWrite) o;
-    return Objects.equals(this.mobileUnionIndustry, sceneTargetingForWrite.mobileUnionIndustry)
-        && Objects.equals(this.unionPositionPackage, sceneTargetingForWrite.unionPositionPackage)
+    return Objects.equals(this.unionPositionPackage, sceneTargetingForWrite.unionPositionPackage)
         && Objects.equals(
             this.excludeUnionPositionPackage, sceneTargetingForWrite.excludeUnionPositionPackage)
         && Objects.equals(this.displayScene, sceneTargetingForWrite.displayScene)
-        && Objects.equals(this.mobileUnionCategory, sceneTargetingForWrite.mobileUnionCategory)
         && Objects.equals(this.tencentNews, sceneTargetingForWrite.tencentNews)
         && Objects.equals(this.wechatScene, sceneTargetingForWrite.wechatScene)
         && Objects.equals(this.wechatPosition, sceneTargetingForWrite.wechatPosition);
@@ -280,11 +218,9 @@ public class SceneTargetingForWrite {
   @Override
   public int hashCode() {
     return Objects.hash(
-        mobileUnionIndustry,
         unionPositionPackage,
         excludeUnionPositionPackage,
         displayScene,
-        mobileUnionCategory,
         tencentNews,
         wechatScene,
         wechatPosition);

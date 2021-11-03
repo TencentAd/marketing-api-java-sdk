@@ -113,9 +113,6 @@ public class WriteTargetingSettingForAdgroup {
   @SerializedName("wechat_official_account_category")
   private List<Long> wechatOfficialAccountCategory = null;
 
-  @SerializedName("mobile_union_category")
-  private List<Long> mobileUnionCategory = null;
-
   @SerializedName("mini_game_qq_status")
   private List<String> miniGameQqStatus = null;
 
@@ -907,33 +904,6 @@ public class WriteTargetingSettingForAdgroup {
     this.wechatOfficialAccountCategory = wechatOfficialAccountCategory;
   }
 
-  public WriteTargetingSettingForAdgroup mobileUnionCategory(List<Long> mobileUnionCategory) {
-    this.mobileUnionCategory = mobileUnionCategory;
-    return this;
-  }
-
-  public WriteTargetingSettingForAdgroup addMobileUnionCategoryItem(Long mobileUnionCategoryItem) {
-    if (this.mobileUnionCategory == null) {
-      this.mobileUnionCategory = new ArrayList<Long>();
-    }
-    this.mobileUnionCategory.add(mobileUnionCategoryItem);
-    return this;
-  }
-
-  /**
-   * Get mobileUnionCategory
-   *
-   * @return mobileUnionCategory
-   */
-  @ApiModelProperty(value = "")
-  public List<Long> getMobileUnionCategory() {
-    return mobileUnionCategory;
-  }
-
-  public void setMobileUnionCategory(List<Long> mobileUnionCategory) {
-    this.mobileUnionCategory = mobileUnionCategory;
-  }
-
   public WriteTargetingSettingForAdgroup miniGameQqStatus(List<String> miniGameQqStatus) {
     this.miniGameQqStatus = miniGameQqStatus;
     return this;
@@ -1030,8 +1000,6 @@ public class WriteTargetingSettingForAdgroup {
         && Objects.equals(
             this.wechatOfficialAccountCategory,
             writeTargetingSettingForAdgroup.wechatOfficialAccountCategory)
-        && Objects.equals(
-            this.mobileUnionCategory, writeTargetingSettingForAdgroup.mobileUnionCategory)
         && Objects.equals(this.miniGameQqStatus, writeTargetingSettingForAdgroup.miniGameQqStatus)
         && Objects.equals(
             this.excludedConvertedAudience,
@@ -1071,7 +1039,6 @@ public class WriteTargetingSettingForAdgroup {
         excludedCustomAudience,
         behaviorOrInterest,
         wechatOfficialAccountCategory,
-        mobileUnionCategory,
         miniGameQqStatus,
         excludedConvertedAudience);
   }
