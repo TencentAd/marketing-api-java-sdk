@@ -45,11 +45,8 @@ public class ActionsUserId {
   @SerializedName("hash_android_id")
   private String hashAndroidId = null;
 
-  @SerializedName("hash_mac")
-  private String hashMac = null;
-
-  @SerializedName("oaid")
-  private String oaid = null;
+  @SerializedName("hash_oaid")
+  private String hashOaid = null;
 
   @SerializedName("md5_sha256_oaid")
   private String md5Sha256Oaid = null;
@@ -215,42 +212,23 @@ public class ActionsUserId {
     this.hashAndroidId = hashAndroidId;
   }
 
-  public ActionsUserId hashMac(String hashMac) {
-    this.hashMac = hashMac;
+  public ActionsUserId hashOaid(String hashOaid) {
+    this.hashOaid = hashOaid;
     return this;
   }
 
   /**
-   * Get hashMac
+   * Get hashOaid
    *
-   * @return hashMac
+   * @return hashOaid
    */
   @ApiModelProperty(value = "")
-  public String getHashMac() {
-    return hashMac;
+  public String getHashOaid() {
+    return hashOaid;
   }
 
-  public void setHashMac(String hashMac) {
-    this.hashMac = hashMac;
-  }
-
-  public ActionsUserId oaid(String oaid) {
-    this.oaid = oaid;
-    return this;
-  }
-
-  /**
-   * Get oaid
-   *
-   * @return oaid
-   */
-  @ApiModelProperty(value = "")
-  public String getOaid() {
-    return oaid;
-  }
-
-  public void setOaid(String oaid) {
-    this.oaid = oaid;
+  public void setHashOaid(String hashOaid) {
+    this.hashOaid = hashOaid;
   }
 
   public ActionsUserId md5Sha256Oaid(String md5Sha256Oaid) {
@@ -346,8 +324,7 @@ public class ActionsUserId {
         && Objects.equals(this.hashPhone, actionsUserId.hashPhone)
         && Objects.equals(this.sha256Phone, actionsUserId.sha256Phone)
         && Objects.equals(this.hashAndroidId, actionsUserId.hashAndroidId)
-        && Objects.equals(this.hashMac, actionsUserId.hashMac)
-        && Objects.equals(this.oaid, actionsUserId.oaid)
+        && Objects.equals(this.hashOaid, actionsUserId.hashOaid)
         && Objects.equals(this.md5Sha256Oaid, actionsUserId.md5Sha256Oaid)
         && Objects.equals(this.wechatOpenid, actionsUserId.wechatOpenid)
         && Objects.equals(this.wechatUnionid, actionsUserId.wechatUnionid)
@@ -365,8 +342,7 @@ public class ActionsUserId {
         hashPhone,
         sha256Phone,
         hashAndroidId,
-        hashMac,
-        oaid,
+        hashOaid,
         md5Sha256Oaid,
         wechatOpenid,
         wechatUnionid,

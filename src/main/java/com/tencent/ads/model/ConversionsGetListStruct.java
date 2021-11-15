@@ -75,6 +75,9 @@ public class ConversionsGetListStruct {
   @SerializedName("conversion_scene")
   private ConversionScene conversionScene = null;
 
+  @SerializedName("owner_id")
+  private Long ownerId = null;
+
   public ConversionsGetListStruct conversionId(Long conversionId) {
     this.conversionId = conversionId;
     return this;
@@ -419,6 +422,25 @@ public class ConversionsGetListStruct {
     this.conversionScene = conversionScene;
   }
 
+  public ConversionsGetListStruct ownerId(Long ownerId) {
+    this.ownerId = ownerId;
+    return this;
+  }
+
+  /**
+   * Get ownerId
+   *
+   * @return ownerId
+   */
+  @ApiModelProperty(value = "")
+  public Long getOwnerId() {
+    return ownerId;
+  }
+
+  public void setOwnerId(Long ownerId) {
+    this.ownerId = ownerId;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -449,7 +471,8 @@ public class ConversionsGetListStruct {
         && Objects.equals(
             this.appAndroidChannelPackageId, conversionsGetListStruct.appAndroidChannelPackageId)
         && Objects.equals(this.promotedObjectId, conversionsGetListStruct.promotedObjectId)
-        && Objects.equals(this.conversionScene, conversionsGetListStruct.conversionScene);
+        && Objects.equals(this.conversionScene, conversionsGetListStruct.conversionScene)
+        && Objects.equals(this.ownerId, conversionsGetListStruct.ownerId);
   }
 
   @Override
@@ -472,7 +495,8 @@ public class ConversionsGetListStruct {
         createSourceType,
         appAndroidChannelPackageId,
         promotedObjectId,
-        conversionScene);
+        conversionScene,
+        ownerId);
   }
 
   @Override
