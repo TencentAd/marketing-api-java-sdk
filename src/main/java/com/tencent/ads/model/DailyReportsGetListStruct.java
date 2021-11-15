@@ -543,6 +543,18 @@ public class DailyReportsGetListStruct {
   @SerializedName("first_pay_count")
   private Long firstPayCount = null;
 
+  @SerializedName("wechat_local_pay_count")
+  private Long wechatLocalPayCount = null;
+
+  @SerializedName("wechat_local_payuser_count")
+  private Long wechatLocalPayuserCount = null;
+
+  @SerializedName("wechat_local_pay_amount")
+  private Long wechatLocalPayAmount = null;
+
+  @SerializedName("wechat_local_pay_roi")
+  private Long wechatLocalPayRoi = null;
+
   @SerializedName("first_pay_rate")
   private Double firstPayRate = null;
 
@@ -4885,6 +4897,82 @@ public class DailyReportsGetListStruct {
 
   public void setFirstPayCount(Long firstPayCount) {
     this.firstPayCount = firstPayCount;
+  }
+
+  public DailyReportsGetListStruct wechatLocalPayCount(Long wechatLocalPayCount) {
+    this.wechatLocalPayCount = wechatLocalPayCount;
+    return this;
+  }
+
+  /**
+   * Get wechatLocalPayCount
+   *
+   * @return wechatLocalPayCount
+   */
+  @ApiModelProperty(value = "")
+  public Long getWechatLocalPayCount() {
+    return wechatLocalPayCount;
+  }
+
+  public void setWechatLocalPayCount(Long wechatLocalPayCount) {
+    this.wechatLocalPayCount = wechatLocalPayCount;
+  }
+
+  public DailyReportsGetListStruct wechatLocalPayuserCount(Long wechatLocalPayuserCount) {
+    this.wechatLocalPayuserCount = wechatLocalPayuserCount;
+    return this;
+  }
+
+  /**
+   * Get wechatLocalPayuserCount
+   *
+   * @return wechatLocalPayuserCount
+   */
+  @ApiModelProperty(value = "")
+  public Long getWechatLocalPayuserCount() {
+    return wechatLocalPayuserCount;
+  }
+
+  public void setWechatLocalPayuserCount(Long wechatLocalPayuserCount) {
+    this.wechatLocalPayuserCount = wechatLocalPayuserCount;
+  }
+
+  public DailyReportsGetListStruct wechatLocalPayAmount(Long wechatLocalPayAmount) {
+    this.wechatLocalPayAmount = wechatLocalPayAmount;
+    return this;
+  }
+
+  /**
+   * Get wechatLocalPayAmount
+   *
+   * @return wechatLocalPayAmount
+   */
+  @ApiModelProperty(value = "")
+  public Long getWechatLocalPayAmount() {
+    return wechatLocalPayAmount;
+  }
+
+  public void setWechatLocalPayAmount(Long wechatLocalPayAmount) {
+    this.wechatLocalPayAmount = wechatLocalPayAmount;
+  }
+
+  public DailyReportsGetListStruct wechatLocalPayRoi(Long wechatLocalPayRoi) {
+    this.wechatLocalPayRoi = wechatLocalPayRoi;
+    return this;
+  }
+
+  /**
+   * Get wechatLocalPayRoi
+   *
+   * @return wechatLocalPayRoi
+   */
+  @ApiModelProperty(value = "")
+  public Long getWechatLocalPayRoi() {
+    return wechatLocalPayRoi;
+  }
+
+  public void setWechatLocalPayRoi(Long wechatLocalPayRoi) {
+    this.wechatLocalPayRoi = wechatLocalPayRoi;
   }
 
   public DailyReportsGetListStruct firstPayRate(Double firstPayRate) {
@@ -11709,6 +11797,11 @@ public class DailyReportsGetListStruct {
         && Objects.equals(this.addDesktopPv, dailyReportsGetListStruct.addDesktopPv)
         && Objects.equals(this.addDesktopCost, dailyReportsGetListStruct.addDesktopCost)
         && Objects.equals(this.firstPayCount, dailyReportsGetListStruct.firstPayCount)
+        && Objects.equals(this.wechatLocalPayCount, dailyReportsGetListStruct.wechatLocalPayCount)
+        && Objects.equals(
+            this.wechatLocalPayuserCount, dailyReportsGetListStruct.wechatLocalPayuserCount)
+        && Objects.equals(this.wechatLocalPayAmount, dailyReportsGetListStruct.wechatLocalPayAmount)
+        && Objects.equals(this.wechatLocalPayRoi, dailyReportsGetListStruct.wechatLocalPayRoi)
         && Objects.equals(this.firstPayRate, dailyReportsGetListStruct.firstPayRate)
         && Objects.equals(this.preCreWeb, dailyReportsGetListStruct.preCreWeb)
         && Objects.equals(this.preCreApp, dailyReportsGetListStruct.preCreApp)
@@ -12427,6 +12520,10 @@ public class DailyReportsGetListStruct {
         addDesktopPv,
         addDesktopCost,
         firstPayCount,
+        wechatLocalPayCount,
+        wechatLocalPayuserCount,
+        wechatLocalPayAmount,
+        wechatLocalPayRoi,
         firstPayRate,
         preCreWeb,
         preCreApp,
