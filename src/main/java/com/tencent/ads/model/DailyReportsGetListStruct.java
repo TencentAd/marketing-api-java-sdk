@@ -1035,6 +1035,72 @@ public class DailyReportsGetListStruct {
   @SerializedName("mini_game_paying_arpu")
   private Long miniGamePayingArpu = null;
 
+  @SerializedName("mini_game_bf_uv")
+  private Long miniGameBfUv = null;
+
+  @SerializedName("mini_game_bf_cost")
+  private Long miniGameBfCost = null;
+
+  @SerializedName("mini_game_bf_income_uv")
+  private Long miniGameBfIncomeUv = null;
+
+  @SerializedName("mini_game_bf_income_amount")
+  private Long miniGameBfIncomeAmount = null;
+
+  @SerializedName("mini_game_bf_income_cost")
+  private Long miniGameBfIncomeCost = null;
+
+  @SerializedName("mini_game_bf_income_roi")
+  private Double miniGameBfIncomeRoi = null;
+
+  @SerializedName("mini_game_bf_income_arpu")
+  private Long miniGameBfIncomeArpu = null;
+
+  @SerializedName("mini_game_bf_income_d1_uv")
+  private Long miniGameBfIncomeD1Uv = null;
+
+  @SerializedName("mini_game_bf_income_d1_amount")
+  private Long miniGameBfIncomeD1Amount = null;
+
+  @SerializedName("mini_game_bf_income_d1_cost")
+  private Long miniGameBfIncomeD1Cost = null;
+
+  @SerializedName("mini_game_bf_income_d1_roi")
+  private Double miniGameBfIncomeD1Roi = null;
+
+  @SerializedName("mini_game_bf_income_d1_arpu")
+  private Long miniGameBfIncomeD1Arpu = null;
+
+  @SerializedName("mini_game_bf_purchase_uv")
+  private Long miniGameBfPurchaseUv = null;
+
+  @SerializedName("mini_game_bf_purchase_amount")
+  private Long miniGameBfPurchaseAmount = null;
+
+  @SerializedName("mini_game_bf_purchase_cost")
+  private Long miniGameBfPurchaseCost = null;
+
+  @SerializedName("mini_game_bf_purchase_roi")
+  private Double miniGameBfPurchaseRoi = null;
+
+  @SerializedName("mini_game_bf_purchase_arpu")
+  private Long miniGameBfPurchaseArpu = null;
+
+  @SerializedName("mini_game_bf_purchase_d1_uv")
+  private Long miniGameBfPurchaseD1Uv = null;
+
+  @SerializedName("mini_game_bf_purchase_d1_amount")
+  private Long miniGameBfPurchaseD1Amount = null;
+
+  @SerializedName("mini_game_bf_purchase_d1_cost")
+  private Long miniGameBfPurchaseD1Cost = null;
+
+  @SerializedName("mini_game_bf_purchase_d1_roi")
+  private Double miniGameBfPurchaseD1Roi = null;
+
+  @SerializedName("mini_game_bf_purchase_d1_arpu")
+  private Long miniGameBfPurchaseD1Arpu = null;
+
   @SerializedName("request_conversions_count")
   private Long requestConversionsCount = null;
 
@@ -8022,6 +8088,424 @@ public class DailyReportsGetListStruct {
     this.miniGamePayingArpu = miniGamePayingArpu;
   }
 
+  public DailyReportsGetListStruct miniGameBfUv(Long miniGameBfUv) {
+    this.miniGameBfUv = miniGameBfUv;
+    return this;
+  }
+
+  /**
+   * Get miniGameBfUv
+   *
+   * @return miniGameBfUv
+   */
+  @ApiModelProperty(value = "")
+  public Long getMiniGameBfUv() {
+    return miniGameBfUv;
+  }
+
+  public void setMiniGameBfUv(Long miniGameBfUv) {
+    this.miniGameBfUv = miniGameBfUv;
+  }
+
+  public DailyReportsGetListStruct miniGameBfCost(Long miniGameBfCost) {
+    this.miniGameBfCost = miniGameBfCost;
+    return this;
+  }
+
+  /**
+   * Get miniGameBfCost
+   *
+   * @return miniGameBfCost
+   */
+  @ApiModelProperty(value = "")
+  public Long getMiniGameBfCost() {
+    return miniGameBfCost;
+  }
+
+  public void setMiniGameBfCost(Long miniGameBfCost) {
+    this.miniGameBfCost = miniGameBfCost;
+  }
+
+  public DailyReportsGetListStruct miniGameBfIncomeUv(Long miniGameBfIncomeUv) {
+    this.miniGameBfIncomeUv = miniGameBfIncomeUv;
+    return this;
+  }
+
+  /**
+   * Get miniGameBfIncomeUv
+   *
+   * @return miniGameBfIncomeUv
+   */
+  @ApiModelProperty(value = "")
+  public Long getMiniGameBfIncomeUv() {
+    return miniGameBfIncomeUv;
+  }
+
+  public void setMiniGameBfIncomeUv(Long miniGameBfIncomeUv) {
+    this.miniGameBfIncomeUv = miniGameBfIncomeUv;
+  }
+
+  public DailyReportsGetListStruct miniGameBfIncomeAmount(Long miniGameBfIncomeAmount) {
+    this.miniGameBfIncomeAmount = miniGameBfIncomeAmount;
+    return this;
+  }
+
+  /**
+   * Get miniGameBfIncomeAmount
+   *
+   * @return miniGameBfIncomeAmount
+   */
+  @ApiModelProperty(value = "")
+  public Long getMiniGameBfIncomeAmount() {
+    return miniGameBfIncomeAmount;
+  }
+
+  public void setMiniGameBfIncomeAmount(Long miniGameBfIncomeAmount) {
+    this.miniGameBfIncomeAmount = miniGameBfIncomeAmount;
+  }
+
+  public DailyReportsGetListStruct miniGameBfIncomeCost(Long miniGameBfIncomeCost) {
+    this.miniGameBfIncomeCost = miniGameBfIncomeCost;
+    return this;
+  }
+
+  /**
+   * Get miniGameBfIncomeCost
+   *
+   * @return miniGameBfIncomeCost
+   */
+  @ApiModelProperty(value = "")
+  public Long getMiniGameBfIncomeCost() {
+    return miniGameBfIncomeCost;
+  }
+
+  public void setMiniGameBfIncomeCost(Long miniGameBfIncomeCost) {
+    this.miniGameBfIncomeCost = miniGameBfIncomeCost;
+  }
+
+  public DailyReportsGetListStruct miniGameBfIncomeRoi(Double miniGameBfIncomeRoi) {
+    this.miniGameBfIncomeRoi = miniGameBfIncomeRoi;
+    return this;
+  }
+
+  /**
+   * Get miniGameBfIncomeRoi
+   *
+   * @return miniGameBfIncomeRoi
+   */
+  @ApiModelProperty(value = "")
+  public Double getMiniGameBfIncomeRoi() {
+    return miniGameBfIncomeRoi;
+  }
+
+  public void setMiniGameBfIncomeRoi(Double miniGameBfIncomeRoi) {
+    this.miniGameBfIncomeRoi = miniGameBfIncomeRoi;
+  }
+
+  public DailyReportsGetListStruct miniGameBfIncomeArpu(Long miniGameBfIncomeArpu) {
+    this.miniGameBfIncomeArpu = miniGameBfIncomeArpu;
+    return this;
+  }
+
+  /**
+   * Get miniGameBfIncomeArpu
+   *
+   * @return miniGameBfIncomeArpu
+   */
+  @ApiModelProperty(value = "")
+  public Long getMiniGameBfIncomeArpu() {
+    return miniGameBfIncomeArpu;
+  }
+
+  public void setMiniGameBfIncomeArpu(Long miniGameBfIncomeArpu) {
+    this.miniGameBfIncomeArpu = miniGameBfIncomeArpu;
+  }
+
+  public DailyReportsGetListStruct miniGameBfIncomeD1Uv(Long miniGameBfIncomeD1Uv) {
+    this.miniGameBfIncomeD1Uv = miniGameBfIncomeD1Uv;
+    return this;
+  }
+
+  /**
+   * Get miniGameBfIncomeD1Uv
+   *
+   * @return miniGameBfIncomeD1Uv
+   */
+  @ApiModelProperty(value = "")
+  public Long getMiniGameBfIncomeD1Uv() {
+    return miniGameBfIncomeD1Uv;
+  }
+
+  public void setMiniGameBfIncomeD1Uv(Long miniGameBfIncomeD1Uv) {
+    this.miniGameBfIncomeD1Uv = miniGameBfIncomeD1Uv;
+  }
+
+  public DailyReportsGetListStruct miniGameBfIncomeD1Amount(Long miniGameBfIncomeD1Amount) {
+    this.miniGameBfIncomeD1Amount = miniGameBfIncomeD1Amount;
+    return this;
+  }
+
+  /**
+   * Get miniGameBfIncomeD1Amount
+   *
+   * @return miniGameBfIncomeD1Amount
+   */
+  @ApiModelProperty(value = "")
+  public Long getMiniGameBfIncomeD1Amount() {
+    return miniGameBfIncomeD1Amount;
+  }
+
+  public void setMiniGameBfIncomeD1Amount(Long miniGameBfIncomeD1Amount) {
+    this.miniGameBfIncomeD1Amount = miniGameBfIncomeD1Amount;
+  }
+
+  public DailyReportsGetListStruct miniGameBfIncomeD1Cost(Long miniGameBfIncomeD1Cost) {
+    this.miniGameBfIncomeD1Cost = miniGameBfIncomeD1Cost;
+    return this;
+  }
+
+  /**
+   * Get miniGameBfIncomeD1Cost
+   *
+   * @return miniGameBfIncomeD1Cost
+   */
+  @ApiModelProperty(value = "")
+  public Long getMiniGameBfIncomeD1Cost() {
+    return miniGameBfIncomeD1Cost;
+  }
+
+  public void setMiniGameBfIncomeD1Cost(Long miniGameBfIncomeD1Cost) {
+    this.miniGameBfIncomeD1Cost = miniGameBfIncomeD1Cost;
+  }
+
+  public DailyReportsGetListStruct miniGameBfIncomeD1Roi(Double miniGameBfIncomeD1Roi) {
+    this.miniGameBfIncomeD1Roi = miniGameBfIncomeD1Roi;
+    return this;
+  }
+
+  /**
+   * Get miniGameBfIncomeD1Roi
+   *
+   * @return miniGameBfIncomeD1Roi
+   */
+  @ApiModelProperty(value = "")
+  public Double getMiniGameBfIncomeD1Roi() {
+    return miniGameBfIncomeD1Roi;
+  }
+
+  public void setMiniGameBfIncomeD1Roi(Double miniGameBfIncomeD1Roi) {
+    this.miniGameBfIncomeD1Roi = miniGameBfIncomeD1Roi;
+  }
+
+  public DailyReportsGetListStruct miniGameBfIncomeD1Arpu(Long miniGameBfIncomeD1Arpu) {
+    this.miniGameBfIncomeD1Arpu = miniGameBfIncomeD1Arpu;
+    return this;
+  }
+
+  /**
+   * Get miniGameBfIncomeD1Arpu
+   *
+   * @return miniGameBfIncomeD1Arpu
+   */
+  @ApiModelProperty(value = "")
+  public Long getMiniGameBfIncomeD1Arpu() {
+    return miniGameBfIncomeD1Arpu;
+  }
+
+  public void setMiniGameBfIncomeD1Arpu(Long miniGameBfIncomeD1Arpu) {
+    this.miniGameBfIncomeD1Arpu = miniGameBfIncomeD1Arpu;
+  }
+
+  public DailyReportsGetListStruct miniGameBfPurchaseUv(Long miniGameBfPurchaseUv) {
+    this.miniGameBfPurchaseUv = miniGameBfPurchaseUv;
+    return this;
+  }
+
+  /**
+   * Get miniGameBfPurchaseUv
+   *
+   * @return miniGameBfPurchaseUv
+   */
+  @ApiModelProperty(value = "")
+  public Long getMiniGameBfPurchaseUv() {
+    return miniGameBfPurchaseUv;
+  }
+
+  public void setMiniGameBfPurchaseUv(Long miniGameBfPurchaseUv) {
+    this.miniGameBfPurchaseUv = miniGameBfPurchaseUv;
+  }
+
+  public DailyReportsGetListStruct miniGameBfPurchaseAmount(Long miniGameBfPurchaseAmount) {
+    this.miniGameBfPurchaseAmount = miniGameBfPurchaseAmount;
+    return this;
+  }
+
+  /**
+   * Get miniGameBfPurchaseAmount
+   *
+   * @return miniGameBfPurchaseAmount
+   */
+  @ApiModelProperty(value = "")
+  public Long getMiniGameBfPurchaseAmount() {
+    return miniGameBfPurchaseAmount;
+  }
+
+  public void setMiniGameBfPurchaseAmount(Long miniGameBfPurchaseAmount) {
+    this.miniGameBfPurchaseAmount = miniGameBfPurchaseAmount;
+  }
+
+  public DailyReportsGetListStruct miniGameBfPurchaseCost(Long miniGameBfPurchaseCost) {
+    this.miniGameBfPurchaseCost = miniGameBfPurchaseCost;
+    return this;
+  }
+
+  /**
+   * Get miniGameBfPurchaseCost
+   *
+   * @return miniGameBfPurchaseCost
+   */
+  @ApiModelProperty(value = "")
+  public Long getMiniGameBfPurchaseCost() {
+    return miniGameBfPurchaseCost;
+  }
+
+  public void setMiniGameBfPurchaseCost(Long miniGameBfPurchaseCost) {
+    this.miniGameBfPurchaseCost = miniGameBfPurchaseCost;
+  }
+
+  public DailyReportsGetListStruct miniGameBfPurchaseRoi(Double miniGameBfPurchaseRoi) {
+    this.miniGameBfPurchaseRoi = miniGameBfPurchaseRoi;
+    return this;
+  }
+
+  /**
+   * Get miniGameBfPurchaseRoi
+   *
+   * @return miniGameBfPurchaseRoi
+   */
+  @ApiModelProperty(value = "")
+  public Double getMiniGameBfPurchaseRoi() {
+    return miniGameBfPurchaseRoi;
+  }
+
+  public void setMiniGameBfPurchaseRoi(Double miniGameBfPurchaseRoi) {
+    this.miniGameBfPurchaseRoi = miniGameBfPurchaseRoi;
+  }
+
+  public DailyReportsGetListStruct miniGameBfPurchaseArpu(Long miniGameBfPurchaseArpu) {
+    this.miniGameBfPurchaseArpu = miniGameBfPurchaseArpu;
+    return this;
+  }
+
+  /**
+   * Get miniGameBfPurchaseArpu
+   *
+   * @return miniGameBfPurchaseArpu
+   */
+  @ApiModelProperty(value = "")
+  public Long getMiniGameBfPurchaseArpu() {
+    return miniGameBfPurchaseArpu;
+  }
+
+  public void setMiniGameBfPurchaseArpu(Long miniGameBfPurchaseArpu) {
+    this.miniGameBfPurchaseArpu = miniGameBfPurchaseArpu;
+  }
+
+  public DailyReportsGetListStruct miniGameBfPurchaseD1Uv(Long miniGameBfPurchaseD1Uv) {
+    this.miniGameBfPurchaseD1Uv = miniGameBfPurchaseD1Uv;
+    return this;
+  }
+
+  /**
+   * Get miniGameBfPurchaseD1Uv
+   *
+   * @return miniGameBfPurchaseD1Uv
+   */
+  @ApiModelProperty(value = "")
+  public Long getMiniGameBfPurchaseD1Uv() {
+    return miniGameBfPurchaseD1Uv;
+  }
+
+  public void setMiniGameBfPurchaseD1Uv(Long miniGameBfPurchaseD1Uv) {
+    this.miniGameBfPurchaseD1Uv = miniGameBfPurchaseD1Uv;
+  }
+
+  public DailyReportsGetListStruct miniGameBfPurchaseD1Amount(Long miniGameBfPurchaseD1Amount) {
+    this.miniGameBfPurchaseD1Amount = miniGameBfPurchaseD1Amount;
+    return this;
+  }
+
+  /**
+   * Get miniGameBfPurchaseD1Amount
+   *
+   * @return miniGameBfPurchaseD1Amount
+   */
+  @ApiModelProperty(value = "")
+  public Long getMiniGameBfPurchaseD1Amount() {
+    return miniGameBfPurchaseD1Amount;
+  }
+
+  public void setMiniGameBfPurchaseD1Amount(Long miniGameBfPurchaseD1Amount) {
+    this.miniGameBfPurchaseD1Amount = miniGameBfPurchaseD1Amount;
+  }
+
+  public DailyReportsGetListStruct miniGameBfPurchaseD1Cost(Long miniGameBfPurchaseD1Cost) {
+    this.miniGameBfPurchaseD1Cost = miniGameBfPurchaseD1Cost;
+    return this;
+  }
+
+  /**
+   * Get miniGameBfPurchaseD1Cost
+   *
+   * @return miniGameBfPurchaseD1Cost
+   */
+  @ApiModelProperty(value = "")
+  public Long getMiniGameBfPurchaseD1Cost() {
+    return miniGameBfPurchaseD1Cost;
+  }
+
+  public void setMiniGameBfPurchaseD1Cost(Long miniGameBfPurchaseD1Cost) {
+    this.miniGameBfPurchaseD1Cost = miniGameBfPurchaseD1Cost;
+  }
+
+  public DailyReportsGetListStruct miniGameBfPurchaseD1Roi(Double miniGameBfPurchaseD1Roi) {
+    this.miniGameBfPurchaseD1Roi = miniGameBfPurchaseD1Roi;
+    return this;
+  }
+
+  /**
+   * Get miniGameBfPurchaseD1Roi
+   *
+   * @return miniGameBfPurchaseD1Roi
+   */
+  @ApiModelProperty(value = "")
+  public Double getMiniGameBfPurchaseD1Roi() {
+    return miniGameBfPurchaseD1Roi;
+  }
+
+  public void setMiniGameBfPurchaseD1Roi(Double miniGameBfPurchaseD1Roi) {
+    this.miniGameBfPurchaseD1Roi = miniGameBfPurchaseD1Roi;
+  }
+
+  public DailyReportsGetListStruct miniGameBfPurchaseD1Arpu(Long miniGameBfPurchaseD1Arpu) {
+    this.miniGameBfPurchaseD1Arpu = miniGameBfPurchaseD1Arpu;
+    return this;
+  }
+
+  /**
+   * Get miniGameBfPurchaseD1Arpu
+   *
+   * @return miniGameBfPurchaseD1Arpu
+   */
+  @ApiModelProperty(value = "")
+  public Long getMiniGameBfPurchaseD1Arpu() {
+    return miniGameBfPurchaseD1Arpu;
+  }
+
+  public void setMiniGameBfPurchaseD1Arpu(Long miniGameBfPurchaseD1Arpu) {
+    this.miniGameBfPurchaseD1Arpu = miniGameBfPurchaseD1Arpu;
+  }
+
   public DailyReportsGetListStruct requestConversionsCount(Long requestConversionsCount) {
     this.requestConversionsCount = requestConversionsCount;
     return this;
@@ -12030,6 +12514,42 @@ public class DailyReportsGetListStruct {
             this.miniGameAdMonetizationArpu, dailyReportsGetListStruct.miniGameAdMonetizationArpu)
         && Objects.equals(this.miniGamePayingRoi, dailyReportsGetListStruct.miniGamePayingRoi)
         && Objects.equals(this.miniGamePayingArpu, dailyReportsGetListStruct.miniGamePayingArpu)
+        && Objects.equals(this.miniGameBfUv, dailyReportsGetListStruct.miniGameBfUv)
+        && Objects.equals(this.miniGameBfCost, dailyReportsGetListStruct.miniGameBfCost)
+        && Objects.equals(this.miniGameBfIncomeUv, dailyReportsGetListStruct.miniGameBfIncomeUv)
+        && Objects.equals(
+            this.miniGameBfIncomeAmount, dailyReportsGetListStruct.miniGameBfIncomeAmount)
+        && Objects.equals(this.miniGameBfIncomeCost, dailyReportsGetListStruct.miniGameBfIncomeCost)
+        && Objects.equals(this.miniGameBfIncomeRoi, dailyReportsGetListStruct.miniGameBfIncomeRoi)
+        && Objects.equals(this.miniGameBfIncomeArpu, dailyReportsGetListStruct.miniGameBfIncomeArpu)
+        && Objects.equals(this.miniGameBfIncomeD1Uv, dailyReportsGetListStruct.miniGameBfIncomeD1Uv)
+        && Objects.equals(
+            this.miniGameBfIncomeD1Amount, dailyReportsGetListStruct.miniGameBfIncomeD1Amount)
+        && Objects.equals(
+            this.miniGameBfIncomeD1Cost, dailyReportsGetListStruct.miniGameBfIncomeD1Cost)
+        && Objects.equals(
+            this.miniGameBfIncomeD1Roi, dailyReportsGetListStruct.miniGameBfIncomeD1Roi)
+        && Objects.equals(
+            this.miniGameBfIncomeD1Arpu, dailyReportsGetListStruct.miniGameBfIncomeD1Arpu)
+        && Objects.equals(this.miniGameBfPurchaseUv, dailyReportsGetListStruct.miniGameBfPurchaseUv)
+        && Objects.equals(
+            this.miniGameBfPurchaseAmount, dailyReportsGetListStruct.miniGameBfPurchaseAmount)
+        && Objects.equals(
+            this.miniGameBfPurchaseCost, dailyReportsGetListStruct.miniGameBfPurchaseCost)
+        && Objects.equals(
+            this.miniGameBfPurchaseRoi, dailyReportsGetListStruct.miniGameBfPurchaseRoi)
+        && Objects.equals(
+            this.miniGameBfPurchaseArpu, dailyReportsGetListStruct.miniGameBfPurchaseArpu)
+        && Objects.equals(
+            this.miniGameBfPurchaseD1Uv, dailyReportsGetListStruct.miniGameBfPurchaseD1Uv)
+        && Objects.equals(
+            this.miniGameBfPurchaseD1Amount, dailyReportsGetListStruct.miniGameBfPurchaseD1Amount)
+        && Objects.equals(
+            this.miniGameBfPurchaseD1Cost, dailyReportsGetListStruct.miniGameBfPurchaseD1Cost)
+        && Objects.equals(
+            this.miniGameBfPurchaseD1Roi, dailyReportsGetListStruct.miniGameBfPurchaseD1Roi)
+        && Objects.equals(
+            this.miniGameBfPurchaseD1Arpu, dailyReportsGetListStruct.miniGameBfPurchaseD1Arpu)
         && Objects.equals(
             this.requestConversionsCount, dailyReportsGetListStruct.requestConversionsCount)
         && Objects.equals(
@@ -12684,6 +13204,28 @@ public class DailyReportsGetListStruct {
         miniGameAdMonetizationArpu,
         miniGamePayingRoi,
         miniGamePayingArpu,
+        miniGameBfUv,
+        miniGameBfCost,
+        miniGameBfIncomeUv,
+        miniGameBfIncomeAmount,
+        miniGameBfIncomeCost,
+        miniGameBfIncomeRoi,
+        miniGameBfIncomeArpu,
+        miniGameBfIncomeD1Uv,
+        miniGameBfIncomeD1Amount,
+        miniGameBfIncomeD1Cost,
+        miniGameBfIncomeD1Roi,
+        miniGameBfIncomeD1Arpu,
+        miniGameBfPurchaseUv,
+        miniGameBfPurchaseAmount,
+        miniGameBfPurchaseCost,
+        miniGameBfPurchaseRoi,
+        miniGameBfPurchaseArpu,
+        miniGameBfPurchaseD1Uv,
+        miniGameBfPurchaseD1Amount,
+        miniGameBfPurchaseD1Cost,
+        miniGameBfPurchaseD1Roi,
+        miniGameBfPurchaseD1Arpu,
         requestConversionsCount,
         requestConversionsCost,
         incomeVal1,
