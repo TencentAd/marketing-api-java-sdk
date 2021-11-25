@@ -24,6 +24,9 @@ public class LeadCluesGetRequest {
   @SerializedName("account_id")
   private Long accountId = null;
 
+  @SerializedName("time_type")
+  private TimeType timeType = null;
+
   @SerializedName("time_range")
   private TimeRange timeRange = null;
 
@@ -56,6 +59,25 @@ public class LeadCluesGetRequest {
 
   public void setAccountId(Long accountId) {
     this.accountId = accountId;
+  }
+
+  public LeadCluesGetRequest timeType(TimeType timeType) {
+    this.timeType = timeType;
+    return this;
+  }
+
+  /**
+   * Get timeType
+   *
+   * @return timeType
+   */
+  @ApiModelProperty(value = "")
+  public TimeType getTimeType() {
+    return timeType;
+  }
+
+  public void setTimeType(TimeType timeType) {
+    this.timeType = timeType;
   }
 
   public LeadCluesGetRequest timeRange(TimeRange timeRange) {
@@ -179,6 +201,7 @@ public class LeadCluesGetRequest {
     }
     LeadCluesGetRequest leadCluesGetRequest = (LeadCluesGetRequest) o;
     return Objects.equals(this.accountId, leadCluesGetRequest.accountId)
+        && Objects.equals(this.timeType, leadCluesGetRequest.timeType)
         && Objects.equals(this.timeRange, leadCluesGetRequest.timeRange)
         && Objects.equals(this.filtering, leadCluesGetRequest.filtering)
         && Objects.equals(this.page, leadCluesGetRequest.page)
@@ -188,7 +211,8 @@ public class LeadCluesGetRequest {
 
   @Override
   public int hashCode() {
-    return Objects.hash(accountId, timeRange, filtering, page, pageSize, lastSearchAfterValues);
+    return Objects.hash(
+        accountId, timeType, timeRange, filtering, page, pageSize, lastSearchAfterValues);
   }
 
   @Override

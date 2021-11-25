@@ -19,20 +19,16 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-/** 资产授权路径类型 */
-@JsonAdapter(PathType.Adapter.class)
-public enum PathType {
-  BM("PATH_TYPE_BM"),
+/** 时间类型，不填默认为TIME_TYPE_ACTION_TIME，此参数会影响到time_range、last_search_after_values、返回数据的排序规则 */
+@JsonAdapter(TimeType.Adapter.class)
+public enum TimeType {
+  ACTION_TIME("TIME_TYPE_ACTION_TIME"),
 
-  MDM("PATH_TYPE_MDM"),
-
-  POINT_TO_POINT("PATH_TYPE_POINT_TO_POINT"),
-
-  AGENCY("PATH_TYPE_AGENCY");
+  CREATED_TIME("TIME_TYPE_CREATED_TIME");
 
   private String value;
 
-  PathType(String value) {
+  TimeType(String value) {
     this.value = value;
   }
 
@@ -45,8 +41,8 @@ public enum PathType {
     return String.valueOf(value);
   }
 
-  public static PathType fromValue(String text) {
-    for (PathType b : PathType.values()) {
+  public static TimeType fromValue(String text) {
+    for (TimeType b : TimeType.values()) {
       if (String.valueOf(b.value).equals(text)) {
         return b;
       }
@@ -54,16 +50,16 @@ public enum PathType {
     return null;
   }
 
-  public static class Adapter extends TypeAdapter<PathType> {
+  public static class Adapter extends TypeAdapter<TimeType> {
     @Override
-    public void write(final JsonWriter jsonWriter, final PathType enumeration) throws IOException {
+    public void write(final JsonWriter jsonWriter, final TimeType enumeration) throws IOException {
       jsonWriter.value(enumeration.getValue());
     }
 
     @Override
-    public PathType read(final JsonReader jsonReader) throws IOException {
+    public TimeType read(final JsonReader jsonReader) throws IOException {
       String value = jsonReader.nextString();
-      return PathType.fromValue(String.valueOf(value));
+      return TimeType.fromValue(String.valueOf(value));
     }
   }
 }

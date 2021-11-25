@@ -146,6 +146,9 @@ public class AdcreativeCreativeElements {
   @SerializedName("chosen_button")
   private ChosenButton chosenButton = null;
 
+  @SerializedName("living_desc_struct")
+  private AdCreativeLivingDescStruct livingDescStruct = null;
+
   @SerializedName("countdown_expiring_timestamp")
   private Long countdownExpiringTimestamp = null;
 
@@ -963,6 +966,25 @@ public class AdcreativeCreativeElements {
     this.chosenButton = chosenButton;
   }
 
+  public AdcreativeCreativeElements livingDescStruct(AdCreativeLivingDescStruct livingDescStruct) {
+    this.livingDescStruct = livingDescStruct;
+    return this;
+  }
+
+  /**
+   * Get livingDescStruct
+   *
+   * @return livingDescStruct
+   */
+  @ApiModelProperty(value = "")
+  public AdCreativeLivingDescStruct getLivingDescStruct() {
+    return livingDescStruct;
+  }
+
+  public void setLivingDescStruct(AdCreativeLivingDescStruct livingDescStruct) {
+    this.livingDescStruct = livingDescStruct;
+  }
+
   public AdcreativeCreativeElements countdownExpiringTimestamp(Long countdownExpiringTimestamp) {
     this.countdownExpiringTimestamp = countdownExpiringTimestamp;
     return this;
@@ -1032,6 +1054,7 @@ public class AdcreativeCreativeElements {
         && Objects.equals(this.headLine, adcreativeCreativeElements.headLine)
         && Objects.equals(this.shopImageStruct, adcreativeCreativeElements.shopImageStruct)
         && Objects.equals(this.chosenButton, adcreativeCreativeElements.chosenButton)
+        && Objects.equals(this.livingDescStruct, adcreativeCreativeElements.livingDescStruct)
         && Objects.equals(
             this.countdownExpiringTimestamp, adcreativeCreativeElements.countdownExpiringTimestamp);
   }
@@ -1080,6 +1103,7 @@ public class AdcreativeCreativeElements {
         headLine,
         shopImageStruct,
         chosenButton,
+        livingDescStruct,
         countdownExpiringTimestamp);
   }
 

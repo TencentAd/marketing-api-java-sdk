@@ -1095,6 +1095,12 @@ public class HourlyReportsGetListStruct {
   @SerializedName("mini_game_bf_purchase_d1_arpu")
   private Long miniGameBfPurchaseD1Arpu = null;
 
+  @SerializedName("mini_game_create_role_rate")
+  private Double miniGameCreateRoleRate = null;
+
+  @SerializedName("consult_uv_count")
+  private Long consultUvCount = null;
+
   @SerializedName("request_conversions_count")
   private Long requestConversionsCount = null;
 
@@ -1355,6 +1361,9 @@ public class HourlyReportsGetListStruct {
 
   @SerializedName("mini_game_paying_arpu_d1")
   private Long miniGamePayingArpuD1 = null;
+
+  @SerializedName("mini_game_pay_d1_pla_rate")
+  private Double miniGamePayD1PlaRate = null;
 
   @SerializedName("campaign_id")
   private Long campaignId = null;
@@ -8413,6 +8422,44 @@ public class HourlyReportsGetListStruct {
     this.miniGameBfPurchaseD1Arpu = miniGameBfPurchaseD1Arpu;
   }
 
+  public HourlyReportsGetListStruct miniGameCreateRoleRate(Double miniGameCreateRoleRate) {
+    this.miniGameCreateRoleRate = miniGameCreateRoleRate;
+    return this;
+  }
+
+  /**
+   * Get miniGameCreateRoleRate
+   *
+   * @return miniGameCreateRoleRate
+   */
+  @ApiModelProperty(value = "")
+  public Double getMiniGameCreateRoleRate() {
+    return miniGameCreateRoleRate;
+  }
+
+  public void setMiniGameCreateRoleRate(Double miniGameCreateRoleRate) {
+    this.miniGameCreateRoleRate = miniGameCreateRoleRate;
+  }
+
+  public HourlyReportsGetListStruct consultUvCount(Long consultUvCount) {
+    this.consultUvCount = consultUvCount;
+    return this;
+  }
+
+  /**
+   * Get consultUvCount
+   *
+   * @return consultUvCount
+   */
+  @ApiModelProperty(value = "")
+  public Long getConsultUvCount() {
+    return consultUvCount;
+  }
+
+  public void setConsultUvCount(Long consultUvCount) {
+    this.consultUvCount = consultUvCount;
+  }
+
   public HourlyReportsGetListStruct requestConversionsCount(Long requestConversionsCount) {
     this.requestConversionsCount = requestConversionsCount;
     return this;
@@ -10088,6 +10135,25 @@ public class HourlyReportsGetListStruct {
 
   public void setMiniGamePayingArpuD1(Long miniGamePayingArpuD1) {
     this.miniGamePayingArpuD1 = miniGamePayingArpuD1;
+  }
+
+  public HourlyReportsGetListStruct miniGamePayD1PlaRate(Double miniGamePayD1PlaRate) {
+    this.miniGamePayD1PlaRate = miniGamePayD1PlaRate;
+    return this;
+  }
+
+  /**
+   * Get miniGamePayD1PlaRate
+   *
+   * @return miniGamePayD1PlaRate
+   */
+  @ApiModelProperty(value = "")
+  public Double getMiniGamePayD1PlaRate() {
+    return miniGamePayD1PlaRate;
+  }
+
+  public void setMiniGamePayD1PlaRate(Double miniGamePayD1PlaRate) {
+    this.miniGamePayD1PlaRate = miniGamePayD1PlaRate;
   }
 
   public HourlyReportsGetListStruct campaignId(Long campaignId) {
@@ -12148,6 +12214,9 @@ public class HourlyReportsGetListStruct {
         && Objects.equals(
             this.miniGameBfPurchaseD1Arpu, hourlyReportsGetListStruct.miniGameBfPurchaseD1Arpu)
         && Objects.equals(
+            this.miniGameCreateRoleRate, hourlyReportsGetListStruct.miniGameCreateRoleRate)
+        && Objects.equals(this.consultUvCount, hourlyReportsGetListStruct.consultUvCount)
+        && Objects.equals(
             this.requestConversionsCount, hourlyReportsGetListStruct.requestConversionsCount)
         && Objects.equals(
             this.requestConversionsCost, hourlyReportsGetListStruct.requestConversionsCost)
@@ -12308,6 +12377,8 @@ public class HourlyReportsGetListStruct {
             hourlyReportsGetListStruct.miniGameAdMonetizationAmountD14)
         && Objects.equals(
             this.miniGamePayingArpuD1, hourlyReportsGetListStruct.miniGamePayingArpuD1)
+        && Objects.equals(
+            this.miniGamePayD1PlaRate, hourlyReportsGetListStruct.miniGamePayD1PlaRate)
         && Objects.equals(this.campaignId, hourlyReportsGetListStruct.campaignId)
         && Objects.equals(this.campaignName, hourlyReportsGetListStruct.campaignName)
         && Objects.equals(this.webAddToCartCount, hourlyReportsGetListStruct.webAddToCartCount)
@@ -12813,6 +12884,8 @@ public class HourlyReportsGetListStruct {
         miniGameBfPurchaseD1Cost,
         miniGameBfPurchaseD1Roi,
         miniGameBfPurchaseD1Arpu,
+        miniGameCreateRoleRate,
+        consultUvCount,
         requestConversionsCount,
         requestConversionsCost,
         incomeVal1,
@@ -12900,6 +12973,7 @@ public class HourlyReportsGetListStruct {
         miniGameAdMonetizationAmountD7,
         miniGameAdMonetizationAmountD14,
         miniGamePayingArpuD1,
+        miniGamePayD1PlaRate,
         campaignId,
         campaignName,
         webAddToCartCount,

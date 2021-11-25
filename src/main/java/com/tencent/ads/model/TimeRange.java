@@ -18,8 +18,12 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.util.Objects;
 
-/** 时间范围，根据表单最后提交时间进行查询。最长跨度1年 */
-@ApiModel(description = "时间范围，根据表单最后提交时间进行查询。最长跨度1年")
+/**
+ * 时间范围，最长跨度1年。&lt;br&gt;time_type&#x3D;TIME_TYPE_ACTION_TIME时填写线索提交时间，time_type&#x3D;TIME_TYPE_CREATED_TIME时填写线索入库时间
+ */
+@ApiModel(
+    description =
+        "时间范围，最长跨度1年。<br>time_type=TIME_TYPE_ACTION_TIME时填写线索提交时间，time_type=TIME_TYPE_CREATED_TIME时填写线索入库时间")
 public class TimeRange {
   @SerializedName("start_time")
   private Long startTime = null;

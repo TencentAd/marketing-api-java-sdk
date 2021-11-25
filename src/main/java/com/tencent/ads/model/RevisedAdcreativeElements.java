@@ -161,6 +161,9 @@ public class RevisedAdcreativeElements {
   @SerializedName("chosen_button")
   private ChosenButton chosenButton = null;
 
+  @SerializedName("living_desc_struct")
+  private AdCreativeLivingDescStruct livingDescStruct = null;
+
   public RevisedAdcreativeElements image(String image) {
     this.image = image;
     return this;
@@ -1078,6 +1081,25 @@ public class RevisedAdcreativeElements {
     this.chosenButton = chosenButton;
   }
 
+  public RevisedAdcreativeElements livingDescStruct(AdCreativeLivingDescStruct livingDescStruct) {
+    this.livingDescStruct = livingDescStruct;
+    return this;
+  }
+
+  /**
+   * Get livingDescStruct
+   *
+   * @return livingDescStruct
+   */
+  @ApiModelProperty(value = "")
+  public AdCreativeLivingDescStruct getLivingDescStruct() {
+    return livingDescStruct;
+  }
+
+  public void setLivingDescStruct(AdCreativeLivingDescStruct livingDescStruct) {
+    this.livingDescStruct = livingDescStruct;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -1132,7 +1154,8 @@ public class RevisedAdcreativeElements {
         && Objects.equals(this.shopImage, revisedAdcreativeElements.shopImage)
         && Objects.equals(this.headLine, revisedAdcreativeElements.headLine)
         && Objects.equals(this.shopImageStruct, revisedAdcreativeElements.shopImageStruct)
-        && Objects.equals(this.chosenButton, revisedAdcreativeElements.chosenButton);
+        && Objects.equals(this.chosenButton, revisedAdcreativeElements.chosenButton)
+        && Objects.equals(this.livingDescStruct, revisedAdcreativeElements.livingDescStruct);
   }
 
   @Override
@@ -1183,7 +1206,8 @@ public class RevisedAdcreativeElements {
         shopImage,
         headLine,
         shopImageStruct,
-        chosenButton);
+        chosenButton,
+        livingDescStruct);
   }
 
   @Override

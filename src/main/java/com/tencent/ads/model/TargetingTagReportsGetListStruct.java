@@ -1101,6 +1101,12 @@ public class TargetingTagReportsGetListStruct {
   @SerializedName("mini_game_bf_purchase_d1_arpu")
   private Long miniGameBfPurchaseD1Arpu = null;
 
+  @SerializedName("mini_game_create_role_rate")
+  private Double miniGameCreateRoleRate = null;
+
+  @SerializedName("consult_uv_count")
+  private Long consultUvCount = null;
+
   @SerializedName("age")
   private String age = null;
 
@@ -1460,6 +1466,9 @@ public class TargetingTagReportsGetListStruct {
 
   @SerializedName("mini_game_paying_arpu_d1")
   private Long miniGamePayingArpuD1 = null;
+
+  @SerializedName("mini_game_pay_d1_pla_rate")
+  private Double miniGamePayD1PlaRate = null;
 
   public TargetingTagReportsGetListStruct date(String date) {
     this.date = date;
@@ -8346,6 +8355,44 @@ public class TargetingTagReportsGetListStruct {
     this.miniGameBfPurchaseD1Arpu = miniGameBfPurchaseD1Arpu;
   }
 
+  public TargetingTagReportsGetListStruct miniGameCreateRoleRate(Double miniGameCreateRoleRate) {
+    this.miniGameCreateRoleRate = miniGameCreateRoleRate;
+    return this;
+  }
+
+  /**
+   * Get miniGameCreateRoleRate
+   *
+   * @return miniGameCreateRoleRate
+   */
+  @ApiModelProperty(value = "")
+  public Double getMiniGameCreateRoleRate() {
+    return miniGameCreateRoleRate;
+  }
+
+  public void setMiniGameCreateRoleRate(Double miniGameCreateRoleRate) {
+    this.miniGameCreateRoleRate = miniGameCreateRoleRate;
+  }
+
+  public TargetingTagReportsGetListStruct consultUvCount(Long consultUvCount) {
+    this.consultUvCount = consultUvCount;
+    return this;
+  }
+
+  /**
+   * Get consultUvCount
+   *
+   * @return consultUvCount
+   */
+  @ApiModelProperty(value = "")
+  public Long getConsultUvCount() {
+    return consultUvCount;
+  }
+
+  public void setConsultUvCount(Long consultUvCount) {
+    this.consultUvCount = consultUvCount;
+  }
+
   public TargetingTagReportsGetListStruct age(String age) {
     this.age = age;
     return this;
@@ -10656,6 +10703,25 @@ public class TargetingTagReportsGetListStruct {
     this.miniGamePayingArpuD1 = miniGamePayingArpuD1;
   }
 
+  public TargetingTagReportsGetListStruct miniGamePayD1PlaRate(Double miniGamePayD1PlaRate) {
+    this.miniGamePayD1PlaRate = miniGamePayD1PlaRate;
+    return this;
+  }
+
+  /**
+   * Get miniGamePayD1PlaRate
+   *
+   * @return miniGamePayD1PlaRate
+   */
+  @ApiModelProperty(value = "")
+  public Double getMiniGamePayD1PlaRate() {
+    return miniGamePayD1PlaRate;
+  }
+
+  public void setMiniGamePayD1PlaRate(Double miniGamePayD1PlaRate) {
+    this.miniGamePayD1PlaRate = miniGamePayD1PlaRate;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -11281,6 +11347,9 @@ public class TargetingTagReportsGetListStruct {
         && Objects.equals(
             this.miniGameBfPurchaseD1Arpu,
             targetingTagReportsGetListStruct.miniGameBfPurchaseD1Arpu)
+        && Objects.equals(
+            this.miniGameCreateRoleRate, targetingTagReportsGetListStruct.miniGameCreateRoleRate)
+        && Objects.equals(this.consultUvCount, targetingTagReportsGetListStruct.consultUvCount)
         && Objects.equals(this.age, targetingTagReportsGetListStruct.age)
         && Objects.equals(this.regionId, targetingTagReportsGetListStruct.regionId)
         && Objects.equals(this.cityId, targetingTagReportsGetListStruct.cityId)
@@ -11502,7 +11571,9 @@ public class TargetingTagReportsGetListStruct {
             this.miniGameAdMonetizationAmountD14,
             targetingTagReportsGetListStruct.miniGameAdMonetizationAmountD14)
         && Objects.equals(
-            this.miniGamePayingArpuD1, targetingTagReportsGetListStruct.miniGamePayingArpuD1);
+            this.miniGamePayingArpuD1, targetingTagReportsGetListStruct.miniGamePayingArpuD1)
+        && Objects.equals(
+            this.miniGamePayD1PlaRate, targetingTagReportsGetListStruct.miniGamePayD1PlaRate);
   }
 
   @Override
@@ -11868,6 +11939,8 @@ public class TargetingTagReportsGetListStruct {
         miniGameBfPurchaseD1Cost,
         miniGameBfPurchaseD1Roi,
         miniGameBfPurchaseD1Arpu,
+        miniGameCreateRoleRate,
+        consultUvCount,
         age,
         regionId,
         cityId,
@@ -11987,7 +12060,8 @@ public class TargetingTagReportsGetListStruct {
         miniGameAdMonetizationAmountD3,
         miniGameAdMonetizationAmountD7,
         miniGameAdMonetizationAmountD14,
-        miniGamePayingArpuD1);
+        miniGamePayingArpuD1,
+        miniGamePayD1PlaRate);
   }
 
   @Override
