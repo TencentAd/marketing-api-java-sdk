@@ -1389,6 +1389,9 @@ public class HourlyReportsGetListStruct {
   @SerializedName("preview_deep_conversions_count")
   private Long previewDeepConversionsCount = null;
 
+  @SerializedName("acquisition_cost")
+  private Long acquisitionCost = null;
+
   @SerializedName("ad_id")
   private Long adId = null;
 
@@ -10308,6 +10311,25 @@ public class HourlyReportsGetListStruct {
     this.previewDeepConversionsCount = previewDeepConversionsCount;
   }
 
+  public HourlyReportsGetListStruct acquisitionCost(Long acquisitionCost) {
+    this.acquisitionCost = acquisitionCost;
+    return this;
+  }
+
+  /**
+   * Get acquisitionCost
+   *
+   * @return acquisitionCost
+   */
+  @ApiModelProperty(value = "")
+  public Long getAcquisitionCost() {
+    return acquisitionCost;
+  }
+
+  public void setAcquisitionCost(Long acquisitionCost) {
+    this.acquisitionCost = acquisitionCost;
+  }
+
   public HourlyReportsGetListStruct adId(Long adId) {
     this.adId = adId;
     return this;
@@ -12390,6 +12412,7 @@ public class HourlyReportsGetListStruct {
         && Objects.equals(
             this.previewDeepConversionsCount,
             hourlyReportsGetListStruct.previewDeepConversionsCount)
+        && Objects.equals(this.acquisitionCost, hourlyReportsGetListStruct.acquisitionCost)
         && Objects.equals(this.adId, hourlyReportsGetListStruct.adId)
         && Objects.equals(this.adName, hourlyReportsGetListStruct.adName)
         && Objects.equals(this.promotedObjectType, hourlyReportsGetListStruct.promotedObjectType)
@@ -12982,6 +13005,7 @@ public class HourlyReportsGetListStruct {
         adgroupName,
         previewConversionsCount,
         previewDeepConversionsCount,
+        acquisitionCost,
         adId,
         adName,
         promotedObjectType,
