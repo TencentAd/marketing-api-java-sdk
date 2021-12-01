@@ -21,7 +21,11 @@ import com.tencent.ads.Configuration;
 import com.tencent.ads.Pair;
 import com.tencent.ads.ProgressRequestBody;
 import com.tencent.ads.ProgressResponseBody;
+import com.tencent.ads.model.WechatPagesCsgrouplistAddRequest;
+import com.tencent.ads.model.WechatPagesCsgrouplistAddResponse;
 import com.tencent.ads.model.WechatPagesCsgrouplistGetResponse;
+import com.tencent.ads.model.WechatPagesCsgrouplistUpdateRequest;
+import com.tencent.ads.model.WechatPagesCsgrouplistUpdateResponse;
 import java.io.IOException;
 import java.lang.reflect.Type;
 import java.util.ArrayList;
@@ -48,6 +52,160 @@ public class WechatPagesCsgrouplistApi {
     this.apiClient = apiClient;
   }
 
+  /**
+   * Build call for wechatPagesCsgrouplistAdd
+   *
+   * @param data (required)
+   * @param progressListener Progress listener
+   * @param progressRequestListener Progress request listener
+   * @return Call to execute
+   * @throws ApiException If fail to serialize the request body object
+   */
+  public com.squareup.okhttp.Call wechatPagesCsgrouplistAddCall(
+      WechatPagesCsgrouplistAddRequest data,
+      final ProgressResponseBody.ProgressListener progressListener,
+      final ProgressRequestBody.ProgressRequestListener progressRequestListener)
+      throws ApiException {
+    Object localVarPostBody = data;
+
+    // create path and map variables
+    String localVarPath = "/wechat_pages_csgrouplist/add";
+
+    List<Pair> localVarQueryParams = new ArrayList<Pair>();
+    List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+
+    Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+
+    Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+    final String[] localVarAccepts = {"application/json"};
+    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+    if (localVarAccept != null) localVarHeaderParams.put("Accept", localVarAccept);
+
+    final String[] localVarContentTypes = {"application/json", "application/xml"};
+    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+    localVarHeaderParams.put("Content-Type", localVarContentType);
+
+    if (progressListener != null) {
+      apiClient
+          .getHttpClient()
+          .networkInterceptors()
+          .add(
+              new com.squareup.okhttp.Interceptor() {
+                @Override
+                public com.squareup.okhttp.Response intercept(
+                    com.squareup.okhttp.Interceptor.Chain chain) throws IOException {
+                  com.squareup.okhttp.Response originalResponse = chain.proceed(chain.request());
+                  return originalResponse
+                      .newBuilder()
+                      .body(new ProgressResponseBody(originalResponse.body(), progressListener))
+                      .build();
+                }
+              });
+    }
+
+    String[] localVarAuthNames = new String[] {"accessToken", "nonce", "timestamp"};
+    return apiClient.buildCall(
+        localVarPath,
+        "POST",
+        localVarQueryParams,
+        localVarCollectionQueryParams,
+        localVarPostBody,
+        localVarHeaderParams,
+        localVarFormParams,
+        localVarAuthNames,
+        progressRequestListener);
+  }
+
+  @SuppressWarnings("rawtypes")
+  private com.squareup.okhttp.Call wechatPagesCsgrouplistAddValidateBeforeCall(
+      WechatPagesCsgrouplistAddRequest data,
+      final ProgressResponseBody.ProgressListener progressListener,
+      final ProgressRequestBody.ProgressRequestListener progressRequestListener)
+      throws ApiException {
+
+    // verify the required parameter 'data' is set
+    if (data == null) {
+      throw new ApiException(
+          "Missing the required parameter 'data' when calling wechatPagesCsgrouplistAdd(Async)");
+    }
+
+    com.squareup.okhttp.Call call =
+        wechatPagesCsgrouplistAddCall(data, progressListener, progressRequestListener);
+    return call;
+  }
+
+  /**
+   * 增加企业微信组件客服组
+   *
+   * @param data (required)
+   * @return WechatPagesCsgrouplistAddResponse
+   * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
+   *     response body
+   */
+  public WechatPagesCsgrouplistAddResponse wechatPagesCsgrouplistAdd(
+      WechatPagesCsgrouplistAddRequest data) throws ApiException {
+    ApiResponse<WechatPagesCsgrouplistAddResponse> resp =
+        wechatPagesCsgrouplistAddWithHttpInfo(data);
+    return resp.getData();
+  }
+
+  /**
+   * 增加企业微信组件客服组
+   *
+   * @param data (required)
+   * @return ApiResponse&lt;WechatPagesCsgrouplistAddResponse&gt;
+   * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
+   *     response body
+   */
+  public ApiResponse<WechatPagesCsgrouplistAddResponse> wechatPagesCsgrouplistAddWithHttpInfo(
+      WechatPagesCsgrouplistAddRequest data) throws ApiException {
+    com.squareup.okhttp.Call call = wechatPagesCsgrouplistAddValidateBeforeCall(data, null, null);
+    Type localVarReturnType = new TypeToken<WechatPagesCsgrouplistAddResponse>() {}.getType();
+    return apiClient.execute(call, localVarReturnType);
+  }
+
+  /**
+   * 增加企业微信组件客服组 (asynchronously)
+   *
+   * @param data (required)
+   * @param callback The callback to be executed when the API call finishes
+   * @return The request call
+   * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+   */
+  public com.squareup.okhttp.Call wechatPagesCsgrouplistAddAsync(
+      WechatPagesCsgrouplistAddRequest data,
+      final ApiCallback<WechatPagesCsgrouplistAddResponse> callback)
+      throws ApiException {
+
+    ProgressResponseBody.ProgressListener progressListener = null;
+    ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
+
+    if (callback != null) {
+      progressListener =
+          new ProgressResponseBody.ProgressListener() {
+            @Override
+            public void update(long bytesRead, long contentLength, boolean done) {
+              callback.onDownloadProgress(bytesRead, contentLength, done);
+            }
+          };
+
+      progressRequestListener =
+          new ProgressRequestBody.ProgressRequestListener() {
+            @Override
+            public void onRequestProgress(long bytesWritten, long contentLength, boolean done) {
+              callback.onUploadProgress(bytesWritten, contentLength, done);
+            }
+          };
+    }
+
+    com.squareup.okhttp.Call call =
+        wechatPagesCsgrouplistAddValidateBeforeCall(
+            data, progressListener, progressRequestListener);
+    Type localVarReturnType = new TypeToken<WechatPagesCsgrouplistAddResponse>() {}.getType();
+    apiClient.executeAsync(call, localVarReturnType, callback);
+    return call;
+  }
   /**
    * Build call for wechatPagesCsgrouplistGet
    *
@@ -229,6 +387,161 @@ public class WechatPagesCsgrouplistApi {
         wechatPagesCsgrouplistGetValidateBeforeCall(
             accountId, page, pageSize, fields, progressListener, progressRequestListener);
     Type localVarReturnType = new TypeToken<WechatPagesCsgrouplistGetResponse>() {}.getType();
+    apiClient.executeAsync(call, localVarReturnType, callback);
+    return call;
+  }
+  /**
+   * Build call for wechatPagesCsgrouplistUpdate
+   *
+   * @param data (required)
+   * @param progressListener Progress listener
+   * @param progressRequestListener Progress request listener
+   * @return Call to execute
+   * @throws ApiException If fail to serialize the request body object
+   */
+  public com.squareup.okhttp.Call wechatPagesCsgrouplistUpdateCall(
+      WechatPagesCsgrouplistUpdateRequest data,
+      final ProgressResponseBody.ProgressListener progressListener,
+      final ProgressRequestBody.ProgressRequestListener progressRequestListener)
+      throws ApiException {
+    Object localVarPostBody = data;
+
+    // create path and map variables
+    String localVarPath = "/wechat_pages_csgrouplist/update";
+
+    List<Pair> localVarQueryParams = new ArrayList<Pair>();
+    List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+
+    Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+
+    Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+    final String[] localVarAccepts = {"application/json"};
+    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+    if (localVarAccept != null) localVarHeaderParams.put("Accept", localVarAccept);
+
+    final String[] localVarContentTypes = {"application/json", "application/xml"};
+    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+    localVarHeaderParams.put("Content-Type", localVarContentType);
+
+    if (progressListener != null) {
+      apiClient
+          .getHttpClient()
+          .networkInterceptors()
+          .add(
+              new com.squareup.okhttp.Interceptor() {
+                @Override
+                public com.squareup.okhttp.Response intercept(
+                    com.squareup.okhttp.Interceptor.Chain chain) throws IOException {
+                  com.squareup.okhttp.Response originalResponse = chain.proceed(chain.request());
+                  return originalResponse
+                      .newBuilder()
+                      .body(new ProgressResponseBody(originalResponse.body(), progressListener))
+                      .build();
+                }
+              });
+    }
+
+    String[] localVarAuthNames = new String[] {"accessToken", "nonce", "timestamp"};
+    return apiClient.buildCall(
+        localVarPath,
+        "POST",
+        localVarQueryParams,
+        localVarCollectionQueryParams,
+        localVarPostBody,
+        localVarHeaderParams,
+        localVarFormParams,
+        localVarAuthNames,
+        progressRequestListener);
+  }
+
+  @SuppressWarnings("rawtypes")
+  private com.squareup.okhttp.Call wechatPagesCsgrouplistUpdateValidateBeforeCall(
+      WechatPagesCsgrouplistUpdateRequest data,
+      final ProgressResponseBody.ProgressListener progressListener,
+      final ProgressRequestBody.ProgressRequestListener progressRequestListener)
+      throws ApiException {
+
+    // verify the required parameter 'data' is set
+    if (data == null) {
+      throw new ApiException(
+          "Missing the required parameter 'data' when calling wechatPagesCsgrouplistUpdate(Async)");
+    }
+
+    com.squareup.okhttp.Call call =
+        wechatPagesCsgrouplistUpdateCall(data, progressListener, progressRequestListener);
+    return call;
+  }
+
+  /**
+   * 更新企业微信组件客服组
+   *
+   * @param data (required)
+   * @return WechatPagesCsgrouplistUpdateResponse
+   * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
+   *     response body
+   */
+  public WechatPagesCsgrouplistUpdateResponse wechatPagesCsgrouplistUpdate(
+      WechatPagesCsgrouplistUpdateRequest data) throws ApiException {
+    ApiResponse<WechatPagesCsgrouplistUpdateResponse> resp =
+        wechatPagesCsgrouplistUpdateWithHttpInfo(data);
+    return resp.getData();
+  }
+
+  /**
+   * 更新企业微信组件客服组
+   *
+   * @param data (required)
+   * @return ApiResponse&lt;WechatPagesCsgrouplistUpdateResponse&gt;
+   * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
+   *     response body
+   */
+  public ApiResponse<WechatPagesCsgrouplistUpdateResponse> wechatPagesCsgrouplistUpdateWithHttpInfo(
+      WechatPagesCsgrouplistUpdateRequest data) throws ApiException {
+    com.squareup.okhttp.Call call =
+        wechatPagesCsgrouplistUpdateValidateBeforeCall(data, null, null);
+    Type localVarReturnType = new TypeToken<WechatPagesCsgrouplistUpdateResponse>() {}.getType();
+    return apiClient.execute(call, localVarReturnType);
+  }
+
+  /**
+   * 更新企业微信组件客服组 (asynchronously)
+   *
+   * @param data (required)
+   * @param callback The callback to be executed when the API call finishes
+   * @return The request call
+   * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+   */
+  public com.squareup.okhttp.Call wechatPagesCsgrouplistUpdateAsync(
+      WechatPagesCsgrouplistUpdateRequest data,
+      final ApiCallback<WechatPagesCsgrouplistUpdateResponse> callback)
+      throws ApiException {
+
+    ProgressResponseBody.ProgressListener progressListener = null;
+    ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
+
+    if (callback != null) {
+      progressListener =
+          new ProgressResponseBody.ProgressListener() {
+            @Override
+            public void update(long bytesRead, long contentLength, boolean done) {
+              callback.onDownloadProgress(bytesRead, contentLength, done);
+            }
+          };
+
+      progressRequestListener =
+          new ProgressRequestBody.ProgressRequestListener() {
+            @Override
+            public void onRequestProgress(long bytesWritten, long contentLength, boolean done) {
+              callback.onUploadProgress(bytesWritten, contentLength, done);
+            }
+          };
+    }
+
+    com.squareup.okhttp.Call call =
+        wechatPagesCsgrouplistUpdateValidateBeforeCall(
+            data, progressListener, progressRequestListener);
+    Type localVarReturnType = new TypeToken<WechatPagesCsgrouplistUpdateResponse>() {}.getType();
     apiClient.executeAsync(call, localVarReturnType, callback);
     return call;
   }

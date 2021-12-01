@@ -157,6 +157,7 @@ public class App {
   @Inject WechatFundTransferApiContainer wechatFundTransferApiContainer;
   @Inject WechatFundsApiContainer wechatFundsApiContainer;
   @Inject WechatPagesApiContainer wechatPagesApiContainer;
+  @Inject WechatPagesCsgroupUserApiContainer wechatPagesCsgroupUserApiContainer;
   @Inject WechatPagesCsgrouplistApiContainer wechatPagesCsgrouplistApiContainer;
   @Inject WechatPagesCustomApiContainer wechatPagesCustomApiContainer;
   @Inject WechatPagesGrantinfoApiContainer wechatPagesGrantinfoApiContainer;
@@ -721,6 +722,10 @@ public class App {
 
   public WechatPagesApiContainer wechatPages() {
     return wechatPagesApiContainer;
+  }
+
+  public WechatPagesCsgroupUserApiContainer wechatPagesCsgroupUser() {
+    return wechatPagesCsgroupUserApiContainer;
   }
 
   public WechatPagesCsgrouplistApiContainer wechatPagesCsgrouplist() {

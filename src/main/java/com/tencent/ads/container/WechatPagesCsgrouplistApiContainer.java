@@ -18,13 +18,33 @@ import com.tencent.ads.ApiException;
 import com.tencent.ads.anno.*;
 import com.tencent.ads.api.WechatPagesCsgrouplistApi;
 import com.tencent.ads.exception.TencentAdsResponseException;
+import com.tencent.ads.model.WechatPagesCsgrouplistAddRequest;
+import com.tencent.ads.model.WechatPagesCsgrouplistAddResponse;
 import com.tencent.ads.model.WechatPagesCsgrouplistGetResponse;
 import com.tencent.ads.model.WechatPagesCsgrouplistGetResponseData;
+import com.tencent.ads.model.WechatPagesCsgrouplistUpdateRequest;
+import com.tencent.ads.model.WechatPagesCsgrouplistUpdateResponse;
 import java.util.List;
 
 public class WechatPagesCsgrouplistApiContainer extends ApiContainer {
 
   @Inject WechatPagesCsgrouplistApi api;
+
+  /**
+   * 增加企业微信组件客服组
+   *
+   * @param data (required)
+   * @return WechatPagesCsgrouplistAddResponse
+   * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
+   *     response body
+   */
+  public WechatPagesCsgrouplistAddResponse wechatPagesCsgrouplistAdd(
+      WechatPagesCsgrouplistAddRequest data) throws ApiException, TencentAdsResponseException {
+    WechatPagesCsgrouplistAddResponse resp = api.wechatPagesCsgrouplistAdd(data);
+    handleResponse(gson.toJson(resp));
+
+    return resp;
+  }
 
   /**
    * 获取企业微信客服组列表
@@ -44,5 +64,21 @@ public class WechatPagesCsgrouplistApiContainer extends ApiContainer {
         api.wechatPagesCsgrouplistGet(accountId, page, pageSize, fields);
     handleResponse(gson.toJson(resp));
     return resp.getData();
+  }
+
+  /**
+   * 更新企业微信组件客服组
+   *
+   * @param data (required)
+   * @return WechatPagesCsgrouplistUpdateResponse
+   * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
+   *     response body
+   */
+  public WechatPagesCsgrouplistUpdateResponse wechatPagesCsgrouplistUpdate(
+      WechatPagesCsgrouplistUpdateRequest data) throws ApiException, TencentAdsResponseException {
+    WechatPagesCsgrouplistUpdateResponse resp = api.wechatPagesCsgrouplistUpdate(data);
+    handleResponse(gson.toJson(resp));
+
+    return resp;
   }
 }
