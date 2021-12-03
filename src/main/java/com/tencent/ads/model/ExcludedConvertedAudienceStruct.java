@@ -29,9 +29,6 @@ public class ExcludedConvertedAudienceStruct {
   @SerializedName("conversion_behavior_list")
   private List<String> conversionBehaviorList = null;
 
-  @SerializedName("excluded_day")
-  private ExcludedDay excludedDay = null;
-
   public ExcludedConvertedAudienceStruct excludedDimension(ExcludedDimension excludedDimension) {
     this.excludedDimension = excludedDimension;
     return this;
@@ -80,25 +77,6 @@ public class ExcludedConvertedAudienceStruct {
     this.conversionBehaviorList = conversionBehaviorList;
   }
 
-  public ExcludedConvertedAudienceStruct excludedDay(ExcludedDay excludedDay) {
-    this.excludedDay = excludedDay;
-    return this;
-  }
-
-  /**
-   * Get excludedDay
-   *
-   * @return excludedDay
-   */
-  @ApiModelProperty(value = "")
-  public ExcludedDay getExcludedDay() {
-    return excludedDay;
-  }
-
-  public void setExcludedDay(ExcludedDay excludedDay) {
-    this.excludedDay = excludedDay;
-  }
-
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -111,13 +89,12 @@ public class ExcludedConvertedAudienceStruct {
         (ExcludedConvertedAudienceStruct) o;
     return Objects.equals(this.excludedDimension, excludedConvertedAudienceStruct.excludedDimension)
         && Objects.equals(
-            this.conversionBehaviorList, excludedConvertedAudienceStruct.conversionBehaviorList)
-        && Objects.equals(this.excludedDay, excludedConvertedAudienceStruct.excludedDay);
+            this.conversionBehaviorList, excludedConvertedAudienceStruct.conversionBehaviorList);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(excludedDimension, conversionBehaviorList, excludedDay);
+    return Objects.hash(excludedDimension, conversionBehaviorList);
   }
 
   @Override
