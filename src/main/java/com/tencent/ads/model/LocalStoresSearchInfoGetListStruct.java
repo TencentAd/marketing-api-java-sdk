@@ -37,7 +37,7 @@ public class LocalStoresSearchInfoGetListStruct {
   private String localStoreAddress = null;
 
   @SerializedName("local_store_biz_info")
-  private LocalStoreBizInfoStruct localStoreBizInfo = null;
+  private LocalStoreBizInfoStructRsp localStoreBizInfo = null;
 
   @SerializedName("wechat_ecosystem_accounts")
   private WechatEcosystemAccounts wechatEcosystemAccounts = null;
@@ -138,7 +138,7 @@ public class LocalStoresSearchInfoGetListStruct {
   }
 
   public LocalStoresSearchInfoGetListStruct localStoreBizInfo(
-      LocalStoreBizInfoStruct localStoreBizInfo) {
+      LocalStoreBizInfoStructRsp localStoreBizInfo) {
     this.localStoreBizInfo = localStoreBizInfo;
     return this;
   }
@@ -149,11 +149,11 @@ public class LocalStoresSearchInfoGetListStruct {
    * @return localStoreBizInfo
    */
   @ApiModelProperty(value = "")
-  public LocalStoreBizInfoStruct getLocalStoreBizInfo() {
+  public LocalStoreBizInfoStructRsp getLocalStoreBizInfo() {
     return localStoreBizInfo;
   }
 
-  public void setLocalStoreBizInfo(LocalStoreBizInfoStruct localStoreBizInfo) {
+  public void setLocalStoreBizInfo(LocalStoreBizInfoStructRsp localStoreBizInfo) {
     this.localStoreBizInfo = localStoreBizInfo;
   }
 

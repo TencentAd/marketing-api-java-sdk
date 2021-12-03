@@ -36,8 +36,20 @@ public class LocalStoresUpdateListStruct {
   @SerializedName("local_store_address")
   private String localStoreAddress = null;
 
+  @SerializedName("local_store_street")
+  private String localStoreStreet = null;
+
+  @SerializedName("local_store_business_area")
+  private String localStoreBusinessArea = null;
+
+  @SerializedName("local_store_district")
+  private String localStoreDistrict = null;
+
+  @SerializedName("local_store_location")
+  private LocalStoreLocation localStoreLocation = null;
+
   @SerializedName("local_store_biz_info")
-  private LocalStoreBizInfoStruct localStoreBizInfo = null;
+  private LocalStoreBizInfoStructRsp localStoreBizInfo = null;
 
   @SerializedName("wechat_ecosystem_accounts")
   private WechatEcosystemAccounts wechatEcosystemAccounts = null;
@@ -137,7 +149,84 @@ public class LocalStoresUpdateListStruct {
     this.localStoreAddress = localStoreAddress;
   }
 
-  public LocalStoresUpdateListStruct localStoreBizInfo(LocalStoreBizInfoStruct localStoreBizInfo) {
+  public LocalStoresUpdateListStruct localStoreStreet(String localStoreStreet) {
+    this.localStoreStreet = localStoreStreet;
+    return this;
+  }
+
+  /**
+   * Get localStoreStreet
+   *
+   * @return localStoreStreet
+   */
+  @ApiModelProperty(value = "")
+  public String getLocalStoreStreet() {
+    return localStoreStreet;
+  }
+
+  public void setLocalStoreStreet(String localStoreStreet) {
+    this.localStoreStreet = localStoreStreet;
+  }
+
+  public LocalStoresUpdateListStruct localStoreBusinessArea(String localStoreBusinessArea) {
+    this.localStoreBusinessArea = localStoreBusinessArea;
+    return this;
+  }
+
+  /**
+   * Get localStoreBusinessArea
+   *
+   * @return localStoreBusinessArea
+   */
+  @ApiModelProperty(value = "")
+  public String getLocalStoreBusinessArea() {
+    return localStoreBusinessArea;
+  }
+
+  public void setLocalStoreBusinessArea(String localStoreBusinessArea) {
+    this.localStoreBusinessArea = localStoreBusinessArea;
+  }
+
+  public LocalStoresUpdateListStruct localStoreDistrict(String localStoreDistrict) {
+    this.localStoreDistrict = localStoreDistrict;
+    return this;
+  }
+
+  /**
+   * Get localStoreDistrict
+   *
+   * @return localStoreDistrict
+   */
+  @ApiModelProperty(value = "")
+  public String getLocalStoreDistrict() {
+    return localStoreDistrict;
+  }
+
+  public void setLocalStoreDistrict(String localStoreDistrict) {
+    this.localStoreDistrict = localStoreDistrict;
+  }
+
+  public LocalStoresUpdateListStruct localStoreLocation(LocalStoreLocation localStoreLocation) {
+    this.localStoreLocation = localStoreLocation;
+    return this;
+  }
+
+  /**
+   * Get localStoreLocation
+   *
+   * @return localStoreLocation
+   */
+  @ApiModelProperty(value = "")
+  public LocalStoreLocation getLocalStoreLocation() {
+    return localStoreLocation;
+  }
+
+  public void setLocalStoreLocation(LocalStoreLocation localStoreLocation) {
+    this.localStoreLocation = localStoreLocation;
+  }
+
+  public LocalStoresUpdateListStruct localStoreBizInfo(
+      LocalStoreBizInfoStructRsp localStoreBizInfo) {
     this.localStoreBizInfo = localStoreBizInfo;
     return this;
   }
@@ -148,11 +237,11 @@ public class LocalStoresUpdateListStruct {
    * @return localStoreBizInfo
    */
   @ApiModelProperty(value = "")
-  public LocalStoreBizInfoStruct getLocalStoreBizInfo() {
+  public LocalStoreBizInfoStructRsp getLocalStoreBizInfo() {
     return localStoreBizInfo;
   }
 
-  public void setLocalStoreBizInfo(LocalStoreBizInfoStruct localStoreBizInfo) {
+  public void setLocalStoreBizInfo(LocalStoreBizInfoStructRsp localStoreBizInfo) {
     this.localStoreBizInfo = localStoreBizInfo;
   }
 
@@ -190,6 +279,11 @@ public class LocalStoresUpdateListStruct {
         && Objects.equals(this.localStoreProvince, localStoresUpdateListStruct.localStoreProvince)
         && Objects.equals(this.localStoreCity, localStoresUpdateListStruct.localStoreCity)
         && Objects.equals(this.localStoreAddress, localStoresUpdateListStruct.localStoreAddress)
+        && Objects.equals(this.localStoreStreet, localStoresUpdateListStruct.localStoreStreet)
+        && Objects.equals(
+            this.localStoreBusinessArea, localStoresUpdateListStruct.localStoreBusinessArea)
+        && Objects.equals(this.localStoreDistrict, localStoresUpdateListStruct.localStoreDistrict)
+        && Objects.equals(this.localStoreLocation, localStoresUpdateListStruct.localStoreLocation)
         && Objects.equals(this.localStoreBizInfo, localStoresUpdateListStruct.localStoreBizInfo)
         && Objects.equals(
             this.wechatEcosystemAccounts, localStoresUpdateListStruct.wechatEcosystemAccounts);
@@ -203,6 +297,10 @@ public class LocalStoresUpdateListStruct {
         localStoreProvince,
         localStoreCity,
         localStoreAddress,
+        localStoreStreet,
+        localStoreBusinessArea,
+        localStoreDistrict,
+        localStoreLocation,
         localStoreBizInfo,
         wechatEcosystemAccounts);
   }
