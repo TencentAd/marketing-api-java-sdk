@@ -1365,6 +1365,30 @@ public class HourlyReportsGetListStruct {
   @SerializedName("mini_game_pay_d1_pla_rate")
   private Double miniGamePayD1PlaRate = null;
 
+  @SerializedName("active_d3_pay_count")
+  private Long activeD3PayCount = null;
+
+  @SerializedName("active_d7_pay_count")
+  private Long activeD7PayCount = null;
+
+  @SerializedName("active_d14_pay_count")
+  private Long activeD14PayCount = null;
+
+  @SerializedName("active_d30_pay_count")
+  private Long activeD30PayCount = null;
+
+  @SerializedName("active_d7_click_pay_rate")
+  private Double activeD7ClickPayRate = null;
+
+  @SerializedName("active_d7_active_pay_rate")
+  private Double activeD7ActivePayRate = null;
+
+  @SerializedName("active_d7_pay_cost")
+  private Long activeD7PayCost = null;
+
+  @SerializedName("mini_game_first_day_paying_pla_roi")
+  private Double miniGameFirstDayPayingPlaRoi = null;
+
   @SerializedName("campaign_id")
   private Long campaignId = null;
 
@@ -10159,6 +10183,159 @@ public class HourlyReportsGetListStruct {
     this.miniGamePayD1PlaRate = miniGamePayD1PlaRate;
   }
 
+  public HourlyReportsGetListStruct activeD3PayCount(Long activeD3PayCount) {
+    this.activeD3PayCount = activeD3PayCount;
+    return this;
+  }
+
+  /**
+   * Get activeD3PayCount
+   *
+   * @return activeD3PayCount
+   */
+  @ApiModelProperty(value = "")
+  public Long getActiveD3PayCount() {
+    return activeD3PayCount;
+  }
+
+  public void setActiveD3PayCount(Long activeD3PayCount) {
+    this.activeD3PayCount = activeD3PayCount;
+  }
+
+  public HourlyReportsGetListStruct activeD7PayCount(Long activeD7PayCount) {
+    this.activeD7PayCount = activeD7PayCount;
+    return this;
+  }
+
+  /**
+   * Get activeD7PayCount
+   *
+   * @return activeD7PayCount
+   */
+  @ApiModelProperty(value = "")
+  public Long getActiveD7PayCount() {
+    return activeD7PayCount;
+  }
+
+  public void setActiveD7PayCount(Long activeD7PayCount) {
+    this.activeD7PayCount = activeD7PayCount;
+  }
+
+  public HourlyReportsGetListStruct activeD14PayCount(Long activeD14PayCount) {
+    this.activeD14PayCount = activeD14PayCount;
+    return this;
+  }
+
+  /**
+   * Get activeD14PayCount
+   *
+   * @return activeD14PayCount
+   */
+  @ApiModelProperty(value = "")
+  public Long getActiveD14PayCount() {
+    return activeD14PayCount;
+  }
+
+  public void setActiveD14PayCount(Long activeD14PayCount) {
+    this.activeD14PayCount = activeD14PayCount;
+  }
+
+  public HourlyReportsGetListStruct activeD30PayCount(Long activeD30PayCount) {
+    this.activeD30PayCount = activeD30PayCount;
+    return this;
+  }
+
+  /**
+   * Get activeD30PayCount
+   *
+   * @return activeD30PayCount
+   */
+  @ApiModelProperty(value = "")
+  public Long getActiveD30PayCount() {
+    return activeD30PayCount;
+  }
+
+  public void setActiveD30PayCount(Long activeD30PayCount) {
+    this.activeD30PayCount = activeD30PayCount;
+  }
+
+  public HourlyReportsGetListStruct activeD7ClickPayRate(Double activeD7ClickPayRate) {
+    this.activeD7ClickPayRate = activeD7ClickPayRate;
+    return this;
+  }
+
+  /**
+   * Get activeD7ClickPayRate
+   *
+   * @return activeD7ClickPayRate
+   */
+  @ApiModelProperty(value = "")
+  public Double getActiveD7ClickPayRate() {
+    return activeD7ClickPayRate;
+  }
+
+  public void setActiveD7ClickPayRate(Double activeD7ClickPayRate) {
+    this.activeD7ClickPayRate = activeD7ClickPayRate;
+  }
+
+  public HourlyReportsGetListStruct activeD7ActivePayRate(Double activeD7ActivePayRate) {
+    this.activeD7ActivePayRate = activeD7ActivePayRate;
+    return this;
+  }
+
+  /**
+   * Get activeD7ActivePayRate
+   *
+   * @return activeD7ActivePayRate
+   */
+  @ApiModelProperty(value = "")
+  public Double getActiveD7ActivePayRate() {
+    return activeD7ActivePayRate;
+  }
+
+  public void setActiveD7ActivePayRate(Double activeD7ActivePayRate) {
+    this.activeD7ActivePayRate = activeD7ActivePayRate;
+  }
+
+  public HourlyReportsGetListStruct activeD7PayCost(Long activeD7PayCost) {
+    this.activeD7PayCost = activeD7PayCost;
+    return this;
+  }
+
+  /**
+   * Get activeD7PayCost
+   *
+   * @return activeD7PayCost
+   */
+  @ApiModelProperty(value = "")
+  public Long getActiveD7PayCost() {
+    return activeD7PayCost;
+  }
+
+  public void setActiveD7PayCost(Long activeD7PayCost) {
+    this.activeD7PayCost = activeD7PayCost;
+  }
+
+  public HourlyReportsGetListStruct miniGameFirstDayPayingPlaRoi(
+      Double miniGameFirstDayPayingPlaRoi) {
+    this.miniGameFirstDayPayingPlaRoi = miniGameFirstDayPayingPlaRoi;
+    return this;
+  }
+
+  /**
+   * Get miniGameFirstDayPayingPlaRoi
+   *
+   * @return miniGameFirstDayPayingPlaRoi
+   */
+  @ApiModelProperty(value = "")
+  public Double getMiniGameFirstDayPayingPlaRoi() {
+    return miniGameFirstDayPayingPlaRoi;
+  }
+
+  public void setMiniGameFirstDayPayingPlaRoi(Double miniGameFirstDayPayingPlaRoi) {
+    this.miniGameFirstDayPayingPlaRoi = miniGameFirstDayPayingPlaRoi;
+  }
+
   public HourlyReportsGetListStruct campaignId(Long campaignId) {
     this.campaignId = campaignId;
     return this;
@@ -12401,6 +12578,18 @@ public class HourlyReportsGetListStruct {
             this.miniGamePayingArpuD1, hourlyReportsGetListStruct.miniGamePayingArpuD1)
         && Objects.equals(
             this.miniGamePayD1PlaRate, hourlyReportsGetListStruct.miniGamePayD1PlaRate)
+        && Objects.equals(this.activeD3PayCount, hourlyReportsGetListStruct.activeD3PayCount)
+        && Objects.equals(this.activeD7PayCount, hourlyReportsGetListStruct.activeD7PayCount)
+        && Objects.equals(this.activeD14PayCount, hourlyReportsGetListStruct.activeD14PayCount)
+        && Objects.equals(this.activeD30PayCount, hourlyReportsGetListStruct.activeD30PayCount)
+        && Objects.equals(
+            this.activeD7ClickPayRate, hourlyReportsGetListStruct.activeD7ClickPayRate)
+        && Objects.equals(
+            this.activeD7ActivePayRate, hourlyReportsGetListStruct.activeD7ActivePayRate)
+        && Objects.equals(this.activeD7PayCost, hourlyReportsGetListStruct.activeD7PayCost)
+        && Objects.equals(
+            this.miniGameFirstDayPayingPlaRoi,
+            hourlyReportsGetListStruct.miniGameFirstDayPayingPlaRoi)
         && Objects.equals(this.campaignId, hourlyReportsGetListStruct.campaignId)
         && Objects.equals(this.campaignName, hourlyReportsGetListStruct.campaignName)
         && Objects.equals(this.webAddToCartCount, hourlyReportsGetListStruct.webAddToCartCount)
@@ -12997,6 +13186,14 @@ public class HourlyReportsGetListStruct {
         miniGameAdMonetizationAmountD14,
         miniGamePayingArpuD1,
         miniGamePayD1PlaRate,
+        activeD3PayCount,
+        activeD7PayCount,
+        activeD14PayCount,
+        activeD30PayCount,
+        activeD7ClickPayRate,
+        activeD7ActivePayRate,
+        activeD7PayCost,
+        miniGameFirstDayPayingPlaRoi,
         campaignId,
         campaignName,
         webAddToCartCount,

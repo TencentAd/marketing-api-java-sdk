@@ -344,6 +344,9 @@ public class ProductItemSpec {
   @SerializedName("risk_type")
   private RiskTypeStatus riskType = null;
 
+  @SerializedName("artist")
+  private List<String> artist = null;
+
   public ProductItemSpec productOuterId(String productOuterId) {
     this.productOuterId = productOuterId;
     return this;
@@ -2457,6 +2460,33 @@ public class ProductItemSpec {
     this.riskType = riskType;
   }
 
+  public ProductItemSpec artist(List<String> artist) {
+    this.artist = artist;
+    return this;
+  }
+
+  public ProductItemSpec addArtistItem(String artistItem) {
+    if (this.artist == null) {
+      this.artist = new ArrayList<String>();
+    }
+    this.artist.add(artistItem);
+    return this;
+  }
+
+  /**
+   * Get artist
+   *
+   * @return artist
+   */
+  @ApiModelProperty(value = "")
+  public List<String> getArtist() {
+    return artist;
+  }
+
+  public void setArtist(List<String> artist) {
+    this.artist = artist;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -2572,7 +2602,8 @@ public class ProductItemSpec {
         && Objects.equals(this.firstMonthInsuranceFee, productItemSpec.firstMonthInsuranceFee)
         && Objects.equals(this.maxQuota, productItemSpec.maxQuota)
         && Objects.equals(this.annualizedRateOfReturn, productItemSpec.annualizedRateOfReturn)
-        && Objects.equals(this.riskType, productItemSpec.riskType);
+        && Objects.equals(this.riskType, productItemSpec.riskType)
+        && Objects.equals(this.artist, productItemSpec.artist);
   }
 
   @Override
@@ -2684,7 +2715,8 @@ public class ProductItemSpec {
         firstMonthInsuranceFee,
         maxQuota,
         annualizedRateOfReturn,
-        riskType);
+        riskType,
+        artist);
   }
 
   @Override

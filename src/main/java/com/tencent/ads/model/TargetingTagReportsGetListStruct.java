@@ -1470,6 +1470,30 @@ public class TargetingTagReportsGetListStruct {
   @SerializedName("mini_game_pay_d1_pla_rate")
   private Double miniGamePayD1PlaRate = null;
 
+  @SerializedName("active_d3_pay_count")
+  private Long activeD3PayCount = null;
+
+  @SerializedName("active_d7_pay_count")
+  private Long activeD7PayCount = null;
+
+  @SerializedName("active_d14_pay_count")
+  private Long activeD14PayCount = null;
+
+  @SerializedName("active_d30_pay_count")
+  private Long activeD30PayCount = null;
+
+  @SerializedName("active_d7_click_pay_rate")
+  private Double activeD7ClickPayRate = null;
+
+  @SerializedName("active_d7_active_pay_rate")
+  private Double activeD7ActivePayRate = null;
+
+  @SerializedName("active_d7_pay_cost")
+  private Long activeD7PayCost = null;
+
+  @SerializedName("mini_game_first_day_paying_pla_roi")
+  private Double miniGameFirstDayPayingPlaRoi = null;
+
   public TargetingTagReportsGetListStruct date(String date) {
     this.date = date;
     return this;
@@ -10722,6 +10746,159 @@ public class TargetingTagReportsGetListStruct {
     this.miniGamePayD1PlaRate = miniGamePayD1PlaRate;
   }
 
+  public TargetingTagReportsGetListStruct activeD3PayCount(Long activeD3PayCount) {
+    this.activeD3PayCount = activeD3PayCount;
+    return this;
+  }
+
+  /**
+   * Get activeD3PayCount
+   *
+   * @return activeD3PayCount
+   */
+  @ApiModelProperty(value = "")
+  public Long getActiveD3PayCount() {
+    return activeD3PayCount;
+  }
+
+  public void setActiveD3PayCount(Long activeD3PayCount) {
+    this.activeD3PayCount = activeD3PayCount;
+  }
+
+  public TargetingTagReportsGetListStruct activeD7PayCount(Long activeD7PayCount) {
+    this.activeD7PayCount = activeD7PayCount;
+    return this;
+  }
+
+  /**
+   * Get activeD7PayCount
+   *
+   * @return activeD7PayCount
+   */
+  @ApiModelProperty(value = "")
+  public Long getActiveD7PayCount() {
+    return activeD7PayCount;
+  }
+
+  public void setActiveD7PayCount(Long activeD7PayCount) {
+    this.activeD7PayCount = activeD7PayCount;
+  }
+
+  public TargetingTagReportsGetListStruct activeD14PayCount(Long activeD14PayCount) {
+    this.activeD14PayCount = activeD14PayCount;
+    return this;
+  }
+
+  /**
+   * Get activeD14PayCount
+   *
+   * @return activeD14PayCount
+   */
+  @ApiModelProperty(value = "")
+  public Long getActiveD14PayCount() {
+    return activeD14PayCount;
+  }
+
+  public void setActiveD14PayCount(Long activeD14PayCount) {
+    this.activeD14PayCount = activeD14PayCount;
+  }
+
+  public TargetingTagReportsGetListStruct activeD30PayCount(Long activeD30PayCount) {
+    this.activeD30PayCount = activeD30PayCount;
+    return this;
+  }
+
+  /**
+   * Get activeD30PayCount
+   *
+   * @return activeD30PayCount
+   */
+  @ApiModelProperty(value = "")
+  public Long getActiveD30PayCount() {
+    return activeD30PayCount;
+  }
+
+  public void setActiveD30PayCount(Long activeD30PayCount) {
+    this.activeD30PayCount = activeD30PayCount;
+  }
+
+  public TargetingTagReportsGetListStruct activeD7ClickPayRate(Double activeD7ClickPayRate) {
+    this.activeD7ClickPayRate = activeD7ClickPayRate;
+    return this;
+  }
+
+  /**
+   * Get activeD7ClickPayRate
+   *
+   * @return activeD7ClickPayRate
+   */
+  @ApiModelProperty(value = "")
+  public Double getActiveD7ClickPayRate() {
+    return activeD7ClickPayRate;
+  }
+
+  public void setActiveD7ClickPayRate(Double activeD7ClickPayRate) {
+    this.activeD7ClickPayRate = activeD7ClickPayRate;
+  }
+
+  public TargetingTagReportsGetListStruct activeD7ActivePayRate(Double activeD7ActivePayRate) {
+    this.activeD7ActivePayRate = activeD7ActivePayRate;
+    return this;
+  }
+
+  /**
+   * Get activeD7ActivePayRate
+   *
+   * @return activeD7ActivePayRate
+   */
+  @ApiModelProperty(value = "")
+  public Double getActiveD7ActivePayRate() {
+    return activeD7ActivePayRate;
+  }
+
+  public void setActiveD7ActivePayRate(Double activeD7ActivePayRate) {
+    this.activeD7ActivePayRate = activeD7ActivePayRate;
+  }
+
+  public TargetingTagReportsGetListStruct activeD7PayCost(Long activeD7PayCost) {
+    this.activeD7PayCost = activeD7PayCost;
+    return this;
+  }
+
+  /**
+   * Get activeD7PayCost
+   *
+   * @return activeD7PayCost
+   */
+  @ApiModelProperty(value = "")
+  public Long getActiveD7PayCost() {
+    return activeD7PayCost;
+  }
+
+  public void setActiveD7PayCost(Long activeD7PayCost) {
+    this.activeD7PayCost = activeD7PayCost;
+  }
+
+  public TargetingTagReportsGetListStruct miniGameFirstDayPayingPlaRoi(
+      Double miniGameFirstDayPayingPlaRoi) {
+    this.miniGameFirstDayPayingPlaRoi = miniGameFirstDayPayingPlaRoi;
+    return this;
+  }
+
+  /**
+   * Get miniGameFirstDayPayingPlaRoi
+   *
+   * @return miniGameFirstDayPayingPlaRoi
+   */
+  @ApiModelProperty(value = "")
+  public Double getMiniGameFirstDayPayingPlaRoi() {
+    return miniGameFirstDayPayingPlaRoi;
+  }
+
+  public void setMiniGameFirstDayPayingPlaRoi(Double miniGameFirstDayPayingPlaRoi) {
+    this.miniGameFirstDayPayingPlaRoi = miniGameFirstDayPayingPlaRoi;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -11573,7 +11750,21 @@ public class TargetingTagReportsGetListStruct {
         && Objects.equals(
             this.miniGamePayingArpuD1, targetingTagReportsGetListStruct.miniGamePayingArpuD1)
         && Objects.equals(
-            this.miniGamePayD1PlaRate, targetingTagReportsGetListStruct.miniGamePayD1PlaRate);
+            this.miniGamePayD1PlaRate, targetingTagReportsGetListStruct.miniGamePayD1PlaRate)
+        && Objects.equals(this.activeD3PayCount, targetingTagReportsGetListStruct.activeD3PayCount)
+        && Objects.equals(this.activeD7PayCount, targetingTagReportsGetListStruct.activeD7PayCount)
+        && Objects.equals(
+            this.activeD14PayCount, targetingTagReportsGetListStruct.activeD14PayCount)
+        && Objects.equals(
+            this.activeD30PayCount, targetingTagReportsGetListStruct.activeD30PayCount)
+        && Objects.equals(
+            this.activeD7ClickPayRate, targetingTagReportsGetListStruct.activeD7ClickPayRate)
+        && Objects.equals(
+            this.activeD7ActivePayRate, targetingTagReportsGetListStruct.activeD7ActivePayRate)
+        && Objects.equals(this.activeD7PayCost, targetingTagReportsGetListStruct.activeD7PayCost)
+        && Objects.equals(
+            this.miniGameFirstDayPayingPlaRoi,
+            targetingTagReportsGetListStruct.miniGameFirstDayPayingPlaRoi);
   }
 
   @Override
@@ -12061,7 +12252,15 @@ public class TargetingTagReportsGetListStruct {
         miniGameAdMonetizationAmountD7,
         miniGameAdMonetizationAmountD14,
         miniGamePayingArpuD1,
-        miniGamePayD1PlaRate);
+        miniGamePayD1PlaRate,
+        activeD3PayCount,
+        activeD7PayCount,
+        activeD14PayCount,
+        activeD30PayCount,
+        activeD7ClickPayRate,
+        activeD7ActivePayRate,
+        activeD7PayCost,
+        miniGameFirstDayPayingPlaRoi);
   }
 
   @Override
