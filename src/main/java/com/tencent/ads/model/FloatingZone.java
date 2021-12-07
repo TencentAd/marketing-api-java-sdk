@@ -42,6 +42,18 @@ public class FloatingZone {
   @SerializedName("floating_zone_single_image_id")
   private String floatingZoneSingleImageId = null;
 
+  @SerializedName("chosen_button_text1")
+  private String chosenButtonText1 = null;
+
+  @SerializedName("chosen_button_landing_page1")
+  private LandingPageStructure chosenButtonLandingPage1 = null;
+
+  @SerializedName("chosen_button_text2")
+  private String chosenButtonText2 = null;
+
+  @SerializedName("chosen_button_landing_page2")
+  private LandingPageStructure chosenButtonLandingPage2 = null;
+
   public FloatingZone floatingZoneSwitch(Boolean floatingZoneSwitch) {
     this.floatingZoneSwitch = floatingZoneSwitch;
     return this;
@@ -175,6 +187,82 @@ public class FloatingZone {
     this.floatingZoneSingleImageId = floatingZoneSingleImageId;
   }
 
+  public FloatingZone chosenButtonText1(String chosenButtonText1) {
+    this.chosenButtonText1 = chosenButtonText1;
+    return this;
+  }
+
+  /**
+   * Get chosenButtonText1
+   *
+   * @return chosenButtonText1
+   */
+  @ApiModelProperty(value = "")
+  public String getChosenButtonText1() {
+    return chosenButtonText1;
+  }
+
+  public void setChosenButtonText1(String chosenButtonText1) {
+    this.chosenButtonText1 = chosenButtonText1;
+  }
+
+  public FloatingZone chosenButtonLandingPage1(LandingPageStructure chosenButtonLandingPage1) {
+    this.chosenButtonLandingPage1 = chosenButtonLandingPage1;
+    return this;
+  }
+
+  /**
+   * Get chosenButtonLandingPage1
+   *
+   * @return chosenButtonLandingPage1
+   */
+  @ApiModelProperty(value = "")
+  public LandingPageStructure getChosenButtonLandingPage1() {
+    return chosenButtonLandingPage1;
+  }
+
+  public void setChosenButtonLandingPage1(LandingPageStructure chosenButtonLandingPage1) {
+    this.chosenButtonLandingPage1 = chosenButtonLandingPage1;
+  }
+
+  public FloatingZone chosenButtonText2(String chosenButtonText2) {
+    this.chosenButtonText2 = chosenButtonText2;
+    return this;
+  }
+
+  /**
+   * Get chosenButtonText2
+   *
+   * @return chosenButtonText2
+   */
+  @ApiModelProperty(value = "")
+  public String getChosenButtonText2() {
+    return chosenButtonText2;
+  }
+
+  public void setChosenButtonText2(String chosenButtonText2) {
+    this.chosenButtonText2 = chosenButtonText2;
+  }
+
+  public FloatingZone chosenButtonLandingPage2(LandingPageStructure chosenButtonLandingPage2) {
+    this.chosenButtonLandingPage2 = chosenButtonLandingPage2;
+    return this;
+  }
+
+  /**
+   * Get chosenButtonLandingPage2
+   *
+   * @return chosenButtonLandingPage2
+   */
+  @ApiModelProperty(value = "")
+  public LandingPageStructure getChosenButtonLandingPage2() {
+    return chosenButtonLandingPage2;
+  }
+
+  public void setChosenButtonLandingPage2(LandingPageStructure chosenButtonLandingPage2) {
+    this.chosenButtonLandingPage2 = chosenButtonLandingPage2;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -190,7 +278,11 @@ public class FloatingZone {
         && Objects.equals(this.floatingZoneDesc, floatingZone.floatingZoneDesc)
         && Objects.equals(this.floatingZoneButtonText, floatingZone.floatingZoneButtonText)
         && Objects.equals(this.floatingZoneType, floatingZone.floatingZoneType)
-        && Objects.equals(this.floatingZoneSingleImageId, floatingZone.floatingZoneSingleImageId);
+        && Objects.equals(this.floatingZoneSingleImageId, floatingZone.floatingZoneSingleImageId)
+        && Objects.equals(this.chosenButtonText1, floatingZone.chosenButtonText1)
+        && Objects.equals(this.chosenButtonLandingPage1, floatingZone.chosenButtonLandingPage1)
+        && Objects.equals(this.chosenButtonText2, floatingZone.chosenButtonText2)
+        && Objects.equals(this.chosenButtonLandingPage2, floatingZone.chosenButtonLandingPage2);
   }
 
   @Override
@@ -202,7 +294,11 @@ public class FloatingZone {
         floatingZoneDesc,
         floatingZoneButtonText,
         floatingZoneType,
-        floatingZoneSingleImageId);
+        floatingZoneSingleImageId,
+        chosenButtonText1,
+        chosenButtonLandingPage1,
+        chosenButtonText2,
+        chosenButtonLandingPage2);
   }
 
   @Override

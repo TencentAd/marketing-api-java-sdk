@@ -212,6 +212,9 @@ public class AdcreativeCreativeElementsReadMp {
   @SerializedName("living_desc_struct")
   private AdCreativeLivingDescStruct livingDescStruct = null;
 
+  @SerializedName("floating_zone_struct")
+  private FloatingZone floatingZoneStruct = null;
+
   @SerializedName("countdown_expiring_timestamp")
   private Long countdownExpiringTimestamp = null;
 
@@ -1450,6 +1453,25 @@ public class AdcreativeCreativeElementsReadMp {
     this.livingDescStruct = livingDescStruct;
   }
 
+  public AdcreativeCreativeElementsReadMp floatingZoneStruct(FloatingZone floatingZoneStruct) {
+    this.floatingZoneStruct = floatingZoneStruct;
+    return this;
+  }
+
+  /**
+   * Get floatingZoneStruct
+   *
+   * @return floatingZoneStruct
+   */
+  @ApiModelProperty(value = "")
+  public FloatingZone getFloatingZoneStruct() {
+    return floatingZoneStruct;
+  }
+
+  public void setFloatingZoneStruct(FloatingZone floatingZoneStruct) {
+    this.floatingZoneStruct = floatingZoneStruct;
+  }
+
   public AdcreativeCreativeElementsReadMp countdownExpiringTimestamp(
       Long countdownExpiringTimestamp) {
     this.countdownExpiringTimestamp = countdownExpiringTimestamp;
@@ -1547,6 +1569,8 @@ public class AdcreativeCreativeElementsReadMp {
         && Objects.equals(this.chosenButton, adcreativeCreativeElementsReadMp.chosenButton)
         && Objects.equals(this.livingDescStruct, adcreativeCreativeElementsReadMp.livingDescStruct)
         && Objects.equals(
+            this.floatingZoneStruct, adcreativeCreativeElementsReadMp.floatingZoneStruct)
+        && Objects.equals(
             this.countdownExpiringTimestamp,
             adcreativeCreativeElementsReadMp.countdownExpiringTimestamp);
   }
@@ -1617,6 +1641,7 @@ public class AdcreativeCreativeElementsReadMp {
         shopImageStruct,
         chosenButton,
         livingDescStruct,
+        floatingZoneStruct,
         countdownExpiringTimestamp);
   }
 

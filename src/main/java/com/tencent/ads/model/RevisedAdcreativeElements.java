@@ -164,6 +164,9 @@ public class RevisedAdcreativeElements {
   @SerializedName("living_desc_struct")
   private AdCreativeLivingDescStruct livingDescStruct = null;
 
+  @SerializedName("floating_zone_struct")
+  private FloatingZone floatingZoneStruct = null;
+
   public RevisedAdcreativeElements image(String image) {
     this.image = image;
     return this;
@@ -1100,6 +1103,25 @@ public class RevisedAdcreativeElements {
     this.livingDescStruct = livingDescStruct;
   }
 
+  public RevisedAdcreativeElements floatingZoneStruct(FloatingZone floatingZoneStruct) {
+    this.floatingZoneStruct = floatingZoneStruct;
+    return this;
+  }
+
+  /**
+   * Get floatingZoneStruct
+   *
+   * @return floatingZoneStruct
+   */
+  @ApiModelProperty(value = "")
+  public FloatingZone getFloatingZoneStruct() {
+    return floatingZoneStruct;
+  }
+
+  public void setFloatingZoneStruct(FloatingZone floatingZoneStruct) {
+    this.floatingZoneStruct = floatingZoneStruct;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -1155,7 +1177,8 @@ public class RevisedAdcreativeElements {
         && Objects.equals(this.headLine, revisedAdcreativeElements.headLine)
         && Objects.equals(this.shopImageStruct, revisedAdcreativeElements.shopImageStruct)
         && Objects.equals(this.chosenButton, revisedAdcreativeElements.chosenButton)
-        && Objects.equals(this.livingDescStruct, revisedAdcreativeElements.livingDescStruct);
+        && Objects.equals(this.livingDescStruct, revisedAdcreativeElements.livingDescStruct)
+        && Objects.equals(this.floatingZoneStruct, revisedAdcreativeElements.floatingZoneStruct);
   }
 
   @Override
@@ -1207,7 +1230,8 @@ public class RevisedAdcreativeElements {
         headLine,
         shopImageStruct,
         chosenButton,
-        livingDescStruct);
+        livingDescStruct,
+        floatingZoneStruct);
   }
 
   @Override

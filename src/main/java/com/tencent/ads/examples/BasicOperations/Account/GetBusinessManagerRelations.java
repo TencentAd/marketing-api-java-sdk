@@ -18,6 +18,8 @@ public class GetBusinessManagerRelations {
 
   public Long pageSize = null;
 
+  public Long advertiserType = null;
+
   public List<String> fields = null;
 
   public void init() {
@@ -32,7 +34,9 @@ public class GetBusinessManagerRelations {
 
   public BusinessManagerRelationsGetResponseData getBusinessManagerRelations() throws Exception {
     BusinessManagerRelationsGetResponseData response =
-        tencentAds.businessManagerRelations().businessManagerRelationsGet(page, pageSize, fields);
+        tencentAds
+            .businessManagerRelations()
+            .businessManagerRelationsGet(page, pageSize, advertiserType, fields);
     return response;
   }
 

@@ -31,16 +31,17 @@ public class BusinessManagerRelationsApiContainer extends ApiContainer {
    *
    * @param page (optional)
    * @param pageSize (optional)
+   * @param advertiserType (optional)
    * @param fields 返回参数的字段列表 (optional)
    * @return BusinessManagerRelationsGetResponse
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
   public BusinessManagerRelationsGetResponseData businessManagerRelationsGet(
-      Long page, Long pageSize, List<String> fields)
+      Long page, Long pageSize, Long advertiserType, List<String> fields)
       throws ApiException, TencentAdsResponseException {
     BusinessManagerRelationsGetResponse resp =
-        api.businessManagerRelationsGet(page, pageSize, fields);
+        api.businessManagerRelationsGet(page, pageSize, advertiserType, fields);
     handleResponse(gson.toJson(resp));
     return resp.getData();
   }

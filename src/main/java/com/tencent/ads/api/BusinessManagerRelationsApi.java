@@ -53,6 +53,7 @@ public class BusinessManagerRelationsApi {
    *
    * @param page (optional)
    * @param pageSize (optional)
+   * @param advertiserType (optional)
    * @param fields 返回参数的字段列表 (optional)
    * @param progressListener Progress listener
    * @param progressRequestListener Progress request listener
@@ -62,6 +63,7 @@ public class BusinessManagerRelationsApi {
   public com.squareup.okhttp.Call businessManagerRelationsGetCall(
       Long page,
       Long pageSize,
+      Long advertiserType,
       List<String> fields,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener)
@@ -76,6 +78,8 @@ public class BusinessManagerRelationsApi {
     if (page != null) localVarQueryParams.addAll(apiClient.parameterToPair("page", page));
     if (pageSize != null)
       localVarQueryParams.addAll(apiClient.parameterToPair("page_size", pageSize));
+    if (advertiserType != null)
+      localVarQueryParams.addAll(apiClient.parameterToPair("advertiser_type", advertiserType));
     if (fields != null)
       localVarCollectionQueryParams.addAll(apiClient.parameterToPairs("multi", "fields", fields));
 
@@ -126,6 +130,7 @@ public class BusinessManagerRelationsApi {
   private com.squareup.okhttp.Call businessManagerRelationsGetValidateBeforeCall(
       Long page,
       Long pageSize,
+      Long advertiserType,
       List<String> fields,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener)
@@ -133,7 +138,7 @@ public class BusinessManagerRelationsApi {
 
     com.squareup.okhttp.Call call =
         businessManagerRelationsGetCall(
-            page, pageSize, fields, progressListener, progressRequestListener);
+            page, pageSize, advertiserType, fields, progressListener, progressRequestListener);
     return call;
   }
 
@@ -142,15 +147,16 @@ public class BusinessManagerRelationsApi {
    *
    * @param page (optional)
    * @param pageSize (optional)
+   * @param advertiserType (optional)
    * @param fields 返回参数的字段列表 (optional)
    * @return BusinessManagerRelationsGetResponse
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
   public BusinessManagerRelationsGetResponse businessManagerRelationsGet(
-      Long page, Long pageSize, List<String> fields) throws ApiException {
+      Long page, Long pageSize, Long advertiserType, List<String> fields) throws ApiException {
     ApiResponse<BusinessManagerRelationsGetResponse> resp =
-        businessManagerRelationsGetWithHttpInfo(page, pageSize, fields);
+        businessManagerRelationsGetWithHttpInfo(page, pageSize, advertiserType, fields);
     return resp.getData();
   }
 
@@ -159,15 +165,17 @@ public class BusinessManagerRelationsApi {
    *
    * @param page (optional)
    * @param pageSize (optional)
+   * @param advertiserType (optional)
    * @param fields 返回参数的字段列表 (optional)
    * @return ApiResponse&lt;BusinessManagerRelationsGetResponse&gt;
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
   public ApiResponse<BusinessManagerRelationsGetResponse> businessManagerRelationsGetWithHttpInfo(
-      Long page, Long pageSize, List<String> fields) throws ApiException {
+      Long page, Long pageSize, Long advertiserType, List<String> fields) throws ApiException {
     com.squareup.okhttp.Call call =
-        businessManagerRelationsGetValidateBeforeCall(page, pageSize, fields, null, null);
+        businessManagerRelationsGetValidateBeforeCall(
+            page, pageSize, advertiserType, fields, null, null);
     Type localVarReturnType = new TypeToken<BusinessManagerRelationsGetResponse>() {}.getType();
     return apiClient.execute(call, localVarReturnType);
   }
@@ -177,6 +185,7 @@ public class BusinessManagerRelationsApi {
    *
    * @param page (optional)
    * @param pageSize (optional)
+   * @param advertiserType (optional)
    * @param fields 返回参数的字段列表 (optional)
    * @param callback The callback to be executed when the API call finishes
    * @return The request call
@@ -185,6 +194,7 @@ public class BusinessManagerRelationsApi {
   public com.squareup.okhttp.Call businessManagerRelationsGetAsync(
       Long page,
       Long pageSize,
+      Long advertiserType,
       List<String> fields,
       final ApiCallback<BusinessManagerRelationsGetResponse> callback)
       throws ApiException {
@@ -212,7 +222,7 @@ public class BusinessManagerRelationsApi {
 
     com.squareup.okhttp.Call call =
         businessManagerRelationsGetValidateBeforeCall(
-            page, pageSize, fields, progressListener, progressRequestListener);
+            page, pageSize, advertiserType, fields, progressListener, progressRequestListener);
     Type localVarReturnType = new TypeToken<BusinessManagerRelationsGetResponse>() {}.getType();
     apiClient.executeAsync(call, localVarReturnType, callback);
     return call;
