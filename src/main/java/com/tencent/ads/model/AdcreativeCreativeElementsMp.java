@@ -149,6 +149,18 @@ public class AdcreativeCreativeElementsMp {
   @SerializedName("living_desc_struct")
   private AdCreativeLivingDescStruct livingDescStruct = null;
 
+  @SerializedName("left_button")
+  private String leftButton = null;
+
+  @SerializedName("right_button")
+  private String rightButton = null;
+
+  @SerializedName("left_canvas")
+  private String leftCanvas = null;
+
+  @SerializedName("right_canvas")
+  private String rightCanvas = null;
+
   @SerializedName("floating_zone_struct")
   private FloatingZone floatingZoneStruct = null;
 
@@ -990,6 +1002,82 @@ public class AdcreativeCreativeElementsMp {
     this.livingDescStruct = livingDescStruct;
   }
 
+  public AdcreativeCreativeElementsMp leftButton(String leftButton) {
+    this.leftButton = leftButton;
+    return this;
+  }
+
+  /**
+   * Get leftButton
+   *
+   * @return leftButton
+   */
+  @ApiModelProperty(value = "")
+  public String getLeftButton() {
+    return leftButton;
+  }
+
+  public void setLeftButton(String leftButton) {
+    this.leftButton = leftButton;
+  }
+
+  public AdcreativeCreativeElementsMp rightButton(String rightButton) {
+    this.rightButton = rightButton;
+    return this;
+  }
+
+  /**
+   * Get rightButton
+   *
+   * @return rightButton
+   */
+  @ApiModelProperty(value = "")
+  public String getRightButton() {
+    return rightButton;
+  }
+
+  public void setRightButton(String rightButton) {
+    this.rightButton = rightButton;
+  }
+
+  public AdcreativeCreativeElementsMp leftCanvas(String leftCanvas) {
+    this.leftCanvas = leftCanvas;
+    return this;
+  }
+
+  /**
+   * Get leftCanvas
+   *
+   * @return leftCanvas
+   */
+  @ApiModelProperty(value = "")
+  public String getLeftCanvas() {
+    return leftCanvas;
+  }
+
+  public void setLeftCanvas(String leftCanvas) {
+    this.leftCanvas = leftCanvas;
+  }
+
+  public AdcreativeCreativeElementsMp rightCanvas(String rightCanvas) {
+    this.rightCanvas = rightCanvas;
+    return this;
+  }
+
+  /**
+   * Get rightCanvas
+   *
+   * @return rightCanvas
+   */
+  @ApiModelProperty(value = "")
+  public String getRightCanvas() {
+    return rightCanvas;
+  }
+
+  public void setRightCanvas(String rightCanvas) {
+    this.rightCanvas = rightCanvas;
+  }
+
   public AdcreativeCreativeElementsMp floatingZoneStruct(FloatingZone floatingZoneStruct) {
     this.floatingZoneStruct = floatingZoneStruct;
     return this;
@@ -1079,6 +1167,10 @@ public class AdcreativeCreativeElementsMp {
         && Objects.equals(this.shopImageStruct, adcreativeCreativeElementsMp.shopImageStruct)
         && Objects.equals(this.chosenButton, adcreativeCreativeElementsMp.chosenButton)
         && Objects.equals(this.livingDescStruct, adcreativeCreativeElementsMp.livingDescStruct)
+        && Objects.equals(this.leftButton, adcreativeCreativeElementsMp.leftButton)
+        && Objects.equals(this.rightButton, adcreativeCreativeElementsMp.rightButton)
+        && Objects.equals(this.leftCanvas, adcreativeCreativeElementsMp.leftCanvas)
+        && Objects.equals(this.rightCanvas, adcreativeCreativeElementsMp.rightCanvas)
         && Objects.equals(this.floatingZoneStruct, adcreativeCreativeElementsMp.floatingZoneStruct)
         && Objects.equals(
             this.countdownExpiringTimestamp,
@@ -1130,6 +1222,10 @@ public class AdcreativeCreativeElementsMp {
         shopImageStruct,
         chosenButton,
         livingDescStruct,
+        leftButton,
+        rightButton,
+        leftCanvas,
+        rightCanvas,
         floatingZoneStruct,
         countdownExpiringTimestamp);
   }

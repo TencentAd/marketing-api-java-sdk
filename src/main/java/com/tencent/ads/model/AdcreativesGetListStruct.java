@@ -155,6 +155,9 @@ public class AdcreativesGetListStruct {
   @SerializedName("creative_template_version_type")
   private CreativeTemplateVersionType creativeTemplateVersionType = null;
 
+  @SerializedName("industry_label")
+  private String industryLabel = null;
+
   @SerializedName("adcreative_template_id")
   private Long adcreativeTemplateId = null;
 
@@ -1018,6 +1021,25 @@ public class AdcreativesGetListStruct {
     this.creativeTemplateVersionType = creativeTemplateVersionType;
   }
 
+  public AdcreativesGetListStruct industryLabel(String industryLabel) {
+    this.industryLabel = industryLabel;
+    return this;
+  }
+
+  /**
+   * Get industryLabel
+   *
+   * @return industryLabel
+   */
+  @ApiModelProperty(value = "")
+  public String getIndustryLabel() {
+    return industryLabel;
+  }
+
+  public void setIndustryLabel(String industryLabel) {
+    this.industryLabel = industryLabel;
+  }
+
   public AdcreativesGetListStruct adcreativeTemplateId(Long adcreativeTemplateId) {
     this.adcreativeTemplateId = adcreativeTemplateId;
     return this;
@@ -1119,6 +1141,7 @@ public class AdcreativesGetListStruct {
             this.enableBreakthroughSiteset, adcreativesGetListStruct.enableBreakthroughSiteset)
         && Objects.equals(
             this.creativeTemplateVersionType, adcreativesGetListStruct.creativeTemplateVersionType)
+        && Objects.equals(this.industryLabel, adcreativesGetListStruct.industryLabel)
         && Objects.equals(this.adcreativeTemplateId, adcreativesGetListStruct.adcreativeTemplateId)
         && Objects.equals(this.adcreativeElements, adcreativesGetListStruct.adcreativeElements);
   }
@@ -1170,6 +1193,7 @@ public class AdcreativesGetListStruct {
         appGiftPackCode,
         enableBreakthroughSiteset,
         creativeTemplateVersionType,
+        industryLabel,
         adcreativeTemplateId,
         adcreativeElements);
   }

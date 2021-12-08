@@ -114,6 +114,9 @@ public class AdcreativesUpdateRequest {
   @SerializedName("app_gift_pack_code")
   private AppGiftPackCode appGiftPackCode = null;
 
+  @SerializedName("industry_label")
+  private String industryLabel = null;
+
   @SerializedName("account_id")
   private Long accountId = null;
 
@@ -720,6 +723,25 @@ public class AdcreativesUpdateRequest {
     this.appGiftPackCode = appGiftPackCode;
   }
 
+  public AdcreativesUpdateRequest industryLabel(String industryLabel) {
+    this.industryLabel = industryLabel;
+    return this;
+  }
+
+  /**
+   * Get industryLabel
+   *
+   * @return industryLabel
+   */
+  @ApiModelProperty(value = "")
+  public String getIndustryLabel() {
+    return industryLabel;
+  }
+
+  public void setIndustryLabel(String industryLabel) {
+    this.industryLabel = industryLabel;
+  }
+
   public AdcreativesUpdateRequest accountId(Long accountId) {
     this.accountId = accountId;
     return this;
@@ -806,6 +828,7 @@ public class AdcreativesUpdateRequest {
         && Objects.equals(
             this.dynamicAdcreativeSpec, adcreativesUpdateRequest.dynamicAdcreativeSpec)
         && Objects.equals(this.appGiftPackCode, adcreativesUpdateRequest.appGiftPackCode)
+        && Objects.equals(this.industryLabel, adcreativesUpdateRequest.industryLabel)
         && Objects.equals(this.accountId, adcreativesUpdateRequest.accountId)
         && Objects.equals(this.adcreativeElements, adcreativesUpdateRequest.adcreativeElements);
   }
@@ -844,6 +867,7 @@ public class AdcreativesUpdateRequest {
         barrageList,
         dynamicAdcreativeSpec,
         appGiftPackCode,
+        industryLabel,
         accountId,
         adcreativeElements);
   }

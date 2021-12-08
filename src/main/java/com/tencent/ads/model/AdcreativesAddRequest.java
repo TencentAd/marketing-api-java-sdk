@@ -126,6 +126,9 @@ public class AdcreativesAddRequest {
   @SerializedName("enable_breakthrough_siteset")
   private Boolean enableBreakthroughSiteset = null;
 
+  @SerializedName("industry_label")
+  private String industryLabel = null;
+
   @SerializedName("account_id")
   private Long accountId = null;
 
@@ -816,6 +819,25 @@ public class AdcreativesAddRequest {
     this.enableBreakthroughSiteset = enableBreakthroughSiteset;
   }
 
+  public AdcreativesAddRequest industryLabel(String industryLabel) {
+    this.industryLabel = industryLabel;
+    return this;
+  }
+
+  /**
+   * Get industryLabel
+   *
+   * @return industryLabel
+   */
+  @ApiModelProperty(value = "")
+  public String getIndustryLabel() {
+    return industryLabel;
+  }
+
+  public void setIndustryLabel(String industryLabel) {
+    this.industryLabel = industryLabel;
+  }
+
   public AdcreativesAddRequest accountId(Long accountId) {
     this.accountId = accountId;
     return this;
@@ -921,6 +943,7 @@ public class AdcreativesAddRequest {
         && Objects.equals(this.appGiftPackCode, adcreativesAddRequest.appGiftPackCode)
         && Objects.equals(
             this.enableBreakthroughSiteset, adcreativesAddRequest.enableBreakthroughSiteset)
+        && Objects.equals(this.industryLabel, adcreativesAddRequest.industryLabel)
         && Objects.equals(this.accountId, adcreativesAddRequest.accountId)
         && Objects.equals(this.adcreativeTemplateId, adcreativesAddRequest.adcreativeTemplateId)
         && Objects.equals(this.adcreativeElements, adcreativesAddRequest.adcreativeElements);
@@ -964,6 +987,7 @@ public class AdcreativesAddRequest {
         barrageList,
         appGiftPackCode,
         enableBreakthroughSiteset,
+        industryLabel,
         accountId,
         adcreativeTemplateId,
         adcreativeElements);

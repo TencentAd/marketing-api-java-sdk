@@ -161,6 +161,30 @@ public class AdcreativeCreativeElementsWithOptions {
   @SerializedName("head_line")
   private String headLine = null;
 
+  @SerializedName("shop_image_struct")
+  private AdCreativeShopImageStruct shopImageStruct = null;
+
+  @SerializedName("chosen_button")
+  private ChosenButton chosenButton = null;
+
+  @SerializedName("living_desc_struct")
+  private AdCreativeLivingDescStruct livingDescStruct = null;
+
+  @SerializedName("floating_zone_struct")
+  private FloatingZone floatingZoneStruct = null;
+
+  @SerializedName("left_button")
+  private String leftButton = null;
+
+  @SerializedName("right_button")
+  private String rightButton = null;
+
+  @SerializedName("left_canvas")
+  private String leftCanvas = null;
+
+  @SerializedName("right_canvas")
+  private String rightCanvas = null;
+
   @SerializedName("countdown_expiring_timestamp")
   private Long countdownExpiringTimestamp = null;
 
@@ -1108,6 +1132,160 @@ public class AdcreativeCreativeElementsWithOptions {
     this.headLine = headLine;
   }
 
+  public AdcreativeCreativeElementsWithOptions shopImageStruct(
+      AdCreativeShopImageStruct shopImageStruct) {
+    this.shopImageStruct = shopImageStruct;
+    return this;
+  }
+
+  /**
+   * Get shopImageStruct
+   *
+   * @return shopImageStruct
+   */
+  @ApiModelProperty(value = "")
+  public AdCreativeShopImageStruct getShopImageStruct() {
+    return shopImageStruct;
+  }
+
+  public void setShopImageStruct(AdCreativeShopImageStruct shopImageStruct) {
+    this.shopImageStruct = shopImageStruct;
+  }
+
+  public AdcreativeCreativeElementsWithOptions chosenButton(ChosenButton chosenButton) {
+    this.chosenButton = chosenButton;
+    return this;
+  }
+
+  /**
+   * Get chosenButton
+   *
+   * @return chosenButton
+   */
+  @ApiModelProperty(value = "")
+  public ChosenButton getChosenButton() {
+    return chosenButton;
+  }
+
+  public void setChosenButton(ChosenButton chosenButton) {
+    this.chosenButton = chosenButton;
+  }
+
+  public AdcreativeCreativeElementsWithOptions livingDescStruct(
+      AdCreativeLivingDescStruct livingDescStruct) {
+    this.livingDescStruct = livingDescStruct;
+    return this;
+  }
+
+  /**
+   * Get livingDescStruct
+   *
+   * @return livingDescStruct
+   */
+  @ApiModelProperty(value = "")
+  public AdCreativeLivingDescStruct getLivingDescStruct() {
+    return livingDescStruct;
+  }
+
+  public void setLivingDescStruct(AdCreativeLivingDescStruct livingDescStruct) {
+    this.livingDescStruct = livingDescStruct;
+  }
+
+  public AdcreativeCreativeElementsWithOptions floatingZoneStruct(FloatingZone floatingZoneStruct) {
+    this.floatingZoneStruct = floatingZoneStruct;
+    return this;
+  }
+
+  /**
+   * Get floatingZoneStruct
+   *
+   * @return floatingZoneStruct
+   */
+  @ApiModelProperty(value = "")
+  public FloatingZone getFloatingZoneStruct() {
+    return floatingZoneStruct;
+  }
+
+  public void setFloatingZoneStruct(FloatingZone floatingZoneStruct) {
+    this.floatingZoneStruct = floatingZoneStruct;
+  }
+
+  public AdcreativeCreativeElementsWithOptions leftButton(String leftButton) {
+    this.leftButton = leftButton;
+    return this;
+  }
+
+  /**
+   * Get leftButton
+   *
+   * @return leftButton
+   */
+  @ApiModelProperty(value = "")
+  public String getLeftButton() {
+    return leftButton;
+  }
+
+  public void setLeftButton(String leftButton) {
+    this.leftButton = leftButton;
+  }
+
+  public AdcreativeCreativeElementsWithOptions rightButton(String rightButton) {
+    this.rightButton = rightButton;
+    return this;
+  }
+
+  /**
+   * Get rightButton
+   *
+   * @return rightButton
+   */
+  @ApiModelProperty(value = "")
+  public String getRightButton() {
+    return rightButton;
+  }
+
+  public void setRightButton(String rightButton) {
+    this.rightButton = rightButton;
+  }
+
+  public AdcreativeCreativeElementsWithOptions leftCanvas(String leftCanvas) {
+    this.leftCanvas = leftCanvas;
+    return this;
+  }
+
+  /**
+   * Get leftCanvas
+   *
+   * @return leftCanvas
+   */
+  @ApiModelProperty(value = "")
+  public String getLeftCanvas() {
+    return leftCanvas;
+  }
+
+  public void setLeftCanvas(String leftCanvas) {
+    this.leftCanvas = leftCanvas;
+  }
+
+  public AdcreativeCreativeElementsWithOptions rightCanvas(String rightCanvas) {
+    this.rightCanvas = rightCanvas;
+    return this;
+  }
+
+  /**
+   * Get rightCanvas
+   *
+   * @return rightCanvas
+   */
+  @ApiModelProperty(value = "")
+  public String getRightCanvas() {
+    return rightCanvas;
+  }
+
+  public void setRightCanvas(String rightCanvas) {
+    this.rightCanvas = rightCanvas;
+  }
+
   public AdcreativeCreativeElementsWithOptions countdownExpiringTimestamp(
       Long countdownExpiringTimestamp) {
     this.countdownExpiringTimestamp = countdownExpiringTimestamp;
@@ -1194,6 +1372,17 @@ public class AdcreativeCreativeElementsWithOptions {
         && Objects.equals(this.shopImage, adcreativeCreativeElementsWithOptions.shopImage)
         && Objects.equals(this.headLine, adcreativeCreativeElementsWithOptions.headLine)
         && Objects.equals(
+            this.shopImageStruct, adcreativeCreativeElementsWithOptions.shopImageStruct)
+        && Objects.equals(this.chosenButton, adcreativeCreativeElementsWithOptions.chosenButton)
+        && Objects.equals(
+            this.livingDescStruct, adcreativeCreativeElementsWithOptions.livingDescStruct)
+        && Objects.equals(
+            this.floatingZoneStruct, adcreativeCreativeElementsWithOptions.floatingZoneStruct)
+        && Objects.equals(this.leftButton, adcreativeCreativeElementsWithOptions.leftButton)
+        && Objects.equals(this.rightButton, adcreativeCreativeElementsWithOptions.rightButton)
+        && Objects.equals(this.leftCanvas, adcreativeCreativeElementsWithOptions.leftCanvas)
+        && Objects.equals(this.rightCanvas, adcreativeCreativeElementsWithOptions.rightCanvas)
+        && Objects.equals(
             this.countdownExpiringTimestamp,
             adcreativeCreativeElementsWithOptions.countdownExpiringTimestamp);
   }
@@ -1247,6 +1436,14 @@ public class AdcreativeCreativeElementsWithOptions {
         endPage,
         shopImage,
         headLine,
+        shopImageStruct,
+        chosenButton,
+        livingDescStruct,
+        floatingZoneStruct,
+        leftButton,
+        rightButton,
+        leftCanvas,
+        rightCanvas,
         countdownExpiringTimestamp);
   }
 

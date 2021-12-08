@@ -19,7 +19,7 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-/** 链接名称类型 */
+/** 转化引导文案 */
 @JsonAdapter(LinkUrlLinkNameType.Adapter.class)
 public enum LinkUrlLinkNameType {
   NOT_USED("NOT_USED"),
