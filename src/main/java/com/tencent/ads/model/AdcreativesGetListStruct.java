@@ -140,6 +140,9 @@ public class AdcreativesGetListStruct {
   @SerializedName("countdown_switch")
   private Boolean countdownSwitch = null;
 
+  @SerializedName("source")
+  private AdCreativeSource source = null;
+
   @SerializedName("page_track_url")
   private String pageTrackUrl = null;
 
@@ -916,6 +919,25 @@ public class AdcreativesGetListStruct {
     this.countdownSwitch = countdownSwitch;
   }
 
+  public AdcreativesGetListStruct source(AdCreativeSource source) {
+    this.source = source;
+    return this;
+  }
+
+  /**
+   * Get source
+   *
+   * @return source
+   */
+  @ApiModelProperty(value = "")
+  public AdCreativeSource getSource() {
+    return source;
+  }
+
+  public void setSource(AdCreativeSource source) {
+    this.source = source;
+  }
+
   public AdcreativesGetListStruct pageTrackUrl(String pageTrackUrl) {
     this.pageTrackUrl = pageTrackUrl;
     return this;
@@ -1134,6 +1156,7 @@ public class AdcreativesGetListStruct {
         && Objects.equals(
             this.marketingPendantImageId, adcreativesGetListStruct.marketingPendantImageId)
         && Objects.equals(this.countdownSwitch, adcreativesGetListStruct.countdownSwitch)
+        && Objects.equals(this.source, adcreativesGetListStruct.source)
         && Objects.equals(this.pageTrackUrl, adcreativesGetListStruct.pageTrackUrl)
         && Objects.equals(this.barrageList, adcreativesGetListStruct.barrageList)
         && Objects.equals(this.appGiftPackCode, adcreativesGetListStruct.appGiftPackCode)
@@ -1188,6 +1211,7 @@ public class AdcreativesGetListStruct {
         floatingZone,
         marketingPendantImageId,
         countdownSwitch,
+        source,
         pageTrackUrl,
         barrageList,
         appGiftPackCode,

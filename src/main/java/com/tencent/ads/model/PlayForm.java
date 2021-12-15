@@ -19,24 +19,18 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-/** 视频来源 */
-@JsonAdapter(MediaSourceType.Adapter.class)
-public enum MediaSourceType {
-  UNSUPPORTED("SOURCE_TYPE_UNSUPPORTED"),
+/** 播讲形式，作品展现形式，主要用于音频类作品 */
+@JsonAdapter(PlayForm.Adapter.class)
+public enum PlayForm {
+  ONE("PLAY_FORM_BY_ONE"),
 
-  LOCAL("SOURCE_TYPE_LOCAL"),
+  TWO("PLAY_FORM_BY_TWO"),
 
-  API("SOURCE_TYPE_API"),
-
-  VIDEO_MAKER_XSJ("SOURCE_TYPE_VIDEO_MAKER_XSJ"),
-
-  TCC("SOURCE_TYPE_TCC"),
-
-  DERIVE("SOURCE_TYPE_DERIVE");
+  MULTI("PLAY_FORM_BY_MULTI");
 
   private String value;
 
-  MediaSourceType(String value) {
+  PlayForm(String value) {
     this.value = value;
   }
 
@@ -49,8 +43,8 @@ public enum MediaSourceType {
     return String.valueOf(value);
   }
 
-  public static MediaSourceType fromValue(String text) {
-    for (MediaSourceType b : MediaSourceType.values()) {
+  public static PlayForm fromValue(String text) {
+    for (PlayForm b : PlayForm.values()) {
       if (String.valueOf(b.value).equals(text)) {
         return b;
       }
@@ -58,17 +52,16 @@ public enum MediaSourceType {
     return null;
   }
 
-  public static class Adapter extends TypeAdapter<MediaSourceType> {
+  public static class Adapter extends TypeAdapter<PlayForm> {
     @Override
-    public void write(final JsonWriter jsonWriter, final MediaSourceType enumeration)
-        throws IOException {
+    public void write(final JsonWriter jsonWriter, final PlayForm enumeration) throws IOException {
       jsonWriter.value(enumeration.getValue());
     }
 
     @Override
-    public MediaSourceType read(final JsonReader jsonReader) throws IOException {
+    public PlayForm read(final JsonReader jsonReader) throws IOException {
       String value = jsonReader.nextString();
-      return MediaSourceType.fromValue(String.valueOf(value));
+      return PlayForm.fromValue(String.valueOf(value));
     }
   }
 }

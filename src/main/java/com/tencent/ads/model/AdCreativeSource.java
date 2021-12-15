@@ -19,24 +19,18 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-/** 视频来源 */
-@JsonAdapter(MediaSourceType.Adapter.class)
-public enum MediaSourceType {
-  UNSUPPORTED("SOURCE_TYPE_UNSUPPORTED"),
+/** 创意来源 */
+@JsonAdapter(AdCreativeSource.Adapter.class)
+public enum AdCreativeSource {
+  SOURCE_NORMAL("AD_CREATIVE_SOURCE_NORMAL"),
 
-  LOCAL("SOURCE_TYPE_LOCAL"),
+  AUTO_DERIVE("AD_CREATIVE_AUTO_DERIVE"),
 
-  API("SOURCE_TYPE_API"),
-
-  VIDEO_MAKER_XSJ("SOURCE_TYPE_VIDEO_MAKER_XSJ"),
-
-  TCC("SOURCE_TYPE_TCC"),
-
-  DERIVE("SOURCE_TYPE_DERIVE");
+  AUTO_GENERATE("AD_CREATIVE_AUTO_GENERATE");
 
   private String value;
 
-  MediaSourceType(String value) {
+  AdCreativeSource(String value) {
     this.value = value;
   }
 
@@ -49,8 +43,8 @@ public enum MediaSourceType {
     return String.valueOf(value);
   }
 
-  public static MediaSourceType fromValue(String text) {
-    for (MediaSourceType b : MediaSourceType.values()) {
+  public static AdCreativeSource fromValue(String text) {
+    for (AdCreativeSource b : AdCreativeSource.values()) {
       if (String.valueOf(b.value).equals(text)) {
         return b;
       }
@@ -58,17 +52,17 @@ public enum MediaSourceType {
     return null;
   }
 
-  public static class Adapter extends TypeAdapter<MediaSourceType> {
+  public static class Adapter extends TypeAdapter<AdCreativeSource> {
     @Override
-    public void write(final JsonWriter jsonWriter, final MediaSourceType enumeration)
+    public void write(final JsonWriter jsonWriter, final AdCreativeSource enumeration)
         throws IOException {
       jsonWriter.value(enumeration.getValue());
     }
 
     @Override
-    public MediaSourceType read(final JsonReader jsonReader) throws IOException {
+    public AdCreativeSource read(final JsonReader jsonReader) throws IOException {
       String value = jsonReader.nextString();
-      return MediaSourceType.fromValue(String.valueOf(value));
+      return AdCreativeSource.fromValue(String.valueOf(value));
     }
   }
 }

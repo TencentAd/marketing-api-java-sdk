@@ -347,6 +347,126 @@ public class ProductItemSpec {
   @SerializedName("artist")
   private List<String> artist = null;
 
+  @SerializedName("trends")
+  private Long trends = null;
+
+  @SerializedName("pay_status")
+  private PayStatus payStatus = null;
+
+  @SerializedName("word_count")
+  private Long wordCount = null;
+
+  @SerializedName("serial_status")
+  private SerialStatus serialStatus = null;
+
+  @SerializedName("book_json")
+  private BookJson bookJson = null;
+
+  @SerializedName("ratings")
+  private Double ratings = null;
+
+  @SerializedName("reader_count")
+  private Long readerCount = null;
+
+  @SerializedName("recommended_votes_count")
+  private Long recommendedVotesCount = null;
+
+  @SerializedName("reward_count")
+  private Long rewardCount = null;
+
+  @SerializedName("ranking")
+  private Long ranking = null;
+
+  @SerializedName("space")
+  private BookLength space = null;
+
+  @SerializedName("if_new_book")
+  private String ifNewBook = null;
+
+  @SerializedName("chapter_count")
+  private Long chapterCount = null;
+
+  @SerializedName("started_pay_chapter")
+  private Long startedPayChapter = null;
+
+  @SerializedName("pay_count")
+  private Long payCount = null;
+
+  @SerializedName("pay_amount")
+  private Double payAmount = null;
+
+  @SerializedName("first_pay_amount")
+  private Double firstPayAmount = null;
+
+  @SerializedName("least_pay_amount")
+  private Double leastPayAmount = null;
+
+  @SerializedName("onetime_pay_amount")
+  private Double onetimePayAmount = null;
+
+  @SerializedName("latest_renew_time")
+  private String latestRenewTime = null;
+
+  @SerializedName("latest_renew_chapter")
+  private Long latestRenewChapter = null;
+
+  @SerializedName("share_count")
+  private Long shareCount = null;
+
+  @SerializedName("download_count")
+  private Long downloadCount = null;
+
+  @SerializedName("paying_reader_count")
+  private Long payingReaderCount = null;
+
+  @SerializedName("story_school")
+  private String storySchool = null;
+
+  @SerializedName("story_role_identity")
+  private String storyRoleIdentity = null;
+
+  @SerializedName("story_role_image")
+  private String storyRoleImage = null;
+
+  @SerializedName("story_era")
+  private String storyEra = null;
+
+  @SerializedName("story_scene")
+  private String storyScene = null;
+
+  @SerializedName("story_plot")
+  private String storyPlot = null;
+
+  @SerializedName("story_style")
+  private String storyStyle = null;
+
+  @SerializedName("authorization_status")
+  private AuthorizationStatus authorizationStatus = null;
+
+  @SerializedName("originality")
+  private Originality originality = null;
+
+  @SerializedName("update_frequency")
+  private UpdateFrequency updateFrequency = null;
+
+  @SerializedName("play_form")
+  private PlayForm playForm = null;
+
+  @SerializedName("play_author")
+  private String playAuthor = null;
+
+  @SerializedName("play_voice")
+  private PlayVoice playVoice = null;
+
+  @SerializedName("production_source")
+  private ProductionSource productionSource = null;
+
+  @SerializedName("production_place")
+  private ProductionPlace productionPlace = null;
+
+  @SerializedName("cartoon_color")
+  private CartoonColor cartoonColor = null;
+
   public ProductItemSpec productOuterId(String productOuterId) {
     this.productOuterId = productOuterId;
     return this;
@@ -2487,6 +2607,766 @@ public class ProductItemSpec {
     this.artist = artist;
   }
 
+  public ProductItemSpec trends(Long trends) {
+    this.trends = trends;
+    return this;
+  }
+
+  /**
+   * Get trends
+   *
+   * @return trends
+   */
+  @ApiModelProperty(value = "")
+  public Long getTrends() {
+    return trends;
+  }
+
+  public void setTrends(Long trends) {
+    this.trends = trends;
+  }
+
+  public ProductItemSpec payStatus(PayStatus payStatus) {
+    this.payStatus = payStatus;
+    return this;
+  }
+
+  /**
+   * Get payStatus
+   *
+   * @return payStatus
+   */
+  @ApiModelProperty(value = "")
+  public PayStatus getPayStatus() {
+    return payStatus;
+  }
+
+  public void setPayStatus(PayStatus payStatus) {
+    this.payStatus = payStatus;
+  }
+
+  public ProductItemSpec wordCount(Long wordCount) {
+    this.wordCount = wordCount;
+    return this;
+  }
+
+  /**
+   * Get wordCount
+   *
+   * @return wordCount
+   */
+  @ApiModelProperty(value = "")
+  public Long getWordCount() {
+    return wordCount;
+  }
+
+  public void setWordCount(Long wordCount) {
+    this.wordCount = wordCount;
+  }
+
+  public ProductItemSpec serialStatus(SerialStatus serialStatus) {
+    this.serialStatus = serialStatus;
+    return this;
+  }
+
+  /**
+   * Get serialStatus
+   *
+   * @return serialStatus
+   */
+  @ApiModelProperty(value = "")
+  public SerialStatus getSerialStatus() {
+    return serialStatus;
+  }
+
+  public void setSerialStatus(SerialStatus serialStatus) {
+    this.serialStatus = serialStatus;
+  }
+
+  public ProductItemSpec bookJson(BookJson bookJson) {
+    this.bookJson = bookJson;
+    return this;
+  }
+
+  /**
+   * Get bookJson
+   *
+   * @return bookJson
+   */
+  @ApiModelProperty(value = "")
+  public BookJson getBookJson() {
+    return bookJson;
+  }
+
+  public void setBookJson(BookJson bookJson) {
+    this.bookJson = bookJson;
+  }
+
+  public ProductItemSpec ratings(Double ratings) {
+    this.ratings = ratings;
+    return this;
+  }
+
+  /**
+   * Get ratings
+   *
+   * @return ratings
+   */
+  @ApiModelProperty(value = "")
+  public Double getRatings() {
+    return ratings;
+  }
+
+  public void setRatings(Double ratings) {
+    this.ratings = ratings;
+  }
+
+  public ProductItemSpec readerCount(Long readerCount) {
+    this.readerCount = readerCount;
+    return this;
+  }
+
+  /**
+   * Get readerCount
+   *
+   * @return readerCount
+   */
+  @ApiModelProperty(value = "")
+  public Long getReaderCount() {
+    return readerCount;
+  }
+
+  public void setReaderCount(Long readerCount) {
+    this.readerCount = readerCount;
+  }
+
+  public ProductItemSpec recommendedVotesCount(Long recommendedVotesCount) {
+    this.recommendedVotesCount = recommendedVotesCount;
+    return this;
+  }
+
+  /**
+   * Get recommendedVotesCount
+   *
+   * @return recommendedVotesCount
+   */
+  @ApiModelProperty(value = "")
+  public Long getRecommendedVotesCount() {
+    return recommendedVotesCount;
+  }
+
+  public void setRecommendedVotesCount(Long recommendedVotesCount) {
+    this.recommendedVotesCount = recommendedVotesCount;
+  }
+
+  public ProductItemSpec rewardCount(Long rewardCount) {
+    this.rewardCount = rewardCount;
+    return this;
+  }
+
+  /**
+   * Get rewardCount
+   *
+   * @return rewardCount
+   */
+  @ApiModelProperty(value = "")
+  public Long getRewardCount() {
+    return rewardCount;
+  }
+
+  public void setRewardCount(Long rewardCount) {
+    this.rewardCount = rewardCount;
+  }
+
+  public ProductItemSpec ranking(Long ranking) {
+    this.ranking = ranking;
+    return this;
+  }
+
+  /**
+   * Get ranking
+   *
+   * @return ranking
+   */
+  @ApiModelProperty(value = "")
+  public Long getRanking() {
+    return ranking;
+  }
+
+  public void setRanking(Long ranking) {
+    this.ranking = ranking;
+  }
+
+  public ProductItemSpec space(BookLength space) {
+    this.space = space;
+    return this;
+  }
+
+  /**
+   * Get space
+   *
+   * @return space
+   */
+  @ApiModelProperty(value = "")
+  public BookLength getSpace() {
+    return space;
+  }
+
+  public void setSpace(BookLength space) {
+    this.space = space;
+  }
+
+  public ProductItemSpec ifNewBook(String ifNewBook) {
+    this.ifNewBook = ifNewBook;
+    return this;
+  }
+
+  /**
+   * Get ifNewBook
+   *
+   * @return ifNewBook
+   */
+  @ApiModelProperty(value = "")
+  public String getIfNewBook() {
+    return ifNewBook;
+  }
+
+  public void setIfNewBook(String ifNewBook) {
+    this.ifNewBook = ifNewBook;
+  }
+
+  public ProductItemSpec chapterCount(Long chapterCount) {
+    this.chapterCount = chapterCount;
+    return this;
+  }
+
+  /**
+   * Get chapterCount
+   *
+   * @return chapterCount
+   */
+  @ApiModelProperty(value = "")
+  public Long getChapterCount() {
+    return chapterCount;
+  }
+
+  public void setChapterCount(Long chapterCount) {
+    this.chapterCount = chapterCount;
+  }
+
+  public ProductItemSpec startedPayChapter(Long startedPayChapter) {
+    this.startedPayChapter = startedPayChapter;
+    return this;
+  }
+
+  /**
+   * Get startedPayChapter
+   *
+   * @return startedPayChapter
+   */
+  @ApiModelProperty(value = "")
+  public Long getStartedPayChapter() {
+    return startedPayChapter;
+  }
+
+  public void setStartedPayChapter(Long startedPayChapter) {
+    this.startedPayChapter = startedPayChapter;
+  }
+
+  public ProductItemSpec payCount(Long payCount) {
+    this.payCount = payCount;
+    return this;
+  }
+
+  /**
+   * Get payCount
+   *
+   * @return payCount
+   */
+  @ApiModelProperty(value = "")
+  public Long getPayCount() {
+    return payCount;
+  }
+
+  public void setPayCount(Long payCount) {
+    this.payCount = payCount;
+  }
+
+  public ProductItemSpec payAmount(Double payAmount) {
+    this.payAmount = payAmount;
+    return this;
+  }
+
+  /**
+   * Get payAmount
+   *
+   * @return payAmount
+   */
+  @ApiModelProperty(value = "")
+  public Double getPayAmount() {
+    return payAmount;
+  }
+
+  public void setPayAmount(Double payAmount) {
+    this.payAmount = payAmount;
+  }
+
+  public ProductItemSpec firstPayAmount(Double firstPayAmount) {
+    this.firstPayAmount = firstPayAmount;
+    return this;
+  }
+
+  /**
+   * Get firstPayAmount
+   *
+   * @return firstPayAmount
+   */
+  @ApiModelProperty(value = "")
+  public Double getFirstPayAmount() {
+    return firstPayAmount;
+  }
+
+  public void setFirstPayAmount(Double firstPayAmount) {
+    this.firstPayAmount = firstPayAmount;
+  }
+
+  public ProductItemSpec leastPayAmount(Double leastPayAmount) {
+    this.leastPayAmount = leastPayAmount;
+    return this;
+  }
+
+  /**
+   * Get leastPayAmount
+   *
+   * @return leastPayAmount
+   */
+  @ApiModelProperty(value = "")
+  public Double getLeastPayAmount() {
+    return leastPayAmount;
+  }
+
+  public void setLeastPayAmount(Double leastPayAmount) {
+    this.leastPayAmount = leastPayAmount;
+  }
+
+  public ProductItemSpec onetimePayAmount(Double onetimePayAmount) {
+    this.onetimePayAmount = onetimePayAmount;
+    return this;
+  }
+
+  /**
+   * Get onetimePayAmount
+   *
+   * @return onetimePayAmount
+   */
+  @ApiModelProperty(value = "")
+  public Double getOnetimePayAmount() {
+    return onetimePayAmount;
+  }
+
+  public void setOnetimePayAmount(Double onetimePayAmount) {
+    this.onetimePayAmount = onetimePayAmount;
+  }
+
+  public ProductItemSpec latestRenewTime(String latestRenewTime) {
+    this.latestRenewTime = latestRenewTime;
+    return this;
+  }
+
+  /**
+   * Get latestRenewTime
+   *
+   * @return latestRenewTime
+   */
+  @ApiModelProperty(value = "")
+  public String getLatestRenewTime() {
+    return latestRenewTime;
+  }
+
+  public void setLatestRenewTime(String latestRenewTime) {
+    this.latestRenewTime = latestRenewTime;
+  }
+
+  public ProductItemSpec latestRenewChapter(Long latestRenewChapter) {
+    this.latestRenewChapter = latestRenewChapter;
+    return this;
+  }
+
+  /**
+   * Get latestRenewChapter
+   *
+   * @return latestRenewChapter
+   */
+  @ApiModelProperty(value = "")
+  public Long getLatestRenewChapter() {
+    return latestRenewChapter;
+  }
+
+  public void setLatestRenewChapter(Long latestRenewChapter) {
+    this.latestRenewChapter = latestRenewChapter;
+  }
+
+  public ProductItemSpec shareCount(Long shareCount) {
+    this.shareCount = shareCount;
+    return this;
+  }
+
+  /**
+   * Get shareCount
+   *
+   * @return shareCount
+   */
+  @ApiModelProperty(value = "")
+  public Long getShareCount() {
+    return shareCount;
+  }
+
+  public void setShareCount(Long shareCount) {
+    this.shareCount = shareCount;
+  }
+
+  public ProductItemSpec downloadCount(Long downloadCount) {
+    this.downloadCount = downloadCount;
+    return this;
+  }
+
+  /**
+   * Get downloadCount
+   *
+   * @return downloadCount
+   */
+  @ApiModelProperty(value = "")
+  public Long getDownloadCount() {
+    return downloadCount;
+  }
+
+  public void setDownloadCount(Long downloadCount) {
+    this.downloadCount = downloadCount;
+  }
+
+  public ProductItemSpec payingReaderCount(Long payingReaderCount) {
+    this.payingReaderCount = payingReaderCount;
+    return this;
+  }
+
+  /**
+   * Get payingReaderCount
+   *
+   * @return payingReaderCount
+   */
+  @ApiModelProperty(value = "")
+  public Long getPayingReaderCount() {
+    return payingReaderCount;
+  }
+
+  public void setPayingReaderCount(Long payingReaderCount) {
+    this.payingReaderCount = payingReaderCount;
+  }
+
+  public ProductItemSpec storySchool(String storySchool) {
+    this.storySchool = storySchool;
+    return this;
+  }
+
+  /**
+   * Get storySchool
+   *
+   * @return storySchool
+   */
+  @ApiModelProperty(value = "")
+  public String getStorySchool() {
+    return storySchool;
+  }
+
+  public void setStorySchool(String storySchool) {
+    this.storySchool = storySchool;
+  }
+
+  public ProductItemSpec storyRoleIdentity(String storyRoleIdentity) {
+    this.storyRoleIdentity = storyRoleIdentity;
+    return this;
+  }
+
+  /**
+   * Get storyRoleIdentity
+   *
+   * @return storyRoleIdentity
+   */
+  @ApiModelProperty(value = "")
+  public String getStoryRoleIdentity() {
+    return storyRoleIdentity;
+  }
+
+  public void setStoryRoleIdentity(String storyRoleIdentity) {
+    this.storyRoleIdentity = storyRoleIdentity;
+  }
+
+  public ProductItemSpec storyRoleImage(String storyRoleImage) {
+    this.storyRoleImage = storyRoleImage;
+    return this;
+  }
+
+  /**
+   * Get storyRoleImage
+   *
+   * @return storyRoleImage
+   */
+  @ApiModelProperty(value = "")
+  public String getStoryRoleImage() {
+    return storyRoleImage;
+  }
+
+  public void setStoryRoleImage(String storyRoleImage) {
+    this.storyRoleImage = storyRoleImage;
+  }
+
+  public ProductItemSpec storyEra(String storyEra) {
+    this.storyEra = storyEra;
+    return this;
+  }
+
+  /**
+   * Get storyEra
+   *
+   * @return storyEra
+   */
+  @ApiModelProperty(value = "")
+  public String getStoryEra() {
+    return storyEra;
+  }
+
+  public void setStoryEra(String storyEra) {
+    this.storyEra = storyEra;
+  }
+
+  public ProductItemSpec storyScene(String storyScene) {
+    this.storyScene = storyScene;
+    return this;
+  }
+
+  /**
+   * Get storyScene
+   *
+   * @return storyScene
+   */
+  @ApiModelProperty(value = "")
+  public String getStoryScene() {
+    return storyScene;
+  }
+
+  public void setStoryScene(String storyScene) {
+    this.storyScene = storyScene;
+  }
+
+  public ProductItemSpec storyPlot(String storyPlot) {
+    this.storyPlot = storyPlot;
+    return this;
+  }
+
+  /**
+   * Get storyPlot
+   *
+   * @return storyPlot
+   */
+  @ApiModelProperty(value = "")
+  public String getStoryPlot() {
+    return storyPlot;
+  }
+
+  public void setStoryPlot(String storyPlot) {
+    this.storyPlot = storyPlot;
+  }
+
+  public ProductItemSpec storyStyle(String storyStyle) {
+    this.storyStyle = storyStyle;
+    return this;
+  }
+
+  /**
+   * Get storyStyle
+   *
+   * @return storyStyle
+   */
+  @ApiModelProperty(value = "")
+  public String getStoryStyle() {
+    return storyStyle;
+  }
+
+  public void setStoryStyle(String storyStyle) {
+    this.storyStyle = storyStyle;
+  }
+
+  public ProductItemSpec authorizationStatus(AuthorizationStatus authorizationStatus) {
+    this.authorizationStatus = authorizationStatus;
+    return this;
+  }
+
+  /**
+   * Get authorizationStatus
+   *
+   * @return authorizationStatus
+   */
+  @ApiModelProperty(value = "")
+  public AuthorizationStatus getAuthorizationStatus() {
+    return authorizationStatus;
+  }
+
+  public void setAuthorizationStatus(AuthorizationStatus authorizationStatus) {
+    this.authorizationStatus = authorizationStatus;
+  }
+
+  public ProductItemSpec originality(Originality originality) {
+    this.originality = originality;
+    return this;
+  }
+
+  /**
+   * Get originality
+   *
+   * @return originality
+   */
+  @ApiModelProperty(value = "")
+  public Originality getOriginality() {
+    return originality;
+  }
+
+  public void setOriginality(Originality originality) {
+    this.originality = originality;
+  }
+
+  public ProductItemSpec updateFrequency(UpdateFrequency updateFrequency) {
+    this.updateFrequency = updateFrequency;
+    return this;
+  }
+
+  /**
+   * Get updateFrequency
+   *
+   * @return updateFrequency
+   */
+  @ApiModelProperty(value = "")
+  public UpdateFrequency getUpdateFrequency() {
+    return updateFrequency;
+  }
+
+  public void setUpdateFrequency(UpdateFrequency updateFrequency) {
+    this.updateFrequency = updateFrequency;
+  }
+
+  public ProductItemSpec playForm(PlayForm playForm) {
+    this.playForm = playForm;
+    return this;
+  }
+
+  /**
+   * Get playForm
+   *
+   * @return playForm
+   */
+  @ApiModelProperty(value = "")
+  public PlayForm getPlayForm() {
+    return playForm;
+  }
+
+  public void setPlayForm(PlayForm playForm) {
+    this.playForm = playForm;
+  }
+
+  public ProductItemSpec playAuthor(String playAuthor) {
+    this.playAuthor = playAuthor;
+    return this;
+  }
+
+  /**
+   * Get playAuthor
+   *
+   * @return playAuthor
+   */
+  @ApiModelProperty(value = "")
+  public String getPlayAuthor() {
+    return playAuthor;
+  }
+
+  public void setPlayAuthor(String playAuthor) {
+    this.playAuthor = playAuthor;
+  }
+
+  public ProductItemSpec playVoice(PlayVoice playVoice) {
+    this.playVoice = playVoice;
+    return this;
+  }
+
+  /**
+   * Get playVoice
+   *
+   * @return playVoice
+   */
+  @ApiModelProperty(value = "")
+  public PlayVoice getPlayVoice() {
+    return playVoice;
+  }
+
+  public void setPlayVoice(PlayVoice playVoice) {
+    this.playVoice = playVoice;
+  }
+
+  public ProductItemSpec productionSource(ProductionSource productionSource) {
+    this.productionSource = productionSource;
+    return this;
+  }
+
+  /**
+   * Get productionSource
+   *
+   * @return productionSource
+   */
+  @ApiModelProperty(value = "")
+  public ProductionSource getProductionSource() {
+    return productionSource;
+  }
+
+  public void setProductionSource(ProductionSource productionSource) {
+    this.productionSource = productionSource;
+  }
+
+  public ProductItemSpec productionPlace(ProductionPlace productionPlace) {
+    this.productionPlace = productionPlace;
+    return this;
+  }
+
+  /**
+   * Get productionPlace
+   *
+   * @return productionPlace
+   */
+  @ApiModelProperty(value = "")
+  public ProductionPlace getProductionPlace() {
+    return productionPlace;
+  }
+
+  public void setProductionPlace(ProductionPlace productionPlace) {
+    this.productionPlace = productionPlace;
+  }
+
+  public ProductItemSpec cartoonColor(CartoonColor cartoonColor) {
+    this.cartoonColor = cartoonColor;
+    return this;
+  }
+
+  /**
+   * Get cartoonColor
+   *
+   * @return cartoonColor
+   */
+  @ApiModelProperty(value = "")
+  public CartoonColor getCartoonColor() {
+    return cartoonColor;
+  }
+
+  public void setCartoonColor(CartoonColor cartoonColor) {
+    this.cartoonColor = cartoonColor;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -2603,7 +3483,47 @@ public class ProductItemSpec {
         && Objects.equals(this.maxQuota, productItemSpec.maxQuota)
         && Objects.equals(this.annualizedRateOfReturn, productItemSpec.annualizedRateOfReturn)
         && Objects.equals(this.riskType, productItemSpec.riskType)
-        && Objects.equals(this.artist, productItemSpec.artist);
+        && Objects.equals(this.artist, productItemSpec.artist)
+        && Objects.equals(this.trends, productItemSpec.trends)
+        && Objects.equals(this.payStatus, productItemSpec.payStatus)
+        && Objects.equals(this.wordCount, productItemSpec.wordCount)
+        && Objects.equals(this.serialStatus, productItemSpec.serialStatus)
+        && Objects.equals(this.bookJson, productItemSpec.bookJson)
+        && Objects.equals(this.ratings, productItemSpec.ratings)
+        && Objects.equals(this.readerCount, productItemSpec.readerCount)
+        && Objects.equals(this.recommendedVotesCount, productItemSpec.recommendedVotesCount)
+        && Objects.equals(this.rewardCount, productItemSpec.rewardCount)
+        && Objects.equals(this.ranking, productItemSpec.ranking)
+        && Objects.equals(this.space, productItemSpec.space)
+        && Objects.equals(this.ifNewBook, productItemSpec.ifNewBook)
+        && Objects.equals(this.chapterCount, productItemSpec.chapterCount)
+        && Objects.equals(this.startedPayChapter, productItemSpec.startedPayChapter)
+        && Objects.equals(this.payCount, productItemSpec.payCount)
+        && Objects.equals(this.payAmount, productItemSpec.payAmount)
+        && Objects.equals(this.firstPayAmount, productItemSpec.firstPayAmount)
+        && Objects.equals(this.leastPayAmount, productItemSpec.leastPayAmount)
+        && Objects.equals(this.onetimePayAmount, productItemSpec.onetimePayAmount)
+        && Objects.equals(this.latestRenewTime, productItemSpec.latestRenewTime)
+        && Objects.equals(this.latestRenewChapter, productItemSpec.latestRenewChapter)
+        && Objects.equals(this.shareCount, productItemSpec.shareCount)
+        && Objects.equals(this.downloadCount, productItemSpec.downloadCount)
+        && Objects.equals(this.payingReaderCount, productItemSpec.payingReaderCount)
+        && Objects.equals(this.storySchool, productItemSpec.storySchool)
+        && Objects.equals(this.storyRoleIdentity, productItemSpec.storyRoleIdentity)
+        && Objects.equals(this.storyRoleImage, productItemSpec.storyRoleImage)
+        && Objects.equals(this.storyEra, productItemSpec.storyEra)
+        && Objects.equals(this.storyScene, productItemSpec.storyScene)
+        && Objects.equals(this.storyPlot, productItemSpec.storyPlot)
+        && Objects.equals(this.storyStyle, productItemSpec.storyStyle)
+        && Objects.equals(this.authorizationStatus, productItemSpec.authorizationStatus)
+        && Objects.equals(this.originality, productItemSpec.originality)
+        && Objects.equals(this.updateFrequency, productItemSpec.updateFrequency)
+        && Objects.equals(this.playForm, productItemSpec.playForm)
+        && Objects.equals(this.playAuthor, productItemSpec.playAuthor)
+        && Objects.equals(this.playVoice, productItemSpec.playVoice)
+        && Objects.equals(this.productionSource, productItemSpec.productionSource)
+        && Objects.equals(this.productionPlace, productItemSpec.productionPlace)
+        && Objects.equals(this.cartoonColor, productItemSpec.cartoonColor);
   }
 
   @Override
@@ -2716,7 +3636,47 @@ public class ProductItemSpec {
         maxQuota,
         annualizedRateOfReturn,
         riskType,
-        artist);
+        artist,
+        trends,
+        payStatus,
+        wordCount,
+        serialStatus,
+        bookJson,
+        ratings,
+        readerCount,
+        recommendedVotesCount,
+        rewardCount,
+        ranking,
+        space,
+        ifNewBook,
+        chapterCount,
+        startedPayChapter,
+        payCount,
+        payAmount,
+        firstPayAmount,
+        leastPayAmount,
+        onetimePayAmount,
+        latestRenewTime,
+        latestRenewChapter,
+        shareCount,
+        downloadCount,
+        payingReaderCount,
+        storySchool,
+        storyRoleIdentity,
+        storyRoleImage,
+        storyEra,
+        storyScene,
+        storyPlot,
+        storyStyle,
+        authorizationStatus,
+        originality,
+        updateFrequency,
+        playForm,
+        playAuthor,
+        playVoice,
+        productionSource,
+        productionPlace,
+        cartoonColor);
   }
 
   @Override

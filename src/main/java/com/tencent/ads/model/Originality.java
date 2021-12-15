@@ -19,24 +19,16 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-/** 视频来源 */
-@JsonAdapter(MediaSourceType.Adapter.class)
-public enum MediaSourceType {
-  UNSUPPORTED("SOURCE_TYPE_UNSUPPORTED"),
+/** 作品原创性 */
+@JsonAdapter(Originality.Adapter.class)
+public enum Originality {
+  YES("ORIGINALITY_YES"),
 
-  LOCAL("SOURCE_TYPE_LOCAL"),
-
-  API("SOURCE_TYPE_API"),
-
-  VIDEO_MAKER_XSJ("SOURCE_TYPE_VIDEO_MAKER_XSJ"),
-
-  TCC("SOURCE_TYPE_TCC"),
-
-  DERIVE("SOURCE_TYPE_DERIVE");
+  NO("ORIGINALITY_NO");
 
   private String value;
 
-  MediaSourceType(String value) {
+  Originality(String value) {
     this.value = value;
   }
 
@@ -49,8 +41,8 @@ public enum MediaSourceType {
     return String.valueOf(value);
   }
 
-  public static MediaSourceType fromValue(String text) {
-    for (MediaSourceType b : MediaSourceType.values()) {
+  public static Originality fromValue(String text) {
+    for (Originality b : Originality.values()) {
       if (String.valueOf(b.value).equals(text)) {
         return b;
       }
@@ -58,17 +50,17 @@ public enum MediaSourceType {
     return null;
   }
 
-  public static class Adapter extends TypeAdapter<MediaSourceType> {
+  public static class Adapter extends TypeAdapter<Originality> {
     @Override
-    public void write(final JsonWriter jsonWriter, final MediaSourceType enumeration)
+    public void write(final JsonWriter jsonWriter, final Originality enumeration)
         throws IOException {
       jsonWriter.value(enumeration.getValue());
     }
 
     @Override
-    public MediaSourceType read(final JsonReader jsonReader) throws IOException {
+    public Originality read(final JsonReader jsonReader) throws IOException {
       String value = jsonReader.nextString();
-      return MediaSourceType.fromValue(String.valueOf(value));
+      return Originality.fromValue(String.valueOf(value));
     }
   }
 }

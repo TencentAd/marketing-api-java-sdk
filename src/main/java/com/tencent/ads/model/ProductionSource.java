@@ -19,24 +19,18 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-/** 视频来源 */
-@JsonAdapter(MediaSourceType.Adapter.class)
-public enum MediaSourceType {
-  UNSUPPORTED("SOURCE_TYPE_UNSUPPORTED"),
+/** 内容来源，作品内容来源，主要用于音频类和漫画类作品 */
+@JsonAdapter(ProductionSource.Adapter.class)
+public enum ProductionSource {
+  UGC("PRODUCTION_SOURCE_UGC"),
 
-  LOCAL("SOURCE_TYPE_LOCAL"),
+  PGC("PRODUCTION_SOURCE_PGC"),
 
-  API("SOURCE_TYPE_API"),
-
-  VIDEO_MAKER_XSJ("SOURCE_TYPE_VIDEO_MAKER_XSJ"),
-
-  TCC("SOURCE_TYPE_TCC"),
-
-  DERIVE("SOURCE_TYPE_DERIVE");
+  PUGC("PRODUCTION_SOURCE_PUGC");
 
   private String value;
 
-  MediaSourceType(String value) {
+  ProductionSource(String value) {
     this.value = value;
   }
 
@@ -49,8 +43,8 @@ public enum MediaSourceType {
     return String.valueOf(value);
   }
 
-  public static MediaSourceType fromValue(String text) {
-    for (MediaSourceType b : MediaSourceType.values()) {
+  public static ProductionSource fromValue(String text) {
+    for (ProductionSource b : ProductionSource.values()) {
       if (String.valueOf(b.value).equals(text)) {
         return b;
       }
@@ -58,17 +52,17 @@ public enum MediaSourceType {
     return null;
   }
 
-  public static class Adapter extends TypeAdapter<MediaSourceType> {
+  public static class Adapter extends TypeAdapter<ProductionSource> {
     @Override
-    public void write(final JsonWriter jsonWriter, final MediaSourceType enumeration)
+    public void write(final JsonWriter jsonWriter, final ProductionSource enumeration)
         throws IOException {
       jsonWriter.value(enumeration.getValue());
     }
 
     @Override
-    public MediaSourceType read(final JsonReader jsonReader) throws IOException {
+    public ProductionSource read(final JsonReader jsonReader) throws IOException {
       String value = jsonReader.nextString();
-      return MediaSourceType.fromValue(String.valueOf(value));
+      return ProductionSource.fromValue(String.valueOf(value));
     }
   }
 }

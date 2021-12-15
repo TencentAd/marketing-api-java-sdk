@@ -19,24 +19,24 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-/** 视频来源 */
-@JsonAdapter(MediaSourceType.Adapter.class)
-public enum MediaSourceType {
-  UNSUPPORTED("SOURCE_TYPE_UNSUPPORTED"),
+/** 书籍的付费状态 */
+@JsonAdapter(PayStatus.Adapter.class)
+public enum PayStatus {
+  STATUS_FREE("PAY_STATUS_FREE"),
 
-  LOCAL("SOURCE_TYPE_LOCAL"),
+  STATUS_PAID("PAY_STATUS_PAID"),
 
-  API("SOURCE_TYPE_API"),
+  STATUS_MEMBER("PAY_STATUS_MEMBER"),
 
-  VIDEO_MAKER_XSJ("SOURCE_TYPE_VIDEO_MAKER_XSJ"),
+  PENDING("PAY_PENDING"),
 
-  TCC("SOURCE_TYPE_TCC"),
+  OK("PAY_OK"),
 
-  DERIVE("SOURCE_TYPE_DERIVE");
+  REFUND("PAY_REFUND");
 
   private String value;
 
-  MediaSourceType(String value) {
+  PayStatus(String value) {
     this.value = value;
   }
 
@@ -49,8 +49,8 @@ public enum MediaSourceType {
     return String.valueOf(value);
   }
 
-  public static MediaSourceType fromValue(String text) {
-    for (MediaSourceType b : MediaSourceType.values()) {
+  public static PayStatus fromValue(String text) {
+    for (PayStatus b : PayStatus.values()) {
       if (String.valueOf(b.value).equals(text)) {
         return b;
       }
@@ -58,17 +58,16 @@ public enum MediaSourceType {
     return null;
   }
 
-  public static class Adapter extends TypeAdapter<MediaSourceType> {
+  public static class Adapter extends TypeAdapter<PayStatus> {
     @Override
-    public void write(final JsonWriter jsonWriter, final MediaSourceType enumeration)
-        throws IOException {
+    public void write(final JsonWriter jsonWriter, final PayStatus enumeration) throws IOException {
       jsonWriter.value(enumeration.getValue());
     }
 
     @Override
-    public MediaSourceType read(final JsonReader jsonReader) throws IOException {
+    public PayStatus read(final JsonReader jsonReader) throws IOException {
       String value = jsonReader.nextString();
-      return MediaSourceType.fromValue(String.valueOf(value));
+      return PayStatus.fromValue(String.valueOf(value));
     }
   }
 }

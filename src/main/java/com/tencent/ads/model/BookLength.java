@@ -19,24 +19,18 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-/** 视频来源 */
-@JsonAdapter(MediaSourceType.Adapter.class)
-public enum MediaSourceType {
-  UNSUPPORTED("SOURCE_TYPE_UNSUPPORTED"),
+/** 小说篇幅 */
+@JsonAdapter(BookLength.Adapter.class)
+public enum BookLength {
+  LONG("BOOK_LENGTH_LONG"),
 
-  LOCAL("SOURCE_TYPE_LOCAL"),
+  MIDDLE_LONG("BOOK_LENGTH_MIDDLE_LONG"),
 
-  API("SOURCE_TYPE_API"),
-
-  VIDEO_MAKER_XSJ("SOURCE_TYPE_VIDEO_MAKER_XSJ"),
-
-  TCC("SOURCE_TYPE_TCC"),
-
-  DERIVE("SOURCE_TYPE_DERIVE");
+  SHORT("BOOK_LENGTH_SHORT");
 
   private String value;
 
-  MediaSourceType(String value) {
+  BookLength(String value) {
     this.value = value;
   }
 
@@ -49,8 +43,8 @@ public enum MediaSourceType {
     return String.valueOf(value);
   }
 
-  public static MediaSourceType fromValue(String text) {
-    for (MediaSourceType b : MediaSourceType.values()) {
+  public static BookLength fromValue(String text) {
+    for (BookLength b : BookLength.values()) {
       if (String.valueOf(b.value).equals(text)) {
         return b;
       }
@@ -58,17 +52,17 @@ public enum MediaSourceType {
     return null;
   }
 
-  public static class Adapter extends TypeAdapter<MediaSourceType> {
+  public static class Adapter extends TypeAdapter<BookLength> {
     @Override
-    public void write(final JsonWriter jsonWriter, final MediaSourceType enumeration)
+    public void write(final JsonWriter jsonWriter, final BookLength enumeration)
         throws IOException {
       jsonWriter.value(enumeration.getValue());
     }
 
     @Override
-    public MediaSourceType read(final JsonReader jsonReader) throws IOException {
+    public BookLength read(final JsonReader jsonReader) throws IOException {
       String value = jsonReader.nextString();
-      return MediaSourceType.fromValue(String.valueOf(value));
+      return BookLength.fromValue(String.valueOf(value));
     }
   }
 }

@@ -19,24 +19,20 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-/** 视频来源 */
-@JsonAdapter(MediaSourceType.Adapter.class)
-public enum MediaSourceType {
-  UNSUPPORTED("SOURCE_TYPE_UNSUPPORTED"),
+/** 广告自动衍生视频创意状态 */
+@JsonAdapter(AutoDerivedCreativeStatus.Adapter.class)
+public enum AutoDerivedCreativeStatus {
+  DEFAULT("AUTO_DERIVED_CREATIVE_STATUS_DEFAULT"),
 
-  LOCAL("SOURCE_TYPE_LOCAL"),
+  INITIATED("AUTO_DERIVED_CREATIVE_STATUS_INITIATED"),
 
-  API("SOURCE_TYPE_API"),
+  SUCCESS("AUTO_DERIVED_CREATIVE_STATUS_SUCCESS"),
 
-  VIDEO_MAKER_XSJ("SOURCE_TYPE_VIDEO_MAKER_XSJ"),
-
-  TCC("SOURCE_TYPE_TCC"),
-
-  DERIVE("SOURCE_TYPE_DERIVE");
+  FAIL("AUTO_DERIVED_CREATIVE_STATUS_FAIL");
 
   private String value;
 
-  MediaSourceType(String value) {
+  AutoDerivedCreativeStatus(String value) {
     this.value = value;
   }
 
@@ -49,8 +45,8 @@ public enum MediaSourceType {
     return String.valueOf(value);
   }
 
-  public static MediaSourceType fromValue(String text) {
-    for (MediaSourceType b : MediaSourceType.values()) {
+  public static AutoDerivedCreativeStatus fromValue(String text) {
+    for (AutoDerivedCreativeStatus b : AutoDerivedCreativeStatus.values()) {
       if (String.valueOf(b.value).equals(text)) {
         return b;
       }
@@ -58,17 +54,17 @@ public enum MediaSourceType {
     return null;
   }
 
-  public static class Adapter extends TypeAdapter<MediaSourceType> {
+  public static class Adapter extends TypeAdapter<AutoDerivedCreativeStatus> {
     @Override
-    public void write(final JsonWriter jsonWriter, final MediaSourceType enumeration)
+    public void write(final JsonWriter jsonWriter, final AutoDerivedCreativeStatus enumeration)
         throws IOException {
       jsonWriter.value(enumeration.getValue());
     }
 
     @Override
-    public MediaSourceType read(final JsonReader jsonReader) throws IOException {
+    public AutoDerivedCreativeStatus read(final JsonReader jsonReader) throws IOException {
       String value = jsonReader.nextString();
-      return MediaSourceType.fromValue(String.valueOf(value));
+      return AutoDerivedCreativeStatus.fromValue(String.valueOf(value));
     }
   }
 }

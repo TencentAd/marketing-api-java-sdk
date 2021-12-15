@@ -19,24 +19,22 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-/** 视频来源 */
-@JsonAdapter(MediaSourceType.Adapter.class)
-public enum MediaSourceType {
-  UNSUPPORTED("SOURCE_TYPE_UNSUPPORTED"),
+/** 内容产地，作品产地，主要用于漫画类作品 */
+@JsonAdapter(ProductionPlace.Adapter.class)
+public enum ProductionPlace {
+  JP("PRODUCTION_PLACE_JP"),
 
-  LOCAL("SOURCE_TYPE_LOCAL"),
+  RK("PRODUCTION_PLACE_RK"),
 
-  API("SOURCE_TYPE_API"),
+  US("PRODUCTION_PLACE_US"),
 
-  VIDEO_MAKER_XSJ("SOURCE_TYPE_VIDEO_MAKER_XSJ"),
+  CN("PRODUCTION_PLACE_CN"),
 
-  TCC("SOURCE_TYPE_TCC"),
-
-  DERIVE("SOURCE_TYPE_DERIVE");
+  OTHER("PRODUCTION_PLACE_OTHER");
 
   private String value;
 
-  MediaSourceType(String value) {
+  ProductionPlace(String value) {
     this.value = value;
   }
 
@@ -49,8 +47,8 @@ public enum MediaSourceType {
     return String.valueOf(value);
   }
 
-  public static MediaSourceType fromValue(String text) {
-    for (MediaSourceType b : MediaSourceType.values()) {
+  public static ProductionPlace fromValue(String text) {
+    for (ProductionPlace b : ProductionPlace.values()) {
       if (String.valueOf(b.value).equals(text)) {
         return b;
       }
@@ -58,17 +56,17 @@ public enum MediaSourceType {
     return null;
   }
 
-  public static class Adapter extends TypeAdapter<MediaSourceType> {
+  public static class Adapter extends TypeAdapter<ProductionPlace> {
     @Override
-    public void write(final JsonWriter jsonWriter, final MediaSourceType enumeration)
+    public void write(final JsonWriter jsonWriter, final ProductionPlace enumeration)
         throws IOException {
       jsonWriter.value(enumeration.getValue());
     }
 
     @Override
-    public MediaSourceType read(final JsonReader jsonReader) throws IOException {
+    public ProductionPlace read(final JsonReader jsonReader) throws IOException {
       String value = jsonReader.nextString();
-      return MediaSourceType.fromValue(String.valueOf(value));
+      return ProductionPlace.fromValue(String.valueOf(value));
     }
   }
 }

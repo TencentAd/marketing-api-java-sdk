@@ -117,6 +117,9 @@ public class AdgroupsUpdateRequest {
   @SerializedName("auto_derived_creative_enabled")
   private Boolean autoDerivedCreativeEnabled = null;
 
+  @SerializedName("auto_derived_creative_status")
+  private AutoDerivedCreativeStatus autoDerivedCreativeStatus = null;
+
   @SerializedName("user_action_sets")
   private List<UserActionSetStruct> userActionSets = null;
 
@@ -771,6 +774,26 @@ public class AdgroupsUpdateRequest {
     this.autoDerivedCreativeEnabled = autoDerivedCreativeEnabled;
   }
 
+  public AdgroupsUpdateRequest autoDerivedCreativeStatus(
+      AutoDerivedCreativeStatus autoDerivedCreativeStatus) {
+    this.autoDerivedCreativeStatus = autoDerivedCreativeStatus;
+    return this;
+  }
+
+  /**
+   * Get autoDerivedCreativeStatus
+   *
+   * @return autoDerivedCreativeStatus
+   */
+  @ApiModelProperty(value = "")
+  public AutoDerivedCreativeStatus getAutoDerivedCreativeStatus() {
+    return autoDerivedCreativeStatus;
+  }
+
+  public void setAutoDerivedCreativeStatus(AutoDerivedCreativeStatus autoDerivedCreativeStatus) {
+    this.autoDerivedCreativeStatus = autoDerivedCreativeStatus;
+  }
+
   public AdgroupsUpdateRequest userActionSets(List<UserActionSetStruct> userActionSets) {
     this.userActionSets = userActionSets;
     return this;
@@ -910,6 +933,8 @@ public class AdgroupsUpdateRequest {
         && Objects.equals(this.autoAcquisitionBudget, adgroupsUpdateRequest.autoAcquisitionBudget)
         && Objects.equals(
             this.autoDerivedCreativeEnabled, adgroupsUpdateRequest.autoDerivedCreativeEnabled)
+        && Objects.equals(
+            this.autoDerivedCreativeStatus, adgroupsUpdateRequest.autoDerivedCreativeStatus)
         && Objects.equals(this.userActionSets, adgroupsUpdateRequest.userActionSets)
         && Objects.equals(this.dynamicAdSpec, adgroupsUpdateRequest.dynamicAdSpec)
         && Objects.equals(this.customAdgroupTag, adgroupsUpdateRequest.customAdgroupTag)
@@ -951,6 +976,7 @@ public class AdgroupsUpdateRequest {
         autoAcquisitionEnabled,
         autoAcquisitionBudget,
         autoDerivedCreativeEnabled,
+        autoDerivedCreativeStatus,
         userActionSets,
         dynamicAdSpec,
         customAdgroupTag,

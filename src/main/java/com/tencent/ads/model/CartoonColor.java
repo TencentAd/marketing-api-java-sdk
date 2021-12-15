@@ -19,24 +19,16 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-/** 视频来源 */
-@JsonAdapter(MediaSourceType.Adapter.class)
-public enum MediaSourceType {
-  UNSUPPORTED("SOURCE_TYPE_UNSUPPORTED"),
+/** 漫画色彩，作品产地，主要用于漫画类作品 */
+@JsonAdapter(CartoonColor.Adapter.class)
+public enum CartoonColor {
+  MULTI("CARTOON_COLOR_MULTI"),
 
-  LOCAL("SOURCE_TYPE_LOCAL"),
-
-  API("SOURCE_TYPE_API"),
-
-  VIDEO_MAKER_XSJ("SOURCE_TYPE_VIDEO_MAKER_XSJ"),
-
-  TCC("SOURCE_TYPE_TCC"),
-
-  DERIVE("SOURCE_TYPE_DERIVE");
+  BLACK_WHITE("CARTOON_COLOR_BLACK_WHITE");
 
   private String value;
 
-  MediaSourceType(String value) {
+  CartoonColor(String value) {
     this.value = value;
   }
 
@@ -49,8 +41,8 @@ public enum MediaSourceType {
     return String.valueOf(value);
   }
 
-  public static MediaSourceType fromValue(String text) {
-    for (MediaSourceType b : MediaSourceType.values()) {
+  public static CartoonColor fromValue(String text) {
+    for (CartoonColor b : CartoonColor.values()) {
       if (String.valueOf(b.value).equals(text)) {
         return b;
       }
@@ -58,17 +50,17 @@ public enum MediaSourceType {
     return null;
   }
 
-  public static class Adapter extends TypeAdapter<MediaSourceType> {
+  public static class Adapter extends TypeAdapter<CartoonColor> {
     @Override
-    public void write(final JsonWriter jsonWriter, final MediaSourceType enumeration)
+    public void write(final JsonWriter jsonWriter, final CartoonColor enumeration)
         throws IOException {
       jsonWriter.value(enumeration.getValue());
     }
 
     @Override
-    public MediaSourceType read(final JsonReader jsonReader) throws IOException {
+    public CartoonColor read(final JsonReader jsonReader) throws IOException {
       String value = jsonReader.nextString();
-      return MediaSourceType.fromValue(String.valueOf(value));
+      return CartoonColor.fromValue(String.valueOf(value));
     }
   }
 }

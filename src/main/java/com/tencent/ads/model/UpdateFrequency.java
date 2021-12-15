@@ -19,24 +19,28 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-/** 视频来源 */
-@JsonAdapter(MediaSourceType.Adapter.class)
-public enum MediaSourceType {
-  UNSUPPORTED("SOURCE_TYPE_UNSUPPORTED"),
+/** 更新频率 */
+@JsonAdapter(UpdateFrequency.Adapter.class)
+public enum UpdateFrequency {
+  DAILY("UPDATE_DAILY"),
 
-  LOCAL("SOURCE_TYPE_LOCAL"),
+  WEEKLY("UPDATE_WEEKLY"),
 
-  API("SOURCE_TYPE_API"),
+  MULTI_WEEKLY("UPDATE_MULTI_WEEKLY"),
 
-  VIDEO_MAKER_XSJ("SOURCE_TYPE_VIDEO_MAKER_XSJ"),
+  ONE_WEEK("UPDATE_ONE_WEEK"),
 
-  TCC("SOURCE_TYPE_TCC"),
+  MULTI_FORTNIGHT("UPDATE_MULTI_FORTNIGHT"),
 
-  DERIVE("SOURCE_TYPE_DERIVE");
+  MONTHLY("UPDATE_MONTHLY"),
+
+  MULTI_MONTHLY("UPDATE_MULTI_MONTHLY"),
+
+  RANDOM("UPDATE_RANDOM");
 
   private String value;
 
-  MediaSourceType(String value) {
+  UpdateFrequency(String value) {
     this.value = value;
   }
 
@@ -49,8 +53,8 @@ public enum MediaSourceType {
     return String.valueOf(value);
   }
 
-  public static MediaSourceType fromValue(String text) {
-    for (MediaSourceType b : MediaSourceType.values()) {
+  public static UpdateFrequency fromValue(String text) {
+    for (UpdateFrequency b : UpdateFrequency.values()) {
       if (String.valueOf(b.value).equals(text)) {
         return b;
       }
@@ -58,17 +62,17 @@ public enum MediaSourceType {
     return null;
   }
 
-  public static class Adapter extends TypeAdapter<MediaSourceType> {
+  public static class Adapter extends TypeAdapter<UpdateFrequency> {
     @Override
-    public void write(final JsonWriter jsonWriter, final MediaSourceType enumeration)
+    public void write(final JsonWriter jsonWriter, final UpdateFrequency enumeration)
         throws IOException {
       jsonWriter.value(enumeration.getValue());
     }
 
     @Override
-    public MediaSourceType read(final JsonReader jsonReader) throws IOException {
+    public UpdateFrequency read(final JsonReader jsonReader) throws IOException {
       String value = jsonReader.nextString();
-      return MediaSourceType.fromValue(String.valueOf(value));
+      return UpdateFrequency.fromValue(String.valueOf(value));
     }
   }
 }
