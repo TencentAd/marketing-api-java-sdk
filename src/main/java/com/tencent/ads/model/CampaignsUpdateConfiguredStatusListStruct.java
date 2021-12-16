@@ -30,6 +30,9 @@ public class CampaignsUpdateConfiguredStatusListStruct {
   @SerializedName("message_cn")
   private String messageCn = null;
 
+  @SerializedName("campaign_id")
+  private Long campaignId = null;
+
   public CampaignsUpdateConfiguredStatusListStruct code(Long code) {
     this.code = code;
     return this;
@@ -87,6 +90,25 @@ public class CampaignsUpdateConfiguredStatusListStruct {
     this.messageCn = messageCn;
   }
 
+  public CampaignsUpdateConfiguredStatusListStruct campaignId(Long campaignId) {
+    this.campaignId = campaignId;
+    return this;
+  }
+
+  /**
+   * Get campaignId
+   *
+   * @return campaignId
+   */
+  @ApiModelProperty(value = "")
+  public Long getCampaignId() {
+    return campaignId;
+  }
+
+  public void setCampaignId(Long campaignId) {
+    this.campaignId = campaignId;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -99,12 +121,13 @@ public class CampaignsUpdateConfiguredStatusListStruct {
         (CampaignsUpdateConfiguredStatusListStruct) o;
     return Objects.equals(this.code, campaignsUpdateConfiguredStatusListStruct.code)
         && Objects.equals(this.message, campaignsUpdateConfiguredStatusListStruct.message)
-        && Objects.equals(this.messageCn, campaignsUpdateConfiguredStatusListStruct.messageCn);
+        && Objects.equals(this.messageCn, campaignsUpdateConfiguredStatusListStruct.messageCn)
+        && Objects.equals(this.campaignId, campaignsUpdateConfiguredStatusListStruct.campaignId);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(code, message, messageCn);
+    return Objects.hash(code, message, messageCn, campaignId);
   }
 
   @Override

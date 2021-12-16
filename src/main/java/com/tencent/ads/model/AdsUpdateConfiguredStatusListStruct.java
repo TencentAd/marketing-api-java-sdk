@@ -30,6 +30,9 @@ public class AdsUpdateConfiguredStatusListStruct {
   @SerializedName("message_cn")
   private String messageCn = null;
 
+  @SerializedName("ad_id")
+  private Long adId = null;
+
   public AdsUpdateConfiguredStatusListStruct code(Long code) {
     this.code = code;
     return this;
@@ -87,6 +90,25 @@ public class AdsUpdateConfiguredStatusListStruct {
     this.messageCn = messageCn;
   }
 
+  public AdsUpdateConfiguredStatusListStruct adId(Long adId) {
+    this.adId = adId;
+    return this;
+  }
+
+  /**
+   * Get adId
+   *
+   * @return adId
+   */
+  @ApiModelProperty(value = "")
+  public Long getAdId() {
+    return adId;
+  }
+
+  public void setAdId(Long adId) {
+    this.adId = adId;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -99,12 +121,13 @@ public class AdsUpdateConfiguredStatusListStruct {
         (AdsUpdateConfiguredStatusListStruct) o;
     return Objects.equals(this.code, adsUpdateConfiguredStatusListStruct.code)
         && Objects.equals(this.message, adsUpdateConfiguredStatusListStruct.message)
-        && Objects.equals(this.messageCn, adsUpdateConfiguredStatusListStruct.messageCn);
+        && Objects.equals(this.messageCn, adsUpdateConfiguredStatusListStruct.messageCn)
+        && Objects.equals(this.adId, adsUpdateConfiguredStatusListStruct.adId);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(code, message, messageCn);
+    return Objects.hash(code, message, messageCn, adId);
   }
 
   @Override

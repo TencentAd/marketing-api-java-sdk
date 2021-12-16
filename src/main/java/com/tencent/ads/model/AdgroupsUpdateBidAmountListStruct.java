@@ -30,6 +30,9 @@ public class AdgroupsUpdateBidAmountListStruct {
   @SerializedName("message_cn")
   private String messageCn = null;
 
+  @SerializedName("adgroup_id")
+  private Long adgroupId = null;
+
   public AdgroupsUpdateBidAmountListStruct code(Long code) {
     this.code = code;
     return this;
@@ -87,6 +90,25 @@ public class AdgroupsUpdateBidAmountListStruct {
     this.messageCn = messageCn;
   }
 
+  public AdgroupsUpdateBidAmountListStruct adgroupId(Long adgroupId) {
+    this.adgroupId = adgroupId;
+    return this;
+  }
+
+  /**
+   * Get adgroupId
+   *
+   * @return adgroupId
+   */
+  @ApiModelProperty(value = "")
+  public Long getAdgroupId() {
+    return adgroupId;
+  }
+
+  public void setAdgroupId(Long adgroupId) {
+    this.adgroupId = adgroupId;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -99,12 +121,13 @@ public class AdgroupsUpdateBidAmountListStruct {
         (AdgroupsUpdateBidAmountListStruct) o;
     return Objects.equals(this.code, adgroupsUpdateBidAmountListStruct.code)
         && Objects.equals(this.message, adgroupsUpdateBidAmountListStruct.message)
-        && Objects.equals(this.messageCn, adgroupsUpdateBidAmountListStruct.messageCn);
+        && Objects.equals(this.messageCn, adgroupsUpdateBidAmountListStruct.messageCn)
+        && Objects.equals(this.adgroupId, adgroupsUpdateBidAmountListStruct.adgroupId);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(code, message, messageCn);
+    return Objects.hash(code, message, messageCn, adgroupId);
   }
 
   @Override

@@ -30,6 +30,9 @@ public class AdgroupsUpdateDailyBudgetListStruct {
   @SerializedName("message_cn")
   private String messageCn = null;
 
+  @SerializedName("adgroup_id")
+  private Long adgroupId = null;
+
   public AdgroupsUpdateDailyBudgetListStruct code(Long code) {
     this.code = code;
     return this;
@@ -87,6 +90,25 @@ public class AdgroupsUpdateDailyBudgetListStruct {
     this.messageCn = messageCn;
   }
 
+  public AdgroupsUpdateDailyBudgetListStruct adgroupId(Long adgroupId) {
+    this.adgroupId = adgroupId;
+    return this;
+  }
+
+  /**
+   * Get adgroupId
+   *
+   * @return adgroupId
+   */
+  @ApiModelProperty(value = "")
+  public Long getAdgroupId() {
+    return adgroupId;
+  }
+
+  public void setAdgroupId(Long adgroupId) {
+    this.adgroupId = adgroupId;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -99,12 +121,13 @@ public class AdgroupsUpdateDailyBudgetListStruct {
         (AdgroupsUpdateDailyBudgetListStruct) o;
     return Objects.equals(this.code, adgroupsUpdateDailyBudgetListStruct.code)
         && Objects.equals(this.message, adgroupsUpdateDailyBudgetListStruct.message)
-        && Objects.equals(this.messageCn, adgroupsUpdateDailyBudgetListStruct.messageCn);
+        && Objects.equals(this.messageCn, adgroupsUpdateDailyBudgetListStruct.messageCn)
+        && Objects.equals(this.adgroupId, adgroupsUpdateDailyBudgetListStruct.adgroupId);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(code, message, messageCn);
+    return Objects.hash(code, message, messageCn, adgroupId);
   }
 
   @Override
