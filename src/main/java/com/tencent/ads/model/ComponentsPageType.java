@@ -22,7 +22,9 @@ import java.io.IOException;
 /** 蹊径落地页类型 */
 @JsonAdapter(ComponentsPageType.Adapter.class)
 public enum ComponentsPageType {
-  PAGE_TYPE_XIJING_ANDROID("PAGE_TYPE_XIJING_ANDROID");
+  ANDROID("PAGE_TYPE_XIJING_ANDROID"),
+
+  IOS("PAGE_TYPE_XIJING_IOS");
 
   private String value;
 
