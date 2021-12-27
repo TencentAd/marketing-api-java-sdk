@@ -1494,6 +1494,33 @@ public class TargetingTagReportsGetListStruct {
   @SerializedName("mini_game_first_day_paying_pla_roi")
   private Double miniGameFirstDayPayingPlaRoi = null;
 
+  @SerializedName("mini_game_first_pay_pla_cost")
+  private Long miniGameFirstPayPlaCost = null;
+
+  @SerializedName("mini_game_pay_d3_roi")
+  private Double miniGamePayD3Roi = null;
+
+  @SerializedName("mini_game_pay_d7_roi")
+  private Long miniGamePayD7Roi = null;
+
+  @SerializedName("mini_game_pay_d14_roi")
+  private Double miniGamePayD14Roi = null;
+
+  @SerializedName("mini_game_pay_d30_roi")
+  private Double miniGamePayD30Roi = null;
+
+  @SerializedName("mini_game_pay_d3_pla_roi")
+  private Double miniGamePayD3PlaRoi = null;
+
+  @SerializedName("mini_game_pay_d7_pla_roi")
+  private Double miniGamePayD7PlaRoi = null;
+
+  @SerializedName("mini_game_pay_d14_pla_roi")
+  private Double miniGamePayD14PlaRoi = null;
+
+  @SerializedName("mini_game_pay_d30_pla_roi")
+  private Double miniGamePayD30PlaRoi = null;
+
   public TargetingTagReportsGetListStruct date(String date) {
     this.date = date;
     return this;
@@ -10899,6 +10926,177 @@ public class TargetingTagReportsGetListStruct {
     this.miniGameFirstDayPayingPlaRoi = miniGameFirstDayPayingPlaRoi;
   }
 
+  public TargetingTagReportsGetListStruct miniGameFirstPayPlaCost(Long miniGameFirstPayPlaCost) {
+    this.miniGameFirstPayPlaCost = miniGameFirstPayPlaCost;
+    return this;
+  }
+
+  /**
+   * Get miniGameFirstPayPlaCost
+   *
+   * @return miniGameFirstPayPlaCost
+   */
+  @ApiModelProperty(value = "")
+  public Long getMiniGameFirstPayPlaCost() {
+    return miniGameFirstPayPlaCost;
+  }
+
+  public void setMiniGameFirstPayPlaCost(Long miniGameFirstPayPlaCost) {
+    this.miniGameFirstPayPlaCost = miniGameFirstPayPlaCost;
+  }
+
+  public TargetingTagReportsGetListStruct miniGamePayD3Roi(Double miniGamePayD3Roi) {
+    this.miniGamePayD3Roi = miniGamePayD3Roi;
+    return this;
+  }
+
+  /**
+   * Get miniGamePayD3Roi
+   *
+   * @return miniGamePayD3Roi
+   */
+  @ApiModelProperty(value = "")
+  public Double getMiniGamePayD3Roi() {
+    return miniGamePayD3Roi;
+  }
+
+  public void setMiniGamePayD3Roi(Double miniGamePayD3Roi) {
+    this.miniGamePayD3Roi = miniGamePayD3Roi;
+  }
+
+  public TargetingTagReportsGetListStruct miniGamePayD7Roi(Long miniGamePayD7Roi) {
+    this.miniGamePayD7Roi = miniGamePayD7Roi;
+    return this;
+  }
+
+  /**
+   * Get miniGamePayD7Roi
+   *
+   * @return miniGamePayD7Roi
+   */
+  @ApiModelProperty(value = "")
+  public Long getMiniGamePayD7Roi() {
+    return miniGamePayD7Roi;
+  }
+
+  public void setMiniGamePayD7Roi(Long miniGamePayD7Roi) {
+    this.miniGamePayD7Roi = miniGamePayD7Roi;
+  }
+
+  public TargetingTagReportsGetListStruct miniGamePayD14Roi(Double miniGamePayD14Roi) {
+    this.miniGamePayD14Roi = miniGamePayD14Roi;
+    return this;
+  }
+
+  /**
+   * Get miniGamePayD14Roi
+   *
+   * @return miniGamePayD14Roi
+   */
+  @ApiModelProperty(value = "")
+  public Double getMiniGamePayD14Roi() {
+    return miniGamePayD14Roi;
+  }
+
+  public void setMiniGamePayD14Roi(Double miniGamePayD14Roi) {
+    this.miniGamePayD14Roi = miniGamePayD14Roi;
+  }
+
+  public TargetingTagReportsGetListStruct miniGamePayD30Roi(Double miniGamePayD30Roi) {
+    this.miniGamePayD30Roi = miniGamePayD30Roi;
+    return this;
+  }
+
+  /**
+   * Get miniGamePayD30Roi
+   *
+   * @return miniGamePayD30Roi
+   */
+  @ApiModelProperty(value = "")
+  public Double getMiniGamePayD30Roi() {
+    return miniGamePayD30Roi;
+  }
+
+  public void setMiniGamePayD30Roi(Double miniGamePayD30Roi) {
+    this.miniGamePayD30Roi = miniGamePayD30Roi;
+  }
+
+  public TargetingTagReportsGetListStruct miniGamePayD3PlaRoi(Double miniGamePayD3PlaRoi) {
+    this.miniGamePayD3PlaRoi = miniGamePayD3PlaRoi;
+    return this;
+  }
+
+  /**
+   * Get miniGamePayD3PlaRoi
+   *
+   * @return miniGamePayD3PlaRoi
+   */
+  @ApiModelProperty(value = "")
+  public Double getMiniGamePayD3PlaRoi() {
+    return miniGamePayD3PlaRoi;
+  }
+
+  public void setMiniGamePayD3PlaRoi(Double miniGamePayD3PlaRoi) {
+    this.miniGamePayD3PlaRoi = miniGamePayD3PlaRoi;
+  }
+
+  public TargetingTagReportsGetListStruct miniGamePayD7PlaRoi(Double miniGamePayD7PlaRoi) {
+    this.miniGamePayD7PlaRoi = miniGamePayD7PlaRoi;
+    return this;
+  }
+
+  /**
+   * Get miniGamePayD7PlaRoi
+   *
+   * @return miniGamePayD7PlaRoi
+   */
+  @ApiModelProperty(value = "")
+  public Double getMiniGamePayD7PlaRoi() {
+    return miniGamePayD7PlaRoi;
+  }
+
+  public void setMiniGamePayD7PlaRoi(Double miniGamePayD7PlaRoi) {
+    this.miniGamePayD7PlaRoi = miniGamePayD7PlaRoi;
+  }
+
+  public TargetingTagReportsGetListStruct miniGamePayD14PlaRoi(Double miniGamePayD14PlaRoi) {
+    this.miniGamePayD14PlaRoi = miniGamePayD14PlaRoi;
+    return this;
+  }
+
+  /**
+   * Get miniGamePayD14PlaRoi
+   *
+   * @return miniGamePayD14PlaRoi
+   */
+  @ApiModelProperty(value = "")
+  public Double getMiniGamePayD14PlaRoi() {
+    return miniGamePayD14PlaRoi;
+  }
+
+  public void setMiniGamePayD14PlaRoi(Double miniGamePayD14PlaRoi) {
+    this.miniGamePayD14PlaRoi = miniGamePayD14PlaRoi;
+  }
+
+  public TargetingTagReportsGetListStruct miniGamePayD30PlaRoi(Double miniGamePayD30PlaRoi) {
+    this.miniGamePayD30PlaRoi = miniGamePayD30PlaRoi;
+    return this;
+  }
+
+  /**
+   * Get miniGamePayD30PlaRoi
+   *
+   * @return miniGamePayD30PlaRoi
+   */
+  @ApiModelProperty(value = "")
+  public Double getMiniGamePayD30PlaRoi() {
+    return miniGamePayD30PlaRoi;
+  }
+
+  public void setMiniGamePayD30PlaRoi(Double miniGamePayD30PlaRoi) {
+    this.miniGamePayD30PlaRoi = miniGamePayD30PlaRoi;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -11764,7 +11962,23 @@ public class TargetingTagReportsGetListStruct {
         && Objects.equals(this.activeD7PayCost, targetingTagReportsGetListStruct.activeD7PayCost)
         && Objects.equals(
             this.miniGameFirstDayPayingPlaRoi,
-            targetingTagReportsGetListStruct.miniGameFirstDayPayingPlaRoi);
+            targetingTagReportsGetListStruct.miniGameFirstDayPayingPlaRoi)
+        && Objects.equals(
+            this.miniGameFirstPayPlaCost, targetingTagReportsGetListStruct.miniGameFirstPayPlaCost)
+        && Objects.equals(this.miniGamePayD3Roi, targetingTagReportsGetListStruct.miniGamePayD3Roi)
+        && Objects.equals(this.miniGamePayD7Roi, targetingTagReportsGetListStruct.miniGamePayD7Roi)
+        && Objects.equals(
+            this.miniGamePayD14Roi, targetingTagReportsGetListStruct.miniGamePayD14Roi)
+        && Objects.equals(
+            this.miniGamePayD30Roi, targetingTagReportsGetListStruct.miniGamePayD30Roi)
+        && Objects.equals(
+            this.miniGamePayD3PlaRoi, targetingTagReportsGetListStruct.miniGamePayD3PlaRoi)
+        && Objects.equals(
+            this.miniGamePayD7PlaRoi, targetingTagReportsGetListStruct.miniGamePayD7PlaRoi)
+        && Objects.equals(
+            this.miniGamePayD14PlaRoi, targetingTagReportsGetListStruct.miniGamePayD14PlaRoi)
+        && Objects.equals(
+            this.miniGamePayD30PlaRoi, targetingTagReportsGetListStruct.miniGamePayD30PlaRoi);
   }
 
   @Override
@@ -12260,7 +12474,16 @@ public class TargetingTagReportsGetListStruct {
         activeD7ClickPayRate,
         activeD7ActivePayRate,
         activeD7PayCost,
-        miniGameFirstDayPayingPlaRoi);
+        miniGameFirstDayPayingPlaRoi,
+        miniGameFirstPayPlaCost,
+        miniGamePayD3Roi,
+        miniGamePayD7Roi,
+        miniGamePayD14Roi,
+        miniGamePayD30Roi,
+        miniGamePayD3PlaRoi,
+        miniGamePayD7PlaRoi,
+        miniGamePayD14PlaRoi,
+        miniGamePayD30PlaRoi);
   }
 
   @Override
