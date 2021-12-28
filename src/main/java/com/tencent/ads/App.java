@@ -78,6 +78,7 @@ public class App {
   @Inject DynamicAdImagesApiContainer dynamicAdImagesApiContainer;
   @Inject DynamicAdTemplatesApiContainer dynamicAdTemplatesApiContainer;
   @Inject DynamicAdVideoApiContainer dynamicAdVideoApiContainer;
+  @Inject DynamicAdVideoTemplatesApiContainer dynamicAdVideoTemplatesApiContainer;
   @Inject DynamicCreativesApiContainer dynamicCreativesApiContainer;
   @Inject EcommerceOrderApiContainer ecommerceOrderApiContainer;
   @Inject EstimationApiContainer estimationApiContainer;
@@ -408,6 +409,10 @@ public class App {
 
   public DynamicAdVideoApiContainer dynamicAdVideo() {
     return dynamicAdVideoApiContainer;
+  }
+
+  public DynamicAdVideoTemplatesApiContainer dynamicAdVideoTemplates() {
+    return dynamicAdVideoTemplatesApiContainer;
   }
 
   public DynamicCreativesApiContainer dynamicCreatives() {
