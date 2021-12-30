@@ -138,7 +138,7 @@ public class ReadTargetingSetting {
   private List<Long> deprecatedRegion = null;
 
   @SerializedName("excluded_converted_audience")
-  private ExcludedConvertedAudienceStruct excludedConvertedAudience = null;
+  private ExcludedConvertedAudience excludedConvertedAudience = null;
 
   public ReadTargetingSetting age(List<AgeStruct> age) {
     this.age = age;
@@ -1126,7 +1126,7 @@ public class ReadTargetingSetting {
   }
 
   public ReadTargetingSetting excludedConvertedAudience(
-      ExcludedConvertedAudienceStruct excludedConvertedAudience) {
+      ExcludedConvertedAudience excludedConvertedAudience) {
     this.excludedConvertedAudience = excludedConvertedAudience;
     return this;
   }
@@ -1137,12 +1137,11 @@ public class ReadTargetingSetting {
    * @return excludedConvertedAudience
    */
   @ApiModelProperty(value = "")
-  public ExcludedConvertedAudienceStruct getExcludedConvertedAudience() {
+  public ExcludedConvertedAudience getExcludedConvertedAudience() {
     return excludedConvertedAudience;
   }
 
-  public void setExcludedConvertedAudience(
-      ExcludedConvertedAudienceStruct excludedConvertedAudience) {
+  public void setExcludedConvertedAudience(ExcludedConvertedAudience excludedConvertedAudience) {
     this.excludedConvertedAudience = excludedConvertedAudience;
   }
 

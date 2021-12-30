@@ -111,7 +111,7 @@ public class WriteTargetingSetting {
   private BehaviorOrInterest behaviorOrInterest = null;
 
   @SerializedName("excluded_converted_audience")
-  private ExcludedConvertedAudienceStruct excludedConvertedAudience = null;
+  private ExcludedConvertedAudience excludedConvertedAudience = null;
 
   public WriteTargetingSetting age(List<AgeStruct> age) {
     this.age = age;
@@ -868,7 +868,7 @@ public class WriteTargetingSetting {
   }
 
   public WriteTargetingSetting excludedConvertedAudience(
-      ExcludedConvertedAudienceStruct excludedConvertedAudience) {
+      ExcludedConvertedAudience excludedConvertedAudience) {
     this.excludedConvertedAudience = excludedConvertedAudience;
     return this;
   }
@@ -879,12 +879,11 @@ public class WriteTargetingSetting {
    * @return excludedConvertedAudience
    */
   @ApiModelProperty(value = "")
-  public ExcludedConvertedAudienceStruct getExcludedConvertedAudience() {
+  public ExcludedConvertedAudience getExcludedConvertedAudience() {
     return excludedConvertedAudience;
   }
 
-  public void setExcludedConvertedAudience(
-      ExcludedConvertedAudienceStruct excludedConvertedAudience) {
+  public void setExcludedConvertedAudience(ExcludedConvertedAudience excludedConvertedAudience) {
     this.excludedConvertedAudience = excludedConvertedAudience;
   }
 
