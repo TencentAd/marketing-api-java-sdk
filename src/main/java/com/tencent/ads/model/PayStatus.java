@@ -22,17 +22,17 @@ import java.io.IOException;
 /** 书籍的付费状态 */
 @JsonAdapter(PayStatus.Adapter.class)
 public enum PayStatus {
-  STATUS_FREE("PAY_STATUS_FREE"),
-
-  STATUS_PAID("PAY_STATUS_PAID"),
-
-  STATUS_MEMBER("PAY_STATUS_MEMBER"),
-
   PENDING("PAY_PENDING"),
 
   OK("PAY_OK"),
 
-  REFUND("PAY_REFUND");
+  REFUND("PAY_REFUND"),
+
+  STATUS_FREE("PAY_STATUS_FREE"),
+
+  STATUS_PAID("PAY_STATUS_PAID"),
+
+  STATUS_MEMBER("PAY_STATUS_MEMBER");
 
   private String value;
 
