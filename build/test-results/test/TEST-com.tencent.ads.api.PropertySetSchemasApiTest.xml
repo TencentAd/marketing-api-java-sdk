@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.tencent.ads.api.PropertySetSchemasApiTest" tests="3" skipped="3" failures="0" errors="0" timestamp="2022-01-05T06:06:54" hostname="VM_147_58_centos" time="0.0">
+<testsuite name="com.tencent.ads.api.PropertySetSchemasApiTest" tests="3" skipped="3" failures="0" errors="0" timestamp="2022-01-05T09:43:29" hostname="VM_147_58_centos" time="0.0">
   <properties/>
   <testcase name="propertySetSchemasGetTest" classname="com.tencent.ads.api.PropertySetSchemasApiTest" time="0.0">
     <skipped/>
