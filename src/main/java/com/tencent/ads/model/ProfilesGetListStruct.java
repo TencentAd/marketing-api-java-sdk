@@ -58,7 +58,7 @@ public class ProfilesGetListStruct {
   private String profileUrl = null;
 
   @SerializedName("system_status")
-  private SysStatus systemStatus = null;
+  private AdStatus systemStatus = null;
 
   public ProfilesGetListStruct ownerId(Long ownerId) {
     this.ownerId = ownerId;
@@ -288,7 +288,7 @@ public class ProfilesGetListStruct {
     this.profileUrl = profileUrl;
   }
 
-  public ProfilesGetListStruct systemStatus(SysStatus systemStatus) {
+  public ProfilesGetListStruct systemStatus(AdStatus systemStatus) {
     this.systemStatus = systemStatus;
     return this;
   }
@@ -299,11 +299,11 @@ public class ProfilesGetListStruct {
    * @return systemStatus
    */
   @ApiModelProperty(value = "")
-  public SysStatus getSystemStatus() {
+  public AdStatus getSystemStatus() {
     return systemStatus;
   }
 
-  public void setSystemStatus(SysStatus systemStatus) {
+  public void setSystemStatus(AdStatus systemStatus) {
     this.systemStatus = systemStatus;
   }
 

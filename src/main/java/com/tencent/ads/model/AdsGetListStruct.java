@@ -45,7 +45,7 @@ public class AdsGetListStruct {
   private AdStatus configuredStatus = null;
 
   @SerializedName("system_status")
-  private SysStatus systemStatus = null;
+  private AdStatus systemStatus = null;
 
   @SerializedName("audit_spec")
   private List<AuditSpecStruct> auditSpec = null;
@@ -207,7 +207,7 @@ public class AdsGetListStruct {
     this.configuredStatus = configuredStatus;
   }
 
-  public AdsGetListStruct systemStatus(SysStatus systemStatus) {
+  public AdsGetListStruct systemStatus(AdStatus systemStatus) {
     this.systemStatus = systemStatus;
     return this;
   }
@@ -218,11 +218,11 @@ public class AdsGetListStruct {
    * @return systemStatus
    */
   @ApiModelProperty(value = "")
-  public SysStatus getSystemStatus() {
+  public AdStatus getSystemStatus() {
     return systemStatus;
   }
 
-  public void setSystemStatus(SysStatus systemStatus) {
+  public void setSystemStatus(AdStatus systemStatus) {
     this.systemStatus = systemStatus;
   }
 

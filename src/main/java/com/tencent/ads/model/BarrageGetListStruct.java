@@ -28,7 +28,7 @@ public class BarrageGetListStruct {
   private String text = null;
 
   @SerializedName("review_status")
-  private SysStatus reviewStatus = null;
+  private AdStatus reviewStatus = null;
 
   public BarrageGetListStruct id(Long id) {
     this.id = id;
@@ -68,7 +68,7 @@ public class BarrageGetListStruct {
     this.text = text;
   }
 
-  public BarrageGetListStruct reviewStatus(SysStatus reviewStatus) {
+  public BarrageGetListStruct reviewStatus(AdStatus reviewStatus) {
     this.reviewStatus = reviewStatus;
     return this;
   }
@@ -79,11 +79,11 @@ public class BarrageGetListStruct {
    * @return reviewStatus
    */
   @ApiModelProperty(value = "")
-  public SysStatus getReviewStatus() {
+  public AdStatus getReviewStatus() {
     return reviewStatus;
   }
 
-  public void setReviewStatus(SysStatus reviewStatus) {
+  public void setReviewStatus(AdStatus reviewStatus) {
     this.reviewStatus = reviewStatus;
   }
 

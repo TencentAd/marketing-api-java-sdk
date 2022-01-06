@@ -27,7 +27,7 @@ public class AuditSpecStruct {
   private SiteSetDefinition siteSet = null;
 
   @SerializedName("system_status")
-  private SysStatus systemStatus = null;
+  private AdStatus systemStatus = null;
 
   @SerializedName("reject_message")
   private String rejectMessage = null;
@@ -54,7 +54,7 @@ public class AuditSpecStruct {
     this.siteSet = siteSet;
   }
 
-  public AuditSpecStruct systemStatus(SysStatus systemStatus) {
+  public AuditSpecStruct systemStatus(AdStatus systemStatus) {
     this.systemStatus = systemStatus;
     return this;
   }
@@ -65,11 +65,11 @@ public class AuditSpecStruct {
    * @return systemStatus
    */
   @ApiModelProperty(value = "")
-  public SysStatus getSystemStatus() {
+  public AdStatus getSystemStatus() {
     return systemStatus;
   }
 
-  public void setSystemStatus(SysStatus systemStatus) {
+  public void setSystemStatus(AdStatus systemStatus) {
     this.systemStatus = systemStatus;
   }
 

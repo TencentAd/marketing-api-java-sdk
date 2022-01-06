@@ -61,7 +61,7 @@ public class LocalStoresAddListStruct {
   private Long lastModifiedTime = null;
 
   @SerializedName("system_status")
-  private SysStatus systemStatus = null;
+  private AdStatus systemStatus = null;
 
   public LocalStoresAddListStruct poiId(String poiId) {
     this.poiId = poiId;
@@ -311,7 +311,7 @@ public class LocalStoresAddListStruct {
     this.lastModifiedTime = lastModifiedTime;
   }
 
-  public LocalStoresAddListStruct systemStatus(SysStatus systemStatus) {
+  public LocalStoresAddListStruct systemStatus(AdStatus systemStatus) {
     this.systemStatus = systemStatus;
     return this;
   }
@@ -322,11 +322,11 @@ public class LocalStoresAddListStruct {
    * @return systemStatus
    */
   @ApiModelProperty(value = "")
-  public SysStatus getSystemStatus() {
+  public AdStatus getSystemStatus() {
     return systemStatus;
   }
 
-  public void setSystemStatus(SysStatus systemStatus) {
+  public void setSystemStatus(AdStatus systemStatus) {
     this.systemStatus = systemStatus;
   }
 
