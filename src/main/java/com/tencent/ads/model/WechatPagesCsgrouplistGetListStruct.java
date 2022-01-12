@@ -21,48 +21,48 @@ import java.util.Objects;
 /** 返回结构 */
 @ApiModel(description = "返回结构")
 public class WechatPagesCsgrouplistGetListStruct {
-  @SerializedName("groupid")
-  private Long groupid = null;
+  @SerializedName("group_id")
+  private Long groupId = null;
 
-  @SerializedName("groupname")
-  private String groupname = null;
+  @SerializedName("group_name")
+  private String groupName = null;
 
-  public WechatPagesCsgrouplistGetListStruct groupid(Long groupid) {
-    this.groupid = groupid;
+  public WechatPagesCsgrouplistGetListStruct groupId(Long groupId) {
+    this.groupId = groupId;
     return this;
   }
 
   /**
-   * Get groupid
+   * Get groupId
    *
-   * @return groupid
+   * @return groupId
    */
   @ApiModelProperty(value = "")
-  public Long getGroupid() {
-    return groupid;
+  public Long getGroupId() {
+    return groupId;
   }
 
-  public void setGroupid(Long groupid) {
-    this.groupid = groupid;
+  public void setGroupId(Long groupId) {
+    this.groupId = groupId;
   }
 
-  public WechatPagesCsgrouplistGetListStruct groupname(String groupname) {
-    this.groupname = groupname;
+  public WechatPagesCsgrouplistGetListStruct groupName(String groupName) {
+    this.groupName = groupName;
     return this;
   }
 
   /**
-   * Get groupname
+   * Get groupName
    *
-   * @return groupname
+   * @return groupName
    */
   @ApiModelProperty(value = "")
-  public String getGroupname() {
-    return groupname;
+  public String getGroupName() {
+    return groupName;
   }
 
-  public void setGroupname(String groupname) {
-    this.groupname = groupname;
+  public void setGroupName(String groupName) {
+    this.groupName = groupName;
   }
 
   @Override
@@ -75,13 +75,13 @@ public class WechatPagesCsgrouplistGetListStruct {
     }
     WechatPagesCsgrouplistGetListStruct wechatPagesCsgrouplistGetListStruct =
         (WechatPagesCsgrouplistGetListStruct) o;
-    return Objects.equals(this.groupid, wechatPagesCsgrouplistGetListStruct.groupid)
-        && Objects.equals(this.groupname, wechatPagesCsgrouplistGetListStruct.groupname);
+    return Objects.equals(this.groupId, wechatPagesCsgrouplistGetListStruct.groupId)
+        && Objects.equals(this.groupName, wechatPagesCsgrouplistGetListStruct.groupName);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(groupid, groupname);
+    return Objects.hash(groupId, groupName);
   }
 
   @Override
