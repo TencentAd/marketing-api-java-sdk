@@ -47,6 +47,9 @@ public class ProductItemSpec {
   @SerializedName("additional_image_url")
   private List<String> additionalImageUrl = null;
 
+  @SerializedName("hidden_landing_img_url")
+  private List<String> hiddenLandingImgUrl = null;
+
   @SerializedName("video_duration")
   private String videoDuration = null;
 
@@ -467,6 +470,9 @@ public class ProductItemSpec {
   @SerializedName("cartoon_color")
   private CartoonColor cartoonColor = null;
 
+  @SerializedName("max_quota_v2")
+  private MaxQuotaEnum maxQuotaV2 = null;
+
   public ProductItemSpec productOuterId(String productOuterId) {
     this.productOuterId = productOuterId;
     return this;
@@ -625,6 +631,33 @@ public class ProductItemSpec {
 
   public void setAdditionalImageUrl(List<String> additionalImageUrl) {
     this.additionalImageUrl = additionalImageUrl;
+  }
+
+  public ProductItemSpec hiddenLandingImgUrl(List<String> hiddenLandingImgUrl) {
+    this.hiddenLandingImgUrl = hiddenLandingImgUrl;
+    return this;
+  }
+
+  public ProductItemSpec addHiddenLandingImgUrlItem(String hiddenLandingImgUrlItem) {
+    if (this.hiddenLandingImgUrl == null) {
+      this.hiddenLandingImgUrl = new ArrayList<String>();
+    }
+    this.hiddenLandingImgUrl.add(hiddenLandingImgUrlItem);
+    return this;
+  }
+
+  /**
+   * Get hiddenLandingImgUrl
+   *
+   * @return hiddenLandingImgUrl
+   */
+  @ApiModelProperty(value = "")
+  public List<String> getHiddenLandingImgUrl() {
+    return hiddenLandingImgUrl;
+  }
+
+  public void setHiddenLandingImgUrl(List<String> hiddenLandingImgUrl) {
+    this.hiddenLandingImgUrl = hiddenLandingImgUrl;
   }
 
   public ProductItemSpec videoDuration(String videoDuration) {
@@ -3367,6 +3400,25 @@ public class ProductItemSpec {
     this.cartoonColor = cartoonColor;
   }
 
+  public ProductItemSpec maxQuotaV2(MaxQuotaEnum maxQuotaV2) {
+    this.maxQuotaV2 = maxQuotaV2;
+    return this;
+  }
+
+  /**
+   * Get maxQuotaV2
+   *
+   * @return maxQuotaV2
+   */
+  @ApiModelProperty(value = "")
+  public MaxQuotaEnum getMaxQuotaV2() {
+    return maxQuotaV2;
+  }
+
+  public void setMaxQuotaV2(MaxQuotaEnum maxQuotaV2) {
+    this.maxQuotaV2 = maxQuotaV2;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -3384,6 +3436,7 @@ public class ProductItemSpec {
         && Objects.equals(this.expirationTime, productItemSpec.expirationTime)
         && Objects.equals(this.imageUrl, productItemSpec.imageUrl)
         && Objects.equals(this.additionalImageUrl, productItemSpec.additionalImageUrl)
+        && Objects.equals(this.hiddenLandingImgUrl, productItemSpec.hiddenLandingImgUrl)
         && Objects.equals(this.videoDuration, productItemSpec.videoDuration)
         && Objects.equals(this.videoUrl, productItemSpec.videoUrl)
         && Objects.equals(this.playCount, productItemSpec.playCount)
@@ -3523,7 +3576,8 @@ public class ProductItemSpec {
         && Objects.equals(this.playVoice, productItemSpec.playVoice)
         && Objects.equals(this.productionSource, productItemSpec.productionSource)
         && Objects.equals(this.productionPlace, productItemSpec.productionPlace)
-        && Objects.equals(this.cartoonColor, productItemSpec.cartoonColor);
+        && Objects.equals(this.cartoonColor, productItemSpec.cartoonColor)
+        && Objects.equals(this.maxQuotaV2, productItemSpec.maxQuotaV2);
   }
 
   @Override
@@ -3537,6 +3591,7 @@ public class ProductItemSpec {
         expirationTime,
         imageUrl,
         additionalImageUrl,
+        hiddenLandingImgUrl,
         videoDuration,
         videoUrl,
         playCount,
@@ -3676,7 +3731,8 @@ public class ProductItemSpec {
         playVoice,
         productionSource,
         productionPlace,
-        cartoonColor);
+        cartoonColor,
+        maxQuotaV2);
   }
 
   @Override
