@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.tencent.ads.api.RealtimeCostApiTest" tests="1" skipped="1" failures="0" errors="0" timestamp="2022-01-13T09:02:45" hostname="VM_147_58_centos" time="0.0">
+<testsuite name="com.tencent.ads.api.RealtimeCostApiTest" tests="1" skipped="1" failures="0" errors="0" timestamp="2022-01-17T02:23:16" hostname="VM_147_58_centos" time="0.001">
   <properties/>
-  <testcase name="realtimeCostGetTest" classname="com.tencent.ads.api.RealtimeCostApiTest" time="0.0">
+  <testcase name="realtimeCostGetTest" classname="com.tencent.ads.api.RealtimeCostApiTest" time="0.001">
     <skipped/>
   </testcase>
   <system-out><![CDATA[]]></system-out>

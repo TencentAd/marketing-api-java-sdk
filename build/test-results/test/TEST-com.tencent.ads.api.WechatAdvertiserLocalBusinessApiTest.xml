@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.tencent.ads.api.WechatAdvertiserLocalBusinessApiTest" tests="3" skipped="3" failures="0" errors="0" timestamp="2022-01-13T09:02:45" hostname="VM_147_58_centos" time="0.0">
+<testsuite name="com.tencent.ads.api.WechatAdvertiserLocalBusinessApiTest" tests="3" skipped="3" failures="0" errors="0" timestamp="2022-01-17T02:23:16" hostname="VM_147_58_centos" time="0.0">
   <properties/>
   <testcase name="wechatAdvertiserLocalBusinessAddTest" classname="com.tencent.ads.api.WechatAdvertiserLocalBusinessApiTest" time="0.0">
     <skipped/>
