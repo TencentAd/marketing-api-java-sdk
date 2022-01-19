@@ -473,6 +473,15 @@ public class ProductItemSpec {
   @SerializedName("max_quota_v2")
   private MaxQuotaEnum maxQuotaV2 = null;
 
+  @SerializedName("custom_url")
+  private String customUrl = null;
+
+  @SerializedName("additional_custom_url")
+  private String additionalCustomUrl = null;
+
+  @SerializedName("product_barcode")
+  private String productBarcode = null;
+
   public ProductItemSpec productOuterId(String productOuterId) {
     this.productOuterId = productOuterId;
     return this;
@@ -3419,6 +3428,63 @@ public class ProductItemSpec {
     this.maxQuotaV2 = maxQuotaV2;
   }
 
+  public ProductItemSpec customUrl(String customUrl) {
+    this.customUrl = customUrl;
+    return this;
+  }
+
+  /**
+   * Get customUrl
+   *
+   * @return customUrl
+   */
+  @ApiModelProperty(value = "")
+  public String getCustomUrl() {
+    return customUrl;
+  }
+
+  public void setCustomUrl(String customUrl) {
+    this.customUrl = customUrl;
+  }
+
+  public ProductItemSpec additionalCustomUrl(String additionalCustomUrl) {
+    this.additionalCustomUrl = additionalCustomUrl;
+    return this;
+  }
+
+  /**
+   * Get additionalCustomUrl
+   *
+   * @return additionalCustomUrl
+   */
+  @ApiModelProperty(value = "")
+  public String getAdditionalCustomUrl() {
+    return additionalCustomUrl;
+  }
+
+  public void setAdditionalCustomUrl(String additionalCustomUrl) {
+    this.additionalCustomUrl = additionalCustomUrl;
+  }
+
+  public ProductItemSpec productBarcode(String productBarcode) {
+    this.productBarcode = productBarcode;
+    return this;
+  }
+
+  /**
+   * Get productBarcode
+   *
+   * @return productBarcode
+   */
+  @ApiModelProperty(value = "")
+  public String getProductBarcode() {
+    return productBarcode;
+  }
+
+  public void setProductBarcode(String productBarcode) {
+    this.productBarcode = productBarcode;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -3577,7 +3643,10 @@ public class ProductItemSpec {
         && Objects.equals(this.productionSource, productItemSpec.productionSource)
         && Objects.equals(this.productionPlace, productItemSpec.productionPlace)
         && Objects.equals(this.cartoonColor, productItemSpec.cartoonColor)
-        && Objects.equals(this.maxQuotaV2, productItemSpec.maxQuotaV2);
+        && Objects.equals(this.maxQuotaV2, productItemSpec.maxQuotaV2)
+        && Objects.equals(this.customUrl, productItemSpec.customUrl)
+        && Objects.equals(this.additionalCustomUrl, productItemSpec.additionalCustomUrl)
+        && Objects.equals(this.productBarcode, productItemSpec.productBarcode);
   }
 
   @Override
@@ -3732,7 +3801,10 @@ public class ProductItemSpec {
         productionSource,
         productionPlace,
         cartoonColor,
-        maxQuotaV2);
+        maxQuotaV2,
+        customUrl,
+        additionalCustomUrl,
+        productBarcode);
   }
 
   @Override

@@ -24,6 +24,9 @@ public class XijingPageListGetResponseData {
   @SerializedName("list")
   private List<PageStruct> list = null;
 
+  @SerializedName("page_info")
+  private PageInfo pageInfo = null;
+
   @SerializedName("total_pages")
   private Long totalPages = null;
 
@@ -58,6 +61,25 @@ public class XijingPageListGetResponseData {
 
   public void setList(List<PageStruct> list) {
     this.list = list;
+  }
+
+  public XijingPageListGetResponseData pageInfo(PageInfo pageInfo) {
+    this.pageInfo = pageInfo;
+    return this;
+  }
+
+  /**
+   * Get pageInfo
+   *
+   * @return pageInfo
+   */
+  @ApiModelProperty(value = "")
+  public PageInfo getPageInfo() {
+    return pageInfo;
+  }
+
+  public void setPageInfo(PageInfo pageInfo) {
+    this.pageInfo = pageInfo;
   }
 
   public XijingPageListGetResponseData totalPages(Long totalPages) {
@@ -127,6 +149,7 @@ public class XijingPageListGetResponseData {
     }
     XijingPageListGetResponseData xijingPageListGetResponseData = (XijingPageListGetResponseData) o;
     return Objects.equals(this.list, xijingPageListGetResponseData.list)
+        && Objects.equals(this.pageInfo, xijingPageListGetResponseData.pageInfo)
         && Objects.equals(this.totalPages, xijingPageListGetResponseData.totalPages)
         && Objects.equals(this.pageSize, xijingPageListGetResponseData.pageSize)
         && Objects.equals(this.pageIndex, xijingPageListGetResponseData.pageIndex);
@@ -134,7 +157,7 @@ public class XijingPageListGetResponseData {
 
   @Override
   public int hashCode() {
-    return Objects.hash(list, totalPages, pageSize, pageIndex);
+    return Objects.hash(list, pageInfo, totalPages, pageSize, pageIndex);
   }
 
   @Override

@@ -165,11 +165,13 @@ public class App {
   @Inject WechatPagesGrantinfoApiContainer wechatPagesGrantinfoApiContainer;
   @Inject WechatQualificationsApiContainer wechatQualificationsApiContainer;
   @Inject WildcardsApiContainer wildcardsApiContainer;
+  @Inject XijingComplexTemplateApiContainer xijingComplexTemplateApiContainer;
   @Inject XijingPageApiContainer xijingPageApiContainer;
   @Inject XijingPageByComponentsApiContainer xijingPageByComponentsApiContainer;
   @Inject XijingPageInteractiveApiContainer xijingPageInteractiveApiContainer;
   @Inject XijingPageListApiContainer xijingPageListApiContainer;
   @Inject XijingTemplateApiContainer xijingTemplateApiContainer;
+  @Inject XijingTemplateListApiContainer xijingTemplateListApiContainer;
 
   public App() {
     Guice.createInjector(new GuiceModule()).injectMembers(this);
@@ -759,6 +761,10 @@ public class App {
     return wildcardsApiContainer;
   }
 
+  public XijingComplexTemplateApiContainer xijingComplexTemplate() {
+    return xijingComplexTemplateApiContainer;
+  }
+
   public XijingPageApiContainer xijingPage() {
     return xijingPageApiContainer;
   }
@@ -777,5 +783,9 @@ public class App {
 
   public XijingTemplateApiContainer xijingTemplate() {
     return xijingTemplateApiContainer;
+  }
+
+  public XijingTemplateListApiContainer xijingTemplateList() {
+    return xijingTemplateListApiContainer;
   }
 }

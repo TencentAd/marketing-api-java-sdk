@@ -16,6 +16,8 @@ import com.google.gson.Gson;
 import com.google.gson.annotations.SerializedName;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Objects;
 
 /** 动态多商品广告落地页信息 */
@@ -23,6 +25,9 @@ import java.util.Objects;
 public class DynamicProductSpec {
   @SerializedName("page_url")
   private String pageUrl = null;
+
+  @SerializedName("mini_program_paths")
+  private List<String> miniProgramPaths = null;
 
   public DynamicProductSpec pageUrl(String pageUrl) {
     this.pageUrl = pageUrl;
@@ -43,6 +48,33 @@ public class DynamicProductSpec {
     this.pageUrl = pageUrl;
   }
 
+  public DynamicProductSpec miniProgramPaths(List<String> miniProgramPaths) {
+    this.miniProgramPaths = miniProgramPaths;
+    return this;
+  }
+
+  public DynamicProductSpec addMiniProgramPathsItem(String miniProgramPathsItem) {
+    if (this.miniProgramPaths == null) {
+      this.miniProgramPaths = new ArrayList<String>();
+    }
+    this.miniProgramPaths.add(miniProgramPathsItem);
+    return this;
+  }
+
+  /**
+   * Get miniProgramPaths
+   *
+   * @return miniProgramPaths
+   */
+  @ApiModelProperty(value = "")
+  public List<String> getMiniProgramPaths() {
+    return miniProgramPaths;
+  }
+
+  public void setMiniProgramPaths(List<String> miniProgramPaths) {
+    this.miniProgramPaths = miniProgramPaths;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -52,12 +84,13 @@ public class DynamicProductSpec {
       return false;
     }
     DynamicProductSpec dynamicProductSpec = (DynamicProductSpec) o;
-    return Objects.equals(this.pageUrl, dynamicProductSpec.pageUrl);
+    return Objects.equals(this.pageUrl, dynamicProductSpec.pageUrl)
+        && Objects.equals(this.miniProgramPaths, dynamicProductSpec.miniProgramPaths);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(pageUrl);
+    return Objects.hash(pageUrl, miniProgramPaths);
   }
 
   @Override
