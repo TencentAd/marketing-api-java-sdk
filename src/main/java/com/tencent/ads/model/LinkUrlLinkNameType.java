@@ -116,7 +116,9 @@ public enum LinkUrlLinkNameType {
 
   FOLLOW_OFFICIAL_ACCOUNT_CHT("FOLLOW_OFFICIAL_ACCOUNT_CHT"),
 
-  GET_FOR_FREE("GET_FOR_FREE");
+  GET_FOR_FREE("GET_FOR_FREE"),
+
+  WATCH_VIDEO("WATCH_VIDEO");
 
   private String value;
 
