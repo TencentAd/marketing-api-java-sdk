@@ -161,6 +161,9 @@ public class AdcreativesGetListStruct {
   @SerializedName("industry_label")
   private String industryLabel = null;
 
+  @SerializedName("creative_template_category")
+  private String creativeTemplateCategory = null;
+
   @SerializedName("adcreative_template_id")
   private Long adcreativeTemplateId = null;
 
@@ -1062,6 +1065,25 @@ public class AdcreativesGetListStruct {
     this.industryLabel = industryLabel;
   }
 
+  public AdcreativesGetListStruct creativeTemplateCategory(String creativeTemplateCategory) {
+    this.creativeTemplateCategory = creativeTemplateCategory;
+    return this;
+  }
+
+  /**
+   * Get creativeTemplateCategory
+   *
+   * @return creativeTemplateCategory
+   */
+  @ApiModelProperty(value = "")
+  public String getCreativeTemplateCategory() {
+    return creativeTemplateCategory;
+  }
+
+  public void setCreativeTemplateCategory(String creativeTemplateCategory) {
+    this.creativeTemplateCategory = creativeTemplateCategory;
+  }
+
   public AdcreativesGetListStruct adcreativeTemplateId(Long adcreativeTemplateId) {
     this.adcreativeTemplateId = adcreativeTemplateId;
     return this;
@@ -1165,6 +1187,8 @@ public class AdcreativesGetListStruct {
         && Objects.equals(
             this.creativeTemplateVersionType, adcreativesGetListStruct.creativeTemplateVersionType)
         && Objects.equals(this.industryLabel, adcreativesGetListStruct.industryLabel)
+        && Objects.equals(
+            this.creativeTemplateCategory, adcreativesGetListStruct.creativeTemplateCategory)
         && Objects.equals(this.adcreativeTemplateId, adcreativesGetListStruct.adcreativeTemplateId)
         && Objects.equals(this.adcreativeElements, adcreativesGetListStruct.adcreativeElements);
   }
@@ -1218,6 +1242,7 @@ public class AdcreativesGetListStruct {
         enableBreakthroughSiteset,
         creativeTemplateVersionType,
         industryLabel,
+        creativeTemplateCategory,
         adcreativeTemplateId,
         adcreativeElements);
   }

@@ -107,6 +107,9 @@ public class DynamicCreativesGetListStruct {
   @SerializedName("creative_template_version_type")
   private CreativeTemplateVersionType creativeTemplateVersionType = null;
 
+  @SerializedName("creative_template_category")
+  private String creativeTemplateCategory = null;
+
   public DynamicCreativesGetListStruct dynamicCreativeId(Long dynamicCreativeId) {
     this.dynamicCreativeId = dynamicCreativeId;
     return this;
@@ -661,6 +664,25 @@ public class DynamicCreativesGetListStruct {
     this.creativeTemplateVersionType = creativeTemplateVersionType;
   }
 
+  public DynamicCreativesGetListStruct creativeTemplateCategory(String creativeTemplateCategory) {
+    this.creativeTemplateCategory = creativeTemplateCategory;
+    return this;
+  }
+
+  /**
+   * Get creativeTemplateCategory
+   *
+   * @return creativeTemplateCategory
+   */
+  @ApiModelProperty(value = "")
+  public String getCreativeTemplateCategory() {
+    return creativeTemplateCategory;
+  }
+
+  public void setCreativeTemplateCategory(String creativeTemplateCategory) {
+    this.creativeTemplateCategory = creativeTemplateCategory;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -708,7 +730,9 @@ public class DynamicCreativesGetListStruct {
             this.enableBreakthroughSiteset, dynamicCreativesGetListStruct.enableBreakthroughSiteset)
         && Objects.equals(
             this.creativeTemplateVersionType,
-            dynamicCreativesGetListStruct.creativeTemplateVersionType);
+            dynamicCreativesGetListStruct.creativeTemplateVersionType)
+        && Objects.equals(
+            this.creativeTemplateCategory, dynamicCreativesGetListStruct.creativeTemplateCategory);
   }
 
   @Override
@@ -741,7 +765,8 @@ public class DynamicCreativesGetListStruct {
         dynamicCreativeGroupUsed,
         appGiftPackCode,
         enableBreakthroughSiteset,
-        creativeTemplateVersionType);
+        creativeTemplateVersionType,
+        creativeTemplateCategory);
   }
 
   @Override
