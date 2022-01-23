@@ -114,7 +114,7 @@ public class AdgroupsGetListStruct {
   private List<UserActionSetStruct> userActionSets = null;
 
   @SerializedName("additional_user_action_sets")
-  private List<UserActionSetStruct> additionalUserActionSets = null;
+  private List<AdditionalUserActionSetStruct> additionalUserActionSets = null;
 
   @SerializedName("is_deleted")
   private Boolean isDeleted = null;
@@ -791,15 +791,15 @@ public class AdgroupsGetListStruct {
   }
 
   public AdgroupsGetListStruct additionalUserActionSets(
-      List<UserActionSetStruct> additionalUserActionSets) {
+      List<AdditionalUserActionSetStruct> additionalUserActionSets) {
     this.additionalUserActionSets = additionalUserActionSets;
     return this;
   }
 
   public AdgroupsGetListStruct addAdditionalUserActionSetsItem(
-      UserActionSetStruct additionalUserActionSetsItem) {
+      AdditionalUserActionSetStruct additionalUserActionSetsItem) {
     if (this.additionalUserActionSets == null) {
-      this.additionalUserActionSets = new ArrayList<UserActionSetStruct>();
+      this.additionalUserActionSets = new ArrayList<AdditionalUserActionSetStruct>();
     }
     this.additionalUserActionSets.add(additionalUserActionSetsItem);
     return this;
@@ -811,11 +811,12 @@ public class AdgroupsGetListStruct {
    * @return additionalUserActionSets
    */
   @ApiModelProperty(value = "")
-  public List<UserActionSetStruct> getAdditionalUserActionSets() {
+  public List<AdditionalUserActionSetStruct> getAdditionalUserActionSets() {
     return additionalUserActionSets;
   }
 
-  public void setAdditionalUserActionSets(List<UserActionSetStruct> additionalUserActionSets) {
+  public void setAdditionalUserActionSets(
+      List<AdditionalUserActionSetStruct> additionalUserActionSets) {
     this.additionalUserActionSets = additionalUserActionSets;
   }
 

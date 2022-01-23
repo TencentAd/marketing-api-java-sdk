@@ -30,6 +30,9 @@ public class ProductItemsAddRequest {
   @SerializedName("feed_id")
   private Long feedId = null;
 
+  @SerializedName("request_source")
+  private String requestSource = null;
+
   @SerializedName("product_item_spec_list")
   private List<ProductItemSpec> productItemSpecList = null;
 
@@ -90,6 +93,25 @@ public class ProductItemsAddRequest {
     this.feedId = feedId;
   }
 
+  public ProductItemsAddRequest requestSource(String requestSource) {
+    this.requestSource = requestSource;
+    return this;
+  }
+
+  /**
+   * Get requestSource
+   *
+   * @return requestSource
+   */
+  @ApiModelProperty(value = "")
+  public String getRequestSource() {
+    return requestSource;
+  }
+
+  public void setRequestSource(String requestSource) {
+    this.requestSource = requestSource;
+  }
+
   public ProductItemsAddRequest productItemSpecList(List<ProductItemSpec> productItemSpecList) {
     this.productItemSpecList = productItemSpecList;
     return this;
@@ -130,12 +152,13 @@ public class ProductItemsAddRequest {
     return Objects.equals(this.accountId, productItemsAddRequest.accountId)
         && Objects.equals(this.productCatalogId, productItemsAddRequest.productCatalogId)
         && Objects.equals(this.feedId, productItemsAddRequest.feedId)
+        && Objects.equals(this.requestSource, productItemsAddRequest.requestSource)
         && Objects.equals(this.productItemSpecList, productItemsAddRequest.productItemSpecList);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(accountId, productCatalogId, feedId, productItemSpecList);
+    return Objects.hash(accountId, productCatalogId, feedId, requestSource, productItemSpecList);
   }
 
   @Override

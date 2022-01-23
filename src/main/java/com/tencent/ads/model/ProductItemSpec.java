@@ -473,6 +473,9 @@ public class ProductItemSpec {
   @SerializedName("max_quota_v2")
   private MaxQuotaEnum maxQuotaV2 = null;
 
+  @SerializedName("standard_catalog_product_hash_id")
+  private Long standardCatalogProductHashId = null;
+
   @SerializedName("custom_url")
   private String customUrl = null;
 
@@ -3428,6 +3431,25 @@ public class ProductItemSpec {
     this.maxQuotaV2 = maxQuotaV2;
   }
 
+  public ProductItemSpec standardCatalogProductHashId(Long standardCatalogProductHashId) {
+    this.standardCatalogProductHashId = standardCatalogProductHashId;
+    return this;
+  }
+
+  /**
+   * Get standardCatalogProductHashId
+   *
+   * @return standardCatalogProductHashId
+   */
+  @ApiModelProperty(value = "")
+  public Long getStandardCatalogProductHashId() {
+    return standardCatalogProductHashId;
+  }
+
+  public void setStandardCatalogProductHashId(Long standardCatalogProductHashId) {
+    this.standardCatalogProductHashId = standardCatalogProductHashId;
+  }
+
   public ProductItemSpec customUrl(String customUrl) {
     this.customUrl = customUrl;
     return this;
@@ -3644,6 +3666,8 @@ public class ProductItemSpec {
         && Objects.equals(this.productionPlace, productItemSpec.productionPlace)
         && Objects.equals(this.cartoonColor, productItemSpec.cartoonColor)
         && Objects.equals(this.maxQuotaV2, productItemSpec.maxQuotaV2)
+        && Objects.equals(
+            this.standardCatalogProductHashId, productItemSpec.standardCatalogProductHashId)
         && Objects.equals(this.customUrl, productItemSpec.customUrl)
         && Objects.equals(this.additionalCustomUrl, productItemSpec.additionalCustomUrl)
         && Objects.equals(this.productBarcode, productItemSpec.productBarcode);
@@ -3802,6 +3826,7 @@ public class ProductItemSpec {
         productionPlace,
         cartoonColor,
         maxQuotaV2,
+        standardCatalogProductHashId,
         customUrl,
         additionalCustomUrl,
         productBarcode);
