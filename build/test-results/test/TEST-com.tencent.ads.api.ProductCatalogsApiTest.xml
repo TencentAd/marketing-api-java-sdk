@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.tencent.ads.api.ProductCatalogsApiTest" tests="2" skipped="2" failures="0" errors="0" timestamp="2022-01-25T03:06:40" hostname="VM_147_58_centos" time="0.001">
+<testsuite name="com.tencent.ads.api.ProductCatalogsApiTest" tests="2" skipped="2" failures="0" errors="0" timestamp="2022-01-25T03:37:29" hostname="VM_147_58_centos" time="0.0">
   <properties/>
-  <testcase name="productCatalogsAddTest" classname="com.tencent.ads.api.ProductCatalogsApiTest" time="0.001">
+  <testcase name="productCatalogsAddTest" classname="com.tencent.ads.api.ProductCatalogsApiTest" time="0.0">
     <skipped/>
   </testcase>
   <testcase name="productCatalogsGetTest" classname="com.tencent.ads.api.ProductCatalogsApiTest" time="0.0">
