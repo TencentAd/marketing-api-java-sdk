@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.tencent.ads.api.LocalStoresSearchInfoApiTest" tests="1" skipped="1" failures="0" errors="0" timestamp="2022-01-25T03:37:29" hostname="VM_147_58_centos" time="0.0">
+<testsuite name="com.tencent.ads.api.LocalStoresSearchInfoApiTest" tests="1" skipped="1" failures="0" errors="0" timestamp="2022-01-25T06:42:02" hostname="VM_147_58_centos" time="0.0">
   <properties/>
   <testcase name="localStoresSearchInfoGetTest" classname="com.tencent.ads.api.LocalStoresSearchInfoApiTest" time="0.0">
     <skipped/>
