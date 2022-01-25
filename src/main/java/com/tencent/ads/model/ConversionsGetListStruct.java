@@ -78,6 +78,9 @@ public class ConversionsGetListStruct {
   @SerializedName("owner_id")
   private Long ownerId = null;
 
+  @SerializedName("deep_worth_advanced_goal")
+  private ConversionOptimizationGoal deepWorthAdvancedGoal = null;
+
   public ConversionsGetListStruct conversionId(Long conversionId) {
     this.conversionId = conversionId;
     return this;
@@ -441,6 +444,26 @@ public class ConversionsGetListStruct {
     this.ownerId = ownerId;
   }
 
+  public ConversionsGetListStruct deepWorthAdvancedGoal(
+      ConversionOptimizationGoal deepWorthAdvancedGoal) {
+    this.deepWorthAdvancedGoal = deepWorthAdvancedGoal;
+    return this;
+  }
+
+  /**
+   * Get deepWorthAdvancedGoal
+   *
+   * @return deepWorthAdvancedGoal
+   */
+  @ApiModelProperty(value = "")
+  public ConversionOptimizationGoal getDeepWorthAdvancedGoal() {
+    return deepWorthAdvancedGoal;
+  }
+
+  public void setDeepWorthAdvancedGoal(ConversionOptimizationGoal deepWorthAdvancedGoal) {
+    this.deepWorthAdvancedGoal = deepWorthAdvancedGoal;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -472,7 +495,9 @@ public class ConversionsGetListStruct {
             this.appAndroidChannelPackageId, conversionsGetListStruct.appAndroidChannelPackageId)
         && Objects.equals(this.promotedObjectId, conversionsGetListStruct.promotedObjectId)
         && Objects.equals(this.conversionScene, conversionsGetListStruct.conversionScene)
-        && Objects.equals(this.ownerId, conversionsGetListStruct.ownerId);
+        && Objects.equals(this.ownerId, conversionsGetListStruct.ownerId)
+        && Objects.equals(
+            this.deepWorthAdvancedGoal, conversionsGetListStruct.deepWorthAdvancedGoal);
   }
 
   @Override
@@ -496,7 +521,8 @@ public class ConversionsGetListStruct {
         appAndroidChannelPackageId,
         promotedObjectId,
         conversionScene,
-        ownerId);
+        ownerId,
+        deepWorthAdvancedGoal);
   }
 
   @Override

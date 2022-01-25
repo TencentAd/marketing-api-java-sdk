@@ -19,7 +19,7 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-/** 深度优化ROI目标，深度优化行为目标和深度优化ROI目标仅可填写其中一个 */
+/** 深度优化ROI目标，深度优化行为目标、深度优化ROI和深度强化ROI目标仅可填写其中一个 */
 @JsonAdapter(ConversionOptimizationGoal.Adapter.class)
 public enum ConversionOptimizationGoal {
   NONE("GOAL_NONE"),

@@ -61,6 +61,9 @@ public class ConversionsAddRequest {
   @SerializedName("deep_worth_optimization_goal")
   private ConversionOptimizationGoal deepWorthOptimizationGoal = null;
 
+  @SerializedName("deep_worth_advanced_goal")
+  private ConversionOptimizationGoal deepWorthAdvancedGoal = null;
+
   @SerializedName("user_action_set_id")
   private Long userActionSetId = null;
 
@@ -332,6 +335,26 @@ public class ConversionsAddRequest {
     this.deepWorthOptimizationGoal = deepWorthOptimizationGoal;
   }
 
+  public ConversionsAddRequest deepWorthAdvancedGoal(
+      ConversionOptimizationGoal deepWorthAdvancedGoal) {
+    this.deepWorthAdvancedGoal = deepWorthAdvancedGoal;
+    return this;
+  }
+
+  /**
+   * Get deepWorthAdvancedGoal
+   *
+   * @return deepWorthAdvancedGoal
+   */
+  @ApiModelProperty(value = "")
+  public ConversionOptimizationGoal getDeepWorthAdvancedGoal() {
+    return deepWorthAdvancedGoal;
+  }
+
+  public void setDeepWorthAdvancedGoal(ConversionOptimizationGoal deepWorthAdvancedGoal) {
+    this.deepWorthAdvancedGoal = deepWorthAdvancedGoal;
+  }
+
   public ConversionsAddRequest userActionSetId(Long userActionSetId) {
     this.userActionSetId = userActionSetId;
     return this;
@@ -377,6 +400,7 @@ public class ConversionsAddRequest {
             this.deepBehaviorOptimizationGoal, conversionsAddRequest.deepBehaviorOptimizationGoal)
         && Objects.equals(
             this.deepWorthOptimizationGoal, conversionsAddRequest.deepWorthOptimizationGoal)
+        && Objects.equals(this.deepWorthAdvancedGoal, conversionsAddRequest.deepWorthAdvancedGoal)
         && Objects.equals(this.userActionSetId, conversionsAddRequest.userActionSetId);
   }
 
@@ -397,6 +421,7 @@ public class ConversionsAddRequest {
         optimizationGoal,
         deepBehaviorOptimizationGoal,
         deepWorthOptimizationGoal,
+        deepWorthAdvancedGoal,
         userActionSetId);
   }
 

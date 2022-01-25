@@ -24,7 +24,9 @@ import java.io.IOException;
 public enum DeepConversionType {
   WORTH("DEEP_CONVERSION_WORTH"),
 
-  BEHAVIOR("DEEP_CONVERSION_BEHAVIOR");
+  BEHAVIOR("DEEP_CONVERSION_BEHAVIOR"),
+
+  WORTH_ADVANCED("DEEP_CONVERSION_WORTH_ADVANCED");
 
   private String value;
 
