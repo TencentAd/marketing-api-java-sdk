@@ -1101,6 +1101,51 @@ public class HourlyReportsGetListStruct {
   @SerializedName("consult_uv_count")
   private Long consultUvCount = null;
 
+  @SerializedName("video_follow_count")
+  private Long videoFollowCount = null;
+
+  @SerializedName("video_heart_count")
+  private Long videoHeartCount = null;
+
+  @SerializedName("video_comment_count")
+  private Long videoCommentCount = null;
+
+  @SerializedName("video_live_subscribe_count")
+  private Long videoLiveSubscribeCount = null;
+
+  @SerializedName("video_live_exp_count")
+  private Long videoLiveExpCount = null;
+
+  @SerializedName("video_live_heart_count")
+  private Long videoLiveHeartCount = null;
+
+  @SerializedName("video_live_comment_count")
+  private Long videoLiveCommentCount = null;
+
+  @SerializedName("video_live_share_count")
+  private Long videoLiveShareCount = null;
+
+  @SerializedName("video_live_cick_commodity_count")
+  private Long videoLiveCickCommodityCount = null;
+
+  @SerializedName("video_live_exp_user_count")
+  private Long videoLiveExpUserCount = null;
+
+  @SerializedName("video_live_heart_user_count")
+  private Long videoLiveHeartUserCount = null;
+
+  @SerializedName("video_live_comment_user_count")
+  private Long videoLiveCommentUserCount = null;
+
+  @SerializedName("video_live_share_user_count")
+  private Long videoLiveShareUserCount = null;
+
+  @SerializedName("video_live_click_commodity_user_count")
+  private Long videoLiveClickCommodityUserCount = null;
+
+  @SerializedName("video_live_commodity_bubble_exp_count")
+  private Long videoLiveCommodityBubbleExpCount = null;
+
   @SerializedName("request_conversions_count")
   private Long requestConversionsCount = null;
 
@@ -8514,6 +8559,293 @@ public class HourlyReportsGetListStruct {
     this.consultUvCount = consultUvCount;
   }
 
+  public HourlyReportsGetListStruct videoFollowCount(Long videoFollowCount) {
+    this.videoFollowCount = videoFollowCount;
+    return this;
+  }
+
+  /**
+   * Get videoFollowCount
+   *
+   * @return videoFollowCount
+   */
+  @ApiModelProperty(value = "")
+  public Long getVideoFollowCount() {
+    return videoFollowCount;
+  }
+
+  public void setVideoFollowCount(Long videoFollowCount) {
+    this.videoFollowCount = videoFollowCount;
+  }
+
+  public HourlyReportsGetListStruct videoHeartCount(Long videoHeartCount) {
+    this.videoHeartCount = videoHeartCount;
+    return this;
+  }
+
+  /**
+   * Get videoHeartCount
+   *
+   * @return videoHeartCount
+   */
+  @ApiModelProperty(value = "")
+  public Long getVideoHeartCount() {
+    return videoHeartCount;
+  }
+
+  public void setVideoHeartCount(Long videoHeartCount) {
+    this.videoHeartCount = videoHeartCount;
+  }
+
+  public HourlyReportsGetListStruct videoCommentCount(Long videoCommentCount) {
+    this.videoCommentCount = videoCommentCount;
+    return this;
+  }
+
+  /**
+   * Get videoCommentCount
+   *
+   * @return videoCommentCount
+   */
+  @ApiModelProperty(value = "")
+  public Long getVideoCommentCount() {
+    return videoCommentCount;
+  }
+
+  public void setVideoCommentCount(Long videoCommentCount) {
+    this.videoCommentCount = videoCommentCount;
+  }
+
+  public HourlyReportsGetListStruct videoLiveSubscribeCount(Long videoLiveSubscribeCount) {
+    this.videoLiveSubscribeCount = videoLiveSubscribeCount;
+    return this;
+  }
+
+  /**
+   * Get videoLiveSubscribeCount
+   *
+   * @return videoLiveSubscribeCount
+   */
+  @ApiModelProperty(value = "")
+  public Long getVideoLiveSubscribeCount() {
+    return videoLiveSubscribeCount;
+  }
+
+  public void setVideoLiveSubscribeCount(Long videoLiveSubscribeCount) {
+    this.videoLiveSubscribeCount = videoLiveSubscribeCount;
+  }
+
+  public HourlyReportsGetListStruct videoLiveExpCount(Long videoLiveExpCount) {
+    this.videoLiveExpCount = videoLiveExpCount;
+    return this;
+  }
+
+  /**
+   * Get videoLiveExpCount
+   *
+   * @return videoLiveExpCount
+   */
+  @ApiModelProperty(value = "")
+  public Long getVideoLiveExpCount() {
+    return videoLiveExpCount;
+  }
+
+  public void setVideoLiveExpCount(Long videoLiveExpCount) {
+    this.videoLiveExpCount = videoLiveExpCount;
+  }
+
+  public HourlyReportsGetListStruct videoLiveHeartCount(Long videoLiveHeartCount) {
+    this.videoLiveHeartCount = videoLiveHeartCount;
+    return this;
+  }
+
+  /**
+   * Get videoLiveHeartCount
+   *
+   * @return videoLiveHeartCount
+   */
+  @ApiModelProperty(value = "")
+  public Long getVideoLiveHeartCount() {
+    return videoLiveHeartCount;
+  }
+
+  public void setVideoLiveHeartCount(Long videoLiveHeartCount) {
+    this.videoLiveHeartCount = videoLiveHeartCount;
+  }
+
+  public HourlyReportsGetListStruct videoLiveCommentCount(Long videoLiveCommentCount) {
+    this.videoLiveCommentCount = videoLiveCommentCount;
+    return this;
+  }
+
+  /**
+   * Get videoLiveCommentCount
+   *
+   * @return videoLiveCommentCount
+   */
+  @ApiModelProperty(value = "")
+  public Long getVideoLiveCommentCount() {
+    return videoLiveCommentCount;
+  }
+
+  public void setVideoLiveCommentCount(Long videoLiveCommentCount) {
+    this.videoLiveCommentCount = videoLiveCommentCount;
+  }
+
+  public HourlyReportsGetListStruct videoLiveShareCount(Long videoLiveShareCount) {
+    this.videoLiveShareCount = videoLiveShareCount;
+    return this;
+  }
+
+  /**
+   * Get videoLiveShareCount
+   *
+   * @return videoLiveShareCount
+   */
+  @ApiModelProperty(value = "")
+  public Long getVideoLiveShareCount() {
+    return videoLiveShareCount;
+  }
+
+  public void setVideoLiveShareCount(Long videoLiveShareCount) {
+    this.videoLiveShareCount = videoLiveShareCount;
+  }
+
+  public HourlyReportsGetListStruct videoLiveCickCommodityCount(Long videoLiveCickCommodityCount) {
+    this.videoLiveCickCommodityCount = videoLiveCickCommodityCount;
+    return this;
+  }
+
+  /**
+   * Get videoLiveCickCommodityCount
+   *
+   * @return videoLiveCickCommodityCount
+   */
+  @ApiModelProperty(value = "")
+  public Long getVideoLiveCickCommodityCount() {
+    return videoLiveCickCommodityCount;
+  }
+
+  public void setVideoLiveCickCommodityCount(Long videoLiveCickCommodityCount) {
+    this.videoLiveCickCommodityCount = videoLiveCickCommodityCount;
+  }
+
+  public HourlyReportsGetListStruct videoLiveExpUserCount(Long videoLiveExpUserCount) {
+    this.videoLiveExpUserCount = videoLiveExpUserCount;
+    return this;
+  }
+
+  /**
+   * Get videoLiveExpUserCount
+   *
+   * @return videoLiveExpUserCount
+   */
+  @ApiModelProperty(value = "")
+  public Long getVideoLiveExpUserCount() {
+    return videoLiveExpUserCount;
+  }
+
+  public void setVideoLiveExpUserCount(Long videoLiveExpUserCount) {
+    this.videoLiveExpUserCount = videoLiveExpUserCount;
+  }
+
+  public HourlyReportsGetListStruct videoLiveHeartUserCount(Long videoLiveHeartUserCount) {
+    this.videoLiveHeartUserCount = videoLiveHeartUserCount;
+    return this;
+  }
+
+  /**
+   * Get videoLiveHeartUserCount
+   *
+   * @return videoLiveHeartUserCount
+   */
+  @ApiModelProperty(value = "")
+  public Long getVideoLiveHeartUserCount() {
+    return videoLiveHeartUserCount;
+  }
+
+  public void setVideoLiveHeartUserCount(Long videoLiveHeartUserCount) {
+    this.videoLiveHeartUserCount = videoLiveHeartUserCount;
+  }
+
+  public HourlyReportsGetListStruct videoLiveCommentUserCount(Long videoLiveCommentUserCount) {
+    this.videoLiveCommentUserCount = videoLiveCommentUserCount;
+    return this;
+  }
+
+  /**
+   * Get videoLiveCommentUserCount
+   *
+   * @return videoLiveCommentUserCount
+   */
+  @ApiModelProperty(value = "")
+  public Long getVideoLiveCommentUserCount() {
+    return videoLiveCommentUserCount;
+  }
+
+  public void setVideoLiveCommentUserCount(Long videoLiveCommentUserCount) {
+    this.videoLiveCommentUserCount = videoLiveCommentUserCount;
+  }
+
+  public HourlyReportsGetListStruct videoLiveShareUserCount(Long videoLiveShareUserCount) {
+    this.videoLiveShareUserCount = videoLiveShareUserCount;
+    return this;
+  }
+
+  /**
+   * Get videoLiveShareUserCount
+   *
+   * @return videoLiveShareUserCount
+   */
+  @ApiModelProperty(value = "")
+  public Long getVideoLiveShareUserCount() {
+    return videoLiveShareUserCount;
+  }
+
+  public void setVideoLiveShareUserCount(Long videoLiveShareUserCount) {
+    this.videoLiveShareUserCount = videoLiveShareUserCount;
+  }
+
+  public HourlyReportsGetListStruct videoLiveClickCommodityUserCount(
+      Long videoLiveClickCommodityUserCount) {
+    this.videoLiveClickCommodityUserCount = videoLiveClickCommodityUserCount;
+    return this;
+  }
+
+  /**
+   * Get videoLiveClickCommodityUserCount
+   *
+   * @return videoLiveClickCommodityUserCount
+   */
+  @ApiModelProperty(value = "")
+  public Long getVideoLiveClickCommodityUserCount() {
+    return videoLiveClickCommodityUserCount;
+  }
+
+  public void setVideoLiveClickCommodityUserCount(Long videoLiveClickCommodityUserCount) {
+    this.videoLiveClickCommodityUserCount = videoLiveClickCommodityUserCount;
+  }
+
+  public HourlyReportsGetListStruct videoLiveCommodityBubbleExpCount(
+      Long videoLiveCommodityBubbleExpCount) {
+    this.videoLiveCommodityBubbleExpCount = videoLiveCommodityBubbleExpCount;
+    return this;
+  }
+
+  /**
+   * Get videoLiveCommodityBubbleExpCount
+   *
+   * @return videoLiveCommodityBubbleExpCount
+   */
+  @ApiModelProperty(value = "")
+  public Long getVideoLiveCommodityBubbleExpCount() {
+    return videoLiveCommodityBubbleExpCount;
+  }
+
+  public void setVideoLiveCommodityBubbleExpCount(Long videoLiveCommodityBubbleExpCount) {
+    this.videoLiveCommodityBubbleExpCount = videoLiveCommodityBubbleExpCount;
+  }
+
   public HourlyReportsGetListStruct requestConversionsCount(Long requestConversionsCount) {
     this.requestConversionsCount = requestConversionsCount;
     return this;
@@ -12613,6 +12945,33 @@ public class HourlyReportsGetListStruct {
         && Objects.equals(
             this.miniGameCreateRoleRate, hourlyReportsGetListStruct.miniGameCreateRoleRate)
         && Objects.equals(this.consultUvCount, hourlyReportsGetListStruct.consultUvCount)
+        && Objects.equals(this.videoFollowCount, hourlyReportsGetListStruct.videoFollowCount)
+        && Objects.equals(this.videoHeartCount, hourlyReportsGetListStruct.videoHeartCount)
+        && Objects.equals(this.videoCommentCount, hourlyReportsGetListStruct.videoCommentCount)
+        && Objects.equals(
+            this.videoLiveSubscribeCount, hourlyReportsGetListStruct.videoLiveSubscribeCount)
+        && Objects.equals(this.videoLiveExpCount, hourlyReportsGetListStruct.videoLiveExpCount)
+        && Objects.equals(this.videoLiveHeartCount, hourlyReportsGetListStruct.videoLiveHeartCount)
+        && Objects.equals(
+            this.videoLiveCommentCount, hourlyReportsGetListStruct.videoLiveCommentCount)
+        && Objects.equals(this.videoLiveShareCount, hourlyReportsGetListStruct.videoLiveShareCount)
+        && Objects.equals(
+            this.videoLiveCickCommodityCount,
+            hourlyReportsGetListStruct.videoLiveCickCommodityCount)
+        && Objects.equals(
+            this.videoLiveExpUserCount, hourlyReportsGetListStruct.videoLiveExpUserCount)
+        && Objects.equals(
+            this.videoLiveHeartUserCount, hourlyReportsGetListStruct.videoLiveHeartUserCount)
+        && Objects.equals(
+            this.videoLiveCommentUserCount, hourlyReportsGetListStruct.videoLiveCommentUserCount)
+        && Objects.equals(
+            this.videoLiveShareUserCount, hourlyReportsGetListStruct.videoLiveShareUserCount)
+        && Objects.equals(
+            this.videoLiveClickCommodityUserCount,
+            hourlyReportsGetListStruct.videoLiveClickCommodityUserCount)
+        && Objects.equals(
+            this.videoLiveCommodityBubbleExpCount,
+            hourlyReportsGetListStruct.videoLiveCommodityBubbleExpCount)
         && Objects.equals(
             this.requestConversionsCount, hourlyReportsGetListStruct.requestConversionsCount)
         && Objects.equals(
@@ -13308,6 +13667,21 @@ public class HourlyReportsGetListStruct {
         miniGameBfPurchaseD1Arpu,
         miniGameCreateRoleRate,
         consultUvCount,
+        videoFollowCount,
+        videoHeartCount,
+        videoCommentCount,
+        videoLiveSubscribeCount,
+        videoLiveExpCount,
+        videoLiveHeartCount,
+        videoLiveCommentCount,
+        videoLiveShareCount,
+        videoLiveCickCommodityCount,
+        videoLiveExpUserCount,
+        videoLiveHeartUserCount,
+        videoLiveCommentUserCount,
+        videoLiveShareUserCount,
+        videoLiveClickCommodityUserCount,
+        videoLiveCommodityBubbleExpCount,
         requestConversionsCount,
         requestConversionsCost,
         incomeVal1,
