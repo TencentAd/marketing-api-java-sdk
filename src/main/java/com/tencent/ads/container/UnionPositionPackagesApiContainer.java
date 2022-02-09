@@ -26,6 +26,9 @@ import com.tencent.ads.model.UnionPositionPackagesDeleteRequest;
 import com.tencent.ads.model.UnionPositionPackagesDeleteResponse;
 import com.tencent.ads.model.UnionPositionPackagesGetResponse;
 import com.tencent.ads.model.UnionPositionPackagesGetResponseData;
+import com.tencent.ads.model.UnionPositionPackagesUpdateRequest;
+import com.tencent.ads.model.UnionPositionPackagesUpdateResponse;
+import com.tencent.ads.model.UnionPositionPackagesUpdateResponseData;
 import java.util.List;
 
 public class UnionPositionPackagesApiContainer extends ApiContainer {
@@ -84,6 +87,21 @@ public class UnionPositionPackagesApiContainer extends ApiContainer {
       throws ApiException, TencentAdsResponseException {
     UnionPositionPackagesGetResponse resp =
         api.unionPositionPackagesGet(accountId, filtering, page, pageSize, fields);
+    handleResponse(gson.toJson(resp));
+    return resp.getData();
+  }
+
+  /**
+   * 联盟流量包模块
+   *
+   * @param data (required)
+   * @return UnionPositionPackagesUpdateResponse
+   * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
+   *     response body
+   */
+  public UnionPositionPackagesUpdateResponseData unionPositionPackagesUpdate(
+      UnionPositionPackagesUpdateRequest data) throws ApiException, TencentAdsResponseException {
+    UnionPositionPackagesUpdateResponse resp = api.unionPositionPackagesUpdate(data);
     handleResponse(gson.toJson(resp));
     return resp.getData();
   }
