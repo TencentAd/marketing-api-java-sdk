@@ -156,6 +156,9 @@ public class AdgroupsAddRequest {
   @SerializedName("custom_adgroup_tag")
   private List<String> customAdgroupTag = null;
 
+  @SerializedName("smart_targeting")
+  private SmartTargeting smartTargeting = null;
+
   @SerializedName("account_id")
   private Long accountId = null;
 
@@ -1074,6 +1077,25 @@ public class AdgroupsAddRequest {
     this.customAdgroupTag = customAdgroupTag;
   }
 
+  public AdgroupsAddRequest smartTargeting(SmartTargeting smartTargeting) {
+    this.smartTargeting = smartTargeting;
+    return this;
+  }
+
+  /**
+   * Get smartTargeting
+   *
+   * @return smartTargeting
+   */
+  @ApiModelProperty(value = "")
+  public SmartTargeting getSmartTargeting() {
+    return smartTargeting;
+  }
+
+  public void setSmartTargeting(SmartTargeting smartTargeting) {
+    this.smartTargeting = smartTargeting;
+  }
+
   public AdgroupsAddRequest accountId(Long accountId) {
     this.accountId = accountId;
     return this;
@@ -1152,6 +1174,7 @@ public class AdgroupsAddRequest {
         && Objects.equals(this.smartBidType, adgroupsAddRequest.smartBidType)
         && Objects.equals(this.marketingScene, adgroupsAddRequest.marketingScene)
         && Objects.equals(this.customAdgroupTag, adgroupsAddRequest.customAdgroupTag)
+        && Objects.equals(this.smartTargeting, adgroupsAddRequest.smartTargeting)
         && Objects.equals(this.accountId, adgroupsAddRequest.accountId);
   }
 
@@ -1203,6 +1226,7 @@ public class AdgroupsAddRequest {
         smartBidType,
         marketingScene,
         customAdgroupTag,
+        smartTargeting,
         accountId);
   }
 

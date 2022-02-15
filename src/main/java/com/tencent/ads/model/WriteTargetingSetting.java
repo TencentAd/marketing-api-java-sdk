@@ -62,27 +62,6 @@ public class WriteTargetingSetting {
   @SerializedName("network_scene")
   private List<String> networkScene = null;
 
-  @SerializedName("dressing_index")
-  private List<String> dressingIndex = null;
-
-  @SerializedName("uv_index")
-  private List<String> uvIndex = null;
-
-  @SerializedName("makeup_index")
-  private List<String> makeupIndex = null;
-
-  @SerializedName("climate")
-  private List<String> climate = null;
-
-  @SerializedName("temperature")
-  private List<TemperatureStruct> temperature = null;
-
-  @SerializedName("air_quality_index")
-  private List<String> airQualityIndex = null;
-
-  @SerializedName("app_install_status")
-  private List<String> appInstallStatus = null;
-
   @SerializedName("consumption_status")
   private List<String> consumptionStatus = null;
 
@@ -448,195 +427,6 @@ public class WriteTargetingSetting {
     this.networkScene = networkScene;
   }
 
-  public WriteTargetingSetting dressingIndex(List<String> dressingIndex) {
-    this.dressingIndex = dressingIndex;
-    return this;
-  }
-
-  public WriteTargetingSetting addDressingIndexItem(String dressingIndexItem) {
-    if (this.dressingIndex == null) {
-      this.dressingIndex = new ArrayList<String>();
-    }
-    this.dressingIndex.add(dressingIndexItem);
-    return this;
-  }
-
-  /**
-   * Get dressingIndex
-   *
-   * @return dressingIndex
-   */
-  @ApiModelProperty(value = "")
-  public List<String> getDressingIndex() {
-    return dressingIndex;
-  }
-
-  public void setDressingIndex(List<String> dressingIndex) {
-    this.dressingIndex = dressingIndex;
-  }
-
-  public WriteTargetingSetting uvIndex(List<String> uvIndex) {
-    this.uvIndex = uvIndex;
-    return this;
-  }
-
-  public WriteTargetingSetting addUvIndexItem(String uvIndexItem) {
-    if (this.uvIndex == null) {
-      this.uvIndex = new ArrayList<String>();
-    }
-    this.uvIndex.add(uvIndexItem);
-    return this;
-  }
-
-  /**
-   * Get uvIndex
-   *
-   * @return uvIndex
-   */
-  @ApiModelProperty(value = "")
-  public List<String> getUvIndex() {
-    return uvIndex;
-  }
-
-  public void setUvIndex(List<String> uvIndex) {
-    this.uvIndex = uvIndex;
-  }
-
-  public WriteTargetingSetting makeupIndex(List<String> makeupIndex) {
-    this.makeupIndex = makeupIndex;
-    return this;
-  }
-
-  public WriteTargetingSetting addMakeupIndexItem(String makeupIndexItem) {
-    if (this.makeupIndex == null) {
-      this.makeupIndex = new ArrayList<String>();
-    }
-    this.makeupIndex.add(makeupIndexItem);
-    return this;
-  }
-
-  /**
-   * Get makeupIndex
-   *
-   * @return makeupIndex
-   */
-  @ApiModelProperty(value = "")
-  public List<String> getMakeupIndex() {
-    return makeupIndex;
-  }
-
-  public void setMakeupIndex(List<String> makeupIndex) {
-    this.makeupIndex = makeupIndex;
-  }
-
-  public WriteTargetingSetting climate(List<String> climate) {
-    this.climate = climate;
-    return this;
-  }
-
-  public WriteTargetingSetting addClimateItem(String climateItem) {
-    if (this.climate == null) {
-      this.climate = new ArrayList<String>();
-    }
-    this.climate.add(climateItem);
-    return this;
-  }
-
-  /**
-   * Get climate
-   *
-   * @return climate
-   */
-  @ApiModelProperty(value = "")
-  public List<String> getClimate() {
-    return climate;
-  }
-
-  public void setClimate(List<String> climate) {
-    this.climate = climate;
-  }
-
-  public WriteTargetingSetting temperature(List<TemperatureStruct> temperature) {
-    this.temperature = temperature;
-    return this;
-  }
-
-  public WriteTargetingSetting addTemperatureItem(TemperatureStruct temperatureItem) {
-    if (this.temperature == null) {
-      this.temperature = new ArrayList<TemperatureStruct>();
-    }
-    this.temperature.add(temperatureItem);
-    return this;
-  }
-
-  /**
-   * Get temperature
-   *
-   * @return temperature
-   */
-  @ApiModelProperty(value = "")
-  public List<TemperatureStruct> getTemperature() {
-    return temperature;
-  }
-
-  public void setTemperature(List<TemperatureStruct> temperature) {
-    this.temperature = temperature;
-  }
-
-  public WriteTargetingSetting airQualityIndex(List<String> airQualityIndex) {
-    this.airQualityIndex = airQualityIndex;
-    return this;
-  }
-
-  public WriteTargetingSetting addAirQualityIndexItem(String airQualityIndexItem) {
-    if (this.airQualityIndex == null) {
-      this.airQualityIndex = new ArrayList<String>();
-    }
-    this.airQualityIndex.add(airQualityIndexItem);
-    return this;
-  }
-
-  /**
-   * Get airQualityIndex
-   *
-   * @return airQualityIndex
-   */
-  @ApiModelProperty(value = "")
-  public List<String> getAirQualityIndex() {
-    return airQualityIndex;
-  }
-
-  public void setAirQualityIndex(List<String> airQualityIndex) {
-    this.airQualityIndex = airQualityIndex;
-  }
-
-  public WriteTargetingSetting appInstallStatus(List<String> appInstallStatus) {
-    this.appInstallStatus = appInstallStatus;
-    return this;
-  }
-
-  public WriteTargetingSetting addAppInstallStatusItem(String appInstallStatusItem) {
-    if (this.appInstallStatus == null) {
-      this.appInstallStatus = new ArrayList<String>();
-    }
-    this.appInstallStatus.add(appInstallStatusItem);
-    return this;
-  }
-
-  /**
-   * Get appInstallStatus
-   *
-   * @return appInstallStatus
-   */
-  @ApiModelProperty(value = "")
-  public List<String> getAppInstallStatus() {
-    return appInstallStatus;
-  }
-
-  public void setAppInstallStatus(List<String> appInstallStatus) {
-    this.appInstallStatus = appInstallStatus;
-  }
-
   public WriteTargetingSetting consumptionStatus(List<String> consumptionStatus) {
     this.consumptionStatus = consumptionStatus;
     return this;
@@ -909,13 +699,6 @@ public class WriteTargetingSetting {
         && Objects.equals(this.networkType, writeTargetingSetting.networkType)
         && Objects.equals(this.networkOperator, writeTargetingSetting.networkOperator)
         && Objects.equals(this.networkScene, writeTargetingSetting.networkScene)
-        && Objects.equals(this.dressingIndex, writeTargetingSetting.dressingIndex)
-        && Objects.equals(this.uvIndex, writeTargetingSetting.uvIndex)
-        && Objects.equals(this.makeupIndex, writeTargetingSetting.makeupIndex)
-        && Objects.equals(this.climate, writeTargetingSetting.climate)
-        && Objects.equals(this.temperature, writeTargetingSetting.temperature)
-        && Objects.equals(this.airQualityIndex, writeTargetingSetting.airQualityIndex)
-        && Objects.equals(this.appInstallStatus, writeTargetingSetting.appInstallStatus)
         && Objects.equals(this.consumptionStatus, writeTargetingSetting.consumptionStatus)
         && Objects.equals(this.gameConsumptionLevel, writeTargetingSetting.gameConsumptionLevel)
         && Objects.equals(
@@ -946,13 +729,6 @@ public class WriteTargetingSetting {
         networkType,
         networkOperator,
         networkScene,
-        dressingIndex,
-        uvIndex,
-        makeupIndex,
-        climate,
-        temperature,
-        airQualityIndex,
-        appInstallStatus,
         consumptionStatus,
         gameConsumptionLevel,
         residentialCommunityPrice,

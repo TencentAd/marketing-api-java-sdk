@@ -59,24 +59,6 @@ public class EstimationReadTargetingSetting {
   @SerializedName("network_scene")
   private List<String> networkScene = null;
 
-  @SerializedName("dressing_index")
-  private List<String> dressingIndex = null;
-
-  @SerializedName("uv_index")
-  private List<String> uvIndex = null;
-
-  @SerializedName("makeup_index")
-  private List<String> makeupIndex = null;
-
-  @SerializedName("climate")
-  private List<String> climate = null;
-
-  @SerializedName("temperature")
-  private List<TemperatureStruct> temperature = null;
-
-  @SerializedName("app_install_status")
-  private List<String> appInstallStatus = null;
-
   @SerializedName("mini_game_qq_status")
   private List<String> miniGameQqStatus = null;
 
@@ -439,168 +421,6 @@ public class EstimationReadTargetingSetting {
 
   public void setNetworkScene(List<String> networkScene) {
     this.networkScene = networkScene;
-  }
-
-  public EstimationReadTargetingSetting dressingIndex(List<String> dressingIndex) {
-    this.dressingIndex = dressingIndex;
-    return this;
-  }
-
-  public EstimationReadTargetingSetting addDressingIndexItem(String dressingIndexItem) {
-    if (this.dressingIndex == null) {
-      this.dressingIndex = new ArrayList<String>();
-    }
-    this.dressingIndex.add(dressingIndexItem);
-    return this;
-  }
-
-  /**
-   * Get dressingIndex
-   *
-   * @return dressingIndex
-   */
-  @ApiModelProperty(value = "")
-  public List<String> getDressingIndex() {
-    return dressingIndex;
-  }
-
-  public void setDressingIndex(List<String> dressingIndex) {
-    this.dressingIndex = dressingIndex;
-  }
-
-  public EstimationReadTargetingSetting uvIndex(List<String> uvIndex) {
-    this.uvIndex = uvIndex;
-    return this;
-  }
-
-  public EstimationReadTargetingSetting addUvIndexItem(String uvIndexItem) {
-    if (this.uvIndex == null) {
-      this.uvIndex = new ArrayList<String>();
-    }
-    this.uvIndex.add(uvIndexItem);
-    return this;
-  }
-
-  /**
-   * Get uvIndex
-   *
-   * @return uvIndex
-   */
-  @ApiModelProperty(value = "")
-  public List<String> getUvIndex() {
-    return uvIndex;
-  }
-
-  public void setUvIndex(List<String> uvIndex) {
-    this.uvIndex = uvIndex;
-  }
-
-  public EstimationReadTargetingSetting makeupIndex(List<String> makeupIndex) {
-    this.makeupIndex = makeupIndex;
-    return this;
-  }
-
-  public EstimationReadTargetingSetting addMakeupIndexItem(String makeupIndexItem) {
-    if (this.makeupIndex == null) {
-      this.makeupIndex = new ArrayList<String>();
-    }
-    this.makeupIndex.add(makeupIndexItem);
-    return this;
-  }
-
-  /**
-   * Get makeupIndex
-   *
-   * @return makeupIndex
-   */
-  @ApiModelProperty(value = "")
-  public List<String> getMakeupIndex() {
-    return makeupIndex;
-  }
-
-  public void setMakeupIndex(List<String> makeupIndex) {
-    this.makeupIndex = makeupIndex;
-  }
-
-  public EstimationReadTargetingSetting climate(List<String> climate) {
-    this.climate = climate;
-    return this;
-  }
-
-  public EstimationReadTargetingSetting addClimateItem(String climateItem) {
-    if (this.climate == null) {
-      this.climate = new ArrayList<String>();
-    }
-    this.climate.add(climateItem);
-    return this;
-  }
-
-  /**
-   * Get climate
-   *
-   * @return climate
-   */
-  @ApiModelProperty(value = "")
-  public List<String> getClimate() {
-    return climate;
-  }
-
-  public void setClimate(List<String> climate) {
-    this.climate = climate;
-  }
-
-  public EstimationReadTargetingSetting temperature(List<TemperatureStruct> temperature) {
-    this.temperature = temperature;
-    return this;
-  }
-
-  public EstimationReadTargetingSetting addTemperatureItem(TemperatureStruct temperatureItem) {
-    if (this.temperature == null) {
-      this.temperature = new ArrayList<TemperatureStruct>();
-    }
-    this.temperature.add(temperatureItem);
-    return this;
-  }
-
-  /**
-   * Get temperature
-   *
-   * @return temperature
-   */
-  @ApiModelProperty(value = "")
-  public List<TemperatureStruct> getTemperature() {
-    return temperature;
-  }
-
-  public void setTemperature(List<TemperatureStruct> temperature) {
-    this.temperature = temperature;
-  }
-
-  public EstimationReadTargetingSetting appInstallStatus(List<String> appInstallStatus) {
-    this.appInstallStatus = appInstallStatus;
-    return this;
-  }
-
-  public EstimationReadTargetingSetting addAppInstallStatusItem(String appInstallStatusItem) {
-    if (this.appInstallStatus == null) {
-      this.appInstallStatus = new ArrayList<String>();
-    }
-    this.appInstallStatus.add(appInstallStatusItem);
-    return this;
-  }
-
-  /**
-   * Get appInstallStatus
-   *
-   * @return appInstallStatus
-   */
-  @ApiModelProperty(value = "")
-  public List<String> getAppInstallStatus() {
-    return appInstallStatus;
-  }
-
-  public void setAppInstallStatus(List<String> appInstallStatus) {
-    this.appInstallStatus = appInstallStatus;
   }
 
   public EstimationReadTargetingSetting miniGameQqStatus(List<String> miniGameQqStatus) {
@@ -1052,12 +872,6 @@ public class EstimationReadTargetingSetting {
         && Objects.equals(this.networkType, estimationReadTargetingSetting.networkType)
         && Objects.equals(this.networkOperator, estimationReadTargetingSetting.networkOperator)
         && Objects.equals(this.networkScene, estimationReadTargetingSetting.networkScene)
-        && Objects.equals(this.dressingIndex, estimationReadTargetingSetting.dressingIndex)
-        && Objects.equals(this.uvIndex, estimationReadTargetingSetting.uvIndex)
-        && Objects.equals(this.makeupIndex, estimationReadTargetingSetting.makeupIndex)
-        && Objects.equals(this.climate, estimationReadTargetingSetting.climate)
-        && Objects.equals(this.temperature, estimationReadTargetingSetting.temperature)
-        && Objects.equals(this.appInstallStatus, estimationReadTargetingSetting.appInstallStatus)
         && Objects.equals(this.miniGameQqStatus, estimationReadTargetingSetting.miniGameQqStatus)
         && Objects.equals(this.consumptionStatus, estimationReadTargetingSetting.consumptionStatus)
         && Objects.equals(
@@ -1103,12 +917,6 @@ public class EstimationReadTargetingSetting {
         networkType,
         networkOperator,
         networkScene,
-        dressingIndex,
-        uvIndex,
-        makeupIndex,
-        climate,
-        temperature,
-        appInstallStatus,
         miniGameQqStatus,
         consumptionStatus,
         gameConsumptionLevel,

@@ -203,6 +203,9 @@ public class AdgroupsGetListStruct {
   @SerializedName("custom_adgroup_tag")
   private List<String> customAdgroupTag = null;
 
+  @SerializedName("smart_targeting")
+  private SmartTargeting smartTargeting = null;
+
   public AdgroupsGetListStruct campaignId(Long campaignId) {
     this.campaignId = campaignId;
     return this;
@@ -1405,6 +1408,25 @@ public class AdgroupsGetListStruct {
     this.customAdgroupTag = customAdgroupTag;
   }
 
+  public AdgroupsGetListStruct smartTargeting(SmartTargeting smartTargeting) {
+    this.smartTargeting = smartTargeting;
+    return this;
+  }
+
+  /**
+   * Get smartTargeting
+   *
+   * @return smartTargeting
+   */
+  @ApiModelProperty(value = "")
+  public SmartTargeting getSmartTargeting() {
+    return smartTargeting;
+  }
+
+  public void setSmartTargeting(SmartTargeting smartTargeting) {
+    this.smartTargeting = smartTargeting;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -1483,7 +1505,8 @@ public class AdgroupsGetListStruct {
         && Objects.equals(this.smartBidType, adgroupsGetListStruct.smartBidType)
         && Objects.equals(this.smartCostCap, adgroupsGetListStruct.smartCostCap)
         && Objects.equals(this.marketingScene, adgroupsGetListStruct.marketingScene)
-        && Objects.equals(this.customAdgroupTag, adgroupsGetListStruct.customAdgroupTag);
+        && Objects.equals(this.customAdgroupTag, adgroupsGetListStruct.customAdgroupTag)
+        && Objects.equals(this.smartTargeting, adgroupsGetListStruct.smartTargeting);
   }
 
   @Override
@@ -1548,7 +1571,8 @@ public class AdgroupsGetListStruct {
         smartBidType,
         smartCostCap,
         marketingScene,
-        customAdgroupTag);
+        customAdgroupTag,
+        smartTargeting);
   }
 
   @Override
