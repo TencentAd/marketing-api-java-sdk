@@ -13,12 +13,45 @@
 package com.tencent.ads.model;
 
 import com.google.gson.Gson;
+import com.google.gson.annotations.SerializedName;
 import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Objects;
 
 /** 小说章节内容 */
 @ApiModel(description = "小说章节内容")
 public class BookJson {
+  @SerializedName("chapters")
+  private List<Chapter> chapters = null;
+
+  public BookJson chapters(List<Chapter> chapters) {
+    this.chapters = chapters;
+    return this;
+  }
+
+  public BookJson addChaptersItem(Chapter chaptersItem) {
+    if (this.chapters == null) {
+      this.chapters = new ArrayList<Chapter>();
+    }
+    this.chapters.add(chaptersItem);
+    return this;
+  }
+
+  /**
+   * Get chapters
+   *
+   * @return chapters
+   */
+  @ApiModelProperty(value = "")
+  public List<Chapter> getChapters() {
+    return chapters;
+  }
+
+  public void setChapters(List<Chapter> chapters) {
+    this.chapters = chapters;
+  }
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -28,12 +61,13 @@ public class BookJson {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    return true;
+    BookJson bookJson = (BookJson) o;
+    return Objects.equals(this.chapters, bookJson.chapters);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash();
+    return Objects.hash(chapters);
   }
 
   @Override
