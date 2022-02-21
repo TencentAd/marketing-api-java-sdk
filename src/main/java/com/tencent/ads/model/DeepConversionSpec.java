@@ -30,6 +30,9 @@ public class DeepConversionSpec {
   @SerializedName("deep_conversion_worth_spec")
   private DeepConversionWorthSpec deepConversionWorthSpec = null;
 
+  @SerializedName("deep_conversion_worth_advanced_spec")
+  private DeepConversionWorthAdvancedSpec deepConversionWorthAdvancedSpec = null;
+
   public DeepConversionSpec deepConversionType(DeepConversionType deepConversionType) {
     this.deepConversionType = deepConversionType;
     return this;
@@ -89,6 +92,27 @@ public class DeepConversionSpec {
     this.deepConversionWorthSpec = deepConversionWorthSpec;
   }
 
+  public DeepConversionSpec deepConversionWorthAdvancedSpec(
+      DeepConversionWorthAdvancedSpec deepConversionWorthAdvancedSpec) {
+    this.deepConversionWorthAdvancedSpec = deepConversionWorthAdvancedSpec;
+    return this;
+  }
+
+  /**
+   * Get deepConversionWorthAdvancedSpec
+   *
+   * @return deepConversionWorthAdvancedSpec
+   */
+  @ApiModelProperty(value = "")
+  public DeepConversionWorthAdvancedSpec getDeepConversionWorthAdvancedSpec() {
+    return deepConversionWorthAdvancedSpec;
+  }
+
+  public void setDeepConversionWorthAdvancedSpec(
+      DeepConversionWorthAdvancedSpec deepConversionWorthAdvancedSpec) {
+    this.deepConversionWorthAdvancedSpec = deepConversionWorthAdvancedSpec;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -101,12 +125,19 @@ public class DeepConversionSpec {
     return Objects.equals(this.deepConversionType, deepConversionSpec.deepConversionType)
         && Objects.equals(
             this.deepConversionBehaviorSpec, deepConversionSpec.deepConversionBehaviorSpec)
-        && Objects.equals(this.deepConversionWorthSpec, deepConversionSpec.deepConversionWorthSpec);
+        && Objects.equals(this.deepConversionWorthSpec, deepConversionSpec.deepConversionWorthSpec)
+        && Objects.equals(
+            this.deepConversionWorthAdvancedSpec,
+            deepConversionSpec.deepConversionWorthAdvancedSpec);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(deepConversionType, deepConversionBehaviorSpec, deepConversionWorthSpec);
+    return Objects.hash(
+        deepConversionType,
+        deepConversionBehaviorSpec,
+        deepConversionWorthSpec,
+        deepConversionWorthAdvancedSpec);
   }
 
   @Override

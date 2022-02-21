@@ -102,6 +102,9 @@ public class AdgroupsUpdateRequest {
   @SerializedName("deep_conversion_worth_rate")
   private Double deepConversionWorthRate = null;
 
+  @SerializedName("deep_conversion_worth_advanced_rate")
+  private Double deepConversionWorthAdvancedRate = null;
+
   @SerializedName("bid_mode")
   private BidMode bidMode = null;
 
@@ -683,6 +686,26 @@ public class AdgroupsUpdateRequest {
     this.deepConversionWorthRate = deepConversionWorthRate;
   }
 
+  public AdgroupsUpdateRequest deepConversionWorthAdvancedRate(
+      Double deepConversionWorthAdvancedRate) {
+    this.deepConversionWorthAdvancedRate = deepConversionWorthAdvancedRate;
+    return this;
+  }
+
+  /**
+   * Get deepConversionWorthAdvancedRate
+   *
+   * @return deepConversionWorthAdvancedRate
+   */
+  @ApiModelProperty(value = "")
+  public Double getDeepConversionWorthAdvancedRate() {
+    return deepConversionWorthAdvancedRate;
+  }
+
+  public void setDeepConversionWorthAdvancedRate(Double deepConversionWorthAdvancedRate) {
+    this.deepConversionWorthAdvancedRate = deepConversionWorthAdvancedRate;
+  }
+
   public AdgroupsUpdateRequest bidMode(BidMode bidMode) {
     this.bidMode = bidMode;
     return this;
@@ -950,6 +973,9 @@ public class AdgroupsUpdateRequest {
             this.deepConversionBehaviorBid, adgroupsUpdateRequest.deepConversionBehaviorBid)
         && Objects.equals(
             this.deepConversionWorthRate, adgroupsUpdateRequest.deepConversionWorthRate)
+        && Objects.equals(
+            this.deepConversionWorthAdvancedRate,
+            adgroupsUpdateRequest.deepConversionWorthAdvancedRate)
         && Objects.equals(this.bidMode, adgroupsUpdateRequest.bidMode)
         && Objects.equals(this.bidAdjustment, adgroupsUpdateRequest.bidAdjustment)
         && Objects.equals(this.autoAcquisitionEnabled, adgroupsUpdateRequest.autoAcquisitionEnabled)
@@ -995,6 +1021,7 @@ public class AdgroupsUpdateRequest {
         poiList,
         deepConversionBehaviorBid,
         deepConversionWorthRate,
+        deepConversionWorthAdvancedRate,
         bidMode,
         bidAdjustment,
         autoAcquisitionEnabled,

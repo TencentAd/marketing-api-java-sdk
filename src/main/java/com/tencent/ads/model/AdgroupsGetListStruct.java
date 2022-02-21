@@ -164,6 +164,9 @@ public class AdgroupsGetListStruct {
   @SerializedName("deep_conversion_worth_rate")
   private Double deepConversionWorthRate = null;
 
+  @SerializedName("deep_conversion_worth_advanced_rate")
+  private Double deepConversionWorthAdvancedRate = null;
+
   @SerializedName("android_channel_package_audit_message")
   private String androidChannelPackageAuditMessage = null;
 
@@ -1152,6 +1155,26 @@ public class AdgroupsGetListStruct {
     this.deepConversionWorthRate = deepConversionWorthRate;
   }
 
+  public AdgroupsGetListStruct deepConversionWorthAdvancedRate(
+      Double deepConversionWorthAdvancedRate) {
+    this.deepConversionWorthAdvancedRate = deepConversionWorthAdvancedRate;
+    return this;
+  }
+
+  /**
+   * Get deepConversionWorthAdvancedRate
+   *
+   * @return deepConversionWorthAdvancedRate
+   */
+  @ApiModelProperty(value = "")
+  public Double getDeepConversionWorthAdvancedRate() {
+    return deepConversionWorthAdvancedRate;
+  }
+
+  public void setDeepConversionWorthAdvancedRate(Double deepConversionWorthAdvancedRate) {
+    this.deepConversionWorthAdvancedRate = deepConversionWorthAdvancedRate;
+  }
+
   public AdgroupsGetListStruct androidChannelPackageAuditMessage(
       String androidChannelPackageAuditMessage) {
     this.androidChannelPackageAuditMessage = androidChannelPackageAuditMessage;
@@ -1491,6 +1514,9 @@ public class AdgroupsGetListStruct {
         && Objects.equals(
             this.deepConversionWorthRate, adgroupsGetListStruct.deepConversionWorthRate)
         && Objects.equals(
+            this.deepConversionWorthAdvancedRate,
+            adgroupsGetListStruct.deepConversionWorthAdvancedRate)
+        && Objects.equals(
             this.androidChannelPackageAuditMessage,
             adgroupsGetListStruct.androidChannelPackageAuditMessage)
         && Objects.equals(this.systemStatus, adgroupsGetListStruct.systemStatus)
@@ -1559,6 +1585,7 @@ public class AdgroupsGetListStruct {
         conversionId,
         deepConversionBehaviorBid,
         deepConversionWorthRate,
+        deepConversionWorthAdvancedRate,
         androidChannelPackageAuditMessage,
         systemStatus,
         bidMode,

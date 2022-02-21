@@ -129,6 +129,9 @@ public class AdgroupsAddRequest {
   @SerializedName("deep_conversion_worth_rate")
   private Double deepConversionWorthRate = null;
 
+  @SerializedName("deep_conversion_worth_advanced_rate")
+  private Double deepConversionWorthAdvancedRate = null;
+
   @SerializedName("bid_mode")
   private BidMode bidMode = null;
 
@@ -898,6 +901,26 @@ public class AdgroupsAddRequest {
     this.deepConversionWorthRate = deepConversionWorthRate;
   }
 
+  public AdgroupsAddRequest deepConversionWorthAdvancedRate(
+      Double deepConversionWorthAdvancedRate) {
+    this.deepConversionWorthAdvancedRate = deepConversionWorthAdvancedRate;
+    return this;
+  }
+
+  /**
+   * Get deepConversionWorthAdvancedRate
+   *
+   * @return deepConversionWorthAdvancedRate
+   */
+  @ApiModelProperty(value = "")
+  public Double getDeepConversionWorthAdvancedRate() {
+    return deepConversionWorthAdvancedRate;
+  }
+
+  public void setDeepConversionWorthAdvancedRate(Double deepConversionWorthAdvancedRate) {
+    this.deepConversionWorthAdvancedRate = deepConversionWorthAdvancedRate;
+  }
+
   public AdgroupsAddRequest bidMode(BidMode bidMode) {
     this.bidMode = bidMode;
     return this;
@@ -1164,6 +1187,9 @@ public class AdgroupsAddRequest {
         && Objects.equals(
             this.deepConversionBehaviorBid, adgroupsAddRequest.deepConversionBehaviorBid)
         && Objects.equals(this.deepConversionWorthRate, adgroupsAddRequest.deepConversionWorthRate)
+        && Objects.equals(
+            this.deepConversionWorthAdvancedRate,
+            adgroupsAddRequest.deepConversionWorthAdvancedRate)
         && Objects.equals(this.bidMode, adgroupsAddRequest.bidMode)
         && Objects.equals(this.bidAdjustment, adgroupsAddRequest.bidAdjustment)
         && Objects.equals(this.autoAcquisitionEnabled, adgroupsAddRequest.autoAcquisitionEnabled)
@@ -1217,6 +1243,7 @@ public class AdgroupsAddRequest {
         conversionId,
         deepConversionBehaviorBid,
         deepConversionWorthRate,
+        deepConversionWorthAdvancedRate,
         bidMode,
         bidAdjustment,
         autoAcquisitionEnabled,
