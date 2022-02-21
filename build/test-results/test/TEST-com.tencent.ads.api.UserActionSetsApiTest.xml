@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.tencent.ads.api.UserActionSetsApiTest" tests="2" skipped="2" failures="0" errors="0" timestamp="2022-02-21T06:49:38" hostname="VM_147_58_centos" time="0.0">
+  <properties/>
+  <testcase name="userActionSetsAddTest" classname="com.tencent.ads.api.UserActionSetsApiTest" time="0.0">
+    <skipped/>
+  </testcase>
+  <testcase name="userActionSetsGetTest" classname="com.tencent.ads.api.UserActionSetsApiTest" time="0.0">
+    <skipped/>
+  </testcase>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
