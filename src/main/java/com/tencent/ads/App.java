@@ -24,7 +24,9 @@ public class App {
   @Inject AdParamApiContainer adParamApiContainer;
   @Inject AdcreativePreviewsApiContainer adcreativePreviewsApiContainer;
   @Inject AdcreativePreviewsQrcodeApiContainer adcreativePreviewsQrcodeApiContainer;
+  @Inject AdcreativeTemplateApiContainer adcreativeTemplateApiContainer;
   @Inject AdcreativeTemplateDetailApiContainer adcreativeTemplateDetailApiContainer;
+  @Inject AdcreativeTemplateListApiContainer adcreativeTemplateListApiContainer;
   @Inject AdcreativeTemplatePreviewApiContainer adcreativeTemplatePreviewApiContainer;
   @Inject AdcreativeTemplatePreviewsApiContainer adcreativeTemplatePreviewsApiContainer;
   @Inject AdcreativeTemplatesApiContainer adcreativeTemplatesApiContainer;
@@ -197,8 +199,16 @@ public class App {
     return adcreativePreviewsQrcodeApiContainer;
   }
 
+  public AdcreativeTemplateApiContainer adcreativeTemplate() {
+    return adcreativeTemplateApiContainer;
+  }
+
   public AdcreativeTemplateDetailApiContainer adcreativeTemplateDetail() {
     return adcreativeTemplateDetailApiContainer;
+  }
+
+  public AdcreativeTemplateListApiContainer adcreativeTemplateList() {
+    return adcreativeTemplateListApiContainer;
   }
 
   public AdcreativeTemplatePreviewApiContainer adcreativeTemplatePreview() {

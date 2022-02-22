@@ -59,6 +59,9 @@ public class LocalStoreBizInfoStructRsp {
   @SerializedName("peak_period")
   private List<PeakPeriod> peakPeriod = null;
 
+  @SerializedName("opening_status")
+  private LocalStoreOpeningStatus openingStatus = null;
+
   public LocalStoreBizInfoStructRsp poiId(String poiId) {
     this.poiId = poiId;
     return this;
@@ -295,6 +298,25 @@ public class LocalStoreBizInfoStructRsp {
     this.peakPeriod = peakPeriod;
   }
 
+  public LocalStoreBizInfoStructRsp openingStatus(LocalStoreOpeningStatus openingStatus) {
+    this.openingStatus = openingStatus;
+    return this;
+  }
+
+  /**
+   * Get openingStatus
+   *
+   * @return openingStatus
+   */
+  @ApiModelProperty(value = "")
+  public LocalStoreOpeningStatus getOpeningStatus() {
+    return openingStatus;
+  }
+
+  public void setOpeningStatus(LocalStoreOpeningStatus openingStatus) {
+    this.openingStatus = openingStatus;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -315,7 +337,8 @@ public class LocalStoreBizInfoStructRsp {
         && Objects.equals(this.secondCategoryName, localStoreBizInfoStructRsp.secondCategoryName)
         && Objects.equals(this.thirdCategoryName, localStoreBizInfoStructRsp.thirdCategoryName)
         && Objects.equals(this.fourthCategoryName, localStoreBizInfoStructRsp.fourthCategoryName)
-        && Objects.equals(this.peakPeriod, localStoreBizInfoStructRsp.peakPeriod);
+        && Objects.equals(this.peakPeriod, localStoreBizInfoStructRsp.peakPeriod)
+        && Objects.equals(this.openingStatus, localStoreBizInfoStructRsp.openingStatus);
   }
 
   @Override
@@ -332,7 +355,8 @@ public class LocalStoreBizInfoStructRsp {
         secondCategoryName,
         thirdCategoryName,
         fourthCategoryName,
-        peakPeriod);
+        peakPeriod,
+        openingStatus);
   }
 
   @Override

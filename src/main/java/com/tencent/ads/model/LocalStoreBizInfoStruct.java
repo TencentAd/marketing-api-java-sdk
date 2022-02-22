@@ -59,6 +59,12 @@ public class LocalStoreBizInfoStruct {
   @SerializedName("peak_period")
   private List<PeakPeriod> peakPeriod = null;
 
+  @SerializedName("opening_status")
+  private LocalStoreOpeningStatus openingStatus = null;
+
+  @SerializedName("star")
+  private Double star = null;
+
   public LocalStoreBizInfoStruct poiId(String poiId) {
     this.poiId = poiId;
     return this;
@@ -295,6 +301,44 @@ public class LocalStoreBizInfoStruct {
     this.peakPeriod = peakPeriod;
   }
 
+  public LocalStoreBizInfoStruct openingStatus(LocalStoreOpeningStatus openingStatus) {
+    this.openingStatus = openingStatus;
+    return this;
+  }
+
+  /**
+   * Get openingStatus
+   *
+   * @return openingStatus
+   */
+  @ApiModelProperty(value = "")
+  public LocalStoreOpeningStatus getOpeningStatus() {
+    return openingStatus;
+  }
+
+  public void setOpeningStatus(LocalStoreOpeningStatus openingStatus) {
+    this.openingStatus = openingStatus;
+  }
+
+  public LocalStoreBizInfoStruct star(Double star) {
+    this.star = star;
+    return this;
+  }
+
+  /**
+   * Get star
+   *
+   * @return star
+   */
+  @ApiModelProperty(value = "")
+  public Double getStar() {
+    return star;
+  }
+
+  public void setStar(Double star) {
+    this.star = star;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -315,7 +359,9 @@ public class LocalStoreBizInfoStruct {
         && Objects.equals(this.secondCategoryName, localStoreBizInfoStruct.secondCategoryName)
         && Objects.equals(this.thirdCategoryName, localStoreBizInfoStruct.thirdCategoryName)
         && Objects.equals(this.fourthCategoryName, localStoreBizInfoStruct.fourthCategoryName)
-        && Objects.equals(this.peakPeriod, localStoreBizInfoStruct.peakPeriod);
+        && Objects.equals(this.peakPeriod, localStoreBizInfoStruct.peakPeriod)
+        && Objects.equals(this.openingStatus, localStoreBizInfoStruct.openingStatus)
+        && Objects.equals(this.star, localStoreBizInfoStruct.star);
   }
 
   @Override
@@ -332,7 +378,9 @@ public class LocalStoreBizInfoStruct {
         secondCategoryName,
         thirdCategoryName,
         fourthCategoryName,
-        peakPeriod);
+        peakPeriod,
+        openingStatus,
+        star);
   }
 
   @Override
