@@ -96,6 +96,7 @@ public class App {
   @Inject LeadCluesApiContainer leadCluesApiContainer;
   @Inject LeadsFormApiContainer leadsFormApiContainer;
   @Inject LeadsFormListApiContainer leadsFormListApiContainer;
+  @Inject LeadsInvalidPayApiContainer leadsInvalidPayApiContainer;
   @Inject LocalApiContainer localApiContainer;
   @Inject LocalEndadsmanuallyApiContainer localEndadsmanuallyApiContainer;
   @Inject LocalEstimatedamountApiContainer localEstimatedamountApiContainer;
@@ -485,6 +486,10 @@ public class App {
 
   public LeadsFormListApiContainer leadsFormList() {
     return leadsFormListApiContainer;
+  }
+
+  public LeadsInvalidPayApiContainer leadsInvalidPay() {
+    return leadsInvalidPayApiContainer;
   }
 
   public LocalApiContainer local() {
