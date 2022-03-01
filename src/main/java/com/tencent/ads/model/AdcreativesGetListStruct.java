@@ -161,6 +161,9 @@ public class AdcreativesGetListStruct {
   @SerializedName("industry_label")
   private String industryLabel = null;
 
+  @SerializedName("union_market_spec")
+  private UnionMarketSpec unionMarketSpec = null;
+
   @SerializedName("creative_template_category")
   private String creativeTemplateCategory = null;
 
@@ -1065,6 +1068,25 @@ public class AdcreativesGetListStruct {
     this.industryLabel = industryLabel;
   }
 
+  public AdcreativesGetListStruct unionMarketSpec(UnionMarketSpec unionMarketSpec) {
+    this.unionMarketSpec = unionMarketSpec;
+    return this;
+  }
+
+  /**
+   * Get unionMarketSpec
+   *
+   * @return unionMarketSpec
+   */
+  @ApiModelProperty(value = "")
+  public UnionMarketSpec getUnionMarketSpec() {
+    return unionMarketSpec;
+  }
+
+  public void setUnionMarketSpec(UnionMarketSpec unionMarketSpec) {
+    this.unionMarketSpec = unionMarketSpec;
+  }
+
   public AdcreativesGetListStruct creativeTemplateCategory(String creativeTemplateCategory) {
     this.creativeTemplateCategory = creativeTemplateCategory;
     return this;
@@ -1187,6 +1209,7 @@ public class AdcreativesGetListStruct {
         && Objects.equals(
             this.creativeTemplateVersionType, adcreativesGetListStruct.creativeTemplateVersionType)
         && Objects.equals(this.industryLabel, adcreativesGetListStruct.industryLabel)
+        && Objects.equals(this.unionMarketSpec, adcreativesGetListStruct.unionMarketSpec)
         && Objects.equals(
             this.creativeTemplateCategory, adcreativesGetListStruct.creativeTemplateCategory)
         && Objects.equals(this.adcreativeTemplateId, adcreativesGetListStruct.adcreativeTemplateId)
@@ -1242,6 +1265,7 @@ public class AdcreativesGetListStruct {
         enableBreakthroughSiteset,
         creativeTemplateVersionType,
         industryLabel,
+        unionMarketSpec,
         creativeTemplateCategory,
         adcreativeTemplateId,
         adcreativeElements);

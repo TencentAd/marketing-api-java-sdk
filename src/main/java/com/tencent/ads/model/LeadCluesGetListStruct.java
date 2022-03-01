@@ -60,6 +60,18 @@ public class LeadCluesGetListStruct {
   @SerializedName("creative_name")
   private String creativeName = null;
 
+  @SerializedName("ad_id")
+  private Long adId = null;
+
+  @SerializedName("ad_name")
+  private String adName = null;
+
+  @SerializedName("adcreative_id")
+  private Long adcreativeId = null;
+
+  @SerializedName("adcreative_name")
+  private String adcreativeName = null;
+
   @SerializedName("component_id")
   private String componentId = null;
 
@@ -410,6 +422,82 @@ public class LeadCluesGetListStruct {
 
   public void setCreativeName(String creativeName) {
     this.creativeName = creativeName;
+  }
+
+  public LeadCluesGetListStruct adId(Long adId) {
+    this.adId = adId;
+    return this;
+  }
+
+  /**
+   * Get adId
+   *
+   * @return adId
+   */
+  @ApiModelProperty(value = "")
+  public Long getAdId() {
+    return adId;
+  }
+
+  public void setAdId(Long adId) {
+    this.adId = adId;
+  }
+
+  public LeadCluesGetListStruct adName(String adName) {
+    this.adName = adName;
+    return this;
+  }
+
+  /**
+   * Get adName
+   *
+   * @return adName
+   */
+  @ApiModelProperty(value = "")
+  public String getAdName() {
+    return adName;
+  }
+
+  public void setAdName(String adName) {
+    this.adName = adName;
+  }
+
+  public LeadCluesGetListStruct adcreativeId(Long adcreativeId) {
+    this.adcreativeId = adcreativeId;
+    return this;
+  }
+
+  /**
+   * Get adcreativeId
+   *
+   * @return adcreativeId
+   */
+  @ApiModelProperty(value = "")
+  public Long getAdcreativeId() {
+    return adcreativeId;
+  }
+
+  public void setAdcreativeId(Long adcreativeId) {
+    this.adcreativeId = adcreativeId;
+  }
+
+  public LeadCluesGetListStruct adcreativeName(String adcreativeName) {
+    this.adcreativeName = adcreativeName;
+    return this;
+  }
+
+  /**
+   * Get adcreativeName
+   *
+   * @return adcreativeName
+   */
+  @ApiModelProperty(value = "")
+  public String getAdcreativeName() {
+    return adcreativeName;
+  }
+
+  public void setAdcreativeName(String adcreativeName) {
+    this.adcreativeName = adcreativeName;
   }
 
   public LeadCluesGetListStruct componentId(String componentId) {
@@ -1099,6 +1187,10 @@ public class LeadCluesGetListStruct {
         && Objects.equals(this.adgroupName, leadCluesGetListStruct.adgroupName)
         && Objects.equals(this.creativeId, leadCluesGetListStruct.creativeId)
         && Objects.equals(this.creativeName, leadCluesGetListStruct.creativeName)
+        && Objects.equals(this.adId, leadCluesGetListStruct.adId)
+        && Objects.equals(this.adName, leadCluesGetListStruct.adName)
+        && Objects.equals(this.adcreativeId, leadCluesGetListStruct.adcreativeId)
+        && Objects.equals(this.adcreativeName, leadCluesGetListStruct.adcreativeName)
         && Objects.equals(this.componentId, leadCluesGetListStruct.componentId)
         && Objects.equals(this.componentName, leadCluesGetListStruct.componentName)
         && Objects.equals(this.pageId, leadCluesGetListStruct.pageId)
@@ -1153,6 +1245,10 @@ public class LeadCluesGetListStruct {
         adgroupName,
         creativeId,
         creativeName,
+        adId,
+        adName,
+        adcreativeId,
+        adcreativeName,
         componentId,
         componentName,
         pageId,

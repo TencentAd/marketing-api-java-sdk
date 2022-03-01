@@ -135,6 +135,9 @@ public class DynamicCreativesAddRequest {
   @SerializedName("enable_breakthrough_siteset")
   private Boolean enableBreakthroughSiteset = null;
 
+  @SerializedName("union_market_spec")
+  private UnionMarketSpec unionMarketSpec = null;
+
   @SerializedName("account_id")
   private Long accountId = null;
 
@@ -881,6 +884,25 @@ public class DynamicCreativesAddRequest {
     this.enableBreakthroughSiteset = enableBreakthroughSiteset;
   }
 
+  public DynamicCreativesAddRequest unionMarketSpec(UnionMarketSpec unionMarketSpec) {
+    this.unionMarketSpec = unionMarketSpec;
+    return this;
+  }
+
+  /**
+   * Get unionMarketSpec
+   *
+   * @return unionMarketSpec
+   */
+  @ApiModelProperty(value = "")
+  public UnionMarketSpec getUnionMarketSpec() {
+    return unionMarketSpec;
+  }
+
+  public void setUnionMarketSpec(UnionMarketSpec unionMarketSpec) {
+    this.unionMarketSpec = unionMarketSpec;
+  }
+
   public DynamicCreativesAddRequest accountId(Long accountId) {
     this.accountId = accountId;
     return this;
@@ -960,6 +982,7 @@ public class DynamicCreativesAddRequest {
         && Objects.equals(this.appGiftPackCode, dynamicCreativesAddRequest.appGiftPackCode)
         && Objects.equals(
             this.enableBreakthroughSiteset, dynamicCreativesAddRequest.enableBreakthroughSiteset)
+        && Objects.equals(this.unionMarketSpec, dynamicCreativesAddRequest.unionMarketSpec)
         && Objects.equals(this.accountId, dynamicCreativesAddRequest.accountId);
   }
 
@@ -1004,6 +1027,7 @@ public class DynamicCreativesAddRequest {
         countdownSwitch,
         appGiftPackCode,
         enableBreakthroughSiteset,
+        unionMarketSpec,
         accountId);
   }
 

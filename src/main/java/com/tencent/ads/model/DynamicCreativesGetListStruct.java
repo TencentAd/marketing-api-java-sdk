@@ -107,6 +107,9 @@ public class DynamicCreativesGetListStruct {
   @SerializedName("creative_template_version_type")
   private CreativeTemplateVersionType creativeTemplateVersionType = null;
 
+  @SerializedName("union_market_spec")
+  private UnionMarketSpec unionMarketSpec = null;
+
   @SerializedName("creative_template_category")
   private String creativeTemplateCategory = null;
 
@@ -664,6 +667,25 @@ public class DynamicCreativesGetListStruct {
     this.creativeTemplateVersionType = creativeTemplateVersionType;
   }
 
+  public DynamicCreativesGetListStruct unionMarketSpec(UnionMarketSpec unionMarketSpec) {
+    this.unionMarketSpec = unionMarketSpec;
+    return this;
+  }
+
+  /**
+   * Get unionMarketSpec
+   *
+   * @return unionMarketSpec
+   */
+  @ApiModelProperty(value = "")
+  public UnionMarketSpec getUnionMarketSpec() {
+    return unionMarketSpec;
+  }
+
+  public void setUnionMarketSpec(UnionMarketSpec unionMarketSpec) {
+    this.unionMarketSpec = unionMarketSpec;
+  }
+
   public DynamicCreativesGetListStruct creativeTemplateCategory(String creativeTemplateCategory) {
     this.creativeTemplateCategory = creativeTemplateCategory;
     return this;
@@ -731,6 +753,7 @@ public class DynamicCreativesGetListStruct {
         && Objects.equals(
             this.creativeTemplateVersionType,
             dynamicCreativesGetListStruct.creativeTemplateVersionType)
+        && Objects.equals(this.unionMarketSpec, dynamicCreativesGetListStruct.unionMarketSpec)
         && Objects.equals(
             this.creativeTemplateCategory, dynamicCreativesGetListStruct.creativeTemplateCategory);
   }
@@ -766,6 +789,7 @@ public class DynamicCreativesGetListStruct {
         appGiftPackCode,
         enableBreakthroughSiteset,
         creativeTemplateVersionType,
+        unionMarketSpec,
         creativeTemplateCategory);
   }
 

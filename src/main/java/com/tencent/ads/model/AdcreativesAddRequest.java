@@ -129,6 +129,9 @@ public class AdcreativesAddRequest {
   @SerializedName("industry_label")
   private String industryLabel = null;
 
+  @SerializedName("union_market_spec")
+  private UnionMarketSpec unionMarketSpec = null;
+
   @SerializedName("account_id")
   private Long accountId = null;
 
@@ -838,6 +841,25 @@ public class AdcreativesAddRequest {
     this.industryLabel = industryLabel;
   }
 
+  public AdcreativesAddRequest unionMarketSpec(UnionMarketSpec unionMarketSpec) {
+    this.unionMarketSpec = unionMarketSpec;
+    return this;
+  }
+
+  /**
+   * Get unionMarketSpec
+   *
+   * @return unionMarketSpec
+   */
+  @ApiModelProperty(value = "")
+  public UnionMarketSpec getUnionMarketSpec() {
+    return unionMarketSpec;
+  }
+
+  public void setUnionMarketSpec(UnionMarketSpec unionMarketSpec) {
+    this.unionMarketSpec = unionMarketSpec;
+  }
+
   public AdcreativesAddRequest accountId(Long accountId) {
     this.accountId = accountId;
     return this;
@@ -944,6 +966,7 @@ public class AdcreativesAddRequest {
         && Objects.equals(
             this.enableBreakthroughSiteset, adcreativesAddRequest.enableBreakthroughSiteset)
         && Objects.equals(this.industryLabel, adcreativesAddRequest.industryLabel)
+        && Objects.equals(this.unionMarketSpec, adcreativesAddRequest.unionMarketSpec)
         && Objects.equals(this.accountId, adcreativesAddRequest.accountId)
         && Objects.equals(this.adcreativeTemplateId, adcreativesAddRequest.adcreativeTemplateId)
         && Objects.equals(this.adcreativeElements, adcreativesAddRequest.adcreativeElements);
@@ -988,6 +1011,7 @@ public class AdcreativesAddRequest {
         appGiftPackCode,
         enableBreakthroughSiteset,
         industryLabel,
+        unionMarketSpec,
         accountId,
         adcreativeTemplateId,
         adcreativeElements);

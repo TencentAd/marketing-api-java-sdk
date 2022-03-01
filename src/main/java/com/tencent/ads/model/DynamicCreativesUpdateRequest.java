@@ -117,6 +117,9 @@ public class DynamicCreativesUpdateRequest {
   @SerializedName("app_gift_pack_code")
   private AppGiftPackCode appGiftPackCode = null;
 
+  @SerializedName("union_market_spec")
+  private UnionMarketSpec unionMarketSpec = null;
+
   @SerializedName("account_id")
   private Long accountId = null;
 
@@ -741,6 +744,25 @@ public class DynamicCreativesUpdateRequest {
     this.appGiftPackCode = appGiftPackCode;
   }
 
+  public DynamicCreativesUpdateRequest unionMarketSpec(UnionMarketSpec unionMarketSpec) {
+    this.unionMarketSpec = unionMarketSpec;
+    return this;
+  }
+
+  /**
+   * Get unionMarketSpec
+   *
+   * @return unionMarketSpec
+   */
+  @ApiModelProperty(value = "")
+  public UnionMarketSpec getUnionMarketSpec() {
+    return unionMarketSpec;
+  }
+
+  public void setUnionMarketSpec(UnionMarketSpec unionMarketSpec) {
+    this.unionMarketSpec = unionMarketSpec;
+  }
+
   public DynamicCreativesUpdateRequest accountId(Long accountId) {
     this.accountId = accountId;
     return this;
@@ -812,6 +834,7 @@ public class DynamicCreativesUpdateRequest {
         && Objects.equals(this.barrageList, dynamicCreativesUpdateRequest.barrageList)
         && Objects.equals(this.countdownSwitch, dynamicCreativesUpdateRequest.countdownSwitch)
         && Objects.equals(this.appGiftPackCode, dynamicCreativesUpdateRequest.appGiftPackCode)
+        && Objects.equals(this.unionMarketSpec, dynamicCreativesUpdateRequest.unionMarketSpec)
         && Objects.equals(this.accountId, dynamicCreativesUpdateRequest.accountId);
   }
 
@@ -850,6 +873,7 @@ public class DynamicCreativesUpdateRequest {
         barrageList,
         countdownSwitch,
         appGiftPackCode,
+        unionMarketSpec,
         accountId);
   }
 
