@@ -85,6 +85,10 @@ public class BatchAsyncRequestTaskSpec {
   @SerializedName("update_adcreative_landing_page_spec")
   private List<UpdateAdcreativeLandingPageItem> updateAdcreativeLandingPageSpec = null;
 
+  @SerializedName("update_adgroup_deep_conversion_worth_advanced_rate_spec")
+  private List<UpdateAdgroupDeepConversionWorthAdvancedRateItem>
+      updateAdgroupDeepConversionWorthAdvancedRateSpec = null;
+
   public BatchAsyncRequestTaskSpec updateUnionPositionPackageSpec(
       List<UpdateUnionPositionPackageItem> updateUnionPositionPackageSpec) {
     this.updateUnionPositionPackageSpec = updateUnionPositionPackageSpec;
@@ -684,6 +688,44 @@ public class BatchAsyncRequestTaskSpec {
     this.updateAdcreativeLandingPageSpec = updateAdcreativeLandingPageSpec;
   }
 
+  public BatchAsyncRequestTaskSpec updateAdgroupDeepConversionWorthAdvancedRateSpec(
+      List<UpdateAdgroupDeepConversionWorthAdvancedRateItem>
+          updateAdgroupDeepConversionWorthAdvancedRateSpec) {
+    this.updateAdgroupDeepConversionWorthAdvancedRateSpec =
+        updateAdgroupDeepConversionWorthAdvancedRateSpec;
+    return this;
+  }
+
+  public BatchAsyncRequestTaskSpec addUpdateAdgroupDeepConversionWorthAdvancedRateSpecItem(
+      UpdateAdgroupDeepConversionWorthAdvancedRateItem
+          updateAdgroupDeepConversionWorthAdvancedRateSpecItem) {
+    if (this.updateAdgroupDeepConversionWorthAdvancedRateSpec == null) {
+      this.updateAdgroupDeepConversionWorthAdvancedRateSpec =
+          new ArrayList<UpdateAdgroupDeepConversionWorthAdvancedRateItem>();
+    }
+    this.updateAdgroupDeepConversionWorthAdvancedRateSpec.add(
+        updateAdgroupDeepConversionWorthAdvancedRateSpecItem);
+    return this;
+  }
+
+  /**
+   * Get updateAdgroupDeepConversionWorthAdvancedRateSpec
+   *
+   * @return updateAdgroupDeepConversionWorthAdvancedRateSpec
+   */
+  @ApiModelProperty(value = "")
+  public List<UpdateAdgroupDeepConversionWorthAdvancedRateItem>
+      getUpdateAdgroupDeepConversionWorthAdvancedRateSpec() {
+    return updateAdgroupDeepConversionWorthAdvancedRateSpec;
+  }
+
+  public void setUpdateAdgroupDeepConversionWorthAdvancedRateSpec(
+      List<UpdateAdgroupDeepConversionWorthAdvancedRateItem>
+          updateAdgroupDeepConversionWorthAdvancedRateSpec) {
+    this.updateAdgroupDeepConversionWorthAdvancedRateSpec =
+        updateAdgroupDeepConversionWorthAdvancedRateSpec;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -741,7 +783,10 @@ public class BatchAsyncRequestTaskSpec {
             batchAsyncRequestTaskSpec.updateAdgroupAutoAcquisitionSpec)
         && Objects.equals(
             this.updateAdcreativeLandingPageSpec,
-            batchAsyncRequestTaskSpec.updateAdcreativeLandingPageSpec);
+            batchAsyncRequestTaskSpec.updateAdcreativeLandingPageSpec)
+        && Objects.equals(
+            this.updateAdgroupDeepConversionWorthAdvancedRateSpec,
+            batchAsyncRequestTaskSpec.updateAdgroupDeepConversionWorthAdvancedRateSpec);
   }
 
   @Override
@@ -766,7 +811,8 @@ public class BatchAsyncRequestTaskSpec {
         updateAdgroupDailyBudgetSpec,
         updateAdConfiguredStatusSpec,
         updateAdgroupAutoAcquisitionSpec,
-        updateAdcreativeLandingPageSpec);
+        updateAdcreativeLandingPageSpec,
+        updateAdgroupDeepConversionWorthAdvancedRateSpec);
   }
 
   @Override
