@@ -27,6 +27,9 @@ public class LocalStoresAddressParsingResultGetResponseData {
   @SerializedName("fail_list")
   private List<String> failList = null;
 
+  @SerializedName("sensitive_list")
+  private List<String> sensitiveList = null;
+
   public LocalStoresAddressParsingResultGetResponseData successList(
       List<SuccessPoiInfoStruct> successList) {
     this.successList = successList;
@@ -83,6 +86,34 @@ public class LocalStoresAddressParsingResultGetResponseData {
     this.failList = failList;
   }
 
+  public LocalStoresAddressParsingResultGetResponseData sensitiveList(List<String> sensitiveList) {
+    this.sensitiveList = sensitiveList;
+    return this;
+  }
+
+  public LocalStoresAddressParsingResultGetResponseData addSensitiveListItem(
+      String sensitiveListItem) {
+    if (this.sensitiveList == null) {
+      this.sensitiveList = new ArrayList<String>();
+    }
+    this.sensitiveList.add(sensitiveListItem);
+    return this;
+  }
+
+  /**
+   * Get sensitiveList
+   *
+   * @return sensitiveList
+   */
+  @ApiModelProperty(value = "")
+  public List<String> getSensitiveList() {
+    return sensitiveList;
+  }
+
+  public void setSensitiveList(List<String> sensitiveList) {
+    this.sensitiveList = sensitiveList;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -95,12 +126,14 @@ public class LocalStoresAddressParsingResultGetResponseData {
         (LocalStoresAddressParsingResultGetResponseData) o;
     return Objects.equals(
             this.successList, localStoresAddressParsingResultGetResponseData.successList)
-        && Objects.equals(this.failList, localStoresAddressParsingResultGetResponseData.failList);
+        && Objects.equals(this.failList, localStoresAddressParsingResultGetResponseData.failList)
+        && Objects.equals(
+            this.sensitiveList, localStoresAddressParsingResultGetResponseData.sensitiveList);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(successList, failList);
+    return Objects.hash(successList, failList, sensitiveList);
   }
 
   @Override
