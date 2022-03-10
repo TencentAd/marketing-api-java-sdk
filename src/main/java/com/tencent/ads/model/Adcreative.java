@@ -62,6 +62,9 @@ public class Adcreative {
   @SerializedName("enable_breakthrough_siteset")
   private Boolean enableBreakthroughSiteset = null;
 
+  @SerializedName("creative_template_category")
+  private String creativeTemplateCategory = null;
+
   @SerializedName("adcreative_template_id")
   private Long adcreativeTemplateId = null;
 
@@ -323,6 +326,25 @@ public class Adcreative {
     this.enableBreakthroughSiteset = enableBreakthroughSiteset;
   }
 
+  public Adcreative creativeTemplateCategory(String creativeTemplateCategory) {
+    this.creativeTemplateCategory = creativeTemplateCategory;
+    return this;
+  }
+
+  /**
+   * Get creativeTemplateCategory
+   *
+   * @return creativeTemplateCategory
+   */
+  @ApiModelProperty(value = "")
+  public String getCreativeTemplateCategory() {
+    return creativeTemplateCategory;
+  }
+
+  public void setCreativeTemplateCategory(String creativeTemplateCategory) {
+    this.creativeTemplateCategory = creativeTemplateCategory;
+  }
+
   public Adcreative adcreativeTemplateId(Long adcreativeTemplateId) {
     this.adcreativeTemplateId = adcreativeTemplateId;
     return this;
@@ -383,6 +405,7 @@ public class Adcreative {
         && Objects.equals(this.playablePageMaterialId, adcreative.playablePageMaterialId)
         && Objects.equals(this.videoEndPage, adcreative.videoEndPage)
         && Objects.equals(this.enableBreakthroughSiteset, adcreative.enableBreakthroughSiteset)
+        && Objects.equals(this.creativeTemplateCategory, adcreative.creativeTemplateCategory)
         && Objects.equals(this.adcreativeTemplateId, adcreative.adcreativeTemplateId)
         && Objects.equals(this.adcreativeElements, adcreative.adcreativeElements);
   }
@@ -403,6 +426,7 @@ public class Adcreative {
         playablePageMaterialId,
         videoEndPage,
         enableBreakthroughSiteset,
+        creativeTemplateCategory,
         adcreativeTemplateId,
         adcreativeElements);
   }
