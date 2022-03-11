@@ -161,6 +161,9 @@ public class DynamicCreativeElements {
   @SerializedName("floating_zone_struct")
   private FloatingZone floatingZoneStruct = null;
 
+  @SerializedName("canvas_share_image")
+  private String canvasShareImage = null;
+
   @SerializedName("countdown_expiring_timestamp")
   private Long countdownExpiringTimestamp = null;
 
@@ -1121,6 +1124,25 @@ public class DynamicCreativeElements {
     this.floatingZoneStruct = floatingZoneStruct;
   }
 
+  public DynamicCreativeElements canvasShareImage(String canvasShareImage) {
+    this.canvasShareImage = canvasShareImage;
+    return this;
+  }
+
+  /**
+   * Get canvasShareImage
+   *
+   * @return canvasShareImage
+   */
+  @ApiModelProperty(value = "")
+  public String getCanvasShareImage() {
+    return canvasShareImage;
+  }
+
+  public void setCanvasShareImage(String canvasShareImage) {
+    this.canvasShareImage = canvasShareImage;
+  }
+
   public DynamicCreativeElements countdownExpiringTimestamp(Long countdownExpiringTimestamp) {
     this.countdownExpiringTimestamp = countdownExpiringTimestamp;
     return this;
@@ -1196,6 +1218,7 @@ public class DynamicCreativeElements {
         && Objects.equals(this.chosenButton, dynamicCreativeElements.chosenButton)
         && Objects.equals(this.livingDescStruct, dynamicCreativeElements.livingDescStruct)
         && Objects.equals(this.floatingZoneStruct, dynamicCreativeElements.floatingZoneStruct)
+        && Objects.equals(this.canvasShareImage, dynamicCreativeElements.canvasShareImage)
         && Objects.equals(
             this.countdownExpiringTimestamp, dynamicCreativeElements.countdownExpiringTimestamp);
   }
@@ -1249,6 +1272,7 @@ public class DynamicCreativeElements {
         chosenButton,
         livingDescStruct,
         floatingZoneStruct,
+        canvasShareImage,
         countdownExpiringTimestamp);
   }
 

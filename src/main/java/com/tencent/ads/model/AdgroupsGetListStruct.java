@@ -209,6 +209,9 @@ public class AdgroupsGetListStruct {
   @SerializedName("smart_targeting")
   private SmartTargeting smartTargeting = null;
 
+  @SerializedName("dynamic_creative_id_set")
+  private List<Long> dynamicCreativeIdSet = null;
+
   public AdgroupsGetListStruct campaignId(Long campaignId) {
     this.campaignId = campaignId;
     return this;
@@ -1450,6 +1453,33 @@ public class AdgroupsGetListStruct {
     this.smartTargeting = smartTargeting;
   }
 
+  public AdgroupsGetListStruct dynamicCreativeIdSet(List<Long> dynamicCreativeIdSet) {
+    this.dynamicCreativeIdSet = dynamicCreativeIdSet;
+    return this;
+  }
+
+  public AdgroupsGetListStruct addDynamicCreativeIdSetItem(Long dynamicCreativeIdSetItem) {
+    if (this.dynamicCreativeIdSet == null) {
+      this.dynamicCreativeIdSet = new ArrayList<Long>();
+    }
+    this.dynamicCreativeIdSet.add(dynamicCreativeIdSetItem);
+    return this;
+  }
+
+  /**
+   * Get dynamicCreativeIdSet
+   *
+   * @return dynamicCreativeIdSet
+   */
+  @ApiModelProperty(value = "")
+  public List<Long> getDynamicCreativeIdSet() {
+    return dynamicCreativeIdSet;
+  }
+
+  public void setDynamicCreativeIdSet(List<Long> dynamicCreativeIdSet) {
+    this.dynamicCreativeIdSet = dynamicCreativeIdSet;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -1532,7 +1562,8 @@ public class AdgroupsGetListStruct {
         && Objects.equals(this.smartCostCap, adgroupsGetListStruct.smartCostCap)
         && Objects.equals(this.marketingScene, adgroupsGetListStruct.marketingScene)
         && Objects.equals(this.customAdgroupTag, adgroupsGetListStruct.customAdgroupTag)
-        && Objects.equals(this.smartTargeting, adgroupsGetListStruct.smartTargeting);
+        && Objects.equals(this.smartTargeting, adgroupsGetListStruct.smartTargeting)
+        && Objects.equals(this.dynamicCreativeIdSet, adgroupsGetListStruct.dynamicCreativeIdSet);
   }
 
   @Override
@@ -1599,7 +1630,8 @@ public class AdgroupsGetListStruct {
         smartCostCap,
         marketingScene,
         customAdgroupTag,
-        smartTargeting);
+        smartTargeting,
+        dynamicCreativeIdSet);
   }
 
   @Override

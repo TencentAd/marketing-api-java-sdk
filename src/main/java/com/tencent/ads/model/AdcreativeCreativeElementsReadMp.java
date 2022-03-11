@@ -215,6 +215,9 @@ public class AdcreativeCreativeElementsReadMp {
   @SerializedName("floating_zone_struct")
   private FloatingZone floatingZoneStruct = null;
 
+  @SerializedName("canvas_share_image")
+  private String canvasShareImage = null;
+
   @SerializedName("countdown_expiring_timestamp")
   private Long countdownExpiringTimestamp = null;
 
@@ -1472,6 +1475,25 @@ public class AdcreativeCreativeElementsReadMp {
     this.floatingZoneStruct = floatingZoneStruct;
   }
 
+  public AdcreativeCreativeElementsReadMp canvasShareImage(String canvasShareImage) {
+    this.canvasShareImage = canvasShareImage;
+    return this;
+  }
+
+  /**
+   * Get canvasShareImage
+   *
+   * @return canvasShareImage
+   */
+  @ApiModelProperty(value = "")
+  public String getCanvasShareImage() {
+    return canvasShareImage;
+  }
+
+  public void setCanvasShareImage(String canvasShareImage) {
+    this.canvasShareImage = canvasShareImage;
+  }
+
   public AdcreativeCreativeElementsReadMp countdownExpiringTimestamp(
       Long countdownExpiringTimestamp) {
     this.countdownExpiringTimestamp = countdownExpiringTimestamp;
@@ -1570,6 +1592,7 @@ public class AdcreativeCreativeElementsReadMp {
         && Objects.equals(this.livingDescStruct, adcreativeCreativeElementsReadMp.livingDescStruct)
         && Objects.equals(
             this.floatingZoneStruct, adcreativeCreativeElementsReadMp.floatingZoneStruct)
+        && Objects.equals(this.canvasShareImage, adcreativeCreativeElementsReadMp.canvasShareImage)
         && Objects.equals(
             this.countdownExpiringTimestamp,
             adcreativeCreativeElementsReadMp.countdownExpiringTimestamp);
@@ -1642,6 +1665,7 @@ public class AdcreativeCreativeElementsReadMp {
         chosenButton,
         livingDescStruct,
         floatingZoneStruct,
+        canvasShareImage,
         countdownExpiringTimestamp);
   }
 

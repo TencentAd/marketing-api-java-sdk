@@ -135,6 +135,9 @@ public class AdgroupsUpdateRequest {
   @SerializedName("smart_targeting")
   private SmartTargeting smartTargeting = null;
 
+  @SerializedName("dynamic_creative_id_set")
+  private List<Long> dynamicCreativeIdSet = null;
+
   @SerializedName("account_id")
   private Long accountId = null;
 
@@ -913,6 +916,33 @@ public class AdgroupsUpdateRequest {
     this.smartTargeting = smartTargeting;
   }
 
+  public AdgroupsUpdateRequest dynamicCreativeIdSet(List<Long> dynamicCreativeIdSet) {
+    this.dynamicCreativeIdSet = dynamicCreativeIdSet;
+    return this;
+  }
+
+  public AdgroupsUpdateRequest addDynamicCreativeIdSetItem(Long dynamicCreativeIdSetItem) {
+    if (this.dynamicCreativeIdSet == null) {
+      this.dynamicCreativeIdSet = new ArrayList<Long>();
+    }
+    this.dynamicCreativeIdSet.add(dynamicCreativeIdSetItem);
+    return this;
+  }
+
+  /**
+   * Get dynamicCreativeIdSet
+   *
+   * @return dynamicCreativeIdSet
+   */
+  @ApiModelProperty(value = "")
+  public List<Long> getDynamicCreativeIdSet() {
+    return dynamicCreativeIdSet;
+  }
+
+  public void setDynamicCreativeIdSet(List<Long> dynamicCreativeIdSet) {
+    this.dynamicCreativeIdSet = dynamicCreativeIdSet;
+  }
+
   public AdgroupsUpdateRequest accountId(Long accountId) {
     this.accountId = accountId;
     return this;
@@ -988,6 +1018,7 @@ public class AdgroupsUpdateRequest {
         && Objects.equals(this.dynamicAdSpec, adgroupsUpdateRequest.dynamicAdSpec)
         && Objects.equals(this.customAdgroupTag, adgroupsUpdateRequest.customAdgroupTag)
         && Objects.equals(this.smartTargeting, adgroupsUpdateRequest.smartTargeting)
+        && Objects.equals(this.dynamicCreativeIdSet, adgroupsUpdateRequest.dynamicCreativeIdSet)
         && Objects.equals(this.accountId, adgroupsUpdateRequest.accountId);
   }
 
@@ -1032,6 +1063,7 @@ public class AdgroupsUpdateRequest {
         dynamicAdSpec,
         customAdgroupTag,
         smartTargeting,
+        dynamicCreativeIdSet,
         accountId);
   }
 

@@ -161,6 +161,9 @@ public class AdcreativeCreativeElements {
   @SerializedName("right_canvas")
   private String rightCanvas = null;
 
+  @SerializedName("canvas_share_image")
+  private String canvasShareImage = null;
+
   @SerializedName("countdown_expiring_timestamp")
   private Long countdownExpiringTimestamp = null;
 
@@ -1073,6 +1076,25 @@ public class AdcreativeCreativeElements {
     this.rightCanvas = rightCanvas;
   }
 
+  public AdcreativeCreativeElements canvasShareImage(String canvasShareImage) {
+    this.canvasShareImage = canvasShareImage;
+    return this;
+  }
+
+  /**
+   * Get canvasShareImage
+   *
+   * @return canvasShareImage
+   */
+  @ApiModelProperty(value = "")
+  public String getCanvasShareImage() {
+    return canvasShareImage;
+  }
+
+  public void setCanvasShareImage(String canvasShareImage) {
+    this.canvasShareImage = canvasShareImage;
+  }
+
   public AdcreativeCreativeElements countdownExpiringTimestamp(Long countdownExpiringTimestamp) {
     this.countdownExpiringTimestamp = countdownExpiringTimestamp;
     return this;
@@ -1147,6 +1169,7 @@ public class AdcreativeCreativeElements {
         && Objects.equals(this.rightButton, adcreativeCreativeElements.rightButton)
         && Objects.equals(this.leftCanvas, adcreativeCreativeElements.leftCanvas)
         && Objects.equals(this.rightCanvas, adcreativeCreativeElements.rightCanvas)
+        && Objects.equals(this.canvasShareImage, adcreativeCreativeElements.canvasShareImage)
         && Objects.equals(
             this.countdownExpiringTimestamp, adcreativeCreativeElements.countdownExpiringTimestamp);
   }
@@ -1200,6 +1223,7 @@ public class AdcreativeCreativeElements {
         rightButton,
         leftCanvas,
         rightCanvas,
+        canvasShareImage,
         countdownExpiringTimestamp);
   }
 

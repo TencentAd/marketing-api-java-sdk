@@ -167,6 +167,9 @@ public class RevisedAdcreativeElements {
   @SerializedName("floating_zone_struct")
   private FloatingZone floatingZoneStruct = null;
 
+  @SerializedName("canvas_share_image")
+  private String canvasShareImage = null;
+
   public RevisedAdcreativeElements image(String image) {
     this.image = image;
     return this;
@@ -1122,6 +1125,25 @@ public class RevisedAdcreativeElements {
     this.floatingZoneStruct = floatingZoneStruct;
   }
 
+  public RevisedAdcreativeElements canvasShareImage(String canvasShareImage) {
+    this.canvasShareImage = canvasShareImage;
+    return this;
+  }
+
+  /**
+   * Get canvasShareImage
+   *
+   * @return canvasShareImage
+   */
+  @ApiModelProperty(value = "")
+  public String getCanvasShareImage() {
+    return canvasShareImage;
+  }
+
+  public void setCanvasShareImage(String canvasShareImage) {
+    this.canvasShareImage = canvasShareImage;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -1178,7 +1200,8 @@ public class RevisedAdcreativeElements {
         && Objects.equals(this.shopImageStruct, revisedAdcreativeElements.shopImageStruct)
         && Objects.equals(this.chosenButton, revisedAdcreativeElements.chosenButton)
         && Objects.equals(this.livingDescStruct, revisedAdcreativeElements.livingDescStruct)
-        && Objects.equals(this.floatingZoneStruct, revisedAdcreativeElements.floatingZoneStruct);
+        && Objects.equals(this.floatingZoneStruct, revisedAdcreativeElements.floatingZoneStruct)
+        && Objects.equals(this.canvasShareImage, revisedAdcreativeElements.canvasShareImage);
   }
 
   @Override
@@ -1231,7 +1254,8 @@ public class RevisedAdcreativeElements {
         shopImageStruct,
         chosenButton,
         livingDescStruct,
-        floatingZoneStruct);
+        floatingZoneStruct,
+        canvasShareImage);
   }
 
   @Override
