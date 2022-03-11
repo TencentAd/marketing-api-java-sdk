@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.tencent.ads.api.WechatAdvertiserLocalBusinessApiTest" tests="3" skipped="3" failures="0" errors="0" timestamp="2022-03-11T03:11:15" hostname="VM_147_58_centos" time="0.0">
+  <properties/>
+  <testcase name="wechatAdvertiserLocalBusinessAddTest" classname="com.tencent.ads.api.WechatAdvertiserLocalBusinessApiTest" time="0.0">
+    <skipped/>
+  </testcase>
+  <testcase name="wechatAdvertiserLocalBusinessGetTest" classname="com.tencent.ads.api.WechatAdvertiserLocalBusinessApiTest" time="0.0">
+    <skipped/>
+  </testcase>
+  <testcase name="wechatAdvertiserLocalBusinessUpdateTest" classname="com.tencent.ads.api.WechatAdvertiserLocalBusinessApiTest" time="0.0">
+    <skipped/>
+  </testcase>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
