@@ -20,14 +20,11 @@ import java.util.Objects;
 
 /** 小游戏落地页信息 */
 @ApiModel(description = "小游戏落地页信息")
-public class MiniGameSpec {
+public class LinkMiniGameSpec {
   @SerializedName("mini_game_tracking_parameter")
   private String miniGameTrackingParameter = null;
 
-  @SerializedName("mini_game_openlink")
-  private String miniGameOpenlink = null;
-
-  public MiniGameSpec miniGameTrackingParameter(String miniGameTrackingParameter) {
+  public LinkMiniGameSpec miniGameTrackingParameter(String miniGameTrackingParameter) {
     this.miniGameTrackingParameter = miniGameTrackingParameter;
     return this;
   }
@@ -46,25 +43,6 @@ public class MiniGameSpec {
     this.miniGameTrackingParameter = miniGameTrackingParameter;
   }
 
-  public MiniGameSpec miniGameOpenlink(String miniGameOpenlink) {
-    this.miniGameOpenlink = miniGameOpenlink;
-    return this;
-  }
-
-  /**
-   * Get miniGameOpenlink
-   *
-   * @return miniGameOpenlink
-   */
-  @ApiModelProperty(value = "")
-  public String getMiniGameOpenlink() {
-    return miniGameOpenlink;
-  }
-
-  public void setMiniGameOpenlink(String miniGameOpenlink) {
-    this.miniGameOpenlink = miniGameOpenlink;
-  }
-
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -73,14 +51,14 @@ public class MiniGameSpec {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    MiniGameSpec miniGameSpec = (MiniGameSpec) o;
-    return Objects.equals(this.miniGameTrackingParameter, miniGameSpec.miniGameTrackingParameter)
-        && Objects.equals(this.miniGameOpenlink, miniGameSpec.miniGameOpenlink);
+    LinkMiniGameSpec linkMiniGameSpec = (LinkMiniGameSpec) o;
+    return Objects.equals(
+        this.miniGameTrackingParameter, linkMiniGameSpec.miniGameTrackingParameter);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(miniGameTrackingParameter, miniGameOpenlink);
+    return Objects.hash(miniGameTrackingParameter);
   }
 
   @Override

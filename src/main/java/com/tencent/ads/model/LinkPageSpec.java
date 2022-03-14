@@ -31,7 +31,7 @@ public class LinkPageSpec {
   private AdcreativeMiniProgramSpec miniProgramSpec = null;
 
   @SerializedName("mini_game_spec")
-  private MiniGameSpec miniGameSpec = null;
+  private LinkMiniGameSpec miniGameSpec = null;
 
   public LinkPageSpec pageId(Long pageId) {
     this.pageId = pageId;
@@ -90,7 +90,7 @@ public class LinkPageSpec {
     this.miniProgramSpec = miniProgramSpec;
   }
 
-  public LinkPageSpec miniGameSpec(MiniGameSpec miniGameSpec) {
+  public LinkPageSpec miniGameSpec(LinkMiniGameSpec miniGameSpec) {
     this.miniGameSpec = miniGameSpec;
     return this;
   }
@@ -101,11 +101,11 @@ public class LinkPageSpec {
    * @return miniGameSpec
    */
   @ApiModelProperty(value = "")
-  public MiniGameSpec getMiniGameSpec() {
+  public LinkMiniGameSpec getMiniGameSpec() {
     return miniGameSpec;
   }
 
-  public void setMiniGameSpec(MiniGameSpec miniGameSpec) {
+  public void setMiniGameSpec(LinkMiniGameSpec miniGameSpec) {
     this.miniGameSpec = miniGameSpec;
   }
 

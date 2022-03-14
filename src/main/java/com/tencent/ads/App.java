@@ -128,6 +128,8 @@ public class App {
   @Inject QualificationsApiContainer qualificationsApiContainer;
   @Inject RealtimeCostApiContainer realtimeCostApiContainer;
   @Inject ReportApiContainer reportApiContainer;
+  @Inject ReviewElementPrereviewResultsApiContainer reviewElementPrereviewResultsApiContainer;
+  @Inject ReviewUrgeCreativesApiContainer reviewUrgeCreativesApiContainer;
   @Inject SceneSpecTagsApiContainer sceneSpecTagsApiContainer;
   @Inject ShopApiContainer shopApiContainer;
   @Inject SplitTestsApiContainer splitTestsApiContainer;
@@ -162,6 +164,7 @@ public class App {
   @Inject WechatFundTransferApiContainer wechatFundTransferApiContainer;
   @Inject WechatFundsApiContainer wechatFundsApiContainer;
   @Inject WechatPagesApiContainer wechatPagesApiContainer;
+  @Inject WechatPagesCsgroupStatusApiContainer wechatPagesCsgroupStatusApiContainer;
   @Inject WechatPagesCsgroupUserApiContainer wechatPagesCsgroupUserApiContainer;
   @Inject WechatPagesCsgrouplistApiContainer wechatPagesCsgrouplistApiContainer;
   @Inject WechatPagesCustomApiContainer wechatPagesCustomApiContainer;
@@ -616,6 +619,14 @@ public class App {
     return reportApiContainer;
   }
 
+  public ReviewElementPrereviewResultsApiContainer reviewElementPrereviewResults() {
+    return reviewElementPrereviewResultsApiContainer;
+  }
+
+  public ReviewUrgeCreativesApiContainer reviewUrgeCreatives() {
+    return reviewUrgeCreativesApiContainer;
+  }
+
   public SceneSpecTagsApiContainer sceneSpecTags() {
     return sceneSpecTagsApiContainer;
   }
@@ -750,6 +761,10 @@ public class App {
 
   public WechatPagesApiContainer wechatPages() {
     return wechatPagesApiContainer;
+  }
+
+  public WechatPagesCsgroupStatusApiContainer wechatPagesCsgroupStatus() {
+    return wechatPagesCsgroupStatusApiContainer;
   }
 
   public WechatPagesCsgroupUserApiContainer wechatPagesCsgroupUser() {
