@@ -32,7 +32,9 @@ public enum MediaSourceType {
 
   TCC("SOURCE_TYPE_TCC"),
 
-  DERIVE("SOURCE_TYPE_DERIVE");
+  DERIVE("SOURCE_TYPE_DERIVE"),
+
+  DERIVATION("SOURCE_TYPE_DERIVATION");
 
   private String value;
 
