@@ -5,9 +5,10 @@ import com.tencent.ads.TencentAds;
 import com.tencent.ads.exception.TencentAdsResponseException;
 import com.tencent.ads.exception.TencentAdsSDKException;
 import com.tencent.ads.model.*;
+import com.tencent.ads.model.FilteringStruct;
 import java.util.List;
 
-public class GetDynamicAdVideoTemplates {
+public class GetDynamicAdImageTemplates {
   /** YOUR ACCESS TOKEN */
   public String ACCESS_TOKEN = "YOUR ACCESS TOKEN";
 
@@ -18,9 +19,15 @@ public class GetDynamicAdVideoTemplates {
 
   public Long productCatalogId = null;
 
-  public Long adcreativeTemplateId = null;
-
   public String productMode = null;
+
+  public Long dynamicAdTemplateWidth = null;
+
+  public Long dynamicAdTemplateHeight = null;
+
+  public String dynamicAdTemplateOwnershipType = null;
+
+  public List<FilteringStruct> filtering = null;
 
   public Long page = null;
 
@@ -38,15 +45,18 @@ public class GetDynamicAdVideoTemplates {
 
   public void buildParams() {}
 
-  public DynamicAdVideoTemplatesGetResponseData getDynamicAdVideoTemplates() throws Exception {
-    DynamicAdVideoTemplatesGetResponseData response =
+  public DynamicAdImageTemplatesGetResponseData getDynamicAdImageTemplates() throws Exception {
+    DynamicAdImageTemplatesGetResponseData response =
         tencentAds
-            .dynamicAdVideoTemplates()
-            .dynamicAdVideoTemplatesGet(
+            .dynamicAdImageTemplates()
+            .dynamicAdImageTemplatesGet(
                 accountId,
                 productCatalogId,
-                adcreativeTemplateId,
                 productMode,
+                dynamicAdTemplateWidth,
+                dynamicAdTemplateHeight,
+                dynamicAdTemplateOwnershipType,
+                filtering,
                 page,
                 pageSize,
                 fields);
@@ -55,10 +65,10 @@ public class GetDynamicAdVideoTemplates {
 
   public static void main(String[] args) {
     try {
-      GetDynamicAdVideoTemplates getDynamicAdVideoTemplates = new GetDynamicAdVideoTemplates();
-      getDynamicAdVideoTemplates.init();
-      DynamicAdVideoTemplatesGetResponseData response =
-          getDynamicAdVideoTemplates.getDynamicAdVideoTemplates();
+      GetDynamicAdImageTemplates getDynamicAdImageTemplates = new GetDynamicAdImageTemplates();
+      getDynamicAdImageTemplates.init();
+      DynamicAdImageTemplatesGetResponseData response =
+          getDynamicAdImageTemplates.getDynamicAdImageTemplates();
     } catch (TencentAdsResponseException e) {
       e.printStackTrace();
     } catch (TencentAdsSDKException e) {

@@ -77,6 +77,7 @@ public class App {
   @Inject DailyReportsApiContainer dailyReportsApiContainer;
   @Inject DiagnosisApiContainer diagnosisApiContainer;
   @Inject DplabelAdLabelApiContainer dplabelAdLabelApiContainer;
+  @Inject DynamicAdImageTemplatesApiContainer dynamicAdImageTemplatesApiContainer;
   @Inject DynamicAdImagesApiContainer dynamicAdImagesApiContainer;
   @Inject DynamicAdTemplatesApiContainer dynamicAdTemplatesApiContainer;
   @Inject DynamicAdVideoApiContainer dynamicAdVideoApiContainer;
@@ -413,6 +414,10 @@ public class App {
 
   public DplabelAdLabelApiContainer dplabelAdLabel() {
     return dplabelAdLabelApiContainer;
+  }
+
+  public DynamicAdImageTemplatesApiContainer dynamicAdImageTemplates() {
+    return dynamicAdImageTemplatesApiContainer;
   }
 
   public DynamicAdImagesApiContainer dynamicAdImages() {

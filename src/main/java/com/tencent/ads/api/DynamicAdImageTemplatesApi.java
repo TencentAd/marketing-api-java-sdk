@@ -21,7 +21,8 @@ import com.tencent.ads.Configuration;
 import com.tencent.ads.Pair;
 import com.tencent.ads.ProgressRequestBody;
 import com.tencent.ads.ProgressResponseBody;
-import com.tencent.ads.model.DynamicAdVideoTemplatesGetResponse;
+import com.tencent.ads.model.DynamicAdImageTemplatesGetResponse;
+import com.tencent.ads.model.FilteringStruct;
 import java.io.IOException;
 import java.lang.reflect.Type;
 import java.util.ArrayList;
@@ -29,14 +30,14 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class DynamicAdVideoTemplatesApi {
+public class DynamicAdImageTemplatesApi {
   private ApiClient apiClient;
 
-  public DynamicAdVideoTemplatesApi() {
+  public DynamicAdImageTemplatesApi() {
     this(Configuration.getDefaultApiClient());
   }
 
-  public DynamicAdVideoTemplatesApi(ApiClient apiClient) {
+  public DynamicAdImageTemplatesApi(ApiClient apiClient) {
     this.apiClient = apiClient;
   }
 
@@ -49,12 +50,15 @@ public class DynamicAdVideoTemplatesApi {
   }
 
   /**
-   * Build call for dynamicAdVideoTemplatesGet
+   * Build call for dynamicAdImageTemplatesGet
    *
    * @param accountId (required)
    * @param productCatalogId (required)
-   * @param adcreativeTemplateId (required)
    * @param productMode (required)
+   * @param dynamicAdTemplateWidth (required)
+   * @param dynamicAdTemplateHeight (required)
+   * @param dynamicAdTemplateOwnershipType (optional)
+   * @param filtering (optional)
    * @param page (optional)
    * @param pageSize (optional)
    * @param fields 返回参数的字段列表 (optional)
@@ -63,11 +67,14 @@ public class DynamicAdVideoTemplatesApi {
    * @return Call to execute
    * @throws ApiException If fail to serialize the request body object
    */
-  public com.squareup.okhttp.Call dynamicAdVideoTemplatesGetCall(
+  public com.squareup.okhttp.Call dynamicAdImageTemplatesGetCall(
       Long accountId,
       Long productCatalogId,
-      Long adcreativeTemplateId,
       String productMode,
+      Long dynamicAdTemplateWidth,
+      Long dynamicAdTemplateHeight,
+      String dynamicAdTemplateOwnershipType,
+      List<FilteringStruct> filtering,
       Long page,
       Long pageSize,
       List<String> fields,
@@ -77,7 +84,7 @@ public class DynamicAdVideoTemplatesApi {
     Object localVarPostBody = null;
 
     // create path and map variables
-    String localVarPath = "/dynamic_ad_video_templates/get";
+    String localVarPath = "/dynamic_ad_image_templates/get";
 
     List<Pair> localVarQueryParams = new ArrayList<Pair>();
     List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -85,11 +92,21 @@ public class DynamicAdVideoTemplatesApi {
       localVarQueryParams.addAll(apiClient.parameterToPair("account_id", accountId));
     if (productCatalogId != null)
       localVarQueryParams.addAll(apiClient.parameterToPair("product_catalog_id", productCatalogId));
-    if (adcreativeTemplateId != null)
-      localVarQueryParams.addAll(
-          apiClient.parameterToPair("adcreative_template_id", adcreativeTemplateId));
     if (productMode != null)
       localVarQueryParams.addAll(apiClient.parameterToPair("product_mode", productMode));
+    if (dynamicAdTemplateOwnershipType != null)
+      localVarQueryParams.addAll(
+          apiClient.parameterToPair(
+              "dynamic_ad_template_ownership_type", dynamicAdTemplateOwnershipType));
+    if (dynamicAdTemplateWidth != null)
+      localVarQueryParams.addAll(
+          apiClient.parameterToPair("dynamic_ad_template_width", dynamicAdTemplateWidth));
+    if (dynamicAdTemplateHeight != null)
+      localVarQueryParams.addAll(
+          apiClient.parameterToPair("dynamic_ad_template_height", dynamicAdTemplateHeight));
+    if (filtering != null)
+      localVarCollectionQueryParams.addAll(
+          apiClient.parameterToPairs("multi", "filtering", filtering));
     if (page != null) localVarQueryParams.addAll(apiClient.parameterToPair("page", page));
     if (pageSize != null)
       localVarQueryParams.addAll(apiClient.parameterToPair("page_size", pageSize));
@@ -140,11 +157,14 @@ public class DynamicAdVideoTemplatesApi {
   }
 
   @SuppressWarnings("rawtypes")
-  private com.squareup.okhttp.Call dynamicAdVideoTemplatesGetValidateBeforeCall(
+  private com.squareup.okhttp.Call dynamicAdImageTemplatesGetValidateBeforeCall(
       Long accountId,
       Long productCatalogId,
-      Long adcreativeTemplateId,
       String productMode,
+      Long dynamicAdTemplateWidth,
+      Long dynamicAdTemplateHeight,
+      String dynamicAdTemplateOwnershipType,
+      List<FilteringStruct> filtering,
       Long page,
       Long pageSize,
       List<String> fields,
@@ -155,33 +175,42 @@ public class DynamicAdVideoTemplatesApi {
     // verify the required parameter 'accountId' is set
     if (accountId == null) {
       throw new ApiException(
-          "Missing the required parameter 'accountId' when calling dynamicAdVideoTemplatesGet(Async)");
+          "Missing the required parameter 'accountId' when calling dynamicAdImageTemplatesGet(Async)");
     }
 
     // verify the required parameter 'productCatalogId' is set
     if (productCatalogId == null) {
       throw new ApiException(
-          "Missing the required parameter 'productCatalogId' when calling dynamicAdVideoTemplatesGet(Async)");
-    }
-
-    // verify the required parameter 'adcreativeTemplateId' is set
-    if (adcreativeTemplateId == null) {
-      throw new ApiException(
-          "Missing the required parameter 'adcreativeTemplateId' when calling dynamicAdVideoTemplatesGet(Async)");
+          "Missing the required parameter 'productCatalogId' when calling dynamicAdImageTemplatesGet(Async)");
     }
 
     // verify the required parameter 'productMode' is set
     if (productMode == null) {
       throw new ApiException(
-          "Missing the required parameter 'productMode' when calling dynamicAdVideoTemplatesGet(Async)");
+          "Missing the required parameter 'productMode' when calling dynamicAdImageTemplatesGet(Async)");
+    }
+
+    // verify the required parameter 'dynamicAdTemplateWidth' is set
+    if (dynamicAdTemplateWidth == null) {
+      throw new ApiException(
+          "Missing the required parameter 'dynamicAdTemplateWidth' when calling dynamicAdImageTemplatesGet(Async)");
+    }
+
+    // verify the required parameter 'dynamicAdTemplateHeight' is set
+    if (dynamicAdTemplateHeight == null) {
+      throw new ApiException(
+          "Missing the required parameter 'dynamicAdTemplateHeight' when calling dynamicAdImageTemplatesGet(Async)");
     }
 
     com.squareup.okhttp.Call call =
-        dynamicAdVideoTemplatesGetCall(
+        dynamicAdImageTemplatesGetCall(
             accountId,
             productCatalogId,
-            adcreativeTemplateId,
             productMode,
+            dynamicAdTemplateWidth,
+            dynamicAdTemplateHeight,
+            dynamicAdTemplateOwnershipType,
+            filtering,
             page,
             pageSize,
             fields,
@@ -191,79 +220,106 @@ public class DynamicAdVideoTemplatesApi {
   }
 
   /**
-   * 获取动态商品视频模板
+   * 获取动态商品图片模板
    *
    * @param accountId (required)
    * @param productCatalogId (required)
-   * @param adcreativeTemplateId (required)
    * @param productMode (required)
+   * @param dynamicAdTemplateWidth (required)
+   * @param dynamicAdTemplateHeight (required)
+   * @param dynamicAdTemplateOwnershipType (optional)
+   * @param filtering (optional)
    * @param page (optional)
    * @param pageSize (optional)
    * @param fields 返回参数的字段列表 (optional)
-   * @return DynamicAdVideoTemplatesGetResponse
+   * @return DynamicAdImageTemplatesGetResponse
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
-  public DynamicAdVideoTemplatesGetResponse dynamicAdVideoTemplatesGet(
+  public DynamicAdImageTemplatesGetResponse dynamicAdImageTemplatesGet(
       Long accountId,
       Long productCatalogId,
-      Long adcreativeTemplateId,
       String productMode,
+      Long dynamicAdTemplateWidth,
+      Long dynamicAdTemplateHeight,
+      String dynamicAdTemplateOwnershipType,
+      List<FilteringStruct> filtering,
       Long page,
       Long pageSize,
       List<String> fields)
       throws ApiException {
-    ApiResponse<DynamicAdVideoTemplatesGetResponse> resp =
-        dynamicAdVideoTemplatesGetWithHttpInfo(
-            accountId, productCatalogId, adcreativeTemplateId, productMode, page, pageSize, fields);
+    ApiResponse<DynamicAdImageTemplatesGetResponse> resp =
+        dynamicAdImageTemplatesGetWithHttpInfo(
+            accountId,
+            productCatalogId,
+            productMode,
+            dynamicAdTemplateWidth,
+            dynamicAdTemplateHeight,
+            dynamicAdTemplateOwnershipType,
+            filtering,
+            page,
+            pageSize,
+            fields);
     return resp.getData();
   }
 
   /**
-   * 获取动态商品视频模板
+   * 获取动态商品图片模板
    *
    * @param accountId (required)
    * @param productCatalogId (required)
-   * @param adcreativeTemplateId (required)
    * @param productMode (required)
+   * @param dynamicAdTemplateWidth (required)
+   * @param dynamicAdTemplateHeight (required)
+   * @param dynamicAdTemplateOwnershipType (optional)
+   * @param filtering (optional)
    * @param page (optional)
    * @param pageSize (optional)
    * @param fields 返回参数的字段列表 (optional)
-   * @return ApiResponse&lt;DynamicAdVideoTemplatesGetResponse&gt;
+   * @return ApiResponse&lt;DynamicAdImageTemplatesGetResponse&gt;
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
-  public ApiResponse<DynamicAdVideoTemplatesGetResponse> dynamicAdVideoTemplatesGetWithHttpInfo(
+  public ApiResponse<DynamicAdImageTemplatesGetResponse> dynamicAdImageTemplatesGetWithHttpInfo(
       Long accountId,
       Long productCatalogId,
-      Long adcreativeTemplateId,
       String productMode,
+      Long dynamicAdTemplateWidth,
+      Long dynamicAdTemplateHeight,
+      String dynamicAdTemplateOwnershipType,
+      List<FilteringStruct> filtering,
       Long page,
       Long pageSize,
       List<String> fields)
       throws ApiException {
     com.squareup.okhttp.Call call =
-        dynamicAdVideoTemplatesGetValidateBeforeCall(
+        dynamicAdImageTemplatesGetValidateBeforeCall(
             accountId,
             productCatalogId,
-            adcreativeTemplateId,
             productMode,
+            dynamicAdTemplateWidth,
+            dynamicAdTemplateHeight,
+            dynamicAdTemplateOwnershipType,
+            filtering,
             page,
             pageSize,
             fields,
             null,
             null);
-    Type localVarReturnType = new TypeToken<DynamicAdVideoTemplatesGetResponse>() {}.getType();
+    Type localVarReturnType = new TypeToken<DynamicAdImageTemplatesGetResponse>() {}.getType();
     return apiClient.execute(call, localVarReturnType);
   }
 
   /**
-   * 获取动态商品视频模板 (asynchronously)
+   * 获取动态商品图片模板 (asynchronously)
    *
    * @param accountId (required)
    * @param productCatalogId (required)
-   * @param adcreativeTemplateId (required)
    * @param productMode (required)
+   * @param dynamicAdTemplateWidth (required)
+   * @param dynamicAdTemplateHeight (required)
+   * @param dynamicAdTemplateOwnershipType (optional)
+   * @param filtering (optional)
    * @param page (optional)
    * @param pageSize (optional)
    * @param fields 返回参数的字段列表 (optional)
@@ -271,15 +327,18 @@ public class DynamicAdVideoTemplatesApi {
    * @return The request call
    * @throws ApiException If fail to process the API call, e.g. serializing the request body object
    */
-  public com.squareup.okhttp.Call dynamicAdVideoTemplatesGetAsync(
+  public com.squareup.okhttp.Call dynamicAdImageTemplatesGetAsync(
       Long accountId,
       Long productCatalogId,
-      Long adcreativeTemplateId,
       String productMode,
+      Long dynamicAdTemplateWidth,
+      Long dynamicAdTemplateHeight,
+      String dynamicAdTemplateOwnershipType,
+      List<FilteringStruct> filtering,
       Long page,
       Long pageSize,
       List<String> fields,
-      final ApiCallback<DynamicAdVideoTemplatesGetResponse> callback)
+      final ApiCallback<DynamicAdImageTemplatesGetResponse> callback)
       throws ApiException {
 
     ProgressResponseBody.ProgressListener progressListener = null;
@@ -304,17 +363,20 @@ public class DynamicAdVideoTemplatesApi {
     }
 
     com.squareup.okhttp.Call call =
-        dynamicAdVideoTemplatesGetValidateBeforeCall(
+        dynamicAdImageTemplatesGetValidateBeforeCall(
             accountId,
             productCatalogId,
-            adcreativeTemplateId,
             productMode,
+            dynamicAdTemplateWidth,
+            dynamicAdTemplateHeight,
+            dynamicAdTemplateOwnershipType,
+            filtering,
             page,
             pageSize,
             fields,
             progressListener,
             progressRequestListener);
-    Type localVarReturnType = new TypeToken<DynamicAdVideoTemplatesGetResponse>() {}.getType();
+    Type localVarReturnType = new TypeToken<DynamicAdImageTemplatesGetResponse>() {}.getType();
     apiClient.executeAsync(call, localVarReturnType, callback);
     return call;
   }

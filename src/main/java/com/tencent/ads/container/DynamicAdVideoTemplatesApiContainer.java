@@ -32,6 +32,7 @@ public class DynamicAdVideoTemplatesApiContainer extends ApiContainer {
    * @param accountId (required)
    * @param productCatalogId (required)
    * @param adcreativeTemplateId (required)
+   * @param productMode (required)
    * @param page (optional)
    * @param pageSize (optional)
    * @param fields 返回参数的字段列表 (optional)
@@ -43,13 +44,14 @@ public class DynamicAdVideoTemplatesApiContainer extends ApiContainer {
       Long accountId,
       Long productCatalogId,
       Long adcreativeTemplateId,
+      String productMode,
       Long page,
       Long pageSize,
       List<String> fields)
       throws ApiException, TencentAdsResponseException {
     DynamicAdVideoTemplatesGetResponse resp =
         api.dynamicAdVideoTemplatesGet(
-            accountId, productCatalogId, adcreativeTemplateId, page, pageSize, fields);
+            accountId, productCatalogId, adcreativeTemplateId, productMode, page, pageSize, fields);
     handleResponse(gson.toJson(resp));
     return resp.getData();
   }

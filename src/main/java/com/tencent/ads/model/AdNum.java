@@ -19,7 +19,7 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-/** 用于投放的的商品数量 */
+/** 动态商品广告（DPA）类型 */
 @JsonAdapter(AdNum.Adapter.class)
 public enum AdNum {
   SINGLE("SINGLE"),
