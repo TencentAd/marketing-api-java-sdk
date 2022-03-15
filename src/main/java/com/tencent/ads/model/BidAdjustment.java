@@ -26,6 +26,9 @@ public class BidAdjustment {
   @SerializedName("site_set_package")
   private List<SiteSetPackageStruct> siteSetPackage = null;
 
+  @SerializedName("region_group_package")
+  private List<RegionGroupPackageStruct> regionGroupPackage = null;
+
   public BidAdjustment siteSetPackage(List<SiteSetPackageStruct> siteSetPackage) {
     this.siteSetPackage = siteSetPackage;
     return this;
@@ -53,6 +56,33 @@ public class BidAdjustment {
     this.siteSetPackage = siteSetPackage;
   }
 
+  public BidAdjustment regionGroupPackage(List<RegionGroupPackageStruct> regionGroupPackage) {
+    this.regionGroupPackage = regionGroupPackage;
+    return this;
+  }
+
+  public BidAdjustment addRegionGroupPackageItem(RegionGroupPackageStruct regionGroupPackageItem) {
+    if (this.regionGroupPackage == null) {
+      this.regionGroupPackage = new ArrayList<RegionGroupPackageStruct>();
+    }
+    this.regionGroupPackage.add(regionGroupPackageItem);
+    return this;
+  }
+
+  /**
+   * Get regionGroupPackage
+   *
+   * @return regionGroupPackage
+   */
+  @ApiModelProperty(value = "")
+  public List<RegionGroupPackageStruct> getRegionGroupPackage() {
+    return regionGroupPackage;
+  }
+
+  public void setRegionGroupPackage(List<RegionGroupPackageStruct> regionGroupPackage) {
+    this.regionGroupPackage = regionGroupPackage;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -62,12 +92,13 @@ public class BidAdjustment {
       return false;
     }
     BidAdjustment bidAdjustment = (BidAdjustment) o;
-    return Objects.equals(this.siteSetPackage, bidAdjustment.siteSetPackage);
+    return Objects.equals(this.siteSetPackage, bidAdjustment.siteSetPackage)
+        && Objects.equals(this.regionGroupPackage, bidAdjustment.regionGroupPackage);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(siteSetPackage);
+    return Objects.hash(siteSetPackage, regionGroupPackage);
   }
 
   @Override

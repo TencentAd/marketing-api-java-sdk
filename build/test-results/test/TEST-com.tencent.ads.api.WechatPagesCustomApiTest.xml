@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.tencent.ads.api.WechatPagesCustomApiTest" tests="1" skipped="1" failures="0" errors="0" timestamp="2022-03-14T12:54:49" hostname="VM_147_58_centos" time="0.0">
-  <properties/>
-  <testcase name="wechatPagesCustomAddTest" classname="com.tencent.ads.api.WechatPagesCustomApiTest" time="0.0">
-    <skipped/>
-  </testcase>
-  <system-out><![CDATA[]]></system-out>
-  <system-err><![CDATA[]]></system-err>
-</testsuite>
