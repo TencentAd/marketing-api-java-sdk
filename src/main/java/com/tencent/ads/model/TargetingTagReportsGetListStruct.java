@@ -1194,6 +1194,18 @@ public class TargetingTagReportsGetListStruct {
   @SerializedName("consult_uv_count")
   private Long consultUvCount = null;
 
+  @SerializedName("scan_code_add_fans_uv")
+  private Long scanCodeAddFansUv = null;
+
+  @SerializedName("scan_code_add_fans_count")
+  private Long scanCodeAddFansCount = null;
+
+  @SerializedName("scan_code_add_fans_uv_cost")
+  private Long scanCodeAddFansUvCost = null;
+
+  @SerializedName("scan_code_add_fans_count_cost")
+  private Long scanCodeAddFansCountCost = null;
+
   @SerializedName("age")
   private String age = null;
 
@@ -9095,6 +9107,82 @@ public class TargetingTagReportsGetListStruct {
     this.consultUvCount = consultUvCount;
   }
 
+  public TargetingTagReportsGetListStruct scanCodeAddFansUv(Long scanCodeAddFansUv) {
+    this.scanCodeAddFansUv = scanCodeAddFansUv;
+    return this;
+  }
+
+  /**
+   * Get scanCodeAddFansUv
+   *
+   * @return scanCodeAddFansUv
+   */
+  @ApiModelProperty(value = "")
+  public Long getScanCodeAddFansUv() {
+    return scanCodeAddFansUv;
+  }
+
+  public void setScanCodeAddFansUv(Long scanCodeAddFansUv) {
+    this.scanCodeAddFansUv = scanCodeAddFansUv;
+  }
+
+  public TargetingTagReportsGetListStruct scanCodeAddFansCount(Long scanCodeAddFansCount) {
+    this.scanCodeAddFansCount = scanCodeAddFansCount;
+    return this;
+  }
+
+  /**
+   * Get scanCodeAddFansCount
+   *
+   * @return scanCodeAddFansCount
+   */
+  @ApiModelProperty(value = "")
+  public Long getScanCodeAddFansCount() {
+    return scanCodeAddFansCount;
+  }
+
+  public void setScanCodeAddFansCount(Long scanCodeAddFansCount) {
+    this.scanCodeAddFansCount = scanCodeAddFansCount;
+  }
+
+  public TargetingTagReportsGetListStruct scanCodeAddFansUvCost(Long scanCodeAddFansUvCost) {
+    this.scanCodeAddFansUvCost = scanCodeAddFansUvCost;
+    return this;
+  }
+
+  /**
+   * Get scanCodeAddFansUvCost
+   *
+   * @return scanCodeAddFansUvCost
+   */
+  @ApiModelProperty(value = "")
+  public Long getScanCodeAddFansUvCost() {
+    return scanCodeAddFansUvCost;
+  }
+
+  public void setScanCodeAddFansUvCost(Long scanCodeAddFansUvCost) {
+    this.scanCodeAddFansUvCost = scanCodeAddFansUvCost;
+  }
+
+  public TargetingTagReportsGetListStruct scanCodeAddFansCountCost(Long scanCodeAddFansCountCost) {
+    this.scanCodeAddFansCountCost = scanCodeAddFansCountCost;
+    return this;
+  }
+
+  /**
+   * Get scanCodeAddFansCountCost
+   *
+   * @return scanCodeAddFansCountCost
+   */
+  @ApiModelProperty(value = "")
+  public Long getScanCodeAddFansCountCost() {
+    return scanCodeAddFansCountCost;
+  }
+
+  public void setScanCodeAddFansCountCost(Long scanCodeAddFansCountCost) {
+    this.scanCodeAddFansCountCost = scanCodeAddFansCountCost;
+  }
+
   public TargetingTagReportsGetListStruct age(String age) {
     this.age = age;
     return this;
@@ -12490,6 +12578,15 @@ public class TargetingTagReportsGetListStruct {
         && Objects.equals(
             this.miniGameCreateRoleRate, targetingTagReportsGetListStruct.miniGameCreateRoleRate)
         && Objects.equals(this.consultUvCount, targetingTagReportsGetListStruct.consultUvCount)
+        && Objects.equals(
+            this.scanCodeAddFansUv, targetingTagReportsGetListStruct.scanCodeAddFansUv)
+        && Objects.equals(
+            this.scanCodeAddFansCount, targetingTagReportsGetListStruct.scanCodeAddFansCount)
+        && Objects.equals(
+            this.scanCodeAddFansUvCost, targetingTagReportsGetListStruct.scanCodeAddFansUvCost)
+        && Objects.equals(
+            this.scanCodeAddFansCountCost,
+            targetingTagReportsGetListStruct.scanCodeAddFansCountCost)
         && Objects.equals(this.age, targetingTagReportsGetListStruct.age)
         && Objects.equals(this.regionId, targetingTagReportsGetListStruct.regionId)
         && Objects.equals(this.cityId, targetingTagReportsGetListStruct.cityId)
@@ -13147,6 +13244,10 @@ public class TargetingTagReportsGetListStruct {
         miniGameBfPurchaseD1Arpu,
         miniGameCreateRoleRate,
         consultUvCount,
+        scanCodeAddFansUv,
+        scanCodeAddFansCount,
+        scanCodeAddFansUvCost,
+        scanCodeAddFansCountCost,
         age,
         regionId,
         cityId,

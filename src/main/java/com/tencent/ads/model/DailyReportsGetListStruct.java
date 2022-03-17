@@ -1239,6 +1239,18 @@ public class DailyReportsGetListStruct {
   @SerializedName("video_live_commodity_bubble_exp_count")
   private Long videoLiveCommodityBubbleExpCount = null;
 
+  @SerializedName("scan_code_add_fans_uv")
+  private Long scanCodeAddFansUv = null;
+
+  @SerializedName("scan_code_add_fans_count")
+  private Long scanCodeAddFansCount = null;
+
+  @SerializedName("scan_code_add_fans_uv_cost")
+  private Long scanCodeAddFansUvCost = null;
+
+  @SerializedName("scan_code_add_fans_count_cost")
+  private Long scanCodeAddFansCountCost = null;
+
   @SerializedName("request_conversions_count")
   private Long requestConversionsCount = null;
 
@@ -9608,6 +9620,82 @@ public class DailyReportsGetListStruct {
     this.videoLiveCommodityBubbleExpCount = videoLiveCommodityBubbleExpCount;
   }
 
+  public DailyReportsGetListStruct scanCodeAddFansUv(Long scanCodeAddFansUv) {
+    this.scanCodeAddFansUv = scanCodeAddFansUv;
+    return this;
+  }
+
+  /**
+   * Get scanCodeAddFansUv
+   *
+   * @return scanCodeAddFansUv
+   */
+  @ApiModelProperty(value = "")
+  public Long getScanCodeAddFansUv() {
+    return scanCodeAddFansUv;
+  }
+
+  public void setScanCodeAddFansUv(Long scanCodeAddFansUv) {
+    this.scanCodeAddFansUv = scanCodeAddFansUv;
+  }
+
+  public DailyReportsGetListStruct scanCodeAddFansCount(Long scanCodeAddFansCount) {
+    this.scanCodeAddFansCount = scanCodeAddFansCount;
+    return this;
+  }
+
+  /**
+   * Get scanCodeAddFansCount
+   *
+   * @return scanCodeAddFansCount
+   */
+  @ApiModelProperty(value = "")
+  public Long getScanCodeAddFansCount() {
+    return scanCodeAddFansCount;
+  }
+
+  public void setScanCodeAddFansCount(Long scanCodeAddFansCount) {
+    this.scanCodeAddFansCount = scanCodeAddFansCount;
+  }
+
+  public DailyReportsGetListStruct scanCodeAddFansUvCost(Long scanCodeAddFansUvCost) {
+    this.scanCodeAddFansUvCost = scanCodeAddFansUvCost;
+    return this;
+  }
+
+  /**
+   * Get scanCodeAddFansUvCost
+   *
+   * @return scanCodeAddFansUvCost
+   */
+  @ApiModelProperty(value = "")
+  public Long getScanCodeAddFansUvCost() {
+    return scanCodeAddFansUvCost;
+  }
+
+  public void setScanCodeAddFansUvCost(Long scanCodeAddFansUvCost) {
+    this.scanCodeAddFansUvCost = scanCodeAddFansUvCost;
+  }
+
+  public DailyReportsGetListStruct scanCodeAddFansCountCost(Long scanCodeAddFansCountCost) {
+    this.scanCodeAddFansCountCost = scanCodeAddFansCountCost;
+    return this;
+  }
+
+  /**
+   * Get scanCodeAddFansCountCost
+   *
+   * @return scanCodeAddFansCountCost
+   */
+  @ApiModelProperty(value = "")
+  public Long getScanCodeAddFansCountCost() {
+    return scanCodeAddFansCountCost;
+  }
+
+  public void setScanCodeAddFansCountCost(Long scanCodeAddFansCountCost) {
+    this.scanCodeAddFansCountCost = scanCodeAddFansCountCost;
+  }
+
   public DailyReportsGetListStruct requestConversionsCount(Long requestConversionsCount) {
     this.requestConversionsCount = requestConversionsCount;
     return this;
@@ -14275,6 +14363,12 @@ public class DailyReportsGetListStruct {
         && Objects.equals(
             this.videoLiveCommodityBubbleExpCount,
             dailyReportsGetListStruct.videoLiveCommodityBubbleExpCount)
+        && Objects.equals(this.scanCodeAddFansUv, dailyReportsGetListStruct.scanCodeAddFansUv)
+        && Objects.equals(this.scanCodeAddFansCount, dailyReportsGetListStruct.scanCodeAddFansCount)
+        && Objects.equals(
+            this.scanCodeAddFansUvCost, dailyReportsGetListStruct.scanCodeAddFansUvCost)
+        && Objects.equals(
+            this.scanCodeAddFansCountCost, dailyReportsGetListStruct.scanCodeAddFansCountCost)
         && Objects.equals(
             this.requestConversionsCount, dailyReportsGetListStruct.requestConversionsCount)
         && Objects.equals(
@@ -15035,6 +15129,10 @@ public class DailyReportsGetListStruct {
         videoLiveShareUserCount,
         videoLiveClickCommodityUserCount,
         videoLiveCommodityBubbleExpCount,
+        scanCodeAddFansUv,
+        scanCodeAddFansCount,
+        scanCodeAddFansUvCost,
+        scanCodeAddFansCountCost,
         requestConversionsCount,
         requestConversionsCost,
         incomeVal1,
