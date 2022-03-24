@@ -73,7 +73,7 @@ public class AdgroupsUpdateRequest {
   private String customizedCategory = null;
 
   @SerializedName("additional_user_action_sets")
-  private List<AdditionalUserActionSetStruct> additionalUserActionSets = null;
+  private List<UserActionSetStruct> additionalUserActionSets = null;
 
   @SerializedName("bid_strategy")
   private BidStrategy bidStrategy = null;
@@ -465,15 +465,15 @@ public class AdgroupsUpdateRequest {
   }
 
   public AdgroupsUpdateRequest additionalUserActionSets(
-      List<AdditionalUserActionSetStruct> additionalUserActionSets) {
+      List<UserActionSetStruct> additionalUserActionSets) {
     this.additionalUserActionSets = additionalUserActionSets;
     return this;
   }
 
   public AdgroupsUpdateRequest addAdditionalUserActionSetsItem(
-      AdditionalUserActionSetStruct additionalUserActionSetsItem) {
+      UserActionSetStruct additionalUserActionSetsItem) {
     if (this.additionalUserActionSets == null) {
-      this.additionalUserActionSets = new ArrayList<AdditionalUserActionSetStruct>();
+      this.additionalUserActionSets = new ArrayList<UserActionSetStruct>();
     }
     this.additionalUserActionSets.add(additionalUserActionSetsItem);
     return this;
@@ -485,12 +485,11 @@ public class AdgroupsUpdateRequest {
    * @return additionalUserActionSets
    */
   @ApiModelProperty(value = "")
-  public List<AdditionalUserActionSetStruct> getAdditionalUserActionSets() {
+  public List<UserActionSetStruct> getAdditionalUserActionSets() {
     return additionalUserActionSets;
   }
 
-  public void setAdditionalUserActionSets(
-      List<AdditionalUserActionSetStruct> additionalUserActionSets) {
+  public void setAdditionalUserActionSets(List<UserActionSetStruct> additionalUserActionSets) {
     this.additionalUserActionSets = additionalUserActionSets;
   }
 

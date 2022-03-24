@@ -91,7 +91,7 @@ public class AdgroupsAddRequest {
   private List<UserActionSetStruct> userActionSets = null;
 
   @SerializedName("additional_user_action_sets")
-  private List<AdditionalUserActionSetStruct> additionalUserActionSets = null;
+  private List<UserActionSetStruct> additionalUserActionSets = null;
 
   @SerializedName("dynamic_creative_id")
   private Long dynamicCreativeId = null;
@@ -622,15 +622,15 @@ public class AdgroupsAddRequest {
   }
 
   public AdgroupsAddRequest additionalUserActionSets(
-      List<AdditionalUserActionSetStruct> additionalUserActionSets) {
+      List<UserActionSetStruct> additionalUserActionSets) {
     this.additionalUserActionSets = additionalUserActionSets;
     return this;
   }
 
   public AdgroupsAddRequest addAdditionalUserActionSetsItem(
-      AdditionalUserActionSetStruct additionalUserActionSetsItem) {
+      UserActionSetStruct additionalUserActionSetsItem) {
     if (this.additionalUserActionSets == null) {
-      this.additionalUserActionSets = new ArrayList<AdditionalUserActionSetStruct>();
+      this.additionalUserActionSets = new ArrayList<UserActionSetStruct>();
     }
     this.additionalUserActionSets.add(additionalUserActionSetsItem);
     return this;
@@ -642,12 +642,11 @@ public class AdgroupsAddRequest {
    * @return additionalUserActionSets
    */
   @ApiModelProperty(value = "")
-  public List<AdditionalUserActionSetStruct> getAdditionalUserActionSets() {
+  public List<UserActionSetStruct> getAdditionalUserActionSets() {
     return additionalUserActionSets;
   }
 
-  public void setAdditionalUserActionSets(
-      List<AdditionalUserActionSetStruct> additionalUserActionSets) {
+  public void setAdditionalUserActionSets(List<UserActionSetStruct> additionalUserActionSets) {
     this.additionalUserActionSets = additionalUserActionSets;
   }
 
