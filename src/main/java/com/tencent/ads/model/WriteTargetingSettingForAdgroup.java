@@ -62,6 +62,9 @@ public class WriteTargetingSettingForAdgroup {
   @SerializedName("network_scene")
   private List<String> networkScene = null;
 
+  @SerializedName("app_install_status")
+  private List<String> appInstallStatus = null;
+
   @SerializedName("consumption_status")
   private List<String> consumptionStatus = null;
 
@@ -433,6 +436,33 @@ public class WriteTargetingSettingForAdgroup {
     this.networkScene = networkScene;
   }
 
+  public WriteTargetingSettingForAdgroup appInstallStatus(List<String> appInstallStatus) {
+    this.appInstallStatus = appInstallStatus;
+    return this;
+  }
+
+  public WriteTargetingSettingForAdgroup addAppInstallStatusItem(String appInstallStatusItem) {
+    if (this.appInstallStatus == null) {
+      this.appInstallStatus = new ArrayList<String>();
+    }
+    this.appInstallStatus.add(appInstallStatusItem);
+    return this;
+  }
+
+  /**
+   * Get appInstallStatus
+   *
+   * @return appInstallStatus
+   */
+  @ApiModelProperty(value = "")
+  public List<String> getAppInstallStatus() {
+    return appInstallStatus;
+  }
+
+  public void setAppInstallStatus(List<String> appInstallStatus) {
+    this.appInstallStatus = appInstallStatus;
+  }
+
   public WriteTargetingSettingForAdgroup consumptionStatus(List<String> consumptionStatus) {
     this.consumptionStatus = consumptionStatus;
     return this;
@@ -764,6 +794,7 @@ public class WriteTargetingSettingForAdgroup {
         && Objects.equals(this.networkType, writeTargetingSettingForAdgroup.networkType)
         && Objects.equals(this.networkOperator, writeTargetingSettingForAdgroup.networkOperator)
         && Objects.equals(this.networkScene, writeTargetingSettingForAdgroup.networkScene)
+        && Objects.equals(this.appInstallStatus, writeTargetingSettingForAdgroup.appInstallStatus)
         && Objects.equals(this.consumptionStatus, writeTargetingSettingForAdgroup.consumptionStatus)
         && Objects.equals(
             this.gameConsumptionLevel, writeTargetingSettingForAdgroup.gameConsumptionLevel)
@@ -804,6 +835,7 @@ public class WriteTargetingSettingForAdgroup {
         networkType,
         networkOperator,
         networkScene,
+        appInstallStatus,
         consumptionStatus,
         gameConsumptionLevel,
         residentialCommunityPrice,

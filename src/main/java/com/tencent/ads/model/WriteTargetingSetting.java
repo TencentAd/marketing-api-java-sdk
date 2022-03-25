@@ -62,6 +62,9 @@ public class WriteTargetingSetting {
   @SerializedName("network_scene")
   private List<String> networkScene = null;
 
+  @SerializedName("app_install_status")
+  private List<String> appInstallStatus = null;
+
   @SerializedName("consumption_status")
   private List<String> consumptionStatus = null;
 
@@ -427,6 +430,33 @@ public class WriteTargetingSetting {
     this.networkScene = networkScene;
   }
 
+  public WriteTargetingSetting appInstallStatus(List<String> appInstallStatus) {
+    this.appInstallStatus = appInstallStatus;
+    return this;
+  }
+
+  public WriteTargetingSetting addAppInstallStatusItem(String appInstallStatusItem) {
+    if (this.appInstallStatus == null) {
+      this.appInstallStatus = new ArrayList<String>();
+    }
+    this.appInstallStatus.add(appInstallStatusItem);
+    return this;
+  }
+
+  /**
+   * Get appInstallStatus
+   *
+   * @return appInstallStatus
+   */
+  @ApiModelProperty(value = "")
+  public List<String> getAppInstallStatus() {
+    return appInstallStatus;
+  }
+
+  public void setAppInstallStatus(List<String> appInstallStatus) {
+    this.appInstallStatus = appInstallStatus;
+  }
+
   public WriteTargetingSetting consumptionStatus(List<String> consumptionStatus) {
     this.consumptionStatus = consumptionStatus;
     return this;
@@ -699,6 +729,7 @@ public class WriteTargetingSetting {
         && Objects.equals(this.networkType, writeTargetingSetting.networkType)
         && Objects.equals(this.networkOperator, writeTargetingSetting.networkOperator)
         && Objects.equals(this.networkScene, writeTargetingSetting.networkScene)
+        && Objects.equals(this.appInstallStatus, writeTargetingSetting.appInstallStatus)
         && Objects.equals(this.consumptionStatus, writeTargetingSetting.consumptionStatus)
         && Objects.equals(this.gameConsumptionLevel, writeTargetingSetting.gameConsumptionLevel)
         && Objects.equals(
@@ -729,6 +760,7 @@ public class WriteTargetingSetting {
         networkType,
         networkOperator,
         networkScene,
+        appInstallStatus,
         consumptionStatus,
         gameConsumptionLevel,
         residentialCommunityPrice,

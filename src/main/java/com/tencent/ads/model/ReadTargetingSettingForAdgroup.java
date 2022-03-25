@@ -62,6 +62,9 @@ public class ReadTargetingSettingForAdgroup {
   @SerializedName("network_scene")
   private List<String> networkScene = null;
 
+  @SerializedName("app_install_status")
+  private List<String> appInstallStatus = null;
+
   @SerializedName("consumption_status")
   private List<String> consumptionStatus = null;
 
@@ -455,6 +458,33 @@ public class ReadTargetingSettingForAdgroup {
 
   public void setNetworkScene(List<String> networkScene) {
     this.networkScene = networkScene;
+  }
+
+  public ReadTargetingSettingForAdgroup appInstallStatus(List<String> appInstallStatus) {
+    this.appInstallStatus = appInstallStatus;
+    return this;
+  }
+
+  public ReadTargetingSettingForAdgroup addAppInstallStatusItem(String appInstallStatusItem) {
+    if (this.appInstallStatus == null) {
+      this.appInstallStatus = new ArrayList<String>();
+    }
+    this.appInstallStatus.add(appInstallStatusItem);
+    return this;
+  }
+
+  /**
+   * Get appInstallStatus
+   *
+   * @return appInstallStatus
+   */
+  @ApiModelProperty(value = "")
+  public List<String> getAppInstallStatus() {
+    return appInstallStatus;
+  }
+
+  public void setAppInstallStatus(List<String> appInstallStatus) {
+    this.appInstallStatus = appInstallStatus;
   }
 
   public ReadTargetingSettingForAdgroup consumptionStatus(List<String> consumptionStatus) {
@@ -992,6 +1022,7 @@ public class ReadTargetingSettingForAdgroup {
         && Objects.equals(this.networkType, readTargetingSettingForAdgroup.networkType)
         && Objects.equals(this.networkOperator, readTargetingSettingForAdgroup.networkOperator)
         && Objects.equals(this.networkScene, readTargetingSettingForAdgroup.networkScene)
+        && Objects.equals(this.appInstallStatus, readTargetingSettingForAdgroup.appInstallStatus)
         && Objects.equals(this.consumptionStatus, readTargetingSettingForAdgroup.consumptionStatus)
         && Objects.equals(
             this.gameConsumptionLevel, readTargetingSettingForAdgroup.gameConsumptionLevel)
@@ -1044,6 +1075,7 @@ public class ReadTargetingSettingForAdgroup {
         networkType,
         networkOperator,
         networkScene,
+        appInstallStatus,
         consumptionStatus,
         gameConsumptionLevel,
         residentialCommunityPrice,

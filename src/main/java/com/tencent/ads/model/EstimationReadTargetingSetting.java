@@ -59,6 +59,9 @@ public class EstimationReadTargetingSetting {
   @SerializedName("network_scene")
   private List<String> networkScene = null;
 
+  @SerializedName("app_install_status")
+  private List<String> appInstallStatus = null;
+
   @SerializedName("mini_game_qq_status")
   private List<String> miniGameQqStatus = null;
 
@@ -421,6 +424,33 @@ public class EstimationReadTargetingSetting {
 
   public void setNetworkScene(List<String> networkScene) {
     this.networkScene = networkScene;
+  }
+
+  public EstimationReadTargetingSetting appInstallStatus(List<String> appInstallStatus) {
+    this.appInstallStatus = appInstallStatus;
+    return this;
+  }
+
+  public EstimationReadTargetingSetting addAppInstallStatusItem(String appInstallStatusItem) {
+    if (this.appInstallStatus == null) {
+      this.appInstallStatus = new ArrayList<String>();
+    }
+    this.appInstallStatus.add(appInstallStatusItem);
+    return this;
+  }
+
+  /**
+   * Get appInstallStatus
+   *
+   * @return appInstallStatus
+   */
+  @ApiModelProperty(value = "")
+  public List<String> getAppInstallStatus() {
+    return appInstallStatus;
+  }
+
+  public void setAppInstallStatus(List<String> appInstallStatus) {
+    this.appInstallStatus = appInstallStatus;
   }
 
   public EstimationReadTargetingSetting miniGameQqStatus(List<String> miniGameQqStatus) {
@@ -872,6 +902,7 @@ public class EstimationReadTargetingSetting {
         && Objects.equals(this.networkType, estimationReadTargetingSetting.networkType)
         && Objects.equals(this.networkOperator, estimationReadTargetingSetting.networkOperator)
         && Objects.equals(this.networkScene, estimationReadTargetingSetting.networkScene)
+        && Objects.equals(this.appInstallStatus, estimationReadTargetingSetting.appInstallStatus)
         && Objects.equals(this.miniGameQqStatus, estimationReadTargetingSetting.miniGameQqStatus)
         && Objects.equals(this.consumptionStatus, estimationReadTargetingSetting.consumptionStatus)
         && Objects.equals(
@@ -917,6 +948,7 @@ public class EstimationReadTargetingSetting {
         networkType,
         networkOperator,
         networkScene,
+        appInstallStatus,
         miniGameQqStatus,
         consumptionStatus,
         gameConsumptionLevel,
