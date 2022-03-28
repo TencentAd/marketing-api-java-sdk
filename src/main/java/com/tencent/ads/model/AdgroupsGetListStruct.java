@@ -212,6 +212,9 @@ public class AdgroupsGetListStruct {
   @SerializedName("dynamic_creative_id_set")
   private List<Long> dynamicCreativeIdSet = null;
 
+  @SerializedName("system_status_explanation")
+  private String systemStatusExplanation = null;
+
   public AdgroupsGetListStruct campaignId(Long campaignId) {
     this.campaignId = campaignId;
     return this;
@@ -1479,6 +1482,25 @@ public class AdgroupsGetListStruct {
     this.dynamicCreativeIdSet = dynamicCreativeIdSet;
   }
 
+  public AdgroupsGetListStruct systemStatusExplanation(String systemStatusExplanation) {
+    this.systemStatusExplanation = systemStatusExplanation;
+    return this;
+  }
+
+  /**
+   * Get systemStatusExplanation
+   *
+   * @return systemStatusExplanation
+   */
+  @ApiModelProperty(value = "")
+  public String getSystemStatusExplanation() {
+    return systemStatusExplanation;
+  }
+
+  public void setSystemStatusExplanation(String systemStatusExplanation) {
+    this.systemStatusExplanation = systemStatusExplanation;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -1562,7 +1584,9 @@ public class AdgroupsGetListStruct {
         && Objects.equals(this.marketingScene, adgroupsGetListStruct.marketingScene)
         && Objects.equals(this.customAdgroupTag, adgroupsGetListStruct.customAdgroupTag)
         && Objects.equals(this.smartTargeting, adgroupsGetListStruct.smartTargeting)
-        && Objects.equals(this.dynamicCreativeIdSet, adgroupsGetListStruct.dynamicCreativeIdSet);
+        && Objects.equals(this.dynamicCreativeIdSet, adgroupsGetListStruct.dynamicCreativeIdSet)
+        && Objects.equals(
+            this.systemStatusExplanation, adgroupsGetListStruct.systemStatusExplanation);
   }
 
   @Override
@@ -1630,7 +1654,8 @@ public class AdgroupsGetListStruct {
         marketingScene,
         customAdgroupTag,
         smartTargeting,
-        dynamicCreativeIdSet);
+        dynamicCreativeIdSet,
+        systemStatusExplanation);
   }
 
   @Override
