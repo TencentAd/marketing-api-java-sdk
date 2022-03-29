@@ -485,6 +485,15 @@ public class ProductItemSpec {
   @SerializedName("product_barcode")
   private String productBarcode = null;
 
+  @SerializedName("business_price")
+  private BusinessPrice businessPrice = null;
+
+  @SerializedName("initial_total_investment")
+  private InitialTotalInvestment initialTotalInvestment = null;
+
+  @SerializedName("business_audience")
+  private BusinessAudience businessAudience = null;
+
   public ProductItemSpec productOuterId(String productOuterId) {
     this.productOuterId = productOuterId;
     return this;
@@ -3507,6 +3516,63 @@ public class ProductItemSpec {
     this.productBarcode = productBarcode;
   }
 
+  public ProductItemSpec businessPrice(BusinessPrice businessPrice) {
+    this.businessPrice = businessPrice;
+    return this;
+  }
+
+  /**
+   * Get businessPrice
+   *
+   * @return businessPrice
+   */
+  @ApiModelProperty(value = "")
+  public BusinessPrice getBusinessPrice() {
+    return businessPrice;
+  }
+
+  public void setBusinessPrice(BusinessPrice businessPrice) {
+    this.businessPrice = businessPrice;
+  }
+
+  public ProductItemSpec initialTotalInvestment(InitialTotalInvestment initialTotalInvestment) {
+    this.initialTotalInvestment = initialTotalInvestment;
+    return this;
+  }
+
+  /**
+   * Get initialTotalInvestment
+   *
+   * @return initialTotalInvestment
+   */
+  @ApiModelProperty(value = "")
+  public InitialTotalInvestment getInitialTotalInvestment() {
+    return initialTotalInvestment;
+  }
+
+  public void setInitialTotalInvestment(InitialTotalInvestment initialTotalInvestment) {
+    this.initialTotalInvestment = initialTotalInvestment;
+  }
+
+  public ProductItemSpec businessAudience(BusinessAudience businessAudience) {
+    this.businessAudience = businessAudience;
+    return this;
+  }
+
+  /**
+   * Get businessAudience
+   *
+   * @return businessAudience
+   */
+  @ApiModelProperty(value = "")
+  public BusinessAudience getBusinessAudience() {
+    return businessAudience;
+  }
+
+  public void setBusinessAudience(BusinessAudience businessAudience) {
+    this.businessAudience = businessAudience;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -3670,7 +3736,10 @@ public class ProductItemSpec {
             this.standardCatalogProductHashId, productItemSpec.standardCatalogProductHashId)
         && Objects.equals(this.customUrl, productItemSpec.customUrl)
         && Objects.equals(this.additionalCustomUrl, productItemSpec.additionalCustomUrl)
-        && Objects.equals(this.productBarcode, productItemSpec.productBarcode);
+        && Objects.equals(this.productBarcode, productItemSpec.productBarcode)
+        && Objects.equals(this.businessPrice, productItemSpec.businessPrice)
+        && Objects.equals(this.initialTotalInvestment, productItemSpec.initialTotalInvestment)
+        && Objects.equals(this.businessAudience, productItemSpec.businessAudience);
   }
 
   @Override
@@ -3829,7 +3898,10 @@ public class ProductItemSpec {
         standardCatalogProductHashId,
         customUrl,
         additionalCustomUrl,
-        productBarcode);
+        productBarcode,
+        businessPrice,
+        initialTotalInvestment,
+        businessAudience);
   }
 
   @Override
