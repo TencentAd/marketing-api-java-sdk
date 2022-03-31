@@ -35,8 +35,8 @@ public class RejectReasonDetailStruct {
   @SerializedName("case_content")
   private String caseContent = null;
 
-  @SerializedName("reject_info_location")
-  private List<RejectInfoLocation> rejectInfoLocation = null;
+  @SerializedName("reject_info_locations")
+  private List<PrereviewRejectInfoLocationStruct> rejectInfoLocations = null;
 
   public RejectReasonDetailStruct rejectReasonId(String rejectReasonId) {
     this.rejectReasonId = rejectReasonId;
@@ -114,32 +114,33 @@ public class RejectReasonDetailStruct {
     this.caseContent = caseContent;
   }
 
-  public RejectReasonDetailStruct rejectInfoLocation(List<RejectInfoLocation> rejectInfoLocation) {
-    this.rejectInfoLocation = rejectInfoLocation;
+  public RejectReasonDetailStruct rejectInfoLocations(
+      List<PrereviewRejectInfoLocationStruct> rejectInfoLocations) {
+    this.rejectInfoLocations = rejectInfoLocations;
     return this;
   }
 
-  public RejectReasonDetailStruct addRejectInfoLocationItem(
-      RejectInfoLocation rejectInfoLocationItem) {
-    if (this.rejectInfoLocation == null) {
-      this.rejectInfoLocation = new ArrayList<RejectInfoLocation>();
+  public RejectReasonDetailStruct addRejectInfoLocationsItem(
+      PrereviewRejectInfoLocationStruct rejectInfoLocationsItem) {
+    if (this.rejectInfoLocations == null) {
+      this.rejectInfoLocations = new ArrayList<PrereviewRejectInfoLocationStruct>();
     }
-    this.rejectInfoLocation.add(rejectInfoLocationItem);
+    this.rejectInfoLocations.add(rejectInfoLocationsItem);
     return this;
   }
 
   /**
-   * Get rejectInfoLocation
+   * Get rejectInfoLocations
    *
-   * @return rejectInfoLocation
+   * @return rejectInfoLocations
    */
   @ApiModelProperty(value = "")
-  public List<RejectInfoLocation> getRejectInfoLocation() {
-    return rejectInfoLocation;
+  public List<PrereviewRejectInfoLocationStruct> getRejectInfoLocations() {
+    return rejectInfoLocations;
   }
 
-  public void setRejectInfoLocation(List<RejectInfoLocation> rejectInfoLocation) {
-    this.rejectInfoLocation = rejectInfoLocation;
+  public void setRejectInfoLocations(List<PrereviewRejectInfoLocationStruct> rejectInfoLocations) {
+    this.rejectInfoLocations = rejectInfoLocations;
   }
 
   @Override
@@ -155,13 +156,13 @@ public class RejectReasonDetailStruct {
         && Objects.equals(this.rejectReasonContent, rejectReasonDetailStruct.rejectReasonContent)
         && Objects.equals(this.caseDoc, rejectReasonDetailStruct.caseDoc)
         && Objects.equals(this.caseContent, rejectReasonDetailStruct.caseContent)
-        && Objects.equals(this.rejectInfoLocation, rejectReasonDetailStruct.rejectInfoLocation);
+        && Objects.equals(this.rejectInfoLocations, rejectReasonDetailStruct.rejectInfoLocations);
   }
 
   @Override
   public int hashCode() {
     return Objects.hash(
-        rejectReasonId, rejectReasonContent, caseDoc, caseContent, rejectInfoLocation);
+        rejectReasonId, rejectReasonContent, caseDoc, caseContent, rejectInfoLocations);
   }
 
   @Override

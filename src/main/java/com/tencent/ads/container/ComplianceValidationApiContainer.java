@@ -27,7 +27,7 @@ public class ComplianceValidationApiContainer extends ApiContainer {
   @Inject ComplianceValidationApi api;
 
   /**
-   * 获取广告素材预审结果
+   * 获取广告素材预审结果(待废弃)
    *
    * @param data (required)
    * @return ComplianceValidationGetResponse

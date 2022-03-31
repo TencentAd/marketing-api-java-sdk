@@ -130,7 +130,6 @@ public class App {
   @Inject RealtimeCostApiContainer realtimeCostApiContainer;
   @Inject ReportApiContainer reportApiContainer;
   @Inject ReviewElementPrereviewResultsApiContainer reviewElementPrereviewResultsApiContainer;
-  @Inject ReviewUrgeCreativesApiContainer reviewUrgeCreativesApiContainer;
   @Inject SceneSpecTagsApiContainer sceneSpecTagsApiContainer;
   @Inject ShopApiContainer shopApiContainer;
   @Inject SplitTestsApiContainer splitTestsApiContainer;
@@ -626,10 +625,6 @@ public class App {
 
   public ReviewElementPrereviewResultsApiContainer reviewElementPrereviewResults() {
     return reviewElementPrereviewResultsApiContainer;
-  }
-
-  public ReviewUrgeCreativesApiContainer reviewUrgeCreatives() {
-    return reviewUrgeCreativesApiContainer;
   }
 
   public SceneSpecTagsApiContainer sceneSpecTags() {

@@ -133,7 +133,7 @@ public class ComplianceValidationApi {
   }
 
   /**
-   * 获取广告素材预审结果
+   * 获取广告素材预审结果(待废弃)
    *
    * @param data (required)
    * @return ComplianceValidationGetResponse
@@ -147,7 +147,7 @@ public class ComplianceValidationApi {
   }
 
   /**
-   * 获取广告素材预审结果
+   * 获取广告素材预审结果(待废弃)
    *
    * @param data (required)
    * @return ApiResponse&lt;ComplianceValidationGetResponse&gt;
@@ -162,7 +162,7 @@ public class ComplianceValidationApi {
   }
 
   /**
-   * 获取广告素材预审结果 (asynchronously)
+   * 获取广告素材预审结果(待废弃) (asynchronously)
    *
    * @param data (required)
    * @param callback The callback to be executed when the API call finishes
