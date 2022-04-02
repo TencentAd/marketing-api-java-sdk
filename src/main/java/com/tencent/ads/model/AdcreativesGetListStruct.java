@@ -167,6 +167,9 @@ public class AdcreativesGetListStruct {
   @SerializedName("creative_template_category")
   private String creativeTemplateCategory = null;
 
+  @SerializedName("android_quick_app_spec")
+  private AndroidQuickAppSpec androidQuickAppSpec = null;
+
   @SerializedName("adcreative_template_id")
   private Long adcreativeTemplateId = null;
 
@@ -1106,6 +1109,25 @@ public class AdcreativesGetListStruct {
     this.creativeTemplateCategory = creativeTemplateCategory;
   }
 
+  public AdcreativesGetListStruct androidQuickAppSpec(AndroidQuickAppSpec androidQuickAppSpec) {
+    this.androidQuickAppSpec = androidQuickAppSpec;
+    return this;
+  }
+
+  /**
+   * Get androidQuickAppSpec
+   *
+   * @return androidQuickAppSpec
+   */
+  @ApiModelProperty(value = "")
+  public AndroidQuickAppSpec getAndroidQuickAppSpec() {
+    return androidQuickAppSpec;
+  }
+
+  public void setAndroidQuickAppSpec(AndroidQuickAppSpec androidQuickAppSpec) {
+    this.androidQuickAppSpec = androidQuickAppSpec;
+  }
+
   public AdcreativesGetListStruct adcreativeTemplateId(Long adcreativeTemplateId) {
     this.adcreativeTemplateId = adcreativeTemplateId;
     return this;
@@ -1212,6 +1234,7 @@ public class AdcreativesGetListStruct {
         && Objects.equals(this.unionMarketSpec, adcreativesGetListStruct.unionMarketSpec)
         && Objects.equals(
             this.creativeTemplateCategory, adcreativesGetListStruct.creativeTemplateCategory)
+        && Objects.equals(this.androidQuickAppSpec, adcreativesGetListStruct.androidQuickAppSpec)
         && Objects.equals(this.adcreativeTemplateId, adcreativesGetListStruct.adcreativeTemplateId)
         && Objects.equals(this.adcreativeElements, adcreativesGetListStruct.adcreativeElements);
   }
@@ -1267,6 +1290,7 @@ public class AdcreativesGetListStruct {
         industryLabel,
         unionMarketSpec,
         creativeTemplateCategory,
+        androidQuickAppSpec,
         adcreativeTemplateId,
         adcreativeElements);
   }

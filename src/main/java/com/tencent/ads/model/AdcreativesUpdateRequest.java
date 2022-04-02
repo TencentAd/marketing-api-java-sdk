@@ -120,6 +120,9 @@ public class AdcreativesUpdateRequest {
   @SerializedName("union_market_spec")
   private UnionMarketSpec unionMarketSpec = null;
 
+  @SerializedName("android_quick_app_spec")
+  private AndroidQuickAppSpec androidQuickAppSpec = null;
+
   @SerializedName("account_id")
   private Long accountId = null;
 
@@ -764,6 +767,25 @@ public class AdcreativesUpdateRequest {
     this.unionMarketSpec = unionMarketSpec;
   }
 
+  public AdcreativesUpdateRequest androidQuickAppSpec(AndroidQuickAppSpec androidQuickAppSpec) {
+    this.androidQuickAppSpec = androidQuickAppSpec;
+    return this;
+  }
+
+  /**
+   * Get androidQuickAppSpec
+   *
+   * @return androidQuickAppSpec
+   */
+  @ApiModelProperty(value = "")
+  public AndroidQuickAppSpec getAndroidQuickAppSpec() {
+    return androidQuickAppSpec;
+  }
+
+  public void setAndroidQuickAppSpec(AndroidQuickAppSpec androidQuickAppSpec) {
+    this.androidQuickAppSpec = androidQuickAppSpec;
+  }
+
   public AdcreativesUpdateRequest accountId(Long accountId) {
     this.accountId = accountId;
     return this;
@@ -852,6 +874,7 @@ public class AdcreativesUpdateRequest {
         && Objects.equals(this.appGiftPackCode, adcreativesUpdateRequest.appGiftPackCode)
         && Objects.equals(this.industryLabel, adcreativesUpdateRequest.industryLabel)
         && Objects.equals(this.unionMarketSpec, adcreativesUpdateRequest.unionMarketSpec)
+        && Objects.equals(this.androidQuickAppSpec, adcreativesUpdateRequest.androidQuickAppSpec)
         && Objects.equals(this.accountId, adcreativesUpdateRequest.accountId)
         && Objects.equals(this.adcreativeElements, adcreativesUpdateRequest.adcreativeElements);
   }
@@ -892,6 +915,7 @@ public class AdcreativesUpdateRequest {
         appGiftPackCode,
         industryLabel,
         unionMarketSpec,
+        androidQuickAppSpec,
         accountId,
         adcreativeElements);
   }

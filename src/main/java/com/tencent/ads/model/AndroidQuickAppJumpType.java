@@ -19,26 +19,18 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-/** 推广计划类型 */
-@JsonAdapter(CampaignType.Adapter.class)
-public enum CampaignType {
-  SEARCH("CAMPAIGN_TYPE_SEARCH"),
+/** 安卓快应用跳转类型 */
+@JsonAdapter(AndroidQuickAppJumpType.Adapter.class)
+public enum AndroidQuickAppJumpType {
+  UNKNOWN("ANDROID_QUICK_APP_JUMP_TYPE_UNKNOWN"),
 
-  NORMAL("CAMPAIGN_TYPE_NORMAL"),
+  DEFAULT("ANDROID_QUICK_APP_JUMP_TYPE_DEFAULT"),
 
-  CONTRACT("CAMPAIGN_TYPE_CONTRACT"),
-
-  WECHAT_OFFICIAL_ACCOUNTS("CAMPAIGN_TYPE_WECHAT_OFFICIAL_ACCOUNTS"),
-
-  WECHAT_MOMENTS("CAMPAIGN_TYPE_WECHAT_MOMENTS"),
-
-  UNSUPPORTED("CAMPAIGN_TYPE_UNSUPPORTED"),
-
-  REWARDQUEST("CAMPAIGN_TYPE_REWARDQUEST");
+  LANDING_PAGE("ANDROID_QUICK_APP_JUMP_TYPE_LANDING_PAGE");
 
   private String value;
 
-  CampaignType(String value) {
+  AndroidQuickAppJumpType(String value) {
     this.value = value;
   }
 
@@ -51,8 +43,8 @@ public enum CampaignType {
     return String.valueOf(value);
   }
 
-  public static CampaignType fromValue(String text) {
-    for (CampaignType b : CampaignType.values()) {
+  public static AndroidQuickAppJumpType fromValue(String text) {
+    for (AndroidQuickAppJumpType b : AndroidQuickAppJumpType.values()) {
       if (String.valueOf(b.value).equals(text)) {
         return b;
       }
@@ -60,17 +52,17 @@ public enum CampaignType {
     return null;
   }
 
-  public static class Adapter extends TypeAdapter<CampaignType> {
+  public static class Adapter extends TypeAdapter<AndroidQuickAppJumpType> {
     @Override
-    public void write(final JsonWriter jsonWriter, final CampaignType enumeration)
+    public void write(final JsonWriter jsonWriter, final AndroidQuickAppJumpType enumeration)
         throws IOException {
       jsonWriter.value(enumeration.getValue());
     }
 
     @Override
-    public CampaignType read(final JsonReader jsonReader) throws IOException {
+    public AndroidQuickAppJumpType read(final JsonReader jsonReader) throws IOException {
       String value = jsonReader.nextString();
-      return CampaignType.fromValue(String.valueOf(value));
+      return AndroidQuickAppJumpType.fromValue(String.valueOf(value));
     }
   }
 }

@@ -132,6 +132,9 @@ public class AdcreativesAddRequest {
   @SerializedName("union_market_spec")
   private UnionMarketSpec unionMarketSpec = null;
 
+  @SerializedName("android_quick_app_spec")
+  private AndroidQuickAppSpec androidQuickAppSpec = null;
+
   @SerializedName("account_id")
   private Long accountId = null;
 
@@ -860,6 +863,25 @@ public class AdcreativesAddRequest {
     this.unionMarketSpec = unionMarketSpec;
   }
 
+  public AdcreativesAddRequest androidQuickAppSpec(AndroidQuickAppSpec androidQuickAppSpec) {
+    this.androidQuickAppSpec = androidQuickAppSpec;
+    return this;
+  }
+
+  /**
+   * Get androidQuickAppSpec
+   *
+   * @return androidQuickAppSpec
+   */
+  @ApiModelProperty(value = "")
+  public AndroidQuickAppSpec getAndroidQuickAppSpec() {
+    return androidQuickAppSpec;
+  }
+
+  public void setAndroidQuickAppSpec(AndroidQuickAppSpec androidQuickAppSpec) {
+    this.androidQuickAppSpec = androidQuickAppSpec;
+  }
+
   public AdcreativesAddRequest accountId(Long accountId) {
     this.accountId = accountId;
     return this;
@@ -967,6 +989,7 @@ public class AdcreativesAddRequest {
             this.enableBreakthroughSiteset, adcreativesAddRequest.enableBreakthroughSiteset)
         && Objects.equals(this.industryLabel, adcreativesAddRequest.industryLabel)
         && Objects.equals(this.unionMarketSpec, adcreativesAddRequest.unionMarketSpec)
+        && Objects.equals(this.androidQuickAppSpec, adcreativesAddRequest.androidQuickAppSpec)
         && Objects.equals(this.accountId, adcreativesAddRequest.accountId)
         && Objects.equals(this.adcreativeTemplateId, adcreativesAddRequest.adcreativeTemplateId)
         && Objects.equals(this.adcreativeElements, adcreativesAddRequest.adcreativeElements);
@@ -1012,6 +1035,7 @@ public class AdcreativesAddRequest {
         enableBreakthroughSiteset,
         industryLabel,
         unionMarketSpec,
+        androidQuickAppSpec,
         accountId,
         adcreativeTemplateId,
         adcreativeElements);
