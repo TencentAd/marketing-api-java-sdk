@@ -66,6 +66,9 @@ public class TaskSpec {
   @SerializedName("task_type_union_position_report_spec")
   private TaskTypeUnionPositionReportSpec taskTypeUnionPositionReportSpec = null;
 
+  @SerializedName("task_type_review_element_prereview_result_spec")
+  private TaskTypeReviewElementPrereviewResultSpec taskTypeReviewElementPrereviewResultSpec = null;
+
   public TaskSpec reportTaskSpec(ReportTaskSpec reportTaskSpec) {
     this.reportTaskSpec = reportTaskSpec;
     return this;
@@ -366,6 +369,27 @@ public class TaskSpec {
     this.taskTypeUnionPositionReportSpec = taskTypeUnionPositionReportSpec;
   }
 
+  public TaskSpec taskTypeReviewElementPrereviewResultSpec(
+      TaskTypeReviewElementPrereviewResultSpec taskTypeReviewElementPrereviewResultSpec) {
+    this.taskTypeReviewElementPrereviewResultSpec = taskTypeReviewElementPrereviewResultSpec;
+    return this;
+  }
+
+  /**
+   * Get taskTypeReviewElementPrereviewResultSpec
+   *
+   * @return taskTypeReviewElementPrereviewResultSpec
+   */
+  @ApiModelProperty(value = "")
+  public TaskTypeReviewElementPrereviewResultSpec getTaskTypeReviewElementPrereviewResultSpec() {
+    return taskTypeReviewElementPrereviewResultSpec;
+  }
+
+  public void setTaskTypeReviewElementPrereviewResultSpec(
+      TaskTypeReviewElementPrereviewResultSpec taskTypeReviewElementPrereviewResultSpec) {
+    this.taskTypeReviewElementPrereviewResultSpec = taskTypeReviewElementPrereviewResultSpec;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -407,7 +431,10 @@ public class TaskSpec {
             this.taskTypeUpdateAndroidUnionChannelPackageSpec,
             taskSpec.taskTypeUpdateAndroidUnionChannelPackageSpec)
         && Objects.equals(
-            this.taskTypeUnionPositionReportSpec, taskSpec.taskTypeUnionPositionReportSpec);
+            this.taskTypeUnionPositionReportSpec, taskSpec.taskTypeUnionPositionReportSpec)
+        && Objects.equals(
+            this.taskTypeReviewElementPrereviewResultSpec,
+            taskSpec.taskTypeReviewElementPrereviewResultSpec);
   }
 
   @Override
@@ -426,7 +453,8 @@ public class TaskSpec {
         taskTypeUpdateAndroidChannelPackageSpec,
         taskTypeCreateAndroidUnionChannelPackageSpec,
         taskTypeUpdateAndroidUnionChannelPackageSpec,
-        taskTypeUnionPositionReportSpec);
+        taskTypeUnionPositionReportSpec,
+        taskTypeReviewElementPrereviewResultSpec);
   }
 
   @Override

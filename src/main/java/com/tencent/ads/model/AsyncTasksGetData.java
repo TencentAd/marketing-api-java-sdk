@@ -32,6 +32,9 @@ public class AsyncTasksGetData {
   @SerializedName("union_channel_package_info_list")
   private List<UnionChannelPackageInfo> unionChannelPackageInfoList = null;
 
+  @SerializedName("review_element_prereview_result_list")
+  private List<ElementPrereviewResultStruct> reviewElementPrereviewResultList = null;
+
   public AsyncTasksGetData fileInfoList(List<AsyncTasksGetFileInfo> fileInfoList) {
     this.fileInfoList = fileInfoList;
     return this;
@@ -117,6 +120,36 @@ public class AsyncTasksGetData {
     this.unionChannelPackageInfoList = unionChannelPackageInfoList;
   }
 
+  public AsyncTasksGetData reviewElementPrereviewResultList(
+      List<ElementPrereviewResultStruct> reviewElementPrereviewResultList) {
+    this.reviewElementPrereviewResultList = reviewElementPrereviewResultList;
+    return this;
+  }
+
+  public AsyncTasksGetData addReviewElementPrereviewResultListItem(
+      ElementPrereviewResultStruct reviewElementPrereviewResultListItem) {
+    if (this.reviewElementPrereviewResultList == null) {
+      this.reviewElementPrereviewResultList = new ArrayList<ElementPrereviewResultStruct>();
+    }
+    this.reviewElementPrereviewResultList.add(reviewElementPrereviewResultListItem);
+    return this;
+  }
+
+  /**
+   * Get reviewElementPrereviewResultList
+   *
+   * @return reviewElementPrereviewResultList
+   */
+  @ApiModelProperty(value = "")
+  public List<ElementPrereviewResultStruct> getReviewElementPrereviewResultList() {
+    return reviewElementPrereviewResultList;
+  }
+
+  public void setReviewElementPrereviewResultList(
+      List<ElementPrereviewResultStruct> reviewElementPrereviewResultList) {
+    this.reviewElementPrereviewResultList = reviewElementPrereviewResultList;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -129,12 +162,19 @@ public class AsyncTasksGetData {
     return Objects.equals(this.fileInfoList, asyncTasksGetData.fileInfoList)
         && Objects.equals(this.channelPackageInfoList, asyncTasksGetData.channelPackageInfoList)
         && Objects.equals(
-            this.unionChannelPackageInfoList, asyncTasksGetData.unionChannelPackageInfoList);
+            this.unionChannelPackageInfoList, asyncTasksGetData.unionChannelPackageInfoList)
+        && Objects.equals(
+            this.reviewElementPrereviewResultList,
+            asyncTasksGetData.reviewElementPrereviewResultList);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(fileInfoList, channelPackageInfoList, unionChannelPackageInfoList);
+    return Objects.hash(
+        fileInfoList,
+        channelPackageInfoList,
+        unionChannelPackageInfoList,
+        reviewElementPrereviewResultList);
   }
 
   @Override

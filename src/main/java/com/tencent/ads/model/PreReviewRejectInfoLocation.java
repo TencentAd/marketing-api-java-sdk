@@ -20,7 +20,7 @@ import java.util.Objects;
 
 /** 标注位置信息 */
 @ApiModel(description = "标注位置信息")
-public class PrereviewRejectInfoLocationStruct {
+public class PreReviewRejectInfoLocation {
   @SerializedName("x")
   private Long x = null;
 
@@ -45,7 +45,7 @@ public class PrereviewRejectInfoLocationStruct {
   @SerializedName("related_img_url")
   private String relatedImgUrl = null;
 
-  public PrereviewRejectInfoLocationStruct x(Long x) {
+  public PreReviewRejectInfoLocation x(Long x) {
     this.x = x;
     return this;
   }
@@ -64,7 +64,7 @@ public class PrereviewRejectInfoLocationStruct {
     this.x = x;
   }
 
-  public PrereviewRejectInfoLocationStruct y(Long y) {
+  public PreReviewRejectInfoLocation y(Long y) {
     this.y = y;
     return this;
   }
@@ -83,7 +83,7 @@ public class PrereviewRejectInfoLocationStruct {
     this.y = y;
   }
 
-  public PrereviewRejectInfoLocationStruct width(Long width) {
+  public PreReviewRejectInfoLocation width(Long width) {
     this.width = width;
     return this;
   }
@@ -102,7 +102,7 @@ public class PrereviewRejectInfoLocationStruct {
     this.width = width;
   }
 
-  public PrereviewRejectInfoLocationStruct height(Long height) {
+  public PreReviewRejectInfoLocation height(Long height) {
     this.height = height;
     return this;
   }
@@ -121,7 +121,7 @@ public class PrereviewRejectInfoLocationStruct {
     this.height = height;
   }
 
-  public PrereviewRejectInfoLocationStruct timeSecond(Double timeSecond) {
+  public PreReviewRejectInfoLocation timeSecond(Double timeSecond) {
     this.timeSecond = timeSecond;
     return this;
   }
@@ -140,7 +140,7 @@ public class PrereviewRejectInfoLocationStruct {
     this.timeSecond = timeSecond;
   }
 
-  public PrereviewRejectInfoLocationStruct locationImgUrl(String locationImgUrl) {
+  public PreReviewRejectInfoLocation locationImgUrl(String locationImgUrl) {
     this.locationImgUrl = locationImgUrl;
     return this;
   }
@@ -159,7 +159,7 @@ public class PrereviewRejectInfoLocationStruct {
     this.locationImgUrl = locationImgUrl;
   }
 
-  public PrereviewRejectInfoLocationStruct imgUrl(String imgUrl) {
+  public PreReviewRejectInfoLocation imgUrl(String imgUrl) {
     this.imgUrl = imgUrl;
     return this;
   }
@@ -178,7 +178,7 @@ public class PrereviewRejectInfoLocationStruct {
     this.imgUrl = imgUrl;
   }
 
-  public PrereviewRejectInfoLocationStruct relatedImgUrl(String relatedImgUrl) {
+  public PreReviewRejectInfoLocation relatedImgUrl(String relatedImgUrl) {
     this.relatedImgUrl = relatedImgUrl;
     return this;
   }
@@ -205,16 +205,15 @@ public class PrereviewRejectInfoLocationStruct {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    PrereviewRejectInfoLocationStruct prereviewRejectInfoLocationStruct =
-        (PrereviewRejectInfoLocationStruct) o;
-    return Objects.equals(this.x, prereviewRejectInfoLocationStruct.x)
-        && Objects.equals(this.y, prereviewRejectInfoLocationStruct.y)
-        && Objects.equals(this.width, prereviewRejectInfoLocationStruct.width)
-        && Objects.equals(this.height, prereviewRejectInfoLocationStruct.height)
-        && Objects.equals(this.timeSecond, prereviewRejectInfoLocationStruct.timeSecond)
-        && Objects.equals(this.locationImgUrl, prereviewRejectInfoLocationStruct.locationImgUrl)
-        && Objects.equals(this.imgUrl, prereviewRejectInfoLocationStruct.imgUrl)
-        && Objects.equals(this.relatedImgUrl, prereviewRejectInfoLocationStruct.relatedImgUrl);
+    PreReviewRejectInfoLocation preReviewRejectInfoLocation = (PreReviewRejectInfoLocation) o;
+    return Objects.equals(this.x, preReviewRejectInfoLocation.x)
+        && Objects.equals(this.y, preReviewRejectInfoLocation.y)
+        && Objects.equals(this.width, preReviewRejectInfoLocation.width)
+        && Objects.equals(this.height, preReviewRejectInfoLocation.height)
+        && Objects.equals(this.timeSecond, preReviewRejectInfoLocation.timeSecond)
+        && Objects.equals(this.locationImgUrl, preReviewRejectInfoLocation.locationImgUrl)
+        && Objects.equals(this.imgUrl, preReviewRejectInfoLocation.imgUrl)
+        && Objects.equals(this.relatedImgUrl, preReviewRejectInfoLocation.relatedImgUrl);
   }
 
   @Override

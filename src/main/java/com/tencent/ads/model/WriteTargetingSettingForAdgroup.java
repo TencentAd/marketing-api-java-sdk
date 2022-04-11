@@ -35,17 +35,11 @@ public class WriteTargetingSettingForAdgroup {
   @SerializedName("marital_status")
   private List<String> maritalStatus = null;
 
-  @SerializedName("working_status")
-  private List<String> workingStatus = null;
-
   @SerializedName("geo_location")
   private GeoLocations geoLocation = null;
 
   @SerializedName("user_os")
   private List<String> userOs = null;
-
-  @SerializedName("new_device")
-  private List<String> newDevice = null;
 
   @SerializedName("device_price")
   private List<String> devicePrice = null;
@@ -59,9 +53,6 @@ public class WriteTargetingSettingForAdgroup {
   @SerializedName("network_operator")
   private List<String> networkOperator = null;
 
-  @SerializedName("network_scene")
-  private List<String> networkScene = null;
-
   @SerializedName("app_install_status")
   private List<String> appInstallStatus = null;
 
@@ -71,14 +62,8 @@ public class WriteTargetingSettingForAdgroup {
   @SerializedName("game_consumption_level")
   private List<String> gameConsumptionLevel = null;
 
-  @SerializedName("residential_community_price")
-  private List<ResidentialCommunityPriceStruct> residentialCommunityPrice = null;
-
   @SerializedName("financial_situation")
   private List<String> financialSituation = null;
-
-  @SerializedName("consumption_type")
-  private List<String> consumptionType = null;
 
   @SerializedName("wechat_ad_behavior")
   private WechatAdBehavior wechatAdBehavior = null;
@@ -209,33 +194,6 @@ public class WriteTargetingSettingForAdgroup {
     this.maritalStatus = maritalStatus;
   }
 
-  public WriteTargetingSettingForAdgroup workingStatus(List<String> workingStatus) {
-    this.workingStatus = workingStatus;
-    return this;
-  }
-
-  public WriteTargetingSettingForAdgroup addWorkingStatusItem(String workingStatusItem) {
-    if (this.workingStatus == null) {
-      this.workingStatus = new ArrayList<String>();
-    }
-    this.workingStatus.add(workingStatusItem);
-    return this;
-  }
-
-  /**
-   * Get workingStatus
-   *
-   * @return workingStatus
-   */
-  @ApiModelProperty(value = "")
-  public List<String> getWorkingStatus() {
-    return workingStatus;
-  }
-
-  public void setWorkingStatus(List<String> workingStatus) {
-    this.workingStatus = workingStatus;
-  }
-
   public WriteTargetingSettingForAdgroup geoLocation(GeoLocations geoLocation) {
     this.geoLocation = geoLocation;
     return this;
@@ -280,33 +238,6 @@ public class WriteTargetingSettingForAdgroup {
 
   public void setUserOs(List<String> userOs) {
     this.userOs = userOs;
-  }
-
-  public WriteTargetingSettingForAdgroup newDevice(List<String> newDevice) {
-    this.newDevice = newDevice;
-    return this;
-  }
-
-  public WriteTargetingSettingForAdgroup addNewDeviceItem(String newDeviceItem) {
-    if (this.newDevice == null) {
-      this.newDevice = new ArrayList<String>();
-    }
-    this.newDevice.add(newDeviceItem);
-    return this;
-  }
-
-  /**
-   * Get newDevice
-   *
-   * @return newDevice
-   */
-  @ApiModelProperty(value = "")
-  public List<String> getNewDevice() {
-    return newDevice;
-  }
-
-  public void setNewDevice(List<String> newDevice) {
-    this.newDevice = newDevice;
   }
 
   public WriteTargetingSettingForAdgroup devicePrice(List<String> devicePrice) {
@@ -409,33 +340,6 @@ public class WriteTargetingSettingForAdgroup {
     this.networkOperator = networkOperator;
   }
 
-  public WriteTargetingSettingForAdgroup networkScene(List<String> networkScene) {
-    this.networkScene = networkScene;
-    return this;
-  }
-
-  public WriteTargetingSettingForAdgroup addNetworkSceneItem(String networkSceneItem) {
-    if (this.networkScene == null) {
-      this.networkScene = new ArrayList<String>();
-    }
-    this.networkScene.add(networkSceneItem);
-    return this;
-  }
-
-  /**
-   * Get networkScene
-   *
-   * @return networkScene
-   */
-  @ApiModelProperty(value = "")
-  public List<String> getNetworkScene() {
-    return networkScene;
-  }
-
-  public void setNetworkScene(List<String> networkScene) {
-    this.networkScene = networkScene;
-  }
-
   public WriteTargetingSettingForAdgroup appInstallStatus(List<String> appInstallStatus) {
     this.appInstallStatus = appInstallStatus;
     return this;
@@ -518,36 +422,6 @@ public class WriteTargetingSettingForAdgroup {
     this.gameConsumptionLevel = gameConsumptionLevel;
   }
 
-  public WriteTargetingSettingForAdgroup residentialCommunityPrice(
-      List<ResidentialCommunityPriceStruct> residentialCommunityPrice) {
-    this.residentialCommunityPrice = residentialCommunityPrice;
-    return this;
-  }
-
-  public WriteTargetingSettingForAdgroup addResidentialCommunityPriceItem(
-      ResidentialCommunityPriceStruct residentialCommunityPriceItem) {
-    if (this.residentialCommunityPrice == null) {
-      this.residentialCommunityPrice = new ArrayList<ResidentialCommunityPriceStruct>();
-    }
-    this.residentialCommunityPrice.add(residentialCommunityPriceItem);
-    return this;
-  }
-
-  /**
-   * Get residentialCommunityPrice
-   *
-   * @return residentialCommunityPrice
-   */
-  @ApiModelProperty(value = "")
-  public List<ResidentialCommunityPriceStruct> getResidentialCommunityPrice() {
-    return residentialCommunityPrice;
-  }
-
-  public void setResidentialCommunityPrice(
-      List<ResidentialCommunityPriceStruct> residentialCommunityPrice) {
-    this.residentialCommunityPrice = residentialCommunityPrice;
-  }
-
   public WriteTargetingSettingForAdgroup financialSituation(List<String> financialSituation) {
     this.financialSituation = financialSituation;
     return this;
@@ -573,33 +447,6 @@ public class WriteTargetingSettingForAdgroup {
 
   public void setFinancialSituation(List<String> financialSituation) {
     this.financialSituation = financialSituation;
-  }
-
-  public WriteTargetingSettingForAdgroup consumptionType(List<String> consumptionType) {
-    this.consumptionType = consumptionType;
-    return this;
-  }
-
-  public WriteTargetingSettingForAdgroup addConsumptionTypeItem(String consumptionTypeItem) {
-    if (this.consumptionType == null) {
-      this.consumptionType = new ArrayList<String>();
-    }
-    this.consumptionType.add(consumptionTypeItem);
-    return this;
-  }
-
-  /**
-   * Get consumptionType
-   *
-   * @return consumptionType
-   */
-  @ApiModelProperty(value = "")
-  public List<String> getConsumptionType() {
-    return consumptionType;
-  }
-
-  public void setConsumptionType(List<String> consumptionType) {
-    this.consumptionType = consumptionType;
   }
 
   public WriteTargetingSettingForAdgroup wechatAdBehavior(WechatAdBehavior wechatAdBehavior) {
@@ -785,25 +632,18 @@ public class WriteTargetingSettingForAdgroup {
         && Objects.equals(this.gender, writeTargetingSettingForAdgroup.gender)
         && Objects.equals(this.education, writeTargetingSettingForAdgroup.education)
         && Objects.equals(this.maritalStatus, writeTargetingSettingForAdgroup.maritalStatus)
-        && Objects.equals(this.workingStatus, writeTargetingSettingForAdgroup.workingStatus)
         && Objects.equals(this.geoLocation, writeTargetingSettingForAdgroup.geoLocation)
         && Objects.equals(this.userOs, writeTargetingSettingForAdgroup.userOs)
-        && Objects.equals(this.newDevice, writeTargetingSettingForAdgroup.newDevice)
         && Objects.equals(this.devicePrice, writeTargetingSettingForAdgroup.devicePrice)
         && Objects.equals(this.deviceBrandModel, writeTargetingSettingForAdgroup.deviceBrandModel)
         && Objects.equals(this.networkType, writeTargetingSettingForAdgroup.networkType)
         && Objects.equals(this.networkOperator, writeTargetingSettingForAdgroup.networkOperator)
-        && Objects.equals(this.networkScene, writeTargetingSettingForAdgroup.networkScene)
         && Objects.equals(this.appInstallStatus, writeTargetingSettingForAdgroup.appInstallStatus)
         && Objects.equals(this.consumptionStatus, writeTargetingSettingForAdgroup.consumptionStatus)
         && Objects.equals(
             this.gameConsumptionLevel, writeTargetingSettingForAdgroup.gameConsumptionLevel)
         && Objects.equals(
-            this.residentialCommunityPrice,
-            writeTargetingSettingForAdgroup.residentialCommunityPrice)
-        && Objects.equals(
             this.financialSituation, writeTargetingSettingForAdgroup.financialSituation)
-        && Objects.equals(this.consumptionType, writeTargetingSettingForAdgroup.consumptionType)
         && Objects.equals(this.wechatAdBehavior, writeTargetingSettingForAdgroup.wechatAdBehavior)
         && Objects.equals(this.customAudience, writeTargetingSettingForAdgroup.customAudience)
         && Objects.equals(
@@ -826,21 +666,16 @@ public class WriteTargetingSettingForAdgroup {
         gender,
         education,
         maritalStatus,
-        workingStatus,
         geoLocation,
         userOs,
-        newDevice,
         devicePrice,
         deviceBrandModel,
         networkType,
         networkOperator,
-        networkScene,
         appInstallStatus,
         consumptionStatus,
         gameConsumptionLevel,
-        residentialCommunityPrice,
         financialSituation,
-        consumptionType,
         wechatAdBehavior,
         customAudience,
         excludedCustomAudience,

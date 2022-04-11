@@ -35,17 +35,11 @@ public class EstimationReadTargetingSetting {
   @SerializedName("marital_status")
   private List<String> maritalStatus = null;
 
-  @SerializedName("working_status")
-  private List<String> workingStatus = null;
-
   @SerializedName("geo_location")
   private GeoLocations geoLocation = null;
 
   @SerializedName("user_os")
   private List<String> userOs = null;
-
-  @SerializedName("new_device")
-  private List<String> newDevice = null;
 
   @SerializedName("device_price")
   private List<String> devicePrice = null;
@@ -55,9 +49,6 @@ public class EstimationReadTargetingSetting {
 
   @SerializedName("network_operator")
   private List<String> networkOperator = null;
-
-  @SerializedName("network_scene")
-  private List<String> networkScene = null;
 
   @SerializedName("app_install_status")
   private List<String> appInstallStatus = null;
@@ -73,9 +64,6 @@ public class EstimationReadTargetingSetting {
 
   @SerializedName("paid_user")
   private List<String> paidUser = null;
-
-  @SerializedName("residential_community_price")
-  private List<ResidentialCommunityPriceStruct> residentialCommunityPrice = null;
 
   @SerializedName("wechat_ad_behavior")
   private LimitWechatAdBehavior wechatAdBehavior = null;
@@ -95,9 +83,6 @@ public class EstimationReadTargetingSetting {
   @SerializedName("behavior_or_interest")
   private BehaviorOrInterest behaviorOrInterest = null;
 
-  @SerializedName("air_quality_index")
-  private List<String> airQualityIndex = null;
-
   @SerializedName("wechat_official_account_category")
   private List<Long> wechatOfficialAccountCategory = null;
 
@@ -106,9 +91,6 @@ public class EstimationReadTargetingSetting {
 
   @SerializedName("financial_situation")
   private List<String> financialSituation = null;
-
-  @SerializedName("consumption_type")
-  private List<String> consumptionType = null;
 
   public EstimationReadTargetingSetting age(List<AgeStruct> age) {
     this.age = age;
@@ -218,33 +200,6 @@ public class EstimationReadTargetingSetting {
     this.maritalStatus = maritalStatus;
   }
 
-  public EstimationReadTargetingSetting workingStatus(List<String> workingStatus) {
-    this.workingStatus = workingStatus;
-    return this;
-  }
-
-  public EstimationReadTargetingSetting addWorkingStatusItem(String workingStatusItem) {
-    if (this.workingStatus == null) {
-      this.workingStatus = new ArrayList<String>();
-    }
-    this.workingStatus.add(workingStatusItem);
-    return this;
-  }
-
-  /**
-   * Get workingStatus
-   *
-   * @return workingStatus
-   */
-  @ApiModelProperty(value = "")
-  public List<String> getWorkingStatus() {
-    return workingStatus;
-  }
-
-  public void setWorkingStatus(List<String> workingStatus) {
-    this.workingStatus = workingStatus;
-  }
-
   public EstimationReadTargetingSetting geoLocation(GeoLocations geoLocation) {
     this.geoLocation = geoLocation;
     return this;
@@ -289,33 +244,6 @@ public class EstimationReadTargetingSetting {
 
   public void setUserOs(List<String> userOs) {
     this.userOs = userOs;
-  }
-
-  public EstimationReadTargetingSetting newDevice(List<String> newDevice) {
-    this.newDevice = newDevice;
-    return this;
-  }
-
-  public EstimationReadTargetingSetting addNewDeviceItem(String newDeviceItem) {
-    if (this.newDevice == null) {
-      this.newDevice = new ArrayList<String>();
-    }
-    this.newDevice.add(newDeviceItem);
-    return this;
-  }
-
-  /**
-   * Get newDevice
-   *
-   * @return newDevice
-   */
-  @ApiModelProperty(value = "")
-  public List<String> getNewDevice() {
-    return newDevice;
-  }
-
-  public void setNewDevice(List<String> newDevice) {
-    this.newDevice = newDevice;
   }
 
   public EstimationReadTargetingSetting devicePrice(List<String> devicePrice) {
@@ -397,33 +325,6 @@ public class EstimationReadTargetingSetting {
 
   public void setNetworkOperator(List<String> networkOperator) {
     this.networkOperator = networkOperator;
-  }
-
-  public EstimationReadTargetingSetting networkScene(List<String> networkScene) {
-    this.networkScene = networkScene;
-    return this;
-  }
-
-  public EstimationReadTargetingSetting addNetworkSceneItem(String networkSceneItem) {
-    if (this.networkScene == null) {
-      this.networkScene = new ArrayList<String>();
-    }
-    this.networkScene.add(networkSceneItem);
-    return this;
-  }
-
-  /**
-   * Get networkScene
-   *
-   * @return networkScene
-   */
-  @ApiModelProperty(value = "")
-  public List<String> getNetworkScene() {
-    return networkScene;
-  }
-
-  public void setNetworkScene(List<String> networkScene) {
-    this.networkScene = networkScene;
   }
 
   public EstimationReadTargetingSetting appInstallStatus(List<String> appInstallStatus) {
@@ -560,36 +461,6 @@ public class EstimationReadTargetingSetting {
 
   public void setPaidUser(List<String> paidUser) {
     this.paidUser = paidUser;
-  }
-
-  public EstimationReadTargetingSetting residentialCommunityPrice(
-      List<ResidentialCommunityPriceStruct> residentialCommunityPrice) {
-    this.residentialCommunityPrice = residentialCommunityPrice;
-    return this;
-  }
-
-  public EstimationReadTargetingSetting addResidentialCommunityPriceItem(
-      ResidentialCommunityPriceStruct residentialCommunityPriceItem) {
-    if (this.residentialCommunityPrice == null) {
-      this.residentialCommunityPrice = new ArrayList<ResidentialCommunityPriceStruct>();
-    }
-    this.residentialCommunityPrice.add(residentialCommunityPriceItem);
-    return this;
-  }
-
-  /**
-   * Get residentialCommunityPrice
-   *
-   * @return residentialCommunityPrice
-   */
-  @ApiModelProperty(value = "")
-  public List<ResidentialCommunityPriceStruct> getResidentialCommunityPrice() {
-    return residentialCommunityPrice;
-  }
-
-  public void setResidentialCommunityPrice(
-      List<ResidentialCommunityPriceStruct> residentialCommunityPrice) {
-    this.residentialCommunityPrice = residentialCommunityPrice;
   }
 
   public EstimationReadTargetingSetting wechatAdBehavior(LimitWechatAdBehavior wechatAdBehavior) {
@@ -743,33 +614,6 @@ public class EstimationReadTargetingSetting {
     this.behaviorOrInterest = behaviorOrInterest;
   }
 
-  public EstimationReadTargetingSetting airQualityIndex(List<String> airQualityIndex) {
-    this.airQualityIndex = airQualityIndex;
-    return this;
-  }
-
-  public EstimationReadTargetingSetting addAirQualityIndexItem(String airQualityIndexItem) {
-    if (this.airQualityIndex == null) {
-      this.airQualityIndex = new ArrayList<String>();
-    }
-    this.airQualityIndex.add(airQualityIndexItem);
-    return this;
-  }
-
-  /**
-   * Get airQualityIndex
-   *
-   * @return airQualityIndex
-   */
-  @ApiModelProperty(value = "")
-  public List<String> getAirQualityIndex() {
-    return airQualityIndex;
-  }
-
-  public void setAirQualityIndex(List<String> airQualityIndex) {
-    this.airQualityIndex = airQualityIndex;
-  }
-
   public EstimationReadTargetingSetting wechatOfficialAccountCategory(
       List<Long> wechatOfficialAccountCategory) {
     this.wechatOfficialAccountCategory = wechatOfficialAccountCategory;
@@ -853,33 +697,6 @@ public class EstimationReadTargetingSetting {
     this.financialSituation = financialSituation;
   }
 
-  public EstimationReadTargetingSetting consumptionType(List<String> consumptionType) {
-    this.consumptionType = consumptionType;
-    return this;
-  }
-
-  public EstimationReadTargetingSetting addConsumptionTypeItem(String consumptionTypeItem) {
-    if (this.consumptionType == null) {
-      this.consumptionType = new ArrayList<String>();
-    }
-    this.consumptionType.add(consumptionTypeItem);
-    return this;
-  }
-
-  /**
-   * Get consumptionType
-   *
-   * @return consumptionType
-   */
-  @ApiModelProperty(value = "")
-  public List<String> getConsumptionType() {
-    return consumptionType;
-  }
-
-  public void setConsumptionType(List<String> consumptionType) {
-    this.consumptionType = consumptionType;
-  }
-
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -894,23 +711,17 @@ public class EstimationReadTargetingSetting {
         && Objects.equals(this.gender, estimationReadTargetingSetting.gender)
         && Objects.equals(this.education, estimationReadTargetingSetting.education)
         && Objects.equals(this.maritalStatus, estimationReadTargetingSetting.maritalStatus)
-        && Objects.equals(this.workingStatus, estimationReadTargetingSetting.workingStatus)
         && Objects.equals(this.geoLocation, estimationReadTargetingSetting.geoLocation)
         && Objects.equals(this.userOs, estimationReadTargetingSetting.userOs)
-        && Objects.equals(this.newDevice, estimationReadTargetingSetting.newDevice)
         && Objects.equals(this.devicePrice, estimationReadTargetingSetting.devicePrice)
         && Objects.equals(this.networkType, estimationReadTargetingSetting.networkType)
         && Objects.equals(this.networkOperator, estimationReadTargetingSetting.networkOperator)
-        && Objects.equals(this.networkScene, estimationReadTargetingSetting.networkScene)
         && Objects.equals(this.appInstallStatus, estimationReadTargetingSetting.appInstallStatus)
         && Objects.equals(this.miniGameQqStatus, estimationReadTargetingSetting.miniGameQqStatus)
         && Objects.equals(this.consumptionStatus, estimationReadTargetingSetting.consumptionStatus)
         && Objects.equals(
             this.gameConsumptionLevel, estimationReadTargetingSetting.gameConsumptionLevel)
         && Objects.equals(this.paidUser, estimationReadTargetingSetting.paidUser)
-        && Objects.equals(
-            this.residentialCommunityPrice,
-            estimationReadTargetingSetting.residentialCommunityPrice)
         && Objects.equals(this.wechatAdBehavior, estimationReadTargetingSetting.wechatAdBehavior)
         && Objects.equals(this.customAudience, estimationReadTargetingSetting.customAudience)
         && Objects.equals(
@@ -922,15 +733,13 @@ public class EstimationReadTargetingSetting {
             estimationReadTargetingSetting.deprecatedExcludedCustomAudience)
         && Objects.equals(
             this.behaviorOrInterest, estimationReadTargetingSetting.behaviorOrInterest)
-        && Objects.equals(this.airQualityIndex, estimationReadTargetingSetting.airQualityIndex)
         && Objects.equals(
             this.wechatOfficialAccountCategory,
             estimationReadTargetingSetting.wechatOfficialAccountCategory)
         && Objects.equals(
             this.mobileUnionCategory, estimationReadTargetingSetting.mobileUnionCategory)
         && Objects.equals(
-            this.financialSituation, estimationReadTargetingSetting.financialSituation)
-        && Objects.equals(this.consumptionType, estimationReadTargetingSetting.consumptionType);
+            this.financialSituation, estimationReadTargetingSetting.financialSituation);
   }
 
   @Override
@@ -940,31 +749,25 @@ public class EstimationReadTargetingSetting {
         gender,
         education,
         maritalStatus,
-        workingStatus,
         geoLocation,
         userOs,
-        newDevice,
         devicePrice,
         networkType,
         networkOperator,
-        networkScene,
         appInstallStatus,
         miniGameQqStatus,
         consumptionStatus,
         gameConsumptionLevel,
         paidUser,
-        residentialCommunityPrice,
         wechatAdBehavior,
         customAudience,
         excludedCustomAudience,
         deprecatedCustomAudience,
         deprecatedExcludedCustomAudience,
         behaviorOrInterest,
-        airQualityIndex,
         wechatOfficialAccountCategory,
         mobileUnionCategory,
-        financialSituation,
-        consumptionType);
+        financialSituation);
   }
 
   @Override

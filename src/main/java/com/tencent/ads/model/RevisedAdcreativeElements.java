@@ -71,8 +71,8 @@ public class RevisedAdcreativeElements {
   @SerializedName("countdown_begin")
   private Long countdownBegin = null;
 
-  @SerializedName("countdown")
-  private Long countdown = null;
+  @SerializedName("countdown_expiring_timestamp")
+  private Long countdownExpiringTimestamp = null;
 
   @SerializedName("countdown_price")
   private String countdownPrice = null;
@@ -148,9 +148,6 @@ public class RevisedAdcreativeElements {
 
   @SerializedName("end_page")
   private AdCreativeEndPage endPage = null;
-
-  @SerializedName("shop_image")
-  private String shopImage = null;
 
   @SerializedName("head_line")
   private String headLine = null;
@@ -492,23 +489,23 @@ public class RevisedAdcreativeElements {
     this.countdownBegin = countdownBegin;
   }
 
-  public RevisedAdcreativeElements countdown(Long countdown) {
-    this.countdown = countdown;
+  public RevisedAdcreativeElements countdownExpiringTimestamp(Long countdownExpiringTimestamp) {
+    this.countdownExpiringTimestamp = countdownExpiringTimestamp;
     return this;
   }
 
   /**
-   * Get countdown
+   * Get countdownExpiringTimestamp
    *
-   * @return countdown
+   * @return countdownExpiringTimestamp
    */
   @ApiModelProperty(value = "")
-  public Long getCountdown() {
-    return countdown;
+  public Long getCountdownExpiringTimestamp() {
+    return countdownExpiringTimestamp;
   }
 
-  public void setCountdown(Long countdown) {
-    this.countdown = countdown;
+  public void setCountdownExpiringTimestamp(Long countdownExpiringTimestamp) {
+    this.countdownExpiringTimestamp = countdownExpiringTimestamp;
   }
 
   public RevisedAdcreativeElements countdownPrice(String countdownPrice) {
@@ -1011,25 +1008,6 @@ public class RevisedAdcreativeElements {
     this.endPage = endPage;
   }
 
-  public RevisedAdcreativeElements shopImage(String shopImage) {
-    this.shopImage = shopImage;
-    return this;
-  }
-
-  /**
-   * Get shopImage
-   *
-   * @return shopImage
-   */
-  @ApiModelProperty(value = "")
-  public String getShopImage() {
-    return shopImage;
-  }
-
-  public void setShopImage(String shopImage) {
-    this.shopImage = shopImage;
-  }
-
   public RevisedAdcreativeElements headLine(String headLine) {
     this.headLine = headLine;
     return this;
@@ -1169,7 +1147,8 @@ public class RevisedAdcreativeElements {
         && Objects.equals(this.bottomText, revisedAdcreativeElements.bottomText)
         && Objects.equals(this.excitationText, revisedAdcreativeElements.excitationText)
         && Objects.equals(this.countdownBegin, revisedAdcreativeElements.countdownBegin)
-        && Objects.equals(this.countdown, revisedAdcreativeElements.countdown)
+        && Objects.equals(
+            this.countdownExpiringTimestamp, revisedAdcreativeElements.countdownExpiringTimestamp)
         && Objects.equals(this.countdownPrice, revisedAdcreativeElements.countdownPrice)
         && Objects.equals(this.countdownTimeType, revisedAdcreativeElements.countdownTimeType)
         && Objects.equals(this.miniProgramId, revisedAdcreativeElements.miniProgramId)
@@ -1195,7 +1174,6 @@ public class RevisedAdcreativeElements {
         && Objects.equals(this.fullScreenImage, revisedAdcreativeElements.fullScreenImage)
         && Objects.equals(this.zipUrl, revisedAdcreativeElements.zipUrl)
         && Objects.equals(this.endPage, revisedAdcreativeElements.endPage)
-        && Objects.equals(this.shopImage, revisedAdcreativeElements.shopImage)
         && Objects.equals(this.headLine, revisedAdcreativeElements.headLine)
         && Objects.equals(this.shopImageStruct, revisedAdcreativeElements.shopImageStruct)
         && Objects.equals(this.chosenButton, revisedAdcreativeElements.chosenButton)
@@ -1223,7 +1201,7 @@ public class RevisedAdcreativeElements {
         bottomText,
         excitationText,
         countdownBegin,
-        countdown,
+        countdownExpiringTimestamp,
         countdownPrice,
         countdownTimeType,
         miniProgramId,
@@ -1249,7 +1227,6 @@ public class RevisedAdcreativeElements {
         fullScreenImage,
         zipUrl,
         endPage,
-        shopImage,
         headLine,
         shopImageStruct,
         chosenButton,

@@ -1206,6 +1206,165 @@ public class TargetingTagReportsGetListStruct {
   @SerializedName("scan_code_add_fans_count_cost")
   private Long scanCodeAddFansCountCost = null;
 
+  @SerializedName("biz_follow_count")
+  private Long bizFollowCount = null;
+
+  @SerializedName("biz_follow_uv")
+  private Long bizFollowUv = null;
+
+  @SerializedName("biz_follow_cost")
+  private Long bizFollowCost = null;
+
+  @SerializedName("biz_follow_rate")
+  private Double bizFollowRate = null;
+
+  @SerializedName("biz_reg_count")
+  private Long bizRegCount = null;
+
+  @SerializedName("biz_reg_uv")
+  private Long bizRegUv = null;
+
+  @SerializedName("biz_reg_rate")
+  private Double bizRegRate = null;
+
+  @SerializedName("biz_reg_cost")
+  private Long bizRegCost = null;
+
+  @SerializedName("biz_reg_order_amount")
+  private Long bizRegOrderAmount = null;
+
+  @SerializedName("biz_reg_roi")
+  private Double bizRegRoi = null;
+
+  @SerializedName("biz_reservation_count")
+  private Long bizReservationCount = null;
+
+  @SerializedName("biz_reservation_uv")
+  private Long bizReservationUv = null;
+
+  @SerializedName("biz_reservation_rate")
+  private Double bizReservationRate = null;
+
+  @SerializedName("biz_reservation_cost")
+  private Long bizReservationCost = null;
+
+  @SerializedName("biz_reservation_amount")
+  private Long bizReservationAmount = null;
+
+  @SerializedName("biz_reservation_roi")
+  private Double bizReservationRoi = null;
+
+  @SerializedName("biz_order_count")
+  private Long bizOrderCount = null;
+
+  @SerializedName("biz_order_uv")
+  private Long bizOrderUv = null;
+
+  @SerializedName("biz_order_rate")
+  private Double bizOrderRate = null;
+
+  @SerializedName("biz_order_cost")
+  private Long bizOrderCost = null;
+
+  @SerializedName("biz_order_roi")
+  private Double bizOrderRoi = null;
+
+  @SerializedName("biz_order_amount")
+  private Long bizOrderAmount = null;
+
+  @SerializedName("biz_1d_order_count")
+  private Long biz1dOrderCount = null;
+
+  @SerializedName("biz_1d_order_amount")
+  private Long biz1dOrderAmount = null;
+
+  @SerializedName("biz_purchase_count")
+  private Long bizPurchaseCount = null;
+
+  @SerializedName("biz_purchase_amount")
+  private Long bizPurchaseAmount = null;
+
+  @SerializedName("biz_purchase_roi")
+  private Double bizPurchaseRoi = null;
+
+  @SerializedName("biz_consult_count")
+  private Long bizConsultCount = null;
+
+  @SerializedName("biz_reading_count")
+  private Long bizReadingCount = null;
+
+  @SerializedName("biz_page_apply_count")
+  private Long bizPageApplyCount = null;
+
+  @SerializedName("biz_page_apply_uv")
+  private Long bizPageApplyUv = null;
+
+  @SerializedName("biz_page_apply_cost")
+  private Long bizPageApplyCost = null;
+
+  @SerializedName("biz_page_apply_rate")
+  private Double bizPageApplyRate = null;
+
+  @SerializedName("biz_credit_count")
+  private Long bizCreditCount = null;
+
+  @SerializedName("biz_credit_cost")
+  private Long bizCreditCost = null;
+
+  @SerializedName("biz_credit_rate")
+  private Double bizCreditRate = null;
+
+  @SerializedName("biz_credit_uv")
+  private Long bizCreditUv = null;
+
+  @SerializedName("biz_deposit_count")
+  private Long bizDepositCount = null;
+
+  @SerializedName("biz_1d_purchase_count")
+  private Long biz1dPurchaseCount = null;
+
+  @SerializedName("biz_1d_purchase_amount")
+  private Long biz1dPurchaseAmount = null;
+
+  @SerializedName("biz_3d_purchase_count")
+  private Long biz3dPurchaseCount = null;
+
+  @SerializedName("biz_3d_purchase_amount")
+  private Long biz3dPurchaseAmount = null;
+
+  @SerializedName("biz_7d_purchase_count")
+  private Long biz7dPurchaseCount = null;
+
+  @SerializedName("biz_7d_purchase_amount")
+  private Long biz7dPurchaseAmount = null;
+
+  @SerializedName("biz_15d_purchase_count")
+  private Long biz15dPurchaseCount = null;
+
+  @SerializedName("biz_15d_purchase_amount")
+  private Long biz15dPurchaseAmount = null;
+
+  @SerializedName("biz_30d_purchase_count")
+  private Long biz30dPurchaseCount = null;
+
+  @SerializedName("biz_30d_purchase_amount")
+  private Long biz30dPurchaseAmount = null;
+
+  @SerializedName("biz_1d_purchase_roi")
+  private Double biz1dPurchaseRoi = null;
+
+  @SerializedName("biz_3d_purchase_roi")
+  private Double biz3dPurchaseRoi = null;
+
+  @SerializedName("biz_7d_purchase_roi")
+  private Double biz7dPurchaseRoi = null;
+
+  @SerializedName("biz_15d_purchase_roi")
+  private Double biz15dPurchaseRoi = null;
+
+  @SerializedName("biz_30d_purchase_roi")
+  private Double biz30dPurchaseRoi = null;
+
   @SerializedName("age")
   private String age = null;
 
@@ -9183,6 +9342,1013 @@ public class TargetingTagReportsGetListStruct {
     this.scanCodeAddFansCountCost = scanCodeAddFansCountCost;
   }
 
+  public TargetingTagReportsGetListStruct bizFollowCount(Long bizFollowCount) {
+    this.bizFollowCount = bizFollowCount;
+    return this;
+  }
+
+  /**
+   * Get bizFollowCount
+   *
+   * @return bizFollowCount
+   */
+  @ApiModelProperty(value = "")
+  public Long getBizFollowCount() {
+    return bizFollowCount;
+  }
+
+  public void setBizFollowCount(Long bizFollowCount) {
+    this.bizFollowCount = bizFollowCount;
+  }
+
+  public TargetingTagReportsGetListStruct bizFollowUv(Long bizFollowUv) {
+    this.bizFollowUv = bizFollowUv;
+    return this;
+  }
+
+  /**
+   * Get bizFollowUv
+   *
+   * @return bizFollowUv
+   */
+  @ApiModelProperty(value = "")
+  public Long getBizFollowUv() {
+    return bizFollowUv;
+  }
+
+  public void setBizFollowUv(Long bizFollowUv) {
+    this.bizFollowUv = bizFollowUv;
+  }
+
+  public TargetingTagReportsGetListStruct bizFollowCost(Long bizFollowCost) {
+    this.bizFollowCost = bizFollowCost;
+    return this;
+  }
+
+  /**
+   * Get bizFollowCost
+   *
+   * @return bizFollowCost
+   */
+  @ApiModelProperty(value = "")
+  public Long getBizFollowCost() {
+    return bizFollowCost;
+  }
+
+  public void setBizFollowCost(Long bizFollowCost) {
+    this.bizFollowCost = bizFollowCost;
+  }
+
+  public TargetingTagReportsGetListStruct bizFollowRate(Double bizFollowRate) {
+    this.bizFollowRate = bizFollowRate;
+    return this;
+  }
+
+  /**
+   * Get bizFollowRate
+   *
+   * @return bizFollowRate
+   */
+  @ApiModelProperty(value = "")
+  public Double getBizFollowRate() {
+    return bizFollowRate;
+  }
+
+  public void setBizFollowRate(Double bizFollowRate) {
+    this.bizFollowRate = bizFollowRate;
+  }
+
+  public TargetingTagReportsGetListStruct bizRegCount(Long bizRegCount) {
+    this.bizRegCount = bizRegCount;
+    return this;
+  }
+
+  /**
+   * Get bizRegCount
+   *
+   * @return bizRegCount
+   */
+  @ApiModelProperty(value = "")
+  public Long getBizRegCount() {
+    return bizRegCount;
+  }
+
+  public void setBizRegCount(Long bizRegCount) {
+    this.bizRegCount = bizRegCount;
+  }
+
+  public TargetingTagReportsGetListStruct bizRegUv(Long bizRegUv) {
+    this.bizRegUv = bizRegUv;
+    return this;
+  }
+
+  /**
+   * Get bizRegUv
+   *
+   * @return bizRegUv
+   */
+  @ApiModelProperty(value = "")
+  public Long getBizRegUv() {
+    return bizRegUv;
+  }
+
+  public void setBizRegUv(Long bizRegUv) {
+    this.bizRegUv = bizRegUv;
+  }
+
+  public TargetingTagReportsGetListStruct bizRegRate(Double bizRegRate) {
+    this.bizRegRate = bizRegRate;
+    return this;
+  }
+
+  /**
+   * Get bizRegRate
+   *
+   * @return bizRegRate
+   */
+  @ApiModelProperty(value = "")
+  public Double getBizRegRate() {
+    return bizRegRate;
+  }
+
+  public void setBizRegRate(Double bizRegRate) {
+    this.bizRegRate = bizRegRate;
+  }
+
+  public TargetingTagReportsGetListStruct bizRegCost(Long bizRegCost) {
+    this.bizRegCost = bizRegCost;
+    return this;
+  }
+
+  /**
+   * Get bizRegCost
+   *
+   * @return bizRegCost
+   */
+  @ApiModelProperty(value = "")
+  public Long getBizRegCost() {
+    return bizRegCost;
+  }
+
+  public void setBizRegCost(Long bizRegCost) {
+    this.bizRegCost = bizRegCost;
+  }
+
+  public TargetingTagReportsGetListStruct bizRegOrderAmount(Long bizRegOrderAmount) {
+    this.bizRegOrderAmount = bizRegOrderAmount;
+    return this;
+  }
+
+  /**
+   * Get bizRegOrderAmount
+   *
+   * @return bizRegOrderAmount
+   */
+  @ApiModelProperty(value = "")
+  public Long getBizRegOrderAmount() {
+    return bizRegOrderAmount;
+  }
+
+  public void setBizRegOrderAmount(Long bizRegOrderAmount) {
+    this.bizRegOrderAmount = bizRegOrderAmount;
+  }
+
+  public TargetingTagReportsGetListStruct bizRegRoi(Double bizRegRoi) {
+    this.bizRegRoi = bizRegRoi;
+    return this;
+  }
+
+  /**
+   * Get bizRegRoi
+   *
+   * @return bizRegRoi
+   */
+  @ApiModelProperty(value = "")
+  public Double getBizRegRoi() {
+    return bizRegRoi;
+  }
+
+  public void setBizRegRoi(Double bizRegRoi) {
+    this.bizRegRoi = bizRegRoi;
+  }
+
+  public TargetingTagReportsGetListStruct bizReservationCount(Long bizReservationCount) {
+    this.bizReservationCount = bizReservationCount;
+    return this;
+  }
+
+  /**
+   * Get bizReservationCount
+   *
+   * @return bizReservationCount
+   */
+  @ApiModelProperty(value = "")
+  public Long getBizReservationCount() {
+    return bizReservationCount;
+  }
+
+  public void setBizReservationCount(Long bizReservationCount) {
+    this.bizReservationCount = bizReservationCount;
+  }
+
+  public TargetingTagReportsGetListStruct bizReservationUv(Long bizReservationUv) {
+    this.bizReservationUv = bizReservationUv;
+    return this;
+  }
+
+  /**
+   * Get bizReservationUv
+   *
+   * @return bizReservationUv
+   */
+  @ApiModelProperty(value = "")
+  public Long getBizReservationUv() {
+    return bizReservationUv;
+  }
+
+  public void setBizReservationUv(Long bizReservationUv) {
+    this.bizReservationUv = bizReservationUv;
+  }
+
+  public TargetingTagReportsGetListStruct bizReservationRate(Double bizReservationRate) {
+    this.bizReservationRate = bizReservationRate;
+    return this;
+  }
+
+  /**
+   * Get bizReservationRate
+   *
+   * @return bizReservationRate
+   */
+  @ApiModelProperty(value = "")
+  public Double getBizReservationRate() {
+    return bizReservationRate;
+  }
+
+  public void setBizReservationRate(Double bizReservationRate) {
+    this.bizReservationRate = bizReservationRate;
+  }
+
+  public TargetingTagReportsGetListStruct bizReservationCost(Long bizReservationCost) {
+    this.bizReservationCost = bizReservationCost;
+    return this;
+  }
+
+  /**
+   * Get bizReservationCost
+   *
+   * @return bizReservationCost
+   */
+  @ApiModelProperty(value = "")
+  public Long getBizReservationCost() {
+    return bizReservationCost;
+  }
+
+  public void setBizReservationCost(Long bizReservationCost) {
+    this.bizReservationCost = bizReservationCost;
+  }
+
+  public TargetingTagReportsGetListStruct bizReservationAmount(Long bizReservationAmount) {
+    this.bizReservationAmount = bizReservationAmount;
+    return this;
+  }
+
+  /**
+   * Get bizReservationAmount
+   *
+   * @return bizReservationAmount
+   */
+  @ApiModelProperty(value = "")
+  public Long getBizReservationAmount() {
+    return bizReservationAmount;
+  }
+
+  public void setBizReservationAmount(Long bizReservationAmount) {
+    this.bizReservationAmount = bizReservationAmount;
+  }
+
+  public TargetingTagReportsGetListStruct bizReservationRoi(Double bizReservationRoi) {
+    this.bizReservationRoi = bizReservationRoi;
+    return this;
+  }
+
+  /**
+   * Get bizReservationRoi
+   *
+   * @return bizReservationRoi
+   */
+  @ApiModelProperty(value = "")
+  public Double getBizReservationRoi() {
+    return bizReservationRoi;
+  }
+
+  public void setBizReservationRoi(Double bizReservationRoi) {
+    this.bizReservationRoi = bizReservationRoi;
+  }
+
+  public TargetingTagReportsGetListStruct bizOrderCount(Long bizOrderCount) {
+    this.bizOrderCount = bizOrderCount;
+    return this;
+  }
+
+  /**
+   * Get bizOrderCount
+   *
+   * @return bizOrderCount
+   */
+  @ApiModelProperty(value = "")
+  public Long getBizOrderCount() {
+    return bizOrderCount;
+  }
+
+  public void setBizOrderCount(Long bizOrderCount) {
+    this.bizOrderCount = bizOrderCount;
+  }
+
+  public TargetingTagReportsGetListStruct bizOrderUv(Long bizOrderUv) {
+    this.bizOrderUv = bizOrderUv;
+    return this;
+  }
+
+  /**
+   * Get bizOrderUv
+   *
+   * @return bizOrderUv
+   */
+  @ApiModelProperty(value = "")
+  public Long getBizOrderUv() {
+    return bizOrderUv;
+  }
+
+  public void setBizOrderUv(Long bizOrderUv) {
+    this.bizOrderUv = bizOrderUv;
+  }
+
+  public TargetingTagReportsGetListStruct bizOrderRate(Double bizOrderRate) {
+    this.bizOrderRate = bizOrderRate;
+    return this;
+  }
+
+  /**
+   * Get bizOrderRate
+   *
+   * @return bizOrderRate
+   */
+  @ApiModelProperty(value = "")
+  public Double getBizOrderRate() {
+    return bizOrderRate;
+  }
+
+  public void setBizOrderRate(Double bizOrderRate) {
+    this.bizOrderRate = bizOrderRate;
+  }
+
+  public TargetingTagReportsGetListStruct bizOrderCost(Long bizOrderCost) {
+    this.bizOrderCost = bizOrderCost;
+    return this;
+  }
+
+  /**
+   * Get bizOrderCost
+   *
+   * @return bizOrderCost
+   */
+  @ApiModelProperty(value = "")
+  public Long getBizOrderCost() {
+    return bizOrderCost;
+  }
+
+  public void setBizOrderCost(Long bizOrderCost) {
+    this.bizOrderCost = bizOrderCost;
+  }
+
+  public TargetingTagReportsGetListStruct bizOrderRoi(Double bizOrderRoi) {
+    this.bizOrderRoi = bizOrderRoi;
+    return this;
+  }
+
+  /**
+   * Get bizOrderRoi
+   *
+   * @return bizOrderRoi
+   */
+  @ApiModelProperty(value = "")
+  public Double getBizOrderRoi() {
+    return bizOrderRoi;
+  }
+
+  public void setBizOrderRoi(Double bizOrderRoi) {
+    this.bizOrderRoi = bizOrderRoi;
+  }
+
+  public TargetingTagReportsGetListStruct bizOrderAmount(Long bizOrderAmount) {
+    this.bizOrderAmount = bizOrderAmount;
+    return this;
+  }
+
+  /**
+   * Get bizOrderAmount
+   *
+   * @return bizOrderAmount
+   */
+  @ApiModelProperty(value = "")
+  public Long getBizOrderAmount() {
+    return bizOrderAmount;
+  }
+
+  public void setBizOrderAmount(Long bizOrderAmount) {
+    this.bizOrderAmount = bizOrderAmount;
+  }
+
+  public TargetingTagReportsGetListStruct biz1dOrderCount(Long biz1dOrderCount) {
+    this.biz1dOrderCount = biz1dOrderCount;
+    return this;
+  }
+
+  /**
+   * Get biz1dOrderCount
+   *
+   * @return biz1dOrderCount
+   */
+  @ApiModelProperty(value = "")
+  public Long getBiz1dOrderCount() {
+    return biz1dOrderCount;
+  }
+
+  public void setBiz1dOrderCount(Long biz1dOrderCount) {
+    this.biz1dOrderCount = biz1dOrderCount;
+  }
+
+  public TargetingTagReportsGetListStruct biz1dOrderAmount(Long biz1dOrderAmount) {
+    this.biz1dOrderAmount = biz1dOrderAmount;
+    return this;
+  }
+
+  /**
+   * Get biz1dOrderAmount
+   *
+   * @return biz1dOrderAmount
+   */
+  @ApiModelProperty(value = "")
+  public Long getBiz1dOrderAmount() {
+    return biz1dOrderAmount;
+  }
+
+  public void setBiz1dOrderAmount(Long biz1dOrderAmount) {
+    this.biz1dOrderAmount = biz1dOrderAmount;
+  }
+
+  public TargetingTagReportsGetListStruct bizPurchaseCount(Long bizPurchaseCount) {
+    this.bizPurchaseCount = bizPurchaseCount;
+    return this;
+  }
+
+  /**
+   * Get bizPurchaseCount
+   *
+   * @return bizPurchaseCount
+   */
+  @ApiModelProperty(value = "")
+  public Long getBizPurchaseCount() {
+    return bizPurchaseCount;
+  }
+
+  public void setBizPurchaseCount(Long bizPurchaseCount) {
+    this.bizPurchaseCount = bizPurchaseCount;
+  }
+
+  public TargetingTagReportsGetListStruct bizPurchaseAmount(Long bizPurchaseAmount) {
+    this.bizPurchaseAmount = bizPurchaseAmount;
+    return this;
+  }
+
+  /**
+   * Get bizPurchaseAmount
+   *
+   * @return bizPurchaseAmount
+   */
+  @ApiModelProperty(value = "")
+  public Long getBizPurchaseAmount() {
+    return bizPurchaseAmount;
+  }
+
+  public void setBizPurchaseAmount(Long bizPurchaseAmount) {
+    this.bizPurchaseAmount = bizPurchaseAmount;
+  }
+
+  public TargetingTagReportsGetListStruct bizPurchaseRoi(Double bizPurchaseRoi) {
+    this.bizPurchaseRoi = bizPurchaseRoi;
+    return this;
+  }
+
+  /**
+   * Get bizPurchaseRoi
+   *
+   * @return bizPurchaseRoi
+   */
+  @ApiModelProperty(value = "")
+  public Double getBizPurchaseRoi() {
+    return bizPurchaseRoi;
+  }
+
+  public void setBizPurchaseRoi(Double bizPurchaseRoi) {
+    this.bizPurchaseRoi = bizPurchaseRoi;
+  }
+
+  public TargetingTagReportsGetListStruct bizConsultCount(Long bizConsultCount) {
+    this.bizConsultCount = bizConsultCount;
+    return this;
+  }
+
+  /**
+   * Get bizConsultCount
+   *
+   * @return bizConsultCount
+   */
+  @ApiModelProperty(value = "")
+  public Long getBizConsultCount() {
+    return bizConsultCount;
+  }
+
+  public void setBizConsultCount(Long bizConsultCount) {
+    this.bizConsultCount = bizConsultCount;
+  }
+
+  public TargetingTagReportsGetListStruct bizReadingCount(Long bizReadingCount) {
+    this.bizReadingCount = bizReadingCount;
+    return this;
+  }
+
+  /**
+   * Get bizReadingCount
+   *
+   * @return bizReadingCount
+   */
+  @ApiModelProperty(value = "")
+  public Long getBizReadingCount() {
+    return bizReadingCount;
+  }
+
+  public void setBizReadingCount(Long bizReadingCount) {
+    this.bizReadingCount = bizReadingCount;
+  }
+
+  public TargetingTagReportsGetListStruct bizPageApplyCount(Long bizPageApplyCount) {
+    this.bizPageApplyCount = bizPageApplyCount;
+    return this;
+  }
+
+  /**
+   * Get bizPageApplyCount
+   *
+   * @return bizPageApplyCount
+   */
+  @ApiModelProperty(value = "")
+  public Long getBizPageApplyCount() {
+    return bizPageApplyCount;
+  }
+
+  public void setBizPageApplyCount(Long bizPageApplyCount) {
+    this.bizPageApplyCount = bizPageApplyCount;
+  }
+
+  public TargetingTagReportsGetListStruct bizPageApplyUv(Long bizPageApplyUv) {
+    this.bizPageApplyUv = bizPageApplyUv;
+    return this;
+  }
+
+  /**
+   * Get bizPageApplyUv
+   *
+   * @return bizPageApplyUv
+   */
+  @ApiModelProperty(value = "")
+  public Long getBizPageApplyUv() {
+    return bizPageApplyUv;
+  }
+
+  public void setBizPageApplyUv(Long bizPageApplyUv) {
+    this.bizPageApplyUv = bizPageApplyUv;
+  }
+
+  public TargetingTagReportsGetListStruct bizPageApplyCost(Long bizPageApplyCost) {
+    this.bizPageApplyCost = bizPageApplyCost;
+    return this;
+  }
+
+  /**
+   * Get bizPageApplyCost
+   *
+   * @return bizPageApplyCost
+   */
+  @ApiModelProperty(value = "")
+  public Long getBizPageApplyCost() {
+    return bizPageApplyCost;
+  }
+
+  public void setBizPageApplyCost(Long bizPageApplyCost) {
+    this.bizPageApplyCost = bizPageApplyCost;
+  }
+
+  public TargetingTagReportsGetListStruct bizPageApplyRate(Double bizPageApplyRate) {
+    this.bizPageApplyRate = bizPageApplyRate;
+    return this;
+  }
+
+  /**
+   * Get bizPageApplyRate
+   *
+   * @return bizPageApplyRate
+   */
+  @ApiModelProperty(value = "")
+  public Double getBizPageApplyRate() {
+    return bizPageApplyRate;
+  }
+
+  public void setBizPageApplyRate(Double bizPageApplyRate) {
+    this.bizPageApplyRate = bizPageApplyRate;
+  }
+
+  public TargetingTagReportsGetListStruct bizCreditCount(Long bizCreditCount) {
+    this.bizCreditCount = bizCreditCount;
+    return this;
+  }
+
+  /**
+   * Get bizCreditCount
+   *
+   * @return bizCreditCount
+   */
+  @ApiModelProperty(value = "")
+  public Long getBizCreditCount() {
+    return bizCreditCount;
+  }
+
+  public void setBizCreditCount(Long bizCreditCount) {
+    this.bizCreditCount = bizCreditCount;
+  }
+
+  public TargetingTagReportsGetListStruct bizCreditCost(Long bizCreditCost) {
+    this.bizCreditCost = bizCreditCost;
+    return this;
+  }
+
+  /**
+   * Get bizCreditCost
+   *
+   * @return bizCreditCost
+   */
+  @ApiModelProperty(value = "")
+  public Long getBizCreditCost() {
+    return bizCreditCost;
+  }
+
+  public void setBizCreditCost(Long bizCreditCost) {
+    this.bizCreditCost = bizCreditCost;
+  }
+
+  public TargetingTagReportsGetListStruct bizCreditRate(Double bizCreditRate) {
+    this.bizCreditRate = bizCreditRate;
+    return this;
+  }
+
+  /**
+   * Get bizCreditRate
+   *
+   * @return bizCreditRate
+   */
+  @ApiModelProperty(value = "")
+  public Double getBizCreditRate() {
+    return bizCreditRate;
+  }
+
+  public void setBizCreditRate(Double bizCreditRate) {
+    this.bizCreditRate = bizCreditRate;
+  }
+
+  public TargetingTagReportsGetListStruct bizCreditUv(Long bizCreditUv) {
+    this.bizCreditUv = bizCreditUv;
+    return this;
+  }
+
+  /**
+   * Get bizCreditUv
+   *
+   * @return bizCreditUv
+   */
+  @ApiModelProperty(value = "")
+  public Long getBizCreditUv() {
+    return bizCreditUv;
+  }
+
+  public void setBizCreditUv(Long bizCreditUv) {
+    this.bizCreditUv = bizCreditUv;
+  }
+
+  public TargetingTagReportsGetListStruct bizDepositCount(Long bizDepositCount) {
+    this.bizDepositCount = bizDepositCount;
+    return this;
+  }
+
+  /**
+   * Get bizDepositCount
+   *
+   * @return bizDepositCount
+   */
+  @ApiModelProperty(value = "")
+  public Long getBizDepositCount() {
+    return bizDepositCount;
+  }
+
+  public void setBizDepositCount(Long bizDepositCount) {
+    this.bizDepositCount = bizDepositCount;
+  }
+
+  public TargetingTagReportsGetListStruct biz1dPurchaseCount(Long biz1dPurchaseCount) {
+    this.biz1dPurchaseCount = biz1dPurchaseCount;
+    return this;
+  }
+
+  /**
+   * Get biz1dPurchaseCount
+   *
+   * @return biz1dPurchaseCount
+   */
+  @ApiModelProperty(value = "")
+  public Long getBiz1dPurchaseCount() {
+    return biz1dPurchaseCount;
+  }
+
+  public void setBiz1dPurchaseCount(Long biz1dPurchaseCount) {
+    this.biz1dPurchaseCount = biz1dPurchaseCount;
+  }
+
+  public TargetingTagReportsGetListStruct biz1dPurchaseAmount(Long biz1dPurchaseAmount) {
+    this.biz1dPurchaseAmount = biz1dPurchaseAmount;
+    return this;
+  }
+
+  /**
+   * Get biz1dPurchaseAmount
+   *
+   * @return biz1dPurchaseAmount
+   */
+  @ApiModelProperty(value = "")
+  public Long getBiz1dPurchaseAmount() {
+    return biz1dPurchaseAmount;
+  }
+
+  public void setBiz1dPurchaseAmount(Long biz1dPurchaseAmount) {
+    this.biz1dPurchaseAmount = biz1dPurchaseAmount;
+  }
+
+  public TargetingTagReportsGetListStruct biz3dPurchaseCount(Long biz3dPurchaseCount) {
+    this.biz3dPurchaseCount = biz3dPurchaseCount;
+    return this;
+  }
+
+  /**
+   * Get biz3dPurchaseCount
+   *
+   * @return biz3dPurchaseCount
+   */
+  @ApiModelProperty(value = "")
+  public Long getBiz3dPurchaseCount() {
+    return biz3dPurchaseCount;
+  }
+
+  public void setBiz3dPurchaseCount(Long biz3dPurchaseCount) {
+    this.biz3dPurchaseCount = biz3dPurchaseCount;
+  }
+
+  public TargetingTagReportsGetListStruct biz3dPurchaseAmount(Long biz3dPurchaseAmount) {
+    this.biz3dPurchaseAmount = biz3dPurchaseAmount;
+    return this;
+  }
+
+  /**
+   * Get biz3dPurchaseAmount
+   *
+   * @return biz3dPurchaseAmount
+   */
+  @ApiModelProperty(value = "")
+  public Long getBiz3dPurchaseAmount() {
+    return biz3dPurchaseAmount;
+  }
+
+  public void setBiz3dPurchaseAmount(Long biz3dPurchaseAmount) {
+    this.biz3dPurchaseAmount = biz3dPurchaseAmount;
+  }
+
+  public TargetingTagReportsGetListStruct biz7dPurchaseCount(Long biz7dPurchaseCount) {
+    this.biz7dPurchaseCount = biz7dPurchaseCount;
+    return this;
+  }
+
+  /**
+   * Get biz7dPurchaseCount
+   *
+   * @return biz7dPurchaseCount
+   */
+  @ApiModelProperty(value = "")
+  public Long getBiz7dPurchaseCount() {
+    return biz7dPurchaseCount;
+  }
+
+  public void setBiz7dPurchaseCount(Long biz7dPurchaseCount) {
+    this.biz7dPurchaseCount = biz7dPurchaseCount;
+  }
+
+  public TargetingTagReportsGetListStruct biz7dPurchaseAmount(Long biz7dPurchaseAmount) {
+    this.biz7dPurchaseAmount = biz7dPurchaseAmount;
+    return this;
+  }
+
+  /**
+   * Get biz7dPurchaseAmount
+   *
+   * @return biz7dPurchaseAmount
+   */
+  @ApiModelProperty(value = "")
+  public Long getBiz7dPurchaseAmount() {
+    return biz7dPurchaseAmount;
+  }
+
+  public void setBiz7dPurchaseAmount(Long biz7dPurchaseAmount) {
+    this.biz7dPurchaseAmount = biz7dPurchaseAmount;
+  }
+
+  public TargetingTagReportsGetListStruct biz15dPurchaseCount(Long biz15dPurchaseCount) {
+    this.biz15dPurchaseCount = biz15dPurchaseCount;
+    return this;
+  }
+
+  /**
+   * Get biz15dPurchaseCount
+   *
+   * @return biz15dPurchaseCount
+   */
+  @ApiModelProperty(value = "")
+  public Long getBiz15dPurchaseCount() {
+    return biz15dPurchaseCount;
+  }
+
+  public void setBiz15dPurchaseCount(Long biz15dPurchaseCount) {
+    this.biz15dPurchaseCount = biz15dPurchaseCount;
+  }
+
+  public TargetingTagReportsGetListStruct biz15dPurchaseAmount(Long biz15dPurchaseAmount) {
+    this.biz15dPurchaseAmount = biz15dPurchaseAmount;
+    return this;
+  }
+
+  /**
+   * Get biz15dPurchaseAmount
+   *
+   * @return biz15dPurchaseAmount
+   */
+  @ApiModelProperty(value = "")
+  public Long getBiz15dPurchaseAmount() {
+    return biz15dPurchaseAmount;
+  }
+
+  public void setBiz15dPurchaseAmount(Long biz15dPurchaseAmount) {
+    this.biz15dPurchaseAmount = biz15dPurchaseAmount;
+  }
+
+  public TargetingTagReportsGetListStruct biz30dPurchaseCount(Long biz30dPurchaseCount) {
+    this.biz30dPurchaseCount = biz30dPurchaseCount;
+    return this;
+  }
+
+  /**
+   * Get biz30dPurchaseCount
+   *
+   * @return biz30dPurchaseCount
+   */
+  @ApiModelProperty(value = "")
+  public Long getBiz30dPurchaseCount() {
+    return biz30dPurchaseCount;
+  }
+
+  public void setBiz30dPurchaseCount(Long biz30dPurchaseCount) {
+    this.biz30dPurchaseCount = biz30dPurchaseCount;
+  }
+
+  public TargetingTagReportsGetListStruct biz30dPurchaseAmount(Long biz30dPurchaseAmount) {
+    this.biz30dPurchaseAmount = biz30dPurchaseAmount;
+    return this;
+  }
+
+  /**
+   * Get biz30dPurchaseAmount
+   *
+   * @return biz30dPurchaseAmount
+   */
+  @ApiModelProperty(value = "")
+  public Long getBiz30dPurchaseAmount() {
+    return biz30dPurchaseAmount;
+  }
+
+  public void setBiz30dPurchaseAmount(Long biz30dPurchaseAmount) {
+    this.biz30dPurchaseAmount = biz30dPurchaseAmount;
+  }
+
+  public TargetingTagReportsGetListStruct biz1dPurchaseRoi(Double biz1dPurchaseRoi) {
+    this.biz1dPurchaseRoi = biz1dPurchaseRoi;
+    return this;
+  }
+
+  /**
+   * Get biz1dPurchaseRoi
+   *
+   * @return biz1dPurchaseRoi
+   */
+  @ApiModelProperty(value = "")
+  public Double getBiz1dPurchaseRoi() {
+    return biz1dPurchaseRoi;
+  }
+
+  public void setBiz1dPurchaseRoi(Double biz1dPurchaseRoi) {
+    this.biz1dPurchaseRoi = biz1dPurchaseRoi;
+  }
+
+  public TargetingTagReportsGetListStruct biz3dPurchaseRoi(Double biz3dPurchaseRoi) {
+    this.biz3dPurchaseRoi = biz3dPurchaseRoi;
+    return this;
+  }
+
+  /**
+   * Get biz3dPurchaseRoi
+   *
+   * @return biz3dPurchaseRoi
+   */
+  @ApiModelProperty(value = "")
+  public Double getBiz3dPurchaseRoi() {
+    return biz3dPurchaseRoi;
+  }
+
+  public void setBiz3dPurchaseRoi(Double biz3dPurchaseRoi) {
+    this.biz3dPurchaseRoi = biz3dPurchaseRoi;
+  }
+
+  public TargetingTagReportsGetListStruct biz7dPurchaseRoi(Double biz7dPurchaseRoi) {
+    this.biz7dPurchaseRoi = biz7dPurchaseRoi;
+    return this;
+  }
+
+  /**
+   * Get biz7dPurchaseRoi
+   *
+   * @return biz7dPurchaseRoi
+   */
+  @ApiModelProperty(value = "")
+  public Double getBiz7dPurchaseRoi() {
+    return biz7dPurchaseRoi;
+  }
+
+  public void setBiz7dPurchaseRoi(Double biz7dPurchaseRoi) {
+    this.biz7dPurchaseRoi = biz7dPurchaseRoi;
+  }
+
+  public TargetingTagReportsGetListStruct biz15dPurchaseRoi(Double biz15dPurchaseRoi) {
+    this.biz15dPurchaseRoi = biz15dPurchaseRoi;
+    return this;
+  }
+
+  /**
+   * Get biz15dPurchaseRoi
+   *
+   * @return biz15dPurchaseRoi
+   */
+  @ApiModelProperty(value = "")
+  public Double getBiz15dPurchaseRoi() {
+    return biz15dPurchaseRoi;
+  }
+
+  public void setBiz15dPurchaseRoi(Double biz15dPurchaseRoi) {
+    this.biz15dPurchaseRoi = biz15dPurchaseRoi;
+  }
+
+  public TargetingTagReportsGetListStruct biz30dPurchaseRoi(Double biz30dPurchaseRoi) {
+    this.biz30dPurchaseRoi = biz30dPurchaseRoi;
+    return this;
+  }
+
+  /**
+   * Get biz30dPurchaseRoi
+   *
+   * @return biz30dPurchaseRoi
+   */
+  @ApiModelProperty(value = "")
+  public Double getBiz30dPurchaseRoi() {
+    return biz30dPurchaseRoi;
+  }
+
+  public void setBiz30dPurchaseRoi(Double biz30dPurchaseRoi) {
+    this.biz30dPurchaseRoi = biz30dPurchaseRoi;
+  }
+
   public TargetingTagReportsGetListStruct age(String age) {
     this.age = age;
     return this;
@@ -12587,6 +13753,79 @@ public class TargetingTagReportsGetListStruct {
         && Objects.equals(
             this.scanCodeAddFansCountCost,
             targetingTagReportsGetListStruct.scanCodeAddFansCountCost)
+        && Objects.equals(this.bizFollowCount, targetingTagReportsGetListStruct.bizFollowCount)
+        && Objects.equals(this.bizFollowUv, targetingTagReportsGetListStruct.bizFollowUv)
+        && Objects.equals(this.bizFollowCost, targetingTagReportsGetListStruct.bizFollowCost)
+        && Objects.equals(this.bizFollowRate, targetingTagReportsGetListStruct.bizFollowRate)
+        && Objects.equals(this.bizRegCount, targetingTagReportsGetListStruct.bizRegCount)
+        && Objects.equals(this.bizRegUv, targetingTagReportsGetListStruct.bizRegUv)
+        && Objects.equals(this.bizRegRate, targetingTagReportsGetListStruct.bizRegRate)
+        && Objects.equals(this.bizRegCost, targetingTagReportsGetListStruct.bizRegCost)
+        && Objects.equals(
+            this.bizRegOrderAmount, targetingTagReportsGetListStruct.bizRegOrderAmount)
+        && Objects.equals(this.bizRegRoi, targetingTagReportsGetListStruct.bizRegRoi)
+        && Objects.equals(
+            this.bizReservationCount, targetingTagReportsGetListStruct.bizReservationCount)
+        && Objects.equals(this.bizReservationUv, targetingTagReportsGetListStruct.bizReservationUv)
+        && Objects.equals(
+            this.bizReservationRate, targetingTagReportsGetListStruct.bizReservationRate)
+        && Objects.equals(
+            this.bizReservationCost, targetingTagReportsGetListStruct.bizReservationCost)
+        && Objects.equals(
+            this.bizReservationAmount, targetingTagReportsGetListStruct.bizReservationAmount)
+        && Objects.equals(
+            this.bizReservationRoi, targetingTagReportsGetListStruct.bizReservationRoi)
+        && Objects.equals(this.bizOrderCount, targetingTagReportsGetListStruct.bizOrderCount)
+        && Objects.equals(this.bizOrderUv, targetingTagReportsGetListStruct.bizOrderUv)
+        && Objects.equals(this.bizOrderRate, targetingTagReportsGetListStruct.bizOrderRate)
+        && Objects.equals(this.bizOrderCost, targetingTagReportsGetListStruct.bizOrderCost)
+        && Objects.equals(this.bizOrderRoi, targetingTagReportsGetListStruct.bizOrderRoi)
+        && Objects.equals(this.bizOrderAmount, targetingTagReportsGetListStruct.bizOrderAmount)
+        && Objects.equals(this.biz1dOrderCount, targetingTagReportsGetListStruct.biz1dOrderCount)
+        && Objects.equals(this.biz1dOrderAmount, targetingTagReportsGetListStruct.biz1dOrderAmount)
+        && Objects.equals(this.bizPurchaseCount, targetingTagReportsGetListStruct.bizPurchaseCount)
+        && Objects.equals(
+            this.bizPurchaseAmount, targetingTagReportsGetListStruct.bizPurchaseAmount)
+        && Objects.equals(this.bizPurchaseRoi, targetingTagReportsGetListStruct.bizPurchaseRoi)
+        && Objects.equals(this.bizConsultCount, targetingTagReportsGetListStruct.bizConsultCount)
+        && Objects.equals(this.bizReadingCount, targetingTagReportsGetListStruct.bizReadingCount)
+        && Objects.equals(
+            this.bizPageApplyCount, targetingTagReportsGetListStruct.bizPageApplyCount)
+        && Objects.equals(this.bizPageApplyUv, targetingTagReportsGetListStruct.bizPageApplyUv)
+        && Objects.equals(this.bizPageApplyCost, targetingTagReportsGetListStruct.bizPageApplyCost)
+        && Objects.equals(this.bizPageApplyRate, targetingTagReportsGetListStruct.bizPageApplyRate)
+        && Objects.equals(this.bizCreditCount, targetingTagReportsGetListStruct.bizCreditCount)
+        && Objects.equals(this.bizCreditCost, targetingTagReportsGetListStruct.bizCreditCost)
+        && Objects.equals(this.bizCreditRate, targetingTagReportsGetListStruct.bizCreditRate)
+        && Objects.equals(this.bizCreditUv, targetingTagReportsGetListStruct.bizCreditUv)
+        && Objects.equals(this.bizDepositCount, targetingTagReportsGetListStruct.bizDepositCount)
+        && Objects.equals(
+            this.biz1dPurchaseCount, targetingTagReportsGetListStruct.biz1dPurchaseCount)
+        && Objects.equals(
+            this.biz1dPurchaseAmount, targetingTagReportsGetListStruct.biz1dPurchaseAmount)
+        && Objects.equals(
+            this.biz3dPurchaseCount, targetingTagReportsGetListStruct.biz3dPurchaseCount)
+        && Objects.equals(
+            this.biz3dPurchaseAmount, targetingTagReportsGetListStruct.biz3dPurchaseAmount)
+        && Objects.equals(
+            this.biz7dPurchaseCount, targetingTagReportsGetListStruct.biz7dPurchaseCount)
+        && Objects.equals(
+            this.biz7dPurchaseAmount, targetingTagReportsGetListStruct.biz7dPurchaseAmount)
+        && Objects.equals(
+            this.biz15dPurchaseCount, targetingTagReportsGetListStruct.biz15dPurchaseCount)
+        && Objects.equals(
+            this.biz15dPurchaseAmount, targetingTagReportsGetListStruct.biz15dPurchaseAmount)
+        && Objects.equals(
+            this.biz30dPurchaseCount, targetingTagReportsGetListStruct.biz30dPurchaseCount)
+        && Objects.equals(
+            this.biz30dPurchaseAmount, targetingTagReportsGetListStruct.biz30dPurchaseAmount)
+        && Objects.equals(this.biz1dPurchaseRoi, targetingTagReportsGetListStruct.biz1dPurchaseRoi)
+        && Objects.equals(this.biz3dPurchaseRoi, targetingTagReportsGetListStruct.biz3dPurchaseRoi)
+        && Objects.equals(this.biz7dPurchaseRoi, targetingTagReportsGetListStruct.biz7dPurchaseRoi)
+        && Objects.equals(
+            this.biz15dPurchaseRoi, targetingTagReportsGetListStruct.biz15dPurchaseRoi)
+        && Objects.equals(
+            this.biz30dPurchaseRoi, targetingTagReportsGetListStruct.biz30dPurchaseRoi)
         && Objects.equals(this.age, targetingTagReportsGetListStruct.age)
         && Objects.equals(this.regionId, targetingTagReportsGetListStruct.regionId)
         && Objects.equals(this.cityId, targetingTagReportsGetListStruct.cityId)
@@ -13248,6 +14487,59 @@ public class TargetingTagReportsGetListStruct {
         scanCodeAddFansCount,
         scanCodeAddFansUvCost,
         scanCodeAddFansCountCost,
+        bizFollowCount,
+        bizFollowUv,
+        bizFollowCost,
+        bizFollowRate,
+        bizRegCount,
+        bizRegUv,
+        bizRegRate,
+        bizRegCost,
+        bizRegOrderAmount,
+        bizRegRoi,
+        bizReservationCount,
+        bizReservationUv,
+        bizReservationRate,
+        bizReservationCost,
+        bizReservationAmount,
+        bizReservationRoi,
+        bizOrderCount,
+        bizOrderUv,
+        bizOrderRate,
+        bizOrderCost,
+        bizOrderRoi,
+        bizOrderAmount,
+        biz1dOrderCount,
+        biz1dOrderAmount,
+        bizPurchaseCount,
+        bizPurchaseAmount,
+        bizPurchaseRoi,
+        bizConsultCount,
+        bizReadingCount,
+        bizPageApplyCount,
+        bizPageApplyUv,
+        bizPageApplyCost,
+        bizPageApplyRate,
+        bizCreditCount,
+        bizCreditCost,
+        bizCreditRate,
+        bizCreditUv,
+        bizDepositCount,
+        biz1dPurchaseCount,
+        biz1dPurchaseAmount,
+        biz3dPurchaseCount,
+        biz3dPurchaseAmount,
+        biz7dPurchaseCount,
+        biz7dPurchaseAmount,
+        biz15dPurchaseCount,
+        biz15dPurchaseAmount,
+        biz30dPurchaseCount,
+        biz30dPurchaseAmount,
+        biz1dPurchaseRoi,
+        biz3dPurchaseRoi,
+        biz7dPurchaseRoi,
+        biz15dPurchaseRoi,
+        biz30dPurchaseRoi,
         age,
         regionId,
         cityId,

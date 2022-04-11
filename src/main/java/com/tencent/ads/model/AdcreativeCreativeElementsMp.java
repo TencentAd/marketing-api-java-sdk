@@ -71,6 +71,9 @@ public class AdcreativeCreativeElementsMp {
   @SerializedName("countdown_begin")
   private Long countdownBegin = null;
 
+  @SerializedName("countdown_expiring_timestamp")
+  private Long countdownExpiringTimestamp = null;
+
   @SerializedName("countdown_price")
   private String countdownPrice = null;
 
@@ -134,9 +137,6 @@ public class AdcreativeCreativeElementsMp {
   @SerializedName("end_page")
   private AdCreativeEndPage endPage = null;
 
-  @SerializedName("shop_image")
-  private String shopImage = null;
-
   @SerializedName("head_line")
   private String headLine = null;
 
@@ -166,9 +166,6 @@ public class AdcreativeCreativeElementsMp {
 
   @SerializedName("canvas_share_image")
   private String canvasShareImage = null;
-
-  @SerializedName("countdown_expiring_timestamp")
-  private Long countdownExpiringTimestamp = null;
 
   public AdcreativeCreativeElementsMp image(String image) {
     this.image = image;
@@ -490,6 +487,25 @@ public class AdcreativeCreativeElementsMp {
 
   public void setCountdownBegin(Long countdownBegin) {
     this.countdownBegin = countdownBegin;
+  }
+
+  public AdcreativeCreativeElementsMp countdownExpiringTimestamp(Long countdownExpiringTimestamp) {
+    this.countdownExpiringTimestamp = countdownExpiringTimestamp;
+    return this;
+  }
+
+  /**
+   * Get countdownExpiringTimestamp
+   *
+   * @return countdownExpiringTimestamp
+   */
+  @ApiModelProperty(value = "")
+  public Long getCountdownExpiringTimestamp() {
+    return countdownExpiringTimestamp;
+  }
+
+  public void setCountdownExpiringTimestamp(Long countdownExpiringTimestamp) {
+    this.countdownExpiringTimestamp = countdownExpiringTimestamp;
   }
 
   public AdcreativeCreativeElementsMp countdownPrice(String countdownPrice) {
@@ -909,25 +925,6 @@ public class AdcreativeCreativeElementsMp {
     this.endPage = endPage;
   }
 
-  public AdcreativeCreativeElementsMp shopImage(String shopImage) {
-    this.shopImage = shopImage;
-    return this;
-  }
-
-  /**
-   * Get shopImage
-   *
-   * @return shopImage
-   */
-  @ApiModelProperty(value = "")
-  public String getShopImage() {
-    return shopImage;
-  }
-
-  public void setShopImage(String shopImage) {
-    this.shopImage = shopImage;
-  }
-
   public AdcreativeCreativeElementsMp headLine(String headLine) {
     this.headLine = headLine;
     return this;
@@ -1119,25 +1116,6 @@ public class AdcreativeCreativeElementsMp {
     this.canvasShareImage = canvasShareImage;
   }
 
-  public AdcreativeCreativeElementsMp countdownExpiringTimestamp(Long countdownExpiringTimestamp) {
-    this.countdownExpiringTimestamp = countdownExpiringTimestamp;
-    return this;
-  }
-
-  /**
-   * Get countdownExpiringTimestamp
-   *
-   * @return countdownExpiringTimestamp
-   */
-  @ApiModelProperty(value = "")
-  public Long getCountdownExpiringTimestamp() {
-    return countdownExpiringTimestamp;
-  }
-
-  public void setCountdownExpiringTimestamp(Long countdownExpiringTimestamp) {
-    this.countdownExpiringTimestamp = countdownExpiringTimestamp;
-  }
-
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -1163,6 +1141,9 @@ public class AdcreativeCreativeElementsMp {
         && Objects.equals(this.bottomText, adcreativeCreativeElementsMp.bottomText)
         && Objects.equals(this.excitationText, adcreativeCreativeElementsMp.excitationText)
         && Objects.equals(this.countdownBegin, adcreativeCreativeElementsMp.countdownBegin)
+        && Objects.equals(
+            this.countdownExpiringTimestamp,
+            adcreativeCreativeElementsMp.countdownExpiringTimestamp)
         && Objects.equals(this.countdownPrice, adcreativeCreativeElementsMp.countdownPrice)
         && Objects.equals(this.countdownTimeType, adcreativeCreativeElementsMp.countdownTimeType)
         && Objects.equals(this.label, adcreativeCreativeElementsMp.label)
@@ -1184,7 +1165,6 @@ public class AdcreativeCreativeElementsMp {
         && Objects.equals(this.fullScreenImage, adcreativeCreativeElementsMp.fullScreenImage)
         && Objects.equals(this.zipUrl, adcreativeCreativeElementsMp.zipUrl)
         && Objects.equals(this.endPage, adcreativeCreativeElementsMp.endPage)
-        && Objects.equals(this.shopImage, adcreativeCreativeElementsMp.shopImage)
         && Objects.equals(this.headLine, adcreativeCreativeElementsMp.headLine)
         && Objects.equals(this.shopImageStruct, adcreativeCreativeElementsMp.shopImageStruct)
         && Objects.equals(this.chosenButton, adcreativeCreativeElementsMp.chosenButton)
@@ -1194,10 +1174,7 @@ public class AdcreativeCreativeElementsMp {
         && Objects.equals(this.leftCanvas, adcreativeCreativeElementsMp.leftCanvas)
         && Objects.equals(this.rightCanvas, adcreativeCreativeElementsMp.rightCanvas)
         && Objects.equals(this.floatingZoneStruct, adcreativeCreativeElementsMp.floatingZoneStruct)
-        && Objects.equals(this.canvasShareImage, adcreativeCreativeElementsMp.canvasShareImage)
-        && Objects.equals(
-            this.countdownExpiringTimestamp,
-            adcreativeCreativeElementsMp.countdownExpiringTimestamp);
+        && Objects.equals(this.canvasShareImage, adcreativeCreativeElementsMp.canvasShareImage);
   }
 
   @Override
@@ -1219,6 +1196,7 @@ public class AdcreativeCreativeElementsMp {
         bottomText,
         excitationText,
         countdownBegin,
+        countdownExpiringTimestamp,
         countdownPrice,
         countdownTimeType,
         label,
@@ -1240,7 +1218,6 @@ public class AdcreativeCreativeElementsMp {
         fullScreenImage,
         zipUrl,
         endPage,
-        shopImage,
         headLine,
         shopImageStruct,
         chosenButton,
@@ -1250,8 +1227,7 @@ public class AdcreativeCreativeElementsMp {
         leftCanvas,
         rightCanvas,
         floatingZoneStruct,
-        canvasShareImage,
-        countdownExpiringTimestamp);
+        canvasShareImage);
   }
 
   @Override

@@ -34,7 +34,7 @@ public class RejectInfoLocation {
   private Long height = null;
 
   @SerializedName("time_second")
-  private Long timeSecond = null;
+  private Double timeSecond = null;
 
   @SerializedName("location_img_url")
   private String locationImgUrl = null;
@@ -121,7 +121,7 @@ public class RejectInfoLocation {
     this.height = height;
   }
 
-  public RejectInfoLocation timeSecond(Long timeSecond) {
+  public RejectInfoLocation timeSecond(Double timeSecond) {
     this.timeSecond = timeSecond;
     return this;
   }
@@ -132,11 +132,11 @@ public class RejectInfoLocation {
    * @return timeSecond
    */
   @ApiModelProperty(value = "")
-  public Long getTimeSecond() {
+  public Double getTimeSecond() {
     return timeSecond;
   }
 
-  public void setTimeSecond(Long timeSecond) {
+  public void setTimeSecond(Double timeSecond) {
     this.timeSecond = timeSecond;
   }
 

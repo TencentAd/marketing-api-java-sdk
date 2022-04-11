@@ -35,17 +35,11 @@ public class WriteTargetingSetting {
   @SerializedName("marital_status")
   private List<String> maritalStatus = null;
 
-  @SerializedName("working_status")
-  private List<String> workingStatus = null;
-
   @SerializedName("geo_location")
   private GeoLocations geoLocation = null;
 
   @SerializedName("user_os")
   private List<String> userOs = null;
-
-  @SerializedName("new_device")
-  private List<String> newDevice = null;
 
   @SerializedName("device_price")
   private List<String> devicePrice = null;
@@ -59,9 +53,6 @@ public class WriteTargetingSetting {
   @SerializedName("network_operator")
   private List<String> networkOperator = null;
 
-  @SerializedName("network_scene")
-  private List<String> networkScene = null;
-
   @SerializedName("app_install_status")
   private List<String> appInstallStatus = null;
 
@@ -71,14 +62,8 @@ public class WriteTargetingSetting {
   @SerializedName("game_consumption_level")
   private List<String> gameConsumptionLevel = null;
 
-  @SerializedName("residential_community_price")
-  private List<ResidentialCommunityPriceStruct> residentialCommunityPrice = null;
-
   @SerializedName("financial_situation")
   private List<String> financialSituation = null;
-
-  @SerializedName("consumption_type")
-  private List<String> consumptionType = null;
 
   @SerializedName("wechat_ad_behavior")
   private WechatAdBehavior wechatAdBehavior = null;
@@ -203,33 +188,6 @@ public class WriteTargetingSetting {
     this.maritalStatus = maritalStatus;
   }
 
-  public WriteTargetingSetting workingStatus(List<String> workingStatus) {
-    this.workingStatus = workingStatus;
-    return this;
-  }
-
-  public WriteTargetingSetting addWorkingStatusItem(String workingStatusItem) {
-    if (this.workingStatus == null) {
-      this.workingStatus = new ArrayList<String>();
-    }
-    this.workingStatus.add(workingStatusItem);
-    return this;
-  }
-
-  /**
-   * Get workingStatus
-   *
-   * @return workingStatus
-   */
-  @ApiModelProperty(value = "")
-  public List<String> getWorkingStatus() {
-    return workingStatus;
-  }
-
-  public void setWorkingStatus(List<String> workingStatus) {
-    this.workingStatus = workingStatus;
-  }
-
   public WriteTargetingSetting geoLocation(GeoLocations geoLocation) {
     this.geoLocation = geoLocation;
     return this;
@@ -274,33 +232,6 @@ public class WriteTargetingSetting {
 
   public void setUserOs(List<String> userOs) {
     this.userOs = userOs;
-  }
-
-  public WriteTargetingSetting newDevice(List<String> newDevice) {
-    this.newDevice = newDevice;
-    return this;
-  }
-
-  public WriteTargetingSetting addNewDeviceItem(String newDeviceItem) {
-    if (this.newDevice == null) {
-      this.newDevice = new ArrayList<String>();
-    }
-    this.newDevice.add(newDeviceItem);
-    return this;
-  }
-
-  /**
-   * Get newDevice
-   *
-   * @return newDevice
-   */
-  @ApiModelProperty(value = "")
-  public List<String> getNewDevice() {
-    return newDevice;
-  }
-
-  public void setNewDevice(List<String> newDevice) {
-    this.newDevice = newDevice;
   }
 
   public WriteTargetingSetting devicePrice(List<String> devicePrice) {
@@ -403,33 +334,6 @@ public class WriteTargetingSetting {
     this.networkOperator = networkOperator;
   }
 
-  public WriteTargetingSetting networkScene(List<String> networkScene) {
-    this.networkScene = networkScene;
-    return this;
-  }
-
-  public WriteTargetingSetting addNetworkSceneItem(String networkSceneItem) {
-    if (this.networkScene == null) {
-      this.networkScene = new ArrayList<String>();
-    }
-    this.networkScene.add(networkSceneItem);
-    return this;
-  }
-
-  /**
-   * Get networkScene
-   *
-   * @return networkScene
-   */
-  @ApiModelProperty(value = "")
-  public List<String> getNetworkScene() {
-    return networkScene;
-  }
-
-  public void setNetworkScene(List<String> networkScene) {
-    this.networkScene = networkScene;
-  }
-
   public WriteTargetingSetting appInstallStatus(List<String> appInstallStatus) {
     this.appInstallStatus = appInstallStatus;
     return this;
@@ -511,36 +415,6 @@ public class WriteTargetingSetting {
     this.gameConsumptionLevel = gameConsumptionLevel;
   }
 
-  public WriteTargetingSetting residentialCommunityPrice(
-      List<ResidentialCommunityPriceStruct> residentialCommunityPrice) {
-    this.residentialCommunityPrice = residentialCommunityPrice;
-    return this;
-  }
-
-  public WriteTargetingSetting addResidentialCommunityPriceItem(
-      ResidentialCommunityPriceStruct residentialCommunityPriceItem) {
-    if (this.residentialCommunityPrice == null) {
-      this.residentialCommunityPrice = new ArrayList<ResidentialCommunityPriceStruct>();
-    }
-    this.residentialCommunityPrice.add(residentialCommunityPriceItem);
-    return this;
-  }
-
-  /**
-   * Get residentialCommunityPrice
-   *
-   * @return residentialCommunityPrice
-   */
-  @ApiModelProperty(value = "")
-  public List<ResidentialCommunityPriceStruct> getResidentialCommunityPrice() {
-    return residentialCommunityPrice;
-  }
-
-  public void setResidentialCommunityPrice(
-      List<ResidentialCommunityPriceStruct> residentialCommunityPrice) {
-    this.residentialCommunityPrice = residentialCommunityPrice;
-  }
-
   public WriteTargetingSetting financialSituation(List<String> financialSituation) {
     this.financialSituation = financialSituation;
     return this;
@@ -566,33 +440,6 @@ public class WriteTargetingSetting {
 
   public void setFinancialSituation(List<String> financialSituation) {
     this.financialSituation = financialSituation;
-  }
-
-  public WriteTargetingSetting consumptionType(List<String> consumptionType) {
-    this.consumptionType = consumptionType;
-    return this;
-  }
-
-  public WriteTargetingSetting addConsumptionTypeItem(String consumptionTypeItem) {
-    if (this.consumptionType == null) {
-      this.consumptionType = new ArrayList<String>();
-    }
-    this.consumptionType.add(consumptionTypeItem);
-    return this;
-  }
-
-  /**
-   * Get consumptionType
-   *
-   * @return consumptionType
-   */
-  @ApiModelProperty(value = "")
-  public List<String> getConsumptionType() {
-    return consumptionType;
-  }
-
-  public void setConsumptionType(List<String> consumptionType) {
-    this.consumptionType = consumptionType;
   }
 
   public WriteTargetingSetting wechatAdBehavior(WechatAdBehavior wechatAdBehavior) {
@@ -720,22 +567,16 @@ public class WriteTargetingSetting {
         && Objects.equals(this.gender, writeTargetingSetting.gender)
         && Objects.equals(this.education, writeTargetingSetting.education)
         && Objects.equals(this.maritalStatus, writeTargetingSetting.maritalStatus)
-        && Objects.equals(this.workingStatus, writeTargetingSetting.workingStatus)
         && Objects.equals(this.geoLocation, writeTargetingSetting.geoLocation)
         && Objects.equals(this.userOs, writeTargetingSetting.userOs)
-        && Objects.equals(this.newDevice, writeTargetingSetting.newDevice)
         && Objects.equals(this.devicePrice, writeTargetingSetting.devicePrice)
         && Objects.equals(this.deviceBrandModel, writeTargetingSetting.deviceBrandModel)
         && Objects.equals(this.networkType, writeTargetingSetting.networkType)
         && Objects.equals(this.networkOperator, writeTargetingSetting.networkOperator)
-        && Objects.equals(this.networkScene, writeTargetingSetting.networkScene)
         && Objects.equals(this.appInstallStatus, writeTargetingSetting.appInstallStatus)
         && Objects.equals(this.consumptionStatus, writeTargetingSetting.consumptionStatus)
         && Objects.equals(this.gameConsumptionLevel, writeTargetingSetting.gameConsumptionLevel)
-        && Objects.equals(
-            this.residentialCommunityPrice, writeTargetingSetting.residentialCommunityPrice)
         && Objects.equals(this.financialSituation, writeTargetingSetting.financialSituation)
-        && Objects.equals(this.consumptionType, writeTargetingSetting.consumptionType)
         && Objects.equals(this.wechatAdBehavior, writeTargetingSetting.wechatAdBehavior)
         && Objects.equals(this.customAudience, writeTargetingSetting.customAudience)
         && Objects.equals(this.excludedCustomAudience, writeTargetingSetting.excludedCustomAudience)
@@ -751,21 +592,16 @@ public class WriteTargetingSetting {
         gender,
         education,
         maritalStatus,
-        workingStatus,
         geoLocation,
         userOs,
-        newDevice,
         devicePrice,
         deviceBrandModel,
         networkType,
         networkOperator,
-        networkScene,
         appInstallStatus,
         consumptionStatus,
         gameConsumptionLevel,
-        residentialCommunityPrice,
         financialSituation,
-        consumptionType,
         wechatAdBehavior,
         customAudience,
         excludedCustomAudience,
