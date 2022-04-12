@@ -81,6 +81,9 @@ public class ConversionsGetListStruct {
   @SerializedName("deep_worth_advanced_goal")
   private ConversionOptimizationGoal deepWorthAdvancedGoal = null;
 
+  @SerializedName("conversion_link_id")
+  private Long conversionLinkId = null;
+
   public ConversionsGetListStruct conversionId(Long conversionId) {
     this.conversionId = conversionId;
     return this;
@@ -464,6 +467,25 @@ public class ConversionsGetListStruct {
     this.deepWorthAdvancedGoal = deepWorthAdvancedGoal;
   }
 
+  public ConversionsGetListStruct conversionLinkId(Long conversionLinkId) {
+    this.conversionLinkId = conversionLinkId;
+    return this;
+  }
+
+  /**
+   * Get conversionLinkId
+   *
+   * @return conversionLinkId
+   */
+  @ApiModelProperty(value = "")
+  public Long getConversionLinkId() {
+    return conversionLinkId;
+  }
+
+  public void setConversionLinkId(Long conversionLinkId) {
+    this.conversionLinkId = conversionLinkId;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -497,7 +519,8 @@ public class ConversionsGetListStruct {
         && Objects.equals(this.conversionScene, conversionsGetListStruct.conversionScene)
         && Objects.equals(this.ownerId, conversionsGetListStruct.ownerId)
         && Objects.equals(
-            this.deepWorthAdvancedGoal, conversionsGetListStruct.deepWorthAdvancedGoal);
+            this.deepWorthAdvancedGoal, conversionsGetListStruct.deepWorthAdvancedGoal)
+        && Objects.equals(this.conversionLinkId, conversionsGetListStruct.conversionLinkId);
   }
 
   @Override
@@ -522,7 +545,8 @@ public class ConversionsGetListStruct {
         promotedObjectId,
         conversionScene,
         ownerId,
-        deepWorthAdvancedGoal);
+        deepWorthAdvancedGoal,
+        conversionLinkId);
   }
 
   @Override

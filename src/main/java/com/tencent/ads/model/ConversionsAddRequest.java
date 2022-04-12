@@ -67,6 +67,9 @@ public class ConversionsAddRequest {
   @SerializedName("user_action_set_id")
   private Long userActionSetId = null;
 
+  @SerializedName("conversion_link_id")
+  private Long conversionLinkId = null;
+
   public ConversionsAddRequest accountId(Long accountId) {
     this.accountId = accountId;
     return this;
@@ -374,6 +377,25 @@ public class ConversionsAddRequest {
     this.userActionSetId = userActionSetId;
   }
 
+  public ConversionsAddRequest conversionLinkId(Long conversionLinkId) {
+    this.conversionLinkId = conversionLinkId;
+    return this;
+  }
+
+  /**
+   * Get conversionLinkId
+   *
+   * @return conversionLinkId
+   */
+  @ApiModelProperty(value = "")
+  public Long getConversionLinkId() {
+    return conversionLinkId;
+  }
+
+  public void setConversionLinkId(Long conversionLinkId) {
+    this.conversionLinkId = conversionLinkId;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -401,7 +423,8 @@ public class ConversionsAddRequest {
         && Objects.equals(
             this.deepWorthOptimizationGoal, conversionsAddRequest.deepWorthOptimizationGoal)
         && Objects.equals(this.deepWorthAdvancedGoal, conversionsAddRequest.deepWorthAdvancedGoal)
-        && Objects.equals(this.userActionSetId, conversionsAddRequest.userActionSetId);
+        && Objects.equals(this.userActionSetId, conversionsAddRequest.userActionSetId)
+        && Objects.equals(this.conversionLinkId, conversionsAddRequest.conversionLinkId);
   }
 
   @Override
@@ -422,7 +445,8 @@ public class ConversionsAddRequest {
         deepBehaviorOptimizationGoal,
         deepWorthOptimizationGoal,
         deepWorthAdvancedGoal,
-        userActionSetId);
+        userActionSetId,
+        conversionLinkId);
   }
 
   @Override

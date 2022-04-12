@@ -27,6 +27,9 @@ public class MiniGameSpec {
   @SerializedName("mini_game_openlink")
   private String miniGameOpenlink = null;
 
+  @SerializedName("mini_game_openlink_page_spec")
+  private AdCreativeMiniGameOpenlinkPageSpec miniGameOpenlinkPageSpec = null;
+
   public MiniGameSpec miniGameTrackingParameter(String miniGameTrackingParameter) {
     this.miniGameTrackingParameter = miniGameTrackingParameter;
     return this;
@@ -65,6 +68,27 @@ public class MiniGameSpec {
     this.miniGameOpenlink = miniGameOpenlink;
   }
 
+  public MiniGameSpec miniGameOpenlinkPageSpec(
+      AdCreativeMiniGameOpenlinkPageSpec miniGameOpenlinkPageSpec) {
+    this.miniGameOpenlinkPageSpec = miniGameOpenlinkPageSpec;
+    return this;
+  }
+
+  /**
+   * Get miniGameOpenlinkPageSpec
+   *
+   * @return miniGameOpenlinkPageSpec
+   */
+  @ApiModelProperty(value = "")
+  public AdCreativeMiniGameOpenlinkPageSpec getMiniGameOpenlinkPageSpec() {
+    return miniGameOpenlinkPageSpec;
+  }
+
+  public void setMiniGameOpenlinkPageSpec(
+      AdCreativeMiniGameOpenlinkPageSpec miniGameOpenlinkPageSpec) {
+    this.miniGameOpenlinkPageSpec = miniGameOpenlinkPageSpec;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -75,12 +99,13 @@ public class MiniGameSpec {
     }
     MiniGameSpec miniGameSpec = (MiniGameSpec) o;
     return Objects.equals(this.miniGameTrackingParameter, miniGameSpec.miniGameTrackingParameter)
-        && Objects.equals(this.miniGameOpenlink, miniGameSpec.miniGameOpenlink);
+        && Objects.equals(this.miniGameOpenlink, miniGameSpec.miniGameOpenlink)
+        && Objects.equals(this.miniGameOpenlinkPageSpec, miniGameSpec.miniGameOpenlinkPageSpec);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(miniGameTrackingParameter, miniGameOpenlink);
+    return Objects.hash(miniGameTrackingParameter, miniGameOpenlink, miniGameOpenlinkPageSpec);
   }
 
   @Override
