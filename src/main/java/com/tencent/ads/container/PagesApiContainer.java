@@ -31,7 +31,7 @@ public class PagesApiContainer extends ApiContainer {
    * 获取落地页列表
    *
    * @param accountId (required)
-   * @param promotedObjectType (required)
+   * @param promotedObjectType (optional)
    * @param filtering (optional)
    * @param page (optional)
    * @param pageSize (optional)

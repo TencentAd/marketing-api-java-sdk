@@ -53,7 +53,7 @@ public class PagesApi {
    * Build call for pagesGet
    *
    * @param accountId (required)
-   * @param promotedObjectType (required)
+   * @param promotedObjectType (optional)
    * @param filtering (optional)
    * @param page (optional)
    * @param pageSize (optional)
@@ -155,12 +155,6 @@ public class PagesApi {
           "Missing the required parameter 'accountId' when calling pagesGet(Async)");
     }
 
-    // verify the required parameter 'promotedObjectType' is set
-    if (promotedObjectType == null) {
-      throw new ApiException(
-          "Missing the required parameter 'promotedObjectType' when calling pagesGet(Async)");
-    }
-
     com.squareup.okhttp.Call call =
         pagesGetCall(
             accountId,
@@ -178,7 +172,7 @@ public class PagesApi {
    * 获取落地页列表
    *
    * @param accountId (required)
-   * @param promotedObjectType (required)
+   * @param promotedObjectType (optional)
    * @param filtering (optional)
    * @param page (optional)
    * @param pageSize (optional)
@@ -204,7 +198,7 @@ public class PagesApi {
    * 获取落地页列表
    *
    * @param accountId (required)
-   * @param promotedObjectType (required)
+   * @param promotedObjectType (optional)
    * @param filtering (optional)
    * @param page (optional)
    * @param pageSize (optional)
@@ -232,7 +226,7 @@ public class PagesApi {
    * 获取落地页列表 (asynchronously)
    *
    * @param accountId (required)
-   * @param promotedObjectType (required)
+   * @param promotedObjectType (optional)
    * @param filtering (optional)
    * @param page (optional)
    * @param pageSize (optional)
