@@ -167,6 +167,9 @@ public class RevisedAdcreativeElements {
   @SerializedName("canvas_share_image")
   private String canvasShareImage = null;
 
+  @SerializedName("wegame_info_spec")
+  private WegameInfoSpec wegameInfoSpec = null;
+
   public RevisedAdcreativeElements image(String image) {
     this.image = image;
     return this;
@@ -1122,6 +1125,25 @@ public class RevisedAdcreativeElements {
     this.canvasShareImage = canvasShareImage;
   }
 
+  public RevisedAdcreativeElements wegameInfoSpec(WegameInfoSpec wegameInfoSpec) {
+    this.wegameInfoSpec = wegameInfoSpec;
+    return this;
+  }
+
+  /**
+   * Get wegameInfoSpec
+   *
+   * @return wegameInfoSpec
+   */
+  @ApiModelProperty(value = "")
+  public WegameInfoSpec getWegameInfoSpec() {
+    return wegameInfoSpec;
+  }
+
+  public void setWegameInfoSpec(WegameInfoSpec wegameInfoSpec) {
+    this.wegameInfoSpec = wegameInfoSpec;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -1179,7 +1201,8 @@ public class RevisedAdcreativeElements {
         && Objects.equals(this.chosenButton, revisedAdcreativeElements.chosenButton)
         && Objects.equals(this.livingDescStruct, revisedAdcreativeElements.livingDescStruct)
         && Objects.equals(this.floatingZoneStruct, revisedAdcreativeElements.floatingZoneStruct)
-        && Objects.equals(this.canvasShareImage, revisedAdcreativeElements.canvasShareImage);
+        && Objects.equals(this.canvasShareImage, revisedAdcreativeElements.canvasShareImage)
+        && Objects.equals(this.wegameInfoSpec, revisedAdcreativeElements.wegameInfoSpec);
   }
 
   @Override
@@ -1232,7 +1255,8 @@ public class RevisedAdcreativeElements {
         chosenButton,
         livingDescStruct,
         floatingZoneStruct,
-        canvasShareImage);
+        canvasShareImage,
+        wegameInfoSpec);
   }
 
   @Override

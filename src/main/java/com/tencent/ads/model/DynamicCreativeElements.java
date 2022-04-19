@@ -164,6 +164,9 @@ public class DynamicCreativeElements {
   @SerializedName("canvas_share_image")
   private String canvasShareImage = null;
 
+  @SerializedName("wegame_info_spec")
+  private WegameInfoSpec wegameInfoSpec = null;
+
   public DynamicCreativeElements image(String image) {
     this.image = image;
     return this;
@@ -1140,6 +1143,25 @@ public class DynamicCreativeElements {
     this.canvasShareImage = canvasShareImage;
   }
 
+  public DynamicCreativeElements wegameInfoSpec(WegameInfoSpec wegameInfoSpec) {
+    this.wegameInfoSpec = wegameInfoSpec;
+    return this;
+  }
+
+  /**
+   * Get wegameInfoSpec
+   *
+   * @return wegameInfoSpec
+   */
+  @ApiModelProperty(value = "")
+  public WegameInfoSpec getWegameInfoSpec() {
+    return wegameInfoSpec;
+  }
+
+  public void setWegameInfoSpec(WegameInfoSpec wegameInfoSpec) {
+    this.wegameInfoSpec = wegameInfoSpec;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -1197,7 +1219,8 @@ public class DynamicCreativeElements {
         && Objects.equals(this.chosenButton, dynamicCreativeElements.chosenButton)
         && Objects.equals(this.livingDescStruct, dynamicCreativeElements.livingDescStruct)
         && Objects.equals(this.floatingZoneStruct, dynamicCreativeElements.floatingZoneStruct)
-        && Objects.equals(this.canvasShareImage, dynamicCreativeElements.canvasShareImage);
+        && Objects.equals(this.canvasShareImage, dynamicCreativeElements.canvasShareImage)
+        && Objects.equals(this.wegameInfoSpec, dynamicCreativeElements.wegameInfoSpec);
   }
 
   @Override
@@ -1249,7 +1272,8 @@ public class DynamicCreativeElements {
         chosenButton,
         livingDescStruct,
         floatingZoneStruct,
-        canvasShareImage);
+        canvasShareImage,
+        wegameInfoSpec);
   }
 
   @Override
