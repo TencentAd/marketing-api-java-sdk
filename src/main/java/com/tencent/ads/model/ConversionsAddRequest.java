@@ -70,12 +70,6 @@ public class ConversionsAddRequest {
   @SerializedName("conversion_link_id")
   private Long conversionLinkId = null;
 
-  @SerializedName("impression_feedback_url")
-  private String impressionFeedbackUrl = null;
-
-  @SerializedName("attribution_window")
-  private Long attributionWindow = null;
-
   public ConversionsAddRequest accountId(Long accountId) {
     this.accountId = accountId;
     return this;
@@ -402,44 +396,6 @@ public class ConversionsAddRequest {
     this.conversionLinkId = conversionLinkId;
   }
 
-  public ConversionsAddRequest impressionFeedbackUrl(String impressionFeedbackUrl) {
-    this.impressionFeedbackUrl = impressionFeedbackUrl;
-    return this;
-  }
-
-  /**
-   * Get impressionFeedbackUrl
-   *
-   * @return impressionFeedbackUrl
-   */
-  @ApiModelProperty(value = "")
-  public String getImpressionFeedbackUrl() {
-    return impressionFeedbackUrl;
-  }
-
-  public void setImpressionFeedbackUrl(String impressionFeedbackUrl) {
-    this.impressionFeedbackUrl = impressionFeedbackUrl;
-  }
-
-  public ConversionsAddRequest attributionWindow(Long attributionWindow) {
-    this.attributionWindow = attributionWindow;
-    return this;
-  }
-
-  /**
-   * Get attributionWindow
-   *
-   * @return attributionWindow
-   */
-  @ApiModelProperty(value = "")
-  public Long getAttributionWindow() {
-    return attributionWindow;
-  }
-
-  public void setAttributionWindow(Long attributionWindow) {
-    this.attributionWindow = attributionWindow;
-  }
-
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -468,9 +424,7 @@ public class ConversionsAddRequest {
             this.deepWorthOptimizationGoal, conversionsAddRequest.deepWorthOptimizationGoal)
         && Objects.equals(this.deepWorthAdvancedGoal, conversionsAddRequest.deepWorthAdvancedGoal)
         && Objects.equals(this.userActionSetId, conversionsAddRequest.userActionSetId)
-        && Objects.equals(this.conversionLinkId, conversionsAddRequest.conversionLinkId)
-        && Objects.equals(this.impressionFeedbackUrl, conversionsAddRequest.impressionFeedbackUrl)
-        && Objects.equals(this.attributionWindow, conversionsAddRequest.attributionWindow);
+        && Objects.equals(this.conversionLinkId, conversionsAddRequest.conversionLinkId);
   }
 
   @Override
@@ -492,9 +446,7 @@ public class ConversionsAddRequest {
         deepWorthOptimizationGoal,
         deepWorthAdvancedGoal,
         userActionSetId,
-        conversionLinkId,
-        impressionFeedbackUrl,
-        attributionWindow);
+        conversionLinkId);
   }
 
   @Override
