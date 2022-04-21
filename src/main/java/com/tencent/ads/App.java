@@ -106,6 +106,13 @@ public class App {
   @Inject LocalStoresCategoriesApiContainer localStoresCategoriesApiContainer;
   @Inject LocalStoresSearchInfoApiContainer localStoresSearchInfoApiContainer;
   @Inject LocalStoresWxpayMerchantsApiContainer localStoresWxpayMerchantsApiContainer;
+  @Inject MergeFundTypeDailyBalanceReportApiContainer mergeFundTypeDailyBalanceReportApiContainer;
+
+  @Inject
+  MergeFundTypeFundStatementsDetailedApiContainer mergeFundTypeFundStatementsDetailedApiContainer;
+
+  @Inject MergeFundTypeFundsApiContainer mergeFundTypeFundsApiContainer;
+  @Inject MergeFundTypeSubcustomerTransferApiContainer mergeFundTypeSubcustomerTransferApiContainer;
   @Inject OauthApiContainer oauthApiContainer;
   @Inject OptimizationGoalPermissionsApiContainer optimizationGoalPermissionsApiContainer;
   @Inject OuterCluesApiContainer outerCluesApiContainer;
@@ -529,6 +536,22 @@ public class App {
 
   public LocalStoresWxpayMerchantsApiContainer localStoresWxpayMerchants() {
     return localStoresWxpayMerchantsApiContainer;
+  }
+
+  public MergeFundTypeDailyBalanceReportApiContainer mergeFundTypeDailyBalanceReport() {
+    return mergeFundTypeDailyBalanceReportApiContainer;
+  }
+
+  public MergeFundTypeFundStatementsDetailedApiContainer mergeFundTypeFundStatementsDetailed() {
+    return mergeFundTypeFundStatementsDetailedApiContainer;
+  }
+
+  public MergeFundTypeFundsApiContainer mergeFundTypeFunds() {
+    return mergeFundTypeFundsApiContainer;
+  }
+
+  public MergeFundTypeSubcustomerTransferApiContainer mergeFundTypeSubcustomerTransfer() {
+    return mergeFundTypeSubcustomerTransferApiContainer;
   }
 
   public OauthApiContainer oauth() {
