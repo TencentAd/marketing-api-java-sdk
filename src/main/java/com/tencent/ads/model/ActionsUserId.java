@@ -60,6 +60,12 @@ public class ActionsUserId {
   @SerializedName("wechat_app_id")
   private String wechatAppId = null;
 
+  @SerializedName("caid")
+  private String caid = null;
+
+  @SerializedName("caid_version")
+  private Long caidVersion = null;
+
   public ActionsUserId hashImei(String hashImei) {
     this.hashImei = hashImei;
     return this;
@@ -307,6 +313,44 @@ public class ActionsUserId {
     this.wechatAppId = wechatAppId;
   }
 
+  public ActionsUserId caid(String caid) {
+    this.caid = caid;
+    return this;
+  }
+
+  /**
+   * Get caid
+   *
+   * @return caid
+   */
+  @ApiModelProperty(value = "")
+  public String getCaid() {
+    return caid;
+  }
+
+  public void setCaid(String caid) {
+    this.caid = caid;
+  }
+
+  public ActionsUserId caidVersion(Long caidVersion) {
+    this.caidVersion = caidVersion;
+    return this;
+  }
+
+  /**
+   * Get caidVersion
+   *
+   * @return caidVersion
+   */
+  @ApiModelProperty(value = "")
+  public Long getCaidVersion() {
+    return caidVersion;
+  }
+
+  public void setCaidVersion(Long caidVersion) {
+    this.caidVersion = caidVersion;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -328,7 +372,9 @@ public class ActionsUserId {
         && Objects.equals(this.md5Sha256Oaid, actionsUserId.md5Sha256Oaid)
         && Objects.equals(this.wechatOpenid, actionsUserId.wechatOpenid)
         && Objects.equals(this.wechatUnionid, actionsUserId.wechatUnionid)
-        && Objects.equals(this.wechatAppId, actionsUserId.wechatAppId);
+        && Objects.equals(this.wechatAppId, actionsUserId.wechatAppId)
+        && Objects.equals(this.caid, actionsUserId.caid)
+        && Objects.equals(this.caidVersion, actionsUserId.caidVersion);
   }
 
   @Override
@@ -346,7 +392,9 @@ public class ActionsUserId {
         md5Sha256Oaid,
         wechatOpenid,
         wechatUnionid,
-        wechatAppId);
+        wechatAppId,
+        caid,
+        caidVersion);
   }
 
   @Override
