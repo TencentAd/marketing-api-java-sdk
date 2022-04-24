@@ -607,7 +607,7 @@ public class DailyReportsGetListStruct {
   private Long wechatLocalPayAmount = null;
 
   @SerializedName("wechat_local_pay_roi")
-  private Long wechatLocalPayRoi = null;
+  private Double wechatLocalPayRoi = null;
 
   @SerializedName("first_pay_rate")
   private Double firstPayRate = null;
@@ -1714,7 +1714,7 @@ public class DailyReportsGetListStruct {
   private Double miniGamePayD3Roi = null;
 
   @SerializedName("mini_game_pay_d7_roi")
-  private Long miniGamePayD7Roi = null;
+  private Double miniGamePayD7Roi = null;
 
   @SerializedName("mini_game_pay_d14_roi")
   private Double miniGamePayD14Roi = null;
@@ -5761,7 +5761,7 @@ public class DailyReportsGetListStruct {
     this.wechatLocalPayAmount = wechatLocalPayAmount;
   }
 
-  public DailyReportsGetListStruct wechatLocalPayRoi(Long wechatLocalPayRoi) {
+  public DailyReportsGetListStruct wechatLocalPayRoi(Double wechatLocalPayRoi) {
     this.wechatLocalPayRoi = wechatLocalPayRoi;
     return this;
   }
@@ -5772,11 +5772,11 @@ public class DailyReportsGetListStruct {
    * @return wechatLocalPayRoi
    */
   @ApiModelProperty(value = "")
-  public Long getWechatLocalPayRoi() {
+  public Double getWechatLocalPayRoi() {
     return wechatLocalPayRoi;
   }
 
-  public void setWechatLocalPayRoi(Long wechatLocalPayRoi) {
+  public void setWechatLocalPayRoi(Double wechatLocalPayRoi) {
     this.wechatLocalPayRoi = wechatLocalPayRoi;
   }
 
@@ -12804,7 +12804,7 @@ public class DailyReportsGetListStruct {
     this.miniGamePayD3Roi = miniGamePayD3Roi;
   }
 
-  public DailyReportsGetListStruct miniGamePayD7Roi(Long miniGamePayD7Roi) {
+  public DailyReportsGetListStruct miniGamePayD7Roi(Double miniGamePayD7Roi) {
     this.miniGamePayD7Roi = miniGamePayD7Roi;
     return this;
   }
@@ -12815,11 +12815,11 @@ public class DailyReportsGetListStruct {
    * @return miniGamePayD7Roi
    */
   @ApiModelProperty(value = "")
-  public Long getMiniGamePayD7Roi() {
+  public Double getMiniGamePayD7Roi() {
     return miniGamePayD7Roi;
   }
 
-  public void setMiniGamePayD7Roi(Long miniGamePayD7Roi) {
+  public void setMiniGamePayD7Roi(Double miniGamePayD7Roi) {
     this.miniGamePayD7Roi = miniGamePayD7Roi;
   }
 

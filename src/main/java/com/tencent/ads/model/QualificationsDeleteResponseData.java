@@ -15,12 +15,17 @@ package com.tencent.ads.model;
 import com.google.gson.Gson;
 import com.google.gson.annotations.SerializedName;
 import io.swagger.annotations.ApiModelProperty;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Objects;
 
 /** QualificationsDeleteResponseData */
 public class QualificationsDeleteResponseData {
   @SerializedName("qualification_id")
   private Long qualificationId = null;
+
+  @SerializedName("qualification_id_list")
+  private List<Long> qualificationIdList = null;
 
   public QualificationsDeleteResponseData qualificationId(Long qualificationId) {
     this.qualificationId = qualificationId;
@@ -41,6 +46,33 @@ public class QualificationsDeleteResponseData {
     this.qualificationId = qualificationId;
   }
 
+  public QualificationsDeleteResponseData qualificationIdList(List<Long> qualificationIdList) {
+    this.qualificationIdList = qualificationIdList;
+    return this;
+  }
+
+  public QualificationsDeleteResponseData addQualificationIdListItem(Long qualificationIdListItem) {
+    if (this.qualificationIdList == null) {
+      this.qualificationIdList = new ArrayList<Long>();
+    }
+    this.qualificationIdList.add(qualificationIdListItem);
+    return this;
+  }
+
+  /**
+   * Get qualificationIdList
+   *
+   * @return qualificationIdList
+   */
+  @ApiModelProperty(value = "")
+  public List<Long> getQualificationIdList() {
+    return qualificationIdList;
+  }
+
+  public void setQualificationIdList(List<Long> qualificationIdList) {
+    this.qualificationIdList = qualificationIdList;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -51,12 +83,14 @@ public class QualificationsDeleteResponseData {
     }
     QualificationsDeleteResponseData qualificationsDeleteResponseData =
         (QualificationsDeleteResponseData) o;
-    return Objects.equals(this.qualificationId, qualificationsDeleteResponseData.qualificationId);
+    return Objects.equals(this.qualificationId, qualificationsDeleteResponseData.qualificationId)
+        && Objects.equals(
+            this.qualificationIdList, qualificationsDeleteResponseData.qualificationIdList);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(qualificationId);
+    return Objects.hash(qualificationId, qualificationIdList);
   }
 
   @Override
