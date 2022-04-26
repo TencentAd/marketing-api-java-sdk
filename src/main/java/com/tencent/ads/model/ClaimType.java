@@ -20,7 +20,7 @@ import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
 /**
- * 归因方式，SDK上报方式时归因方式只能为CLAIM_TYPE_ACTIVATION，JS上报方式时只能是CLAIM_TYPE_CLICK,微信小游戏推广仅支持CLAIM_TYPE_REGISTER，QQ小游戏推广仅支持是CLAIM_TYPE_CLICK
+ * 归因方式，SDK上报方式时归因方式只能为CLAIM_TYPE_ACTIVATION，JS上报方式时只能是CLAIM_TYPE_CLICK,微信小游戏推广仅支持CLAIM_TYPE_REGISTER，QQ小游戏推广仅支持是CLAIM_TYPE_CLICK，APP类型、WEB类型、微信小程序并且配置白名单的账户支持CLAIM_TYPE_IMPRESSION
  */
 @JsonAdapter(ClaimType.Adapter.class)
 public enum ClaimType {
@@ -28,7 +28,9 @@ public enum ClaimType {
 
   CLICK("CLAIM_TYPE_CLICK"),
 
-  REGISTER("CLAIM_TYPE_REGISTER");
+  REGISTER("CLAIM_TYPE_REGISTER"),
+
+  IMPRESSION("CLAIM_TYPE_IMPRESSION");
 
   private String value;
 
