@@ -46,6 +46,9 @@ public class AdvertiserAddRequest {
   @SerializedName("certification_number")
   private String certificationNumber = null;
 
+  @SerializedName("area_code")
+  private Long areaCode = null;
+
   public AdvertiserAddRequest corporationName(String corporationName) {
     this.corporationName = corporationName;
     return this;
@@ -218,6 +221,25 @@ public class AdvertiserAddRequest {
     this.certificationNumber = certificationNumber;
   }
 
+  public AdvertiserAddRequest areaCode(Long areaCode) {
+    this.areaCode = areaCode;
+    return this;
+  }
+
+  /**
+   * Get areaCode
+   *
+   * @return areaCode
+   */
+  @ApiModelProperty(value = "")
+  public Long getAreaCode() {
+    return areaCode;
+  }
+
+  public void setAreaCode(Long areaCode) {
+    this.areaCode = areaCode;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -236,7 +258,8 @@ public class AdvertiserAddRequest {
         && Objects.equals(this.corporateImageName, advertiserAddRequest.corporateImageName)
         && Objects.equals(this.contactPersonTelephone, advertiserAddRequest.contactPersonTelephone)
         && Objects.equals(this.contactPersonMobile, advertiserAddRequest.contactPersonMobile)
-        && Objects.equals(this.certificationNumber, advertiserAddRequest.certificationNumber);
+        && Objects.equals(this.certificationNumber, advertiserAddRequest.certificationNumber)
+        && Objects.equals(this.areaCode, advertiserAddRequest.areaCode);
   }
 
   @Override
@@ -250,7 +273,8 @@ public class AdvertiserAddRequest {
         corporateImageName,
         contactPersonTelephone,
         contactPersonMobile,
-        certificationNumber);
+        certificationNumber,
+        areaCode);
   }
 
   @Override

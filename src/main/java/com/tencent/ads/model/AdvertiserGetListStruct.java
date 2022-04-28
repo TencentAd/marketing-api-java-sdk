@@ -80,6 +80,9 @@ public class AdvertiserGetListStruct {
   @SerializedName("memo")
   private String memo = null;
 
+  @SerializedName("area_code")
+  private Long areaCode = null;
+
   @SerializedName("account_id")
   private Long accountId = null;
 
@@ -511,6 +514,25 @@ public class AdvertiserGetListStruct {
     this.memo = memo;
   }
 
+  public AdvertiserGetListStruct areaCode(Long areaCode) {
+    this.areaCode = areaCode;
+    return this;
+  }
+
+  /**
+   * Get areaCode
+   *
+   * @return areaCode
+   */
+  @ApiModelProperty(value = "")
+  public Long getAreaCode() {
+    return areaCode;
+  }
+
+  public void setAreaCode(Long areaCode) {
+    this.areaCode = areaCode;
+  }
+
   public AdvertiserGetListStruct accountId(Long accountId) {
     this.accountId = accountId;
     return this;
@@ -771,6 +793,7 @@ public class AdvertiserGetListStruct {
         && Objects.equals(this.agencyAccountId, advertiserGetListStruct.agencyAccountId)
         && Objects.equals(this.operators, advertiserGetListStruct.operators)
         && Objects.equals(this.memo, advertiserGetListStruct.memo)
+        && Objects.equals(this.areaCode, advertiserGetListStruct.areaCode)
         && Objects.equals(this.accountId, advertiserGetListStruct.accountId)
         && Objects.equals(this.adQualificationImage, advertiserGetListStruct.adQualificationImage)
         && Objects.equals(this.certificationImage, advertiserGetListStruct.certificationImage)
@@ -807,6 +830,7 @@ public class AdvertiserGetListStruct {
         agencyAccountId,
         operators,
         memo,
+        areaCode,
         accountId,
         adQualificationImage,
         certificationImage,

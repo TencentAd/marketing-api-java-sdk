@@ -57,6 +57,9 @@ public class AdvertiserUpdateRequest {
   @SerializedName("websites")
   private List<WebsiteUpdateStruct> websites = null;
 
+  @SerializedName("area_code")
+  private Long areaCode = null;
+
   public AdvertiserUpdateRequest accountId(Long accountId) {
     this.accountId = accountId;
     return this;
@@ -294,6 +297,25 @@ public class AdvertiserUpdateRequest {
     this.websites = websites;
   }
 
+  public AdvertiserUpdateRequest areaCode(Long areaCode) {
+    this.areaCode = areaCode;
+    return this;
+  }
+
+  /**
+   * Get areaCode
+   *
+   * @return areaCode
+   */
+  @ApiModelProperty(value = "")
+  public Long getAreaCode() {
+    return areaCode;
+  }
+
+  public void setAreaCode(Long areaCode) {
+    this.areaCode = areaCode;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -316,7 +338,8 @@ public class AdvertiserUpdateRequest {
             this.contactPersonTelephone, advertiserUpdateRequest.contactPersonTelephone)
         && Objects.equals(this.contactPersonMobile, advertiserUpdateRequest.contactPersonMobile)
         && Objects.equals(this.wechatSpec, advertiserUpdateRequest.wechatSpec)
-        && Objects.equals(this.websites, advertiserUpdateRequest.websites);
+        && Objects.equals(this.websites, advertiserUpdateRequest.websites)
+        && Objects.equals(this.areaCode, advertiserUpdateRequest.areaCode);
   }
 
   @Override
@@ -333,7 +356,8 @@ public class AdvertiserUpdateRequest {
         contactPersonTelephone,
         contactPersonMobile,
         wechatSpec,
-        websites);
+        websites,
+        areaCode);
   }
 
   @Override
