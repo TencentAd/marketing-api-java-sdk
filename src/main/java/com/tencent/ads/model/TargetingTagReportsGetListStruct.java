@@ -1365,6 +1365,15 @@ public class TargetingTagReportsGetListStruct {
   @SerializedName("biz_30d_purchase_roi")
   private Double biz30dPurchaseRoi = null;
 
+  @SerializedName("stay_pay_7d_pv")
+  private Long stayPay7dPv = null;
+
+  @SerializedName("stay_pay_15d_pv")
+  private Long stayPay15dPv = null;
+
+  @SerializedName("stay_pay_30d_pv")
+  private Long stayPay30dPv = null;
+
   @SerializedName("age")
   private String age = null;
 
@@ -10349,6 +10358,63 @@ public class TargetingTagReportsGetListStruct {
     this.biz30dPurchaseRoi = biz30dPurchaseRoi;
   }
 
+  public TargetingTagReportsGetListStruct stayPay7dPv(Long stayPay7dPv) {
+    this.stayPay7dPv = stayPay7dPv;
+    return this;
+  }
+
+  /**
+   * Get stayPay7dPv
+   *
+   * @return stayPay7dPv
+   */
+  @ApiModelProperty(value = "")
+  public Long getStayPay7dPv() {
+    return stayPay7dPv;
+  }
+
+  public void setStayPay7dPv(Long stayPay7dPv) {
+    this.stayPay7dPv = stayPay7dPv;
+  }
+
+  public TargetingTagReportsGetListStruct stayPay15dPv(Long stayPay15dPv) {
+    this.stayPay15dPv = stayPay15dPv;
+    return this;
+  }
+
+  /**
+   * Get stayPay15dPv
+   *
+   * @return stayPay15dPv
+   */
+  @ApiModelProperty(value = "")
+  public Long getStayPay15dPv() {
+    return stayPay15dPv;
+  }
+
+  public void setStayPay15dPv(Long stayPay15dPv) {
+    this.stayPay15dPv = stayPay15dPv;
+  }
+
+  public TargetingTagReportsGetListStruct stayPay30dPv(Long stayPay30dPv) {
+    this.stayPay30dPv = stayPay30dPv;
+    return this;
+  }
+
+  /**
+   * Get stayPay30dPv
+   *
+   * @return stayPay30dPv
+   */
+  @ApiModelProperty(value = "")
+  public Long getStayPay30dPv() {
+    return stayPay30dPv;
+  }
+
+  public void setStayPay30dPv(Long stayPay30dPv) {
+    this.stayPay30dPv = stayPay30dPv;
+  }
+
   public TargetingTagReportsGetListStruct age(String age) {
     this.age = age;
     return this;
@@ -13826,6 +13892,9 @@ public class TargetingTagReportsGetListStruct {
             this.biz15dPurchaseRoi, targetingTagReportsGetListStruct.biz15dPurchaseRoi)
         && Objects.equals(
             this.biz30dPurchaseRoi, targetingTagReportsGetListStruct.biz30dPurchaseRoi)
+        && Objects.equals(this.stayPay7dPv, targetingTagReportsGetListStruct.stayPay7dPv)
+        && Objects.equals(this.stayPay15dPv, targetingTagReportsGetListStruct.stayPay15dPv)
+        && Objects.equals(this.stayPay30dPv, targetingTagReportsGetListStruct.stayPay30dPv)
         && Objects.equals(this.age, targetingTagReportsGetListStruct.age)
         && Objects.equals(this.regionId, targetingTagReportsGetListStruct.regionId)
         && Objects.equals(this.cityId, targetingTagReportsGetListStruct.cityId)
@@ -14540,6 +14609,9 @@ public class TargetingTagReportsGetListStruct {
         biz7dPurchaseRoi,
         biz15dPurchaseRoi,
         biz30dPurchaseRoi,
+        stayPay7dPv,
+        stayPay15dPv,
+        stayPay30dPv,
         age,
         regionId,
         cityId,

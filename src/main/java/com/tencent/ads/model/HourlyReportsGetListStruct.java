@@ -1404,6 +1404,15 @@ public class HourlyReportsGetListStruct {
   @SerializedName("biz_30d_purchase_roi")
   private Double biz30dPurchaseRoi = null;
 
+  @SerializedName("stay_pay_7d_pv")
+  private Long stayPay7dPv = null;
+
+  @SerializedName("stay_pay_15d_pv")
+  private Long stayPay15dPv = null;
+
+  @SerializedName("stay_pay_30d_pv")
+  private Long stayPay30dPv = null;
+
   @SerializedName("request_conversions_count")
   private Long requestConversionsCount = null;
 
@@ -10748,6 +10757,63 @@ public class HourlyReportsGetListStruct {
     this.biz30dPurchaseRoi = biz30dPurchaseRoi;
   }
 
+  public HourlyReportsGetListStruct stayPay7dPv(Long stayPay7dPv) {
+    this.stayPay7dPv = stayPay7dPv;
+    return this;
+  }
+
+  /**
+   * Get stayPay7dPv
+   *
+   * @return stayPay7dPv
+   */
+  @ApiModelProperty(value = "")
+  public Long getStayPay7dPv() {
+    return stayPay7dPv;
+  }
+
+  public void setStayPay7dPv(Long stayPay7dPv) {
+    this.stayPay7dPv = stayPay7dPv;
+  }
+
+  public HourlyReportsGetListStruct stayPay15dPv(Long stayPay15dPv) {
+    this.stayPay15dPv = stayPay15dPv;
+    return this;
+  }
+
+  /**
+   * Get stayPay15dPv
+   *
+   * @return stayPay15dPv
+   */
+  @ApiModelProperty(value = "")
+  public Long getStayPay15dPv() {
+    return stayPay15dPv;
+  }
+
+  public void setStayPay15dPv(Long stayPay15dPv) {
+    this.stayPay15dPv = stayPay15dPv;
+  }
+
+  public HourlyReportsGetListStruct stayPay30dPv(Long stayPay30dPv) {
+    this.stayPay30dPv = stayPay30dPv;
+    return this;
+  }
+
+  /**
+   * Get stayPay30dPv
+   *
+   * @return stayPay30dPv
+   */
+  @ApiModelProperty(value = "")
+  public Long getStayPay30dPv() {
+    return stayPay30dPv;
+  }
+
+  public void setStayPay30dPv(Long stayPay30dPv) {
+    this.stayPay30dPv = stayPay30dPv;
+  }
+
   public HourlyReportsGetListStruct requestConversionsCount(Long requestConversionsCount) {
     this.requestConversionsCount = requestConversionsCount;
     return this;
@@ -15038,6 +15104,9 @@ public class HourlyReportsGetListStruct {
         && Objects.equals(this.biz7dPurchaseRoi, hourlyReportsGetListStruct.biz7dPurchaseRoi)
         && Objects.equals(this.biz15dPurchaseRoi, hourlyReportsGetListStruct.biz15dPurchaseRoi)
         && Objects.equals(this.biz30dPurchaseRoi, hourlyReportsGetListStruct.biz30dPurchaseRoi)
+        && Objects.equals(this.stayPay7dPv, hourlyReportsGetListStruct.stayPay7dPv)
+        && Objects.equals(this.stayPay15dPv, hourlyReportsGetListStruct.stayPay15dPv)
+        && Objects.equals(this.stayPay30dPv, hourlyReportsGetListStruct.stayPay30dPv)
         && Objects.equals(
             this.requestConversionsCount, hourlyReportsGetListStruct.requestConversionsCount)
         && Objects.equals(
@@ -15839,6 +15908,9 @@ public class HourlyReportsGetListStruct {
         biz7dPurchaseRoi,
         biz15dPurchaseRoi,
         biz30dPurchaseRoi,
+        stayPay7dPv,
+        stayPay15dPv,
+        stayPay30dPv,
         requestConversionsCount,
         requestConversionsCost,
         incomeVal1,
