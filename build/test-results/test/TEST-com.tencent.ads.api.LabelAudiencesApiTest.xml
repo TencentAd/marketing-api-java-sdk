@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.tencent.ads.api.LabelAudiencesApiTest" tests="1" skipped="1" failures="0" errors="0" timestamp="2022-05-05T01:55:16" hostname="VM_147_58_centos" time="0.0">
-  <properties/>
-  <testcase name="labelAudiencesAddTest" classname="com.tencent.ads.api.LabelAudiencesApiTest" time="0.0">
-    <skipped/>
-  </testcase>
-  <system-out><![CDATA[]]></system-out>
-  <system-err><![CDATA[]]></system-err>
-</testsuite>
