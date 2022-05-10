@@ -32,6 +32,9 @@ public class PromotedObjectAppAndroidSpec {
   @SerializedName("icon")
   private String icon = null;
 
+  @SerializedName("icon_image_id")
+  private String iconImageId = null;
+
   @SerializedName("average_rating")
   private String averageRating = null;
 
@@ -46,6 +49,9 @@ public class PromotedObjectAppAndroidSpec {
 
   @SerializedName("channel_package_spec")
   private List<ChannelPackageSpecStruct> channelPackageSpec = null;
+
+  @SerializedName("children_privacy_protection")
+  private ChildrenPrivacyProtection childrenPrivacyProtection = null;
 
   public PromotedObjectAppAndroidSpec packname(String packname) {
     this.packname = packname;
@@ -102,6 +108,25 @@ public class PromotedObjectAppAndroidSpec {
 
   public void setIcon(String icon) {
     this.icon = icon;
+  }
+
+  public PromotedObjectAppAndroidSpec iconImageId(String iconImageId) {
+    this.iconImageId = iconImageId;
+    return this;
+  }
+
+  /**
+   * Get iconImageId
+   *
+   * @return iconImageId
+   */
+  @ApiModelProperty(value = "")
+  public String getIconImageId() {
+    return iconImageId;
+  }
+
+  public void setIconImageId(String iconImageId) {
+    this.iconImageId = iconImageId;
   }
 
   public PromotedObjectAppAndroidSpec averageRating(String averageRating) {
@@ -217,6 +242,26 @@ public class PromotedObjectAppAndroidSpec {
     this.channelPackageSpec = channelPackageSpec;
   }
 
+  public PromotedObjectAppAndroidSpec childrenPrivacyProtection(
+      ChildrenPrivacyProtection childrenPrivacyProtection) {
+    this.childrenPrivacyProtection = childrenPrivacyProtection;
+    return this;
+  }
+
+  /**
+   * Get childrenPrivacyProtection
+   *
+   * @return childrenPrivacyProtection
+   */
+  @ApiModelProperty(value = "")
+  public ChildrenPrivacyProtection getChildrenPrivacyProtection() {
+    return childrenPrivacyProtection;
+  }
+
+  public void setChildrenPrivacyProtection(ChildrenPrivacyProtection childrenPrivacyProtection) {
+    this.childrenPrivacyProtection = childrenPrivacyProtection;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -229,11 +274,14 @@ public class PromotedObjectAppAndroidSpec {
     return Objects.equals(this.packname, promotedObjectAppAndroidSpec.packname)
         && Objects.equals(this.version, promotedObjectAppAndroidSpec.version)
         && Objects.equals(this.icon, promotedObjectAppAndroidSpec.icon)
+        && Objects.equals(this.iconImageId, promotedObjectAppAndroidSpec.iconImageId)
         && Objects.equals(this.averageRating, promotedObjectAppAndroidSpec.averageRating)
         && Objects.equals(this.packageSize, promotedObjectAppAndroidSpec.packageSize)
         && Objects.equals(this.genres, promotedObjectAppAndroidSpec.genres)
         && Objects.equals(this.packageDownloadUrl, promotedObjectAppAndroidSpec.packageDownloadUrl)
-        && Objects.equals(this.channelPackageSpec, promotedObjectAppAndroidSpec.channelPackageSpec);
+        && Objects.equals(this.channelPackageSpec, promotedObjectAppAndroidSpec.channelPackageSpec)
+        && Objects.equals(
+            this.childrenPrivacyProtection, promotedObjectAppAndroidSpec.childrenPrivacyProtection);
   }
 
   @Override
@@ -242,11 +290,13 @@ public class PromotedObjectAppAndroidSpec {
         packname,
         version,
         icon,
+        iconImageId,
         averageRating,
         packageSize,
         genres,
         packageDownloadUrl,
-        channelPackageSpec);
+        channelPackageSpec,
+        childrenPrivacyProtection);
   }
 
   @Override

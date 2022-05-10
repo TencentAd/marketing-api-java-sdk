@@ -35,6 +35,9 @@ public class PromotedObjectAppIosSpec {
   @SerializedName("icon_512")
   private String icon512 = null;
 
+  @SerializedName("icon_image_id")
+  private String iconImageId = null;
+
   @SerializedName("average_rating")
   private String averageRating = null;
 
@@ -46,6 +49,9 @@ public class PromotedObjectAppIosSpec {
 
   @SerializedName("package_download_url")
   private String packageDownloadUrl = null;
+
+  @SerializedName("children_privacy_protection")
+  private ChildrenPrivacyProtection childrenPrivacyProtection = null;
 
   public PromotedObjectAppIosSpec packname(String packname) {
     this.packname = packname;
@@ -121,6 +127,25 @@ public class PromotedObjectAppIosSpec {
 
   public void setIcon512(String icon512) {
     this.icon512 = icon512;
+  }
+
+  public PromotedObjectAppIosSpec iconImageId(String iconImageId) {
+    this.iconImageId = iconImageId;
+    return this;
+  }
+
+  /**
+   * Get iconImageId
+   *
+   * @return iconImageId
+   */
+  @ApiModelProperty(value = "")
+  public String getIconImageId() {
+    return iconImageId;
+  }
+
+  public void setIconImageId(String iconImageId) {
+    this.iconImageId = iconImageId;
   }
 
   public PromotedObjectAppIosSpec averageRating(String averageRating) {
@@ -207,6 +232,26 @@ public class PromotedObjectAppIosSpec {
     this.packageDownloadUrl = packageDownloadUrl;
   }
 
+  public PromotedObjectAppIosSpec childrenPrivacyProtection(
+      ChildrenPrivacyProtection childrenPrivacyProtection) {
+    this.childrenPrivacyProtection = childrenPrivacyProtection;
+    return this;
+  }
+
+  /**
+   * Get childrenPrivacyProtection
+   *
+   * @return childrenPrivacyProtection
+   */
+  @ApiModelProperty(value = "")
+  public ChildrenPrivacyProtection getChildrenPrivacyProtection() {
+    return childrenPrivacyProtection;
+  }
+
+  public void setChildrenPrivacyProtection(ChildrenPrivacyProtection childrenPrivacyProtection) {
+    this.childrenPrivacyProtection = childrenPrivacyProtection;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -220,16 +265,28 @@ public class PromotedObjectAppIosSpec {
         && Objects.equals(this.version, promotedObjectAppIosSpec.version)
         && Objects.equals(this.icon, promotedObjectAppIosSpec.icon)
         && Objects.equals(this.icon512, promotedObjectAppIosSpec.icon512)
+        && Objects.equals(this.iconImageId, promotedObjectAppIosSpec.iconImageId)
         && Objects.equals(this.averageRating, promotedObjectAppIosSpec.averageRating)
         && Objects.equals(this.packageSize, promotedObjectAppIosSpec.packageSize)
         && Objects.equals(this.genres, promotedObjectAppIosSpec.genres)
-        && Objects.equals(this.packageDownloadUrl, promotedObjectAppIosSpec.packageDownloadUrl);
+        && Objects.equals(this.packageDownloadUrl, promotedObjectAppIosSpec.packageDownloadUrl)
+        && Objects.equals(
+            this.childrenPrivacyProtection, promotedObjectAppIosSpec.childrenPrivacyProtection);
   }
 
   @Override
   public int hashCode() {
     return Objects.hash(
-        packname, version, icon, icon512, averageRating, packageSize, genres, packageDownloadUrl);
+        packname,
+        version,
+        icon,
+        icon512,
+        iconImageId,
+        averageRating,
+        packageSize,
+        genres,
+        packageDownloadUrl,
+        childrenPrivacyProtection);
   }
 
   @Override
