@@ -36,6 +36,12 @@ public class LocalStoresUpdateListStruct {
   @SerializedName("local_store_address")
   private String localStoreAddress = null;
 
+  @SerializedName("local_store_biz_info")
+  private LocalStoreBizInfoStructRsp localStoreBizInfo = null;
+
+  @SerializedName("wechat_ecosystem_accounts")
+  private WechatEcosystemAccounts wechatEcosystemAccounts = null;
+
   @SerializedName("local_store_street")
   private String localStoreStreet = null;
 
@@ -47,12 +53,6 @@ public class LocalStoresUpdateListStruct {
 
   @SerializedName("local_store_location")
   private LocalStoreLocation localStoreLocation = null;
-
-  @SerializedName("local_store_biz_info")
-  private LocalStoreBizInfoStructRsp localStoreBizInfo = null;
-
-  @SerializedName("wechat_ecosystem_accounts")
-  private WechatEcosystemAccounts wechatEcosystemAccounts = null;
 
   public LocalStoresUpdateListStruct poiId(String poiId) {
     this.poiId = poiId;
@@ -149,6 +149,46 @@ public class LocalStoresUpdateListStruct {
     this.localStoreAddress = localStoreAddress;
   }
 
+  public LocalStoresUpdateListStruct localStoreBizInfo(
+      LocalStoreBizInfoStructRsp localStoreBizInfo) {
+    this.localStoreBizInfo = localStoreBizInfo;
+    return this;
+  }
+
+  /**
+   * Get localStoreBizInfo
+   *
+   * @return localStoreBizInfo
+   */
+  @ApiModelProperty(value = "")
+  public LocalStoreBizInfoStructRsp getLocalStoreBizInfo() {
+    return localStoreBizInfo;
+  }
+
+  public void setLocalStoreBizInfo(LocalStoreBizInfoStructRsp localStoreBizInfo) {
+    this.localStoreBizInfo = localStoreBizInfo;
+  }
+
+  public LocalStoresUpdateListStruct wechatEcosystemAccounts(
+      WechatEcosystemAccounts wechatEcosystemAccounts) {
+    this.wechatEcosystemAccounts = wechatEcosystemAccounts;
+    return this;
+  }
+
+  /**
+   * Get wechatEcosystemAccounts
+   *
+   * @return wechatEcosystemAccounts
+   */
+  @ApiModelProperty(value = "")
+  public WechatEcosystemAccounts getWechatEcosystemAccounts() {
+    return wechatEcosystemAccounts;
+  }
+
+  public void setWechatEcosystemAccounts(WechatEcosystemAccounts wechatEcosystemAccounts) {
+    this.wechatEcosystemAccounts = wechatEcosystemAccounts;
+  }
+
   public LocalStoresUpdateListStruct localStoreStreet(String localStoreStreet) {
     this.localStoreStreet = localStoreStreet;
     return this;
@@ -225,46 +265,6 @@ public class LocalStoresUpdateListStruct {
     this.localStoreLocation = localStoreLocation;
   }
 
-  public LocalStoresUpdateListStruct localStoreBizInfo(
-      LocalStoreBizInfoStructRsp localStoreBizInfo) {
-    this.localStoreBizInfo = localStoreBizInfo;
-    return this;
-  }
-
-  /**
-   * Get localStoreBizInfo
-   *
-   * @return localStoreBizInfo
-   */
-  @ApiModelProperty(value = "")
-  public LocalStoreBizInfoStructRsp getLocalStoreBizInfo() {
-    return localStoreBizInfo;
-  }
-
-  public void setLocalStoreBizInfo(LocalStoreBizInfoStructRsp localStoreBizInfo) {
-    this.localStoreBizInfo = localStoreBizInfo;
-  }
-
-  public LocalStoresUpdateListStruct wechatEcosystemAccounts(
-      WechatEcosystemAccounts wechatEcosystemAccounts) {
-    this.wechatEcosystemAccounts = wechatEcosystemAccounts;
-    return this;
-  }
-
-  /**
-   * Get wechatEcosystemAccounts
-   *
-   * @return wechatEcosystemAccounts
-   */
-  @ApiModelProperty(value = "")
-  public WechatEcosystemAccounts getWechatEcosystemAccounts() {
-    return wechatEcosystemAccounts;
-  }
-
-  public void setWechatEcosystemAccounts(WechatEcosystemAccounts wechatEcosystemAccounts) {
-    this.wechatEcosystemAccounts = wechatEcosystemAccounts;
-  }
-
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -279,14 +279,14 @@ public class LocalStoresUpdateListStruct {
         && Objects.equals(this.localStoreProvince, localStoresUpdateListStruct.localStoreProvince)
         && Objects.equals(this.localStoreCity, localStoresUpdateListStruct.localStoreCity)
         && Objects.equals(this.localStoreAddress, localStoresUpdateListStruct.localStoreAddress)
+        && Objects.equals(this.localStoreBizInfo, localStoresUpdateListStruct.localStoreBizInfo)
+        && Objects.equals(
+            this.wechatEcosystemAccounts, localStoresUpdateListStruct.wechatEcosystemAccounts)
         && Objects.equals(this.localStoreStreet, localStoresUpdateListStruct.localStoreStreet)
         && Objects.equals(
             this.localStoreBusinessArea, localStoresUpdateListStruct.localStoreBusinessArea)
         && Objects.equals(this.localStoreDistrict, localStoresUpdateListStruct.localStoreDistrict)
-        && Objects.equals(this.localStoreLocation, localStoresUpdateListStruct.localStoreLocation)
-        && Objects.equals(this.localStoreBizInfo, localStoresUpdateListStruct.localStoreBizInfo)
-        && Objects.equals(
-            this.wechatEcosystemAccounts, localStoresUpdateListStruct.wechatEcosystemAccounts);
+        && Objects.equals(this.localStoreLocation, localStoresUpdateListStruct.localStoreLocation);
   }
 
   @Override
@@ -297,12 +297,12 @@ public class LocalStoresUpdateListStruct {
         localStoreProvince,
         localStoreCity,
         localStoreAddress,
+        localStoreBizInfo,
+        wechatEcosystemAccounts,
         localStoreStreet,
         localStoreBusinessArea,
         localStoreDistrict,
-        localStoreLocation,
-        localStoreBizInfo,
-        wechatEcosystemAccounts);
+        localStoreLocation);
   }
 
   @Override

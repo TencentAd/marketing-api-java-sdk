@@ -18,8 +18,8 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.util.Objects;
 
-/** 门店高峰时间段 */
-@ApiModel(description = "门店高峰时间段")
+/** 门店高峰时间段信息结构 */
+@ApiModel(description = "门店高峰时间段信息结构")
 public class PeakPeriod {
   @SerializedName("time_series")
   private String timeSeries = null;

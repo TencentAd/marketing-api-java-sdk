@@ -363,7 +363,7 @@ public class LocalStoresApi {
    * @param filtering (optional)
    * @param page (optional)
    * @param pageSize (optional)
-   * @param fields (optional)
+   * @param fields 返回参数的字段列表 (optional)
    * @param progressListener Progress listener
    * @param progressRequestListener Progress request listener
    * @return Call to execute
@@ -475,7 +475,7 @@ public class LocalStoresApi {
    * @param filtering (optional)
    * @param page (optional)
    * @param pageSize (optional)
-   * @param fields (optional)
+   * @param fields 返回参数的字段列表 (optional)
    * @return LocalStoresGetResponse
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
@@ -499,7 +499,7 @@ public class LocalStoresApi {
    * @param filtering (optional)
    * @param page (optional)
    * @param pageSize (optional)
-   * @param fields (optional)
+   * @param fields 返回参数的字段列表 (optional)
    * @return ApiResponse&lt;LocalStoresGetResponse&gt;
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
@@ -524,7 +524,7 @@ public class LocalStoresApi {
    * @param filtering (optional)
    * @param page (optional)
    * @param pageSize (optional)
-   * @param fields (optional)
+   * @param fields 返回参数的字段列表 (optional)
    * @param callback The callback to be executed when the API call finishes
    * @return The request call
    * @throws ApiException If fail to process the API call, e.g. serializing the request body object

@@ -24,7 +24,9 @@ import java.io.IOException;
 public enum LocalProfileType {
   DEFAULT("LOCAL_PROFILE_TYPE_DEFAULT"),
 
-  CUSTOMIZED("LOCAL_PROFILE_TYPE_CUSTOMIZED");
+  CUSTOMIZED("LOCAL_PROFILE_TYPE_CUSTOMIZED"),
+
+  INVAILD("LOCAL_PROFILE_TYPE_INVAILD");
 
   private String value;
 

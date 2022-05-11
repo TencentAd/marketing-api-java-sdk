@@ -49,7 +49,7 @@ public class TargetingsGetListStruct {
   private String targetingTranslation = null;
 
   @SerializedName("targeting_source_type")
-  private TargetingPkgSourceType targetingSourceType = null;
+  private TargetingSourceType targetingSourceType = null;
 
   @SerializedName("share_from_account_id")
   private Long shareFromAccountId = null;
@@ -232,7 +232,7 @@ public class TargetingsGetListStruct {
     this.targetingTranslation = targetingTranslation;
   }
 
-  public TargetingsGetListStruct targetingSourceType(TargetingPkgSourceType targetingSourceType) {
+  public TargetingsGetListStruct targetingSourceType(TargetingSourceType targetingSourceType) {
     this.targetingSourceType = targetingSourceType;
     return this;
   }
@@ -243,11 +243,11 @@ public class TargetingsGetListStruct {
    * @return targetingSourceType
    */
   @ApiModelProperty(value = "")
-  public TargetingPkgSourceType getTargetingSourceType() {
+  public TargetingSourceType getTargetingSourceType() {
     return targetingSourceType;
   }
 
-  public void setTargetingSourceType(TargetingPkgSourceType targetingSourceType) {
+  public void setTargetingSourceType(TargetingSourceType targetingSourceType) {
     this.targetingSourceType = targetingSourceType;
   }
 

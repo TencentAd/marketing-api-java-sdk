@@ -65,9 +65,6 @@ public class LocalStoreBizInfoStruct {
   @SerializedName("star")
   private Double star = null;
 
-  @SerializedName("level")
-  private LocalStoreLevel level = null;
-
   public LocalStoreBizInfoStruct poiId(String poiId) {
     this.poiId = poiId;
     return this;
@@ -342,25 +339,6 @@ public class LocalStoreBizInfoStruct {
     this.star = star;
   }
 
-  public LocalStoreBizInfoStruct level(LocalStoreLevel level) {
-    this.level = level;
-    return this;
-  }
-
-  /**
-   * Get level
-   *
-   * @return level
-   */
-  @ApiModelProperty(value = "")
-  public LocalStoreLevel getLevel() {
-    return level;
-  }
-
-  public void setLevel(LocalStoreLevel level) {
-    this.level = level;
-  }
-
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -383,8 +361,7 @@ public class LocalStoreBizInfoStruct {
         && Objects.equals(this.fourthCategoryName, localStoreBizInfoStruct.fourthCategoryName)
         && Objects.equals(this.peakPeriod, localStoreBizInfoStruct.peakPeriod)
         && Objects.equals(this.openingStatus, localStoreBizInfoStruct.openingStatus)
-        && Objects.equals(this.star, localStoreBizInfoStruct.star)
-        && Objects.equals(this.level, localStoreBizInfoStruct.level);
+        && Objects.equals(this.star, localStoreBizInfoStruct.star);
   }
 
   @Override
@@ -403,8 +380,7 @@ public class LocalStoreBizInfoStruct {
         fourthCategoryName,
         peakPeriod,
         openingStatus,
-        star,
-        level);
+        star);
   }
 
   @Override

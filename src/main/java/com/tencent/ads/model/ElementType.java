@@ -74,7 +74,9 @@ public enum ElementType {
 
   ANIMATION_EFFECT("ANIMATION_EFFECT"),
 
-  LABEL("LABEL");
+  LABEL("LABEL"),
+
+  LANDING_PAGE_STRUCT("LANDING_PAGE_STRUCT");
 
   private String value;
 

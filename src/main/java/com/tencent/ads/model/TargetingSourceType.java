@@ -20,15 +20,15 @@ import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
 /** 定向包来源，自建或者来自分享 */
-@JsonAdapter(TargetingPkgSourceType.Adapter.class)
-public enum TargetingPkgSourceType {
+@JsonAdapter(TargetingSourceType.Adapter.class)
+public enum TargetingSourceType {
   CREATE("TARGETING_SOURCE_TYPE_CREATE"),
 
   SHARE("TARGETING_SOURCE_TYPE_SHARE");
 
   private String value;
 
-  TargetingPkgSourceType(String value) {
+  TargetingSourceType(String value) {
     this.value = value;
   }
 
@@ -41,8 +41,8 @@ public enum TargetingPkgSourceType {
     return String.valueOf(value);
   }
 
-  public static TargetingPkgSourceType fromValue(String text) {
-    for (TargetingPkgSourceType b : TargetingPkgSourceType.values()) {
+  public static TargetingSourceType fromValue(String text) {
+    for (TargetingSourceType b : TargetingSourceType.values()) {
       if (String.valueOf(b.value).equals(text)) {
         return b;
       }
@@ -50,17 +50,17 @@ public enum TargetingPkgSourceType {
     return null;
   }
 
-  public static class Adapter extends TypeAdapter<TargetingPkgSourceType> {
+  public static class Adapter extends TypeAdapter<TargetingSourceType> {
     @Override
-    public void write(final JsonWriter jsonWriter, final TargetingPkgSourceType enumeration)
+    public void write(final JsonWriter jsonWriter, final TargetingSourceType enumeration)
         throws IOException {
       jsonWriter.value(enumeration.getValue());
     }
 
     @Override
-    public TargetingPkgSourceType read(final JsonReader jsonReader) throws IOException {
+    public TargetingSourceType read(final JsonReader jsonReader) throws IOException {
       String value = jsonReader.nextString();
-      return TargetingPkgSourceType.fromValue(String.valueOf(value));
+      return TargetingSourceType.fromValue(String.valueOf(value));
     }
   }
 }

@@ -34,7 +34,9 @@ public enum TaskScope {
 
   AD("TASK_SCOPE_AD"),
 
-  ADCREATIVE("TASK_SCOPE_ADCREATIVE");
+  ADCREATIVE("TASK_SCOPE_ADCREATIVE"),
+
+  PROJECT("TASK_SCOPE_PROJECT");
 
   private String value;
 

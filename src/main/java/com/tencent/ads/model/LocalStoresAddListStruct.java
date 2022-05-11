@@ -36,18 +36,6 @@ public class LocalStoresAddListStruct {
   @SerializedName("local_store_address")
   private String localStoreAddress = null;
 
-  @SerializedName("local_store_street")
-  private String localStoreStreet = null;
-
-  @SerializedName("local_store_business_area")
-  private String localStoreBusinessArea = null;
-
-  @SerializedName("local_store_district")
-  private String localStoreDistrict = null;
-
-  @SerializedName("local_store_location")
-  private LocalStoreLocation localStoreLocation = null;
-
   @SerializedName("local_store_biz_info")
   private LocalStoreBizInfoStructRsp localStoreBizInfo = null;
 
@@ -62,6 +50,18 @@ public class LocalStoresAddListStruct {
 
   @SerializedName("system_status")
   private AdStatus systemStatus = null;
+
+  @SerializedName("local_store_street")
+  private String localStoreStreet = null;
+
+  @SerializedName("local_store_business_area")
+  private String localStoreBusinessArea = null;
+
+  @SerializedName("local_store_district")
+  private String localStoreDistrict = null;
+
+  @SerializedName("local_store_location")
+  private LocalStoreLocation localStoreLocation = null;
 
   public LocalStoresAddListStruct poiId(String poiId) {
     this.poiId = poiId;
@@ -156,82 +156,6 @@ public class LocalStoresAddListStruct {
 
   public void setLocalStoreAddress(String localStoreAddress) {
     this.localStoreAddress = localStoreAddress;
-  }
-
-  public LocalStoresAddListStruct localStoreStreet(String localStoreStreet) {
-    this.localStoreStreet = localStoreStreet;
-    return this;
-  }
-
-  /**
-   * Get localStoreStreet
-   *
-   * @return localStoreStreet
-   */
-  @ApiModelProperty(value = "")
-  public String getLocalStoreStreet() {
-    return localStoreStreet;
-  }
-
-  public void setLocalStoreStreet(String localStoreStreet) {
-    this.localStoreStreet = localStoreStreet;
-  }
-
-  public LocalStoresAddListStruct localStoreBusinessArea(String localStoreBusinessArea) {
-    this.localStoreBusinessArea = localStoreBusinessArea;
-    return this;
-  }
-
-  /**
-   * Get localStoreBusinessArea
-   *
-   * @return localStoreBusinessArea
-   */
-  @ApiModelProperty(value = "")
-  public String getLocalStoreBusinessArea() {
-    return localStoreBusinessArea;
-  }
-
-  public void setLocalStoreBusinessArea(String localStoreBusinessArea) {
-    this.localStoreBusinessArea = localStoreBusinessArea;
-  }
-
-  public LocalStoresAddListStruct localStoreDistrict(String localStoreDistrict) {
-    this.localStoreDistrict = localStoreDistrict;
-    return this;
-  }
-
-  /**
-   * Get localStoreDistrict
-   *
-   * @return localStoreDistrict
-   */
-  @ApiModelProperty(value = "")
-  public String getLocalStoreDistrict() {
-    return localStoreDistrict;
-  }
-
-  public void setLocalStoreDistrict(String localStoreDistrict) {
-    this.localStoreDistrict = localStoreDistrict;
-  }
-
-  public LocalStoresAddListStruct localStoreLocation(LocalStoreLocation localStoreLocation) {
-    this.localStoreLocation = localStoreLocation;
-    return this;
-  }
-
-  /**
-   * Get localStoreLocation
-   *
-   * @return localStoreLocation
-   */
-  @ApiModelProperty(value = "")
-  public LocalStoreLocation getLocalStoreLocation() {
-    return localStoreLocation;
-  }
-
-  public void setLocalStoreLocation(LocalStoreLocation localStoreLocation) {
-    this.localStoreLocation = localStoreLocation;
   }
 
   public LocalStoresAddListStruct localStoreBizInfo(LocalStoreBizInfoStructRsp localStoreBizInfo) {
@@ -330,6 +254,82 @@ public class LocalStoresAddListStruct {
     this.systemStatus = systemStatus;
   }
 
+  public LocalStoresAddListStruct localStoreStreet(String localStoreStreet) {
+    this.localStoreStreet = localStoreStreet;
+    return this;
+  }
+
+  /**
+   * Get localStoreStreet
+   *
+   * @return localStoreStreet
+   */
+  @ApiModelProperty(value = "")
+  public String getLocalStoreStreet() {
+    return localStoreStreet;
+  }
+
+  public void setLocalStoreStreet(String localStoreStreet) {
+    this.localStoreStreet = localStoreStreet;
+  }
+
+  public LocalStoresAddListStruct localStoreBusinessArea(String localStoreBusinessArea) {
+    this.localStoreBusinessArea = localStoreBusinessArea;
+    return this;
+  }
+
+  /**
+   * Get localStoreBusinessArea
+   *
+   * @return localStoreBusinessArea
+   */
+  @ApiModelProperty(value = "")
+  public String getLocalStoreBusinessArea() {
+    return localStoreBusinessArea;
+  }
+
+  public void setLocalStoreBusinessArea(String localStoreBusinessArea) {
+    this.localStoreBusinessArea = localStoreBusinessArea;
+  }
+
+  public LocalStoresAddListStruct localStoreDistrict(String localStoreDistrict) {
+    this.localStoreDistrict = localStoreDistrict;
+    return this;
+  }
+
+  /**
+   * Get localStoreDistrict
+   *
+   * @return localStoreDistrict
+   */
+  @ApiModelProperty(value = "")
+  public String getLocalStoreDistrict() {
+    return localStoreDistrict;
+  }
+
+  public void setLocalStoreDistrict(String localStoreDistrict) {
+    this.localStoreDistrict = localStoreDistrict;
+  }
+
+  public LocalStoresAddListStruct localStoreLocation(LocalStoreLocation localStoreLocation) {
+    this.localStoreLocation = localStoreLocation;
+    return this;
+  }
+
+  /**
+   * Get localStoreLocation
+   *
+   * @return localStoreLocation
+   */
+  @ApiModelProperty(value = "")
+  public LocalStoreLocation getLocalStoreLocation() {
+    return localStoreLocation;
+  }
+
+  public void setLocalStoreLocation(LocalStoreLocation localStoreLocation) {
+    this.localStoreLocation = localStoreLocation;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -344,17 +344,17 @@ public class LocalStoresAddListStruct {
         && Objects.equals(this.localStoreProvince, localStoresAddListStruct.localStoreProvince)
         && Objects.equals(this.localStoreCity, localStoresAddListStruct.localStoreCity)
         && Objects.equals(this.localStoreAddress, localStoresAddListStruct.localStoreAddress)
-        && Objects.equals(this.localStoreStreet, localStoresAddListStruct.localStoreStreet)
-        && Objects.equals(
-            this.localStoreBusinessArea, localStoresAddListStruct.localStoreBusinessArea)
-        && Objects.equals(this.localStoreDistrict, localStoresAddListStruct.localStoreDistrict)
-        && Objects.equals(this.localStoreLocation, localStoresAddListStruct.localStoreLocation)
         && Objects.equals(this.localStoreBizInfo, localStoresAddListStruct.localStoreBizInfo)
         && Objects.equals(
             this.wechatEcosystemAccounts, localStoresAddListStruct.wechatEcosystemAccounts)
         && Objects.equals(this.createdTime, localStoresAddListStruct.createdTime)
         && Objects.equals(this.lastModifiedTime, localStoresAddListStruct.lastModifiedTime)
-        && Objects.equals(this.systemStatus, localStoresAddListStruct.systemStatus);
+        && Objects.equals(this.systemStatus, localStoresAddListStruct.systemStatus)
+        && Objects.equals(this.localStoreStreet, localStoresAddListStruct.localStoreStreet)
+        && Objects.equals(
+            this.localStoreBusinessArea, localStoresAddListStruct.localStoreBusinessArea)
+        && Objects.equals(this.localStoreDistrict, localStoresAddListStruct.localStoreDistrict)
+        && Objects.equals(this.localStoreLocation, localStoresAddListStruct.localStoreLocation);
   }
 
   @Override
@@ -365,15 +365,15 @@ public class LocalStoresAddListStruct {
         localStoreProvince,
         localStoreCity,
         localStoreAddress,
-        localStoreStreet,
-        localStoreBusinessArea,
-        localStoreDistrict,
-        localStoreLocation,
         localStoreBizInfo,
         wechatEcosystemAccounts,
         createdTime,
         lastModifiedTime,
-        systemStatus);
+        systemStatus,
+        localStoreStreet,
+        localStoreBusinessArea,
+        localStoreDistrict,
+        localStoreLocation);
   }
 
   @Override

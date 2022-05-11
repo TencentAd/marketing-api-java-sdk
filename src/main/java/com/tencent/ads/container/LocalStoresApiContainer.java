@@ -73,7 +73,7 @@ public class LocalStoresApiContainer extends ApiContainer {
    * @param filtering (optional)
    * @param page (optional)
    * @param pageSize (optional)
-   * @param fields (optional)
+   * @param fields 返回参数的字段列表 (optional)
    * @return LocalStoresGetResponse
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
