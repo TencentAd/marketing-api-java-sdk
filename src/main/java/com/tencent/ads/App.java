@@ -159,7 +159,6 @@ public class App {
   @Inject VideomakerTasksApiContainer videomakerTasksApiContainer;
   @Inject VideomakerVideocapturesApiContainer videomakerVideocapturesApiContainer;
   @Inject VideosApiContainer videosApiContainer;
-  @Inject WechatAdFollowersApiContainer wechatAdFollowersApiContainer;
   @Inject WechatAdLabelsApiContainer wechatAdLabelsApiContainer;
   @Inject WechatAdvertiserApiContainer wechatAdvertiserApiContainer;
   @Inject WechatAdvertiserDetailApiContainer wechatAdvertiserDetailApiContainer;
@@ -736,10 +735,6 @@ public class App {
 
   public VideosApiContainer videos() {
     return videosApiContainer;
-  }
-
-  public WechatAdFollowersApiContainer wechatAdFollowers() {
-    return wechatAdFollowersApiContainer;
   }
 
   public WechatAdLabelsApiContainer wechatAdLabels() {

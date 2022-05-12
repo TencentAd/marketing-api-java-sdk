@@ -19,7 +19,7 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-/** 微信广告位信息 */
+/** 微信广告位 */
 @JsonAdapter(WechatPositionType.Adapter.class)
 public enum WechatPositionType {
   WECHAT_OFFICIAL_ACCOUNT_BOTTOM("POSITION_TYPE_WECHAT_OFFICIAL_ACCOUNT_BOTTOM"),
