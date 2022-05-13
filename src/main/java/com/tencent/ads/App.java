@@ -73,7 +73,6 @@ public class App {
   @Inject CustomTagFilesApiContainer customTagFilesApiContainer;
   @Inject CustomTagsApiContainer customTagsApiContainer;
   @Inject DailyBalanceReportApiContainer dailyBalanceReportApiContainer;
-  @Inject DailyCostApiContainer dailyCostApiContainer;
   @Inject DailyReportsApiContainer dailyReportsApiContainer;
   @Inject DiagnosisApiContainer diagnosisApiContainer;
   @Inject DplabelAdLabelApiContainer dplabelAdLabelApiContainer;
@@ -160,12 +159,7 @@ public class App {
   @Inject VideomakerVideocapturesApiContainer videomakerVideocapturesApiContainer;
   @Inject VideosApiContainer videosApiContainer;
   @Inject WechatAdLabelsApiContainer wechatAdLabelsApiContainer;
-  @Inject WechatAdvertiserApiContainer wechatAdvertiserApiContainer;
-  @Inject WechatAdvertiserDetailApiContainer wechatAdvertiserDetailApiContainer;
   @Inject WechatAdvertiserLocalBusinessApiContainer wechatAdvertiserLocalBusinessApiContainer;
-  @Inject WechatAdvertiserSpecificationApiContainer wechatAdvertiserSpecificationApiContainer;
-  @Inject WechatAgencyApiContainer wechatAgencyApiContainer;
-  @Inject WechatDailyCostApiContainer wechatDailyCostApiContainer;
   @Inject WechatFundStatementsDetailedApiContainer wechatFundStatementsDetailedApiContainer;
   @Inject WechatFundTransferApiContainer wechatFundTransferApiContainer;
   @Inject WechatFundsApiContainer wechatFundsApiContainer;
@@ -403,10 +397,6 @@ public class App {
 
   public DailyBalanceReportApiContainer dailyBalanceReport() {
     return dailyBalanceReportApiContainer;
-  }
-
-  public DailyCostApiContainer dailyCost() {
-    return dailyCostApiContainer;
   }
 
   public DailyReportsApiContainer dailyReports() {
@@ -741,28 +731,8 @@ public class App {
     return wechatAdLabelsApiContainer;
   }
 
-  public WechatAdvertiserApiContainer wechatAdvertiser() {
-    return wechatAdvertiserApiContainer;
-  }
-
-  public WechatAdvertiserDetailApiContainer wechatAdvertiserDetail() {
-    return wechatAdvertiserDetailApiContainer;
-  }
-
   public WechatAdvertiserLocalBusinessApiContainer wechatAdvertiserLocalBusiness() {
     return wechatAdvertiserLocalBusinessApiContainer;
-  }
-
-  public WechatAdvertiserSpecificationApiContainer wechatAdvertiserSpecification() {
-    return wechatAdvertiserSpecificationApiContainer;
-  }
-
-  public WechatAgencyApiContainer wechatAgency() {
-    return wechatAgencyApiContainer;
-  }
-
-  public WechatDailyCostApiContainer wechatDailyCost() {
-    return wechatDailyCostApiContainer;
   }
 
   public WechatFundStatementsDetailedApiContainer wechatFundStatementsDetailed() {

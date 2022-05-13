@@ -22,11 +22,11 @@ import java.io.IOException;
 /** 头像类型,使用自定义类型需要传profile id，通过该字段实现类型的切换 */
 @JsonAdapter(LocalProfileType.Adapter.class)
 public enum LocalProfileType {
-  INVAILD("LOCAL_PROFILE_TYPE_INVAILD"),
-
   DEFAULT("LOCAL_PROFILE_TYPE_DEFAULT"),
 
-  CUSTOMIZED("LOCAL_PROFILE_TYPE_CUSTOMIZED");
+  CUSTOMIZED("LOCAL_PROFILE_TYPE_CUSTOMIZED"),
+
+  INVAILD("LOCAL_PROFILE_TYPE_INVAILD");
 
   private String value;
 

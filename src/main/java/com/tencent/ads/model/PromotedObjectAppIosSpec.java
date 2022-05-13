@@ -35,9 +35,6 @@ public class PromotedObjectAppIosSpec {
   @SerializedName("icon_512")
   private String icon512 = null;
 
-  @SerializedName("icon_image_id")
-  private String iconImageId = null;
-
   @SerializedName("average_rating")
   private String averageRating = null;
 
@@ -127,25 +124,6 @@ public class PromotedObjectAppIosSpec {
 
   public void setIcon512(String icon512) {
     this.icon512 = icon512;
-  }
-
-  public PromotedObjectAppIosSpec iconImageId(String iconImageId) {
-    this.iconImageId = iconImageId;
-    return this;
-  }
-
-  /**
-   * Get iconImageId
-   *
-   * @return iconImageId
-   */
-  @ApiModelProperty(value = "")
-  public String getIconImageId() {
-    return iconImageId;
-  }
-
-  public void setIconImageId(String iconImageId) {
-    this.iconImageId = iconImageId;
   }
 
   public PromotedObjectAppIosSpec averageRating(String averageRating) {
@@ -265,7 +243,6 @@ public class PromotedObjectAppIosSpec {
         && Objects.equals(this.version, promotedObjectAppIosSpec.version)
         && Objects.equals(this.icon, promotedObjectAppIosSpec.icon)
         && Objects.equals(this.icon512, promotedObjectAppIosSpec.icon512)
-        && Objects.equals(this.iconImageId, promotedObjectAppIosSpec.iconImageId)
         && Objects.equals(this.averageRating, promotedObjectAppIosSpec.averageRating)
         && Objects.equals(this.packageSize, promotedObjectAppIosSpec.packageSize)
         && Objects.equals(this.genres, promotedObjectAppIosSpec.genres)
@@ -281,7 +258,6 @@ public class PromotedObjectAppIosSpec {
         version,
         icon,
         icon512,
-        iconImageId,
         averageRating,
         packageSize,
         genres,
