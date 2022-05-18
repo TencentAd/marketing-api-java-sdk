@@ -31,6 +31,9 @@ public class FundTransferAddRequest {
   @SerializedName("memo")
   private String memo = null;
 
+  @SerializedName("transfer_try_best")
+  private Long transferTryBest = null;
+
   @SerializedName("account_id")
   private Long accountId = null;
 
@@ -113,6 +116,25 @@ public class FundTransferAddRequest {
     this.memo = memo;
   }
 
+  public FundTransferAddRequest transferTryBest(Long transferTryBest) {
+    this.transferTryBest = transferTryBest;
+    return this;
+  }
+
+  /**
+   * Get transferTryBest
+   *
+   * @return transferTryBest
+   */
+  @ApiModelProperty(value = "")
+  public Long getTransferTryBest() {
+    return transferTryBest;
+  }
+
+  public void setTransferTryBest(Long transferTryBest) {
+    this.transferTryBest = transferTryBest;
+  }
+
   public FundTransferAddRequest accountId(Long accountId) {
     this.accountId = accountId;
     return this;
@@ -164,13 +186,15 @@ public class FundTransferAddRequest {
         && Objects.equals(this.transferType, fundTransferAddRequest.transferType)
         && Objects.equals(this.externalBillNo, fundTransferAddRequest.externalBillNo)
         && Objects.equals(this.memo, fundTransferAddRequest.memo)
+        && Objects.equals(this.transferTryBest, fundTransferAddRequest.transferTryBest)
         && Objects.equals(this.accountId, fundTransferAddRequest.accountId)
         && Objects.equals(this.fundType, fundTransferAddRequest.fundType);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(amount, transferType, externalBillNo, memo, accountId, fundType);
+    return Objects.hash(
+        amount, transferType, externalBillNo, memo, transferTryBest, accountId, fundType);
   }
 
   @Override

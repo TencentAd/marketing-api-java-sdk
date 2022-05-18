@@ -27,7 +27,7 @@ public class MergeFundTypeFundsApiContainer extends ApiContainer {
   @Inject MergeFundTypeFundsApi api;
 
   /**
-   * 获取资金合并类资金账户信息
+   * 获取资金合并类型资金账户信息
    *
    * @param accountId (required)
    * @param fields 返回参数的字段列表 (optional)

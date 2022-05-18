@@ -28,7 +28,7 @@ public class MergeFundTypeDailyBalanceReportApiContainer extends ApiContainer {
   @Inject MergeFundTypeDailyBalanceReportApi api;
 
   /**
-   * 获取资金合并类资金账户日结明细
+   * 获取资金合并类型资金账户日结明细
    *
    * @param accountId (required)
    * @param dateRange (required)

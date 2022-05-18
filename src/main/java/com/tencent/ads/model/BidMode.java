@@ -19,7 +19,13 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-/** 出价方式，&lt;br/&gt; 优化目标查询接口需传输出价方式才可获取是否支持“点击”优化目标，&lt;br/&gt; “点击”优化目标仅支持BID_MODE_OCPM出价方式。 */
+/**
+ * 出价方式，&lt;br/&gt; 1. bid_mode为billing_event升级字段，不可同时输入，升级后直接写入bid_mode字段即可；&lt;br/&gt; 2.
+ * 当投放智能出价广告，可写入BID_MODE_OCPC/BID_MODE_OCPM。此时，optimization_goal优化目标字段必填；&lt;br/&gt; 3.
+ * 当投放非智能出价广告，可写入BID_MODE_CPC/BID_MODE_CPM/BID_MODE_CPA。此时，optimization_goal优化目标字段不可填；&lt;br/&gt; 4.
+ * 针对非微信流量，BID_MODE_CPC可编辑修改为BID_MODE_OCPC，BID_MODE_CPM可编辑修改为BID_MODE_OCPM，其他修改不可操作。针对微信流量，bid_mode字段不可修改；&lt;br/&gt;
+ * 5. 可通过adcreative_templates/get接口查询不同情况下支持的出价方式;
+ */
 @JsonAdapter(BidMode.Adapter.class)
 public enum BidMode {
   CPC("BID_MODE_CPC"),

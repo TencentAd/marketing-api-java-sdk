@@ -21,7 +21,8 @@ import com.tencent.ads.Configuration;
 import com.tencent.ads.Pair;
 import com.tencent.ads.ProgressRequestBody;
 import com.tencent.ads.ProgressResponseBody;
-import com.tencent.ads.model.MergeFundTypeFundsGetResponse;
+import com.tencent.ads.model.ProgrammedTemplateGetRequest;
+import com.tencent.ads.model.ProgrammedTemplateGetResponse;
 import java.io.IOException;
 import java.lang.reflect.Type;
 import java.util.ArrayList;
@@ -29,14 +30,14 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class MergeFundTypeFundsApi {
+public class ProgrammedTemplateApi {
   private ApiClient apiClient;
 
-  public MergeFundTypeFundsApi() {
+  public ProgrammedTemplateApi() {
     this(Configuration.getDefaultApiClient());
   }
 
-  public MergeFundTypeFundsApi(ApiClient apiClient) {
+  public ProgrammedTemplateApi(ApiClient apiClient) {
     this.apiClient = apiClient;
   }
 
@@ -49,32 +50,26 @@ public class MergeFundTypeFundsApi {
   }
 
   /**
-   * Build call for mergeFundTypeFundsGet
+   * Build call for programmedTemplateGet
    *
-   * @param accountId (required)
-   * @param fields 返回参数的字段列表 (optional)
+   * @param data (required)
    * @param progressListener Progress listener
    * @param progressRequestListener Progress request listener
    * @return Call to execute
    * @throws ApiException If fail to serialize the request body object
    */
-  public com.squareup.okhttp.Call mergeFundTypeFundsGetCall(
-      Long accountId,
-      List<String> fields,
+  public com.squareup.okhttp.Call programmedTemplateGetCall(
+      ProgrammedTemplateGetRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener)
       throws ApiException {
-    Object localVarPostBody = null;
+    Object localVarPostBody = data;
 
     // create path and map variables
-    String localVarPath = "/merge_fund_type_funds/get";
+    String localVarPath = "/programmed_template/get";
 
     List<Pair> localVarQueryParams = new ArrayList<Pair>();
     List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
-    if (accountId != null)
-      localVarQueryParams.addAll(apiClient.parameterToPair("account_id", accountId));
-    if (fields != null)
-      localVarCollectionQueryParams.addAll(apiClient.parameterToPairs("multi", "fields", fields));
 
     Map<String, String> localVarHeaderParams = new HashMap<String, String>();
 
@@ -84,7 +79,7 @@ public class MergeFundTypeFundsApi {
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
     if (localVarAccept != null) localVarHeaderParams.put("Accept", localVarAccept);
 
-    final String[] localVarContentTypes = {"text/plain"};
+    final String[] localVarContentTypes = {"application/json", "application/xml"};
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
     localVarHeaderParams.put("Content-Type", localVarContentType);
 
@@ -109,7 +104,7 @@ public class MergeFundTypeFundsApi {
     String[] localVarAuthNames = new String[] {"accessToken", "nonce", "timestamp"};
     return apiClient.buildCall(
         localVarPath,
-        "GET",
+        "POST",
         localVarQueryParams,
         localVarCollectionQueryParams,
         localVarPostBody,
@@ -120,70 +115,62 @@ public class MergeFundTypeFundsApi {
   }
 
   @SuppressWarnings("rawtypes")
-  private com.squareup.okhttp.Call mergeFundTypeFundsGetValidateBeforeCall(
-      Long accountId,
-      List<String> fields,
+  private com.squareup.okhttp.Call programmedTemplateGetValidateBeforeCall(
+      ProgrammedTemplateGetRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener)
       throws ApiException {
 
-    // verify the required parameter 'accountId' is set
-    if (accountId == null) {
+    // verify the required parameter 'data' is set
+    if (data == null) {
       throw new ApiException(
-          "Missing the required parameter 'accountId' when calling mergeFundTypeFundsGet(Async)");
+          "Missing the required parameter 'data' when calling programmedTemplateGet(Async)");
     }
 
     com.squareup.okhttp.Call call =
-        mergeFundTypeFundsGetCall(accountId, fields, progressListener, progressRequestListener);
+        programmedTemplateGetCall(data, progressListener, progressRequestListener);
     return call;
   }
 
   /**
-   * 获取资金合并类型资金账户信息
+   * 获取模板列表接口
    *
-   * @param accountId (required)
-   * @param fields 返回参数的字段列表 (optional)
-   * @return MergeFundTypeFundsGetResponse
+   * @param data (required)
+   * @return ProgrammedTemplateGetResponse
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
-  public MergeFundTypeFundsGetResponse mergeFundTypeFundsGet(Long accountId, List<String> fields)
+  public ProgrammedTemplateGetResponse programmedTemplateGet(ProgrammedTemplateGetRequest data)
       throws ApiException {
-    ApiResponse<MergeFundTypeFundsGetResponse> resp =
-        mergeFundTypeFundsGetWithHttpInfo(accountId, fields);
+    ApiResponse<ProgrammedTemplateGetResponse> resp = programmedTemplateGetWithHttpInfo(data);
     return resp.getData();
   }
 
   /**
-   * 获取资金合并类型资金账户信息
+   * 获取模板列表接口
    *
-   * @param accountId (required)
-   * @param fields 返回参数的字段列表 (optional)
-   * @return ApiResponse&lt;MergeFundTypeFundsGetResponse&gt;
+   * @param data (required)
+   * @return ApiResponse&lt;ProgrammedTemplateGetResponse&gt;
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
-  public ApiResponse<MergeFundTypeFundsGetResponse> mergeFundTypeFundsGetWithHttpInfo(
-      Long accountId, List<String> fields) throws ApiException {
-    com.squareup.okhttp.Call call =
-        mergeFundTypeFundsGetValidateBeforeCall(accountId, fields, null, null);
-    Type localVarReturnType = new TypeToken<MergeFundTypeFundsGetResponse>() {}.getType();
+  public ApiResponse<ProgrammedTemplateGetResponse> programmedTemplateGetWithHttpInfo(
+      ProgrammedTemplateGetRequest data) throws ApiException {
+    com.squareup.okhttp.Call call = programmedTemplateGetValidateBeforeCall(data, null, null);
+    Type localVarReturnType = new TypeToken<ProgrammedTemplateGetResponse>() {}.getType();
     return apiClient.execute(call, localVarReturnType);
   }
 
   /**
-   * 获取资金合并类型资金账户信息 (asynchronously)
+   * 获取模板列表接口 (asynchronously)
    *
-   * @param accountId (required)
-   * @param fields 返回参数的字段列表 (optional)
+   * @param data (required)
    * @param callback The callback to be executed when the API call finishes
    * @return The request call
    * @throws ApiException If fail to process the API call, e.g. serializing the request body object
    */
-  public com.squareup.okhttp.Call mergeFundTypeFundsGetAsync(
-      Long accountId,
-      List<String> fields,
-      final ApiCallback<MergeFundTypeFundsGetResponse> callback)
+  public com.squareup.okhttp.Call programmedTemplateGetAsync(
+      ProgrammedTemplateGetRequest data, final ApiCallback<ProgrammedTemplateGetResponse> callback)
       throws ApiException {
 
     ProgressResponseBody.ProgressListener progressListener = null;
@@ -208,9 +195,8 @@ public class MergeFundTypeFundsApi {
     }
 
     com.squareup.okhttp.Call call =
-        mergeFundTypeFundsGetValidateBeforeCall(
-            accountId, fields, progressListener, progressRequestListener);
-    Type localVarReturnType = new TypeToken<MergeFundTypeFundsGetResponse>() {}.getType();
+        programmedTemplateGetValidateBeforeCall(data, progressListener, progressRequestListener);
+    Type localVarReturnType = new TypeToken<ProgrammedTemplateGetResponse>() {}.getType();
     apiClient.executeAsync(call, localVarReturnType, callback);
     return call;
   }
