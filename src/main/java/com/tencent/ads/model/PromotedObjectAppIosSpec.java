@@ -47,9 +47,6 @@ public class PromotedObjectAppIosSpec {
   @SerializedName("package_download_url")
   private String packageDownloadUrl = null;
 
-  @SerializedName("children_privacy_protection")
-  private ChildrenPrivacyProtection childrenPrivacyProtection = null;
-
   public PromotedObjectAppIosSpec packname(String packname) {
     this.packname = packname;
     return this;
@@ -210,26 +207,6 @@ public class PromotedObjectAppIosSpec {
     this.packageDownloadUrl = packageDownloadUrl;
   }
 
-  public PromotedObjectAppIosSpec childrenPrivacyProtection(
-      ChildrenPrivacyProtection childrenPrivacyProtection) {
-    this.childrenPrivacyProtection = childrenPrivacyProtection;
-    return this;
-  }
-
-  /**
-   * Get childrenPrivacyProtection
-   *
-   * @return childrenPrivacyProtection
-   */
-  @ApiModelProperty(value = "")
-  public ChildrenPrivacyProtection getChildrenPrivacyProtection() {
-    return childrenPrivacyProtection;
-  }
-
-  public void setChildrenPrivacyProtection(ChildrenPrivacyProtection childrenPrivacyProtection) {
-    this.childrenPrivacyProtection = childrenPrivacyProtection;
-  }
-
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -246,23 +223,13 @@ public class PromotedObjectAppIosSpec {
         && Objects.equals(this.averageRating, promotedObjectAppIosSpec.averageRating)
         && Objects.equals(this.packageSize, promotedObjectAppIosSpec.packageSize)
         && Objects.equals(this.genres, promotedObjectAppIosSpec.genres)
-        && Objects.equals(this.packageDownloadUrl, promotedObjectAppIosSpec.packageDownloadUrl)
-        && Objects.equals(
-            this.childrenPrivacyProtection, promotedObjectAppIosSpec.childrenPrivacyProtection);
+        && Objects.equals(this.packageDownloadUrl, promotedObjectAppIosSpec.packageDownloadUrl);
   }
 
   @Override
   public int hashCode() {
     return Objects.hash(
-        packname,
-        version,
-        icon,
-        icon512,
-        averageRating,
-        packageSize,
-        genres,
-        packageDownloadUrl,
-        childrenPrivacyProtection);
+        packname, version, icon, icon512, averageRating, packageSize, genres, packageDownloadUrl);
   }
 
   @Override

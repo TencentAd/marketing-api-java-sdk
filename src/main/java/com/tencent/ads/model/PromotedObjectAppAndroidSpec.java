@@ -47,9 +47,6 @@ public class PromotedObjectAppAndroidSpec {
   @SerializedName("channel_package_spec")
   private List<ChannelPackageSpecStruct> channelPackageSpec = null;
 
-  @SerializedName("children_privacy_protection")
-  private ChildrenPrivacyProtection childrenPrivacyProtection = null;
-
   public PromotedObjectAppAndroidSpec packname(String packname) {
     this.packname = packname;
     return this;
@@ -220,26 +217,6 @@ public class PromotedObjectAppAndroidSpec {
     this.channelPackageSpec = channelPackageSpec;
   }
 
-  public PromotedObjectAppAndroidSpec childrenPrivacyProtection(
-      ChildrenPrivacyProtection childrenPrivacyProtection) {
-    this.childrenPrivacyProtection = childrenPrivacyProtection;
-    return this;
-  }
-
-  /**
-   * Get childrenPrivacyProtection
-   *
-   * @return childrenPrivacyProtection
-   */
-  @ApiModelProperty(value = "")
-  public ChildrenPrivacyProtection getChildrenPrivacyProtection() {
-    return childrenPrivacyProtection;
-  }
-
-  public void setChildrenPrivacyProtection(ChildrenPrivacyProtection childrenPrivacyProtection) {
-    this.childrenPrivacyProtection = childrenPrivacyProtection;
-  }
-
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -256,9 +233,7 @@ public class PromotedObjectAppAndroidSpec {
         && Objects.equals(this.packageSize, promotedObjectAppAndroidSpec.packageSize)
         && Objects.equals(this.genres, promotedObjectAppAndroidSpec.genres)
         && Objects.equals(this.packageDownloadUrl, promotedObjectAppAndroidSpec.packageDownloadUrl)
-        && Objects.equals(this.channelPackageSpec, promotedObjectAppAndroidSpec.channelPackageSpec)
-        && Objects.equals(
-            this.childrenPrivacyProtection, promotedObjectAppAndroidSpec.childrenPrivacyProtection);
+        && Objects.equals(this.channelPackageSpec, promotedObjectAppAndroidSpec.channelPackageSpec);
   }
 
   @Override
@@ -271,8 +246,7 @@ public class PromotedObjectAppAndroidSpec {
         packageSize,
         genres,
         packageDownloadUrl,
-        channelPackageSpec,
-        childrenPrivacyProtection);
+        channelPackageSpec);
   }
 
   @Override
