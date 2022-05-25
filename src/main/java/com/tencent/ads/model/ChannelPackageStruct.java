@@ -33,6 +33,12 @@ public class ChannelPackageStruct {
   @SerializedName("package_origin_url")
   private String packageOriginUrl = null;
 
+  @SerializedName("created_time")
+  private Long createdTime = null;
+
+  @SerializedName("last_modified_time")
+  private Long lastModifiedTime = null;
+
   public ChannelPackageStruct appAndroidChannelPackageId(String appAndroidChannelPackageId) {
     this.appAndroidChannelPackageId = appAndroidChannelPackageId;
     return this;
@@ -109,6 +115,44 @@ public class ChannelPackageStruct {
     this.packageOriginUrl = packageOriginUrl;
   }
 
+  public ChannelPackageStruct createdTime(Long createdTime) {
+    this.createdTime = createdTime;
+    return this;
+  }
+
+  /**
+   * Get createdTime
+   *
+   * @return createdTime
+   */
+  @ApiModelProperty(value = "")
+  public Long getCreatedTime() {
+    return createdTime;
+  }
+
+  public void setCreatedTime(Long createdTime) {
+    this.createdTime = createdTime;
+  }
+
+  public ChannelPackageStruct lastModifiedTime(Long lastModifiedTime) {
+    this.lastModifiedTime = lastModifiedTime;
+    return this;
+  }
+
+  /**
+   * Get lastModifiedTime
+   *
+   * @return lastModifiedTime
+   */
+  @ApiModelProperty(value = "")
+  public Long getLastModifiedTime() {
+    return lastModifiedTime;
+  }
+
+  public void setLastModifiedTime(Long lastModifiedTime) {
+    this.lastModifiedTime = lastModifiedTime;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -122,12 +166,20 @@ public class ChannelPackageStruct {
             this.appAndroidChannelPackageId, channelPackageStruct.appAndroidChannelPackageId)
         && Objects.equals(this.packageName, channelPackageStruct.packageName)
         && Objects.equals(this.systemStatus, channelPackageStruct.systemStatus)
-        && Objects.equals(this.packageOriginUrl, channelPackageStruct.packageOriginUrl);
+        && Objects.equals(this.packageOriginUrl, channelPackageStruct.packageOriginUrl)
+        && Objects.equals(this.createdTime, channelPackageStruct.createdTime)
+        && Objects.equals(this.lastModifiedTime, channelPackageStruct.lastModifiedTime);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(appAndroidChannelPackageId, packageName, systemStatus, packageOriginUrl);
+    return Objects.hash(
+        appAndroidChannelPackageId,
+        packageName,
+        systemStatus,
+        packageOriginUrl,
+        createdTime,
+        lastModifiedTime);
   }
 
   @Override
