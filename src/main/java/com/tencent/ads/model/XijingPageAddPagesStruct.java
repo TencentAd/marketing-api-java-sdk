@@ -41,6 +41,9 @@ public class XijingPageAddPagesStruct {
   @SerializedName("mobile_app_id")
   private String mobileAppId = null;
 
+  @SerializedName("form_id")
+  private String formId = null;
+
   @SerializedName("page_template_id")
   private String pageTemplateId = null;
 
@@ -161,6 +164,25 @@ public class XijingPageAddPagesStruct {
     this.mobileAppId = mobileAppId;
   }
 
+  public XijingPageAddPagesStruct formId(String formId) {
+    this.formId = formId;
+    return this;
+  }
+
+  /**
+   * Get formId
+   *
+   * @return formId
+   */
+  @ApiModelProperty(value = "")
+  public String getFormId() {
+    return formId;
+  }
+
+  public void setFormId(String formId) {
+    this.formId = formId;
+  }
+
   public XijingPageAddPagesStruct pageTemplateId(String pageTemplateId) {
     this.pageTemplateId = pageTemplateId;
     return this;
@@ -222,6 +244,7 @@ public class XijingPageAddPagesStruct {
         && Objects.equals(this.clipboard, xijingPageAddPagesStruct.clipboard)
         && Objects.equals(this.pageDeeplink, xijingPageAddPagesStruct.pageDeeplink)
         && Objects.equals(this.mobileAppId, xijingPageAddPagesStruct.mobileAppId)
+        && Objects.equals(this.formId, xijingPageAddPagesStruct.formId)
         && Objects.equals(this.pageTemplateId, xijingPageAddPagesStruct.pageTemplateId)
         && Objects.equals(this.componentSpecList, xijingPageAddPagesStruct.componentSpecList);
   }
@@ -235,6 +258,7 @@ public class XijingPageAddPagesStruct {
         clipboard,
         pageDeeplink,
         mobileAppId,
+        formId,
         pageTemplateId,
         componentSpecList);
   }

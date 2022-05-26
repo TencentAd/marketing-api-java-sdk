@@ -1797,6 +1797,39 @@ public class TargetingTagReportsGetListStruct {
   @SerializedName("mini_game_pay_d30_pla_roi")
   private Double miniGamePayD30PlaRoi = null;
 
+  @SerializedName("minigame_1d_pay_count")
+  private Long minigame1dPayCount = null;
+
+  @SerializedName("minigame_3d_income_uv")
+  private Long minigame3dIncomeUv = null;
+
+  @SerializedName("minigame_3d_income_count")
+  private Long minigame3dIncomeCount = null;
+
+  @SerializedName("minigame_7d_income_uv")
+  private Long minigame7dIncomeUv = null;
+
+  @SerializedName("minigame_7d_income_count")
+  private Long minigame7dIncomeCount = null;
+
+  @SerializedName("minigame_3d_income_roi")
+  private Double minigame3dIncomeRoi = null;
+
+  @SerializedName("minigame_7d_income_roi")
+  private Double minigame7dIncomeRoi = null;
+
+  @SerializedName("minigame_24h_pay_uv")
+  private Long minigame24hPayUv = null;
+
+  @SerializedName("minigame_24h_pay_amount")
+  private Long minigame24hPayAmount = null;
+
+  @SerializedName("minigame_24h_pay_roi")
+  private Double minigame24hPayRoi = null;
+
+  @SerializedName("minigame_24h_pay_arpu")
+  private Long minigame24hPayArpu = null;
+
   public TargetingTagReportsGetListStruct date(String date) {
     this.date = date;
     return this;
@@ -13126,6 +13159,215 @@ public class TargetingTagReportsGetListStruct {
     this.miniGamePayD30PlaRoi = miniGamePayD30PlaRoi;
   }
 
+  public TargetingTagReportsGetListStruct minigame1dPayCount(Long minigame1dPayCount) {
+    this.minigame1dPayCount = minigame1dPayCount;
+    return this;
+  }
+
+  /**
+   * Get minigame1dPayCount
+   *
+   * @return minigame1dPayCount
+   */
+  @ApiModelProperty(value = "")
+  public Long getMinigame1dPayCount() {
+    return minigame1dPayCount;
+  }
+
+  public void setMinigame1dPayCount(Long minigame1dPayCount) {
+    this.minigame1dPayCount = minigame1dPayCount;
+  }
+
+  public TargetingTagReportsGetListStruct minigame3dIncomeUv(Long minigame3dIncomeUv) {
+    this.minigame3dIncomeUv = minigame3dIncomeUv;
+    return this;
+  }
+
+  /**
+   * Get minigame3dIncomeUv
+   *
+   * @return minigame3dIncomeUv
+   */
+  @ApiModelProperty(value = "")
+  public Long getMinigame3dIncomeUv() {
+    return minigame3dIncomeUv;
+  }
+
+  public void setMinigame3dIncomeUv(Long minigame3dIncomeUv) {
+    this.minigame3dIncomeUv = minigame3dIncomeUv;
+  }
+
+  public TargetingTagReportsGetListStruct minigame3dIncomeCount(Long minigame3dIncomeCount) {
+    this.minigame3dIncomeCount = minigame3dIncomeCount;
+    return this;
+  }
+
+  /**
+   * Get minigame3dIncomeCount
+   *
+   * @return minigame3dIncomeCount
+   */
+  @ApiModelProperty(value = "")
+  public Long getMinigame3dIncomeCount() {
+    return minigame3dIncomeCount;
+  }
+
+  public void setMinigame3dIncomeCount(Long minigame3dIncomeCount) {
+    this.minigame3dIncomeCount = minigame3dIncomeCount;
+  }
+
+  public TargetingTagReportsGetListStruct minigame7dIncomeUv(Long minigame7dIncomeUv) {
+    this.minigame7dIncomeUv = minigame7dIncomeUv;
+    return this;
+  }
+
+  /**
+   * Get minigame7dIncomeUv
+   *
+   * @return minigame7dIncomeUv
+   */
+  @ApiModelProperty(value = "")
+  public Long getMinigame7dIncomeUv() {
+    return minigame7dIncomeUv;
+  }
+
+  public void setMinigame7dIncomeUv(Long minigame7dIncomeUv) {
+    this.minigame7dIncomeUv = minigame7dIncomeUv;
+  }
+
+  public TargetingTagReportsGetListStruct minigame7dIncomeCount(Long minigame7dIncomeCount) {
+    this.minigame7dIncomeCount = minigame7dIncomeCount;
+    return this;
+  }
+
+  /**
+   * Get minigame7dIncomeCount
+   *
+   * @return minigame7dIncomeCount
+   */
+  @ApiModelProperty(value = "")
+  public Long getMinigame7dIncomeCount() {
+    return minigame7dIncomeCount;
+  }
+
+  public void setMinigame7dIncomeCount(Long minigame7dIncomeCount) {
+    this.minigame7dIncomeCount = minigame7dIncomeCount;
+  }
+
+  public TargetingTagReportsGetListStruct minigame3dIncomeRoi(Double minigame3dIncomeRoi) {
+    this.minigame3dIncomeRoi = minigame3dIncomeRoi;
+    return this;
+  }
+
+  /**
+   * Get minigame3dIncomeRoi
+   *
+   * @return minigame3dIncomeRoi
+   */
+  @ApiModelProperty(value = "")
+  public Double getMinigame3dIncomeRoi() {
+    return minigame3dIncomeRoi;
+  }
+
+  public void setMinigame3dIncomeRoi(Double minigame3dIncomeRoi) {
+    this.minigame3dIncomeRoi = minigame3dIncomeRoi;
+  }
+
+  public TargetingTagReportsGetListStruct minigame7dIncomeRoi(Double minigame7dIncomeRoi) {
+    this.minigame7dIncomeRoi = minigame7dIncomeRoi;
+    return this;
+  }
+
+  /**
+   * Get minigame7dIncomeRoi
+   *
+   * @return minigame7dIncomeRoi
+   */
+  @ApiModelProperty(value = "")
+  public Double getMinigame7dIncomeRoi() {
+    return minigame7dIncomeRoi;
+  }
+
+  public void setMinigame7dIncomeRoi(Double minigame7dIncomeRoi) {
+    this.minigame7dIncomeRoi = minigame7dIncomeRoi;
+  }
+
+  public TargetingTagReportsGetListStruct minigame24hPayUv(Long minigame24hPayUv) {
+    this.minigame24hPayUv = minigame24hPayUv;
+    return this;
+  }
+
+  /**
+   * Get minigame24hPayUv
+   *
+   * @return minigame24hPayUv
+   */
+  @ApiModelProperty(value = "")
+  public Long getMinigame24hPayUv() {
+    return minigame24hPayUv;
+  }
+
+  public void setMinigame24hPayUv(Long minigame24hPayUv) {
+    this.minigame24hPayUv = minigame24hPayUv;
+  }
+
+  public TargetingTagReportsGetListStruct minigame24hPayAmount(Long minigame24hPayAmount) {
+    this.minigame24hPayAmount = minigame24hPayAmount;
+    return this;
+  }
+
+  /**
+   * Get minigame24hPayAmount
+   *
+   * @return minigame24hPayAmount
+   */
+  @ApiModelProperty(value = "")
+  public Long getMinigame24hPayAmount() {
+    return minigame24hPayAmount;
+  }
+
+  public void setMinigame24hPayAmount(Long minigame24hPayAmount) {
+    this.minigame24hPayAmount = minigame24hPayAmount;
+  }
+
+  public TargetingTagReportsGetListStruct minigame24hPayRoi(Double minigame24hPayRoi) {
+    this.minigame24hPayRoi = minigame24hPayRoi;
+    return this;
+  }
+
+  /**
+   * Get minigame24hPayRoi
+   *
+   * @return minigame24hPayRoi
+   */
+  @ApiModelProperty(value = "")
+  public Double getMinigame24hPayRoi() {
+    return minigame24hPayRoi;
+  }
+
+  public void setMinigame24hPayRoi(Double minigame24hPayRoi) {
+    this.minigame24hPayRoi = minigame24hPayRoi;
+  }
+
+  public TargetingTagReportsGetListStruct minigame24hPayArpu(Long minigame24hPayArpu) {
+    this.minigame24hPayArpu = minigame24hPayArpu;
+    return this;
+  }
+
+  /**
+   * Get minigame24hPayArpu
+   *
+   * @return minigame24hPayArpu
+   */
+  @ApiModelProperty(value = "")
+  public Long getMinigame24hPayArpu() {
+    return minigame24hPayArpu;
+  }
+
+  public void setMinigame24hPayArpu(Long minigame24hPayArpu) {
+    this.minigame24hPayArpu = minigame24hPayArpu;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -14155,7 +14397,28 @@ public class TargetingTagReportsGetListStruct {
         && Objects.equals(
             this.miniGamePayD14PlaRoi, targetingTagReportsGetListStruct.miniGamePayD14PlaRoi)
         && Objects.equals(
-            this.miniGamePayD30PlaRoi, targetingTagReportsGetListStruct.miniGamePayD30PlaRoi);
+            this.miniGamePayD30PlaRoi, targetingTagReportsGetListStruct.miniGamePayD30PlaRoi)
+        && Objects.equals(
+            this.minigame1dPayCount, targetingTagReportsGetListStruct.minigame1dPayCount)
+        && Objects.equals(
+            this.minigame3dIncomeUv, targetingTagReportsGetListStruct.minigame3dIncomeUv)
+        && Objects.equals(
+            this.minigame3dIncomeCount, targetingTagReportsGetListStruct.minigame3dIncomeCount)
+        && Objects.equals(
+            this.minigame7dIncomeUv, targetingTagReportsGetListStruct.minigame7dIncomeUv)
+        && Objects.equals(
+            this.minigame7dIncomeCount, targetingTagReportsGetListStruct.minigame7dIncomeCount)
+        && Objects.equals(
+            this.minigame3dIncomeRoi, targetingTagReportsGetListStruct.minigame3dIncomeRoi)
+        && Objects.equals(
+            this.minigame7dIncomeRoi, targetingTagReportsGetListStruct.minigame7dIncomeRoi)
+        && Objects.equals(this.minigame24hPayUv, targetingTagReportsGetListStruct.minigame24hPayUv)
+        && Objects.equals(
+            this.minigame24hPayAmount, targetingTagReportsGetListStruct.minigame24hPayAmount)
+        && Objects.equals(
+            this.minigame24hPayRoi, targetingTagReportsGetListStruct.minigame24hPayRoi)
+        && Objects.equals(
+            this.minigame24hPayArpu, targetingTagReportsGetListStruct.minigame24hPayArpu);
   }
 
   @Override
@@ -14752,7 +15015,18 @@ public class TargetingTagReportsGetListStruct {
         miniGamePayD3PlaRoi,
         miniGamePayD7PlaRoi,
         miniGamePayD14PlaRoi,
-        miniGamePayD30PlaRoi);
+        miniGamePayD30PlaRoi,
+        minigame1dPayCount,
+        minigame3dIncomeUv,
+        minigame3dIncomeCount,
+        minigame7dIncomeUv,
+        minigame7dIncomeCount,
+        minigame3dIncomeRoi,
+        minigame7dIncomeRoi,
+        minigame24hPayUv,
+        minigame24hPayAmount,
+        minigame24hPayRoi,
+        minigame24hPayArpu);
   }
 
   @Override
