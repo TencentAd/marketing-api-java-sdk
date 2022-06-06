@@ -72,7 +72,9 @@ public enum DynamicAdTemplateSize {
 
   _230_152("SIZE_230_152"),
 
-  _147_147("SIZE_147_147");
+  _147_147("SIZE_147_147"),
+
+  _540_276("SIZE_540_276");
 
   private String value;
 

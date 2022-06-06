@@ -26,9 +26,9 @@ public enum TimeGranularity {
 
   HOURLY("HOURLY"),
 
-  SUMMARY("SUMMARY"),
+  UNKNOWN("UNKNOWN"),
 
-  UNKNOWN("UNKNOWN");
+  SUMMARY("SUMMARY");
 
   private String value;
 

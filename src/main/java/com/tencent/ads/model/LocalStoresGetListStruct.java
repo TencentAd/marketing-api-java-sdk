@@ -72,6 +72,9 @@ public class LocalStoresGetListStruct {
   @SerializedName("local_store_business_area")
   private String localStoreBusinessArea = null;
 
+  @SerializedName("local_store_remark")
+  private String localStoreRemark = null;
+
   public LocalStoresGetListStruct poiId(String poiId) {
     this.poiId = poiId;
     return this;
@@ -396,6 +399,25 @@ public class LocalStoresGetListStruct {
     this.localStoreBusinessArea = localStoreBusinessArea;
   }
 
+  public LocalStoresGetListStruct localStoreRemark(String localStoreRemark) {
+    this.localStoreRemark = localStoreRemark;
+    return this;
+  }
+
+  /**
+   * Get localStoreRemark
+   *
+   * @return localStoreRemark
+   */
+  @ApiModelProperty(value = "")
+  public String getLocalStoreRemark() {
+    return localStoreRemark;
+  }
+
+  public void setLocalStoreRemark(String localStoreRemark) {
+    this.localStoreRemark = localStoreRemark;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -423,7 +445,8 @@ public class LocalStoresGetListStruct {
         && Objects.equals(this.localStoreDistrict, localStoresGetListStruct.localStoreDistrict)
         && Objects.equals(this.localStoreStreet, localStoresGetListStruct.localStoreStreet)
         && Objects.equals(
-            this.localStoreBusinessArea, localStoresGetListStruct.localStoreBusinessArea);
+            this.localStoreBusinessArea, localStoresGetListStruct.localStoreBusinessArea)
+        && Objects.equals(this.localStoreRemark, localStoresGetListStruct.localStoreRemark);
   }
 
   @Override
@@ -445,7 +468,8 @@ public class LocalStoresGetListStruct {
         localStoreAdcode,
         localStoreDistrict,
         localStoreStreet,
-        localStoreBusinessArea);
+        localStoreBusinessArea,
+        localStoreRemark);
   }
 
   @Override
