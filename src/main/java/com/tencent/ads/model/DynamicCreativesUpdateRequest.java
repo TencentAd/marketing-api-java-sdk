@@ -120,6 +120,12 @@ public class DynamicCreativesUpdateRequest {
   @SerializedName("union_market_spec")
   private UnionMarketSpec unionMarketSpec = null;
 
+  @SerializedName("head_click_type")
+  private HeadClickType headClickType = null;
+
+  @SerializedName("head_click_spec")
+  private HeadClickSpec headClickSpec = null;
+
   @SerializedName("account_id")
   private Long accountId = null;
 
@@ -763,6 +769,44 @@ public class DynamicCreativesUpdateRequest {
     this.unionMarketSpec = unionMarketSpec;
   }
 
+  public DynamicCreativesUpdateRequest headClickType(HeadClickType headClickType) {
+    this.headClickType = headClickType;
+    return this;
+  }
+
+  /**
+   * Get headClickType
+   *
+   * @return headClickType
+   */
+  @ApiModelProperty(value = "")
+  public HeadClickType getHeadClickType() {
+    return headClickType;
+  }
+
+  public void setHeadClickType(HeadClickType headClickType) {
+    this.headClickType = headClickType;
+  }
+
+  public DynamicCreativesUpdateRequest headClickSpec(HeadClickSpec headClickSpec) {
+    this.headClickSpec = headClickSpec;
+    return this;
+  }
+
+  /**
+   * Get headClickSpec
+   *
+   * @return headClickSpec
+   */
+  @ApiModelProperty(value = "")
+  public HeadClickSpec getHeadClickSpec() {
+    return headClickSpec;
+  }
+
+  public void setHeadClickSpec(HeadClickSpec headClickSpec) {
+    this.headClickSpec = headClickSpec;
+  }
+
   public DynamicCreativesUpdateRequest accountId(Long accountId) {
     this.accountId = accountId;
     return this;
@@ -835,6 +879,8 @@ public class DynamicCreativesUpdateRequest {
         && Objects.equals(this.countdownSwitch, dynamicCreativesUpdateRequest.countdownSwitch)
         && Objects.equals(this.appGiftPackCode, dynamicCreativesUpdateRequest.appGiftPackCode)
         && Objects.equals(this.unionMarketSpec, dynamicCreativesUpdateRequest.unionMarketSpec)
+        && Objects.equals(this.headClickType, dynamicCreativesUpdateRequest.headClickType)
+        && Objects.equals(this.headClickSpec, dynamicCreativesUpdateRequest.headClickSpec)
         && Objects.equals(this.accountId, dynamicCreativesUpdateRequest.accountId);
   }
 
@@ -874,6 +920,8 @@ public class DynamicCreativesUpdateRequest {
         countdownSwitch,
         appGiftPackCode,
         unionMarketSpec,
+        headClickType,
+        headClickSpec,
         accountId);
   }
 

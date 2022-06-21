@@ -114,6 +114,12 @@ public class AdcreativesAddRequest {
   @SerializedName("countdown_switch")
   private Boolean countdownSwitch = null;
 
+  @SerializedName("head_click_type")
+  private HeadClickType headClickType = null;
+
+  @SerializedName("head_click_spec")
+  private HeadClickSpec headClickSpec = null;
+
   @SerializedName("page_track_url")
   private String pageTrackUrl = null;
 
@@ -741,6 +747,44 @@ public class AdcreativesAddRequest {
     this.countdownSwitch = countdownSwitch;
   }
 
+  public AdcreativesAddRequest headClickType(HeadClickType headClickType) {
+    this.headClickType = headClickType;
+    return this;
+  }
+
+  /**
+   * Get headClickType
+   *
+   * @return headClickType
+   */
+  @ApiModelProperty(value = "")
+  public HeadClickType getHeadClickType() {
+    return headClickType;
+  }
+
+  public void setHeadClickType(HeadClickType headClickType) {
+    this.headClickType = headClickType;
+  }
+
+  public AdcreativesAddRequest headClickSpec(HeadClickSpec headClickSpec) {
+    this.headClickSpec = headClickSpec;
+    return this;
+  }
+
+  /**
+   * Get headClickSpec
+   *
+   * @return headClickSpec
+   */
+  @ApiModelProperty(value = "")
+  public HeadClickSpec getHeadClickSpec() {
+    return headClickSpec;
+  }
+
+  public void setHeadClickSpec(HeadClickSpec headClickSpec) {
+    this.headClickSpec = headClickSpec;
+  }
+
   public AdcreativesAddRequest pageTrackUrl(String pageTrackUrl) {
     this.pageTrackUrl = pageTrackUrl;
     return this;
@@ -982,6 +1026,8 @@ public class AdcreativesAddRequest {
         && Objects.equals(
             this.marketingPendantImageId, adcreativesAddRequest.marketingPendantImageId)
         && Objects.equals(this.countdownSwitch, adcreativesAddRequest.countdownSwitch)
+        && Objects.equals(this.headClickType, adcreativesAddRequest.headClickType)
+        && Objects.equals(this.headClickSpec, adcreativesAddRequest.headClickSpec)
         && Objects.equals(this.pageTrackUrl, adcreativesAddRequest.pageTrackUrl)
         && Objects.equals(this.barrageList, adcreativesAddRequest.barrageList)
         && Objects.equals(this.appGiftPackCode, adcreativesAddRequest.appGiftPackCode)
@@ -1029,6 +1075,8 @@ public class AdcreativesAddRequest {
         floatingZone,
         marketingPendantImageId,
         countdownSwitch,
+        headClickType,
+        headClickSpec,
         pageTrackUrl,
         barrageList,
         appGiftPackCode,

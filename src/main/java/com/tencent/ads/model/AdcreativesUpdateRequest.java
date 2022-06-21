@@ -105,6 +105,12 @@ public class AdcreativesUpdateRequest {
   @SerializedName("countdown_switch")
   private Boolean countdownSwitch = null;
 
+  @SerializedName("head_click_type")
+  private HeadClickType headClickType = null;
+
+  @SerializedName("head_click_spec")
+  private HeadClickSpec headClickSpec = null;
+
   @SerializedName("barrage_list")
   private List<BarrageListCreateStruct> barrageList = null;
 
@@ -663,6 +669,44 @@ public class AdcreativesUpdateRequest {
     this.countdownSwitch = countdownSwitch;
   }
 
+  public AdcreativesUpdateRequest headClickType(HeadClickType headClickType) {
+    this.headClickType = headClickType;
+    return this;
+  }
+
+  /**
+   * Get headClickType
+   *
+   * @return headClickType
+   */
+  @ApiModelProperty(value = "")
+  public HeadClickType getHeadClickType() {
+    return headClickType;
+  }
+
+  public void setHeadClickType(HeadClickType headClickType) {
+    this.headClickType = headClickType;
+  }
+
+  public AdcreativesUpdateRequest headClickSpec(HeadClickSpec headClickSpec) {
+    this.headClickSpec = headClickSpec;
+    return this;
+  }
+
+  /**
+   * Get headClickSpec
+   *
+   * @return headClickSpec
+   */
+  @ApiModelProperty(value = "")
+  public HeadClickSpec getHeadClickSpec() {
+    return headClickSpec;
+  }
+
+  public void setHeadClickSpec(HeadClickSpec headClickSpec) {
+    this.headClickSpec = headClickSpec;
+  }
+
   public AdcreativesUpdateRequest barrageList(List<BarrageListCreateStruct> barrageList) {
     this.barrageList = barrageList;
     return this;
@@ -868,6 +912,8 @@ public class AdcreativesUpdateRequest {
         && Objects.equals(
             this.marketingPendantImageId, adcreativesUpdateRequest.marketingPendantImageId)
         && Objects.equals(this.countdownSwitch, adcreativesUpdateRequest.countdownSwitch)
+        && Objects.equals(this.headClickType, adcreativesUpdateRequest.headClickType)
+        && Objects.equals(this.headClickSpec, adcreativesUpdateRequest.headClickSpec)
         && Objects.equals(this.barrageList, adcreativesUpdateRequest.barrageList)
         && Objects.equals(
             this.dynamicAdcreativeSpec, adcreativesUpdateRequest.dynamicAdcreativeSpec)
@@ -910,6 +956,8 @@ public class AdcreativesUpdateRequest {
         floatingZone,
         marketingPendantImageId,
         countdownSwitch,
+        headClickType,
+        headClickSpec,
         barrageList,
         dynamicAdcreativeSpec,
         appGiftPackCode,

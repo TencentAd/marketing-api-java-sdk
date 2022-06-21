@@ -138,6 +138,12 @@ public class DynamicCreativesAddRequest {
   @SerializedName("union_market_spec")
   private UnionMarketSpec unionMarketSpec = null;
 
+  @SerializedName("head_click_type")
+  private HeadClickType headClickType = null;
+
+  @SerializedName("head_click_spec")
+  private HeadClickSpec headClickSpec = null;
+
   @SerializedName("account_id")
   private Long accountId = null;
 
@@ -903,6 +909,44 @@ public class DynamicCreativesAddRequest {
     this.unionMarketSpec = unionMarketSpec;
   }
 
+  public DynamicCreativesAddRequest headClickType(HeadClickType headClickType) {
+    this.headClickType = headClickType;
+    return this;
+  }
+
+  /**
+   * Get headClickType
+   *
+   * @return headClickType
+   */
+  @ApiModelProperty(value = "")
+  public HeadClickType getHeadClickType() {
+    return headClickType;
+  }
+
+  public void setHeadClickType(HeadClickType headClickType) {
+    this.headClickType = headClickType;
+  }
+
+  public DynamicCreativesAddRequest headClickSpec(HeadClickSpec headClickSpec) {
+    this.headClickSpec = headClickSpec;
+    return this;
+  }
+
+  /**
+   * Get headClickSpec
+   *
+   * @return headClickSpec
+   */
+  @ApiModelProperty(value = "")
+  public HeadClickSpec getHeadClickSpec() {
+    return headClickSpec;
+  }
+
+  public void setHeadClickSpec(HeadClickSpec headClickSpec) {
+    this.headClickSpec = headClickSpec;
+  }
+
   public DynamicCreativesAddRequest accountId(Long accountId) {
     this.accountId = accountId;
     return this;
@@ -983,6 +1027,8 @@ public class DynamicCreativesAddRequest {
         && Objects.equals(
             this.enableBreakthroughSiteset, dynamicCreativesAddRequest.enableBreakthroughSiteset)
         && Objects.equals(this.unionMarketSpec, dynamicCreativesAddRequest.unionMarketSpec)
+        && Objects.equals(this.headClickType, dynamicCreativesAddRequest.headClickType)
+        && Objects.equals(this.headClickSpec, dynamicCreativesAddRequest.headClickSpec)
         && Objects.equals(this.accountId, dynamicCreativesAddRequest.accountId);
   }
 
@@ -1028,6 +1074,8 @@ public class DynamicCreativesAddRequest {
         appGiftPackCode,
         enableBreakthroughSiteset,
         unionMarketSpec,
+        headClickType,
+        headClickSpec,
         accountId);
   }
 

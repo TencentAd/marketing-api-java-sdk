@@ -146,6 +146,12 @@ public class AdcreativesGetListStruct {
   @SerializedName("page_track_url")
   private String pageTrackUrl = null;
 
+  @SerializedName("head_click_type")
+  private HeadClickType headClickType = null;
+
+  @SerializedName("head_click_spec")
+  private HeadClickSpec headClickSpec = null;
+
   @SerializedName("barrage_list")
   private List<BarrageListReadStruct> barrageList = null;
 
@@ -966,6 +972,44 @@ public class AdcreativesGetListStruct {
     this.pageTrackUrl = pageTrackUrl;
   }
 
+  public AdcreativesGetListStruct headClickType(HeadClickType headClickType) {
+    this.headClickType = headClickType;
+    return this;
+  }
+
+  /**
+   * Get headClickType
+   *
+   * @return headClickType
+   */
+  @ApiModelProperty(value = "")
+  public HeadClickType getHeadClickType() {
+    return headClickType;
+  }
+
+  public void setHeadClickType(HeadClickType headClickType) {
+    this.headClickType = headClickType;
+  }
+
+  public AdcreativesGetListStruct headClickSpec(HeadClickSpec headClickSpec) {
+    this.headClickSpec = headClickSpec;
+    return this;
+  }
+
+  /**
+   * Get headClickSpec
+   *
+   * @return headClickSpec
+   */
+  @ApiModelProperty(value = "")
+  public HeadClickSpec getHeadClickSpec() {
+    return headClickSpec;
+  }
+
+  public void setHeadClickSpec(HeadClickSpec headClickSpec) {
+    this.headClickSpec = headClickSpec;
+  }
+
   public AdcreativesGetListStruct barrageList(List<BarrageListReadStruct> barrageList) {
     this.barrageList = barrageList;
     return this;
@@ -1224,6 +1268,8 @@ public class AdcreativesGetListStruct {
         && Objects.equals(this.countdownSwitch, adcreativesGetListStruct.countdownSwitch)
         && Objects.equals(this.source, adcreativesGetListStruct.source)
         && Objects.equals(this.pageTrackUrl, adcreativesGetListStruct.pageTrackUrl)
+        && Objects.equals(this.headClickType, adcreativesGetListStruct.headClickType)
+        && Objects.equals(this.headClickSpec, adcreativesGetListStruct.headClickSpec)
         && Objects.equals(this.barrageList, adcreativesGetListStruct.barrageList)
         && Objects.equals(this.appGiftPackCode, adcreativesGetListStruct.appGiftPackCode)
         && Objects.equals(
@@ -1283,6 +1329,8 @@ public class AdcreativesGetListStruct {
         countdownSwitch,
         source,
         pageTrackUrl,
+        headClickType,
+        headClickSpec,
         barrageList,
         appGiftPackCode,
         enableBreakthroughSiteset,

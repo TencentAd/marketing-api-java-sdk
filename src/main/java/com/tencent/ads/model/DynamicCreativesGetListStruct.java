@@ -113,6 +113,12 @@ public class DynamicCreativesGetListStruct {
   @SerializedName("creative_template_category")
   private String creativeTemplateCategory = null;
 
+  @SerializedName("head_click_type")
+  private HeadClickType headClickType = null;
+
+  @SerializedName("head_click_spec")
+  private HeadClickSpec headClickSpec = null;
+
   public DynamicCreativesGetListStruct dynamicCreativeId(Long dynamicCreativeId) {
     this.dynamicCreativeId = dynamicCreativeId;
     return this;
@@ -705,6 +711,44 @@ public class DynamicCreativesGetListStruct {
     this.creativeTemplateCategory = creativeTemplateCategory;
   }
 
+  public DynamicCreativesGetListStruct headClickType(HeadClickType headClickType) {
+    this.headClickType = headClickType;
+    return this;
+  }
+
+  /**
+   * Get headClickType
+   *
+   * @return headClickType
+   */
+  @ApiModelProperty(value = "")
+  public HeadClickType getHeadClickType() {
+    return headClickType;
+  }
+
+  public void setHeadClickType(HeadClickType headClickType) {
+    this.headClickType = headClickType;
+  }
+
+  public DynamicCreativesGetListStruct headClickSpec(HeadClickSpec headClickSpec) {
+    this.headClickSpec = headClickSpec;
+    return this;
+  }
+
+  /**
+   * Get headClickSpec
+   *
+   * @return headClickSpec
+   */
+  @ApiModelProperty(value = "")
+  public HeadClickSpec getHeadClickSpec() {
+    return headClickSpec;
+  }
+
+  public void setHeadClickSpec(HeadClickSpec headClickSpec) {
+    this.headClickSpec = headClickSpec;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -755,7 +799,9 @@ public class DynamicCreativesGetListStruct {
             dynamicCreativesGetListStruct.creativeTemplateVersionType)
         && Objects.equals(this.unionMarketSpec, dynamicCreativesGetListStruct.unionMarketSpec)
         && Objects.equals(
-            this.creativeTemplateCategory, dynamicCreativesGetListStruct.creativeTemplateCategory);
+            this.creativeTemplateCategory, dynamicCreativesGetListStruct.creativeTemplateCategory)
+        && Objects.equals(this.headClickType, dynamicCreativesGetListStruct.headClickType)
+        && Objects.equals(this.headClickSpec, dynamicCreativesGetListStruct.headClickSpec);
   }
 
   @Override
@@ -790,7 +836,9 @@ public class DynamicCreativesGetListStruct {
         enableBreakthroughSiteset,
         creativeTemplateVersionType,
         unionMarketSpec,
-        creativeTemplateCategory);
+        creativeTemplateCategory,
+        headClickType,
+        headClickSpec);
   }
 
   @Override
