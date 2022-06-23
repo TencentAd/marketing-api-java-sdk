@@ -188,6 +188,9 @@ public class AdcreativeCreativeElementsWithOptions {
   @SerializedName("wegame_info_spec")
   private WegameInfoSpec wegameInfoSpec = null;
 
+  @SerializedName("wechat_channels_spec")
+  private AdCreativeWechatChannelsSpec wechatChannelsSpec = null;
+
   public AdcreativeCreativeElementsWithOptions image(String image) {
     this.image = image;
     return this;
@@ -1306,6 +1309,26 @@ public class AdcreativeCreativeElementsWithOptions {
     this.wegameInfoSpec = wegameInfoSpec;
   }
 
+  public AdcreativeCreativeElementsWithOptions wechatChannelsSpec(
+      AdCreativeWechatChannelsSpec wechatChannelsSpec) {
+    this.wechatChannelsSpec = wechatChannelsSpec;
+    return this;
+  }
+
+  /**
+   * Get wechatChannelsSpec
+   *
+   * @return wechatChannelsSpec
+   */
+  @ApiModelProperty(value = "")
+  public AdCreativeWechatChannelsSpec getWechatChannelsSpec() {
+    return wechatChannelsSpec;
+  }
+
+  public void setWechatChannelsSpec(AdCreativeWechatChannelsSpec wechatChannelsSpec) {
+    this.wechatChannelsSpec = wechatChannelsSpec;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -1384,8 +1407,9 @@ public class AdcreativeCreativeElementsWithOptions {
         && Objects.equals(this.rightButton, adcreativeCreativeElementsWithOptions.rightButton)
         && Objects.equals(this.leftCanvas, adcreativeCreativeElementsWithOptions.leftCanvas)
         && Objects.equals(this.rightCanvas, adcreativeCreativeElementsWithOptions.rightCanvas)
+        && Objects.equals(this.wegameInfoSpec, adcreativeCreativeElementsWithOptions.wegameInfoSpec)
         && Objects.equals(
-            this.wegameInfoSpec, adcreativeCreativeElementsWithOptions.wegameInfoSpec);
+            this.wechatChannelsSpec, adcreativeCreativeElementsWithOptions.wechatChannelsSpec);
   }
 
   @Override
@@ -1445,7 +1469,8 @@ public class AdcreativeCreativeElementsWithOptions {
         rightButton,
         leftCanvas,
         rightCanvas,
-        wegameInfoSpec);
+        wegameInfoSpec,
+        wechatChannelsSpec);
   }
 
   @Override

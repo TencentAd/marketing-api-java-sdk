@@ -221,6 +221,9 @@ public class AdcreativeCreativeElementsRead {
   @SerializedName("wegame_info_spec")
   private WegameInfoSpec wegameInfoSpec = null;
 
+  @SerializedName("search_brand_area")
+  private SearchBrandAreaStruct searchBrandArea = null;
+
   public AdcreativeCreativeElementsRead image(String image) {
     this.image = image;
     return this;
@@ -1513,6 +1516,25 @@ public class AdcreativeCreativeElementsRead {
     this.wegameInfoSpec = wegameInfoSpec;
   }
 
+  public AdcreativeCreativeElementsRead searchBrandArea(SearchBrandAreaStruct searchBrandArea) {
+    this.searchBrandArea = searchBrandArea;
+    return this;
+  }
+
+  /**
+   * Get searchBrandArea
+   *
+   * @return searchBrandArea
+   */
+  @ApiModelProperty(value = "")
+  public SearchBrandAreaStruct getSearchBrandArea() {
+    return searchBrandArea;
+  }
+
+  public void setSearchBrandArea(SearchBrandAreaStruct searchBrandArea) {
+    this.searchBrandArea = searchBrandArea;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -1593,7 +1615,8 @@ public class AdcreativeCreativeElementsRead {
         && Objects.equals(
             this.floatingZoneStruct, adcreativeCreativeElementsRead.floatingZoneStruct)
         && Objects.equals(this.canvasShareImage, adcreativeCreativeElementsRead.canvasShareImage)
-        && Objects.equals(this.wegameInfoSpec, adcreativeCreativeElementsRead.wegameInfoSpec);
+        && Objects.equals(this.wegameInfoSpec, adcreativeCreativeElementsRead.wegameInfoSpec)
+        && Objects.equals(this.searchBrandArea, adcreativeCreativeElementsRead.searchBrandArea);
   }
 
   @Override
@@ -1664,7 +1687,8 @@ public class AdcreativeCreativeElementsRead {
         livingDescStruct,
         floatingZoneStruct,
         canvasShareImage,
-        wegameInfoSpec);
+        wegameInfoSpec,
+        searchBrandArea);
   }
 
   @Override
