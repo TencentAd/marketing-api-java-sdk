@@ -36,7 +36,9 @@ public enum CanvasPageElementType {
 
   TEXT("TEXT"),
 
-  APP_DOWNLOAD("APP_DOWNLOAD");
+  APP_DOWNLOAD("APP_DOWNLOAD"),
+
+  WEAPP("WEAPP");
 
   private String value;
 

@@ -48,6 +48,9 @@ public class PageElementsSpecListStruct {
   @SerializedName("app_download_spec")
   private CanvasAppDownloadSpecType appDownloadSpec = null;
 
+  @SerializedName("weapp_spec")
+  private WeappSpec weappSpec = null;
+
   public PageElementsSpecListStruct elementType(CanvasPageElementType elementType) {
     this.elementType = elementType;
     return this;
@@ -219,6 +222,25 @@ public class PageElementsSpecListStruct {
     this.appDownloadSpec = appDownloadSpec;
   }
 
+  public PageElementsSpecListStruct weappSpec(WeappSpec weappSpec) {
+    this.weappSpec = weappSpec;
+    return this;
+  }
+
+  /**
+   * Get weappSpec
+   *
+   * @return weappSpec
+   */
+  @ApiModelProperty(value = "")
+  public WeappSpec getWeappSpec() {
+    return weappSpec;
+  }
+
+  public void setWeappSpec(WeappSpec weappSpec) {
+    this.weappSpec = weappSpec;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -236,7 +258,8 @@ public class PageElementsSpecListStruct {
         && Objects.equals(this.sliderSpec, pageElementsSpecListStruct.sliderSpec)
         && Objects.equals(this.videoSpec, pageElementsSpecListStruct.videoSpec)
         && Objects.equals(this.textSpec, pageElementsSpecListStruct.textSpec)
-        && Objects.equals(this.appDownloadSpec, pageElementsSpecListStruct.appDownloadSpec);
+        && Objects.equals(this.appDownloadSpec, pageElementsSpecListStruct.appDownloadSpec)
+        && Objects.equals(this.weappSpec, pageElementsSpecListStruct.weappSpec);
   }
 
   @Override
@@ -250,7 +273,8 @@ public class PageElementsSpecListStruct {
         sliderSpec,
         videoSpec,
         textSpec,
-        appDownloadSpec);
+        appDownloadSpec,
+        weappSpec);
   }
 
   @Override
