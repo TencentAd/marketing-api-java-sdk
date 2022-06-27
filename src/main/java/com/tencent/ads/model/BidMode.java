@@ -34,13 +34,13 @@ public enum BidMode {
 
   CPM("BID_MODE_CPM"),
 
+  CPT("BID_MODE_CPT"),
+
   OCPC("BID_MODE_OCPC"),
 
   OCPA("BID_MODE_OCPA"),
 
-  OCPM("BID_MODE_OCPM"),
-
-  CPT("BID_MODE_CPT");
+  OCPM("BID_MODE_OCPM");
 
   private String value;
 
