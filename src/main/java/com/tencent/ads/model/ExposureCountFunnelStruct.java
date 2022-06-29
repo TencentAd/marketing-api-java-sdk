@@ -22,24 +22,24 @@ import java.util.Objects;
 @ApiModel(description = "曝光量分析")
 public class ExposureCountFunnelStruct {
   @SerializedName("value")
-  private Double value = null;
+  private String value = null;
 
   @SerializedName("score")
-  private Long score = null;
+  private String score = null;
 
   @SerializedName("score_desc")
   private String scoreDesc = null;
 
   @SerializedName("rank_category")
-  private Long rankCategory = null;
+  private String rankCategory = null;
 
   @SerializedName("rank_second_category")
-  private Long rankSecondCategory = null;
+  private String rankSecondCategory = null;
 
   @SerializedName("rank_overall")
-  private Long rankOverall = null;
+  private String rankOverall = null;
 
-  public ExposureCountFunnelStruct value(Double value) {
+  public ExposureCountFunnelStruct value(String value) {
     this.value = value;
     return this;
   }
@@ -50,15 +50,15 @@ public class ExposureCountFunnelStruct {
    * @return value
    */
   @ApiModelProperty(value = "")
-  public Double getValue() {
+  public String getValue() {
     return value;
   }
 
-  public void setValue(Double value) {
+  public void setValue(String value) {
     this.value = value;
   }
 
-  public ExposureCountFunnelStruct score(Long score) {
+  public ExposureCountFunnelStruct score(String score) {
     this.score = score;
     return this;
   }
@@ -69,11 +69,11 @@ public class ExposureCountFunnelStruct {
    * @return score
    */
   @ApiModelProperty(value = "")
-  public Long getScore() {
+  public String getScore() {
     return score;
   }
 
-  public void setScore(Long score) {
+  public void setScore(String score) {
     this.score = score;
   }
 
@@ -96,7 +96,7 @@ public class ExposureCountFunnelStruct {
     this.scoreDesc = scoreDesc;
   }
 
-  public ExposureCountFunnelStruct rankCategory(Long rankCategory) {
+  public ExposureCountFunnelStruct rankCategory(String rankCategory) {
     this.rankCategory = rankCategory;
     return this;
   }
@@ -107,15 +107,15 @@ public class ExposureCountFunnelStruct {
    * @return rankCategory
    */
   @ApiModelProperty(value = "")
-  public Long getRankCategory() {
+  public String getRankCategory() {
     return rankCategory;
   }
 
-  public void setRankCategory(Long rankCategory) {
+  public void setRankCategory(String rankCategory) {
     this.rankCategory = rankCategory;
   }
 
-  public ExposureCountFunnelStruct rankSecondCategory(Long rankSecondCategory) {
+  public ExposureCountFunnelStruct rankSecondCategory(String rankSecondCategory) {
     this.rankSecondCategory = rankSecondCategory;
     return this;
   }
@@ -126,15 +126,15 @@ public class ExposureCountFunnelStruct {
    * @return rankSecondCategory
    */
   @ApiModelProperty(value = "")
-  public Long getRankSecondCategory() {
+  public String getRankSecondCategory() {
     return rankSecondCategory;
   }
 
-  public void setRankSecondCategory(Long rankSecondCategory) {
+  public void setRankSecondCategory(String rankSecondCategory) {
     this.rankSecondCategory = rankSecondCategory;
   }
 
-  public ExposureCountFunnelStruct rankOverall(Long rankOverall) {
+  public ExposureCountFunnelStruct rankOverall(String rankOverall) {
     this.rankOverall = rankOverall;
     return this;
   }
@@ -145,11 +145,11 @@ public class ExposureCountFunnelStruct {
    * @return rankOverall
    */
   @ApiModelProperty(value = "")
-  public Long getRankOverall() {
+  public String getRankOverall() {
     return rankOverall;
   }
 
-  public void setRankOverall(Long rankOverall) {
+  public void setRankOverall(String rankOverall) {
     this.rankOverall = rankOverall;
   }
 

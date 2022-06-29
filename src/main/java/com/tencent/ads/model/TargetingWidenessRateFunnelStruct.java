@@ -22,24 +22,24 @@ import java.util.Objects;
 @ApiModel(description = "定向通过率分析")
 public class TargetingWidenessRateFunnelStruct {
   @SerializedName("value")
-  private Double value = null;
+  private String value = null;
 
   @SerializedName("score")
-  private Long score = null;
+  private String score = null;
 
   @SerializedName("score_desc")
   private String scoreDesc = null;
 
   @SerializedName("rank_category")
-  private Long rankCategory = null;
+  private String rankCategory = null;
 
   @SerializedName("rank_second_category")
-  private Long rankSecondCategory = null;
+  private String rankSecondCategory = null;
 
   @SerializedName("rank_overall")
-  private Long rankOverall = null;
+  private String rankOverall = null;
 
-  public TargetingWidenessRateFunnelStruct value(Double value) {
+  public TargetingWidenessRateFunnelStruct value(String value) {
     this.value = value;
     return this;
   }
@@ -50,15 +50,15 @@ public class TargetingWidenessRateFunnelStruct {
    * @return value
    */
   @ApiModelProperty(value = "")
-  public Double getValue() {
+  public String getValue() {
     return value;
   }
 
-  public void setValue(Double value) {
+  public void setValue(String value) {
     this.value = value;
   }
 
-  public TargetingWidenessRateFunnelStruct score(Long score) {
+  public TargetingWidenessRateFunnelStruct score(String score) {
     this.score = score;
     return this;
   }
@@ -69,11 +69,11 @@ public class TargetingWidenessRateFunnelStruct {
    * @return score
    */
   @ApiModelProperty(value = "")
-  public Long getScore() {
+  public String getScore() {
     return score;
   }
 
-  public void setScore(Long score) {
+  public void setScore(String score) {
     this.score = score;
   }
 
@@ -96,7 +96,7 @@ public class TargetingWidenessRateFunnelStruct {
     this.scoreDesc = scoreDesc;
   }
 
-  public TargetingWidenessRateFunnelStruct rankCategory(Long rankCategory) {
+  public TargetingWidenessRateFunnelStruct rankCategory(String rankCategory) {
     this.rankCategory = rankCategory;
     return this;
   }
@@ -107,15 +107,15 @@ public class TargetingWidenessRateFunnelStruct {
    * @return rankCategory
    */
   @ApiModelProperty(value = "")
-  public Long getRankCategory() {
+  public String getRankCategory() {
     return rankCategory;
   }
 
-  public void setRankCategory(Long rankCategory) {
+  public void setRankCategory(String rankCategory) {
     this.rankCategory = rankCategory;
   }
 
-  public TargetingWidenessRateFunnelStruct rankSecondCategory(Long rankSecondCategory) {
+  public TargetingWidenessRateFunnelStruct rankSecondCategory(String rankSecondCategory) {
     this.rankSecondCategory = rankSecondCategory;
     return this;
   }
@@ -126,15 +126,15 @@ public class TargetingWidenessRateFunnelStruct {
    * @return rankSecondCategory
    */
   @ApiModelProperty(value = "")
-  public Long getRankSecondCategory() {
+  public String getRankSecondCategory() {
     return rankSecondCategory;
   }
 
-  public void setRankSecondCategory(Long rankSecondCategory) {
+  public void setRankSecondCategory(String rankSecondCategory) {
     this.rankSecondCategory = rankSecondCategory;
   }
 
-  public TargetingWidenessRateFunnelStruct rankOverall(Long rankOverall) {
+  public TargetingWidenessRateFunnelStruct rankOverall(String rankOverall) {
     this.rankOverall = rankOverall;
     return this;
   }
@@ -145,11 +145,11 @@ public class TargetingWidenessRateFunnelStruct {
    * @return rankOverall
    */
   @ApiModelProperty(value = "")
-  public Long getRankOverall() {
+  public String getRankOverall() {
     return rankOverall;
   }
 
-  public void setRankOverall(Long rankOverall) {
+  public void setRankOverall(String rankOverall) {
     this.rankOverall = rankOverall;
   }
 

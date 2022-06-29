@@ -19,16 +19,18 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-/** 搜索广告品牌官方区类型 */
-@JsonAdapter(SearchBrandAreaType.Adapter.class)
-public enum SearchBrandAreaType {
-  UNKOWN("UNKOWN"),
+/** 人群来源 */
+@JsonAdapter(AudienceSource.Adapter.class)
+public enum AudienceSource {
+  ADVERTISER_OWN_DATA("ADVERTISER_OWN_DATA"),
 
-  WECHAT_SEARCH("WECHAT_SEARCH");
+  TENCENT_DATA("TENCENT_DATA"),
+
+  UNKNOWN("UNKNOWN");
 
   private String value;
 
-  SearchBrandAreaType(String value) {
+  AudienceSource(String value) {
     this.value = value;
   }
 
@@ -41,8 +43,8 @@ public enum SearchBrandAreaType {
     return String.valueOf(value);
   }
 
-  public static SearchBrandAreaType fromValue(String text) {
-    for (SearchBrandAreaType b : SearchBrandAreaType.values()) {
+  public static AudienceSource fromValue(String text) {
+    for (AudienceSource b : AudienceSource.values()) {
       if (String.valueOf(b.value).equals(text)) {
         return b;
       }
@@ -50,17 +52,17 @@ public enum SearchBrandAreaType {
     return null;
   }
 
-  public static class Adapter extends TypeAdapter<SearchBrandAreaType> {
+  public static class Adapter extends TypeAdapter<AudienceSource> {
     @Override
-    public void write(final JsonWriter jsonWriter, final SearchBrandAreaType enumeration)
+    public void write(final JsonWriter jsonWriter, final AudienceSource enumeration)
         throws IOException {
       jsonWriter.value(enumeration.getValue());
     }
 
     @Override
-    public SearchBrandAreaType read(final JsonReader jsonReader) throws IOException {
+    public AudienceSource read(final JsonReader jsonReader) throws IOException {
       String value = jsonReader.nextString();
-      return SearchBrandAreaType.fromValue(String.valueOf(value));
+      return AudienceSource.fromValue(String.valueOf(value));
     }
   }
 }

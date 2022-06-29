@@ -167,9 +167,6 @@ public class DynamicCreativeElements {
   @SerializedName("wegame_info_spec")
   private WegameInfoSpec wegameInfoSpec = null;
 
-  @SerializedName("search_brand_area")
-  private SearchBrandAreaStruct searchBrandArea = null;
-
   public DynamicCreativeElements image(String image) {
     this.image = image;
     return this;
@@ -1165,25 +1162,6 @@ public class DynamicCreativeElements {
     this.wegameInfoSpec = wegameInfoSpec;
   }
 
-  public DynamicCreativeElements searchBrandArea(SearchBrandAreaStruct searchBrandArea) {
-    this.searchBrandArea = searchBrandArea;
-    return this;
-  }
-
-  /**
-   * Get searchBrandArea
-   *
-   * @return searchBrandArea
-   */
-  @ApiModelProperty(value = "")
-  public SearchBrandAreaStruct getSearchBrandArea() {
-    return searchBrandArea;
-  }
-
-  public void setSearchBrandArea(SearchBrandAreaStruct searchBrandArea) {
-    this.searchBrandArea = searchBrandArea;
-  }
-
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -1242,8 +1220,7 @@ public class DynamicCreativeElements {
         && Objects.equals(this.livingDescStruct, dynamicCreativeElements.livingDescStruct)
         && Objects.equals(this.floatingZoneStruct, dynamicCreativeElements.floatingZoneStruct)
         && Objects.equals(this.canvasShareImage, dynamicCreativeElements.canvasShareImage)
-        && Objects.equals(this.wegameInfoSpec, dynamicCreativeElements.wegameInfoSpec)
-        && Objects.equals(this.searchBrandArea, dynamicCreativeElements.searchBrandArea);
+        && Objects.equals(this.wegameInfoSpec, dynamicCreativeElements.wegameInfoSpec);
   }
 
   @Override
@@ -1296,8 +1273,7 @@ public class DynamicCreativeElements {
         livingDescStruct,
         floatingZoneStruct,
         canvasShareImage,
-        wegameInfoSpec,
-        searchBrandArea);
+        wegameInfoSpec);
   }
 
   @Override

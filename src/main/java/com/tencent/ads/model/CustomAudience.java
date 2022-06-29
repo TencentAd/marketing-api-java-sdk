@@ -39,6 +39,9 @@ public class CustomAudience {
   @SerializedName("type")
   private AudienceType type = null;
 
+  @SerializedName("source")
+  private AudienceSource source = null;
+
   @SerializedName("status")
   private ProcessStatus status = null;
 
@@ -172,6 +175,25 @@ public class CustomAudience {
 
   public void setType(AudienceType type) {
     this.type = type;
+  }
+
+  public CustomAudience source(AudienceSource source) {
+    this.source = source;
+    return this;
+  }
+
+  /**
+   * Get source
+   *
+   * @return source
+   */
+  @ApiModelProperty(value = "")
+  public AudienceSource getSource() {
+    return source;
+  }
+
+  public void setSource(AudienceSource source) {
+    this.source = source;
   }
 
   public CustomAudience status(ProcessStatus status) {
@@ -322,6 +344,7 @@ public class CustomAudience {
         && Objects.equals(this.description, customAudience.description)
         && Objects.equals(this.cooperated, customAudience.cooperated)
         && Objects.equals(this.type, customAudience.type)
+        && Objects.equals(this.source, customAudience.source)
         && Objects.equals(this.status, customAudience.status)
         && Objects.equals(this.errorCode, customAudience.errorCode)
         && Objects.equals(this.userCount, customAudience.userCount)
@@ -340,6 +363,7 @@ public class CustomAudience {
         description,
         cooperated,
         type,
+        source,
         status,
         errorCode,
         userCount,

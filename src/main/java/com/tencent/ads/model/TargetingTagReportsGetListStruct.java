@@ -1122,6 +1122,18 @@ public class TargetingTagReportsGetListStruct {
   @SerializedName("mini_game_paying_arpu")
   private Long miniGamePayingArpu = null;
 
+  @SerializedName("zone_header_click_count")
+  private Long zoneHeaderClickCount = null;
+
+  @SerializedName("basic_info_client_count")
+  private Long basicInfoClientCount = null;
+
+  @SerializedName("account_info_click_count")
+  private Long accountInfoClickCount = null;
+
+  @SerializedName("activity_info_click_count")
+  private Long activityInfoClickCount = null;
+
   @SerializedName("mini_game_bf_uv")
   private Long miniGameBfUv = null;
 
@@ -8851,6 +8863,82 @@ public class TargetingTagReportsGetListStruct {
     this.miniGamePayingArpu = miniGamePayingArpu;
   }
 
+  public TargetingTagReportsGetListStruct zoneHeaderClickCount(Long zoneHeaderClickCount) {
+    this.zoneHeaderClickCount = zoneHeaderClickCount;
+    return this;
+  }
+
+  /**
+   * Get zoneHeaderClickCount
+   *
+   * @return zoneHeaderClickCount
+   */
+  @ApiModelProperty(value = "")
+  public Long getZoneHeaderClickCount() {
+    return zoneHeaderClickCount;
+  }
+
+  public void setZoneHeaderClickCount(Long zoneHeaderClickCount) {
+    this.zoneHeaderClickCount = zoneHeaderClickCount;
+  }
+
+  public TargetingTagReportsGetListStruct basicInfoClientCount(Long basicInfoClientCount) {
+    this.basicInfoClientCount = basicInfoClientCount;
+    return this;
+  }
+
+  /**
+   * Get basicInfoClientCount
+   *
+   * @return basicInfoClientCount
+   */
+  @ApiModelProperty(value = "")
+  public Long getBasicInfoClientCount() {
+    return basicInfoClientCount;
+  }
+
+  public void setBasicInfoClientCount(Long basicInfoClientCount) {
+    this.basicInfoClientCount = basicInfoClientCount;
+  }
+
+  public TargetingTagReportsGetListStruct accountInfoClickCount(Long accountInfoClickCount) {
+    this.accountInfoClickCount = accountInfoClickCount;
+    return this;
+  }
+
+  /**
+   * Get accountInfoClickCount
+   *
+   * @return accountInfoClickCount
+   */
+  @ApiModelProperty(value = "")
+  public Long getAccountInfoClickCount() {
+    return accountInfoClickCount;
+  }
+
+  public void setAccountInfoClickCount(Long accountInfoClickCount) {
+    this.accountInfoClickCount = accountInfoClickCount;
+  }
+
+  public TargetingTagReportsGetListStruct activityInfoClickCount(Long activityInfoClickCount) {
+    this.activityInfoClickCount = activityInfoClickCount;
+    return this;
+  }
+
+  /**
+   * Get activityInfoClickCount
+   *
+   * @return activityInfoClickCount
+   */
+  @ApiModelProperty(value = "")
+  public Long getActivityInfoClickCount() {
+    return activityInfoClickCount;
+  }
+
+  public void setActivityInfoClickCount(Long activityInfoClickCount) {
+    this.activityInfoClickCount = activityInfoClickCount;
+  }
+
   public TargetingTagReportsGetListStruct miniGameBfUv(Long miniGameBfUv) {
     this.miniGameBfUv = miniGameBfUv;
     return this;
@@ -14002,6 +14090,14 @@ public class TargetingTagReportsGetListStruct {
             this.miniGamePayingRoi, targetingTagReportsGetListStruct.miniGamePayingRoi)
         && Objects.equals(
             this.miniGamePayingArpu, targetingTagReportsGetListStruct.miniGamePayingArpu)
+        && Objects.equals(
+            this.zoneHeaderClickCount, targetingTagReportsGetListStruct.zoneHeaderClickCount)
+        && Objects.equals(
+            this.basicInfoClientCount, targetingTagReportsGetListStruct.basicInfoClientCount)
+        && Objects.equals(
+            this.accountInfoClickCount, targetingTagReportsGetListStruct.accountInfoClickCount)
+        && Objects.equals(
+            this.activityInfoClickCount, targetingTagReportsGetListStruct.activityInfoClickCount)
         && Objects.equals(this.miniGameBfUv, targetingTagReportsGetListStruct.miniGameBfUv)
         && Objects.equals(this.miniGameBfCost, targetingTagReportsGetListStruct.miniGameBfCost)
         && Objects.equals(
@@ -14791,6 +14887,10 @@ public class TargetingTagReportsGetListStruct {
         miniGameAdMonetizationArpu,
         miniGamePayingRoi,
         miniGamePayingArpu,
+        zoneHeaderClickCount,
+        basicInfoClientCount,
+        accountInfoClickCount,
+        activityInfoClickCount,
         miniGameBfUv,
         miniGameBfCost,
         miniGameBfIncomeUv,
