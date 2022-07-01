@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.tencent.ads.api.PropertyFilesApiTest" tests="1" skipped="1" failures="0" errors="0" timestamp="2022-06-30T03:21:09" hostname="VM_147_58_centos" time="0.0">
+<testsuite name="com.tencent.ads.api.PropertyFilesApiTest" tests="1" skipped="1" failures="0" errors="0" timestamp="2022-07-01T06:34:11" hostname="VM_147_58_centos" time="0.0">
   <properties/>
   <testcase name="propertyFilesAddTest" classname="com.tencent.ads.api.PropertyFilesApiTest" time="0.0">
     <skipped/>
