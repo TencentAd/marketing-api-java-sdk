@@ -20,8 +20,12 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
-/** 智能定向功能,功能灰度开放，如需使用可联系您的运营接口同学。&lt;br&gt;智能定向功能与自动扩量/系统优选相关字段不可同时设置。 */
-@ApiModel(description = "智能定向功能,功能灰度开放，如需使用可联系您的运营接口同学。<br>智能定向功能与自动扩量/系统优选相关字段不可同时设置。")
+/**
+ * 智能定向功能,功能灰度开放，如需使用可联系您的运营接口同学。&lt;br&gt;智能定向功能与自动扩量/系统优选相关字段不可同时设置。2022年6月30日起，智能定向无法与行为兴趣意向、“二方人群”人群包同时使用
+ */
+@ApiModel(
+    description =
+        "智能定向功能,功能灰度开放，如需使用可联系您的运营接口同学。<br>智能定向功能与自动扩量/系统优选相关字段不可同时设置。2022年6月30日起，智能定向无法与行为兴趣意向、“二方人群”人群包同时使用")
 public class SmartTargeting {
   @SerializedName("smart_targeting_version")
   private Long smartTargetingVersion = null;

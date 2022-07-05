@@ -20,8 +20,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
-/** 行为兴趣意向定向 */
-@ApiModel(description = "行为兴趣意向定向")
+/** 行为兴趣意向定向，2022年6月30日起，该定向将无法在竞价oCPC、oCPM场景使用。 */
+@ApiModel(description = "行为兴趣意向定向，2022年6月30日起，该定向将无法在竞价oCPC、oCPM场景使用。")
 public class BehaviorOrInterest {
   @SerializedName("interest")
   private Interest interest = null;
