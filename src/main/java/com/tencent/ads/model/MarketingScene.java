@@ -19,7 +19,7 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-/** 营销场景 */
+/** 营销目标 */
 @JsonAdapter(MarketingScene.Adapter.class)
 public enum MarketingScene {
   DEFAULT("DEFAULT"),
