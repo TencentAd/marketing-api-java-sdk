@@ -19,7 +19,7 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-/** 创意展示类型 */
+/** 创意展示类型，不填该字段默认优选模式 */
 @JsonAdapter(CreativeDisplayType.Adapter.class)
 public enum CreativeDisplayType {
   NONE("CREATIVE_DISPLAY_TYPE_NONE"),
