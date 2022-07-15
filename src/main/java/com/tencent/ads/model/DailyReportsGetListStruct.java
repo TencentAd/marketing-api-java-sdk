@@ -1431,6 +1431,36 @@ public class DailyReportsGetListStruct {
   @SerializedName("stay_pay_30d_pv")
   private Long stayPay30dPv = null;
 
+  @SerializedName("live_stream_commodity_shop_bag_clk_pv")
+  private Long liveStreamCommodityShopBagClkPv = null;
+
+  @SerializedName("live_stream_commodity_shop_list_exp_pv")
+  private Long liveStreamCommodityShopListExpPv = null;
+
+  @SerializedName("live_stream_commodity_bubble_clk_pv")
+  private Long liveStreamCommodityBubbleClkPv = null;
+
+  @SerializedName("live_stream_order_pv")
+  private Long liveStreamOrderPv = null;
+
+  @SerializedName("live_stream_order_amount")
+  private Long liveStreamOrderAmount = null;
+
+  @SerializedName("biz_pre_credit_pv")
+  private Long bizPreCreditPv = null;
+
+  @SerializedName("biz_pre_credit_uv")
+  private Long bizPreCreditUv = null;
+
+  @SerializedName("biz_pre_credit_uv_cost")
+  private Long bizPreCreditUvCost = null;
+
+  @SerializedName("biz_withdraw_deposits_uv")
+  private Long bizWithdrawDepositsUv = null;
+
+  @SerializedName("biz_withdraw_deposits_uv_cost")
+  private Long bizWithdrawDepositsUvCost = null;
+
   @SerializedName("request_conversions_count")
   private Long requestConversionsCount = null;
 
@@ -11049,6 +11079,199 @@ public class DailyReportsGetListStruct {
     this.stayPay30dPv = stayPay30dPv;
   }
 
+  public DailyReportsGetListStruct liveStreamCommodityShopBagClkPv(
+      Long liveStreamCommodityShopBagClkPv) {
+    this.liveStreamCommodityShopBagClkPv = liveStreamCommodityShopBagClkPv;
+    return this;
+  }
+
+  /**
+   * Get liveStreamCommodityShopBagClkPv
+   *
+   * @return liveStreamCommodityShopBagClkPv
+   */
+  @ApiModelProperty(value = "")
+  public Long getLiveStreamCommodityShopBagClkPv() {
+    return liveStreamCommodityShopBagClkPv;
+  }
+
+  public void setLiveStreamCommodityShopBagClkPv(Long liveStreamCommodityShopBagClkPv) {
+    this.liveStreamCommodityShopBagClkPv = liveStreamCommodityShopBagClkPv;
+  }
+
+  public DailyReportsGetListStruct liveStreamCommodityShopListExpPv(
+      Long liveStreamCommodityShopListExpPv) {
+    this.liveStreamCommodityShopListExpPv = liveStreamCommodityShopListExpPv;
+    return this;
+  }
+
+  /**
+   * Get liveStreamCommodityShopListExpPv
+   *
+   * @return liveStreamCommodityShopListExpPv
+   */
+  @ApiModelProperty(value = "")
+  public Long getLiveStreamCommodityShopListExpPv() {
+    return liveStreamCommodityShopListExpPv;
+  }
+
+  public void setLiveStreamCommodityShopListExpPv(Long liveStreamCommodityShopListExpPv) {
+    this.liveStreamCommodityShopListExpPv = liveStreamCommodityShopListExpPv;
+  }
+
+  public DailyReportsGetListStruct liveStreamCommodityBubbleClkPv(
+      Long liveStreamCommodityBubbleClkPv) {
+    this.liveStreamCommodityBubbleClkPv = liveStreamCommodityBubbleClkPv;
+    return this;
+  }
+
+  /**
+   * Get liveStreamCommodityBubbleClkPv
+   *
+   * @return liveStreamCommodityBubbleClkPv
+   */
+  @ApiModelProperty(value = "")
+  public Long getLiveStreamCommodityBubbleClkPv() {
+    return liveStreamCommodityBubbleClkPv;
+  }
+
+  public void setLiveStreamCommodityBubbleClkPv(Long liveStreamCommodityBubbleClkPv) {
+    this.liveStreamCommodityBubbleClkPv = liveStreamCommodityBubbleClkPv;
+  }
+
+  public DailyReportsGetListStruct liveStreamOrderPv(Long liveStreamOrderPv) {
+    this.liveStreamOrderPv = liveStreamOrderPv;
+    return this;
+  }
+
+  /**
+   * Get liveStreamOrderPv
+   *
+   * @return liveStreamOrderPv
+   */
+  @ApiModelProperty(value = "")
+  public Long getLiveStreamOrderPv() {
+    return liveStreamOrderPv;
+  }
+
+  public void setLiveStreamOrderPv(Long liveStreamOrderPv) {
+    this.liveStreamOrderPv = liveStreamOrderPv;
+  }
+
+  public DailyReportsGetListStruct liveStreamOrderAmount(Long liveStreamOrderAmount) {
+    this.liveStreamOrderAmount = liveStreamOrderAmount;
+    return this;
+  }
+
+  /**
+   * Get liveStreamOrderAmount
+   *
+   * @return liveStreamOrderAmount
+   */
+  @ApiModelProperty(value = "")
+  public Long getLiveStreamOrderAmount() {
+    return liveStreamOrderAmount;
+  }
+
+  public void setLiveStreamOrderAmount(Long liveStreamOrderAmount) {
+    this.liveStreamOrderAmount = liveStreamOrderAmount;
+  }
+
+  public DailyReportsGetListStruct bizPreCreditPv(Long bizPreCreditPv) {
+    this.bizPreCreditPv = bizPreCreditPv;
+    return this;
+  }
+
+  /**
+   * Get bizPreCreditPv
+   *
+   * @return bizPreCreditPv
+   */
+  @ApiModelProperty(value = "")
+  public Long getBizPreCreditPv() {
+    return bizPreCreditPv;
+  }
+
+  public void setBizPreCreditPv(Long bizPreCreditPv) {
+    this.bizPreCreditPv = bizPreCreditPv;
+  }
+
+  public DailyReportsGetListStruct bizPreCreditUv(Long bizPreCreditUv) {
+    this.bizPreCreditUv = bizPreCreditUv;
+    return this;
+  }
+
+  /**
+   * Get bizPreCreditUv
+   *
+   * @return bizPreCreditUv
+   */
+  @ApiModelProperty(value = "")
+  public Long getBizPreCreditUv() {
+    return bizPreCreditUv;
+  }
+
+  public void setBizPreCreditUv(Long bizPreCreditUv) {
+    this.bizPreCreditUv = bizPreCreditUv;
+  }
+
+  public DailyReportsGetListStruct bizPreCreditUvCost(Long bizPreCreditUvCost) {
+    this.bizPreCreditUvCost = bizPreCreditUvCost;
+    return this;
+  }
+
+  /**
+   * Get bizPreCreditUvCost
+   *
+   * @return bizPreCreditUvCost
+   */
+  @ApiModelProperty(value = "")
+  public Long getBizPreCreditUvCost() {
+    return bizPreCreditUvCost;
+  }
+
+  public void setBizPreCreditUvCost(Long bizPreCreditUvCost) {
+    this.bizPreCreditUvCost = bizPreCreditUvCost;
+  }
+
+  public DailyReportsGetListStruct bizWithdrawDepositsUv(Long bizWithdrawDepositsUv) {
+    this.bizWithdrawDepositsUv = bizWithdrawDepositsUv;
+    return this;
+  }
+
+  /**
+   * Get bizWithdrawDepositsUv
+   *
+   * @return bizWithdrawDepositsUv
+   */
+  @ApiModelProperty(value = "")
+  public Long getBizWithdrawDepositsUv() {
+    return bizWithdrawDepositsUv;
+  }
+
+  public void setBizWithdrawDepositsUv(Long bizWithdrawDepositsUv) {
+    this.bizWithdrawDepositsUv = bizWithdrawDepositsUv;
+  }
+
+  public DailyReportsGetListStruct bizWithdrawDepositsUvCost(Long bizWithdrawDepositsUvCost) {
+    this.bizWithdrawDepositsUvCost = bizWithdrawDepositsUvCost;
+    return this;
+  }
+
+  /**
+   * Get bizWithdrawDepositsUvCost
+   *
+   * @return bizWithdrawDepositsUvCost
+   */
+  @ApiModelProperty(value = "")
+  public Long getBizWithdrawDepositsUvCost() {
+    return bizWithdrawDepositsUvCost;
+  }
+
+  public void setBizWithdrawDepositsUvCost(Long bizWithdrawDepositsUvCost) {
+    this.bizWithdrawDepositsUvCost = bizWithdrawDepositsUvCost;
+  }
+
   public DailyReportsGetListStruct requestConversionsCount(Long requestConversionsCount) {
     this.requestConversionsCount = requestConversionsCount;
     return this;
@@ -15994,6 +16217,25 @@ public class DailyReportsGetListStruct {
         && Objects.equals(this.stayPay15dPv, dailyReportsGetListStruct.stayPay15dPv)
         && Objects.equals(this.stayPay30dPv, dailyReportsGetListStruct.stayPay30dPv)
         && Objects.equals(
+            this.liveStreamCommodityShopBagClkPv,
+            dailyReportsGetListStruct.liveStreamCommodityShopBagClkPv)
+        && Objects.equals(
+            this.liveStreamCommodityShopListExpPv,
+            dailyReportsGetListStruct.liveStreamCommodityShopListExpPv)
+        && Objects.equals(
+            this.liveStreamCommodityBubbleClkPv,
+            dailyReportsGetListStruct.liveStreamCommodityBubbleClkPv)
+        && Objects.equals(this.liveStreamOrderPv, dailyReportsGetListStruct.liveStreamOrderPv)
+        && Objects.equals(
+            this.liveStreamOrderAmount, dailyReportsGetListStruct.liveStreamOrderAmount)
+        && Objects.equals(this.bizPreCreditPv, dailyReportsGetListStruct.bizPreCreditPv)
+        && Objects.equals(this.bizPreCreditUv, dailyReportsGetListStruct.bizPreCreditUv)
+        && Objects.equals(this.bizPreCreditUvCost, dailyReportsGetListStruct.bizPreCreditUvCost)
+        && Objects.equals(
+            this.bizWithdrawDepositsUv, dailyReportsGetListStruct.bizWithdrawDepositsUv)
+        && Objects.equals(
+            this.bizWithdrawDepositsUvCost, dailyReportsGetListStruct.bizWithdrawDepositsUvCost)
+        && Objects.equals(
             this.requestConversionsCount, dailyReportsGetListStruct.requestConversionsCount)
         && Objects.equals(
             this.requestConversionsCost, dailyReportsGetListStruct.requestConversionsCost)
@@ -16830,6 +17072,16 @@ public class DailyReportsGetListStruct {
         stayPay7dPv,
         stayPay15dPv,
         stayPay30dPv,
+        liveStreamCommodityShopBagClkPv,
+        liveStreamCommodityShopListExpPv,
+        liveStreamCommodityBubbleClkPv,
+        liveStreamOrderPv,
+        liveStreamOrderAmount,
+        bizPreCreditPv,
+        bizPreCreditUv,
+        bizPreCreditUvCost,
+        bizWithdrawDepositsUv,
+        bizWithdrawDepositsUvCost,
         requestConversionsCount,
         requestConversionsCost,
         incomeVal1,
