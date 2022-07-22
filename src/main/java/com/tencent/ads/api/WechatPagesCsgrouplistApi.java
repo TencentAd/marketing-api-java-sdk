@@ -212,6 +212,7 @@ public class WechatPagesCsgrouplistApi {
    * @param accountId (required)
    * @param page (optional)
    * @param pageSize (optional)
+   * @param cropId (optional)
    * @param fields 返回参数的字段列表 (optional)
    * @param progressListener Progress listener
    * @param progressRequestListener Progress request listener
@@ -222,6 +223,7 @@ public class WechatPagesCsgrouplistApi {
       Long accountId,
       Long page,
       Long pageSize,
+      String cropId,
       List<String> fields,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener)
@@ -238,6 +240,7 @@ public class WechatPagesCsgrouplistApi {
     if (page != null) localVarQueryParams.addAll(apiClient.parameterToPair("page", page));
     if (pageSize != null)
       localVarQueryParams.addAll(apiClient.parameterToPair("page_size", pageSize));
+    if (cropId != null) localVarQueryParams.addAll(apiClient.parameterToPair("crop_id", cropId));
     if (fields != null)
       localVarCollectionQueryParams.addAll(apiClient.parameterToPairs("multi", "fields", fields));
 
@@ -289,6 +292,7 @@ public class WechatPagesCsgrouplistApi {
       Long accountId,
       Long page,
       Long pageSize,
+      String cropId,
       List<String> fields,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener)
@@ -302,7 +306,7 @@ public class WechatPagesCsgrouplistApi {
 
     com.squareup.okhttp.Call call =
         wechatPagesCsgrouplistGetCall(
-            accountId, page, pageSize, fields, progressListener, progressRequestListener);
+            accountId, page, pageSize, cropId, fields, progressListener, progressRequestListener);
     return call;
   }
 
@@ -312,15 +316,17 @@ public class WechatPagesCsgrouplistApi {
    * @param accountId (required)
    * @param page (optional)
    * @param pageSize (optional)
+   * @param cropId (optional)
    * @param fields 返回参数的字段列表 (optional)
    * @return WechatPagesCsgrouplistGetResponse
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
   public WechatPagesCsgrouplistGetResponse wechatPagesCsgrouplistGet(
-      Long accountId, Long page, Long pageSize, List<String> fields) throws ApiException {
+      Long accountId, Long page, Long pageSize, String cropId, List<String> fields)
+      throws ApiException {
     ApiResponse<WechatPagesCsgrouplistGetResponse> resp =
-        wechatPagesCsgrouplistGetWithHttpInfo(accountId, page, pageSize, fields);
+        wechatPagesCsgrouplistGetWithHttpInfo(accountId, page, pageSize, cropId, fields);
     return resp.getData();
   }
 
@@ -330,15 +336,18 @@ public class WechatPagesCsgrouplistApi {
    * @param accountId (required)
    * @param page (optional)
    * @param pageSize (optional)
+   * @param cropId (optional)
    * @param fields 返回参数的字段列表 (optional)
    * @return ApiResponse&lt;WechatPagesCsgrouplistGetResponse&gt;
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
   public ApiResponse<WechatPagesCsgrouplistGetResponse> wechatPagesCsgrouplistGetWithHttpInfo(
-      Long accountId, Long page, Long pageSize, List<String> fields) throws ApiException {
+      Long accountId, Long page, Long pageSize, String cropId, List<String> fields)
+      throws ApiException {
     com.squareup.okhttp.Call call =
-        wechatPagesCsgrouplistGetValidateBeforeCall(accountId, page, pageSize, fields, null, null);
+        wechatPagesCsgrouplistGetValidateBeforeCall(
+            accountId, page, pageSize, cropId, fields, null, null);
     Type localVarReturnType = new TypeToken<WechatPagesCsgrouplistGetResponse>() {}.getType();
     return apiClient.execute(call, localVarReturnType);
   }
@@ -349,6 +358,7 @@ public class WechatPagesCsgrouplistApi {
    * @param accountId (required)
    * @param page (optional)
    * @param pageSize (optional)
+   * @param cropId (optional)
    * @param fields 返回参数的字段列表 (optional)
    * @param callback The callback to be executed when the API call finishes
    * @return The request call
@@ -358,6 +368,7 @@ public class WechatPagesCsgrouplistApi {
       Long accountId,
       Long page,
       Long pageSize,
+      String cropId,
       List<String> fields,
       final ApiCallback<WechatPagesCsgrouplistGetResponse> callback)
       throws ApiException {
@@ -385,7 +396,7 @@ public class WechatPagesCsgrouplistApi {
 
     com.squareup.okhttp.Call call =
         wechatPagesCsgrouplistGetValidateBeforeCall(
-            accountId, page, pageSize, fields, progressListener, progressRequestListener);
+            accountId, page, pageSize, cropId, fields, progressListener, progressRequestListener);
     Type localVarReturnType = new TypeToken<WechatPagesCsgrouplistGetResponse>() {}.getType();
     apiClient.executeAsync(call, localVarReturnType, callback);
     return call;

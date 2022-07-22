@@ -38,7 +38,11 @@ public enum CanvasPageElementType {
 
   APP_DOWNLOAD("APP_DOWNLOAD"),
 
-  WEAPP("WEAPP");
+  WEAPP("WEAPP"),
+
+  GH("GH"),
+
+  ENTERPRISE_WX("ENTERPRISE_WX");
 
   private String value;
 

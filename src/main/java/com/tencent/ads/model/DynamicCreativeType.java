@@ -19,20 +19,16 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-/** 创意来源 */
-@JsonAdapter(AdCreativeSource.Adapter.class)
-public enum AdCreativeSource {
-  SOURCE_NORMAL("AD_CREATIVE_SOURCE_NORMAL"),
+/** 动态创意类型 */
+@JsonAdapter(DynamicCreativeType.Adapter.class)
+public enum DynamicCreativeType {
+  COMMON("DYNAMIC_CREATIVE_TYPE_COMMON"),
 
-  AUTO_DERIVE("AD_CREATIVE_AUTO_DERIVE"),
-
-  AUTO_GENERATE("AD_CREATIVE_AUTO_GENERATE"),
-
-  PAGE_DERIVE("AD_CREATIVE_PAGE_DERIVE");
+  PROGRAM("DYNAMIC_CREATIVE_TYPE_PROGRAM");
 
   private String value;
 
-  AdCreativeSource(String value) {
+  DynamicCreativeType(String value) {
     this.value = value;
   }
 
@@ -45,8 +41,8 @@ public enum AdCreativeSource {
     return String.valueOf(value);
   }
 
-  public static AdCreativeSource fromValue(String text) {
-    for (AdCreativeSource b : AdCreativeSource.values()) {
+  public static DynamicCreativeType fromValue(String text) {
+    for (DynamicCreativeType b : DynamicCreativeType.values()) {
       if (String.valueOf(b.value).equals(text)) {
         return b;
       }
@@ -54,17 +50,17 @@ public enum AdCreativeSource {
     return null;
   }
 
-  public static class Adapter extends TypeAdapter<AdCreativeSource> {
+  public static class Adapter extends TypeAdapter<DynamicCreativeType> {
     @Override
-    public void write(final JsonWriter jsonWriter, final AdCreativeSource enumeration)
+    public void write(final JsonWriter jsonWriter, final DynamicCreativeType enumeration)
         throws IOException {
       jsonWriter.value(enumeration.getValue());
     }
 
     @Override
-    public AdCreativeSource read(final JsonReader jsonReader) throws IOException {
+    public DynamicCreativeType read(final JsonReader jsonReader) throws IOException {
       String value = jsonReader.nextString();
-      return AdCreativeSource.fromValue(String.valueOf(value));
+      return DynamicCreativeType.fromValue(String.valueOf(value));
     }
   }
 }

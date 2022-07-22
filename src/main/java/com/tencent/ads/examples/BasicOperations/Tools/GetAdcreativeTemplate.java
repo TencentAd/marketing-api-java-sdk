@@ -18,13 +18,15 @@ public class GetAdcreativeTemplate {
 
   public String promotedObjectType = null;
 
-  public Long adcreativeTemplateId = null;
-
   public List<String> siteSet = null;
 
   public Boolean automaticSiteEnabled = null;
 
   public Boolean isDynamicCreative = null;
+
+  public Long adcreativeTemplateId = null;
+
+  public String dynamicCreativeType = null;
 
   public List<String> fields = null;
 
@@ -45,10 +47,11 @@ public class GetAdcreativeTemplate {
             .adcreativeTemplateGet(
                 accountId,
                 promotedObjectType,
-                adcreativeTemplateId,
                 siteSet,
                 automaticSiteEnabled,
                 isDynamicCreative,
+                adcreativeTemplateId,
+                dynamicCreativeType,
                 fields);
     return response;
   }

@@ -52,16 +52,17 @@ public class WechatPagesCsgrouplistApiContainer extends ApiContainer {
    * @param accountId (required)
    * @param page (optional)
    * @param pageSize (optional)
+   * @param cropId (optional)
    * @param fields 返回参数的字段列表 (optional)
    * @return WechatPagesCsgrouplistGetResponse
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
   public WechatPagesCsgrouplistGetResponseData wechatPagesCsgrouplistGet(
-      Long accountId, Long page, Long pageSize, List<String> fields)
+      Long accountId, Long page, Long pageSize, String cropId, List<String> fields)
       throws ApiException, TencentAdsResponseException {
     WechatPagesCsgrouplistGetResponse resp =
-        api.wechatPagesCsgrouplistGet(accountId, page, pageSize, fields);
+        api.wechatPagesCsgrouplistGet(accountId, page, pageSize, cropId, fields);
     handleResponse(gson.toJson(resp));
     return resp.getData();
   }

@@ -51,6 +51,12 @@ public class PageElementsSpecListStruct {
   @SerializedName("weapp_spec")
   private WeappSpec weappSpec = null;
 
+  @SerializedName("gh_spec")
+  private GhSpec ghSpec = null;
+
+  @SerializedName("enterprise_wx_spec")
+  private EnterpriseWxSpec enterpriseWxSpec = null;
+
   public PageElementsSpecListStruct elementType(CanvasPageElementType elementType) {
     this.elementType = elementType;
     return this;
@@ -241,6 +247,44 @@ public class PageElementsSpecListStruct {
     this.weappSpec = weappSpec;
   }
 
+  public PageElementsSpecListStruct ghSpec(GhSpec ghSpec) {
+    this.ghSpec = ghSpec;
+    return this;
+  }
+
+  /**
+   * Get ghSpec
+   *
+   * @return ghSpec
+   */
+  @ApiModelProperty(value = "")
+  public GhSpec getGhSpec() {
+    return ghSpec;
+  }
+
+  public void setGhSpec(GhSpec ghSpec) {
+    this.ghSpec = ghSpec;
+  }
+
+  public PageElementsSpecListStruct enterpriseWxSpec(EnterpriseWxSpec enterpriseWxSpec) {
+    this.enterpriseWxSpec = enterpriseWxSpec;
+    return this;
+  }
+
+  /**
+   * Get enterpriseWxSpec
+   *
+   * @return enterpriseWxSpec
+   */
+  @ApiModelProperty(value = "")
+  public EnterpriseWxSpec getEnterpriseWxSpec() {
+    return enterpriseWxSpec;
+  }
+
+  public void setEnterpriseWxSpec(EnterpriseWxSpec enterpriseWxSpec) {
+    this.enterpriseWxSpec = enterpriseWxSpec;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -259,7 +303,9 @@ public class PageElementsSpecListStruct {
         && Objects.equals(this.videoSpec, pageElementsSpecListStruct.videoSpec)
         && Objects.equals(this.textSpec, pageElementsSpecListStruct.textSpec)
         && Objects.equals(this.appDownloadSpec, pageElementsSpecListStruct.appDownloadSpec)
-        && Objects.equals(this.weappSpec, pageElementsSpecListStruct.weappSpec);
+        && Objects.equals(this.weappSpec, pageElementsSpecListStruct.weappSpec)
+        && Objects.equals(this.ghSpec, pageElementsSpecListStruct.ghSpec)
+        && Objects.equals(this.enterpriseWxSpec, pageElementsSpecListStruct.enterpriseWxSpec);
   }
 
   @Override
@@ -274,7 +320,9 @@ public class PageElementsSpecListStruct {
         videoSpec,
         textSpec,
         appDownloadSpec,
-        weappSpec);
+        weappSpec,
+        ghSpec,
+        enterpriseWxSpec);
   }
 
   @Override

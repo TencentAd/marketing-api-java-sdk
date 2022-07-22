@@ -20,6 +20,8 @@ public class GetWechatPagesCsgrouplist {
 
   public Long pageSize = null;
 
+  public String cropId = null;
+
   public List<String> fields = null;
 
   public void init() {
@@ -36,7 +38,7 @@ public class GetWechatPagesCsgrouplist {
     WechatPagesCsgrouplistGetResponseData response =
         tencentAds
             .wechatPagesCsgrouplist()
-            .wechatPagesCsgrouplistGet(accountId, page, pageSize, fields);
+            .wechatPagesCsgrouplistGet(accountId, page, pageSize, cropId, fields);
     return response;
   }
 

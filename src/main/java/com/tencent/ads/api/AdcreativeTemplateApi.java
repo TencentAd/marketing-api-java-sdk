@@ -53,10 +53,11 @@ public class AdcreativeTemplateApi {
    *
    * @param accountId (required)
    * @param promotedObjectType (required)
-   * @param adcreativeTemplateId (required)
    * @param siteSet (optional)
    * @param automaticSiteEnabled (optional)
    * @param isDynamicCreative (optional)
+   * @param adcreativeTemplateId (optional)
+   * @param dynamicCreativeType (optional)
    * @param fields 返回参数的字段列表 (optional)
    * @param progressListener Progress listener
    * @param progressRequestListener Progress request listener
@@ -66,10 +67,11 @@ public class AdcreativeTemplateApi {
   public com.squareup.okhttp.Call adcreativeTemplateGetCall(
       Long accountId,
       String promotedObjectType,
-      Long adcreativeTemplateId,
       List<String> siteSet,
       Boolean automaticSiteEnabled,
       Boolean isDynamicCreative,
+      Long adcreativeTemplateId,
+      String dynamicCreativeType,
       List<String> fields,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener)
@@ -98,6 +100,9 @@ public class AdcreativeTemplateApi {
     if (adcreativeTemplateId != null)
       localVarQueryParams.addAll(
           apiClient.parameterToPair("adcreative_template_id", adcreativeTemplateId));
+    if (dynamicCreativeType != null)
+      localVarQueryParams.addAll(
+          apiClient.parameterToPair("dynamic_creative_type", dynamicCreativeType));
     if (fields != null)
       localVarCollectionQueryParams.addAll(apiClient.parameterToPairs("multi", "fields", fields));
 
@@ -148,10 +153,11 @@ public class AdcreativeTemplateApi {
   private com.squareup.okhttp.Call adcreativeTemplateGetValidateBeforeCall(
       Long accountId,
       String promotedObjectType,
-      Long adcreativeTemplateId,
       List<String> siteSet,
       Boolean automaticSiteEnabled,
       Boolean isDynamicCreative,
+      Long adcreativeTemplateId,
+      String dynamicCreativeType,
       List<String> fields,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener)
@@ -169,20 +175,15 @@ public class AdcreativeTemplateApi {
           "Missing the required parameter 'promotedObjectType' when calling adcreativeTemplateGet(Async)");
     }
 
-    // verify the required parameter 'adcreativeTemplateId' is set
-    if (adcreativeTemplateId == null) {
-      throw new ApiException(
-          "Missing the required parameter 'adcreativeTemplateId' when calling adcreativeTemplateGet(Async)");
-    }
-
     com.squareup.okhttp.Call call =
         adcreativeTemplateGetCall(
             accountId,
             promotedObjectType,
-            adcreativeTemplateId,
             siteSet,
             automaticSiteEnabled,
             isDynamicCreative,
+            adcreativeTemplateId,
+            dynamicCreativeType,
             fields,
             progressListener,
             progressRequestListener);
@@ -194,10 +195,11 @@ public class AdcreativeTemplateApi {
    *
    * @param accountId (required)
    * @param promotedObjectType (required)
-   * @param adcreativeTemplateId (required)
    * @param siteSet (optional)
    * @param automaticSiteEnabled (optional)
    * @param isDynamicCreative (optional)
+   * @param adcreativeTemplateId (optional)
+   * @param dynamicCreativeType (optional)
    * @param fields 返回参数的字段列表 (optional)
    * @return AdcreativeTemplateGetResponse
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
@@ -206,20 +208,22 @@ public class AdcreativeTemplateApi {
   public AdcreativeTemplateGetResponse adcreativeTemplateGet(
       Long accountId,
       String promotedObjectType,
-      Long adcreativeTemplateId,
       List<String> siteSet,
       Boolean automaticSiteEnabled,
       Boolean isDynamicCreative,
+      Long adcreativeTemplateId,
+      String dynamicCreativeType,
       List<String> fields)
       throws ApiException {
     ApiResponse<AdcreativeTemplateGetResponse> resp =
         adcreativeTemplateGetWithHttpInfo(
             accountId,
             promotedObjectType,
-            adcreativeTemplateId,
             siteSet,
             automaticSiteEnabled,
             isDynamicCreative,
+            adcreativeTemplateId,
+            dynamicCreativeType,
             fields);
     return resp.getData();
   }
@@ -229,10 +233,11 @@ public class AdcreativeTemplateApi {
    *
    * @param accountId (required)
    * @param promotedObjectType (required)
-   * @param adcreativeTemplateId (required)
    * @param siteSet (optional)
    * @param automaticSiteEnabled (optional)
    * @param isDynamicCreative (optional)
+   * @param adcreativeTemplateId (optional)
+   * @param dynamicCreativeType (optional)
    * @param fields 返回参数的字段列表 (optional)
    * @return ApiResponse&lt;AdcreativeTemplateGetResponse&gt;
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
@@ -241,20 +246,22 @@ public class AdcreativeTemplateApi {
   public ApiResponse<AdcreativeTemplateGetResponse> adcreativeTemplateGetWithHttpInfo(
       Long accountId,
       String promotedObjectType,
-      Long adcreativeTemplateId,
       List<String> siteSet,
       Boolean automaticSiteEnabled,
       Boolean isDynamicCreative,
+      Long adcreativeTemplateId,
+      String dynamicCreativeType,
       List<String> fields)
       throws ApiException {
     com.squareup.okhttp.Call call =
         adcreativeTemplateGetValidateBeforeCall(
             accountId,
             promotedObjectType,
-            adcreativeTemplateId,
             siteSet,
             automaticSiteEnabled,
             isDynamicCreative,
+            adcreativeTemplateId,
+            dynamicCreativeType,
             fields,
             null,
             null);
@@ -267,10 +274,11 @@ public class AdcreativeTemplateApi {
    *
    * @param accountId (required)
    * @param promotedObjectType (required)
-   * @param adcreativeTemplateId (required)
    * @param siteSet (optional)
    * @param automaticSiteEnabled (optional)
    * @param isDynamicCreative (optional)
+   * @param adcreativeTemplateId (optional)
+   * @param dynamicCreativeType (optional)
    * @param fields 返回参数的字段列表 (optional)
    * @param callback The callback to be executed when the API call finishes
    * @return The request call
@@ -279,10 +287,11 @@ public class AdcreativeTemplateApi {
   public com.squareup.okhttp.Call adcreativeTemplateGetAsync(
       Long accountId,
       String promotedObjectType,
-      Long adcreativeTemplateId,
       List<String> siteSet,
       Boolean automaticSiteEnabled,
       Boolean isDynamicCreative,
+      Long adcreativeTemplateId,
+      String dynamicCreativeType,
       List<String> fields,
       final ApiCallback<AdcreativeTemplateGetResponse> callback)
       throws ApiException {
@@ -312,10 +321,11 @@ public class AdcreativeTemplateApi {
         adcreativeTemplateGetValidateBeforeCall(
             accountId,
             promotedObjectType,
-            adcreativeTemplateId,
             siteSet,
             automaticSiteEnabled,
             isDynamicCreative,
+            adcreativeTemplateId,
+            dynamicCreativeType,
             fields,
             progressListener,
             progressRequestListener);

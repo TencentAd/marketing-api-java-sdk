@@ -31,10 +31,11 @@ public class AdcreativeTemplateApiContainer extends ApiContainer {
    *
    * @param accountId (required)
    * @param promotedObjectType (required)
-   * @param adcreativeTemplateId (required)
    * @param siteSet (optional)
    * @param automaticSiteEnabled (optional)
    * @param isDynamicCreative (optional)
+   * @param adcreativeTemplateId (optional)
+   * @param dynamicCreativeType (optional)
    * @param fields 返回参数的字段列表 (optional)
    * @return AdcreativeTemplateGetResponse
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
@@ -43,20 +44,22 @@ public class AdcreativeTemplateApiContainer extends ApiContainer {
   public AdcreativeTemplateGetResponseData adcreativeTemplateGet(
       Long accountId,
       String promotedObjectType,
-      Long adcreativeTemplateId,
       List<String> siteSet,
       Boolean automaticSiteEnabled,
       Boolean isDynamicCreative,
+      Long adcreativeTemplateId,
+      String dynamicCreativeType,
       List<String> fields)
       throws ApiException, TencentAdsResponseException {
     AdcreativeTemplateGetResponse resp =
         api.adcreativeTemplateGet(
             accountId,
             promotedObjectType,
-            adcreativeTemplateId,
             siteSet,
             automaticSiteEnabled,
             isDynamicCreative,
+            adcreativeTemplateId,
+            dynamicCreativeType,
             fields);
     handleResponse(gson.toJson(resp));
     return resp.getData();
