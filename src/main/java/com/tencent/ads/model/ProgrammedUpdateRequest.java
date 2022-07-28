@@ -30,6 +30,9 @@ public class ProgrammedUpdateRequest {
   @SerializedName("auto_derived_program_creative_switch")
   private Boolean autoDerivedProgramCreativeSwitch = null;
 
+  @SerializedName("standard_switch")
+  private Boolean standardSwitch = null;
+
   @SerializedName("update_material_groups")
   private List<MaterialGroupUpdateStruct> updateMaterialGroups = null;
 
@@ -91,6 +94,25 @@ public class ProgrammedUpdateRequest {
     this.autoDerivedProgramCreativeSwitch = autoDerivedProgramCreativeSwitch;
   }
 
+  public ProgrammedUpdateRequest standardSwitch(Boolean standardSwitch) {
+    this.standardSwitch = standardSwitch;
+    return this;
+  }
+
+  /**
+   * Get standardSwitch
+   *
+   * @return standardSwitch
+   */
+  @ApiModelProperty(value = "")
+  public Boolean isStandardSwitch() {
+    return standardSwitch;
+  }
+
+  public void setStandardSwitch(Boolean standardSwitch) {
+    this.standardSwitch = standardSwitch;
+  }
+
   public ProgrammedUpdateRequest updateMaterialGroups(
       List<MaterialGroupUpdateStruct> updateMaterialGroups) {
     this.updateMaterialGroups = updateMaterialGroups;
@@ -134,13 +156,18 @@ public class ProgrammedUpdateRequest {
         && Objects.equals(
             this.autoDerivedProgramCreativeSwitch,
             programmedUpdateRequest.autoDerivedProgramCreativeSwitch)
+        && Objects.equals(this.standardSwitch, programmedUpdateRequest.standardSwitch)
         && Objects.equals(this.updateMaterialGroups, programmedUpdateRequest.updateMaterialGroups);
   }
 
   @Override
   public int hashCode() {
     return Objects.hash(
-        accountId, materialDeriveId, autoDerivedProgramCreativeSwitch, updateMaterialGroups);
+        accountId,
+        materialDeriveId,
+        autoDerivedProgramCreativeSwitch,
+        standardSwitch,
+        updateMaterialGroups);
   }
 
   @Override

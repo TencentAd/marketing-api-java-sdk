@@ -165,6 +165,9 @@ public class AdgroupsAddRequest {
   @SerializedName("dynamic_creative_id_set")
   private List<Long> dynamicCreativeIdSet = null;
 
+  @SerializedName("auto_derived_landing_page_switch")
+  private Boolean autoDerivedLandingPageSwitch = null;
+
   @SerializedName("account_id")
   private Long accountId = null;
 
@@ -1148,6 +1151,25 @@ public class AdgroupsAddRequest {
     this.dynamicCreativeIdSet = dynamicCreativeIdSet;
   }
 
+  public AdgroupsAddRequest autoDerivedLandingPageSwitch(Boolean autoDerivedLandingPageSwitch) {
+    this.autoDerivedLandingPageSwitch = autoDerivedLandingPageSwitch;
+    return this;
+  }
+
+  /**
+   * Get autoDerivedLandingPageSwitch
+   *
+   * @return autoDerivedLandingPageSwitch
+   */
+  @ApiModelProperty(value = "")
+  public Boolean isAutoDerivedLandingPageSwitch() {
+    return autoDerivedLandingPageSwitch;
+  }
+
+  public void setAutoDerivedLandingPageSwitch(Boolean autoDerivedLandingPageSwitch) {
+    this.autoDerivedLandingPageSwitch = autoDerivedLandingPageSwitch;
+  }
+
   public AdgroupsAddRequest accountId(Long accountId) {
     this.accountId = accountId;
     return this;
@@ -1231,6 +1253,8 @@ public class AdgroupsAddRequest {
         && Objects.equals(this.customAdgroupTag, adgroupsAddRequest.customAdgroupTag)
         && Objects.equals(this.smartTargeting, adgroupsAddRequest.smartTargeting)
         && Objects.equals(this.dynamicCreativeIdSet, adgroupsAddRequest.dynamicCreativeIdSet)
+        && Objects.equals(
+            this.autoDerivedLandingPageSwitch, adgroupsAddRequest.autoDerivedLandingPageSwitch)
         && Objects.equals(this.accountId, adgroupsAddRequest.accountId);
   }
 
@@ -1285,6 +1309,7 @@ public class AdgroupsAddRequest {
         customAdgroupTag,
         smartTargeting,
         dynamicCreativeIdSet,
+        autoDerivedLandingPageSwitch,
         accountId);
   }
 

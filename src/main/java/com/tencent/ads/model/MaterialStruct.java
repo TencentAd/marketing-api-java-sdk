@@ -30,6 +30,12 @@ public class MaterialStruct {
   @SerializedName("material_name")
   private String materialName = null;
 
+  @SerializedName("origin_media_id")
+  private String originMediaId = null;
+
+  @SerializedName("url")
+  private String url = null;
+
   public MaterialStruct type(MaterialTypeEnum type) {
     this.type = type;
     return this;
@@ -87,6 +93,44 @@ public class MaterialStruct {
     this.materialName = materialName;
   }
 
+  public MaterialStruct originMediaId(String originMediaId) {
+    this.originMediaId = originMediaId;
+    return this;
+  }
+
+  /**
+   * Get originMediaId
+   *
+   * @return originMediaId
+   */
+  @ApiModelProperty(value = "")
+  public String getOriginMediaId() {
+    return originMediaId;
+  }
+
+  public void setOriginMediaId(String originMediaId) {
+    this.originMediaId = originMediaId;
+  }
+
+  public MaterialStruct url(String url) {
+    this.url = url;
+    return this;
+  }
+
+  /**
+   * Get url
+   *
+   * @return url
+   */
+  @ApiModelProperty(value = "")
+  public String getUrl() {
+    return url;
+  }
+
+  public void setUrl(String url) {
+    this.url = url;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -98,12 +142,14 @@ public class MaterialStruct {
     MaterialStruct materialStruct = (MaterialStruct) o;
     return Objects.equals(this.type, materialStruct.type)
         && Objects.equals(this.mediaId, materialStruct.mediaId)
-        && Objects.equals(this.materialName, materialStruct.materialName);
+        && Objects.equals(this.materialName, materialStruct.materialName)
+        && Objects.equals(this.originMediaId, materialStruct.originMediaId)
+        && Objects.equals(this.url, materialStruct.url);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(type, mediaId, materialName);
+    return Objects.hash(type, mediaId, materialName, originMediaId, url);
   }
 
   @Override

@@ -22,6 +22,8 @@ import com.tencent.ads.model.FilteringStruct;
 import com.tencent.ads.model.ProductItemsAddRequest;
 import com.tencent.ads.model.ProductItemsAddResponse;
 import com.tencent.ads.model.ProductItemsAddResponseData;
+import com.tencent.ads.model.ProductItemsBatchUpdateRequest;
+import com.tencent.ads.model.ProductItemsBatchUpdateResponse;
 import com.tencent.ads.model.ProductItemsGetResponse;
 import com.tencent.ads.model.ProductItemsGetResponseData;
 import com.tencent.ads.model.ProductItemsUpdateRequest;
@@ -45,6 +47,22 @@ public class ProductItemsApiContainer extends ApiContainer {
     ProductItemsAddResponse resp = api.productItemsAdd(data);
     handleResponse(gson.toJson(resp));
     return resp.getData();
+  }
+
+  /**
+   * 批量更新商品信息
+   *
+   * @param data (required)
+   * @return ProductItemsBatchUpdateResponse
+   * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
+   *     response body
+   */
+  public ProductItemsBatchUpdateResponse productItemsBatchUpdate(
+      ProductItemsBatchUpdateRequest data) throws ApiException, TencentAdsResponseException {
+    ProductItemsBatchUpdateResponse resp = api.productItemsBatchUpdate(data);
+    handleResponse(gson.toJson(resp));
+
+    return resp;
   }
 
   /**

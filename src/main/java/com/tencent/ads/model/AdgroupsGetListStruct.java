@@ -215,6 +215,9 @@ public class AdgroupsGetListStruct {
   @SerializedName("system_status_explanation")
   private String systemStatusExplanation = null;
 
+  @SerializedName("auto_derived_landing_page_switch")
+  private Boolean autoDerivedLandingPageSwitch = null;
+
   public AdgroupsGetListStruct campaignId(Long campaignId) {
     this.campaignId = campaignId;
     return this;
@@ -1501,6 +1504,25 @@ public class AdgroupsGetListStruct {
     this.systemStatusExplanation = systemStatusExplanation;
   }
 
+  public AdgroupsGetListStruct autoDerivedLandingPageSwitch(Boolean autoDerivedLandingPageSwitch) {
+    this.autoDerivedLandingPageSwitch = autoDerivedLandingPageSwitch;
+    return this;
+  }
+
+  /**
+   * Get autoDerivedLandingPageSwitch
+   *
+   * @return autoDerivedLandingPageSwitch
+   */
+  @ApiModelProperty(value = "")
+  public Boolean isAutoDerivedLandingPageSwitch() {
+    return autoDerivedLandingPageSwitch;
+  }
+
+  public void setAutoDerivedLandingPageSwitch(Boolean autoDerivedLandingPageSwitch) {
+    this.autoDerivedLandingPageSwitch = autoDerivedLandingPageSwitch;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -1586,7 +1608,9 @@ public class AdgroupsGetListStruct {
         && Objects.equals(this.smartTargeting, adgroupsGetListStruct.smartTargeting)
         && Objects.equals(this.dynamicCreativeIdSet, adgroupsGetListStruct.dynamicCreativeIdSet)
         && Objects.equals(
-            this.systemStatusExplanation, adgroupsGetListStruct.systemStatusExplanation);
+            this.systemStatusExplanation, adgroupsGetListStruct.systemStatusExplanation)
+        && Objects.equals(
+            this.autoDerivedLandingPageSwitch, adgroupsGetListStruct.autoDerivedLandingPageSwitch);
   }
 
   @Override
@@ -1655,7 +1679,8 @@ public class AdgroupsGetListStruct {
         customAdgroupTag,
         smartTargeting,
         dynamicCreativeIdSet,
-        systemStatusExplanation);
+        systemStatusExplanation,
+        autoDerivedLandingPageSwitch);
   }
 
   @Override

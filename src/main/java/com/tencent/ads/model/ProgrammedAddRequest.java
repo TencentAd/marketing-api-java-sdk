@@ -30,6 +30,9 @@ public class ProgrammedAddRequest {
   @SerializedName("auto_derived_program_creative_switch")
   private Boolean autoDerivedProgramCreativeSwitch = null;
 
+  @SerializedName("standard_switch")
+  private Boolean standardSwitch = null;
+
   @SerializedName("create_material_groups")
   private List<MaterialGroupCreateStruct> createMaterialGroups = null;
 
@@ -91,6 +94,25 @@ public class ProgrammedAddRequest {
     this.autoDerivedProgramCreativeSwitch = autoDerivedProgramCreativeSwitch;
   }
 
+  public ProgrammedAddRequest standardSwitch(Boolean standardSwitch) {
+    this.standardSwitch = standardSwitch;
+    return this;
+  }
+
+  /**
+   * Get standardSwitch
+   *
+   * @return standardSwitch
+   */
+  @ApiModelProperty(value = "")
+  public Boolean isStandardSwitch() {
+    return standardSwitch;
+  }
+
+  public void setStandardSwitch(Boolean standardSwitch) {
+    this.standardSwitch = standardSwitch;
+  }
+
   public ProgrammedAddRequest createMaterialGroups(
       List<MaterialGroupCreateStruct> createMaterialGroups) {
     this.createMaterialGroups = createMaterialGroups;
@@ -134,13 +156,18 @@ public class ProgrammedAddRequest {
         && Objects.equals(
             this.autoDerivedProgramCreativeSwitch,
             programmedAddRequest.autoDerivedProgramCreativeSwitch)
+        && Objects.equals(this.standardSwitch, programmedAddRequest.standardSwitch)
         && Objects.equals(this.createMaterialGroups, programmedAddRequest.createMaterialGroups);
   }
 
   @Override
   public int hashCode() {
     return Objects.hash(
-        accountId, adMetadata, autoDerivedProgramCreativeSwitch, createMaterialGroups);
+        accountId,
+        adMetadata,
+        autoDerivedProgramCreativeSwitch,
+        standardSwitch,
+        createMaterialGroups);
   }
 
   @Override
