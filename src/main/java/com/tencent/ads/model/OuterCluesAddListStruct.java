@@ -27,6 +27,12 @@ public class OuterCluesAddListStruct {
   @SerializedName("outer_leads_id")
   private String outerLeadsId = null;
 
+  @SerializedName("detailed_err_code")
+  private String detailedErrCode = null;
+
+  @SerializedName("detailed_err_msg")
+  private String detailedErrMsg = null;
+
   public OuterCluesAddListStruct index(Long index) {
     this.index = index;
     return this;
@@ -65,6 +71,44 @@ public class OuterCluesAddListStruct {
     this.outerLeadsId = outerLeadsId;
   }
 
+  public OuterCluesAddListStruct detailedErrCode(String detailedErrCode) {
+    this.detailedErrCode = detailedErrCode;
+    return this;
+  }
+
+  /**
+   * Get detailedErrCode
+   *
+   * @return detailedErrCode
+   */
+  @ApiModelProperty(value = "")
+  public String getDetailedErrCode() {
+    return detailedErrCode;
+  }
+
+  public void setDetailedErrCode(String detailedErrCode) {
+    this.detailedErrCode = detailedErrCode;
+  }
+
+  public OuterCluesAddListStruct detailedErrMsg(String detailedErrMsg) {
+    this.detailedErrMsg = detailedErrMsg;
+    return this;
+  }
+
+  /**
+   * Get detailedErrMsg
+   *
+   * @return detailedErrMsg
+   */
+  @ApiModelProperty(value = "")
+  public String getDetailedErrMsg() {
+    return detailedErrMsg;
+  }
+
+  public void setDetailedErrMsg(String detailedErrMsg) {
+    this.detailedErrMsg = detailedErrMsg;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -75,12 +119,14 @@ public class OuterCluesAddListStruct {
     }
     OuterCluesAddListStruct outerCluesAddListStruct = (OuterCluesAddListStruct) o;
     return Objects.equals(this.index, outerCluesAddListStruct.index)
-        && Objects.equals(this.outerLeadsId, outerCluesAddListStruct.outerLeadsId);
+        && Objects.equals(this.outerLeadsId, outerCluesAddListStruct.outerLeadsId)
+        && Objects.equals(this.detailedErrCode, outerCluesAddListStruct.detailedErrCode)
+        && Objects.equals(this.detailedErrMsg, outerCluesAddListStruct.detailedErrMsg);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(index, outerLeadsId);
+    return Objects.hash(index, outerLeadsId, detailedErrCode, detailedErrMsg);
   }
 
   @Override

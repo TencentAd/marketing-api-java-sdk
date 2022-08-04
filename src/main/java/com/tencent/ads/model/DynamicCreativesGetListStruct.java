@@ -113,6 +113,12 @@ public class DynamicCreativesGetListStruct {
   @SerializedName("creative_template_category")
   private String creativeTemplateCategory = null;
 
+  @SerializedName("program_creative_info")
+  private ProgramCreativeInfo programCreativeInfo = null;
+
+  @SerializedName("dynamic_creative_type")
+  private DynamicCreativeType dynamicCreativeType = null;
+
   @SerializedName("head_click_type")
   private HeadClickType headClickType = null;
 
@@ -711,6 +717,46 @@ public class DynamicCreativesGetListStruct {
     this.creativeTemplateCategory = creativeTemplateCategory;
   }
 
+  public DynamicCreativesGetListStruct programCreativeInfo(
+      ProgramCreativeInfo programCreativeInfo) {
+    this.programCreativeInfo = programCreativeInfo;
+    return this;
+  }
+
+  /**
+   * Get programCreativeInfo
+   *
+   * @return programCreativeInfo
+   */
+  @ApiModelProperty(value = "")
+  public ProgramCreativeInfo getProgramCreativeInfo() {
+    return programCreativeInfo;
+  }
+
+  public void setProgramCreativeInfo(ProgramCreativeInfo programCreativeInfo) {
+    this.programCreativeInfo = programCreativeInfo;
+  }
+
+  public DynamicCreativesGetListStruct dynamicCreativeType(
+      DynamicCreativeType dynamicCreativeType) {
+    this.dynamicCreativeType = dynamicCreativeType;
+    return this;
+  }
+
+  /**
+   * Get dynamicCreativeType
+   *
+   * @return dynamicCreativeType
+   */
+  @ApiModelProperty(value = "")
+  public DynamicCreativeType getDynamicCreativeType() {
+    return dynamicCreativeType;
+  }
+
+  public void setDynamicCreativeType(DynamicCreativeType dynamicCreativeType) {
+    this.dynamicCreativeType = dynamicCreativeType;
+  }
+
   public DynamicCreativesGetListStruct headClickType(HeadClickType headClickType) {
     this.headClickType = headClickType;
     return this;
@@ -800,6 +846,10 @@ public class DynamicCreativesGetListStruct {
         && Objects.equals(this.unionMarketSpec, dynamicCreativesGetListStruct.unionMarketSpec)
         && Objects.equals(
             this.creativeTemplateCategory, dynamicCreativesGetListStruct.creativeTemplateCategory)
+        && Objects.equals(
+            this.programCreativeInfo, dynamicCreativesGetListStruct.programCreativeInfo)
+        && Objects.equals(
+            this.dynamicCreativeType, dynamicCreativesGetListStruct.dynamicCreativeType)
         && Objects.equals(this.headClickType, dynamicCreativesGetListStruct.headClickType)
         && Objects.equals(this.headClickSpec, dynamicCreativesGetListStruct.headClickSpec);
   }
@@ -837,6 +887,8 @@ public class DynamicCreativesGetListStruct {
         creativeTemplateVersionType,
         unionMarketSpec,
         creativeTemplateCategory,
+        programCreativeInfo,
+        dynamicCreativeType,
         headClickType,
         headClickSpec);
   }

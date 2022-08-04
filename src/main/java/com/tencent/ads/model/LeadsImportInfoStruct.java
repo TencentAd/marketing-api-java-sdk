@@ -51,6 +51,9 @@ public class LeadsImportInfoStruct {
   @SerializedName("leads_user_wechat_appid")
   private String leadsUserWechatAppid = null;
 
+  @SerializedName("leads_action_time")
+  private String leadsActionTime = null;
+
   @SerializedName("leads_name")
   private String leadsName = null;
 
@@ -77,6 +80,39 @@ public class LeadsImportInfoStruct {
 
   @SerializedName("memo")
   private String memo = null;
+
+  @SerializedName("wechat_agency_id")
+  private String wechatAgencyId = null;
+
+  @SerializedName("leads_age")
+  private String leadsAge = null;
+
+  @SerializedName("leads_id_number")
+  private String leadsIdNumber = null;
+
+  @SerializedName("leads_nationality")
+  private String leadsNationality = null;
+
+  @SerializedName("leads_address")
+  private String leadsAddress = null;
+
+  @SerializedName("leads_company")
+  private String leadsCompany = null;
+
+  @SerializedName("leads_profession")
+  private String leadsProfession = null;
+
+  @SerializedName("leads_working_years")
+  private String leadsWorkingYears = null;
+
+  @SerializedName("leads_page_id")
+  private String leadsPageId = null;
+
+  @SerializedName("leads_page_name")
+  private String leadsPageName = null;
+
+  @SerializedName("leads_page_url")
+  private String leadsPageUrl = null;
 
   public LeadsImportInfoStruct outerLeadsId(String outerLeadsId) {
     this.outerLeadsId = outerLeadsId;
@@ -268,6 +304,25 @@ public class LeadsImportInfoStruct {
     this.leadsUserWechatAppid = leadsUserWechatAppid;
   }
 
+  public LeadsImportInfoStruct leadsActionTime(String leadsActionTime) {
+    this.leadsActionTime = leadsActionTime;
+    return this;
+  }
+
+  /**
+   * Get leadsActionTime
+   *
+   * @return leadsActionTime
+   */
+  @ApiModelProperty(value = "")
+  public String getLeadsActionTime() {
+    return leadsActionTime;
+  }
+
+  public void setLeadsActionTime(String leadsActionTime) {
+    this.leadsActionTime = leadsActionTime;
+  }
+
   public LeadsImportInfoStruct leadsName(String leadsName) {
     this.leadsName = leadsName;
     return this;
@@ -439,6 +494,215 @@ public class LeadsImportInfoStruct {
     this.memo = memo;
   }
 
+  public LeadsImportInfoStruct wechatAgencyId(String wechatAgencyId) {
+    this.wechatAgencyId = wechatAgencyId;
+    return this;
+  }
+
+  /**
+   * Get wechatAgencyId
+   *
+   * @return wechatAgencyId
+   */
+  @ApiModelProperty(value = "")
+  public String getWechatAgencyId() {
+    return wechatAgencyId;
+  }
+
+  public void setWechatAgencyId(String wechatAgencyId) {
+    this.wechatAgencyId = wechatAgencyId;
+  }
+
+  public LeadsImportInfoStruct leadsAge(String leadsAge) {
+    this.leadsAge = leadsAge;
+    return this;
+  }
+
+  /**
+   * Get leadsAge
+   *
+   * @return leadsAge
+   */
+  @ApiModelProperty(value = "")
+  public String getLeadsAge() {
+    return leadsAge;
+  }
+
+  public void setLeadsAge(String leadsAge) {
+    this.leadsAge = leadsAge;
+  }
+
+  public LeadsImportInfoStruct leadsIdNumber(String leadsIdNumber) {
+    this.leadsIdNumber = leadsIdNumber;
+    return this;
+  }
+
+  /**
+   * Get leadsIdNumber
+   *
+   * @return leadsIdNumber
+   */
+  @ApiModelProperty(value = "")
+  public String getLeadsIdNumber() {
+    return leadsIdNumber;
+  }
+
+  public void setLeadsIdNumber(String leadsIdNumber) {
+    this.leadsIdNumber = leadsIdNumber;
+  }
+
+  public LeadsImportInfoStruct leadsNationality(String leadsNationality) {
+    this.leadsNationality = leadsNationality;
+    return this;
+  }
+
+  /**
+   * Get leadsNationality
+   *
+   * @return leadsNationality
+   */
+  @ApiModelProperty(value = "")
+  public String getLeadsNationality() {
+    return leadsNationality;
+  }
+
+  public void setLeadsNationality(String leadsNationality) {
+    this.leadsNationality = leadsNationality;
+  }
+
+  public LeadsImportInfoStruct leadsAddress(String leadsAddress) {
+    this.leadsAddress = leadsAddress;
+    return this;
+  }
+
+  /**
+   * Get leadsAddress
+   *
+   * @return leadsAddress
+   */
+  @ApiModelProperty(value = "")
+  public String getLeadsAddress() {
+    return leadsAddress;
+  }
+
+  public void setLeadsAddress(String leadsAddress) {
+    this.leadsAddress = leadsAddress;
+  }
+
+  public LeadsImportInfoStruct leadsCompany(String leadsCompany) {
+    this.leadsCompany = leadsCompany;
+    return this;
+  }
+
+  /**
+   * Get leadsCompany
+   *
+   * @return leadsCompany
+   */
+  @ApiModelProperty(value = "")
+  public String getLeadsCompany() {
+    return leadsCompany;
+  }
+
+  public void setLeadsCompany(String leadsCompany) {
+    this.leadsCompany = leadsCompany;
+  }
+
+  public LeadsImportInfoStruct leadsProfession(String leadsProfession) {
+    this.leadsProfession = leadsProfession;
+    return this;
+  }
+
+  /**
+   * Get leadsProfession
+   *
+   * @return leadsProfession
+   */
+  @ApiModelProperty(value = "")
+  public String getLeadsProfession() {
+    return leadsProfession;
+  }
+
+  public void setLeadsProfession(String leadsProfession) {
+    this.leadsProfession = leadsProfession;
+  }
+
+  public LeadsImportInfoStruct leadsWorkingYears(String leadsWorkingYears) {
+    this.leadsWorkingYears = leadsWorkingYears;
+    return this;
+  }
+
+  /**
+   * Get leadsWorkingYears
+   *
+   * @return leadsWorkingYears
+   */
+  @ApiModelProperty(value = "")
+  public String getLeadsWorkingYears() {
+    return leadsWorkingYears;
+  }
+
+  public void setLeadsWorkingYears(String leadsWorkingYears) {
+    this.leadsWorkingYears = leadsWorkingYears;
+  }
+
+  public LeadsImportInfoStruct leadsPageId(String leadsPageId) {
+    this.leadsPageId = leadsPageId;
+    return this;
+  }
+
+  /**
+   * Get leadsPageId
+   *
+   * @return leadsPageId
+   */
+  @ApiModelProperty(value = "")
+  public String getLeadsPageId() {
+    return leadsPageId;
+  }
+
+  public void setLeadsPageId(String leadsPageId) {
+    this.leadsPageId = leadsPageId;
+  }
+
+  public LeadsImportInfoStruct leadsPageName(String leadsPageName) {
+    this.leadsPageName = leadsPageName;
+    return this;
+  }
+
+  /**
+   * Get leadsPageName
+   *
+   * @return leadsPageName
+   */
+  @ApiModelProperty(value = "")
+  public String getLeadsPageName() {
+    return leadsPageName;
+  }
+
+  public void setLeadsPageName(String leadsPageName) {
+    this.leadsPageName = leadsPageName;
+  }
+
+  public LeadsImportInfoStruct leadsPageUrl(String leadsPageUrl) {
+    this.leadsPageUrl = leadsPageUrl;
+    return this;
+  }
+
+  /**
+   * Get leadsPageUrl
+   *
+   * @return leadsPageUrl
+   */
+  @ApiModelProperty(value = "")
+  public String getLeadsPageUrl() {
+    return leadsPageUrl;
+  }
+
+  public void setLeadsPageUrl(String leadsPageUrl) {
+    this.leadsPageUrl = leadsPageUrl;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -458,6 +722,7 @@ public class LeadsImportInfoStruct {
         && Objects.equals(this.leadsUserId, leadsImportInfoStruct.leadsUserId)
         && Objects.equals(this.leadsUserType, leadsImportInfoStruct.leadsUserType)
         && Objects.equals(this.leadsUserWechatAppid, leadsImportInfoStruct.leadsUserWechatAppid)
+        && Objects.equals(this.leadsActionTime, leadsImportInfoStruct.leadsActionTime)
         && Objects.equals(this.leadsName, leadsImportInfoStruct.leadsName)
         && Objects.equals(this.leadsGender, leadsImportInfoStruct.leadsGender)
         && Objects.equals(this.leadsEmail, leadsImportInfoStruct.leadsEmail)
@@ -467,7 +732,18 @@ public class LeadsImportInfoStruct {
         && Objects.equals(
             this.outerLeadsIneffectReason, leadsImportInfoStruct.outerLeadsIneffectReason)
         && Objects.equals(this.outerLeadsComefrom, leadsImportInfoStruct.outerLeadsComefrom)
-        && Objects.equals(this.memo, leadsImportInfoStruct.memo);
+        && Objects.equals(this.memo, leadsImportInfoStruct.memo)
+        && Objects.equals(this.wechatAgencyId, leadsImportInfoStruct.wechatAgencyId)
+        && Objects.equals(this.leadsAge, leadsImportInfoStruct.leadsAge)
+        && Objects.equals(this.leadsIdNumber, leadsImportInfoStruct.leadsIdNumber)
+        && Objects.equals(this.leadsNationality, leadsImportInfoStruct.leadsNationality)
+        && Objects.equals(this.leadsAddress, leadsImportInfoStruct.leadsAddress)
+        && Objects.equals(this.leadsCompany, leadsImportInfoStruct.leadsCompany)
+        && Objects.equals(this.leadsProfession, leadsImportInfoStruct.leadsProfession)
+        && Objects.equals(this.leadsWorkingYears, leadsImportInfoStruct.leadsWorkingYears)
+        && Objects.equals(this.leadsPageId, leadsImportInfoStruct.leadsPageId)
+        && Objects.equals(this.leadsPageName, leadsImportInfoStruct.leadsPageName)
+        && Objects.equals(this.leadsPageUrl, leadsImportInfoStruct.leadsPageUrl);
   }
 
   @Override
@@ -483,6 +759,7 @@ public class LeadsImportInfoStruct {
         leadsUserId,
         leadsUserType,
         leadsUserWechatAppid,
+        leadsActionTime,
         leadsName,
         leadsGender,
         leadsEmail,
@@ -491,7 +768,18 @@ public class LeadsImportInfoStruct {
         outerLeadsConvertType,
         outerLeadsIneffectReason,
         outerLeadsComefrom,
-        memo);
+        memo,
+        wechatAgencyId,
+        leadsAge,
+        leadsIdNumber,
+        leadsNationality,
+        leadsAddress,
+        leadsCompany,
+        leadsProfession,
+        leadsWorkingYears,
+        leadsPageId,
+        leadsPageName,
+        leadsPageUrl);
   }
 
   @Override

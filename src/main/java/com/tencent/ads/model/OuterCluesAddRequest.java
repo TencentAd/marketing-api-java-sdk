@@ -30,6 +30,9 @@ public class OuterCluesAddRequest {
   @SerializedName("leads_info_list")
   private List<LeadsImportInfoStruct> leadsInfoList = null;
 
+  @SerializedName("customized_tags")
+  private List<CustomizedTagsStruct> customizedTags = null;
+
   public OuterCluesAddRequest accountId(Long accountId) {
     this.accountId = accountId;
     return this;
@@ -95,6 +98,33 @@ public class OuterCluesAddRequest {
     this.leadsInfoList = leadsInfoList;
   }
 
+  public OuterCluesAddRequest customizedTags(List<CustomizedTagsStruct> customizedTags) {
+    this.customizedTags = customizedTags;
+    return this;
+  }
+
+  public OuterCluesAddRequest addCustomizedTagsItem(CustomizedTagsStruct customizedTagsItem) {
+    if (this.customizedTags == null) {
+      this.customizedTags = new ArrayList<CustomizedTagsStruct>();
+    }
+    this.customizedTags.add(customizedTagsItem);
+    return this;
+  }
+
+  /**
+   * Get customizedTags
+   *
+   * @return customizedTags
+   */
+  @ApiModelProperty(value = "")
+  public List<CustomizedTagsStruct> getCustomizedTags() {
+    return customizedTags;
+  }
+
+  public void setCustomizedTags(List<CustomizedTagsStruct> customizedTags) {
+    this.customizedTags = customizedTags;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -106,12 +136,13 @@ public class OuterCluesAddRequest {
     OuterCluesAddRequest outerCluesAddRequest = (OuterCluesAddRequest) o;
     return Objects.equals(this.accountId, outerCluesAddRequest.accountId)
         && Objects.equals(this.matchType, outerCluesAddRequest.matchType)
-        && Objects.equals(this.leadsInfoList, outerCluesAddRequest.leadsInfoList);
+        && Objects.equals(this.leadsInfoList, outerCluesAddRequest.leadsInfoList)
+        && Objects.equals(this.customizedTags, outerCluesAddRequest.customizedTags);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(accountId, matchType, leadsInfoList);
+    return Objects.hash(accountId, matchType, leadsInfoList, customizedTags);
   }
 
   @Override

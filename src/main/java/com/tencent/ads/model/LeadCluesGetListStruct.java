@@ -90,6 +90,12 @@ public class LeadCluesGetListStruct {
   @SerializedName("leads_type")
   private LeadCluesLeadsType leadsType = null;
 
+  @SerializedName("leads_sub_type")
+  private String leadsSubType = null;
+
+  @SerializedName("chat_id")
+  private String chatId = null;
+
   @SerializedName("leads_source")
   private String leadsSource = null;
 
@@ -176,6 +182,30 @@ public class LeadCluesGetListStruct {
 
   @SerializedName("shop_address")
   private String shopAddress = null;
+
+  @SerializedName("call_middle_num")
+  private String callMiddleNum = null;
+
+  @SerializedName("call_consumer_hotline")
+  private String callConsumerHotline = null;
+
+  @SerializedName("call_touch_tag")
+  private String callTouchTag = null;
+
+  @SerializedName("call_duration")
+  private String callDuration = null;
+
+  @SerializedName("call_record_url")
+  private String callRecordUrl = null;
+
+  @SerializedName("layer_form_content")
+  private String layerFormContent = null;
+
+  @SerializedName("nick_name")
+  private String nickName = null;
+
+  @SerializedName("is_broad_cast_leads")
+  private String isBroadCastLeads = null;
 
   public LeadCluesGetListStruct accountId(Long accountId) {
     this.accountId = accountId;
@@ -612,6 +642,44 @@ public class LeadCluesGetListStruct {
 
   public void setLeadsType(LeadCluesLeadsType leadsType) {
     this.leadsType = leadsType;
+  }
+
+  public LeadCluesGetListStruct leadsSubType(String leadsSubType) {
+    this.leadsSubType = leadsSubType;
+    return this;
+  }
+
+  /**
+   * Get leadsSubType
+   *
+   * @return leadsSubType
+   */
+  @ApiModelProperty(value = "")
+  public String getLeadsSubType() {
+    return leadsSubType;
+  }
+
+  public void setLeadsSubType(String leadsSubType) {
+    this.leadsSubType = leadsSubType;
+  }
+
+  public LeadCluesGetListStruct chatId(String chatId) {
+    this.chatId = chatId;
+    return this;
+  }
+
+  /**
+   * Get chatId
+   *
+   * @return chatId
+   */
+  @ApiModelProperty(value = "")
+  public String getChatId() {
+    return chatId;
+  }
+
+  public void setChatId(String chatId) {
+    this.chatId = chatId;
   }
 
   public LeadCluesGetListStruct leadsSource(String leadsSource) {
@@ -1165,6 +1233,158 @@ public class LeadCluesGetListStruct {
     this.shopAddress = shopAddress;
   }
 
+  public LeadCluesGetListStruct callMiddleNum(String callMiddleNum) {
+    this.callMiddleNum = callMiddleNum;
+    return this;
+  }
+
+  /**
+   * Get callMiddleNum
+   *
+   * @return callMiddleNum
+   */
+  @ApiModelProperty(value = "")
+  public String getCallMiddleNum() {
+    return callMiddleNum;
+  }
+
+  public void setCallMiddleNum(String callMiddleNum) {
+    this.callMiddleNum = callMiddleNum;
+  }
+
+  public LeadCluesGetListStruct callConsumerHotline(String callConsumerHotline) {
+    this.callConsumerHotline = callConsumerHotline;
+    return this;
+  }
+
+  /**
+   * Get callConsumerHotline
+   *
+   * @return callConsumerHotline
+   */
+  @ApiModelProperty(value = "")
+  public String getCallConsumerHotline() {
+    return callConsumerHotline;
+  }
+
+  public void setCallConsumerHotline(String callConsumerHotline) {
+    this.callConsumerHotline = callConsumerHotline;
+  }
+
+  public LeadCluesGetListStruct callTouchTag(String callTouchTag) {
+    this.callTouchTag = callTouchTag;
+    return this;
+  }
+
+  /**
+   * Get callTouchTag
+   *
+   * @return callTouchTag
+   */
+  @ApiModelProperty(value = "")
+  public String getCallTouchTag() {
+    return callTouchTag;
+  }
+
+  public void setCallTouchTag(String callTouchTag) {
+    this.callTouchTag = callTouchTag;
+  }
+
+  public LeadCluesGetListStruct callDuration(String callDuration) {
+    this.callDuration = callDuration;
+    return this;
+  }
+
+  /**
+   * Get callDuration
+   *
+   * @return callDuration
+   */
+  @ApiModelProperty(value = "")
+  public String getCallDuration() {
+    return callDuration;
+  }
+
+  public void setCallDuration(String callDuration) {
+    this.callDuration = callDuration;
+  }
+
+  public LeadCluesGetListStruct callRecordUrl(String callRecordUrl) {
+    this.callRecordUrl = callRecordUrl;
+    return this;
+  }
+
+  /**
+   * Get callRecordUrl
+   *
+   * @return callRecordUrl
+   */
+  @ApiModelProperty(value = "")
+  public String getCallRecordUrl() {
+    return callRecordUrl;
+  }
+
+  public void setCallRecordUrl(String callRecordUrl) {
+    this.callRecordUrl = callRecordUrl;
+  }
+
+  public LeadCluesGetListStruct layerFormContent(String layerFormContent) {
+    this.layerFormContent = layerFormContent;
+    return this;
+  }
+
+  /**
+   * Get layerFormContent
+   *
+   * @return layerFormContent
+   */
+  @ApiModelProperty(value = "")
+  public String getLayerFormContent() {
+    return layerFormContent;
+  }
+
+  public void setLayerFormContent(String layerFormContent) {
+    this.layerFormContent = layerFormContent;
+  }
+
+  public LeadCluesGetListStruct nickName(String nickName) {
+    this.nickName = nickName;
+    return this;
+  }
+
+  /**
+   * Get nickName
+   *
+   * @return nickName
+   */
+  @ApiModelProperty(value = "")
+  public String getNickName() {
+    return nickName;
+  }
+
+  public void setNickName(String nickName) {
+    this.nickName = nickName;
+  }
+
+  public LeadCluesGetListStruct isBroadCastLeads(String isBroadCastLeads) {
+    this.isBroadCastLeads = isBroadCastLeads;
+    return this;
+  }
+
+  /**
+   * Get isBroadCastLeads
+   *
+   * @return isBroadCastLeads
+   */
+  @ApiModelProperty(value = "")
+  public String getIsBroadCastLeads() {
+    return isBroadCastLeads;
+  }
+
+  public void setIsBroadCastLeads(String isBroadCastLeads) {
+    this.isBroadCastLeads = isBroadCastLeads;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -1197,6 +1417,8 @@ public class LeadCluesGetListStruct {
         && Objects.equals(this.pageName, leadCluesGetListStruct.pageName)
         && Objects.equals(this.pageUrl, leadCluesGetListStruct.pageUrl)
         && Objects.equals(this.leadsType, leadCluesGetListStruct.leadsType)
+        && Objects.equals(this.leadsSubType, leadCluesGetListStruct.leadsSubType)
+        && Objects.equals(this.chatId, leadCluesGetListStruct.chatId)
         && Objects.equals(this.leadsSource, leadCluesGetListStruct.leadsSource)
         && Objects.equals(this.leadsPotentialScore, leadCluesGetListStruct.leadsPotentialScore)
         && Objects.equals(this.leadsFollowTag, leadCluesGetListStruct.leadsFollowTag)
@@ -1226,7 +1448,15 @@ public class LeadCluesGetListStruct {
         && Objects.equals(this.leadsActionTime, leadCluesGetListStruct.leadsActionTime)
         && Objects.equals(this.leadsTags, leadCluesGetListStruct.leadsTags)
         && Objects.equals(this.shopName, leadCluesGetListStruct.shopName)
-        && Objects.equals(this.shopAddress, leadCluesGetListStruct.shopAddress);
+        && Objects.equals(this.shopAddress, leadCluesGetListStruct.shopAddress)
+        && Objects.equals(this.callMiddleNum, leadCluesGetListStruct.callMiddleNum)
+        && Objects.equals(this.callConsumerHotline, leadCluesGetListStruct.callConsumerHotline)
+        && Objects.equals(this.callTouchTag, leadCluesGetListStruct.callTouchTag)
+        && Objects.equals(this.callDuration, leadCluesGetListStruct.callDuration)
+        && Objects.equals(this.callRecordUrl, leadCluesGetListStruct.callRecordUrl)
+        && Objects.equals(this.layerFormContent, leadCluesGetListStruct.layerFormContent)
+        && Objects.equals(this.nickName, leadCluesGetListStruct.nickName)
+        && Objects.equals(this.isBroadCastLeads, leadCluesGetListStruct.isBroadCastLeads);
   }
 
   @Override
@@ -1255,6 +1485,8 @@ public class LeadCluesGetListStruct {
         pageName,
         pageUrl,
         leadsType,
+        leadsSubType,
+        chatId,
         leadsSource,
         leadsPotentialScore,
         leadsFollowTag,
@@ -1283,7 +1515,15 @@ public class LeadCluesGetListStruct {
         leadsActionTime,
         leadsTags,
         shopName,
-        shopAddress);
+        shopAddress,
+        callMiddleNum,
+        callConsumerHotline,
+        callTouchTag,
+        callDuration,
+        callRecordUrl,
+        layerFormContent,
+        nickName,
+        isBroadCastLeads);
   }
 
   @Override

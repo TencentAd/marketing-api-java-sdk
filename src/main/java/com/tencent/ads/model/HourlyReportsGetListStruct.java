@@ -1455,6 +1455,42 @@ public class HourlyReportsGetListStruct {
   @SerializedName("biz_withdraw_deposits_uv_cost")
   private Long bizWithdrawDepositsUvCost = null;
 
+  @SerializedName("cheout_pv_1d")
+  private Long cheoutPv1d = null;
+
+  @SerializedName("cheout_pv_3d")
+  private Long cheoutPv3d = null;
+
+  @SerializedName("cheout_pv_5d")
+  private Long cheoutPv5d = null;
+
+  @SerializedName("cheout_pv_7d")
+  private Long cheoutPv7d = null;
+
+  @SerializedName("cheout_1d_cost")
+  private Long cheout1dCost = null;
+
+  @SerializedName("cheout_3d_cost")
+  private Long cheout3dCost = null;
+
+  @SerializedName("cheout_5d_cost")
+  private Long cheout5dCost = null;
+
+  @SerializedName("cheout_7d_cost")
+  private Long cheout7dCost = null;
+
+  @SerializedName("cheout_1d_rate")
+  private Double cheout1dRate = null;
+
+  @SerializedName("cheout_3d_rate")
+  private Double cheout3dRate = null;
+
+  @SerializedName("cheout_5d_rate")
+  private Double cheout5dRate = null;
+
+  @SerializedName("cheout_7d_rate")
+  private Double cheout7dRate = null;
+
   @SerializedName("request_conversions_count")
   private Long requestConversionsCount = null;
 
@@ -11158,6 +11194,234 @@ public class HourlyReportsGetListStruct {
     this.bizWithdrawDepositsUvCost = bizWithdrawDepositsUvCost;
   }
 
+  public HourlyReportsGetListStruct cheoutPv1d(Long cheoutPv1d) {
+    this.cheoutPv1d = cheoutPv1d;
+    return this;
+  }
+
+  /**
+   * Get cheoutPv1d
+   *
+   * @return cheoutPv1d
+   */
+  @ApiModelProperty(value = "")
+  public Long getCheoutPv1d() {
+    return cheoutPv1d;
+  }
+
+  public void setCheoutPv1d(Long cheoutPv1d) {
+    this.cheoutPv1d = cheoutPv1d;
+  }
+
+  public HourlyReportsGetListStruct cheoutPv3d(Long cheoutPv3d) {
+    this.cheoutPv3d = cheoutPv3d;
+    return this;
+  }
+
+  /**
+   * Get cheoutPv3d
+   *
+   * @return cheoutPv3d
+   */
+  @ApiModelProperty(value = "")
+  public Long getCheoutPv3d() {
+    return cheoutPv3d;
+  }
+
+  public void setCheoutPv3d(Long cheoutPv3d) {
+    this.cheoutPv3d = cheoutPv3d;
+  }
+
+  public HourlyReportsGetListStruct cheoutPv5d(Long cheoutPv5d) {
+    this.cheoutPv5d = cheoutPv5d;
+    return this;
+  }
+
+  /**
+   * Get cheoutPv5d
+   *
+   * @return cheoutPv5d
+   */
+  @ApiModelProperty(value = "")
+  public Long getCheoutPv5d() {
+    return cheoutPv5d;
+  }
+
+  public void setCheoutPv5d(Long cheoutPv5d) {
+    this.cheoutPv5d = cheoutPv5d;
+  }
+
+  public HourlyReportsGetListStruct cheoutPv7d(Long cheoutPv7d) {
+    this.cheoutPv7d = cheoutPv7d;
+    return this;
+  }
+
+  /**
+   * Get cheoutPv7d
+   *
+   * @return cheoutPv7d
+   */
+  @ApiModelProperty(value = "")
+  public Long getCheoutPv7d() {
+    return cheoutPv7d;
+  }
+
+  public void setCheoutPv7d(Long cheoutPv7d) {
+    this.cheoutPv7d = cheoutPv7d;
+  }
+
+  public HourlyReportsGetListStruct cheout1dCost(Long cheout1dCost) {
+    this.cheout1dCost = cheout1dCost;
+    return this;
+  }
+
+  /**
+   * Get cheout1dCost
+   *
+   * @return cheout1dCost
+   */
+  @ApiModelProperty(value = "")
+  public Long getCheout1dCost() {
+    return cheout1dCost;
+  }
+
+  public void setCheout1dCost(Long cheout1dCost) {
+    this.cheout1dCost = cheout1dCost;
+  }
+
+  public HourlyReportsGetListStruct cheout3dCost(Long cheout3dCost) {
+    this.cheout3dCost = cheout3dCost;
+    return this;
+  }
+
+  /**
+   * Get cheout3dCost
+   *
+   * @return cheout3dCost
+   */
+  @ApiModelProperty(value = "")
+  public Long getCheout3dCost() {
+    return cheout3dCost;
+  }
+
+  public void setCheout3dCost(Long cheout3dCost) {
+    this.cheout3dCost = cheout3dCost;
+  }
+
+  public HourlyReportsGetListStruct cheout5dCost(Long cheout5dCost) {
+    this.cheout5dCost = cheout5dCost;
+    return this;
+  }
+
+  /**
+   * Get cheout5dCost
+   *
+   * @return cheout5dCost
+   */
+  @ApiModelProperty(value = "")
+  public Long getCheout5dCost() {
+    return cheout5dCost;
+  }
+
+  public void setCheout5dCost(Long cheout5dCost) {
+    this.cheout5dCost = cheout5dCost;
+  }
+
+  public HourlyReportsGetListStruct cheout7dCost(Long cheout7dCost) {
+    this.cheout7dCost = cheout7dCost;
+    return this;
+  }
+
+  /**
+   * Get cheout7dCost
+   *
+   * @return cheout7dCost
+   */
+  @ApiModelProperty(value = "")
+  public Long getCheout7dCost() {
+    return cheout7dCost;
+  }
+
+  public void setCheout7dCost(Long cheout7dCost) {
+    this.cheout7dCost = cheout7dCost;
+  }
+
+  public HourlyReportsGetListStruct cheout1dRate(Double cheout1dRate) {
+    this.cheout1dRate = cheout1dRate;
+    return this;
+  }
+
+  /**
+   * Get cheout1dRate
+   *
+   * @return cheout1dRate
+   */
+  @ApiModelProperty(value = "")
+  public Double getCheout1dRate() {
+    return cheout1dRate;
+  }
+
+  public void setCheout1dRate(Double cheout1dRate) {
+    this.cheout1dRate = cheout1dRate;
+  }
+
+  public HourlyReportsGetListStruct cheout3dRate(Double cheout3dRate) {
+    this.cheout3dRate = cheout3dRate;
+    return this;
+  }
+
+  /**
+   * Get cheout3dRate
+   *
+   * @return cheout3dRate
+   */
+  @ApiModelProperty(value = "")
+  public Double getCheout3dRate() {
+    return cheout3dRate;
+  }
+
+  public void setCheout3dRate(Double cheout3dRate) {
+    this.cheout3dRate = cheout3dRate;
+  }
+
+  public HourlyReportsGetListStruct cheout5dRate(Double cheout5dRate) {
+    this.cheout5dRate = cheout5dRate;
+    return this;
+  }
+
+  /**
+   * Get cheout5dRate
+   *
+   * @return cheout5dRate
+   */
+  @ApiModelProperty(value = "")
+  public Double getCheout5dRate() {
+    return cheout5dRate;
+  }
+
+  public void setCheout5dRate(Double cheout5dRate) {
+    this.cheout5dRate = cheout5dRate;
+  }
+
+  public HourlyReportsGetListStruct cheout7dRate(Double cheout7dRate) {
+    this.cheout7dRate = cheout7dRate;
+    return this;
+  }
+
+  /**
+   * Get cheout7dRate
+   *
+   * @return cheout7dRate
+   */
+  @ApiModelProperty(value = "")
+  public Double getCheout7dRate() {
+    return cheout7dRate;
+  }
+
+  public void setCheout7dRate(Double cheout7dRate) {
+    this.cheout7dRate = cheout7dRate;
+  }
+
   public HourlyReportsGetListStruct requestConversionsCount(Long requestConversionsCount) {
     this.requestConversionsCount = requestConversionsCount;
     return this;
@@ -15687,6 +15951,18 @@ public class HourlyReportsGetListStruct {
             this.bizWithdrawDepositsUv, hourlyReportsGetListStruct.bizWithdrawDepositsUv)
         && Objects.equals(
             this.bizWithdrawDepositsUvCost, hourlyReportsGetListStruct.bizWithdrawDepositsUvCost)
+        && Objects.equals(this.cheoutPv1d, hourlyReportsGetListStruct.cheoutPv1d)
+        && Objects.equals(this.cheoutPv3d, hourlyReportsGetListStruct.cheoutPv3d)
+        && Objects.equals(this.cheoutPv5d, hourlyReportsGetListStruct.cheoutPv5d)
+        && Objects.equals(this.cheoutPv7d, hourlyReportsGetListStruct.cheoutPv7d)
+        && Objects.equals(this.cheout1dCost, hourlyReportsGetListStruct.cheout1dCost)
+        && Objects.equals(this.cheout3dCost, hourlyReportsGetListStruct.cheout3dCost)
+        && Objects.equals(this.cheout5dCost, hourlyReportsGetListStruct.cheout5dCost)
+        && Objects.equals(this.cheout7dCost, hourlyReportsGetListStruct.cheout7dCost)
+        && Objects.equals(this.cheout1dRate, hourlyReportsGetListStruct.cheout1dRate)
+        && Objects.equals(this.cheout3dRate, hourlyReportsGetListStruct.cheout3dRate)
+        && Objects.equals(this.cheout5dRate, hourlyReportsGetListStruct.cheout5dRate)
+        && Objects.equals(this.cheout7dRate, hourlyReportsGetListStruct.cheout7dRate)
         && Objects.equals(
             this.requestConversionsCount, hourlyReportsGetListStruct.requestConversionsCount)
         && Objects.equals(
@@ -16519,6 +16795,18 @@ public class HourlyReportsGetListStruct {
         bizPreCreditUvCost,
         bizWithdrawDepositsUv,
         bizWithdrawDepositsUvCost,
+        cheoutPv1d,
+        cheoutPv3d,
+        cheoutPv5d,
+        cheoutPv7d,
+        cheout1dCost,
+        cheout3dCost,
+        cheout5dCost,
+        cheout7dCost,
+        cheout1dRate,
+        cheout3dRate,
+        cheout5dRate,
+        cheout7dRate,
         requestConversionsCount,
         requestConversionsCost,
         incomeVal1,

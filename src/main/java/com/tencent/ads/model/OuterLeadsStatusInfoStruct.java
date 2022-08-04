@@ -16,6 +16,8 @@ import com.google.gson.Gson;
 import com.google.gson.annotations.SerializedName;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Objects;
 
 /** 回传信息结构 */
@@ -44,6 +46,9 @@ public class OuterLeadsStatusInfoStruct {
 
   @SerializedName("outer_leads_ineffect_reason")
   private String outerLeadsIneffectReason = null;
+
+  @SerializedName("customized_tags")
+  private List<CustomizedTagsStruct> customizedTags = null;
 
   public OuterLeadsStatusInfoStruct outerLeadsId(String outerLeadsId) {
     this.outerLeadsId = outerLeadsId;
@@ -197,6 +202,33 @@ public class OuterLeadsStatusInfoStruct {
     this.outerLeadsIneffectReason = outerLeadsIneffectReason;
   }
 
+  public OuterLeadsStatusInfoStruct customizedTags(List<CustomizedTagsStruct> customizedTags) {
+    this.customizedTags = customizedTags;
+    return this;
+  }
+
+  public OuterLeadsStatusInfoStruct addCustomizedTagsItem(CustomizedTagsStruct customizedTagsItem) {
+    if (this.customizedTags == null) {
+      this.customizedTags = new ArrayList<CustomizedTagsStruct>();
+    }
+    this.customizedTags.add(customizedTagsItem);
+    return this;
+  }
+
+  /**
+   * Get customizedTags
+   *
+   * @return customizedTags
+   */
+  @ApiModelProperty(value = "")
+  public List<CustomizedTagsStruct> getCustomizedTags() {
+    return customizedTags;
+  }
+
+  public void setCustomizedTags(List<CustomizedTagsStruct> customizedTags) {
+    this.customizedTags = customizedTags;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -215,7 +247,8 @@ public class OuterLeadsStatusInfoStruct {
         && Objects.equals(
             this.outerLeadsConvertType, outerLeadsStatusInfoStruct.outerLeadsConvertType)
         && Objects.equals(
-            this.outerLeadsIneffectReason, outerLeadsStatusInfoStruct.outerLeadsIneffectReason);
+            this.outerLeadsIneffectReason, outerLeadsStatusInfoStruct.outerLeadsIneffectReason)
+        && Objects.equals(this.customizedTags, outerLeadsStatusInfoStruct.customizedTags);
   }
 
   @Override
@@ -228,7 +261,8 @@ public class OuterLeadsStatusInfoStruct {
         leadsWechat,
         clickId,
         outerLeadsConvertType,
-        outerLeadsIneffectReason);
+        outerLeadsIneffectReason,
+        customizedTags);
   }
 
   @Override
