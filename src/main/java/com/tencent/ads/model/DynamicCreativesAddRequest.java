@@ -138,6 +138,12 @@ public class DynamicCreativesAddRequest {
   @SerializedName("union_market_spec")
   private UnionMarketSpec unionMarketSpec = null;
 
+  @SerializedName("program_creative_info")
+  private ProgramCreativeInfo programCreativeInfo = null;
+
+  @SerializedName("dynamic_creative_type")
+  private DynamicCreativeType dynamicCreativeType = null;
+
   @SerializedName("head_click_type")
   private HeadClickType headClickType = null;
 
@@ -909,6 +915,44 @@ public class DynamicCreativesAddRequest {
     this.unionMarketSpec = unionMarketSpec;
   }
 
+  public DynamicCreativesAddRequest programCreativeInfo(ProgramCreativeInfo programCreativeInfo) {
+    this.programCreativeInfo = programCreativeInfo;
+    return this;
+  }
+
+  /**
+   * Get programCreativeInfo
+   *
+   * @return programCreativeInfo
+   */
+  @ApiModelProperty(value = "")
+  public ProgramCreativeInfo getProgramCreativeInfo() {
+    return programCreativeInfo;
+  }
+
+  public void setProgramCreativeInfo(ProgramCreativeInfo programCreativeInfo) {
+    this.programCreativeInfo = programCreativeInfo;
+  }
+
+  public DynamicCreativesAddRequest dynamicCreativeType(DynamicCreativeType dynamicCreativeType) {
+    this.dynamicCreativeType = dynamicCreativeType;
+    return this;
+  }
+
+  /**
+   * Get dynamicCreativeType
+   *
+   * @return dynamicCreativeType
+   */
+  @ApiModelProperty(value = "")
+  public DynamicCreativeType getDynamicCreativeType() {
+    return dynamicCreativeType;
+  }
+
+  public void setDynamicCreativeType(DynamicCreativeType dynamicCreativeType) {
+    this.dynamicCreativeType = dynamicCreativeType;
+  }
+
   public DynamicCreativesAddRequest headClickType(HeadClickType headClickType) {
     this.headClickType = headClickType;
     return this;
@@ -1027,6 +1071,8 @@ public class DynamicCreativesAddRequest {
         && Objects.equals(
             this.enableBreakthroughSiteset, dynamicCreativesAddRequest.enableBreakthroughSiteset)
         && Objects.equals(this.unionMarketSpec, dynamicCreativesAddRequest.unionMarketSpec)
+        && Objects.equals(this.programCreativeInfo, dynamicCreativesAddRequest.programCreativeInfo)
+        && Objects.equals(this.dynamicCreativeType, dynamicCreativesAddRequest.dynamicCreativeType)
         && Objects.equals(this.headClickType, dynamicCreativesAddRequest.headClickType)
         && Objects.equals(this.headClickSpec, dynamicCreativesAddRequest.headClickSpec)
         && Objects.equals(this.accountId, dynamicCreativesAddRequest.accountId);
@@ -1074,6 +1120,8 @@ public class DynamicCreativesAddRequest {
         appGiftPackCode,
         enableBreakthroughSiteset,
         unionMarketSpec,
+        programCreativeInfo,
+        dynamicCreativeType,
         headClickType,
         headClickSpec,
         accountId);
