@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.tencent.ads.api.XijingPageInteractiveApiTest" tests="1" skipped="1" failures="0" errors="0" timestamp="2022-08-04T05:44:28" hostname="VM_147_58_centos" time="0.0">
-  <properties/>
-  <testcase name="xijingPageInteractiveAddTest" classname="com.tencent.ads.api.XijingPageInteractiveApiTest" time="0.0">
-    <skipped/>
-  </testcase>
-  <system-out><![CDATA[]]></system-out>
-  <system-err><![CDATA[]]></system-err>
-</testsuite>

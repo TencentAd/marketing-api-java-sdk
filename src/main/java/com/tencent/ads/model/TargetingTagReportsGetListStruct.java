@@ -903,6 +903,9 @@ public class TargetingTagReportsGetListStruct {
   @SerializedName("video_outer_play75_count")
   private Long videoOuterPlay75Count = null;
 
+  @SerializedName("video_outer_play90_count")
+  private Long videoOuterPlay90Count = null;
+
   @SerializedName("video_outer_play95_count")
   private Long videoOuterPlay95Count = null;
 
@@ -7517,6 +7520,25 @@ public class TargetingTagReportsGetListStruct {
 
   public void setVideoOuterPlay75Count(Long videoOuterPlay75Count) {
     this.videoOuterPlay75Count = videoOuterPlay75Count;
+  }
+
+  public TargetingTagReportsGetListStruct videoOuterPlay90Count(Long videoOuterPlay90Count) {
+    this.videoOuterPlay90Count = videoOuterPlay90Count;
+    return this;
+  }
+
+  /**
+   * Get videoOuterPlay90Count
+   *
+   * @return videoOuterPlay90Count
+   */
+  @ApiModelProperty(value = "")
+  public Long getVideoOuterPlay90Count() {
+    return videoOuterPlay90Count;
+  }
+
+  public void setVideoOuterPlay90Count(Long videoOuterPlay90Count) {
+    this.videoOuterPlay90Count = videoOuterPlay90Count;
   }
 
   public TargetingTagReportsGetListStruct videoOuterPlay95Count(Long videoOuterPlay95Count) {
@@ -14421,6 +14443,8 @@ public class TargetingTagReportsGetListStruct {
         && Objects.equals(
             this.videoOuterPlay75Count, targetingTagReportsGetListStruct.videoOuterPlay75Count)
         && Objects.equals(
+            this.videoOuterPlay90Count, targetingTagReportsGetListStruct.videoOuterPlay90Count)
+        && Objects.equals(
             this.videoOuterPlay95Count, targetingTagReportsGetListStruct.videoOuterPlay95Count)
         && Objects.equals(
             this.videoOuterPlay100Count, targetingTagReportsGetListStruct.videoOuterPlay100Count)
@@ -15336,6 +15360,7 @@ public class TargetingTagReportsGetListStruct {
         videoOuterPlay25Count,
         videoOuterPlay50Count,
         videoOuterPlay75Count,
+        videoOuterPlay90Count,
         videoOuterPlay95Count,
         videoOuterPlay100Count,
         videoOuterPlayTimeCount,

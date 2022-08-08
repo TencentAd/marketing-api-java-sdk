@@ -28,6 +28,12 @@ public class AddImages {
 
   public String description = null;
 
+  public Long resizeWidth = null;
+
+  public Long resizeHeight = null;
+
+  public Long resizeFileSize = null;
+
   public void init() {
     this.tencentAds = TencentAds.getInstance();
     this.tencentAds.init(
@@ -42,7 +48,17 @@ public class AddImages {
     ImagesAddResponseData response =
         tencentAds
             .images()
-            .imagesAdd(accountId, uploadType, signature, file, bytes, imageUsage, description);
+            .imagesAdd(
+                accountId,
+                uploadType,
+                signature,
+                file,
+                bytes,
+                imageUsage,
+                description,
+                resizeWidth,
+                resizeHeight,
+                resizeFileSize);
     return response;
   }
 

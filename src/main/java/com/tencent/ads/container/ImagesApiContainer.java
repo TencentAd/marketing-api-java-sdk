@@ -46,6 +46,9 @@ public class ImagesApiContainer extends ApiContainer {
    * @param bytes (optional)
    * @param imageUsage (optional)
    * @param description (optional)
+   * @param resizeWidth (optional)
+   * @param resizeHeight (optional)
+   * @param resizeFileSize (optional)
    * @return ImagesAddResponse
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
@@ -57,10 +60,23 @@ public class ImagesApiContainer extends ApiContainer {
       File file,
       String bytes,
       String imageUsage,
-      String description)
+      String description,
+      Long resizeWidth,
+      Long resizeHeight,
+      Long resizeFileSize)
       throws ApiException, TencentAdsResponseException {
     ImagesAddResponse resp =
-        api.imagesAdd(accountId, uploadType, signature, file, bytes, imageUsage, description);
+        api.imagesAdd(
+            accountId,
+            uploadType,
+            signature,
+            file,
+            bytes,
+            imageUsage,
+            description,
+            resizeWidth,
+            resizeHeight,
+            resizeFileSize);
     handleResponse(gson.toJson(resp));
     return resp.getData();
   }

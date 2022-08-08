@@ -65,6 +65,9 @@ public class ImagesApi {
    * @param bytes (optional)
    * @param imageUsage (optional)
    * @param description (optional)
+   * @param resizeWidth (optional)
+   * @param resizeHeight (optional)
+   * @param resizeFileSize (optional)
    * @param progressListener Progress listener
    * @param progressRequestListener Progress request listener
    * @return Call to execute
@@ -78,6 +81,9 @@ public class ImagesApi {
       String bytes,
       String imageUsage,
       String description,
+      Long resizeWidth,
+      Long resizeHeight,
+      Long resizeFileSize,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener)
       throws ApiException {
@@ -99,6 +105,9 @@ public class ImagesApi {
     if (bytes != null) localVarFormParams.put("bytes", bytes);
     if (imageUsage != null) localVarFormParams.put("image_usage", imageUsage);
     if (description != null) localVarFormParams.put("description", description);
+    if (resizeWidth != null) localVarFormParams.put("resize_width", resizeWidth);
+    if (resizeHeight != null) localVarFormParams.put("resize_height", resizeHeight);
+    if (resizeFileSize != null) localVarFormParams.put("resize_file_size", resizeFileSize);
 
     final String[] localVarAccepts = {"application/json"};
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
@@ -148,6 +157,9 @@ public class ImagesApi {
       String bytes,
       String imageUsage,
       String description,
+      Long resizeWidth,
+      Long resizeHeight,
+      Long resizeFileSize,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener)
       throws ApiException {
@@ -179,6 +191,9 @@ public class ImagesApi {
             bytes,
             imageUsage,
             description,
+            resizeWidth,
+            resizeHeight,
+            resizeFileSize,
             progressListener,
             progressRequestListener);
     return call;
@@ -194,6 +209,9 @@ public class ImagesApi {
    * @param bytes (optional)
    * @param imageUsage (optional)
    * @param description (optional)
+   * @param resizeWidth (optional)
+   * @param resizeHeight (optional)
+   * @param resizeFileSize (optional)
    * @return ImagesAddResponse
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
@@ -205,11 +223,23 @@ public class ImagesApi {
       File file,
       String bytes,
       String imageUsage,
-      String description)
+      String description,
+      Long resizeWidth,
+      Long resizeHeight,
+      Long resizeFileSize)
       throws ApiException {
     ApiResponse<ImagesAddResponse> resp =
         imagesAddWithHttpInfo(
-            accountId, uploadType, signature, file, bytes, imageUsage, description);
+            accountId,
+            uploadType,
+            signature,
+            file,
+            bytes,
+            imageUsage,
+            description,
+            resizeWidth,
+            resizeHeight,
+            resizeFileSize);
     return resp.getData();
   }
 
@@ -223,6 +253,9 @@ public class ImagesApi {
    * @param bytes (optional)
    * @param imageUsage (optional)
    * @param description (optional)
+   * @param resizeWidth (optional)
+   * @param resizeHeight (optional)
+   * @param resizeFileSize (optional)
    * @return ApiResponse&lt;ImagesAddResponse&gt;
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
@@ -234,11 +267,25 @@ public class ImagesApi {
       File file,
       String bytes,
       String imageUsage,
-      String description)
+      String description,
+      Long resizeWidth,
+      Long resizeHeight,
+      Long resizeFileSize)
       throws ApiException {
     com.squareup.okhttp.Call call =
         imagesAddValidateBeforeCall(
-            accountId, uploadType, signature, file, bytes, imageUsage, description, null, null);
+            accountId,
+            uploadType,
+            signature,
+            file,
+            bytes,
+            imageUsage,
+            description,
+            resizeWidth,
+            resizeHeight,
+            resizeFileSize,
+            null,
+            null);
     Type localVarReturnType = new TypeToken<ImagesAddResponse>() {}.getType();
     return apiClient.execute(call, localVarReturnType);
   }
@@ -253,6 +300,9 @@ public class ImagesApi {
    * @param bytes (optional)
    * @param imageUsage (optional)
    * @param description (optional)
+   * @param resizeWidth (optional)
+   * @param resizeHeight (optional)
+   * @param resizeFileSize (optional)
    * @param callback The callback to be executed when the API call finishes
    * @return The request call
    * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -265,6 +315,9 @@ public class ImagesApi {
       String bytes,
       String imageUsage,
       String description,
+      Long resizeWidth,
+      Long resizeHeight,
+      Long resizeFileSize,
       final ApiCallback<ImagesAddResponse> callback)
       throws ApiException {
 
@@ -298,6 +351,9 @@ public class ImagesApi {
             bytes,
             imageUsage,
             description,
+            resizeWidth,
+            resizeHeight,
+            resizeFileSize,
             progressListener,
             progressRequestListener);
     Type localVarReturnType = new TypeToken<ImagesAddResponse>() {}.getType();
