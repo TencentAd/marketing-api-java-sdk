@@ -27,6 +27,9 @@ public class AdCreativeWechatChannelsSpec {
   @SerializedName("username")
   private String username = null;
 
+  @SerializedName("live_promoted_type")
+  private LivePromotedType livePromotedType = null;
+
   public AdCreativeWechatChannelsSpec exportId(String exportId) {
     this.exportId = exportId;
     return this;
@@ -65,6 +68,25 @@ public class AdCreativeWechatChannelsSpec {
     this.username = username;
   }
 
+  public AdCreativeWechatChannelsSpec livePromotedType(LivePromotedType livePromotedType) {
+    this.livePromotedType = livePromotedType;
+    return this;
+  }
+
+  /**
+   * Get livePromotedType
+   *
+   * @return livePromotedType
+   */
+  @ApiModelProperty(value = "")
+  public LivePromotedType getLivePromotedType() {
+    return livePromotedType;
+  }
+
+  public void setLivePromotedType(LivePromotedType livePromotedType) {
+    this.livePromotedType = livePromotedType;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -75,12 +97,13 @@ public class AdCreativeWechatChannelsSpec {
     }
     AdCreativeWechatChannelsSpec adCreativeWechatChannelsSpec = (AdCreativeWechatChannelsSpec) o;
     return Objects.equals(this.exportId, adCreativeWechatChannelsSpec.exportId)
-        && Objects.equals(this.username, adCreativeWechatChannelsSpec.username);
+        && Objects.equals(this.username, adCreativeWechatChannelsSpec.username)
+        && Objects.equals(this.livePromotedType, adCreativeWechatChannelsSpec.livePromotedType);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(exportId, username);
+    return Objects.hash(exportId, username, livePromotedType);
   }
 
   @Override
