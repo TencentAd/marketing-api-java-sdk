@@ -1209,6 +1209,9 @@ public class TargetingTagReportsGetListStruct {
   @SerializedName("consult_uv_count")
   private Long consultUvCount = null;
 
+  @SerializedName("live_stream_exp_uv")
+  private Long liveStreamExpUv = null;
+
   @SerializedName("scan_code_add_fans_uv")
   private Long scanCodeAddFansUv = null;
 
@@ -1388,6 +1391,12 @@ public class TargetingTagReportsGetListStruct {
 
   @SerializedName("stay_pay_30d_pv")
   private Long stayPay30dPv = null;
+
+  @SerializedName("live_stream_crt_click_cnt")
+  private Long liveStreamCrtClickCnt = null;
+
+  @SerializedName("live_stream_avg_time")
+  private Double liveStreamAvgTime = null;
 
   @SerializedName("live_stream_commodity_shop_bag_clk_pv")
   private Long liveStreamCommodityShopBagClkPv = null;
@@ -9484,6 +9493,25 @@ public class TargetingTagReportsGetListStruct {
     this.consultUvCount = consultUvCount;
   }
 
+  public TargetingTagReportsGetListStruct liveStreamExpUv(Long liveStreamExpUv) {
+    this.liveStreamExpUv = liveStreamExpUv;
+    return this;
+  }
+
+  /**
+   * Get liveStreamExpUv
+   *
+   * @return liveStreamExpUv
+   */
+  @ApiModelProperty(value = "")
+  public Long getLiveStreamExpUv() {
+    return liveStreamExpUv;
+  }
+
+  public void setLiveStreamExpUv(Long liveStreamExpUv) {
+    this.liveStreamExpUv = liveStreamExpUv;
+  }
+
   public TargetingTagReportsGetListStruct scanCodeAddFansUv(Long scanCodeAddFansUv) {
     this.scanCodeAddFansUv = scanCodeAddFansUv;
     return this;
@@ -10622,6 +10650,44 @@ public class TargetingTagReportsGetListStruct {
 
   public void setStayPay30dPv(Long stayPay30dPv) {
     this.stayPay30dPv = stayPay30dPv;
+  }
+
+  public TargetingTagReportsGetListStruct liveStreamCrtClickCnt(Long liveStreamCrtClickCnt) {
+    this.liveStreamCrtClickCnt = liveStreamCrtClickCnt;
+    return this;
+  }
+
+  /**
+   * Get liveStreamCrtClickCnt
+   *
+   * @return liveStreamCrtClickCnt
+   */
+  @ApiModelProperty(value = "")
+  public Long getLiveStreamCrtClickCnt() {
+    return liveStreamCrtClickCnt;
+  }
+
+  public void setLiveStreamCrtClickCnt(Long liveStreamCrtClickCnt) {
+    this.liveStreamCrtClickCnt = liveStreamCrtClickCnt;
+  }
+
+  public TargetingTagReportsGetListStruct liveStreamAvgTime(Double liveStreamAvgTime) {
+    this.liveStreamAvgTime = liveStreamAvgTime;
+    return this;
+  }
+
+  /**
+   * Get liveStreamAvgTime
+   *
+   * @return liveStreamAvgTime
+   */
+  @ApiModelProperty(value = "")
+  public Double getLiveStreamAvgTime() {
+    return liveStreamAvgTime;
+  }
+
+  public void setLiveStreamAvgTime(Double liveStreamAvgTime) {
+    this.liveStreamAvgTime = liveStreamAvgTime;
   }
 
   public TargetingTagReportsGetListStruct liveStreamCommodityShopBagClkPv(
@@ -14660,6 +14726,7 @@ public class TargetingTagReportsGetListStruct {
         && Objects.equals(
             this.miniGameCreateRoleRate, targetingTagReportsGetListStruct.miniGameCreateRoleRate)
         && Objects.equals(this.consultUvCount, targetingTagReportsGetListStruct.consultUvCount)
+        && Objects.equals(this.liveStreamExpUv, targetingTagReportsGetListStruct.liveStreamExpUv)
         && Objects.equals(
             this.scanCodeAddFansUv, targetingTagReportsGetListStruct.scanCodeAddFansUv)
         && Objects.equals(
@@ -14745,6 +14812,10 @@ public class TargetingTagReportsGetListStruct {
         && Objects.equals(this.stayPay7dPv, targetingTagReportsGetListStruct.stayPay7dPv)
         && Objects.equals(this.stayPay15dPv, targetingTagReportsGetListStruct.stayPay15dPv)
         && Objects.equals(this.stayPay30dPv, targetingTagReportsGetListStruct.stayPay30dPv)
+        && Objects.equals(
+            this.liveStreamCrtClickCnt, targetingTagReportsGetListStruct.liveStreamCrtClickCnt)
+        && Objects.equals(
+            this.liveStreamAvgTime, targetingTagReportsGetListStruct.liveStreamAvgTime)
         && Objects.equals(
             this.liveStreamCommodityShopBagClkPv,
             targetingTagReportsGetListStruct.liveStreamCommodityShopBagClkPv)
@@ -15462,6 +15533,7 @@ public class TargetingTagReportsGetListStruct {
         miniGameBfPurchaseD1Arpu,
         miniGameCreateRoleRate,
         consultUvCount,
+        liveStreamExpUv,
         scanCodeAddFansUv,
         scanCodeAddFansCount,
         scanCodeAddFansUvCost,
@@ -15522,6 +15594,8 @@ public class TargetingTagReportsGetListStruct {
         stayPay7dPv,
         stayPay15dPv,
         stayPay30dPv,
+        liveStreamCrtClickCnt,
+        liveStreamAvgTime,
         liveStreamCommodityShopBagClkPv,
         liveStreamCommodityShopListExpPv,
         liveStreamCommodityBubbleClkPv,

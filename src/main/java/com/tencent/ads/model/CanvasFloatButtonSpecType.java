@@ -56,6 +56,15 @@ public class CanvasFloatButtonSpecType {
   @SerializedName("app_download_spec")
   private FloatAppDownloadSpec appDownloadSpec = null;
 
+  @SerializedName("weapp_spec")
+  private FloatWeappSpec weappSpec = null;
+
+  @SerializedName("gh_spec")
+  private FloatGhSpec ghSpec = null;
+
+  @SerializedName("enterprise_wx_spec")
+  private FloatEnterpriseWxSpec enterpriseWxSpec = null;
+
   public CanvasFloatButtonSpecType styleType(Long styleType) {
     this.styleType = styleType;
     return this;
@@ -273,6 +282,63 @@ public class CanvasFloatButtonSpecType {
     this.appDownloadSpec = appDownloadSpec;
   }
 
+  public CanvasFloatButtonSpecType weappSpec(FloatWeappSpec weappSpec) {
+    this.weappSpec = weappSpec;
+    return this;
+  }
+
+  /**
+   * Get weappSpec
+   *
+   * @return weappSpec
+   */
+  @ApiModelProperty(value = "")
+  public FloatWeappSpec getWeappSpec() {
+    return weappSpec;
+  }
+
+  public void setWeappSpec(FloatWeappSpec weappSpec) {
+    this.weappSpec = weappSpec;
+  }
+
+  public CanvasFloatButtonSpecType ghSpec(FloatGhSpec ghSpec) {
+    this.ghSpec = ghSpec;
+    return this;
+  }
+
+  /**
+   * Get ghSpec
+   *
+   * @return ghSpec
+   */
+  @ApiModelProperty(value = "")
+  public FloatGhSpec getGhSpec() {
+    return ghSpec;
+  }
+
+  public void setGhSpec(FloatGhSpec ghSpec) {
+    this.ghSpec = ghSpec;
+  }
+
+  public CanvasFloatButtonSpecType enterpriseWxSpec(FloatEnterpriseWxSpec enterpriseWxSpec) {
+    this.enterpriseWxSpec = enterpriseWxSpec;
+    return this;
+  }
+
+  /**
+   * Get enterpriseWxSpec
+   *
+   * @return enterpriseWxSpec
+   */
+  @ApiModelProperty(value = "")
+  public FloatEnterpriseWxSpec getEnterpriseWxSpec() {
+    return enterpriseWxSpec;
+  }
+
+  public void setEnterpriseWxSpec(FloatEnterpriseWxSpec enterpriseWxSpec) {
+    this.enterpriseWxSpec = enterpriseWxSpec;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -292,7 +358,10 @@ public class CanvasFloatButtonSpecType {
         && Objects.equals(this.disappearType, canvasFloatButtonSpecType.disappearType)
         && Objects.equals(this.forbidPageList, canvasFloatButtonSpecType.forbidPageList)
         && Objects.equals(this.elementType, canvasFloatButtonSpecType.elementType)
-        && Objects.equals(this.appDownloadSpec, canvasFloatButtonSpecType.appDownloadSpec);
+        && Objects.equals(this.appDownloadSpec, canvasFloatButtonSpecType.appDownloadSpec)
+        && Objects.equals(this.weappSpec, canvasFloatButtonSpecType.weappSpec)
+        && Objects.equals(this.ghSpec, canvasFloatButtonSpecType.ghSpec)
+        && Objects.equals(this.enterpriseWxSpec, canvasFloatButtonSpecType.enterpriseWxSpec);
   }
 
   @Override
@@ -308,7 +377,10 @@ public class CanvasFloatButtonSpecType {
         disappearType,
         forbidPageList,
         elementType,
-        appDownloadSpec);
+        appDownloadSpec,
+        weappSpec,
+        ghSpec,
+        enterpriseWxSpec);
   }
 
   @Override

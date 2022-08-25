@@ -113,6 +113,9 @@ public class DynamicCreativesGetListStruct {
   @SerializedName("creative_template_category")
   private String creativeTemplateCategory = null;
 
+  @SerializedName("auto_derived_program_creative_switch")
+  private Boolean autoDerivedProgramCreativeSwitch = null;
+
   @SerializedName("program_creative_info")
   private ProgramCreativeInfo programCreativeInfo = null;
 
@@ -717,6 +720,26 @@ public class DynamicCreativesGetListStruct {
     this.creativeTemplateCategory = creativeTemplateCategory;
   }
 
+  public DynamicCreativesGetListStruct autoDerivedProgramCreativeSwitch(
+      Boolean autoDerivedProgramCreativeSwitch) {
+    this.autoDerivedProgramCreativeSwitch = autoDerivedProgramCreativeSwitch;
+    return this;
+  }
+
+  /**
+   * Get autoDerivedProgramCreativeSwitch
+   *
+   * @return autoDerivedProgramCreativeSwitch
+   */
+  @ApiModelProperty(value = "")
+  public Boolean isAutoDerivedProgramCreativeSwitch() {
+    return autoDerivedProgramCreativeSwitch;
+  }
+
+  public void setAutoDerivedProgramCreativeSwitch(Boolean autoDerivedProgramCreativeSwitch) {
+    this.autoDerivedProgramCreativeSwitch = autoDerivedProgramCreativeSwitch;
+  }
+
   public DynamicCreativesGetListStruct programCreativeInfo(
       ProgramCreativeInfo programCreativeInfo) {
     this.programCreativeInfo = programCreativeInfo;
@@ -847,6 +870,9 @@ public class DynamicCreativesGetListStruct {
         && Objects.equals(
             this.creativeTemplateCategory, dynamicCreativesGetListStruct.creativeTemplateCategory)
         && Objects.equals(
+            this.autoDerivedProgramCreativeSwitch,
+            dynamicCreativesGetListStruct.autoDerivedProgramCreativeSwitch)
+        && Objects.equals(
             this.programCreativeInfo, dynamicCreativesGetListStruct.programCreativeInfo)
         && Objects.equals(
             this.dynamicCreativeType, dynamicCreativesGetListStruct.dynamicCreativeType)
@@ -887,6 +913,7 @@ public class DynamicCreativesGetListStruct {
         creativeTemplateVersionType,
         unionMarketSpec,
         creativeTemplateCategory,
+        autoDerivedProgramCreativeSwitch,
         programCreativeInfo,
         dynamicCreativeType,
         headClickType,

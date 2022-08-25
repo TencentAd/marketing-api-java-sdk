@@ -1428,6 +1428,9 @@ public class HourlyReportsGetListStruct {
   @SerializedName("stay_pay_30d_pv")
   private Long stayPay30dPv = null;
 
+  @SerializedName("live_stream_crt_click_cnt")
+  private Long liveStreamCrtClickCnt = null;
+
   @SerializedName("live_stream_commodity_shop_bag_clk_pv")
   private Long liveStreamCommodityShopBagClkPv = null;
 
@@ -11023,6 +11026,25 @@ public class HourlyReportsGetListStruct {
     this.stayPay30dPv = stayPay30dPv;
   }
 
+  public HourlyReportsGetListStruct liveStreamCrtClickCnt(Long liveStreamCrtClickCnt) {
+    this.liveStreamCrtClickCnt = liveStreamCrtClickCnt;
+    return this;
+  }
+
+  /**
+   * Get liveStreamCrtClickCnt
+   *
+   * @return liveStreamCrtClickCnt
+   */
+  @ApiModelProperty(value = "")
+  public Long getLiveStreamCrtClickCnt() {
+    return liveStreamCrtClickCnt;
+  }
+
+  public void setLiveStreamCrtClickCnt(Long liveStreamCrtClickCnt) {
+    this.liveStreamCrtClickCnt = liveStreamCrtClickCnt;
+  }
+
   public HourlyReportsGetListStruct liveStreamCommodityShopBagClkPv(
       Long liveStreamCommodityShopBagClkPv) {
     this.liveStreamCommodityShopBagClkPv = liveStreamCommodityShopBagClkPv;
@@ -15957,6 +15979,8 @@ public class HourlyReportsGetListStruct {
         && Objects.equals(this.stayPay15dPv, hourlyReportsGetListStruct.stayPay15dPv)
         && Objects.equals(this.stayPay30dPv, hourlyReportsGetListStruct.stayPay30dPv)
         && Objects.equals(
+            this.liveStreamCrtClickCnt, hourlyReportsGetListStruct.liveStreamCrtClickCnt)
+        && Objects.equals(
             this.liveStreamCommodityShopBagClkPv,
             hourlyReportsGetListStruct.liveStreamCommodityShopBagClkPv)
         && Objects.equals(
@@ -16810,6 +16834,7 @@ public class HourlyReportsGetListStruct {
         stayPay7dPv,
         stayPay15dPv,
         stayPay30dPv,
+        liveStreamCrtClickCnt,
         liveStreamCommodityShopBagClkPv,
         liveStreamCommodityShopListExpPv,
         liveStreamCommodityBubbleClkPv,

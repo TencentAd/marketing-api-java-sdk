@@ -138,6 +138,9 @@ public class DynamicCreativesAddRequest {
   @SerializedName("union_market_spec")
   private UnionMarketSpec unionMarketSpec = null;
 
+  @SerializedName("auto_derived_program_creative_switch")
+  private Boolean autoDerivedProgramCreativeSwitch = null;
+
   @SerializedName("program_creative_info")
   private ProgramCreativeInfo programCreativeInfo = null;
 
@@ -915,6 +918,26 @@ public class DynamicCreativesAddRequest {
     this.unionMarketSpec = unionMarketSpec;
   }
 
+  public DynamicCreativesAddRequest autoDerivedProgramCreativeSwitch(
+      Boolean autoDerivedProgramCreativeSwitch) {
+    this.autoDerivedProgramCreativeSwitch = autoDerivedProgramCreativeSwitch;
+    return this;
+  }
+
+  /**
+   * Get autoDerivedProgramCreativeSwitch
+   *
+   * @return autoDerivedProgramCreativeSwitch
+   */
+  @ApiModelProperty(value = "")
+  public Boolean isAutoDerivedProgramCreativeSwitch() {
+    return autoDerivedProgramCreativeSwitch;
+  }
+
+  public void setAutoDerivedProgramCreativeSwitch(Boolean autoDerivedProgramCreativeSwitch) {
+    this.autoDerivedProgramCreativeSwitch = autoDerivedProgramCreativeSwitch;
+  }
+
   public DynamicCreativesAddRequest programCreativeInfo(ProgramCreativeInfo programCreativeInfo) {
     this.programCreativeInfo = programCreativeInfo;
     return this;
@@ -1071,6 +1094,9 @@ public class DynamicCreativesAddRequest {
         && Objects.equals(
             this.enableBreakthroughSiteset, dynamicCreativesAddRequest.enableBreakthroughSiteset)
         && Objects.equals(this.unionMarketSpec, dynamicCreativesAddRequest.unionMarketSpec)
+        && Objects.equals(
+            this.autoDerivedProgramCreativeSwitch,
+            dynamicCreativesAddRequest.autoDerivedProgramCreativeSwitch)
         && Objects.equals(this.programCreativeInfo, dynamicCreativesAddRequest.programCreativeInfo)
         && Objects.equals(this.dynamicCreativeType, dynamicCreativesAddRequest.dynamicCreativeType)
         && Objects.equals(this.headClickType, dynamicCreativesAddRequest.headClickType)
@@ -1120,6 +1146,7 @@ public class DynamicCreativesAddRequest {
         appGiftPackCode,
         enableBreakthroughSiteset,
         unionMarketSpec,
+        autoDerivedProgramCreativeSwitch,
         programCreativeInfo,
         dynamicCreativeType,
         headClickType,

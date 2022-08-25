@@ -22,7 +22,13 @@ import java.io.IOException;
 /** 悬浮按钮内组件类型 */
 @JsonAdapter(CanvasFloatElementType.Adapter.class)
 public enum CanvasFloatElementType {
-  APP_DOWNLOAD("APP_DOWNLOAD");
+  APP_DOWNLOAD("APP_DOWNLOAD"),
+
+  WEAPP("WEAPP"),
+
+  GH("GH"),
+
+  ENTERPRISE_WX("ENTERPRISE_WX");
 
   private String value;
 

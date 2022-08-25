@@ -120,6 +120,9 @@ public class DynamicCreativesUpdateRequest {
   @SerializedName("union_market_spec")
   private UnionMarketSpec unionMarketSpec = null;
 
+  @SerializedName("auto_derived_program_creative_switch")
+  private Boolean autoDerivedProgramCreativeSwitch = null;
+
   @SerializedName("head_click_type")
   private HeadClickType headClickType = null;
 
@@ -769,6 +772,26 @@ public class DynamicCreativesUpdateRequest {
     this.unionMarketSpec = unionMarketSpec;
   }
 
+  public DynamicCreativesUpdateRequest autoDerivedProgramCreativeSwitch(
+      Boolean autoDerivedProgramCreativeSwitch) {
+    this.autoDerivedProgramCreativeSwitch = autoDerivedProgramCreativeSwitch;
+    return this;
+  }
+
+  /**
+   * Get autoDerivedProgramCreativeSwitch
+   *
+   * @return autoDerivedProgramCreativeSwitch
+   */
+  @ApiModelProperty(value = "")
+  public Boolean isAutoDerivedProgramCreativeSwitch() {
+    return autoDerivedProgramCreativeSwitch;
+  }
+
+  public void setAutoDerivedProgramCreativeSwitch(Boolean autoDerivedProgramCreativeSwitch) {
+    this.autoDerivedProgramCreativeSwitch = autoDerivedProgramCreativeSwitch;
+  }
+
   public DynamicCreativesUpdateRequest headClickType(HeadClickType headClickType) {
     this.headClickType = headClickType;
     return this;
@@ -879,6 +902,9 @@ public class DynamicCreativesUpdateRequest {
         && Objects.equals(this.countdownSwitch, dynamicCreativesUpdateRequest.countdownSwitch)
         && Objects.equals(this.appGiftPackCode, dynamicCreativesUpdateRequest.appGiftPackCode)
         && Objects.equals(this.unionMarketSpec, dynamicCreativesUpdateRequest.unionMarketSpec)
+        && Objects.equals(
+            this.autoDerivedProgramCreativeSwitch,
+            dynamicCreativesUpdateRequest.autoDerivedProgramCreativeSwitch)
         && Objects.equals(this.headClickType, dynamicCreativesUpdateRequest.headClickType)
         && Objects.equals(this.headClickSpec, dynamicCreativesUpdateRequest.headClickSpec)
         && Objects.equals(this.accountId, dynamicCreativesUpdateRequest.accountId);
@@ -920,6 +946,7 @@ public class DynamicCreativesUpdateRequest {
         countdownSwitch,
         appGiftPackCode,
         unionMarketSpec,
+        autoDerivedProgramCreativeSwitch,
         headClickType,
         headClickSpec,
         accountId);
