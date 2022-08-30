@@ -33,6 +33,9 @@ public class DeepConversionSpec {
   @SerializedName("deep_conversion_worth_advanced_spec")
   private DeepConversionWorthAdvancedSpec deepConversionWorthAdvancedSpec = null;
 
+  @SerializedName("deep_conversion_behavior_advanced_spec")
+  private DeepConversionBehaviorAdvancedSpec deepConversionBehaviorAdvancedSpec = null;
+
   public DeepConversionSpec deepConversionType(DeepConversionType deepConversionType) {
     this.deepConversionType = deepConversionType;
     return this;
@@ -113,6 +116,27 @@ public class DeepConversionSpec {
     this.deepConversionWorthAdvancedSpec = deepConversionWorthAdvancedSpec;
   }
 
+  public DeepConversionSpec deepConversionBehaviorAdvancedSpec(
+      DeepConversionBehaviorAdvancedSpec deepConversionBehaviorAdvancedSpec) {
+    this.deepConversionBehaviorAdvancedSpec = deepConversionBehaviorAdvancedSpec;
+    return this;
+  }
+
+  /**
+   * Get deepConversionBehaviorAdvancedSpec
+   *
+   * @return deepConversionBehaviorAdvancedSpec
+   */
+  @ApiModelProperty(value = "")
+  public DeepConversionBehaviorAdvancedSpec getDeepConversionBehaviorAdvancedSpec() {
+    return deepConversionBehaviorAdvancedSpec;
+  }
+
+  public void setDeepConversionBehaviorAdvancedSpec(
+      DeepConversionBehaviorAdvancedSpec deepConversionBehaviorAdvancedSpec) {
+    this.deepConversionBehaviorAdvancedSpec = deepConversionBehaviorAdvancedSpec;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -128,7 +152,10 @@ public class DeepConversionSpec {
         && Objects.equals(this.deepConversionWorthSpec, deepConversionSpec.deepConversionWorthSpec)
         && Objects.equals(
             this.deepConversionWorthAdvancedSpec,
-            deepConversionSpec.deepConversionWorthAdvancedSpec);
+            deepConversionSpec.deepConversionWorthAdvancedSpec)
+        && Objects.equals(
+            this.deepConversionBehaviorAdvancedSpec,
+            deepConversionSpec.deepConversionBehaviorAdvancedSpec);
   }
 
   @Override
@@ -137,7 +164,8 @@ public class DeepConversionSpec {
         deepConversionType,
         deepConversionBehaviorSpec,
         deepConversionWorthSpec,
-        deepConversionWorthAdvancedSpec);
+        deepConversionWorthAdvancedSpec,
+        deepConversionBehaviorAdvancedSpec);
   }
 
   @Override
