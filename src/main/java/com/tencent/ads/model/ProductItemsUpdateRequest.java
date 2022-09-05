@@ -53,7 +53,7 @@ public class ProductItemsUpdateRequest {
   private Long expirationTime = null;
 
   @SerializedName("product_sale_status")
-  private ProductSaleStatus productSaleStatus = null;
+  private ProductSaleOnlineStatus productSaleStatus = null;
 
   @SerializedName("product_visibility")
   private ProductVisibility productVisibility = null;
@@ -267,7 +267,7 @@ public class ProductItemsUpdateRequest {
     this.expirationTime = expirationTime;
   }
 
-  public ProductItemsUpdateRequest productSaleStatus(ProductSaleStatus productSaleStatus) {
+  public ProductItemsUpdateRequest productSaleStatus(ProductSaleOnlineStatus productSaleStatus) {
     this.productSaleStatus = productSaleStatus;
     return this;
   }
@@ -278,11 +278,11 @@ public class ProductItemsUpdateRequest {
    * @return productSaleStatus
    */
   @ApiModelProperty(value = "")
-  public ProductSaleStatus getProductSaleStatus() {
+  public ProductSaleOnlineStatus getProductSaleStatus() {
     return productSaleStatus;
   }
 
-  public void setProductSaleStatus(ProductSaleStatus productSaleStatus) {
+  public void setProductSaleStatus(ProductSaleOnlineStatus productSaleStatus) {
     this.productSaleStatus = productSaleStatus;
   }
 

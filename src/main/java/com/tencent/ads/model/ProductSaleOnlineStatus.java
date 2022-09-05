@@ -19,18 +19,19 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-/** 商品在线状态 */
-@JsonAdapter(ProductSaleStatus.Adapter.class)
-public enum ProductSaleStatus {
-  UNKNOWN("PRODUCT_SALE_STATUS_UNKNOWN"),
-
+/**
+ * 商品销售状态，详见 &lt;a href&#x3D;&#39;sale_status&#39;
+ * target&#x3D;&#39;_blank&#39;&gt;[商品销售状态]&lt;/a&gt;
+ */
+@JsonAdapter(ProductSaleOnlineStatus.Adapter.class)
+public enum ProductSaleOnlineStatus {
   ONLINE("PRODUCT_SALE_STATUS_ONLINE"),
 
   OFFLINE("PRODUCT_SALE_STATUS_OFFLINE");
 
   private String value;
 
-  ProductSaleStatus(String value) {
+  ProductSaleOnlineStatus(String value) {
     this.value = value;
   }
 
@@ -43,8 +44,8 @@ public enum ProductSaleStatus {
     return String.valueOf(value);
   }
 
-  public static ProductSaleStatus fromValue(String text) {
-    for (ProductSaleStatus b : ProductSaleStatus.values()) {
+  public static ProductSaleOnlineStatus fromValue(String text) {
+    for (ProductSaleOnlineStatus b : ProductSaleOnlineStatus.values()) {
       if (String.valueOf(b.value).equals(text)) {
         return b;
       }
@@ -52,17 +53,17 @@ public enum ProductSaleStatus {
     return null;
   }
 
-  public static class Adapter extends TypeAdapter<ProductSaleStatus> {
+  public static class Adapter extends TypeAdapter<ProductSaleOnlineStatus> {
     @Override
-    public void write(final JsonWriter jsonWriter, final ProductSaleStatus enumeration)
+    public void write(final JsonWriter jsonWriter, final ProductSaleOnlineStatus enumeration)
         throws IOException {
       jsonWriter.value(enumeration.getValue());
     }
 
     @Override
-    public ProductSaleStatus read(final JsonReader jsonReader) throws IOException {
+    public ProductSaleOnlineStatus read(final JsonReader jsonReader) throws IOException {
       String value = jsonReader.nextString();
-      return ProductSaleStatus.fromValue(String.valueOf(value));
+      return ProductSaleOnlineStatus.fromValue(String.valueOf(value));
     }
   }
 }

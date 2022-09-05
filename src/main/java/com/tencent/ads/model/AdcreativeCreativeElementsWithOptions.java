@@ -191,6 +191,9 @@ public class AdcreativeCreativeElementsWithOptions {
   @SerializedName("wechat_channels_spec")
   private AdCreativeWechatChannelsSpec wechatChannelsSpec = null;
 
+  @SerializedName("finder_object_visibility")
+  private Boolean finderObjectVisibility = null;
+
   public AdcreativeCreativeElementsWithOptions image(String image) {
     this.image = image;
     return this;
@@ -1329,6 +1332,26 @@ public class AdcreativeCreativeElementsWithOptions {
     this.wechatChannelsSpec = wechatChannelsSpec;
   }
 
+  public AdcreativeCreativeElementsWithOptions finderObjectVisibility(
+      Boolean finderObjectVisibility) {
+    this.finderObjectVisibility = finderObjectVisibility;
+    return this;
+  }
+
+  /**
+   * Get finderObjectVisibility
+   *
+   * @return finderObjectVisibility
+   */
+  @ApiModelProperty(value = "")
+  public Boolean isFinderObjectVisibility() {
+    return finderObjectVisibility;
+  }
+
+  public void setFinderObjectVisibility(Boolean finderObjectVisibility) {
+    this.finderObjectVisibility = finderObjectVisibility;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -1409,7 +1432,10 @@ public class AdcreativeCreativeElementsWithOptions {
         && Objects.equals(this.rightCanvas, adcreativeCreativeElementsWithOptions.rightCanvas)
         && Objects.equals(this.wegameInfoSpec, adcreativeCreativeElementsWithOptions.wegameInfoSpec)
         && Objects.equals(
-            this.wechatChannelsSpec, adcreativeCreativeElementsWithOptions.wechatChannelsSpec);
+            this.wechatChannelsSpec, adcreativeCreativeElementsWithOptions.wechatChannelsSpec)
+        && Objects.equals(
+            this.finderObjectVisibility,
+            adcreativeCreativeElementsWithOptions.finderObjectVisibility);
   }
 
   @Override
@@ -1470,7 +1496,8 @@ public class AdcreativeCreativeElementsWithOptions {
         leftCanvas,
         rightCanvas,
         wegameInfoSpec,
-        wechatChannelsSpec);
+        wechatChannelsSpec,
+        finderObjectVisibility);
   }
 
   @Override

@@ -170,6 +170,9 @@ public class AdcreativeCreativeElementsMp {
   @SerializedName("wegame_info_spec")
   private WegameInfoSpec wegameInfoSpec = null;
 
+  @SerializedName("finder_object_visibility")
+  private Boolean finderObjectVisibility = null;
+
   public AdcreativeCreativeElementsMp image(String image) {
     this.image = image;
     return this;
@@ -1138,6 +1141,25 @@ public class AdcreativeCreativeElementsMp {
     this.wegameInfoSpec = wegameInfoSpec;
   }
 
+  public AdcreativeCreativeElementsMp finderObjectVisibility(Boolean finderObjectVisibility) {
+    this.finderObjectVisibility = finderObjectVisibility;
+    return this;
+  }
+
+  /**
+   * Get finderObjectVisibility
+   *
+   * @return finderObjectVisibility
+   */
+  @ApiModelProperty(value = "")
+  public Boolean isFinderObjectVisibility() {
+    return finderObjectVisibility;
+  }
+
+  public void setFinderObjectVisibility(Boolean finderObjectVisibility) {
+    this.finderObjectVisibility = finderObjectVisibility;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -1197,7 +1219,9 @@ public class AdcreativeCreativeElementsMp {
         && Objects.equals(this.rightCanvas, adcreativeCreativeElementsMp.rightCanvas)
         && Objects.equals(this.floatingZoneStruct, adcreativeCreativeElementsMp.floatingZoneStruct)
         && Objects.equals(this.canvasShareImage, adcreativeCreativeElementsMp.canvasShareImage)
-        && Objects.equals(this.wegameInfoSpec, adcreativeCreativeElementsMp.wegameInfoSpec);
+        && Objects.equals(this.wegameInfoSpec, adcreativeCreativeElementsMp.wegameInfoSpec)
+        && Objects.equals(
+            this.finderObjectVisibility, adcreativeCreativeElementsMp.finderObjectVisibility);
   }
 
   @Override
@@ -1251,7 +1275,8 @@ public class AdcreativeCreativeElementsMp {
         rightCanvas,
         floatingZoneStruct,
         canvasShareImage,
-        wegameInfoSpec);
+        wegameInfoSpec,
+        finderObjectVisibility);
   }
 
   @Override

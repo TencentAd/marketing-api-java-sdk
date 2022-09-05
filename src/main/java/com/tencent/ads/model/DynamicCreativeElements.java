@@ -167,6 +167,9 @@ public class DynamicCreativeElements {
   @SerializedName("wegame_info_spec")
   private WegameInfoSpec wegameInfoSpec = null;
 
+  @SerializedName("finder_object_visibility")
+  private Boolean finderObjectVisibility = null;
+
   public DynamicCreativeElements image(String image) {
     this.image = image;
     return this;
@@ -1162,6 +1165,25 @@ public class DynamicCreativeElements {
     this.wegameInfoSpec = wegameInfoSpec;
   }
 
+  public DynamicCreativeElements finderObjectVisibility(Boolean finderObjectVisibility) {
+    this.finderObjectVisibility = finderObjectVisibility;
+    return this;
+  }
+
+  /**
+   * Get finderObjectVisibility
+   *
+   * @return finderObjectVisibility
+   */
+  @ApiModelProperty(value = "")
+  public Boolean isFinderObjectVisibility() {
+    return finderObjectVisibility;
+  }
+
+  public void setFinderObjectVisibility(Boolean finderObjectVisibility) {
+    this.finderObjectVisibility = finderObjectVisibility;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -1220,7 +1242,9 @@ public class DynamicCreativeElements {
         && Objects.equals(this.livingDescStruct, dynamicCreativeElements.livingDescStruct)
         && Objects.equals(this.floatingZoneStruct, dynamicCreativeElements.floatingZoneStruct)
         && Objects.equals(this.canvasShareImage, dynamicCreativeElements.canvasShareImage)
-        && Objects.equals(this.wegameInfoSpec, dynamicCreativeElements.wegameInfoSpec);
+        && Objects.equals(this.wegameInfoSpec, dynamicCreativeElements.wegameInfoSpec)
+        && Objects.equals(
+            this.finderObjectVisibility, dynamicCreativeElements.finderObjectVisibility);
   }
 
   @Override
@@ -1273,7 +1297,8 @@ public class DynamicCreativeElements {
         livingDescStruct,
         floatingZoneStruct,
         canvasShareImage,
-        wegameInfoSpec);
+        wegameInfoSpec,
+        finderObjectVisibility);
   }
 
   @Override
