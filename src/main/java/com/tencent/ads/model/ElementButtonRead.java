@@ -27,6 +27,9 @@ public class ElementButtonRead {
   @SerializedName("url")
   private String url = null;
 
+  @SerializedName("link_spec")
+  private LinkSpec linkSpec = null;
+
   @SerializedName("app_ios_spec")
   private AppIosSpec appIosSpec = null;
 
@@ -96,6 +99,25 @@ public class ElementButtonRead {
 
   public void setUrl(String url) {
     this.url = url;
+  }
+
+  public ElementButtonRead linkSpec(LinkSpec linkSpec) {
+    this.linkSpec = linkSpec;
+    return this;
+  }
+
+  /**
+   * Get linkSpec
+   *
+   * @return linkSpec
+   */
+  @ApiModelProperty(value = "")
+  public LinkSpec getLinkSpec() {
+    return linkSpec;
+  }
+
+  public void setLinkSpec(LinkSpec linkSpec) {
+    this.linkSpec = linkSpec;
   }
 
   public ElementButtonRead appIosSpec(AppIosSpec appIosSpec) {
@@ -318,6 +340,7 @@ public class ElementButtonRead {
     ElementButtonRead elementButtonRead = (ElementButtonRead) o;
     return Objects.equals(this.title, elementButtonRead.title)
         && Objects.equals(this.url, elementButtonRead.url)
+        && Objects.equals(this.linkSpec, elementButtonRead.linkSpec)
         && Objects.equals(this.appIosSpec, elementButtonRead.appIosSpec)
         && Objects.equals(this.appAndroidSpec, elementButtonRead.appAndroidSpec)
         && Objects.equals(this.miniProgramSpec, elementButtonRead.miniProgramSpec)
@@ -336,6 +359,7 @@ public class ElementButtonRead {
     return Objects.hash(
         title,
         url,
+        linkSpec,
         appIosSpec,
         appAndroidSpec,
         miniProgramSpec,

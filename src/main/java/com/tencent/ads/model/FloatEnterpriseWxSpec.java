@@ -21,8 +21,8 @@ import java.util.Objects;
 /** 添加商家微信组件元素 */
 @ApiModel(description = "添加商家微信组件元素")
 public class FloatEnterpriseWxSpec {
-  @SerializedName("crop_id")
-  private String cropId = null;
+  @SerializedName("corp_id")
+  private String corpId = null;
 
   @SerializedName("group_id")
   private Long groupId = null;
@@ -39,23 +39,23 @@ public class FloatEnterpriseWxSpec {
   @SerializedName("btn_font_type")
   private Long btnFontType = null;
 
-  public FloatEnterpriseWxSpec cropId(String cropId) {
-    this.cropId = cropId;
+  public FloatEnterpriseWxSpec corpId(String corpId) {
+    this.corpId = corpId;
     return this;
   }
 
   /**
-   * Get cropId
+   * Get corpId
    *
-   * @return cropId
+   * @return corpId
    */
   @ApiModelProperty(value = "")
-  public String getCropId() {
-    return cropId;
+  public String getCorpId() {
+    return corpId;
   }
 
-  public void setCropId(String cropId) {
-    this.cropId = cropId;
+  public void setCorpId(String corpId) {
+    this.corpId = corpId;
   }
 
   public FloatEnterpriseWxSpec groupId(Long groupId) {
@@ -162,7 +162,7 @@ public class FloatEnterpriseWxSpec {
       return false;
     }
     FloatEnterpriseWxSpec floatEnterpriseWxSpec = (FloatEnterpriseWxSpec) o;
-    return Objects.equals(this.cropId, floatEnterpriseWxSpec.cropId)
+    return Objects.equals(this.corpId, floatEnterpriseWxSpec.corpId)
         && Objects.equals(this.groupId, floatEnterpriseWxSpec.groupId)
         && Objects.equals(this.btnTitle, floatEnterpriseWxSpec.btnTitle)
         && Objects.equals(this.fontColor, floatEnterpriseWxSpec.fontColor)
@@ -172,7 +172,7 @@ public class FloatEnterpriseWxSpec {
 
   @Override
   public int hashCode() {
-    return Objects.hash(cropId, groupId, btnTitle, fontColor, btnBgColorTheme, btnFontType);
+    return Objects.hash(corpId, groupId, btnTitle, fontColor, btnBgColorTheme, btnFontType);
   }
 
   @Override

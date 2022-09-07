@@ -27,6 +27,12 @@ public class LinkSpec {
   @SerializedName("url")
   private String url = null;
 
+  @SerializedName("deep_link_android_spec")
+  private DeepLinkAppAndroidSpec deepLinkAndroidSpec = null;
+
+  @SerializedName("deep_link_ios_spec")
+  private DeepLinkAppIosSpec deepLinkIosSpec = null;
+
   public LinkSpec title(String title) {
     this.title = title;
     return this;
@@ -65,6 +71,44 @@ public class LinkSpec {
     this.url = url;
   }
 
+  public LinkSpec deepLinkAndroidSpec(DeepLinkAppAndroidSpec deepLinkAndroidSpec) {
+    this.deepLinkAndroidSpec = deepLinkAndroidSpec;
+    return this;
+  }
+
+  /**
+   * Get deepLinkAndroidSpec
+   *
+   * @return deepLinkAndroidSpec
+   */
+  @ApiModelProperty(value = "")
+  public DeepLinkAppAndroidSpec getDeepLinkAndroidSpec() {
+    return deepLinkAndroidSpec;
+  }
+
+  public void setDeepLinkAndroidSpec(DeepLinkAppAndroidSpec deepLinkAndroidSpec) {
+    this.deepLinkAndroidSpec = deepLinkAndroidSpec;
+  }
+
+  public LinkSpec deepLinkIosSpec(DeepLinkAppIosSpec deepLinkIosSpec) {
+    this.deepLinkIosSpec = deepLinkIosSpec;
+    return this;
+  }
+
+  /**
+   * Get deepLinkIosSpec
+   *
+   * @return deepLinkIosSpec
+   */
+  @ApiModelProperty(value = "")
+  public DeepLinkAppIosSpec getDeepLinkIosSpec() {
+    return deepLinkIosSpec;
+  }
+
+  public void setDeepLinkIosSpec(DeepLinkAppIosSpec deepLinkIosSpec) {
+    this.deepLinkIosSpec = deepLinkIosSpec;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -74,12 +118,15 @@ public class LinkSpec {
       return false;
     }
     LinkSpec linkSpec = (LinkSpec) o;
-    return Objects.equals(this.title, linkSpec.title) && Objects.equals(this.url, linkSpec.url);
+    return Objects.equals(this.title, linkSpec.title)
+        && Objects.equals(this.url, linkSpec.url)
+        && Objects.equals(this.deepLinkAndroidSpec, linkSpec.deepLinkAndroidSpec)
+        && Objects.equals(this.deepLinkIosSpec, linkSpec.deepLinkIosSpec);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(title, url);
+    return Objects.hash(title, url, deepLinkAndroidSpec, deepLinkIosSpec);
   }
 
   @Override
