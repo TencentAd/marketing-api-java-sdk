@@ -76,6 +76,12 @@ public class ConversionsAddRequest {
   @SerializedName("attribution_window")
   private Long attributionWindow = null;
 
+  @SerializedName("deep_behavior_advanced_goal")
+  private IntOptimizationGoal deepBehaviorAdvancedGoal = null;
+
+  @SerializedName("deep_optimization_goal_type")
+  private DeepOptimizationGoalType deepOptimizationGoalType = null;
+
   public ConversionsAddRequest accountId(Long accountId) {
     this.accountId = accountId;
     return this;
@@ -440,6 +446,46 @@ public class ConversionsAddRequest {
     this.attributionWindow = attributionWindow;
   }
 
+  public ConversionsAddRequest deepBehaviorAdvancedGoal(
+      IntOptimizationGoal deepBehaviorAdvancedGoal) {
+    this.deepBehaviorAdvancedGoal = deepBehaviorAdvancedGoal;
+    return this;
+  }
+
+  /**
+   * Get deepBehaviorAdvancedGoal
+   *
+   * @return deepBehaviorAdvancedGoal
+   */
+  @ApiModelProperty(value = "")
+  public IntOptimizationGoal getDeepBehaviorAdvancedGoal() {
+    return deepBehaviorAdvancedGoal;
+  }
+
+  public void setDeepBehaviorAdvancedGoal(IntOptimizationGoal deepBehaviorAdvancedGoal) {
+    this.deepBehaviorAdvancedGoal = deepBehaviorAdvancedGoal;
+  }
+
+  public ConversionsAddRequest deepOptimizationGoalType(
+      DeepOptimizationGoalType deepOptimizationGoalType) {
+    this.deepOptimizationGoalType = deepOptimizationGoalType;
+    return this;
+  }
+
+  /**
+   * Get deepOptimizationGoalType
+   *
+   * @return deepOptimizationGoalType
+   */
+  @ApiModelProperty(value = "")
+  public DeepOptimizationGoalType getDeepOptimizationGoalType() {
+    return deepOptimizationGoalType;
+  }
+
+  public void setDeepOptimizationGoalType(DeepOptimizationGoalType deepOptimizationGoalType) {
+    this.deepOptimizationGoalType = deepOptimizationGoalType;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -470,7 +516,11 @@ public class ConversionsAddRequest {
         && Objects.equals(this.userActionSetId, conversionsAddRequest.userActionSetId)
         && Objects.equals(this.conversionLinkId, conversionsAddRequest.conversionLinkId)
         && Objects.equals(this.impressionFeedbackUrl, conversionsAddRequest.impressionFeedbackUrl)
-        && Objects.equals(this.attributionWindow, conversionsAddRequest.attributionWindow);
+        && Objects.equals(this.attributionWindow, conversionsAddRequest.attributionWindow)
+        && Objects.equals(
+            this.deepBehaviorAdvancedGoal, conversionsAddRequest.deepBehaviorAdvancedGoal)
+        && Objects.equals(
+            this.deepOptimizationGoalType, conversionsAddRequest.deepOptimizationGoalType);
   }
 
   @Override
@@ -494,7 +544,9 @@ public class ConversionsAddRequest {
         userActionSetId,
         conversionLinkId,
         impressionFeedbackUrl,
-        attributionWindow);
+        attributionWindow,
+        deepBehaviorAdvancedGoal,
+        deepOptimizationGoalType);
   }
 
   @Override

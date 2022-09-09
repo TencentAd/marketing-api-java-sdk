@@ -90,6 +90,18 @@ public class ConversionsGetListStruct {
   @SerializedName("attribution_window")
   private Long attributionWindow = null;
 
+  @SerializedName("deep_behavior_advanced_goal")
+  private IntOptimizationGoal deepBehaviorAdvancedGoal = null;
+
+  @SerializedName("deep_behavior_advanced_goal_min_price")
+  private Long deepBehaviorAdvancedGoalMinPrice = null;
+
+  @SerializedName("deep_behavior_advanced_goal_max_price")
+  private Long deepBehaviorAdvancedGoalMaxPrice = null;
+
+  @SerializedName("deep_optimization_goal_type")
+  private DeepOptimizationGoalType deepOptimizationGoalType = null;
+
   public ConversionsGetListStruct conversionId(Long conversionId) {
     this.conversionId = conversionId;
     return this;
@@ -530,6 +542,86 @@ public class ConversionsGetListStruct {
     this.attributionWindow = attributionWindow;
   }
 
+  public ConversionsGetListStruct deepBehaviorAdvancedGoal(
+      IntOptimizationGoal deepBehaviorAdvancedGoal) {
+    this.deepBehaviorAdvancedGoal = deepBehaviorAdvancedGoal;
+    return this;
+  }
+
+  /**
+   * Get deepBehaviorAdvancedGoal
+   *
+   * @return deepBehaviorAdvancedGoal
+   */
+  @ApiModelProperty(value = "")
+  public IntOptimizationGoal getDeepBehaviorAdvancedGoal() {
+    return deepBehaviorAdvancedGoal;
+  }
+
+  public void setDeepBehaviorAdvancedGoal(IntOptimizationGoal deepBehaviorAdvancedGoal) {
+    this.deepBehaviorAdvancedGoal = deepBehaviorAdvancedGoal;
+  }
+
+  public ConversionsGetListStruct deepBehaviorAdvancedGoalMinPrice(
+      Long deepBehaviorAdvancedGoalMinPrice) {
+    this.deepBehaviorAdvancedGoalMinPrice = deepBehaviorAdvancedGoalMinPrice;
+    return this;
+  }
+
+  /**
+   * Get deepBehaviorAdvancedGoalMinPrice
+   *
+   * @return deepBehaviorAdvancedGoalMinPrice
+   */
+  @ApiModelProperty(value = "")
+  public Long getDeepBehaviorAdvancedGoalMinPrice() {
+    return deepBehaviorAdvancedGoalMinPrice;
+  }
+
+  public void setDeepBehaviorAdvancedGoalMinPrice(Long deepBehaviorAdvancedGoalMinPrice) {
+    this.deepBehaviorAdvancedGoalMinPrice = deepBehaviorAdvancedGoalMinPrice;
+  }
+
+  public ConversionsGetListStruct deepBehaviorAdvancedGoalMaxPrice(
+      Long deepBehaviorAdvancedGoalMaxPrice) {
+    this.deepBehaviorAdvancedGoalMaxPrice = deepBehaviorAdvancedGoalMaxPrice;
+    return this;
+  }
+
+  /**
+   * Get deepBehaviorAdvancedGoalMaxPrice
+   *
+   * @return deepBehaviorAdvancedGoalMaxPrice
+   */
+  @ApiModelProperty(value = "")
+  public Long getDeepBehaviorAdvancedGoalMaxPrice() {
+    return deepBehaviorAdvancedGoalMaxPrice;
+  }
+
+  public void setDeepBehaviorAdvancedGoalMaxPrice(Long deepBehaviorAdvancedGoalMaxPrice) {
+    this.deepBehaviorAdvancedGoalMaxPrice = deepBehaviorAdvancedGoalMaxPrice;
+  }
+
+  public ConversionsGetListStruct deepOptimizationGoalType(
+      DeepOptimizationGoalType deepOptimizationGoalType) {
+    this.deepOptimizationGoalType = deepOptimizationGoalType;
+    return this;
+  }
+
+  /**
+   * Get deepOptimizationGoalType
+   *
+   * @return deepOptimizationGoalType
+   */
+  @ApiModelProperty(value = "")
+  public DeepOptimizationGoalType getDeepOptimizationGoalType() {
+    return deepOptimizationGoalType;
+  }
+
+  public void setDeepOptimizationGoalType(DeepOptimizationGoalType deepOptimizationGoalType) {
+    this.deepOptimizationGoalType = deepOptimizationGoalType;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -567,7 +659,17 @@ public class ConversionsGetListStruct {
         && Objects.equals(this.conversionLinkId, conversionsGetListStruct.conversionLinkId)
         && Objects.equals(
             this.impressionFeedbackUrl, conversionsGetListStruct.impressionFeedbackUrl)
-        && Objects.equals(this.attributionWindow, conversionsGetListStruct.attributionWindow);
+        && Objects.equals(this.attributionWindow, conversionsGetListStruct.attributionWindow)
+        && Objects.equals(
+            this.deepBehaviorAdvancedGoal, conversionsGetListStruct.deepBehaviorAdvancedGoal)
+        && Objects.equals(
+            this.deepBehaviorAdvancedGoalMinPrice,
+            conversionsGetListStruct.deepBehaviorAdvancedGoalMinPrice)
+        && Objects.equals(
+            this.deepBehaviorAdvancedGoalMaxPrice,
+            conversionsGetListStruct.deepBehaviorAdvancedGoalMaxPrice)
+        && Objects.equals(
+            this.deepOptimizationGoalType, conversionsGetListStruct.deepOptimizationGoalType);
   }
 
   @Override
@@ -595,7 +697,11 @@ public class ConversionsGetListStruct {
         deepWorthAdvancedGoal,
         conversionLinkId,
         impressionFeedbackUrl,
-        attributionWindow);
+        attributionWindow,
+        deepBehaviorAdvancedGoal,
+        deepBehaviorAdvancedGoalMinPrice,
+        deepBehaviorAdvancedGoalMaxPrice,
+        deepOptimizationGoalType);
   }
 
   @Override
