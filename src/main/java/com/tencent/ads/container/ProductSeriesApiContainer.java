@@ -18,6 +18,9 @@ import com.tencent.ads.ApiException;
 import com.tencent.ads.anno.*;
 import com.tencent.ads.api.ProductSeriesApi;
 import com.tencent.ads.exception.TencentAdsResponseException;
+import com.tencent.ads.model.ProductSeriesAddRequest;
+import com.tencent.ads.model.ProductSeriesAddResponse;
+import com.tencent.ads.model.ProductSeriesAddResponseData;
 import com.tencent.ads.model.ProductSeriesGetResponse;
 import com.tencent.ads.model.ProductSeriesGetResponseData;
 import com.tencent.ads.model.ProductSeriesSearchFilteringStruct;
@@ -26,6 +29,21 @@ import java.util.List;
 public class ProductSeriesApiContainer extends ApiContainer {
 
   @Inject ProductSeriesApi api;
+
+  /**
+   * 创建商品系列
+   *
+   * @param data (required)
+   * @return ProductSeriesAddResponse
+   * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
+   *     response body
+   */
+  public ProductSeriesAddResponseData productSeriesAdd(ProductSeriesAddRequest data)
+      throws ApiException, TencentAdsResponseException {
+    ProductSeriesAddResponse resp = api.productSeriesAdd(data);
+    handleResponse(gson.toJson(resp));
+    return resp.getData();
+  }
 
   /**
    * 获取商品系列

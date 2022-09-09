@@ -65,6 +65,9 @@ public class Adcreative {
   @SerializedName("creative_template_category")
   private String creativeTemplateCategory = null;
 
+  @SerializedName("keyword_id_list")
+  private List<Long> keywordIdList = null;
+
   @SerializedName("adcreative_template_id")
   private Long adcreativeTemplateId = null;
 
@@ -345,6 +348,33 @@ public class Adcreative {
     this.creativeTemplateCategory = creativeTemplateCategory;
   }
 
+  public Adcreative keywordIdList(List<Long> keywordIdList) {
+    this.keywordIdList = keywordIdList;
+    return this;
+  }
+
+  public Adcreative addKeywordIdListItem(Long keywordIdListItem) {
+    if (this.keywordIdList == null) {
+      this.keywordIdList = new ArrayList<Long>();
+    }
+    this.keywordIdList.add(keywordIdListItem);
+    return this;
+  }
+
+  /**
+   * Get keywordIdList
+   *
+   * @return keywordIdList
+   */
+  @ApiModelProperty(value = "")
+  public List<Long> getKeywordIdList() {
+    return keywordIdList;
+  }
+
+  public void setKeywordIdList(List<Long> keywordIdList) {
+    this.keywordIdList = keywordIdList;
+  }
+
   public Adcreative adcreativeTemplateId(Long adcreativeTemplateId) {
     this.adcreativeTemplateId = adcreativeTemplateId;
     return this;
@@ -406,6 +436,7 @@ public class Adcreative {
         && Objects.equals(this.videoEndPage, adcreative.videoEndPage)
         && Objects.equals(this.enableBreakthroughSiteset, adcreative.enableBreakthroughSiteset)
         && Objects.equals(this.creativeTemplateCategory, adcreative.creativeTemplateCategory)
+        && Objects.equals(this.keywordIdList, adcreative.keywordIdList)
         && Objects.equals(this.adcreativeTemplateId, adcreative.adcreativeTemplateId)
         && Objects.equals(this.adcreativeElements, adcreative.adcreativeElements);
   }
@@ -427,6 +458,7 @@ public class Adcreative {
         videoEndPage,
         enableBreakthroughSiteset,
         creativeTemplateCategory,
+        keywordIdList,
         adcreativeTemplateId,
         adcreativeElements);
   }
