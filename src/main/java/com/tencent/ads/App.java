@@ -173,6 +173,8 @@ public class App {
   @Inject WechatPagesGrantinfoApiContainer wechatPagesGrantinfoApiContainer;
   @Inject WechatQualificationsApiContainer wechatQualificationsApiContainer;
   @Inject WildcardsApiContainer wildcardsApiContainer;
+  @Inject WxPackageAccountApiContainer wxPackageAccountApiContainer;
+  @Inject WxPackagePackageApiContainer wxPackagePackageApiContainer;
   @Inject XijingComplexTemplateApiContainer xijingComplexTemplateApiContainer;
   @Inject XijingPageApiContainer xijingPageApiContainer;
   @Inject XijingPageByComponentsApiContainer xijingPageByComponentsApiContainer;
@@ -787,6 +789,14 @@ public class App {
 
   public WildcardsApiContainer wildcards() {
     return wildcardsApiContainer;
+  }
+
+  public WxPackageAccountApiContainer wxPackageAccount() {
+    return wxPackageAccountApiContainer;
+  }
+
+  public WxPackagePackageApiContainer wxPackagePackage() {
+    return wxPackagePackageApiContainer;
   }
 
   public XijingComplexTemplateApiContainer xijingComplexTemplate() {

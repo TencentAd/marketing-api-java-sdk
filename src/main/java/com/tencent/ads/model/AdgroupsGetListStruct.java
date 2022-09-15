@@ -47,6 +47,9 @@ public class AdgroupsGetListStruct {
   @SerializedName("bid_amount")
   private Long bidAmount = null;
 
+  @SerializedName("total_budget")
+  private Long totalBudget = null;
+
   @SerializedName("daily_budget")
   private Long dailyBudget = null;
 
@@ -379,6 +382,25 @@ public class AdgroupsGetListStruct {
 
   public void setBidAmount(Long bidAmount) {
     this.bidAmount = bidAmount;
+  }
+
+  public AdgroupsGetListStruct totalBudget(Long totalBudget) {
+    this.totalBudget = totalBudget;
+    return this;
+  }
+
+  /**
+   * Get totalBudget
+   *
+   * @return totalBudget
+   */
+  @ApiModelProperty(value = "")
+  public Long getTotalBudget() {
+    return totalBudget;
+  }
+
+  public void setTotalBudget(Long totalBudget) {
+    this.totalBudget = totalBudget;
   }
 
   public AdgroupsGetListStruct dailyBudget(Long dailyBudget) {
@@ -1563,6 +1585,7 @@ public class AdgroupsGetListStruct {
         && Objects.equals(this.optimizationGoal, adgroupsGetListStruct.optimizationGoal)
         && Objects.equals(this.billingEvent, adgroupsGetListStruct.billingEvent)
         && Objects.equals(this.bidAmount, adgroupsGetListStruct.bidAmount)
+        && Objects.equals(this.totalBudget, adgroupsGetListStruct.totalBudget)
         && Objects.equals(this.dailyBudget, adgroupsGetListStruct.dailyBudget)
         && Objects.equals(this.promotedObjectType, adgroupsGetListStruct.promotedObjectType)
         && Objects.equals(this.promotedObjectId, adgroupsGetListStruct.promotedObjectId)
@@ -1650,6 +1673,7 @@ public class AdgroupsGetListStruct {
         optimizationGoal,
         billingEvent,
         bidAmount,
+        totalBudget,
         dailyBudget,
         promotedObjectType,
         promotedObjectId,

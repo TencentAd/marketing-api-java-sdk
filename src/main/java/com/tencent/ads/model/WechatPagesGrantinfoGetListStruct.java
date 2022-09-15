@@ -28,7 +28,7 @@ public class WechatPagesGrantinfoGetListStruct {
   private String ownerAccountName = null;
 
   @SerializedName("created_time")
-  private Long createdTime = null;
+  private String createdTime = null;
 
   public WechatPagesGrantinfoGetListStruct ownerAccountId(Long ownerAccountId) {
     this.ownerAccountId = ownerAccountId;
@@ -68,7 +68,7 @@ public class WechatPagesGrantinfoGetListStruct {
     this.ownerAccountName = ownerAccountName;
   }
 
-  public WechatPagesGrantinfoGetListStruct createdTime(Long createdTime) {
+  public WechatPagesGrantinfoGetListStruct createdTime(String createdTime) {
     this.createdTime = createdTime;
     return this;
   }
@@ -79,11 +79,11 @@ public class WechatPagesGrantinfoGetListStruct {
    * @return createdTime
    */
   @ApiModelProperty(value = "")
-  public Long getCreatedTime() {
+  public String getCreatedTime() {
     return createdTime;
   }
 
-  public void setCreatedTime(Long createdTime) {
+  public void setCreatedTime(String createdTime) {
     this.createdTime = createdTime;
   }
 
