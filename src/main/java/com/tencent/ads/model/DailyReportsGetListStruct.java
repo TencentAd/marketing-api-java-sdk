@@ -1236,9 +1236,6 @@ public class DailyReportsGetListStruct {
   @SerializedName("video_live_cick_commodity_count")
   private Long videoLiveCickCommodityCount = null;
 
-  @SerializedName("video_live_exp_user_count")
-  private Long videoLiveExpUserCount = null;
-
   @SerializedName("live_stream_exp_uv")
   private Long liveStreamExpUv = null;
 
@@ -9890,25 +9887,6 @@ public class DailyReportsGetListStruct {
     this.videoLiveCickCommodityCount = videoLiveCickCommodityCount;
   }
 
-  public DailyReportsGetListStruct videoLiveExpUserCount(Long videoLiveExpUserCount) {
-    this.videoLiveExpUserCount = videoLiveExpUserCount;
-    return this;
-  }
-
-  /**
-   * Get videoLiveExpUserCount
-   *
-   * @return videoLiveExpUserCount
-   */
-  @ApiModelProperty(value = "")
-  public Long getVideoLiveExpUserCount() {
-    return videoLiveExpUserCount;
-  }
-
-  public void setVideoLiveExpUserCount(Long videoLiveExpUserCount) {
-    this.videoLiveExpUserCount = videoLiveExpUserCount;
-  }
-
   public DailyReportsGetListStruct liveStreamExpUv(Long liveStreamExpUv) {
     this.liveStreamExpUv = liveStreamExpUv;
     return this;
@@ -16494,8 +16472,6 @@ public class DailyReportsGetListStruct {
         && Objects.equals(this.videoLiveShareCount, dailyReportsGetListStruct.videoLiveShareCount)
         && Objects.equals(
             this.videoLiveCickCommodityCount, dailyReportsGetListStruct.videoLiveCickCommodityCount)
-        && Objects.equals(
-            this.videoLiveExpUserCount, dailyReportsGetListStruct.videoLiveExpUserCount)
         && Objects.equals(this.liveStreamExpUv, dailyReportsGetListStruct.liveStreamExpUv)
         && Objects.equals(
             this.videoLiveHeartUserCount, dailyReportsGetListStruct.videoLiveHeartUserCount)
@@ -17377,7 +17353,6 @@ public class DailyReportsGetListStruct {
         videoLiveCommentCount,
         videoLiveShareCount,
         videoLiveCickCommodityCount,
-        videoLiveExpUserCount,
         liveStreamExpUv,
         videoLiveHeartUserCount,
         videoLiveCommentUserCount,

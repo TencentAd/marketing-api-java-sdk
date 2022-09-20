@@ -1230,9 +1230,6 @@ public class HourlyReportsGetListStruct {
   @SerializedName("video_live_cick_commodity_count")
   private Long videoLiveCickCommodityCount = null;
 
-  @SerializedName("video_live_exp_user_count")
-  private Long videoLiveExpUserCount = null;
-
   @SerializedName("video_live_heart_user_count")
   private Long videoLiveHeartUserCount = null;
 
@@ -9770,25 +9767,6 @@ public class HourlyReportsGetListStruct {
     this.videoLiveCickCommodityCount = videoLiveCickCommodityCount;
   }
 
-  public HourlyReportsGetListStruct videoLiveExpUserCount(Long videoLiveExpUserCount) {
-    this.videoLiveExpUserCount = videoLiveExpUserCount;
-    return this;
-  }
-
-  /**
-   * Get videoLiveExpUserCount
-   *
-   * @return videoLiveExpUserCount
-   */
-  @ApiModelProperty(value = "")
-  public Long getVideoLiveExpUserCount() {
-    return videoLiveExpUserCount;
-  }
-
-  public void setVideoLiveExpUserCount(Long videoLiveExpUserCount) {
-    this.videoLiveExpUserCount = videoLiveExpUserCount;
-  }
-
   public HourlyReportsGetListStruct videoLiveHeartUserCount(Long videoLiveHeartUserCount) {
     this.videoLiveHeartUserCount = videoLiveHeartUserCount;
     return this;
@@ -15899,8 +15877,6 @@ public class HourlyReportsGetListStruct {
             this.videoLiveCickCommodityCount,
             hourlyReportsGetListStruct.videoLiveCickCommodityCount)
         && Objects.equals(
-            this.videoLiveExpUserCount, hourlyReportsGetListStruct.videoLiveExpUserCount)
-        && Objects.equals(
             this.videoLiveHeartUserCount, hourlyReportsGetListStruct.videoLiveHeartUserCount)
         && Objects.equals(
             this.videoLiveCommentUserCount, hourlyReportsGetListStruct.videoLiveCommentUserCount)
@@ -16768,7 +16744,6 @@ public class HourlyReportsGetListStruct {
         videoLiveCommentCount,
         videoLiveShareCount,
         videoLiveCickCommodityCount,
-        videoLiveExpUserCount,
         videoLiveHeartUserCount,
         videoLiveCommentUserCount,
         videoLiveShareUserCount,
