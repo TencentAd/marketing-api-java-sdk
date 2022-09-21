@@ -76,7 +76,9 @@ public enum ElementType {
 
   LABEL("LABEL"),
 
-  LANDING_PAGE_STRUCT("LANDING_PAGE_STRUCT");
+  LANDING_PAGE_STRUCT("LANDING_PAGE_STRUCT"),
+
+  COMPONENT("COMPONENT");
 
   private String value;
 

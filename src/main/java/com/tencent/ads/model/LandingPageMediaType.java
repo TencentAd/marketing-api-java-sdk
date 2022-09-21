@@ -19,18 +19,20 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-/** 动态创意类型 */
-@JsonAdapter(DynamicCreativeType.Adapter.class)
-public enum DynamicCreativeType {
-  COMMON("DYNAMIC_CREATIVE_TYPE_COMMON"),
+/** 落地页媒体平台类型 */
+@JsonAdapter(LandingPageMediaType.Adapter.class)
+public enum LandingPageMediaType {
+  DEFAULT("DEFAULT"),
 
-  PROGRAM("DYNAMIC_CREATIVE_TYPE_PROGRAM"),
+  ALL("ALL"),
 
-  COMPONENT("DYNAMIC_CREATIVE_TYPE_COMPONENT");
+  SCREEN_PC("SCREEN_PC"),
+
+  SCREEN_PHONE("SCREEN_PHONE");
 
   private String value;
 
-  DynamicCreativeType(String value) {
+  LandingPageMediaType(String value) {
     this.value = value;
   }
 
@@ -43,8 +45,8 @@ public enum DynamicCreativeType {
     return String.valueOf(value);
   }
 
-  public static DynamicCreativeType fromValue(String text) {
-    for (DynamicCreativeType b : DynamicCreativeType.values()) {
+  public static LandingPageMediaType fromValue(String text) {
+    for (LandingPageMediaType b : LandingPageMediaType.values()) {
       if (String.valueOf(b.value).equals(text)) {
         return b;
       }
@@ -52,17 +54,17 @@ public enum DynamicCreativeType {
     return null;
   }
 
-  public static class Adapter extends TypeAdapter<DynamicCreativeType> {
+  public static class Adapter extends TypeAdapter<LandingPageMediaType> {
     @Override
-    public void write(final JsonWriter jsonWriter, final DynamicCreativeType enumeration)
+    public void write(final JsonWriter jsonWriter, final LandingPageMediaType enumeration)
         throws IOException {
       jsonWriter.value(enumeration.getValue());
     }
 
     @Override
-    public DynamicCreativeType read(final JsonReader jsonReader) throws IOException {
+    public LandingPageMediaType read(final JsonReader jsonReader) throws IOException {
       String value = jsonReader.nextString();
-      return DynamicCreativeType.fromValue(String.valueOf(value));
+      return LandingPageMediaType.fromValue(String.valueOf(value));
     }
   }
 }
