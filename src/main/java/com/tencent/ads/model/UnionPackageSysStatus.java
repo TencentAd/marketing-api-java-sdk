@@ -19,7 +19,7 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-/** 渠道包状态 */
+/** 广告包渠道包状态 */
 @JsonAdapter(UnionPackageSysStatus.Adapter.class)
 public enum UnionPackageSysStatus {
   PASSED("CHANNEL_PACKAGE_STATUS_PASSED"),

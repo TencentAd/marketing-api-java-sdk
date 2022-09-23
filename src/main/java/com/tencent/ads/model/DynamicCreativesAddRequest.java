@@ -153,6 +153,9 @@ public class DynamicCreativesAddRequest {
   @SerializedName("head_click_spec")
   private HeadClickSpec headClickSpec = null;
 
+  @SerializedName("campaign_id")
+  private Long campaignId = null;
+
   @SerializedName("account_id")
   private Long accountId = null;
 
@@ -1014,6 +1017,25 @@ public class DynamicCreativesAddRequest {
     this.headClickSpec = headClickSpec;
   }
 
+  public DynamicCreativesAddRequest campaignId(Long campaignId) {
+    this.campaignId = campaignId;
+    return this;
+  }
+
+  /**
+   * Get campaignId
+   *
+   * @return campaignId
+   */
+  @ApiModelProperty(value = "")
+  public Long getCampaignId() {
+    return campaignId;
+  }
+
+  public void setCampaignId(Long campaignId) {
+    this.campaignId = campaignId;
+  }
+
   public DynamicCreativesAddRequest accountId(Long accountId) {
     this.accountId = accountId;
     return this;
@@ -1101,6 +1123,7 @@ public class DynamicCreativesAddRequest {
         && Objects.equals(this.dynamicCreativeType, dynamicCreativesAddRequest.dynamicCreativeType)
         && Objects.equals(this.headClickType, dynamicCreativesAddRequest.headClickType)
         && Objects.equals(this.headClickSpec, dynamicCreativesAddRequest.headClickSpec)
+        && Objects.equals(this.campaignId, dynamicCreativesAddRequest.campaignId)
         && Objects.equals(this.accountId, dynamicCreativesAddRequest.accountId);
   }
 
@@ -1151,6 +1174,7 @@ public class DynamicCreativesAddRequest {
         dynamicCreativeType,
         headClickType,
         headClickSpec,
+        campaignId,
         accountId);
   }
 

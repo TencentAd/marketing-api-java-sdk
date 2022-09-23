@@ -129,6 +129,9 @@ public class DynamicCreativesUpdateRequest {
   @SerializedName("head_click_spec")
   private HeadClickSpec headClickSpec = null;
 
+  @SerializedName("campaign_id")
+  private Long campaignId = null;
+
   @SerializedName("account_id")
   private Long accountId = null;
 
@@ -830,6 +833,25 @@ public class DynamicCreativesUpdateRequest {
     this.headClickSpec = headClickSpec;
   }
 
+  public DynamicCreativesUpdateRequest campaignId(Long campaignId) {
+    this.campaignId = campaignId;
+    return this;
+  }
+
+  /**
+   * Get campaignId
+   *
+   * @return campaignId
+   */
+  @ApiModelProperty(value = "")
+  public Long getCampaignId() {
+    return campaignId;
+  }
+
+  public void setCampaignId(Long campaignId) {
+    this.campaignId = campaignId;
+  }
+
   public DynamicCreativesUpdateRequest accountId(Long accountId) {
     this.accountId = accountId;
     return this;
@@ -907,6 +929,7 @@ public class DynamicCreativesUpdateRequest {
             dynamicCreativesUpdateRequest.autoDerivedProgramCreativeSwitch)
         && Objects.equals(this.headClickType, dynamicCreativesUpdateRequest.headClickType)
         && Objects.equals(this.headClickSpec, dynamicCreativesUpdateRequest.headClickSpec)
+        && Objects.equals(this.campaignId, dynamicCreativesUpdateRequest.campaignId)
         && Objects.equals(this.accountId, dynamicCreativesUpdateRequest.accountId);
   }
 
@@ -949,6 +972,7 @@ public class DynamicCreativesUpdateRequest {
         autoDerivedProgramCreativeSwitch,
         headClickType,
         headClickSpec,
+        campaignId,
         accountId);
   }
 

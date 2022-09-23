@@ -38,7 +38,6 @@ public class App {
   @Inject AgencyInnerTransferApiContainer agencyInnerTransferApiContainer;
   @Inject AgencyRealtimeCostApiContainer agencyRealtimeCostApiContainer;
   @Inject AndroidChannelPackagesApiContainer androidChannelPackagesApiContainer;
-  @Inject AndroidUnionChannelPackagesApiContainer androidUnionChannelPackagesApiContainer;
   @Inject AppAndroidChannelPackagesApiContainer appAndroidChannelPackagesApiContainer;
   @Inject AssetPermissionsApiContainer assetPermissionsApiContainer;
   @Inject AssetPrePermissionsApiContainer assetPrePermissionsApiContainer;
@@ -176,6 +175,8 @@ public class App {
   @Inject WxPackageAccountApiContainer wxPackageAccountApiContainer;
   @Inject WxPackagePackageApiContainer wxPackagePackageApiContainer;
   @Inject XijingComplexTemplateApiContainer xijingComplexTemplateApiContainer;
+  @Inject XijingDeriveRoleApiContainer xijingDeriveRoleApiContainer;
+  @Inject XijingDeriveTempTokenApiContainer xijingDeriveTempTokenApiContainer;
   @Inject XijingPageApiContainer xijingPageApiContainer;
   @Inject XijingPageByComponentsApiContainer xijingPageByComponentsApiContainer;
   @Inject XijingPageInteractiveApiContainer xijingPageInteractiveApiContainer;
@@ -261,10 +262,6 @@ public class App {
 
   public AndroidChannelPackagesApiContainer androidChannelPackages() {
     return androidChannelPackagesApiContainer;
-  }
-
-  public AndroidUnionChannelPackagesApiContainer androidUnionChannelPackages() {
-    return androidUnionChannelPackagesApiContainer;
   }
 
   public AppAndroidChannelPackagesApiContainer appAndroidChannelPackages() {
@@ -801,6 +798,14 @@ public class App {
 
   public XijingComplexTemplateApiContainer xijingComplexTemplate() {
     return xijingComplexTemplateApiContainer;
+  }
+
+  public XijingDeriveRoleApiContainer xijingDeriveRole() {
+    return xijingDeriveRoleApiContainer;
+  }
+
+  public XijingDeriveTempTokenApiContainer xijingDeriveTempToken() {
+    return xijingDeriveTempTokenApiContainer;
   }
 
   public XijingPageApiContainer xijingPage() {
