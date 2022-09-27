@@ -82,6 +82,7 @@ public class App {
   @Inject DynamicCreativesApiContainer dynamicCreativesApiContainer;
   @Inject EcommerceOrderApiContainer ecommerceOrderApiContainer;
   @Inject EstimationApiContainer estimationApiContainer;
+  @Inject ExtendPackageApiContainer extendPackageApiContainer;
   @Inject FundStatementsDailyApiContainer fundStatementsDailyApiContainer;
   @Inject FundStatementsDetailedApiContainer fundStatementsDetailedApiContainer;
   @Inject FundTransferApiContainer fundTransferApiContainer;
@@ -174,6 +175,7 @@ public class App {
   @Inject WxPackageAccountApiContainer wxPackageAccountApiContainer;
   @Inject WxPackagePackageApiContainer wxPackagePackageApiContainer;
   @Inject XijingComplexTemplateApiContainer xijingComplexTemplateApiContainer;
+  @Inject XijingDeriveClickEffectApiContainer xijingDeriveClickEffectApiContainer;
   @Inject XijingDeriveRoleApiContainer xijingDeriveRoleApiContainer;
   @Inject XijingDeriveTempTokenApiContainer xijingDeriveTempTokenApiContainer;
   @Inject XijingPageApiContainer xijingPageApiContainer;
@@ -437,6 +439,10 @@ public class App {
 
   public EstimationApiContainer estimation() {
     return estimationApiContainer;
+  }
+
+  public ExtendPackageApiContainer extendPackage() {
+    return extendPackageApiContainer;
   }
 
   public FundStatementsDailyApiContainer fundStatementsDaily() {
@@ -793,6 +799,10 @@ public class App {
 
   public XijingComplexTemplateApiContainer xijingComplexTemplate() {
     return xijingComplexTemplateApiContainer;
+  }
+
+  public XijingDeriveClickEffectApiContainer xijingDeriveClickEffect() {
+    return xijingDeriveClickEffectApiContainer;
   }
 
   public XijingDeriveRoleApiContainer xijingDeriveRole() {
