@@ -41,6 +41,9 @@ public class SceneTargetingForWrite {
   @SerializedName("wechat_position")
   private List<Long> wechatPosition = null;
 
+  @SerializedName("qbsearch_scene")
+  private List<String> qbsearchScene = null;
+
   public SceneTargetingForWrite unionPositionPackage(List<Long> unionPositionPackage) {
     this.unionPositionPackage = unionPositionPackage;
     return this;
@@ -197,6 +200,33 @@ public class SceneTargetingForWrite {
     this.wechatPosition = wechatPosition;
   }
 
+  public SceneTargetingForWrite qbsearchScene(List<String> qbsearchScene) {
+    this.qbsearchScene = qbsearchScene;
+    return this;
+  }
+
+  public SceneTargetingForWrite addQbsearchSceneItem(String qbsearchSceneItem) {
+    if (this.qbsearchScene == null) {
+      this.qbsearchScene = new ArrayList<String>();
+    }
+    this.qbsearchScene.add(qbsearchSceneItem);
+    return this;
+  }
+
+  /**
+   * Get qbsearchScene
+   *
+   * @return qbsearchScene
+   */
+  @ApiModelProperty(value = "")
+  public List<String> getQbsearchScene() {
+    return qbsearchScene;
+  }
+
+  public void setQbsearchScene(List<String> qbsearchScene) {
+    this.qbsearchScene = qbsearchScene;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -212,7 +242,8 @@ public class SceneTargetingForWrite {
         && Objects.equals(this.displayScene, sceneTargetingForWrite.displayScene)
         && Objects.equals(this.tencentNews, sceneTargetingForWrite.tencentNews)
         && Objects.equals(this.wechatScene, sceneTargetingForWrite.wechatScene)
-        && Objects.equals(this.wechatPosition, sceneTargetingForWrite.wechatPosition);
+        && Objects.equals(this.wechatPosition, sceneTargetingForWrite.wechatPosition)
+        && Objects.equals(this.qbsearchScene, sceneTargetingForWrite.qbsearchScene);
   }
 
   @Override
@@ -223,7 +254,8 @@ public class SceneTargetingForWrite {
         displayScene,
         tencentNews,
         wechatScene,
-        wechatPosition);
+        wechatPosition,
+        qbsearchScene);
   }
 
   @Override

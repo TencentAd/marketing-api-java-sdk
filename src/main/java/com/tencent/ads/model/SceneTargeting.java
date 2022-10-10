@@ -53,6 +53,9 @@ public class SceneTargeting {
   @SerializedName("wechat_position")
   private List<Long> wechatPosition = null;
 
+  @SerializedName("qbsearch_scene")
+  private List<String> qbsearchScene = null;
+
   public SceneTargeting mobileUnion(List<String> mobileUnion) {
     this.mobileUnion = mobileUnion;
     return this;
@@ -315,6 +318,33 @@ public class SceneTargeting {
     this.wechatPosition = wechatPosition;
   }
 
+  public SceneTargeting qbsearchScene(List<String> qbsearchScene) {
+    this.qbsearchScene = qbsearchScene;
+    return this;
+  }
+
+  public SceneTargeting addQbsearchSceneItem(String qbsearchSceneItem) {
+    if (this.qbsearchScene == null) {
+      this.qbsearchScene = new ArrayList<String>();
+    }
+    this.qbsearchScene.add(qbsearchSceneItem);
+    return this;
+  }
+
+  /**
+   * Get qbsearchScene
+   *
+   * @return qbsearchScene
+   */
+  @ApiModelProperty(value = "")
+  public List<String> getQbsearchScene() {
+    return qbsearchScene;
+  }
+
+  public void setQbsearchScene(List<String> qbsearchScene) {
+    this.qbsearchScene = qbsearchScene;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -334,7 +364,8 @@ public class SceneTargeting {
         && Objects.equals(this.mobileUnionCategory, sceneTargeting.mobileUnionCategory)
         && Objects.equals(this.tencentNews, sceneTargeting.tencentNews)
         && Objects.equals(this.wechatScene, sceneTargeting.wechatScene)
-        && Objects.equals(this.wechatPosition, sceneTargeting.wechatPosition);
+        && Objects.equals(this.wechatPosition, sceneTargeting.wechatPosition)
+        && Objects.equals(this.qbsearchScene, sceneTargeting.qbsearchScene);
   }
 
   @Override
@@ -349,7 +380,8 @@ public class SceneTargeting {
         mobileUnionCategory,
         tencentNews,
         wechatScene,
-        wechatPosition);
+        wechatPosition,
+        qbsearchScene);
   }
 
   @Override
