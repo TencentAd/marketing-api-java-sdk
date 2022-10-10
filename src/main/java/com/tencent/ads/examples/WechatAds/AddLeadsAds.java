@@ -200,6 +200,9 @@ public class AddLeadsAds {
                 new File(imageFile),
                 null,
                 null,
+                null,
+                null,
+                null,
                 null);
     if (responseData != null) {
       return responseData.getImageId();

@@ -197,7 +197,16 @@ public class AddMiniProgramBannerAds {
         tencentAds
             .images()
             .imagesAdd(
-                ACCOUNT_ID, uploadType, imageSignature, new File(imageFile), null, null, null);
+                ACCOUNT_ID,
+                uploadType,
+                imageSignature,
+                new File(imageFile),
+                null,
+                null,
+                null,
+                null,
+                null,
+                null);
 
     return responseData.getImageId();
   }
