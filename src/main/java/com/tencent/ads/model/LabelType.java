@@ -30,7 +30,9 @@ public enum LabelType {
 
   CUSTOMIZETEXT("LABEL_TYPE_CUSTOMIZETEXT"),
 
-  ICON("LABEL_TYPE_ICON");
+  ICON("LABEL_TYPE_ICON"),
+
+  DYNAMIC("LABEL_TYPE_DYNAMIC");
 
   private String value;
 

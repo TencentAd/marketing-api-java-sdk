@@ -128,6 +128,7 @@ public class App {
   @Inject ProfilesApiContainer profilesApiContainer;
   @Inject ProgrammedApiContainer programmedApiContainer;
   @Inject ProgrammedTemplateApiContainer programmedTemplateApiContainer;
+  @Inject PromotedObjectAuthorizationApiContainer promotedObjectAuthorizationApiContainer;
   @Inject PromotedObjectsApiContainer promotedObjectsApiContainer;
   @Inject PropertyFileSessionsApiContainer propertyFileSessionsApiContainer;
   @Inject PropertyFilesApiContainer propertyFilesApiContainer;
@@ -611,6 +612,10 @@ public class App {
 
   public ProgrammedTemplateApiContainer programmedTemplate() {
     return programmedTemplateApiContainer;
+  }
+
+  public PromotedObjectAuthorizationApiContainer promotedObjectAuthorization() {
+    return promotedObjectAuthorizationApiContainer;
   }
 
   public PromotedObjectsApiContainer promotedObjects() {

@@ -128,6 +128,9 @@ public class DynamicCreativesGetListStruct {
   @SerializedName("head_click_spec")
   private HeadClickSpec headClickSpec = null;
 
+  @SerializedName("async_job_status")
+  private DCAsyncJobStatus asyncJobStatus = null;
+
   public DynamicCreativesGetListStruct dynamicCreativeId(Long dynamicCreativeId) {
     this.dynamicCreativeId = dynamicCreativeId;
     return this;
@@ -818,6 +821,25 @@ public class DynamicCreativesGetListStruct {
     this.headClickSpec = headClickSpec;
   }
 
+  public DynamicCreativesGetListStruct asyncJobStatus(DCAsyncJobStatus asyncJobStatus) {
+    this.asyncJobStatus = asyncJobStatus;
+    return this;
+  }
+
+  /**
+   * Get asyncJobStatus
+   *
+   * @return asyncJobStatus
+   */
+  @ApiModelProperty(value = "")
+  public DCAsyncJobStatus getAsyncJobStatus() {
+    return asyncJobStatus;
+  }
+
+  public void setAsyncJobStatus(DCAsyncJobStatus asyncJobStatus) {
+    this.asyncJobStatus = asyncJobStatus;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -877,7 +899,8 @@ public class DynamicCreativesGetListStruct {
         && Objects.equals(
             this.dynamicCreativeType, dynamicCreativesGetListStruct.dynamicCreativeType)
         && Objects.equals(this.headClickType, dynamicCreativesGetListStruct.headClickType)
-        && Objects.equals(this.headClickSpec, dynamicCreativesGetListStruct.headClickSpec);
+        && Objects.equals(this.headClickSpec, dynamicCreativesGetListStruct.headClickSpec)
+        && Objects.equals(this.asyncJobStatus, dynamicCreativesGetListStruct.asyncJobStatus);
   }
 
   @Override
@@ -917,7 +940,8 @@ public class DynamicCreativesGetListStruct {
         programCreativeInfo,
         dynamicCreativeType,
         headClickType,
-        headClickSpec);
+        headClickSpec,
+        asyncJobStatus);
   }
 
   @Override

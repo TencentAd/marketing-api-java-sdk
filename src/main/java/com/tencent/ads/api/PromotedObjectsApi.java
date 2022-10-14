@@ -24,6 +24,10 @@ import com.tencent.ads.ProgressResponseBody;
 import com.tencent.ads.model.FilteringStruct;
 import com.tencent.ads.model.PromotedObjectsAddRequest;
 import com.tencent.ads.model.PromotedObjectsAddResponse;
+import com.tencent.ads.model.PromotedObjectsAuthorizeRequest;
+import com.tencent.ads.model.PromotedObjectsAuthorizeResponse;
+import com.tencent.ads.model.PromotedObjectsDeleteRequest;
+import com.tencent.ads.model.PromotedObjectsDeleteResponse;
 import com.tencent.ads.model.PromotedObjectsGetResponse;
 import com.tencent.ads.model.PromotedObjectsUpdateRequest;
 import com.tencent.ads.model.PromotedObjectsUpdateResponse;
@@ -201,6 +205,309 @@ public class PromotedObjectsApi {
     com.squareup.okhttp.Call call =
         promotedObjectsAddValidateBeforeCall(data, progressListener, progressRequestListener);
     Type localVarReturnType = new TypeToken<PromotedObjectsAddResponse>() {}.getType();
+    apiClient.executeAsync(call, localVarReturnType, callback);
+    return call;
+  }
+  /**
+   * Build call for promotedObjectsAuthorize
+   *
+   * @param data (required)
+   * @param progressListener Progress listener
+   * @param progressRequestListener Progress request listener
+   * @return Call to execute
+   * @throws ApiException If fail to serialize the request body object
+   */
+  public com.squareup.okhttp.Call promotedObjectsAuthorizeCall(
+      PromotedObjectsAuthorizeRequest data,
+      final ProgressResponseBody.ProgressListener progressListener,
+      final ProgressRequestBody.ProgressRequestListener progressRequestListener)
+      throws ApiException {
+    Object localVarPostBody = data;
+
+    // create path and map variables
+    String localVarPath = "/promoted_objects/authorize";
+
+    List<Pair> localVarQueryParams = new ArrayList<Pair>();
+    List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+
+    Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+
+    Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+    final String[] localVarAccepts = {"application/json"};
+    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+    if (localVarAccept != null) localVarHeaderParams.put("Accept", localVarAccept);
+
+    final String[] localVarContentTypes = {"application/json", "application/xml"};
+    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+    localVarHeaderParams.put("Content-Type", localVarContentType);
+
+    if (progressListener != null) {
+      apiClient
+          .getHttpClient()
+          .networkInterceptors()
+          .add(
+              new com.squareup.okhttp.Interceptor() {
+                @Override
+                public com.squareup.okhttp.Response intercept(
+                    com.squareup.okhttp.Interceptor.Chain chain) throws IOException {
+                  com.squareup.okhttp.Response originalResponse = chain.proceed(chain.request());
+                  return originalResponse
+                      .newBuilder()
+                      .body(new ProgressResponseBody(originalResponse.body(), progressListener))
+                      .build();
+                }
+              });
+    }
+
+    String[] localVarAuthNames = new String[] {"accessToken", "nonce", "timestamp"};
+    return apiClient.buildCall(
+        localVarPath,
+        "POST",
+        localVarQueryParams,
+        localVarCollectionQueryParams,
+        localVarPostBody,
+        localVarHeaderParams,
+        localVarFormParams,
+        localVarAuthNames,
+        progressRequestListener);
+  }
+
+  @SuppressWarnings("rawtypes")
+  private com.squareup.okhttp.Call promotedObjectsAuthorizeValidateBeforeCall(
+      PromotedObjectsAuthorizeRequest data,
+      final ProgressResponseBody.ProgressListener progressListener,
+      final ProgressRequestBody.ProgressRequestListener progressRequestListener)
+      throws ApiException {
+
+    // verify the required parameter 'data' is set
+    if (data == null) {
+      throw new ApiException(
+          "Missing the required parameter 'data' when calling promotedObjectsAuthorize(Async)");
+    }
+
+    com.squareup.okhttp.Call call =
+        promotedObjectsAuthorizeCall(data, progressListener, progressRequestListener);
+    return call;
+  }
+
+  /**
+   * 推广目标授权接口
+   *
+   * @param data (required)
+   * @return PromotedObjectsAuthorizeResponse
+   * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
+   *     response body
+   */
+  public PromotedObjectsAuthorizeResponse promotedObjectsAuthorize(
+      PromotedObjectsAuthorizeRequest data) throws ApiException {
+    ApiResponse<PromotedObjectsAuthorizeResponse> resp = promotedObjectsAuthorizeWithHttpInfo(data);
+    return resp.getData();
+  }
+
+  /**
+   * 推广目标授权接口
+   *
+   * @param data (required)
+   * @return ApiResponse&lt;PromotedObjectsAuthorizeResponse&gt;
+   * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
+   *     response body
+   */
+  public ApiResponse<PromotedObjectsAuthorizeResponse> promotedObjectsAuthorizeWithHttpInfo(
+      PromotedObjectsAuthorizeRequest data) throws ApiException {
+    com.squareup.okhttp.Call call = promotedObjectsAuthorizeValidateBeforeCall(data, null, null);
+    Type localVarReturnType = new TypeToken<PromotedObjectsAuthorizeResponse>() {}.getType();
+    return apiClient.execute(call, localVarReturnType);
+  }
+
+  /**
+   * 推广目标授权接口 (asynchronously)
+   *
+   * @param data (required)
+   * @param callback The callback to be executed when the API call finishes
+   * @return The request call
+   * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+   */
+  public com.squareup.okhttp.Call promotedObjectsAuthorizeAsync(
+      PromotedObjectsAuthorizeRequest data,
+      final ApiCallback<PromotedObjectsAuthorizeResponse> callback)
+      throws ApiException {
+
+    ProgressResponseBody.ProgressListener progressListener = null;
+    ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
+
+    if (callback != null) {
+      progressListener =
+          new ProgressResponseBody.ProgressListener() {
+            @Override
+            public void update(long bytesRead, long contentLength, boolean done) {
+              callback.onDownloadProgress(bytesRead, contentLength, done);
+            }
+          };
+
+      progressRequestListener =
+          new ProgressRequestBody.ProgressRequestListener() {
+            @Override
+            public void onRequestProgress(long bytesWritten, long contentLength, boolean done) {
+              callback.onUploadProgress(bytesWritten, contentLength, done);
+            }
+          };
+    }
+
+    com.squareup.okhttp.Call call =
+        promotedObjectsAuthorizeValidateBeforeCall(data, progressListener, progressRequestListener);
+    Type localVarReturnType = new TypeToken<PromotedObjectsAuthorizeResponse>() {}.getType();
+    apiClient.executeAsync(call, localVarReturnType, callback);
+    return call;
+  }
+  /**
+   * Build call for promotedObjectsDelete
+   *
+   * @param data (required)
+   * @param progressListener Progress listener
+   * @param progressRequestListener Progress request listener
+   * @return Call to execute
+   * @throws ApiException If fail to serialize the request body object
+   */
+  public com.squareup.okhttp.Call promotedObjectsDeleteCall(
+      PromotedObjectsDeleteRequest data,
+      final ProgressResponseBody.ProgressListener progressListener,
+      final ProgressRequestBody.ProgressRequestListener progressRequestListener)
+      throws ApiException {
+    Object localVarPostBody = data;
+
+    // create path and map variables
+    String localVarPath = "/promoted_objects/delete";
+
+    List<Pair> localVarQueryParams = new ArrayList<Pair>();
+    List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+
+    Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+
+    Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+    final String[] localVarAccepts = {"application/json"};
+    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+    if (localVarAccept != null) localVarHeaderParams.put("Accept", localVarAccept);
+
+    final String[] localVarContentTypes = {"application/json", "application/xml"};
+    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+    localVarHeaderParams.put("Content-Type", localVarContentType);
+
+    if (progressListener != null) {
+      apiClient
+          .getHttpClient()
+          .networkInterceptors()
+          .add(
+              new com.squareup.okhttp.Interceptor() {
+                @Override
+                public com.squareup.okhttp.Response intercept(
+                    com.squareup.okhttp.Interceptor.Chain chain) throws IOException {
+                  com.squareup.okhttp.Response originalResponse = chain.proceed(chain.request());
+                  return originalResponse
+                      .newBuilder()
+                      .body(new ProgressResponseBody(originalResponse.body(), progressListener))
+                      .build();
+                }
+              });
+    }
+
+    String[] localVarAuthNames = new String[] {"accessToken", "nonce", "timestamp"};
+    return apiClient.buildCall(
+        localVarPath,
+        "POST",
+        localVarQueryParams,
+        localVarCollectionQueryParams,
+        localVarPostBody,
+        localVarHeaderParams,
+        localVarFormParams,
+        localVarAuthNames,
+        progressRequestListener);
+  }
+
+  @SuppressWarnings("rawtypes")
+  private com.squareup.okhttp.Call promotedObjectsDeleteValidateBeforeCall(
+      PromotedObjectsDeleteRequest data,
+      final ProgressResponseBody.ProgressListener progressListener,
+      final ProgressRequestBody.ProgressRequestListener progressRequestListener)
+      throws ApiException {
+
+    // verify the required parameter 'data' is set
+    if (data == null) {
+      throw new ApiException(
+          "Missing the required parameter 'data' when calling promotedObjectsDelete(Async)");
+    }
+
+    com.squareup.okhttp.Call call =
+        promotedObjectsDeleteCall(data, progressListener, progressRequestListener);
+    return call;
+  }
+
+  /**
+   * 删除推广目标
+   *
+   * @param data (required)
+   * @return PromotedObjectsDeleteResponse
+   * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
+   *     response body
+   */
+  public PromotedObjectsDeleteResponse promotedObjectsDelete(PromotedObjectsDeleteRequest data)
+      throws ApiException {
+    ApiResponse<PromotedObjectsDeleteResponse> resp = promotedObjectsDeleteWithHttpInfo(data);
+    return resp.getData();
+  }
+
+  /**
+   * 删除推广目标
+   *
+   * @param data (required)
+   * @return ApiResponse&lt;PromotedObjectsDeleteResponse&gt;
+   * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
+   *     response body
+   */
+  public ApiResponse<PromotedObjectsDeleteResponse> promotedObjectsDeleteWithHttpInfo(
+      PromotedObjectsDeleteRequest data) throws ApiException {
+    com.squareup.okhttp.Call call = promotedObjectsDeleteValidateBeforeCall(data, null, null);
+    Type localVarReturnType = new TypeToken<PromotedObjectsDeleteResponse>() {}.getType();
+    return apiClient.execute(call, localVarReturnType);
+  }
+
+  /**
+   * 删除推广目标 (asynchronously)
+   *
+   * @param data (required)
+   * @param callback The callback to be executed when the API call finishes
+   * @return The request call
+   * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+   */
+  public com.squareup.okhttp.Call promotedObjectsDeleteAsync(
+      PromotedObjectsDeleteRequest data, final ApiCallback<PromotedObjectsDeleteResponse> callback)
+      throws ApiException {
+
+    ProgressResponseBody.ProgressListener progressListener = null;
+    ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
+
+    if (callback != null) {
+      progressListener =
+          new ProgressResponseBody.ProgressListener() {
+            @Override
+            public void update(long bytesRead, long contentLength, boolean done) {
+              callback.onDownloadProgress(bytesRead, contentLength, done);
+            }
+          };
+
+      progressRequestListener =
+          new ProgressRequestBody.ProgressRequestListener() {
+            @Override
+            public void onRequestProgress(long bytesWritten, long contentLength, boolean done) {
+              callback.onUploadProgress(bytesWritten, contentLength, done);
+            }
+          };
+    }
+
+    com.squareup.okhttp.Call call =
+        promotedObjectsDeleteValidateBeforeCall(data, progressListener, progressRequestListener);
+    Type localVarReturnType = new TypeToken<PromotedObjectsDeleteResponse>() {}.getType();
     apiClient.executeAsync(call, localVarReturnType, callback);
     return call;
   }

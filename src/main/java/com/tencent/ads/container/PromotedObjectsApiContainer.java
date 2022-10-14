@@ -22,6 +22,12 @@ import com.tencent.ads.model.FilteringStruct;
 import com.tencent.ads.model.PromotedObjectsAddRequest;
 import com.tencent.ads.model.PromotedObjectsAddResponse;
 import com.tencent.ads.model.PromotedObjectsAddResponseData;
+import com.tencent.ads.model.PromotedObjectsAuthorizeRequest;
+import com.tencent.ads.model.PromotedObjectsAuthorizeResponse;
+import com.tencent.ads.model.PromotedObjectsAuthorizeResponseData;
+import com.tencent.ads.model.PromotedObjectsDeleteRequest;
+import com.tencent.ads.model.PromotedObjectsDeleteResponse;
+import com.tencent.ads.model.PromotedObjectsDeleteResponseData;
 import com.tencent.ads.model.PromotedObjectsGetResponse;
 import com.tencent.ads.model.PromotedObjectsGetResponseData;
 import com.tencent.ads.model.PromotedObjectsUpdateRequest;
@@ -44,6 +50,36 @@ public class PromotedObjectsApiContainer extends ApiContainer {
   public PromotedObjectsAddResponseData promotedObjectsAdd(PromotedObjectsAddRequest data)
       throws ApiException, TencentAdsResponseException {
     PromotedObjectsAddResponse resp = api.promotedObjectsAdd(data);
+    handleResponse(gson.toJson(resp));
+    return resp.getData();
+  }
+
+  /**
+   * 推广目标授权接口
+   *
+   * @param data (required)
+   * @return PromotedObjectsAuthorizeResponse
+   * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
+   *     response body
+   */
+  public PromotedObjectsAuthorizeResponseData promotedObjectsAuthorize(
+      PromotedObjectsAuthorizeRequest data) throws ApiException, TencentAdsResponseException {
+    PromotedObjectsAuthorizeResponse resp = api.promotedObjectsAuthorize(data);
+    handleResponse(gson.toJson(resp));
+    return resp.getData();
+  }
+
+  /**
+   * 删除推广目标
+   *
+   * @param data (required)
+   * @return PromotedObjectsDeleteResponse
+   * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
+   *     response body
+   */
+  public PromotedObjectsDeleteResponseData promotedObjectsDelete(PromotedObjectsDeleteRequest data)
+      throws ApiException, TencentAdsResponseException {
+    PromotedObjectsDeleteResponse resp = api.promotedObjectsDelete(data);
     handleResponse(gson.toJson(resp));
     return resp.getData();
   }

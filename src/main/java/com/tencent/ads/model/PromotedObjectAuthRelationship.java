@@ -19,20 +19,18 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-/** 任务详情每项执行结果类型 */
-@JsonAdapter(TaskDetailResultType.Adapter.class)
-public enum TaskDetailResultType {
-  PENDING("TASK_DETAIL_RESULT_TYPE_PENDING"),
+/** 授权主体关系 */
+@JsonAdapter(PromotedObjectAuthRelationship.Adapter.class)
+public enum PromotedObjectAuthRelationship {
+  UNKNOWN("RELATIONSHIP_UNKNOWN"),
 
-  FAIL("TASK_DETAIL_RESULT_TYPE_FAIL"),
+  CORPORATION("RELATIONSHIP_CORPORATION"),
 
-  SUCCESS("TASK_DETAIL_RESULT_TYPE_SUCCESS"),
-
-  SYSTEM_ERROR("TASK_DETAIL_RESULT_TYPE_SYSTEM_ERROR");
+  EMPLOYMENT("RELATIONSHIP_EMPLOYMENT");
 
   private String value;
 
-  TaskDetailResultType(String value) {
+  PromotedObjectAuthRelationship(String value) {
     this.value = value;
   }
 
@@ -45,8 +43,8 @@ public enum TaskDetailResultType {
     return String.valueOf(value);
   }
 
-  public static TaskDetailResultType fromValue(String text) {
-    for (TaskDetailResultType b : TaskDetailResultType.values()) {
+  public static PromotedObjectAuthRelationship fromValue(String text) {
+    for (PromotedObjectAuthRelationship b : PromotedObjectAuthRelationship.values()) {
       if (String.valueOf(b.value).equals(text)) {
         return b;
       }
@@ -54,17 +52,17 @@ public enum TaskDetailResultType {
     return null;
   }
 
-  public static class Adapter extends TypeAdapter<TaskDetailResultType> {
+  public static class Adapter extends TypeAdapter<PromotedObjectAuthRelationship> {
     @Override
-    public void write(final JsonWriter jsonWriter, final TaskDetailResultType enumeration)
+    public void write(final JsonWriter jsonWriter, final PromotedObjectAuthRelationship enumeration)
         throws IOException {
       jsonWriter.value(enumeration.getValue());
     }
 
     @Override
-    public TaskDetailResultType read(final JsonReader jsonReader) throws IOException {
+    public PromotedObjectAuthRelationship read(final JsonReader jsonReader) throws IOException {
       String value = jsonReader.nextString();
-      return TaskDetailResultType.fromValue(String.valueOf(value));
+      return PromotedObjectAuthRelationship.fromValue(String.valueOf(value));
     }
   }
 }

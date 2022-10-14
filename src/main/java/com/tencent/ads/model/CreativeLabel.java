@@ -27,6 +27,9 @@ public class CreativeLabel {
   @SerializedName("type")
   private LabelType type = null;
 
+  @SerializedName("display_content")
+  private String displayContent = null;
+
   public CreativeLabel content(String content) {
     this.content = content;
     return this;
@@ -65,6 +68,25 @@ public class CreativeLabel {
     this.type = type;
   }
 
+  public CreativeLabel displayContent(String displayContent) {
+    this.displayContent = displayContent;
+    return this;
+  }
+
+  /**
+   * Get displayContent
+   *
+   * @return displayContent
+   */
+  @ApiModelProperty(value = "")
+  public String getDisplayContent() {
+    return displayContent;
+  }
+
+  public void setDisplayContent(String displayContent) {
+    this.displayContent = displayContent;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -75,12 +97,13 @@ public class CreativeLabel {
     }
     CreativeLabel creativeLabel = (CreativeLabel) o;
     return Objects.equals(this.content, creativeLabel.content)
-        && Objects.equals(this.type, creativeLabel.type);
+        && Objects.equals(this.type, creativeLabel.type)
+        && Objects.equals(this.displayContent, creativeLabel.displayContent);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(content, type);
+    return Objects.hash(content, type, displayContent);
   }
 
   @Override

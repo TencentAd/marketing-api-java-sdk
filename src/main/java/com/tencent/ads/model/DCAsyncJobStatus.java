@@ -19,20 +19,22 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-/** 任务详情每项执行结果类型 */
-@JsonAdapter(TaskDetailResultType.Adapter.class)
-public enum TaskDetailResultType {
-  PENDING("TASK_DETAIL_RESULT_TYPE_PENDING"),
+/** 异步任务状态 */
+@JsonAdapter(DCAsyncJobStatus.Adapter.class)
+public enum DCAsyncJobStatus {
+  PENDING("DC_ASYNC_JOB_STATUS_PENDING"),
 
-  FAIL("TASK_DETAIL_RESULT_TYPE_FAIL"),
+  FAIL("DC_ASYNC_JOB_STATUS_FAIL"),
 
-  SUCCESS("TASK_DETAIL_RESULT_TYPE_SUCCESS"),
+  SUCCESS("DC_ASYNC_JOB_STATUS_SUCCESS"),
 
-  SYSTEM_ERROR("TASK_DETAIL_RESULT_TYPE_SYSTEM_ERROR");
+  SYSTEM_ERROR("DC_ASYNC_JOB_STATUS_SYSTEM_ERROR"),
+
+  PROCESSING("DC_ASYNC_JOB_STATUS_PROCESSING");
 
   private String value;
 
-  TaskDetailResultType(String value) {
+  DCAsyncJobStatus(String value) {
     this.value = value;
   }
 
@@ -45,8 +47,8 @@ public enum TaskDetailResultType {
     return String.valueOf(value);
   }
 
-  public static TaskDetailResultType fromValue(String text) {
-    for (TaskDetailResultType b : TaskDetailResultType.values()) {
+  public static DCAsyncJobStatus fromValue(String text) {
+    for (DCAsyncJobStatus b : DCAsyncJobStatus.values()) {
       if (String.valueOf(b.value).equals(text)) {
         return b;
       }
@@ -54,17 +56,17 @@ public enum TaskDetailResultType {
     return null;
   }
 
-  public static class Adapter extends TypeAdapter<TaskDetailResultType> {
+  public static class Adapter extends TypeAdapter<DCAsyncJobStatus> {
     @Override
-    public void write(final JsonWriter jsonWriter, final TaskDetailResultType enumeration)
+    public void write(final JsonWriter jsonWriter, final DCAsyncJobStatus enumeration)
         throws IOException {
       jsonWriter.value(enumeration.getValue());
     }
 
     @Override
-    public TaskDetailResultType read(final JsonReader jsonReader) throws IOException {
+    public DCAsyncJobStatus read(final JsonReader jsonReader) throws IOException {
       String value = jsonReader.nextString();
-      return TaskDetailResultType.fromValue(String.valueOf(value));
+      return DCAsyncJobStatus.fromValue(String.valueOf(value));
     }
   }
 }

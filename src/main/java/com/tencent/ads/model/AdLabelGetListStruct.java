@@ -41,6 +41,9 @@ public class AdLabelGetListStruct {
   @SerializedName("label_remark")
   private List<LabelRemarkItem> labelRemark = null;
 
+  @SerializedName("label_structs")
+  private List<LabelStruct> labelStructs = null;
+
   public AdLabelGetListStruct labelCategory(String labelCategory) {
     this.labelCategory = labelCategory;
     return this;
@@ -179,6 +182,33 @@ public class AdLabelGetListStruct {
     this.labelRemark = labelRemark;
   }
 
+  public AdLabelGetListStruct labelStructs(List<LabelStruct> labelStructs) {
+    this.labelStructs = labelStructs;
+    return this;
+  }
+
+  public AdLabelGetListStruct addLabelStructsItem(LabelStruct labelStructsItem) {
+    if (this.labelStructs == null) {
+      this.labelStructs = new ArrayList<LabelStruct>();
+    }
+    this.labelStructs.add(labelStructsItem);
+    return this;
+  }
+
+  /**
+   * Get labelStructs
+   *
+   * @return labelStructs
+   */
+  @ApiModelProperty(value = "")
+  public List<LabelStruct> getLabelStructs() {
+    return labelStructs;
+  }
+
+  public void setLabelStructs(List<LabelStruct> labelStructs) {
+    this.labelStructs = labelStructs;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -193,12 +223,14 @@ public class AdLabelGetListStruct {
         && Objects.equals(this.icon, adLabelGetListStruct.icon)
         && Objects.equals(this.labelType, adLabelGetListStruct.labelType)
         && Objects.equals(this.labelTypeName, adLabelGetListStruct.labelTypeName)
-        && Objects.equals(this.labelRemark, adLabelGetListStruct.labelRemark);
+        && Objects.equals(this.labelRemark, adLabelGetListStruct.labelRemark)
+        && Objects.equals(this.labelStructs, adLabelGetListStruct.labelStructs);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(labelCategory, label, icon, labelType, labelTypeName, labelRemark);
+    return Objects.hash(
+        labelCategory, label, icon, labelType, labelTypeName, labelRemark, labelStructs);
   }
 
   @Override
