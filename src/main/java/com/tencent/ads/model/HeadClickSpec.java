@@ -24,6 +24,9 @@ public class HeadClickSpec {
   @SerializedName("brand_app_id")
   private String brandAppId = null;
 
+  @SerializedName("search_brand_area_keyword")
+  private String searchBrandAreaKeyword = null;
+
   public HeadClickSpec brandAppId(String brandAppId) {
     this.brandAppId = brandAppId;
     return this;
@@ -43,6 +46,25 @@ public class HeadClickSpec {
     this.brandAppId = brandAppId;
   }
 
+  public HeadClickSpec searchBrandAreaKeyword(String searchBrandAreaKeyword) {
+    this.searchBrandAreaKeyword = searchBrandAreaKeyword;
+    return this;
+  }
+
+  /**
+   * Get searchBrandAreaKeyword
+   *
+   * @return searchBrandAreaKeyword
+   */
+  @ApiModelProperty(value = "")
+  public String getSearchBrandAreaKeyword() {
+    return searchBrandAreaKeyword;
+  }
+
+  public void setSearchBrandAreaKeyword(String searchBrandAreaKeyword) {
+    this.searchBrandAreaKeyword = searchBrandAreaKeyword;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -52,12 +74,13 @@ public class HeadClickSpec {
       return false;
     }
     HeadClickSpec headClickSpec = (HeadClickSpec) o;
-    return Objects.equals(this.brandAppId, headClickSpec.brandAppId);
+    return Objects.equals(this.brandAppId, headClickSpec.brandAppId)
+        && Objects.equals(this.searchBrandAreaKeyword, headClickSpec.searchBrandAreaKeyword);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(brandAppId);
+    return Objects.hash(brandAppId, searchBrandAreaKeyword);
   }
 
   @Override

@@ -172,6 +172,10 @@ public class App {
   @Inject WechatPagesCustomApiContainer wechatPagesCustomApiContainer;
   @Inject WechatPagesGrantinfoApiContainer wechatPagesGrantinfoApiContainer;
   @Inject WechatQualificationsApiContainer wechatQualificationsApiContainer;
+
+  @Inject
+  WeixinOfficialAccountsUpgradeStatusApiContainer weixinOfficialAccountsUpgradeStatusApiContainer;
+
   @Inject WildcardsApiContainer wildcardsApiContainer;
   @Inject WxPackageAccountApiContainer wxPackageAccountApiContainer;
   @Inject WxPackagePackageApiContainer wxPackagePackageApiContainer;
@@ -788,6 +792,10 @@ public class App {
 
   public WechatQualificationsApiContainer wechatQualifications() {
     return wechatQualificationsApiContainer;
+  }
+
+  public WeixinOfficialAccountsUpgradeStatusApiContainer weixinOfficialAccountsUpgradeStatus() {
+    return weixinOfficialAccountsUpgradeStatusApiContainer;
   }
 
   public WildcardsApiContainer wildcards() {
