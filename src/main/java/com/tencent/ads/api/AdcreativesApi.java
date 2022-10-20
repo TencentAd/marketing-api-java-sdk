@@ -365,6 +365,7 @@ public class AdcreativesApi {
    * @param pageSize (optional)
    * @param isDeleted (optional)
    * @param linkPageTypeCompatible (optional)
+   * @param weixinOfficialAccountsUpgradeEnabled (optional)
    * @param fields 返回参数的字段列表 (optional)
    * @param progressListener Progress listener
    * @param progressRequestListener Progress request listener
@@ -378,6 +379,7 @@ public class AdcreativesApi {
       Long pageSize,
       Boolean isDeleted,
       Boolean linkPageTypeCompatible,
+      Boolean weixinOfficialAccountsUpgradeEnabled,
       List<String> fields,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener)
@@ -402,6 +404,10 @@ public class AdcreativesApi {
     if (linkPageTypeCompatible != null)
       localVarQueryParams.addAll(
           apiClient.parameterToPair("link_page_type_compatible", linkPageTypeCompatible));
+    if (weixinOfficialAccountsUpgradeEnabled != null)
+      localVarQueryParams.addAll(
+          apiClient.parameterToPair(
+              "weixin_official_accounts_upgrade_enabled", weixinOfficialAccountsUpgradeEnabled));
     if (fields != null)
       localVarCollectionQueryParams.addAll(apiClient.parameterToPairs("multi", "fields", fields));
 
@@ -456,6 +462,7 @@ public class AdcreativesApi {
       Long pageSize,
       Boolean isDeleted,
       Boolean linkPageTypeCompatible,
+      Boolean weixinOfficialAccountsUpgradeEnabled,
       List<String> fields,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener)
@@ -475,6 +482,7 @@ public class AdcreativesApi {
             pageSize,
             isDeleted,
             linkPageTypeCompatible,
+            weixinOfficialAccountsUpgradeEnabled,
             fields,
             progressListener,
             progressRequestListener);
@@ -490,6 +498,7 @@ public class AdcreativesApi {
    * @param pageSize (optional)
    * @param isDeleted (optional)
    * @param linkPageTypeCompatible (optional)
+   * @param weixinOfficialAccountsUpgradeEnabled (optional)
    * @param fields 返回参数的字段列表 (optional)
    * @return AdcreativesGetResponse
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
@@ -502,11 +511,19 @@ public class AdcreativesApi {
       Long pageSize,
       Boolean isDeleted,
       Boolean linkPageTypeCompatible,
+      Boolean weixinOfficialAccountsUpgradeEnabled,
       List<String> fields)
       throws ApiException {
     ApiResponse<AdcreativesGetResponse> resp =
         adcreativesGetWithHttpInfo(
-            accountId, filtering, page, pageSize, isDeleted, linkPageTypeCompatible, fields);
+            accountId,
+            filtering,
+            page,
+            pageSize,
+            isDeleted,
+            linkPageTypeCompatible,
+            weixinOfficialAccountsUpgradeEnabled,
+            fields);
     return resp.getData();
   }
 
@@ -519,6 +536,7 @@ public class AdcreativesApi {
    * @param pageSize (optional)
    * @param isDeleted (optional)
    * @param linkPageTypeCompatible (optional)
+   * @param weixinOfficialAccountsUpgradeEnabled (optional)
    * @param fields 返回参数的字段列表 (optional)
    * @return ApiResponse&lt;AdcreativesGetResponse&gt;
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
@@ -531,6 +549,7 @@ public class AdcreativesApi {
       Long pageSize,
       Boolean isDeleted,
       Boolean linkPageTypeCompatible,
+      Boolean weixinOfficialAccountsUpgradeEnabled,
       List<String> fields)
       throws ApiException {
     com.squareup.okhttp.Call call =
@@ -541,6 +560,7 @@ public class AdcreativesApi {
             pageSize,
             isDeleted,
             linkPageTypeCompatible,
+            weixinOfficialAccountsUpgradeEnabled,
             fields,
             null,
             null);
@@ -557,6 +577,7 @@ public class AdcreativesApi {
    * @param pageSize (optional)
    * @param isDeleted (optional)
    * @param linkPageTypeCompatible (optional)
+   * @param weixinOfficialAccountsUpgradeEnabled (optional)
    * @param fields 返回参数的字段列表 (optional)
    * @param callback The callback to be executed when the API call finishes
    * @return The request call
@@ -569,6 +590,7 @@ public class AdcreativesApi {
       Long pageSize,
       Boolean isDeleted,
       Boolean linkPageTypeCompatible,
+      Boolean weixinOfficialAccountsUpgradeEnabled,
       List<String> fields,
       final ApiCallback<AdcreativesGetResponse> callback)
       throws ApiException {
@@ -602,6 +624,7 @@ public class AdcreativesApi {
             pageSize,
             isDeleted,
             linkPageTypeCompatible,
+            weixinOfficialAccountsUpgradeEnabled,
             fields,
             progressListener,
             progressRequestListener);

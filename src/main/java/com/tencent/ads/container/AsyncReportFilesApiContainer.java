@@ -31,15 +31,23 @@ public class AsyncReportFilesApiContainer extends ApiContainer {
    * @param accountId (required)
    * @param taskId (required)
    * @param fileId (required)
+   * @param weixinOfficialAccountsUpgradeEnabled (optional)
    * @param fields 返回参数的字段列表 (optional)
    * @return String
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
   @NeedDiffHost
-  public String asyncReportFilesGet(Long accountId, Long taskId, Long fileId, List<String> fields)
+  public String asyncReportFilesGet(
+      Long accountId,
+      Long taskId,
+      Long fileId,
+      Boolean weixinOfficialAccountsUpgradeEnabled,
+      List<String> fields)
       throws ApiException, TencentAdsResponseException {
-    String resp = api.asyncReportFilesGet(accountId, taskId, fileId, fields);
+    String resp =
+        api.asyncReportFilesGet(
+            accountId, taskId, fileId, weixinOfficialAccountsUpgradeEnabled, fields);
 
     return resp;
   }

@@ -20,6 +20,8 @@ public class GetAsyncReportFiles {
 
   public Long fileId = null;
 
+  public Boolean weixinOfficialAccountsUpgradeEnabled = null;
+
   public List<String> fields = null;
 
   public void init() {
@@ -34,7 +36,10 @@ public class GetAsyncReportFiles {
 
   public String getAsyncReportFiles() throws Exception {
     String response =
-        tencentAds.asyncReportFiles().asyncReportFilesGet(accountId, taskId, fileId, fields);
+        tencentAds
+            .asyncReportFiles()
+            .asyncReportFilesGet(
+                accountId, taskId, fileId, weixinOfficialAccountsUpgradeEnabled, fields);
     return response;
   }
 

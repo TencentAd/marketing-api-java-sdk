@@ -39,6 +39,8 @@ public class GetDailyReports {
   public List<String> fields =
       Arrays.asList("date", "view_count", "valid_click_count", "ctr", "cpc", "cost");
 
+  public Boolean weixinOfficialAccountsUpgradeEnabled = null;
+
   public void init() {
     this.tencentAds = TencentAds.getInstance();
     this.tencentAds.init(
@@ -59,8 +61,17 @@ public class GetDailyReports {
         tencentAds
             .dailyReports()
             .dailyReportsGet(
-                accountId, level, dateRange, filtering, groupBy, orderBy, page, pageSize, timeLine,
-                fields);
+                accountId,
+                level,
+                dateRange,
+                filtering,
+                groupBy,
+                orderBy,
+                page,
+                pageSize,
+                timeLine,
+                fields,
+                weixinOfficialAccountsUpgradeEnabled);
     return response;
   }
 

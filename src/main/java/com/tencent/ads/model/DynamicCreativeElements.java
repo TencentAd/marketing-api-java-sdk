@@ -170,6 +170,54 @@ public class DynamicCreativeElements {
   @SerializedName("finder_object_visibility")
   private Boolean finderObjectVisibility = null;
 
+  @SerializedName("title_component_options")
+  private List<TextComponentOption> titleComponentOptions = null;
+
+  @SerializedName("description_component_options")
+  private List<TextComponentOption> descriptionComponentOptions = null;
+
+  @SerializedName("image_component_options")
+  private List<ImageComponentOption> imageComponentOptions = null;
+
+  @SerializedName("image_list_component_options")
+  private List<ImageListComponentOption> imageListComponentOptions = null;
+
+  @SerializedName("image_text_list_component_options")
+  private List<ImageTextListComponentOption> imageTextListComponentOptions = null;
+
+  @SerializedName("image2_component_options")
+  private List<ImageComponentOption> image2ComponentOptions = null;
+
+  @SerializedName("landing_page_component_options")
+  private List<LandingPageComponentOption> landingPageComponentOptions = null;
+
+  @SerializedName("brand_component_options")
+  private List<BrandComponentOption> brandComponentOptions = null;
+
+  @SerializedName("long_sublink_component_options")
+  private List<LongSublinkComponentOption> longSublinkComponentOptions = null;
+
+  @SerializedName("long_sublink_list_component_options")
+  private List<LongSublinkListComponentOption> longSublinkListComponentOptions = null;
+
+  @SerializedName("short_sublink_component_options")
+  private List<ShortSublinkComponentOption> shortSublinkComponentOptions = null;
+
+  @SerializedName("short_sublink_list_component_options")
+  private List<ShortSublinkListComponentOption> shortSublinkListComponentOptions = null;
+
+  @SerializedName("video_component_options")
+  private List<VideoComponentOption> videoComponentOptions = null;
+
+  @SerializedName("consult_component_options")
+  private List<ConsultComponentOption> consultComponentOptions = null;
+
+  @SerializedName("phone_component_options")
+  private List<PhoneComponentOption> phoneComponentOptions = null;
+
+  @SerializedName("form_component_options")
+  private List<FormComponentOption> formComponentOptions = null;
+
   public DynamicCreativeElements image(String image) {
     this.image = image;
     return this;
@@ -1184,6 +1232,478 @@ public class DynamicCreativeElements {
     this.finderObjectVisibility = finderObjectVisibility;
   }
 
+  public DynamicCreativeElements titleComponentOptions(
+      List<TextComponentOption> titleComponentOptions) {
+    this.titleComponentOptions = titleComponentOptions;
+    return this;
+  }
+
+  public DynamicCreativeElements addTitleComponentOptionsItem(
+      TextComponentOption titleComponentOptionsItem) {
+    if (this.titleComponentOptions == null) {
+      this.titleComponentOptions = new ArrayList<TextComponentOption>();
+    }
+    this.titleComponentOptions.add(titleComponentOptionsItem);
+    return this;
+  }
+
+  /**
+   * Get titleComponentOptions
+   *
+   * @return titleComponentOptions
+   */
+  @ApiModelProperty(value = "")
+  public List<TextComponentOption> getTitleComponentOptions() {
+    return titleComponentOptions;
+  }
+
+  public void setTitleComponentOptions(List<TextComponentOption> titleComponentOptions) {
+    this.titleComponentOptions = titleComponentOptions;
+  }
+
+  public DynamicCreativeElements descriptionComponentOptions(
+      List<TextComponentOption> descriptionComponentOptions) {
+    this.descriptionComponentOptions = descriptionComponentOptions;
+    return this;
+  }
+
+  public DynamicCreativeElements addDescriptionComponentOptionsItem(
+      TextComponentOption descriptionComponentOptionsItem) {
+    if (this.descriptionComponentOptions == null) {
+      this.descriptionComponentOptions = new ArrayList<TextComponentOption>();
+    }
+    this.descriptionComponentOptions.add(descriptionComponentOptionsItem);
+    return this;
+  }
+
+  /**
+   * Get descriptionComponentOptions
+   *
+   * @return descriptionComponentOptions
+   */
+  @ApiModelProperty(value = "")
+  public List<TextComponentOption> getDescriptionComponentOptions() {
+    return descriptionComponentOptions;
+  }
+
+  public void setDescriptionComponentOptions(
+      List<TextComponentOption> descriptionComponentOptions) {
+    this.descriptionComponentOptions = descriptionComponentOptions;
+  }
+
+  public DynamicCreativeElements imageComponentOptions(
+      List<ImageComponentOption> imageComponentOptions) {
+    this.imageComponentOptions = imageComponentOptions;
+    return this;
+  }
+
+  public DynamicCreativeElements addImageComponentOptionsItem(
+      ImageComponentOption imageComponentOptionsItem) {
+    if (this.imageComponentOptions == null) {
+      this.imageComponentOptions = new ArrayList<ImageComponentOption>();
+    }
+    this.imageComponentOptions.add(imageComponentOptionsItem);
+    return this;
+  }
+
+  /**
+   * Get imageComponentOptions
+   *
+   * @return imageComponentOptions
+   */
+  @ApiModelProperty(value = "")
+  public List<ImageComponentOption> getImageComponentOptions() {
+    return imageComponentOptions;
+  }
+
+  public void setImageComponentOptions(List<ImageComponentOption> imageComponentOptions) {
+    this.imageComponentOptions = imageComponentOptions;
+  }
+
+  public DynamicCreativeElements imageListComponentOptions(
+      List<ImageListComponentOption> imageListComponentOptions) {
+    this.imageListComponentOptions = imageListComponentOptions;
+    return this;
+  }
+
+  public DynamicCreativeElements addImageListComponentOptionsItem(
+      ImageListComponentOption imageListComponentOptionsItem) {
+    if (this.imageListComponentOptions == null) {
+      this.imageListComponentOptions = new ArrayList<ImageListComponentOption>();
+    }
+    this.imageListComponentOptions.add(imageListComponentOptionsItem);
+    return this;
+  }
+
+  /**
+   * Get imageListComponentOptions
+   *
+   * @return imageListComponentOptions
+   */
+  @ApiModelProperty(value = "")
+  public List<ImageListComponentOption> getImageListComponentOptions() {
+    return imageListComponentOptions;
+  }
+
+  public void setImageListComponentOptions(
+      List<ImageListComponentOption> imageListComponentOptions) {
+    this.imageListComponentOptions = imageListComponentOptions;
+  }
+
+  public DynamicCreativeElements imageTextListComponentOptions(
+      List<ImageTextListComponentOption> imageTextListComponentOptions) {
+    this.imageTextListComponentOptions = imageTextListComponentOptions;
+    return this;
+  }
+
+  public DynamicCreativeElements addImageTextListComponentOptionsItem(
+      ImageTextListComponentOption imageTextListComponentOptionsItem) {
+    if (this.imageTextListComponentOptions == null) {
+      this.imageTextListComponentOptions = new ArrayList<ImageTextListComponentOption>();
+    }
+    this.imageTextListComponentOptions.add(imageTextListComponentOptionsItem);
+    return this;
+  }
+
+  /**
+   * Get imageTextListComponentOptions
+   *
+   * @return imageTextListComponentOptions
+   */
+  @ApiModelProperty(value = "")
+  public List<ImageTextListComponentOption> getImageTextListComponentOptions() {
+    return imageTextListComponentOptions;
+  }
+
+  public void setImageTextListComponentOptions(
+      List<ImageTextListComponentOption> imageTextListComponentOptions) {
+    this.imageTextListComponentOptions = imageTextListComponentOptions;
+  }
+
+  public DynamicCreativeElements image2ComponentOptions(
+      List<ImageComponentOption> image2ComponentOptions) {
+    this.image2ComponentOptions = image2ComponentOptions;
+    return this;
+  }
+
+  public DynamicCreativeElements addImage2ComponentOptionsItem(
+      ImageComponentOption image2ComponentOptionsItem) {
+    if (this.image2ComponentOptions == null) {
+      this.image2ComponentOptions = new ArrayList<ImageComponentOption>();
+    }
+    this.image2ComponentOptions.add(image2ComponentOptionsItem);
+    return this;
+  }
+
+  /**
+   * Get image2ComponentOptions
+   *
+   * @return image2ComponentOptions
+   */
+  @ApiModelProperty(value = "")
+  public List<ImageComponentOption> getImage2ComponentOptions() {
+    return image2ComponentOptions;
+  }
+
+  public void setImage2ComponentOptions(List<ImageComponentOption> image2ComponentOptions) {
+    this.image2ComponentOptions = image2ComponentOptions;
+  }
+
+  public DynamicCreativeElements landingPageComponentOptions(
+      List<LandingPageComponentOption> landingPageComponentOptions) {
+    this.landingPageComponentOptions = landingPageComponentOptions;
+    return this;
+  }
+
+  public DynamicCreativeElements addLandingPageComponentOptionsItem(
+      LandingPageComponentOption landingPageComponentOptionsItem) {
+    if (this.landingPageComponentOptions == null) {
+      this.landingPageComponentOptions = new ArrayList<LandingPageComponentOption>();
+    }
+    this.landingPageComponentOptions.add(landingPageComponentOptionsItem);
+    return this;
+  }
+
+  /**
+   * Get landingPageComponentOptions
+   *
+   * @return landingPageComponentOptions
+   */
+  @ApiModelProperty(value = "")
+  public List<LandingPageComponentOption> getLandingPageComponentOptions() {
+    return landingPageComponentOptions;
+  }
+
+  public void setLandingPageComponentOptions(
+      List<LandingPageComponentOption> landingPageComponentOptions) {
+    this.landingPageComponentOptions = landingPageComponentOptions;
+  }
+
+  public DynamicCreativeElements brandComponentOptions(
+      List<BrandComponentOption> brandComponentOptions) {
+    this.brandComponentOptions = brandComponentOptions;
+    return this;
+  }
+
+  public DynamicCreativeElements addBrandComponentOptionsItem(
+      BrandComponentOption brandComponentOptionsItem) {
+    if (this.brandComponentOptions == null) {
+      this.brandComponentOptions = new ArrayList<BrandComponentOption>();
+    }
+    this.brandComponentOptions.add(brandComponentOptionsItem);
+    return this;
+  }
+
+  /**
+   * Get brandComponentOptions
+   *
+   * @return brandComponentOptions
+   */
+  @ApiModelProperty(value = "")
+  public List<BrandComponentOption> getBrandComponentOptions() {
+    return brandComponentOptions;
+  }
+
+  public void setBrandComponentOptions(List<BrandComponentOption> brandComponentOptions) {
+    this.brandComponentOptions = brandComponentOptions;
+  }
+
+  public DynamicCreativeElements longSublinkComponentOptions(
+      List<LongSublinkComponentOption> longSublinkComponentOptions) {
+    this.longSublinkComponentOptions = longSublinkComponentOptions;
+    return this;
+  }
+
+  public DynamicCreativeElements addLongSublinkComponentOptionsItem(
+      LongSublinkComponentOption longSublinkComponentOptionsItem) {
+    if (this.longSublinkComponentOptions == null) {
+      this.longSublinkComponentOptions = new ArrayList<LongSublinkComponentOption>();
+    }
+    this.longSublinkComponentOptions.add(longSublinkComponentOptionsItem);
+    return this;
+  }
+
+  /**
+   * Get longSublinkComponentOptions
+   *
+   * @return longSublinkComponentOptions
+   */
+  @ApiModelProperty(value = "")
+  public List<LongSublinkComponentOption> getLongSublinkComponentOptions() {
+    return longSublinkComponentOptions;
+  }
+
+  public void setLongSublinkComponentOptions(
+      List<LongSublinkComponentOption> longSublinkComponentOptions) {
+    this.longSublinkComponentOptions = longSublinkComponentOptions;
+  }
+
+  public DynamicCreativeElements longSublinkListComponentOptions(
+      List<LongSublinkListComponentOption> longSublinkListComponentOptions) {
+    this.longSublinkListComponentOptions = longSublinkListComponentOptions;
+    return this;
+  }
+
+  public DynamicCreativeElements addLongSublinkListComponentOptionsItem(
+      LongSublinkListComponentOption longSublinkListComponentOptionsItem) {
+    if (this.longSublinkListComponentOptions == null) {
+      this.longSublinkListComponentOptions = new ArrayList<LongSublinkListComponentOption>();
+    }
+    this.longSublinkListComponentOptions.add(longSublinkListComponentOptionsItem);
+    return this;
+  }
+
+  /**
+   * Get longSublinkListComponentOptions
+   *
+   * @return longSublinkListComponentOptions
+   */
+  @ApiModelProperty(value = "")
+  public List<LongSublinkListComponentOption> getLongSublinkListComponentOptions() {
+    return longSublinkListComponentOptions;
+  }
+
+  public void setLongSublinkListComponentOptions(
+      List<LongSublinkListComponentOption> longSublinkListComponentOptions) {
+    this.longSublinkListComponentOptions = longSublinkListComponentOptions;
+  }
+
+  public DynamicCreativeElements shortSublinkComponentOptions(
+      List<ShortSublinkComponentOption> shortSublinkComponentOptions) {
+    this.shortSublinkComponentOptions = shortSublinkComponentOptions;
+    return this;
+  }
+
+  public DynamicCreativeElements addShortSublinkComponentOptionsItem(
+      ShortSublinkComponentOption shortSublinkComponentOptionsItem) {
+    if (this.shortSublinkComponentOptions == null) {
+      this.shortSublinkComponentOptions = new ArrayList<ShortSublinkComponentOption>();
+    }
+    this.shortSublinkComponentOptions.add(shortSublinkComponentOptionsItem);
+    return this;
+  }
+
+  /**
+   * Get shortSublinkComponentOptions
+   *
+   * @return shortSublinkComponentOptions
+   */
+  @ApiModelProperty(value = "")
+  public List<ShortSublinkComponentOption> getShortSublinkComponentOptions() {
+    return shortSublinkComponentOptions;
+  }
+
+  public void setShortSublinkComponentOptions(
+      List<ShortSublinkComponentOption> shortSublinkComponentOptions) {
+    this.shortSublinkComponentOptions = shortSublinkComponentOptions;
+  }
+
+  public DynamicCreativeElements shortSublinkListComponentOptions(
+      List<ShortSublinkListComponentOption> shortSublinkListComponentOptions) {
+    this.shortSublinkListComponentOptions = shortSublinkListComponentOptions;
+    return this;
+  }
+
+  public DynamicCreativeElements addShortSublinkListComponentOptionsItem(
+      ShortSublinkListComponentOption shortSublinkListComponentOptionsItem) {
+    if (this.shortSublinkListComponentOptions == null) {
+      this.shortSublinkListComponentOptions = new ArrayList<ShortSublinkListComponentOption>();
+    }
+    this.shortSublinkListComponentOptions.add(shortSublinkListComponentOptionsItem);
+    return this;
+  }
+
+  /**
+   * Get shortSublinkListComponentOptions
+   *
+   * @return shortSublinkListComponentOptions
+   */
+  @ApiModelProperty(value = "")
+  public List<ShortSublinkListComponentOption> getShortSublinkListComponentOptions() {
+    return shortSublinkListComponentOptions;
+  }
+
+  public void setShortSublinkListComponentOptions(
+      List<ShortSublinkListComponentOption> shortSublinkListComponentOptions) {
+    this.shortSublinkListComponentOptions = shortSublinkListComponentOptions;
+  }
+
+  public DynamicCreativeElements videoComponentOptions(
+      List<VideoComponentOption> videoComponentOptions) {
+    this.videoComponentOptions = videoComponentOptions;
+    return this;
+  }
+
+  public DynamicCreativeElements addVideoComponentOptionsItem(
+      VideoComponentOption videoComponentOptionsItem) {
+    if (this.videoComponentOptions == null) {
+      this.videoComponentOptions = new ArrayList<VideoComponentOption>();
+    }
+    this.videoComponentOptions.add(videoComponentOptionsItem);
+    return this;
+  }
+
+  /**
+   * Get videoComponentOptions
+   *
+   * @return videoComponentOptions
+   */
+  @ApiModelProperty(value = "")
+  public List<VideoComponentOption> getVideoComponentOptions() {
+    return videoComponentOptions;
+  }
+
+  public void setVideoComponentOptions(List<VideoComponentOption> videoComponentOptions) {
+    this.videoComponentOptions = videoComponentOptions;
+  }
+
+  public DynamicCreativeElements consultComponentOptions(
+      List<ConsultComponentOption> consultComponentOptions) {
+    this.consultComponentOptions = consultComponentOptions;
+    return this;
+  }
+
+  public DynamicCreativeElements addConsultComponentOptionsItem(
+      ConsultComponentOption consultComponentOptionsItem) {
+    if (this.consultComponentOptions == null) {
+      this.consultComponentOptions = new ArrayList<ConsultComponentOption>();
+    }
+    this.consultComponentOptions.add(consultComponentOptionsItem);
+    return this;
+  }
+
+  /**
+   * Get consultComponentOptions
+   *
+   * @return consultComponentOptions
+   */
+  @ApiModelProperty(value = "")
+  public List<ConsultComponentOption> getConsultComponentOptions() {
+    return consultComponentOptions;
+  }
+
+  public void setConsultComponentOptions(List<ConsultComponentOption> consultComponentOptions) {
+    this.consultComponentOptions = consultComponentOptions;
+  }
+
+  public DynamicCreativeElements phoneComponentOptions(
+      List<PhoneComponentOption> phoneComponentOptions) {
+    this.phoneComponentOptions = phoneComponentOptions;
+    return this;
+  }
+
+  public DynamicCreativeElements addPhoneComponentOptionsItem(
+      PhoneComponentOption phoneComponentOptionsItem) {
+    if (this.phoneComponentOptions == null) {
+      this.phoneComponentOptions = new ArrayList<PhoneComponentOption>();
+    }
+    this.phoneComponentOptions.add(phoneComponentOptionsItem);
+    return this;
+  }
+
+  /**
+   * Get phoneComponentOptions
+   *
+   * @return phoneComponentOptions
+   */
+  @ApiModelProperty(value = "")
+  public List<PhoneComponentOption> getPhoneComponentOptions() {
+    return phoneComponentOptions;
+  }
+
+  public void setPhoneComponentOptions(List<PhoneComponentOption> phoneComponentOptions) {
+    this.phoneComponentOptions = phoneComponentOptions;
+  }
+
+  public DynamicCreativeElements formComponentOptions(
+      List<FormComponentOption> formComponentOptions) {
+    this.formComponentOptions = formComponentOptions;
+    return this;
+  }
+
+  public DynamicCreativeElements addFormComponentOptionsItem(
+      FormComponentOption formComponentOptionsItem) {
+    if (this.formComponentOptions == null) {
+      this.formComponentOptions = new ArrayList<FormComponentOption>();
+    }
+    this.formComponentOptions.add(formComponentOptionsItem);
+    return this;
+  }
+
+  /**
+   * Get formComponentOptions
+   *
+   * @return formComponentOptions
+   */
+  @ApiModelProperty(value = "")
+  public List<FormComponentOption> getFormComponentOptions() {
+    return formComponentOptions;
+  }
+
+  public void setFormComponentOptions(List<FormComponentOption> formComponentOptions) {
+    this.formComponentOptions = formComponentOptions;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -1244,7 +1764,36 @@ public class DynamicCreativeElements {
         && Objects.equals(this.canvasShareImage, dynamicCreativeElements.canvasShareImage)
         && Objects.equals(this.wegameInfoSpec, dynamicCreativeElements.wegameInfoSpec)
         && Objects.equals(
-            this.finderObjectVisibility, dynamicCreativeElements.finderObjectVisibility);
+            this.finderObjectVisibility, dynamicCreativeElements.finderObjectVisibility)
+        && Objects.equals(this.titleComponentOptions, dynamicCreativeElements.titleComponentOptions)
+        && Objects.equals(
+            this.descriptionComponentOptions, dynamicCreativeElements.descriptionComponentOptions)
+        && Objects.equals(this.imageComponentOptions, dynamicCreativeElements.imageComponentOptions)
+        && Objects.equals(
+            this.imageListComponentOptions, dynamicCreativeElements.imageListComponentOptions)
+        && Objects.equals(
+            this.imageTextListComponentOptions,
+            dynamicCreativeElements.imageTextListComponentOptions)
+        && Objects.equals(
+            this.image2ComponentOptions, dynamicCreativeElements.image2ComponentOptions)
+        && Objects.equals(
+            this.landingPageComponentOptions, dynamicCreativeElements.landingPageComponentOptions)
+        && Objects.equals(this.brandComponentOptions, dynamicCreativeElements.brandComponentOptions)
+        && Objects.equals(
+            this.longSublinkComponentOptions, dynamicCreativeElements.longSublinkComponentOptions)
+        && Objects.equals(
+            this.longSublinkListComponentOptions,
+            dynamicCreativeElements.longSublinkListComponentOptions)
+        && Objects.equals(
+            this.shortSublinkComponentOptions, dynamicCreativeElements.shortSublinkComponentOptions)
+        && Objects.equals(
+            this.shortSublinkListComponentOptions,
+            dynamicCreativeElements.shortSublinkListComponentOptions)
+        && Objects.equals(this.videoComponentOptions, dynamicCreativeElements.videoComponentOptions)
+        && Objects.equals(
+            this.consultComponentOptions, dynamicCreativeElements.consultComponentOptions)
+        && Objects.equals(this.phoneComponentOptions, dynamicCreativeElements.phoneComponentOptions)
+        && Objects.equals(this.formComponentOptions, dynamicCreativeElements.formComponentOptions);
   }
 
   @Override
@@ -1298,7 +1847,23 @@ public class DynamicCreativeElements {
         floatingZoneStruct,
         canvasShareImage,
         wegameInfoSpec,
-        finderObjectVisibility);
+        finderObjectVisibility,
+        titleComponentOptions,
+        descriptionComponentOptions,
+        imageComponentOptions,
+        imageListComponentOptions,
+        imageTextListComponentOptions,
+        image2ComponentOptions,
+        landingPageComponentOptions,
+        brandComponentOptions,
+        longSublinkComponentOptions,
+        longSublinkListComponentOptions,
+        shortSublinkComponentOptions,
+        shortSublinkListComponentOptions,
+        videoComponentOptions,
+        consultComponentOptions,
+        phoneComponentOptions,
+        formComponentOptions);
   }
 
   @Override

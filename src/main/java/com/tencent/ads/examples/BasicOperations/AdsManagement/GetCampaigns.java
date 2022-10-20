@@ -27,6 +27,8 @@ public class GetCampaigns {
 
   public Boolean isDeleted = null;
 
+  public Boolean weixinOfficialAccountsUpgradeEnabled = null;
+
   public List<String> fields = Arrays.asList("campaign_id", "campaign_name");
 
   public void init() {
@@ -52,7 +54,14 @@ public class GetCampaigns {
     CampaignsGetResponseData response =
         tencentAds
             .campaigns()
-            .campaignsGet(accountId, filtering, page, pageSize, isDeleted, fields);
+            .campaignsGet(
+                accountId,
+                filtering,
+                page,
+                pageSize,
+                isDeleted,
+                weixinOfficialAccountsUpgradeEnabled,
+                fields);
     return response;
   }
 

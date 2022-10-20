@@ -75,6 +75,7 @@ public class AdcreativesApiContainer extends ApiContainer {
    * @param pageSize (optional)
    * @param isDeleted (optional)
    * @param linkPageTypeCompatible (optional)
+   * @param weixinOfficialAccountsUpgradeEnabled (optional)
    * @param fields 返回参数的字段列表 (optional)
    * @return AdcreativesGetResponse
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
@@ -87,11 +88,19 @@ public class AdcreativesApiContainer extends ApiContainer {
       Long pageSize,
       Boolean isDeleted,
       Boolean linkPageTypeCompatible,
+      Boolean weixinOfficialAccountsUpgradeEnabled,
       List<String> fields)
       throws ApiException, TencentAdsResponseException {
     AdcreativesGetResponse resp =
         api.adcreativesGet(
-            accountId, filtering, page, pageSize, isDeleted, linkPageTypeCompatible, fields);
+            accountId,
+            filtering,
+            page,
+            pageSize,
+            isDeleted,
+            linkPageTypeCompatible,
+            weixinOfficialAccountsUpgradeEnabled,
+            fields);
     handleResponse(gson.toJson(resp));
     return resp.getData();
   }

@@ -42,6 +42,7 @@ public class HourlyReportsApiContainer extends ApiContainer {
    * @param pageSize (optional)
    * @param timeLine (optional)
    * @param fields (optional)
+   * @param weixinOfficialAccountsUpgradeEnabled (optional)
    * @return HourlyReportsGetResponse
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
@@ -56,12 +57,22 @@ public class HourlyReportsApiContainer extends ApiContainer {
       Long page,
       Long pageSize,
       String timeLine,
-      List<String> fields)
+      List<String> fields,
+      Boolean weixinOfficialAccountsUpgradeEnabled)
       throws ApiException, TencentAdsResponseException {
     HourlyReportsGetResponse resp =
         api.hourlyReportsGet(
-            accountId, level, dateRange, filtering, groupBy, orderBy, page, pageSize, timeLine,
-            fields);
+            accountId,
+            level,
+            dateRange,
+            filtering,
+            groupBy,
+            orderBy,
+            page,
+            pageSize,
+            timeLine,
+            fields,
+            weixinOfficialAccountsUpgradeEnabled);
     handleResponse(gson.toJson(resp));
     return resp.getData();
   }

@@ -52,6 +52,7 @@ public class AsyncReportsApiContainer extends ApiContainer {
    * @param filtering (optional)
    * @param page (optional)
    * @param pageSize (optional)
+   * @param weixinOfficialAccountsUpgradeEnabled (optional)
    * @param fields 返回参数的字段列表 (optional)
    * @return AsyncReportsGetResponse
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
@@ -62,10 +63,12 @@ public class AsyncReportsApiContainer extends ApiContainer {
       List<FilteringStruct> filtering,
       Long page,
       Long pageSize,
+      Boolean weixinOfficialAccountsUpgradeEnabled,
       List<String> fields)
       throws ApiException, TencentAdsResponseException {
     AsyncReportsGetResponse resp =
-        api.asyncReportsGet(accountId, filtering, page, pageSize, fields);
+        api.asyncReportsGet(
+            accountId, filtering, page, pageSize, weixinOfficialAccountsUpgradeEnabled, fields);
     handleResponse(gson.toJson(resp));
     return resp.getData();
   }

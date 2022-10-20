@@ -53,6 +53,7 @@ public class AsyncReportFilesApi {
    * @param accountId (required)
    * @param taskId (required)
    * @param fileId (required)
+   * @param weixinOfficialAccountsUpgradeEnabled (optional)
    * @param fields 返回参数的字段列表 (optional)
    * @param progressListener Progress listener
    * @param progressRequestListener Progress request listener
@@ -63,6 +64,7 @@ public class AsyncReportFilesApi {
       Long accountId,
       Long taskId,
       Long fileId,
+      Boolean weixinOfficialAccountsUpgradeEnabled,
       List<String> fields,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener)
@@ -78,6 +80,10 @@ public class AsyncReportFilesApi {
       localVarQueryParams.addAll(apiClient.parameterToPair("account_id", accountId));
     if (taskId != null) localVarQueryParams.addAll(apiClient.parameterToPair("task_id", taskId));
     if (fileId != null) localVarQueryParams.addAll(apiClient.parameterToPair("file_id", fileId));
+    if (weixinOfficialAccountsUpgradeEnabled != null)
+      localVarQueryParams.addAll(
+          apiClient.parameterToPair(
+              "weixin_official_accounts_upgrade_enabled", weixinOfficialAccountsUpgradeEnabled));
     if (fields != null)
       localVarCollectionQueryParams.addAll(apiClient.parameterToPairs("multi", "fields", fields));
 
@@ -129,6 +135,7 @@ public class AsyncReportFilesApi {
       Long accountId,
       Long taskId,
       Long fileId,
+      Boolean weixinOfficialAccountsUpgradeEnabled,
       List<String> fields,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener)
@@ -154,7 +161,13 @@ public class AsyncReportFilesApi {
 
     com.squareup.okhttp.Call call =
         asyncReportFilesGetCall(
-            accountId, taskId, fileId, fields, progressListener, progressRequestListener);
+            accountId,
+            taskId,
+            fileId,
+            weixinOfficialAccountsUpgradeEnabled,
+            fields,
+            progressListener,
+            progressRequestListener);
     return call;
   }
 
@@ -164,14 +177,22 @@ public class AsyncReportFilesApi {
    * @param accountId (required)
    * @param taskId (required)
    * @param fileId (required)
+   * @param weixinOfficialAccountsUpgradeEnabled (optional)
    * @param fields 返回参数的字段列表 (optional)
    * @return String
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
-  public String asyncReportFilesGet(Long accountId, Long taskId, Long fileId, List<String> fields)
+  public String asyncReportFilesGet(
+      Long accountId,
+      Long taskId,
+      Long fileId,
+      Boolean weixinOfficialAccountsUpgradeEnabled,
+      List<String> fields)
       throws ApiException {
-    ApiResponse<String> resp = asyncReportFilesGetWithHttpInfo(accountId, taskId, fileId, fields);
+    ApiResponse<String> resp =
+        asyncReportFilesGetWithHttpInfo(
+            accountId, taskId, fileId, weixinOfficialAccountsUpgradeEnabled, fields);
     return resp.getData();
   }
 
@@ -181,15 +202,22 @@ public class AsyncReportFilesApi {
    * @param accountId (required)
    * @param taskId (required)
    * @param fileId (required)
+   * @param weixinOfficialAccountsUpgradeEnabled (optional)
    * @param fields 返回参数的字段列表 (optional)
    * @return ApiResponse&lt;String&gt;
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
   public ApiResponse<String> asyncReportFilesGetWithHttpInfo(
-      Long accountId, Long taskId, Long fileId, List<String> fields) throws ApiException {
+      Long accountId,
+      Long taskId,
+      Long fileId,
+      Boolean weixinOfficialAccountsUpgradeEnabled,
+      List<String> fields)
+      throws ApiException {
     com.squareup.okhttp.Call call =
-        asyncReportFilesGetValidateBeforeCall(accountId, taskId, fileId, fields, null, null);
+        asyncReportFilesGetValidateBeforeCall(
+            accountId, taskId, fileId, weixinOfficialAccountsUpgradeEnabled, fields, null, null);
     Type localVarReturnType = new TypeToken<String>() {}.getType();
     return apiClient.execute(call, localVarReturnType);
   }
@@ -200,6 +228,7 @@ public class AsyncReportFilesApi {
    * @param accountId (required)
    * @param taskId (required)
    * @param fileId (required)
+   * @param weixinOfficialAccountsUpgradeEnabled (optional)
    * @param fields 返回参数的字段列表 (optional)
    * @param callback The callback to be executed when the API call finishes
    * @return The request call
@@ -209,6 +238,7 @@ public class AsyncReportFilesApi {
       Long accountId,
       Long taskId,
       Long fileId,
+      Boolean weixinOfficialAccountsUpgradeEnabled,
       List<String> fields,
       final ApiCallback<String> callback)
       throws ApiException {
@@ -236,7 +266,13 @@ public class AsyncReportFilesApi {
 
     com.squareup.okhttp.Call call =
         asyncReportFilesGetValidateBeforeCall(
-            accountId, taskId, fileId, fields, progressListener, progressRequestListener);
+            accountId,
+            taskId,
+            fileId,
+            weixinOfficialAccountsUpgradeEnabled,
+            fields,
+            progressListener,
+            progressRequestListener);
     Type localVarReturnType = new TypeToken<String>() {}.getType();
     apiClient.executeAsync(call, localVarReturnType, callback);
     return call;

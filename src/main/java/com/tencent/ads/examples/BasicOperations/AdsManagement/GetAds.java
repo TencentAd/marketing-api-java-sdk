@@ -27,6 +27,8 @@ public class GetAds {
 
   public Boolean isDeleted = null;
 
+  public Boolean weixinOfficialAccountsUpgradeEnabled = null;
+
   public List<String> fields =
       Arrays.asList("ad_id", "campaign_id", "adgroup_id", "adcreative_id", "ad_name");
 
@@ -51,7 +53,16 @@ public class GetAds {
 
   public AdsGetResponseData getAds() throws Exception {
     AdsGetResponseData response =
-        tencentAds.ads().adsGet(accountId, filtering, page, pageSize, isDeleted, fields);
+        tencentAds
+            .ads()
+            .adsGet(
+                accountId,
+                filtering,
+                page,
+                pageSize,
+                isDeleted,
+                weixinOfficialAccountsUpgradeEnabled,
+                fields);
     return response;
   }
 

@@ -48,6 +48,9 @@ public class AsyncReportsAddRequest {
   @SerializedName("date")
   private String date = null;
 
+  @SerializedName("weixin_official_accounts_upgrade_enabled")
+  private Boolean weixinOfficialAccountsUpgradeEnabled = null;
+
   public AsyncReportsAddRequest accountId(Long accountId) {
     this.accountId = accountId;
     return this;
@@ -243,6 +246,27 @@ public class AsyncReportsAddRequest {
     this.date = date;
   }
 
+  public AsyncReportsAddRequest weixinOfficialAccountsUpgradeEnabled(
+      Boolean weixinOfficialAccountsUpgradeEnabled) {
+    this.weixinOfficialAccountsUpgradeEnabled = weixinOfficialAccountsUpgradeEnabled;
+    return this;
+  }
+
+  /**
+   * Get weixinOfficialAccountsUpgradeEnabled
+   *
+   * @return weixinOfficialAccountsUpgradeEnabled
+   */
+  @ApiModelProperty(value = "")
+  public Boolean isWeixinOfficialAccountsUpgradeEnabled() {
+    return weixinOfficialAccountsUpgradeEnabled;
+  }
+
+  public void setWeixinOfficialAccountsUpgradeEnabled(
+      Boolean weixinOfficialAccountsUpgradeEnabled) {
+    this.weixinOfficialAccountsUpgradeEnabled = weixinOfficialAccountsUpgradeEnabled;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -260,13 +284,25 @@ public class AsyncReportsAddRequest {
         && Objects.equals(this.timeLine, asyncReportsAddRequest.timeLine)
         && Objects.equals(this.groupBy, asyncReportsAddRequest.groupBy)
         && Objects.equals(this.granularity, asyncReportsAddRequest.granularity)
-        && Objects.equals(this.date, asyncReportsAddRequest.date);
+        && Objects.equals(this.date, asyncReportsAddRequest.date)
+        && Objects.equals(
+            this.weixinOfficialAccountsUpgradeEnabled,
+            asyncReportsAddRequest.weixinOfficialAccountsUpgradeEnabled);
   }
 
   @Override
   public int hashCode() {
     return Objects.hash(
-        accountId, taskName, reportFields, level, filtering, timeLine, groupBy, granularity, date);
+        accountId,
+        taskName,
+        reportFields,
+        level,
+        filtering,
+        timeLine,
+        groupBy,
+        granularity,
+        date,
+        weixinOfficialAccountsUpgradeEnabled);
   }
 
   @Override

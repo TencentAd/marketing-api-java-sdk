@@ -39,6 +39,8 @@ public class GetHourlyReports {
   public List<String> fields =
       Arrays.asList("hour", "view_count", "valid_click_count", "ctr", "cpc", "cost");
 
+  public Boolean weixinOfficialAccountsUpgradeEnabled = null;
+
   public void init() {
     this.tencentAds = TencentAds.getInstance();
     this.tencentAds.init(
@@ -59,8 +61,17 @@ public class GetHourlyReports {
         tencentAds
             .hourlyReports()
             .hourlyReportsGet(
-                accountId, level, dateRange, filtering, groupBy, orderBy, page, pageSize, timeLine,
-                fields);
+                accountId,
+                level,
+                dateRange,
+                filtering,
+                groupBy,
+                orderBy,
+                page,
+                pageSize,
+                timeLine,
+                fields,
+                weixinOfficialAccountsUpgradeEnabled);
     return response;
   }
 

@@ -208,6 +208,7 @@ public class AsyncReportsApi {
    * @param filtering (optional)
    * @param page (optional)
    * @param pageSize (optional)
+   * @param weixinOfficialAccountsUpgradeEnabled (optional)
    * @param fields 返回参数的字段列表 (optional)
    * @param progressListener Progress listener
    * @param progressRequestListener Progress request listener
@@ -219,6 +220,7 @@ public class AsyncReportsApi {
       List<FilteringStruct> filtering,
       Long page,
       Long pageSize,
+      Boolean weixinOfficialAccountsUpgradeEnabled,
       List<String> fields,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener)
@@ -238,6 +240,10 @@ public class AsyncReportsApi {
     if (page != null) localVarQueryParams.addAll(apiClient.parameterToPair("page", page));
     if (pageSize != null)
       localVarQueryParams.addAll(apiClient.parameterToPair("page_size", pageSize));
+    if (weixinOfficialAccountsUpgradeEnabled != null)
+      localVarQueryParams.addAll(
+          apiClient.parameterToPair(
+              "weixin_official_accounts_upgrade_enabled", weixinOfficialAccountsUpgradeEnabled));
     if (fields != null)
       localVarCollectionQueryParams.addAll(apiClient.parameterToPairs("multi", "fields", fields));
 
@@ -290,6 +296,7 @@ public class AsyncReportsApi {
       List<FilteringStruct> filtering,
       Long page,
       Long pageSize,
+      Boolean weixinOfficialAccountsUpgradeEnabled,
       List<String> fields,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener)
@@ -307,6 +314,7 @@ public class AsyncReportsApi {
             filtering,
             page,
             pageSize,
+            weixinOfficialAccountsUpgradeEnabled,
             fields,
             progressListener,
             progressRequestListener);
@@ -320,6 +328,7 @@ public class AsyncReportsApi {
    * @param filtering (optional)
    * @param page (optional)
    * @param pageSize (optional)
+   * @param weixinOfficialAccountsUpgradeEnabled (optional)
    * @param fields 返回参数的字段列表 (optional)
    * @return AsyncReportsGetResponse
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
@@ -330,10 +339,12 @@ public class AsyncReportsApi {
       List<FilteringStruct> filtering,
       Long page,
       Long pageSize,
+      Boolean weixinOfficialAccountsUpgradeEnabled,
       List<String> fields)
       throws ApiException {
     ApiResponse<AsyncReportsGetResponse> resp =
-        asyncReportsGetWithHttpInfo(accountId, filtering, page, pageSize, fields);
+        asyncReportsGetWithHttpInfo(
+            accountId, filtering, page, pageSize, weixinOfficialAccountsUpgradeEnabled, fields);
     return resp.getData();
   }
 
@@ -344,6 +355,7 @@ public class AsyncReportsApi {
    * @param filtering (optional)
    * @param page (optional)
    * @param pageSize (optional)
+   * @param weixinOfficialAccountsUpgradeEnabled (optional)
    * @param fields 返回参数的字段列表 (optional)
    * @return ApiResponse&lt;AsyncReportsGetResponse&gt;
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
@@ -354,10 +366,19 @@ public class AsyncReportsApi {
       List<FilteringStruct> filtering,
       Long page,
       Long pageSize,
+      Boolean weixinOfficialAccountsUpgradeEnabled,
       List<String> fields)
       throws ApiException {
     com.squareup.okhttp.Call call =
-        asyncReportsGetValidateBeforeCall(accountId, filtering, page, pageSize, fields, null, null);
+        asyncReportsGetValidateBeforeCall(
+            accountId,
+            filtering,
+            page,
+            pageSize,
+            weixinOfficialAccountsUpgradeEnabled,
+            fields,
+            null,
+            null);
     Type localVarReturnType = new TypeToken<AsyncReportsGetResponse>() {}.getType();
     return apiClient.execute(call, localVarReturnType);
   }
@@ -369,6 +390,7 @@ public class AsyncReportsApi {
    * @param filtering (optional)
    * @param page (optional)
    * @param pageSize (optional)
+   * @param weixinOfficialAccountsUpgradeEnabled (optional)
    * @param fields 返回参数的字段列表 (optional)
    * @param callback The callback to be executed when the API call finishes
    * @return The request call
@@ -379,6 +401,7 @@ public class AsyncReportsApi {
       List<FilteringStruct> filtering,
       Long page,
       Long pageSize,
+      Boolean weixinOfficialAccountsUpgradeEnabled,
       List<String> fields,
       final ApiCallback<AsyncReportsGetResponse> callback)
       throws ApiException {
@@ -410,6 +433,7 @@ public class AsyncReportsApi {
             filtering,
             page,
             pageSize,
+            weixinOfficialAccountsUpgradeEnabled,
             fields,
             progressListener,
             progressRequestListener);

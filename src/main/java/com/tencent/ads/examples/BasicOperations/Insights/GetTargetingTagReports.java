@@ -40,6 +40,8 @@ public class GetTargetingTagReports {
 
   public String timeLine = null;
 
+  public Boolean weixinOfficialAccountsUpgradeEnabled = null;
+
   public List<String> fields =
       Arrays.asList(
           "date", "city_id", "city", "view_count", "valid_click_count", "ctr", "cpc", "cost");
@@ -64,8 +66,19 @@ public class GetTargetingTagReports {
         tencentAds
             .targetingTagReports()
             .targetingTagReportsGet(
-                accountId, type, level, dateRange, posType, filtering, groupBy, orderBy, page,
-                pageSize, timeLine, fields);
+                accountId,
+                type,
+                level,
+                dateRange,
+                posType,
+                filtering,
+                groupBy,
+                orderBy,
+                page,
+                pageSize,
+                timeLine,
+                weixinOfficialAccountsUpgradeEnabled,
+                fields);
     return response;
   }
 

@@ -77,6 +77,7 @@ public class AdsApiContainer extends ApiContainer {
    * @param page (optional)
    * @param pageSize (optional)
    * @param isDeleted (optional)
+   * @param weixinOfficialAccountsUpgradeEnabled (optional)
    * @param fields 返回参数的字段列表 (optional)
    * @return AdsGetResponse
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
@@ -88,9 +89,18 @@ public class AdsApiContainer extends ApiContainer {
       Long page,
       Long pageSize,
       Boolean isDeleted,
+      Boolean weixinOfficialAccountsUpgradeEnabled,
       List<String> fields)
       throws ApiException, TencentAdsResponseException {
-    AdsGetResponse resp = api.adsGet(accountId, filtering, page, pageSize, isDeleted, fields);
+    AdsGetResponse resp =
+        api.adsGet(
+            accountId,
+            filtering,
+            page,
+            pageSize,
+            isDeleted,
+            weixinOfficialAccountsUpgradeEnabled,
+            fields);
     handleResponse(gson.toJson(resp));
     return resp.getData();
   }

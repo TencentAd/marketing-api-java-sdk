@@ -358,6 +358,7 @@ public class AdsApi {
    * @param page (optional)
    * @param pageSize (optional)
    * @param isDeleted (optional)
+   * @param weixinOfficialAccountsUpgradeEnabled (optional)
    * @param fields 返回参数的字段列表 (optional)
    * @param progressListener Progress listener
    * @param progressRequestListener Progress request listener
@@ -370,6 +371,7 @@ public class AdsApi {
       Long page,
       Long pageSize,
       Boolean isDeleted,
+      Boolean weixinOfficialAccountsUpgradeEnabled,
       List<String> fields,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener)
@@ -391,6 +393,10 @@ public class AdsApi {
       localVarQueryParams.addAll(apiClient.parameterToPair("page_size", pageSize));
     if (isDeleted != null)
       localVarQueryParams.addAll(apiClient.parameterToPair("is_deleted", isDeleted));
+    if (weixinOfficialAccountsUpgradeEnabled != null)
+      localVarQueryParams.addAll(
+          apiClient.parameterToPair(
+              "weixin_official_accounts_upgrade_enabled", weixinOfficialAccountsUpgradeEnabled));
     if (fields != null)
       localVarCollectionQueryParams.addAll(apiClient.parameterToPairs("multi", "fields", fields));
 
@@ -444,6 +450,7 @@ public class AdsApi {
       Long page,
       Long pageSize,
       Boolean isDeleted,
+      Boolean weixinOfficialAccountsUpgradeEnabled,
       List<String> fields,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener)
@@ -462,6 +469,7 @@ public class AdsApi {
             page,
             pageSize,
             isDeleted,
+            weixinOfficialAccountsUpgradeEnabled,
             fields,
             progressListener,
             progressRequestListener);
@@ -476,6 +484,7 @@ public class AdsApi {
    * @param page (optional)
    * @param pageSize (optional)
    * @param isDeleted (optional)
+   * @param weixinOfficialAccountsUpgradeEnabled (optional)
    * @param fields 返回参数的字段列表 (optional)
    * @return AdsGetResponse
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
@@ -487,10 +496,18 @@ public class AdsApi {
       Long page,
       Long pageSize,
       Boolean isDeleted,
+      Boolean weixinOfficialAccountsUpgradeEnabled,
       List<String> fields)
       throws ApiException {
     ApiResponse<AdsGetResponse> resp =
-        adsGetWithHttpInfo(accountId, filtering, page, pageSize, isDeleted, fields);
+        adsGetWithHttpInfo(
+            accountId,
+            filtering,
+            page,
+            pageSize,
+            isDeleted,
+            weixinOfficialAccountsUpgradeEnabled,
+            fields);
     return resp.getData();
   }
 
@@ -502,6 +519,7 @@ public class AdsApi {
    * @param page (optional)
    * @param pageSize (optional)
    * @param isDeleted (optional)
+   * @param weixinOfficialAccountsUpgradeEnabled (optional)
    * @param fields 返回参数的字段列表 (optional)
    * @return ApiResponse&lt;AdsGetResponse&gt;
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
@@ -513,11 +531,20 @@ public class AdsApi {
       Long page,
       Long pageSize,
       Boolean isDeleted,
+      Boolean weixinOfficialAccountsUpgradeEnabled,
       List<String> fields)
       throws ApiException {
     com.squareup.okhttp.Call call =
         adsGetValidateBeforeCall(
-            accountId, filtering, page, pageSize, isDeleted, fields, null, null);
+            accountId,
+            filtering,
+            page,
+            pageSize,
+            isDeleted,
+            weixinOfficialAccountsUpgradeEnabled,
+            fields,
+            null,
+            null);
     Type localVarReturnType = new TypeToken<AdsGetResponse>() {}.getType();
     return apiClient.execute(call, localVarReturnType);
   }
@@ -530,6 +557,7 @@ public class AdsApi {
    * @param page (optional)
    * @param pageSize (optional)
    * @param isDeleted (optional)
+   * @param weixinOfficialAccountsUpgradeEnabled (optional)
    * @param fields 返回参数的字段列表 (optional)
    * @param callback The callback to be executed when the API call finishes
    * @return The request call
@@ -541,6 +569,7 @@ public class AdsApi {
       Long page,
       Long pageSize,
       Boolean isDeleted,
+      Boolean weixinOfficialAccountsUpgradeEnabled,
       List<String> fields,
       final ApiCallback<AdsGetResponse> callback)
       throws ApiException {
@@ -573,6 +602,7 @@ public class AdsApi {
             page,
             pageSize,
             isDeleted,
+            weixinOfficialAccountsUpgradeEnabled,
             fields,
             progressListener,
             progressRequestListener);

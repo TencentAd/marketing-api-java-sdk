@@ -64,6 +64,7 @@ public class HourlyReportsApi {
    * @param pageSize (optional)
    * @param timeLine (optional)
    * @param fields (optional)
+   * @param weixinOfficialAccountsUpgradeEnabled (optional)
    * @param progressListener Progress listener
    * @param progressRequestListener Progress request listener
    * @return Call to execute
@@ -80,6 +81,7 @@ public class HourlyReportsApi {
       Long pageSize,
       String timeLine,
       List<String> fields,
+      Boolean weixinOfficialAccountsUpgradeEnabled,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener)
       throws ApiException {
@@ -111,6 +113,10 @@ public class HourlyReportsApi {
       localVarQueryParams.addAll(apiClient.parameterToPair("time_line", timeLine));
     if (fields != null)
       localVarCollectionQueryParams.addAll(apiClient.parameterToPairs("multi", "fields", fields));
+    if (weixinOfficialAccountsUpgradeEnabled != null)
+      localVarQueryParams.addAll(
+          apiClient.parameterToPair(
+              "weixin_official_accounts_upgrade_enabled", weixinOfficialAccountsUpgradeEnabled));
 
     Map<String, String> localVarHeaderParams = new HashMap<String, String>();
 
@@ -167,6 +173,7 @@ public class HourlyReportsApi {
       Long pageSize,
       String timeLine,
       List<String> fields,
+      Boolean weixinOfficialAccountsUpgradeEnabled,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener)
       throws ApiException {
@@ -201,6 +208,7 @@ public class HourlyReportsApi {
             pageSize,
             timeLine,
             fields,
+            weixinOfficialAccountsUpgradeEnabled,
             progressListener,
             progressRequestListener);
     return call;
@@ -219,6 +227,7 @@ public class HourlyReportsApi {
    * @param pageSize (optional)
    * @param timeLine (optional)
    * @param fields (optional)
+   * @param weixinOfficialAccountsUpgradeEnabled (optional)
    * @return HourlyReportsGetResponse
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
@@ -233,12 +242,22 @@ public class HourlyReportsApi {
       Long page,
       Long pageSize,
       String timeLine,
-      List<String> fields)
+      List<String> fields,
+      Boolean weixinOfficialAccountsUpgradeEnabled)
       throws ApiException {
     ApiResponse<HourlyReportsGetResponse> resp =
         hourlyReportsGetWithHttpInfo(
-            accountId, level, dateRange, filtering, groupBy, orderBy, page, pageSize, timeLine,
-            fields);
+            accountId,
+            level,
+            dateRange,
+            filtering,
+            groupBy,
+            orderBy,
+            page,
+            pageSize,
+            timeLine,
+            fields,
+            weixinOfficialAccountsUpgradeEnabled);
     return resp.getData();
   }
 
@@ -255,6 +274,7 @@ public class HourlyReportsApi {
    * @param pageSize (optional)
    * @param timeLine (optional)
    * @param fields (optional)
+   * @param weixinOfficialAccountsUpgradeEnabled (optional)
    * @return ApiResponse&lt;HourlyReportsGetResponse&gt;
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
@@ -269,12 +289,24 @@ public class HourlyReportsApi {
       Long page,
       Long pageSize,
       String timeLine,
-      List<String> fields)
+      List<String> fields,
+      Boolean weixinOfficialAccountsUpgradeEnabled)
       throws ApiException {
     com.squareup.okhttp.Call call =
         hourlyReportsGetValidateBeforeCall(
-            accountId, level, dateRange, filtering, groupBy, orderBy, page, pageSize, timeLine,
-            fields, null, null);
+            accountId,
+            level,
+            dateRange,
+            filtering,
+            groupBy,
+            orderBy,
+            page,
+            pageSize,
+            timeLine,
+            fields,
+            weixinOfficialAccountsUpgradeEnabled,
+            null,
+            null);
     Type localVarReturnType = new TypeToken<HourlyReportsGetResponse>() {}.getType();
     return apiClient.execute(call, localVarReturnType);
   }
@@ -292,6 +324,7 @@ public class HourlyReportsApi {
    * @param pageSize (optional)
    * @param timeLine (optional)
    * @param fields (optional)
+   * @param weixinOfficialAccountsUpgradeEnabled (optional)
    * @param callback The callback to be executed when the API call finishes
    * @return The request call
    * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -307,6 +340,7 @@ public class HourlyReportsApi {
       Long pageSize,
       String timeLine,
       List<String> fields,
+      Boolean weixinOfficialAccountsUpgradeEnabled,
       final ApiCallback<HourlyReportsGetResponse> callback)
       throws ApiException {
 
@@ -343,6 +377,7 @@ public class HourlyReportsApi {
             pageSize,
             timeLine,
             fields,
+            weixinOfficialAccountsUpgradeEnabled,
             progressListener,
             progressRequestListener);
     Type localVarReturnType = new TypeToken<HourlyReportsGetResponse>() {}.getType();

@@ -31,6 +31,9 @@ public class AsyncTasksAddRequest {
   @SerializedName("task_spec")
   private TaskSpec taskSpec = null;
 
+  @SerializedName("weixin_official_accounts_upgrade_enabled")
+  private Boolean weixinOfficialAccountsUpgradeEnabled = null;
+
   public AsyncTasksAddRequest accountId(Long accountId) {
     this.accountId = accountId;
     return this;
@@ -107,6 +110,27 @@ public class AsyncTasksAddRequest {
     this.taskSpec = taskSpec;
   }
 
+  public AsyncTasksAddRequest weixinOfficialAccountsUpgradeEnabled(
+      Boolean weixinOfficialAccountsUpgradeEnabled) {
+    this.weixinOfficialAccountsUpgradeEnabled = weixinOfficialAccountsUpgradeEnabled;
+    return this;
+  }
+
+  /**
+   * Get weixinOfficialAccountsUpgradeEnabled
+   *
+   * @return weixinOfficialAccountsUpgradeEnabled
+   */
+  @ApiModelProperty(value = "")
+  public Boolean isWeixinOfficialAccountsUpgradeEnabled() {
+    return weixinOfficialAccountsUpgradeEnabled;
+  }
+
+  public void setWeixinOfficialAccountsUpgradeEnabled(
+      Boolean weixinOfficialAccountsUpgradeEnabled) {
+    this.weixinOfficialAccountsUpgradeEnabled = weixinOfficialAccountsUpgradeEnabled;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -119,12 +143,16 @@ public class AsyncTasksAddRequest {
     return Objects.equals(this.accountId, asyncTasksAddRequest.accountId)
         && Objects.equals(this.taskName, asyncTasksAddRequest.taskName)
         && Objects.equals(this.taskType, asyncTasksAddRequest.taskType)
-        && Objects.equals(this.taskSpec, asyncTasksAddRequest.taskSpec);
+        && Objects.equals(this.taskSpec, asyncTasksAddRequest.taskSpec)
+        && Objects.equals(
+            this.weixinOfficialAccountsUpgradeEnabled,
+            asyncTasksAddRequest.weixinOfficialAccountsUpgradeEnabled);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(accountId, taskName, taskType, taskSpec);
+    return Objects.hash(
+        accountId, taskName, taskType, taskSpec, weixinOfficialAccountsUpgradeEnabled);
   }
 
   @Override

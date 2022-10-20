@@ -27,6 +27,8 @@ public class GetAdgroups {
 
   public Boolean isDeleted = null;
 
+  public Boolean weixinOfficialAccountsUpgradeEnabled = null;
+
   public List<String> fields = Arrays.asList("adgroup_id", "campaign_id", "adgroup_name");
 
   public void init() {
@@ -50,7 +52,16 @@ public class GetAdgroups {
 
   public AdgroupsGetResponseData getAdgroups() throws Exception {
     AdgroupsGetResponseData response =
-        tencentAds.adgroups().adgroupsGet(accountId, filtering, page, pageSize, isDeleted, fields);
+        tencentAds
+            .adgroups()
+            .adgroupsGet(
+                accountId,
+                filtering,
+                page,
+                pageSize,
+                isDeleted,
+                weixinOfficialAccountsUpgradeEnabled,
+                fields);
     return response;
   }
 

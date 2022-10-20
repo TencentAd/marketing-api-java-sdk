@@ -29,6 +29,8 @@ public class GetAdcreatives {
 
   public Boolean linkPageTypeCompatible = null;
 
+  public Boolean weixinOfficialAccountsUpgradeEnabled = null;
+
   public List<String> fields = Arrays.asList("adcreative_id", "campaign_id", "adcreative_name");
 
   public void init() {
@@ -55,7 +57,14 @@ public class GetAdcreatives {
         tencentAds
             .adcreatives()
             .adcreativesGet(
-                accountId, filtering, page, pageSize, isDeleted, linkPageTypeCompatible, fields);
+                accountId,
+                filtering,
+                page,
+                pageSize,
+                isDeleted,
+                linkPageTypeCompatible,
+                weixinOfficialAccountsUpgradeEnabled,
+                fields);
     return response;
   }
 
