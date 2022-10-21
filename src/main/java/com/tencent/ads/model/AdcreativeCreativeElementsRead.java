@@ -224,6 +224,9 @@ public class AdcreativeCreativeElementsRead {
   @SerializedName("finder_object_visibility")
   private Boolean finderObjectVisibility = null;
 
+  @SerializedName("image_list_jump_info")
+  private List<LandingPageStructure> imageListJumpInfo = null;
+
   public AdcreativeCreativeElementsRead image(String image) {
     this.image = image;
     return this;
@@ -1535,6 +1538,35 @@ public class AdcreativeCreativeElementsRead {
     this.finderObjectVisibility = finderObjectVisibility;
   }
 
+  public AdcreativeCreativeElementsRead imageListJumpInfo(
+      List<LandingPageStructure> imageListJumpInfo) {
+    this.imageListJumpInfo = imageListJumpInfo;
+    return this;
+  }
+
+  public AdcreativeCreativeElementsRead addImageListJumpInfoItem(
+      LandingPageStructure imageListJumpInfoItem) {
+    if (this.imageListJumpInfo == null) {
+      this.imageListJumpInfo = new ArrayList<LandingPageStructure>();
+    }
+    this.imageListJumpInfo.add(imageListJumpInfoItem);
+    return this;
+  }
+
+  /**
+   * Get imageListJumpInfo
+   *
+   * @return imageListJumpInfo
+   */
+  @ApiModelProperty(value = "")
+  public List<LandingPageStructure> getImageListJumpInfo() {
+    return imageListJumpInfo;
+  }
+
+  public void setImageListJumpInfo(List<LandingPageStructure> imageListJumpInfo) {
+    this.imageListJumpInfo = imageListJumpInfo;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -1617,7 +1649,8 @@ public class AdcreativeCreativeElementsRead {
         && Objects.equals(this.canvasShareImage, adcreativeCreativeElementsRead.canvasShareImage)
         && Objects.equals(this.wegameInfoSpec, adcreativeCreativeElementsRead.wegameInfoSpec)
         && Objects.equals(
-            this.finderObjectVisibility, adcreativeCreativeElementsRead.finderObjectVisibility);
+            this.finderObjectVisibility, adcreativeCreativeElementsRead.finderObjectVisibility)
+        && Objects.equals(this.imageListJumpInfo, adcreativeCreativeElementsRead.imageListJumpInfo);
   }
 
   @Override
@@ -1689,7 +1722,8 @@ public class AdcreativeCreativeElementsRead {
         floatingZoneStruct,
         canvasShareImage,
         wegameInfoSpec,
-        finderObjectVisibility);
+        finderObjectVisibility,
+        imageListJumpInfo);
   }
 
   @Override

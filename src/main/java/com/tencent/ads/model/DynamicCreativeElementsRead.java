@@ -296,6 +296,9 @@ public class DynamicCreativeElementsRead {
   @SerializedName("form_component_options")
   private List<FormComponentOption> formComponentOptions = null;
 
+  @SerializedName("image_list_jump_info")
+  private List<LandingPageStructure> imageListJumpInfo = null;
+
   public DynamicCreativeElementsRead image(String image) {
     this.image = image;
     return this;
@@ -2280,6 +2283,35 @@ public class DynamicCreativeElementsRead {
     this.formComponentOptions = formComponentOptions;
   }
 
+  public DynamicCreativeElementsRead imageListJumpInfo(
+      List<LandingPageStructure> imageListJumpInfo) {
+    this.imageListJumpInfo = imageListJumpInfo;
+    return this;
+  }
+
+  public DynamicCreativeElementsRead addImageListJumpInfoItem(
+      LandingPageStructure imageListJumpInfoItem) {
+    if (this.imageListJumpInfo == null) {
+      this.imageListJumpInfo = new ArrayList<LandingPageStructure>();
+    }
+    this.imageListJumpInfo.add(imageListJumpInfoItem);
+    return this;
+  }
+
+  /**
+   * Get imageListJumpInfo
+   *
+   * @return imageListJumpInfo
+   */
+  @ApiModelProperty(value = "")
+  public List<LandingPageStructure> getImageListJumpInfo() {
+    return imageListJumpInfo;
+  }
+
+  public void setImageListJumpInfo(List<LandingPageStructure> imageListJumpInfo) {
+    this.imageListJumpInfo = imageListJumpInfo;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -2407,7 +2439,8 @@ public class DynamicCreativeElementsRead {
         && Objects.equals(
             this.phoneComponentOptions, dynamicCreativeElementsRead.phoneComponentOptions)
         && Objects.equals(
-            this.formComponentOptions, dynamicCreativeElementsRead.formComponentOptions);
+            this.formComponentOptions, dynamicCreativeElementsRead.formComponentOptions)
+        && Objects.equals(this.imageListJumpInfo, dynamicCreativeElementsRead.imageListJumpInfo);
   }
 
   @Override
@@ -2503,7 +2536,8 @@ public class DynamicCreativeElementsRead {
         videoComponentOptions,
         consultComponentOptions,
         phoneComponentOptions,
-        formComponentOptions);
+        formComponentOptions,
+        imageListJumpInfo);
   }
 
   @Override

@@ -218,6 +218,9 @@ public class DynamicCreativeElements {
   @SerializedName("form_component_options")
   private List<FormComponentOption> formComponentOptions = null;
 
+  @SerializedName("image_list_jump_info")
+  private List<LandingPageStructure> imageListJumpInfo = null;
+
   public DynamicCreativeElements image(String image) {
     this.image = image;
     return this;
@@ -1704,6 +1707,34 @@ public class DynamicCreativeElements {
     this.formComponentOptions = formComponentOptions;
   }
 
+  public DynamicCreativeElements imageListJumpInfo(List<LandingPageStructure> imageListJumpInfo) {
+    this.imageListJumpInfo = imageListJumpInfo;
+    return this;
+  }
+
+  public DynamicCreativeElements addImageListJumpInfoItem(
+      LandingPageStructure imageListJumpInfoItem) {
+    if (this.imageListJumpInfo == null) {
+      this.imageListJumpInfo = new ArrayList<LandingPageStructure>();
+    }
+    this.imageListJumpInfo.add(imageListJumpInfoItem);
+    return this;
+  }
+
+  /**
+   * Get imageListJumpInfo
+   *
+   * @return imageListJumpInfo
+   */
+  @ApiModelProperty(value = "")
+  public List<LandingPageStructure> getImageListJumpInfo() {
+    return imageListJumpInfo;
+  }
+
+  public void setImageListJumpInfo(List<LandingPageStructure> imageListJumpInfo) {
+    this.imageListJumpInfo = imageListJumpInfo;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -1793,7 +1824,8 @@ public class DynamicCreativeElements {
         && Objects.equals(
             this.consultComponentOptions, dynamicCreativeElements.consultComponentOptions)
         && Objects.equals(this.phoneComponentOptions, dynamicCreativeElements.phoneComponentOptions)
-        && Objects.equals(this.formComponentOptions, dynamicCreativeElements.formComponentOptions);
+        && Objects.equals(this.formComponentOptions, dynamicCreativeElements.formComponentOptions)
+        && Objects.equals(this.imageListJumpInfo, dynamicCreativeElements.imageListJumpInfo);
   }
 
   @Override
@@ -1863,7 +1895,8 @@ public class DynamicCreativeElements {
         videoComponentOptions,
         consultComponentOptions,
         phoneComponentOptions,
-        formComponentOptions);
+        formComponentOptions,
+        imageListJumpInfo);
   }
 
   @Override

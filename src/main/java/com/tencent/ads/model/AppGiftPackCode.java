@@ -27,6 +27,9 @@ public class AppGiftPackCode {
   @SerializedName("tips")
   private String tips = null;
 
+  @SerializedName("description")
+  private String description = null;
+
   public AppGiftPackCode code(String code) {
     this.code = code;
     return this;
@@ -65,6 +68,25 @@ public class AppGiftPackCode {
     this.tips = tips;
   }
 
+  public AppGiftPackCode description(String description) {
+    this.description = description;
+    return this;
+  }
+
+  /**
+   * Get description
+   *
+   * @return description
+   */
+  @ApiModelProperty(value = "")
+  public String getDescription() {
+    return description;
+  }
+
+  public void setDescription(String description) {
+    this.description = description;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -75,12 +97,13 @@ public class AppGiftPackCode {
     }
     AppGiftPackCode appGiftPackCode = (AppGiftPackCode) o;
     return Objects.equals(this.code, appGiftPackCode.code)
-        && Objects.equals(this.tips, appGiftPackCode.tips);
+        && Objects.equals(this.tips, appGiftPackCode.tips)
+        && Objects.equals(this.description, appGiftPackCode.description);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(code, tips);
+    return Objects.hash(code, tips, description);
   }
 
   @Override

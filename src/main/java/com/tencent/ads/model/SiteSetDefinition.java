@@ -110,7 +110,9 @@ public enum SiteSetDefinition {
 
   WECHAT_PLUGIN("SITE_SET_WECHAT_PLUGIN"),
 
-  QBSEARCH("SITE_SET_QBSEARCH");
+  QBSEARCH("SITE_SET_QBSEARCH"),
+
+  FREETRADE("SITE_SET_FREETRADE");
 
   private String value;
 

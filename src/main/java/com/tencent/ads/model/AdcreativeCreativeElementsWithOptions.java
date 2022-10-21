@@ -194,6 +194,9 @@ public class AdcreativeCreativeElementsWithOptions {
   @SerializedName("finder_object_visibility")
   private Boolean finderObjectVisibility = null;
 
+  @SerializedName("image_list_jump_info")
+  private List<LandingPageStructure> imageListJumpInfo = null;
+
   public AdcreativeCreativeElementsWithOptions image(String image) {
     this.image = image;
     return this;
@@ -1352,6 +1355,35 @@ public class AdcreativeCreativeElementsWithOptions {
     this.finderObjectVisibility = finderObjectVisibility;
   }
 
+  public AdcreativeCreativeElementsWithOptions imageListJumpInfo(
+      List<LandingPageStructure> imageListJumpInfo) {
+    this.imageListJumpInfo = imageListJumpInfo;
+    return this;
+  }
+
+  public AdcreativeCreativeElementsWithOptions addImageListJumpInfoItem(
+      LandingPageStructure imageListJumpInfoItem) {
+    if (this.imageListJumpInfo == null) {
+      this.imageListJumpInfo = new ArrayList<LandingPageStructure>();
+    }
+    this.imageListJumpInfo.add(imageListJumpInfoItem);
+    return this;
+  }
+
+  /**
+   * Get imageListJumpInfo
+   *
+   * @return imageListJumpInfo
+   */
+  @ApiModelProperty(value = "")
+  public List<LandingPageStructure> getImageListJumpInfo() {
+    return imageListJumpInfo;
+  }
+
+  public void setImageListJumpInfo(List<LandingPageStructure> imageListJumpInfo) {
+    this.imageListJumpInfo = imageListJumpInfo;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -1435,7 +1467,9 @@ public class AdcreativeCreativeElementsWithOptions {
             this.wechatChannelsSpec, adcreativeCreativeElementsWithOptions.wechatChannelsSpec)
         && Objects.equals(
             this.finderObjectVisibility,
-            adcreativeCreativeElementsWithOptions.finderObjectVisibility);
+            adcreativeCreativeElementsWithOptions.finderObjectVisibility)
+        && Objects.equals(
+            this.imageListJumpInfo, adcreativeCreativeElementsWithOptions.imageListJumpInfo);
   }
 
   @Override
@@ -1497,7 +1531,8 @@ public class AdcreativeCreativeElementsWithOptions {
         rightCanvas,
         wegameInfoSpec,
         wechatChannelsSpec,
-        finderObjectVisibility);
+        finderObjectVisibility,
+        imageListJumpInfo);
   }
 
   @Override

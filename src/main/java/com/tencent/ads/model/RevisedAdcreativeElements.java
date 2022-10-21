@@ -173,6 +173,9 @@ public class RevisedAdcreativeElements {
   @SerializedName("finder_object_visibility")
   private Boolean finderObjectVisibility = null;
 
+  @SerializedName("image_list_jump_info")
+  private List<LandingPageStructure> imageListJumpInfo = null;
+
   public RevisedAdcreativeElements image(String image) {
     this.image = image;
     return this;
@@ -1166,6 +1169,34 @@ public class RevisedAdcreativeElements {
     this.finderObjectVisibility = finderObjectVisibility;
   }
 
+  public RevisedAdcreativeElements imageListJumpInfo(List<LandingPageStructure> imageListJumpInfo) {
+    this.imageListJumpInfo = imageListJumpInfo;
+    return this;
+  }
+
+  public RevisedAdcreativeElements addImageListJumpInfoItem(
+      LandingPageStructure imageListJumpInfoItem) {
+    if (this.imageListJumpInfo == null) {
+      this.imageListJumpInfo = new ArrayList<LandingPageStructure>();
+    }
+    this.imageListJumpInfo.add(imageListJumpInfoItem);
+    return this;
+  }
+
+  /**
+   * Get imageListJumpInfo
+   *
+   * @return imageListJumpInfo
+   */
+  @ApiModelProperty(value = "")
+  public List<LandingPageStructure> getImageListJumpInfo() {
+    return imageListJumpInfo;
+  }
+
+  public void setImageListJumpInfo(List<LandingPageStructure> imageListJumpInfo) {
+    this.imageListJumpInfo = imageListJumpInfo;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -1226,7 +1257,8 @@ public class RevisedAdcreativeElements {
         && Objects.equals(this.canvasShareImage, revisedAdcreativeElements.canvasShareImage)
         && Objects.equals(this.wegameInfoSpec, revisedAdcreativeElements.wegameInfoSpec)
         && Objects.equals(
-            this.finderObjectVisibility, revisedAdcreativeElements.finderObjectVisibility);
+            this.finderObjectVisibility, revisedAdcreativeElements.finderObjectVisibility)
+        && Objects.equals(this.imageListJumpInfo, revisedAdcreativeElements.imageListJumpInfo);
   }
 
   @Override
@@ -1281,7 +1313,8 @@ public class RevisedAdcreativeElements {
         floatingZoneStruct,
         canvasShareImage,
         wegameInfoSpec,
-        finderObjectVisibility);
+        finderObjectVisibility,
+        imageListJumpInfo);
   }
 
   @Override
