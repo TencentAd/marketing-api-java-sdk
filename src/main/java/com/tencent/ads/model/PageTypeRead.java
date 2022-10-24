@@ -102,9 +102,9 @@ public enum PageTypeRead {
 
   CHANNELS_HALF_CARD("PAGE_TYPE_CHANNELS_HALF_CARD"),
 
-  TSA_OTT("PAGE_TYPE_TSA_OTT"),
+  NOT_USED("PAGE_TYPE_NOT_USED"),
 
-  NOT_USED("PAGE_TYPE_NOT_USED");
+  TSA_OTT("PAGE_TYPE_TSA_OTT");
 
   private String value;
 

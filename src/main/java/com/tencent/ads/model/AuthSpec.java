@@ -20,14 +20,17 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
-/** 返回结构 */
-@ApiModel(description = "返回结构")
+/** 授权信息 */
+@ApiModel(description = "授权信息")
 public class AuthSpec {
   @SerializedName("certification_list")
   private List<Certification> certificationList = null;
 
   @SerializedName("relationship")
   private PromotedObjectAuthRelationship relationship = null;
+
+  @SerializedName("auth_scope")
+  private WechatAuthScope authScope = null;
 
   public AuthSpec certificationList(List<Certification> certificationList) {
     this.certificationList = certificationList;
@@ -75,6 +78,25 @@ public class AuthSpec {
     this.relationship = relationship;
   }
 
+  public AuthSpec authScope(WechatAuthScope authScope) {
+    this.authScope = authScope;
+    return this;
+  }
+
+  /**
+   * Get authScope
+   *
+   * @return authScope
+   */
+  @ApiModelProperty(value = "")
+  public WechatAuthScope getAuthScope() {
+    return authScope;
+  }
+
+  public void setAuthScope(WechatAuthScope authScope) {
+    this.authScope = authScope;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -85,12 +107,13 @@ public class AuthSpec {
     }
     AuthSpec authSpec = (AuthSpec) o;
     return Objects.equals(this.certificationList, authSpec.certificationList)
-        && Objects.equals(this.relationship, authSpec.relationship);
+        && Objects.equals(this.relationship, authSpec.relationship)
+        && Objects.equals(this.authScope, authSpec.authScope);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(certificationList, relationship);
+    return Objects.hash(certificationList, relationship, authScope);
   }
 
   @Override
