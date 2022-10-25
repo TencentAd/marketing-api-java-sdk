@@ -402,7 +402,7 @@ public class RapidAdsContainer extends ApiContainer {
     for (int i = 0; i < ATTEMPT_TIMES; i++) {
       try {
         AdgroupsGetResponseData adgroupsGetResponse =
-            adgroupsApi.adgroupsGet(accountId, filtering, null, null, null, fields);
+            adgroupsApi.adgroupsGet(accountId, filtering, null, null, null, null, fields);
         if (adgroupsGetResponse.getList() != null && adgroupsGetResponse.getList().size() == 1)
           adgroupId = adgroupsGetResponse.getList().get(0).getAdgroupId();
         break;
@@ -427,7 +427,8 @@ public class RapidAdsContainer extends ApiContainer {
     for (int i = 0; i < ATTEMPT_TIMES; i++) {
       try {
         AdcreativesGetResponseData adcreativesGetResponseData =
-            adcreativesApi.adcreativesGet(accountId, filtering, null, null, null, null, fields);
+            adcreativesApi.adcreativesGet(
+                accountId, filtering, null, null, null, null, null, fields);
         if (adcreativesGetResponseData.getList() != null
             && adcreativesGetResponseData.getList().size() == 1)
           adcreativeId = adcreativesGetResponseData.getList().get(0).getAdcreativeId();
@@ -453,7 +454,7 @@ public class RapidAdsContainer extends ApiContainer {
     for (int i = 0; i < ATTEMPT_TIMES; i++) {
       try {
         AdsGetResponseData adsGetResponseData =
-            adApi.adsGet(accountId, filtering, null, null, null, fields);
+            adApi.adsGet(accountId, filtering, null, null, null, null, fields);
         if (adsGetResponseData.getList() != null && adsGetResponseData.getList().size() == 1) {
           adId = adsGetResponseData.getList().get(0).getAdId();
         }
