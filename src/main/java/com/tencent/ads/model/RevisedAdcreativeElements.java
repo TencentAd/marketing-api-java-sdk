@@ -170,6 +170,9 @@ public class RevisedAdcreativeElements {
   @SerializedName("wegame_info_spec")
   private WegameInfoSpec wegameInfoSpec = null;
 
+  @SerializedName("wechat_channels_spec")
+  private AdCreativeWechatChannelsSpec wechatChannelsSpec = null;
+
   @SerializedName("finder_object_visibility")
   private Boolean finderObjectVisibility = null;
 
@@ -1150,6 +1153,26 @@ public class RevisedAdcreativeElements {
     this.wegameInfoSpec = wegameInfoSpec;
   }
 
+  public RevisedAdcreativeElements wechatChannelsSpec(
+      AdCreativeWechatChannelsSpec wechatChannelsSpec) {
+    this.wechatChannelsSpec = wechatChannelsSpec;
+    return this;
+  }
+
+  /**
+   * Get wechatChannelsSpec
+   *
+   * @return wechatChannelsSpec
+   */
+  @ApiModelProperty(value = "")
+  public AdCreativeWechatChannelsSpec getWechatChannelsSpec() {
+    return wechatChannelsSpec;
+  }
+
+  public void setWechatChannelsSpec(AdCreativeWechatChannelsSpec wechatChannelsSpec) {
+    this.wechatChannelsSpec = wechatChannelsSpec;
+  }
+
   public RevisedAdcreativeElements finderObjectVisibility(Boolean finderObjectVisibility) {
     this.finderObjectVisibility = finderObjectVisibility;
     return this;
@@ -1256,6 +1279,7 @@ public class RevisedAdcreativeElements {
         && Objects.equals(this.floatingZoneStruct, revisedAdcreativeElements.floatingZoneStruct)
         && Objects.equals(this.canvasShareImage, revisedAdcreativeElements.canvasShareImage)
         && Objects.equals(this.wegameInfoSpec, revisedAdcreativeElements.wegameInfoSpec)
+        && Objects.equals(this.wechatChannelsSpec, revisedAdcreativeElements.wechatChannelsSpec)
         && Objects.equals(
             this.finderObjectVisibility, revisedAdcreativeElements.finderObjectVisibility)
         && Objects.equals(this.imageListJumpInfo, revisedAdcreativeElements.imageListJumpInfo);
@@ -1313,6 +1337,7 @@ public class RevisedAdcreativeElements {
         floatingZoneStruct,
         canvasShareImage,
         wegameInfoSpec,
+        wechatChannelsSpec,
         finderObjectVisibility,
         imageListJumpInfo);
   }

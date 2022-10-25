@@ -167,6 +167,9 @@ public class DynamicCreativeElements {
   @SerializedName("wegame_info_spec")
   private WegameInfoSpec wegameInfoSpec = null;
 
+  @SerializedName("wechat_channels_spec")
+  private AdCreativeWechatChannelsSpec wechatChannelsSpec = null;
+
   @SerializedName("finder_object_visibility")
   private Boolean finderObjectVisibility = null;
 
@@ -1216,6 +1219,26 @@ public class DynamicCreativeElements {
     this.wegameInfoSpec = wegameInfoSpec;
   }
 
+  public DynamicCreativeElements wechatChannelsSpec(
+      AdCreativeWechatChannelsSpec wechatChannelsSpec) {
+    this.wechatChannelsSpec = wechatChannelsSpec;
+    return this;
+  }
+
+  /**
+   * Get wechatChannelsSpec
+   *
+   * @return wechatChannelsSpec
+   */
+  @ApiModelProperty(value = "")
+  public AdCreativeWechatChannelsSpec getWechatChannelsSpec() {
+    return wechatChannelsSpec;
+  }
+
+  public void setWechatChannelsSpec(AdCreativeWechatChannelsSpec wechatChannelsSpec) {
+    this.wechatChannelsSpec = wechatChannelsSpec;
+  }
+
   public DynamicCreativeElements finderObjectVisibility(Boolean finderObjectVisibility) {
     this.finderObjectVisibility = finderObjectVisibility;
     return this;
@@ -1794,6 +1817,7 @@ public class DynamicCreativeElements {
         && Objects.equals(this.floatingZoneStruct, dynamicCreativeElements.floatingZoneStruct)
         && Objects.equals(this.canvasShareImage, dynamicCreativeElements.canvasShareImage)
         && Objects.equals(this.wegameInfoSpec, dynamicCreativeElements.wegameInfoSpec)
+        && Objects.equals(this.wechatChannelsSpec, dynamicCreativeElements.wechatChannelsSpec)
         && Objects.equals(
             this.finderObjectVisibility, dynamicCreativeElements.finderObjectVisibility)
         && Objects.equals(this.titleComponentOptions, dynamicCreativeElements.titleComponentOptions)
@@ -1879,6 +1903,7 @@ public class DynamicCreativeElements {
         floatingZoneStruct,
         canvasShareImage,
         wegameInfoSpec,
+        wechatChannelsSpec,
         finderObjectVisibility,
         titleComponentOptions,
         descriptionComponentOptions,

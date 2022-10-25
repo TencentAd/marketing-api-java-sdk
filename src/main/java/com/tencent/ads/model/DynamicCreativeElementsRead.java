@@ -245,6 +245,9 @@ public class DynamicCreativeElementsRead {
   @SerializedName("wegame_info_spec")
   private WegameInfoSpec wegameInfoSpec = null;
 
+  @SerializedName("wechat_channels_spec")
+  private AdCreativeWechatChannelsSpec wechatChannelsSpec = null;
+
   @SerializedName("finder_object_visibility")
   private Boolean finderObjectVisibility = null;
 
@@ -1792,6 +1795,26 @@ public class DynamicCreativeElementsRead {
     this.wegameInfoSpec = wegameInfoSpec;
   }
 
+  public DynamicCreativeElementsRead wechatChannelsSpec(
+      AdCreativeWechatChannelsSpec wechatChannelsSpec) {
+    this.wechatChannelsSpec = wechatChannelsSpec;
+    return this;
+  }
+
+  /**
+   * Get wechatChannelsSpec
+   *
+   * @return wechatChannelsSpec
+   */
+  @ApiModelProperty(value = "")
+  public AdCreativeWechatChannelsSpec getWechatChannelsSpec() {
+    return wechatChannelsSpec;
+  }
+
+  public void setWechatChannelsSpec(AdCreativeWechatChannelsSpec wechatChannelsSpec) {
+    this.wechatChannelsSpec = wechatChannelsSpec;
+  }
+
   public DynamicCreativeElementsRead finderObjectVisibility(Boolean finderObjectVisibility) {
     this.finderObjectVisibility = finderObjectVisibility;
     return this;
@@ -2399,6 +2422,7 @@ public class DynamicCreativeElementsRead {
         && Objects.equals(this.floatingZoneStruct, dynamicCreativeElementsRead.floatingZoneStruct)
         && Objects.equals(this.canvasShareImage, dynamicCreativeElementsRead.canvasShareImage)
         && Objects.equals(this.wegameInfoSpec, dynamicCreativeElementsRead.wegameInfoSpec)
+        && Objects.equals(this.wechatChannelsSpec, dynamicCreativeElementsRead.wechatChannelsSpec)
         && Objects.equals(
             this.finderObjectVisibility, dynamicCreativeElementsRead.finderObjectVisibility)
         && Objects.equals(
@@ -2520,6 +2544,7 @@ public class DynamicCreativeElementsRead {
         floatingZoneStruct,
         canvasShareImage,
         wegameInfoSpec,
+        wechatChannelsSpec,
         finderObjectVisibility,
         titleComponentOptions,
         descriptionComponentOptions,

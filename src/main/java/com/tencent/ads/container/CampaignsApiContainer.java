@@ -18,12 +18,18 @@ import com.tencent.ads.ApiException;
 import com.tencent.ads.anno.*;
 import com.tencent.ads.api.CampaignsApi;
 import com.tencent.ads.exception.TencentAdsResponseException;
+import com.tencent.ads.model.CampaignsAddNegativewordRequest;
+import com.tencent.ads.model.CampaignsAddNegativewordResponse;
+import com.tencent.ads.model.CampaignsAddNegativewordResponseData;
 import com.tencent.ads.model.CampaignsAddRequest;
 import com.tencent.ads.model.CampaignsAddResponse;
 import com.tencent.ads.model.CampaignsAddResponseData;
 import com.tencent.ads.model.CampaignsDeleteRequest;
 import com.tencent.ads.model.CampaignsDeleteResponse;
 import com.tencent.ads.model.CampaignsDeleteResponseData;
+import com.tencent.ads.model.CampaignsGetNegativewordRequest;
+import com.tencent.ads.model.CampaignsGetNegativewordResponse;
+import com.tencent.ads.model.CampaignsGetNegativewordResponseData;
 import com.tencent.ads.model.CampaignsGetResponse;
 import com.tencent.ads.model.CampaignsGetResponseData;
 import com.tencent.ads.model.CampaignsUpdateConfiguredStatusRequest;
@@ -32,6 +38,9 @@ import com.tencent.ads.model.CampaignsUpdateConfiguredStatusResponseData;
 import com.tencent.ads.model.CampaignsUpdateDailyBudgetRequest;
 import com.tencent.ads.model.CampaignsUpdateDailyBudgetResponse;
 import com.tencent.ads.model.CampaignsUpdateDailyBudgetResponseData;
+import com.tencent.ads.model.CampaignsUpdateNegativewordRequest;
+import com.tencent.ads.model.CampaignsUpdateNegativewordResponse;
+import com.tencent.ads.model.CampaignsUpdateNegativewordResponseData;
 import com.tencent.ads.model.CampaignsUpdateRequest;
 import com.tencent.ads.model.CampaignsUpdateResponse;
 import com.tencent.ads.model.CampaignsUpdateResponseData;
@@ -53,6 +62,21 @@ public class CampaignsApiContainer extends ApiContainer {
   public CampaignsAddResponseData campaignsAdd(CampaignsAddRequest data)
       throws ApiException, TencentAdsResponseException {
     CampaignsAddResponse resp = api.campaignsAdd(data);
+    handleResponse(gson.toJson(resp));
+    return resp.getData();
+  }
+
+  /**
+   * 新增推广计划否定词
+   *
+   * @param data (required)
+   * @return CampaignsAddNegativewordResponse
+   * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
+   *     response body
+   */
+  public CampaignsAddNegativewordResponseData campaignsAddNegativeword(
+      CampaignsAddNegativewordRequest data) throws ApiException, TencentAdsResponseException {
+    CampaignsAddNegativewordResponse resp = api.campaignsAddNegativeword(data);
     handleResponse(gson.toJson(resp));
     return resp.getData();
   }
@@ -109,6 +133,21 @@ public class CampaignsApiContainer extends ApiContainer {
   }
 
   /**
+   * 查询推广计划否定词
+   *
+   * @param data (required)
+   * @return CampaignsGetNegativewordResponse
+   * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
+   *     response body
+   */
+  public CampaignsGetNegativewordResponseData campaignsGetNegativeword(
+      CampaignsGetNegativewordRequest data) throws ApiException, TencentAdsResponseException {
+    CampaignsGetNegativewordResponse resp = api.campaignsGetNegativeword(data);
+    handleResponse(gson.toJson(resp));
+    return resp.getData();
+  }
+
+  /**
    * 更新推广计划
    *
    * @param data (required)
@@ -150,6 +189,21 @@ public class CampaignsApiContainer extends ApiContainer {
   public CampaignsUpdateDailyBudgetResponseData campaignsUpdateDailyBudget(
       CampaignsUpdateDailyBudgetRequest data) throws ApiException, TencentAdsResponseException {
     CampaignsUpdateDailyBudgetResponse resp = api.campaignsUpdateDailyBudget(data);
+    handleResponse(gson.toJson(resp));
+    return resp.getData();
+  }
+
+  /**
+   * 修改推广计划否定词
+   *
+   * @param data (required)
+   * @return CampaignsUpdateNegativewordResponse
+   * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
+   *     response body
+   */
+  public CampaignsUpdateNegativewordResponseData campaignsUpdateNegativeword(
+      CampaignsUpdateNegativewordRequest data) throws ApiException, TencentAdsResponseException {
+    CampaignsUpdateNegativewordResponse resp = api.campaignsUpdateNegativeword(data);
     handleResponse(gson.toJson(resp));
     return resp.getData();
   }

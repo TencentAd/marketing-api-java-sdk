@@ -221,6 +221,9 @@ public class AdcreativeCreativeElementsRead {
   @SerializedName("wegame_info_spec")
   private WegameInfoSpec wegameInfoSpec = null;
 
+  @SerializedName("wechat_channels_spec")
+  private AdCreativeWechatChannelsSpec wechatChannelsSpec = null;
+
   @SerializedName("finder_object_visibility")
   private Boolean finderObjectVisibility = null;
 
@@ -1519,6 +1522,26 @@ public class AdcreativeCreativeElementsRead {
     this.wegameInfoSpec = wegameInfoSpec;
   }
 
+  public AdcreativeCreativeElementsRead wechatChannelsSpec(
+      AdCreativeWechatChannelsSpec wechatChannelsSpec) {
+    this.wechatChannelsSpec = wechatChannelsSpec;
+    return this;
+  }
+
+  /**
+   * Get wechatChannelsSpec
+   *
+   * @return wechatChannelsSpec
+   */
+  @ApiModelProperty(value = "")
+  public AdCreativeWechatChannelsSpec getWechatChannelsSpec() {
+    return wechatChannelsSpec;
+  }
+
+  public void setWechatChannelsSpec(AdCreativeWechatChannelsSpec wechatChannelsSpec) {
+    this.wechatChannelsSpec = wechatChannelsSpec;
+  }
+
   public AdcreativeCreativeElementsRead finderObjectVisibility(Boolean finderObjectVisibility) {
     this.finderObjectVisibility = finderObjectVisibility;
     return this;
@@ -1649,6 +1672,8 @@ public class AdcreativeCreativeElementsRead {
         && Objects.equals(this.canvasShareImage, adcreativeCreativeElementsRead.canvasShareImage)
         && Objects.equals(this.wegameInfoSpec, adcreativeCreativeElementsRead.wegameInfoSpec)
         && Objects.equals(
+            this.wechatChannelsSpec, adcreativeCreativeElementsRead.wechatChannelsSpec)
+        && Objects.equals(
             this.finderObjectVisibility, adcreativeCreativeElementsRead.finderObjectVisibility)
         && Objects.equals(this.imageListJumpInfo, adcreativeCreativeElementsRead.imageListJumpInfo);
   }
@@ -1722,6 +1747,7 @@ public class AdcreativeCreativeElementsRead {
         floatingZoneStruct,
         canvasShareImage,
         wegameInfoSpec,
+        wechatChannelsSpec,
         finderObjectVisibility,
         imageListJumpInfo);
   }

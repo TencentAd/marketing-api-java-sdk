@@ -18,12 +18,18 @@ import com.tencent.ads.ApiException;
 import com.tencent.ads.anno.*;
 import com.tencent.ads.api.AdgroupsApi;
 import com.tencent.ads.exception.TencentAdsResponseException;
+import com.tencent.ads.model.AdgroupsAddNegativewordRequest;
+import com.tencent.ads.model.AdgroupsAddNegativewordResponse;
+import com.tencent.ads.model.AdgroupsAddNegativewordResponseData;
 import com.tencent.ads.model.AdgroupsAddRequest;
 import com.tencent.ads.model.AdgroupsAddResponse;
 import com.tencent.ads.model.AdgroupsAddResponseData;
 import com.tencent.ads.model.AdgroupsDeleteRequest;
 import com.tencent.ads.model.AdgroupsDeleteResponse;
 import com.tencent.ads.model.AdgroupsDeleteResponseData;
+import com.tencent.ads.model.AdgroupsGetNegativewordRequest;
+import com.tencent.ads.model.AdgroupsGetNegativewordResponse;
+import com.tencent.ads.model.AdgroupsGetNegativewordResponseData;
 import com.tencent.ads.model.AdgroupsGetResponse;
 import com.tencent.ads.model.AdgroupsGetResponseData;
 import com.tencent.ads.model.AdgroupsUpdateBidAmountRequest;
@@ -38,6 +44,9 @@ import com.tencent.ads.model.AdgroupsUpdateDailyBudgetResponseData;
 import com.tencent.ads.model.AdgroupsUpdateDatetimeRequest;
 import com.tencent.ads.model.AdgroupsUpdateDatetimeResponse;
 import com.tencent.ads.model.AdgroupsUpdateDatetimeResponseData;
+import com.tencent.ads.model.AdgroupsUpdateNegativewordRequest;
+import com.tencent.ads.model.AdgroupsUpdateNegativewordResponse;
+import com.tencent.ads.model.AdgroupsUpdateNegativewordResponseData;
 import com.tencent.ads.model.AdgroupsUpdateRequest;
 import com.tencent.ads.model.AdgroupsUpdateResponse;
 import com.tencent.ads.model.AdgroupsUpdateResponseData;
@@ -59,6 +68,21 @@ public class AdgroupsApiContainer extends ApiContainer {
   public AdgroupsAddResponseData adgroupsAdd(AdgroupsAddRequest data)
       throws ApiException, TencentAdsResponseException {
     AdgroupsAddResponse resp = api.adgroupsAdd(data);
+    handleResponse(gson.toJson(resp));
+    return resp.getData();
+  }
+
+  /**
+   * 新增广告组否定词
+   *
+   * @param data (required)
+   * @return AdgroupsAddNegativewordResponse
+   * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
+   *     response body
+   */
+  public AdgroupsAddNegativewordResponseData adgroupsAddNegativeword(
+      AdgroupsAddNegativewordRequest data) throws ApiException, TencentAdsResponseException {
+    AdgroupsAddNegativewordResponse resp = api.adgroupsAddNegativeword(data);
     handleResponse(gson.toJson(resp));
     return resp.getData();
   }
@@ -110,6 +134,21 @@ public class AdgroupsApiContainer extends ApiContainer {
             isDeleted,
             weixinOfficialAccountsUpgradeEnabled,
             fields);
+    handleResponse(gson.toJson(resp));
+    return resp.getData();
+  }
+
+  /**
+   * 查询广告组否定词
+   *
+   * @param data (required)
+   * @return AdgroupsGetNegativewordResponse
+   * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
+   *     response body
+   */
+  public AdgroupsGetNegativewordResponseData adgroupsGetNegativeword(
+      AdgroupsGetNegativewordRequest data) throws ApiException, TencentAdsResponseException {
+    AdgroupsGetNegativewordResponse resp = api.adgroupsGetNegativeword(data);
     handleResponse(gson.toJson(resp));
     return resp.getData();
   }
@@ -185,6 +224,21 @@ public class AdgroupsApiContainer extends ApiContainer {
   public AdgroupsUpdateDatetimeResponseData adgroupsUpdateDatetime(
       AdgroupsUpdateDatetimeRequest data) throws ApiException, TencentAdsResponseException {
     AdgroupsUpdateDatetimeResponse resp = api.adgroupsUpdateDatetime(data);
+    handleResponse(gson.toJson(resp));
+    return resp.getData();
+  }
+
+  /**
+   * 修改广告组否定词
+   *
+   * @param data (required)
+   * @return AdgroupsUpdateNegativewordResponse
+   * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
+   *     response body
+   */
+  public AdgroupsUpdateNegativewordResponseData adgroupsUpdateNegativeword(
+      AdgroupsUpdateNegativewordRequest data) throws ApiException, TencentAdsResponseException {
+    AdgroupsUpdateNegativewordResponse resp = api.adgroupsUpdateNegativeword(data);
     handleResponse(gson.toJson(resp));
     return resp.getData();
   }

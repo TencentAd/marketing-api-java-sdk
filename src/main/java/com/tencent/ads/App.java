@@ -32,6 +32,7 @@ public class App {
   @Inject AdcreativeTemplatesApiContainer adcreativeTemplatesApiContainer;
   @Inject AdcreativesApiContainer adcreativesApiContainer;
   @Inject AdcreativesRelatedCapabilityApiContainer adcreativesRelatedCapabilityApiContainer;
+  @Inject AdgroupNegativewordsApiContainer adgroupNegativewordsApiContainer;
   @Inject AdgroupsApiContainer adgroupsApiContainer;
   @Inject AdsApiContainer adsApiContainer;
   @Inject AdvertiserApiContainer advertiserApiContainer;
@@ -53,14 +54,18 @@ public class App {
   @Inject BatchOperationApiContainer batchOperationApiContainer;
   @Inject BatchRequestsApiContainer batchRequestsApiContainer;
   @Inject BidSimulationApiContainer bidSimulationApiContainer;
+  @Inject BidwordApiContainer bidwordApiContainer;
+  @Inject BidwordRptApiContainer bidwordRptApiContainer;
   @Inject BrandApiContainer brandApiContainer;
   @Inject BusinessManagerRelationsApiContainer businessManagerRelationsApiContainer;
   @Inject BusinessMdmAccountRelationsApiContainer businessMdmAccountRelationsApiContainer;
+  @Inject CampaignNegativewordsApiContainer campaignNegativewordsApiContainer;
   @Inject CampaignsApiContainer campaignsApiContainer;
   @Inject CapabilitiesApiContainer capabilitiesApiContainer;
   @Inject ChannelsApiContainer channelsApiContainer;
   @Inject ComplianceValidationApiContainer complianceValidationApiContainer;
   @Inject ConversionsApiContainer conversionsApiContainer;
+  @Inject CreativeComponentsApiContainer creativeComponentsApiContainer;
   @Inject CreativetoolsTextApiContainer creativetoolsTextApiContainer;
   @Inject CustomAudienceEstimationsApiContainer customAudienceEstimationsApiContainer;
   @Inject CustomAudienceFilesApiContainer customAudienceFilesApiContainer;
@@ -135,6 +140,7 @@ public class App {
   @Inject PropertySetSchemasApiContainer propertySetSchemasApiContainer;
   @Inject PropertySetsApiContainer propertySetsApiContainer;
   @Inject QualificationsApiContainer qualificationsApiContainer;
+  @Inject QuerywordRptApiContainer querywordRptApiContainer;
   @Inject RealtimeCostApiContainer realtimeCostApiContainer;
   @Inject ReportApiContainer reportApiContainer;
   @Inject ReviewElementPrereviewResultsApiContainer reviewElementPrereviewResultsApiContainer;
@@ -246,6 +252,10 @@ public class App {
     return adcreativesRelatedCapabilityApiContainer;
   }
 
+  public AdgroupNegativewordsApiContainer adgroupNegativewords() {
+    return adgroupNegativewordsApiContainer;
+  }
+
   public AdgroupsApiContainer adgroups() {
     return adgroupsApiContainer;
   }
@@ -330,6 +340,14 @@ public class App {
     return bidSimulationApiContainer;
   }
 
+  public BidwordApiContainer bidword() {
+    return bidwordApiContainer;
+  }
+
+  public BidwordRptApiContainer bidwordRpt() {
+    return bidwordRptApiContainer;
+  }
+
   public BrandApiContainer brand() {
     return brandApiContainer;
   }
@@ -340,6 +358,10 @@ public class App {
 
   public BusinessMdmAccountRelationsApiContainer businessMdmAccountRelations() {
     return businessMdmAccountRelationsApiContainer;
+  }
+
+  public CampaignNegativewordsApiContainer campaignNegativewords() {
+    return campaignNegativewordsApiContainer;
   }
 
   public CampaignsApiContainer campaigns() {
@@ -360,6 +382,10 @@ public class App {
 
   public ConversionsApiContainer conversions() {
     return conversionsApiContainer;
+  }
+
+  public CreativeComponentsApiContainer creativeComponents() {
+    return creativeComponentsApiContainer;
   }
 
   public CreativetoolsTextApiContainer creativetoolsText() {
@@ -644,6 +670,10 @@ public class App {
 
   public QualificationsApiContainer qualifications() {
     return qualificationsApiContainer;
+  }
+
+  public QuerywordRptApiContainer querywordRpt() {
+    return querywordRptApiContainer;
   }
 
   public RealtimeCostApiContainer realtimeCost() {

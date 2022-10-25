@@ -221,6 +221,9 @@ public class AdcreativeCreativeElementsReadMp {
   @SerializedName("wegame_info_spec")
   private WegameInfoSpec wegameInfoSpec = null;
 
+  @SerializedName("wechat_channels_spec")
+  private AdCreativeWechatChannelsSpec wechatChannelsSpec = null;
+
   @SerializedName("finder_object_visibility")
   private Boolean finderObjectVisibility = null;
 
@@ -1520,6 +1523,26 @@ public class AdcreativeCreativeElementsReadMp {
     this.wegameInfoSpec = wegameInfoSpec;
   }
 
+  public AdcreativeCreativeElementsReadMp wechatChannelsSpec(
+      AdCreativeWechatChannelsSpec wechatChannelsSpec) {
+    this.wechatChannelsSpec = wechatChannelsSpec;
+    return this;
+  }
+
+  /**
+   * Get wechatChannelsSpec
+   *
+   * @return wechatChannelsSpec
+   */
+  @ApiModelProperty(value = "")
+  public AdCreativeWechatChannelsSpec getWechatChannelsSpec() {
+    return wechatChannelsSpec;
+  }
+
+  public void setWechatChannelsSpec(AdCreativeWechatChannelsSpec wechatChannelsSpec) {
+    this.wechatChannelsSpec = wechatChannelsSpec;
+  }
+
   public AdcreativeCreativeElementsReadMp finderObjectVisibility(Boolean finderObjectVisibility) {
     this.finderObjectVisibility = finderObjectVisibility;
     return this;
@@ -1651,6 +1674,8 @@ public class AdcreativeCreativeElementsReadMp {
         && Objects.equals(this.canvasShareImage, adcreativeCreativeElementsReadMp.canvasShareImage)
         && Objects.equals(this.wegameInfoSpec, adcreativeCreativeElementsReadMp.wegameInfoSpec)
         && Objects.equals(
+            this.wechatChannelsSpec, adcreativeCreativeElementsReadMp.wechatChannelsSpec)
+        && Objects.equals(
             this.finderObjectVisibility, adcreativeCreativeElementsReadMp.finderObjectVisibility)
         && Objects.equals(
             this.imageListJumpInfo, adcreativeCreativeElementsReadMp.imageListJumpInfo);
@@ -1725,6 +1750,7 @@ public class AdcreativeCreativeElementsReadMp {
         floatingZoneStruct,
         canvasShareImage,
         wegameInfoSpec,
+        wechatChannelsSpec,
         finderObjectVisibility,
         imageListJumpInfo);
   }

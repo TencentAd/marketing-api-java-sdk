@@ -170,6 +170,9 @@ public class AdcreativeCreativeElementsMp {
   @SerializedName("wegame_info_spec")
   private WegameInfoSpec wegameInfoSpec = null;
 
+  @SerializedName("wechat_channels_spec")
+  private AdCreativeWechatChannelsSpec wechatChannelsSpec = null;
+
   @SerializedName("finder_object_visibility")
   private Boolean finderObjectVisibility = null;
 
@@ -1144,6 +1147,26 @@ public class AdcreativeCreativeElementsMp {
     this.wegameInfoSpec = wegameInfoSpec;
   }
 
+  public AdcreativeCreativeElementsMp wechatChannelsSpec(
+      AdCreativeWechatChannelsSpec wechatChannelsSpec) {
+    this.wechatChannelsSpec = wechatChannelsSpec;
+    return this;
+  }
+
+  /**
+   * Get wechatChannelsSpec
+   *
+   * @return wechatChannelsSpec
+   */
+  @ApiModelProperty(value = "")
+  public AdCreativeWechatChannelsSpec getWechatChannelsSpec() {
+    return wechatChannelsSpec;
+  }
+
+  public void setWechatChannelsSpec(AdCreativeWechatChannelsSpec wechatChannelsSpec) {
+    this.wechatChannelsSpec = wechatChannelsSpec;
+  }
+
   public AdcreativeCreativeElementsMp finderObjectVisibility(Boolean finderObjectVisibility) {
     this.finderObjectVisibility = finderObjectVisibility;
     return this;
@@ -1252,6 +1275,7 @@ public class AdcreativeCreativeElementsMp {
         && Objects.equals(this.floatingZoneStruct, adcreativeCreativeElementsMp.floatingZoneStruct)
         && Objects.equals(this.canvasShareImage, adcreativeCreativeElementsMp.canvasShareImage)
         && Objects.equals(this.wegameInfoSpec, adcreativeCreativeElementsMp.wegameInfoSpec)
+        && Objects.equals(this.wechatChannelsSpec, adcreativeCreativeElementsMp.wechatChannelsSpec)
         && Objects.equals(
             this.finderObjectVisibility, adcreativeCreativeElementsMp.finderObjectVisibility)
         && Objects.equals(this.imageListJumpInfo, adcreativeCreativeElementsMp.imageListJumpInfo);
@@ -1309,6 +1333,7 @@ public class AdcreativeCreativeElementsMp {
         floatingZoneStruct,
         canvasShareImage,
         wegameInfoSpec,
+        wechatChannelsSpec,
         finderObjectVisibility,
         imageListJumpInfo);
   }
