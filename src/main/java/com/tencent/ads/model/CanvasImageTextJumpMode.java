@@ -19,36 +19,16 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-/** 原生页中组件类型 */
-@JsonAdapter(CanvasPageElementType.Adapter.class)
-public enum CanvasPageElementType {
-  TOP_IMAGE("TOP_IMAGE"),
+/** 图文复合组件跳转方式，默认为btn_jump */
+@JsonAdapter(CanvasImageTextJumpMode.Adapter.class)
+public enum CanvasImageTextJumpMode {
+  BTN_JUMP("btn_jump"),
 
-  TOP_SLIDER("TOP_SLIDER"),
-
-  TOP_VIDEO("TOP_VIDEO"),
-
-  IMAGE("IMAGE"),
-
-  SLIDER("SLIDER"),
-
-  VIDEO("VIDEO"),
-
-  TEXT("TEXT"),
-
-  APP_DOWNLOAD("APP_DOWNLOAD"),
-
-  WEAPP("WEAPP"),
-
-  GH("GH"),
-
-  ENTERPRISE_WX("ENTERPRISE_WX"),
-
-  IMAGE_TEXT("IMAGE_TEXT");
+  TOTAL_JUMP("total_jump");
 
   private String value;
 
-  CanvasPageElementType(String value) {
+  CanvasImageTextJumpMode(String value) {
     this.value = value;
   }
 
@@ -61,8 +41,8 @@ public enum CanvasPageElementType {
     return String.valueOf(value);
   }
 
-  public static CanvasPageElementType fromValue(String text) {
-    for (CanvasPageElementType b : CanvasPageElementType.values()) {
+  public static CanvasImageTextJumpMode fromValue(String text) {
+    for (CanvasImageTextJumpMode b : CanvasImageTextJumpMode.values()) {
       if (String.valueOf(b.value).equals(text)) {
         return b;
       }
@@ -70,17 +50,17 @@ public enum CanvasPageElementType {
     return null;
   }
 
-  public static class Adapter extends TypeAdapter<CanvasPageElementType> {
+  public static class Adapter extends TypeAdapter<CanvasImageTextJumpMode> {
     @Override
-    public void write(final JsonWriter jsonWriter, final CanvasPageElementType enumeration)
+    public void write(final JsonWriter jsonWriter, final CanvasImageTextJumpMode enumeration)
         throws IOException {
       jsonWriter.value(enumeration.getValue());
     }
 
     @Override
-    public CanvasPageElementType read(final JsonReader jsonReader) throws IOException {
+    public CanvasImageTextJumpMode read(final JsonReader jsonReader) throws IOException {
       String value = jsonReader.nextString();
-      return CanvasPageElementType.fromValue(String.valueOf(value));
+      return CanvasImageTextJumpMode.fromValue(String.valueOf(value));
     }
   }
 }

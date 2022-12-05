@@ -27,6 +27,9 @@ public class GlobalSpecStruct {
   @SerializedName("float_button_spec")
   private CanvasFloatButtonSpecType floatButtonSpec = null;
 
+  @SerializedName("side_bar_float_spec")
+  private SideBarFloatSpecSpec sideBarFloatSpec = null;
+
   public GlobalSpecStruct elementType(CanvasGlobalElementType elementType) {
     this.elementType = elementType;
     return this;
@@ -65,6 +68,25 @@ public class GlobalSpecStruct {
     this.floatButtonSpec = floatButtonSpec;
   }
 
+  public GlobalSpecStruct sideBarFloatSpec(SideBarFloatSpecSpec sideBarFloatSpec) {
+    this.sideBarFloatSpec = sideBarFloatSpec;
+    return this;
+  }
+
+  /**
+   * Get sideBarFloatSpec
+   *
+   * @return sideBarFloatSpec
+   */
+  @ApiModelProperty(value = "")
+  public SideBarFloatSpecSpec getSideBarFloatSpec() {
+    return sideBarFloatSpec;
+  }
+
+  public void setSideBarFloatSpec(SideBarFloatSpecSpec sideBarFloatSpec) {
+    this.sideBarFloatSpec = sideBarFloatSpec;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -75,12 +97,13 @@ public class GlobalSpecStruct {
     }
     GlobalSpecStruct globalSpecStruct = (GlobalSpecStruct) o;
     return Objects.equals(this.elementType, globalSpecStruct.elementType)
-        && Objects.equals(this.floatButtonSpec, globalSpecStruct.floatButtonSpec);
+        && Objects.equals(this.floatButtonSpec, globalSpecStruct.floatButtonSpec)
+        && Objects.equals(this.sideBarFloatSpec, globalSpecStruct.sideBarFloatSpec);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(elementType, floatButtonSpec);
+    return Objects.hash(elementType, floatButtonSpec, sideBarFloatSpec);
   }
 
   @Override

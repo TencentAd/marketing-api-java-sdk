@@ -299,8 +299,14 @@ public class DynamicCreativeElementsRead {
   @SerializedName("form_component_options")
   private List<FormComponentOption> formComponentOptions = null;
 
+  @SerializedName("holiday_logo_component_options")
+  private List<HolidayLogoComponentOption> holidayLogoComponentOptions = null;
+
   @SerializedName("image_list_jump_info")
   private List<LandingPageStructure> imageListJumpInfo = null;
+
+  @SerializedName("excitation_text")
+  private String excitationText = null;
 
   public DynamicCreativeElementsRead image(String image) {
     this.image = image;
@@ -2306,6 +2312,36 @@ public class DynamicCreativeElementsRead {
     this.formComponentOptions = formComponentOptions;
   }
 
+  public DynamicCreativeElementsRead holidayLogoComponentOptions(
+      List<HolidayLogoComponentOption> holidayLogoComponentOptions) {
+    this.holidayLogoComponentOptions = holidayLogoComponentOptions;
+    return this;
+  }
+
+  public DynamicCreativeElementsRead addHolidayLogoComponentOptionsItem(
+      HolidayLogoComponentOption holidayLogoComponentOptionsItem) {
+    if (this.holidayLogoComponentOptions == null) {
+      this.holidayLogoComponentOptions = new ArrayList<HolidayLogoComponentOption>();
+    }
+    this.holidayLogoComponentOptions.add(holidayLogoComponentOptionsItem);
+    return this;
+  }
+
+  /**
+   * Get holidayLogoComponentOptions
+   *
+   * @return holidayLogoComponentOptions
+   */
+  @ApiModelProperty(value = "")
+  public List<HolidayLogoComponentOption> getHolidayLogoComponentOptions() {
+    return holidayLogoComponentOptions;
+  }
+
+  public void setHolidayLogoComponentOptions(
+      List<HolidayLogoComponentOption> holidayLogoComponentOptions) {
+    this.holidayLogoComponentOptions = holidayLogoComponentOptions;
+  }
+
   public DynamicCreativeElementsRead imageListJumpInfo(
       List<LandingPageStructure> imageListJumpInfo) {
     this.imageListJumpInfo = imageListJumpInfo;
@@ -2333,6 +2369,25 @@ public class DynamicCreativeElementsRead {
 
   public void setImageListJumpInfo(List<LandingPageStructure> imageListJumpInfo) {
     this.imageListJumpInfo = imageListJumpInfo;
+  }
+
+  public DynamicCreativeElementsRead excitationText(String excitationText) {
+    this.excitationText = excitationText;
+    return this;
+  }
+
+  /**
+   * Get excitationText
+   *
+   * @return excitationText
+   */
+  @ApiModelProperty(value = "")
+  public String getExcitationText() {
+    return excitationText;
+  }
+
+  public void setExcitationText(String excitationText) {
+    this.excitationText = excitationText;
   }
 
   @Override
@@ -2464,7 +2519,11 @@ public class DynamicCreativeElementsRead {
             this.phoneComponentOptions, dynamicCreativeElementsRead.phoneComponentOptions)
         && Objects.equals(
             this.formComponentOptions, dynamicCreativeElementsRead.formComponentOptions)
-        && Objects.equals(this.imageListJumpInfo, dynamicCreativeElementsRead.imageListJumpInfo);
+        && Objects.equals(
+            this.holidayLogoComponentOptions,
+            dynamicCreativeElementsRead.holidayLogoComponentOptions)
+        && Objects.equals(this.imageListJumpInfo, dynamicCreativeElementsRead.imageListJumpInfo)
+        && Objects.equals(this.excitationText, dynamicCreativeElementsRead.excitationText);
   }
 
   @Override
@@ -2562,7 +2621,9 @@ public class DynamicCreativeElementsRead {
         consultComponentOptions,
         phoneComponentOptions,
         formComponentOptions,
-        imageListJumpInfo);
+        holidayLogoComponentOptions,
+        imageListJumpInfo,
+        excitationText);
   }
 
   @Override

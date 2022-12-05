@@ -436,6 +436,8 @@ public class BidwordApi {
   }
 
   /**
+   * 获取关键词
+   *
    * @param data (required)
    * @return BidwordGetResponse
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
@@ -447,6 +449,8 @@ public class BidwordApi {
   }
 
   /**
+   * 获取关键词
+   *
    * @param data (required)
    * @return ApiResponse&lt;BidwordGetResponse&gt;
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
@@ -460,7 +464,7 @@ public class BidwordApi {
   }
 
   /**
-   * (asynchronously)
+   * 获取关键词 (asynchronously)
    *
    * @param data (required)
    * @param callback The callback to be executed when the API call finishes

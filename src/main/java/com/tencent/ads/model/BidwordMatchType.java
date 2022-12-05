@@ -26,7 +26,11 @@ public enum BidwordMatchType {
 
   WIDE_MATCH("WIDE_MATCH"),
 
-  WORD_MATCH("WORD_MATCH");
+  WORD_MATCH("WORD_MATCH"),
+
+  RECOMMEND_BY_WORD("RECOMMEND_BY_WORD"),
+
+  RECOMMEND_BY_INDUSTRY("RECOMMEND_BY_INDUSTRY");
 
   private String value;
 

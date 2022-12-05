@@ -66,6 +66,8 @@ public class BidwordApiContainer extends ApiContainer {
   }
 
   /**
+   * 获取关键词
+   *
    * @param data (required)
    * @return BidwordGetResponse
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the

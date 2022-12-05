@@ -19,36 +19,16 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-/** 原生页中组件类型 */
-@JsonAdapter(CanvasPageElementType.Adapter.class)
-public enum CanvasPageElementType {
-  TOP_IMAGE("TOP_IMAGE"),
-
-  TOP_SLIDER("TOP_SLIDER"),
-
-  TOP_VIDEO("TOP_VIDEO"),
-
-  IMAGE("IMAGE"),
-
-  SLIDER("SLIDER"),
-
-  VIDEO("VIDEO"),
-
-  TEXT("TEXT"),
-
-  APP_DOWNLOAD("APP_DOWNLOAD"),
-
-  WEAPP("WEAPP"),
-
+/** 图文复合组件转化类型 */
+@JsonAdapter(CanvasImageTextElementType.Adapter.class)
+public enum CanvasImageTextElementType {
   GH("GH"),
 
-  ENTERPRISE_WX("ENTERPRISE_WX"),
-
-  IMAGE_TEXT("IMAGE_TEXT");
+  ENTERPRISE_WX("ENTERPRISE_WX");
 
   private String value;
 
-  CanvasPageElementType(String value) {
+  CanvasImageTextElementType(String value) {
     this.value = value;
   }
 
@@ -61,8 +41,8 @@ public enum CanvasPageElementType {
     return String.valueOf(value);
   }
 
-  public static CanvasPageElementType fromValue(String text) {
-    for (CanvasPageElementType b : CanvasPageElementType.values()) {
+  public static CanvasImageTextElementType fromValue(String text) {
+    for (CanvasImageTextElementType b : CanvasImageTextElementType.values()) {
       if (String.valueOf(b.value).equals(text)) {
         return b;
       }
@@ -70,17 +50,17 @@ public enum CanvasPageElementType {
     return null;
   }
 
-  public static class Adapter extends TypeAdapter<CanvasPageElementType> {
+  public static class Adapter extends TypeAdapter<CanvasImageTextElementType> {
     @Override
-    public void write(final JsonWriter jsonWriter, final CanvasPageElementType enumeration)
+    public void write(final JsonWriter jsonWriter, final CanvasImageTextElementType enumeration)
         throws IOException {
       jsonWriter.value(enumeration.getValue());
     }
 
     @Override
-    public CanvasPageElementType read(final JsonReader jsonReader) throws IOException {
+    public CanvasImageTextElementType read(final JsonReader jsonReader) throws IOException {
       String value = jsonReader.nextString();
-      return CanvasPageElementType.fromValue(String.valueOf(value));
+      return CanvasImageTextElementType.fromValue(String.valueOf(value));
     }
   }
 }

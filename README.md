@@ -18,7 +18,7 @@
 <dependency>
   <groupId>com.tencent.ads</groupId>
   <artifactId>marketing-api-java-sdk</artifactId>
-  <version>1.1.51</version>
+  <version>1.1.52</version>
 </dependency>
 ```
 
@@ -35,7 +35,7 @@ mvn clean install
         <dependency>
             <groupId>com.tencent.ads</groupId>
             <artifactId>marketing-api-java-sdk</artifactId>
-            <version>1.1.51</version>
+            <version>1.1.52</version>
         </dependency>
 ```
 

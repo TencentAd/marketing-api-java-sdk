@@ -179,6 +179,9 @@ public class AdcreativeCreativeElementsMp {
   @SerializedName("image_list_jump_info")
   private List<LandingPageStructure> imageListJumpInfo = null;
 
+  @SerializedName("button_text_jump_info")
+  private LandingPageStructure buttonTextJumpInfo = null;
+
   public AdcreativeCreativeElementsMp image(String image) {
     this.image = image;
     return this;
@@ -1215,6 +1218,25 @@ public class AdcreativeCreativeElementsMp {
     this.imageListJumpInfo = imageListJumpInfo;
   }
 
+  public AdcreativeCreativeElementsMp buttonTextJumpInfo(LandingPageStructure buttonTextJumpInfo) {
+    this.buttonTextJumpInfo = buttonTextJumpInfo;
+    return this;
+  }
+
+  /**
+   * Get buttonTextJumpInfo
+   *
+   * @return buttonTextJumpInfo
+   */
+  @ApiModelProperty(value = "")
+  public LandingPageStructure getButtonTextJumpInfo() {
+    return buttonTextJumpInfo;
+  }
+
+  public void setButtonTextJumpInfo(LandingPageStructure buttonTextJumpInfo) {
+    this.buttonTextJumpInfo = buttonTextJumpInfo;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -1278,7 +1300,8 @@ public class AdcreativeCreativeElementsMp {
         && Objects.equals(this.wechatChannelsSpec, adcreativeCreativeElementsMp.wechatChannelsSpec)
         && Objects.equals(
             this.finderObjectVisibility, adcreativeCreativeElementsMp.finderObjectVisibility)
-        && Objects.equals(this.imageListJumpInfo, adcreativeCreativeElementsMp.imageListJumpInfo);
+        && Objects.equals(this.imageListJumpInfo, adcreativeCreativeElementsMp.imageListJumpInfo)
+        && Objects.equals(this.buttonTextJumpInfo, adcreativeCreativeElementsMp.buttonTextJumpInfo);
   }
 
   @Override
@@ -1335,7 +1358,8 @@ public class AdcreativeCreativeElementsMp {
         wegameInfoSpec,
         wechatChannelsSpec,
         finderObjectVisibility,
-        imageListJumpInfo);
+        imageListJumpInfo,
+        buttonTextJumpInfo);
   }
 
   @Override

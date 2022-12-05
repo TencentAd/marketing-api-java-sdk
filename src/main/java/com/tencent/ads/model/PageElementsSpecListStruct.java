@@ -57,6 +57,9 @@ public class PageElementsSpecListStruct {
   @SerializedName("enterprise_wx_spec")
   private EnterpriseWxSpec enterpriseWxSpec = null;
 
+  @SerializedName("image_text_spec")
+  private ImageTextSpec imageTextSpec = null;
+
   public PageElementsSpecListStruct elementType(CanvasPageElementType elementType) {
     this.elementType = elementType;
     return this;
@@ -285,6 +288,25 @@ public class PageElementsSpecListStruct {
     this.enterpriseWxSpec = enterpriseWxSpec;
   }
 
+  public PageElementsSpecListStruct imageTextSpec(ImageTextSpec imageTextSpec) {
+    this.imageTextSpec = imageTextSpec;
+    return this;
+  }
+
+  /**
+   * Get imageTextSpec
+   *
+   * @return imageTextSpec
+   */
+  @ApiModelProperty(value = "")
+  public ImageTextSpec getImageTextSpec() {
+    return imageTextSpec;
+  }
+
+  public void setImageTextSpec(ImageTextSpec imageTextSpec) {
+    this.imageTextSpec = imageTextSpec;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -305,7 +327,8 @@ public class PageElementsSpecListStruct {
         && Objects.equals(this.appDownloadSpec, pageElementsSpecListStruct.appDownloadSpec)
         && Objects.equals(this.weappSpec, pageElementsSpecListStruct.weappSpec)
         && Objects.equals(this.ghSpec, pageElementsSpecListStruct.ghSpec)
-        && Objects.equals(this.enterpriseWxSpec, pageElementsSpecListStruct.enterpriseWxSpec);
+        && Objects.equals(this.enterpriseWxSpec, pageElementsSpecListStruct.enterpriseWxSpec)
+        && Objects.equals(this.imageTextSpec, pageElementsSpecListStruct.imageTextSpec);
   }
 
   @Override
@@ -322,7 +345,8 @@ public class PageElementsSpecListStruct {
         appDownloadSpec,
         weappSpec,
         ghSpec,
-        enterpriseWxSpec);
+        enterpriseWxSpec,
+        imageTextSpec);
   }
 
   @Override

@@ -22,7 +22,7 @@ import java.util.Objects;
 @ApiModel(description = "报表过滤器")
 public class RptFilter {
   @SerializedName("time_range")
-  private TimeRange timeRange = null;
+  private DateTimeRange timeRange = null;
 
   @SerializedName("report_only")
   private Long reportOnly = null;
@@ -33,7 +33,7 @@ public class RptFilter {
   @SerializedName("time_line")
   private Long timeLine = null;
 
-  public RptFilter timeRange(TimeRange timeRange) {
+  public RptFilter timeRange(DateTimeRange timeRange) {
     this.timeRange = timeRange;
     return this;
   }
@@ -44,11 +44,11 @@ public class RptFilter {
    * @return timeRange
    */
   @ApiModelProperty(value = "")
-  public TimeRange getTimeRange() {
+  public DateTimeRange getTimeRange() {
     return timeRange;
   }
 
-  public void setTimeRange(TimeRange timeRange) {
+  public void setTimeRange(DateTimeRange timeRange) {
     this.timeRange = timeRange;
   }
 

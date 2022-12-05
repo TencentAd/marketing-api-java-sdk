@@ -22,7 +22,9 @@ import java.io.IOException;
 /** 全局组件类型 */
 @JsonAdapter(CanvasGlobalElementType.Adapter.class)
 public enum CanvasGlobalElementType {
-  FLOAT_BUTTON("FLOAT_BUTTON");
+  FLOAT_BUTTON("FLOAT_BUTTON"),
+
+  SIDE_BAR_FLOAT_BUTTON("SIDE_BAR_FLOAT_BUTTON");
 
   private String value;
 

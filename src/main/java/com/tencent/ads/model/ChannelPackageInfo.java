@@ -39,6 +39,9 @@ public class ChannelPackageInfo {
   @SerializedName("last_modified_time")
   private Long lastModifiedTime = null;
 
+  @SerializedName("channel_package_id")
+  private String channelPackageId = null;
+
   public ChannelPackageInfo androidAppId(Long androidAppId) {
     this.androidAppId = androidAppId;
     return this;
@@ -153,6 +156,25 @@ public class ChannelPackageInfo {
     this.lastModifiedTime = lastModifiedTime;
   }
 
+  public ChannelPackageInfo channelPackageId(String channelPackageId) {
+    this.channelPackageId = channelPackageId;
+    return this;
+  }
+
+  /**
+   * Get channelPackageId
+   *
+   * @return channelPackageId
+   */
+  @ApiModelProperty(value = "")
+  public String getChannelPackageId() {
+    return channelPackageId;
+  }
+
+  public void setChannelPackageId(String channelPackageId) {
+    this.channelPackageId = channelPackageId;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -167,13 +189,20 @@ public class ChannelPackageInfo {
         && Objects.equals(this.status, channelPackageInfo.status)
         && Objects.equals(this.errorCode, channelPackageInfo.errorCode)
         && Objects.equals(this.createdTime, channelPackageInfo.createdTime)
-        && Objects.equals(this.lastModifiedTime, channelPackageInfo.lastModifiedTime);
+        && Objects.equals(this.lastModifiedTime, channelPackageInfo.lastModifiedTime)
+        && Objects.equals(this.channelPackageId, channelPackageInfo.channelPackageId);
   }
 
   @Override
   public int hashCode() {
     return Objects.hash(
-        androidAppId, packageName, status, errorCode, createdTime, lastModifiedTime);
+        androidAppId,
+        packageName,
+        status,
+        errorCode,
+        createdTime,
+        lastModifiedTime,
+        channelPackageId);
   }
 
   @Override
