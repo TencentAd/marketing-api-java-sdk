@@ -45,6 +45,9 @@ public class QuerywordRptGetRequest {
   @SerializedName("biz_filter")
   private BizFilter bizFilter = null;
 
+  @SerializedName("query_type")
+  private List<Long> queryType = null;
+
   public QuerywordRptGetRequest accountId(Long accountId) {
     this.accountId = accountId;
     return this;
@@ -221,6 +224,33 @@ public class QuerywordRptGetRequest {
     this.bizFilter = bizFilter;
   }
 
+  public QuerywordRptGetRequest queryType(List<Long> queryType) {
+    this.queryType = queryType;
+    return this;
+  }
+
+  public QuerywordRptGetRequest addQueryTypeItem(Long queryTypeItem) {
+    if (this.queryType == null) {
+      this.queryType = new ArrayList<Long>();
+    }
+    this.queryType.add(queryTypeItem);
+    return this;
+  }
+
+  /**
+   * Get queryType
+   *
+   * @return queryType
+   */
+  @ApiModelProperty(value = "")
+  public List<Long> getQueryType() {
+    return queryType;
+  }
+
+  public void setQueryType(List<Long> queryType) {
+    this.queryType = queryType;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -237,13 +267,14 @@ public class QuerywordRptGetRequest {
         && Objects.equals(this.page, querywordRptGetRequest.page)
         && Objects.equals(this.pageSize, querywordRptGetRequest.pageSize)
         && Objects.equals(this.rptFilter, querywordRptGetRequest.rptFilter)
-        && Objects.equals(this.bizFilter, querywordRptGetRequest.bizFilter);
+        && Objects.equals(this.bizFilter, querywordRptGetRequest.bizFilter)
+        && Objects.equals(this.queryType, querywordRptGetRequest.queryType);
   }
 
   @Override
   public int hashCode() {
     return Objects.hash(
-        accountId, filtering, groupBy, orderBy, page, pageSize, rptFilter, bizFilter);
+        accountId, filtering, groupBy, orderBy, page, pageSize, rptFilter, bizFilter, queryType);
   }
 
   @Override

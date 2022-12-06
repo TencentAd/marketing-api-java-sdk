@@ -132,6 +132,9 @@ public class DynamicCreativesUpdateRequest {
   @SerializedName("campaign_id")
   private Long campaignId = null;
 
+  @SerializedName("industry_label")
+  private String industryLabel = null;
+
   @SerializedName("account_id")
   private Long accountId = null;
 
@@ -852,6 +855,25 @@ public class DynamicCreativesUpdateRequest {
     this.campaignId = campaignId;
   }
 
+  public DynamicCreativesUpdateRequest industryLabel(String industryLabel) {
+    this.industryLabel = industryLabel;
+    return this;
+  }
+
+  /**
+   * Get industryLabel
+   *
+   * @return industryLabel
+   */
+  @ApiModelProperty(value = "")
+  public String getIndustryLabel() {
+    return industryLabel;
+  }
+
+  public void setIndustryLabel(String industryLabel) {
+    this.industryLabel = industryLabel;
+  }
+
   public DynamicCreativesUpdateRequest accountId(Long accountId) {
     this.accountId = accountId;
     return this;
@@ -930,6 +952,7 @@ public class DynamicCreativesUpdateRequest {
         && Objects.equals(this.headClickType, dynamicCreativesUpdateRequest.headClickType)
         && Objects.equals(this.headClickSpec, dynamicCreativesUpdateRequest.headClickSpec)
         && Objects.equals(this.campaignId, dynamicCreativesUpdateRequest.campaignId)
+        && Objects.equals(this.industryLabel, dynamicCreativesUpdateRequest.industryLabel)
         && Objects.equals(this.accountId, dynamicCreativesUpdateRequest.accountId);
   }
 
@@ -973,6 +996,7 @@ public class DynamicCreativesUpdateRequest {
         headClickType,
         headClickSpec,
         campaignId,
+        industryLabel,
         accountId);
   }
 

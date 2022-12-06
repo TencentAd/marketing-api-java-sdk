@@ -156,6 +156,12 @@ public class DynamicCreativesAddRequest {
   @SerializedName("campaign_id")
   private Long campaignId = null;
 
+  @SerializedName("page_track_url")
+  private String pageTrackUrl = null;
+
+  @SerializedName("industry_label")
+  private String industryLabel = null;
+
   @SerializedName("account_id")
   private Long accountId = null;
 
@@ -1036,6 +1042,44 @@ public class DynamicCreativesAddRequest {
     this.campaignId = campaignId;
   }
 
+  public DynamicCreativesAddRequest pageTrackUrl(String pageTrackUrl) {
+    this.pageTrackUrl = pageTrackUrl;
+    return this;
+  }
+
+  /**
+   * Get pageTrackUrl
+   *
+   * @return pageTrackUrl
+   */
+  @ApiModelProperty(value = "")
+  public String getPageTrackUrl() {
+    return pageTrackUrl;
+  }
+
+  public void setPageTrackUrl(String pageTrackUrl) {
+    this.pageTrackUrl = pageTrackUrl;
+  }
+
+  public DynamicCreativesAddRequest industryLabel(String industryLabel) {
+    this.industryLabel = industryLabel;
+    return this;
+  }
+
+  /**
+   * Get industryLabel
+   *
+   * @return industryLabel
+   */
+  @ApiModelProperty(value = "")
+  public String getIndustryLabel() {
+    return industryLabel;
+  }
+
+  public void setIndustryLabel(String industryLabel) {
+    this.industryLabel = industryLabel;
+  }
+
   public DynamicCreativesAddRequest accountId(Long accountId) {
     this.accountId = accountId;
     return this;
@@ -1124,6 +1168,8 @@ public class DynamicCreativesAddRequest {
         && Objects.equals(this.headClickType, dynamicCreativesAddRequest.headClickType)
         && Objects.equals(this.headClickSpec, dynamicCreativesAddRequest.headClickSpec)
         && Objects.equals(this.campaignId, dynamicCreativesAddRequest.campaignId)
+        && Objects.equals(this.pageTrackUrl, dynamicCreativesAddRequest.pageTrackUrl)
+        && Objects.equals(this.industryLabel, dynamicCreativesAddRequest.industryLabel)
         && Objects.equals(this.accountId, dynamicCreativesAddRequest.accountId);
   }
 
@@ -1175,6 +1221,8 @@ public class DynamicCreativesAddRequest {
         headClickType,
         headClickSpec,
         campaignId,
+        pageTrackUrl,
+        industryLabel,
         accountId);
   }
 

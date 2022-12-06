@@ -131,6 +131,12 @@ public class DynamicCreativesGetListStruct {
   @SerializedName("async_job_status")
   private DCAsyncJobStatus asyncJobStatus = null;
 
+  @SerializedName("page_track_url")
+  private String pageTrackUrl = null;
+
+  @SerializedName("industry_label")
+  private String industryLabel = null;
+
   public DynamicCreativesGetListStruct dynamicCreativeId(Long dynamicCreativeId) {
     this.dynamicCreativeId = dynamicCreativeId;
     return this;
@@ -840,6 +846,44 @@ public class DynamicCreativesGetListStruct {
     this.asyncJobStatus = asyncJobStatus;
   }
 
+  public DynamicCreativesGetListStruct pageTrackUrl(String pageTrackUrl) {
+    this.pageTrackUrl = pageTrackUrl;
+    return this;
+  }
+
+  /**
+   * Get pageTrackUrl
+   *
+   * @return pageTrackUrl
+   */
+  @ApiModelProperty(value = "")
+  public String getPageTrackUrl() {
+    return pageTrackUrl;
+  }
+
+  public void setPageTrackUrl(String pageTrackUrl) {
+    this.pageTrackUrl = pageTrackUrl;
+  }
+
+  public DynamicCreativesGetListStruct industryLabel(String industryLabel) {
+    this.industryLabel = industryLabel;
+    return this;
+  }
+
+  /**
+   * Get industryLabel
+   *
+   * @return industryLabel
+   */
+  @ApiModelProperty(value = "")
+  public String getIndustryLabel() {
+    return industryLabel;
+  }
+
+  public void setIndustryLabel(String industryLabel) {
+    this.industryLabel = industryLabel;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -900,7 +944,9 @@ public class DynamicCreativesGetListStruct {
             this.dynamicCreativeType, dynamicCreativesGetListStruct.dynamicCreativeType)
         && Objects.equals(this.headClickType, dynamicCreativesGetListStruct.headClickType)
         && Objects.equals(this.headClickSpec, dynamicCreativesGetListStruct.headClickSpec)
-        && Objects.equals(this.asyncJobStatus, dynamicCreativesGetListStruct.asyncJobStatus);
+        && Objects.equals(this.asyncJobStatus, dynamicCreativesGetListStruct.asyncJobStatus)
+        && Objects.equals(this.pageTrackUrl, dynamicCreativesGetListStruct.pageTrackUrl)
+        && Objects.equals(this.industryLabel, dynamicCreativesGetListStruct.industryLabel);
   }
 
   @Override
@@ -941,7 +987,9 @@ public class DynamicCreativesGetListStruct {
         dynamicCreativeType,
         headClickType,
         headClickSpec,
-        asyncJobStatus);
+        asyncJobStatus,
+        pageTrackUrl,
+        industryLabel);
   }
 
   @Override
