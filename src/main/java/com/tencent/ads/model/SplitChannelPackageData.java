@@ -42,6 +42,9 @@ public class SplitChannelPackageData {
   @SerializedName("last_modified_time")
   private Long lastModifiedTime = null;
 
+  @SerializedName("customized_channel_id")
+  private String customizedChannelId = null;
+
   public SplitChannelPackageData packageId(Long packageId) {
     this.packageId = packageId;
     return this;
@@ -175,6 +178,25 @@ public class SplitChannelPackageData {
     this.lastModifiedTime = lastModifiedTime;
   }
 
+  public SplitChannelPackageData customizedChannelId(String customizedChannelId) {
+    this.customizedChannelId = customizedChannelId;
+    return this;
+  }
+
+  /**
+   * Get customizedChannelId
+   *
+   * @return customizedChannelId
+   */
+  @ApiModelProperty(value = "")
+  public String getCustomizedChannelId() {
+    return customizedChannelId;
+  }
+
+  public void setCustomizedChannelId(String customizedChannelId) {
+    this.customizedChannelId = customizedChannelId;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -190,7 +212,8 @@ public class SplitChannelPackageData {
         && Objects.equals(this.channelId, splitChannelPackageData.channelId)
         && Objects.equals(this.systemStatus, splitChannelPackageData.systemStatus)
         && Objects.equals(this.createdTime, splitChannelPackageData.createdTime)
-        && Objects.equals(this.lastModifiedTime, splitChannelPackageData.lastModifiedTime);
+        && Objects.equals(this.lastModifiedTime, splitChannelPackageData.lastModifiedTime)
+        && Objects.equals(this.customizedChannelId, splitChannelPackageData.customizedChannelId);
   }
 
   @Override
@@ -202,7 +225,8 @@ public class SplitChannelPackageData {
         channelId,
         systemStatus,
         createdTime,
-        lastModifiedTime);
+        lastModifiedTime,
+        customizedChannelId);
   }
 
   @Override

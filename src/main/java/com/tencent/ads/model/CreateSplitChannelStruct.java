@@ -27,6 +27,9 @@ public class CreateSplitChannelStruct {
   @SerializedName("channel_name")
   private String channelName = null;
 
+  @SerializedName("customized_channel_id")
+  private String customizedChannelId = null;
+
   public CreateSplitChannelStruct channelId(String channelId) {
     this.channelId = channelId;
     return this;
@@ -65,6 +68,25 @@ public class CreateSplitChannelStruct {
     this.channelName = channelName;
   }
 
+  public CreateSplitChannelStruct customizedChannelId(String customizedChannelId) {
+    this.customizedChannelId = customizedChannelId;
+    return this;
+  }
+
+  /**
+   * Get customizedChannelId
+   *
+   * @return customizedChannelId
+   */
+  @ApiModelProperty(value = "")
+  public String getCustomizedChannelId() {
+    return customizedChannelId;
+  }
+
+  public void setCustomizedChannelId(String customizedChannelId) {
+    this.customizedChannelId = customizedChannelId;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -75,12 +97,13 @@ public class CreateSplitChannelStruct {
     }
     CreateSplitChannelStruct createSplitChannelStruct = (CreateSplitChannelStruct) o;
     return Objects.equals(this.channelId, createSplitChannelStruct.channelId)
-        && Objects.equals(this.channelName, createSplitChannelStruct.channelName);
+        && Objects.equals(this.channelName, createSplitChannelStruct.channelName)
+        && Objects.equals(this.customizedChannelId, createSplitChannelStruct.customizedChannelId);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(channelId, channelName);
+    return Objects.hash(channelId, channelName, customizedChannelId);
   }
 
   @Override

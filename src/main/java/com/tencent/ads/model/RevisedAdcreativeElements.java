@@ -176,6 +176,15 @@ public class RevisedAdcreativeElements {
   @SerializedName("finder_object_visibility")
   private Boolean finderObjectVisibility = null;
 
+  @SerializedName("action_button_component_options")
+  private List<ActionButtonComponentOption> actionButtonComponentOptions = null;
+
+  @SerializedName("chosen_button_component_options")
+  private List<ChosenButtonComponentOption> chosenButtonComponentOptions = null;
+
+  @SerializedName("video2_component_options")
+  private List<VideoComponentOption> video2ComponentOptions = null;
+
   @SerializedName("image_list_jump_info")
   private List<LandingPageStructure> imageListJumpInfo = null;
 
@@ -1192,6 +1201,95 @@ public class RevisedAdcreativeElements {
     this.finderObjectVisibility = finderObjectVisibility;
   }
 
+  public RevisedAdcreativeElements actionButtonComponentOptions(
+      List<ActionButtonComponentOption> actionButtonComponentOptions) {
+    this.actionButtonComponentOptions = actionButtonComponentOptions;
+    return this;
+  }
+
+  public RevisedAdcreativeElements addActionButtonComponentOptionsItem(
+      ActionButtonComponentOption actionButtonComponentOptionsItem) {
+    if (this.actionButtonComponentOptions == null) {
+      this.actionButtonComponentOptions = new ArrayList<ActionButtonComponentOption>();
+    }
+    this.actionButtonComponentOptions.add(actionButtonComponentOptionsItem);
+    return this;
+  }
+
+  /**
+   * Get actionButtonComponentOptions
+   *
+   * @return actionButtonComponentOptions
+   */
+  @ApiModelProperty(value = "")
+  public List<ActionButtonComponentOption> getActionButtonComponentOptions() {
+    return actionButtonComponentOptions;
+  }
+
+  public void setActionButtonComponentOptions(
+      List<ActionButtonComponentOption> actionButtonComponentOptions) {
+    this.actionButtonComponentOptions = actionButtonComponentOptions;
+  }
+
+  public RevisedAdcreativeElements chosenButtonComponentOptions(
+      List<ChosenButtonComponentOption> chosenButtonComponentOptions) {
+    this.chosenButtonComponentOptions = chosenButtonComponentOptions;
+    return this;
+  }
+
+  public RevisedAdcreativeElements addChosenButtonComponentOptionsItem(
+      ChosenButtonComponentOption chosenButtonComponentOptionsItem) {
+    if (this.chosenButtonComponentOptions == null) {
+      this.chosenButtonComponentOptions = new ArrayList<ChosenButtonComponentOption>();
+    }
+    this.chosenButtonComponentOptions.add(chosenButtonComponentOptionsItem);
+    return this;
+  }
+
+  /**
+   * Get chosenButtonComponentOptions
+   *
+   * @return chosenButtonComponentOptions
+   */
+  @ApiModelProperty(value = "")
+  public List<ChosenButtonComponentOption> getChosenButtonComponentOptions() {
+    return chosenButtonComponentOptions;
+  }
+
+  public void setChosenButtonComponentOptions(
+      List<ChosenButtonComponentOption> chosenButtonComponentOptions) {
+    this.chosenButtonComponentOptions = chosenButtonComponentOptions;
+  }
+
+  public RevisedAdcreativeElements video2ComponentOptions(
+      List<VideoComponentOption> video2ComponentOptions) {
+    this.video2ComponentOptions = video2ComponentOptions;
+    return this;
+  }
+
+  public RevisedAdcreativeElements addVideo2ComponentOptionsItem(
+      VideoComponentOption video2ComponentOptionsItem) {
+    if (this.video2ComponentOptions == null) {
+      this.video2ComponentOptions = new ArrayList<VideoComponentOption>();
+    }
+    this.video2ComponentOptions.add(video2ComponentOptionsItem);
+    return this;
+  }
+
+  /**
+   * Get video2ComponentOptions
+   *
+   * @return video2ComponentOptions
+   */
+  @ApiModelProperty(value = "")
+  public List<VideoComponentOption> getVideo2ComponentOptions() {
+    return video2ComponentOptions;
+  }
+
+  public void setVideo2ComponentOptions(List<VideoComponentOption> video2ComponentOptions) {
+    this.video2ComponentOptions = video2ComponentOptions;
+  }
+
   public RevisedAdcreativeElements imageListJumpInfo(List<LandingPageStructure> imageListJumpInfo) {
     this.imageListJumpInfo = imageListJumpInfo;
     return this;
@@ -1282,6 +1380,14 @@ public class RevisedAdcreativeElements {
         && Objects.equals(this.wechatChannelsSpec, revisedAdcreativeElements.wechatChannelsSpec)
         && Objects.equals(
             this.finderObjectVisibility, revisedAdcreativeElements.finderObjectVisibility)
+        && Objects.equals(
+            this.actionButtonComponentOptions,
+            revisedAdcreativeElements.actionButtonComponentOptions)
+        && Objects.equals(
+            this.chosenButtonComponentOptions,
+            revisedAdcreativeElements.chosenButtonComponentOptions)
+        && Objects.equals(
+            this.video2ComponentOptions, revisedAdcreativeElements.video2ComponentOptions)
         && Objects.equals(this.imageListJumpInfo, revisedAdcreativeElements.imageListJumpInfo);
   }
 
@@ -1339,6 +1445,9 @@ public class RevisedAdcreativeElements {
         wegameInfoSpec,
         wechatChannelsSpec,
         finderObjectVisibility,
+        actionButtonComponentOptions,
+        chosenButtonComponentOptions,
+        video2ComponentOptions,
         imageListJumpInfo);
   }
 

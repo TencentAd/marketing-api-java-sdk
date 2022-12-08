@@ -28,7 +28,11 @@ public enum LandingPageMediaType {
 
   SCREEN_PC("SCREEN_PC"),
 
-  SCREEN_PHONE("SCREEN_PHONE");
+  SCREEN_PHONE("SCREEN_PHONE"),
+
+  OS_ANDROID("OS_ANDROID"),
+
+  OS_IOS("OS_IOS");
 
   private String value;
 

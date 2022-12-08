@@ -224,6 +224,15 @@ public class DynamicCreativeElements {
   @SerializedName("holiday_logo_component_options")
   private List<HolidayLogoComponentOption> holidayLogoComponentOptions = null;
 
+  @SerializedName("action_button_component_options")
+  private List<ActionButtonComponentOption> actionButtonComponentOptions = null;
+
+  @SerializedName("chosen_button_component_options")
+  private List<ChosenButtonComponentOption> chosenButtonComponentOptions = null;
+
+  @SerializedName("video2_component_options")
+  private List<VideoComponentOption> video2ComponentOptions = null;
+
   @SerializedName("image_list_jump_info")
   private List<LandingPageStructure> imageListJumpInfo = null;
 
@@ -1766,6 +1775,95 @@ public class DynamicCreativeElements {
     this.holidayLogoComponentOptions = holidayLogoComponentOptions;
   }
 
+  public DynamicCreativeElements actionButtonComponentOptions(
+      List<ActionButtonComponentOption> actionButtonComponentOptions) {
+    this.actionButtonComponentOptions = actionButtonComponentOptions;
+    return this;
+  }
+
+  public DynamicCreativeElements addActionButtonComponentOptionsItem(
+      ActionButtonComponentOption actionButtonComponentOptionsItem) {
+    if (this.actionButtonComponentOptions == null) {
+      this.actionButtonComponentOptions = new ArrayList<ActionButtonComponentOption>();
+    }
+    this.actionButtonComponentOptions.add(actionButtonComponentOptionsItem);
+    return this;
+  }
+
+  /**
+   * Get actionButtonComponentOptions
+   *
+   * @return actionButtonComponentOptions
+   */
+  @ApiModelProperty(value = "")
+  public List<ActionButtonComponentOption> getActionButtonComponentOptions() {
+    return actionButtonComponentOptions;
+  }
+
+  public void setActionButtonComponentOptions(
+      List<ActionButtonComponentOption> actionButtonComponentOptions) {
+    this.actionButtonComponentOptions = actionButtonComponentOptions;
+  }
+
+  public DynamicCreativeElements chosenButtonComponentOptions(
+      List<ChosenButtonComponentOption> chosenButtonComponentOptions) {
+    this.chosenButtonComponentOptions = chosenButtonComponentOptions;
+    return this;
+  }
+
+  public DynamicCreativeElements addChosenButtonComponentOptionsItem(
+      ChosenButtonComponentOption chosenButtonComponentOptionsItem) {
+    if (this.chosenButtonComponentOptions == null) {
+      this.chosenButtonComponentOptions = new ArrayList<ChosenButtonComponentOption>();
+    }
+    this.chosenButtonComponentOptions.add(chosenButtonComponentOptionsItem);
+    return this;
+  }
+
+  /**
+   * Get chosenButtonComponentOptions
+   *
+   * @return chosenButtonComponentOptions
+   */
+  @ApiModelProperty(value = "")
+  public List<ChosenButtonComponentOption> getChosenButtonComponentOptions() {
+    return chosenButtonComponentOptions;
+  }
+
+  public void setChosenButtonComponentOptions(
+      List<ChosenButtonComponentOption> chosenButtonComponentOptions) {
+    this.chosenButtonComponentOptions = chosenButtonComponentOptions;
+  }
+
+  public DynamicCreativeElements video2ComponentOptions(
+      List<VideoComponentOption> video2ComponentOptions) {
+    this.video2ComponentOptions = video2ComponentOptions;
+    return this;
+  }
+
+  public DynamicCreativeElements addVideo2ComponentOptionsItem(
+      VideoComponentOption video2ComponentOptionsItem) {
+    if (this.video2ComponentOptions == null) {
+      this.video2ComponentOptions = new ArrayList<VideoComponentOption>();
+    }
+    this.video2ComponentOptions.add(video2ComponentOptionsItem);
+    return this;
+  }
+
+  /**
+   * Get video2ComponentOptions
+   *
+   * @return video2ComponentOptions
+   */
+  @ApiModelProperty(value = "")
+  public List<VideoComponentOption> getVideo2ComponentOptions() {
+    return video2ComponentOptions;
+  }
+
+  public void setVideo2ComponentOptions(List<VideoComponentOption> video2ComponentOptions) {
+    this.video2ComponentOptions = video2ComponentOptions;
+  }
+
   public DynamicCreativeElements imageListJumpInfo(List<LandingPageStructure> imageListJumpInfo) {
     this.imageListJumpInfo = imageListJumpInfo;
     return this;
@@ -1906,6 +2004,12 @@ public class DynamicCreativeElements {
         && Objects.equals(this.formComponentOptions, dynamicCreativeElements.formComponentOptions)
         && Objects.equals(
             this.holidayLogoComponentOptions, dynamicCreativeElements.holidayLogoComponentOptions)
+        && Objects.equals(
+            this.actionButtonComponentOptions, dynamicCreativeElements.actionButtonComponentOptions)
+        && Objects.equals(
+            this.chosenButtonComponentOptions, dynamicCreativeElements.chosenButtonComponentOptions)
+        && Objects.equals(
+            this.video2ComponentOptions, dynamicCreativeElements.video2ComponentOptions)
         && Objects.equals(this.imageListJumpInfo, dynamicCreativeElements.imageListJumpInfo)
         && Objects.equals(this.excitationText, dynamicCreativeElements.excitationText);
   }
@@ -1980,6 +2084,9 @@ public class DynamicCreativeElements {
         phoneComponentOptions,
         formComponentOptions,
         holidayLogoComponentOptions,
+        actionButtonComponentOptions,
+        chosenButtonComponentOptions,
+        video2ComponentOptions,
         imageListJumpInfo,
         excitationText);
   }
