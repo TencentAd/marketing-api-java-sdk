@@ -1131,6 +1131,42 @@ public class HourlyReportsGetListStruct {
   @SerializedName("activity_info_click_count")
   private Long activityInfoClickCount = null;
 
+  @SerializedName("clk_redpocket_btn_get_pv")
+  private Long clkRedpocketBtnGetPv = null;
+
+  @SerializedName("clk_redpocket_btn_share_pv")
+  private Long clkRedpocketBtnSharePv = null;
+
+  @SerializedName("clk_redpocket_btn_jump_pv")
+  private Long clkRedpocketBtnJumpPv = null;
+
+  @SerializedName("clk_goods_header_pv")
+  private Long clkGoodsHeaderPv = null;
+
+  @SerializedName("clk_goods_info_pv")
+  private Long clkGoodsInfoPv = null;
+
+  @SerializedName("clk_goods_recommend_pv")
+  private Long clkGoodsRecommendPv = null;
+
+  @SerializedName("clk_middle_showwindow_pv")
+  private Long clkMiddleShowwindowPv = null;
+
+  @SerializedName("clk_footer_pv")
+  private Long clkFooterPv = null;
+
+  @SerializedName("clk_middle_goods_pv")
+  private Long clkMiddleGoodsPv = null;
+
+  @SerializedName("clk_middle_btn_pv")
+  private Long clkMiddleBtnPv = null;
+
+  @SerializedName("clk_middle_section_pv")
+  private Long clkMiddleSectionPv = null;
+
+  @SerializedName("clk_middle_gridview_pv")
+  private Long clkMiddleGridviewPv = null;
+
   @SerializedName("mini_game_bf_uv")
   private Long miniGameBfUv = null;
 
@@ -9140,6 +9176,234 @@ public class HourlyReportsGetListStruct {
     this.activityInfoClickCount = activityInfoClickCount;
   }
 
+  public HourlyReportsGetListStruct clkRedpocketBtnGetPv(Long clkRedpocketBtnGetPv) {
+    this.clkRedpocketBtnGetPv = clkRedpocketBtnGetPv;
+    return this;
+  }
+
+  /**
+   * Get clkRedpocketBtnGetPv
+   *
+   * @return clkRedpocketBtnGetPv
+   */
+  @ApiModelProperty(value = "")
+  public Long getClkRedpocketBtnGetPv() {
+    return clkRedpocketBtnGetPv;
+  }
+
+  public void setClkRedpocketBtnGetPv(Long clkRedpocketBtnGetPv) {
+    this.clkRedpocketBtnGetPv = clkRedpocketBtnGetPv;
+  }
+
+  public HourlyReportsGetListStruct clkRedpocketBtnSharePv(Long clkRedpocketBtnSharePv) {
+    this.clkRedpocketBtnSharePv = clkRedpocketBtnSharePv;
+    return this;
+  }
+
+  /**
+   * Get clkRedpocketBtnSharePv
+   *
+   * @return clkRedpocketBtnSharePv
+   */
+  @ApiModelProperty(value = "")
+  public Long getClkRedpocketBtnSharePv() {
+    return clkRedpocketBtnSharePv;
+  }
+
+  public void setClkRedpocketBtnSharePv(Long clkRedpocketBtnSharePv) {
+    this.clkRedpocketBtnSharePv = clkRedpocketBtnSharePv;
+  }
+
+  public HourlyReportsGetListStruct clkRedpocketBtnJumpPv(Long clkRedpocketBtnJumpPv) {
+    this.clkRedpocketBtnJumpPv = clkRedpocketBtnJumpPv;
+    return this;
+  }
+
+  /**
+   * Get clkRedpocketBtnJumpPv
+   *
+   * @return clkRedpocketBtnJumpPv
+   */
+  @ApiModelProperty(value = "")
+  public Long getClkRedpocketBtnJumpPv() {
+    return clkRedpocketBtnJumpPv;
+  }
+
+  public void setClkRedpocketBtnJumpPv(Long clkRedpocketBtnJumpPv) {
+    this.clkRedpocketBtnJumpPv = clkRedpocketBtnJumpPv;
+  }
+
+  public HourlyReportsGetListStruct clkGoodsHeaderPv(Long clkGoodsHeaderPv) {
+    this.clkGoodsHeaderPv = clkGoodsHeaderPv;
+    return this;
+  }
+
+  /**
+   * Get clkGoodsHeaderPv
+   *
+   * @return clkGoodsHeaderPv
+   */
+  @ApiModelProperty(value = "")
+  public Long getClkGoodsHeaderPv() {
+    return clkGoodsHeaderPv;
+  }
+
+  public void setClkGoodsHeaderPv(Long clkGoodsHeaderPv) {
+    this.clkGoodsHeaderPv = clkGoodsHeaderPv;
+  }
+
+  public HourlyReportsGetListStruct clkGoodsInfoPv(Long clkGoodsInfoPv) {
+    this.clkGoodsInfoPv = clkGoodsInfoPv;
+    return this;
+  }
+
+  /**
+   * Get clkGoodsInfoPv
+   *
+   * @return clkGoodsInfoPv
+   */
+  @ApiModelProperty(value = "")
+  public Long getClkGoodsInfoPv() {
+    return clkGoodsInfoPv;
+  }
+
+  public void setClkGoodsInfoPv(Long clkGoodsInfoPv) {
+    this.clkGoodsInfoPv = clkGoodsInfoPv;
+  }
+
+  public HourlyReportsGetListStruct clkGoodsRecommendPv(Long clkGoodsRecommendPv) {
+    this.clkGoodsRecommendPv = clkGoodsRecommendPv;
+    return this;
+  }
+
+  /**
+   * Get clkGoodsRecommendPv
+   *
+   * @return clkGoodsRecommendPv
+   */
+  @ApiModelProperty(value = "")
+  public Long getClkGoodsRecommendPv() {
+    return clkGoodsRecommendPv;
+  }
+
+  public void setClkGoodsRecommendPv(Long clkGoodsRecommendPv) {
+    this.clkGoodsRecommendPv = clkGoodsRecommendPv;
+  }
+
+  public HourlyReportsGetListStruct clkMiddleShowwindowPv(Long clkMiddleShowwindowPv) {
+    this.clkMiddleShowwindowPv = clkMiddleShowwindowPv;
+    return this;
+  }
+
+  /**
+   * Get clkMiddleShowwindowPv
+   *
+   * @return clkMiddleShowwindowPv
+   */
+  @ApiModelProperty(value = "")
+  public Long getClkMiddleShowwindowPv() {
+    return clkMiddleShowwindowPv;
+  }
+
+  public void setClkMiddleShowwindowPv(Long clkMiddleShowwindowPv) {
+    this.clkMiddleShowwindowPv = clkMiddleShowwindowPv;
+  }
+
+  public HourlyReportsGetListStruct clkFooterPv(Long clkFooterPv) {
+    this.clkFooterPv = clkFooterPv;
+    return this;
+  }
+
+  /**
+   * Get clkFooterPv
+   *
+   * @return clkFooterPv
+   */
+  @ApiModelProperty(value = "")
+  public Long getClkFooterPv() {
+    return clkFooterPv;
+  }
+
+  public void setClkFooterPv(Long clkFooterPv) {
+    this.clkFooterPv = clkFooterPv;
+  }
+
+  public HourlyReportsGetListStruct clkMiddleGoodsPv(Long clkMiddleGoodsPv) {
+    this.clkMiddleGoodsPv = clkMiddleGoodsPv;
+    return this;
+  }
+
+  /**
+   * Get clkMiddleGoodsPv
+   *
+   * @return clkMiddleGoodsPv
+   */
+  @ApiModelProperty(value = "")
+  public Long getClkMiddleGoodsPv() {
+    return clkMiddleGoodsPv;
+  }
+
+  public void setClkMiddleGoodsPv(Long clkMiddleGoodsPv) {
+    this.clkMiddleGoodsPv = clkMiddleGoodsPv;
+  }
+
+  public HourlyReportsGetListStruct clkMiddleBtnPv(Long clkMiddleBtnPv) {
+    this.clkMiddleBtnPv = clkMiddleBtnPv;
+    return this;
+  }
+
+  /**
+   * Get clkMiddleBtnPv
+   *
+   * @return clkMiddleBtnPv
+   */
+  @ApiModelProperty(value = "")
+  public Long getClkMiddleBtnPv() {
+    return clkMiddleBtnPv;
+  }
+
+  public void setClkMiddleBtnPv(Long clkMiddleBtnPv) {
+    this.clkMiddleBtnPv = clkMiddleBtnPv;
+  }
+
+  public HourlyReportsGetListStruct clkMiddleSectionPv(Long clkMiddleSectionPv) {
+    this.clkMiddleSectionPv = clkMiddleSectionPv;
+    return this;
+  }
+
+  /**
+   * Get clkMiddleSectionPv
+   *
+   * @return clkMiddleSectionPv
+   */
+  @ApiModelProperty(value = "")
+  public Long getClkMiddleSectionPv() {
+    return clkMiddleSectionPv;
+  }
+
+  public void setClkMiddleSectionPv(Long clkMiddleSectionPv) {
+    this.clkMiddleSectionPv = clkMiddleSectionPv;
+  }
+
+  public HourlyReportsGetListStruct clkMiddleGridviewPv(Long clkMiddleGridviewPv) {
+    this.clkMiddleGridviewPv = clkMiddleGridviewPv;
+    return this;
+  }
+
+  /**
+   * Get clkMiddleGridviewPv
+   *
+   * @return clkMiddleGridviewPv
+   */
+  @ApiModelProperty(value = "")
+  public Long getClkMiddleGridviewPv() {
+    return clkMiddleGridviewPv;
+  }
+
+  public void setClkMiddleGridviewPv(Long clkMiddleGridviewPv) {
+    this.clkMiddleGridviewPv = clkMiddleGridviewPv;
+  }
+
   public HourlyReportsGetListStruct miniGameBfUv(Long miniGameBfUv) {
     this.miniGameBfUv = miniGameBfUv;
     return this;
@@ -15820,6 +16084,22 @@ public class HourlyReportsGetListStruct {
             this.accountInfoClickCount, hourlyReportsGetListStruct.accountInfoClickCount)
         && Objects.equals(
             this.activityInfoClickCount, hourlyReportsGetListStruct.activityInfoClickCount)
+        && Objects.equals(
+            this.clkRedpocketBtnGetPv, hourlyReportsGetListStruct.clkRedpocketBtnGetPv)
+        && Objects.equals(
+            this.clkRedpocketBtnSharePv, hourlyReportsGetListStruct.clkRedpocketBtnSharePv)
+        && Objects.equals(
+            this.clkRedpocketBtnJumpPv, hourlyReportsGetListStruct.clkRedpocketBtnJumpPv)
+        && Objects.equals(this.clkGoodsHeaderPv, hourlyReportsGetListStruct.clkGoodsHeaderPv)
+        && Objects.equals(this.clkGoodsInfoPv, hourlyReportsGetListStruct.clkGoodsInfoPv)
+        && Objects.equals(this.clkGoodsRecommendPv, hourlyReportsGetListStruct.clkGoodsRecommendPv)
+        && Objects.equals(
+            this.clkMiddleShowwindowPv, hourlyReportsGetListStruct.clkMiddleShowwindowPv)
+        && Objects.equals(this.clkFooterPv, hourlyReportsGetListStruct.clkFooterPv)
+        && Objects.equals(this.clkMiddleGoodsPv, hourlyReportsGetListStruct.clkMiddleGoodsPv)
+        && Objects.equals(this.clkMiddleBtnPv, hourlyReportsGetListStruct.clkMiddleBtnPv)
+        && Objects.equals(this.clkMiddleSectionPv, hourlyReportsGetListStruct.clkMiddleSectionPv)
+        && Objects.equals(this.clkMiddleGridviewPv, hourlyReportsGetListStruct.clkMiddleGridviewPv)
         && Objects.equals(this.miniGameBfUv, hourlyReportsGetListStruct.miniGameBfUv)
         && Objects.equals(this.miniGameBfCost, hourlyReportsGetListStruct.miniGameBfCost)
         && Objects.equals(this.miniGameBfIncomeUv, hourlyReportsGetListStruct.miniGameBfIncomeUv)
@@ -16711,6 +16991,18 @@ public class HourlyReportsGetListStruct {
         basicInfoClientCount,
         accountInfoClickCount,
         activityInfoClickCount,
+        clkRedpocketBtnGetPv,
+        clkRedpocketBtnSharePv,
+        clkRedpocketBtnJumpPv,
+        clkGoodsHeaderPv,
+        clkGoodsInfoPv,
+        clkGoodsRecommendPv,
+        clkMiddleShowwindowPv,
+        clkFooterPv,
+        clkMiddleGoodsPv,
+        clkMiddleBtnPv,
+        clkMiddleSectionPv,
+        clkMiddleGridviewPv,
         miniGameBfUv,
         miniGameBfCost,
         miniGameBfIncomeUv,
