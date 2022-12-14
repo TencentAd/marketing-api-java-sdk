@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.tencent.ads.api.XijingTemplateApiTest" tests="1" skipped="1" failures="0" errors="0" timestamp="2022-12-13T03:32:28" hostname="VM_118_42_centos" time="0.0">
+<testsuite name="com.tencent.ads.api.XijingTemplateApiTest" tests="1" skipped="1" failures="0" errors="0" timestamp="2022-12-14T09:36:06" hostname="VM_118_42_centos" time="0.0">
   <properties/>
   <testcase name="xijingTemplateGetTest" classname="com.tencent.ads.api.XijingTemplateApiTest" time="0.0">
     <skipped/>
