@@ -239,6 +239,12 @@ public class DynamicCreativeElements {
   @SerializedName("excitation_text")
   private String excitationText = null;
 
+  @SerializedName("origin_video")
+  private String originVideo = null;
+
+  @SerializedName("red_envelope_struct")
+  private RedEnvelopeStruct redEnvelopeStruct = null;
+
   public DynamicCreativeElements image(String image) {
     this.image = image;
     return this;
@@ -1911,6 +1917,44 @@ public class DynamicCreativeElements {
     this.excitationText = excitationText;
   }
 
+  public DynamicCreativeElements originVideo(String originVideo) {
+    this.originVideo = originVideo;
+    return this;
+  }
+
+  /**
+   * Get originVideo
+   *
+   * @return originVideo
+   */
+  @ApiModelProperty(value = "")
+  public String getOriginVideo() {
+    return originVideo;
+  }
+
+  public void setOriginVideo(String originVideo) {
+    this.originVideo = originVideo;
+  }
+
+  public DynamicCreativeElements redEnvelopeStruct(RedEnvelopeStruct redEnvelopeStruct) {
+    this.redEnvelopeStruct = redEnvelopeStruct;
+    return this;
+  }
+
+  /**
+   * Get redEnvelopeStruct
+   *
+   * @return redEnvelopeStruct
+   */
+  @ApiModelProperty(value = "")
+  public RedEnvelopeStruct getRedEnvelopeStruct() {
+    return redEnvelopeStruct;
+  }
+
+  public void setRedEnvelopeStruct(RedEnvelopeStruct redEnvelopeStruct) {
+    this.redEnvelopeStruct = redEnvelopeStruct;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -2011,7 +2055,9 @@ public class DynamicCreativeElements {
         && Objects.equals(
             this.video2ComponentOptions, dynamicCreativeElements.video2ComponentOptions)
         && Objects.equals(this.imageListJumpInfo, dynamicCreativeElements.imageListJumpInfo)
-        && Objects.equals(this.excitationText, dynamicCreativeElements.excitationText);
+        && Objects.equals(this.excitationText, dynamicCreativeElements.excitationText)
+        && Objects.equals(this.originVideo, dynamicCreativeElements.originVideo)
+        && Objects.equals(this.redEnvelopeStruct, dynamicCreativeElements.redEnvelopeStruct);
   }
 
   @Override
@@ -2088,7 +2134,9 @@ public class DynamicCreativeElements {
         chosenButtonComponentOptions,
         video2ComponentOptions,
         imageListJumpInfo,
-        excitationText);
+        excitationText,
+        originVideo,
+        redEnvelopeStruct);
   }
 
   @Override

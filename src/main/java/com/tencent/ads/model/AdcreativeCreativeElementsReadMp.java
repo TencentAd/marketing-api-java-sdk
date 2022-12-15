@@ -230,6 +230,12 @@ public class AdcreativeCreativeElementsReadMp {
   @SerializedName("image_list_jump_info")
   private List<LandingPageStructure> imageListJumpInfo = null;
 
+  @SerializedName("origin_video")
+  private String originVideo = null;
+
+  @SerializedName("red_envelope_struct")
+  private RedEnvelopeStruct redEnvelopeStruct = null;
+
   public AdcreativeCreativeElementsReadMp image(String image) {
     this.image = image;
     return this;
@@ -1591,6 +1597,44 @@ public class AdcreativeCreativeElementsReadMp {
     this.imageListJumpInfo = imageListJumpInfo;
   }
 
+  public AdcreativeCreativeElementsReadMp originVideo(String originVideo) {
+    this.originVideo = originVideo;
+    return this;
+  }
+
+  /**
+   * Get originVideo
+   *
+   * @return originVideo
+   */
+  @ApiModelProperty(value = "")
+  public String getOriginVideo() {
+    return originVideo;
+  }
+
+  public void setOriginVideo(String originVideo) {
+    this.originVideo = originVideo;
+  }
+
+  public AdcreativeCreativeElementsReadMp redEnvelopeStruct(RedEnvelopeStruct redEnvelopeStruct) {
+    this.redEnvelopeStruct = redEnvelopeStruct;
+    return this;
+  }
+
+  /**
+   * Get redEnvelopeStruct
+   *
+   * @return redEnvelopeStruct
+   */
+  @ApiModelProperty(value = "")
+  public RedEnvelopeStruct getRedEnvelopeStruct() {
+    return redEnvelopeStruct;
+  }
+
+  public void setRedEnvelopeStruct(RedEnvelopeStruct redEnvelopeStruct) {
+    this.redEnvelopeStruct = redEnvelopeStruct;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -1678,7 +1722,10 @@ public class AdcreativeCreativeElementsReadMp {
         && Objects.equals(
             this.finderObjectVisibility, adcreativeCreativeElementsReadMp.finderObjectVisibility)
         && Objects.equals(
-            this.imageListJumpInfo, adcreativeCreativeElementsReadMp.imageListJumpInfo);
+            this.imageListJumpInfo, adcreativeCreativeElementsReadMp.imageListJumpInfo)
+        && Objects.equals(this.originVideo, adcreativeCreativeElementsReadMp.originVideo)
+        && Objects.equals(
+            this.redEnvelopeStruct, adcreativeCreativeElementsReadMp.redEnvelopeStruct);
   }
 
   @Override
@@ -1752,7 +1799,9 @@ public class AdcreativeCreativeElementsReadMp {
         wegameInfoSpec,
         wechatChannelsSpec,
         finderObjectVisibility,
-        imageListJumpInfo);
+        imageListJumpInfo,
+        originVideo,
+        redEnvelopeStruct);
   }
 
   @Override

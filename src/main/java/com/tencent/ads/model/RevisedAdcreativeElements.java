@@ -188,6 +188,12 @@ public class RevisedAdcreativeElements {
   @SerializedName("image_list_jump_info")
   private List<LandingPageStructure> imageListJumpInfo = null;
 
+  @SerializedName("origin_video")
+  private String originVideo = null;
+
+  @SerializedName("red_envelope_struct")
+  private RedEnvelopeStruct redEnvelopeStruct = null;
+
   public RevisedAdcreativeElements image(String image) {
     this.image = image;
     return this;
@@ -1318,6 +1324,44 @@ public class RevisedAdcreativeElements {
     this.imageListJumpInfo = imageListJumpInfo;
   }
 
+  public RevisedAdcreativeElements originVideo(String originVideo) {
+    this.originVideo = originVideo;
+    return this;
+  }
+
+  /**
+   * Get originVideo
+   *
+   * @return originVideo
+   */
+  @ApiModelProperty(value = "")
+  public String getOriginVideo() {
+    return originVideo;
+  }
+
+  public void setOriginVideo(String originVideo) {
+    this.originVideo = originVideo;
+  }
+
+  public RevisedAdcreativeElements redEnvelopeStruct(RedEnvelopeStruct redEnvelopeStruct) {
+    this.redEnvelopeStruct = redEnvelopeStruct;
+    return this;
+  }
+
+  /**
+   * Get redEnvelopeStruct
+   *
+   * @return redEnvelopeStruct
+   */
+  @ApiModelProperty(value = "")
+  public RedEnvelopeStruct getRedEnvelopeStruct() {
+    return redEnvelopeStruct;
+  }
+
+  public void setRedEnvelopeStruct(RedEnvelopeStruct redEnvelopeStruct) {
+    this.redEnvelopeStruct = redEnvelopeStruct;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -1388,7 +1432,9 @@ public class RevisedAdcreativeElements {
             revisedAdcreativeElements.chosenButtonComponentOptions)
         && Objects.equals(
             this.video2ComponentOptions, revisedAdcreativeElements.video2ComponentOptions)
-        && Objects.equals(this.imageListJumpInfo, revisedAdcreativeElements.imageListJumpInfo);
+        && Objects.equals(this.imageListJumpInfo, revisedAdcreativeElements.imageListJumpInfo)
+        && Objects.equals(this.originVideo, revisedAdcreativeElements.originVideo)
+        && Objects.equals(this.redEnvelopeStruct, revisedAdcreativeElements.redEnvelopeStruct);
   }
 
   @Override
@@ -1448,7 +1494,9 @@ public class RevisedAdcreativeElements {
         actionButtonComponentOptions,
         chosenButtonComponentOptions,
         video2ComponentOptions,
-        imageListJumpInfo);
+        imageListJumpInfo,
+        originVideo,
+        redEnvelopeStruct);
   }
 
   @Override
