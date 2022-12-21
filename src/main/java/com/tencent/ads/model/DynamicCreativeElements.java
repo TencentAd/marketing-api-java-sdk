@@ -245,6 +245,9 @@ public class DynamicCreativeElements {
   @SerializedName("red_envelope_struct")
   private RedEnvelopeStruct redEnvelopeStruct = null;
 
+  @SerializedName("image3_component_options")
+  private List<ImageComponentOption> image3ComponentOptions = null;
+
   public DynamicCreativeElements image(String image) {
     this.image = image;
     return this;
@@ -1955,6 +1958,35 @@ public class DynamicCreativeElements {
     this.redEnvelopeStruct = redEnvelopeStruct;
   }
 
+  public DynamicCreativeElements image3ComponentOptions(
+      List<ImageComponentOption> image3ComponentOptions) {
+    this.image3ComponentOptions = image3ComponentOptions;
+    return this;
+  }
+
+  public DynamicCreativeElements addImage3ComponentOptionsItem(
+      ImageComponentOption image3ComponentOptionsItem) {
+    if (this.image3ComponentOptions == null) {
+      this.image3ComponentOptions = new ArrayList<ImageComponentOption>();
+    }
+    this.image3ComponentOptions.add(image3ComponentOptionsItem);
+    return this;
+  }
+
+  /**
+   * Get image3ComponentOptions
+   *
+   * @return image3ComponentOptions
+   */
+  @ApiModelProperty(value = "")
+  public List<ImageComponentOption> getImage3ComponentOptions() {
+    return image3ComponentOptions;
+  }
+
+  public void setImage3ComponentOptions(List<ImageComponentOption> image3ComponentOptions) {
+    this.image3ComponentOptions = image3ComponentOptions;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -2057,7 +2089,9 @@ public class DynamicCreativeElements {
         && Objects.equals(this.imageListJumpInfo, dynamicCreativeElements.imageListJumpInfo)
         && Objects.equals(this.excitationText, dynamicCreativeElements.excitationText)
         && Objects.equals(this.originVideo, dynamicCreativeElements.originVideo)
-        && Objects.equals(this.redEnvelopeStruct, dynamicCreativeElements.redEnvelopeStruct);
+        && Objects.equals(this.redEnvelopeStruct, dynamicCreativeElements.redEnvelopeStruct)
+        && Objects.equals(
+            this.image3ComponentOptions, dynamicCreativeElements.image3ComponentOptions);
   }
 
   @Override
@@ -2136,7 +2170,8 @@ public class DynamicCreativeElements {
         imageListJumpInfo,
         excitationText,
         originVideo,
-        redEnvelopeStruct);
+        redEnvelopeStruct,
+        image3ComponentOptions);
   }
 
   @Override

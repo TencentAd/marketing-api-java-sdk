@@ -323,6 +323,9 @@ public class DynamicCreativeElementsRead {
   @SerializedName("red_envelope_struct")
   private RedEnvelopeStruct redEnvelopeStruct = null;
 
+  @SerializedName("image3_component_options")
+  private List<ImageComponentOption> image3ComponentOptions = null;
+
   public DynamicCreativeElementsRead image(String image) {
     this.image = image;
     return this;
@@ -2532,6 +2535,35 @@ public class DynamicCreativeElementsRead {
     this.redEnvelopeStruct = redEnvelopeStruct;
   }
 
+  public DynamicCreativeElementsRead image3ComponentOptions(
+      List<ImageComponentOption> image3ComponentOptions) {
+    this.image3ComponentOptions = image3ComponentOptions;
+    return this;
+  }
+
+  public DynamicCreativeElementsRead addImage3ComponentOptionsItem(
+      ImageComponentOption image3ComponentOptionsItem) {
+    if (this.image3ComponentOptions == null) {
+      this.image3ComponentOptions = new ArrayList<ImageComponentOption>();
+    }
+    this.image3ComponentOptions.add(image3ComponentOptionsItem);
+    return this;
+  }
+
+  /**
+   * Get image3ComponentOptions
+   *
+   * @return image3ComponentOptions
+   */
+  @ApiModelProperty(value = "")
+  public List<ImageComponentOption> getImage3ComponentOptions() {
+    return image3ComponentOptions;
+  }
+
+  public void setImage3ComponentOptions(List<ImageComponentOption> image3ComponentOptions) {
+    this.image3ComponentOptions = image3ComponentOptions;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -2675,7 +2707,9 @@ public class DynamicCreativeElementsRead {
         && Objects.equals(this.imageListJumpInfo, dynamicCreativeElementsRead.imageListJumpInfo)
         && Objects.equals(this.excitationText, dynamicCreativeElementsRead.excitationText)
         && Objects.equals(this.originVideo, dynamicCreativeElementsRead.originVideo)
-        && Objects.equals(this.redEnvelopeStruct, dynamicCreativeElementsRead.redEnvelopeStruct);
+        && Objects.equals(this.redEnvelopeStruct, dynamicCreativeElementsRead.redEnvelopeStruct)
+        && Objects.equals(
+            this.image3ComponentOptions, dynamicCreativeElementsRead.image3ComponentOptions);
   }
 
   @Override
@@ -2780,7 +2814,8 @@ public class DynamicCreativeElementsRead {
         imageListJumpInfo,
         excitationText,
         originVideo,
-        redEnvelopeStruct);
+        redEnvelopeStruct,
+        image3ComponentOptions);
   }
 
   @Override
