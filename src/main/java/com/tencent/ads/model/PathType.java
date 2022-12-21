@@ -28,7 +28,9 @@ public enum PathType {
 
   POINT_TO_POINT("PATH_TYPE_POINT_TO_POINT"),
 
-  AGENCY("PATH_TYPE_AGENCY");
+  AGENCY("PATH_TYPE_AGENCY"),
+
+  ACCOUNT("PATH_TYPE_ACCOUNT");
 
   private String value;
 

@@ -64,7 +64,9 @@ public enum UserIdType {
 
   MD5_SHA256_IDFA("MD5_SHA256_IDFA"),
 
-  MD5_SHA256_OAID("MD5_SHA256_OAID");
+  MD5_SHA256_OAID("MD5_SHA256_OAID"),
+
+  CAID("CAID");
 
   private String value;
 
