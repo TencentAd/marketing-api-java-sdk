@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.tencent.ads.api.AudienceGrantRelationsApiTest" tests="2" skipped="2" failures="0" errors="0" timestamp="2022-12-21T09:55:19" hostname="VM_118_42_centos" time="0.0">
+  <properties/>
+  <testcase name="audienceGrantRelationsAddTest" classname="com.tencent.ads.api.AudienceGrantRelationsApiTest" time="0.0">
+    <skipped/>
+  </testcase>
+  <testcase name="audienceGrantRelationsGetTest" classname="com.tencent.ads.api.AudienceGrantRelationsApiTest" time="0.0">
+    <skipped/>
+  </testcase>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
