@@ -16,6 +16,8 @@ import com.google.gson.Gson;
 import com.google.gson.annotations.SerializedName;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Objects;
 
 /** 返回结构 */
@@ -74,6 +76,21 @@ public class LocalStoresGetListStruct {
 
   @SerializedName("local_store_remark")
   private String localStoreRemark = null;
+
+  @SerializedName("wechat_work_corp_id")
+  private Long wechatWorkCorpId = null;
+
+  @SerializedName("wechat_customer_service_link")
+  private String wechatCustomerServiceLink = null;
+
+  @SerializedName("image_set")
+  private List<ImageSetDataStruct> imageSet = null;
+
+  @SerializedName("recommend_words")
+  private List<RecommendWordStruct> recommendWords = null;
+
+  @SerializedName("is_use_standardized_name")
+  private Boolean isUseStandardizedName = null;
 
   public LocalStoresGetListStruct poiId(String poiId) {
     this.poiId = poiId;
@@ -418,6 +435,117 @@ public class LocalStoresGetListStruct {
     this.localStoreRemark = localStoreRemark;
   }
 
+  public LocalStoresGetListStruct wechatWorkCorpId(Long wechatWorkCorpId) {
+    this.wechatWorkCorpId = wechatWorkCorpId;
+    return this;
+  }
+
+  /**
+   * Get wechatWorkCorpId
+   *
+   * @return wechatWorkCorpId
+   */
+  @ApiModelProperty(value = "")
+  public Long getWechatWorkCorpId() {
+    return wechatWorkCorpId;
+  }
+
+  public void setWechatWorkCorpId(Long wechatWorkCorpId) {
+    this.wechatWorkCorpId = wechatWorkCorpId;
+  }
+
+  public LocalStoresGetListStruct wechatCustomerServiceLink(String wechatCustomerServiceLink) {
+    this.wechatCustomerServiceLink = wechatCustomerServiceLink;
+    return this;
+  }
+
+  /**
+   * Get wechatCustomerServiceLink
+   *
+   * @return wechatCustomerServiceLink
+   */
+  @ApiModelProperty(value = "")
+  public String getWechatCustomerServiceLink() {
+    return wechatCustomerServiceLink;
+  }
+
+  public void setWechatCustomerServiceLink(String wechatCustomerServiceLink) {
+    this.wechatCustomerServiceLink = wechatCustomerServiceLink;
+  }
+
+  public LocalStoresGetListStruct imageSet(List<ImageSetDataStruct> imageSet) {
+    this.imageSet = imageSet;
+    return this;
+  }
+
+  public LocalStoresGetListStruct addImageSetItem(ImageSetDataStruct imageSetItem) {
+    if (this.imageSet == null) {
+      this.imageSet = new ArrayList<ImageSetDataStruct>();
+    }
+    this.imageSet.add(imageSetItem);
+    return this;
+  }
+
+  /**
+   * Get imageSet
+   *
+   * @return imageSet
+   */
+  @ApiModelProperty(value = "")
+  public List<ImageSetDataStruct> getImageSet() {
+    return imageSet;
+  }
+
+  public void setImageSet(List<ImageSetDataStruct> imageSet) {
+    this.imageSet = imageSet;
+  }
+
+  public LocalStoresGetListStruct recommendWords(List<RecommendWordStruct> recommendWords) {
+    this.recommendWords = recommendWords;
+    return this;
+  }
+
+  public LocalStoresGetListStruct addRecommendWordsItem(RecommendWordStruct recommendWordsItem) {
+    if (this.recommendWords == null) {
+      this.recommendWords = new ArrayList<RecommendWordStruct>();
+    }
+    this.recommendWords.add(recommendWordsItem);
+    return this;
+  }
+
+  /**
+   * Get recommendWords
+   *
+   * @return recommendWords
+   */
+  @ApiModelProperty(value = "")
+  public List<RecommendWordStruct> getRecommendWords() {
+    return recommendWords;
+  }
+
+  public void setRecommendWords(List<RecommendWordStruct> recommendWords) {
+    this.recommendWords = recommendWords;
+  }
+
+  public LocalStoresGetListStruct isUseStandardizedName(Boolean isUseStandardizedName) {
+    this.isUseStandardizedName = isUseStandardizedName;
+    return this;
+  }
+
+  /**
+   * Get isUseStandardizedName
+   *
+   * @return isUseStandardizedName
+   */
+  @ApiModelProperty(value = "")
+  public Boolean isIsUseStandardizedName() {
+    return isUseStandardizedName;
+  }
+
+  public void setIsUseStandardizedName(Boolean isUseStandardizedName) {
+    this.isUseStandardizedName = isUseStandardizedName;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -446,7 +574,14 @@ public class LocalStoresGetListStruct {
         && Objects.equals(this.localStoreStreet, localStoresGetListStruct.localStoreStreet)
         && Objects.equals(
             this.localStoreBusinessArea, localStoresGetListStruct.localStoreBusinessArea)
-        && Objects.equals(this.localStoreRemark, localStoresGetListStruct.localStoreRemark);
+        && Objects.equals(this.localStoreRemark, localStoresGetListStruct.localStoreRemark)
+        && Objects.equals(this.wechatWorkCorpId, localStoresGetListStruct.wechatWorkCorpId)
+        && Objects.equals(
+            this.wechatCustomerServiceLink, localStoresGetListStruct.wechatCustomerServiceLink)
+        && Objects.equals(this.imageSet, localStoresGetListStruct.imageSet)
+        && Objects.equals(this.recommendWords, localStoresGetListStruct.recommendWords)
+        && Objects.equals(
+            this.isUseStandardizedName, localStoresGetListStruct.isUseStandardizedName);
   }
 
   @Override
@@ -469,7 +604,12 @@ public class LocalStoresGetListStruct {
         localStoreDistrict,
         localStoreStreet,
         localStoreBusinessArea,
-        localStoreRemark);
+        localStoreRemark,
+        wechatWorkCorpId,
+        wechatCustomerServiceLink,
+        imageSet,
+        recommendWords,
+        isUseStandardizedName);
   }
 
   @Override

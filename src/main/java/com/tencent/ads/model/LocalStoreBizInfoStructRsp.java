@@ -59,6 +59,15 @@ public class LocalStoreBizInfoStructRsp {
   @SerializedName("peak_period")
   private List<PeakPeriod> peakPeriod = null;
 
+  @SerializedName("opening_hours")
+  private List<OpeningHours> openingHours = null;
+
+  @SerializedName("telephone")
+  private String telephone = null;
+
+  @SerializedName("special_service")
+  private List<String> specialService = null;
+
   @SerializedName("opening_status")
   private LocalStoreOpeningStatus openingStatus = null;
 
@@ -298,6 +307,79 @@ public class LocalStoreBizInfoStructRsp {
     this.peakPeriod = peakPeriod;
   }
 
+  public LocalStoreBizInfoStructRsp openingHours(List<OpeningHours> openingHours) {
+    this.openingHours = openingHours;
+    return this;
+  }
+
+  public LocalStoreBizInfoStructRsp addOpeningHoursItem(OpeningHours openingHoursItem) {
+    if (this.openingHours == null) {
+      this.openingHours = new ArrayList<OpeningHours>();
+    }
+    this.openingHours.add(openingHoursItem);
+    return this;
+  }
+
+  /**
+   * Get openingHours
+   *
+   * @return openingHours
+   */
+  @ApiModelProperty(value = "")
+  public List<OpeningHours> getOpeningHours() {
+    return openingHours;
+  }
+
+  public void setOpeningHours(List<OpeningHours> openingHours) {
+    this.openingHours = openingHours;
+  }
+
+  public LocalStoreBizInfoStructRsp telephone(String telephone) {
+    this.telephone = telephone;
+    return this;
+  }
+
+  /**
+   * Get telephone
+   *
+   * @return telephone
+   */
+  @ApiModelProperty(value = "")
+  public String getTelephone() {
+    return telephone;
+  }
+
+  public void setTelephone(String telephone) {
+    this.telephone = telephone;
+  }
+
+  public LocalStoreBizInfoStructRsp specialService(List<String> specialService) {
+    this.specialService = specialService;
+    return this;
+  }
+
+  public LocalStoreBizInfoStructRsp addSpecialServiceItem(String specialServiceItem) {
+    if (this.specialService == null) {
+      this.specialService = new ArrayList<String>();
+    }
+    this.specialService.add(specialServiceItem);
+    return this;
+  }
+
+  /**
+   * Get specialService
+   *
+   * @return specialService
+   */
+  @ApiModelProperty(value = "")
+  public List<String> getSpecialService() {
+    return specialService;
+  }
+
+  public void setSpecialService(List<String> specialService) {
+    this.specialService = specialService;
+  }
+
   public LocalStoreBizInfoStructRsp openingStatus(LocalStoreOpeningStatus openingStatus) {
     this.openingStatus = openingStatus;
     return this;
@@ -338,6 +420,9 @@ public class LocalStoreBizInfoStructRsp {
         && Objects.equals(this.thirdCategoryName, localStoreBizInfoStructRsp.thirdCategoryName)
         && Objects.equals(this.fourthCategoryName, localStoreBizInfoStructRsp.fourthCategoryName)
         && Objects.equals(this.peakPeriod, localStoreBizInfoStructRsp.peakPeriod)
+        && Objects.equals(this.openingHours, localStoreBizInfoStructRsp.openingHours)
+        && Objects.equals(this.telephone, localStoreBizInfoStructRsp.telephone)
+        && Objects.equals(this.specialService, localStoreBizInfoStructRsp.specialService)
         && Objects.equals(this.openingStatus, localStoreBizInfoStructRsp.openingStatus);
   }
 
@@ -356,6 +441,9 @@ public class LocalStoreBizInfoStructRsp {
         thirdCategoryName,
         fourthCategoryName,
         peakPeriod,
+        openingHours,
+        telephone,
+        specialService,
         openingStatus);
   }
 

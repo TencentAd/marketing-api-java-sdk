@@ -37,6 +37,7 @@ import java.security.cert.X509Certificate;
 import java.text.DateFormat;
 import java.util.*;
 import java.util.Map.Entry;
+import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.TimeUnit;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -51,7 +52,7 @@ public class ApiClient {
 
   private String basePath = "https://sandbox-api.e.qq.com/v1.3";
   private boolean debugging = false;
-  private Map<String, String> defaultHeaderMap = new HashMap<String, String>();
+  private Map<String, String> defaultHeaderMap = new ConcurrentHashMap<String, String>();
   private String tempFolderPath = null;
 
   private static ThreadLocal<Map<String, Authentication>> authenticationsLocal =
