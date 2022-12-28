@@ -36,6 +36,9 @@ public class RedEnvelopeStruct {
   @SerializedName("red_envelope_disappear_time_ms")
   private Long redEnvelopeDisappearTimeMs = null;
 
+  @SerializedName("red_envelope_origin_extra_scene_id")
+  private String redEnvelopeOriginExtraSceneId = null;
+
   public RedEnvelopeStruct redEnvelopeSwitch(Boolean redEnvelopeSwitch) {
     this.redEnvelopeSwitch = redEnvelopeSwitch;
     return this;
@@ -131,6 +134,25 @@ public class RedEnvelopeStruct {
     this.redEnvelopeDisappearTimeMs = redEnvelopeDisappearTimeMs;
   }
 
+  public RedEnvelopeStruct redEnvelopeOriginExtraSceneId(String redEnvelopeOriginExtraSceneId) {
+    this.redEnvelopeOriginExtraSceneId = redEnvelopeOriginExtraSceneId;
+    return this;
+  }
+
+  /**
+   * Get redEnvelopeOriginExtraSceneId
+   *
+   * @return redEnvelopeOriginExtraSceneId
+   */
+  @ApiModelProperty(value = "")
+  public String getRedEnvelopeOriginExtraSceneId() {
+    return redEnvelopeOriginExtraSceneId;
+  }
+
+  public void setRedEnvelopeOriginExtraSceneId(String redEnvelopeOriginExtraSceneId) {
+    this.redEnvelopeOriginExtraSceneId = redEnvelopeOriginExtraSceneId;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -145,7 +167,9 @@ public class RedEnvelopeStruct {
         && Objects.equals(this.redEnvelopeExtraSceneId, redEnvelopeStruct.redEnvelopeExtraSceneId)
         && Objects.equals(this.redEnvelopeAppearTimeMs, redEnvelopeStruct.redEnvelopeAppearTimeMs)
         && Objects.equals(
-            this.redEnvelopeDisappearTimeMs, redEnvelopeStruct.redEnvelopeDisappearTimeMs);
+            this.redEnvelopeDisappearTimeMs, redEnvelopeStruct.redEnvelopeDisappearTimeMs)
+        && Objects.equals(
+            this.redEnvelopeOriginExtraSceneId, redEnvelopeStruct.redEnvelopeOriginExtraSceneId);
   }
 
   @Override
@@ -155,7 +179,8 @@ public class RedEnvelopeStruct {
         redEnvelopeImageId,
         redEnvelopeExtraSceneId,
         redEnvelopeAppearTimeMs,
-        redEnvelopeDisappearTimeMs);
+        redEnvelopeDisappearTimeMs,
+        redEnvelopeOriginExtraSceneId);
   }
 
   @Override
