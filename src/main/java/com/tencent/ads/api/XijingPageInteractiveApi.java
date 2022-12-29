@@ -60,6 +60,8 @@ public class XijingPageInteractiveApi {
    * @param pageName (required)
    * @param mobileAppId (required)
    * @param file (optional)
+   * @param transformType (optional)
+   * @param pageConfig (optional)
    * @param progressListener Progress listener
    * @param progressRequestListener Progress request listener
    * @return Call to execute
@@ -74,6 +76,8 @@ public class XijingPageInteractiveApi {
       String pageName,
       String mobileAppId,
       File file,
+      String transformType,
+      String pageConfig,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener)
       throws ApiException {
@@ -97,6 +101,8 @@ public class XijingPageInteractiveApi {
     if (pageName != null) localVarFormParams.put("page_name", pageName);
     if (mobileAppId != null) localVarFormParams.put("mobile_app_id", mobileAppId);
     if (file != null) localVarFormParams.put("file", file);
+    if (transformType != null) localVarFormParams.put("transform_type", transformType);
+    if (pageConfig != null) localVarFormParams.put("page_config", pageConfig);
 
     final String[] localVarAccepts = {"application/json"};
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
@@ -147,6 +153,8 @@ public class XijingPageInteractiveApi {
       String pageName,
       String mobileAppId,
       File file,
+      String transformType,
+      String pageConfig,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener)
       throws ApiException {
@@ -203,6 +211,8 @@ public class XijingPageInteractiveApi {
             pageName,
             mobileAppId,
             file,
+            transformType,
+            pageConfig,
             progressListener,
             progressRequestListener);
     return call;
@@ -219,6 +229,8 @@ public class XijingPageInteractiveApi {
    * @param pageName (required)
    * @param mobileAppId (required)
    * @param file (optional)
+   * @param transformType (optional)
+   * @param pageConfig (optional)
    * @return XijingPageInteractiveAddResponse
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
@@ -231,7 +243,9 @@ public class XijingPageInteractiveApi {
       String pageTitle,
       String pageName,
       String mobileAppId,
-      File file)
+      File file,
+      String transformType,
+      String pageConfig)
       throws ApiException {
     ApiResponse<XijingPageInteractiveAddResponse> resp =
         xijingPageInteractiveAddWithHttpInfo(
@@ -242,7 +256,9 @@ public class XijingPageInteractiveApi {
             pageTitle,
             pageName,
             mobileAppId,
-            file);
+            file,
+            transformType,
+            pageConfig);
     return resp.getData();
   }
 
@@ -257,6 +273,8 @@ public class XijingPageInteractiveApi {
    * @param pageName (required)
    * @param mobileAppId (required)
    * @param file (optional)
+   * @param transformType (optional)
+   * @param pageConfig (optional)
    * @return ApiResponse&lt;XijingPageInteractiveAddResponse&gt;
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
@@ -269,7 +287,9 @@ public class XijingPageInteractiveApi {
       String pageTitle,
       String pageName,
       String mobileAppId,
-      File file)
+      File file,
+      String transformType,
+      String pageConfig)
       throws ApiException {
     com.squareup.okhttp.Call call =
         xijingPageInteractiveAddValidateBeforeCall(
@@ -281,6 +301,8 @@ public class XijingPageInteractiveApi {
             pageName,
             mobileAppId,
             file,
+            transformType,
+            pageConfig,
             null,
             null);
     Type localVarReturnType = new TypeToken<XijingPageInteractiveAddResponse>() {}.getType();
@@ -298,6 +320,8 @@ public class XijingPageInteractiveApi {
    * @param pageName (required)
    * @param mobileAppId (required)
    * @param file (optional)
+   * @param transformType (optional)
+   * @param pageConfig (optional)
    * @param callback The callback to be executed when the API call finishes
    * @return The request call
    * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -311,6 +335,8 @@ public class XijingPageInteractiveApi {
       String pageName,
       String mobileAppId,
       File file,
+      String transformType,
+      String pageConfig,
       final ApiCallback<XijingPageInteractiveAddResponse> callback)
       throws ApiException {
 
@@ -345,6 +371,8 @@ public class XijingPageInteractiveApi {
             pageName,
             mobileAppId,
             file,
+            transformType,
+            pageConfig,
             progressListener,
             progressRequestListener);
     Type localVarReturnType = new TypeToken<XijingPageInteractiveAddResponse>() {}.getType();

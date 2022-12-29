@@ -36,6 +36,8 @@ public class XijingPageInteractiveApiContainer extends ApiContainer {
    * @param pageName (required)
    * @param mobileAppId (required)
    * @param file (optional)
+   * @param transformType (optional)
+   * @param pageConfig (optional)
    * @return XijingPageInteractiveAddResponse
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
@@ -48,7 +50,9 @@ public class XijingPageInteractiveApiContainer extends ApiContainer {
       String pageTitle,
       String pageName,
       String mobileAppId,
-      File file)
+      File file,
+      String transformType,
+      String pageConfig)
       throws ApiException, TencentAdsResponseException {
     XijingPageInteractiveAddResponse resp =
         api.xijingPageInteractiveAdd(
@@ -59,7 +63,9 @@ public class XijingPageInteractiveApiContainer extends ApiContainer {
             pageTitle,
             pageName,
             mobileAppId,
-            file);
+            file,
+            transformType,
+            pageConfig);
     handleResponse(gson.toJson(resp));
 
     return resp;

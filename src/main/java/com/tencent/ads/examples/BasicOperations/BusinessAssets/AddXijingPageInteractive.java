@@ -31,6 +31,10 @@ public class AddXijingPageInteractive {
 
   public File file = null;
 
+  public String transformType = null;
+
+  public String pageConfig = null;
+
   public void init() {
     this.tencentAds = TencentAds.getInstance();
     this.tencentAds.init(
@@ -53,7 +57,9 @@ public class AddXijingPageInteractive {
                 pageTitle,
                 pageName,
                 mobileAppId,
-                file);
+                file,
+                transformType,
+                pageConfig);
     return response;
   }
 
