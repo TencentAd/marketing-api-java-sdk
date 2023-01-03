@@ -106,7 +106,9 @@ public enum PageTypeRead {
 
   NOT_USED("PAGE_TYPE_NOT_USED"),
 
-  TSA_OTT("PAGE_TYPE_TSA_OTT");
+  TSA_OTT("PAGE_TYPE_TSA_OTT"),
+
+  APP_DEEP_LINK("PAGE_TYPE_APP_DEEP_LINK");
 
   private String value;
 
