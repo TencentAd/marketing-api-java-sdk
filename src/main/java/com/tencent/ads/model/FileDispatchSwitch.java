@@ -19,20 +19,16 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-/** 资产授权路径类型 */
-@JsonAdapter(PathType.Adapter.class)
-public enum PathType {
-  BM("PATH_TYPE_BM"),
+/** 是否开启自动分发，如打开开关，文件上传后会自动分发给所选应用场景 */
+@JsonAdapter(FileDispatchSwitch.Adapter.class)
+public enum FileDispatchSwitch {
+  ON("SWITCH_ON"),
 
-  MDM("PATH_TYPE_MDM"),
-
-  POINT_TO_POINT("PATH_TYPE_POINT_TO_POINT"),
-
-  AGENCY("PATH_TYPE_AGENCY");
+  OFF("SWITCH_OFF");
 
   private String value;
 
-  PathType(String value) {
+  FileDispatchSwitch(String value) {
     this.value = value;
   }
 
@@ -45,8 +41,8 @@ public enum PathType {
     return String.valueOf(value);
   }
 
-  public static PathType fromValue(String text) {
-    for (PathType b : PathType.values()) {
+  public static FileDispatchSwitch fromValue(String text) {
+    for (FileDispatchSwitch b : FileDispatchSwitch.values()) {
       if (String.valueOf(b.value).equals(text)) {
         return b;
       }
@@ -54,16 +50,17 @@ public enum PathType {
     return null;
   }
 
-  public static class Adapter extends TypeAdapter<PathType> {
+  public static class Adapter extends TypeAdapter<FileDispatchSwitch> {
     @Override
-    public void write(final JsonWriter jsonWriter, final PathType enumeration) throws IOException {
+    public void write(final JsonWriter jsonWriter, final FileDispatchSwitch enumeration)
+        throws IOException {
       jsonWriter.value(enumeration.getValue());
     }
 
     @Override
-    public PathType read(final JsonReader jsonReader) throws IOException {
+    public FileDispatchSwitch read(final JsonReader jsonReader) throws IOException {
       String value = jsonReader.nextString();
-      return PathType.fromValue(String.valueOf(value));
+      return FileDispatchSwitch.fromValue(String.valueOf(value));
     }
   }
 }

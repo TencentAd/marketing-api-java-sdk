@@ -245,6 +245,9 @@ public class DynamicCreativeElements {
   @SerializedName("red_envelope_struct")
   private RedEnvelopeStruct redEnvelopeStruct = null;
 
+  @SerializedName("button_text_jump_info")
+  private LandingPageStructure buttonTextJumpInfo = null;
+
   @SerializedName("image3_component_options")
   private List<ImageComponentOption> image3ComponentOptions = null;
 
@@ -1958,6 +1961,25 @@ public class DynamicCreativeElements {
     this.redEnvelopeStruct = redEnvelopeStruct;
   }
 
+  public DynamicCreativeElements buttonTextJumpInfo(LandingPageStructure buttonTextJumpInfo) {
+    this.buttonTextJumpInfo = buttonTextJumpInfo;
+    return this;
+  }
+
+  /**
+   * Get buttonTextJumpInfo
+   *
+   * @return buttonTextJumpInfo
+   */
+  @ApiModelProperty(value = "")
+  public LandingPageStructure getButtonTextJumpInfo() {
+    return buttonTextJumpInfo;
+  }
+
+  public void setButtonTextJumpInfo(LandingPageStructure buttonTextJumpInfo) {
+    this.buttonTextJumpInfo = buttonTextJumpInfo;
+  }
+
   public DynamicCreativeElements image3ComponentOptions(
       List<ImageComponentOption> image3ComponentOptions) {
     this.image3ComponentOptions = image3ComponentOptions;
@@ -2090,6 +2112,7 @@ public class DynamicCreativeElements {
         && Objects.equals(this.excitationText, dynamicCreativeElements.excitationText)
         && Objects.equals(this.originVideo, dynamicCreativeElements.originVideo)
         && Objects.equals(this.redEnvelopeStruct, dynamicCreativeElements.redEnvelopeStruct)
+        && Objects.equals(this.buttonTextJumpInfo, dynamicCreativeElements.buttonTextJumpInfo)
         && Objects.equals(
             this.image3ComponentOptions, dynamicCreativeElements.image3ComponentOptions);
   }
@@ -2171,6 +2194,7 @@ public class DynamicCreativeElements {
         excitationText,
         originVideo,
         redEnvelopeStruct,
+        buttonTextJumpInfo,
         image3ComponentOptions);
   }
 

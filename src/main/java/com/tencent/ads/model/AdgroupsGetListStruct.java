@@ -224,6 +224,12 @@ public class AdgroupsGetListStruct {
   @SerializedName("auto_derived_landing_page_switch")
   private Boolean autoDerivedLandingPageSwitch = null;
 
+  @SerializedName("search_expansion_switch")
+  private SearchExpansionSwitch searchExpansionSwitch = null;
+
+  @SerializedName("search_expand_targeting_switch")
+  private SearchExpandTargetingSwitch searchExpandTargetingSwitch = null;
+
   public AdgroupsGetListStruct campaignId(Long campaignId) {
     this.campaignId = campaignId;
     return this;
@@ -1568,6 +1574,46 @@ public class AdgroupsGetListStruct {
     this.autoDerivedLandingPageSwitch = autoDerivedLandingPageSwitch;
   }
 
+  public AdgroupsGetListStruct searchExpansionSwitch(SearchExpansionSwitch searchExpansionSwitch) {
+    this.searchExpansionSwitch = searchExpansionSwitch;
+    return this;
+  }
+
+  /**
+   * Get searchExpansionSwitch
+   *
+   * @return searchExpansionSwitch
+   */
+  @ApiModelProperty(value = "")
+  public SearchExpansionSwitch getSearchExpansionSwitch() {
+    return searchExpansionSwitch;
+  }
+
+  public void setSearchExpansionSwitch(SearchExpansionSwitch searchExpansionSwitch) {
+    this.searchExpansionSwitch = searchExpansionSwitch;
+  }
+
+  public AdgroupsGetListStruct searchExpandTargetingSwitch(
+      SearchExpandTargetingSwitch searchExpandTargetingSwitch) {
+    this.searchExpandTargetingSwitch = searchExpandTargetingSwitch;
+    return this;
+  }
+
+  /**
+   * Get searchExpandTargetingSwitch
+   *
+   * @return searchExpandTargetingSwitch
+   */
+  @ApiModelProperty(value = "")
+  public SearchExpandTargetingSwitch getSearchExpandTargetingSwitch() {
+    return searchExpandTargetingSwitch;
+  }
+
+  public void setSearchExpandTargetingSwitch(
+      SearchExpandTargetingSwitch searchExpandTargetingSwitch) {
+    this.searchExpandTargetingSwitch = searchExpandTargetingSwitch;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -1659,7 +1705,10 @@ public class AdgroupsGetListStruct {
         && Objects.equals(
             this.systemStatusExplanation, adgroupsGetListStruct.systemStatusExplanation)
         && Objects.equals(
-            this.autoDerivedLandingPageSwitch, adgroupsGetListStruct.autoDerivedLandingPageSwitch);
+            this.autoDerivedLandingPageSwitch, adgroupsGetListStruct.autoDerivedLandingPageSwitch)
+        && Objects.equals(this.searchExpansionSwitch, adgroupsGetListStruct.searchExpansionSwitch)
+        && Objects.equals(
+            this.searchExpandTargetingSwitch, adgroupsGetListStruct.searchExpandTargetingSwitch);
   }
 
   @Override
@@ -1731,7 +1780,9 @@ public class AdgroupsGetListStruct {
         smartTargeting,
         dynamicCreativeIdSet,
         systemStatusExplanation,
-        autoDerivedLandingPageSwitch);
+        autoDerivedLandingPageSwitch,
+        searchExpansionSwitch,
+        searchExpandTargetingSwitch);
   }
 
   @Override

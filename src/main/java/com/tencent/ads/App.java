@@ -40,6 +40,7 @@ public class App {
   @Inject AgencyRealtimeCostApiContainer agencyRealtimeCostApiContainer;
   @Inject AppAndroidChannelPackagesApiContainer appAndroidChannelPackagesApiContainer;
   @Inject AssetPermissionsApiContainer assetPermissionsApiContainer;
+  @Inject AssetPermissionsScenesApiContainer assetPermissionsScenesApiContainer;
   @Inject AssetPrePermissionsApiContainer assetPrePermissionsApiContainer;
   @Inject AsyncReportFilesApiContainer asyncReportFilesApiContainer;
   @Inject AsyncReportsApiContainer asyncReportsApiContainer;
@@ -77,6 +78,10 @@ public class App {
   @Inject CustomTagsApiContainer customTagsApiContainer;
   @Inject DailyBalanceReportApiContainer dailyBalanceReportApiContainer;
   @Inject DailyReportsApiContainer dailyReportsApiContainer;
+  @Inject DataNexusFileApiContainer dataNexusFileApiContainer;
+  @Inject DataSetApiContainer dataSetApiContainer;
+  @Inject DataSourceApiContainer dataSourceApiContainer;
+  @Inject DataSourceDispatchApiContainer dataSourceDispatchApiContainer;
   @Inject DiagnosisApiContainer diagnosisApiContainer;
   @Inject DplabelAdLabelApiContainer dplabelAdLabelApiContainer;
   @Inject DynamicAdImageTemplatesApiContainer dynamicAdImageTemplatesApiContainer;
@@ -88,6 +93,8 @@ public class App {
   @Inject EcommerceOrderApiContainer ecommerceOrderApiContainer;
   @Inject EstimationApiContainer estimationApiContainer;
   @Inject ExtendPackageApiContainer extendPackageApiContainer;
+  @Inject FileDispatchApiContainer fileDispatchApiContainer;
+  @Inject FileSchemaApiContainer fileSchemaApiContainer;
   @Inject FundStatementsDailyApiContainer fundStatementsDailyApiContainer;
   @Inject FundStatementsDetailedApiContainer fundStatementsDetailedApiContainer;
   @Inject FundTransferApiContainer fundTransferApiContainer;
@@ -284,6 +291,10 @@ public class App {
     return assetPermissionsApiContainer;
   }
 
+  public AssetPermissionsScenesApiContainer assetPermissionsScenes() {
+    return assetPermissionsScenesApiContainer;
+  }
+
   public AssetPrePermissionsApiContainer assetPrePermissions() {
     return assetPrePermissionsApiContainer;
   }
@@ -432,6 +443,22 @@ public class App {
     return dailyReportsApiContainer;
   }
 
+  public DataNexusFileApiContainer dataNexusFile() {
+    return dataNexusFileApiContainer;
+  }
+
+  public DataSetApiContainer dataSet() {
+    return dataSetApiContainer;
+  }
+
+  public DataSourceApiContainer dataSource() {
+    return dataSourceApiContainer;
+  }
+
+  public DataSourceDispatchApiContainer dataSourceDispatch() {
+    return dataSourceDispatchApiContainer;
+  }
+
   public DiagnosisApiContainer diagnosis() {
     return diagnosisApiContainer;
   }
@@ -474,6 +501,14 @@ public class App {
 
   public ExtendPackageApiContainer extendPackage() {
     return extendPackageApiContainer;
+  }
+
+  public FileDispatchApiContainer fileDispatch() {
+    return fileDispatchApiContainer;
+  }
+
+  public FileSchemaApiContainer fileSchema() {
+    return fileSchemaApiContainer;
   }
 
   public FundStatementsDailyApiContainer fundStatementsDaily() {

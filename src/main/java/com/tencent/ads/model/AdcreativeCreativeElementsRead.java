@@ -236,6 +236,9 @@ public class AdcreativeCreativeElementsRead {
   @SerializedName("red_envelope_struct")
   private RedEnvelopeStruct redEnvelopeStruct = null;
 
+  @SerializedName("button_text_jump_info")
+  private LandingPageStructure buttonTextJumpInfo = null;
+
   public AdcreativeCreativeElementsRead image(String image) {
     this.image = image;
     return this;
@@ -1634,6 +1637,26 @@ public class AdcreativeCreativeElementsRead {
     this.redEnvelopeStruct = redEnvelopeStruct;
   }
 
+  public AdcreativeCreativeElementsRead buttonTextJumpInfo(
+      LandingPageStructure buttonTextJumpInfo) {
+    this.buttonTextJumpInfo = buttonTextJumpInfo;
+    return this;
+  }
+
+  /**
+   * Get buttonTextJumpInfo
+   *
+   * @return buttonTextJumpInfo
+   */
+  @ApiModelProperty(value = "")
+  public LandingPageStructure getButtonTextJumpInfo() {
+    return buttonTextJumpInfo;
+  }
+
+  public void setButtonTextJumpInfo(LandingPageStructure buttonTextJumpInfo) {
+    this.buttonTextJumpInfo = buttonTextJumpInfo;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -1721,7 +1744,9 @@ public class AdcreativeCreativeElementsRead {
             this.finderObjectVisibility, adcreativeCreativeElementsRead.finderObjectVisibility)
         && Objects.equals(this.imageListJumpInfo, adcreativeCreativeElementsRead.imageListJumpInfo)
         && Objects.equals(this.originVideo, adcreativeCreativeElementsRead.originVideo)
-        && Objects.equals(this.redEnvelopeStruct, adcreativeCreativeElementsRead.redEnvelopeStruct);
+        && Objects.equals(this.redEnvelopeStruct, adcreativeCreativeElementsRead.redEnvelopeStruct)
+        && Objects.equals(
+            this.buttonTextJumpInfo, adcreativeCreativeElementsRead.buttonTextJumpInfo);
   }
 
   @Override
@@ -1797,7 +1822,8 @@ public class AdcreativeCreativeElementsRead {
         finderObjectVisibility,
         imageListJumpInfo,
         originVideo,
-        redEnvelopeStruct);
+        redEnvelopeStruct,
+        buttonTextJumpInfo);
   }
 
   @Override

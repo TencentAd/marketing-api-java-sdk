@@ -19,16 +19,18 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-/** 数据源来源 */
-@JsonAdapter(ActionSetAccessWayType.Adapter.class)
-public enum ActionSetAccessWayType {
-  SELF_BUILT("SELF_BUILT"),
+/** 应用场景 */
+@JsonAdapter(FileAvailableScene.Adapter.class)
+public enum FileAvailableScene {
+  DMP("DMP"),
 
-  BE_AUTHORIZED("BE_AUTHORIZED");
+  TRANSFORMATION_ATTRIBUTION("TRANSFORMATION_ATTRIBUTION"),
+
+  PK_AM("PK_AM");
 
   private String value;
 
-  ActionSetAccessWayType(String value) {
+  FileAvailableScene(String value) {
     this.value = value;
   }
 
@@ -41,8 +43,8 @@ public enum ActionSetAccessWayType {
     return String.valueOf(value);
   }
 
-  public static ActionSetAccessWayType fromValue(String text) {
-    for (ActionSetAccessWayType b : ActionSetAccessWayType.values()) {
+  public static FileAvailableScene fromValue(String text) {
+    for (FileAvailableScene b : FileAvailableScene.values()) {
       if (String.valueOf(b.value).equals(text)) {
         return b;
       }
@@ -50,17 +52,17 @@ public enum ActionSetAccessWayType {
     return null;
   }
 
-  public static class Adapter extends TypeAdapter<ActionSetAccessWayType> {
+  public static class Adapter extends TypeAdapter<FileAvailableScene> {
     @Override
-    public void write(final JsonWriter jsonWriter, final ActionSetAccessWayType enumeration)
+    public void write(final JsonWriter jsonWriter, final FileAvailableScene enumeration)
         throws IOException {
       jsonWriter.value(enumeration.getValue());
     }
 
     @Override
-    public ActionSetAccessWayType read(final JsonReader jsonReader) throws IOException {
+    public FileAvailableScene read(final JsonReader jsonReader) throws IOException {
       String value = jsonReader.nextString();
-      return ActionSetAccessWayType.fromValue(String.valueOf(value));
+      return FileAvailableScene.fromValue(String.valueOf(value));
     }
   }
 }

@@ -19,20 +19,18 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-/** 资产授权路径类型 */
-@JsonAdapter(PathType.Adapter.class)
-public enum PathType {
-  BM("PATH_TYPE_BM"),
+/** 搜索定向拓展开关 */
+@JsonAdapter(SearchExpandTargetingSwitch.Adapter.class)
+public enum SearchExpandTargetingSwitch {
+  UNKNOWN("SEARCH_EXPAND_TARGETING_SWITCH_UNKNOWN"),
 
-  MDM("PATH_TYPE_MDM"),
+  OPEN("SEARCH_EXPAND_TARGETING_SWITCH_OPEN"),
 
-  POINT_TO_POINT("PATH_TYPE_POINT_TO_POINT"),
-
-  AGENCY("PATH_TYPE_AGENCY");
+  CLOSE("SEARCH_EXPAND_TARGETING_SWITCH_CLOSE");
 
   private String value;
 
-  PathType(String value) {
+  SearchExpandTargetingSwitch(String value) {
     this.value = value;
   }
 
@@ -45,8 +43,8 @@ public enum PathType {
     return String.valueOf(value);
   }
 
-  public static PathType fromValue(String text) {
-    for (PathType b : PathType.values()) {
+  public static SearchExpandTargetingSwitch fromValue(String text) {
+    for (SearchExpandTargetingSwitch b : SearchExpandTargetingSwitch.values()) {
       if (String.valueOf(b.value).equals(text)) {
         return b;
       }
@@ -54,16 +52,17 @@ public enum PathType {
     return null;
   }
 
-  public static class Adapter extends TypeAdapter<PathType> {
+  public static class Adapter extends TypeAdapter<SearchExpandTargetingSwitch> {
     @Override
-    public void write(final JsonWriter jsonWriter, final PathType enumeration) throws IOException {
+    public void write(final JsonWriter jsonWriter, final SearchExpandTargetingSwitch enumeration)
+        throws IOException {
       jsonWriter.value(enumeration.getValue());
     }
 
     @Override
-    public PathType read(final JsonReader jsonReader) throws IOException {
+    public SearchExpandTargetingSwitch read(final JsonReader jsonReader) throws IOException {
       String value = jsonReader.nextString();
-      return PathType.fromValue(String.valueOf(value));
+      return SearchExpandTargetingSwitch.fromValue(String.valueOf(value));
     }
   }
 }

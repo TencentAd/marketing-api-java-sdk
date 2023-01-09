@@ -203,6 +203,9 @@ public class AdcreativeCreativeElementsWithOptions {
   @SerializedName("red_envelope_struct")
   private RedEnvelopeStruct redEnvelopeStruct = null;
 
+  @SerializedName("button_text_jump_info")
+  private LandingPageStructure buttonTextJumpInfo = null;
+
   public AdcreativeCreativeElementsWithOptions image(String image) {
     this.image = image;
     return this;
@@ -1429,6 +1432,26 @@ public class AdcreativeCreativeElementsWithOptions {
     this.redEnvelopeStruct = redEnvelopeStruct;
   }
 
+  public AdcreativeCreativeElementsWithOptions buttonTextJumpInfo(
+      LandingPageStructure buttonTextJumpInfo) {
+    this.buttonTextJumpInfo = buttonTextJumpInfo;
+    return this;
+  }
+
+  /**
+   * Get buttonTextJumpInfo
+   *
+   * @return buttonTextJumpInfo
+   */
+  @ApiModelProperty(value = "")
+  public LandingPageStructure getButtonTextJumpInfo() {
+    return buttonTextJumpInfo;
+  }
+
+  public void setButtonTextJumpInfo(LandingPageStructure buttonTextJumpInfo) {
+    this.buttonTextJumpInfo = buttonTextJumpInfo;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -1517,7 +1540,9 @@ public class AdcreativeCreativeElementsWithOptions {
             this.imageListJumpInfo, adcreativeCreativeElementsWithOptions.imageListJumpInfo)
         && Objects.equals(this.originVideo, adcreativeCreativeElementsWithOptions.originVideo)
         && Objects.equals(
-            this.redEnvelopeStruct, adcreativeCreativeElementsWithOptions.redEnvelopeStruct);
+            this.redEnvelopeStruct, adcreativeCreativeElementsWithOptions.redEnvelopeStruct)
+        && Objects.equals(
+            this.buttonTextJumpInfo, adcreativeCreativeElementsWithOptions.buttonTextJumpInfo);
   }
 
   @Override
@@ -1582,7 +1607,8 @@ public class AdcreativeCreativeElementsWithOptions {
         finderObjectVisibility,
         imageListJumpInfo,
         originVideo,
-        redEnvelopeStruct);
+        redEnvelopeStruct,
+        buttonTextJumpInfo);
   }
 
   @Override

@@ -19,20 +19,20 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-/** 资产授权路径类型 */
-@JsonAdapter(PathType.Adapter.class)
-public enum PathType {
-  BM("PATH_TYPE_BM"),
+/** 文件分发状态 */
+@JsonAdapter(DnFileDispatchStatus.Adapter.class)
+public enum DnFileDispatchStatus {
+  UN_DISPATCHED("UN_DISPATCHED"),
 
-  MDM("PATH_TYPE_MDM"),
+  DISPATCHING("DISPATCHING"),
 
-  POINT_TO_POINT("PATH_TYPE_POINT_TO_POINT"),
+  DISPATCHED("DISPATCHED"),
 
-  AGENCY("PATH_TYPE_AGENCY");
+  BE_CANCELLING("BE_CANCELLING");
 
   private String value;
 
-  PathType(String value) {
+  DnFileDispatchStatus(String value) {
     this.value = value;
   }
 
@@ -45,8 +45,8 @@ public enum PathType {
     return String.valueOf(value);
   }
 
-  public static PathType fromValue(String text) {
-    for (PathType b : PathType.values()) {
+  public static DnFileDispatchStatus fromValue(String text) {
+    for (DnFileDispatchStatus b : DnFileDispatchStatus.values()) {
       if (String.valueOf(b.value).equals(text)) {
         return b;
       }
@@ -54,16 +54,17 @@ public enum PathType {
     return null;
   }
 
-  public static class Adapter extends TypeAdapter<PathType> {
+  public static class Adapter extends TypeAdapter<DnFileDispatchStatus> {
     @Override
-    public void write(final JsonWriter jsonWriter, final PathType enumeration) throws IOException {
+    public void write(final JsonWriter jsonWriter, final DnFileDispatchStatus enumeration)
+        throws IOException {
       jsonWriter.value(enumeration.getValue());
     }
 
     @Override
-    public PathType read(final JsonReader jsonReader) throws IOException {
+    public DnFileDispatchStatus read(final JsonReader jsonReader) throws IOException {
       String value = jsonReader.nextString();
-      return PathType.fromValue(String.valueOf(value));
+      return DnFileDispatchStatus.fromValue(String.valueOf(value));
     }
   }
 }

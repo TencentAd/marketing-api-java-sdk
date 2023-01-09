@@ -19,20 +19,18 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-/** 资产授权路径类型 */
-@JsonAdapter(PathType.Adapter.class)
-public enum PathType {
-  BM("PATH_TYPE_BM"),
+/** 搜索扩量开关 */
+@JsonAdapter(SearchExpansionSwitch.Adapter.class)
+public enum SearchExpansionSwitch {
+  UNKNOWN("SEARCH_EXPANSION_SWITCH_UNKNOWN"),
 
-  MDM("PATH_TYPE_MDM"),
+  OPEN("SEARCH_EXPANSION_SWITCH_OPEN"),
 
-  POINT_TO_POINT("PATH_TYPE_POINT_TO_POINT"),
-
-  AGENCY("PATH_TYPE_AGENCY");
+  CLOSE("SEARCH_EXPANSION_SWITCH_CLOSE");
 
   private String value;
 
-  PathType(String value) {
+  SearchExpansionSwitch(String value) {
     this.value = value;
   }
 
@@ -45,8 +43,8 @@ public enum PathType {
     return String.valueOf(value);
   }
 
-  public static PathType fromValue(String text) {
-    for (PathType b : PathType.values()) {
+  public static SearchExpansionSwitch fromValue(String text) {
+    for (SearchExpansionSwitch b : SearchExpansionSwitch.values()) {
       if (String.valueOf(b.value).equals(text)) {
         return b;
       }
@@ -54,16 +52,17 @@ public enum PathType {
     return null;
   }
 
-  public static class Adapter extends TypeAdapter<PathType> {
+  public static class Adapter extends TypeAdapter<SearchExpansionSwitch> {
     @Override
-    public void write(final JsonWriter jsonWriter, final PathType enumeration) throws IOException {
+    public void write(final JsonWriter jsonWriter, final SearchExpansionSwitch enumeration)
+        throws IOException {
       jsonWriter.value(enumeration.getValue());
     }
 
     @Override
-    public PathType read(final JsonReader jsonReader) throws IOException {
+    public SearchExpansionSwitch read(final JsonReader jsonReader) throws IOException {
       String value = jsonReader.nextString();
-      return PathType.fromValue(String.valueOf(value));
+      return SearchExpansionSwitch.fromValue(String.valueOf(value));
     }
   }
 }

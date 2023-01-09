@@ -27,6 +27,9 @@ public class HeadClickSpec {
   @SerializedName("search_brand_area_keyword")
   private String searchBrandAreaKeyword = null;
 
+  @SerializedName("finder_username")
+  private String finderUsername = null;
+
   public HeadClickSpec brandAppId(String brandAppId) {
     this.brandAppId = brandAppId;
     return this;
@@ -65,6 +68,25 @@ public class HeadClickSpec {
     this.searchBrandAreaKeyword = searchBrandAreaKeyword;
   }
 
+  public HeadClickSpec finderUsername(String finderUsername) {
+    this.finderUsername = finderUsername;
+    return this;
+  }
+
+  /**
+   * Get finderUsername
+   *
+   * @return finderUsername
+   */
+  @ApiModelProperty(value = "")
+  public String getFinderUsername() {
+    return finderUsername;
+  }
+
+  public void setFinderUsername(String finderUsername) {
+    this.finderUsername = finderUsername;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -75,12 +97,13 @@ public class HeadClickSpec {
     }
     HeadClickSpec headClickSpec = (HeadClickSpec) o;
     return Objects.equals(this.brandAppId, headClickSpec.brandAppId)
-        && Objects.equals(this.searchBrandAreaKeyword, headClickSpec.searchBrandAreaKeyword);
+        && Objects.equals(this.searchBrandAreaKeyword, headClickSpec.searchBrandAreaKeyword)
+        && Objects.equals(this.finderUsername, headClickSpec.finderUsername);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(brandAppId, searchBrandAreaKeyword);
+    return Objects.hash(brandAppId, searchBrandAreaKeyword, finderUsername);
   }
 
   @Override

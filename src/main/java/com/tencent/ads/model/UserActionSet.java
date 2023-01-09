@@ -45,7 +45,7 @@ public class UserActionSet {
   private String createdTime = null;
 
   @SerializedName("access_way")
-  private ActionSetAccessWayType accessWay = null;
+  private DnFileAccessWayType accessWay = null;
 
   @SerializedName("usages")
   private List<String> usages = null;
@@ -189,7 +189,7 @@ public class UserActionSet {
     this.createdTime = createdTime;
   }
 
-  public UserActionSet accessWay(ActionSetAccessWayType accessWay) {
+  public UserActionSet accessWay(DnFileAccessWayType accessWay) {
     this.accessWay = accessWay;
     return this;
   }
@@ -200,11 +200,11 @@ public class UserActionSet {
    * @return accessWay
    */
   @ApiModelProperty(value = "")
-  public ActionSetAccessWayType getAccessWay() {
+  public DnFileAccessWayType getAccessWay() {
     return accessWay;
   }
 
-  public void setAccessWay(ActionSetAccessWayType accessWay) {
+  public void setAccessWay(DnFileAccessWayType accessWay) {
     this.accessWay = accessWay;
   }
 

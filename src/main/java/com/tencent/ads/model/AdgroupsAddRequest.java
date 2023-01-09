@@ -171,6 +171,12 @@ public class AdgroupsAddRequest {
   @SerializedName("auto_derived_landing_page_switch")
   private Boolean autoDerivedLandingPageSwitch = null;
 
+  @SerializedName("search_expansion_switch")
+  private SearchExpansionSwitch searchExpansionSwitch = null;
+
+  @SerializedName("search_expand_targeting_switch")
+  private SearchExpandTargetingSwitch searchExpandTargetingSwitch = null;
+
   @SerializedName("account_id")
   private Long accountId = null;
 
@@ -1193,6 +1199,46 @@ public class AdgroupsAddRequest {
     this.autoDerivedLandingPageSwitch = autoDerivedLandingPageSwitch;
   }
 
+  public AdgroupsAddRequest searchExpansionSwitch(SearchExpansionSwitch searchExpansionSwitch) {
+    this.searchExpansionSwitch = searchExpansionSwitch;
+    return this;
+  }
+
+  /**
+   * Get searchExpansionSwitch
+   *
+   * @return searchExpansionSwitch
+   */
+  @ApiModelProperty(value = "")
+  public SearchExpansionSwitch getSearchExpansionSwitch() {
+    return searchExpansionSwitch;
+  }
+
+  public void setSearchExpansionSwitch(SearchExpansionSwitch searchExpansionSwitch) {
+    this.searchExpansionSwitch = searchExpansionSwitch;
+  }
+
+  public AdgroupsAddRequest searchExpandTargetingSwitch(
+      SearchExpandTargetingSwitch searchExpandTargetingSwitch) {
+    this.searchExpandTargetingSwitch = searchExpandTargetingSwitch;
+    return this;
+  }
+
+  /**
+   * Get searchExpandTargetingSwitch
+   *
+   * @return searchExpandTargetingSwitch
+   */
+  @ApiModelProperty(value = "")
+  public SearchExpandTargetingSwitch getSearchExpandTargetingSwitch() {
+    return searchExpandTargetingSwitch;
+  }
+
+  public void setSearchExpandTargetingSwitch(
+      SearchExpandTargetingSwitch searchExpandTargetingSwitch) {
+    this.searchExpandTargetingSwitch = searchExpandTargetingSwitch;
+  }
+
   public AdgroupsAddRequest accountId(Long accountId) {
     this.accountId = accountId;
     return this;
@@ -1281,6 +1327,9 @@ public class AdgroupsAddRequest {
         && Objects.equals(this.dynamicCreativeIdSet, adgroupsAddRequest.dynamicCreativeIdSet)
         && Objects.equals(
             this.autoDerivedLandingPageSwitch, adgroupsAddRequest.autoDerivedLandingPageSwitch)
+        && Objects.equals(this.searchExpansionSwitch, adgroupsAddRequest.searchExpansionSwitch)
+        && Objects.equals(
+            this.searchExpandTargetingSwitch, adgroupsAddRequest.searchExpandTargetingSwitch)
         && Objects.equals(this.accountId, adgroupsAddRequest.accountId);
   }
 
@@ -1337,6 +1386,8 @@ public class AdgroupsAddRequest {
         smartTargeting,
         dynamicCreativeIdSet,
         autoDerivedLandingPageSwitch,
+        searchExpansionSwitch,
+        searchExpandTargetingSwitch,
         accountId);
   }
 
