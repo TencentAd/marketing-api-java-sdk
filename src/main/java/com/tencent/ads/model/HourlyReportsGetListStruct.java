@@ -1530,6 +1530,9 @@ public class HourlyReportsGetListStruct {
   @SerializedName("cheout_7d_rate")
   private Double cheout7dRate = null;
 
+  @SerializedName("clk_redpocket_shake_pv")
+  private Long clkRedpocketShakePv = null;
+
   @SerializedName("request_conversions_count")
   private Long requestConversionsCount = null;
 
@@ -11708,6 +11711,25 @@ public class HourlyReportsGetListStruct {
     this.cheout7dRate = cheout7dRate;
   }
 
+  public HourlyReportsGetListStruct clkRedpocketShakePv(Long clkRedpocketShakePv) {
+    this.clkRedpocketShakePv = clkRedpocketShakePv;
+    return this;
+  }
+
+  /**
+   * Get clkRedpocketShakePv
+   *
+   * @return clkRedpocketShakePv
+   */
+  @ApiModelProperty(value = "")
+  public Long getClkRedpocketShakePv() {
+    return clkRedpocketShakePv;
+  }
+
+  public void setClkRedpocketShakePv(Long clkRedpocketShakePv) {
+    this.clkRedpocketShakePv = clkRedpocketShakePv;
+  }
+
   public HourlyReportsGetListStruct requestConversionsCount(Long requestConversionsCount) {
     this.requestConversionsCount = requestConversionsCount;
     return this;
@@ -16267,6 +16289,7 @@ public class HourlyReportsGetListStruct {
         && Objects.equals(this.cheout3dRate, hourlyReportsGetListStruct.cheout3dRate)
         && Objects.equals(this.cheout5dRate, hourlyReportsGetListStruct.cheout5dRate)
         && Objects.equals(this.cheout7dRate, hourlyReportsGetListStruct.cheout7dRate)
+        && Objects.equals(this.clkRedpocketShakePv, hourlyReportsGetListStruct.clkRedpocketShakePv)
         && Objects.equals(
             this.requestConversionsCount, hourlyReportsGetListStruct.requestConversionsCount)
         && Objects.equals(
@@ -17124,6 +17147,7 @@ public class HourlyReportsGetListStruct {
         cheout3dRate,
         cheout5dRate,
         cheout7dRate,
+        clkRedpocketShakePv,
         requestConversionsCount,
         requestConversionsCost,
         incomeVal1,

@@ -44,6 +44,9 @@ public class SceneTargetingForWrite {
   @SerializedName("qbsearch_scene")
   private List<String> qbsearchScene = null;
 
+  @SerializedName("wechat_channels_scene")
+  private List<Long> wechatChannelsScene = null;
+
   public SceneTargetingForWrite unionPositionPackage(List<Long> unionPositionPackage) {
     this.unionPositionPackage = unionPositionPackage;
     return this;
@@ -227,6 +230,33 @@ public class SceneTargetingForWrite {
     this.qbsearchScene = qbsearchScene;
   }
 
+  public SceneTargetingForWrite wechatChannelsScene(List<Long> wechatChannelsScene) {
+    this.wechatChannelsScene = wechatChannelsScene;
+    return this;
+  }
+
+  public SceneTargetingForWrite addWechatChannelsSceneItem(Long wechatChannelsSceneItem) {
+    if (this.wechatChannelsScene == null) {
+      this.wechatChannelsScene = new ArrayList<Long>();
+    }
+    this.wechatChannelsScene.add(wechatChannelsSceneItem);
+    return this;
+  }
+
+  /**
+   * Get wechatChannelsScene
+   *
+   * @return wechatChannelsScene
+   */
+  @ApiModelProperty(value = "")
+  public List<Long> getWechatChannelsScene() {
+    return wechatChannelsScene;
+  }
+
+  public void setWechatChannelsScene(List<Long> wechatChannelsScene) {
+    this.wechatChannelsScene = wechatChannelsScene;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -243,7 +273,8 @@ public class SceneTargetingForWrite {
         && Objects.equals(this.tencentNews, sceneTargetingForWrite.tencentNews)
         && Objects.equals(this.wechatScene, sceneTargetingForWrite.wechatScene)
         && Objects.equals(this.wechatPosition, sceneTargetingForWrite.wechatPosition)
-        && Objects.equals(this.qbsearchScene, sceneTargetingForWrite.qbsearchScene);
+        && Objects.equals(this.qbsearchScene, sceneTargetingForWrite.qbsearchScene)
+        && Objects.equals(this.wechatChannelsScene, sceneTargetingForWrite.wechatChannelsScene);
   }
 
   @Override
@@ -255,7 +286,8 @@ public class SceneTargetingForWrite {
         tencentNews,
         wechatScene,
         wechatPosition,
-        qbsearchScene);
+        qbsearchScene,
+        wechatChannelsScene);
   }
 
   @Override

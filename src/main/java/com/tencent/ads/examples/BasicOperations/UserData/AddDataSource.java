@@ -6,7 +6,6 @@ import com.tencent.ads.exception.TencentAdsResponseException;
 import com.tencent.ads.exception.TencentAdsSDKException;
 import com.tencent.ads.model.*;
 import com.tencent.ads.model.DataSourceAddRequest;
-import com.tencent.ads.model.DataSourceAddResponse;
 
 public class AddDataSource {
   /** YOUR ACCESS TOKEN */
@@ -27,8 +26,8 @@ public class AddDataSource {
 
   public void buildParams() {}
 
-  public DataSourceAddResponse addDataSource() throws Exception {
-    DataSourceAddResponse response = tencentAds.dataSource().dataSourceAdd(data);
+  public DataSourceAddResponseData addDataSource() throws Exception {
+    DataSourceAddResponseData response = tencentAds.dataSource().dataSourceAdd(data);
     return response;
   }
 
@@ -36,7 +35,7 @@ public class AddDataSource {
     try {
       AddDataSource addDataSource = new AddDataSource();
       addDataSource.init();
-      DataSourceAddResponse response = addDataSource.addDataSource();
+      DataSourceAddResponseData response = addDataSource.addDataSource();
     } catch (TencentAdsResponseException e) {
       e.printStackTrace();
     } catch (TencentAdsSDKException e) {

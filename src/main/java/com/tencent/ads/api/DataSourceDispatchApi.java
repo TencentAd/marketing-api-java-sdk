@@ -133,7 +133,7 @@ public class DataSourceDispatchApi {
   }
 
   /**
-   * 数据源分发
+   * 数据源分发关系更新
    *
    * @param data (required)
    * @return DataSourceDispatchUpdateResponse
@@ -147,7 +147,7 @@ public class DataSourceDispatchApi {
   }
 
   /**
-   * 数据源分发
+   * 数据源分发关系更新
    *
    * @param data (required)
    * @return ApiResponse&lt;DataSourceDispatchUpdateResponse&gt;
@@ -162,7 +162,7 @@ public class DataSourceDispatchApi {
   }
 
   /**
-   * 数据源分发 (asynchronously)
+   * 数据源分发关系更新 (asynchronously)
    *
    * @param data (required)
    * @param callback The callback to be executed when the API call finishes

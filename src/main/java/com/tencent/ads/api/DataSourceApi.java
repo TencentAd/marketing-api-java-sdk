@@ -23,7 +23,6 @@ import com.tencent.ads.ProgressRequestBody;
 import com.tencent.ads.ProgressResponseBody;
 import com.tencent.ads.model.DataSourceAddRequest;
 import com.tencent.ads.model.DataSourceAddResponse;
-import com.tencent.ads.model.DataSourceGetRequest;
 import com.tencent.ads.model.DataSourceGetResponse;
 import java.io.IOException;
 import java.lang.reflect.Type;
@@ -204,24 +203,34 @@ public class DataSourceApi {
   /**
    * Build call for dataSourceGet
    *
-   * @param data (required)
+   * @param accountId (required)
+   * @param dataSourceId (optional)
+   * @param fields 返回参数的字段列表 (optional)
    * @param progressListener Progress listener
    * @param progressRequestListener Progress request listener
    * @return Call to execute
    * @throws ApiException If fail to serialize the request body object
    */
   public com.squareup.okhttp.Call dataSourceGetCall(
-      DataSourceGetRequest data,
+      Long accountId,
+      Long dataSourceId,
+      List<String> fields,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener)
       throws ApiException {
-    Object localVarPostBody = data;
+    Object localVarPostBody = null;
 
     // create path and map variables
     String localVarPath = "/data_source/get";
 
     List<Pair> localVarQueryParams = new ArrayList<Pair>();
     List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+    if (accountId != null)
+      localVarQueryParams.addAll(apiClient.parameterToPair("account_id", accountId));
+    if (dataSourceId != null)
+      localVarQueryParams.addAll(apiClient.parameterToPair("data_source_id", dataSourceId));
+    if (fields != null)
+      localVarCollectionQueryParams.addAll(apiClient.parameterToPairs("multi", "fields", fields));
 
     Map<String, String> localVarHeaderParams = new HashMap<String, String>();
 
@@ -231,7 +240,7 @@ public class DataSourceApi {
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
     if (localVarAccept != null) localVarHeaderParams.put("Accept", localVarAccept);
 
-    final String[] localVarContentTypes = {"application/json", "application/xml"};
+    final String[] localVarContentTypes = {"text/plain"};
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
     localVarHeaderParams.put("Content-Type", localVarContentType);
 
@@ -256,7 +265,7 @@ public class DataSourceApi {
     String[] localVarAuthNames = new String[] {"accessToken", "nonce", "timestamp"};
     return apiClient.buildCall(
         localVarPath,
-        "POST",
+        "GET",
         localVarQueryParams,
         localVarCollectionQueryParams,
         localVarPostBody,
@@ -268,60 +277,75 @@ public class DataSourceApi {
 
   @SuppressWarnings("rawtypes")
   private com.squareup.okhttp.Call dataSourceGetValidateBeforeCall(
-      DataSourceGetRequest data,
+      Long accountId,
+      Long dataSourceId,
+      List<String> fields,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener)
       throws ApiException {
 
-    // verify the required parameter 'data' is set
-    if (data == null) {
+    // verify the required parameter 'accountId' is set
+    if (accountId == null) {
       throw new ApiException(
-          "Missing the required parameter 'data' when calling dataSourceGet(Async)");
+          "Missing the required parameter 'accountId' when calling dataSourceGet(Async)");
     }
 
     com.squareup.okhttp.Call call =
-        dataSourceGetCall(data, progressListener, progressRequestListener);
+        dataSourceGetCall(
+            accountId, dataSourceId, fields, progressListener, progressRequestListener);
     return call;
   }
 
   /**
-   * 获取数据源
+   * 查询数据源
    *
-   * @param data (required)
+   * @param accountId (required)
+   * @param dataSourceId (optional)
+   * @param fields 返回参数的字段列表 (optional)
    * @return DataSourceGetResponse
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
-  public DataSourceGetResponse dataSourceGet(DataSourceGetRequest data) throws ApiException {
-    ApiResponse<DataSourceGetResponse> resp = dataSourceGetWithHttpInfo(data);
+  public DataSourceGetResponse dataSourceGet(Long accountId, Long dataSourceId, List<String> fields)
+      throws ApiException {
+    ApiResponse<DataSourceGetResponse> resp =
+        dataSourceGetWithHttpInfo(accountId, dataSourceId, fields);
     return resp.getData();
   }
 
   /**
-   * 获取数据源
+   * 查询数据源
    *
-   * @param data (required)
+   * @param accountId (required)
+   * @param dataSourceId (optional)
+   * @param fields 返回参数的字段列表 (optional)
    * @return ApiResponse&lt;DataSourceGetResponse&gt;
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
-  public ApiResponse<DataSourceGetResponse> dataSourceGetWithHttpInfo(DataSourceGetRequest data)
-      throws ApiException {
-    com.squareup.okhttp.Call call = dataSourceGetValidateBeforeCall(data, null, null);
+  public ApiResponse<DataSourceGetResponse> dataSourceGetWithHttpInfo(
+      Long accountId, Long dataSourceId, List<String> fields) throws ApiException {
+    com.squareup.okhttp.Call call =
+        dataSourceGetValidateBeforeCall(accountId, dataSourceId, fields, null, null);
     Type localVarReturnType = new TypeToken<DataSourceGetResponse>() {}.getType();
     return apiClient.execute(call, localVarReturnType);
   }
 
   /**
-   * 获取数据源 (asynchronously)
+   * 查询数据源 (asynchronously)
    *
-   * @param data (required)
+   * @param accountId (required)
+   * @param dataSourceId (optional)
+   * @param fields 返回参数的字段列表 (optional)
    * @param callback The callback to be executed when the API call finishes
    * @return The request call
    * @throws ApiException If fail to process the API call, e.g. serializing the request body object
    */
   public com.squareup.okhttp.Call dataSourceGetAsync(
-      DataSourceGetRequest data, final ApiCallback<DataSourceGetResponse> callback)
+      Long accountId,
+      Long dataSourceId,
+      List<String> fields,
+      final ApiCallback<DataSourceGetResponse> callback)
       throws ApiException {
 
     ProgressResponseBody.ProgressListener progressListener = null;
@@ -346,7 +370,8 @@ public class DataSourceApi {
     }
 
     com.squareup.okhttp.Call call =
-        dataSourceGetValidateBeforeCall(data, progressListener, progressRequestListener);
+        dataSourceGetValidateBeforeCall(
+            accountId, dataSourceId, fields, progressListener, progressRequestListener);
     Type localVarReturnType = new TypeToken<DataSourceGetResponse>() {}.getType();
     apiClient.executeAsync(call, localVarReturnType, callback);
     return call;

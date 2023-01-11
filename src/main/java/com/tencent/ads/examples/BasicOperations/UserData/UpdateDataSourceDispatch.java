@@ -6,7 +6,6 @@ import com.tencent.ads.exception.TencentAdsResponseException;
 import com.tencent.ads.exception.TencentAdsSDKException;
 import com.tencent.ads.model.*;
 import com.tencent.ads.model.DataSourceDispatchUpdateRequest;
-import com.tencent.ads.model.DataSourceDispatchUpdateResponse;
 
 public class UpdateDataSourceDispatch {
   /** YOUR ACCESS TOKEN */
@@ -27,8 +26,8 @@ public class UpdateDataSourceDispatch {
 
   public void buildParams() {}
 
-  public DataSourceDispatchUpdateResponse updateDataSourceDispatch() throws Exception {
-    DataSourceDispatchUpdateResponse response =
+  public DataSourceDispatchUpdateResponseData updateDataSourceDispatch() throws Exception {
+    DataSourceDispatchUpdateResponseData response =
         tencentAds.dataSourceDispatch().dataSourceDispatchUpdate(data);
     return response;
   }
@@ -37,7 +36,7 @@ public class UpdateDataSourceDispatch {
     try {
       UpdateDataSourceDispatch updateDataSourceDispatch = new UpdateDataSourceDispatch();
       updateDataSourceDispatch.init();
-      DataSourceDispatchUpdateResponse response =
+      DataSourceDispatchUpdateResponseData response =
           updateDataSourceDispatch.updateDataSourceDispatch();
     } catch (TencentAdsResponseException e) {
       e.printStackTrace();

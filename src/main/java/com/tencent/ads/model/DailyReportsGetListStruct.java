@@ -1542,6 +1542,12 @@ public class DailyReportsGetListStruct {
   @SerializedName("cheout_7d_rate")
   private Double cheout7dRate = null;
 
+  @SerializedName("clk_redpocket_shake_pv")
+  private Long clkRedpocketShakePv = null;
+
+  @SerializedName("clk_redpocket_shake_uv")
+  private Long clkRedpocketShakeUv = null;
+
   @SerializedName("request_conversions_count")
   private Long requestConversionsCount = null;
 
@@ -11866,6 +11872,44 @@ public class DailyReportsGetListStruct {
     this.cheout7dRate = cheout7dRate;
   }
 
+  public DailyReportsGetListStruct clkRedpocketShakePv(Long clkRedpocketShakePv) {
+    this.clkRedpocketShakePv = clkRedpocketShakePv;
+    return this;
+  }
+
+  /**
+   * Get clkRedpocketShakePv
+   *
+   * @return clkRedpocketShakePv
+   */
+  @ApiModelProperty(value = "")
+  public Long getClkRedpocketShakePv() {
+    return clkRedpocketShakePv;
+  }
+
+  public void setClkRedpocketShakePv(Long clkRedpocketShakePv) {
+    this.clkRedpocketShakePv = clkRedpocketShakePv;
+  }
+
+  public DailyReportsGetListStruct clkRedpocketShakeUv(Long clkRedpocketShakeUv) {
+    this.clkRedpocketShakeUv = clkRedpocketShakeUv;
+    return this;
+  }
+
+  /**
+   * Get clkRedpocketShakeUv
+   *
+   * @return clkRedpocketShakeUv
+   */
+  @ApiModelProperty(value = "")
+  public Long getClkRedpocketShakeUv() {
+    return clkRedpocketShakeUv;
+  }
+
+  public void setClkRedpocketShakeUv(Long clkRedpocketShakeUv) {
+    this.clkRedpocketShakeUv = clkRedpocketShakeUv;
+  }
+
   public DailyReportsGetListStruct requestConversionsCount(Long requestConversionsCount) {
     this.requestConversionsCount = requestConversionsCount;
     return this;
@@ -16860,6 +16904,8 @@ public class DailyReportsGetListStruct {
         && Objects.equals(this.cheout3dRate, dailyReportsGetListStruct.cheout3dRate)
         && Objects.equals(this.cheout5dRate, dailyReportsGetListStruct.cheout5dRate)
         && Objects.equals(this.cheout7dRate, dailyReportsGetListStruct.cheout7dRate)
+        && Objects.equals(this.clkRedpocketShakePv, dailyReportsGetListStruct.clkRedpocketShakePv)
+        && Objects.equals(this.clkRedpocketShakeUv, dailyReportsGetListStruct.clkRedpocketShakeUv)
         && Objects.equals(
             this.requestConversionsCount, dailyReportsGetListStruct.requestConversionsCount)
         && Objects.equals(
@@ -17734,6 +17780,8 @@ public class DailyReportsGetListStruct {
         cheout3dRate,
         cheout5dRate,
         cheout7dRate,
+        clkRedpocketShakePv,
+        clkRedpocketShakeUv,
         requestConversionsCount,
         requestConversionsCost,
         incomeVal1,

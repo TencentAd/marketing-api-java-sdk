@@ -6,7 +6,6 @@ import com.tencent.ads.exception.TencentAdsResponseException;
 import com.tencent.ads.exception.TencentAdsSDKException;
 import com.tencent.ads.model.*;
 import com.tencent.ads.model.DataSetAddRequest;
-import com.tencent.ads.model.DataSetAddResponse;
 
 public class AddDataSet {
   /** YOUR ACCESS TOKEN */
@@ -27,8 +26,8 @@ public class AddDataSet {
 
   public void buildParams() {}
 
-  public DataSetAddResponse addDataSet() throws Exception {
-    DataSetAddResponse response = tencentAds.dataSet().dataSetAdd(data);
+  public DataSetAddResponseData addDataSet() throws Exception {
+    DataSetAddResponseData response = tencentAds.dataSet().dataSetAdd(data);
     return response;
   }
 
@@ -36,7 +35,7 @@ public class AddDataSet {
     try {
       AddDataSet addDataSet = new AddDataSet();
       addDataSet.init();
-      DataSetAddResponse response = addDataSet.addDataSet();
+      DataSetAddResponseData response = addDataSet.addDataSet();
     } catch (TencentAdsResponseException e) {
       e.printStackTrace();
     } catch (TencentAdsSDKException e) {

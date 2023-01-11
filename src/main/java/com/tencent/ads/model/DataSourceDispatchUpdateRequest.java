@@ -15,12 +15,17 @@ package com.tencent.ads.model;
 import com.google.gson.Gson;
 import com.google.gson.annotations.SerializedName;
 import io.swagger.annotations.ApiModelProperty;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Objects;
 
 /** DataSourceDispatchUpdateRequest */
 public class DataSourceDispatchUpdateRequest {
   @SerializedName("account_id")
   private Long accountId = null;
+
+  @SerializedName("data_source_scenes")
+  private List<SingleDataSourceScenes> dataSourceScenes = null;
 
   public DataSourceDispatchUpdateRequest accountId(Long accountId) {
     this.accountId = accountId;
@@ -41,6 +46,35 @@ public class DataSourceDispatchUpdateRequest {
     this.accountId = accountId;
   }
 
+  public DataSourceDispatchUpdateRequest dataSourceScenes(
+      List<SingleDataSourceScenes> dataSourceScenes) {
+    this.dataSourceScenes = dataSourceScenes;
+    return this;
+  }
+
+  public DataSourceDispatchUpdateRequest addDataSourceScenesItem(
+      SingleDataSourceScenes dataSourceScenesItem) {
+    if (this.dataSourceScenes == null) {
+      this.dataSourceScenes = new ArrayList<SingleDataSourceScenes>();
+    }
+    this.dataSourceScenes.add(dataSourceScenesItem);
+    return this;
+  }
+
+  /**
+   * Get dataSourceScenes
+   *
+   * @return dataSourceScenes
+   */
+  @ApiModelProperty(value = "")
+  public List<SingleDataSourceScenes> getDataSourceScenes() {
+    return dataSourceScenes;
+  }
+
+  public void setDataSourceScenes(List<SingleDataSourceScenes> dataSourceScenes) {
+    this.dataSourceScenes = dataSourceScenes;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -51,12 +85,13 @@ public class DataSourceDispatchUpdateRequest {
     }
     DataSourceDispatchUpdateRequest dataSourceDispatchUpdateRequest =
         (DataSourceDispatchUpdateRequest) o;
-    return Objects.equals(this.accountId, dataSourceDispatchUpdateRequest.accountId);
+    return Objects.equals(this.accountId, dataSourceDispatchUpdateRequest.accountId)
+        && Objects.equals(this.dataSourceScenes, dataSourceDispatchUpdateRequest.dataSourceScenes);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(accountId);
+    return Objects.hash(accountId, dataSourceScenes);
   }
 
   @Override

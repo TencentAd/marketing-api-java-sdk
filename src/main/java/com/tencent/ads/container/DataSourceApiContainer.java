@@ -20,8 +20,10 @@ import com.tencent.ads.api.DataSourceApi;
 import com.tencent.ads.exception.TencentAdsResponseException;
 import com.tencent.ads.model.DataSourceAddRequest;
 import com.tencent.ads.model.DataSourceAddResponse;
-import com.tencent.ads.model.DataSourceGetRequest;
+import com.tencent.ads.model.DataSourceAddResponseData;
 import com.tencent.ads.model.DataSourceGetResponse;
+import com.tencent.ads.model.DataSourceGetResponseData;
+import java.util.List;
 
 public class DataSourceApiContainer extends ApiContainer {
 
@@ -35,27 +37,28 @@ public class DataSourceApiContainer extends ApiContainer {
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
-  public DataSourceAddResponse dataSourceAdd(DataSourceAddRequest data)
+  public DataSourceAddResponseData dataSourceAdd(DataSourceAddRequest data)
       throws ApiException, TencentAdsResponseException {
     DataSourceAddResponse resp = api.dataSourceAdd(data);
     handleResponse(gson.toJson(resp));
-
-    return resp;
+    return resp.getData();
   }
 
   /**
-   * 获取数据源
+   * 查询数据源
    *
-   * @param data (required)
+   * @param accountId (required)
+   * @param dataSourceId (optional)
+   * @param fields 返回参数的字段列表 (optional)
    * @return DataSourceGetResponse
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
-  public DataSourceGetResponse dataSourceGet(DataSourceGetRequest data)
+  public DataSourceGetResponseData dataSourceGet(
+      Long accountId, Long dataSourceId, List<String> fields)
       throws ApiException, TencentAdsResponseException {
-    DataSourceGetResponse resp = api.dataSourceGet(data);
+    DataSourceGetResponse resp = api.dataSourceGet(accountId, dataSourceId, fields);
     handleResponse(gson.toJson(resp));
-
-    return resp;
+    return resp.getData();
   }
 }

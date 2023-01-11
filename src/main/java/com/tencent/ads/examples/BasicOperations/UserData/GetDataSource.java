@@ -5,8 +5,7 @@ import com.tencent.ads.TencentAds;
 import com.tencent.ads.exception.TencentAdsResponseException;
 import com.tencent.ads.exception.TencentAdsSDKException;
 import com.tencent.ads.model.*;
-import com.tencent.ads.model.DataSourceGetRequest;
-import com.tencent.ads.model.DataSourceGetResponse;
+import java.util.List;
 
 public class GetDataSource {
   /** YOUR ACCESS TOKEN */
@@ -15,7 +14,11 @@ public class GetDataSource {
   /** TencentAds */
   public TencentAds tencentAds;
 
-  public DataSourceGetRequest data = null;
+  public Long accountId = null;
+
+  public Long dataSourceId = null;
+
+  public List<String> fields = null;
 
   public void init() {
     this.tencentAds = TencentAds.getInstance();
@@ -27,8 +30,9 @@ public class GetDataSource {
 
   public void buildParams() {}
 
-  public DataSourceGetResponse getDataSource() throws Exception {
-    DataSourceGetResponse response = tencentAds.dataSource().dataSourceGet(data);
+  public DataSourceGetResponseData getDataSource() throws Exception {
+    DataSourceGetResponseData response =
+        tencentAds.dataSource().dataSourceGet(accountId, dataSourceId, fields);
     return response;
   }
 
@@ -36,7 +40,7 @@ public class GetDataSource {
     try {
       GetDataSource getDataSource = new GetDataSource();
       getDataSource.init();
-      DataSourceGetResponse response = getDataSource.getDataSource();
+      DataSourceGetResponseData response = getDataSource.getDataSource();
     } catch (TencentAdsResponseException e) {
       e.printStackTrace();
     } catch (TencentAdsSDKException e) {

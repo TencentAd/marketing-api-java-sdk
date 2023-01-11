@@ -56,6 +56,9 @@ public class SceneTargeting {
   @SerializedName("qbsearch_scene")
   private List<String> qbsearchScene = null;
 
+  @SerializedName("wechat_channels_scene")
+  private List<Long> wechatChannelsScene = null;
+
   public SceneTargeting mobileUnion(List<String> mobileUnion) {
     this.mobileUnion = mobileUnion;
     return this;
@@ -345,6 +348,33 @@ public class SceneTargeting {
     this.qbsearchScene = qbsearchScene;
   }
 
+  public SceneTargeting wechatChannelsScene(List<Long> wechatChannelsScene) {
+    this.wechatChannelsScene = wechatChannelsScene;
+    return this;
+  }
+
+  public SceneTargeting addWechatChannelsSceneItem(Long wechatChannelsSceneItem) {
+    if (this.wechatChannelsScene == null) {
+      this.wechatChannelsScene = new ArrayList<Long>();
+    }
+    this.wechatChannelsScene.add(wechatChannelsSceneItem);
+    return this;
+  }
+
+  /**
+   * Get wechatChannelsScene
+   *
+   * @return wechatChannelsScene
+   */
+  @ApiModelProperty(value = "")
+  public List<Long> getWechatChannelsScene() {
+    return wechatChannelsScene;
+  }
+
+  public void setWechatChannelsScene(List<Long> wechatChannelsScene) {
+    this.wechatChannelsScene = wechatChannelsScene;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -365,7 +395,8 @@ public class SceneTargeting {
         && Objects.equals(this.tencentNews, sceneTargeting.tencentNews)
         && Objects.equals(this.wechatScene, sceneTargeting.wechatScene)
         && Objects.equals(this.wechatPosition, sceneTargeting.wechatPosition)
-        && Objects.equals(this.qbsearchScene, sceneTargeting.qbsearchScene);
+        && Objects.equals(this.qbsearchScene, sceneTargeting.qbsearchScene)
+        && Objects.equals(this.wechatChannelsScene, sceneTargeting.wechatChannelsScene);
   }
 
   @Override
@@ -381,7 +412,8 @@ public class SceneTargeting {
         tencentNews,
         wechatScene,
         wechatPosition,
-        qbsearchScene);
+        qbsearchScene,
+        wechatChannelsScene);
   }
 
   @Override

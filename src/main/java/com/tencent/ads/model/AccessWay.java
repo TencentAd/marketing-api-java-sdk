@@ -19,24 +19,18 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-/** 场景定向标签类型 */
-@JsonAdapter(SceneSpecTagsType.Adapter.class)
-public enum SceneSpecTagsType {
-  WECHAT_POSITION("WECHAT_POSITION"),
+/** 创建来源 */
+@JsonAdapter(AccessWay.Adapter.class)
+public enum AccessWay {
+  SELF_BUILT("SELF_BUILT"),
 
-  OFFICIAL_ACCOUNT_MEDIA_CATEGORY("OFFICIAL_ACCOUNT_MEDIA_CATEGORY"),
+  AUTO_BUILT("AUTO_BUILT"),
 
-  MINI_PROGRAM_AND_MINI_GAME("MINI_PROGRAM_AND_MINI_GAME"),
-
-  PAY_SCENE("PAY_SCENE"),
-
-  MOBILE_UNION_CATEGORY("MOBILE_UNION_CATEGORY"),
-
-  WECHAT_CHANNELS_SCENE("WECHAT_CHANNELS_SCENE");
+  BE_AUTHORIZED("BE_AUTHORIZED");
 
   private String value;
 
-  SceneSpecTagsType(String value) {
+  AccessWay(String value) {
     this.value = value;
   }
 
@@ -49,8 +43,8 @@ public enum SceneSpecTagsType {
     return String.valueOf(value);
   }
 
-  public static SceneSpecTagsType fromValue(String text) {
-    for (SceneSpecTagsType b : SceneSpecTagsType.values()) {
+  public static AccessWay fromValue(String text) {
+    for (AccessWay b : AccessWay.values()) {
       if (String.valueOf(b.value).equals(text)) {
         return b;
       }
@@ -58,17 +52,16 @@ public enum SceneSpecTagsType {
     return null;
   }
 
-  public static class Adapter extends TypeAdapter<SceneSpecTagsType> {
+  public static class Adapter extends TypeAdapter<AccessWay> {
     @Override
-    public void write(final JsonWriter jsonWriter, final SceneSpecTagsType enumeration)
-        throws IOException {
+    public void write(final JsonWriter jsonWriter, final AccessWay enumeration) throws IOException {
       jsonWriter.value(enumeration.getValue());
     }
 
     @Override
-    public SceneSpecTagsType read(final JsonReader jsonReader) throws IOException {
+    public AccessWay read(final JsonReader jsonReader) throws IOException {
       String value = jsonReader.nextString();
-      return SceneSpecTagsType.fromValue(String.valueOf(value));
+      return AccessWay.fromValue(String.valueOf(value));
     }
   }
 }

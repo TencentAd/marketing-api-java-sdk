@@ -14,59 +14,39 @@ package com.tencent.ads.model;
 
 import com.google.gson.Gson;
 import com.google.gson.annotations.SerializedName;
+import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.util.Objects;
 
-/** DataSetAddRequest */
-public class DataSetAddRequest {
-  @SerializedName("account_id")
-  private Long accountId = null;
-
-  @SerializedName("data_source_id")
-  private Long dataSourceId = null;
+/** 数据集详情 */
+@ApiModel(description = "数据集详情")
+public class SingleDataSet {
+  @SerializedName("data_set_id")
+  private Long dataSetId = null;
 
   @SerializedName("env_type")
   private Long envType = null;
 
-  public DataSetAddRequest accountId(Long accountId) {
-    this.accountId = accountId;
+  public SingleDataSet dataSetId(Long dataSetId) {
+    this.dataSetId = dataSetId;
     return this;
   }
 
   /**
-   * Get accountId
+   * Get dataSetId
    *
-   * @return accountId
+   * @return dataSetId
    */
   @ApiModelProperty(value = "")
-  public Long getAccountId() {
-    return accountId;
+  public Long getDataSetId() {
+    return dataSetId;
   }
 
-  public void setAccountId(Long accountId) {
-    this.accountId = accountId;
+  public void setDataSetId(Long dataSetId) {
+    this.dataSetId = dataSetId;
   }
 
-  public DataSetAddRequest dataSourceId(Long dataSourceId) {
-    this.dataSourceId = dataSourceId;
-    return this;
-  }
-
-  /**
-   * Get dataSourceId
-   *
-   * @return dataSourceId
-   */
-  @ApiModelProperty(value = "")
-  public Long getDataSourceId() {
-    return dataSourceId;
-  }
-
-  public void setDataSourceId(Long dataSourceId) {
-    this.dataSourceId = dataSourceId;
-  }
-
-  public DataSetAddRequest envType(Long envType) {
+  public SingleDataSet envType(Long envType) {
     this.envType = envType;
     return this;
   }
@@ -93,15 +73,14 @@ public class DataSetAddRequest {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    DataSetAddRequest dataSetAddRequest = (DataSetAddRequest) o;
-    return Objects.equals(this.accountId, dataSetAddRequest.accountId)
-        && Objects.equals(this.dataSourceId, dataSetAddRequest.dataSourceId)
-        && Objects.equals(this.envType, dataSetAddRequest.envType);
+    SingleDataSet singleDataSet = (SingleDataSet) o;
+    return Objects.equals(this.dataSetId, singleDataSet.dataSetId)
+        && Objects.equals(this.envType, singleDataSet.envType);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(accountId, dataSourceId, envType);
+    return Objects.hash(dataSetId, envType);
   }
 
   @Override

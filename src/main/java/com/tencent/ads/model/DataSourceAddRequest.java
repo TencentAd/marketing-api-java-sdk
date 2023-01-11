@@ -22,8 +22,17 @@ public class DataSourceAddRequest {
   @SerializedName("account_id")
   private Long accountId = null;
 
-  @SerializedName("data_source_id")
-  private Long dataSourceId = null;
+  @SerializedName("type")
+  private DataSourceType type = null;
+
+  @SerializedName("mobile_app_id")
+  private Long mobileAppId = null;
+
+  @SerializedName("wechat_app_id")
+  private String wechatAppId = null;
+
+  @SerializedName("name")
+  private String name = null;
 
   public DataSourceAddRequest accountId(Long accountId) {
     this.accountId = accountId;
@@ -44,23 +53,80 @@ public class DataSourceAddRequest {
     this.accountId = accountId;
   }
 
-  public DataSourceAddRequest dataSourceId(Long dataSourceId) {
-    this.dataSourceId = dataSourceId;
+  public DataSourceAddRequest type(DataSourceType type) {
+    this.type = type;
     return this;
   }
 
   /**
-   * Get dataSourceId
+   * Get type
    *
-   * @return dataSourceId
+   * @return type
    */
   @ApiModelProperty(value = "")
-  public Long getDataSourceId() {
-    return dataSourceId;
+  public DataSourceType getType() {
+    return type;
   }
 
-  public void setDataSourceId(Long dataSourceId) {
-    this.dataSourceId = dataSourceId;
+  public void setType(DataSourceType type) {
+    this.type = type;
+  }
+
+  public DataSourceAddRequest mobileAppId(Long mobileAppId) {
+    this.mobileAppId = mobileAppId;
+    return this;
+  }
+
+  /**
+   * Get mobileAppId
+   *
+   * @return mobileAppId
+   */
+  @ApiModelProperty(value = "")
+  public Long getMobileAppId() {
+    return mobileAppId;
+  }
+
+  public void setMobileAppId(Long mobileAppId) {
+    this.mobileAppId = mobileAppId;
+  }
+
+  public DataSourceAddRequest wechatAppId(String wechatAppId) {
+    this.wechatAppId = wechatAppId;
+    return this;
+  }
+
+  /**
+   * Get wechatAppId
+   *
+   * @return wechatAppId
+   */
+  @ApiModelProperty(value = "")
+  public String getWechatAppId() {
+    return wechatAppId;
+  }
+
+  public void setWechatAppId(String wechatAppId) {
+    this.wechatAppId = wechatAppId;
+  }
+
+  public DataSourceAddRequest name(String name) {
+    this.name = name;
+    return this;
+  }
+
+  /**
+   * Get name
+   *
+   * @return name
+   */
+  @ApiModelProperty(value = "")
+  public String getName() {
+    return name;
+  }
+
+  public void setName(String name) {
+    this.name = name;
   }
 
   @Override
@@ -73,12 +139,15 @@ public class DataSourceAddRequest {
     }
     DataSourceAddRequest dataSourceAddRequest = (DataSourceAddRequest) o;
     return Objects.equals(this.accountId, dataSourceAddRequest.accountId)
-        && Objects.equals(this.dataSourceId, dataSourceAddRequest.dataSourceId);
+        && Objects.equals(this.type, dataSourceAddRequest.type)
+        && Objects.equals(this.mobileAppId, dataSourceAddRequest.mobileAppId)
+        && Objects.equals(this.wechatAppId, dataSourceAddRequest.wechatAppId)
+        && Objects.equals(this.name, dataSourceAddRequest.name);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(accountId, dataSourceId);
+    return Objects.hash(accountId, type, mobileAppId, wechatAppId, name);
   }
 
   @Override

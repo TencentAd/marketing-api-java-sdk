@@ -20,6 +20,7 @@ import com.tencent.ads.api.DataSetApi;
 import com.tencent.ads.exception.TencentAdsResponseException;
 import com.tencent.ads.model.DataSetAddRequest;
 import com.tencent.ads.model.DataSetAddResponse;
+import com.tencent.ads.model.DataSetAddResponseData;
 
 public class DataSetApiContainer extends ApiContainer {
 
@@ -33,11 +34,10 @@ public class DataSetApiContainer extends ApiContainer {
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
-  public DataSetAddResponse dataSetAdd(DataSetAddRequest data)
+  public DataSetAddResponseData dataSetAdd(DataSetAddRequest data)
       throws ApiException, TencentAdsResponseException {
     DataSetAddResponse resp = api.dataSetAdd(data);
     handleResponse(gson.toJson(resp));
-
-    return resp;
+    return resp.getData();
   }
 }

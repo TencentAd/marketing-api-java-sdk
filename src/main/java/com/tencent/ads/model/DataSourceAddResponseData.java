@@ -17,34 +17,12 @@ import com.google.gson.annotations.SerializedName;
 import io.swagger.annotations.ApiModelProperty;
 import java.util.Objects;
 
-/** DataSourceGetRequest */
-public class DataSourceGetRequest {
-  @SerializedName("account_id")
-  private Long accountId = null;
-
+/** DataSourceAddResponseData */
+public class DataSourceAddResponseData {
   @SerializedName("data_source_id")
   private Long dataSourceId = null;
 
-  public DataSourceGetRequest accountId(Long accountId) {
-    this.accountId = accountId;
-    return this;
-  }
-
-  /**
-   * Get accountId
-   *
-   * @return accountId
-   */
-  @ApiModelProperty(value = "")
-  public Long getAccountId() {
-    return accountId;
-  }
-
-  public void setAccountId(Long accountId) {
-    this.accountId = accountId;
-  }
-
-  public DataSourceGetRequest dataSourceId(Long dataSourceId) {
+  public DataSourceAddResponseData dataSourceId(Long dataSourceId) {
     this.dataSourceId = dataSourceId;
     return this;
   }
@@ -71,14 +49,13 @@ public class DataSourceGetRequest {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    DataSourceGetRequest dataSourceGetRequest = (DataSourceGetRequest) o;
-    return Objects.equals(this.accountId, dataSourceGetRequest.accountId)
-        && Objects.equals(this.dataSourceId, dataSourceGetRequest.dataSourceId);
+    DataSourceAddResponseData dataSourceAddResponseData = (DataSourceAddResponseData) o;
+    return Objects.equals(this.dataSourceId, dataSourceAddResponseData.dataSourceId);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(accountId, dataSourceId);
+    return Objects.hash(dataSourceId);
   }
 
   @Override

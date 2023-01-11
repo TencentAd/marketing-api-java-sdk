@@ -20,24 +20,24 @@ import com.tencent.ads.api.DataSourceDispatchApi;
 import com.tencent.ads.exception.TencentAdsResponseException;
 import com.tencent.ads.model.DataSourceDispatchUpdateRequest;
 import com.tencent.ads.model.DataSourceDispatchUpdateResponse;
+import com.tencent.ads.model.DataSourceDispatchUpdateResponseData;
 
 public class DataSourceDispatchApiContainer extends ApiContainer {
 
   @Inject DataSourceDispatchApi api;
 
   /**
-   * 数据源分发
+   * 数据源分发关系更新
    *
    * @param data (required)
    * @return DataSourceDispatchUpdateResponse
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
-  public DataSourceDispatchUpdateResponse dataSourceDispatchUpdate(
+  public DataSourceDispatchUpdateResponseData dataSourceDispatchUpdate(
       DataSourceDispatchUpdateRequest data) throws ApiException, TencentAdsResponseException {
     DataSourceDispatchUpdateResponse resp = api.dataSourceDispatchUpdate(data);
     handleResponse(gson.toJson(resp));
-
-    return resp;
+    return resp.getData();
   }
 }

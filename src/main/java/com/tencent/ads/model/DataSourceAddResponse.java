@@ -33,6 +33,9 @@ public class DataSourceAddResponse {
   @SerializedName("errors")
   private List<ApiErrorStruct> errors = null;
 
+  @SerializedName("data")
+  private DataSourceAddResponseData data = null;
+
   public DataSourceAddResponse code(Long code) {
     this.code = code;
     return this;
@@ -117,6 +120,25 @@ public class DataSourceAddResponse {
     this.errors = errors;
   }
 
+  public DataSourceAddResponse data(DataSourceAddResponseData data) {
+    this.data = data;
+    return this;
+  }
+
+  /**
+   * Get data
+   *
+   * @return data
+   */
+  @ApiModelProperty(value = "")
+  public DataSourceAddResponseData getData() {
+    return data;
+  }
+
+  public void setData(DataSourceAddResponseData data) {
+    this.data = data;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -129,12 +151,13 @@ public class DataSourceAddResponse {
     return Objects.equals(this.code, dataSourceAddResponse.code)
         && Objects.equals(this.message, dataSourceAddResponse.message)
         && Objects.equals(this.messageCn, dataSourceAddResponse.messageCn)
-        && Objects.equals(this.errors, dataSourceAddResponse.errors);
+        && Objects.equals(this.errors, dataSourceAddResponse.errors)
+        && Objects.equals(this.data, dataSourceAddResponse.data);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(code, message, messageCn, errors);
+    return Objects.hash(code, message, messageCn, errors, data);
   }
 
   @Override
