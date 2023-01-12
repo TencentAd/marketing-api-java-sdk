@@ -176,6 +176,12 @@ public class AdcreativesGetListStruct {
   @SerializedName("android_quick_app_spec")
   private AndroidQuickAppSpec androidQuickAppSpec = null;
 
+  @SerializedName("live_video_mode")
+  private LiveVideoMode liveVideoMode = null;
+
+  @SerializedName("live_video_sub_mode")
+  private LiveVideoSubMode liveVideoSubMode = null;
+
   @SerializedName("adcreative_template_id")
   private Long adcreativeTemplateId = null;
 
@@ -1172,6 +1178,44 @@ public class AdcreativesGetListStruct {
     this.androidQuickAppSpec = androidQuickAppSpec;
   }
 
+  public AdcreativesGetListStruct liveVideoMode(LiveVideoMode liveVideoMode) {
+    this.liveVideoMode = liveVideoMode;
+    return this;
+  }
+
+  /**
+   * Get liveVideoMode
+   *
+   * @return liveVideoMode
+   */
+  @ApiModelProperty(value = "")
+  public LiveVideoMode getLiveVideoMode() {
+    return liveVideoMode;
+  }
+
+  public void setLiveVideoMode(LiveVideoMode liveVideoMode) {
+    this.liveVideoMode = liveVideoMode;
+  }
+
+  public AdcreativesGetListStruct liveVideoSubMode(LiveVideoSubMode liveVideoSubMode) {
+    this.liveVideoSubMode = liveVideoSubMode;
+    return this;
+  }
+
+  /**
+   * Get liveVideoSubMode
+   *
+   * @return liveVideoSubMode
+   */
+  @ApiModelProperty(value = "")
+  public LiveVideoSubMode getLiveVideoSubMode() {
+    return liveVideoSubMode;
+  }
+
+  public void setLiveVideoSubMode(LiveVideoSubMode liveVideoSubMode) {
+    this.liveVideoSubMode = liveVideoSubMode;
+  }
+
   public AdcreativesGetListStruct adcreativeTemplateId(Long adcreativeTemplateId) {
     this.adcreativeTemplateId = adcreativeTemplateId;
     return this;
@@ -1281,6 +1325,8 @@ public class AdcreativesGetListStruct {
         && Objects.equals(
             this.creativeTemplateCategory, adcreativesGetListStruct.creativeTemplateCategory)
         && Objects.equals(this.androidQuickAppSpec, adcreativesGetListStruct.androidQuickAppSpec)
+        && Objects.equals(this.liveVideoMode, adcreativesGetListStruct.liveVideoMode)
+        && Objects.equals(this.liveVideoSubMode, adcreativesGetListStruct.liveVideoSubMode)
         && Objects.equals(this.adcreativeTemplateId, adcreativesGetListStruct.adcreativeTemplateId)
         && Objects.equals(this.adcreativeElements, adcreativesGetListStruct.adcreativeElements);
   }
@@ -1339,6 +1385,8 @@ public class AdcreativesGetListStruct {
         unionMarketSpec,
         creativeTemplateCategory,
         androidQuickAppSpec,
+        liveVideoMode,
+        liveVideoSubMode,
         adcreativeTemplateId,
         adcreativeElements);
   }

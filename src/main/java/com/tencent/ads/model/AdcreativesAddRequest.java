@@ -141,6 +141,12 @@ public class AdcreativesAddRequest {
   @SerializedName("android_quick_app_spec")
   private AndroidQuickAppSpec androidQuickAppSpec = null;
 
+  @SerializedName("live_video_mode")
+  private LiveVideoMode liveVideoMode = null;
+
+  @SerializedName("live_video_sub_mode")
+  private LiveVideoSubMode liveVideoSubMode = null;
+
   @SerializedName("account_id")
   private Long accountId = null;
 
@@ -926,6 +932,44 @@ public class AdcreativesAddRequest {
     this.androidQuickAppSpec = androidQuickAppSpec;
   }
 
+  public AdcreativesAddRequest liveVideoMode(LiveVideoMode liveVideoMode) {
+    this.liveVideoMode = liveVideoMode;
+    return this;
+  }
+
+  /**
+   * Get liveVideoMode
+   *
+   * @return liveVideoMode
+   */
+  @ApiModelProperty(value = "")
+  public LiveVideoMode getLiveVideoMode() {
+    return liveVideoMode;
+  }
+
+  public void setLiveVideoMode(LiveVideoMode liveVideoMode) {
+    this.liveVideoMode = liveVideoMode;
+  }
+
+  public AdcreativesAddRequest liveVideoSubMode(LiveVideoSubMode liveVideoSubMode) {
+    this.liveVideoSubMode = liveVideoSubMode;
+    return this;
+  }
+
+  /**
+   * Get liveVideoSubMode
+   *
+   * @return liveVideoSubMode
+   */
+  @ApiModelProperty(value = "")
+  public LiveVideoSubMode getLiveVideoSubMode() {
+    return liveVideoSubMode;
+  }
+
+  public void setLiveVideoSubMode(LiveVideoSubMode liveVideoSubMode) {
+    this.liveVideoSubMode = liveVideoSubMode;
+  }
+
   public AdcreativesAddRequest accountId(Long accountId) {
     this.accountId = accountId;
     return this;
@@ -1036,6 +1080,8 @@ public class AdcreativesAddRequest {
         && Objects.equals(this.industryLabel, adcreativesAddRequest.industryLabel)
         && Objects.equals(this.unionMarketSpec, adcreativesAddRequest.unionMarketSpec)
         && Objects.equals(this.androidQuickAppSpec, adcreativesAddRequest.androidQuickAppSpec)
+        && Objects.equals(this.liveVideoMode, adcreativesAddRequest.liveVideoMode)
+        && Objects.equals(this.liveVideoSubMode, adcreativesAddRequest.liveVideoSubMode)
         && Objects.equals(this.accountId, adcreativesAddRequest.accountId)
         && Objects.equals(this.adcreativeTemplateId, adcreativesAddRequest.adcreativeTemplateId)
         && Objects.equals(this.adcreativeElements, adcreativesAddRequest.adcreativeElements);
@@ -1084,6 +1130,8 @@ public class AdcreativesAddRequest {
         industryLabel,
         unionMarketSpec,
         androidQuickAppSpec,
+        liveVideoMode,
+        liveVideoSubMode,
         accountId,
         adcreativeTemplateId,
         adcreativeElements);
