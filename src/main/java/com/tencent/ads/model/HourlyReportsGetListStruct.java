@@ -1533,6 +1533,18 @@ public class HourlyReportsGetListStruct {
   @SerializedName("clk_redpocket_shake_pv")
   private Long clkRedpocketShakePv = null;
 
+  @SerializedName("reg_all_dedup_pv")
+  private Long regAllDedupPv = null;
+
+  @SerializedName("reg_dedup_pv")
+  private Long regDedupPv = null;
+
+  @SerializedName("reg_cost_pla")
+  private Long regCostPla = null;
+
+  @SerializedName("reg_click_rate_pla")
+  private Double regClickRatePla = null;
+
   @SerializedName("request_conversions_count")
   private Long requestConversionsCount = null;
 
@@ -11730,6 +11742,82 @@ public class HourlyReportsGetListStruct {
     this.clkRedpocketShakePv = clkRedpocketShakePv;
   }
 
+  public HourlyReportsGetListStruct regAllDedupPv(Long regAllDedupPv) {
+    this.regAllDedupPv = regAllDedupPv;
+    return this;
+  }
+
+  /**
+   * Get regAllDedupPv
+   *
+   * @return regAllDedupPv
+   */
+  @ApiModelProperty(value = "")
+  public Long getRegAllDedupPv() {
+    return regAllDedupPv;
+  }
+
+  public void setRegAllDedupPv(Long regAllDedupPv) {
+    this.regAllDedupPv = regAllDedupPv;
+  }
+
+  public HourlyReportsGetListStruct regDedupPv(Long regDedupPv) {
+    this.regDedupPv = regDedupPv;
+    return this;
+  }
+
+  /**
+   * Get regDedupPv
+   *
+   * @return regDedupPv
+   */
+  @ApiModelProperty(value = "")
+  public Long getRegDedupPv() {
+    return regDedupPv;
+  }
+
+  public void setRegDedupPv(Long regDedupPv) {
+    this.regDedupPv = regDedupPv;
+  }
+
+  public HourlyReportsGetListStruct regCostPla(Long regCostPla) {
+    this.regCostPla = regCostPla;
+    return this;
+  }
+
+  /**
+   * Get regCostPla
+   *
+   * @return regCostPla
+   */
+  @ApiModelProperty(value = "")
+  public Long getRegCostPla() {
+    return regCostPla;
+  }
+
+  public void setRegCostPla(Long regCostPla) {
+    this.regCostPla = regCostPla;
+  }
+
+  public HourlyReportsGetListStruct regClickRatePla(Double regClickRatePla) {
+    this.regClickRatePla = regClickRatePla;
+    return this;
+  }
+
+  /**
+   * Get regClickRatePla
+   *
+   * @return regClickRatePla
+   */
+  @ApiModelProperty(value = "")
+  public Double getRegClickRatePla() {
+    return regClickRatePla;
+  }
+
+  public void setRegClickRatePla(Double regClickRatePla) {
+    this.regClickRatePla = regClickRatePla;
+  }
+
   public HourlyReportsGetListStruct requestConversionsCount(Long requestConversionsCount) {
     this.requestConversionsCount = requestConversionsCount;
     return this;
@@ -16290,6 +16378,10 @@ public class HourlyReportsGetListStruct {
         && Objects.equals(this.cheout5dRate, hourlyReportsGetListStruct.cheout5dRate)
         && Objects.equals(this.cheout7dRate, hourlyReportsGetListStruct.cheout7dRate)
         && Objects.equals(this.clkRedpocketShakePv, hourlyReportsGetListStruct.clkRedpocketShakePv)
+        && Objects.equals(this.regAllDedupPv, hourlyReportsGetListStruct.regAllDedupPv)
+        && Objects.equals(this.regDedupPv, hourlyReportsGetListStruct.regDedupPv)
+        && Objects.equals(this.regCostPla, hourlyReportsGetListStruct.regCostPla)
+        && Objects.equals(this.regClickRatePla, hourlyReportsGetListStruct.regClickRatePla)
         && Objects.equals(
             this.requestConversionsCount, hourlyReportsGetListStruct.requestConversionsCount)
         && Objects.equals(
@@ -17148,6 +17240,10 @@ public class HourlyReportsGetListStruct {
         cheout5dRate,
         cheout7dRate,
         clkRedpocketShakePv,
+        regAllDedupPv,
+        regDedupPv,
+        regCostPla,
+        regClickRatePla,
         requestConversionsCount,
         requestConversionsCost,
         incomeVal1,

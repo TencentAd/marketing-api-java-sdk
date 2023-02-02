@@ -1464,6 +1464,18 @@ public class TargetingTagReportsGetListStruct {
   @SerializedName("cheout_7d_rate")
   private Double cheout7dRate = null;
 
+  @SerializedName("reg_all_dedup_pv")
+  private Long regAllDedupPv = null;
+
+  @SerializedName("reg_dedup_pv")
+  private Long regDedupPv = null;
+
+  @SerializedName("reg_cost_pla")
+  private Long regCostPla = null;
+
+  @SerializedName("reg_click_rate_pla")
+  private Double regClickRatePla = null;
+
   @SerializedName("age")
   private String age = null;
 
@@ -11112,6 +11124,82 @@ public class TargetingTagReportsGetListStruct {
     this.cheout7dRate = cheout7dRate;
   }
 
+  public TargetingTagReportsGetListStruct regAllDedupPv(Long regAllDedupPv) {
+    this.regAllDedupPv = regAllDedupPv;
+    return this;
+  }
+
+  /**
+   * Get regAllDedupPv
+   *
+   * @return regAllDedupPv
+   */
+  @ApiModelProperty(value = "")
+  public Long getRegAllDedupPv() {
+    return regAllDedupPv;
+  }
+
+  public void setRegAllDedupPv(Long regAllDedupPv) {
+    this.regAllDedupPv = regAllDedupPv;
+  }
+
+  public TargetingTagReportsGetListStruct regDedupPv(Long regDedupPv) {
+    this.regDedupPv = regDedupPv;
+    return this;
+  }
+
+  /**
+   * Get regDedupPv
+   *
+   * @return regDedupPv
+   */
+  @ApiModelProperty(value = "")
+  public Long getRegDedupPv() {
+    return regDedupPv;
+  }
+
+  public void setRegDedupPv(Long regDedupPv) {
+    this.regDedupPv = regDedupPv;
+  }
+
+  public TargetingTagReportsGetListStruct regCostPla(Long regCostPla) {
+    this.regCostPla = regCostPla;
+    return this;
+  }
+
+  /**
+   * Get regCostPla
+   *
+   * @return regCostPla
+   */
+  @ApiModelProperty(value = "")
+  public Long getRegCostPla() {
+    return regCostPla;
+  }
+
+  public void setRegCostPla(Long regCostPla) {
+    this.regCostPla = regCostPla;
+  }
+
+  public TargetingTagReportsGetListStruct regClickRatePla(Double regClickRatePla) {
+    this.regClickRatePla = regClickRatePla;
+    return this;
+  }
+
+  /**
+   * Get regClickRatePla
+   *
+   * @return regClickRatePla
+   */
+  @ApiModelProperty(value = "")
+  public Double getRegClickRatePla() {
+    return regClickRatePla;
+  }
+
+  public void setRegClickRatePla(Double regClickRatePla) {
+    this.regClickRatePla = regClickRatePla;
+  }
+
   public TargetingTagReportsGetListStruct age(String age) {
     this.age = age;
     return this;
@@ -14850,6 +14938,10 @@ public class TargetingTagReportsGetListStruct {
         && Objects.equals(this.cheout3dRate, targetingTagReportsGetListStruct.cheout3dRate)
         && Objects.equals(this.cheout5dRate, targetingTagReportsGetListStruct.cheout5dRate)
         && Objects.equals(this.cheout7dRate, targetingTagReportsGetListStruct.cheout7dRate)
+        && Objects.equals(this.regAllDedupPv, targetingTagReportsGetListStruct.regAllDedupPv)
+        && Objects.equals(this.regDedupPv, targetingTagReportsGetListStruct.regDedupPv)
+        && Objects.equals(this.regCostPla, targetingTagReportsGetListStruct.regCostPla)
+        && Objects.equals(this.regClickRatePla, targetingTagReportsGetListStruct.regClickRatePla)
         && Objects.equals(this.age, targetingTagReportsGetListStruct.age)
         && Objects.equals(this.regionId, targetingTagReportsGetListStruct.regionId)
         && Objects.equals(this.cityId, targetingTagReportsGetListStruct.cityId)
@@ -15618,6 +15710,10 @@ public class TargetingTagReportsGetListStruct {
         cheout3dRate,
         cheout5dRate,
         cheout7dRate,
+        regAllDedupPv,
+        regDedupPv,
+        regCostPla,
+        regClickRatePla,
         age,
         regionId,
         cityId,
