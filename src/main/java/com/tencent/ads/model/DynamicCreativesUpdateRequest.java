@@ -135,6 +135,12 @@ public class DynamicCreativesUpdateRequest {
   @SerializedName("industry_label")
   private String industryLabel = null;
 
+  @SerializedName("sublink_switch")
+  private AdvertiserSublinkSwitch sublinkSwitch = null;
+
+  @SerializedName("pic_material_switch")
+  private AdvertiserPicMaterialSwitch picMaterialSwitch = null;
+
   @SerializedName("account_id")
   private Long accountId = null;
 
@@ -874,6 +880,45 @@ public class DynamicCreativesUpdateRequest {
     this.industryLabel = industryLabel;
   }
 
+  public DynamicCreativesUpdateRequest sublinkSwitch(AdvertiserSublinkSwitch sublinkSwitch) {
+    this.sublinkSwitch = sublinkSwitch;
+    return this;
+  }
+
+  /**
+   * Get sublinkSwitch
+   *
+   * @return sublinkSwitch
+   */
+  @ApiModelProperty(value = "")
+  public AdvertiserSublinkSwitch getSublinkSwitch() {
+    return sublinkSwitch;
+  }
+
+  public void setSublinkSwitch(AdvertiserSublinkSwitch sublinkSwitch) {
+    this.sublinkSwitch = sublinkSwitch;
+  }
+
+  public DynamicCreativesUpdateRequest picMaterialSwitch(
+      AdvertiserPicMaterialSwitch picMaterialSwitch) {
+    this.picMaterialSwitch = picMaterialSwitch;
+    return this;
+  }
+
+  /**
+   * Get picMaterialSwitch
+   *
+   * @return picMaterialSwitch
+   */
+  @ApiModelProperty(value = "")
+  public AdvertiserPicMaterialSwitch getPicMaterialSwitch() {
+    return picMaterialSwitch;
+  }
+
+  public void setPicMaterialSwitch(AdvertiserPicMaterialSwitch picMaterialSwitch) {
+    this.picMaterialSwitch = picMaterialSwitch;
+  }
+
   public DynamicCreativesUpdateRequest accountId(Long accountId) {
     this.accountId = accountId;
     return this;
@@ -953,6 +998,8 @@ public class DynamicCreativesUpdateRequest {
         && Objects.equals(this.headClickSpec, dynamicCreativesUpdateRequest.headClickSpec)
         && Objects.equals(this.campaignId, dynamicCreativesUpdateRequest.campaignId)
         && Objects.equals(this.industryLabel, dynamicCreativesUpdateRequest.industryLabel)
+        && Objects.equals(this.sublinkSwitch, dynamicCreativesUpdateRequest.sublinkSwitch)
+        && Objects.equals(this.picMaterialSwitch, dynamicCreativesUpdateRequest.picMaterialSwitch)
         && Objects.equals(this.accountId, dynamicCreativesUpdateRequest.accountId);
   }
 
@@ -997,6 +1044,8 @@ public class DynamicCreativesUpdateRequest {
         headClickSpec,
         campaignId,
         industryLabel,
+        sublinkSwitch,
+        picMaterialSwitch,
         accountId);
   }
 

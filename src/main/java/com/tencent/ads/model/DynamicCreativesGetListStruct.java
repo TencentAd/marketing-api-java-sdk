@@ -137,6 +137,12 @@ public class DynamicCreativesGetListStruct {
   @SerializedName("industry_label")
   private String industryLabel = null;
 
+  @SerializedName("sublink_switch")
+  private AdvertiserSublinkSwitch sublinkSwitch = null;
+
+  @SerializedName("pic_material_switch")
+  private AdvertiserPicMaterialSwitch picMaterialSwitch = null;
+
   public DynamicCreativesGetListStruct dynamicCreativeId(Long dynamicCreativeId) {
     this.dynamicCreativeId = dynamicCreativeId;
     return this;
@@ -884,6 +890,45 @@ public class DynamicCreativesGetListStruct {
     this.industryLabel = industryLabel;
   }
 
+  public DynamicCreativesGetListStruct sublinkSwitch(AdvertiserSublinkSwitch sublinkSwitch) {
+    this.sublinkSwitch = sublinkSwitch;
+    return this;
+  }
+
+  /**
+   * Get sublinkSwitch
+   *
+   * @return sublinkSwitch
+   */
+  @ApiModelProperty(value = "")
+  public AdvertiserSublinkSwitch getSublinkSwitch() {
+    return sublinkSwitch;
+  }
+
+  public void setSublinkSwitch(AdvertiserSublinkSwitch sublinkSwitch) {
+    this.sublinkSwitch = sublinkSwitch;
+  }
+
+  public DynamicCreativesGetListStruct picMaterialSwitch(
+      AdvertiserPicMaterialSwitch picMaterialSwitch) {
+    this.picMaterialSwitch = picMaterialSwitch;
+    return this;
+  }
+
+  /**
+   * Get picMaterialSwitch
+   *
+   * @return picMaterialSwitch
+   */
+  @ApiModelProperty(value = "")
+  public AdvertiserPicMaterialSwitch getPicMaterialSwitch() {
+    return picMaterialSwitch;
+  }
+
+  public void setPicMaterialSwitch(AdvertiserPicMaterialSwitch picMaterialSwitch) {
+    this.picMaterialSwitch = picMaterialSwitch;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -946,7 +991,9 @@ public class DynamicCreativesGetListStruct {
         && Objects.equals(this.headClickSpec, dynamicCreativesGetListStruct.headClickSpec)
         && Objects.equals(this.asyncJobStatus, dynamicCreativesGetListStruct.asyncJobStatus)
         && Objects.equals(this.pageTrackUrl, dynamicCreativesGetListStruct.pageTrackUrl)
-        && Objects.equals(this.industryLabel, dynamicCreativesGetListStruct.industryLabel);
+        && Objects.equals(this.industryLabel, dynamicCreativesGetListStruct.industryLabel)
+        && Objects.equals(this.sublinkSwitch, dynamicCreativesGetListStruct.sublinkSwitch)
+        && Objects.equals(this.picMaterialSwitch, dynamicCreativesGetListStruct.picMaterialSwitch);
   }
 
   @Override
@@ -989,7 +1036,9 @@ public class DynamicCreativesGetListStruct {
         headClickSpec,
         asyncJobStatus,
         pageTrackUrl,
-        industryLabel);
+        industryLabel,
+        sublinkSwitch,
+        picMaterialSwitch);
   }
 
   @Override
