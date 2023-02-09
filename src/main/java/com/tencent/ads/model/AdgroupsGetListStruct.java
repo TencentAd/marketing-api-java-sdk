@@ -230,6 +230,9 @@ public class AdgroupsGetListStruct {
   @SerializedName("search_expand_targeting_switch")
   private SearchExpandTargetingSwitch searchExpandTargetingSwitch = null;
 
+  @SerializedName("auto_acquisition_status")
+  private AutoAcquisitionStatus autoAcquisitionStatus = null;
+
   public AdgroupsGetListStruct campaignId(Long campaignId) {
     this.campaignId = campaignId;
     return this;
@@ -1614,6 +1617,25 @@ public class AdgroupsGetListStruct {
     this.searchExpandTargetingSwitch = searchExpandTargetingSwitch;
   }
 
+  public AdgroupsGetListStruct autoAcquisitionStatus(AutoAcquisitionStatus autoAcquisitionStatus) {
+    this.autoAcquisitionStatus = autoAcquisitionStatus;
+    return this;
+  }
+
+  /**
+   * Get autoAcquisitionStatus
+   *
+   * @return autoAcquisitionStatus
+   */
+  @ApiModelProperty(value = "")
+  public AutoAcquisitionStatus getAutoAcquisitionStatus() {
+    return autoAcquisitionStatus;
+  }
+
+  public void setAutoAcquisitionStatus(AutoAcquisitionStatus autoAcquisitionStatus) {
+    this.autoAcquisitionStatus = autoAcquisitionStatus;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -1708,7 +1730,8 @@ public class AdgroupsGetListStruct {
             this.autoDerivedLandingPageSwitch, adgroupsGetListStruct.autoDerivedLandingPageSwitch)
         && Objects.equals(this.searchExpansionSwitch, adgroupsGetListStruct.searchExpansionSwitch)
         && Objects.equals(
-            this.searchExpandTargetingSwitch, adgroupsGetListStruct.searchExpandTargetingSwitch);
+            this.searchExpandTargetingSwitch, adgroupsGetListStruct.searchExpandTargetingSwitch)
+        && Objects.equals(this.autoAcquisitionStatus, adgroupsGetListStruct.autoAcquisitionStatus);
   }
 
   @Override
@@ -1782,7 +1805,8 @@ public class AdgroupsGetListStruct {
         systemStatusExplanation,
         autoDerivedLandingPageSwitch,
         searchExpansionSwitch,
-        searchExpandTargetingSwitch);
+        searchExpandTargetingSwitch,
+        autoAcquisitionStatus);
   }
 
   @Override

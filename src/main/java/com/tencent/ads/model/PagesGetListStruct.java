@@ -43,7 +43,7 @@ public class PagesGetListStruct {
   private Long productCatalogId = null;
 
   @SerializedName("page_type")
-  private WechatPagePageType pageType = null;
+  private DestinationTypeRead pageType = null;
 
   @SerializedName("playable_type")
   private PlayableType playableType = null;
@@ -193,7 +193,7 @@ public class PagesGetListStruct {
     this.productCatalogId = productCatalogId;
   }
 
-  public PagesGetListStruct pageType(WechatPagePageType pageType) {
+  public PagesGetListStruct pageType(DestinationTypeRead pageType) {
     this.pageType = pageType;
     return this;
   }
@@ -204,11 +204,11 @@ public class PagesGetListStruct {
    * @return pageType
    */
   @ApiModelProperty(value = "")
-  public WechatPagePageType getPageType() {
+  public DestinationTypeRead getPageType() {
     return pageType;
   }
 
-  public void setPageType(WechatPagePageType pageType) {
+  public void setPageType(DestinationTypeRead pageType) {
     this.pageType = pageType;
   }
 

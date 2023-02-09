@@ -20,7 +20,7 @@ public class GetAdcreativeTemplatePreview {
   public AdcreativeTemplatePreviewGetRequest data = new AdcreativeTemplatePreviewGetRequest();
   public Long adcreativeTemplateId = 133L;
   public List<String> siteSet = Arrays.asList("SITE_SET_WECHAT");
-  public WechatPromotedObjectType promotedObjectType = WechatPromotedObjectType.LINK_WECHAT;
+  public PromotedObjectType promotedObjectType = PromotedObjectType.LINK_WECHAT;
   public String image = "YOUR AD IMAGE ID";
   public DestinationType pageType = DestinationType.DEFAULT;
   public String pageUrl = "YOUR AD PAGE URL";

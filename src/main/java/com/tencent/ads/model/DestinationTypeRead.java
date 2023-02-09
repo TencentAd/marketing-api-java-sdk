@@ -20,8 +20,8 @@ import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
 /** 落地页类型 */
-@JsonAdapter(WechatPagePageType.Adapter.class)
-public enum WechatPagePageType {
+@JsonAdapter(DestinationTypeRead.Adapter.class)
+public enum DestinationTypeRead {
   TSA_APP("PAGE_TYPE_TSA_APP"),
 
   TSA_WEB_NONE_ECOMMERCE("PAGE_TYPE_TSA_WEB_NONE_ECOMMERCE"),
@@ -47,6 +47,10 @@ public enum WechatPagePageType {
   CHANNELS_RESERVE_LIVE("PAGE_TYPE_CHANNELS_RESERVE_LIVE"),
 
   WECHAT_STATUS_FOOTER("PAGE_TYPE_WECHAT_STATUS_FOOTER"),
+
+  WECHAT_CONSULT("PAGE_TYPE_WECHAT_CONSULT"),
+
+  WECOM_CONSULT("PAGE_TYPE_WECOM_CONSULT"),
 
   YOUZAN_SINGLE("PAGE_TYPE_YOUZAN_SINGLE"),
 
@@ -90,7 +94,7 @@ public enum WechatPagePageType {
 
   private String value;
 
-  WechatPagePageType(String value) {
+  DestinationTypeRead(String value) {
     this.value = value;
   }
 
@@ -103,8 +107,8 @@ public enum WechatPagePageType {
     return String.valueOf(value);
   }
 
-  public static WechatPagePageType fromValue(String text) {
-    for (WechatPagePageType b : WechatPagePageType.values()) {
+  public static DestinationTypeRead fromValue(String text) {
+    for (DestinationTypeRead b : DestinationTypeRead.values()) {
       if (String.valueOf(b.value).equals(text)) {
         return b;
       }
@@ -112,17 +116,17 @@ public enum WechatPagePageType {
     return null;
   }
 
-  public static class Adapter extends TypeAdapter<WechatPagePageType> {
+  public static class Adapter extends TypeAdapter<DestinationTypeRead> {
     @Override
-    public void write(final JsonWriter jsonWriter, final WechatPagePageType enumeration)
+    public void write(final JsonWriter jsonWriter, final DestinationTypeRead enumeration)
         throws IOException {
       jsonWriter.value(enumeration.getValue());
     }
 
     @Override
-    public WechatPagePageType read(final JsonReader jsonReader) throws IOException {
+    public DestinationTypeRead read(final JsonReader jsonReader) throws IOException {
       String value = jsonReader.nextString();
-      return WechatPagePageType.fromValue(String.valueOf(value));
+      return DestinationTypeRead.fromValue(String.valueOf(value));
     }
   }
 }

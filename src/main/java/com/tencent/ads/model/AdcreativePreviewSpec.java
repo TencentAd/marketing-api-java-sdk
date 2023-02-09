@@ -30,7 +30,7 @@ public class AdcreativePreviewSpec {
   private List<String> siteSet = null;
 
   @SerializedName("promoted_object_type")
-  private WechatPromotedObjectType promotedObjectType = null;
+  private PromotedObjectType promotedObjectType = null;
 
   @SerializedName("adcreative_elements")
   private AdcreativeCreativeElements adcreativeElements = null;
@@ -90,7 +90,7 @@ public class AdcreativePreviewSpec {
     this.siteSet = siteSet;
   }
 
-  public AdcreativePreviewSpec promotedObjectType(WechatPromotedObjectType promotedObjectType) {
+  public AdcreativePreviewSpec promotedObjectType(PromotedObjectType promotedObjectType) {
     this.promotedObjectType = promotedObjectType;
     return this;
   }
@@ -101,11 +101,11 @@ public class AdcreativePreviewSpec {
    * @return promotedObjectType
    */
   @ApiModelProperty(value = "")
-  public WechatPromotedObjectType getPromotedObjectType() {
+  public PromotedObjectType getPromotedObjectType() {
     return promotedObjectType;
   }
 
-  public void setPromotedObjectType(WechatPromotedObjectType promotedObjectType) {
+  public void setPromotedObjectType(PromotedObjectType promotedObjectType) {
     this.promotedObjectType = promotedObjectType;
   }
 

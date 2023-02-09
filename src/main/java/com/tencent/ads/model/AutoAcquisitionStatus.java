@@ -19,7 +19,9 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-/** 一键起量状态 */
+/**
+ * 一键起量状态,&lt;br/&gt;一键起量状态表示当前广告在开启一键起量时，所处的不同起量阶段。一键起量状态与一键起量开关是两个独立的字段，一键起量开关为客户创建或更新时设置的开关，正常的广告在一键起量过程结束后，一键起量开关不会随一键起量状态改变。起量结束后，如果想再次开启一键起量，需要关闭一键起量开关后再次开启一键起量开关
+ */
 @JsonAdapter(AutoAcquisitionStatus.Adapter.class)
 public enum AutoAcquisitionStatus {
   ACQUISTION_STATUS_UNKNOW("AUTO_ACQUISTION_STATUS_UNKNOW"),

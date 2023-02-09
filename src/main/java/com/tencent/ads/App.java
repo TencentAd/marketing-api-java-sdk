@@ -56,6 +56,7 @@ public class App {
   @Inject BatchRequestsApiContainer batchRequestsApiContainer;
   @Inject BidSimulationApiContainer bidSimulationApiContainer;
   @Inject BidwordApiContainer bidwordApiContainer;
+  @Inject BidwordFlowApiContainer bidwordFlowApiContainer;
   @Inject BidwordRptApiContainer bidwordRptApiContainer;
   @Inject BrandApiContainer brandApiContainer;
   @Inject BusinessManagerRelationsApiContainer businessManagerRelationsApiContainer;
@@ -353,6 +354,10 @@ public class App {
 
   public BidwordApiContainer bidword() {
     return bidwordApiContainer;
+  }
+
+  public BidwordFlowApiContainer bidwordFlow() {
+    return bidwordFlowApiContainer;
   }
 
   public BidwordRptApiContainer bidwordRpt() {
