@@ -21,6 +21,9 @@ import com.tencent.ads.exception.TencentAdsResponseException;
 import com.tencent.ads.model.PromotedObjectAuthorizationAddRequest;
 import com.tencent.ads.model.PromotedObjectAuthorizationAddResponse;
 import com.tencent.ads.model.PromotedObjectAuthorizationAddResponseData;
+import com.tencent.ads.model.PromotedObjectAuthorizationGetResponse;
+import com.tencent.ads.model.PromotedObjectAuthorizationGetResponseData;
+import java.util.List;
 
 public class PromotedObjectAuthorizationApiContainer extends ApiContainer {
 
@@ -37,6 +40,34 @@ public class PromotedObjectAuthorizationApiContainer extends ApiContainer {
   public PromotedObjectAuthorizationAddResponseData promotedObjectAuthorizationAdd(
       PromotedObjectAuthorizationAddRequest data) throws ApiException, TencentAdsResponseException {
     PromotedObjectAuthorizationAddResponse resp = api.promotedObjectAuthorizationAdd(data);
+    handleResponse(gson.toJson(resp));
+    return resp.getData();
+  }
+
+  /**
+   * 获取授权历史记录
+   *
+   * @param accountId (required)
+   * @param promotedObjectType (required)
+   * @param promotedObjectName (optional)
+   * @param page (optional)
+   * @param pageSize (optional)
+   * @param fields 返回参数的字段列表 (optional)
+   * @return PromotedObjectAuthorizationGetResponse
+   * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
+   *     response body
+   */
+  public PromotedObjectAuthorizationGetResponseData promotedObjectAuthorizationGet(
+      Long accountId,
+      String promotedObjectType,
+      String promotedObjectName,
+      Long page,
+      Long pageSize,
+      List<String> fields)
+      throws ApiException, TencentAdsResponseException {
+    PromotedObjectAuthorizationGetResponse resp =
+        api.promotedObjectAuthorizationGet(
+            accountId, promotedObjectType, promotedObjectName, page, pageSize, fields);
     handleResponse(gson.toJson(resp));
     return resp.getData();
   }
