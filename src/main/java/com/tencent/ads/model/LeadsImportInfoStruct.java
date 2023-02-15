@@ -69,6 +69,12 @@ public class LeadsImportInfoStruct {
   @SerializedName("bundle")
   private String bundle = null;
 
+  @SerializedName("leads_convert_type")
+  private String leadsConvertType = null;
+
+  @SerializedName("leads_ineffect_reason")
+  private String leadsIneffectReason = null;
+
   @SerializedName("outer_leads_convert_type")
   private String outerLeadsConvertType = null;
 
@@ -418,6 +424,44 @@ public class LeadsImportInfoStruct {
     this.bundle = bundle;
   }
 
+  public LeadsImportInfoStruct leadsConvertType(String leadsConvertType) {
+    this.leadsConvertType = leadsConvertType;
+    return this;
+  }
+
+  /**
+   * Get leadsConvertType
+   *
+   * @return leadsConvertType
+   */
+  @ApiModelProperty(value = "")
+  public String getLeadsConvertType() {
+    return leadsConvertType;
+  }
+
+  public void setLeadsConvertType(String leadsConvertType) {
+    this.leadsConvertType = leadsConvertType;
+  }
+
+  public LeadsImportInfoStruct leadsIneffectReason(String leadsIneffectReason) {
+    this.leadsIneffectReason = leadsIneffectReason;
+    return this;
+  }
+
+  /**
+   * Get leadsIneffectReason
+   *
+   * @return leadsIneffectReason
+   */
+  @ApiModelProperty(value = "")
+  public String getLeadsIneffectReason() {
+    return leadsIneffectReason;
+  }
+
+  public void setLeadsIneffectReason(String leadsIneffectReason) {
+    this.leadsIneffectReason = leadsIneffectReason;
+  }
+
   public LeadsImportInfoStruct outerLeadsConvertType(String outerLeadsConvertType) {
     this.outerLeadsConvertType = outerLeadsConvertType;
     return this;
@@ -728,6 +772,8 @@ public class LeadsImportInfoStruct {
         && Objects.equals(this.leadsEmail, leadsImportInfoStruct.leadsEmail)
         && Objects.equals(this.leadsArea, leadsImportInfoStruct.leadsArea)
         && Objects.equals(this.bundle, leadsImportInfoStruct.bundle)
+        && Objects.equals(this.leadsConvertType, leadsImportInfoStruct.leadsConvertType)
+        && Objects.equals(this.leadsIneffectReason, leadsImportInfoStruct.leadsIneffectReason)
         && Objects.equals(this.outerLeadsConvertType, leadsImportInfoStruct.outerLeadsConvertType)
         && Objects.equals(
             this.outerLeadsIneffectReason, leadsImportInfoStruct.outerLeadsIneffectReason)
@@ -765,6 +811,8 @@ public class LeadsImportInfoStruct {
         leadsEmail,
         leadsArea,
         bundle,
+        leadsConvertType,
+        leadsIneffectReason,
         outerLeadsConvertType,
         outerLeadsIneffectReason,
         outerLeadsComefrom,

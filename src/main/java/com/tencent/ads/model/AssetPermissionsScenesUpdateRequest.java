@@ -25,7 +25,7 @@ public class AssetPermissionsScenesUpdateRequest {
   private Long accountId = null;
 
   @SerializedName("asset_type")
-  private AssetType assetType = null;
+  private DnAssetType assetType = null;
 
   @SerializedName("asset_id")
   private Long assetId = null;
@@ -58,7 +58,7 @@ public class AssetPermissionsScenesUpdateRequest {
     this.accountId = accountId;
   }
 
-  public AssetPermissionsScenesUpdateRequest assetType(AssetType assetType) {
+  public AssetPermissionsScenesUpdateRequest assetType(DnAssetType assetType) {
     this.assetType = assetType;
     return this;
   }
@@ -69,11 +69,11 @@ public class AssetPermissionsScenesUpdateRequest {
    * @return assetType
    */
   @ApiModelProperty(value = "")
-  public AssetType getAssetType() {
+  public DnAssetType getAssetType() {
     return assetType;
   }
 
-  public void setAssetType(AssetType assetType) {
+  public void setAssetType(DnAssetType assetType) {
     this.assetType = assetType;
   }
 

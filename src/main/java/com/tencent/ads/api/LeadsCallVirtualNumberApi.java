@@ -133,6 +133,8 @@ public class LeadsCallVirtualNumberApi {
   }
 
   /**
+   * 获取中间号
+   *
    * @param data (required)
    * @return LeadsCallVirtualNumberGetResponse
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
@@ -146,6 +148,8 @@ public class LeadsCallVirtualNumberApi {
   }
 
   /**
+   * 获取中间号
+   *
    * @param data (required)
    * @return ApiResponse&lt;LeadsCallVirtualNumberGetResponse&gt;
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
@@ -159,7 +163,7 @@ public class LeadsCallVirtualNumberApi {
   }
 
   /**
-   * (asynchronously)
+   * 获取中间号 (asynchronously)
    *
    * @param data (required)
    * @param callback The callback to be executed when the API call finishes

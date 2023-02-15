@@ -27,6 +27,8 @@ public class LeadsCallRecordApiContainer extends ApiContainer {
   @Inject LeadsCallRecordApi api;
 
   /**
+   * 获取通话结果
+   *
    * @param data (required)
    * @return LeadsCallRecordGetResponse
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the

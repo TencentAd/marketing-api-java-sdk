@@ -41,6 +41,12 @@ public class OuterLeadsStatusInfoStruct {
   @SerializedName("click_id")
   private String clickId = null;
 
+  @SerializedName("leads_convert_type")
+  private String leadsConvertType = null;
+
+  @SerializedName("leads_ineffect_reason")
+  private String leadsIneffectReason = null;
+
   @SerializedName("outer_leads_convert_type")
   private String outerLeadsConvertType = null;
 
@@ -164,6 +170,44 @@ public class OuterLeadsStatusInfoStruct {
     this.clickId = clickId;
   }
 
+  public OuterLeadsStatusInfoStruct leadsConvertType(String leadsConvertType) {
+    this.leadsConvertType = leadsConvertType;
+    return this;
+  }
+
+  /**
+   * Get leadsConvertType
+   *
+   * @return leadsConvertType
+   */
+  @ApiModelProperty(value = "")
+  public String getLeadsConvertType() {
+    return leadsConvertType;
+  }
+
+  public void setLeadsConvertType(String leadsConvertType) {
+    this.leadsConvertType = leadsConvertType;
+  }
+
+  public OuterLeadsStatusInfoStruct leadsIneffectReason(String leadsIneffectReason) {
+    this.leadsIneffectReason = leadsIneffectReason;
+    return this;
+  }
+
+  /**
+   * Get leadsIneffectReason
+   *
+   * @return leadsIneffectReason
+   */
+  @ApiModelProperty(value = "")
+  public String getLeadsIneffectReason() {
+    return leadsIneffectReason;
+  }
+
+  public void setLeadsIneffectReason(String leadsIneffectReason) {
+    this.leadsIneffectReason = leadsIneffectReason;
+  }
+
   public OuterLeadsStatusInfoStruct outerLeadsConvertType(String outerLeadsConvertType) {
     this.outerLeadsConvertType = outerLeadsConvertType;
     return this;
@@ -244,6 +288,8 @@ public class OuterLeadsStatusInfoStruct {
         && Objects.equals(this.leadsQq, outerLeadsStatusInfoStruct.leadsQq)
         && Objects.equals(this.leadsWechat, outerLeadsStatusInfoStruct.leadsWechat)
         && Objects.equals(this.clickId, outerLeadsStatusInfoStruct.clickId)
+        && Objects.equals(this.leadsConvertType, outerLeadsStatusInfoStruct.leadsConvertType)
+        && Objects.equals(this.leadsIneffectReason, outerLeadsStatusInfoStruct.leadsIneffectReason)
         && Objects.equals(
             this.outerLeadsConvertType, outerLeadsStatusInfoStruct.outerLeadsConvertType)
         && Objects.equals(
@@ -260,6 +306,8 @@ public class OuterLeadsStatusInfoStruct {
         leadsQq,
         leadsWechat,
         clickId,
+        leadsConvertType,
+        leadsIneffectReason,
         outerLeadsConvertType,
         outerLeadsIneffectReason,
         customizedTags);

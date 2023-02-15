@@ -133,6 +133,8 @@ public class LeadsCallRecordApi {
   }
 
   /**
+   * 获取通话结果
+   *
    * @param data (required)
    * @return LeadsCallRecordGetResponse
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
@@ -145,6 +147,8 @@ public class LeadsCallRecordApi {
   }
 
   /**
+   * 获取通话结果
+   *
    * @param data (required)
    * @return ApiResponse&lt;LeadsCallRecordGetResponse&gt;
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
@@ -158,7 +162,7 @@ public class LeadsCallRecordApi {
   }
 
   /**
-   * (asynchronously)
+   * 获取通话结果 (asynchronously)
    *
    * @param data (required)
    * @param callback The callback to be executed when the API call finishes

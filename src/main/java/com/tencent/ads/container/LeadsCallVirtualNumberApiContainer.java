@@ -27,6 +27,8 @@ public class LeadsCallVirtualNumberApiContainer extends ApiContainer {
   @Inject LeadsCallVirtualNumberApi api;
 
   /**
+   * 获取中间号
+   *
    * @param data (required)
    * @return LeadsCallVirtualNumberGetResponse
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
