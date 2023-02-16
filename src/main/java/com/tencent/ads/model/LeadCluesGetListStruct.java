@@ -207,6 +207,12 @@ public class LeadCluesGetListStruct {
   @SerializedName("is_broad_cast_leads")
   private String isBroadCastLeads = null;
 
+  @SerializedName("owner_name")
+  private String ownerName = null;
+
+  @SerializedName("all_follow_records")
+  private String allFollowRecords = null;
+
   public LeadCluesGetListStruct accountId(Long accountId) {
     this.accountId = accountId;
     return this;
@@ -1385,6 +1391,44 @@ public class LeadCluesGetListStruct {
     this.isBroadCastLeads = isBroadCastLeads;
   }
 
+  public LeadCluesGetListStruct ownerName(String ownerName) {
+    this.ownerName = ownerName;
+    return this;
+  }
+
+  /**
+   * Get ownerName
+   *
+   * @return ownerName
+   */
+  @ApiModelProperty(value = "")
+  public String getOwnerName() {
+    return ownerName;
+  }
+
+  public void setOwnerName(String ownerName) {
+    this.ownerName = ownerName;
+  }
+
+  public LeadCluesGetListStruct allFollowRecords(String allFollowRecords) {
+    this.allFollowRecords = allFollowRecords;
+    return this;
+  }
+
+  /**
+   * Get allFollowRecords
+   *
+   * @return allFollowRecords
+   */
+  @ApiModelProperty(value = "")
+  public String getAllFollowRecords() {
+    return allFollowRecords;
+  }
+
+  public void setAllFollowRecords(String allFollowRecords) {
+    this.allFollowRecords = allFollowRecords;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -1456,7 +1500,9 @@ public class LeadCluesGetListStruct {
         && Objects.equals(this.callRecordUrl, leadCluesGetListStruct.callRecordUrl)
         && Objects.equals(this.layerFormContent, leadCluesGetListStruct.layerFormContent)
         && Objects.equals(this.nickName, leadCluesGetListStruct.nickName)
-        && Objects.equals(this.isBroadCastLeads, leadCluesGetListStruct.isBroadCastLeads);
+        && Objects.equals(this.isBroadCastLeads, leadCluesGetListStruct.isBroadCastLeads)
+        && Objects.equals(this.ownerName, leadCluesGetListStruct.ownerName)
+        && Objects.equals(this.allFollowRecords, leadCluesGetListStruct.allFollowRecords);
   }
 
   @Override
@@ -1523,7 +1569,9 @@ public class LeadCluesGetListStruct {
         callRecordUrl,
         layerFormContent,
         nickName,
-        isBroadCastLeads);
+        isBroadCastLeads,
+        ownerName,
+        allFollowRecords);
   }
 
   @Override
