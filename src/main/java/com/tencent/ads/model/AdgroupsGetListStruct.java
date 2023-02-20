@@ -114,7 +114,7 @@ public class AdgroupsGetListStruct {
   private DynamicAdSpec dynamicAdSpec = null;
 
   @SerializedName("user_action_sets")
-  private List<UserActionSetStruct> userActionSets = null;
+  private List<UserActionSetStructDn> userActionSets = null;
 
   @SerializedName("additional_user_action_sets")
   private List<UserActionSetStruct> additionalUserActionSets = null;
@@ -812,14 +812,14 @@ public class AdgroupsGetListStruct {
     this.dynamicAdSpec = dynamicAdSpec;
   }
 
-  public AdgroupsGetListStruct userActionSets(List<UserActionSetStruct> userActionSets) {
+  public AdgroupsGetListStruct userActionSets(List<UserActionSetStructDn> userActionSets) {
     this.userActionSets = userActionSets;
     return this;
   }
 
-  public AdgroupsGetListStruct addUserActionSetsItem(UserActionSetStruct userActionSetsItem) {
+  public AdgroupsGetListStruct addUserActionSetsItem(UserActionSetStructDn userActionSetsItem) {
     if (this.userActionSets == null) {
-      this.userActionSets = new ArrayList<UserActionSetStruct>();
+      this.userActionSets = new ArrayList<UserActionSetStructDn>();
     }
     this.userActionSets.add(userActionSetsItem);
     return this;
@@ -831,11 +831,11 @@ public class AdgroupsGetListStruct {
    * @return userActionSets
    */
   @ApiModelProperty(value = "")
-  public List<UserActionSetStruct> getUserActionSets() {
+  public List<UserActionSetStructDn> getUserActionSets() {
     return userActionSets;
   }
 
-  public void setUserActionSets(List<UserActionSetStruct> userActionSets) {
+  public void setUserActionSets(List<UserActionSetStructDn> userActionSets) {
     this.userActionSets = userActionSets;
   }
 
