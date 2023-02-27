@@ -36,6 +36,7 @@ public class App {
   @Inject AdgroupsApiContainer adgroupsApiContainer;
   @Inject AdsApiContainer adsApiContainer;
   @Inject AdvertiserApiContainer advertiserApiContainer;
+  @Inject AdvertiserDailyBudgetApiContainer advertiserDailyBudgetApiContainer;
   @Inject AgencyInnerTransferApiContainer agencyInnerTransferApiContainer;
   @Inject AgencyRealtimeCostApiContainer agencyRealtimeCostApiContainer;
   @Inject AppAndroidChannelPackagesApiContainer appAndroidChannelPackagesApiContainer;
@@ -276,6 +277,10 @@ public class App {
 
   public AdvertiserApiContainer advertiser() {
     return advertiserApiContainer;
+  }
+
+  public AdvertiserDailyBudgetApiContainer advertiserDailyBudget() {
+    return advertiserDailyBudgetApiContainer;
   }
 
   public AgencyInnerTransferApiContainer agencyInnerTransfer() {
