@@ -108,6 +108,12 @@ public class QuerywordRptGetListStruct {
   @SerializedName("placement_group_name")
   private String placementGroupName = null;
 
+  @SerializedName("match_type")
+  private Long matchType = null;
+
+  @SerializedName("match_type_name")
+  private String matchTypeName = null;
+
   public QuerywordRptGetListStruct bidwordId(Long bidwordId) {
     this.bidwordId = bidwordId;
     return this;
@@ -659,6 +665,44 @@ public class QuerywordRptGetListStruct {
     this.placementGroupName = placementGroupName;
   }
 
+  public QuerywordRptGetListStruct matchType(Long matchType) {
+    this.matchType = matchType;
+    return this;
+  }
+
+  /**
+   * Get matchType
+   *
+   * @return matchType
+   */
+  @ApiModelProperty(value = "")
+  public Long getMatchType() {
+    return matchType;
+  }
+
+  public void setMatchType(Long matchType) {
+    this.matchType = matchType;
+  }
+
+  public QuerywordRptGetListStruct matchTypeName(String matchTypeName) {
+    this.matchTypeName = matchTypeName;
+    return this;
+  }
+
+  /**
+   * Get matchTypeName
+   *
+   * @return matchTypeName
+   */
+  @ApiModelProperty(value = "")
+  public String getMatchTypeName() {
+    return matchTypeName;
+  }
+
+  public void setMatchTypeName(String matchTypeName) {
+    this.matchTypeName = matchTypeName;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -702,7 +746,9 @@ public class QuerywordRptGetListStruct {
         && Objects.equals(this.time, querywordRptGetListStruct.time)
         && Objects.equals(this.thousandDisplayPrice, querywordRptGetListStruct.thousandDisplayPrice)
         && Objects.equals(this.placementGroupId, querywordRptGetListStruct.placementGroupId)
-        && Objects.equals(this.placementGroupName, querywordRptGetListStruct.placementGroupName);
+        && Objects.equals(this.placementGroupName, querywordRptGetListStruct.placementGroupName)
+        && Objects.equals(this.matchType, querywordRptGetListStruct.matchType)
+        && Objects.equals(this.matchTypeName, querywordRptGetListStruct.matchTypeName);
   }
 
   @Override
@@ -736,7 +782,9 @@ public class QuerywordRptGetListStruct {
         time,
         thousandDisplayPrice,
         placementGroupId,
-        placementGroupName);
+        placementGroupName,
+        matchType,
+        matchTypeName);
   }
 
   @Override

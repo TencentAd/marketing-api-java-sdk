@@ -197,6 +197,12 @@ public class RevisedAdcreativeElements {
   @SerializedName("button_text_jump_info")
   private LandingPageStructure buttonTextJumpInfo = null;
 
+  @SerializedName("promotion_sublink_component_options")
+  private List<PromotionSublinkComponentOption> promotionSublinkComponentOptions = null;
+
+  @SerializedName("wxgame_playable_page_spec")
+  private WxgamePlayablePageSpec wxgamePlayablePageSpec = null;
+
   public RevisedAdcreativeElements image(String image) {
     this.image = image;
     return this;
@@ -1384,6 +1390,56 @@ public class RevisedAdcreativeElements {
     this.buttonTextJumpInfo = buttonTextJumpInfo;
   }
 
+  public RevisedAdcreativeElements promotionSublinkComponentOptions(
+      List<PromotionSublinkComponentOption> promotionSublinkComponentOptions) {
+    this.promotionSublinkComponentOptions = promotionSublinkComponentOptions;
+    return this;
+  }
+
+  public RevisedAdcreativeElements addPromotionSublinkComponentOptionsItem(
+      PromotionSublinkComponentOption promotionSublinkComponentOptionsItem) {
+    if (this.promotionSublinkComponentOptions == null) {
+      this.promotionSublinkComponentOptions = new ArrayList<PromotionSublinkComponentOption>();
+    }
+    this.promotionSublinkComponentOptions.add(promotionSublinkComponentOptionsItem);
+    return this;
+  }
+
+  /**
+   * Get promotionSublinkComponentOptions
+   *
+   * @return promotionSublinkComponentOptions
+   */
+  @ApiModelProperty(value = "")
+  public List<PromotionSublinkComponentOption> getPromotionSublinkComponentOptions() {
+    return promotionSublinkComponentOptions;
+  }
+
+  public void setPromotionSublinkComponentOptions(
+      List<PromotionSublinkComponentOption> promotionSublinkComponentOptions) {
+    this.promotionSublinkComponentOptions = promotionSublinkComponentOptions;
+  }
+
+  public RevisedAdcreativeElements wxgamePlayablePageSpec(
+      WxgamePlayablePageSpec wxgamePlayablePageSpec) {
+    this.wxgamePlayablePageSpec = wxgamePlayablePageSpec;
+    return this;
+  }
+
+  /**
+   * Get wxgamePlayablePageSpec
+   *
+   * @return wxgamePlayablePageSpec
+   */
+  @ApiModelProperty(value = "")
+  public WxgamePlayablePageSpec getWxgamePlayablePageSpec() {
+    return wxgamePlayablePageSpec;
+  }
+
+  public void setWxgamePlayablePageSpec(WxgamePlayablePageSpec wxgamePlayablePageSpec) {
+    this.wxgamePlayablePageSpec = wxgamePlayablePageSpec;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -1457,7 +1513,12 @@ public class RevisedAdcreativeElements {
         && Objects.equals(this.imageListJumpInfo, revisedAdcreativeElements.imageListJumpInfo)
         && Objects.equals(this.originVideo, revisedAdcreativeElements.originVideo)
         && Objects.equals(this.redEnvelopeStruct, revisedAdcreativeElements.redEnvelopeStruct)
-        && Objects.equals(this.buttonTextJumpInfo, revisedAdcreativeElements.buttonTextJumpInfo);
+        && Objects.equals(this.buttonTextJumpInfo, revisedAdcreativeElements.buttonTextJumpInfo)
+        && Objects.equals(
+            this.promotionSublinkComponentOptions,
+            revisedAdcreativeElements.promotionSublinkComponentOptions)
+        && Objects.equals(
+            this.wxgamePlayablePageSpec, revisedAdcreativeElements.wxgamePlayablePageSpec);
   }
 
   @Override
@@ -1520,7 +1581,9 @@ public class RevisedAdcreativeElements {
         imageListJumpInfo,
         originVideo,
         redEnvelopeStruct,
-        buttonTextJumpInfo);
+        buttonTextJumpInfo,
+        promotionSublinkComponentOptions,
+        wxgamePlayablePageSpec);
   }
 
   @Override

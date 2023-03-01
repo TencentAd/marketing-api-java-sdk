@@ -188,6 +188,9 @@ public class AdcreativeCreativeElementsMp {
   @SerializedName("red_envelope_struct")
   private RedEnvelopeStruct redEnvelopeStruct = null;
 
+  @SerializedName("wxgame_playable_page_spec")
+  private WxgamePlayablePageSpec wxgamePlayablePageSpec = null;
+
   public AdcreativeCreativeElementsMp image(String image) {
     this.image = image;
     return this;
@@ -1281,6 +1284,26 @@ public class AdcreativeCreativeElementsMp {
     this.redEnvelopeStruct = redEnvelopeStruct;
   }
 
+  public AdcreativeCreativeElementsMp wxgamePlayablePageSpec(
+      WxgamePlayablePageSpec wxgamePlayablePageSpec) {
+    this.wxgamePlayablePageSpec = wxgamePlayablePageSpec;
+    return this;
+  }
+
+  /**
+   * Get wxgamePlayablePageSpec
+   *
+   * @return wxgamePlayablePageSpec
+   */
+  @ApiModelProperty(value = "")
+  public WxgamePlayablePageSpec getWxgamePlayablePageSpec() {
+    return wxgamePlayablePageSpec;
+  }
+
+  public void setWxgamePlayablePageSpec(WxgamePlayablePageSpec wxgamePlayablePageSpec) {
+    this.wxgamePlayablePageSpec = wxgamePlayablePageSpec;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -1347,7 +1370,9 @@ public class AdcreativeCreativeElementsMp {
         && Objects.equals(this.imageListJumpInfo, adcreativeCreativeElementsMp.imageListJumpInfo)
         && Objects.equals(this.buttonTextJumpInfo, adcreativeCreativeElementsMp.buttonTextJumpInfo)
         && Objects.equals(this.originVideo, adcreativeCreativeElementsMp.originVideo)
-        && Objects.equals(this.redEnvelopeStruct, adcreativeCreativeElementsMp.redEnvelopeStruct);
+        && Objects.equals(this.redEnvelopeStruct, adcreativeCreativeElementsMp.redEnvelopeStruct)
+        && Objects.equals(
+            this.wxgamePlayablePageSpec, adcreativeCreativeElementsMp.wxgamePlayablePageSpec);
   }
 
   @Override
@@ -1407,7 +1432,8 @@ public class AdcreativeCreativeElementsMp {
         imageListJumpInfo,
         buttonTextJumpInfo,
         originVideo,
-        redEnvelopeStruct);
+        redEnvelopeStruct,
+        wxgamePlayablePageSpec);
   }
 
   @Override

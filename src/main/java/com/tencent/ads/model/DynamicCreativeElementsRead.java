@@ -329,6 +329,12 @@ public class DynamicCreativeElementsRead {
   @SerializedName("image3_component_options")
   private List<ImageComponentOption> image3ComponentOptions = null;
 
+  @SerializedName("promotion_sublink_component_options")
+  private List<PromotionSublinkComponentOption> promotionSublinkComponentOptions = null;
+
+  @SerializedName("wxgame_playable_page_spec")
+  private WxgamePlayablePageSpec wxgamePlayablePageSpec = null;
+
   public DynamicCreativeElementsRead image(String image) {
     this.image = image;
     return this;
@@ -2586,6 +2592,56 @@ public class DynamicCreativeElementsRead {
     this.image3ComponentOptions = image3ComponentOptions;
   }
 
+  public DynamicCreativeElementsRead promotionSublinkComponentOptions(
+      List<PromotionSublinkComponentOption> promotionSublinkComponentOptions) {
+    this.promotionSublinkComponentOptions = promotionSublinkComponentOptions;
+    return this;
+  }
+
+  public DynamicCreativeElementsRead addPromotionSublinkComponentOptionsItem(
+      PromotionSublinkComponentOption promotionSublinkComponentOptionsItem) {
+    if (this.promotionSublinkComponentOptions == null) {
+      this.promotionSublinkComponentOptions = new ArrayList<PromotionSublinkComponentOption>();
+    }
+    this.promotionSublinkComponentOptions.add(promotionSublinkComponentOptionsItem);
+    return this;
+  }
+
+  /**
+   * Get promotionSublinkComponentOptions
+   *
+   * @return promotionSublinkComponentOptions
+   */
+  @ApiModelProperty(value = "")
+  public List<PromotionSublinkComponentOption> getPromotionSublinkComponentOptions() {
+    return promotionSublinkComponentOptions;
+  }
+
+  public void setPromotionSublinkComponentOptions(
+      List<PromotionSublinkComponentOption> promotionSublinkComponentOptions) {
+    this.promotionSublinkComponentOptions = promotionSublinkComponentOptions;
+  }
+
+  public DynamicCreativeElementsRead wxgamePlayablePageSpec(
+      WxgamePlayablePageSpec wxgamePlayablePageSpec) {
+    this.wxgamePlayablePageSpec = wxgamePlayablePageSpec;
+    return this;
+  }
+
+  /**
+   * Get wxgamePlayablePageSpec
+   *
+   * @return wxgamePlayablePageSpec
+   */
+  @ApiModelProperty(value = "")
+  public WxgamePlayablePageSpec getWxgamePlayablePageSpec() {
+    return wxgamePlayablePageSpec;
+  }
+
+  public void setWxgamePlayablePageSpec(WxgamePlayablePageSpec wxgamePlayablePageSpec) {
+    this.wxgamePlayablePageSpec = wxgamePlayablePageSpec;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -2732,7 +2788,12 @@ public class DynamicCreativeElementsRead {
         && Objects.equals(this.redEnvelopeStruct, dynamicCreativeElementsRead.redEnvelopeStruct)
         && Objects.equals(this.buttonTextJumpInfo, dynamicCreativeElementsRead.buttonTextJumpInfo)
         && Objects.equals(
-            this.image3ComponentOptions, dynamicCreativeElementsRead.image3ComponentOptions);
+            this.image3ComponentOptions, dynamicCreativeElementsRead.image3ComponentOptions)
+        && Objects.equals(
+            this.promotionSublinkComponentOptions,
+            dynamicCreativeElementsRead.promotionSublinkComponentOptions)
+        && Objects.equals(
+            this.wxgamePlayablePageSpec, dynamicCreativeElementsRead.wxgamePlayablePageSpec);
   }
 
   @Override
@@ -2839,7 +2900,9 @@ public class DynamicCreativeElementsRead {
         originVideo,
         redEnvelopeStruct,
         buttonTextJumpInfo,
-        image3ComponentOptions);
+        image3ComponentOptions,
+        promotionSublinkComponentOptions,
+        wxgamePlayablePageSpec);
   }
 
   @Override

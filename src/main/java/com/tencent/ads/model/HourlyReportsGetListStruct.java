@@ -1545,6 +1545,36 @@ public class HourlyReportsGetListStruct {
   @SerializedName("reg_click_rate_pla")
   private Double regClickRatePla = null;
 
+  @SerializedName("income_val_24h")
+  private Long incomeVal24h = null;
+
+  @SerializedName("ad_paying_users_24h")
+  private Long adPayingUsers24h = null;
+
+  @SerializedName("income_roi_1_24h")
+  private Double incomeRoi124h = null;
+
+  @SerializedName("ad_pur_arpu_cost_d1_24h")
+  private Long adPurArpuCostD124h = null;
+
+  @SerializedName("first_day_ad_pur_arppu_cost_24h")
+  private Long firstDayAdPurArppuCost24h = null;
+
+  @SerializedName("income_val_24h_pla")
+  private Long incomeVal24hPla = null;
+
+  @SerializedName("ad_paying_users_24h_pla")
+  private Long adPayingUsers24hPla = null;
+
+  @SerializedName("income_roi_1_24h_pla")
+  private Double incomeRoi124hPla = null;
+
+  @SerializedName("ad_pur_arpu_cost_d1_24h_pla")
+  private Long adPurArpuCostD124hPla = null;
+
+  @SerializedName("first_day_ad_pur_arppu_cost_24h_pla")
+  private Long firstDayAdPurArppuCost24hPla = null;
+
   @SerializedName("request_conversions_count")
   private Long requestConversionsCount = null;
 
@@ -11818,6 +11848,197 @@ public class HourlyReportsGetListStruct {
     this.regClickRatePla = regClickRatePla;
   }
 
+  public HourlyReportsGetListStruct incomeVal24h(Long incomeVal24h) {
+    this.incomeVal24h = incomeVal24h;
+    return this;
+  }
+
+  /**
+   * Get incomeVal24h
+   *
+   * @return incomeVal24h
+   */
+  @ApiModelProperty(value = "")
+  public Long getIncomeVal24h() {
+    return incomeVal24h;
+  }
+
+  public void setIncomeVal24h(Long incomeVal24h) {
+    this.incomeVal24h = incomeVal24h;
+  }
+
+  public HourlyReportsGetListStruct adPayingUsers24h(Long adPayingUsers24h) {
+    this.adPayingUsers24h = adPayingUsers24h;
+    return this;
+  }
+
+  /**
+   * Get adPayingUsers24h
+   *
+   * @return adPayingUsers24h
+   */
+  @ApiModelProperty(value = "")
+  public Long getAdPayingUsers24h() {
+    return adPayingUsers24h;
+  }
+
+  public void setAdPayingUsers24h(Long adPayingUsers24h) {
+    this.adPayingUsers24h = adPayingUsers24h;
+  }
+
+  public HourlyReportsGetListStruct incomeRoi124h(Double incomeRoi124h) {
+    this.incomeRoi124h = incomeRoi124h;
+    return this;
+  }
+
+  /**
+   * Get incomeRoi124h
+   *
+   * @return incomeRoi124h
+   */
+  @ApiModelProperty(value = "")
+  public Double getIncomeRoi124h() {
+    return incomeRoi124h;
+  }
+
+  public void setIncomeRoi124h(Double incomeRoi124h) {
+    this.incomeRoi124h = incomeRoi124h;
+  }
+
+  public HourlyReportsGetListStruct adPurArpuCostD124h(Long adPurArpuCostD124h) {
+    this.adPurArpuCostD124h = adPurArpuCostD124h;
+    return this;
+  }
+
+  /**
+   * Get adPurArpuCostD124h
+   *
+   * @return adPurArpuCostD124h
+   */
+  @ApiModelProperty(value = "")
+  public Long getAdPurArpuCostD124h() {
+    return adPurArpuCostD124h;
+  }
+
+  public void setAdPurArpuCostD124h(Long adPurArpuCostD124h) {
+    this.adPurArpuCostD124h = adPurArpuCostD124h;
+  }
+
+  public HourlyReportsGetListStruct firstDayAdPurArppuCost24h(Long firstDayAdPurArppuCost24h) {
+    this.firstDayAdPurArppuCost24h = firstDayAdPurArppuCost24h;
+    return this;
+  }
+
+  /**
+   * Get firstDayAdPurArppuCost24h
+   *
+   * @return firstDayAdPurArppuCost24h
+   */
+  @ApiModelProperty(value = "")
+  public Long getFirstDayAdPurArppuCost24h() {
+    return firstDayAdPurArppuCost24h;
+  }
+
+  public void setFirstDayAdPurArppuCost24h(Long firstDayAdPurArppuCost24h) {
+    this.firstDayAdPurArppuCost24h = firstDayAdPurArppuCost24h;
+  }
+
+  public HourlyReportsGetListStruct incomeVal24hPla(Long incomeVal24hPla) {
+    this.incomeVal24hPla = incomeVal24hPla;
+    return this;
+  }
+
+  /**
+   * Get incomeVal24hPla
+   *
+   * @return incomeVal24hPla
+   */
+  @ApiModelProperty(value = "")
+  public Long getIncomeVal24hPla() {
+    return incomeVal24hPla;
+  }
+
+  public void setIncomeVal24hPla(Long incomeVal24hPla) {
+    this.incomeVal24hPla = incomeVal24hPla;
+  }
+
+  public HourlyReportsGetListStruct adPayingUsers24hPla(Long adPayingUsers24hPla) {
+    this.adPayingUsers24hPla = adPayingUsers24hPla;
+    return this;
+  }
+
+  /**
+   * Get adPayingUsers24hPla
+   *
+   * @return adPayingUsers24hPla
+   */
+  @ApiModelProperty(value = "")
+  public Long getAdPayingUsers24hPla() {
+    return adPayingUsers24hPla;
+  }
+
+  public void setAdPayingUsers24hPla(Long adPayingUsers24hPla) {
+    this.adPayingUsers24hPla = adPayingUsers24hPla;
+  }
+
+  public HourlyReportsGetListStruct incomeRoi124hPla(Double incomeRoi124hPla) {
+    this.incomeRoi124hPla = incomeRoi124hPla;
+    return this;
+  }
+
+  /**
+   * Get incomeRoi124hPla
+   *
+   * @return incomeRoi124hPla
+   */
+  @ApiModelProperty(value = "")
+  public Double getIncomeRoi124hPla() {
+    return incomeRoi124hPla;
+  }
+
+  public void setIncomeRoi124hPla(Double incomeRoi124hPla) {
+    this.incomeRoi124hPla = incomeRoi124hPla;
+  }
+
+  public HourlyReportsGetListStruct adPurArpuCostD124hPla(Long adPurArpuCostD124hPla) {
+    this.adPurArpuCostD124hPla = adPurArpuCostD124hPla;
+    return this;
+  }
+
+  /**
+   * Get adPurArpuCostD124hPla
+   *
+   * @return adPurArpuCostD124hPla
+   */
+  @ApiModelProperty(value = "")
+  public Long getAdPurArpuCostD124hPla() {
+    return adPurArpuCostD124hPla;
+  }
+
+  public void setAdPurArpuCostD124hPla(Long adPurArpuCostD124hPla) {
+    this.adPurArpuCostD124hPla = adPurArpuCostD124hPla;
+  }
+
+  public HourlyReportsGetListStruct firstDayAdPurArppuCost24hPla(
+      Long firstDayAdPurArppuCost24hPla) {
+    this.firstDayAdPurArppuCost24hPla = firstDayAdPurArppuCost24hPla;
+    return this;
+  }
+
+  /**
+   * Get firstDayAdPurArppuCost24hPla
+   *
+   * @return firstDayAdPurArppuCost24hPla
+   */
+  @ApiModelProperty(value = "")
+  public Long getFirstDayAdPurArppuCost24hPla() {
+    return firstDayAdPurArppuCost24hPla;
+  }
+
+  public void setFirstDayAdPurArppuCost24hPla(Long firstDayAdPurArppuCost24hPla) {
+    this.firstDayAdPurArppuCost24hPla = firstDayAdPurArppuCost24hPla;
+  }
+
   public HourlyReportsGetListStruct requestConversionsCount(Long requestConversionsCount) {
     this.requestConversionsCount = requestConversionsCount;
     return this;
@@ -16382,6 +16603,20 @@ public class HourlyReportsGetListStruct {
         && Objects.equals(this.regDedupPv, hourlyReportsGetListStruct.regDedupPv)
         && Objects.equals(this.regCostPla, hourlyReportsGetListStruct.regCostPla)
         && Objects.equals(this.regClickRatePla, hourlyReportsGetListStruct.regClickRatePla)
+        && Objects.equals(this.incomeVal24h, hourlyReportsGetListStruct.incomeVal24h)
+        && Objects.equals(this.adPayingUsers24h, hourlyReportsGetListStruct.adPayingUsers24h)
+        && Objects.equals(this.incomeRoi124h, hourlyReportsGetListStruct.incomeRoi124h)
+        && Objects.equals(this.adPurArpuCostD124h, hourlyReportsGetListStruct.adPurArpuCostD124h)
+        && Objects.equals(
+            this.firstDayAdPurArppuCost24h, hourlyReportsGetListStruct.firstDayAdPurArppuCost24h)
+        && Objects.equals(this.incomeVal24hPla, hourlyReportsGetListStruct.incomeVal24hPla)
+        && Objects.equals(this.adPayingUsers24hPla, hourlyReportsGetListStruct.adPayingUsers24hPla)
+        && Objects.equals(this.incomeRoi124hPla, hourlyReportsGetListStruct.incomeRoi124hPla)
+        && Objects.equals(
+            this.adPurArpuCostD124hPla, hourlyReportsGetListStruct.adPurArpuCostD124hPla)
+        && Objects.equals(
+            this.firstDayAdPurArppuCost24hPla,
+            hourlyReportsGetListStruct.firstDayAdPurArppuCost24hPla)
         && Objects.equals(
             this.requestConversionsCount, hourlyReportsGetListStruct.requestConversionsCount)
         && Objects.equals(
@@ -17244,6 +17479,16 @@ public class HourlyReportsGetListStruct {
         regDedupPv,
         regCostPla,
         regClickRatePla,
+        incomeVal24h,
+        adPayingUsers24h,
+        incomeRoi124h,
+        adPurArpuCostD124h,
+        firstDayAdPurArppuCost24h,
+        incomeVal24hPla,
+        adPayingUsers24hPla,
+        incomeRoi124hPla,
+        adPurArpuCostD124hPla,
+        firstDayAdPurArppuCost24hPla,
         requestConversionsCount,
         requestConversionsCost,
         incomeVal1,

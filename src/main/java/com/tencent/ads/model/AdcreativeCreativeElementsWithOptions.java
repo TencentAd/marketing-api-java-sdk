@@ -206,6 +206,9 @@ public class AdcreativeCreativeElementsWithOptions {
   @SerializedName("button_text_jump_info")
   private LandingPageStructure buttonTextJumpInfo = null;
 
+  @SerializedName("wxgame_playable_page_spec")
+  private WxgamePlayablePageSpec wxgamePlayablePageSpec = null;
+
   public AdcreativeCreativeElementsWithOptions image(String image) {
     this.image = image;
     return this;
@@ -1452,6 +1455,26 @@ public class AdcreativeCreativeElementsWithOptions {
     this.buttonTextJumpInfo = buttonTextJumpInfo;
   }
 
+  public AdcreativeCreativeElementsWithOptions wxgamePlayablePageSpec(
+      WxgamePlayablePageSpec wxgamePlayablePageSpec) {
+    this.wxgamePlayablePageSpec = wxgamePlayablePageSpec;
+    return this;
+  }
+
+  /**
+   * Get wxgamePlayablePageSpec
+   *
+   * @return wxgamePlayablePageSpec
+   */
+  @ApiModelProperty(value = "")
+  public WxgamePlayablePageSpec getWxgamePlayablePageSpec() {
+    return wxgamePlayablePageSpec;
+  }
+
+  public void setWxgamePlayablePageSpec(WxgamePlayablePageSpec wxgamePlayablePageSpec) {
+    this.wxgamePlayablePageSpec = wxgamePlayablePageSpec;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -1542,7 +1565,10 @@ public class AdcreativeCreativeElementsWithOptions {
         && Objects.equals(
             this.redEnvelopeStruct, adcreativeCreativeElementsWithOptions.redEnvelopeStruct)
         && Objects.equals(
-            this.buttonTextJumpInfo, adcreativeCreativeElementsWithOptions.buttonTextJumpInfo);
+            this.buttonTextJumpInfo, adcreativeCreativeElementsWithOptions.buttonTextJumpInfo)
+        && Objects.equals(
+            this.wxgamePlayablePageSpec,
+            adcreativeCreativeElementsWithOptions.wxgamePlayablePageSpec);
   }
 
   @Override
@@ -1608,7 +1634,8 @@ public class AdcreativeCreativeElementsWithOptions {
         imageListJumpInfo,
         originVideo,
         redEnvelopeStruct,
-        buttonTextJumpInfo);
+        buttonTextJumpInfo,
+        wxgamePlayablePageSpec);
   }
 
   @Override

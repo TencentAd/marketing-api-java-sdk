@@ -239,6 +239,9 @@ public class AdcreativeCreativeElementsReadMp {
   @SerializedName("button_text_jump_info")
   private LandingPageStructure buttonTextJumpInfo = null;
 
+  @SerializedName("wxgame_playable_page_spec")
+  private WxgamePlayablePageSpec wxgamePlayablePageSpec = null;
+
   public AdcreativeCreativeElementsReadMp image(String image) {
     this.image = image;
     return this;
@@ -1658,6 +1661,26 @@ public class AdcreativeCreativeElementsReadMp {
     this.buttonTextJumpInfo = buttonTextJumpInfo;
   }
 
+  public AdcreativeCreativeElementsReadMp wxgamePlayablePageSpec(
+      WxgamePlayablePageSpec wxgamePlayablePageSpec) {
+    this.wxgamePlayablePageSpec = wxgamePlayablePageSpec;
+    return this;
+  }
+
+  /**
+   * Get wxgamePlayablePageSpec
+   *
+   * @return wxgamePlayablePageSpec
+   */
+  @ApiModelProperty(value = "")
+  public WxgamePlayablePageSpec getWxgamePlayablePageSpec() {
+    return wxgamePlayablePageSpec;
+  }
+
+  public void setWxgamePlayablePageSpec(WxgamePlayablePageSpec wxgamePlayablePageSpec) {
+    this.wxgamePlayablePageSpec = wxgamePlayablePageSpec;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -1750,7 +1773,9 @@ public class AdcreativeCreativeElementsReadMp {
         && Objects.equals(
             this.redEnvelopeStruct, adcreativeCreativeElementsReadMp.redEnvelopeStruct)
         && Objects.equals(
-            this.buttonTextJumpInfo, adcreativeCreativeElementsReadMp.buttonTextJumpInfo);
+            this.buttonTextJumpInfo, adcreativeCreativeElementsReadMp.buttonTextJumpInfo)
+        && Objects.equals(
+            this.wxgamePlayablePageSpec, adcreativeCreativeElementsReadMp.wxgamePlayablePageSpec);
   }
 
   @Override
@@ -1827,7 +1852,8 @@ public class AdcreativeCreativeElementsReadMp {
         imageListJumpInfo,
         originVideo,
         redEnvelopeStruct,
-        buttonTextJumpInfo);
+        buttonTextJumpInfo,
+        wxgamePlayablePageSpec);
   }
 
   @Override

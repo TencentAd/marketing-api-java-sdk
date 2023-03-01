@@ -105,6 +105,12 @@ public class BidwordRptGetListStruct {
   @SerializedName("thousand_display_price")
   private String thousandDisplayPrice = null;
 
+  @SerializedName("match_type")
+  private Long matchType = null;
+
+  @SerializedName("match_type_name")
+  private String matchTypeName = null;
+
   public BidwordRptGetListStruct bidwordId(Long bidwordId) {
     this.bidwordId = bidwordId;
     return this;
@@ -637,6 +643,44 @@ public class BidwordRptGetListStruct {
     this.thousandDisplayPrice = thousandDisplayPrice;
   }
 
+  public BidwordRptGetListStruct matchType(Long matchType) {
+    this.matchType = matchType;
+    return this;
+  }
+
+  /**
+   * Get matchType
+   *
+   * @return matchType
+   */
+  @ApiModelProperty(value = "")
+  public Long getMatchType() {
+    return matchType;
+  }
+
+  public void setMatchType(Long matchType) {
+    this.matchType = matchType;
+  }
+
+  public BidwordRptGetListStruct matchTypeName(String matchTypeName) {
+    this.matchTypeName = matchTypeName;
+    return this;
+  }
+
+  /**
+   * Get matchTypeName
+   *
+   * @return matchTypeName
+   */
+  @ApiModelProperty(value = "")
+  public String getMatchTypeName() {
+    return matchTypeName;
+  }
+
+  public void setMatchTypeName(String matchTypeName) {
+    this.matchTypeName = matchTypeName;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -679,7 +723,9 @@ public class BidwordRptGetListStruct {
         && Objects.equals(this.deepConversionsCount, bidwordRptGetListStruct.deepConversionsCount)
         && Objects.equals(this.deepConversionsRate, bidwordRptGetListStruct.deepConversionsRate)
         && Objects.equals(this.deepConversionsCost, bidwordRptGetListStruct.deepConversionsCost)
-        && Objects.equals(this.thousandDisplayPrice, bidwordRptGetListStruct.thousandDisplayPrice);
+        && Objects.equals(this.thousandDisplayPrice, bidwordRptGetListStruct.thousandDisplayPrice)
+        && Objects.equals(this.matchType, bidwordRptGetListStruct.matchType)
+        && Objects.equals(this.matchTypeName, bidwordRptGetListStruct.matchTypeName);
   }
 
   @Override
@@ -712,7 +758,9 @@ public class BidwordRptGetListStruct {
         deepConversionsCount,
         deepConversionsRate,
         deepConversionsCost,
-        thousandDisplayPrice);
+        thousandDisplayPrice,
+        matchType,
+        matchTypeName);
   }
 
   @Override
