@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.tencent.ads.api.CampaignsApiTest" tests="9" skipped="9" failures="0" errors="0" timestamp="2023-03-02T03:35:46" hostname="VM_118_42_centos" time="0.0">
+<testsuite name="com.tencent.ads.api.CampaignsApiTest" tests="9" skipped="9" failures="0" errors="0" timestamp="2023-03-02T03:50:25" hostname="VM_118_42_centos" time="0.0">
   <properties/>
   <testcase name="campaignsAddTest" classname="com.tencent.ads.api.CampaignsApiTest" time="0.0">
     <skipped/>
