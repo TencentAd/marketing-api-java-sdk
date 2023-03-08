@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.tencent.ads.api.DataNexusFileApiTest" tests="2" skipped="2" failures="0" errors="0" timestamp="2023-03-02T03:50:25" hostname="VM_118_42_centos" time="0.0">
+<testsuite name="com.tencent.ads.api.DataNexusFileApiTest" tests="2" skipped="2" failures="0" errors="0" timestamp="2023-03-08T02:53:36" hostname="VM_118_42_centos" time="0.0">
   <properties/>
   <testcase name="dataNexusFileAddTest" classname="com.tencent.ads.api.DataNexusFileApiTest" time="0.0">
     <skipped/>
