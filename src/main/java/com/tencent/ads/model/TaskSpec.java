@@ -69,6 +69,9 @@ public class TaskSpec {
   @SerializedName("task_type_review_element_prereview_result_spec")
   private TaskTypeReviewElementPrereviewResultSpec taskTypeReviewElementPrereviewResultSpec = null;
 
+  @SerializedName("task_type_search_download_all_spec")
+  private TaskTypeSearchDownloadAllSpec taskTypeSearchDownloadAllSpec = null;
+
   public TaskSpec reportTaskSpec(ReportTaskSpec reportTaskSpec) {
     this.reportTaskSpec = reportTaskSpec;
     return this;
@@ -390,6 +393,27 @@ public class TaskSpec {
     this.taskTypeReviewElementPrereviewResultSpec = taskTypeReviewElementPrereviewResultSpec;
   }
 
+  public TaskSpec taskTypeSearchDownloadAllSpec(
+      TaskTypeSearchDownloadAllSpec taskTypeSearchDownloadAllSpec) {
+    this.taskTypeSearchDownloadAllSpec = taskTypeSearchDownloadAllSpec;
+    return this;
+  }
+
+  /**
+   * Get taskTypeSearchDownloadAllSpec
+   *
+   * @return taskTypeSearchDownloadAllSpec
+   */
+  @ApiModelProperty(value = "")
+  public TaskTypeSearchDownloadAllSpec getTaskTypeSearchDownloadAllSpec() {
+    return taskTypeSearchDownloadAllSpec;
+  }
+
+  public void setTaskTypeSearchDownloadAllSpec(
+      TaskTypeSearchDownloadAllSpec taskTypeSearchDownloadAllSpec) {
+    this.taskTypeSearchDownloadAllSpec = taskTypeSearchDownloadAllSpec;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -434,7 +458,9 @@ public class TaskSpec {
             this.taskTypeUnionPositionReportSpec, taskSpec.taskTypeUnionPositionReportSpec)
         && Objects.equals(
             this.taskTypeReviewElementPrereviewResultSpec,
-            taskSpec.taskTypeReviewElementPrereviewResultSpec);
+            taskSpec.taskTypeReviewElementPrereviewResultSpec)
+        && Objects.equals(
+            this.taskTypeSearchDownloadAllSpec, taskSpec.taskTypeSearchDownloadAllSpec);
   }
 
   @Override
@@ -454,7 +480,8 @@ public class TaskSpec {
         taskTypeCreateAndroidUnionChannelPackageSpec,
         taskTypeUpdateAndroidUnionChannelPackageSpec,
         taskTypeUnionPositionReportSpec,
-        taskTypeReviewElementPrereviewResultSpec);
+        taskTypeReviewElementPrereviewResultSpec,
+        taskTypeSearchDownloadAllSpec);
   }
 
   @Override
