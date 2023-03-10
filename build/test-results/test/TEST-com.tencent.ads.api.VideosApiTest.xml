@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.tencent.ads.api.VideosApiTest" tests="4" skipped="4" failures="0" errors="0" timestamp="2023-03-10T02:22:54" hostname="VM_118_42_centos" time="0.0">
+  <properties/>
+  <testcase name="videosAddTest" classname="com.tencent.ads.api.VideosApiTest" time="0.0">
+    <skipped/>
+  </testcase>
+  <testcase name="videosUpdateTest" classname="com.tencent.ads.api.VideosApiTest" time="0.0">
+    <skipped/>
+  </testcase>
+  <testcase name="videosGetTest" classname="com.tencent.ads.api.VideosApiTest" time="0.0">
+    <skipped/>
+  </testcase>
+  <testcase name="videosDeleteTest" classname="com.tencent.ads.api.VideosApiTest" time="0.0">
+    <skipped/>
+  </testcase>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
