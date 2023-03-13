@@ -16,6 +16,8 @@ import com.google.gson.Gson;
 import com.google.gson.annotations.SerializedName;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Objects;
 
 /** 咨询组件 */
@@ -23,6 +25,9 @@ import java.util.Objects;
 public class ConsultComponentValueStruct {
   @SerializedName("id")
   private Long id = null;
+
+  @SerializedName("jump_info")
+  private List<LandingPageStructure> jumpInfo = null;
 
   public ConsultComponentValueStruct id(Long id) {
     this.id = id;
@@ -43,6 +48,33 @@ public class ConsultComponentValueStruct {
     this.id = id;
   }
 
+  public ConsultComponentValueStruct jumpInfo(List<LandingPageStructure> jumpInfo) {
+    this.jumpInfo = jumpInfo;
+    return this;
+  }
+
+  public ConsultComponentValueStruct addJumpInfoItem(LandingPageStructure jumpInfoItem) {
+    if (this.jumpInfo == null) {
+      this.jumpInfo = new ArrayList<LandingPageStructure>();
+    }
+    this.jumpInfo.add(jumpInfoItem);
+    return this;
+  }
+
+  /**
+   * Get jumpInfo
+   *
+   * @return jumpInfo
+   */
+  @ApiModelProperty(value = "")
+  public List<LandingPageStructure> getJumpInfo() {
+    return jumpInfo;
+  }
+
+  public void setJumpInfo(List<LandingPageStructure> jumpInfo) {
+    this.jumpInfo = jumpInfo;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -52,12 +84,13 @@ public class ConsultComponentValueStruct {
       return false;
     }
     ConsultComponentValueStruct consultComponentValueStruct = (ConsultComponentValueStruct) o;
-    return Objects.equals(this.id, consultComponentValueStruct.id);
+    return Objects.equals(this.id, consultComponentValueStruct.id)
+        && Objects.equals(this.jumpInfo, consultComponentValueStruct.jumpInfo);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(id);
+    return Objects.hash(id, jumpInfo);
   }
 
   @Override

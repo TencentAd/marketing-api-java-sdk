@@ -120,6 +120,7 @@ public class App {
   @Inject LocalStoresCategoriesApiContainer localStoresCategoriesApiContainer;
   @Inject LocalStoresSearchInfoApiContainer localStoresSearchInfoApiContainer;
   @Inject LocalStoresWxpayMerchantsApiContainer localStoresWxpayMerchantsApiContainer;
+  @Inject MaterialLabelsApiContainer materialLabelsApiContainer;
   @Inject MergeFundTypeDailyBalanceReportApiContainer mergeFundTypeDailyBalanceReportApiContainer;
 
   @Inject
@@ -613,6 +614,10 @@ public class App {
 
   public LocalStoresWxpayMerchantsApiContainer localStoresWxpayMerchants() {
     return localStoresWxpayMerchantsApiContainer;
+  }
+
+  public MaterialLabelsApiContainer materialLabels() {
+    return materialLabelsApiContainer;
   }
 
   public MergeFundTypeDailyBalanceReportApiContainer mergeFundTypeDailyBalanceReport() {

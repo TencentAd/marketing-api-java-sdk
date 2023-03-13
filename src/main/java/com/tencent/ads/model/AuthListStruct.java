@@ -51,6 +51,9 @@ public class AuthListStruct {
   @SerializedName("auth_scope")
   private WechatAuthScope authScope = null;
 
+  @SerializedName("is_ad_acct")
+  private Boolean isAdAcct = null;
+
   public AuthListStruct promotedObjectName(String promotedObjectName) {
     this.promotedObjectName = promotedObjectName;
     return this;
@@ -241,6 +244,25 @@ public class AuthListStruct {
     this.authScope = authScope;
   }
 
+  public AuthListStruct isAdAcct(Boolean isAdAcct) {
+    this.isAdAcct = isAdAcct;
+    return this;
+  }
+
+  /**
+   * Get isAdAcct
+   *
+   * @return isAdAcct
+   */
+  @ApiModelProperty(value = "")
+  public Boolean isIsAdAcct() {
+    return isAdAcct;
+  }
+
+  public void setIsAdAcct(Boolean isAdAcct) {
+    this.isAdAcct = isAdAcct;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -259,7 +281,8 @@ public class AuthListStruct {
         && Objects.equals(this.status, authListStruct.status)
         && Objects.equals(this.auditMsg, authListStruct.auditMsg)
         && Objects.equals(this.authType, authListStruct.authType)
-        && Objects.equals(this.authScope, authListStruct.authScope);
+        && Objects.equals(this.authScope, authListStruct.authScope)
+        && Objects.equals(this.isAdAcct, authListStruct.isAdAcct);
   }
 
   @Override
@@ -274,7 +297,8 @@ public class AuthListStruct {
         status,
         auditMsg,
         authType,
-        authScope);
+        authScope,
+        isAdAcct);
   }
 
   @Override
