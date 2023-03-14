@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.tencent.ads.api.ReportApiTest" tests="4" skipped="4" failures="0" errors="0" timestamp="2023-03-14T03:33:50" hostname="VM_118_42_centos" time="0.001">
+  <properties/>
+  <testcase name="reportLandingPageTest" classname="com.tencent.ads.api.ReportApiTest" time="0.0">
+    <skipped/>
+  </testcase>
+  <testcase name="reportConversionsPredictTest" classname="com.tencent.ads.api.ReportApiTest" time="0.0">
+    <skipped/>
+  </testcase>
+  <testcase name="reportVideoFrameTest" classname="com.tencent.ads.api.ReportApiTest" time="0.0">
+    <skipped/>
+  </testcase>
+  <testcase name="reportAdUnionTest" classname="com.tencent.ads.api.ReportApiTest" time="0.0">
+    <skipped/>
+  </testcase>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
