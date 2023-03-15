@@ -90,6 +90,10 @@ public enum DestinationTypeRead {
 
   TSA_OTT("PAGE_TYPE_TSA_OTT"),
 
+  APP_DEEP_LINK("PAGE_TYPE_APP_DEEP_LINK"),
+
+  UNIVERSAL_LINK("PAGE_TYPE_UNIVERSAL_LINK"),
+
   NOT_USED("PAGE_TYPE_NOT_USED");
 
   private String value;

@@ -48,6 +48,9 @@ public class SuccessPoiInfoStruct {
   @SerializedName("local_store_district")
   private String localStoreDistrict = null;
 
+  @SerializedName("telephone")
+  private String telephone = null;
+
   public SuccessPoiInfoStruct poiId(String poiId) {
     this.poiId = poiId;
     return this;
@@ -219,6 +222,25 @@ public class SuccessPoiInfoStruct {
     this.localStoreDistrict = localStoreDistrict;
   }
 
+  public SuccessPoiInfoStruct telephone(String telephone) {
+    this.telephone = telephone;
+    return this;
+  }
+
+  /**
+   * Get telephone
+   *
+   * @return telephone
+   */
+  @ApiModelProperty(value = "")
+  public String getTelephone() {
+    return telephone;
+  }
+
+  public void setTelephone(String telephone) {
+    this.telephone = telephone;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -236,7 +258,8 @@ public class SuccessPoiInfoStruct {
         && Objects.equals(this.localStoreAddress, successPoiInfoStruct.localStoreAddress)
         && Objects.equals(this.localStoreBusinessArea, successPoiInfoStruct.localStoreBusinessArea)
         && Objects.equals(this.localStoreStreet, successPoiInfoStruct.localStoreStreet)
-        && Objects.equals(this.localStoreDistrict, successPoiInfoStruct.localStoreDistrict);
+        && Objects.equals(this.localStoreDistrict, successPoiInfoStruct.localStoreDistrict)
+        && Objects.equals(this.telephone, successPoiInfoStruct.telephone);
   }
 
   @Override
@@ -250,7 +273,8 @@ public class SuccessPoiInfoStruct {
         localStoreAddress,
         localStoreBusinessArea,
         localStoreStreet,
-        localStoreDistrict);
+        localStoreDistrict,
+        telephone);
   }
 
   @Override

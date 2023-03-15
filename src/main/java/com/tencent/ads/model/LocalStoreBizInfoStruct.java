@@ -74,6 +74,9 @@ public class LocalStoreBizInfoStruct {
   @SerializedName("star")
   private Double star = null;
 
+  @SerializedName("intro")
+  private String intro = null;
+
   public LocalStoreBizInfoStruct poiId(String poiId) {
     this.poiId = poiId;
     return this;
@@ -421,6 +424,25 @@ public class LocalStoreBizInfoStruct {
     this.star = star;
   }
 
+  public LocalStoreBizInfoStruct intro(String intro) {
+    this.intro = intro;
+    return this;
+  }
+
+  /**
+   * Get intro
+   *
+   * @return intro
+   */
+  @ApiModelProperty(value = "")
+  public String getIntro() {
+    return intro;
+  }
+
+  public void setIntro(String intro) {
+    this.intro = intro;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -446,7 +468,8 @@ public class LocalStoreBizInfoStruct {
         && Objects.equals(this.telephone, localStoreBizInfoStruct.telephone)
         && Objects.equals(this.specialService, localStoreBizInfoStruct.specialService)
         && Objects.equals(this.openingStatus, localStoreBizInfoStruct.openingStatus)
-        && Objects.equals(this.star, localStoreBizInfoStruct.star);
+        && Objects.equals(this.star, localStoreBizInfoStruct.star)
+        && Objects.equals(this.intro, localStoreBizInfoStruct.intro);
   }
 
   @Override
@@ -468,7 +491,8 @@ public class LocalStoreBizInfoStruct {
         telephone,
         specialService,
         openingStatus,
-        star);
+        star,
+        intro);
   }
 
   @Override

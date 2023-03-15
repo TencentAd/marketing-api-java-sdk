@@ -71,6 +71,9 @@ public class LocalStoreBizInfoStructRsp {
   @SerializedName("opening_status")
   private LocalStoreOpeningStatus openingStatus = null;
 
+  @SerializedName("intro")
+  private String intro = null;
+
   public LocalStoreBizInfoStructRsp poiId(String poiId) {
     this.poiId = poiId;
     return this;
@@ -399,6 +402,25 @@ public class LocalStoreBizInfoStructRsp {
     this.openingStatus = openingStatus;
   }
 
+  public LocalStoreBizInfoStructRsp intro(String intro) {
+    this.intro = intro;
+    return this;
+  }
+
+  /**
+   * Get intro
+   *
+   * @return intro
+   */
+  @ApiModelProperty(value = "")
+  public String getIntro() {
+    return intro;
+  }
+
+  public void setIntro(String intro) {
+    this.intro = intro;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -423,7 +445,8 @@ public class LocalStoreBizInfoStructRsp {
         && Objects.equals(this.openingHours, localStoreBizInfoStructRsp.openingHours)
         && Objects.equals(this.telephone, localStoreBizInfoStructRsp.telephone)
         && Objects.equals(this.specialService, localStoreBizInfoStructRsp.specialService)
-        && Objects.equals(this.openingStatus, localStoreBizInfoStructRsp.openingStatus);
+        && Objects.equals(this.openingStatus, localStoreBizInfoStructRsp.openingStatus)
+        && Objects.equals(this.intro, localStoreBizInfoStructRsp.intro);
   }
 
   @Override
@@ -444,7 +467,8 @@ public class LocalStoreBizInfoStructRsp {
         openingHours,
         telephone,
         specialService,
-        openingStatus);
+        openingStatus,
+        intro);
   }
 
   @Override

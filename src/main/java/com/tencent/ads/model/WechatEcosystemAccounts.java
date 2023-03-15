@@ -26,6 +26,15 @@ public class WechatEcosystemAccounts {
   @SerializedName("wxpay_merchant_id")
   private List<Long> wxpayMerchantId = null;
 
+  @SerializedName("wechat_official_account_id")
+  private String wechatOfficialAccountId = null;
+
+  @SerializedName("wechat_mini_program_id")
+  private String wechatMiniProgramId = null;
+
+  @SerializedName("wechat_channels_id")
+  private String wechatChannelsId = null;
+
   public WechatEcosystemAccounts wxpayMerchantId(List<Long> wxpayMerchantId) {
     this.wxpayMerchantId = wxpayMerchantId;
     return this;
@@ -53,6 +62,63 @@ public class WechatEcosystemAccounts {
     this.wxpayMerchantId = wxpayMerchantId;
   }
 
+  public WechatEcosystemAccounts wechatOfficialAccountId(String wechatOfficialAccountId) {
+    this.wechatOfficialAccountId = wechatOfficialAccountId;
+    return this;
+  }
+
+  /**
+   * Get wechatOfficialAccountId
+   *
+   * @return wechatOfficialAccountId
+   */
+  @ApiModelProperty(value = "")
+  public String getWechatOfficialAccountId() {
+    return wechatOfficialAccountId;
+  }
+
+  public void setWechatOfficialAccountId(String wechatOfficialAccountId) {
+    this.wechatOfficialAccountId = wechatOfficialAccountId;
+  }
+
+  public WechatEcosystemAccounts wechatMiniProgramId(String wechatMiniProgramId) {
+    this.wechatMiniProgramId = wechatMiniProgramId;
+    return this;
+  }
+
+  /**
+   * Get wechatMiniProgramId
+   *
+   * @return wechatMiniProgramId
+   */
+  @ApiModelProperty(value = "")
+  public String getWechatMiniProgramId() {
+    return wechatMiniProgramId;
+  }
+
+  public void setWechatMiniProgramId(String wechatMiniProgramId) {
+    this.wechatMiniProgramId = wechatMiniProgramId;
+  }
+
+  public WechatEcosystemAccounts wechatChannelsId(String wechatChannelsId) {
+    this.wechatChannelsId = wechatChannelsId;
+    return this;
+  }
+
+  /**
+   * Get wechatChannelsId
+   *
+   * @return wechatChannelsId
+   */
+  @ApiModelProperty(value = "")
+  public String getWechatChannelsId() {
+    return wechatChannelsId;
+  }
+
+  public void setWechatChannelsId(String wechatChannelsId) {
+    this.wechatChannelsId = wechatChannelsId;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -62,12 +128,17 @@ public class WechatEcosystemAccounts {
       return false;
     }
     WechatEcosystemAccounts wechatEcosystemAccounts = (WechatEcosystemAccounts) o;
-    return Objects.equals(this.wxpayMerchantId, wechatEcosystemAccounts.wxpayMerchantId);
+    return Objects.equals(this.wxpayMerchantId, wechatEcosystemAccounts.wxpayMerchantId)
+        && Objects.equals(
+            this.wechatOfficialAccountId, wechatEcosystemAccounts.wechatOfficialAccountId)
+        && Objects.equals(this.wechatMiniProgramId, wechatEcosystemAccounts.wechatMiniProgramId)
+        && Objects.equals(this.wechatChannelsId, wechatEcosystemAccounts.wechatChannelsId);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(wxpayMerchantId);
+    return Objects.hash(
+        wxpayMerchantId, wechatOfficialAccountId, wechatMiniProgramId, wechatChannelsId);
   }
 
   @Override
