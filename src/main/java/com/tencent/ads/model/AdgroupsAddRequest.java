@@ -177,6 +177,9 @@ public class AdgroupsAddRequest {
   @SerializedName("search_expand_targeting_switch")
   private SearchExpandTargetingSwitch searchExpandTargetingSwitch = null;
 
+  @SerializedName("bid_scene")
+  private BidScene bidScene = null;
+
   @SerializedName("account_id")
   private Long accountId = null;
 
@@ -1239,6 +1242,25 @@ public class AdgroupsAddRequest {
     this.searchExpandTargetingSwitch = searchExpandTargetingSwitch;
   }
 
+  public AdgroupsAddRequest bidScene(BidScene bidScene) {
+    this.bidScene = bidScene;
+    return this;
+  }
+
+  /**
+   * Get bidScene
+   *
+   * @return bidScene
+   */
+  @ApiModelProperty(value = "")
+  public BidScene getBidScene() {
+    return bidScene;
+  }
+
+  public void setBidScene(BidScene bidScene) {
+    this.bidScene = bidScene;
+  }
+
   public AdgroupsAddRequest accountId(Long accountId) {
     this.accountId = accountId;
     return this;
@@ -1330,6 +1352,7 @@ public class AdgroupsAddRequest {
         && Objects.equals(this.searchExpansionSwitch, adgroupsAddRequest.searchExpansionSwitch)
         && Objects.equals(
             this.searchExpandTargetingSwitch, adgroupsAddRequest.searchExpandTargetingSwitch)
+        && Objects.equals(this.bidScene, adgroupsAddRequest.bidScene)
         && Objects.equals(this.accountId, adgroupsAddRequest.accountId);
   }
 
@@ -1388,6 +1411,7 @@ public class AdgroupsAddRequest {
         autoDerivedLandingPageSwitch,
         searchExpansionSwitch,
         searchExpandTargetingSwitch,
+        bidScene,
         accountId);
   }
 

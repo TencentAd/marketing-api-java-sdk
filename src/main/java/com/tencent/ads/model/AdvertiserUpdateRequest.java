@@ -33,6 +33,9 @@ public class AdvertiserUpdateRequest {
   @SerializedName("corporation_name")
   private String corporationName = null;
 
+  @SerializedName("corporation_licence")
+  private String corporationLicence = null;
+
   @SerializedName("certification_image_id")
   private String certificationImageId = null;
 
@@ -134,6 +137,25 @@ public class AdvertiserUpdateRequest {
 
   public void setCorporationName(String corporationName) {
     this.corporationName = corporationName;
+  }
+
+  public AdvertiserUpdateRequest corporationLicence(String corporationLicence) {
+    this.corporationLicence = corporationLicence;
+    return this;
+  }
+
+  /**
+   * Get corporationLicence
+   *
+   * @return corporationLicence
+   */
+  @ApiModelProperty(value = "")
+  public String getCorporationLicence() {
+    return corporationLicence;
+  }
+
+  public void setCorporationLicence(String corporationLicence) {
+    this.corporationLicence = corporationLicence;
   }
 
   public AdvertiserUpdateRequest certificationImageId(String certificationImageId) {
@@ -329,6 +351,7 @@ public class AdvertiserUpdateRequest {
         && Objects.equals(this.dailyBudget, advertiserUpdateRequest.dailyBudget)
         && Objects.equals(this.systemIndustryId, advertiserUpdateRequest.systemIndustryId)
         && Objects.equals(this.corporationName, advertiserUpdateRequest.corporationName)
+        && Objects.equals(this.corporationLicence, advertiserUpdateRequest.corporationLicence)
         && Objects.equals(this.certificationImageId, advertiserUpdateRequest.certificationImageId)
         && Objects.equals(this.corporateImageName, advertiserUpdateRequest.corporateImageName)
         && Objects.equals(
@@ -349,6 +372,7 @@ public class AdvertiserUpdateRequest {
         dailyBudget,
         systemIndustryId,
         corporationName,
+        corporationLicence,
         certificationImageId,
         corporateImageName,
         individualQualification,

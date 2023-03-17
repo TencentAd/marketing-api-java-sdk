@@ -191,6 +191,9 @@ public class AdcreativeCreativeElementsMp {
   @SerializedName("wxgame_playable_page_spec")
   private WxgamePlayablePageSpec wxgamePlayablePageSpec = null;
 
+  @SerializedName("main_jump_info")
+  private List<LandingPageStructure> mainJumpInfo = null;
+
   public AdcreativeCreativeElementsMp image(String image) {
     this.image = image;
     return this;
@@ -1304,6 +1307,33 @@ public class AdcreativeCreativeElementsMp {
     this.wxgamePlayablePageSpec = wxgamePlayablePageSpec;
   }
 
+  public AdcreativeCreativeElementsMp mainJumpInfo(List<LandingPageStructure> mainJumpInfo) {
+    this.mainJumpInfo = mainJumpInfo;
+    return this;
+  }
+
+  public AdcreativeCreativeElementsMp addMainJumpInfoItem(LandingPageStructure mainJumpInfoItem) {
+    if (this.mainJumpInfo == null) {
+      this.mainJumpInfo = new ArrayList<LandingPageStructure>();
+    }
+    this.mainJumpInfo.add(mainJumpInfoItem);
+    return this;
+  }
+
+  /**
+   * Get mainJumpInfo
+   *
+   * @return mainJumpInfo
+   */
+  @ApiModelProperty(value = "")
+  public List<LandingPageStructure> getMainJumpInfo() {
+    return mainJumpInfo;
+  }
+
+  public void setMainJumpInfo(List<LandingPageStructure> mainJumpInfo) {
+    this.mainJumpInfo = mainJumpInfo;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -1372,7 +1402,8 @@ public class AdcreativeCreativeElementsMp {
         && Objects.equals(this.originVideo, adcreativeCreativeElementsMp.originVideo)
         && Objects.equals(this.redEnvelopeStruct, adcreativeCreativeElementsMp.redEnvelopeStruct)
         && Objects.equals(
-            this.wxgamePlayablePageSpec, adcreativeCreativeElementsMp.wxgamePlayablePageSpec);
+            this.wxgamePlayablePageSpec, adcreativeCreativeElementsMp.wxgamePlayablePageSpec)
+        && Objects.equals(this.mainJumpInfo, adcreativeCreativeElementsMp.mainJumpInfo);
   }
 
   @Override
@@ -1433,7 +1464,8 @@ public class AdcreativeCreativeElementsMp {
         buttonTextJumpInfo,
         originVideo,
         redEnvelopeStruct,
-        wxgamePlayablePageSpec);
+        wxgamePlayablePageSpec,
+        mainJumpInfo);
   }
 
   @Override

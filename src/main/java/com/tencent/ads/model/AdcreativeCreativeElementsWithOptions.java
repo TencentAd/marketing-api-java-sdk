@@ -209,6 +209,9 @@ public class AdcreativeCreativeElementsWithOptions {
   @SerializedName("wxgame_playable_page_spec")
   private WxgamePlayablePageSpec wxgamePlayablePageSpec = null;
 
+  @SerializedName("main_jump_info")
+  private List<LandingPageStructure> mainJumpInfo = null;
+
   public AdcreativeCreativeElementsWithOptions image(String image) {
     this.image = image;
     return this;
@@ -1475,6 +1478,35 @@ public class AdcreativeCreativeElementsWithOptions {
     this.wxgamePlayablePageSpec = wxgamePlayablePageSpec;
   }
 
+  public AdcreativeCreativeElementsWithOptions mainJumpInfo(
+      List<LandingPageStructure> mainJumpInfo) {
+    this.mainJumpInfo = mainJumpInfo;
+    return this;
+  }
+
+  public AdcreativeCreativeElementsWithOptions addMainJumpInfoItem(
+      LandingPageStructure mainJumpInfoItem) {
+    if (this.mainJumpInfo == null) {
+      this.mainJumpInfo = new ArrayList<LandingPageStructure>();
+    }
+    this.mainJumpInfo.add(mainJumpInfoItem);
+    return this;
+  }
+
+  /**
+   * Get mainJumpInfo
+   *
+   * @return mainJumpInfo
+   */
+  @ApiModelProperty(value = "")
+  public List<LandingPageStructure> getMainJumpInfo() {
+    return mainJumpInfo;
+  }
+
+  public void setMainJumpInfo(List<LandingPageStructure> mainJumpInfo) {
+    this.mainJumpInfo = mainJumpInfo;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -1568,7 +1600,8 @@ public class AdcreativeCreativeElementsWithOptions {
             this.buttonTextJumpInfo, adcreativeCreativeElementsWithOptions.buttonTextJumpInfo)
         && Objects.equals(
             this.wxgamePlayablePageSpec,
-            adcreativeCreativeElementsWithOptions.wxgamePlayablePageSpec);
+            adcreativeCreativeElementsWithOptions.wxgamePlayablePageSpec)
+        && Objects.equals(this.mainJumpInfo, adcreativeCreativeElementsWithOptions.mainJumpInfo);
   }
 
   @Override
@@ -1635,7 +1668,8 @@ public class AdcreativeCreativeElementsWithOptions {
         originVideo,
         redEnvelopeStruct,
         buttonTextJumpInfo,
-        wxgamePlayablePageSpec);
+        wxgamePlayablePageSpec,
+        mainJumpInfo);
   }
 
   @Override

@@ -233,6 +233,9 @@ public class AdgroupsGetListStruct {
   @SerializedName("auto_acquisition_status")
   private AutoAcquisitionStatus autoAcquisitionStatus = null;
 
+  @SerializedName("bid_scene")
+  private BidScene bidScene = null;
+
   public AdgroupsGetListStruct campaignId(Long campaignId) {
     this.campaignId = campaignId;
     return this;
@@ -1636,6 +1639,25 @@ public class AdgroupsGetListStruct {
     this.autoAcquisitionStatus = autoAcquisitionStatus;
   }
 
+  public AdgroupsGetListStruct bidScene(BidScene bidScene) {
+    this.bidScene = bidScene;
+    return this;
+  }
+
+  /**
+   * Get bidScene
+   *
+   * @return bidScene
+   */
+  @ApiModelProperty(value = "")
+  public BidScene getBidScene() {
+    return bidScene;
+  }
+
+  public void setBidScene(BidScene bidScene) {
+    this.bidScene = bidScene;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -1731,7 +1753,8 @@ public class AdgroupsGetListStruct {
         && Objects.equals(this.searchExpansionSwitch, adgroupsGetListStruct.searchExpansionSwitch)
         && Objects.equals(
             this.searchExpandTargetingSwitch, adgroupsGetListStruct.searchExpandTargetingSwitch)
-        && Objects.equals(this.autoAcquisitionStatus, adgroupsGetListStruct.autoAcquisitionStatus);
+        && Objects.equals(this.autoAcquisitionStatus, adgroupsGetListStruct.autoAcquisitionStatus)
+        && Objects.equals(this.bidScene, adgroupsGetListStruct.bidScene);
   }
 
   @Override
@@ -1806,7 +1829,8 @@ public class AdgroupsGetListStruct {
         autoDerivedLandingPageSwitch,
         searchExpansionSwitch,
         searchExpandTargetingSwitch,
-        autoAcquisitionStatus);
+        autoAcquisitionStatus,
+        bidScene);
   }
 
   @Override

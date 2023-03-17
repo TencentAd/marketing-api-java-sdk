@@ -19,24 +19,20 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-/** 异步任务状态 */
-@JsonAdapter(DCAsyncJobStatus.Adapter.class)
-public enum DCAsyncJobStatus {
-  PENDING("DC_ASYNC_JOB_STATUS_PENDING"),
+/** 出价场景，该能力与出价类型(smart_bid_type)/出价策略(bid_strategy)互斥使用 */
+@JsonAdapter(BidScene.Adapter.class)
+public enum BidScene {
+  UNKNOWN("BID_SCENE_UNKNOWN"),
 
-  FAIL("DC_ASYNC_JOB_STATUS_FAIL"),
+  NORMAL_AVERAGE("BID_SCENE_NORMAL_AVERAGE"),
 
-  SUCCESS("DC_ASYNC_JOB_STATUS_SUCCESS"),
+  NORMAL_TARGET("BID_SCENE_NORMAL_TARGET"),
 
-  SYSTEM_ERROR("DC_ASYNC_JOB_STATUS_SYSTEM_ERROR"),
-
-  PROCESSING("DC_ASYNC_JOB_STATUS_PROCESSING"),
-
-  RETRYING("DC_ASYNC_JOB_STATUS_RETRYING");
+  NORMAL_MAX("BID_SCENE_NORMAL_MAX");
 
   private String value;
 
-  DCAsyncJobStatus(String value) {
+  BidScene(String value) {
     this.value = value;
   }
 
@@ -49,8 +45,8 @@ public enum DCAsyncJobStatus {
     return String.valueOf(value);
   }
 
-  public static DCAsyncJobStatus fromValue(String text) {
-    for (DCAsyncJobStatus b : DCAsyncJobStatus.values()) {
+  public static BidScene fromValue(String text) {
+    for (BidScene b : BidScene.values()) {
       if (String.valueOf(b.value).equals(text)) {
         return b;
       }
@@ -58,17 +54,16 @@ public enum DCAsyncJobStatus {
     return null;
   }
 
-  public static class Adapter extends TypeAdapter<DCAsyncJobStatus> {
+  public static class Adapter extends TypeAdapter<BidScene> {
     @Override
-    public void write(final JsonWriter jsonWriter, final DCAsyncJobStatus enumeration)
-        throws IOException {
+    public void write(final JsonWriter jsonWriter, final BidScene enumeration) throws IOException {
       jsonWriter.value(enumeration.getValue());
     }
 
     @Override
-    public DCAsyncJobStatus read(final JsonReader jsonReader) throws IOException {
+    public BidScene read(final JsonReader jsonReader) throws IOException {
       String value = jsonReader.nextString();
-      return DCAsyncJobStatus.fromValue(String.valueOf(value));
+      return BidScene.fromValue(String.valueOf(value));
     }
   }
 }

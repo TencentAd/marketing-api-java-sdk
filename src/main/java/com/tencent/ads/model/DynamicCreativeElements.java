@@ -257,6 +257,9 @@ public class DynamicCreativeElements {
   @SerializedName("wxgame_playable_page_spec")
   private WxgamePlayablePageSpec wxgamePlayablePageSpec = null;
 
+  @SerializedName("main_jump_info")
+  private List<LandingPageStructure> mainJumpInfo = null;
+
   public DynamicCreativeElements image(String image) {
     this.image = image;
     return this;
@@ -2065,6 +2068,33 @@ public class DynamicCreativeElements {
     this.wxgamePlayablePageSpec = wxgamePlayablePageSpec;
   }
 
+  public DynamicCreativeElements mainJumpInfo(List<LandingPageStructure> mainJumpInfo) {
+    this.mainJumpInfo = mainJumpInfo;
+    return this;
+  }
+
+  public DynamicCreativeElements addMainJumpInfoItem(LandingPageStructure mainJumpInfoItem) {
+    if (this.mainJumpInfo == null) {
+      this.mainJumpInfo = new ArrayList<LandingPageStructure>();
+    }
+    this.mainJumpInfo.add(mainJumpInfoItem);
+    return this;
+  }
+
+  /**
+   * Get mainJumpInfo
+   *
+   * @return mainJumpInfo
+   */
+  @ApiModelProperty(value = "")
+  public List<LandingPageStructure> getMainJumpInfo() {
+    return mainJumpInfo;
+  }
+
+  public void setMainJumpInfo(List<LandingPageStructure> mainJumpInfo) {
+    this.mainJumpInfo = mainJumpInfo;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -2175,7 +2205,8 @@ public class DynamicCreativeElements {
             this.promotionSublinkComponentOptions,
             dynamicCreativeElements.promotionSublinkComponentOptions)
         && Objects.equals(
-            this.wxgamePlayablePageSpec, dynamicCreativeElements.wxgamePlayablePageSpec);
+            this.wxgamePlayablePageSpec, dynamicCreativeElements.wxgamePlayablePageSpec)
+        && Objects.equals(this.mainJumpInfo, dynamicCreativeElements.mainJumpInfo);
   }
 
   @Override
@@ -2258,7 +2289,8 @@ public class DynamicCreativeElements {
         buttonTextJumpInfo,
         image3ComponentOptions,
         promotionSublinkComponentOptions,
-        wxgamePlayablePageSpec);
+        wxgamePlayablePageSpec,
+        mainJumpInfo);
   }
 
   @Override
