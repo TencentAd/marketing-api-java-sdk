@@ -1575,6 +1575,24 @@ public class HourlyReportsGetListStruct {
   @SerializedName("first_day_ad_pur_arppu_cost_24h_pla")
   private Long firstDayAdPurArppuCost24hPla = null;
 
+  @SerializedName("clk_related_video_pv")
+  private Long clkRelatedVideoPv = null;
+
+  @SerializedName("clk_brand_pedia_pv")
+  private Long clkBrandPediaPv = null;
+
+  @SerializedName("clk_activity_news_pv")
+  private Long clkActivityNewsPv = null;
+
+  @SerializedName("clk_left_grid_info_pv")
+  private Long clkLeftGridInfoPv = null;
+
+  @SerializedName("clk_left_grid_middle_pv")
+  private Long clkLeftGridMiddlePv = null;
+
+  @SerializedName("clk_right_grid_pv")
+  private Long clkRightGridPv = null;
+
   @SerializedName("request_conversions_count")
   private Long requestConversionsCount = null;
 
@@ -12039,6 +12057,120 @@ public class HourlyReportsGetListStruct {
     this.firstDayAdPurArppuCost24hPla = firstDayAdPurArppuCost24hPla;
   }
 
+  public HourlyReportsGetListStruct clkRelatedVideoPv(Long clkRelatedVideoPv) {
+    this.clkRelatedVideoPv = clkRelatedVideoPv;
+    return this;
+  }
+
+  /**
+   * Get clkRelatedVideoPv
+   *
+   * @return clkRelatedVideoPv
+   */
+  @ApiModelProperty(value = "")
+  public Long getClkRelatedVideoPv() {
+    return clkRelatedVideoPv;
+  }
+
+  public void setClkRelatedVideoPv(Long clkRelatedVideoPv) {
+    this.clkRelatedVideoPv = clkRelatedVideoPv;
+  }
+
+  public HourlyReportsGetListStruct clkBrandPediaPv(Long clkBrandPediaPv) {
+    this.clkBrandPediaPv = clkBrandPediaPv;
+    return this;
+  }
+
+  /**
+   * Get clkBrandPediaPv
+   *
+   * @return clkBrandPediaPv
+   */
+  @ApiModelProperty(value = "")
+  public Long getClkBrandPediaPv() {
+    return clkBrandPediaPv;
+  }
+
+  public void setClkBrandPediaPv(Long clkBrandPediaPv) {
+    this.clkBrandPediaPv = clkBrandPediaPv;
+  }
+
+  public HourlyReportsGetListStruct clkActivityNewsPv(Long clkActivityNewsPv) {
+    this.clkActivityNewsPv = clkActivityNewsPv;
+    return this;
+  }
+
+  /**
+   * Get clkActivityNewsPv
+   *
+   * @return clkActivityNewsPv
+   */
+  @ApiModelProperty(value = "")
+  public Long getClkActivityNewsPv() {
+    return clkActivityNewsPv;
+  }
+
+  public void setClkActivityNewsPv(Long clkActivityNewsPv) {
+    this.clkActivityNewsPv = clkActivityNewsPv;
+  }
+
+  public HourlyReportsGetListStruct clkLeftGridInfoPv(Long clkLeftGridInfoPv) {
+    this.clkLeftGridInfoPv = clkLeftGridInfoPv;
+    return this;
+  }
+
+  /**
+   * Get clkLeftGridInfoPv
+   *
+   * @return clkLeftGridInfoPv
+   */
+  @ApiModelProperty(value = "")
+  public Long getClkLeftGridInfoPv() {
+    return clkLeftGridInfoPv;
+  }
+
+  public void setClkLeftGridInfoPv(Long clkLeftGridInfoPv) {
+    this.clkLeftGridInfoPv = clkLeftGridInfoPv;
+  }
+
+  public HourlyReportsGetListStruct clkLeftGridMiddlePv(Long clkLeftGridMiddlePv) {
+    this.clkLeftGridMiddlePv = clkLeftGridMiddlePv;
+    return this;
+  }
+
+  /**
+   * Get clkLeftGridMiddlePv
+   *
+   * @return clkLeftGridMiddlePv
+   */
+  @ApiModelProperty(value = "")
+  public Long getClkLeftGridMiddlePv() {
+    return clkLeftGridMiddlePv;
+  }
+
+  public void setClkLeftGridMiddlePv(Long clkLeftGridMiddlePv) {
+    this.clkLeftGridMiddlePv = clkLeftGridMiddlePv;
+  }
+
+  public HourlyReportsGetListStruct clkRightGridPv(Long clkRightGridPv) {
+    this.clkRightGridPv = clkRightGridPv;
+    return this;
+  }
+
+  /**
+   * Get clkRightGridPv
+   *
+   * @return clkRightGridPv
+   */
+  @ApiModelProperty(value = "")
+  public Long getClkRightGridPv() {
+    return clkRightGridPv;
+  }
+
+  public void setClkRightGridPv(Long clkRightGridPv) {
+    this.clkRightGridPv = clkRightGridPv;
+  }
+
   public HourlyReportsGetListStruct requestConversionsCount(Long requestConversionsCount) {
     this.requestConversionsCount = requestConversionsCount;
     return this;
@@ -16617,6 +16749,12 @@ public class HourlyReportsGetListStruct {
         && Objects.equals(
             this.firstDayAdPurArppuCost24hPla,
             hourlyReportsGetListStruct.firstDayAdPurArppuCost24hPla)
+        && Objects.equals(this.clkRelatedVideoPv, hourlyReportsGetListStruct.clkRelatedVideoPv)
+        && Objects.equals(this.clkBrandPediaPv, hourlyReportsGetListStruct.clkBrandPediaPv)
+        && Objects.equals(this.clkActivityNewsPv, hourlyReportsGetListStruct.clkActivityNewsPv)
+        && Objects.equals(this.clkLeftGridInfoPv, hourlyReportsGetListStruct.clkLeftGridInfoPv)
+        && Objects.equals(this.clkLeftGridMiddlePv, hourlyReportsGetListStruct.clkLeftGridMiddlePv)
+        && Objects.equals(this.clkRightGridPv, hourlyReportsGetListStruct.clkRightGridPv)
         && Objects.equals(
             this.requestConversionsCount, hourlyReportsGetListStruct.requestConversionsCount)
         && Objects.equals(
@@ -17489,6 +17627,12 @@ public class HourlyReportsGetListStruct {
         incomeRoi124hPla,
         adPurArpuCostD124hPla,
         firstDayAdPurArppuCost24hPla,
+        clkRelatedVideoPv,
+        clkBrandPediaPv,
+        clkActivityNewsPv,
+        clkLeftGridInfoPv,
+        clkLeftGridMiddlePv,
+        clkRightGridPv,
         requestConversionsCount,
         requestConversionsCost,
         incomeVal1,

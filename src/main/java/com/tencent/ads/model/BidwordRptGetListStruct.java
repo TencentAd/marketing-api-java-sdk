@@ -111,6 +111,228 @@ public class BidwordRptGetListStruct {
   @SerializedName("match_type_name")
   private String matchTypeName = null;
 
+  @SerializedName("contract_type")
+  private Long contractType = null;
+
+  @SerializedName("contract_type_name")
+  private String contractTypeName = null;
+
+  @SerializedName("ad_id")
+  private Long adId = null;
+
+  @SerializedName("ad_name")
+  private String adName = null;
+
+  @SerializedName("biz_follow_count")
+  private String bizFollowCount = null;
+
+  @SerializedName("biz_follow_uv")
+  private String bizFollowUv = null;
+
+  @SerializedName("live_stream_avg_time")
+  private String liveStreamAvgTime = null;
+
+  @SerializedName("live_stream_exp_uv")
+  private String liveStreamExpUv = null;
+
+  @SerializedName("video_live_heart_user_count")
+  private String videoLiveHeartUserCount = null;
+
+  @SerializedName("video_live_comment_user_count")
+  private String videoLiveCommentUserCount = null;
+
+  @SerializedName("video_live_share_user_count")
+  private String videoLiveShareUserCount = null;
+
+  @SerializedName("video_live_click_commodity_user_count")
+  private String videoLiveClickCommodityUserCount = null;
+
+  @SerializedName("zone_header_click_count")
+  private String zoneHeaderClickCount = null;
+
+  @SerializedName("basic_info_client_count")
+  private String basicInfoClientCount = null;
+
+  @SerializedName("account_info_click_count")
+  private String accountInfoClickCount = null;
+
+  @SerializedName("activity_info_click_count")
+  private String activityInfoClickCount = null;
+
+  @SerializedName("biz_reg_uv")
+  private String bizRegUv = null;
+
+  @SerializedName("biz_reservation_uv")
+  private String bizReservationUv = null;
+
+  @SerializedName("biz_order_uv")
+  private String bizOrderUv = null;
+
+  @SerializedName("biz_page_apply_uv")
+  private String bizPageApplyUv = null;
+
+  @SerializedName("biz_credit_uv")
+  private String bizCreditUv = null;
+
+  @SerializedName("biz_withdraw_deposits_uv")
+  private String bizWithdrawDepositsUv = null;
+
+  @SerializedName("biz_pre_credit_uv")
+  private String bizPreCreditUv = null;
+
+  @SerializedName("biz_reg_order_amount")
+  private String bizRegOrderAmount = null;
+
+  @SerializedName("biz_reservation_count")
+  private String bizReservationCount = null;
+
+  @SerializedName("biz_reservation_amount")
+  private String bizReservationAmount = null;
+
+  @SerializedName("biz_order_count")
+  private String bizOrderCount = null;
+
+  @SerializedName("biz_order_amount")
+  private String bizOrderAmount = null;
+
+  @SerializedName("biz_1d_order_count")
+  private String biz1dOrderCount = null;
+
+  @SerializedName("biz_1d_order_amount")
+  private String biz1dOrderAmount = null;
+
+  @SerializedName("biz_purchase_count")
+  private String bizPurchaseCount = null;
+
+  @SerializedName("biz_purchase_amount")
+  private String bizPurchaseAmount = null;
+
+  @SerializedName("biz_consult_count")
+  private String bizConsultCount = null;
+
+  @SerializedName("biz_reading_count")
+  private String bizReadingCount = null;
+
+  @SerializedName("biz_page_apply_count")
+  private String bizPageApplyCount = null;
+
+  @SerializedName("biz_credit_count")
+  private String bizCreditCount = null;
+
+  @SerializedName("biz_deposit_count")
+  private String bizDepositCount = null;
+
+  @SerializedName("biz_1d_purchase_count")
+  private String biz1dPurchaseCount = null;
+
+  @SerializedName("biz_1d_purchase_amount")
+  private String biz1dPurchaseAmount = null;
+
+  @SerializedName("biz_3d_purchase_count")
+  private String biz3dPurchaseCount = null;
+
+  @SerializedName("biz_3d_purchase_amount")
+  private String biz3dPurchaseAmount = null;
+
+  @SerializedName("biz_7d_purchase_count")
+  private String biz7dPurchaseCount = null;
+
+  @SerializedName("biz_7d_purchase_amount")
+  private String biz7dPurchaseAmount = null;
+
+  @SerializedName("biz_15d_purchase_count")
+  private String biz15dPurchaseCount = null;
+
+  @SerializedName("biz_15d_purchase_amount")
+  private String biz15dPurchaseAmount = null;
+
+  @SerializedName("biz_30d_purchase_count")
+  private String biz30dPurchaseCount = null;
+
+  @SerializedName("biz_30d_purchase_amount")
+  private String biz30dPurchaseAmount = null;
+
+  @SerializedName("biz_pre_credit_pv")
+  private String bizPreCreditPv = null;
+
+  @SerializedName("video_follow_count")
+  private String videoFollowCount = null;
+
+  @SerializedName("video_heart_count")
+  private String videoHeartCount = null;
+
+  @SerializedName("video_comment_count")
+  private String videoCommentCount = null;
+
+  @SerializedName("video_live_subscribe_count")
+  private String videoLiveSubscribeCount = null;
+
+  @SerializedName("video_live_exp_count")
+  private String videoLiveExpCount = null;
+
+  @SerializedName("video_live_heart_count")
+  private String videoLiveHeartCount = null;
+
+  @SerializedName("video_live_comment_count")
+  private String videoLiveCommentCount = null;
+
+  @SerializedName("video_live_share_count")
+  private String videoLiveShareCount = null;
+
+  @SerializedName("video_live_cick_commodity_count")
+  private String videoLiveCickCommodityCount = null;
+
+  @SerializedName("video_live_commodity_bubble_exp_count")
+  private String videoLiveCommodityBubbleExpCount = null;
+
+  @SerializedName("live_stream_commodity_bubble_clk_pv")
+  private String liveStreamCommodityBubbleClkPv = null;
+
+  @SerializedName("live_stream_commodity_shop_bag_clk_pv")
+  private String liveStreamCommodityShopBagClkPv = null;
+
+  @SerializedName("live_stream_commodity_shop_list_exp_pv")
+  private String liveStreamCommodityShopListExpPv = null;
+
+  @SerializedName("live_stream_order_pv")
+  private String liveStreamOrderPv = null;
+
+  @SerializedName("clk_redpocket_btn_get_pv")
+  private String clkRedpocketBtnGetPv = null;
+
+  @SerializedName("clk_redpocket_btn_share_pv")
+  private String clkRedpocketBtnSharePv = null;
+
+  @SerializedName("clk_redpocket_btn_jump_pv")
+  private String clkRedpocketBtnJumpPv = null;
+
+  @SerializedName("clk_goods_header_pv")
+  private String clkGoodsHeaderPv = null;
+
+  @SerializedName("clk_goods_info_pv")
+  private String clkGoodsInfoPv = null;
+
+  @SerializedName("clk_goods_recommend_pv")
+  private String clkGoodsRecommendPv = null;
+
+  @SerializedName("clk_middle_showwindow_pv")
+  private String clkMiddleShowwindowPv = null;
+
+  @SerializedName("clk_footer_pv")
+  private String clkFooterPv = null;
+
+  @SerializedName("clk_middle_goods_pv")
+  private String clkMiddleGoodsPv = null;
+
+  @SerializedName("clk_middle_btn_pv")
+  private String clkMiddleBtnPv = null;
+
+  @SerializedName("clk_middle_section_pv")
+  private String clkMiddleSectionPv = null;
+
+  @SerializedName("clk_middle_gridview_pv")
+  private String clkMiddleGridviewPv = null;
+
   public BidwordRptGetListStruct bidwordId(Long bidwordId) {
     this.bidwordId = bidwordId;
     return this;
@@ -681,6 +903,1417 @@ public class BidwordRptGetListStruct {
     this.matchTypeName = matchTypeName;
   }
 
+  public BidwordRptGetListStruct contractType(Long contractType) {
+    this.contractType = contractType;
+    return this;
+  }
+
+  /**
+   * Get contractType
+   *
+   * @return contractType
+   */
+  @ApiModelProperty(value = "")
+  public Long getContractType() {
+    return contractType;
+  }
+
+  public void setContractType(Long contractType) {
+    this.contractType = contractType;
+  }
+
+  public BidwordRptGetListStruct contractTypeName(String contractTypeName) {
+    this.contractTypeName = contractTypeName;
+    return this;
+  }
+
+  /**
+   * Get contractTypeName
+   *
+   * @return contractTypeName
+   */
+  @ApiModelProperty(value = "")
+  public String getContractTypeName() {
+    return contractTypeName;
+  }
+
+  public void setContractTypeName(String contractTypeName) {
+    this.contractTypeName = contractTypeName;
+  }
+
+  public BidwordRptGetListStruct adId(Long adId) {
+    this.adId = adId;
+    return this;
+  }
+
+  /**
+   * Get adId
+   *
+   * @return adId
+   */
+  @ApiModelProperty(value = "")
+  public Long getAdId() {
+    return adId;
+  }
+
+  public void setAdId(Long adId) {
+    this.adId = adId;
+  }
+
+  public BidwordRptGetListStruct adName(String adName) {
+    this.adName = adName;
+    return this;
+  }
+
+  /**
+   * Get adName
+   *
+   * @return adName
+   */
+  @ApiModelProperty(value = "")
+  public String getAdName() {
+    return adName;
+  }
+
+  public void setAdName(String adName) {
+    this.adName = adName;
+  }
+
+  public BidwordRptGetListStruct bizFollowCount(String bizFollowCount) {
+    this.bizFollowCount = bizFollowCount;
+    return this;
+  }
+
+  /**
+   * Get bizFollowCount
+   *
+   * @return bizFollowCount
+   */
+  @ApiModelProperty(value = "")
+  public String getBizFollowCount() {
+    return bizFollowCount;
+  }
+
+  public void setBizFollowCount(String bizFollowCount) {
+    this.bizFollowCount = bizFollowCount;
+  }
+
+  public BidwordRptGetListStruct bizFollowUv(String bizFollowUv) {
+    this.bizFollowUv = bizFollowUv;
+    return this;
+  }
+
+  /**
+   * Get bizFollowUv
+   *
+   * @return bizFollowUv
+   */
+  @ApiModelProperty(value = "")
+  public String getBizFollowUv() {
+    return bizFollowUv;
+  }
+
+  public void setBizFollowUv(String bizFollowUv) {
+    this.bizFollowUv = bizFollowUv;
+  }
+
+  public BidwordRptGetListStruct liveStreamAvgTime(String liveStreamAvgTime) {
+    this.liveStreamAvgTime = liveStreamAvgTime;
+    return this;
+  }
+
+  /**
+   * Get liveStreamAvgTime
+   *
+   * @return liveStreamAvgTime
+   */
+  @ApiModelProperty(value = "")
+  public String getLiveStreamAvgTime() {
+    return liveStreamAvgTime;
+  }
+
+  public void setLiveStreamAvgTime(String liveStreamAvgTime) {
+    this.liveStreamAvgTime = liveStreamAvgTime;
+  }
+
+  public BidwordRptGetListStruct liveStreamExpUv(String liveStreamExpUv) {
+    this.liveStreamExpUv = liveStreamExpUv;
+    return this;
+  }
+
+  /**
+   * Get liveStreamExpUv
+   *
+   * @return liveStreamExpUv
+   */
+  @ApiModelProperty(value = "")
+  public String getLiveStreamExpUv() {
+    return liveStreamExpUv;
+  }
+
+  public void setLiveStreamExpUv(String liveStreamExpUv) {
+    this.liveStreamExpUv = liveStreamExpUv;
+  }
+
+  public BidwordRptGetListStruct videoLiveHeartUserCount(String videoLiveHeartUserCount) {
+    this.videoLiveHeartUserCount = videoLiveHeartUserCount;
+    return this;
+  }
+
+  /**
+   * Get videoLiveHeartUserCount
+   *
+   * @return videoLiveHeartUserCount
+   */
+  @ApiModelProperty(value = "")
+  public String getVideoLiveHeartUserCount() {
+    return videoLiveHeartUserCount;
+  }
+
+  public void setVideoLiveHeartUserCount(String videoLiveHeartUserCount) {
+    this.videoLiveHeartUserCount = videoLiveHeartUserCount;
+  }
+
+  public BidwordRptGetListStruct videoLiveCommentUserCount(String videoLiveCommentUserCount) {
+    this.videoLiveCommentUserCount = videoLiveCommentUserCount;
+    return this;
+  }
+
+  /**
+   * Get videoLiveCommentUserCount
+   *
+   * @return videoLiveCommentUserCount
+   */
+  @ApiModelProperty(value = "")
+  public String getVideoLiveCommentUserCount() {
+    return videoLiveCommentUserCount;
+  }
+
+  public void setVideoLiveCommentUserCount(String videoLiveCommentUserCount) {
+    this.videoLiveCommentUserCount = videoLiveCommentUserCount;
+  }
+
+  public BidwordRptGetListStruct videoLiveShareUserCount(String videoLiveShareUserCount) {
+    this.videoLiveShareUserCount = videoLiveShareUserCount;
+    return this;
+  }
+
+  /**
+   * Get videoLiveShareUserCount
+   *
+   * @return videoLiveShareUserCount
+   */
+  @ApiModelProperty(value = "")
+  public String getVideoLiveShareUserCount() {
+    return videoLiveShareUserCount;
+  }
+
+  public void setVideoLiveShareUserCount(String videoLiveShareUserCount) {
+    this.videoLiveShareUserCount = videoLiveShareUserCount;
+  }
+
+  public BidwordRptGetListStruct videoLiveClickCommodityUserCount(
+      String videoLiveClickCommodityUserCount) {
+    this.videoLiveClickCommodityUserCount = videoLiveClickCommodityUserCount;
+    return this;
+  }
+
+  /**
+   * Get videoLiveClickCommodityUserCount
+   *
+   * @return videoLiveClickCommodityUserCount
+   */
+  @ApiModelProperty(value = "")
+  public String getVideoLiveClickCommodityUserCount() {
+    return videoLiveClickCommodityUserCount;
+  }
+
+  public void setVideoLiveClickCommodityUserCount(String videoLiveClickCommodityUserCount) {
+    this.videoLiveClickCommodityUserCount = videoLiveClickCommodityUserCount;
+  }
+
+  public BidwordRptGetListStruct zoneHeaderClickCount(String zoneHeaderClickCount) {
+    this.zoneHeaderClickCount = zoneHeaderClickCount;
+    return this;
+  }
+
+  /**
+   * Get zoneHeaderClickCount
+   *
+   * @return zoneHeaderClickCount
+   */
+  @ApiModelProperty(value = "")
+  public String getZoneHeaderClickCount() {
+    return zoneHeaderClickCount;
+  }
+
+  public void setZoneHeaderClickCount(String zoneHeaderClickCount) {
+    this.zoneHeaderClickCount = zoneHeaderClickCount;
+  }
+
+  public BidwordRptGetListStruct basicInfoClientCount(String basicInfoClientCount) {
+    this.basicInfoClientCount = basicInfoClientCount;
+    return this;
+  }
+
+  /**
+   * Get basicInfoClientCount
+   *
+   * @return basicInfoClientCount
+   */
+  @ApiModelProperty(value = "")
+  public String getBasicInfoClientCount() {
+    return basicInfoClientCount;
+  }
+
+  public void setBasicInfoClientCount(String basicInfoClientCount) {
+    this.basicInfoClientCount = basicInfoClientCount;
+  }
+
+  public BidwordRptGetListStruct accountInfoClickCount(String accountInfoClickCount) {
+    this.accountInfoClickCount = accountInfoClickCount;
+    return this;
+  }
+
+  /**
+   * Get accountInfoClickCount
+   *
+   * @return accountInfoClickCount
+   */
+  @ApiModelProperty(value = "")
+  public String getAccountInfoClickCount() {
+    return accountInfoClickCount;
+  }
+
+  public void setAccountInfoClickCount(String accountInfoClickCount) {
+    this.accountInfoClickCount = accountInfoClickCount;
+  }
+
+  public BidwordRptGetListStruct activityInfoClickCount(String activityInfoClickCount) {
+    this.activityInfoClickCount = activityInfoClickCount;
+    return this;
+  }
+
+  /**
+   * Get activityInfoClickCount
+   *
+   * @return activityInfoClickCount
+   */
+  @ApiModelProperty(value = "")
+  public String getActivityInfoClickCount() {
+    return activityInfoClickCount;
+  }
+
+  public void setActivityInfoClickCount(String activityInfoClickCount) {
+    this.activityInfoClickCount = activityInfoClickCount;
+  }
+
+  public BidwordRptGetListStruct bizRegUv(String bizRegUv) {
+    this.bizRegUv = bizRegUv;
+    return this;
+  }
+
+  /**
+   * Get bizRegUv
+   *
+   * @return bizRegUv
+   */
+  @ApiModelProperty(value = "")
+  public String getBizRegUv() {
+    return bizRegUv;
+  }
+
+  public void setBizRegUv(String bizRegUv) {
+    this.bizRegUv = bizRegUv;
+  }
+
+  public BidwordRptGetListStruct bizReservationUv(String bizReservationUv) {
+    this.bizReservationUv = bizReservationUv;
+    return this;
+  }
+
+  /**
+   * Get bizReservationUv
+   *
+   * @return bizReservationUv
+   */
+  @ApiModelProperty(value = "")
+  public String getBizReservationUv() {
+    return bizReservationUv;
+  }
+
+  public void setBizReservationUv(String bizReservationUv) {
+    this.bizReservationUv = bizReservationUv;
+  }
+
+  public BidwordRptGetListStruct bizOrderUv(String bizOrderUv) {
+    this.bizOrderUv = bizOrderUv;
+    return this;
+  }
+
+  /**
+   * Get bizOrderUv
+   *
+   * @return bizOrderUv
+   */
+  @ApiModelProperty(value = "")
+  public String getBizOrderUv() {
+    return bizOrderUv;
+  }
+
+  public void setBizOrderUv(String bizOrderUv) {
+    this.bizOrderUv = bizOrderUv;
+  }
+
+  public BidwordRptGetListStruct bizPageApplyUv(String bizPageApplyUv) {
+    this.bizPageApplyUv = bizPageApplyUv;
+    return this;
+  }
+
+  /**
+   * Get bizPageApplyUv
+   *
+   * @return bizPageApplyUv
+   */
+  @ApiModelProperty(value = "")
+  public String getBizPageApplyUv() {
+    return bizPageApplyUv;
+  }
+
+  public void setBizPageApplyUv(String bizPageApplyUv) {
+    this.bizPageApplyUv = bizPageApplyUv;
+  }
+
+  public BidwordRptGetListStruct bizCreditUv(String bizCreditUv) {
+    this.bizCreditUv = bizCreditUv;
+    return this;
+  }
+
+  /**
+   * Get bizCreditUv
+   *
+   * @return bizCreditUv
+   */
+  @ApiModelProperty(value = "")
+  public String getBizCreditUv() {
+    return bizCreditUv;
+  }
+
+  public void setBizCreditUv(String bizCreditUv) {
+    this.bizCreditUv = bizCreditUv;
+  }
+
+  public BidwordRptGetListStruct bizWithdrawDepositsUv(String bizWithdrawDepositsUv) {
+    this.bizWithdrawDepositsUv = bizWithdrawDepositsUv;
+    return this;
+  }
+
+  /**
+   * Get bizWithdrawDepositsUv
+   *
+   * @return bizWithdrawDepositsUv
+   */
+  @ApiModelProperty(value = "")
+  public String getBizWithdrawDepositsUv() {
+    return bizWithdrawDepositsUv;
+  }
+
+  public void setBizWithdrawDepositsUv(String bizWithdrawDepositsUv) {
+    this.bizWithdrawDepositsUv = bizWithdrawDepositsUv;
+  }
+
+  public BidwordRptGetListStruct bizPreCreditUv(String bizPreCreditUv) {
+    this.bizPreCreditUv = bizPreCreditUv;
+    return this;
+  }
+
+  /**
+   * Get bizPreCreditUv
+   *
+   * @return bizPreCreditUv
+   */
+  @ApiModelProperty(value = "")
+  public String getBizPreCreditUv() {
+    return bizPreCreditUv;
+  }
+
+  public void setBizPreCreditUv(String bizPreCreditUv) {
+    this.bizPreCreditUv = bizPreCreditUv;
+  }
+
+  public BidwordRptGetListStruct bizRegOrderAmount(String bizRegOrderAmount) {
+    this.bizRegOrderAmount = bizRegOrderAmount;
+    return this;
+  }
+
+  /**
+   * Get bizRegOrderAmount
+   *
+   * @return bizRegOrderAmount
+   */
+  @ApiModelProperty(value = "")
+  public String getBizRegOrderAmount() {
+    return bizRegOrderAmount;
+  }
+
+  public void setBizRegOrderAmount(String bizRegOrderAmount) {
+    this.bizRegOrderAmount = bizRegOrderAmount;
+  }
+
+  public BidwordRptGetListStruct bizReservationCount(String bizReservationCount) {
+    this.bizReservationCount = bizReservationCount;
+    return this;
+  }
+
+  /**
+   * Get bizReservationCount
+   *
+   * @return bizReservationCount
+   */
+  @ApiModelProperty(value = "")
+  public String getBizReservationCount() {
+    return bizReservationCount;
+  }
+
+  public void setBizReservationCount(String bizReservationCount) {
+    this.bizReservationCount = bizReservationCount;
+  }
+
+  public BidwordRptGetListStruct bizReservationAmount(String bizReservationAmount) {
+    this.bizReservationAmount = bizReservationAmount;
+    return this;
+  }
+
+  /**
+   * Get bizReservationAmount
+   *
+   * @return bizReservationAmount
+   */
+  @ApiModelProperty(value = "")
+  public String getBizReservationAmount() {
+    return bizReservationAmount;
+  }
+
+  public void setBizReservationAmount(String bizReservationAmount) {
+    this.bizReservationAmount = bizReservationAmount;
+  }
+
+  public BidwordRptGetListStruct bizOrderCount(String bizOrderCount) {
+    this.bizOrderCount = bizOrderCount;
+    return this;
+  }
+
+  /**
+   * Get bizOrderCount
+   *
+   * @return bizOrderCount
+   */
+  @ApiModelProperty(value = "")
+  public String getBizOrderCount() {
+    return bizOrderCount;
+  }
+
+  public void setBizOrderCount(String bizOrderCount) {
+    this.bizOrderCount = bizOrderCount;
+  }
+
+  public BidwordRptGetListStruct bizOrderAmount(String bizOrderAmount) {
+    this.bizOrderAmount = bizOrderAmount;
+    return this;
+  }
+
+  /**
+   * Get bizOrderAmount
+   *
+   * @return bizOrderAmount
+   */
+  @ApiModelProperty(value = "")
+  public String getBizOrderAmount() {
+    return bizOrderAmount;
+  }
+
+  public void setBizOrderAmount(String bizOrderAmount) {
+    this.bizOrderAmount = bizOrderAmount;
+  }
+
+  public BidwordRptGetListStruct biz1dOrderCount(String biz1dOrderCount) {
+    this.biz1dOrderCount = biz1dOrderCount;
+    return this;
+  }
+
+  /**
+   * Get biz1dOrderCount
+   *
+   * @return biz1dOrderCount
+   */
+  @ApiModelProperty(value = "")
+  public String getBiz1dOrderCount() {
+    return biz1dOrderCount;
+  }
+
+  public void setBiz1dOrderCount(String biz1dOrderCount) {
+    this.biz1dOrderCount = biz1dOrderCount;
+  }
+
+  public BidwordRptGetListStruct biz1dOrderAmount(String biz1dOrderAmount) {
+    this.biz1dOrderAmount = biz1dOrderAmount;
+    return this;
+  }
+
+  /**
+   * Get biz1dOrderAmount
+   *
+   * @return biz1dOrderAmount
+   */
+  @ApiModelProperty(value = "")
+  public String getBiz1dOrderAmount() {
+    return biz1dOrderAmount;
+  }
+
+  public void setBiz1dOrderAmount(String biz1dOrderAmount) {
+    this.biz1dOrderAmount = biz1dOrderAmount;
+  }
+
+  public BidwordRptGetListStruct bizPurchaseCount(String bizPurchaseCount) {
+    this.bizPurchaseCount = bizPurchaseCount;
+    return this;
+  }
+
+  /**
+   * Get bizPurchaseCount
+   *
+   * @return bizPurchaseCount
+   */
+  @ApiModelProperty(value = "")
+  public String getBizPurchaseCount() {
+    return bizPurchaseCount;
+  }
+
+  public void setBizPurchaseCount(String bizPurchaseCount) {
+    this.bizPurchaseCount = bizPurchaseCount;
+  }
+
+  public BidwordRptGetListStruct bizPurchaseAmount(String bizPurchaseAmount) {
+    this.bizPurchaseAmount = bizPurchaseAmount;
+    return this;
+  }
+
+  /**
+   * Get bizPurchaseAmount
+   *
+   * @return bizPurchaseAmount
+   */
+  @ApiModelProperty(value = "")
+  public String getBizPurchaseAmount() {
+    return bizPurchaseAmount;
+  }
+
+  public void setBizPurchaseAmount(String bizPurchaseAmount) {
+    this.bizPurchaseAmount = bizPurchaseAmount;
+  }
+
+  public BidwordRptGetListStruct bizConsultCount(String bizConsultCount) {
+    this.bizConsultCount = bizConsultCount;
+    return this;
+  }
+
+  /**
+   * Get bizConsultCount
+   *
+   * @return bizConsultCount
+   */
+  @ApiModelProperty(value = "")
+  public String getBizConsultCount() {
+    return bizConsultCount;
+  }
+
+  public void setBizConsultCount(String bizConsultCount) {
+    this.bizConsultCount = bizConsultCount;
+  }
+
+  public BidwordRptGetListStruct bizReadingCount(String bizReadingCount) {
+    this.bizReadingCount = bizReadingCount;
+    return this;
+  }
+
+  /**
+   * Get bizReadingCount
+   *
+   * @return bizReadingCount
+   */
+  @ApiModelProperty(value = "")
+  public String getBizReadingCount() {
+    return bizReadingCount;
+  }
+
+  public void setBizReadingCount(String bizReadingCount) {
+    this.bizReadingCount = bizReadingCount;
+  }
+
+  public BidwordRptGetListStruct bizPageApplyCount(String bizPageApplyCount) {
+    this.bizPageApplyCount = bizPageApplyCount;
+    return this;
+  }
+
+  /**
+   * Get bizPageApplyCount
+   *
+   * @return bizPageApplyCount
+   */
+  @ApiModelProperty(value = "")
+  public String getBizPageApplyCount() {
+    return bizPageApplyCount;
+  }
+
+  public void setBizPageApplyCount(String bizPageApplyCount) {
+    this.bizPageApplyCount = bizPageApplyCount;
+  }
+
+  public BidwordRptGetListStruct bizCreditCount(String bizCreditCount) {
+    this.bizCreditCount = bizCreditCount;
+    return this;
+  }
+
+  /**
+   * Get bizCreditCount
+   *
+   * @return bizCreditCount
+   */
+  @ApiModelProperty(value = "")
+  public String getBizCreditCount() {
+    return bizCreditCount;
+  }
+
+  public void setBizCreditCount(String bizCreditCount) {
+    this.bizCreditCount = bizCreditCount;
+  }
+
+  public BidwordRptGetListStruct bizDepositCount(String bizDepositCount) {
+    this.bizDepositCount = bizDepositCount;
+    return this;
+  }
+
+  /**
+   * Get bizDepositCount
+   *
+   * @return bizDepositCount
+   */
+  @ApiModelProperty(value = "")
+  public String getBizDepositCount() {
+    return bizDepositCount;
+  }
+
+  public void setBizDepositCount(String bizDepositCount) {
+    this.bizDepositCount = bizDepositCount;
+  }
+
+  public BidwordRptGetListStruct biz1dPurchaseCount(String biz1dPurchaseCount) {
+    this.biz1dPurchaseCount = biz1dPurchaseCount;
+    return this;
+  }
+
+  /**
+   * Get biz1dPurchaseCount
+   *
+   * @return biz1dPurchaseCount
+   */
+  @ApiModelProperty(value = "")
+  public String getBiz1dPurchaseCount() {
+    return biz1dPurchaseCount;
+  }
+
+  public void setBiz1dPurchaseCount(String biz1dPurchaseCount) {
+    this.biz1dPurchaseCount = biz1dPurchaseCount;
+  }
+
+  public BidwordRptGetListStruct biz1dPurchaseAmount(String biz1dPurchaseAmount) {
+    this.biz1dPurchaseAmount = biz1dPurchaseAmount;
+    return this;
+  }
+
+  /**
+   * Get biz1dPurchaseAmount
+   *
+   * @return biz1dPurchaseAmount
+   */
+  @ApiModelProperty(value = "")
+  public String getBiz1dPurchaseAmount() {
+    return biz1dPurchaseAmount;
+  }
+
+  public void setBiz1dPurchaseAmount(String biz1dPurchaseAmount) {
+    this.biz1dPurchaseAmount = biz1dPurchaseAmount;
+  }
+
+  public BidwordRptGetListStruct biz3dPurchaseCount(String biz3dPurchaseCount) {
+    this.biz3dPurchaseCount = biz3dPurchaseCount;
+    return this;
+  }
+
+  /**
+   * Get biz3dPurchaseCount
+   *
+   * @return biz3dPurchaseCount
+   */
+  @ApiModelProperty(value = "")
+  public String getBiz3dPurchaseCount() {
+    return biz3dPurchaseCount;
+  }
+
+  public void setBiz3dPurchaseCount(String biz3dPurchaseCount) {
+    this.biz3dPurchaseCount = biz3dPurchaseCount;
+  }
+
+  public BidwordRptGetListStruct biz3dPurchaseAmount(String biz3dPurchaseAmount) {
+    this.biz3dPurchaseAmount = biz3dPurchaseAmount;
+    return this;
+  }
+
+  /**
+   * Get biz3dPurchaseAmount
+   *
+   * @return biz3dPurchaseAmount
+   */
+  @ApiModelProperty(value = "")
+  public String getBiz3dPurchaseAmount() {
+    return biz3dPurchaseAmount;
+  }
+
+  public void setBiz3dPurchaseAmount(String biz3dPurchaseAmount) {
+    this.biz3dPurchaseAmount = biz3dPurchaseAmount;
+  }
+
+  public BidwordRptGetListStruct biz7dPurchaseCount(String biz7dPurchaseCount) {
+    this.biz7dPurchaseCount = biz7dPurchaseCount;
+    return this;
+  }
+
+  /**
+   * Get biz7dPurchaseCount
+   *
+   * @return biz7dPurchaseCount
+   */
+  @ApiModelProperty(value = "")
+  public String getBiz7dPurchaseCount() {
+    return biz7dPurchaseCount;
+  }
+
+  public void setBiz7dPurchaseCount(String biz7dPurchaseCount) {
+    this.biz7dPurchaseCount = biz7dPurchaseCount;
+  }
+
+  public BidwordRptGetListStruct biz7dPurchaseAmount(String biz7dPurchaseAmount) {
+    this.biz7dPurchaseAmount = biz7dPurchaseAmount;
+    return this;
+  }
+
+  /**
+   * Get biz7dPurchaseAmount
+   *
+   * @return biz7dPurchaseAmount
+   */
+  @ApiModelProperty(value = "")
+  public String getBiz7dPurchaseAmount() {
+    return biz7dPurchaseAmount;
+  }
+
+  public void setBiz7dPurchaseAmount(String biz7dPurchaseAmount) {
+    this.biz7dPurchaseAmount = biz7dPurchaseAmount;
+  }
+
+  public BidwordRptGetListStruct biz15dPurchaseCount(String biz15dPurchaseCount) {
+    this.biz15dPurchaseCount = biz15dPurchaseCount;
+    return this;
+  }
+
+  /**
+   * Get biz15dPurchaseCount
+   *
+   * @return biz15dPurchaseCount
+   */
+  @ApiModelProperty(value = "")
+  public String getBiz15dPurchaseCount() {
+    return biz15dPurchaseCount;
+  }
+
+  public void setBiz15dPurchaseCount(String biz15dPurchaseCount) {
+    this.biz15dPurchaseCount = biz15dPurchaseCount;
+  }
+
+  public BidwordRptGetListStruct biz15dPurchaseAmount(String biz15dPurchaseAmount) {
+    this.biz15dPurchaseAmount = biz15dPurchaseAmount;
+    return this;
+  }
+
+  /**
+   * Get biz15dPurchaseAmount
+   *
+   * @return biz15dPurchaseAmount
+   */
+  @ApiModelProperty(value = "")
+  public String getBiz15dPurchaseAmount() {
+    return biz15dPurchaseAmount;
+  }
+
+  public void setBiz15dPurchaseAmount(String biz15dPurchaseAmount) {
+    this.biz15dPurchaseAmount = biz15dPurchaseAmount;
+  }
+
+  public BidwordRptGetListStruct biz30dPurchaseCount(String biz30dPurchaseCount) {
+    this.biz30dPurchaseCount = biz30dPurchaseCount;
+    return this;
+  }
+
+  /**
+   * Get biz30dPurchaseCount
+   *
+   * @return biz30dPurchaseCount
+   */
+  @ApiModelProperty(value = "")
+  public String getBiz30dPurchaseCount() {
+    return biz30dPurchaseCount;
+  }
+
+  public void setBiz30dPurchaseCount(String biz30dPurchaseCount) {
+    this.biz30dPurchaseCount = biz30dPurchaseCount;
+  }
+
+  public BidwordRptGetListStruct biz30dPurchaseAmount(String biz30dPurchaseAmount) {
+    this.biz30dPurchaseAmount = biz30dPurchaseAmount;
+    return this;
+  }
+
+  /**
+   * Get biz30dPurchaseAmount
+   *
+   * @return biz30dPurchaseAmount
+   */
+  @ApiModelProperty(value = "")
+  public String getBiz30dPurchaseAmount() {
+    return biz30dPurchaseAmount;
+  }
+
+  public void setBiz30dPurchaseAmount(String biz30dPurchaseAmount) {
+    this.biz30dPurchaseAmount = biz30dPurchaseAmount;
+  }
+
+  public BidwordRptGetListStruct bizPreCreditPv(String bizPreCreditPv) {
+    this.bizPreCreditPv = bizPreCreditPv;
+    return this;
+  }
+
+  /**
+   * Get bizPreCreditPv
+   *
+   * @return bizPreCreditPv
+   */
+  @ApiModelProperty(value = "")
+  public String getBizPreCreditPv() {
+    return bizPreCreditPv;
+  }
+
+  public void setBizPreCreditPv(String bizPreCreditPv) {
+    this.bizPreCreditPv = bizPreCreditPv;
+  }
+
+  public BidwordRptGetListStruct videoFollowCount(String videoFollowCount) {
+    this.videoFollowCount = videoFollowCount;
+    return this;
+  }
+
+  /**
+   * Get videoFollowCount
+   *
+   * @return videoFollowCount
+   */
+  @ApiModelProperty(value = "")
+  public String getVideoFollowCount() {
+    return videoFollowCount;
+  }
+
+  public void setVideoFollowCount(String videoFollowCount) {
+    this.videoFollowCount = videoFollowCount;
+  }
+
+  public BidwordRptGetListStruct videoHeartCount(String videoHeartCount) {
+    this.videoHeartCount = videoHeartCount;
+    return this;
+  }
+
+  /**
+   * Get videoHeartCount
+   *
+   * @return videoHeartCount
+   */
+  @ApiModelProperty(value = "")
+  public String getVideoHeartCount() {
+    return videoHeartCount;
+  }
+
+  public void setVideoHeartCount(String videoHeartCount) {
+    this.videoHeartCount = videoHeartCount;
+  }
+
+  public BidwordRptGetListStruct videoCommentCount(String videoCommentCount) {
+    this.videoCommentCount = videoCommentCount;
+    return this;
+  }
+
+  /**
+   * Get videoCommentCount
+   *
+   * @return videoCommentCount
+   */
+  @ApiModelProperty(value = "")
+  public String getVideoCommentCount() {
+    return videoCommentCount;
+  }
+
+  public void setVideoCommentCount(String videoCommentCount) {
+    this.videoCommentCount = videoCommentCount;
+  }
+
+  public BidwordRptGetListStruct videoLiveSubscribeCount(String videoLiveSubscribeCount) {
+    this.videoLiveSubscribeCount = videoLiveSubscribeCount;
+    return this;
+  }
+
+  /**
+   * Get videoLiveSubscribeCount
+   *
+   * @return videoLiveSubscribeCount
+   */
+  @ApiModelProperty(value = "")
+  public String getVideoLiveSubscribeCount() {
+    return videoLiveSubscribeCount;
+  }
+
+  public void setVideoLiveSubscribeCount(String videoLiveSubscribeCount) {
+    this.videoLiveSubscribeCount = videoLiveSubscribeCount;
+  }
+
+  public BidwordRptGetListStruct videoLiveExpCount(String videoLiveExpCount) {
+    this.videoLiveExpCount = videoLiveExpCount;
+    return this;
+  }
+
+  /**
+   * Get videoLiveExpCount
+   *
+   * @return videoLiveExpCount
+   */
+  @ApiModelProperty(value = "")
+  public String getVideoLiveExpCount() {
+    return videoLiveExpCount;
+  }
+
+  public void setVideoLiveExpCount(String videoLiveExpCount) {
+    this.videoLiveExpCount = videoLiveExpCount;
+  }
+
+  public BidwordRptGetListStruct videoLiveHeartCount(String videoLiveHeartCount) {
+    this.videoLiveHeartCount = videoLiveHeartCount;
+    return this;
+  }
+
+  /**
+   * Get videoLiveHeartCount
+   *
+   * @return videoLiveHeartCount
+   */
+  @ApiModelProperty(value = "")
+  public String getVideoLiveHeartCount() {
+    return videoLiveHeartCount;
+  }
+
+  public void setVideoLiveHeartCount(String videoLiveHeartCount) {
+    this.videoLiveHeartCount = videoLiveHeartCount;
+  }
+
+  public BidwordRptGetListStruct videoLiveCommentCount(String videoLiveCommentCount) {
+    this.videoLiveCommentCount = videoLiveCommentCount;
+    return this;
+  }
+
+  /**
+   * Get videoLiveCommentCount
+   *
+   * @return videoLiveCommentCount
+   */
+  @ApiModelProperty(value = "")
+  public String getVideoLiveCommentCount() {
+    return videoLiveCommentCount;
+  }
+
+  public void setVideoLiveCommentCount(String videoLiveCommentCount) {
+    this.videoLiveCommentCount = videoLiveCommentCount;
+  }
+
+  public BidwordRptGetListStruct videoLiveShareCount(String videoLiveShareCount) {
+    this.videoLiveShareCount = videoLiveShareCount;
+    return this;
+  }
+
+  /**
+   * Get videoLiveShareCount
+   *
+   * @return videoLiveShareCount
+   */
+  @ApiModelProperty(value = "")
+  public String getVideoLiveShareCount() {
+    return videoLiveShareCount;
+  }
+
+  public void setVideoLiveShareCount(String videoLiveShareCount) {
+    this.videoLiveShareCount = videoLiveShareCount;
+  }
+
+  public BidwordRptGetListStruct videoLiveCickCommodityCount(String videoLiveCickCommodityCount) {
+    this.videoLiveCickCommodityCount = videoLiveCickCommodityCount;
+    return this;
+  }
+
+  /**
+   * Get videoLiveCickCommodityCount
+   *
+   * @return videoLiveCickCommodityCount
+   */
+  @ApiModelProperty(value = "")
+  public String getVideoLiveCickCommodityCount() {
+    return videoLiveCickCommodityCount;
+  }
+
+  public void setVideoLiveCickCommodityCount(String videoLiveCickCommodityCount) {
+    this.videoLiveCickCommodityCount = videoLiveCickCommodityCount;
+  }
+
+  public BidwordRptGetListStruct videoLiveCommodityBubbleExpCount(
+      String videoLiveCommodityBubbleExpCount) {
+    this.videoLiveCommodityBubbleExpCount = videoLiveCommodityBubbleExpCount;
+    return this;
+  }
+
+  /**
+   * Get videoLiveCommodityBubbleExpCount
+   *
+   * @return videoLiveCommodityBubbleExpCount
+   */
+  @ApiModelProperty(value = "")
+  public String getVideoLiveCommodityBubbleExpCount() {
+    return videoLiveCommodityBubbleExpCount;
+  }
+
+  public void setVideoLiveCommodityBubbleExpCount(String videoLiveCommodityBubbleExpCount) {
+    this.videoLiveCommodityBubbleExpCount = videoLiveCommodityBubbleExpCount;
+  }
+
+  public BidwordRptGetListStruct liveStreamCommodityBubbleClkPv(
+      String liveStreamCommodityBubbleClkPv) {
+    this.liveStreamCommodityBubbleClkPv = liveStreamCommodityBubbleClkPv;
+    return this;
+  }
+
+  /**
+   * Get liveStreamCommodityBubbleClkPv
+   *
+   * @return liveStreamCommodityBubbleClkPv
+   */
+  @ApiModelProperty(value = "")
+  public String getLiveStreamCommodityBubbleClkPv() {
+    return liveStreamCommodityBubbleClkPv;
+  }
+
+  public void setLiveStreamCommodityBubbleClkPv(String liveStreamCommodityBubbleClkPv) {
+    this.liveStreamCommodityBubbleClkPv = liveStreamCommodityBubbleClkPv;
+  }
+
+  public BidwordRptGetListStruct liveStreamCommodityShopBagClkPv(
+      String liveStreamCommodityShopBagClkPv) {
+    this.liveStreamCommodityShopBagClkPv = liveStreamCommodityShopBagClkPv;
+    return this;
+  }
+
+  /**
+   * Get liveStreamCommodityShopBagClkPv
+   *
+   * @return liveStreamCommodityShopBagClkPv
+   */
+  @ApiModelProperty(value = "")
+  public String getLiveStreamCommodityShopBagClkPv() {
+    return liveStreamCommodityShopBagClkPv;
+  }
+
+  public void setLiveStreamCommodityShopBagClkPv(String liveStreamCommodityShopBagClkPv) {
+    this.liveStreamCommodityShopBagClkPv = liveStreamCommodityShopBagClkPv;
+  }
+
+  public BidwordRptGetListStruct liveStreamCommodityShopListExpPv(
+      String liveStreamCommodityShopListExpPv) {
+    this.liveStreamCommodityShopListExpPv = liveStreamCommodityShopListExpPv;
+    return this;
+  }
+
+  /**
+   * Get liveStreamCommodityShopListExpPv
+   *
+   * @return liveStreamCommodityShopListExpPv
+   */
+  @ApiModelProperty(value = "")
+  public String getLiveStreamCommodityShopListExpPv() {
+    return liveStreamCommodityShopListExpPv;
+  }
+
+  public void setLiveStreamCommodityShopListExpPv(String liveStreamCommodityShopListExpPv) {
+    this.liveStreamCommodityShopListExpPv = liveStreamCommodityShopListExpPv;
+  }
+
+  public BidwordRptGetListStruct liveStreamOrderPv(String liveStreamOrderPv) {
+    this.liveStreamOrderPv = liveStreamOrderPv;
+    return this;
+  }
+
+  /**
+   * Get liveStreamOrderPv
+   *
+   * @return liveStreamOrderPv
+   */
+  @ApiModelProperty(value = "")
+  public String getLiveStreamOrderPv() {
+    return liveStreamOrderPv;
+  }
+
+  public void setLiveStreamOrderPv(String liveStreamOrderPv) {
+    this.liveStreamOrderPv = liveStreamOrderPv;
+  }
+
+  public BidwordRptGetListStruct clkRedpocketBtnGetPv(String clkRedpocketBtnGetPv) {
+    this.clkRedpocketBtnGetPv = clkRedpocketBtnGetPv;
+    return this;
+  }
+
+  /**
+   * Get clkRedpocketBtnGetPv
+   *
+   * @return clkRedpocketBtnGetPv
+   */
+  @ApiModelProperty(value = "")
+  public String getClkRedpocketBtnGetPv() {
+    return clkRedpocketBtnGetPv;
+  }
+
+  public void setClkRedpocketBtnGetPv(String clkRedpocketBtnGetPv) {
+    this.clkRedpocketBtnGetPv = clkRedpocketBtnGetPv;
+  }
+
+  public BidwordRptGetListStruct clkRedpocketBtnSharePv(String clkRedpocketBtnSharePv) {
+    this.clkRedpocketBtnSharePv = clkRedpocketBtnSharePv;
+    return this;
+  }
+
+  /**
+   * Get clkRedpocketBtnSharePv
+   *
+   * @return clkRedpocketBtnSharePv
+   */
+  @ApiModelProperty(value = "")
+  public String getClkRedpocketBtnSharePv() {
+    return clkRedpocketBtnSharePv;
+  }
+
+  public void setClkRedpocketBtnSharePv(String clkRedpocketBtnSharePv) {
+    this.clkRedpocketBtnSharePv = clkRedpocketBtnSharePv;
+  }
+
+  public BidwordRptGetListStruct clkRedpocketBtnJumpPv(String clkRedpocketBtnJumpPv) {
+    this.clkRedpocketBtnJumpPv = clkRedpocketBtnJumpPv;
+    return this;
+  }
+
+  /**
+   * Get clkRedpocketBtnJumpPv
+   *
+   * @return clkRedpocketBtnJumpPv
+   */
+  @ApiModelProperty(value = "")
+  public String getClkRedpocketBtnJumpPv() {
+    return clkRedpocketBtnJumpPv;
+  }
+
+  public void setClkRedpocketBtnJumpPv(String clkRedpocketBtnJumpPv) {
+    this.clkRedpocketBtnJumpPv = clkRedpocketBtnJumpPv;
+  }
+
+  public BidwordRptGetListStruct clkGoodsHeaderPv(String clkGoodsHeaderPv) {
+    this.clkGoodsHeaderPv = clkGoodsHeaderPv;
+    return this;
+  }
+
+  /**
+   * Get clkGoodsHeaderPv
+   *
+   * @return clkGoodsHeaderPv
+   */
+  @ApiModelProperty(value = "")
+  public String getClkGoodsHeaderPv() {
+    return clkGoodsHeaderPv;
+  }
+
+  public void setClkGoodsHeaderPv(String clkGoodsHeaderPv) {
+    this.clkGoodsHeaderPv = clkGoodsHeaderPv;
+  }
+
+  public BidwordRptGetListStruct clkGoodsInfoPv(String clkGoodsInfoPv) {
+    this.clkGoodsInfoPv = clkGoodsInfoPv;
+    return this;
+  }
+
+  /**
+   * Get clkGoodsInfoPv
+   *
+   * @return clkGoodsInfoPv
+   */
+  @ApiModelProperty(value = "")
+  public String getClkGoodsInfoPv() {
+    return clkGoodsInfoPv;
+  }
+
+  public void setClkGoodsInfoPv(String clkGoodsInfoPv) {
+    this.clkGoodsInfoPv = clkGoodsInfoPv;
+  }
+
+  public BidwordRptGetListStruct clkGoodsRecommendPv(String clkGoodsRecommendPv) {
+    this.clkGoodsRecommendPv = clkGoodsRecommendPv;
+    return this;
+  }
+
+  /**
+   * Get clkGoodsRecommendPv
+   *
+   * @return clkGoodsRecommendPv
+   */
+  @ApiModelProperty(value = "")
+  public String getClkGoodsRecommendPv() {
+    return clkGoodsRecommendPv;
+  }
+
+  public void setClkGoodsRecommendPv(String clkGoodsRecommendPv) {
+    this.clkGoodsRecommendPv = clkGoodsRecommendPv;
+  }
+
+  public BidwordRptGetListStruct clkMiddleShowwindowPv(String clkMiddleShowwindowPv) {
+    this.clkMiddleShowwindowPv = clkMiddleShowwindowPv;
+    return this;
+  }
+
+  /**
+   * Get clkMiddleShowwindowPv
+   *
+   * @return clkMiddleShowwindowPv
+   */
+  @ApiModelProperty(value = "")
+  public String getClkMiddleShowwindowPv() {
+    return clkMiddleShowwindowPv;
+  }
+
+  public void setClkMiddleShowwindowPv(String clkMiddleShowwindowPv) {
+    this.clkMiddleShowwindowPv = clkMiddleShowwindowPv;
+  }
+
+  public BidwordRptGetListStruct clkFooterPv(String clkFooterPv) {
+    this.clkFooterPv = clkFooterPv;
+    return this;
+  }
+
+  /**
+   * Get clkFooterPv
+   *
+   * @return clkFooterPv
+   */
+  @ApiModelProperty(value = "")
+  public String getClkFooterPv() {
+    return clkFooterPv;
+  }
+
+  public void setClkFooterPv(String clkFooterPv) {
+    this.clkFooterPv = clkFooterPv;
+  }
+
+  public BidwordRptGetListStruct clkMiddleGoodsPv(String clkMiddleGoodsPv) {
+    this.clkMiddleGoodsPv = clkMiddleGoodsPv;
+    return this;
+  }
+
+  /**
+   * Get clkMiddleGoodsPv
+   *
+   * @return clkMiddleGoodsPv
+   */
+  @ApiModelProperty(value = "")
+  public String getClkMiddleGoodsPv() {
+    return clkMiddleGoodsPv;
+  }
+
+  public void setClkMiddleGoodsPv(String clkMiddleGoodsPv) {
+    this.clkMiddleGoodsPv = clkMiddleGoodsPv;
+  }
+
+  public BidwordRptGetListStruct clkMiddleBtnPv(String clkMiddleBtnPv) {
+    this.clkMiddleBtnPv = clkMiddleBtnPv;
+    return this;
+  }
+
+  /**
+   * Get clkMiddleBtnPv
+   *
+   * @return clkMiddleBtnPv
+   */
+  @ApiModelProperty(value = "")
+  public String getClkMiddleBtnPv() {
+    return clkMiddleBtnPv;
+  }
+
+  public void setClkMiddleBtnPv(String clkMiddleBtnPv) {
+    this.clkMiddleBtnPv = clkMiddleBtnPv;
+  }
+
+  public BidwordRptGetListStruct clkMiddleSectionPv(String clkMiddleSectionPv) {
+    this.clkMiddleSectionPv = clkMiddleSectionPv;
+    return this;
+  }
+
+  /**
+   * Get clkMiddleSectionPv
+   *
+   * @return clkMiddleSectionPv
+   */
+  @ApiModelProperty(value = "")
+  public String getClkMiddleSectionPv() {
+    return clkMiddleSectionPv;
+  }
+
+  public void setClkMiddleSectionPv(String clkMiddleSectionPv) {
+    this.clkMiddleSectionPv = clkMiddleSectionPv;
+  }
+
+  public BidwordRptGetListStruct clkMiddleGridviewPv(String clkMiddleGridviewPv) {
+    this.clkMiddleGridviewPv = clkMiddleGridviewPv;
+    return this;
+  }
+
+  /**
+   * Get clkMiddleGridviewPv
+   *
+   * @return clkMiddleGridviewPv
+   */
+  @ApiModelProperty(value = "")
+  public String getClkMiddleGridviewPv() {
+    return clkMiddleGridviewPv;
+  }
+
+  public void setClkMiddleGridviewPv(String clkMiddleGridviewPv) {
+    this.clkMiddleGridviewPv = clkMiddleGridviewPv;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -725,7 +2358,98 @@ public class BidwordRptGetListStruct {
         && Objects.equals(this.deepConversionsCost, bidwordRptGetListStruct.deepConversionsCost)
         && Objects.equals(this.thousandDisplayPrice, bidwordRptGetListStruct.thousandDisplayPrice)
         && Objects.equals(this.matchType, bidwordRptGetListStruct.matchType)
-        && Objects.equals(this.matchTypeName, bidwordRptGetListStruct.matchTypeName);
+        && Objects.equals(this.matchTypeName, bidwordRptGetListStruct.matchTypeName)
+        && Objects.equals(this.contractType, bidwordRptGetListStruct.contractType)
+        && Objects.equals(this.contractTypeName, bidwordRptGetListStruct.contractTypeName)
+        && Objects.equals(this.adId, bidwordRptGetListStruct.adId)
+        && Objects.equals(this.adName, bidwordRptGetListStruct.adName)
+        && Objects.equals(this.bizFollowCount, bidwordRptGetListStruct.bizFollowCount)
+        && Objects.equals(this.bizFollowUv, bidwordRptGetListStruct.bizFollowUv)
+        && Objects.equals(this.liveStreamAvgTime, bidwordRptGetListStruct.liveStreamAvgTime)
+        && Objects.equals(this.liveStreamExpUv, bidwordRptGetListStruct.liveStreamExpUv)
+        && Objects.equals(
+            this.videoLiveHeartUserCount, bidwordRptGetListStruct.videoLiveHeartUserCount)
+        && Objects.equals(
+            this.videoLiveCommentUserCount, bidwordRptGetListStruct.videoLiveCommentUserCount)
+        && Objects.equals(
+            this.videoLiveShareUserCount, bidwordRptGetListStruct.videoLiveShareUserCount)
+        && Objects.equals(
+            this.videoLiveClickCommodityUserCount,
+            bidwordRptGetListStruct.videoLiveClickCommodityUserCount)
+        && Objects.equals(this.zoneHeaderClickCount, bidwordRptGetListStruct.zoneHeaderClickCount)
+        && Objects.equals(this.basicInfoClientCount, bidwordRptGetListStruct.basicInfoClientCount)
+        && Objects.equals(this.accountInfoClickCount, bidwordRptGetListStruct.accountInfoClickCount)
+        && Objects.equals(
+            this.activityInfoClickCount, bidwordRptGetListStruct.activityInfoClickCount)
+        && Objects.equals(this.bizRegUv, bidwordRptGetListStruct.bizRegUv)
+        && Objects.equals(this.bizReservationUv, bidwordRptGetListStruct.bizReservationUv)
+        && Objects.equals(this.bizOrderUv, bidwordRptGetListStruct.bizOrderUv)
+        && Objects.equals(this.bizPageApplyUv, bidwordRptGetListStruct.bizPageApplyUv)
+        && Objects.equals(this.bizCreditUv, bidwordRptGetListStruct.bizCreditUv)
+        && Objects.equals(this.bizWithdrawDepositsUv, bidwordRptGetListStruct.bizWithdrawDepositsUv)
+        && Objects.equals(this.bizPreCreditUv, bidwordRptGetListStruct.bizPreCreditUv)
+        && Objects.equals(this.bizRegOrderAmount, bidwordRptGetListStruct.bizRegOrderAmount)
+        && Objects.equals(this.bizReservationCount, bidwordRptGetListStruct.bizReservationCount)
+        && Objects.equals(this.bizReservationAmount, bidwordRptGetListStruct.bizReservationAmount)
+        && Objects.equals(this.bizOrderCount, bidwordRptGetListStruct.bizOrderCount)
+        && Objects.equals(this.bizOrderAmount, bidwordRptGetListStruct.bizOrderAmount)
+        && Objects.equals(this.biz1dOrderCount, bidwordRptGetListStruct.biz1dOrderCount)
+        && Objects.equals(this.biz1dOrderAmount, bidwordRptGetListStruct.biz1dOrderAmount)
+        && Objects.equals(this.bizPurchaseCount, bidwordRptGetListStruct.bizPurchaseCount)
+        && Objects.equals(this.bizPurchaseAmount, bidwordRptGetListStruct.bizPurchaseAmount)
+        && Objects.equals(this.bizConsultCount, bidwordRptGetListStruct.bizConsultCount)
+        && Objects.equals(this.bizReadingCount, bidwordRptGetListStruct.bizReadingCount)
+        && Objects.equals(this.bizPageApplyCount, bidwordRptGetListStruct.bizPageApplyCount)
+        && Objects.equals(this.bizCreditCount, bidwordRptGetListStruct.bizCreditCount)
+        && Objects.equals(this.bizDepositCount, bidwordRptGetListStruct.bizDepositCount)
+        && Objects.equals(this.biz1dPurchaseCount, bidwordRptGetListStruct.biz1dPurchaseCount)
+        && Objects.equals(this.biz1dPurchaseAmount, bidwordRptGetListStruct.biz1dPurchaseAmount)
+        && Objects.equals(this.biz3dPurchaseCount, bidwordRptGetListStruct.biz3dPurchaseCount)
+        && Objects.equals(this.biz3dPurchaseAmount, bidwordRptGetListStruct.biz3dPurchaseAmount)
+        && Objects.equals(this.biz7dPurchaseCount, bidwordRptGetListStruct.biz7dPurchaseCount)
+        && Objects.equals(this.biz7dPurchaseAmount, bidwordRptGetListStruct.biz7dPurchaseAmount)
+        && Objects.equals(this.biz15dPurchaseCount, bidwordRptGetListStruct.biz15dPurchaseCount)
+        && Objects.equals(this.biz15dPurchaseAmount, bidwordRptGetListStruct.biz15dPurchaseAmount)
+        && Objects.equals(this.biz30dPurchaseCount, bidwordRptGetListStruct.biz30dPurchaseCount)
+        && Objects.equals(this.biz30dPurchaseAmount, bidwordRptGetListStruct.biz30dPurchaseAmount)
+        && Objects.equals(this.bizPreCreditPv, bidwordRptGetListStruct.bizPreCreditPv)
+        && Objects.equals(this.videoFollowCount, bidwordRptGetListStruct.videoFollowCount)
+        && Objects.equals(this.videoHeartCount, bidwordRptGetListStruct.videoHeartCount)
+        && Objects.equals(this.videoCommentCount, bidwordRptGetListStruct.videoCommentCount)
+        && Objects.equals(
+            this.videoLiveSubscribeCount, bidwordRptGetListStruct.videoLiveSubscribeCount)
+        && Objects.equals(this.videoLiveExpCount, bidwordRptGetListStruct.videoLiveExpCount)
+        && Objects.equals(this.videoLiveHeartCount, bidwordRptGetListStruct.videoLiveHeartCount)
+        && Objects.equals(this.videoLiveCommentCount, bidwordRptGetListStruct.videoLiveCommentCount)
+        && Objects.equals(this.videoLiveShareCount, bidwordRptGetListStruct.videoLiveShareCount)
+        && Objects.equals(
+            this.videoLiveCickCommodityCount, bidwordRptGetListStruct.videoLiveCickCommodityCount)
+        && Objects.equals(
+            this.videoLiveCommodityBubbleExpCount,
+            bidwordRptGetListStruct.videoLiveCommodityBubbleExpCount)
+        && Objects.equals(
+            this.liveStreamCommodityBubbleClkPv,
+            bidwordRptGetListStruct.liveStreamCommodityBubbleClkPv)
+        && Objects.equals(
+            this.liveStreamCommodityShopBagClkPv,
+            bidwordRptGetListStruct.liveStreamCommodityShopBagClkPv)
+        && Objects.equals(
+            this.liveStreamCommodityShopListExpPv,
+            bidwordRptGetListStruct.liveStreamCommodityShopListExpPv)
+        && Objects.equals(this.liveStreamOrderPv, bidwordRptGetListStruct.liveStreamOrderPv)
+        && Objects.equals(this.clkRedpocketBtnGetPv, bidwordRptGetListStruct.clkRedpocketBtnGetPv)
+        && Objects.equals(
+            this.clkRedpocketBtnSharePv, bidwordRptGetListStruct.clkRedpocketBtnSharePv)
+        && Objects.equals(this.clkRedpocketBtnJumpPv, bidwordRptGetListStruct.clkRedpocketBtnJumpPv)
+        && Objects.equals(this.clkGoodsHeaderPv, bidwordRptGetListStruct.clkGoodsHeaderPv)
+        && Objects.equals(this.clkGoodsInfoPv, bidwordRptGetListStruct.clkGoodsInfoPv)
+        && Objects.equals(this.clkGoodsRecommendPv, bidwordRptGetListStruct.clkGoodsRecommendPv)
+        && Objects.equals(this.clkMiddleShowwindowPv, bidwordRptGetListStruct.clkMiddleShowwindowPv)
+        && Objects.equals(this.clkFooterPv, bidwordRptGetListStruct.clkFooterPv)
+        && Objects.equals(this.clkMiddleGoodsPv, bidwordRptGetListStruct.clkMiddleGoodsPv)
+        && Objects.equals(this.clkMiddleBtnPv, bidwordRptGetListStruct.clkMiddleBtnPv)
+        && Objects.equals(this.clkMiddleSectionPv, bidwordRptGetListStruct.clkMiddleSectionPv)
+        && Objects.equals(this.clkMiddleGridviewPv, bidwordRptGetListStruct.clkMiddleGridviewPv);
   }
 
   @Override
@@ -760,7 +2484,81 @@ public class BidwordRptGetListStruct {
         deepConversionsCost,
         thousandDisplayPrice,
         matchType,
-        matchTypeName);
+        matchTypeName,
+        contractType,
+        contractTypeName,
+        adId,
+        adName,
+        bizFollowCount,
+        bizFollowUv,
+        liveStreamAvgTime,
+        liveStreamExpUv,
+        videoLiveHeartUserCount,
+        videoLiveCommentUserCount,
+        videoLiveShareUserCount,
+        videoLiveClickCommodityUserCount,
+        zoneHeaderClickCount,
+        basicInfoClientCount,
+        accountInfoClickCount,
+        activityInfoClickCount,
+        bizRegUv,
+        bizReservationUv,
+        bizOrderUv,
+        bizPageApplyUv,
+        bizCreditUv,
+        bizWithdrawDepositsUv,
+        bizPreCreditUv,
+        bizRegOrderAmount,
+        bizReservationCount,
+        bizReservationAmount,
+        bizOrderCount,
+        bizOrderAmount,
+        biz1dOrderCount,
+        biz1dOrderAmount,
+        bizPurchaseCount,
+        bizPurchaseAmount,
+        bizConsultCount,
+        bizReadingCount,
+        bizPageApplyCount,
+        bizCreditCount,
+        bizDepositCount,
+        biz1dPurchaseCount,
+        biz1dPurchaseAmount,
+        biz3dPurchaseCount,
+        biz3dPurchaseAmount,
+        biz7dPurchaseCount,
+        biz7dPurchaseAmount,
+        biz15dPurchaseCount,
+        biz15dPurchaseAmount,
+        biz30dPurchaseCount,
+        biz30dPurchaseAmount,
+        bizPreCreditPv,
+        videoFollowCount,
+        videoHeartCount,
+        videoCommentCount,
+        videoLiveSubscribeCount,
+        videoLiveExpCount,
+        videoLiveHeartCount,
+        videoLiveCommentCount,
+        videoLiveShareCount,
+        videoLiveCickCommodityCount,
+        videoLiveCommodityBubbleExpCount,
+        liveStreamCommodityBubbleClkPv,
+        liveStreamCommodityShopBagClkPv,
+        liveStreamCommodityShopListExpPv,
+        liveStreamOrderPv,
+        clkRedpocketBtnGetPv,
+        clkRedpocketBtnSharePv,
+        clkRedpocketBtnJumpPv,
+        clkGoodsHeaderPv,
+        clkGoodsInfoPv,
+        clkGoodsRecommendPv,
+        clkMiddleShowwindowPv,
+        clkFooterPv,
+        clkMiddleGoodsPv,
+        clkMiddleBtnPv,
+        clkMiddleSectionPv,
+        clkMiddleGridviewPv);
   }
 
   @Override
