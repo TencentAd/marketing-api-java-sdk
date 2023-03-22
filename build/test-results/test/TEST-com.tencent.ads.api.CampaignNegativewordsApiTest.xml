@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.tencent.ads.api.CampaignNegativewordsApiTest" tests="3" skipped="3" failures="0" errors="0" timestamp="2023-03-22T02:25:10" hostname="VM_118_42_centos" time="0.0">
+  <properties/>
+  <testcase name="campaignNegativewordsUpdateTest" classname="com.tencent.ads.api.CampaignNegativewordsApiTest" time="0.0">
+    <skipped/>
+  </testcase>
+  <testcase name="campaignNegativewordsAddTest" classname="com.tencent.ads.api.CampaignNegativewordsApiTest" time="0.0">
+    <skipped/>
+  </testcase>
+  <testcase name="campaignNegativewordsGetTest" classname="com.tencent.ads.api.CampaignNegativewordsApiTest" time="0.0">
+    <skipped/>
+  </testcase>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
