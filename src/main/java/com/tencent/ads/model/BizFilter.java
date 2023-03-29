@@ -26,6 +26,12 @@ public class BizFilter {
   @SerializedName("bidword_id_list")
   private List<Long> bidwordIdList = null;
 
+  @SerializedName("campaign_type")
+  private CampaignType campaignType = null;
+
+  @SerializedName("bidword_list")
+  private List<String> bidwordList = null;
+
   public BizFilter bidwordIdList(List<Long> bidwordIdList) {
     this.bidwordIdList = bidwordIdList;
     return this;
@@ -53,6 +59,52 @@ public class BizFilter {
     this.bidwordIdList = bidwordIdList;
   }
 
+  public BizFilter campaignType(CampaignType campaignType) {
+    this.campaignType = campaignType;
+    return this;
+  }
+
+  /**
+   * Get campaignType
+   *
+   * @return campaignType
+   */
+  @ApiModelProperty(value = "")
+  public CampaignType getCampaignType() {
+    return campaignType;
+  }
+
+  public void setCampaignType(CampaignType campaignType) {
+    this.campaignType = campaignType;
+  }
+
+  public BizFilter bidwordList(List<String> bidwordList) {
+    this.bidwordList = bidwordList;
+    return this;
+  }
+
+  public BizFilter addBidwordListItem(String bidwordListItem) {
+    if (this.bidwordList == null) {
+      this.bidwordList = new ArrayList<String>();
+    }
+    this.bidwordList.add(bidwordListItem);
+    return this;
+  }
+
+  /**
+   * Get bidwordList
+   *
+   * @return bidwordList
+   */
+  @ApiModelProperty(value = "")
+  public List<String> getBidwordList() {
+    return bidwordList;
+  }
+
+  public void setBidwordList(List<String> bidwordList) {
+    this.bidwordList = bidwordList;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -62,12 +114,14 @@ public class BizFilter {
       return false;
     }
     BizFilter bizFilter = (BizFilter) o;
-    return Objects.equals(this.bidwordIdList, bizFilter.bidwordIdList);
+    return Objects.equals(this.bidwordIdList, bizFilter.bidwordIdList)
+        && Objects.equals(this.campaignType, bizFilter.campaignType)
+        && Objects.equals(this.bidwordList, bizFilter.bidwordList);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(bidwordIdList);
+    return Objects.hash(bidwordIdList, campaignType, bidwordList);
   }
 
   @Override

@@ -25,6 +25,12 @@ public class LeadsCallRecordGetRequest {
   @SerializedName("leads_id")
   private Long leadsId = null;
 
+  @SerializedName("request_id")
+  private String requestId = null;
+
+  @SerializedName("contact_id")
+  private String contactId = null;
+
   public LeadsCallRecordGetRequest accountId(Long accountId) {
     this.accountId = accountId;
     return this;
@@ -63,6 +69,44 @@ public class LeadsCallRecordGetRequest {
     this.leadsId = leadsId;
   }
 
+  public LeadsCallRecordGetRequest requestId(String requestId) {
+    this.requestId = requestId;
+    return this;
+  }
+
+  /**
+   * Get requestId
+   *
+   * @return requestId
+   */
+  @ApiModelProperty(value = "")
+  public String getRequestId() {
+    return requestId;
+  }
+
+  public void setRequestId(String requestId) {
+    this.requestId = requestId;
+  }
+
+  public LeadsCallRecordGetRequest contactId(String contactId) {
+    this.contactId = contactId;
+    return this;
+  }
+
+  /**
+   * Get contactId
+   *
+   * @return contactId
+   */
+  @ApiModelProperty(value = "")
+  public String getContactId() {
+    return contactId;
+  }
+
+  public void setContactId(String contactId) {
+    this.contactId = contactId;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -73,12 +117,14 @@ public class LeadsCallRecordGetRequest {
     }
     LeadsCallRecordGetRequest leadsCallRecordGetRequest = (LeadsCallRecordGetRequest) o;
     return Objects.equals(this.accountId, leadsCallRecordGetRequest.accountId)
-        && Objects.equals(this.leadsId, leadsCallRecordGetRequest.leadsId);
+        && Objects.equals(this.leadsId, leadsCallRecordGetRequest.leadsId)
+        && Objects.equals(this.requestId, leadsCallRecordGetRequest.requestId)
+        && Objects.equals(this.contactId, leadsCallRecordGetRequest.contactId);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(accountId, leadsId);
+    return Objects.hash(accountId, leadsId, requestId, contactId);
   }
 
   @Override

@@ -260,6 +260,12 @@ public class DynamicCreativeElements {
   @SerializedName("main_jump_info")
   private List<LandingPageStructure> mainJumpInfo = null;
 
+  @SerializedName("mdpa_title_component_options")
+  private List<MdpaTitleComponentOption> mdpaTitleComponentOptions = null;
+
+  @SerializedName("mdpa_desc_component_options")
+  private List<MdpaDescComponentOption> mdpaDescComponentOptions = null;
+
   public DynamicCreativeElements image(String image) {
     this.image = image;
     return this;
@@ -2095,6 +2101,65 @@ public class DynamicCreativeElements {
     this.mainJumpInfo = mainJumpInfo;
   }
 
+  public DynamicCreativeElements mdpaTitleComponentOptions(
+      List<MdpaTitleComponentOption> mdpaTitleComponentOptions) {
+    this.mdpaTitleComponentOptions = mdpaTitleComponentOptions;
+    return this;
+  }
+
+  public DynamicCreativeElements addMdpaTitleComponentOptionsItem(
+      MdpaTitleComponentOption mdpaTitleComponentOptionsItem) {
+    if (this.mdpaTitleComponentOptions == null) {
+      this.mdpaTitleComponentOptions = new ArrayList<MdpaTitleComponentOption>();
+    }
+    this.mdpaTitleComponentOptions.add(mdpaTitleComponentOptionsItem);
+    return this;
+  }
+
+  /**
+   * Get mdpaTitleComponentOptions
+   *
+   * @return mdpaTitleComponentOptions
+   */
+  @ApiModelProperty(value = "")
+  public List<MdpaTitleComponentOption> getMdpaTitleComponentOptions() {
+    return mdpaTitleComponentOptions;
+  }
+
+  public void setMdpaTitleComponentOptions(
+      List<MdpaTitleComponentOption> mdpaTitleComponentOptions) {
+    this.mdpaTitleComponentOptions = mdpaTitleComponentOptions;
+  }
+
+  public DynamicCreativeElements mdpaDescComponentOptions(
+      List<MdpaDescComponentOption> mdpaDescComponentOptions) {
+    this.mdpaDescComponentOptions = mdpaDescComponentOptions;
+    return this;
+  }
+
+  public DynamicCreativeElements addMdpaDescComponentOptionsItem(
+      MdpaDescComponentOption mdpaDescComponentOptionsItem) {
+    if (this.mdpaDescComponentOptions == null) {
+      this.mdpaDescComponentOptions = new ArrayList<MdpaDescComponentOption>();
+    }
+    this.mdpaDescComponentOptions.add(mdpaDescComponentOptionsItem);
+    return this;
+  }
+
+  /**
+   * Get mdpaDescComponentOptions
+   *
+   * @return mdpaDescComponentOptions
+   */
+  @ApiModelProperty(value = "")
+  public List<MdpaDescComponentOption> getMdpaDescComponentOptions() {
+    return mdpaDescComponentOptions;
+  }
+
+  public void setMdpaDescComponentOptions(List<MdpaDescComponentOption> mdpaDescComponentOptions) {
+    this.mdpaDescComponentOptions = mdpaDescComponentOptions;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -2206,7 +2271,11 @@ public class DynamicCreativeElements {
             dynamicCreativeElements.promotionSublinkComponentOptions)
         && Objects.equals(
             this.wxgamePlayablePageSpec, dynamicCreativeElements.wxgamePlayablePageSpec)
-        && Objects.equals(this.mainJumpInfo, dynamicCreativeElements.mainJumpInfo);
+        && Objects.equals(this.mainJumpInfo, dynamicCreativeElements.mainJumpInfo)
+        && Objects.equals(
+            this.mdpaTitleComponentOptions, dynamicCreativeElements.mdpaTitleComponentOptions)
+        && Objects.equals(
+            this.mdpaDescComponentOptions, dynamicCreativeElements.mdpaDescComponentOptions);
   }
 
   @Override
@@ -2290,7 +2359,9 @@ public class DynamicCreativeElements {
         image3ComponentOptions,
         promotionSublinkComponentOptions,
         wxgamePlayablePageSpec,
-        mainJumpInfo);
+        mainJumpInfo,
+        mdpaTitleComponentOptions,
+        mdpaDescComponentOptions);
   }
 
   @Override

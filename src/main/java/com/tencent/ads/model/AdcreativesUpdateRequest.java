@@ -129,6 +129,9 @@ public class AdcreativesUpdateRequest {
   @SerializedName("android_quick_app_spec")
   private AndroidQuickAppSpec androidQuickAppSpec = null;
 
+  @SerializedName("link_name_text")
+  private String linkNameText = null;
+
   @SerializedName("account_id")
   private Long accountId = null;
 
@@ -830,6 +833,25 @@ public class AdcreativesUpdateRequest {
     this.androidQuickAppSpec = androidQuickAppSpec;
   }
 
+  public AdcreativesUpdateRequest linkNameText(String linkNameText) {
+    this.linkNameText = linkNameText;
+    return this;
+  }
+
+  /**
+   * Get linkNameText
+   *
+   * @return linkNameText
+   */
+  @ApiModelProperty(value = "")
+  public String getLinkNameText() {
+    return linkNameText;
+  }
+
+  public void setLinkNameText(String linkNameText) {
+    this.linkNameText = linkNameText;
+  }
+
   public AdcreativesUpdateRequest accountId(Long accountId) {
     this.accountId = accountId;
     return this;
@@ -921,6 +943,7 @@ public class AdcreativesUpdateRequest {
         && Objects.equals(this.industryLabel, adcreativesUpdateRequest.industryLabel)
         && Objects.equals(this.unionMarketSpec, adcreativesUpdateRequest.unionMarketSpec)
         && Objects.equals(this.androidQuickAppSpec, adcreativesUpdateRequest.androidQuickAppSpec)
+        && Objects.equals(this.linkNameText, adcreativesUpdateRequest.linkNameText)
         && Objects.equals(this.accountId, adcreativesUpdateRequest.accountId)
         && Objects.equals(this.adcreativeElements, adcreativesUpdateRequest.adcreativeElements);
   }
@@ -964,6 +987,7 @@ public class AdcreativesUpdateRequest {
         industryLabel,
         unionMarketSpec,
         androidQuickAppSpec,
+        linkNameText,
         accountId,
         adcreativeElements);
   }

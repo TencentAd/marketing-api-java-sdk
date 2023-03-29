@@ -132,7 +132,9 @@ public enum LinkNameType {
 
   CONTACT_BUSINESS("CONTACT_BUSINESS"),
 
-  GO_SCAN("GO_SCAN");
+  GO_SCAN("GO_SCAN"),
+
+  LINK_NAME_TEXT_TEMPLATE("LINK_NAME_TEXT_TEMPLATE");
 
   private String value;
 

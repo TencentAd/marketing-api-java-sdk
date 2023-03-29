@@ -25,6 +25,9 @@ public class LeadsCallVirtualNumberGetResponseData {
   @SerializedName("request_id")
   private String requestId = null;
 
+  @SerializedName("contact_id")
+  private String contactId = null;
+
   public LeadsCallVirtualNumberGetResponseData virtualNumber(String virtualNumber) {
     this.virtualNumber = virtualNumber;
     return this;
@@ -63,6 +66,25 @@ public class LeadsCallVirtualNumberGetResponseData {
     this.requestId = requestId;
   }
 
+  public LeadsCallVirtualNumberGetResponseData contactId(String contactId) {
+    this.contactId = contactId;
+    return this;
+  }
+
+  /**
+   * Get contactId
+   *
+   * @return contactId
+   */
+  @ApiModelProperty(value = "")
+  public String getContactId() {
+    return contactId;
+  }
+
+  public void setContactId(String contactId) {
+    this.contactId = contactId;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -74,12 +96,13 @@ public class LeadsCallVirtualNumberGetResponseData {
     LeadsCallVirtualNumberGetResponseData leadsCallVirtualNumberGetResponseData =
         (LeadsCallVirtualNumberGetResponseData) o;
     return Objects.equals(this.virtualNumber, leadsCallVirtualNumberGetResponseData.virtualNumber)
-        && Objects.equals(this.requestId, leadsCallVirtualNumberGetResponseData.requestId);
+        && Objects.equals(this.requestId, leadsCallVirtualNumberGetResponseData.requestId)
+        && Objects.equals(this.contactId, leadsCallVirtualNumberGetResponseData.contactId);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(virtualNumber, requestId);
+    return Objects.hash(virtualNumber, requestId, contactId);
   }
 
   @Override

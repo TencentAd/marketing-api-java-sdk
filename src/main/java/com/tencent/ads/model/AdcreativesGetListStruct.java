@@ -182,6 +182,9 @@ public class AdcreativesGetListStruct {
   @SerializedName("live_video_sub_mode")
   private LiveVideoSubMode liveVideoSubMode = null;
 
+  @SerializedName("link_name_text")
+  private String linkNameText = null;
+
   @SerializedName("adcreative_template_id")
   private Long adcreativeTemplateId = null;
 
@@ -1216,6 +1219,25 @@ public class AdcreativesGetListStruct {
     this.liveVideoSubMode = liveVideoSubMode;
   }
 
+  public AdcreativesGetListStruct linkNameText(String linkNameText) {
+    this.linkNameText = linkNameText;
+    return this;
+  }
+
+  /**
+   * Get linkNameText
+   *
+   * @return linkNameText
+   */
+  @ApiModelProperty(value = "")
+  public String getLinkNameText() {
+    return linkNameText;
+  }
+
+  public void setLinkNameText(String linkNameText) {
+    this.linkNameText = linkNameText;
+  }
+
   public AdcreativesGetListStruct adcreativeTemplateId(Long adcreativeTemplateId) {
     this.adcreativeTemplateId = adcreativeTemplateId;
     return this;
@@ -1327,6 +1349,7 @@ public class AdcreativesGetListStruct {
         && Objects.equals(this.androidQuickAppSpec, adcreativesGetListStruct.androidQuickAppSpec)
         && Objects.equals(this.liveVideoMode, adcreativesGetListStruct.liveVideoMode)
         && Objects.equals(this.liveVideoSubMode, adcreativesGetListStruct.liveVideoSubMode)
+        && Objects.equals(this.linkNameText, adcreativesGetListStruct.linkNameText)
         && Objects.equals(this.adcreativeTemplateId, adcreativesGetListStruct.adcreativeTemplateId)
         && Objects.equals(this.adcreativeElements, adcreativesGetListStruct.adcreativeElements);
   }
@@ -1387,6 +1410,7 @@ public class AdcreativesGetListStruct {
         androidQuickAppSpec,
         liveVideoMode,
         liveVideoSubMode,
+        linkNameText,
         adcreativeTemplateId,
         adcreativeElements);
   }

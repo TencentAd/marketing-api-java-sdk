@@ -39,6 +39,9 @@ public class LandingPageStructure {
   @SerializedName("media_query")
   private LandingPageMediaQuery mediaQuery = null;
 
+  @SerializedName("link_name_text")
+  private String linkNameText = null;
+
   public LandingPageStructure pageSpec(PageSpec pageSpec) {
     this.pageSpec = pageSpec;
     return this;
@@ -153,6 +156,25 @@ public class LandingPageStructure {
     this.mediaQuery = mediaQuery;
   }
 
+  public LandingPageStructure linkNameText(String linkNameText) {
+    this.linkNameText = linkNameText;
+    return this;
+  }
+
+  /**
+   * Get linkNameText
+   *
+   * @return linkNameText
+   */
+  @ApiModelProperty(value = "")
+  public String getLinkNameText() {
+    return linkNameText;
+  }
+
+  public void setLinkNameText(String linkNameText) {
+    this.linkNameText = linkNameText;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -167,13 +189,20 @@ public class LandingPageStructure {
         && Objects.equals(this.linkNameType, landingPageStructure.linkNameType)
         && Objects.equals(this.landingPagePlatform, landingPageStructure.landingPagePlatform)
         && Objects.equals(this.landingPageInfo, landingPageStructure.landingPageInfo)
-        && Objects.equals(this.mediaQuery, landingPageStructure.mediaQuery);
+        && Objects.equals(this.mediaQuery, landingPageStructure.mediaQuery)
+        && Objects.equals(this.linkNameText, landingPageStructure.linkNameText);
   }
 
   @Override
   public int hashCode() {
     return Objects.hash(
-        pageSpec, pageType, linkNameType, landingPagePlatform, landingPageInfo, mediaQuery);
+        pageSpec,
+        pageType,
+        linkNameType,
+        landingPagePlatform,
+        landingPageInfo,
+        mediaQuery,
+        linkNameText);
   }
 
   @Override

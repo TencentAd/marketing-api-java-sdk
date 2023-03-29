@@ -141,6 +141,9 @@ public class DynamicCreativesUpdateRequest {
   @SerializedName("pic_material_switch")
   private AdvertiserPicMaterialSwitch picMaterialSwitch = null;
 
+  @SerializedName("link_name_text")
+  private String linkNameText = null;
+
   @SerializedName("account_id")
   private Long accountId = null;
 
@@ -919,6 +922,25 @@ public class DynamicCreativesUpdateRequest {
     this.picMaterialSwitch = picMaterialSwitch;
   }
 
+  public DynamicCreativesUpdateRequest linkNameText(String linkNameText) {
+    this.linkNameText = linkNameText;
+    return this;
+  }
+
+  /**
+   * Get linkNameText
+   *
+   * @return linkNameText
+   */
+  @ApiModelProperty(value = "")
+  public String getLinkNameText() {
+    return linkNameText;
+  }
+
+  public void setLinkNameText(String linkNameText) {
+    this.linkNameText = linkNameText;
+  }
+
   public DynamicCreativesUpdateRequest accountId(Long accountId) {
     this.accountId = accountId;
     return this;
@@ -1000,6 +1022,7 @@ public class DynamicCreativesUpdateRequest {
         && Objects.equals(this.industryLabel, dynamicCreativesUpdateRequest.industryLabel)
         && Objects.equals(this.sublinkSwitch, dynamicCreativesUpdateRequest.sublinkSwitch)
         && Objects.equals(this.picMaterialSwitch, dynamicCreativesUpdateRequest.picMaterialSwitch)
+        && Objects.equals(this.linkNameText, dynamicCreativesUpdateRequest.linkNameText)
         && Objects.equals(this.accountId, dynamicCreativesUpdateRequest.accountId);
   }
 
@@ -1046,6 +1069,7 @@ public class DynamicCreativesUpdateRequest {
         industryLabel,
         sublinkSwitch,
         picMaterialSwitch,
+        linkNameText,
         accountId);
   }
 

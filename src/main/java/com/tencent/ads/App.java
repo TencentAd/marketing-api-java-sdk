@@ -107,8 +107,10 @@ public class App {
   @Inject LabelAudiencesApiContainer labelAudiencesApiContainer;
   @Inject LabelsApiContainer labelsApiContainer;
   @Inject LeadCluesApiContainer leadCluesApiContainer;
+  @Inject LeadsCallApiContainer leadsCallApiContainer;
   @Inject LeadsCallRecordApiContainer leadsCallRecordApiContainer;
   @Inject LeadsCallRecordsApiContainer leadsCallRecordsApiContainer;
+  @Inject LeadsCallTokenApiContainer leadsCallTokenApiContainer;
   @Inject LeadsCallVirtualNumberApiContainer leadsCallVirtualNumberApiContainer;
   @Inject LeadsFormApiContainer leadsFormApiContainer;
   @Inject LeadsFormListApiContainer leadsFormListApiContainer;
@@ -565,12 +567,20 @@ public class App {
     return leadCluesApiContainer;
   }
 
+  public LeadsCallApiContainer leadsCall() {
+    return leadsCallApiContainer;
+  }
+
   public LeadsCallRecordApiContainer leadsCallRecord() {
     return leadsCallRecordApiContainer;
   }
 
   public LeadsCallRecordsApiContainer leadsCallRecords() {
     return leadsCallRecordsApiContainer;
+  }
+
+  public LeadsCallTokenApiContainer leadsCallToken() {
+    return leadsCallTokenApiContainer;
   }
 
   public LeadsCallVirtualNumberApiContainer leadsCallVirtualNumber() {

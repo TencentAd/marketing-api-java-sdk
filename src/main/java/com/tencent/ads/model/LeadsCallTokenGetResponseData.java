@@ -15,46 +15,36 @@ package com.tencent.ads.model;
 import com.google.gson.Gson;
 import com.google.gson.annotations.SerializedName;
 import io.swagger.annotations.ApiModelProperty;
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Objects;
 
-/** LeadsCallRecordGetResponseData */
-public class LeadsCallRecordGetResponseData {
-  @SerializedName("call_records")
-  private List<CallListStructs> callRecords = null;
+/** LeadsCallTokenGetResponseData */
+public class LeadsCallTokenGetResponseData {
+  @SerializedName("token")
+  private String token = null;
 
   @SerializedName("request_id")
   private String requestId = null;
 
-  public LeadsCallRecordGetResponseData callRecords(List<CallListStructs> callRecords) {
-    this.callRecords = callRecords;
-    return this;
-  }
-
-  public LeadsCallRecordGetResponseData addCallRecordsItem(CallListStructs callRecordsItem) {
-    if (this.callRecords == null) {
-      this.callRecords = new ArrayList<CallListStructs>();
-    }
-    this.callRecords.add(callRecordsItem);
+  public LeadsCallTokenGetResponseData token(String token) {
+    this.token = token;
     return this;
   }
 
   /**
-   * Get callRecords
+   * Get token
    *
-   * @return callRecords
+   * @return token
    */
   @ApiModelProperty(value = "")
-  public List<CallListStructs> getCallRecords() {
-    return callRecords;
+  public String getToken() {
+    return token;
   }
 
-  public void setCallRecords(List<CallListStructs> callRecords) {
-    this.callRecords = callRecords;
+  public void setToken(String token) {
+    this.token = token;
   }
 
-  public LeadsCallRecordGetResponseData requestId(String requestId) {
+  public LeadsCallTokenGetResponseData requestId(String requestId) {
     this.requestId = requestId;
     return this;
   }
@@ -81,15 +71,14 @@ public class LeadsCallRecordGetResponseData {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    LeadsCallRecordGetResponseData leadsCallRecordGetResponseData =
-        (LeadsCallRecordGetResponseData) o;
-    return Objects.equals(this.callRecords, leadsCallRecordGetResponseData.callRecords)
-        && Objects.equals(this.requestId, leadsCallRecordGetResponseData.requestId);
+    LeadsCallTokenGetResponseData leadsCallTokenGetResponseData = (LeadsCallTokenGetResponseData) o;
+    return Objects.equals(this.token, leadsCallTokenGetResponseData.token)
+        && Objects.equals(this.requestId, leadsCallTokenGetResponseData.requestId);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(callRecords, requestId);
+    return Objects.hash(token, requestId);
   }
 
   @Override

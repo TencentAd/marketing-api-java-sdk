@@ -17,24 +17,27 @@ import com.google.gson.annotations.SerializedName;
 import io.swagger.annotations.ApiModelProperty;
 import java.util.Objects;
 
-/** LeadsCallVirtualNumberGetRequest */
-public class LeadsCallVirtualNumberGetRequest {
+/** LeadsCallCreateRequest */
+public class LeadsCallCreateRequest {
   @SerializedName("account_id")
   private Long accountId = null;
 
   @SerializedName("leads_id")
   private Long leadsId = null;
 
-  @SerializedName("caller")
-  private String caller = null;
+  @SerializedName("user_id")
+  private Long userId = null;
 
-  @SerializedName("callee")
-  private String callee = null;
+  @SerializedName("callee_number")
+  private String calleeNumber = null;
 
   @SerializedName("request_id")
   private String requestId = null;
 
-  public LeadsCallVirtualNumberGetRequest accountId(Long accountId) {
+  @SerializedName("version")
+  private String version = null;
+
+  public LeadsCallCreateRequest accountId(Long accountId) {
     this.accountId = accountId;
     return this;
   }
@@ -53,7 +56,7 @@ public class LeadsCallVirtualNumberGetRequest {
     this.accountId = accountId;
   }
 
-  public LeadsCallVirtualNumberGetRequest leadsId(Long leadsId) {
+  public LeadsCallCreateRequest leadsId(Long leadsId) {
     this.leadsId = leadsId;
     return this;
   }
@@ -72,45 +75,45 @@ public class LeadsCallVirtualNumberGetRequest {
     this.leadsId = leadsId;
   }
 
-  public LeadsCallVirtualNumberGetRequest caller(String caller) {
-    this.caller = caller;
+  public LeadsCallCreateRequest userId(Long userId) {
+    this.userId = userId;
     return this;
   }
 
   /**
-   * Get caller
+   * Get userId
    *
-   * @return caller
+   * @return userId
    */
   @ApiModelProperty(value = "")
-  public String getCaller() {
-    return caller;
+  public Long getUserId() {
+    return userId;
   }
 
-  public void setCaller(String caller) {
-    this.caller = caller;
+  public void setUserId(Long userId) {
+    this.userId = userId;
   }
 
-  public LeadsCallVirtualNumberGetRequest callee(String callee) {
-    this.callee = callee;
+  public LeadsCallCreateRequest calleeNumber(String calleeNumber) {
+    this.calleeNumber = calleeNumber;
     return this;
   }
 
   /**
-   * Get callee
+   * Get calleeNumber
    *
-   * @return callee
+   * @return calleeNumber
    */
   @ApiModelProperty(value = "")
-  public String getCallee() {
-    return callee;
+  public String getCalleeNumber() {
+    return calleeNumber;
   }
 
-  public void setCallee(String callee) {
-    this.callee = callee;
+  public void setCalleeNumber(String calleeNumber) {
+    this.calleeNumber = calleeNumber;
   }
 
-  public LeadsCallVirtualNumberGetRequest requestId(String requestId) {
+  public LeadsCallCreateRequest requestId(String requestId) {
     this.requestId = requestId;
     return this;
   }
@@ -129,6 +132,25 @@ public class LeadsCallVirtualNumberGetRequest {
     this.requestId = requestId;
   }
 
+  public LeadsCallCreateRequest version(String version) {
+    this.version = version;
+    return this;
+  }
+
+  /**
+   * Get version
+   *
+   * @return version
+   */
+  @ApiModelProperty(value = "")
+  public String getVersion() {
+    return version;
+  }
+
+  public void setVersion(String version) {
+    this.version = version;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -137,18 +159,18 @@ public class LeadsCallVirtualNumberGetRequest {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    LeadsCallVirtualNumberGetRequest leadsCallVirtualNumberGetRequest =
-        (LeadsCallVirtualNumberGetRequest) o;
-    return Objects.equals(this.accountId, leadsCallVirtualNumberGetRequest.accountId)
-        && Objects.equals(this.leadsId, leadsCallVirtualNumberGetRequest.leadsId)
-        && Objects.equals(this.caller, leadsCallVirtualNumberGetRequest.caller)
-        && Objects.equals(this.callee, leadsCallVirtualNumberGetRequest.callee)
-        && Objects.equals(this.requestId, leadsCallVirtualNumberGetRequest.requestId);
+    LeadsCallCreateRequest leadsCallCreateRequest = (LeadsCallCreateRequest) o;
+    return Objects.equals(this.accountId, leadsCallCreateRequest.accountId)
+        && Objects.equals(this.leadsId, leadsCallCreateRequest.leadsId)
+        && Objects.equals(this.userId, leadsCallCreateRequest.userId)
+        && Objects.equals(this.calleeNumber, leadsCallCreateRequest.calleeNumber)
+        && Objects.equals(this.requestId, leadsCallCreateRequest.requestId)
+        && Objects.equals(this.version, leadsCallCreateRequest.version);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(accountId, leadsId, caller, callee, requestId);
+    return Objects.hash(accountId, leadsId, userId, calleeNumber, requestId, version);
   }
 
   @Override

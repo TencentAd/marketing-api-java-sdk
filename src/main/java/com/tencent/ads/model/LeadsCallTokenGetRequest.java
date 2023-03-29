@@ -15,46 +15,58 @@ package com.tencent.ads.model;
 import com.google.gson.Gson;
 import com.google.gson.annotations.SerializedName;
 import io.swagger.annotations.ApiModelProperty;
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Objects;
 
-/** LeadsCallRecordGetResponseData */
-public class LeadsCallRecordGetResponseData {
-  @SerializedName("call_records")
-  private List<CallListStructs> callRecords = null;
+/** LeadsCallTokenGetRequest */
+public class LeadsCallTokenGetRequest {
+  @SerializedName("account_id")
+  private Long accountId = null;
+
+  @SerializedName("user_id")
+  private Long userId = null;
 
   @SerializedName("request_id")
   private String requestId = null;
 
-  public LeadsCallRecordGetResponseData callRecords(List<CallListStructs> callRecords) {
-    this.callRecords = callRecords;
-    return this;
-  }
-
-  public LeadsCallRecordGetResponseData addCallRecordsItem(CallListStructs callRecordsItem) {
-    if (this.callRecords == null) {
-      this.callRecords = new ArrayList<CallListStructs>();
-    }
-    this.callRecords.add(callRecordsItem);
+  public LeadsCallTokenGetRequest accountId(Long accountId) {
+    this.accountId = accountId;
     return this;
   }
 
   /**
-   * Get callRecords
+   * Get accountId
    *
-   * @return callRecords
+   * @return accountId
    */
   @ApiModelProperty(value = "")
-  public List<CallListStructs> getCallRecords() {
-    return callRecords;
+  public Long getAccountId() {
+    return accountId;
   }
 
-  public void setCallRecords(List<CallListStructs> callRecords) {
-    this.callRecords = callRecords;
+  public void setAccountId(Long accountId) {
+    this.accountId = accountId;
   }
 
-  public LeadsCallRecordGetResponseData requestId(String requestId) {
+  public LeadsCallTokenGetRequest userId(Long userId) {
+    this.userId = userId;
+    return this;
+  }
+
+  /**
+   * Get userId
+   *
+   * @return userId
+   */
+  @ApiModelProperty(value = "")
+  public Long getUserId() {
+    return userId;
+  }
+
+  public void setUserId(Long userId) {
+    this.userId = userId;
+  }
+
+  public LeadsCallTokenGetRequest requestId(String requestId) {
     this.requestId = requestId;
     return this;
   }
@@ -81,15 +93,15 @@ public class LeadsCallRecordGetResponseData {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    LeadsCallRecordGetResponseData leadsCallRecordGetResponseData =
-        (LeadsCallRecordGetResponseData) o;
-    return Objects.equals(this.callRecords, leadsCallRecordGetResponseData.callRecords)
-        && Objects.equals(this.requestId, leadsCallRecordGetResponseData.requestId);
+    LeadsCallTokenGetRequest leadsCallTokenGetRequest = (LeadsCallTokenGetRequest) o;
+    return Objects.equals(this.accountId, leadsCallTokenGetRequest.accountId)
+        && Objects.equals(this.userId, leadsCallTokenGetRequest.userId)
+        && Objects.equals(this.requestId, leadsCallTokenGetRequest.requestId);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(callRecords, requestId);
+    return Objects.hash(accountId, userId, requestId);
   }
 
   @Override
