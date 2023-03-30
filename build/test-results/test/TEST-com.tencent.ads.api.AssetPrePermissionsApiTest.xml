@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.tencent.ads.api.AssetPrePermissionsApiTest" tests="2" skipped="2" failures="0" errors="0" timestamp="2023-03-30T10:31:21" hostname="VM_118_42_centos" time="0.0">
+  <properties/>
+  <testcase name="assetPrePermissionsGetTest" classname="com.tencent.ads.api.AssetPrePermissionsApiTest" time="0.0">
+    <skipped/>
+  </testcase>
+  <testcase name="assetPrePermissionsUpdateTest" classname="com.tencent.ads.api.AssetPrePermissionsApiTest" time="0.0">
+    <skipped/>
+  </testcase>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
