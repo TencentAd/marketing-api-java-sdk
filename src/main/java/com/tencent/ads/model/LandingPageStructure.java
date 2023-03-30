@@ -42,6 +42,9 @@ public class LandingPageStructure {
   @SerializedName("link_name_text")
   private String linkNameText = null;
 
+  @SerializedName("landing_page_url_type")
+  private LandingPageUrlType landingPageUrlType = null;
+
   public LandingPageStructure pageSpec(PageSpec pageSpec) {
     this.pageSpec = pageSpec;
     return this;
@@ -175,6 +178,25 @@ public class LandingPageStructure {
     this.linkNameText = linkNameText;
   }
 
+  public LandingPageStructure landingPageUrlType(LandingPageUrlType landingPageUrlType) {
+    this.landingPageUrlType = landingPageUrlType;
+    return this;
+  }
+
+  /**
+   * Get landingPageUrlType
+   *
+   * @return landingPageUrlType
+   */
+  @ApiModelProperty(value = "")
+  public LandingPageUrlType getLandingPageUrlType() {
+    return landingPageUrlType;
+  }
+
+  public void setLandingPageUrlType(LandingPageUrlType landingPageUrlType) {
+    this.landingPageUrlType = landingPageUrlType;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -190,7 +212,8 @@ public class LandingPageStructure {
         && Objects.equals(this.landingPagePlatform, landingPageStructure.landingPagePlatform)
         && Objects.equals(this.landingPageInfo, landingPageStructure.landingPageInfo)
         && Objects.equals(this.mediaQuery, landingPageStructure.mediaQuery)
-        && Objects.equals(this.linkNameText, landingPageStructure.linkNameText);
+        && Objects.equals(this.linkNameText, landingPageStructure.linkNameText)
+        && Objects.equals(this.landingPageUrlType, landingPageStructure.landingPageUrlType);
   }
 
   @Override
@@ -202,7 +225,8 @@ public class LandingPageStructure {
         landingPagePlatform,
         landingPageInfo,
         mediaQuery,
-        linkNameText);
+        linkNameText,
+        landingPageUrlType);
   }
 
   @Override
