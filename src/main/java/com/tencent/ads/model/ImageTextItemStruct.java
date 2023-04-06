@@ -49,10 +49,10 @@ public class ImageTextItemStruct {
   private CanvasImageTextElementType subElemType = null;
 
   @SerializedName("gh_spec")
-  private GhSpec ghSpec = null;
+  private FloatGhSpec ghSpec = null;
 
   @SerializedName("enterprise_wx_spec")
-  private EnterpriseWxSpec enterpriseWxSpec = null;
+  private FloatEnterpriseWxSpec enterpriseWxSpec = null;
 
   public ImageTextItemStruct borderColor(String borderColor) {
     this.borderColor = borderColor;
@@ -225,7 +225,7 @@ public class ImageTextItemStruct {
     this.subElemType = subElemType;
   }
 
-  public ImageTextItemStruct ghSpec(GhSpec ghSpec) {
+  public ImageTextItemStruct ghSpec(FloatGhSpec ghSpec) {
     this.ghSpec = ghSpec;
     return this;
   }
@@ -236,15 +236,15 @@ public class ImageTextItemStruct {
    * @return ghSpec
    */
   @ApiModelProperty(value = "")
-  public GhSpec getGhSpec() {
+  public FloatGhSpec getGhSpec() {
     return ghSpec;
   }
 
-  public void setGhSpec(GhSpec ghSpec) {
+  public void setGhSpec(FloatGhSpec ghSpec) {
     this.ghSpec = ghSpec;
   }
 
-  public ImageTextItemStruct enterpriseWxSpec(EnterpriseWxSpec enterpriseWxSpec) {
+  public ImageTextItemStruct enterpriseWxSpec(FloatEnterpriseWxSpec enterpriseWxSpec) {
     this.enterpriseWxSpec = enterpriseWxSpec;
     return this;
   }
@@ -255,11 +255,11 @@ public class ImageTextItemStruct {
    * @return enterpriseWxSpec
    */
   @ApiModelProperty(value = "")
-  public EnterpriseWxSpec getEnterpriseWxSpec() {
+  public FloatEnterpriseWxSpec getEnterpriseWxSpec() {
     return enterpriseWxSpec;
   }
 
-  public void setEnterpriseWxSpec(EnterpriseWxSpec enterpriseWxSpec) {
+  public void setEnterpriseWxSpec(FloatEnterpriseWxSpec enterpriseWxSpec) {
     this.enterpriseWxSpec = enterpriseWxSpec;
   }
 
