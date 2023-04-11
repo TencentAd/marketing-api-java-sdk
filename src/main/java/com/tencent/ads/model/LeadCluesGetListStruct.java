@@ -210,6 +210,9 @@ public class LeadCluesGetListStruct {
   @SerializedName("owner_name")
   private String ownerName = null;
 
+  @SerializedName("owner_id")
+  private Long ownerId = null;
+
   @SerializedName("all_follow_records")
   private String allFollowRecords = null;
 
@@ -1410,6 +1413,25 @@ public class LeadCluesGetListStruct {
     this.ownerName = ownerName;
   }
 
+  public LeadCluesGetListStruct ownerId(Long ownerId) {
+    this.ownerId = ownerId;
+    return this;
+  }
+
+  /**
+   * Get ownerId
+   *
+   * @return ownerId
+   */
+  @ApiModelProperty(value = "")
+  public Long getOwnerId() {
+    return ownerId;
+  }
+
+  public void setOwnerId(Long ownerId) {
+    this.ownerId = ownerId;
+  }
+
   public LeadCluesGetListStruct allFollowRecords(String allFollowRecords) {
     this.allFollowRecords = allFollowRecords;
     return this;
@@ -1502,6 +1524,7 @@ public class LeadCluesGetListStruct {
         && Objects.equals(this.nickName, leadCluesGetListStruct.nickName)
         && Objects.equals(this.isBroadCastLeads, leadCluesGetListStruct.isBroadCastLeads)
         && Objects.equals(this.ownerName, leadCluesGetListStruct.ownerName)
+        && Objects.equals(this.ownerId, leadCluesGetListStruct.ownerId)
         && Objects.equals(this.allFollowRecords, leadCluesGetListStruct.allFollowRecords);
   }
 
@@ -1571,6 +1594,7 @@ public class LeadCluesGetListStruct {
         nickName,
         isBroadCastLeads,
         ownerName,
+        ownerId,
         allFollowRecords);
   }
 

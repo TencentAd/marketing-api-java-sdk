@@ -27,6 +27,18 @@ public class BidwordPage {
   @SerializedName("page_url")
   private String pageUrl = null;
 
+  @SerializedName("mini_program_spec")
+  private MiniProgramSpecStruct miniProgramSpec = null;
+
+  @SerializedName("deep_link_spec")
+  private DeepLinkSpecStruct deepLinkSpec = null;
+
+  @SerializedName("universal_link_spec")
+  private UniversalLinkSpecStruct universalLinkSpec = null;
+
+  @SerializedName("xijing_spec")
+  private XijingSpecStruct xijingSpec = null;
+
   public BidwordPage pageType(PageTypeRead pageType) {
     this.pageType = pageType;
     return this;
@@ -65,6 +77,82 @@ public class BidwordPage {
     this.pageUrl = pageUrl;
   }
 
+  public BidwordPage miniProgramSpec(MiniProgramSpecStruct miniProgramSpec) {
+    this.miniProgramSpec = miniProgramSpec;
+    return this;
+  }
+
+  /**
+   * Get miniProgramSpec
+   *
+   * @return miniProgramSpec
+   */
+  @ApiModelProperty(value = "")
+  public MiniProgramSpecStruct getMiniProgramSpec() {
+    return miniProgramSpec;
+  }
+
+  public void setMiniProgramSpec(MiniProgramSpecStruct miniProgramSpec) {
+    this.miniProgramSpec = miniProgramSpec;
+  }
+
+  public BidwordPage deepLinkSpec(DeepLinkSpecStruct deepLinkSpec) {
+    this.deepLinkSpec = deepLinkSpec;
+    return this;
+  }
+
+  /**
+   * Get deepLinkSpec
+   *
+   * @return deepLinkSpec
+   */
+  @ApiModelProperty(value = "")
+  public DeepLinkSpecStruct getDeepLinkSpec() {
+    return deepLinkSpec;
+  }
+
+  public void setDeepLinkSpec(DeepLinkSpecStruct deepLinkSpec) {
+    this.deepLinkSpec = deepLinkSpec;
+  }
+
+  public BidwordPage universalLinkSpec(UniversalLinkSpecStruct universalLinkSpec) {
+    this.universalLinkSpec = universalLinkSpec;
+    return this;
+  }
+
+  /**
+   * Get universalLinkSpec
+   *
+   * @return universalLinkSpec
+   */
+  @ApiModelProperty(value = "")
+  public UniversalLinkSpecStruct getUniversalLinkSpec() {
+    return universalLinkSpec;
+  }
+
+  public void setUniversalLinkSpec(UniversalLinkSpecStruct universalLinkSpec) {
+    this.universalLinkSpec = universalLinkSpec;
+  }
+
+  public BidwordPage xijingSpec(XijingSpecStruct xijingSpec) {
+    this.xijingSpec = xijingSpec;
+    return this;
+  }
+
+  /**
+   * Get xijingSpec
+   *
+   * @return xijingSpec
+   */
+  @ApiModelProperty(value = "")
+  public XijingSpecStruct getXijingSpec() {
+    return xijingSpec;
+  }
+
+  public void setXijingSpec(XijingSpecStruct xijingSpec) {
+    this.xijingSpec = xijingSpec;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -75,12 +163,17 @@ public class BidwordPage {
     }
     BidwordPage bidwordPage = (BidwordPage) o;
     return Objects.equals(this.pageType, bidwordPage.pageType)
-        && Objects.equals(this.pageUrl, bidwordPage.pageUrl);
+        && Objects.equals(this.pageUrl, bidwordPage.pageUrl)
+        && Objects.equals(this.miniProgramSpec, bidwordPage.miniProgramSpec)
+        && Objects.equals(this.deepLinkSpec, bidwordPage.deepLinkSpec)
+        && Objects.equals(this.universalLinkSpec, bidwordPage.universalLinkSpec)
+        && Objects.equals(this.xijingSpec, bidwordPage.xijingSpec);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(pageType, pageUrl);
+    return Objects.hash(
+        pageType, pageUrl, miniProgramSpec, deepLinkSpec, universalLinkSpec, xijingSpec);
   }
 
   @Override
