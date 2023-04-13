@@ -18,8 +18,8 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.util.Objects;
 
-/** 推广站点结构 */
-@ApiModel(description = "推广站点结构")
+/** 推广链接结构 */
+@ApiModel(description = "推广链接结构")
 public class WebsiteUpdateStruct {
   @SerializedName("website_domain")
   private String websiteDomain = null;

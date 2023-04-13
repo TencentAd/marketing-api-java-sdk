@@ -30,12 +30,6 @@ public class QualificationSpec {
   @SerializedName("additional_industry_spec")
   private AdditionalIndustryQualificationsSpec additionalIndustrySpec = null;
 
-  @SerializedName("industry_wechat_spec")
-  private WechatIndustryQualificationsSpec industryWechatSpec = null;
-
-  @SerializedName("ad_wechat_spec")
-  private WechatAdQualificationsSpec adWechatSpec = null;
-
   public QualificationSpec industrySpec(IndustryQualificationsSpec industrySpec) {
     this.industrySpec = industrySpec;
     return this;
@@ -95,44 +89,6 @@ public class QualificationSpec {
     this.additionalIndustrySpec = additionalIndustrySpec;
   }
 
-  public QualificationSpec industryWechatSpec(WechatIndustryQualificationsSpec industryWechatSpec) {
-    this.industryWechatSpec = industryWechatSpec;
-    return this;
-  }
-
-  /**
-   * Get industryWechatSpec
-   *
-   * @return industryWechatSpec
-   */
-  @ApiModelProperty(value = "")
-  public WechatIndustryQualificationsSpec getIndustryWechatSpec() {
-    return industryWechatSpec;
-  }
-
-  public void setIndustryWechatSpec(WechatIndustryQualificationsSpec industryWechatSpec) {
-    this.industryWechatSpec = industryWechatSpec;
-  }
-
-  public QualificationSpec adWechatSpec(WechatAdQualificationsSpec adWechatSpec) {
-    this.adWechatSpec = adWechatSpec;
-    return this;
-  }
-
-  /**
-   * Get adWechatSpec
-   *
-   * @return adWechatSpec
-   */
-  @ApiModelProperty(value = "")
-  public WechatAdQualificationsSpec getAdWechatSpec() {
-    return adWechatSpec;
-  }
-
-  public void setAdWechatSpec(WechatAdQualificationsSpec adWechatSpec) {
-    this.adWechatSpec = adWechatSpec;
-  }
-
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -144,15 +100,12 @@ public class QualificationSpec {
     QualificationSpec qualificationSpec = (QualificationSpec) o;
     return Objects.equals(this.industrySpec, qualificationSpec.industrySpec)
         && Objects.equals(this.adSpec, qualificationSpec.adSpec)
-        && Objects.equals(this.additionalIndustrySpec, qualificationSpec.additionalIndustrySpec)
-        && Objects.equals(this.industryWechatSpec, qualificationSpec.industryWechatSpec)
-        && Objects.equals(this.adWechatSpec, qualificationSpec.adWechatSpec);
+        && Objects.equals(this.additionalIndustrySpec, qualificationSpec.additionalIndustrySpec);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(
-        industrySpec, adSpec, additionalIndustrySpec, industryWechatSpec, adWechatSpec);
+    return Objects.hash(industrySpec, adSpec, additionalIndustrySpec);
   }
 
   @Override

@@ -54,9 +54,6 @@ public class AdvertiserUpdateRequest {
   @SerializedName("contact_person_mobile")
   private String contactPersonMobile = null;
 
-  @SerializedName("wechat_spec")
-  private MpInfoUpdate wechatSpec = null;
-
   @SerializedName("websites")
   private List<WebsiteUpdateStruct> websites = null;
 
@@ -273,25 +270,6 @@ public class AdvertiserUpdateRequest {
     this.contactPersonMobile = contactPersonMobile;
   }
 
-  public AdvertiserUpdateRequest wechatSpec(MpInfoUpdate wechatSpec) {
-    this.wechatSpec = wechatSpec;
-    return this;
-  }
-
-  /**
-   * Get wechatSpec
-   *
-   * @return wechatSpec
-   */
-  @ApiModelProperty(value = "")
-  public MpInfoUpdate getWechatSpec() {
-    return wechatSpec;
-  }
-
-  public void setWechatSpec(MpInfoUpdate wechatSpec) {
-    this.wechatSpec = wechatSpec;
-  }
-
   public AdvertiserUpdateRequest websites(List<WebsiteUpdateStruct> websites) {
     this.websites = websites;
     return this;
@@ -360,7 +338,6 @@ public class AdvertiserUpdateRequest {
         && Objects.equals(
             this.contactPersonTelephone, advertiserUpdateRequest.contactPersonTelephone)
         && Objects.equals(this.contactPersonMobile, advertiserUpdateRequest.contactPersonMobile)
-        && Objects.equals(this.wechatSpec, advertiserUpdateRequest.wechatSpec)
         && Objects.equals(this.websites, advertiserUpdateRequest.websites)
         && Objects.equals(this.areaCode, advertiserUpdateRequest.areaCode);
   }
@@ -379,7 +356,6 @@ public class AdvertiserUpdateRequest {
         introductionUrl,
         contactPersonTelephone,
         contactPersonMobile,
-        wechatSpec,
         websites,
         areaCode);
   }

@@ -30,12 +30,6 @@ public class QualificationsGetResponseData {
   @SerializedName("additional_industry_qualifications")
   private List<AdditionalIndustryQualificationsStruct> additionalIndustryQualifications = null;
 
-  @SerializedName("industry_qualifications_wechat")
-  private List<WechatIndustryQualificationsStruct> industryQualificationsWechat = null;
-
-  @SerializedName("ad_qualifications_wechat")
-  private List<WechatAdQualificationsStruct> adQualificationsWechat = null;
-
   public QualificationsGetResponseData industryQualifications(
       List<IndustryQualificationsStruct> industryQualifications) {
     this.industryQualifications = industryQualifications;
@@ -125,65 +119,6 @@ public class QualificationsGetResponseData {
     this.additionalIndustryQualifications = additionalIndustryQualifications;
   }
 
-  public QualificationsGetResponseData industryQualificationsWechat(
-      List<WechatIndustryQualificationsStruct> industryQualificationsWechat) {
-    this.industryQualificationsWechat = industryQualificationsWechat;
-    return this;
-  }
-
-  public QualificationsGetResponseData addIndustryQualificationsWechatItem(
-      WechatIndustryQualificationsStruct industryQualificationsWechatItem) {
-    if (this.industryQualificationsWechat == null) {
-      this.industryQualificationsWechat = new ArrayList<WechatIndustryQualificationsStruct>();
-    }
-    this.industryQualificationsWechat.add(industryQualificationsWechatItem);
-    return this;
-  }
-
-  /**
-   * Get industryQualificationsWechat
-   *
-   * @return industryQualificationsWechat
-   */
-  @ApiModelProperty(value = "")
-  public List<WechatIndustryQualificationsStruct> getIndustryQualificationsWechat() {
-    return industryQualificationsWechat;
-  }
-
-  public void setIndustryQualificationsWechat(
-      List<WechatIndustryQualificationsStruct> industryQualificationsWechat) {
-    this.industryQualificationsWechat = industryQualificationsWechat;
-  }
-
-  public QualificationsGetResponseData adQualificationsWechat(
-      List<WechatAdQualificationsStruct> adQualificationsWechat) {
-    this.adQualificationsWechat = adQualificationsWechat;
-    return this;
-  }
-
-  public QualificationsGetResponseData addAdQualificationsWechatItem(
-      WechatAdQualificationsStruct adQualificationsWechatItem) {
-    if (this.adQualificationsWechat == null) {
-      this.adQualificationsWechat = new ArrayList<WechatAdQualificationsStruct>();
-    }
-    this.adQualificationsWechat.add(adQualificationsWechatItem);
-    return this;
-  }
-
-  /**
-   * Get adQualificationsWechat
-   *
-   * @return adQualificationsWechat
-   */
-  @ApiModelProperty(value = "")
-  public List<WechatAdQualificationsStruct> getAdQualificationsWechat() {
-    return adQualificationsWechat;
-  }
-
-  public void setAdQualificationsWechat(List<WechatAdQualificationsStruct> adQualificationsWechat) {
-    this.adQualificationsWechat = adQualificationsWechat;
-  }
-
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -198,22 +133,12 @@ public class QualificationsGetResponseData {
         && Objects.equals(this.adQualifications, qualificationsGetResponseData.adQualifications)
         && Objects.equals(
             this.additionalIndustryQualifications,
-            qualificationsGetResponseData.additionalIndustryQualifications)
-        && Objects.equals(
-            this.industryQualificationsWechat,
-            qualificationsGetResponseData.industryQualificationsWechat)
-        && Objects.equals(
-            this.adQualificationsWechat, qualificationsGetResponseData.adQualificationsWechat);
+            qualificationsGetResponseData.additionalIndustryQualifications);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(
-        industryQualifications,
-        adQualifications,
-        additionalIndustryQualifications,
-        industryQualificationsWechat,
-        adQualificationsWechat);
+    return Objects.hash(industryQualifications, adQualifications, additionalIndustryQualifications);
   }
 
   @Override

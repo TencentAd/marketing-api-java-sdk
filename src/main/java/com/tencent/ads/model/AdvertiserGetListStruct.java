@@ -59,9 +59,6 @@ public class AdvertiserGetListStruct {
   @SerializedName("contact_person_mobile")
   private String contactPersonMobile = null;
 
-  @SerializedName("wechat_spec")
-  private MpInfoRead wechatSpec = null;
-
   @SerializedName("websites")
   private List<WebsiteReadStruct> websites = null;
 
@@ -82,6 +79,9 @@ public class AdvertiserGetListStruct {
 
   @SerializedName("area_code")
   private Long areaCode = null;
+
+  @SerializedName("is_local_business")
+  private Boolean isLocalBusiness = null;
 
   @SerializedName("account_id")
   private Long accountId = null;
@@ -365,25 +365,6 @@ public class AdvertiserGetListStruct {
     this.contactPersonMobile = contactPersonMobile;
   }
 
-  public AdvertiserGetListStruct wechatSpec(MpInfoRead wechatSpec) {
-    this.wechatSpec = wechatSpec;
-    return this;
-  }
-
-  /**
-   * Get wechatSpec
-   *
-   * @return wechatSpec
-   */
-  @ApiModelProperty(value = "")
-  public MpInfoRead getWechatSpec() {
-    return wechatSpec;
-  }
-
-  public void setWechatSpec(MpInfoRead wechatSpec) {
-    this.wechatSpec = wechatSpec;
-  }
-
   public AdvertiserGetListStruct websites(List<WebsiteReadStruct> websites) {
     this.websites = websites;
     return this;
@@ -531,6 +512,25 @@ public class AdvertiserGetListStruct {
 
   public void setAreaCode(Long areaCode) {
     this.areaCode = areaCode;
+  }
+
+  public AdvertiserGetListStruct isLocalBusiness(Boolean isLocalBusiness) {
+    this.isLocalBusiness = isLocalBusiness;
+    return this;
+  }
+
+  /**
+   * Get isLocalBusiness
+   *
+   * @return isLocalBusiness
+   */
+  @ApiModelProperty(value = "")
+  public Boolean isIsLocalBusiness() {
+    return isLocalBusiness;
+  }
+
+  public void setIsLocalBusiness(Boolean isLocalBusiness) {
+    this.isLocalBusiness = isLocalBusiness;
   }
 
   public AdvertiserGetListStruct accountId(Long accountId) {
@@ -786,7 +786,6 @@ public class AdvertiserGetListStruct {
         && Objects.equals(
             this.contactPersonTelephone, advertiserGetListStruct.contactPersonTelephone)
         && Objects.equals(this.contactPersonMobile, advertiserGetListStruct.contactPersonMobile)
-        && Objects.equals(this.wechatSpec, advertiserGetListStruct.wechatSpec)
         && Objects.equals(this.websites, advertiserGetListStruct.websites)
         && Objects.equals(this.mdmId, advertiserGetListStruct.mdmId)
         && Objects.equals(this.mdmName, advertiserGetListStruct.mdmName)
@@ -794,6 +793,7 @@ public class AdvertiserGetListStruct {
         && Objects.equals(this.operators, advertiserGetListStruct.operators)
         && Objects.equals(this.memo, advertiserGetListStruct.memo)
         && Objects.equals(this.areaCode, advertiserGetListStruct.areaCode)
+        && Objects.equals(this.isLocalBusiness, advertiserGetListStruct.isLocalBusiness)
         && Objects.equals(this.accountId, advertiserGetListStruct.accountId)
         && Objects.equals(this.adQualificationImage, advertiserGetListStruct.adQualificationImage)
         && Objects.equals(this.certificationImage, advertiserGetListStruct.certificationImage)
@@ -823,7 +823,6 @@ public class AdvertiserGetListStruct {
         contactPersonEmail,
         contactPersonTelephone,
         contactPersonMobile,
-        wechatSpec,
         websites,
         mdmId,
         mdmName,
@@ -831,6 +830,7 @@ public class AdvertiserGetListStruct {
         operators,
         memo,
         areaCode,
+        isLocalBusiness,
         accountId,
         adQualificationImage,
         certificationImage,

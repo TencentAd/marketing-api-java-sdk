@@ -19,7 +19,7 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-/** 推广版位系统状态 */
+/** 推广链接系统状态 */
 @JsonAdapter(WebsiteStatus.Adapter.class)
 public enum WebsiteStatus {
   NORMAL("WEBSITE_STATUS_NORMAL"),
