@@ -28,7 +28,15 @@ public enum CityLevel {
 
   THIRD("CITY_LEVEL_THIRD"),
 
-  NONE("CITY_LEVEL_NONE");
+  NONE("CITY_LEVEL_NONE"),
+
+  UNKNOW("CITY_LEVEL_UNKNOW"),
+
+  CORE("CITY_LEVEL_CORE"),
+
+  IMPORTANT("CITY_LEVEL_IMPORTANT"),
+
+  OTHER("CITY_LEVEL_OTHER");
 
   private String value;
 
