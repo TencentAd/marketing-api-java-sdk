@@ -34,6 +34,7 @@ public class App {
   @Inject AdcreativesRelatedCapabilityApiContainer adcreativesRelatedCapabilityApiContainer;
   @Inject AdgroupNegativewordsApiContainer adgroupNegativewordsApiContainer;
   @Inject AdgroupsApiContainer adgroupsApiContainer;
+  @Inject AdqReportsUpgradeStatusApiContainer adqReportsUpgradeStatusApiContainer;
   @Inject AdsApiContainer adsApiContainer;
   @Inject AdvertiserApiContainer advertiserApiContainer;
   @Inject AdvertiserDailyBudgetApiContainer advertiserDailyBudgetApiContainer;
@@ -273,6 +274,10 @@ public class App {
 
   public AdgroupsApiContainer adgroups() {
     return adgroupsApiContainer;
+  }
+
+  public AdqReportsUpgradeStatusApiContainer adqReportsUpgradeStatus() {
+    return adqReportsUpgradeStatusApiContainer;
   }
 
   public AdsApiContainer ads() {
