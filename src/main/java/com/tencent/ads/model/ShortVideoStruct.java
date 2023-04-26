@@ -27,9 +27,6 @@ public class ShortVideoStruct {
   @SerializedName("short_video2")
   private Long shortVideo2 = null;
 
-  @SerializedName("video_cover_img_id")
-  private String videoCoverImgId = null;
-
   public ShortVideoStruct shortVideo1(Long shortVideo1) {
     this.shortVideo1 = shortVideo1;
     return this;
@@ -68,25 +65,6 @@ public class ShortVideoStruct {
     this.shortVideo2 = shortVideo2;
   }
 
-  public ShortVideoStruct videoCoverImgId(String videoCoverImgId) {
-    this.videoCoverImgId = videoCoverImgId;
-    return this;
-  }
-
-  /**
-   * Get videoCoverImgId
-   *
-   * @return videoCoverImgId
-   */
-  @ApiModelProperty(value = "")
-  public String getVideoCoverImgId() {
-    return videoCoverImgId;
-  }
-
-  public void setVideoCoverImgId(String videoCoverImgId) {
-    this.videoCoverImgId = videoCoverImgId;
-  }
-
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -97,13 +75,12 @@ public class ShortVideoStruct {
     }
     ShortVideoStruct shortVideoStruct = (ShortVideoStruct) o;
     return Objects.equals(this.shortVideo1, shortVideoStruct.shortVideo1)
-        && Objects.equals(this.shortVideo2, shortVideoStruct.shortVideo2)
-        && Objects.equals(this.videoCoverImgId, shortVideoStruct.videoCoverImgId);
+        && Objects.equals(this.shortVideo2, shortVideoStruct.shortVideo2);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(shortVideo1, shortVideo2, videoCoverImgId);
+    return Objects.hash(shortVideo1, shortVideo2);
   }
 
   @Override

@@ -1995,17 +1995,11 @@ public class HourlyReportsGetListStruct {
   @SerializedName("match_type")
   private Long matchType = null;
 
-  @SerializedName("placement_group_id")
-  private Long placementGroupId = null;
-
   @SerializedName("bidword_id")
   private Long bidwordId = null;
 
   @SerializedName("bidword")
   private String bidword = null;
-
-  @SerializedName("placement_group_name")
-  private String placementGroupName = null;
 
   @SerializedName("live_stream_exp_uv")
   private Long liveStreamExpUv = null;
@@ -14766,25 +14760,6 @@ public class HourlyReportsGetListStruct {
     this.matchType = matchType;
   }
 
-  public HourlyReportsGetListStruct placementGroupId(Long placementGroupId) {
-    this.placementGroupId = placementGroupId;
-    return this;
-  }
-
-  /**
-   * Get placementGroupId
-   *
-   * @return placementGroupId
-   */
-  @ApiModelProperty(value = "")
-  public Long getPlacementGroupId() {
-    return placementGroupId;
-  }
-
-  public void setPlacementGroupId(Long placementGroupId) {
-    this.placementGroupId = placementGroupId;
-  }
-
   public HourlyReportsGetListStruct bidwordId(Long bidwordId) {
     this.bidwordId = bidwordId;
     return this;
@@ -14821,25 +14796,6 @@ public class HourlyReportsGetListStruct {
 
   public void setBidword(String bidword) {
     this.bidword = bidword;
-  }
-
-  public HourlyReportsGetListStruct placementGroupName(String placementGroupName) {
-    this.placementGroupName = placementGroupName;
-    return this;
-  }
-
-  /**
-   * Get placementGroupName
-   *
-   * @return placementGroupName
-   */
-  @ApiModelProperty(value = "")
-  public String getPlacementGroupName() {
-    return placementGroupName;
-  }
-
-  public void setPlacementGroupName(String placementGroupName) {
-    this.placementGroupName = placementGroupName;
   }
 
   public HourlyReportsGetListStruct liveStreamExpUv(Long liveStreamExpUv) {
@@ -17155,10 +17111,8 @@ public class HourlyReportsGetListStruct {
         && Objects.equals(this.promotedObjectId, hourlyReportsGetListStruct.promotedObjectId)
         && Objects.equals(this.date, hourlyReportsGetListStruct.date)
         && Objects.equals(this.matchType, hourlyReportsGetListStruct.matchType)
-        && Objects.equals(this.placementGroupId, hourlyReportsGetListStruct.placementGroupId)
         && Objects.equals(this.bidwordId, hourlyReportsGetListStruct.bidwordId)
         && Objects.equals(this.bidword, hourlyReportsGetListStruct.bidword)
-        && Objects.equals(this.placementGroupName, hourlyReportsGetListStruct.placementGroupName)
         && Objects.equals(this.liveStreamExpUv, hourlyReportsGetListStruct.liveStreamExpUv)
         && Objects.equals(this.liveStreamAvgTime, hourlyReportsGetListStruct.liveStreamAvgTime)
         && Objects.equals(this.wechatAccountId, hourlyReportsGetListStruct.wechatAccountId)
@@ -17951,10 +17905,8 @@ public class HourlyReportsGetListStruct {
         promotedObjectId,
         date,
         matchType,
-        placementGroupId,
         bidwordId,
         bidword,
-        placementGroupName,
         liveStreamExpUv,
         liveStreamAvgTime,
         wechatAccountId,

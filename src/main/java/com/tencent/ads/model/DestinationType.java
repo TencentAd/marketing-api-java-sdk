@@ -110,7 +110,9 @@ public enum DestinationType {
 
   UNIVERSAL_LINK("PAGE_TYPE_UNIVERSAL_LINK"),
 
-  NOT_USED("PAGE_TYPE_NOT_USED");
+  NOT_USED("PAGE_TYPE_NOT_USED"),
+
+  CUSTOM_TV("PAGE_TYPE_CUSTOM_TV");
 
   private String value;
 

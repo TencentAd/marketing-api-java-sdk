@@ -51,6 +51,9 @@ public class AsyncReportsAddRequest {
   @SerializedName("weixin_official_accounts_upgrade_enabled")
   private Boolean weixinOfficialAccountsUpgradeEnabled = null;
 
+  @SerializedName("adq_accounts_upgrade_enabled")
+  private Boolean adqAccountsUpgradeEnabled = null;
+
   public AsyncReportsAddRequest accountId(Long accountId) {
     this.accountId = accountId;
     return this;
@@ -267,6 +270,25 @@ public class AsyncReportsAddRequest {
     this.weixinOfficialAccountsUpgradeEnabled = weixinOfficialAccountsUpgradeEnabled;
   }
 
+  public AsyncReportsAddRequest adqAccountsUpgradeEnabled(Boolean adqAccountsUpgradeEnabled) {
+    this.adqAccountsUpgradeEnabled = adqAccountsUpgradeEnabled;
+    return this;
+  }
+
+  /**
+   * Get adqAccountsUpgradeEnabled
+   *
+   * @return adqAccountsUpgradeEnabled
+   */
+  @ApiModelProperty(value = "")
+  public Boolean isAdqAccountsUpgradeEnabled() {
+    return adqAccountsUpgradeEnabled;
+  }
+
+  public void setAdqAccountsUpgradeEnabled(Boolean adqAccountsUpgradeEnabled) {
+    this.adqAccountsUpgradeEnabled = adqAccountsUpgradeEnabled;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -287,7 +309,9 @@ public class AsyncReportsAddRequest {
         && Objects.equals(this.date, asyncReportsAddRequest.date)
         && Objects.equals(
             this.weixinOfficialAccountsUpgradeEnabled,
-            asyncReportsAddRequest.weixinOfficialAccountsUpgradeEnabled);
+            asyncReportsAddRequest.weixinOfficialAccountsUpgradeEnabled)
+        && Objects.equals(
+            this.adqAccountsUpgradeEnabled, asyncReportsAddRequest.adqAccountsUpgradeEnabled);
   }
 
   @Override
@@ -302,7 +326,8 @@ public class AsyncReportsAddRequest {
         groupBy,
         granularity,
         date,
-        weixinOfficialAccountsUpgradeEnabled);
+        weixinOfficialAccountsUpgradeEnabled,
+        adqAccountsUpgradeEnabled);
   }
 
   @Override

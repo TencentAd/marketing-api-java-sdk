@@ -2058,17 +2058,11 @@ public class DailyReportsGetListStruct {
   @SerializedName("match_type")
   private Long matchType = null;
 
-  @SerializedName("placement_group_id")
-  private Long placementGroupId = null;
-
   @SerializedName("bidword_id")
   private Long bidwordId = null;
 
   @SerializedName("bidword")
   private String bidword = null;
-
-  @SerializedName("placement_group_name")
-  private String placementGroupName = null;
 
   @SerializedName("queryword")
   private String queryword = null;
@@ -15244,25 +15238,6 @@ public class DailyReportsGetListStruct {
     this.matchType = matchType;
   }
 
-  public DailyReportsGetListStruct placementGroupId(Long placementGroupId) {
-    this.placementGroupId = placementGroupId;
-    return this;
-  }
-
-  /**
-   * Get placementGroupId
-   *
-   * @return placementGroupId
-   */
-  @ApiModelProperty(value = "")
-  public Long getPlacementGroupId() {
-    return placementGroupId;
-  }
-
-  public void setPlacementGroupId(Long placementGroupId) {
-    this.placementGroupId = placementGroupId;
-  }
-
   public DailyReportsGetListStruct bidwordId(Long bidwordId) {
     this.bidwordId = bidwordId;
     return this;
@@ -15299,25 +15274,6 @@ public class DailyReportsGetListStruct {
 
   public void setBidword(String bidword) {
     this.bidword = bidword;
-  }
-
-  public DailyReportsGetListStruct placementGroupName(String placementGroupName) {
-    this.placementGroupName = placementGroupName;
-    return this;
-  }
-
-  /**
-   * Get placementGroupName
-   *
-   * @return placementGroupName
-   */
-  @ApiModelProperty(value = "")
-  public String getPlacementGroupName() {
-    return placementGroupName;
-  }
-
-  public void setPlacementGroupName(String placementGroupName) {
-    this.placementGroupName = placementGroupName;
   }
 
   public DailyReportsGetListStruct queryword(String queryword) {
@@ -17754,10 +17710,8 @@ public class DailyReportsGetListStruct {
         && Objects.equals(this.secondCategoryId, dailyReportsGetListStruct.secondCategoryId)
         && Objects.equals(this.thirdCategoryId, dailyReportsGetListStruct.thirdCategoryId)
         && Objects.equals(this.matchType, dailyReportsGetListStruct.matchType)
-        && Objects.equals(this.placementGroupId, dailyReportsGetListStruct.placementGroupId)
         && Objects.equals(this.bidwordId, dailyReportsGetListStruct.bidwordId)
         && Objects.equals(this.bidword, dailyReportsGetListStruct.bidword)
-        && Objects.equals(this.placementGroupName, dailyReportsGetListStruct.placementGroupName)
         && Objects.equals(this.queryword, dailyReportsGetListStruct.queryword)
         && Objects.equals(this.hour, dailyReportsGetListStruct.hour)
         && Objects.equals(this.wechatAccountId, dailyReportsGetListStruct.wechatAccountId)
@@ -18577,10 +18531,8 @@ public class DailyReportsGetListStruct {
         secondCategoryId,
         thirdCategoryId,
         matchType,
-        placementGroupId,
         bidwordId,
         bidword,
-        placementGroupName,
         queryword,
         hour,
         wechatAccountId,
