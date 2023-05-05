@@ -1608,6 +1608,48 @@ public class DailyReportsGetListStruct {
   @SerializedName("clk_right_grid_pv")
   private Long clkRightGridPv = null;
 
+  @SerializedName("reservation_check_uv")
+  private Long reservationCheckUv = null;
+
+  @SerializedName("reservation_check_uv_cost")
+  private Long reservationCheckUvCost = null;
+
+  @SerializedName("reservation_check_uv_rate")
+  private Double reservationCheckUvRate = null;
+
+  @SerializedName("try_out_intention_uv")
+  private Long tryOutIntentionUv = null;
+
+  @SerializedName("ineffective_leads_uv")
+  private Long ineffectiveLeadsUv = null;
+
+  @SerializedName("class_participated_fisrt_uv")
+  private Long classParticipatedFisrtUv = null;
+
+  @SerializedName("class_participated_fisrt_uv_cost")
+  private Long classParticipatedFisrtUvCost = null;
+
+  @SerializedName("class_participated_fisrt_uv_rate")
+  private Double classParticipatedFisrtUvRate = null;
+
+  @SerializedName("ad_pur_arpu_cost_d1_24h_reg")
+  private Long adPurArpuCostD124hReg = null;
+
+  @SerializedName("ad_pur_arpu_cost_d1_24h_reg_pla")
+  private Long adPurArpuCostD124hRegPla = null;
+
+  @SerializedName("quit_chat_group_amount")
+  private Long quitChatGroupAmount = null;
+
+  @SerializedName("quit_chat_group_rate")
+  private Double quitChatGroupRate = null;
+
+  @SerializedName("cre_application_rate_web")
+  private Double creApplicationRateWeb = null;
+
+  @SerializedName("cre_application_rate_app")
+  private Double creApplicationRateApp = null;
+
   @SerializedName("request_conversions_count")
   private Long requestConversionsCount = null;
 
@@ -12365,6 +12407,273 @@ public class DailyReportsGetListStruct {
     this.clkRightGridPv = clkRightGridPv;
   }
 
+  public DailyReportsGetListStruct reservationCheckUv(Long reservationCheckUv) {
+    this.reservationCheckUv = reservationCheckUv;
+    return this;
+  }
+
+  /**
+   * Get reservationCheckUv
+   *
+   * @return reservationCheckUv
+   */
+  @ApiModelProperty(value = "")
+  public Long getReservationCheckUv() {
+    return reservationCheckUv;
+  }
+
+  public void setReservationCheckUv(Long reservationCheckUv) {
+    this.reservationCheckUv = reservationCheckUv;
+  }
+
+  public DailyReportsGetListStruct reservationCheckUvCost(Long reservationCheckUvCost) {
+    this.reservationCheckUvCost = reservationCheckUvCost;
+    return this;
+  }
+
+  /**
+   * Get reservationCheckUvCost
+   *
+   * @return reservationCheckUvCost
+   */
+  @ApiModelProperty(value = "")
+  public Long getReservationCheckUvCost() {
+    return reservationCheckUvCost;
+  }
+
+  public void setReservationCheckUvCost(Long reservationCheckUvCost) {
+    this.reservationCheckUvCost = reservationCheckUvCost;
+  }
+
+  public DailyReportsGetListStruct reservationCheckUvRate(Double reservationCheckUvRate) {
+    this.reservationCheckUvRate = reservationCheckUvRate;
+    return this;
+  }
+
+  /**
+   * Get reservationCheckUvRate
+   *
+   * @return reservationCheckUvRate
+   */
+  @ApiModelProperty(value = "")
+  public Double getReservationCheckUvRate() {
+    return reservationCheckUvRate;
+  }
+
+  public void setReservationCheckUvRate(Double reservationCheckUvRate) {
+    this.reservationCheckUvRate = reservationCheckUvRate;
+  }
+
+  public DailyReportsGetListStruct tryOutIntentionUv(Long tryOutIntentionUv) {
+    this.tryOutIntentionUv = tryOutIntentionUv;
+    return this;
+  }
+
+  /**
+   * Get tryOutIntentionUv
+   *
+   * @return tryOutIntentionUv
+   */
+  @ApiModelProperty(value = "")
+  public Long getTryOutIntentionUv() {
+    return tryOutIntentionUv;
+  }
+
+  public void setTryOutIntentionUv(Long tryOutIntentionUv) {
+    this.tryOutIntentionUv = tryOutIntentionUv;
+  }
+
+  public DailyReportsGetListStruct ineffectiveLeadsUv(Long ineffectiveLeadsUv) {
+    this.ineffectiveLeadsUv = ineffectiveLeadsUv;
+    return this;
+  }
+
+  /**
+   * Get ineffectiveLeadsUv
+   *
+   * @return ineffectiveLeadsUv
+   */
+  @ApiModelProperty(value = "")
+  public Long getIneffectiveLeadsUv() {
+    return ineffectiveLeadsUv;
+  }
+
+  public void setIneffectiveLeadsUv(Long ineffectiveLeadsUv) {
+    this.ineffectiveLeadsUv = ineffectiveLeadsUv;
+  }
+
+  public DailyReportsGetListStruct classParticipatedFisrtUv(Long classParticipatedFisrtUv) {
+    this.classParticipatedFisrtUv = classParticipatedFisrtUv;
+    return this;
+  }
+
+  /**
+   * Get classParticipatedFisrtUv
+   *
+   * @return classParticipatedFisrtUv
+   */
+  @ApiModelProperty(value = "")
+  public Long getClassParticipatedFisrtUv() {
+    return classParticipatedFisrtUv;
+  }
+
+  public void setClassParticipatedFisrtUv(Long classParticipatedFisrtUv) {
+    this.classParticipatedFisrtUv = classParticipatedFisrtUv;
+  }
+
+  public DailyReportsGetListStruct classParticipatedFisrtUvCost(Long classParticipatedFisrtUvCost) {
+    this.classParticipatedFisrtUvCost = classParticipatedFisrtUvCost;
+    return this;
+  }
+
+  /**
+   * Get classParticipatedFisrtUvCost
+   *
+   * @return classParticipatedFisrtUvCost
+   */
+  @ApiModelProperty(value = "")
+  public Long getClassParticipatedFisrtUvCost() {
+    return classParticipatedFisrtUvCost;
+  }
+
+  public void setClassParticipatedFisrtUvCost(Long classParticipatedFisrtUvCost) {
+    this.classParticipatedFisrtUvCost = classParticipatedFisrtUvCost;
+  }
+
+  public DailyReportsGetListStruct classParticipatedFisrtUvRate(
+      Double classParticipatedFisrtUvRate) {
+    this.classParticipatedFisrtUvRate = classParticipatedFisrtUvRate;
+    return this;
+  }
+
+  /**
+   * Get classParticipatedFisrtUvRate
+   *
+   * @return classParticipatedFisrtUvRate
+   */
+  @ApiModelProperty(value = "")
+  public Double getClassParticipatedFisrtUvRate() {
+    return classParticipatedFisrtUvRate;
+  }
+
+  public void setClassParticipatedFisrtUvRate(Double classParticipatedFisrtUvRate) {
+    this.classParticipatedFisrtUvRate = classParticipatedFisrtUvRate;
+  }
+
+  public DailyReportsGetListStruct adPurArpuCostD124hReg(Long adPurArpuCostD124hReg) {
+    this.adPurArpuCostD124hReg = adPurArpuCostD124hReg;
+    return this;
+  }
+
+  /**
+   * Get adPurArpuCostD124hReg
+   *
+   * @return adPurArpuCostD124hReg
+   */
+  @ApiModelProperty(value = "")
+  public Long getAdPurArpuCostD124hReg() {
+    return adPurArpuCostD124hReg;
+  }
+
+  public void setAdPurArpuCostD124hReg(Long adPurArpuCostD124hReg) {
+    this.adPurArpuCostD124hReg = adPurArpuCostD124hReg;
+  }
+
+  public DailyReportsGetListStruct adPurArpuCostD124hRegPla(Long adPurArpuCostD124hRegPla) {
+    this.adPurArpuCostD124hRegPla = adPurArpuCostD124hRegPla;
+    return this;
+  }
+
+  /**
+   * Get adPurArpuCostD124hRegPla
+   *
+   * @return adPurArpuCostD124hRegPla
+   */
+  @ApiModelProperty(value = "")
+  public Long getAdPurArpuCostD124hRegPla() {
+    return adPurArpuCostD124hRegPla;
+  }
+
+  public void setAdPurArpuCostD124hRegPla(Long adPurArpuCostD124hRegPla) {
+    this.adPurArpuCostD124hRegPla = adPurArpuCostD124hRegPla;
+  }
+
+  public DailyReportsGetListStruct quitChatGroupAmount(Long quitChatGroupAmount) {
+    this.quitChatGroupAmount = quitChatGroupAmount;
+    return this;
+  }
+
+  /**
+   * Get quitChatGroupAmount
+   *
+   * @return quitChatGroupAmount
+   */
+  @ApiModelProperty(value = "")
+  public Long getQuitChatGroupAmount() {
+    return quitChatGroupAmount;
+  }
+
+  public void setQuitChatGroupAmount(Long quitChatGroupAmount) {
+    this.quitChatGroupAmount = quitChatGroupAmount;
+  }
+
+  public DailyReportsGetListStruct quitChatGroupRate(Double quitChatGroupRate) {
+    this.quitChatGroupRate = quitChatGroupRate;
+    return this;
+  }
+
+  /**
+   * Get quitChatGroupRate
+   *
+   * @return quitChatGroupRate
+   */
+  @ApiModelProperty(value = "")
+  public Double getQuitChatGroupRate() {
+    return quitChatGroupRate;
+  }
+
+  public void setQuitChatGroupRate(Double quitChatGroupRate) {
+    this.quitChatGroupRate = quitChatGroupRate;
+  }
+
+  public DailyReportsGetListStruct creApplicationRateWeb(Double creApplicationRateWeb) {
+    this.creApplicationRateWeb = creApplicationRateWeb;
+    return this;
+  }
+
+  /**
+   * Get creApplicationRateWeb
+   *
+   * @return creApplicationRateWeb
+   */
+  @ApiModelProperty(value = "")
+  public Double getCreApplicationRateWeb() {
+    return creApplicationRateWeb;
+  }
+
+  public void setCreApplicationRateWeb(Double creApplicationRateWeb) {
+    this.creApplicationRateWeb = creApplicationRateWeb;
+  }
+
+  public DailyReportsGetListStruct creApplicationRateApp(Double creApplicationRateApp) {
+    this.creApplicationRateApp = creApplicationRateApp;
+    return this;
+  }
+
+  /**
+   * Get creApplicationRateApp
+   *
+   * @return creApplicationRateApp
+   */
+  @ApiModelProperty(value = "")
+  public Double getCreApplicationRateApp() {
+    return creApplicationRateApp;
+  }
+
+  public void setCreApplicationRateApp(Double creApplicationRateApp) {
+    this.creApplicationRateApp = creApplicationRateApp;
+  }
+
   public DailyReportsGetListStruct requestConversionsCount(Long requestConversionsCount) {
     this.requestConversionsCount = requestConversionsCount;
     return this;
@@ -17480,6 +17789,31 @@ public class DailyReportsGetListStruct {
         && Objects.equals(this.clkLeftGridInfoPv, dailyReportsGetListStruct.clkLeftGridInfoPv)
         && Objects.equals(this.clkLeftGridMiddlePv, dailyReportsGetListStruct.clkLeftGridMiddlePv)
         && Objects.equals(this.clkRightGridPv, dailyReportsGetListStruct.clkRightGridPv)
+        && Objects.equals(this.reservationCheckUv, dailyReportsGetListStruct.reservationCheckUv)
+        && Objects.equals(
+            this.reservationCheckUvCost, dailyReportsGetListStruct.reservationCheckUvCost)
+        && Objects.equals(
+            this.reservationCheckUvRate, dailyReportsGetListStruct.reservationCheckUvRate)
+        && Objects.equals(this.tryOutIntentionUv, dailyReportsGetListStruct.tryOutIntentionUv)
+        && Objects.equals(this.ineffectiveLeadsUv, dailyReportsGetListStruct.ineffectiveLeadsUv)
+        && Objects.equals(
+            this.classParticipatedFisrtUv, dailyReportsGetListStruct.classParticipatedFisrtUv)
+        && Objects.equals(
+            this.classParticipatedFisrtUvCost,
+            dailyReportsGetListStruct.classParticipatedFisrtUvCost)
+        && Objects.equals(
+            this.classParticipatedFisrtUvRate,
+            dailyReportsGetListStruct.classParticipatedFisrtUvRate)
+        && Objects.equals(
+            this.adPurArpuCostD124hReg, dailyReportsGetListStruct.adPurArpuCostD124hReg)
+        && Objects.equals(
+            this.adPurArpuCostD124hRegPla, dailyReportsGetListStruct.adPurArpuCostD124hRegPla)
+        && Objects.equals(this.quitChatGroupAmount, dailyReportsGetListStruct.quitChatGroupAmount)
+        && Objects.equals(this.quitChatGroupRate, dailyReportsGetListStruct.quitChatGroupRate)
+        && Objects.equals(
+            this.creApplicationRateWeb, dailyReportsGetListStruct.creApplicationRateWeb)
+        && Objects.equals(
+            this.creApplicationRateApp, dailyReportsGetListStruct.creApplicationRateApp)
         && Objects.equals(
             this.requestConversionsCount, dailyReportsGetListStruct.requestConversionsCount)
         && Objects.equals(
@@ -18381,6 +18715,20 @@ public class DailyReportsGetListStruct {
         clkLeftGridInfoPv,
         clkLeftGridMiddlePv,
         clkRightGridPv,
+        reservationCheckUv,
+        reservationCheckUvCost,
+        reservationCheckUvRate,
+        tryOutIntentionUv,
+        ineffectiveLeadsUv,
+        classParticipatedFisrtUv,
+        classParticipatedFisrtUvCost,
+        classParticipatedFisrtUvRate,
+        adPurArpuCostD124hReg,
+        adPurArpuCostD124hRegPla,
+        quitChatGroupAmount,
+        quitChatGroupRate,
+        creApplicationRateWeb,
+        creApplicationRateApp,
         requestConversionsCount,
         requestConversionsCost,
         incomeVal1,
