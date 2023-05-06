@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.tencent.ads.api.CreativeComponentsApiTest" tests="5" skipped="5" failures="0" errors="0" timestamp="2023-05-06T03:04:45" hostname="VM_118_42_centos" time="0.0">
+  <properties/>
+  <testcase name="creativeComponentsUpdateTest" classname="com.tencent.ads.api.CreativeComponentsApiTest" time="0.0">
+    <skipped/>
+  </testcase>
+  <testcase name="creativeComponentsAddTest" classname="com.tencent.ads.api.CreativeComponentsApiTest" time="0.0">
+    <skipped/>
+  </testcase>
+  <testcase name="creativeComponentsDeleteTest" classname="com.tencent.ads.api.CreativeComponentsApiTest" time="0.0">
+    <skipped/>
+  </testcase>
+  <testcase name="creativeComponentsUpdateStatusTest" classname="com.tencent.ads.api.CreativeComponentsApiTest" time="0.0">
+    <skipped/>
+  </testcase>
+  <testcase name="creativeComponentsGetTest" classname="com.tencent.ads.api.CreativeComponentsApiTest" time="0.0">
+    <skipped/>
+  </testcase>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

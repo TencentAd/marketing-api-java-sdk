@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.tencent.ads.api.ProductItemsApiTest" tests="4" skipped="4" failures="0" errors="0" timestamp="2023-05-06T03:04:45" hostname="VM_118_42_centos" time="0.0">
+  <properties/>
+  <testcase name="productItemsAddTest" classname="com.tencent.ads.api.ProductItemsApiTest" time="0.0">
+    <skipped/>
+  </testcase>
+  <testcase name="productItemsUpdateTest" classname="com.tencent.ads.api.ProductItemsApiTest" time="0.0">
+    <skipped/>
+  </testcase>
+  <testcase name="productItemsGetTest" classname="com.tencent.ads.api.ProductItemsApiTest" time="0.0">
+    <skipped/>
+  </testcase>
+  <testcase name="productItemsBatchUpdateTest" classname="com.tencent.ads.api.ProductItemsApiTest" time="0.0">
+    <skipped/>
+  </testcase>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
