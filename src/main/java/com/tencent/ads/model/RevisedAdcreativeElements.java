@@ -212,6 +212,9 @@ public class RevisedAdcreativeElements {
   @SerializedName("mdpa_desc_component_options")
   private List<MdpaDescComponentOption> mdpaDescComponentOptions = null;
 
+  @SerializedName("list_sublink_component_options")
+  private List<ListSublinkComponentOption> listSublinkComponentOptions = null;
+
   public RevisedAdcreativeElements image(String image) {
     this.image = image;
     return this;
@@ -1535,6 +1538,36 @@ public class RevisedAdcreativeElements {
     this.mdpaDescComponentOptions = mdpaDescComponentOptions;
   }
 
+  public RevisedAdcreativeElements listSublinkComponentOptions(
+      List<ListSublinkComponentOption> listSublinkComponentOptions) {
+    this.listSublinkComponentOptions = listSublinkComponentOptions;
+    return this;
+  }
+
+  public RevisedAdcreativeElements addListSublinkComponentOptionsItem(
+      ListSublinkComponentOption listSublinkComponentOptionsItem) {
+    if (this.listSublinkComponentOptions == null) {
+      this.listSublinkComponentOptions = new ArrayList<ListSublinkComponentOption>();
+    }
+    this.listSublinkComponentOptions.add(listSublinkComponentOptionsItem);
+    return this;
+  }
+
+  /**
+   * Get listSublinkComponentOptions
+   *
+   * @return listSublinkComponentOptions
+   */
+  @ApiModelProperty(value = "")
+  public List<ListSublinkComponentOption> getListSublinkComponentOptions() {
+    return listSublinkComponentOptions;
+  }
+
+  public void setListSublinkComponentOptions(
+      List<ListSublinkComponentOption> listSublinkComponentOptions) {
+    this.listSublinkComponentOptions = listSublinkComponentOptions;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -1618,7 +1651,10 @@ public class RevisedAdcreativeElements {
         && Objects.equals(
             this.mdpaTitleComponentOptions, revisedAdcreativeElements.mdpaTitleComponentOptions)
         && Objects.equals(
-            this.mdpaDescComponentOptions, revisedAdcreativeElements.mdpaDescComponentOptions);
+            this.mdpaDescComponentOptions, revisedAdcreativeElements.mdpaDescComponentOptions)
+        && Objects.equals(
+            this.listSublinkComponentOptions,
+            revisedAdcreativeElements.listSublinkComponentOptions);
   }
 
   @Override
@@ -1686,7 +1722,8 @@ public class RevisedAdcreativeElements {
         wxgamePlayablePageSpec,
         mainJumpInfo,
         mdpaTitleComponentOptions,
-        mdpaDescComponentOptions);
+        mdpaDescComponentOptions,
+        listSublinkComponentOptions);
   }
 
   @Override

@@ -69,6 +69,9 @@ public class TaskSpec {
   @SerializedName("task_type_review_element_prereview_result_spec")
   private TaskTypeReviewElementPrereviewResultSpec taskTypeReviewElementPrereviewResultSpec = null;
 
+  @SerializedName("task_type_massive_keyword_recommend_spec")
+  private TaskTypeMassiveKeywordRecommendSpec taskTypeMassiveKeywordRecommendSpec = null;
+
   @SerializedName("task_type_search_download_all_spec")
   private TaskTypeSearchDownloadAllSpec taskTypeSearchDownloadAllSpec = null;
 
@@ -393,6 +396,27 @@ public class TaskSpec {
     this.taskTypeReviewElementPrereviewResultSpec = taskTypeReviewElementPrereviewResultSpec;
   }
 
+  public TaskSpec taskTypeMassiveKeywordRecommendSpec(
+      TaskTypeMassiveKeywordRecommendSpec taskTypeMassiveKeywordRecommendSpec) {
+    this.taskTypeMassiveKeywordRecommendSpec = taskTypeMassiveKeywordRecommendSpec;
+    return this;
+  }
+
+  /**
+   * Get taskTypeMassiveKeywordRecommendSpec
+   *
+   * @return taskTypeMassiveKeywordRecommendSpec
+   */
+  @ApiModelProperty(value = "")
+  public TaskTypeMassiveKeywordRecommendSpec getTaskTypeMassiveKeywordRecommendSpec() {
+    return taskTypeMassiveKeywordRecommendSpec;
+  }
+
+  public void setTaskTypeMassiveKeywordRecommendSpec(
+      TaskTypeMassiveKeywordRecommendSpec taskTypeMassiveKeywordRecommendSpec) {
+    this.taskTypeMassiveKeywordRecommendSpec = taskTypeMassiveKeywordRecommendSpec;
+  }
+
   public TaskSpec taskTypeSearchDownloadAllSpec(
       TaskTypeSearchDownloadAllSpec taskTypeSearchDownloadAllSpec) {
     this.taskTypeSearchDownloadAllSpec = taskTypeSearchDownloadAllSpec;
@@ -460,6 +484,8 @@ public class TaskSpec {
             this.taskTypeReviewElementPrereviewResultSpec,
             taskSpec.taskTypeReviewElementPrereviewResultSpec)
         && Objects.equals(
+            this.taskTypeMassiveKeywordRecommendSpec, taskSpec.taskTypeMassiveKeywordRecommendSpec)
+        && Objects.equals(
             this.taskTypeSearchDownloadAllSpec, taskSpec.taskTypeSearchDownloadAllSpec);
   }
 
@@ -481,6 +507,7 @@ public class TaskSpec {
         taskTypeUpdateAndroidUnionChannelPackageSpec,
         taskTypeUnionPositionReportSpec,
         taskTypeReviewElementPrereviewResultSpec,
+        taskTypeMassiveKeywordRecommendSpec,
         taskTypeSearchDownloadAllSpec);
   }
 

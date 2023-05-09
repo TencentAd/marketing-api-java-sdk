@@ -344,6 +344,12 @@ public class DynamicCreativeElementsRead {
   @SerializedName("mdpa_desc_component_options")
   private List<MdpaDescComponentOption> mdpaDescComponentOptions = null;
 
+  @SerializedName("list_sublink_component_options")
+  private List<ListSublinkComponentOption> listSublinkComponentOptions = null;
+
+  @SerializedName("image_list3_component_options")
+  private List<ImageListComponentOption> imageList3ComponentOptions = null;
+
   public DynamicCreativeElementsRead image(String image) {
     this.image = image;
     return this;
@@ -2737,6 +2743,66 @@ public class DynamicCreativeElementsRead {
     this.mdpaDescComponentOptions = mdpaDescComponentOptions;
   }
 
+  public DynamicCreativeElementsRead listSublinkComponentOptions(
+      List<ListSublinkComponentOption> listSublinkComponentOptions) {
+    this.listSublinkComponentOptions = listSublinkComponentOptions;
+    return this;
+  }
+
+  public DynamicCreativeElementsRead addListSublinkComponentOptionsItem(
+      ListSublinkComponentOption listSublinkComponentOptionsItem) {
+    if (this.listSublinkComponentOptions == null) {
+      this.listSublinkComponentOptions = new ArrayList<ListSublinkComponentOption>();
+    }
+    this.listSublinkComponentOptions.add(listSublinkComponentOptionsItem);
+    return this;
+  }
+
+  /**
+   * Get listSublinkComponentOptions
+   *
+   * @return listSublinkComponentOptions
+   */
+  @ApiModelProperty(value = "")
+  public List<ListSublinkComponentOption> getListSublinkComponentOptions() {
+    return listSublinkComponentOptions;
+  }
+
+  public void setListSublinkComponentOptions(
+      List<ListSublinkComponentOption> listSublinkComponentOptions) {
+    this.listSublinkComponentOptions = listSublinkComponentOptions;
+  }
+
+  public DynamicCreativeElementsRead imageList3ComponentOptions(
+      List<ImageListComponentOption> imageList3ComponentOptions) {
+    this.imageList3ComponentOptions = imageList3ComponentOptions;
+    return this;
+  }
+
+  public DynamicCreativeElementsRead addImageList3ComponentOptionsItem(
+      ImageListComponentOption imageList3ComponentOptionsItem) {
+    if (this.imageList3ComponentOptions == null) {
+      this.imageList3ComponentOptions = new ArrayList<ImageListComponentOption>();
+    }
+    this.imageList3ComponentOptions.add(imageList3ComponentOptionsItem);
+    return this;
+  }
+
+  /**
+   * Get imageList3ComponentOptions
+   *
+   * @return imageList3ComponentOptions
+   */
+  @ApiModelProperty(value = "")
+  public List<ImageListComponentOption> getImageList3ComponentOptions() {
+    return imageList3ComponentOptions;
+  }
+
+  public void setImageList3ComponentOptions(
+      List<ImageListComponentOption> imageList3ComponentOptions) {
+    this.imageList3ComponentOptions = imageList3ComponentOptions;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -2893,7 +2959,13 @@ public class DynamicCreativeElementsRead {
         && Objects.equals(
             this.mdpaTitleComponentOptions, dynamicCreativeElementsRead.mdpaTitleComponentOptions)
         && Objects.equals(
-            this.mdpaDescComponentOptions, dynamicCreativeElementsRead.mdpaDescComponentOptions);
+            this.mdpaDescComponentOptions, dynamicCreativeElementsRead.mdpaDescComponentOptions)
+        && Objects.equals(
+            this.listSublinkComponentOptions,
+            dynamicCreativeElementsRead.listSublinkComponentOptions)
+        && Objects.equals(
+            this.imageList3ComponentOptions,
+            dynamicCreativeElementsRead.imageList3ComponentOptions);
   }
 
   @Override
@@ -3005,7 +3077,9 @@ public class DynamicCreativeElementsRead {
         wxgamePlayablePageSpec,
         mainJumpInfo,
         mdpaTitleComponentOptions,
-        mdpaDescComponentOptions);
+        mdpaDescComponentOptions,
+        listSublinkComponentOptions,
+        imageList3ComponentOptions);
   }
 
   @Override
