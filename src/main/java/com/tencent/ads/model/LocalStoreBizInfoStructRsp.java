@@ -74,6 +74,9 @@ public class LocalStoreBizInfoStructRsp {
   @SerializedName("intro")
   private String intro = null;
 
+  @SerializedName("hide_poi")
+  private Boolean hidePoi = null;
+
   public LocalStoreBizInfoStructRsp poiId(String poiId) {
     this.poiId = poiId;
     return this;
@@ -421,6 +424,25 @@ public class LocalStoreBizInfoStructRsp {
     this.intro = intro;
   }
 
+  public LocalStoreBizInfoStructRsp hidePoi(Boolean hidePoi) {
+    this.hidePoi = hidePoi;
+    return this;
+  }
+
+  /**
+   * Get hidePoi
+   *
+   * @return hidePoi
+   */
+  @ApiModelProperty(value = "")
+  public Boolean isHidePoi() {
+    return hidePoi;
+  }
+
+  public void setHidePoi(Boolean hidePoi) {
+    this.hidePoi = hidePoi;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -446,7 +468,8 @@ public class LocalStoreBizInfoStructRsp {
         && Objects.equals(this.telephone, localStoreBizInfoStructRsp.telephone)
         && Objects.equals(this.specialService, localStoreBizInfoStructRsp.specialService)
         && Objects.equals(this.openingStatus, localStoreBizInfoStructRsp.openingStatus)
-        && Objects.equals(this.intro, localStoreBizInfoStructRsp.intro);
+        && Objects.equals(this.intro, localStoreBizInfoStructRsp.intro)
+        && Objects.equals(this.hidePoi, localStoreBizInfoStructRsp.hidePoi);
   }
 
   @Override
@@ -468,7 +491,8 @@ public class LocalStoreBizInfoStructRsp {
         telephone,
         specialService,
         openingStatus,
-        intro);
+        intro,
+        hidePoi);
   }
 
   @Override

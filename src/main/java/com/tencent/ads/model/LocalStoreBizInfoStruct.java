@@ -77,6 +77,9 @@ public class LocalStoreBizInfoStruct {
   @SerializedName("intro")
   private String intro = null;
 
+  @SerializedName("hide_poi")
+  private Boolean hidePoi = null;
+
   public LocalStoreBizInfoStruct poiId(String poiId) {
     this.poiId = poiId;
     return this;
@@ -443,6 +446,25 @@ public class LocalStoreBizInfoStruct {
     this.intro = intro;
   }
 
+  public LocalStoreBizInfoStruct hidePoi(Boolean hidePoi) {
+    this.hidePoi = hidePoi;
+    return this;
+  }
+
+  /**
+   * Get hidePoi
+   *
+   * @return hidePoi
+   */
+  @ApiModelProperty(value = "")
+  public Boolean isHidePoi() {
+    return hidePoi;
+  }
+
+  public void setHidePoi(Boolean hidePoi) {
+    this.hidePoi = hidePoi;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -469,7 +491,8 @@ public class LocalStoreBizInfoStruct {
         && Objects.equals(this.specialService, localStoreBizInfoStruct.specialService)
         && Objects.equals(this.openingStatus, localStoreBizInfoStruct.openingStatus)
         && Objects.equals(this.star, localStoreBizInfoStruct.star)
-        && Objects.equals(this.intro, localStoreBizInfoStruct.intro);
+        && Objects.equals(this.intro, localStoreBizInfoStruct.intro)
+        && Objects.equals(this.hidePoi, localStoreBizInfoStruct.hidePoi);
   }
 
   @Override
@@ -492,7 +515,8 @@ public class LocalStoreBizInfoStruct {
         specialService,
         openingStatus,
         star,
-        intro);
+        intro,
+        hidePoi);
   }
 
   @Override

@@ -55,6 +55,7 @@ public class DynamicAdVideoTemplatesApi {
    * @param productCatalogId (required)
    * @param adcreativeTemplateId (required)
    * @param productMode (required)
+   * @param supportChannel (optional)
    * @param page (optional)
    * @param pageSize (optional)
    * @param fields 返回参数的字段列表 (optional)
@@ -68,6 +69,7 @@ public class DynamicAdVideoTemplatesApi {
       Long productCatalogId,
       Long adcreativeTemplateId,
       String productMode,
+      Boolean supportChannel,
       Long page,
       Long pageSize,
       List<String> fields,
@@ -90,6 +92,8 @@ public class DynamicAdVideoTemplatesApi {
           apiClient.parameterToPair("adcreative_template_id", adcreativeTemplateId));
     if (productMode != null)
       localVarQueryParams.addAll(apiClient.parameterToPair("product_mode", productMode));
+    if (supportChannel != null)
+      localVarQueryParams.addAll(apiClient.parameterToPair("support_channel", supportChannel));
     if (page != null) localVarQueryParams.addAll(apiClient.parameterToPair("page", page));
     if (pageSize != null)
       localVarQueryParams.addAll(apiClient.parameterToPair("page_size", pageSize));
@@ -145,6 +149,7 @@ public class DynamicAdVideoTemplatesApi {
       Long productCatalogId,
       Long adcreativeTemplateId,
       String productMode,
+      Boolean supportChannel,
       Long page,
       Long pageSize,
       List<String> fields,
@@ -182,6 +187,7 @@ public class DynamicAdVideoTemplatesApi {
             productCatalogId,
             adcreativeTemplateId,
             productMode,
+            supportChannel,
             page,
             pageSize,
             fields,
@@ -197,6 +203,7 @@ public class DynamicAdVideoTemplatesApi {
    * @param productCatalogId (required)
    * @param adcreativeTemplateId (required)
    * @param productMode (required)
+   * @param supportChannel (optional)
    * @param page (optional)
    * @param pageSize (optional)
    * @param fields 返回参数的字段列表 (optional)
@@ -209,13 +216,21 @@ public class DynamicAdVideoTemplatesApi {
       Long productCatalogId,
       Long adcreativeTemplateId,
       String productMode,
+      Boolean supportChannel,
       Long page,
       Long pageSize,
       List<String> fields)
       throws ApiException {
     ApiResponse<DynamicAdVideoTemplatesGetResponse> resp =
         dynamicAdVideoTemplatesGetWithHttpInfo(
-            accountId, productCatalogId, adcreativeTemplateId, productMode, page, pageSize, fields);
+            accountId,
+            productCatalogId,
+            adcreativeTemplateId,
+            productMode,
+            supportChannel,
+            page,
+            pageSize,
+            fields);
     return resp.getData();
   }
 
@@ -226,6 +241,7 @@ public class DynamicAdVideoTemplatesApi {
    * @param productCatalogId (required)
    * @param adcreativeTemplateId (required)
    * @param productMode (required)
+   * @param supportChannel (optional)
    * @param page (optional)
    * @param pageSize (optional)
    * @param fields 返回参数的字段列表 (optional)
@@ -238,6 +254,7 @@ public class DynamicAdVideoTemplatesApi {
       Long productCatalogId,
       Long adcreativeTemplateId,
       String productMode,
+      Boolean supportChannel,
       Long page,
       Long pageSize,
       List<String> fields)
@@ -248,6 +265,7 @@ public class DynamicAdVideoTemplatesApi {
             productCatalogId,
             adcreativeTemplateId,
             productMode,
+            supportChannel,
             page,
             pageSize,
             fields,
@@ -264,6 +282,7 @@ public class DynamicAdVideoTemplatesApi {
    * @param productCatalogId (required)
    * @param adcreativeTemplateId (required)
    * @param productMode (required)
+   * @param supportChannel (optional)
    * @param page (optional)
    * @param pageSize (optional)
    * @param fields 返回参数的字段列表 (optional)
@@ -276,6 +295,7 @@ public class DynamicAdVideoTemplatesApi {
       Long productCatalogId,
       Long adcreativeTemplateId,
       String productMode,
+      Boolean supportChannel,
       Long page,
       Long pageSize,
       List<String> fields,
@@ -309,6 +329,7 @@ public class DynamicAdVideoTemplatesApi {
             productCatalogId,
             adcreativeTemplateId,
             productMode,
+            supportChannel,
             page,
             pageSize,
             fields,

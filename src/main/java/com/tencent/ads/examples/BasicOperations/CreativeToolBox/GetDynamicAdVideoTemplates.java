@@ -22,6 +22,8 @@ public class GetDynamicAdVideoTemplates {
 
   public String productMode = null;
 
+  public Boolean supportChannel = null;
+
   public Long page = null;
 
   public Long pageSize = null;
@@ -47,6 +49,7 @@ public class GetDynamicAdVideoTemplates {
                 productCatalogId,
                 adcreativeTemplateId,
                 productMode,
+                supportChannel,
                 page,
                 pageSize,
                 fields);

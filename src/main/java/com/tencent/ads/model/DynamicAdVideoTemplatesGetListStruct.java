@@ -47,6 +47,12 @@ public class DynamicAdVideoTemplatesGetListStruct {
   @SerializedName("delivery_video_url")
   private String deliveryVideoUrl = null;
 
+  @SerializedName("support_channel")
+  private Boolean supportChannel = null;
+
+  @SerializedName("extra")
+  private Extra extra = null;
+
   @SerializedName("sub_template_list")
   private List<SubTemplateStruct> subTemplateList = null;
 
@@ -202,6 +208,44 @@ public class DynamicAdVideoTemplatesGetListStruct {
     this.deliveryVideoUrl = deliveryVideoUrl;
   }
 
+  public DynamicAdVideoTemplatesGetListStruct supportChannel(Boolean supportChannel) {
+    this.supportChannel = supportChannel;
+    return this;
+  }
+
+  /**
+   * Get supportChannel
+   *
+   * @return supportChannel
+   */
+  @ApiModelProperty(value = "")
+  public Boolean isSupportChannel() {
+    return supportChannel;
+  }
+
+  public void setSupportChannel(Boolean supportChannel) {
+    this.supportChannel = supportChannel;
+  }
+
+  public DynamicAdVideoTemplatesGetListStruct extra(Extra extra) {
+    this.extra = extra;
+    return this;
+  }
+
+  /**
+   * Get extra
+   *
+   * @return extra
+   */
+  @ApiModelProperty(value = "")
+  public Extra getExtra() {
+    return extra;
+  }
+
+  public void setExtra(Extra extra) {
+    this.extra = extra;
+  }
+
   public DynamicAdVideoTemplatesGetListStruct subTemplateList(
       List<SubTemplateStruct> subTemplateList) {
     this.subTemplateList = subTemplateList;
@@ -252,6 +296,8 @@ public class DynamicAdVideoTemplatesGetListStruct {
         && Objects.equals(this.introVideoUrl, dynamicAdVideoTemplatesGetListStruct.introVideoUrl)
         && Objects.equals(
             this.deliveryVideoUrl, dynamicAdVideoTemplatesGetListStruct.deliveryVideoUrl)
+        && Objects.equals(this.supportChannel, dynamicAdVideoTemplatesGetListStruct.supportChannel)
+        && Objects.equals(this.extra, dynamicAdVideoTemplatesGetListStruct.extra)
         && Objects.equals(
             this.subTemplateList, dynamicAdVideoTemplatesGetListStruct.subTemplateList);
   }
@@ -267,6 +313,8 @@ public class DynamicAdVideoTemplatesGetListStruct {
         coverImageUrl,
         introVideoUrl,
         deliveryVideoUrl,
+        supportChannel,
+        extra,
         subTemplateList);
   }
 
