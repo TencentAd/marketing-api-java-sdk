@@ -21,11 +21,17 @@ import java.util.Objects;
 /** 模板扩展信息 */
 @ApiModel(description = "模板扩展信息")
 public class Extra {
+  @SerializedName("cover_image_template_id")
+  private Long coverImageTemplateId = null;
+
+  @SerializedName("cover_image_template_intro_url")
+  private String coverImageTemplateIntroUrl = null;
+
   @SerializedName("image_template_id")
   private Long imageTemplateId = null;
 
   @SerializedName("image_template_intro_url")
-  private Long imageTemplateIntroUrl = null;
+  private String imageTemplateIntroUrl = null;
 
   @SerializedName("desc")
   private String desc = null;
@@ -35,6 +41,44 @@ public class Extra {
 
   @SerializedName("floating_zone_desc")
   private String floatingZoneDesc = null;
+
+  public Extra coverImageTemplateId(Long coverImageTemplateId) {
+    this.coverImageTemplateId = coverImageTemplateId;
+    return this;
+  }
+
+  /**
+   * Get coverImageTemplateId
+   *
+   * @return coverImageTemplateId
+   */
+  @ApiModelProperty(value = "")
+  public Long getCoverImageTemplateId() {
+    return coverImageTemplateId;
+  }
+
+  public void setCoverImageTemplateId(Long coverImageTemplateId) {
+    this.coverImageTemplateId = coverImageTemplateId;
+  }
+
+  public Extra coverImageTemplateIntroUrl(String coverImageTemplateIntroUrl) {
+    this.coverImageTemplateIntroUrl = coverImageTemplateIntroUrl;
+    return this;
+  }
+
+  /**
+   * Get coverImageTemplateIntroUrl
+   *
+   * @return coverImageTemplateIntroUrl
+   */
+  @ApiModelProperty(value = "")
+  public String getCoverImageTemplateIntroUrl() {
+    return coverImageTemplateIntroUrl;
+  }
+
+  public void setCoverImageTemplateIntroUrl(String coverImageTemplateIntroUrl) {
+    this.coverImageTemplateIntroUrl = coverImageTemplateIntroUrl;
+  }
 
   public Extra imageTemplateId(Long imageTemplateId) {
     this.imageTemplateId = imageTemplateId;
@@ -55,7 +99,7 @@ public class Extra {
     this.imageTemplateId = imageTemplateId;
   }
 
-  public Extra imageTemplateIntroUrl(Long imageTemplateIntroUrl) {
+  public Extra imageTemplateIntroUrl(String imageTemplateIntroUrl) {
     this.imageTemplateIntroUrl = imageTemplateIntroUrl;
     return this;
   }
@@ -66,11 +110,11 @@ public class Extra {
    * @return imageTemplateIntroUrl
    */
   @ApiModelProperty(value = "")
-  public Long getImageTemplateIntroUrl() {
+  public String getImageTemplateIntroUrl() {
     return imageTemplateIntroUrl;
   }
 
-  public void setImageTemplateIntroUrl(Long imageTemplateIntroUrl) {
+  public void setImageTemplateIntroUrl(String imageTemplateIntroUrl) {
     this.imageTemplateIntroUrl = imageTemplateIntroUrl;
   }
 
@@ -140,7 +184,9 @@ public class Extra {
       return false;
     }
     Extra extra = (Extra) o;
-    return Objects.equals(this.imageTemplateId, extra.imageTemplateId)
+    return Objects.equals(this.coverImageTemplateId, extra.coverImageTemplateId)
+        && Objects.equals(this.coverImageTemplateIntroUrl, extra.coverImageTemplateIntroUrl)
+        && Objects.equals(this.imageTemplateId, extra.imageTemplateId)
         && Objects.equals(this.imageTemplateIntroUrl, extra.imageTemplateIntroUrl)
         && Objects.equals(this.desc, extra.desc)
         && Objects.equals(this.floatingZoneName, extra.floatingZoneName)
@@ -150,7 +196,13 @@ public class Extra {
   @Override
   public int hashCode() {
     return Objects.hash(
-        imageTemplateId, imageTemplateIntroUrl, desc, floatingZoneName, floatingZoneDesc);
+        coverImageTemplateId,
+        coverImageTemplateIntroUrl,
+        imageTemplateId,
+        imageTemplateIntroUrl,
+        desc,
+        floatingZoneName,
+        floatingZoneDesc);
   }
 
   @Override
