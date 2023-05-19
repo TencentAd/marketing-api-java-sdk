@@ -48,6 +48,12 @@ public class QuerywordRptGetRequest {
   @SerializedName("query_type")
   private List<Long> queryType = null;
 
+  @SerializedName("fields")
+  private List<String> fields = null;
+
+  @SerializedName("use_unified_report")
+  private Boolean useUnifiedReport = null;
+
   public QuerywordRptGetRequest accountId(Long accountId) {
     this.accountId = accountId;
     return this;
@@ -251,6 +257,52 @@ public class QuerywordRptGetRequest {
     this.queryType = queryType;
   }
 
+  public QuerywordRptGetRequest fields(List<String> fields) {
+    this.fields = fields;
+    return this;
+  }
+
+  public QuerywordRptGetRequest addFieldsItem(String fieldsItem) {
+    if (this.fields == null) {
+      this.fields = new ArrayList<String>();
+    }
+    this.fields.add(fieldsItem);
+    return this;
+  }
+
+  /**
+   * Get fields
+   *
+   * @return fields
+   */
+  @ApiModelProperty(value = "")
+  public List<String> getFields() {
+    return fields;
+  }
+
+  public void setFields(List<String> fields) {
+    this.fields = fields;
+  }
+
+  public QuerywordRptGetRequest useUnifiedReport(Boolean useUnifiedReport) {
+    this.useUnifiedReport = useUnifiedReport;
+    return this;
+  }
+
+  /**
+   * Get useUnifiedReport
+   *
+   * @return useUnifiedReport
+   */
+  @ApiModelProperty(value = "")
+  public Boolean isUseUnifiedReport() {
+    return useUnifiedReport;
+  }
+
+  public void setUseUnifiedReport(Boolean useUnifiedReport) {
+    this.useUnifiedReport = useUnifiedReport;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -268,13 +320,25 @@ public class QuerywordRptGetRequest {
         && Objects.equals(this.pageSize, querywordRptGetRequest.pageSize)
         && Objects.equals(this.rptFilter, querywordRptGetRequest.rptFilter)
         && Objects.equals(this.bizFilter, querywordRptGetRequest.bizFilter)
-        && Objects.equals(this.queryType, querywordRptGetRequest.queryType);
+        && Objects.equals(this.queryType, querywordRptGetRequest.queryType)
+        && Objects.equals(this.fields, querywordRptGetRequest.fields)
+        && Objects.equals(this.useUnifiedReport, querywordRptGetRequest.useUnifiedReport);
   }
 
   @Override
   public int hashCode() {
     return Objects.hash(
-        accountId, filtering, groupBy, orderBy, page, pageSize, rptFilter, bizFilter, queryType);
+        accountId,
+        filtering,
+        groupBy,
+        orderBy,
+        page,
+        pageSize,
+        rptFilter,
+        bizFilter,
+        queryType,
+        fields,
+        useUnifiedReport);
   }
 
   @Override

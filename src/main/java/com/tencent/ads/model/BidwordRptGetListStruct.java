@@ -333,6 +333,72 @@ public class BidwordRptGetListStruct {
   @SerializedName("clk_middle_gridview_pv")
   private String clkMiddleGridviewPv = null;
 
+  @SerializedName("page_reservation_count")
+  private String pageReservationCount = null;
+
+  @SerializedName("reservation_amount")
+  private String reservationAmount = null;
+
+  @SerializedName("order_pv")
+  private String orderPv = null;
+
+  @SerializedName("order_amount")
+  private String orderAmount = null;
+
+  @SerializedName("order_follow_1d_pv")
+  private String orderFollow1dPv = null;
+
+  @SerializedName("order_follow_1d_amount")
+  private String orderFollow1dAmount = null;
+
+  @SerializedName("purchase_pv")
+  private String purchasePv = null;
+
+  @SerializedName("purchase_amount")
+  private String purchaseAmount = null;
+
+  @SerializedName("apply_pv")
+  private String applyPv = null;
+
+  @SerializedName("credit_pv")
+  private String creditPv = null;
+
+  @SerializedName("withdraw_deposit_pv")
+  private String withdrawDepositPv = null;
+
+  @SerializedName("cheout_pv_1d")
+  private String cheoutPv1d = null;
+
+  @SerializedName("cheout_fd")
+  private String cheoutFd = null;
+
+  @SerializedName("cheout_pv_3d")
+  private String cheoutPv3d = null;
+
+  @SerializedName("cheout_td")
+  private String cheoutTd = null;
+
+  @SerializedName("cheout_pv_7d")
+  private String cheoutPv7d = null;
+
+  @SerializedName("cheout_ow")
+  private String cheoutOw = null;
+
+  @SerializedName("purchase_clk_15d_pv")
+  private String purchaseClk15dPv = null;
+
+  @SerializedName("cheout_15d")
+  private String cheout15d = null;
+
+  @SerializedName("purchase_clk_30d_pv")
+  private String purchaseClk30dPv = null;
+
+  @SerializedName("cheout_om")
+  private String cheoutOm = null;
+
+  @SerializedName("pre_credit_pv")
+  private String preCreditPv = null;
+
   public BidwordRptGetListStruct bidwordId(Long bidwordId) {
     this.bidwordId = bidwordId;
     return this;
@@ -2314,6 +2380,424 @@ public class BidwordRptGetListStruct {
     this.clkMiddleGridviewPv = clkMiddleGridviewPv;
   }
 
+  public BidwordRptGetListStruct pageReservationCount(String pageReservationCount) {
+    this.pageReservationCount = pageReservationCount;
+    return this;
+  }
+
+  /**
+   * Get pageReservationCount
+   *
+   * @return pageReservationCount
+   */
+  @ApiModelProperty(value = "")
+  public String getPageReservationCount() {
+    return pageReservationCount;
+  }
+
+  public void setPageReservationCount(String pageReservationCount) {
+    this.pageReservationCount = pageReservationCount;
+  }
+
+  public BidwordRptGetListStruct reservationAmount(String reservationAmount) {
+    this.reservationAmount = reservationAmount;
+    return this;
+  }
+
+  /**
+   * Get reservationAmount
+   *
+   * @return reservationAmount
+   */
+  @ApiModelProperty(value = "")
+  public String getReservationAmount() {
+    return reservationAmount;
+  }
+
+  public void setReservationAmount(String reservationAmount) {
+    this.reservationAmount = reservationAmount;
+  }
+
+  public BidwordRptGetListStruct orderPv(String orderPv) {
+    this.orderPv = orderPv;
+    return this;
+  }
+
+  /**
+   * Get orderPv
+   *
+   * @return orderPv
+   */
+  @ApiModelProperty(value = "")
+  public String getOrderPv() {
+    return orderPv;
+  }
+
+  public void setOrderPv(String orderPv) {
+    this.orderPv = orderPv;
+  }
+
+  public BidwordRptGetListStruct orderAmount(String orderAmount) {
+    this.orderAmount = orderAmount;
+    return this;
+  }
+
+  /**
+   * Get orderAmount
+   *
+   * @return orderAmount
+   */
+  @ApiModelProperty(value = "")
+  public String getOrderAmount() {
+    return orderAmount;
+  }
+
+  public void setOrderAmount(String orderAmount) {
+    this.orderAmount = orderAmount;
+  }
+
+  public BidwordRptGetListStruct orderFollow1dPv(String orderFollow1dPv) {
+    this.orderFollow1dPv = orderFollow1dPv;
+    return this;
+  }
+
+  /**
+   * Get orderFollow1dPv
+   *
+   * @return orderFollow1dPv
+   */
+  @ApiModelProperty(value = "")
+  public String getOrderFollow1dPv() {
+    return orderFollow1dPv;
+  }
+
+  public void setOrderFollow1dPv(String orderFollow1dPv) {
+    this.orderFollow1dPv = orderFollow1dPv;
+  }
+
+  public BidwordRptGetListStruct orderFollow1dAmount(String orderFollow1dAmount) {
+    this.orderFollow1dAmount = orderFollow1dAmount;
+    return this;
+  }
+
+  /**
+   * Get orderFollow1dAmount
+   *
+   * @return orderFollow1dAmount
+   */
+  @ApiModelProperty(value = "")
+  public String getOrderFollow1dAmount() {
+    return orderFollow1dAmount;
+  }
+
+  public void setOrderFollow1dAmount(String orderFollow1dAmount) {
+    this.orderFollow1dAmount = orderFollow1dAmount;
+  }
+
+  public BidwordRptGetListStruct purchasePv(String purchasePv) {
+    this.purchasePv = purchasePv;
+    return this;
+  }
+
+  /**
+   * Get purchasePv
+   *
+   * @return purchasePv
+   */
+  @ApiModelProperty(value = "")
+  public String getPurchasePv() {
+    return purchasePv;
+  }
+
+  public void setPurchasePv(String purchasePv) {
+    this.purchasePv = purchasePv;
+  }
+
+  public BidwordRptGetListStruct purchaseAmount(String purchaseAmount) {
+    this.purchaseAmount = purchaseAmount;
+    return this;
+  }
+
+  /**
+   * Get purchaseAmount
+   *
+   * @return purchaseAmount
+   */
+  @ApiModelProperty(value = "")
+  public String getPurchaseAmount() {
+    return purchaseAmount;
+  }
+
+  public void setPurchaseAmount(String purchaseAmount) {
+    this.purchaseAmount = purchaseAmount;
+  }
+
+  public BidwordRptGetListStruct applyPv(String applyPv) {
+    this.applyPv = applyPv;
+    return this;
+  }
+
+  /**
+   * Get applyPv
+   *
+   * @return applyPv
+   */
+  @ApiModelProperty(value = "")
+  public String getApplyPv() {
+    return applyPv;
+  }
+
+  public void setApplyPv(String applyPv) {
+    this.applyPv = applyPv;
+  }
+
+  public BidwordRptGetListStruct creditPv(String creditPv) {
+    this.creditPv = creditPv;
+    return this;
+  }
+
+  /**
+   * Get creditPv
+   *
+   * @return creditPv
+   */
+  @ApiModelProperty(value = "")
+  public String getCreditPv() {
+    return creditPv;
+  }
+
+  public void setCreditPv(String creditPv) {
+    this.creditPv = creditPv;
+  }
+
+  public BidwordRptGetListStruct withdrawDepositPv(String withdrawDepositPv) {
+    this.withdrawDepositPv = withdrawDepositPv;
+    return this;
+  }
+
+  /**
+   * Get withdrawDepositPv
+   *
+   * @return withdrawDepositPv
+   */
+  @ApiModelProperty(value = "")
+  public String getWithdrawDepositPv() {
+    return withdrawDepositPv;
+  }
+
+  public void setWithdrawDepositPv(String withdrawDepositPv) {
+    this.withdrawDepositPv = withdrawDepositPv;
+  }
+
+  public BidwordRptGetListStruct cheoutPv1d(String cheoutPv1d) {
+    this.cheoutPv1d = cheoutPv1d;
+    return this;
+  }
+
+  /**
+   * Get cheoutPv1d
+   *
+   * @return cheoutPv1d
+   */
+  @ApiModelProperty(value = "")
+  public String getCheoutPv1d() {
+    return cheoutPv1d;
+  }
+
+  public void setCheoutPv1d(String cheoutPv1d) {
+    this.cheoutPv1d = cheoutPv1d;
+  }
+
+  public BidwordRptGetListStruct cheoutFd(String cheoutFd) {
+    this.cheoutFd = cheoutFd;
+    return this;
+  }
+
+  /**
+   * Get cheoutFd
+   *
+   * @return cheoutFd
+   */
+  @ApiModelProperty(value = "")
+  public String getCheoutFd() {
+    return cheoutFd;
+  }
+
+  public void setCheoutFd(String cheoutFd) {
+    this.cheoutFd = cheoutFd;
+  }
+
+  public BidwordRptGetListStruct cheoutPv3d(String cheoutPv3d) {
+    this.cheoutPv3d = cheoutPv3d;
+    return this;
+  }
+
+  /**
+   * Get cheoutPv3d
+   *
+   * @return cheoutPv3d
+   */
+  @ApiModelProperty(value = "")
+  public String getCheoutPv3d() {
+    return cheoutPv3d;
+  }
+
+  public void setCheoutPv3d(String cheoutPv3d) {
+    this.cheoutPv3d = cheoutPv3d;
+  }
+
+  public BidwordRptGetListStruct cheoutTd(String cheoutTd) {
+    this.cheoutTd = cheoutTd;
+    return this;
+  }
+
+  /**
+   * Get cheoutTd
+   *
+   * @return cheoutTd
+   */
+  @ApiModelProperty(value = "")
+  public String getCheoutTd() {
+    return cheoutTd;
+  }
+
+  public void setCheoutTd(String cheoutTd) {
+    this.cheoutTd = cheoutTd;
+  }
+
+  public BidwordRptGetListStruct cheoutPv7d(String cheoutPv7d) {
+    this.cheoutPv7d = cheoutPv7d;
+    return this;
+  }
+
+  /**
+   * Get cheoutPv7d
+   *
+   * @return cheoutPv7d
+   */
+  @ApiModelProperty(value = "")
+  public String getCheoutPv7d() {
+    return cheoutPv7d;
+  }
+
+  public void setCheoutPv7d(String cheoutPv7d) {
+    this.cheoutPv7d = cheoutPv7d;
+  }
+
+  public BidwordRptGetListStruct cheoutOw(String cheoutOw) {
+    this.cheoutOw = cheoutOw;
+    return this;
+  }
+
+  /**
+   * Get cheoutOw
+   *
+   * @return cheoutOw
+   */
+  @ApiModelProperty(value = "")
+  public String getCheoutOw() {
+    return cheoutOw;
+  }
+
+  public void setCheoutOw(String cheoutOw) {
+    this.cheoutOw = cheoutOw;
+  }
+
+  public BidwordRptGetListStruct purchaseClk15dPv(String purchaseClk15dPv) {
+    this.purchaseClk15dPv = purchaseClk15dPv;
+    return this;
+  }
+
+  /**
+   * Get purchaseClk15dPv
+   *
+   * @return purchaseClk15dPv
+   */
+  @ApiModelProperty(value = "")
+  public String getPurchaseClk15dPv() {
+    return purchaseClk15dPv;
+  }
+
+  public void setPurchaseClk15dPv(String purchaseClk15dPv) {
+    this.purchaseClk15dPv = purchaseClk15dPv;
+  }
+
+  public BidwordRptGetListStruct cheout15d(String cheout15d) {
+    this.cheout15d = cheout15d;
+    return this;
+  }
+
+  /**
+   * Get cheout15d
+   *
+   * @return cheout15d
+   */
+  @ApiModelProperty(value = "")
+  public String getCheout15d() {
+    return cheout15d;
+  }
+
+  public void setCheout15d(String cheout15d) {
+    this.cheout15d = cheout15d;
+  }
+
+  public BidwordRptGetListStruct purchaseClk30dPv(String purchaseClk30dPv) {
+    this.purchaseClk30dPv = purchaseClk30dPv;
+    return this;
+  }
+
+  /**
+   * Get purchaseClk30dPv
+   *
+   * @return purchaseClk30dPv
+   */
+  @ApiModelProperty(value = "")
+  public String getPurchaseClk30dPv() {
+    return purchaseClk30dPv;
+  }
+
+  public void setPurchaseClk30dPv(String purchaseClk30dPv) {
+    this.purchaseClk30dPv = purchaseClk30dPv;
+  }
+
+  public BidwordRptGetListStruct cheoutOm(String cheoutOm) {
+    this.cheoutOm = cheoutOm;
+    return this;
+  }
+
+  /**
+   * Get cheoutOm
+   *
+   * @return cheoutOm
+   */
+  @ApiModelProperty(value = "")
+  public String getCheoutOm() {
+    return cheoutOm;
+  }
+
+  public void setCheoutOm(String cheoutOm) {
+    this.cheoutOm = cheoutOm;
+  }
+
+  public BidwordRptGetListStruct preCreditPv(String preCreditPv) {
+    this.preCreditPv = preCreditPv;
+    return this;
+  }
+
+  /**
+   * Get preCreditPv
+   *
+   * @return preCreditPv
+   */
+  @ApiModelProperty(value = "")
+  public String getPreCreditPv() {
+    return preCreditPv;
+  }
+
+  public void setPreCreditPv(String preCreditPv) {
+    this.preCreditPv = preCreditPv;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -2449,7 +2933,29 @@ public class BidwordRptGetListStruct {
         && Objects.equals(this.clkMiddleGoodsPv, bidwordRptGetListStruct.clkMiddleGoodsPv)
         && Objects.equals(this.clkMiddleBtnPv, bidwordRptGetListStruct.clkMiddleBtnPv)
         && Objects.equals(this.clkMiddleSectionPv, bidwordRptGetListStruct.clkMiddleSectionPv)
-        && Objects.equals(this.clkMiddleGridviewPv, bidwordRptGetListStruct.clkMiddleGridviewPv);
+        && Objects.equals(this.clkMiddleGridviewPv, bidwordRptGetListStruct.clkMiddleGridviewPv)
+        && Objects.equals(this.pageReservationCount, bidwordRptGetListStruct.pageReservationCount)
+        && Objects.equals(this.reservationAmount, bidwordRptGetListStruct.reservationAmount)
+        && Objects.equals(this.orderPv, bidwordRptGetListStruct.orderPv)
+        && Objects.equals(this.orderAmount, bidwordRptGetListStruct.orderAmount)
+        && Objects.equals(this.orderFollow1dPv, bidwordRptGetListStruct.orderFollow1dPv)
+        && Objects.equals(this.orderFollow1dAmount, bidwordRptGetListStruct.orderFollow1dAmount)
+        && Objects.equals(this.purchasePv, bidwordRptGetListStruct.purchasePv)
+        && Objects.equals(this.purchaseAmount, bidwordRptGetListStruct.purchaseAmount)
+        && Objects.equals(this.applyPv, bidwordRptGetListStruct.applyPv)
+        && Objects.equals(this.creditPv, bidwordRptGetListStruct.creditPv)
+        && Objects.equals(this.withdrawDepositPv, bidwordRptGetListStruct.withdrawDepositPv)
+        && Objects.equals(this.cheoutPv1d, bidwordRptGetListStruct.cheoutPv1d)
+        && Objects.equals(this.cheoutFd, bidwordRptGetListStruct.cheoutFd)
+        && Objects.equals(this.cheoutPv3d, bidwordRptGetListStruct.cheoutPv3d)
+        && Objects.equals(this.cheoutTd, bidwordRptGetListStruct.cheoutTd)
+        && Objects.equals(this.cheoutPv7d, bidwordRptGetListStruct.cheoutPv7d)
+        && Objects.equals(this.cheoutOw, bidwordRptGetListStruct.cheoutOw)
+        && Objects.equals(this.purchaseClk15dPv, bidwordRptGetListStruct.purchaseClk15dPv)
+        && Objects.equals(this.cheout15d, bidwordRptGetListStruct.cheout15d)
+        && Objects.equals(this.purchaseClk30dPv, bidwordRptGetListStruct.purchaseClk30dPv)
+        && Objects.equals(this.cheoutOm, bidwordRptGetListStruct.cheoutOm)
+        && Objects.equals(this.preCreditPv, bidwordRptGetListStruct.preCreditPv);
   }
 
   @Override
@@ -2558,7 +3064,29 @@ public class BidwordRptGetListStruct {
         clkMiddleGoodsPv,
         clkMiddleBtnPv,
         clkMiddleSectionPv,
-        clkMiddleGridviewPv);
+        clkMiddleGridviewPv,
+        pageReservationCount,
+        reservationAmount,
+        orderPv,
+        orderAmount,
+        orderFollow1dPv,
+        orderFollow1dAmount,
+        purchasePv,
+        purchaseAmount,
+        applyPv,
+        creditPv,
+        withdrawDepositPv,
+        cheoutPv1d,
+        cheoutFd,
+        cheoutPv3d,
+        cheoutTd,
+        cheoutPv7d,
+        cheoutOw,
+        purchaseClk15dPv,
+        cheout15d,
+        purchaseClk30dPv,
+        cheoutOm,
+        preCreditPv);
   }
 
   @Override

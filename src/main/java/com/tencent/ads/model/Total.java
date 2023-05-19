@@ -285,6 +285,72 @@ public class Total {
   @SerializedName("clk_middle_gridview_pv")
   private String clkMiddleGridviewPv = null;
 
+  @SerializedName("page_reservation_count")
+  private String pageReservationCount = null;
+
+  @SerializedName("reservation_amount")
+  private String reservationAmount = null;
+
+  @SerializedName("order_pv")
+  private String orderPv = null;
+
+  @SerializedName("order_amount")
+  private String orderAmount = null;
+
+  @SerializedName("order_follow_1d_pv")
+  private String orderFollow1dPv = null;
+
+  @SerializedName("order_follow_1d_amount")
+  private String orderFollow1dAmount = null;
+
+  @SerializedName("purchase_pv")
+  private String purchasePv = null;
+
+  @SerializedName("purchase_amount")
+  private String purchaseAmount = null;
+
+  @SerializedName("apply_pv")
+  private String applyPv = null;
+
+  @SerializedName("credit_pv")
+  private String creditPv = null;
+
+  @SerializedName("withdraw_deposit_pv")
+  private String withdrawDepositPv = null;
+
+  @SerializedName("cheout_pv_1d")
+  private String cheoutPv1d = null;
+
+  @SerializedName("cheout_fd")
+  private String cheoutFd = null;
+
+  @SerializedName("cheout_pv_3d")
+  private String cheoutPv3d = null;
+
+  @SerializedName("cheout_td")
+  private String cheoutTd = null;
+
+  @SerializedName("cheout_pv_7d")
+  private String cheoutPv7d = null;
+
+  @SerializedName("cheout_ow")
+  private String cheoutOw = null;
+
+  @SerializedName("purchase_clk_15d_pv")
+  private String purchaseClk15dPv = null;
+
+  @SerializedName("cheout_15d")
+  private String cheout15d = null;
+
+  @SerializedName("purchase_clk_30d_pv")
+  private String purchaseClk30dPv = null;
+
+  @SerializedName("cheout_om")
+  private String cheoutOm = null;
+
+  @SerializedName("pre_credit_pv")
+  private String preCreditPv = null;
+
   public Total cpc(String cpc) {
     this.cpc = cpc;
     return this;
@@ -1957,6 +2023,424 @@ public class Total {
     this.clkMiddleGridviewPv = clkMiddleGridviewPv;
   }
 
+  public Total pageReservationCount(String pageReservationCount) {
+    this.pageReservationCount = pageReservationCount;
+    return this;
+  }
+
+  /**
+   * Get pageReservationCount
+   *
+   * @return pageReservationCount
+   */
+  @ApiModelProperty(value = "")
+  public String getPageReservationCount() {
+    return pageReservationCount;
+  }
+
+  public void setPageReservationCount(String pageReservationCount) {
+    this.pageReservationCount = pageReservationCount;
+  }
+
+  public Total reservationAmount(String reservationAmount) {
+    this.reservationAmount = reservationAmount;
+    return this;
+  }
+
+  /**
+   * Get reservationAmount
+   *
+   * @return reservationAmount
+   */
+  @ApiModelProperty(value = "")
+  public String getReservationAmount() {
+    return reservationAmount;
+  }
+
+  public void setReservationAmount(String reservationAmount) {
+    this.reservationAmount = reservationAmount;
+  }
+
+  public Total orderPv(String orderPv) {
+    this.orderPv = orderPv;
+    return this;
+  }
+
+  /**
+   * Get orderPv
+   *
+   * @return orderPv
+   */
+  @ApiModelProperty(value = "")
+  public String getOrderPv() {
+    return orderPv;
+  }
+
+  public void setOrderPv(String orderPv) {
+    this.orderPv = orderPv;
+  }
+
+  public Total orderAmount(String orderAmount) {
+    this.orderAmount = orderAmount;
+    return this;
+  }
+
+  /**
+   * Get orderAmount
+   *
+   * @return orderAmount
+   */
+  @ApiModelProperty(value = "")
+  public String getOrderAmount() {
+    return orderAmount;
+  }
+
+  public void setOrderAmount(String orderAmount) {
+    this.orderAmount = orderAmount;
+  }
+
+  public Total orderFollow1dPv(String orderFollow1dPv) {
+    this.orderFollow1dPv = orderFollow1dPv;
+    return this;
+  }
+
+  /**
+   * Get orderFollow1dPv
+   *
+   * @return orderFollow1dPv
+   */
+  @ApiModelProperty(value = "")
+  public String getOrderFollow1dPv() {
+    return orderFollow1dPv;
+  }
+
+  public void setOrderFollow1dPv(String orderFollow1dPv) {
+    this.orderFollow1dPv = orderFollow1dPv;
+  }
+
+  public Total orderFollow1dAmount(String orderFollow1dAmount) {
+    this.orderFollow1dAmount = orderFollow1dAmount;
+    return this;
+  }
+
+  /**
+   * Get orderFollow1dAmount
+   *
+   * @return orderFollow1dAmount
+   */
+  @ApiModelProperty(value = "")
+  public String getOrderFollow1dAmount() {
+    return orderFollow1dAmount;
+  }
+
+  public void setOrderFollow1dAmount(String orderFollow1dAmount) {
+    this.orderFollow1dAmount = orderFollow1dAmount;
+  }
+
+  public Total purchasePv(String purchasePv) {
+    this.purchasePv = purchasePv;
+    return this;
+  }
+
+  /**
+   * Get purchasePv
+   *
+   * @return purchasePv
+   */
+  @ApiModelProperty(value = "")
+  public String getPurchasePv() {
+    return purchasePv;
+  }
+
+  public void setPurchasePv(String purchasePv) {
+    this.purchasePv = purchasePv;
+  }
+
+  public Total purchaseAmount(String purchaseAmount) {
+    this.purchaseAmount = purchaseAmount;
+    return this;
+  }
+
+  /**
+   * Get purchaseAmount
+   *
+   * @return purchaseAmount
+   */
+  @ApiModelProperty(value = "")
+  public String getPurchaseAmount() {
+    return purchaseAmount;
+  }
+
+  public void setPurchaseAmount(String purchaseAmount) {
+    this.purchaseAmount = purchaseAmount;
+  }
+
+  public Total applyPv(String applyPv) {
+    this.applyPv = applyPv;
+    return this;
+  }
+
+  /**
+   * Get applyPv
+   *
+   * @return applyPv
+   */
+  @ApiModelProperty(value = "")
+  public String getApplyPv() {
+    return applyPv;
+  }
+
+  public void setApplyPv(String applyPv) {
+    this.applyPv = applyPv;
+  }
+
+  public Total creditPv(String creditPv) {
+    this.creditPv = creditPv;
+    return this;
+  }
+
+  /**
+   * Get creditPv
+   *
+   * @return creditPv
+   */
+  @ApiModelProperty(value = "")
+  public String getCreditPv() {
+    return creditPv;
+  }
+
+  public void setCreditPv(String creditPv) {
+    this.creditPv = creditPv;
+  }
+
+  public Total withdrawDepositPv(String withdrawDepositPv) {
+    this.withdrawDepositPv = withdrawDepositPv;
+    return this;
+  }
+
+  /**
+   * Get withdrawDepositPv
+   *
+   * @return withdrawDepositPv
+   */
+  @ApiModelProperty(value = "")
+  public String getWithdrawDepositPv() {
+    return withdrawDepositPv;
+  }
+
+  public void setWithdrawDepositPv(String withdrawDepositPv) {
+    this.withdrawDepositPv = withdrawDepositPv;
+  }
+
+  public Total cheoutPv1d(String cheoutPv1d) {
+    this.cheoutPv1d = cheoutPv1d;
+    return this;
+  }
+
+  /**
+   * Get cheoutPv1d
+   *
+   * @return cheoutPv1d
+   */
+  @ApiModelProperty(value = "")
+  public String getCheoutPv1d() {
+    return cheoutPv1d;
+  }
+
+  public void setCheoutPv1d(String cheoutPv1d) {
+    this.cheoutPv1d = cheoutPv1d;
+  }
+
+  public Total cheoutFd(String cheoutFd) {
+    this.cheoutFd = cheoutFd;
+    return this;
+  }
+
+  /**
+   * Get cheoutFd
+   *
+   * @return cheoutFd
+   */
+  @ApiModelProperty(value = "")
+  public String getCheoutFd() {
+    return cheoutFd;
+  }
+
+  public void setCheoutFd(String cheoutFd) {
+    this.cheoutFd = cheoutFd;
+  }
+
+  public Total cheoutPv3d(String cheoutPv3d) {
+    this.cheoutPv3d = cheoutPv3d;
+    return this;
+  }
+
+  /**
+   * Get cheoutPv3d
+   *
+   * @return cheoutPv3d
+   */
+  @ApiModelProperty(value = "")
+  public String getCheoutPv3d() {
+    return cheoutPv3d;
+  }
+
+  public void setCheoutPv3d(String cheoutPv3d) {
+    this.cheoutPv3d = cheoutPv3d;
+  }
+
+  public Total cheoutTd(String cheoutTd) {
+    this.cheoutTd = cheoutTd;
+    return this;
+  }
+
+  /**
+   * Get cheoutTd
+   *
+   * @return cheoutTd
+   */
+  @ApiModelProperty(value = "")
+  public String getCheoutTd() {
+    return cheoutTd;
+  }
+
+  public void setCheoutTd(String cheoutTd) {
+    this.cheoutTd = cheoutTd;
+  }
+
+  public Total cheoutPv7d(String cheoutPv7d) {
+    this.cheoutPv7d = cheoutPv7d;
+    return this;
+  }
+
+  /**
+   * Get cheoutPv7d
+   *
+   * @return cheoutPv7d
+   */
+  @ApiModelProperty(value = "")
+  public String getCheoutPv7d() {
+    return cheoutPv7d;
+  }
+
+  public void setCheoutPv7d(String cheoutPv7d) {
+    this.cheoutPv7d = cheoutPv7d;
+  }
+
+  public Total cheoutOw(String cheoutOw) {
+    this.cheoutOw = cheoutOw;
+    return this;
+  }
+
+  /**
+   * Get cheoutOw
+   *
+   * @return cheoutOw
+   */
+  @ApiModelProperty(value = "")
+  public String getCheoutOw() {
+    return cheoutOw;
+  }
+
+  public void setCheoutOw(String cheoutOw) {
+    this.cheoutOw = cheoutOw;
+  }
+
+  public Total purchaseClk15dPv(String purchaseClk15dPv) {
+    this.purchaseClk15dPv = purchaseClk15dPv;
+    return this;
+  }
+
+  /**
+   * Get purchaseClk15dPv
+   *
+   * @return purchaseClk15dPv
+   */
+  @ApiModelProperty(value = "")
+  public String getPurchaseClk15dPv() {
+    return purchaseClk15dPv;
+  }
+
+  public void setPurchaseClk15dPv(String purchaseClk15dPv) {
+    this.purchaseClk15dPv = purchaseClk15dPv;
+  }
+
+  public Total cheout15d(String cheout15d) {
+    this.cheout15d = cheout15d;
+    return this;
+  }
+
+  /**
+   * Get cheout15d
+   *
+   * @return cheout15d
+   */
+  @ApiModelProperty(value = "")
+  public String getCheout15d() {
+    return cheout15d;
+  }
+
+  public void setCheout15d(String cheout15d) {
+    this.cheout15d = cheout15d;
+  }
+
+  public Total purchaseClk30dPv(String purchaseClk30dPv) {
+    this.purchaseClk30dPv = purchaseClk30dPv;
+    return this;
+  }
+
+  /**
+   * Get purchaseClk30dPv
+   *
+   * @return purchaseClk30dPv
+   */
+  @ApiModelProperty(value = "")
+  public String getPurchaseClk30dPv() {
+    return purchaseClk30dPv;
+  }
+
+  public void setPurchaseClk30dPv(String purchaseClk30dPv) {
+    this.purchaseClk30dPv = purchaseClk30dPv;
+  }
+
+  public Total cheoutOm(String cheoutOm) {
+    this.cheoutOm = cheoutOm;
+    return this;
+  }
+
+  /**
+   * Get cheoutOm
+   *
+   * @return cheoutOm
+   */
+  @ApiModelProperty(value = "")
+  public String getCheoutOm() {
+    return cheoutOm;
+  }
+
+  public void setCheoutOm(String cheoutOm) {
+    this.cheoutOm = cheoutOm;
+  }
+
+  public Total preCreditPv(String preCreditPv) {
+    this.preCreditPv = preCreditPv;
+    return this;
+  }
+
+  /**
+   * Get preCreditPv
+   *
+   * @return preCreditPv
+   */
+  @ApiModelProperty(value = "")
+  public String getPreCreditPv() {
+    return preCreditPv;
+  }
+
+  public void setPreCreditPv(String preCreditPv) {
+    this.preCreditPv = preCreditPv;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -2057,7 +2541,29 @@ public class Total {
         && Objects.equals(this.clkMiddleGoodsPv, total.clkMiddleGoodsPv)
         && Objects.equals(this.clkMiddleBtnPv, total.clkMiddleBtnPv)
         && Objects.equals(this.clkMiddleSectionPv, total.clkMiddleSectionPv)
-        && Objects.equals(this.clkMiddleGridviewPv, total.clkMiddleGridviewPv);
+        && Objects.equals(this.clkMiddleGridviewPv, total.clkMiddleGridviewPv)
+        && Objects.equals(this.pageReservationCount, total.pageReservationCount)
+        && Objects.equals(this.reservationAmount, total.reservationAmount)
+        && Objects.equals(this.orderPv, total.orderPv)
+        && Objects.equals(this.orderAmount, total.orderAmount)
+        && Objects.equals(this.orderFollow1dPv, total.orderFollow1dPv)
+        && Objects.equals(this.orderFollow1dAmount, total.orderFollow1dAmount)
+        && Objects.equals(this.purchasePv, total.purchasePv)
+        && Objects.equals(this.purchaseAmount, total.purchaseAmount)
+        && Objects.equals(this.applyPv, total.applyPv)
+        && Objects.equals(this.creditPv, total.creditPv)
+        && Objects.equals(this.withdrawDepositPv, total.withdrawDepositPv)
+        && Objects.equals(this.cheoutPv1d, total.cheoutPv1d)
+        && Objects.equals(this.cheoutFd, total.cheoutFd)
+        && Objects.equals(this.cheoutPv3d, total.cheoutPv3d)
+        && Objects.equals(this.cheoutTd, total.cheoutTd)
+        && Objects.equals(this.cheoutPv7d, total.cheoutPv7d)
+        && Objects.equals(this.cheoutOw, total.cheoutOw)
+        && Objects.equals(this.purchaseClk15dPv, total.purchaseClk15dPv)
+        && Objects.equals(this.cheout15d, total.cheout15d)
+        && Objects.equals(this.purchaseClk30dPv, total.purchaseClk30dPv)
+        && Objects.equals(this.cheoutOm, total.cheoutOm)
+        && Objects.equals(this.preCreditPv, total.preCreditPv);
   }
 
   @Override
@@ -2150,7 +2656,29 @@ public class Total {
         clkMiddleGoodsPv,
         clkMiddleBtnPv,
         clkMiddleSectionPv,
-        clkMiddleGridviewPv);
+        clkMiddleGridviewPv,
+        pageReservationCount,
+        reservationAmount,
+        orderPv,
+        orderAmount,
+        orderFollow1dPv,
+        orderFollow1dAmount,
+        purchasePv,
+        purchaseAmount,
+        applyPv,
+        creditPv,
+        withdrawDepositPv,
+        cheoutPv1d,
+        cheoutFd,
+        cheoutPv3d,
+        cheoutTd,
+        cheoutPv7d,
+        cheoutOw,
+        purchaseClk15dPv,
+        cheout15d,
+        purchaseClk30dPv,
+        cheoutOm,
+        preCreditPv);
   }
 
   @Override
