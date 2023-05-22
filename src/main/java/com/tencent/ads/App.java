@@ -63,6 +63,7 @@ public class App {
   @Inject BrandApiContainer brandApiContainer;
   @Inject BusinessManagerRelationsApiContainer businessManagerRelationsApiContainer;
   @Inject BusinessMdmAccountRelationsApiContainer businessMdmAccountRelationsApiContainer;
+  @Inject BusinessPointApiContainer businessPointApiContainer;
   @Inject CampaignNegativewordsApiContainer campaignNegativewordsApiContainer;
   @Inject CampaignsApiContainer campaignsApiContainer;
   @Inject CapabilitiesApiContainer capabilitiesApiContainer;
@@ -105,6 +106,7 @@ public class App {
   @Inject HourlyReportsApiContainer hourlyReportsApiContainer;
   @Inject ImageProcessingApiContainer imageProcessingApiContainer;
   @Inject ImagesApiContainer imagesApiContainer;
+  @Inject KeywordRecommendApiContainer keywordRecommendApiContainer;
   @Inject LabelAudiencesApiContainer labelAudiencesApiContainer;
   @Inject LabelsApiContainer labelsApiContainer;
   @Inject LeadCluesApiContainer leadCluesApiContainer;
@@ -392,6 +394,10 @@ public class App {
     return businessMdmAccountRelationsApiContainer;
   }
 
+  public BusinessPointApiContainer businessPoint() {
+    return businessPointApiContainer;
+  }
+
   public CampaignNegativewordsApiContainer campaignNegativewords() {
     return campaignNegativewordsApiContainer;
   }
@@ -558,6 +564,10 @@ public class App {
 
   public ImagesApiContainer images() {
     return imagesApiContainer;
+  }
+
+  public KeywordRecommendApiContainer keywordRecommend() {
+    return keywordRecommendApiContainer;
   }
 
   public LabelAudiencesApiContainer labelAudiences() {
