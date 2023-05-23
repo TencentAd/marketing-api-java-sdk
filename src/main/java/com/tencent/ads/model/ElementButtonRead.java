@@ -28,7 +28,7 @@ public class ElementButtonRead {
   private String url = null;
 
   @SerializedName("link_spec")
-  private LinkSpec linkSpec = null;
+  private ElementButtonLinkSpec linkSpec = null;
 
   @SerializedName("app_ios_spec")
   private AppIosSpec appIosSpec = null;
@@ -101,7 +101,7 @@ public class ElementButtonRead {
     this.url = url;
   }
 
-  public ElementButtonRead linkSpec(LinkSpec linkSpec) {
+  public ElementButtonRead linkSpec(ElementButtonLinkSpec linkSpec) {
     this.linkSpec = linkSpec;
     return this;
   }
@@ -112,11 +112,11 @@ public class ElementButtonRead {
    * @return linkSpec
    */
   @ApiModelProperty(value = "")
-  public LinkSpec getLinkSpec() {
+  public ElementButtonLinkSpec getLinkSpec() {
     return linkSpec;
   }
 
-  public void setLinkSpec(LinkSpec linkSpec) {
+  public void setLinkSpec(ElementButtonLinkSpec linkSpec) {
     this.linkSpec = linkSpec;
   }
 
