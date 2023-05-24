@@ -1635,6 +1635,24 @@ public class HourlyReportsGetListStruct {
   @SerializedName("cre_application_rate_app")
   private Double creApplicationRateApp = null;
 
+  @SerializedName("income_pv_24h_pla")
+  private Long incomePv24hPla = null;
+
+  @SerializedName("income_pv_1d_pla")
+  private Long incomePv1dPla = null;
+
+  @SerializedName("income_pv_pla")
+  private Long incomePvPla = null;
+
+  @SerializedName("video_outer_play3s_rate")
+  private Double videoOuterPlay3sRate = null;
+
+  @SerializedName("app_retention_lt7")
+  private Double appRetentionLt7 = null;
+
+  @SerializedName("app_retention_lt7_cost")
+  private Long appRetentionLt7Cost = null;
+
   @SerializedName("request_conversions_count")
   private Long requestConversionsCount = null;
 
@@ -12499,6 +12517,120 @@ public class HourlyReportsGetListStruct {
     this.creApplicationRateApp = creApplicationRateApp;
   }
 
+  public HourlyReportsGetListStruct incomePv24hPla(Long incomePv24hPla) {
+    this.incomePv24hPla = incomePv24hPla;
+    return this;
+  }
+
+  /**
+   * Get incomePv24hPla
+   *
+   * @return incomePv24hPla
+   */
+  @ApiModelProperty(value = "")
+  public Long getIncomePv24hPla() {
+    return incomePv24hPla;
+  }
+
+  public void setIncomePv24hPla(Long incomePv24hPla) {
+    this.incomePv24hPla = incomePv24hPla;
+  }
+
+  public HourlyReportsGetListStruct incomePv1dPla(Long incomePv1dPla) {
+    this.incomePv1dPla = incomePv1dPla;
+    return this;
+  }
+
+  /**
+   * Get incomePv1dPla
+   *
+   * @return incomePv1dPla
+   */
+  @ApiModelProperty(value = "")
+  public Long getIncomePv1dPla() {
+    return incomePv1dPla;
+  }
+
+  public void setIncomePv1dPla(Long incomePv1dPla) {
+    this.incomePv1dPla = incomePv1dPla;
+  }
+
+  public HourlyReportsGetListStruct incomePvPla(Long incomePvPla) {
+    this.incomePvPla = incomePvPla;
+    return this;
+  }
+
+  /**
+   * Get incomePvPla
+   *
+   * @return incomePvPla
+   */
+  @ApiModelProperty(value = "")
+  public Long getIncomePvPla() {
+    return incomePvPla;
+  }
+
+  public void setIncomePvPla(Long incomePvPla) {
+    this.incomePvPla = incomePvPla;
+  }
+
+  public HourlyReportsGetListStruct videoOuterPlay3sRate(Double videoOuterPlay3sRate) {
+    this.videoOuterPlay3sRate = videoOuterPlay3sRate;
+    return this;
+  }
+
+  /**
+   * Get videoOuterPlay3sRate
+   *
+   * @return videoOuterPlay3sRate
+   */
+  @ApiModelProperty(value = "")
+  public Double getVideoOuterPlay3sRate() {
+    return videoOuterPlay3sRate;
+  }
+
+  public void setVideoOuterPlay3sRate(Double videoOuterPlay3sRate) {
+    this.videoOuterPlay3sRate = videoOuterPlay3sRate;
+  }
+
+  public HourlyReportsGetListStruct appRetentionLt7(Double appRetentionLt7) {
+    this.appRetentionLt7 = appRetentionLt7;
+    return this;
+  }
+
+  /**
+   * Get appRetentionLt7
+   *
+   * @return appRetentionLt7
+   */
+  @ApiModelProperty(value = "")
+  public Double getAppRetentionLt7() {
+    return appRetentionLt7;
+  }
+
+  public void setAppRetentionLt7(Double appRetentionLt7) {
+    this.appRetentionLt7 = appRetentionLt7;
+  }
+
+  public HourlyReportsGetListStruct appRetentionLt7Cost(Long appRetentionLt7Cost) {
+    this.appRetentionLt7Cost = appRetentionLt7Cost;
+    return this;
+  }
+
+  /**
+   * Get appRetentionLt7Cost
+   *
+   * @return appRetentionLt7Cost
+   */
+  @ApiModelProperty(value = "")
+  public Long getAppRetentionLt7Cost() {
+    return appRetentionLt7Cost;
+  }
+
+  public void setAppRetentionLt7Cost(Long appRetentionLt7Cost) {
+    this.appRetentionLt7Cost = appRetentionLt7Cost;
+  }
+
   public HourlyReportsGetListStruct requestConversionsCount(Long requestConversionsCount) {
     this.requestConversionsCount = requestConversionsCount;
     return this;
@@ -17222,6 +17354,13 @@ public class HourlyReportsGetListStruct {
             this.creApplicationRateWeb, hourlyReportsGetListStruct.creApplicationRateWeb)
         && Objects.equals(
             this.creApplicationRateApp, hourlyReportsGetListStruct.creApplicationRateApp)
+        && Objects.equals(this.incomePv24hPla, hourlyReportsGetListStruct.incomePv24hPla)
+        && Objects.equals(this.incomePv1dPla, hourlyReportsGetListStruct.incomePv1dPla)
+        && Objects.equals(this.incomePvPla, hourlyReportsGetListStruct.incomePvPla)
+        && Objects.equals(
+            this.videoOuterPlay3sRate, hourlyReportsGetListStruct.videoOuterPlay3sRate)
+        && Objects.equals(this.appRetentionLt7, hourlyReportsGetListStruct.appRetentionLt7)
+        && Objects.equals(this.appRetentionLt7Cost, hourlyReportsGetListStruct.appRetentionLt7Cost)
         && Objects.equals(
             this.requestConversionsCount, hourlyReportsGetListStruct.requestConversionsCount)
         && Objects.equals(
@@ -18120,6 +18259,12 @@ public class HourlyReportsGetListStruct {
         quitChatGroupRate,
         creApplicationRateWeb,
         creApplicationRateApp,
+        incomePv24hPla,
+        incomePv1dPla,
+        incomePvPla,
+        videoOuterPlay3sRate,
+        appRetentionLt7,
+        appRetentionLt7Cost,
         requestConversionsCount,
         requestConversionsCost,
         incomeVal1,

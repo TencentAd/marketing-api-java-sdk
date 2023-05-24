@@ -1548,6 +1548,24 @@ public class TargetingTagReportsGetListStruct {
   @SerializedName("cre_application_rate_app")
   private Double creApplicationRateApp = null;
 
+  @SerializedName("income_pv_24h_pla")
+  private Long incomePv24hPla = null;
+
+  @SerializedName("income_pv_1d_pla")
+  private Long incomePv1dPla = null;
+
+  @SerializedName("income_pv_pla")
+  private Long incomePvPla = null;
+
+  @SerializedName("video_outer_play3s_rate")
+  private Double videoOuterPlay3sRate = null;
+
+  @SerializedName("app_retention_lt7")
+  private Double appRetentionLt7 = null;
+
+  @SerializedName("app_retention_lt7_cost")
+  private Long appRetentionLt7Cost = null;
+
   @SerializedName("age")
   private String age = null;
 
@@ -11732,6 +11750,120 @@ public class TargetingTagReportsGetListStruct {
     this.creApplicationRateApp = creApplicationRateApp;
   }
 
+  public TargetingTagReportsGetListStruct incomePv24hPla(Long incomePv24hPla) {
+    this.incomePv24hPla = incomePv24hPla;
+    return this;
+  }
+
+  /**
+   * Get incomePv24hPla
+   *
+   * @return incomePv24hPla
+   */
+  @ApiModelProperty(value = "")
+  public Long getIncomePv24hPla() {
+    return incomePv24hPla;
+  }
+
+  public void setIncomePv24hPla(Long incomePv24hPla) {
+    this.incomePv24hPla = incomePv24hPla;
+  }
+
+  public TargetingTagReportsGetListStruct incomePv1dPla(Long incomePv1dPla) {
+    this.incomePv1dPla = incomePv1dPla;
+    return this;
+  }
+
+  /**
+   * Get incomePv1dPla
+   *
+   * @return incomePv1dPla
+   */
+  @ApiModelProperty(value = "")
+  public Long getIncomePv1dPla() {
+    return incomePv1dPla;
+  }
+
+  public void setIncomePv1dPla(Long incomePv1dPla) {
+    this.incomePv1dPla = incomePv1dPla;
+  }
+
+  public TargetingTagReportsGetListStruct incomePvPla(Long incomePvPla) {
+    this.incomePvPla = incomePvPla;
+    return this;
+  }
+
+  /**
+   * Get incomePvPla
+   *
+   * @return incomePvPla
+   */
+  @ApiModelProperty(value = "")
+  public Long getIncomePvPla() {
+    return incomePvPla;
+  }
+
+  public void setIncomePvPla(Long incomePvPla) {
+    this.incomePvPla = incomePvPla;
+  }
+
+  public TargetingTagReportsGetListStruct videoOuterPlay3sRate(Double videoOuterPlay3sRate) {
+    this.videoOuterPlay3sRate = videoOuterPlay3sRate;
+    return this;
+  }
+
+  /**
+   * Get videoOuterPlay3sRate
+   *
+   * @return videoOuterPlay3sRate
+   */
+  @ApiModelProperty(value = "")
+  public Double getVideoOuterPlay3sRate() {
+    return videoOuterPlay3sRate;
+  }
+
+  public void setVideoOuterPlay3sRate(Double videoOuterPlay3sRate) {
+    this.videoOuterPlay3sRate = videoOuterPlay3sRate;
+  }
+
+  public TargetingTagReportsGetListStruct appRetentionLt7(Double appRetentionLt7) {
+    this.appRetentionLt7 = appRetentionLt7;
+    return this;
+  }
+
+  /**
+   * Get appRetentionLt7
+   *
+   * @return appRetentionLt7
+   */
+  @ApiModelProperty(value = "")
+  public Double getAppRetentionLt7() {
+    return appRetentionLt7;
+  }
+
+  public void setAppRetentionLt7(Double appRetentionLt7) {
+    this.appRetentionLt7 = appRetentionLt7;
+  }
+
+  public TargetingTagReportsGetListStruct appRetentionLt7Cost(Long appRetentionLt7Cost) {
+    this.appRetentionLt7Cost = appRetentionLt7Cost;
+    return this;
+  }
+
+  /**
+   * Get appRetentionLt7Cost
+   *
+   * @return appRetentionLt7Cost
+   */
+  @ApiModelProperty(value = "")
+  public Long getAppRetentionLt7Cost() {
+    return appRetentionLt7Cost;
+  }
+
+  public void setAppRetentionLt7Cost(Long appRetentionLt7Cost) {
+    this.appRetentionLt7Cost = appRetentionLt7Cost;
+  }
+
   public TargetingTagReportsGetListStruct age(String age) {
     this.age = age;
     return this;
@@ -15523,6 +15655,14 @@ public class TargetingTagReportsGetListStruct {
             this.creApplicationRateWeb, targetingTagReportsGetListStruct.creApplicationRateWeb)
         && Objects.equals(
             this.creApplicationRateApp, targetingTagReportsGetListStruct.creApplicationRateApp)
+        && Objects.equals(this.incomePv24hPla, targetingTagReportsGetListStruct.incomePv24hPla)
+        && Objects.equals(this.incomePv1dPla, targetingTagReportsGetListStruct.incomePv1dPla)
+        && Objects.equals(this.incomePvPla, targetingTagReportsGetListStruct.incomePvPla)
+        && Objects.equals(
+            this.videoOuterPlay3sRate, targetingTagReportsGetListStruct.videoOuterPlay3sRate)
+        && Objects.equals(this.appRetentionLt7, targetingTagReportsGetListStruct.appRetentionLt7)
+        && Objects.equals(
+            this.appRetentionLt7Cost, targetingTagReportsGetListStruct.appRetentionLt7Cost)
         && Objects.equals(this.age, targetingTagReportsGetListStruct.age)
         && Objects.equals(this.regionId, targetingTagReportsGetListStruct.regionId)
         && Objects.equals(this.cityId, targetingTagReportsGetListStruct.cityId)
@@ -16319,6 +16459,12 @@ public class TargetingTagReportsGetListStruct {
         quitChatGroupRate,
         creApplicationRateWeb,
         creApplicationRateApp,
+        incomePv24hPla,
+        incomePv1dPla,
+        incomePvPla,
+        videoOuterPlay3sRate,
+        appRetentionLt7,
+        appRetentionLt7Cost,
         age,
         regionId,
         cityId,
