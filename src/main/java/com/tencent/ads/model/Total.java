@@ -351,6 +351,18 @@ public class Total {
   @SerializedName("pre_credit_pv")
   private String preCreditPv = null;
 
+  @SerializedName("exp_avg_rank")
+  private String expAvgRank = null;
+
+  @SerializedName("exp_overall_top_pv")
+  private String expOverallTopPv = null;
+
+  @SerializedName("clk_top_pv")
+  private String clkTopPv = null;
+
+  @SerializedName("real_cost_top")
+  private String realCostTop = null;
+
   public Total cpc(String cpc) {
     this.cpc = cpc;
     return this;
@@ -2441,6 +2453,82 @@ public class Total {
     this.preCreditPv = preCreditPv;
   }
 
+  public Total expAvgRank(String expAvgRank) {
+    this.expAvgRank = expAvgRank;
+    return this;
+  }
+
+  /**
+   * Get expAvgRank
+   *
+   * @return expAvgRank
+   */
+  @ApiModelProperty(value = "")
+  public String getExpAvgRank() {
+    return expAvgRank;
+  }
+
+  public void setExpAvgRank(String expAvgRank) {
+    this.expAvgRank = expAvgRank;
+  }
+
+  public Total expOverallTopPv(String expOverallTopPv) {
+    this.expOverallTopPv = expOverallTopPv;
+    return this;
+  }
+
+  /**
+   * Get expOverallTopPv
+   *
+   * @return expOverallTopPv
+   */
+  @ApiModelProperty(value = "")
+  public String getExpOverallTopPv() {
+    return expOverallTopPv;
+  }
+
+  public void setExpOverallTopPv(String expOverallTopPv) {
+    this.expOverallTopPv = expOverallTopPv;
+  }
+
+  public Total clkTopPv(String clkTopPv) {
+    this.clkTopPv = clkTopPv;
+    return this;
+  }
+
+  /**
+   * Get clkTopPv
+   *
+   * @return clkTopPv
+   */
+  @ApiModelProperty(value = "")
+  public String getClkTopPv() {
+    return clkTopPv;
+  }
+
+  public void setClkTopPv(String clkTopPv) {
+    this.clkTopPv = clkTopPv;
+  }
+
+  public Total realCostTop(String realCostTop) {
+    this.realCostTop = realCostTop;
+    return this;
+  }
+
+  /**
+   * Get realCostTop
+   *
+   * @return realCostTop
+   */
+  @ApiModelProperty(value = "")
+  public String getRealCostTop() {
+    return realCostTop;
+  }
+
+  public void setRealCostTop(String realCostTop) {
+    this.realCostTop = realCostTop;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -2563,7 +2651,11 @@ public class Total {
         && Objects.equals(this.cheout15d, total.cheout15d)
         && Objects.equals(this.purchaseClk30dPv, total.purchaseClk30dPv)
         && Objects.equals(this.cheoutOm, total.cheoutOm)
-        && Objects.equals(this.preCreditPv, total.preCreditPv);
+        && Objects.equals(this.preCreditPv, total.preCreditPv)
+        && Objects.equals(this.expAvgRank, total.expAvgRank)
+        && Objects.equals(this.expOverallTopPv, total.expOverallTopPv)
+        && Objects.equals(this.clkTopPv, total.clkTopPv)
+        && Objects.equals(this.realCostTop, total.realCostTop);
   }
 
   @Override
@@ -2678,7 +2770,11 @@ public class Total {
         cheout15d,
         purchaseClk30dPv,
         cheoutOm,
-        preCreditPv);
+        preCreditPv,
+        expAvgRank,
+        expOverallTopPv,
+        clkTopPv,
+        realCostTop);
   }
 
   @Override

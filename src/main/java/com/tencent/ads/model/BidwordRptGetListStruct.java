@@ -399,6 +399,18 @@ public class BidwordRptGetListStruct {
   @SerializedName("pre_credit_pv")
   private String preCreditPv = null;
 
+  @SerializedName("exp_avg_rank")
+  private String expAvgRank = null;
+
+  @SerializedName("exp_overall_top_pv")
+  private String expOverallTopPv = null;
+
+  @SerializedName("clk_top_pv")
+  private String clkTopPv = null;
+
+  @SerializedName("real_cost_top")
+  private String realCostTop = null;
+
   public BidwordRptGetListStruct bidwordId(Long bidwordId) {
     this.bidwordId = bidwordId;
     return this;
@@ -2798,6 +2810,82 @@ public class BidwordRptGetListStruct {
     this.preCreditPv = preCreditPv;
   }
 
+  public BidwordRptGetListStruct expAvgRank(String expAvgRank) {
+    this.expAvgRank = expAvgRank;
+    return this;
+  }
+
+  /**
+   * Get expAvgRank
+   *
+   * @return expAvgRank
+   */
+  @ApiModelProperty(value = "")
+  public String getExpAvgRank() {
+    return expAvgRank;
+  }
+
+  public void setExpAvgRank(String expAvgRank) {
+    this.expAvgRank = expAvgRank;
+  }
+
+  public BidwordRptGetListStruct expOverallTopPv(String expOverallTopPv) {
+    this.expOverallTopPv = expOverallTopPv;
+    return this;
+  }
+
+  /**
+   * Get expOverallTopPv
+   *
+   * @return expOverallTopPv
+   */
+  @ApiModelProperty(value = "")
+  public String getExpOverallTopPv() {
+    return expOverallTopPv;
+  }
+
+  public void setExpOverallTopPv(String expOverallTopPv) {
+    this.expOverallTopPv = expOverallTopPv;
+  }
+
+  public BidwordRptGetListStruct clkTopPv(String clkTopPv) {
+    this.clkTopPv = clkTopPv;
+    return this;
+  }
+
+  /**
+   * Get clkTopPv
+   *
+   * @return clkTopPv
+   */
+  @ApiModelProperty(value = "")
+  public String getClkTopPv() {
+    return clkTopPv;
+  }
+
+  public void setClkTopPv(String clkTopPv) {
+    this.clkTopPv = clkTopPv;
+  }
+
+  public BidwordRptGetListStruct realCostTop(String realCostTop) {
+    this.realCostTop = realCostTop;
+    return this;
+  }
+
+  /**
+   * Get realCostTop
+   *
+   * @return realCostTop
+   */
+  @ApiModelProperty(value = "")
+  public String getRealCostTop() {
+    return realCostTop;
+  }
+
+  public void setRealCostTop(String realCostTop) {
+    this.realCostTop = realCostTop;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -2955,7 +3043,11 @@ public class BidwordRptGetListStruct {
         && Objects.equals(this.cheout15d, bidwordRptGetListStruct.cheout15d)
         && Objects.equals(this.purchaseClk30dPv, bidwordRptGetListStruct.purchaseClk30dPv)
         && Objects.equals(this.cheoutOm, bidwordRptGetListStruct.cheoutOm)
-        && Objects.equals(this.preCreditPv, bidwordRptGetListStruct.preCreditPv);
+        && Objects.equals(this.preCreditPv, bidwordRptGetListStruct.preCreditPv)
+        && Objects.equals(this.expAvgRank, bidwordRptGetListStruct.expAvgRank)
+        && Objects.equals(this.expOverallTopPv, bidwordRptGetListStruct.expOverallTopPv)
+        && Objects.equals(this.clkTopPv, bidwordRptGetListStruct.clkTopPv)
+        && Objects.equals(this.realCostTop, bidwordRptGetListStruct.realCostTop);
   }
 
   @Override
@@ -3086,7 +3178,11 @@ public class BidwordRptGetListStruct {
         cheout15d,
         purchaseClk30dPv,
         cheoutOm,
-        preCreditPv);
+        preCreditPv,
+        expAvgRank,
+        expOverallTopPv,
+        clkTopPv,
+        realCostTop);
   }
 
   @Override
