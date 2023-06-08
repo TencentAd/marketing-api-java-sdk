@@ -2067,6 +2067,18 @@ public class HourlyReportsGetListStruct {
   @SerializedName("live_stream_avg_time")
   private Double liveStreamAvgTime = null;
 
+  @SerializedName("exp_overall_top_pv")
+  private Long expOverallTopPv = null;
+
+  @SerializedName("exp_avg_rank")
+  private Double expAvgRank = null;
+
+  @SerializedName("clk_top_pv")
+  private Long clkTopPv = null;
+
+  @SerializedName("real_cost_top")
+  private Long realCostTop = null;
+
   @SerializedName("wechat_account_id")
   private String wechatAccountId = null;
 
@@ -15278,6 +15290,82 @@ public class HourlyReportsGetListStruct {
     this.liveStreamAvgTime = liveStreamAvgTime;
   }
 
+  public HourlyReportsGetListStruct expOverallTopPv(Long expOverallTopPv) {
+    this.expOverallTopPv = expOverallTopPv;
+    return this;
+  }
+
+  /**
+   * Get expOverallTopPv
+   *
+   * @return expOverallTopPv
+   */
+  @ApiModelProperty(value = "")
+  public Long getExpOverallTopPv() {
+    return expOverallTopPv;
+  }
+
+  public void setExpOverallTopPv(Long expOverallTopPv) {
+    this.expOverallTopPv = expOverallTopPv;
+  }
+
+  public HourlyReportsGetListStruct expAvgRank(Double expAvgRank) {
+    this.expAvgRank = expAvgRank;
+    return this;
+  }
+
+  /**
+   * Get expAvgRank
+   *
+   * @return expAvgRank
+   */
+  @ApiModelProperty(value = "")
+  public Double getExpAvgRank() {
+    return expAvgRank;
+  }
+
+  public void setExpAvgRank(Double expAvgRank) {
+    this.expAvgRank = expAvgRank;
+  }
+
+  public HourlyReportsGetListStruct clkTopPv(Long clkTopPv) {
+    this.clkTopPv = clkTopPv;
+    return this;
+  }
+
+  /**
+   * Get clkTopPv
+   *
+   * @return clkTopPv
+   */
+  @ApiModelProperty(value = "")
+  public Long getClkTopPv() {
+    return clkTopPv;
+  }
+
+  public void setClkTopPv(Long clkTopPv) {
+    this.clkTopPv = clkTopPv;
+  }
+
+  public HourlyReportsGetListStruct realCostTop(Long realCostTop) {
+    this.realCostTop = realCostTop;
+    return this;
+  }
+
+  /**
+   * Get realCostTop
+   *
+   * @return realCostTop
+   */
+  @ApiModelProperty(value = "")
+  public Long getRealCostTop() {
+    return realCostTop;
+  }
+
+  public void setRealCostTop(Long realCostTop) {
+    this.realCostTop = realCostTop;
+  }
+
   public HourlyReportsGetListStruct wechatAccountId(String wechatAccountId) {
     this.wechatAccountId = wechatAccountId;
     return this;
@@ -17589,6 +17677,10 @@ public class HourlyReportsGetListStruct {
         && Objects.equals(this.bidword, hourlyReportsGetListStruct.bidword)
         && Objects.equals(this.liveStreamExpUv, hourlyReportsGetListStruct.liveStreamExpUv)
         && Objects.equals(this.liveStreamAvgTime, hourlyReportsGetListStruct.liveStreamAvgTime)
+        && Objects.equals(this.expOverallTopPv, hourlyReportsGetListStruct.expOverallTopPv)
+        && Objects.equals(this.expAvgRank, hourlyReportsGetListStruct.expAvgRank)
+        && Objects.equals(this.clkTopPv, hourlyReportsGetListStruct.clkTopPv)
+        && Objects.equals(this.realCostTop, hourlyReportsGetListStruct.realCostTop)
         && Objects.equals(this.wechatAccountId, hourlyReportsGetListStruct.wechatAccountId)
         && Objects.equals(this.wechatAgencyId, hourlyReportsGetListStruct.wechatAgencyId)
         && Objects.equals(this.costDeviationRate, hourlyReportsGetListStruct.costDeviationRate)
@@ -18403,6 +18495,10 @@ public class HourlyReportsGetListStruct {
         bidword,
         liveStreamExpUv,
         liveStreamAvgTime,
+        expOverallTopPv,
+        expAvgRank,
+        clkTopPv,
+        realCostTop,
         wechatAccountId,
         wechatAgencyId,
         costDeviationRate,

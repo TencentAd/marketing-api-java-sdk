@@ -2124,6 +2124,18 @@ public class DailyReportsGetListStruct {
   @SerializedName("bidword")
   private String bidword = null;
 
+  @SerializedName("exp_overall_top_pv")
+  private Long expOverallTopPv = null;
+
+  @SerializedName("exp_avg_rank")
+  private Double expAvgRank = null;
+
+  @SerializedName("clk_top_pv")
+  private Long clkTopPv = null;
+
+  @SerializedName("real_cost_top")
+  private Long realCostTop = null;
+
   @SerializedName("queryword")
   private String queryword = null;
 
@@ -15717,6 +15729,82 @@ public class DailyReportsGetListStruct {
     this.bidword = bidword;
   }
 
+  public DailyReportsGetListStruct expOverallTopPv(Long expOverallTopPv) {
+    this.expOverallTopPv = expOverallTopPv;
+    return this;
+  }
+
+  /**
+   * Get expOverallTopPv
+   *
+   * @return expOverallTopPv
+   */
+  @ApiModelProperty(value = "")
+  public Long getExpOverallTopPv() {
+    return expOverallTopPv;
+  }
+
+  public void setExpOverallTopPv(Long expOverallTopPv) {
+    this.expOverallTopPv = expOverallTopPv;
+  }
+
+  public DailyReportsGetListStruct expAvgRank(Double expAvgRank) {
+    this.expAvgRank = expAvgRank;
+    return this;
+  }
+
+  /**
+   * Get expAvgRank
+   *
+   * @return expAvgRank
+   */
+  @ApiModelProperty(value = "")
+  public Double getExpAvgRank() {
+    return expAvgRank;
+  }
+
+  public void setExpAvgRank(Double expAvgRank) {
+    this.expAvgRank = expAvgRank;
+  }
+
+  public DailyReportsGetListStruct clkTopPv(Long clkTopPv) {
+    this.clkTopPv = clkTopPv;
+    return this;
+  }
+
+  /**
+   * Get clkTopPv
+   *
+   * @return clkTopPv
+   */
+  @ApiModelProperty(value = "")
+  public Long getClkTopPv() {
+    return clkTopPv;
+  }
+
+  public void setClkTopPv(Long clkTopPv) {
+    this.clkTopPv = clkTopPv;
+  }
+
+  public DailyReportsGetListStruct realCostTop(Long realCostTop) {
+    this.realCostTop = realCostTop;
+    return this;
+  }
+
+  /**
+   * Get realCostTop
+   *
+   * @return realCostTop
+   */
+  @ApiModelProperty(value = "")
+  public Long getRealCostTop() {
+    return realCostTop;
+  }
+
+  public void setRealCostTop(Long realCostTop) {
+    this.realCostTop = realCostTop;
+  }
+
   public DailyReportsGetListStruct queryword(String queryword) {
     this.queryword = queryword;
     return this;
@@ -18184,6 +18272,10 @@ public class DailyReportsGetListStruct {
         && Objects.equals(this.matchType, dailyReportsGetListStruct.matchType)
         && Objects.equals(this.bidwordId, dailyReportsGetListStruct.bidwordId)
         && Objects.equals(this.bidword, dailyReportsGetListStruct.bidword)
+        && Objects.equals(this.expOverallTopPv, dailyReportsGetListStruct.expOverallTopPv)
+        && Objects.equals(this.expAvgRank, dailyReportsGetListStruct.expAvgRank)
+        && Objects.equals(this.clkTopPv, dailyReportsGetListStruct.clkTopPv)
+        && Objects.equals(this.realCostTop, dailyReportsGetListStruct.realCostTop)
         && Objects.equals(this.queryword, dailyReportsGetListStruct.queryword)
         && Objects.equals(this.hour, dailyReportsGetListStruct.hour)
         && Objects.equals(this.wechatAccountId, dailyReportsGetListStruct.wechatAccountId)
@@ -19025,6 +19117,10 @@ public class DailyReportsGetListStruct {
         matchType,
         bidwordId,
         bidword,
+        expOverallTopPv,
+        expAvgRank,
+        clkTopPv,
+        realCostTop,
         queryword,
         hour,
         wechatAccountId,
