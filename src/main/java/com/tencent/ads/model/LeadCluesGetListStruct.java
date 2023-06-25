@@ -216,6 +216,9 @@ public class LeadCluesGetListStruct {
   @SerializedName("all_follow_records")
   private String allFollowRecords = null;
 
+  @SerializedName("claim_advertiser_id")
+  private Long claimAdvertiserId = null;
+
   public LeadCluesGetListStruct accountId(Long accountId) {
     this.accountId = accountId;
     return this;
@@ -1451,6 +1454,25 @@ public class LeadCluesGetListStruct {
     this.allFollowRecords = allFollowRecords;
   }
 
+  public LeadCluesGetListStruct claimAdvertiserId(Long claimAdvertiserId) {
+    this.claimAdvertiserId = claimAdvertiserId;
+    return this;
+  }
+
+  /**
+   * Get claimAdvertiserId
+   *
+   * @return claimAdvertiserId
+   */
+  @ApiModelProperty(value = "")
+  public Long getClaimAdvertiserId() {
+    return claimAdvertiserId;
+  }
+
+  public void setClaimAdvertiserId(Long claimAdvertiserId) {
+    this.claimAdvertiserId = claimAdvertiserId;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -1525,7 +1547,8 @@ public class LeadCluesGetListStruct {
         && Objects.equals(this.isBroadCastLeads, leadCluesGetListStruct.isBroadCastLeads)
         && Objects.equals(this.ownerName, leadCluesGetListStruct.ownerName)
         && Objects.equals(this.ownerId, leadCluesGetListStruct.ownerId)
-        && Objects.equals(this.allFollowRecords, leadCluesGetListStruct.allFollowRecords);
+        && Objects.equals(this.allFollowRecords, leadCluesGetListStruct.allFollowRecords)
+        && Objects.equals(this.claimAdvertiserId, leadCluesGetListStruct.claimAdvertiserId);
   }
 
   @Override
@@ -1595,7 +1618,8 @@ public class LeadCluesGetListStruct {
         isBroadCastLeads,
         ownerName,
         ownerId,
-        allFollowRecords);
+        allFollowRecords,
+        claimAdvertiserId);
   }
 
   @Override
