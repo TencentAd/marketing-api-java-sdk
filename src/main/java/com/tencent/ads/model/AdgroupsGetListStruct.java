@@ -224,9 +224,6 @@ public class AdgroupsGetListStruct {
   @SerializedName("auto_derived_landing_page_switch")
   private Boolean autoDerivedLandingPageSwitch = null;
 
-  @SerializedName("search_expansion_switch")
-  private SearchExpansionSwitch searchExpansionSwitch = null;
-
   @SerializedName("search_expand_targeting_switch")
   private SearchExpandTargetingSwitch searchExpandTargetingSwitch = null;
 
@@ -1580,25 +1577,6 @@ public class AdgroupsGetListStruct {
     this.autoDerivedLandingPageSwitch = autoDerivedLandingPageSwitch;
   }
 
-  public AdgroupsGetListStruct searchExpansionSwitch(SearchExpansionSwitch searchExpansionSwitch) {
-    this.searchExpansionSwitch = searchExpansionSwitch;
-    return this;
-  }
-
-  /**
-   * Get searchExpansionSwitch
-   *
-   * @return searchExpansionSwitch
-   */
-  @ApiModelProperty(value = "")
-  public SearchExpansionSwitch getSearchExpansionSwitch() {
-    return searchExpansionSwitch;
-  }
-
-  public void setSearchExpansionSwitch(SearchExpansionSwitch searchExpansionSwitch) {
-    this.searchExpansionSwitch = searchExpansionSwitch;
-  }
-
   public AdgroupsGetListStruct searchExpandTargetingSwitch(
       SearchExpandTargetingSwitch searchExpandTargetingSwitch) {
     this.searchExpandTargetingSwitch = searchExpandTargetingSwitch;
@@ -1750,7 +1728,6 @@ public class AdgroupsGetListStruct {
             this.systemStatusExplanation, adgroupsGetListStruct.systemStatusExplanation)
         && Objects.equals(
             this.autoDerivedLandingPageSwitch, adgroupsGetListStruct.autoDerivedLandingPageSwitch)
-        && Objects.equals(this.searchExpansionSwitch, adgroupsGetListStruct.searchExpansionSwitch)
         && Objects.equals(
             this.searchExpandTargetingSwitch, adgroupsGetListStruct.searchExpandTargetingSwitch)
         && Objects.equals(this.autoAcquisitionStatus, adgroupsGetListStruct.autoAcquisitionStatus)
@@ -1827,7 +1804,6 @@ public class AdgroupsGetListStruct {
         dynamicCreativeIdSet,
         systemStatusExplanation,
         autoDerivedLandingPageSwitch,
-        searchExpansionSwitch,
         searchExpandTargetingSwitch,
         autoAcquisitionStatus,
         bidScene);

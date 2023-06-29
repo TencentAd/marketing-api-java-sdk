@@ -171,9 +171,6 @@ public class AdgroupsAddRequest {
   @SerializedName("auto_derived_landing_page_switch")
   private Boolean autoDerivedLandingPageSwitch = null;
 
-  @SerializedName("search_expansion_switch")
-  private SearchExpansionSwitch searchExpansionSwitch = null;
-
   @SerializedName("search_expand_targeting_switch")
   private SearchExpandTargetingSwitch searchExpandTargetingSwitch = null;
 
@@ -1202,25 +1199,6 @@ public class AdgroupsAddRequest {
     this.autoDerivedLandingPageSwitch = autoDerivedLandingPageSwitch;
   }
 
-  public AdgroupsAddRequest searchExpansionSwitch(SearchExpansionSwitch searchExpansionSwitch) {
-    this.searchExpansionSwitch = searchExpansionSwitch;
-    return this;
-  }
-
-  /**
-   * Get searchExpansionSwitch
-   *
-   * @return searchExpansionSwitch
-   */
-  @ApiModelProperty(value = "")
-  public SearchExpansionSwitch getSearchExpansionSwitch() {
-    return searchExpansionSwitch;
-  }
-
-  public void setSearchExpansionSwitch(SearchExpansionSwitch searchExpansionSwitch) {
-    this.searchExpansionSwitch = searchExpansionSwitch;
-  }
-
   public AdgroupsAddRequest searchExpandTargetingSwitch(
       SearchExpandTargetingSwitch searchExpandTargetingSwitch) {
     this.searchExpandTargetingSwitch = searchExpandTargetingSwitch;
@@ -1349,7 +1327,6 @@ public class AdgroupsAddRequest {
         && Objects.equals(this.dynamicCreativeIdSet, adgroupsAddRequest.dynamicCreativeIdSet)
         && Objects.equals(
             this.autoDerivedLandingPageSwitch, adgroupsAddRequest.autoDerivedLandingPageSwitch)
-        && Objects.equals(this.searchExpansionSwitch, adgroupsAddRequest.searchExpansionSwitch)
         && Objects.equals(
             this.searchExpandTargetingSwitch, adgroupsAddRequest.searchExpandTargetingSwitch)
         && Objects.equals(this.bidScene, adgroupsAddRequest.bidScene)
@@ -1409,7 +1386,6 @@ public class AdgroupsAddRequest {
         smartTargeting,
         dynamicCreativeIdSet,
         autoDerivedLandingPageSwitch,
-        searchExpansionSwitch,
         searchExpandTargetingSwitch,
         bidScene,
         accountId);
