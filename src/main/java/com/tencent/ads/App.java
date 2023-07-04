@@ -83,9 +83,6 @@ public class App {
   @Inject DailyBalanceReportApiContainer dailyBalanceReportApiContainer;
   @Inject DailyReportsApiContainer dailyReportsApiContainer;
   @Inject DataNexusFileApiContainer dataNexusFileApiContainer;
-  @Inject DataSetApiContainer dataSetApiContainer;
-  @Inject DataSourceApiContainer dataSourceApiContainer;
-  @Inject DataSourceDispatchApiContainer dataSourceDispatchApiContainer;
   @Inject DiagnosisApiContainer diagnosisApiContainer;
   @Inject DplabelAdLabelApiContainer dplabelAdLabelApiContainer;
   @Inject DynamicAdImageTemplatesApiContainer dynamicAdImageTemplatesApiContainer;
@@ -473,18 +470,6 @@ public class App {
 
   public DataNexusFileApiContainer dataNexusFile() {
     return dataNexusFileApiContainer;
-  }
-
-  public DataSetApiContainer dataSet() {
-    return dataSetApiContainer;
-  }
-
-  public DataSourceApiContainer dataSource() {
-    return dataSourceApiContainer;
-  }
-
-  public DataSourceDispatchApiContainer dataSourceDispatch() {
-    return dataSourceDispatchApiContainer;
   }
 
   public DiagnosisApiContainer diagnosis() {

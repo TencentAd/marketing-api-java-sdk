@@ -40,7 +40,7 @@ public class CustomTagFile {
   private String openAppId = null;
 
   @SerializedName("process_status")
-  private FileProcessStatus processStatus = null;
+  private Long processStatus = null;
 
   @SerializedName("process_code")
   private Long processCode = null;
@@ -174,7 +174,7 @@ public class CustomTagFile {
     this.openAppId = openAppId;
   }
 
-  public CustomTagFile processStatus(FileProcessStatus processStatus) {
+  public CustomTagFile processStatus(Long processStatus) {
     this.processStatus = processStatus;
     return this;
   }
@@ -185,11 +185,11 @@ public class CustomTagFile {
    * @return processStatus
    */
   @ApiModelProperty(value = "")
-  public FileProcessStatus getProcessStatus() {
+  public Long getProcessStatus() {
     return processStatus;
   }
 
-  public void setProcessStatus(FileProcessStatus processStatus) {
+  public void setProcessStatus(Long processStatus) {
     this.processStatus = processStatus;
   }
 

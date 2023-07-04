@@ -19,7 +19,7 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-/** 数据源类型标识，枚举列表：{ WEB, ANDROID, IOS, OFFLINE, WECHAT, WECHAT_MINI_PROGRAM, WECHAT_MINI_GAME } */
+/** 用户行为源类型 */
 @JsonAdapter(DataSourceType.Adapter.class)
 public enum DataSourceType {
   DATA_SOURCE_TYPE_FILE("DATA_SOURCE_TYPE_FILE"),

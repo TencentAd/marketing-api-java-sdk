@@ -17,7 +17,7 @@ public class AddUserActionSets {
   public Long accountId = null;
   public UserActionSetsAddRequest data = new UserActionSetsAddRequest();
   public String name = "SDK数据源5ede252f5d953";
-  public AmUserActionSetType type = AmUserActionSetType.WEB;
+  public DataSourceType type = DataSourceType.WEB;
 
   public void init() {
     this.tencentAds = TencentAds.getInstance();

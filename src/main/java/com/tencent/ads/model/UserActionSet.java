@@ -27,7 +27,7 @@ public class UserActionSet {
   private Long userActionSetId = null;
 
   @SerializedName("type")
-  private AmUserActionSetType type = null;
+  private DataSourceType type = null;
 
   @SerializedName("mobile_app_id")
   private Long mobileAppId = null;
@@ -75,7 +75,7 @@ public class UserActionSet {
     this.userActionSetId = userActionSetId;
   }
 
-  public UserActionSet type(AmUserActionSetType type) {
+  public UserActionSet type(DataSourceType type) {
     this.type = type;
     return this;
   }
@@ -86,11 +86,11 @@ public class UserActionSet {
    * @return type
    */
   @ApiModelProperty(value = "")
-  public AmUserActionSetType getType() {
+  public DataSourceType getType() {
     return type;
   }
 
-  public void setType(AmUserActionSetType type) {
+  public void setType(DataSourceType type) {
     this.type = type;
   }
 
