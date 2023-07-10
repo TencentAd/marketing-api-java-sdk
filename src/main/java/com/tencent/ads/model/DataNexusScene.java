@@ -19,22 +19,20 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-/** 浮层卡片类型 */
-@JsonAdapter(FloatingZoneType.Adapter.class)
-public enum FloatingZoneType {
-  UNKNOWN("FLOATING_ZONE_TYPE_UNKNOWN"),
+/** 应用场景 */
+@JsonAdapter(DataNexusScene.Adapter.class)
+public enum DataNexusScene {
+  DMP("DMP"),
 
-  IMAGE_TEXT("FLOATING_ZONE_TYPE_IMAGE_TEXT"),
+  TRANSFORMATION_ATTRIBUTION("TRANSFORMATION_ATTRIBUTION"),
 
-  SINGLE_IMAGE("FLOATING_ZONE_TYPE_SINGLE_IMAGE"),
+  PKAM("PKAM"),
 
-  MULTI_BUTTON("FLOATING_ZONE_TYPE_MULTI_BUTTON"),
-
-  SLIDER_CARD("FLOATING_ZONE_TYPE_SLIDER_CARD");
+  DPA("DPA");
 
   private String value;
 
-  FloatingZoneType(String value) {
+  DataNexusScene(String value) {
     this.value = value;
   }
 
@@ -47,8 +45,8 @@ public enum FloatingZoneType {
     return String.valueOf(value);
   }
 
-  public static FloatingZoneType fromValue(String text) {
-    for (FloatingZoneType b : FloatingZoneType.values()) {
+  public static DataNexusScene fromValue(String text) {
+    for (DataNexusScene b : DataNexusScene.values()) {
       if (String.valueOf(b.value).equals(text)) {
         return b;
       }
@@ -56,17 +54,17 @@ public enum FloatingZoneType {
     return null;
   }
 
-  public static class Adapter extends TypeAdapter<FloatingZoneType> {
+  public static class Adapter extends TypeAdapter<DataNexusScene> {
     @Override
-    public void write(final JsonWriter jsonWriter, final FloatingZoneType enumeration)
+    public void write(final JsonWriter jsonWriter, final DataNexusScene enumeration)
         throws IOException {
       jsonWriter.value(enumeration.getValue());
     }
 
     @Override
-    public FloatingZoneType read(final JsonReader jsonReader) throws IOException {
+    public DataNexusScene read(final JsonReader jsonReader) throws IOException {
       String value = jsonReader.nextString();
-      return FloatingZoneType.fromValue(String.valueOf(value));
+      return DataNexusScene.fromValue(String.valueOf(value));
     }
   }
 }

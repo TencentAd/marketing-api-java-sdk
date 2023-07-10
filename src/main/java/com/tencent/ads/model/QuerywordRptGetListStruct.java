@@ -114,6 +114,18 @@ public class QuerywordRptGetListStruct {
   @SerializedName("match_type_name")
   private String matchTypeName = null;
 
+  @SerializedName("queryword_status")
+  private Long querywordStatus = null;
+
+  @SerializedName("queryword_status_cn")
+  private String querywordStatusCn = null;
+
+  @SerializedName("bid_amount")
+  private Long bidAmount = null;
+
+  @SerializedName("bid_mode")
+  private String bidMode = null;
+
   public QuerywordRptGetListStruct bidwordId(Long bidwordId) {
     this.bidwordId = bidwordId;
     return this;
@@ -703,6 +715,82 @@ public class QuerywordRptGetListStruct {
     this.matchTypeName = matchTypeName;
   }
 
+  public QuerywordRptGetListStruct querywordStatus(Long querywordStatus) {
+    this.querywordStatus = querywordStatus;
+    return this;
+  }
+
+  /**
+   * Get querywordStatus
+   *
+   * @return querywordStatus
+   */
+  @ApiModelProperty(value = "")
+  public Long getQuerywordStatus() {
+    return querywordStatus;
+  }
+
+  public void setQuerywordStatus(Long querywordStatus) {
+    this.querywordStatus = querywordStatus;
+  }
+
+  public QuerywordRptGetListStruct querywordStatusCn(String querywordStatusCn) {
+    this.querywordStatusCn = querywordStatusCn;
+    return this;
+  }
+
+  /**
+   * Get querywordStatusCn
+   *
+   * @return querywordStatusCn
+   */
+  @ApiModelProperty(value = "")
+  public String getQuerywordStatusCn() {
+    return querywordStatusCn;
+  }
+
+  public void setQuerywordStatusCn(String querywordStatusCn) {
+    this.querywordStatusCn = querywordStatusCn;
+  }
+
+  public QuerywordRptGetListStruct bidAmount(Long bidAmount) {
+    this.bidAmount = bidAmount;
+    return this;
+  }
+
+  /**
+   * Get bidAmount
+   *
+   * @return bidAmount
+   */
+  @ApiModelProperty(value = "")
+  public Long getBidAmount() {
+    return bidAmount;
+  }
+
+  public void setBidAmount(Long bidAmount) {
+    this.bidAmount = bidAmount;
+  }
+
+  public QuerywordRptGetListStruct bidMode(String bidMode) {
+    this.bidMode = bidMode;
+    return this;
+  }
+
+  /**
+   * Get bidMode
+   *
+   * @return bidMode
+   */
+  @ApiModelProperty(value = "")
+  public String getBidMode() {
+    return bidMode;
+  }
+
+  public void setBidMode(String bidMode) {
+    this.bidMode = bidMode;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -748,7 +836,11 @@ public class QuerywordRptGetListStruct {
         && Objects.equals(this.placementGroupId, querywordRptGetListStruct.placementGroupId)
         && Objects.equals(this.placementGroupName, querywordRptGetListStruct.placementGroupName)
         && Objects.equals(this.matchType, querywordRptGetListStruct.matchType)
-        && Objects.equals(this.matchTypeName, querywordRptGetListStruct.matchTypeName);
+        && Objects.equals(this.matchTypeName, querywordRptGetListStruct.matchTypeName)
+        && Objects.equals(this.querywordStatus, querywordRptGetListStruct.querywordStatus)
+        && Objects.equals(this.querywordStatusCn, querywordRptGetListStruct.querywordStatusCn)
+        && Objects.equals(this.bidAmount, querywordRptGetListStruct.bidAmount)
+        && Objects.equals(this.bidMode, querywordRptGetListStruct.bidMode);
   }
 
   @Override
@@ -784,7 +876,11 @@ public class QuerywordRptGetListStruct {
         placementGroupId,
         placementGroupName,
         matchType,
-        matchTypeName);
+        matchTypeName,
+        querywordStatus,
+        querywordStatusCn,
+        bidAmount,
+        bidMode);
   }
 
   @Override

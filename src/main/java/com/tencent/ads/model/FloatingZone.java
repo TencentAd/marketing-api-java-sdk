@@ -16,6 +16,8 @@ import com.google.gson.Gson;
 import com.google.gson.annotations.SerializedName;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Objects;
 
 /** 浮层卡片创意内容 */
@@ -41,6 +43,12 @@ public class FloatingZone {
 
   @SerializedName("floating_zone_single_image_id")
   private String floatingZoneSingleImageId = null;
+
+  @SerializedName("floating_zone_bgcolor")
+  private String floatingZoneBgcolor = null;
+
+  @SerializedName("floating_zone_jump_info")
+  private List<LandingPageStructure> floatingZoneJumpInfo = null;
 
   public FloatingZone floatingZoneSwitch(Boolean floatingZoneSwitch) {
     this.floatingZoneSwitch = floatingZoneSwitch;
@@ -175,6 +183,52 @@ public class FloatingZone {
     this.floatingZoneSingleImageId = floatingZoneSingleImageId;
   }
 
+  public FloatingZone floatingZoneBgcolor(String floatingZoneBgcolor) {
+    this.floatingZoneBgcolor = floatingZoneBgcolor;
+    return this;
+  }
+
+  /**
+   * Get floatingZoneBgcolor
+   *
+   * @return floatingZoneBgcolor
+   */
+  @ApiModelProperty(value = "")
+  public String getFloatingZoneBgcolor() {
+    return floatingZoneBgcolor;
+  }
+
+  public void setFloatingZoneBgcolor(String floatingZoneBgcolor) {
+    this.floatingZoneBgcolor = floatingZoneBgcolor;
+  }
+
+  public FloatingZone floatingZoneJumpInfo(List<LandingPageStructure> floatingZoneJumpInfo) {
+    this.floatingZoneJumpInfo = floatingZoneJumpInfo;
+    return this;
+  }
+
+  public FloatingZone addFloatingZoneJumpInfoItem(LandingPageStructure floatingZoneJumpInfoItem) {
+    if (this.floatingZoneJumpInfo == null) {
+      this.floatingZoneJumpInfo = new ArrayList<LandingPageStructure>();
+    }
+    this.floatingZoneJumpInfo.add(floatingZoneJumpInfoItem);
+    return this;
+  }
+
+  /**
+   * Get floatingZoneJumpInfo
+   *
+   * @return floatingZoneJumpInfo
+   */
+  @ApiModelProperty(value = "")
+  public List<LandingPageStructure> getFloatingZoneJumpInfo() {
+    return floatingZoneJumpInfo;
+  }
+
+  public void setFloatingZoneJumpInfo(List<LandingPageStructure> floatingZoneJumpInfo) {
+    this.floatingZoneJumpInfo = floatingZoneJumpInfo;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -190,7 +244,9 @@ public class FloatingZone {
         && Objects.equals(this.floatingZoneDesc, floatingZone.floatingZoneDesc)
         && Objects.equals(this.floatingZoneButtonText, floatingZone.floatingZoneButtonText)
         && Objects.equals(this.floatingZoneType, floatingZone.floatingZoneType)
-        && Objects.equals(this.floatingZoneSingleImageId, floatingZone.floatingZoneSingleImageId);
+        && Objects.equals(this.floatingZoneSingleImageId, floatingZone.floatingZoneSingleImageId)
+        && Objects.equals(this.floatingZoneBgcolor, floatingZone.floatingZoneBgcolor)
+        && Objects.equals(this.floatingZoneJumpInfo, floatingZone.floatingZoneJumpInfo);
   }
 
   @Override
@@ -202,7 +258,9 @@ public class FloatingZone {
         floatingZoneDesc,
         floatingZoneButtonText,
         floatingZoneType,
-        floatingZoneSingleImageId);
+        floatingZoneSingleImageId,
+        floatingZoneBgcolor,
+        floatingZoneJumpInfo);
   }
 
   @Override

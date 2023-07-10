@@ -1668,6 +1668,30 @@ public class DailyReportsGetListStruct {
   @SerializedName("app_retention_lt7_cost")
   private Long appRetentionLt7Cost = null;
 
+  @SerializedName("clk_break_pv")
+  private Long clkBreakPv = null;
+
+  @SerializedName("clk_account_living_status_pv")
+  private Long clkAccountLivingStatusPv = null;
+
+  @SerializedName("wecom_add_personal_dedup_pv")
+  private Long wecomAddPersonalDedupPv = null;
+
+  @SerializedName("wecom_add_personal_dedup_pv_cost")
+  private Long wecomAddPersonalDedupPvCost = null;
+
+  @SerializedName("after_add_wecom_consult_dedup_pv")
+  private Long afterAddWecomConsultDedupPv = null;
+
+  @SerializedName("after_add_wecom_consult_dedup_pv_cost")
+  private Long afterAddWecomConsultDedupPvCost = null;
+
+  @SerializedName("after_add_wecom_intention_dedup_pv")
+  private Long afterAddWecomIntentionDedupPv = null;
+
+  @SerializedName("after_add_wecom_intention_dedup_pv_cost")
+  private Long afterAddWecomIntentionDedupPvCost = null;
+
   @SerializedName("request_conversions_count")
   private Long requestConversionsCount = null;
 
@@ -12818,6 +12842,161 @@ public class DailyReportsGetListStruct {
     this.appRetentionLt7Cost = appRetentionLt7Cost;
   }
 
+  public DailyReportsGetListStruct clkBreakPv(Long clkBreakPv) {
+    this.clkBreakPv = clkBreakPv;
+    return this;
+  }
+
+  /**
+   * Get clkBreakPv
+   *
+   * @return clkBreakPv
+   */
+  @ApiModelProperty(value = "")
+  public Long getClkBreakPv() {
+    return clkBreakPv;
+  }
+
+  public void setClkBreakPv(Long clkBreakPv) {
+    this.clkBreakPv = clkBreakPv;
+  }
+
+  public DailyReportsGetListStruct clkAccountLivingStatusPv(Long clkAccountLivingStatusPv) {
+    this.clkAccountLivingStatusPv = clkAccountLivingStatusPv;
+    return this;
+  }
+
+  /**
+   * Get clkAccountLivingStatusPv
+   *
+   * @return clkAccountLivingStatusPv
+   */
+  @ApiModelProperty(value = "")
+  public Long getClkAccountLivingStatusPv() {
+    return clkAccountLivingStatusPv;
+  }
+
+  public void setClkAccountLivingStatusPv(Long clkAccountLivingStatusPv) {
+    this.clkAccountLivingStatusPv = clkAccountLivingStatusPv;
+  }
+
+  public DailyReportsGetListStruct wecomAddPersonalDedupPv(Long wecomAddPersonalDedupPv) {
+    this.wecomAddPersonalDedupPv = wecomAddPersonalDedupPv;
+    return this;
+  }
+
+  /**
+   * Get wecomAddPersonalDedupPv
+   *
+   * @return wecomAddPersonalDedupPv
+   */
+  @ApiModelProperty(value = "")
+  public Long getWecomAddPersonalDedupPv() {
+    return wecomAddPersonalDedupPv;
+  }
+
+  public void setWecomAddPersonalDedupPv(Long wecomAddPersonalDedupPv) {
+    this.wecomAddPersonalDedupPv = wecomAddPersonalDedupPv;
+  }
+
+  public DailyReportsGetListStruct wecomAddPersonalDedupPvCost(Long wecomAddPersonalDedupPvCost) {
+    this.wecomAddPersonalDedupPvCost = wecomAddPersonalDedupPvCost;
+    return this;
+  }
+
+  /**
+   * Get wecomAddPersonalDedupPvCost
+   *
+   * @return wecomAddPersonalDedupPvCost
+   */
+  @ApiModelProperty(value = "")
+  public Long getWecomAddPersonalDedupPvCost() {
+    return wecomAddPersonalDedupPvCost;
+  }
+
+  public void setWecomAddPersonalDedupPvCost(Long wecomAddPersonalDedupPvCost) {
+    this.wecomAddPersonalDedupPvCost = wecomAddPersonalDedupPvCost;
+  }
+
+  public DailyReportsGetListStruct afterAddWecomConsultDedupPv(Long afterAddWecomConsultDedupPv) {
+    this.afterAddWecomConsultDedupPv = afterAddWecomConsultDedupPv;
+    return this;
+  }
+
+  /**
+   * Get afterAddWecomConsultDedupPv
+   *
+   * @return afterAddWecomConsultDedupPv
+   */
+  @ApiModelProperty(value = "")
+  public Long getAfterAddWecomConsultDedupPv() {
+    return afterAddWecomConsultDedupPv;
+  }
+
+  public void setAfterAddWecomConsultDedupPv(Long afterAddWecomConsultDedupPv) {
+    this.afterAddWecomConsultDedupPv = afterAddWecomConsultDedupPv;
+  }
+
+  public DailyReportsGetListStruct afterAddWecomConsultDedupPvCost(
+      Long afterAddWecomConsultDedupPvCost) {
+    this.afterAddWecomConsultDedupPvCost = afterAddWecomConsultDedupPvCost;
+    return this;
+  }
+
+  /**
+   * Get afterAddWecomConsultDedupPvCost
+   *
+   * @return afterAddWecomConsultDedupPvCost
+   */
+  @ApiModelProperty(value = "")
+  public Long getAfterAddWecomConsultDedupPvCost() {
+    return afterAddWecomConsultDedupPvCost;
+  }
+
+  public void setAfterAddWecomConsultDedupPvCost(Long afterAddWecomConsultDedupPvCost) {
+    this.afterAddWecomConsultDedupPvCost = afterAddWecomConsultDedupPvCost;
+  }
+
+  public DailyReportsGetListStruct afterAddWecomIntentionDedupPv(
+      Long afterAddWecomIntentionDedupPv) {
+    this.afterAddWecomIntentionDedupPv = afterAddWecomIntentionDedupPv;
+    return this;
+  }
+
+  /**
+   * Get afterAddWecomIntentionDedupPv
+   *
+   * @return afterAddWecomIntentionDedupPv
+   */
+  @ApiModelProperty(value = "")
+  public Long getAfterAddWecomIntentionDedupPv() {
+    return afterAddWecomIntentionDedupPv;
+  }
+
+  public void setAfterAddWecomIntentionDedupPv(Long afterAddWecomIntentionDedupPv) {
+    this.afterAddWecomIntentionDedupPv = afterAddWecomIntentionDedupPv;
+  }
+
+  public DailyReportsGetListStruct afterAddWecomIntentionDedupPvCost(
+      Long afterAddWecomIntentionDedupPvCost) {
+    this.afterAddWecomIntentionDedupPvCost = afterAddWecomIntentionDedupPvCost;
+    return this;
+  }
+
+  /**
+   * Get afterAddWecomIntentionDedupPvCost
+   *
+   * @return afterAddWecomIntentionDedupPvCost
+   */
+  @ApiModelProperty(value = "")
+  public Long getAfterAddWecomIntentionDedupPvCost() {
+    return afterAddWecomIntentionDedupPvCost;
+  }
+
+  public void setAfterAddWecomIntentionDedupPvCost(Long afterAddWecomIntentionDedupPvCost) {
+    this.afterAddWecomIntentionDedupPvCost = afterAddWecomIntentionDedupPvCost;
+  }
+
   public DailyReportsGetListStruct requestConversionsCount(Long requestConversionsCount) {
     this.requestConversionsCount = requestConversionsCount;
     return this;
@@ -18040,6 +18219,24 @@ public class DailyReportsGetListStruct {
         && Objects.equals(this.videoOuterPlay3sRate, dailyReportsGetListStruct.videoOuterPlay3sRate)
         && Objects.equals(this.appRetentionLt7, dailyReportsGetListStruct.appRetentionLt7)
         && Objects.equals(this.appRetentionLt7Cost, dailyReportsGetListStruct.appRetentionLt7Cost)
+        && Objects.equals(this.clkBreakPv, dailyReportsGetListStruct.clkBreakPv)
+        && Objects.equals(
+            this.clkAccountLivingStatusPv, dailyReportsGetListStruct.clkAccountLivingStatusPv)
+        && Objects.equals(
+            this.wecomAddPersonalDedupPv, dailyReportsGetListStruct.wecomAddPersonalDedupPv)
+        && Objects.equals(
+            this.wecomAddPersonalDedupPvCost, dailyReportsGetListStruct.wecomAddPersonalDedupPvCost)
+        && Objects.equals(
+            this.afterAddWecomConsultDedupPv, dailyReportsGetListStruct.afterAddWecomConsultDedupPv)
+        && Objects.equals(
+            this.afterAddWecomConsultDedupPvCost,
+            dailyReportsGetListStruct.afterAddWecomConsultDedupPvCost)
+        && Objects.equals(
+            this.afterAddWecomIntentionDedupPv,
+            dailyReportsGetListStruct.afterAddWecomIntentionDedupPv)
+        && Objects.equals(
+            this.afterAddWecomIntentionDedupPvCost,
+            dailyReportsGetListStruct.afterAddWecomIntentionDedupPvCost)
         && Objects.equals(
             this.requestConversionsCount, dailyReportsGetListStruct.requestConversionsCount)
         && Objects.equals(
@@ -18965,6 +19162,14 @@ public class DailyReportsGetListStruct {
         videoOuterPlay3sRate,
         appRetentionLt7,
         appRetentionLt7Cost,
+        clkBreakPv,
+        clkAccountLivingStatusPv,
+        wecomAddPersonalDedupPv,
+        wecomAddPersonalDedupPvCost,
+        afterAddWecomConsultDedupPv,
+        afterAddWecomConsultDedupPvCost,
+        afterAddWecomIntentionDedupPv,
+        afterAddWecomIntentionDedupPvCost,
         requestConversionsCount,
         requestConversionsCost,
         incomeVal1,

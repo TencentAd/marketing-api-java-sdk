@@ -19,7 +19,7 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-/** 是否开启自动分发，如打开开关，文件上传后会自动分发给所选应用场景 */
+/** 批量分发开关标识，SWITCH_ON开启，SWITCH_OFF关闭 */
 @JsonAdapter(FileDispatchSwitch.Adapter.class)
 public enum FileDispatchSwitch {
   ON("SWITCH_ON"),

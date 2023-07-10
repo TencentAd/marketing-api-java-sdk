@@ -1566,6 +1566,27 @@ public class TargetingTagReportsGetListStruct {
   @SerializedName("app_retention_lt7_cost")
   private Long appRetentionLt7Cost = null;
 
+  @SerializedName("clk_account_living_status_pv")
+  private Long clkAccountLivingStatusPv = null;
+
+  @SerializedName("wecom_add_personal_dedup_pv")
+  private Long wecomAddPersonalDedupPv = null;
+
+  @SerializedName("wecom_add_personal_dedup_pv_cost")
+  private Long wecomAddPersonalDedupPvCost = null;
+
+  @SerializedName("after_add_wecom_consult_dedup_pv")
+  private Long afterAddWecomConsultDedupPv = null;
+
+  @SerializedName("after_add_wecom_consult_dedup_pv_cost")
+  private Long afterAddWecomConsultDedupPvCost = null;
+
+  @SerializedName("after_add_wecom_intention_dedup_pv")
+  private Long afterAddWecomIntentionDedupPv = null;
+
+  @SerializedName("after_add_wecom_intention_dedup_pv_cost")
+  private Long afterAddWecomIntentionDedupPvCost = null;
+
   @SerializedName("age")
   private String age = null;
 
@@ -11864,6 +11885,144 @@ public class TargetingTagReportsGetListStruct {
     this.appRetentionLt7Cost = appRetentionLt7Cost;
   }
 
+  public TargetingTagReportsGetListStruct clkAccountLivingStatusPv(Long clkAccountLivingStatusPv) {
+    this.clkAccountLivingStatusPv = clkAccountLivingStatusPv;
+    return this;
+  }
+
+  /**
+   * Get clkAccountLivingStatusPv
+   *
+   * @return clkAccountLivingStatusPv
+   */
+  @ApiModelProperty(value = "")
+  public Long getClkAccountLivingStatusPv() {
+    return clkAccountLivingStatusPv;
+  }
+
+  public void setClkAccountLivingStatusPv(Long clkAccountLivingStatusPv) {
+    this.clkAccountLivingStatusPv = clkAccountLivingStatusPv;
+  }
+
+  public TargetingTagReportsGetListStruct wecomAddPersonalDedupPv(Long wecomAddPersonalDedupPv) {
+    this.wecomAddPersonalDedupPv = wecomAddPersonalDedupPv;
+    return this;
+  }
+
+  /**
+   * Get wecomAddPersonalDedupPv
+   *
+   * @return wecomAddPersonalDedupPv
+   */
+  @ApiModelProperty(value = "")
+  public Long getWecomAddPersonalDedupPv() {
+    return wecomAddPersonalDedupPv;
+  }
+
+  public void setWecomAddPersonalDedupPv(Long wecomAddPersonalDedupPv) {
+    this.wecomAddPersonalDedupPv = wecomAddPersonalDedupPv;
+  }
+
+  public TargetingTagReportsGetListStruct wecomAddPersonalDedupPvCost(
+      Long wecomAddPersonalDedupPvCost) {
+    this.wecomAddPersonalDedupPvCost = wecomAddPersonalDedupPvCost;
+    return this;
+  }
+
+  /**
+   * Get wecomAddPersonalDedupPvCost
+   *
+   * @return wecomAddPersonalDedupPvCost
+   */
+  @ApiModelProperty(value = "")
+  public Long getWecomAddPersonalDedupPvCost() {
+    return wecomAddPersonalDedupPvCost;
+  }
+
+  public void setWecomAddPersonalDedupPvCost(Long wecomAddPersonalDedupPvCost) {
+    this.wecomAddPersonalDedupPvCost = wecomAddPersonalDedupPvCost;
+  }
+
+  public TargetingTagReportsGetListStruct afterAddWecomConsultDedupPv(
+      Long afterAddWecomConsultDedupPv) {
+    this.afterAddWecomConsultDedupPv = afterAddWecomConsultDedupPv;
+    return this;
+  }
+
+  /**
+   * Get afterAddWecomConsultDedupPv
+   *
+   * @return afterAddWecomConsultDedupPv
+   */
+  @ApiModelProperty(value = "")
+  public Long getAfterAddWecomConsultDedupPv() {
+    return afterAddWecomConsultDedupPv;
+  }
+
+  public void setAfterAddWecomConsultDedupPv(Long afterAddWecomConsultDedupPv) {
+    this.afterAddWecomConsultDedupPv = afterAddWecomConsultDedupPv;
+  }
+
+  public TargetingTagReportsGetListStruct afterAddWecomConsultDedupPvCost(
+      Long afterAddWecomConsultDedupPvCost) {
+    this.afterAddWecomConsultDedupPvCost = afterAddWecomConsultDedupPvCost;
+    return this;
+  }
+
+  /**
+   * Get afterAddWecomConsultDedupPvCost
+   *
+   * @return afterAddWecomConsultDedupPvCost
+   */
+  @ApiModelProperty(value = "")
+  public Long getAfterAddWecomConsultDedupPvCost() {
+    return afterAddWecomConsultDedupPvCost;
+  }
+
+  public void setAfterAddWecomConsultDedupPvCost(Long afterAddWecomConsultDedupPvCost) {
+    this.afterAddWecomConsultDedupPvCost = afterAddWecomConsultDedupPvCost;
+  }
+
+  public TargetingTagReportsGetListStruct afterAddWecomIntentionDedupPv(
+      Long afterAddWecomIntentionDedupPv) {
+    this.afterAddWecomIntentionDedupPv = afterAddWecomIntentionDedupPv;
+    return this;
+  }
+
+  /**
+   * Get afterAddWecomIntentionDedupPv
+   *
+   * @return afterAddWecomIntentionDedupPv
+   */
+  @ApiModelProperty(value = "")
+  public Long getAfterAddWecomIntentionDedupPv() {
+    return afterAddWecomIntentionDedupPv;
+  }
+
+  public void setAfterAddWecomIntentionDedupPv(Long afterAddWecomIntentionDedupPv) {
+    this.afterAddWecomIntentionDedupPv = afterAddWecomIntentionDedupPv;
+  }
+
+  public TargetingTagReportsGetListStruct afterAddWecomIntentionDedupPvCost(
+      Long afterAddWecomIntentionDedupPvCost) {
+    this.afterAddWecomIntentionDedupPvCost = afterAddWecomIntentionDedupPvCost;
+    return this;
+  }
+
+  /**
+   * Get afterAddWecomIntentionDedupPvCost
+   *
+   * @return afterAddWecomIntentionDedupPvCost
+   */
+  @ApiModelProperty(value = "")
+  public Long getAfterAddWecomIntentionDedupPvCost() {
+    return afterAddWecomIntentionDedupPvCost;
+  }
+
+  public void setAfterAddWecomIntentionDedupPvCost(Long afterAddWecomIntentionDedupPvCost) {
+    this.afterAddWecomIntentionDedupPvCost = afterAddWecomIntentionDedupPvCost;
+  }
+
   public TargetingTagReportsGetListStruct age(String age) {
     this.age = age;
     return this;
@@ -15663,6 +15822,26 @@ public class TargetingTagReportsGetListStruct {
         && Objects.equals(this.appRetentionLt7, targetingTagReportsGetListStruct.appRetentionLt7)
         && Objects.equals(
             this.appRetentionLt7Cost, targetingTagReportsGetListStruct.appRetentionLt7Cost)
+        && Objects.equals(
+            this.clkAccountLivingStatusPv,
+            targetingTagReportsGetListStruct.clkAccountLivingStatusPv)
+        && Objects.equals(
+            this.wecomAddPersonalDedupPv, targetingTagReportsGetListStruct.wecomAddPersonalDedupPv)
+        && Objects.equals(
+            this.wecomAddPersonalDedupPvCost,
+            targetingTagReportsGetListStruct.wecomAddPersonalDedupPvCost)
+        && Objects.equals(
+            this.afterAddWecomConsultDedupPv,
+            targetingTagReportsGetListStruct.afterAddWecomConsultDedupPv)
+        && Objects.equals(
+            this.afterAddWecomConsultDedupPvCost,
+            targetingTagReportsGetListStruct.afterAddWecomConsultDedupPvCost)
+        && Objects.equals(
+            this.afterAddWecomIntentionDedupPv,
+            targetingTagReportsGetListStruct.afterAddWecomIntentionDedupPv)
+        && Objects.equals(
+            this.afterAddWecomIntentionDedupPvCost,
+            targetingTagReportsGetListStruct.afterAddWecomIntentionDedupPvCost)
         && Objects.equals(this.age, targetingTagReportsGetListStruct.age)
         && Objects.equals(this.regionId, targetingTagReportsGetListStruct.regionId)
         && Objects.equals(this.cityId, targetingTagReportsGetListStruct.cityId)
@@ -16465,6 +16644,13 @@ public class TargetingTagReportsGetListStruct {
         videoOuterPlay3sRate,
         appRetentionLt7,
         appRetentionLt7Cost,
+        clkAccountLivingStatusPv,
+        wecomAddPersonalDedupPv,
+        wecomAddPersonalDedupPvCost,
+        afterAddWecomConsultDedupPv,
+        afterAddWecomConsultDedupPvCost,
+        afterAddWecomIntentionDedupPv,
+        afterAddWecomIntentionDedupPvCost,
         age,
         regionId,
         cityId,
