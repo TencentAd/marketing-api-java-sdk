@@ -60,6 +60,12 @@ public class PagesGetListStruct {
   @SerializedName("quote_creative_material")
   private Boolean quoteCreativeMaterial = null;
 
+  @SerializedName("disable_code")
+  private Long disableCode = null;
+
+  @SerializedName("disable_message")
+  private String disableMessage = null;
+
   public PagesGetListStruct pageId(Long pageId) {
     this.pageId = pageId;
     return this;
@@ -307,6 +313,44 @@ public class PagesGetListStruct {
     this.quoteCreativeMaterial = quoteCreativeMaterial;
   }
 
+  public PagesGetListStruct disableCode(Long disableCode) {
+    this.disableCode = disableCode;
+    return this;
+  }
+
+  /**
+   * Get disableCode
+   *
+   * @return disableCode
+   */
+  @ApiModelProperty(value = "")
+  public Long getDisableCode() {
+    return disableCode;
+  }
+
+  public void setDisableCode(Long disableCode) {
+    this.disableCode = disableCode;
+  }
+
+  public PagesGetListStruct disableMessage(String disableMessage) {
+    this.disableMessage = disableMessage;
+    return this;
+  }
+
+  /**
+   * Get disableMessage
+   *
+   * @return disableMessage
+   */
+  @ApiModelProperty(value = "")
+  public String getDisableMessage() {
+    return disableMessage;
+  }
+
+  public void setDisableMessage(String disableMessage) {
+    this.disableMessage = disableMessage;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -328,7 +372,9 @@ public class PagesGetListStruct {
         && Objects.equals(this.pageStatus, pagesGetListStruct.pageStatus)
         && Objects.equals(this.fengyeSubType, pagesGetListStruct.fengyeSubType)
         && Objects.equals(this.ownerUid, pagesGetListStruct.ownerUid)
-        && Objects.equals(this.quoteCreativeMaterial, pagesGetListStruct.quoteCreativeMaterial);
+        && Objects.equals(this.quoteCreativeMaterial, pagesGetListStruct.quoteCreativeMaterial)
+        && Objects.equals(this.disableCode, pagesGetListStruct.disableCode)
+        && Objects.equals(this.disableMessage, pagesGetListStruct.disableMessage);
   }
 
   @Override
@@ -346,7 +392,9 @@ public class PagesGetListStruct {
         pageStatus,
         fengyeSubType,
         ownerUid,
-        quoteCreativeMaterial);
+        quoteCreativeMaterial,
+        disableCode,
+        disableMessage);
   }
 
   @Override
