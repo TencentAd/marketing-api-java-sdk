@@ -22,27 +22,15 @@ import java.io.IOException;
 /** 号码包用户ID类型 */
 @JsonAdapter(UserIdType.Adapter.class)
 public enum UserIdType {
-  GDT_OPENID("GDT_OPENID"),
-
   HASH_IDFA("HASH_IDFA"),
 
   HASH_IMEI("HASH_IMEI"),
 
-  HASH_MAC("HASH_MAC"),
-
   HASH_MOBILE_PHONE("HASH_MOBILE_PHONE"),
-
-  HASH_QQ("HASH_QQ"),
 
   IDFA("IDFA"),
 
   IMEI("IMEI"),
-
-  MAC("MAC"),
-
-  MOBILE_QQ_OPENID("MOBILE_QQ_OPENID"),
-
-  QQ("QQ"),
 
   WX_OPENID("WX_OPENID"),
 
@@ -66,7 +54,19 @@ public enum UserIdType {
 
   MD5_SHA256_OAID("MD5_SHA256_OAID"),
 
-  CAID("CAID");
+  CAID("CAID"),
+
+  GDT_OPENID("GDT_OPENID"),
+
+  HASH_MAC("HASH_MAC"),
+
+  HASH_QQ("HASH_QQ"),
+
+  MAC("MAC"),
+
+  MOBILE_QQ_OPENID("MOBILE_QQ_OPENID"),
+
+  QQ("QQ");
 
   private String value;
 
