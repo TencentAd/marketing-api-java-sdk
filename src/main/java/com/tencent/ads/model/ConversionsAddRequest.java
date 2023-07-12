@@ -82,6 +82,9 @@ public class ConversionsAddRequest {
   @SerializedName("deep_optimization_goal_type")
   private DeepOptimizationGoalType deepOptimizationGoalType = null;
 
+  @SerializedName("forward_link_assist")
+  private IntOptimizationGoal forwardLinkAssist = null;
+
   public ConversionsAddRequest accountId(Long accountId) {
     this.accountId = accountId;
     return this;
@@ -486,6 +489,25 @@ public class ConversionsAddRequest {
     this.deepOptimizationGoalType = deepOptimizationGoalType;
   }
 
+  public ConversionsAddRequest forwardLinkAssist(IntOptimizationGoal forwardLinkAssist) {
+    this.forwardLinkAssist = forwardLinkAssist;
+    return this;
+  }
+
+  /**
+   * Get forwardLinkAssist
+   *
+   * @return forwardLinkAssist
+   */
+  @ApiModelProperty(value = "")
+  public IntOptimizationGoal getForwardLinkAssist() {
+    return forwardLinkAssist;
+  }
+
+  public void setForwardLinkAssist(IntOptimizationGoal forwardLinkAssist) {
+    this.forwardLinkAssist = forwardLinkAssist;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -520,7 +542,8 @@ public class ConversionsAddRequest {
         && Objects.equals(
             this.deepBehaviorAdvancedGoal, conversionsAddRequest.deepBehaviorAdvancedGoal)
         && Objects.equals(
-            this.deepOptimizationGoalType, conversionsAddRequest.deepOptimizationGoalType);
+            this.deepOptimizationGoalType, conversionsAddRequest.deepOptimizationGoalType)
+        && Objects.equals(this.forwardLinkAssist, conversionsAddRequest.forwardLinkAssist);
   }
 
   @Override
@@ -546,7 +569,8 @@ public class ConversionsAddRequest {
         impressionFeedbackUrl,
         attributionWindow,
         deepBehaviorAdvancedGoal,
-        deepOptimizationGoalType);
+        deepOptimizationGoalType,
+        forwardLinkAssist);
   }
 
   @Override
