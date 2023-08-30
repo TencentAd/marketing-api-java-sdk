@@ -38,7 +38,6 @@ public class CustomAudienceFilesApiContainer extends ApiContainer {
    * @param file (required)
    * @param operationType (optional)
    * @param openAppId (optional)
-   * @param saltId (optional)
    * @return CustomAudienceFilesAddResponse
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
@@ -49,12 +48,11 @@ public class CustomAudienceFilesApiContainer extends ApiContainer {
       String userIdType,
       File file,
       String operationType,
-      String openAppId,
-      String saltId)
+      String openAppId)
       throws ApiException, TencentAdsResponseException {
     CustomAudienceFilesAddResponse resp =
         api.customAudienceFilesAdd(
-            accountId, audienceId, userIdType, file, operationType, openAppId, saltId);
+            accountId, audienceId, userIdType, file, operationType, openAppId);
     handleResponse(gson.toJson(resp));
     return resp.getData();
   }

@@ -89,6 +89,10 @@ public class BatchAsyncRequestTaskSpec {
   private List<UpdateAdgroupDeepConversionWorthAdvancedRateItem>
       updateAdgroupDeepConversionWorthAdvancedRateSpec = null;
 
+  @SerializedName("update_deep_conversion_behavior_advanced_bid_spec")
+  private List<UpdateDeepConversionBehaviorAdvancedBidItem>
+      updateDeepConversionBehaviorAdvancedBidSpec = null;
+
   public BatchAsyncRequestTaskSpec updateUnionPositionPackageSpec(
       List<UpdateUnionPositionPackageItem> updateUnionPositionPackageSpec) {
     this.updateUnionPositionPackageSpec = updateUnionPositionPackageSpec;
@@ -726,6 +730,41 @@ public class BatchAsyncRequestTaskSpec {
         updateAdgroupDeepConversionWorthAdvancedRateSpec;
   }
 
+  public BatchAsyncRequestTaskSpec updateDeepConversionBehaviorAdvancedBidSpec(
+      List<UpdateDeepConversionBehaviorAdvancedBidItem>
+          updateDeepConversionBehaviorAdvancedBidSpec) {
+    this.updateDeepConversionBehaviorAdvancedBidSpec = updateDeepConversionBehaviorAdvancedBidSpec;
+    return this;
+  }
+
+  public BatchAsyncRequestTaskSpec addUpdateDeepConversionBehaviorAdvancedBidSpecItem(
+      UpdateDeepConversionBehaviorAdvancedBidItem updateDeepConversionBehaviorAdvancedBidSpecItem) {
+    if (this.updateDeepConversionBehaviorAdvancedBidSpec == null) {
+      this.updateDeepConversionBehaviorAdvancedBidSpec =
+          new ArrayList<UpdateDeepConversionBehaviorAdvancedBidItem>();
+    }
+    this.updateDeepConversionBehaviorAdvancedBidSpec.add(
+        updateDeepConversionBehaviorAdvancedBidSpecItem);
+    return this;
+  }
+
+  /**
+   * Get updateDeepConversionBehaviorAdvancedBidSpec
+   *
+   * @return updateDeepConversionBehaviorAdvancedBidSpec
+   */
+  @ApiModelProperty(value = "")
+  public List<UpdateDeepConversionBehaviorAdvancedBidItem>
+      getUpdateDeepConversionBehaviorAdvancedBidSpec() {
+    return updateDeepConversionBehaviorAdvancedBidSpec;
+  }
+
+  public void setUpdateDeepConversionBehaviorAdvancedBidSpec(
+      List<UpdateDeepConversionBehaviorAdvancedBidItem>
+          updateDeepConversionBehaviorAdvancedBidSpec) {
+    this.updateDeepConversionBehaviorAdvancedBidSpec = updateDeepConversionBehaviorAdvancedBidSpec;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -786,7 +825,10 @@ public class BatchAsyncRequestTaskSpec {
             batchAsyncRequestTaskSpec.updateAdcreativeLandingPageSpec)
         && Objects.equals(
             this.updateAdgroupDeepConversionWorthAdvancedRateSpec,
-            batchAsyncRequestTaskSpec.updateAdgroupDeepConversionWorthAdvancedRateSpec);
+            batchAsyncRequestTaskSpec.updateAdgroupDeepConversionWorthAdvancedRateSpec)
+        && Objects.equals(
+            this.updateDeepConversionBehaviorAdvancedBidSpec,
+            batchAsyncRequestTaskSpec.updateDeepConversionBehaviorAdvancedBidSpec);
   }
 
   @Override
@@ -812,7 +854,8 @@ public class BatchAsyncRequestTaskSpec {
         updateAdConfiguredStatusSpec,
         updateAdgroupAutoAcquisitionSpec,
         updateAdcreativeLandingPageSpec,
-        updateAdgroupDeepConversionWorthAdvancedRateSpec);
+        updateAdgroupDeepConversionWorthAdvancedRateSpec,
+        updateDeepConversionBehaviorAdvancedBidSpec);
   }
 
   @Override

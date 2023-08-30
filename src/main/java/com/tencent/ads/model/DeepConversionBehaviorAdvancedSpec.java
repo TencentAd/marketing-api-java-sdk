@@ -18,8 +18,8 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.util.Objects;
 
-/** oCPC/oCPM 加强转化行为配置 */
-@ApiModel(description = "oCPC/oCPM 加强转化行为配置")
+/** oCPC/oCPM 深度辅助优化-优化转化行为 */
+@ApiModel(description = "oCPC/oCPM 深度辅助优化-优化转化行为")
 public class DeepConversionBehaviorAdvancedSpec {
   @SerializedName("goal")
   private OptimizationGoal goal = null;

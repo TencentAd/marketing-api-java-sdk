@@ -22,6 +22,12 @@ import java.io.IOException;
 /** 透视维度 */
 @JsonAdapter(DimensionType.Adapter.class)
 public enum DimensionType {
+  CONTENT("CONTENT"),
+
+  RESOURCE_ID("RESOURCE_ID"),
+
+  HYPERLINK("HYPERLINK"),
+
   AGE("AGE"),
 
   GENDER("GENDER"),

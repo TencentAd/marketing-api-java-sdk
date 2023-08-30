@@ -60,6 +60,8 @@ public enum LandingPagePlatform {
 
   ZHONGZHI("LANDING_PAGE_PLATFORM_ZHONGZHI"),
 
+  LINGQUE("LANDING_PAGE_PLATFORM_LINGQUE"),
+
   WEIMOB_2("LANDING_PAGE_PLATFORM_wEIMOB");
 
   private String value;

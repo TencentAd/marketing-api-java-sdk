@@ -59,7 +59,6 @@ public class CustomAudienceFilesApi {
    * @param file (required)
    * @param operationType (optional)
    * @param openAppId (optional)
-   * @param saltId (optional)
    * @param progressListener Progress listener
    * @param progressRequestListener Progress request listener
    * @return Call to execute
@@ -72,7 +71,6 @@ public class CustomAudienceFilesApi {
       File file,
       String operationType,
       String openAppId,
-      String saltId,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener)
       throws ApiException {
@@ -93,7 +91,6 @@ public class CustomAudienceFilesApi {
     if (file != null) localVarFormParams.put("file", file);
     if (operationType != null) localVarFormParams.put("operation_type", operationType);
     if (openAppId != null) localVarFormParams.put("open_app_id", openAppId);
-    if (saltId != null) localVarFormParams.put("salt_id", saltId);
 
     final String[] localVarAccepts = {"application/json"};
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
@@ -142,7 +139,6 @@ public class CustomAudienceFilesApi {
       File file,
       String operationType,
       String openAppId,
-      String saltId,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener)
       throws ApiException {
@@ -179,7 +175,6 @@ public class CustomAudienceFilesApi {
             file,
             operationType,
             openAppId,
-            saltId,
             progressListener,
             progressRequestListener);
     return call;
@@ -194,7 +189,6 @@ public class CustomAudienceFilesApi {
    * @param file (required)
    * @param operationType (optional)
    * @param openAppId (optional)
-   * @param saltId (optional)
    * @return CustomAudienceFilesAddResponse
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
@@ -205,12 +199,11 @@ public class CustomAudienceFilesApi {
       String userIdType,
       File file,
       String operationType,
-      String openAppId,
-      String saltId)
+      String openAppId)
       throws ApiException {
     ApiResponse<CustomAudienceFilesAddResponse> resp =
         customAudienceFilesAddWithHttpInfo(
-            accountId, audienceId, userIdType, file, operationType, openAppId, saltId);
+            accountId, audienceId, userIdType, file, operationType, openAppId);
     return resp.getData();
   }
 
@@ -223,7 +216,6 @@ public class CustomAudienceFilesApi {
    * @param file (required)
    * @param operationType (optional)
    * @param openAppId (optional)
-   * @param saltId (optional)
    * @return ApiResponse&lt;CustomAudienceFilesAddResponse&gt;
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
@@ -234,12 +226,11 @@ public class CustomAudienceFilesApi {
       String userIdType,
       File file,
       String operationType,
-      String openAppId,
-      String saltId)
+      String openAppId)
       throws ApiException {
     com.squareup.okhttp.Call call =
         customAudienceFilesAddValidateBeforeCall(
-            accountId, audienceId, userIdType, file, operationType, openAppId, saltId, null, null);
+            accountId, audienceId, userIdType, file, operationType, openAppId, null, null);
     Type localVarReturnType = new TypeToken<CustomAudienceFilesAddResponse>() {}.getType();
     return apiClient.execute(call, localVarReturnType);
   }
@@ -253,7 +244,6 @@ public class CustomAudienceFilesApi {
    * @param file (required)
    * @param operationType (optional)
    * @param openAppId (optional)
-   * @param saltId (optional)
    * @param callback The callback to be executed when the API call finishes
    * @return The request call
    * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -265,7 +255,6 @@ public class CustomAudienceFilesApi {
       File file,
       String operationType,
       String openAppId,
-      String saltId,
       final ApiCallback<CustomAudienceFilesAddResponse> callback)
       throws ApiException {
 
@@ -298,7 +287,6 @@ public class CustomAudienceFilesApi {
             file,
             operationType,
             openAppId,
-            saltId,
             progressListener,
             progressRequestListener);
     Type localVarReturnType = new TypeToken<CustomAudienceFilesAddResponse>() {}.getType();

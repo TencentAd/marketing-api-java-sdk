@@ -230,8 +230,14 @@ public class AdgroupsGetListStruct {
   @SerializedName("auto_acquisition_status")
   private AutoAcquisitionStatus autoAcquisitionStatus = null;
 
+  @SerializedName("ecom_pkam_switch")
+  private EcomPkamSwitch ecomPkamSwitch = null;
+
   @SerializedName("bid_scene")
   private BidScene bidScene = null;
+
+  @SerializedName("forward_link_assist")
+  private OptimizationGoal forwardLinkAssist = null;
 
   public AdgroupsGetListStruct campaignId(Long campaignId) {
     this.campaignId = campaignId;
@@ -1617,6 +1623,25 @@ public class AdgroupsGetListStruct {
     this.autoAcquisitionStatus = autoAcquisitionStatus;
   }
 
+  public AdgroupsGetListStruct ecomPkamSwitch(EcomPkamSwitch ecomPkamSwitch) {
+    this.ecomPkamSwitch = ecomPkamSwitch;
+    return this;
+  }
+
+  /**
+   * Get ecomPkamSwitch
+   *
+   * @return ecomPkamSwitch
+   */
+  @ApiModelProperty(value = "")
+  public EcomPkamSwitch getEcomPkamSwitch() {
+    return ecomPkamSwitch;
+  }
+
+  public void setEcomPkamSwitch(EcomPkamSwitch ecomPkamSwitch) {
+    this.ecomPkamSwitch = ecomPkamSwitch;
+  }
+
   public AdgroupsGetListStruct bidScene(BidScene bidScene) {
     this.bidScene = bidScene;
     return this;
@@ -1634,6 +1659,25 @@ public class AdgroupsGetListStruct {
 
   public void setBidScene(BidScene bidScene) {
     this.bidScene = bidScene;
+  }
+
+  public AdgroupsGetListStruct forwardLinkAssist(OptimizationGoal forwardLinkAssist) {
+    this.forwardLinkAssist = forwardLinkAssist;
+    return this;
+  }
+
+  /**
+   * Get forwardLinkAssist
+   *
+   * @return forwardLinkAssist
+   */
+  @ApiModelProperty(value = "")
+  public OptimizationGoal getForwardLinkAssist() {
+    return forwardLinkAssist;
+  }
+
+  public void setForwardLinkAssist(OptimizationGoal forwardLinkAssist) {
+    this.forwardLinkAssist = forwardLinkAssist;
   }
 
   @Override
@@ -1731,7 +1775,9 @@ public class AdgroupsGetListStruct {
         && Objects.equals(
             this.searchExpandTargetingSwitch, adgroupsGetListStruct.searchExpandTargetingSwitch)
         && Objects.equals(this.autoAcquisitionStatus, adgroupsGetListStruct.autoAcquisitionStatus)
-        && Objects.equals(this.bidScene, adgroupsGetListStruct.bidScene);
+        && Objects.equals(this.ecomPkamSwitch, adgroupsGetListStruct.ecomPkamSwitch)
+        && Objects.equals(this.bidScene, adgroupsGetListStruct.bidScene)
+        && Objects.equals(this.forwardLinkAssist, adgroupsGetListStruct.forwardLinkAssist);
   }
 
   @Override
@@ -1806,7 +1852,9 @@ public class AdgroupsGetListStruct {
         autoDerivedLandingPageSwitch,
         searchExpandTargetingSwitch,
         autoAcquisitionStatus,
-        bidScene);
+        ecomPkamSwitch,
+        bidScene,
+        forwardLinkAssist);
   }
 
   @Override

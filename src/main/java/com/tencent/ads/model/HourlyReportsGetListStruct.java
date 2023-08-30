@@ -591,6 +591,30 @@ public class HourlyReportsGetListStruct {
   @SerializedName("first_pay_count")
   private Long firstPayCount = null;
 
+  @SerializedName("mini_game_pay_d3_uv")
+  private Long miniGamePayD3Uv = null;
+
+  @SerializedName("mini_game_pay_d7_uv")
+  private Long miniGamePayD7Uv = null;
+
+  @SerializedName("mini_game_pay_d14_uv")
+  private Long miniGamePayD14Uv = null;
+
+  @SerializedName("mini_game_pay_d30_uv")
+  private Long miniGamePayD30Uv = null;
+
+  @SerializedName("mini_game_d3_pay_count")
+  private Long miniGameD3PayCount = null;
+
+  @SerializedName("mini_game_d7_pay_count")
+  private Long miniGameD7PayCount = null;
+
+  @SerializedName("mini_game_d14_pay_count")
+  private Long miniGameD14PayCount = null;
+
+  @SerializedName("mini_game_d30_pay_count")
+  private Long miniGameD30PayCount = null;
+
   @SerializedName("wechat_local_pay_count")
   private Long wechatLocalPayCount = null;
 
@@ -999,14 +1023,50 @@ public class HourlyReportsGetListStruct {
   @SerializedName("mini_game_ad_monetization_users")
   private Long miniGameAdMonetizationUsers = null;
 
+  @SerializedName("mini_game_first_day_ad_monetization_users")
+  private Long miniGameFirstDayAdMonetizationUsers = null;
+
+  @SerializedName("mini_game_first_day_ad_monetization_amount")
+  private Long miniGameFirstDayAdMonetizationAmount = null;
+
+  @SerializedName("mini_game_first_day_ad_paying_cost")
+  private Long miniGameFirstDayAdPayingCost = null;
+
+  @SerializedName("mini_game_income_roi_1")
+  private Double miniGameIncomeRoi1 = null;
+
+  @SerializedName("mini_game_first_day_ad_paying_arpu")
+  private Long miniGameFirstDayAdPayingArpu = null;
+
   @SerializedName("mini_game_paying_count")
   private Long miniGamePayingCount = null;
 
   @SerializedName("mini_game_paying_amount")
   private Long miniGamePayingAmount = null;
 
+  @SerializedName("mini_game_paying_users_d1")
+  private Long miniGamePayingUsersD1 = null;
+
+  @SerializedName("mini_game_paying_amount_d1")
+  private Long miniGamePayingAmountD1 = null;
+
+  @SerializedName("mini_game_paying_amount_d3")
+  private Long miniGamePayingAmountD3 = null;
+
+  @SerializedName("mini_game_paying_amount_d7")
+  private Long miniGamePayingAmountD7 = null;
+
+  @SerializedName("mini_game_paying_amount_d14")
+  private Long miniGamePayingAmountD14 = null;
+
+  @SerializedName("mini_game_paying_amount_d30")
+  private Long miniGamePayingAmountD30 = null;
+
   @SerializedName("mini_game_first_paying_users")
   private Long miniGameFirstPayingUsers = null;
+
+  @SerializedName("mini_game_first_day_paying_roi")
+  private Double miniGameFirstDayPayingRoi = null;
 
   @SerializedName("mini_game_create_role_users")
   private Long miniGameCreateRoleUsers = null;
@@ -1103,6 +1163,27 @@ public class HourlyReportsGetListStruct {
 
   @SerializedName("first_day_order_roi")
   private Double firstDayOrderRoi = null;
+
+  @SerializedName("mini_game_mixed_monetization_roi_d1")
+  private Double miniGameMixedMonetizationRoiD1 = null;
+
+  @SerializedName("mini_game_mixed_monetization_roi_d3")
+  private Double miniGameMixedMonetizationRoiD3 = null;
+
+  @SerializedName("mini_game_mixed_monetization_roi_d7")
+  private Double miniGameMixedMonetizationRoiD7 = null;
+
+  @SerializedName("mini_game_mixed_monetization_roi_d14")
+  private Double miniGameMixedMonetizationRoiD14 = null;
+
+  @SerializedName("mini_game_ad_monetization_amount_d3")
+  private Long miniGameAdMonetizationAmountD3 = null;
+
+  @SerializedName("mini_game_ad_monetization_amount_d7")
+  private Long miniGameAdMonetizationAmountD7 = null;
+
+  @SerializedName("mini_game_ad_monetization_amount_d14")
+  private Long miniGameAdMonetizationAmountD14 = null;
 
   @SerializedName("mini_game_ad_monetization_cost")
   private Long miniGameAdMonetizationCost = null;
@@ -1238,6 +1319,18 @@ public class HourlyReportsGetListStruct {
 
   @SerializedName("consult_uv_count")
   private Long consultUvCount = null;
+
+  @SerializedName("mini_game_pay_d3_roi")
+  private Double miniGamePayD3Roi = null;
+
+  @SerializedName("mini_game_pay_d7_roi")
+  private Double miniGamePayD7Roi = null;
+
+  @SerializedName("mini_game_pay_d14_roi")
+  private Double miniGamePayD14Roi = null;
+
+  @SerializedName("mini_game_pay_d30_roi")
+  private Double miniGamePayD30Roi = null;
 
   @SerializedName("video_follow_count")
   private Long videoFollowCount = null;
@@ -1460,6 +1553,39 @@ public class HourlyReportsGetListStruct {
 
   @SerializedName("stay_pay_30d_pv")
   private Long stayPay30dPv = null;
+
+  @SerializedName("minigame_1d_pay_count")
+  private Long minigame1dPayCount = null;
+
+  @SerializedName("minigame_3d_income_uv")
+  private Long minigame3dIncomeUv = null;
+
+  @SerializedName("minigame_3d_income_count")
+  private Long minigame3dIncomeCount = null;
+
+  @SerializedName("minigame_7d_income_uv")
+  private Long minigame7dIncomeUv = null;
+
+  @SerializedName("minigame_7d_income_count")
+  private Long minigame7dIncomeCount = null;
+
+  @SerializedName("minigame_3d_income_roi")
+  private Double minigame3dIncomeRoi = null;
+
+  @SerializedName("minigame_7d_income_roi")
+  private Double minigame7dIncomeRoi = null;
+
+  @SerializedName("minigame_24h_pay_uv")
+  private Long minigame24hPayUv = null;
+
+  @SerializedName("minigame_24h_pay_amount")
+  private Long minigame24hPayAmount = null;
+
+  @SerializedName("minigame_24h_pay_roi")
+  private Double minigame24hPayRoi = null;
+
+  @SerializedName("minigame_24h_pay_arpu")
+  private Long minigame24hPayArpu = null;
 
   @SerializedName("live_stream_crt_click_cnt")
   private Long liveStreamCrtClickCnt = null;
@@ -1776,18 +1902,6 @@ public class HourlyReportsGetListStruct {
   @SerializedName("mini_game_pay_d1_pla_uv")
   private Long miniGamePayD1PlaUv = null;
 
-  @SerializedName("mini_game_pay_d3_uv")
-  private Long miniGamePayD3Uv = null;
-
-  @SerializedName("mini_game_pay_d7_uv")
-  private Long miniGamePayD7Uv = null;
-
-  @SerializedName("mini_game_pay_d14_uv")
-  private Long miniGamePayD14Uv = null;
-
-  @SerializedName("mini_game_pay_d30_uv")
-  private Long miniGamePayD30Uv = null;
-
   @SerializedName("mini_game_pay_d3_pla_uv")
   private Long miniGamePayD3PlaUv = null;
 
@@ -1799,18 +1913,6 @@ public class HourlyReportsGetListStruct {
 
   @SerializedName("mini_game_pay_d30_pla_uv")
   private Long miniGamePayD30PlaUv = null;
-
-  @SerializedName("mini_game_d3_pay_count")
-  private Long miniGameD3PayCount = null;
-
-  @SerializedName("mini_game_d7_pay_count")
-  private Long miniGameD7PayCount = null;
-
-  @SerializedName("mini_game_d14_pay_count")
-  private Long miniGameD14PayCount = null;
-
-  @SerializedName("mini_game_d30_pay_count")
-  private Long miniGameD30PayCount = null;
 
   @SerializedName("mini_game_d3_pay_pla_count")
   private Long miniGameD3PayPlaCount = null;
@@ -1832,42 +1934,6 @@ public class HourlyReportsGetListStruct {
 
   @SerializedName("active_d5_first_pay_cost")
   private Long activeD5FirstPayCost = null;
-
-  @SerializedName("mini_game_first_day_ad_monetization_users")
-  private Long miniGameFirstDayAdMonetizationUsers = null;
-
-  @SerializedName("mini_game_first_day_ad_monetization_amount")
-  private Long miniGameFirstDayAdMonetizationAmount = null;
-
-  @SerializedName("mini_game_first_day_ad_paying_cost")
-  private Long miniGameFirstDayAdPayingCost = null;
-
-  @SerializedName("mini_game_income_roi_1")
-  private Double miniGameIncomeRoi1 = null;
-
-  @SerializedName("mini_game_first_day_ad_paying_arpu")
-  private Long miniGameFirstDayAdPayingArpu = null;
-
-  @SerializedName("mini_game_paying_users_d1")
-  private Long miniGamePayingUsersD1 = null;
-
-  @SerializedName("mini_game_paying_amount_d1")
-  private Long miniGamePayingAmountD1 = null;
-
-  @SerializedName("mini_game_paying_amount_d3")
-  private Long miniGamePayingAmountD3 = null;
-
-  @SerializedName("mini_game_paying_amount_d7")
-  private Long miniGamePayingAmountD7 = null;
-
-  @SerializedName("mini_game_paying_amount_d14")
-  private Long miniGamePayingAmountD14 = null;
-
-  @SerializedName("mini_game_paying_amount_d30")
-  private Long miniGamePayingAmountD30 = null;
-
-  @SerializedName("mini_game_first_day_paying_roi")
-  private Double miniGameFirstDayPayingRoi = null;
 
   @SerializedName("mini_game_paying_amount_d1_by_upload")
   private Long miniGamePayingAmountD1ByUpload = null;
@@ -1896,26 +1962,14 @@ public class HourlyReportsGetListStruct {
   @SerializedName("mixed_monetization_roi_d14")
   private Double mixedMonetizationRoiD14 = null;
 
-  @SerializedName("mini_game_mixed_monetization_roi_d1")
-  private Double miniGameMixedMonetizationRoiD1 = null;
-
   @SerializedName("mini_game_mixed_monetization_roi_d1_by_reporting")
   private Double miniGameMixedMonetizationRoiD1ByReporting = null;
-
-  @SerializedName("mini_game_mixed_monetization_roi_d3")
-  private Double miniGameMixedMonetizationRoiD3 = null;
 
   @SerializedName("mini_game_mixed_monetization_roi_d3_by_reporting")
   private Double miniGameMixedMonetizationRoiD3ByReporting = null;
 
-  @SerializedName("mini_game_mixed_monetization_roi_d7")
-  private Double miniGameMixedMonetizationRoiD7 = null;
-
   @SerializedName("mini_game_mixed_monetization_roi_d7_by_reporting")
   private Double miniGameMixedMonetizationRoiD7ByReporting = null;
-
-  @SerializedName("mini_game_mixed_monetization_roi_d14")
-  private Double miniGameMixedMonetizationRoiD14 = null;
 
   @SerializedName("mini_game_mixed_monetization_roi_d14_by_reporting")
   private Double miniGameMixedMonetizationRoiD14ByReporting = null;
@@ -1931,15 +1985,6 @@ public class HourlyReportsGetListStruct {
 
   @SerializedName("ad_monetization_penetration_rat_d1")
   private Double adMonetizationPenetrationRatD1 = null;
-
-  @SerializedName("mini_game_ad_monetization_amount_d3")
-  private Long miniGameAdMonetizationAmountD3 = null;
-
-  @SerializedName("mini_game_ad_monetization_amount_d7")
-  private Long miniGameAdMonetizationAmountD7 = null;
-
-  @SerializedName("mini_game_ad_monetization_amount_d14")
-  private Long miniGameAdMonetizationAmountD14 = null;
 
   @SerializedName("mini_game_paying_arpu_d1")
   private Long miniGamePayingArpuD1 = null;
@@ -1977,18 +2022,6 @@ public class HourlyReportsGetListStruct {
   @SerializedName("mini_game_first_pay_pla_cost")
   private Long miniGameFirstPayPlaCost = null;
 
-  @SerializedName("mini_game_pay_d3_roi")
-  private Double miniGamePayD3Roi = null;
-
-  @SerializedName("mini_game_pay_d7_roi")
-  private Double miniGamePayD7Roi = null;
-
-  @SerializedName("mini_game_pay_d14_roi")
-  private Double miniGamePayD14Roi = null;
-
-  @SerializedName("mini_game_pay_d30_roi")
-  private Double miniGamePayD30Roi = null;
-
   @SerializedName("mini_game_pay_d3_pla_roi")
   private Double miniGamePayD3PlaRoi = null;
 
@@ -2000,39 +2033,6 @@ public class HourlyReportsGetListStruct {
 
   @SerializedName("mini_game_pay_d30_pla_roi")
   private Double miniGamePayD30PlaRoi = null;
-
-  @SerializedName("minigame_1d_pay_count")
-  private Long minigame1dPayCount = null;
-
-  @SerializedName("minigame_3d_income_uv")
-  private Long minigame3dIncomeUv = null;
-
-  @SerializedName("minigame_3d_income_count")
-  private Long minigame3dIncomeCount = null;
-
-  @SerializedName("minigame_7d_income_uv")
-  private Long minigame7dIncomeUv = null;
-
-  @SerializedName("minigame_7d_income_count")
-  private Long minigame7dIncomeCount = null;
-
-  @SerializedName("minigame_3d_income_roi")
-  private Double minigame3dIncomeRoi = null;
-
-  @SerializedName("minigame_7d_income_roi")
-  private Double minigame7dIncomeRoi = null;
-
-  @SerializedName("minigame_24h_pay_uv")
-  private Long minigame24hPayUv = null;
-
-  @SerializedName("minigame_24h_pay_amount")
-  private Long minigame24hPayAmount = null;
-
-  @SerializedName("minigame_24h_pay_roi")
-  private Double minigame24hPayRoi = null;
-
-  @SerializedName("minigame_24h_pay_arpu")
-  private Long minigame24hPayArpu = null;
 
   @SerializedName("campaign_id")
   private Long campaignId = null;
@@ -5922,6 +5922,158 @@ public class HourlyReportsGetListStruct {
     this.firstPayCount = firstPayCount;
   }
 
+  public HourlyReportsGetListStruct miniGamePayD3Uv(Long miniGamePayD3Uv) {
+    this.miniGamePayD3Uv = miniGamePayD3Uv;
+    return this;
+  }
+
+  /**
+   * Get miniGamePayD3Uv
+   *
+   * @return miniGamePayD3Uv
+   */
+  @ApiModelProperty(value = "")
+  public Long getMiniGamePayD3Uv() {
+    return miniGamePayD3Uv;
+  }
+
+  public void setMiniGamePayD3Uv(Long miniGamePayD3Uv) {
+    this.miniGamePayD3Uv = miniGamePayD3Uv;
+  }
+
+  public HourlyReportsGetListStruct miniGamePayD7Uv(Long miniGamePayD7Uv) {
+    this.miniGamePayD7Uv = miniGamePayD7Uv;
+    return this;
+  }
+
+  /**
+   * Get miniGamePayD7Uv
+   *
+   * @return miniGamePayD7Uv
+   */
+  @ApiModelProperty(value = "")
+  public Long getMiniGamePayD7Uv() {
+    return miniGamePayD7Uv;
+  }
+
+  public void setMiniGamePayD7Uv(Long miniGamePayD7Uv) {
+    this.miniGamePayD7Uv = miniGamePayD7Uv;
+  }
+
+  public HourlyReportsGetListStruct miniGamePayD14Uv(Long miniGamePayD14Uv) {
+    this.miniGamePayD14Uv = miniGamePayD14Uv;
+    return this;
+  }
+
+  /**
+   * Get miniGamePayD14Uv
+   *
+   * @return miniGamePayD14Uv
+   */
+  @ApiModelProperty(value = "")
+  public Long getMiniGamePayD14Uv() {
+    return miniGamePayD14Uv;
+  }
+
+  public void setMiniGamePayD14Uv(Long miniGamePayD14Uv) {
+    this.miniGamePayD14Uv = miniGamePayD14Uv;
+  }
+
+  public HourlyReportsGetListStruct miniGamePayD30Uv(Long miniGamePayD30Uv) {
+    this.miniGamePayD30Uv = miniGamePayD30Uv;
+    return this;
+  }
+
+  /**
+   * Get miniGamePayD30Uv
+   *
+   * @return miniGamePayD30Uv
+   */
+  @ApiModelProperty(value = "")
+  public Long getMiniGamePayD30Uv() {
+    return miniGamePayD30Uv;
+  }
+
+  public void setMiniGamePayD30Uv(Long miniGamePayD30Uv) {
+    this.miniGamePayD30Uv = miniGamePayD30Uv;
+  }
+
+  public HourlyReportsGetListStruct miniGameD3PayCount(Long miniGameD3PayCount) {
+    this.miniGameD3PayCount = miniGameD3PayCount;
+    return this;
+  }
+
+  /**
+   * Get miniGameD3PayCount
+   *
+   * @return miniGameD3PayCount
+   */
+  @ApiModelProperty(value = "")
+  public Long getMiniGameD3PayCount() {
+    return miniGameD3PayCount;
+  }
+
+  public void setMiniGameD3PayCount(Long miniGameD3PayCount) {
+    this.miniGameD3PayCount = miniGameD3PayCount;
+  }
+
+  public HourlyReportsGetListStruct miniGameD7PayCount(Long miniGameD7PayCount) {
+    this.miniGameD7PayCount = miniGameD7PayCount;
+    return this;
+  }
+
+  /**
+   * Get miniGameD7PayCount
+   *
+   * @return miniGameD7PayCount
+   */
+  @ApiModelProperty(value = "")
+  public Long getMiniGameD7PayCount() {
+    return miniGameD7PayCount;
+  }
+
+  public void setMiniGameD7PayCount(Long miniGameD7PayCount) {
+    this.miniGameD7PayCount = miniGameD7PayCount;
+  }
+
+  public HourlyReportsGetListStruct miniGameD14PayCount(Long miniGameD14PayCount) {
+    this.miniGameD14PayCount = miniGameD14PayCount;
+    return this;
+  }
+
+  /**
+   * Get miniGameD14PayCount
+   *
+   * @return miniGameD14PayCount
+   */
+  @ApiModelProperty(value = "")
+  public Long getMiniGameD14PayCount() {
+    return miniGameD14PayCount;
+  }
+
+  public void setMiniGameD14PayCount(Long miniGameD14PayCount) {
+    this.miniGameD14PayCount = miniGameD14PayCount;
+  }
+
+  public HourlyReportsGetListStruct miniGameD30PayCount(Long miniGameD30PayCount) {
+    this.miniGameD30PayCount = miniGameD30PayCount;
+    return this;
+  }
+
+  /**
+   * Get miniGameD30PayCount
+   *
+   * @return miniGameD30PayCount
+   */
+  @ApiModelProperty(value = "")
+  public Long getMiniGameD30PayCount() {
+    return miniGameD30PayCount;
+  }
+
+  public void setMiniGameD30PayCount(Long miniGameD30PayCount) {
+    this.miniGameD30PayCount = miniGameD30PayCount;
+  }
+
   public HourlyReportsGetListStruct wechatLocalPayCount(Long wechatLocalPayCount) {
     this.wechatLocalPayCount = wechatLocalPayCount;
     return this;
@@ -8509,6 +8661,105 @@ public class HourlyReportsGetListStruct {
     this.miniGameAdMonetizationUsers = miniGameAdMonetizationUsers;
   }
 
+  public HourlyReportsGetListStruct miniGameFirstDayAdMonetizationUsers(
+      Long miniGameFirstDayAdMonetizationUsers) {
+    this.miniGameFirstDayAdMonetizationUsers = miniGameFirstDayAdMonetizationUsers;
+    return this;
+  }
+
+  /**
+   * Get miniGameFirstDayAdMonetizationUsers
+   *
+   * @return miniGameFirstDayAdMonetizationUsers
+   */
+  @ApiModelProperty(value = "")
+  public Long getMiniGameFirstDayAdMonetizationUsers() {
+    return miniGameFirstDayAdMonetizationUsers;
+  }
+
+  public void setMiniGameFirstDayAdMonetizationUsers(Long miniGameFirstDayAdMonetizationUsers) {
+    this.miniGameFirstDayAdMonetizationUsers = miniGameFirstDayAdMonetizationUsers;
+  }
+
+  public HourlyReportsGetListStruct miniGameFirstDayAdMonetizationAmount(
+      Long miniGameFirstDayAdMonetizationAmount) {
+    this.miniGameFirstDayAdMonetizationAmount = miniGameFirstDayAdMonetizationAmount;
+    return this;
+  }
+
+  /**
+   * Get miniGameFirstDayAdMonetizationAmount
+   *
+   * @return miniGameFirstDayAdMonetizationAmount
+   */
+  @ApiModelProperty(value = "")
+  public Long getMiniGameFirstDayAdMonetizationAmount() {
+    return miniGameFirstDayAdMonetizationAmount;
+  }
+
+  public void setMiniGameFirstDayAdMonetizationAmount(Long miniGameFirstDayAdMonetizationAmount) {
+    this.miniGameFirstDayAdMonetizationAmount = miniGameFirstDayAdMonetizationAmount;
+  }
+
+  public HourlyReportsGetListStruct miniGameFirstDayAdPayingCost(
+      Long miniGameFirstDayAdPayingCost) {
+    this.miniGameFirstDayAdPayingCost = miniGameFirstDayAdPayingCost;
+    return this;
+  }
+
+  /**
+   * Get miniGameFirstDayAdPayingCost
+   *
+   * @return miniGameFirstDayAdPayingCost
+   */
+  @ApiModelProperty(value = "")
+  public Long getMiniGameFirstDayAdPayingCost() {
+    return miniGameFirstDayAdPayingCost;
+  }
+
+  public void setMiniGameFirstDayAdPayingCost(Long miniGameFirstDayAdPayingCost) {
+    this.miniGameFirstDayAdPayingCost = miniGameFirstDayAdPayingCost;
+  }
+
+  public HourlyReportsGetListStruct miniGameIncomeRoi1(Double miniGameIncomeRoi1) {
+    this.miniGameIncomeRoi1 = miniGameIncomeRoi1;
+    return this;
+  }
+
+  /**
+   * Get miniGameIncomeRoi1
+   *
+   * @return miniGameIncomeRoi1
+   */
+  @ApiModelProperty(value = "")
+  public Double getMiniGameIncomeRoi1() {
+    return miniGameIncomeRoi1;
+  }
+
+  public void setMiniGameIncomeRoi1(Double miniGameIncomeRoi1) {
+    this.miniGameIncomeRoi1 = miniGameIncomeRoi1;
+  }
+
+  public HourlyReportsGetListStruct miniGameFirstDayAdPayingArpu(
+      Long miniGameFirstDayAdPayingArpu) {
+    this.miniGameFirstDayAdPayingArpu = miniGameFirstDayAdPayingArpu;
+    return this;
+  }
+
+  /**
+   * Get miniGameFirstDayAdPayingArpu
+   *
+   * @return miniGameFirstDayAdPayingArpu
+   */
+  @ApiModelProperty(value = "")
+  public Long getMiniGameFirstDayAdPayingArpu() {
+    return miniGameFirstDayAdPayingArpu;
+  }
+
+  public void setMiniGameFirstDayAdPayingArpu(Long miniGameFirstDayAdPayingArpu) {
+    this.miniGameFirstDayAdPayingArpu = miniGameFirstDayAdPayingArpu;
+  }
+
   public HourlyReportsGetListStruct miniGamePayingCount(Long miniGamePayingCount) {
     this.miniGamePayingCount = miniGamePayingCount;
     return this;
@@ -8547,6 +8798,120 @@ public class HourlyReportsGetListStruct {
     this.miniGamePayingAmount = miniGamePayingAmount;
   }
 
+  public HourlyReportsGetListStruct miniGamePayingUsersD1(Long miniGamePayingUsersD1) {
+    this.miniGamePayingUsersD1 = miniGamePayingUsersD1;
+    return this;
+  }
+
+  /**
+   * Get miniGamePayingUsersD1
+   *
+   * @return miniGamePayingUsersD1
+   */
+  @ApiModelProperty(value = "")
+  public Long getMiniGamePayingUsersD1() {
+    return miniGamePayingUsersD1;
+  }
+
+  public void setMiniGamePayingUsersD1(Long miniGamePayingUsersD1) {
+    this.miniGamePayingUsersD1 = miniGamePayingUsersD1;
+  }
+
+  public HourlyReportsGetListStruct miniGamePayingAmountD1(Long miniGamePayingAmountD1) {
+    this.miniGamePayingAmountD1 = miniGamePayingAmountD1;
+    return this;
+  }
+
+  /**
+   * Get miniGamePayingAmountD1
+   *
+   * @return miniGamePayingAmountD1
+   */
+  @ApiModelProperty(value = "")
+  public Long getMiniGamePayingAmountD1() {
+    return miniGamePayingAmountD1;
+  }
+
+  public void setMiniGamePayingAmountD1(Long miniGamePayingAmountD1) {
+    this.miniGamePayingAmountD1 = miniGamePayingAmountD1;
+  }
+
+  public HourlyReportsGetListStruct miniGamePayingAmountD3(Long miniGamePayingAmountD3) {
+    this.miniGamePayingAmountD3 = miniGamePayingAmountD3;
+    return this;
+  }
+
+  /**
+   * Get miniGamePayingAmountD3
+   *
+   * @return miniGamePayingAmountD3
+   */
+  @ApiModelProperty(value = "")
+  public Long getMiniGamePayingAmountD3() {
+    return miniGamePayingAmountD3;
+  }
+
+  public void setMiniGamePayingAmountD3(Long miniGamePayingAmountD3) {
+    this.miniGamePayingAmountD3 = miniGamePayingAmountD3;
+  }
+
+  public HourlyReportsGetListStruct miniGamePayingAmountD7(Long miniGamePayingAmountD7) {
+    this.miniGamePayingAmountD7 = miniGamePayingAmountD7;
+    return this;
+  }
+
+  /**
+   * Get miniGamePayingAmountD7
+   *
+   * @return miniGamePayingAmountD7
+   */
+  @ApiModelProperty(value = "")
+  public Long getMiniGamePayingAmountD7() {
+    return miniGamePayingAmountD7;
+  }
+
+  public void setMiniGamePayingAmountD7(Long miniGamePayingAmountD7) {
+    this.miniGamePayingAmountD7 = miniGamePayingAmountD7;
+  }
+
+  public HourlyReportsGetListStruct miniGamePayingAmountD14(Long miniGamePayingAmountD14) {
+    this.miniGamePayingAmountD14 = miniGamePayingAmountD14;
+    return this;
+  }
+
+  /**
+   * Get miniGamePayingAmountD14
+   *
+   * @return miniGamePayingAmountD14
+   */
+  @ApiModelProperty(value = "")
+  public Long getMiniGamePayingAmountD14() {
+    return miniGamePayingAmountD14;
+  }
+
+  public void setMiniGamePayingAmountD14(Long miniGamePayingAmountD14) {
+    this.miniGamePayingAmountD14 = miniGamePayingAmountD14;
+  }
+
+  public HourlyReportsGetListStruct miniGamePayingAmountD30(Long miniGamePayingAmountD30) {
+    this.miniGamePayingAmountD30 = miniGamePayingAmountD30;
+    return this;
+  }
+
+  /**
+   * Get miniGamePayingAmountD30
+   *
+   * @return miniGamePayingAmountD30
+   */
+  @ApiModelProperty(value = "")
+  public Long getMiniGamePayingAmountD30() {
+    return miniGamePayingAmountD30;
+  }
+
+  public void setMiniGamePayingAmountD30(Long miniGamePayingAmountD30) {
+    this.miniGamePayingAmountD30 = miniGamePayingAmountD30;
+  }
+
   public HourlyReportsGetListStruct miniGameFirstPayingUsers(Long miniGameFirstPayingUsers) {
     this.miniGameFirstPayingUsers = miniGameFirstPayingUsers;
     return this;
@@ -8564,6 +8929,25 @@ public class HourlyReportsGetListStruct {
 
   public void setMiniGameFirstPayingUsers(Long miniGameFirstPayingUsers) {
     this.miniGameFirstPayingUsers = miniGameFirstPayingUsers;
+  }
+
+  public HourlyReportsGetListStruct miniGameFirstDayPayingRoi(Double miniGameFirstDayPayingRoi) {
+    this.miniGameFirstDayPayingRoi = miniGameFirstDayPayingRoi;
+    return this;
+  }
+
+  /**
+   * Get miniGameFirstDayPayingRoi
+   *
+   * @return miniGameFirstDayPayingRoi
+   */
+  @ApiModelProperty(value = "")
+  public Double getMiniGameFirstDayPayingRoi() {
+    return miniGameFirstDayPayingRoi;
+  }
+
+  public void setMiniGameFirstDayPayingRoi(Double miniGameFirstDayPayingRoi) {
+    this.miniGameFirstDayPayingRoi = miniGameFirstDayPayingRoi;
   }
 
   public HourlyReportsGetListStruct miniGameCreateRoleUsers(Long miniGameCreateRoleUsers) {
@@ -9180,6 +9564,146 @@ public class HourlyReportsGetListStruct {
 
   public void setFirstDayOrderRoi(Double firstDayOrderRoi) {
     this.firstDayOrderRoi = firstDayOrderRoi;
+  }
+
+  public HourlyReportsGetListStruct miniGameMixedMonetizationRoiD1(
+      Double miniGameMixedMonetizationRoiD1) {
+    this.miniGameMixedMonetizationRoiD1 = miniGameMixedMonetizationRoiD1;
+    return this;
+  }
+
+  /**
+   * Get miniGameMixedMonetizationRoiD1
+   *
+   * @return miniGameMixedMonetizationRoiD1
+   */
+  @ApiModelProperty(value = "")
+  public Double getMiniGameMixedMonetizationRoiD1() {
+    return miniGameMixedMonetizationRoiD1;
+  }
+
+  public void setMiniGameMixedMonetizationRoiD1(Double miniGameMixedMonetizationRoiD1) {
+    this.miniGameMixedMonetizationRoiD1 = miniGameMixedMonetizationRoiD1;
+  }
+
+  public HourlyReportsGetListStruct miniGameMixedMonetizationRoiD3(
+      Double miniGameMixedMonetizationRoiD3) {
+    this.miniGameMixedMonetizationRoiD3 = miniGameMixedMonetizationRoiD3;
+    return this;
+  }
+
+  /**
+   * Get miniGameMixedMonetizationRoiD3
+   *
+   * @return miniGameMixedMonetizationRoiD3
+   */
+  @ApiModelProperty(value = "")
+  public Double getMiniGameMixedMonetizationRoiD3() {
+    return miniGameMixedMonetizationRoiD3;
+  }
+
+  public void setMiniGameMixedMonetizationRoiD3(Double miniGameMixedMonetizationRoiD3) {
+    this.miniGameMixedMonetizationRoiD3 = miniGameMixedMonetizationRoiD3;
+  }
+
+  public HourlyReportsGetListStruct miniGameMixedMonetizationRoiD7(
+      Double miniGameMixedMonetizationRoiD7) {
+    this.miniGameMixedMonetizationRoiD7 = miniGameMixedMonetizationRoiD7;
+    return this;
+  }
+
+  /**
+   * Get miniGameMixedMonetizationRoiD7
+   *
+   * @return miniGameMixedMonetizationRoiD7
+   */
+  @ApiModelProperty(value = "")
+  public Double getMiniGameMixedMonetizationRoiD7() {
+    return miniGameMixedMonetizationRoiD7;
+  }
+
+  public void setMiniGameMixedMonetizationRoiD7(Double miniGameMixedMonetizationRoiD7) {
+    this.miniGameMixedMonetizationRoiD7 = miniGameMixedMonetizationRoiD7;
+  }
+
+  public HourlyReportsGetListStruct miniGameMixedMonetizationRoiD14(
+      Double miniGameMixedMonetizationRoiD14) {
+    this.miniGameMixedMonetizationRoiD14 = miniGameMixedMonetizationRoiD14;
+    return this;
+  }
+
+  /**
+   * Get miniGameMixedMonetizationRoiD14
+   *
+   * @return miniGameMixedMonetizationRoiD14
+   */
+  @ApiModelProperty(value = "")
+  public Double getMiniGameMixedMonetizationRoiD14() {
+    return miniGameMixedMonetizationRoiD14;
+  }
+
+  public void setMiniGameMixedMonetizationRoiD14(Double miniGameMixedMonetizationRoiD14) {
+    this.miniGameMixedMonetizationRoiD14 = miniGameMixedMonetizationRoiD14;
+  }
+
+  public HourlyReportsGetListStruct miniGameAdMonetizationAmountD3(
+      Long miniGameAdMonetizationAmountD3) {
+    this.miniGameAdMonetizationAmountD3 = miniGameAdMonetizationAmountD3;
+    return this;
+  }
+
+  /**
+   * Get miniGameAdMonetizationAmountD3
+   *
+   * @return miniGameAdMonetizationAmountD3
+   */
+  @ApiModelProperty(value = "")
+  public Long getMiniGameAdMonetizationAmountD3() {
+    return miniGameAdMonetizationAmountD3;
+  }
+
+  public void setMiniGameAdMonetizationAmountD3(Long miniGameAdMonetizationAmountD3) {
+    this.miniGameAdMonetizationAmountD3 = miniGameAdMonetizationAmountD3;
+  }
+
+  public HourlyReportsGetListStruct miniGameAdMonetizationAmountD7(
+      Long miniGameAdMonetizationAmountD7) {
+    this.miniGameAdMonetizationAmountD7 = miniGameAdMonetizationAmountD7;
+    return this;
+  }
+
+  /**
+   * Get miniGameAdMonetizationAmountD7
+   *
+   * @return miniGameAdMonetizationAmountD7
+   */
+  @ApiModelProperty(value = "")
+  public Long getMiniGameAdMonetizationAmountD7() {
+    return miniGameAdMonetizationAmountD7;
+  }
+
+  public void setMiniGameAdMonetizationAmountD7(Long miniGameAdMonetizationAmountD7) {
+    this.miniGameAdMonetizationAmountD7 = miniGameAdMonetizationAmountD7;
+  }
+
+  public HourlyReportsGetListStruct miniGameAdMonetizationAmountD14(
+      Long miniGameAdMonetizationAmountD14) {
+    this.miniGameAdMonetizationAmountD14 = miniGameAdMonetizationAmountD14;
+    return this;
+  }
+
+  /**
+   * Get miniGameAdMonetizationAmountD14
+   *
+   * @return miniGameAdMonetizationAmountD14
+   */
+  @ApiModelProperty(value = "")
+  public Long getMiniGameAdMonetizationAmountD14() {
+    return miniGameAdMonetizationAmountD14;
+  }
+
+  public void setMiniGameAdMonetizationAmountD14(Long miniGameAdMonetizationAmountD14) {
+    this.miniGameAdMonetizationAmountD14 = miniGameAdMonetizationAmountD14;
   }
 
   public HourlyReportsGetListStruct miniGameAdMonetizationCost(Long miniGameAdMonetizationCost) {
@@ -10035,6 +10559,82 @@ public class HourlyReportsGetListStruct {
 
   public void setConsultUvCount(Long consultUvCount) {
     this.consultUvCount = consultUvCount;
+  }
+
+  public HourlyReportsGetListStruct miniGamePayD3Roi(Double miniGamePayD3Roi) {
+    this.miniGamePayD3Roi = miniGamePayD3Roi;
+    return this;
+  }
+
+  /**
+   * Get miniGamePayD3Roi
+   *
+   * @return miniGamePayD3Roi
+   */
+  @ApiModelProperty(value = "")
+  public Double getMiniGamePayD3Roi() {
+    return miniGamePayD3Roi;
+  }
+
+  public void setMiniGamePayD3Roi(Double miniGamePayD3Roi) {
+    this.miniGamePayD3Roi = miniGamePayD3Roi;
+  }
+
+  public HourlyReportsGetListStruct miniGamePayD7Roi(Double miniGamePayD7Roi) {
+    this.miniGamePayD7Roi = miniGamePayD7Roi;
+    return this;
+  }
+
+  /**
+   * Get miniGamePayD7Roi
+   *
+   * @return miniGamePayD7Roi
+   */
+  @ApiModelProperty(value = "")
+  public Double getMiniGamePayD7Roi() {
+    return miniGamePayD7Roi;
+  }
+
+  public void setMiniGamePayD7Roi(Double miniGamePayD7Roi) {
+    this.miniGamePayD7Roi = miniGamePayD7Roi;
+  }
+
+  public HourlyReportsGetListStruct miniGamePayD14Roi(Double miniGamePayD14Roi) {
+    this.miniGamePayD14Roi = miniGamePayD14Roi;
+    return this;
+  }
+
+  /**
+   * Get miniGamePayD14Roi
+   *
+   * @return miniGamePayD14Roi
+   */
+  @ApiModelProperty(value = "")
+  public Double getMiniGamePayD14Roi() {
+    return miniGamePayD14Roi;
+  }
+
+  public void setMiniGamePayD14Roi(Double miniGamePayD14Roi) {
+    this.miniGamePayD14Roi = miniGamePayD14Roi;
+  }
+
+  public HourlyReportsGetListStruct miniGamePayD30Roi(Double miniGamePayD30Roi) {
+    this.miniGamePayD30Roi = miniGamePayD30Roi;
+    return this;
+  }
+
+  /**
+   * Get miniGamePayD30Roi
+   *
+   * @return miniGamePayD30Roi
+   */
+  @ApiModelProperty(value = "")
+  public Double getMiniGamePayD30Roi() {
+    return miniGamePayD30Roi;
+  }
+
+  public void setMiniGamePayD30Roi(Double miniGamePayD30Roi) {
+    this.miniGamePayD30Roi = miniGamePayD30Roi;
   }
 
   public HourlyReportsGetListStruct videoFollowCount(Long videoFollowCount) {
@@ -11443,6 +12043,215 @@ public class HourlyReportsGetListStruct {
 
   public void setStayPay30dPv(Long stayPay30dPv) {
     this.stayPay30dPv = stayPay30dPv;
+  }
+
+  public HourlyReportsGetListStruct minigame1dPayCount(Long minigame1dPayCount) {
+    this.minigame1dPayCount = minigame1dPayCount;
+    return this;
+  }
+
+  /**
+   * Get minigame1dPayCount
+   *
+   * @return minigame1dPayCount
+   */
+  @ApiModelProperty(value = "")
+  public Long getMinigame1dPayCount() {
+    return minigame1dPayCount;
+  }
+
+  public void setMinigame1dPayCount(Long minigame1dPayCount) {
+    this.minigame1dPayCount = minigame1dPayCount;
+  }
+
+  public HourlyReportsGetListStruct minigame3dIncomeUv(Long minigame3dIncomeUv) {
+    this.minigame3dIncomeUv = minigame3dIncomeUv;
+    return this;
+  }
+
+  /**
+   * Get minigame3dIncomeUv
+   *
+   * @return minigame3dIncomeUv
+   */
+  @ApiModelProperty(value = "")
+  public Long getMinigame3dIncomeUv() {
+    return minigame3dIncomeUv;
+  }
+
+  public void setMinigame3dIncomeUv(Long minigame3dIncomeUv) {
+    this.minigame3dIncomeUv = minigame3dIncomeUv;
+  }
+
+  public HourlyReportsGetListStruct minigame3dIncomeCount(Long minigame3dIncomeCount) {
+    this.minigame3dIncomeCount = minigame3dIncomeCount;
+    return this;
+  }
+
+  /**
+   * Get minigame3dIncomeCount
+   *
+   * @return minigame3dIncomeCount
+   */
+  @ApiModelProperty(value = "")
+  public Long getMinigame3dIncomeCount() {
+    return minigame3dIncomeCount;
+  }
+
+  public void setMinigame3dIncomeCount(Long minigame3dIncomeCount) {
+    this.minigame3dIncomeCount = minigame3dIncomeCount;
+  }
+
+  public HourlyReportsGetListStruct minigame7dIncomeUv(Long minigame7dIncomeUv) {
+    this.minigame7dIncomeUv = minigame7dIncomeUv;
+    return this;
+  }
+
+  /**
+   * Get minigame7dIncomeUv
+   *
+   * @return minigame7dIncomeUv
+   */
+  @ApiModelProperty(value = "")
+  public Long getMinigame7dIncomeUv() {
+    return minigame7dIncomeUv;
+  }
+
+  public void setMinigame7dIncomeUv(Long minigame7dIncomeUv) {
+    this.minigame7dIncomeUv = minigame7dIncomeUv;
+  }
+
+  public HourlyReportsGetListStruct minigame7dIncomeCount(Long minigame7dIncomeCount) {
+    this.minigame7dIncomeCount = minigame7dIncomeCount;
+    return this;
+  }
+
+  /**
+   * Get minigame7dIncomeCount
+   *
+   * @return minigame7dIncomeCount
+   */
+  @ApiModelProperty(value = "")
+  public Long getMinigame7dIncomeCount() {
+    return minigame7dIncomeCount;
+  }
+
+  public void setMinigame7dIncomeCount(Long minigame7dIncomeCount) {
+    this.minigame7dIncomeCount = minigame7dIncomeCount;
+  }
+
+  public HourlyReportsGetListStruct minigame3dIncomeRoi(Double minigame3dIncomeRoi) {
+    this.minigame3dIncomeRoi = minigame3dIncomeRoi;
+    return this;
+  }
+
+  /**
+   * Get minigame3dIncomeRoi
+   *
+   * @return minigame3dIncomeRoi
+   */
+  @ApiModelProperty(value = "")
+  public Double getMinigame3dIncomeRoi() {
+    return minigame3dIncomeRoi;
+  }
+
+  public void setMinigame3dIncomeRoi(Double minigame3dIncomeRoi) {
+    this.minigame3dIncomeRoi = minigame3dIncomeRoi;
+  }
+
+  public HourlyReportsGetListStruct minigame7dIncomeRoi(Double minigame7dIncomeRoi) {
+    this.minigame7dIncomeRoi = minigame7dIncomeRoi;
+    return this;
+  }
+
+  /**
+   * Get minigame7dIncomeRoi
+   *
+   * @return minigame7dIncomeRoi
+   */
+  @ApiModelProperty(value = "")
+  public Double getMinigame7dIncomeRoi() {
+    return minigame7dIncomeRoi;
+  }
+
+  public void setMinigame7dIncomeRoi(Double minigame7dIncomeRoi) {
+    this.minigame7dIncomeRoi = minigame7dIncomeRoi;
+  }
+
+  public HourlyReportsGetListStruct minigame24hPayUv(Long minigame24hPayUv) {
+    this.minigame24hPayUv = minigame24hPayUv;
+    return this;
+  }
+
+  /**
+   * Get minigame24hPayUv
+   *
+   * @return minigame24hPayUv
+   */
+  @ApiModelProperty(value = "")
+  public Long getMinigame24hPayUv() {
+    return minigame24hPayUv;
+  }
+
+  public void setMinigame24hPayUv(Long minigame24hPayUv) {
+    this.minigame24hPayUv = minigame24hPayUv;
+  }
+
+  public HourlyReportsGetListStruct minigame24hPayAmount(Long minigame24hPayAmount) {
+    this.minigame24hPayAmount = minigame24hPayAmount;
+    return this;
+  }
+
+  /**
+   * Get minigame24hPayAmount
+   *
+   * @return minigame24hPayAmount
+   */
+  @ApiModelProperty(value = "")
+  public Long getMinigame24hPayAmount() {
+    return minigame24hPayAmount;
+  }
+
+  public void setMinigame24hPayAmount(Long minigame24hPayAmount) {
+    this.minigame24hPayAmount = minigame24hPayAmount;
+  }
+
+  public HourlyReportsGetListStruct minigame24hPayRoi(Double minigame24hPayRoi) {
+    this.minigame24hPayRoi = minigame24hPayRoi;
+    return this;
+  }
+
+  /**
+   * Get minigame24hPayRoi
+   *
+   * @return minigame24hPayRoi
+   */
+  @ApiModelProperty(value = "")
+  public Double getMinigame24hPayRoi() {
+    return minigame24hPayRoi;
+  }
+
+  public void setMinigame24hPayRoi(Double minigame24hPayRoi) {
+    this.minigame24hPayRoi = minigame24hPayRoi;
+  }
+
+  public HourlyReportsGetListStruct minigame24hPayArpu(Long minigame24hPayArpu) {
+    this.minigame24hPayArpu = minigame24hPayArpu;
+    return this;
+  }
+
+  /**
+   * Get minigame24hPayArpu
+   *
+   * @return minigame24hPayArpu
+   */
+  @ApiModelProperty(value = "")
+  public Long getMinigame24hPayArpu() {
+    return minigame24hPayArpu;
+  }
+
+  public void setMinigame24hPayArpu(Long minigame24hPayArpu) {
+    this.minigame24hPayArpu = minigame24hPayArpu;
   }
 
   public HourlyReportsGetListStruct liveStreamCrtClickCnt(Long liveStreamCrtClickCnt) {
@@ -13449,82 +14258,6 @@ public class HourlyReportsGetListStruct {
     this.miniGamePayD1PlaUv = miniGamePayD1PlaUv;
   }
 
-  public HourlyReportsGetListStruct miniGamePayD3Uv(Long miniGamePayD3Uv) {
-    this.miniGamePayD3Uv = miniGamePayD3Uv;
-    return this;
-  }
-
-  /**
-   * Get miniGamePayD3Uv
-   *
-   * @return miniGamePayD3Uv
-   */
-  @ApiModelProperty(value = "")
-  public Long getMiniGamePayD3Uv() {
-    return miniGamePayD3Uv;
-  }
-
-  public void setMiniGamePayD3Uv(Long miniGamePayD3Uv) {
-    this.miniGamePayD3Uv = miniGamePayD3Uv;
-  }
-
-  public HourlyReportsGetListStruct miniGamePayD7Uv(Long miniGamePayD7Uv) {
-    this.miniGamePayD7Uv = miniGamePayD7Uv;
-    return this;
-  }
-
-  /**
-   * Get miniGamePayD7Uv
-   *
-   * @return miniGamePayD7Uv
-   */
-  @ApiModelProperty(value = "")
-  public Long getMiniGamePayD7Uv() {
-    return miniGamePayD7Uv;
-  }
-
-  public void setMiniGamePayD7Uv(Long miniGamePayD7Uv) {
-    this.miniGamePayD7Uv = miniGamePayD7Uv;
-  }
-
-  public HourlyReportsGetListStruct miniGamePayD14Uv(Long miniGamePayD14Uv) {
-    this.miniGamePayD14Uv = miniGamePayD14Uv;
-    return this;
-  }
-
-  /**
-   * Get miniGamePayD14Uv
-   *
-   * @return miniGamePayD14Uv
-   */
-  @ApiModelProperty(value = "")
-  public Long getMiniGamePayD14Uv() {
-    return miniGamePayD14Uv;
-  }
-
-  public void setMiniGamePayD14Uv(Long miniGamePayD14Uv) {
-    this.miniGamePayD14Uv = miniGamePayD14Uv;
-  }
-
-  public HourlyReportsGetListStruct miniGamePayD30Uv(Long miniGamePayD30Uv) {
-    this.miniGamePayD30Uv = miniGamePayD30Uv;
-    return this;
-  }
-
-  /**
-   * Get miniGamePayD30Uv
-   *
-   * @return miniGamePayD30Uv
-   */
-  @ApiModelProperty(value = "")
-  public Long getMiniGamePayD30Uv() {
-    return miniGamePayD30Uv;
-  }
-
-  public void setMiniGamePayD30Uv(Long miniGamePayD30Uv) {
-    this.miniGamePayD30Uv = miniGamePayD30Uv;
-  }
-
   public HourlyReportsGetListStruct miniGamePayD3PlaUv(Long miniGamePayD3PlaUv) {
     this.miniGamePayD3PlaUv = miniGamePayD3PlaUv;
     return this;
@@ -13599,82 +14332,6 @@ public class HourlyReportsGetListStruct {
 
   public void setMiniGamePayD30PlaUv(Long miniGamePayD30PlaUv) {
     this.miniGamePayD30PlaUv = miniGamePayD30PlaUv;
-  }
-
-  public HourlyReportsGetListStruct miniGameD3PayCount(Long miniGameD3PayCount) {
-    this.miniGameD3PayCount = miniGameD3PayCount;
-    return this;
-  }
-
-  /**
-   * Get miniGameD3PayCount
-   *
-   * @return miniGameD3PayCount
-   */
-  @ApiModelProperty(value = "")
-  public Long getMiniGameD3PayCount() {
-    return miniGameD3PayCount;
-  }
-
-  public void setMiniGameD3PayCount(Long miniGameD3PayCount) {
-    this.miniGameD3PayCount = miniGameD3PayCount;
-  }
-
-  public HourlyReportsGetListStruct miniGameD7PayCount(Long miniGameD7PayCount) {
-    this.miniGameD7PayCount = miniGameD7PayCount;
-    return this;
-  }
-
-  /**
-   * Get miniGameD7PayCount
-   *
-   * @return miniGameD7PayCount
-   */
-  @ApiModelProperty(value = "")
-  public Long getMiniGameD7PayCount() {
-    return miniGameD7PayCount;
-  }
-
-  public void setMiniGameD7PayCount(Long miniGameD7PayCount) {
-    this.miniGameD7PayCount = miniGameD7PayCount;
-  }
-
-  public HourlyReportsGetListStruct miniGameD14PayCount(Long miniGameD14PayCount) {
-    this.miniGameD14PayCount = miniGameD14PayCount;
-    return this;
-  }
-
-  /**
-   * Get miniGameD14PayCount
-   *
-   * @return miniGameD14PayCount
-   */
-  @ApiModelProperty(value = "")
-  public Long getMiniGameD14PayCount() {
-    return miniGameD14PayCount;
-  }
-
-  public void setMiniGameD14PayCount(Long miniGameD14PayCount) {
-    this.miniGameD14PayCount = miniGameD14PayCount;
-  }
-
-  public HourlyReportsGetListStruct miniGameD30PayCount(Long miniGameD30PayCount) {
-    this.miniGameD30PayCount = miniGameD30PayCount;
-    return this;
-  }
-
-  /**
-   * Get miniGameD30PayCount
-   *
-   * @return miniGameD30PayCount
-   */
-  @ApiModelProperty(value = "")
-  public Long getMiniGameD30PayCount() {
-    return miniGameD30PayCount;
-  }
-
-  public void setMiniGameD30PayCount(Long miniGameD30PayCount) {
-    this.miniGameD30PayCount = miniGameD30PayCount;
   }
 
   public HourlyReportsGetListStruct miniGameD3PayPlaCount(Long miniGameD3PayPlaCount) {
@@ -13808,238 +14465,6 @@ public class HourlyReportsGetListStruct {
 
   public void setActiveD5FirstPayCost(Long activeD5FirstPayCost) {
     this.activeD5FirstPayCost = activeD5FirstPayCost;
-  }
-
-  public HourlyReportsGetListStruct miniGameFirstDayAdMonetizationUsers(
-      Long miniGameFirstDayAdMonetizationUsers) {
-    this.miniGameFirstDayAdMonetizationUsers = miniGameFirstDayAdMonetizationUsers;
-    return this;
-  }
-
-  /**
-   * Get miniGameFirstDayAdMonetizationUsers
-   *
-   * @return miniGameFirstDayAdMonetizationUsers
-   */
-  @ApiModelProperty(value = "")
-  public Long getMiniGameFirstDayAdMonetizationUsers() {
-    return miniGameFirstDayAdMonetizationUsers;
-  }
-
-  public void setMiniGameFirstDayAdMonetizationUsers(Long miniGameFirstDayAdMonetizationUsers) {
-    this.miniGameFirstDayAdMonetizationUsers = miniGameFirstDayAdMonetizationUsers;
-  }
-
-  public HourlyReportsGetListStruct miniGameFirstDayAdMonetizationAmount(
-      Long miniGameFirstDayAdMonetizationAmount) {
-    this.miniGameFirstDayAdMonetizationAmount = miniGameFirstDayAdMonetizationAmount;
-    return this;
-  }
-
-  /**
-   * Get miniGameFirstDayAdMonetizationAmount
-   *
-   * @return miniGameFirstDayAdMonetizationAmount
-   */
-  @ApiModelProperty(value = "")
-  public Long getMiniGameFirstDayAdMonetizationAmount() {
-    return miniGameFirstDayAdMonetizationAmount;
-  }
-
-  public void setMiniGameFirstDayAdMonetizationAmount(Long miniGameFirstDayAdMonetizationAmount) {
-    this.miniGameFirstDayAdMonetizationAmount = miniGameFirstDayAdMonetizationAmount;
-  }
-
-  public HourlyReportsGetListStruct miniGameFirstDayAdPayingCost(
-      Long miniGameFirstDayAdPayingCost) {
-    this.miniGameFirstDayAdPayingCost = miniGameFirstDayAdPayingCost;
-    return this;
-  }
-
-  /**
-   * Get miniGameFirstDayAdPayingCost
-   *
-   * @return miniGameFirstDayAdPayingCost
-   */
-  @ApiModelProperty(value = "")
-  public Long getMiniGameFirstDayAdPayingCost() {
-    return miniGameFirstDayAdPayingCost;
-  }
-
-  public void setMiniGameFirstDayAdPayingCost(Long miniGameFirstDayAdPayingCost) {
-    this.miniGameFirstDayAdPayingCost = miniGameFirstDayAdPayingCost;
-  }
-
-  public HourlyReportsGetListStruct miniGameIncomeRoi1(Double miniGameIncomeRoi1) {
-    this.miniGameIncomeRoi1 = miniGameIncomeRoi1;
-    return this;
-  }
-
-  /**
-   * Get miniGameIncomeRoi1
-   *
-   * @return miniGameIncomeRoi1
-   */
-  @ApiModelProperty(value = "")
-  public Double getMiniGameIncomeRoi1() {
-    return miniGameIncomeRoi1;
-  }
-
-  public void setMiniGameIncomeRoi1(Double miniGameIncomeRoi1) {
-    this.miniGameIncomeRoi1 = miniGameIncomeRoi1;
-  }
-
-  public HourlyReportsGetListStruct miniGameFirstDayAdPayingArpu(
-      Long miniGameFirstDayAdPayingArpu) {
-    this.miniGameFirstDayAdPayingArpu = miniGameFirstDayAdPayingArpu;
-    return this;
-  }
-
-  /**
-   * Get miniGameFirstDayAdPayingArpu
-   *
-   * @return miniGameFirstDayAdPayingArpu
-   */
-  @ApiModelProperty(value = "")
-  public Long getMiniGameFirstDayAdPayingArpu() {
-    return miniGameFirstDayAdPayingArpu;
-  }
-
-  public void setMiniGameFirstDayAdPayingArpu(Long miniGameFirstDayAdPayingArpu) {
-    this.miniGameFirstDayAdPayingArpu = miniGameFirstDayAdPayingArpu;
-  }
-
-  public HourlyReportsGetListStruct miniGamePayingUsersD1(Long miniGamePayingUsersD1) {
-    this.miniGamePayingUsersD1 = miniGamePayingUsersD1;
-    return this;
-  }
-
-  /**
-   * Get miniGamePayingUsersD1
-   *
-   * @return miniGamePayingUsersD1
-   */
-  @ApiModelProperty(value = "")
-  public Long getMiniGamePayingUsersD1() {
-    return miniGamePayingUsersD1;
-  }
-
-  public void setMiniGamePayingUsersD1(Long miniGamePayingUsersD1) {
-    this.miniGamePayingUsersD1 = miniGamePayingUsersD1;
-  }
-
-  public HourlyReportsGetListStruct miniGamePayingAmountD1(Long miniGamePayingAmountD1) {
-    this.miniGamePayingAmountD1 = miniGamePayingAmountD1;
-    return this;
-  }
-
-  /**
-   * Get miniGamePayingAmountD1
-   *
-   * @return miniGamePayingAmountD1
-   */
-  @ApiModelProperty(value = "")
-  public Long getMiniGamePayingAmountD1() {
-    return miniGamePayingAmountD1;
-  }
-
-  public void setMiniGamePayingAmountD1(Long miniGamePayingAmountD1) {
-    this.miniGamePayingAmountD1 = miniGamePayingAmountD1;
-  }
-
-  public HourlyReportsGetListStruct miniGamePayingAmountD3(Long miniGamePayingAmountD3) {
-    this.miniGamePayingAmountD3 = miniGamePayingAmountD3;
-    return this;
-  }
-
-  /**
-   * Get miniGamePayingAmountD3
-   *
-   * @return miniGamePayingAmountD3
-   */
-  @ApiModelProperty(value = "")
-  public Long getMiniGamePayingAmountD3() {
-    return miniGamePayingAmountD3;
-  }
-
-  public void setMiniGamePayingAmountD3(Long miniGamePayingAmountD3) {
-    this.miniGamePayingAmountD3 = miniGamePayingAmountD3;
-  }
-
-  public HourlyReportsGetListStruct miniGamePayingAmountD7(Long miniGamePayingAmountD7) {
-    this.miniGamePayingAmountD7 = miniGamePayingAmountD7;
-    return this;
-  }
-
-  /**
-   * Get miniGamePayingAmountD7
-   *
-   * @return miniGamePayingAmountD7
-   */
-  @ApiModelProperty(value = "")
-  public Long getMiniGamePayingAmountD7() {
-    return miniGamePayingAmountD7;
-  }
-
-  public void setMiniGamePayingAmountD7(Long miniGamePayingAmountD7) {
-    this.miniGamePayingAmountD7 = miniGamePayingAmountD7;
-  }
-
-  public HourlyReportsGetListStruct miniGamePayingAmountD14(Long miniGamePayingAmountD14) {
-    this.miniGamePayingAmountD14 = miniGamePayingAmountD14;
-    return this;
-  }
-
-  /**
-   * Get miniGamePayingAmountD14
-   *
-   * @return miniGamePayingAmountD14
-   */
-  @ApiModelProperty(value = "")
-  public Long getMiniGamePayingAmountD14() {
-    return miniGamePayingAmountD14;
-  }
-
-  public void setMiniGamePayingAmountD14(Long miniGamePayingAmountD14) {
-    this.miniGamePayingAmountD14 = miniGamePayingAmountD14;
-  }
-
-  public HourlyReportsGetListStruct miniGamePayingAmountD30(Long miniGamePayingAmountD30) {
-    this.miniGamePayingAmountD30 = miniGamePayingAmountD30;
-    return this;
-  }
-
-  /**
-   * Get miniGamePayingAmountD30
-   *
-   * @return miniGamePayingAmountD30
-   */
-  @ApiModelProperty(value = "")
-  public Long getMiniGamePayingAmountD30() {
-    return miniGamePayingAmountD30;
-  }
-
-  public void setMiniGamePayingAmountD30(Long miniGamePayingAmountD30) {
-    this.miniGamePayingAmountD30 = miniGamePayingAmountD30;
-  }
-
-  public HourlyReportsGetListStruct miniGameFirstDayPayingRoi(Double miniGameFirstDayPayingRoi) {
-    this.miniGameFirstDayPayingRoi = miniGameFirstDayPayingRoi;
-    return this;
-  }
-
-  /**
-   * Get miniGameFirstDayPayingRoi
-   *
-   * @return miniGameFirstDayPayingRoi
-   */
-  @ApiModelProperty(value = "")
-  public Double getMiniGameFirstDayPayingRoi() {
-    return miniGameFirstDayPayingRoi;
-  }
-
-  public void setMiniGameFirstDayPayingRoi(Double miniGameFirstDayPayingRoi) {
-    this.miniGameFirstDayPayingRoi = miniGameFirstDayPayingRoi;
   }
 
   public HourlyReportsGetListStruct miniGamePayingAmountD1ByUpload(
@@ -14217,26 +14642,6 @@ public class HourlyReportsGetListStruct {
     this.mixedMonetizationRoiD14 = mixedMonetizationRoiD14;
   }
 
-  public HourlyReportsGetListStruct miniGameMixedMonetizationRoiD1(
-      Double miniGameMixedMonetizationRoiD1) {
-    this.miniGameMixedMonetizationRoiD1 = miniGameMixedMonetizationRoiD1;
-    return this;
-  }
-
-  /**
-   * Get miniGameMixedMonetizationRoiD1
-   *
-   * @return miniGameMixedMonetizationRoiD1
-   */
-  @ApiModelProperty(value = "")
-  public Double getMiniGameMixedMonetizationRoiD1() {
-    return miniGameMixedMonetizationRoiD1;
-  }
-
-  public void setMiniGameMixedMonetizationRoiD1(Double miniGameMixedMonetizationRoiD1) {
-    this.miniGameMixedMonetizationRoiD1 = miniGameMixedMonetizationRoiD1;
-  }
-
   public HourlyReportsGetListStruct miniGameMixedMonetizationRoiD1ByReporting(
       Double miniGameMixedMonetizationRoiD1ByReporting) {
     this.miniGameMixedMonetizationRoiD1ByReporting = miniGameMixedMonetizationRoiD1ByReporting;
@@ -14256,26 +14661,6 @@ public class HourlyReportsGetListStruct {
   public void setMiniGameMixedMonetizationRoiD1ByReporting(
       Double miniGameMixedMonetizationRoiD1ByReporting) {
     this.miniGameMixedMonetizationRoiD1ByReporting = miniGameMixedMonetizationRoiD1ByReporting;
-  }
-
-  public HourlyReportsGetListStruct miniGameMixedMonetizationRoiD3(
-      Double miniGameMixedMonetizationRoiD3) {
-    this.miniGameMixedMonetizationRoiD3 = miniGameMixedMonetizationRoiD3;
-    return this;
-  }
-
-  /**
-   * Get miniGameMixedMonetizationRoiD3
-   *
-   * @return miniGameMixedMonetizationRoiD3
-   */
-  @ApiModelProperty(value = "")
-  public Double getMiniGameMixedMonetizationRoiD3() {
-    return miniGameMixedMonetizationRoiD3;
-  }
-
-  public void setMiniGameMixedMonetizationRoiD3(Double miniGameMixedMonetizationRoiD3) {
-    this.miniGameMixedMonetizationRoiD3 = miniGameMixedMonetizationRoiD3;
   }
 
   public HourlyReportsGetListStruct miniGameMixedMonetizationRoiD3ByReporting(
@@ -14299,26 +14684,6 @@ public class HourlyReportsGetListStruct {
     this.miniGameMixedMonetizationRoiD3ByReporting = miniGameMixedMonetizationRoiD3ByReporting;
   }
 
-  public HourlyReportsGetListStruct miniGameMixedMonetizationRoiD7(
-      Double miniGameMixedMonetizationRoiD7) {
-    this.miniGameMixedMonetizationRoiD7 = miniGameMixedMonetizationRoiD7;
-    return this;
-  }
-
-  /**
-   * Get miniGameMixedMonetizationRoiD7
-   *
-   * @return miniGameMixedMonetizationRoiD7
-   */
-  @ApiModelProperty(value = "")
-  public Double getMiniGameMixedMonetizationRoiD7() {
-    return miniGameMixedMonetizationRoiD7;
-  }
-
-  public void setMiniGameMixedMonetizationRoiD7(Double miniGameMixedMonetizationRoiD7) {
-    this.miniGameMixedMonetizationRoiD7 = miniGameMixedMonetizationRoiD7;
-  }
-
   public HourlyReportsGetListStruct miniGameMixedMonetizationRoiD7ByReporting(
       Double miniGameMixedMonetizationRoiD7ByReporting) {
     this.miniGameMixedMonetizationRoiD7ByReporting = miniGameMixedMonetizationRoiD7ByReporting;
@@ -14338,26 +14703,6 @@ public class HourlyReportsGetListStruct {
   public void setMiniGameMixedMonetizationRoiD7ByReporting(
       Double miniGameMixedMonetizationRoiD7ByReporting) {
     this.miniGameMixedMonetizationRoiD7ByReporting = miniGameMixedMonetizationRoiD7ByReporting;
-  }
-
-  public HourlyReportsGetListStruct miniGameMixedMonetizationRoiD14(
-      Double miniGameMixedMonetizationRoiD14) {
-    this.miniGameMixedMonetizationRoiD14 = miniGameMixedMonetizationRoiD14;
-    return this;
-  }
-
-  /**
-   * Get miniGameMixedMonetizationRoiD14
-   *
-   * @return miniGameMixedMonetizationRoiD14
-   */
-  @ApiModelProperty(value = "")
-  public Double getMiniGameMixedMonetizationRoiD14() {
-    return miniGameMixedMonetizationRoiD14;
-  }
-
-  public void setMiniGameMixedMonetizationRoiD14(Double miniGameMixedMonetizationRoiD14) {
-    this.miniGameMixedMonetizationRoiD14 = miniGameMixedMonetizationRoiD14;
   }
 
   public HourlyReportsGetListStruct miniGameMixedMonetizationRoiD14ByReporting(
@@ -14456,66 +14801,6 @@ public class HourlyReportsGetListStruct {
 
   public void setAdMonetizationPenetrationRatD1(Double adMonetizationPenetrationRatD1) {
     this.adMonetizationPenetrationRatD1 = adMonetizationPenetrationRatD1;
-  }
-
-  public HourlyReportsGetListStruct miniGameAdMonetizationAmountD3(
-      Long miniGameAdMonetizationAmountD3) {
-    this.miniGameAdMonetizationAmountD3 = miniGameAdMonetizationAmountD3;
-    return this;
-  }
-
-  /**
-   * Get miniGameAdMonetizationAmountD3
-   *
-   * @return miniGameAdMonetizationAmountD3
-   */
-  @ApiModelProperty(value = "")
-  public Long getMiniGameAdMonetizationAmountD3() {
-    return miniGameAdMonetizationAmountD3;
-  }
-
-  public void setMiniGameAdMonetizationAmountD3(Long miniGameAdMonetizationAmountD3) {
-    this.miniGameAdMonetizationAmountD3 = miniGameAdMonetizationAmountD3;
-  }
-
-  public HourlyReportsGetListStruct miniGameAdMonetizationAmountD7(
-      Long miniGameAdMonetizationAmountD7) {
-    this.miniGameAdMonetizationAmountD7 = miniGameAdMonetizationAmountD7;
-    return this;
-  }
-
-  /**
-   * Get miniGameAdMonetizationAmountD7
-   *
-   * @return miniGameAdMonetizationAmountD7
-   */
-  @ApiModelProperty(value = "")
-  public Long getMiniGameAdMonetizationAmountD7() {
-    return miniGameAdMonetizationAmountD7;
-  }
-
-  public void setMiniGameAdMonetizationAmountD7(Long miniGameAdMonetizationAmountD7) {
-    this.miniGameAdMonetizationAmountD7 = miniGameAdMonetizationAmountD7;
-  }
-
-  public HourlyReportsGetListStruct miniGameAdMonetizationAmountD14(
-      Long miniGameAdMonetizationAmountD14) {
-    this.miniGameAdMonetizationAmountD14 = miniGameAdMonetizationAmountD14;
-    return this;
-  }
-
-  /**
-   * Get miniGameAdMonetizationAmountD14
-   *
-   * @return miniGameAdMonetizationAmountD14
-   */
-  @ApiModelProperty(value = "")
-  public Long getMiniGameAdMonetizationAmountD14() {
-    return miniGameAdMonetizationAmountD14;
-  }
-
-  public void setMiniGameAdMonetizationAmountD14(Long miniGameAdMonetizationAmountD14) {
-    this.miniGameAdMonetizationAmountD14 = miniGameAdMonetizationAmountD14;
   }
 
   public HourlyReportsGetListStruct miniGamePayingArpuD1(Long miniGamePayingArpuD1) {
@@ -14747,82 +15032,6 @@ public class HourlyReportsGetListStruct {
     this.miniGameFirstPayPlaCost = miniGameFirstPayPlaCost;
   }
 
-  public HourlyReportsGetListStruct miniGamePayD3Roi(Double miniGamePayD3Roi) {
-    this.miniGamePayD3Roi = miniGamePayD3Roi;
-    return this;
-  }
-
-  /**
-   * Get miniGamePayD3Roi
-   *
-   * @return miniGamePayD3Roi
-   */
-  @ApiModelProperty(value = "")
-  public Double getMiniGamePayD3Roi() {
-    return miniGamePayD3Roi;
-  }
-
-  public void setMiniGamePayD3Roi(Double miniGamePayD3Roi) {
-    this.miniGamePayD3Roi = miniGamePayD3Roi;
-  }
-
-  public HourlyReportsGetListStruct miniGamePayD7Roi(Double miniGamePayD7Roi) {
-    this.miniGamePayD7Roi = miniGamePayD7Roi;
-    return this;
-  }
-
-  /**
-   * Get miniGamePayD7Roi
-   *
-   * @return miniGamePayD7Roi
-   */
-  @ApiModelProperty(value = "")
-  public Double getMiniGamePayD7Roi() {
-    return miniGamePayD7Roi;
-  }
-
-  public void setMiniGamePayD7Roi(Double miniGamePayD7Roi) {
-    this.miniGamePayD7Roi = miniGamePayD7Roi;
-  }
-
-  public HourlyReportsGetListStruct miniGamePayD14Roi(Double miniGamePayD14Roi) {
-    this.miniGamePayD14Roi = miniGamePayD14Roi;
-    return this;
-  }
-
-  /**
-   * Get miniGamePayD14Roi
-   *
-   * @return miniGamePayD14Roi
-   */
-  @ApiModelProperty(value = "")
-  public Double getMiniGamePayD14Roi() {
-    return miniGamePayD14Roi;
-  }
-
-  public void setMiniGamePayD14Roi(Double miniGamePayD14Roi) {
-    this.miniGamePayD14Roi = miniGamePayD14Roi;
-  }
-
-  public HourlyReportsGetListStruct miniGamePayD30Roi(Double miniGamePayD30Roi) {
-    this.miniGamePayD30Roi = miniGamePayD30Roi;
-    return this;
-  }
-
-  /**
-   * Get miniGamePayD30Roi
-   *
-   * @return miniGamePayD30Roi
-   */
-  @ApiModelProperty(value = "")
-  public Double getMiniGamePayD30Roi() {
-    return miniGamePayD30Roi;
-  }
-
-  public void setMiniGamePayD30Roi(Double miniGamePayD30Roi) {
-    this.miniGamePayD30Roi = miniGamePayD30Roi;
-  }
-
   public HourlyReportsGetListStruct miniGamePayD3PlaRoi(Double miniGamePayD3PlaRoi) {
     this.miniGamePayD3PlaRoi = miniGamePayD3PlaRoi;
     return this;
@@ -14897,215 +15106,6 @@ public class HourlyReportsGetListStruct {
 
   public void setMiniGamePayD30PlaRoi(Double miniGamePayD30PlaRoi) {
     this.miniGamePayD30PlaRoi = miniGamePayD30PlaRoi;
-  }
-
-  public HourlyReportsGetListStruct minigame1dPayCount(Long minigame1dPayCount) {
-    this.minigame1dPayCount = minigame1dPayCount;
-    return this;
-  }
-
-  /**
-   * Get minigame1dPayCount
-   *
-   * @return minigame1dPayCount
-   */
-  @ApiModelProperty(value = "")
-  public Long getMinigame1dPayCount() {
-    return minigame1dPayCount;
-  }
-
-  public void setMinigame1dPayCount(Long minigame1dPayCount) {
-    this.minigame1dPayCount = minigame1dPayCount;
-  }
-
-  public HourlyReportsGetListStruct minigame3dIncomeUv(Long minigame3dIncomeUv) {
-    this.minigame3dIncomeUv = minigame3dIncomeUv;
-    return this;
-  }
-
-  /**
-   * Get minigame3dIncomeUv
-   *
-   * @return minigame3dIncomeUv
-   */
-  @ApiModelProperty(value = "")
-  public Long getMinigame3dIncomeUv() {
-    return minigame3dIncomeUv;
-  }
-
-  public void setMinigame3dIncomeUv(Long minigame3dIncomeUv) {
-    this.minigame3dIncomeUv = minigame3dIncomeUv;
-  }
-
-  public HourlyReportsGetListStruct minigame3dIncomeCount(Long minigame3dIncomeCount) {
-    this.minigame3dIncomeCount = minigame3dIncomeCount;
-    return this;
-  }
-
-  /**
-   * Get minigame3dIncomeCount
-   *
-   * @return minigame3dIncomeCount
-   */
-  @ApiModelProperty(value = "")
-  public Long getMinigame3dIncomeCount() {
-    return minigame3dIncomeCount;
-  }
-
-  public void setMinigame3dIncomeCount(Long minigame3dIncomeCount) {
-    this.minigame3dIncomeCount = minigame3dIncomeCount;
-  }
-
-  public HourlyReportsGetListStruct minigame7dIncomeUv(Long minigame7dIncomeUv) {
-    this.minigame7dIncomeUv = minigame7dIncomeUv;
-    return this;
-  }
-
-  /**
-   * Get minigame7dIncomeUv
-   *
-   * @return minigame7dIncomeUv
-   */
-  @ApiModelProperty(value = "")
-  public Long getMinigame7dIncomeUv() {
-    return minigame7dIncomeUv;
-  }
-
-  public void setMinigame7dIncomeUv(Long minigame7dIncomeUv) {
-    this.minigame7dIncomeUv = minigame7dIncomeUv;
-  }
-
-  public HourlyReportsGetListStruct minigame7dIncomeCount(Long minigame7dIncomeCount) {
-    this.minigame7dIncomeCount = minigame7dIncomeCount;
-    return this;
-  }
-
-  /**
-   * Get minigame7dIncomeCount
-   *
-   * @return minigame7dIncomeCount
-   */
-  @ApiModelProperty(value = "")
-  public Long getMinigame7dIncomeCount() {
-    return minigame7dIncomeCount;
-  }
-
-  public void setMinigame7dIncomeCount(Long minigame7dIncomeCount) {
-    this.minigame7dIncomeCount = minigame7dIncomeCount;
-  }
-
-  public HourlyReportsGetListStruct minigame3dIncomeRoi(Double minigame3dIncomeRoi) {
-    this.minigame3dIncomeRoi = minigame3dIncomeRoi;
-    return this;
-  }
-
-  /**
-   * Get minigame3dIncomeRoi
-   *
-   * @return minigame3dIncomeRoi
-   */
-  @ApiModelProperty(value = "")
-  public Double getMinigame3dIncomeRoi() {
-    return minigame3dIncomeRoi;
-  }
-
-  public void setMinigame3dIncomeRoi(Double minigame3dIncomeRoi) {
-    this.minigame3dIncomeRoi = minigame3dIncomeRoi;
-  }
-
-  public HourlyReportsGetListStruct minigame7dIncomeRoi(Double minigame7dIncomeRoi) {
-    this.minigame7dIncomeRoi = minigame7dIncomeRoi;
-    return this;
-  }
-
-  /**
-   * Get minigame7dIncomeRoi
-   *
-   * @return minigame7dIncomeRoi
-   */
-  @ApiModelProperty(value = "")
-  public Double getMinigame7dIncomeRoi() {
-    return minigame7dIncomeRoi;
-  }
-
-  public void setMinigame7dIncomeRoi(Double minigame7dIncomeRoi) {
-    this.minigame7dIncomeRoi = minigame7dIncomeRoi;
-  }
-
-  public HourlyReportsGetListStruct minigame24hPayUv(Long minigame24hPayUv) {
-    this.minigame24hPayUv = minigame24hPayUv;
-    return this;
-  }
-
-  /**
-   * Get minigame24hPayUv
-   *
-   * @return minigame24hPayUv
-   */
-  @ApiModelProperty(value = "")
-  public Long getMinigame24hPayUv() {
-    return minigame24hPayUv;
-  }
-
-  public void setMinigame24hPayUv(Long minigame24hPayUv) {
-    this.minigame24hPayUv = minigame24hPayUv;
-  }
-
-  public HourlyReportsGetListStruct minigame24hPayAmount(Long minigame24hPayAmount) {
-    this.minigame24hPayAmount = minigame24hPayAmount;
-    return this;
-  }
-
-  /**
-   * Get minigame24hPayAmount
-   *
-   * @return minigame24hPayAmount
-   */
-  @ApiModelProperty(value = "")
-  public Long getMinigame24hPayAmount() {
-    return minigame24hPayAmount;
-  }
-
-  public void setMinigame24hPayAmount(Long minigame24hPayAmount) {
-    this.minigame24hPayAmount = minigame24hPayAmount;
-  }
-
-  public HourlyReportsGetListStruct minigame24hPayRoi(Double minigame24hPayRoi) {
-    this.minigame24hPayRoi = minigame24hPayRoi;
-    return this;
-  }
-
-  /**
-   * Get minigame24hPayRoi
-   *
-   * @return minigame24hPayRoi
-   */
-  @ApiModelProperty(value = "")
-  public Double getMinigame24hPayRoi() {
-    return minigame24hPayRoi;
-  }
-
-  public void setMinigame24hPayRoi(Double minigame24hPayRoi) {
-    this.minigame24hPayRoi = minigame24hPayRoi;
-  }
-
-  public HourlyReportsGetListStruct minigame24hPayArpu(Long minigame24hPayArpu) {
-    this.minigame24hPayArpu = minigame24hPayArpu;
-    return this;
-  }
-
-  /**
-   * Get minigame24hPayArpu
-   *
-   * @return minigame24hPayArpu
-   */
-  @ApiModelProperty(value = "")
-  public Long getMinigame24hPayArpu() {
-    return minigame24hPayArpu;
-  }
-
-  public void setMinigame24hPayArpu(Long minigame24hPayArpu) {
-    this.minigame24hPayArpu = minigame24hPayArpu;
   }
 
   public HourlyReportsGetListStruct campaignId(Long campaignId) {
@@ -17114,6 +17114,14 @@ public class HourlyReportsGetListStruct {
         && Objects.equals(this.addDesktopPv, hourlyReportsGetListStruct.addDesktopPv)
         && Objects.equals(this.addDesktopCost, hourlyReportsGetListStruct.addDesktopCost)
         && Objects.equals(this.firstPayCount, hourlyReportsGetListStruct.firstPayCount)
+        && Objects.equals(this.miniGamePayD3Uv, hourlyReportsGetListStruct.miniGamePayD3Uv)
+        && Objects.equals(this.miniGamePayD7Uv, hourlyReportsGetListStruct.miniGamePayD7Uv)
+        && Objects.equals(this.miniGamePayD14Uv, hourlyReportsGetListStruct.miniGamePayD14Uv)
+        && Objects.equals(this.miniGamePayD30Uv, hourlyReportsGetListStruct.miniGamePayD30Uv)
+        && Objects.equals(this.miniGameD3PayCount, hourlyReportsGetListStruct.miniGameD3PayCount)
+        && Objects.equals(this.miniGameD7PayCount, hourlyReportsGetListStruct.miniGameD7PayCount)
+        && Objects.equals(this.miniGameD14PayCount, hourlyReportsGetListStruct.miniGameD14PayCount)
+        && Objects.equals(this.miniGameD30PayCount, hourlyReportsGetListStruct.miniGameD30PayCount)
         && Objects.equals(this.wechatLocalPayCount, hourlyReportsGetListStruct.wechatLocalPayCount)
         && Objects.equals(
             this.wechatLocalPayuserCount, hourlyReportsGetListStruct.wechatLocalPayuserCount)
@@ -17304,11 +17312,38 @@ public class HourlyReportsGetListStruct {
         && Objects.equals(
             this.miniGameAdMonetizationUsers,
             hourlyReportsGetListStruct.miniGameAdMonetizationUsers)
+        && Objects.equals(
+            this.miniGameFirstDayAdMonetizationUsers,
+            hourlyReportsGetListStruct.miniGameFirstDayAdMonetizationUsers)
+        && Objects.equals(
+            this.miniGameFirstDayAdMonetizationAmount,
+            hourlyReportsGetListStruct.miniGameFirstDayAdMonetizationAmount)
+        && Objects.equals(
+            this.miniGameFirstDayAdPayingCost,
+            hourlyReportsGetListStruct.miniGameFirstDayAdPayingCost)
+        && Objects.equals(this.miniGameIncomeRoi1, hourlyReportsGetListStruct.miniGameIncomeRoi1)
+        && Objects.equals(
+            this.miniGameFirstDayAdPayingArpu,
+            hourlyReportsGetListStruct.miniGameFirstDayAdPayingArpu)
         && Objects.equals(this.miniGamePayingCount, hourlyReportsGetListStruct.miniGamePayingCount)
         && Objects.equals(
             this.miniGamePayingAmount, hourlyReportsGetListStruct.miniGamePayingAmount)
         && Objects.equals(
+            this.miniGamePayingUsersD1, hourlyReportsGetListStruct.miniGamePayingUsersD1)
+        && Objects.equals(
+            this.miniGamePayingAmountD1, hourlyReportsGetListStruct.miniGamePayingAmountD1)
+        && Objects.equals(
+            this.miniGamePayingAmountD3, hourlyReportsGetListStruct.miniGamePayingAmountD3)
+        && Objects.equals(
+            this.miniGamePayingAmountD7, hourlyReportsGetListStruct.miniGamePayingAmountD7)
+        && Objects.equals(
+            this.miniGamePayingAmountD14, hourlyReportsGetListStruct.miniGamePayingAmountD14)
+        && Objects.equals(
+            this.miniGamePayingAmountD30, hourlyReportsGetListStruct.miniGamePayingAmountD30)
+        && Objects.equals(
             this.miniGameFirstPayingUsers, hourlyReportsGetListStruct.miniGameFirstPayingUsers)
+        && Objects.equals(
+            this.miniGameFirstDayPayingRoi, hourlyReportsGetListStruct.miniGameFirstDayPayingRoi)
         && Objects.equals(
             this.miniGameCreateRoleUsers, hourlyReportsGetListStruct.miniGameCreateRoleUsers)
         && Objects.equals(
@@ -17372,6 +17407,27 @@ public class HourlyReportsGetListStruct {
         && Objects.equals(
             this.keyBehaviorConversionsRate, hourlyReportsGetListStruct.keyBehaviorConversionsRate)
         && Objects.equals(this.firstDayOrderRoi, hourlyReportsGetListStruct.firstDayOrderRoi)
+        && Objects.equals(
+            this.miniGameMixedMonetizationRoiD1,
+            hourlyReportsGetListStruct.miniGameMixedMonetizationRoiD1)
+        && Objects.equals(
+            this.miniGameMixedMonetizationRoiD3,
+            hourlyReportsGetListStruct.miniGameMixedMonetizationRoiD3)
+        && Objects.equals(
+            this.miniGameMixedMonetizationRoiD7,
+            hourlyReportsGetListStruct.miniGameMixedMonetizationRoiD7)
+        && Objects.equals(
+            this.miniGameMixedMonetizationRoiD14,
+            hourlyReportsGetListStruct.miniGameMixedMonetizationRoiD14)
+        && Objects.equals(
+            this.miniGameAdMonetizationAmountD3,
+            hourlyReportsGetListStruct.miniGameAdMonetizationAmountD3)
+        && Objects.equals(
+            this.miniGameAdMonetizationAmountD7,
+            hourlyReportsGetListStruct.miniGameAdMonetizationAmountD7)
+        && Objects.equals(
+            this.miniGameAdMonetizationAmountD14,
+            hourlyReportsGetListStruct.miniGameAdMonetizationAmountD14)
         && Objects.equals(
             this.miniGameAdMonetizationCost, hourlyReportsGetListStruct.miniGameAdMonetizationCost)
         && Objects.equals(
@@ -17447,6 +17503,10 @@ public class HourlyReportsGetListStruct {
         && Objects.equals(
             this.miniGameCreateRoleRate, hourlyReportsGetListStruct.miniGameCreateRoleRate)
         && Objects.equals(this.consultUvCount, hourlyReportsGetListStruct.consultUvCount)
+        && Objects.equals(this.miniGamePayD3Roi, hourlyReportsGetListStruct.miniGamePayD3Roi)
+        && Objects.equals(this.miniGamePayD7Roi, hourlyReportsGetListStruct.miniGamePayD7Roi)
+        && Objects.equals(this.miniGamePayD14Roi, hourlyReportsGetListStruct.miniGamePayD14Roi)
+        && Objects.equals(this.miniGamePayD30Roi, hourlyReportsGetListStruct.miniGamePayD30Roi)
         && Objects.equals(this.videoFollowCount, hourlyReportsGetListStruct.videoFollowCount)
         && Objects.equals(this.videoHeartCount, hourlyReportsGetListStruct.videoHeartCount)
         && Objects.equals(this.videoCommentCount, hourlyReportsGetListStruct.videoCommentCount)
@@ -17538,6 +17598,20 @@ public class HourlyReportsGetListStruct {
         && Objects.equals(this.stayPay7dPv, hourlyReportsGetListStruct.stayPay7dPv)
         && Objects.equals(this.stayPay15dPv, hourlyReportsGetListStruct.stayPay15dPv)
         && Objects.equals(this.stayPay30dPv, hourlyReportsGetListStruct.stayPay30dPv)
+        && Objects.equals(this.minigame1dPayCount, hourlyReportsGetListStruct.minigame1dPayCount)
+        && Objects.equals(this.minigame3dIncomeUv, hourlyReportsGetListStruct.minigame3dIncomeUv)
+        && Objects.equals(
+            this.minigame3dIncomeCount, hourlyReportsGetListStruct.minigame3dIncomeCount)
+        && Objects.equals(this.minigame7dIncomeUv, hourlyReportsGetListStruct.minigame7dIncomeUv)
+        && Objects.equals(
+            this.minigame7dIncomeCount, hourlyReportsGetListStruct.minigame7dIncomeCount)
+        && Objects.equals(this.minigame3dIncomeRoi, hourlyReportsGetListStruct.minigame3dIncomeRoi)
+        && Objects.equals(this.minigame7dIncomeRoi, hourlyReportsGetListStruct.minigame7dIncomeRoi)
+        && Objects.equals(this.minigame24hPayUv, hourlyReportsGetListStruct.minigame24hPayUv)
+        && Objects.equals(
+            this.minigame24hPayAmount, hourlyReportsGetListStruct.minigame24hPayAmount)
+        && Objects.equals(this.minigame24hPayRoi, hourlyReportsGetListStruct.minigame24hPayRoi)
+        && Objects.equals(this.minigame24hPayArpu, hourlyReportsGetListStruct.minigame24hPayArpu)
         && Objects.equals(
             this.liveStreamCrtClickCnt, hourlyReportsGetListStruct.liveStreamCrtClickCnt)
         && Objects.equals(
@@ -17697,18 +17771,10 @@ public class HourlyReportsGetListStruct {
         && Objects.equals(
             this.miniGameFirstPayPlaAmount, hourlyReportsGetListStruct.miniGameFirstPayPlaAmount)
         && Objects.equals(this.miniGamePayD1PlaUv, hourlyReportsGetListStruct.miniGamePayD1PlaUv)
-        && Objects.equals(this.miniGamePayD3Uv, hourlyReportsGetListStruct.miniGamePayD3Uv)
-        && Objects.equals(this.miniGamePayD7Uv, hourlyReportsGetListStruct.miniGamePayD7Uv)
-        && Objects.equals(this.miniGamePayD14Uv, hourlyReportsGetListStruct.miniGamePayD14Uv)
-        && Objects.equals(this.miniGamePayD30Uv, hourlyReportsGetListStruct.miniGamePayD30Uv)
         && Objects.equals(this.miniGamePayD3PlaUv, hourlyReportsGetListStruct.miniGamePayD3PlaUv)
         && Objects.equals(this.miniGamePayD7PlaUv, hourlyReportsGetListStruct.miniGamePayD7PlaUv)
         && Objects.equals(this.miniGamePayD14PlaUv, hourlyReportsGetListStruct.miniGamePayD14PlaUv)
         && Objects.equals(this.miniGamePayD30PlaUv, hourlyReportsGetListStruct.miniGamePayD30PlaUv)
-        && Objects.equals(this.miniGameD3PayCount, hourlyReportsGetListStruct.miniGameD3PayCount)
-        && Objects.equals(this.miniGameD7PayCount, hourlyReportsGetListStruct.miniGameD7PayCount)
-        && Objects.equals(this.miniGameD14PayCount, hourlyReportsGetListStruct.miniGameD14PayCount)
-        && Objects.equals(this.miniGameD30PayCount, hourlyReportsGetListStruct.miniGameD30PayCount)
         && Objects.equals(
             this.miniGameD3PayPlaCount, hourlyReportsGetListStruct.miniGameD3PayPlaCount)
         && Objects.equals(
@@ -17722,33 +17788,6 @@ public class HourlyReportsGetListStruct {
             this.firstDayFirstPayRate, hourlyReportsGetListStruct.firstDayFirstPayRate)
         && Objects.equals(
             this.activeD5FirstPayCost, hourlyReportsGetListStruct.activeD5FirstPayCost)
-        && Objects.equals(
-            this.miniGameFirstDayAdMonetizationUsers,
-            hourlyReportsGetListStruct.miniGameFirstDayAdMonetizationUsers)
-        && Objects.equals(
-            this.miniGameFirstDayAdMonetizationAmount,
-            hourlyReportsGetListStruct.miniGameFirstDayAdMonetizationAmount)
-        && Objects.equals(
-            this.miniGameFirstDayAdPayingCost,
-            hourlyReportsGetListStruct.miniGameFirstDayAdPayingCost)
-        && Objects.equals(this.miniGameIncomeRoi1, hourlyReportsGetListStruct.miniGameIncomeRoi1)
-        && Objects.equals(
-            this.miniGameFirstDayAdPayingArpu,
-            hourlyReportsGetListStruct.miniGameFirstDayAdPayingArpu)
-        && Objects.equals(
-            this.miniGamePayingUsersD1, hourlyReportsGetListStruct.miniGamePayingUsersD1)
-        && Objects.equals(
-            this.miniGamePayingAmountD1, hourlyReportsGetListStruct.miniGamePayingAmountD1)
-        && Objects.equals(
-            this.miniGamePayingAmountD3, hourlyReportsGetListStruct.miniGamePayingAmountD3)
-        && Objects.equals(
-            this.miniGamePayingAmountD7, hourlyReportsGetListStruct.miniGamePayingAmountD7)
-        && Objects.equals(
-            this.miniGamePayingAmountD14, hourlyReportsGetListStruct.miniGamePayingAmountD14)
-        && Objects.equals(
-            this.miniGamePayingAmountD30, hourlyReportsGetListStruct.miniGamePayingAmountD30)
-        && Objects.equals(
-            this.miniGameFirstDayPayingRoi, hourlyReportsGetListStruct.miniGameFirstDayPayingRoi)
         && Objects.equals(
             this.miniGamePayingAmountD1ByUpload,
             hourlyReportsGetListStruct.miniGamePayingAmountD1ByUpload)
@@ -17772,26 +17811,14 @@ public class HourlyReportsGetListStruct {
         && Objects.equals(
             this.mixedMonetizationRoiD14, hourlyReportsGetListStruct.mixedMonetizationRoiD14)
         && Objects.equals(
-            this.miniGameMixedMonetizationRoiD1,
-            hourlyReportsGetListStruct.miniGameMixedMonetizationRoiD1)
-        && Objects.equals(
             this.miniGameMixedMonetizationRoiD1ByReporting,
             hourlyReportsGetListStruct.miniGameMixedMonetizationRoiD1ByReporting)
-        && Objects.equals(
-            this.miniGameMixedMonetizationRoiD3,
-            hourlyReportsGetListStruct.miniGameMixedMonetizationRoiD3)
         && Objects.equals(
             this.miniGameMixedMonetizationRoiD3ByReporting,
             hourlyReportsGetListStruct.miniGameMixedMonetizationRoiD3ByReporting)
         && Objects.equals(
-            this.miniGameMixedMonetizationRoiD7,
-            hourlyReportsGetListStruct.miniGameMixedMonetizationRoiD7)
-        && Objects.equals(
             this.miniGameMixedMonetizationRoiD7ByReporting,
             hourlyReportsGetListStruct.miniGameMixedMonetizationRoiD7ByReporting)
-        && Objects.equals(
-            this.miniGameMixedMonetizationRoiD14,
-            hourlyReportsGetListStruct.miniGameMixedMonetizationRoiD14)
         && Objects.equals(
             this.miniGameMixedMonetizationRoiD14ByReporting,
             hourlyReportsGetListStruct.miniGameMixedMonetizationRoiD14ByReporting)
@@ -17801,15 +17828,6 @@ public class HourlyReportsGetListStruct {
         && Objects.equals(
             this.adMonetizationPenetrationRatD1,
             hourlyReportsGetListStruct.adMonetizationPenetrationRatD1)
-        && Objects.equals(
-            this.miniGameAdMonetizationAmountD3,
-            hourlyReportsGetListStruct.miniGameAdMonetizationAmountD3)
-        && Objects.equals(
-            this.miniGameAdMonetizationAmountD7,
-            hourlyReportsGetListStruct.miniGameAdMonetizationAmountD7)
-        && Objects.equals(
-            this.miniGameAdMonetizationAmountD14,
-            hourlyReportsGetListStruct.miniGameAdMonetizationAmountD14)
         && Objects.equals(
             this.miniGamePayingArpuD1, hourlyReportsGetListStruct.miniGamePayingArpuD1)
         && Objects.equals(
@@ -17830,30 +17848,12 @@ public class HourlyReportsGetListStruct {
             hourlyReportsGetListStruct.miniGameFirstDayPayingPlaRoi)
         && Objects.equals(
             this.miniGameFirstPayPlaCost, hourlyReportsGetListStruct.miniGameFirstPayPlaCost)
-        && Objects.equals(this.miniGamePayD3Roi, hourlyReportsGetListStruct.miniGamePayD3Roi)
-        && Objects.equals(this.miniGamePayD7Roi, hourlyReportsGetListStruct.miniGamePayD7Roi)
-        && Objects.equals(this.miniGamePayD14Roi, hourlyReportsGetListStruct.miniGamePayD14Roi)
-        && Objects.equals(this.miniGamePayD30Roi, hourlyReportsGetListStruct.miniGamePayD30Roi)
         && Objects.equals(this.miniGamePayD3PlaRoi, hourlyReportsGetListStruct.miniGamePayD3PlaRoi)
         && Objects.equals(this.miniGamePayD7PlaRoi, hourlyReportsGetListStruct.miniGamePayD7PlaRoi)
         && Objects.equals(
             this.miniGamePayD14PlaRoi, hourlyReportsGetListStruct.miniGamePayD14PlaRoi)
         && Objects.equals(
             this.miniGamePayD30PlaRoi, hourlyReportsGetListStruct.miniGamePayD30PlaRoi)
-        && Objects.equals(this.minigame1dPayCount, hourlyReportsGetListStruct.minigame1dPayCount)
-        && Objects.equals(this.minigame3dIncomeUv, hourlyReportsGetListStruct.minigame3dIncomeUv)
-        && Objects.equals(
-            this.minigame3dIncomeCount, hourlyReportsGetListStruct.minigame3dIncomeCount)
-        && Objects.equals(this.minigame7dIncomeUv, hourlyReportsGetListStruct.minigame7dIncomeUv)
-        && Objects.equals(
-            this.minigame7dIncomeCount, hourlyReportsGetListStruct.minigame7dIncomeCount)
-        && Objects.equals(this.minigame3dIncomeRoi, hourlyReportsGetListStruct.minigame3dIncomeRoi)
-        && Objects.equals(this.minigame7dIncomeRoi, hourlyReportsGetListStruct.minigame7dIncomeRoi)
-        && Objects.equals(this.minigame24hPayUv, hourlyReportsGetListStruct.minigame24hPayUv)
-        && Objects.equals(
-            this.minigame24hPayAmount, hourlyReportsGetListStruct.minigame24hPayAmount)
-        && Objects.equals(this.minigame24hPayRoi, hourlyReportsGetListStruct.minigame24hPayRoi)
-        && Objects.equals(this.minigame24hPayArpu, hourlyReportsGetListStruct.minigame24hPayArpu)
         && Objects.equals(this.campaignId, hourlyReportsGetListStruct.campaignId)
         && Objects.equals(this.campaignName, hourlyReportsGetListStruct.campaignName)
         && Objects.equals(this.webAddToCartCount, hourlyReportsGetListStruct.webAddToCartCount)
@@ -18202,6 +18202,14 @@ public class HourlyReportsGetListStruct {
         addDesktopPv,
         addDesktopCost,
         firstPayCount,
+        miniGamePayD3Uv,
+        miniGamePayD7Uv,
+        miniGamePayD14Uv,
+        miniGamePayD30Uv,
+        miniGameD3PayCount,
+        miniGameD7PayCount,
+        miniGameD14PayCount,
+        miniGameD30PayCount,
         wechatLocalPayCount,
         wechatLocalPayuserCount,
         wechatLocalPayAmount,
@@ -18338,9 +18346,21 @@ public class HourlyReportsGetListStruct {
         miniGameRegisterCost,
         miniGameRegisterRate,
         miniGameAdMonetizationUsers,
+        miniGameFirstDayAdMonetizationUsers,
+        miniGameFirstDayAdMonetizationAmount,
+        miniGameFirstDayAdPayingCost,
+        miniGameIncomeRoi1,
+        miniGameFirstDayAdPayingArpu,
         miniGamePayingCount,
         miniGamePayingAmount,
+        miniGamePayingUsersD1,
+        miniGamePayingAmountD1,
+        miniGamePayingAmountD3,
+        miniGamePayingAmountD7,
+        miniGamePayingAmountD14,
+        miniGamePayingAmountD30,
         miniGameFirstPayingUsers,
+        miniGameFirstDayPayingRoi,
         miniGameCreateRoleUsers,
         miniGameCreateRoleCost,
         miniGameRetentionD1,
@@ -18373,6 +18393,13 @@ public class HourlyReportsGetListStruct {
         keyBehaviorConversionsCost,
         keyBehaviorConversionsRate,
         firstDayOrderRoi,
+        miniGameMixedMonetizationRoiD1,
+        miniGameMixedMonetizationRoiD3,
+        miniGameMixedMonetizationRoiD7,
+        miniGameMixedMonetizationRoiD14,
+        miniGameAdMonetizationAmountD3,
+        miniGameAdMonetizationAmountD7,
+        miniGameAdMonetizationAmountD14,
         miniGameAdMonetizationCost,
         miniGameAdMonetizationRoi,
         miniGameAdMonetizationArpu,
@@ -18418,6 +18445,10 @@ public class HourlyReportsGetListStruct {
         miniGameBfPurchaseD1Arpu,
         miniGameCreateRoleRate,
         consultUvCount,
+        miniGamePayD3Roi,
+        miniGamePayD7Roi,
+        miniGamePayD14Roi,
+        miniGamePayD30Roi,
         videoFollowCount,
         videoHeartCount,
         videoCommentCount,
@@ -18492,6 +18523,17 @@ public class HourlyReportsGetListStruct {
         stayPay7dPv,
         stayPay15dPv,
         stayPay30dPv,
+        minigame1dPayCount,
+        minigame3dIncomeUv,
+        minigame3dIncomeCount,
+        minigame7dIncomeUv,
+        minigame7dIncomeCount,
+        minigame3dIncomeRoi,
+        minigame7dIncomeRoi,
+        minigame24hPayUv,
+        minigame24hPayAmount,
+        minigame24hPayRoi,
+        minigame24hPayArpu,
         liveStreamCrtClickCnt,
         liveStreamCommodityShopBagClkPv,
         liveStreamCommodityShopListExpPv,
@@ -18597,18 +18639,10 @@ public class HourlyReportsGetListStruct {
         miniGamePayingUsersPlaD1,
         miniGameFirstPayPlaAmount,
         miniGamePayD1PlaUv,
-        miniGamePayD3Uv,
-        miniGamePayD7Uv,
-        miniGamePayD14Uv,
-        miniGamePayD30Uv,
         miniGamePayD3PlaUv,
         miniGamePayD7PlaUv,
         miniGamePayD14PlaUv,
         miniGamePayD30PlaUv,
-        miniGameD3PayCount,
-        miniGameD7PayCount,
-        miniGameD14PayCount,
-        miniGameD30PayCount,
         miniGameD3PayPlaCount,
         miniGameD7PayPlaCount,
         miniGameD14PayPlaCount,
@@ -18616,18 +18650,6 @@ public class HourlyReportsGetListStruct {
         roiActivatedD30,
         firstDayFirstPayRate,
         activeD5FirstPayCost,
-        miniGameFirstDayAdMonetizationUsers,
-        miniGameFirstDayAdMonetizationAmount,
-        miniGameFirstDayAdPayingCost,
-        miniGameIncomeRoi1,
-        miniGameFirstDayAdPayingArpu,
-        miniGamePayingUsersD1,
-        miniGamePayingAmountD1,
-        miniGamePayingAmountD3,
-        miniGamePayingAmountD7,
-        miniGamePayingAmountD14,
-        miniGamePayingAmountD30,
-        miniGameFirstDayPayingRoi,
         miniGamePayingAmountD1ByUpload,
         miniGamePayingAmountD3ByUpload,
         miniGamePayingAmountD7ByUpload,
@@ -18637,21 +18659,14 @@ public class HourlyReportsGetListStruct {
         mixedMonetizationRoiD3,
         mixedMonetizationRoiD7,
         mixedMonetizationRoiD14,
-        miniGameMixedMonetizationRoiD1,
         miniGameMixedMonetizationRoiD1ByReporting,
-        miniGameMixedMonetizationRoiD3,
         miniGameMixedMonetizationRoiD3ByReporting,
-        miniGameMixedMonetizationRoiD7,
         miniGameMixedMonetizationRoiD7ByReporting,
-        miniGameMixedMonetizationRoiD14,
         miniGameMixedMonetizationRoiD14ByReporting,
         adPayingUsersD1,
         adPayingCostD1,
         adPurArpuCostD1,
         adMonetizationPenetrationRatD1,
-        miniGameAdMonetizationAmountD3,
-        miniGameAdMonetizationAmountD7,
-        miniGameAdMonetizationAmountD14,
         miniGamePayingArpuD1,
         miniGamePayD1PlaRate,
         activeD5ClickFirstPayRate,
@@ -18664,25 +18679,10 @@ public class HourlyReportsGetListStruct {
         activeD7PayCost,
         miniGameFirstDayPayingPlaRoi,
         miniGameFirstPayPlaCost,
-        miniGamePayD3Roi,
-        miniGamePayD7Roi,
-        miniGamePayD14Roi,
-        miniGamePayD30Roi,
         miniGamePayD3PlaRoi,
         miniGamePayD7PlaRoi,
         miniGamePayD14PlaRoi,
         miniGamePayD30PlaRoi,
-        minigame1dPayCount,
-        minigame3dIncomeUv,
-        minigame3dIncomeCount,
-        minigame7dIncomeUv,
-        minigame7dIncomeCount,
-        minigame3dIncomeRoi,
-        minigame7dIncomeRoi,
-        minigame24hPayUv,
-        minigame24hPayAmount,
-        minigame24hPayRoi,
-        minigame24hPayArpu,
         campaignId,
         campaignName,
         webAddToCartCount,

@@ -212,6 +212,9 @@ public class AdcreativeCreativeElementsWithOptions {
   @SerializedName("main_jump_info")
   private List<LandingPageStructure> mainJumpInfo = null;
 
+  @SerializedName("eggs_jump_info")
+  private List<LandingPageStructure> eggsJumpInfo = null;
+
   public AdcreativeCreativeElementsWithOptions image(String image) {
     this.image = image;
     return this;
@@ -1507,6 +1510,35 @@ public class AdcreativeCreativeElementsWithOptions {
     this.mainJumpInfo = mainJumpInfo;
   }
 
+  public AdcreativeCreativeElementsWithOptions eggsJumpInfo(
+      List<LandingPageStructure> eggsJumpInfo) {
+    this.eggsJumpInfo = eggsJumpInfo;
+    return this;
+  }
+
+  public AdcreativeCreativeElementsWithOptions addEggsJumpInfoItem(
+      LandingPageStructure eggsJumpInfoItem) {
+    if (this.eggsJumpInfo == null) {
+      this.eggsJumpInfo = new ArrayList<LandingPageStructure>();
+    }
+    this.eggsJumpInfo.add(eggsJumpInfoItem);
+    return this;
+  }
+
+  /**
+   * Get eggsJumpInfo
+   *
+   * @return eggsJumpInfo
+   */
+  @ApiModelProperty(value = "")
+  public List<LandingPageStructure> getEggsJumpInfo() {
+    return eggsJumpInfo;
+  }
+
+  public void setEggsJumpInfo(List<LandingPageStructure> eggsJumpInfo) {
+    this.eggsJumpInfo = eggsJumpInfo;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -1601,7 +1633,8 @@ public class AdcreativeCreativeElementsWithOptions {
         && Objects.equals(
             this.wxgamePlayablePageSpec,
             adcreativeCreativeElementsWithOptions.wxgamePlayablePageSpec)
-        && Objects.equals(this.mainJumpInfo, adcreativeCreativeElementsWithOptions.mainJumpInfo);
+        && Objects.equals(this.mainJumpInfo, adcreativeCreativeElementsWithOptions.mainJumpInfo)
+        && Objects.equals(this.eggsJumpInfo, adcreativeCreativeElementsWithOptions.eggsJumpInfo);
   }
 
   @Override
@@ -1669,7 +1702,8 @@ public class AdcreativeCreativeElementsWithOptions {
         redEnvelopeStruct,
         buttonTextJumpInfo,
         wxgamePlayablePageSpec,
-        mainJumpInfo);
+        mainJumpInfo,
+        eggsJumpInfo);
   }
 
   @Override

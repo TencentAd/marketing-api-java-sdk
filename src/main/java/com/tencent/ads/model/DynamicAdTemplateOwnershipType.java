@@ -36,6 +36,8 @@ public enum DynamicAdTemplateOwnershipType {
 
   GRANTED("GRANTED"),
 
+  COMMON("COMMON"),
+
   PRODUCT_CATALOG_OWNED("PRODUCT_CATALOG_OWNED");
 
   private String value;

@@ -24,7 +24,9 @@ import java.io.IOException;
 public enum PageStatus {
   NORMAL("NORMAL"),
 
-  DELETED("DELETED");
+  DELETED("DELETED"),
+
+  PENDING("PENDING");
 
   private String value;
 

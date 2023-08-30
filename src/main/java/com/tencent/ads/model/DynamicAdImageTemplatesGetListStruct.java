@@ -16,6 +16,8 @@ import com.google.gson.Gson;
 import com.google.gson.annotations.SerializedName;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Objects;
 
 /** 返回结构 */
@@ -38,6 +40,15 @@ public class DynamicAdImageTemplatesGetListStruct {
 
   @SerializedName("image_url")
   private String imageUrl = null;
+
+  @SerializedName("image_product_fields")
+  private List<String> imageProductFields = null;
+
+  @SerializedName("fill_type")
+  private TemplateImageFillType fillType = null;
+
+  @SerializedName("coverage")
+  private Double coverage = null;
 
   public DynamicAdImageTemplatesGetListStruct dynamicAdTemplateId(Long dynamicAdTemplateId) {
     this.dynamicAdTemplateId = dynamicAdTemplateId;
@@ -155,6 +166,72 @@ public class DynamicAdImageTemplatesGetListStruct {
     this.imageUrl = imageUrl;
   }
 
+  public DynamicAdImageTemplatesGetListStruct imageProductFields(List<String> imageProductFields) {
+    this.imageProductFields = imageProductFields;
+    return this;
+  }
+
+  public DynamicAdImageTemplatesGetListStruct addImageProductFieldsItem(
+      String imageProductFieldsItem) {
+    if (this.imageProductFields == null) {
+      this.imageProductFields = new ArrayList<String>();
+    }
+    this.imageProductFields.add(imageProductFieldsItem);
+    return this;
+  }
+
+  /**
+   * Get imageProductFields
+   *
+   * @return imageProductFields
+   */
+  @ApiModelProperty(value = "")
+  public List<String> getImageProductFields() {
+    return imageProductFields;
+  }
+
+  public void setImageProductFields(List<String> imageProductFields) {
+    this.imageProductFields = imageProductFields;
+  }
+
+  public DynamicAdImageTemplatesGetListStruct fillType(TemplateImageFillType fillType) {
+    this.fillType = fillType;
+    return this;
+  }
+
+  /**
+   * Get fillType
+   *
+   * @return fillType
+   */
+  @ApiModelProperty(value = "")
+  public TemplateImageFillType getFillType() {
+    return fillType;
+  }
+
+  public void setFillType(TemplateImageFillType fillType) {
+    this.fillType = fillType;
+  }
+
+  public DynamicAdImageTemplatesGetListStruct coverage(Double coverage) {
+    this.coverage = coverage;
+    return this;
+  }
+
+  /**
+   * Get coverage
+   *
+   * @return coverage
+   */
+  @ApiModelProperty(value = "")
+  public Double getCoverage() {
+    return coverage;
+  }
+
+  public void setCoverage(Double coverage) {
+    this.coverage = coverage;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -178,7 +255,11 @@ public class DynamicAdImageTemplatesGetListStruct {
         && Objects.equals(
             this.dynamicAdTemplateHeight,
             dynamicAdImageTemplatesGetListStruct.dynamicAdTemplateHeight)
-        && Objects.equals(this.imageUrl, dynamicAdImageTemplatesGetListStruct.imageUrl);
+        && Objects.equals(this.imageUrl, dynamicAdImageTemplatesGetListStruct.imageUrl)
+        && Objects.equals(
+            this.imageProductFields, dynamicAdImageTemplatesGetListStruct.imageProductFields)
+        && Objects.equals(this.fillType, dynamicAdImageTemplatesGetListStruct.fillType)
+        && Objects.equals(this.coverage, dynamicAdImageTemplatesGetListStruct.coverage);
   }
 
   @Override
@@ -189,7 +270,10 @@ public class DynamicAdImageTemplatesGetListStruct {
         productItemDisplayQuantity,
         dynamicAdTemplateWidth,
         dynamicAdTemplateHeight,
-        imageUrl);
+        imageUrl,
+        imageProductFields,
+        fillType,
+        coverage);
   }
 
   @Override

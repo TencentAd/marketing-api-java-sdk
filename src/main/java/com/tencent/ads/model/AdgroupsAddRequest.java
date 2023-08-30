@@ -174,8 +174,14 @@ public class AdgroupsAddRequest {
   @SerializedName("search_expand_targeting_switch")
   private SearchExpandTargetingSwitch searchExpandTargetingSwitch = null;
 
+  @SerializedName("ecom_pkam_switch")
+  private EcomPkamSwitch ecomPkamSwitch = null;
+
   @SerializedName("bid_scene")
   private BidScene bidScene = null;
+
+  @SerializedName("forward_link_assist")
+  private OptimizationGoal forwardLinkAssist = null;
 
   @SerializedName("account_id")
   private Long accountId = null;
@@ -1220,6 +1226,25 @@ public class AdgroupsAddRequest {
     this.searchExpandTargetingSwitch = searchExpandTargetingSwitch;
   }
 
+  public AdgroupsAddRequest ecomPkamSwitch(EcomPkamSwitch ecomPkamSwitch) {
+    this.ecomPkamSwitch = ecomPkamSwitch;
+    return this;
+  }
+
+  /**
+   * Get ecomPkamSwitch
+   *
+   * @return ecomPkamSwitch
+   */
+  @ApiModelProperty(value = "")
+  public EcomPkamSwitch getEcomPkamSwitch() {
+    return ecomPkamSwitch;
+  }
+
+  public void setEcomPkamSwitch(EcomPkamSwitch ecomPkamSwitch) {
+    this.ecomPkamSwitch = ecomPkamSwitch;
+  }
+
   public AdgroupsAddRequest bidScene(BidScene bidScene) {
     this.bidScene = bidScene;
     return this;
@@ -1237,6 +1262,25 @@ public class AdgroupsAddRequest {
 
   public void setBidScene(BidScene bidScene) {
     this.bidScene = bidScene;
+  }
+
+  public AdgroupsAddRequest forwardLinkAssist(OptimizationGoal forwardLinkAssist) {
+    this.forwardLinkAssist = forwardLinkAssist;
+    return this;
+  }
+
+  /**
+   * Get forwardLinkAssist
+   *
+   * @return forwardLinkAssist
+   */
+  @ApiModelProperty(value = "")
+  public OptimizationGoal getForwardLinkAssist() {
+    return forwardLinkAssist;
+  }
+
+  public void setForwardLinkAssist(OptimizationGoal forwardLinkAssist) {
+    this.forwardLinkAssist = forwardLinkAssist;
   }
 
   public AdgroupsAddRequest accountId(Long accountId) {
@@ -1329,7 +1373,9 @@ public class AdgroupsAddRequest {
             this.autoDerivedLandingPageSwitch, adgroupsAddRequest.autoDerivedLandingPageSwitch)
         && Objects.equals(
             this.searchExpandTargetingSwitch, adgroupsAddRequest.searchExpandTargetingSwitch)
+        && Objects.equals(this.ecomPkamSwitch, adgroupsAddRequest.ecomPkamSwitch)
         && Objects.equals(this.bidScene, adgroupsAddRequest.bidScene)
+        && Objects.equals(this.forwardLinkAssist, adgroupsAddRequest.forwardLinkAssist)
         && Objects.equals(this.accountId, adgroupsAddRequest.accountId);
   }
 
@@ -1387,7 +1433,9 @@ public class AdgroupsAddRequest {
         dynamicCreativeIdSet,
         autoDerivedLandingPageSwitch,
         searchExpandTargetingSwitch,
+        ecomPkamSwitch,
         bidScene,
+        forwardLinkAssist,
         accountId);
   }
 

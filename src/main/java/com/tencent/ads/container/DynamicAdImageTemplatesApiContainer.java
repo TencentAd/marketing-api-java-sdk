@@ -39,6 +39,8 @@ public class DynamicAdImageTemplatesApiContainer extends ApiContainer {
    * @param filtering (optional)
    * @param page (optional)
    * @param pageSize (optional)
+   * @param templateIdList (optional)
+   * @param templateName (optional)
    * @param fields 返回参数的字段列表 (optional)
    * @return DynamicAdImageTemplatesGetResponse
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
@@ -54,6 +56,8 @@ public class DynamicAdImageTemplatesApiContainer extends ApiContainer {
       List<FilteringStruct> filtering,
       Long page,
       Long pageSize,
+      List<Long> templateIdList,
+      String templateName,
       List<String> fields)
       throws ApiException, TencentAdsResponseException {
     DynamicAdImageTemplatesGetResponse resp =
@@ -67,6 +71,8 @@ public class DynamicAdImageTemplatesApiContainer extends ApiContainer {
             filtering,
             page,
             pageSize,
+            templateIdList,
+            templateName,
             fields);
     handleResponse(gson.toJson(resp));
     return resp.getData();

@@ -19,6 +19,7 @@ import com.tencent.ads.guice.GuiceModule;
 
 public class App {
 
+  @Inject AdAppealQuotaApiContainer adAppealQuotaApiContainer;
   @Inject AdDiagnosisApiContainer adDiagnosisApiContainer;
   @Inject AdLabelApiContainer adLabelApiContainer;
   @Inject AdParamApiContainer adParamApiContainer;
@@ -71,6 +72,7 @@ public class App {
   @Inject ComplianceValidationApiContainer complianceValidationApiContainer;
   @Inject ConversionsApiContainer conversionsApiContainer;
   @Inject CreativeComponentsApiContainer creativeComponentsApiContainer;
+  @Inject CreativeSampleProductsApiContainer creativeSampleProductsApiContainer;
   @Inject CreativetoolsTextApiContainer creativetoolsTextApiContainer;
   @Inject CustomAudienceEstimationsApiContainer customAudienceEstimationsApiContainer;
   @Inject CustomAudienceFilesApiContainer customAudienceFilesApiContainer;
@@ -82,26 +84,24 @@ public class App {
   @Inject CustomTagsApiContainer customTagsApiContainer;
   @Inject DailyBalanceReportApiContainer dailyBalanceReportApiContainer;
   @Inject DailyReportsApiContainer dailyReportsApiContainer;
-  @Inject DataNexusFileApiContainer dataNexusFileApiContainer;
   @Inject DataSetApiContainer dataSetApiContainer;
   @Inject DataSourceDispatchApiContainer dataSourceDispatchApiContainer;
   @Inject DiagnosisApiContainer diagnosisApiContainer;
   @Inject DplabelAdLabelApiContainer dplabelAdLabelApiContainer;
   @Inject DynamicAdImageTemplatesApiContainer dynamicAdImageTemplatesApiContainer;
   @Inject DynamicAdImagesApiContainer dynamicAdImagesApiContainer;
-  @Inject DynamicAdTemplatesApiContainer dynamicAdTemplatesApiContainer;
   @Inject DynamicAdVideoApiContainer dynamicAdVideoApiContainer;
   @Inject DynamicAdVideoTemplatesApiContainer dynamicAdVideoTemplatesApiContainer;
   @Inject DynamicCreativesApiContainer dynamicCreativesApiContainer;
   @Inject EcommerceOrderApiContainer ecommerceOrderApiContainer;
   @Inject EstimationApiContainer estimationApiContainer;
   @Inject ExtendPackageApiContainer extendPackageApiContainer;
-  @Inject FileDispatchApiContainer fileDispatchApiContainer;
-  @Inject FileSchemaApiContainer fileSchemaApiContainer;
   @Inject FundStatementsDailyApiContainer fundStatementsDailyApiContainer;
   @Inject FundStatementsDetailedApiContainer fundStatementsDetailedApiContainer;
   @Inject FundTransferApiContainer fundTransferApiContainer;
   @Inject FundsApiContainer fundsApiContainer;
+  @Inject GameFeatureApiContainer gameFeatureApiContainer;
+  @Inject GameFeatureTagsApiContainer gameFeatureTagsApiContainer;
   @Inject HourlyReportsApiContainer hourlyReportsApiContainer;
   @Inject ImageProcessingApiContainer imageProcessingApiContainer;
   @Inject ImagesApiContainer imagesApiContainer;
@@ -161,12 +161,14 @@ public class App {
   @Inject QuerywordRptApiContainer querywordRptApiContainer;
   @Inject RealtimeCostApiContainer realtimeCostApiContainer;
   @Inject ReportApiContainer reportApiContainer;
+  @Inject ReviewAdAppealApiContainer reviewAdAppealApiContainer;
   @Inject ReviewElementPrereviewResultsApiContainer reviewElementPrereviewResultsApiContainer;
   @Inject SceneSpecTagsApiContainer sceneSpecTagsApiContainer;
   @Inject ShopApiContainer shopApiContainer;
   @Inject SplitTestsApiContainer splitTestsApiContainer;
   @Inject SubcustomerTransferApiContainer subcustomerTransferApiContainer;
   @Inject SystemStatusApiContainer systemStatusApiContainer;
+  @Inject TargetcpaTagApiContainer targetcpaTagApiContainer;
   @Inject TargetingTagReportsApiContainer targetingTagReportsApiContainer;
   @Inject TargetingTagsApiContainer targetingTagsApiContainer;
   @Inject TargetingTagsUvApiContainer targetingTagsUvApiContainer;
@@ -216,6 +218,10 @@ public class App {
 
   public App() {
     Guice.createInjector(new GuiceModule()).injectMembers(this);
+  }
+
+  public AdAppealQuotaApiContainer adAppealQuota() {
+    return adAppealQuotaApiContainer;
   }
 
   public AdDiagnosisApiContainer adDiagnosis() {
@@ -426,6 +432,10 @@ public class App {
     return creativeComponentsApiContainer;
   }
 
+  public CreativeSampleProductsApiContainer creativeSampleProducts() {
+    return creativeSampleProductsApiContainer;
+  }
+
   public CreativetoolsTextApiContainer creativetoolsText() {
     return creativetoolsTextApiContainer;
   }
@@ -470,10 +480,6 @@ public class App {
     return dailyReportsApiContainer;
   }
 
-  public DataNexusFileApiContainer dataNexusFile() {
-    return dataNexusFileApiContainer;
-  }
-
   public DataSetApiContainer dataSet() {
     return dataSetApiContainer;
   }
@@ -496,10 +502,6 @@ public class App {
 
   public DynamicAdImagesApiContainer dynamicAdImages() {
     return dynamicAdImagesApiContainer;
-  }
-
-  public DynamicAdTemplatesApiContainer dynamicAdTemplates() {
-    return dynamicAdTemplatesApiContainer;
   }
 
   public DynamicAdVideoApiContainer dynamicAdVideo() {
@@ -526,14 +528,6 @@ public class App {
     return extendPackageApiContainer;
   }
 
-  public FileDispatchApiContainer fileDispatch() {
-    return fileDispatchApiContainer;
-  }
-
-  public FileSchemaApiContainer fileSchema() {
-    return fileSchemaApiContainer;
-  }
-
   public FundStatementsDailyApiContainer fundStatementsDaily() {
     return fundStatementsDailyApiContainer;
   }
@@ -548,6 +542,14 @@ public class App {
 
   public FundsApiContainer funds() {
     return fundsApiContainer;
+  }
+
+  public GameFeatureApiContainer gameFeature() {
+    return gameFeatureApiContainer;
+  }
+
+  public GameFeatureTagsApiContainer gameFeatureTags() {
+    return gameFeatureTagsApiContainer;
   }
 
   public HourlyReportsApiContainer hourlyReports() {
@@ -774,6 +776,10 @@ public class App {
     return reportApiContainer;
   }
 
+  public ReviewAdAppealApiContainer reviewAdAppeal() {
+    return reviewAdAppealApiContainer;
+  }
+
   public ReviewElementPrereviewResultsApiContainer reviewElementPrereviewResults() {
     return reviewElementPrereviewResultsApiContainer;
   }
@@ -796,6 +802,10 @@ public class App {
 
   public SystemStatusApiContainer systemStatus() {
     return systemStatusApiContainer;
+  }
+
+  public TargetcpaTagApiContainer targetcpaTag() {
+    return targetcpaTagApiContainer;
   }
 
   public TargetingTagReportsApiContainer targetingTagReports() {

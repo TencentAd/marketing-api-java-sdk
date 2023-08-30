@@ -30,6 +30,9 @@ public class MiniGameSpec {
   @SerializedName("mini_game_openlink_page_spec")
   private AdCreativeMiniGameOpenlinkPageSpec miniGameOpenlinkPageSpec = null;
 
+  @SerializedName("mini_game_openlink_switch")
+  private Boolean miniGameOpenlinkSwitch = null;
+
   public MiniGameSpec miniGameTrackingParameter(String miniGameTrackingParameter) {
     this.miniGameTrackingParameter = miniGameTrackingParameter;
     return this;
@@ -89,6 +92,25 @@ public class MiniGameSpec {
     this.miniGameOpenlinkPageSpec = miniGameOpenlinkPageSpec;
   }
 
+  public MiniGameSpec miniGameOpenlinkSwitch(Boolean miniGameOpenlinkSwitch) {
+    this.miniGameOpenlinkSwitch = miniGameOpenlinkSwitch;
+    return this;
+  }
+
+  /**
+   * Get miniGameOpenlinkSwitch
+   *
+   * @return miniGameOpenlinkSwitch
+   */
+  @ApiModelProperty(value = "")
+  public Boolean isMiniGameOpenlinkSwitch() {
+    return miniGameOpenlinkSwitch;
+  }
+
+  public void setMiniGameOpenlinkSwitch(Boolean miniGameOpenlinkSwitch) {
+    this.miniGameOpenlinkSwitch = miniGameOpenlinkSwitch;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -100,12 +122,17 @@ public class MiniGameSpec {
     MiniGameSpec miniGameSpec = (MiniGameSpec) o;
     return Objects.equals(this.miniGameTrackingParameter, miniGameSpec.miniGameTrackingParameter)
         && Objects.equals(this.miniGameOpenlink, miniGameSpec.miniGameOpenlink)
-        && Objects.equals(this.miniGameOpenlinkPageSpec, miniGameSpec.miniGameOpenlinkPageSpec);
+        && Objects.equals(this.miniGameOpenlinkPageSpec, miniGameSpec.miniGameOpenlinkPageSpec)
+        && Objects.equals(this.miniGameOpenlinkSwitch, miniGameSpec.miniGameOpenlinkSwitch);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(miniGameTrackingParameter, miniGameOpenlink, miniGameOpenlinkPageSpec);
+    return Objects.hash(
+        miniGameTrackingParameter,
+        miniGameOpenlink,
+        miniGameOpenlinkPageSpec,
+        miniGameOpenlinkSwitch);
   }
 
   @Override

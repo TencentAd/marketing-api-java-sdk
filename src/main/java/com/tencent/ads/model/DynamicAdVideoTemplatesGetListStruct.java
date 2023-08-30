@@ -50,6 +50,21 @@ public class DynamicAdVideoTemplatesGetListStruct {
   @SerializedName("support_channel")
   private Boolean supportChannel = null;
 
+  @SerializedName("coverage")
+  private Double coverage = null;
+
+  @SerializedName("min_video_duration")
+  private Double minVideoDuration = null;
+
+  @SerializedName("max_video_duration")
+  private Double maxVideoDuration = null;
+
+  @SerializedName("video_product_fields")
+  private List<String> videoProductFields = null;
+
+  @SerializedName("image_product_fields")
+  private List<String> imageProductFields = null;
+
   @SerializedName("extra")
   private Extra extra = null;
 
@@ -227,6 +242,119 @@ public class DynamicAdVideoTemplatesGetListStruct {
     this.supportChannel = supportChannel;
   }
 
+  public DynamicAdVideoTemplatesGetListStruct coverage(Double coverage) {
+    this.coverage = coverage;
+    return this;
+  }
+
+  /**
+   * Get coverage
+   *
+   * @return coverage
+   */
+  @ApiModelProperty(value = "")
+  public Double getCoverage() {
+    return coverage;
+  }
+
+  public void setCoverage(Double coverage) {
+    this.coverage = coverage;
+  }
+
+  public DynamicAdVideoTemplatesGetListStruct minVideoDuration(Double minVideoDuration) {
+    this.minVideoDuration = minVideoDuration;
+    return this;
+  }
+
+  /**
+   * Get minVideoDuration
+   *
+   * @return minVideoDuration
+   */
+  @ApiModelProperty(value = "")
+  public Double getMinVideoDuration() {
+    return minVideoDuration;
+  }
+
+  public void setMinVideoDuration(Double minVideoDuration) {
+    this.minVideoDuration = minVideoDuration;
+  }
+
+  public DynamicAdVideoTemplatesGetListStruct maxVideoDuration(Double maxVideoDuration) {
+    this.maxVideoDuration = maxVideoDuration;
+    return this;
+  }
+
+  /**
+   * Get maxVideoDuration
+   *
+   * @return maxVideoDuration
+   */
+  @ApiModelProperty(value = "")
+  public Double getMaxVideoDuration() {
+    return maxVideoDuration;
+  }
+
+  public void setMaxVideoDuration(Double maxVideoDuration) {
+    this.maxVideoDuration = maxVideoDuration;
+  }
+
+  public DynamicAdVideoTemplatesGetListStruct videoProductFields(List<String> videoProductFields) {
+    this.videoProductFields = videoProductFields;
+    return this;
+  }
+
+  public DynamicAdVideoTemplatesGetListStruct addVideoProductFieldsItem(
+      String videoProductFieldsItem) {
+    if (this.videoProductFields == null) {
+      this.videoProductFields = new ArrayList<String>();
+    }
+    this.videoProductFields.add(videoProductFieldsItem);
+    return this;
+  }
+
+  /**
+   * Get videoProductFields
+   *
+   * @return videoProductFields
+   */
+  @ApiModelProperty(value = "")
+  public List<String> getVideoProductFields() {
+    return videoProductFields;
+  }
+
+  public void setVideoProductFields(List<String> videoProductFields) {
+    this.videoProductFields = videoProductFields;
+  }
+
+  public DynamicAdVideoTemplatesGetListStruct imageProductFields(List<String> imageProductFields) {
+    this.imageProductFields = imageProductFields;
+    return this;
+  }
+
+  public DynamicAdVideoTemplatesGetListStruct addImageProductFieldsItem(
+      String imageProductFieldsItem) {
+    if (this.imageProductFields == null) {
+      this.imageProductFields = new ArrayList<String>();
+    }
+    this.imageProductFields.add(imageProductFieldsItem);
+    return this;
+  }
+
+  /**
+   * Get imageProductFields
+   *
+   * @return imageProductFields
+   */
+  @ApiModelProperty(value = "")
+  public List<String> getImageProductFields() {
+    return imageProductFields;
+  }
+
+  public void setImageProductFields(List<String> imageProductFields) {
+    this.imageProductFields = imageProductFields;
+  }
+
   public DynamicAdVideoTemplatesGetListStruct extra(Extra extra) {
     this.extra = extra;
     return this;
@@ -297,6 +425,15 @@ public class DynamicAdVideoTemplatesGetListStruct {
         && Objects.equals(
             this.deliveryVideoUrl, dynamicAdVideoTemplatesGetListStruct.deliveryVideoUrl)
         && Objects.equals(this.supportChannel, dynamicAdVideoTemplatesGetListStruct.supportChannel)
+        && Objects.equals(this.coverage, dynamicAdVideoTemplatesGetListStruct.coverage)
+        && Objects.equals(
+            this.minVideoDuration, dynamicAdVideoTemplatesGetListStruct.minVideoDuration)
+        && Objects.equals(
+            this.maxVideoDuration, dynamicAdVideoTemplatesGetListStruct.maxVideoDuration)
+        && Objects.equals(
+            this.videoProductFields, dynamicAdVideoTemplatesGetListStruct.videoProductFields)
+        && Objects.equals(
+            this.imageProductFields, dynamicAdVideoTemplatesGetListStruct.imageProductFields)
         && Objects.equals(this.extra, dynamicAdVideoTemplatesGetListStruct.extra)
         && Objects.equals(
             this.subTemplateList, dynamicAdVideoTemplatesGetListStruct.subTemplateList);
@@ -314,6 +451,11 @@ public class DynamicAdVideoTemplatesGetListStruct {
         introVideoUrl,
         deliveryVideoUrl,
         supportChannel,
+        coverage,
+        minVideoDuration,
+        maxVideoDuration,
+        videoProductFields,
+        imageProductFields,
         extra,
         subTemplateList);
   }

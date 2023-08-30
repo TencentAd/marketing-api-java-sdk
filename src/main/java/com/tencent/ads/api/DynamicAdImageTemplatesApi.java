@@ -61,6 +61,8 @@ public class DynamicAdImageTemplatesApi {
    * @param filtering (optional)
    * @param page (optional)
    * @param pageSize (optional)
+   * @param templateIdList (optional)
+   * @param templateName (optional)
    * @param fields 返回参数的字段列表 (optional)
    * @param progressListener Progress listener
    * @param progressRequestListener Progress request listener
@@ -77,6 +79,8 @@ public class DynamicAdImageTemplatesApi {
       List<FilteringStruct> filtering,
       Long page,
       Long pageSize,
+      List<Long> templateIdList,
+      String templateName,
       List<String> fields,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener)
@@ -110,6 +114,11 @@ public class DynamicAdImageTemplatesApi {
     if (page != null) localVarQueryParams.addAll(apiClient.parameterToPair("page", page));
     if (pageSize != null)
       localVarQueryParams.addAll(apiClient.parameterToPair("page_size", pageSize));
+    if (templateIdList != null)
+      localVarCollectionQueryParams.addAll(
+          apiClient.parameterToPairs("multi", "template_id_list", templateIdList));
+    if (templateName != null)
+      localVarQueryParams.addAll(apiClient.parameterToPair("template_name", templateName));
     if (fields != null)
       localVarCollectionQueryParams.addAll(apiClient.parameterToPairs("multi", "fields", fields));
 
@@ -167,6 +176,8 @@ public class DynamicAdImageTemplatesApi {
       List<FilteringStruct> filtering,
       Long page,
       Long pageSize,
+      List<Long> templateIdList,
+      String templateName,
       List<String> fields,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener)
@@ -213,6 +224,8 @@ public class DynamicAdImageTemplatesApi {
             filtering,
             page,
             pageSize,
+            templateIdList,
+            templateName,
             fields,
             progressListener,
             progressRequestListener);
@@ -231,6 +244,8 @@ public class DynamicAdImageTemplatesApi {
    * @param filtering (optional)
    * @param page (optional)
    * @param pageSize (optional)
+   * @param templateIdList (optional)
+   * @param templateName (optional)
    * @param fields 返回参数的字段列表 (optional)
    * @return DynamicAdImageTemplatesGetResponse
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
@@ -246,6 +261,8 @@ public class DynamicAdImageTemplatesApi {
       List<FilteringStruct> filtering,
       Long page,
       Long pageSize,
+      List<Long> templateIdList,
+      String templateName,
       List<String> fields)
       throws ApiException {
     ApiResponse<DynamicAdImageTemplatesGetResponse> resp =
@@ -259,6 +276,8 @@ public class DynamicAdImageTemplatesApi {
             filtering,
             page,
             pageSize,
+            templateIdList,
+            templateName,
             fields);
     return resp.getData();
   }
@@ -275,6 +294,8 @@ public class DynamicAdImageTemplatesApi {
    * @param filtering (optional)
    * @param page (optional)
    * @param pageSize (optional)
+   * @param templateIdList (optional)
+   * @param templateName (optional)
    * @param fields 返回参数的字段列表 (optional)
    * @return ApiResponse&lt;DynamicAdImageTemplatesGetResponse&gt;
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
@@ -290,6 +311,8 @@ public class DynamicAdImageTemplatesApi {
       List<FilteringStruct> filtering,
       Long page,
       Long pageSize,
+      List<Long> templateIdList,
+      String templateName,
       List<String> fields)
       throws ApiException {
     com.squareup.okhttp.Call call =
@@ -303,6 +326,8 @@ public class DynamicAdImageTemplatesApi {
             filtering,
             page,
             pageSize,
+            templateIdList,
+            templateName,
             fields,
             null,
             null);
@@ -322,6 +347,8 @@ public class DynamicAdImageTemplatesApi {
    * @param filtering (optional)
    * @param page (optional)
    * @param pageSize (optional)
+   * @param templateIdList (optional)
+   * @param templateName (optional)
    * @param fields 返回参数的字段列表 (optional)
    * @param callback The callback to be executed when the API call finishes
    * @return The request call
@@ -337,6 +364,8 @@ public class DynamicAdImageTemplatesApi {
       List<FilteringStruct> filtering,
       Long page,
       Long pageSize,
+      List<Long> templateIdList,
+      String templateName,
       List<String> fields,
       final ApiCallback<DynamicAdImageTemplatesGetResponse> callback)
       throws ApiException {
@@ -373,6 +402,8 @@ public class DynamicAdImageTemplatesApi {
             filtering,
             page,
             pageSize,
+            templateIdList,
+            templateName,
             fields,
             progressListener,
             progressRequestListener);

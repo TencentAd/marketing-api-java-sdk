@@ -33,6 +33,10 @@ public class GetDynamicAdImageTemplates {
 
   public Long pageSize = null;
 
+  public List<Long> templateIdList = null;
+
+  public String templateName = null;
+
   public List<String> fields = null;
 
   public void init() {
@@ -59,6 +63,8 @@ public class GetDynamicAdImageTemplates {
                 filtering,
                 page,
                 pageSize,
+                templateIdList,
+                templateName,
                 fields);
     return response;
   }

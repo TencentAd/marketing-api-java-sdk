@@ -30,6 +30,9 @@ public class QuerywordRptGetResponseData {
   @SerializedName("total")
   private Total total = null;
 
+  @SerializedName("reportv3_list")
+  private List<ReportStructV3> reportv3List = null;
+
   public QuerywordRptGetResponseData conf(Conf conf) {
     this.conf = conf;
     return this;
@@ -95,6 +98,33 @@ public class QuerywordRptGetResponseData {
     this.total = total;
   }
 
+  public QuerywordRptGetResponseData reportv3List(List<ReportStructV3> reportv3List) {
+    this.reportv3List = reportv3List;
+    return this;
+  }
+
+  public QuerywordRptGetResponseData addReportv3ListItem(ReportStructV3 reportv3ListItem) {
+    if (this.reportv3List == null) {
+      this.reportv3List = new ArrayList<ReportStructV3>();
+    }
+    this.reportv3List.add(reportv3ListItem);
+    return this;
+  }
+
+  /**
+   * Get reportv3List
+   *
+   * @return reportv3List
+   */
+  @ApiModelProperty(value = "")
+  public List<ReportStructV3> getReportv3List() {
+    return reportv3List;
+  }
+
+  public void setReportv3List(List<ReportStructV3> reportv3List) {
+    this.reportv3List = reportv3List;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -106,12 +136,13 @@ public class QuerywordRptGetResponseData {
     QuerywordRptGetResponseData querywordRptGetResponseData = (QuerywordRptGetResponseData) o;
     return Objects.equals(this.conf, querywordRptGetResponseData.conf)
         && Objects.equals(this.list, querywordRptGetResponseData.list)
-        && Objects.equals(this.total, querywordRptGetResponseData.total);
+        && Objects.equals(this.total, querywordRptGetResponseData.total)
+        && Objects.equals(this.reportv3List, querywordRptGetResponseData.reportv3List);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(conf, list, total);
+    return Objects.hash(conf, list, total, reportv3List);
   }
 
   @Override

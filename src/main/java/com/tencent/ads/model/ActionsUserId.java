@@ -33,9 +33,6 @@ public class ActionsUserId {
   @SerializedName("md5_sha256_idfa")
   private String md5Sha256Idfa = null;
 
-  @SerializedName("gdt_openid")
-  private String gdtOpenid = null;
-
   @SerializedName("hash_phone")
   private String hashPhone = null;
 
@@ -140,25 +137,6 @@ public class ActionsUserId {
 
   public void setMd5Sha256Idfa(String md5Sha256Idfa) {
     this.md5Sha256Idfa = md5Sha256Idfa;
-  }
-
-  public ActionsUserId gdtOpenid(String gdtOpenid) {
-    this.gdtOpenid = gdtOpenid;
-    return this;
-  }
-
-  /**
-   * Get gdtOpenid
-   *
-   * @return gdtOpenid
-   */
-  @ApiModelProperty(value = "")
-  public String getGdtOpenid() {
-    return gdtOpenid;
-  }
-
-  public void setGdtOpenid(String gdtOpenid) {
-    this.gdtOpenid = gdtOpenid;
   }
 
   public ActionsUserId hashPhone(String hashPhone) {
@@ -364,7 +342,6 @@ public class ActionsUserId {
         && Objects.equals(this.md5Sha256Imei, actionsUserId.md5Sha256Imei)
         && Objects.equals(this.hashIdfa, actionsUserId.hashIdfa)
         && Objects.equals(this.md5Sha256Idfa, actionsUserId.md5Sha256Idfa)
-        && Objects.equals(this.gdtOpenid, actionsUserId.gdtOpenid)
         && Objects.equals(this.hashPhone, actionsUserId.hashPhone)
         && Objects.equals(this.sha256Phone, actionsUserId.sha256Phone)
         && Objects.equals(this.hashAndroidId, actionsUserId.hashAndroidId)
@@ -384,7 +361,6 @@ public class ActionsUserId {
         md5Sha256Imei,
         hashIdfa,
         md5Sha256Idfa,
-        gdtOpenid,
         hashPhone,
         sha256Phone,
         hashAndroidId,

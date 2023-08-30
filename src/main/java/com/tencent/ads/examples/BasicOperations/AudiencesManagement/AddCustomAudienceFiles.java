@@ -26,8 +26,6 @@ public class AddCustomAudienceFiles {
 
   public String openAppId = null;
 
-  public String saltId = null;
-
   public void init() {
     this.tencentAds = TencentAds.getInstance();
     this.tencentAds.init(
@@ -43,7 +41,7 @@ public class AddCustomAudienceFiles {
         tencentAds
             .customAudienceFiles()
             .customAudienceFilesAdd(
-                accountId, audienceId, userIdType, file, operationType, openAppId, saltId);
+                accountId, audienceId, userIdType, file, operationType, openAppId);
     return response;
   }
 

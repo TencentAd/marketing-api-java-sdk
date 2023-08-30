@@ -144,6 +144,12 @@ public class AdgroupsUpdateRequest {
   @SerializedName("auto_derived_landing_page_switch")
   private Boolean autoDerivedLandingPageSwitch = null;
 
+  @SerializedName("ecom_pkam_switch")
+  private EcomPkamSwitch ecomPkamSwitch = null;
+
+  @SerializedName("forward_link_assist")
+  private OptimizationGoal forwardLinkAssist = null;
+
   @SerializedName("account_id")
   private Long accountId = null;
 
@@ -987,6 +993,44 @@ public class AdgroupsUpdateRequest {
     this.autoDerivedLandingPageSwitch = autoDerivedLandingPageSwitch;
   }
 
+  public AdgroupsUpdateRequest ecomPkamSwitch(EcomPkamSwitch ecomPkamSwitch) {
+    this.ecomPkamSwitch = ecomPkamSwitch;
+    return this;
+  }
+
+  /**
+   * Get ecomPkamSwitch
+   *
+   * @return ecomPkamSwitch
+   */
+  @ApiModelProperty(value = "")
+  public EcomPkamSwitch getEcomPkamSwitch() {
+    return ecomPkamSwitch;
+  }
+
+  public void setEcomPkamSwitch(EcomPkamSwitch ecomPkamSwitch) {
+    this.ecomPkamSwitch = ecomPkamSwitch;
+  }
+
+  public AdgroupsUpdateRequest forwardLinkAssist(OptimizationGoal forwardLinkAssist) {
+    this.forwardLinkAssist = forwardLinkAssist;
+    return this;
+  }
+
+  /**
+   * Get forwardLinkAssist
+   *
+   * @return forwardLinkAssist
+   */
+  @ApiModelProperty(value = "")
+  public OptimizationGoal getForwardLinkAssist() {
+    return forwardLinkAssist;
+  }
+
+  public void setForwardLinkAssist(OptimizationGoal forwardLinkAssist) {
+    this.forwardLinkAssist = forwardLinkAssist;
+  }
+
   public AdgroupsUpdateRequest accountId(Long accountId) {
     this.accountId = accountId;
     return this;
@@ -1068,6 +1112,8 @@ public class AdgroupsUpdateRequest {
         && Objects.equals(this.dynamicCreativeIdSet, adgroupsUpdateRequest.dynamicCreativeIdSet)
         && Objects.equals(
             this.autoDerivedLandingPageSwitch, adgroupsUpdateRequest.autoDerivedLandingPageSwitch)
+        && Objects.equals(this.ecomPkamSwitch, adgroupsUpdateRequest.ecomPkamSwitch)
+        && Objects.equals(this.forwardLinkAssist, adgroupsUpdateRequest.forwardLinkAssist)
         && Objects.equals(this.accountId, adgroupsUpdateRequest.accountId);
   }
 
@@ -1115,6 +1161,8 @@ public class AdgroupsUpdateRequest {
         smartTargeting,
         dynamicCreativeIdSet,
         autoDerivedLandingPageSwitch,
+        ecomPkamSwitch,
+        forwardLinkAssist,
         accountId);
   }
 
