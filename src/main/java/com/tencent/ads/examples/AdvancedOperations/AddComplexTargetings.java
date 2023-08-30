@@ -105,7 +105,7 @@ public class AddComplexTargetings {
           tencentAds
               .customAudienceFiles()
               .customAudienceFilesAdd(
-                  ACCOUNT_ID, audienceId, "IMEI", new File(audienceFilePath), null, null, null);
+                  ACCOUNT_ID, audienceId, "IMEI", new File(audienceFilePath), null, null);
       if (customAudienceFilesAddResponseData != null
           && customAudienceFilesAddResponseData.getCustomAudienceFileId() != null) {
         return audienceId;
