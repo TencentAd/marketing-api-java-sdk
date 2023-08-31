@@ -1,20 +1,29 @@
-package com.tencent.ads.examples.BasicOperations.LocalBusiness;
+package com.tencent.ads.examples.BasicOperations.BusinessAssets;
 
 import com.tencent.ads.ApiContextConfig;
 import com.tencent.ads.TencentAds;
 import com.tencent.ads.exception.TencentAdsResponseException;
 import com.tencent.ads.exception.TencentAdsSDKException;
 import com.tencent.ads.model.*;
-import com.tencent.ads.model.LocalEstimatedamountGetRequest;
+import com.tencent.ads.model.FilteringStruct;
+import java.util.List;
 
-public class GetLocalEstimatedamount {
+public class GetLocalStores {
   /** YOUR ACCESS TOKEN */
   public String ACCESS_TOKEN = "YOUR ACCESS TOKEN";
 
   /** TencentAds */
   public TencentAds tencentAds;
 
-  public LocalEstimatedamountGetRequest data = null;
+  public Long accountId = null;
+
+  public List<FilteringStruct> filtering = null;
+
+  public Long page = null;
+
+  public Long pageSize = null;
+
+  public List<String> fields = null;
 
   public void init() {
     this.tencentAds = TencentAds.getInstance();
@@ -26,18 +35,17 @@ public class GetLocalEstimatedamount {
 
   public void buildParams() {}
 
-  public LocalEstimatedamountGetResponseData getLocalEstimatedamount() throws Exception {
-    LocalEstimatedamountGetResponseData response =
-        tencentAds.localEstimatedamount().localEstimatedamountGet(data);
+  public LocalStoresGetResponseData getLocalStores() throws Exception {
+    LocalStoresGetResponseData response =
+        tencentAds.localStores().localStoresGet(accountId, filtering, page, pageSize, fields);
     return response;
   }
 
   public static void main(String[] args) {
     try {
-      GetLocalEstimatedamount getLocalEstimatedamount = new GetLocalEstimatedamount();
-      getLocalEstimatedamount.init();
-      LocalEstimatedamountGetResponseData response =
-          getLocalEstimatedamount.getLocalEstimatedamount();
+      GetLocalStores getLocalStores = new GetLocalStores();
+      getLocalStores.init();
+      LocalStoresGetResponseData response = getLocalStores.getLocalStores();
     } catch (TencentAdsResponseException e) {
       e.printStackTrace();
     } catch (TencentAdsSDKException e) {

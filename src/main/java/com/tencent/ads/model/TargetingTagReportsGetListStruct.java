@@ -2043,6 +2043,12 @@ public class TargetingTagReportsGetListStruct {
   @SerializedName("mini_game_pay_d30_pla_roi")
   private Double miniGamePayD30PlaRoi = null;
 
+  @SerializedName("project_id")
+  private Long projectId = null;
+
+  @SerializedName("project_name")
+  private String projectName = null;
+
   public TargetingTagReportsGetListStruct date(String date) {
     this.date = date;
     return this;
@@ -14943,6 +14949,44 @@ public class TargetingTagReportsGetListStruct {
     this.miniGamePayD30PlaRoi = miniGamePayD30PlaRoi;
   }
 
+  public TargetingTagReportsGetListStruct projectId(Long projectId) {
+    this.projectId = projectId;
+    return this;
+  }
+
+  /**
+   * Get projectId
+   *
+   * @return projectId
+   */
+  @ApiModelProperty(value = "")
+  public Long getProjectId() {
+    return projectId;
+  }
+
+  public void setProjectId(Long projectId) {
+    this.projectId = projectId;
+  }
+
+  public TargetingTagReportsGetListStruct projectName(String projectName) {
+    this.projectName = projectName;
+    return this;
+  }
+
+  /**
+   * Get projectName
+   *
+   * @return projectName
+   */
+  @ApiModelProperty(value = "")
+  public String getProjectName() {
+    return projectName;
+  }
+
+  public void setProjectName(String projectName) {
+    this.projectName = projectName;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -16123,7 +16167,9 @@ public class TargetingTagReportsGetListStruct {
         && Objects.equals(
             this.miniGamePayD14PlaRoi, targetingTagReportsGetListStruct.miniGamePayD14PlaRoi)
         && Objects.equals(
-            this.miniGamePayD30PlaRoi, targetingTagReportsGetListStruct.miniGamePayD30PlaRoi);
+            this.miniGamePayD30PlaRoi, targetingTagReportsGetListStruct.miniGamePayD30PlaRoi)
+        && Objects.equals(this.projectId, targetingTagReportsGetListStruct.projectId)
+        && Objects.equals(this.projectName, targetingTagReportsGetListStruct.projectName);
   }
 
   @Override
@@ -16802,7 +16848,9 @@ public class TargetingTagReportsGetListStruct {
         miniGamePayD3PlaRoi,
         miniGamePayD7PlaRoi,
         miniGamePayD14PlaRoi,
-        miniGamePayD30PlaRoi);
+        miniGamePayD30PlaRoi,
+        projectId,
+        projectName);
   }
 
   @Override

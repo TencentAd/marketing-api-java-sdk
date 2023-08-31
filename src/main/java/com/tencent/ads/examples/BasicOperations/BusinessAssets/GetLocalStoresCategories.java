@@ -1,21 +1,22 @@
-package com.tencent.ads.examples.BasicOperations.LocalBusiness;
+package com.tencent.ads.examples.BasicOperations.BusinessAssets;
 
 import com.tencent.ads.ApiContextConfig;
 import com.tencent.ads.TencentAds;
 import com.tencent.ads.exception.TencentAdsResponseException;
 import com.tencent.ads.exception.TencentAdsSDKException;
 import com.tencent.ads.model.*;
-import com.tencent.ads.model.WechatFundTransferAddRequest;
-import com.tencent.ads.model.WechatFundTransferAddResponse;
+import java.util.List;
 
-public class AddWechatFundTransfer {
+public class GetLocalStoresCategories {
   /** YOUR ACCESS TOKEN */
   public String ACCESS_TOKEN = "YOUR ACCESS TOKEN";
 
   /** TencentAds */
   public TencentAds tencentAds;
 
-  public WechatFundTransferAddRequest data = null;
+  public Long verticalId = null;
+
+  public List<String> fields = null;
 
   public void init() {
     this.tencentAds = TencentAds.getInstance();
@@ -27,17 +28,18 @@ public class AddWechatFundTransfer {
 
   public void buildParams() {}
 
-  public WechatFundTransferAddResponse addWechatFundTransfer() throws Exception {
-    WechatFundTransferAddResponse response =
-        tencentAds.wechatFundTransfer().wechatFundTransferAdd(data);
+  public LocalStoresCategoriesGetResponseData getLocalStoresCategories() throws Exception {
+    LocalStoresCategoriesGetResponseData response =
+        tencentAds.localStoresCategories().localStoresCategoriesGet(verticalId, fields);
     return response;
   }
 
   public static void main(String[] args) {
     try {
-      AddWechatFundTransfer addWechatFundTransfer = new AddWechatFundTransfer();
-      addWechatFundTransfer.init();
-      WechatFundTransferAddResponse response = addWechatFundTransfer.addWechatFundTransfer();
+      GetLocalStoresCategories getLocalStoresCategories = new GetLocalStoresCategories();
+      getLocalStoresCategories.init();
+      LocalStoresCategoriesGetResponseData response =
+          getLocalStoresCategories.getLocalStoresCategories();
     } catch (TencentAdsResponseException e) {
       e.printStackTrace();
     } catch (TencentAdsSDKException e) {

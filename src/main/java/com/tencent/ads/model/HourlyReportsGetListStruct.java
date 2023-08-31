@@ -2307,6 +2307,12 @@ public class HourlyReportsGetListStruct {
   @SerializedName("poi_id")
   private String poiId = null;
 
+  @SerializedName("project_id")
+  private Long projectId = null;
+
+  @SerializedName("project_name")
+  private String projectName = null;
+
   public HourlyReportsGetListStruct accountId(Long accountId) {
     this.accountId = accountId;
     return this;
@@ -16851,6 +16857,44 @@ public class HourlyReportsGetListStruct {
     this.poiId = poiId;
   }
 
+  public HourlyReportsGetListStruct projectId(Long projectId) {
+    this.projectId = projectId;
+    return this;
+  }
+
+  /**
+   * Get projectId
+   *
+   * @return projectId
+   */
+  @ApiModelProperty(value = "")
+  public Long getProjectId() {
+    return projectId;
+  }
+
+  public void setProjectId(Long projectId) {
+    this.projectId = projectId;
+  }
+
+  public HourlyReportsGetListStruct projectName(String projectName) {
+    this.projectName = projectName;
+    return this;
+  }
+
+  /**
+   * Get projectName
+   *
+   * @return projectName
+   */
+  @ApiModelProperty(value = "")
+  public String getProjectName() {
+    return projectName;
+  }
+
+  public void setProjectName(String projectName) {
+    this.projectName = projectName;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -18006,7 +18050,9 @@ public class HourlyReportsGetListStruct {
             this.videoOuterPlayUserCount, hourlyReportsGetListStruct.videoOuterPlayUserCount)
         && Objects.equals(
             this.videoInnerPlayUserCount, hourlyReportsGetListStruct.videoInnerPlayUserCount)
-        && Objects.equals(this.poiId, hourlyReportsGetListStruct.poiId);
+        && Objects.equals(this.poiId, hourlyReportsGetListStruct.poiId)
+        && Objects.equals(this.projectId, hourlyReportsGetListStruct.projectId)
+        && Objects.equals(this.projectName, hourlyReportsGetListStruct.projectName);
   }
 
   @Override
@@ -18773,7 +18819,9 @@ public class HourlyReportsGetListStruct {
         forwardUserCount,
         videoOuterPlayUserCount,
         videoInnerPlayUserCount,
-        poiId);
+        poiId,
+        projectId,
+        projectName);
   }
 
   @Override

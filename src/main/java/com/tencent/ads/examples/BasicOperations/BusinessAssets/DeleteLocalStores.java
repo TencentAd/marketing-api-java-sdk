@@ -1,20 +1,20 @@
-package com.tencent.ads.examples.BasicOperations.LocalBusiness;
+package com.tencent.ads.examples.BasicOperations.BusinessAssets;
 
 import com.tencent.ads.ApiContextConfig;
 import com.tencent.ads.TencentAds;
 import com.tencent.ads.exception.TencentAdsResponseException;
 import com.tencent.ads.exception.TencentAdsSDKException;
 import com.tencent.ads.model.*;
-import com.tencent.ads.model.LocalStoresAddRequest;
+import com.tencent.ads.model.LocalStoresDeleteRequest;
 
-public class AddLocalStores {
+public class DeleteLocalStores {
   /** YOUR ACCESS TOKEN */
   public String ACCESS_TOKEN = "YOUR ACCESS TOKEN";
 
   /** TencentAds */
   public TencentAds tencentAds;
 
-  public LocalStoresAddRequest data = null;
+  public LocalStoresDeleteRequest data = null;
 
   public void init() {
     this.tencentAds = TencentAds.getInstance();
@@ -26,16 +26,16 @@ public class AddLocalStores {
 
   public void buildParams() {}
 
-  public LocalStoresAddResponseData addLocalStores() throws Exception {
-    LocalStoresAddResponseData response = tencentAds.localStores().localStoresAdd(data);
+  public LocalStoresDeleteResponseData deleteLocalStores() throws Exception {
+    LocalStoresDeleteResponseData response = tencentAds.localStores().localStoresDelete(data);
     return response;
   }
 
   public static void main(String[] args) {
     try {
-      AddLocalStores addLocalStores = new AddLocalStores();
-      addLocalStores.init();
-      LocalStoresAddResponseData response = addLocalStores.addLocalStores();
+      DeleteLocalStores deleteLocalStores = new DeleteLocalStores();
+      deleteLocalStores.init();
+      LocalStoresDeleteResponseData response = deleteLocalStores.deleteLocalStores();
     } catch (TencentAdsResponseException e) {
       e.printStackTrace();
     } catch (TencentAdsSDKException e) {

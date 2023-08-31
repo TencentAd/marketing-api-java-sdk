@@ -1,14 +1,13 @@
-package com.tencent.ads.examples.BasicOperations.LocalBusiness;
+package com.tencent.ads.examples.BasicOperations.BusinessAssets;
 
 import com.tencent.ads.ApiContextConfig;
 import com.tencent.ads.TencentAds;
 import com.tencent.ads.exception.TencentAdsResponseException;
 import com.tencent.ads.exception.TencentAdsSDKException;
 import com.tencent.ads.model.*;
-import com.tencent.ads.model.FilteringStruct;
 import java.util.List;
 
-public class GetLocalStores {
+public class GetLocalStoresWxpayMerchants {
   /** YOUR ACCESS TOKEN */
   public String ACCESS_TOKEN = "YOUR ACCESS TOKEN";
 
@@ -16,8 +15,6 @@ public class GetLocalStores {
   public TencentAds tencentAds;
 
   public Long accountId = null;
-
-  public List<FilteringStruct> filtering = null;
 
   public Long page = null;
 
@@ -35,17 +32,21 @@ public class GetLocalStores {
 
   public void buildParams() {}
 
-  public LocalStoresGetResponseData getLocalStores() throws Exception {
-    LocalStoresGetResponseData response =
-        tencentAds.localStores().localStoresGet(accountId, filtering, page, pageSize, fields);
+  public LocalStoresWxpayMerchantsGetResponseData getLocalStoresWxpayMerchants() throws Exception {
+    LocalStoresWxpayMerchantsGetResponseData response =
+        tencentAds
+            .localStoresWxpayMerchants()
+            .localStoresWxpayMerchantsGet(accountId, page, pageSize, fields);
     return response;
   }
 
   public static void main(String[] args) {
     try {
-      GetLocalStores getLocalStores = new GetLocalStores();
-      getLocalStores.init();
-      LocalStoresGetResponseData response = getLocalStores.getLocalStores();
+      GetLocalStoresWxpayMerchants getLocalStoresWxpayMerchants =
+          new GetLocalStoresWxpayMerchants();
+      getLocalStoresWxpayMerchants.init();
+      LocalStoresWxpayMerchantsGetResponseData response =
+          getLocalStoresWxpayMerchants.getLocalStoresWxpayMerchants();
     } catch (TencentAdsResponseException e) {
       e.printStackTrace();
     } catch (TencentAdsSDKException e) {

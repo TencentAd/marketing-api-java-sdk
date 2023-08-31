@@ -2394,6 +2394,12 @@ public class DailyReportsGetListStruct {
   @SerializedName("export_id")
   private String exportId = null;
 
+  @SerializedName("project_id")
+  private Long projectId = null;
+
+  @SerializedName("project_name")
+  private String projectName = null;
+
   public DailyReportsGetListStruct accountId(Long accountId) {
     this.accountId = accountId;
     return this;
@@ -17476,6 +17482,44 @@ public class DailyReportsGetListStruct {
     this.exportId = exportId;
   }
 
+  public DailyReportsGetListStruct projectId(Long projectId) {
+    this.projectId = projectId;
+    return this;
+  }
+
+  /**
+   * Get projectId
+   *
+   * @return projectId
+   */
+  @ApiModelProperty(value = "")
+  public Long getProjectId() {
+    return projectId;
+  }
+
+  public void setProjectId(Long projectId) {
+    this.projectId = projectId;
+  }
+
+  public DailyReportsGetListStruct projectName(String projectName) {
+    this.projectName = projectName;
+    return this;
+  }
+
+  /**
+   * Get projectName
+   *
+   * @return projectName
+   */
+  @ApiModelProperty(value = "")
+  public String getProjectName() {
+    return projectName;
+  }
+
+  public void setProjectName(String projectName) {
+    this.projectName = projectName;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -18607,7 +18651,9 @@ public class DailyReportsGetListStruct {
         && Objects.equals(
             this.channelsMatchCommentPv, dailyReportsGetListStruct.channelsMatchCommentPv)
         && Objects.equals(this.channelsMatchSharePv, dailyReportsGetListStruct.channelsMatchSharePv)
-        && Objects.equals(this.exportId, dailyReportsGetListStruct.exportId);
+        && Objects.equals(this.exportId, dailyReportsGetListStruct.exportId)
+        && Objects.equals(this.projectId, dailyReportsGetListStruct.projectId)
+        && Objects.equals(this.projectName, dailyReportsGetListStruct.projectName);
   }
 
   @Override
@@ -19403,7 +19449,9 @@ public class DailyReportsGetListStruct {
         channelsMatchHeartPv,
         channelsMatchCommentPv,
         channelsMatchSharePv,
-        exportId);
+        exportId,
+        projectId,
+        projectName);
   }
 
   @Override

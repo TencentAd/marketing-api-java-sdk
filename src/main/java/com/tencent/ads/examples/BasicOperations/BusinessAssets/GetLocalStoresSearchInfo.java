@@ -1,4 +1,4 @@
-package com.tencent.ads.examples.BasicOperations.LocalBusiness;
+package com.tencent.ads.examples.BasicOperations.BusinessAssets;
 
 import com.tencent.ads.ApiContextConfig;
 import com.tencent.ads.TencentAds;
@@ -7,7 +7,7 @@ import com.tencent.ads.exception.TencentAdsSDKException;
 import com.tencent.ads.model.*;
 import java.util.List;
 
-public class GetLocalStoresWxpayMerchants {
+public class GetLocalStoresSearchInfo {
   /** YOUR ACCESS TOKEN */
   public String ACCESS_TOKEN = "YOUR ACCESS TOKEN";
 
@@ -15,6 +15,8 @@ public class GetLocalStoresWxpayMerchants {
   public TencentAds tencentAds;
 
   public Long accountId = null;
+
+  public String keyWord = null;
 
   public Long page = null;
 
@@ -32,21 +34,20 @@ public class GetLocalStoresWxpayMerchants {
 
   public void buildParams() {}
 
-  public LocalStoresWxpayMerchantsGetResponseData getLocalStoresWxpayMerchants() throws Exception {
-    LocalStoresWxpayMerchantsGetResponseData response =
+  public LocalStoresSearchInfoGetResponseData getLocalStoresSearchInfo() throws Exception {
+    LocalStoresSearchInfoGetResponseData response =
         tencentAds
-            .localStoresWxpayMerchants()
-            .localStoresWxpayMerchantsGet(accountId, page, pageSize, fields);
+            .localStoresSearchInfo()
+            .localStoresSearchInfoGet(accountId, keyWord, page, pageSize, fields);
     return response;
   }
 
   public static void main(String[] args) {
     try {
-      GetLocalStoresWxpayMerchants getLocalStoresWxpayMerchants =
-          new GetLocalStoresWxpayMerchants();
-      getLocalStoresWxpayMerchants.init();
-      LocalStoresWxpayMerchantsGetResponseData response =
-          getLocalStoresWxpayMerchants.getLocalStoresWxpayMerchants();
+      GetLocalStoresSearchInfo getLocalStoresSearchInfo = new GetLocalStoresSearchInfo();
+      getLocalStoresSearchInfo.init();
+      LocalStoresSearchInfoGetResponseData response =
+          getLocalStoresSearchInfo.getLocalStoresSearchInfo();
     } catch (TencentAdsResponseException e) {
       e.printStackTrace();
     } catch (TencentAdsSDKException e) {

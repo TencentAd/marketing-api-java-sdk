@@ -1,20 +1,20 @@
-package com.tencent.ads.examples.BasicOperations.LocalBusiness;
+package com.tencent.ads.examples.BasicOperations.BusinessAssets;
 
 import com.tencent.ads.ApiContextConfig;
 import com.tencent.ads.TencentAds;
 import com.tencent.ads.exception.TencentAdsResponseException;
 import com.tencent.ads.exception.TencentAdsSDKException;
 import com.tencent.ads.model.*;
-import com.tencent.ads.model.LocalStoresAddressParsingResultGetRequest;
+import com.tencent.ads.model.LocalStoresUpdateRequest;
 
-public class GetLocalStoresAddressParsingResult {
+public class UpdateLocalStores {
   /** YOUR ACCESS TOKEN */
   public String ACCESS_TOKEN = "YOUR ACCESS TOKEN";
 
   /** TencentAds */
   public TencentAds tencentAds;
 
-  public LocalStoresAddressParsingResultGetRequest data = null;
+  public LocalStoresUpdateRequest data = null;
 
   public void init() {
     this.tencentAds = TencentAds.getInstance();
@@ -26,20 +26,16 @@ public class GetLocalStoresAddressParsingResult {
 
   public void buildParams() {}
 
-  public LocalStoresAddressParsingResultGetResponseData getLocalStoresAddressParsingResult()
-      throws Exception {
-    LocalStoresAddressParsingResultGetResponseData response =
-        tencentAds.localStoresAddressParsingResult().localStoresAddressParsingResultGet(data);
+  public LocalStoresUpdateResponseData updateLocalStores() throws Exception {
+    LocalStoresUpdateResponseData response = tencentAds.localStores().localStoresUpdate(data);
     return response;
   }
 
   public static void main(String[] args) {
     try {
-      GetLocalStoresAddressParsingResult getLocalStoresAddressParsingResult =
-          new GetLocalStoresAddressParsingResult();
-      getLocalStoresAddressParsingResult.init();
-      LocalStoresAddressParsingResultGetResponseData response =
-          getLocalStoresAddressParsingResult.getLocalStoresAddressParsingResult();
+      UpdateLocalStores updateLocalStores = new UpdateLocalStores();
+      updateLocalStores.init();
+      LocalStoresUpdateResponseData response = updateLocalStores.updateLocalStores();
     } catch (TencentAdsResponseException e) {
       e.printStackTrace();
     } catch (TencentAdsSDKException e) {

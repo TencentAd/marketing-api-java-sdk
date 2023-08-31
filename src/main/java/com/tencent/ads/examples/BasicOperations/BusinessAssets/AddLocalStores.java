@@ -1,20 +1,20 @@
-package com.tencent.ads.examples.BasicOperations.LocalBusiness;
+package com.tencent.ads.examples.BasicOperations.BusinessAssets;
 
 import com.tencent.ads.ApiContextConfig;
 import com.tencent.ads.TencentAds;
 import com.tencent.ads.exception.TencentAdsResponseException;
 import com.tencent.ads.exception.TencentAdsSDKException;
 import com.tencent.ads.model.*;
-import com.tencent.ads.model.LocalUpdateRequest;
+import com.tencent.ads.model.LocalStoresAddRequest;
 
-public class UpdateLocal {
+public class AddLocalStores {
   /** YOUR ACCESS TOKEN */
   public String ACCESS_TOKEN = "YOUR ACCESS TOKEN";
 
   /** TencentAds */
   public TencentAds tencentAds;
 
-  public LocalUpdateRequest data = null;
+  public LocalStoresAddRequest data = null;
 
   public void init() {
     this.tencentAds = TencentAds.getInstance();
@@ -26,16 +26,16 @@ public class UpdateLocal {
 
   public void buildParams() {}
 
-  public LocalUpdateResponseData updateLocal() throws Exception {
-    LocalUpdateResponseData response = tencentAds.local().localUpdate(data);
+  public LocalStoresAddResponseData addLocalStores() throws Exception {
+    LocalStoresAddResponseData response = tencentAds.localStores().localStoresAdd(data);
     return response;
   }
 
   public static void main(String[] args) {
     try {
-      UpdateLocal updateLocal = new UpdateLocal();
-      updateLocal.init();
-      LocalUpdateResponseData response = updateLocal.updateLocal();
+      AddLocalStores addLocalStores = new AddLocalStores();
+      addLocalStores.init();
+      LocalStoresAddResponseData response = addLocalStores.addLocalStores();
     } catch (TencentAdsResponseException e) {
       e.printStackTrace();
     } catch (TencentAdsSDKException e) {

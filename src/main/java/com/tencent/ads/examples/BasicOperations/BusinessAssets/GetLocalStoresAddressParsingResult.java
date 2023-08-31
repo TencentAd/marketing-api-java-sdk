@@ -1,20 +1,20 @@
-package com.tencent.ads.examples.BasicOperations.LocalBusiness;
+package com.tencent.ads.examples.BasicOperations.BusinessAssets;
 
 import com.tencent.ads.ApiContextConfig;
 import com.tencent.ads.TencentAds;
 import com.tencent.ads.exception.TencentAdsResponseException;
 import com.tencent.ads.exception.TencentAdsSDKException;
 import com.tencent.ads.model.*;
-import com.tencent.ads.model.LocalStoresDeleteRequest;
+import com.tencent.ads.model.LocalStoresAddressParsingResultGetRequest;
 
-public class DeleteLocalStores {
+public class GetLocalStoresAddressParsingResult {
   /** YOUR ACCESS TOKEN */
   public String ACCESS_TOKEN = "YOUR ACCESS TOKEN";
 
   /** TencentAds */
   public TencentAds tencentAds;
 
-  public LocalStoresDeleteRequest data = null;
+  public LocalStoresAddressParsingResultGetRequest data = null;
 
   public void init() {
     this.tencentAds = TencentAds.getInstance();
@@ -26,16 +26,20 @@ public class DeleteLocalStores {
 
   public void buildParams() {}
 
-  public LocalStoresDeleteResponseData deleteLocalStores() throws Exception {
-    LocalStoresDeleteResponseData response = tencentAds.localStores().localStoresDelete(data);
+  public LocalStoresAddressParsingResultGetResponseData getLocalStoresAddressParsingResult()
+      throws Exception {
+    LocalStoresAddressParsingResultGetResponseData response =
+        tencentAds.localStoresAddressParsingResult().localStoresAddressParsingResultGet(data);
     return response;
   }
 
   public static void main(String[] args) {
     try {
-      DeleteLocalStores deleteLocalStores = new DeleteLocalStores();
-      deleteLocalStores.init();
-      LocalStoresDeleteResponseData response = deleteLocalStores.deleteLocalStores();
+      GetLocalStoresAddressParsingResult getLocalStoresAddressParsingResult =
+          new GetLocalStoresAddressParsingResult();
+      getLocalStoresAddressParsingResult.init();
+      LocalStoresAddressParsingResultGetResponseData response =
+          getLocalStoresAddressParsingResult.getLocalStoresAddressParsingResult();
     } catch (TencentAdsResponseException e) {
       e.printStackTrace();
     } catch (TencentAdsSDKException e) {
