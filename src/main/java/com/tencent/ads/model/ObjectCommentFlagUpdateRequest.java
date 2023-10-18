@@ -28,6 +28,9 @@ public class ObjectCommentFlagUpdateRequest {
   @SerializedName("op_type")
   private SetObjectCommentFlagOpType opType = null;
 
+  @SerializedName("comment_id")
+  private String commentId = null;
+
   public ObjectCommentFlagUpdateRequest accountId(Long accountId) {
     this.accountId = accountId;
     return this;
@@ -85,6 +88,25 @@ public class ObjectCommentFlagUpdateRequest {
     this.opType = opType;
   }
 
+  public ObjectCommentFlagUpdateRequest commentId(String commentId) {
+    this.commentId = commentId;
+    return this;
+  }
+
+  /**
+   * Get commentId
+   *
+   * @return commentId
+   */
+  @ApiModelProperty(value = "")
+  public String getCommentId() {
+    return commentId;
+  }
+
+  public void setCommentId(String commentId) {
+    this.commentId = commentId;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -97,12 +119,13 @@ public class ObjectCommentFlagUpdateRequest {
         (ObjectCommentFlagUpdateRequest) o;
     return Objects.equals(this.accountId, objectCommentFlagUpdateRequest.accountId)
         && Objects.equals(this.adcreativeId, objectCommentFlagUpdateRequest.adcreativeId)
-        && Objects.equals(this.opType, objectCommentFlagUpdateRequest.opType);
+        && Objects.equals(this.opType, objectCommentFlagUpdateRequest.opType)
+        && Objects.equals(this.commentId, objectCommentFlagUpdateRequest.commentId);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(accountId, adcreativeId, opType);
+    return Objects.hash(accountId, adcreativeId, opType, commentId);
   }
 
   @Override

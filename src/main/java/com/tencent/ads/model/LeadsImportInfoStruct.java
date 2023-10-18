@@ -82,7 +82,7 @@ public class LeadsImportInfoStruct {
   private String outerLeadsIneffectReason = null;
 
   @SerializedName("outer_leads_comefrom")
-  private ActionChannelType outerLeadsComefrom = null;
+  private OuterLeadsComeFrom outerLeadsComefrom = null;
 
   @SerializedName("memo")
   private String memo = null;
@@ -500,7 +500,7 @@ public class LeadsImportInfoStruct {
     this.outerLeadsIneffectReason = outerLeadsIneffectReason;
   }
 
-  public LeadsImportInfoStruct outerLeadsComefrom(ActionChannelType outerLeadsComefrom) {
+  public LeadsImportInfoStruct outerLeadsComefrom(OuterLeadsComeFrom outerLeadsComefrom) {
     this.outerLeadsComefrom = outerLeadsComefrom;
     return this;
   }
@@ -511,11 +511,11 @@ public class LeadsImportInfoStruct {
    * @return outerLeadsComefrom
    */
   @ApiModelProperty(value = "")
-  public ActionChannelType getOuterLeadsComefrom() {
+  public OuterLeadsComeFrom getOuterLeadsComefrom() {
     return outerLeadsComefrom;
   }
 
-  public void setOuterLeadsComefrom(ActionChannelType outerLeadsComefrom) {
+  public void setOuterLeadsComefrom(OuterLeadsComeFrom outerLeadsComefrom) {
     this.outerLeadsComefrom = outerLeadsComefrom;
   }
 

@@ -26,7 +26,9 @@ public enum BidwordMatchType {
 
   WIDE_MATCH("WIDE_MATCH"),
 
-  WORD_MATCH("WORD_MATCH");
+  WORD_MATCH("WORD_MATCH"),
+
+  PHRASE_MATCH("PHRASE_MATCH");
 
   private String value;
 

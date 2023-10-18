@@ -65,11 +65,11 @@ public class CreativeSampleProductsGetListStruct {
   @SerializedName("ad_direct_videos")
   private List<String> adDirectVideos = null;
 
-  @SerializedName("ad_direct_landscape_videos")
-  private List<String> adDirectLandscapeVideos = null;
+  @SerializedName("ad_direct_landscape_video")
+  private String adDirectLandscapeVideo = null;
 
-  @SerializedName("ad_direct_portrait_videos")
-  private List<String> adDirectPortraitVideos = null;
+  @SerializedName("ad_direct_portrait_video")
+  private String adDirectPortraitVideo = null;
 
   public CreativeSampleProductsGetListStruct productCatalogId(Long productCatalogId) {
     this.productCatalogId = productCatalogId;
@@ -374,62 +374,42 @@ public class CreativeSampleProductsGetListStruct {
     this.adDirectVideos = adDirectVideos;
   }
 
-  public CreativeSampleProductsGetListStruct adDirectLandscapeVideos(
-      List<String> adDirectLandscapeVideos) {
-    this.adDirectLandscapeVideos = adDirectLandscapeVideos;
-    return this;
-  }
-
-  public CreativeSampleProductsGetListStruct addAdDirectLandscapeVideosItem(
-      String adDirectLandscapeVideosItem) {
-    if (this.adDirectLandscapeVideos == null) {
-      this.adDirectLandscapeVideos = new ArrayList<String>();
-    }
-    this.adDirectLandscapeVideos.add(adDirectLandscapeVideosItem);
+  public CreativeSampleProductsGetListStruct adDirectLandscapeVideo(String adDirectLandscapeVideo) {
+    this.adDirectLandscapeVideo = adDirectLandscapeVideo;
     return this;
   }
 
   /**
-   * Get adDirectLandscapeVideos
+   * Get adDirectLandscapeVideo
    *
-   * @return adDirectLandscapeVideos
+   * @return adDirectLandscapeVideo
    */
   @ApiModelProperty(value = "")
-  public List<String> getAdDirectLandscapeVideos() {
-    return adDirectLandscapeVideos;
+  public String getAdDirectLandscapeVideo() {
+    return adDirectLandscapeVideo;
   }
 
-  public void setAdDirectLandscapeVideos(List<String> adDirectLandscapeVideos) {
-    this.adDirectLandscapeVideos = adDirectLandscapeVideos;
+  public void setAdDirectLandscapeVideo(String adDirectLandscapeVideo) {
+    this.adDirectLandscapeVideo = adDirectLandscapeVideo;
   }
 
-  public CreativeSampleProductsGetListStruct adDirectPortraitVideos(
-      List<String> adDirectPortraitVideos) {
-    this.adDirectPortraitVideos = adDirectPortraitVideos;
-    return this;
-  }
-
-  public CreativeSampleProductsGetListStruct addAdDirectPortraitVideosItem(
-      String adDirectPortraitVideosItem) {
-    if (this.adDirectPortraitVideos == null) {
-      this.adDirectPortraitVideos = new ArrayList<String>();
-    }
-    this.adDirectPortraitVideos.add(adDirectPortraitVideosItem);
+  public CreativeSampleProductsGetListStruct adDirectPortraitVideo(String adDirectPortraitVideo) {
+    this.adDirectPortraitVideo = adDirectPortraitVideo;
     return this;
   }
 
   /**
-   * Get adDirectPortraitVideos
+   * Get adDirectPortraitVideo
    *
-   * @return adDirectPortraitVideos
+   * @return adDirectPortraitVideo
    */
   @ApiModelProperty(value = "")
-  public List<String> getAdDirectPortraitVideos() {
-    return adDirectPortraitVideos;
+  public String getAdDirectPortraitVideo() {
+    return adDirectPortraitVideo;
   }
 
-  public void setAdDirectPortraitVideos(List<String> adDirectPortraitVideos) {
-    this.adDirectPortraitVideos = adDirectPortraitVideos;
+  public void setAdDirectPortraitVideo(String adDirectPortraitVideo) {
+    this.adDirectPortraitVideo = adDirectPortraitVideo;
   }
 
   @Override
@@ -465,11 +445,9 @@ public class CreativeSampleProductsGetListStruct {
         && Objects.equals(this.videoUrl, creativeSampleProductsGetListStruct.videoUrl)
         && Objects.equals(this.adDirectVideos, creativeSampleProductsGetListStruct.adDirectVideos)
         && Objects.equals(
-            this.adDirectLandscapeVideos,
-            creativeSampleProductsGetListStruct.adDirectLandscapeVideos)
+            this.adDirectLandscapeVideo, creativeSampleProductsGetListStruct.adDirectLandscapeVideo)
         && Objects.equals(
-            this.adDirectPortraitVideos,
-            creativeSampleProductsGetListStruct.adDirectPortraitVideos);
+            this.adDirectPortraitVideo, creativeSampleProductsGetListStruct.adDirectPortraitVideo);
   }
 
   @Override
@@ -489,8 +467,8 @@ public class CreativeSampleProductsGetListStruct {
         advertisementPortraitImages,
         videoUrl,
         adDirectVideos,
-        adDirectLandscapeVideos,
-        adDirectPortraitVideos);
+        adDirectLandscapeVideo,
+        adDirectPortraitVideo);
   }
 
   @Override

@@ -44,6 +44,7 @@ public class TargetingTagReportsApiContainer extends ApiContainer {
    * @param pageSize (optional)
    * @param timeLine (optional)
    * @param weixinOfficialAccountsUpgradeEnabled (optional)
+   * @param adqAccountsUpgradeEnabled (optional)
    * @param fields 返回参数的字段列表 (optional)
    * @return TargetingTagReportsGetResponse
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
@@ -62,6 +63,7 @@ public class TargetingTagReportsApiContainer extends ApiContainer {
       Long pageSize,
       String timeLine,
       Boolean weixinOfficialAccountsUpgradeEnabled,
+      Boolean adqAccountsUpgradeEnabled,
       List<String> fields)
       throws ApiException, TencentAdsResponseException {
     TargetingTagReportsGetResponse resp =
@@ -78,6 +80,7 @@ public class TargetingTagReportsApiContainer extends ApiContainer {
             pageSize,
             timeLine,
             weixinOfficialAccountsUpgradeEnabled,
+            adqAccountsUpgradeEnabled,
             fields);
     handleResponse(gson.toJson(resp));
     return resp.getData();

@@ -15,6 +15,8 @@ package com.tencent.ads.model;
 import com.google.gson.Gson;
 import com.google.gson.annotations.SerializedName;
 import io.swagger.annotations.ApiModelProperty;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Objects;
 
 /** ReviewAdAppealGetResponseData */
@@ -42,6 +44,12 @@ public class ReviewAdAppealGetResponseData {
 
   @SerializedName("appeal_status")
   private AppealStatus appealStatus = null;
+
+  @SerializedName("description")
+  private String description = null;
+
+  @SerializedName("image_list")
+  private List<String> imageList = null;
 
   public ReviewAdAppealGetResponseData accountId(Long accountId) {
     this.accountId = accountId;
@@ -195,6 +203,52 @@ public class ReviewAdAppealGetResponseData {
     this.appealStatus = appealStatus;
   }
 
+  public ReviewAdAppealGetResponseData description(String description) {
+    this.description = description;
+    return this;
+  }
+
+  /**
+   * Get description
+   *
+   * @return description
+   */
+  @ApiModelProperty(value = "")
+  public String getDescription() {
+    return description;
+  }
+
+  public void setDescription(String description) {
+    this.description = description;
+  }
+
+  public ReviewAdAppealGetResponseData imageList(List<String> imageList) {
+    this.imageList = imageList;
+    return this;
+  }
+
+  public ReviewAdAppealGetResponseData addImageListItem(String imageListItem) {
+    if (this.imageList == null) {
+      this.imageList = new ArrayList<String>();
+    }
+    this.imageList.add(imageListItem);
+    return this;
+  }
+
+  /**
+   * Get imageList
+   *
+   * @return imageList
+   */
+  @ApiModelProperty(value = "")
+  public List<String> getImageList() {
+    return imageList;
+  }
+
+  public void setImageList(List<String> imageList) {
+    this.imageList = imageList;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -212,7 +266,9 @@ public class ReviewAdAppealGetResponseData {
         && Objects.equals(
             this.historyApprovalAdId, reviewAdAppealGetResponseData.historyApprovalAdId)
         && Objects.equals(this.appealResult, reviewAdAppealGetResponseData.appealResult)
-        && Objects.equals(this.appealStatus, reviewAdAppealGetResponseData.appealStatus);
+        && Objects.equals(this.appealStatus, reviewAdAppealGetResponseData.appealStatus)
+        && Objects.equals(this.description, reviewAdAppealGetResponseData.description)
+        && Objects.equals(this.imageList, reviewAdAppealGetResponseData.imageList);
   }
 
   @Override
@@ -225,7 +281,9 @@ public class ReviewAdAppealGetResponseData {
         appealReason,
         historyApprovalAdId,
         appealResult,
-        appealStatus);
+        appealStatus,
+        description,
+        imageList);
   }
 
   @Override

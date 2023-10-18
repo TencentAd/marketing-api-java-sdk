@@ -65,6 +65,7 @@ public class DailyReportsApi {
    * @param timeLine (optional)
    * @param fields (optional)
    * @param weixinOfficialAccountsUpgradeEnabled (optional)
+   * @param adqAccountsUpgradeEnabled (optional)
    * @param progressListener Progress listener
    * @param progressRequestListener Progress request listener
    * @return Call to execute
@@ -82,6 +83,7 @@ public class DailyReportsApi {
       String timeLine,
       List<String> fields,
       Boolean weixinOfficialAccountsUpgradeEnabled,
+      Boolean adqAccountsUpgradeEnabled,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener)
       throws ApiException {
@@ -117,6 +119,9 @@ public class DailyReportsApi {
       localVarQueryParams.addAll(
           apiClient.parameterToPair(
               "weixin_official_accounts_upgrade_enabled", weixinOfficialAccountsUpgradeEnabled));
+    if (adqAccountsUpgradeEnabled != null)
+      localVarQueryParams.addAll(
+          apiClient.parameterToPair("adq_accounts_upgrade_enabled", adqAccountsUpgradeEnabled));
 
     Map<String, String> localVarHeaderParams = new HashMap<String, String>();
 
@@ -174,6 +179,7 @@ public class DailyReportsApi {
       String timeLine,
       List<String> fields,
       Boolean weixinOfficialAccountsUpgradeEnabled,
+      Boolean adqAccountsUpgradeEnabled,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener)
       throws ApiException {
@@ -209,6 +215,7 @@ public class DailyReportsApi {
             timeLine,
             fields,
             weixinOfficialAccountsUpgradeEnabled,
+            adqAccountsUpgradeEnabled,
             progressListener,
             progressRequestListener);
     return call;
@@ -228,6 +235,7 @@ public class DailyReportsApi {
    * @param timeLine (optional)
    * @param fields (optional)
    * @param weixinOfficialAccountsUpgradeEnabled (optional)
+   * @param adqAccountsUpgradeEnabled (optional)
    * @return DailyReportsGetResponse
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
@@ -243,7 +251,8 @@ public class DailyReportsApi {
       Long pageSize,
       String timeLine,
       List<String> fields,
-      Boolean weixinOfficialAccountsUpgradeEnabled)
+      Boolean weixinOfficialAccountsUpgradeEnabled,
+      Boolean adqAccountsUpgradeEnabled)
       throws ApiException {
     ApiResponse<DailyReportsGetResponse> resp =
         dailyReportsGetWithHttpInfo(
@@ -257,7 +266,8 @@ public class DailyReportsApi {
             pageSize,
             timeLine,
             fields,
-            weixinOfficialAccountsUpgradeEnabled);
+            weixinOfficialAccountsUpgradeEnabled,
+            adqAccountsUpgradeEnabled);
     return resp.getData();
   }
 
@@ -275,6 +285,7 @@ public class DailyReportsApi {
    * @param timeLine (optional)
    * @param fields (optional)
    * @param weixinOfficialAccountsUpgradeEnabled (optional)
+   * @param adqAccountsUpgradeEnabled (optional)
    * @return ApiResponse&lt;DailyReportsGetResponse&gt;
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
@@ -290,7 +301,8 @@ public class DailyReportsApi {
       Long pageSize,
       String timeLine,
       List<String> fields,
-      Boolean weixinOfficialAccountsUpgradeEnabled)
+      Boolean weixinOfficialAccountsUpgradeEnabled,
+      Boolean adqAccountsUpgradeEnabled)
       throws ApiException {
     com.squareup.okhttp.Call call =
         dailyReportsGetValidateBeforeCall(
@@ -305,6 +317,7 @@ public class DailyReportsApi {
             timeLine,
             fields,
             weixinOfficialAccountsUpgradeEnabled,
+            adqAccountsUpgradeEnabled,
             null,
             null);
     Type localVarReturnType = new TypeToken<DailyReportsGetResponse>() {}.getType();
@@ -325,6 +338,7 @@ public class DailyReportsApi {
    * @param timeLine (optional)
    * @param fields (optional)
    * @param weixinOfficialAccountsUpgradeEnabled (optional)
+   * @param adqAccountsUpgradeEnabled (optional)
    * @param callback The callback to be executed when the API call finishes
    * @return The request call
    * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -341,6 +355,7 @@ public class DailyReportsApi {
       String timeLine,
       List<String> fields,
       Boolean weixinOfficialAccountsUpgradeEnabled,
+      Boolean adqAccountsUpgradeEnabled,
       final ApiCallback<DailyReportsGetResponse> callback)
       throws ApiException {
 
@@ -378,6 +393,7 @@ public class DailyReportsApi {
             timeLine,
             fields,
             weixinOfficialAccountsUpgradeEnabled,
+            adqAccountsUpgradeEnabled,
             progressListener,
             progressRequestListener);
     Type localVarReturnType = new TypeToken<DailyReportsGetResponse>() {}.getType();

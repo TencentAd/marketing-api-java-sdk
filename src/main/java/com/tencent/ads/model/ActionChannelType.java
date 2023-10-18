@@ -36,6 +36,8 @@ public enum ActionChannelType {
 
   OTHERS("OTHERS"),
 
+  MULTIPLE("MULTIPLE"),
+
   UNKNOWN("UNKNOWN");
 
   private String value;

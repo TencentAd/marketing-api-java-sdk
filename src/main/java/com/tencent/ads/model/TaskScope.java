@@ -38,7 +38,9 @@ public enum TaskScope {
 
   PROJECT("TASK_SCOPE_PROJECT"),
 
-  BIDWORD("TASK_SCOPE_BIDWORD");
+  BIDWORD("TASK_SCOPE_BIDWORD"),
+
+  COMMENT("TASK_SCOPE_COMMENT");
 
   private String value;
 

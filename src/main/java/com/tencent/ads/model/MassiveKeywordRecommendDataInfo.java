@@ -35,6 +35,15 @@ public class MassiveKeywordRecommendDataInfo {
   @SerializedName("exclude_words")
   private List<String> excludeWords = null;
 
+  @SerializedName("contains_non_regional_words")
+  private ContainsRegionWords containsNonRegionalWords = null;
+
+  @SerializedName("word_province")
+  private List<Long> wordProvince = null;
+
+  @SerializedName("word_city")
+  private List<Long> wordCity = null;
+
   public MassiveKeywordRecommendDataInfo seedWords(List<String> seedWords) {
     this.seedWords = seedWords;
     return this;
@@ -136,6 +145,80 @@ public class MassiveKeywordRecommendDataInfo {
     this.excludeWords = excludeWords;
   }
 
+  public MassiveKeywordRecommendDataInfo containsNonRegionalWords(
+      ContainsRegionWords containsNonRegionalWords) {
+    this.containsNonRegionalWords = containsNonRegionalWords;
+    return this;
+  }
+
+  /**
+   * Get containsNonRegionalWords
+   *
+   * @return containsNonRegionalWords
+   */
+  @ApiModelProperty(value = "")
+  public ContainsRegionWords getContainsNonRegionalWords() {
+    return containsNonRegionalWords;
+  }
+
+  public void setContainsNonRegionalWords(ContainsRegionWords containsNonRegionalWords) {
+    this.containsNonRegionalWords = containsNonRegionalWords;
+  }
+
+  public MassiveKeywordRecommendDataInfo wordProvince(List<Long> wordProvince) {
+    this.wordProvince = wordProvince;
+    return this;
+  }
+
+  public MassiveKeywordRecommendDataInfo addWordProvinceItem(Long wordProvinceItem) {
+    if (this.wordProvince == null) {
+      this.wordProvince = new ArrayList<Long>();
+    }
+    this.wordProvince.add(wordProvinceItem);
+    return this;
+  }
+
+  /**
+   * Get wordProvince
+   *
+   * @return wordProvince
+   */
+  @ApiModelProperty(value = "")
+  public List<Long> getWordProvince() {
+    return wordProvince;
+  }
+
+  public void setWordProvince(List<Long> wordProvince) {
+    this.wordProvince = wordProvince;
+  }
+
+  public MassiveKeywordRecommendDataInfo wordCity(List<Long> wordCity) {
+    this.wordCity = wordCity;
+    return this;
+  }
+
+  public MassiveKeywordRecommendDataInfo addWordCityItem(Long wordCityItem) {
+    if (this.wordCity == null) {
+      this.wordCity = new ArrayList<Long>();
+    }
+    this.wordCity.add(wordCityItem);
+    return this;
+  }
+
+  /**
+   * Get wordCity
+   *
+   * @return wordCity
+   */
+  @ApiModelProperty(value = "")
+  public List<Long> getWordCity() {
+    return wordCity;
+  }
+
+  public void setWordCity(List<Long> wordCity) {
+    this.wordCity = wordCity;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -150,12 +233,23 @@ public class MassiveKeywordRecommendDataInfo {
         && Objects.equals(
             this.isFilterPurchasedWords, massiveKeywordRecommendDataInfo.isFilterPurchasedWords)
         && Objects.equals(this.siteSets, massiveKeywordRecommendDataInfo.siteSets)
-        && Objects.equals(this.excludeWords, massiveKeywordRecommendDataInfo.excludeWords);
+        && Objects.equals(this.excludeWords, massiveKeywordRecommendDataInfo.excludeWords)
+        && Objects.equals(
+            this.containsNonRegionalWords, massiveKeywordRecommendDataInfo.containsNonRegionalWords)
+        && Objects.equals(this.wordProvince, massiveKeywordRecommendDataInfo.wordProvince)
+        && Objects.equals(this.wordCity, massiveKeywordRecommendDataInfo.wordCity);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(seedWords, isFilterPurchasedWords, siteSets, excludeWords);
+    return Objects.hash(
+        seedWords,
+        isFilterPurchasedWords,
+        siteSets,
+        excludeWords,
+        containsNonRegionalWords,
+        wordProvince,
+        wordCity);
   }
 
   @Override

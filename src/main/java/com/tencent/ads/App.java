@@ -85,7 +85,6 @@ public class App {
   @Inject DailyReportsApiContainer dailyReportsApiContainer;
   @Inject DataSetApiContainer dataSetApiContainer;
   @Inject DataSourceDispatchApiContainer dataSourceDispatchApiContainer;
-  @Inject DiagnosisApiContainer diagnosisApiContainer;
   @Inject DplabelAdLabelApiContainer dplabelAdLabelApiContainer;
   @Inject DynamicAdImageTemplatesApiContainer dynamicAdImageTemplatesApiContainer;
   @Inject DynamicAdImagesApiContainer dynamicAdImagesApiContainer;
@@ -162,7 +161,6 @@ public class App {
   @Inject SceneSpecTagsApiContainer sceneSpecTagsApiContainer;
   @Inject SplitTestsApiContainer splitTestsApiContainer;
   @Inject SubcustomerTransferApiContainer subcustomerTransferApiContainer;
-  @Inject SystemStatusApiContainer systemStatusApiContainer;
   @Inject TargetcpaTagApiContainer targetcpaTagApiContainer;
   @Inject TargetingTagReportsApiContainer targetingTagReportsApiContainer;
   @Inject TargetingTagsApiContainer targetingTagsApiContainer;
@@ -476,10 +474,6 @@ public class App {
     return dataSourceDispatchApiContainer;
   }
 
-  public DiagnosisApiContainer diagnosis() {
-    return diagnosisApiContainer;
-  }
-
   public DplabelAdLabelApiContainer dplabelAdLabel() {
     return dplabelAdLabelApiContainer;
   }
@@ -770,10 +764,6 @@ public class App {
 
   public SubcustomerTransferApiContainer subcustomerTransfer() {
     return subcustomerTransferApiContainer;
-  }
-
-  public SystemStatusApiContainer systemStatus() {
-    return systemStatusApiContainer;
   }
 
   public TargetcpaTagApiContainer targetcpaTag() {

@@ -60,6 +60,7 @@ public class DynamicAdVideoTemplatesApi {
    * @param pageSize (optional)
    * @param templateIdList (optional)
    * @param templateName (optional)
+   * @param dynamicAdTemplateOwnershipType (optional)
    * @param fields 返回参数的字段列表 (optional)
    * @param progressListener Progress listener
    * @param progressRequestListener Progress request listener
@@ -76,6 +77,7 @@ public class DynamicAdVideoTemplatesApi {
       Long pageSize,
       List<Long> templateIdList,
       String templateName,
+      String dynamicAdTemplateOwnershipType,
       List<String> fields,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener)
@@ -106,6 +108,10 @@ public class DynamicAdVideoTemplatesApi {
           apiClient.parameterToPairs("multi", "template_id_list", templateIdList));
     if (templateName != null)
       localVarQueryParams.addAll(apiClient.parameterToPair("template_name", templateName));
+    if (dynamicAdTemplateOwnershipType != null)
+      localVarQueryParams.addAll(
+          apiClient.parameterToPair(
+              "dynamic_ad_template_ownership_type", dynamicAdTemplateOwnershipType));
     if (fields != null)
       localVarCollectionQueryParams.addAll(apiClient.parameterToPairs("multi", "fields", fields));
 
@@ -163,6 +169,7 @@ public class DynamicAdVideoTemplatesApi {
       Long pageSize,
       List<Long> templateIdList,
       String templateName,
+      String dynamicAdTemplateOwnershipType,
       List<String> fields,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener)
@@ -203,6 +210,7 @@ public class DynamicAdVideoTemplatesApi {
             pageSize,
             templateIdList,
             templateName,
+            dynamicAdTemplateOwnershipType,
             fields,
             progressListener,
             progressRequestListener);
@@ -221,6 +229,7 @@ public class DynamicAdVideoTemplatesApi {
    * @param pageSize (optional)
    * @param templateIdList (optional)
    * @param templateName (optional)
+   * @param dynamicAdTemplateOwnershipType (optional)
    * @param fields 返回参数的字段列表 (optional)
    * @return DynamicAdVideoTemplatesGetResponse
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
@@ -236,6 +245,7 @@ public class DynamicAdVideoTemplatesApi {
       Long pageSize,
       List<Long> templateIdList,
       String templateName,
+      String dynamicAdTemplateOwnershipType,
       List<String> fields)
       throws ApiException {
     ApiResponse<DynamicAdVideoTemplatesGetResponse> resp =
@@ -249,6 +259,7 @@ public class DynamicAdVideoTemplatesApi {
             pageSize,
             templateIdList,
             templateName,
+            dynamicAdTemplateOwnershipType,
             fields);
     return resp.getData();
   }
@@ -265,6 +276,7 @@ public class DynamicAdVideoTemplatesApi {
    * @param pageSize (optional)
    * @param templateIdList (optional)
    * @param templateName (optional)
+   * @param dynamicAdTemplateOwnershipType (optional)
    * @param fields 返回参数的字段列表 (optional)
    * @return ApiResponse&lt;DynamicAdVideoTemplatesGetResponse&gt;
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
@@ -280,6 +292,7 @@ public class DynamicAdVideoTemplatesApi {
       Long pageSize,
       List<Long> templateIdList,
       String templateName,
+      String dynamicAdTemplateOwnershipType,
       List<String> fields)
       throws ApiException {
     com.squareup.okhttp.Call call =
@@ -293,6 +306,7 @@ public class DynamicAdVideoTemplatesApi {
             pageSize,
             templateIdList,
             templateName,
+            dynamicAdTemplateOwnershipType,
             fields,
             null,
             null);
@@ -312,6 +326,7 @@ public class DynamicAdVideoTemplatesApi {
    * @param pageSize (optional)
    * @param templateIdList (optional)
    * @param templateName (optional)
+   * @param dynamicAdTemplateOwnershipType (optional)
    * @param fields 返回参数的字段列表 (optional)
    * @param callback The callback to be executed when the API call finishes
    * @return The request call
@@ -327,6 +342,7 @@ public class DynamicAdVideoTemplatesApi {
       Long pageSize,
       List<Long> templateIdList,
       String templateName,
+      String dynamicAdTemplateOwnershipType,
       List<String> fields,
       final ApiCallback<DynamicAdVideoTemplatesGetResponse> callback)
       throws ApiException {
@@ -363,6 +379,7 @@ public class DynamicAdVideoTemplatesApi {
             pageSize,
             templateIdList,
             templateName,
+            dynamicAdTemplateOwnershipType,
             fields,
             progressListener,
             progressRequestListener);

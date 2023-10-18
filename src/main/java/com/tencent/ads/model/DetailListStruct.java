@@ -24,6 +24,9 @@ public class DetailListStruct {
   @SerializedName("scope_object_id")
   private Long scopeObjectId = null;
 
+  @SerializedName("scope_object_id_str")
+  private String scopeObjectIdStr = null;
+
   @SerializedName("scope_object_name")
   private String scopeObjectName = null;
 
@@ -50,6 +53,25 @@ public class DetailListStruct {
 
   public void setScopeObjectId(Long scopeObjectId) {
     this.scopeObjectId = scopeObjectId;
+  }
+
+  public DetailListStruct scopeObjectIdStr(String scopeObjectIdStr) {
+    this.scopeObjectIdStr = scopeObjectIdStr;
+    return this;
+  }
+
+  /**
+   * Get scopeObjectIdStr
+   *
+   * @return scopeObjectIdStr
+   */
+  @ApiModelProperty(value = "")
+  public String getScopeObjectIdStr() {
+    return scopeObjectIdStr;
+  }
+
+  public void setScopeObjectIdStr(String scopeObjectIdStr) {
+    this.scopeObjectIdStr = scopeObjectIdStr;
   }
 
   public DetailListStruct scopeObjectName(String scopeObjectName) {
@@ -119,6 +141,7 @@ public class DetailListStruct {
     }
     DetailListStruct detailListStruct = (DetailListStruct) o;
     return Objects.equals(this.scopeObjectId, detailListStruct.scopeObjectId)
+        && Objects.equals(this.scopeObjectIdStr, detailListStruct.scopeObjectIdStr)
         && Objects.equals(this.scopeObjectName, detailListStruct.scopeObjectName)
         && Objects.equals(this.detailResultType, detailListStruct.detailResultType)
         && Objects.equals(this.message, detailListStruct.message);
@@ -126,7 +149,8 @@ public class DetailListStruct {
 
   @Override
   public int hashCode() {
-    return Objects.hash(scopeObjectId, scopeObjectName, detailResultType, message);
+    return Objects.hash(
+        scopeObjectId, scopeObjectIdStr, scopeObjectName, detailResultType, message);
   }
 
   @Override

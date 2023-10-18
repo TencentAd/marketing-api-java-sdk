@@ -15,6 +15,8 @@ package com.tencent.ads.model;
 import com.google.gson.Gson;
 import com.google.gson.annotations.SerializedName;
 import io.swagger.annotations.ApiModelProperty;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Objects;
 
 /** ReviewAdAppealAddRequest */
@@ -36,6 +38,12 @@ public class ReviewAdAppealAddRequest {
 
   @SerializedName("history_approval_ad_id")
   private Long historyApprovalAdId = null;
+
+  @SerializedName("description")
+  private String description = null;
+
+  @SerializedName("image_list")
+  private List<String> imageList = null;
 
   public ReviewAdAppealAddRequest accountId(Long accountId) {
     this.accountId = accountId;
@@ -151,6 +159,52 @@ public class ReviewAdAppealAddRequest {
     this.historyApprovalAdId = historyApprovalAdId;
   }
 
+  public ReviewAdAppealAddRequest description(String description) {
+    this.description = description;
+    return this;
+  }
+
+  /**
+   * Get description
+   *
+   * @return description
+   */
+  @ApiModelProperty(value = "")
+  public String getDescription() {
+    return description;
+  }
+
+  public void setDescription(String description) {
+    this.description = description;
+  }
+
+  public ReviewAdAppealAddRequest imageList(List<String> imageList) {
+    this.imageList = imageList;
+    return this;
+  }
+
+  public ReviewAdAppealAddRequest addImageListItem(String imageListItem) {
+    if (this.imageList == null) {
+      this.imageList = new ArrayList<String>();
+    }
+    this.imageList.add(imageListItem);
+    return this;
+  }
+
+  /**
+   * Get imageList
+   *
+   * @return imageList
+   */
+  @ApiModelProperty(value = "")
+  public List<String> getImageList() {
+    return imageList;
+  }
+
+  public void setImageList(List<String> imageList) {
+    this.imageList = imageList;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -165,13 +219,22 @@ public class ReviewAdAppealAddRequest {
         && Objects.equals(this.adId, reviewAdAppealAddRequest.adId)
         && Objects.equals(this.appealDemand, reviewAdAppealAddRequest.appealDemand)
         && Objects.equals(this.appealReason, reviewAdAppealAddRequest.appealReason)
-        && Objects.equals(this.historyApprovalAdId, reviewAdAppealAddRequest.historyApprovalAdId);
+        && Objects.equals(this.historyApprovalAdId, reviewAdAppealAddRequest.historyApprovalAdId)
+        && Objects.equals(this.description, reviewAdAppealAddRequest.description)
+        && Objects.equals(this.imageList, reviewAdAppealAddRequest.imageList);
   }
 
   @Override
   public int hashCode() {
     return Objects.hash(
-        accountId, adgroupId, adId, appealDemand, appealReason, historyApprovalAdId);
+        accountId,
+        adgroupId,
+        adId,
+        appealDemand,
+        appealReason,
+        historyApprovalAdId,
+        description,
+        imageList);
   }
 
   @Override

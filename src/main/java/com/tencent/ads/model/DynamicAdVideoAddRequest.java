@@ -31,6 +31,12 @@ public class DynamicAdVideoAddRequest {
   @SerializedName("product_source")
   private String productSource = null;
 
+  @SerializedName("product_outer_id")
+  private String productOuterId = null;
+
+  @SerializedName("product_series_id")
+  private Long productSeriesId = null;
+
   @SerializedName("video_max_duration")
   private Long videoMaxDuration = null;
 
@@ -113,6 +119,44 @@ public class DynamicAdVideoAddRequest {
     this.productSource = productSource;
   }
 
+  public DynamicAdVideoAddRequest productOuterId(String productOuterId) {
+    this.productOuterId = productOuterId;
+    return this;
+  }
+
+  /**
+   * Get productOuterId
+   *
+   * @return productOuterId
+   */
+  @ApiModelProperty(value = "")
+  public String getProductOuterId() {
+    return productOuterId;
+  }
+
+  public void setProductOuterId(String productOuterId) {
+    this.productOuterId = productOuterId;
+  }
+
+  public DynamicAdVideoAddRequest productSeriesId(Long productSeriesId) {
+    this.productSeriesId = productSeriesId;
+    return this;
+  }
+
+  /**
+   * Get productSeriesId
+   *
+   * @return productSeriesId
+   */
+  @ApiModelProperty(value = "")
+  public Long getProductSeriesId() {
+    return productSeriesId;
+  }
+
+  public void setProductSeriesId(Long productSeriesId) {
+    this.productSeriesId = productSeriesId;
+  }
+
   public DynamicAdVideoAddRequest videoMaxDuration(Long videoMaxDuration) {
     this.videoMaxDuration = videoMaxDuration;
     return this;
@@ -164,6 +208,8 @@ public class DynamicAdVideoAddRequest {
         && Objects.equals(this.productCatalogId, dynamicAdVideoAddRequest.productCatalogId)
         && Objects.equals(this.productMode, dynamicAdVideoAddRequest.productMode)
         && Objects.equals(this.productSource, dynamicAdVideoAddRequest.productSource)
+        && Objects.equals(this.productOuterId, dynamicAdVideoAddRequest.productOuterId)
+        && Objects.equals(this.productSeriesId, dynamicAdVideoAddRequest.productSeriesId)
         && Objects.equals(this.videoMaxDuration, dynamicAdVideoAddRequest.videoMaxDuration)
         && Objects.equals(this.dynamicAdTemplateId, dynamicAdVideoAddRequest.dynamicAdTemplateId);
   }
@@ -175,6 +221,8 @@ public class DynamicAdVideoAddRequest {
         productCatalogId,
         productMode,
         productSource,
+        productOuterId,
+        productSeriesId,
         videoMaxDuration,
         dynamicAdTemplateId);
   }

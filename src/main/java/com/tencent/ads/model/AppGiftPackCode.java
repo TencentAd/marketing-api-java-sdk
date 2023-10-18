@@ -30,6 +30,15 @@ public class AppGiftPackCode {
   @SerializedName("description")
   private String description = null;
 
+  @SerializedName("game_gift_id")
+  private String gameGiftId = null;
+
+  @SerializedName("game_act_id")
+  private String gameActId = null;
+
+  @SerializedName("game_gift_image_id")
+  private String gameGiftImageId = null;
+
   public AppGiftPackCode code(String code) {
     this.code = code;
     return this;
@@ -87,6 +96,63 @@ public class AppGiftPackCode {
     this.description = description;
   }
 
+  public AppGiftPackCode gameGiftId(String gameGiftId) {
+    this.gameGiftId = gameGiftId;
+    return this;
+  }
+
+  /**
+   * Get gameGiftId
+   *
+   * @return gameGiftId
+   */
+  @ApiModelProperty(value = "")
+  public String getGameGiftId() {
+    return gameGiftId;
+  }
+
+  public void setGameGiftId(String gameGiftId) {
+    this.gameGiftId = gameGiftId;
+  }
+
+  public AppGiftPackCode gameActId(String gameActId) {
+    this.gameActId = gameActId;
+    return this;
+  }
+
+  /**
+   * Get gameActId
+   *
+   * @return gameActId
+   */
+  @ApiModelProperty(value = "")
+  public String getGameActId() {
+    return gameActId;
+  }
+
+  public void setGameActId(String gameActId) {
+    this.gameActId = gameActId;
+  }
+
+  public AppGiftPackCode gameGiftImageId(String gameGiftImageId) {
+    this.gameGiftImageId = gameGiftImageId;
+    return this;
+  }
+
+  /**
+   * Get gameGiftImageId
+   *
+   * @return gameGiftImageId
+   */
+  @ApiModelProperty(value = "")
+  public String getGameGiftImageId() {
+    return gameGiftImageId;
+  }
+
+  public void setGameGiftImageId(String gameGiftImageId) {
+    this.gameGiftImageId = gameGiftImageId;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -98,12 +164,15 @@ public class AppGiftPackCode {
     AppGiftPackCode appGiftPackCode = (AppGiftPackCode) o;
     return Objects.equals(this.code, appGiftPackCode.code)
         && Objects.equals(this.tips, appGiftPackCode.tips)
-        && Objects.equals(this.description, appGiftPackCode.description);
+        && Objects.equals(this.description, appGiftPackCode.description)
+        && Objects.equals(this.gameGiftId, appGiftPackCode.gameGiftId)
+        && Objects.equals(this.gameActId, appGiftPackCode.gameActId)
+        && Objects.equals(this.gameGiftImageId, appGiftPackCode.gameGiftImageId);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(code, tips, description);
+    return Objects.hash(code, tips, description, gameGiftId, gameActId, gameGiftImageId);
   }
 
   @Override

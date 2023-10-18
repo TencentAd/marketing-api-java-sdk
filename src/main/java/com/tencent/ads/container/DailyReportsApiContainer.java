@@ -43,6 +43,7 @@ public class DailyReportsApiContainer extends ApiContainer {
    * @param timeLine (optional)
    * @param fields (optional)
    * @param weixinOfficialAccountsUpgradeEnabled (optional)
+   * @param adqAccountsUpgradeEnabled (optional)
    * @return DailyReportsGetResponse
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
@@ -58,7 +59,8 @@ public class DailyReportsApiContainer extends ApiContainer {
       Long pageSize,
       String timeLine,
       List<String> fields,
-      Boolean weixinOfficialAccountsUpgradeEnabled)
+      Boolean weixinOfficialAccountsUpgradeEnabled,
+      Boolean adqAccountsUpgradeEnabled)
       throws ApiException, TencentAdsResponseException {
     DailyReportsGetResponse resp =
         api.dailyReportsGet(
@@ -72,7 +74,8 @@ public class DailyReportsApiContainer extends ApiContainer {
             pageSize,
             timeLine,
             fields,
-            weixinOfficialAccountsUpgradeEnabled);
+            weixinOfficialAccountsUpgradeEnabled,
+            adqAccountsUpgradeEnabled);
     handleResponse(gson.toJson(resp));
     return resp.getData();
   }

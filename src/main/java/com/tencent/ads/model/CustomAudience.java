@@ -45,6 +45,12 @@ public class CustomAudience {
   @SerializedName("status")
   private ProcessStatus status = null;
 
+  @SerializedName("online_status")
+  private AudienceOnlineStatus onlineStatus = null;
+
+  @SerializedName("is_own")
+  private Boolean isOwn = null;
+
   @SerializedName("error_code")
   private Long errorCode = null;
 
@@ -215,6 +221,44 @@ public class CustomAudience {
     this.status = status;
   }
 
+  public CustomAudience onlineStatus(AudienceOnlineStatus onlineStatus) {
+    this.onlineStatus = onlineStatus;
+    return this;
+  }
+
+  /**
+   * Get onlineStatus
+   *
+   * @return onlineStatus
+   */
+  @ApiModelProperty(value = "")
+  public AudienceOnlineStatus getOnlineStatus() {
+    return onlineStatus;
+  }
+
+  public void setOnlineStatus(AudienceOnlineStatus onlineStatus) {
+    this.onlineStatus = onlineStatus;
+  }
+
+  public CustomAudience isOwn(Boolean isOwn) {
+    this.isOwn = isOwn;
+    return this;
+  }
+
+  /**
+   * Get isOwn
+   *
+   * @return isOwn
+   */
+  @ApiModelProperty(value = "")
+  public Boolean isIsOwn() {
+    return isOwn;
+  }
+
+  public void setIsOwn(Boolean isOwn) {
+    this.isOwn = isOwn;
+  }
+
   public CustomAudience errorCode(Long errorCode) {
     this.errorCode = errorCode;
     return this;
@@ -346,6 +390,8 @@ public class CustomAudience {
         && Objects.equals(this.type, customAudience.type)
         && Objects.equals(this.source, customAudience.source)
         && Objects.equals(this.status, customAudience.status)
+        && Objects.equals(this.onlineStatus, customAudience.onlineStatus)
+        && Objects.equals(this.isOwn, customAudience.isOwn)
         && Objects.equals(this.errorCode, customAudience.errorCode)
         && Objects.equals(this.userCount, customAudience.userCount)
         && Objects.equals(this.createdTime, customAudience.createdTime)
@@ -365,6 +411,8 @@ public class CustomAudience {
         type,
         source,
         status,
+        onlineStatus,
+        isOwn,
         errorCode,
         userCount,
         createdTime,

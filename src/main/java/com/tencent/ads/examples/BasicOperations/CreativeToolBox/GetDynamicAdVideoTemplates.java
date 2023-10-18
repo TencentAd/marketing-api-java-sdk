@@ -32,6 +32,8 @@ public class GetDynamicAdVideoTemplates {
 
   public String templateName = null;
 
+  public String dynamicAdTemplateOwnershipType = null;
+
   public List<String> fields = null;
 
   public void init() {
@@ -58,6 +60,7 @@ public class GetDynamicAdVideoTemplates {
                 pageSize,
                 templateIdList,
                 templateName,
+                dynamicAdTemplateOwnershipType,
                 fields);
     return response;
   }

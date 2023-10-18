@@ -93,6 +93,12 @@ public class BatchAsyncRequestTaskSpec {
   private List<UpdateDeepConversionBehaviorAdvancedBidItem>
       updateDeepConversionBehaviorAdvancedBidSpec = null;
 
+  @SerializedName("reply_finder_object_comment_spec")
+  private List<ReplyFinderObjectCommentItem> replyFinderObjectCommentSpec = null;
+
+  @SerializedName("update_finder_object_comment_flag_spec")
+  private List<UpdateFinderObjectCommentFlagItem> updateFinderObjectCommentFlagSpec = null;
+
   public BatchAsyncRequestTaskSpec updateUnionPositionPackageSpec(
       List<UpdateUnionPositionPackageItem> updateUnionPositionPackageSpec) {
     this.updateUnionPositionPackageSpec = updateUnionPositionPackageSpec;
@@ -765,6 +771,66 @@ public class BatchAsyncRequestTaskSpec {
     this.updateDeepConversionBehaviorAdvancedBidSpec = updateDeepConversionBehaviorAdvancedBidSpec;
   }
 
+  public BatchAsyncRequestTaskSpec replyFinderObjectCommentSpec(
+      List<ReplyFinderObjectCommentItem> replyFinderObjectCommentSpec) {
+    this.replyFinderObjectCommentSpec = replyFinderObjectCommentSpec;
+    return this;
+  }
+
+  public BatchAsyncRequestTaskSpec addReplyFinderObjectCommentSpecItem(
+      ReplyFinderObjectCommentItem replyFinderObjectCommentSpecItem) {
+    if (this.replyFinderObjectCommentSpec == null) {
+      this.replyFinderObjectCommentSpec = new ArrayList<ReplyFinderObjectCommentItem>();
+    }
+    this.replyFinderObjectCommentSpec.add(replyFinderObjectCommentSpecItem);
+    return this;
+  }
+
+  /**
+   * Get replyFinderObjectCommentSpec
+   *
+   * @return replyFinderObjectCommentSpec
+   */
+  @ApiModelProperty(value = "")
+  public List<ReplyFinderObjectCommentItem> getReplyFinderObjectCommentSpec() {
+    return replyFinderObjectCommentSpec;
+  }
+
+  public void setReplyFinderObjectCommentSpec(
+      List<ReplyFinderObjectCommentItem> replyFinderObjectCommentSpec) {
+    this.replyFinderObjectCommentSpec = replyFinderObjectCommentSpec;
+  }
+
+  public BatchAsyncRequestTaskSpec updateFinderObjectCommentFlagSpec(
+      List<UpdateFinderObjectCommentFlagItem> updateFinderObjectCommentFlagSpec) {
+    this.updateFinderObjectCommentFlagSpec = updateFinderObjectCommentFlagSpec;
+    return this;
+  }
+
+  public BatchAsyncRequestTaskSpec addUpdateFinderObjectCommentFlagSpecItem(
+      UpdateFinderObjectCommentFlagItem updateFinderObjectCommentFlagSpecItem) {
+    if (this.updateFinderObjectCommentFlagSpec == null) {
+      this.updateFinderObjectCommentFlagSpec = new ArrayList<UpdateFinderObjectCommentFlagItem>();
+    }
+    this.updateFinderObjectCommentFlagSpec.add(updateFinderObjectCommentFlagSpecItem);
+    return this;
+  }
+
+  /**
+   * Get updateFinderObjectCommentFlagSpec
+   *
+   * @return updateFinderObjectCommentFlagSpec
+   */
+  @ApiModelProperty(value = "")
+  public List<UpdateFinderObjectCommentFlagItem> getUpdateFinderObjectCommentFlagSpec() {
+    return updateFinderObjectCommentFlagSpec;
+  }
+
+  public void setUpdateFinderObjectCommentFlagSpec(
+      List<UpdateFinderObjectCommentFlagItem> updateFinderObjectCommentFlagSpec) {
+    this.updateFinderObjectCommentFlagSpec = updateFinderObjectCommentFlagSpec;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -828,7 +894,13 @@ public class BatchAsyncRequestTaskSpec {
             batchAsyncRequestTaskSpec.updateAdgroupDeepConversionWorthAdvancedRateSpec)
         && Objects.equals(
             this.updateDeepConversionBehaviorAdvancedBidSpec,
-            batchAsyncRequestTaskSpec.updateDeepConversionBehaviorAdvancedBidSpec);
+            batchAsyncRequestTaskSpec.updateDeepConversionBehaviorAdvancedBidSpec)
+        && Objects.equals(
+            this.replyFinderObjectCommentSpec,
+            batchAsyncRequestTaskSpec.replyFinderObjectCommentSpec)
+        && Objects.equals(
+            this.updateFinderObjectCommentFlagSpec,
+            batchAsyncRequestTaskSpec.updateFinderObjectCommentFlagSpec);
   }
 
   @Override
@@ -855,7 +927,9 @@ public class BatchAsyncRequestTaskSpec {
         updateAdgroupAutoAcquisitionSpec,
         updateAdcreativeLandingPageSpec,
         updateAdgroupDeepConversionWorthAdvancedRateSpec,
-        updateDeepConversionBehaviorAdvancedBidSpec);
+        updateDeepConversionBehaviorAdvancedBidSpec,
+        replyFinderObjectCommentSpec,
+        updateFinderObjectCommentFlagSpec);
   }
 
   @Override

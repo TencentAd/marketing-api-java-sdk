@@ -41,6 +41,8 @@ public class GetHourlyReports {
 
   public Boolean weixinOfficialAccountsUpgradeEnabled = null;
 
+  public Boolean adqAccountsUpgradeEnabled = null;
+
   public void init() {
     this.tencentAds = TencentAds.getInstance();
     this.tencentAds.init(
@@ -71,7 +73,8 @@ public class GetHourlyReports {
                 pageSize,
                 timeLine,
                 fields,
-                weixinOfficialAccountsUpgradeEnabled);
+                weixinOfficialAccountsUpgradeEnabled,
+                adqAccountsUpgradeEnabled);
     return response;
   }
 

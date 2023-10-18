@@ -75,6 +75,13 @@ public class TaskSpec {
   @SerializedName("task_type_search_download_all_spec")
   private TaskTypeSearchDownloadAllSpec taskTypeSearchDownloadAllSpec = null;
 
+  @SerializedName("adcleaner_update_adgroup_configured_status_spec")
+  private AdcleanerUpdateAdgroupConfiguredStatusSpec adcleanerUpdateAdgroupConfiguredStatusSpec =
+      null;
+
+  @SerializedName("adcleaner_delete_adgroup_spec")
+  private AdcleanerDeleteAdgroupSpec adcleanerDeleteAdgroupSpec = null;
+
   public TaskSpec reportTaskSpec(ReportTaskSpec reportTaskSpec) {
     this.reportTaskSpec = reportTaskSpec;
     return this;
@@ -438,6 +445,48 @@ public class TaskSpec {
     this.taskTypeSearchDownloadAllSpec = taskTypeSearchDownloadAllSpec;
   }
 
+  public TaskSpec adcleanerUpdateAdgroupConfiguredStatusSpec(
+      AdcleanerUpdateAdgroupConfiguredStatusSpec adcleanerUpdateAdgroupConfiguredStatusSpec) {
+    this.adcleanerUpdateAdgroupConfiguredStatusSpec = adcleanerUpdateAdgroupConfiguredStatusSpec;
+    return this;
+  }
+
+  /**
+   * Get adcleanerUpdateAdgroupConfiguredStatusSpec
+   *
+   * @return adcleanerUpdateAdgroupConfiguredStatusSpec
+   */
+  @ApiModelProperty(value = "")
+  public AdcleanerUpdateAdgroupConfiguredStatusSpec
+      getAdcleanerUpdateAdgroupConfiguredStatusSpec() {
+    return adcleanerUpdateAdgroupConfiguredStatusSpec;
+  }
+
+  public void setAdcleanerUpdateAdgroupConfiguredStatusSpec(
+      AdcleanerUpdateAdgroupConfiguredStatusSpec adcleanerUpdateAdgroupConfiguredStatusSpec) {
+    this.adcleanerUpdateAdgroupConfiguredStatusSpec = adcleanerUpdateAdgroupConfiguredStatusSpec;
+  }
+
+  public TaskSpec adcleanerDeleteAdgroupSpec(
+      AdcleanerDeleteAdgroupSpec adcleanerDeleteAdgroupSpec) {
+    this.adcleanerDeleteAdgroupSpec = adcleanerDeleteAdgroupSpec;
+    return this;
+  }
+
+  /**
+   * Get adcleanerDeleteAdgroupSpec
+   *
+   * @return adcleanerDeleteAdgroupSpec
+   */
+  @ApiModelProperty(value = "")
+  public AdcleanerDeleteAdgroupSpec getAdcleanerDeleteAdgroupSpec() {
+    return adcleanerDeleteAdgroupSpec;
+  }
+
+  public void setAdcleanerDeleteAdgroupSpec(AdcleanerDeleteAdgroupSpec adcleanerDeleteAdgroupSpec) {
+    this.adcleanerDeleteAdgroupSpec = adcleanerDeleteAdgroupSpec;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -486,7 +535,11 @@ public class TaskSpec {
         && Objects.equals(
             this.taskTypeMassiveKeywordRecommendSpec, taskSpec.taskTypeMassiveKeywordRecommendSpec)
         && Objects.equals(
-            this.taskTypeSearchDownloadAllSpec, taskSpec.taskTypeSearchDownloadAllSpec);
+            this.taskTypeSearchDownloadAllSpec, taskSpec.taskTypeSearchDownloadAllSpec)
+        && Objects.equals(
+            this.adcleanerUpdateAdgroupConfiguredStatusSpec,
+            taskSpec.adcleanerUpdateAdgroupConfiguredStatusSpec)
+        && Objects.equals(this.adcleanerDeleteAdgroupSpec, taskSpec.adcleanerDeleteAdgroupSpec);
   }
 
   @Override
@@ -508,7 +561,9 @@ public class TaskSpec {
         taskTypeUnionPositionReportSpec,
         taskTypeReviewElementPrereviewResultSpec,
         taskTypeMassiveKeywordRecommendSpec,
-        taskTypeSearchDownloadAllSpec);
+        taskTypeSearchDownloadAllSpec,
+        adcleanerUpdateAdgroupConfiguredStatusSpec,
+        adcleanerDeleteAdgroupSpec);
   }
 
   @Override

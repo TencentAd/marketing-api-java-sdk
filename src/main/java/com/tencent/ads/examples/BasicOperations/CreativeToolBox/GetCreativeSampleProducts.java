@@ -5,7 +5,7 @@ import com.tencent.ads.TencentAds;
 import com.tencent.ads.exception.TencentAdsResponseException;
 import com.tencent.ads.exception.TencentAdsSDKException;
 import com.tencent.ads.model.*;
-import com.tencent.ads.model.CreativeSampleProductsGetRequest;
+import java.util.List;
 
 public class GetCreativeSampleProducts {
   /** YOUR ACCESS TOKEN */
@@ -14,7 +14,27 @@ public class GetCreativeSampleProducts {
   /** TencentAds */
   public TencentAds tencentAds;
 
-  public CreativeSampleProductsGetRequest data = null;
+  public Long accountId = null;
+
+  public Long productCatalogId = null;
+
+  public List<String> productOuterIds = null;
+
+  public Long productSeriesId = null;
+
+  public Long templateId = null;
+
+  public String templateType = null;
+
+  public String imageId = null;
+
+  public String videoId = null;
+
+  public List<String> productFields = null;
+
+  public Long limit = null;
+
+  public List<String> fields = null;
 
   public void init() {
     this.tencentAds = TencentAds.getInstance();
@@ -28,7 +48,20 @@ public class GetCreativeSampleProducts {
 
   public CreativeSampleProductsGetResponseData getCreativeSampleProducts() throws Exception {
     CreativeSampleProductsGetResponseData response =
-        tencentAds.creativeSampleProducts().creativeSampleProductsGet(data);
+        tencentAds
+            .creativeSampleProducts()
+            .creativeSampleProductsGet(
+                accountId,
+                productCatalogId,
+                productOuterIds,
+                productSeriesId,
+                templateId,
+                templateType,
+                imageId,
+                videoId,
+                productFields,
+                limit,
+                fields);
     return response;
   }
 

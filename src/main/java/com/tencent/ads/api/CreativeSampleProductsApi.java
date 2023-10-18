@@ -21,7 +21,6 @@ import com.tencent.ads.Configuration;
 import com.tencent.ads.Pair;
 import com.tencent.ads.ProgressRequestBody;
 import com.tencent.ads.ProgressResponseBody;
-import com.tencent.ads.model.CreativeSampleProductsGetRequest;
 import com.tencent.ads.model.CreativeSampleProductsGetResponse;
 import java.io.IOException;
 import java.lang.reflect.Type;
@@ -52,24 +51,65 @@ public class CreativeSampleProductsApi {
   /**
    * Build call for creativeSampleProductsGet
    *
-   * @param data (required)
+   * @param accountId (required)
+   * @param productCatalogId (required)
+   * @param productOuterIds (optional)
+   * @param productSeriesId (optional)
+   * @param templateId (optional)
+   * @param templateType (optional)
+   * @param imageId (optional)
+   * @param videoId (optional)
+   * @param productFields (optional)
+   * @param limit (optional)
+   * @param fields 返回参数的字段列表 (optional)
    * @param progressListener Progress listener
    * @param progressRequestListener Progress request listener
    * @return Call to execute
    * @throws ApiException If fail to serialize the request body object
    */
   public com.squareup.okhttp.Call creativeSampleProductsGetCall(
-      CreativeSampleProductsGetRequest data,
+      Long accountId,
+      Long productCatalogId,
+      List<String> productOuterIds,
+      Long productSeriesId,
+      Long templateId,
+      String templateType,
+      String imageId,
+      String videoId,
+      List<String> productFields,
+      Long limit,
+      List<String> fields,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener)
       throws ApiException {
-    Object localVarPostBody = data;
+    Object localVarPostBody = null;
 
     // create path and map variables
     String localVarPath = "/creative_sample_products/get";
 
     List<Pair> localVarQueryParams = new ArrayList<Pair>();
     List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+    if (accountId != null)
+      localVarQueryParams.addAll(apiClient.parameterToPair("account_id", accountId));
+    if (productCatalogId != null)
+      localVarQueryParams.addAll(apiClient.parameterToPair("product_catalog_id", productCatalogId));
+    if (productOuterIds != null)
+      localVarCollectionQueryParams.addAll(
+          apiClient.parameterToPairs("multi", "product_outer_ids", productOuterIds));
+    if (productSeriesId != null)
+      localVarQueryParams.addAll(apiClient.parameterToPair("product_series_id", productSeriesId));
+    if (templateId != null)
+      localVarQueryParams.addAll(apiClient.parameterToPair("template_id", templateId));
+    if (templateType != null)
+      localVarQueryParams.addAll(apiClient.parameterToPair("template_type", templateType));
+    if (imageId != null) localVarQueryParams.addAll(apiClient.parameterToPair("image_id", imageId));
+    if (videoId != null) localVarQueryParams.addAll(apiClient.parameterToPair("video_id", videoId));
+    if (productFields != null)
+      localVarCollectionQueryParams.addAll(
+          apiClient.parameterToPairs("multi", "product_fields", productFields));
+    if (limit != null) localVarQueryParams.addAll(apiClient.parameterToPair("limit", limit));
+    if (fields != null)
+      localVarCollectionQueryParams.addAll(apiClient.parameterToPairs("multi", "fields", fields));
 
     Map<String, String> localVarHeaderParams = new HashMap<String, String>();
 
@@ -79,7 +119,7 @@ public class CreativeSampleProductsApi {
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
     if (localVarAccept != null) localVarHeaderParams.put("Accept", localVarAccept);
 
-    final String[] localVarContentTypes = {"application/json", "application/xml"};
+    final String[] localVarContentTypes = {"text/plain"};
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
     localVarHeaderParams.put("Content-Type", localVarContentType);
 
@@ -104,7 +144,7 @@ public class CreativeSampleProductsApi {
     String[] localVarAuthNames = new String[] {"accessToken", "nonce", "timestamp"};
     return apiClient.buildCall(
         localVarPath,
-        "POST",
+        "GET",
         localVarQueryParams,
         localVarCollectionQueryParams,
         localVarPostBody,
@@ -116,48 +156,144 @@ public class CreativeSampleProductsApi {
 
   @SuppressWarnings("rawtypes")
   private com.squareup.okhttp.Call creativeSampleProductsGetValidateBeforeCall(
-      CreativeSampleProductsGetRequest data,
+      Long accountId,
+      Long productCatalogId,
+      List<String> productOuterIds,
+      Long productSeriesId,
+      Long templateId,
+      String templateType,
+      String imageId,
+      String videoId,
+      List<String> productFields,
+      Long limit,
+      List<String> fields,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener)
       throws ApiException {
 
-    // verify the required parameter 'data' is set
-    if (data == null) {
+    // verify the required parameter 'accountId' is set
+    if (accountId == null) {
       throw new ApiException(
-          "Missing the required parameter 'data' when calling creativeSampleProductsGet(Async)");
+          "Missing the required parameter 'accountId' when calling creativeSampleProductsGet(Async)");
+    }
+
+    // verify the required parameter 'productCatalogId' is set
+    if (productCatalogId == null) {
+      throw new ApiException(
+          "Missing the required parameter 'productCatalogId' when calling creativeSampleProductsGet(Async)");
     }
 
     com.squareup.okhttp.Call call =
-        creativeSampleProductsGetCall(data, progressListener, progressRequestListener);
+        creativeSampleProductsGetCall(
+            accountId,
+            productCatalogId,
+            productOuterIds,
+            productSeriesId,
+            templateId,
+            templateType,
+            imageId,
+            videoId,
+            productFields,
+            limit,
+            fields,
+            progressListener,
+            progressRequestListener);
     return call;
   }
 
   /**
    * 获取创意示例商品列表
    *
-   * @param data (required)
+   * @param accountId (required)
+   * @param productCatalogId (required)
+   * @param productOuterIds (optional)
+   * @param productSeriesId (optional)
+   * @param templateId (optional)
+   * @param templateType (optional)
+   * @param imageId (optional)
+   * @param videoId (optional)
+   * @param productFields (optional)
+   * @param limit (optional)
+   * @param fields 返回参数的字段列表 (optional)
    * @return CreativeSampleProductsGetResponse
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
   public CreativeSampleProductsGetResponse creativeSampleProductsGet(
-      CreativeSampleProductsGetRequest data) throws ApiException {
+      Long accountId,
+      Long productCatalogId,
+      List<String> productOuterIds,
+      Long productSeriesId,
+      Long templateId,
+      String templateType,
+      String imageId,
+      String videoId,
+      List<String> productFields,
+      Long limit,
+      List<String> fields)
+      throws ApiException {
     ApiResponse<CreativeSampleProductsGetResponse> resp =
-        creativeSampleProductsGetWithHttpInfo(data);
+        creativeSampleProductsGetWithHttpInfo(
+            accountId,
+            productCatalogId,
+            productOuterIds,
+            productSeriesId,
+            templateId,
+            templateType,
+            imageId,
+            videoId,
+            productFields,
+            limit,
+            fields);
     return resp.getData();
   }
 
   /**
    * 获取创意示例商品列表
    *
-   * @param data (required)
+   * @param accountId (required)
+   * @param productCatalogId (required)
+   * @param productOuterIds (optional)
+   * @param productSeriesId (optional)
+   * @param templateId (optional)
+   * @param templateType (optional)
+   * @param imageId (optional)
+   * @param videoId (optional)
+   * @param productFields (optional)
+   * @param limit (optional)
+   * @param fields 返回参数的字段列表 (optional)
    * @return ApiResponse&lt;CreativeSampleProductsGetResponse&gt;
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
   public ApiResponse<CreativeSampleProductsGetResponse> creativeSampleProductsGetWithHttpInfo(
-      CreativeSampleProductsGetRequest data) throws ApiException {
-    com.squareup.okhttp.Call call = creativeSampleProductsGetValidateBeforeCall(data, null, null);
+      Long accountId,
+      Long productCatalogId,
+      List<String> productOuterIds,
+      Long productSeriesId,
+      Long templateId,
+      String templateType,
+      String imageId,
+      String videoId,
+      List<String> productFields,
+      Long limit,
+      List<String> fields)
+      throws ApiException {
+    com.squareup.okhttp.Call call =
+        creativeSampleProductsGetValidateBeforeCall(
+            accountId,
+            productCatalogId,
+            productOuterIds,
+            productSeriesId,
+            templateId,
+            templateType,
+            imageId,
+            videoId,
+            productFields,
+            limit,
+            fields,
+            null,
+            null);
     Type localVarReturnType = new TypeToken<CreativeSampleProductsGetResponse>() {}.getType();
     return apiClient.execute(call, localVarReturnType);
   }
@@ -165,13 +301,33 @@ public class CreativeSampleProductsApi {
   /**
    * 获取创意示例商品列表 (asynchronously)
    *
-   * @param data (required)
+   * @param accountId (required)
+   * @param productCatalogId (required)
+   * @param productOuterIds (optional)
+   * @param productSeriesId (optional)
+   * @param templateId (optional)
+   * @param templateType (optional)
+   * @param imageId (optional)
+   * @param videoId (optional)
+   * @param productFields (optional)
+   * @param limit (optional)
+   * @param fields 返回参数的字段列表 (optional)
    * @param callback The callback to be executed when the API call finishes
    * @return The request call
    * @throws ApiException If fail to process the API call, e.g. serializing the request body object
    */
   public com.squareup.okhttp.Call creativeSampleProductsGetAsync(
-      CreativeSampleProductsGetRequest data,
+      Long accountId,
+      Long productCatalogId,
+      List<String> productOuterIds,
+      Long productSeriesId,
+      Long templateId,
+      String templateType,
+      String imageId,
+      String videoId,
+      List<String> productFields,
+      Long limit,
+      List<String> fields,
       final ApiCallback<CreativeSampleProductsGetResponse> callback)
       throws ApiException {
 
@@ -198,7 +354,19 @@ public class CreativeSampleProductsApi {
 
     com.squareup.okhttp.Call call =
         creativeSampleProductsGetValidateBeforeCall(
-            data, progressListener, progressRequestListener);
+            accountId,
+            productCatalogId,
+            productOuterIds,
+            productSeriesId,
+            templateId,
+            templateType,
+            imageId,
+            videoId,
+            productFields,
+            limit,
+            fields,
+            progressListener,
+            progressRequestListener);
     Type localVarReturnType = new TypeToken<CreativeSampleProductsGetResponse>() {}.getType();
     apiClient.executeAsync(call, localVarReturnType, callback);
     return call;

@@ -50,6 +50,9 @@ public class BatchAsyncRequestsGetTaskListStruct {
   @SerializedName("scope_object_id_list")
   private List<Long> scopeObjectIdList = null;
 
+  @SerializedName("scope_object_id_str_list")
+  private List<String> scopeObjectIdStrList = null;
+
   public BatchAsyncRequestsGetTaskListStruct taskId(Long taskId) {
     this.taskId = taskId;
     return this;
@@ -229,6 +232,35 @@ public class BatchAsyncRequestsGetTaskListStruct {
     this.scopeObjectIdList = scopeObjectIdList;
   }
 
+  public BatchAsyncRequestsGetTaskListStruct scopeObjectIdStrList(
+      List<String> scopeObjectIdStrList) {
+    this.scopeObjectIdStrList = scopeObjectIdStrList;
+    return this;
+  }
+
+  public BatchAsyncRequestsGetTaskListStruct addScopeObjectIdStrListItem(
+      String scopeObjectIdStrListItem) {
+    if (this.scopeObjectIdStrList == null) {
+      this.scopeObjectIdStrList = new ArrayList<String>();
+    }
+    this.scopeObjectIdStrList.add(scopeObjectIdStrListItem);
+    return this;
+  }
+
+  /**
+   * Get scopeObjectIdStrList
+   *
+   * @return scopeObjectIdStrList
+   */
+  @ApiModelProperty(value = "")
+  public List<String> getScopeObjectIdStrList() {
+    return scopeObjectIdStrList;
+  }
+
+  public void setScopeObjectIdStrList(List<String> scopeObjectIdStrList) {
+    this.scopeObjectIdStrList = scopeObjectIdStrList;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -248,7 +280,9 @@ public class BatchAsyncRequestsGetTaskListStruct {
         && Objects.equals(this.createdTime, batchAsyncRequestsGetTaskListStruct.createdTime)
         && Objects.equals(this.endTime, batchAsyncRequestsGetTaskListStruct.endTime)
         && Objects.equals(
-            this.scopeObjectIdList, batchAsyncRequestsGetTaskListStruct.scopeObjectIdList);
+            this.scopeObjectIdList, batchAsyncRequestsGetTaskListStruct.scopeObjectIdList)
+        && Objects.equals(
+            this.scopeObjectIdStrList, batchAsyncRequestsGetTaskListStruct.scopeObjectIdStrList);
   }
 
   @Override
@@ -262,7 +296,8 @@ public class BatchAsyncRequestsGetTaskListStruct {
         resultStatus,
         createdTime,
         endTime,
-        scopeObjectIdList);
+        scopeObjectIdList,
+        scopeObjectIdStrList);
   }
 
   @Override

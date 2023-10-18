@@ -42,6 +42,8 @@ public class GetTargetingTagReports {
 
   public Boolean weixinOfficialAccountsUpgradeEnabled = null;
 
+  public Boolean adqAccountsUpgradeEnabled = null;
+
   public List<String> fields =
       Arrays.asList(
           "date", "city_id", "city", "view_count", "valid_click_count", "ctr", "cpc", "cost");
@@ -78,6 +80,7 @@ public class GetTargetingTagReports {
                 pageSize,
                 timeLine,
                 weixinOfficialAccountsUpgradeEnabled,
+                adqAccountsUpgradeEnabled,
                 fields);
     return response;
   }

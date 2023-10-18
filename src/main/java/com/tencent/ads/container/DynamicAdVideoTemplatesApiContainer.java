@@ -38,6 +38,7 @@ public class DynamicAdVideoTemplatesApiContainer extends ApiContainer {
    * @param pageSize (optional)
    * @param templateIdList (optional)
    * @param templateName (optional)
+   * @param dynamicAdTemplateOwnershipType (optional)
    * @param fields 返回参数的字段列表 (optional)
    * @return DynamicAdVideoTemplatesGetResponse
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
@@ -53,6 +54,7 @@ public class DynamicAdVideoTemplatesApiContainer extends ApiContainer {
       Long pageSize,
       List<Long> templateIdList,
       String templateName,
+      String dynamicAdTemplateOwnershipType,
       List<String> fields)
       throws ApiException, TencentAdsResponseException {
     DynamicAdVideoTemplatesGetResponse resp =
@@ -66,6 +68,7 @@ public class DynamicAdVideoTemplatesApiContainer extends ApiContainer {
             pageSize,
             templateIdList,
             templateName,
+            dynamicAdTemplateOwnershipType,
             fields);
     handleResponse(gson.toJson(resp));
     return resp.getData();

@@ -1,0 +1,360 @@
+com/tencent/ads/api/AdcreativeTemplatePreviewApiTest.java
+ com.tencent.ads.api.AdcreativeTemplatePreviewApiTest
+com/tencent/ads/api/LocalStoresCategoriesApiTest.java
+ com.tencent.ads.api.LocalStoresCategoriesApiTest
+com/tencent/ads/api/AdgroupNegativewordsApiTest.java
+ com.tencent.ads.api.AdgroupNegativewordsApiTest
+com/tencent/ads/api/WechatAdLabelsApiTest.java
+ com.tencent.ads.api.WechatAdLabelsApiTest
+com/tencent/ads/api/AdcreativeTemplatePreviewsApiTest.java
+ com.tencent.ads.api.AdcreativeTemplatePreviewsApiTest
+com/tencent/ads/api/UserActionSetsApiTest.java
+ com.tencent.ads.api.UserActionSetsApiTest
+com/tencent/ads/api/AssetPermissionsApiTest.java
+ com.tencent.ads.api.AssetPermissionsApiTest
+com/tencent/ads/api/GameFeatureApiTest.java
+ com.tencent.ads.api.GameFeatureApiTest
+com/tencent/ads/api/LeadsCallTokenApiTest.java
+ com.tencent.ads.api.LeadsCallTokenApiTest
+com/tencent/ads/api/CapabilitiesApiTest.java
+ com.tencent.ads.api.CapabilitiesApiTest
+com/tencent/ads/api/CreativeSampleProductsApiTest.java
+ com.tencent.ads.api.CreativeSampleProductsApiTest
+com/tencent/ads/api/AssetPermissionsScenesApiTest.java
+ com.tencent.ads.api.AssetPermissionsScenesApiTest
+com/tencent/ads/api/DynamicAdVideoTemplatesApiTest.java
+ com.tencent.ads.api.DynamicAdVideoTemplatesApiTest
+com/tencent/ads/api/LeadsInvalidPayApiTest.java
+ com.tencent.ads.api.LeadsInvalidPayApiTest
+com/tencent/ads/api/DailyReportsApiTest.java
+ com.tencent.ads.api.DailyReportsApiTest
+com/tencent/ads/api/AdcreativeTemplateApiTest.java
+ com.tencent.ads.api.AdcreativeTemplateApiTest
+com/tencent/ads/api/UserPropertiesApiTest.java
+ com.tencent.ads.api.UserPropertiesApiTest
+com/tencent/ads/api/TargetcpaTagApiTest.java
+ com.tencent.ads.api.TargetcpaTagApiTest
+com/tencent/ads/api/XijingPageInteractiveApiTest.java
+ com.tencent.ads.api.XijingPageInteractiveApiTest
+com/tencent/ads/api/LocalStoresWxpayMerchantsApiTest.java
+ com.tencent.ads.api.LocalStoresWxpayMerchantsApiTest
+com/tencent/ads/api/OuterCluesApiTest.java
+ com.tencent.ads.api.OuterCluesApiTest
+com/tencent/ads/api/LeadsCallApiTest.java
+ com.tencent.ads.api.LeadsCallApiTest
+com/tencent/ads/api/HourlyReportsApiTest.java
+ com.tencent.ads.api.HourlyReportsApiTest
+com/tencent/ads/api/WechatPagesCsgrouplistApiTest.java
+ com.tencent.ads.api.WechatPagesCsgrouplistApiTest
+com/tencent/ads/api/XijingPageByComponentsApiTest.java
+ com.tencent.ads.api.XijingPageByComponentsApiTest
+com/tencent/ads/api/DynamicCreativesApiTest.java
+ com.tencent.ads.api.DynamicCreativesApiTest
+com/tencent/ads/api/FundTransferApiTest.java
+ com.tencent.ads.api.FundTransferApiTest
+com/tencent/ads/api/AdParamApiTest.java
+ com.tencent.ads.api.AdParamApiTest
+com/tencent/ads/api/BidwordApiTest.java
+ com.tencent.ads.api.BidwordApiTest
+com/tencent/ads/api/XijingTemplateApiTest.java
+ com.tencent.ads.api.XijingTemplateApiTest
+com/tencent/ads/api/BidwordRptApiTest.java
+ com.tencent.ads.api.BidwordRptApiTest
+com/tencent/ads/api/TrackingReportsApiTest.java
+ com.tencent.ads.api.TrackingReportsApiTest
+com/tencent/ads/api/VideomakerAutoadjustmentsApiTest.java
+ com.tencent.ads.api.VideomakerAutoadjustmentsApiTest
+com/tencent/ads/api/BusinessPointApiTest.java
+ com.tencent.ads.api.BusinessPointApiTest
+com/tencent/ads/api/WildcardsApiTest.java
+ com.tencent.ads.api.WildcardsApiTest
+com/tencent/ads/api/BusinessManagerRelationsApiTest.java
+ com.tencent.ads.api.BusinessManagerRelationsApiTest
+com/tencent/ads/api/LocalStoresSearchInfoApiTest.java
+ com.tencent.ads.api.LocalStoresSearchInfoApiTest
+com/tencent/ads/api/AsyncReportFilesApiTest.java
+ com.tencent.ads.api.AsyncReportFilesApiTest
+com/tencent/ads/api/BusinessMdmAccountRelationsApiTest.java
+ com.tencent.ads.api.BusinessMdmAccountRelationsApiTest
+com/tencent/ads/api/DynamicAdImagesApiTest.java
+ com.tencent.ads.api.DynamicAdImagesApiTest
+com/tencent/ads/api/EstimationApiTest.java
+ com.tencent.ads.api.EstimationApiTest
+com/tencent/ads/api/AudienceGrantRelationsApiTest.java
+ com.tencent.ads.api.AudienceGrantRelationsApiTest
+com/tencent/ads/api/ProductCatalogsApiTest.java
+ com.tencent.ads.api.ProductCatalogsApiTest
+com/tencent/ads/api/LocalStoresApiTest.java
+ com.tencent.ads.api.LocalStoresApiTest
+com/tencent/ads/api/ProgrammedTemplateApiTest.java
+ com.tencent.ads.api.ProgrammedTemplateApiTest
+com/tencent/ads/api/ObjectCommentFlagApiTest.java
+ com.tencent.ads.api.ObjectCommentFlagApiTest
+com/tencent/ads/api/VideomakerTasksApiTest.java
+ com.tencent.ads.api.VideomakerTasksApiTest
+com/tencent/ads/api/LeadsFormApiTest.java
+ com.tencent.ads.api.LeadsFormApiTest
+com/tencent/ads/api/CustomAudienceEstimationsApiTest.java
+ com.tencent.ads.api.CustomAudienceEstimationsApiTest
+com/tencent/ads/api/LabelAudiencesApiTest.java
+ com.tencent.ads.api.LabelAudiencesApiTest
+com/tencent/ads/api/PropertyFilesApiTest.java
+ com.tencent.ads.api.PropertyFilesApiTest
+com/tencent/ads/api/AdsApiTest.java
+ com.tencent.ads.api.AdsApiTest
+com/tencent/ads/api/ReviewAdAppealApiTest.java
+ com.tencent.ads.api.ReviewAdAppealApiTest
+com/tencent/ads/api/WechatPagesCsgroupStatusApiTest.java
+ com.tencent.ads.api.WechatPagesCsgroupStatusApiTest
+com/tencent/ads/api/ProductItemsDetailApiTest.java
+ com.tencent.ads.api.ProductItemsDetailApiTest
+com/tencent/ads/api/ProductItemsVerticalsApiTest.java
+ com.tencent.ads.api.ProductItemsVerticalsApiTest
+com/tencent/ads/api/CustomTagFilesApiTest.java
+ com.tencent.ads.api.CustomTagFilesApiTest
+com/tencent/ads/api/MergeFundTypeDailyBalanceReportApiTest.java
+ com.tencent.ads.api.MergeFundTypeDailyBalanceReportApiTest
+com/tencent/ads/api/PagesApiTest.java
+ com.tencent.ads.api.PagesApiTest
+com/tencent/ads/api/DynamicAdImageTemplatesApiTest.java
+ com.tencent.ads.api.DynamicAdImageTemplatesApiTest
+com/tencent/ads/api/SceneSpecTagsApiTest.java
+ com.tencent.ads.api.SceneSpecTagsApiTest
+com/tencent/ads/api/AdcreativeTemplateDetailApiTest.java
+ com.tencent.ads.api.AdcreativeTemplateDetailApiTest
+com/tencent/ads/api/ProductCatalogsReportsApiTest.java
+ com.tencent.ads.api.ProductCatalogsReportsApiTest
+com/tencent/ads/api/ProfilesApiTest.java
+ com.tencent.ads.api.ProfilesApiTest
+com/tencent/ads/api/CustomAudienceReportsApiTest.java
+ com.tencent.ads.api.CustomAudienceReportsApiTest
+com/tencent/ads/api/CampaignNegativewordsApiTest.java
+ com.tencent.ads.api.CampaignNegativewordsApiTest
+com/tencent/ads/api/LeadsCallRecordsApiTest.java
+ com.tencent.ads.api.LeadsCallRecordsApiTest
+com/tencent/ads/api/LeadsCallVirtualNumberApiTest.java
+ com.tencent.ads.api.LeadsCallVirtualNumberApiTest
+com/tencent/ads/api/AdcreativePreviewsQrcodeApiTest.java
+ com.tencent.ads.api.AdcreativePreviewsQrcodeApiTest
+com/tencent/ads/api/BatchRequestsApiTest.java
+ com.tencent.ads.api.BatchRequestsApiTest
+com/tencent/ads/api/AsyncTasksApiTest.java
+ com.tencent.ads.api.AsyncTasksApiTest
+com/tencent/ads/api/XijingPageApiTest.java
+ com.tencent.ads.api.XijingPageApiTest
+com/tencent/ads/api/AdcreativePreviewsApiTest.java
+ com.tencent.ads.api.AdcreativePreviewsApiTest
+com/tencent/ads/api/AgencyRealtimeCostApiTest.java
+ com.tencent.ads.api.AgencyRealtimeCostApiTest
+com/tencent/ads/api/AdLabelApiTest.java
+ com.tencent.ads.api.AdLabelApiTest
+com/tencent/ads/api/CustomAudienceInsightsApiTest.java
+ com.tencent.ads.api.CustomAudienceInsightsApiTest
+com/tencent/ads/api/LabelsApiTest.java
+ com.tencent.ads.api.LabelsApiTest
+com/tencent/ads/api/TargetingTagReportsApiTest.java
+ com.tencent.ads.api.TargetingTagReportsApiTest
+com/tencent/ads/api/FundStatementsDailyApiTest.java
+ com.tencent.ads.api.FundStatementsDailyApiTest
+com/tencent/ads/api/BarrageApiTest.java
+ com.tencent.ads.api.BarrageApiTest
+com/tencent/ads/api/VideomakerVideocapturesApiTest.java
+ com.tencent.ads.api.VideomakerVideocapturesApiTest
+com/tencent/ads/api/AsyncReportsApiTest.java
+ com.tencent.ads.api.AsyncReportsApiTest
+com/tencent/ads/api/PlayablePagesApiTest.java
+ com.tencent.ads.api.PlayablePagesApiTest
+com/tencent/ads/api/WechatFundStatementsDetailedApiTest.java
+ com.tencent.ads.api.WechatFundStatementsDetailedApiTest
+com/tencent/ads/api/AdvertiserApiTest.java
+ com.tencent.ads.api.AdvertiserApiTest
+com/tencent/ads/api/OauthApiTest.java
+ com.tencent.ads.api.OauthApiTest
+com/tencent/ads/api/DailyBalanceReportApiTest.java
+ com.tencent.ads.api.DailyBalanceReportApiTest
+com/tencent/ads/api/WechatFundsApiTest.java
+ com.tencent.ads.api.WechatFundsApiTest
+com/tencent/ads/api/AssetPrePermissionsApiTest.java
+ com.tencent.ads.api.AssetPrePermissionsApiTest
+com/tencent/ads/api/QualificationsApiTest.java
+ com.tencent.ads.api.QualificationsApiTest
+com/tencent/ads/api/PropertySetSchemasApiTest.java
+ com.tencent.ads.api.PropertySetSchemasApiTest
+com/tencent/ads/api/WeixinOfficialAccountsUpgradeStatusApiTest.java
+ com.tencent.ads.api.WeixinOfficialAccountsUpgradeStatusApiTest
+com/tencent/ads/api/BatchAsyncRequestsApiTest.java
+ com.tencent.ads.api.BatchAsyncRequestsApiTest
+com/tencent/ads/api/UnionPositionPackagesApiTest.java
+ com.tencent.ads.api.UnionPositionPackagesApiTest
+com/tencent/ads/api/FundStatementsDetailedApiTest.java
+ com.tencent.ads.api.FundStatementsDetailedApiTest
+com/tencent/ads/api/ReviewElementPrereviewResultsApiTest.java
+ com.tencent.ads.api.ReviewElementPrereviewResultsApiTest
+com/tencent/ads/api/ImageProcessingApiTest.java
+ com.tencent.ads.api.ImageProcessingApiTest
+com/tencent/ads/api/AdvertiserDailyBudgetApiTest.java
+ com.tencent.ads.api.AdvertiserDailyBudgetApiTest
+com/tencent/ads/api/OptimizationGoalPermissionsApiTest.java
+ com.tencent.ads.api.OptimizationGoalPermissionsApiTest
+com/tencent/ads/api/OuterCluesContactApiTest.java
+ com.tencent.ads.api.OuterCluesContactApiTest
+com/tencent/ads/api/KeywordRecommendApiTest.java
+ com.tencent.ads.api.KeywordRecommendApiTest
+com/tencent/ads/api/QuerywordRptApiTest.java
+ com.tencent.ads.api.QuerywordRptApiTest
+com/tencent/ads/api/WechatPagesGrantinfoApiTest.java
+ com.tencent.ads.api.WechatPagesGrantinfoApiTest
+com/tencent/ads/api/ExtendPackageApiTest.java
+ com.tencent.ads.api.ExtendPackageApiTest
+com/tencent/ads/api/XijingTemplateListApiTest.java
+ com.tencent.ads.api.XijingTemplateListApiTest
+com/tencent/ads/api/CreativetoolsTextApiTest.java
+ com.tencent.ads.api.CreativetoolsTextApiTest
+com/tencent/ads/api/AdcreativeTemplatesApiTest.java
+ com.tencent.ads.api.AdcreativeTemplatesApiTest
+com/tencent/ads/api/AsyncTaskFilesApiTest.java
+ com.tencent.ads.api.AsyncTaskFilesApiTest
+com/tencent/ads/api/AdcreativesRelatedCapabilityApiTest.java
+ com.tencent.ads.api.AdcreativesRelatedCapabilityApiTest
+com/tencent/ads/api/LeadsFormListApiTest.java
+ com.tencent.ads.api.LeadsFormListApiTest
+com/tencent/ads/api/AdqReportsUpgradeStatusApiTest.java
+ com.tencent.ads.api.AdqReportsUpgradeStatusApiTest
+com/tencent/ads/api/XijingPageListApiTest.java
+ com.tencent.ads.api.XijingPageListApiTest
+com/tencent/ads/api/AdDiagnosisApiTest.java
+ com.tencent.ads.api.AdDiagnosisApiTest
+com/tencent/ads/api/WxPackagePackageApiTest.java
+ com.tencent.ads.api.WxPackagePackageApiTest
+com/tencent/ads/api/ProductSeriesApiTest.java
+ com.tencent.ads.api.ProductSeriesApiTest
+com/tencent/ads/api/XijingComplexTemplateApiTest.java
+ com.tencent.ads.api.XijingComplexTemplateApiTest
+com/tencent/ads/api/CustomAudiencesApiTest.java
+ com.tencent.ads.api.CustomAudiencesApiTest
+com/tencent/ads/api/LeadCluesApiTest.java
+ com.tencent.ads.api.LeadCluesApiTest
+com/tencent/ads/api/PromotedObjectsApiTest.java
+ com.tencent.ads.api.PromotedObjectsApiTest
+com/tencent/ads/api/UserPropertySetsApiTest.java
+ com.tencent.ads.api.UserPropertySetsApiTest
+com/tencent/ads/api/SplitTestsApiTest.java
+ com.tencent.ads.api.SplitTestsApiTest
+com/tencent/ads/api/CustomFeaturesApiTest.java
+ com.tencent.ads.api.CustomFeaturesApiTest
+com/tencent/ads/api/BatchAsyncRequestSpecificationApiTest.java
+ com.tencent.ads.api.BatchAsyncRequestSpecificationApiTest
+com/tencent/ads/api/FundsApiTest.java
+ com.tencent.ads.api.FundsApiTest
+com/tencent/ads/api/ReportApiTest.java
+ com.tencent.ads.api.ReportApiTest
+com/tencent/ads/api/BarrageRecommendApiTest.java
+ com.tencent.ads.api.BarrageRecommendApiTest
+com/tencent/ads/api/VideosApiTest.java
+ com.tencent.ads.api.VideosApiTest
+com/tencent/ads/api/MergeFundTypeFundStatementsDetailedApiTest.java
+ com.tencent.ads.api.MergeFundTypeFundStatementsDetailedApiTest
+com/tencent/ads/api/DynamicAdVideoApiTest.java
+ com.tencent.ads.api.DynamicAdVideoApiTest
+com/tencent/ads/api/MaterialLabelsApiTest.java
+ com.tencent.ads.api.MaterialLabelsApiTest
+com/tencent/ads/api/ProductItemsApiTest.java
+ com.tencent.ads.api.ProductItemsApiTest
+com/tencent/ads/api/BatchOperationApiTest.java
+ com.tencent.ads.api.BatchOperationApiTest
+com/tencent/ads/api/TargetingsApiTest.java
+ com.tencent.ads.api.TargetingsApiTest
+com/tencent/ads/api/WxPackageAccountApiTest.java
+ com.tencent.ads.api.WxPackageAccountApiTest
+com/tencent/ads/api/AdcreativesApiTest.java
+ com.tencent.ads.api.AdcreativesApiTest
+com/tencent/ads/api/TargetingsShareApiTest.java
+ com.tencent.ads.api.TargetingsShareApiTest
+com/tencent/ads/api/XijingDeriveRoleApiTest.java
+ com.tencent.ads.api.XijingDeriveRoleApiTest
+com/tencent/ads/api/MergeFundTypeFundsApiTest.java
+ com.tencent.ads.api.MergeFundTypeFundsApiTest
+com/tencent/ads/api/CustomAudienceFilesApiTest.java
+ com.tencent.ads.api.CustomAudienceFilesApiTest
+com/tencent/ads/api/CampaignsApiTest.java
+ com.tencent.ads.api.CampaignsApiTest
+com/tencent/ads/api/DataSourceDispatchApiTest.java
+ com.tencent.ads.api.DataSourceDispatchApiTest
+com/tencent/ads/api/VideomakerSubtitlesApiTest.java
+ com.tencent.ads.api.VideomakerSubtitlesApiTest
+com/tencent/ads/api/LeadsCallRecordApiTest.java
+ com.tencent.ads.api.LeadsCallRecordApiTest
+com/tencent/ads/api/AppAndroidChannelPackagesApiTest.java
+ com.tencent.ads.api.AppAndroidChannelPackagesApiTest
+com/tencent/ads/api/ProductsSystemStatusApiTest.java
+ com.tencent.ads.api.ProductsSystemStatusApiTest
+com/tencent/ads/api/RealtimeCostApiTest.java
+ com.tencent.ads.api.RealtimeCostApiTest
+com/tencent/ads/api/PropertyFileSessionsApiTest.java
+ com.tencent.ads.api.PropertyFileSessionsApiTest
+com/tencent/ads/api/BidwordFlowApiTest.java
+ com.tencent.ads.api.BidwordFlowApiTest
+com/tencent/ads/api/DplabelAdLabelApiTest.java
+ com.tencent.ads.api.DplabelAdLabelApiTest
+com/tencent/ads/api/BidSimulationApiTest.java
+ com.tencent.ads.api.BidSimulationApiTest
+com/tencent/ads/api/SubcustomerTransferApiTest.java
+ com.tencent.ads.api.SubcustomerTransferApiTest
+com/tencent/ads/api/LocalStoresAddressParsingResultApiTest.java
+ com.tencent.ads.api.LocalStoresAddressParsingResultApiTest
+com/tencent/ads/api/MergeFundTypeSubcustomerTransferApiTest.java
+ com.tencent.ads.api.MergeFundTypeSubcustomerTransferApiTest
+com/tencent/ads/api/ProgrammedApiTest.java
+ com.tencent.ads.api.ProgrammedApiTest
+com/tencent/ads/api/CreativeComponentsApiTest.java
+ com.tencent.ads.api.CreativeComponentsApiTest
+com/tencent/ads/api/GameFeatureTagsApiTest.java
+ com.tencent.ads.api.GameFeatureTagsApiTest
+com/tencent/ads/api/ConversionsApiTest.java
+ com.tencent.ads.api.ConversionsApiTest
+com/tencent/ads/api/AdcreativeTemplateListApiTest.java
+ com.tencent.ads.api.AdcreativeTemplateListApiTest
+com/tencent/ads/api/ComplianceValidationApiTest.java
+ com.tencent.ads.api.ComplianceValidationApiTest
+com/tencent/ads/api/CustomTagsApiTest.java
+ com.tencent.ads.api.CustomTagsApiTest
+com/tencent/ads/api/XijingDeriveTempTokenApiTest.java
+ com.tencent.ads.api.XijingDeriveTempTokenApiTest
+com/tencent/ads/api/AuthorizationApiTest.java
+ com.tencent.ads.api.AuthorizationApiTest
+com/tencent/ads/api/AdAppealQuotaApiTest.java
+ com.tencent.ads.api.AdAppealQuotaApiTest
+com/tencent/ads/api/UserActionSetReportsApiTest.java
+ com.tencent.ads.api.UserActionSetReportsApiTest
+com/tencent/ads/api/TargetingTagsUvApiTest.java
+ com.tencent.ads.api.TargetingTagsUvApiTest
+com/tencent/ads/api/PropertySetsApiTest.java
+ com.tencent.ads.api.PropertySetsApiTest
+com/tencent/ads/api/EcommerceOrderApiTest.java
+ com.tencent.ads.api.EcommerceOrderApiTest
+com/tencent/ads/api/AgencyInnerTransferApiTest.java
+ com.tencent.ads.api.AgencyInnerTransferApiTest
+com/tencent/ads/api/BrandApiTest.java
+ com.tencent.ads.api.BrandApiTest
+com/tencent/ads/api/ImagesApiTest.java
+ com.tencent.ads.api.ImagesApiTest
+com/tencent/ads/api/XijingDeriveClickEffectApiTest.java
+ com.tencent.ads.api.XijingDeriveClickEffectApiTest
+com/tencent/ads/api/WechatPagesCsgroupUserApiTest.java
+ com.tencent.ads.api.WechatPagesCsgroupUserApiTest
+com/tencent/ads/api/WechatPagesApiTest.java
+ com.tencent.ads.api.WechatPagesApiTest
+com/tencent/ads/api/ProductCategoriesListApiTest.java
+ com.tencent.ads.api.ProductCategoriesListApiTest
+com/tencent/ads/api/WechatPagesCustomApiTest.java
+ com.tencent.ads.api.WechatPagesCustomApiTest
+com/tencent/ads/api/TargetingTagsApiTest.java
+ com.tencent.ads.api.TargetingTagsApiTest
+com/tencent/ads/api/DataSetApiTest.java
+ com.tencent.ads.api.DataSetApiTest
+com/tencent/ads/api/UserActionsApiTest.java
+ com.tencent.ads.api.UserActionsApiTest
+com/tencent/ads/api/AdgroupsApiTest.java
+ com.tencent.ads.api.AdgroupsApiTest
+com/tencent/ads/api/PromotedObjectAuthorizationApiTest.java
+ com.tencent.ads.api.PromotedObjectAuthorizationApiTest

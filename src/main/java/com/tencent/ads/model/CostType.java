@@ -46,7 +46,11 @@ public enum CostType {
 
   COSTTYPE_CPT("COSTTYPE_CPT"),
 
-  BID_TYPE_CPO("BID_TYPE_CPO");
+  BID_TYPE_CPO("BID_TYPE_CPO"),
+
+  _1("1"),
+
+  _2("2");
 
   private String value;
 

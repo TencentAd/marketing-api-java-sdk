@@ -40,7 +40,9 @@ public enum ConversionDataType {
 
   SHOP("CONVERSION_DATA_SHOP"),
 
-  FORM("CONVERSION_DATA_FORM");
+  FORM("CONVERSION_DATA_FORM"),
+
+  PRODUCT_DATA("CONVERSION_DATA_PRODUCT_DATA");
 
   private String value;
 
