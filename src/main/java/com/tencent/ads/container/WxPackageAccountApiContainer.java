@@ -49,11 +49,12 @@ public class WxPackageAccountApiContainer extends ApiContainer {
       String beginTime,
       String endTime,
       String keyword,
-      List<String> fields)
+      List<String> fields,
+      String... headerPair)
       throws ApiException, TencentAdsResponseException {
     WxPackageAccountGetResponse resp =
         api.wxPackageAccountGet(
-            accountId, pageSize, pageIndex, beginTime, endTime, keyword, fields);
+            accountId, pageSize, pageIndex, beginTime, endTime, keyword, fields, headerPair);
     handleResponse(gson.toJson(resp));
     return resp.getData();
   }
@@ -71,10 +72,15 @@ public class WxPackageAccountApiContainer extends ApiContainer {
    *     response body
    */
   public WxPackageAccountUpdateResponse wxPackageAccountUpdate(
-      Long accountId, Long wechatId, String nickName, File file, Long enableFlag)
+      Long accountId,
+      Long wechatId,
+      String nickName,
+      File file,
+      Long enableFlag,
+      String... headerPair)
       throws ApiException, TencentAdsResponseException {
     WxPackageAccountUpdateResponse resp =
-        api.wxPackageAccountUpdate(accountId, wechatId, nickName, file, enableFlag);
+        api.wxPackageAccountUpdate(accountId, wechatId, nickName, file, enableFlag, headerPair);
     handleResponse(gson.toJson(resp));
 
     return resp;

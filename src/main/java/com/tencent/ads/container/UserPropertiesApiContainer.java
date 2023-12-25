@@ -33,9 +33,10 @@ public class UserPropertiesApiContainer extends ApiContainer {
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
-  public UserPropertiesAddResponse userPropertiesAdd(UserPropertiesAddRequest data)
+  public UserPropertiesAddResponse userPropertiesAdd(
+      UserPropertiesAddRequest data, String... headerPair)
       throws ApiException, TencentAdsResponseException {
-    UserPropertiesAddResponse resp = api.userPropertiesAdd(data);
+    UserPropertiesAddResponse resp = api.userPropertiesAdd(data, headerPair);
     handleResponse(gson.toJson(resp));
 
     return resp;

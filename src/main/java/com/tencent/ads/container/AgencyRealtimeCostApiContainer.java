@@ -36,8 +36,9 @@ public class AgencyRealtimeCostApiContainer extends ApiContainer {
    *     response body
    */
   public AgencyRealtimeCostGetResponseData agencyRealtimeCostGet(
-      Long accountId, List<String> fields) throws ApiException, TencentAdsResponseException {
-    AgencyRealtimeCostGetResponse resp = api.agencyRealtimeCostGet(accountId, fields);
+      Long accountId, List<String> fields, String... headerPair)
+      throws ApiException, TencentAdsResponseException {
+    AgencyRealtimeCostGetResponse resp = api.agencyRealtimeCostGet(accountId, fields, headerPair);
     handleResponse(gson.toJson(resp));
     return resp.getData();
   }

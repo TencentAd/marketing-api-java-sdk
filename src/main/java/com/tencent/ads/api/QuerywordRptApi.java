@@ -61,8 +61,10 @@ public class QuerywordRptApi {
   public com.squareup.okhttp.Call querywordRptGetCall(
       QuerywordRptGetRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
-      final ProgressRequestBody.ProgressRequestListener progressRequestListener)
+      final ProgressRequestBody.ProgressRequestListener progressRequestListener,
+      String... headerPair)
       throws ApiException {
+
     Object localVarPostBody = data;
 
     // create path and map variables
@@ -82,6 +84,15 @@ public class QuerywordRptApi {
     final String[] localVarContentTypes = {"application/json", "application/xml"};
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
     localVarHeaderParams.put("Content-Type", localVarContentType);
+
+    if (headerPair != null && headerPair.length > 0) {
+      if (headerPair.length % 2 != 0) {
+        throw new UnsupportedOperationException("Parameter headerPair must be paired");
+      }
+      for (int i = 0; i < headerPair.length / 2; i++) {
+        localVarHeaderParams.put(headerPair[i], headerPair[i * 2 + 1]);
+      }
+    }
 
     if (progressListener != null) {
       apiClient
@@ -118,7 +129,8 @@ public class QuerywordRptApi {
   private com.squareup.okhttp.Call querywordRptGetValidateBeforeCall(
       QuerywordRptGetRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
-      final ProgressRequestBody.ProgressRequestListener progressRequestListener)
+      final ProgressRequestBody.ProgressRequestListener progressRequestListener,
+      String... headerPair)
       throws ApiException {
 
     // verify the required parameter 'data' is set
@@ -128,7 +140,7 @@ public class QuerywordRptApi {
     }
 
     com.squareup.okhttp.Call call =
-        querywordRptGetCall(data, progressListener, progressRequestListener);
+        querywordRptGetCall(data, progressListener, progressRequestListener, headerPair);
     return call;
   }
 
@@ -140,8 +152,9 @@ public class QuerywordRptApi {
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
-  public QuerywordRptGetResponse querywordRptGet(QuerywordRptGetRequest data) throws ApiException {
-    ApiResponse<QuerywordRptGetResponse> resp = querywordRptGetWithHttpInfo(data);
+  public QuerywordRptGetResponse querywordRptGet(QuerywordRptGetRequest data, String... headerPair)
+      throws ApiException {
+    ApiResponse<QuerywordRptGetResponse> resp = querywordRptGetWithHttpInfo(data, headerPair);
     return resp.getData();
   }
 
@@ -154,8 +167,8 @@ public class QuerywordRptApi {
    *     response body
    */
   public ApiResponse<QuerywordRptGetResponse> querywordRptGetWithHttpInfo(
-      QuerywordRptGetRequest data) throws ApiException {
-    com.squareup.okhttp.Call call = querywordRptGetValidateBeforeCall(data, null, null);
+      QuerywordRptGetRequest data, String... headerPair) throws ApiException {
+    com.squareup.okhttp.Call call = querywordRptGetValidateBeforeCall(data, null, null, headerPair);
     Type localVarReturnType = new TypeToken<QuerywordRptGetResponse>() {}.getType();
     return apiClient.execute(call, localVarReturnType);
   }
@@ -169,7 +182,9 @@ public class QuerywordRptApi {
    * @throws ApiException If fail to process the API call, e.g. serializing the request body object
    */
   public com.squareup.okhttp.Call querywordRptGetAsync(
-      QuerywordRptGetRequest data, final ApiCallback<QuerywordRptGetResponse> callback)
+      QuerywordRptGetRequest data,
+      final ApiCallback<QuerywordRptGetResponse> callback,
+      String... headerPair)
       throws ApiException {
 
     ProgressResponseBody.ProgressListener progressListener = null;
@@ -194,7 +209,8 @@ public class QuerywordRptApi {
     }
 
     com.squareup.okhttp.Call call =
-        querywordRptGetValidateBeforeCall(data, progressListener, progressRequestListener);
+        querywordRptGetValidateBeforeCall(
+            data, progressListener, progressRequestListener, headerPair);
     Type localVarReturnType = new TypeToken<QuerywordRptGetResponse>() {}.getType();
     apiClient.executeAsync(call, localVarReturnType, callback);
     return call;

@@ -76,8 +76,10 @@ public class DataSourceDispatchApi {
       String accessWay,
       List<String> fields,
       final ProgressResponseBody.ProgressListener progressListener,
-      final ProgressRequestBody.ProgressRequestListener progressRequestListener)
+      final ProgressRequestBody.ProgressRequestListener progressRequestListener,
+      String... headerPair)
       throws ApiException {
+
     Object localVarPostBody = null;
 
     // create path and map variables
@@ -111,6 +113,15 @@ public class DataSourceDispatchApi {
     final String[] localVarContentTypes = {"text/plain"};
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
     localVarHeaderParams.put("Content-Type", localVarContentType);
+
+    if (headerPair != null && headerPair.length > 0) {
+      if (headerPair.length % 2 != 0) {
+        throw new UnsupportedOperationException("Parameter headerPair must be paired");
+      }
+      for (int i = 0; i < headerPair.length / 2; i++) {
+        localVarHeaderParams.put(headerPair[i], headerPair[i * 2 + 1]);
+      }
+    }
 
     if (progressListener != null) {
       apiClient
@@ -154,7 +165,8 @@ public class DataSourceDispatchApi {
       String accessWay,
       List<String> fields,
       final ProgressResponseBody.ProgressListener progressListener,
-      final ProgressRequestBody.ProgressRequestListener progressRequestListener)
+      final ProgressRequestBody.ProgressRequestListener progressRequestListener,
+      String... headerPair)
       throws ApiException {
 
     // verify the required parameter 'accountId' is set
@@ -174,7 +186,8 @@ public class DataSourceDispatchApi {
             accessWay,
             fields,
             progressListener,
-            progressRequestListener);
+            progressRequestListener,
+            headerPair);
     return call;
   }
 
@@ -201,11 +214,20 @@ public class DataSourceDispatchApi {
       List<String> scenes,
       String switchType,
       String accessWay,
-      List<String> fields)
+      List<String> fields,
+      String... headerPair)
       throws ApiException {
     ApiResponse<DataSourceDispatchGetResponse> resp =
         dataSourceDispatchGetWithHttpInfo(
-            accountId, userActionSetId, type, name, scenes, switchType, accessWay, fields);
+            accountId,
+            userActionSetId,
+            type,
+            name,
+            scenes,
+            switchType,
+            accessWay,
+            fields,
+            headerPair);
     return resp.getData();
   }
 
@@ -232,7 +254,8 @@ public class DataSourceDispatchApi {
       List<String> scenes,
       String switchType,
       String accessWay,
-      List<String> fields)
+      List<String> fields,
+      String... headerPair)
       throws ApiException {
     com.squareup.okhttp.Call call =
         dataSourceDispatchGetValidateBeforeCall(
@@ -245,7 +268,8 @@ public class DataSourceDispatchApi {
             accessWay,
             fields,
             null,
-            null);
+            null,
+            headerPair);
     Type localVarReturnType = new TypeToken<DataSourceDispatchGetResponse>() {}.getType();
     return apiClient.execute(call, localVarReturnType);
   }
@@ -274,7 +298,8 @@ public class DataSourceDispatchApi {
       String switchType,
       String accessWay,
       List<String> fields,
-      final ApiCallback<DataSourceDispatchGetResponse> callback)
+      final ApiCallback<DataSourceDispatchGetResponse> callback,
+      String... headerPair)
       throws ApiException {
 
     ProgressResponseBody.ProgressListener progressListener = null;
@@ -309,7 +334,8 @@ public class DataSourceDispatchApi {
             accessWay,
             fields,
             progressListener,
-            progressRequestListener);
+            progressRequestListener,
+            headerPair);
     Type localVarReturnType = new TypeToken<DataSourceDispatchGetResponse>() {}.getType();
     apiClient.executeAsync(call, localVarReturnType, callback);
     return call;
@@ -326,8 +352,10 @@ public class DataSourceDispatchApi {
   public com.squareup.okhttp.Call dataSourceDispatchUpdateCall(
       DataSourceDispatchUpdateRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
-      final ProgressRequestBody.ProgressRequestListener progressRequestListener)
+      final ProgressRequestBody.ProgressRequestListener progressRequestListener,
+      String... headerPair)
       throws ApiException {
+
     Object localVarPostBody = data;
 
     // create path and map variables
@@ -347,6 +375,15 @@ public class DataSourceDispatchApi {
     final String[] localVarContentTypes = {"application/json", "application/xml"};
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
     localVarHeaderParams.put("Content-Type", localVarContentType);
+
+    if (headerPair != null && headerPair.length > 0) {
+      if (headerPair.length % 2 != 0) {
+        throw new UnsupportedOperationException("Parameter headerPair must be paired");
+      }
+      for (int i = 0; i < headerPair.length / 2; i++) {
+        localVarHeaderParams.put(headerPair[i], headerPair[i * 2 + 1]);
+      }
+    }
 
     if (progressListener != null) {
       apiClient
@@ -383,7 +420,8 @@ public class DataSourceDispatchApi {
   private com.squareup.okhttp.Call dataSourceDispatchUpdateValidateBeforeCall(
       DataSourceDispatchUpdateRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
-      final ProgressRequestBody.ProgressRequestListener progressRequestListener)
+      final ProgressRequestBody.ProgressRequestListener progressRequestListener,
+      String... headerPair)
       throws ApiException {
 
     // verify the required parameter 'data' is set
@@ -393,7 +431,7 @@ public class DataSourceDispatchApi {
     }
 
     com.squareup.okhttp.Call call =
-        dataSourceDispatchUpdateCall(data, progressListener, progressRequestListener);
+        dataSourceDispatchUpdateCall(data, progressListener, progressRequestListener, headerPair);
     return call;
   }
 
@@ -406,8 +444,9 @@ public class DataSourceDispatchApi {
    *     response body
    */
   public DataSourceDispatchUpdateResponse dataSourceDispatchUpdate(
-      DataSourceDispatchUpdateRequest data) throws ApiException {
-    ApiResponse<DataSourceDispatchUpdateResponse> resp = dataSourceDispatchUpdateWithHttpInfo(data);
+      DataSourceDispatchUpdateRequest data, String... headerPair) throws ApiException {
+    ApiResponse<DataSourceDispatchUpdateResponse> resp =
+        dataSourceDispatchUpdateWithHttpInfo(data, headerPair);
     return resp.getData();
   }
 
@@ -420,8 +459,9 @@ public class DataSourceDispatchApi {
    *     response body
    */
   public ApiResponse<DataSourceDispatchUpdateResponse> dataSourceDispatchUpdateWithHttpInfo(
-      DataSourceDispatchUpdateRequest data) throws ApiException {
-    com.squareup.okhttp.Call call = dataSourceDispatchUpdateValidateBeforeCall(data, null, null);
+      DataSourceDispatchUpdateRequest data, String... headerPair) throws ApiException {
+    com.squareup.okhttp.Call call =
+        dataSourceDispatchUpdateValidateBeforeCall(data, null, null, headerPair);
     Type localVarReturnType = new TypeToken<DataSourceDispatchUpdateResponse>() {}.getType();
     return apiClient.execute(call, localVarReturnType);
   }
@@ -436,7 +476,8 @@ public class DataSourceDispatchApi {
    */
   public com.squareup.okhttp.Call dataSourceDispatchUpdateAsync(
       DataSourceDispatchUpdateRequest data,
-      final ApiCallback<DataSourceDispatchUpdateResponse> callback)
+      final ApiCallback<DataSourceDispatchUpdateResponse> callback,
+      String... headerPair)
       throws ApiException {
 
     ProgressResponseBody.ProgressListener progressListener = null;
@@ -461,7 +502,8 @@ public class DataSourceDispatchApi {
     }
 
     com.squareup.okhttp.Call call =
-        dataSourceDispatchUpdateValidateBeforeCall(data, progressListener, progressRequestListener);
+        dataSourceDispatchUpdateValidateBeforeCall(
+            data, progressListener, progressRequestListener, headerPair);
     Type localVarReturnType = new TypeToken<DataSourceDispatchUpdateResponse>() {}.getType();
     apiClient.executeAsync(call, localVarReturnType, callback);
     return call;

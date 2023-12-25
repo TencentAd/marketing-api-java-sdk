@@ -65,8 +65,10 @@ public class DynamicCreativesApi {
   public com.squareup.okhttp.Call dynamicCreativesAddCall(
       DynamicCreativesAddRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
-      final ProgressRequestBody.ProgressRequestListener progressRequestListener)
+      final ProgressRequestBody.ProgressRequestListener progressRequestListener,
+      String... headerPair)
       throws ApiException {
+
     Object localVarPostBody = data;
 
     // create path and map variables
@@ -86,6 +88,15 @@ public class DynamicCreativesApi {
     final String[] localVarContentTypes = {"application/json", "application/xml"};
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
     localVarHeaderParams.put("Content-Type", localVarContentType);
+
+    if (headerPair != null && headerPair.length > 0) {
+      if (headerPair.length % 2 != 0) {
+        throw new UnsupportedOperationException("Parameter headerPair must be paired");
+      }
+      for (int i = 0; i < headerPair.length / 2; i++) {
+        localVarHeaderParams.put(headerPair[i], headerPair[i * 2 + 1]);
+      }
+    }
 
     if (progressListener != null) {
       apiClient
@@ -122,7 +133,8 @@ public class DynamicCreativesApi {
   private com.squareup.okhttp.Call dynamicCreativesAddValidateBeforeCall(
       DynamicCreativesAddRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
-      final ProgressRequestBody.ProgressRequestListener progressRequestListener)
+      final ProgressRequestBody.ProgressRequestListener progressRequestListener,
+      String... headerPair)
       throws ApiException {
 
     // verify the required parameter 'data' is set
@@ -132,7 +144,7 @@ public class DynamicCreativesApi {
     }
 
     com.squareup.okhttp.Call call =
-        dynamicCreativesAddCall(data, progressListener, progressRequestListener);
+        dynamicCreativesAddCall(data, progressListener, progressRequestListener, headerPair);
     return call;
   }
 
@@ -144,9 +156,10 @@ public class DynamicCreativesApi {
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
-  public DynamicCreativesAddResponse dynamicCreativesAdd(DynamicCreativesAddRequest data)
-      throws ApiException {
-    ApiResponse<DynamicCreativesAddResponse> resp = dynamicCreativesAddWithHttpInfo(data);
+  public DynamicCreativesAddResponse dynamicCreativesAdd(
+      DynamicCreativesAddRequest data, String... headerPair) throws ApiException {
+    ApiResponse<DynamicCreativesAddResponse> resp =
+        dynamicCreativesAddWithHttpInfo(data, headerPair);
     return resp.getData();
   }
 
@@ -159,8 +172,9 @@ public class DynamicCreativesApi {
    *     response body
    */
   public ApiResponse<DynamicCreativesAddResponse> dynamicCreativesAddWithHttpInfo(
-      DynamicCreativesAddRequest data) throws ApiException {
-    com.squareup.okhttp.Call call = dynamicCreativesAddValidateBeforeCall(data, null, null);
+      DynamicCreativesAddRequest data, String... headerPair) throws ApiException {
+    com.squareup.okhttp.Call call =
+        dynamicCreativesAddValidateBeforeCall(data, null, null, headerPair);
     Type localVarReturnType = new TypeToken<DynamicCreativesAddResponse>() {}.getType();
     return apiClient.execute(call, localVarReturnType);
   }
@@ -174,7 +188,9 @@ public class DynamicCreativesApi {
    * @throws ApiException If fail to process the API call, e.g. serializing the request body object
    */
   public com.squareup.okhttp.Call dynamicCreativesAddAsync(
-      DynamicCreativesAddRequest data, final ApiCallback<DynamicCreativesAddResponse> callback)
+      DynamicCreativesAddRequest data,
+      final ApiCallback<DynamicCreativesAddResponse> callback,
+      String... headerPair)
       throws ApiException {
 
     ProgressResponseBody.ProgressListener progressListener = null;
@@ -199,7 +215,8 @@ public class DynamicCreativesApi {
     }
 
     com.squareup.okhttp.Call call =
-        dynamicCreativesAddValidateBeforeCall(data, progressListener, progressRequestListener);
+        dynamicCreativesAddValidateBeforeCall(
+            data, progressListener, progressRequestListener, headerPair);
     Type localVarReturnType = new TypeToken<DynamicCreativesAddResponse>() {}.getType();
     apiClient.executeAsync(call, localVarReturnType, callback);
     return call;
@@ -224,8 +241,10 @@ public class DynamicCreativesApi {
       Long pageSize,
       List<String> fields,
       final ProgressResponseBody.ProgressListener progressListener,
-      final ProgressRequestBody.ProgressRequestListener progressRequestListener)
+      final ProgressRequestBody.ProgressRequestListener progressRequestListener,
+      String... headerPair)
       throws ApiException {
+
     Object localVarPostBody = null;
 
     // create path and map variables
@@ -255,6 +274,15 @@ public class DynamicCreativesApi {
     final String[] localVarContentTypes = {"text/plain"};
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
     localVarHeaderParams.put("Content-Type", localVarContentType);
+
+    if (headerPair != null && headerPair.length > 0) {
+      if (headerPair.length % 2 != 0) {
+        throw new UnsupportedOperationException("Parameter headerPair must be paired");
+      }
+      for (int i = 0; i < headerPair.length / 2; i++) {
+        localVarHeaderParams.put(headerPair[i], headerPair[i * 2 + 1]);
+      }
+    }
 
     if (progressListener != null) {
       apiClient
@@ -295,7 +323,8 @@ public class DynamicCreativesApi {
       Long pageSize,
       List<String> fields,
       final ProgressResponseBody.ProgressListener progressListener,
-      final ProgressRequestBody.ProgressRequestListener progressRequestListener)
+      final ProgressRequestBody.ProgressRequestListener progressRequestListener,
+      String... headerPair)
       throws ApiException {
 
     // verify the required parameter 'accountId' is set
@@ -312,7 +341,8 @@ public class DynamicCreativesApi {
             pageSize,
             fields,
             progressListener,
-            progressRequestListener);
+            progressRequestListener,
+            headerPair);
     return call;
   }
 
@@ -333,10 +363,11 @@ public class DynamicCreativesApi {
       List<FilteringStruct> filtering,
       Long page,
       Long pageSize,
-      List<String> fields)
+      List<String> fields,
+      String... headerPair)
       throws ApiException {
     ApiResponse<DynamicCreativesGetResponse> resp =
-        dynamicCreativesGetWithHttpInfo(accountId, filtering, page, pageSize, fields);
+        dynamicCreativesGetWithHttpInfo(accountId, filtering, page, pageSize, fields, headerPair);
     return resp.getData();
   }
 
@@ -357,11 +388,12 @@ public class DynamicCreativesApi {
       List<FilteringStruct> filtering,
       Long page,
       Long pageSize,
-      List<String> fields)
+      List<String> fields,
+      String... headerPair)
       throws ApiException {
     com.squareup.okhttp.Call call =
         dynamicCreativesGetValidateBeforeCall(
-            accountId, filtering, page, pageSize, fields, null, null);
+            accountId, filtering, page, pageSize, fields, null, null, headerPair);
     Type localVarReturnType = new TypeToken<DynamicCreativesGetResponse>() {}.getType();
     return apiClient.execute(call, localVarReturnType);
   }
@@ -384,7 +416,8 @@ public class DynamicCreativesApi {
       Long page,
       Long pageSize,
       List<String> fields,
-      final ApiCallback<DynamicCreativesGetResponse> callback)
+      final ApiCallback<DynamicCreativesGetResponse> callback,
+      String... headerPair)
       throws ApiException {
 
     ProgressResponseBody.ProgressListener progressListener = null;
@@ -416,7 +449,8 @@ public class DynamicCreativesApi {
             pageSize,
             fields,
             progressListener,
-            progressRequestListener);
+            progressRequestListener,
+            headerPair);
     Type localVarReturnType = new TypeToken<DynamicCreativesGetResponse>() {}.getType();
     apiClient.executeAsync(call, localVarReturnType, callback);
     return call;
@@ -433,8 +467,10 @@ public class DynamicCreativesApi {
   public com.squareup.okhttp.Call dynamicCreativesUpdateCall(
       DynamicCreativesUpdateRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
-      final ProgressRequestBody.ProgressRequestListener progressRequestListener)
+      final ProgressRequestBody.ProgressRequestListener progressRequestListener,
+      String... headerPair)
       throws ApiException {
+
     Object localVarPostBody = data;
 
     // create path and map variables
@@ -454,6 +490,15 @@ public class DynamicCreativesApi {
     final String[] localVarContentTypes = {"application/json", "application/xml"};
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
     localVarHeaderParams.put("Content-Type", localVarContentType);
+
+    if (headerPair != null && headerPair.length > 0) {
+      if (headerPair.length % 2 != 0) {
+        throw new UnsupportedOperationException("Parameter headerPair must be paired");
+      }
+      for (int i = 0; i < headerPair.length / 2; i++) {
+        localVarHeaderParams.put(headerPair[i], headerPair[i * 2 + 1]);
+      }
+    }
 
     if (progressListener != null) {
       apiClient
@@ -490,7 +535,8 @@ public class DynamicCreativesApi {
   private com.squareup.okhttp.Call dynamicCreativesUpdateValidateBeforeCall(
       DynamicCreativesUpdateRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
-      final ProgressRequestBody.ProgressRequestListener progressRequestListener)
+      final ProgressRequestBody.ProgressRequestListener progressRequestListener,
+      String... headerPair)
       throws ApiException {
 
     // verify the required parameter 'data' is set
@@ -500,7 +546,7 @@ public class DynamicCreativesApi {
     }
 
     com.squareup.okhttp.Call call =
-        dynamicCreativesUpdateCall(data, progressListener, progressRequestListener);
+        dynamicCreativesUpdateCall(data, progressListener, progressRequestListener, headerPair);
     return call;
   }
 
@@ -512,9 +558,10 @@ public class DynamicCreativesApi {
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
-  public DynamicCreativesUpdateResponse dynamicCreativesUpdate(DynamicCreativesUpdateRequest data)
-      throws ApiException {
-    ApiResponse<DynamicCreativesUpdateResponse> resp = dynamicCreativesUpdateWithHttpInfo(data);
+  public DynamicCreativesUpdateResponse dynamicCreativesUpdate(
+      DynamicCreativesUpdateRequest data, String... headerPair) throws ApiException {
+    ApiResponse<DynamicCreativesUpdateResponse> resp =
+        dynamicCreativesUpdateWithHttpInfo(data, headerPair);
     return resp.getData();
   }
 
@@ -527,8 +574,9 @@ public class DynamicCreativesApi {
    *     response body
    */
   public ApiResponse<DynamicCreativesUpdateResponse> dynamicCreativesUpdateWithHttpInfo(
-      DynamicCreativesUpdateRequest data) throws ApiException {
-    com.squareup.okhttp.Call call = dynamicCreativesUpdateValidateBeforeCall(data, null, null);
+      DynamicCreativesUpdateRequest data, String... headerPair) throws ApiException {
+    com.squareup.okhttp.Call call =
+        dynamicCreativesUpdateValidateBeforeCall(data, null, null, headerPair);
     Type localVarReturnType = new TypeToken<DynamicCreativesUpdateResponse>() {}.getType();
     return apiClient.execute(call, localVarReturnType);
   }
@@ -543,7 +591,8 @@ public class DynamicCreativesApi {
    */
   public com.squareup.okhttp.Call dynamicCreativesUpdateAsync(
       DynamicCreativesUpdateRequest data,
-      final ApiCallback<DynamicCreativesUpdateResponse> callback)
+      final ApiCallback<DynamicCreativesUpdateResponse> callback,
+      String... headerPair)
       throws ApiException {
 
     ProgressResponseBody.ProgressListener progressListener = null;
@@ -568,7 +617,8 @@ public class DynamicCreativesApi {
     }
 
     com.squareup.okhttp.Call call =
-        dynamicCreativesUpdateValidateBeforeCall(data, progressListener, progressRequestListener);
+        dynamicCreativesUpdateValidateBeforeCall(
+            data, progressListener, progressRequestListener, headerPair);
     Type localVarReturnType = new TypeToken<DynamicCreativesUpdateResponse>() {}.getType();
     apiClient.executeAsync(call, localVarReturnType, callback);
     return call;

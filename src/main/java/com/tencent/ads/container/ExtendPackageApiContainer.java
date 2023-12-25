@@ -41,9 +41,10 @@ public class ExtendPackageApiContainer extends ApiContainer {
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
-  public ExtendPackageAddResponseData extendPackageAdd(ExtendPackageAddRequest data)
+  public ExtendPackageAddResponseData extendPackageAdd(
+      ExtendPackageAddRequest data, String... headerPair)
       throws ApiException, TencentAdsResponseException {
-    ExtendPackageAddResponse resp = api.extendPackageAdd(data);
+    ExtendPackageAddResponse resp = api.extendPackageAdd(data, headerPair);
     handleResponse(gson.toJson(resp));
     return resp.getData();
   }
@@ -67,10 +68,11 @@ public class ExtendPackageApiContainer extends ApiContainer {
       List<FilteringStruct> filtering,
       Long page,
       Long pageSize,
-      List<String> fields)
+      List<String> fields,
+      String... headerPair)
       throws ApiException, TencentAdsResponseException {
     ExtendPackageGetResponse resp =
-        api.extendPackageGet(accountId, packageId, filtering, page, pageSize, fields);
+        api.extendPackageGet(accountId, packageId, filtering, page, pageSize, fields, headerPair);
     handleResponse(gson.toJson(resp));
     return resp.getData();
   }
@@ -83,9 +85,10 @@ public class ExtendPackageApiContainer extends ApiContainer {
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
-  public ExtendPackageUpdateResponseData extendPackageUpdate(ExtendPackageUpdateRequest data)
+  public ExtendPackageUpdateResponseData extendPackageUpdate(
+      ExtendPackageUpdateRequest data, String... headerPair)
       throws ApiException, TencentAdsResponseException {
-    ExtendPackageUpdateResponse resp = api.extendPackageUpdate(data);
+    ExtendPackageUpdateResponse resp = api.extendPackageUpdate(data, headerPair);
     handleResponse(gson.toJson(resp));
     return resp.getData();
   }

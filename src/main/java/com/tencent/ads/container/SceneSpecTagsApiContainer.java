@@ -37,9 +37,9 @@ public class SceneSpecTagsApiContainer extends ApiContainer {
    *     response body
    */
   public SceneSpecTagsGetResponseData sceneSpecTagsGet(
-      String type, Long accountId, List<String> fields)
+      String type, Long accountId, List<String> fields, String... headerPair)
       throws ApiException, TencentAdsResponseException {
-    SceneSpecTagsGetResponse resp = api.sceneSpecTagsGet(type, accountId, fields);
+    SceneSpecTagsGetResponse resp = api.sceneSpecTagsGet(type, accountId, fields, headerPair);
     handleResponse(gson.toJson(resp));
     return resp.getData();
   }

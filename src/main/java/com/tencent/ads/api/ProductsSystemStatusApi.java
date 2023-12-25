@@ -70,8 +70,10 @@ public class ProductsSystemStatusApi {
       Long pageSize,
       List<String> fields,
       final ProgressResponseBody.ProgressListener progressListener,
-      final ProgressRequestBody.ProgressRequestListener progressRequestListener)
+      final ProgressRequestBody.ProgressRequestListener progressRequestListener,
+      String... headerPair)
       throws ApiException {
+
     Object localVarPostBody = null;
 
     // create path and map variables
@@ -101,6 +103,15 @@ public class ProductsSystemStatusApi {
     final String[] localVarContentTypes = {"text/plain"};
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
     localVarHeaderParams.put("Content-Type", localVarContentType);
+
+    if (headerPair != null && headerPair.length > 0) {
+      if (headerPair.length % 2 != 0) {
+        throw new UnsupportedOperationException("Parameter headerPair must be paired");
+      }
+      for (int i = 0; i < headerPair.length / 2; i++) {
+        localVarHeaderParams.put(headerPair[i], headerPair[i * 2 + 1]);
+      }
+    }
 
     if (progressListener != null) {
       apiClient
@@ -142,7 +153,8 @@ public class ProductsSystemStatusApi {
       Long pageSize,
       List<String> fields,
       final ProgressResponseBody.ProgressListener progressListener,
-      final ProgressRequestBody.ProgressRequestListener progressRequestListener)
+      final ProgressRequestBody.ProgressRequestListener progressRequestListener,
+      String... headerPair)
       throws ApiException {
 
     // verify the required parameter 'accountId' is set
@@ -166,7 +178,8 @@ public class ProductsSystemStatusApi {
             pageSize,
             fields,
             progressListener,
-            progressRequestListener);
+            progressRequestListener,
+            headerPair);
     return call;
   }
 
@@ -189,11 +202,12 @@ public class ProductsSystemStatusApi {
       Long feedId,
       Long page,
       Long pageSize,
-      List<String> fields)
+      List<String> fields,
+      String... headerPair)
       throws ApiException {
     ApiResponse<ProductsSystemStatusGetResponse> resp =
         productsSystemStatusGetWithHttpInfo(
-            accountId, productCatalogId, feedId, page, pageSize, fields);
+            accountId, productCatalogId, feedId, page, pageSize, fields, headerPair);
     return resp.getData();
   }
 
@@ -216,11 +230,12 @@ public class ProductsSystemStatusApi {
       Long feedId,
       Long page,
       Long pageSize,
-      List<String> fields)
+      List<String> fields,
+      String... headerPair)
       throws ApiException {
     com.squareup.okhttp.Call call =
         productsSystemStatusGetValidateBeforeCall(
-            accountId, productCatalogId, feedId, page, pageSize, fields, null, null);
+            accountId, productCatalogId, feedId, page, pageSize, fields, null, null, headerPair);
     Type localVarReturnType = new TypeToken<ProductsSystemStatusGetResponse>() {}.getType();
     return apiClient.execute(call, localVarReturnType);
   }
@@ -245,7 +260,8 @@ public class ProductsSystemStatusApi {
       Long page,
       Long pageSize,
       List<String> fields,
-      final ApiCallback<ProductsSystemStatusGetResponse> callback)
+      final ApiCallback<ProductsSystemStatusGetResponse> callback,
+      String... headerPair)
       throws ApiException {
 
     ProgressResponseBody.ProgressListener progressListener = null;
@@ -278,7 +294,8 @@ public class ProductsSystemStatusApi {
             pageSize,
             fields,
             progressListener,
-            progressRequestListener);
+            progressRequestListener,
+            headerPair);
     Type localVarReturnType = new TypeToken<ProductsSystemStatusGetResponse>() {}.getType();
     apiClient.executeAsync(call, localVarReturnType, callback);
     return call;

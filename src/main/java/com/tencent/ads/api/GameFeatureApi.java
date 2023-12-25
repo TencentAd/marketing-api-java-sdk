@@ -64,8 +64,10 @@ public class GameFeatureApi {
   public com.squareup.okhttp.Call gameFeatureAddCall(
       GameFeatureAddRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
-      final ProgressRequestBody.ProgressRequestListener progressRequestListener)
+      final ProgressRequestBody.ProgressRequestListener progressRequestListener,
+      String... headerPair)
       throws ApiException {
+
     Object localVarPostBody = data;
 
     // create path and map variables
@@ -85,6 +87,15 @@ public class GameFeatureApi {
     final String[] localVarContentTypes = {"application/json", "application/xml"};
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
     localVarHeaderParams.put("Content-Type", localVarContentType);
+
+    if (headerPair != null && headerPair.length > 0) {
+      if (headerPair.length % 2 != 0) {
+        throw new UnsupportedOperationException("Parameter headerPair must be paired");
+      }
+      for (int i = 0; i < headerPair.length / 2; i++) {
+        localVarHeaderParams.put(headerPair[i], headerPair[i * 2 + 1]);
+      }
+    }
 
     if (progressListener != null) {
       apiClient
@@ -121,7 +132,8 @@ public class GameFeatureApi {
   private com.squareup.okhttp.Call gameFeatureAddValidateBeforeCall(
       GameFeatureAddRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
-      final ProgressRequestBody.ProgressRequestListener progressRequestListener)
+      final ProgressRequestBody.ProgressRequestListener progressRequestListener,
+      String... headerPair)
       throws ApiException {
 
     // verify the required parameter 'data' is set
@@ -131,7 +143,7 @@ public class GameFeatureApi {
     }
 
     com.squareup.okhttp.Call call =
-        gameFeatureAddCall(data, progressListener, progressRequestListener);
+        gameFeatureAddCall(data, progressListener, progressRequestListener, headerPair);
     return call;
   }
 
@@ -143,8 +155,9 @@ public class GameFeatureApi {
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
-  public GameFeatureAddResponse gameFeatureAdd(GameFeatureAddRequest data) throws ApiException {
-    ApiResponse<GameFeatureAddResponse> resp = gameFeatureAddWithHttpInfo(data);
+  public GameFeatureAddResponse gameFeatureAdd(GameFeatureAddRequest data, String... headerPair)
+      throws ApiException {
+    ApiResponse<GameFeatureAddResponse> resp = gameFeatureAddWithHttpInfo(data, headerPair);
     return resp.getData();
   }
 
@@ -156,9 +169,9 @@ public class GameFeatureApi {
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
-  public ApiResponse<GameFeatureAddResponse> gameFeatureAddWithHttpInfo(GameFeatureAddRequest data)
-      throws ApiException {
-    com.squareup.okhttp.Call call = gameFeatureAddValidateBeforeCall(data, null, null);
+  public ApiResponse<GameFeatureAddResponse> gameFeatureAddWithHttpInfo(
+      GameFeatureAddRequest data, String... headerPair) throws ApiException {
+    com.squareup.okhttp.Call call = gameFeatureAddValidateBeforeCall(data, null, null, headerPair);
     Type localVarReturnType = new TypeToken<GameFeatureAddResponse>() {}.getType();
     return apiClient.execute(call, localVarReturnType);
   }
@@ -172,7 +185,9 @@ public class GameFeatureApi {
    * @throws ApiException If fail to process the API call, e.g. serializing the request body object
    */
   public com.squareup.okhttp.Call gameFeatureAddAsync(
-      GameFeatureAddRequest data, final ApiCallback<GameFeatureAddResponse> callback)
+      GameFeatureAddRequest data,
+      final ApiCallback<GameFeatureAddResponse> callback,
+      String... headerPair)
       throws ApiException {
 
     ProgressResponseBody.ProgressListener progressListener = null;
@@ -197,7 +212,8 @@ public class GameFeatureApi {
     }
 
     com.squareup.okhttp.Call call =
-        gameFeatureAddValidateBeforeCall(data, progressListener, progressRequestListener);
+        gameFeatureAddValidateBeforeCall(
+            data, progressListener, progressRequestListener, headerPair);
     Type localVarReturnType = new TypeToken<GameFeatureAddResponse>() {}.getType();
     apiClient.executeAsync(call, localVarReturnType, callback);
     return call;
@@ -220,8 +236,10 @@ public class GameFeatureApi {
       String promotedObjectId,
       List<String> fields,
       final ProgressResponseBody.ProgressListener progressListener,
-      final ProgressRequestBody.ProgressRequestListener progressRequestListener)
+      final ProgressRequestBody.ProgressRequestListener progressRequestListener,
+      String... headerPair)
       throws ApiException {
+
     Object localVarPostBody = null;
 
     // create path and map variables
@@ -250,6 +268,15 @@ public class GameFeatureApi {
     final String[] localVarContentTypes = {"text/plain"};
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
     localVarHeaderParams.put("Content-Type", localVarContentType);
+
+    if (headerPair != null && headerPair.length > 0) {
+      if (headerPair.length % 2 != 0) {
+        throw new UnsupportedOperationException("Parameter headerPair must be paired");
+      }
+      for (int i = 0; i < headerPair.length / 2; i++) {
+        localVarHeaderParams.put(headerPair[i], headerPair[i * 2 + 1]);
+      }
+    }
 
     if (progressListener != null) {
       apiClient
@@ -289,7 +316,8 @@ public class GameFeatureApi {
       String promotedObjectId,
       List<String> fields,
       final ProgressResponseBody.ProgressListener progressListener,
-      final ProgressRequestBody.ProgressRequestListener progressRequestListener)
+      final ProgressRequestBody.ProgressRequestListener progressRequestListener,
+      String... headerPair)
       throws ApiException {
 
     // verify the required parameter 'accountId' is set
@@ -317,7 +345,8 @@ public class GameFeatureApi {
             promotedObjectId,
             fields,
             progressListener,
-            progressRequestListener);
+            progressRequestListener,
+            headerPair);
     return call;
   }
 
@@ -333,10 +362,15 @@ public class GameFeatureApi {
    *     response body
    */
   public GameFeatureGetResponse gameFeatureGet(
-      Long accountId, String promotedObjectType, String promotedObjectId, List<String> fields)
+      Long accountId,
+      String promotedObjectType,
+      String promotedObjectId,
+      List<String> fields,
+      String... headerPair)
       throws ApiException {
     ApiResponse<GameFeatureGetResponse> resp =
-        gameFeatureGetWithHttpInfo(accountId, promotedObjectType, promotedObjectId, fields);
+        gameFeatureGetWithHttpInfo(
+            accountId, promotedObjectType, promotedObjectId, fields, headerPair);
     return resp.getData();
   }
 
@@ -352,11 +386,15 @@ public class GameFeatureApi {
    *     response body
    */
   public ApiResponse<GameFeatureGetResponse> gameFeatureGetWithHttpInfo(
-      Long accountId, String promotedObjectType, String promotedObjectId, List<String> fields)
+      Long accountId,
+      String promotedObjectType,
+      String promotedObjectId,
+      List<String> fields,
+      String... headerPair)
       throws ApiException {
     com.squareup.okhttp.Call call =
         gameFeatureGetValidateBeforeCall(
-            accountId, promotedObjectType, promotedObjectId, fields, null, null);
+            accountId, promotedObjectType, promotedObjectId, fields, null, null, headerPair);
     Type localVarReturnType = new TypeToken<GameFeatureGetResponse>() {}.getType();
     return apiClient.execute(call, localVarReturnType);
   }
@@ -377,7 +415,8 @@ public class GameFeatureApi {
       String promotedObjectType,
       String promotedObjectId,
       List<String> fields,
-      final ApiCallback<GameFeatureGetResponse> callback)
+      final ApiCallback<GameFeatureGetResponse> callback,
+      String... headerPair)
       throws ApiException {
 
     ProgressResponseBody.ProgressListener progressListener = null;
@@ -408,7 +447,8 @@ public class GameFeatureApi {
             promotedObjectId,
             fields,
             progressListener,
-            progressRequestListener);
+            progressRequestListener,
+            headerPair);
     Type localVarReturnType = new TypeToken<GameFeatureGetResponse>() {}.getType();
     apiClient.executeAsync(call, localVarReturnType, callback);
     return call;
@@ -425,8 +465,10 @@ public class GameFeatureApi {
   public com.squareup.okhttp.Call gameFeatureUpdateCall(
       GameFeatureUpdateRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
-      final ProgressRequestBody.ProgressRequestListener progressRequestListener)
+      final ProgressRequestBody.ProgressRequestListener progressRequestListener,
+      String... headerPair)
       throws ApiException {
+
     Object localVarPostBody = data;
 
     // create path and map variables
@@ -446,6 +488,15 @@ public class GameFeatureApi {
     final String[] localVarContentTypes = {"application/json", "application/xml"};
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
     localVarHeaderParams.put("Content-Type", localVarContentType);
+
+    if (headerPair != null && headerPair.length > 0) {
+      if (headerPair.length % 2 != 0) {
+        throw new UnsupportedOperationException("Parameter headerPair must be paired");
+      }
+      for (int i = 0; i < headerPair.length / 2; i++) {
+        localVarHeaderParams.put(headerPair[i], headerPair[i * 2 + 1]);
+      }
+    }
 
     if (progressListener != null) {
       apiClient
@@ -482,7 +533,8 @@ public class GameFeatureApi {
   private com.squareup.okhttp.Call gameFeatureUpdateValidateBeforeCall(
       GameFeatureUpdateRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
-      final ProgressRequestBody.ProgressRequestListener progressRequestListener)
+      final ProgressRequestBody.ProgressRequestListener progressRequestListener,
+      String... headerPair)
       throws ApiException {
 
     // verify the required parameter 'data' is set
@@ -492,7 +544,7 @@ public class GameFeatureApi {
     }
 
     com.squareup.okhttp.Call call =
-        gameFeatureUpdateCall(data, progressListener, progressRequestListener);
+        gameFeatureUpdateCall(data, progressListener, progressRequestListener, headerPair);
     return call;
   }
 
@@ -504,9 +556,9 @@ public class GameFeatureApi {
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
-  public GameFeatureUpdateResponse gameFeatureUpdate(GameFeatureUpdateRequest data)
-      throws ApiException {
-    ApiResponse<GameFeatureUpdateResponse> resp = gameFeatureUpdateWithHttpInfo(data);
+  public GameFeatureUpdateResponse gameFeatureUpdate(
+      GameFeatureUpdateRequest data, String... headerPair) throws ApiException {
+    ApiResponse<GameFeatureUpdateResponse> resp = gameFeatureUpdateWithHttpInfo(data, headerPair);
     return resp.getData();
   }
 
@@ -519,8 +571,9 @@ public class GameFeatureApi {
    *     response body
    */
   public ApiResponse<GameFeatureUpdateResponse> gameFeatureUpdateWithHttpInfo(
-      GameFeatureUpdateRequest data) throws ApiException {
-    com.squareup.okhttp.Call call = gameFeatureUpdateValidateBeforeCall(data, null, null);
+      GameFeatureUpdateRequest data, String... headerPair) throws ApiException {
+    com.squareup.okhttp.Call call =
+        gameFeatureUpdateValidateBeforeCall(data, null, null, headerPair);
     Type localVarReturnType = new TypeToken<GameFeatureUpdateResponse>() {}.getType();
     return apiClient.execute(call, localVarReturnType);
   }
@@ -534,7 +587,9 @@ public class GameFeatureApi {
    * @throws ApiException If fail to process the API call, e.g. serializing the request body object
    */
   public com.squareup.okhttp.Call gameFeatureUpdateAsync(
-      GameFeatureUpdateRequest data, final ApiCallback<GameFeatureUpdateResponse> callback)
+      GameFeatureUpdateRequest data,
+      final ApiCallback<GameFeatureUpdateResponse> callback,
+      String... headerPair)
       throws ApiException {
 
     ProgressResponseBody.ProgressListener progressListener = null;
@@ -559,7 +614,8 @@ public class GameFeatureApi {
     }
 
     com.squareup.okhttp.Call call =
-        gameFeatureUpdateValidateBeforeCall(data, progressListener, progressRequestListener);
+        gameFeatureUpdateValidateBeforeCall(
+            data, progressListener, progressRequestListener, headerPair);
     Type localVarReturnType = new TypeToken<GameFeatureUpdateResponse>() {}.getType();
     apiClient.executeAsync(call, localVarReturnType, callback);
     return call;

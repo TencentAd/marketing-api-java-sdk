@@ -39,10 +39,16 @@ public class BatchAsyncRequestSpecificationApiContainer extends ApiContainer {
    *     response body
    */
   public BatchAsyncRequestSpecificationGetResponseData batchAsyncRequestSpecificationGet(
-      Long accountId, Long taskId, Long page, Long pageSize, List<String> fields)
+      Long accountId,
+      Long taskId,
+      Long page,
+      Long pageSize,
+      List<String> fields,
+      String... headerPair)
       throws ApiException, TencentAdsResponseException {
     BatchAsyncRequestSpecificationGetResponse resp =
-        api.batchAsyncRequestSpecificationGet(accountId, taskId, page, pageSize, fields);
+        api.batchAsyncRequestSpecificationGet(
+            accountId, taskId, page, pageSize, fields, headerPair);
     handleResponse(gson.toJson(resp));
     return resp.getData();
   }

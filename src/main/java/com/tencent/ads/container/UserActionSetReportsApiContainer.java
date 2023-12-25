@@ -46,11 +46,18 @@ public class UserActionSetReportsApiContainer extends ApiContainer {
       DateRange dateRange,
       String timeGranularity,
       String aggregation,
-      List<String> fields)
+      List<String> fields,
+      String... headerPair)
       throws ApiException, TencentAdsResponseException {
     UserActionSetReportsGetResponse resp =
         api.userActionSetReportsGet(
-            accountId, userActionSetId, dateRange, timeGranularity, aggregation, fields);
+            accountId,
+            userActionSetId,
+            dateRange,
+            timeGranularity,
+            aggregation,
+            fields,
+            headerPair);
     handleResponse(gson.toJson(resp));
     return resp.getData();
   }

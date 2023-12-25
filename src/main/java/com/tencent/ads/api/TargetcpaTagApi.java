@@ -64,8 +64,10 @@ public class TargetcpaTagApi {
       List<String> tagTypes,
       List<String> fields,
       final ProgressResponseBody.ProgressListener progressListener,
-      final ProgressRequestBody.ProgressRequestListener progressRequestListener)
+      final ProgressRequestBody.ProgressRequestListener progressRequestListener,
+      String... headerPair)
       throws ApiException {
+
     Object localVarPostBody = null;
 
     // create path and map variables
@@ -92,6 +94,15 @@ public class TargetcpaTagApi {
     final String[] localVarContentTypes = {"text/plain"};
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
     localVarHeaderParams.put("Content-Type", localVarContentType);
+
+    if (headerPair != null && headerPair.length > 0) {
+      if (headerPair.length % 2 != 0) {
+        throw new UnsupportedOperationException("Parameter headerPair must be paired");
+      }
+      for (int i = 0; i < headerPair.length / 2; i++) {
+        localVarHeaderParams.put(headerPair[i], headerPair[i * 2 + 1]);
+      }
+    }
 
     if (progressListener != null) {
       apiClient
@@ -130,7 +141,8 @@ public class TargetcpaTagApi {
       List<String> tagTypes,
       List<String> fields,
       final ProgressResponseBody.ProgressListener progressListener,
-      final ProgressRequestBody.ProgressRequestListener progressRequestListener)
+      final ProgressRequestBody.ProgressRequestListener progressRequestListener,
+      String... headerPair)
       throws ApiException {
 
     // verify the required parameter 'accountId' is set
@@ -146,7 +158,8 @@ public class TargetcpaTagApi {
     }
 
     com.squareup.okhttp.Call call =
-        targetcpaTagGetCall(accountId, tagTypes, fields, progressListener, progressRequestListener);
+        targetcpaTagGetCall(
+            accountId, tagTypes, fields, progressListener, progressRequestListener, headerPair);
     return call;
   }
 
@@ -161,9 +174,10 @@ public class TargetcpaTagApi {
    *     response body
    */
   public TargetcpaTagGetResponse targetcpaTagGet(
-      Long accountId, List<String> tagTypes, List<String> fields) throws ApiException {
+      Long accountId, List<String> tagTypes, List<String> fields, String... headerPair)
+      throws ApiException {
     ApiResponse<TargetcpaTagGetResponse> resp =
-        targetcpaTagGetWithHttpInfo(accountId, tagTypes, fields);
+        targetcpaTagGetWithHttpInfo(accountId, tagTypes, fields, headerPair);
     return resp.getData();
   }
 
@@ -178,9 +192,10 @@ public class TargetcpaTagApi {
    *     response body
    */
   public ApiResponse<TargetcpaTagGetResponse> targetcpaTagGetWithHttpInfo(
-      Long accountId, List<String> tagTypes, List<String> fields) throws ApiException {
+      Long accountId, List<String> tagTypes, List<String> fields, String... headerPair)
+      throws ApiException {
     com.squareup.okhttp.Call call =
-        targetcpaTagGetValidateBeforeCall(accountId, tagTypes, fields, null, null);
+        targetcpaTagGetValidateBeforeCall(accountId, tagTypes, fields, null, null, headerPair);
     Type localVarReturnType = new TypeToken<TargetcpaTagGetResponse>() {}.getType();
     return apiClient.execute(call, localVarReturnType);
   }
@@ -199,7 +214,8 @@ public class TargetcpaTagApi {
       Long accountId,
       List<String> tagTypes,
       List<String> fields,
-      final ApiCallback<TargetcpaTagGetResponse> callback)
+      final ApiCallback<TargetcpaTagGetResponse> callback,
+      String... headerPair)
       throws ApiException {
 
     ProgressResponseBody.ProgressListener progressListener = null;
@@ -225,7 +241,7 @@ public class TargetcpaTagApi {
 
     com.squareup.okhttp.Call call =
         targetcpaTagGetValidateBeforeCall(
-            accountId, tagTypes, fields, progressListener, progressRequestListener);
+            accountId, tagTypes, fields, progressListener, progressRequestListener, headerPair);
     Type localVarReturnType = new TypeToken<TargetcpaTagGetResponse>() {}.getType();
     apiClient.executeAsync(call, localVarReturnType, callback);
     return call;

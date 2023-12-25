@@ -41,9 +41,9 @@ public class ProfilesApiContainer extends ApiContainer {
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
-  public ProfilesAddResponseData profilesAdd(ProfilesAddRequest data)
+  public ProfilesAddResponseData profilesAdd(ProfilesAddRequest data, String... headerPair)
       throws ApiException, TencentAdsResponseException {
-    ProfilesAddResponse resp = api.profilesAdd(data);
+    ProfilesAddResponse resp = api.profilesAdd(data, headerPair);
     handleResponse(gson.toJson(resp));
     return resp.getData();
   }
@@ -56,9 +56,9 @@ public class ProfilesApiContainer extends ApiContainer {
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
-  public ProfilesDeleteResponseData profilesDelete(ProfilesDeleteRequest data)
+  public ProfilesDeleteResponseData profilesDelete(ProfilesDeleteRequest data, String... headerPair)
       throws ApiException, TencentAdsResponseException {
-    ProfilesDeleteResponse resp = api.profilesDelete(data);
+    ProfilesDeleteResponse resp = api.profilesDelete(data, headerPair);
     handleResponse(gson.toJson(resp));
     return resp.getData();
   }
@@ -80,9 +80,11 @@ public class ProfilesApiContainer extends ApiContainer {
       List<FilteringStruct> filtering,
       Long page,
       Long pageSize,
-      List<String> fields)
+      List<String> fields,
+      String... headerPair)
       throws ApiException, TencentAdsResponseException {
-    ProfilesGetResponse resp = api.profilesGet(accountId, filtering, page, pageSize, fields);
+    ProfilesGetResponse resp =
+        api.profilesGet(accountId, filtering, page, pageSize, fields, headerPair);
     handleResponse(gson.toJson(resp));
     return resp.getData();
   }

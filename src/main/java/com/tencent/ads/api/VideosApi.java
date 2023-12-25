@@ -75,8 +75,10 @@ public class VideosApi {
       String description,
       Long adcreativeTemplateId,
       final ProgressResponseBody.ProgressListener progressListener,
-      final ProgressRequestBody.ProgressRequestListener progressRequestListener)
+      final ProgressRequestBody.ProgressRequestListener progressRequestListener,
+      String... headerPair)
       throws ApiException {
+
     Object localVarPostBody = null;
 
     // create path and map variables
@@ -102,6 +104,15 @@ public class VideosApi {
     final String[] localVarContentTypes = {"multipart/form-data"};
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
     localVarHeaderParams.put("Content-Type", localVarContentType);
+
+    if (headerPair != null && headerPair.length > 0) {
+      if (headerPair.length % 2 != 0) {
+        throw new UnsupportedOperationException("Parameter headerPair must be paired");
+      }
+      for (int i = 0; i < headerPair.length / 2; i++) {
+        localVarHeaderParams.put(headerPair[i], headerPair[i * 2 + 1]);
+      }
+    }
 
     if (progressListener != null) {
       apiClient
@@ -142,7 +153,8 @@ public class VideosApi {
       String description,
       Long adcreativeTemplateId,
       final ProgressResponseBody.ProgressListener progressListener,
-      final ProgressRequestBody.ProgressRequestListener progressRequestListener)
+      final ProgressRequestBody.ProgressRequestListener progressRequestListener,
+      String... headerPair)
       throws ApiException {
 
     // verify the required parameter 'accountId' is set
@@ -171,7 +183,8 @@ public class VideosApi {
             description,
             adcreativeTemplateId,
             progressListener,
-            progressRequestListener);
+            progressRequestListener,
+            headerPair);
     return call;
   }
 
@@ -192,10 +205,12 @@ public class VideosApi {
       File videoFile,
       String signature,
       String description,
-      Long adcreativeTemplateId)
+      Long adcreativeTemplateId,
+      String... headerPair)
       throws ApiException {
     ApiResponse<VideosAddResponse> resp =
-        videosAddWithHttpInfo(accountId, videoFile, signature, description, adcreativeTemplateId);
+        videosAddWithHttpInfo(
+            accountId, videoFile, signature, description, adcreativeTemplateId, headerPair);
     return resp.getData();
   }
 
@@ -216,11 +231,19 @@ public class VideosApi {
       File videoFile,
       String signature,
       String description,
-      Long adcreativeTemplateId)
+      Long adcreativeTemplateId,
+      String... headerPair)
       throws ApiException {
     com.squareup.okhttp.Call call =
         videosAddValidateBeforeCall(
-            accountId, videoFile, signature, description, adcreativeTemplateId, null, null);
+            accountId,
+            videoFile,
+            signature,
+            description,
+            adcreativeTemplateId,
+            null,
+            null,
+            headerPair);
     Type localVarReturnType = new TypeToken<VideosAddResponse>() {}.getType();
     return apiClient.execute(call, localVarReturnType);
   }
@@ -243,7 +266,8 @@ public class VideosApi {
       String signature,
       String description,
       Long adcreativeTemplateId,
-      final ApiCallback<VideosAddResponse> callback)
+      final ApiCallback<VideosAddResponse> callback,
+      String... headerPair)
       throws ApiException {
 
     ProgressResponseBody.ProgressListener progressListener = null;
@@ -275,7 +299,8 @@ public class VideosApi {
             description,
             adcreativeTemplateId,
             progressListener,
-            progressRequestListener);
+            progressRequestListener,
+            headerPair);
     Type localVarReturnType = new TypeToken<VideosAddResponse>() {}.getType();
     apiClient.executeAsync(call, localVarReturnType, callback);
     return call;
@@ -292,8 +317,10 @@ public class VideosApi {
   public com.squareup.okhttp.Call videosDeleteCall(
       VideosDeleteRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
-      final ProgressRequestBody.ProgressRequestListener progressRequestListener)
+      final ProgressRequestBody.ProgressRequestListener progressRequestListener,
+      String... headerPair)
       throws ApiException {
+
     Object localVarPostBody = data;
 
     // create path and map variables
@@ -313,6 +340,15 @@ public class VideosApi {
     final String[] localVarContentTypes = {"application/json", "application/xml"};
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
     localVarHeaderParams.put("Content-Type", localVarContentType);
+
+    if (headerPair != null && headerPair.length > 0) {
+      if (headerPair.length % 2 != 0) {
+        throw new UnsupportedOperationException("Parameter headerPair must be paired");
+      }
+      for (int i = 0; i < headerPair.length / 2; i++) {
+        localVarHeaderParams.put(headerPair[i], headerPair[i * 2 + 1]);
+      }
+    }
 
     if (progressListener != null) {
       apiClient
@@ -349,7 +385,8 @@ public class VideosApi {
   private com.squareup.okhttp.Call videosDeleteValidateBeforeCall(
       VideosDeleteRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
-      final ProgressRequestBody.ProgressRequestListener progressRequestListener)
+      final ProgressRequestBody.ProgressRequestListener progressRequestListener,
+      String... headerPair)
       throws ApiException {
 
     // verify the required parameter 'data' is set
@@ -359,7 +396,7 @@ public class VideosApi {
     }
 
     com.squareup.okhttp.Call call =
-        videosDeleteCall(data, progressListener, progressRequestListener);
+        videosDeleteCall(data, progressListener, progressRequestListener, headerPair);
     return call;
   }
 
@@ -371,8 +408,9 @@ public class VideosApi {
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
-  public VideosDeleteResponse videosDelete(VideosDeleteRequest data) throws ApiException {
-    ApiResponse<VideosDeleteResponse> resp = videosDeleteWithHttpInfo(data);
+  public VideosDeleteResponse videosDelete(VideosDeleteRequest data, String... headerPair)
+      throws ApiException {
+    ApiResponse<VideosDeleteResponse> resp = videosDeleteWithHttpInfo(data, headerPair);
     return resp.getData();
   }
 
@@ -384,9 +422,9 @@ public class VideosApi {
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
-  public ApiResponse<VideosDeleteResponse> videosDeleteWithHttpInfo(VideosDeleteRequest data)
-      throws ApiException {
-    com.squareup.okhttp.Call call = videosDeleteValidateBeforeCall(data, null, null);
+  public ApiResponse<VideosDeleteResponse> videosDeleteWithHttpInfo(
+      VideosDeleteRequest data, String... headerPair) throws ApiException {
+    com.squareup.okhttp.Call call = videosDeleteValidateBeforeCall(data, null, null, headerPair);
     Type localVarReturnType = new TypeToken<VideosDeleteResponse>() {}.getType();
     return apiClient.execute(call, localVarReturnType);
   }
@@ -400,7 +438,9 @@ public class VideosApi {
    * @throws ApiException If fail to process the API call, e.g. serializing the request body object
    */
   public com.squareup.okhttp.Call videosDeleteAsync(
-      VideosDeleteRequest data, final ApiCallback<VideosDeleteResponse> callback)
+      VideosDeleteRequest data,
+      final ApiCallback<VideosDeleteResponse> callback,
+      String... headerPair)
       throws ApiException {
 
     ProgressResponseBody.ProgressListener progressListener = null;
@@ -425,7 +465,7 @@ public class VideosApi {
     }
 
     com.squareup.okhttp.Call call =
-        videosDeleteValidateBeforeCall(data, progressListener, progressRequestListener);
+        videosDeleteValidateBeforeCall(data, progressListener, progressRequestListener, headerPair);
     Type localVarReturnType = new TypeToken<VideosDeleteResponse>() {}.getType();
     apiClient.executeAsync(call, localVarReturnType, callback);
     return call;
@@ -450,8 +490,10 @@ public class VideosApi {
       Long pageSize,
       List<String> fields,
       final ProgressResponseBody.ProgressListener progressListener,
-      final ProgressRequestBody.ProgressRequestListener progressRequestListener)
+      final ProgressRequestBody.ProgressRequestListener progressRequestListener,
+      String... headerPair)
       throws ApiException {
+
     Object localVarPostBody = null;
 
     // create path and map variables
@@ -481,6 +523,15 @@ public class VideosApi {
     final String[] localVarContentTypes = {"text/plain"};
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
     localVarHeaderParams.put("Content-Type", localVarContentType);
+
+    if (headerPair != null && headerPair.length > 0) {
+      if (headerPair.length % 2 != 0) {
+        throw new UnsupportedOperationException("Parameter headerPair must be paired");
+      }
+      for (int i = 0; i < headerPair.length / 2; i++) {
+        localVarHeaderParams.put(headerPair[i], headerPair[i * 2 + 1]);
+      }
+    }
 
     if (progressListener != null) {
       apiClient
@@ -521,7 +572,8 @@ public class VideosApi {
       Long pageSize,
       List<String> fields,
       final ProgressResponseBody.ProgressListener progressListener,
-      final ProgressRequestBody.ProgressRequestListener progressRequestListener)
+      final ProgressRequestBody.ProgressRequestListener progressRequestListener,
+      String... headerPair)
       throws ApiException {
 
     // verify the required parameter 'accountId' is set
@@ -538,7 +590,8 @@ public class VideosApi {
             pageSize,
             fields,
             progressListener,
-            progressRequestListener);
+            progressRequestListener,
+            headerPair);
     return call;
   }
 
@@ -559,10 +612,11 @@ public class VideosApi {
       List<FilteringStruct> filtering,
       Long page,
       Long pageSize,
-      List<String> fields)
+      List<String> fields,
+      String... headerPair)
       throws ApiException {
     ApiResponse<VideosGetResponse> resp =
-        videosGetWithHttpInfo(accountId, filtering, page, pageSize, fields);
+        videosGetWithHttpInfo(accountId, filtering, page, pageSize, fields, headerPair);
     return resp.getData();
   }
 
@@ -583,10 +637,12 @@ public class VideosApi {
       List<FilteringStruct> filtering,
       Long page,
       Long pageSize,
-      List<String> fields)
+      List<String> fields,
+      String... headerPair)
       throws ApiException {
     com.squareup.okhttp.Call call =
-        videosGetValidateBeforeCall(accountId, filtering, page, pageSize, fields, null, null);
+        videosGetValidateBeforeCall(
+            accountId, filtering, page, pageSize, fields, null, null, headerPair);
     Type localVarReturnType = new TypeToken<VideosGetResponse>() {}.getType();
     return apiClient.execute(call, localVarReturnType);
   }
@@ -609,7 +665,8 @@ public class VideosApi {
       Long page,
       Long pageSize,
       List<String> fields,
-      final ApiCallback<VideosGetResponse> callback)
+      final ApiCallback<VideosGetResponse> callback,
+      String... headerPair)
       throws ApiException {
 
     ProgressResponseBody.ProgressListener progressListener = null;
@@ -641,7 +698,8 @@ public class VideosApi {
             pageSize,
             fields,
             progressListener,
-            progressRequestListener);
+            progressRequestListener,
+            headerPair);
     Type localVarReturnType = new TypeToken<VideosGetResponse>() {}.getType();
     apiClient.executeAsync(call, localVarReturnType, callback);
     return call;
@@ -658,8 +716,10 @@ public class VideosApi {
   public com.squareup.okhttp.Call videosUpdateCall(
       VideosUpdateRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
-      final ProgressRequestBody.ProgressRequestListener progressRequestListener)
+      final ProgressRequestBody.ProgressRequestListener progressRequestListener,
+      String... headerPair)
       throws ApiException {
+
     Object localVarPostBody = data;
 
     // create path and map variables
@@ -679,6 +739,15 @@ public class VideosApi {
     final String[] localVarContentTypes = {"application/json", "application/xml"};
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
     localVarHeaderParams.put("Content-Type", localVarContentType);
+
+    if (headerPair != null && headerPair.length > 0) {
+      if (headerPair.length % 2 != 0) {
+        throw new UnsupportedOperationException("Parameter headerPair must be paired");
+      }
+      for (int i = 0; i < headerPair.length / 2; i++) {
+        localVarHeaderParams.put(headerPair[i], headerPair[i * 2 + 1]);
+      }
+    }
 
     if (progressListener != null) {
       apiClient
@@ -715,7 +784,8 @@ public class VideosApi {
   private com.squareup.okhttp.Call videosUpdateValidateBeforeCall(
       VideosUpdateRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
-      final ProgressRequestBody.ProgressRequestListener progressRequestListener)
+      final ProgressRequestBody.ProgressRequestListener progressRequestListener,
+      String... headerPair)
       throws ApiException {
 
     // verify the required parameter 'data' is set
@@ -725,7 +795,7 @@ public class VideosApi {
     }
 
     com.squareup.okhttp.Call call =
-        videosUpdateCall(data, progressListener, progressRequestListener);
+        videosUpdateCall(data, progressListener, progressRequestListener, headerPair);
     return call;
   }
 
@@ -737,8 +807,9 @@ public class VideosApi {
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
-  public VideosUpdateResponse videosUpdate(VideosUpdateRequest data) throws ApiException {
-    ApiResponse<VideosUpdateResponse> resp = videosUpdateWithHttpInfo(data);
+  public VideosUpdateResponse videosUpdate(VideosUpdateRequest data, String... headerPair)
+      throws ApiException {
+    ApiResponse<VideosUpdateResponse> resp = videosUpdateWithHttpInfo(data, headerPair);
     return resp.getData();
   }
 
@@ -750,9 +821,9 @@ public class VideosApi {
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
-  public ApiResponse<VideosUpdateResponse> videosUpdateWithHttpInfo(VideosUpdateRequest data)
-      throws ApiException {
-    com.squareup.okhttp.Call call = videosUpdateValidateBeforeCall(data, null, null);
+  public ApiResponse<VideosUpdateResponse> videosUpdateWithHttpInfo(
+      VideosUpdateRequest data, String... headerPair) throws ApiException {
+    com.squareup.okhttp.Call call = videosUpdateValidateBeforeCall(data, null, null, headerPair);
     Type localVarReturnType = new TypeToken<VideosUpdateResponse>() {}.getType();
     return apiClient.execute(call, localVarReturnType);
   }
@@ -766,7 +837,9 @@ public class VideosApi {
    * @throws ApiException If fail to process the API call, e.g. serializing the request body object
    */
   public com.squareup.okhttp.Call videosUpdateAsync(
-      VideosUpdateRequest data, final ApiCallback<VideosUpdateResponse> callback)
+      VideosUpdateRequest data,
+      final ApiCallback<VideosUpdateResponse> callback,
+      String... headerPair)
       throws ApiException {
 
     ProgressResponseBody.ProgressListener progressListener = null;
@@ -791,7 +864,7 @@ public class VideosApi {
     }
 
     com.squareup.okhttp.Call call =
-        videosUpdateValidateBeforeCall(data, progressListener, progressRequestListener);
+        videosUpdateValidateBeforeCall(data, progressListener, progressRequestListener, headerPair);
     Type localVarReturnType = new TypeToken<VideosUpdateResponse>() {}.getType();
     apiClient.executeAsync(call, localVarReturnType, callback);
     return call;

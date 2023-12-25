@@ -64,8 +64,10 @@ public class WechatPagesCsgrouplistApi {
   public com.squareup.okhttp.Call wechatPagesCsgrouplistAddCall(
       WechatPagesCsgrouplistAddRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
-      final ProgressRequestBody.ProgressRequestListener progressRequestListener)
+      final ProgressRequestBody.ProgressRequestListener progressRequestListener,
+      String... headerPair)
       throws ApiException {
+
     Object localVarPostBody = data;
 
     // create path and map variables
@@ -85,6 +87,15 @@ public class WechatPagesCsgrouplistApi {
     final String[] localVarContentTypes = {"application/json", "application/xml"};
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
     localVarHeaderParams.put("Content-Type", localVarContentType);
+
+    if (headerPair != null && headerPair.length > 0) {
+      if (headerPair.length % 2 != 0) {
+        throw new UnsupportedOperationException("Parameter headerPair must be paired");
+      }
+      for (int i = 0; i < headerPair.length / 2; i++) {
+        localVarHeaderParams.put(headerPair[i], headerPair[i * 2 + 1]);
+      }
+    }
 
     if (progressListener != null) {
       apiClient
@@ -121,7 +132,8 @@ public class WechatPagesCsgrouplistApi {
   private com.squareup.okhttp.Call wechatPagesCsgrouplistAddValidateBeforeCall(
       WechatPagesCsgrouplistAddRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
-      final ProgressRequestBody.ProgressRequestListener progressRequestListener)
+      final ProgressRequestBody.ProgressRequestListener progressRequestListener,
+      String... headerPair)
       throws ApiException {
 
     // verify the required parameter 'data' is set
@@ -131,7 +143,7 @@ public class WechatPagesCsgrouplistApi {
     }
 
     com.squareup.okhttp.Call call =
-        wechatPagesCsgrouplistAddCall(data, progressListener, progressRequestListener);
+        wechatPagesCsgrouplistAddCall(data, progressListener, progressRequestListener, headerPair);
     return call;
   }
 
@@ -144,9 +156,9 @@ public class WechatPagesCsgrouplistApi {
    *     response body
    */
   public WechatPagesCsgrouplistAddResponse wechatPagesCsgrouplistAdd(
-      WechatPagesCsgrouplistAddRequest data) throws ApiException {
+      WechatPagesCsgrouplistAddRequest data, String... headerPair) throws ApiException {
     ApiResponse<WechatPagesCsgrouplistAddResponse> resp =
-        wechatPagesCsgrouplistAddWithHttpInfo(data);
+        wechatPagesCsgrouplistAddWithHttpInfo(data, headerPair);
     return resp.getData();
   }
 
@@ -159,8 +171,9 @@ public class WechatPagesCsgrouplistApi {
    *     response body
    */
   public ApiResponse<WechatPagesCsgrouplistAddResponse> wechatPagesCsgrouplistAddWithHttpInfo(
-      WechatPagesCsgrouplistAddRequest data) throws ApiException {
-    com.squareup.okhttp.Call call = wechatPagesCsgrouplistAddValidateBeforeCall(data, null, null);
+      WechatPagesCsgrouplistAddRequest data, String... headerPair) throws ApiException {
+    com.squareup.okhttp.Call call =
+        wechatPagesCsgrouplistAddValidateBeforeCall(data, null, null, headerPair);
     Type localVarReturnType = new TypeToken<WechatPagesCsgrouplistAddResponse>() {}.getType();
     return apiClient.execute(call, localVarReturnType);
   }
@@ -175,7 +188,8 @@ public class WechatPagesCsgrouplistApi {
    */
   public com.squareup.okhttp.Call wechatPagesCsgrouplistAddAsync(
       WechatPagesCsgrouplistAddRequest data,
-      final ApiCallback<WechatPagesCsgrouplistAddResponse> callback)
+      final ApiCallback<WechatPagesCsgrouplistAddResponse> callback,
+      String... headerPair)
       throws ApiException {
 
     ProgressResponseBody.ProgressListener progressListener = null;
@@ -201,7 +215,7 @@ public class WechatPagesCsgrouplistApi {
 
     com.squareup.okhttp.Call call =
         wechatPagesCsgrouplistAddValidateBeforeCall(
-            data, progressListener, progressRequestListener);
+            data, progressListener, progressRequestListener, headerPair);
     Type localVarReturnType = new TypeToken<WechatPagesCsgrouplistAddResponse>() {}.getType();
     apiClient.executeAsync(call, localVarReturnType, callback);
     return call;
@@ -226,8 +240,10 @@ public class WechatPagesCsgrouplistApi {
       String corpId,
       List<String> fields,
       final ProgressResponseBody.ProgressListener progressListener,
-      final ProgressRequestBody.ProgressRequestListener progressRequestListener)
+      final ProgressRequestBody.ProgressRequestListener progressRequestListener,
+      String... headerPair)
       throws ApiException {
+
     Object localVarPostBody = null;
 
     // create path and map variables
@@ -255,6 +271,15 @@ public class WechatPagesCsgrouplistApi {
     final String[] localVarContentTypes = {"text/plain"};
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
     localVarHeaderParams.put("Content-Type", localVarContentType);
+
+    if (headerPair != null && headerPair.length > 0) {
+      if (headerPair.length % 2 != 0) {
+        throw new UnsupportedOperationException("Parameter headerPair must be paired");
+      }
+      for (int i = 0; i < headerPair.length / 2; i++) {
+        localVarHeaderParams.put(headerPair[i], headerPair[i * 2 + 1]);
+      }
+    }
 
     if (progressListener != null) {
       apiClient
@@ -295,7 +320,8 @@ public class WechatPagesCsgrouplistApi {
       String corpId,
       List<String> fields,
       final ProgressResponseBody.ProgressListener progressListener,
-      final ProgressRequestBody.ProgressRequestListener progressRequestListener)
+      final ProgressRequestBody.ProgressRequestListener progressRequestListener,
+      String... headerPair)
       throws ApiException {
 
     // verify the required parameter 'accountId' is set
@@ -306,7 +332,14 @@ public class WechatPagesCsgrouplistApi {
 
     com.squareup.okhttp.Call call =
         wechatPagesCsgrouplistGetCall(
-            accountId, page, pageSize, corpId, fields, progressListener, progressRequestListener);
+            accountId,
+            page,
+            pageSize,
+            corpId,
+            fields,
+            progressListener,
+            progressRequestListener,
+            headerPair);
     return call;
   }
 
@@ -323,10 +356,16 @@ public class WechatPagesCsgrouplistApi {
    *     response body
    */
   public WechatPagesCsgrouplistGetResponse wechatPagesCsgrouplistGet(
-      Long accountId, Long page, Long pageSize, String corpId, List<String> fields)
+      Long accountId,
+      Long page,
+      Long pageSize,
+      String corpId,
+      List<String> fields,
+      String... headerPair)
       throws ApiException {
     ApiResponse<WechatPagesCsgrouplistGetResponse> resp =
-        wechatPagesCsgrouplistGetWithHttpInfo(accountId, page, pageSize, corpId, fields);
+        wechatPagesCsgrouplistGetWithHttpInfo(
+            accountId, page, pageSize, corpId, fields, headerPair);
     return resp.getData();
   }
 
@@ -343,11 +382,16 @@ public class WechatPagesCsgrouplistApi {
    *     response body
    */
   public ApiResponse<WechatPagesCsgrouplistGetResponse> wechatPagesCsgrouplistGetWithHttpInfo(
-      Long accountId, Long page, Long pageSize, String corpId, List<String> fields)
+      Long accountId,
+      Long page,
+      Long pageSize,
+      String corpId,
+      List<String> fields,
+      String... headerPair)
       throws ApiException {
     com.squareup.okhttp.Call call =
         wechatPagesCsgrouplistGetValidateBeforeCall(
-            accountId, page, pageSize, corpId, fields, null, null);
+            accountId, page, pageSize, corpId, fields, null, null, headerPair);
     Type localVarReturnType = new TypeToken<WechatPagesCsgrouplistGetResponse>() {}.getType();
     return apiClient.execute(call, localVarReturnType);
   }
@@ -370,7 +414,8 @@ public class WechatPagesCsgrouplistApi {
       Long pageSize,
       String corpId,
       List<String> fields,
-      final ApiCallback<WechatPagesCsgrouplistGetResponse> callback)
+      final ApiCallback<WechatPagesCsgrouplistGetResponse> callback,
+      String... headerPair)
       throws ApiException {
 
     ProgressResponseBody.ProgressListener progressListener = null;
@@ -396,7 +441,14 @@ public class WechatPagesCsgrouplistApi {
 
     com.squareup.okhttp.Call call =
         wechatPagesCsgrouplistGetValidateBeforeCall(
-            accountId, page, pageSize, corpId, fields, progressListener, progressRequestListener);
+            accountId,
+            page,
+            pageSize,
+            corpId,
+            fields,
+            progressListener,
+            progressRequestListener,
+            headerPair);
     Type localVarReturnType = new TypeToken<WechatPagesCsgrouplistGetResponse>() {}.getType();
     apiClient.executeAsync(call, localVarReturnType, callback);
     return call;
@@ -413,8 +465,10 @@ public class WechatPagesCsgrouplistApi {
   public com.squareup.okhttp.Call wechatPagesCsgrouplistUpdateCall(
       WechatPagesCsgrouplistUpdateRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
-      final ProgressRequestBody.ProgressRequestListener progressRequestListener)
+      final ProgressRequestBody.ProgressRequestListener progressRequestListener,
+      String... headerPair)
       throws ApiException {
+
     Object localVarPostBody = data;
 
     // create path and map variables
@@ -434,6 +488,15 @@ public class WechatPagesCsgrouplistApi {
     final String[] localVarContentTypes = {"application/json", "application/xml"};
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
     localVarHeaderParams.put("Content-Type", localVarContentType);
+
+    if (headerPair != null && headerPair.length > 0) {
+      if (headerPair.length % 2 != 0) {
+        throw new UnsupportedOperationException("Parameter headerPair must be paired");
+      }
+      for (int i = 0; i < headerPair.length / 2; i++) {
+        localVarHeaderParams.put(headerPair[i], headerPair[i * 2 + 1]);
+      }
+    }
 
     if (progressListener != null) {
       apiClient
@@ -470,7 +533,8 @@ public class WechatPagesCsgrouplistApi {
   private com.squareup.okhttp.Call wechatPagesCsgrouplistUpdateValidateBeforeCall(
       WechatPagesCsgrouplistUpdateRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
-      final ProgressRequestBody.ProgressRequestListener progressRequestListener)
+      final ProgressRequestBody.ProgressRequestListener progressRequestListener,
+      String... headerPair)
       throws ApiException {
 
     // verify the required parameter 'data' is set
@@ -480,7 +544,8 @@ public class WechatPagesCsgrouplistApi {
     }
 
     com.squareup.okhttp.Call call =
-        wechatPagesCsgrouplistUpdateCall(data, progressListener, progressRequestListener);
+        wechatPagesCsgrouplistUpdateCall(
+            data, progressListener, progressRequestListener, headerPair);
     return call;
   }
 
@@ -493,9 +558,9 @@ public class WechatPagesCsgrouplistApi {
    *     response body
    */
   public WechatPagesCsgrouplistUpdateResponse wechatPagesCsgrouplistUpdate(
-      WechatPagesCsgrouplistUpdateRequest data) throws ApiException {
+      WechatPagesCsgrouplistUpdateRequest data, String... headerPair) throws ApiException {
     ApiResponse<WechatPagesCsgrouplistUpdateResponse> resp =
-        wechatPagesCsgrouplistUpdateWithHttpInfo(data);
+        wechatPagesCsgrouplistUpdateWithHttpInfo(data, headerPair);
     return resp.getData();
   }
 
@@ -508,9 +573,9 @@ public class WechatPagesCsgrouplistApi {
    *     response body
    */
   public ApiResponse<WechatPagesCsgrouplistUpdateResponse> wechatPagesCsgrouplistUpdateWithHttpInfo(
-      WechatPagesCsgrouplistUpdateRequest data) throws ApiException {
+      WechatPagesCsgrouplistUpdateRequest data, String... headerPair) throws ApiException {
     com.squareup.okhttp.Call call =
-        wechatPagesCsgrouplistUpdateValidateBeforeCall(data, null, null);
+        wechatPagesCsgrouplistUpdateValidateBeforeCall(data, null, null, headerPair);
     Type localVarReturnType = new TypeToken<WechatPagesCsgrouplistUpdateResponse>() {}.getType();
     return apiClient.execute(call, localVarReturnType);
   }
@@ -525,7 +590,8 @@ public class WechatPagesCsgrouplistApi {
    */
   public com.squareup.okhttp.Call wechatPagesCsgrouplistUpdateAsync(
       WechatPagesCsgrouplistUpdateRequest data,
-      final ApiCallback<WechatPagesCsgrouplistUpdateResponse> callback)
+      final ApiCallback<WechatPagesCsgrouplistUpdateResponse> callback,
+      String... headerPair)
       throws ApiException {
 
     ProgressResponseBody.ProgressListener progressListener = null;
@@ -551,7 +617,7 @@ public class WechatPagesCsgrouplistApi {
 
     com.squareup.okhttp.Call call =
         wechatPagesCsgrouplistUpdateValidateBeforeCall(
-            data, progressListener, progressRequestListener);
+            data, progressListener, progressRequestListener, headerPair);
     Type localVarReturnType = new TypeToken<WechatPagesCsgrouplistUpdateResponse>() {}.getType();
     apiClient.executeAsync(call, localVarReturnType, callback);
     return call;

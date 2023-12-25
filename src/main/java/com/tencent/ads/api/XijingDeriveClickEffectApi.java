@@ -61,8 +61,10 @@ public class XijingDeriveClickEffectApi {
   public com.squareup.okhttp.Call xijingDeriveClickEffectGetCall(
       XijingDeriveClickEffectGetRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
-      final ProgressRequestBody.ProgressRequestListener progressRequestListener)
+      final ProgressRequestBody.ProgressRequestListener progressRequestListener,
+      String... headerPair)
       throws ApiException {
+
     Object localVarPostBody = data;
 
     // create path and map variables
@@ -82,6 +84,15 @@ public class XijingDeriveClickEffectApi {
     final String[] localVarContentTypes = {"application/json", "application/xml"};
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
     localVarHeaderParams.put("Content-Type", localVarContentType);
+
+    if (headerPair != null && headerPair.length > 0) {
+      if (headerPair.length % 2 != 0) {
+        throw new UnsupportedOperationException("Parameter headerPair must be paired");
+      }
+      for (int i = 0; i < headerPair.length / 2; i++) {
+        localVarHeaderParams.put(headerPair[i], headerPair[i * 2 + 1]);
+      }
+    }
 
     if (progressListener != null) {
       apiClient
@@ -118,7 +129,8 @@ public class XijingDeriveClickEffectApi {
   private com.squareup.okhttp.Call xijingDeriveClickEffectGetValidateBeforeCall(
       XijingDeriveClickEffectGetRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
-      final ProgressRequestBody.ProgressRequestListener progressRequestListener)
+      final ProgressRequestBody.ProgressRequestListener progressRequestListener,
+      String... headerPair)
       throws ApiException {
 
     // verify the required parameter 'data' is set
@@ -128,7 +140,7 @@ public class XijingDeriveClickEffectApi {
     }
 
     com.squareup.okhttp.Call call =
-        xijingDeriveClickEffectGetCall(data, progressListener, progressRequestListener);
+        xijingDeriveClickEffectGetCall(data, progressListener, progressRequestListener, headerPair);
     return call;
   }
 
@@ -141,9 +153,9 @@ public class XijingDeriveClickEffectApi {
    *     response body
    */
   public XijingDeriveClickEffectGetResponse xijingDeriveClickEffectGet(
-      XijingDeriveClickEffectGetRequest data) throws ApiException {
+      XijingDeriveClickEffectGetRequest data, String... headerPair) throws ApiException {
     ApiResponse<XijingDeriveClickEffectGetResponse> resp =
-        xijingDeriveClickEffectGetWithHttpInfo(data);
+        xijingDeriveClickEffectGetWithHttpInfo(data, headerPair);
     return resp.getData();
   }
 
@@ -156,8 +168,9 @@ public class XijingDeriveClickEffectApi {
    *     response body
    */
   public ApiResponse<XijingDeriveClickEffectGetResponse> xijingDeriveClickEffectGetWithHttpInfo(
-      XijingDeriveClickEffectGetRequest data) throws ApiException {
-    com.squareup.okhttp.Call call = xijingDeriveClickEffectGetValidateBeforeCall(data, null, null);
+      XijingDeriveClickEffectGetRequest data, String... headerPair) throws ApiException {
+    com.squareup.okhttp.Call call =
+        xijingDeriveClickEffectGetValidateBeforeCall(data, null, null, headerPair);
     Type localVarReturnType = new TypeToken<XijingDeriveClickEffectGetResponse>() {}.getType();
     return apiClient.execute(call, localVarReturnType);
   }
@@ -172,7 +185,8 @@ public class XijingDeriveClickEffectApi {
    */
   public com.squareup.okhttp.Call xijingDeriveClickEffectGetAsync(
       XijingDeriveClickEffectGetRequest data,
-      final ApiCallback<XijingDeriveClickEffectGetResponse> callback)
+      final ApiCallback<XijingDeriveClickEffectGetResponse> callback,
+      String... headerPair)
       throws ApiException {
 
     ProgressResponseBody.ProgressListener progressListener = null;
@@ -198,7 +212,7 @@ public class XijingDeriveClickEffectApi {
 
     com.squareup.okhttp.Call call =
         xijingDeriveClickEffectGetValidateBeforeCall(
-            data, progressListener, progressRequestListener);
+            data, progressListener, progressRequestListener, headerPair);
     Type localVarReturnType = new TypeToken<XijingDeriveClickEffectGetResponse>() {}.getType();
     apiClient.executeAsync(call, localVarReturnType, callback);
     return call;

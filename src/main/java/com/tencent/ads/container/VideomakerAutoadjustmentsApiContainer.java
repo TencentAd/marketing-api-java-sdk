@@ -49,7 +49,8 @@ public class VideomakerAutoadjustmentsApiContainer extends ApiContainer {
       File videoFile,
       String signature,
       SmartAdjustment smartAdjustment,
-      ManualAdjustment manualAdjustment)
+      ManualAdjustment manualAdjustment,
+      String... headerPair)
       throws ApiException, TencentAdsResponseException {
     VideomakerAutoadjustmentsAddResponse resp =
         api.videomakerAutoadjustmentsAdd(
@@ -59,7 +60,8 @@ public class VideomakerAutoadjustmentsApiContainer extends ApiContainer {
             videoFile,
             signature,
             smartAdjustment,
-            manualAdjustment);
+            manualAdjustment,
+            headerPair);
     handleResponse(gson.toJson(resp));
     return resp.getData();
   }

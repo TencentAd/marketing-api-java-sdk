@@ -38,6 +38,12 @@ public class AdgroupsGetListStruct {
   @SerializedName("automatic_site_enabled")
   private Boolean automaticSiteEnabled = null;
 
+  @SerializedName("exploration_strategy")
+  private SiteSetExplorationStrategy explorationStrategy = null;
+
+  @SerializedName("priority_site_set")
+  private List<String> prioritySiteSet = null;
+
   @SerializedName("optimization_goal")
   private OptimizationGoal optimizationGoal = null;
 
@@ -340,6 +346,52 @@ public class AdgroupsGetListStruct {
 
   public void setAutomaticSiteEnabled(Boolean automaticSiteEnabled) {
     this.automaticSiteEnabled = automaticSiteEnabled;
+  }
+
+  public AdgroupsGetListStruct explorationStrategy(SiteSetExplorationStrategy explorationStrategy) {
+    this.explorationStrategy = explorationStrategy;
+    return this;
+  }
+
+  /**
+   * Get explorationStrategy
+   *
+   * @return explorationStrategy
+   */
+  @ApiModelProperty(value = "")
+  public SiteSetExplorationStrategy getExplorationStrategy() {
+    return explorationStrategy;
+  }
+
+  public void setExplorationStrategy(SiteSetExplorationStrategy explorationStrategy) {
+    this.explorationStrategy = explorationStrategy;
+  }
+
+  public AdgroupsGetListStruct prioritySiteSet(List<String> prioritySiteSet) {
+    this.prioritySiteSet = prioritySiteSet;
+    return this;
+  }
+
+  public AdgroupsGetListStruct addPrioritySiteSetItem(String prioritySiteSetItem) {
+    if (this.prioritySiteSet == null) {
+      this.prioritySiteSet = new ArrayList<String>();
+    }
+    this.prioritySiteSet.add(prioritySiteSetItem);
+    return this;
+  }
+
+  /**
+   * Get prioritySiteSet
+   *
+   * @return prioritySiteSet
+   */
+  @ApiModelProperty(value = "")
+  public List<String> getPrioritySiteSet() {
+    return prioritySiteSet;
+  }
+
+  public void setPrioritySiteSet(List<String> prioritySiteSet) {
+    this.prioritySiteSet = prioritySiteSet;
   }
 
   public AdgroupsGetListStruct optimizationGoal(OptimizationGoal optimizationGoal) {
@@ -1694,6 +1746,8 @@ public class AdgroupsGetListStruct {
         && Objects.equals(this.adgroupName, adgroupsGetListStruct.adgroupName)
         && Objects.equals(this.siteSet, adgroupsGetListStruct.siteSet)
         && Objects.equals(this.automaticSiteEnabled, adgroupsGetListStruct.automaticSiteEnabled)
+        && Objects.equals(this.explorationStrategy, adgroupsGetListStruct.explorationStrategy)
+        && Objects.equals(this.prioritySiteSet, adgroupsGetListStruct.prioritySiteSet)
         && Objects.equals(this.optimizationGoal, adgroupsGetListStruct.optimizationGoal)
         && Objects.equals(this.billingEvent, adgroupsGetListStruct.billingEvent)
         && Objects.equals(this.bidAmount, adgroupsGetListStruct.bidAmount)
@@ -1788,6 +1842,8 @@ public class AdgroupsGetListStruct {
         adgroupName,
         siteSet,
         automaticSiteEnabled,
+        explorationStrategy,
+        prioritySiteSet,
         optimizationGoal,
         billingEvent,
         bidAmount,

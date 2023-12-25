@@ -61,8 +61,10 @@ public class UserPropertiesApi {
   public com.squareup.okhttp.Call userPropertiesAddCall(
       UserPropertiesAddRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
-      final ProgressRequestBody.ProgressRequestListener progressRequestListener)
+      final ProgressRequestBody.ProgressRequestListener progressRequestListener,
+      String... headerPair)
       throws ApiException {
+
     Object localVarPostBody = data;
 
     // create path and map variables
@@ -82,6 +84,15 @@ public class UserPropertiesApi {
     final String[] localVarContentTypes = {"application/json", "application/xml"};
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
     localVarHeaderParams.put("Content-Type", localVarContentType);
+
+    if (headerPair != null && headerPair.length > 0) {
+      if (headerPair.length % 2 != 0) {
+        throw new UnsupportedOperationException("Parameter headerPair must be paired");
+      }
+      for (int i = 0; i < headerPair.length / 2; i++) {
+        localVarHeaderParams.put(headerPair[i], headerPair[i * 2 + 1]);
+      }
+    }
 
     if (progressListener != null) {
       apiClient
@@ -118,7 +129,8 @@ public class UserPropertiesApi {
   private com.squareup.okhttp.Call userPropertiesAddValidateBeforeCall(
       UserPropertiesAddRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
-      final ProgressRequestBody.ProgressRequestListener progressRequestListener)
+      final ProgressRequestBody.ProgressRequestListener progressRequestListener,
+      String... headerPair)
       throws ApiException {
 
     // verify the required parameter 'data' is set
@@ -128,7 +140,7 @@ public class UserPropertiesApi {
     }
 
     com.squareup.okhttp.Call call =
-        userPropertiesAddCall(data, progressListener, progressRequestListener);
+        userPropertiesAddCall(data, progressListener, progressRequestListener, headerPair);
     return call;
   }
 
@@ -140,9 +152,9 @@ public class UserPropertiesApi {
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
-  public UserPropertiesAddResponse userPropertiesAdd(UserPropertiesAddRequest data)
-      throws ApiException {
-    ApiResponse<UserPropertiesAddResponse> resp = userPropertiesAddWithHttpInfo(data);
+  public UserPropertiesAddResponse userPropertiesAdd(
+      UserPropertiesAddRequest data, String... headerPair) throws ApiException {
+    ApiResponse<UserPropertiesAddResponse> resp = userPropertiesAddWithHttpInfo(data, headerPair);
     return resp.getData();
   }
 
@@ -155,8 +167,9 @@ public class UserPropertiesApi {
    *     response body
    */
   public ApiResponse<UserPropertiesAddResponse> userPropertiesAddWithHttpInfo(
-      UserPropertiesAddRequest data) throws ApiException {
-    com.squareup.okhttp.Call call = userPropertiesAddValidateBeforeCall(data, null, null);
+      UserPropertiesAddRequest data, String... headerPair) throws ApiException {
+    com.squareup.okhttp.Call call =
+        userPropertiesAddValidateBeforeCall(data, null, null, headerPair);
     Type localVarReturnType = new TypeToken<UserPropertiesAddResponse>() {}.getType();
     return apiClient.execute(call, localVarReturnType);
   }
@@ -170,7 +183,9 @@ public class UserPropertiesApi {
    * @throws ApiException If fail to process the API call, e.g. serializing the request body object
    */
   public com.squareup.okhttp.Call userPropertiesAddAsync(
-      UserPropertiesAddRequest data, final ApiCallback<UserPropertiesAddResponse> callback)
+      UserPropertiesAddRequest data,
+      final ApiCallback<UserPropertiesAddResponse> callback,
+      String... headerPair)
       throws ApiException {
 
     ProgressResponseBody.ProgressListener progressListener = null;
@@ -195,7 +210,8 @@ public class UserPropertiesApi {
     }
 
     com.squareup.okhttp.Call call =
-        userPropertiesAddValidateBeforeCall(data, progressListener, progressRequestListener);
+        userPropertiesAddValidateBeforeCall(
+            data, progressListener, progressRequestListener, headerPair);
     Type localVarReturnType = new TypeToken<UserPropertiesAddResponse>() {}.getType();
     apiClient.executeAsync(call, localVarReturnType, callback);
     return call;

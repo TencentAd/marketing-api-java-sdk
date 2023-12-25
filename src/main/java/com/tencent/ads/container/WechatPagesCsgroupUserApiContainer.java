@@ -38,10 +38,10 @@ public class WechatPagesCsgroupUserApiContainer extends ApiContainer {
    *     response body
    */
   public WechatPagesCsgroupUserGetResponseData wechatPagesCsgroupUserGet(
-      Long accountId, String corpId, Long departmentId, List<String> fields)
+      Long accountId, String corpId, Long departmentId, List<String> fields, String... headerPair)
       throws ApiException, TencentAdsResponseException {
     WechatPagesCsgroupUserGetResponse resp =
-        api.wechatPagesCsgroupUserGet(accountId, corpId, departmentId, fields);
+        api.wechatPagesCsgroupUserGet(accountId, corpId, departmentId, fields, headerPair);
     handleResponse(gson.toJson(resp));
     return resp.getData();
   }

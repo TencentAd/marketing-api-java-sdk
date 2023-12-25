@@ -37,9 +37,10 @@ public class TargetingsShareApiContainer extends ApiContainer {
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
-  public TargetingsShareAddResponseData targetingsShareAdd(TargetingsShareAddRequest data)
+  public TargetingsShareAddResponseData targetingsShareAdd(
+      TargetingsShareAddRequest data, String... headerPair)
       throws ApiException, TencentAdsResponseException {
-    TargetingsShareAddResponse resp = api.targetingsShareAdd(data);
+    TargetingsShareAddResponse resp = api.targetingsShareAdd(data, headerPair);
     handleResponse(gson.toJson(resp));
     return resp.getData();
   }
@@ -57,10 +58,15 @@ public class TargetingsShareApiContainer extends ApiContainer {
    *     response body
    */
   public TargetingsShareGetResponseData targetingsShareGet(
-      Long accountId, Long targetingId, Long page, Long pageSize, List<String> fields)
+      Long accountId,
+      Long targetingId,
+      Long page,
+      Long pageSize,
+      List<String> fields,
+      String... headerPair)
       throws ApiException, TencentAdsResponseException {
     TargetingsShareGetResponse resp =
-        api.targetingsShareGet(accountId, targetingId, page, pageSize, fields);
+        api.targetingsShareGet(accountId, targetingId, page, pageSize, fields, headerPair);
     handleResponse(gson.toJson(resp));
     return resp.getData();
   }

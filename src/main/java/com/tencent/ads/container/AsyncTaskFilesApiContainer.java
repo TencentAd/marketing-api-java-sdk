@@ -37,9 +37,10 @@ public class AsyncTaskFilesApiContainer extends ApiContainer {
    *     response body
    */
   @NeedDiffHost
-  public String asyncTaskFilesGet(Long accountId, Long taskId, Long fileId, List<String> fields)
+  public String asyncTaskFilesGet(
+      Long accountId, Long taskId, Long fileId, List<String> fields, String... headerPair)
       throws ApiException, TencentAdsResponseException {
-    String resp = api.asyncTaskFilesGet(accountId, taskId, fileId, fields);
+    String resp = api.asyncTaskFilesGet(accountId, taskId, fileId, fields, headerPair);
 
     return resp;
   }

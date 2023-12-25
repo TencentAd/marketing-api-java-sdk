@@ -73,8 +73,10 @@ public class RealtimeCostApi {
       Long pageSize,
       List<String> fields,
       final ProgressResponseBody.ProgressListener progressListener,
-      final ProgressRequestBody.ProgressRequestListener progressRequestListener)
+      final ProgressRequestBody.ProgressRequestListener progressRequestListener,
+      String... headerPair)
       throws ApiException {
+
     Object localVarPostBody = null;
 
     // create path and map variables
@@ -106,6 +108,15 @@ public class RealtimeCostApi {
     final String[] localVarContentTypes = {"text/plain"};
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
     localVarHeaderParams.put("Content-Type", localVarContentType);
+
+    if (headerPair != null && headerPair.length > 0) {
+      if (headerPair.length % 2 != 0) {
+        throw new UnsupportedOperationException("Parameter headerPair must be paired");
+      }
+      for (int i = 0; i < headerPair.length / 2; i++) {
+        localVarHeaderParams.put(headerPair[i], headerPair[i * 2 + 1]);
+      }
+    }
 
     if (progressListener != null) {
       apiClient
@@ -148,7 +159,8 @@ public class RealtimeCostApi {
       Long pageSize,
       List<String> fields,
       final ProgressResponseBody.ProgressListener progressListener,
-      final ProgressRequestBody.ProgressRequestListener progressRequestListener)
+      final ProgressRequestBody.ProgressRequestListener progressRequestListener,
+      String... headerPair)
       throws ApiException {
 
     // verify the required parameter 'accountId' is set
@@ -179,7 +191,8 @@ public class RealtimeCostApi {
             pageSize,
             fields,
             progressListener,
-            progressRequestListener);
+            progressRequestListener,
+            headerPair);
     return call;
   }
 
@@ -204,10 +217,12 @@ public class RealtimeCostApi {
       List<FilteringStruct> filtering,
       Long page,
       Long pageSize,
-      List<String> fields)
+      List<String> fields,
+      String... headerPair)
       throws ApiException {
     ApiResponse<RealtimeCostGetResponse> resp =
-        realtimeCostGetWithHttpInfo(accountId, level, date, filtering, page, pageSize, fields);
+        realtimeCostGetWithHttpInfo(
+            accountId, level, date, filtering, page, pageSize, fields, headerPair);
     return resp.getData();
   }
 
@@ -232,11 +247,12 @@ public class RealtimeCostApi {
       List<FilteringStruct> filtering,
       Long page,
       Long pageSize,
-      List<String> fields)
+      List<String> fields,
+      String... headerPair)
       throws ApiException {
     com.squareup.okhttp.Call call =
         realtimeCostGetValidateBeforeCall(
-            accountId, level, date, filtering, page, pageSize, fields, null, null);
+            accountId, level, date, filtering, page, pageSize, fields, null, null, headerPair);
     Type localVarReturnType = new TypeToken<RealtimeCostGetResponse>() {}.getType();
     return apiClient.execute(call, localVarReturnType);
   }
@@ -263,7 +279,8 @@ public class RealtimeCostApi {
       Long page,
       Long pageSize,
       List<String> fields,
-      final ApiCallback<RealtimeCostGetResponse> callback)
+      final ApiCallback<RealtimeCostGetResponse> callback,
+      String... headerPair)
       throws ApiException {
 
     ProgressResponseBody.ProgressListener progressListener = null;
@@ -297,7 +314,8 @@ public class RealtimeCostApi {
             pageSize,
             fields,
             progressListener,
-            progressRequestListener);
+            progressRequestListener,
+            headerPair);
     Type localVarReturnType = new TypeToken<RealtimeCostGetResponse>() {}.getType();
     apiClient.executeAsync(call, localVarReturnType, callback);
     return call;

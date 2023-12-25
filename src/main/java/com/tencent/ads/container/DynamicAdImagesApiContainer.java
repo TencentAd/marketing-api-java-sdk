@@ -38,9 +38,10 @@ public class DynamicAdImagesApiContainer extends ApiContainer {
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
-  public DynamicAdImagesAddResponseData dynamicAdImagesAdd(DynamicAdImagesAddRequest data)
+  public DynamicAdImagesAddResponseData dynamicAdImagesAdd(
+      DynamicAdImagesAddRequest data, String... headerPair)
       throws ApiException, TencentAdsResponseException {
-    DynamicAdImagesAddResponse resp = api.dynamicAdImagesAdd(data);
+    DynamicAdImagesAddResponse resp = api.dynamicAdImagesAdd(data, headerPair);
     handleResponse(gson.toJson(resp));
     return resp.getData();
   }
@@ -62,10 +63,11 @@ public class DynamicAdImagesApiContainer extends ApiContainer {
       List<FilteringStruct> filtering,
       Long page,
       Long pageSize,
-      List<String> fields)
+      List<String> fields,
+      String... headerPair)
       throws ApiException, TencentAdsResponseException {
     DynamicAdImagesGetResponse resp =
-        api.dynamicAdImagesGet(accountId, filtering, page, pageSize, fields);
+        api.dynamicAdImagesGet(accountId, filtering, page, pageSize, fields, headerPair);
     handleResponse(gson.toJson(resp));
     return resp.getData();
   }

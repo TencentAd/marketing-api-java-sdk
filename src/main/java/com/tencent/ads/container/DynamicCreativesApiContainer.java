@@ -41,9 +41,10 @@ public class DynamicCreativesApiContainer extends ApiContainer {
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
-  public DynamicCreativesAddResponseData dynamicCreativesAdd(DynamicCreativesAddRequest data)
+  public DynamicCreativesAddResponseData dynamicCreativesAdd(
+      DynamicCreativesAddRequest data, String... headerPair)
       throws ApiException, TencentAdsResponseException {
-    DynamicCreativesAddResponse resp = api.dynamicCreativesAdd(data);
+    DynamicCreativesAddResponse resp = api.dynamicCreativesAdd(data, headerPair);
     handleResponse(gson.toJson(resp));
     return resp.getData();
   }
@@ -65,10 +66,11 @@ public class DynamicCreativesApiContainer extends ApiContainer {
       List<FilteringStruct> filtering,
       Long page,
       Long pageSize,
-      List<String> fields)
+      List<String> fields,
+      String... headerPair)
       throws ApiException, TencentAdsResponseException {
     DynamicCreativesGetResponse resp =
-        api.dynamicCreativesGet(accountId, filtering, page, pageSize, fields);
+        api.dynamicCreativesGet(accountId, filtering, page, pageSize, fields, headerPair);
     handleResponse(gson.toJson(resp));
     return resp.getData();
   }
@@ -82,8 +84,9 @@ public class DynamicCreativesApiContainer extends ApiContainer {
    *     response body
    */
   public DynamicCreativesUpdateResponseData dynamicCreativesUpdate(
-      DynamicCreativesUpdateRequest data) throws ApiException, TencentAdsResponseException {
-    DynamicCreativesUpdateResponse resp = api.dynamicCreativesUpdate(data);
+      DynamicCreativesUpdateRequest data, String... headerPair)
+      throws ApiException, TencentAdsResponseException {
+    DynamicCreativesUpdateResponse resp = api.dynamicCreativesUpdate(data, headerPair);
     handleResponse(gson.toJson(resp));
     return resp.getData();
   }

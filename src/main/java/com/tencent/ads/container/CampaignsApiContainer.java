@@ -59,9 +59,9 @@ public class CampaignsApiContainer extends ApiContainer {
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
-  public CampaignsAddResponseData campaignsAdd(CampaignsAddRequest data)
+  public CampaignsAddResponseData campaignsAdd(CampaignsAddRequest data, String... headerPair)
       throws ApiException, TencentAdsResponseException {
-    CampaignsAddResponse resp = api.campaignsAdd(data);
+    CampaignsAddResponse resp = api.campaignsAdd(data, headerPair);
     handleResponse(gson.toJson(resp));
     return resp.getData();
   }
@@ -75,8 +75,9 @@ public class CampaignsApiContainer extends ApiContainer {
    *     response body
    */
   public CampaignsAddNegativewordResponseData campaignsAddNegativeword(
-      CampaignsAddNegativewordRequest data) throws ApiException, TencentAdsResponseException {
-    CampaignsAddNegativewordResponse resp = api.campaignsAddNegativeword(data);
+      CampaignsAddNegativewordRequest data, String... headerPair)
+      throws ApiException, TencentAdsResponseException {
+    CampaignsAddNegativewordResponse resp = api.campaignsAddNegativeword(data, headerPair);
     handleResponse(gson.toJson(resp));
     return resp.getData();
   }
@@ -89,9 +90,10 @@ public class CampaignsApiContainer extends ApiContainer {
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
-  public CampaignsDeleteResponseData campaignsDelete(CampaignsDeleteRequest data)
+  public CampaignsDeleteResponseData campaignsDelete(
+      CampaignsDeleteRequest data, String... headerPair)
       throws ApiException, TencentAdsResponseException {
-    CampaignsDeleteResponse resp = api.campaignsDelete(data);
+    CampaignsDeleteResponse resp = api.campaignsDelete(data, headerPair);
     handleResponse(gson.toJson(resp));
     return resp.getData();
   }
@@ -117,7 +119,8 @@ public class CampaignsApiContainer extends ApiContainer {
       Long pageSize,
       Boolean isDeleted,
       Boolean weixinOfficialAccountsUpgradeEnabled,
-      List<String> fields)
+      List<String> fields,
+      String... headerPair)
       throws ApiException, TencentAdsResponseException {
     CampaignsGetResponse resp =
         api.campaignsGet(
@@ -127,7 +130,8 @@ public class CampaignsApiContainer extends ApiContainer {
             pageSize,
             isDeleted,
             weixinOfficialAccountsUpgradeEnabled,
-            fields);
+            fields,
+            headerPair);
     handleResponse(gson.toJson(resp));
     return resp.getData();
   }
@@ -141,8 +145,9 @@ public class CampaignsApiContainer extends ApiContainer {
    *     response body
    */
   public CampaignsGetNegativewordResponseData campaignsGetNegativeword(
-      CampaignsGetNegativewordRequest data) throws ApiException, TencentAdsResponseException {
-    CampaignsGetNegativewordResponse resp = api.campaignsGetNegativeword(data);
+      CampaignsGetNegativewordRequest data, String... headerPair)
+      throws ApiException, TencentAdsResponseException {
+    CampaignsGetNegativewordResponse resp = api.campaignsGetNegativeword(data, headerPair);
     handleResponse(gson.toJson(resp));
     return resp.getData();
   }
@@ -155,9 +160,10 @@ public class CampaignsApiContainer extends ApiContainer {
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
-  public CampaignsUpdateResponseData campaignsUpdate(CampaignsUpdateRequest data)
+  public CampaignsUpdateResponseData campaignsUpdate(
+      CampaignsUpdateRequest data, String... headerPair)
       throws ApiException, TencentAdsResponseException {
-    CampaignsUpdateResponse resp = api.campaignsUpdate(data);
+    CampaignsUpdateResponse resp = api.campaignsUpdate(data, headerPair);
     handleResponse(gson.toJson(resp));
     return resp.getData();
   }
@@ -171,9 +177,10 @@ public class CampaignsApiContainer extends ApiContainer {
    *     response body
    */
   public CampaignsUpdateConfiguredStatusResponseData campaignsUpdateConfiguredStatus(
-      CampaignsUpdateConfiguredStatusRequest data)
+      CampaignsUpdateConfiguredStatusRequest data, String... headerPair)
       throws ApiException, TencentAdsResponseException {
-    CampaignsUpdateConfiguredStatusResponse resp = api.campaignsUpdateConfiguredStatus(data);
+    CampaignsUpdateConfiguredStatusResponse resp =
+        api.campaignsUpdateConfiguredStatus(data, headerPair);
     handleResponse(gson.toJson(resp));
     return resp.getData();
   }
@@ -187,8 +194,9 @@ public class CampaignsApiContainer extends ApiContainer {
    *     response body
    */
   public CampaignsUpdateDailyBudgetResponseData campaignsUpdateDailyBudget(
-      CampaignsUpdateDailyBudgetRequest data) throws ApiException, TencentAdsResponseException {
-    CampaignsUpdateDailyBudgetResponse resp = api.campaignsUpdateDailyBudget(data);
+      CampaignsUpdateDailyBudgetRequest data, String... headerPair)
+      throws ApiException, TencentAdsResponseException {
+    CampaignsUpdateDailyBudgetResponse resp = api.campaignsUpdateDailyBudget(data, headerPair);
     handleResponse(gson.toJson(resp));
     return resp.getData();
   }
@@ -202,8 +210,9 @@ public class CampaignsApiContainer extends ApiContainer {
    *     response body
    */
   public CampaignsUpdateNegativewordResponseData campaignsUpdateNegativeword(
-      CampaignsUpdateNegativewordRequest data) throws ApiException, TencentAdsResponseException {
-    CampaignsUpdateNegativewordResponse resp = api.campaignsUpdateNegativeword(data);
+      CampaignsUpdateNegativewordRequest data, String... headerPair)
+      throws ApiException, TencentAdsResponseException {
+    CampaignsUpdateNegativewordResponse resp = api.campaignsUpdateNegativeword(data, headerPair);
     handleResponse(gson.toJson(resp));
     return resp.getData();
   }

@@ -27,6 +27,9 @@ public class AdcreativeTemplatePreviewsGetRequest {
   @SerializedName("ad_id_list")
   private List<Long> adIdList = null;
 
+  @SerializedName("dynamic_creative_id")
+  private Long dynamicCreativeId = null;
+
   @SerializedName("adgroup")
   private Adgroup adgroup = null;
 
@@ -80,6 +83,25 @@ public class AdcreativeTemplatePreviewsGetRequest {
 
   public void setAdIdList(List<Long> adIdList) {
     this.adIdList = adIdList;
+  }
+
+  public AdcreativeTemplatePreviewsGetRequest dynamicCreativeId(Long dynamicCreativeId) {
+    this.dynamicCreativeId = dynamicCreativeId;
+    return this;
+  }
+
+  /**
+   * Get dynamicCreativeId
+   *
+   * @return dynamicCreativeId
+   */
+  @ApiModelProperty(value = "")
+  public Long getDynamicCreativeId() {
+    return dynamicCreativeId;
+  }
+
+  public void setDynamicCreativeId(Long dynamicCreativeId) {
+    this.dynamicCreativeId = dynamicCreativeId;
   }
 
   public AdcreativeTemplatePreviewsGetRequest adgroup(Adgroup adgroup) {
@@ -159,6 +181,8 @@ public class AdcreativeTemplatePreviewsGetRequest {
         (AdcreativeTemplatePreviewsGetRequest) o;
     return Objects.equals(this.adgroupId, adcreativeTemplatePreviewsGetRequest.adgroupId)
         && Objects.equals(this.adIdList, adcreativeTemplatePreviewsGetRequest.adIdList)
+        && Objects.equals(
+            this.dynamicCreativeId, adcreativeTemplatePreviewsGetRequest.dynamicCreativeId)
         && Objects.equals(this.adgroup, adcreativeTemplatePreviewsGetRequest.adgroup)
         && Objects.equals(this.adList, adcreativeTemplatePreviewsGetRequest.adList)
         && Objects.equals(this.accountId, adcreativeTemplatePreviewsGetRequest.accountId);
@@ -166,7 +190,7 @@ public class AdcreativeTemplatePreviewsGetRequest {
 
   @Override
   public int hashCode() {
-    return Objects.hash(adgroupId, adIdList, adgroup, adList, accountId);
+    return Objects.hash(adgroupId, adIdList, dynamicCreativeId, adgroup, adList, accountId);
   }
 
   @Override

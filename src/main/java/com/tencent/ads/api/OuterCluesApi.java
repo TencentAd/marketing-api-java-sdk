@@ -21,6 +21,8 @@ import com.tencent.ads.Configuration;
 import com.tencent.ads.Pair;
 import com.tencent.ads.ProgressRequestBody;
 import com.tencent.ads.ProgressResponseBody;
+import com.tencent.ads.model.OuterCluesActionTypeReportRequest;
+import com.tencent.ads.model.OuterCluesActionTypeReportResponse;
 import com.tencent.ads.model.OuterCluesAddRequest;
 import com.tencent.ads.model.OuterCluesAddResponse;
 import com.tencent.ads.model.OuterCluesUpdateRequest;
@@ -52,6 +54,174 @@ public class OuterCluesApi {
   }
 
   /**
+   * Build call for outerCluesActionTypeReport
+   *
+   * @param data (required)
+   * @param progressListener Progress listener
+   * @param progressRequestListener Progress request listener
+   * @return Call to execute
+   * @throws ApiException If fail to serialize the request body object
+   */
+  public com.squareup.okhttp.Call outerCluesActionTypeReportCall(
+      OuterCluesActionTypeReportRequest data,
+      final ProgressResponseBody.ProgressListener progressListener,
+      final ProgressRequestBody.ProgressRequestListener progressRequestListener,
+      String... headerPair)
+      throws ApiException {
+
+    Object localVarPostBody = data;
+
+    // create path and map variables
+    String localVarPath = "/outer_clues/action_type_report";
+
+    List<Pair> localVarQueryParams = new ArrayList<Pair>();
+    List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+
+    Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+
+    Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+    final String[] localVarAccepts = {"application/json"};
+    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+    if (localVarAccept != null) localVarHeaderParams.put("Accept", localVarAccept);
+
+    final String[] localVarContentTypes = {"application/json", "application/xml"};
+    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+    localVarHeaderParams.put("Content-Type", localVarContentType);
+
+    if (headerPair != null && headerPair.length > 0) {
+      if (headerPair.length % 2 != 0) {
+        throw new UnsupportedOperationException("Parameter headerPair must be paired");
+      }
+      for (int i = 0; i < headerPair.length / 2; i++) {
+        localVarHeaderParams.put(headerPair[i], headerPair[i * 2 + 1]);
+      }
+    }
+
+    if (progressListener != null) {
+      apiClient
+          .getHttpClient()
+          .networkInterceptors()
+          .add(
+              new com.squareup.okhttp.Interceptor() {
+                @Override
+                public com.squareup.okhttp.Response intercept(
+                    com.squareup.okhttp.Interceptor.Chain chain) throws IOException {
+                  com.squareup.okhttp.Response originalResponse = chain.proceed(chain.request());
+                  return originalResponse
+                      .newBuilder()
+                      .body(new ProgressResponseBody(originalResponse.body(), progressListener))
+                      .build();
+                }
+              });
+    }
+
+    String[] localVarAuthNames = new String[] {"accessToken", "nonce", "timestamp"};
+    return apiClient.buildCall(
+        localVarPath,
+        "POST",
+        localVarQueryParams,
+        localVarCollectionQueryParams,
+        localVarPostBody,
+        localVarHeaderParams,
+        localVarFormParams,
+        localVarAuthNames,
+        progressRequestListener);
+  }
+
+  @SuppressWarnings("rawtypes")
+  private com.squareup.okhttp.Call outerCluesActionTypeReportValidateBeforeCall(
+      OuterCluesActionTypeReportRequest data,
+      final ProgressResponseBody.ProgressListener progressListener,
+      final ProgressRequestBody.ProgressRequestListener progressRequestListener,
+      String... headerPair)
+      throws ApiException {
+
+    // verify the required parameter 'data' is set
+    if (data == null) {
+      throw new ApiException(
+          "Missing the required parameter 'data' when calling outerCluesActionTypeReport(Async)");
+    }
+
+    com.squareup.okhttp.Call call =
+        outerCluesActionTypeReportCall(data, progressListener, progressRequestListener, headerPair);
+    return call;
+  }
+
+  /**
+   * 线索上报DMP平台
+   *
+   * @param data (required)
+   * @return OuterCluesActionTypeReportResponse
+   * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
+   *     response body
+   */
+  public OuterCluesActionTypeReportResponse outerCluesActionTypeReport(
+      OuterCluesActionTypeReportRequest data, String... headerPair) throws ApiException {
+    ApiResponse<OuterCluesActionTypeReportResponse> resp =
+        outerCluesActionTypeReportWithHttpInfo(data, headerPair);
+    return resp.getData();
+  }
+
+  /**
+   * 线索上报DMP平台
+   *
+   * @param data (required)
+   * @return ApiResponse&lt;OuterCluesActionTypeReportResponse&gt;
+   * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
+   *     response body
+   */
+  public ApiResponse<OuterCluesActionTypeReportResponse> outerCluesActionTypeReportWithHttpInfo(
+      OuterCluesActionTypeReportRequest data, String... headerPair) throws ApiException {
+    com.squareup.okhttp.Call call =
+        outerCluesActionTypeReportValidateBeforeCall(data, null, null, headerPair);
+    Type localVarReturnType = new TypeToken<OuterCluesActionTypeReportResponse>() {}.getType();
+    return apiClient.execute(call, localVarReturnType);
+  }
+
+  /**
+   * 线索上报DMP平台 (asynchronously)
+   *
+   * @param data (required)
+   * @param callback The callback to be executed when the API call finishes
+   * @return The request call
+   * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+   */
+  public com.squareup.okhttp.Call outerCluesActionTypeReportAsync(
+      OuterCluesActionTypeReportRequest data,
+      final ApiCallback<OuterCluesActionTypeReportResponse> callback,
+      String... headerPair)
+      throws ApiException {
+
+    ProgressResponseBody.ProgressListener progressListener = null;
+    ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
+
+    if (callback != null) {
+      progressListener =
+          new ProgressResponseBody.ProgressListener() {
+            @Override
+            public void update(long bytesRead, long contentLength, boolean done) {
+              callback.onDownloadProgress(bytesRead, contentLength, done);
+            }
+          };
+
+      progressRequestListener =
+          new ProgressRequestBody.ProgressRequestListener() {
+            @Override
+            public void onRequestProgress(long bytesWritten, long contentLength, boolean done) {
+              callback.onUploadProgress(bytesWritten, contentLength, done);
+            }
+          };
+    }
+
+    com.squareup.okhttp.Call call =
+        outerCluesActionTypeReportValidateBeforeCall(
+            data, progressListener, progressRequestListener, headerPair);
+    Type localVarReturnType = new TypeToken<OuterCluesActionTypeReportResponse>() {}.getType();
+    apiClient.executeAsync(call, localVarReturnType, callback);
+    return call;
+  }
+  /**
    * Build call for outerCluesAdd
    *
    * @param data (required)
@@ -63,8 +233,10 @@ public class OuterCluesApi {
   public com.squareup.okhttp.Call outerCluesAddCall(
       OuterCluesAddRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
-      final ProgressRequestBody.ProgressRequestListener progressRequestListener)
+      final ProgressRequestBody.ProgressRequestListener progressRequestListener,
+      String... headerPair)
       throws ApiException {
+
     Object localVarPostBody = data;
 
     // create path and map variables
@@ -84,6 +256,15 @@ public class OuterCluesApi {
     final String[] localVarContentTypes = {"application/json", "application/xml"};
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
     localVarHeaderParams.put("Content-Type", localVarContentType);
+
+    if (headerPair != null && headerPair.length > 0) {
+      if (headerPair.length % 2 != 0) {
+        throw new UnsupportedOperationException("Parameter headerPair must be paired");
+      }
+      for (int i = 0; i < headerPair.length / 2; i++) {
+        localVarHeaderParams.put(headerPair[i], headerPair[i * 2 + 1]);
+      }
+    }
 
     if (progressListener != null) {
       apiClient
@@ -120,7 +301,8 @@ public class OuterCluesApi {
   private com.squareup.okhttp.Call outerCluesAddValidateBeforeCall(
       OuterCluesAddRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
-      final ProgressRequestBody.ProgressRequestListener progressRequestListener)
+      final ProgressRequestBody.ProgressRequestListener progressRequestListener,
+      String... headerPair)
       throws ApiException {
 
     // verify the required parameter 'data' is set
@@ -130,7 +312,7 @@ public class OuterCluesApi {
     }
 
     com.squareup.okhttp.Call call =
-        outerCluesAddCall(data, progressListener, progressRequestListener);
+        outerCluesAddCall(data, progressListener, progressRequestListener, headerPair);
     return call;
   }
 
@@ -142,8 +324,9 @@ public class OuterCluesApi {
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
-  public OuterCluesAddResponse outerCluesAdd(OuterCluesAddRequest data) throws ApiException {
-    ApiResponse<OuterCluesAddResponse> resp = outerCluesAddWithHttpInfo(data);
+  public OuterCluesAddResponse outerCluesAdd(OuterCluesAddRequest data, String... headerPair)
+      throws ApiException {
+    ApiResponse<OuterCluesAddResponse> resp = outerCluesAddWithHttpInfo(data, headerPair);
     return resp.getData();
   }
 
@@ -155,9 +338,9 @@ public class OuterCluesApi {
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
-  public ApiResponse<OuterCluesAddResponse> outerCluesAddWithHttpInfo(OuterCluesAddRequest data)
-      throws ApiException {
-    com.squareup.okhttp.Call call = outerCluesAddValidateBeforeCall(data, null, null);
+  public ApiResponse<OuterCluesAddResponse> outerCluesAddWithHttpInfo(
+      OuterCluesAddRequest data, String... headerPair) throws ApiException {
+    com.squareup.okhttp.Call call = outerCluesAddValidateBeforeCall(data, null, null, headerPair);
     Type localVarReturnType = new TypeToken<OuterCluesAddResponse>() {}.getType();
     return apiClient.execute(call, localVarReturnType);
   }
@@ -171,7 +354,9 @@ public class OuterCluesApi {
    * @throws ApiException If fail to process the API call, e.g. serializing the request body object
    */
   public com.squareup.okhttp.Call outerCluesAddAsync(
-      OuterCluesAddRequest data, final ApiCallback<OuterCluesAddResponse> callback)
+      OuterCluesAddRequest data,
+      final ApiCallback<OuterCluesAddResponse> callback,
+      String... headerPair)
       throws ApiException {
 
     ProgressResponseBody.ProgressListener progressListener = null;
@@ -196,7 +381,8 @@ public class OuterCluesApi {
     }
 
     com.squareup.okhttp.Call call =
-        outerCluesAddValidateBeforeCall(data, progressListener, progressRequestListener);
+        outerCluesAddValidateBeforeCall(
+            data, progressListener, progressRequestListener, headerPair);
     Type localVarReturnType = new TypeToken<OuterCluesAddResponse>() {}.getType();
     apiClient.executeAsync(call, localVarReturnType, callback);
     return call;
@@ -213,8 +399,10 @@ public class OuterCluesApi {
   public com.squareup.okhttp.Call outerCluesUpdateCall(
       OuterCluesUpdateRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
-      final ProgressRequestBody.ProgressRequestListener progressRequestListener)
+      final ProgressRequestBody.ProgressRequestListener progressRequestListener,
+      String... headerPair)
       throws ApiException {
+
     Object localVarPostBody = data;
 
     // create path and map variables
@@ -234,6 +422,15 @@ public class OuterCluesApi {
     final String[] localVarContentTypes = {"application/json", "application/xml"};
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
     localVarHeaderParams.put("Content-Type", localVarContentType);
+
+    if (headerPair != null && headerPair.length > 0) {
+      if (headerPair.length % 2 != 0) {
+        throw new UnsupportedOperationException("Parameter headerPair must be paired");
+      }
+      for (int i = 0; i < headerPair.length / 2; i++) {
+        localVarHeaderParams.put(headerPair[i], headerPair[i * 2 + 1]);
+      }
+    }
 
     if (progressListener != null) {
       apiClient
@@ -270,7 +467,8 @@ public class OuterCluesApi {
   private com.squareup.okhttp.Call outerCluesUpdateValidateBeforeCall(
       OuterCluesUpdateRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
-      final ProgressRequestBody.ProgressRequestListener progressRequestListener)
+      final ProgressRequestBody.ProgressRequestListener progressRequestListener,
+      String... headerPair)
       throws ApiException {
 
     // verify the required parameter 'data' is set
@@ -280,7 +478,7 @@ public class OuterCluesApi {
     }
 
     com.squareup.okhttp.Call call =
-        outerCluesUpdateCall(data, progressListener, progressRequestListener);
+        outerCluesUpdateCall(data, progressListener, progressRequestListener, headerPair);
     return call;
   }
 
@@ -292,9 +490,9 @@ public class OuterCluesApi {
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
-  public OuterCluesUpdateResponse outerCluesUpdate(OuterCluesUpdateRequest data)
-      throws ApiException {
-    ApiResponse<OuterCluesUpdateResponse> resp = outerCluesUpdateWithHttpInfo(data);
+  public OuterCluesUpdateResponse outerCluesUpdate(
+      OuterCluesUpdateRequest data, String... headerPair) throws ApiException {
+    ApiResponse<OuterCluesUpdateResponse> resp = outerCluesUpdateWithHttpInfo(data, headerPair);
     return resp.getData();
   }
 
@@ -307,8 +505,9 @@ public class OuterCluesApi {
    *     response body
    */
   public ApiResponse<OuterCluesUpdateResponse> outerCluesUpdateWithHttpInfo(
-      OuterCluesUpdateRequest data) throws ApiException {
-    com.squareup.okhttp.Call call = outerCluesUpdateValidateBeforeCall(data, null, null);
+      OuterCluesUpdateRequest data, String... headerPair) throws ApiException {
+    com.squareup.okhttp.Call call =
+        outerCluesUpdateValidateBeforeCall(data, null, null, headerPair);
     Type localVarReturnType = new TypeToken<OuterCluesUpdateResponse>() {}.getType();
     return apiClient.execute(call, localVarReturnType);
   }
@@ -322,7 +521,9 @@ public class OuterCluesApi {
    * @throws ApiException If fail to process the API call, e.g. serializing the request body object
    */
   public com.squareup.okhttp.Call outerCluesUpdateAsync(
-      OuterCluesUpdateRequest data, final ApiCallback<OuterCluesUpdateResponse> callback)
+      OuterCluesUpdateRequest data,
+      final ApiCallback<OuterCluesUpdateResponse> callback,
+      String... headerPair)
       throws ApiException {
 
     ProgressResponseBody.ProgressListener progressListener = null;
@@ -347,7 +548,8 @@ public class OuterCluesApi {
     }
 
     com.squareup.okhttp.Call call =
-        outerCluesUpdateValidateBeforeCall(data, progressListener, progressRequestListener);
+        outerCluesUpdateValidateBeforeCall(
+            data, progressListener, progressRequestListener, headerPair);
     Type localVarReturnType = new TypeToken<OuterCluesUpdateResponse>() {}.getType();
     apiClient.executeAsync(call, localVarReturnType, callback);
     return call;

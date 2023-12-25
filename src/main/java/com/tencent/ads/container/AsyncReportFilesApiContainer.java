@@ -43,11 +43,12 @@ public class AsyncReportFilesApiContainer extends ApiContainer {
       Long taskId,
       Long fileId,
       Boolean weixinOfficialAccountsUpgradeEnabled,
-      List<String> fields)
+      List<String> fields,
+      String... headerPair)
       throws ApiException, TencentAdsResponseException {
     String resp =
         api.asyncReportFilesGet(
-            accountId, taskId, fileId, weixinOfficialAccountsUpgradeEnabled, fields);
+            accountId, taskId, fileId, weixinOfficialAccountsUpgradeEnabled, fields, headerPair);
 
     return resp;
   }

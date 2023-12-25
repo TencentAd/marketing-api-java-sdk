@@ -74,8 +74,10 @@ public class AdcreativeTemplateApi {
       String dynamicCreativeType,
       List<String> fields,
       final ProgressResponseBody.ProgressListener progressListener,
-      final ProgressRequestBody.ProgressRequestListener progressRequestListener)
+      final ProgressRequestBody.ProgressRequestListener progressRequestListener,
+      String... headerPair)
       throws ApiException {
+
     Object localVarPostBody = null;
 
     // create path and map variables
@@ -117,6 +119,15 @@ public class AdcreativeTemplateApi {
     final String[] localVarContentTypes = {"text/plain"};
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
     localVarHeaderParams.put("Content-Type", localVarContentType);
+
+    if (headerPair != null && headerPair.length > 0) {
+      if (headerPair.length % 2 != 0) {
+        throw new UnsupportedOperationException("Parameter headerPair must be paired");
+      }
+      for (int i = 0; i < headerPair.length / 2; i++) {
+        localVarHeaderParams.put(headerPair[i], headerPair[i * 2 + 1]);
+      }
+    }
 
     if (progressListener != null) {
       apiClient
@@ -160,7 +171,8 @@ public class AdcreativeTemplateApi {
       String dynamicCreativeType,
       List<String> fields,
       final ProgressResponseBody.ProgressListener progressListener,
-      final ProgressRequestBody.ProgressRequestListener progressRequestListener)
+      final ProgressRequestBody.ProgressRequestListener progressRequestListener,
+      String... headerPair)
       throws ApiException {
 
     // verify the required parameter 'accountId' is set
@@ -186,7 +198,8 @@ public class AdcreativeTemplateApi {
             dynamicCreativeType,
             fields,
             progressListener,
-            progressRequestListener);
+            progressRequestListener,
+            headerPair);
     return call;
   }
 
@@ -213,7 +226,8 @@ public class AdcreativeTemplateApi {
       Boolean isDynamicCreative,
       Long adcreativeTemplateId,
       String dynamicCreativeType,
-      List<String> fields)
+      List<String> fields,
+      String... headerPair)
       throws ApiException {
     ApiResponse<AdcreativeTemplateGetResponse> resp =
         adcreativeTemplateGetWithHttpInfo(
@@ -224,7 +238,8 @@ public class AdcreativeTemplateApi {
             isDynamicCreative,
             adcreativeTemplateId,
             dynamicCreativeType,
-            fields);
+            fields,
+            headerPair);
     return resp.getData();
   }
 
@@ -251,7 +266,8 @@ public class AdcreativeTemplateApi {
       Boolean isDynamicCreative,
       Long adcreativeTemplateId,
       String dynamicCreativeType,
-      List<String> fields)
+      List<String> fields,
+      String... headerPair)
       throws ApiException {
     com.squareup.okhttp.Call call =
         adcreativeTemplateGetValidateBeforeCall(
@@ -264,7 +280,8 @@ public class AdcreativeTemplateApi {
             dynamicCreativeType,
             fields,
             null,
-            null);
+            null,
+            headerPair);
     Type localVarReturnType = new TypeToken<AdcreativeTemplateGetResponse>() {}.getType();
     return apiClient.execute(call, localVarReturnType);
   }
@@ -293,7 +310,8 @@ public class AdcreativeTemplateApi {
       Long adcreativeTemplateId,
       String dynamicCreativeType,
       List<String> fields,
-      final ApiCallback<AdcreativeTemplateGetResponse> callback)
+      final ApiCallback<AdcreativeTemplateGetResponse> callback,
+      String... headerPair)
       throws ApiException {
 
     ProgressResponseBody.ProgressListener progressListener = null;
@@ -328,7 +346,8 @@ public class AdcreativeTemplateApi {
             dynamicCreativeType,
             fields,
             progressListener,
-            progressRequestListener);
+            progressRequestListener,
+            headerPair);
     Type localVarReturnType = new TypeToken<AdcreativeTemplateGetResponse>() {}.getType();
     apiClient.executeAsync(call, localVarReturnType, callback);
     return call;

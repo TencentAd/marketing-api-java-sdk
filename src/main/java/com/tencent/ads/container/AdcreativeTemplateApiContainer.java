@@ -49,7 +49,8 @@ public class AdcreativeTemplateApiContainer extends ApiContainer {
       Boolean isDynamicCreative,
       Long adcreativeTemplateId,
       String dynamicCreativeType,
-      List<String> fields)
+      List<String> fields,
+      String... headerPair)
       throws ApiException, TencentAdsResponseException {
     AdcreativeTemplateGetResponse resp =
         api.adcreativeTemplateGet(
@@ -60,7 +61,8 @@ public class AdcreativeTemplateApiContainer extends ApiContainer {
             isDynamicCreative,
             adcreativeTemplateId,
             dynamicCreativeType,
-            fields);
+            fields,
+            headerPair);
     handleResponse(gson.toJson(resp));
     return resp.getData();
   }

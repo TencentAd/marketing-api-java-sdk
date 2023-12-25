@@ -36,8 +36,10 @@ public class LocalStoresCategoriesApiContainer extends ApiContainer {
    *     response body
    */
   public LocalStoresCategoriesGetResponseData localStoresCategoriesGet(
-      Long verticalId, List<String> fields) throws ApiException, TencentAdsResponseException {
-    LocalStoresCategoriesGetResponse resp = api.localStoresCategoriesGet(verticalId, fields);
+      Long verticalId, List<String> fields, String... headerPair)
+      throws ApiException, TencentAdsResponseException {
+    LocalStoresCategoriesGetResponse resp =
+        api.localStoresCategoriesGet(verticalId, fields, headerPair);
     handleResponse(gson.toJson(resp));
     return resp.getData();
   }

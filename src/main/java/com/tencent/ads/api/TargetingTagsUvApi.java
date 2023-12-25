@@ -66,8 +66,10 @@ public class TargetingTagsUvApi {
       List<Long> categoryList,
       List<String> fields,
       final ProgressResponseBody.ProgressListener progressListener,
-      final ProgressRequestBody.ProgressRequestListener progressRequestListener)
+      final ProgressRequestBody.ProgressRequestListener progressRequestListener,
+      String... headerPair)
       throws ApiException {
+
     Object localVarPostBody = null;
 
     // create path and map variables
@@ -96,6 +98,15 @@ public class TargetingTagsUvApi {
     final String[] localVarContentTypes = {"text/plain"};
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
     localVarHeaderParams.put("Content-Type", localVarContentType);
+
+    if (headerPair != null && headerPair.length > 0) {
+      if (headerPair.length % 2 != 0) {
+        throw new UnsupportedOperationException("Parameter headerPair must be paired");
+      }
+      for (int i = 0; i < headerPair.length / 2; i++) {
+        localVarHeaderParams.put(headerPair[i], headerPair[i * 2 + 1]);
+      }
+    }
 
     if (progressListener != null) {
       apiClient
@@ -135,7 +146,8 @@ public class TargetingTagsUvApi {
       List<Long> categoryList,
       List<String> fields,
       final ProgressResponseBody.ProgressListener progressListener,
-      final ProgressRequestBody.ProgressRequestListener progressRequestListener)
+      final ProgressRequestBody.ProgressRequestListener progressRequestListener,
+      String... headerPair)
       throws ApiException {
 
     // verify the required parameter 'accountId' is set
@@ -157,7 +169,8 @@ public class TargetingTagsUvApi {
             categoryList,
             fields,
             progressListener,
-            progressRequestListener);
+            progressRequestListener,
+            headerPair);
     return call;
   }
 
@@ -173,10 +186,14 @@ public class TargetingTagsUvApi {
    *     response body
    */
   public TargetingTagsUvGetResponse targetingTagsUvGet(
-      Long accountId, String categoryType, List<Long> categoryList, List<String> fields)
+      Long accountId,
+      String categoryType,
+      List<Long> categoryList,
+      List<String> fields,
+      String... headerPair)
       throws ApiException {
     ApiResponse<TargetingTagsUvGetResponse> resp =
-        targetingTagsUvGetWithHttpInfo(accountId, categoryType, categoryList, fields);
+        targetingTagsUvGetWithHttpInfo(accountId, categoryType, categoryList, fields, headerPair);
     return resp.getData();
   }
 
@@ -192,11 +209,15 @@ public class TargetingTagsUvApi {
    *     response body
    */
   public ApiResponse<TargetingTagsUvGetResponse> targetingTagsUvGetWithHttpInfo(
-      Long accountId, String categoryType, List<Long> categoryList, List<String> fields)
+      Long accountId,
+      String categoryType,
+      List<Long> categoryList,
+      List<String> fields,
+      String... headerPair)
       throws ApiException {
     com.squareup.okhttp.Call call =
         targetingTagsUvGetValidateBeforeCall(
-            accountId, categoryType, categoryList, fields, null, null);
+            accountId, categoryType, categoryList, fields, null, null, headerPair);
     Type localVarReturnType = new TypeToken<TargetingTagsUvGetResponse>() {}.getType();
     return apiClient.execute(call, localVarReturnType);
   }
@@ -217,7 +238,8 @@ public class TargetingTagsUvApi {
       String categoryType,
       List<Long> categoryList,
       List<String> fields,
-      final ApiCallback<TargetingTagsUvGetResponse> callback)
+      final ApiCallback<TargetingTagsUvGetResponse> callback,
+      String... headerPair)
       throws ApiException {
 
     ProgressResponseBody.ProgressListener progressListener = null;
@@ -248,7 +270,8 @@ public class TargetingTagsUvApi {
             categoryList,
             fields,
             progressListener,
-            progressRequestListener);
+            progressRequestListener,
+            headerPair);
     Type localVarReturnType = new TypeToken<TargetingTagsUvGetResponse>() {}.getType();
     apiClient.executeAsync(call, localVarReturnType, callback);
     return call;

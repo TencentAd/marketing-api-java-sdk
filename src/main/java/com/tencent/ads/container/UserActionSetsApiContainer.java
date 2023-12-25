@@ -37,9 +37,10 @@ public class UserActionSetsApiContainer extends ApiContainer {
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
-  public UserActionSetsAddResponseData userActionSetsAdd(UserActionSetsAddRequest data)
+  public UserActionSetsAddResponseData userActionSetsAdd(
+      UserActionSetsAddRequest data, String... headerPair)
       throws ApiException, TencentAdsResponseException {
-    UserActionSetsAddResponse resp = api.userActionSetsAdd(data);
+    UserActionSetsAddResponse resp = api.userActionSetsAdd(data, headerPair);
     handleResponse(gson.toJson(resp));
     return resp.getData();
   }
@@ -67,7 +68,8 @@ public class UserActionSetsApiContainer extends ApiContainer {
       String wechatAppId,
       String name,
       Boolean includePermission,
-      List<String> fields)
+      List<String> fields,
+      String... headerPair)
       throws ApiException, TencentAdsResponseException {
     UserActionSetsGetResponse resp =
         api.userActionSetsGet(
@@ -78,7 +80,8 @@ public class UserActionSetsApiContainer extends ApiContainer {
             wechatAppId,
             name,
             includePermission,
-            fields);
+            fields,
+            headerPair);
     handleResponse(gson.toJson(resp));
     return resp.getData();
   }

@@ -12,7 +12,6 @@
 
 package com.tencent.ads.model;
 
-
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.stream.JsonReader;
@@ -68,7 +67,9 @@ public enum CanvasType {
 
   PC_EGG_PLOT("CANVAS_TYPE_PC_EGG_PLOT"),
 
-  EGGS_RANDOM_HALF("CANVAS_TYPE_EGGS_RANDOM_HALF");
+  EGGS_RANDOM_HALF("CANVAS_TYPE_EGGS_RANDOM_HALF"),
+
+  EGGS_RANDOM_PICK("CANVAS_TYPE_EGGS_RANDOM_PICK");
 
   private String value;
 

@@ -37,9 +37,10 @@ public class AdcreativePreviewsApiContainer extends ApiContainer {
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
-  public AdcreativePreviewsAddResponse adcreativePreviewsAdd(AdcreativePreviewsAddRequest data)
+  public AdcreativePreviewsAddResponse adcreativePreviewsAdd(
+      AdcreativePreviewsAddRequest data, String... headerPair)
       throws ApiException, TencentAdsResponseException {
-    AdcreativePreviewsAddResponse resp = api.adcreativePreviewsAdd(data);
+    AdcreativePreviewsAddResponse resp = api.adcreativePreviewsAdd(data, headerPair);
     handleResponse(gson.toJson(resp));
 
     return resp;
@@ -56,9 +57,10 @@ public class AdcreativePreviewsApiContainer extends ApiContainer {
    *     response body
    */
   public AdcreativePreviewsGetResponseData adcreativePreviewsGet(
-      Long accountId, List<FilteringStruct> filtering, List<String> fields)
+      Long accountId, List<FilteringStruct> filtering, List<String> fields, String... headerPair)
       throws ApiException, TencentAdsResponseException {
-    AdcreativePreviewsGetResponse resp = api.adcreativePreviewsGet(accountId, filtering, fields);
+    AdcreativePreviewsGetResponse resp =
+        api.adcreativePreviewsGet(accountId, filtering, fields, headerPair);
     handleResponse(gson.toJson(resp));
     return resp.getData();
   }

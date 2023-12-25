@@ -62,8 +62,10 @@ public class FundsApi {
       Long accountId,
       List<String> fields,
       final ProgressResponseBody.ProgressListener progressListener,
-      final ProgressRequestBody.ProgressRequestListener progressRequestListener)
+      final ProgressRequestBody.ProgressRequestListener progressRequestListener,
+      String... headerPair)
       throws ApiException {
+
     Object localVarPostBody = null;
 
     // create path and map variables
@@ -87,6 +89,15 @@ public class FundsApi {
     final String[] localVarContentTypes = {"text/plain"};
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
     localVarHeaderParams.put("Content-Type", localVarContentType);
+
+    if (headerPair != null && headerPair.length > 0) {
+      if (headerPair.length % 2 != 0) {
+        throw new UnsupportedOperationException("Parameter headerPair must be paired");
+      }
+      for (int i = 0; i < headerPair.length / 2; i++) {
+        localVarHeaderParams.put(headerPair[i], headerPair[i * 2 + 1]);
+      }
+    }
 
     if (progressListener != null) {
       apiClient
@@ -124,7 +135,8 @@ public class FundsApi {
       Long accountId,
       List<String> fields,
       final ProgressResponseBody.ProgressListener progressListener,
-      final ProgressRequestBody.ProgressRequestListener progressRequestListener)
+      final ProgressRequestBody.ProgressRequestListener progressRequestListener,
+      String... headerPair)
       throws ApiException {
 
     // verify the required parameter 'accountId' is set
@@ -134,7 +146,7 @@ public class FundsApi {
     }
 
     com.squareup.okhttp.Call call =
-        fundsGetCall(accountId, fields, progressListener, progressRequestListener);
+        fundsGetCall(accountId, fields, progressListener, progressRequestListener, headerPair);
     return call;
   }
 
@@ -147,8 +159,9 @@ public class FundsApi {
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
-  public FundsGetResponse fundsGet(Long accountId, List<String> fields) throws ApiException {
-    ApiResponse<FundsGetResponse> resp = fundsGetWithHttpInfo(accountId, fields);
+  public FundsGetResponse fundsGet(Long accountId, List<String> fields, String... headerPair)
+      throws ApiException {
+    ApiResponse<FundsGetResponse> resp = fundsGetWithHttpInfo(accountId, fields, headerPair);
     return resp.getData();
   }
 
@@ -161,9 +174,10 @@ public class FundsApi {
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
-  public ApiResponse<FundsGetResponse> fundsGetWithHttpInfo(Long accountId, List<String> fields)
-      throws ApiException {
-    com.squareup.okhttp.Call call = fundsGetValidateBeforeCall(accountId, fields, null, null);
+  public ApiResponse<FundsGetResponse> fundsGetWithHttpInfo(
+      Long accountId, List<String> fields, String... headerPair) throws ApiException {
+    com.squareup.okhttp.Call call =
+        fundsGetValidateBeforeCall(accountId, fields, null, null, headerPair);
     Type localVarReturnType = new TypeToken<FundsGetResponse>() {}.getType();
     return apiClient.execute(call, localVarReturnType);
   }
@@ -178,7 +192,10 @@ public class FundsApi {
    * @throws ApiException If fail to process the API call, e.g. serializing the request body object
    */
   public com.squareup.okhttp.Call fundsGetAsync(
-      Long accountId, List<String> fields, final ApiCallback<FundsGetResponse> callback)
+      Long accountId,
+      List<String> fields,
+      final ApiCallback<FundsGetResponse> callback,
+      String... headerPair)
       throws ApiException {
 
     ProgressResponseBody.ProgressListener progressListener = null;
@@ -203,7 +220,8 @@ public class FundsApi {
     }
 
     com.squareup.okhttp.Call call =
-        fundsGetValidateBeforeCall(accountId, fields, progressListener, progressRequestListener);
+        fundsGetValidateBeforeCall(
+            accountId, fields, progressListener, progressRequestListener, headerPair);
     Type localVarReturnType = new TypeToken<FundsGetResponse>() {}.getType();
     apiClient.executeAsync(call, localVarReturnType, callback);
     return call;

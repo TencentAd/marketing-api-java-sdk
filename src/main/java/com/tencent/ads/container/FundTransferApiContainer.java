@@ -34,9 +34,10 @@ public class FundTransferApiContainer extends ApiContainer {
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
-  public FundTransferAddResponseData fundTransferAdd(FundTransferAddRequest data)
+  public FundTransferAddResponseData fundTransferAdd(
+      FundTransferAddRequest data, String... headerPair)
       throws ApiException, TencentAdsResponseException {
-    FundTransferAddResponse resp = api.fundTransferAdd(data);
+    FundTransferAddResponse resp = api.fundTransferAdd(data, headerPair);
     handleResponse(gson.toJson(resp));
     return resp.getData();
   }

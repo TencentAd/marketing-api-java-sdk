@@ -79,8 +79,10 @@ public class XijingPageInteractiveApi {
       String transformType,
       String pageConfig,
       final ProgressResponseBody.ProgressListener progressListener,
-      final ProgressRequestBody.ProgressRequestListener progressRequestListener)
+      final ProgressRequestBody.ProgressRequestListener progressRequestListener,
+      String... headerPair)
       throws ApiException {
+
     Object localVarPostBody = null;
 
     // create path and map variables
@@ -111,6 +113,15 @@ public class XijingPageInteractiveApi {
     final String[] localVarContentTypes = {"multipart/form-data"};
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
     localVarHeaderParams.put("Content-Type", localVarContentType);
+
+    if (headerPair != null && headerPair.length > 0) {
+      if (headerPair.length % 2 != 0) {
+        throw new UnsupportedOperationException("Parameter headerPair must be paired");
+      }
+      for (int i = 0; i < headerPair.length / 2; i++) {
+        localVarHeaderParams.put(headerPair[i], headerPair[i * 2 + 1]);
+      }
+    }
 
     if (progressListener != null) {
       apiClient
@@ -156,7 +167,8 @@ public class XijingPageInteractiveApi {
       String transformType,
       String pageConfig,
       final ProgressResponseBody.ProgressListener progressListener,
-      final ProgressRequestBody.ProgressRequestListener progressRequestListener)
+      final ProgressRequestBody.ProgressRequestListener progressRequestListener,
+      String... headerPair)
       throws ApiException {
 
     // verify the required parameter 'accountId' is set
@@ -214,7 +226,8 @@ public class XijingPageInteractiveApi {
             transformType,
             pageConfig,
             progressListener,
-            progressRequestListener);
+            progressRequestListener,
+            headerPair);
     return call;
   }
 
@@ -245,7 +258,8 @@ public class XijingPageInteractiveApi {
       String mobileAppId,
       File file,
       String transformType,
-      String pageConfig)
+      String pageConfig,
+      String... headerPair)
       throws ApiException {
     ApiResponse<XijingPageInteractiveAddResponse> resp =
         xijingPageInteractiveAddWithHttpInfo(
@@ -258,7 +272,8 @@ public class XijingPageInteractiveApi {
             mobileAppId,
             file,
             transformType,
-            pageConfig);
+            pageConfig,
+            headerPair);
     return resp.getData();
   }
 
@@ -289,7 +304,8 @@ public class XijingPageInteractiveApi {
       String mobileAppId,
       File file,
       String transformType,
-      String pageConfig)
+      String pageConfig,
+      String... headerPair)
       throws ApiException {
     com.squareup.okhttp.Call call =
         xijingPageInteractiveAddValidateBeforeCall(
@@ -304,7 +320,8 @@ public class XijingPageInteractiveApi {
             transformType,
             pageConfig,
             null,
-            null);
+            null,
+            headerPair);
     Type localVarReturnType = new TypeToken<XijingPageInteractiveAddResponse>() {}.getType();
     return apiClient.execute(call, localVarReturnType);
   }
@@ -337,7 +354,8 @@ public class XijingPageInteractiveApi {
       File file,
       String transformType,
       String pageConfig,
-      final ApiCallback<XijingPageInteractiveAddResponse> callback)
+      final ApiCallback<XijingPageInteractiveAddResponse> callback,
+      String... headerPair)
       throws ApiException {
 
     ProgressResponseBody.ProgressListener progressListener = null;
@@ -374,7 +392,8 @@ public class XijingPageInteractiveApi {
             transformType,
             pageConfig,
             progressListener,
-            progressRequestListener);
+            progressRequestListener,
+            headerPair);
     Type localVarReturnType = new TypeToken<XijingPageInteractiveAddResponse>() {}.getType();
     apiClient.executeAsync(call, localVarReturnType, callback);
     return call;

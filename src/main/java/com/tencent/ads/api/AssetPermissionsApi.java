@@ -63,8 +63,10 @@ public class AssetPermissionsApi {
   public com.squareup.okhttp.Call assetPermissionsAddCall(
       AssetPermissionsAddRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
-      final ProgressRequestBody.ProgressRequestListener progressRequestListener)
+      final ProgressRequestBody.ProgressRequestListener progressRequestListener,
+      String... headerPair)
       throws ApiException {
+
     Object localVarPostBody = data;
 
     // create path and map variables
@@ -84,6 +86,15 @@ public class AssetPermissionsApi {
     final String[] localVarContentTypes = {"application/json", "application/xml"};
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
     localVarHeaderParams.put("Content-Type", localVarContentType);
+
+    if (headerPair != null && headerPair.length > 0) {
+      if (headerPair.length % 2 != 0) {
+        throw new UnsupportedOperationException("Parameter headerPair must be paired");
+      }
+      for (int i = 0; i < headerPair.length / 2; i++) {
+        localVarHeaderParams.put(headerPair[i], headerPair[i * 2 + 1]);
+      }
+    }
 
     if (progressListener != null) {
       apiClient
@@ -120,7 +131,8 @@ public class AssetPermissionsApi {
   private com.squareup.okhttp.Call assetPermissionsAddValidateBeforeCall(
       AssetPermissionsAddRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
-      final ProgressRequestBody.ProgressRequestListener progressRequestListener)
+      final ProgressRequestBody.ProgressRequestListener progressRequestListener,
+      String... headerPair)
       throws ApiException {
 
     // verify the required parameter 'data' is set
@@ -130,7 +142,7 @@ public class AssetPermissionsApi {
     }
 
     com.squareup.okhttp.Call call =
-        assetPermissionsAddCall(data, progressListener, progressRequestListener);
+        assetPermissionsAddCall(data, progressListener, progressRequestListener, headerPair);
     return call;
   }
 
@@ -142,9 +154,10 @@ public class AssetPermissionsApi {
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
-  public AssetPermissionsAddResponse assetPermissionsAdd(AssetPermissionsAddRequest data)
-      throws ApiException {
-    ApiResponse<AssetPermissionsAddResponse> resp = assetPermissionsAddWithHttpInfo(data);
+  public AssetPermissionsAddResponse assetPermissionsAdd(
+      AssetPermissionsAddRequest data, String... headerPair) throws ApiException {
+    ApiResponse<AssetPermissionsAddResponse> resp =
+        assetPermissionsAddWithHttpInfo(data, headerPair);
     return resp.getData();
   }
 
@@ -157,8 +170,9 @@ public class AssetPermissionsApi {
    *     response body
    */
   public ApiResponse<AssetPermissionsAddResponse> assetPermissionsAddWithHttpInfo(
-      AssetPermissionsAddRequest data) throws ApiException {
-    com.squareup.okhttp.Call call = assetPermissionsAddValidateBeforeCall(data, null, null);
+      AssetPermissionsAddRequest data, String... headerPair) throws ApiException {
+    com.squareup.okhttp.Call call =
+        assetPermissionsAddValidateBeforeCall(data, null, null, headerPair);
     Type localVarReturnType = new TypeToken<AssetPermissionsAddResponse>() {}.getType();
     return apiClient.execute(call, localVarReturnType);
   }
@@ -172,7 +186,9 @@ public class AssetPermissionsApi {
    * @throws ApiException If fail to process the API call, e.g. serializing the request body object
    */
   public com.squareup.okhttp.Call assetPermissionsAddAsync(
-      AssetPermissionsAddRequest data, final ApiCallback<AssetPermissionsAddResponse> callback)
+      AssetPermissionsAddRequest data,
+      final ApiCallback<AssetPermissionsAddResponse> callback,
+      String... headerPair)
       throws ApiException {
 
     ProgressResponseBody.ProgressListener progressListener = null;
@@ -197,7 +213,8 @@ public class AssetPermissionsApi {
     }
 
     com.squareup.okhttp.Call call =
-        assetPermissionsAddValidateBeforeCall(data, progressListener, progressRequestListener);
+        assetPermissionsAddValidateBeforeCall(
+            data, progressListener, progressRequestListener, headerPair);
     Type localVarReturnType = new TypeToken<AssetPermissionsAddResponse>() {}.getType();
     apiClient.executeAsync(call, localVarReturnType, callback);
     return call;
@@ -214,8 +231,10 @@ public class AssetPermissionsApi {
   public com.squareup.okhttp.Call assetPermissionsDeleteCall(
       AssetPermissionsDeleteRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
-      final ProgressRequestBody.ProgressRequestListener progressRequestListener)
+      final ProgressRequestBody.ProgressRequestListener progressRequestListener,
+      String... headerPair)
       throws ApiException {
+
     Object localVarPostBody = data;
 
     // create path and map variables
@@ -235,6 +254,15 @@ public class AssetPermissionsApi {
     final String[] localVarContentTypes = {"application/json", "application/xml"};
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
     localVarHeaderParams.put("Content-Type", localVarContentType);
+
+    if (headerPair != null && headerPair.length > 0) {
+      if (headerPair.length % 2 != 0) {
+        throw new UnsupportedOperationException("Parameter headerPair must be paired");
+      }
+      for (int i = 0; i < headerPair.length / 2; i++) {
+        localVarHeaderParams.put(headerPair[i], headerPair[i * 2 + 1]);
+      }
+    }
 
     if (progressListener != null) {
       apiClient
@@ -271,7 +299,8 @@ public class AssetPermissionsApi {
   private com.squareup.okhttp.Call assetPermissionsDeleteValidateBeforeCall(
       AssetPermissionsDeleteRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
-      final ProgressRequestBody.ProgressRequestListener progressRequestListener)
+      final ProgressRequestBody.ProgressRequestListener progressRequestListener,
+      String... headerPair)
       throws ApiException {
 
     // verify the required parameter 'data' is set
@@ -281,7 +310,7 @@ public class AssetPermissionsApi {
     }
 
     com.squareup.okhttp.Call call =
-        assetPermissionsDeleteCall(data, progressListener, progressRequestListener);
+        assetPermissionsDeleteCall(data, progressListener, progressRequestListener, headerPair);
     return call;
   }
 
@@ -293,9 +322,10 @@ public class AssetPermissionsApi {
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
-  public AssetPermissionsDeleteResponse assetPermissionsDelete(AssetPermissionsDeleteRequest data)
-      throws ApiException {
-    ApiResponse<AssetPermissionsDeleteResponse> resp = assetPermissionsDeleteWithHttpInfo(data);
+  public AssetPermissionsDeleteResponse assetPermissionsDelete(
+      AssetPermissionsDeleteRequest data, String... headerPair) throws ApiException {
+    ApiResponse<AssetPermissionsDeleteResponse> resp =
+        assetPermissionsDeleteWithHttpInfo(data, headerPair);
     return resp.getData();
   }
 
@@ -308,8 +338,9 @@ public class AssetPermissionsApi {
    *     response body
    */
   public ApiResponse<AssetPermissionsDeleteResponse> assetPermissionsDeleteWithHttpInfo(
-      AssetPermissionsDeleteRequest data) throws ApiException {
-    com.squareup.okhttp.Call call = assetPermissionsDeleteValidateBeforeCall(data, null, null);
+      AssetPermissionsDeleteRequest data, String... headerPair) throws ApiException {
+    com.squareup.okhttp.Call call =
+        assetPermissionsDeleteValidateBeforeCall(data, null, null, headerPair);
     Type localVarReturnType = new TypeToken<AssetPermissionsDeleteResponse>() {}.getType();
     return apiClient.execute(call, localVarReturnType);
   }
@@ -324,7 +355,8 @@ public class AssetPermissionsApi {
    */
   public com.squareup.okhttp.Call assetPermissionsDeleteAsync(
       AssetPermissionsDeleteRequest data,
-      final ApiCallback<AssetPermissionsDeleteResponse> callback)
+      final ApiCallback<AssetPermissionsDeleteResponse> callback,
+      String... headerPair)
       throws ApiException {
 
     ProgressResponseBody.ProgressListener progressListener = null;
@@ -349,7 +381,8 @@ public class AssetPermissionsApi {
     }
 
     com.squareup.okhttp.Call call =
-        assetPermissionsDeleteValidateBeforeCall(data, progressListener, progressRequestListener);
+        assetPermissionsDeleteValidateBeforeCall(
+            data, progressListener, progressRequestListener, headerPair);
     Type localVarReturnType = new TypeToken<AssetPermissionsDeleteResponse>() {}.getType();
     apiClient.executeAsync(call, localVarReturnType, callback);
     return call;

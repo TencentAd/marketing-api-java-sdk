@@ -34,9 +34,10 @@ public class AdAppealQuotaApiContainer extends ApiContainer {
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
-  public AdAppealQuotaGetResponseData adAppealQuotaGet(AdAppealQuotaGetRequest data)
+  public AdAppealQuotaGetResponseData adAppealQuotaGet(
+      AdAppealQuotaGetRequest data, String... headerPair)
       throws ApiException, TencentAdsResponseException {
-    AdAppealQuotaGetResponse resp = api.adAppealQuotaGet(data);
+    AdAppealQuotaGetResponse resp = api.adAppealQuotaGet(data, headerPair);
     handleResponse(gson.toJson(resp));
     return resp.getData();
   }

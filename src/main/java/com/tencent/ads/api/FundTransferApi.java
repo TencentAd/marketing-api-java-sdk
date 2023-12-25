@@ -61,8 +61,10 @@ public class FundTransferApi {
   public com.squareup.okhttp.Call fundTransferAddCall(
       FundTransferAddRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
-      final ProgressRequestBody.ProgressRequestListener progressRequestListener)
+      final ProgressRequestBody.ProgressRequestListener progressRequestListener,
+      String... headerPair)
       throws ApiException {
+
     Object localVarPostBody = data;
 
     // create path and map variables
@@ -82,6 +84,15 @@ public class FundTransferApi {
     final String[] localVarContentTypes = {"application/json", "application/xml"};
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
     localVarHeaderParams.put("Content-Type", localVarContentType);
+
+    if (headerPair != null && headerPair.length > 0) {
+      if (headerPair.length % 2 != 0) {
+        throw new UnsupportedOperationException("Parameter headerPair must be paired");
+      }
+      for (int i = 0; i < headerPair.length / 2; i++) {
+        localVarHeaderParams.put(headerPair[i], headerPair[i * 2 + 1]);
+      }
+    }
 
     if (progressListener != null) {
       apiClient
@@ -118,7 +129,8 @@ public class FundTransferApi {
   private com.squareup.okhttp.Call fundTransferAddValidateBeforeCall(
       FundTransferAddRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
-      final ProgressRequestBody.ProgressRequestListener progressRequestListener)
+      final ProgressRequestBody.ProgressRequestListener progressRequestListener,
+      String... headerPair)
       throws ApiException {
 
     // verify the required parameter 'data' is set
@@ -128,7 +140,7 @@ public class FundTransferApi {
     }
 
     com.squareup.okhttp.Call call =
-        fundTransferAddCall(data, progressListener, progressRequestListener);
+        fundTransferAddCall(data, progressListener, progressRequestListener, headerPair);
     return call;
   }
 
@@ -140,8 +152,9 @@ public class FundTransferApi {
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
-  public FundTransferAddResponse fundTransferAdd(FundTransferAddRequest data) throws ApiException {
-    ApiResponse<FundTransferAddResponse> resp = fundTransferAddWithHttpInfo(data);
+  public FundTransferAddResponse fundTransferAdd(FundTransferAddRequest data, String... headerPair)
+      throws ApiException {
+    ApiResponse<FundTransferAddResponse> resp = fundTransferAddWithHttpInfo(data, headerPair);
     return resp.getData();
   }
 
@@ -154,8 +167,8 @@ public class FundTransferApi {
    *     response body
    */
   public ApiResponse<FundTransferAddResponse> fundTransferAddWithHttpInfo(
-      FundTransferAddRequest data) throws ApiException {
-    com.squareup.okhttp.Call call = fundTransferAddValidateBeforeCall(data, null, null);
+      FundTransferAddRequest data, String... headerPair) throws ApiException {
+    com.squareup.okhttp.Call call = fundTransferAddValidateBeforeCall(data, null, null, headerPair);
     Type localVarReturnType = new TypeToken<FundTransferAddResponse>() {}.getType();
     return apiClient.execute(call, localVarReturnType);
   }
@@ -169,7 +182,9 @@ public class FundTransferApi {
    * @throws ApiException If fail to process the API call, e.g. serializing the request body object
    */
   public com.squareup.okhttp.Call fundTransferAddAsync(
-      FundTransferAddRequest data, final ApiCallback<FundTransferAddResponse> callback)
+      FundTransferAddRequest data,
+      final ApiCallback<FundTransferAddResponse> callback,
+      String... headerPair)
       throws ApiException {
 
     ProgressResponseBody.ProgressListener progressListener = null;
@@ -194,7 +209,8 @@ public class FundTransferApi {
     }
 
     com.squareup.okhttp.Call call =
-        fundTransferAddValidateBeforeCall(data, progressListener, progressRequestListener);
+        fundTransferAddValidateBeforeCall(
+            data, progressListener, progressRequestListener, headerPair);
     Type localVarReturnType = new TypeToken<FundTransferAddResponse>() {}.getType();
     apiClient.executeAsync(call, localVarReturnType, callback);
     return call;

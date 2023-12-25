@@ -63,8 +63,10 @@ public class AsyncReportsApi {
   public com.squareup.okhttp.Call asyncReportsAddCall(
       AsyncReportsAddRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
-      final ProgressRequestBody.ProgressRequestListener progressRequestListener)
+      final ProgressRequestBody.ProgressRequestListener progressRequestListener,
+      String... headerPair)
       throws ApiException {
+
     Object localVarPostBody = data;
 
     // create path and map variables
@@ -84,6 +86,15 @@ public class AsyncReportsApi {
     final String[] localVarContentTypes = {"application/json", "application/xml"};
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
     localVarHeaderParams.put("Content-Type", localVarContentType);
+
+    if (headerPair != null && headerPair.length > 0) {
+      if (headerPair.length % 2 != 0) {
+        throw new UnsupportedOperationException("Parameter headerPair must be paired");
+      }
+      for (int i = 0; i < headerPair.length / 2; i++) {
+        localVarHeaderParams.put(headerPair[i], headerPair[i * 2 + 1]);
+      }
+    }
 
     if (progressListener != null) {
       apiClient
@@ -120,7 +131,8 @@ public class AsyncReportsApi {
   private com.squareup.okhttp.Call asyncReportsAddValidateBeforeCall(
       AsyncReportsAddRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
-      final ProgressRequestBody.ProgressRequestListener progressRequestListener)
+      final ProgressRequestBody.ProgressRequestListener progressRequestListener,
+      String... headerPair)
       throws ApiException {
 
     // verify the required parameter 'data' is set
@@ -130,7 +142,7 @@ public class AsyncReportsApi {
     }
 
     com.squareup.okhttp.Call call =
-        asyncReportsAddCall(data, progressListener, progressRequestListener);
+        asyncReportsAddCall(data, progressListener, progressRequestListener, headerPair);
     return call;
   }
 
@@ -142,8 +154,9 @@ public class AsyncReportsApi {
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
-  public AsyncReportsAddResponse asyncReportsAdd(AsyncReportsAddRequest data) throws ApiException {
-    ApiResponse<AsyncReportsAddResponse> resp = asyncReportsAddWithHttpInfo(data);
+  public AsyncReportsAddResponse asyncReportsAdd(AsyncReportsAddRequest data, String... headerPair)
+      throws ApiException {
+    ApiResponse<AsyncReportsAddResponse> resp = asyncReportsAddWithHttpInfo(data, headerPair);
     return resp.getData();
   }
 
@@ -156,8 +169,8 @@ public class AsyncReportsApi {
    *     response body
    */
   public ApiResponse<AsyncReportsAddResponse> asyncReportsAddWithHttpInfo(
-      AsyncReportsAddRequest data) throws ApiException {
-    com.squareup.okhttp.Call call = asyncReportsAddValidateBeforeCall(data, null, null);
+      AsyncReportsAddRequest data, String... headerPair) throws ApiException {
+    com.squareup.okhttp.Call call = asyncReportsAddValidateBeforeCall(data, null, null, headerPair);
     Type localVarReturnType = new TypeToken<AsyncReportsAddResponse>() {}.getType();
     return apiClient.execute(call, localVarReturnType);
   }
@@ -171,7 +184,9 @@ public class AsyncReportsApi {
    * @throws ApiException If fail to process the API call, e.g. serializing the request body object
    */
   public com.squareup.okhttp.Call asyncReportsAddAsync(
-      AsyncReportsAddRequest data, final ApiCallback<AsyncReportsAddResponse> callback)
+      AsyncReportsAddRequest data,
+      final ApiCallback<AsyncReportsAddResponse> callback,
+      String... headerPair)
       throws ApiException {
 
     ProgressResponseBody.ProgressListener progressListener = null;
@@ -196,7 +211,8 @@ public class AsyncReportsApi {
     }
 
     com.squareup.okhttp.Call call =
-        asyncReportsAddValidateBeforeCall(data, progressListener, progressRequestListener);
+        asyncReportsAddValidateBeforeCall(
+            data, progressListener, progressRequestListener, headerPair);
     Type localVarReturnType = new TypeToken<AsyncReportsAddResponse>() {}.getType();
     apiClient.executeAsync(call, localVarReturnType, callback);
     return call;
@@ -223,8 +239,10 @@ public class AsyncReportsApi {
       Boolean weixinOfficialAccountsUpgradeEnabled,
       List<String> fields,
       final ProgressResponseBody.ProgressListener progressListener,
-      final ProgressRequestBody.ProgressRequestListener progressRequestListener)
+      final ProgressRequestBody.ProgressRequestListener progressRequestListener,
+      String... headerPair)
       throws ApiException {
+
     Object localVarPostBody = null;
 
     // create path and map variables
@@ -258,6 +276,15 @@ public class AsyncReportsApi {
     final String[] localVarContentTypes = {"text/plain"};
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
     localVarHeaderParams.put("Content-Type", localVarContentType);
+
+    if (headerPair != null && headerPair.length > 0) {
+      if (headerPair.length % 2 != 0) {
+        throw new UnsupportedOperationException("Parameter headerPair must be paired");
+      }
+      for (int i = 0; i < headerPair.length / 2; i++) {
+        localVarHeaderParams.put(headerPair[i], headerPair[i * 2 + 1]);
+      }
+    }
 
     if (progressListener != null) {
       apiClient
@@ -299,7 +326,8 @@ public class AsyncReportsApi {
       Boolean weixinOfficialAccountsUpgradeEnabled,
       List<String> fields,
       final ProgressResponseBody.ProgressListener progressListener,
-      final ProgressRequestBody.ProgressRequestListener progressRequestListener)
+      final ProgressRequestBody.ProgressRequestListener progressRequestListener,
+      String... headerPair)
       throws ApiException {
 
     // verify the required parameter 'accountId' is set
@@ -317,7 +345,8 @@ public class AsyncReportsApi {
             weixinOfficialAccountsUpgradeEnabled,
             fields,
             progressListener,
-            progressRequestListener);
+            progressRequestListener,
+            headerPair);
     return call;
   }
 
@@ -340,11 +369,18 @@ public class AsyncReportsApi {
       Long page,
       Long pageSize,
       Boolean weixinOfficialAccountsUpgradeEnabled,
-      List<String> fields)
+      List<String> fields,
+      String... headerPair)
       throws ApiException {
     ApiResponse<AsyncReportsGetResponse> resp =
         asyncReportsGetWithHttpInfo(
-            accountId, filtering, page, pageSize, weixinOfficialAccountsUpgradeEnabled, fields);
+            accountId,
+            filtering,
+            page,
+            pageSize,
+            weixinOfficialAccountsUpgradeEnabled,
+            fields,
+            headerPair);
     return resp.getData();
   }
 
@@ -367,7 +403,8 @@ public class AsyncReportsApi {
       Long page,
       Long pageSize,
       Boolean weixinOfficialAccountsUpgradeEnabled,
-      List<String> fields)
+      List<String> fields,
+      String... headerPair)
       throws ApiException {
     com.squareup.okhttp.Call call =
         asyncReportsGetValidateBeforeCall(
@@ -378,7 +415,8 @@ public class AsyncReportsApi {
             weixinOfficialAccountsUpgradeEnabled,
             fields,
             null,
-            null);
+            null,
+            headerPair);
     Type localVarReturnType = new TypeToken<AsyncReportsGetResponse>() {}.getType();
     return apiClient.execute(call, localVarReturnType);
   }
@@ -403,7 +441,8 @@ public class AsyncReportsApi {
       Long pageSize,
       Boolean weixinOfficialAccountsUpgradeEnabled,
       List<String> fields,
-      final ApiCallback<AsyncReportsGetResponse> callback)
+      final ApiCallback<AsyncReportsGetResponse> callback,
+      String... headerPair)
       throws ApiException {
 
     ProgressResponseBody.ProgressListener progressListener = null;
@@ -436,7 +475,8 @@ public class AsyncReportsApi {
             weixinOfficialAccountsUpgradeEnabled,
             fields,
             progressListener,
-            progressRequestListener);
+            progressRequestListener,
+            headerPair);
     Type localVarReturnType = new TypeToken<AsyncReportsGetResponse>() {}.getType();
     apiClient.executeAsync(call, localVarReturnType, callback);
     return call;

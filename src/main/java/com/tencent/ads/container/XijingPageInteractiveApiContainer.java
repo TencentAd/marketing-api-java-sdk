@@ -52,7 +52,8 @@ public class XijingPageInteractiveApiContainer extends ApiContainer {
       String mobileAppId,
       File file,
       String transformType,
-      String pageConfig)
+      String pageConfig,
+      String... headerPair)
       throws ApiException, TencentAdsResponseException {
     XijingPageInteractiveAddResponse resp =
         api.xijingPageInteractiveAdd(
@@ -65,7 +66,8 @@ public class XijingPageInteractiveApiContainer extends ApiContainer {
             mobileAppId,
             file,
             transformType,
-            pageConfig);
+            pageConfig,
+            headerPair);
     handleResponse(gson.toJson(resp));
 
     return resp;

@@ -46,10 +46,12 @@ public class FundStatementsDetailedApiContainer extends ApiContainer {
       DateRangeTransaction dateRange,
       Long page,
       Long pageSize,
-      List<String> fields)
+      List<String> fields,
+      String... headerPair)
       throws ApiException, TencentAdsResponseException {
     FundStatementsDetailedGetResponse resp =
-        api.fundStatementsDetailedGet(accountId, fundType, dateRange, page, pageSize, fields);
+        api.fundStatementsDetailedGet(
+            accountId, fundType, dateRange, page, pageSize, fields, headerPair);
     handleResponse(gson.toJson(resp));
     return resp.getData();
   }

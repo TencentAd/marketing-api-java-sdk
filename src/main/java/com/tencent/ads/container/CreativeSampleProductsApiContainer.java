@@ -55,7 +55,8 @@ public class CreativeSampleProductsApiContainer extends ApiContainer {
       String videoId,
       List<String> productFields,
       Long limit,
-      List<String> fields)
+      List<String> fields,
+      String... headerPair)
       throws ApiException, TencentAdsResponseException {
     CreativeSampleProductsGetResponse resp =
         api.creativeSampleProductsGet(
@@ -69,7 +70,8 @@ public class CreativeSampleProductsApiContainer extends ApiContainer {
             videoId,
             productFields,
             limit,
-            fields);
+            fields,
+            headerPair);
     handleResponse(gson.toJson(resp));
     return resp.getData();
   }

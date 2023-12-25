@@ -48,10 +48,11 @@ public class RealtimeCostApiContainer extends ApiContainer {
       List<FilteringStruct> filtering,
       Long page,
       Long pageSize,
-      List<String> fields)
+      List<String> fields,
+      String... headerPair)
       throws ApiException, TencentAdsResponseException {
     RealtimeCostGetResponse resp =
-        api.realtimeCostGet(accountId, level, date, filtering, page, pageSize, fields);
+        api.realtimeCostGet(accountId, level, date, filtering, page, pageSize, fields, headerPair);
     handleResponse(gson.toJson(resp));
     return resp.getData();
   }

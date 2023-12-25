@@ -58,7 +58,8 @@ public class DynamicAdImageTemplatesApiContainer extends ApiContainer {
       Long pageSize,
       List<Long> templateIdList,
       String templateName,
-      List<String> fields)
+      List<String> fields,
+      String... headerPair)
       throws ApiException, TencentAdsResponseException {
     DynamicAdImageTemplatesGetResponse resp =
         api.dynamicAdImageTemplatesGet(
@@ -73,7 +74,8 @@ public class DynamicAdImageTemplatesApiContainer extends ApiContainer {
             pageSize,
             templateIdList,
             templateName,
-            fields);
+            fields,
+            headerPair);
     handleResponse(gson.toJson(resp));
     return resp.getData();
   }

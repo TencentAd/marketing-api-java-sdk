@@ -69,8 +69,10 @@ public class AdsApi {
   public com.squareup.okhttp.Call adsAddCall(
       AdsAddRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
-      final ProgressRequestBody.ProgressRequestListener progressRequestListener)
+      final ProgressRequestBody.ProgressRequestListener progressRequestListener,
+      String... headerPair)
       throws ApiException {
+
     Object localVarPostBody = data;
 
     // create path and map variables
@@ -90,6 +92,15 @@ public class AdsApi {
     final String[] localVarContentTypes = {"application/json", "application/xml"};
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
     localVarHeaderParams.put("Content-Type", localVarContentType);
+
+    if (headerPair != null && headerPair.length > 0) {
+      if (headerPair.length % 2 != 0) {
+        throw new UnsupportedOperationException("Parameter headerPair must be paired");
+      }
+      for (int i = 0; i < headerPair.length / 2; i++) {
+        localVarHeaderParams.put(headerPair[i], headerPair[i * 2 + 1]);
+      }
+    }
 
     if (progressListener != null) {
       apiClient
@@ -126,7 +137,8 @@ public class AdsApi {
   private com.squareup.okhttp.Call adsAddValidateBeforeCall(
       AdsAddRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
-      final ProgressRequestBody.ProgressRequestListener progressRequestListener)
+      final ProgressRequestBody.ProgressRequestListener progressRequestListener,
+      String... headerPair)
       throws ApiException {
 
     // verify the required parameter 'data' is set
@@ -134,7 +146,8 @@ public class AdsApi {
       throw new ApiException("Missing the required parameter 'data' when calling adsAdd(Async)");
     }
 
-    com.squareup.okhttp.Call call = adsAddCall(data, progressListener, progressRequestListener);
+    com.squareup.okhttp.Call call =
+        adsAddCall(data, progressListener, progressRequestListener, headerPair);
     return call;
   }
 
@@ -146,8 +159,8 @@ public class AdsApi {
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
-  public AdsAddResponse adsAdd(AdsAddRequest data) throws ApiException {
-    ApiResponse<AdsAddResponse> resp = adsAddWithHttpInfo(data);
+  public AdsAddResponse adsAdd(AdsAddRequest data, String... headerPair) throws ApiException {
+    ApiResponse<AdsAddResponse> resp = adsAddWithHttpInfo(data, headerPair);
     return resp.getData();
   }
 
@@ -159,8 +172,9 @@ public class AdsApi {
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
-  public ApiResponse<AdsAddResponse> adsAddWithHttpInfo(AdsAddRequest data) throws ApiException {
-    com.squareup.okhttp.Call call = adsAddValidateBeforeCall(data, null, null);
+  public ApiResponse<AdsAddResponse> adsAddWithHttpInfo(AdsAddRequest data, String... headerPair)
+      throws ApiException {
+    com.squareup.okhttp.Call call = adsAddValidateBeforeCall(data, null, null, headerPair);
     Type localVarReturnType = new TypeToken<AdsAddResponse>() {}.getType();
     return apiClient.execute(call, localVarReturnType);
   }
@@ -174,7 +188,8 @@ public class AdsApi {
    * @throws ApiException If fail to process the API call, e.g. serializing the request body object
    */
   public com.squareup.okhttp.Call adsAddAsync(
-      AdsAddRequest data, final ApiCallback<AdsAddResponse> callback) throws ApiException {
+      AdsAddRequest data, final ApiCallback<AdsAddResponse> callback, String... headerPair)
+      throws ApiException {
 
     ProgressResponseBody.ProgressListener progressListener = null;
     ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -198,7 +213,7 @@ public class AdsApi {
     }
 
     com.squareup.okhttp.Call call =
-        adsAddValidateBeforeCall(data, progressListener, progressRequestListener);
+        adsAddValidateBeforeCall(data, progressListener, progressRequestListener, headerPair);
     Type localVarReturnType = new TypeToken<AdsAddResponse>() {}.getType();
     apiClient.executeAsync(call, localVarReturnType, callback);
     return call;
@@ -215,8 +230,10 @@ public class AdsApi {
   public com.squareup.okhttp.Call adsDeleteCall(
       AdsDeleteRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
-      final ProgressRequestBody.ProgressRequestListener progressRequestListener)
+      final ProgressRequestBody.ProgressRequestListener progressRequestListener,
+      String... headerPair)
       throws ApiException {
+
     Object localVarPostBody = data;
 
     // create path and map variables
@@ -236,6 +253,15 @@ public class AdsApi {
     final String[] localVarContentTypes = {"application/json", "application/xml"};
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
     localVarHeaderParams.put("Content-Type", localVarContentType);
+
+    if (headerPair != null && headerPair.length > 0) {
+      if (headerPair.length % 2 != 0) {
+        throw new UnsupportedOperationException("Parameter headerPair must be paired");
+      }
+      for (int i = 0; i < headerPair.length / 2; i++) {
+        localVarHeaderParams.put(headerPair[i], headerPair[i * 2 + 1]);
+      }
+    }
 
     if (progressListener != null) {
       apiClient
@@ -272,7 +298,8 @@ public class AdsApi {
   private com.squareup.okhttp.Call adsDeleteValidateBeforeCall(
       AdsDeleteRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
-      final ProgressRequestBody.ProgressRequestListener progressRequestListener)
+      final ProgressRequestBody.ProgressRequestListener progressRequestListener,
+      String... headerPair)
       throws ApiException {
 
     // verify the required parameter 'data' is set
@@ -280,7 +307,8 @@ public class AdsApi {
       throw new ApiException("Missing the required parameter 'data' when calling adsDelete(Async)");
     }
 
-    com.squareup.okhttp.Call call = adsDeleteCall(data, progressListener, progressRequestListener);
+    com.squareup.okhttp.Call call =
+        adsDeleteCall(data, progressListener, progressRequestListener, headerPair);
     return call;
   }
 
@@ -292,8 +320,9 @@ public class AdsApi {
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
-  public AdsDeleteResponse adsDelete(AdsDeleteRequest data) throws ApiException {
-    ApiResponse<AdsDeleteResponse> resp = adsDeleteWithHttpInfo(data);
+  public AdsDeleteResponse adsDelete(AdsDeleteRequest data, String... headerPair)
+      throws ApiException {
+    ApiResponse<AdsDeleteResponse> resp = adsDeleteWithHttpInfo(data, headerPair);
     return resp.getData();
   }
 
@@ -305,9 +334,9 @@ public class AdsApi {
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
-  public ApiResponse<AdsDeleteResponse> adsDeleteWithHttpInfo(AdsDeleteRequest data)
-      throws ApiException {
-    com.squareup.okhttp.Call call = adsDeleteValidateBeforeCall(data, null, null);
+  public ApiResponse<AdsDeleteResponse> adsDeleteWithHttpInfo(
+      AdsDeleteRequest data, String... headerPair) throws ApiException {
+    com.squareup.okhttp.Call call = adsDeleteValidateBeforeCall(data, null, null, headerPair);
     Type localVarReturnType = new TypeToken<AdsDeleteResponse>() {}.getType();
     return apiClient.execute(call, localVarReturnType);
   }
@@ -321,7 +350,8 @@ public class AdsApi {
    * @throws ApiException If fail to process the API call, e.g. serializing the request body object
    */
   public com.squareup.okhttp.Call adsDeleteAsync(
-      AdsDeleteRequest data, final ApiCallback<AdsDeleteResponse> callback) throws ApiException {
+      AdsDeleteRequest data, final ApiCallback<AdsDeleteResponse> callback, String... headerPair)
+      throws ApiException {
 
     ProgressResponseBody.ProgressListener progressListener = null;
     ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -345,7 +375,7 @@ public class AdsApi {
     }
 
     com.squareup.okhttp.Call call =
-        adsDeleteValidateBeforeCall(data, progressListener, progressRequestListener);
+        adsDeleteValidateBeforeCall(data, progressListener, progressRequestListener, headerPair);
     Type localVarReturnType = new TypeToken<AdsDeleteResponse>() {}.getType();
     apiClient.executeAsync(call, localVarReturnType, callback);
     return call;
@@ -374,8 +404,10 @@ public class AdsApi {
       Boolean weixinOfficialAccountsUpgradeEnabled,
       List<String> fields,
       final ProgressResponseBody.ProgressListener progressListener,
-      final ProgressRequestBody.ProgressRequestListener progressRequestListener)
+      final ProgressRequestBody.ProgressRequestListener progressRequestListener,
+      String... headerPair)
       throws ApiException {
+
     Object localVarPostBody = null;
 
     // create path and map variables
@@ -411,6 +443,15 @@ public class AdsApi {
     final String[] localVarContentTypes = {"text/plain"};
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
     localVarHeaderParams.put("Content-Type", localVarContentType);
+
+    if (headerPair != null && headerPair.length > 0) {
+      if (headerPair.length % 2 != 0) {
+        throw new UnsupportedOperationException("Parameter headerPair must be paired");
+      }
+      for (int i = 0; i < headerPair.length / 2; i++) {
+        localVarHeaderParams.put(headerPair[i], headerPair[i * 2 + 1]);
+      }
+    }
 
     if (progressListener != null) {
       apiClient
@@ -453,7 +494,8 @@ public class AdsApi {
       Boolean weixinOfficialAccountsUpgradeEnabled,
       List<String> fields,
       final ProgressResponseBody.ProgressListener progressListener,
-      final ProgressRequestBody.ProgressRequestListener progressRequestListener)
+      final ProgressRequestBody.ProgressRequestListener progressRequestListener,
+      String... headerPair)
       throws ApiException {
 
     // verify the required parameter 'accountId' is set
@@ -472,7 +514,8 @@ public class AdsApi {
             weixinOfficialAccountsUpgradeEnabled,
             fields,
             progressListener,
-            progressRequestListener);
+            progressRequestListener,
+            headerPair);
     return call;
   }
 
@@ -497,7 +540,8 @@ public class AdsApi {
       Long pageSize,
       Boolean isDeleted,
       Boolean weixinOfficialAccountsUpgradeEnabled,
-      List<String> fields)
+      List<String> fields,
+      String... headerPair)
       throws ApiException {
     ApiResponse<AdsGetResponse> resp =
         adsGetWithHttpInfo(
@@ -507,7 +551,8 @@ public class AdsApi {
             pageSize,
             isDeleted,
             weixinOfficialAccountsUpgradeEnabled,
-            fields);
+            fields,
+            headerPair);
     return resp.getData();
   }
 
@@ -532,7 +577,8 @@ public class AdsApi {
       Long pageSize,
       Boolean isDeleted,
       Boolean weixinOfficialAccountsUpgradeEnabled,
-      List<String> fields)
+      List<String> fields,
+      String... headerPair)
       throws ApiException {
     com.squareup.okhttp.Call call =
         adsGetValidateBeforeCall(
@@ -544,7 +590,8 @@ public class AdsApi {
             weixinOfficialAccountsUpgradeEnabled,
             fields,
             null,
-            null);
+            null,
+            headerPair);
     Type localVarReturnType = new TypeToken<AdsGetResponse>() {}.getType();
     return apiClient.execute(call, localVarReturnType);
   }
@@ -571,7 +618,8 @@ public class AdsApi {
       Boolean isDeleted,
       Boolean weixinOfficialAccountsUpgradeEnabled,
       List<String> fields,
-      final ApiCallback<AdsGetResponse> callback)
+      final ApiCallback<AdsGetResponse> callback,
+      String... headerPair)
       throws ApiException {
 
     ProgressResponseBody.ProgressListener progressListener = null;
@@ -605,7 +653,8 @@ public class AdsApi {
             weixinOfficialAccountsUpgradeEnabled,
             fields,
             progressListener,
-            progressRequestListener);
+            progressRequestListener,
+            headerPair);
     Type localVarReturnType = new TypeToken<AdsGetResponse>() {}.getType();
     apiClient.executeAsync(call, localVarReturnType, callback);
     return call;
@@ -622,8 +671,10 @@ public class AdsApi {
   public com.squareup.okhttp.Call adsUpdateCall(
       AdsUpdateRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
-      final ProgressRequestBody.ProgressRequestListener progressRequestListener)
+      final ProgressRequestBody.ProgressRequestListener progressRequestListener,
+      String... headerPair)
       throws ApiException {
+
     Object localVarPostBody = data;
 
     // create path and map variables
@@ -643,6 +694,15 @@ public class AdsApi {
     final String[] localVarContentTypes = {"application/json", "application/xml"};
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
     localVarHeaderParams.put("Content-Type", localVarContentType);
+
+    if (headerPair != null && headerPair.length > 0) {
+      if (headerPair.length % 2 != 0) {
+        throw new UnsupportedOperationException("Parameter headerPair must be paired");
+      }
+      for (int i = 0; i < headerPair.length / 2; i++) {
+        localVarHeaderParams.put(headerPair[i], headerPair[i * 2 + 1]);
+      }
+    }
 
     if (progressListener != null) {
       apiClient
@@ -679,7 +739,8 @@ public class AdsApi {
   private com.squareup.okhttp.Call adsUpdateValidateBeforeCall(
       AdsUpdateRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
-      final ProgressRequestBody.ProgressRequestListener progressRequestListener)
+      final ProgressRequestBody.ProgressRequestListener progressRequestListener,
+      String... headerPair)
       throws ApiException {
 
     // verify the required parameter 'data' is set
@@ -687,7 +748,8 @@ public class AdsApi {
       throw new ApiException("Missing the required parameter 'data' when calling adsUpdate(Async)");
     }
 
-    com.squareup.okhttp.Call call = adsUpdateCall(data, progressListener, progressRequestListener);
+    com.squareup.okhttp.Call call =
+        adsUpdateCall(data, progressListener, progressRequestListener, headerPair);
     return call;
   }
 
@@ -699,8 +761,9 @@ public class AdsApi {
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
-  public AdsUpdateResponse adsUpdate(AdsUpdateRequest data) throws ApiException {
-    ApiResponse<AdsUpdateResponse> resp = adsUpdateWithHttpInfo(data);
+  public AdsUpdateResponse adsUpdate(AdsUpdateRequest data, String... headerPair)
+      throws ApiException {
+    ApiResponse<AdsUpdateResponse> resp = adsUpdateWithHttpInfo(data, headerPair);
     return resp.getData();
   }
 
@@ -712,9 +775,9 @@ public class AdsApi {
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
-  public ApiResponse<AdsUpdateResponse> adsUpdateWithHttpInfo(AdsUpdateRequest data)
-      throws ApiException {
-    com.squareup.okhttp.Call call = adsUpdateValidateBeforeCall(data, null, null);
+  public ApiResponse<AdsUpdateResponse> adsUpdateWithHttpInfo(
+      AdsUpdateRequest data, String... headerPair) throws ApiException {
+    com.squareup.okhttp.Call call = adsUpdateValidateBeforeCall(data, null, null, headerPair);
     Type localVarReturnType = new TypeToken<AdsUpdateResponse>() {}.getType();
     return apiClient.execute(call, localVarReturnType);
   }
@@ -728,7 +791,8 @@ public class AdsApi {
    * @throws ApiException If fail to process the API call, e.g. serializing the request body object
    */
   public com.squareup.okhttp.Call adsUpdateAsync(
-      AdsUpdateRequest data, final ApiCallback<AdsUpdateResponse> callback) throws ApiException {
+      AdsUpdateRequest data, final ApiCallback<AdsUpdateResponse> callback, String... headerPair)
+      throws ApiException {
 
     ProgressResponseBody.ProgressListener progressListener = null;
     ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -752,7 +816,7 @@ public class AdsApi {
     }
 
     com.squareup.okhttp.Call call =
-        adsUpdateValidateBeforeCall(data, progressListener, progressRequestListener);
+        adsUpdateValidateBeforeCall(data, progressListener, progressRequestListener, headerPair);
     Type localVarReturnType = new TypeToken<AdsUpdateResponse>() {}.getType();
     apiClient.executeAsync(call, localVarReturnType, callback);
     return call;
@@ -769,8 +833,10 @@ public class AdsApi {
   public com.squareup.okhttp.Call adsUpdateConfiguredStatusCall(
       AdsUpdateConfiguredStatusRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
-      final ProgressRequestBody.ProgressRequestListener progressRequestListener)
+      final ProgressRequestBody.ProgressRequestListener progressRequestListener,
+      String... headerPair)
       throws ApiException {
+
     Object localVarPostBody = data;
 
     // create path and map variables
@@ -790,6 +856,15 @@ public class AdsApi {
     final String[] localVarContentTypes = {"application/json", "application/xml"};
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
     localVarHeaderParams.put("Content-Type", localVarContentType);
+
+    if (headerPair != null && headerPair.length > 0) {
+      if (headerPair.length % 2 != 0) {
+        throw new UnsupportedOperationException("Parameter headerPair must be paired");
+      }
+      for (int i = 0; i < headerPair.length / 2; i++) {
+        localVarHeaderParams.put(headerPair[i], headerPair[i * 2 + 1]);
+      }
+    }
 
     if (progressListener != null) {
       apiClient
@@ -826,7 +901,8 @@ public class AdsApi {
   private com.squareup.okhttp.Call adsUpdateConfiguredStatusValidateBeforeCall(
       AdsUpdateConfiguredStatusRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
-      final ProgressRequestBody.ProgressRequestListener progressRequestListener)
+      final ProgressRequestBody.ProgressRequestListener progressRequestListener,
+      String... headerPair)
       throws ApiException {
 
     // verify the required parameter 'data' is set
@@ -836,7 +912,7 @@ public class AdsApi {
     }
 
     com.squareup.okhttp.Call call =
-        adsUpdateConfiguredStatusCall(data, progressListener, progressRequestListener);
+        adsUpdateConfiguredStatusCall(data, progressListener, progressRequestListener, headerPair);
     return call;
   }
 
@@ -849,9 +925,9 @@ public class AdsApi {
    *     response body
    */
   public AdsUpdateConfiguredStatusResponse adsUpdateConfiguredStatus(
-      AdsUpdateConfiguredStatusRequest data) throws ApiException {
+      AdsUpdateConfiguredStatusRequest data, String... headerPair) throws ApiException {
     ApiResponse<AdsUpdateConfiguredStatusResponse> resp =
-        adsUpdateConfiguredStatusWithHttpInfo(data);
+        adsUpdateConfiguredStatusWithHttpInfo(data, headerPair);
     return resp.getData();
   }
 
@@ -864,8 +940,9 @@ public class AdsApi {
    *     response body
    */
   public ApiResponse<AdsUpdateConfiguredStatusResponse> adsUpdateConfiguredStatusWithHttpInfo(
-      AdsUpdateConfiguredStatusRequest data) throws ApiException {
-    com.squareup.okhttp.Call call = adsUpdateConfiguredStatusValidateBeforeCall(data, null, null);
+      AdsUpdateConfiguredStatusRequest data, String... headerPair) throws ApiException {
+    com.squareup.okhttp.Call call =
+        adsUpdateConfiguredStatusValidateBeforeCall(data, null, null, headerPair);
     Type localVarReturnType = new TypeToken<AdsUpdateConfiguredStatusResponse>() {}.getType();
     return apiClient.execute(call, localVarReturnType);
   }
@@ -880,7 +957,8 @@ public class AdsApi {
    */
   public com.squareup.okhttp.Call adsUpdateConfiguredStatusAsync(
       AdsUpdateConfiguredStatusRequest data,
-      final ApiCallback<AdsUpdateConfiguredStatusResponse> callback)
+      final ApiCallback<AdsUpdateConfiguredStatusResponse> callback,
+      String... headerPair)
       throws ApiException {
 
     ProgressResponseBody.ProgressListener progressListener = null;
@@ -906,7 +984,7 @@ public class AdsApi {
 
     com.squareup.okhttp.Call call =
         adsUpdateConfiguredStatusValidateBeforeCall(
-            data, progressListener, progressRequestListener);
+            data, progressListener, progressRequestListener, headerPair);
     Type localVarReturnType = new TypeToken<AdsUpdateConfiguredStatusResponse>() {}.getType();
     apiClient.executeAsync(call, localVarReturnType, callback);
     return call;

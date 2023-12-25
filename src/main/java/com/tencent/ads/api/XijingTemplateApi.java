@@ -64,8 +64,10 @@ public class XijingTemplateApi {
       String templateId,
       List<String> fields,
       final ProgressResponseBody.ProgressListener progressListener,
-      final ProgressRequestBody.ProgressRequestListener progressRequestListener)
+      final ProgressRequestBody.ProgressRequestListener progressRequestListener,
+      String... headerPair)
       throws ApiException {
+
     Object localVarPostBody = null;
 
     // create path and map variables
@@ -91,6 +93,15 @@ public class XijingTemplateApi {
     final String[] localVarContentTypes = {"text/plain"};
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
     localVarHeaderParams.put("Content-Type", localVarContentType);
+
+    if (headerPair != null && headerPair.length > 0) {
+      if (headerPair.length % 2 != 0) {
+        throw new UnsupportedOperationException("Parameter headerPair must be paired");
+      }
+      for (int i = 0; i < headerPair.length / 2; i++) {
+        localVarHeaderParams.put(headerPair[i], headerPair[i * 2 + 1]);
+      }
+    }
 
     if (progressListener != null) {
       apiClient
@@ -129,7 +140,8 @@ public class XijingTemplateApi {
       String templateId,
       List<String> fields,
       final ProgressResponseBody.ProgressListener progressListener,
-      final ProgressRequestBody.ProgressRequestListener progressRequestListener)
+      final ProgressRequestBody.ProgressRequestListener progressRequestListener,
+      String... headerPair)
       throws ApiException {
 
     // verify the required parameter 'accountId' is set
@@ -146,7 +158,7 @@ public class XijingTemplateApi {
 
     com.squareup.okhttp.Call call =
         xijingTemplateGetCall(
-            accountId, templateId, fields, progressListener, progressRequestListener);
+            accountId, templateId, fields, progressListener, progressRequestListener, headerPair);
     return call;
   }
 
@@ -161,9 +173,10 @@ public class XijingTemplateApi {
    *     response body
    */
   public XijingTemplateGetResponse xijingTemplateGet(
-      Long accountId, String templateId, List<String> fields) throws ApiException {
+      Long accountId, String templateId, List<String> fields, String... headerPair)
+      throws ApiException {
     ApiResponse<XijingTemplateGetResponse> resp =
-        xijingTemplateGetWithHttpInfo(accountId, templateId, fields);
+        xijingTemplateGetWithHttpInfo(accountId, templateId, fields, headerPair);
     return resp.getData();
   }
 
@@ -178,9 +191,10 @@ public class XijingTemplateApi {
    *     response body
    */
   public ApiResponse<XijingTemplateGetResponse> xijingTemplateGetWithHttpInfo(
-      Long accountId, String templateId, List<String> fields) throws ApiException {
+      Long accountId, String templateId, List<String> fields, String... headerPair)
+      throws ApiException {
     com.squareup.okhttp.Call call =
-        xijingTemplateGetValidateBeforeCall(accountId, templateId, fields, null, null);
+        xijingTemplateGetValidateBeforeCall(accountId, templateId, fields, null, null, headerPair);
     Type localVarReturnType = new TypeToken<XijingTemplateGetResponse>() {}.getType();
     return apiClient.execute(call, localVarReturnType);
   }
@@ -199,7 +213,8 @@ public class XijingTemplateApi {
       Long accountId,
       String templateId,
       List<String> fields,
-      final ApiCallback<XijingTemplateGetResponse> callback)
+      final ApiCallback<XijingTemplateGetResponse> callback,
+      String... headerPair)
       throws ApiException {
 
     ProgressResponseBody.ProgressListener progressListener = null;
@@ -225,7 +240,7 @@ public class XijingTemplateApi {
 
     com.squareup.okhttp.Call call =
         xijingTemplateGetValidateBeforeCall(
-            accountId, templateId, fields, progressListener, progressRequestListener);
+            accountId, templateId, fields, progressListener, progressRequestListener, headerPair);
     Type localVarReturnType = new TypeToken<XijingTemplateGetResponse>() {}.getType();
     apiClient.executeAsync(call, localVarReturnType, callback);
     return call;

@@ -35,8 +35,9 @@ public class OuterCluesContactApiContainer extends ApiContainer {
    *     response body
    */
   public OuterCluesContactUpdateResponseData outerCluesContactUpdate(
-      OuterCluesContactUpdateRequest data) throws ApiException, TencentAdsResponseException {
-    OuterCluesContactUpdateResponse resp = api.outerCluesContactUpdate(data);
+      OuterCluesContactUpdateRequest data, String... headerPair)
+      throws ApiException, TencentAdsResponseException {
+    OuterCluesContactUpdateResponse resp = api.outerCluesContactUpdate(data, headerPair);
     handleResponse(gson.toJson(resp));
     return resp.getData();
   }

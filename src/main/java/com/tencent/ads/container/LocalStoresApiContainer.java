@@ -44,9 +44,9 @@ public class LocalStoresApiContainer extends ApiContainer {
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
-  public LocalStoresAddResponseData localStoresAdd(LocalStoresAddRequest data)
+  public LocalStoresAddResponseData localStoresAdd(LocalStoresAddRequest data, String... headerPair)
       throws ApiException, TencentAdsResponseException {
-    LocalStoresAddResponse resp = api.localStoresAdd(data);
+    LocalStoresAddResponse resp = api.localStoresAdd(data, headerPair);
     handleResponse(gson.toJson(resp));
     return resp.getData();
   }
@@ -59,9 +59,10 @@ public class LocalStoresApiContainer extends ApiContainer {
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
-  public LocalStoresDeleteResponseData localStoresDelete(LocalStoresDeleteRequest data)
+  public LocalStoresDeleteResponseData localStoresDelete(
+      LocalStoresDeleteRequest data, String... headerPair)
       throws ApiException, TencentAdsResponseException {
-    LocalStoresDeleteResponse resp = api.localStoresDelete(data);
+    LocalStoresDeleteResponse resp = api.localStoresDelete(data, headerPair);
     handleResponse(gson.toJson(resp));
     return resp.getData();
   }
@@ -83,9 +84,11 @@ public class LocalStoresApiContainer extends ApiContainer {
       List<FilteringStruct> filtering,
       Long page,
       Long pageSize,
-      List<String> fields)
+      List<String> fields,
+      String... headerPair)
       throws ApiException, TencentAdsResponseException {
-    LocalStoresGetResponse resp = api.localStoresGet(accountId, filtering, page, pageSize, fields);
+    LocalStoresGetResponse resp =
+        api.localStoresGet(accountId, filtering, page, pageSize, fields, headerPair);
     handleResponse(gson.toJson(resp));
     return resp.getData();
   }
@@ -98,9 +101,10 @@ public class LocalStoresApiContainer extends ApiContainer {
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
-  public LocalStoresUpdateResponseData localStoresUpdate(LocalStoresUpdateRequest data)
+  public LocalStoresUpdateResponseData localStoresUpdate(
+      LocalStoresUpdateRequest data, String... headerPair)
       throws ApiException, TencentAdsResponseException {
-    LocalStoresUpdateResponse resp = api.localStoresUpdate(data);
+    LocalStoresUpdateResponse resp = api.localStoresUpdate(data, headerPair);
     handleResponse(gson.toJson(resp));
     return resp.getData();
   }

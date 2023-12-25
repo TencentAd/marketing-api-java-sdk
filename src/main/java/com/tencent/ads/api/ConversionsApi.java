@@ -63,8 +63,10 @@ public class ConversionsApi {
   public com.squareup.okhttp.Call conversionsAddCall(
       ConversionsAddRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
-      final ProgressRequestBody.ProgressRequestListener progressRequestListener)
+      final ProgressRequestBody.ProgressRequestListener progressRequestListener,
+      String... headerPair)
       throws ApiException {
+
     Object localVarPostBody = data;
 
     // create path and map variables
@@ -84,6 +86,15 @@ public class ConversionsApi {
     final String[] localVarContentTypes = {"application/json", "application/xml"};
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
     localVarHeaderParams.put("Content-Type", localVarContentType);
+
+    if (headerPair != null && headerPair.length > 0) {
+      if (headerPair.length % 2 != 0) {
+        throw new UnsupportedOperationException("Parameter headerPair must be paired");
+      }
+      for (int i = 0; i < headerPair.length / 2; i++) {
+        localVarHeaderParams.put(headerPair[i], headerPair[i * 2 + 1]);
+      }
+    }
 
     if (progressListener != null) {
       apiClient
@@ -120,7 +131,8 @@ public class ConversionsApi {
   private com.squareup.okhttp.Call conversionsAddValidateBeforeCall(
       ConversionsAddRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
-      final ProgressRequestBody.ProgressRequestListener progressRequestListener)
+      final ProgressRequestBody.ProgressRequestListener progressRequestListener,
+      String... headerPair)
       throws ApiException {
 
     // verify the required parameter 'data' is set
@@ -130,7 +142,7 @@ public class ConversionsApi {
     }
 
     com.squareup.okhttp.Call call =
-        conversionsAddCall(data, progressListener, progressRequestListener);
+        conversionsAddCall(data, progressListener, progressRequestListener, headerPair);
     return call;
   }
 
@@ -142,8 +154,9 @@ public class ConversionsApi {
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
-  public ConversionsAddResponse conversionsAdd(ConversionsAddRequest data) throws ApiException {
-    ApiResponse<ConversionsAddResponse> resp = conversionsAddWithHttpInfo(data);
+  public ConversionsAddResponse conversionsAdd(ConversionsAddRequest data, String... headerPair)
+      throws ApiException {
+    ApiResponse<ConversionsAddResponse> resp = conversionsAddWithHttpInfo(data, headerPair);
     return resp.getData();
   }
 
@@ -155,9 +168,9 @@ public class ConversionsApi {
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
-  public ApiResponse<ConversionsAddResponse> conversionsAddWithHttpInfo(ConversionsAddRequest data)
-      throws ApiException {
-    com.squareup.okhttp.Call call = conversionsAddValidateBeforeCall(data, null, null);
+  public ApiResponse<ConversionsAddResponse> conversionsAddWithHttpInfo(
+      ConversionsAddRequest data, String... headerPair) throws ApiException {
+    com.squareup.okhttp.Call call = conversionsAddValidateBeforeCall(data, null, null, headerPair);
     Type localVarReturnType = new TypeToken<ConversionsAddResponse>() {}.getType();
     return apiClient.execute(call, localVarReturnType);
   }
@@ -171,7 +184,9 @@ public class ConversionsApi {
    * @throws ApiException If fail to process the API call, e.g. serializing the request body object
    */
   public com.squareup.okhttp.Call conversionsAddAsync(
-      ConversionsAddRequest data, final ApiCallback<ConversionsAddResponse> callback)
+      ConversionsAddRequest data,
+      final ApiCallback<ConversionsAddResponse> callback,
+      String... headerPair)
       throws ApiException {
 
     ProgressResponseBody.ProgressListener progressListener = null;
@@ -196,7 +211,8 @@ public class ConversionsApi {
     }
 
     com.squareup.okhttp.Call call =
-        conversionsAddValidateBeforeCall(data, progressListener, progressRequestListener);
+        conversionsAddValidateBeforeCall(
+            data, progressListener, progressRequestListener, headerPair);
     Type localVarReturnType = new TypeToken<ConversionsAddResponse>() {}.getType();
     apiClient.executeAsync(call, localVarReturnType, callback);
     return call;
@@ -221,8 +237,10 @@ public class ConversionsApi {
       Long pageSize,
       List<String> fields,
       final ProgressResponseBody.ProgressListener progressListener,
-      final ProgressRequestBody.ProgressRequestListener progressRequestListener)
+      final ProgressRequestBody.ProgressRequestListener progressRequestListener,
+      String... headerPair)
       throws ApiException {
+
     Object localVarPostBody = null;
 
     // create path and map variables
@@ -252,6 +270,15 @@ public class ConversionsApi {
     final String[] localVarContentTypes = {"text/plain"};
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
     localVarHeaderParams.put("Content-Type", localVarContentType);
+
+    if (headerPair != null && headerPair.length > 0) {
+      if (headerPair.length % 2 != 0) {
+        throw new UnsupportedOperationException("Parameter headerPair must be paired");
+      }
+      for (int i = 0; i < headerPair.length / 2; i++) {
+        localVarHeaderParams.put(headerPair[i], headerPair[i * 2 + 1]);
+      }
+    }
 
     if (progressListener != null) {
       apiClient
@@ -292,7 +319,8 @@ public class ConversionsApi {
       Long pageSize,
       List<String> fields,
       final ProgressResponseBody.ProgressListener progressListener,
-      final ProgressRequestBody.ProgressRequestListener progressRequestListener)
+      final ProgressRequestBody.ProgressRequestListener progressRequestListener,
+      String... headerPair)
       throws ApiException {
 
     // verify the required parameter 'accountId' is set
@@ -309,7 +337,8 @@ public class ConversionsApi {
             pageSize,
             fields,
             progressListener,
-            progressRequestListener);
+            progressRequestListener,
+            headerPair);
     return call;
   }
 
@@ -330,10 +359,11 @@ public class ConversionsApi {
       List<FilteringStruct> filtering,
       Long page,
       Long pageSize,
-      List<String> fields)
+      List<String> fields,
+      String... headerPair)
       throws ApiException {
     ApiResponse<ConversionsGetResponse> resp =
-        conversionsGetWithHttpInfo(accountId, filtering, page, pageSize, fields);
+        conversionsGetWithHttpInfo(accountId, filtering, page, pageSize, fields, headerPair);
     return resp.getData();
   }
 
@@ -354,10 +384,12 @@ public class ConversionsApi {
       List<FilteringStruct> filtering,
       Long page,
       Long pageSize,
-      List<String> fields)
+      List<String> fields,
+      String... headerPair)
       throws ApiException {
     com.squareup.okhttp.Call call =
-        conversionsGetValidateBeforeCall(accountId, filtering, page, pageSize, fields, null, null);
+        conversionsGetValidateBeforeCall(
+            accountId, filtering, page, pageSize, fields, null, null, headerPair);
     Type localVarReturnType = new TypeToken<ConversionsGetResponse>() {}.getType();
     return apiClient.execute(call, localVarReturnType);
   }
@@ -380,7 +412,8 @@ public class ConversionsApi {
       Long page,
       Long pageSize,
       List<String> fields,
-      final ApiCallback<ConversionsGetResponse> callback)
+      final ApiCallback<ConversionsGetResponse> callback,
+      String... headerPair)
       throws ApiException {
 
     ProgressResponseBody.ProgressListener progressListener = null;
@@ -412,7 +445,8 @@ public class ConversionsApi {
             pageSize,
             fields,
             progressListener,
-            progressRequestListener);
+            progressRequestListener,
+            headerPair);
     Type localVarReturnType = new TypeToken<ConversionsGetResponse>() {}.getType();
     apiClient.executeAsync(call, localVarReturnType, callback);
     return call;

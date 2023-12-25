@@ -44,9 +44,9 @@ public class AdcreativesApiContainer extends ApiContainer {
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
-  public AdcreativesAddResponseData adcreativesAdd(AdcreativesAddRequest data)
+  public AdcreativesAddResponseData adcreativesAdd(AdcreativesAddRequest data, String... headerPair)
       throws ApiException, TencentAdsResponseException {
-    AdcreativesAddResponse resp = api.adcreativesAdd(data);
+    AdcreativesAddResponse resp = api.adcreativesAdd(data, headerPair);
     handleResponse(gson.toJson(resp));
     return resp.getData();
   }
@@ -59,9 +59,10 @@ public class AdcreativesApiContainer extends ApiContainer {
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
-  public AdcreativesDeleteResponseData adcreativesDelete(AdcreativesDeleteRequest data)
+  public AdcreativesDeleteResponseData adcreativesDelete(
+      AdcreativesDeleteRequest data, String... headerPair)
       throws ApiException, TencentAdsResponseException {
-    AdcreativesDeleteResponse resp = api.adcreativesDelete(data);
+    AdcreativesDeleteResponse resp = api.adcreativesDelete(data, headerPair);
     handleResponse(gson.toJson(resp));
     return resp.getData();
   }
@@ -89,7 +90,8 @@ public class AdcreativesApiContainer extends ApiContainer {
       Boolean isDeleted,
       Boolean linkPageTypeCompatible,
       Boolean weixinOfficialAccountsUpgradeEnabled,
-      List<String> fields)
+      List<String> fields,
+      String... headerPair)
       throws ApiException, TencentAdsResponseException {
     AdcreativesGetResponse resp =
         api.adcreativesGet(
@@ -100,7 +102,8 @@ public class AdcreativesApiContainer extends ApiContainer {
             isDeleted,
             linkPageTypeCompatible,
             weixinOfficialAccountsUpgradeEnabled,
-            fields);
+            fields,
+            headerPair);
     handleResponse(gson.toJson(resp));
     return resp.getData();
   }
@@ -113,9 +116,10 @@ public class AdcreativesApiContainer extends ApiContainer {
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
-  public AdcreativesUpdateResponseData adcreativesUpdate(AdcreativesUpdateRequest data)
+  public AdcreativesUpdateResponseData adcreativesUpdate(
+      AdcreativesUpdateRequest data, String... headerPair)
       throws ApiException, TencentAdsResponseException {
-    AdcreativesUpdateResponse resp = api.adcreativesUpdate(data);
+    AdcreativesUpdateResponse resp = api.adcreativesUpdate(data, headerPair);
     handleResponse(gson.toJson(resp));
     return resp.getData();
   }

@@ -61,8 +61,10 @@ public class ComplianceValidationApi {
   public com.squareup.okhttp.Call complianceValidationGetCall(
       ComplianceValidationGetRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
-      final ProgressRequestBody.ProgressRequestListener progressRequestListener)
+      final ProgressRequestBody.ProgressRequestListener progressRequestListener,
+      String... headerPair)
       throws ApiException {
+
     Object localVarPostBody = data;
 
     // create path and map variables
@@ -82,6 +84,15 @@ public class ComplianceValidationApi {
     final String[] localVarContentTypes = {"application/json", "application/xml"};
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
     localVarHeaderParams.put("Content-Type", localVarContentType);
+
+    if (headerPair != null && headerPair.length > 0) {
+      if (headerPair.length % 2 != 0) {
+        throw new UnsupportedOperationException("Parameter headerPair must be paired");
+      }
+      for (int i = 0; i < headerPair.length / 2; i++) {
+        localVarHeaderParams.put(headerPair[i], headerPair[i * 2 + 1]);
+      }
+    }
 
     if (progressListener != null) {
       apiClient
@@ -118,7 +129,8 @@ public class ComplianceValidationApi {
   private com.squareup.okhttp.Call complianceValidationGetValidateBeforeCall(
       ComplianceValidationGetRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
-      final ProgressRequestBody.ProgressRequestListener progressRequestListener)
+      final ProgressRequestBody.ProgressRequestListener progressRequestListener,
+      String... headerPair)
       throws ApiException {
 
     // verify the required parameter 'data' is set
@@ -128,7 +140,7 @@ public class ComplianceValidationApi {
     }
 
     com.squareup.okhttp.Call call =
-        complianceValidationGetCall(data, progressListener, progressRequestListener);
+        complianceValidationGetCall(data, progressListener, progressRequestListener, headerPair);
     return call;
   }
 
@@ -141,8 +153,9 @@ public class ComplianceValidationApi {
    *     response body
    */
   public ComplianceValidationGetResponse complianceValidationGet(
-      ComplianceValidationGetRequest data) throws ApiException {
-    ApiResponse<ComplianceValidationGetResponse> resp = complianceValidationGetWithHttpInfo(data);
+      ComplianceValidationGetRequest data, String... headerPair) throws ApiException {
+    ApiResponse<ComplianceValidationGetResponse> resp =
+        complianceValidationGetWithHttpInfo(data, headerPair);
     return resp.getData();
   }
 
@@ -155,8 +168,9 @@ public class ComplianceValidationApi {
    *     response body
    */
   public ApiResponse<ComplianceValidationGetResponse> complianceValidationGetWithHttpInfo(
-      ComplianceValidationGetRequest data) throws ApiException {
-    com.squareup.okhttp.Call call = complianceValidationGetValidateBeforeCall(data, null, null);
+      ComplianceValidationGetRequest data, String... headerPair) throws ApiException {
+    com.squareup.okhttp.Call call =
+        complianceValidationGetValidateBeforeCall(data, null, null, headerPair);
     Type localVarReturnType = new TypeToken<ComplianceValidationGetResponse>() {}.getType();
     return apiClient.execute(call, localVarReturnType);
   }
@@ -171,7 +185,8 @@ public class ComplianceValidationApi {
    */
   public com.squareup.okhttp.Call complianceValidationGetAsync(
       ComplianceValidationGetRequest data,
-      final ApiCallback<ComplianceValidationGetResponse> callback)
+      final ApiCallback<ComplianceValidationGetResponse> callback,
+      String... headerPair)
       throws ApiException {
 
     ProgressResponseBody.ProgressListener progressListener = null;
@@ -196,7 +211,8 @@ public class ComplianceValidationApi {
     }
 
     com.squareup.okhttp.Call call =
-        complianceValidationGetValidateBeforeCall(data, progressListener, progressRequestListener);
+        complianceValidationGetValidateBeforeCall(
+            data, progressListener, progressRequestListener, headerPair);
     Type localVarReturnType = new TypeToken<ComplianceValidationGetResponse>() {}.getType();
     apiClient.executeAsync(call, localVarReturnType, callback);
     return call;

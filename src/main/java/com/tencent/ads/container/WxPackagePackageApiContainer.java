@@ -38,9 +38,10 @@ public class WxPackagePackageApiContainer extends ApiContainer {
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
-  public WxPackagePackageAddResponse wxPackagePackageAdd(WxPackagePackageAddRequest data)
+  public WxPackagePackageAddResponse wxPackagePackageAdd(
+      WxPackagePackageAddRequest data, String... headerPair)
       throws ApiException, TencentAdsResponseException {
-    WxPackagePackageAddResponse resp = api.wxPackagePackageAdd(data);
+    WxPackagePackageAddResponse resp = api.wxPackagePackageAdd(data, headerPair);
     handleResponse(gson.toJson(resp));
 
     return resp;
@@ -58,10 +59,10 @@ public class WxPackagePackageApiContainer extends ApiContainer {
    *     response body
    */
   public WxPackagePackageGetResponseData wxPackagePackageGet(
-      Long accountId, Long pageSize, Long pageIndex, List<String> fields)
+      Long accountId, Long pageSize, Long pageIndex, List<String> fields, String... headerPair)
       throws ApiException, TencentAdsResponseException {
     WxPackagePackageGetResponse resp =
-        api.wxPackagePackageGet(accountId, pageSize, pageIndex, fields);
+        api.wxPackagePackageGet(accountId, pageSize, pageIndex, fields, headerPair);
     handleResponse(gson.toJson(resp));
     return resp.getData();
   }
@@ -74,9 +75,10 @@ public class WxPackagePackageApiContainer extends ApiContainer {
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
-  public WxPackagePackageUpdateResponse wxPackagePackageUpdate(WxPackagePackageUpdateRequest data)
+  public WxPackagePackageUpdateResponse wxPackagePackageUpdate(
+      WxPackagePackageUpdateRequest data, String... headerPair)
       throws ApiException, TencentAdsResponseException {
-    WxPackagePackageUpdateResponse resp = api.wxPackagePackageUpdate(data);
+    WxPackagePackageUpdateResponse resp = api.wxPackagePackageUpdate(data, headerPair);
     handleResponse(gson.toJson(resp));
 
     return resp;

@@ -55,7 +55,8 @@ public class DynamicAdVideoTemplatesApiContainer extends ApiContainer {
       List<Long> templateIdList,
       String templateName,
       String dynamicAdTemplateOwnershipType,
-      List<String> fields)
+      List<String> fields,
+      String... headerPair)
       throws ApiException, TencentAdsResponseException {
     DynamicAdVideoTemplatesGetResponse resp =
         api.dynamicAdVideoTemplatesGet(
@@ -69,7 +70,8 @@ public class DynamicAdVideoTemplatesApiContainer extends ApiContainer {
             templateIdList,
             templateName,
             dynamicAdTemplateOwnershipType,
-            fields);
+            fields,
+            headerPair);
     handleResponse(gson.toJson(resp));
     return resp.getData();
   }

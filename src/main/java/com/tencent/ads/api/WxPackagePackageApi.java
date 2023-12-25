@@ -64,8 +64,10 @@ public class WxPackagePackageApi {
   public com.squareup.okhttp.Call wxPackagePackageAddCall(
       WxPackagePackageAddRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
-      final ProgressRequestBody.ProgressRequestListener progressRequestListener)
+      final ProgressRequestBody.ProgressRequestListener progressRequestListener,
+      String... headerPair)
       throws ApiException {
+
     Object localVarPostBody = data;
 
     // create path and map variables
@@ -85,6 +87,15 @@ public class WxPackagePackageApi {
     final String[] localVarContentTypes = {"application/json", "application/xml"};
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
     localVarHeaderParams.put("Content-Type", localVarContentType);
+
+    if (headerPair != null && headerPair.length > 0) {
+      if (headerPair.length % 2 != 0) {
+        throw new UnsupportedOperationException("Parameter headerPair must be paired");
+      }
+      for (int i = 0; i < headerPair.length / 2; i++) {
+        localVarHeaderParams.put(headerPair[i], headerPair[i * 2 + 1]);
+      }
+    }
 
     if (progressListener != null) {
       apiClient
@@ -121,7 +132,8 @@ public class WxPackagePackageApi {
   private com.squareup.okhttp.Call wxPackagePackageAddValidateBeforeCall(
       WxPackagePackageAddRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
-      final ProgressRequestBody.ProgressRequestListener progressRequestListener)
+      final ProgressRequestBody.ProgressRequestListener progressRequestListener,
+      String... headerPair)
       throws ApiException {
 
     // verify the required parameter 'data' is set
@@ -131,7 +143,7 @@ public class WxPackagePackageApi {
     }
 
     com.squareup.okhttp.Call call =
-        wxPackagePackageAddCall(data, progressListener, progressRequestListener);
+        wxPackagePackageAddCall(data, progressListener, progressRequestListener, headerPair);
     return call;
   }
 
@@ -143,9 +155,10 @@ public class WxPackagePackageApi {
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
-  public WxPackagePackageAddResponse wxPackagePackageAdd(WxPackagePackageAddRequest data)
-      throws ApiException {
-    ApiResponse<WxPackagePackageAddResponse> resp = wxPackagePackageAddWithHttpInfo(data);
+  public WxPackagePackageAddResponse wxPackagePackageAdd(
+      WxPackagePackageAddRequest data, String... headerPair) throws ApiException {
+    ApiResponse<WxPackagePackageAddResponse> resp =
+        wxPackagePackageAddWithHttpInfo(data, headerPair);
     return resp.getData();
   }
 
@@ -158,8 +171,9 @@ public class WxPackagePackageApi {
    *     response body
    */
   public ApiResponse<WxPackagePackageAddResponse> wxPackagePackageAddWithHttpInfo(
-      WxPackagePackageAddRequest data) throws ApiException {
-    com.squareup.okhttp.Call call = wxPackagePackageAddValidateBeforeCall(data, null, null);
+      WxPackagePackageAddRequest data, String... headerPair) throws ApiException {
+    com.squareup.okhttp.Call call =
+        wxPackagePackageAddValidateBeforeCall(data, null, null, headerPair);
     Type localVarReturnType = new TypeToken<WxPackagePackageAddResponse>() {}.getType();
     return apiClient.execute(call, localVarReturnType);
   }
@@ -173,7 +187,9 @@ public class WxPackagePackageApi {
    * @throws ApiException If fail to process the API call, e.g. serializing the request body object
    */
   public com.squareup.okhttp.Call wxPackagePackageAddAsync(
-      WxPackagePackageAddRequest data, final ApiCallback<WxPackagePackageAddResponse> callback)
+      WxPackagePackageAddRequest data,
+      final ApiCallback<WxPackagePackageAddResponse> callback,
+      String... headerPair)
       throws ApiException {
 
     ProgressResponseBody.ProgressListener progressListener = null;
@@ -198,7 +214,8 @@ public class WxPackagePackageApi {
     }
 
     com.squareup.okhttp.Call call =
-        wxPackagePackageAddValidateBeforeCall(data, progressListener, progressRequestListener);
+        wxPackagePackageAddValidateBeforeCall(
+            data, progressListener, progressRequestListener, headerPair);
     Type localVarReturnType = new TypeToken<WxPackagePackageAddResponse>() {}.getType();
     apiClient.executeAsync(call, localVarReturnType, callback);
     return call;
@@ -221,8 +238,10 @@ public class WxPackagePackageApi {
       Long pageIndex,
       List<String> fields,
       final ProgressResponseBody.ProgressListener progressListener,
-      final ProgressRequestBody.ProgressRequestListener progressRequestListener)
+      final ProgressRequestBody.ProgressRequestListener progressRequestListener,
+      String... headerPair)
       throws ApiException {
+
     Object localVarPostBody = null;
 
     // create path and map variables
@@ -250,6 +269,15 @@ public class WxPackagePackageApi {
     final String[] localVarContentTypes = {"text/plain"};
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
     localVarHeaderParams.put("Content-Type", localVarContentType);
+
+    if (headerPair != null && headerPair.length > 0) {
+      if (headerPair.length % 2 != 0) {
+        throw new UnsupportedOperationException("Parameter headerPair must be paired");
+      }
+      for (int i = 0; i < headerPair.length / 2; i++) {
+        localVarHeaderParams.put(headerPair[i], headerPair[i * 2 + 1]);
+      }
+    }
 
     if (progressListener != null) {
       apiClient
@@ -289,7 +317,8 @@ public class WxPackagePackageApi {
       Long pageIndex,
       List<String> fields,
       final ProgressResponseBody.ProgressListener progressListener,
-      final ProgressRequestBody.ProgressRequestListener progressRequestListener)
+      final ProgressRequestBody.ProgressRequestListener progressRequestListener,
+      String... headerPair)
       throws ApiException {
 
     // verify the required parameter 'accountId' is set
@@ -300,7 +329,13 @@ public class WxPackagePackageApi {
 
     com.squareup.okhttp.Call call =
         wxPackagePackageGetCall(
-            accountId, pageSize, pageIndex, fields, progressListener, progressRequestListener);
+            accountId,
+            pageSize,
+            pageIndex,
+            fields,
+            progressListener,
+            progressRequestListener,
+            headerPair);
     return call;
   }
 
@@ -316,9 +351,10 @@ public class WxPackagePackageApi {
    *     response body
    */
   public WxPackagePackageGetResponse wxPackagePackageGet(
-      Long accountId, Long pageSize, Long pageIndex, List<String> fields) throws ApiException {
+      Long accountId, Long pageSize, Long pageIndex, List<String> fields, String... headerPair)
+      throws ApiException {
     ApiResponse<WxPackagePackageGetResponse> resp =
-        wxPackagePackageGetWithHttpInfo(accountId, pageSize, pageIndex, fields);
+        wxPackagePackageGetWithHttpInfo(accountId, pageSize, pageIndex, fields, headerPair);
     return resp.getData();
   }
 
@@ -334,9 +370,11 @@ public class WxPackagePackageApi {
    *     response body
    */
   public ApiResponse<WxPackagePackageGetResponse> wxPackagePackageGetWithHttpInfo(
-      Long accountId, Long pageSize, Long pageIndex, List<String> fields) throws ApiException {
+      Long accountId, Long pageSize, Long pageIndex, List<String> fields, String... headerPair)
+      throws ApiException {
     com.squareup.okhttp.Call call =
-        wxPackagePackageGetValidateBeforeCall(accountId, pageSize, pageIndex, fields, null, null);
+        wxPackagePackageGetValidateBeforeCall(
+            accountId, pageSize, pageIndex, fields, null, null, headerPair);
     Type localVarReturnType = new TypeToken<WxPackagePackageGetResponse>() {}.getType();
     return apiClient.execute(call, localVarReturnType);
   }
@@ -357,7 +395,8 @@ public class WxPackagePackageApi {
       Long pageSize,
       Long pageIndex,
       List<String> fields,
-      final ApiCallback<WxPackagePackageGetResponse> callback)
+      final ApiCallback<WxPackagePackageGetResponse> callback,
+      String... headerPair)
       throws ApiException {
 
     ProgressResponseBody.ProgressListener progressListener = null;
@@ -383,7 +422,13 @@ public class WxPackagePackageApi {
 
     com.squareup.okhttp.Call call =
         wxPackagePackageGetValidateBeforeCall(
-            accountId, pageSize, pageIndex, fields, progressListener, progressRequestListener);
+            accountId,
+            pageSize,
+            pageIndex,
+            fields,
+            progressListener,
+            progressRequestListener,
+            headerPair);
     Type localVarReturnType = new TypeToken<WxPackagePackageGetResponse>() {}.getType();
     apiClient.executeAsync(call, localVarReturnType, callback);
     return call;
@@ -400,8 +445,10 @@ public class WxPackagePackageApi {
   public com.squareup.okhttp.Call wxPackagePackageUpdateCall(
       WxPackagePackageUpdateRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
-      final ProgressRequestBody.ProgressRequestListener progressRequestListener)
+      final ProgressRequestBody.ProgressRequestListener progressRequestListener,
+      String... headerPair)
       throws ApiException {
+
     Object localVarPostBody = data;
 
     // create path and map variables
@@ -421,6 +468,15 @@ public class WxPackagePackageApi {
     final String[] localVarContentTypes = {"application/json", "application/xml"};
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
     localVarHeaderParams.put("Content-Type", localVarContentType);
+
+    if (headerPair != null && headerPair.length > 0) {
+      if (headerPair.length % 2 != 0) {
+        throw new UnsupportedOperationException("Parameter headerPair must be paired");
+      }
+      for (int i = 0; i < headerPair.length / 2; i++) {
+        localVarHeaderParams.put(headerPair[i], headerPair[i * 2 + 1]);
+      }
+    }
 
     if (progressListener != null) {
       apiClient
@@ -457,7 +513,8 @@ public class WxPackagePackageApi {
   private com.squareup.okhttp.Call wxPackagePackageUpdateValidateBeforeCall(
       WxPackagePackageUpdateRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
-      final ProgressRequestBody.ProgressRequestListener progressRequestListener)
+      final ProgressRequestBody.ProgressRequestListener progressRequestListener,
+      String... headerPair)
       throws ApiException {
 
     // verify the required parameter 'data' is set
@@ -467,7 +524,7 @@ public class WxPackagePackageApi {
     }
 
     com.squareup.okhttp.Call call =
-        wxPackagePackageUpdateCall(data, progressListener, progressRequestListener);
+        wxPackagePackageUpdateCall(data, progressListener, progressRequestListener, headerPair);
     return call;
   }
 
@@ -479,9 +536,10 @@ public class WxPackagePackageApi {
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
-  public WxPackagePackageUpdateResponse wxPackagePackageUpdate(WxPackagePackageUpdateRequest data)
-      throws ApiException {
-    ApiResponse<WxPackagePackageUpdateResponse> resp = wxPackagePackageUpdateWithHttpInfo(data);
+  public WxPackagePackageUpdateResponse wxPackagePackageUpdate(
+      WxPackagePackageUpdateRequest data, String... headerPair) throws ApiException {
+    ApiResponse<WxPackagePackageUpdateResponse> resp =
+        wxPackagePackageUpdateWithHttpInfo(data, headerPair);
     return resp.getData();
   }
 
@@ -494,8 +552,9 @@ public class WxPackagePackageApi {
    *     response body
    */
   public ApiResponse<WxPackagePackageUpdateResponse> wxPackagePackageUpdateWithHttpInfo(
-      WxPackagePackageUpdateRequest data) throws ApiException {
-    com.squareup.okhttp.Call call = wxPackagePackageUpdateValidateBeforeCall(data, null, null);
+      WxPackagePackageUpdateRequest data, String... headerPair) throws ApiException {
+    com.squareup.okhttp.Call call =
+        wxPackagePackageUpdateValidateBeforeCall(data, null, null, headerPair);
     Type localVarReturnType = new TypeToken<WxPackagePackageUpdateResponse>() {}.getType();
     return apiClient.execute(call, localVarReturnType);
   }
@@ -510,7 +569,8 @@ public class WxPackagePackageApi {
    */
   public com.squareup.okhttp.Call wxPackagePackageUpdateAsync(
       WxPackagePackageUpdateRequest data,
-      final ApiCallback<WxPackagePackageUpdateResponse> callback)
+      final ApiCallback<WxPackagePackageUpdateResponse> callback,
+      String... headerPair)
       throws ApiException {
 
     ProgressResponseBody.ProgressListener progressListener = null;
@@ -535,7 +595,8 @@ public class WxPackagePackageApi {
     }
 
     com.squareup.okhttp.Call call =
-        wxPackagePackageUpdateValidateBeforeCall(data, progressListener, progressRequestListener);
+        wxPackagePackageUpdateValidateBeforeCall(
+            data, progressListener, progressRequestListener, headerPair);
     Type localVarReturnType = new TypeToken<WxPackagePackageUpdateResponse>() {}.getType();
     apiClient.executeAsync(call, localVarReturnType, callback);
     return call;

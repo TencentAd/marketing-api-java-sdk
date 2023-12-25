@@ -12,7 +12,6 @@
 
 package com.tencent.ads.model;
 
-
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.stream.JsonReader;
@@ -38,9 +37,7 @@ public enum DynamicAdTemplateOwnershipType {
 
   COMMON("COMMON"),
 
-  PRODUCT_CATALOG_OWNED("PRODUCT_CATALOG_OWNED"),
-
-  PRODUCT_VIDEO_STRAIGHT_OUT("PRODUCT_VIDEO_STRAIGHT_OUT");
+  PRODUCT_CATALOG_OWNED("PRODUCT_CATALOG_OWNED");
 
   private String value;
 

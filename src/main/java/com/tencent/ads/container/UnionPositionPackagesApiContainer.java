@@ -44,8 +44,9 @@ public class UnionPositionPackagesApiContainer extends ApiContainer {
    *     response body
    */
   public UnionPositionPackagesAddResponseData unionPositionPackagesAdd(
-      UnionPositionPackagesAddRequest data) throws ApiException, TencentAdsResponseException {
-    UnionPositionPackagesAddResponse resp = api.unionPositionPackagesAdd(data);
+      UnionPositionPackagesAddRequest data, String... headerPair)
+      throws ApiException, TencentAdsResponseException {
+    UnionPositionPackagesAddResponse resp = api.unionPositionPackagesAdd(data, headerPair);
     handleResponse(gson.toJson(resp));
     return resp.getData();
   }
@@ -59,8 +60,9 @@ public class UnionPositionPackagesApiContainer extends ApiContainer {
    *     response body
    */
   public UnionPositionPackagesDeleteResponse unionPositionPackagesDelete(
-      UnionPositionPackagesDeleteRequest data) throws ApiException, TencentAdsResponseException {
-    UnionPositionPackagesDeleteResponse resp = api.unionPositionPackagesDelete(data);
+      UnionPositionPackagesDeleteRequest data, String... headerPair)
+      throws ApiException, TencentAdsResponseException {
+    UnionPositionPackagesDeleteResponse resp = api.unionPositionPackagesDelete(data, headerPair);
     handleResponse(gson.toJson(resp));
 
     return resp;
@@ -83,10 +85,11 @@ public class UnionPositionPackagesApiContainer extends ApiContainer {
       List<FilteringStruct> filtering,
       Long page,
       Long pageSize,
-      List<String> fields)
+      List<String> fields,
+      String... headerPair)
       throws ApiException, TencentAdsResponseException {
     UnionPositionPackagesGetResponse resp =
-        api.unionPositionPackagesGet(accountId, filtering, page, pageSize, fields);
+        api.unionPositionPackagesGet(accountId, filtering, page, pageSize, fields, headerPair);
     handleResponse(gson.toJson(resp));
     return resp.getData();
   }
@@ -100,8 +103,9 @@ public class UnionPositionPackagesApiContainer extends ApiContainer {
    *     response body
    */
   public UnionPositionPackagesUpdateResponseData unionPositionPackagesUpdate(
-      UnionPositionPackagesUpdateRequest data) throws ApiException, TencentAdsResponseException {
-    UnionPositionPackagesUpdateResponse resp = api.unionPositionPackagesUpdate(data);
+      UnionPositionPackagesUpdateRequest data, String... headerPair)
+      throws ApiException, TencentAdsResponseException {
+    UnionPositionPackagesUpdateResponse resp = api.unionPositionPackagesUpdate(data, headerPair);
     handleResponse(gson.toJson(resp));
     return resp.getData();
   }

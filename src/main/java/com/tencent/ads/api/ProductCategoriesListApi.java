@@ -74,8 +74,10 @@ public class ProductCategoriesListApi {
       String categoryName,
       List<String> fields,
       final ProgressResponseBody.ProgressListener progressListener,
-      final ProgressRequestBody.ProgressRequestListener progressRequestListener)
+      final ProgressRequestBody.ProgressRequestListener progressRequestListener,
+      String... headerPair)
       throws ApiException {
+
     Object localVarPostBody = null;
 
     // create path and map variables
@@ -109,6 +111,15 @@ public class ProductCategoriesListApi {
     final String[] localVarContentTypes = {"text/plain"};
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
     localVarHeaderParams.put("Content-Type", localVarContentType);
+
+    if (headerPair != null && headerPair.length > 0) {
+      if (headerPair.length % 2 != 0) {
+        throw new UnsupportedOperationException("Parameter headerPair must be paired");
+      }
+      for (int i = 0; i < headerPair.length / 2; i++) {
+        localVarHeaderParams.put(headerPair[i], headerPair[i * 2 + 1]);
+      }
+    }
 
     if (progressListener != null) {
       apiClient
@@ -152,7 +163,8 @@ public class ProductCategoriesListApi {
       String categoryName,
       List<String> fields,
       final ProgressResponseBody.ProgressListener progressListener,
-      final ProgressRequestBody.ProgressRequestListener progressRequestListener)
+      final ProgressRequestBody.ProgressRequestListener progressRequestListener,
+      String... headerPair)
       throws ApiException {
 
     // verify the required parameter 'accountId' is set
@@ -190,7 +202,8 @@ public class ProductCategoriesListApi {
             categoryName,
             fields,
             progressListener,
-            progressRequestListener);
+            progressRequestListener,
+            headerPair);
     return call;
   }
 
@@ -217,11 +230,20 @@ public class ProductCategoriesListApi {
       Long level,
       Long categoryId,
       String categoryName,
-      List<String> fields)
+      List<String> fields,
+      String... headerPair)
       throws ApiException {
     ApiResponse<ProductCategoriesListGetResponse> resp =
         productCategoriesListGetWithHttpInfo(
-            accountId, productCatalogId, page, pageSize, level, categoryId, categoryName, fields);
+            accountId,
+            productCatalogId,
+            page,
+            pageSize,
+            level,
+            categoryId,
+            categoryName,
+            fields,
+            headerPair);
     return resp.getData();
   }
 
@@ -248,7 +270,8 @@ public class ProductCategoriesListApi {
       Long level,
       Long categoryId,
       String categoryName,
-      List<String> fields)
+      List<String> fields,
+      String... headerPair)
       throws ApiException {
     com.squareup.okhttp.Call call =
         productCategoriesListGetValidateBeforeCall(
@@ -261,7 +284,8 @@ public class ProductCategoriesListApi {
             categoryName,
             fields,
             null,
-            null);
+            null,
+            headerPair);
     Type localVarReturnType = new TypeToken<ProductCategoriesListGetResponse>() {}.getType();
     return apiClient.execute(call, localVarReturnType);
   }
@@ -290,7 +314,8 @@ public class ProductCategoriesListApi {
       Long categoryId,
       String categoryName,
       List<String> fields,
-      final ApiCallback<ProductCategoriesListGetResponse> callback)
+      final ApiCallback<ProductCategoriesListGetResponse> callback,
+      String... headerPair)
       throws ApiException {
 
     ProgressResponseBody.ProgressListener progressListener = null;
@@ -325,7 +350,8 @@ public class ProductCategoriesListApi {
             categoryName,
             fields,
             progressListener,
-            progressRequestListener);
+            progressRequestListener,
+            headerPair);
     Type localVarReturnType = new TypeToken<ProductCategoriesListGetResponse>() {}.getType();
     apiClient.executeAsync(call, localVarReturnType, callback);
     return call;

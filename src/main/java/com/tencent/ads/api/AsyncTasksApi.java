@@ -63,8 +63,10 @@ public class AsyncTasksApi {
   public com.squareup.okhttp.Call asyncTasksAddCall(
       AsyncTasksAddRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
-      final ProgressRequestBody.ProgressRequestListener progressRequestListener)
+      final ProgressRequestBody.ProgressRequestListener progressRequestListener,
+      String... headerPair)
       throws ApiException {
+
     Object localVarPostBody = data;
 
     // create path and map variables
@@ -84,6 +86,15 @@ public class AsyncTasksApi {
     final String[] localVarContentTypes = {"application/json", "application/xml"};
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
     localVarHeaderParams.put("Content-Type", localVarContentType);
+
+    if (headerPair != null && headerPair.length > 0) {
+      if (headerPair.length % 2 != 0) {
+        throw new UnsupportedOperationException("Parameter headerPair must be paired");
+      }
+      for (int i = 0; i < headerPair.length / 2; i++) {
+        localVarHeaderParams.put(headerPair[i], headerPair[i * 2 + 1]);
+      }
+    }
 
     if (progressListener != null) {
       apiClient
@@ -120,7 +131,8 @@ public class AsyncTasksApi {
   private com.squareup.okhttp.Call asyncTasksAddValidateBeforeCall(
       AsyncTasksAddRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
-      final ProgressRequestBody.ProgressRequestListener progressRequestListener)
+      final ProgressRequestBody.ProgressRequestListener progressRequestListener,
+      String... headerPair)
       throws ApiException {
 
     // verify the required parameter 'data' is set
@@ -130,7 +142,7 @@ public class AsyncTasksApi {
     }
 
     com.squareup.okhttp.Call call =
-        asyncTasksAddCall(data, progressListener, progressRequestListener);
+        asyncTasksAddCall(data, progressListener, progressRequestListener, headerPair);
     return call;
   }
 
@@ -142,8 +154,9 @@ public class AsyncTasksApi {
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
-  public AsyncTasksAddResponse asyncTasksAdd(AsyncTasksAddRequest data) throws ApiException {
-    ApiResponse<AsyncTasksAddResponse> resp = asyncTasksAddWithHttpInfo(data);
+  public AsyncTasksAddResponse asyncTasksAdd(AsyncTasksAddRequest data, String... headerPair)
+      throws ApiException {
+    ApiResponse<AsyncTasksAddResponse> resp = asyncTasksAddWithHttpInfo(data, headerPair);
     return resp.getData();
   }
 
@@ -155,9 +168,9 @@ public class AsyncTasksApi {
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
-  public ApiResponse<AsyncTasksAddResponse> asyncTasksAddWithHttpInfo(AsyncTasksAddRequest data)
-      throws ApiException {
-    com.squareup.okhttp.Call call = asyncTasksAddValidateBeforeCall(data, null, null);
+  public ApiResponse<AsyncTasksAddResponse> asyncTasksAddWithHttpInfo(
+      AsyncTasksAddRequest data, String... headerPair) throws ApiException {
+    com.squareup.okhttp.Call call = asyncTasksAddValidateBeforeCall(data, null, null, headerPair);
     Type localVarReturnType = new TypeToken<AsyncTasksAddResponse>() {}.getType();
     return apiClient.execute(call, localVarReturnType);
   }
@@ -171,7 +184,9 @@ public class AsyncTasksApi {
    * @throws ApiException If fail to process the API call, e.g. serializing the request body object
    */
   public com.squareup.okhttp.Call asyncTasksAddAsync(
-      AsyncTasksAddRequest data, final ApiCallback<AsyncTasksAddResponse> callback)
+      AsyncTasksAddRequest data,
+      final ApiCallback<AsyncTasksAddResponse> callback,
+      String... headerPair)
       throws ApiException {
 
     ProgressResponseBody.ProgressListener progressListener = null;
@@ -196,7 +211,8 @@ public class AsyncTasksApi {
     }
 
     com.squareup.okhttp.Call call =
-        asyncTasksAddValidateBeforeCall(data, progressListener, progressRequestListener);
+        asyncTasksAddValidateBeforeCall(
+            data, progressListener, progressRequestListener, headerPair);
     Type localVarReturnType = new TypeToken<AsyncTasksAddResponse>() {}.getType();
     apiClient.executeAsync(call, localVarReturnType, callback);
     return call;
@@ -221,8 +237,10 @@ public class AsyncTasksApi {
       Long pageSize,
       List<String> fields,
       final ProgressResponseBody.ProgressListener progressListener,
-      final ProgressRequestBody.ProgressRequestListener progressRequestListener)
+      final ProgressRequestBody.ProgressRequestListener progressRequestListener,
+      String... headerPair)
       throws ApiException {
+
     Object localVarPostBody = null;
 
     // create path and map variables
@@ -252,6 +270,15 @@ public class AsyncTasksApi {
     final String[] localVarContentTypes = {"text/plain"};
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
     localVarHeaderParams.put("Content-Type", localVarContentType);
+
+    if (headerPair != null && headerPair.length > 0) {
+      if (headerPair.length % 2 != 0) {
+        throw new UnsupportedOperationException("Parameter headerPair must be paired");
+      }
+      for (int i = 0; i < headerPair.length / 2; i++) {
+        localVarHeaderParams.put(headerPair[i], headerPair[i * 2 + 1]);
+      }
+    }
 
     if (progressListener != null) {
       apiClient
@@ -292,7 +319,8 @@ public class AsyncTasksApi {
       Long pageSize,
       List<String> fields,
       final ProgressResponseBody.ProgressListener progressListener,
-      final ProgressRequestBody.ProgressRequestListener progressRequestListener)
+      final ProgressRequestBody.ProgressRequestListener progressRequestListener,
+      String... headerPair)
       throws ApiException {
 
     // verify the required parameter 'accountId' is set
@@ -309,7 +337,8 @@ public class AsyncTasksApi {
             pageSize,
             fields,
             progressListener,
-            progressRequestListener);
+            progressRequestListener,
+            headerPair);
     return call;
   }
 
@@ -330,10 +359,11 @@ public class AsyncTasksApi {
       List<FilteringStruct> filtering,
       Long page,
       Long pageSize,
-      List<String> fields)
+      List<String> fields,
+      String... headerPair)
       throws ApiException {
     ApiResponse<AsyncTasksGetResponse> resp =
-        asyncTasksGetWithHttpInfo(accountId, filtering, page, pageSize, fields);
+        asyncTasksGetWithHttpInfo(accountId, filtering, page, pageSize, fields, headerPair);
     return resp.getData();
   }
 
@@ -354,10 +384,12 @@ public class AsyncTasksApi {
       List<FilteringStruct> filtering,
       Long page,
       Long pageSize,
-      List<String> fields)
+      List<String> fields,
+      String... headerPair)
       throws ApiException {
     com.squareup.okhttp.Call call =
-        asyncTasksGetValidateBeforeCall(accountId, filtering, page, pageSize, fields, null, null);
+        asyncTasksGetValidateBeforeCall(
+            accountId, filtering, page, pageSize, fields, null, null, headerPair);
     Type localVarReturnType = new TypeToken<AsyncTasksGetResponse>() {}.getType();
     return apiClient.execute(call, localVarReturnType);
   }
@@ -380,7 +412,8 @@ public class AsyncTasksApi {
       Long page,
       Long pageSize,
       List<String> fields,
-      final ApiCallback<AsyncTasksGetResponse> callback)
+      final ApiCallback<AsyncTasksGetResponse> callback,
+      String... headerPair)
       throws ApiException {
 
     ProgressResponseBody.ProgressListener progressListener = null;
@@ -412,7 +445,8 @@ public class AsyncTasksApi {
             pageSize,
             fields,
             progressListener,
-            progressRequestListener);
+            progressRequestListener,
+            headerPair);
     Type localVarReturnType = new TypeToken<AsyncTasksGetResponse>() {}.getType();
     apiClient.executeAsync(call, localVarReturnType, callback);
     return call;

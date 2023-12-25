@@ -34,8 +34,9 @@ public class XijingPageByComponentsApiContainer extends ApiContainer {
    *     response body
    */
   public XijingPageByComponentsAddResponse xijingPageByComponentsAdd(
-      XijingPageByComponentsAddRequest data) throws ApiException, TencentAdsResponseException {
-    XijingPageByComponentsAddResponse resp = api.xijingPageByComponentsAdd(data);
+      XijingPageByComponentsAddRequest data, String... headerPair)
+      throws ApiException, TencentAdsResponseException {
+    XijingPageByComponentsAddResponse resp = api.xijingPageByComponentsAdd(data, headerPair);
     handleResponse(gson.toJson(resp));
 
     return resp;

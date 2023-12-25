@@ -42,9 +42,10 @@ public class ProductItemsApiContainer extends ApiContainer {
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
-  public ProductItemsAddResponseData productItemsAdd(ProductItemsAddRequest data)
+  public ProductItemsAddResponseData productItemsAdd(
+      ProductItemsAddRequest data, String... headerPair)
       throws ApiException, TencentAdsResponseException {
-    ProductItemsAddResponse resp = api.productItemsAdd(data);
+    ProductItemsAddResponse resp = api.productItemsAdd(data, headerPair);
     handleResponse(gson.toJson(resp));
     return resp.getData();
   }
@@ -58,8 +59,9 @@ public class ProductItemsApiContainer extends ApiContainer {
    *     response body
    */
   public ProductItemsBatchUpdateResponse productItemsBatchUpdate(
-      ProductItemsBatchUpdateRequest data) throws ApiException, TencentAdsResponseException {
-    ProductItemsBatchUpdateResponse resp = api.productItemsBatchUpdate(data);
+      ProductItemsBatchUpdateRequest data, String... headerPair)
+      throws ApiException, TencentAdsResponseException {
+    ProductItemsBatchUpdateResponse resp = api.productItemsBatchUpdate(data, headerPair);
     handleResponse(gson.toJson(resp));
 
     return resp;
@@ -77,10 +79,14 @@ public class ProductItemsApiContainer extends ApiContainer {
    *     response body
    */
   public ProductItemsGetResponseData productItemsGet(
-      Long accountId, Long productCatalogId, List<FilteringStruct> filtering, List<String> fields)
+      Long accountId,
+      Long productCatalogId,
+      List<FilteringStruct> filtering,
+      List<String> fields,
+      String... headerPair)
       throws ApiException, TencentAdsResponseException {
     ProductItemsGetResponse resp =
-        api.productItemsGet(accountId, productCatalogId, filtering, fields);
+        api.productItemsGet(accountId, productCatalogId, filtering, fields, headerPair);
     handleResponse(gson.toJson(resp));
     return resp.getData();
   }
@@ -93,9 +99,10 @@ public class ProductItemsApiContainer extends ApiContainer {
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
-  public ProductItemsUpdateResponse productItemsUpdate(ProductItemsUpdateRequest data)
+  public ProductItemsUpdateResponse productItemsUpdate(
+      ProductItemsUpdateRequest data, String... headerPair)
       throws ApiException, TencentAdsResponseException {
-    ProductItemsUpdateResponse resp = api.productItemsUpdate(data);
+    ProductItemsUpdateResponse resp = api.productItemsUpdate(data, headerPair);
     handleResponse(gson.toJson(resp));
 
     return resp;

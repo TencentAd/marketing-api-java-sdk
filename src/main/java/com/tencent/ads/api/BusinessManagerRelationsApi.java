@@ -66,8 +66,10 @@ public class BusinessManagerRelationsApi {
       Long advertiserType,
       List<String> fields,
       final ProgressResponseBody.ProgressListener progressListener,
-      final ProgressRequestBody.ProgressRequestListener progressRequestListener)
+      final ProgressRequestBody.ProgressRequestListener progressRequestListener,
+      String... headerPair)
       throws ApiException {
+
     Object localVarPostBody = null;
 
     // create path and map variables
@@ -94,6 +96,15 @@ public class BusinessManagerRelationsApi {
     final String[] localVarContentTypes = {"text/plain"};
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
     localVarHeaderParams.put("Content-Type", localVarContentType);
+
+    if (headerPair != null && headerPair.length > 0) {
+      if (headerPair.length % 2 != 0) {
+        throw new UnsupportedOperationException("Parameter headerPair must be paired");
+      }
+      for (int i = 0; i < headerPair.length / 2; i++) {
+        localVarHeaderParams.put(headerPair[i], headerPair[i * 2 + 1]);
+      }
+    }
 
     if (progressListener != null) {
       apiClient
@@ -133,12 +144,19 @@ public class BusinessManagerRelationsApi {
       Long advertiserType,
       List<String> fields,
       final ProgressResponseBody.ProgressListener progressListener,
-      final ProgressRequestBody.ProgressRequestListener progressRequestListener)
+      final ProgressRequestBody.ProgressRequestListener progressRequestListener,
+      String... headerPair)
       throws ApiException {
 
     com.squareup.okhttp.Call call =
         businessManagerRelationsGetCall(
-            page, pageSize, advertiserType, fields, progressListener, progressRequestListener);
+            page,
+            pageSize,
+            advertiserType,
+            fields,
+            progressListener,
+            progressRequestListener,
+            headerPair);
     return call;
   }
 
@@ -154,9 +172,10 @@ public class BusinessManagerRelationsApi {
    *     response body
    */
   public BusinessManagerRelationsGetResponse businessManagerRelationsGet(
-      Long page, Long pageSize, Long advertiserType, List<String> fields) throws ApiException {
+      Long page, Long pageSize, Long advertiserType, List<String> fields, String... headerPair)
+      throws ApiException {
     ApiResponse<BusinessManagerRelationsGetResponse> resp =
-        businessManagerRelationsGetWithHttpInfo(page, pageSize, advertiserType, fields);
+        businessManagerRelationsGetWithHttpInfo(page, pageSize, advertiserType, fields, headerPair);
     return resp.getData();
   }
 
@@ -172,10 +191,11 @@ public class BusinessManagerRelationsApi {
    *     response body
    */
   public ApiResponse<BusinessManagerRelationsGetResponse> businessManagerRelationsGetWithHttpInfo(
-      Long page, Long pageSize, Long advertiserType, List<String> fields) throws ApiException {
+      Long page, Long pageSize, Long advertiserType, List<String> fields, String... headerPair)
+      throws ApiException {
     com.squareup.okhttp.Call call =
         businessManagerRelationsGetValidateBeforeCall(
-            page, pageSize, advertiserType, fields, null, null);
+            page, pageSize, advertiserType, fields, null, null, headerPair);
     Type localVarReturnType = new TypeToken<BusinessManagerRelationsGetResponse>() {}.getType();
     return apiClient.execute(call, localVarReturnType);
   }
@@ -196,7 +216,8 @@ public class BusinessManagerRelationsApi {
       Long pageSize,
       Long advertiserType,
       List<String> fields,
-      final ApiCallback<BusinessManagerRelationsGetResponse> callback)
+      final ApiCallback<BusinessManagerRelationsGetResponse> callback,
+      String... headerPair)
       throws ApiException {
 
     ProgressResponseBody.ProgressListener progressListener = null;
@@ -222,7 +243,13 @@ public class BusinessManagerRelationsApi {
 
     com.squareup.okhttp.Call call =
         businessManagerRelationsGetValidateBeforeCall(
-            page, pageSize, advertiserType, fields, progressListener, progressRequestListener);
+            page,
+            pageSize,
+            advertiserType,
+            fields,
+            progressListener,
+            progressRequestListener,
+            headerPair);
     Type localVarReturnType = new TypeToken<BusinessManagerRelationsGetResponse>() {}.getType();
     apiClient.executeAsync(call, localVarReturnType, callback);
     return call;

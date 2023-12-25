@@ -35,8 +35,9 @@ public class AssetPermissionsScenesApiContainer extends ApiContainer {
    *     response body
    */
   public AssetPermissionsScenesUpdateResponseData assetPermissionsScenesUpdate(
-      AssetPermissionsScenesUpdateRequest data) throws ApiException, TencentAdsResponseException {
-    AssetPermissionsScenesUpdateResponse resp = api.assetPermissionsScenesUpdate(data);
+      AssetPermissionsScenesUpdateRequest data, String... headerPair)
+      throws ApiException, TencentAdsResponseException {
+    AssetPermissionsScenesUpdateResponse resp = api.assetPermissionsScenesUpdate(data, headerPair);
     handleResponse(gson.toJson(resp));
     return resp.getData();
   }

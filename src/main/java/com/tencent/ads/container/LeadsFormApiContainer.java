@@ -37,9 +37,9 @@ public class LeadsFormApiContainer extends ApiContainer {
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
-  public LeadsFormAddResponseData leadsFormAdd(LeadsFormAddRequest data)
+  public LeadsFormAddResponseData leadsFormAdd(LeadsFormAddRequest data, String... headerPair)
       throws ApiException, TencentAdsResponseException {
-    LeadsFormAddResponse resp = api.leadsFormAdd(data);
+    LeadsFormAddResponse resp = api.leadsFormAdd(data, headerPair);
     handleResponse(gson.toJson(resp));
     return resp.getData();
   }
@@ -55,9 +55,9 @@ public class LeadsFormApiContainer extends ApiContainer {
    *     response body
    */
   public LeadsFormGetResponseData leadsFormGet(
-      Long accountId, String componentId, List<String> fields)
+      Long accountId, String componentId, List<String> fields, String... headerPair)
       throws ApiException, TencentAdsResponseException {
-    LeadsFormGetResponse resp = api.leadsFormGet(accountId, componentId, fields);
+    LeadsFormGetResponse resp = api.leadsFormGet(accountId, componentId, fields, headerPair);
     handleResponse(gson.toJson(resp));
     return resp.getData();
   }

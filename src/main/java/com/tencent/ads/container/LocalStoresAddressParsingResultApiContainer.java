@@ -35,9 +35,10 @@ public class LocalStoresAddressParsingResultApiContainer extends ApiContainer {
    *     response body
    */
   public LocalStoresAddressParsingResultGetResponseData localStoresAddressParsingResultGet(
-      LocalStoresAddressParsingResultGetRequest data)
+      LocalStoresAddressParsingResultGetRequest data, String... headerPair)
       throws ApiException, TencentAdsResponseException {
-    LocalStoresAddressParsingResultGetResponse resp = api.localStoresAddressParsingResultGet(data);
+    LocalStoresAddressParsingResultGetResponse resp =
+        api.localStoresAddressParsingResultGet(data, headerPair);
     handleResponse(gson.toJson(resp));
     return resp.getData();
   }

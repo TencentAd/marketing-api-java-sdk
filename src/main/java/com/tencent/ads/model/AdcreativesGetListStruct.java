@@ -185,6 +185,9 @@ public class AdcreativesGetListStruct {
   @SerializedName("link_name_text")
   private String linkNameText = null;
 
+  @SerializedName("dynamic_creative_id")
+  private Long dynamicCreativeId = null;
+
   @SerializedName("adcreative_template_id")
   private Long adcreativeTemplateId = null;
 
@@ -1238,6 +1241,25 @@ public class AdcreativesGetListStruct {
     this.linkNameText = linkNameText;
   }
 
+  public AdcreativesGetListStruct dynamicCreativeId(Long dynamicCreativeId) {
+    this.dynamicCreativeId = dynamicCreativeId;
+    return this;
+  }
+
+  /**
+   * Get dynamicCreativeId
+   *
+   * @return dynamicCreativeId
+   */
+  @ApiModelProperty(value = "")
+  public Long getDynamicCreativeId() {
+    return dynamicCreativeId;
+  }
+
+  public void setDynamicCreativeId(Long dynamicCreativeId) {
+    this.dynamicCreativeId = dynamicCreativeId;
+  }
+
   public AdcreativesGetListStruct adcreativeTemplateId(Long adcreativeTemplateId) {
     this.adcreativeTemplateId = adcreativeTemplateId;
     return this;
@@ -1350,6 +1372,7 @@ public class AdcreativesGetListStruct {
         && Objects.equals(this.liveVideoMode, adcreativesGetListStruct.liveVideoMode)
         && Objects.equals(this.liveVideoSubMode, adcreativesGetListStruct.liveVideoSubMode)
         && Objects.equals(this.linkNameText, adcreativesGetListStruct.linkNameText)
+        && Objects.equals(this.dynamicCreativeId, adcreativesGetListStruct.dynamicCreativeId)
         && Objects.equals(this.adcreativeTemplateId, adcreativesGetListStruct.adcreativeTemplateId)
         && Objects.equals(this.adcreativeElements, adcreativesGetListStruct.adcreativeElements);
   }
@@ -1411,6 +1434,7 @@ public class AdcreativesGetListStruct {
         liveVideoMode,
         liveVideoSubMode,
         linkNameText,
+        dynamicCreativeId,
         adcreativeTemplateId,
         adcreativeElements);
   }

@@ -36,8 +36,9 @@ public class MergeFundTypeFundsApiContainer extends ApiContainer {
    *     response body
    */
   public MergeFundTypeFundsGetResponseData mergeFundTypeFundsGet(
-      Long accountId, List<String> fields) throws ApiException, TencentAdsResponseException {
-    MergeFundTypeFundsGetResponse resp = api.mergeFundTypeFundsGet(accountId, fields);
+      Long accountId, List<String> fields, String... headerPair)
+      throws ApiException, TencentAdsResponseException {
+    MergeFundTypeFundsGetResponse resp = api.mergeFundTypeFundsGet(accountId, fields, headerPair);
     handleResponse(gson.toJson(resp));
     return resp.getData();
   }

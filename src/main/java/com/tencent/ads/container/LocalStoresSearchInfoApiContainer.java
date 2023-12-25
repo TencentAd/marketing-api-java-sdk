@@ -39,10 +39,15 @@ public class LocalStoresSearchInfoApiContainer extends ApiContainer {
    *     response body
    */
   public LocalStoresSearchInfoGetResponseData localStoresSearchInfoGet(
-      Long accountId, String keyWord, Long page, Long pageSize, List<String> fields)
+      Long accountId,
+      String keyWord,
+      Long page,
+      Long pageSize,
+      List<String> fields,
+      String... headerPair)
       throws ApiException, TencentAdsResponseException {
     LocalStoresSearchInfoGetResponse resp =
-        api.localStoresSearchInfoGet(accountId, keyWord, page, pageSize, fields);
+        api.localStoresSearchInfoGet(accountId, keyWord, page, pageSize, fields, headerPair);
     handleResponse(gson.toJson(resp));
     return resp.getData();
   }

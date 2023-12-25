@@ -37,9 +37,9 @@ public class BarrageApiContainer extends ApiContainer {
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
-  public BarrageAddResponseData barrageAdd(BarrageAddRequest data)
+  public BarrageAddResponseData barrageAdd(BarrageAddRequest data, String... headerPair)
       throws ApiException, TencentAdsResponseException {
-    BarrageAddResponse resp = api.barrageAdd(data);
+    BarrageAddResponse resp = api.barrageAdd(data, headerPair);
     handleResponse(gson.toJson(resp));
     return resp.getData();
   }
@@ -57,9 +57,14 @@ public class BarrageApiContainer extends ApiContainer {
    *     response body
    */
   public BarrageGetResponseData barrageGet(
-      Long accountId, List<Long> idList, Long page, Long pageSize, List<String> fields)
+      Long accountId,
+      List<Long> idList,
+      Long page,
+      Long pageSize,
+      List<String> fields,
+      String... headerPair)
       throws ApiException, TencentAdsResponseException {
-    BarrageGetResponse resp = api.barrageGet(accountId, idList, page, pageSize, fields);
+    BarrageGetResponse resp = api.barrageGet(accountId, idList, page, pageSize, fields, headerPair);
     handleResponse(gson.toJson(resp));
     return resp.getData();
   }

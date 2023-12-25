@@ -65,8 +65,10 @@ public class ProgrammedApi {
   public com.squareup.okhttp.Call programmedAddCall(
       ProgrammedAddRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
-      final ProgressRequestBody.ProgressRequestListener progressRequestListener)
+      final ProgressRequestBody.ProgressRequestListener progressRequestListener,
+      String... headerPair)
       throws ApiException {
+
     Object localVarPostBody = data;
 
     // create path and map variables
@@ -86,6 +88,15 @@ public class ProgrammedApi {
     final String[] localVarContentTypes = {"application/json", "application/xml"};
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
     localVarHeaderParams.put("Content-Type", localVarContentType);
+
+    if (headerPair != null && headerPair.length > 0) {
+      if (headerPair.length % 2 != 0) {
+        throw new UnsupportedOperationException("Parameter headerPair must be paired");
+      }
+      for (int i = 0; i < headerPair.length / 2; i++) {
+        localVarHeaderParams.put(headerPair[i], headerPair[i * 2 + 1]);
+      }
+    }
 
     if (progressListener != null) {
       apiClient
@@ -122,7 +133,8 @@ public class ProgrammedApi {
   private com.squareup.okhttp.Call programmedAddValidateBeforeCall(
       ProgrammedAddRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
-      final ProgressRequestBody.ProgressRequestListener progressRequestListener)
+      final ProgressRequestBody.ProgressRequestListener progressRequestListener,
+      String... headerPair)
       throws ApiException {
 
     // verify the required parameter 'data' is set
@@ -132,7 +144,7 @@ public class ProgrammedApi {
     }
 
     com.squareup.okhttp.Call call =
-        programmedAddCall(data, progressListener, progressRequestListener);
+        programmedAddCall(data, progressListener, progressRequestListener, headerPair);
     return call;
   }
 
@@ -144,8 +156,9 @@ public class ProgrammedApi {
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
-  public ProgrammedAddResponse programmedAdd(ProgrammedAddRequest data) throws ApiException {
-    ApiResponse<ProgrammedAddResponse> resp = programmedAddWithHttpInfo(data);
+  public ProgrammedAddResponse programmedAdd(ProgrammedAddRequest data, String... headerPair)
+      throws ApiException {
+    ApiResponse<ProgrammedAddResponse> resp = programmedAddWithHttpInfo(data, headerPair);
     return resp.getData();
   }
 
@@ -157,9 +170,9 @@ public class ProgrammedApi {
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
-  public ApiResponse<ProgrammedAddResponse> programmedAddWithHttpInfo(ProgrammedAddRequest data)
-      throws ApiException {
-    com.squareup.okhttp.Call call = programmedAddValidateBeforeCall(data, null, null);
+  public ApiResponse<ProgrammedAddResponse> programmedAddWithHttpInfo(
+      ProgrammedAddRequest data, String... headerPair) throws ApiException {
+    com.squareup.okhttp.Call call = programmedAddValidateBeforeCall(data, null, null, headerPair);
     Type localVarReturnType = new TypeToken<ProgrammedAddResponse>() {}.getType();
     return apiClient.execute(call, localVarReturnType);
   }
@@ -173,7 +186,9 @@ public class ProgrammedApi {
    * @throws ApiException If fail to process the API call, e.g. serializing the request body object
    */
   public com.squareup.okhttp.Call programmedAddAsync(
-      ProgrammedAddRequest data, final ApiCallback<ProgrammedAddResponse> callback)
+      ProgrammedAddRequest data,
+      final ApiCallback<ProgrammedAddResponse> callback,
+      String... headerPair)
       throws ApiException {
 
     ProgressResponseBody.ProgressListener progressListener = null;
@@ -198,7 +213,8 @@ public class ProgrammedApi {
     }
 
     com.squareup.okhttp.Call call =
-        programmedAddValidateBeforeCall(data, progressListener, progressRequestListener);
+        programmedAddValidateBeforeCall(
+            data, progressListener, progressRequestListener, headerPair);
     Type localVarReturnType = new TypeToken<ProgrammedAddResponse>() {}.getType();
     apiClient.executeAsync(call, localVarReturnType, callback);
     return call;
@@ -215,8 +231,10 @@ public class ProgrammedApi {
   public com.squareup.okhttp.Call programmedGetCall(
       ProgrammedGetRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
-      final ProgressRequestBody.ProgressRequestListener progressRequestListener)
+      final ProgressRequestBody.ProgressRequestListener progressRequestListener,
+      String... headerPair)
       throws ApiException {
+
     Object localVarPostBody = data;
 
     // create path and map variables
@@ -236,6 +254,15 @@ public class ProgrammedApi {
     final String[] localVarContentTypes = {"application/json", "application/xml"};
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
     localVarHeaderParams.put("Content-Type", localVarContentType);
+
+    if (headerPair != null && headerPair.length > 0) {
+      if (headerPair.length % 2 != 0) {
+        throw new UnsupportedOperationException("Parameter headerPair must be paired");
+      }
+      for (int i = 0; i < headerPair.length / 2; i++) {
+        localVarHeaderParams.put(headerPair[i], headerPair[i * 2 + 1]);
+      }
+    }
 
     if (progressListener != null) {
       apiClient
@@ -272,7 +299,8 @@ public class ProgrammedApi {
   private com.squareup.okhttp.Call programmedGetValidateBeforeCall(
       ProgrammedGetRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
-      final ProgressRequestBody.ProgressRequestListener progressRequestListener)
+      final ProgressRequestBody.ProgressRequestListener progressRequestListener,
+      String... headerPair)
       throws ApiException {
 
     // verify the required parameter 'data' is set
@@ -282,7 +310,7 @@ public class ProgrammedApi {
     }
 
     com.squareup.okhttp.Call call =
-        programmedGetCall(data, progressListener, progressRequestListener);
+        programmedGetCall(data, progressListener, progressRequestListener, headerPair);
     return call;
   }
 
@@ -294,8 +322,9 @@ public class ProgrammedApi {
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
-  public ProgrammedGetResponse programmedGet(ProgrammedGetRequest data) throws ApiException {
-    ApiResponse<ProgrammedGetResponse> resp = programmedGetWithHttpInfo(data);
+  public ProgrammedGetResponse programmedGet(ProgrammedGetRequest data, String... headerPair)
+      throws ApiException {
+    ApiResponse<ProgrammedGetResponse> resp = programmedGetWithHttpInfo(data, headerPair);
     return resp.getData();
   }
 
@@ -307,9 +336,9 @@ public class ProgrammedApi {
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
-  public ApiResponse<ProgrammedGetResponse> programmedGetWithHttpInfo(ProgrammedGetRequest data)
-      throws ApiException {
-    com.squareup.okhttp.Call call = programmedGetValidateBeforeCall(data, null, null);
+  public ApiResponse<ProgrammedGetResponse> programmedGetWithHttpInfo(
+      ProgrammedGetRequest data, String... headerPair) throws ApiException {
+    com.squareup.okhttp.Call call = programmedGetValidateBeforeCall(data, null, null, headerPair);
     Type localVarReturnType = new TypeToken<ProgrammedGetResponse>() {}.getType();
     return apiClient.execute(call, localVarReturnType);
   }
@@ -323,7 +352,9 @@ public class ProgrammedApi {
    * @throws ApiException If fail to process the API call, e.g. serializing the request body object
    */
   public com.squareup.okhttp.Call programmedGetAsync(
-      ProgrammedGetRequest data, final ApiCallback<ProgrammedGetResponse> callback)
+      ProgrammedGetRequest data,
+      final ApiCallback<ProgrammedGetResponse> callback,
+      String... headerPair)
       throws ApiException {
 
     ProgressResponseBody.ProgressListener progressListener = null;
@@ -348,7 +379,8 @@ public class ProgrammedApi {
     }
 
     com.squareup.okhttp.Call call =
-        programmedGetValidateBeforeCall(data, progressListener, progressRequestListener);
+        programmedGetValidateBeforeCall(
+            data, progressListener, progressRequestListener, headerPair);
     Type localVarReturnType = new TypeToken<ProgrammedGetResponse>() {}.getType();
     apiClient.executeAsync(call, localVarReturnType, callback);
     return call;
@@ -365,8 +397,10 @@ public class ProgrammedApi {
   public com.squareup.okhttp.Call programmedUpdateCall(
       ProgrammedUpdateRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
-      final ProgressRequestBody.ProgressRequestListener progressRequestListener)
+      final ProgressRequestBody.ProgressRequestListener progressRequestListener,
+      String... headerPair)
       throws ApiException {
+
     Object localVarPostBody = data;
 
     // create path and map variables
@@ -386,6 +420,15 @@ public class ProgrammedApi {
     final String[] localVarContentTypes = {"application/json", "application/xml"};
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
     localVarHeaderParams.put("Content-Type", localVarContentType);
+
+    if (headerPair != null && headerPair.length > 0) {
+      if (headerPair.length % 2 != 0) {
+        throw new UnsupportedOperationException("Parameter headerPair must be paired");
+      }
+      for (int i = 0; i < headerPair.length / 2; i++) {
+        localVarHeaderParams.put(headerPair[i], headerPair[i * 2 + 1]);
+      }
+    }
 
     if (progressListener != null) {
       apiClient
@@ -422,7 +465,8 @@ public class ProgrammedApi {
   private com.squareup.okhttp.Call programmedUpdateValidateBeforeCall(
       ProgrammedUpdateRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
-      final ProgressRequestBody.ProgressRequestListener progressRequestListener)
+      final ProgressRequestBody.ProgressRequestListener progressRequestListener,
+      String... headerPair)
       throws ApiException {
 
     // verify the required parameter 'data' is set
@@ -432,7 +476,7 @@ public class ProgrammedApi {
     }
 
     com.squareup.okhttp.Call call =
-        programmedUpdateCall(data, progressListener, progressRequestListener);
+        programmedUpdateCall(data, progressListener, progressRequestListener, headerPair);
     return call;
   }
 
@@ -444,9 +488,9 @@ public class ProgrammedApi {
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
-  public ProgrammedUpdateResponse programmedUpdate(ProgrammedUpdateRequest data)
-      throws ApiException {
-    ApiResponse<ProgrammedUpdateResponse> resp = programmedUpdateWithHttpInfo(data);
+  public ProgrammedUpdateResponse programmedUpdate(
+      ProgrammedUpdateRequest data, String... headerPair) throws ApiException {
+    ApiResponse<ProgrammedUpdateResponse> resp = programmedUpdateWithHttpInfo(data, headerPair);
     return resp.getData();
   }
 
@@ -459,8 +503,9 @@ public class ProgrammedApi {
    *     response body
    */
   public ApiResponse<ProgrammedUpdateResponse> programmedUpdateWithHttpInfo(
-      ProgrammedUpdateRequest data) throws ApiException {
-    com.squareup.okhttp.Call call = programmedUpdateValidateBeforeCall(data, null, null);
+      ProgrammedUpdateRequest data, String... headerPair) throws ApiException {
+    com.squareup.okhttp.Call call =
+        programmedUpdateValidateBeforeCall(data, null, null, headerPair);
     Type localVarReturnType = new TypeToken<ProgrammedUpdateResponse>() {}.getType();
     return apiClient.execute(call, localVarReturnType);
   }
@@ -474,7 +519,9 @@ public class ProgrammedApi {
    * @throws ApiException If fail to process the API call, e.g. serializing the request body object
    */
   public com.squareup.okhttp.Call programmedUpdateAsync(
-      ProgrammedUpdateRequest data, final ApiCallback<ProgrammedUpdateResponse> callback)
+      ProgrammedUpdateRequest data,
+      final ApiCallback<ProgrammedUpdateResponse> callback,
+      String... headerPair)
       throws ApiException {
 
     ProgressResponseBody.ProgressListener progressListener = null;
@@ -499,7 +546,8 @@ public class ProgrammedApi {
     }
 
     com.squareup.okhttp.Call call =
-        programmedUpdateValidateBeforeCall(data, progressListener, progressRequestListener);
+        programmedUpdateValidateBeforeCall(
+            data, progressListener, progressRequestListener, headerPair);
     Type localVarReturnType = new TypeToken<ProgrammedUpdateResponse>() {}.getType();
     apiClient.executeAsync(call, localVarReturnType, callback);
     return call;

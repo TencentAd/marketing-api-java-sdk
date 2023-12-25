@@ -34,9 +34,9 @@ public class ProductItemsVerticalsApiContainer extends ApiContainer {
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
-  public ProductItemsVerticalsGetResponseData productItemsVerticalsGet(List<String> fields)
-      throws ApiException, TencentAdsResponseException {
-    ProductItemsVerticalsGetResponse resp = api.productItemsVerticalsGet(fields);
+  public ProductItemsVerticalsGetResponseData productItemsVerticalsGet(
+      List<String> fields, String... headerPair) throws ApiException, TencentAdsResponseException {
+    ProductItemsVerticalsGetResponse resp = api.productItemsVerticalsGet(fields, headerPair);
     handleResponse(gson.toJson(resp));
     return resp.getData();
   }

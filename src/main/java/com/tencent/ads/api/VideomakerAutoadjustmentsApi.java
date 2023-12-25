@@ -75,8 +75,10 @@ public class VideomakerAutoadjustmentsApi {
       SmartAdjustment smartAdjustment,
       ManualAdjustment manualAdjustment,
       final ProgressResponseBody.ProgressListener progressListener,
-      final ProgressRequestBody.ProgressRequestListener progressRequestListener)
+      final ProgressRequestBody.ProgressRequestListener progressRequestListener,
+      String... headerPair)
       throws ApiException {
+
     Object localVarPostBody = null;
 
     // create path and map variables
@@ -103,6 +105,15 @@ public class VideomakerAutoadjustmentsApi {
     final String[] localVarContentTypes = {"multipart/form-data"};
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
     localVarHeaderParams.put("Content-Type", localVarContentType);
+
+    if (headerPair != null && headerPair.length > 0) {
+      if (headerPair.length % 2 != 0) {
+        throw new UnsupportedOperationException("Parameter headerPair must be paired");
+      }
+      for (int i = 0; i < headerPair.length / 2; i++) {
+        localVarHeaderParams.put(headerPair[i], headerPair[i * 2 + 1]);
+      }
+    }
 
     if (progressListener != null) {
       apiClient
@@ -145,7 +156,8 @@ public class VideomakerAutoadjustmentsApi {
       SmartAdjustment smartAdjustment,
       ManualAdjustment manualAdjustment,
       final ProgressResponseBody.ProgressListener progressListener,
-      final ProgressRequestBody.ProgressRequestListener progressRequestListener)
+      final ProgressRequestBody.ProgressRequestListener progressRequestListener,
+      String... headerPair)
       throws ApiException {
 
     // verify the required parameter 'accountId' is set
@@ -170,7 +182,8 @@ public class VideomakerAutoadjustmentsApi {
             smartAdjustment,
             manualAdjustment,
             progressListener,
-            progressRequestListener);
+            progressRequestListener,
+            headerPair);
     return call;
   }
 
@@ -195,7 +208,8 @@ public class VideomakerAutoadjustmentsApi {
       File videoFile,
       String signature,
       SmartAdjustment smartAdjustment,
-      ManualAdjustment manualAdjustment)
+      ManualAdjustment manualAdjustment,
+      String... headerPair)
       throws ApiException {
     ApiResponse<VideomakerAutoadjustmentsAddResponse> resp =
         videomakerAutoadjustmentsAddWithHttpInfo(
@@ -205,7 +219,8 @@ public class VideomakerAutoadjustmentsApi {
             videoFile,
             signature,
             smartAdjustment,
-            manualAdjustment);
+            manualAdjustment,
+            headerPair);
     return resp.getData();
   }
 
@@ -230,7 +245,8 @@ public class VideomakerAutoadjustmentsApi {
       File videoFile,
       String signature,
       SmartAdjustment smartAdjustment,
-      ManualAdjustment manualAdjustment)
+      ManualAdjustment manualAdjustment,
+      String... headerPair)
       throws ApiException {
     com.squareup.okhttp.Call call =
         videomakerAutoadjustmentsAddValidateBeforeCall(
@@ -242,7 +258,8 @@ public class VideomakerAutoadjustmentsApi {
             smartAdjustment,
             manualAdjustment,
             null,
-            null);
+            null,
+            headerPair);
     Type localVarReturnType = new TypeToken<VideomakerAutoadjustmentsAddResponse>() {}.getType();
     return apiClient.execute(call, localVarReturnType);
   }
@@ -269,7 +286,8 @@ public class VideomakerAutoadjustmentsApi {
       String signature,
       SmartAdjustment smartAdjustment,
       ManualAdjustment manualAdjustment,
-      final ApiCallback<VideomakerAutoadjustmentsAddResponse> callback)
+      final ApiCallback<VideomakerAutoadjustmentsAddResponse> callback,
+      String... headerPair)
       throws ApiException {
 
     ProgressResponseBody.ProgressListener progressListener = null;
@@ -303,7 +321,8 @@ public class VideomakerAutoadjustmentsApi {
             smartAdjustment,
             manualAdjustment,
             progressListener,
-            progressRequestListener);
+            progressRequestListener,
+            headerPair);
     Type localVarReturnType = new TypeToken<VideomakerAutoadjustmentsAddResponse>() {}.getType();
     apiClient.executeAsync(call, localVarReturnType, callback);
     return call;

@@ -40,9 +40,9 @@ public class GameFeatureApiContainer extends ApiContainer {
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
-  public GameFeatureAddResponseData gameFeatureAdd(GameFeatureAddRequest data)
+  public GameFeatureAddResponseData gameFeatureAdd(GameFeatureAddRequest data, String... headerPair)
       throws ApiException, TencentAdsResponseException {
-    GameFeatureAddResponse resp = api.gameFeatureAdd(data);
+    GameFeatureAddResponse resp = api.gameFeatureAdd(data, headerPair);
     handleResponse(gson.toJson(resp));
     return resp.getData();
   }
@@ -59,10 +59,14 @@ public class GameFeatureApiContainer extends ApiContainer {
    *     response body
    */
   public GameFeatureGetResponseData gameFeatureGet(
-      Long accountId, String promotedObjectType, String promotedObjectId, List<String> fields)
+      Long accountId,
+      String promotedObjectType,
+      String promotedObjectId,
+      List<String> fields,
+      String... headerPair)
       throws ApiException, TencentAdsResponseException {
     GameFeatureGetResponse resp =
-        api.gameFeatureGet(accountId, promotedObjectType, promotedObjectId, fields);
+        api.gameFeatureGet(accountId, promotedObjectType, promotedObjectId, fields, headerPair);
     handleResponse(gson.toJson(resp));
     return resp.getData();
   }
@@ -75,9 +79,10 @@ public class GameFeatureApiContainer extends ApiContainer {
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
-  public GameFeatureUpdateResponseData gameFeatureUpdate(GameFeatureUpdateRequest data)
+  public GameFeatureUpdateResponseData gameFeatureUpdate(
+      GameFeatureUpdateRequest data, String... headerPair)
       throws ApiException, TencentAdsResponseException {
-    GameFeatureUpdateResponse resp = api.gameFeatureUpdate(data);
+    GameFeatureUpdateResponse resp = api.gameFeatureUpdate(data, headerPair);
     handleResponse(gson.toJson(resp));
     return resp.getData();
   }

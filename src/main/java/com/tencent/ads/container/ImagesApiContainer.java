@@ -63,7 +63,8 @@ public class ImagesApiContainer extends ApiContainer {
       String description,
       Long resizeWidth,
       Long resizeHeight,
-      Long resizeFileSize)
+      Long resizeFileSize,
+      String... headerPair)
       throws ApiException, TencentAdsResponseException {
     ImagesAddResponse resp =
         api.imagesAdd(
@@ -76,7 +77,8 @@ public class ImagesApiContainer extends ApiContainer {
             description,
             resizeWidth,
             resizeHeight,
-            resizeFileSize);
+            resizeFileSize,
+            headerPair);
     handleResponse(gson.toJson(resp));
     return resp.getData();
   }
@@ -89,9 +91,9 @@ public class ImagesApiContainer extends ApiContainer {
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
-  public ImagesDeleteResponseData imagesDelete(ImagesDeleteRequest data)
+  public ImagesDeleteResponseData imagesDelete(ImagesDeleteRequest data, String... headerPair)
       throws ApiException, TencentAdsResponseException {
-    ImagesDeleteResponse resp = api.imagesDelete(data);
+    ImagesDeleteResponse resp = api.imagesDelete(data, headerPair);
     handleResponse(gson.toJson(resp));
     return resp.getData();
   }
@@ -113,9 +115,11 @@ public class ImagesApiContainer extends ApiContainer {
       List<FilteringStruct> filtering,
       Long page,
       Long pageSize,
-      List<String> fields)
+      List<String> fields,
+      String... headerPair)
       throws ApiException, TencentAdsResponseException {
-    ImagesGetResponse resp = api.imagesGet(accountId, filtering, page, pageSize, fields);
+    ImagesGetResponse resp =
+        api.imagesGet(accountId, filtering, page, pageSize, fields, headerPair);
     handleResponse(gson.toJson(resp));
     return resp.getData();
   }
@@ -128,9 +132,9 @@ public class ImagesApiContainer extends ApiContainer {
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
-  public ImagesUpdateResponseData imagesUpdate(ImagesUpdateRequest data)
+  public ImagesUpdateResponseData imagesUpdate(ImagesUpdateRequest data, String... headerPair)
       throws ApiException, TencentAdsResponseException {
-    ImagesUpdateResponse resp = api.imagesUpdate(data);
+    ImagesUpdateResponse resp = api.imagesUpdate(data, headerPair);
     handleResponse(gson.toJson(resp));
     return resp.getData();
   }

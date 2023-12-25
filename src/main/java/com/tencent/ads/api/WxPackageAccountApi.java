@@ -74,8 +74,10 @@ public class WxPackageAccountApi {
       String keyword,
       List<String> fields,
       final ProgressResponseBody.ProgressListener progressListener,
-      final ProgressRequestBody.ProgressRequestListener progressRequestListener)
+      final ProgressRequestBody.ProgressRequestListener progressRequestListener,
+      String... headerPair)
       throws ApiException {
+
     Object localVarPostBody = null;
 
     // create path and map variables
@@ -107,6 +109,15 @@ public class WxPackageAccountApi {
     final String[] localVarContentTypes = {"text/plain"};
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
     localVarHeaderParams.put("Content-Type", localVarContentType);
+
+    if (headerPair != null && headerPair.length > 0) {
+      if (headerPair.length % 2 != 0) {
+        throw new UnsupportedOperationException("Parameter headerPair must be paired");
+      }
+      for (int i = 0; i < headerPair.length / 2; i++) {
+        localVarHeaderParams.put(headerPair[i], headerPair[i * 2 + 1]);
+      }
+    }
 
     if (progressListener != null) {
       apiClient
@@ -149,7 +160,8 @@ public class WxPackageAccountApi {
       String keyword,
       List<String> fields,
       final ProgressResponseBody.ProgressListener progressListener,
-      final ProgressRequestBody.ProgressRequestListener progressRequestListener)
+      final ProgressRequestBody.ProgressRequestListener progressRequestListener,
+      String... headerPair)
       throws ApiException {
 
     // verify the required parameter 'accountId' is set
@@ -168,7 +180,8 @@ public class WxPackageAccountApi {
             keyword,
             fields,
             progressListener,
-            progressRequestListener);
+            progressRequestListener,
+            headerPair);
     return call;
   }
 
@@ -193,11 +206,12 @@ public class WxPackageAccountApi {
       String beginTime,
       String endTime,
       String keyword,
-      List<String> fields)
+      List<String> fields,
+      String... headerPair)
       throws ApiException {
     ApiResponse<WxPackageAccountGetResponse> resp =
         wxPackageAccountGetWithHttpInfo(
-            accountId, pageSize, pageIndex, beginTime, endTime, keyword, fields);
+            accountId, pageSize, pageIndex, beginTime, endTime, keyword, fields, headerPair);
     return resp.getData();
   }
 
@@ -222,11 +236,21 @@ public class WxPackageAccountApi {
       String beginTime,
       String endTime,
       String keyword,
-      List<String> fields)
+      List<String> fields,
+      String... headerPair)
       throws ApiException {
     com.squareup.okhttp.Call call =
         wxPackageAccountGetValidateBeforeCall(
-            accountId, pageSize, pageIndex, beginTime, endTime, keyword, fields, null, null);
+            accountId,
+            pageSize,
+            pageIndex,
+            beginTime,
+            endTime,
+            keyword,
+            fields,
+            null,
+            null,
+            headerPair);
     Type localVarReturnType = new TypeToken<WxPackageAccountGetResponse>() {}.getType();
     return apiClient.execute(call, localVarReturnType);
   }
@@ -253,7 +277,8 @@ public class WxPackageAccountApi {
       String endTime,
       String keyword,
       List<String> fields,
-      final ApiCallback<WxPackageAccountGetResponse> callback)
+      final ApiCallback<WxPackageAccountGetResponse> callback,
+      String... headerPair)
       throws ApiException {
 
     ProgressResponseBody.ProgressListener progressListener = null;
@@ -287,7 +312,8 @@ public class WxPackageAccountApi {
             keyword,
             fields,
             progressListener,
-            progressRequestListener);
+            progressRequestListener,
+            headerPair);
     Type localVarReturnType = new TypeToken<WxPackageAccountGetResponse>() {}.getType();
     apiClient.executeAsync(call, localVarReturnType, callback);
     return call;
@@ -312,8 +338,10 @@ public class WxPackageAccountApi {
       File file,
       Long enableFlag,
       final ProgressResponseBody.ProgressListener progressListener,
-      final ProgressRequestBody.ProgressRequestListener progressRequestListener)
+      final ProgressRequestBody.ProgressRequestListener progressRequestListener,
+      String... headerPair)
       throws ApiException {
+
     Object localVarPostBody = null;
 
     // create path and map variables
@@ -338,6 +366,15 @@ public class WxPackageAccountApi {
     final String[] localVarContentTypes = {"multipart/form-data"};
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
     localVarHeaderParams.put("Content-Type", localVarContentType);
+
+    if (headerPair != null && headerPair.length > 0) {
+      if (headerPair.length % 2 != 0) {
+        throw new UnsupportedOperationException("Parameter headerPair must be paired");
+      }
+      for (int i = 0; i < headerPair.length / 2; i++) {
+        localVarHeaderParams.put(headerPair[i], headerPair[i * 2 + 1]);
+      }
+    }
 
     if (progressListener != null) {
       apiClient
@@ -378,7 +415,8 @@ public class WxPackageAccountApi {
       File file,
       Long enableFlag,
       final ProgressResponseBody.ProgressListener progressListener,
-      final ProgressRequestBody.ProgressRequestListener progressRequestListener)
+      final ProgressRequestBody.ProgressRequestListener progressRequestListener,
+      String... headerPair)
       throws ApiException {
 
     // verify the required parameter 'accountId' is set
@@ -401,7 +439,8 @@ public class WxPackageAccountApi {
             file,
             enableFlag,
             progressListener,
-            progressRequestListener);
+            progressRequestListener,
+            headerPair);
     return call;
   }
 
@@ -418,10 +457,16 @@ public class WxPackageAccountApi {
    *     response body
    */
   public WxPackageAccountUpdateResponse wxPackageAccountUpdate(
-      Long accountId, Long wechatId, String nickName, File file, Long enableFlag)
+      Long accountId,
+      Long wechatId,
+      String nickName,
+      File file,
+      Long enableFlag,
+      String... headerPair)
       throws ApiException {
     ApiResponse<WxPackageAccountUpdateResponse> resp =
-        wxPackageAccountUpdateWithHttpInfo(accountId, wechatId, nickName, file, enableFlag);
+        wxPackageAccountUpdateWithHttpInfo(
+            accountId, wechatId, nickName, file, enableFlag, headerPair);
     return resp.getData();
   }
 
@@ -438,11 +483,16 @@ public class WxPackageAccountApi {
    *     response body
    */
   public ApiResponse<WxPackageAccountUpdateResponse> wxPackageAccountUpdateWithHttpInfo(
-      Long accountId, Long wechatId, String nickName, File file, Long enableFlag)
+      Long accountId,
+      Long wechatId,
+      String nickName,
+      File file,
+      Long enableFlag,
+      String... headerPair)
       throws ApiException {
     com.squareup.okhttp.Call call =
         wxPackageAccountUpdateValidateBeforeCall(
-            accountId, wechatId, nickName, file, enableFlag, null, null);
+            accountId, wechatId, nickName, file, enableFlag, null, null, headerPair);
     Type localVarReturnType = new TypeToken<WxPackageAccountUpdateResponse>() {}.getType();
     return apiClient.execute(call, localVarReturnType);
   }
@@ -465,7 +515,8 @@ public class WxPackageAccountApi {
       String nickName,
       File file,
       Long enableFlag,
-      final ApiCallback<WxPackageAccountUpdateResponse> callback)
+      final ApiCallback<WxPackageAccountUpdateResponse> callback,
+      String... headerPair)
       throws ApiException {
 
     ProgressResponseBody.ProgressListener progressListener = null;
@@ -497,7 +548,8 @@ public class WxPackageAccountApi {
             file,
             enableFlag,
             progressListener,
-            progressRequestListener);
+            progressRequestListener,
+            headerPair);
     Type localVarReturnType = new TypeToken<WxPackageAccountUpdateResponse>() {}.getType();
     apiClient.executeAsync(call, localVarReturnType, callback);
     return call;

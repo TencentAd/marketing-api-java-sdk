@@ -65,8 +65,10 @@ public class AdgroupNegativewordsApi {
   public com.squareup.okhttp.Call adgroupNegativewordsAddCall(
       AdgroupNegativewordsAddRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
-      final ProgressRequestBody.ProgressRequestListener progressRequestListener)
+      final ProgressRequestBody.ProgressRequestListener progressRequestListener,
+      String... headerPair)
       throws ApiException {
+
     Object localVarPostBody = data;
 
     // create path and map variables
@@ -86,6 +88,15 @@ public class AdgroupNegativewordsApi {
     final String[] localVarContentTypes = {"application/json", "application/xml"};
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
     localVarHeaderParams.put("Content-Type", localVarContentType);
+
+    if (headerPair != null && headerPair.length > 0) {
+      if (headerPair.length % 2 != 0) {
+        throw new UnsupportedOperationException("Parameter headerPair must be paired");
+      }
+      for (int i = 0; i < headerPair.length / 2; i++) {
+        localVarHeaderParams.put(headerPair[i], headerPair[i * 2 + 1]);
+      }
+    }
 
     if (progressListener != null) {
       apiClient
@@ -122,7 +133,8 @@ public class AdgroupNegativewordsApi {
   private com.squareup.okhttp.Call adgroupNegativewordsAddValidateBeforeCall(
       AdgroupNegativewordsAddRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
-      final ProgressRequestBody.ProgressRequestListener progressRequestListener)
+      final ProgressRequestBody.ProgressRequestListener progressRequestListener,
+      String... headerPair)
       throws ApiException {
 
     // verify the required parameter 'data' is set
@@ -132,7 +144,7 @@ public class AdgroupNegativewordsApi {
     }
 
     com.squareup.okhttp.Call call =
-        adgroupNegativewordsAddCall(data, progressListener, progressRequestListener);
+        adgroupNegativewordsAddCall(data, progressListener, progressRequestListener, headerPair);
     return call;
   }
 
@@ -145,8 +157,9 @@ public class AdgroupNegativewordsApi {
    *     response body
    */
   public AdgroupNegativewordsAddResponse adgroupNegativewordsAdd(
-      AdgroupNegativewordsAddRequest data) throws ApiException {
-    ApiResponse<AdgroupNegativewordsAddResponse> resp = adgroupNegativewordsAddWithHttpInfo(data);
+      AdgroupNegativewordsAddRequest data, String... headerPair) throws ApiException {
+    ApiResponse<AdgroupNegativewordsAddResponse> resp =
+        adgroupNegativewordsAddWithHttpInfo(data, headerPair);
     return resp.getData();
   }
 
@@ -159,8 +172,9 @@ public class AdgroupNegativewordsApi {
    *     response body
    */
   public ApiResponse<AdgroupNegativewordsAddResponse> adgroupNegativewordsAddWithHttpInfo(
-      AdgroupNegativewordsAddRequest data) throws ApiException {
-    com.squareup.okhttp.Call call = adgroupNegativewordsAddValidateBeforeCall(data, null, null);
+      AdgroupNegativewordsAddRequest data, String... headerPair) throws ApiException {
+    com.squareup.okhttp.Call call =
+        adgroupNegativewordsAddValidateBeforeCall(data, null, null, headerPair);
     Type localVarReturnType = new TypeToken<AdgroupNegativewordsAddResponse>() {}.getType();
     return apiClient.execute(call, localVarReturnType);
   }
@@ -175,7 +189,8 @@ public class AdgroupNegativewordsApi {
    */
   public com.squareup.okhttp.Call adgroupNegativewordsAddAsync(
       AdgroupNegativewordsAddRequest data,
-      final ApiCallback<AdgroupNegativewordsAddResponse> callback)
+      final ApiCallback<AdgroupNegativewordsAddResponse> callback,
+      String... headerPair)
       throws ApiException {
 
     ProgressResponseBody.ProgressListener progressListener = null;
@@ -200,7 +215,8 @@ public class AdgroupNegativewordsApi {
     }
 
     com.squareup.okhttp.Call call =
-        adgroupNegativewordsAddValidateBeforeCall(data, progressListener, progressRequestListener);
+        adgroupNegativewordsAddValidateBeforeCall(
+            data, progressListener, progressRequestListener, headerPair);
     Type localVarReturnType = new TypeToken<AdgroupNegativewordsAddResponse>() {}.getType();
     apiClient.executeAsync(call, localVarReturnType, callback);
     return call;
@@ -217,8 +233,10 @@ public class AdgroupNegativewordsApi {
   public com.squareup.okhttp.Call adgroupNegativewordsGetCall(
       AdgroupNegativewordsGetRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
-      final ProgressRequestBody.ProgressRequestListener progressRequestListener)
+      final ProgressRequestBody.ProgressRequestListener progressRequestListener,
+      String... headerPair)
       throws ApiException {
+
     Object localVarPostBody = data;
 
     // create path and map variables
@@ -238,6 +256,15 @@ public class AdgroupNegativewordsApi {
     final String[] localVarContentTypes = {"application/json", "application/xml"};
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
     localVarHeaderParams.put("Content-Type", localVarContentType);
+
+    if (headerPair != null && headerPair.length > 0) {
+      if (headerPair.length % 2 != 0) {
+        throw new UnsupportedOperationException("Parameter headerPair must be paired");
+      }
+      for (int i = 0; i < headerPair.length / 2; i++) {
+        localVarHeaderParams.put(headerPair[i], headerPair[i * 2 + 1]);
+      }
+    }
 
     if (progressListener != null) {
       apiClient
@@ -274,7 +301,8 @@ public class AdgroupNegativewordsApi {
   private com.squareup.okhttp.Call adgroupNegativewordsGetValidateBeforeCall(
       AdgroupNegativewordsGetRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
-      final ProgressRequestBody.ProgressRequestListener progressRequestListener)
+      final ProgressRequestBody.ProgressRequestListener progressRequestListener,
+      String... headerPair)
       throws ApiException {
 
     // verify the required parameter 'data' is set
@@ -284,7 +312,7 @@ public class AdgroupNegativewordsApi {
     }
 
     com.squareup.okhttp.Call call =
-        adgroupNegativewordsGetCall(data, progressListener, progressRequestListener);
+        adgroupNegativewordsGetCall(data, progressListener, progressRequestListener, headerPair);
     return call;
   }
 
@@ -297,8 +325,9 @@ public class AdgroupNegativewordsApi {
    *     response body
    */
   public AdgroupNegativewordsGetResponse adgroupNegativewordsGet(
-      AdgroupNegativewordsGetRequest data) throws ApiException {
-    ApiResponse<AdgroupNegativewordsGetResponse> resp = adgroupNegativewordsGetWithHttpInfo(data);
+      AdgroupNegativewordsGetRequest data, String... headerPair) throws ApiException {
+    ApiResponse<AdgroupNegativewordsGetResponse> resp =
+        adgroupNegativewordsGetWithHttpInfo(data, headerPair);
     return resp.getData();
   }
 
@@ -311,8 +340,9 @@ public class AdgroupNegativewordsApi {
    *     response body
    */
   public ApiResponse<AdgroupNegativewordsGetResponse> adgroupNegativewordsGetWithHttpInfo(
-      AdgroupNegativewordsGetRequest data) throws ApiException {
-    com.squareup.okhttp.Call call = adgroupNegativewordsGetValidateBeforeCall(data, null, null);
+      AdgroupNegativewordsGetRequest data, String... headerPair) throws ApiException {
+    com.squareup.okhttp.Call call =
+        adgroupNegativewordsGetValidateBeforeCall(data, null, null, headerPair);
     Type localVarReturnType = new TypeToken<AdgroupNegativewordsGetResponse>() {}.getType();
     return apiClient.execute(call, localVarReturnType);
   }
@@ -327,7 +357,8 @@ public class AdgroupNegativewordsApi {
    */
   public com.squareup.okhttp.Call adgroupNegativewordsGetAsync(
       AdgroupNegativewordsGetRequest data,
-      final ApiCallback<AdgroupNegativewordsGetResponse> callback)
+      final ApiCallback<AdgroupNegativewordsGetResponse> callback,
+      String... headerPair)
       throws ApiException {
 
     ProgressResponseBody.ProgressListener progressListener = null;
@@ -352,7 +383,8 @@ public class AdgroupNegativewordsApi {
     }
 
     com.squareup.okhttp.Call call =
-        adgroupNegativewordsGetValidateBeforeCall(data, progressListener, progressRequestListener);
+        adgroupNegativewordsGetValidateBeforeCall(
+            data, progressListener, progressRequestListener, headerPair);
     Type localVarReturnType = new TypeToken<AdgroupNegativewordsGetResponse>() {}.getType();
     apiClient.executeAsync(call, localVarReturnType, callback);
     return call;
@@ -369,8 +401,10 @@ public class AdgroupNegativewordsApi {
   public com.squareup.okhttp.Call adgroupNegativewordsUpdateCall(
       AdgroupNegativewordsUpdateRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
-      final ProgressRequestBody.ProgressRequestListener progressRequestListener)
+      final ProgressRequestBody.ProgressRequestListener progressRequestListener,
+      String... headerPair)
       throws ApiException {
+
     Object localVarPostBody = data;
 
     // create path and map variables
@@ -390,6 +424,15 @@ public class AdgroupNegativewordsApi {
     final String[] localVarContentTypes = {"application/json", "application/xml"};
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
     localVarHeaderParams.put("Content-Type", localVarContentType);
+
+    if (headerPair != null && headerPair.length > 0) {
+      if (headerPair.length % 2 != 0) {
+        throw new UnsupportedOperationException("Parameter headerPair must be paired");
+      }
+      for (int i = 0; i < headerPair.length / 2; i++) {
+        localVarHeaderParams.put(headerPair[i], headerPair[i * 2 + 1]);
+      }
+    }
 
     if (progressListener != null) {
       apiClient
@@ -426,7 +469,8 @@ public class AdgroupNegativewordsApi {
   private com.squareup.okhttp.Call adgroupNegativewordsUpdateValidateBeforeCall(
       AdgroupNegativewordsUpdateRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
-      final ProgressRequestBody.ProgressRequestListener progressRequestListener)
+      final ProgressRequestBody.ProgressRequestListener progressRequestListener,
+      String... headerPair)
       throws ApiException {
 
     // verify the required parameter 'data' is set
@@ -436,7 +480,7 @@ public class AdgroupNegativewordsApi {
     }
 
     com.squareup.okhttp.Call call =
-        adgroupNegativewordsUpdateCall(data, progressListener, progressRequestListener);
+        adgroupNegativewordsUpdateCall(data, progressListener, progressRequestListener, headerPair);
     return call;
   }
 
@@ -449,9 +493,9 @@ public class AdgroupNegativewordsApi {
    *     response body
    */
   public AdgroupNegativewordsUpdateResponse adgroupNegativewordsUpdate(
-      AdgroupNegativewordsUpdateRequest data) throws ApiException {
+      AdgroupNegativewordsUpdateRequest data, String... headerPair) throws ApiException {
     ApiResponse<AdgroupNegativewordsUpdateResponse> resp =
-        adgroupNegativewordsUpdateWithHttpInfo(data);
+        adgroupNegativewordsUpdateWithHttpInfo(data, headerPair);
     return resp.getData();
   }
 
@@ -464,8 +508,9 @@ public class AdgroupNegativewordsApi {
    *     response body
    */
   public ApiResponse<AdgroupNegativewordsUpdateResponse> adgroupNegativewordsUpdateWithHttpInfo(
-      AdgroupNegativewordsUpdateRequest data) throws ApiException {
-    com.squareup.okhttp.Call call = adgroupNegativewordsUpdateValidateBeforeCall(data, null, null);
+      AdgroupNegativewordsUpdateRequest data, String... headerPair) throws ApiException {
+    com.squareup.okhttp.Call call =
+        adgroupNegativewordsUpdateValidateBeforeCall(data, null, null, headerPair);
     Type localVarReturnType = new TypeToken<AdgroupNegativewordsUpdateResponse>() {}.getType();
     return apiClient.execute(call, localVarReturnType);
   }
@@ -480,7 +525,8 @@ public class AdgroupNegativewordsApi {
    */
   public com.squareup.okhttp.Call adgroupNegativewordsUpdateAsync(
       AdgroupNegativewordsUpdateRequest data,
-      final ApiCallback<AdgroupNegativewordsUpdateResponse> callback)
+      final ApiCallback<AdgroupNegativewordsUpdateResponse> callback,
+      String... headerPair)
       throws ApiException {
 
     ProgressResponseBody.ProgressListener progressListener = null;
@@ -506,7 +552,7 @@ public class AdgroupNegativewordsApi {
 
     com.squareup.okhttp.Call call =
         adgroupNegativewordsUpdateValidateBeforeCall(
-            data, progressListener, progressRequestListener);
+            data, progressListener, progressRequestListener, headerPair);
     Type localVarReturnType = new TypeToken<AdgroupNegativewordsUpdateResponse>() {}.getType();
     apiClient.executeAsync(call, localVarReturnType, callback);
     return call;

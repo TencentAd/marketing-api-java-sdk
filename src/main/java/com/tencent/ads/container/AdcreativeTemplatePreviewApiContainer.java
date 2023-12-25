@@ -35,8 +35,9 @@ public class AdcreativeTemplatePreviewApiContainer extends ApiContainer {
    *     response body
    */
   public AdcreativeTemplatePreviewGetResponseData adcreativeTemplatePreviewGet(
-      AdcreativeTemplatePreviewGetRequest data) throws ApiException, TencentAdsResponseException {
-    AdcreativeTemplatePreviewGetResponse resp = api.adcreativeTemplatePreviewGet(data);
+      AdcreativeTemplatePreviewGetRequest data, String... headerPair)
+      throws ApiException, TencentAdsResponseException {
+    AdcreativeTemplatePreviewGetResponse resp = api.adcreativeTemplatePreviewGet(data, headerPair);
     handleResponse(gson.toJson(resp));
     return resp.getData();
   }

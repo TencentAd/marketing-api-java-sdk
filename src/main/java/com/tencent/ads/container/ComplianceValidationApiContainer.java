@@ -35,8 +35,9 @@ public class ComplianceValidationApiContainer extends ApiContainer {
    *     response body
    */
   public ComplianceValidationGetResponseData complianceValidationGet(
-      ComplianceValidationGetRequest data) throws ApiException, TencentAdsResponseException {
-    ComplianceValidationGetResponse resp = api.complianceValidationGet(data);
+      ComplianceValidationGetRequest data, String... headerPair)
+      throws ApiException, TencentAdsResponseException {
+    ComplianceValidationGetResponse resp = api.complianceValidationGet(data, headerPair);
     handleResponse(gson.toJson(resp));
     return resp.getData();
   }

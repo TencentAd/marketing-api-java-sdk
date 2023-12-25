@@ -61,8 +61,10 @@ public class XijingDeriveTempTokenApi {
   public com.squareup.okhttp.Call xijingDeriveTempTokenGetCall(
       XijingDeriveTempTokenGetRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
-      final ProgressRequestBody.ProgressRequestListener progressRequestListener)
+      final ProgressRequestBody.ProgressRequestListener progressRequestListener,
+      String... headerPair)
       throws ApiException {
+
     Object localVarPostBody = data;
 
     // create path and map variables
@@ -82,6 +84,15 @@ public class XijingDeriveTempTokenApi {
     final String[] localVarContentTypes = {"application/json", "application/xml"};
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
     localVarHeaderParams.put("Content-Type", localVarContentType);
+
+    if (headerPair != null && headerPair.length > 0) {
+      if (headerPair.length % 2 != 0) {
+        throw new UnsupportedOperationException("Parameter headerPair must be paired");
+      }
+      for (int i = 0; i < headerPair.length / 2; i++) {
+        localVarHeaderParams.put(headerPair[i], headerPair[i * 2 + 1]);
+      }
+    }
 
     if (progressListener != null) {
       apiClient
@@ -118,7 +129,8 @@ public class XijingDeriveTempTokenApi {
   private com.squareup.okhttp.Call xijingDeriveTempTokenGetValidateBeforeCall(
       XijingDeriveTempTokenGetRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
-      final ProgressRequestBody.ProgressRequestListener progressRequestListener)
+      final ProgressRequestBody.ProgressRequestListener progressRequestListener,
+      String... headerPair)
       throws ApiException {
 
     // verify the required parameter 'data' is set
@@ -128,7 +140,7 @@ public class XijingDeriveTempTokenApi {
     }
 
     com.squareup.okhttp.Call call =
-        xijingDeriveTempTokenGetCall(data, progressListener, progressRequestListener);
+        xijingDeriveTempTokenGetCall(data, progressListener, progressRequestListener, headerPair);
     return call;
   }
 
@@ -141,8 +153,9 @@ public class XijingDeriveTempTokenApi {
    *     response body
    */
   public XijingDeriveTempTokenGetResponse xijingDeriveTempTokenGet(
-      XijingDeriveTempTokenGetRequest data) throws ApiException {
-    ApiResponse<XijingDeriveTempTokenGetResponse> resp = xijingDeriveTempTokenGetWithHttpInfo(data);
+      XijingDeriveTempTokenGetRequest data, String... headerPair) throws ApiException {
+    ApiResponse<XijingDeriveTempTokenGetResponse> resp =
+        xijingDeriveTempTokenGetWithHttpInfo(data, headerPair);
     return resp.getData();
   }
 
@@ -155,8 +168,9 @@ public class XijingDeriveTempTokenApi {
    *     response body
    */
   public ApiResponse<XijingDeriveTempTokenGetResponse> xijingDeriveTempTokenGetWithHttpInfo(
-      XijingDeriveTempTokenGetRequest data) throws ApiException {
-    com.squareup.okhttp.Call call = xijingDeriveTempTokenGetValidateBeforeCall(data, null, null);
+      XijingDeriveTempTokenGetRequest data, String... headerPair) throws ApiException {
+    com.squareup.okhttp.Call call =
+        xijingDeriveTempTokenGetValidateBeforeCall(data, null, null, headerPair);
     Type localVarReturnType = new TypeToken<XijingDeriveTempTokenGetResponse>() {}.getType();
     return apiClient.execute(call, localVarReturnType);
   }
@@ -171,7 +185,8 @@ public class XijingDeriveTempTokenApi {
    */
   public com.squareup.okhttp.Call xijingDeriveTempTokenGetAsync(
       XijingDeriveTempTokenGetRequest data,
-      final ApiCallback<XijingDeriveTempTokenGetResponse> callback)
+      final ApiCallback<XijingDeriveTempTokenGetResponse> callback,
+      String... headerPair)
       throws ApiException {
 
     ProgressResponseBody.ProgressListener progressListener = null;
@@ -196,7 +211,8 @@ public class XijingDeriveTempTokenApi {
     }
 
     com.squareup.okhttp.Call call =
-        xijingDeriveTempTokenGetValidateBeforeCall(data, progressListener, progressRequestListener);
+        xijingDeriveTempTokenGetValidateBeforeCall(
+            data, progressListener, progressRequestListener, headerPair);
     Type localVarReturnType = new TypeToken<XijingDeriveTempTokenGetResponse>() {}.getType();
     apiClient.executeAsync(call, localVarReturnType, callback);
     return call;

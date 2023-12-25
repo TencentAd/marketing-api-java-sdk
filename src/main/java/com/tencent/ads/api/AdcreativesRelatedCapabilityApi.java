@@ -64,8 +64,10 @@ public class AdcreativesRelatedCapabilityApi {
       Long adId,
       List<String> fields,
       final ProgressResponseBody.ProgressListener progressListener,
-      final ProgressRequestBody.ProgressRequestListener progressRequestListener)
+      final ProgressRequestBody.ProgressRequestListener progressRequestListener,
+      String... headerPair)
       throws ApiException {
+
     Object localVarPostBody = null;
 
     // create path and map variables
@@ -90,6 +92,15 @@ public class AdcreativesRelatedCapabilityApi {
     final String[] localVarContentTypes = {"text/plain"};
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
     localVarHeaderParams.put("Content-Type", localVarContentType);
+
+    if (headerPair != null && headerPair.length > 0) {
+      if (headerPair.length % 2 != 0) {
+        throw new UnsupportedOperationException("Parameter headerPair must be paired");
+      }
+      for (int i = 0; i < headerPair.length / 2; i++) {
+        localVarHeaderParams.put(headerPair[i], headerPair[i * 2 + 1]);
+      }
+    }
 
     if (progressListener != null) {
       apiClient
@@ -128,7 +139,8 @@ public class AdcreativesRelatedCapabilityApi {
       Long adId,
       List<String> fields,
       final ProgressResponseBody.ProgressListener progressListener,
-      final ProgressRequestBody.ProgressRequestListener progressRequestListener)
+      final ProgressRequestBody.ProgressRequestListener progressRequestListener,
+      String... headerPair)
       throws ApiException {
 
     // verify the required parameter 'accountId' is set
@@ -145,7 +157,7 @@ public class AdcreativesRelatedCapabilityApi {
 
     com.squareup.okhttp.Call call =
         adcreativesRelatedCapabilityGetCall(
-            accountId, adId, fields, progressListener, progressRequestListener);
+            accountId, adId, fields, progressListener, progressRequestListener, headerPair);
     return call;
   }
 
@@ -160,9 +172,9 @@ public class AdcreativesRelatedCapabilityApi {
    *     response body
    */
   public AdcreativesRelatedCapabilityGetResponse adcreativesRelatedCapabilityGet(
-      Long accountId, Long adId, List<String> fields) throws ApiException {
+      Long accountId, Long adId, List<String> fields, String... headerPair) throws ApiException {
     ApiResponse<AdcreativesRelatedCapabilityGetResponse> resp =
-        adcreativesRelatedCapabilityGetWithHttpInfo(accountId, adId, fields);
+        adcreativesRelatedCapabilityGetWithHttpInfo(accountId, adId, fields, headerPair);
     return resp.getData();
   }
 
@@ -177,10 +189,12 @@ public class AdcreativesRelatedCapabilityApi {
    *     response body
    */
   public ApiResponse<AdcreativesRelatedCapabilityGetResponse>
-      adcreativesRelatedCapabilityGetWithHttpInfo(Long accountId, Long adId, List<String> fields)
+      adcreativesRelatedCapabilityGetWithHttpInfo(
+          Long accountId, Long adId, List<String> fields, String... headerPair)
           throws ApiException {
     com.squareup.okhttp.Call call =
-        adcreativesRelatedCapabilityGetValidateBeforeCall(accountId, adId, fields, null, null);
+        adcreativesRelatedCapabilityGetValidateBeforeCall(
+            accountId, adId, fields, null, null, headerPair);
     Type localVarReturnType = new TypeToken<AdcreativesRelatedCapabilityGetResponse>() {}.getType();
     return apiClient.execute(call, localVarReturnType);
   }
@@ -199,7 +213,8 @@ public class AdcreativesRelatedCapabilityApi {
       Long accountId,
       Long adId,
       List<String> fields,
-      final ApiCallback<AdcreativesRelatedCapabilityGetResponse> callback)
+      final ApiCallback<AdcreativesRelatedCapabilityGetResponse> callback,
+      String... headerPair)
       throws ApiException {
 
     ProgressResponseBody.ProgressListener progressListener = null;
@@ -225,7 +240,7 @@ public class AdcreativesRelatedCapabilityApi {
 
     com.squareup.okhttp.Call call =
         adcreativesRelatedCapabilityGetValidateBeforeCall(
-            accountId, adId, fields, progressListener, progressRequestListener);
+            accountId, adId, fields, progressListener, progressRequestListener, headerPair);
     Type localVarReturnType = new TypeToken<AdcreativesRelatedCapabilityGetResponse>() {}.getType();
     apiClient.executeAsync(call, localVarReturnType, callback);
     return call;

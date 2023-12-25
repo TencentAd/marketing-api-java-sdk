@@ -34,9 +34,10 @@ public class ImageProcessingApiContainer extends ApiContainer {
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
-  public ImageProcessingAddResponseData imageProcessingAdd(ImageProcessingAddRequest data)
+  public ImageProcessingAddResponseData imageProcessingAdd(
+      ImageProcessingAddRequest data, String... headerPair)
       throws ApiException, TencentAdsResponseException {
-    ImageProcessingAddResponse resp = api.imageProcessingAdd(data);
+    ImageProcessingAddResponse resp = api.imageProcessingAdd(data, headerPair);
     handleResponse(gson.toJson(resp));
     return resp.getData();
   }

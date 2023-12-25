@@ -47,9 +47,10 @@ public class PromotedObjectsApiContainer extends ApiContainer {
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
-  public PromotedObjectsAddResponseData promotedObjectsAdd(PromotedObjectsAddRequest data)
+  public PromotedObjectsAddResponseData promotedObjectsAdd(
+      PromotedObjectsAddRequest data, String... headerPair)
       throws ApiException, TencentAdsResponseException {
-    PromotedObjectsAddResponse resp = api.promotedObjectsAdd(data);
+    PromotedObjectsAddResponse resp = api.promotedObjectsAdd(data, headerPair);
     handleResponse(gson.toJson(resp));
     return resp.getData();
   }
@@ -63,8 +64,9 @@ public class PromotedObjectsApiContainer extends ApiContainer {
    *     response body
    */
   public PromotedObjectsAuthorizeResponseData promotedObjectsAuthorize(
-      PromotedObjectsAuthorizeRequest data) throws ApiException, TencentAdsResponseException {
-    PromotedObjectsAuthorizeResponse resp = api.promotedObjectsAuthorize(data);
+      PromotedObjectsAuthorizeRequest data, String... headerPair)
+      throws ApiException, TencentAdsResponseException {
+    PromotedObjectsAuthorizeResponse resp = api.promotedObjectsAuthorize(data, headerPair);
     handleResponse(gson.toJson(resp));
     return resp.getData();
   }
@@ -77,9 +79,10 @@ public class PromotedObjectsApiContainer extends ApiContainer {
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
-  public PromotedObjectsDeleteResponseData promotedObjectsDelete(PromotedObjectsDeleteRequest data)
+  public PromotedObjectsDeleteResponseData promotedObjectsDelete(
+      PromotedObjectsDeleteRequest data, String... headerPair)
       throws ApiException, TencentAdsResponseException {
-    PromotedObjectsDeleteResponse resp = api.promotedObjectsDelete(data);
+    PromotedObjectsDeleteResponse resp = api.promotedObjectsDelete(data, headerPair);
     handleResponse(gson.toJson(resp));
     return resp.getData();
   }
@@ -101,10 +104,11 @@ public class PromotedObjectsApiContainer extends ApiContainer {
       List<FilteringStruct> filtering,
       Long page,
       Long pageSize,
-      List<String> fields)
+      List<String> fields,
+      String... headerPair)
       throws ApiException, TencentAdsResponseException {
     PromotedObjectsGetResponse resp =
-        api.promotedObjectsGet(accountId, filtering, page, pageSize, fields);
+        api.promotedObjectsGet(accountId, filtering, page, pageSize, fields, headerPair);
     handleResponse(gson.toJson(resp));
     return resp.getData();
   }
@@ -117,9 +121,10 @@ public class PromotedObjectsApiContainer extends ApiContainer {
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
-  public PromotedObjectsUpdateResponseData promotedObjectsUpdate(PromotedObjectsUpdateRequest data)
+  public PromotedObjectsUpdateResponseData promotedObjectsUpdate(
+      PromotedObjectsUpdateRequest data, String... headerPair)
       throws ApiException, TencentAdsResponseException {
-    PromotedObjectsUpdateResponse resp = api.promotedObjectsUpdate(data);
+    PromotedObjectsUpdateResponse resp = api.promotedObjectsUpdate(data, headerPair);
     handleResponse(gson.toJson(resp));
     return resp.getData();
   }

@@ -37,10 +37,10 @@ public class AdcreativePreviewsQrcodeApiContainer extends ApiContainer {
    *     response body
    */
   public AdcreativePreviewsQrcodeGetResponseData adcreativePreviewsQrcodeGet(
-      Long accountId, Long adgroupId, List<String> fields)
+      Long accountId, Long adgroupId, List<String> fields, String... headerPair)
       throws ApiException, TencentAdsResponseException {
     AdcreativePreviewsQrcodeGetResponse resp =
-        api.adcreativePreviewsQrcodeGet(accountId, adgroupId, fields);
+        api.adcreativePreviewsQrcodeGet(accountId, adgroupId, fields, headerPair);
     handleResponse(gson.toJson(resp));
     return resp.getData();
   }

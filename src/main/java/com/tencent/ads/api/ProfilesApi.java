@@ -65,8 +65,10 @@ public class ProfilesApi {
   public com.squareup.okhttp.Call profilesAddCall(
       ProfilesAddRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
-      final ProgressRequestBody.ProgressRequestListener progressRequestListener)
+      final ProgressRequestBody.ProgressRequestListener progressRequestListener,
+      String... headerPair)
       throws ApiException {
+
     Object localVarPostBody = data;
 
     // create path and map variables
@@ -86,6 +88,15 @@ public class ProfilesApi {
     final String[] localVarContentTypes = {"application/json", "application/xml"};
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
     localVarHeaderParams.put("Content-Type", localVarContentType);
+
+    if (headerPair != null && headerPair.length > 0) {
+      if (headerPair.length % 2 != 0) {
+        throw new UnsupportedOperationException("Parameter headerPair must be paired");
+      }
+      for (int i = 0; i < headerPair.length / 2; i++) {
+        localVarHeaderParams.put(headerPair[i], headerPair[i * 2 + 1]);
+      }
+    }
 
     if (progressListener != null) {
       apiClient
@@ -122,7 +133,8 @@ public class ProfilesApi {
   private com.squareup.okhttp.Call profilesAddValidateBeforeCall(
       ProfilesAddRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
-      final ProgressRequestBody.ProgressRequestListener progressRequestListener)
+      final ProgressRequestBody.ProgressRequestListener progressRequestListener,
+      String... headerPair)
       throws ApiException {
 
     // verify the required parameter 'data' is set
@@ -132,7 +144,7 @@ public class ProfilesApi {
     }
 
     com.squareup.okhttp.Call call =
-        profilesAddCall(data, progressListener, progressRequestListener);
+        profilesAddCall(data, progressListener, progressRequestListener, headerPair);
     return call;
   }
 
@@ -144,8 +156,9 @@ public class ProfilesApi {
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
-  public ProfilesAddResponse profilesAdd(ProfilesAddRequest data) throws ApiException {
-    ApiResponse<ProfilesAddResponse> resp = profilesAddWithHttpInfo(data);
+  public ProfilesAddResponse profilesAdd(ProfilesAddRequest data, String... headerPair)
+      throws ApiException {
+    ApiResponse<ProfilesAddResponse> resp = profilesAddWithHttpInfo(data, headerPair);
     return resp.getData();
   }
 
@@ -157,9 +170,9 @@ public class ProfilesApi {
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
-  public ApiResponse<ProfilesAddResponse> profilesAddWithHttpInfo(ProfilesAddRequest data)
-      throws ApiException {
-    com.squareup.okhttp.Call call = profilesAddValidateBeforeCall(data, null, null);
+  public ApiResponse<ProfilesAddResponse> profilesAddWithHttpInfo(
+      ProfilesAddRequest data, String... headerPair) throws ApiException {
+    com.squareup.okhttp.Call call = profilesAddValidateBeforeCall(data, null, null, headerPair);
     Type localVarReturnType = new TypeToken<ProfilesAddResponse>() {}.getType();
     return apiClient.execute(call, localVarReturnType);
   }
@@ -173,7 +186,9 @@ public class ProfilesApi {
    * @throws ApiException If fail to process the API call, e.g. serializing the request body object
    */
   public com.squareup.okhttp.Call profilesAddAsync(
-      ProfilesAddRequest data, final ApiCallback<ProfilesAddResponse> callback)
+      ProfilesAddRequest data,
+      final ApiCallback<ProfilesAddResponse> callback,
+      String... headerPair)
       throws ApiException {
 
     ProgressResponseBody.ProgressListener progressListener = null;
@@ -198,7 +213,7 @@ public class ProfilesApi {
     }
 
     com.squareup.okhttp.Call call =
-        profilesAddValidateBeforeCall(data, progressListener, progressRequestListener);
+        profilesAddValidateBeforeCall(data, progressListener, progressRequestListener, headerPair);
     Type localVarReturnType = new TypeToken<ProfilesAddResponse>() {}.getType();
     apiClient.executeAsync(call, localVarReturnType, callback);
     return call;
@@ -215,8 +230,10 @@ public class ProfilesApi {
   public com.squareup.okhttp.Call profilesDeleteCall(
       ProfilesDeleteRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
-      final ProgressRequestBody.ProgressRequestListener progressRequestListener)
+      final ProgressRequestBody.ProgressRequestListener progressRequestListener,
+      String... headerPair)
       throws ApiException {
+
     Object localVarPostBody = data;
 
     // create path and map variables
@@ -236,6 +253,15 @@ public class ProfilesApi {
     final String[] localVarContentTypes = {"application/json", "application/xml"};
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
     localVarHeaderParams.put("Content-Type", localVarContentType);
+
+    if (headerPair != null && headerPair.length > 0) {
+      if (headerPair.length % 2 != 0) {
+        throw new UnsupportedOperationException("Parameter headerPair must be paired");
+      }
+      for (int i = 0; i < headerPair.length / 2; i++) {
+        localVarHeaderParams.put(headerPair[i], headerPair[i * 2 + 1]);
+      }
+    }
 
     if (progressListener != null) {
       apiClient
@@ -272,7 +298,8 @@ public class ProfilesApi {
   private com.squareup.okhttp.Call profilesDeleteValidateBeforeCall(
       ProfilesDeleteRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
-      final ProgressRequestBody.ProgressRequestListener progressRequestListener)
+      final ProgressRequestBody.ProgressRequestListener progressRequestListener,
+      String... headerPair)
       throws ApiException {
 
     // verify the required parameter 'data' is set
@@ -282,7 +309,7 @@ public class ProfilesApi {
     }
 
     com.squareup.okhttp.Call call =
-        profilesDeleteCall(data, progressListener, progressRequestListener);
+        profilesDeleteCall(data, progressListener, progressRequestListener, headerPair);
     return call;
   }
 
@@ -294,8 +321,9 @@ public class ProfilesApi {
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
-  public ProfilesDeleteResponse profilesDelete(ProfilesDeleteRequest data) throws ApiException {
-    ApiResponse<ProfilesDeleteResponse> resp = profilesDeleteWithHttpInfo(data);
+  public ProfilesDeleteResponse profilesDelete(ProfilesDeleteRequest data, String... headerPair)
+      throws ApiException {
+    ApiResponse<ProfilesDeleteResponse> resp = profilesDeleteWithHttpInfo(data, headerPair);
     return resp.getData();
   }
 
@@ -307,9 +335,9 @@ public class ProfilesApi {
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
-  public ApiResponse<ProfilesDeleteResponse> profilesDeleteWithHttpInfo(ProfilesDeleteRequest data)
-      throws ApiException {
-    com.squareup.okhttp.Call call = profilesDeleteValidateBeforeCall(data, null, null);
+  public ApiResponse<ProfilesDeleteResponse> profilesDeleteWithHttpInfo(
+      ProfilesDeleteRequest data, String... headerPair) throws ApiException {
+    com.squareup.okhttp.Call call = profilesDeleteValidateBeforeCall(data, null, null, headerPair);
     Type localVarReturnType = new TypeToken<ProfilesDeleteResponse>() {}.getType();
     return apiClient.execute(call, localVarReturnType);
   }
@@ -323,7 +351,9 @@ public class ProfilesApi {
    * @throws ApiException If fail to process the API call, e.g. serializing the request body object
    */
   public com.squareup.okhttp.Call profilesDeleteAsync(
-      ProfilesDeleteRequest data, final ApiCallback<ProfilesDeleteResponse> callback)
+      ProfilesDeleteRequest data,
+      final ApiCallback<ProfilesDeleteResponse> callback,
+      String... headerPair)
       throws ApiException {
 
     ProgressResponseBody.ProgressListener progressListener = null;
@@ -348,7 +378,8 @@ public class ProfilesApi {
     }
 
     com.squareup.okhttp.Call call =
-        profilesDeleteValidateBeforeCall(data, progressListener, progressRequestListener);
+        profilesDeleteValidateBeforeCall(
+            data, progressListener, progressRequestListener, headerPair);
     Type localVarReturnType = new TypeToken<ProfilesDeleteResponse>() {}.getType();
     apiClient.executeAsync(call, localVarReturnType, callback);
     return call;
@@ -373,8 +404,10 @@ public class ProfilesApi {
       Long pageSize,
       List<String> fields,
       final ProgressResponseBody.ProgressListener progressListener,
-      final ProgressRequestBody.ProgressRequestListener progressRequestListener)
+      final ProgressRequestBody.ProgressRequestListener progressRequestListener,
+      String... headerPair)
       throws ApiException {
+
     Object localVarPostBody = null;
 
     // create path and map variables
@@ -404,6 +437,15 @@ public class ProfilesApi {
     final String[] localVarContentTypes = {"text/plain"};
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
     localVarHeaderParams.put("Content-Type", localVarContentType);
+
+    if (headerPair != null && headerPair.length > 0) {
+      if (headerPair.length % 2 != 0) {
+        throw new UnsupportedOperationException("Parameter headerPair must be paired");
+      }
+      for (int i = 0; i < headerPair.length / 2; i++) {
+        localVarHeaderParams.put(headerPair[i], headerPair[i * 2 + 1]);
+      }
+    }
 
     if (progressListener != null) {
       apiClient
@@ -444,7 +486,8 @@ public class ProfilesApi {
       Long pageSize,
       List<String> fields,
       final ProgressResponseBody.ProgressListener progressListener,
-      final ProgressRequestBody.ProgressRequestListener progressRequestListener)
+      final ProgressRequestBody.ProgressRequestListener progressRequestListener,
+      String... headerPair)
       throws ApiException {
 
     // verify the required parameter 'accountId' is set
@@ -461,7 +504,8 @@ public class ProfilesApi {
             pageSize,
             fields,
             progressListener,
-            progressRequestListener);
+            progressRequestListener,
+            headerPair);
     return call;
   }
 
@@ -482,10 +526,11 @@ public class ProfilesApi {
       List<FilteringStruct> filtering,
       Long page,
       Long pageSize,
-      List<String> fields)
+      List<String> fields,
+      String... headerPair)
       throws ApiException {
     ApiResponse<ProfilesGetResponse> resp =
-        profilesGetWithHttpInfo(accountId, filtering, page, pageSize, fields);
+        profilesGetWithHttpInfo(accountId, filtering, page, pageSize, fields, headerPair);
     return resp.getData();
   }
 
@@ -506,10 +551,12 @@ public class ProfilesApi {
       List<FilteringStruct> filtering,
       Long page,
       Long pageSize,
-      List<String> fields)
+      List<String> fields,
+      String... headerPair)
       throws ApiException {
     com.squareup.okhttp.Call call =
-        profilesGetValidateBeforeCall(accountId, filtering, page, pageSize, fields, null, null);
+        profilesGetValidateBeforeCall(
+            accountId, filtering, page, pageSize, fields, null, null, headerPair);
     Type localVarReturnType = new TypeToken<ProfilesGetResponse>() {}.getType();
     return apiClient.execute(call, localVarReturnType);
   }
@@ -532,7 +579,8 @@ public class ProfilesApi {
       Long page,
       Long pageSize,
       List<String> fields,
-      final ApiCallback<ProfilesGetResponse> callback)
+      final ApiCallback<ProfilesGetResponse> callback,
+      String... headerPair)
       throws ApiException {
 
     ProgressResponseBody.ProgressListener progressListener = null;
@@ -564,7 +612,8 @@ public class ProfilesApi {
             pageSize,
             fields,
             progressListener,
-            progressRequestListener);
+            progressRequestListener,
+            headerPair);
     Type localVarReturnType = new TypeToken<ProfilesGetResponse>() {}.getType();
     apiClient.executeAsync(call, localVarReturnType, callback);
     return call;

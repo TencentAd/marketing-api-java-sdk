@@ -38,10 +38,10 @@ public class BusinessManagerRelationsApiContainer extends ApiContainer {
    *     response body
    */
   public BusinessManagerRelationsGetResponseData businessManagerRelationsGet(
-      Long page, Long pageSize, Long advertiserType, List<String> fields)
+      Long page, Long pageSize, Long advertiserType, List<String> fields, String... headerPair)
       throws ApiException, TencentAdsResponseException {
     BusinessManagerRelationsGetResponse resp =
-        api.businessManagerRelationsGet(page, pageSize, advertiserType, fields);
+        api.businessManagerRelationsGet(page, pageSize, advertiserType, fields, headerPair);
     handleResponse(gson.toJson(resp));
     return resp.getData();
   }

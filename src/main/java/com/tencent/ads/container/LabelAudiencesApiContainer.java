@@ -34,9 +34,10 @@ public class LabelAudiencesApiContainer extends ApiContainer {
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
-  public LabelAudiencesAddResponseData labelAudiencesAdd(LabelAudiencesAddRequest data)
+  public LabelAudiencesAddResponseData labelAudiencesAdd(
+      LabelAudiencesAddRequest data, String... headerPair)
       throws ApiException, TencentAdsResponseException {
-    LabelAudiencesAddResponse resp = api.labelAudiencesAdd(data);
+    LabelAudiencesAddResponse resp = api.labelAudiencesAdd(data, headerPair);
     handleResponse(gson.toJson(resp));
     return resp.getData();
   }

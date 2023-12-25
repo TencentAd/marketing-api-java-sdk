@@ -64,8 +64,10 @@ public class GameFeatureTagsApi {
       String type,
       List<String> fields,
       final ProgressResponseBody.ProgressListener progressListener,
-      final ProgressRequestBody.ProgressRequestListener progressRequestListener)
+      final ProgressRequestBody.ProgressRequestListener progressRequestListener,
+      String... headerPair)
       throws ApiException {
+
     Object localVarPostBody = null;
 
     // create path and map variables
@@ -90,6 +92,15 @@ public class GameFeatureTagsApi {
     final String[] localVarContentTypes = {"text/plain"};
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
     localVarHeaderParams.put("Content-Type", localVarContentType);
+
+    if (headerPair != null && headerPair.length > 0) {
+      if (headerPair.length % 2 != 0) {
+        throw new UnsupportedOperationException("Parameter headerPair must be paired");
+      }
+      for (int i = 0; i < headerPair.length / 2; i++) {
+        localVarHeaderParams.put(headerPair[i], headerPair[i * 2 + 1]);
+      }
+    }
 
     if (progressListener != null) {
       apiClient
@@ -128,7 +139,8 @@ public class GameFeatureTagsApi {
       String type,
       List<String> fields,
       final ProgressResponseBody.ProgressListener progressListener,
-      final ProgressRequestBody.ProgressRequestListener progressRequestListener)
+      final ProgressRequestBody.ProgressRequestListener progressRequestListener,
+      String... headerPair)
       throws ApiException {
 
     // verify the required parameter 'accountId' is set
@@ -144,7 +156,8 @@ public class GameFeatureTagsApi {
     }
 
     com.squareup.okhttp.Call call =
-        gameFeatureTagsGetCall(accountId, type, fields, progressListener, progressRequestListener);
+        gameFeatureTagsGetCall(
+            accountId, type, fields, progressListener, progressRequestListener, headerPair);
     return call;
   }
 
@@ -159,9 +172,9 @@ public class GameFeatureTagsApi {
    *     response body
    */
   public GameFeatureTagsGetResponse gameFeatureTagsGet(
-      Long accountId, String type, List<String> fields) throws ApiException {
+      Long accountId, String type, List<String> fields, String... headerPair) throws ApiException {
     ApiResponse<GameFeatureTagsGetResponse> resp =
-        gameFeatureTagsGetWithHttpInfo(accountId, type, fields);
+        gameFeatureTagsGetWithHttpInfo(accountId, type, fields, headerPair);
     return resp.getData();
   }
 
@@ -176,9 +189,9 @@ public class GameFeatureTagsApi {
    *     response body
    */
   public ApiResponse<GameFeatureTagsGetResponse> gameFeatureTagsGetWithHttpInfo(
-      Long accountId, String type, List<String> fields) throws ApiException {
+      Long accountId, String type, List<String> fields, String... headerPair) throws ApiException {
     com.squareup.okhttp.Call call =
-        gameFeatureTagsGetValidateBeforeCall(accountId, type, fields, null, null);
+        gameFeatureTagsGetValidateBeforeCall(accountId, type, fields, null, null, headerPair);
     Type localVarReturnType = new TypeToken<GameFeatureTagsGetResponse>() {}.getType();
     return apiClient.execute(call, localVarReturnType);
   }
@@ -197,7 +210,8 @@ public class GameFeatureTagsApi {
       Long accountId,
       String type,
       List<String> fields,
-      final ApiCallback<GameFeatureTagsGetResponse> callback)
+      final ApiCallback<GameFeatureTagsGetResponse> callback,
+      String... headerPair)
       throws ApiException {
 
     ProgressResponseBody.ProgressListener progressListener = null;
@@ -223,7 +237,7 @@ public class GameFeatureTagsApi {
 
     com.squareup.okhttp.Call call =
         gameFeatureTagsGetValidateBeforeCall(
-            accountId, type, fields, progressListener, progressRequestListener);
+            accountId, type, fields, progressListener, progressRequestListener, headerPair);
     Type localVarReturnType = new TypeToken<GameFeatureTagsGetResponse>() {}.getType();
     apiClient.executeAsync(call, localVarReturnType, callback);
     return call;

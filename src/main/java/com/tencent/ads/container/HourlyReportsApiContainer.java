@@ -60,7 +60,8 @@ public class HourlyReportsApiContainer extends ApiContainer {
       String timeLine,
       List<String> fields,
       Boolean weixinOfficialAccountsUpgradeEnabled,
-      Boolean adqAccountsUpgradeEnabled)
+      Boolean adqAccountsUpgradeEnabled,
+      String... headerPair)
       throws ApiException, TencentAdsResponseException {
     HourlyReportsGetResponse resp =
         api.hourlyReportsGet(
@@ -75,7 +76,8 @@ public class HourlyReportsApiContainer extends ApiContainer {
             timeLine,
             fields,
             weixinOfficialAccountsUpgradeEnabled,
-            adqAccountsUpgradeEnabled);
+            adqAccountsUpgradeEnabled,
+            headerPair);
     handleResponse(gson.toJson(resp));
     return resp.getData();
   }

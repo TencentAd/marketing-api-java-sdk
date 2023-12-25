@@ -21,6 +21,9 @@ import com.tencent.ads.exception.TencentAdsResponseException;
 import com.tencent.ads.model.DynamicAdVideoAddRequest;
 import com.tencent.ads.model.DynamicAdVideoAddResponse;
 import com.tencent.ads.model.DynamicAdVideoAddResponseData;
+import com.tencent.ads.model.DynamicAdVideoGetResponse;
+import com.tencent.ads.model.DynamicAdVideoGetResponseData;
+import java.util.List;
 
 public class DynamicAdVideoApiContainer extends ApiContainer {
 
@@ -34,9 +37,45 @@ public class DynamicAdVideoApiContainer extends ApiContainer {
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
-  public DynamicAdVideoAddResponseData dynamicAdVideoAdd(DynamicAdVideoAddRequest data)
+  public DynamicAdVideoAddResponseData dynamicAdVideoAdd(
+      DynamicAdVideoAddRequest data, String... headerPair)
       throws ApiException, TencentAdsResponseException {
-    DynamicAdVideoAddResponse resp = api.dynamicAdVideoAdd(data);
+    DynamicAdVideoAddResponse resp = api.dynamicAdVideoAdd(data, headerPair);
+    handleResponse(gson.toJson(resp));
+    return resp.getData();
+  }
+
+  /**
+   * 获取广告投放的动态广告视频
+   *
+   * @param accountId (required)
+   * @param productCatalogId (required)
+   * @param productMode (required)
+   * @param productOuterId (required)
+   * @param dynamicAdTemplateId (required)
+   * @param fields 返回参数的字段列表 (optional)
+   * @return DynamicAdVideoGetResponse
+   * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
+   *     response body
+   */
+  public DynamicAdVideoGetResponseData dynamicAdVideoGet(
+      Long accountId,
+      Long productCatalogId,
+      String productMode,
+      String productOuterId,
+      Long dynamicAdTemplateId,
+      List<String> fields,
+      String... headerPair)
+      throws ApiException, TencentAdsResponseException {
+    DynamicAdVideoGetResponse resp =
+        api.dynamicAdVideoGet(
+            accountId,
+            productCatalogId,
+            productMode,
+            productOuterId,
+            dynamicAdTemplateId,
+            fields,
+            headerPair);
     handleResponse(gson.toJson(resp));
     return resp.getData();
   }

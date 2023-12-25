@@ -61,8 +61,10 @@ public class MergeFundTypeSubcustomerTransferApi {
   public com.squareup.okhttp.Call mergeFundTypeSubcustomerTransferAddCall(
       MergeFundTypeSubcustomerTransferAddRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
-      final ProgressRequestBody.ProgressRequestListener progressRequestListener)
+      final ProgressRequestBody.ProgressRequestListener progressRequestListener,
+      String... headerPair)
       throws ApiException {
+
     Object localVarPostBody = data;
 
     // create path and map variables
@@ -82,6 +84,15 @@ public class MergeFundTypeSubcustomerTransferApi {
     final String[] localVarContentTypes = {"application/json", "application/xml"};
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
     localVarHeaderParams.put("Content-Type", localVarContentType);
+
+    if (headerPair != null && headerPair.length > 0) {
+      if (headerPair.length % 2 != 0) {
+        throw new UnsupportedOperationException("Parameter headerPair must be paired");
+      }
+      for (int i = 0; i < headerPair.length / 2; i++) {
+        localVarHeaderParams.put(headerPair[i], headerPair[i * 2 + 1]);
+      }
+    }
 
     if (progressListener != null) {
       apiClient
@@ -118,7 +129,8 @@ public class MergeFundTypeSubcustomerTransferApi {
   private com.squareup.okhttp.Call mergeFundTypeSubcustomerTransferAddValidateBeforeCall(
       MergeFundTypeSubcustomerTransferAddRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
-      final ProgressRequestBody.ProgressRequestListener progressRequestListener)
+      final ProgressRequestBody.ProgressRequestListener progressRequestListener,
+      String... headerPair)
       throws ApiException {
 
     // verify the required parameter 'data' is set
@@ -128,7 +140,8 @@ public class MergeFundTypeSubcustomerTransferApi {
     }
 
     com.squareup.okhttp.Call call =
-        mergeFundTypeSubcustomerTransferAddCall(data, progressListener, progressRequestListener);
+        mergeFundTypeSubcustomerTransferAddCall(
+            data, progressListener, progressRequestListener, headerPair);
     return call;
   }
 
@@ -141,9 +154,9 @@ public class MergeFundTypeSubcustomerTransferApi {
    *     response body
    */
   public MergeFundTypeSubcustomerTransferAddResponse mergeFundTypeSubcustomerTransferAdd(
-      MergeFundTypeSubcustomerTransferAddRequest data) throws ApiException {
+      MergeFundTypeSubcustomerTransferAddRequest data, String... headerPair) throws ApiException {
     ApiResponse<MergeFundTypeSubcustomerTransferAddResponse> resp =
-        mergeFundTypeSubcustomerTransferAddWithHttpInfo(data);
+        mergeFundTypeSubcustomerTransferAddWithHttpInfo(data, headerPair);
     return resp.getData();
   }
 
@@ -157,9 +170,10 @@ public class MergeFundTypeSubcustomerTransferApi {
    */
   public ApiResponse<MergeFundTypeSubcustomerTransferAddResponse>
       mergeFundTypeSubcustomerTransferAddWithHttpInfo(
-          MergeFundTypeSubcustomerTransferAddRequest data) throws ApiException {
+          MergeFundTypeSubcustomerTransferAddRequest data, String... headerPair)
+          throws ApiException {
     com.squareup.okhttp.Call call =
-        mergeFundTypeSubcustomerTransferAddValidateBeforeCall(data, null, null);
+        mergeFundTypeSubcustomerTransferAddValidateBeforeCall(data, null, null, headerPair);
     Type localVarReturnType =
         new TypeToken<MergeFundTypeSubcustomerTransferAddResponse>() {}.getType();
     return apiClient.execute(call, localVarReturnType);
@@ -175,7 +189,8 @@ public class MergeFundTypeSubcustomerTransferApi {
    */
   public com.squareup.okhttp.Call mergeFundTypeSubcustomerTransferAddAsync(
       MergeFundTypeSubcustomerTransferAddRequest data,
-      final ApiCallback<MergeFundTypeSubcustomerTransferAddResponse> callback)
+      final ApiCallback<MergeFundTypeSubcustomerTransferAddResponse> callback,
+      String... headerPair)
       throws ApiException {
 
     ProgressResponseBody.ProgressListener progressListener = null;
@@ -201,7 +216,7 @@ public class MergeFundTypeSubcustomerTransferApi {
 
     com.squareup.okhttp.Call call =
         mergeFundTypeSubcustomerTransferAddValidateBeforeCall(
-            data, progressListener, progressRequestListener);
+            data, progressListener, progressRequestListener, headerPair);
     Type localVarReturnType =
         new TypeToken<MergeFundTypeSubcustomerTransferAddResponse>() {}.getType();
     apiClient.executeAsync(call, localVarReturnType, callback);

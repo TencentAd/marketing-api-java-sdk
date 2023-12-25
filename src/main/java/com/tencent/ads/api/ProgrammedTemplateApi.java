@@ -61,8 +61,10 @@ public class ProgrammedTemplateApi {
   public com.squareup.okhttp.Call programmedTemplateGetCall(
       ProgrammedTemplateGetRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
-      final ProgressRequestBody.ProgressRequestListener progressRequestListener)
+      final ProgressRequestBody.ProgressRequestListener progressRequestListener,
+      String... headerPair)
       throws ApiException {
+
     Object localVarPostBody = data;
 
     // create path and map variables
@@ -82,6 +84,15 @@ public class ProgrammedTemplateApi {
     final String[] localVarContentTypes = {"application/json", "application/xml"};
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
     localVarHeaderParams.put("Content-Type", localVarContentType);
+
+    if (headerPair != null && headerPair.length > 0) {
+      if (headerPair.length % 2 != 0) {
+        throw new UnsupportedOperationException("Parameter headerPair must be paired");
+      }
+      for (int i = 0; i < headerPair.length / 2; i++) {
+        localVarHeaderParams.put(headerPair[i], headerPair[i * 2 + 1]);
+      }
+    }
 
     if (progressListener != null) {
       apiClient
@@ -118,7 +129,8 @@ public class ProgrammedTemplateApi {
   private com.squareup.okhttp.Call programmedTemplateGetValidateBeforeCall(
       ProgrammedTemplateGetRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
-      final ProgressRequestBody.ProgressRequestListener progressRequestListener)
+      final ProgressRequestBody.ProgressRequestListener progressRequestListener,
+      String... headerPair)
       throws ApiException {
 
     // verify the required parameter 'data' is set
@@ -128,7 +140,7 @@ public class ProgrammedTemplateApi {
     }
 
     com.squareup.okhttp.Call call =
-        programmedTemplateGetCall(data, progressListener, progressRequestListener);
+        programmedTemplateGetCall(data, progressListener, progressRequestListener, headerPair);
     return call;
   }
 
@@ -140,9 +152,10 @@ public class ProgrammedTemplateApi {
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
-  public ProgrammedTemplateGetResponse programmedTemplateGet(ProgrammedTemplateGetRequest data)
-      throws ApiException {
-    ApiResponse<ProgrammedTemplateGetResponse> resp = programmedTemplateGetWithHttpInfo(data);
+  public ProgrammedTemplateGetResponse programmedTemplateGet(
+      ProgrammedTemplateGetRequest data, String... headerPair) throws ApiException {
+    ApiResponse<ProgrammedTemplateGetResponse> resp =
+        programmedTemplateGetWithHttpInfo(data, headerPair);
     return resp.getData();
   }
 
@@ -155,8 +168,9 @@ public class ProgrammedTemplateApi {
    *     response body
    */
   public ApiResponse<ProgrammedTemplateGetResponse> programmedTemplateGetWithHttpInfo(
-      ProgrammedTemplateGetRequest data) throws ApiException {
-    com.squareup.okhttp.Call call = programmedTemplateGetValidateBeforeCall(data, null, null);
+      ProgrammedTemplateGetRequest data, String... headerPair) throws ApiException {
+    com.squareup.okhttp.Call call =
+        programmedTemplateGetValidateBeforeCall(data, null, null, headerPair);
     Type localVarReturnType = new TypeToken<ProgrammedTemplateGetResponse>() {}.getType();
     return apiClient.execute(call, localVarReturnType);
   }
@@ -170,7 +184,9 @@ public class ProgrammedTemplateApi {
    * @throws ApiException If fail to process the API call, e.g. serializing the request body object
    */
   public com.squareup.okhttp.Call programmedTemplateGetAsync(
-      ProgrammedTemplateGetRequest data, final ApiCallback<ProgrammedTemplateGetResponse> callback)
+      ProgrammedTemplateGetRequest data,
+      final ApiCallback<ProgrammedTemplateGetResponse> callback,
+      String... headerPair)
       throws ApiException {
 
     ProgressResponseBody.ProgressListener progressListener = null;
@@ -195,7 +211,8 @@ public class ProgrammedTemplateApi {
     }
 
     com.squareup.okhttp.Call call =
-        programmedTemplateGetValidateBeforeCall(data, progressListener, progressRequestListener);
+        programmedTemplateGetValidateBeforeCall(
+            data, progressListener, progressRequestListener, headerPair);
     Type localVarReturnType = new TypeToken<ProgrammedTemplateGetResponse>() {}.getType();
     apiClient.executeAsync(call, localVarReturnType, callback);
     return call;

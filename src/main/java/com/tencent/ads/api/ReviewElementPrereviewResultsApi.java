@@ -61,8 +61,10 @@ public class ReviewElementPrereviewResultsApi {
   public com.squareup.okhttp.Call reviewElementPrereviewResultsGetCall(
       ReviewElementPrereviewResultsGetRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
-      final ProgressRequestBody.ProgressRequestListener progressRequestListener)
+      final ProgressRequestBody.ProgressRequestListener progressRequestListener,
+      String... headerPair)
       throws ApiException {
+
     Object localVarPostBody = data;
 
     // create path and map variables
@@ -82,6 +84,15 @@ public class ReviewElementPrereviewResultsApi {
     final String[] localVarContentTypes = {"application/json", "application/xml"};
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
     localVarHeaderParams.put("Content-Type", localVarContentType);
+
+    if (headerPair != null && headerPair.length > 0) {
+      if (headerPair.length % 2 != 0) {
+        throw new UnsupportedOperationException("Parameter headerPair must be paired");
+      }
+      for (int i = 0; i < headerPair.length / 2; i++) {
+        localVarHeaderParams.put(headerPair[i], headerPair[i * 2 + 1]);
+      }
+    }
 
     if (progressListener != null) {
       apiClient
@@ -118,7 +129,8 @@ public class ReviewElementPrereviewResultsApi {
   private com.squareup.okhttp.Call reviewElementPrereviewResultsGetValidateBeforeCall(
       ReviewElementPrereviewResultsGetRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
-      final ProgressRequestBody.ProgressRequestListener progressRequestListener)
+      final ProgressRequestBody.ProgressRequestListener progressRequestListener,
+      String... headerPair)
       throws ApiException {
 
     // verify the required parameter 'data' is set
@@ -128,7 +140,8 @@ public class ReviewElementPrereviewResultsApi {
     }
 
     com.squareup.okhttp.Call call =
-        reviewElementPrereviewResultsGetCall(data, progressListener, progressRequestListener);
+        reviewElementPrereviewResultsGetCall(
+            data, progressListener, progressRequestListener, headerPair);
     return call;
   }
 
@@ -141,9 +154,9 @@ public class ReviewElementPrereviewResultsApi {
    *     response body
    */
   public ReviewElementPrereviewResultsGetResponse reviewElementPrereviewResultsGet(
-      ReviewElementPrereviewResultsGetRequest data) throws ApiException {
+      ReviewElementPrereviewResultsGetRequest data, String... headerPair) throws ApiException {
     ApiResponse<ReviewElementPrereviewResultsGetResponse> resp =
-        reviewElementPrereviewResultsGetWithHttpInfo(data);
+        reviewElementPrereviewResultsGetWithHttpInfo(data, headerPair);
     return resp.getData();
   }
 
@@ -156,10 +169,10 @@ public class ReviewElementPrereviewResultsApi {
    *     response body
    */
   public ApiResponse<ReviewElementPrereviewResultsGetResponse>
-      reviewElementPrereviewResultsGetWithHttpInfo(ReviewElementPrereviewResultsGetRequest data)
-          throws ApiException {
+      reviewElementPrereviewResultsGetWithHttpInfo(
+          ReviewElementPrereviewResultsGetRequest data, String... headerPair) throws ApiException {
     com.squareup.okhttp.Call call =
-        reviewElementPrereviewResultsGetValidateBeforeCall(data, null, null);
+        reviewElementPrereviewResultsGetValidateBeforeCall(data, null, null, headerPair);
     Type localVarReturnType =
         new TypeToken<ReviewElementPrereviewResultsGetResponse>() {}.getType();
     return apiClient.execute(call, localVarReturnType);
@@ -175,7 +188,8 @@ public class ReviewElementPrereviewResultsApi {
    */
   public com.squareup.okhttp.Call reviewElementPrereviewResultsGetAsync(
       ReviewElementPrereviewResultsGetRequest data,
-      final ApiCallback<ReviewElementPrereviewResultsGetResponse> callback)
+      final ApiCallback<ReviewElementPrereviewResultsGetResponse> callback,
+      String... headerPair)
       throws ApiException {
 
     ProgressResponseBody.ProgressListener progressListener = null;
@@ -201,7 +215,7 @@ public class ReviewElementPrereviewResultsApi {
 
     com.squareup.okhttp.Call call =
         reviewElementPrereviewResultsGetValidateBeforeCall(
-            data, progressListener, progressRequestListener);
+            data, progressListener, progressRequestListener, headerPair);
     Type localVarReturnType =
         new TypeToken<ReviewElementPrereviewResultsGetResponse>() {}.getType();
     apiClient.executeAsync(call, localVarReturnType, callback);

@@ -62,8 +62,10 @@ public class WeixinOfficialAccountsUpgradeStatusApi {
       Long accountId,
       List<String> fields,
       final ProgressResponseBody.ProgressListener progressListener,
-      final ProgressRequestBody.ProgressRequestListener progressRequestListener)
+      final ProgressRequestBody.ProgressRequestListener progressRequestListener,
+      String... headerPair)
       throws ApiException {
+
     Object localVarPostBody = null;
 
     // create path and map variables
@@ -87,6 +89,15 @@ public class WeixinOfficialAccountsUpgradeStatusApi {
     final String[] localVarContentTypes = {"text/plain"};
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
     localVarHeaderParams.put("Content-Type", localVarContentType);
+
+    if (headerPair != null && headerPair.length > 0) {
+      if (headerPair.length % 2 != 0) {
+        throw new UnsupportedOperationException("Parameter headerPair must be paired");
+      }
+      for (int i = 0; i < headerPair.length / 2; i++) {
+        localVarHeaderParams.put(headerPair[i], headerPair[i * 2 + 1]);
+      }
+    }
 
     if (progressListener != null) {
       apiClient
@@ -124,7 +135,8 @@ public class WeixinOfficialAccountsUpgradeStatusApi {
       Long accountId,
       List<String> fields,
       final ProgressResponseBody.ProgressListener progressListener,
-      final ProgressRequestBody.ProgressRequestListener progressRequestListener)
+      final ProgressRequestBody.ProgressRequestListener progressRequestListener,
+      String... headerPair)
       throws ApiException {
 
     // verify the required parameter 'accountId' is set
@@ -135,7 +147,7 @@ public class WeixinOfficialAccountsUpgradeStatusApi {
 
     com.squareup.okhttp.Call call =
         weixinOfficialAccountsUpgradeStatusGetCall(
-            accountId, fields, progressListener, progressRequestListener);
+            accountId, fields, progressListener, progressRequestListener, headerPair);
     return call;
   }
 
@@ -149,9 +161,9 @@ public class WeixinOfficialAccountsUpgradeStatusApi {
    *     response body
    */
   public WeixinOfficialAccountsUpgradeStatusGetResponse weixinOfficialAccountsUpgradeStatusGet(
-      Long accountId, List<String> fields) throws ApiException {
+      Long accountId, List<String> fields, String... headerPair) throws ApiException {
     ApiResponse<WeixinOfficialAccountsUpgradeStatusGetResponse> resp =
-        weixinOfficialAccountsUpgradeStatusGetWithHttpInfo(accountId, fields);
+        weixinOfficialAccountsUpgradeStatusGetWithHttpInfo(accountId, fields, headerPair);
     return resp.getData();
   }
 
@@ -165,10 +177,11 @@ public class WeixinOfficialAccountsUpgradeStatusApi {
    *     response body
    */
   public ApiResponse<WeixinOfficialAccountsUpgradeStatusGetResponse>
-      weixinOfficialAccountsUpgradeStatusGetWithHttpInfo(Long accountId, List<String> fields)
-          throws ApiException {
+      weixinOfficialAccountsUpgradeStatusGetWithHttpInfo(
+          Long accountId, List<String> fields, String... headerPair) throws ApiException {
     com.squareup.okhttp.Call call =
-        weixinOfficialAccountsUpgradeStatusGetValidateBeforeCall(accountId, fields, null, null);
+        weixinOfficialAccountsUpgradeStatusGetValidateBeforeCall(
+            accountId, fields, null, null, headerPair);
     Type localVarReturnType =
         new TypeToken<WeixinOfficialAccountsUpgradeStatusGetResponse>() {}.getType();
     return apiClient.execute(call, localVarReturnType);
@@ -186,7 +199,8 @@ public class WeixinOfficialAccountsUpgradeStatusApi {
   public com.squareup.okhttp.Call weixinOfficialAccountsUpgradeStatusGetAsync(
       Long accountId,
       List<String> fields,
-      final ApiCallback<WeixinOfficialAccountsUpgradeStatusGetResponse> callback)
+      final ApiCallback<WeixinOfficialAccountsUpgradeStatusGetResponse> callback,
+      String... headerPair)
       throws ApiException {
 
     ProgressResponseBody.ProgressListener progressListener = null;
@@ -212,7 +226,7 @@ public class WeixinOfficialAccountsUpgradeStatusApi {
 
     com.squareup.okhttp.Call call =
         weixinOfficialAccountsUpgradeStatusGetValidateBeforeCall(
-            accountId, fields, progressListener, progressRequestListener);
+            accountId, fields, progressListener, progressRequestListener, headerPair);
     Type localVarReturnType =
         new TypeToken<WeixinOfficialAccountsUpgradeStatusGetResponse>() {}.getType();
     apiClient.executeAsync(call, localVarReturnType, callback);

@@ -44,9 +44,11 @@ public class LabelsApiContainer extends ApiContainer {
       List<FilteringStruct> filtering,
       Long page,
       Long pageSize,
-      List<String> fields)
+      List<String> fields,
+      String... headerPair)
       throws ApiException, TencentAdsResponseException {
-    LabelsGetResponse resp = api.labelsGet(accountId, filtering, page, pageSize, fields);
+    LabelsGetResponse resp =
+        api.labelsGet(accountId, filtering, page, pageSize, fields, headerPair);
     handleResponse(gson.toJson(resp));
     return resp.getData();
   }

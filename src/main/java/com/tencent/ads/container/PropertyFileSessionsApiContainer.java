@@ -38,8 +38,9 @@ public class PropertyFileSessionsApiContainer extends ApiContainer {
    *     response body
    */
   public PropertyFileSessionsAddResponseData propertyFileSessionsAdd(
-      PropertyFileSessionsAddRequest data) throws ApiException, TencentAdsResponseException {
-    PropertyFileSessionsAddResponse resp = api.propertyFileSessionsAdd(data);
+      PropertyFileSessionsAddRequest data, String... headerPair)
+      throws ApiException, TencentAdsResponseException {
+    PropertyFileSessionsAddResponse resp = api.propertyFileSessionsAdd(data, headerPair);
     handleResponse(gson.toJson(resp));
     return resp.getData();
   }
@@ -53,8 +54,9 @@ public class PropertyFileSessionsApiContainer extends ApiContainer {
    *     response body
    */
   public PropertyFileSessionsUpdateResponseData propertyFileSessionsUpdate(
-      PropertyFileSessionsUpdateRequest data) throws ApiException, TencentAdsResponseException {
-    PropertyFileSessionsUpdateResponse resp = api.propertyFileSessionsUpdate(data);
+      PropertyFileSessionsUpdateRequest data, String... headerPair)
+      throws ApiException, TencentAdsResponseException {
+    PropertyFileSessionsUpdateResponse resp = api.propertyFileSessionsUpdate(data, headerPair);
     handleResponse(gson.toJson(resp));
     return resp.getData();
   }

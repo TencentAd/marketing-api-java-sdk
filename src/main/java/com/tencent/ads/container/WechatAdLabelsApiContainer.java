@@ -35,9 +35,10 @@ public class WechatAdLabelsApiContainer extends ApiContainer {
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
-  public WechatAdLabelsGetResponseData wechatAdLabelsGet(Long accountId, List<String> fields)
+  public WechatAdLabelsGetResponseData wechatAdLabelsGet(
+      Long accountId, List<String> fields, String... headerPair)
       throws ApiException, TencentAdsResponseException {
-    WechatAdLabelsGetResponse resp = api.wechatAdLabelsGet(accountId, fields);
+    WechatAdLabelsGetResponse resp = api.wechatAdLabelsGet(accountId, fields, headerPair);
     handleResponse(gson.toJson(resp));
     return resp.getData();
   }

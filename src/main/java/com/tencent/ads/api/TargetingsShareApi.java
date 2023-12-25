@@ -62,8 +62,10 @@ public class TargetingsShareApi {
   public com.squareup.okhttp.Call targetingsShareAddCall(
       TargetingsShareAddRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
-      final ProgressRequestBody.ProgressRequestListener progressRequestListener)
+      final ProgressRequestBody.ProgressRequestListener progressRequestListener,
+      String... headerPair)
       throws ApiException {
+
     Object localVarPostBody = data;
 
     // create path and map variables
@@ -83,6 +85,15 @@ public class TargetingsShareApi {
     final String[] localVarContentTypes = {"application/json", "application/xml"};
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
     localVarHeaderParams.put("Content-Type", localVarContentType);
+
+    if (headerPair != null && headerPair.length > 0) {
+      if (headerPair.length % 2 != 0) {
+        throw new UnsupportedOperationException("Parameter headerPair must be paired");
+      }
+      for (int i = 0; i < headerPair.length / 2; i++) {
+        localVarHeaderParams.put(headerPair[i], headerPair[i * 2 + 1]);
+      }
+    }
 
     if (progressListener != null) {
       apiClient
@@ -119,7 +130,8 @@ public class TargetingsShareApi {
   private com.squareup.okhttp.Call targetingsShareAddValidateBeforeCall(
       TargetingsShareAddRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
-      final ProgressRequestBody.ProgressRequestListener progressRequestListener)
+      final ProgressRequestBody.ProgressRequestListener progressRequestListener,
+      String... headerPair)
       throws ApiException {
 
     // verify the required parameter 'data' is set
@@ -129,7 +141,7 @@ public class TargetingsShareApi {
     }
 
     com.squareup.okhttp.Call call =
-        targetingsShareAddCall(data, progressListener, progressRequestListener);
+        targetingsShareAddCall(data, progressListener, progressRequestListener, headerPair);
     return call;
   }
 
@@ -141,9 +153,9 @@ public class TargetingsShareApi {
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
-  public TargetingsShareAddResponse targetingsShareAdd(TargetingsShareAddRequest data)
-      throws ApiException {
-    ApiResponse<TargetingsShareAddResponse> resp = targetingsShareAddWithHttpInfo(data);
+  public TargetingsShareAddResponse targetingsShareAdd(
+      TargetingsShareAddRequest data, String... headerPair) throws ApiException {
+    ApiResponse<TargetingsShareAddResponse> resp = targetingsShareAddWithHttpInfo(data, headerPair);
     return resp.getData();
   }
 
@@ -156,8 +168,9 @@ public class TargetingsShareApi {
    *     response body
    */
   public ApiResponse<TargetingsShareAddResponse> targetingsShareAddWithHttpInfo(
-      TargetingsShareAddRequest data) throws ApiException {
-    com.squareup.okhttp.Call call = targetingsShareAddValidateBeforeCall(data, null, null);
+      TargetingsShareAddRequest data, String... headerPair) throws ApiException {
+    com.squareup.okhttp.Call call =
+        targetingsShareAddValidateBeforeCall(data, null, null, headerPair);
     Type localVarReturnType = new TypeToken<TargetingsShareAddResponse>() {}.getType();
     return apiClient.execute(call, localVarReturnType);
   }
@@ -171,7 +184,9 @@ public class TargetingsShareApi {
    * @throws ApiException If fail to process the API call, e.g. serializing the request body object
    */
   public com.squareup.okhttp.Call targetingsShareAddAsync(
-      TargetingsShareAddRequest data, final ApiCallback<TargetingsShareAddResponse> callback)
+      TargetingsShareAddRequest data,
+      final ApiCallback<TargetingsShareAddResponse> callback,
+      String... headerPair)
       throws ApiException {
 
     ProgressResponseBody.ProgressListener progressListener = null;
@@ -196,7 +211,8 @@ public class TargetingsShareApi {
     }
 
     com.squareup.okhttp.Call call =
-        targetingsShareAddValidateBeforeCall(data, progressListener, progressRequestListener);
+        targetingsShareAddValidateBeforeCall(
+            data, progressListener, progressRequestListener, headerPair);
     Type localVarReturnType = new TypeToken<TargetingsShareAddResponse>() {}.getType();
     apiClient.executeAsync(call, localVarReturnType, callback);
     return call;
@@ -221,8 +237,10 @@ public class TargetingsShareApi {
       Long pageSize,
       List<String> fields,
       final ProgressResponseBody.ProgressListener progressListener,
-      final ProgressRequestBody.ProgressRequestListener progressRequestListener)
+      final ProgressRequestBody.ProgressRequestListener progressRequestListener,
+      String... headerPair)
       throws ApiException {
+
     Object localVarPostBody = null;
 
     // create path and map variables
@@ -251,6 +269,15 @@ public class TargetingsShareApi {
     final String[] localVarContentTypes = {"text/plain"};
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
     localVarHeaderParams.put("Content-Type", localVarContentType);
+
+    if (headerPair != null && headerPair.length > 0) {
+      if (headerPair.length % 2 != 0) {
+        throw new UnsupportedOperationException("Parameter headerPair must be paired");
+      }
+      for (int i = 0; i < headerPair.length / 2; i++) {
+        localVarHeaderParams.put(headerPair[i], headerPair[i * 2 + 1]);
+      }
+    }
 
     if (progressListener != null) {
       apiClient
@@ -291,7 +318,8 @@ public class TargetingsShareApi {
       Long pageSize,
       List<String> fields,
       final ProgressResponseBody.ProgressListener progressListener,
-      final ProgressRequestBody.ProgressRequestListener progressRequestListener)
+      final ProgressRequestBody.ProgressRequestListener progressRequestListener,
+      String... headerPair)
       throws ApiException {
 
     // verify the required parameter 'accountId' is set
@@ -314,7 +342,8 @@ public class TargetingsShareApi {
             pageSize,
             fields,
             progressListener,
-            progressRequestListener);
+            progressRequestListener,
+            headerPair);
     return call;
   }
 
@@ -331,10 +360,15 @@ public class TargetingsShareApi {
    *     response body
    */
   public TargetingsShareGetResponse targetingsShareGet(
-      Long accountId, Long targetingId, Long page, Long pageSize, List<String> fields)
+      Long accountId,
+      Long targetingId,
+      Long page,
+      Long pageSize,
+      List<String> fields,
+      String... headerPair)
       throws ApiException {
     ApiResponse<TargetingsShareGetResponse> resp =
-        targetingsShareGetWithHttpInfo(accountId, targetingId, page, pageSize, fields);
+        targetingsShareGetWithHttpInfo(accountId, targetingId, page, pageSize, fields, headerPair);
     return resp.getData();
   }
 
@@ -351,11 +385,16 @@ public class TargetingsShareApi {
    *     response body
    */
   public ApiResponse<TargetingsShareGetResponse> targetingsShareGetWithHttpInfo(
-      Long accountId, Long targetingId, Long page, Long pageSize, List<String> fields)
+      Long accountId,
+      Long targetingId,
+      Long page,
+      Long pageSize,
+      List<String> fields,
+      String... headerPair)
       throws ApiException {
     com.squareup.okhttp.Call call =
         targetingsShareGetValidateBeforeCall(
-            accountId, targetingId, page, pageSize, fields, null, null);
+            accountId, targetingId, page, pageSize, fields, null, null, headerPair);
     Type localVarReturnType = new TypeToken<TargetingsShareGetResponse>() {}.getType();
     return apiClient.execute(call, localVarReturnType);
   }
@@ -378,7 +417,8 @@ public class TargetingsShareApi {
       Long page,
       Long pageSize,
       List<String> fields,
-      final ApiCallback<TargetingsShareGetResponse> callback)
+      final ApiCallback<TargetingsShareGetResponse> callback,
+      String... headerPair)
       throws ApiException {
 
     ProgressResponseBody.ProgressListener progressListener = null;
@@ -410,7 +450,8 @@ public class TargetingsShareApi {
             pageSize,
             fields,
             progressListener,
-            progressRequestListener);
+            progressRequestListener,
+            headerPair);
     Type localVarReturnType = new TypeToken<TargetingsShareGetResponse>() {}.getType();
     apiClient.executeAsync(call, localVarReturnType, callback);
     return call;

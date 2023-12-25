@@ -53,10 +53,12 @@ public class VideosApiContainer extends ApiContainer {
       File videoFile,
       String signature,
       String description,
-      Long adcreativeTemplateId)
+      Long adcreativeTemplateId,
+      String... headerPair)
       throws ApiException, TencentAdsResponseException {
     VideosAddResponse resp =
-        api.videosAdd(accountId, videoFile, signature, description, adcreativeTemplateId);
+        api.videosAdd(
+            accountId, videoFile, signature, description, adcreativeTemplateId, headerPair);
     handleResponse(gson.toJson(resp));
     return resp.getData();
   }
@@ -69,9 +71,9 @@ public class VideosApiContainer extends ApiContainer {
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
-  public VideosDeleteResponseData videosDelete(VideosDeleteRequest data)
+  public VideosDeleteResponseData videosDelete(VideosDeleteRequest data, String... headerPair)
       throws ApiException, TencentAdsResponseException {
-    VideosDeleteResponse resp = api.videosDelete(data);
+    VideosDeleteResponse resp = api.videosDelete(data, headerPair);
     handleResponse(gson.toJson(resp));
     return resp.getData();
   }
@@ -93,9 +95,11 @@ public class VideosApiContainer extends ApiContainer {
       List<FilteringStruct> filtering,
       Long page,
       Long pageSize,
-      List<String> fields)
+      List<String> fields,
+      String... headerPair)
       throws ApiException, TencentAdsResponseException {
-    VideosGetResponse resp = api.videosGet(accountId, filtering, page, pageSize, fields);
+    VideosGetResponse resp =
+        api.videosGet(accountId, filtering, page, pageSize, fields, headerPair);
     handleResponse(gson.toJson(resp));
     return resp.getData();
   }
@@ -108,9 +112,9 @@ public class VideosApiContainer extends ApiContainer {
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
-  public VideosUpdateResponseData videosUpdate(VideosUpdateRequest data)
+  public VideosUpdateResponseData videosUpdate(VideosUpdateRequest data, String... headerPair)
       throws ApiException, TencentAdsResponseException {
-    VideosUpdateResponse resp = api.videosUpdate(data);
+    VideosUpdateResponse resp = api.videosUpdate(data, headerPair);
     handleResponse(gson.toJson(resp));
     return resp.getData();
   }

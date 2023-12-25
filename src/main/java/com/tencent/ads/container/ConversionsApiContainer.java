@@ -38,9 +38,9 @@ public class ConversionsApiContainer extends ApiContainer {
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
-  public ConversionsAddResponseData conversionsAdd(ConversionsAddRequest data)
+  public ConversionsAddResponseData conversionsAdd(ConversionsAddRequest data, String... headerPair)
       throws ApiException, TencentAdsResponseException {
-    ConversionsAddResponse resp = api.conversionsAdd(data);
+    ConversionsAddResponse resp = api.conversionsAdd(data, headerPair);
     handleResponse(gson.toJson(resp));
     return resp.getData();
   }
@@ -62,9 +62,11 @@ public class ConversionsApiContainer extends ApiContainer {
       List<FilteringStruct> filtering,
       Long page,
       Long pageSize,
-      List<String> fields)
+      List<String> fields,
+      String... headerPair)
       throws ApiException, TencentAdsResponseException {
-    ConversionsGetResponse resp = api.conversionsGet(accountId, filtering, page, pageSize, fields);
+    ConversionsGetResponse resp =
+        api.conversionsGet(accountId, filtering, page, pageSize, fields, headerPair);
     handleResponse(gson.toJson(resp));
     return resp.getData();
   }

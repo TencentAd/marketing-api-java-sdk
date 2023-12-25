@@ -49,7 +49,8 @@ public class CreativetoolsTextApiContainer extends ApiContainer {
       String keyword,
       List<Long> filtering,
       Long number,
-      List<String> fields)
+      List<String> fields,
+      String... headerPair)
       throws ApiException, TencentAdsResponseException {
     CreativetoolsTextGetResponse resp =
         api.creativetoolsTextGet(
@@ -60,7 +61,8 @@ public class CreativetoolsTextApiContainer extends ApiContainer {
             keyword,
             filtering,
             number,
-            fields);
+            fields,
+            headerPair);
     handleResponse(gson.toJson(resp));
     return resp.getData();
   }

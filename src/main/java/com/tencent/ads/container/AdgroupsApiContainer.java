@@ -65,9 +65,9 @@ public class AdgroupsApiContainer extends ApiContainer {
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
-  public AdgroupsAddResponseData adgroupsAdd(AdgroupsAddRequest data)
+  public AdgroupsAddResponseData adgroupsAdd(AdgroupsAddRequest data, String... headerPair)
       throws ApiException, TencentAdsResponseException {
-    AdgroupsAddResponse resp = api.adgroupsAdd(data);
+    AdgroupsAddResponse resp = api.adgroupsAdd(data, headerPair);
     handleResponse(gson.toJson(resp));
     return resp.getData();
   }
@@ -81,8 +81,9 @@ public class AdgroupsApiContainer extends ApiContainer {
    *     response body
    */
   public AdgroupsAddNegativewordResponseData adgroupsAddNegativeword(
-      AdgroupsAddNegativewordRequest data) throws ApiException, TencentAdsResponseException {
-    AdgroupsAddNegativewordResponse resp = api.adgroupsAddNegativeword(data);
+      AdgroupsAddNegativewordRequest data, String... headerPair)
+      throws ApiException, TencentAdsResponseException {
+    AdgroupsAddNegativewordResponse resp = api.adgroupsAddNegativeword(data, headerPair);
     handleResponse(gson.toJson(resp));
     return resp.getData();
   }
@@ -95,9 +96,9 @@ public class AdgroupsApiContainer extends ApiContainer {
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
-  public AdgroupsDeleteResponseData adgroupsDelete(AdgroupsDeleteRequest data)
+  public AdgroupsDeleteResponseData adgroupsDelete(AdgroupsDeleteRequest data, String... headerPair)
       throws ApiException, TencentAdsResponseException {
-    AdgroupsDeleteResponse resp = api.adgroupsDelete(data);
+    AdgroupsDeleteResponse resp = api.adgroupsDelete(data, headerPair);
     handleResponse(gson.toJson(resp));
     return resp.getData();
   }
@@ -123,7 +124,8 @@ public class AdgroupsApiContainer extends ApiContainer {
       Long pageSize,
       Boolean isDeleted,
       Boolean weixinOfficialAccountsUpgradeEnabled,
-      List<String> fields)
+      List<String> fields,
+      String... headerPair)
       throws ApiException, TencentAdsResponseException {
     AdgroupsGetResponse resp =
         api.adgroupsGet(
@@ -133,7 +135,8 @@ public class AdgroupsApiContainer extends ApiContainer {
             pageSize,
             isDeleted,
             weixinOfficialAccountsUpgradeEnabled,
-            fields);
+            fields,
+            headerPair);
     handleResponse(gson.toJson(resp));
     return resp.getData();
   }
@@ -147,8 +150,9 @@ public class AdgroupsApiContainer extends ApiContainer {
    *     response body
    */
   public AdgroupsGetNegativewordResponseData adgroupsGetNegativeword(
-      AdgroupsGetNegativewordRequest data) throws ApiException, TencentAdsResponseException {
-    AdgroupsGetNegativewordResponse resp = api.adgroupsGetNegativeword(data);
+      AdgroupsGetNegativewordRequest data, String... headerPair)
+      throws ApiException, TencentAdsResponseException {
+    AdgroupsGetNegativewordResponse resp = api.adgroupsGetNegativeword(data, headerPair);
     handleResponse(gson.toJson(resp));
     return resp.getData();
   }
@@ -161,9 +165,9 @@ public class AdgroupsApiContainer extends ApiContainer {
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
-  public AdgroupsUpdateResponseData adgroupsUpdate(AdgroupsUpdateRequest data)
+  public AdgroupsUpdateResponseData adgroupsUpdate(AdgroupsUpdateRequest data, String... headerPair)
       throws ApiException, TencentAdsResponseException {
-    AdgroupsUpdateResponse resp = api.adgroupsUpdate(data);
+    AdgroupsUpdateResponse resp = api.adgroupsUpdate(data, headerPair);
     handleResponse(gson.toJson(resp));
     return resp.getData();
   }
@@ -177,8 +181,9 @@ public class AdgroupsApiContainer extends ApiContainer {
    *     response body
    */
   public AdgroupsUpdateBidAmountResponseData adgroupsUpdateBidAmount(
-      AdgroupsUpdateBidAmountRequest data) throws ApiException, TencentAdsResponseException {
-    AdgroupsUpdateBidAmountResponse resp = api.adgroupsUpdateBidAmount(data);
+      AdgroupsUpdateBidAmountRequest data, String... headerPair)
+      throws ApiException, TencentAdsResponseException {
+    AdgroupsUpdateBidAmountResponse resp = api.adgroupsUpdateBidAmount(data, headerPair);
     handleResponse(gson.toJson(resp));
     return resp.getData();
   }
@@ -192,8 +197,10 @@ public class AdgroupsApiContainer extends ApiContainer {
    *     response body
    */
   public AdgroupsUpdateConfiguredStatusResponseData adgroupsUpdateConfiguredStatus(
-      AdgroupsUpdateConfiguredStatusRequest data) throws ApiException, TencentAdsResponseException {
-    AdgroupsUpdateConfiguredStatusResponse resp = api.adgroupsUpdateConfiguredStatus(data);
+      AdgroupsUpdateConfiguredStatusRequest data, String... headerPair)
+      throws ApiException, TencentAdsResponseException {
+    AdgroupsUpdateConfiguredStatusResponse resp =
+        api.adgroupsUpdateConfiguredStatus(data, headerPair);
     handleResponse(gson.toJson(resp));
     return resp.getData();
   }
@@ -207,8 +214,9 @@ public class AdgroupsApiContainer extends ApiContainer {
    *     response body
    */
   public AdgroupsUpdateDailyBudgetResponseData adgroupsUpdateDailyBudget(
-      AdgroupsUpdateDailyBudgetRequest data) throws ApiException, TencentAdsResponseException {
-    AdgroupsUpdateDailyBudgetResponse resp = api.adgroupsUpdateDailyBudget(data);
+      AdgroupsUpdateDailyBudgetRequest data, String... headerPair)
+      throws ApiException, TencentAdsResponseException {
+    AdgroupsUpdateDailyBudgetResponse resp = api.adgroupsUpdateDailyBudget(data, headerPair);
     handleResponse(gson.toJson(resp));
     return resp.getData();
   }
@@ -222,8 +230,9 @@ public class AdgroupsApiContainer extends ApiContainer {
    *     response body
    */
   public AdgroupsUpdateDatetimeResponseData adgroupsUpdateDatetime(
-      AdgroupsUpdateDatetimeRequest data) throws ApiException, TencentAdsResponseException {
-    AdgroupsUpdateDatetimeResponse resp = api.adgroupsUpdateDatetime(data);
+      AdgroupsUpdateDatetimeRequest data, String... headerPair)
+      throws ApiException, TencentAdsResponseException {
+    AdgroupsUpdateDatetimeResponse resp = api.adgroupsUpdateDatetime(data, headerPair);
     handleResponse(gson.toJson(resp));
     return resp.getData();
   }
@@ -237,8 +246,9 @@ public class AdgroupsApiContainer extends ApiContainer {
    *     response body
    */
   public AdgroupsUpdateNegativewordResponseData adgroupsUpdateNegativeword(
-      AdgroupsUpdateNegativewordRequest data) throws ApiException, TencentAdsResponseException {
-    AdgroupsUpdateNegativewordResponse resp = api.adgroupsUpdateNegativeword(data);
+      AdgroupsUpdateNegativewordRequest data, String... headerPair)
+      throws ApiException, TencentAdsResponseException {
+    AdgroupsUpdateNegativewordResponse resp = api.adgroupsUpdateNegativeword(data, headerPair);
     handleResponse(gson.toJson(resp));
     return resp.getData();
   }

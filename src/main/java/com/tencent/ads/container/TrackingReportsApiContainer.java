@@ -52,7 +52,8 @@ public class TrackingReportsApiContainer extends ApiContainer {
       String feedbackUrl,
       Long page,
       Long pageSize,
-      List<String> fields)
+      List<String> fields,
+      String... headerPair)
       throws ApiException, TencentAdsResponseException {
     TrackingReportsGetResponse resp =
         api.trackingReportsGet(
@@ -64,7 +65,8 @@ public class TrackingReportsApiContainer extends ApiContainer {
             feedbackUrl,
             page,
             pageSize,
-            fields);
+            fields,
+            headerPair);
     handleResponse(gson.toJson(resp));
     return resp.getData();
   }

@@ -35,10 +35,10 @@ public class MergeFundTypeSubcustomerTransferApiContainer extends ApiContainer {
    *     response body
    */
   public MergeFundTypeSubcustomerTransferAddResponseData mergeFundTypeSubcustomerTransferAdd(
-      MergeFundTypeSubcustomerTransferAddRequest data)
+      MergeFundTypeSubcustomerTransferAddRequest data, String... headerPair)
       throws ApiException, TencentAdsResponseException {
     MergeFundTypeSubcustomerTransferAddResponse resp =
-        api.mergeFundTypeSubcustomerTransferAdd(data);
+        api.mergeFundTypeSubcustomerTransferAdd(data, headerPair);
     handleResponse(gson.toJson(resp));
     return resp.getData();
   }

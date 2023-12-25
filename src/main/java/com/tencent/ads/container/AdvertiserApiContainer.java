@@ -44,9 +44,9 @@ public class AdvertiserApiContainer extends ApiContainer {
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
-  public AdvertiserAddResponseData advertiserAdd(AdvertiserAddRequest data)
+  public AdvertiserAddResponseData advertiserAdd(AdvertiserAddRequest data, String... headerPair)
       throws ApiException, TencentAdsResponseException {
-    AdvertiserAddResponse resp = api.advertiserAdd(data);
+    AdvertiserAddResponse resp = api.advertiserAdd(data, headerPair);
     handleResponse(gson.toJson(resp));
     return resp.getData();
   }
@@ -68,9 +68,11 @@ public class AdvertiserApiContainer extends ApiContainer {
       List<FilteringStruct> filtering,
       List<String> fields,
       Long page,
-      Long pageSize)
+      Long pageSize,
+      String... headerPair)
       throws ApiException, TencentAdsResponseException {
-    AdvertiserGetResponse resp = api.advertiserGet(accountId, filtering, fields, page, pageSize);
+    AdvertiserGetResponse resp =
+        api.advertiserGet(accountId, filtering, fields, page, pageSize, headerPair);
     handleResponse(gson.toJson(resp));
     return resp.getData();
   }
@@ -83,9 +85,10 @@ public class AdvertiserApiContainer extends ApiContainer {
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
-  public AdvertiserUpdateResponseData advertiserUpdate(AdvertiserUpdateRequest data)
+  public AdvertiserUpdateResponseData advertiserUpdate(
+      AdvertiserUpdateRequest data, String... headerPair)
       throws ApiException, TencentAdsResponseException {
-    AdvertiserUpdateResponse resp = api.advertiserUpdate(data);
+    AdvertiserUpdateResponse resp = api.advertiserUpdate(data, headerPair);
     handleResponse(gson.toJson(resp));
     return resp.getData();
   }
@@ -99,8 +102,9 @@ public class AdvertiserApiContainer extends ApiContainer {
    *     response body
    */
   public AdvertiserUpdateDailyBudgetResponseData advertiserUpdateDailyBudget(
-      AdvertiserUpdateDailyBudgetRequest data) throws ApiException, TencentAdsResponseException {
-    AdvertiserUpdateDailyBudgetResponse resp = api.advertiserUpdateDailyBudget(data);
+      AdvertiserUpdateDailyBudgetRequest data, String... headerPair)
+      throws ApiException, TencentAdsResponseException {
+    AdvertiserUpdateDailyBudgetResponse resp = api.advertiserUpdateDailyBudget(data, headerPair);
     handleResponse(gson.toJson(resp));
     return resp.getData();
   }

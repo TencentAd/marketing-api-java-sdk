@@ -34,9 +34,10 @@ public class ProgrammedTemplateApiContainer extends ApiContainer {
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
-  public ProgrammedTemplateGetResponseData programmedTemplateGet(ProgrammedTemplateGetRequest data)
+  public ProgrammedTemplateGetResponseData programmedTemplateGet(
+      ProgrammedTemplateGetRequest data, String... headerPair)
       throws ApiException, TencentAdsResponseException {
-    ProgrammedTemplateGetResponse resp = api.programmedTemplateGet(data);
+    ProgrammedTemplateGetResponse resp = api.programmedTemplateGet(data, headerPair);
     handleResponse(gson.toJson(resp));
     return resp.getData();
   }

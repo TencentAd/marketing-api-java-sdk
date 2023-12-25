@@ -67,7 +67,8 @@ public class XijingPageListApiContainer extends ApiContainer {
       Long appId,
       String appType,
       String queryType,
-      List<String> fields)
+      List<String> fields,
+      String... headerPair)
       throws ApiException, TencentAdsResponseException {
     XijingPageListGetResponse resp =
         api.xijingPageListGet(
@@ -87,7 +88,8 @@ public class XijingPageListApiContainer extends ApiContainer {
             appId,
             appType,
             queryType,
-            fields);
+            fields,
+            headerPair);
     handleResponse(gson.toJson(resp));
     return resp.getData();
   }

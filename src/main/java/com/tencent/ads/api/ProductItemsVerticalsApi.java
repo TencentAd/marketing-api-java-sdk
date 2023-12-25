@@ -60,8 +60,10 @@ public class ProductItemsVerticalsApi {
   public com.squareup.okhttp.Call productItemsVerticalsGetCall(
       List<String> fields,
       final ProgressResponseBody.ProgressListener progressListener,
-      final ProgressRequestBody.ProgressRequestListener progressRequestListener)
+      final ProgressRequestBody.ProgressRequestListener progressRequestListener,
+      String... headerPair)
       throws ApiException {
+
     Object localVarPostBody = null;
 
     // create path and map variables
@@ -83,6 +85,15 @@ public class ProductItemsVerticalsApi {
     final String[] localVarContentTypes = {"text/plain"};
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
     localVarHeaderParams.put("Content-Type", localVarContentType);
+
+    if (headerPair != null && headerPair.length > 0) {
+      if (headerPair.length % 2 != 0) {
+        throw new UnsupportedOperationException("Parameter headerPair must be paired");
+      }
+      for (int i = 0; i < headerPair.length / 2; i++) {
+        localVarHeaderParams.put(headerPair[i], headerPair[i * 2 + 1]);
+      }
+    }
 
     if (progressListener != null) {
       apiClient
@@ -119,11 +130,12 @@ public class ProductItemsVerticalsApi {
   private com.squareup.okhttp.Call productItemsVerticalsGetValidateBeforeCall(
       List<String> fields,
       final ProgressResponseBody.ProgressListener progressListener,
-      final ProgressRequestBody.ProgressRequestListener progressRequestListener)
+      final ProgressRequestBody.ProgressRequestListener progressRequestListener,
+      String... headerPair)
       throws ApiException {
 
     com.squareup.okhttp.Call call =
-        productItemsVerticalsGetCall(fields, progressListener, progressRequestListener);
+        productItemsVerticalsGetCall(fields, progressListener, progressRequestListener, headerPair);
     return call;
   }
 
@@ -135,10 +147,10 @@ public class ProductItemsVerticalsApi {
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
-  public ProductItemsVerticalsGetResponse productItemsVerticalsGet(List<String> fields)
-      throws ApiException {
+  public ProductItemsVerticalsGetResponse productItemsVerticalsGet(
+      List<String> fields, String... headerPair) throws ApiException {
     ApiResponse<ProductItemsVerticalsGetResponse> resp =
-        productItemsVerticalsGetWithHttpInfo(fields);
+        productItemsVerticalsGetWithHttpInfo(fields, headerPair);
     return resp.getData();
   }
 
@@ -151,8 +163,9 @@ public class ProductItemsVerticalsApi {
    *     response body
    */
   public ApiResponse<ProductItemsVerticalsGetResponse> productItemsVerticalsGetWithHttpInfo(
-      List<String> fields) throws ApiException {
-    com.squareup.okhttp.Call call = productItemsVerticalsGetValidateBeforeCall(fields, null, null);
+      List<String> fields, String... headerPair) throws ApiException {
+    com.squareup.okhttp.Call call =
+        productItemsVerticalsGetValidateBeforeCall(fields, null, null, headerPair);
     Type localVarReturnType = new TypeToken<ProductItemsVerticalsGetResponse>() {}.getType();
     return apiClient.execute(call, localVarReturnType);
   }
@@ -166,7 +179,9 @@ public class ProductItemsVerticalsApi {
    * @throws ApiException If fail to process the API call, e.g. serializing the request body object
    */
   public com.squareup.okhttp.Call productItemsVerticalsGetAsync(
-      List<String> fields, final ApiCallback<ProductItemsVerticalsGetResponse> callback)
+      List<String> fields,
+      final ApiCallback<ProductItemsVerticalsGetResponse> callback,
+      String... headerPair)
       throws ApiException {
 
     ProgressResponseBody.ProgressListener progressListener = null;
@@ -192,7 +207,7 @@ public class ProductItemsVerticalsApi {
 
     com.squareup.okhttp.Call call =
         productItemsVerticalsGetValidateBeforeCall(
-            fields, progressListener, progressRequestListener);
+            fields, progressListener, progressRequestListener, headerPair);
     Type localVarReturnType = new TypeToken<ProductItemsVerticalsGetResponse>() {}.getType();
     apiClient.executeAsync(call, localVarReturnType, callback);
     return call;

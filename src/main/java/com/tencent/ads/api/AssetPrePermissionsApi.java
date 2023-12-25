@@ -76,8 +76,10 @@ public class AssetPrePermissionsApi {
       Long pageSize,
       List<String> fields,
       final ProgressResponseBody.ProgressListener progressListener,
-      final ProgressRequestBody.ProgressRequestListener progressRequestListener)
+      final ProgressRequestBody.ProgressRequestListener progressRequestListener,
+      String... headerPair)
       throws ApiException {
+
     Object localVarPostBody = null;
 
     // create path and map variables
@@ -111,6 +113,15 @@ public class AssetPrePermissionsApi {
     final String[] localVarContentTypes = {"text/plain"};
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
     localVarHeaderParams.put("Content-Type", localVarContentType);
+
+    if (headerPair != null && headerPair.length > 0) {
+      if (headerPair.length % 2 != 0) {
+        throw new UnsupportedOperationException("Parameter headerPair must be paired");
+      }
+      for (int i = 0; i < headerPair.length / 2; i++) {
+        localVarHeaderParams.put(headerPair[i], headerPair[i * 2 + 1]);
+      }
+    }
 
     if (progressListener != null) {
       apiClient
@@ -154,7 +165,8 @@ public class AssetPrePermissionsApi {
       Long pageSize,
       List<String> fields,
       final ProgressResponseBody.ProgressListener progressListener,
-      final ProgressRequestBody.ProgressRequestListener progressRequestListener)
+      final ProgressRequestBody.ProgressRequestListener progressRequestListener,
+      String... headerPair)
       throws ApiException {
 
     // verify the required parameter 'accountId' is set
@@ -180,7 +192,8 @@ public class AssetPrePermissionsApi {
             pageSize,
             fields,
             progressListener,
-            progressRequestListener);
+            progressRequestListener,
+            headerPair);
     return call;
   }
 
@@ -207,11 +220,12 @@ public class AssetPrePermissionsApi {
       String pathType,
       Long page,
       Long pageSize,
-      List<String> fields)
+      List<String> fields,
+      String... headerPair)
       throws ApiException {
     ApiResponse<AssetPrePermissionsGetResponse> resp =
         assetPrePermissionsGetWithHttpInfo(
-            accountId, assetType, assetId, assetName, pathType, page, pageSize, fields);
+            accountId, assetType, assetId, assetName, pathType, page, pageSize, fields, headerPair);
     return resp.getData();
   }
 
@@ -238,11 +252,22 @@ public class AssetPrePermissionsApi {
       String pathType,
       Long page,
       Long pageSize,
-      List<String> fields)
+      List<String> fields,
+      String... headerPair)
       throws ApiException {
     com.squareup.okhttp.Call call =
         assetPrePermissionsGetValidateBeforeCall(
-            accountId, assetType, assetId, assetName, pathType, page, pageSize, fields, null, null);
+            accountId,
+            assetType,
+            assetId,
+            assetName,
+            pathType,
+            page,
+            pageSize,
+            fields,
+            null,
+            null,
+            headerPair);
     Type localVarReturnType = new TypeToken<AssetPrePermissionsGetResponse>() {}.getType();
     return apiClient.execute(call, localVarReturnType);
   }
@@ -271,7 +296,8 @@ public class AssetPrePermissionsApi {
       Long page,
       Long pageSize,
       List<String> fields,
-      final ApiCallback<AssetPrePermissionsGetResponse> callback)
+      final ApiCallback<AssetPrePermissionsGetResponse> callback,
+      String... headerPair)
       throws ApiException {
 
     ProgressResponseBody.ProgressListener progressListener = null;
@@ -306,7 +332,8 @@ public class AssetPrePermissionsApi {
             pageSize,
             fields,
             progressListener,
-            progressRequestListener);
+            progressRequestListener,
+            headerPair);
     Type localVarReturnType = new TypeToken<AssetPrePermissionsGetResponse>() {}.getType();
     apiClient.executeAsync(call, localVarReturnType, callback);
     return call;
@@ -323,8 +350,10 @@ public class AssetPrePermissionsApi {
   public com.squareup.okhttp.Call assetPrePermissionsUpdateCall(
       AssetPrePermissionsUpdateRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
-      final ProgressRequestBody.ProgressRequestListener progressRequestListener)
+      final ProgressRequestBody.ProgressRequestListener progressRequestListener,
+      String... headerPair)
       throws ApiException {
+
     Object localVarPostBody = data;
 
     // create path and map variables
@@ -344,6 +373,15 @@ public class AssetPrePermissionsApi {
     final String[] localVarContentTypes = {"application/json", "application/xml"};
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
     localVarHeaderParams.put("Content-Type", localVarContentType);
+
+    if (headerPair != null && headerPair.length > 0) {
+      if (headerPair.length % 2 != 0) {
+        throw new UnsupportedOperationException("Parameter headerPair must be paired");
+      }
+      for (int i = 0; i < headerPair.length / 2; i++) {
+        localVarHeaderParams.put(headerPair[i], headerPair[i * 2 + 1]);
+      }
+    }
 
     if (progressListener != null) {
       apiClient
@@ -380,7 +418,8 @@ public class AssetPrePermissionsApi {
   private com.squareup.okhttp.Call assetPrePermissionsUpdateValidateBeforeCall(
       AssetPrePermissionsUpdateRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
-      final ProgressRequestBody.ProgressRequestListener progressRequestListener)
+      final ProgressRequestBody.ProgressRequestListener progressRequestListener,
+      String... headerPair)
       throws ApiException {
 
     // verify the required parameter 'data' is set
@@ -390,7 +429,7 @@ public class AssetPrePermissionsApi {
     }
 
     com.squareup.okhttp.Call call =
-        assetPrePermissionsUpdateCall(data, progressListener, progressRequestListener);
+        assetPrePermissionsUpdateCall(data, progressListener, progressRequestListener, headerPair);
     return call;
   }
 
@@ -403,9 +442,9 @@ public class AssetPrePermissionsApi {
    *     response body
    */
   public AssetPrePermissionsUpdateResponse assetPrePermissionsUpdate(
-      AssetPrePermissionsUpdateRequest data) throws ApiException {
+      AssetPrePermissionsUpdateRequest data, String... headerPair) throws ApiException {
     ApiResponse<AssetPrePermissionsUpdateResponse> resp =
-        assetPrePermissionsUpdateWithHttpInfo(data);
+        assetPrePermissionsUpdateWithHttpInfo(data, headerPair);
     return resp.getData();
   }
 
@@ -418,8 +457,9 @@ public class AssetPrePermissionsApi {
    *     response body
    */
   public ApiResponse<AssetPrePermissionsUpdateResponse> assetPrePermissionsUpdateWithHttpInfo(
-      AssetPrePermissionsUpdateRequest data) throws ApiException {
-    com.squareup.okhttp.Call call = assetPrePermissionsUpdateValidateBeforeCall(data, null, null);
+      AssetPrePermissionsUpdateRequest data, String... headerPair) throws ApiException {
+    com.squareup.okhttp.Call call =
+        assetPrePermissionsUpdateValidateBeforeCall(data, null, null, headerPair);
     Type localVarReturnType = new TypeToken<AssetPrePermissionsUpdateResponse>() {}.getType();
     return apiClient.execute(call, localVarReturnType);
   }
@@ -434,7 +474,8 @@ public class AssetPrePermissionsApi {
    */
   public com.squareup.okhttp.Call assetPrePermissionsUpdateAsync(
       AssetPrePermissionsUpdateRequest data,
-      final ApiCallback<AssetPrePermissionsUpdateResponse> callback)
+      final ApiCallback<AssetPrePermissionsUpdateResponse> callback,
+      String... headerPair)
       throws ApiException {
 
     ProgressResponseBody.ProgressListener progressListener = null;
@@ -460,7 +501,7 @@ public class AssetPrePermissionsApi {
 
     com.squareup.okhttp.Call call =
         assetPrePermissionsUpdateValidateBeforeCall(
-            data, progressListener, progressRequestListener);
+            data, progressListener, progressRequestListener, headerPair);
     Type localVarReturnType = new TypeToken<AssetPrePermissionsUpdateResponse>() {}.getType();
     apiClient.executeAsync(call, localVarReturnType, callback);
     return call;

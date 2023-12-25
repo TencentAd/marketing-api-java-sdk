@@ -39,10 +39,16 @@ public class BusinessMdmAccountRelationsApiContainer extends ApiContainer {
    *     response body
    */
   public BusinessMdmAccountRelationsGetResponseData businessMdmAccountRelationsGet(
-      Long accountId, String relationType, Long page, Long pageSize, List<String> fields)
+      Long accountId,
+      String relationType,
+      Long page,
+      Long pageSize,
+      List<String> fields,
+      String... headerPair)
       throws ApiException, TencentAdsResponseException {
     BusinessMdmAccountRelationsGetResponse resp =
-        api.businessMdmAccountRelationsGet(accountId, relationType, page, pageSize, fields);
+        api.businessMdmAccountRelationsGet(
+            accountId, relationType, page, pageSize, fields, headerPair);
     handleResponse(gson.toJson(resp));
     return resp.getData();
   }

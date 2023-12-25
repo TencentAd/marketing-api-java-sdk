@@ -62,8 +62,10 @@ public class LeadsFormApi {
   public com.squareup.okhttp.Call leadsFormAddCall(
       LeadsFormAddRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
-      final ProgressRequestBody.ProgressRequestListener progressRequestListener)
+      final ProgressRequestBody.ProgressRequestListener progressRequestListener,
+      String... headerPair)
       throws ApiException {
+
     Object localVarPostBody = data;
 
     // create path and map variables
@@ -83,6 +85,15 @@ public class LeadsFormApi {
     final String[] localVarContentTypes = {"application/json", "application/xml"};
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
     localVarHeaderParams.put("Content-Type", localVarContentType);
+
+    if (headerPair != null && headerPair.length > 0) {
+      if (headerPair.length % 2 != 0) {
+        throw new UnsupportedOperationException("Parameter headerPair must be paired");
+      }
+      for (int i = 0; i < headerPair.length / 2; i++) {
+        localVarHeaderParams.put(headerPair[i], headerPair[i * 2 + 1]);
+      }
+    }
 
     if (progressListener != null) {
       apiClient
@@ -119,7 +130,8 @@ public class LeadsFormApi {
   private com.squareup.okhttp.Call leadsFormAddValidateBeforeCall(
       LeadsFormAddRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
-      final ProgressRequestBody.ProgressRequestListener progressRequestListener)
+      final ProgressRequestBody.ProgressRequestListener progressRequestListener,
+      String... headerPair)
       throws ApiException {
 
     // verify the required parameter 'data' is set
@@ -129,7 +141,7 @@ public class LeadsFormApi {
     }
 
     com.squareup.okhttp.Call call =
-        leadsFormAddCall(data, progressListener, progressRequestListener);
+        leadsFormAddCall(data, progressListener, progressRequestListener, headerPair);
     return call;
   }
 
@@ -141,8 +153,9 @@ public class LeadsFormApi {
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
-  public LeadsFormAddResponse leadsFormAdd(LeadsFormAddRequest data) throws ApiException {
-    ApiResponse<LeadsFormAddResponse> resp = leadsFormAddWithHttpInfo(data);
+  public LeadsFormAddResponse leadsFormAdd(LeadsFormAddRequest data, String... headerPair)
+      throws ApiException {
+    ApiResponse<LeadsFormAddResponse> resp = leadsFormAddWithHttpInfo(data, headerPair);
     return resp.getData();
   }
 
@@ -154,9 +167,9 @@ public class LeadsFormApi {
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
-  public ApiResponse<LeadsFormAddResponse> leadsFormAddWithHttpInfo(LeadsFormAddRequest data)
-      throws ApiException {
-    com.squareup.okhttp.Call call = leadsFormAddValidateBeforeCall(data, null, null);
+  public ApiResponse<LeadsFormAddResponse> leadsFormAddWithHttpInfo(
+      LeadsFormAddRequest data, String... headerPair) throws ApiException {
+    com.squareup.okhttp.Call call = leadsFormAddValidateBeforeCall(data, null, null, headerPair);
     Type localVarReturnType = new TypeToken<LeadsFormAddResponse>() {}.getType();
     return apiClient.execute(call, localVarReturnType);
   }
@@ -170,7 +183,9 @@ public class LeadsFormApi {
    * @throws ApiException If fail to process the API call, e.g. serializing the request body object
    */
   public com.squareup.okhttp.Call leadsFormAddAsync(
-      LeadsFormAddRequest data, final ApiCallback<LeadsFormAddResponse> callback)
+      LeadsFormAddRequest data,
+      final ApiCallback<LeadsFormAddResponse> callback,
+      String... headerPair)
       throws ApiException {
 
     ProgressResponseBody.ProgressListener progressListener = null;
@@ -195,7 +210,7 @@ public class LeadsFormApi {
     }
 
     com.squareup.okhttp.Call call =
-        leadsFormAddValidateBeforeCall(data, progressListener, progressRequestListener);
+        leadsFormAddValidateBeforeCall(data, progressListener, progressRequestListener, headerPair);
     Type localVarReturnType = new TypeToken<LeadsFormAddResponse>() {}.getType();
     apiClient.executeAsync(call, localVarReturnType, callback);
     return call;
@@ -216,8 +231,10 @@ public class LeadsFormApi {
       String componentId,
       List<String> fields,
       final ProgressResponseBody.ProgressListener progressListener,
-      final ProgressRequestBody.ProgressRequestListener progressRequestListener)
+      final ProgressRequestBody.ProgressRequestListener progressRequestListener,
+      String... headerPair)
       throws ApiException {
+
     Object localVarPostBody = null;
 
     // create path and map variables
@@ -243,6 +260,15 @@ public class LeadsFormApi {
     final String[] localVarContentTypes = {"text/plain"};
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
     localVarHeaderParams.put("Content-Type", localVarContentType);
+
+    if (headerPair != null && headerPair.length > 0) {
+      if (headerPair.length % 2 != 0) {
+        throw new UnsupportedOperationException("Parameter headerPair must be paired");
+      }
+      for (int i = 0; i < headerPair.length / 2; i++) {
+        localVarHeaderParams.put(headerPair[i], headerPair[i * 2 + 1]);
+      }
+    }
 
     if (progressListener != null) {
       apiClient
@@ -281,7 +307,8 @@ public class LeadsFormApi {
       String componentId,
       List<String> fields,
       final ProgressResponseBody.ProgressListener progressListener,
-      final ProgressRequestBody.ProgressRequestListener progressRequestListener)
+      final ProgressRequestBody.ProgressRequestListener progressRequestListener,
+      String... headerPair)
       throws ApiException {
 
     // verify the required parameter 'accountId' is set
@@ -297,7 +324,8 @@ public class LeadsFormApi {
     }
 
     com.squareup.okhttp.Call call =
-        leadsFormGetCall(accountId, componentId, fields, progressListener, progressRequestListener);
+        leadsFormGetCall(
+            accountId, componentId, fields, progressListener, progressRequestListener, headerPair);
     return call;
   }
 
@@ -311,10 +339,11 @@ public class LeadsFormApi {
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
-  public LeadsFormGetResponse leadsFormGet(Long accountId, String componentId, List<String> fields)
+  public LeadsFormGetResponse leadsFormGet(
+      Long accountId, String componentId, List<String> fields, String... headerPair)
       throws ApiException {
     ApiResponse<LeadsFormGetResponse> resp =
-        leadsFormGetWithHttpInfo(accountId, componentId, fields);
+        leadsFormGetWithHttpInfo(accountId, componentId, fields, headerPair);
     return resp.getData();
   }
 
@@ -329,9 +358,10 @@ public class LeadsFormApi {
    *     response body
    */
   public ApiResponse<LeadsFormGetResponse> leadsFormGetWithHttpInfo(
-      Long accountId, String componentId, List<String> fields) throws ApiException {
+      Long accountId, String componentId, List<String> fields, String... headerPair)
+      throws ApiException {
     com.squareup.okhttp.Call call =
-        leadsFormGetValidateBeforeCall(accountId, componentId, fields, null, null);
+        leadsFormGetValidateBeforeCall(accountId, componentId, fields, null, null, headerPair);
     Type localVarReturnType = new TypeToken<LeadsFormGetResponse>() {}.getType();
     return apiClient.execute(call, localVarReturnType);
   }
@@ -350,7 +380,8 @@ public class LeadsFormApi {
       Long accountId,
       String componentId,
       List<String> fields,
-      final ApiCallback<LeadsFormGetResponse> callback)
+      final ApiCallback<LeadsFormGetResponse> callback,
+      String... headerPair)
       throws ApiException {
 
     ProgressResponseBody.ProgressListener progressListener = null;
@@ -376,7 +407,7 @@ public class LeadsFormApi {
 
     com.squareup.okhttp.Call call =
         leadsFormGetValidateBeforeCall(
-            accountId, componentId, fields, progressListener, progressRequestListener);
+            accountId, componentId, fields, progressListener, progressRequestListener, headerPair);
     Type localVarReturnType = new TypeToken<LeadsFormGetResponse>() {}.getType();
     apiClient.executeAsync(call, localVarReturnType, callback);
     return call;

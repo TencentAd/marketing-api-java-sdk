@@ -44,9 +44,10 @@ public class QualificationsApiContainer extends ApiContainer {
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
-  public QualificationsAddResponseData qualificationsAdd(QualificationsAddRequest data)
+  public QualificationsAddResponseData qualificationsAdd(
+      QualificationsAddRequest data, String... headerPair)
       throws ApiException, TencentAdsResponseException {
-    QualificationsAddResponse resp = api.qualificationsAdd(data);
+    QualificationsAddResponse resp = api.qualificationsAdd(data, headerPair);
     handleResponse(gson.toJson(resp));
     return resp.getData();
   }
@@ -59,9 +60,10 @@ public class QualificationsApiContainer extends ApiContainer {
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
-  public QualificationsDeleteResponseData qualificationsDelete(QualificationsDeleteRequest data)
+  public QualificationsDeleteResponseData qualificationsDelete(
+      QualificationsDeleteRequest data, String... headerPair)
       throws ApiException, TencentAdsResponseException {
-    QualificationsDeleteResponse resp = api.qualificationsDelete(data);
+    QualificationsDeleteResponse resp = api.qualificationsDelete(data, headerPair);
     handleResponse(gson.toJson(resp));
     return resp.getData();
   }
@@ -81,10 +83,11 @@ public class QualificationsApiContainer extends ApiContainer {
       Long accountId,
       String qualificationType,
       List<FilteringStruct> filtering,
-      List<String> fields)
+      List<String> fields,
+      String... headerPair)
       throws ApiException, TencentAdsResponseException {
     QualificationsGetResponse resp =
-        api.qualificationsGet(accountId, qualificationType, filtering, fields);
+        api.qualificationsGet(accountId, qualificationType, filtering, fields, headerPair);
     handleResponse(gson.toJson(resp));
     return resp.getData();
   }
@@ -97,9 +100,10 @@ public class QualificationsApiContainer extends ApiContainer {
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
-  public QualificationsUpdateResponseData qualificationsUpdate(QualificationsUpdateRequest data)
+  public QualificationsUpdateResponseData qualificationsUpdate(
+      QualificationsUpdateRequest data, String... headerPair)
       throws ApiException, TencentAdsResponseException {
-    QualificationsUpdateResponse resp = api.qualificationsUpdate(data);
+    QualificationsUpdateResponse resp = api.qualificationsUpdate(data, headerPair);
     handleResponse(gson.toJson(resp));
     return resp.getData();
   }

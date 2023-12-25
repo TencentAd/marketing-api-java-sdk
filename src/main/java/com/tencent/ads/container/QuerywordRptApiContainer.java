@@ -34,9 +34,10 @@ public class QuerywordRptApiContainer extends ApiContainer {
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
-  public QuerywordRptGetResponseData querywordRptGet(QuerywordRptGetRequest data)
+  public QuerywordRptGetResponseData querywordRptGet(
+      QuerywordRptGetRequest data, String... headerPair)
       throws ApiException, TencentAdsResponseException {
-    QuerywordRptGetResponse resp = api.querywordRptGet(data);
+    QuerywordRptGetResponse resp = api.querywordRptGet(data, headerPair);
     handleResponse(gson.toJson(resp));
     return resp.getData();
   }

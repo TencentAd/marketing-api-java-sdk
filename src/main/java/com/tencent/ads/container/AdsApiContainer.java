@@ -47,9 +47,9 @@ public class AdsApiContainer extends ApiContainer {
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
-  public AdsAddResponseData adsAdd(AdsAddRequest data)
+  public AdsAddResponseData adsAdd(AdsAddRequest data, String... headerPair)
       throws ApiException, TencentAdsResponseException {
-    AdsAddResponse resp = api.adsAdd(data);
+    AdsAddResponse resp = api.adsAdd(data, headerPair);
     handleResponse(gson.toJson(resp));
     return resp.getData();
   }
@@ -62,9 +62,9 @@ public class AdsApiContainer extends ApiContainer {
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
-  public AdsDeleteResponseData adsDelete(AdsDeleteRequest data)
+  public AdsDeleteResponseData adsDelete(AdsDeleteRequest data, String... headerPair)
       throws ApiException, TencentAdsResponseException {
-    AdsDeleteResponse resp = api.adsDelete(data);
+    AdsDeleteResponse resp = api.adsDelete(data, headerPair);
     handleResponse(gson.toJson(resp));
     return resp.getData();
   }
@@ -90,7 +90,8 @@ public class AdsApiContainer extends ApiContainer {
       Long pageSize,
       Boolean isDeleted,
       Boolean weixinOfficialAccountsUpgradeEnabled,
-      List<String> fields)
+      List<String> fields,
+      String... headerPair)
       throws ApiException, TencentAdsResponseException {
     AdsGetResponse resp =
         api.adsGet(
@@ -100,7 +101,8 @@ public class AdsApiContainer extends ApiContainer {
             pageSize,
             isDeleted,
             weixinOfficialAccountsUpgradeEnabled,
-            fields);
+            fields,
+            headerPair);
     handleResponse(gson.toJson(resp));
     return resp.getData();
   }
@@ -113,9 +115,9 @@ public class AdsApiContainer extends ApiContainer {
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
-  public AdsUpdateResponseData adsUpdate(AdsUpdateRequest data)
+  public AdsUpdateResponseData adsUpdate(AdsUpdateRequest data, String... headerPair)
       throws ApiException, TencentAdsResponseException {
-    AdsUpdateResponse resp = api.adsUpdate(data);
+    AdsUpdateResponse resp = api.adsUpdate(data, headerPair);
     handleResponse(gson.toJson(resp));
     return resp.getData();
   }
@@ -129,8 +131,9 @@ public class AdsApiContainer extends ApiContainer {
    *     response body
    */
   public AdsUpdateConfiguredStatusResponseData adsUpdateConfiguredStatus(
-      AdsUpdateConfiguredStatusRequest data) throws ApiException, TencentAdsResponseException {
-    AdsUpdateConfiguredStatusResponse resp = api.adsUpdateConfiguredStatus(data);
+      AdsUpdateConfiguredStatusRequest data, String... headerPair)
+      throws ApiException, TencentAdsResponseException {
+    AdsUpdateConfiguredStatusResponse resp = api.adsUpdateConfiguredStatus(data, headerPair);
     handleResponse(gson.toJson(resp));
     return resp.getData();
   }

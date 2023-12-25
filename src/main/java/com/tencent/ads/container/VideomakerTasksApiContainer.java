@@ -37,9 +37,9 @@ public class VideomakerTasksApiContainer extends ApiContainer {
    *     response body
    */
   public VideomakerTasksGetResponseData videomakerTasksGet(
-      Long accountId, String taskId, List<String> fields)
+      Long accountId, String taskId, List<String> fields, String... headerPair)
       throws ApiException, TencentAdsResponseException {
-    VideomakerTasksGetResponse resp = api.videomakerTasksGet(accountId, taskId, fields);
+    VideomakerTasksGetResponse resp = api.videomakerTasksGet(accountId, taskId, fields, headerPair);
     handleResponse(gson.toJson(resp));
     return resp.getData();
   }

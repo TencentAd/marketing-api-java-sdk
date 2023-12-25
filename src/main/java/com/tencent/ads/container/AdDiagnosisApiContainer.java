@@ -34,9 +34,9 @@ public class AdDiagnosisApiContainer extends ApiContainer {
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
-  public AdDiagnosisGetResponseData adDiagnosisGet(AdDiagnosisGetRequest data)
+  public AdDiagnosisGetResponseData adDiagnosisGet(AdDiagnosisGetRequest data, String... headerPair)
       throws ApiException, TencentAdsResponseException {
-    AdDiagnosisGetResponse resp = api.adDiagnosisGet(data);
+    AdDiagnosisGetResponse resp = api.adDiagnosisGet(data, headerPair);
     handleResponse(gson.toJson(resp));
     return resp.getData();
   }

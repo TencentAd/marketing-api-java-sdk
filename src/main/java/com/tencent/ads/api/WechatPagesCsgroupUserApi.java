@@ -66,8 +66,10 @@ public class WechatPagesCsgroupUserApi {
       Long departmentId,
       List<String> fields,
       final ProgressResponseBody.ProgressListener progressListener,
-      final ProgressRequestBody.ProgressRequestListener progressRequestListener)
+      final ProgressRequestBody.ProgressRequestListener progressRequestListener,
+      String... headerPair)
       throws ApiException {
+
     Object localVarPostBody = null;
 
     // create path and map variables
@@ -94,6 +96,15 @@ public class WechatPagesCsgroupUserApi {
     final String[] localVarContentTypes = {"text/plain"};
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
     localVarHeaderParams.put("Content-Type", localVarContentType);
+
+    if (headerPair != null && headerPair.length > 0) {
+      if (headerPair.length % 2 != 0) {
+        throw new UnsupportedOperationException("Parameter headerPair must be paired");
+      }
+      for (int i = 0; i < headerPair.length / 2; i++) {
+        localVarHeaderParams.put(headerPair[i], headerPair[i * 2 + 1]);
+      }
+    }
 
     if (progressListener != null) {
       apiClient
@@ -133,7 +144,8 @@ public class WechatPagesCsgroupUserApi {
       Long departmentId,
       List<String> fields,
       final ProgressResponseBody.ProgressListener progressListener,
-      final ProgressRequestBody.ProgressRequestListener progressRequestListener)
+      final ProgressRequestBody.ProgressRequestListener progressRequestListener,
+      String... headerPair)
       throws ApiException {
 
     // verify the required parameter 'accountId' is set
@@ -150,7 +162,13 @@ public class WechatPagesCsgroupUserApi {
 
     com.squareup.okhttp.Call call =
         wechatPagesCsgroupUserGetCall(
-            accountId, corpId, departmentId, fields, progressListener, progressRequestListener);
+            accountId,
+            corpId,
+            departmentId,
+            fields,
+            progressListener,
+            progressRequestListener,
+            headerPair);
     return call;
   }
 
@@ -166,9 +184,10 @@ public class WechatPagesCsgroupUserApi {
    *     response body
    */
   public WechatPagesCsgroupUserGetResponse wechatPagesCsgroupUserGet(
-      Long accountId, String corpId, Long departmentId, List<String> fields) throws ApiException {
+      Long accountId, String corpId, Long departmentId, List<String> fields, String... headerPair)
+      throws ApiException {
     ApiResponse<WechatPagesCsgroupUserGetResponse> resp =
-        wechatPagesCsgroupUserGetWithHttpInfo(accountId, corpId, departmentId, fields);
+        wechatPagesCsgroupUserGetWithHttpInfo(accountId, corpId, departmentId, fields, headerPair);
     return resp.getData();
   }
 
@@ -184,10 +203,11 @@ public class WechatPagesCsgroupUserApi {
    *     response body
    */
   public ApiResponse<WechatPagesCsgroupUserGetResponse> wechatPagesCsgroupUserGetWithHttpInfo(
-      Long accountId, String corpId, Long departmentId, List<String> fields) throws ApiException {
+      Long accountId, String corpId, Long departmentId, List<String> fields, String... headerPair)
+      throws ApiException {
     com.squareup.okhttp.Call call =
         wechatPagesCsgroupUserGetValidateBeforeCall(
-            accountId, corpId, departmentId, fields, null, null);
+            accountId, corpId, departmentId, fields, null, null, headerPair);
     Type localVarReturnType = new TypeToken<WechatPagesCsgroupUserGetResponse>() {}.getType();
     return apiClient.execute(call, localVarReturnType);
   }
@@ -208,7 +228,8 @@ public class WechatPagesCsgroupUserApi {
       String corpId,
       Long departmentId,
       List<String> fields,
-      final ApiCallback<WechatPagesCsgroupUserGetResponse> callback)
+      final ApiCallback<WechatPagesCsgroupUserGetResponse> callback,
+      String... headerPair)
       throws ApiException {
 
     ProgressResponseBody.ProgressListener progressListener = null;
@@ -234,7 +255,13 @@ public class WechatPagesCsgroupUserApi {
 
     com.squareup.okhttp.Call call =
         wechatPagesCsgroupUserGetValidateBeforeCall(
-            accountId, corpId, departmentId, fields, progressListener, progressRequestListener);
+            accountId,
+            corpId,
+            departmentId,
+            fields,
+            progressListener,
+            progressRequestListener,
+            headerPair);
     Type localVarReturnType = new TypeToken<WechatPagesCsgroupUserGetResponse>() {}.getType();
     apiClient.executeAsync(call, localVarReturnType, callback);
     return call;

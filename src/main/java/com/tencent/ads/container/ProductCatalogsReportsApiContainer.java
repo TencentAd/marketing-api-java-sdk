@@ -50,11 +50,19 @@ public class ProductCatalogsReportsApiContainer extends ApiContainer {
       List<FilteringStruct> filtering,
       List<String> groupBy,
       List<OrderByStruct> orderBy,
-      List<String> fields)
+      List<String> fields,
+      String... headerPair)
       throws ApiException, TencentAdsResponseException {
     ProductCatalogsReportsGetResponse resp =
         api.productCatalogsReportsGet(
-            accountId, productCatalogId, dateRange, filtering, groupBy, orderBy, fields);
+            accountId,
+            productCatalogId,
+            dateRange,
+            filtering,
+            groupBy,
+            orderBy,
+            fields,
+            headerPair);
     handleResponse(gson.toJson(resp));
     return resp.getData();
   }

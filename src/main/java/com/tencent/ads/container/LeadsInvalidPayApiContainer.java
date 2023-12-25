@@ -34,9 +34,10 @@ public class LeadsInvalidPayApiContainer extends ApiContainer {
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
-  public LeadsInvalidPayGetResponseData leadsInvalidPayGet(LeadsInvalidPayGetRequest data)
+  public LeadsInvalidPayGetResponseData leadsInvalidPayGet(
+      LeadsInvalidPayGetRequest data, String... headerPair)
       throws ApiException, TencentAdsResponseException {
-    LeadsInvalidPayGetResponse resp = api.leadsInvalidPayGet(data);
+    LeadsInvalidPayGetResponse resp = api.leadsInvalidPayGet(data, headerPair);
     handleResponse(gson.toJson(resp));
     return resp.getData();
   }

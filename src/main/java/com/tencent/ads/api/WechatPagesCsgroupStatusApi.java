@@ -61,8 +61,10 @@ public class WechatPagesCsgroupStatusApi {
   public com.squareup.okhttp.Call wechatPagesCsgroupStatusUpdateCall(
       WechatPagesCsgroupStatusUpdateRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
-      final ProgressRequestBody.ProgressRequestListener progressRequestListener)
+      final ProgressRequestBody.ProgressRequestListener progressRequestListener,
+      String... headerPair)
       throws ApiException {
+
     Object localVarPostBody = data;
 
     // create path and map variables
@@ -82,6 +84,15 @@ public class WechatPagesCsgroupStatusApi {
     final String[] localVarContentTypes = {"application/json", "application/xml"};
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
     localVarHeaderParams.put("Content-Type", localVarContentType);
+
+    if (headerPair != null && headerPair.length > 0) {
+      if (headerPair.length % 2 != 0) {
+        throw new UnsupportedOperationException("Parameter headerPair must be paired");
+      }
+      for (int i = 0; i < headerPair.length / 2; i++) {
+        localVarHeaderParams.put(headerPair[i], headerPair[i * 2 + 1]);
+      }
+    }
 
     if (progressListener != null) {
       apiClient
@@ -118,7 +129,8 @@ public class WechatPagesCsgroupStatusApi {
   private com.squareup.okhttp.Call wechatPagesCsgroupStatusUpdateValidateBeforeCall(
       WechatPagesCsgroupStatusUpdateRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
-      final ProgressRequestBody.ProgressRequestListener progressRequestListener)
+      final ProgressRequestBody.ProgressRequestListener progressRequestListener,
+      String... headerPair)
       throws ApiException {
 
     // verify the required parameter 'data' is set
@@ -128,7 +140,8 @@ public class WechatPagesCsgroupStatusApi {
     }
 
     com.squareup.okhttp.Call call =
-        wechatPagesCsgroupStatusUpdateCall(data, progressListener, progressRequestListener);
+        wechatPagesCsgroupStatusUpdateCall(
+            data, progressListener, progressRequestListener, headerPair);
     return call;
   }
 
@@ -141,9 +154,9 @@ public class WechatPagesCsgroupStatusApi {
    *     response body
    */
   public WechatPagesCsgroupStatusUpdateResponse wechatPagesCsgroupStatusUpdate(
-      WechatPagesCsgroupStatusUpdateRequest data) throws ApiException {
+      WechatPagesCsgroupStatusUpdateRequest data, String... headerPair) throws ApiException {
     ApiResponse<WechatPagesCsgroupStatusUpdateResponse> resp =
-        wechatPagesCsgroupStatusUpdateWithHttpInfo(data);
+        wechatPagesCsgroupStatusUpdateWithHttpInfo(data, headerPair);
     return resp.getData();
   }
 
@@ -156,10 +169,10 @@ public class WechatPagesCsgroupStatusApi {
    *     response body
    */
   public ApiResponse<WechatPagesCsgroupStatusUpdateResponse>
-      wechatPagesCsgroupStatusUpdateWithHttpInfo(WechatPagesCsgroupStatusUpdateRequest data)
-          throws ApiException {
+      wechatPagesCsgroupStatusUpdateWithHttpInfo(
+          WechatPagesCsgroupStatusUpdateRequest data, String... headerPair) throws ApiException {
     com.squareup.okhttp.Call call =
-        wechatPagesCsgroupStatusUpdateValidateBeforeCall(data, null, null);
+        wechatPagesCsgroupStatusUpdateValidateBeforeCall(data, null, null, headerPair);
     Type localVarReturnType = new TypeToken<WechatPagesCsgroupStatusUpdateResponse>() {}.getType();
     return apiClient.execute(call, localVarReturnType);
   }
@@ -174,7 +187,8 @@ public class WechatPagesCsgroupStatusApi {
    */
   public com.squareup.okhttp.Call wechatPagesCsgroupStatusUpdateAsync(
       WechatPagesCsgroupStatusUpdateRequest data,
-      final ApiCallback<WechatPagesCsgroupStatusUpdateResponse> callback)
+      final ApiCallback<WechatPagesCsgroupStatusUpdateResponse> callback,
+      String... headerPair)
       throws ApiException {
 
     ProgressResponseBody.ProgressListener progressListener = null;
@@ -200,7 +214,7 @@ public class WechatPagesCsgroupStatusApi {
 
     com.squareup.okhttp.Call call =
         wechatPagesCsgroupStatusUpdateValidateBeforeCall(
-            data, progressListener, progressRequestListener);
+            data, progressListener, progressRequestListener, headerPair);
     Type localVarReturnType = new TypeToken<WechatPagesCsgroupStatusUpdateResponse>() {}.getType();
     apiClient.executeAsync(call, localVarReturnType, callback);
     return call;

@@ -49,7 +49,8 @@ public class XijingTemplateListApiContainer extends ApiContainer {
       String templateSource,
       Long pageSize,
       Long page,
-      List<String> fields)
+      List<String> fields,
+      String... headerPair)
       throws ApiException, TencentAdsResponseException {
     XijingTemplateListGetResponse resp =
         api.xijingTemplateListGet(
@@ -60,7 +61,8 @@ public class XijingTemplateListApiContainer extends ApiContainer {
             templateSource,
             pageSize,
             page,
-            fields);
+            fields,
+            headerPair);
     handleResponse(gson.toJson(resp));
     return resp.getData();
   }

@@ -49,11 +49,20 @@ public class ProductCategoriesListApiContainer extends ApiContainer {
       Long level,
       Long categoryId,
       String categoryName,
-      List<String> fields)
+      List<String> fields,
+      String... headerPair)
       throws ApiException, TencentAdsResponseException {
     ProductCategoriesListGetResponse resp =
         api.productCategoriesListGet(
-            accountId, productCatalogId, page, pageSize, level, categoryId, categoryName, fields);
+            accountId,
+            productCatalogId,
+            page,
+            pageSize,
+            level,
+            categoryId,
+            categoryName,
+            fields,
+            headerPair);
     handleResponse(gson.toJson(resp));
     return resp.getData();
   }

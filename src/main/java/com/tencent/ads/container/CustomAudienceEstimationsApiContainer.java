@@ -35,8 +35,9 @@ public class CustomAudienceEstimationsApiContainer extends ApiContainer {
    *     response body
    */
   public CustomAudienceEstimationsGetResponseData customAudienceEstimationsGet(
-      CustomAudienceEstimationsGetRequest data) throws ApiException, TencentAdsResponseException {
-    CustomAudienceEstimationsGetResponse resp = api.customAudienceEstimationsGet(data);
+      CustomAudienceEstimationsGetRequest data, String... headerPair)
+      throws ApiException, TencentAdsResponseException {
+    CustomAudienceEstimationsGetResponse resp = api.customAudienceEstimationsGet(data, headerPair);
     handleResponse(gson.toJson(resp));
     return resp.getData();
   }

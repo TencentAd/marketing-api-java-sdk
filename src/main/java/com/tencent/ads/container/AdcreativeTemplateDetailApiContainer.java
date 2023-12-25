@@ -47,7 +47,8 @@ public class AdcreativeTemplateDetailApiContainer extends ApiContainer {
       Boolean automaticSiteEnabled,
       List<String> siteSet,
       Boolean isDynamicCreativeAd,
-      List<String> fields)
+      List<String> fields,
+      String... headerPair)
       throws ApiException, TencentAdsResponseException {
     AdcreativeTemplateDetailGetResponse resp =
         api.adcreativeTemplateDetailGet(
@@ -57,7 +58,8 @@ public class AdcreativeTemplateDetailApiContainer extends ApiContainer {
             automaticSiteEnabled,
             siteSet,
             isDynamicCreativeAd,
-            fields);
+            fields,
+            headerPair);
     handleResponse(gson.toJson(resp));
     return resp.getData();
   }

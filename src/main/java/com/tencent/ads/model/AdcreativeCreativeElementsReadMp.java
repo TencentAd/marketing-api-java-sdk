@@ -245,6 +245,9 @@ public class AdcreativeCreativeElementsReadMp {
   @SerializedName("main_jump_info")
   private List<LandingPageStructure> mainJumpInfo = null;
 
+  @SerializedName("wechat_channels_cover_img_show_type")
+  private WechatChannelsCoverImgShowType wechatChannelsCoverImgShowType = null;
+
   public AdcreativeCreativeElementsReadMp image(String image) {
     this.image = image;
     return this;
@@ -1712,6 +1715,27 @@ public class AdcreativeCreativeElementsReadMp {
     this.mainJumpInfo = mainJumpInfo;
   }
 
+  public AdcreativeCreativeElementsReadMp wechatChannelsCoverImgShowType(
+      WechatChannelsCoverImgShowType wechatChannelsCoverImgShowType) {
+    this.wechatChannelsCoverImgShowType = wechatChannelsCoverImgShowType;
+    return this;
+  }
+
+  /**
+   * Get wechatChannelsCoverImgShowType
+   *
+   * @return wechatChannelsCoverImgShowType
+   */
+  @ApiModelProperty(value = "")
+  public WechatChannelsCoverImgShowType getWechatChannelsCoverImgShowType() {
+    return wechatChannelsCoverImgShowType;
+  }
+
+  public void setWechatChannelsCoverImgShowType(
+      WechatChannelsCoverImgShowType wechatChannelsCoverImgShowType) {
+    this.wechatChannelsCoverImgShowType = wechatChannelsCoverImgShowType;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -1807,7 +1831,10 @@ public class AdcreativeCreativeElementsReadMp {
             this.buttonTextJumpInfo, adcreativeCreativeElementsReadMp.buttonTextJumpInfo)
         && Objects.equals(
             this.wxgamePlayablePageSpec, adcreativeCreativeElementsReadMp.wxgamePlayablePageSpec)
-        && Objects.equals(this.mainJumpInfo, adcreativeCreativeElementsReadMp.mainJumpInfo);
+        && Objects.equals(this.mainJumpInfo, adcreativeCreativeElementsReadMp.mainJumpInfo)
+        && Objects.equals(
+            this.wechatChannelsCoverImgShowType,
+            adcreativeCreativeElementsReadMp.wechatChannelsCoverImgShowType);
   }
 
   @Override
@@ -1886,7 +1913,8 @@ public class AdcreativeCreativeElementsReadMp {
         redEnvelopeStruct,
         buttonTextJumpInfo,
         wxgamePlayablePageSpec,
-        mainJumpInfo);
+        mainJumpInfo,
+        wechatChannelsCoverImgShowType);
   }
 
   @Override

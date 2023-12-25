@@ -34,9 +34,10 @@ public class LeadsCallRecordApiContainer extends ApiContainer {
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
-  public LeadsCallRecordGetResponseData leadsCallRecordGet(LeadsCallRecordGetRequest data)
+  public LeadsCallRecordGetResponseData leadsCallRecordGet(
+      LeadsCallRecordGetRequest data, String... headerPair)
       throws ApiException, TencentAdsResponseException {
-    LeadsCallRecordGetResponse resp = api.leadsCallRecordGet(data);
+    LeadsCallRecordGetResponse resp = api.leadsCallRecordGet(data, headerPair);
     handleResponse(gson.toJson(resp));
     return resp.getData();
   }

@@ -38,9 +38,10 @@ public class ProductSeriesApiContainer extends ApiContainer {
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
-  public ProductSeriesAddResponseData productSeriesAdd(ProductSeriesAddRequest data)
+  public ProductSeriesAddResponseData productSeriesAdd(
+      ProductSeriesAddRequest data, String... headerPair)
       throws ApiException, TencentAdsResponseException {
-    ProductSeriesAddResponse resp = api.productSeriesAdd(data);
+    ProductSeriesAddResponse resp = api.productSeriesAdd(data, headerPair);
     handleResponse(gson.toJson(resp));
     return resp.getData();
   }
@@ -64,10 +65,11 @@ public class ProductSeriesApiContainer extends ApiContainer {
       List<ProductSeriesSearchFilteringStruct> filtering,
       Long page,
       Long pageSize,
-      List<String> fields)
+      List<String> fields,
+      String... headerPair)
       throws ApiException, TencentAdsResponseException {
     ProductSeriesGetResponse resp =
-        api.productSeriesGet(accountId, catalogId, filtering, page, pageSize, fields);
+        api.productSeriesGet(accountId, catalogId, filtering, page, pageSize, fields, headerPair);
     handleResponse(gson.toJson(resp));
     return resp.getData();
   }

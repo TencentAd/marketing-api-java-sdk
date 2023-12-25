@@ -38,9 +38,9 @@ public class AsyncTasksApiContainer extends ApiContainer {
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
-  public AsyncTasksAddResponseData asyncTasksAdd(AsyncTasksAddRequest data)
+  public AsyncTasksAddResponseData asyncTasksAdd(AsyncTasksAddRequest data, String... headerPair)
       throws ApiException, TencentAdsResponseException {
-    AsyncTasksAddResponse resp = api.asyncTasksAdd(data);
+    AsyncTasksAddResponse resp = api.asyncTasksAdd(data, headerPair);
     handleResponse(gson.toJson(resp));
     return resp.getData();
   }
@@ -62,9 +62,11 @@ public class AsyncTasksApiContainer extends ApiContainer {
       List<FilteringStruct> filtering,
       Long page,
       Long pageSize,
-      List<String> fields)
+      List<String> fields,
+      String... headerPair)
       throws ApiException, TencentAdsResponseException {
-    AsyncTasksGetResponse resp = api.asyncTasksGet(accountId, filtering, page, pageSize, fields);
+    AsyncTasksGetResponse resp =
+        api.asyncTasksGet(accountId, filtering, page, pageSize, fields, headerPair);
     handleResponse(gson.toJson(resp));
     return resp.getData();
   }

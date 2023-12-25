@@ -61,8 +61,10 @@ public class KeywordRecommendApi {
   public com.squareup.okhttp.Call keywordRecommendGetCall(
       KeywordRecommendGetRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
-      final ProgressRequestBody.ProgressRequestListener progressRequestListener)
+      final ProgressRequestBody.ProgressRequestListener progressRequestListener,
+      String... headerPair)
       throws ApiException {
+
     Object localVarPostBody = data;
 
     // create path and map variables
@@ -82,6 +84,15 @@ public class KeywordRecommendApi {
     final String[] localVarContentTypes = {"application/json", "application/xml"};
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
     localVarHeaderParams.put("Content-Type", localVarContentType);
+
+    if (headerPair != null && headerPair.length > 0) {
+      if (headerPair.length % 2 != 0) {
+        throw new UnsupportedOperationException("Parameter headerPair must be paired");
+      }
+      for (int i = 0; i < headerPair.length / 2; i++) {
+        localVarHeaderParams.put(headerPair[i], headerPair[i * 2 + 1]);
+      }
+    }
 
     if (progressListener != null) {
       apiClient
@@ -118,7 +129,8 @@ public class KeywordRecommendApi {
   private com.squareup.okhttp.Call keywordRecommendGetValidateBeforeCall(
       KeywordRecommendGetRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
-      final ProgressRequestBody.ProgressRequestListener progressRequestListener)
+      final ProgressRequestBody.ProgressRequestListener progressRequestListener,
+      String... headerPair)
       throws ApiException {
 
     // verify the required parameter 'data' is set
@@ -128,7 +140,7 @@ public class KeywordRecommendApi {
     }
 
     com.squareup.okhttp.Call call =
-        keywordRecommendGetCall(data, progressListener, progressRequestListener);
+        keywordRecommendGetCall(data, progressListener, progressRequestListener, headerPair);
     return call;
   }
 
@@ -140,9 +152,10 @@ public class KeywordRecommendApi {
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
-  public KeywordRecommendGetResponse keywordRecommendGet(KeywordRecommendGetRequest data)
-      throws ApiException {
-    ApiResponse<KeywordRecommendGetResponse> resp = keywordRecommendGetWithHttpInfo(data);
+  public KeywordRecommendGetResponse keywordRecommendGet(
+      KeywordRecommendGetRequest data, String... headerPair) throws ApiException {
+    ApiResponse<KeywordRecommendGetResponse> resp =
+        keywordRecommendGetWithHttpInfo(data, headerPair);
     return resp.getData();
   }
 
@@ -155,8 +168,9 @@ public class KeywordRecommendApi {
    *     response body
    */
   public ApiResponse<KeywordRecommendGetResponse> keywordRecommendGetWithHttpInfo(
-      KeywordRecommendGetRequest data) throws ApiException {
-    com.squareup.okhttp.Call call = keywordRecommendGetValidateBeforeCall(data, null, null);
+      KeywordRecommendGetRequest data, String... headerPair) throws ApiException {
+    com.squareup.okhttp.Call call =
+        keywordRecommendGetValidateBeforeCall(data, null, null, headerPair);
     Type localVarReturnType = new TypeToken<KeywordRecommendGetResponse>() {}.getType();
     return apiClient.execute(call, localVarReturnType);
   }
@@ -170,7 +184,9 @@ public class KeywordRecommendApi {
    * @throws ApiException If fail to process the API call, e.g. serializing the request body object
    */
   public com.squareup.okhttp.Call keywordRecommendGetAsync(
-      KeywordRecommendGetRequest data, final ApiCallback<KeywordRecommendGetResponse> callback)
+      KeywordRecommendGetRequest data,
+      final ApiCallback<KeywordRecommendGetResponse> callback,
+      String... headerPair)
       throws ApiException {
 
     ProgressResponseBody.ProgressListener progressListener = null;
@@ -195,7 +211,8 @@ public class KeywordRecommendApi {
     }
 
     com.squareup.okhttp.Call call =
-        keywordRecommendGetValidateBeforeCall(data, progressListener, progressRequestListener);
+        keywordRecommendGetValidateBeforeCall(
+            data, progressListener, progressRequestListener, headerPair);
     Type localVarReturnType = new TypeToken<KeywordRecommendGetResponse>() {}.getType();
     apiClient.executeAsync(call, localVarReturnType, callback);
     return call;

@@ -102,6 +102,9 @@ public class ConversionsGetListStruct {
   @SerializedName("deep_optimization_goal_type")
   private DeepOptimizationGoalType deepOptimizationGoalType = null;
 
+  @SerializedName("forward_link_assist")
+  private IntOptimizationGoal forwardLinkAssist = null;
+
   public ConversionsGetListStruct conversionId(Long conversionId) {
     this.conversionId = conversionId;
     return this;
@@ -622,6 +625,25 @@ public class ConversionsGetListStruct {
     this.deepOptimizationGoalType = deepOptimizationGoalType;
   }
 
+  public ConversionsGetListStruct forwardLinkAssist(IntOptimizationGoal forwardLinkAssist) {
+    this.forwardLinkAssist = forwardLinkAssist;
+    return this;
+  }
+
+  /**
+   * Get forwardLinkAssist
+   *
+   * @return forwardLinkAssist
+   */
+  @ApiModelProperty(value = "")
+  public IntOptimizationGoal getForwardLinkAssist() {
+    return forwardLinkAssist;
+  }
+
+  public void setForwardLinkAssist(IntOptimizationGoal forwardLinkAssist) {
+    this.forwardLinkAssist = forwardLinkAssist;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -669,7 +691,8 @@ public class ConversionsGetListStruct {
             this.deepBehaviorAdvancedGoalMaxPrice,
             conversionsGetListStruct.deepBehaviorAdvancedGoalMaxPrice)
         && Objects.equals(
-            this.deepOptimizationGoalType, conversionsGetListStruct.deepOptimizationGoalType);
+            this.deepOptimizationGoalType, conversionsGetListStruct.deepOptimizationGoalType)
+        && Objects.equals(this.forwardLinkAssist, conversionsGetListStruct.forwardLinkAssist);
   }
 
   @Override
@@ -701,7 +724,8 @@ public class ConversionsGetListStruct {
         deepBehaviorAdvancedGoal,
         deepBehaviorAdvancedGoalMinPrice,
         deepBehaviorAdvancedGoalMaxPrice,
-        deepOptimizationGoalType);
+        deepOptimizationGoalType,
+        forwardLinkAssist);
   }
 
   @Override

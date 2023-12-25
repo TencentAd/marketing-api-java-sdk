@@ -52,11 +52,20 @@ public class DataSourceDispatchApiContainer extends ApiContainer {
       List<String> scenes,
       String switchType,
       String accessWay,
-      List<String> fields)
+      List<String> fields,
+      String... headerPair)
       throws ApiException, TencentAdsResponseException {
     DataSourceDispatchGetResponse resp =
         api.dataSourceDispatchGet(
-            accountId, userActionSetId, type, name, scenes, switchType, accessWay, fields);
+            accountId,
+            userActionSetId,
+            type,
+            name,
+            scenes,
+            switchType,
+            accessWay,
+            fields,
+            headerPair);
     handleResponse(gson.toJson(resp));
     return resp.getData();
   }
@@ -70,8 +79,9 @@ public class DataSourceDispatchApiContainer extends ApiContainer {
    *     response body
    */
   public DataSourceDispatchUpdateResponseData dataSourceDispatchUpdate(
-      DataSourceDispatchUpdateRequest data) throws ApiException, TencentAdsResponseException {
-    DataSourceDispatchUpdateResponse resp = api.dataSourceDispatchUpdate(data);
+      DataSourceDispatchUpdateRequest data, String... headerPair)
+      throws ApiException, TencentAdsResponseException {
+    DataSourceDispatchUpdateResponse resp = api.dataSourceDispatchUpdate(data, headerPair);
     handleResponse(gson.toJson(resp));
     return resp.getData();
   }

@@ -215,6 +215,9 @@ public class AdcreativeCreativeElementsWithOptions {
   @SerializedName("eggs_jump_info")
   private List<LandingPageStructure> eggsJumpInfo = null;
 
+  @SerializedName("wechat_channels_cover_img_show_type")
+  private WechatChannelsCoverImgShowType wechatChannelsCoverImgShowType = null;
+
   public AdcreativeCreativeElementsWithOptions image(String image) {
     this.image = image;
     return this;
@@ -1539,6 +1542,27 @@ public class AdcreativeCreativeElementsWithOptions {
     this.eggsJumpInfo = eggsJumpInfo;
   }
 
+  public AdcreativeCreativeElementsWithOptions wechatChannelsCoverImgShowType(
+      WechatChannelsCoverImgShowType wechatChannelsCoverImgShowType) {
+    this.wechatChannelsCoverImgShowType = wechatChannelsCoverImgShowType;
+    return this;
+  }
+
+  /**
+   * Get wechatChannelsCoverImgShowType
+   *
+   * @return wechatChannelsCoverImgShowType
+   */
+  @ApiModelProperty(value = "")
+  public WechatChannelsCoverImgShowType getWechatChannelsCoverImgShowType() {
+    return wechatChannelsCoverImgShowType;
+  }
+
+  public void setWechatChannelsCoverImgShowType(
+      WechatChannelsCoverImgShowType wechatChannelsCoverImgShowType) {
+    this.wechatChannelsCoverImgShowType = wechatChannelsCoverImgShowType;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -1634,7 +1658,10 @@ public class AdcreativeCreativeElementsWithOptions {
             this.wxgamePlayablePageSpec,
             adcreativeCreativeElementsWithOptions.wxgamePlayablePageSpec)
         && Objects.equals(this.mainJumpInfo, adcreativeCreativeElementsWithOptions.mainJumpInfo)
-        && Objects.equals(this.eggsJumpInfo, adcreativeCreativeElementsWithOptions.eggsJumpInfo);
+        && Objects.equals(this.eggsJumpInfo, adcreativeCreativeElementsWithOptions.eggsJumpInfo)
+        && Objects.equals(
+            this.wechatChannelsCoverImgShowType,
+            adcreativeCreativeElementsWithOptions.wechatChannelsCoverImgShowType);
   }
 
   @Override
@@ -1703,7 +1730,8 @@ public class AdcreativeCreativeElementsWithOptions {
         buttonTextJumpInfo,
         wxgamePlayablePageSpec,
         mainJumpInfo,
-        eggsJumpInfo);
+        eggsJumpInfo,
+        wechatChannelsCoverImgShowType);
   }
 
   @Override

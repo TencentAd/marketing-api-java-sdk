@@ -69,8 +69,10 @@ public class VideomakerSubtitlesApi {
       String signature,
       Boolean onlySubtitleFile,
       final ProgressResponseBody.ProgressListener progressListener,
-      final ProgressRequestBody.ProgressRequestListener progressRequestListener)
+      final ProgressRequestBody.ProgressRequestListener progressRequestListener,
+      String... headerPair)
       throws ApiException {
+
     Object localVarPostBody = null;
 
     // create path and map variables
@@ -95,6 +97,15 @@ public class VideomakerSubtitlesApi {
     final String[] localVarContentTypes = {"multipart/form-data"};
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
     localVarHeaderParams.put("Content-Type", localVarContentType);
+
+    if (headerPair != null && headerPair.length > 0) {
+      if (headerPair.length % 2 != 0) {
+        throw new UnsupportedOperationException("Parameter headerPair must be paired");
+      }
+      for (int i = 0; i < headerPair.length / 2; i++) {
+        localVarHeaderParams.put(headerPair[i], headerPair[i * 2 + 1]);
+      }
+    }
 
     if (progressListener != null) {
       apiClient
@@ -135,7 +146,8 @@ public class VideomakerSubtitlesApi {
       String signature,
       Boolean onlySubtitleFile,
       final ProgressResponseBody.ProgressListener progressListener,
-      final ProgressRequestBody.ProgressRequestListener progressRequestListener)
+      final ProgressRequestBody.ProgressRequestListener progressRequestListener,
+      String... headerPair)
       throws ApiException {
 
     // verify the required parameter 'accountId' is set
@@ -152,7 +164,8 @@ public class VideomakerSubtitlesApi {
             signature,
             onlySubtitleFile,
             progressListener,
-            progressRequestListener);
+            progressRequestListener,
+            headerPair);
     return call;
   }
 
@@ -169,11 +182,16 @@ public class VideomakerSubtitlesApi {
    *     response body
    */
   public VideomakerSubtitlesAddResponse videomakerSubtitlesAdd(
-      Long accountId, String videoId, File videoFile, String signature, Boolean onlySubtitleFile)
+      Long accountId,
+      String videoId,
+      File videoFile,
+      String signature,
+      Boolean onlySubtitleFile,
+      String... headerPair)
       throws ApiException {
     ApiResponse<VideomakerSubtitlesAddResponse> resp =
         videomakerSubtitlesAddWithHttpInfo(
-            accountId, videoId, videoFile, signature, onlySubtitleFile);
+            accountId, videoId, videoFile, signature, onlySubtitleFile, headerPair);
     return resp.getData();
   }
 
@@ -190,11 +208,16 @@ public class VideomakerSubtitlesApi {
    *     response body
    */
   public ApiResponse<VideomakerSubtitlesAddResponse> videomakerSubtitlesAddWithHttpInfo(
-      Long accountId, String videoId, File videoFile, String signature, Boolean onlySubtitleFile)
+      Long accountId,
+      String videoId,
+      File videoFile,
+      String signature,
+      Boolean onlySubtitleFile,
+      String... headerPair)
       throws ApiException {
     com.squareup.okhttp.Call call =
         videomakerSubtitlesAddValidateBeforeCall(
-            accountId, videoId, videoFile, signature, onlySubtitleFile, null, null);
+            accountId, videoId, videoFile, signature, onlySubtitleFile, null, null, headerPair);
     Type localVarReturnType = new TypeToken<VideomakerSubtitlesAddResponse>() {}.getType();
     return apiClient.execute(call, localVarReturnType);
   }
@@ -217,7 +240,8 @@ public class VideomakerSubtitlesApi {
       File videoFile,
       String signature,
       Boolean onlySubtitleFile,
-      final ApiCallback<VideomakerSubtitlesAddResponse> callback)
+      final ApiCallback<VideomakerSubtitlesAddResponse> callback,
+      String... headerPair)
       throws ApiException {
 
     ProgressResponseBody.ProgressListener progressListener = null;
@@ -249,7 +273,8 @@ public class VideomakerSubtitlesApi {
             signature,
             onlySubtitleFile,
             progressListener,
-            progressRequestListener);
+            progressRequestListener,
+            headerPair);
     Type localVarReturnType = new TypeToken<VideomakerSubtitlesAddResponse>() {}.getType();
     apiClient.executeAsync(call, localVarReturnType, callback);
     return call;

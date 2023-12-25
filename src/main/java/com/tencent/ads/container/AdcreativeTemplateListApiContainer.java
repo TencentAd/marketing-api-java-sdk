@@ -55,7 +55,8 @@ public class AdcreativeTemplateListApiContainer extends ApiContainer {
       Long adcreativeTemplateId,
       Long page,
       Long pageSize,
-      List<String> fields)
+      List<String> fields,
+      String... headerPair)
       throws ApiException, TencentAdsResponseException {
     AdcreativeTemplateListGetResponse resp =
         api.adcreativeTemplateListGet(
@@ -69,7 +70,8 @@ public class AdcreativeTemplateListApiContainer extends ApiContainer {
             adcreativeTemplateId,
             page,
             pageSize,
-            fields);
+            fields,
+            headerPair);
     handleResponse(gson.toJson(resp));
     return resp.getData();
   }

@@ -48,11 +48,12 @@ public class CustomAudienceFilesApiContainer extends ApiContainer {
       String userIdType,
       File file,
       String operationType,
-      String openAppId)
+      String openAppId,
+      String... headerPair)
       throws ApiException, TencentAdsResponseException {
     CustomAudienceFilesAddResponse resp =
         api.customAudienceFilesAdd(
-            accountId, audienceId, userIdType, file, operationType, openAppId);
+            accountId, audienceId, userIdType, file, operationType, openAppId, headerPair);
     handleResponse(gson.toJson(resp));
     return resp.getData();
   }
@@ -76,11 +77,12 @@ public class CustomAudienceFilesApiContainer extends ApiContainer {
       Long customAudienceFileId,
       Long page,
       Long pageSize,
-      List<String> fields)
+      List<String> fields,
+      String... headerPair)
       throws ApiException, TencentAdsResponseException {
     CustomAudienceFilesGetResponse resp =
         api.customAudienceFilesGet(
-            accountId, audienceId, customAudienceFileId, page, pageSize, fields);
+            accountId, audienceId, customAudienceFileId, page, pageSize, fields, headerPair);
     handleResponse(gson.toJson(resp));
     return resp.getData();
   }

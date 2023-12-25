@@ -37,9 +37,10 @@ public class MaterialLabelsApiContainer extends ApiContainer {
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
-  public MaterialLabelsAddResponseData materialLabelsAdd(MaterialLabelsAddRequest data)
+  public MaterialLabelsAddResponseData materialLabelsAdd(
+      MaterialLabelsAddRequest data, String... headerPair)
       throws ApiException, TencentAdsResponseException {
-    MaterialLabelsAddResponse resp = api.materialLabelsAdd(data);
+    MaterialLabelsAddResponse resp = api.materialLabelsAdd(data, headerPair);
     handleResponse(gson.toJson(resp));
     return resp.getData();
   }
@@ -52,9 +53,10 @@ public class MaterialLabelsApiContainer extends ApiContainer {
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
-  public MaterialLabelsGetResponseData materialLabelsGet(MaterialLabelsGetRequest data)
+  public MaterialLabelsGetResponseData materialLabelsGet(
+      MaterialLabelsGetRequest data, String... headerPair)
       throws ApiException, TencentAdsResponseException {
-    MaterialLabelsGetResponse resp = api.materialLabelsGet(data);
+    MaterialLabelsGetResponse resp = api.materialLabelsGet(data, headerPair);
     handleResponse(gson.toJson(resp));
     return resp.getData();
   }

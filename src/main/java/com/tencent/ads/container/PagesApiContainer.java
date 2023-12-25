@@ -46,10 +46,11 @@ public class PagesApiContainer extends ApiContainer {
       List<FilteringStruct> filtering,
       Long page,
       Long pageSize,
-      List<String> fields)
+      List<String> fields,
+      String... headerPair)
       throws ApiException, TencentAdsResponseException {
     PagesGetResponse resp =
-        api.pagesGet(accountId, promotedObjectType, filtering, page, pageSize, fields);
+        api.pagesGet(accountId, promotedObjectType, filtering, page, pageSize, fields, headerPair);
     handleResponse(gson.toJson(resp));
     return resp.getData();
   }

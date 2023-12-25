@@ -35,9 +35,10 @@ public class ReviewElementPrereviewResultsApiContainer extends ApiContainer {
    *     response body
    */
   public ReviewElementPrereviewResultsGetResponseData reviewElementPrereviewResultsGet(
-      ReviewElementPrereviewResultsGetRequest data)
+      ReviewElementPrereviewResultsGetRequest data, String... headerPair)
       throws ApiException, TencentAdsResponseException {
-    ReviewElementPrereviewResultsGetResponse resp = api.reviewElementPrereviewResultsGet(data);
+    ReviewElementPrereviewResultsGetResponse resp =
+        api.reviewElementPrereviewResultsGet(data, headerPair);
     handleResponse(gson.toJson(resp));
     return resp.getData();
   }

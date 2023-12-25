@@ -46,11 +46,12 @@ public class MergeFundTypeFundStatementsDetailedApiContainer extends ApiContaine
       DateRangeTransaction dateRange,
       Long page,
       Long pageSize,
-      List<String> fields)
+      List<String> fields,
+      String... headerPair)
       throws ApiException, TencentAdsResponseException {
     MergeFundTypeFundStatementsDetailedGetResponse resp =
         api.mergeFundTypeFundStatementsDetailedGet(
-            accountId, fundType, dateRange, page, pageSize, fields);
+            accountId, fundType, dateRange, page, pageSize, fields, headerPair);
     handleResponse(gson.toJson(resp));
     return resp.getData();
   }

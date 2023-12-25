@@ -12,7 +12,6 @@
 
 package com.tencent.ads.model;
 
-
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.stream.JsonReader;
@@ -51,6 +50,8 @@ public enum MarketingScene {
   ECOMMERCE_CONTENT_BRAND_DAILY("ECOMMERCE_CONTENT_BRAND_DAILY"),
 
   ECOMMERCE_CONSUMER_LIVE_FOLLOW_DAILY("ECOMMERCE_CONSUMER_LIVE_FOLLOW_DAILY"),
+
+  DELIVERY_V3("DELIVERY_V3"),
 
   ECOMMERCE_CONSUMER_APP_ACTIVATION_DAILY("ECOMMERCE_CONSUMER_APP_ACTIVATION_DAILY");
 

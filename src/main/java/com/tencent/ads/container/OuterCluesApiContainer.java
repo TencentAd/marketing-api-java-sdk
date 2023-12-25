@@ -18,6 +18,9 @@ import com.tencent.ads.ApiException;
 import com.tencent.ads.anno.*;
 import com.tencent.ads.api.OuterCluesApi;
 import com.tencent.ads.exception.TencentAdsResponseException;
+import com.tencent.ads.model.OuterCluesActionTypeReportRequest;
+import com.tencent.ads.model.OuterCluesActionTypeReportResponse;
+import com.tencent.ads.model.OuterCluesActionTypeReportResponseData;
 import com.tencent.ads.model.OuterCluesAddRequest;
 import com.tencent.ads.model.OuterCluesAddResponse;
 import com.tencent.ads.model.OuterCluesAddResponseData;
@@ -30,6 +33,22 @@ public class OuterCluesApiContainer extends ApiContainer {
   @Inject OuterCluesApi api;
 
   /**
+   * 线索上报DMP平台
+   *
+   * @param data (required)
+   * @return OuterCluesActionTypeReportResponse
+   * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
+   *     response body
+   */
+  public OuterCluesActionTypeReportResponseData outerCluesActionTypeReport(
+      OuterCluesActionTypeReportRequest data, String... headerPair)
+      throws ApiException, TencentAdsResponseException {
+    OuterCluesActionTypeReportResponse resp = api.outerCluesActionTypeReport(data, headerPair);
+    handleResponse(gson.toJson(resp));
+    return resp.getData();
+  }
+
+  /**
    * 外部线索数据导入
    *
    * @param data (required)
@@ -37,9 +56,9 @@ public class OuterCluesApiContainer extends ApiContainer {
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
-  public OuterCluesAddResponseData outerCluesAdd(OuterCluesAddRequest data)
+  public OuterCluesAddResponseData outerCluesAdd(OuterCluesAddRequest data, String... headerPair)
       throws ApiException, TencentAdsResponseException {
-    OuterCluesAddResponse resp = api.outerCluesAdd(data);
+    OuterCluesAddResponse resp = api.outerCluesAdd(data, headerPair);
     handleResponse(gson.toJson(resp));
     return resp.getData();
   }
@@ -52,9 +71,10 @@ public class OuterCluesApiContainer extends ApiContainer {
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
-  public OuterCluesUpdateResponseData outerCluesUpdate(OuterCluesUpdateRequest data)
+  public OuterCluesUpdateResponseData outerCluesUpdate(
+      OuterCluesUpdateRequest data, String... headerPair)
       throws ApiException, TencentAdsResponseException {
-    OuterCluesUpdateResponse resp = api.outerCluesUpdate(data);
+    OuterCluesUpdateResponse resp = api.outerCluesUpdate(data, headerPair);
     handleResponse(gson.toJson(resp));
     return resp.getData();
   }

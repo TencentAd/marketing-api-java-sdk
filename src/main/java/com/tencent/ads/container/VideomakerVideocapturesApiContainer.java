@@ -45,11 +45,12 @@ public class VideomakerVideocapturesApiContainer extends ApiContainer {
       File videoFile,
       String signature,
       Long number,
-      Boolean returnImageIds)
+      Boolean returnImageIds,
+      String... headerPair)
       throws ApiException, TencentAdsResponseException {
     VideomakerVideocapturesAddResponse resp =
         api.videomakerVideocapturesAdd(
-            accountId, videoId, videoFile, signature, number, returnImageIds);
+            accountId, videoId, videoFile, signature, number, returnImageIds, headerPair);
     handleResponse(gson.toJson(resp));
     return resp.getData();
   }

@@ -39,7 +39,6 @@ public class App {
   @Inject AdsApiContainer adsApiContainer;
   @Inject AdvertiserApiContainer advertiserApiContainer;
   @Inject AdvertiserDailyBudgetApiContainer advertiserDailyBudgetApiContainer;
-  @Inject AgencyInnerTransferApiContainer agencyInnerTransferApiContainer;
   @Inject AgencyRealtimeCostApiContainer agencyRealtimeCostApiContainer;
   @Inject AppAndroidChannelPackagesApiContainer appAndroidChannelPackagesApiContainer;
   @Inject AssetPermissionsApiContainer assetPermissionsApiContainer;
@@ -94,7 +93,6 @@ public class App {
   @Inject EcommerceOrderApiContainer ecommerceOrderApiContainer;
   @Inject EstimationApiContainer estimationApiContainer;
   @Inject ExtendPackageApiContainer extendPackageApiContainer;
-  @Inject FundStatementsDailyApiContainer fundStatementsDailyApiContainer;
   @Inject FundStatementsDetailedApiContainer fundStatementsDetailedApiContainer;
   @Inject FundTransferApiContainer fundTransferApiContainer;
   @Inject FundsApiContainer fundsApiContainer;
@@ -174,14 +172,16 @@ public class App {
   @Inject UserActionsApiContainer userActionsApiContainer;
   @Inject UserPropertiesApiContainer userPropertiesApiContainer;
   @Inject UserPropertySetsApiContainer userPropertySetsApiContainer;
+  @Inject VideoChannelDealerDataApiContainer videoChannelDealerDataApiContainer;
+  @Inject VideoChannelFansDataApiContainer videoChannelFansDataApiContainer;
+  @Inject VideoChannelLeadsDataApiContainer videoChannelLeadsDataApiContainer;
+  @Inject VideoChannelLiveDataApiContainer videoChannelLiveDataApiContainer;
   @Inject VideomakerAutoadjustmentsApiContainer videomakerAutoadjustmentsApiContainer;
   @Inject VideomakerSubtitlesApiContainer videomakerSubtitlesApiContainer;
   @Inject VideomakerTasksApiContainer videomakerTasksApiContainer;
   @Inject VideomakerVideocapturesApiContainer videomakerVideocapturesApiContainer;
   @Inject VideosApiContainer videosApiContainer;
   @Inject WechatAdLabelsApiContainer wechatAdLabelsApiContainer;
-  @Inject WechatFundStatementsDetailedApiContainer wechatFundStatementsDetailedApiContainer;
-  @Inject WechatFundsApiContainer wechatFundsApiContainer;
   @Inject WechatPagesApiContainer wechatPagesApiContainer;
   @Inject WechatPagesCsgroupStatusApiContainer wechatPagesCsgroupStatusApiContainer;
   @Inject WechatPagesCsgroupUserApiContainer wechatPagesCsgroupUserApiContainer;
@@ -288,10 +288,6 @@ public class App {
 
   public AdvertiserDailyBudgetApiContainer advertiserDailyBudget() {
     return advertiserDailyBudgetApiContainer;
-  }
-
-  public AgencyInnerTransferApiContainer agencyInnerTransfer() {
-    return agencyInnerTransferApiContainer;
   }
 
   public AgencyRealtimeCostApiContainer agencyRealtimeCost() {
@@ -508,10 +504,6 @@ public class App {
 
   public ExtendPackageApiContainer extendPackage() {
     return extendPackageApiContainer;
-  }
-
-  public FundStatementsDailyApiContainer fundStatementsDaily() {
-    return fundStatementsDailyApiContainer;
   }
 
   public FundStatementsDetailedApiContainer fundStatementsDetailed() {
@@ -818,6 +810,22 @@ public class App {
     return userPropertySetsApiContainer;
   }
 
+  public VideoChannelDealerDataApiContainer videoChannelDealerData() {
+    return videoChannelDealerDataApiContainer;
+  }
+
+  public VideoChannelFansDataApiContainer videoChannelFansData() {
+    return videoChannelFansDataApiContainer;
+  }
+
+  public VideoChannelLeadsDataApiContainer videoChannelLeadsData() {
+    return videoChannelLeadsDataApiContainer;
+  }
+
+  public VideoChannelLiveDataApiContainer videoChannelLiveData() {
+    return videoChannelLiveDataApiContainer;
+  }
+
   public VideomakerAutoadjustmentsApiContainer videomakerAutoadjustments() {
     return videomakerAutoadjustmentsApiContainer;
   }
@@ -840,14 +848,6 @@ public class App {
 
   public WechatAdLabelsApiContainer wechatAdLabels() {
     return wechatAdLabelsApiContainer;
-  }
-
-  public WechatFundStatementsDetailedApiContainer wechatFundStatementsDetailed() {
-    return wechatFundStatementsDetailedApiContainer;
-  }
-
-  public WechatFundsApiContainer wechatFunds() {
-    return wechatFundsApiContainer;
   }
 
   public WechatPagesApiContainer wechatPages() {

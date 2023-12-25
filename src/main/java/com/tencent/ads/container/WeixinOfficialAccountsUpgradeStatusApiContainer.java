@@ -36,9 +36,10 @@ public class WeixinOfficialAccountsUpgradeStatusApiContainer extends ApiContaine
    *     response body
    */
   public WeixinOfficialAccountsUpgradeStatusGetResponseData weixinOfficialAccountsUpgradeStatusGet(
-      Long accountId, List<String> fields) throws ApiException, TencentAdsResponseException {
+      Long accountId, List<String> fields, String... headerPair)
+      throws ApiException, TencentAdsResponseException {
     WeixinOfficialAccountsUpgradeStatusGetResponse resp =
-        api.weixinOfficialAccountsUpgradeStatusGet(accountId, fields);
+        api.weixinOfficialAccountsUpgradeStatusGet(accountId, fields, headerPair);
     handleResponse(gson.toJson(resp));
     return resp.getData();
   }

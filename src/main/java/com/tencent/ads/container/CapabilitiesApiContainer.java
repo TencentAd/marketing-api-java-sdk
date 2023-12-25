@@ -39,9 +39,14 @@ public class CapabilitiesApiContainer extends ApiContainer {
    *     response body
    */
   public CapabilitiesGetResponseData capabilitiesGet(
-      Long accountId, String capability, CapabilitiesGetQuerySpec querySpec, List<String> fields)
+      Long accountId,
+      String capability,
+      CapabilitiesGetQuerySpec querySpec,
+      List<String> fields,
+      String... headerPair)
       throws ApiException, TencentAdsResponseException {
-    CapabilitiesGetResponse resp = api.capabilitiesGet(accountId, capability, querySpec, fields);
+    CapabilitiesGetResponse resp =
+        api.capabilitiesGet(accountId, capability, querySpec, fields, headerPair);
     handleResponse(gson.toJson(resp));
     return resp.getData();
   }

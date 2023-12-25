@@ -40,10 +40,16 @@ public class MergeFundTypeDailyBalanceReportApiContainer extends ApiContainer {
    *     response body
    */
   public MergeFundTypeDailyBalanceReportGetResponseData mergeFundTypeDailyBalanceReportGet(
-      Long accountId, DateRangeTransaction dateRange, Long page, Long pageSize, List<String> fields)
+      Long accountId,
+      DateRangeTransaction dateRange,
+      Long page,
+      Long pageSize,
+      List<String> fields,
+      String... headerPair)
       throws ApiException, TencentAdsResponseException {
     MergeFundTypeDailyBalanceReportGetResponse resp =
-        api.mergeFundTypeDailyBalanceReportGet(accountId, dateRange, page, pageSize, fields);
+        api.mergeFundTypeDailyBalanceReportGet(
+            accountId, dateRange, page, pageSize, fields, headerPair);
     handleResponse(gson.toJson(resp));
     return resp.getData();
   }

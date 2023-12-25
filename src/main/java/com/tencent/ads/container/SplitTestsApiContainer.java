@@ -44,9 +44,9 @@ public class SplitTestsApiContainer extends ApiContainer {
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
-  public SplitTestsAddResponseData splitTestsAdd(SplitTestsAddRequest data)
+  public SplitTestsAddResponseData splitTestsAdd(SplitTestsAddRequest data, String... headerPair)
       throws ApiException, TencentAdsResponseException {
-    SplitTestsAddResponse resp = api.splitTestsAdd(data);
+    SplitTestsAddResponse resp = api.splitTestsAdd(data, headerPair);
     handleResponse(gson.toJson(resp));
     return resp.getData();
   }
@@ -59,9 +59,10 @@ public class SplitTestsApiContainer extends ApiContainer {
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
-  public SplitTestsDeleteResponseData splitTestsDelete(SplitTestsDeleteRequest data)
+  public SplitTestsDeleteResponseData splitTestsDelete(
+      SplitTestsDeleteRequest data, String... headerPair)
       throws ApiException, TencentAdsResponseException {
-    SplitTestsDeleteResponse resp = api.splitTestsDelete(data);
+    SplitTestsDeleteResponse resp = api.splitTestsDelete(data, headerPair);
     handleResponse(gson.toJson(resp));
     return resp.getData();
   }
@@ -83,9 +84,11 @@ public class SplitTestsApiContainer extends ApiContainer {
       List<FilteringStruct> filtering,
       Long page,
       Long pageSize,
-      List<String> fields)
+      List<String> fields,
+      String... headerPair)
       throws ApiException, TencentAdsResponseException {
-    SplitTestsGetResponse resp = api.splitTestsGet(accountId, filtering, page, pageSize, fields);
+    SplitTestsGetResponse resp =
+        api.splitTestsGet(accountId, filtering, page, pageSize, fields, headerPair);
     handleResponse(gson.toJson(resp));
     return resp.getData();
   }
@@ -98,9 +101,10 @@ public class SplitTestsApiContainer extends ApiContainer {
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
-  public SplitTestsUpdateResponseData splitTestsUpdate(SplitTestsUpdateRequest data)
+  public SplitTestsUpdateResponseData splitTestsUpdate(
+      SplitTestsUpdateRequest data, String... headerPair)
       throws ApiException, TencentAdsResponseException {
-    SplitTestsUpdateResponse resp = api.splitTestsUpdate(data);
+    SplitTestsUpdateResponse resp = api.splitTestsUpdate(data, headerPair);
     handleResponse(gson.toJson(resp));
     return resp.getData();
   }

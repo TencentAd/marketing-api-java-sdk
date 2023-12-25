@@ -92,8 +92,10 @@ public class XijingPageListApi {
       String queryType,
       List<String> fields,
       final ProgressResponseBody.ProgressListener progressListener,
-      final ProgressRequestBody.ProgressRequestListener progressRequestListener)
+      final ProgressRequestBody.ProgressRequestListener progressRequestListener,
+      String... headerPair)
       throws ApiException {
+
     Object localVarPostBody = null;
 
     // create path and map variables
@@ -150,6 +152,15 @@ public class XijingPageListApi {
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
     localVarHeaderParams.put("Content-Type", localVarContentType);
 
+    if (headerPair != null && headerPair.length > 0) {
+      if (headerPair.length % 2 != 0) {
+        throw new UnsupportedOperationException("Parameter headerPair must be paired");
+      }
+      for (int i = 0; i < headerPair.length / 2; i++) {
+        localVarHeaderParams.put(headerPair[i], headerPair[i * 2 + 1]);
+      }
+    }
+
     if (progressListener != null) {
       apiClient
           .getHttpClient()
@@ -201,7 +212,8 @@ public class XijingPageListApi {
       String queryType,
       List<String> fields,
       final ProgressResponseBody.ProgressListener progressListener,
-      final ProgressRequestBody.ProgressRequestListener progressRequestListener)
+      final ProgressRequestBody.ProgressRequestListener progressRequestListener,
+      String... headerPair)
       throws ApiException {
 
     // verify the required parameter 'accountId' is set
@@ -230,7 +242,8 @@ public class XijingPageListApi {
             queryType,
             fields,
             progressListener,
-            progressRequestListener);
+            progressRequestListener,
+            headerPair);
     return call;
   }
 
@@ -275,7 +288,8 @@ public class XijingPageListApi {
       Long appId,
       String appType,
       String queryType,
-      List<String> fields)
+      List<String> fields,
+      String... headerPair)
       throws ApiException {
     ApiResponse<XijingPageListGetResponse> resp =
         xijingPageListGetWithHttpInfo(
@@ -295,7 +309,8 @@ public class XijingPageListApi {
             appId,
             appType,
             queryType,
-            fields);
+            fields,
+            headerPair);
     return resp.getData();
   }
 
@@ -340,7 +355,8 @@ public class XijingPageListApi {
       Long appId,
       String appType,
       String queryType,
-      List<String> fields)
+      List<String> fields,
+      String... headerPair)
       throws ApiException {
     com.squareup.okhttp.Call call =
         xijingPageListGetValidateBeforeCall(
@@ -362,7 +378,8 @@ public class XijingPageListApi {
             queryType,
             fields,
             null,
-            null);
+            null,
+            headerPair);
     Type localVarReturnType = new TypeToken<XijingPageListGetResponse>() {}.getType();
     return apiClient.execute(call, localVarReturnType);
   }
@@ -409,7 +426,8 @@ public class XijingPageListApi {
       String appType,
       String queryType,
       List<String> fields,
-      final ApiCallback<XijingPageListGetResponse> callback)
+      final ApiCallback<XijingPageListGetResponse> callback,
+      String... headerPair)
       throws ApiException {
 
     ProgressResponseBody.ProgressListener progressListener = null;
@@ -453,7 +471,8 @@ public class XijingPageListApi {
             queryType,
             fields,
             progressListener,
-            progressRequestListener);
+            progressRequestListener,
+            headerPair);
     Type localVarReturnType = new TypeToken<XijingPageListGetResponse>() {}.getType();
     apiClient.executeAsync(call, localVarReturnType, callback);
     return call;

@@ -38,10 +38,14 @@ public class TargetingTagsUvApiContainer extends ApiContainer {
    *     response body
    */
   public TargetingTagsUvGetResponseData targetingTagsUvGet(
-      Long accountId, String categoryType, List<Long> categoryList, List<String> fields)
+      Long accountId,
+      String categoryType,
+      List<Long> categoryList,
+      List<String> fields,
+      String... headerPair)
       throws ApiException, TencentAdsResponseException {
     TargetingTagsUvGetResponse resp =
-        api.targetingTagsUvGet(accountId, categoryType, categoryList, fields);
+        api.targetingTagsUvGet(accountId, categoryType, categoryList, fields, headerPair);
     handleResponse(gson.toJson(resp));
     return resp.getData();
   }

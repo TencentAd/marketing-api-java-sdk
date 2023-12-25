@@ -12,7 +12,6 @@
 
 package com.tencent.ads.model;
 
-
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.stream.JsonReader;
@@ -40,7 +39,9 @@ public enum AccountType {
 
   TONE("ACCOUNT_TYPE_TONE"),
 
-  BM("ACCOUNT_TYPE_BM");
+  BM("ACCOUNT_TYPE_BM"),
+
+  DATA_NEXUS("ACCOUNT_TYPE_DATA_NEXUS");
 
   private String value;
 

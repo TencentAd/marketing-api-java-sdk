@@ -85,8 +85,10 @@ public class HourlyReportsApi {
       Boolean weixinOfficialAccountsUpgradeEnabled,
       Boolean adqAccountsUpgradeEnabled,
       final ProgressResponseBody.ProgressListener progressListener,
-      final ProgressRequestBody.ProgressRequestListener progressRequestListener)
+      final ProgressRequestBody.ProgressRequestListener progressRequestListener,
+      String... headerPair)
       throws ApiException {
+
     Object localVarPostBody = null;
 
     // create path and map variables
@@ -135,6 +137,15 @@ public class HourlyReportsApi {
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
     localVarHeaderParams.put("Content-Type", localVarContentType);
 
+    if (headerPair != null && headerPair.length > 0) {
+      if (headerPair.length % 2 != 0) {
+        throw new UnsupportedOperationException("Parameter headerPair must be paired");
+      }
+      for (int i = 0; i < headerPair.length / 2; i++) {
+        localVarHeaderParams.put(headerPair[i], headerPair[i * 2 + 1]);
+      }
+    }
+
     if (progressListener != null) {
       apiClient
           .getHttpClient()
@@ -181,7 +192,8 @@ public class HourlyReportsApi {
       Boolean weixinOfficialAccountsUpgradeEnabled,
       Boolean adqAccountsUpgradeEnabled,
       final ProgressResponseBody.ProgressListener progressListener,
-      final ProgressRequestBody.ProgressRequestListener progressRequestListener)
+      final ProgressRequestBody.ProgressRequestListener progressRequestListener,
+      String... headerPair)
       throws ApiException {
 
     // verify the required parameter 'accountId' is set
@@ -217,7 +229,8 @@ public class HourlyReportsApi {
             weixinOfficialAccountsUpgradeEnabled,
             adqAccountsUpgradeEnabled,
             progressListener,
-            progressRequestListener);
+            progressRequestListener,
+            headerPair);
     return call;
   }
 
@@ -252,7 +265,8 @@ public class HourlyReportsApi {
       String timeLine,
       List<String> fields,
       Boolean weixinOfficialAccountsUpgradeEnabled,
-      Boolean adqAccountsUpgradeEnabled)
+      Boolean adqAccountsUpgradeEnabled,
+      String... headerPair)
       throws ApiException {
     ApiResponse<HourlyReportsGetResponse> resp =
         hourlyReportsGetWithHttpInfo(
@@ -267,7 +281,8 @@ public class HourlyReportsApi {
             timeLine,
             fields,
             weixinOfficialAccountsUpgradeEnabled,
-            adqAccountsUpgradeEnabled);
+            adqAccountsUpgradeEnabled,
+            headerPair);
     return resp.getData();
   }
 
@@ -302,7 +317,8 @@ public class HourlyReportsApi {
       String timeLine,
       List<String> fields,
       Boolean weixinOfficialAccountsUpgradeEnabled,
-      Boolean adqAccountsUpgradeEnabled)
+      Boolean adqAccountsUpgradeEnabled,
+      String... headerPair)
       throws ApiException {
     com.squareup.okhttp.Call call =
         hourlyReportsGetValidateBeforeCall(
@@ -319,7 +335,8 @@ public class HourlyReportsApi {
             weixinOfficialAccountsUpgradeEnabled,
             adqAccountsUpgradeEnabled,
             null,
-            null);
+            null,
+            headerPair);
     Type localVarReturnType = new TypeToken<HourlyReportsGetResponse>() {}.getType();
     return apiClient.execute(call, localVarReturnType);
   }
@@ -356,7 +373,8 @@ public class HourlyReportsApi {
       List<String> fields,
       Boolean weixinOfficialAccountsUpgradeEnabled,
       Boolean adqAccountsUpgradeEnabled,
-      final ApiCallback<HourlyReportsGetResponse> callback)
+      final ApiCallback<HourlyReportsGetResponse> callback,
+      String... headerPair)
       throws ApiException {
 
     ProgressResponseBody.ProgressListener progressListener = null;
@@ -395,7 +413,8 @@ public class HourlyReportsApi {
             weixinOfficialAccountsUpgradeEnabled,
             adqAccountsUpgradeEnabled,
             progressListener,
-            progressRequestListener);
+            progressRequestListener,
+            headerPair);
     Type localVarReturnType = new TypeToken<HourlyReportsGetResponse>() {}.getType();
     apiClient.executeAsync(call, localVarReturnType, callback);
     return call;

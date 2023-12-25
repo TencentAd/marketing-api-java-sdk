@@ -12,7 +12,6 @@
 
 package com.tencent.ads.model;
 
-
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.stream.JsonReader;
@@ -28,7 +27,9 @@ public enum AccountRoleType {
 
   T1("ACCOUNT_ROLE_TYPE_T1"),
 
-  BUSINESS_MANAGER("ACCOUNT_ROLE_TYPE_BUSINESS_MANAGER");
+  BUSINESS_MANAGER("ACCOUNT_ROLE_TYPE_BUSINESS_MANAGER"),
+
+  DATA_NEXUS("ACCOUNT_ROLE_TYPE_DATA_NEXUS");
 
   private String value;
 

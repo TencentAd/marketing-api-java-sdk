@@ -37,9 +37,9 @@ public class DataSetApiContainer extends ApiContainer {
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
-  public DataSetAddResponseData dataSetAdd(DataSetAddRequest data)
+  public DataSetAddResponseData dataSetAdd(DataSetAddRequest data, String... headerPair)
       throws ApiException, TencentAdsResponseException {
-    DataSetAddResponse resp = api.dataSetAdd(data);
+    DataSetAddResponse resp = api.dataSetAdd(data, headerPair);
     handleResponse(gson.toJson(resp));
     return resp.getData();
   }
@@ -57,10 +57,15 @@ public class DataSetApiContainer extends ApiContainer {
    *     response body
    */
   public DataSetGetResponseData dataSetGet(
-      Long accountId, Long userActionSetId, Long dataSetId, Long envType, List<String> fields)
+      Long accountId,
+      Long userActionSetId,
+      Long dataSetId,
+      Long envType,
+      List<String> fields,
+      String... headerPair)
       throws ApiException, TencentAdsResponseException {
     DataSetGetResponse resp =
-        api.dataSetGet(accountId, userActionSetId, dataSetId, envType, fields);
+        api.dataSetGet(accountId, userActionSetId, dataSetId, envType, fields, headerPair);
     handleResponse(gson.toJson(resp));
     return resp.getData();
   }

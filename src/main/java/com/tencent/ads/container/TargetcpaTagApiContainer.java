@@ -37,9 +37,9 @@ public class TargetcpaTagApiContainer extends ApiContainer {
    *     response body
    */
   public TargetcpaTagGetResponseData targetcpaTagGet(
-      Long accountId, List<String> tagTypes, List<String> fields)
+      Long accountId, List<String> tagTypes, List<String> fields, String... headerPair)
       throws ApiException, TencentAdsResponseException {
-    TargetcpaTagGetResponse resp = api.targetcpaTagGet(accountId, tagTypes, fields);
+    TargetcpaTagGetResponse resp = api.targetcpaTagGet(accountId, tagTypes, fields, headerPair);
     handleResponse(gson.toJson(resp));
     return resp.getData();
   }

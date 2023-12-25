@@ -99,6 +99,9 @@ public class BatchAsyncRequestTaskSpec {
   @SerializedName("update_finder_object_comment_flag_spec")
   private List<UpdateFinderObjectCommentFlagItem> updateFinderObjectCommentFlagSpec = null;
 
+  @SerializedName("delete_finder_object_comment_spec")
+  private List<DeleteFinderObjectCommentItem> deleteFinderObjectCommentSpec = null;
+
   public BatchAsyncRequestTaskSpec updateUnionPositionPackageSpec(
       List<UpdateUnionPositionPackageItem> updateUnionPositionPackageSpec) {
     this.updateUnionPositionPackageSpec = updateUnionPositionPackageSpec;
@@ -831,6 +834,36 @@ public class BatchAsyncRequestTaskSpec {
     this.updateFinderObjectCommentFlagSpec = updateFinderObjectCommentFlagSpec;
   }
 
+  public BatchAsyncRequestTaskSpec deleteFinderObjectCommentSpec(
+      List<DeleteFinderObjectCommentItem> deleteFinderObjectCommentSpec) {
+    this.deleteFinderObjectCommentSpec = deleteFinderObjectCommentSpec;
+    return this;
+  }
+
+  public BatchAsyncRequestTaskSpec addDeleteFinderObjectCommentSpecItem(
+      DeleteFinderObjectCommentItem deleteFinderObjectCommentSpecItem) {
+    if (this.deleteFinderObjectCommentSpec == null) {
+      this.deleteFinderObjectCommentSpec = new ArrayList<DeleteFinderObjectCommentItem>();
+    }
+    this.deleteFinderObjectCommentSpec.add(deleteFinderObjectCommentSpecItem);
+    return this;
+  }
+
+  /**
+   * Get deleteFinderObjectCommentSpec
+   *
+   * @return deleteFinderObjectCommentSpec
+   */
+  @ApiModelProperty(value = "")
+  public List<DeleteFinderObjectCommentItem> getDeleteFinderObjectCommentSpec() {
+    return deleteFinderObjectCommentSpec;
+  }
+
+  public void setDeleteFinderObjectCommentSpec(
+      List<DeleteFinderObjectCommentItem> deleteFinderObjectCommentSpec) {
+    this.deleteFinderObjectCommentSpec = deleteFinderObjectCommentSpec;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -900,7 +933,10 @@ public class BatchAsyncRequestTaskSpec {
             batchAsyncRequestTaskSpec.replyFinderObjectCommentSpec)
         && Objects.equals(
             this.updateFinderObjectCommentFlagSpec,
-            batchAsyncRequestTaskSpec.updateFinderObjectCommentFlagSpec);
+            batchAsyncRequestTaskSpec.updateFinderObjectCommentFlagSpec)
+        && Objects.equals(
+            this.deleteFinderObjectCommentSpec,
+            batchAsyncRequestTaskSpec.deleteFinderObjectCommentSpec);
   }
 
   @Override
@@ -929,7 +965,8 @@ public class BatchAsyncRequestTaskSpec {
         updateAdgroupDeepConversionWorthAdvancedRateSpec,
         updateDeepConversionBehaviorAdvancedBidSpec,
         replyFinderObjectCommentSpec,
-        updateFinderObjectCommentFlagSpec);
+        updateFinderObjectCommentFlagSpec,
+        deleteFinderObjectCommentSpec);
   }
 
   @Override

@@ -34,8 +34,10 @@ public class WechatPagesCsgroupStatusApiContainer extends ApiContainer {
    *     response body
    */
   public WechatPagesCsgroupStatusUpdateResponse wechatPagesCsgroupStatusUpdate(
-      WechatPagesCsgroupStatusUpdateRequest data) throws ApiException, TencentAdsResponseException {
-    WechatPagesCsgroupStatusUpdateResponse resp = api.wechatPagesCsgroupStatusUpdate(data);
+      WechatPagesCsgroupStatusUpdateRequest data, String... headerPair)
+      throws ApiException, TencentAdsResponseException {
+    WechatPagesCsgroupStatusUpdateResponse resp =
+        api.wechatPagesCsgroupStatusUpdate(data, headerPair);
     handleResponse(gson.toJson(resp));
 
     return resp;

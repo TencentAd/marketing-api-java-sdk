@@ -34,9 +34,10 @@ public class WechatPagesCustomApiContainer extends ApiContainer {
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
-  public WechatPagesCustomAddResponseData wechatPagesCustomAdd(WechatPagesCustomAddRequest data)
+  public WechatPagesCustomAddResponseData wechatPagesCustomAdd(
+      WechatPagesCustomAddRequest data, String... headerPair)
       throws ApiException, TencentAdsResponseException {
-    WechatPagesCustomAddResponse resp = api.wechatPagesCustomAdd(data);
+    WechatPagesCustomAddResponse resp = api.wechatPagesCustomAdd(data, headerPair);
     handleResponse(gson.toJson(resp));
     return resp.getData();
   }

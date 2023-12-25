@@ -61,8 +61,10 @@ public class LeadsCallVirtualNumberApi {
   public com.squareup.okhttp.Call leadsCallVirtualNumberGetCall(
       LeadsCallVirtualNumberGetRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
-      final ProgressRequestBody.ProgressRequestListener progressRequestListener)
+      final ProgressRequestBody.ProgressRequestListener progressRequestListener,
+      String... headerPair)
       throws ApiException {
+
     Object localVarPostBody = data;
 
     // create path and map variables
@@ -82,6 +84,15 @@ public class LeadsCallVirtualNumberApi {
     final String[] localVarContentTypes = {"application/json", "application/xml"};
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
     localVarHeaderParams.put("Content-Type", localVarContentType);
+
+    if (headerPair != null && headerPair.length > 0) {
+      if (headerPair.length % 2 != 0) {
+        throw new UnsupportedOperationException("Parameter headerPair must be paired");
+      }
+      for (int i = 0; i < headerPair.length / 2; i++) {
+        localVarHeaderParams.put(headerPair[i], headerPair[i * 2 + 1]);
+      }
+    }
 
     if (progressListener != null) {
       apiClient
@@ -118,7 +129,8 @@ public class LeadsCallVirtualNumberApi {
   private com.squareup.okhttp.Call leadsCallVirtualNumberGetValidateBeforeCall(
       LeadsCallVirtualNumberGetRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
-      final ProgressRequestBody.ProgressRequestListener progressRequestListener)
+      final ProgressRequestBody.ProgressRequestListener progressRequestListener,
+      String... headerPair)
       throws ApiException {
 
     // verify the required parameter 'data' is set
@@ -128,7 +140,7 @@ public class LeadsCallVirtualNumberApi {
     }
 
     com.squareup.okhttp.Call call =
-        leadsCallVirtualNumberGetCall(data, progressListener, progressRequestListener);
+        leadsCallVirtualNumberGetCall(data, progressListener, progressRequestListener, headerPair);
     return call;
   }
 
@@ -141,9 +153,9 @@ public class LeadsCallVirtualNumberApi {
    *     response body
    */
   public LeadsCallVirtualNumberGetResponse leadsCallVirtualNumberGet(
-      LeadsCallVirtualNumberGetRequest data) throws ApiException {
+      LeadsCallVirtualNumberGetRequest data, String... headerPair) throws ApiException {
     ApiResponse<LeadsCallVirtualNumberGetResponse> resp =
-        leadsCallVirtualNumberGetWithHttpInfo(data);
+        leadsCallVirtualNumberGetWithHttpInfo(data, headerPair);
     return resp.getData();
   }
 
@@ -156,8 +168,9 @@ public class LeadsCallVirtualNumberApi {
    *     response body
    */
   public ApiResponse<LeadsCallVirtualNumberGetResponse> leadsCallVirtualNumberGetWithHttpInfo(
-      LeadsCallVirtualNumberGetRequest data) throws ApiException {
-    com.squareup.okhttp.Call call = leadsCallVirtualNumberGetValidateBeforeCall(data, null, null);
+      LeadsCallVirtualNumberGetRequest data, String... headerPair) throws ApiException {
+    com.squareup.okhttp.Call call =
+        leadsCallVirtualNumberGetValidateBeforeCall(data, null, null, headerPair);
     Type localVarReturnType = new TypeToken<LeadsCallVirtualNumberGetResponse>() {}.getType();
     return apiClient.execute(call, localVarReturnType);
   }
@@ -172,7 +185,8 @@ public class LeadsCallVirtualNumberApi {
    */
   public com.squareup.okhttp.Call leadsCallVirtualNumberGetAsync(
       LeadsCallVirtualNumberGetRequest data,
-      final ApiCallback<LeadsCallVirtualNumberGetResponse> callback)
+      final ApiCallback<LeadsCallVirtualNumberGetResponse> callback,
+      String... headerPair)
       throws ApiException {
 
     ProgressResponseBody.ProgressListener progressListener = null;
@@ -198,7 +212,7 @@ public class LeadsCallVirtualNumberApi {
 
     com.squareup.okhttp.Call call =
         leadsCallVirtualNumberGetValidateBeforeCall(
-            data, progressListener, progressRequestListener);
+            data, progressListener, progressRequestListener, headerPair);
     Type localVarReturnType = new TypeToken<LeadsCallVirtualNumberGetResponse>() {}.getType();
     apiClient.executeAsync(call, localVarReturnType, callback);
     return call;

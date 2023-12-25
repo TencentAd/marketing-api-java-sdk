@@ -12,7 +12,6 @@
 
 package com.tencent.ads.model;
 
-
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.stream.JsonReader;
@@ -34,7 +33,9 @@ public enum MediaSourceType {
 
   DERIVE("SOURCE_TYPE_DERIVE"),
 
-  DERIVATION("SOURCE_TYPE_DERIVATION");
+  DERIVATION("SOURCE_TYPE_DERIVATION"),
+
+  AIGC("SOURCE_TYPE_AIGC");
 
   private String value;
 

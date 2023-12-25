@@ -34,9 +34,10 @@ public class BusinessPointApiContainer extends ApiContainer {
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
-  public BusinessPointGetResponseData businessPointGet(BusinessPointGetRequest data)
+  public BusinessPointGetResponseData businessPointGet(
+      BusinessPointGetRequest data, String... headerPair)
       throws ApiException, TencentAdsResponseException {
-    BusinessPointGetResponse resp = api.businessPointGet(data);
+    BusinessPointGetResponse resp = api.businessPointGet(data, headerPair);
     handleResponse(gson.toJson(resp));
     return resp.getData();
   }

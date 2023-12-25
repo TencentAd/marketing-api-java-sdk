@@ -35,8 +35,9 @@ public class XijingDeriveClickEffectApiContainer extends ApiContainer {
    *     response body
    */
   public XijingDeriveClickEffectGetResponseData xijingDeriveClickEffectGet(
-      XijingDeriveClickEffectGetRequest data) throws ApiException, TencentAdsResponseException {
-    XijingDeriveClickEffectGetResponse resp = api.xijingDeriveClickEffectGet(data);
+      XijingDeriveClickEffectGetRequest data, String... headerPair)
+      throws ApiException, TencentAdsResponseException {
+    XijingDeriveClickEffectGetResponse resp = api.xijingDeriveClickEffectGet(data, headerPair);
     handleResponse(gson.toJson(resp));
     return resp.getData();
   }

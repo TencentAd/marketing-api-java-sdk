@@ -43,9 +43,9 @@ public class ReportApiContainer extends ApiContainer {
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
-  public ReportAdUnionResponseData reportAdUnion(ReportAdUnionRequest data)
+  public ReportAdUnionResponseData reportAdUnion(ReportAdUnionRequest data, String... headerPair)
       throws ApiException, TencentAdsResponseException {
-    ReportAdUnionResponse resp = api.reportAdUnion(data);
+    ReportAdUnionResponse resp = api.reportAdUnion(data, headerPair);
     handleResponse(gson.toJson(resp));
     return resp.getData();
   }
@@ -59,8 +59,9 @@ public class ReportApiContainer extends ApiContainer {
    *     response body
    */
   public ReportConversionsPredictResponseData reportConversionsPredict(
-      ReportConversionsPredictRequest data) throws ApiException, TencentAdsResponseException {
-    ReportConversionsPredictResponse resp = api.reportConversionsPredict(data);
+      ReportConversionsPredictRequest data, String... headerPair)
+      throws ApiException, TencentAdsResponseException {
+    ReportConversionsPredictResponse resp = api.reportConversionsPredict(data, headerPair);
     handleResponse(gson.toJson(resp));
     return resp.getData();
   }
@@ -73,9 +74,10 @@ public class ReportApiContainer extends ApiContainer {
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
-  public ReportLandingPageResponseData reportLandingPage(ReportLandingPageRequest data)
+  public ReportLandingPageResponseData reportLandingPage(
+      ReportLandingPageRequest data, String... headerPair)
       throws ApiException, TencentAdsResponseException {
-    ReportLandingPageResponse resp = api.reportLandingPage(data);
+    ReportLandingPageResponse resp = api.reportLandingPage(data, headerPair);
     handleResponse(gson.toJson(resp));
     return resp.getData();
   }
@@ -88,9 +90,10 @@ public class ReportApiContainer extends ApiContainer {
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
-  public ReportVideoFrameResponseData reportVideoFrame(ReportVideoFrameRequest data)
+  public ReportVideoFrameResponseData reportVideoFrame(
+      ReportVideoFrameRequest data, String... headerPair)
       throws ApiException, TencentAdsResponseException {
-    ReportVideoFrameResponse resp = api.reportVideoFrame(data);
+    ReportVideoFrameResponse resp = api.reportVideoFrame(data, headerPair);
     handleResponse(gson.toJson(resp));
     return resp.getData();
   }

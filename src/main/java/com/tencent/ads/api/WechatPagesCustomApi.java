@@ -61,8 +61,10 @@ public class WechatPagesCustomApi {
   public com.squareup.okhttp.Call wechatPagesCustomAddCall(
       WechatPagesCustomAddRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
-      final ProgressRequestBody.ProgressRequestListener progressRequestListener)
+      final ProgressRequestBody.ProgressRequestListener progressRequestListener,
+      String... headerPair)
       throws ApiException {
+
     Object localVarPostBody = data;
 
     // create path and map variables
@@ -82,6 +84,15 @@ public class WechatPagesCustomApi {
     final String[] localVarContentTypes = {"application/json", "application/xml"};
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
     localVarHeaderParams.put("Content-Type", localVarContentType);
+
+    if (headerPair != null && headerPair.length > 0) {
+      if (headerPair.length % 2 != 0) {
+        throw new UnsupportedOperationException("Parameter headerPair must be paired");
+      }
+      for (int i = 0; i < headerPair.length / 2; i++) {
+        localVarHeaderParams.put(headerPair[i], headerPair[i * 2 + 1]);
+      }
+    }
 
     if (progressListener != null) {
       apiClient
@@ -118,7 +129,8 @@ public class WechatPagesCustomApi {
   private com.squareup.okhttp.Call wechatPagesCustomAddValidateBeforeCall(
       WechatPagesCustomAddRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
-      final ProgressRequestBody.ProgressRequestListener progressRequestListener)
+      final ProgressRequestBody.ProgressRequestListener progressRequestListener,
+      String... headerPair)
       throws ApiException {
 
     // verify the required parameter 'data' is set
@@ -128,7 +140,7 @@ public class WechatPagesCustomApi {
     }
 
     com.squareup.okhttp.Call call =
-        wechatPagesCustomAddCall(data, progressListener, progressRequestListener);
+        wechatPagesCustomAddCall(data, progressListener, progressRequestListener, headerPair);
     return call;
   }
 
@@ -140,9 +152,10 @@ public class WechatPagesCustomApi {
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
-  public WechatPagesCustomAddResponse wechatPagesCustomAdd(WechatPagesCustomAddRequest data)
-      throws ApiException {
-    ApiResponse<WechatPagesCustomAddResponse> resp = wechatPagesCustomAddWithHttpInfo(data);
+  public WechatPagesCustomAddResponse wechatPagesCustomAdd(
+      WechatPagesCustomAddRequest data, String... headerPair) throws ApiException {
+    ApiResponse<WechatPagesCustomAddResponse> resp =
+        wechatPagesCustomAddWithHttpInfo(data, headerPair);
     return resp.getData();
   }
 
@@ -155,8 +168,9 @@ public class WechatPagesCustomApi {
    *     response body
    */
   public ApiResponse<WechatPagesCustomAddResponse> wechatPagesCustomAddWithHttpInfo(
-      WechatPagesCustomAddRequest data) throws ApiException {
-    com.squareup.okhttp.Call call = wechatPagesCustomAddValidateBeforeCall(data, null, null);
+      WechatPagesCustomAddRequest data, String... headerPair) throws ApiException {
+    com.squareup.okhttp.Call call =
+        wechatPagesCustomAddValidateBeforeCall(data, null, null, headerPair);
     Type localVarReturnType = new TypeToken<WechatPagesCustomAddResponse>() {}.getType();
     return apiClient.execute(call, localVarReturnType);
   }
@@ -170,7 +184,9 @@ public class WechatPagesCustomApi {
    * @throws ApiException If fail to process the API call, e.g. serializing the request body object
    */
   public com.squareup.okhttp.Call wechatPagesCustomAddAsync(
-      WechatPagesCustomAddRequest data, final ApiCallback<WechatPagesCustomAddResponse> callback)
+      WechatPagesCustomAddRequest data,
+      final ApiCallback<WechatPagesCustomAddResponse> callback,
+      String... headerPair)
       throws ApiException {
 
     ProgressResponseBody.ProgressListener progressListener = null;
@@ -195,7 +211,8 @@ public class WechatPagesCustomApi {
     }
 
     com.squareup.okhttp.Call call =
-        wechatPagesCustomAddValidateBeforeCall(data, progressListener, progressRequestListener);
+        wechatPagesCustomAddValidateBeforeCall(
+            data, progressListener, progressRequestListener, headerPair);
     Type localVarReturnType = new TypeToken<WechatPagesCustomAddResponse>() {}.getType();
     apiClient.executeAsync(call, localVarReturnType, callback);
     return call;

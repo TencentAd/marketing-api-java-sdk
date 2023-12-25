@@ -51,11 +51,12 @@ public class AssetPrePermissionsApiContainer extends ApiContainer {
       String pathType,
       Long page,
       Long pageSize,
-      List<String> fields)
+      List<String> fields,
+      String... headerPair)
       throws ApiException, TencentAdsResponseException {
     AssetPrePermissionsGetResponse resp =
         api.assetPrePermissionsGet(
-            accountId, assetType, assetId, assetName, pathType, page, pageSize, fields);
+            accountId, assetType, assetId, assetName, pathType, page, pageSize, fields, headerPair);
     handleResponse(gson.toJson(resp));
     return resp.getData();
   }
@@ -69,8 +70,9 @@ public class AssetPrePermissionsApiContainer extends ApiContainer {
    *     response body
    */
   public AssetPrePermissionsUpdateResponse assetPrePermissionsUpdate(
-      AssetPrePermissionsUpdateRequest data) throws ApiException, TencentAdsResponseException {
-    AssetPrePermissionsUpdateResponse resp = api.assetPrePermissionsUpdate(data);
+      AssetPrePermissionsUpdateRequest data, String... headerPair)
+      throws ApiException, TencentAdsResponseException {
+    AssetPrePermissionsUpdateResponse resp = api.assetPrePermissionsUpdate(data, headerPair);
     handleResponse(gson.toJson(resp));
 
     return resp;

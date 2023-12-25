@@ -107,6 +107,9 @@ public class DynamicCreativesGetListStruct {
   @SerializedName("creative_template_version_type")
   private CreativeTemplateVersionType creativeTemplateVersionType = null;
 
+  @SerializedName("landing_page_options")
+  private List<DynamicLandingPageInfoRead> landingPageOptions = null;
+
   @SerializedName("union_market_spec")
   private UnionMarketSpec unionMarketSpec = null;
 
@@ -697,6 +700,35 @@ public class DynamicCreativesGetListStruct {
     this.creativeTemplateVersionType = creativeTemplateVersionType;
   }
 
+  public DynamicCreativesGetListStruct landingPageOptions(
+      List<DynamicLandingPageInfoRead> landingPageOptions) {
+    this.landingPageOptions = landingPageOptions;
+    return this;
+  }
+
+  public DynamicCreativesGetListStruct addLandingPageOptionsItem(
+      DynamicLandingPageInfoRead landingPageOptionsItem) {
+    if (this.landingPageOptions == null) {
+      this.landingPageOptions = new ArrayList<DynamicLandingPageInfoRead>();
+    }
+    this.landingPageOptions.add(landingPageOptionsItem);
+    return this;
+  }
+
+  /**
+   * Get landingPageOptions
+   *
+   * @return landingPageOptions
+   */
+  @ApiModelProperty(value = "")
+  public List<DynamicLandingPageInfoRead> getLandingPageOptions() {
+    return landingPageOptions;
+  }
+
+  public void setLandingPageOptions(List<DynamicLandingPageInfoRead> landingPageOptions) {
+    this.landingPageOptions = landingPageOptions;
+  }
+
   public DynamicCreativesGetListStruct unionMarketSpec(UnionMarketSpec unionMarketSpec) {
     this.unionMarketSpec = unionMarketSpec;
     return this;
@@ -977,6 +1009,7 @@ public class DynamicCreativesGetListStruct {
         && Objects.equals(
             this.creativeTemplateVersionType,
             dynamicCreativesGetListStruct.creativeTemplateVersionType)
+        && Objects.equals(this.landingPageOptions, dynamicCreativesGetListStruct.landingPageOptions)
         && Objects.equals(this.unionMarketSpec, dynamicCreativesGetListStruct.unionMarketSpec)
         && Objects.equals(
             this.creativeTemplateCategory, dynamicCreativesGetListStruct.creativeTemplateCategory)
@@ -1027,6 +1060,7 @@ public class DynamicCreativesGetListStruct {
         appGiftPackCode,
         enableBreakthroughSiteset,
         creativeTemplateVersionType,
+        landingPageOptions,
         unionMarketSpec,
         creativeTemplateCategory,
         autoDerivedProgramCreativeSwitch,

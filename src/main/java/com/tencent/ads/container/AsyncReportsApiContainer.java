@@ -38,9 +38,10 @@ public class AsyncReportsApiContainer extends ApiContainer {
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
-  public AsyncReportsAddResponseData asyncReportsAdd(AsyncReportsAddRequest data)
+  public AsyncReportsAddResponseData asyncReportsAdd(
+      AsyncReportsAddRequest data, String... headerPair)
       throws ApiException, TencentAdsResponseException {
-    AsyncReportsAddResponse resp = api.asyncReportsAdd(data);
+    AsyncReportsAddResponse resp = api.asyncReportsAdd(data, headerPair);
     handleResponse(gson.toJson(resp));
     return resp.getData();
   }
@@ -64,11 +65,18 @@ public class AsyncReportsApiContainer extends ApiContainer {
       Long page,
       Long pageSize,
       Boolean weixinOfficialAccountsUpgradeEnabled,
-      List<String> fields)
+      List<String> fields,
+      String... headerPair)
       throws ApiException, TencentAdsResponseException {
     AsyncReportsGetResponse resp =
         api.asyncReportsGet(
-            accountId, filtering, page, pageSize, weixinOfficialAccountsUpgradeEnabled, fields);
+            accountId,
+            filtering,
+            page,
+            pageSize,
+            weixinOfficialAccountsUpgradeEnabled,
+            fields,
+            headerPair);
     handleResponse(gson.toJson(resp));
     return resp.getData();
   }

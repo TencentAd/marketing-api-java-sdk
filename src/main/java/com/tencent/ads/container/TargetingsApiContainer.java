@@ -44,9 +44,9 @@ public class TargetingsApiContainer extends ApiContainer {
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
-  public TargetingsAddResponseData targetingsAdd(TargetingsAddRequest data)
+  public TargetingsAddResponseData targetingsAdd(TargetingsAddRequest data, String... headerPair)
       throws ApiException, TencentAdsResponseException {
-    TargetingsAddResponse resp = api.targetingsAdd(data);
+    TargetingsAddResponse resp = api.targetingsAdd(data, headerPair);
     handleResponse(gson.toJson(resp));
     return resp.getData();
   }
@@ -59,9 +59,10 @@ public class TargetingsApiContainer extends ApiContainer {
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
-  public TargetingsDeleteResponseData targetingsDelete(TargetingsDeleteRequest data)
+  public TargetingsDeleteResponseData targetingsDelete(
+      TargetingsDeleteRequest data, String... headerPair)
       throws ApiException, TencentAdsResponseException {
-    TargetingsDeleteResponse resp = api.targetingsDelete(data);
+    TargetingsDeleteResponse resp = api.targetingsDelete(data, headerPair);
     handleResponse(gson.toJson(resp));
     return resp.getData();
   }
@@ -83,9 +84,11 @@ public class TargetingsApiContainer extends ApiContainer {
       List<FilteringStruct> filtering,
       Long page,
       Long pageSize,
-      List<String> fields)
+      List<String> fields,
+      String... headerPair)
       throws ApiException, TencentAdsResponseException {
-    TargetingsGetResponse resp = api.targetingsGet(accountId, filtering, page, pageSize, fields);
+    TargetingsGetResponse resp =
+        api.targetingsGet(accountId, filtering, page, pageSize, fields, headerPair);
     handleResponse(gson.toJson(resp));
     return resp.getData();
   }
@@ -98,9 +101,10 @@ public class TargetingsApiContainer extends ApiContainer {
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
-  public TargetingsUpdateResponseData targetingsUpdate(TargetingsUpdateRequest data)
+  public TargetingsUpdateResponseData targetingsUpdate(
+      TargetingsUpdateRequest data, String... headerPair)
       throws ApiException, TencentAdsResponseException {
-    TargetingsUpdateResponse resp = api.targetingsUpdate(data);
+    TargetingsUpdateResponse resp = api.targetingsUpdate(data, headerPair);
     handleResponse(gson.toJson(resp));
     return resp.getData();
   }

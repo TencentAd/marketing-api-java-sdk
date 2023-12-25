@@ -69,8 +69,10 @@ public class MergeFundTypeDailyBalanceReportApi {
       Long pageSize,
       List<String> fields,
       final ProgressResponseBody.ProgressListener progressListener,
-      final ProgressRequestBody.ProgressRequestListener progressRequestListener)
+      final ProgressRequestBody.ProgressRequestListener progressRequestListener,
+      String... headerPair)
       throws ApiException {
+
     Object localVarPostBody = null;
 
     // create path and map variables
@@ -99,6 +101,15 @@ public class MergeFundTypeDailyBalanceReportApi {
     final String[] localVarContentTypes = {"text/plain"};
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
     localVarHeaderParams.put("Content-Type", localVarContentType);
+
+    if (headerPair != null && headerPair.length > 0) {
+      if (headerPair.length % 2 != 0) {
+        throw new UnsupportedOperationException("Parameter headerPair must be paired");
+      }
+      for (int i = 0; i < headerPair.length / 2; i++) {
+        localVarHeaderParams.put(headerPair[i], headerPair[i * 2 + 1]);
+      }
+    }
 
     if (progressListener != null) {
       apiClient
@@ -139,7 +150,8 @@ public class MergeFundTypeDailyBalanceReportApi {
       Long pageSize,
       List<String> fields,
       final ProgressResponseBody.ProgressListener progressListener,
-      final ProgressRequestBody.ProgressRequestListener progressRequestListener)
+      final ProgressRequestBody.ProgressRequestListener progressRequestListener,
+      String... headerPair)
       throws ApiException {
 
     // verify the required parameter 'accountId' is set
@@ -162,7 +174,8 @@ public class MergeFundTypeDailyBalanceReportApi {
             pageSize,
             fields,
             progressListener,
-            progressRequestListener);
+            progressRequestListener,
+            headerPair);
     return call;
   }
 
@@ -179,11 +192,16 @@ public class MergeFundTypeDailyBalanceReportApi {
    *     response body
    */
   public MergeFundTypeDailyBalanceReportGetResponse mergeFundTypeDailyBalanceReportGet(
-      Long accountId, DateRangeTransaction dateRange, Long page, Long pageSize, List<String> fields)
+      Long accountId,
+      DateRangeTransaction dateRange,
+      Long page,
+      Long pageSize,
+      List<String> fields,
+      String... headerPair)
       throws ApiException {
     ApiResponse<MergeFundTypeDailyBalanceReportGetResponse> resp =
         mergeFundTypeDailyBalanceReportGetWithHttpInfo(
-            accountId, dateRange, page, pageSize, fields);
+            accountId, dateRange, page, pageSize, fields, headerPair);
     return resp.getData();
   }
 
@@ -205,11 +223,12 @@ public class MergeFundTypeDailyBalanceReportApi {
           DateRangeTransaction dateRange,
           Long page,
           Long pageSize,
-          List<String> fields)
+          List<String> fields,
+          String... headerPair)
           throws ApiException {
     com.squareup.okhttp.Call call =
         mergeFundTypeDailyBalanceReportGetValidateBeforeCall(
-            accountId, dateRange, page, pageSize, fields, null, null);
+            accountId, dateRange, page, pageSize, fields, null, null, headerPair);
     Type localVarReturnType =
         new TypeToken<MergeFundTypeDailyBalanceReportGetResponse>() {}.getType();
     return apiClient.execute(call, localVarReturnType);
@@ -233,7 +252,8 @@ public class MergeFundTypeDailyBalanceReportApi {
       Long page,
       Long pageSize,
       List<String> fields,
-      final ApiCallback<MergeFundTypeDailyBalanceReportGetResponse> callback)
+      final ApiCallback<MergeFundTypeDailyBalanceReportGetResponse> callback,
+      String... headerPair)
       throws ApiException {
 
     ProgressResponseBody.ProgressListener progressListener = null;
@@ -265,7 +285,8 @@ public class MergeFundTypeDailyBalanceReportApi {
             pageSize,
             fields,
             progressListener,
-            progressRequestListener);
+            progressRequestListener,
+            headerPair);
     Type localVarReturnType =
         new TypeToken<MergeFundTypeDailyBalanceReportGetResponse>() {}.getType();
     apiClient.executeAsync(call, localVarReturnType, callback);

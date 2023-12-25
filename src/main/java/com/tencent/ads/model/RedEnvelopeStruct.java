@@ -39,6 +39,9 @@ public class RedEnvelopeStruct {
   @SerializedName("red_envelope_origin_extra_scene_id")
   private String redEnvelopeOriginExtraSceneId = null;
 
+  @SerializedName("red_barrage_switch")
+  private Boolean redBarrageSwitch = null;
+
   public RedEnvelopeStruct redEnvelopeSwitch(Boolean redEnvelopeSwitch) {
     this.redEnvelopeSwitch = redEnvelopeSwitch;
     return this;
@@ -153,6 +156,25 @@ public class RedEnvelopeStruct {
     this.redEnvelopeOriginExtraSceneId = redEnvelopeOriginExtraSceneId;
   }
 
+  public RedEnvelopeStruct redBarrageSwitch(Boolean redBarrageSwitch) {
+    this.redBarrageSwitch = redBarrageSwitch;
+    return this;
+  }
+
+  /**
+   * Get redBarrageSwitch
+   *
+   * @return redBarrageSwitch
+   */
+  @ApiModelProperty(value = "")
+  public Boolean isRedBarrageSwitch() {
+    return redBarrageSwitch;
+  }
+
+  public void setRedBarrageSwitch(Boolean redBarrageSwitch) {
+    this.redBarrageSwitch = redBarrageSwitch;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -169,7 +191,8 @@ public class RedEnvelopeStruct {
         && Objects.equals(
             this.redEnvelopeDisappearTimeMs, redEnvelopeStruct.redEnvelopeDisappearTimeMs)
         && Objects.equals(
-            this.redEnvelopeOriginExtraSceneId, redEnvelopeStruct.redEnvelopeOriginExtraSceneId);
+            this.redEnvelopeOriginExtraSceneId, redEnvelopeStruct.redEnvelopeOriginExtraSceneId)
+        && Objects.equals(this.redBarrageSwitch, redEnvelopeStruct.redBarrageSwitch);
   }
 
   @Override
@@ -180,7 +203,8 @@ public class RedEnvelopeStruct {
         redEnvelopeExtraSceneId,
         redEnvelopeAppearTimeMs,
         redEnvelopeDisappearTimeMs,
-        redEnvelopeOriginExtraSceneId);
+        redEnvelopeOriginExtraSceneId,
+        redBarrageSwitch);
   }
 
   @Override

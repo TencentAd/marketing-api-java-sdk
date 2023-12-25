@@ -66,8 +66,10 @@ public class CustomAudienceInsightsApi {
       List<String> dimensionType,
       List<String> fields,
       final ProgressResponseBody.ProgressListener progressListener,
-      final ProgressRequestBody.ProgressRequestListener progressRequestListener)
+      final ProgressRequestBody.ProgressRequestListener progressRequestListener,
+      String... headerPair)
       throws ApiException {
+
     Object localVarPostBody = null;
 
     // create path and map variables
@@ -96,6 +98,15 @@ public class CustomAudienceInsightsApi {
     final String[] localVarContentTypes = {"text/plain"};
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
     localVarHeaderParams.put("Content-Type", localVarContentType);
+
+    if (headerPair != null && headerPair.length > 0) {
+      if (headerPair.length % 2 != 0) {
+        throw new UnsupportedOperationException("Parameter headerPair must be paired");
+      }
+      for (int i = 0; i < headerPair.length / 2; i++) {
+        localVarHeaderParams.put(headerPair[i], headerPair[i * 2 + 1]);
+      }
+    }
 
     if (progressListener != null) {
       apiClient
@@ -135,7 +146,8 @@ public class CustomAudienceInsightsApi {
       List<String> dimensionType,
       List<String> fields,
       final ProgressResponseBody.ProgressListener progressListener,
-      final ProgressRequestBody.ProgressRequestListener progressRequestListener)
+      final ProgressRequestBody.ProgressRequestListener progressRequestListener,
+      String... headerPair)
       throws ApiException {
 
     // verify the required parameter 'accountId' is set
@@ -163,7 +175,8 @@ public class CustomAudienceInsightsApi {
             dimensionType,
             fields,
             progressListener,
-            progressRequestListener);
+            progressRequestListener,
+            headerPair);
     return call;
   }
 
@@ -179,10 +192,15 @@ public class CustomAudienceInsightsApi {
    *     response body
    */
   public CustomAudienceInsightsGetResponse customAudienceInsightsGet(
-      Long accountId, Long audienceId, List<String> dimensionType, List<String> fields)
+      Long accountId,
+      Long audienceId,
+      List<String> dimensionType,
+      List<String> fields,
+      String... headerPair)
       throws ApiException {
     ApiResponse<CustomAudienceInsightsGetResponse> resp =
-        customAudienceInsightsGetWithHttpInfo(accountId, audienceId, dimensionType, fields);
+        customAudienceInsightsGetWithHttpInfo(
+            accountId, audienceId, dimensionType, fields, headerPair);
     return resp.getData();
   }
 
@@ -198,11 +216,15 @@ public class CustomAudienceInsightsApi {
    *     response body
    */
   public ApiResponse<CustomAudienceInsightsGetResponse> customAudienceInsightsGetWithHttpInfo(
-      Long accountId, Long audienceId, List<String> dimensionType, List<String> fields)
+      Long accountId,
+      Long audienceId,
+      List<String> dimensionType,
+      List<String> fields,
+      String... headerPair)
       throws ApiException {
     com.squareup.okhttp.Call call =
         customAudienceInsightsGetValidateBeforeCall(
-            accountId, audienceId, dimensionType, fields, null, null);
+            accountId, audienceId, dimensionType, fields, null, null, headerPair);
     Type localVarReturnType = new TypeToken<CustomAudienceInsightsGetResponse>() {}.getType();
     return apiClient.execute(call, localVarReturnType);
   }
@@ -223,7 +245,8 @@ public class CustomAudienceInsightsApi {
       Long audienceId,
       List<String> dimensionType,
       List<String> fields,
-      final ApiCallback<CustomAudienceInsightsGetResponse> callback)
+      final ApiCallback<CustomAudienceInsightsGetResponse> callback,
+      String... headerPair)
       throws ApiException {
 
     ProgressResponseBody.ProgressListener progressListener = null;
@@ -254,7 +277,8 @@ public class CustomAudienceInsightsApi {
             dimensionType,
             fields,
             progressListener,
-            progressRequestListener);
+            progressRequestListener,
+            headerPair);
     Type localVarReturnType = new TypeToken<CustomAudienceInsightsGetResponse>() {}.getType();
     apiClient.executeAsync(call, localVarReturnType, callback);
     return call;

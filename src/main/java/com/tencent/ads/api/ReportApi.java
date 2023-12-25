@@ -67,8 +67,10 @@ public class ReportApi {
   public com.squareup.okhttp.Call reportAdUnionCall(
       ReportAdUnionRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
-      final ProgressRequestBody.ProgressRequestListener progressRequestListener)
+      final ProgressRequestBody.ProgressRequestListener progressRequestListener,
+      String... headerPair)
       throws ApiException {
+
     Object localVarPostBody = data;
 
     // create path and map variables
@@ -88,6 +90,15 @@ public class ReportApi {
     final String[] localVarContentTypes = {"application/json", "application/xml"};
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
     localVarHeaderParams.put("Content-Type", localVarContentType);
+
+    if (headerPair != null && headerPair.length > 0) {
+      if (headerPair.length % 2 != 0) {
+        throw new UnsupportedOperationException("Parameter headerPair must be paired");
+      }
+      for (int i = 0; i < headerPair.length / 2; i++) {
+        localVarHeaderParams.put(headerPair[i], headerPair[i * 2 + 1]);
+      }
+    }
 
     if (progressListener != null) {
       apiClient
@@ -124,7 +135,8 @@ public class ReportApi {
   private com.squareup.okhttp.Call reportAdUnionValidateBeforeCall(
       ReportAdUnionRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
-      final ProgressRequestBody.ProgressRequestListener progressRequestListener)
+      final ProgressRequestBody.ProgressRequestListener progressRequestListener,
+      String... headerPair)
       throws ApiException {
 
     // verify the required parameter 'data' is set
@@ -134,7 +146,7 @@ public class ReportApi {
     }
 
     com.squareup.okhttp.Call call =
-        reportAdUnionCall(data, progressListener, progressRequestListener);
+        reportAdUnionCall(data, progressListener, progressRequestListener, headerPair);
     return call;
   }
 
@@ -146,8 +158,9 @@ public class ReportApi {
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
-  public ReportAdUnionResponse reportAdUnion(ReportAdUnionRequest data) throws ApiException {
-    ApiResponse<ReportAdUnionResponse> resp = reportAdUnionWithHttpInfo(data);
+  public ReportAdUnionResponse reportAdUnion(ReportAdUnionRequest data, String... headerPair)
+      throws ApiException {
+    ApiResponse<ReportAdUnionResponse> resp = reportAdUnionWithHttpInfo(data, headerPair);
     return resp.getData();
   }
 
@@ -159,9 +172,9 @@ public class ReportApi {
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
-  public ApiResponse<ReportAdUnionResponse> reportAdUnionWithHttpInfo(ReportAdUnionRequest data)
-      throws ApiException {
-    com.squareup.okhttp.Call call = reportAdUnionValidateBeforeCall(data, null, null);
+  public ApiResponse<ReportAdUnionResponse> reportAdUnionWithHttpInfo(
+      ReportAdUnionRequest data, String... headerPair) throws ApiException {
+    com.squareup.okhttp.Call call = reportAdUnionValidateBeforeCall(data, null, null, headerPair);
     Type localVarReturnType = new TypeToken<ReportAdUnionResponse>() {}.getType();
     return apiClient.execute(call, localVarReturnType);
   }
@@ -175,7 +188,9 @@ public class ReportApi {
    * @throws ApiException If fail to process the API call, e.g. serializing the request body object
    */
   public com.squareup.okhttp.Call reportAdUnionAsync(
-      ReportAdUnionRequest data, final ApiCallback<ReportAdUnionResponse> callback)
+      ReportAdUnionRequest data,
+      final ApiCallback<ReportAdUnionResponse> callback,
+      String... headerPair)
       throws ApiException {
 
     ProgressResponseBody.ProgressListener progressListener = null;
@@ -200,7 +215,8 @@ public class ReportApi {
     }
 
     com.squareup.okhttp.Call call =
-        reportAdUnionValidateBeforeCall(data, progressListener, progressRequestListener);
+        reportAdUnionValidateBeforeCall(
+            data, progressListener, progressRequestListener, headerPair);
     Type localVarReturnType = new TypeToken<ReportAdUnionResponse>() {}.getType();
     apiClient.executeAsync(call, localVarReturnType, callback);
     return call;
@@ -217,8 +233,10 @@ public class ReportApi {
   public com.squareup.okhttp.Call reportConversionsPredictCall(
       ReportConversionsPredictRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
-      final ProgressRequestBody.ProgressRequestListener progressRequestListener)
+      final ProgressRequestBody.ProgressRequestListener progressRequestListener,
+      String... headerPair)
       throws ApiException {
+
     Object localVarPostBody = data;
 
     // create path and map variables
@@ -238,6 +256,15 @@ public class ReportApi {
     final String[] localVarContentTypes = {"application/json", "application/xml"};
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
     localVarHeaderParams.put("Content-Type", localVarContentType);
+
+    if (headerPair != null && headerPair.length > 0) {
+      if (headerPair.length % 2 != 0) {
+        throw new UnsupportedOperationException("Parameter headerPair must be paired");
+      }
+      for (int i = 0; i < headerPair.length / 2; i++) {
+        localVarHeaderParams.put(headerPair[i], headerPair[i * 2 + 1]);
+      }
+    }
 
     if (progressListener != null) {
       apiClient
@@ -274,7 +301,8 @@ public class ReportApi {
   private com.squareup.okhttp.Call reportConversionsPredictValidateBeforeCall(
       ReportConversionsPredictRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
-      final ProgressRequestBody.ProgressRequestListener progressRequestListener)
+      final ProgressRequestBody.ProgressRequestListener progressRequestListener,
+      String... headerPair)
       throws ApiException {
 
     // verify the required parameter 'data' is set
@@ -284,7 +312,7 @@ public class ReportApi {
     }
 
     com.squareup.okhttp.Call call =
-        reportConversionsPredictCall(data, progressListener, progressRequestListener);
+        reportConversionsPredictCall(data, progressListener, progressRequestListener, headerPair);
     return call;
   }
 
@@ -297,8 +325,9 @@ public class ReportApi {
    *     response body
    */
   public ReportConversionsPredictResponse reportConversionsPredict(
-      ReportConversionsPredictRequest data) throws ApiException {
-    ApiResponse<ReportConversionsPredictResponse> resp = reportConversionsPredictWithHttpInfo(data);
+      ReportConversionsPredictRequest data, String... headerPair) throws ApiException {
+    ApiResponse<ReportConversionsPredictResponse> resp =
+        reportConversionsPredictWithHttpInfo(data, headerPair);
     return resp.getData();
   }
 
@@ -311,8 +340,9 @@ public class ReportApi {
    *     response body
    */
   public ApiResponse<ReportConversionsPredictResponse> reportConversionsPredictWithHttpInfo(
-      ReportConversionsPredictRequest data) throws ApiException {
-    com.squareup.okhttp.Call call = reportConversionsPredictValidateBeforeCall(data, null, null);
+      ReportConversionsPredictRequest data, String... headerPair) throws ApiException {
+    com.squareup.okhttp.Call call =
+        reportConversionsPredictValidateBeforeCall(data, null, null, headerPair);
     Type localVarReturnType = new TypeToken<ReportConversionsPredictResponse>() {}.getType();
     return apiClient.execute(call, localVarReturnType);
   }
@@ -327,7 +357,8 @@ public class ReportApi {
    */
   public com.squareup.okhttp.Call reportConversionsPredictAsync(
       ReportConversionsPredictRequest data,
-      final ApiCallback<ReportConversionsPredictResponse> callback)
+      final ApiCallback<ReportConversionsPredictResponse> callback,
+      String... headerPair)
       throws ApiException {
 
     ProgressResponseBody.ProgressListener progressListener = null;
@@ -352,7 +383,8 @@ public class ReportApi {
     }
 
     com.squareup.okhttp.Call call =
-        reportConversionsPredictValidateBeforeCall(data, progressListener, progressRequestListener);
+        reportConversionsPredictValidateBeforeCall(
+            data, progressListener, progressRequestListener, headerPair);
     Type localVarReturnType = new TypeToken<ReportConversionsPredictResponse>() {}.getType();
     apiClient.executeAsync(call, localVarReturnType, callback);
     return call;
@@ -369,8 +401,10 @@ public class ReportApi {
   public com.squareup.okhttp.Call reportLandingPageCall(
       ReportLandingPageRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
-      final ProgressRequestBody.ProgressRequestListener progressRequestListener)
+      final ProgressRequestBody.ProgressRequestListener progressRequestListener,
+      String... headerPair)
       throws ApiException {
+
     Object localVarPostBody = data;
 
     // create path and map variables
@@ -390,6 +424,15 @@ public class ReportApi {
     final String[] localVarContentTypes = {"application/json", "application/xml"};
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
     localVarHeaderParams.put("Content-Type", localVarContentType);
+
+    if (headerPair != null && headerPair.length > 0) {
+      if (headerPair.length % 2 != 0) {
+        throw new UnsupportedOperationException("Parameter headerPair must be paired");
+      }
+      for (int i = 0; i < headerPair.length / 2; i++) {
+        localVarHeaderParams.put(headerPair[i], headerPair[i * 2 + 1]);
+      }
+    }
 
     if (progressListener != null) {
       apiClient
@@ -426,7 +469,8 @@ public class ReportApi {
   private com.squareup.okhttp.Call reportLandingPageValidateBeforeCall(
       ReportLandingPageRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
-      final ProgressRequestBody.ProgressRequestListener progressRequestListener)
+      final ProgressRequestBody.ProgressRequestListener progressRequestListener,
+      String... headerPair)
       throws ApiException {
 
     // verify the required parameter 'data' is set
@@ -436,7 +480,7 @@ public class ReportApi {
     }
 
     com.squareup.okhttp.Call call =
-        reportLandingPageCall(data, progressListener, progressRequestListener);
+        reportLandingPageCall(data, progressListener, progressRequestListener, headerPair);
     return call;
   }
 
@@ -448,9 +492,9 @@ public class ReportApi {
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
-  public ReportLandingPageResponse reportLandingPage(ReportLandingPageRequest data)
-      throws ApiException {
-    ApiResponse<ReportLandingPageResponse> resp = reportLandingPageWithHttpInfo(data);
+  public ReportLandingPageResponse reportLandingPage(
+      ReportLandingPageRequest data, String... headerPair) throws ApiException {
+    ApiResponse<ReportLandingPageResponse> resp = reportLandingPageWithHttpInfo(data, headerPair);
     return resp.getData();
   }
 
@@ -463,8 +507,9 @@ public class ReportApi {
    *     response body
    */
   public ApiResponse<ReportLandingPageResponse> reportLandingPageWithHttpInfo(
-      ReportLandingPageRequest data) throws ApiException {
-    com.squareup.okhttp.Call call = reportLandingPageValidateBeforeCall(data, null, null);
+      ReportLandingPageRequest data, String... headerPair) throws ApiException {
+    com.squareup.okhttp.Call call =
+        reportLandingPageValidateBeforeCall(data, null, null, headerPair);
     Type localVarReturnType = new TypeToken<ReportLandingPageResponse>() {}.getType();
     return apiClient.execute(call, localVarReturnType);
   }
@@ -478,7 +523,9 @@ public class ReportApi {
    * @throws ApiException If fail to process the API call, e.g. serializing the request body object
    */
   public com.squareup.okhttp.Call reportLandingPageAsync(
-      ReportLandingPageRequest data, final ApiCallback<ReportLandingPageResponse> callback)
+      ReportLandingPageRequest data,
+      final ApiCallback<ReportLandingPageResponse> callback,
+      String... headerPair)
       throws ApiException {
 
     ProgressResponseBody.ProgressListener progressListener = null;
@@ -503,7 +550,8 @@ public class ReportApi {
     }
 
     com.squareup.okhttp.Call call =
-        reportLandingPageValidateBeforeCall(data, progressListener, progressRequestListener);
+        reportLandingPageValidateBeforeCall(
+            data, progressListener, progressRequestListener, headerPair);
     Type localVarReturnType = new TypeToken<ReportLandingPageResponse>() {}.getType();
     apiClient.executeAsync(call, localVarReturnType, callback);
     return call;
@@ -520,8 +568,10 @@ public class ReportApi {
   public com.squareup.okhttp.Call reportVideoFrameCall(
       ReportVideoFrameRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
-      final ProgressRequestBody.ProgressRequestListener progressRequestListener)
+      final ProgressRequestBody.ProgressRequestListener progressRequestListener,
+      String... headerPair)
       throws ApiException {
+
     Object localVarPostBody = data;
 
     // create path and map variables
@@ -541,6 +591,15 @@ public class ReportApi {
     final String[] localVarContentTypes = {"application/json", "application/xml"};
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
     localVarHeaderParams.put("Content-Type", localVarContentType);
+
+    if (headerPair != null && headerPair.length > 0) {
+      if (headerPair.length % 2 != 0) {
+        throw new UnsupportedOperationException("Parameter headerPair must be paired");
+      }
+      for (int i = 0; i < headerPair.length / 2; i++) {
+        localVarHeaderParams.put(headerPair[i], headerPair[i * 2 + 1]);
+      }
+    }
 
     if (progressListener != null) {
       apiClient
@@ -577,7 +636,8 @@ public class ReportApi {
   private com.squareup.okhttp.Call reportVideoFrameValidateBeforeCall(
       ReportVideoFrameRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
-      final ProgressRequestBody.ProgressRequestListener progressRequestListener)
+      final ProgressRequestBody.ProgressRequestListener progressRequestListener,
+      String... headerPair)
       throws ApiException {
 
     // verify the required parameter 'data' is set
@@ -587,7 +647,7 @@ public class ReportApi {
     }
 
     com.squareup.okhttp.Call call =
-        reportVideoFrameCall(data, progressListener, progressRequestListener);
+        reportVideoFrameCall(data, progressListener, progressRequestListener, headerPair);
     return call;
   }
 
@@ -599,9 +659,9 @@ public class ReportApi {
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
-  public ReportVideoFrameResponse reportVideoFrame(ReportVideoFrameRequest data)
-      throws ApiException {
-    ApiResponse<ReportVideoFrameResponse> resp = reportVideoFrameWithHttpInfo(data);
+  public ReportVideoFrameResponse reportVideoFrame(
+      ReportVideoFrameRequest data, String... headerPair) throws ApiException {
+    ApiResponse<ReportVideoFrameResponse> resp = reportVideoFrameWithHttpInfo(data, headerPair);
     return resp.getData();
   }
 
@@ -614,8 +674,9 @@ public class ReportApi {
    *     response body
    */
   public ApiResponse<ReportVideoFrameResponse> reportVideoFrameWithHttpInfo(
-      ReportVideoFrameRequest data) throws ApiException {
-    com.squareup.okhttp.Call call = reportVideoFrameValidateBeforeCall(data, null, null);
+      ReportVideoFrameRequest data, String... headerPair) throws ApiException {
+    com.squareup.okhttp.Call call =
+        reportVideoFrameValidateBeforeCall(data, null, null, headerPair);
     Type localVarReturnType = new TypeToken<ReportVideoFrameResponse>() {}.getType();
     return apiClient.execute(call, localVarReturnType);
   }
@@ -629,7 +690,9 @@ public class ReportApi {
    * @throws ApiException If fail to process the API call, e.g. serializing the request body object
    */
   public com.squareup.okhttp.Call reportVideoFrameAsync(
-      ReportVideoFrameRequest data, final ApiCallback<ReportVideoFrameResponse> callback)
+      ReportVideoFrameRequest data,
+      final ApiCallback<ReportVideoFrameResponse> callback,
+      String... headerPair)
       throws ApiException {
 
     ProgressResponseBody.ProgressListener progressListener = null;
@@ -654,7 +717,8 @@ public class ReportApi {
     }
 
     com.squareup.okhttp.Call call =
-        reportVideoFrameValidateBeforeCall(data, progressListener, progressRequestListener);
+        reportVideoFrameValidateBeforeCall(
+            data, progressListener, progressRequestListener, headerPair);
     Type localVarReturnType = new TypeToken<ReportVideoFrameResponse>() {}.getType();
     apiClient.executeAsync(call, localVarReturnType, callback);
     return call;

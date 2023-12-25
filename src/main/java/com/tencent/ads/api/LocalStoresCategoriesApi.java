@@ -62,8 +62,10 @@ public class LocalStoresCategoriesApi {
       Long verticalId,
       List<String> fields,
       final ProgressResponseBody.ProgressListener progressListener,
-      final ProgressRequestBody.ProgressRequestListener progressRequestListener)
+      final ProgressRequestBody.ProgressRequestListener progressRequestListener,
+      String... headerPair)
       throws ApiException {
+
     Object localVarPostBody = null;
 
     // create path and map variables
@@ -87,6 +89,15 @@ public class LocalStoresCategoriesApi {
     final String[] localVarContentTypes = {"text/plain"};
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
     localVarHeaderParams.put("Content-Type", localVarContentType);
+
+    if (headerPair != null && headerPair.length > 0) {
+      if (headerPair.length % 2 != 0) {
+        throw new UnsupportedOperationException("Parameter headerPair must be paired");
+      }
+      for (int i = 0; i < headerPair.length / 2; i++) {
+        localVarHeaderParams.put(headerPair[i], headerPair[i * 2 + 1]);
+      }
+    }
 
     if (progressListener != null) {
       apiClient
@@ -124,11 +135,13 @@ public class LocalStoresCategoriesApi {
       Long verticalId,
       List<String> fields,
       final ProgressResponseBody.ProgressListener progressListener,
-      final ProgressRequestBody.ProgressRequestListener progressRequestListener)
+      final ProgressRequestBody.ProgressRequestListener progressRequestListener,
+      String... headerPair)
       throws ApiException {
 
     com.squareup.okhttp.Call call =
-        localStoresCategoriesGetCall(verticalId, fields, progressListener, progressRequestListener);
+        localStoresCategoriesGetCall(
+            verticalId, fields, progressListener, progressRequestListener, headerPair);
     return call;
   }
 
@@ -142,9 +155,9 @@ public class LocalStoresCategoriesApi {
    *     response body
    */
   public LocalStoresCategoriesGetResponse localStoresCategoriesGet(
-      Long verticalId, List<String> fields) throws ApiException {
+      Long verticalId, List<String> fields, String... headerPair) throws ApiException {
     ApiResponse<LocalStoresCategoriesGetResponse> resp =
-        localStoresCategoriesGetWithHttpInfo(verticalId, fields);
+        localStoresCategoriesGetWithHttpInfo(verticalId, fields, headerPair);
     return resp.getData();
   }
 
@@ -158,9 +171,9 @@ public class LocalStoresCategoriesApi {
    *     response body
    */
   public ApiResponse<LocalStoresCategoriesGetResponse> localStoresCategoriesGetWithHttpInfo(
-      Long verticalId, List<String> fields) throws ApiException {
+      Long verticalId, List<String> fields, String... headerPair) throws ApiException {
     com.squareup.okhttp.Call call =
-        localStoresCategoriesGetValidateBeforeCall(verticalId, fields, null, null);
+        localStoresCategoriesGetValidateBeforeCall(verticalId, fields, null, null, headerPair);
     Type localVarReturnType = new TypeToken<LocalStoresCategoriesGetResponse>() {}.getType();
     return apiClient.execute(call, localVarReturnType);
   }
@@ -177,7 +190,8 @@ public class LocalStoresCategoriesApi {
   public com.squareup.okhttp.Call localStoresCategoriesGetAsync(
       Long verticalId,
       List<String> fields,
-      final ApiCallback<LocalStoresCategoriesGetResponse> callback)
+      final ApiCallback<LocalStoresCategoriesGetResponse> callback,
+      String... headerPair)
       throws ApiException {
 
     ProgressResponseBody.ProgressListener progressListener = null;
@@ -203,7 +217,7 @@ public class LocalStoresCategoriesApi {
 
     com.squareup.okhttp.Call call =
         localStoresCategoriesGetValidateBeforeCall(
-            verticalId, fields, progressListener, progressRequestListener);
+            verticalId, fields, progressListener, progressRequestListener, headerPair);
     Type localVarReturnType = new TypeToken<LocalStoresCategoriesGetResponse>() {}.getType();
     apiClient.executeAsync(call, localVarReturnType, callback);
     return call;

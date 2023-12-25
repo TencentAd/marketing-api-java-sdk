@@ -38,10 +38,10 @@ public class LocalStoresWxpayMerchantsApiContainer extends ApiContainer {
    *     response body
    */
   public LocalStoresWxpayMerchantsGetResponseData localStoresWxpayMerchantsGet(
-      Long accountId, Long page, Long pageSize, List<String> fields)
+      Long accountId, Long page, Long pageSize, List<String> fields, String... headerPair)
       throws ApiException, TencentAdsResponseException {
     LocalStoresWxpayMerchantsGetResponse resp =
-        api.localStoresWxpayMerchantsGet(accountId, page, pageSize, fields);
+        api.localStoresWxpayMerchantsGet(accountId, page, pageSize, fields, headerPair);
     handleResponse(gson.toJson(resp));
     return resp.getData();
   }

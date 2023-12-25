@@ -72,8 +72,10 @@ public class CustomAudienceFilesApi {
       String operationType,
       String openAppId,
       final ProgressResponseBody.ProgressListener progressListener,
-      final ProgressRequestBody.ProgressRequestListener progressRequestListener)
+      final ProgressRequestBody.ProgressRequestListener progressRequestListener,
+      String... headerPair)
       throws ApiException {
+
     Object localVarPostBody = null;
 
     // create path and map variables
@@ -99,6 +101,15 @@ public class CustomAudienceFilesApi {
     final String[] localVarContentTypes = {"multipart/form-data"};
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
     localVarHeaderParams.put("Content-Type", localVarContentType);
+
+    if (headerPair != null && headerPair.length > 0) {
+      if (headerPair.length % 2 != 0) {
+        throw new UnsupportedOperationException("Parameter headerPair must be paired");
+      }
+      for (int i = 0; i < headerPair.length / 2; i++) {
+        localVarHeaderParams.put(headerPair[i], headerPair[i * 2 + 1]);
+      }
+    }
 
     if (progressListener != null) {
       apiClient
@@ -140,7 +151,8 @@ public class CustomAudienceFilesApi {
       String operationType,
       String openAppId,
       final ProgressResponseBody.ProgressListener progressListener,
-      final ProgressRequestBody.ProgressRequestListener progressRequestListener)
+      final ProgressRequestBody.ProgressRequestListener progressRequestListener,
+      String... headerPair)
       throws ApiException {
 
     // verify the required parameter 'accountId' is set
@@ -176,7 +188,8 @@ public class CustomAudienceFilesApi {
             operationType,
             openAppId,
             progressListener,
-            progressRequestListener);
+            progressRequestListener,
+            headerPair);
     return call;
   }
 
@@ -199,11 +212,12 @@ public class CustomAudienceFilesApi {
       String userIdType,
       File file,
       String operationType,
-      String openAppId)
+      String openAppId,
+      String... headerPair)
       throws ApiException {
     ApiResponse<CustomAudienceFilesAddResponse> resp =
         customAudienceFilesAddWithHttpInfo(
-            accountId, audienceId, userIdType, file, operationType, openAppId);
+            accountId, audienceId, userIdType, file, operationType, openAppId, headerPair);
     return resp.getData();
   }
 
@@ -226,11 +240,20 @@ public class CustomAudienceFilesApi {
       String userIdType,
       File file,
       String operationType,
-      String openAppId)
+      String openAppId,
+      String... headerPair)
       throws ApiException {
     com.squareup.okhttp.Call call =
         customAudienceFilesAddValidateBeforeCall(
-            accountId, audienceId, userIdType, file, operationType, openAppId, null, null);
+            accountId,
+            audienceId,
+            userIdType,
+            file,
+            operationType,
+            openAppId,
+            null,
+            null,
+            headerPair);
     Type localVarReturnType = new TypeToken<CustomAudienceFilesAddResponse>() {}.getType();
     return apiClient.execute(call, localVarReturnType);
   }
@@ -255,7 +278,8 @@ public class CustomAudienceFilesApi {
       File file,
       String operationType,
       String openAppId,
-      final ApiCallback<CustomAudienceFilesAddResponse> callback)
+      final ApiCallback<CustomAudienceFilesAddResponse> callback,
+      String... headerPair)
       throws ApiException {
 
     ProgressResponseBody.ProgressListener progressListener = null;
@@ -288,7 +312,8 @@ public class CustomAudienceFilesApi {
             operationType,
             openAppId,
             progressListener,
-            progressRequestListener);
+            progressRequestListener,
+            headerPair);
     Type localVarReturnType = new TypeToken<CustomAudienceFilesAddResponse>() {}.getType();
     apiClient.executeAsync(call, localVarReturnType, callback);
     return call;
@@ -315,8 +340,10 @@ public class CustomAudienceFilesApi {
       Long pageSize,
       List<String> fields,
       final ProgressResponseBody.ProgressListener progressListener,
-      final ProgressRequestBody.ProgressRequestListener progressRequestListener)
+      final ProgressRequestBody.ProgressRequestListener progressRequestListener,
+      String... headerPair)
       throws ApiException {
+
     Object localVarPostBody = null;
 
     // create path and map variables
@@ -348,6 +375,15 @@ public class CustomAudienceFilesApi {
     final String[] localVarContentTypes = {"text/plain"};
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
     localVarHeaderParams.put("Content-Type", localVarContentType);
+
+    if (headerPair != null && headerPair.length > 0) {
+      if (headerPair.length % 2 != 0) {
+        throw new UnsupportedOperationException("Parameter headerPair must be paired");
+      }
+      for (int i = 0; i < headerPair.length / 2; i++) {
+        localVarHeaderParams.put(headerPair[i], headerPair[i * 2 + 1]);
+      }
+    }
 
     if (progressListener != null) {
       apiClient
@@ -389,7 +425,8 @@ public class CustomAudienceFilesApi {
       Long pageSize,
       List<String> fields,
       final ProgressResponseBody.ProgressListener progressListener,
-      final ProgressRequestBody.ProgressRequestListener progressRequestListener)
+      final ProgressRequestBody.ProgressRequestListener progressRequestListener,
+      String... headerPair)
       throws ApiException {
 
     // verify the required parameter 'accountId' is set
@@ -407,7 +444,8 @@ public class CustomAudienceFilesApi {
             pageSize,
             fields,
             progressListener,
-            progressRequestListener);
+            progressRequestListener,
+            headerPair);
     return call;
   }
 
@@ -430,11 +468,12 @@ public class CustomAudienceFilesApi {
       Long customAudienceFileId,
       Long page,
       Long pageSize,
-      List<String> fields)
+      List<String> fields,
+      String... headerPair)
       throws ApiException {
     ApiResponse<CustomAudienceFilesGetResponse> resp =
         customAudienceFilesGetWithHttpInfo(
-            accountId, audienceId, customAudienceFileId, page, pageSize, fields);
+            accountId, audienceId, customAudienceFileId, page, pageSize, fields, headerPair);
     return resp.getData();
   }
 
@@ -457,11 +496,20 @@ public class CustomAudienceFilesApi {
       Long customAudienceFileId,
       Long page,
       Long pageSize,
-      List<String> fields)
+      List<String> fields,
+      String... headerPair)
       throws ApiException {
     com.squareup.okhttp.Call call =
         customAudienceFilesGetValidateBeforeCall(
-            accountId, audienceId, customAudienceFileId, page, pageSize, fields, null, null);
+            accountId,
+            audienceId,
+            customAudienceFileId,
+            page,
+            pageSize,
+            fields,
+            null,
+            null,
+            headerPair);
     Type localVarReturnType = new TypeToken<CustomAudienceFilesGetResponse>() {}.getType();
     return apiClient.execute(call, localVarReturnType);
   }
@@ -486,7 +534,8 @@ public class CustomAudienceFilesApi {
       Long page,
       Long pageSize,
       List<String> fields,
-      final ApiCallback<CustomAudienceFilesGetResponse> callback)
+      final ApiCallback<CustomAudienceFilesGetResponse> callback,
+      String... headerPair)
       throws ApiException {
 
     ProgressResponseBody.ProgressListener progressListener = null;
@@ -519,7 +568,8 @@ public class CustomAudienceFilesApi {
             pageSize,
             fields,
             progressListener,
-            progressRequestListener);
+            progressRequestListener,
+            headerPair);
     Type localVarReturnType = new TypeToken<CustomAudienceFilesGetResponse>() {}.getType();
     apiClient.executeAsync(call, localVarReturnType, callback);
     return call;

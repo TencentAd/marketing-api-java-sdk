@@ -33,9 +33,10 @@ public class BatchOperationApiContainer extends ApiContainer {
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
-  public BatchOperationAddResponse batchOperationAdd(BatchOperationAddRequest data)
+  public BatchOperationAddResponse batchOperationAdd(
+      BatchOperationAddRequest data, String... headerPair)
       throws ApiException, TencentAdsResponseException {
-    BatchOperationAddResponse resp = api.batchOperationAdd(data);
+    BatchOperationAddResponse resp = api.batchOperationAdd(data, headerPair);
     handleResponse(gson.toJson(resp));
 
     return resp;

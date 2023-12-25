@@ -41,9 +41,10 @@ public class CustomAudiencesApiContainer extends ApiContainer {
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
-  public CustomAudiencesAddResponseData customAudiencesAdd(CustomAudiencesAddRequest data)
+  public CustomAudiencesAddResponseData customAudiencesAdd(
+      CustomAudiencesAddRequest data, String... headerPair)
       throws ApiException, TencentAdsResponseException {
-    CustomAudiencesAddResponse resp = api.customAudiencesAdd(data);
+    CustomAudiencesAddResponse resp = api.customAudiencesAdd(data, headerPair);
     handleResponse(gson.toJson(resp));
     return resp.getData();
   }
@@ -56,9 +57,10 @@ public class CustomAudiencesApiContainer extends ApiContainer {
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
-  public CustomAudiencesDeleteResponse customAudiencesDelete(CustomAudiencesDeleteRequest data)
+  public CustomAudiencesDeleteResponse customAudiencesDelete(
+      CustomAudiencesDeleteRequest data, String... headerPair)
       throws ApiException, TencentAdsResponseException {
-    CustomAudiencesDeleteResponse resp = api.customAudiencesDelete(data);
+    CustomAudiencesDeleteResponse resp = api.customAudiencesDelete(data, headerPair);
     handleResponse(gson.toJson(resp));
 
     return resp;
@@ -83,10 +85,11 @@ public class CustomAudiencesApiContainer extends ApiContainer {
       Long page,
       Long pageSize,
       String platform,
-      List<String> fields)
+      List<String> fields,
+      String... headerPair)
       throws ApiException, TencentAdsResponseException {
     CustomAudiencesGetResponse resp =
-        api.customAudiencesGet(accountId, audienceId, page, pageSize, platform, fields);
+        api.customAudiencesGet(accountId, audienceId, page, pageSize, platform, fields, headerPair);
     handleResponse(gson.toJson(resp));
     return resp.getData();
   }
@@ -99,9 +102,10 @@ public class CustomAudiencesApiContainer extends ApiContainer {
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
-  public CustomAudiencesUpdateResponse customAudiencesUpdate(CustomAudiencesUpdateRequest data)
+  public CustomAudiencesUpdateResponse customAudiencesUpdate(
+      CustomAudiencesUpdateRequest data, String... headerPair)
       throws ApiException, TencentAdsResponseException {
-    CustomAudiencesUpdateResponse resp = api.customAudiencesUpdate(data);
+    CustomAudiencesUpdateResponse resp = api.customAudiencesUpdate(data, headerPair);
     handleResponse(gson.toJson(resp));
 
     return resp;

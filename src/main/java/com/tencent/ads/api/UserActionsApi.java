@@ -61,8 +61,10 @@ public class UserActionsApi {
   public com.squareup.okhttp.Call userActionsAddCall(
       UserActionsAddRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
-      final ProgressRequestBody.ProgressRequestListener progressRequestListener)
+      final ProgressRequestBody.ProgressRequestListener progressRequestListener,
+      String... headerPair)
       throws ApiException {
+
     Object localVarPostBody = data;
 
     // create path and map variables
@@ -82,6 +84,15 @@ public class UserActionsApi {
     final String[] localVarContentTypes = {"application/json", "application/xml"};
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
     localVarHeaderParams.put("Content-Type", localVarContentType);
+
+    if (headerPair != null && headerPair.length > 0) {
+      if (headerPair.length % 2 != 0) {
+        throw new UnsupportedOperationException("Parameter headerPair must be paired");
+      }
+      for (int i = 0; i < headerPair.length / 2; i++) {
+        localVarHeaderParams.put(headerPair[i], headerPair[i * 2 + 1]);
+      }
+    }
 
     if (progressListener != null) {
       apiClient
@@ -118,7 +129,8 @@ public class UserActionsApi {
   private com.squareup.okhttp.Call userActionsAddValidateBeforeCall(
       UserActionsAddRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
-      final ProgressRequestBody.ProgressRequestListener progressRequestListener)
+      final ProgressRequestBody.ProgressRequestListener progressRequestListener,
+      String... headerPair)
       throws ApiException {
 
     // verify the required parameter 'data' is set
@@ -128,7 +140,7 @@ public class UserActionsApi {
     }
 
     com.squareup.okhttp.Call call =
-        userActionsAddCall(data, progressListener, progressRequestListener);
+        userActionsAddCall(data, progressListener, progressRequestListener, headerPair);
     return call;
   }
 
@@ -140,8 +152,9 @@ public class UserActionsApi {
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
-  public UserActionsAddResponse userActionsAdd(UserActionsAddRequest data) throws ApiException {
-    ApiResponse<UserActionsAddResponse> resp = userActionsAddWithHttpInfo(data);
+  public UserActionsAddResponse userActionsAdd(UserActionsAddRequest data, String... headerPair)
+      throws ApiException {
+    ApiResponse<UserActionsAddResponse> resp = userActionsAddWithHttpInfo(data, headerPair);
     return resp.getData();
   }
 
@@ -153,9 +166,9 @@ public class UserActionsApi {
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
-  public ApiResponse<UserActionsAddResponse> userActionsAddWithHttpInfo(UserActionsAddRequest data)
-      throws ApiException {
-    com.squareup.okhttp.Call call = userActionsAddValidateBeforeCall(data, null, null);
+  public ApiResponse<UserActionsAddResponse> userActionsAddWithHttpInfo(
+      UserActionsAddRequest data, String... headerPair) throws ApiException {
+    com.squareup.okhttp.Call call = userActionsAddValidateBeforeCall(data, null, null, headerPair);
     Type localVarReturnType = new TypeToken<UserActionsAddResponse>() {}.getType();
     return apiClient.execute(call, localVarReturnType);
   }
@@ -169,7 +182,9 @@ public class UserActionsApi {
    * @throws ApiException If fail to process the API call, e.g. serializing the request body object
    */
   public com.squareup.okhttp.Call userActionsAddAsync(
-      UserActionsAddRequest data, final ApiCallback<UserActionsAddResponse> callback)
+      UserActionsAddRequest data,
+      final ApiCallback<UserActionsAddResponse> callback,
+      String... headerPair)
       throws ApiException {
 
     ProgressResponseBody.ProgressListener progressListener = null;
@@ -194,7 +209,8 @@ public class UserActionsApi {
     }
 
     com.squareup.okhttp.Call call =
-        userActionsAddValidateBeforeCall(data, progressListener, progressRequestListener);
+        userActionsAddValidateBeforeCall(
+            data, progressListener, progressRequestListener, headerPair);
     Type localVarReturnType = new TypeToken<UserActionsAddResponse>() {}.getType();
     apiClient.executeAsync(call, localVarReturnType, callback);
     return call;

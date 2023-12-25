@@ -62,8 +62,10 @@ public class PromotedObjectAuthorizationApi {
   public com.squareup.okhttp.Call promotedObjectAuthorizationAddCall(
       PromotedObjectAuthorizationAddRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
-      final ProgressRequestBody.ProgressRequestListener progressRequestListener)
+      final ProgressRequestBody.ProgressRequestListener progressRequestListener,
+      String... headerPair)
       throws ApiException {
+
     Object localVarPostBody = data;
 
     // create path and map variables
@@ -83,6 +85,15 @@ public class PromotedObjectAuthorizationApi {
     final String[] localVarContentTypes = {"application/json", "application/xml"};
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
     localVarHeaderParams.put("Content-Type", localVarContentType);
+
+    if (headerPair != null && headerPair.length > 0) {
+      if (headerPair.length % 2 != 0) {
+        throw new UnsupportedOperationException("Parameter headerPair must be paired");
+      }
+      for (int i = 0; i < headerPair.length / 2; i++) {
+        localVarHeaderParams.put(headerPair[i], headerPair[i * 2 + 1]);
+      }
+    }
 
     if (progressListener != null) {
       apiClient
@@ -119,7 +130,8 @@ public class PromotedObjectAuthorizationApi {
   private com.squareup.okhttp.Call promotedObjectAuthorizationAddValidateBeforeCall(
       PromotedObjectAuthorizationAddRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
-      final ProgressRequestBody.ProgressRequestListener progressRequestListener)
+      final ProgressRequestBody.ProgressRequestListener progressRequestListener,
+      String... headerPair)
       throws ApiException {
 
     // verify the required parameter 'data' is set
@@ -129,7 +141,8 @@ public class PromotedObjectAuthorizationApi {
     }
 
     com.squareup.okhttp.Call call =
-        promotedObjectAuthorizationAddCall(data, progressListener, progressRequestListener);
+        promotedObjectAuthorizationAddCall(
+            data, progressListener, progressRequestListener, headerPair);
     return call;
   }
 
@@ -142,9 +155,9 @@ public class PromotedObjectAuthorizationApi {
    *     response body
    */
   public PromotedObjectAuthorizationAddResponse promotedObjectAuthorizationAdd(
-      PromotedObjectAuthorizationAddRequest data) throws ApiException {
+      PromotedObjectAuthorizationAddRequest data, String... headerPair) throws ApiException {
     ApiResponse<PromotedObjectAuthorizationAddResponse> resp =
-        promotedObjectAuthorizationAddWithHttpInfo(data);
+        promotedObjectAuthorizationAddWithHttpInfo(data, headerPair);
     return resp.getData();
   }
 
@@ -157,10 +170,10 @@ public class PromotedObjectAuthorizationApi {
    *     response body
    */
   public ApiResponse<PromotedObjectAuthorizationAddResponse>
-      promotedObjectAuthorizationAddWithHttpInfo(PromotedObjectAuthorizationAddRequest data)
-          throws ApiException {
+      promotedObjectAuthorizationAddWithHttpInfo(
+          PromotedObjectAuthorizationAddRequest data, String... headerPair) throws ApiException {
     com.squareup.okhttp.Call call =
-        promotedObjectAuthorizationAddValidateBeforeCall(data, null, null);
+        promotedObjectAuthorizationAddValidateBeforeCall(data, null, null, headerPair);
     Type localVarReturnType = new TypeToken<PromotedObjectAuthorizationAddResponse>() {}.getType();
     return apiClient.execute(call, localVarReturnType);
   }
@@ -175,7 +188,8 @@ public class PromotedObjectAuthorizationApi {
    */
   public com.squareup.okhttp.Call promotedObjectAuthorizationAddAsync(
       PromotedObjectAuthorizationAddRequest data,
-      final ApiCallback<PromotedObjectAuthorizationAddResponse> callback)
+      final ApiCallback<PromotedObjectAuthorizationAddResponse> callback,
+      String... headerPair)
       throws ApiException {
 
     ProgressResponseBody.ProgressListener progressListener = null;
@@ -201,7 +215,7 @@ public class PromotedObjectAuthorizationApi {
 
     com.squareup.okhttp.Call call =
         promotedObjectAuthorizationAddValidateBeforeCall(
-            data, progressListener, progressRequestListener);
+            data, progressListener, progressRequestListener, headerPair);
     Type localVarReturnType = new TypeToken<PromotedObjectAuthorizationAddResponse>() {}.getType();
     apiClient.executeAsync(call, localVarReturnType, callback);
     return call;
@@ -228,8 +242,10 @@ public class PromotedObjectAuthorizationApi {
       Long pageSize,
       List<String> fields,
       final ProgressResponseBody.ProgressListener progressListener,
-      final ProgressRequestBody.ProgressRequestListener progressRequestListener)
+      final ProgressRequestBody.ProgressRequestListener progressRequestListener,
+      String... headerPair)
       throws ApiException {
+
     Object localVarPostBody = null;
 
     // create path and map variables
@@ -262,6 +278,15 @@ public class PromotedObjectAuthorizationApi {
     final String[] localVarContentTypes = {"text/plain"};
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
     localVarHeaderParams.put("Content-Type", localVarContentType);
+
+    if (headerPair != null && headerPair.length > 0) {
+      if (headerPair.length % 2 != 0) {
+        throw new UnsupportedOperationException("Parameter headerPair must be paired");
+      }
+      for (int i = 0; i < headerPair.length / 2; i++) {
+        localVarHeaderParams.put(headerPair[i], headerPair[i * 2 + 1]);
+      }
+    }
 
     if (progressListener != null) {
       apiClient
@@ -303,7 +328,8 @@ public class PromotedObjectAuthorizationApi {
       Long pageSize,
       List<String> fields,
       final ProgressResponseBody.ProgressListener progressListener,
-      final ProgressRequestBody.ProgressRequestListener progressRequestListener)
+      final ProgressRequestBody.ProgressRequestListener progressRequestListener,
+      String... headerPair)
       throws ApiException {
 
     // verify the required parameter 'accountId' is set
@@ -327,7 +353,8 @@ public class PromotedObjectAuthorizationApi {
             pageSize,
             fields,
             progressListener,
-            progressRequestListener);
+            progressRequestListener,
+            headerPair);
     return call;
   }
 
@@ -350,11 +377,12 @@ public class PromotedObjectAuthorizationApi {
       String promotedObjectName,
       Long page,
       Long pageSize,
-      List<String> fields)
+      List<String> fields,
+      String... headerPair)
       throws ApiException {
     ApiResponse<PromotedObjectAuthorizationGetResponse> resp =
         promotedObjectAuthorizationGetWithHttpInfo(
-            accountId, promotedObjectType, promotedObjectName, page, pageSize, fields);
+            accountId, promotedObjectType, promotedObjectName, page, pageSize, fields, headerPair);
     return resp.getData();
   }
 
@@ -378,11 +406,20 @@ public class PromotedObjectAuthorizationApi {
           String promotedObjectName,
           Long page,
           Long pageSize,
-          List<String> fields)
+          List<String> fields,
+          String... headerPair)
           throws ApiException {
     com.squareup.okhttp.Call call =
         promotedObjectAuthorizationGetValidateBeforeCall(
-            accountId, promotedObjectType, promotedObjectName, page, pageSize, fields, null, null);
+            accountId,
+            promotedObjectType,
+            promotedObjectName,
+            page,
+            pageSize,
+            fields,
+            null,
+            null,
+            headerPair);
     Type localVarReturnType = new TypeToken<PromotedObjectAuthorizationGetResponse>() {}.getType();
     return apiClient.execute(call, localVarReturnType);
   }
@@ -407,7 +444,8 @@ public class PromotedObjectAuthorizationApi {
       Long page,
       Long pageSize,
       List<String> fields,
-      final ApiCallback<PromotedObjectAuthorizationGetResponse> callback)
+      final ApiCallback<PromotedObjectAuthorizationGetResponse> callback,
+      String... headerPair)
       throws ApiException {
 
     ProgressResponseBody.ProgressListener progressListener = null;
@@ -440,7 +478,8 @@ public class PromotedObjectAuthorizationApi {
             pageSize,
             fields,
             progressListener,
-            progressRequestListener);
+            progressRequestListener,
+            headerPair);
     Type localVarReturnType = new TypeToken<PromotedObjectAuthorizationGetResponse>() {}.getType();
     apiClient.executeAsync(call, localVarReturnType, callback);
     return call;

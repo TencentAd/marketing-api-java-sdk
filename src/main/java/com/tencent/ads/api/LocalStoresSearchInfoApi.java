@@ -68,8 +68,10 @@ public class LocalStoresSearchInfoApi {
       Long pageSize,
       List<String> fields,
       final ProgressResponseBody.ProgressListener progressListener,
-      final ProgressRequestBody.ProgressRequestListener progressRequestListener)
+      final ProgressRequestBody.ProgressRequestListener progressRequestListener,
+      String... headerPair)
       throws ApiException {
+
     Object localVarPostBody = null;
 
     // create path and map variables
@@ -97,6 +99,15 @@ public class LocalStoresSearchInfoApi {
     final String[] localVarContentTypes = {"text/plain"};
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
     localVarHeaderParams.put("Content-Type", localVarContentType);
+
+    if (headerPair != null && headerPair.length > 0) {
+      if (headerPair.length % 2 != 0) {
+        throw new UnsupportedOperationException("Parameter headerPair must be paired");
+      }
+      for (int i = 0; i < headerPair.length / 2; i++) {
+        localVarHeaderParams.put(headerPair[i], headerPair[i * 2 + 1]);
+      }
+    }
 
     if (progressListener != null) {
       apiClient
@@ -137,7 +148,8 @@ public class LocalStoresSearchInfoApi {
       Long pageSize,
       List<String> fields,
       final ProgressResponseBody.ProgressListener progressListener,
-      final ProgressRequestBody.ProgressRequestListener progressRequestListener)
+      final ProgressRequestBody.ProgressRequestListener progressRequestListener,
+      String... headerPair)
       throws ApiException {
 
     // verify the required parameter 'accountId' is set
@@ -154,7 +166,14 @@ public class LocalStoresSearchInfoApi {
 
     com.squareup.okhttp.Call call =
         localStoresSearchInfoGetCall(
-            accountId, keyWord, page, pageSize, fields, progressListener, progressRequestListener);
+            accountId,
+            keyWord,
+            page,
+            pageSize,
+            fields,
+            progressListener,
+            progressRequestListener,
+            headerPair);
     return call;
   }
 
@@ -171,10 +190,16 @@ public class LocalStoresSearchInfoApi {
    *     response body
    */
   public LocalStoresSearchInfoGetResponse localStoresSearchInfoGet(
-      Long accountId, String keyWord, Long page, Long pageSize, List<String> fields)
+      Long accountId,
+      String keyWord,
+      Long page,
+      Long pageSize,
+      List<String> fields,
+      String... headerPair)
       throws ApiException {
     ApiResponse<LocalStoresSearchInfoGetResponse> resp =
-        localStoresSearchInfoGetWithHttpInfo(accountId, keyWord, page, pageSize, fields);
+        localStoresSearchInfoGetWithHttpInfo(
+            accountId, keyWord, page, pageSize, fields, headerPair);
     return resp.getData();
   }
 
@@ -191,11 +216,16 @@ public class LocalStoresSearchInfoApi {
    *     response body
    */
   public ApiResponse<LocalStoresSearchInfoGetResponse> localStoresSearchInfoGetWithHttpInfo(
-      Long accountId, String keyWord, Long page, Long pageSize, List<String> fields)
+      Long accountId,
+      String keyWord,
+      Long page,
+      Long pageSize,
+      List<String> fields,
+      String... headerPair)
       throws ApiException {
     com.squareup.okhttp.Call call =
         localStoresSearchInfoGetValidateBeforeCall(
-            accountId, keyWord, page, pageSize, fields, null, null);
+            accountId, keyWord, page, pageSize, fields, null, null, headerPair);
     Type localVarReturnType = new TypeToken<LocalStoresSearchInfoGetResponse>() {}.getType();
     return apiClient.execute(call, localVarReturnType);
   }
@@ -218,7 +248,8 @@ public class LocalStoresSearchInfoApi {
       Long page,
       Long pageSize,
       List<String> fields,
-      final ApiCallback<LocalStoresSearchInfoGetResponse> callback)
+      final ApiCallback<LocalStoresSearchInfoGetResponse> callback,
+      String... headerPair)
       throws ApiException {
 
     ProgressResponseBody.ProgressListener progressListener = null;
@@ -244,7 +275,14 @@ public class LocalStoresSearchInfoApi {
 
     com.squareup.okhttp.Call call =
         localStoresSearchInfoGetValidateBeforeCall(
-            accountId, keyWord, page, pageSize, fields, progressListener, progressRequestListener);
+            accountId,
+            keyWord,
+            page,
+            pageSize,
+            fields,
+            progressListener,
+            progressRequestListener,
+            headerPair);
     Type localVarReturnType = new TypeToken<LocalStoresSearchInfoGetResponse>() {}.getType();
     apiClient.executeAsync(call, localVarReturnType, callback);
     return call;

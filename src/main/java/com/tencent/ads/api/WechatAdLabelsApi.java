@@ -62,8 +62,10 @@ public class WechatAdLabelsApi {
       Long accountId,
       List<String> fields,
       final ProgressResponseBody.ProgressListener progressListener,
-      final ProgressRequestBody.ProgressRequestListener progressRequestListener)
+      final ProgressRequestBody.ProgressRequestListener progressRequestListener,
+      String... headerPair)
       throws ApiException {
+
     Object localVarPostBody = null;
 
     // create path and map variables
@@ -87,6 +89,15 @@ public class WechatAdLabelsApi {
     final String[] localVarContentTypes = {"text/plain"};
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
     localVarHeaderParams.put("Content-Type", localVarContentType);
+
+    if (headerPair != null && headerPair.length > 0) {
+      if (headerPair.length % 2 != 0) {
+        throw new UnsupportedOperationException("Parameter headerPair must be paired");
+      }
+      for (int i = 0; i < headerPair.length / 2; i++) {
+        localVarHeaderParams.put(headerPair[i], headerPair[i * 2 + 1]);
+      }
+    }
 
     if (progressListener != null) {
       apiClient
@@ -124,7 +135,8 @@ public class WechatAdLabelsApi {
       Long accountId,
       List<String> fields,
       final ProgressResponseBody.ProgressListener progressListener,
-      final ProgressRequestBody.ProgressRequestListener progressRequestListener)
+      final ProgressRequestBody.ProgressRequestListener progressRequestListener,
+      String... headerPair)
       throws ApiException {
 
     // verify the required parameter 'accountId' is set
@@ -134,7 +146,8 @@ public class WechatAdLabelsApi {
     }
 
     com.squareup.okhttp.Call call =
-        wechatAdLabelsGetCall(accountId, fields, progressListener, progressRequestListener);
+        wechatAdLabelsGetCall(
+            accountId, fields, progressListener, progressRequestListener, headerPair);
     return call;
   }
 
@@ -147,9 +160,10 @@ public class WechatAdLabelsApi {
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
-  public WechatAdLabelsGetResponse wechatAdLabelsGet(Long accountId, List<String> fields)
-      throws ApiException {
-    ApiResponse<WechatAdLabelsGetResponse> resp = wechatAdLabelsGetWithHttpInfo(accountId, fields);
+  public WechatAdLabelsGetResponse wechatAdLabelsGet(
+      Long accountId, List<String> fields, String... headerPair) throws ApiException {
+    ApiResponse<WechatAdLabelsGetResponse> resp =
+        wechatAdLabelsGetWithHttpInfo(accountId, fields, headerPair);
     return resp.getData();
   }
 
@@ -163,9 +177,9 @@ public class WechatAdLabelsApi {
    *     response body
    */
   public ApiResponse<WechatAdLabelsGetResponse> wechatAdLabelsGetWithHttpInfo(
-      Long accountId, List<String> fields) throws ApiException {
+      Long accountId, List<String> fields, String... headerPair) throws ApiException {
     com.squareup.okhttp.Call call =
-        wechatAdLabelsGetValidateBeforeCall(accountId, fields, null, null);
+        wechatAdLabelsGetValidateBeforeCall(accountId, fields, null, null, headerPair);
     Type localVarReturnType = new TypeToken<WechatAdLabelsGetResponse>() {}.getType();
     return apiClient.execute(call, localVarReturnType);
   }
@@ -180,7 +194,10 @@ public class WechatAdLabelsApi {
    * @throws ApiException If fail to process the API call, e.g. serializing the request body object
    */
   public com.squareup.okhttp.Call wechatAdLabelsGetAsync(
-      Long accountId, List<String> fields, final ApiCallback<WechatAdLabelsGetResponse> callback)
+      Long accountId,
+      List<String> fields,
+      final ApiCallback<WechatAdLabelsGetResponse> callback,
+      String... headerPair)
       throws ApiException {
 
     ProgressResponseBody.ProgressListener progressListener = null;
@@ -206,7 +223,7 @@ public class WechatAdLabelsApi {
 
     com.squareup.okhttp.Call call =
         wechatAdLabelsGetValidateBeforeCall(
-            accountId, fields, progressListener, progressRequestListener);
+            accountId, fields, progressListener, progressRequestListener, headerPair);
     Type localVarReturnType = new TypeToken<WechatAdLabelsGetResponse>() {}.getType();
     apiClient.executeAsync(call, localVarReturnType, callback);
     return call;

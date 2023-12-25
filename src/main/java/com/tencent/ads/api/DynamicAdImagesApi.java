@@ -63,8 +63,10 @@ public class DynamicAdImagesApi {
   public com.squareup.okhttp.Call dynamicAdImagesAddCall(
       DynamicAdImagesAddRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
-      final ProgressRequestBody.ProgressRequestListener progressRequestListener)
+      final ProgressRequestBody.ProgressRequestListener progressRequestListener,
+      String... headerPair)
       throws ApiException {
+
     Object localVarPostBody = data;
 
     // create path and map variables
@@ -84,6 +86,15 @@ public class DynamicAdImagesApi {
     final String[] localVarContentTypes = {"application/json", "application/xml"};
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
     localVarHeaderParams.put("Content-Type", localVarContentType);
+
+    if (headerPair != null && headerPair.length > 0) {
+      if (headerPair.length % 2 != 0) {
+        throw new UnsupportedOperationException("Parameter headerPair must be paired");
+      }
+      for (int i = 0; i < headerPair.length / 2; i++) {
+        localVarHeaderParams.put(headerPair[i], headerPair[i * 2 + 1]);
+      }
+    }
 
     if (progressListener != null) {
       apiClient
@@ -120,7 +131,8 @@ public class DynamicAdImagesApi {
   private com.squareup.okhttp.Call dynamicAdImagesAddValidateBeforeCall(
       DynamicAdImagesAddRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
-      final ProgressRequestBody.ProgressRequestListener progressRequestListener)
+      final ProgressRequestBody.ProgressRequestListener progressRequestListener,
+      String... headerPair)
       throws ApiException {
 
     // verify the required parameter 'data' is set
@@ -130,7 +142,7 @@ public class DynamicAdImagesApi {
     }
 
     com.squareup.okhttp.Call call =
-        dynamicAdImagesAddCall(data, progressListener, progressRequestListener);
+        dynamicAdImagesAddCall(data, progressListener, progressRequestListener, headerPair);
     return call;
   }
 
@@ -142,9 +154,9 @@ public class DynamicAdImagesApi {
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
-  public DynamicAdImagesAddResponse dynamicAdImagesAdd(DynamicAdImagesAddRequest data)
-      throws ApiException {
-    ApiResponse<DynamicAdImagesAddResponse> resp = dynamicAdImagesAddWithHttpInfo(data);
+  public DynamicAdImagesAddResponse dynamicAdImagesAdd(
+      DynamicAdImagesAddRequest data, String... headerPair) throws ApiException {
+    ApiResponse<DynamicAdImagesAddResponse> resp = dynamicAdImagesAddWithHttpInfo(data, headerPair);
     return resp.getData();
   }
 
@@ -157,8 +169,9 @@ public class DynamicAdImagesApi {
    *     response body
    */
   public ApiResponse<DynamicAdImagesAddResponse> dynamicAdImagesAddWithHttpInfo(
-      DynamicAdImagesAddRequest data) throws ApiException {
-    com.squareup.okhttp.Call call = dynamicAdImagesAddValidateBeforeCall(data, null, null);
+      DynamicAdImagesAddRequest data, String... headerPair) throws ApiException {
+    com.squareup.okhttp.Call call =
+        dynamicAdImagesAddValidateBeforeCall(data, null, null, headerPair);
     Type localVarReturnType = new TypeToken<DynamicAdImagesAddResponse>() {}.getType();
     return apiClient.execute(call, localVarReturnType);
   }
@@ -172,7 +185,9 @@ public class DynamicAdImagesApi {
    * @throws ApiException If fail to process the API call, e.g. serializing the request body object
    */
   public com.squareup.okhttp.Call dynamicAdImagesAddAsync(
-      DynamicAdImagesAddRequest data, final ApiCallback<DynamicAdImagesAddResponse> callback)
+      DynamicAdImagesAddRequest data,
+      final ApiCallback<DynamicAdImagesAddResponse> callback,
+      String... headerPair)
       throws ApiException {
 
     ProgressResponseBody.ProgressListener progressListener = null;
@@ -197,7 +212,8 @@ public class DynamicAdImagesApi {
     }
 
     com.squareup.okhttp.Call call =
-        dynamicAdImagesAddValidateBeforeCall(data, progressListener, progressRequestListener);
+        dynamicAdImagesAddValidateBeforeCall(
+            data, progressListener, progressRequestListener, headerPair);
     Type localVarReturnType = new TypeToken<DynamicAdImagesAddResponse>() {}.getType();
     apiClient.executeAsync(call, localVarReturnType, callback);
     return call;
@@ -222,8 +238,10 @@ public class DynamicAdImagesApi {
       Long pageSize,
       List<String> fields,
       final ProgressResponseBody.ProgressListener progressListener,
-      final ProgressRequestBody.ProgressRequestListener progressRequestListener)
+      final ProgressRequestBody.ProgressRequestListener progressRequestListener,
+      String... headerPair)
       throws ApiException {
+
     Object localVarPostBody = null;
 
     // create path and map variables
@@ -253,6 +271,15 @@ public class DynamicAdImagesApi {
     final String[] localVarContentTypes = {"text/plain"};
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
     localVarHeaderParams.put("Content-Type", localVarContentType);
+
+    if (headerPair != null && headerPair.length > 0) {
+      if (headerPair.length % 2 != 0) {
+        throw new UnsupportedOperationException("Parameter headerPair must be paired");
+      }
+      for (int i = 0; i < headerPair.length / 2; i++) {
+        localVarHeaderParams.put(headerPair[i], headerPair[i * 2 + 1]);
+      }
+    }
 
     if (progressListener != null) {
       apiClient
@@ -293,7 +320,8 @@ public class DynamicAdImagesApi {
       Long pageSize,
       List<String> fields,
       final ProgressResponseBody.ProgressListener progressListener,
-      final ProgressRequestBody.ProgressRequestListener progressRequestListener)
+      final ProgressRequestBody.ProgressRequestListener progressRequestListener,
+      String... headerPair)
       throws ApiException {
 
     // verify the required parameter 'accountId' is set
@@ -310,7 +338,8 @@ public class DynamicAdImagesApi {
             pageSize,
             fields,
             progressListener,
-            progressRequestListener);
+            progressRequestListener,
+            headerPair);
     return call;
   }
 
@@ -331,10 +360,11 @@ public class DynamicAdImagesApi {
       List<FilteringStruct> filtering,
       Long page,
       Long pageSize,
-      List<String> fields)
+      List<String> fields,
+      String... headerPair)
       throws ApiException {
     ApiResponse<DynamicAdImagesGetResponse> resp =
-        dynamicAdImagesGetWithHttpInfo(accountId, filtering, page, pageSize, fields);
+        dynamicAdImagesGetWithHttpInfo(accountId, filtering, page, pageSize, fields, headerPair);
     return resp.getData();
   }
 
@@ -355,11 +385,12 @@ public class DynamicAdImagesApi {
       List<FilteringStruct> filtering,
       Long page,
       Long pageSize,
-      List<String> fields)
+      List<String> fields,
+      String... headerPair)
       throws ApiException {
     com.squareup.okhttp.Call call =
         dynamicAdImagesGetValidateBeforeCall(
-            accountId, filtering, page, pageSize, fields, null, null);
+            accountId, filtering, page, pageSize, fields, null, null, headerPair);
     Type localVarReturnType = new TypeToken<DynamicAdImagesGetResponse>() {}.getType();
     return apiClient.execute(call, localVarReturnType);
   }
@@ -382,7 +413,8 @@ public class DynamicAdImagesApi {
       Long page,
       Long pageSize,
       List<String> fields,
-      final ApiCallback<DynamicAdImagesGetResponse> callback)
+      final ApiCallback<DynamicAdImagesGetResponse> callback,
+      String... headerPair)
       throws ApiException {
 
     ProgressResponseBody.ProgressListener progressListener = null;
@@ -414,7 +446,8 @@ public class DynamicAdImagesApi {
             pageSize,
             fields,
             progressListener,
-            progressRequestListener);
+            progressRequestListener,
+            headerPair);
     Type localVarReturnType = new TypeToken<DynamicAdImagesGetResponse>() {}.getType();
     apiClient.executeAsync(call, localVarReturnType, callback);
     return call;

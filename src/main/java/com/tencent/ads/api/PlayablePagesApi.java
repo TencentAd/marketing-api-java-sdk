@@ -67,8 +67,10 @@ public class PlayablePagesApi {
       String playablePageName,
       File materialFile,
       final ProgressResponseBody.ProgressListener progressListener,
-      final ProgressRequestBody.ProgressRequestListener progressRequestListener)
+      final ProgressRequestBody.ProgressRequestListener progressRequestListener,
+      String... headerPair)
       throws ApiException {
+
     Object localVarPostBody = null;
 
     // create path and map variables
@@ -91,6 +93,15 @@ public class PlayablePagesApi {
     final String[] localVarContentTypes = {"multipart/form-data"};
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
     localVarHeaderParams.put("Content-Type", localVarContentType);
+
+    if (headerPair != null && headerPair.length > 0) {
+      if (headerPair.length % 2 != 0) {
+        throw new UnsupportedOperationException("Parameter headerPair must be paired");
+      }
+      for (int i = 0; i < headerPair.length / 2; i++) {
+        localVarHeaderParams.put(headerPair[i], headerPair[i * 2 + 1]);
+      }
+    }
 
     if (progressListener != null) {
       apiClient
@@ -129,7 +140,8 @@ public class PlayablePagesApi {
       String playablePageName,
       File materialFile,
       final ProgressResponseBody.ProgressListener progressListener,
-      final ProgressRequestBody.ProgressRequestListener progressRequestListener)
+      final ProgressRequestBody.ProgressRequestListener progressRequestListener,
+      String... headerPair)
       throws ApiException {
 
     // verify the required parameter 'accountId' is set
@@ -152,7 +164,12 @@ public class PlayablePagesApi {
 
     com.squareup.okhttp.Call call =
         playablePagesAddCall(
-            accountId, playablePageName, materialFile, progressListener, progressRequestListener);
+            accountId,
+            playablePageName,
+            materialFile,
+            progressListener,
+            progressRequestListener,
+            headerPair);
     return call;
   }
 
@@ -167,9 +184,10 @@ public class PlayablePagesApi {
    *     response body
    */
   public PlayablePagesAddResponse playablePagesAdd(
-      Long accountId, String playablePageName, File materialFile) throws ApiException {
+      Long accountId, String playablePageName, File materialFile, String... headerPair)
+      throws ApiException {
     ApiResponse<PlayablePagesAddResponse> resp =
-        playablePagesAddWithHttpInfo(accountId, playablePageName, materialFile);
+        playablePagesAddWithHttpInfo(accountId, playablePageName, materialFile, headerPair);
     return resp.getData();
   }
 
@@ -184,9 +202,11 @@ public class PlayablePagesApi {
    *     response body
    */
   public ApiResponse<PlayablePagesAddResponse> playablePagesAddWithHttpInfo(
-      Long accountId, String playablePageName, File materialFile) throws ApiException {
+      Long accountId, String playablePageName, File materialFile, String... headerPair)
+      throws ApiException {
     com.squareup.okhttp.Call call =
-        playablePagesAddValidateBeforeCall(accountId, playablePageName, materialFile, null, null);
+        playablePagesAddValidateBeforeCall(
+            accountId, playablePageName, materialFile, null, null, headerPair);
     Type localVarReturnType = new TypeToken<PlayablePagesAddResponse>() {}.getType();
     return apiClient.execute(call, localVarReturnType);
   }
@@ -205,7 +225,8 @@ public class PlayablePagesApi {
       Long accountId,
       String playablePageName,
       File materialFile,
-      final ApiCallback<PlayablePagesAddResponse> callback)
+      final ApiCallback<PlayablePagesAddResponse> callback,
+      String... headerPair)
       throws ApiException {
 
     ProgressResponseBody.ProgressListener progressListener = null;
@@ -231,7 +252,12 @@ public class PlayablePagesApi {
 
     com.squareup.okhttp.Call call =
         playablePagesAddValidateBeforeCall(
-            accountId, playablePageName, materialFile, progressListener, progressRequestListener);
+            accountId,
+            playablePageName,
+            materialFile,
+            progressListener,
+            progressRequestListener,
+            headerPair);
     Type localVarReturnType = new TypeToken<PlayablePagesAddResponse>() {}.getType();
     apiClient.executeAsync(call, localVarReturnType, callback);
     return call;
@@ -256,8 +282,10 @@ public class PlayablePagesApi {
       Long pageSize,
       List<String> fields,
       final ProgressResponseBody.ProgressListener progressListener,
-      final ProgressRequestBody.ProgressRequestListener progressRequestListener)
+      final ProgressRequestBody.ProgressRequestListener progressRequestListener,
+      String... headerPair)
       throws ApiException {
+
     Object localVarPostBody = null;
 
     // create path and map variables
@@ -287,6 +315,15 @@ public class PlayablePagesApi {
     final String[] localVarContentTypes = {"text/plain"};
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
     localVarHeaderParams.put("Content-Type", localVarContentType);
+
+    if (headerPair != null && headerPair.length > 0) {
+      if (headerPair.length % 2 != 0) {
+        throw new UnsupportedOperationException("Parameter headerPair must be paired");
+      }
+      for (int i = 0; i < headerPair.length / 2; i++) {
+        localVarHeaderParams.put(headerPair[i], headerPair[i * 2 + 1]);
+      }
+    }
 
     if (progressListener != null) {
       apiClient
@@ -327,7 +364,8 @@ public class PlayablePagesApi {
       Long pageSize,
       List<String> fields,
       final ProgressResponseBody.ProgressListener progressListener,
-      final ProgressRequestBody.ProgressRequestListener progressRequestListener)
+      final ProgressRequestBody.ProgressRequestListener progressRequestListener,
+      String... headerPair)
       throws ApiException {
 
     // verify the required parameter 'accountId' is set
@@ -344,7 +382,8 @@ public class PlayablePagesApi {
             pageSize,
             fields,
             progressListener,
-            progressRequestListener);
+            progressRequestListener,
+            headerPair);
     return call;
   }
 
@@ -365,10 +404,11 @@ public class PlayablePagesApi {
       List<FilteringStruct> filtering,
       Long page,
       Long pageSize,
-      List<String> fields)
+      List<String> fields,
+      String... headerPair)
       throws ApiException {
     ApiResponse<PlayablePagesGetResponse> resp =
-        playablePagesGetWithHttpInfo(accountId, filtering, page, pageSize, fields);
+        playablePagesGetWithHttpInfo(accountId, filtering, page, pageSize, fields, headerPair);
     return resp.getData();
   }
 
@@ -389,11 +429,12 @@ public class PlayablePagesApi {
       List<FilteringStruct> filtering,
       Long page,
       Long pageSize,
-      List<String> fields)
+      List<String> fields,
+      String... headerPair)
       throws ApiException {
     com.squareup.okhttp.Call call =
         playablePagesGetValidateBeforeCall(
-            accountId, filtering, page, pageSize, fields, null, null);
+            accountId, filtering, page, pageSize, fields, null, null, headerPair);
     Type localVarReturnType = new TypeToken<PlayablePagesGetResponse>() {}.getType();
     return apiClient.execute(call, localVarReturnType);
   }
@@ -416,7 +457,8 @@ public class PlayablePagesApi {
       Long page,
       Long pageSize,
       List<String> fields,
-      final ApiCallback<PlayablePagesGetResponse> callback)
+      final ApiCallback<PlayablePagesGetResponse> callback,
+      String... headerPair)
       throws ApiException {
 
     ProgressResponseBody.ProgressListener progressListener = null;
@@ -448,7 +490,8 @@ public class PlayablePagesApi {
             pageSize,
             fields,
             progressListener,
-            progressRequestListener);
+            progressRequestListener,
+            headerPair);
     Type localVarReturnType = new TypeToken<PlayablePagesGetResponse>() {}.getType();
     apiClient.executeAsync(call, localVarReturnType, callback);
     return call;

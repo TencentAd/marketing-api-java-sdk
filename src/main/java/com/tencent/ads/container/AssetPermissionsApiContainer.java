@@ -36,9 +36,10 @@ public class AssetPermissionsApiContainer extends ApiContainer {
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
-  public AssetPermissionsAddResponseData assetPermissionsAdd(AssetPermissionsAddRequest data)
+  public AssetPermissionsAddResponseData assetPermissionsAdd(
+      AssetPermissionsAddRequest data, String... headerPair)
       throws ApiException, TencentAdsResponseException {
-    AssetPermissionsAddResponse resp = api.assetPermissionsAdd(data);
+    AssetPermissionsAddResponse resp = api.assetPermissionsAdd(data, headerPair);
     handleResponse(gson.toJson(resp));
     return resp.getData();
   }
@@ -51,9 +52,10 @@ public class AssetPermissionsApiContainer extends ApiContainer {
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
-  public AssetPermissionsDeleteResponse assetPermissionsDelete(AssetPermissionsDeleteRequest data)
+  public AssetPermissionsDeleteResponse assetPermissionsDelete(
+      AssetPermissionsDeleteRequest data, String... headerPair)
       throws ApiException, TencentAdsResponseException {
-    AssetPermissionsDeleteResponse resp = api.assetPermissionsDelete(data);
+    AssetPermissionsDeleteResponse resp = api.assetPermissionsDelete(data, headerPair);
     handleResponse(gson.toJson(resp));
 
     return resp;

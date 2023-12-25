@@ -65,8 +65,10 @@ public class XijingPageApi {
   public com.squareup.okhttp.Call xijingPageAddCall(
       XijingPageAddRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
-      final ProgressRequestBody.ProgressRequestListener progressRequestListener)
+      final ProgressRequestBody.ProgressRequestListener progressRequestListener,
+      String... headerPair)
       throws ApiException {
+
     Object localVarPostBody = data;
 
     // create path and map variables
@@ -86,6 +88,15 @@ public class XijingPageApi {
     final String[] localVarContentTypes = {"application/json", "application/xml"};
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
     localVarHeaderParams.put("Content-Type", localVarContentType);
+
+    if (headerPair != null && headerPair.length > 0) {
+      if (headerPair.length % 2 != 0) {
+        throw new UnsupportedOperationException("Parameter headerPair must be paired");
+      }
+      for (int i = 0; i < headerPair.length / 2; i++) {
+        localVarHeaderParams.put(headerPair[i], headerPair[i * 2 + 1]);
+      }
+    }
 
     if (progressListener != null) {
       apiClient
@@ -122,7 +133,8 @@ public class XijingPageApi {
   private com.squareup.okhttp.Call xijingPageAddValidateBeforeCall(
       XijingPageAddRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
-      final ProgressRequestBody.ProgressRequestListener progressRequestListener)
+      final ProgressRequestBody.ProgressRequestListener progressRequestListener,
+      String... headerPair)
       throws ApiException {
 
     // verify the required parameter 'data' is set
@@ -132,7 +144,7 @@ public class XijingPageApi {
     }
 
     com.squareup.okhttp.Call call =
-        xijingPageAddCall(data, progressListener, progressRequestListener);
+        xijingPageAddCall(data, progressListener, progressRequestListener, headerPair);
     return call;
   }
 
@@ -144,8 +156,9 @@ public class XijingPageApi {
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
-  public XijingPageAddResponse xijingPageAdd(XijingPageAddRequest data) throws ApiException {
-    ApiResponse<XijingPageAddResponse> resp = xijingPageAddWithHttpInfo(data);
+  public XijingPageAddResponse xijingPageAdd(XijingPageAddRequest data, String... headerPair)
+      throws ApiException {
+    ApiResponse<XijingPageAddResponse> resp = xijingPageAddWithHttpInfo(data, headerPair);
     return resp.getData();
   }
 
@@ -157,9 +170,9 @@ public class XijingPageApi {
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
-  public ApiResponse<XijingPageAddResponse> xijingPageAddWithHttpInfo(XijingPageAddRequest data)
-      throws ApiException {
-    com.squareup.okhttp.Call call = xijingPageAddValidateBeforeCall(data, null, null);
+  public ApiResponse<XijingPageAddResponse> xijingPageAddWithHttpInfo(
+      XijingPageAddRequest data, String... headerPair) throws ApiException {
+    com.squareup.okhttp.Call call = xijingPageAddValidateBeforeCall(data, null, null, headerPair);
     Type localVarReturnType = new TypeToken<XijingPageAddResponse>() {}.getType();
     return apiClient.execute(call, localVarReturnType);
   }
@@ -173,7 +186,9 @@ public class XijingPageApi {
    * @throws ApiException If fail to process the API call, e.g. serializing the request body object
    */
   public com.squareup.okhttp.Call xijingPageAddAsync(
-      XijingPageAddRequest data, final ApiCallback<XijingPageAddResponse> callback)
+      XijingPageAddRequest data,
+      final ApiCallback<XijingPageAddResponse> callback,
+      String... headerPair)
       throws ApiException {
 
     ProgressResponseBody.ProgressListener progressListener = null;
@@ -198,7 +213,8 @@ public class XijingPageApi {
     }
 
     com.squareup.okhttp.Call call =
-        xijingPageAddValidateBeforeCall(data, progressListener, progressRequestListener);
+        xijingPageAddValidateBeforeCall(
+            data, progressListener, progressRequestListener, headerPair);
     Type localVarReturnType = new TypeToken<XijingPageAddResponse>() {}.getType();
     apiClient.executeAsync(call, localVarReturnType, callback);
     return call;
@@ -215,8 +231,10 @@ public class XijingPageApi {
   public com.squareup.okhttp.Call xijingPageDeleteCall(
       XijingPageDeleteRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
-      final ProgressRequestBody.ProgressRequestListener progressRequestListener)
+      final ProgressRequestBody.ProgressRequestListener progressRequestListener,
+      String... headerPair)
       throws ApiException {
+
     Object localVarPostBody = data;
 
     // create path and map variables
@@ -236,6 +254,15 @@ public class XijingPageApi {
     final String[] localVarContentTypes = {"application/json", "application/xml"};
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
     localVarHeaderParams.put("Content-Type", localVarContentType);
+
+    if (headerPair != null && headerPair.length > 0) {
+      if (headerPair.length % 2 != 0) {
+        throw new UnsupportedOperationException("Parameter headerPair must be paired");
+      }
+      for (int i = 0; i < headerPair.length / 2; i++) {
+        localVarHeaderParams.put(headerPair[i], headerPair[i * 2 + 1]);
+      }
+    }
 
     if (progressListener != null) {
       apiClient
@@ -272,7 +299,8 @@ public class XijingPageApi {
   private com.squareup.okhttp.Call xijingPageDeleteValidateBeforeCall(
       XijingPageDeleteRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
-      final ProgressRequestBody.ProgressRequestListener progressRequestListener)
+      final ProgressRequestBody.ProgressRequestListener progressRequestListener,
+      String... headerPair)
       throws ApiException {
 
     // verify the required parameter 'data' is set
@@ -282,7 +310,7 @@ public class XijingPageApi {
     }
 
     com.squareup.okhttp.Call call =
-        xijingPageDeleteCall(data, progressListener, progressRequestListener);
+        xijingPageDeleteCall(data, progressListener, progressRequestListener, headerPair);
     return call;
   }
 
@@ -294,9 +322,9 @@ public class XijingPageApi {
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
-  public XijingPageDeleteResponse xijingPageDelete(XijingPageDeleteRequest data)
-      throws ApiException {
-    ApiResponse<XijingPageDeleteResponse> resp = xijingPageDeleteWithHttpInfo(data);
+  public XijingPageDeleteResponse xijingPageDelete(
+      XijingPageDeleteRequest data, String... headerPair) throws ApiException {
+    ApiResponse<XijingPageDeleteResponse> resp = xijingPageDeleteWithHttpInfo(data, headerPair);
     return resp.getData();
   }
 
@@ -309,8 +337,9 @@ public class XijingPageApi {
    *     response body
    */
   public ApiResponse<XijingPageDeleteResponse> xijingPageDeleteWithHttpInfo(
-      XijingPageDeleteRequest data) throws ApiException {
-    com.squareup.okhttp.Call call = xijingPageDeleteValidateBeforeCall(data, null, null);
+      XijingPageDeleteRequest data, String... headerPair) throws ApiException {
+    com.squareup.okhttp.Call call =
+        xijingPageDeleteValidateBeforeCall(data, null, null, headerPair);
     Type localVarReturnType = new TypeToken<XijingPageDeleteResponse>() {}.getType();
     return apiClient.execute(call, localVarReturnType);
   }
@@ -324,7 +353,9 @@ public class XijingPageApi {
    * @throws ApiException If fail to process the API call, e.g. serializing the request body object
    */
   public com.squareup.okhttp.Call xijingPageDeleteAsync(
-      XijingPageDeleteRequest data, final ApiCallback<XijingPageDeleteResponse> callback)
+      XijingPageDeleteRequest data,
+      final ApiCallback<XijingPageDeleteResponse> callback,
+      String... headerPair)
       throws ApiException {
 
     ProgressResponseBody.ProgressListener progressListener = null;
@@ -349,7 +380,8 @@ public class XijingPageApi {
     }
 
     com.squareup.okhttp.Call call =
-        xijingPageDeleteValidateBeforeCall(data, progressListener, progressRequestListener);
+        xijingPageDeleteValidateBeforeCall(
+            data, progressListener, progressRequestListener, headerPair);
     Type localVarReturnType = new TypeToken<XijingPageDeleteResponse>() {}.getType();
     apiClient.executeAsync(call, localVarReturnType, callback);
     return call;
@@ -366,8 +398,10 @@ public class XijingPageApi {
   public com.squareup.okhttp.Call xijingPageUpdateCall(
       XijingPageUpdateRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
-      final ProgressRequestBody.ProgressRequestListener progressRequestListener)
+      final ProgressRequestBody.ProgressRequestListener progressRequestListener,
+      String... headerPair)
       throws ApiException {
+
     Object localVarPostBody = data;
 
     // create path and map variables
@@ -387,6 +421,15 @@ public class XijingPageApi {
     final String[] localVarContentTypes = {"application/json", "application/xml"};
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
     localVarHeaderParams.put("Content-Type", localVarContentType);
+
+    if (headerPair != null && headerPair.length > 0) {
+      if (headerPair.length % 2 != 0) {
+        throw new UnsupportedOperationException("Parameter headerPair must be paired");
+      }
+      for (int i = 0; i < headerPair.length / 2; i++) {
+        localVarHeaderParams.put(headerPair[i], headerPair[i * 2 + 1]);
+      }
+    }
 
     if (progressListener != null) {
       apiClient
@@ -423,7 +466,8 @@ public class XijingPageApi {
   private com.squareup.okhttp.Call xijingPageUpdateValidateBeforeCall(
       XijingPageUpdateRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
-      final ProgressRequestBody.ProgressRequestListener progressRequestListener)
+      final ProgressRequestBody.ProgressRequestListener progressRequestListener,
+      String... headerPair)
       throws ApiException {
 
     // verify the required parameter 'data' is set
@@ -433,7 +477,7 @@ public class XijingPageApi {
     }
 
     com.squareup.okhttp.Call call =
-        xijingPageUpdateCall(data, progressListener, progressRequestListener);
+        xijingPageUpdateCall(data, progressListener, progressRequestListener, headerPair);
     return call;
   }
 
@@ -445,9 +489,9 @@ public class XijingPageApi {
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
-  public XijingPageUpdateResponse xijingPageUpdate(XijingPageUpdateRequest data)
-      throws ApiException {
-    ApiResponse<XijingPageUpdateResponse> resp = xijingPageUpdateWithHttpInfo(data);
+  public XijingPageUpdateResponse xijingPageUpdate(
+      XijingPageUpdateRequest data, String... headerPair) throws ApiException {
+    ApiResponse<XijingPageUpdateResponse> resp = xijingPageUpdateWithHttpInfo(data, headerPair);
     return resp.getData();
   }
 
@@ -460,8 +504,9 @@ public class XijingPageApi {
    *     response body
    */
   public ApiResponse<XijingPageUpdateResponse> xijingPageUpdateWithHttpInfo(
-      XijingPageUpdateRequest data) throws ApiException {
-    com.squareup.okhttp.Call call = xijingPageUpdateValidateBeforeCall(data, null, null);
+      XijingPageUpdateRequest data, String... headerPair) throws ApiException {
+    com.squareup.okhttp.Call call =
+        xijingPageUpdateValidateBeforeCall(data, null, null, headerPair);
     Type localVarReturnType = new TypeToken<XijingPageUpdateResponse>() {}.getType();
     return apiClient.execute(call, localVarReturnType);
   }
@@ -475,7 +520,9 @@ public class XijingPageApi {
    * @throws ApiException If fail to process the API call, e.g. serializing the request body object
    */
   public com.squareup.okhttp.Call xijingPageUpdateAsync(
-      XijingPageUpdateRequest data, final ApiCallback<XijingPageUpdateResponse> callback)
+      XijingPageUpdateRequest data,
+      final ApiCallback<XijingPageUpdateResponse> callback,
+      String... headerPair)
       throws ApiException {
 
     ProgressResponseBody.ProgressListener progressListener = null;
@@ -500,7 +547,8 @@ public class XijingPageApi {
     }
 
     com.squareup.okhttp.Call call =
-        xijingPageUpdateValidateBeforeCall(data, progressListener, progressRequestListener);
+        xijingPageUpdateValidateBeforeCall(
+            data, progressListener, progressRequestListener, headerPair);
     Type localVarReturnType = new TypeToken<XijingPageUpdateResponse>() {}.getType();
     apiClient.executeAsync(call, localVarReturnType, callback);
     return call;

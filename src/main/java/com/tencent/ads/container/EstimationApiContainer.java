@@ -34,9 +34,9 @@ public class EstimationApiContainer extends ApiContainer {
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
-  public EstimationGetResponseData estimationGet(EstimationGetRequest data)
+  public EstimationGetResponseData estimationGet(EstimationGetRequest data, String... headerPair)
       throws ApiException, TencentAdsResponseException {
-    EstimationGetResponse resp = api.estimationGet(data);
+    EstimationGetResponse resp = api.estimationGet(data, headerPair);
     handleResponse(gson.toJson(resp));
     return resp.getData();
   }

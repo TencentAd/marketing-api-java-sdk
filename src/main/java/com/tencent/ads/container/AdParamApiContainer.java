@@ -34,9 +34,9 @@ public class AdParamApiContainer extends ApiContainer {
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
-  public AdParamGetResponseData adParamGet(AdParamGetRequest data)
+  public AdParamGetResponseData adParamGet(AdParamGetRequest data, String... headerPair)
       throws ApiException, TencentAdsResponseException {
-    AdParamGetResponse resp = api.adParamGet(data);
+    AdParamGetResponse resp = api.adParamGet(data, headerPair);
     handleResponse(gson.toJson(resp));
     return resp.getData();
   }

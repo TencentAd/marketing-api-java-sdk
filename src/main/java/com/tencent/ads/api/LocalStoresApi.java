@@ -67,8 +67,10 @@ public class LocalStoresApi {
   public com.squareup.okhttp.Call localStoresAddCall(
       LocalStoresAddRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
-      final ProgressRequestBody.ProgressRequestListener progressRequestListener)
+      final ProgressRequestBody.ProgressRequestListener progressRequestListener,
+      String... headerPair)
       throws ApiException {
+
     Object localVarPostBody = data;
 
     // create path and map variables
@@ -88,6 +90,15 @@ public class LocalStoresApi {
     final String[] localVarContentTypes = {"application/json", "application/xml"};
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
     localVarHeaderParams.put("Content-Type", localVarContentType);
+
+    if (headerPair != null && headerPair.length > 0) {
+      if (headerPair.length % 2 != 0) {
+        throw new UnsupportedOperationException("Parameter headerPair must be paired");
+      }
+      for (int i = 0; i < headerPair.length / 2; i++) {
+        localVarHeaderParams.put(headerPair[i], headerPair[i * 2 + 1]);
+      }
+    }
 
     if (progressListener != null) {
       apiClient
@@ -124,7 +135,8 @@ public class LocalStoresApi {
   private com.squareup.okhttp.Call localStoresAddValidateBeforeCall(
       LocalStoresAddRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
-      final ProgressRequestBody.ProgressRequestListener progressRequestListener)
+      final ProgressRequestBody.ProgressRequestListener progressRequestListener,
+      String... headerPair)
       throws ApiException {
 
     // verify the required parameter 'data' is set
@@ -134,7 +146,7 @@ public class LocalStoresApi {
     }
 
     com.squareup.okhttp.Call call =
-        localStoresAddCall(data, progressListener, progressRequestListener);
+        localStoresAddCall(data, progressListener, progressRequestListener, headerPair);
     return call;
   }
 
@@ -146,8 +158,9 @@ public class LocalStoresApi {
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
-  public LocalStoresAddResponse localStoresAdd(LocalStoresAddRequest data) throws ApiException {
-    ApiResponse<LocalStoresAddResponse> resp = localStoresAddWithHttpInfo(data);
+  public LocalStoresAddResponse localStoresAdd(LocalStoresAddRequest data, String... headerPair)
+      throws ApiException {
+    ApiResponse<LocalStoresAddResponse> resp = localStoresAddWithHttpInfo(data, headerPair);
     return resp.getData();
   }
 
@@ -159,9 +172,9 @@ public class LocalStoresApi {
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
-  public ApiResponse<LocalStoresAddResponse> localStoresAddWithHttpInfo(LocalStoresAddRequest data)
-      throws ApiException {
-    com.squareup.okhttp.Call call = localStoresAddValidateBeforeCall(data, null, null);
+  public ApiResponse<LocalStoresAddResponse> localStoresAddWithHttpInfo(
+      LocalStoresAddRequest data, String... headerPair) throws ApiException {
+    com.squareup.okhttp.Call call = localStoresAddValidateBeforeCall(data, null, null, headerPair);
     Type localVarReturnType = new TypeToken<LocalStoresAddResponse>() {}.getType();
     return apiClient.execute(call, localVarReturnType);
   }
@@ -175,7 +188,9 @@ public class LocalStoresApi {
    * @throws ApiException If fail to process the API call, e.g. serializing the request body object
    */
   public com.squareup.okhttp.Call localStoresAddAsync(
-      LocalStoresAddRequest data, final ApiCallback<LocalStoresAddResponse> callback)
+      LocalStoresAddRequest data,
+      final ApiCallback<LocalStoresAddResponse> callback,
+      String... headerPair)
       throws ApiException {
 
     ProgressResponseBody.ProgressListener progressListener = null;
@@ -200,7 +215,8 @@ public class LocalStoresApi {
     }
 
     com.squareup.okhttp.Call call =
-        localStoresAddValidateBeforeCall(data, progressListener, progressRequestListener);
+        localStoresAddValidateBeforeCall(
+            data, progressListener, progressRequestListener, headerPair);
     Type localVarReturnType = new TypeToken<LocalStoresAddResponse>() {}.getType();
     apiClient.executeAsync(call, localVarReturnType, callback);
     return call;
@@ -217,8 +233,10 @@ public class LocalStoresApi {
   public com.squareup.okhttp.Call localStoresDeleteCall(
       LocalStoresDeleteRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
-      final ProgressRequestBody.ProgressRequestListener progressRequestListener)
+      final ProgressRequestBody.ProgressRequestListener progressRequestListener,
+      String... headerPair)
       throws ApiException {
+
     Object localVarPostBody = data;
 
     // create path and map variables
@@ -238,6 +256,15 @@ public class LocalStoresApi {
     final String[] localVarContentTypes = {"application/json", "application/xml"};
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
     localVarHeaderParams.put("Content-Type", localVarContentType);
+
+    if (headerPair != null && headerPair.length > 0) {
+      if (headerPair.length % 2 != 0) {
+        throw new UnsupportedOperationException("Parameter headerPair must be paired");
+      }
+      for (int i = 0; i < headerPair.length / 2; i++) {
+        localVarHeaderParams.put(headerPair[i], headerPair[i * 2 + 1]);
+      }
+    }
 
     if (progressListener != null) {
       apiClient
@@ -274,7 +301,8 @@ public class LocalStoresApi {
   private com.squareup.okhttp.Call localStoresDeleteValidateBeforeCall(
       LocalStoresDeleteRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
-      final ProgressRequestBody.ProgressRequestListener progressRequestListener)
+      final ProgressRequestBody.ProgressRequestListener progressRequestListener,
+      String... headerPair)
       throws ApiException {
 
     // verify the required parameter 'data' is set
@@ -284,7 +312,7 @@ public class LocalStoresApi {
     }
 
     com.squareup.okhttp.Call call =
-        localStoresDeleteCall(data, progressListener, progressRequestListener);
+        localStoresDeleteCall(data, progressListener, progressRequestListener, headerPair);
     return call;
   }
 
@@ -296,9 +324,9 @@ public class LocalStoresApi {
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
-  public LocalStoresDeleteResponse localStoresDelete(LocalStoresDeleteRequest data)
-      throws ApiException {
-    ApiResponse<LocalStoresDeleteResponse> resp = localStoresDeleteWithHttpInfo(data);
+  public LocalStoresDeleteResponse localStoresDelete(
+      LocalStoresDeleteRequest data, String... headerPair) throws ApiException {
+    ApiResponse<LocalStoresDeleteResponse> resp = localStoresDeleteWithHttpInfo(data, headerPair);
     return resp.getData();
   }
 
@@ -311,8 +339,9 @@ public class LocalStoresApi {
    *     response body
    */
   public ApiResponse<LocalStoresDeleteResponse> localStoresDeleteWithHttpInfo(
-      LocalStoresDeleteRequest data) throws ApiException {
-    com.squareup.okhttp.Call call = localStoresDeleteValidateBeforeCall(data, null, null);
+      LocalStoresDeleteRequest data, String... headerPair) throws ApiException {
+    com.squareup.okhttp.Call call =
+        localStoresDeleteValidateBeforeCall(data, null, null, headerPair);
     Type localVarReturnType = new TypeToken<LocalStoresDeleteResponse>() {}.getType();
     return apiClient.execute(call, localVarReturnType);
   }
@@ -326,7 +355,9 @@ public class LocalStoresApi {
    * @throws ApiException If fail to process the API call, e.g. serializing the request body object
    */
   public com.squareup.okhttp.Call localStoresDeleteAsync(
-      LocalStoresDeleteRequest data, final ApiCallback<LocalStoresDeleteResponse> callback)
+      LocalStoresDeleteRequest data,
+      final ApiCallback<LocalStoresDeleteResponse> callback,
+      String... headerPair)
       throws ApiException {
 
     ProgressResponseBody.ProgressListener progressListener = null;
@@ -351,7 +382,8 @@ public class LocalStoresApi {
     }
 
     com.squareup.okhttp.Call call =
-        localStoresDeleteValidateBeforeCall(data, progressListener, progressRequestListener);
+        localStoresDeleteValidateBeforeCall(
+            data, progressListener, progressRequestListener, headerPair);
     Type localVarReturnType = new TypeToken<LocalStoresDeleteResponse>() {}.getType();
     apiClient.executeAsync(call, localVarReturnType, callback);
     return call;
@@ -376,8 +408,10 @@ public class LocalStoresApi {
       Long pageSize,
       List<String> fields,
       final ProgressResponseBody.ProgressListener progressListener,
-      final ProgressRequestBody.ProgressRequestListener progressRequestListener)
+      final ProgressRequestBody.ProgressRequestListener progressRequestListener,
+      String... headerPair)
       throws ApiException {
+
     Object localVarPostBody = null;
 
     // create path and map variables
@@ -407,6 +441,15 @@ public class LocalStoresApi {
     final String[] localVarContentTypes = {"text/plain"};
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
     localVarHeaderParams.put("Content-Type", localVarContentType);
+
+    if (headerPair != null && headerPair.length > 0) {
+      if (headerPair.length % 2 != 0) {
+        throw new UnsupportedOperationException("Parameter headerPair must be paired");
+      }
+      for (int i = 0; i < headerPair.length / 2; i++) {
+        localVarHeaderParams.put(headerPair[i], headerPair[i * 2 + 1]);
+      }
+    }
 
     if (progressListener != null) {
       apiClient
@@ -447,7 +490,8 @@ public class LocalStoresApi {
       Long pageSize,
       List<String> fields,
       final ProgressResponseBody.ProgressListener progressListener,
-      final ProgressRequestBody.ProgressRequestListener progressRequestListener)
+      final ProgressRequestBody.ProgressRequestListener progressRequestListener,
+      String... headerPair)
       throws ApiException {
 
     // verify the required parameter 'accountId' is set
@@ -464,7 +508,8 @@ public class LocalStoresApi {
             pageSize,
             fields,
             progressListener,
-            progressRequestListener);
+            progressRequestListener,
+            headerPair);
     return call;
   }
 
@@ -485,10 +530,11 @@ public class LocalStoresApi {
       List<FilteringStruct> filtering,
       Long page,
       Long pageSize,
-      List<String> fields)
+      List<String> fields,
+      String... headerPair)
       throws ApiException {
     ApiResponse<LocalStoresGetResponse> resp =
-        localStoresGetWithHttpInfo(accountId, filtering, page, pageSize, fields);
+        localStoresGetWithHttpInfo(accountId, filtering, page, pageSize, fields, headerPair);
     return resp.getData();
   }
 
@@ -509,10 +555,12 @@ public class LocalStoresApi {
       List<FilteringStruct> filtering,
       Long page,
       Long pageSize,
-      List<String> fields)
+      List<String> fields,
+      String... headerPair)
       throws ApiException {
     com.squareup.okhttp.Call call =
-        localStoresGetValidateBeforeCall(accountId, filtering, page, pageSize, fields, null, null);
+        localStoresGetValidateBeforeCall(
+            accountId, filtering, page, pageSize, fields, null, null, headerPair);
     Type localVarReturnType = new TypeToken<LocalStoresGetResponse>() {}.getType();
     return apiClient.execute(call, localVarReturnType);
   }
@@ -535,7 +583,8 @@ public class LocalStoresApi {
       Long page,
       Long pageSize,
       List<String> fields,
-      final ApiCallback<LocalStoresGetResponse> callback)
+      final ApiCallback<LocalStoresGetResponse> callback,
+      String... headerPair)
       throws ApiException {
 
     ProgressResponseBody.ProgressListener progressListener = null;
@@ -567,7 +616,8 @@ public class LocalStoresApi {
             pageSize,
             fields,
             progressListener,
-            progressRequestListener);
+            progressRequestListener,
+            headerPair);
     Type localVarReturnType = new TypeToken<LocalStoresGetResponse>() {}.getType();
     apiClient.executeAsync(call, localVarReturnType, callback);
     return call;
@@ -584,8 +634,10 @@ public class LocalStoresApi {
   public com.squareup.okhttp.Call localStoresUpdateCall(
       LocalStoresUpdateRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
-      final ProgressRequestBody.ProgressRequestListener progressRequestListener)
+      final ProgressRequestBody.ProgressRequestListener progressRequestListener,
+      String... headerPair)
       throws ApiException {
+
     Object localVarPostBody = data;
 
     // create path and map variables
@@ -605,6 +657,15 @@ public class LocalStoresApi {
     final String[] localVarContentTypes = {"application/json", "application/xml"};
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
     localVarHeaderParams.put("Content-Type", localVarContentType);
+
+    if (headerPair != null && headerPair.length > 0) {
+      if (headerPair.length % 2 != 0) {
+        throw new UnsupportedOperationException("Parameter headerPair must be paired");
+      }
+      for (int i = 0; i < headerPair.length / 2; i++) {
+        localVarHeaderParams.put(headerPair[i], headerPair[i * 2 + 1]);
+      }
+    }
 
     if (progressListener != null) {
       apiClient
@@ -641,7 +702,8 @@ public class LocalStoresApi {
   private com.squareup.okhttp.Call localStoresUpdateValidateBeforeCall(
       LocalStoresUpdateRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
-      final ProgressRequestBody.ProgressRequestListener progressRequestListener)
+      final ProgressRequestBody.ProgressRequestListener progressRequestListener,
+      String... headerPair)
       throws ApiException {
 
     // verify the required parameter 'data' is set
@@ -651,7 +713,7 @@ public class LocalStoresApi {
     }
 
     com.squareup.okhttp.Call call =
-        localStoresUpdateCall(data, progressListener, progressRequestListener);
+        localStoresUpdateCall(data, progressListener, progressRequestListener, headerPair);
     return call;
   }
 
@@ -663,9 +725,9 @@ public class LocalStoresApi {
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
-  public LocalStoresUpdateResponse localStoresUpdate(LocalStoresUpdateRequest data)
-      throws ApiException {
-    ApiResponse<LocalStoresUpdateResponse> resp = localStoresUpdateWithHttpInfo(data);
+  public LocalStoresUpdateResponse localStoresUpdate(
+      LocalStoresUpdateRequest data, String... headerPair) throws ApiException {
+    ApiResponse<LocalStoresUpdateResponse> resp = localStoresUpdateWithHttpInfo(data, headerPair);
     return resp.getData();
   }
 
@@ -678,8 +740,9 @@ public class LocalStoresApi {
    *     response body
    */
   public ApiResponse<LocalStoresUpdateResponse> localStoresUpdateWithHttpInfo(
-      LocalStoresUpdateRequest data) throws ApiException {
-    com.squareup.okhttp.Call call = localStoresUpdateValidateBeforeCall(data, null, null);
+      LocalStoresUpdateRequest data, String... headerPair) throws ApiException {
+    com.squareup.okhttp.Call call =
+        localStoresUpdateValidateBeforeCall(data, null, null, headerPair);
     Type localVarReturnType = new TypeToken<LocalStoresUpdateResponse>() {}.getType();
     return apiClient.execute(call, localVarReturnType);
   }
@@ -693,7 +756,9 @@ public class LocalStoresApi {
    * @throws ApiException If fail to process the API call, e.g. serializing the request body object
    */
   public com.squareup.okhttp.Call localStoresUpdateAsync(
-      LocalStoresUpdateRequest data, final ApiCallback<LocalStoresUpdateResponse> callback)
+      LocalStoresUpdateRequest data,
+      final ApiCallback<LocalStoresUpdateResponse> callback,
+      String... headerPair)
       throws ApiException {
 
     ProgressResponseBody.ProgressListener progressListener = null;
@@ -718,7 +783,8 @@ public class LocalStoresApi {
     }
 
     com.squareup.okhttp.Call call =
-        localStoresUpdateValidateBeforeCall(data, progressListener, progressRequestListener);
+        localStoresUpdateValidateBeforeCall(
+            data, progressListener, progressRequestListener, headerPair);
     Type localVarReturnType = new TypeToken<LocalStoresUpdateResponse>() {}.getType();
     apiClient.executeAsync(call, localVarReturnType, callback);
     return call;

@@ -70,8 +70,10 @@ public class LeadsFormListApi {
       Long pageSize,
       List<String> fields,
       final ProgressResponseBody.ProgressListener progressListener,
-      final ProgressRequestBody.ProgressRequestListener progressRequestListener)
+      final ProgressRequestBody.ProgressRequestListener progressRequestListener,
+      String... headerPair)
       throws ApiException {
+
     Object localVarPostBody = null;
 
     // create path and map variables
@@ -102,6 +104,15 @@ public class LeadsFormListApi {
     final String[] localVarContentTypes = {"text/plain"};
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
     localVarHeaderParams.put("Content-Type", localVarContentType);
+
+    if (headerPair != null && headerPair.length > 0) {
+      if (headerPair.length % 2 != 0) {
+        throw new UnsupportedOperationException("Parameter headerPair must be paired");
+      }
+      for (int i = 0; i < headerPair.length / 2; i++) {
+        localVarHeaderParams.put(headerPair[i], headerPair[i * 2 + 1]);
+      }
+    }
 
     if (progressListener != null) {
       apiClient
@@ -143,7 +154,8 @@ public class LeadsFormListApi {
       Long pageSize,
       List<String> fields,
       final ProgressResponseBody.ProgressListener progressListener,
-      final ProgressRequestBody.ProgressRequestListener progressRequestListener)
+      final ProgressRequestBody.ProgressRequestListener progressRequestListener,
+      String... headerPair)
       throws ApiException {
 
     // verify the required parameter 'accountId' is set
@@ -161,7 +173,8 @@ public class LeadsFormListApi {
             pageSize,
             fields,
             progressListener,
-            progressRequestListener);
+            progressRequestListener,
+            headerPair);
     return call;
   }
 
@@ -184,11 +197,12 @@ public class LeadsFormListApi {
       String endCreatedTime,
       Long page,
       Long pageSize,
-      List<String> fields)
+      List<String> fields,
+      String... headerPair)
       throws ApiException {
     ApiResponse<LeadsFormListGetResponse> resp =
         leadsFormListGetWithHttpInfo(
-            accountId, beginCreatedTime, endCreatedTime, page, pageSize, fields);
+            accountId, beginCreatedTime, endCreatedTime, page, pageSize, fields, headerPair);
     return resp.getData();
   }
 
@@ -211,11 +225,20 @@ public class LeadsFormListApi {
       String endCreatedTime,
       Long page,
       Long pageSize,
-      List<String> fields)
+      List<String> fields,
+      String... headerPair)
       throws ApiException {
     com.squareup.okhttp.Call call =
         leadsFormListGetValidateBeforeCall(
-            accountId, beginCreatedTime, endCreatedTime, page, pageSize, fields, null, null);
+            accountId,
+            beginCreatedTime,
+            endCreatedTime,
+            page,
+            pageSize,
+            fields,
+            null,
+            null,
+            headerPair);
     Type localVarReturnType = new TypeToken<LeadsFormListGetResponse>() {}.getType();
     return apiClient.execute(call, localVarReturnType);
   }
@@ -240,7 +263,8 @@ public class LeadsFormListApi {
       Long page,
       Long pageSize,
       List<String> fields,
-      final ApiCallback<LeadsFormListGetResponse> callback)
+      final ApiCallback<LeadsFormListGetResponse> callback,
+      String... headerPair)
       throws ApiException {
 
     ProgressResponseBody.ProgressListener progressListener = null;
@@ -273,7 +297,8 @@ public class LeadsFormListApi {
             pageSize,
             fields,
             progressListener,
-            progressRequestListener);
+            progressRequestListener,
+            headerPair);
     Type localVarReturnType = new TypeToken<LeadsFormListGetResponse>() {}.getType();
     apiClient.executeAsync(call, localVarReturnType, callback);
     return call;

@@ -64,8 +64,10 @@ public class PropertySetSchemasApi {
   public com.squareup.okhttp.Call propertySetSchemasAddCall(
       PropertySetSchemasAddRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
-      final ProgressRequestBody.ProgressRequestListener progressRequestListener)
+      final ProgressRequestBody.ProgressRequestListener progressRequestListener,
+      String... headerPair)
       throws ApiException {
+
     Object localVarPostBody = data;
 
     // create path and map variables
@@ -85,6 +87,15 @@ public class PropertySetSchemasApi {
     final String[] localVarContentTypes = {"application/json", "application/xml"};
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
     localVarHeaderParams.put("Content-Type", localVarContentType);
+
+    if (headerPair != null && headerPair.length > 0) {
+      if (headerPair.length % 2 != 0) {
+        throw new UnsupportedOperationException("Parameter headerPair must be paired");
+      }
+      for (int i = 0; i < headerPair.length / 2; i++) {
+        localVarHeaderParams.put(headerPair[i], headerPair[i * 2 + 1]);
+      }
+    }
 
     if (progressListener != null) {
       apiClient
@@ -121,7 +132,8 @@ public class PropertySetSchemasApi {
   private com.squareup.okhttp.Call propertySetSchemasAddValidateBeforeCall(
       PropertySetSchemasAddRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
-      final ProgressRequestBody.ProgressRequestListener progressRequestListener)
+      final ProgressRequestBody.ProgressRequestListener progressRequestListener,
+      String... headerPair)
       throws ApiException {
 
     // verify the required parameter 'data' is set
@@ -131,7 +143,7 @@ public class PropertySetSchemasApi {
     }
 
     com.squareup.okhttp.Call call =
-        propertySetSchemasAddCall(data, progressListener, progressRequestListener);
+        propertySetSchemasAddCall(data, progressListener, progressRequestListener, headerPair);
     return call;
   }
 
@@ -143,9 +155,10 @@ public class PropertySetSchemasApi {
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
-  public PropertySetSchemasAddResponse propertySetSchemasAdd(PropertySetSchemasAddRequest data)
-      throws ApiException {
-    ApiResponse<PropertySetSchemasAddResponse> resp = propertySetSchemasAddWithHttpInfo(data);
+  public PropertySetSchemasAddResponse propertySetSchemasAdd(
+      PropertySetSchemasAddRequest data, String... headerPair) throws ApiException {
+    ApiResponse<PropertySetSchemasAddResponse> resp =
+        propertySetSchemasAddWithHttpInfo(data, headerPair);
     return resp.getData();
   }
 
@@ -158,8 +171,9 @@ public class PropertySetSchemasApi {
    *     response body
    */
   public ApiResponse<PropertySetSchemasAddResponse> propertySetSchemasAddWithHttpInfo(
-      PropertySetSchemasAddRequest data) throws ApiException {
-    com.squareup.okhttp.Call call = propertySetSchemasAddValidateBeforeCall(data, null, null);
+      PropertySetSchemasAddRequest data, String... headerPair) throws ApiException {
+    com.squareup.okhttp.Call call =
+        propertySetSchemasAddValidateBeforeCall(data, null, null, headerPair);
     Type localVarReturnType = new TypeToken<PropertySetSchemasAddResponse>() {}.getType();
     return apiClient.execute(call, localVarReturnType);
   }
@@ -173,7 +187,9 @@ public class PropertySetSchemasApi {
    * @throws ApiException If fail to process the API call, e.g. serializing the request body object
    */
   public com.squareup.okhttp.Call propertySetSchemasAddAsync(
-      PropertySetSchemasAddRequest data, final ApiCallback<PropertySetSchemasAddResponse> callback)
+      PropertySetSchemasAddRequest data,
+      final ApiCallback<PropertySetSchemasAddResponse> callback,
+      String... headerPair)
       throws ApiException {
 
     ProgressResponseBody.ProgressListener progressListener = null;
@@ -198,7 +214,8 @@ public class PropertySetSchemasApi {
     }
 
     com.squareup.okhttp.Call call =
-        propertySetSchemasAddValidateBeforeCall(data, progressListener, progressRequestListener);
+        propertySetSchemasAddValidateBeforeCall(
+            data, progressListener, progressRequestListener, headerPair);
     Type localVarReturnType = new TypeToken<PropertySetSchemasAddResponse>() {}.getType();
     apiClient.executeAsync(call, localVarReturnType, callback);
     return call;
@@ -219,8 +236,10 @@ public class PropertySetSchemasApi {
       Long propertySetId,
       List<String> fields,
       final ProgressResponseBody.ProgressListener progressListener,
-      final ProgressRequestBody.ProgressRequestListener progressRequestListener)
+      final ProgressRequestBody.ProgressRequestListener progressRequestListener,
+      String... headerPair)
       throws ApiException {
+
     Object localVarPostBody = null;
 
     // create path and map variables
@@ -246,6 +265,15 @@ public class PropertySetSchemasApi {
     final String[] localVarContentTypes = {"text/plain"};
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
     localVarHeaderParams.put("Content-Type", localVarContentType);
+
+    if (headerPair != null && headerPair.length > 0) {
+      if (headerPair.length % 2 != 0) {
+        throw new UnsupportedOperationException("Parameter headerPair must be paired");
+      }
+      for (int i = 0; i < headerPair.length / 2; i++) {
+        localVarHeaderParams.put(headerPair[i], headerPair[i * 2 + 1]);
+      }
+    }
 
     if (progressListener != null) {
       apiClient
@@ -284,7 +312,8 @@ public class PropertySetSchemasApi {
       Long propertySetId,
       List<String> fields,
       final ProgressResponseBody.ProgressListener progressListener,
-      final ProgressRequestBody.ProgressRequestListener progressRequestListener)
+      final ProgressRequestBody.ProgressRequestListener progressRequestListener,
+      String... headerPair)
       throws ApiException {
 
     // verify the required parameter 'accountId' is set
@@ -301,7 +330,12 @@ public class PropertySetSchemasApi {
 
     com.squareup.okhttp.Call call =
         propertySetSchemasGetCall(
-            accountId, propertySetId, fields, progressListener, progressRequestListener);
+            accountId,
+            propertySetId,
+            fields,
+            progressListener,
+            progressRequestListener,
+            headerPair);
     return call;
   }
 
@@ -316,9 +350,10 @@ public class PropertySetSchemasApi {
    *     response body
    */
   public PropertySetSchemasGetResponse propertySetSchemasGet(
-      Long accountId, Long propertySetId, List<String> fields) throws ApiException {
+      Long accountId, Long propertySetId, List<String> fields, String... headerPair)
+      throws ApiException {
     ApiResponse<PropertySetSchemasGetResponse> resp =
-        propertySetSchemasGetWithHttpInfo(accountId, propertySetId, fields);
+        propertySetSchemasGetWithHttpInfo(accountId, propertySetId, fields, headerPair);
     return resp.getData();
   }
 
@@ -333,9 +368,11 @@ public class PropertySetSchemasApi {
    *     response body
    */
   public ApiResponse<PropertySetSchemasGetResponse> propertySetSchemasGetWithHttpInfo(
-      Long accountId, Long propertySetId, List<String> fields) throws ApiException {
+      Long accountId, Long propertySetId, List<String> fields, String... headerPair)
+      throws ApiException {
     com.squareup.okhttp.Call call =
-        propertySetSchemasGetValidateBeforeCall(accountId, propertySetId, fields, null, null);
+        propertySetSchemasGetValidateBeforeCall(
+            accountId, propertySetId, fields, null, null, headerPair);
     Type localVarReturnType = new TypeToken<PropertySetSchemasGetResponse>() {}.getType();
     return apiClient.execute(call, localVarReturnType);
   }
@@ -354,7 +391,8 @@ public class PropertySetSchemasApi {
       Long accountId,
       Long propertySetId,
       List<String> fields,
-      final ApiCallback<PropertySetSchemasGetResponse> callback)
+      final ApiCallback<PropertySetSchemasGetResponse> callback,
+      String... headerPair)
       throws ApiException {
 
     ProgressResponseBody.ProgressListener progressListener = null;
@@ -380,7 +418,12 @@ public class PropertySetSchemasApi {
 
     com.squareup.okhttp.Call call =
         propertySetSchemasGetValidateBeforeCall(
-            accountId, propertySetId, fields, progressListener, progressRequestListener);
+            accountId,
+            propertySetId,
+            fields,
+            progressListener,
+            progressRequestListener,
+            headerPair);
     Type localVarReturnType = new TypeToken<PropertySetSchemasGetResponse>() {}.getType();
     apiClient.executeAsync(call, localVarReturnType, callback);
     return call;
@@ -397,8 +440,10 @@ public class PropertySetSchemasApi {
   public com.squareup.okhttp.Call propertySetSchemasUpdateCall(
       PropertySetSchemasUpdateRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
-      final ProgressRequestBody.ProgressRequestListener progressRequestListener)
+      final ProgressRequestBody.ProgressRequestListener progressRequestListener,
+      String... headerPair)
       throws ApiException {
+
     Object localVarPostBody = data;
 
     // create path and map variables
@@ -418,6 +463,15 @@ public class PropertySetSchemasApi {
     final String[] localVarContentTypes = {"application/json", "application/xml"};
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
     localVarHeaderParams.put("Content-Type", localVarContentType);
+
+    if (headerPair != null && headerPair.length > 0) {
+      if (headerPair.length % 2 != 0) {
+        throw new UnsupportedOperationException("Parameter headerPair must be paired");
+      }
+      for (int i = 0; i < headerPair.length / 2; i++) {
+        localVarHeaderParams.put(headerPair[i], headerPair[i * 2 + 1]);
+      }
+    }
 
     if (progressListener != null) {
       apiClient
@@ -454,7 +508,8 @@ public class PropertySetSchemasApi {
   private com.squareup.okhttp.Call propertySetSchemasUpdateValidateBeforeCall(
       PropertySetSchemasUpdateRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
-      final ProgressRequestBody.ProgressRequestListener progressRequestListener)
+      final ProgressRequestBody.ProgressRequestListener progressRequestListener,
+      String... headerPair)
       throws ApiException {
 
     // verify the required parameter 'data' is set
@@ -464,7 +519,7 @@ public class PropertySetSchemasApi {
     }
 
     com.squareup.okhttp.Call call =
-        propertySetSchemasUpdateCall(data, progressListener, progressRequestListener);
+        propertySetSchemasUpdateCall(data, progressListener, progressRequestListener, headerPair);
     return call;
   }
 
@@ -477,8 +532,9 @@ public class PropertySetSchemasApi {
    *     response body
    */
   public PropertySetSchemasUpdateResponse propertySetSchemasUpdate(
-      PropertySetSchemasUpdateRequest data) throws ApiException {
-    ApiResponse<PropertySetSchemasUpdateResponse> resp = propertySetSchemasUpdateWithHttpInfo(data);
+      PropertySetSchemasUpdateRequest data, String... headerPair) throws ApiException {
+    ApiResponse<PropertySetSchemasUpdateResponse> resp =
+        propertySetSchemasUpdateWithHttpInfo(data, headerPair);
     return resp.getData();
   }
 
@@ -491,8 +547,9 @@ public class PropertySetSchemasApi {
    *     response body
    */
   public ApiResponse<PropertySetSchemasUpdateResponse> propertySetSchemasUpdateWithHttpInfo(
-      PropertySetSchemasUpdateRequest data) throws ApiException {
-    com.squareup.okhttp.Call call = propertySetSchemasUpdateValidateBeforeCall(data, null, null);
+      PropertySetSchemasUpdateRequest data, String... headerPair) throws ApiException {
+    com.squareup.okhttp.Call call =
+        propertySetSchemasUpdateValidateBeforeCall(data, null, null, headerPair);
     Type localVarReturnType = new TypeToken<PropertySetSchemasUpdateResponse>() {}.getType();
     return apiClient.execute(call, localVarReturnType);
   }
@@ -507,7 +564,8 @@ public class PropertySetSchemasApi {
    */
   public com.squareup.okhttp.Call propertySetSchemasUpdateAsync(
       PropertySetSchemasUpdateRequest data,
-      final ApiCallback<PropertySetSchemasUpdateResponse> callback)
+      final ApiCallback<PropertySetSchemasUpdateResponse> callback,
+      String... headerPair)
       throws ApiException {
 
     ProgressResponseBody.ProgressListener progressListener = null;
@@ -532,7 +590,8 @@ public class PropertySetSchemasApi {
     }
 
     com.squareup.okhttp.Call call =
-        propertySetSchemasUpdateValidateBeforeCall(data, progressListener, progressRequestListener);
+        propertySetSchemasUpdateValidateBeforeCall(
+            data, progressListener, progressRequestListener, headerPair);
     Type localVarReturnType = new TypeToken<PropertySetSchemasUpdateResponse>() {}.getType();
     apiClient.executeAsync(call, localVarReturnType, callback);
     return call;

@@ -12,7 +12,6 @@
 
 package com.tencent.ads.model;
 
-
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.stream.JsonReader;
@@ -78,7 +77,13 @@ public enum AccountTypeMap {
 
   DEBT_FIXED("FUND_TYPE_DEBT_FIXED"),
 
-  DEBT_TEMP("FUND_TYPE_DEBT_TEMP");
+  DEBT_TEMP("FUND_TYPE_DEBT_TEMP"),
+
+  SHORT_PLAY_GIFT("FUND_TYPE_SHORT_PLAY_GIFT"),
+
+  GAME_CHARGE_INDIRECT_REWARDS_GIFT("FUND_TYPE_GAME_CHARGE_INDIRECT_REWARDS_GIFT"),
+
+  GAME_CHARGE_DIRECT_REWARDS_GIFT("FUND_TYPE_GAME_CHARGE_DIRECT_REWARDS_GIFT");
 
   private String value;
 

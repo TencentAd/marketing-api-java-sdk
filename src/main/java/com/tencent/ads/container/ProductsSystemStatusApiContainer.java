@@ -45,10 +45,12 @@ public class ProductsSystemStatusApiContainer extends ApiContainer {
       Long feedId,
       Long page,
       Long pageSize,
-      List<String> fields)
+      List<String> fields,
+      String... headerPair)
       throws ApiException, TencentAdsResponseException {
     ProductsSystemStatusGetResponse resp =
-        api.productsSystemStatusGet(accountId, productCatalogId, feedId, page, pageSize, fields);
+        api.productsSystemStatusGet(
+            accountId, productCatalogId, feedId, page, pageSize, fields, headerPair);
     handleResponse(gson.toJson(resp));
     return resp.getData();
   }

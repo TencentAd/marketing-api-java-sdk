@@ -38,9 +38,10 @@ public class PropertySetSchemasApiContainer extends ApiContainer {
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
-  public PropertySetSchemasAddResponse propertySetSchemasAdd(PropertySetSchemasAddRequest data)
+  public PropertySetSchemasAddResponse propertySetSchemasAdd(
+      PropertySetSchemasAddRequest data, String... headerPair)
       throws ApiException, TencentAdsResponseException {
-    PropertySetSchemasAddResponse resp = api.propertySetSchemasAdd(data);
+    PropertySetSchemasAddResponse resp = api.propertySetSchemasAdd(data, headerPair);
     handleResponse(gson.toJson(resp));
 
     return resp;
@@ -57,10 +58,10 @@ public class PropertySetSchemasApiContainer extends ApiContainer {
    *     response body
    */
   public PropertySetSchemasGetResponseData propertySetSchemasGet(
-      Long accountId, Long propertySetId, List<String> fields)
+      Long accountId, Long propertySetId, List<String> fields, String... headerPair)
       throws ApiException, TencentAdsResponseException {
     PropertySetSchemasGetResponse resp =
-        api.propertySetSchemasGet(accountId, propertySetId, fields);
+        api.propertySetSchemasGet(accountId, propertySetId, fields, headerPair);
     handleResponse(gson.toJson(resp));
     return resp.getData();
   }
@@ -74,8 +75,9 @@ public class PropertySetSchemasApiContainer extends ApiContainer {
    *     response body
    */
   public PropertySetSchemasUpdateResponse propertySetSchemasUpdate(
-      PropertySetSchemasUpdateRequest data) throws ApiException, TencentAdsResponseException {
-    PropertySetSchemasUpdateResponse resp = api.propertySetSchemasUpdate(data);
+      PropertySetSchemasUpdateRequest data, String... headerPair)
+      throws ApiException, TencentAdsResponseException {
+    PropertySetSchemasUpdateResponse resp = api.propertySetSchemasUpdate(data, headerPair);
     handleResponse(gson.toJson(resp));
 
     return resp;

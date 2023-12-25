@@ -63,8 +63,10 @@ public class ProductSeriesApi {
   public com.squareup.okhttp.Call productSeriesAddCall(
       ProductSeriesAddRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
-      final ProgressRequestBody.ProgressRequestListener progressRequestListener)
+      final ProgressRequestBody.ProgressRequestListener progressRequestListener,
+      String... headerPair)
       throws ApiException {
+
     Object localVarPostBody = data;
 
     // create path and map variables
@@ -84,6 +86,15 @@ public class ProductSeriesApi {
     final String[] localVarContentTypes = {"application/json", "application/xml"};
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
     localVarHeaderParams.put("Content-Type", localVarContentType);
+
+    if (headerPair != null && headerPair.length > 0) {
+      if (headerPair.length % 2 != 0) {
+        throw new UnsupportedOperationException("Parameter headerPair must be paired");
+      }
+      for (int i = 0; i < headerPair.length / 2; i++) {
+        localVarHeaderParams.put(headerPair[i], headerPair[i * 2 + 1]);
+      }
+    }
 
     if (progressListener != null) {
       apiClient
@@ -120,7 +131,8 @@ public class ProductSeriesApi {
   private com.squareup.okhttp.Call productSeriesAddValidateBeforeCall(
       ProductSeriesAddRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
-      final ProgressRequestBody.ProgressRequestListener progressRequestListener)
+      final ProgressRequestBody.ProgressRequestListener progressRequestListener,
+      String... headerPair)
       throws ApiException {
 
     // verify the required parameter 'data' is set
@@ -130,7 +142,7 @@ public class ProductSeriesApi {
     }
 
     com.squareup.okhttp.Call call =
-        productSeriesAddCall(data, progressListener, progressRequestListener);
+        productSeriesAddCall(data, progressListener, progressRequestListener, headerPair);
     return call;
   }
 
@@ -142,9 +154,9 @@ public class ProductSeriesApi {
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
-  public ProductSeriesAddResponse productSeriesAdd(ProductSeriesAddRequest data)
-      throws ApiException {
-    ApiResponse<ProductSeriesAddResponse> resp = productSeriesAddWithHttpInfo(data);
+  public ProductSeriesAddResponse productSeriesAdd(
+      ProductSeriesAddRequest data, String... headerPair) throws ApiException {
+    ApiResponse<ProductSeriesAddResponse> resp = productSeriesAddWithHttpInfo(data, headerPair);
     return resp.getData();
   }
 
@@ -157,8 +169,9 @@ public class ProductSeriesApi {
    *     response body
    */
   public ApiResponse<ProductSeriesAddResponse> productSeriesAddWithHttpInfo(
-      ProductSeriesAddRequest data) throws ApiException {
-    com.squareup.okhttp.Call call = productSeriesAddValidateBeforeCall(data, null, null);
+      ProductSeriesAddRequest data, String... headerPair) throws ApiException {
+    com.squareup.okhttp.Call call =
+        productSeriesAddValidateBeforeCall(data, null, null, headerPair);
     Type localVarReturnType = new TypeToken<ProductSeriesAddResponse>() {}.getType();
     return apiClient.execute(call, localVarReturnType);
   }
@@ -172,7 +185,9 @@ public class ProductSeriesApi {
    * @throws ApiException If fail to process the API call, e.g. serializing the request body object
    */
   public com.squareup.okhttp.Call productSeriesAddAsync(
-      ProductSeriesAddRequest data, final ApiCallback<ProductSeriesAddResponse> callback)
+      ProductSeriesAddRequest data,
+      final ApiCallback<ProductSeriesAddResponse> callback,
+      String... headerPair)
       throws ApiException {
 
     ProgressResponseBody.ProgressListener progressListener = null;
@@ -197,7 +212,8 @@ public class ProductSeriesApi {
     }
 
     com.squareup.okhttp.Call call =
-        productSeriesAddValidateBeforeCall(data, progressListener, progressRequestListener);
+        productSeriesAddValidateBeforeCall(
+            data, progressListener, progressRequestListener, headerPair);
     Type localVarReturnType = new TypeToken<ProductSeriesAddResponse>() {}.getType();
     apiClient.executeAsync(call, localVarReturnType, callback);
     return call;
@@ -224,8 +240,10 @@ public class ProductSeriesApi {
       Long pageSize,
       List<String> fields,
       final ProgressResponseBody.ProgressListener progressListener,
-      final ProgressRequestBody.ProgressRequestListener progressRequestListener)
+      final ProgressRequestBody.ProgressRequestListener progressRequestListener,
+      String... headerPair)
       throws ApiException {
+
     Object localVarPostBody = null;
 
     // create path and map variables
@@ -257,6 +275,15 @@ public class ProductSeriesApi {
     final String[] localVarContentTypes = {"text/plain"};
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
     localVarHeaderParams.put("Content-Type", localVarContentType);
+
+    if (headerPair != null && headerPair.length > 0) {
+      if (headerPair.length % 2 != 0) {
+        throw new UnsupportedOperationException("Parameter headerPair must be paired");
+      }
+      for (int i = 0; i < headerPair.length / 2; i++) {
+        localVarHeaderParams.put(headerPair[i], headerPair[i * 2 + 1]);
+      }
+    }
 
     if (progressListener != null) {
       apiClient
@@ -298,7 +325,8 @@ public class ProductSeriesApi {
       Long pageSize,
       List<String> fields,
       final ProgressResponseBody.ProgressListener progressListener,
-      final ProgressRequestBody.ProgressRequestListener progressRequestListener)
+      final ProgressRequestBody.ProgressRequestListener progressRequestListener,
+      String... headerPair)
       throws ApiException {
 
     // verify the required parameter 'accountId' is set
@@ -322,7 +350,8 @@ public class ProductSeriesApi {
             pageSize,
             fields,
             progressListener,
-            progressRequestListener);
+            progressRequestListener,
+            headerPair);
     return call;
   }
 
@@ -345,10 +374,12 @@ public class ProductSeriesApi {
       List<ProductSeriesSearchFilteringStruct> filtering,
       Long page,
       Long pageSize,
-      List<String> fields)
+      List<String> fields,
+      String... headerPair)
       throws ApiException {
     ApiResponse<ProductSeriesGetResponse> resp =
-        productSeriesGetWithHttpInfo(accountId, catalogId, filtering, page, pageSize, fields);
+        productSeriesGetWithHttpInfo(
+            accountId, catalogId, filtering, page, pageSize, fields, headerPair);
     return resp.getData();
   }
 
@@ -371,11 +402,12 @@ public class ProductSeriesApi {
       List<ProductSeriesSearchFilteringStruct> filtering,
       Long page,
       Long pageSize,
-      List<String> fields)
+      List<String> fields,
+      String... headerPair)
       throws ApiException {
     com.squareup.okhttp.Call call =
         productSeriesGetValidateBeforeCall(
-            accountId, catalogId, filtering, page, pageSize, fields, null, null);
+            accountId, catalogId, filtering, page, pageSize, fields, null, null, headerPair);
     Type localVarReturnType = new TypeToken<ProductSeriesGetResponse>() {}.getType();
     return apiClient.execute(call, localVarReturnType);
   }
@@ -400,7 +432,8 @@ public class ProductSeriesApi {
       Long page,
       Long pageSize,
       List<String> fields,
-      final ApiCallback<ProductSeriesGetResponse> callback)
+      final ApiCallback<ProductSeriesGetResponse> callback,
+      String... headerPair)
       throws ApiException {
 
     ProgressResponseBody.ProgressListener progressListener = null;
@@ -433,7 +466,8 @@ public class ProductSeriesApi {
             pageSize,
             fields,
             progressListener,
-            progressRequestListener);
+            progressRequestListener,
+            headerPair);
     Type localVarReturnType = new TypeToken<ProductSeriesGetResponse>() {}.getType();
     apiClient.executeAsync(call, localVarReturnType, callback);
     return call;

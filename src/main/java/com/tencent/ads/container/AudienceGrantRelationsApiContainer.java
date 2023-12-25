@@ -38,8 +38,9 @@ public class AudienceGrantRelationsApiContainer extends ApiContainer {
    *     response body
    */
   public AudienceGrantRelationsAddResponse audienceGrantRelationsAdd(
-      AudienceGrantRelationsAddRequest data) throws ApiException, TencentAdsResponseException {
-    AudienceGrantRelationsAddResponse resp = api.audienceGrantRelationsAdd(data);
+      AudienceGrantRelationsAddRequest data, String... headerPair)
+      throws ApiException, TencentAdsResponseException {
+    AudienceGrantRelationsAddResponse resp = api.audienceGrantRelationsAdd(data, headerPair);
     handleResponse(gson.toJson(resp));
 
     return resp;
@@ -62,10 +63,11 @@ public class AudienceGrantRelationsApiContainer extends ApiContainer {
       List<FilteringStruct> filtering,
       Long page,
       Long pageSize,
-      List<String> fields)
+      List<String> fields,
+      String... headerPair)
       throws ApiException, TencentAdsResponseException {
     AudienceGrantRelationsGetResponse resp =
-        api.audienceGrantRelationsGet(accountId, filtering, page, pageSize, fields);
+        api.audienceGrantRelationsGet(accountId, filtering, page, pageSize, fields, headerPair);
     handleResponse(gson.toJson(resp));
     return resp.getData();
   }

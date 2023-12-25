@@ -35,9 +35,10 @@ public class AdLabelApiContainer extends ApiContainer {
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
-  public AdLabelGetResponseData adLabelGet(Long accountId, List<String> fields)
+  public AdLabelGetResponseData adLabelGet(
+      Long accountId, List<String> fields, String... headerPair)
       throws ApiException, TencentAdsResponseException {
-    AdLabelGetResponse resp = api.adLabelGet(accountId, fields);
+    AdLabelGetResponse resp = api.adLabelGet(accountId, fields, headerPair);
     handleResponse(gson.toJson(resp));
     return resp.getData();
   }

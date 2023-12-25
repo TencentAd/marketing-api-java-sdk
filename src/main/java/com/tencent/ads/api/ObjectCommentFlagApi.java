@@ -61,8 +61,10 @@ public class ObjectCommentFlagApi {
   public com.squareup.okhttp.Call objectCommentFlagUpdateCall(
       ObjectCommentFlagUpdateRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
-      final ProgressRequestBody.ProgressRequestListener progressRequestListener)
+      final ProgressRequestBody.ProgressRequestListener progressRequestListener,
+      String... headerPair)
       throws ApiException {
+
     Object localVarPostBody = data;
 
     // create path and map variables
@@ -82,6 +84,15 @@ public class ObjectCommentFlagApi {
     final String[] localVarContentTypes = {"application/json", "application/xml"};
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
     localVarHeaderParams.put("Content-Type", localVarContentType);
+
+    if (headerPair != null && headerPair.length > 0) {
+      if (headerPair.length % 2 != 0) {
+        throw new UnsupportedOperationException("Parameter headerPair must be paired");
+      }
+      for (int i = 0; i < headerPair.length / 2; i++) {
+        localVarHeaderParams.put(headerPair[i], headerPair[i * 2 + 1]);
+      }
+    }
 
     if (progressListener != null) {
       apiClient
@@ -118,7 +129,8 @@ public class ObjectCommentFlagApi {
   private com.squareup.okhttp.Call objectCommentFlagUpdateValidateBeforeCall(
       ObjectCommentFlagUpdateRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
-      final ProgressRequestBody.ProgressRequestListener progressRequestListener)
+      final ProgressRequestBody.ProgressRequestListener progressRequestListener,
+      String... headerPair)
       throws ApiException {
 
     // verify the required parameter 'data' is set
@@ -128,7 +140,7 @@ public class ObjectCommentFlagApi {
     }
 
     com.squareup.okhttp.Call call =
-        objectCommentFlagUpdateCall(data, progressListener, progressRequestListener);
+        objectCommentFlagUpdateCall(data, progressListener, progressRequestListener, headerPair);
     return call;
   }
 
@@ -141,8 +153,9 @@ public class ObjectCommentFlagApi {
    *     response body
    */
   public ObjectCommentFlagUpdateResponse objectCommentFlagUpdate(
-      ObjectCommentFlagUpdateRequest data) throws ApiException {
-    ApiResponse<ObjectCommentFlagUpdateResponse> resp = objectCommentFlagUpdateWithHttpInfo(data);
+      ObjectCommentFlagUpdateRequest data, String... headerPair) throws ApiException {
+    ApiResponse<ObjectCommentFlagUpdateResponse> resp =
+        objectCommentFlagUpdateWithHttpInfo(data, headerPair);
     return resp.getData();
   }
 
@@ -155,8 +168,9 @@ public class ObjectCommentFlagApi {
    *     response body
    */
   public ApiResponse<ObjectCommentFlagUpdateResponse> objectCommentFlagUpdateWithHttpInfo(
-      ObjectCommentFlagUpdateRequest data) throws ApiException {
-    com.squareup.okhttp.Call call = objectCommentFlagUpdateValidateBeforeCall(data, null, null);
+      ObjectCommentFlagUpdateRequest data, String... headerPair) throws ApiException {
+    com.squareup.okhttp.Call call =
+        objectCommentFlagUpdateValidateBeforeCall(data, null, null, headerPair);
     Type localVarReturnType = new TypeToken<ObjectCommentFlagUpdateResponse>() {}.getType();
     return apiClient.execute(call, localVarReturnType);
   }
@@ -171,7 +185,8 @@ public class ObjectCommentFlagApi {
    */
   public com.squareup.okhttp.Call objectCommentFlagUpdateAsync(
       ObjectCommentFlagUpdateRequest data,
-      final ApiCallback<ObjectCommentFlagUpdateResponse> callback)
+      final ApiCallback<ObjectCommentFlagUpdateResponse> callback,
+      String... headerPair)
       throws ApiException {
 
     ProgressResponseBody.ProgressListener progressListener = null;
@@ -196,7 +211,8 @@ public class ObjectCommentFlagApi {
     }
 
     com.squareup.okhttp.Call call =
-        objectCommentFlagUpdateValidateBeforeCall(data, progressListener, progressRequestListener);
+        objectCommentFlagUpdateValidateBeforeCall(
+            data, progressListener, progressRequestListener, headerPair);
     Type localVarReturnType = new TypeToken<ObjectCommentFlagUpdateResponse>() {}.getType();
     apiClient.executeAsync(call, localVarReturnType, callback);
     return call;

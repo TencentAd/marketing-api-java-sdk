@@ -41,9 +41,10 @@ public class PlayablePagesApiContainer extends ApiContainer {
    *     response body
    */
   public PlayablePagesAddResponseData playablePagesAdd(
-      Long accountId, String playablePageName, File materialFile)
+      Long accountId, String playablePageName, File materialFile, String... headerPair)
       throws ApiException, TencentAdsResponseException {
-    PlayablePagesAddResponse resp = api.playablePagesAdd(accountId, playablePageName, materialFile);
+    PlayablePagesAddResponse resp =
+        api.playablePagesAdd(accountId, playablePageName, materialFile, headerPair);
     handleResponse(gson.toJson(resp));
     return resp.getData();
   }
@@ -65,10 +66,11 @@ public class PlayablePagesApiContainer extends ApiContainer {
       List<FilteringStruct> filtering,
       Long page,
       Long pageSize,
-      List<String> fields)
+      List<String> fields,
+      String... headerPair)
       throws ApiException, TencentAdsResponseException {
     PlayablePagesGetResponse resp =
-        api.playablePagesGet(accountId, filtering, page, pageSize, fields);
+        api.playablePagesGet(accountId, filtering, page, pageSize, fields, headerPair);
     handleResponse(gson.toJson(resp));
     return resp.getData();
   }

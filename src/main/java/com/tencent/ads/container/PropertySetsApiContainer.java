@@ -37,9 +37,10 @@ public class PropertySetsApiContainer extends ApiContainer {
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
-  public PropertySetsAddResponseData propertySetsAdd(PropertySetsAddRequest data)
+  public PropertySetsAddResponseData propertySetsAdd(
+      PropertySetsAddRequest data, String... headerPair)
       throws ApiException, TencentAdsResponseException {
-    PropertySetsAddResponse resp = api.propertySetsAdd(data);
+    PropertySetsAddResponse resp = api.propertySetsAdd(data, headerPair);
     handleResponse(gson.toJson(resp));
     return resp.getData();
   }
@@ -57,10 +58,15 @@ public class PropertySetsApiContainer extends ApiContainer {
    *     response body
    */
   public PropertySetsGetResponseData propertySetsGet(
-      Long accountId, Long propertySetId, Long page, Long pageSize, List<String> fields)
+      Long accountId,
+      Long propertySetId,
+      Long page,
+      Long pageSize,
+      List<String> fields,
+      String... headerPair)
       throws ApiException, TencentAdsResponseException {
     PropertySetsGetResponse resp =
-        api.propertySetsGet(accountId, propertySetId, page, pageSize, fields);
+        api.propertySetsGet(accountId, propertySetId, page, pageSize, fields, headerPair);
     handleResponse(gson.toJson(resp));
     return resp.getData();
   }

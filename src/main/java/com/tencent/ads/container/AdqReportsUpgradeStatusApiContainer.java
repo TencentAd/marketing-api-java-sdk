@@ -36,8 +36,10 @@ public class AdqReportsUpgradeStatusApiContainer extends ApiContainer {
    *     response body
    */
   public AdqReportsUpgradeStatusGetResponseData adqReportsUpgradeStatusGet(
-      Long accountId, List<String> fields) throws ApiException, TencentAdsResponseException {
-    AdqReportsUpgradeStatusGetResponse resp = api.adqReportsUpgradeStatusGet(accountId, fields);
+      Long accountId, List<String> fields, String... headerPair)
+      throws ApiException, TencentAdsResponseException {
+    AdqReportsUpgradeStatusGetResponse resp =
+        api.adqReportsUpgradeStatusGet(accountId, fields, headerPair);
     handleResponse(gson.toJson(resp));
     return resp.getData();
   }

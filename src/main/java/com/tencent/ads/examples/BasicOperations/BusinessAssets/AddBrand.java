@@ -24,7 +24,7 @@ public class AddBrand {
     this.tencentAds = TencentAds.getInstance();
     this.tencentAds.init(
         new ApiContextConfig().accessToken(ACCESS_TOKEN).isDebug(true)); // debug==true 会打印请求详细信息
-    this.tencentAds.useSandbox(); // 默认使用沙箱环境，如果要请求线上，这里需要设为线上环境
+
     this.buildParams();
   }
 

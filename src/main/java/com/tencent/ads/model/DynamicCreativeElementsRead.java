@@ -350,6 +350,9 @@ public class DynamicCreativeElementsRead {
   @SerializedName("image_list3_component_options")
   private List<ImageListComponentOption> imageList3ComponentOptions = null;
 
+  @SerializedName("wechat_channels_cover_img_show_type")
+  private WechatChannelsCoverImgShowType wechatChannelsCoverImgShowType = null;
+
   public DynamicCreativeElementsRead image(String image) {
     this.image = image;
     return this;
@@ -2803,6 +2806,27 @@ public class DynamicCreativeElementsRead {
     this.imageList3ComponentOptions = imageList3ComponentOptions;
   }
 
+  public DynamicCreativeElementsRead wechatChannelsCoverImgShowType(
+      WechatChannelsCoverImgShowType wechatChannelsCoverImgShowType) {
+    this.wechatChannelsCoverImgShowType = wechatChannelsCoverImgShowType;
+    return this;
+  }
+
+  /**
+   * Get wechatChannelsCoverImgShowType
+   *
+   * @return wechatChannelsCoverImgShowType
+   */
+  @ApiModelProperty(value = "")
+  public WechatChannelsCoverImgShowType getWechatChannelsCoverImgShowType() {
+    return wechatChannelsCoverImgShowType;
+  }
+
+  public void setWechatChannelsCoverImgShowType(
+      WechatChannelsCoverImgShowType wechatChannelsCoverImgShowType) {
+    this.wechatChannelsCoverImgShowType = wechatChannelsCoverImgShowType;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -2964,8 +2988,10 @@ public class DynamicCreativeElementsRead {
             this.listSublinkComponentOptions,
             dynamicCreativeElementsRead.listSublinkComponentOptions)
         && Objects.equals(
-            this.imageList3ComponentOptions,
-            dynamicCreativeElementsRead.imageList3ComponentOptions);
+            this.imageList3ComponentOptions, dynamicCreativeElementsRead.imageList3ComponentOptions)
+        && Objects.equals(
+            this.wechatChannelsCoverImgShowType,
+            dynamicCreativeElementsRead.wechatChannelsCoverImgShowType);
   }
 
   @Override
@@ -3079,7 +3105,8 @@ public class DynamicCreativeElementsRead {
         mdpaTitleComponentOptions,
         mdpaDescComponentOptions,
         listSublinkComponentOptions,
-        imageList3ComponentOptions);
+        imageList3ComponentOptions,
+        wechatChannelsCoverImgShowType);
   }
 
   @Override

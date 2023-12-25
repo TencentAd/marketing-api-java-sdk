@@ -36,8 +36,10 @@ public class AdvertiserDailyBudgetApiContainer extends ApiContainer {
    *     response body
    */
   public AdvertiserDailyBudgetGetResponseData advertiserDailyBudgetGet(
-      Long accountId, List<String> fields) throws ApiException, TencentAdsResponseException {
-    AdvertiserDailyBudgetGetResponse resp = api.advertiserDailyBudgetGet(accountId, fields);
+      Long accountId, List<String> fields, String... headerPair)
+      throws ApiException, TencentAdsResponseException {
+    AdvertiserDailyBudgetGetResponse resp =
+        api.advertiserDailyBudgetGet(accountId, fields, headerPair);
     handleResponse(gson.toJson(resp));
     return resp.getData();
   }

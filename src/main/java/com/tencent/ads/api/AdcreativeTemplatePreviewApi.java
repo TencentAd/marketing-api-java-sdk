@@ -61,8 +61,10 @@ public class AdcreativeTemplatePreviewApi {
   public com.squareup.okhttp.Call adcreativeTemplatePreviewGetCall(
       AdcreativeTemplatePreviewGetRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
-      final ProgressRequestBody.ProgressRequestListener progressRequestListener)
+      final ProgressRequestBody.ProgressRequestListener progressRequestListener,
+      String... headerPair)
       throws ApiException {
+
     Object localVarPostBody = data;
 
     // create path and map variables
@@ -82,6 +84,15 @@ public class AdcreativeTemplatePreviewApi {
     final String[] localVarContentTypes = {"application/json", "application/xml"};
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
     localVarHeaderParams.put("Content-Type", localVarContentType);
+
+    if (headerPair != null && headerPair.length > 0) {
+      if (headerPair.length % 2 != 0) {
+        throw new UnsupportedOperationException("Parameter headerPair must be paired");
+      }
+      for (int i = 0; i < headerPair.length / 2; i++) {
+        localVarHeaderParams.put(headerPair[i], headerPair[i * 2 + 1]);
+      }
+    }
 
     if (progressListener != null) {
       apiClient
@@ -118,7 +129,8 @@ public class AdcreativeTemplatePreviewApi {
   private com.squareup.okhttp.Call adcreativeTemplatePreviewGetValidateBeforeCall(
       AdcreativeTemplatePreviewGetRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
-      final ProgressRequestBody.ProgressRequestListener progressRequestListener)
+      final ProgressRequestBody.ProgressRequestListener progressRequestListener,
+      String... headerPair)
       throws ApiException {
 
     // verify the required parameter 'data' is set
@@ -128,7 +140,8 @@ public class AdcreativeTemplatePreviewApi {
     }
 
     com.squareup.okhttp.Call call =
-        adcreativeTemplatePreviewGetCall(data, progressListener, progressRequestListener);
+        adcreativeTemplatePreviewGetCall(
+            data, progressListener, progressRequestListener, headerPair);
     return call;
   }
 
@@ -141,9 +154,9 @@ public class AdcreativeTemplatePreviewApi {
    *     response body
    */
   public AdcreativeTemplatePreviewGetResponse adcreativeTemplatePreviewGet(
-      AdcreativeTemplatePreviewGetRequest data) throws ApiException {
+      AdcreativeTemplatePreviewGetRequest data, String... headerPair) throws ApiException {
     ApiResponse<AdcreativeTemplatePreviewGetResponse> resp =
-        adcreativeTemplatePreviewGetWithHttpInfo(data);
+        adcreativeTemplatePreviewGetWithHttpInfo(data, headerPair);
     return resp.getData();
   }
 
@@ -156,9 +169,9 @@ public class AdcreativeTemplatePreviewApi {
    *     response body
    */
   public ApiResponse<AdcreativeTemplatePreviewGetResponse> adcreativeTemplatePreviewGetWithHttpInfo(
-      AdcreativeTemplatePreviewGetRequest data) throws ApiException {
+      AdcreativeTemplatePreviewGetRequest data, String... headerPair) throws ApiException {
     com.squareup.okhttp.Call call =
-        adcreativeTemplatePreviewGetValidateBeforeCall(data, null, null);
+        adcreativeTemplatePreviewGetValidateBeforeCall(data, null, null, headerPair);
     Type localVarReturnType = new TypeToken<AdcreativeTemplatePreviewGetResponse>() {}.getType();
     return apiClient.execute(call, localVarReturnType);
   }
@@ -173,7 +186,8 @@ public class AdcreativeTemplatePreviewApi {
    */
   public com.squareup.okhttp.Call adcreativeTemplatePreviewGetAsync(
       AdcreativeTemplatePreviewGetRequest data,
-      final ApiCallback<AdcreativeTemplatePreviewGetResponse> callback)
+      final ApiCallback<AdcreativeTemplatePreviewGetResponse> callback,
+      String... headerPair)
       throws ApiException {
 
     ProgressResponseBody.ProgressListener progressListener = null;
@@ -199,7 +213,7 @@ public class AdcreativeTemplatePreviewApi {
 
     com.squareup.okhttp.Call call =
         adcreativeTemplatePreviewGetValidateBeforeCall(
-            data, progressListener, progressRequestListener);
+            data, progressListener, progressRequestListener, headerPair);
     Type localVarReturnType = new TypeToken<AdcreativeTemplatePreviewGetResponse>() {}.getType();
     apiClient.executeAsync(call, localVarReturnType, callback);
     return call;

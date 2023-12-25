@@ -34,9 +34,10 @@ public class XijingDeriveRoleApiContainer extends ApiContainer {
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
-  public XijingDeriveRoleGetResponseData xijingDeriveRoleGet(XijingDeriveRoleGetRequest data)
+  public XijingDeriveRoleGetResponseData xijingDeriveRoleGet(
+      XijingDeriveRoleGetRequest data, String... headerPair)
       throws ApiException, TencentAdsResponseException {
-    XijingDeriveRoleGetResponse resp = api.xijingDeriveRoleGet(data);
+    XijingDeriveRoleGetResponse resp = api.xijingDeriveRoleGet(data, headerPair);
     handleResponse(gson.toJson(resp));
     return resp.getData();
   }

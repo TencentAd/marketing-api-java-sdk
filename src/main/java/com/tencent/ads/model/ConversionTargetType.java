@@ -12,7 +12,6 @@
 
 package com.tencent.ads.model;
 
-
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.stream.JsonReader;
@@ -72,7 +71,11 @@ public enum ConversionTargetType {
 
   ADD_WECOM("CONVERSION_TARGET_ADD_WECOM"),
 
-  LIKE("CONVERSION_TARGET_LIKE");
+  LIKE("CONVERSION_TARGET_LIKE"),
+
+  DONATION("CONVERSION_TARGET_DONATION"),
+
+  GOOD_DEED("CONVERSION_TARGET_GOOD_DEED");
 
   private String value;
 

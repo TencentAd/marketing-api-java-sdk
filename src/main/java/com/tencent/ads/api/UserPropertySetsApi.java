@@ -64,8 +64,10 @@ public class UserPropertySetsApi {
   public com.squareup.okhttp.Call userPropertySetsAddCall(
       UserPropertySetsAddRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
-      final ProgressRequestBody.ProgressRequestListener progressRequestListener)
+      final ProgressRequestBody.ProgressRequestListener progressRequestListener,
+      String... headerPair)
       throws ApiException {
+
     Object localVarPostBody = data;
 
     // create path and map variables
@@ -85,6 +87,15 @@ public class UserPropertySetsApi {
     final String[] localVarContentTypes = {"application/json", "application/xml"};
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
     localVarHeaderParams.put("Content-Type", localVarContentType);
+
+    if (headerPair != null && headerPair.length > 0) {
+      if (headerPair.length % 2 != 0) {
+        throw new UnsupportedOperationException("Parameter headerPair must be paired");
+      }
+      for (int i = 0; i < headerPair.length / 2; i++) {
+        localVarHeaderParams.put(headerPair[i], headerPair[i * 2 + 1]);
+      }
+    }
 
     if (progressListener != null) {
       apiClient
@@ -121,7 +132,8 @@ public class UserPropertySetsApi {
   private com.squareup.okhttp.Call userPropertySetsAddValidateBeforeCall(
       UserPropertySetsAddRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
-      final ProgressRequestBody.ProgressRequestListener progressRequestListener)
+      final ProgressRequestBody.ProgressRequestListener progressRequestListener,
+      String... headerPair)
       throws ApiException {
 
     // verify the required parameter 'data' is set
@@ -131,7 +143,7 @@ public class UserPropertySetsApi {
     }
 
     com.squareup.okhttp.Call call =
-        userPropertySetsAddCall(data, progressListener, progressRequestListener);
+        userPropertySetsAddCall(data, progressListener, progressRequestListener, headerPair);
     return call;
   }
 
@@ -143,9 +155,10 @@ public class UserPropertySetsApi {
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
-  public UserPropertySetsAddResponse userPropertySetsAdd(UserPropertySetsAddRequest data)
-      throws ApiException {
-    ApiResponse<UserPropertySetsAddResponse> resp = userPropertySetsAddWithHttpInfo(data);
+  public UserPropertySetsAddResponse userPropertySetsAdd(
+      UserPropertySetsAddRequest data, String... headerPair) throws ApiException {
+    ApiResponse<UserPropertySetsAddResponse> resp =
+        userPropertySetsAddWithHttpInfo(data, headerPair);
     return resp.getData();
   }
 
@@ -158,8 +171,9 @@ public class UserPropertySetsApi {
    *     response body
    */
   public ApiResponse<UserPropertySetsAddResponse> userPropertySetsAddWithHttpInfo(
-      UserPropertySetsAddRequest data) throws ApiException {
-    com.squareup.okhttp.Call call = userPropertySetsAddValidateBeforeCall(data, null, null);
+      UserPropertySetsAddRequest data, String... headerPair) throws ApiException {
+    com.squareup.okhttp.Call call =
+        userPropertySetsAddValidateBeforeCall(data, null, null, headerPair);
     Type localVarReturnType = new TypeToken<UserPropertySetsAddResponse>() {}.getType();
     return apiClient.execute(call, localVarReturnType);
   }
@@ -173,7 +187,9 @@ public class UserPropertySetsApi {
    * @throws ApiException If fail to process the API call, e.g. serializing the request body object
    */
   public com.squareup.okhttp.Call userPropertySetsAddAsync(
-      UserPropertySetsAddRequest data, final ApiCallback<UserPropertySetsAddResponse> callback)
+      UserPropertySetsAddRequest data,
+      final ApiCallback<UserPropertySetsAddResponse> callback,
+      String... headerPair)
       throws ApiException {
 
     ProgressResponseBody.ProgressListener progressListener = null;
@@ -198,7 +214,8 @@ public class UserPropertySetsApi {
     }
 
     com.squareup.okhttp.Call call =
-        userPropertySetsAddValidateBeforeCall(data, progressListener, progressRequestListener);
+        userPropertySetsAddValidateBeforeCall(
+            data, progressListener, progressRequestListener, headerPair);
     Type localVarReturnType = new TypeToken<UserPropertySetsAddResponse>() {}.getType();
     apiClient.executeAsync(call, localVarReturnType, callback);
     return call;
@@ -219,8 +236,10 @@ public class UserPropertySetsApi {
       Long userPropertySetId,
       List<String> fields,
       final ProgressResponseBody.ProgressListener progressListener,
-      final ProgressRequestBody.ProgressRequestListener progressRequestListener)
+      final ProgressRequestBody.ProgressRequestListener progressRequestListener,
+      String... headerPair)
       throws ApiException {
+
     Object localVarPostBody = null;
 
     // create path and map variables
@@ -247,6 +266,15 @@ public class UserPropertySetsApi {
     final String[] localVarContentTypes = {"text/plain"};
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
     localVarHeaderParams.put("Content-Type", localVarContentType);
+
+    if (headerPair != null && headerPair.length > 0) {
+      if (headerPair.length % 2 != 0) {
+        throw new UnsupportedOperationException("Parameter headerPair must be paired");
+      }
+      for (int i = 0; i < headerPair.length / 2; i++) {
+        localVarHeaderParams.put(headerPair[i], headerPair[i * 2 + 1]);
+      }
+    }
 
     if (progressListener != null) {
       apiClient
@@ -285,7 +313,8 @@ public class UserPropertySetsApi {
       Long userPropertySetId,
       List<String> fields,
       final ProgressResponseBody.ProgressListener progressListener,
-      final ProgressRequestBody.ProgressRequestListener progressRequestListener)
+      final ProgressRequestBody.ProgressRequestListener progressRequestListener,
+      String... headerPair)
       throws ApiException {
 
     // verify the required parameter 'accountId' is set
@@ -296,7 +325,12 @@ public class UserPropertySetsApi {
 
     com.squareup.okhttp.Call call =
         userPropertySetsGetCall(
-            accountId, userPropertySetId, fields, progressListener, progressRequestListener);
+            accountId,
+            userPropertySetId,
+            fields,
+            progressListener,
+            progressRequestListener,
+            headerPair);
     return call;
   }
 
@@ -311,9 +345,10 @@ public class UserPropertySetsApi {
    *     response body
    */
   public UserPropertySetsGetResponse userPropertySetsGet(
-      Long accountId, Long userPropertySetId, List<String> fields) throws ApiException {
+      Long accountId, Long userPropertySetId, List<String> fields, String... headerPair)
+      throws ApiException {
     ApiResponse<UserPropertySetsGetResponse> resp =
-        userPropertySetsGetWithHttpInfo(accountId, userPropertySetId, fields);
+        userPropertySetsGetWithHttpInfo(accountId, userPropertySetId, fields, headerPair);
     return resp.getData();
   }
 
@@ -328,9 +363,11 @@ public class UserPropertySetsApi {
    *     response body
    */
   public ApiResponse<UserPropertySetsGetResponse> userPropertySetsGetWithHttpInfo(
-      Long accountId, Long userPropertySetId, List<String> fields) throws ApiException {
+      Long accountId, Long userPropertySetId, List<String> fields, String... headerPair)
+      throws ApiException {
     com.squareup.okhttp.Call call =
-        userPropertySetsGetValidateBeforeCall(accountId, userPropertySetId, fields, null, null);
+        userPropertySetsGetValidateBeforeCall(
+            accountId, userPropertySetId, fields, null, null, headerPair);
     Type localVarReturnType = new TypeToken<UserPropertySetsGetResponse>() {}.getType();
     return apiClient.execute(call, localVarReturnType);
   }
@@ -349,7 +386,8 @@ public class UserPropertySetsApi {
       Long accountId,
       Long userPropertySetId,
       List<String> fields,
-      final ApiCallback<UserPropertySetsGetResponse> callback)
+      final ApiCallback<UserPropertySetsGetResponse> callback,
+      String... headerPair)
       throws ApiException {
 
     ProgressResponseBody.ProgressListener progressListener = null;
@@ -375,7 +413,12 @@ public class UserPropertySetsApi {
 
     com.squareup.okhttp.Call call =
         userPropertySetsGetValidateBeforeCall(
-            accountId, userPropertySetId, fields, progressListener, progressRequestListener);
+            accountId,
+            userPropertySetId,
+            fields,
+            progressListener,
+            progressRequestListener,
+            headerPair);
     Type localVarReturnType = new TypeToken<UserPropertySetsGetResponse>() {}.getType();
     apiClient.executeAsync(call, localVarReturnType, callback);
     return call;
@@ -392,8 +435,10 @@ public class UserPropertySetsApi {
   public com.squareup.okhttp.Call userPropertySetsUpdateCall(
       UserPropertySetsUpdateRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
-      final ProgressRequestBody.ProgressRequestListener progressRequestListener)
+      final ProgressRequestBody.ProgressRequestListener progressRequestListener,
+      String... headerPair)
       throws ApiException {
+
     Object localVarPostBody = data;
 
     // create path and map variables
@@ -413,6 +458,15 @@ public class UserPropertySetsApi {
     final String[] localVarContentTypes = {"application/json", "application/xml"};
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
     localVarHeaderParams.put("Content-Type", localVarContentType);
+
+    if (headerPair != null && headerPair.length > 0) {
+      if (headerPair.length % 2 != 0) {
+        throw new UnsupportedOperationException("Parameter headerPair must be paired");
+      }
+      for (int i = 0; i < headerPair.length / 2; i++) {
+        localVarHeaderParams.put(headerPair[i], headerPair[i * 2 + 1]);
+      }
+    }
 
     if (progressListener != null) {
       apiClient
@@ -449,7 +503,8 @@ public class UserPropertySetsApi {
   private com.squareup.okhttp.Call userPropertySetsUpdateValidateBeforeCall(
       UserPropertySetsUpdateRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
-      final ProgressRequestBody.ProgressRequestListener progressRequestListener)
+      final ProgressRequestBody.ProgressRequestListener progressRequestListener,
+      String... headerPair)
       throws ApiException {
 
     // verify the required parameter 'data' is set
@@ -459,7 +514,7 @@ public class UserPropertySetsApi {
     }
 
     com.squareup.okhttp.Call call =
-        userPropertySetsUpdateCall(data, progressListener, progressRequestListener);
+        userPropertySetsUpdateCall(data, progressListener, progressRequestListener, headerPair);
     return call;
   }
 
@@ -471,9 +526,10 @@ public class UserPropertySetsApi {
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
-  public UserPropertySetsUpdateResponse userPropertySetsUpdate(UserPropertySetsUpdateRequest data)
-      throws ApiException {
-    ApiResponse<UserPropertySetsUpdateResponse> resp = userPropertySetsUpdateWithHttpInfo(data);
+  public UserPropertySetsUpdateResponse userPropertySetsUpdate(
+      UserPropertySetsUpdateRequest data, String... headerPair) throws ApiException {
+    ApiResponse<UserPropertySetsUpdateResponse> resp =
+        userPropertySetsUpdateWithHttpInfo(data, headerPair);
     return resp.getData();
   }
 
@@ -486,8 +542,9 @@ public class UserPropertySetsApi {
    *     response body
    */
   public ApiResponse<UserPropertySetsUpdateResponse> userPropertySetsUpdateWithHttpInfo(
-      UserPropertySetsUpdateRequest data) throws ApiException {
-    com.squareup.okhttp.Call call = userPropertySetsUpdateValidateBeforeCall(data, null, null);
+      UserPropertySetsUpdateRequest data, String... headerPair) throws ApiException {
+    com.squareup.okhttp.Call call =
+        userPropertySetsUpdateValidateBeforeCall(data, null, null, headerPair);
     Type localVarReturnType = new TypeToken<UserPropertySetsUpdateResponse>() {}.getType();
     return apiClient.execute(call, localVarReturnType);
   }
@@ -502,7 +559,8 @@ public class UserPropertySetsApi {
    */
   public com.squareup.okhttp.Call userPropertySetsUpdateAsync(
       UserPropertySetsUpdateRequest data,
-      final ApiCallback<UserPropertySetsUpdateResponse> callback)
+      final ApiCallback<UserPropertySetsUpdateResponse> callback,
+      String... headerPair)
       throws ApiException {
 
     ProgressResponseBody.ProgressListener progressListener = null;
@@ -527,7 +585,8 @@ public class UserPropertySetsApi {
     }
 
     com.squareup.okhttp.Call call =
-        userPropertySetsUpdateValidateBeforeCall(data, progressListener, progressRequestListener);
+        userPropertySetsUpdateValidateBeforeCall(
+            data, progressListener, progressRequestListener, headerPair);
     Type localVarReturnType = new TypeToken<UserPropertySetsUpdateResponse>() {}.getType();
     apiClient.executeAsync(call, localVarReturnType, callback);
     return call;

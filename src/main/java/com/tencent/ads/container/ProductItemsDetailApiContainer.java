@@ -38,10 +38,14 @@ public class ProductItemsDetailApiContainer extends ApiContainer {
    *     response body
    */
   public ProductItemsDetailGetResponseData productItemsDetailGet(
-      Long accountId, Long productCatalogId, String productOuterId, List<String> fields)
+      Long accountId,
+      Long productCatalogId,
+      String productOuterId,
+      List<String> fields,
+      String... headerPair)
       throws ApiException, TencentAdsResponseException {
     ProductItemsDetailGetResponse resp =
-        api.productItemsDetailGet(accountId, productCatalogId, productOuterId, fields);
+        api.productItemsDetailGet(accountId, productCatalogId, productOuterId, fields, headerPair);
     handleResponse(gson.toJson(resp));
     return resp.getData();
   }

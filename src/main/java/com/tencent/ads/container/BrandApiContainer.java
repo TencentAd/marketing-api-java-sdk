@@ -39,9 +39,10 @@ public class BrandApiContainer extends ApiContainer {
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
-  public BrandAddResponseData brandAdd(Long accountId, String name, File brandImageFile)
+  public BrandAddResponseData brandAdd(
+      Long accountId, String name, File brandImageFile, String... headerPair)
       throws ApiException, TencentAdsResponseException {
-    BrandAddResponse resp = api.brandAdd(accountId, name, brandImageFile);
+    BrandAddResponse resp = api.brandAdd(accountId, name, brandImageFile, headerPair);
     handleResponse(gson.toJson(resp));
     return resp.getData();
   }
@@ -58,9 +59,9 @@ public class BrandApiContainer extends ApiContainer {
    *     response body
    */
   public BrandGetResponseData brandGet(
-      Long accountId, Long page, Long pageSize, List<String> fields)
+      Long accountId, Long page, Long pageSize, List<String> fields, String... headerPair)
       throws ApiException, TencentAdsResponseException {
-    BrandGetResponse resp = api.brandGet(accountId, page, pageSize, fields);
+    BrandGetResponse resp = api.brandGet(accountId, page, pageSize, fields, headerPair);
     handleResponse(gson.toJson(resp));
     return resp.getData();
   }

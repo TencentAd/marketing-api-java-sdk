@@ -34,9 +34,9 @@ public class BidwordFlowApiContainer extends ApiContainer {
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
-  public BidwordFlowGetResponseData bidwordFlowGet(BidwordFlowGetRequest data)
+  public BidwordFlowGetResponseData bidwordFlowGet(BidwordFlowGetRequest data, String... headerPair)
       throws ApiException, TencentAdsResponseException {
-    BidwordFlowGetResponse resp = api.bidwordFlowGet(data);
+    BidwordFlowGetResponse resp = api.bidwordFlowGet(data, headerPair);
     handleResponse(gson.toJson(resp));
     return resp.getData();
   }

@@ -67,8 +67,10 @@ public class AsyncReportFilesApi {
       Boolean weixinOfficialAccountsUpgradeEnabled,
       List<String> fields,
       final ProgressResponseBody.ProgressListener progressListener,
-      final ProgressRequestBody.ProgressRequestListener progressRequestListener)
+      final ProgressRequestBody.ProgressRequestListener progressRequestListener,
+      String... headerPair)
       throws ApiException {
+
     Object localVarPostBody = null;
 
     // create path and map variables
@@ -98,6 +100,15 @@ public class AsyncReportFilesApi {
     final String[] localVarContentTypes = {"text/plain"};
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
     localVarHeaderParams.put("Content-Type", localVarContentType);
+
+    if (headerPair != null && headerPair.length > 0) {
+      if (headerPair.length % 2 != 0) {
+        throw new UnsupportedOperationException("Parameter headerPair must be paired");
+      }
+      for (int i = 0; i < headerPair.length / 2; i++) {
+        localVarHeaderParams.put(headerPair[i], headerPair[i * 2 + 1]);
+      }
+    }
 
     if (progressListener != null) {
       apiClient
@@ -138,7 +149,8 @@ public class AsyncReportFilesApi {
       Boolean weixinOfficialAccountsUpgradeEnabled,
       List<String> fields,
       final ProgressResponseBody.ProgressListener progressListener,
-      final ProgressRequestBody.ProgressRequestListener progressRequestListener)
+      final ProgressRequestBody.ProgressRequestListener progressRequestListener,
+      String... headerPair)
       throws ApiException {
 
     // verify the required parameter 'accountId' is set
@@ -167,7 +179,8 @@ public class AsyncReportFilesApi {
             weixinOfficialAccountsUpgradeEnabled,
             fields,
             progressListener,
-            progressRequestListener);
+            progressRequestListener,
+            headerPair);
     return call;
   }
 
@@ -188,11 +201,12 @@ public class AsyncReportFilesApi {
       Long taskId,
       Long fileId,
       Boolean weixinOfficialAccountsUpgradeEnabled,
-      List<String> fields)
+      List<String> fields,
+      String... headerPair)
       throws ApiException {
     ApiResponse<String> resp =
         asyncReportFilesGetWithHttpInfo(
-            accountId, taskId, fileId, weixinOfficialAccountsUpgradeEnabled, fields);
+            accountId, taskId, fileId, weixinOfficialAccountsUpgradeEnabled, fields, headerPair);
     return resp.getData();
   }
 
@@ -213,11 +227,19 @@ public class AsyncReportFilesApi {
       Long taskId,
       Long fileId,
       Boolean weixinOfficialAccountsUpgradeEnabled,
-      List<String> fields)
+      List<String> fields,
+      String... headerPair)
       throws ApiException {
     com.squareup.okhttp.Call call =
         asyncReportFilesGetValidateBeforeCall(
-            accountId, taskId, fileId, weixinOfficialAccountsUpgradeEnabled, fields, null, null);
+            accountId,
+            taskId,
+            fileId,
+            weixinOfficialAccountsUpgradeEnabled,
+            fields,
+            null,
+            null,
+            headerPair);
     Type localVarReturnType = new TypeToken<String>() {}.getType();
     return apiClient.execute(call, localVarReturnType);
   }
@@ -240,7 +262,8 @@ public class AsyncReportFilesApi {
       Long fileId,
       Boolean weixinOfficialAccountsUpgradeEnabled,
       List<String> fields,
-      final ApiCallback<String> callback)
+      final ApiCallback<String> callback,
+      String... headerPair)
       throws ApiException {
 
     ProgressResponseBody.ProgressListener progressListener = null;
@@ -272,7 +295,8 @@ public class AsyncReportFilesApi {
             weixinOfficialAccountsUpgradeEnabled,
             fields,
             progressListener,
-            progressRequestListener);
+            progressRequestListener,
+            headerPair);
     Type localVarReturnType = new TypeToken<String>() {}.getType();
     apiClient.executeAsync(call, localVarReturnType, callback);
     return call;

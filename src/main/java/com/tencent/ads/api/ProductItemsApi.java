@@ -67,8 +67,10 @@ public class ProductItemsApi {
   public com.squareup.okhttp.Call productItemsAddCall(
       ProductItemsAddRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
-      final ProgressRequestBody.ProgressRequestListener progressRequestListener)
+      final ProgressRequestBody.ProgressRequestListener progressRequestListener,
+      String... headerPair)
       throws ApiException {
+
     Object localVarPostBody = data;
 
     // create path and map variables
@@ -88,6 +90,15 @@ public class ProductItemsApi {
     final String[] localVarContentTypes = {"application/json", "application/xml"};
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
     localVarHeaderParams.put("Content-Type", localVarContentType);
+
+    if (headerPair != null && headerPair.length > 0) {
+      if (headerPair.length % 2 != 0) {
+        throw new UnsupportedOperationException("Parameter headerPair must be paired");
+      }
+      for (int i = 0; i < headerPair.length / 2; i++) {
+        localVarHeaderParams.put(headerPair[i], headerPair[i * 2 + 1]);
+      }
+    }
 
     if (progressListener != null) {
       apiClient
@@ -124,7 +135,8 @@ public class ProductItemsApi {
   private com.squareup.okhttp.Call productItemsAddValidateBeforeCall(
       ProductItemsAddRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
-      final ProgressRequestBody.ProgressRequestListener progressRequestListener)
+      final ProgressRequestBody.ProgressRequestListener progressRequestListener,
+      String... headerPair)
       throws ApiException {
 
     // verify the required parameter 'data' is set
@@ -134,7 +146,7 @@ public class ProductItemsApi {
     }
 
     com.squareup.okhttp.Call call =
-        productItemsAddCall(data, progressListener, progressRequestListener);
+        productItemsAddCall(data, progressListener, progressRequestListener, headerPair);
     return call;
   }
 
@@ -146,8 +158,9 @@ public class ProductItemsApi {
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
-  public ProductItemsAddResponse productItemsAdd(ProductItemsAddRequest data) throws ApiException {
-    ApiResponse<ProductItemsAddResponse> resp = productItemsAddWithHttpInfo(data);
+  public ProductItemsAddResponse productItemsAdd(ProductItemsAddRequest data, String... headerPair)
+      throws ApiException {
+    ApiResponse<ProductItemsAddResponse> resp = productItemsAddWithHttpInfo(data, headerPair);
     return resp.getData();
   }
 
@@ -160,8 +173,8 @@ public class ProductItemsApi {
    *     response body
    */
   public ApiResponse<ProductItemsAddResponse> productItemsAddWithHttpInfo(
-      ProductItemsAddRequest data) throws ApiException {
-    com.squareup.okhttp.Call call = productItemsAddValidateBeforeCall(data, null, null);
+      ProductItemsAddRequest data, String... headerPair) throws ApiException {
+    com.squareup.okhttp.Call call = productItemsAddValidateBeforeCall(data, null, null, headerPair);
     Type localVarReturnType = new TypeToken<ProductItemsAddResponse>() {}.getType();
     return apiClient.execute(call, localVarReturnType);
   }
@@ -175,7 +188,9 @@ public class ProductItemsApi {
    * @throws ApiException If fail to process the API call, e.g. serializing the request body object
    */
   public com.squareup.okhttp.Call productItemsAddAsync(
-      ProductItemsAddRequest data, final ApiCallback<ProductItemsAddResponse> callback)
+      ProductItemsAddRequest data,
+      final ApiCallback<ProductItemsAddResponse> callback,
+      String... headerPair)
       throws ApiException {
 
     ProgressResponseBody.ProgressListener progressListener = null;
@@ -200,7 +215,8 @@ public class ProductItemsApi {
     }
 
     com.squareup.okhttp.Call call =
-        productItemsAddValidateBeforeCall(data, progressListener, progressRequestListener);
+        productItemsAddValidateBeforeCall(
+            data, progressListener, progressRequestListener, headerPair);
     Type localVarReturnType = new TypeToken<ProductItemsAddResponse>() {}.getType();
     apiClient.executeAsync(call, localVarReturnType, callback);
     return call;
@@ -217,8 +233,10 @@ public class ProductItemsApi {
   public com.squareup.okhttp.Call productItemsBatchUpdateCall(
       ProductItemsBatchUpdateRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
-      final ProgressRequestBody.ProgressRequestListener progressRequestListener)
+      final ProgressRequestBody.ProgressRequestListener progressRequestListener,
+      String... headerPair)
       throws ApiException {
+
     Object localVarPostBody = data;
 
     // create path and map variables
@@ -238,6 +256,15 @@ public class ProductItemsApi {
     final String[] localVarContentTypes = {"application/json", "application/xml"};
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
     localVarHeaderParams.put("Content-Type", localVarContentType);
+
+    if (headerPair != null && headerPair.length > 0) {
+      if (headerPair.length % 2 != 0) {
+        throw new UnsupportedOperationException("Parameter headerPair must be paired");
+      }
+      for (int i = 0; i < headerPair.length / 2; i++) {
+        localVarHeaderParams.put(headerPair[i], headerPair[i * 2 + 1]);
+      }
+    }
 
     if (progressListener != null) {
       apiClient
@@ -274,7 +301,8 @@ public class ProductItemsApi {
   private com.squareup.okhttp.Call productItemsBatchUpdateValidateBeforeCall(
       ProductItemsBatchUpdateRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
-      final ProgressRequestBody.ProgressRequestListener progressRequestListener)
+      final ProgressRequestBody.ProgressRequestListener progressRequestListener,
+      String... headerPair)
       throws ApiException {
 
     // verify the required parameter 'data' is set
@@ -284,7 +312,7 @@ public class ProductItemsApi {
     }
 
     com.squareup.okhttp.Call call =
-        productItemsBatchUpdateCall(data, progressListener, progressRequestListener);
+        productItemsBatchUpdateCall(data, progressListener, progressRequestListener, headerPair);
     return call;
   }
 
@@ -297,8 +325,9 @@ public class ProductItemsApi {
    *     response body
    */
   public ProductItemsBatchUpdateResponse productItemsBatchUpdate(
-      ProductItemsBatchUpdateRequest data) throws ApiException {
-    ApiResponse<ProductItemsBatchUpdateResponse> resp = productItemsBatchUpdateWithHttpInfo(data);
+      ProductItemsBatchUpdateRequest data, String... headerPair) throws ApiException {
+    ApiResponse<ProductItemsBatchUpdateResponse> resp =
+        productItemsBatchUpdateWithHttpInfo(data, headerPair);
     return resp.getData();
   }
 
@@ -311,8 +340,9 @@ public class ProductItemsApi {
    *     response body
    */
   public ApiResponse<ProductItemsBatchUpdateResponse> productItemsBatchUpdateWithHttpInfo(
-      ProductItemsBatchUpdateRequest data) throws ApiException {
-    com.squareup.okhttp.Call call = productItemsBatchUpdateValidateBeforeCall(data, null, null);
+      ProductItemsBatchUpdateRequest data, String... headerPair) throws ApiException {
+    com.squareup.okhttp.Call call =
+        productItemsBatchUpdateValidateBeforeCall(data, null, null, headerPair);
     Type localVarReturnType = new TypeToken<ProductItemsBatchUpdateResponse>() {}.getType();
     return apiClient.execute(call, localVarReturnType);
   }
@@ -327,7 +357,8 @@ public class ProductItemsApi {
    */
   public com.squareup.okhttp.Call productItemsBatchUpdateAsync(
       ProductItemsBatchUpdateRequest data,
-      final ApiCallback<ProductItemsBatchUpdateResponse> callback)
+      final ApiCallback<ProductItemsBatchUpdateResponse> callback,
+      String... headerPair)
       throws ApiException {
 
     ProgressResponseBody.ProgressListener progressListener = null;
@@ -352,7 +383,8 @@ public class ProductItemsApi {
     }
 
     com.squareup.okhttp.Call call =
-        productItemsBatchUpdateValidateBeforeCall(data, progressListener, progressRequestListener);
+        productItemsBatchUpdateValidateBeforeCall(
+            data, progressListener, progressRequestListener, headerPair);
     Type localVarReturnType = new TypeToken<ProductItemsBatchUpdateResponse>() {}.getType();
     apiClient.executeAsync(call, localVarReturnType, callback);
     return call;
@@ -375,8 +407,10 @@ public class ProductItemsApi {
       List<FilteringStruct> filtering,
       List<String> fields,
       final ProgressResponseBody.ProgressListener progressListener,
-      final ProgressRequestBody.ProgressRequestListener progressRequestListener)
+      final ProgressRequestBody.ProgressRequestListener progressRequestListener,
+      String... headerPair)
       throws ApiException {
+
     Object localVarPostBody = null;
 
     // create path and map variables
@@ -405,6 +439,15 @@ public class ProductItemsApi {
     final String[] localVarContentTypes = {"text/plain"};
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
     localVarHeaderParams.put("Content-Type", localVarContentType);
+
+    if (headerPair != null && headerPair.length > 0) {
+      if (headerPair.length % 2 != 0) {
+        throw new UnsupportedOperationException("Parameter headerPair must be paired");
+      }
+      for (int i = 0; i < headerPair.length / 2; i++) {
+        localVarHeaderParams.put(headerPair[i], headerPair[i * 2 + 1]);
+      }
+    }
 
     if (progressListener != null) {
       apiClient
@@ -444,7 +487,8 @@ public class ProductItemsApi {
       List<FilteringStruct> filtering,
       List<String> fields,
       final ProgressResponseBody.ProgressListener progressListener,
-      final ProgressRequestBody.ProgressRequestListener progressRequestListener)
+      final ProgressRequestBody.ProgressRequestListener progressRequestListener,
+      String... headerPair)
       throws ApiException {
 
     // verify the required parameter 'accountId' is set
@@ -466,7 +510,8 @@ public class ProductItemsApi {
             filtering,
             fields,
             progressListener,
-            progressRequestListener);
+            progressRequestListener,
+            headerPair);
     return call;
   }
 
@@ -482,10 +527,14 @@ public class ProductItemsApi {
    *     response body
    */
   public ProductItemsGetResponse productItemsGet(
-      Long accountId, Long productCatalogId, List<FilteringStruct> filtering, List<String> fields)
+      Long accountId,
+      Long productCatalogId,
+      List<FilteringStruct> filtering,
+      List<String> fields,
+      String... headerPair)
       throws ApiException {
     ApiResponse<ProductItemsGetResponse> resp =
-        productItemsGetWithHttpInfo(accountId, productCatalogId, filtering, fields);
+        productItemsGetWithHttpInfo(accountId, productCatalogId, filtering, fields, headerPair);
     return resp.getData();
   }
 
@@ -501,11 +550,15 @@ public class ProductItemsApi {
    *     response body
    */
   public ApiResponse<ProductItemsGetResponse> productItemsGetWithHttpInfo(
-      Long accountId, Long productCatalogId, List<FilteringStruct> filtering, List<String> fields)
+      Long accountId,
+      Long productCatalogId,
+      List<FilteringStruct> filtering,
+      List<String> fields,
+      String... headerPair)
       throws ApiException {
     com.squareup.okhttp.Call call =
         productItemsGetValidateBeforeCall(
-            accountId, productCatalogId, filtering, fields, null, null);
+            accountId, productCatalogId, filtering, fields, null, null, headerPair);
     Type localVarReturnType = new TypeToken<ProductItemsGetResponse>() {}.getType();
     return apiClient.execute(call, localVarReturnType);
   }
@@ -526,7 +579,8 @@ public class ProductItemsApi {
       Long productCatalogId,
       List<FilteringStruct> filtering,
       List<String> fields,
-      final ApiCallback<ProductItemsGetResponse> callback)
+      final ApiCallback<ProductItemsGetResponse> callback,
+      String... headerPair)
       throws ApiException {
 
     ProgressResponseBody.ProgressListener progressListener = null;
@@ -557,7 +611,8 @@ public class ProductItemsApi {
             filtering,
             fields,
             progressListener,
-            progressRequestListener);
+            progressRequestListener,
+            headerPair);
     Type localVarReturnType = new TypeToken<ProductItemsGetResponse>() {}.getType();
     apiClient.executeAsync(call, localVarReturnType, callback);
     return call;
@@ -574,8 +629,10 @@ public class ProductItemsApi {
   public com.squareup.okhttp.Call productItemsUpdateCall(
       ProductItemsUpdateRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
-      final ProgressRequestBody.ProgressRequestListener progressRequestListener)
+      final ProgressRequestBody.ProgressRequestListener progressRequestListener,
+      String... headerPair)
       throws ApiException {
+
     Object localVarPostBody = data;
 
     // create path and map variables
@@ -595,6 +652,15 @@ public class ProductItemsApi {
     final String[] localVarContentTypes = {"application/json", "application/xml"};
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
     localVarHeaderParams.put("Content-Type", localVarContentType);
+
+    if (headerPair != null && headerPair.length > 0) {
+      if (headerPair.length % 2 != 0) {
+        throw new UnsupportedOperationException("Parameter headerPair must be paired");
+      }
+      for (int i = 0; i < headerPair.length / 2; i++) {
+        localVarHeaderParams.put(headerPair[i], headerPair[i * 2 + 1]);
+      }
+    }
 
     if (progressListener != null) {
       apiClient
@@ -631,7 +697,8 @@ public class ProductItemsApi {
   private com.squareup.okhttp.Call productItemsUpdateValidateBeforeCall(
       ProductItemsUpdateRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
-      final ProgressRequestBody.ProgressRequestListener progressRequestListener)
+      final ProgressRequestBody.ProgressRequestListener progressRequestListener,
+      String... headerPair)
       throws ApiException {
 
     // verify the required parameter 'data' is set
@@ -641,7 +708,7 @@ public class ProductItemsApi {
     }
 
     com.squareup.okhttp.Call call =
-        productItemsUpdateCall(data, progressListener, progressRequestListener);
+        productItemsUpdateCall(data, progressListener, progressRequestListener, headerPair);
     return call;
   }
 
@@ -653,9 +720,9 @@ public class ProductItemsApi {
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
-  public ProductItemsUpdateResponse productItemsUpdate(ProductItemsUpdateRequest data)
-      throws ApiException {
-    ApiResponse<ProductItemsUpdateResponse> resp = productItemsUpdateWithHttpInfo(data);
+  public ProductItemsUpdateResponse productItemsUpdate(
+      ProductItemsUpdateRequest data, String... headerPair) throws ApiException {
+    ApiResponse<ProductItemsUpdateResponse> resp = productItemsUpdateWithHttpInfo(data, headerPair);
     return resp.getData();
   }
 
@@ -668,8 +735,9 @@ public class ProductItemsApi {
    *     response body
    */
   public ApiResponse<ProductItemsUpdateResponse> productItemsUpdateWithHttpInfo(
-      ProductItemsUpdateRequest data) throws ApiException {
-    com.squareup.okhttp.Call call = productItemsUpdateValidateBeforeCall(data, null, null);
+      ProductItemsUpdateRequest data, String... headerPair) throws ApiException {
+    com.squareup.okhttp.Call call =
+        productItemsUpdateValidateBeforeCall(data, null, null, headerPair);
     Type localVarReturnType = new TypeToken<ProductItemsUpdateResponse>() {}.getType();
     return apiClient.execute(call, localVarReturnType);
   }
@@ -683,7 +751,9 @@ public class ProductItemsApi {
    * @throws ApiException If fail to process the API call, e.g. serializing the request body object
    */
   public com.squareup.okhttp.Call productItemsUpdateAsync(
-      ProductItemsUpdateRequest data, final ApiCallback<ProductItemsUpdateResponse> callback)
+      ProductItemsUpdateRequest data,
+      final ApiCallback<ProductItemsUpdateResponse> callback,
+      String... headerPair)
       throws ApiException {
 
     ProgressResponseBody.ProgressListener progressListener = null;
@@ -708,7 +778,8 @@ public class ProductItemsApi {
     }
 
     com.squareup.okhttp.Call call =
-        productItemsUpdateValidateBeforeCall(data, progressListener, progressRequestListener);
+        productItemsUpdateValidateBeforeCall(
+            data, progressListener, progressRequestListener, headerPair);
     Type localVarReturnType = new TypeToken<ProductItemsUpdateResponse>() {}.getType();
     apiClient.executeAsync(call, localVarReturnType, callback);
     return call;

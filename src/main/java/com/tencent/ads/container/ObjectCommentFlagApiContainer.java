@@ -34,8 +34,9 @@ public class ObjectCommentFlagApiContainer extends ApiContainer {
    *     response body
    */
   public ObjectCommentFlagUpdateResponse objectCommentFlagUpdate(
-      ObjectCommentFlagUpdateRequest data) throws ApiException, TencentAdsResponseException {
-    ObjectCommentFlagUpdateResponse resp = api.objectCommentFlagUpdate(data);
+      ObjectCommentFlagUpdateRequest data, String... headerPair)
+      throws ApiException, TencentAdsResponseException {
+    ObjectCommentFlagUpdateResponse resp = api.objectCommentFlagUpdate(data, headerPair);
     handleResponse(gson.toJson(resp));
 
     return resp;

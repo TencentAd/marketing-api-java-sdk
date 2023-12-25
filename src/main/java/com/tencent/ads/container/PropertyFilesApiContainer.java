@@ -38,10 +38,15 @@ public class PropertyFilesApiContainer extends ApiContainer {
    *     response body
    */
   public PropertyFilesAddResponse propertyFilesAdd(
-      Long accountId, Long propertySetId, Long sessionId, String fileName, File file)
+      Long accountId,
+      Long propertySetId,
+      Long sessionId,
+      String fileName,
+      File file,
+      String... headerPair)
       throws ApiException, TencentAdsResponseException {
     PropertyFilesAddResponse resp =
-        api.propertyFilesAdd(accountId, propertySetId, sessionId, fileName, file);
+        api.propertyFilesAdd(accountId, propertySetId, sessionId, fileName, file, headerPair);
     handleResponse(gson.toJson(resp));
 
     return resp;

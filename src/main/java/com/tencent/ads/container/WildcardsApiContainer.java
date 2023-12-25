@@ -34,9 +34,9 @@ public class WildcardsApiContainer extends ApiContainer {
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
-  public WildcardsGetResponseData wildcardsGet(WildcardsGetRequest data)
+  public WildcardsGetResponseData wildcardsGet(WildcardsGetRequest data, String... headerPair)
       throws ApiException, TencentAdsResponseException {
-    WildcardsGetResponse resp = api.wildcardsGet(data);
+    WildcardsGetResponse resp = api.wildcardsGet(data, headerPair);
     handleResponse(gson.toJson(resp));
     return resp.getData();
   }

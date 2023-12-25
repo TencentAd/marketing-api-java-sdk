@@ -67,8 +67,10 @@ public class SplitTestsApi {
   public com.squareup.okhttp.Call splitTestsAddCall(
       SplitTestsAddRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
-      final ProgressRequestBody.ProgressRequestListener progressRequestListener)
+      final ProgressRequestBody.ProgressRequestListener progressRequestListener,
+      String... headerPair)
       throws ApiException {
+
     Object localVarPostBody = data;
 
     // create path and map variables
@@ -88,6 +90,15 @@ public class SplitTestsApi {
     final String[] localVarContentTypes = {"application/json", "application/xml"};
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
     localVarHeaderParams.put("Content-Type", localVarContentType);
+
+    if (headerPair != null && headerPair.length > 0) {
+      if (headerPair.length % 2 != 0) {
+        throw new UnsupportedOperationException("Parameter headerPair must be paired");
+      }
+      for (int i = 0; i < headerPair.length / 2; i++) {
+        localVarHeaderParams.put(headerPair[i], headerPair[i * 2 + 1]);
+      }
+    }
 
     if (progressListener != null) {
       apiClient
@@ -124,7 +135,8 @@ public class SplitTestsApi {
   private com.squareup.okhttp.Call splitTestsAddValidateBeforeCall(
       SplitTestsAddRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
-      final ProgressRequestBody.ProgressRequestListener progressRequestListener)
+      final ProgressRequestBody.ProgressRequestListener progressRequestListener,
+      String... headerPair)
       throws ApiException {
 
     // verify the required parameter 'data' is set
@@ -134,7 +146,7 @@ public class SplitTestsApi {
     }
 
     com.squareup.okhttp.Call call =
-        splitTestsAddCall(data, progressListener, progressRequestListener);
+        splitTestsAddCall(data, progressListener, progressRequestListener, headerPair);
     return call;
   }
 
@@ -146,8 +158,9 @@ public class SplitTestsApi {
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
-  public SplitTestsAddResponse splitTestsAdd(SplitTestsAddRequest data) throws ApiException {
-    ApiResponse<SplitTestsAddResponse> resp = splitTestsAddWithHttpInfo(data);
+  public SplitTestsAddResponse splitTestsAdd(SplitTestsAddRequest data, String... headerPair)
+      throws ApiException {
+    ApiResponse<SplitTestsAddResponse> resp = splitTestsAddWithHttpInfo(data, headerPair);
     return resp.getData();
   }
 
@@ -159,9 +172,9 @@ public class SplitTestsApi {
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
-  public ApiResponse<SplitTestsAddResponse> splitTestsAddWithHttpInfo(SplitTestsAddRequest data)
-      throws ApiException {
-    com.squareup.okhttp.Call call = splitTestsAddValidateBeforeCall(data, null, null);
+  public ApiResponse<SplitTestsAddResponse> splitTestsAddWithHttpInfo(
+      SplitTestsAddRequest data, String... headerPair) throws ApiException {
+    com.squareup.okhttp.Call call = splitTestsAddValidateBeforeCall(data, null, null, headerPair);
     Type localVarReturnType = new TypeToken<SplitTestsAddResponse>() {}.getType();
     return apiClient.execute(call, localVarReturnType);
   }
@@ -175,7 +188,9 @@ public class SplitTestsApi {
    * @throws ApiException If fail to process the API call, e.g. serializing the request body object
    */
   public com.squareup.okhttp.Call splitTestsAddAsync(
-      SplitTestsAddRequest data, final ApiCallback<SplitTestsAddResponse> callback)
+      SplitTestsAddRequest data,
+      final ApiCallback<SplitTestsAddResponse> callback,
+      String... headerPair)
       throws ApiException {
 
     ProgressResponseBody.ProgressListener progressListener = null;
@@ -200,7 +215,8 @@ public class SplitTestsApi {
     }
 
     com.squareup.okhttp.Call call =
-        splitTestsAddValidateBeforeCall(data, progressListener, progressRequestListener);
+        splitTestsAddValidateBeforeCall(
+            data, progressListener, progressRequestListener, headerPair);
     Type localVarReturnType = new TypeToken<SplitTestsAddResponse>() {}.getType();
     apiClient.executeAsync(call, localVarReturnType, callback);
     return call;
@@ -217,8 +233,10 @@ public class SplitTestsApi {
   public com.squareup.okhttp.Call splitTestsDeleteCall(
       SplitTestsDeleteRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
-      final ProgressRequestBody.ProgressRequestListener progressRequestListener)
+      final ProgressRequestBody.ProgressRequestListener progressRequestListener,
+      String... headerPair)
       throws ApiException {
+
     Object localVarPostBody = data;
 
     // create path and map variables
@@ -238,6 +256,15 @@ public class SplitTestsApi {
     final String[] localVarContentTypes = {"application/json", "application/xml"};
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
     localVarHeaderParams.put("Content-Type", localVarContentType);
+
+    if (headerPair != null && headerPair.length > 0) {
+      if (headerPair.length % 2 != 0) {
+        throw new UnsupportedOperationException("Parameter headerPair must be paired");
+      }
+      for (int i = 0; i < headerPair.length / 2; i++) {
+        localVarHeaderParams.put(headerPair[i], headerPair[i * 2 + 1]);
+      }
+    }
 
     if (progressListener != null) {
       apiClient
@@ -274,7 +301,8 @@ public class SplitTestsApi {
   private com.squareup.okhttp.Call splitTestsDeleteValidateBeforeCall(
       SplitTestsDeleteRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
-      final ProgressRequestBody.ProgressRequestListener progressRequestListener)
+      final ProgressRequestBody.ProgressRequestListener progressRequestListener,
+      String... headerPair)
       throws ApiException {
 
     // verify the required parameter 'data' is set
@@ -284,7 +312,7 @@ public class SplitTestsApi {
     }
 
     com.squareup.okhttp.Call call =
-        splitTestsDeleteCall(data, progressListener, progressRequestListener);
+        splitTestsDeleteCall(data, progressListener, progressRequestListener, headerPair);
     return call;
   }
 
@@ -296,9 +324,9 @@ public class SplitTestsApi {
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
-  public SplitTestsDeleteResponse splitTestsDelete(SplitTestsDeleteRequest data)
-      throws ApiException {
-    ApiResponse<SplitTestsDeleteResponse> resp = splitTestsDeleteWithHttpInfo(data);
+  public SplitTestsDeleteResponse splitTestsDelete(
+      SplitTestsDeleteRequest data, String... headerPair) throws ApiException {
+    ApiResponse<SplitTestsDeleteResponse> resp = splitTestsDeleteWithHttpInfo(data, headerPair);
     return resp.getData();
   }
 
@@ -311,8 +339,9 @@ public class SplitTestsApi {
    *     response body
    */
   public ApiResponse<SplitTestsDeleteResponse> splitTestsDeleteWithHttpInfo(
-      SplitTestsDeleteRequest data) throws ApiException {
-    com.squareup.okhttp.Call call = splitTestsDeleteValidateBeforeCall(data, null, null);
+      SplitTestsDeleteRequest data, String... headerPair) throws ApiException {
+    com.squareup.okhttp.Call call =
+        splitTestsDeleteValidateBeforeCall(data, null, null, headerPair);
     Type localVarReturnType = new TypeToken<SplitTestsDeleteResponse>() {}.getType();
     return apiClient.execute(call, localVarReturnType);
   }
@@ -326,7 +355,9 @@ public class SplitTestsApi {
    * @throws ApiException If fail to process the API call, e.g. serializing the request body object
    */
   public com.squareup.okhttp.Call splitTestsDeleteAsync(
-      SplitTestsDeleteRequest data, final ApiCallback<SplitTestsDeleteResponse> callback)
+      SplitTestsDeleteRequest data,
+      final ApiCallback<SplitTestsDeleteResponse> callback,
+      String... headerPair)
       throws ApiException {
 
     ProgressResponseBody.ProgressListener progressListener = null;
@@ -351,7 +382,8 @@ public class SplitTestsApi {
     }
 
     com.squareup.okhttp.Call call =
-        splitTestsDeleteValidateBeforeCall(data, progressListener, progressRequestListener);
+        splitTestsDeleteValidateBeforeCall(
+            data, progressListener, progressRequestListener, headerPair);
     Type localVarReturnType = new TypeToken<SplitTestsDeleteResponse>() {}.getType();
     apiClient.executeAsync(call, localVarReturnType, callback);
     return call;
@@ -376,8 +408,10 @@ public class SplitTestsApi {
       Long pageSize,
       List<String> fields,
       final ProgressResponseBody.ProgressListener progressListener,
-      final ProgressRequestBody.ProgressRequestListener progressRequestListener)
+      final ProgressRequestBody.ProgressRequestListener progressRequestListener,
+      String... headerPair)
       throws ApiException {
+
     Object localVarPostBody = null;
 
     // create path and map variables
@@ -407,6 +441,15 @@ public class SplitTestsApi {
     final String[] localVarContentTypes = {"text/plain"};
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
     localVarHeaderParams.put("Content-Type", localVarContentType);
+
+    if (headerPair != null && headerPair.length > 0) {
+      if (headerPair.length % 2 != 0) {
+        throw new UnsupportedOperationException("Parameter headerPair must be paired");
+      }
+      for (int i = 0; i < headerPair.length / 2; i++) {
+        localVarHeaderParams.put(headerPair[i], headerPair[i * 2 + 1]);
+      }
+    }
 
     if (progressListener != null) {
       apiClient
@@ -447,7 +490,8 @@ public class SplitTestsApi {
       Long pageSize,
       List<String> fields,
       final ProgressResponseBody.ProgressListener progressListener,
-      final ProgressRequestBody.ProgressRequestListener progressRequestListener)
+      final ProgressRequestBody.ProgressRequestListener progressRequestListener,
+      String... headerPair)
       throws ApiException {
 
     // verify the required parameter 'accountId' is set
@@ -464,7 +508,8 @@ public class SplitTestsApi {
             pageSize,
             fields,
             progressListener,
-            progressRequestListener);
+            progressRequestListener,
+            headerPair);
     return call;
   }
 
@@ -485,10 +530,11 @@ public class SplitTestsApi {
       List<FilteringStruct> filtering,
       Long page,
       Long pageSize,
-      List<String> fields)
+      List<String> fields,
+      String... headerPair)
       throws ApiException {
     ApiResponse<SplitTestsGetResponse> resp =
-        splitTestsGetWithHttpInfo(accountId, filtering, page, pageSize, fields);
+        splitTestsGetWithHttpInfo(accountId, filtering, page, pageSize, fields, headerPair);
     return resp.getData();
   }
 
@@ -509,10 +555,12 @@ public class SplitTestsApi {
       List<FilteringStruct> filtering,
       Long page,
       Long pageSize,
-      List<String> fields)
+      List<String> fields,
+      String... headerPair)
       throws ApiException {
     com.squareup.okhttp.Call call =
-        splitTestsGetValidateBeforeCall(accountId, filtering, page, pageSize, fields, null, null);
+        splitTestsGetValidateBeforeCall(
+            accountId, filtering, page, pageSize, fields, null, null, headerPair);
     Type localVarReturnType = new TypeToken<SplitTestsGetResponse>() {}.getType();
     return apiClient.execute(call, localVarReturnType);
   }
@@ -535,7 +583,8 @@ public class SplitTestsApi {
       Long page,
       Long pageSize,
       List<String> fields,
-      final ApiCallback<SplitTestsGetResponse> callback)
+      final ApiCallback<SplitTestsGetResponse> callback,
+      String... headerPair)
       throws ApiException {
 
     ProgressResponseBody.ProgressListener progressListener = null;
@@ -567,7 +616,8 @@ public class SplitTestsApi {
             pageSize,
             fields,
             progressListener,
-            progressRequestListener);
+            progressRequestListener,
+            headerPair);
     Type localVarReturnType = new TypeToken<SplitTestsGetResponse>() {}.getType();
     apiClient.executeAsync(call, localVarReturnType, callback);
     return call;
@@ -584,8 +634,10 @@ public class SplitTestsApi {
   public com.squareup.okhttp.Call splitTestsUpdateCall(
       SplitTestsUpdateRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
-      final ProgressRequestBody.ProgressRequestListener progressRequestListener)
+      final ProgressRequestBody.ProgressRequestListener progressRequestListener,
+      String... headerPair)
       throws ApiException {
+
     Object localVarPostBody = data;
 
     // create path and map variables
@@ -605,6 +657,15 @@ public class SplitTestsApi {
     final String[] localVarContentTypes = {"application/json", "application/xml"};
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
     localVarHeaderParams.put("Content-Type", localVarContentType);
+
+    if (headerPair != null && headerPair.length > 0) {
+      if (headerPair.length % 2 != 0) {
+        throw new UnsupportedOperationException("Parameter headerPair must be paired");
+      }
+      for (int i = 0; i < headerPair.length / 2; i++) {
+        localVarHeaderParams.put(headerPair[i], headerPair[i * 2 + 1]);
+      }
+    }
 
     if (progressListener != null) {
       apiClient
@@ -641,7 +702,8 @@ public class SplitTestsApi {
   private com.squareup.okhttp.Call splitTestsUpdateValidateBeforeCall(
       SplitTestsUpdateRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
-      final ProgressRequestBody.ProgressRequestListener progressRequestListener)
+      final ProgressRequestBody.ProgressRequestListener progressRequestListener,
+      String... headerPair)
       throws ApiException {
 
     // verify the required parameter 'data' is set
@@ -651,7 +713,7 @@ public class SplitTestsApi {
     }
 
     com.squareup.okhttp.Call call =
-        splitTestsUpdateCall(data, progressListener, progressRequestListener);
+        splitTestsUpdateCall(data, progressListener, progressRequestListener, headerPair);
     return call;
   }
 
@@ -663,9 +725,9 @@ public class SplitTestsApi {
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
-  public SplitTestsUpdateResponse splitTestsUpdate(SplitTestsUpdateRequest data)
-      throws ApiException {
-    ApiResponse<SplitTestsUpdateResponse> resp = splitTestsUpdateWithHttpInfo(data);
+  public SplitTestsUpdateResponse splitTestsUpdate(
+      SplitTestsUpdateRequest data, String... headerPair) throws ApiException {
+    ApiResponse<SplitTestsUpdateResponse> resp = splitTestsUpdateWithHttpInfo(data, headerPair);
     return resp.getData();
   }
 
@@ -678,8 +740,9 @@ public class SplitTestsApi {
    *     response body
    */
   public ApiResponse<SplitTestsUpdateResponse> splitTestsUpdateWithHttpInfo(
-      SplitTestsUpdateRequest data) throws ApiException {
-    com.squareup.okhttp.Call call = splitTestsUpdateValidateBeforeCall(data, null, null);
+      SplitTestsUpdateRequest data, String... headerPair) throws ApiException {
+    com.squareup.okhttp.Call call =
+        splitTestsUpdateValidateBeforeCall(data, null, null, headerPair);
     Type localVarReturnType = new TypeToken<SplitTestsUpdateResponse>() {}.getType();
     return apiClient.execute(call, localVarReturnType);
   }
@@ -693,7 +756,9 @@ public class SplitTestsApi {
    * @throws ApiException If fail to process the API call, e.g. serializing the request body object
    */
   public com.squareup.okhttp.Call splitTestsUpdateAsync(
-      SplitTestsUpdateRequest data, final ApiCallback<SplitTestsUpdateResponse> callback)
+      SplitTestsUpdateRequest data,
+      final ApiCallback<SplitTestsUpdateResponse> callback,
+      String... headerPair)
       throws ApiException {
 
     ProgressResponseBody.ProgressListener progressListener = null;
@@ -718,7 +783,8 @@ public class SplitTestsApi {
     }
 
     com.squareup.okhttp.Call call =
-        splitTestsUpdateValidateBeforeCall(data, progressListener, progressRequestListener);
+        splitTestsUpdateValidateBeforeCall(
+            data, progressListener, progressRequestListener, headerPair);
     Type localVarReturnType = new TypeToken<SplitTestsUpdateResponse>() {}.getType();
     apiClient.executeAsync(call, localVarReturnType, callback);
     return call;

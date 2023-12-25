@@ -45,11 +45,12 @@ public class OptimizationGoalPermissionsApiContainer extends ApiContainer {
       String promotedObjectType,
       String bidMode,
       String promotedObjectId,
-      List<String> fields)
+      List<String> fields,
+      String... headerPair)
       throws ApiException, TencentAdsResponseException {
     OptimizationGoalPermissionsGetResponse resp =
         api.optimizationGoalPermissionsGet(
-            accountId, siteSet, promotedObjectType, bidMode, promotedObjectId, fields);
+            accountId, siteSet, promotedObjectType, bidMode, promotedObjectId, fields, headerPair);
     handleResponse(gson.toJson(resp));
     return resp.getData();
   }

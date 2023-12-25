@@ -67,8 +67,10 @@ public class TargetingTagsApi {
       TagSpec tagSpec,
       List<String> fields,
       final ProgressResponseBody.ProgressListener progressListener,
-      final ProgressRequestBody.ProgressRequestListener progressRequestListener)
+      final ProgressRequestBody.ProgressRequestListener progressRequestListener,
+      String... headerPair)
       throws ApiException {
+
     Object localVarPostBody = null;
 
     // create path and map variables
@@ -94,6 +96,15 @@ public class TargetingTagsApi {
     final String[] localVarContentTypes = {"text/plain"};
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
     localVarHeaderParams.put("Content-Type", localVarContentType);
+
+    if (headerPair != null && headerPair.length > 0) {
+      if (headerPair.length % 2 != 0) {
+        throw new UnsupportedOperationException("Parameter headerPair must be paired");
+      }
+      for (int i = 0; i < headerPair.length / 2; i++) {
+        localVarHeaderParams.put(headerPair[i], headerPair[i * 2 + 1]);
+      }
+    }
 
     if (progressListener != null) {
       apiClient
@@ -133,7 +144,8 @@ public class TargetingTagsApi {
       TagSpec tagSpec,
       List<String> fields,
       final ProgressResponseBody.ProgressListener progressListener,
-      final ProgressRequestBody.ProgressRequestListener progressRequestListener)
+      final ProgressRequestBody.ProgressRequestListener progressRequestListener,
+      String... headerPair)
       throws ApiException {
 
     // verify the required parameter 'type' is set
@@ -144,7 +156,13 @@ public class TargetingTagsApi {
 
     com.squareup.okhttp.Call call =
         targetingTagsGetCall(
-            type, accountId, tagSpec, fields, progressListener, progressRequestListener);
+            type,
+            accountId,
+            tagSpec,
+            fields,
+            progressListener,
+            progressRequestListener,
+            headerPair);
     return call;
   }
 
@@ -160,9 +178,10 @@ public class TargetingTagsApi {
    *     response body
    */
   public TargetingTagsGetResponse targetingTagsGet(
-      String type, Long accountId, TagSpec tagSpec, List<String> fields) throws ApiException {
+      String type, Long accountId, TagSpec tagSpec, List<String> fields, String... headerPair)
+      throws ApiException {
     ApiResponse<TargetingTagsGetResponse> resp =
-        targetingTagsGetWithHttpInfo(type, accountId, tagSpec, fields);
+        targetingTagsGetWithHttpInfo(type, accountId, tagSpec, fields, headerPair);
     return resp.getData();
   }
 
@@ -178,9 +197,11 @@ public class TargetingTagsApi {
    *     response body
    */
   public ApiResponse<TargetingTagsGetResponse> targetingTagsGetWithHttpInfo(
-      String type, Long accountId, TagSpec tagSpec, List<String> fields) throws ApiException {
+      String type, Long accountId, TagSpec tagSpec, List<String> fields, String... headerPair)
+      throws ApiException {
     com.squareup.okhttp.Call call =
-        targetingTagsGetValidateBeforeCall(type, accountId, tagSpec, fields, null, null);
+        targetingTagsGetValidateBeforeCall(
+            type, accountId, tagSpec, fields, null, null, headerPair);
     Type localVarReturnType = new TypeToken<TargetingTagsGetResponse>() {}.getType();
     return apiClient.execute(call, localVarReturnType);
   }
@@ -201,7 +222,8 @@ public class TargetingTagsApi {
       Long accountId,
       TagSpec tagSpec,
       List<String> fields,
-      final ApiCallback<TargetingTagsGetResponse> callback)
+      final ApiCallback<TargetingTagsGetResponse> callback,
+      String... headerPair)
       throws ApiException {
 
     ProgressResponseBody.ProgressListener progressListener = null;
@@ -227,7 +249,13 @@ public class TargetingTagsApi {
 
     com.squareup.okhttp.Call call =
         targetingTagsGetValidateBeforeCall(
-            type, accountId, tagSpec, fields, progressListener, progressRequestListener);
+            type,
+            accountId,
+            tagSpec,
+            fields,
+            progressListener,
+            progressRequestListener,
+            headerPair);
     Type localVarReturnType = new TypeToken<TargetingTagsGetResponse>() {}.getType();
     apiClient.executeAsync(call, localVarReturnType, callback);
     return call;

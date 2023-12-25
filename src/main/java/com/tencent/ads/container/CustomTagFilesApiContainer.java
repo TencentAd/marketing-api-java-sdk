@@ -49,10 +49,12 @@ public class CustomTagFilesApiContainer extends ApiContainer {
       Long tagId,
       File file,
       String operationType,
-      String openAppId)
+      String openAppId,
+      String... headerPair)
       throws ApiException, TencentAdsResponseException {
     CustomTagFilesAddResponse resp =
-        api.customTagFilesAdd(accountId, userIdType, tagId, file, operationType, openAppId);
+        api.customTagFilesAdd(
+            accountId, userIdType, tagId, file, operationType, openAppId, headerPair);
     handleResponse(gson.toJson(resp));
     return resp.getData();
   }
@@ -74,10 +76,11 @@ public class CustomTagFilesApiContainer extends ApiContainer {
       List<FilteringStruct> filtering,
       Long page,
       Long pageSize,
-      List<String> fields)
+      List<String> fields,
+      String... headerPair)
       throws ApiException, TencentAdsResponseException {
     CustomTagFilesGetResponse resp =
-        api.customTagFilesGet(accountId, filtering, page, pageSize, fields);
+        api.customTagFilesGet(accountId, filtering, page, pageSize, fields, headerPair);
     handleResponse(gson.toJson(resp));
     return resp.getData();
   }

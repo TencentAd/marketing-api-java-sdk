@@ -69,8 +69,10 @@ public class PropertyFilesApi {
       String fileName,
       File file,
       final ProgressResponseBody.ProgressListener progressListener,
-      final ProgressRequestBody.ProgressRequestListener progressRequestListener)
+      final ProgressRequestBody.ProgressRequestListener progressRequestListener,
+      String... headerPair)
       throws ApiException {
+
     Object localVarPostBody = null;
 
     // create path and map variables
@@ -95,6 +97,15 @@ public class PropertyFilesApi {
     final String[] localVarContentTypes = {"multipart/form-data"};
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
     localVarHeaderParams.put("Content-Type", localVarContentType);
+
+    if (headerPair != null && headerPair.length > 0) {
+      if (headerPair.length % 2 != 0) {
+        throw new UnsupportedOperationException("Parameter headerPair must be paired");
+      }
+      for (int i = 0; i < headerPair.length / 2; i++) {
+        localVarHeaderParams.put(headerPair[i], headerPair[i * 2 + 1]);
+      }
+    }
 
     if (progressListener != null) {
       apiClient
@@ -135,7 +146,8 @@ public class PropertyFilesApi {
       String fileName,
       File file,
       final ProgressResponseBody.ProgressListener progressListener,
-      final ProgressRequestBody.ProgressRequestListener progressRequestListener)
+      final ProgressRequestBody.ProgressRequestListener progressRequestListener,
+      String... headerPair)
       throws ApiException {
 
     // verify the required parameter 'accountId' is set
@@ -176,7 +188,8 @@ public class PropertyFilesApi {
             fileName,
             file,
             progressListener,
-            progressRequestListener);
+            progressRequestListener,
+            headerPair);
     return call;
   }
 
@@ -193,10 +206,16 @@ public class PropertyFilesApi {
    *     response body
    */
   public PropertyFilesAddResponse propertyFilesAdd(
-      Long accountId, Long propertySetId, Long sessionId, String fileName, File file)
+      Long accountId,
+      Long propertySetId,
+      Long sessionId,
+      String fileName,
+      File file,
+      String... headerPair)
       throws ApiException {
     ApiResponse<PropertyFilesAddResponse> resp =
-        propertyFilesAddWithHttpInfo(accountId, propertySetId, sessionId, fileName, file);
+        propertyFilesAddWithHttpInfo(
+            accountId, propertySetId, sessionId, fileName, file, headerPair);
     return resp.getData();
   }
 
@@ -213,11 +232,16 @@ public class PropertyFilesApi {
    *     response body
    */
   public ApiResponse<PropertyFilesAddResponse> propertyFilesAddWithHttpInfo(
-      Long accountId, Long propertySetId, Long sessionId, String fileName, File file)
+      Long accountId,
+      Long propertySetId,
+      Long sessionId,
+      String fileName,
+      File file,
+      String... headerPair)
       throws ApiException {
     com.squareup.okhttp.Call call =
         propertyFilesAddValidateBeforeCall(
-            accountId, propertySetId, sessionId, fileName, file, null, null);
+            accountId, propertySetId, sessionId, fileName, file, null, null, headerPair);
     Type localVarReturnType = new TypeToken<PropertyFilesAddResponse>() {}.getType();
     return apiClient.execute(call, localVarReturnType);
   }
@@ -240,7 +264,8 @@ public class PropertyFilesApi {
       Long sessionId,
       String fileName,
       File file,
-      final ApiCallback<PropertyFilesAddResponse> callback)
+      final ApiCallback<PropertyFilesAddResponse> callback,
+      String... headerPair)
       throws ApiException {
 
     ProgressResponseBody.ProgressListener progressListener = null;
@@ -272,7 +297,8 @@ public class PropertyFilesApi {
             fileName,
             file,
             progressListener,
-            progressRequestListener);
+            progressRequestListener,
+            headerPair);
     Type localVarReturnType = new TypeToken<PropertyFilesAddResponse>() {}.getType();
     apiClient.executeAsync(call, localVarReturnType, callback);
     return call;

@@ -43,10 +43,12 @@ public class AuthorizationApiContainer extends ApiContainer {
       String redirectUri,
       Long accountId,
       String wechatAccountId,
-      List<String> fields)
+      List<String> fields,
+      String... headerPair)
       throws ApiException, TencentAdsResponseException {
     String resp =
-        api.authorizationWechatBind(accessToken, redirectUri, accountId, wechatAccountId, fields);
+        api.authorizationWechatBind(
+            accessToken, redirectUri, accountId, wechatAccountId, fields, headerPair);
 
     return resp;
   }

@@ -34,9 +34,10 @@ public class BatchRequestsApiContainer extends ApiContainer {
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
-  public BatchRequestsAddResponseData batchRequestsAdd(BatchRequestsAddRequest data)
+  public BatchRequestsAddResponseData batchRequestsAdd(
+      BatchRequestsAddRequest data, String... headerPair)
       throws ApiException, TencentAdsResponseException {
-    BatchRequestsAddResponse resp = api.batchRequestsAdd(data);
+    BatchRequestsAddResponse resp = api.batchRequestsAdd(data, headerPair);
     handleResponse(gson.toJson(resp));
     return resp.getData();
   }

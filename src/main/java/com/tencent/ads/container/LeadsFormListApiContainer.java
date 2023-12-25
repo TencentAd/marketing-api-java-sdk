@@ -45,10 +45,12 @@ public class LeadsFormListApiContainer extends ApiContainer {
       String endCreatedTime,
       Long page,
       Long pageSize,
-      List<String> fields)
+      List<String> fields,
+      String... headerPair)
       throws ApiException, TencentAdsResponseException {
     LeadsFormListGetResponse resp =
-        api.leadsFormListGet(accountId, beginCreatedTime, endCreatedTime, page, pageSize, fields);
+        api.leadsFormListGet(
+            accountId, beginCreatedTime, endCreatedTime, page, pageSize, fields, headerPair);
     handleResponse(gson.toJson(resp));
     return resp.getData();
   }

@@ -35,8 +35,9 @@ public class XijingDeriveTempTokenApiContainer extends ApiContainer {
    *     response body
    */
   public XijingDeriveTempTokenGetResponseData xijingDeriveTempTokenGet(
-      XijingDeriveTempTokenGetRequest data) throws ApiException, TencentAdsResponseException {
-    XijingDeriveTempTokenGetResponse resp = api.xijingDeriveTempTokenGet(data);
+      XijingDeriveTempTokenGetRequest data, String... headerPair)
+      throws ApiException, TencentAdsResponseException {
+    XijingDeriveTempTokenGetResponse resp = api.xijingDeriveTempTokenGet(data, headerPair);
     handleResponse(gson.toJson(resp));
     return resp.getData();
   }

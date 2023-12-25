@@ -64,8 +64,10 @@ public class AdcreativePreviewsQrcodeApi {
       Long adgroupId,
       List<String> fields,
       final ProgressResponseBody.ProgressListener progressListener,
-      final ProgressRequestBody.ProgressRequestListener progressRequestListener)
+      final ProgressRequestBody.ProgressRequestListener progressRequestListener,
+      String... headerPair)
       throws ApiException {
+
     Object localVarPostBody = null;
 
     // create path and map variables
@@ -91,6 +93,15 @@ public class AdcreativePreviewsQrcodeApi {
     final String[] localVarContentTypes = {"text/plain"};
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
     localVarHeaderParams.put("Content-Type", localVarContentType);
+
+    if (headerPair != null && headerPair.length > 0) {
+      if (headerPair.length % 2 != 0) {
+        throw new UnsupportedOperationException("Parameter headerPair must be paired");
+      }
+      for (int i = 0; i < headerPair.length / 2; i++) {
+        localVarHeaderParams.put(headerPair[i], headerPair[i * 2 + 1]);
+      }
+    }
 
     if (progressListener != null) {
       apiClient
@@ -129,7 +140,8 @@ public class AdcreativePreviewsQrcodeApi {
       Long adgroupId,
       List<String> fields,
       final ProgressResponseBody.ProgressListener progressListener,
-      final ProgressRequestBody.ProgressRequestListener progressRequestListener)
+      final ProgressRequestBody.ProgressRequestListener progressRequestListener,
+      String... headerPair)
       throws ApiException {
 
     // verify the required parameter 'accountId' is set
@@ -146,7 +158,7 @@ public class AdcreativePreviewsQrcodeApi {
 
     com.squareup.okhttp.Call call =
         adcreativePreviewsQrcodeGetCall(
-            accountId, adgroupId, fields, progressListener, progressRequestListener);
+            accountId, adgroupId, fields, progressListener, progressRequestListener, headerPair);
     return call;
   }
 
@@ -161,9 +173,10 @@ public class AdcreativePreviewsQrcodeApi {
    *     response body
    */
   public AdcreativePreviewsQrcodeGetResponse adcreativePreviewsQrcodeGet(
-      Long accountId, Long adgroupId, List<String> fields) throws ApiException {
+      Long accountId, Long adgroupId, List<String> fields, String... headerPair)
+      throws ApiException {
     ApiResponse<AdcreativePreviewsQrcodeGetResponse> resp =
-        adcreativePreviewsQrcodeGetWithHttpInfo(accountId, adgroupId, fields);
+        adcreativePreviewsQrcodeGetWithHttpInfo(accountId, adgroupId, fields, headerPair);
     return resp.getData();
   }
 
@@ -178,9 +191,11 @@ public class AdcreativePreviewsQrcodeApi {
    *     response body
    */
   public ApiResponse<AdcreativePreviewsQrcodeGetResponse> adcreativePreviewsQrcodeGetWithHttpInfo(
-      Long accountId, Long adgroupId, List<String> fields) throws ApiException {
+      Long accountId, Long adgroupId, List<String> fields, String... headerPair)
+      throws ApiException {
     com.squareup.okhttp.Call call =
-        adcreativePreviewsQrcodeGetValidateBeforeCall(accountId, adgroupId, fields, null, null);
+        adcreativePreviewsQrcodeGetValidateBeforeCall(
+            accountId, adgroupId, fields, null, null, headerPair);
     Type localVarReturnType = new TypeToken<AdcreativePreviewsQrcodeGetResponse>() {}.getType();
     return apiClient.execute(call, localVarReturnType);
   }
@@ -199,7 +214,8 @@ public class AdcreativePreviewsQrcodeApi {
       Long accountId,
       Long adgroupId,
       List<String> fields,
-      final ApiCallback<AdcreativePreviewsQrcodeGetResponse> callback)
+      final ApiCallback<AdcreativePreviewsQrcodeGetResponse> callback,
+      String... headerPair)
       throws ApiException {
 
     ProgressResponseBody.ProgressListener progressListener = null;
@@ -225,7 +241,7 @@ public class AdcreativePreviewsQrcodeApi {
 
     com.squareup.okhttp.Call call =
         adcreativePreviewsQrcodeGetValidateBeforeCall(
-            accountId, adgroupId, fields, progressListener, progressRequestListener);
+            accountId, adgroupId, fields, progressListener, progressRequestListener, headerPair);
     Type localVarReturnType = new TypeToken<AdcreativePreviewsQrcodeGetResponse>() {}.getType();
     apiClient.executeAsync(call, localVarReturnType, callback);
     return call;

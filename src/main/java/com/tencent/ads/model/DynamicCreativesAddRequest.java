@@ -135,6 +135,9 @@ public class DynamicCreativesAddRequest {
   @SerializedName("enable_breakthrough_siteset")
   private Boolean enableBreakthroughSiteset = null;
 
+  @SerializedName("landing_page_options")
+  private List<DynamicLandingPageInfo> landingPageOptions = null;
+
   @SerializedName("union_market_spec")
   private UnionMarketSpec unionMarketSpec = null;
 
@@ -917,6 +920,35 @@ public class DynamicCreativesAddRequest {
     this.enableBreakthroughSiteset = enableBreakthroughSiteset;
   }
 
+  public DynamicCreativesAddRequest landingPageOptions(
+      List<DynamicLandingPageInfo> landingPageOptions) {
+    this.landingPageOptions = landingPageOptions;
+    return this;
+  }
+
+  public DynamicCreativesAddRequest addLandingPageOptionsItem(
+      DynamicLandingPageInfo landingPageOptionsItem) {
+    if (this.landingPageOptions == null) {
+      this.landingPageOptions = new ArrayList<DynamicLandingPageInfo>();
+    }
+    this.landingPageOptions.add(landingPageOptionsItem);
+    return this;
+  }
+
+  /**
+   * Get landingPageOptions
+   *
+   * @return landingPageOptions
+   */
+  @ApiModelProperty(value = "")
+  public List<DynamicLandingPageInfo> getLandingPageOptions() {
+    return landingPageOptions;
+  }
+
+  public void setLandingPageOptions(List<DynamicLandingPageInfo> landingPageOptions) {
+    this.landingPageOptions = landingPageOptions;
+  }
+
   public DynamicCreativesAddRequest unionMarketSpec(UnionMarketSpec unionMarketSpec) {
     this.unionMarketSpec = unionMarketSpec;
     return this;
@@ -1226,6 +1258,7 @@ public class DynamicCreativesAddRequest {
         && Objects.equals(this.appGiftPackCode, dynamicCreativesAddRequest.appGiftPackCode)
         && Objects.equals(
             this.enableBreakthroughSiteset, dynamicCreativesAddRequest.enableBreakthroughSiteset)
+        && Objects.equals(this.landingPageOptions, dynamicCreativesAddRequest.landingPageOptions)
         && Objects.equals(this.unionMarketSpec, dynamicCreativesAddRequest.unionMarketSpec)
         && Objects.equals(
             this.autoDerivedProgramCreativeSwitch,
@@ -1284,6 +1317,7 @@ public class DynamicCreativesAddRequest {
         countdownSwitch,
         appGiftPackCode,
         enableBreakthroughSiteset,
+        landingPageOptions,
         unionMarketSpec,
         autoDerivedProgramCreativeSwitch,
         programCreativeInfo,

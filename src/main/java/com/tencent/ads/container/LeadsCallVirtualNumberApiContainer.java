@@ -35,8 +35,9 @@ public class LeadsCallVirtualNumberApiContainer extends ApiContainer {
    *     response body
    */
   public LeadsCallVirtualNumberGetResponseData leadsCallVirtualNumberGet(
-      LeadsCallVirtualNumberGetRequest data) throws ApiException, TencentAdsResponseException {
-    LeadsCallVirtualNumberGetResponse resp = api.leadsCallVirtualNumberGet(data);
+      LeadsCallVirtualNumberGetRequest data, String... headerPair)
+      throws ApiException, TencentAdsResponseException {
+    LeadsCallVirtualNumberGetResponse resp = api.leadsCallVirtualNumberGet(data, headerPair);
     handleResponse(gson.toJson(resp));
     return resp.getData();
   }

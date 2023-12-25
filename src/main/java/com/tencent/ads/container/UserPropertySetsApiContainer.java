@@ -39,9 +39,10 @@ public class UserPropertySetsApiContainer extends ApiContainer {
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
-  public UserPropertySetsAddResponseData userPropertySetsAdd(UserPropertySetsAddRequest data)
+  public UserPropertySetsAddResponseData userPropertySetsAdd(
+      UserPropertySetsAddRequest data, String... headerPair)
       throws ApiException, TencentAdsResponseException {
-    UserPropertySetsAddResponse resp = api.userPropertySetsAdd(data);
+    UserPropertySetsAddResponse resp = api.userPropertySetsAdd(data, headerPair);
     handleResponse(gson.toJson(resp));
     return resp.getData();
   }
@@ -57,10 +58,10 @@ public class UserPropertySetsApiContainer extends ApiContainer {
    *     response body
    */
   public UserPropertySetsGetResponseData userPropertySetsGet(
-      Long accountId, Long userPropertySetId, List<String> fields)
+      Long accountId, Long userPropertySetId, List<String> fields, String... headerPair)
       throws ApiException, TencentAdsResponseException {
     UserPropertySetsGetResponse resp =
-        api.userPropertySetsGet(accountId, userPropertySetId, fields);
+        api.userPropertySetsGet(accountId, userPropertySetId, fields, headerPair);
     handleResponse(gson.toJson(resp));
     return resp.getData();
   }
@@ -73,9 +74,10 @@ public class UserPropertySetsApiContainer extends ApiContainer {
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
-  public UserPropertySetsUpdateResponse userPropertySetsUpdate(UserPropertySetsUpdateRequest data)
+  public UserPropertySetsUpdateResponse userPropertySetsUpdate(
+      UserPropertySetsUpdateRequest data, String... headerPair)
       throws ApiException, TencentAdsResponseException {
-    UserPropertySetsUpdateResponse resp = api.userPropertySetsUpdate(data);
+    UserPropertySetsUpdateResponse resp = api.userPropertySetsUpdate(data, headerPair);
     handleResponse(gson.toJson(resp));
 
     return resp;

@@ -38,8 +38,10 @@ public class PromotedObjectAuthorizationApiContainer extends ApiContainer {
    *     response body
    */
   public PromotedObjectAuthorizationAddResponseData promotedObjectAuthorizationAdd(
-      PromotedObjectAuthorizationAddRequest data) throws ApiException, TencentAdsResponseException {
-    PromotedObjectAuthorizationAddResponse resp = api.promotedObjectAuthorizationAdd(data);
+      PromotedObjectAuthorizationAddRequest data, String... headerPair)
+      throws ApiException, TencentAdsResponseException {
+    PromotedObjectAuthorizationAddResponse resp =
+        api.promotedObjectAuthorizationAdd(data, headerPair);
     handleResponse(gson.toJson(resp));
     return resp.getData();
   }
@@ -63,11 +65,12 @@ public class PromotedObjectAuthorizationApiContainer extends ApiContainer {
       String promotedObjectName,
       Long page,
       Long pageSize,
-      List<String> fields)
+      List<String> fields,
+      String... headerPair)
       throws ApiException, TencentAdsResponseException {
     PromotedObjectAuthorizationGetResponse resp =
         api.promotedObjectAuthorizationGet(
-            accountId, promotedObjectType, promotedObjectName, page, pageSize, fields);
+            accountId, promotedObjectType, promotedObjectName, page, pageSize, fields, headerPair);
     handleResponse(gson.toJson(resp));
     return resp.getData();
   }

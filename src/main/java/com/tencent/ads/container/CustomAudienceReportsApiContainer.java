@@ -45,10 +45,11 @@ public class CustomAudienceReportsApiContainer extends ApiContainer {
       List<FilteringStruct> filtering,
       DateRange dateRange,
       List<String> groupBy,
-      List<String> fields)
+      List<String> fields,
+      String... headerPair)
       throws ApiException, TencentAdsResponseException {
     CustomAudienceReportsGetResponse resp =
-        api.customAudienceReportsGet(accountId, filtering, dateRange, groupBy, fields);
+        api.customAudienceReportsGet(accountId, filtering, dateRange, groupBy, fields, headerPair);
     handleResponse(gson.toJson(resp));
     return resp.getData();
   }

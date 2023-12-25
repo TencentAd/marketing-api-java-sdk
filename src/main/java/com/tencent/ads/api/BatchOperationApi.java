@@ -61,8 +61,10 @@ public class BatchOperationApi {
   public com.squareup.okhttp.Call batchOperationAddCall(
       BatchOperationAddRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
-      final ProgressRequestBody.ProgressRequestListener progressRequestListener)
+      final ProgressRequestBody.ProgressRequestListener progressRequestListener,
+      String... headerPair)
       throws ApiException {
+
     Object localVarPostBody = data;
 
     // create path and map variables
@@ -82,6 +84,15 @@ public class BatchOperationApi {
     final String[] localVarContentTypes = {"application/json", "application/xml"};
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
     localVarHeaderParams.put("Content-Type", localVarContentType);
+
+    if (headerPair != null && headerPair.length > 0) {
+      if (headerPair.length % 2 != 0) {
+        throw new UnsupportedOperationException("Parameter headerPair must be paired");
+      }
+      for (int i = 0; i < headerPair.length / 2; i++) {
+        localVarHeaderParams.put(headerPair[i], headerPair[i * 2 + 1]);
+      }
+    }
 
     if (progressListener != null) {
       apiClient
@@ -118,7 +129,8 @@ public class BatchOperationApi {
   private com.squareup.okhttp.Call batchOperationAddValidateBeforeCall(
       BatchOperationAddRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
-      final ProgressRequestBody.ProgressRequestListener progressRequestListener)
+      final ProgressRequestBody.ProgressRequestListener progressRequestListener,
+      String... headerPair)
       throws ApiException {
 
     // verify the required parameter 'data' is set
@@ -128,7 +140,7 @@ public class BatchOperationApi {
     }
 
     com.squareup.okhttp.Call call =
-        batchOperationAddCall(data, progressListener, progressRequestListener);
+        batchOperationAddCall(data, progressListener, progressRequestListener, headerPair);
     return call;
   }
 
@@ -140,9 +152,9 @@ public class BatchOperationApi {
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
-  public BatchOperationAddResponse batchOperationAdd(BatchOperationAddRequest data)
-      throws ApiException {
-    ApiResponse<BatchOperationAddResponse> resp = batchOperationAddWithHttpInfo(data);
+  public BatchOperationAddResponse batchOperationAdd(
+      BatchOperationAddRequest data, String... headerPair) throws ApiException {
+    ApiResponse<BatchOperationAddResponse> resp = batchOperationAddWithHttpInfo(data, headerPair);
     return resp.getData();
   }
 
@@ -155,8 +167,9 @@ public class BatchOperationApi {
    *     response body
    */
   public ApiResponse<BatchOperationAddResponse> batchOperationAddWithHttpInfo(
-      BatchOperationAddRequest data) throws ApiException {
-    com.squareup.okhttp.Call call = batchOperationAddValidateBeforeCall(data, null, null);
+      BatchOperationAddRequest data, String... headerPair) throws ApiException {
+    com.squareup.okhttp.Call call =
+        batchOperationAddValidateBeforeCall(data, null, null, headerPair);
     Type localVarReturnType = new TypeToken<BatchOperationAddResponse>() {}.getType();
     return apiClient.execute(call, localVarReturnType);
   }
@@ -170,7 +183,9 @@ public class BatchOperationApi {
    * @throws ApiException If fail to process the API call, e.g. serializing the request body object
    */
   public com.squareup.okhttp.Call batchOperationAddAsync(
-      BatchOperationAddRequest data, final ApiCallback<BatchOperationAddResponse> callback)
+      BatchOperationAddRequest data,
+      final ApiCallback<BatchOperationAddResponse> callback,
+      String... headerPair)
       throws ApiException {
 
     ProgressResponseBody.ProgressListener progressListener = null;
@@ -195,7 +210,8 @@ public class BatchOperationApi {
     }
 
     com.squareup.okhttp.Call call =
-        batchOperationAddValidateBeforeCall(data, progressListener, progressRequestListener);
+        batchOperationAddValidateBeforeCall(
+            data, progressListener, progressRequestListener, headerPair);
     Type localVarReturnType = new TypeToken<BatchOperationAddResponse>() {}.getType();
     apiClient.executeAsync(call, localVarReturnType, callback);
     return call;

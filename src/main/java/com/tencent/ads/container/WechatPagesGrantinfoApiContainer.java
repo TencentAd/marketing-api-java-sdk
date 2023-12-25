@@ -39,10 +39,15 @@ public class WechatPagesGrantinfoApiContainer extends ApiContainer {
    *     response body
    */
   public WechatPagesGrantinfoGetResponseData wechatPagesGrantinfoGet(
-      Long accountId, String searchKey, Long page, Long pageSize, List<String> fields)
+      Long accountId,
+      String searchKey,
+      Long page,
+      Long pageSize,
+      List<String> fields,
+      String... headerPair)
       throws ApiException, TencentAdsResponseException {
     WechatPagesGrantinfoGetResponse resp =
-        api.wechatPagesGrantinfoGet(accountId, searchKey, page, pageSize, fields);
+        api.wechatPagesGrantinfoGet(accountId, searchKey, page, pageSize, fields, headerPair);
     handleResponse(gson.toJson(resp));
     return resp.getData();
   }

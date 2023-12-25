@@ -49,11 +49,19 @@ public class OauthApiContainer extends ApiContainer {
       String scope,
       String accountType,
       Long accountDisplayNumber,
-      List<String> fields)
+      List<String> fields,
+      String... headerPair)
       throws ApiException, TencentAdsResponseException {
     String resp =
         api.oauthAuthorize(
-            clientId, redirectUri, state, scope, accountType, accountDisplayNumber, fields);
+            clientId,
+            redirectUri,
+            state,
+            scope,
+            accountType,
+            accountDisplayNumber,
+            fields,
+            headerPair);
 
     return resp;
   }
@@ -79,11 +87,18 @@ public class OauthApiContainer extends ApiContainer {
       String grantType,
       String authorizationCode,
       String refreshToken,
-      String redirectUri)
+      String redirectUri,
+      String... headerPair)
       throws ApiException, TencentAdsResponseException {
     OauthTokenResponse resp =
         api.oauthToken(
-            clientId, clientSecret, grantType, authorizationCode, refreshToken, redirectUri);
+            clientId,
+            clientSecret,
+            grantType,
+            authorizationCode,
+            refreshToken,
+            redirectUri,
+            headerPair);
     handleResponse(gson.toJson(resp));
     return resp.getData();
   }

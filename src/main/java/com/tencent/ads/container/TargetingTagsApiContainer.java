@@ -39,9 +39,10 @@ public class TargetingTagsApiContainer extends ApiContainer {
    *     response body
    */
   public TargetingTagsGetResponseData targetingTagsGet(
-      String type, Long accountId, TagSpec tagSpec, List<String> fields)
+      String type, Long accountId, TagSpec tagSpec, List<String> fields, String... headerPair)
       throws ApiException, TencentAdsResponseException {
-    TargetingTagsGetResponse resp = api.targetingTagsGet(type, accountId, tagSpec, fields);
+    TargetingTagsGetResponse resp =
+        api.targetingTagsGet(type, accountId, tagSpec, fields, headerPair);
     handleResponse(gson.toJson(resp));
     return resp.getData();
   }

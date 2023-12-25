@@ -36,9 +36,9 @@ public class LeadCluesApiContainer extends ApiContainer {
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
-  public LeadCluesGetResponseData leadCluesGet(LeadCluesGetRequest data)
+  public LeadCluesGetResponseData leadCluesGet(LeadCluesGetRequest data, String... headerPair)
       throws ApiException, TencentAdsResponseException {
-    LeadCluesGetResponse resp = api.leadCluesGet(data);
+    LeadCluesGetResponse resp = api.leadCluesGet(data, headerPair);
     handleResponse(gson.toJson(resp));
     return resp.getData();
   }
@@ -51,9 +51,9 @@ public class LeadCluesApiContainer extends ApiContainer {
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
-  public LeadCluesUpdateResponse leadCluesUpdate(LeadCluesUpdateRequest data)
+  public LeadCluesUpdateResponse leadCluesUpdate(LeadCluesUpdateRequest data, String... headerPair)
       throws ApiException, TencentAdsResponseException {
-    LeadCluesUpdateResponse resp = api.leadCluesUpdate(data);
+    LeadCluesUpdateResponse resp = api.leadCluesUpdate(data, headerPair);
     handleResponse(gson.toJson(resp));
 
     return resp;

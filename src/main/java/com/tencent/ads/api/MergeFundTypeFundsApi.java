@@ -62,8 +62,10 @@ public class MergeFundTypeFundsApi {
       Long accountId,
       List<String> fields,
       final ProgressResponseBody.ProgressListener progressListener,
-      final ProgressRequestBody.ProgressRequestListener progressRequestListener)
+      final ProgressRequestBody.ProgressRequestListener progressRequestListener,
+      String... headerPair)
       throws ApiException {
+
     Object localVarPostBody = null;
 
     // create path and map variables
@@ -87,6 +89,15 @@ public class MergeFundTypeFundsApi {
     final String[] localVarContentTypes = {"text/plain"};
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
     localVarHeaderParams.put("Content-Type", localVarContentType);
+
+    if (headerPair != null && headerPair.length > 0) {
+      if (headerPair.length % 2 != 0) {
+        throw new UnsupportedOperationException("Parameter headerPair must be paired");
+      }
+      for (int i = 0; i < headerPair.length / 2; i++) {
+        localVarHeaderParams.put(headerPair[i], headerPair[i * 2 + 1]);
+      }
+    }
 
     if (progressListener != null) {
       apiClient
@@ -124,7 +135,8 @@ public class MergeFundTypeFundsApi {
       Long accountId,
       List<String> fields,
       final ProgressResponseBody.ProgressListener progressListener,
-      final ProgressRequestBody.ProgressRequestListener progressRequestListener)
+      final ProgressRequestBody.ProgressRequestListener progressRequestListener,
+      String... headerPair)
       throws ApiException {
 
     // verify the required parameter 'accountId' is set
@@ -134,7 +146,8 @@ public class MergeFundTypeFundsApi {
     }
 
     com.squareup.okhttp.Call call =
-        mergeFundTypeFundsGetCall(accountId, fields, progressListener, progressRequestListener);
+        mergeFundTypeFundsGetCall(
+            accountId, fields, progressListener, progressRequestListener, headerPair);
     return call;
   }
 
@@ -147,10 +160,10 @@ public class MergeFundTypeFundsApi {
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
-  public MergeFundTypeFundsGetResponse mergeFundTypeFundsGet(Long accountId, List<String> fields)
-      throws ApiException {
+  public MergeFundTypeFundsGetResponse mergeFundTypeFundsGet(
+      Long accountId, List<String> fields, String... headerPair) throws ApiException {
     ApiResponse<MergeFundTypeFundsGetResponse> resp =
-        mergeFundTypeFundsGetWithHttpInfo(accountId, fields);
+        mergeFundTypeFundsGetWithHttpInfo(accountId, fields, headerPair);
     return resp.getData();
   }
 
@@ -164,9 +177,9 @@ public class MergeFundTypeFundsApi {
    *     response body
    */
   public ApiResponse<MergeFundTypeFundsGetResponse> mergeFundTypeFundsGetWithHttpInfo(
-      Long accountId, List<String> fields) throws ApiException {
+      Long accountId, List<String> fields, String... headerPair) throws ApiException {
     com.squareup.okhttp.Call call =
-        mergeFundTypeFundsGetValidateBeforeCall(accountId, fields, null, null);
+        mergeFundTypeFundsGetValidateBeforeCall(accountId, fields, null, null, headerPair);
     Type localVarReturnType = new TypeToken<MergeFundTypeFundsGetResponse>() {}.getType();
     return apiClient.execute(call, localVarReturnType);
   }
@@ -183,7 +196,8 @@ public class MergeFundTypeFundsApi {
   public com.squareup.okhttp.Call mergeFundTypeFundsGetAsync(
       Long accountId,
       List<String> fields,
-      final ApiCallback<MergeFundTypeFundsGetResponse> callback)
+      final ApiCallback<MergeFundTypeFundsGetResponse> callback,
+      String... headerPair)
       throws ApiException {
 
     ProgressResponseBody.ProgressListener progressListener = null;
@@ -209,7 +223,7 @@ public class MergeFundTypeFundsApi {
 
     com.squareup.okhttp.Call call =
         mergeFundTypeFundsGetValidateBeforeCall(
-            accountId, fields, progressListener, progressRequestListener);
+            accountId, fields, progressListener, progressRequestListener, headerPair);
     Type localVarReturnType = new TypeToken<MergeFundTypeFundsGetResponse>() {}.getType();
     apiClient.executeAsync(call, localVarReturnType, callback);
     return call;

@@ -12,7 +12,6 @@
 
 package com.tencent.ads.model;
 
-
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.stream.JsonReader;
@@ -34,7 +33,9 @@ public enum ImageSourceType {
 
   VIDEO_SNAPSHOTS("SOURCE_TYPE_VIDEO_SNAPSHOTS"),
 
-  TCC("SOURCE_TYPE_TCC");
+  TCC("SOURCE_TYPE_TCC"),
+
+  AIGC("SOURCE_TYPE_AIGC");
 
   private String value;
 

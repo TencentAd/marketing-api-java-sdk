@@ -65,8 +65,10 @@ public class ExtendPackageApi {
   public com.squareup.okhttp.Call extendPackageAddCall(
       ExtendPackageAddRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
-      final ProgressRequestBody.ProgressRequestListener progressRequestListener)
+      final ProgressRequestBody.ProgressRequestListener progressRequestListener,
+      String... headerPair)
       throws ApiException {
+
     Object localVarPostBody = data;
 
     // create path and map variables
@@ -86,6 +88,15 @@ public class ExtendPackageApi {
     final String[] localVarContentTypes = {"application/json", "application/xml"};
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
     localVarHeaderParams.put("Content-Type", localVarContentType);
+
+    if (headerPair != null && headerPair.length > 0) {
+      if (headerPair.length % 2 != 0) {
+        throw new UnsupportedOperationException("Parameter headerPair must be paired");
+      }
+      for (int i = 0; i < headerPair.length / 2; i++) {
+        localVarHeaderParams.put(headerPair[i], headerPair[i * 2 + 1]);
+      }
+    }
 
     if (progressListener != null) {
       apiClient
@@ -122,7 +133,8 @@ public class ExtendPackageApi {
   private com.squareup.okhttp.Call extendPackageAddValidateBeforeCall(
       ExtendPackageAddRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
-      final ProgressRequestBody.ProgressRequestListener progressRequestListener)
+      final ProgressRequestBody.ProgressRequestListener progressRequestListener,
+      String... headerPair)
       throws ApiException {
 
     // verify the required parameter 'data' is set
@@ -132,7 +144,7 @@ public class ExtendPackageApi {
     }
 
     com.squareup.okhttp.Call call =
-        extendPackageAddCall(data, progressListener, progressRequestListener);
+        extendPackageAddCall(data, progressListener, progressRequestListener, headerPair);
     return call;
   }
 
@@ -144,9 +156,9 @@ public class ExtendPackageApi {
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
-  public ExtendPackageAddResponse extendPackageAdd(ExtendPackageAddRequest data)
-      throws ApiException {
-    ApiResponse<ExtendPackageAddResponse> resp = extendPackageAddWithHttpInfo(data);
+  public ExtendPackageAddResponse extendPackageAdd(
+      ExtendPackageAddRequest data, String... headerPair) throws ApiException {
+    ApiResponse<ExtendPackageAddResponse> resp = extendPackageAddWithHttpInfo(data, headerPair);
     return resp.getData();
   }
 
@@ -159,8 +171,9 @@ public class ExtendPackageApi {
    *     response body
    */
   public ApiResponse<ExtendPackageAddResponse> extendPackageAddWithHttpInfo(
-      ExtendPackageAddRequest data) throws ApiException {
-    com.squareup.okhttp.Call call = extendPackageAddValidateBeforeCall(data, null, null);
+      ExtendPackageAddRequest data, String... headerPair) throws ApiException {
+    com.squareup.okhttp.Call call =
+        extendPackageAddValidateBeforeCall(data, null, null, headerPair);
     Type localVarReturnType = new TypeToken<ExtendPackageAddResponse>() {}.getType();
     return apiClient.execute(call, localVarReturnType);
   }
@@ -174,7 +187,9 @@ public class ExtendPackageApi {
    * @throws ApiException If fail to process the API call, e.g. serializing the request body object
    */
   public com.squareup.okhttp.Call extendPackageAddAsync(
-      ExtendPackageAddRequest data, final ApiCallback<ExtendPackageAddResponse> callback)
+      ExtendPackageAddRequest data,
+      final ApiCallback<ExtendPackageAddResponse> callback,
+      String... headerPair)
       throws ApiException {
 
     ProgressResponseBody.ProgressListener progressListener = null;
@@ -199,7 +214,8 @@ public class ExtendPackageApi {
     }
 
     com.squareup.okhttp.Call call =
-        extendPackageAddValidateBeforeCall(data, progressListener, progressRequestListener);
+        extendPackageAddValidateBeforeCall(
+            data, progressListener, progressRequestListener, headerPair);
     Type localVarReturnType = new TypeToken<ExtendPackageAddResponse>() {}.getType();
     apiClient.executeAsync(call, localVarReturnType, callback);
     return call;
@@ -226,8 +242,10 @@ public class ExtendPackageApi {
       Long pageSize,
       List<String> fields,
       final ProgressResponseBody.ProgressListener progressListener,
-      final ProgressRequestBody.ProgressRequestListener progressRequestListener)
+      final ProgressRequestBody.ProgressRequestListener progressRequestListener,
+      String... headerPair)
       throws ApiException {
+
     Object localVarPostBody = null;
 
     // create path and map variables
@@ -259,6 +277,15 @@ public class ExtendPackageApi {
     final String[] localVarContentTypes = {"text/plain"};
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
     localVarHeaderParams.put("Content-Type", localVarContentType);
+
+    if (headerPair != null && headerPair.length > 0) {
+      if (headerPair.length % 2 != 0) {
+        throw new UnsupportedOperationException("Parameter headerPair must be paired");
+      }
+      for (int i = 0; i < headerPair.length / 2; i++) {
+        localVarHeaderParams.put(headerPair[i], headerPair[i * 2 + 1]);
+      }
+    }
 
     if (progressListener != null) {
       apiClient
@@ -300,7 +327,8 @@ public class ExtendPackageApi {
       Long pageSize,
       List<String> fields,
       final ProgressResponseBody.ProgressListener progressListener,
-      final ProgressRequestBody.ProgressRequestListener progressRequestListener)
+      final ProgressRequestBody.ProgressRequestListener progressRequestListener,
+      String... headerPair)
       throws ApiException {
 
     // verify the required parameter 'accountId' is set
@@ -324,7 +352,8 @@ public class ExtendPackageApi {
             pageSize,
             fields,
             progressListener,
-            progressRequestListener);
+            progressRequestListener,
+            headerPair);
     return call;
   }
 
@@ -347,10 +376,12 @@ public class ExtendPackageApi {
       List<FilteringStruct> filtering,
       Long page,
       Long pageSize,
-      List<String> fields)
+      List<String> fields,
+      String... headerPair)
       throws ApiException {
     ApiResponse<ExtendPackageGetResponse> resp =
-        extendPackageGetWithHttpInfo(accountId, packageId, filtering, page, pageSize, fields);
+        extendPackageGetWithHttpInfo(
+            accountId, packageId, filtering, page, pageSize, fields, headerPair);
     return resp.getData();
   }
 
@@ -373,11 +404,12 @@ public class ExtendPackageApi {
       List<FilteringStruct> filtering,
       Long page,
       Long pageSize,
-      List<String> fields)
+      List<String> fields,
+      String... headerPair)
       throws ApiException {
     com.squareup.okhttp.Call call =
         extendPackageGetValidateBeforeCall(
-            accountId, packageId, filtering, page, pageSize, fields, null, null);
+            accountId, packageId, filtering, page, pageSize, fields, null, null, headerPair);
     Type localVarReturnType = new TypeToken<ExtendPackageGetResponse>() {}.getType();
     return apiClient.execute(call, localVarReturnType);
   }
@@ -402,7 +434,8 @@ public class ExtendPackageApi {
       Long page,
       Long pageSize,
       List<String> fields,
-      final ApiCallback<ExtendPackageGetResponse> callback)
+      final ApiCallback<ExtendPackageGetResponse> callback,
+      String... headerPair)
       throws ApiException {
 
     ProgressResponseBody.ProgressListener progressListener = null;
@@ -435,7 +468,8 @@ public class ExtendPackageApi {
             pageSize,
             fields,
             progressListener,
-            progressRequestListener);
+            progressRequestListener,
+            headerPair);
     Type localVarReturnType = new TypeToken<ExtendPackageGetResponse>() {}.getType();
     apiClient.executeAsync(call, localVarReturnType, callback);
     return call;
@@ -452,8 +486,10 @@ public class ExtendPackageApi {
   public com.squareup.okhttp.Call extendPackageUpdateCall(
       ExtendPackageUpdateRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
-      final ProgressRequestBody.ProgressRequestListener progressRequestListener)
+      final ProgressRequestBody.ProgressRequestListener progressRequestListener,
+      String... headerPair)
       throws ApiException {
+
     Object localVarPostBody = data;
 
     // create path and map variables
@@ -473,6 +509,15 @@ public class ExtendPackageApi {
     final String[] localVarContentTypes = {"application/json", "application/xml"};
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
     localVarHeaderParams.put("Content-Type", localVarContentType);
+
+    if (headerPair != null && headerPair.length > 0) {
+      if (headerPair.length % 2 != 0) {
+        throw new UnsupportedOperationException("Parameter headerPair must be paired");
+      }
+      for (int i = 0; i < headerPair.length / 2; i++) {
+        localVarHeaderParams.put(headerPair[i], headerPair[i * 2 + 1]);
+      }
+    }
 
     if (progressListener != null) {
       apiClient
@@ -509,7 +554,8 @@ public class ExtendPackageApi {
   private com.squareup.okhttp.Call extendPackageUpdateValidateBeforeCall(
       ExtendPackageUpdateRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
-      final ProgressRequestBody.ProgressRequestListener progressRequestListener)
+      final ProgressRequestBody.ProgressRequestListener progressRequestListener,
+      String... headerPair)
       throws ApiException {
 
     // verify the required parameter 'data' is set
@@ -519,7 +565,7 @@ public class ExtendPackageApi {
     }
 
     com.squareup.okhttp.Call call =
-        extendPackageUpdateCall(data, progressListener, progressRequestListener);
+        extendPackageUpdateCall(data, progressListener, progressRequestListener, headerPair);
     return call;
   }
 
@@ -531,9 +577,10 @@ public class ExtendPackageApi {
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
-  public ExtendPackageUpdateResponse extendPackageUpdate(ExtendPackageUpdateRequest data)
-      throws ApiException {
-    ApiResponse<ExtendPackageUpdateResponse> resp = extendPackageUpdateWithHttpInfo(data);
+  public ExtendPackageUpdateResponse extendPackageUpdate(
+      ExtendPackageUpdateRequest data, String... headerPair) throws ApiException {
+    ApiResponse<ExtendPackageUpdateResponse> resp =
+        extendPackageUpdateWithHttpInfo(data, headerPair);
     return resp.getData();
   }
 
@@ -546,8 +593,9 @@ public class ExtendPackageApi {
    *     response body
    */
   public ApiResponse<ExtendPackageUpdateResponse> extendPackageUpdateWithHttpInfo(
-      ExtendPackageUpdateRequest data) throws ApiException {
-    com.squareup.okhttp.Call call = extendPackageUpdateValidateBeforeCall(data, null, null);
+      ExtendPackageUpdateRequest data, String... headerPair) throws ApiException {
+    com.squareup.okhttp.Call call =
+        extendPackageUpdateValidateBeforeCall(data, null, null, headerPair);
     Type localVarReturnType = new TypeToken<ExtendPackageUpdateResponse>() {}.getType();
     return apiClient.execute(call, localVarReturnType);
   }
@@ -561,7 +609,9 @@ public class ExtendPackageApi {
    * @throws ApiException If fail to process the API call, e.g. serializing the request body object
    */
   public com.squareup.okhttp.Call extendPackageUpdateAsync(
-      ExtendPackageUpdateRequest data, final ApiCallback<ExtendPackageUpdateResponse> callback)
+      ExtendPackageUpdateRequest data,
+      final ApiCallback<ExtendPackageUpdateResponse> callback,
+      String... headerPair)
       throws ApiException {
 
     ProgressResponseBody.ProgressListener progressListener = null;
@@ -586,7 +636,8 @@ public class ExtendPackageApi {
     }
 
     com.squareup.okhttp.Call call =
-        extendPackageUpdateValidateBeforeCall(data, progressListener, progressRequestListener);
+        extendPackageUpdateValidateBeforeCall(
+            data, progressListener, progressRequestListener, headerPair);
     Type localVarReturnType = new TypeToken<ExtendPackageUpdateResponse>() {}.getType();
     apiClient.executeAsync(call, localVarReturnType, callback);
     return call;

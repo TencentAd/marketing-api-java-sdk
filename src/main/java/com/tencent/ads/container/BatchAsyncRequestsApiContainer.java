@@ -38,9 +38,10 @@ public class BatchAsyncRequestsApiContainer extends ApiContainer {
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
-  public BatchAsyncRequestsAddResponseData batchAsyncRequestsAdd(BatchAsyncRequestsAddRequest data)
+  public BatchAsyncRequestsAddResponseData batchAsyncRequestsAdd(
+      BatchAsyncRequestsAddRequest data, String... headerPair)
       throws ApiException, TencentAdsResponseException {
-    BatchAsyncRequestsAddResponse resp = api.batchAsyncRequestsAdd(data);
+    BatchAsyncRequestsAddResponse resp = api.batchAsyncRequestsAdd(data, headerPair);
     handleResponse(gson.toJson(resp));
     return resp.getData();
   }
@@ -62,10 +63,11 @@ public class BatchAsyncRequestsApiContainer extends ApiContainer {
       List<FilteringStruct> filtering,
       Long page,
       Long pageSize,
-      List<String> fields)
+      List<String> fields,
+      String... headerPair)
       throws ApiException, TencentAdsResponseException {
     BatchAsyncRequestsGetResponse resp =
-        api.batchAsyncRequestsGet(accountId, filtering, page, pageSize, fields);
+        api.batchAsyncRequestsGet(accountId, filtering, page, pageSize, fields, headerPair);
     handleResponse(gson.toJson(resp));
     return resp.getData();
   }

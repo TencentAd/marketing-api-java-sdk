@@ -34,9 +34,9 @@ public class BidwordRptApiContainer extends ApiContainer {
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
-  public BidwordRptGetResponseData bidwordRptGet(BidwordRptGetRequest data)
+  public BidwordRptGetResponseData bidwordRptGet(BidwordRptGetRequest data, String... headerPair)
       throws ApiException, TencentAdsResponseException {
-    BidwordRptGetResponse resp = api.bidwordRptGet(data);
+    BidwordRptGetResponse resp = api.bidwordRptGet(data, headerPair);
     handleResponse(gson.toJson(resp));
     return resp.getData();
   }

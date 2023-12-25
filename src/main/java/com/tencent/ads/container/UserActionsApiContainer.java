@@ -33,9 +33,9 @@ public class UserActionsApiContainer extends ApiContainer {
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
-  public UserActionsAddResponse userActionsAdd(UserActionsAddRequest data)
+  public UserActionsAddResponse userActionsAdd(UserActionsAddRequest data, String... headerPair)
       throws ApiException, TencentAdsResponseException {
-    UserActionsAddResponse resp = api.userActionsAdd(data);
+    UserActionsAddResponse resp = api.userActionsAdd(data, headerPair);
     handleResponse(gson.toJson(resp));
 
     return resp;

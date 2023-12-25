@@ -63,8 +63,10 @@ public class AudienceGrantRelationsApi {
   public com.squareup.okhttp.Call audienceGrantRelationsAddCall(
       AudienceGrantRelationsAddRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
-      final ProgressRequestBody.ProgressRequestListener progressRequestListener)
+      final ProgressRequestBody.ProgressRequestListener progressRequestListener,
+      String... headerPair)
       throws ApiException {
+
     Object localVarPostBody = data;
 
     // create path and map variables
@@ -84,6 +86,15 @@ public class AudienceGrantRelationsApi {
     final String[] localVarContentTypes = {"application/json", "application/xml"};
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
     localVarHeaderParams.put("Content-Type", localVarContentType);
+
+    if (headerPair != null && headerPair.length > 0) {
+      if (headerPair.length % 2 != 0) {
+        throw new UnsupportedOperationException("Parameter headerPair must be paired");
+      }
+      for (int i = 0; i < headerPair.length / 2; i++) {
+        localVarHeaderParams.put(headerPair[i], headerPair[i * 2 + 1]);
+      }
+    }
 
     if (progressListener != null) {
       apiClient
@@ -120,7 +131,8 @@ public class AudienceGrantRelationsApi {
   private com.squareup.okhttp.Call audienceGrantRelationsAddValidateBeforeCall(
       AudienceGrantRelationsAddRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
-      final ProgressRequestBody.ProgressRequestListener progressRequestListener)
+      final ProgressRequestBody.ProgressRequestListener progressRequestListener,
+      String... headerPair)
       throws ApiException {
 
     // verify the required parameter 'data' is set
@@ -130,7 +142,7 @@ public class AudienceGrantRelationsApi {
     }
 
     com.squareup.okhttp.Call call =
-        audienceGrantRelationsAddCall(data, progressListener, progressRequestListener);
+        audienceGrantRelationsAddCall(data, progressListener, progressRequestListener, headerPair);
     return call;
   }
 
@@ -143,9 +155,9 @@ public class AudienceGrantRelationsApi {
    *     response body
    */
   public AudienceGrantRelationsAddResponse audienceGrantRelationsAdd(
-      AudienceGrantRelationsAddRequest data) throws ApiException {
+      AudienceGrantRelationsAddRequest data, String... headerPair) throws ApiException {
     ApiResponse<AudienceGrantRelationsAddResponse> resp =
-        audienceGrantRelationsAddWithHttpInfo(data);
+        audienceGrantRelationsAddWithHttpInfo(data, headerPair);
     return resp.getData();
   }
 
@@ -158,8 +170,9 @@ public class AudienceGrantRelationsApi {
    *     response body
    */
   public ApiResponse<AudienceGrantRelationsAddResponse> audienceGrantRelationsAddWithHttpInfo(
-      AudienceGrantRelationsAddRequest data) throws ApiException {
-    com.squareup.okhttp.Call call = audienceGrantRelationsAddValidateBeforeCall(data, null, null);
+      AudienceGrantRelationsAddRequest data, String... headerPair) throws ApiException {
+    com.squareup.okhttp.Call call =
+        audienceGrantRelationsAddValidateBeforeCall(data, null, null, headerPair);
     Type localVarReturnType = new TypeToken<AudienceGrantRelationsAddResponse>() {}.getType();
     return apiClient.execute(call, localVarReturnType);
   }
@@ -174,7 +187,8 @@ public class AudienceGrantRelationsApi {
    */
   public com.squareup.okhttp.Call audienceGrantRelationsAddAsync(
       AudienceGrantRelationsAddRequest data,
-      final ApiCallback<AudienceGrantRelationsAddResponse> callback)
+      final ApiCallback<AudienceGrantRelationsAddResponse> callback,
+      String... headerPair)
       throws ApiException {
 
     ProgressResponseBody.ProgressListener progressListener = null;
@@ -200,7 +214,7 @@ public class AudienceGrantRelationsApi {
 
     com.squareup.okhttp.Call call =
         audienceGrantRelationsAddValidateBeforeCall(
-            data, progressListener, progressRequestListener);
+            data, progressListener, progressRequestListener, headerPair);
     Type localVarReturnType = new TypeToken<AudienceGrantRelationsAddResponse>() {}.getType();
     apiClient.executeAsync(call, localVarReturnType, callback);
     return call;
@@ -225,8 +239,10 @@ public class AudienceGrantRelationsApi {
       Long pageSize,
       List<String> fields,
       final ProgressResponseBody.ProgressListener progressListener,
-      final ProgressRequestBody.ProgressRequestListener progressRequestListener)
+      final ProgressRequestBody.ProgressRequestListener progressRequestListener,
+      String... headerPair)
       throws ApiException {
+
     Object localVarPostBody = null;
 
     // create path and map variables
@@ -256,6 +272,15 @@ public class AudienceGrantRelationsApi {
     final String[] localVarContentTypes = {"text/plain"};
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
     localVarHeaderParams.put("Content-Type", localVarContentType);
+
+    if (headerPair != null && headerPair.length > 0) {
+      if (headerPair.length % 2 != 0) {
+        throw new UnsupportedOperationException("Parameter headerPair must be paired");
+      }
+      for (int i = 0; i < headerPair.length / 2; i++) {
+        localVarHeaderParams.put(headerPair[i], headerPair[i * 2 + 1]);
+      }
+    }
 
     if (progressListener != null) {
       apiClient
@@ -296,7 +321,8 @@ public class AudienceGrantRelationsApi {
       Long pageSize,
       List<String> fields,
       final ProgressResponseBody.ProgressListener progressListener,
-      final ProgressRequestBody.ProgressRequestListener progressRequestListener)
+      final ProgressRequestBody.ProgressRequestListener progressRequestListener,
+      String... headerPair)
       throws ApiException {
 
     // verify the required parameter 'accountId' is set
@@ -313,7 +339,8 @@ public class AudienceGrantRelationsApi {
             pageSize,
             fields,
             progressListener,
-            progressRequestListener);
+            progressRequestListener,
+            headerPair);
     return call;
   }
 
@@ -334,10 +361,12 @@ public class AudienceGrantRelationsApi {
       List<FilteringStruct> filtering,
       Long page,
       Long pageSize,
-      List<String> fields)
+      List<String> fields,
+      String... headerPair)
       throws ApiException {
     ApiResponse<AudienceGrantRelationsGetResponse> resp =
-        audienceGrantRelationsGetWithHttpInfo(accountId, filtering, page, pageSize, fields);
+        audienceGrantRelationsGetWithHttpInfo(
+            accountId, filtering, page, pageSize, fields, headerPair);
     return resp.getData();
   }
 
@@ -358,11 +387,12 @@ public class AudienceGrantRelationsApi {
       List<FilteringStruct> filtering,
       Long page,
       Long pageSize,
-      List<String> fields)
+      List<String> fields,
+      String... headerPair)
       throws ApiException {
     com.squareup.okhttp.Call call =
         audienceGrantRelationsGetValidateBeforeCall(
-            accountId, filtering, page, pageSize, fields, null, null);
+            accountId, filtering, page, pageSize, fields, null, null, headerPair);
     Type localVarReturnType = new TypeToken<AudienceGrantRelationsGetResponse>() {}.getType();
     return apiClient.execute(call, localVarReturnType);
   }
@@ -385,7 +415,8 @@ public class AudienceGrantRelationsApi {
       Long page,
       Long pageSize,
       List<String> fields,
-      final ApiCallback<AudienceGrantRelationsGetResponse> callback)
+      final ApiCallback<AudienceGrantRelationsGetResponse> callback,
+      String... headerPair)
       throws ApiException {
 
     ProgressResponseBody.ProgressListener progressListener = null;
@@ -417,7 +448,8 @@ public class AudienceGrantRelationsApi {
             pageSize,
             fields,
             progressListener,
-            progressRequestListener);
+            progressRequestListener,
+            headerPair);
     Type localVarReturnType = new TypeToken<AudienceGrantRelationsGetResponse>() {}.getType();
     apiClient.executeAsync(call, localVarReturnType, callback);
     return call;

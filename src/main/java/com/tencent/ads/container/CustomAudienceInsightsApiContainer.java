@@ -38,10 +38,14 @@ public class CustomAudienceInsightsApiContainer extends ApiContainer {
    *     response body
    */
   public CustomAudienceInsightsGetResponseData customAudienceInsightsGet(
-      Long accountId, Long audienceId, List<String> dimensionType, List<String> fields)
+      Long accountId,
+      Long audienceId,
+      List<String> dimensionType,
+      List<String> fields,
+      String... headerPair)
       throws ApiException, TencentAdsResponseException {
     CustomAudienceInsightsGetResponse resp =
-        api.customAudienceInsightsGet(accountId, audienceId, dimensionType, fields);
+        api.customAudienceInsightsGet(accountId, audienceId, dimensionType, fields, headerPair);
     handleResponse(gson.toJson(resp));
     return resp.getData();
   }

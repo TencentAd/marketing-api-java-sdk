@@ -71,8 +71,10 @@ public class UserActionSetReportsApi {
       String aggregation,
       List<String> fields,
       final ProgressResponseBody.ProgressListener progressListener,
-      final ProgressRequestBody.ProgressRequestListener progressRequestListener)
+      final ProgressRequestBody.ProgressRequestListener progressRequestListener,
+      String... headerPair)
       throws ApiException {
+
     Object localVarPostBody = null;
 
     // create path and map variables
@@ -104,6 +106,15 @@ public class UserActionSetReportsApi {
     final String[] localVarContentTypes = {"text/plain"};
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
     localVarHeaderParams.put("Content-Type", localVarContentType);
+
+    if (headerPair != null && headerPair.length > 0) {
+      if (headerPair.length % 2 != 0) {
+        throw new UnsupportedOperationException("Parameter headerPair must be paired");
+      }
+      for (int i = 0; i < headerPair.length / 2; i++) {
+        localVarHeaderParams.put(headerPair[i], headerPair[i * 2 + 1]);
+      }
+    }
 
     if (progressListener != null) {
       apiClient
@@ -145,7 +156,8 @@ public class UserActionSetReportsApi {
       String aggregation,
       List<String> fields,
       final ProgressResponseBody.ProgressListener progressListener,
-      final ProgressRequestBody.ProgressRequestListener progressRequestListener)
+      final ProgressRequestBody.ProgressRequestListener progressRequestListener,
+      String... headerPair)
       throws ApiException {
 
     // verify the required parameter 'accountId' is set
@@ -181,7 +193,8 @@ public class UserActionSetReportsApi {
             aggregation,
             fields,
             progressListener,
-            progressRequestListener);
+            progressRequestListener,
+            headerPair);
     return call;
   }
 
@@ -204,11 +217,18 @@ public class UserActionSetReportsApi {
       DateRange dateRange,
       String timeGranularity,
       String aggregation,
-      List<String> fields)
+      List<String> fields,
+      String... headerPair)
       throws ApiException {
     ApiResponse<UserActionSetReportsGetResponse> resp =
         userActionSetReportsGetWithHttpInfo(
-            accountId, userActionSetId, dateRange, timeGranularity, aggregation, fields);
+            accountId,
+            userActionSetId,
+            dateRange,
+            timeGranularity,
+            aggregation,
+            fields,
+            headerPair);
     return resp.getData();
   }
 
@@ -231,7 +251,8 @@ public class UserActionSetReportsApi {
       DateRange dateRange,
       String timeGranularity,
       String aggregation,
-      List<String> fields)
+      List<String> fields,
+      String... headerPair)
       throws ApiException {
     com.squareup.okhttp.Call call =
         userActionSetReportsGetValidateBeforeCall(
@@ -242,7 +263,8 @@ public class UserActionSetReportsApi {
             aggregation,
             fields,
             null,
-            null);
+            null,
+            headerPair);
     Type localVarReturnType = new TypeToken<UserActionSetReportsGetResponse>() {}.getType();
     return apiClient.execute(call, localVarReturnType);
   }
@@ -267,7 +289,8 @@ public class UserActionSetReportsApi {
       String timeGranularity,
       String aggregation,
       List<String> fields,
-      final ApiCallback<UserActionSetReportsGetResponse> callback)
+      final ApiCallback<UserActionSetReportsGetResponse> callback,
+      String... headerPair)
       throws ApiException {
 
     ProgressResponseBody.ProgressListener progressListener = null;
@@ -300,7 +323,8 @@ public class UserActionSetReportsApi {
             aggregation,
             fields,
             progressListener,
-            progressRequestListener);
+            progressRequestListener,
+            headerPair);
     Type localVarReturnType = new TypeToken<UserActionSetReportsGetResponse>() {}.getType();
     apiClient.executeAsync(call, localVarReturnType, callback);
     return call;

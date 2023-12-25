@@ -37,9 +37,9 @@ public class XijingPageApiContainer extends ApiContainer {
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
-  public XijingPageAddResponse xijingPageAdd(XijingPageAddRequest data)
+  public XijingPageAddResponse xijingPageAdd(XijingPageAddRequest data, String... headerPair)
       throws ApiException, TencentAdsResponseException {
-    XijingPageAddResponse resp = api.xijingPageAdd(data);
+    XijingPageAddResponse resp = api.xijingPageAdd(data, headerPair);
     handleResponse(gson.toJson(resp));
 
     return resp;
@@ -53,9 +53,10 @@ public class XijingPageApiContainer extends ApiContainer {
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
-  public XijingPageDeleteResponse xijingPageDelete(XijingPageDeleteRequest data)
+  public XijingPageDeleteResponse xijingPageDelete(
+      XijingPageDeleteRequest data, String... headerPair)
       throws ApiException, TencentAdsResponseException {
-    XijingPageDeleteResponse resp = api.xijingPageDelete(data);
+    XijingPageDeleteResponse resp = api.xijingPageDelete(data, headerPair);
     handleResponse(gson.toJson(resp));
 
     return resp;
@@ -69,9 +70,10 @@ public class XijingPageApiContainer extends ApiContainer {
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
-  public XijingPageUpdateResponse xijingPageUpdate(XijingPageUpdateRequest data)
+  public XijingPageUpdateResponse xijingPageUpdate(
+      XijingPageUpdateRequest data, String... headerPair)
       throws ApiException, TencentAdsResponseException {
-    XijingPageUpdateResponse resp = api.xijingPageUpdate(data);
+    XijingPageUpdateResponse resp = api.xijingPageUpdate(data, headerPair);
     handleResponse(gson.toJson(resp));
 
     return resp;

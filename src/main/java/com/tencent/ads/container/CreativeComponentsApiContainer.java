@@ -47,9 +47,10 @@ public class CreativeComponentsApiContainer extends ApiContainer {
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
-  public CreativeComponentsAddResponseData creativeComponentsAdd(CreativeComponentsAddRequest data)
+  public CreativeComponentsAddResponseData creativeComponentsAdd(
+      CreativeComponentsAddRequest data, String... headerPair)
       throws ApiException, TencentAdsResponseException {
-    CreativeComponentsAddResponse resp = api.creativeComponentsAdd(data);
+    CreativeComponentsAddResponse resp = api.creativeComponentsAdd(data, headerPair);
     handleResponse(gson.toJson(resp));
     return resp.getData();
   }
@@ -63,8 +64,9 @@ public class CreativeComponentsApiContainer extends ApiContainer {
    *     response body
    */
   public CreativeComponentsDeleteResponseData creativeComponentsDelete(
-      CreativeComponentsDeleteRequest data) throws ApiException, TencentAdsResponseException {
-    CreativeComponentsDeleteResponse resp = api.creativeComponentsDelete(data);
+      CreativeComponentsDeleteRequest data, String... headerPair)
+      throws ApiException, TencentAdsResponseException {
+    CreativeComponentsDeleteResponse resp = api.creativeComponentsDelete(data, headerPair);
     handleResponse(gson.toJson(resp));
     return resp.getData();
   }
@@ -86,10 +88,11 @@ public class CreativeComponentsApiContainer extends ApiContainer {
       List<FilteringStruct> filtering,
       Long page,
       Long pageSize,
-      List<String> fields)
+      List<String> fields,
+      String... headerPair)
       throws ApiException, TencentAdsResponseException {
     CreativeComponentsGetResponse resp =
-        api.creativeComponentsGet(accountId, filtering, page, pageSize, fields);
+        api.creativeComponentsGet(accountId, filtering, page, pageSize, fields, headerPair);
     handleResponse(gson.toJson(resp));
     return resp.getData();
   }
@@ -103,8 +106,9 @@ public class CreativeComponentsApiContainer extends ApiContainer {
    *     response body
    */
   public CreativeComponentsUpdateResponseData creativeComponentsUpdate(
-      CreativeComponentsUpdateRequest data) throws ApiException, TencentAdsResponseException {
-    CreativeComponentsUpdateResponse resp = api.creativeComponentsUpdate(data);
+      CreativeComponentsUpdateRequest data, String... headerPair)
+      throws ApiException, TencentAdsResponseException {
+    CreativeComponentsUpdateResponse resp = api.creativeComponentsUpdate(data, headerPair);
     handleResponse(gson.toJson(resp));
     return resp.getData();
   }
@@ -118,8 +122,10 @@ public class CreativeComponentsApiContainer extends ApiContainer {
    *     response body
    */
   public CreativeComponentsUpdateStatusResponseData creativeComponentsUpdateStatus(
-      CreativeComponentsUpdateStatusRequest data) throws ApiException, TencentAdsResponseException {
-    CreativeComponentsUpdateStatusResponse resp = api.creativeComponentsUpdateStatus(data);
+      CreativeComponentsUpdateStatusRequest data, String... headerPair)
+      throws ApiException, TencentAdsResponseException {
+    CreativeComponentsUpdateStatusResponse resp =
+        api.creativeComponentsUpdateStatus(data, headerPair);
     handleResponse(gson.toJson(resp));
     return resp.getData();
   }

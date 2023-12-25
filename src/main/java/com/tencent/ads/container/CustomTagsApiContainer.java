@@ -41,9 +41,9 @@ public class CustomTagsApiContainer extends ApiContainer {
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
-  public CustomTagsAddResponseData customTagsAdd(CustomTagsAddRequest data)
+  public CustomTagsAddResponseData customTagsAdd(CustomTagsAddRequest data, String... headerPair)
       throws ApiException, TencentAdsResponseException {
-    CustomTagsAddResponse resp = api.customTagsAdd(data);
+    CustomTagsAddResponse resp = api.customTagsAdd(data, headerPair);
     handleResponse(gson.toJson(resp));
     return resp.getData();
   }
@@ -56,9 +56,10 @@ public class CustomTagsApiContainer extends ApiContainer {
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
-  public CustomTagsDeleteResponse customTagsDelete(CustomTagsDeleteRequest data)
+  public CustomTagsDeleteResponse customTagsDelete(
+      CustomTagsDeleteRequest data, String... headerPair)
       throws ApiException, TencentAdsResponseException {
-    CustomTagsDeleteResponse resp = api.customTagsDelete(data);
+    CustomTagsDeleteResponse resp = api.customTagsDelete(data, headerPair);
     handleResponse(gson.toJson(resp));
 
     return resp;
@@ -87,10 +88,12 @@ public class CustomTagsApiContainer extends ApiContainer {
       String platform,
       Long page,
       Long pageSize,
-      List<String> fields)
+      List<String> fields,
+      String... headerPair)
       throws ApiException, TencentAdsResponseException {
     CustomTagsGetResponse resp =
-        api.customTagsGet(accountId, parentTagId, tagId, tagCode, platform, page, pageSize, fields);
+        api.customTagsGet(
+            accountId, parentTagId, tagId, tagCode, platform, page, pageSize, fields, headerPair);
     handleResponse(gson.toJson(resp));
     return resp.getData();
   }
@@ -103,9 +106,10 @@ public class CustomTagsApiContainer extends ApiContainer {
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
-  public CustomTagsUpdateResponse customTagsUpdate(CustomTagsUpdateRequest data)
+  public CustomTagsUpdateResponse customTagsUpdate(
+      CustomTagsUpdateRequest data, String... headerPair)
       throws ApiException, TencentAdsResponseException {
-    CustomTagsUpdateResponse resp = api.customTagsUpdate(data);
+    CustomTagsUpdateResponse resp = api.customTagsUpdate(data, headerPair);
     handleResponse(gson.toJson(resp));
 
     return resp;

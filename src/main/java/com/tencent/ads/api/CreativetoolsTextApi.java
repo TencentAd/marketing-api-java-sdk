@@ -74,8 +74,10 @@ public class CreativetoolsTextApi {
       Long number,
       List<String> fields,
       final ProgressResponseBody.ProgressListener progressListener,
-      final ProgressRequestBody.ProgressRequestListener progressRequestListener)
+      final ProgressRequestBody.ProgressRequestListener progressRequestListener,
+      String... headerPair)
       throws ApiException {
+
     Object localVarPostBody = null;
 
     // create path and map variables
@@ -112,6 +114,15 @@ public class CreativetoolsTextApi {
     final String[] localVarContentTypes = {"text/plain"};
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
     localVarHeaderParams.put("Content-Type", localVarContentType);
+
+    if (headerPair != null && headerPair.length > 0) {
+      if (headerPair.length % 2 != 0) {
+        throw new UnsupportedOperationException("Parameter headerPair must be paired");
+      }
+      for (int i = 0; i < headerPair.length / 2; i++) {
+        localVarHeaderParams.put(headerPair[i], headerPair[i * 2 + 1]);
+      }
+    }
 
     if (progressListener != null) {
       apiClient
@@ -155,7 +166,8 @@ public class CreativetoolsTextApi {
       Long number,
       List<String> fields,
       final ProgressResponseBody.ProgressListener progressListener,
-      final ProgressRequestBody.ProgressRequestListener progressRequestListener)
+      final ProgressRequestBody.ProgressRequestListener progressRequestListener,
+      String... headerPair)
       throws ApiException {
 
     // verify the required parameter 'accountId' is set
@@ -181,7 +193,8 @@ public class CreativetoolsTextApi {
             number,
             fields,
             progressListener,
-            progressRequestListener);
+            progressRequestListener,
+            headerPair);
     return call;
   }
 
@@ -208,7 +221,8 @@ public class CreativetoolsTextApi {
       String keyword,
       List<Long> filtering,
       Long number,
-      List<String> fields)
+      List<String> fields,
+      String... headerPair)
       throws ApiException {
     ApiResponse<CreativetoolsTextGetResponse> resp =
         creativetoolsTextGetWithHttpInfo(
@@ -219,7 +233,8 @@ public class CreativetoolsTextApi {
             keyword,
             filtering,
             number,
-            fields);
+            fields,
+            headerPair);
     return resp.getData();
   }
 
@@ -246,7 +261,8 @@ public class CreativetoolsTextApi {
       String keyword,
       List<Long> filtering,
       Long number,
-      List<String> fields)
+      List<String> fields,
+      String... headerPair)
       throws ApiException {
     com.squareup.okhttp.Call call =
         creativetoolsTextGetValidateBeforeCall(
@@ -259,7 +275,8 @@ public class CreativetoolsTextApi {
             number,
             fields,
             null,
-            null);
+            null,
+            headerPair);
     Type localVarReturnType = new TypeToken<CreativetoolsTextGetResponse>() {}.getType();
     return apiClient.execute(call, localVarReturnType);
   }
@@ -288,7 +305,8 @@ public class CreativetoolsTextApi {
       List<Long> filtering,
       Long number,
       List<String> fields,
-      final ApiCallback<CreativetoolsTextGetResponse> callback)
+      final ApiCallback<CreativetoolsTextGetResponse> callback,
+      String... headerPair)
       throws ApiException {
 
     ProgressResponseBody.ProgressListener progressListener = null;
@@ -323,7 +341,8 @@ public class CreativetoolsTextApi {
             number,
             fields,
             progressListener,
-            progressRequestListener);
+            progressRequestListener,
+            headerPair);
     Type localVarReturnType = new TypeToken<CreativetoolsTextGetResponse>() {}.getType();
     apiClient.executeAsync(call, localVarReturnType, callback);
     return call;

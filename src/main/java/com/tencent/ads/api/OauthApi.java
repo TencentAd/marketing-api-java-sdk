@@ -72,8 +72,10 @@ public class OauthApi {
       Long accountDisplayNumber,
       List<String> fields,
       final ProgressResponseBody.ProgressListener progressListener,
-      final ProgressRequestBody.ProgressRequestListener progressRequestListener)
+      final ProgressRequestBody.ProgressRequestListener progressRequestListener,
+      String... headerPair)
       throws ApiException {
+
     Object localVarPostBody = null;
 
     // create path and map variables
@@ -106,6 +108,15 @@ public class OauthApi {
     final String[] localVarContentTypes = {"text/plain"};
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
     localVarHeaderParams.put("Content-Type", localVarContentType);
+
+    if (headerPair != null && headerPair.length > 0) {
+      if (headerPair.length % 2 != 0) {
+        throw new UnsupportedOperationException("Parameter headerPair must be paired");
+      }
+      for (int i = 0; i < headerPair.length / 2; i++) {
+        localVarHeaderParams.put(headerPair[i], headerPair[i * 2 + 1]);
+      }
+    }
 
     if (progressListener != null) {
       apiClient
@@ -148,7 +159,8 @@ public class OauthApi {
       Long accountDisplayNumber,
       List<String> fields,
       final ProgressResponseBody.ProgressListener progressListener,
-      final ProgressRequestBody.ProgressRequestListener progressRequestListener)
+      final ProgressRequestBody.ProgressRequestListener progressRequestListener,
+      String... headerPair)
       throws ApiException {
 
     // verify the required parameter 'clientId' is set
@@ -173,7 +185,8 @@ public class OauthApi {
             accountDisplayNumber,
             fields,
             progressListener,
-            progressRequestListener);
+            progressRequestListener,
+            headerPair);
     return call;
   }
 
@@ -198,11 +211,19 @@ public class OauthApi {
       String scope,
       String accountType,
       Long accountDisplayNumber,
-      List<String> fields)
+      List<String> fields,
+      String... headerPair)
       throws ApiException {
     ApiResponse<String> resp =
         oauthAuthorizeWithHttpInfo(
-            clientId, redirectUri, state, scope, accountType, accountDisplayNumber, fields);
+            clientId,
+            redirectUri,
+            state,
+            scope,
+            accountType,
+            accountDisplayNumber,
+            fields,
+            headerPair);
     return resp.getData();
   }
 
@@ -227,7 +248,8 @@ public class OauthApi {
       String scope,
       String accountType,
       Long accountDisplayNumber,
-      List<String> fields)
+      List<String> fields,
+      String... headerPair)
       throws ApiException {
     com.squareup.okhttp.Call call =
         oauthAuthorizeValidateBeforeCall(
@@ -239,7 +261,8 @@ public class OauthApi {
             accountDisplayNumber,
             fields,
             null,
-            null);
+            null,
+            headerPair);
     Type localVarReturnType = new TypeToken<String>() {}.getType();
     return apiClient.execute(call, localVarReturnType);
   }
@@ -266,7 +289,8 @@ public class OauthApi {
       String accountType,
       Long accountDisplayNumber,
       List<String> fields,
-      final ApiCallback<String> callback)
+      final ApiCallback<String> callback,
+      String... headerPair)
       throws ApiException {
 
     ProgressResponseBody.ProgressListener progressListener = null;
@@ -300,7 +324,8 @@ public class OauthApi {
             accountDisplayNumber,
             fields,
             progressListener,
-            progressRequestListener);
+            progressRequestListener,
+            headerPair);
     Type localVarReturnType = new TypeToken<String>() {}.getType();
     apiClient.executeAsync(call, localVarReturnType, callback);
     return call;
@@ -328,8 +353,10 @@ public class OauthApi {
       String refreshToken,
       String redirectUri,
       final ProgressResponseBody.ProgressListener progressListener,
-      final ProgressRequestBody.ProgressRequestListener progressRequestListener)
+      final ProgressRequestBody.ProgressRequestListener progressRequestListener,
+      String... headerPair)
       throws ApiException {
+
     Object localVarPostBody = null;
 
     // create path and map variables
@@ -362,6 +389,15 @@ public class OauthApi {
     final String[] localVarContentTypes = {"text/plain"};
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
     localVarHeaderParams.put("Content-Type", localVarContentType);
+
+    if (headerPair != null && headerPair.length > 0) {
+      if (headerPair.length % 2 != 0) {
+        throw new UnsupportedOperationException("Parameter headerPair must be paired");
+      }
+      for (int i = 0; i < headerPair.length / 2; i++) {
+        localVarHeaderParams.put(headerPair[i], headerPair[i * 2 + 1]);
+      }
+    }
 
     if (progressListener != null) {
       apiClient
@@ -403,7 +439,8 @@ public class OauthApi {
       String refreshToken,
       String redirectUri,
       final ProgressResponseBody.ProgressListener progressListener,
-      final ProgressRequestBody.ProgressRequestListener progressRequestListener)
+      final ProgressRequestBody.ProgressRequestListener progressRequestListener,
+      String... headerPair)
       throws ApiException {
 
     // verify the required parameter 'clientId' is set
@@ -433,7 +470,8 @@ public class OauthApi {
             refreshToken,
             redirectUri,
             progressListener,
-            progressRequestListener);
+            progressRequestListener,
+            headerPair);
     return call;
   }
 
@@ -457,11 +495,18 @@ public class OauthApi {
       String grantType,
       String authorizationCode,
       String refreshToken,
-      String redirectUri)
+      String redirectUri,
+      String... headerPair)
       throws ApiException {
     ApiResponse<OauthTokenResponse> resp =
         oauthTokenWithHttpInfo(
-            clientId, clientSecret, grantType, authorizationCode, refreshToken, redirectUri);
+            clientId,
+            clientSecret,
+            grantType,
+            authorizationCode,
+            refreshToken,
+            redirectUri,
+            headerPair);
     return resp.getData();
   }
 
@@ -485,7 +530,8 @@ public class OauthApi {
       String grantType,
       String authorizationCode,
       String refreshToken,
-      String redirectUri)
+      String redirectUri,
+      String... headerPair)
       throws ApiException {
     com.squareup.okhttp.Call call =
         oauthTokenValidateBeforeCall(
@@ -496,7 +542,8 @@ public class OauthApi {
             refreshToken,
             redirectUri,
             null,
-            null);
+            null,
+            headerPair);
     Type localVarReturnType = new TypeToken<OauthTokenResponse>() {}.getType();
     return apiClient.execute(call, localVarReturnType);
   }
@@ -522,7 +569,8 @@ public class OauthApi {
       String authorizationCode,
       String refreshToken,
       String redirectUri,
-      final ApiCallback<OauthTokenResponse> callback)
+      final ApiCallback<OauthTokenResponse> callback,
+      String... headerPair)
       throws ApiException {
 
     ProgressResponseBody.ProgressListener progressListener = null;
@@ -555,7 +603,8 @@ public class OauthApi {
             refreshToken,
             redirectUri,
             progressListener,
-            progressRequestListener);
+            progressRequestListener,
+            headerPair);
     Type localVarReturnType = new TypeToken<OauthTokenResponse>() {}.getType();
     apiClient.executeAsync(call, localVarReturnType, callback);
     return call;

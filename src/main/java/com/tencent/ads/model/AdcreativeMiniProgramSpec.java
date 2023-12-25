@@ -32,6 +32,9 @@ public class AdcreativeMiniProgramSpec {
   @SerializedName("mini_program_paths")
   private List<String> miniProgramPaths = null;
 
+  @SerializedName("mini_program_openlink_option")
+  private MiniProgramOpenLinkOption miniProgramOpenlinkOption = null;
+
   public AdcreativeMiniProgramSpec miniProgramId(String miniProgramId) {
     this.miniProgramId = miniProgramId;
     return this;
@@ -97,6 +100,26 @@ public class AdcreativeMiniProgramSpec {
     this.miniProgramPaths = miniProgramPaths;
   }
 
+  public AdcreativeMiniProgramSpec miniProgramOpenlinkOption(
+      MiniProgramOpenLinkOption miniProgramOpenlinkOption) {
+    this.miniProgramOpenlinkOption = miniProgramOpenlinkOption;
+    return this;
+  }
+
+  /**
+   * Get miniProgramOpenlinkOption
+   *
+   * @return miniProgramOpenlinkOption
+   */
+  @ApiModelProperty(value = "")
+  public MiniProgramOpenLinkOption getMiniProgramOpenlinkOption() {
+    return miniProgramOpenlinkOption;
+  }
+
+  public void setMiniProgramOpenlinkOption(MiniProgramOpenLinkOption miniProgramOpenlinkOption) {
+    this.miniProgramOpenlinkOption = miniProgramOpenlinkOption;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -108,12 +131,15 @@ public class AdcreativeMiniProgramSpec {
     AdcreativeMiniProgramSpec adcreativeMiniProgramSpec = (AdcreativeMiniProgramSpec) o;
     return Objects.equals(this.miniProgramId, adcreativeMiniProgramSpec.miniProgramId)
         && Objects.equals(this.miniProgramPath, adcreativeMiniProgramSpec.miniProgramPath)
-        && Objects.equals(this.miniProgramPaths, adcreativeMiniProgramSpec.miniProgramPaths);
+        && Objects.equals(this.miniProgramPaths, adcreativeMiniProgramSpec.miniProgramPaths)
+        && Objects.equals(
+            this.miniProgramOpenlinkOption, adcreativeMiniProgramSpec.miniProgramOpenlinkOption);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(miniProgramId, miniProgramPath, miniProgramPaths);
+    return Objects.hash(
+        miniProgramId, miniProgramPath, miniProgramPaths, miniProgramOpenlinkOption);
   }
 
   @Override

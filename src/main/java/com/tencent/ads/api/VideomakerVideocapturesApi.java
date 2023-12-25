@@ -71,8 +71,10 @@ public class VideomakerVideocapturesApi {
       Long number,
       Boolean returnImageIds,
       final ProgressResponseBody.ProgressListener progressListener,
-      final ProgressRequestBody.ProgressRequestListener progressRequestListener)
+      final ProgressRequestBody.ProgressRequestListener progressRequestListener,
+      String... headerPair)
       throws ApiException {
+
     Object localVarPostBody = null;
 
     // create path and map variables
@@ -98,6 +100,15 @@ public class VideomakerVideocapturesApi {
     final String[] localVarContentTypes = {"multipart/form-data"};
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
     localVarHeaderParams.put("Content-Type", localVarContentType);
+
+    if (headerPair != null && headerPair.length > 0) {
+      if (headerPair.length % 2 != 0) {
+        throw new UnsupportedOperationException("Parameter headerPair must be paired");
+      }
+      for (int i = 0; i < headerPair.length / 2; i++) {
+        localVarHeaderParams.put(headerPair[i], headerPair[i * 2 + 1]);
+      }
+    }
 
     if (progressListener != null) {
       apiClient
@@ -139,7 +150,8 @@ public class VideomakerVideocapturesApi {
       Long number,
       Boolean returnImageIds,
       final ProgressResponseBody.ProgressListener progressListener,
-      final ProgressRequestBody.ProgressRequestListener progressRequestListener)
+      final ProgressRequestBody.ProgressRequestListener progressRequestListener,
+      String... headerPair)
       throws ApiException {
 
     // verify the required parameter 'accountId' is set
@@ -157,7 +169,8 @@ public class VideomakerVideocapturesApi {
             number,
             returnImageIds,
             progressListener,
-            progressRequestListener);
+            progressRequestListener,
+            headerPair);
     return call;
   }
 
@@ -180,11 +193,12 @@ public class VideomakerVideocapturesApi {
       File videoFile,
       String signature,
       Long number,
-      Boolean returnImageIds)
+      Boolean returnImageIds,
+      String... headerPair)
       throws ApiException {
     ApiResponse<VideomakerVideocapturesAddResponse> resp =
         videomakerVideocapturesAddWithHttpInfo(
-            accountId, videoId, videoFile, signature, number, returnImageIds);
+            accountId, videoId, videoFile, signature, number, returnImageIds, headerPair);
     return resp.getData();
   }
 
@@ -207,11 +221,20 @@ public class VideomakerVideocapturesApi {
       File videoFile,
       String signature,
       Long number,
-      Boolean returnImageIds)
+      Boolean returnImageIds,
+      String... headerPair)
       throws ApiException {
     com.squareup.okhttp.Call call =
         videomakerVideocapturesAddValidateBeforeCall(
-            accountId, videoId, videoFile, signature, number, returnImageIds, null, null);
+            accountId,
+            videoId,
+            videoFile,
+            signature,
+            number,
+            returnImageIds,
+            null,
+            null,
+            headerPair);
     Type localVarReturnType = new TypeToken<VideomakerVideocapturesAddResponse>() {}.getType();
     return apiClient.execute(call, localVarReturnType);
   }
@@ -236,7 +259,8 @@ public class VideomakerVideocapturesApi {
       String signature,
       Long number,
       Boolean returnImageIds,
-      final ApiCallback<VideomakerVideocapturesAddResponse> callback)
+      final ApiCallback<VideomakerVideocapturesAddResponse> callback,
+      String... headerPair)
       throws ApiException {
 
     ProgressResponseBody.ProgressListener progressListener = null;
@@ -269,7 +293,8 @@ public class VideomakerVideocapturesApi {
             number,
             returnImageIds,
             progressListener,
-            progressRequestListener);
+            progressRequestListener,
+            headerPair);
     Type localVarReturnType = new TypeToken<VideomakerVideocapturesAddResponse>() {}.getType();
     apiClient.executeAsync(call, localVarReturnType, callback);
     return call;

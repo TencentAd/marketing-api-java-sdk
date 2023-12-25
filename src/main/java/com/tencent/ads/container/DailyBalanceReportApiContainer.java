@@ -40,10 +40,15 @@ public class DailyBalanceReportApiContainer extends ApiContainer {
    *     response body
    */
   public DailyBalanceReportGetResponseData dailyBalanceReportGet(
-      Long accountId, DateRangeTransaction dateRange, Long page, Long pageSize, List<String> fields)
+      Long accountId,
+      DateRangeTransaction dateRange,
+      Long page,
+      Long pageSize,
+      List<String> fields,
+      String... headerPair)
       throws ApiException, TencentAdsResponseException {
     DailyBalanceReportGetResponse resp =
-        api.dailyBalanceReportGet(accountId, dateRange, page, pageSize, fields);
+        api.dailyBalanceReportGet(accountId, dateRange, page, pageSize, fields, headerPair);
     handleResponse(gson.toJson(resp));
     return resp.getData();
   }

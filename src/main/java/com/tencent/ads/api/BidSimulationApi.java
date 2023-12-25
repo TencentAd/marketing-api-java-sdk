@@ -61,8 +61,10 @@ public class BidSimulationApi {
   public com.squareup.okhttp.Call bidSimulationGetCall(
       BidSimulationGetRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
-      final ProgressRequestBody.ProgressRequestListener progressRequestListener)
+      final ProgressRequestBody.ProgressRequestListener progressRequestListener,
+      String... headerPair)
       throws ApiException {
+
     Object localVarPostBody = data;
 
     // create path and map variables
@@ -82,6 +84,15 @@ public class BidSimulationApi {
     final String[] localVarContentTypes = {"application/json", "application/xml"};
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
     localVarHeaderParams.put("Content-Type", localVarContentType);
+
+    if (headerPair != null && headerPair.length > 0) {
+      if (headerPair.length % 2 != 0) {
+        throw new UnsupportedOperationException("Parameter headerPair must be paired");
+      }
+      for (int i = 0; i < headerPair.length / 2; i++) {
+        localVarHeaderParams.put(headerPair[i], headerPair[i * 2 + 1]);
+      }
+    }
 
     if (progressListener != null) {
       apiClient
@@ -118,7 +129,8 @@ public class BidSimulationApi {
   private com.squareup.okhttp.Call bidSimulationGetValidateBeforeCall(
       BidSimulationGetRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
-      final ProgressRequestBody.ProgressRequestListener progressRequestListener)
+      final ProgressRequestBody.ProgressRequestListener progressRequestListener,
+      String... headerPair)
       throws ApiException {
 
     // verify the required parameter 'data' is set
@@ -128,7 +140,7 @@ public class BidSimulationApi {
     }
 
     com.squareup.okhttp.Call call =
-        bidSimulationGetCall(data, progressListener, progressRequestListener);
+        bidSimulationGetCall(data, progressListener, progressRequestListener, headerPair);
     return call;
   }
 
@@ -140,9 +152,9 @@ public class BidSimulationApi {
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
-  public BidSimulationGetResponse bidSimulationGet(BidSimulationGetRequest data)
-      throws ApiException {
-    ApiResponse<BidSimulationGetResponse> resp = bidSimulationGetWithHttpInfo(data);
+  public BidSimulationGetResponse bidSimulationGet(
+      BidSimulationGetRequest data, String... headerPair) throws ApiException {
+    ApiResponse<BidSimulationGetResponse> resp = bidSimulationGetWithHttpInfo(data, headerPair);
     return resp.getData();
   }
 
@@ -155,8 +167,9 @@ public class BidSimulationApi {
    *     response body
    */
   public ApiResponse<BidSimulationGetResponse> bidSimulationGetWithHttpInfo(
-      BidSimulationGetRequest data) throws ApiException {
-    com.squareup.okhttp.Call call = bidSimulationGetValidateBeforeCall(data, null, null);
+      BidSimulationGetRequest data, String... headerPair) throws ApiException {
+    com.squareup.okhttp.Call call =
+        bidSimulationGetValidateBeforeCall(data, null, null, headerPair);
     Type localVarReturnType = new TypeToken<BidSimulationGetResponse>() {}.getType();
     return apiClient.execute(call, localVarReturnType);
   }
@@ -170,7 +183,9 @@ public class BidSimulationApi {
    * @throws ApiException If fail to process the API call, e.g. serializing the request body object
    */
   public com.squareup.okhttp.Call bidSimulationGetAsync(
-      BidSimulationGetRequest data, final ApiCallback<BidSimulationGetResponse> callback)
+      BidSimulationGetRequest data,
+      final ApiCallback<BidSimulationGetResponse> callback,
+      String... headerPair)
       throws ApiException {
 
     ProgressResponseBody.ProgressListener progressListener = null;
@@ -195,7 +210,8 @@ public class BidSimulationApi {
     }
 
     com.squareup.okhttp.Call call =
-        bidSimulationGetValidateBeforeCall(data, progressListener, progressRequestListener);
+        bidSimulationGetValidateBeforeCall(
+            data, progressListener, progressRequestListener, headerPair);
     Type localVarReturnType = new TypeToken<BidSimulationGetResponse>() {}.getType();
     apiClient.executeAsync(call, localVarReturnType, callback);
     return call;

@@ -61,8 +61,10 @@ public class EstimationApi {
   public com.squareup.okhttp.Call estimationGetCall(
       EstimationGetRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
-      final ProgressRequestBody.ProgressRequestListener progressRequestListener)
+      final ProgressRequestBody.ProgressRequestListener progressRequestListener,
+      String... headerPair)
       throws ApiException {
+
     Object localVarPostBody = data;
 
     // create path and map variables
@@ -82,6 +84,15 @@ public class EstimationApi {
     final String[] localVarContentTypes = {"application/json", "application/xml"};
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
     localVarHeaderParams.put("Content-Type", localVarContentType);
+
+    if (headerPair != null && headerPair.length > 0) {
+      if (headerPair.length % 2 != 0) {
+        throw new UnsupportedOperationException("Parameter headerPair must be paired");
+      }
+      for (int i = 0; i < headerPair.length / 2; i++) {
+        localVarHeaderParams.put(headerPair[i], headerPair[i * 2 + 1]);
+      }
+    }
 
     if (progressListener != null) {
       apiClient
@@ -118,7 +129,8 @@ public class EstimationApi {
   private com.squareup.okhttp.Call estimationGetValidateBeforeCall(
       EstimationGetRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
-      final ProgressRequestBody.ProgressRequestListener progressRequestListener)
+      final ProgressRequestBody.ProgressRequestListener progressRequestListener,
+      String... headerPair)
       throws ApiException {
 
     // verify the required parameter 'data' is set
@@ -128,7 +140,7 @@ public class EstimationApi {
     }
 
     com.squareup.okhttp.Call call =
-        estimationGetCall(data, progressListener, progressRequestListener);
+        estimationGetCall(data, progressListener, progressRequestListener, headerPair);
     return call;
   }
 
@@ -140,8 +152,9 @@ public class EstimationApi {
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
-  public EstimationGetResponse estimationGet(EstimationGetRequest data) throws ApiException {
-    ApiResponse<EstimationGetResponse> resp = estimationGetWithHttpInfo(data);
+  public EstimationGetResponse estimationGet(EstimationGetRequest data, String... headerPair)
+      throws ApiException {
+    ApiResponse<EstimationGetResponse> resp = estimationGetWithHttpInfo(data, headerPair);
     return resp.getData();
   }
 
@@ -153,9 +166,9 @@ public class EstimationApi {
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
-  public ApiResponse<EstimationGetResponse> estimationGetWithHttpInfo(EstimationGetRequest data)
-      throws ApiException {
-    com.squareup.okhttp.Call call = estimationGetValidateBeforeCall(data, null, null);
+  public ApiResponse<EstimationGetResponse> estimationGetWithHttpInfo(
+      EstimationGetRequest data, String... headerPair) throws ApiException {
+    com.squareup.okhttp.Call call = estimationGetValidateBeforeCall(data, null, null, headerPair);
     Type localVarReturnType = new TypeToken<EstimationGetResponse>() {}.getType();
     return apiClient.execute(call, localVarReturnType);
   }
@@ -169,7 +182,9 @@ public class EstimationApi {
    * @throws ApiException If fail to process the API call, e.g. serializing the request body object
    */
   public com.squareup.okhttp.Call estimationGetAsync(
-      EstimationGetRequest data, final ApiCallback<EstimationGetResponse> callback)
+      EstimationGetRequest data,
+      final ApiCallback<EstimationGetResponse> callback,
+      String... headerPair)
       throws ApiException {
 
     ProgressResponseBody.ProgressListener progressListener = null;
@@ -194,7 +209,8 @@ public class EstimationApi {
     }
 
     com.squareup.okhttp.Call call =
-        estimationGetValidateBeforeCall(data, progressListener, progressRequestListener);
+        estimationGetValidateBeforeCall(
+            data, progressListener, progressRequestListener, headerPair);
     Type localVarReturnType = new TypeToken<EstimationGetResponse>() {}.getType();
     apiClient.executeAsync(call, localVarReturnType, callback);
     return call;

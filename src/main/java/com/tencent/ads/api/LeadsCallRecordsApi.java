@@ -61,8 +61,10 @@ public class LeadsCallRecordsApi {
   public com.squareup.okhttp.Call leadsCallRecordsGetCall(
       LeadsCallRecordsGetRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
-      final ProgressRequestBody.ProgressRequestListener progressRequestListener)
+      final ProgressRequestBody.ProgressRequestListener progressRequestListener,
+      String... headerPair)
       throws ApiException {
+
     Object localVarPostBody = data;
 
     // create path and map variables
@@ -82,6 +84,15 @@ public class LeadsCallRecordsApi {
     final String[] localVarContentTypes = {"application/json", "application/xml"};
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
     localVarHeaderParams.put("Content-Type", localVarContentType);
+
+    if (headerPair != null && headerPair.length > 0) {
+      if (headerPair.length % 2 != 0) {
+        throw new UnsupportedOperationException("Parameter headerPair must be paired");
+      }
+      for (int i = 0; i < headerPair.length / 2; i++) {
+        localVarHeaderParams.put(headerPair[i], headerPair[i * 2 + 1]);
+      }
+    }
 
     if (progressListener != null) {
       apiClient
@@ -118,7 +129,8 @@ public class LeadsCallRecordsApi {
   private com.squareup.okhttp.Call leadsCallRecordsGetValidateBeforeCall(
       LeadsCallRecordsGetRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
-      final ProgressRequestBody.ProgressRequestListener progressRequestListener)
+      final ProgressRequestBody.ProgressRequestListener progressRequestListener,
+      String... headerPair)
       throws ApiException {
 
     // verify the required parameter 'data' is set
@@ -128,7 +140,7 @@ public class LeadsCallRecordsApi {
     }
 
     com.squareup.okhttp.Call call =
-        leadsCallRecordsGetCall(data, progressListener, progressRequestListener);
+        leadsCallRecordsGetCall(data, progressListener, progressRequestListener, headerPair);
     return call;
   }
 
@@ -140,9 +152,10 @@ public class LeadsCallRecordsApi {
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
-  public LeadsCallRecordsGetResponse leadsCallRecordsGet(LeadsCallRecordsGetRequest data)
-      throws ApiException {
-    ApiResponse<LeadsCallRecordsGetResponse> resp = leadsCallRecordsGetWithHttpInfo(data);
+  public LeadsCallRecordsGetResponse leadsCallRecordsGet(
+      LeadsCallRecordsGetRequest data, String... headerPair) throws ApiException {
+    ApiResponse<LeadsCallRecordsGetResponse> resp =
+        leadsCallRecordsGetWithHttpInfo(data, headerPair);
     return resp.getData();
   }
 
@@ -155,8 +168,9 @@ public class LeadsCallRecordsApi {
    *     response body
    */
   public ApiResponse<LeadsCallRecordsGetResponse> leadsCallRecordsGetWithHttpInfo(
-      LeadsCallRecordsGetRequest data) throws ApiException {
-    com.squareup.okhttp.Call call = leadsCallRecordsGetValidateBeforeCall(data, null, null);
+      LeadsCallRecordsGetRequest data, String... headerPair) throws ApiException {
+    com.squareup.okhttp.Call call =
+        leadsCallRecordsGetValidateBeforeCall(data, null, null, headerPair);
     Type localVarReturnType = new TypeToken<LeadsCallRecordsGetResponse>() {}.getType();
     return apiClient.execute(call, localVarReturnType);
   }
@@ -170,7 +184,9 @@ public class LeadsCallRecordsApi {
    * @throws ApiException If fail to process the API call, e.g. serializing the request body object
    */
   public com.squareup.okhttp.Call leadsCallRecordsGetAsync(
-      LeadsCallRecordsGetRequest data, final ApiCallback<LeadsCallRecordsGetResponse> callback)
+      LeadsCallRecordsGetRequest data,
+      final ApiCallback<LeadsCallRecordsGetResponse> callback,
+      String... headerPair)
       throws ApiException {
 
     ProgressResponseBody.ProgressListener progressListener = null;
@@ -195,7 +211,8 @@ public class LeadsCallRecordsApi {
     }
 
     com.squareup.okhttp.Call call =
-        leadsCallRecordsGetValidateBeforeCall(data, progressListener, progressRequestListener);
+        leadsCallRecordsGetValidateBeforeCall(
+            data, progressListener, progressRequestListener, headerPair);
     Type localVarReturnType = new TypeToken<LeadsCallRecordsGetResponse>() {}.getType();
     apiClient.executeAsync(call, localVarReturnType, callback);
     return call;

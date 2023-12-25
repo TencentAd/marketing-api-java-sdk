@@ -73,8 +73,10 @@ public class AppAndroidChannelPackagesApi {
       Long pageSize,
       List<String> fields,
       final ProgressResponseBody.ProgressListener progressListener,
-      final ProgressRequestBody.ProgressRequestListener progressRequestListener)
+      final ProgressRequestBody.ProgressRequestListener progressRequestListener,
+      String... headerPair)
       throws ApiException {
+
     Object localVarPostBody = null;
 
     // create path and map variables
@@ -109,6 +111,15 @@ public class AppAndroidChannelPackagesApi {
     final String[] localVarContentTypes = {"text/plain"};
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
     localVarHeaderParams.put("Content-Type", localVarContentType);
+
+    if (headerPair != null && headerPair.length > 0) {
+      if (headerPair.length % 2 != 0) {
+        throw new UnsupportedOperationException("Parameter headerPair must be paired");
+      }
+      for (int i = 0; i < headerPair.length / 2; i++) {
+        localVarHeaderParams.put(headerPair[i], headerPair[i * 2 + 1]);
+      }
+    }
 
     if (progressListener != null) {
       apiClient
@@ -151,7 +162,8 @@ public class AppAndroidChannelPackagesApi {
       Long pageSize,
       List<String> fields,
       final ProgressResponseBody.ProgressListener progressListener,
-      final ProgressRequestBody.ProgressRequestListener progressRequestListener)
+      final ProgressRequestBody.ProgressRequestListener progressRequestListener,
+      String... headerPair)
       throws ApiException {
 
     // verify the required parameter 'accountId' is set
@@ -182,7 +194,8 @@ public class AppAndroidChannelPackagesApi {
             pageSize,
             fields,
             progressListener,
-            progressRequestListener);
+            progressRequestListener,
+            headerPair);
     return call;
   }
 
@@ -207,11 +220,19 @@ public class AppAndroidChannelPackagesApi {
       List<FilteringStruct> filtering,
       Long page,
       Long pageSize,
-      List<String> fields)
+      List<String> fields,
+      String... headerPair)
       throws ApiException {
     ApiResponse<AppAndroidChannelPackagesGetResponse> resp =
         appAndroidChannelPackagesGetWithHttpInfo(
-            accountId, promotedObjectId, promotedObjectType, filtering, page, pageSize, fields);
+            accountId,
+            promotedObjectId,
+            promotedObjectType,
+            filtering,
+            page,
+            pageSize,
+            fields,
+            headerPair);
     return resp.getData();
   }
 
@@ -236,7 +257,8 @@ public class AppAndroidChannelPackagesApi {
       List<FilteringStruct> filtering,
       Long page,
       Long pageSize,
-      List<String> fields)
+      List<String> fields,
+      String... headerPair)
       throws ApiException {
     com.squareup.okhttp.Call call =
         appAndroidChannelPackagesGetValidateBeforeCall(
@@ -248,7 +270,8 @@ public class AppAndroidChannelPackagesApi {
             pageSize,
             fields,
             null,
-            null);
+            null,
+            headerPair);
     Type localVarReturnType = new TypeToken<AppAndroidChannelPackagesGetResponse>() {}.getType();
     return apiClient.execute(call, localVarReturnType);
   }
@@ -275,7 +298,8 @@ public class AppAndroidChannelPackagesApi {
       Long page,
       Long pageSize,
       List<String> fields,
-      final ApiCallback<AppAndroidChannelPackagesGetResponse> callback)
+      final ApiCallback<AppAndroidChannelPackagesGetResponse> callback,
+      String... headerPair)
       throws ApiException {
 
     ProgressResponseBody.ProgressListener progressListener = null;
@@ -309,7 +333,8 @@ public class AppAndroidChannelPackagesApi {
             pageSize,
             fields,
             progressListener,
-            progressRequestListener);
+            progressRequestListener,
+            headerPair);
     Type localVarReturnType = new TypeToken<AppAndroidChannelPackagesGetResponse>() {}.getType();
     apiClient.executeAsync(call, localVarReturnType, callback);
     return call;

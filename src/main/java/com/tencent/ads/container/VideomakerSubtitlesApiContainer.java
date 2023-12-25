@@ -39,10 +39,16 @@ public class VideomakerSubtitlesApiContainer extends ApiContainer {
    *     response body
    */
   public VideomakerSubtitlesAddResponseData videomakerSubtitlesAdd(
-      Long accountId, String videoId, File videoFile, String signature, Boolean onlySubtitleFile)
+      Long accountId,
+      String videoId,
+      File videoFile,
+      String signature,
+      Boolean onlySubtitleFile,
+      String... headerPair)
       throws ApiException, TencentAdsResponseException {
     VideomakerSubtitlesAddResponse resp =
-        api.videomakerSubtitlesAdd(accountId, videoId, videoFile, signature, onlySubtitleFile);
+        api.videomakerSubtitlesAdd(
+            accountId, videoId, videoFile, signature, onlySubtitleFile, headerPair);
     handleResponse(gson.toJson(resp));
     return resp.getData();
   }

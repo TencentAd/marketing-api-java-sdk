@@ -117,6 +117,9 @@ public class DynamicCreativesUpdateRequest {
   @SerializedName("app_gift_pack_code")
   private AppGiftPackCode appGiftPackCode = null;
 
+  @SerializedName("landing_page_options")
+  private List<DynamicLandingPageInfo> landingPageOptions = null;
+
   @SerializedName("union_market_spec")
   private UnionMarketSpec unionMarketSpec = null;
 
@@ -768,6 +771,35 @@ public class DynamicCreativesUpdateRequest {
     this.appGiftPackCode = appGiftPackCode;
   }
 
+  public DynamicCreativesUpdateRequest landingPageOptions(
+      List<DynamicLandingPageInfo> landingPageOptions) {
+    this.landingPageOptions = landingPageOptions;
+    return this;
+  }
+
+  public DynamicCreativesUpdateRequest addLandingPageOptionsItem(
+      DynamicLandingPageInfo landingPageOptionsItem) {
+    if (this.landingPageOptions == null) {
+      this.landingPageOptions = new ArrayList<DynamicLandingPageInfo>();
+    }
+    this.landingPageOptions.add(landingPageOptionsItem);
+    return this;
+  }
+
+  /**
+   * Get landingPageOptions
+   *
+   * @return landingPageOptions
+   */
+  @ApiModelProperty(value = "")
+  public List<DynamicLandingPageInfo> getLandingPageOptions() {
+    return landingPageOptions;
+  }
+
+  public void setLandingPageOptions(List<DynamicLandingPageInfo> landingPageOptions) {
+    this.landingPageOptions = landingPageOptions;
+  }
+
   public DynamicCreativesUpdateRequest unionMarketSpec(UnionMarketSpec unionMarketSpec) {
     this.unionMarketSpec = unionMarketSpec;
     return this;
@@ -1012,6 +1044,7 @@ public class DynamicCreativesUpdateRequest {
         && Objects.equals(this.barrageList, dynamicCreativesUpdateRequest.barrageList)
         && Objects.equals(this.countdownSwitch, dynamicCreativesUpdateRequest.countdownSwitch)
         && Objects.equals(this.appGiftPackCode, dynamicCreativesUpdateRequest.appGiftPackCode)
+        && Objects.equals(this.landingPageOptions, dynamicCreativesUpdateRequest.landingPageOptions)
         && Objects.equals(this.unionMarketSpec, dynamicCreativesUpdateRequest.unionMarketSpec)
         && Objects.equals(
             this.autoDerivedProgramCreativeSwitch,
@@ -1061,6 +1094,7 @@ public class DynamicCreativesUpdateRequest {
         barrageList,
         countdownSwitch,
         appGiftPackCode,
+        landingPageOptions,
         unionMarketSpec,
         autoDerivedProgramCreativeSwitch,
         headClickType,

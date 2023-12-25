@@ -12,7 +12,6 @@
 
 package com.tencent.ads.model;
 
-
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.stream.JsonReader;
@@ -210,6 +209,8 @@ public enum LandingPageType {
   LANDING_PAGE_TYPE_DEEP_LINK("LANDING_PAGE_TYPE_DEEP_LINK"),
 
   LANDING_PAGE_TYPE_UNIVERSAL_LINK("LANDING_PAGE_TYPE_UNIVERSAL_LINK"),
+
+  LANDING_PAGE_TYPE_APP_MARKET("LANDING_PAGE_TYPE_APP_MARKET"),
 
   LANDING_PAGE_TYPE_WECHAT_NATIVE_WEBVIEW("LANDING_PAGE_TYPE_WECHAT_NATIVE_WEBVIEW"),
 

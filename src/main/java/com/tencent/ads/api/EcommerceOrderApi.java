@@ -74,8 +74,10 @@ public class EcommerceOrderApi {
       Long pageSize,
       List<String> fields,
       final ProgressResponseBody.ProgressListener progressListener,
-      final ProgressRequestBody.ProgressRequestListener progressRequestListener)
+      final ProgressRequestBody.ProgressRequestListener progressRequestListener,
+      String... headerPair)
       throws ApiException {
+
     Object localVarPostBody = null;
 
     // create path and map variables
@@ -107,6 +109,15 @@ public class EcommerceOrderApi {
     final String[] localVarContentTypes = {"text/plain"};
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
     localVarHeaderParams.put("Content-Type", localVarContentType);
+
+    if (headerPair != null && headerPair.length > 0) {
+      if (headerPair.length % 2 != 0) {
+        throw new UnsupportedOperationException("Parameter headerPair must be paired");
+      }
+      for (int i = 0; i < headerPair.length / 2; i++) {
+        localVarHeaderParams.put(headerPair[i], headerPair[i * 2 + 1]);
+      }
+    }
 
     if (progressListener != null) {
       apiClient
@@ -148,7 +159,8 @@ public class EcommerceOrderApi {
       Long pageSize,
       List<String> fields,
       final ProgressResponseBody.ProgressListener progressListener,
-      final ProgressRequestBody.ProgressRequestListener progressRequestListener)
+      final ProgressRequestBody.ProgressRequestListener progressRequestListener,
+      String... headerPair)
       throws ApiException {
 
     // verify the required parameter 'accountId' is set
@@ -172,7 +184,8 @@ public class EcommerceOrderApi {
             pageSize,
             fields,
             progressListener,
-            progressRequestListener);
+            progressRequestListener,
+            headerPair);
     return call;
   }
 
@@ -195,10 +208,12 @@ public class EcommerceOrderApi {
       List<FilteringStruct> filtering,
       Long page,
       Long pageSize,
-      List<String> fields)
+      List<String> fields,
+      String... headerPair)
       throws ApiException {
     ApiResponse<EcommerceOrderGetResponse> resp =
-        ecommerceOrderGetWithHttpInfo(accountId, dateRange, filtering, page, pageSize, fields);
+        ecommerceOrderGetWithHttpInfo(
+            accountId, dateRange, filtering, page, pageSize, fields, headerPair);
     return resp.getData();
   }
 
@@ -221,11 +236,12 @@ public class EcommerceOrderApi {
       List<FilteringStruct> filtering,
       Long page,
       Long pageSize,
-      List<String> fields)
+      List<String> fields,
+      String... headerPair)
       throws ApiException {
     com.squareup.okhttp.Call call =
         ecommerceOrderGetValidateBeforeCall(
-            accountId, dateRange, filtering, page, pageSize, fields, null, null);
+            accountId, dateRange, filtering, page, pageSize, fields, null, null, headerPair);
     Type localVarReturnType = new TypeToken<EcommerceOrderGetResponse>() {}.getType();
     return apiClient.execute(call, localVarReturnType);
   }
@@ -250,7 +266,8 @@ public class EcommerceOrderApi {
       Long page,
       Long pageSize,
       List<String> fields,
-      final ApiCallback<EcommerceOrderGetResponse> callback)
+      final ApiCallback<EcommerceOrderGetResponse> callback,
+      String... headerPair)
       throws ApiException {
 
     ProgressResponseBody.ProgressListener progressListener = null;
@@ -283,7 +300,8 @@ public class EcommerceOrderApi {
             pageSize,
             fields,
             progressListener,
-            progressRequestListener);
+            progressRequestListener,
+            headerPair);
     Type localVarReturnType = new TypeToken<EcommerceOrderGetResponse>() {}.getType();
     apiClient.executeAsync(call, localVarReturnType, callback);
     return call;
@@ -300,8 +318,10 @@ public class EcommerceOrderApi {
   public com.squareup.okhttp.Call ecommerceOrderUpdateCall(
       EcommerceOrderUpdateRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
-      final ProgressRequestBody.ProgressRequestListener progressRequestListener)
+      final ProgressRequestBody.ProgressRequestListener progressRequestListener,
+      String... headerPair)
       throws ApiException {
+
     Object localVarPostBody = data;
 
     // create path and map variables
@@ -321,6 +341,15 @@ public class EcommerceOrderApi {
     final String[] localVarContentTypes = {"application/json", "application/xml"};
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
     localVarHeaderParams.put("Content-Type", localVarContentType);
+
+    if (headerPair != null && headerPair.length > 0) {
+      if (headerPair.length % 2 != 0) {
+        throw new UnsupportedOperationException("Parameter headerPair must be paired");
+      }
+      for (int i = 0; i < headerPair.length / 2; i++) {
+        localVarHeaderParams.put(headerPair[i], headerPair[i * 2 + 1]);
+      }
+    }
 
     if (progressListener != null) {
       apiClient
@@ -357,7 +386,8 @@ public class EcommerceOrderApi {
   private com.squareup.okhttp.Call ecommerceOrderUpdateValidateBeforeCall(
       EcommerceOrderUpdateRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
-      final ProgressRequestBody.ProgressRequestListener progressRequestListener)
+      final ProgressRequestBody.ProgressRequestListener progressRequestListener,
+      String... headerPair)
       throws ApiException {
 
     // verify the required parameter 'data' is set
@@ -367,7 +397,7 @@ public class EcommerceOrderApi {
     }
 
     com.squareup.okhttp.Call call =
-        ecommerceOrderUpdateCall(data, progressListener, progressRequestListener);
+        ecommerceOrderUpdateCall(data, progressListener, progressRequestListener, headerPair);
     return call;
   }
 
@@ -379,9 +409,10 @@ public class EcommerceOrderApi {
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
-  public EcommerceOrderUpdateResponse ecommerceOrderUpdate(EcommerceOrderUpdateRequest data)
-      throws ApiException {
-    ApiResponse<EcommerceOrderUpdateResponse> resp = ecommerceOrderUpdateWithHttpInfo(data);
+  public EcommerceOrderUpdateResponse ecommerceOrderUpdate(
+      EcommerceOrderUpdateRequest data, String... headerPair) throws ApiException {
+    ApiResponse<EcommerceOrderUpdateResponse> resp =
+        ecommerceOrderUpdateWithHttpInfo(data, headerPair);
     return resp.getData();
   }
 
@@ -394,8 +425,9 @@ public class EcommerceOrderApi {
    *     response body
    */
   public ApiResponse<EcommerceOrderUpdateResponse> ecommerceOrderUpdateWithHttpInfo(
-      EcommerceOrderUpdateRequest data) throws ApiException {
-    com.squareup.okhttp.Call call = ecommerceOrderUpdateValidateBeforeCall(data, null, null);
+      EcommerceOrderUpdateRequest data, String... headerPair) throws ApiException {
+    com.squareup.okhttp.Call call =
+        ecommerceOrderUpdateValidateBeforeCall(data, null, null, headerPair);
     Type localVarReturnType = new TypeToken<EcommerceOrderUpdateResponse>() {}.getType();
     return apiClient.execute(call, localVarReturnType);
   }
@@ -409,7 +441,9 @@ public class EcommerceOrderApi {
    * @throws ApiException If fail to process the API call, e.g. serializing the request body object
    */
   public com.squareup.okhttp.Call ecommerceOrderUpdateAsync(
-      EcommerceOrderUpdateRequest data, final ApiCallback<EcommerceOrderUpdateResponse> callback)
+      EcommerceOrderUpdateRequest data,
+      final ApiCallback<EcommerceOrderUpdateResponse> callback,
+      String... headerPair)
       throws ApiException {
 
     ProgressResponseBody.ProgressListener progressListener = null;
@@ -434,7 +468,8 @@ public class EcommerceOrderApi {
     }
 
     com.squareup.okhttp.Call call =
-        ecommerceOrderUpdateValidateBeforeCall(data, progressListener, progressRequestListener);
+        ecommerceOrderUpdateValidateBeforeCall(
+            data, progressListener, progressRequestListener, headerPair);
     Type localVarReturnType = new TypeToken<EcommerceOrderUpdateResponse>() {}.getType();
     apiClient.executeAsync(call, localVarReturnType, callback);
     return call;

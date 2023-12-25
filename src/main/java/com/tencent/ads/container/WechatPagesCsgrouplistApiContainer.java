@@ -39,8 +39,9 @@ public class WechatPagesCsgrouplistApiContainer extends ApiContainer {
    *     response body
    */
   public WechatPagesCsgrouplistAddResponse wechatPagesCsgrouplistAdd(
-      WechatPagesCsgrouplistAddRequest data) throws ApiException, TencentAdsResponseException {
-    WechatPagesCsgrouplistAddResponse resp = api.wechatPagesCsgrouplistAdd(data);
+      WechatPagesCsgrouplistAddRequest data, String... headerPair)
+      throws ApiException, TencentAdsResponseException {
+    WechatPagesCsgrouplistAddResponse resp = api.wechatPagesCsgrouplistAdd(data, headerPair);
     handleResponse(gson.toJson(resp));
 
     return resp;
@@ -59,10 +60,15 @@ public class WechatPagesCsgrouplistApiContainer extends ApiContainer {
    *     response body
    */
   public WechatPagesCsgrouplistGetResponseData wechatPagesCsgrouplistGet(
-      Long accountId, Long page, Long pageSize, String corpId, List<String> fields)
+      Long accountId,
+      Long page,
+      Long pageSize,
+      String corpId,
+      List<String> fields,
+      String... headerPair)
       throws ApiException, TencentAdsResponseException {
     WechatPagesCsgrouplistGetResponse resp =
-        api.wechatPagesCsgrouplistGet(accountId, page, pageSize, corpId, fields);
+        api.wechatPagesCsgrouplistGet(accountId, page, pageSize, corpId, fields, headerPair);
     handleResponse(gson.toJson(resp));
     return resp.getData();
   }
@@ -76,8 +82,9 @@ public class WechatPagesCsgrouplistApiContainer extends ApiContainer {
    *     response body
    */
   public WechatPagesCsgrouplistUpdateResponse wechatPagesCsgrouplistUpdate(
-      WechatPagesCsgrouplistUpdateRequest data) throws ApiException, TencentAdsResponseException {
-    WechatPagesCsgrouplistUpdateResponse resp = api.wechatPagesCsgrouplistUpdate(data);
+      WechatPagesCsgrouplistUpdateRequest data, String... headerPair)
+      throws ApiException, TencentAdsResponseException {
+    WechatPagesCsgrouplistUpdateResponse resp = api.wechatPagesCsgrouplistUpdate(data, headerPair);
     handleResponse(gson.toJson(resp));
 
     return resp;

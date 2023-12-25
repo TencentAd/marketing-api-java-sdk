@@ -12,14 +12,13 @@
 
 package com.tencent.ads.model;
 
-
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-/** 线索匹配类型，不填认为是NONE */
+/** 线索匹配类型，不填认为时OUTERLEADSID */
 @JsonAdapter(LeadsMatchType.Adapter.class)
 public enum LeadsMatchType {
   NONE("NONE"),

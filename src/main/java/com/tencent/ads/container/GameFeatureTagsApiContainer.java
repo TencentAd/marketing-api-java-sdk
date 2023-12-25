@@ -37,9 +37,9 @@ public class GameFeatureTagsApiContainer extends ApiContainer {
    *     response body
    */
   public GameFeatureTagsGetResponseData gameFeatureTagsGet(
-      Long accountId, String type, List<String> fields)
+      Long accountId, String type, List<String> fields, String... headerPair)
       throws ApiException, TencentAdsResponseException {
-    GameFeatureTagsGetResponse resp = api.gameFeatureTagsGet(accountId, type, fields);
+    GameFeatureTagsGetResponse resp = api.gameFeatureTagsGet(accountId, type, fields, headerPair);
     handleResponse(gson.toJson(resp));
     return resp.getData();
   }

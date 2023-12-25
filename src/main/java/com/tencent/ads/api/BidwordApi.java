@@ -67,8 +67,10 @@ public class BidwordApi {
   public com.squareup.okhttp.Call bidwordAddCall(
       BidwordAddRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
-      final ProgressRequestBody.ProgressRequestListener progressRequestListener)
+      final ProgressRequestBody.ProgressRequestListener progressRequestListener,
+      String... headerPair)
       throws ApiException {
+
     Object localVarPostBody = data;
 
     // create path and map variables
@@ -88,6 +90,15 @@ public class BidwordApi {
     final String[] localVarContentTypes = {"application/json", "application/xml"};
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
     localVarHeaderParams.put("Content-Type", localVarContentType);
+
+    if (headerPair != null && headerPair.length > 0) {
+      if (headerPair.length % 2 != 0) {
+        throw new UnsupportedOperationException("Parameter headerPair must be paired");
+      }
+      for (int i = 0; i < headerPair.length / 2; i++) {
+        localVarHeaderParams.put(headerPair[i], headerPair[i * 2 + 1]);
+      }
+    }
 
     if (progressListener != null) {
       apiClient
@@ -124,7 +135,8 @@ public class BidwordApi {
   private com.squareup.okhttp.Call bidwordAddValidateBeforeCall(
       BidwordAddRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
-      final ProgressRequestBody.ProgressRequestListener progressRequestListener)
+      final ProgressRequestBody.ProgressRequestListener progressRequestListener,
+      String... headerPair)
       throws ApiException {
 
     // verify the required parameter 'data' is set
@@ -133,7 +145,8 @@ public class BidwordApi {
           "Missing the required parameter 'data' when calling bidwordAdd(Async)");
     }
 
-    com.squareup.okhttp.Call call = bidwordAddCall(data, progressListener, progressRequestListener);
+    com.squareup.okhttp.Call call =
+        bidwordAddCall(data, progressListener, progressRequestListener, headerPair);
     return call;
   }
 
@@ -145,8 +158,9 @@ public class BidwordApi {
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
-  public BidwordAddResponse bidwordAdd(BidwordAddRequest data) throws ApiException {
-    ApiResponse<BidwordAddResponse> resp = bidwordAddWithHttpInfo(data);
+  public BidwordAddResponse bidwordAdd(BidwordAddRequest data, String... headerPair)
+      throws ApiException {
+    ApiResponse<BidwordAddResponse> resp = bidwordAddWithHttpInfo(data, headerPair);
     return resp.getData();
   }
 
@@ -158,9 +172,9 @@ public class BidwordApi {
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
-  public ApiResponse<BidwordAddResponse> bidwordAddWithHttpInfo(BidwordAddRequest data)
-      throws ApiException {
-    com.squareup.okhttp.Call call = bidwordAddValidateBeforeCall(data, null, null);
+  public ApiResponse<BidwordAddResponse> bidwordAddWithHttpInfo(
+      BidwordAddRequest data, String... headerPair) throws ApiException {
+    com.squareup.okhttp.Call call = bidwordAddValidateBeforeCall(data, null, null, headerPair);
     Type localVarReturnType = new TypeToken<BidwordAddResponse>() {}.getType();
     return apiClient.execute(call, localVarReturnType);
   }
@@ -174,7 +188,8 @@ public class BidwordApi {
    * @throws ApiException If fail to process the API call, e.g. serializing the request body object
    */
   public com.squareup.okhttp.Call bidwordAddAsync(
-      BidwordAddRequest data, final ApiCallback<BidwordAddResponse> callback) throws ApiException {
+      BidwordAddRequest data, final ApiCallback<BidwordAddResponse> callback, String... headerPair)
+      throws ApiException {
 
     ProgressResponseBody.ProgressListener progressListener = null;
     ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -198,7 +213,7 @@ public class BidwordApi {
     }
 
     com.squareup.okhttp.Call call =
-        bidwordAddValidateBeforeCall(data, progressListener, progressRequestListener);
+        bidwordAddValidateBeforeCall(data, progressListener, progressRequestListener, headerPair);
     Type localVarReturnType = new TypeToken<BidwordAddResponse>() {}.getType();
     apiClient.executeAsync(call, localVarReturnType, callback);
     return call;
@@ -215,8 +230,10 @@ public class BidwordApi {
   public com.squareup.okhttp.Call bidwordDeleteCall(
       BidwordDeleteRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
-      final ProgressRequestBody.ProgressRequestListener progressRequestListener)
+      final ProgressRequestBody.ProgressRequestListener progressRequestListener,
+      String... headerPair)
       throws ApiException {
+
     Object localVarPostBody = data;
 
     // create path and map variables
@@ -236,6 +253,15 @@ public class BidwordApi {
     final String[] localVarContentTypes = {"application/json", "application/xml"};
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
     localVarHeaderParams.put("Content-Type", localVarContentType);
+
+    if (headerPair != null && headerPair.length > 0) {
+      if (headerPair.length % 2 != 0) {
+        throw new UnsupportedOperationException("Parameter headerPair must be paired");
+      }
+      for (int i = 0; i < headerPair.length / 2; i++) {
+        localVarHeaderParams.put(headerPair[i], headerPair[i * 2 + 1]);
+      }
+    }
 
     if (progressListener != null) {
       apiClient
@@ -272,7 +298,8 @@ public class BidwordApi {
   private com.squareup.okhttp.Call bidwordDeleteValidateBeforeCall(
       BidwordDeleteRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
-      final ProgressRequestBody.ProgressRequestListener progressRequestListener)
+      final ProgressRequestBody.ProgressRequestListener progressRequestListener,
+      String... headerPair)
       throws ApiException {
 
     // verify the required parameter 'data' is set
@@ -282,7 +309,7 @@ public class BidwordApi {
     }
 
     com.squareup.okhttp.Call call =
-        bidwordDeleteCall(data, progressListener, progressRequestListener);
+        bidwordDeleteCall(data, progressListener, progressRequestListener, headerPair);
     return call;
   }
 
@@ -294,8 +321,9 @@ public class BidwordApi {
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
-  public BidwordDeleteResponse bidwordDelete(BidwordDeleteRequest data) throws ApiException {
-    ApiResponse<BidwordDeleteResponse> resp = bidwordDeleteWithHttpInfo(data);
+  public BidwordDeleteResponse bidwordDelete(BidwordDeleteRequest data, String... headerPair)
+      throws ApiException {
+    ApiResponse<BidwordDeleteResponse> resp = bidwordDeleteWithHttpInfo(data, headerPair);
     return resp.getData();
   }
 
@@ -307,9 +335,9 @@ public class BidwordApi {
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
-  public ApiResponse<BidwordDeleteResponse> bidwordDeleteWithHttpInfo(BidwordDeleteRequest data)
-      throws ApiException {
-    com.squareup.okhttp.Call call = bidwordDeleteValidateBeforeCall(data, null, null);
+  public ApiResponse<BidwordDeleteResponse> bidwordDeleteWithHttpInfo(
+      BidwordDeleteRequest data, String... headerPair) throws ApiException {
+    com.squareup.okhttp.Call call = bidwordDeleteValidateBeforeCall(data, null, null, headerPair);
     Type localVarReturnType = new TypeToken<BidwordDeleteResponse>() {}.getType();
     return apiClient.execute(call, localVarReturnType);
   }
@@ -323,7 +351,9 @@ public class BidwordApi {
    * @throws ApiException If fail to process the API call, e.g. serializing the request body object
    */
   public com.squareup.okhttp.Call bidwordDeleteAsync(
-      BidwordDeleteRequest data, final ApiCallback<BidwordDeleteResponse> callback)
+      BidwordDeleteRequest data,
+      final ApiCallback<BidwordDeleteResponse> callback,
+      String... headerPair)
       throws ApiException {
 
     ProgressResponseBody.ProgressListener progressListener = null;
@@ -348,7 +378,8 @@ public class BidwordApi {
     }
 
     com.squareup.okhttp.Call call =
-        bidwordDeleteValidateBeforeCall(data, progressListener, progressRequestListener);
+        bidwordDeleteValidateBeforeCall(
+            data, progressListener, progressRequestListener, headerPair);
     Type localVarReturnType = new TypeToken<BidwordDeleteResponse>() {}.getType();
     apiClient.executeAsync(call, localVarReturnType, callback);
     return call;
@@ -365,8 +396,10 @@ public class BidwordApi {
   public com.squareup.okhttp.Call bidwordGetCall(
       BidwordGetRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
-      final ProgressRequestBody.ProgressRequestListener progressRequestListener)
+      final ProgressRequestBody.ProgressRequestListener progressRequestListener,
+      String... headerPair)
       throws ApiException {
+
     Object localVarPostBody = data;
 
     // create path and map variables
@@ -386,6 +419,15 @@ public class BidwordApi {
     final String[] localVarContentTypes = {"application/json", "application/xml"};
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
     localVarHeaderParams.put("Content-Type", localVarContentType);
+
+    if (headerPair != null && headerPair.length > 0) {
+      if (headerPair.length % 2 != 0) {
+        throw new UnsupportedOperationException("Parameter headerPair must be paired");
+      }
+      for (int i = 0; i < headerPair.length / 2; i++) {
+        localVarHeaderParams.put(headerPair[i], headerPair[i * 2 + 1]);
+      }
+    }
 
     if (progressListener != null) {
       apiClient
@@ -422,7 +464,8 @@ public class BidwordApi {
   private com.squareup.okhttp.Call bidwordGetValidateBeforeCall(
       BidwordGetRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
-      final ProgressRequestBody.ProgressRequestListener progressRequestListener)
+      final ProgressRequestBody.ProgressRequestListener progressRequestListener,
+      String... headerPair)
       throws ApiException {
 
     // verify the required parameter 'data' is set
@@ -431,7 +474,8 @@ public class BidwordApi {
           "Missing the required parameter 'data' when calling bidwordGet(Async)");
     }
 
-    com.squareup.okhttp.Call call = bidwordGetCall(data, progressListener, progressRequestListener);
+    com.squareup.okhttp.Call call =
+        bidwordGetCall(data, progressListener, progressRequestListener, headerPair);
     return call;
   }
 
@@ -443,8 +487,9 @@ public class BidwordApi {
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
-  public BidwordGetResponse bidwordGet(BidwordGetRequest data) throws ApiException {
-    ApiResponse<BidwordGetResponse> resp = bidwordGetWithHttpInfo(data);
+  public BidwordGetResponse bidwordGet(BidwordGetRequest data, String... headerPair)
+      throws ApiException {
+    ApiResponse<BidwordGetResponse> resp = bidwordGetWithHttpInfo(data, headerPair);
     return resp.getData();
   }
 
@@ -456,9 +501,9 @@ public class BidwordApi {
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
-  public ApiResponse<BidwordGetResponse> bidwordGetWithHttpInfo(BidwordGetRequest data)
-      throws ApiException {
-    com.squareup.okhttp.Call call = bidwordGetValidateBeforeCall(data, null, null);
+  public ApiResponse<BidwordGetResponse> bidwordGetWithHttpInfo(
+      BidwordGetRequest data, String... headerPair) throws ApiException {
+    com.squareup.okhttp.Call call = bidwordGetValidateBeforeCall(data, null, null, headerPair);
     Type localVarReturnType = new TypeToken<BidwordGetResponse>() {}.getType();
     return apiClient.execute(call, localVarReturnType);
   }
@@ -472,7 +517,8 @@ public class BidwordApi {
    * @throws ApiException If fail to process the API call, e.g. serializing the request body object
    */
   public com.squareup.okhttp.Call bidwordGetAsync(
-      BidwordGetRequest data, final ApiCallback<BidwordGetResponse> callback) throws ApiException {
+      BidwordGetRequest data, final ApiCallback<BidwordGetResponse> callback, String... headerPair)
+      throws ApiException {
 
     ProgressResponseBody.ProgressListener progressListener = null;
     ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -496,7 +542,7 @@ public class BidwordApi {
     }
 
     com.squareup.okhttp.Call call =
-        bidwordGetValidateBeforeCall(data, progressListener, progressRequestListener);
+        bidwordGetValidateBeforeCall(data, progressListener, progressRequestListener, headerPair);
     Type localVarReturnType = new TypeToken<BidwordGetResponse>() {}.getType();
     apiClient.executeAsync(call, localVarReturnType, callback);
     return call;
@@ -513,8 +559,10 @@ public class BidwordApi {
   public com.squareup.okhttp.Call bidwordUpdateCall(
       BidwordUpdateRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
-      final ProgressRequestBody.ProgressRequestListener progressRequestListener)
+      final ProgressRequestBody.ProgressRequestListener progressRequestListener,
+      String... headerPair)
       throws ApiException {
+
     Object localVarPostBody = data;
 
     // create path and map variables
@@ -534,6 +582,15 @@ public class BidwordApi {
     final String[] localVarContentTypes = {"application/json", "application/xml"};
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
     localVarHeaderParams.put("Content-Type", localVarContentType);
+
+    if (headerPair != null && headerPair.length > 0) {
+      if (headerPair.length % 2 != 0) {
+        throw new UnsupportedOperationException("Parameter headerPair must be paired");
+      }
+      for (int i = 0; i < headerPair.length / 2; i++) {
+        localVarHeaderParams.put(headerPair[i], headerPair[i * 2 + 1]);
+      }
+    }
 
     if (progressListener != null) {
       apiClient
@@ -570,7 +627,8 @@ public class BidwordApi {
   private com.squareup.okhttp.Call bidwordUpdateValidateBeforeCall(
       BidwordUpdateRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
-      final ProgressRequestBody.ProgressRequestListener progressRequestListener)
+      final ProgressRequestBody.ProgressRequestListener progressRequestListener,
+      String... headerPair)
       throws ApiException {
 
     // verify the required parameter 'data' is set
@@ -580,7 +638,7 @@ public class BidwordApi {
     }
 
     com.squareup.okhttp.Call call =
-        bidwordUpdateCall(data, progressListener, progressRequestListener);
+        bidwordUpdateCall(data, progressListener, progressRequestListener, headerPair);
     return call;
   }
 
@@ -592,8 +650,9 @@ public class BidwordApi {
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
-  public BidwordUpdateResponse bidwordUpdate(BidwordUpdateRequest data) throws ApiException {
-    ApiResponse<BidwordUpdateResponse> resp = bidwordUpdateWithHttpInfo(data);
+  public BidwordUpdateResponse bidwordUpdate(BidwordUpdateRequest data, String... headerPair)
+      throws ApiException {
+    ApiResponse<BidwordUpdateResponse> resp = bidwordUpdateWithHttpInfo(data, headerPair);
     return resp.getData();
   }
 
@@ -605,9 +664,9 @@ public class BidwordApi {
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
-  public ApiResponse<BidwordUpdateResponse> bidwordUpdateWithHttpInfo(BidwordUpdateRequest data)
-      throws ApiException {
-    com.squareup.okhttp.Call call = bidwordUpdateValidateBeforeCall(data, null, null);
+  public ApiResponse<BidwordUpdateResponse> bidwordUpdateWithHttpInfo(
+      BidwordUpdateRequest data, String... headerPair) throws ApiException {
+    com.squareup.okhttp.Call call = bidwordUpdateValidateBeforeCall(data, null, null, headerPair);
     Type localVarReturnType = new TypeToken<BidwordUpdateResponse>() {}.getType();
     return apiClient.execute(call, localVarReturnType);
   }
@@ -621,7 +680,9 @@ public class BidwordApi {
    * @throws ApiException If fail to process the API call, e.g. serializing the request body object
    */
   public com.squareup.okhttp.Call bidwordUpdateAsync(
-      BidwordUpdateRequest data, final ApiCallback<BidwordUpdateResponse> callback)
+      BidwordUpdateRequest data,
+      final ApiCallback<BidwordUpdateResponse> callback,
+      String... headerPair)
       throws ApiException {
 
     ProgressResponseBody.ProgressListener progressListener = null;
@@ -646,7 +707,8 @@ public class BidwordApi {
     }
 
     com.squareup.okhttp.Call call =
-        bidwordUpdateValidateBeforeCall(data, progressListener, progressRequestListener);
+        bidwordUpdateValidateBeforeCall(
+            data, progressListener, progressRequestListener, headerPair);
     Type localVarReturnType = new TypeToken<BidwordUpdateResponse>() {}.getType();
     apiClient.executeAsync(call, localVarReturnType, callback);
     return call;

@@ -35,8 +35,9 @@ public class SubcustomerTransferApiContainer extends ApiContainer {
    *     response body
    */
   public SubcustomerTransferAddResponseData subcustomerTransferAdd(
-      SubcustomerTransferAddRequest data) throws ApiException, TencentAdsResponseException {
-    SubcustomerTransferAddResponse resp = api.subcustomerTransferAdd(data);
+      SubcustomerTransferAddRequest data, String... headerPair)
+      throws ApiException, TencentAdsResponseException {
+    SubcustomerTransferAddResponse resp = api.subcustomerTransferAdd(data, headerPair);
     handleResponse(gson.toJson(resp));
     return resp.getData();
   }

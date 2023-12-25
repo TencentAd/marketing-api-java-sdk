@@ -37,9 +37,10 @@ public class XijingTemplateApiContainer extends ApiContainer {
    *     response body
    */
   public XijingTemplateGetResponseData xijingTemplateGet(
-      Long accountId, String templateId, List<String> fields)
+      Long accountId, String templateId, List<String> fields, String... headerPair)
       throws ApiException, TencentAdsResponseException {
-    XijingTemplateGetResponse resp = api.xijingTemplateGet(accountId, templateId, fields);
+    XijingTemplateGetResponse resp =
+        api.xijingTemplateGet(accountId, templateId, fields, headerPair);
     handleResponse(gson.toJson(resp));
     return resp.getData();
   }

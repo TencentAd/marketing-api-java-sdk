@@ -41,8 +41,9 @@ public class CampaignNegativewordsApiContainer extends ApiContainer {
    *     response body
    */
   public CampaignNegativewordsAddResponseData campaignNegativewordsAdd(
-      CampaignNegativewordsAddRequest data) throws ApiException, TencentAdsResponseException {
-    CampaignNegativewordsAddResponse resp = api.campaignNegativewordsAdd(data);
+      CampaignNegativewordsAddRequest data, String... headerPair)
+      throws ApiException, TencentAdsResponseException {
+    CampaignNegativewordsAddResponse resp = api.campaignNegativewordsAdd(data, headerPair);
     handleResponse(gson.toJson(resp));
     return resp.getData();
   }
@@ -56,8 +57,9 @@ public class CampaignNegativewordsApiContainer extends ApiContainer {
    *     response body
    */
   public CampaignNegativewordsGetResponseData campaignNegativewordsGet(
-      CampaignNegativewordsGetRequest data) throws ApiException, TencentAdsResponseException {
-    CampaignNegativewordsGetResponse resp = api.campaignNegativewordsGet(data);
+      CampaignNegativewordsGetRequest data, String... headerPair)
+      throws ApiException, TencentAdsResponseException {
+    CampaignNegativewordsGetResponse resp = api.campaignNegativewordsGet(data, headerPair);
     handleResponse(gson.toJson(resp));
     return resp.getData();
   }
@@ -71,8 +73,9 @@ public class CampaignNegativewordsApiContainer extends ApiContainer {
    *     response body
    */
   public CampaignNegativewordsUpdateResponseData campaignNegativewordsUpdate(
-      CampaignNegativewordsUpdateRequest data) throws ApiException, TencentAdsResponseException {
-    CampaignNegativewordsUpdateResponse resp = api.campaignNegativewordsUpdate(data);
+      CampaignNegativewordsUpdateRequest data, String... headerPair)
+      throws ApiException, TencentAdsResponseException {
+    CampaignNegativewordsUpdateResponse resp = api.campaignNegativewordsUpdate(data, headerPair);
     handleResponse(gson.toJson(resp));
     return resp.getData();
   }

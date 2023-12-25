@@ -36,9 +36,10 @@ public class ReviewAdAppealApiContainer extends ApiContainer {
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
-  public ReviewAdAppealAddResponse reviewAdAppealAdd(ReviewAdAppealAddRequest data)
+  public ReviewAdAppealAddResponse reviewAdAppealAdd(
+      ReviewAdAppealAddRequest data, String... headerPair)
       throws ApiException, TencentAdsResponseException {
-    ReviewAdAppealAddResponse resp = api.reviewAdAppealAdd(data);
+    ReviewAdAppealAddResponse resp = api.reviewAdAppealAdd(data, headerPair);
     handleResponse(gson.toJson(resp));
 
     return resp;
@@ -52,9 +53,10 @@ public class ReviewAdAppealApiContainer extends ApiContainer {
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
-  public ReviewAdAppealGetResponseData reviewAdAppealGet(ReviewAdAppealGetRequest data)
+  public ReviewAdAppealGetResponseData reviewAdAppealGet(
+      ReviewAdAppealGetRequest data, String... headerPair)
       throws ApiException, TencentAdsResponseException {
-    ReviewAdAppealGetResponse resp = api.reviewAdAppealGet(data);
+    ReviewAdAppealGetResponse resp = api.reviewAdAppealGet(data, headerPair);
     handleResponse(gson.toJson(resp));
     return resp.getData();
   }

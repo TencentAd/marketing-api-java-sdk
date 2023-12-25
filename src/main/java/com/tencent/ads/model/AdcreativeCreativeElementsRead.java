@@ -245,6 +245,9 @@ public class AdcreativeCreativeElementsRead {
   @SerializedName("main_jump_info")
   private List<LandingPageStructure> mainJumpInfo = null;
 
+  @SerializedName("wechat_channels_cover_img_show_type")
+  private WechatChannelsCoverImgShowType wechatChannelsCoverImgShowType = null;
+
   public AdcreativeCreativeElementsRead image(String image) {
     this.image = image;
     return this;
@@ -1710,6 +1713,27 @@ public class AdcreativeCreativeElementsRead {
     this.mainJumpInfo = mainJumpInfo;
   }
 
+  public AdcreativeCreativeElementsRead wechatChannelsCoverImgShowType(
+      WechatChannelsCoverImgShowType wechatChannelsCoverImgShowType) {
+    this.wechatChannelsCoverImgShowType = wechatChannelsCoverImgShowType;
+    return this;
+  }
+
+  /**
+   * Get wechatChannelsCoverImgShowType
+   *
+   * @return wechatChannelsCoverImgShowType
+   */
+  @ApiModelProperty(value = "")
+  public WechatChannelsCoverImgShowType getWechatChannelsCoverImgShowType() {
+    return wechatChannelsCoverImgShowType;
+  }
+
+  public void setWechatChannelsCoverImgShowType(
+      WechatChannelsCoverImgShowType wechatChannelsCoverImgShowType) {
+    this.wechatChannelsCoverImgShowType = wechatChannelsCoverImgShowType;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -1802,7 +1826,10 @@ public class AdcreativeCreativeElementsRead {
             this.buttonTextJumpInfo, adcreativeCreativeElementsRead.buttonTextJumpInfo)
         && Objects.equals(
             this.wxgamePlayablePageSpec, adcreativeCreativeElementsRead.wxgamePlayablePageSpec)
-        && Objects.equals(this.mainJumpInfo, adcreativeCreativeElementsRead.mainJumpInfo);
+        && Objects.equals(this.mainJumpInfo, adcreativeCreativeElementsRead.mainJumpInfo)
+        && Objects.equals(
+            this.wechatChannelsCoverImgShowType,
+            adcreativeCreativeElementsRead.wechatChannelsCoverImgShowType);
   }
 
   @Override
@@ -1881,7 +1908,8 @@ public class AdcreativeCreativeElementsRead {
         redEnvelopeStruct,
         buttonTextJumpInfo,
         wxgamePlayablePageSpec,
-        mainJumpInfo);
+        mainJumpInfo,
+        wechatChannelsCoverImgShowType);
   }
 
   @Override

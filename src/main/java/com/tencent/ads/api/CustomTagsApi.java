@@ -66,8 +66,10 @@ public class CustomTagsApi {
   public com.squareup.okhttp.Call customTagsAddCall(
       CustomTagsAddRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
-      final ProgressRequestBody.ProgressRequestListener progressRequestListener)
+      final ProgressRequestBody.ProgressRequestListener progressRequestListener,
+      String... headerPair)
       throws ApiException {
+
     Object localVarPostBody = data;
 
     // create path and map variables
@@ -87,6 +89,15 @@ public class CustomTagsApi {
     final String[] localVarContentTypes = {"application/json", "application/xml"};
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
     localVarHeaderParams.put("Content-Type", localVarContentType);
+
+    if (headerPair != null && headerPair.length > 0) {
+      if (headerPair.length % 2 != 0) {
+        throw new UnsupportedOperationException("Parameter headerPair must be paired");
+      }
+      for (int i = 0; i < headerPair.length / 2; i++) {
+        localVarHeaderParams.put(headerPair[i], headerPair[i * 2 + 1]);
+      }
+    }
 
     if (progressListener != null) {
       apiClient
@@ -123,7 +134,8 @@ public class CustomTagsApi {
   private com.squareup.okhttp.Call customTagsAddValidateBeforeCall(
       CustomTagsAddRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
-      final ProgressRequestBody.ProgressRequestListener progressRequestListener)
+      final ProgressRequestBody.ProgressRequestListener progressRequestListener,
+      String... headerPair)
       throws ApiException {
 
     // verify the required parameter 'data' is set
@@ -133,7 +145,7 @@ public class CustomTagsApi {
     }
 
     com.squareup.okhttp.Call call =
-        customTagsAddCall(data, progressListener, progressRequestListener);
+        customTagsAddCall(data, progressListener, progressRequestListener, headerPair);
     return call;
   }
 
@@ -145,8 +157,9 @@ public class CustomTagsApi {
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
-  public CustomTagsAddResponse customTagsAdd(CustomTagsAddRequest data) throws ApiException {
-    ApiResponse<CustomTagsAddResponse> resp = customTagsAddWithHttpInfo(data);
+  public CustomTagsAddResponse customTagsAdd(CustomTagsAddRequest data, String... headerPair)
+      throws ApiException {
+    ApiResponse<CustomTagsAddResponse> resp = customTagsAddWithHttpInfo(data, headerPair);
     return resp.getData();
   }
 
@@ -158,9 +171,9 @@ public class CustomTagsApi {
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
-  public ApiResponse<CustomTagsAddResponse> customTagsAddWithHttpInfo(CustomTagsAddRequest data)
-      throws ApiException {
-    com.squareup.okhttp.Call call = customTagsAddValidateBeforeCall(data, null, null);
+  public ApiResponse<CustomTagsAddResponse> customTagsAddWithHttpInfo(
+      CustomTagsAddRequest data, String... headerPair) throws ApiException {
+    com.squareup.okhttp.Call call = customTagsAddValidateBeforeCall(data, null, null, headerPair);
     Type localVarReturnType = new TypeToken<CustomTagsAddResponse>() {}.getType();
     return apiClient.execute(call, localVarReturnType);
   }
@@ -174,7 +187,9 @@ public class CustomTagsApi {
    * @throws ApiException If fail to process the API call, e.g. serializing the request body object
    */
   public com.squareup.okhttp.Call customTagsAddAsync(
-      CustomTagsAddRequest data, final ApiCallback<CustomTagsAddResponse> callback)
+      CustomTagsAddRequest data,
+      final ApiCallback<CustomTagsAddResponse> callback,
+      String... headerPair)
       throws ApiException {
 
     ProgressResponseBody.ProgressListener progressListener = null;
@@ -199,7 +214,8 @@ public class CustomTagsApi {
     }
 
     com.squareup.okhttp.Call call =
-        customTagsAddValidateBeforeCall(data, progressListener, progressRequestListener);
+        customTagsAddValidateBeforeCall(
+            data, progressListener, progressRequestListener, headerPair);
     Type localVarReturnType = new TypeToken<CustomTagsAddResponse>() {}.getType();
     apiClient.executeAsync(call, localVarReturnType, callback);
     return call;
@@ -216,8 +232,10 @@ public class CustomTagsApi {
   public com.squareup.okhttp.Call customTagsDeleteCall(
       CustomTagsDeleteRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
-      final ProgressRequestBody.ProgressRequestListener progressRequestListener)
+      final ProgressRequestBody.ProgressRequestListener progressRequestListener,
+      String... headerPair)
       throws ApiException {
+
     Object localVarPostBody = data;
 
     // create path and map variables
@@ -237,6 +255,15 @@ public class CustomTagsApi {
     final String[] localVarContentTypes = {"application/json", "application/xml"};
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
     localVarHeaderParams.put("Content-Type", localVarContentType);
+
+    if (headerPair != null && headerPair.length > 0) {
+      if (headerPair.length % 2 != 0) {
+        throw new UnsupportedOperationException("Parameter headerPair must be paired");
+      }
+      for (int i = 0; i < headerPair.length / 2; i++) {
+        localVarHeaderParams.put(headerPair[i], headerPair[i * 2 + 1]);
+      }
+    }
 
     if (progressListener != null) {
       apiClient
@@ -273,7 +300,8 @@ public class CustomTagsApi {
   private com.squareup.okhttp.Call customTagsDeleteValidateBeforeCall(
       CustomTagsDeleteRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
-      final ProgressRequestBody.ProgressRequestListener progressRequestListener)
+      final ProgressRequestBody.ProgressRequestListener progressRequestListener,
+      String... headerPair)
       throws ApiException {
 
     // verify the required parameter 'data' is set
@@ -283,7 +311,7 @@ public class CustomTagsApi {
     }
 
     com.squareup.okhttp.Call call =
-        customTagsDeleteCall(data, progressListener, progressRequestListener);
+        customTagsDeleteCall(data, progressListener, progressRequestListener, headerPair);
     return call;
   }
 
@@ -295,9 +323,9 @@ public class CustomTagsApi {
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
-  public CustomTagsDeleteResponse customTagsDelete(CustomTagsDeleteRequest data)
-      throws ApiException {
-    ApiResponse<CustomTagsDeleteResponse> resp = customTagsDeleteWithHttpInfo(data);
+  public CustomTagsDeleteResponse customTagsDelete(
+      CustomTagsDeleteRequest data, String... headerPair) throws ApiException {
+    ApiResponse<CustomTagsDeleteResponse> resp = customTagsDeleteWithHttpInfo(data, headerPair);
     return resp.getData();
   }
 
@@ -310,8 +338,9 @@ public class CustomTagsApi {
    *     response body
    */
   public ApiResponse<CustomTagsDeleteResponse> customTagsDeleteWithHttpInfo(
-      CustomTagsDeleteRequest data) throws ApiException {
-    com.squareup.okhttp.Call call = customTagsDeleteValidateBeforeCall(data, null, null);
+      CustomTagsDeleteRequest data, String... headerPair) throws ApiException {
+    com.squareup.okhttp.Call call =
+        customTagsDeleteValidateBeforeCall(data, null, null, headerPair);
     Type localVarReturnType = new TypeToken<CustomTagsDeleteResponse>() {}.getType();
     return apiClient.execute(call, localVarReturnType);
   }
@@ -325,7 +354,9 @@ public class CustomTagsApi {
    * @throws ApiException If fail to process the API call, e.g. serializing the request body object
    */
   public com.squareup.okhttp.Call customTagsDeleteAsync(
-      CustomTagsDeleteRequest data, final ApiCallback<CustomTagsDeleteResponse> callback)
+      CustomTagsDeleteRequest data,
+      final ApiCallback<CustomTagsDeleteResponse> callback,
+      String... headerPair)
       throws ApiException {
 
     ProgressResponseBody.ProgressListener progressListener = null;
@@ -350,7 +381,8 @@ public class CustomTagsApi {
     }
 
     com.squareup.okhttp.Call call =
-        customTagsDeleteValidateBeforeCall(data, progressListener, progressRequestListener);
+        customTagsDeleteValidateBeforeCall(
+            data, progressListener, progressRequestListener, headerPair);
     Type localVarReturnType = new TypeToken<CustomTagsDeleteResponse>() {}.getType();
     apiClient.executeAsync(call, localVarReturnType, callback);
     return call;
@@ -381,8 +413,10 @@ public class CustomTagsApi {
       Long pageSize,
       List<String> fields,
       final ProgressResponseBody.ProgressListener progressListener,
-      final ProgressRequestBody.ProgressRequestListener progressRequestListener)
+      final ProgressRequestBody.ProgressRequestListener progressRequestListener,
+      String... headerPair)
       throws ApiException {
+
     Object localVarPostBody = null;
 
     // create path and map variables
@@ -415,6 +449,15 @@ public class CustomTagsApi {
     final String[] localVarContentTypes = {"text/plain"};
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
     localVarHeaderParams.put("Content-Type", localVarContentType);
+
+    if (headerPair != null && headerPair.length > 0) {
+      if (headerPair.length % 2 != 0) {
+        throw new UnsupportedOperationException("Parameter headerPair must be paired");
+      }
+      for (int i = 0; i < headerPair.length / 2; i++) {
+        localVarHeaderParams.put(headerPair[i], headerPair[i * 2 + 1]);
+      }
+    }
 
     if (progressListener != null) {
       apiClient
@@ -458,7 +501,8 @@ public class CustomTagsApi {
       Long pageSize,
       List<String> fields,
       final ProgressResponseBody.ProgressListener progressListener,
-      final ProgressRequestBody.ProgressRequestListener progressRequestListener)
+      final ProgressRequestBody.ProgressRequestListener progressRequestListener,
+      String... headerPair)
       throws ApiException {
 
     // verify the required parameter 'accountId' is set
@@ -478,7 +522,8 @@ public class CustomTagsApi {
             pageSize,
             fields,
             progressListener,
-            progressRequestListener);
+            progressRequestListener,
+            headerPair);
     return call;
   }
 
@@ -505,11 +550,12 @@ public class CustomTagsApi {
       String platform,
       Long page,
       Long pageSize,
-      List<String> fields)
+      List<String> fields,
+      String... headerPair)
       throws ApiException {
     ApiResponse<CustomTagsGetResponse> resp =
         customTagsGetWithHttpInfo(
-            accountId, parentTagId, tagId, tagCode, platform, page, pageSize, fields);
+            accountId, parentTagId, tagId, tagCode, platform, page, pageSize, fields, headerPair);
     return resp.getData();
   }
 
@@ -536,11 +582,22 @@ public class CustomTagsApi {
       String platform,
       Long page,
       Long pageSize,
-      List<String> fields)
+      List<String> fields,
+      String... headerPair)
       throws ApiException {
     com.squareup.okhttp.Call call =
         customTagsGetValidateBeforeCall(
-            accountId, parentTagId, tagId, tagCode, platform, page, pageSize, fields, null, null);
+            accountId,
+            parentTagId,
+            tagId,
+            tagCode,
+            platform,
+            page,
+            pageSize,
+            fields,
+            null,
+            null,
+            headerPair);
     Type localVarReturnType = new TypeToken<CustomTagsGetResponse>() {}.getType();
     return apiClient.execute(call, localVarReturnType);
   }
@@ -569,7 +626,8 @@ public class CustomTagsApi {
       Long page,
       Long pageSize,
       List<String> fields,
-      final ApiCallback<CustomTagsGetResponse> callback)
+      final ApiCallback<CustomTagsGetResponse> callback,
+      String... headerPair)
       throws ApiException {
 
     ProgressResponseBody.ProgressListener progressListener = null;
@@ -604,7 +662,8 @@ public class CustomTagsApi {
             pageSize,
             fields,
             progressListener,
-            progressRequestListener);
+            progressRequestListener,
+            headerPair);
     Type localVarReturnType = new TypeToken<CustomTagsGetResponse>() {}.getType();
     apiClient.executeAsync(call, localVarReturnType, callback);
     return call;
@@ -621,8 +680,10 @@ public class CustomTagsApi {
   public com.squareup.okhttp.Call customTagsUpdateCall(
       CustomTagsUpdateRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
-      final ProgressRequestBody.ProgressRequestListener progressRequestListener)
+      final ProgressRequestBody.ProgressRequestListener progressRequestListener,
+      String... headerPair)
       throws ApiException {
+
     Object localVarPostBody = data;
 
     // create path and map variables
@@ -642,6 +703,15 @@ public class CustomTagsApi {
     final String[] localVarContentTypes = {"application/json", "application/xml"};
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
     localVarHeaderParams.put("Content-Type", localVarContentType);
+
+    if (headerPair != null && headerPair.length > 0) {
+      if (headerPair.length % 2 != 0) {
+        throw new UnsupportedOperationException("Parameter headerPair must be paired");
+      }
+      for (int i = 0; i < headerPair.length / 2; i++) {
+        localVarHeaderParams.put(headerPair[i], headerPair[i * 2 + 1]);
+      }
+    }
 
     if (progressListener != null) {
       apiClient
@@ -678,7 +748,8 @@ public class CustomTagsApi {
   private com.squareup.okhttp.Call customTagsUpdateValidateBeforeCall(
       CustomTagsUpdateRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
-      final ProgressRequestBody.ProgressRequestListener progressRequestListener)
+      final ProgressRequestBody.ProgressRequestListener progressRequestListener,
+      String... headerPair)
       throws ApiException {
 
     // verify the required parameter 'data' is set
@@ -688,7 +759,7 @@ public class CustomTagsApi {
     }
 
     com.squareup.okhttp.Call call =
-        customTagsUpdateCall(data, progressListener, progressRequestListener);
+        customTagsUpdateCall(data, progressListener, progressRequestListener, headerPair);
     return call;
   }
 
@@ -700,9 +771,9 @@ public class CustomTagsApi {
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
-  public CustomTagsUpdateResponse customTagsUpdate(CustomTagsUpdateRequest data)
-      throws ApiException {
-    ApiResponse<CustomTagsUpdateResponse> resp = customTagsUpdateWithHttpInfo(data);
+  public CustomTagsUpdateResponse customTagsUpdate(
+      CustomTagsUpdateRequest data, String... headerPair) throws ApiException {
+    ApiResponse<CustomTagsUpdateResponse> resp = customTagsUpdateWithHttpInfo(data, headerPair);
     return resp.getData();
   }
 
@@ -715,8 +786,9 @@ public class CustomTagsApi {
    *     response body
    */
   public ApiResponse<CustomTagsUpdateResponse> customTagsUpdateWithHttpInfo(
-      CustomTagsUpdateRequest data) throws ApiException {
-    com.squareup.okhttp.Call call = customTagsUpdateValidateBeforeCall(data, null, null);
+      CustomTagsUpdateRequest data, String... headerPair) throws ApiException {
+    com.squareup.okhttp.Call call =
+        customTagsUpdateValidateBeforeCall(data, null, null, headerPair);
     Type localVarReturnType = new TypeToken<CustomTagsUpdateResponse>() {}.getType();
     return apiClient.execute(call, localVarReturnType);
   }
@@ -730,7 +802,9 @@ public class CustomTagsApi {
    * @throws ApiException If fail to process the API call, e.g. serializing the request body object
    */
   public com.squareup.okhttp.Call customTagsUpdateAsync(
-      CustomTagsUpdateRequest data, final ApiCallback<CustomTagsUpdateResponse> callback)
+      CustomTagsUpdateRequest data,
+      final ApiCallback<CustomTagsUpdateResponse> callback,
+      String... headerPair)
       throws ApiException {
 
     ProgressResponseBody.ProgressListener progressListener = null;
@@ -755,7 +829,8 @@ public class CustomTagsApi {
     }
 
     com.squareup.okhttp.Call call =
-        customTagsUpdateValidateBeforeCall(data, progressListener, progressRequestListener);
+        customTagsUpdateValidateBeforeCall(
+            data, progressListener, progressRequestListener, headerPair);
     Type localVarReturnType = new TypeToken<CustomTagsUpdateResponse>() {}.getType();
     apiClient.executeAsync(call, localVarReturnType, callback);
     return call;

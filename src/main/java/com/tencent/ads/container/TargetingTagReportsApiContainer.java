@@ -64,7 +64,8 @@ public class TargetingTagReportsApiContainer extends ApiContainer {
       String timeLine,
       Boolean weixinOfficialAccountsUpgradeEnabled,
       Boolean adqAccountsUpgradeEnabled,
-      List<String> fields)
+      List<String> fields,
+      String... headerPair)
       throws ApiException, TencentAdsResponseException {
     TargetingTagReportsGetResponse resp =
         api.targetingTagReportsGet(
@@ -81,7 +82,8 @@ public class TargetingTagReportsApiContainer extends ApiContainer {
             timeLine,
             weixinOfficialAccountsUpgradeEnabled,
             adqAccountsUpgradeEnabled,
-            fields);
+            fields,
+            headerPair);
     handleResponse(gson.toJson(resp));
     return resp.getData();
   }

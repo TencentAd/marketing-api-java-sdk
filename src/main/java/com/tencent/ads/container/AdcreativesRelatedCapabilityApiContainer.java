@@ -37,10 +37,10 @@ public class AdcreativesRelatedCapabilityApiContainer extends ApiContainer {
    *     response body
    */
   public AdcreativesRelatedCapabilityGetResponseData adcreativesRelatedCapabilityGet(
-      Long accountId, Long adId, List<String> fields)
+      Long accountId, Long adId, List<String> fields, String... headerPair)
       throws ApiException, TencentAdsResponseException {
     AdcreativesRelatedCapabilityGetResponse resp =
-        api.adcreativesRelatedCapabilityGet(accountId, adId, fields);
+        api.adcreativesRelatedCapabilityGet(accountId, adId, fields, headerPair);
     handleResponse(gson.toJson(resp));
     return resp.getData();
   }
