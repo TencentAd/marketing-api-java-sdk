@@ -105,6 +105,9 @@ public class AdgroupsUpdateRequest {
   @SerializedName("flow_optimization_enabled")
   private Boolean flowOptimizationEnabled = null;
 
+  @SerializedName("poi_list")
+  private List<String> poiList = null;
+
   public AdgroupsUpdateRequest accountId(Long accountId) {
     this.accountId = accountId;
     return this;
@@ -647,6 +650,33 @@ public class AdgroupsUpdateRequest {
     this.flowOptimizationEnabled = flowOptimizationEnabled;
   }
 
+  public AdgroupsUpdateRequest poiList(List<String> poiList) {
+    this.poiList = poiList;
+    return this;
+  }
+
+  public AdgroupsUpdateRequest addPoiListItem(String poiListItem) {
+    if (this.poiList == null) {
+      this.poiList = new ArrayList<String>();
+    }
+    this.poiList.add(poiListItem);
+    return this;
+  }
+
+  /**
+   * Get poiList
+   *
+   * @return poiList
+   */
+  @ApiModelProperty(value = "")
+  public List<String> getPoiList() {
+    return poiList;
+  }
+
+  public void setPoiList(List<String> poiList) {
+    this.poiList = poiList;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -692,7 +722,8 @@ public class AdgroupsUpdateRequest {
         && Objects.equals(this.dataModelVersion, adgroupsUpdateRequest.dataModelVersion)
         && Objects.equals(this.configuredStatus, adgroupsUpdateRequest.configuredStatus)
         && Objects.equals(
-            this.flowOptimizationEnabled, adgroupsUpdateRequest.flowOptimizationEnabled);
+            this.flowOptimizationEnabled, adgroupsUpdateRequest.flowOptimizationEnabled)
+        && Objects.equals(this.poiList, adgroupsUpdateRequest.poiList);
   }
 
   @Override
@@ -725,7 +756,8 @@ public class AdgroupsUpdateRequest {
         autoDerivedCreativeEnabled,
         dataModelVersion,
         configuredStatus,
-        flowOptimizationEnabled);
+        flowOptimizationEnabled,
+        poiList);
   }
 
   @Override

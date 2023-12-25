@@ -19,7 +19,7 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-/** 小程序蹊径落地页开关选项 */
+/** 微信小程序/微信小游戏蹊径落地页开关选项 */
 @JsonAdapter(BackUpOption.Adapter.class)
 public enum BackUpOption {
   UNKNOWN("BACKUP_OPTION_UNKNOWN"),

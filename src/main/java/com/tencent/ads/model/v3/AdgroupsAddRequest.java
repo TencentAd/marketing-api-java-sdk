@@ -147,6 +147,9 @@ public class AdgroupsAddRequest {
   @SerializedName("marketing_asset_outer_spec")
   private MarketingAssetOuterSpec marketingAssetOuterSpec = null;
 
+  @SerializedName("poi_list")
+  private List<String> poiList = null;
+
   public AdgroupsAddRequest accountId(Long accountId) {
     this.accountId = accountId;
     return this;
@@ -967,6 +970,33 @@ public class AdgroupsAddRequest {
     this.marketingAssetOuterSpec = marketingAssetOuterSpec;
   }
 
+  public AdgroupsAddRequest poiList(List<String> poiList) {
+    this.poiList = poiList;
+    return this;
+  }
+
+  public AdgroupsAddRequest addPoiListItem(String poiListItem) {
+    if (this.poiList == null) {
+      this.poiList = new ArrayList<String>();
+    }
+    this.poiList.add(poiListItem);
+    return this;
+  }
+
+  /**
+   * Get poiList
+   *
+   * @return poiList
+   */
+  @ApiModelProperty(value = "")
+  public List<String> getPoiList() {
+    return poiList;
+  }
+
+  public void setPoiList(List<String> poiList) {
+    this.poiList = poiList;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -1026,7 +1056,8 @@ public class AdgroupsAddRequest {
         && Objects.equals(this.flowOptimizationEnabled, adgroupsAddRequest.flowOptimizationEnabled)
         && Objects.equals(this.materialPackageId, adgroupsAddRequest.materialPackageId)
         && Objects.equals(this.marketingAssetId, adgroupsAddRequest.marketingAssetId)
-        && Objects.equals(this.marketingAssetOuterSpec, adgroupsAddRequest.marketingAssetOuterSpec);
+        && Objects.equals(this.marketingAssetOuterSpec, adgroupsAddRequest.marketingAssetOuterSpec)
+        && Objects.equals(this.poiList, adgroupsAddRequest.poiList);
   }
 
   @Override
@@ -1073,7 +1104,8 @@ public class AdgroupsAddRequest {
         flowOptimizationEnabled,
         materialPackageId,
         marketingAssetId,
-        marketingAssetOuterSpec);
+        marketingAssetOuterSpec,
+        poiList);
   }
 
   @Override

@@ -191,6 +191,9 @@ public class AdgroupsGetListStruct {
   @SerializedName("marketing_asset_outer_spec")
   private MarketingAssetOuterSpec marketingAssetOuterSpec = null;
 
+  @SerializedName("poi_list")
+  private List<String> poiList = null;
+
   public AdgroupsGetListStruct targeting(ReadTargetingSetting targeting) {
     this.targeting = targeting;
     return this;
@@ -1278,6 +1281,33 @@ public class AdgroupsGetListStruct {
     this.marketingAssetOuterSpec = marketingAssetOuterSpec;
   }
 
+  public AdgroupsGetListStruct poiList(List<String> poiList) {
+    this.poiList = poiList;
+    return this;
+  }
+
+  public AdgroupsGetListStruct addPoiListItem(String poiListItem) {
+    if (this.poiList == null) {
+      this.poiList = new ArrayList<String>();
+    }
+    this.poiList.add(poiListItem);
+    return this;
+  }
+
+  /**
+   * Get poiList
+   *
+   * @return poiList
+   */
+  @ApiModelProperty(value = "")
+  public List<String> getPoiList() {
+    return poiList;
+  }
+
+  public void setPoiList(List<String> poiList) {
+    this.poiList = poiList;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -1354,7 +1384,8 @@ public class AdgroupsGetListStruct {
         && Objects.equals(this.promotedAssetType, adgroupsGetListStruct.promotedAssetType)
         && Objects.equals(this.materialPackageId, adgroupsGetListStruct.materialPackageId)
         && Objects.equals(
-            this.marketingAssetOuterSpec, adgroupsGetListStruct.marketingAssetOuterSpec);
+            this.marketingAssetOuterSpec, adgroupsGetListStruct.marketingAssetOuterSpec)
+        && Objects.equals(this.poiList, adgroupsGetListStruct.poiList);
   }
 
   @Override
@@ -1415,7 +1446,8 @@ public class AdgroupsGetListStruct {
         marketingAssetId,
         promotedAssetType,
         materialPackageId,
-        marketingAssetOuterSpec);
+        marketingAssetOuterSpec,
+        poiList);
   }
 
   @Override
