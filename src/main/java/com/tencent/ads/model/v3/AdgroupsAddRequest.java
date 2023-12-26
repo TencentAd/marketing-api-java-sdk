@@ -150,6 +150,12 @@ public class AdgroupsAddRequest {
   @SerializedName("poi_list")
   private List<String> poiList = null;
 
+  @SerializedName("exploration_strategy")
+  private SiteSetExplorationStrategy explorationStrategy = null;
+
+  @SerializedName("priority_site_set")
+  private List<String> prioritySiteSet = null;
+
   public AdgroupsAddRequest accountId(Long accountId) {
     this.accountId = accountId;
     return this;
@@ -997,6 +1003,52 @@ public class AdgroupsAddRequest {
     this.poiList = poiList;
   }
 
+  public AdgroupsAddRequest explorationStrategy(SiteSetExplorationStrategy explorationStrategy) {
+    this.explorationStrategy = explorationStrategy;
+    return this;
+  }
+
+  /**
+   * Get explorationStrategy
+   *
+   * @return explorationStrategy
+   */
+  @ApiModelProperty(value = "")
+  public SiteSetExplorationStrategy getExplorationStrategy() {
+    return explorationStrategy;
+  }
+
+  public void setExplorationStrategy(SiteSetExplorationStrategy explorationStrategy) {
+    this.explorationStrategy = explorationStrategy;
+  }
+
+  public AdgroupsAddRequest prioritySiteSet(List<String> prioritySiteSet) {
+    this.prioritySiteSet = prioritySiteSet;
+    return this;
+  }
+
+  public AdgroupsAddRequest addPrioritySiteSetItem(String prioritySiteSetItem) {
+    if (this.prioritySiteSet == null) {
+      this.prioritySiteSet = new ArrayList<String>();
+    }
+    this.prioritySiteSet.add(prioritySiteSetItem);
+    return this;
+  }
+
+  /**
+   * Get prioritySiteSet
+   *
+   * @return prioritySiteSet
+   */
+  @ApiModelProperty(value = "")
+  public List<String> getPrioritySiteSet() {
+    return prioritySiteSet;
+  }
+
+  public void setPrioritySiteSet(List<String> prioritySiteSet) {
+    this.prioritySiteSet = prioritySiteSet;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -1057,7 +1109,9 @@ public class AdgroupsAddRequest {
         && Objects.equals(this.materialPackageId, adgroupsAddRequest.materialPackageId)
         && Objects.equals(this.marketingAssetId, adgroupsAddRequest.marketingAssetId)
         && Objects.equals(this.marketingAssetOuterSpec, adgroupsAddRequest.marketingAssetOuterSpec)
-        && Objects.equals(this.poiList, adgroupsAddRequest.poiList);
+        && Objects.equals(this.poiList, adgroupsAddRequest.poiList)
+        && Objects.equals(this.explorationStrategy, adgroupsAddRequest.explorationStrategy)
+        && Objects.equals(this.prioritySiteSet, adgroupsAddRequest.prioritySiteSet);
   }
 
   @Override
@@ -1105,7 +1159,9 @@ public class AdgroupsAddRequest {
         materialPackageId,
         marketingAssetId,
         marketingAssetOuterSpec,
-        poiList);
+        poiList,
+        explorationStrategy,
+        prioritySiteSet);
   }
 
   @Override

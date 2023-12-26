@@ -189,6 +189,12 @@ public class AdgroupsAddRequest {
   @SerializedName("forward_link_assist")
   private OptimizationGoal forwardLinkAssist = null;
 
+  @SerializedName("short_play_pay_type")
+  private ShortPlayPayType shortPlayPayType = null;
+
+  @SerializedName("sell_strategy_id")
+  private Long sellStrategyId = null;
+
   @SerializedName("account_id")
   private Long accountId = null;
 
@@ -1335,6 +1341,44 @@ public class AdgroupsAddRequest {
     this.forwardLinkAssist = forwardLinkAssist;
   }
 
+  public AdgroupsAddRequest shortPlayPayType(ShortPlayPayType shortPlayPayType) {
+    this.shortPlayPayType = shortPlayPayType;
+    return this;
+  }
+
+  /**
+   * Get shortPlayPayType
+   *
+   * @return shortPlayPayType
+   */
+  @ApiModelProperty(value = "")
+  public ShortPlayPayType getShortPlayPayType() {
+    return shortPlayPayType;
+  }
+
+  public void setShortPlayPayType(ShortPlayPayType shortPlayPayType) {
+    this.shortPlayPayType = shortPlayPayType;
+  }
+
+  public AdgroupsAddRequest sellStrategyId(Long sellStrategyId) {
+    this.sellStrategyId = sellStrategyId;
+    return this;
+  }
+
+  /**
+   * Get sellStrategyId
+   *
+   * @return sellStrategyId
+   */
+  @ApiModelProperty(value = "")
+  public Long getSellStrategyId() {
+    return sellStrategyId;
+  }
+
+  public void setSellStrategyId(Long sellStrategyId) {
+    this.sellStrategyId = sellStrategyId;
+  }
+
   public AdgroupsAddRequest accountId(Long accountId) {
     this.accountId = accountId;
     return this;
@@ -1430,6 +1474,8 @@ public class AdgroupsAddRequest {
         && Objects.equals(this.ecomPkamSwitch, adgroupsAddRequest.ecomPkamSwitch)
         && Objects.equals(this.bidScene, adgroupsAddRequest.bidScene)
         && Objects.equals(this.forwardLinkAssist, adgroupsAddRequest.forwardLinkAssist)
+        && Objects.equals(this.shortPlayPayType, adgroupsAddRequest.shortPlayPayType)
+        && Objects.equals(this.sellStrategyId, adgroupsAddRequest.sellStrategyId)
         && Objects.equals(this.accountId, adgroupsAddRequest.accountId);
   }
 
@@ -1492,6 +1538,8 @@ public class AdgroupsAddRequest {
         ecomPkamSwitch,
         bidScene,
         forwardLinkAssist,
+        shortPlayPayType,
+        sellStrategyId,
         accountId);
   }
 

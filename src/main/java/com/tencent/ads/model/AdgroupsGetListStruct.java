@@ -245,6 +245,12 @@ public class AdgroupsGetListStruct {
   @SerializedName("forward_link_assist")
   private OptimizationGoal forwardLinkAssist = null;
 
+  @SerializedName("short_play_pay_type")
+  private ShortPlayPayType shortPlayPayType = null;
+
+  @SerializedName("sell_strategy_id")
+  private Long sellStrategyId = null;
+
   public AdgroupsGetListStruct campaignId(Long campaignId) {
     this.campaignId = campaignId;
     return this;
@@ -1732,6 +1738,44 @@ public class AdgroupsGetListStruct {
     this.forwardLinkAssist = forwardLinkAssist;
   }
 
+  public AdgroupsGetListStruct shortPlayPayType(ShortPlayPayType shortPlayPayType) {
+    this.shortPlayPayType = shortPlayPayType;
+    return this;
+  }
+
+  /**
+   * Get shortPlayPayType
+   *
+   * @return shortPlayPayType
+   */
+  @ApiModelProperty(value = "")
+  public ShortPlayPayType getShortPlayPayType() {
+    return shortPlayPayType;
+  }
+
+  public void setShortPlayPayType(ShortPlayPayType shortPlayPayType) {
+    this.shortPlayPayType = shortPlayPayType;
+  }
+
+  public AdgroupsGetListStruct sellStrategyId(Long sellStrategyId) {
+    this.sellStrategyId = sellStrategyId;
+    return this;
+  }
+
+  /**
+   * Get sellStrategyId
+   *
+   * @return sellStrategyId
+   */
+  @ApiModelProperty(value = "")
+  public Long getSellStrategyId() {
+    return sellStrategyId;
+  }
+
+  public void setSellStrategyId(Long sellStrategyId) {
+    this.sellStrategyId = sellStrategyId;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -1831,7 +1875,9 @@ public class AdgroupsGetListStruct {
         && Objects.equals(this.autoAcquisitionStatus, adgroupsGetListStruct.autoAcquisitionStatus)
         && Objects.equals(this.ecomPkamSwitch, adgroupsGetListStruct.ecomPkamSwitch)
         && Objects.equals(this.bidScene, adgroupsGetListStruct.bidScene)
-        && Objects.equals(this.forwardLinkAssist, adgroupsGetListStruct.forwardLinkAssist);
+        && Objects.equals(this.forwardLinkAssist, adgroupsGetListStruct.forwardLinkAssist)
+        && Objects.equals(this.shortPlayPayType, adgroupsGetListStruct.shortPlayPayType)
+        && Objects.equals(this.sellStrategyId, adgroupsGetListStruct.sellStrategyId);
   }
 
   @Override
@@ -1910,7 +1956,9 @@ public class AdgroupsGetListStruct {
         autoAcquisitionStatus,
         ecomPkamSwitch,
         bidScene,
-        forwardLinkAssist);
+        forwardLinkAssist,
+        shortPlayPayType,
+        sellStrategyId);
   }
 
   @Override
