@@ -21,9 +21,10 @@ import com.tencent.ads.exception.TencentAdsResponseException;
 import com.tencent.ads.model.v3.AsyncReportsAddRequest;
 import com.tencent.ads.model.v3.AsyncReportsAddResponse;
 import com.tencent.ads.model.v3.AsyncReportsAddResponseData;
-import com.tencent.ads.model.v3.AsyncReportsGetRequest;
+import com.tencent.ads.model.v3.AsyncReportsFilteringStruct;
 import com.tencent.ads.model.v3.AsyncReportsGetResponse;
 import com.tencent.ads.model.v3.AsyncReportsGetResponseData;
+import java.util.List;
 
 public class AsyncReportsApiContainer extends ApiContainer {
 
@@ -48,15 +49,25 @@ public class AsyncReportsApiContainer extends ApiContainer {
   /**
    * 获取异步报表任务
    *
-   * @param data (required)
+   * @param accountId (required)
+   * @param filtering (optional)
+   * @param page (optional)
+   * @param pageSize (optional)
+   * @param fields 返回参数的字段列表 (optional)
    * @return AsyncReportsGetResponse
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
   public AsyncReportsGetResponseData asyncReportsGet(
-      AsyncReportsGetRequest data, String... headerPair)
+      Long accountId,
+      List<AsyncReportsFilteringStruct> filtering,
+      Long page,
+      Long pageSize,
+      List<String> fields,
+      String... headerPair)
       throws ApiException, TencentAdsResponseException {
-    AsyncReportsGetResponse resp = api.asyncReportsGet(data, headerPair);
+    AsyncReportsGetResponse resp =
+        api.asyncReportsGet(accountId, filtering, page, pageSize, fields, headerPair);
     handleResponse(gson.toJson(resp));
     return resp.getData();
   }

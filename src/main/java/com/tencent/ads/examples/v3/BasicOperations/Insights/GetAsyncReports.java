@@ -4,8 +4,9 @@ import com.tencent.ads.ApiContextConfig;
 import com.tencent.ads.exception.TencentAdsResponseException;
 import com.tencent.ads.exception.TencentAdsSDKException;
 import com.tencent.ads.model.v3.*;
-import com.tencent.ads.model.v3.AsyncReportsGetRequest;
+import com.tencent.ads.model.v3.AsyncReportsFilteringStruct;
 import com.tencent.ads.v3.TencentAds;
+import java.util.List;
 
 public class GetAsyncReports {
   /** YOUR ACCESS TOKEN */
@@ -14,7 +15,15 @@ public class GetAsyncReports {
   /** TencentAds */
   public TencentAds tencentAds;
 
-  public AsyncReportsGetRequest data = null;
+  public Long accountId = null;
+
+  public List<AsyncReportsFilteringStruct> filtering = null;
+
+  public Long page = null;
+
+  public Long pageSize = null;
+
+  public List<String> fields = null;
 
   public void init() {
     this.tencentAds = TencentAds.getInstance();
@@ -27,7 +36,8 @@ public class GetAsyncReports {
   public void buildParams() {}
 
   public AsyncReportsGetResponseData getAsyncReports() throws Exception {
-    AsyncReportsGetResponseData response = tencentAds.asyncReports().asyncReportsGet(data);
+    AsyncReportsGetResponseData response =
+        tencentAds.asyncReports().asyncReportsGet(accountId, filtering, page, pageSize, fields);
     return response;
   }
 

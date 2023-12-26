@@ -18,8 +18,8 @@ import com.tencent.ads.ApiException;
 import com.tencent.ads.anno.*;
 import com.tencent.ads.api.v3.AsyncReportFilesApi;
 import com.tencent.ads.exception.TencentAdsResponseException;
-import com.tencent.ads.model.v3.AsyncReportFilesGetRequest;
 import com.tencent.ads.model.v3.AsyncReportFilesGetResponse;
+import java.util.List;
 
 @NeedDiffHost
 public class AsyncReportFilesApiContainer extends ApiContainer {
@@ -29,16 +29,20 @@ public class AsyncReportFilesApiContainer extends ApiContainer {
   /**
    * 获取文件接口
    *
-   * @param data (required)
+   * @param accountId (required)
+   * @param taskId (required)
+   * @param fileId (required)
+   * @param fields 返回参数的字段列表 (optional)
    * @return AsyncReportFilesGetResponse
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
   @NeedDiffHost
   public AsyncReportFilesGetResponse asyncReportFilesGet(
-      AsyncReportFilesGetRequest data, String... headerPair)
+      Long accountId, Long taskId, Long fileId, List<String> fields, String... headerPair)
       throws ApiException, TencentAdsResponseException {
-    AsyncReportFilesGetResponse resp = api.asyncReportFilesGet(data, headerPair);
+    AsyncReportFilesGetResponse resp =
+        api.asyncReportFilesGet(accountId, taskId, fileId, fields, headerPair);
 
     return resp;
   }

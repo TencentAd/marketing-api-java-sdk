@@ -21,7 +21,6 @@ import com.tencent.ads.Configuration;
 import com.tencent.ads.Pair;
 import com.tencent.ads.ProgressRequestBody;
 import com.tencent.ads.ProgressResponseBody;
-import com.tencent.ads.model.v3.AsyncReportFilesGetRequest;
 import com.tencent.ads.model.v3.AsyncReportFilesGetResponse;
 import java.io.IOException;
 import java.lang.reflect.Type;
@@ -52,26 +51,38 @@ public class AsyncReportFilesApi {
   /**
    * Build call for asyncReportFilesGet
    *
-   * @param data (required)
+   * @param accountId (required)
+   * @param taskId (required)
+   * @param fileId (required)
+   * @param fields 返回参数的字段列表 (optional)
    * @param progressListener Progress listener
    * @param progressRequestListener Progress request listener
    * @return Call to execute
    * @throws ApiException If fail to serialize the request body object
    */
   public com.squareup.okhttp.Call asyncReportFilesGetCall(
-      AsyncReportFilesGetRequest data,
+      Long accountId,
+      Long taskId,
+      Long fileId,
+      List<String> fields,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
       String... headerPair)
       throws ApiException {
 
-    Object localVarPostBody = data;
+    Object localVarPostBody = null;
 
     // create path and map variables
     String localVarPath = "/async_report_files/get";
 
     List<Pair> localVarQueryParams = new ArrayList<Pair>();
     List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+    if (accountId != null)
+      localVarQueryParams.addAll(apiClient.parameterToPair("account_id", accountId));
+    if (taskId != null) localVarQueryParams.addAll(apiClient.parameterToPair("task_id", taskId));
+    if (fileId != null) localVarQueryParams.addAll(apiClient.parameterToPair("file_id", fileId));
+    if (fields != null)
+      localVarCollectionQueryParams.addAll(apiClient.parameterToPairs("multi", "fields", fields));
 
     Map<String, String> localVarHeaderParams = new HashMap<String, String>();
 
@@ -81,7 +92,7 @@ public class AsyncReportFilesApi {
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
     if (localVarAccept != null) localVarHeaderParams.put("Accept", localVarAccept);
 
-    final String[] localVarContentTypes = {"application/json", "application/xml"};
+    final String[] localVarContentTypes = {"text/plain"};
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
     localVarHeaderParams.put("Content-Type", localVarContentType);
 
@@ -115,7 +126,7 @@ public class AsyncReportFilesApi {
     String[] localVarAuthNames = new String[] {"accessToken", "nonce", "timestamp"};
     return apiClient.buildCall(
         localVarPath,
-        "POST",
+        "GET",
         localVarQueryParams,
         localVarCollectionQueryParams,
         localVarPostBody,
@@ -127,50 +138,81 @@ public class AsyncReportFilesApi {
 
   @SuppressWarnings("rawtypes")
   private com.squareup.okhttp.Call asyncReportFilesGetValidateBeforeCall(
-      AsyncReportFilesGetRequest data,
+      Long accountId,
+      Long taskId,
+      Long fileId,
+      List<String> fields,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
       String... headerPair)
       throws ApiException {
 
-    // verify the required parameter 'data' is set
-    if (data == null) {
+    // verify the required parameter 'accountId' is set
+    if (accountId == null) {
       throw new ApiException(
-          "Missing the required parameter 'data' when calling asyncReportFilesGet(Async)");
+          "Missing the required parameter 'accountId' when calling asyncReportFilesGet(Async)");
+    }
+
+    // verify the required parameter 'taskId' is set
+    if (taskId == null) {
+      throw new ApiException(
+          "Missing the required parameter 'taskId' when calling asyncReportFilesGet(Async)");
+    }
+
+    // verify the required parameter 'fileId' is set
+    if (fileId == null) {
+      throw new ApiException(
+          "Missing the required parameter 'fileId' when calling asyncReportFilesGet(Async)");
     }
 
     com.squareup.okhttp.Call call =
-        asyncReportFilesGetCall(data, progressListener, progressRequestListener, headerPair);
+        asyncReportFilesGetCall(
+            accountId,
+            taskId,
+            fileId,
+            fields,
+            progressListener,
+            progressRequestListener,
+            headerPair);
     return call;
   }
 
   /**
    * 获取文件接口
    *
-   * @param data (required)
+   * @param accountId (required)
+   * @param taskId (required)
+   * @param fileId (required)
+   * @param fields 返回参数的字段列表 (optional)
    * @return AsyncReportFilesGetResponse
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
   public AsyncReportFilesGetResponse asyncReportFilesGet(
-      AsyncReportFilesGetRequest data, String... headerPair) throws ApiException {
+      Long accountId, Long taskId, Long fileId, List<String> fields, String... headerPair)
+      throws ApiException {
     ApiResponse<AsyncReportFilesGetResponse> resp =
-        asyncReportFilesGetWithHttpInfo(data, headerPair);
+        asyncReportFilesGetWithHttpInfo(accountId, taskId, fileId, fields, headerPair);
     return resp.getData();
   }
 
   /**
    * 获取文件接口
    *
-   * @param data (required)
+   * @param accountId (required)
+   * @param taskId (required)
+   * @param fileId (required)
+   * @param fields 返回参数的字段列表 (optional)
    * @return ApiResponse&lt;AsyncReportFilesGetResponse&gt;
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
   public ApiResponse<AsyncReportFilesGetResponse> asyncReportFilesGetWithHttpInfo(
-      AsyncReportFilesGetRequest data, String... headerPair) throws ApiException {
+      Long accountId, Long taskId, Long fileId, List<String> fields, String... headerPair)
+      throws ApiException {
     com.squareup.okhttp.Call call =
-        asyncReportFilesGetValidateBeforeCall(data, null, null, headerPair);
+        asyncReportFilesGetValidateBeforeCall(
+            accountId, taskId, fileId, fields, null, null, headerPair);
     Type localVarReturnType = new TypeToken<AsyncReportFilesGetResponse>() {}.getType();
     return apiClient.execute(call, localVarReturnType);
   }
@@ -178,13 +220,19 @@ public class AsyncReportFilesApi {
   /**
    * 获取文件接口 (asynchronously)
    *
-   * @param data (required)
+   * @param accountId (required)
+   * @param taskId (required)
+   * @param fileId (required)
+   * @param fields 返回参数的字段列表 (optional)
    * @param callback The callback to be executed when the API call finishes
    * @return The request call
    * @throws ApiException If fail to process the API call, e.g. serializing the request body object
    */
   public com.squareup.okhttp.Call asyncReportFilesGetAsync(
-      AsyncReportFilesGetRequest data,
+      Long accountId,
+      Long taskId,
+      Long fileId,
+      List<String> fields,
       final ApiCallback<AsyncReportFilesGetResponse> callback,
       String... headerPair)
       throws ApiException {
@@ -212,7 +260,13 @@ public class AsyncReportFilesApi {
 
     com.squareup.okhttp.Call call =
         asyncReportFilesGetValidateBeforeCall(
-            data, progressListener, progressRequestListener, headerPair);
+            accountId,
+            taskId,
+            fileId,
+            fields,
+            progressListener,
+            progressRequestListener,
+            headerPair);
     Type localVarReturnType = new TypeToken<AsyncReportFilesGetResponse>() {}.getType();
     apiClient.executeAsync(call, localVarReturnType, callback);
     return call;

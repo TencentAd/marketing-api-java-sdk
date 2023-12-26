@@ -4,9 +4,9 @@ import com.tencent.ads.ApiContextConfig;
 import com.tencent.ads.exception.TencentAdsResponseException;
 import com.tencent.ads.exception.TencentAdsSDKException;
 import com.tencent.ads.model.v3.*;
-import com.tencent.ads.model.v3.AsyncReportFilesGetRequest;
 import com.tencent.ads.model.v3.AsyncReportFilesGetResponse;
 import com.tencent.ads.v3.TencentAds;
+import java.util.List;
 
 public class GetAsyncReportFiles {
   /** YOUR ACCESS TOKEN */
@@ -15,7 +15,13 @@ public class GetAsyncReportFiles {
   /** TencentAds */
   public TencentAds tencentAds;
 
-  public AsyncReportFilesGetRequest data = null;
+  public Long accountId = null;
+
+  public Long taskId = null;
+
+  public Long fileId = null;
+
+  public List<String> fields = null;
 
   public void init() {
     this.tencentAds = TencentAds.getInstance();
@@ -28,7 +34,8 @@ public class GetAsyncReportFiles {
   public void buildParams() {}
 
   public AsyncReportFilesGetResponse getAsyncReportFiles() throws Exception {
-    AsyncReportFilesGetResponse response = tencentAds.asyncReportFiles().asyncReportFilesGet(data);
+    AsyncReportFilesGetResponse response =
+        tencentAds.asyncReportFiles().asyncReportFilesGet(accountId, taskId, fileId, fields);
     return response;
   }
 

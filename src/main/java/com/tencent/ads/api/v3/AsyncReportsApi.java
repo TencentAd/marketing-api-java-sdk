@@ -23,7 +23,7 @@ import com.tencent.ads.ProgressRequestBody;
 import com.tencent.ads.ProgressResponseBody;
 import com.tencent.ads.model.v3.AsyncReportsAddRequest;
 import com.tencent.ads.model.v3.AsyncReportsAddResponse;
-import com.tencent.ads.model.v3.AsyncReportsGetRequest;
+import com.tencent.ads.model.v3.AsyncReportsFilteringStruct;
 import com.tencent.ads.model.v3.AsyncReportsGetResponse;
 import java.io.IOException;
 import java.lang.reflect.Type;
@@ -220,26 +220,44 @@ public class AsyncReportsApi {
   /**
    * Build call for asyncReportsGet
    *
-   * @param data (required)
+   * @param accountId (required)
+   * @param filtering (optional)
+   * @param page (optional)
+   * @param pageSize (optional)
+   * @param fields 返回参数的字段列表 (optional)
    * @param progressListener Progress listener
    * @param progressRequestListener Progress request listener
    * @return Call to execute
    * @throws ApiException If fail to serialize the request body object
    */
   public com.squareup.okhttp.Call asyncReportsGetCall(
-      AsyncReportsGetRequest data,
+      Long accountId,
+      List<AsyncReportsFilteringStruct> filtering,
+      Long page,
+      Long pageSize,
+      List<String> fields,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
       String... headerPair)
       throws ApiException {
 
-    Object localVarPostBody = data;
+    Object localVarPostBody = null;
 
     // create path and map variables
     String localVarPath = "/async_reports/get";
 
     List<Pair> localVarQueryParams = new ArrayList<Pair>();
     List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+    if (accountId != null)
+      localVarQueryParams.addAll(apiClient.parameterToPair("account_id", accountId));
+    if (filtering != null)
+      localVarCollectionQueryParams.addAll(
+          apiClient.parameterToPairs("multi", "filtering", filtering));
+    if (page != null) localVarQueryParams.addAll(apiClient.parameterToPair("page", page));
+    if (pageSize != null)
+      localVarQueryParams.addAll(apiClient.parameterToPair("page_size", pageSize));
+    if (fields != null)
+      localVarCollectionQueryParams.addAll(apiClient.parameterToPairs("multi", "fields", fields));
 
     Map<String, String> localVarHeaderParams = new HashMap<String, String>();
 
@@ -249,7 +267,7 @@ public class AsyncReportsApi {
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
     if (localVarAccept != null) localVarHeaderParams.put("Accept", localVarAccept);
 
-    final String[] localVarContentTypes = {"application/json", "application/xml"};
+    final String[] localVarContentTypes = {"text/plain"};
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
     localVarHeaderParams.put("Content-Type", localVarContentType);
 
@@ -283,7 +301,7 @@ public class AsyncReportsApi {
     String[] localVarAuthNames = new String[] {"accessToken", "nonce", "timestamp"};
     return apiClient.buildCall(
         localVarPath,
-        "POST",
+        "GET",
         localVarQueryParams,
         localVarCollectionQueryParams,
         localVarPostBody,
@@ -295,48 +313,83 @@ public class AsyncReportsApi {
 
   @SuppressWarnings("rawtypes")
   private com.squareup.okhttp.Call asyncReportsGetValidateBeforeCall(
-      AsyncReportsGetRequest data,
+      Long accountId,
+      List<AsyncReportsFilteringStruct> filtering,
+      Long page,
+      Long pageSize,
+      List<String> fields,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
       String... headerPair)
       throws ApiException {
 
-    // verify the required parameter 'data' is set
-    if (data == null) {
+    // verify the required parameter 'accountId' is set
+    if (accountId == null) {
       throw new ApiException(
-          "Missing the required parameter 'data' when calling asyncReportsGet(Async)");
+          "Missing the required parameter 'accountId' when calling asyncReportsGet(Async)");
     }
 
     com.squareup.okhttp.Call call =
-        asyncReportsGetCall(data, progressListener, progressRequestListener, headerPair);
+        asyncReportsGetCall(
+            accountId,
+            filtering,
+            page,
+            pageSize,
+            fields,
+            progressListener,
+            progressRequestListener,
+            headerPair);
     return call;
   }
 
   /**
    * 获取异步报表任务
    *
-   * @param data (required)
+   * @param accountId (required)
+   * @param filtering (optional)
+   * @param page (optional)
+   * @param pageSize (optional)
+   * @param fields 返回参数的字段列表 (optional)
    * @return AsyncReportsGetResponse
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
-  public AsyncReportsGetResponse asyncReportsGet(AsyncReportsGetRequest data, String... headerPair)
+  public AsyncReportsGetResponse asyncReportsGet(
+      Long accountId,
+      List<AsyncReportsFilteringStruct> filtering,
+      Long page,
+      Long pageSize,
+      List<String> fields,
+      String... headerPair)
       throws ApiException {
-    ApiResponse<AsyncReportsGetResponse> resp = asyncReportsGetWithHttpInfo(data, headerPair);
+    ApiResponse<AsyncReportsGetResponse> resp =
+        asyncReportsGetWithHttpInfo(accountId, filtering, page, pageSize, fields, headerPair);
     return resp.getData();
   }
 
   /**
    * 获取异步报表任务
    *
-   * @param data (required)
+   * @param accountId (required)
+   * @param filtering (optional)
+   * @param page (optional)
+   * @param pageSize (optional)
+   * @param fields 返回参数的字段列表 (optional)
    * @return ApiResponse&lt;AsyncReportsGetResponse&gt;
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
   public ApiResponse<AsyncReportsGetResponse> asyncReportsGetWithHttpInfo(
-      AsyncReportsGetRequest data, String... headerPair) throws ApiException {
-    com.squareup.okhttp.Call call = asyncReportsGetValidateBeforeCall(data, null, null, headerPair);
+      Long accountId,
+      List<AsyncReportsFilteringStruct> filtering,
+      Long page,
+      Long pageSize,
+      List<String> fields,
+      String... headerPair)
+      throws ApiException {
+    com.squareup.okhttp.Call call =
+        asyncReportsGetValidateBeforeCall(
+            accountId, filtering, page, pageSize, fields, null, null, headerPair);
     Type localVarReturnType = new TypeToken<AsyncReportsGetResponse>() {}.getType();
     return apiClient.execute(call, localVarReturnType);
   }
@@ -344,13 +397,21 @@ public class AsyncReportsApi {
   /**
    * 获取异步报表任务 (asynchronously)
    *
-   * @param data (required)
+   * @param accountId (required)
+   * @param filtering (optional)
+   * @param page (optional)
+   * @param pageSize (optional)
+   * @param fields 返回参数的字段列表 (optional)
    * @param callback The callback to be executed when the API call finishes
    * @return The request call
    * @throws ApiException If fail to process the API call, e.g. serializing the request body object
    */
   public com.squareup.okhttp.Call asyncReportsGetAsync(
-      AsyncReportsGetRequest data,
+      Long accountId,
+      List<AsyncReportsFilteringStruct> filtering,
+      Long page,
+      Long pageSize,
+      List<String> fields,
       final ApiCallback<AsyncReportsGetResponse> callback,
       String... headerPair)
       throws ApiException {
@@ -378,7 +439,14 @@ public class AsyncReportsApi {
 
     com.squareup.okhttp.Call call =
         asyncReportsGetValidateBeforeCall(
-            data, progressListener, progressRequestListener, headerPair);
+            accountId,
+            filtering,
+            page,
+            pageSize,
+            fields,
+            progressListener,
+            progressRequestListener,
+            headerPair);
     Type localVarReturnType = new TypeToken<AsyncReportsGetResponse>() {}.getType();
     apiClient.executeAsync(call, localVarReturnType, callback);
     return call;
