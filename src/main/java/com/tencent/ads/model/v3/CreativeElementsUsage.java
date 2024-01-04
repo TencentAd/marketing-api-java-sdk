@@ -14,31 +14,33 @@ package com.tencent.ads.model.v3;
 
 import com.google.gson.Gson;
 import com.google.gson.annotations.SerializedName;
+import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.util.Objects;
 
-/** GameFeatureUpdateResponseData */
-public class GameFeatureUpdateResponseData {
-  @SerializedName("marketing_target_detail_id")
-  private String marketingTargetDetailId = null;
+/** 衍生使用元素信息 */
+@ApiModel(description = "衍生使用元素信息")
+public class CreativeElementsUsage {
+  @SerializedName("use_description_element")
+  private Boolean useDescriptionElement = null;
 
-  public GameFeatureUpdateResponseData marketingTargetDetailId(String marketingTargetDetailId) {
-    this.marketingTargetDetailId = marketingTargetDetailId;
+  public CreativeElementsUsage useDescriptionElement(Boolean useDescriptionElement) {
+    this.useDescriptionElement = useDescriptionElement;
     return this;
   }
 
   /**
-   * Get marketingTargetDetailId
+   * Get useDescriptionElement
    *
-   * @return marketingTargetDetailId
+   * @return useDescriptionElement
    */
   @ApiModelProperty(value = "")
-  public String getMarketingTargetDetailId() {
-    return marketingTargetDetailId;
+  public Boolean isUseDescriptionElement() {
+    return useDescriptionElement;
   }
 
-  public void setMarketingTargetDetailId(String marketingTargetDetailId) {
-    this.marketingTargetDetailId = marketingTargetDetailId;
+  public void setUseDescriptionElement(Boolean useDescriptionElement) {
+    this.useDescriptionElement = useDescriptionElement;
   }
 
   @Override
@@ -49,14 +51,13 @@ public class GameFeatureUpdateResponseData {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    GameFeatureUpdateResponseData gameFeatureUpdateResponseData = (GameFeatureUpdateResponseData) o;
-    return Objects.equals(
-        this.marketingTargetDetailId, gameFeatureUpdateResponseData.marketingTargetDetailId);
+    CreativeElementsUsage creativeElementsUsage = (CreativeElementsUsage) o;
+    return Objects.equals(this.useDescriptionElement, creativeElementsUsage.useDescriptionElement);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(marketingTargetDetailId);
+    return Objects.hash(useDescriptionElement);
   }
 
   @Override

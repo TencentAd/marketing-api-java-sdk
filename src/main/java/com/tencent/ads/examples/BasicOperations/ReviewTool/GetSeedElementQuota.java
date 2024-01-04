@@ -1,20 +1,20 @@
-package com.tencent.ads.examples.v3.BasicOperations.Tools;
+package com.tencent.ads.examples.BasicOperations.ReviewTool;
 
 import com.tencent.ads.ApiContextConfig;
+import com.tencent.ads.TencentAds;
 import com.tencent.ads.exception.TencentAdsResponseException;
 import com.tencent.ads.exception.TencentAdsSDKException;
-import com.tencent.ads.model.v3.*;
-import com.tencent.ads.model.v3.GameFeatureUpdateRequest;
-import com.tencent.ads.v3.TencentAds;
+import com.tencent.ads.model.*;
+import com.tencent.ads.model.SeedElementQuotaGetRequest;
 
-public class UpdateGameFeature {
+public class GetSeedElementQuota {
   /** YOUR ACCESS TOKEN */
   public String ACCESS_TOKEN = "YOUR ACCESS TOKEN";
 
   /** TencentAds */
   public TencentAds tencentAds;
 
-  public GameFeatureUpdateRequest data = null;
+  public SeedElementQuotaGetRequest data = null;
 
   public void init() {
     this.tencentAds = TencentAds.getInstance();
@@ -26,16 +26,17 @@ public class UpdateGameFeature {
 
   public void buildParams() {}
 
-  public GameFeatureUpdateResponseData updateGameFeature() throws Exception {
-    GameFeatureUpdateResponseData response = tencentAds.gameFeature().gameFeatureUpdate(data);
+  public SeedElementQuotaGetResponseData getSeedElementQuota() throws Exception {
+    SeedElementQuotaGetResponseData response =
+        tencentAds.seedElementQuota().seedElementQuotaGet(data);
     return response;
   }
 
   public static void main(String[] args) {
     try {
-      UpdateGameFeature updateGameFeature = new UpdateGameFeature();
-      updateGameFeature.init();
-      GameFeatureUpdateResponseData response = updateGameFeature.updateGameFeature();
+      GetSeedElementQuota getSeedElementQuota = new GetSeedElementQuota();
+      getSeedElementQuota.init();
+      SeedElementQuotaGetResponseData response = getSeedElementQuota.getSeedElementQuota();
     } catch (TencentAdsResponseException e) {
       e.printStackTrace();
     } catch (TencentAdsSDKException e) {

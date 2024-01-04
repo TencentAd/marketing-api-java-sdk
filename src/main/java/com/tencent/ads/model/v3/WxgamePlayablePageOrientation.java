@@ -19,24 +19,16 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-/** 营销目的类型 */
-@JsonAdapter(MarketingGoal.Adapter.class)
-public enum MarketingGoal {
-  UNKNOWN("MARKETING_GOAL_UNKNOWN"),
+/** 小游戏试玩页横竖屏标记信息 */
+@JsonAdapter(WxgamePlayablePageOrientation.Adapter.class)
+public enum WxgamePlayablePageOrientation {
+  PORTRAIT("PORTRAIT"),
 
-  USER_GROWTH("MARKETING_GOAL_USER_GROWTH"),
-
-  PRODUCT_SALES("MARKETING_GOAL_PRODUCT_SALES"),
-
-  LEAD_RETENTION("MARKETING_GOAL_LEAD_RETENTION"),
-
-  BRAND_PROMOTION("MARKETING_GOAL_BRAND_PROMOTION"),
-
-  INCREASE_FANS_INTERACTION("MARKETING_GOAL_INCREASE_FANS_INTERACTION");
+  LANDSCAPE("LANDSCAPE");
 
   private String value;
 
-  MarketingGoal(String value) {
+  WxgamePlayablePageOrientation(String value) {
     this.value = value;
   }
 
@@ -49,8 +41,8 @@ public enum MarketingGoal {
     return String.valueOf(value);
   }
 
-  public static MarketingGoal fromValue(String text) {
-    for (MarketingGoal b : MarketingGoal.values()) {
+  public static WxgamePlayablePageOrientation fromValue(String text) {
+    for (WxgamePlayablePageOrientation b : WxgamePlayablePageOrientation.values()) {
       if (String.valueOf(b.value).equals(text)) {
         return b;
       }
@@ -58,17 +50,17 @@ public enum MarketingGoal {
     return null;
   }
 
-  public static class Adapter extends TypeAdapter<MarketingGoal> {
+  public static class Adapter extends TypeAdapter<WxgamePlayablePageOrientation> {
     @Override
-    public void write(final JsonWriter jsonWriter, final MarketingGoal enumeration)
+    public void write(final JsonWriter jsonWriter, final WxgamePlayablePageOrientation enumeration)
         throws IOException {
       jsonWriter.value(enumeration.getValue());
     }
 
     @Override
-    public MarketingGoal read(final JsonReader jsonReader) throws IOException {
+    public WxgamePlayablePageOrientation read(final JsonReader jsonReader) throws IOException {
       String value = jsonReader.nextString();
-      return MarketingGoal.fromValue(String.valueOf(value));
+      return WxgamePlayablePageOrientation.fromValue(String.valueOf(value));
     }
   }
 }

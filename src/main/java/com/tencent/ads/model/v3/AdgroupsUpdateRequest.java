@@ -96,9 +96,6 @@ public class AdgroupsUpdateRequest {
   @SerializedName("auto_derived_creative_enabled")
   private Boolean autoDerivedCreativeEnabled = null;
 
-  @SerializedName("data_model_version")
-  private Long dataModelVersion = null;
-
   @SerializedName("configured_status")
   private ConfiguredStatus configuredStatus = null;
 
@@ -593,25 +590,6 @@ public class AdgroupsUpdateRequest {
     this.autoDerivedCreativeEnabled = autoDerivedCreativeEnabled;
   }
 
-  public AdgroupsUpdateRequest dataModelVersion(Long dataModelVersion) {
-    this.dataModelVersion = dataModelVersion;
-    return this;
-  }
-
-  /**
-   * Get dataModelVersion
-   *
-   * @return dataModelVersion
-   */
-  @ApiModelProperty(value = "")
-  public Long getDataModelVersion() {
-    return dataModelVersion;
-  }
-
-  public void setDataModelVersion(Long dataModelVersion) {
-    this.dataModelVersion = dataModelVersion;
-  }
-
   public AdgroupsUpdateRequest configuredStatus(ConfiguredStatus configuredStatus) {
     this.configuredStatus = configuredStatus;
     return this;
@@ -719,7 +697,6 @@ public class AdgroupsUpdateRequest {
             this.autoDerivedLandingPageSwitch, adgroupsUpdateRequest.autoDerivedLandingPageSwitch)
         && Objects.equals(
             this.autoDerivedCreativeEnabled, adgroupsUpdateRequest.autoDerivedCreativeEnabled)
-        && Objects.equals(this.dataModelVersion, adgroupsUpdateRequest.dataModelVersion)
         && Objects.equals(this.configuredStatus, adgroupsUpdateRequest.configuredStatus)
         && Objects.equals(
             this.flowOptimizationEnabled, adgroupsUpdateRequest.flowOptimizationEnabled)
@@ -754,7 +731,6 @@ public class AdgroupsUpdateRequest {
         autoAcquisitionBudget,
         autoDerivedLandingPageSwitch,
         autoDerivedCreativeEnabled,
-        dataModelVersion,
         configuredStatus,
         flowOptimizationEnabled,
         poiList);

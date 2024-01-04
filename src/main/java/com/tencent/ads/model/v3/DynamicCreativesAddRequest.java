@@ -46,8 +46,14 @@ public class DynamicCreativesAddRequest {
   @SerializedName("click_tracking_url")
   private String clickTrackingUrl = null;
 
+  @SerializedName("program_creative_info")
+  private ProgramCreativeInfo programCreativeInfo = null;
+
   @SerializedName("page_track_url")
   private String pageTrackUrl = null;
+
+  @SerializedName("auto_derived_program_creative_switch")
+  private Boolean autoDerivedProgramCreativeSwitch = null;
 
   @SerializedName("configured_status")
   private ConfiguredStatus configuredStatus = null;
@@ -226,6 +232,25 @@ public class DynamicCreativesAddRequest {
     this.clickTrackingUrl = clickTrackingUrl;
   }
 
+  public DynamicCreativesAddRequest programCreativeInfo(ProgramCreativeInfo programCreativeInfo) {
+    this.programCreativeInfo = programCreativeInfo;
+    return this;
+  }
+
+  /**
+   * Get programCreativeInfo
+   *
+   * @return programCreativeInfo
+   */
+  @ApiModelProperty(value = "")
+  public ProgramCreativeInfo getProgramCreativeInfo() {
+    return programCreativeInfo;
+  }
+
+  public void setProgramCreativeInfo(ProgramCreativeInfo programCreativeInfo) {
+    this.programCreativeInfo = programCreativeInfo;
+  }
+
   public DynamicCreativesAddRequest pageTrackUrl(String pageTrackUrl) {
     this.pageTrackUrl = pageTrackUrl;
     return this;
@@ -243,6 +268,26 @@ public class DynamicCreativesAddRequest {
 
   public void setPageTrackUrl(String pageTrackUrl) {
     this.pageTrackUrl = pageTrackUrl;
+  }
+
+  public DynamicCreativesAddRequest autoDerivedProgramCreativeSwitch(
+      Boolean autoDerivedProgramCreativeSwitch) {
+    this.autoDerivedProgramCreativeSwitch = autoDerivedProgramCreativeSwitch;
+    return this;
+  }
+
+  /**
+   * Get autoDerivedProgramCreativeSwitch
+   *
+   * @return autoDerivedProgramCreativeSwitch
+   */
+  @ApiModelProperty(value = "")
+  public Boolean isAutoDerivedProgramCreativeSwitch() {
+    return autoDerivedProgramCreativeSwitch;
+  }
+
+  public void setAutoDerivedProgramCreativeSwitch(Boolean autoDerivedProgramCreativeSwitch) {
+    this.autoDerivedProgramCreativeSwitch = autoDerivedProgramCreativeSwitch;
   }
 
   public DynamicCreativesAddRequest configuredStatus(ConfiguredStatus configuredStatus) {
@@ -302,7 +347,11 @@ public class DynamicCreativesAddRequest {
         && Objects.equals(
             this.impressionTrackingUrl, dynamicCreativesAddRequest.impressionTrackingUrl)
         && Objects.equals(this.clickTrackingUrl, dynamicCreativesAddRequest.clickTrackingUrl)
+        && Objects.equals(this.programCreativeInfo, dynamicCreativesAddRequest.programCreativeInfo)
         && Objects.equals(this.pageTrackUrl, dynamicCreativesAddRequest.pageTrackUrl)
+        && Objects.equals(
+            this.autoDerivedProgramCreativeSwitch,
+            dynamicCreativesAddRequest.autoDerivedProgramCreativeSwitch)
         && Objects.equals(this.configuredStatus, dynamicCreativesAddRequest.configuredStatus)
         && Objects.equals(
             this.enableBreakthroughSiteset, dynamicCreativesAddRequest.enableBreakthroughSiteset);
@@ -320,7 +369,9 @@ public class DynamicCreativesAddRequest {
         creativeComponents,
         impressionTrackingUrl,
         clickTrackingUrl,
+        programCreativeInfo,
         pageTrackUrl,
+        autoDerivedProgramCreativeSwitch,
         configuredStatus,
         enableBreakthroughSiteset);
   }

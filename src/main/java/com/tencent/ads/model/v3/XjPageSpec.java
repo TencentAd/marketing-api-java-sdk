@@ -24,6 +24,9 @@ public class XjPageSpec {
   @SerializedName("page_id")
   private Long pageId = null;
 
+  @SerializedName("wechat_channels_live_reserve_id")
+  private String wechatChannelsLiveReserveId = null;
+
   public XjPageSpec pageId(Long pageId) {
     this.pageId = pageId;
     return this;
@@ -43,6 +46,25 @@ public class XjPageSpec {
     this.pageId = pageId;
   }
 
+  public XjPageSpec wechatChannelsLiveReserveId(String wechatChannelsLiveReserveId) {
+    this.wechatChannelsLiveReserveId = wechatChannelsLiveReserveId;
+    return this;
+  }
+
+  /**
+   * Get wechatChannelsLiveReserveId
+   *
+   * @return wechatChannelsLiveReserveId
+   */
+  @ApiModelProperty(value = "")
+  public String getWechatChannelsLiveReserveId() {
+    return wechatChannelsLiveReserveId;
+  }
+
+  public void setWechatChannelsLiveReserveId(String wechatChannelsLiveReserveId) {
+    this.wechatChannelsLiveReserveId = wechatChannelsLiveReserveId;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -52,12 +74,13 @@ public class XjPageSpec {
       return false;
     }
     XjPageSpec xjPageSpec = (XjPageSpec) o;
-    return Objects.equals(this.pageId, xjPageSpec.pageId);
+    return Objects.equals(this.pageId, xjPageSpec.pageId)
+        && Objects.equals(this.wechatChannelsLiveReserveId, xjPageSpec.wechatChannelsLiveReserveId);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(pageId);
+    return Objects.hash(pageId, wechatChannelsLiveReserveId);
   }
 
   @Override

@@ -13,12 +13,35 @@
 package com.tencent.ads.model.v3;
 
 import com.google.gson.Gson;
+import com.google.gson.annotations.SerializedName;
 import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
 import java.util.Objects;
 
-/** 返回结构 */
-@ApiModel(description = "返回结构")
-public class ReportApiListStruct {
+/** 小游戏试玩页组件 */
+@ApiModel(description = "小游戏试玩页组件")
+public class WxgamePlayablePageComponent {
+  @SerializedName("value")
+  private WxgamePlayablePageStruct value = null;
+
+  public WxgamePlayablePageComponent value(WxgamePlayablePageStruct value) {
+    this.value = value;
+    return this;
+  }
+
+  /**
+   * Get value
+   *
+   * @return value
+   */
+  @ApiModelProperty(value = "")
+  public WxgamePlayablePageStruct getValue() {
+    return value;
+  }
+
+  public void setValue(WxgamePlayablePageStruct value) {
+    this.value = value;
+  }
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -28,12 +51,13 @@ public class ReportApiListStruct {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    return true;
+    WxgamePlayablePageComponent wxgamePlayablePageComponent = (WxgamePlayablePageComponent) o;
+    return Objects.equals(this.value, wxgamePlayablePageComponent.value);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash();
+    return Objects.hash(value);
   }
 
   @Override

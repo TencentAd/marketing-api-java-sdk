@@ -30,9 +30,6 @@ public class AdgroupsAddRequest {
   @SerializedName("marketing_goal")
   private MarketingGoal marketingGoal = null;
 
-  @SerializedName("marketing_target_id")
-  private Long marketingTargetId = null;
-
   @SerializedName("marketing_sub_goal")
   private MarketingSubGoal marketingSubGoal = null;
 
@@ -123,17 +120,11 @@ public class AdgroupsAddRequest {
   @SerializedName("auto_derived_landing_page_switch")
   private Boolean autoDerivedLandingPageSwitch = null;
 
-  @SerializedName("data_model_version")
-  private Long dataModelVersion = null;
-
   @SerializedName("bid_scene")
   private BidScene bidScene = null;
 
   @SerializedName("configured_status")
   private ConfiguredStatus configuredStatus = null;
-
-  @SerializedName("marketing_target_attachment")
-  private MarketingTargetAttachment marketingTargetAttachment = null;
 
   @SerializedName("flow_optimization_enabled")
   private Boolean flowOptimizationEnabled = null;
@@ -211,25 +202,6 @@ public class AdgroupsAddRequest {
 
   public void setMarketingGoal(MarketingGoal marketingGoal) {
     this.marketingGoal = marketingGoal;
-  }
-
-  public AdgroupsAddRequest marketingTargetId(Long marketingTargetId) {
-    this.marketingTargetId = marketingTargetId;
-    return this;
-  }
-
-  /**
-   * Get marketingTargetId
-   *
-   * @return marketingTargetId
-   */
-  @ApiModelProperty(value = "")
-  public Long getMarketingTargetId() {
-    return marketingTargetId;
-  }
-
-  public void setMarketingTargetId(Long marketingTargetId) {
-    this.marketingTargetId = marketingTargetId;
   }
 
   public AdgroupsAddRequest marketingSubGoal(MarketingSubGoal marketingSubGoal) {
@@ -822,25 +794,6 @@ public class AdgroupsAddRequest {
     this.autoDerivedLandingPageSwitch = autoDerivedLandingPageSwitch;
   }
 
-  public AdgroupsAddRequest dataModelVersion(Long dataModelVersion) {
-    this.dataModelVersion = dataModelVersion;
-    return this;
-  }
-
-  /**
-   * Get dataModelVersion
-   *
-   * @return dataModelVersion
-   */
-  @ApiModelProperty(value = "")
-  public Long getDataModelVersion() {
-    return dataModelVersion;
-  }
-
-  public void setDataModelVersion(Long dataModelVersion) {
-    this.dataModelVersion = dataModelVersion;
-  }
-
   public AdgroupsAddRequest bidScene(BidScene bidScene) {
     this.bidScene = bidScene;
     return this;
@@ -877,26 +830,6 @@ public class AdgroupsAddRequest {
 
   public void setConfiguredStatus(ConfiguredStatus configuredStatus) {
     this.configuredStatus = configuredStatus;
-  }
-
-  public AdgroupsAddRequest marketingTargetAttachment(
-      MarketingTargetAttachment marketingTargetAttachment) {
-    this.marketingTargetAttachment = marketingTargetAttachment;
-    return this;
-  }
-
-  /**
-   * Get marketingTargetAttachment
-   *
-   * @return marketingTargetAttachment
-   */
-  @ApiModelProperty(value = "")
-  public MarketingTargetAttachment getMarketingTargetAttachment() {
-    return marketingTargetAttachment;
-  }
-
-  public void setMarketingTargetAttachment(MarketingTargetAttachment marketingTargetAttachment) {
-    this.marketingTargetAttachment = marketingTargetAttachment;
   }
 
   public AdgroupsAddRequest flowOptimizationEnabled(Boolean flowOptimizationEnabled) {
@@ -1061,7 +994,6 @@ public class AdgroupsAddRequest {
     return Objects.equals(this.accountId, adgroupsAddRequest.accountId)
         && Objects.equals(this.adgroupName, adgroupsAddRequest.adgroupName)
         && Objects.equals(this.marketingGoal, adgroupsAddRequest.marketingGoal)
-        && Objects.equals(this.marketingTargetId, adgroupsAddRequest.marketingTargetId)
         && Objects.equals(this.marketingSubGoal, adgroupsAddRequest.marketingSubGoal)
         && Objects.equals(this.marketingCarrierType, adgroupsAddRequest.marketingCarrierType)
         && Objects.equals(this.marketingCarrierDetail, adgroupsAddRequest.marketingCarrierDetail)
@@ -1100,11 +1032,8 @@ public class AdgroupsAddRequest {
             this.searchExpandTargetingSwitch, adgroupsAddRequest.searchExpandTargetingSwitch)
         && Objects.equals(
             this.autoDerivedLandingPageSwitch, adgroupsAddRequest.autoDerivedLandingPageSwitch)
-        && Objects.equals(this.dataModelVersion, adgroupsAddRequest.dataModelVersion)
         && Objects.equals(this.bidScene, adgroupsAddRequest.bidScene)
         && Objects.equals(this.configuredStatus, adgroupsAddRequest.configuredStatus)
-        && Objects.equals(
-            this.marketingTargetAttachment, adgroupsAddRequest.marketingTargetAttachment)
         && Objects.equals(this.flowOptimizationEnabled, adgroupsAddRequest.flowOptimizationEnabled)
         && Objects.equals(this.materialPackageId, adgroupsAddRequest.materialPackageId)
         && Objects.equals(this.marketingAssetId, adgroupsAddRequest.marketingAssetId)
@@ -1120,7 +1049,6 @@ public class AdgroupsAddRequest {
         accountId,
         adgroupName,
         marketingGoal,
-        marketingTargetId,
         marketingSubGoal,
         marketingCarrierType,
         marketingCarrierDetail,
@@ -1151,10 +1079,8 @@ public class AdgroupsAddRequest {
         autoDerivedCreativeEnabled,
         searchExpandTargetingSwitch,
         autoDerivedLandingPageSwitch,
-        dataModelVersion,
         bidScene,
         configuredStatus,
-        marketingTargetAttachment,
         flowOptimizationEnabled,
         materialPackageId,
         marketingAssetId,

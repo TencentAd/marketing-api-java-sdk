@@ -22,19 +22,19 @@ import java.util.Objects;
 /** DailyReportsGetResponseData */
 public class DailyReportsGetResponseData {
   @SerializedName("list")
-  private List<ReportApiListStruct> list = null;
+  private List<DailyReportApiListStruct> list = null;
 
   @SerializedName("page_info")
   private PageInfo pageInfo = null;
 
-  public DailyReportsGetResponseData list(List<ReportApiListStruct> list) {
+  public DailyReportsGetResponseData list(List<DailyReportApiListStruct> list) {
     this.list = list;
     return this;
   }
 
-  public DailyReportsGetResponseData addListItem(ReportApiListStruct listItem) {
+  public DailyReportsGetResponseData addListItem(DailyReportApiListStruct listItem) {
     if (this.list == null) {
-      this.list = new ArrayList<ReportApiListStruct>();
+      this.list = new ArrayList<DailyReportApiListStruct>();
     }
     this.list.add(listItem);
     return this;
@@ -46,11 +46,11 @@ public class DailyReportsGetResponseData {
    * @return list
    */
   @ApiModelProperty(value = "")
-  public List<ReportApiListStruct> getList() {
+  public List<DailyReportApiListStruct> getList() {
     return list;
   }
 
-  public void setList(List<ReportApiListStruct> list) {
+  public void setList(List<DailyReportApiListStruct> list) {
     this.list = list;
   }
 

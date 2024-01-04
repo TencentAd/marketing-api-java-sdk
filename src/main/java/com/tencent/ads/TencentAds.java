@@ -14,12 +14,16 @@ public class TencentAds extends CustomApp {
 
   private static String basePath = "https://sandbox-api.e.qq.com/v1.3";
 
-  private static final String SDK_VERSION = "1.1.64";
+  private static final String SDK_VERSION = "1.1.65";
 
   private TencentAds() {}
 
   public static TencentAds getInstance() {
     return TencentAdsHolder.INSTANCE;
+  }
+
+  public static com.tencent.ads.v3.TencentAds getInstanceV3() {
+    return com.tencent.ads.v3.TencentAds.getInstance();
   }
 
   private static class TencentAdsHolder {

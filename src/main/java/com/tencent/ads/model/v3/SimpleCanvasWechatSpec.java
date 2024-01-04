@@ -39,6 +39,9 @@ public class SimpleCanvasWechatSpec {
   @SerializedName("simple_canvas_webview_url")
   private String simpleCanvasWebviewUrl = null;
 
+  @SerializedName("wechat_channels_live_reserve_id")
+  private String wechatChannelsLiveReserveId = null;
+
   public SimpleCanvasWechatSpec simpleCanvasWebviewType(
       SimpleCanvasWebviewType simpleCanvasWebviewType) {
     this.simpleCanvasWebviewType = simpleCanvasWebviewType;
@@ -154,6 +157,25 @@ public class SimpleCanvasWechatSpec {
     this.simpleCanvasWebviewUrl = simpleCanvasWebviewUrl;
   }
 
+  public SimpleCanvasWechatSpec wechatChannelsLiveReserveId(String wechatChannelsLiveReserveId) {
+    this.wechatChannelsLiveReserveId = wechatChannelsLiveReserveId;
+    return this;
+  }
+
+  /**
+   * Get wechatChannelsLiveReserveId
+   *
+   * @return wechatChannelsLiveReserveId
+   */
+  @ApiModelProperty(value = "")
+  public String getWechatChannelsLiveReserveId() {
+    return wechatChannelsLiveReserveId;
+  }
+
+  public void setWechatChannelsLiveReserveId(String wechatChannelsLiveReserveId) {
+    this.wechatChannelsLiveReserveId = wechatChannelsLiveReserveId;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -172,7 +194,9 @@ public class SimpleCanvasWechatSpec {
             this.simpleCanvasShareTitle, simpleCanvasWechatSpec.simpleCanvasShareTitle)
         && Objects.equals(this.simpleCanvasShareDesc, simpleCanvasWechatSpec.simpleCanvasShareDesc)
         && Objects.equals(
-            this.simpleCanvasWebviewUrl, simpleCanvasWechatSpec.simpleCanvasWebviewUrl);
+            this.simpleCanvasWebviewUrl, simpleCanvasWechatSpec.simpleCanvasWebviewUrl)
+        && Objects.equals(
+            this.wechatChannelsLiveReserveId, simpleCanvasWechatSpec.wechatChannelsLiveReserveId);
   }
 
   @Override
@@ -183,7 +207,8 @@ public class SimpleCanvasWechatSpec {
         simpleCanvasSubType,
         simpleCanvasShareTitle,
         simpleCanvasShareDesc,
-        simpleCanvasWebviewUrl);
+        simpleCanvasWebviewUrl,
+        wechatChannelsLiveReserveId);
   }
 
   @Override

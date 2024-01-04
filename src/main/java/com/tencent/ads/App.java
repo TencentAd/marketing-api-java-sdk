@@ -157,6 +157,7 @@ public class App {
   @Inject ReviewAdAppealApiContainer reviewAdAppealApiContainer;
   @Inject ReviewElementPrereviewResultsApiContainer reviewElementPrereviewResultsApiContainer;
   @Inject SceneSpecTagsApiContainer sceneSpecTagsApiContainer;
+  @Inject SeedElementQuotaApiContainer seedElementQuotaApiContainer;
   @Inject SplitTestsApiContainer splitTestsApiContainer;
   @Inject SubcustomerTransferApiContainer subcustomerTransferApiContainer;
   @Inject TargetcpaTagApiContainer targetcpaTagApiContainer;
@@ -748,6 +749,10 @@ public class App {
 
   public SceneSpecTagsApiContainer sceneSpecTags() {
     return sceneSpecTagsApiContainer;
+  }
+
+  public SeedElementQuotaApiContainer seedElementQuota() {
+    return seedElementQuotaApiContainer;
   }
 
   public SplitTestsApiContainer splitTests() {

@@ -13,12 +13,35 @@
 package com.tencent.ads.model.v3;
 
 import com.google.gson.Gson;
+import com.google.gson.annotations.SerializedName;
 import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
 import java.util.Objects;
 
 /** android 默认落地页内容 */
 @ApiModel(description = "android 默认落地页内容")
 public class IosAppPageSpec {
+  @SerializedName("ios_app_id")
+  private String iosAppId = null;
+
+  public IosAppPageSpec iosAppId(String iosAppId) {
+    this.iosAppId = iosAppId;
+    return this;
+  }
+
+  /**
+   * Get iosAppId
+   *
+   * @return iosAppId
+   */
+  @ApiModelProperty(value = "")
+  public String getIosAppId() {
+    return iosAppId;
+  }
+
+  public void setIosAppId(String iosAppId) {
+    this.iosAppId = iosAppId;
+  }
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -28,12 +51,13 @@ public class IosAppPageSpec {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    return true;
+    IosAppPageSpec iosAppPageSpec = (IosAppPageSpec) o;
+    return Objects.equals(this.iosAppId, iosAppPageSpec.iosAppId);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash();
+    return Objects.hash(iosAppId);
   }
 
   @Override

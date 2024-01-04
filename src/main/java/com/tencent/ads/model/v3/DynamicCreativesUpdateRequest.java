@@ -37,6 +37,9 @@ public class DynamicCreativesUpdateRequest {
   @SerializedName("click_tracking_url")
   private String clickTrackingUrl = null;
 
+  @SerializedName("auto_derived_program_creative_switch")
+  private Boolean autoDerivedProgramCreativeSwitch = null;
+
   @SerializedName("configured_status")
   private ConfiguredStatus configuredStatus = null;
 
@@ -157,6 +160,26 @@ public class DynamicCreativesUpdateRequest {
     this.clickTrackingUrl = clickTrackingUrl;
   }
 
+  public DynamicCreativesUpdateRequest autoDerivedProgramCreativeSwitch(
+      Boolean autoDerivedProgramCreativeSwitch) {
+    this.autoDerivedProgramCreativeSwitch = autoDerivedProgramCreativeSwitch;
+    return this;
+  }
+
+  /**
+   * Get autoDerivedProgramCreativeSwitch
+   *
+   * @return autoDerivedProgramCreativeSwitch
+   */
+  @ApiModelProperty(value = "")
+  public Boolean isAutoDerivedProgramCreativeSwitch() {
+    return autoDerivedProgramCreativeSwitch;
+  }
+
+  public void setAutoDerivedProgramCreativeSwitch(Boolean autoDerivedProgramCreativeSwitch) {
+    this.autoDerivedProgramCreativeSwitch = autoDerivedProgramCreativeSwitch;
+  }
+
   public DynamicCreativesUpdateRequest configuredStatus(ConfiguredStatus configuredStatus) {
     this.configuredStatus = configuredStatus;
     return this;
@@ -212,6 +235,9 @@ public class DynamicCreativesUpdateRequest {
         && Objects.equals(
             this.impressionTrackingUrl, dynamicCreativesUpdateRequest.impressionTrackingUrl)
         && Objects.equals(this.clickTrackingUrl, dynamicCreativesUpdateRequest.clickTrackingUrl)
+        && Objects.equals(
+            this.autoDerivedProgramCreativeSwitch,
+            dynamicCreativesUpdateRequest.autoDerivedProgramCreativeSwitch)
         && Objects.equals(this.configuredStatus, dynamicCreativesUpdateRequest.configuredStatus)
         && Objects.equals(
             this.isRetryBatchUpdate, dynamicCreativesUpdateRequest.isRetryBatchUpdate);
@@ -226,6 +252,7 @@ public class DynamicCreativesUpdateRequest {
         creativeComponents,
         impressionTrackingUrl,
         clickTrackingUrl,
+        autoDerivedProgramCreativeSwitch,
         configuredStatus,
         isRetryBatchUpdate);
   }

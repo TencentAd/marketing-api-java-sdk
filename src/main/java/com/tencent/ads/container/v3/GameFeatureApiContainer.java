@@ -23,9 +23,6 @@ import com.tencent.ads.model.v3.GameFeatureAddResponse;
 import com.tencent.ads.model.v3.GameFeatureAddResponseData;
 import com.tencent.ads.model.v3.GameFeatureGetResponse;
 import com.tencent.ads.model.v3.GameFeatureGetResponseData;
-import com.tencent.ads.model.v3.GameFeatureUpdateRequest;
-import com.tencent.ads.model.v3.GameFeatureUpdateResponse;
-import com.tencent.ads.model.v3.GameFeatureUpdateResponseData;
 import java.util.List;
 
 public class GameFeatureApiContainer extends ApiContainer {
@@ -68,22 +65,6 @@ public class GameFeatureApiContainer extends ApiContainer {
     GameFeatureGetResponse resp =
         api.gameFeatureGet(
             accountId, marketingTargetType, marketingTargetDetailId, fields, headerPair);
-    handleResponse(gson.toJson(resp));
-    return resp.getData();
-  }
-
-  /**
-   * 更新游戏App特征
-   *
-   * @param data (required)
-   * @return GameFeatureUpdateResponse
-   * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
-   *     response body
-   */
-  public GameFeatureUpdateResponseData gameFeatureUpdate(
-      GameFeatureUpdateRequest data, String... headerPair)
-      throws ApiException, TencentAdsResponseException {
-    GameFeatureUpdateResponse resp = api.gameFeatureUpdate(data, headerPair);
     handleResponse(gson.toJson(resp));
     return resp.getData();
   }

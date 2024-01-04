@@ -101,6 +101,9 @@ public class CreativeComponents {
   @SerializedName("element_story")
   private List<ElementStoryComponent> elementStory = null;
 
+  @SerializedName("wxgame_playable_page")
+  private List<WxgamePlayablePageComponent> wxgamePlayablePage = null;
+
   public CreativeComponents title(List<TitleComponent> title) {
     this.title = title;
     return this;
@@ -804,6 +807,35 @@ public class CreativeComponents {
     this.elementStory = elementStory;
   }
 
+  public CreativeComponents wxgamePlayablePage(
+      List<WxgamePlayablePageComponent> wxgamePlayablePage) {
+    this.wxgamePlayablePage = wxgamePlayablePage;
+    return this;
+  }
+
+  public CreativeComponents addWxgamePlayablePageItem(
+      WxgamePlayablePageComponent wxgamePlayablePageItem) {
+    if (this.wxgamePlayablePage == null) {
+      this.wxgamePlayablePage = new ArrayList<WxgamePlayablePageComponent>();
+    }
+    this.wxgamePlayablePage.add(wxgamePlayablePageItem);
+    return this;
+  }
+
+  /**
+   * Get wxgamePlayablePage
+   *
+   * @return wxgamePlayablePage
+   */
+  @ApiModelProperty(value = "")
+  public List<WxgamePlayablePageComponent> getWxgamePlayablePage() {
+    return wxgamePlayablePage;
+  }
+
+  public void setWxgamePlayablePage(List<WxgamePlayablePageComponent> wxgamePlayablePage) {
+    this.wxgamePlayablePage = wxgamePlayablePage;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -838,7 +870,8 @@ public class CreativeComponents {
         && Objects.equals(this.livingDesc, creativeComponents.livingDesc)
         && Objects.equals(this.wechatChannels, creativeComponents.wechatChannels)
         && Objects.equals(this.shortVideo, creativeComponents.shortVideo)
-        && Objects.equals(this.elementStory, creativeComponents.elementStory);
+        && Objects.equals(this.elementStory, creativeComponents.elementStory)
+        && Objects.equals(this.wxgamePlayablePage, creativeComponents.wxgamePlayablePage);
   }
 
   @Override
@@ -869,7 +902,8 @@ public class CreativeComponents {
         livingDesc,
         wechatChannels,
         shortVideo,
-        elementStory);
+        elementStory,
+        wxgamePlayablePage);
   }
 
   @Override

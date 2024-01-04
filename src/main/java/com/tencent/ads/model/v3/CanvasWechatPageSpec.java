@@ -27,6 +27,9 @@ public class CanvasWechatPageSpec {
   @SerializedName("override_canvas_head_option")
   private OverrideCanvasHeadOption overrideCanvasHeadOption = null;
 
+  @SerializedName("wechat_channels_live_reserve_id")
+  private String wechatChannelsLiveReserveId = null;
+
   public CanvasWechatPageSpec pageId(Long pageId) {
     this.pageId = pageId;
     return this;
@@ -66,6 +69,25 @@ public class CanvasWechatPageSpec {
     this.overrideCanvasHeadOption = overrideCanvasHeadOption;
   }
 
+  public CanvasWechatPageSpec wechatChannelsLiveReserveId(String wechatChannelsLiveReserveId) {
+    this.wechatChannelsLiveReserveId = wechatChannelsLiveReserveId;
+    return this;
+  }
+
+  /**
+   * Get wechatChannelsLiveReserveId
+   *
+   * @return wechatChannelsLiveReserveId
+   */
+  @ApiModelProperty(value = "")
+  public String getWechatChannelsLiveReserveId() {
+    return wechatChannelsLiveReserveId;
+  }
+
+  public void setWechatChannelsLiveReserveId(String wechatChannelsLiveReserveId) {
+    this.wechatChannelsLiveReserveId = wechatChannelsLiveReserveId;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -77,12 +99,14 @@ public class CanvasWechatPageSpec {
     CanvasWechatPageSpec canvasWechatPageSpec = (CanvasWechatPageSpec) o;
     return Objects.equals(this.pageId, canvasWechatPageSpec.pageId)
         && Objects.equals(
-            this.overrideCanvasHeadOption, canvasWechatPageSpec.overrideCanvasHeadOption);
+            this.overrideCanvasHeadOption, canvasWechatPageSpec.overrideCanvasHeadOption)
+        && Objects.equals(
+            this.wechatChannelsLiveReserveId, canvasWechatPageSpec.wechatChannelsLiveReserveId);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(pageId, overrideCanvasHeadOption);
+    return Objects.hash(pageId, overrideCanvasHeadOption, wechatChannelsLiveReserveId);
   }
 
   @Override

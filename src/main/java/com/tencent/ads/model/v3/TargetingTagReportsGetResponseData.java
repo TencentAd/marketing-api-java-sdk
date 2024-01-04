@@ -22,19 +22,19 @@ import java.util.Objects;
 /** TargetingTagReportsGetResponseData */
 public class TargetingTagReportsGetResponseData {
   @SerializedName("list")
-  private List<ReportApiListStruct> list = null;
+  private List<TargetReportApiListStruct> list = null;
 
   @SerializedName("page_info")
   private PageInfo pageInfo = null;
 
-  public TargetingTagReportsGetResponseData list(List<ReportApiListStruct> list) {
+  public TargetingTagReportsGetResponseData list(List<TargetReportApiListStruct> list) {
     this.list = list;
     return this;
   }
 
-  public TargetingTagReportsGetResponseData addListItem(ReportApiListStruct listItem) {
+  public TargetingTagReportsGetResponseData addListItem(TargetReportApiListStruct listItem) {
     if (this.list == null) {
-      this.list = new ArrayList<ReportApiListStruct>();
+      this.list = new ArrayList<TargetReportApiListStruct>();
     }
     this.list.add(listItem);
     return this;
@@ -46,11 +46,11 @@ public class TargetingTagReportsGetResponseData {
    * @return list
    */
   @ApiModelProperty(value = "")
-  public List<ReportApiListStruct> getList() {
+  public List<TargetReportApiListStruct> getList() {
     return list;
   }
 
-  public void setList(List<ReportApiListStruct> list) {
+  public void setList(List<TargetReportApiListStruct> list) {
     this.list = list;
   }
 
