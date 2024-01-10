@@ -21,7 +21,6 @@ import com.tencent.ads.Configuration;
 import com.tencent.ads.Pair;
 import com.tencent.ads.ProgressRequestBody;
 import com.tencent.ads.ProgressResponseBody;
-import com.tencent.ads.model.v3.OauthAuthorizeResponse;
 import com.tencent.ads.model.v3.OauthTokenResponse;
 import java.io.IOException;
 import java.lang.reflect.Type;
@@ -193,11 +192,11 @@ public class OauthApi {
    * @param scope (optional)
    * @param accountType (optional)
    * @param fields 返回参数的字段列表 (optional)
-   * @return OauthAuthorizeResponse
+   * @return String
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
-  public OauthAuthorizeResponse oauthAuthorize(
+  public String oauthAuthorize(
       Long clientId,
       String redirectUri,
       String state,
@@ -206,7 +205,7 @@ public class OauthApi {
       List<String> fields,
       String... headerPair)
       throws ApiException {
-    ApiResponse<OauthAuthorizeResponse> resp =
+    ApiResponse<String> resp =
         oauthAuthorizeWithHttpInfo(
             clientId, redirectUri, state, scope, accountType, fields, headerPair);
     return resp.getData();
@@ -221,11 +220,11 @@ public class OauthApi {
    * @param scope (optional)
    * @param accountType (optional)
    * @param fields 返回参数的字段列表 (optional)
-   * @return ApiResponse&lt;OauthAuthorizeResponse&gt;
+   * @return ApiResponse&lt;String&gt;
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
-  public ApiResponse<OauthAuthorizeResponse> oauthAuthorizeWithHttpInfo(
+  public ApiResponse<String> oauthAuthorizeWithHttpInfo(
       Long clientId,
       String redirectUri,
       String state,
@@ -237,7 +236,7 @@ public class OauthApi {
     com.squareup.okhttp.Call call =
         oauthAuthorizeValidateBeforeCall(
             clientId, redirectUri, state, scope, accountType, fields, null, null, headerPair);
-    Type localVarReturnType = new TypeToken<OauthAuthorizeResponse>() {}.getType();
+    Type localVarReturnType = new TypeToken<String>() {}.getType();
     return apiClient.execute(call, localVarReturnType);
   }
 
@@ -261,7 +260,7 @@ public class OauthApi {
       String scope,
       String accountType,
       List<String> fields,
-      final ApiCallback<OauthAuthorizeResponse> callback,
+      final ApiCallback<String> callback,
       String... headerPair)
       throws ApiException {
 
@@ -297,7 +296,7 @@ public class OauthApi {
             progressListener,
             progressRequestListener,
             headerPair);
-    Type localVarReturnType = new TypeToken<OauthAuthorizeResponse>() {}.getType();
+    Type localVarReturnType = new TypeToken<String>() {}.getType();
     apiClient.executeAsync(call, localVarReturnType, callback);
     return call;
   }

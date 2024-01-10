@@ -203,6 +203,15 @@ public class AdgroupsGetListStruct {
   @SerializedName("priority_site_set")
   private List<String> prioritySiteSet = null;
 
+  @SerializedName("ecom_pkam_switch")
+  private EcomPkamSwitch ecomPkamSwitch = null;
+
+  @SerializedName("forward_link_assist")
+  private OptimizationGoal forwardLinkAssist = null;
+
+  @SerializedName("conversion_name")
+  private String conversionName = null;
+
   public AdgroupsGetListStruct targeting(ReadTargetingSetting targeting) {
     this.targeting = targeting;
     return this;
@@ -1382,6 +1391,63 @@ public class AdgroupsGetListStruct {
     this.prioritySiteSet = prioritySiteSet;
   }
 
+  public AdgroupsGetListStruct ecomPkamSwitch(EcomPkamSwitch ecomPkamSwitch) {
+    this.ecomPkamSwitch = ecomPkamSwitch;
+    return this;
+  }
+
+  /**
+   * Get ecomPkamSwitch
+   *
+   * @return ecomPkamSwitch
+   */
+  @ApiModelProperty(value = "")
+  public EcomPkamSwitch getEcomPkamSwitch() {
+    return ecomPkamSwitch;
+  }
+
+  public void setEcomPkamSwitch(EcomPkamSwitch ecomPkamSwitch) {
+    this.ecomPkamSwitch = ecomPkamSwitch;
+  }
+
+  public AdgroupsGetListStruct forwardLinkAssist(OptimizationGoal forwardLinkAssist) {
+    this.forwardLinkAssist = forwardLinkAssist;
+    return this;
+  }
+
+  /**
+   * Get forwardLinkAssist
+   *
+   * @return forwardLinkAssist
+   */
+  @ApiModelProperty(value = "")
+  public OptimizationGoal getForwardLinkAssist() {
+    return forwardLinkAssist;
+  }
+
+  public void setForwardLinkAssist(OptimizationGoal forwardLinkAssist) {
+    this.forwardLinkAssist = forwardLinkAssist;
+  }
+
+  public AdgroupsGetListStruct conversionName(String conversionName) {
+    this.conversionName = conversionName;
+    return this;
+  }
+
+  /**
+   * Get conversionName
+   *
+   * @return conversionName
+   */
+  @ApiModelProperty(value = "")
+  public String getConversionName() {
+    return conversionName;
+  }
+
+  public void setConversionName(String conversionName) {
+    this.conversionName = conversionName;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -1462,7 +1528,10 @@ public class AdgroupsGetListStruct {
         && Objects.equals(this.poiList, adgroupsGetListStruct.poiList)
         && Objects.equals(this.marketingScene, adgroupsGetListStruct.marketingScene)
         && Objects.equals(this.explorationStrategy, adgroupsGetListStruct.explorationStrategy)
-        && Objects.equals(this.prioritySiteSet, adgroupsGetListStruct.prioritySiteSet);
+        && Objects.equals(this.prioritySiteSet, adgroupsGetListStruct.prioritySiteSet)
+        && Objects.equals(this.ecomPkamSwitch, adgroupsGetListStruct.ecomPkamSwitch)
+        && Objects.equals(this.forwardLinkAssist, adgroupsGetListStruct.forwardLinkAssist)
+        && Objects.equals(this.conversionName, adgroupsGetListStruct.conversionName);
   }
 
   @Override
@@ -1527,7 +1596,10 @@ public class AdgroupsGetListStruct {
         poiList,
         marketingScene,
         explorationStrategy,
-        prioritySiteSet);
+        prioritySiteSet,
+        ecomPkamSwitch,
+        forwardLinkAssist,
+        conversionName);
   }
 
   @Override

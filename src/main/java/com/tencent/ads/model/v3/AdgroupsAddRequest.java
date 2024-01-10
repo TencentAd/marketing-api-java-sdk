@@ -147,6 +147,12 @@ public class AdgroupsAddRequest {
   @SerializedName("priority_site_set")
   private List<String> prioritySiteSet = null;
 
+  @SerializedName("ecom_pkam_switch")
+  private EcomPkamSwitch ecomPkamSwitch = null;
+
+  @SerializedName("forward_link_assist")
+  private OptimizationGoal forwardLinkAssist = null;
+
   public AdgroupsAddRequest accountId(Long accountId) {
     this.accountId = accountId;
     return this;
@@ -982,6 +988,44 @@ public class AdgroupsAddRequest {
     this.prioritySiteSet = prioritySiteSet;
   }
 
+  public AdgroupsAddRequest ecomPkamSwitch(EcomPkamSwitch ecomPkamSwitch) {
+    this.ecomPkamSwitch = ecomPkamSwitch;
+    return this;
+  }
+
+  /**
+   * Get ecomPkamSwitch
+   *
+   * @return ecomPkamSwitch
+   */
+  @ApiModelProperty(value = "")
+  public EcomPkamSwitch getEcomPkamSwitch() {
+    return ecomPkamSwitch;
+  }
+
+  public void setEcomPkamSwitch(EcomPkamSwitch ecomPkamSwitch) {
+    this.ecomPkamSwitch = ecomPkamSwitch;
+  }
+
+  public AdgroupsAddRequest forwardLinkAssist(OptimizationGoal forwardLinkAssist) {
+    this.forwardLinkAssist = forwardLinkAssist;
+    return this;
+  }
+
+  /**
+   * Get forwardLinkAssist
+   *
+   * @return forwardLinkAssist
+   */
+  @ApiModelProperty(value = "")
+  public OptimizationGoal getForwardLinkAssist() {
+    return forwardLinkAssist;
+  }
+
+  public void setForwardLinkAssist(OptimizationGoal forwardLinkAssist) {
+    this.forwardLinkAssist = forwardLinkAssist;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -1040,7 +1084,9 @@ public class AdgroupsAddRequest {
         && Objects.equals(this.marketingAssetOuterSpec, adgroupsAddRequest.marketingAssetOuterSpec)
         && Objects.equals(this.poiList, adgroupsAddRequest.poiList)
         && Objects.equals(this.explorationStrategy, adgroupsAddRequest.explorationStrategy)
-        && Objects.equals(this.prioritySiteSet, adgroupsAddRequest.prioritySiteSet);
+        && Objects.equals(this.prioritySiteSet, adgroupsAddRequest.prioritySiteSet)
+        && Objects.equals(this.ecomPkamSwitch, adgroupsAddRequest.ecomPkamSwitch)
+        && Objects.equals(this.forwardLinkAssist, adgroupsAddRequest.forwardLinkAssist);
   }
 
   @Override
@@ -1087,7 +1133,9 @@ public class AdgroupsAddRequest {
         marketingAssetOuterSpec,
         poiList,
         explorationStrategy,
-        prioritySiteSet);
+        prioritySiteSet,
+        ecomPkamSwitch,
+        forwardLinkAssist);
   }
 
   @Override

@@ -18,8 +18,6 @@ import com.tencent.ads.ApiException;
 import com.tencent.ads.anno.*;
 import com.tencent.ads.api.v3.OauthApi;
 import com.tencent.ads.exception.TencentAdsResponseException;
-import com.tencent.ads.model.v3.OauthAuthorizeResponse;
-import com.tencent.ads.model.v3.OauthAuthorizeResponseData;
 import com.tencent.ads.model.v3.OauthTokenResponse;
 import com.tencent.ads.model.v3.OauthTokenResponseData;
 import java.util.List;
@@ -38,12 +36,12 @@ public class OauthApiContainer extends ApiContainer {
    * @param scope (optional)
    * @param accountType (optional)
    * @param fields 返回参数的字段列表 (optional)
-   * @return OauthAuthorizeResponse
+   * @return String
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
   @NeedDiffHost
-  public OauthAuthorizeResponseData oauthAuthorize(
+  public String oauthAuthorize(
       Long clientId,
       String redirectUri,
       String state,
@@ -52,9 +50,10 @@ public class OauthApiContainer extends ApiContainer {
       List<String> fields,
       String... headerPair)
       throws ApiException, TencentAdsResponseException {
-    OauthAuthorizeResponse resp =
+    String resp =
         api.oauthAuthorize(clientId, redirectUri, state, scope, accountType, fields, headerPair);
-    return resp.getData();
+
+    return resp;
   }
 
   /**

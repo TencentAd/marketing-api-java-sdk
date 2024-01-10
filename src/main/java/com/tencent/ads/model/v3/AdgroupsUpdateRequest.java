@@ -105,6 +105,9 @@ public class AdgroupsUpdateRequest {
   @SerializedName("poi_list")
   private List<String> poiList = null;
 
+  @SerializedName("ecom_pkam_switch")
+  private EcomPkamSwitch ecomPkamSwitch = null;
+
   public AdgroupsUpdateRequest accountId(Long accountId) {
     this.accountId = accountId;
     return this;
@@ -655,6 +658,25 @@ public class AdgroupsUpdateRequest {
     this.poiList = poiList;
   }
 
+  public AdgroupsUpdateRequest ecomPkamSwitch(EcomPkamSwitch ecomPkamSwitch) {
+    this.ecomPkamSwitch = ecomPkamSwitch;
+    return this;
+  }
+
+  /**
+   * Get ecomPkamSwitch
+   *
+   * @return ecomPkamSwitch
+   */
+  @ApiModelProperty(value = "")
+  public EcomPkamSwitch getEcomPkamSwitch() {
+    return ecomPkamSwitch;
+  }
+
+  public void setEcomPkamSwitch(EcomPkamSwitch ecomPkamSwitch) {
+    this.ecomPkamSwitch = ecomPkamSwitch;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -700,7 +722,8 @@ public class AdgroupsUpdateRequest {
         && Objects.equals(this.configuredStatus, adgroupsUpdateRequest.configuredStatus)
         && Objects.equals(
             this.flowOptimizationEnabled, adgroupsUpdateRequest.flowOptimizationEnabled)
-        && Objects.equals(this.poiList, adgroupsUpdateRequest.poiList);
+        && Objects.equals(this.poiList, adgroupsUpdateRequest.poiList)
+        && Objects.equals(this.ecomPkamSwitch, adgroupsUpdateRequest.ecomPkamSwitch);
   }
 
   @Override
@@ -733,7 +756,8 @@ public class AdgroupsUpdateRequest {
         autoDerivedCreativeEnabled,
         configuredStatus,
         flowOptimizationEnabled,
-        poiList);
+        poiList,
+        ecomPkamSwitch);
   }
 
   @Override
