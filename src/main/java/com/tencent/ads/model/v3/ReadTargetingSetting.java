@@ -41,6 +41,9 @@ public class ReadTargetingSetting {
   @SerializedName("marital_status")
   private List<String> maritalStatus = null;
 
+  @SerializedName("excluded_converted_audience")
+  private ExcludedConvertedAudience excludedConvertedAudience = null;
+
   @SerializedName("custom_audience")
   private List<Long> customAudience = null;
 
@@ -220,6 +223,26 @@ public class ReadTargetingSetting {
 
   public void setMaritalStatus(List<String> maritalStatus) {
     this.maritalStatus = maritalStatus;
+  }
+
+  public ReadTargetingSetting excludedConvertedAudience(
+      ExcludedConvertedAudience excludedConvertedAudience) {
+    this.excludedConvertedAudience = excludedConvertedAudience;
+    return this;
+  }
+
+  /**
+   * Get excludedConvertedAudience
+   *
+   * @return excludedConvertedAudience
+   */
+  @ApiModelProperty(value = "")
+  public ExcludedConvertedAudience getExcludedConvertedAudience() {
+    return excludedConvertedAudience;
+  }
+
+  public void setExcludedConvertedAudience(ExcludedConvertedAudience excludedConvertedAudience) {
+    this.excludedConvertedAudience = excludedConvertedAudience;
   }
 
   public ReadTargetingSetting customAudience(List<Long> customAudience) {
@@ -464,6 +487,8 @@ public class ReadTargetingSetting {
         && Objects.equals(this.education, readTargetingSetting.education)
         && Objects.equals(this.appInstallStatus, readTargetingSetting.appInstallStatus)
         && Objects.equals(this.maritalStatus, readTargetingSetting.maritalStatus)
+        && Objects.equals(
+            this.excludedConvertedAudience, readTargetingSetting.excludedConvertedAudience)
         && Objects.equals(this.customAudience, readTargetingSetting.customAudience)
         && Objects.equals(this.excludedCustomAudience, readTargetingSetting.excludedCustomAudience)
         && Objects.equals(this.deviceBrandModel, readTargetingSetting.deviceBrandModel)
@@ -484,6 +509,7 @@ public class ReadTargetingSetting {
         education,
         appInstallStatus,
         maritalStatus,
+        excludedConvertedAudience,
         customAudience,
         excludedCustomAudience,
         deviceBrandModel,

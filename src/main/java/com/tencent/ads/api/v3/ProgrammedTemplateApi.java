@@ -21,9 +21,8 @@ import com.tencent.ads.Configuration;
 import com.tencent.ads.Pair;
 import com.tencent.ads.ProgressRequestBody;
 import com.tencent.ads.ProgressResponseBody;
-import com.tencent.ads.model.v3.PageInfoStruct;
+import com.tencent.ads.model.v3.ProgrammedTemplateGetRequest;
 import com.tencent.ads.model.v3.ProgrammedTemplateGetResponse;
-import com.tencent.ads.model.v3.SortByStruct;
 import java.io.IOException;
 import java.lang.reflect.Type;
 import java.util.ArrayList;
@@ -53,61 +52,26 @@ public class ProgrammedTemplateApi {
   /**
    * Build call for programmedTemplateGet
    *
-   * @param accountId (required)
-   * @param materialDeriveId (required)
-   * @param materialGroupId (required)
-   * @param materialDerivePreviewId (required)
-   * @param templateIdList (optional)
-   * @param keyWord (optional)
-   * @param sortBy (optional)
-   * @param pageInfo (optional)
-   * @param fields 返回参数的字段列表 (optional)
+   * @param data (required)
    * @param progressListener Progress listener
    * @param progressRequestListener Progress request listener
    * @return Call to execute
    * @throws ApiException If fail to serialize the request body object
    */
   public com.squareup.okhttp.Call programmedTemplateGetCall(
-      Long accountId,
-      Long materialDeriveId,
-      Long materialGroupId,
-      Long materialDerivePreviewId,
-      List<Long> templateIdList,
-      String keyWord,
-      List<SortByStruct> sortBy,
-      PageInfoStruct pageInfo,
-      List<String> fields,
+      ProgrammedTemplateGetRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
       String... headerPair)
       throws ApiException {
 
-    Object localVarPostBody = null;
+    Object localVarPostBody = data;
 
     // create path and map variables
     String localVarPath = "/programmed_template/get";
 
     List<Pair> localVarQueryParams = new ArrayList<Pair>();
     List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
-    if (accountId != null)
-      localVarQueryParams.addAll(apiClient.parameterToPair("account_id", accountId));
-    if (materialDeriveId != null)
-      localVarQueryParams.addAll(apiClient.parameterToPair("material_derive_id", materialDeriveId));
-    if (materialGroupId != null)
-      localVarQueryParams.addAll(apiClient.parameterToPair("material_group_id", materialGroupId));
-    if (materialDerivePreviewId != null)
-      localVarQueryParams.addAll(
-          apiClient.parameterToPair("material_derive_preview_id", materialDerivePreviewId));
-    if (templateIdList != null)
-      localVarCollectionQueryParams.addAll(
-          apiClient.parameterToPairs("multi", "template_id_list", templateIdList));
-    if (keyWord != null) localVarQueryParams.addAll(apiClient.parameterToPair("key_word", keyWord));
-    if (sortBy != null)
-      localVarCollectionQueryParams.addAll(apiClient.parameterToPairs("multi", "sort_by", sortBy));
-    if (pageInfo != null)
-      localVarQueryParams.addAll(apiClient.parameterToPair("page_info", pageInfo));
-    if (fields != null)
-      localVarCollectionQueryParams.addAll(apiClient.parameterToPairs("multi", "fields", fields));
 
     Map<String, String> localVarHeaderParams = new HashMap<String, String>();
 
@@ -117,7 +81,7 @@ public class ProgrammedTemplateApi {
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
     if (localVarAccept != null) localVarHeaderParams.put("Accept", localVarAccept);
 
-    final String[] localVarContentTypes = {"text/plain"};
+    final String[] localVarContentTypes = {"application/json", "application/xml"};
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
     localVarHeaderParams.put("Content-Type", localVarContentType);
 
@@ -151,7 +115,7 @@ public class ProgrammedTemplateApi {
     String[] localVarAuthNames = new String[] {"accessToken", "nonce", "timestamp"};
     return apiClient.buildCall(
         localVarPath,
-        "GET",
+        "POST",
         localVarQueryParams,
         localVarCollectionQueryParams,
         localVarPostBody,
@@ -163,146 +127,50 @@ public class ProgrammedTemplateApi {
 
   @SuppressWarnings("rawtypes")
   private com.squareup.okhttp.Call programmedTemplateGetValidateBeforeCall(
-      Long accountId,
-      Long materialDeriveId,
-      Long materialGroupId,
-      Long materialDerivePreviewId,
-      List<Long> templateIdList,
-      String keyWord,
-      List<SortByStruct> sortBy,
-      PageInfoStruct pageInfo,
-      List<String> fields,
+      ProgrammedTemplateGetRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
       String... headerPair)
       throws ApiException {
 
-    // verify the required parameter 'accountId' is set
-    if (accountId == null) {
+    // verify the required parameter 'data' is set
+    if (data == null) {
       throw new ApiException(
-          "Missing the required parameter 'accountId' when calling programmedTemplateGet(Async)");
-    }
-
-    // verify the required parameter 'materialDeriveId' is set
-    if (materialDeriveId == null) {
-      throw new ApiException(
-          "Missing the required parameter 'materialDeriveId' when calling programmedTemplateGet(Async)");
-    }
-
-    // verify the required parameter 'materialGroupId' is set
-    if (materialGroupId == null) {
-      throw new ApiException(
-          "Missing the required parameter 'materialGroupId' when calling programmedTemplateGet(Async)");
-    }
-
-    // verify the required parameter 'materialDerivePreviewId' is set
-    if (materialDerivePreviewId == null) {
-      throw new ApiException(
-          "Missing the required parameter 'materialDerivePreviewId' when calling programmedTemplateGet(Async)");
+          "Missing the required parameter 'data' when calling programmedTemplateGet(Async)");
     }
 
     com.squareup.okhttp.Call call =
-        programmedTemplateGetCall(
-            accountId,
-            materialDeriveId,
-            materialGroupId,
-            materialDerivePreviewId,
-            templateIdList,
-            keyWord,
-            sortBy,
-            pageInfo,
-            fields,
-            progressListener,
-            progressRequestListener,
-            headerPair);
+        programmedTemplateGetCall(data, progressListener, progressRequestListener, headerPair);
     return call;
   }
 
   /**
    * 获取模板列表接口
    *
-   * @param accountId (required)
-   * @param materialDeriveId (required)
-   * @param materialGroupId (required)
-   * @param materialDerivePreviewId (required)
-   * @param templateIdList (optional)
-   * @param keyWord (optional)
-   * @param sortBy (optional)
-   * @param pageInfo (optional)
-   * @param fields 返回参数的字段列表 (optional)
+   * @param data (required)
    * @return ProgrammedTemplateGetResponse
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
   public ProgrammedTemplateGetResponse programmedTemplateGet(
-      Long accountId,
-      Long materialDeriveId,
-      Long materialGroupId,
-      Long materialDerivePreviewId,
-      List<Long> templateIdList,
-      String keyWord,
-      List<SortByStruct> sortBy,
-      PageInfoStruct pageInfo,
-      List<String> fields,
-      String... headerPair)
-      throws ApiException {
+      ProgrammedTemplateGetRequest data, String... headerPair) throws ApiException {
     ApiResponse<ProgrammedTemplateGetResponse> resp =
-        programmedTemplateGetWithHttpInfo(
-            accountId,
-            materialDeriveId,
-            materialGroupId,
-            materialDerivePreviewId,
-            templateIdList,
-            keyWord,
-            sortBy,
-            pageInfo,
-            fields,
-            headerPair);
+        programmedTemplateGetWithHttpInfo(data, headerPair);
     return resp.getData();
   }
 
   /**
    * 获取模板列表接口
    *
-   * @param accountId (required)
-   * @param materialDeriveId (required)
-   * @param materialGroupId (required)
-   * @param materialDerivePreviewId (required)
-   * @param templateIdList (optional)
-   * @param keyWord (optional)
-   * @param sortBy (optional)
-   * @param pageInfo (optional)
-   * @param fields 返回参数的字段列表 (optional)
+   * @param data (required)
    * @return ApiResponse&lt;ProgrammedTemplateGetResponse&gt;
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
   public ApiResponse<ProgrammedTemplateGetResponse> programmedTemplateGetWithHttpInfo(
-      Long accountId,
-      Long materialDeriveId,
-      Long materialGroupId,
-      Long materialDerivePreviewId,
-      List<Long> templateIdList,
-      String keyWord,
-      List<SortByStruct> sortBy,
-      PageInfoStruct pageInfo,
-      List<String> fields,
-      String... headerPair)
-      throws ApiException {
+      ProgrammedTemplateGetRequest data, String... headerPair) throws ApiException {
     com.squareup.okhttp.Call call =
-        programmedTemplateGetValidateBeforeCall(
-            accountId,
-            materialDeriveId,
-            materialGroupId,
-            materialDerivePreviewId,
-            templateIdList,
-            keyWord,
-            sortBy,
-            pageInfo,
-            fields,
-            null,
-            null,
-            headerPair);
+        programmedTemplateGetValidateBeforeCall(data, null, null, headerPair);
     Type localVarReturnType = new TypeToken<ProgrammedTemplateGetResponse>() {}.getType();
     return apiClient.execute(call, localVarReturnType);
   }
@@ -310,29 +178,13 @@ public class ProgrammedTemplateApi {
   /**
    * 获取模板列表接口 (asynchronously)
    *
-   * @param accountId (required)
-   * @param materialDeriveId (required)
-   * @param materialGroupId (required)
-   * @param materialDerivePreviewId (required)
-   * @param templateIdList (optional)
-   * @param keyWord (optional)
-   * @param sortBy (optional)
-   * @param pageInfo (optional)
-   * @param fields 返回参数的字段列表 (optional)
+   * @param data (required)
    * @param callback The callback to be executed when the API call finishes
    * @return The request call
    * @throws ApiException If fail to process the API call, e.g. serializing the request body object
    */
   public com.squareup.okhttp.Call programmedTemplateGetAsync(
-      Long accountId,
-      Long materialDeriveId,
-      Long materialGroupId,
-      Long materialDerivePreviewId,
-      List<Long> templateIdList,
-      String keyWord,
-      List<SortByStruct> sortBy,
-      PageInfoStruct pageInfo,
-      List<String> fields,
+      ProgrammedTemplateGetRequest data,
       final ApiCallback<ProgrammedTemplateGetResponse> callback,
       String... headerPair)
       throws ApiException {
@@ -360,18 +212,7 @@ public class ProgrammedTemplateApi {
 
     com.squareup.okhttp.Call call =
         programmedTemplateGetValidateBeforeCall(
-            accountId,
-            materialDeriveId,
-            materialGroupId,
-            materialDerivePreviewId,
-            templateIdList,
-            keyWord,
-            sortBy,
-            pageInfo,
-            fields,
-            progressListener,
-            progressRequestListener,
-            headerPair);
+            data, progressListener, progressRequestListener, headerPair);
     Type localVarReturnType = new TypeToken<ProgrammedTemplateGetResponse>() {}.getType();
     apiClient.executeAsync(call, localVarReturnType, callback);
     return call;

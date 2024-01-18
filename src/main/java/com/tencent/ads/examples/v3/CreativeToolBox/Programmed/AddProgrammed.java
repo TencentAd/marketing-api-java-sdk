@@ -4,9 +4,8 @@ import com.tencent.ads.ApiContextConfig;
 import com.tencent.ads.exception.TencentAdsResponseException;
 import com.tencent.ads.exception.TencentAdsSDKException;
 import com.tencent.ads.model.v3.*;
-import com.tencent.ads.model.v3.MaterialGroupCreateStruct;
+import com.tencent.ads.model.v3.ProgrammedAddRequest;
 import com.tencent.ads.v3.TencentAds;
-import java.util.List;
 
 public class AddProgrammed {
   /** YOUR ACCESS TOKEN */
@@ -15,17 +14,7 @@ public class AddProgrammed {
   /** TencentAds */
   public TencentAds tencentAds;
 
-  public Long accountId = null;
-
-  public Long adgroupId = null;
-
-  public List<MaterialGroupCreateStruct> createMaterialGroups = null;
-
-  public Boolean autoDerivedProgramCreativeSwitch = null;
-
-  public Boolean standardSwitch = null;
-
-  public List<String> fields = null;
+  public ProgrammedAddRequest data = null;
 
   public void init() {
     this.tencentAds = TencentAds.getInstance();
@@ -38,16 +27,7 @@ public class AddProgrammed {
   public void buildParams() {}
 
   public ProgrammedAddResponseData addProgrammed() throws Exception {
-    ProgrammedAddResponseData response =
-        tencentAds
-            .programmed()
-            .programmedAdd(
-                accountId,
-                adgroupId,
-                createMaterialGroups,
-                autoDerivedProgramCreativeSwitch,
-                standardSwitch,
-                fields);
+    ProgrammedAddResponseData response = tencentAds.programmed().programmedAdd(data);
     return response;
   }
 

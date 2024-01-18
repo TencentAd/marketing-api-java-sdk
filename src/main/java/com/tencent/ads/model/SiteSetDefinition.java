@@ -18,7 +18,7 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-/** 投放站点集合 */
+/** 版位信息 */
 @JsonAdapter(SiteSetDefinition.Adapter.class)
 public enum SiteSetDefinition {
   QZONE("SITE_SET_QZONE"),
@@ -84,6 +84,8 @@ public enum SiteSetDefinition {
   JD_WAICAI("SITE_SET_JD_WAICAI"),
 
   PCQQ("SITE_SET_PCQQ"),
+
+  PCAD("SITE_SET_PCAD"),
 
   KUAISHOU("SITE_SET_KUAISHOU"),
 

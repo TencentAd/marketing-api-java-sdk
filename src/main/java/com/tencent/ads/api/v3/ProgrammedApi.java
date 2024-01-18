@@ -21,10 +21,11 @@ import com.tencent.ads.Configuration;
 import com.tencent.ads.Pair;
 import com.tencent.ads.ProgressRequestBody;
 import com.tencent.ads.ProgressResponseBody;
-import com.tencent.ads.model.v3.MaterialGroupCreateStruct;
-import com.tencent.ads.model.v3.MaterialGroupUpdateStruct;
+import com.tencent.ads.model.v3.ProgrammedAddRequest;
 import com.tencent.ads.model.v3.ProgrammedAddResponse;
+import com.tencent.ads.model.v3.ProgrammedGetRequest;
 import com.tencent.ads.model.v3.ProgrammedGetResponse;
+import com.tencent.ads.model.v3.ProgrammedUpdateRequest;
 import com.tencent.ads.model.v3.ProgrammedUpdateResponse;
 import java.io.IOException;
 import java.lang.reflect.Type;
@@ -55,51 +56,26 @@ public class ProgrammedApi {
   /**
    * Build call for programmedAdd
    *
-   * @param accountId (required)
-   * @param adgroupId (required)
-   * @param createMaterialGroups (required)
-   * @param autoDerivedProgramCreativeSwitch (optional)
-   * @param standardSwitch (optional)
-   * @param fields 返回参数的字段列表 (optional)
+   * @param data (required)
    * @param progressListener Progress listener
    * @param progressRequestListener Progress request listener
    * @return Call to execute
    * @throws ApiException If fail to serialize the request body object
    */
   public com.squareup.okhttp.Call programmedAddCall(
-      Long accountId,
-      Long adgroupId,
-      List<MaterialGroupCreateStruct> createMaterialGroups,
-      Boolean autoDerivedProgramCreativeSwitch,
-      Boolean standardSwitch,
-      List<String> fields,
+      ProgrammedAddRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
       String... headerPair)
       throws ApiException {
 
-    Object localVarPostBody = null;
+    Object localVarPostBody = data;
 
     // create path and map variables
     String localVarPath = "/programmed/add";
 
     List<Pair> localVarQueryParams = new ArrayList<Pair>();
     List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
-    if (accountId != null)
-      localVarQueryParams.addAll(apiClient.parameterToPair("account_id", accountId));
-    if (adgroupId != null)
-      localVarQueryParams.addAll(apiClient.parameterToPair("adgroup_id", adgroupId));
-    if (autoDerivedProgramCreativeSwitch != null)
-      localVarQueryParams.addAll(
-          apiClient.parameterToPair(
-              "auto_derived_program_creative_switch", autoDerivedProgramCreativeSwitch));
-    if (standardSwitch != null)
-      localVarQueryParams.addAll(apiClient.parameterToPair("standard_switch", standardSwitch));
-    if (createMaterialGroups != null)
-      localVarCollectionQueryParams.addAll(
-          apiClient.parameterToPairs("multi", "create_material_groups", createMaterialGroups));
-    if (fields != null)
-      localVarCollectionQueryParams.addAll(apiClient.parameterToPairs("multi", "fields", fields));
 
     Map<String, String> localVarHeaderParams = new HashMap<String, String>();
 
@@ -109,7 +85,7 @@ public class ProgrammedApi {
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
     if (localVarAccept != null) localVarHeaderParams.put("Accept", localVarAccept);
 
-    final String[] localVarContentTypes = {"text/plain"};
+    final String[] localVarContentTypes = {"application/json", "application/xml"};
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
     localVarHeaderParams.put("Content-Type", localVarContentType);
 
@@ -143,7 +119,7 @@ public class ProgrammedApi {
     String[] localVarAuthNames = new String[] {"accessToken", "nonce", "timestamp"};
     return apiClient.buildCall(
         localVarPath,
-        "GET",
+        "POST",
         localVarQueryParams,
         localVarCollectionQueryParams,
         localVarPostBody,
@@ -155,116 +131,48 @@ public class ProgrammedApi {
 
   @SuppressWarnings("rawtypes")
   private com.squareup.okhttp.Call programmedAddValidateBeforeCall(
-      Long accountId,
-      Long adgroupId,
-      List<MaterialGroupCreateStruct> createMaterialGroups,
-      Boolean autoDerivedProgramCreativeSwitch,
-      Boolean standardSwitch,
-      List<String> fields,
+      ProgrammedAddRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
       String... headerPair)
       throws ApiException {
 
-    // verify the required parameter 'accountId' is set
-    if (accountId == null) {
+    // verify the required parameter 'data' is set
+    if (data == null) {
       throw new ApiException(
-          "Missing the required parameter 'accountId' when calling programmedAdd(Async)");
-    }
-
-    // verify the required parameter 'adgroupId' is set
-    if (adgroupId == null) {
-      throw new ApiException(
-          "Missing the required parameter 'adgroupId' when calling programmedAdd(Async)");
-    }
-
-    // verify the required parameter 'createMaterialGroups' is set
-    if (createMaterialGroups == null) {
-      throw new ApiException(
-          "Missing the required parameter 'createMaterialGroups' when calling programmedAdd(Async)");
+          "Missing the required parameter 'data' when calling programmedAdd(Async)");
     }
 
     com.squareup.okhttp.Call call =
-        programmedAddCall(
-            accountId,
-            adgroupId,
-            createMaterialGroups,
-            autoDerivedProgramCreativeSwitch,
-            standardSwitch,
-            fields,
-            progressListener,
-            progressRequestListener,
-            headerPair);
+        programmedAddCall(data, progressListener, progressRequestListener, headerPair);
     return call;
   }
 
   /**
    * 创建模板预览接口
    *
-   * @param accountId (required)
-   * @param adgroupId (required)
-   * @param createMaterialGroups (required)
-   * @param autoDerivedProgramCreativeSwitch (optional)
-   * @param standardSwitch (optional)
-   * @param fields 返回参数的字段列表 (optional)
+   * @param data (required)
    * @return ProgrammedAddResponse
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
-  public ProgrammedAddResponse programmedAdd(
-      Long accountId,
-      Long adgroupId,
-      List<MaterialGroupCreateStruct> createMaterialGroups,
-      Boolean autoDerivedProgramCreativeSwitch,
-      Boolean standardSwitch,
-      List<String> fields,
-      String... headerPair)
+  public ProgrammedAddResponse programmedAdd(ProgrammedAddRequest data, String... headerPair)
       throws ApiException {
-    ApiResponse<ProgrammedAddResponse> resp =
-        programmedAddWithHttpInfo(
-            accountId,
-            adgroupId,
-            createMaterialGroups,
-            autoDerivedProgramCreativeSwitch,
-            standardSwitch,
-            fields,
-            headerPair);
+    ApiResponse<ProgrammedAddResponse> resp = programmedAddWithHttpInfo(data, headerPair);
     return resp.getData();
   }
 
   /**
    * 创建模板预览接口
    *
-   * @param accountId (required)
-   * @param adgroupId (required)
-   * @param createMaterialGroups (required)
-   * @param autoDerivedProgramCreativeSwitch (optional)
-   * @param standardSwitch (optional)
-   * @param fields 返回参数的字段列表 (optional)
+   * @param data (required)
    * @return ApiResponse&lt;ProgrammedAddResponse&gt;
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
   public ApiResponse<ProgrammedAddResponse> programmedAddWithHttpInfo(
-      Long accountId,
-      Long adgroupId,
-      List<MaterialGroupCreateStruct> createMaterialGroups,
-      Boolean autoDerivedProgramCreativeSwitch,
-      Boolean standardSwitch,
-      List<String> fields,
-      String... headerPair)
-      throws ApiException {
-    com.squareup.okhttp.Call call =
-        programmedAddValidateBeforeCall(
-            accountId,
-            adgroupId,
-            createMaterialGroups,
-            autoDerivedProgramCreativeSwitch,
-            standardSwitch,
-            fields,
-            null,
-            null,
-            headerPair);
+      ProgrammedAddRequest data, String... headerPair) throws ApiException {
+    com.squareup.okhttp.Call call = programmedAddValidateBeforeCall(data, null, null, headerPair);
     Type localVarReturnType = new TypeToken<ProgrammedAddResponse>() {}.getType();
     return apiClient.execute(call, localVarReturnType);
   }
@@ -272,23 +180,13 @@ public class ProgrammedApi {
   /**
    * 创建模板预览接口 (asynchronously)
    *
-   * @param accountId (required)
-   * @param adgroupId (required)
-   * @param createMaterialGroups (required)
-   * @param autoDerivedProgramCreativeSwitch (optional)
-   * @param standardSwitch (optional)
-   * @param fields 返回参数的字段列表 (optional)
+   * @param data (required)
    * @param callback The callback to be executed when the API call finishes
    * @return The request call
    * @throws ApiException If fail to process the API call, e.g. serializing the request body object
    */
   public com.squareup.okhttp.Call programmedAddAsync(
-      Long accountId,
-      Long adgroupId,
-      List<MaterialGroupCreateStruct> createMaterialGroups,
-      Boolean autoDerivedProgramCreativeSwitch,
-      Boolean standardSwitch,
-      List<String> fields,
+      ProgrammedAddRequest data,
       final ApiCallback<ProgrammedAddResponse> callback,
       String... headerPair)
       throws ApiException {
@@ -316,15 +214,7 @@ public class ProgrammedApi {
 
     com.squareup.okhttp.Call call =
         programmedAddValidateBeforeCall(
-            accountId,
-            adgroupId,
-            createMaterialGroups,
-            autoDerivedProgramCreativeSwitch,
-            standardSwitch,
-            fields,
-            progressListener,
-            progressRequestListener,
-            headerPair);
+            data, progressListener, progressRequestListener, headerPair);
     Type localVarReturnType = new TypeToken<ProgrammedAddResponse>() {}.getType();
     apiClient.executeAsync(call, localVarReturnType, callback);
     return call;
@@ -332,36 +222,26 @@ public class ProgrammedApi {
   /**
    * Build call for programmedGet
    *
-   * @param accountId (required)
-   * @param materialDeriveId (required)
-   * @param fields 返回参数的字段列表 (optional)
+   * @param data (required)
    * @param progressListener Progress listener
    * @param progressRequestListener Progress request listener
    * @return Call to execute
    * @throws ApiException If fail to serialize the request body object
    */
   public com.squareup.okhttp.Call programmedGetCall(
-      Long accountId,
-      Long materialDeriveId,
-      List<String> fields,
+      ProgrammedGetRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
       String... headerPair)
       throws ApiException {
 
-    Object localVarPostBody = null;
+    Object localVarPostBody = data;
 
     // create path and map variables
     String localVarPath = "/programmed/get";
 
     List<Pair> localVarQueryParams = new ArrayList<Pair>();
     List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
-    if (accountId != null)
-      localVarQueryParams.addAll(apiClient.parameterToPair("account_id", accountId));
-    if (materialDeriveId != null)
-      localVarQueryParams.addAll(apiClient.parameterToPair("material_derive_id", materialDeriveId));
-    if (fields != null)
-      localVarCollectionQueryParams.addAll(apiClient.parameterToPairs("multi", "fields", fields));
 
     Map<String, String> localVarHeaderParams = new HashMap<String, String>();
 
@@ -371,7 +251,7 @@ public class ProgrammedApi {
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
     if (localVarAccept != null) localVarHeaderParams.put("Accept", localVarAccept);
 
-    final String[] localVarContentTypes = {"text/plain"};
+    final String[] localVarContentTypes = {"application/json", "application/xml"};
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
     localVarHeaderParams.put("Content-Type", localVarContentType);
 
@@ -405,7 +285,7 @@ public class ProgrammedApi {
     String[] localVarAuthNames = new String[] {"accessToken", "nonce", "timestamp"};
     return apiClient.buildCall(
         localVarPath,
-        "GET",
+        "POST",
         localVarQueryParams,
         localVarCollectionQueryParams,
         localVarPostBody,
@@ -417,71 +297,48 @@ public class ProgrammedApi {
 
   @SuppressWarnings("rawtypes")
   private com.squareup.okhttp.Call programmedGetValidateBeforeCall(
-      Long accountId,
-      Long materialDeriveId,
-      List<String> fields,
+      ProgrammedGetRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
       String... headerPair)
       throws ApiException {
 
-    // verify the required parameter 'accountId' is set
-    if (accountId == null) {
+    // verify the required parameter 'data' is set
+    if (data == null) {
       throw new ApiException(
-          "Missing the required parameter 'accountId' when calling programmedGet(Async)");
-    }
-
-    // verify the required parameter 'materialDeriveId' is set
-    if (materialDeriveId == null) {
-      throw new ApiException(
-          "Missing the required parameter 'materialDeriveId' when calling programmedGet(Async)");
+          "Missing the required parameter 'data' when calling programmedGet(Async)");
     }
 
     com.squareup.okhttp.Call call =
-        programmedGetCall(
-            accountId,
-            materialDeriveId,
-            fields,
-            progressListener,
-            progressRequestListener,
-            headerPair);
+        programmedGetCall(data, progressListener, progressRequestListener, headerPair);
     return call;
   }
 
   /**
    * 获取模板预览接口
    *
-   * @param accountId (required)
-   * @param materialDeriveId (required)
-   * @param fields 返回参数的字段列表 (optional)
+   * @param data (required)
    * @return ProgrammedGetResponse
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
-  public ProgrammedGetResponse programmedGet(
-      Long accountId, Long materialDeriveId, List<String> fields, String... headerPair)
+  public ProgrammedGetResponse programmedGet(ProgrammedGetRequest data, String... headerPair)
       throws ApiException {
-    ApiResponse<ProgrammedGetResponse> resp =
-        programmedGetWithHttpInfo(accountId, materialDeriveId, fields, headerPair);
+    ApiResponse<ProgrammedGetResponse> resp = programmedGetWithHttpInfo(data, headerPair);
     return resp.getData();
   }
 
   /**
    * 获取模板预览接口
    *
-   * @param accountId (required)
-   * @param materialDeriveId (required)
-   * @param fields 返回参数的字段列表 (optional)
+   * @param data (required)
    * @return ApiResponse&lt;ProgrammedGetResponse&gt;
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
   public ApiResponse<ProgrammedGetResponse> programmedGetWithHttpInfo(
-      Long accountId, Long materialDeriveId, List<String> fields, String... headerPair)
-      throws ApiException {
-    com.squareup.okhttp.Call call =
-        programmedGetValidateBeforeCall(
-            accountId, materialDeriveId, fields, null, null, headerPair);
+      ProgrammedGetRequest data, String... headerPair) throws ApiException {
+    com.squareup.okhttp.Call call = programmedGetValidateBeforeCall(data, null, null, headerPair);
     Type localVarReturnType = new TypeToken<ProgrammedGetResponse>() {}.getType();
     return apiClient.execute(call, localVarReturnType);
   }
@@ -489,17 +346,13 @@ public class ProgrammedApi {
   /**
    * 获取模板预览接口 (asynchronously)
    *
-   * @param accountId (required)
-   * @param materialDeriveId (required)
-   * @param fields 返回参数的字段列表 (optional)
+   * @param data (required)
    * @param callback The callback to be executed when the API call finishes
    * @return The request call
    * @throws ApiException If fail to process the API call, e.g. serializing the request body object
    */
   public com.squareup.okhttp.Call programmedGetAsync(
-      Long accountId,
-      Long materialDeriveId,
-      List<String> fields,
+      ProgrammedGetRequest data,
       final ApiCallback<ProgrammedGetResponse> callback,
       String... headerPair)
       throws ApiException {
@@ -527,12 +380,7 @@ public class ProgrammedApi {
 
     com.squareup.okhttp.Call call =
         programmedGetValidateBeforeCall(
-            accountId,
-            materialDeriveId,
-            fields,
-            progressListener,
-            progressRequestListener,
-            headerPair);
+            data, progressListener, progressRequestListener, headerPair);
     Type localVarReturnType = new TypeToken<ProgrammedGetResponse>() {}.getType();
     apiClient.executeAsync(call, localVarReturnType, callback);
     return call;
@@ -540,51 +388,26 @@ public class ProgrammedApi {
   /**
    * Build call for programmedUpdate
    *
-   * @param accountId (required)
-   * @param materialDeriveId (required)
-   * @param autoDerivedProgramCreativeSwitch (optional)
-   * @param standardSwitch (optional)
-   * @param updateMaterialGroups (optional)
-   * @param fields 返回参数的字段列表 (optional)
+   * @param data (required)
    * @param progressListener Progress listener
    * @param progressRequestListener Progress request listener
    * @return Call to execute
    * @throws ApiException If fail to serialize the request body object
    */
   public com.squareup.okhttp.Call programmedUpdateCall(
-      Long accountId,
-      Long materialDeriveId,
-      Boolean autoDerivedProgramCreativeSwitch,
-      Boolean standardSwitch,
-      List<MaterialGroupUpdateStruct> updateMaterialGroups,
-      List<String> fields,
+      ProgrammedUpdateRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
       String... headerPair)
       throws ApiException {
 
-    Object localVarPostBody = null;
+    Object localVarPostBody = data;
 
     // create path and map variables
     String localVarPath = "/programmed/update";
 
     List<Pair> localVarQueryParams = new ArrayList<Pair>();
     List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
-    if (accountId != null)
-      localVarQueryParams.addAll(apiClient.parameterToPair("account_id", accountId));
-    if (materialDeriveId != null)
-      localVarQueryParams.addAll(apiClient.parameterToPair("material_derive_id", materialDeriveId));
-    if (autoDerivedProgramCreativeSwitch != null)
-      localVarQueryParams.addAll(
-          apiClient.parameterToPair(
-              "auto_derived_program_creative_switch", autoDerivedProgramCreativeSwitch));
-    if (standardSwitch != null)
-      localVarQueryParams.addAll(apiClient.parameterToPair("standard_switch", standardSwitch));
-    if (updateMaterialGroups != null)
-      localVarCollectionQueryParams.addAll(
-          apiClient.parameterToPairs("multi", "update_material_groups", updateMaterialGroups));
-    if (fields != null)
-      localVarCollectionQueryParams.addAll(apiClient.parameterToPairs("multi", "fields", fields));
 
     Map<String, String> localVarHeaderParams = new HashMap<String, String>();
 
@@ -594,7 +417,7 @@ public class ProgrammedApi {
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
     if (localVarAccept != null) localVarHeaderParams.put("Accept", localVarAccept);
 
-    final String[] localVarContentTypes = {"text/plain"};
+    final String[] localVarContentTypes = {"application/json", "application/xml"};
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
     localVarHeaderParams.put("Content-Type", localVarContentType);
 
@@ -628,7 +451,7 @@ public class ProgrammedApi {
     String[] localVarAuthNames = new String[] {"accessToken", "nonce", "timestamp"};
     return apiClient.buildCall(
         localVarPath,
-        "GET",
+        "POST",
         localVarQueryParams,
         localVarCollectionQueryParams,
         localVarPostBody,
@@ -640,110 +463,49 @@ public class ProgrammedApi {
 
   @SuppressWarnings("rawtypes")
   private com.squareup.okhttp.Call programmedUpdateValidateBeforeCall(
-      Long accountId,
-      Long materialDeriveId,
-      Boolean autoDerivedProgramCreativeSwitch,
-      Boolean standardSwitch,
-      List<MaterialGroupUpdateStruct> updateMaterialGroups,
-      List<String> fields,
+      ProgrammedUpdateRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
       String... headerPair)
       throws ApiException {
 
-    // verify the required parameter 'accountId' is set
-    if (accountId == null) {
+    // verify the required parameter 'data' is set
+    if (data == null) {
       throw new ApiException(
-          "Missing the required parameter 'accountId' when calling programmedUpdate(Async)");
-    }
-
-    // verify the required parameter 'materialDeriveId' is set
-    if (materialDeriveId == null) {
-      throw new ApiException(
-          "Missing the required parameter 'materialDeriveId' when calling programmedUpdate(Async)");
+          "Missing the required parameter 'data' when calling programmedUpdate(Async)");
     }
 
     com.squareup.okhttp.Call call =
-        programmedUpdateCall(
-            accountId,
-            materialDeriveId,
-            autoDerivedProgramCreativeSwitch,
-            standardSwitch,
-            updateMaterialGroups,
-            fields,
-            progressListener,
-            progressRequestListener,
-            headerPair);
+        programmedUpdateCall(data, progressListener, progressRequestListener, headerPair);
     return call;
   }
 
   /**
    * 更新模板预览接口
    *
-   * @param accountId (required)
-   * @param materialDeriveId (required)
-   * @param autoDerivedProgramCreativeSwitch (optional)
-   * @param standardSwitch (optional)
-   * @param updateMaterialGroups (optional)
-   * @param fields 返回参数的字段列表 (optional)
+   * @param data (required)
    * @return ProgrammedUpdateResponse
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
   public ProgrammedUpdateResponse programmedUpdate(
-      Long accountId,
-      Long materialDeriveId,
-      Boolean autoDerivedProgramCreativeSwitch,
-      Boolean standardSwitch,
-      List<MaterialGroupUpdateStruct> updateMaterialGroups,
-      List<String> fields,
-      String... headerPair)
-      throws ApiException {
-    ApiResponse<ProgrammedUpdateResponse> resp =
-        programmedUpdateWithHttpInfo(
-            accountId,
-            materialDeriveId,
-            autoDerivedProgramCreativeSwitch,
-            standardSwitch,
-            updateMaterialGroups,
-            fields,
-            headerPair);
+      ProgrammedUpdateRequest data, String... headerPair) throws ApiException {
+    ApiResponse<ProgrammedUpdateResponse> resp = programmedUpdateWithHttpInfo(data, headerPair);
     return resp.getData();
   }
 
   /**
    * 更新模板预览接口
    *
-   * @param accountId (required)
-   * @param materialDeriveId (required)
-   * @param autoDerivedProgramCreativeSwitch (optional)
-   * @param standardSwitch (optional)
-   * @param updateMaterialGroups (optional)
-   * @param fields 返回参数的字段列表 (optional)
+   * @param data (required)
    * @return ApiResponse&lt;ProgrammedUpdateResponse&gt;
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
   public ApiResponse<ProgrammedUpdateResponse> programmedUpdateWithHttpInfo(
-      Long accountId,
-      Long materialDeriveId,
-      Boolean autoDerivedProgramCreativeSwitch,
-      Boolean standardSwitch,
-      List<MaterialGroupUpdateStruct> updateMaterialGroups,
-      List<String> fields,
-      String... headerPair)
-      throws ApiException {
+      ProgrammedUpdateRequest data, String... headerPair) throws ApiException {
     com.squareup.okhttp.Call call =
-        programmedUpdateValidateBeforeCall(
-            accountId,
-            materialDeriveId,
-            autoDerivedProgramCreativeSwitch,
-            standardSwitch,
-            updateMaterialGroups,
-            fields,
-            null,
-            null,
-            headerPair);
+        programmedUpdateValidateBeforeCall(data, null, null, headerPair);
     Type localVarReturnType = new TypeToken<ProgrammedUpdateResponse>() {}.getType();
     return apiClient.execute(call, localVarReturnType);
   }
@@ -751,23 +513,13 @@ public class ProgrammedApi {
   /**
    * 更新模板预览接口 (asynchronously)
    *
-   * @param accountId (required)
-   * @param materialDeriveId (required)
-   * @param autoDerivedProgramCreativeSwitch (optional)
-   * @param standardSwitch (optional)
-   * @param updateMaterialGroups (optional)
-   * @param fields 返回参数的字段列表 (optional)
+   * @param data (required)
    * @param callback The callback to be executed when the API call finishes
    * @return The request call
    * @throws ApiException If fail to process the API call, e.g. serializing the request body object
    */
   public com.squareup.okhttp.Call programmedUpdateAsync(
-      Long accountId,
-      Long materialDeriveId,
-      Boolean autoDerivedProgramCreativeSwitch,
-      Boolean standardSwitch,
-      List<MaterialGroupUpdateStruct> updateMaterialGroups,
-      List<String> fields,
+      ProgrammedUpdateRequest data,
       final ApiCallback<ProgrammedUpdateResponse> callback,
       String... headerPair)
       throws ApiException {
@@ -795,15 +547,7 @@ public class ProgrammedApi {
 
     com.squareup.okhttp.Call call =
         programmedUpdateValidateBeforeCall(
-            accountId,
-            materialDeriveId,
-            autoDerivedProgramCreativeSwitch,
-            standardSwitch,
-            updateMaterialGroups,
-            fields,
-            progressListener,
-            progressRequestListener,
-            headerPair);
+            data, progressListener, progressRequestListener, headerPair);
     Type localVarReturnType = new TypeToken<ProgrammedUpdateResponse>() {}.getType();
     apiClient.executeAsync(call, localVarReturnType, callback);
     return call;

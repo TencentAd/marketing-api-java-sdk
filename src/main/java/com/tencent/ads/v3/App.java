@@ -27,6 +27,10 @@ public class App {
   @Inject AsyncReportFilesApiContainer asyncReportFilesApiContainer;
   @Inject AsyncReportsApiContainer asyncReportsApiContainer;
   @Inject AudienceGrantRelationsApiContainer audienceGrantRelationsApiContainer;
+  @Inject BidwordApiContainer bidwordApiContainer;
+  @Inject BidwordFlowApiContainer bidwordFlowApiContainer;
+  @Inject BrandApiContainer brandApiContainer;
+  @Inject BusinessPointApiContainer businessPointApiContainer;
   @Inject ConversionsApiContainer conversionsApiContainer;
   @Inject CreativeTemplateApiContainer creativeTemplateApiContainer;
   @Inject CreativeTemplateListApiContainer creativeTemplateListApiContainer;
@@ -44,7 +48,14 @@ public class App {
   @Inject GameFeatureTagsApiContainer gameFeatureTagsApiContainer;
   @Inject HourlyReportsApiContainer hourlyReportsApiContainer;
   @Inject ImagesApiContainer imagesApiContainer;
-  @Inject MarketingTargetApiContainer marketingTargetApiContainer;
+  @Inject KeywordRecommendApiContainer keywordRecommendApiContainer;
+  @Inject LocalStoresApiContainer localStoresApiContainer;
+  @Inject LocalStoresAddressParsingResultApiContainer localStoresAddressParsingResultApiContainer;
+  @Inject LocalStoresCategoriesApiContainer localStoresCategoriesApiContainer;
+  @Inject LocalStoresSearchInfoApiContainer localStoresSearchInfoApiContainer;
+  @Inject LocalStoresWxpayMerchantsApiContainer localStoresWxpayMerchantsApiContainer;
+  @Inject MarketingTargetAssetsApiContainer marketingTargetAssetsApiContainer;
+  @Inject MarketingTargetTypesApiContainer marketingTargetTypesApiContainer;
   @Inject MaterialLabelsApiContainer materialLabelsApiContainer;
   @Inject MergeFundTypeDailyBalanceReportApiContainer mergeFundTypeDailyBalanceReportApiContainer;
 
@@ -100,6 +111,22 @@ public class App {
 
   public AudienceGrantRelationsApiContainer audienceGrantRelations() {
     return audienceGrantRelationsApiContainer;
+  }
+
+  public BidwordApiContainer bidword() {
+    return bidwordApiContainer;
+  }
+
+  public BidwordFlowApiContainer bidwordFlow() {
+    return bidwordFlowApiContainer;
+  }
+
+  public BrandApiContainer brand() {
+    return brandApiContainer;
+  }
+
+  public BusinessPointApiContainer businessPoint() {
+    return businessPointApiContainer;
   }
 
   public ConversionsApiContainer conversions() {
@@ -170,8 +197,36 @@ public class App {
     return imagesApiContainer;
   }
 
-  public MarketingTargetApiContainer marketingTarget() {
-    return marketingTargetApiContainer;
+  public KeywordRecommendApiContainer keywordRecommend() {
+    return keywordRecommendApiContainer;
+  }
+
+  public LocalStoresApiContainer localStores() {
+    return localStoresApiContainer;
+  }
+
+  public LocalStoresAddressParsingResultApiContainer localStoresAddressParsingResult() {
+    return localStoresAddressParsingResultApiContainer;
+  }
+
+  public LocalStoresCategoriesApiContainer localStoresCategories() {
+    return localStoresCategoriesApiContainer;
+  }
+
+  public LocalStoresSearchInfoApiContainer localStoresSearchInfo() {
+    return localStoresSearchInfoApiContainer;
+  }
+
+  public LocalStoresWxpayMerchantsApiContainer localStoresWxpayMerchants() {
+    return localStoresWxpayMerchantsApiContainer;
+  }
+
+  public MarketingTargetAssetsApiContainer marketingTargetAssets() {
+    return marketingTargetAssetsApiContainer;
+  }
+
+  public MarketingTargetTypesApiContainer marketingTargetTypes() {
+    return marketingTargetTypesApiContainer;
   }
 
   public MaterialLabelsApiContainer materialLabels() {

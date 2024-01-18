@@ -18,11 +18,9 @@ import com.tencent.ads.ApiException;
 import com.tencent.ads.anno.*;
 import com.tencent.ads.api.v3.ProgrammedTemplateApi;
 import com.tencent.ads.exception.TencentAdsResponseException;
-import com.tencent.ads.model.v3.PageInfoStruct;
+import com.tencent.ads.model.v3.ProgrammedTemplateGetRequest;
 import com.tencent.ads.model.v3.ProgrammedTemplateGetResponse;
 import com.tencent.ads.model.v3.ProgrammedTemplateGetResponseData;
-import com.tencent.ads.model.v3.SortByStruct;
-import java.util.List;
 
 public class ProgrammedTemplateApiContainer extends ApiContainer {
 
@@ -31,43 +29,15 @@ public class ProgrammedTemplateApiContainer extends ApiContainer {
   /**
    * 获取模板列表接口
    *
-   * @param accountId (required)
-   * @param materialDeriveId (required)
-   * @param materialGroupId (required)
-   * @param materialDerivePreviewId (required)
-   * @param templateIdList (optional)
-   * @param keyWord (optional)
-   * @param sortBy (optional)
-   * @param pageInfo (optional)
-   * @param fields 返回参数的字段列表 (optional)
+   * @param data (required)
    * @return ProgrammedTemplateGetResponse
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
   public ProgrammedTemplateGetResponseData programmedTemplateGet(
-      Long accountId,
-      Long materialDeriveId,
-      Long materialGroupId,
-      Long materialDerivePreviewId,
-      List<Long> templateIdList,
-      String keyWord,
-      List<SortByStruct> sortBy,
-      PageInfoStruct pageInfo,
-      List<String> fields,
-      String... headerPair)
+      ProgrammedTemplateGetRequest data, String... headerPair)
       throws ApiException, TencentAdsResponseException {
-    ProgrammedTemplateGetResponse resp =
-        api.programmedTemplateGet(
-            accountId,
-            materialDeriveId,
-            materialGroupId,
-            materialDerivePreviewId,
-            templateIdList,
-            keyWord,
-            sortBy,
-            pageInfo,
-            fields,
-            headerPair);
+    ProgrammedTemplateGetResponse resp = api.programmedTemplateGet(data, headerPair);
     handleResponse(gson.toJson(resp));
     return resp.getData();
   }

@@ -6,7 +6,6 @@ import com.tencent.ads.exception.TencentAdsSDKException;
 import com.tencent.ads.model.v3.*;
 import com.tencent.ads.v3.TencentAds;
 import java.io.File;
-import java.util.List;
 
 public class AddVideos {
   /** YOUR ACCESS TOKEN */
@@ -25,8 +24,6 @@ public class AddVideos {
 
   public Long adcreativeTemplateId = null;
 
-  public List<String> fields = null;
-
   public void init() {
     this.tencentAds = TencentAds.getInstance();
     this.tencentAds.init(
@@ -41,7 +38,7 @@ public class AddVideos {
     VideosAddResponseData response =
         tencentAds
             .videos()
-            .videosAdd(accountId, videoFile, signature, description, adcreativeTemplateId, fields);
+            .videosAdd(accountId, videoFile, signature, description, adcreativeTemplateId);
     return response;
   }
 

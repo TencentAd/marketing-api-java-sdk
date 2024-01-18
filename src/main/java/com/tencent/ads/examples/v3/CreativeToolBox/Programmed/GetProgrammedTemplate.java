@@ -4,10 +4,8 @@ import com.tencent.ads.ApiContextConfig;
 import com.tencent.ads.exception.TencentAdsResponseException;
 import com.tencent.ads.exception.TencentAdsSDKException;
 import com.tencent.ads.model.v3.*;
-import com.tencent.ads.model.v3.PageInfoStruct;
-import com.tencent.ads.model.v3.SortByStruct;
+import com.tencent.ads.model.v3.ProgrammedTemplateGetRequest;
 import com.tencent.ads.v3.TencentAds;
-import java.util.List;
 
 public class GetProgrammedTemplate {
   /** YOUR ACCESS TOKEN */
@@ -16,23 +14,7 @@ public class GetProgrammedTemplate {
   /** TencentAds */
   public TencentAds tencentAds;
 
-  public Long accountId = null;
-
-  public Long materialDeriveId = null;
-
-  public Long materialGroupId = null;
-
-  public Long materialDerivePreviewId = null;
-
-  public List<Long> templateIdList = null;
-
-  public String keyWord = null;
-
-  public List<SortByStruct> sortBy = null;
-
-  public PageInfoStruct pageInfo = null;
-
-  public List<String> fields = null;
+  public ProgrammedTemplateGetRequest data = null;
 
   public void init() {
     this.tencentAds = TencentAds.getInstance();
@@ -46,18 +28,7 @@ public class GetProgrammedTemplate {
 
   public ProgrammedTemplateGetResponseData getProgrammedTemplate() throws Exception {
     ProgrammedTemplateGetResponseData response =
-        tencentAds
-            .programmedTemplate()
-            .programmedTemplateGet(
-                accountId,
-                materialDeriveId,
-                materialGroupId,
-                materialDerivePreviewId,
-                templateIdList,
-                keyWord,
-                sortBy,
-                pageInfo,
-                fields);
+        tencentAds.programmedTemplate().programmedTemplateGet(data);
     return response;
   }
 

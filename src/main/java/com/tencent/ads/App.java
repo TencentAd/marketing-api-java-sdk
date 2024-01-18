@@ -118,6 +118,7 @@ public class App {
   @Inject LocalStoresCategoriesApiContainer localStoresCategoriesApiContainer;
   @Inject LocalStoresSearchInfoApiContainer localStoresSearchInfoApiContainer;
   @Inject LocalStoresWxpayMerchantsApiContainer localStoresWxpayMerchantsApiContainer;
+  @Inject MaterialAuditApiContainer materialAuditApiContainer;
   @Inject MaterialLabelsApiContainer materialLabelsApiContainer;
   @Inject MergeFundTypeDailyBalanceReportApiContainer mergeFundTypeDailyBalanceReportApiContainer;
 
@@ -605,6 +606,10 @@ public class App {
 
   public LocalStoresWxpayMerchantsApiContainer localStoresWxpayMerchants() {
     return localStoresWxpayMerchantsApiContainer;
+  }
+
+  public MaterialAuditApiContainer materialAudit() {
+    return materialAuditApiContainer;
   }
 
   public MaterialLabelsApiContainer materialLabels() {

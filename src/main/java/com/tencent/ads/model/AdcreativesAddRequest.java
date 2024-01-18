@@ -141,6 +141,9 @@ public class AdcreativesAddRequest {
   @SerializedName("android_quick_app_spec")
   private AndroidQuickAppSpec androidQuickAppSpec = null;
 
+  @SerializedName("wechat_channels_tracking_spec")
+  private WechatChannelsTrackingSpec wechatChannelsTrackingSpec = null;
+
   @SerializedName("live_video_mode")
   private LiveVideoMode liveVideoMode = null;
 
@@ -935,6 +938,26 @@ public class AdcreativesAddRequest {
     this.androidQuickAppSpec = androidQuickAppSpec;
   }
 
+  public AdcreativesAddRequest wechatChannelsTrackingSpec(
+      WechatChannelsTrackingSpec wechatChannelsTrackingSpec) {
+    this.wechatChannelsTrackingSpec = wechatChannelsTrackingSpec;
+    return this;
+  }
+
+  /**
+   * Get wechatChannelsTrackingSpec
+   *
+   * @return wechatChannelsTrackingSpec
+   */
+  @ApiModelProperty(value = "")
+  public WechatChannelsTrackingSpec getWechatChannelsTrackingSpec() {
+    return wechatChannelsTrackingSpec;
+  }
+
+  public void setWechatChannelsTrackingSpec(WechatChannelsTrackingSpec wechatChannelsTrackingSpec) {
+    this.wechatChannelsTrackingSpec = wechatChannelsTrackingSpec;
+  }
+
   public AdcreativesAddRequest liveVideoMode(LiveVideoMode liveVideoMode) {
     this.liveVideoMode = liveVideoMode;
     return this;
@@ -1102,6 +1125,8 @@ public class AdcreativesAddRequest {
         && Objects.equals(this.industryLabel, adcreativesAddRequest.industryLabel)
         && Objects.equals(this.unionMarketSpec, adcreativesAddRequest.unionMarketSpec)
         && Objects.equals(this.androidQuickAppSpec, adcreativesAddRequest.androidQuickAppSpec)
+        && Objects.equals(
+            this.wechatChannelsTrackingSpec, adcreativesAddRequest.wechatChannelsTrackingSpec)
         && Objects.equals(this.liveVideoMode, adcreativesAddRequest.liveVideoMode)
         && Objects.equals(this.liveVideoSubMode, adcreativesAddRequest.liveVideoSubMode)
         && Objects.equals(this.linkNameText, adcreativesAddRequest.linkNameText)
@@ -1153,6 +1178,7 @@ public class AdcreativesAddRequest {
         industryLabel,
         unionMarketSpec,
         androidQuickAppSpec,
+        wechatChannelsTrackingSpec,
         liveVideoMode,
         liveVideoSubMode,
         linkNameText,

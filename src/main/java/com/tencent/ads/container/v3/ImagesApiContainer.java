@@ -21,10 +21,12 @@ import com.tencent.ads.exception.TencentAdsResponseException;
 import com.tencent.ads.model.v3.FilteringStruct;
 import com.tencent.ads.model.v3.ImagesAddResponse;
 import com.tencent.ads.model.v3.ImagesAddResponseData;
+import com.tencent.ads.model.v3.ImagesDeleteRequest;
 import com.tencent.ads.model.v3.ImagesDeleteResponse;
 import com.tencent.ads.model.v3.ImagesDeleteResponseData;
 import com.tencent.ads.model.v3.ImagesGetResponse;
 import com.tencent.ads.model.v3.ImagesGetResponseData;
+import com.tencent.ads.model.v3.ImagesUpdateRequest;
 import com.tencent.ads.model.v3.ImagesUpdateResponse;
 import com.tencent.ads.model.v3.ImagesUpdateResponseData;
 import java.io.File;
@@ -47,7 +49,6 @@ public class ImagesApiContainer extends ApiContainer {
    * @param resizeWidth (optional)
    * @param resizeHeight (optional)
    * @param resizeFileSize (optional)
-   * @param fields 返回参数的字段列表 (optional)
    * @return ImagesAddResponse
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
@@ -63,7 +64,6 @@ public class ImagesApiContainer extends ApiContainer {
       Long resizeWidth,
       Long resizeHeight,
       Long resizeFileSize,
-      List<String> fields,
       String... headerPair)
       throws ApiException, TencentAdsResponseException {
     ImagesAddResponse resp =
@@ -78,7 +78,6 @@ public class ImagesApiContainer extends ApiContainer {
             resizeWidth,
             resizeHeight,
             resizeFileSize,
-            fields,
             headerPair);
     handleResponse(gson.toJson(resp));
     return resp.getData();
@@ -87,17 +86,14 @@ public class ImagesApiContainer extends ApiContainer {
   /**
    * 删除图片
    *
-   * @param advertiserId (required)
-   * @param imageId (required)
-   * @param fields 返回参数的字段列表 (optional)
+   * @param data (required)
    * @return ImagesDeleteResponse
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
-  public ImagesDeleteResponseData imagesDelete(
-      Long advertiserId, String imageId, List<String> fields, String... headerPair)
+  public ImagesDeleteResponseData imagesDelete(ImagesDeleteRequest data, String... headerPair)
       throws ApiException, TencentAdsResponseException {
-    ImagesDeleteResponse resp = api.imagesDelete(advertiserId, imageId, fields, headerPair);
+    ImagesDeleteResponse resp = api.imagesDelete(data, headerPair);
     handleResponse(gson.toJson(resp));
     return resp.getData();
   }
@@ -136,23 +132,14 @@ public class ImagesApiContainer extends ApiContainer {
   /**
    * 修改图片信息
    *
-   * @param advertiserId (required)
-   * @param imageId (required)
-   * @param description (required)
-   * @param fields 返回参数的字段列表 (optional)
+   * @param data (required)
    * @return ImagesUpdateResponse
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
-  public ImagesUpdateResponseData imagesUpdate(
-      Long advertiserId,
-      String imageId,
-      String description,
-      List<String> fields,
-      String... headerPair)
+  public ImagesUpdateResponseData imagesUpdate(ImagesUpdateRequest data, String... headerPair)
       throws ApiException, TencentAdsResponseException {
-    ImagesUpdateResponse resp =
-        api.imagesUpdate(advertiserId, imageId, description, fields, headerPair);
+    ImagesUpdateResponse resp = api.imagesUpdate(data, headerPair);
     handleResponse(gson.toJson(resp));
     return resp.getData();
   }

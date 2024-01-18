@@ -4,8 +4,8 @@ import com.tencent.ads.ApiContextConfig;
 import com.tencent.ads.exception.TencentAdsResponseException;
 import com.tencent.ads.exception.TencentAdsSDKException;
 import com.tencent.ads.model.v3.*;
+import com.tencent.ads.model.v3.VideosUpdateRequest;
 import com.tencent.ads.v3.TencentAds;
-import java.util.List;
 
 public class UpdateVideos {
   /** YOUR ACCESS TOKEN */
@@ -14,13 +14,7 @@ public class UpdateVideos {
   /** TencentAds */
   public TencentAds tencentAds;
 
-  public Long accountId = null;
-
-  public Long videoId = null;
-
-  public String description = null;
-
-  public List<String> fields = null;
+  public VideosUpdateRequest data = null;
 
   public void init() {
     this.tencentAds = TencentAds.getInstance();
@@ -33,8 +27,7 @@ public class UpdateVideos {
   public void buildParams() {}
 
   public VideosUpdateResponseData updateVideos() throws Exception {
-    VideosUpdateResponseData response =
-        tencentAds.videos().videosUpdate(accountId, videoId, description, fields);
+    VideosUpdateResponseData response = tencentAds.videos().videosUpdate(data);
     return response;
   }
 

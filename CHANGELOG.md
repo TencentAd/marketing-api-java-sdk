@@ -1,4 +1,7 @@
 # 更新日志
+## 2024-01-18
+1. 发布Java SDK [1.1.66] 版
+  - 新增MarketingApi V3接口与相关V3模型
 ## 2023-12-25
 1. 发布Java SDK [1.1.65] 版
   - 新增MarketingApi接口，更新模型

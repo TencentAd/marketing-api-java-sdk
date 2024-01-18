@@ -32,7 +32,7 @@ public class AdParamGetRequest {
   private Long adcreativeTemplateId = null;
 
   @SerializedName("site_set")
-  private SiteSetDefinition siteSet = null;
+  private IntSiteSetDefinition siteSet = null;
 
   @SerializedName("product_catalog_id")
   private Long productCatalogId = null;
@@ -113,7 +113,7 @@ public class AdParamGetRequest {
     this.adcreativeTemplateId = adcreativeTemplateId;
   }
 
-  public AdParamGetRequest siteSet(SiteSetDefinition siteSet) {
+  public AdParamGetRequest siteSet(IntSiteSetDefinition siteSet) {
     this.siteSet = siteSet;
     return this;
   }
@@ -124,11 +124,11 @@ public class AdParamGetRequest {
    * @return siteSet
    */
   @ApiModelProperty(value = "")
-  public SiteSetDefinition getSiteSet() {
+  public IntSiteSetDefinition getSiteSet() {
     return siteSet;
   }
 
-  public void setSiteSet(SiteSetDefinition siteSet) {
+  public void setSiteSet(IntSiteSetDefinition siteSet) {
     this.siteSet = siteSet;
   }
 

@@ -23,8 +23,10 @@ import com.tencent.ads.ProgressRequestBody;
 import com.tencent.ads.ProgressResponseBody;
 import com.tencent.ads.model.v3.FilteringStruct;
 import com.tencent.ads.model.v3.ImagesAddResponse;
+import com.tencent.ads.model.v3.ImagesDeleteRequest;
 import com.tencent.ads.model.v3.ImagesDeleteResponse;
 import com.tencent.ads.model.v3.ImagesGetResponse;
+import com.tencent.ads.model.v3.ImagesUpdateRequest;
 import com.tencent.ads.model.v3.ImagesUpdateResponse;
 import java.io.File;
 import java.io.IOException;
@@ -66,7 +68,6 @@ public class ImagesApi {
    * @param resizeWidth (optional)
    * @param resizeHeight (optional)
    * @param resizeFileSize (optional)
-   * @param fields 返回参数的字段列表 (optional)
    * @param progressListener Progress listener
    * @param progressRequestListener Progress request listener
    * @return Call to execute
@@ -83,7 +84,6 @@ public class ImagesApi {
       Long resizeWidth,
       Long resizeHeight,
       Long resizeFileSize,
-      List<String> fields,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
       String... headerPair)
@@ -96,37 +96,26 @@ public class ImagesApi {
 
     List<Pair> localVarQueryParams = new ArrayList<Pair>();
     List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
-    if (advertiserId != null)
-      localVarQueryParams.addAll(apiClient.parameterToPair("advertiser_id", advertiserId));
-    if (uploadType != null)
-      localVarQueryParams.addAll(apiClient.parameterToPair("upload_type", uploadType));
-    if (imageSignature != null)
-      localVarQueryParams.addAll(apiClient.parameterToPair("image_signature", imageSignature));
-    if (imageFile != null)
-      localVarQueryParams.addAll(apiClient.parameterToPair("image_file", imageFile));
-    if (bytes != null) localVarQueryParams.addAll(apiClient.parameterToPair("bytes", bytes));
-    if (imageUsage != null)
-      localVarQueryParams.addAll(apiClient.parameterToPair("image_usage", imageUsage));
-    if (description != null)
-      localVarQueryParams.addAll(apiClient.parameterToPair("description", description));
-    if (resizeWidth != null)
-      localVarQueryParams.addAll(apiClient.parameterToPair("resize_width", resizeWidth));
-    if (resizeHeight != null)
-      localVarQueryParams.addAll(apiClient.parameterToPair("resize_height", resizeHeight));
-    if (resizeFileSize != null)
-      localVarQueryParams.addAll(apiClient.parameterToPair("resize_file_size", resizeFileSize));
-    if (fields != null)
-      localVarCollectionQueryParams.addAll(apiClient.parameterToPairs("multi", "fields", fields));
 
     Map<String, String> localVarHeaderParams = new HashMap<String, String>();
 
     Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+    if (advertiserId != null) localVarFormParams.put("advertiser_id", advertiserId);
+    if (uploadType != null) localVarFormParams.put("upload_type", uploadType);
+    if (imageSignature != null) localVarFormParams.put("image_signature", imageSignature);
+    if (imageFile != null) localVarFormParams.put("image_file", imageFile);
+    if (bytes != null) localVarFormParams.put("bytes", bytes);
+    if (imageUsage != null) localVarFormParams.put("image_usage", imageUsage);
+    if (description != null) localVarFormParams.put("description", description);
+    if (resizeWidth != null) localVarFormParams.put("resize_width", resizeWidth);
+    if (resizeHeight != null) localVarFormParams.put("resize_height", resizeHeight);
+    if (resizeFileSize != null) localVarFormParams.put("resize_file_size", resizeFileSize);
 
     final String[] localVarAccepts = {"application/json"};
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
     if (localVarAccept != null) localVarHeaderParams.put("Accept", localVarAccept);
 
-    final String[] localVarContentTypes = {"text/plain"};
+    final String[] localVarContentTypes = {"multipart/form-data"};
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
     localVarHeaderParams.put("Content-Type", localVarContentType);
 
@@ -160,7 +149,7 @@ public class ImagesApi {
     String[] localVarAuthNames = new String[] {"accessToken", "nonce", "timestamp"};
     return apiClient.buildCall(
         localVarPath,
-        "GET",
+        "POST",
         localVarQueryParams,
         localVarCollectionQueryParams,
         localVarPostBody,
@@ -182,7 +171,6 @@ public class ImagesApi {
       Long resizeWidth,
       Long resizeHeight,
       Long resizeFileSize,
-      List<String> fields,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
       String... headerPair)
@@ -218,7 +206,6 @@ public class ImagesApi {
             resizeWidth,
             resizeHeight,
             resizeFileSize,
-            fields,
             progressListener,
             progressRequestListener,
             headerPair);
@@ -238,7 +225,6 @@ public class ImagesApi {
    * @param resizeWidth (optional)
    * @param resizeHeight (optional)
    * @param resizeFileSize (optional)
-   * @param fields 返回参数的字段列表 (optional)
    * @return ImagesAddResponse
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
@@ -254,7 +240,6 @@ public class ImagesApi {
       Long resizeWidth,
       Long resizeHeight,
       Long resizeFileSize,
-      List<String> fields,
       String... headerPair)
       throws ApiException {
     ApiResponse<ImagesAddResponse> resp =
@@ -269,7 +254,6 @@ public class ImagesApi {
             resizeWidth,
             resizeHeight,
             resizeFileSize,
-            fields,
             headerPair);
     return resp.getData();
   }
@@ -287,7 +271,6 @@ public class ImagesApi {
    * @param resizeWidth (optional)
    * @param resizeHeight (optional)
    * @param resizeFileSize (optional)
-   * @param fields 返回参数的字段列表 (optional)
    * @return ApiResponse&lt;ImagesAddResponse&gt;
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
@@ -303,7 +286,6 @@ public class ImagesApi {
       Long resizeWidth,
       Long resizeHeight,
       Long resizeFileSize,
-      List<String> fields,
       String... headerPair)
       throws ApiException {
     com.squareup.okhttp.Call call =
@@ -318,7 +300,6 @@ public class ImagesApi {
             resizeWidth,
             resizeHeight,
             resizeFileSize,
-            fields,
             null,
             null,
             headerPair);
@@ -339,7 +320,6 @@ public class ImagesApi {
    * @param resizeWidth (optional)
    * @param resizeHeight (optional)
    * @param resizeFileSize (optional)
-   * @param fields 返回参数的字段列表 (optional)
    * @param callback The callback to be executed when the API call finishes
    * @return The request call
    * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -355,7 +335,6 @@ public class ImagesApi {
       Long resizeWidth,
       Long resizeHeight,
       Long resizeFileSize,
-      List<String> fields,
       final ApiCallback<ImagesAddResponse> callback,
       String... headerPair)
       throws ApiException {
@@ -393,7 +372,6 @@ public class ImagesApi {
             resizeWidth,
             resizeHeight,
             resizeFileSize,
-            fields,
             progressListener,
             progressRequestListener,
             headerPair);
@@ -404,35 +382,26 @@ public class ImagesApi {
   /**
    * Build call for imagesDelete
    *
-   * @param advertiserId (required)
-   * @param imageId (required)
-   * @param fields 返回参数的字段列表 (optional)
+   * @param data (required)
    * @param progressListener Progress listener
    * @param progressRequestListener Progress request listener
    * @return Call to execute
    * @throws ApiException If fail to serialize the request body object
    */
   public com.squareup.okhttp.Call imagesDeleteCall(
-      Long advertiserId,
-      String imageId,
-      List<String> fields,
+      ImagesDeleteRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
       String... headerPair)
       throws ApiException {
 
-    Object localVarPostBody = null;
+    Object localVarPostBody = data;
 
     // create path and map variables
     String localVarPath = "/images/delete";
 
     List<Pair> localVarQueryParams = new ArrayList<Pair>();
     List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
-    if (advertiserId != null)
-      localVarQueryParams.addAll(apiClient.parameterToPair("advertiser_id", advertiserId));
-    if (imageId != null) localVarQueryParams.addAll(apiClient.parameterToPair("image_id", imageId));
-    if (fields != null)
-      localVarCollectionQueryParams.addAll(apiClient.parameterToPairs("multi", "fields", fields));
 
     Map<String, String> localVarHeaderParams = new HashMap<String, String>();
 
@@ -442,7 +411,7 @@ public class ImagesApi {
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
     if (localVarAccept != null) localVarHeaderParams.put("Accept", localVarAccept);
 
-    final String[] localVarContentTypes = {"text/plain"};
+    final String[] localVarContentTypes = {"application/json", "application/xml"};
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
     localVarHeaderParams.put("Content-Type", localVarContentType);
 
@@ -476,7 +445,7 @@ public class ImagesApi {
     String[] localVarAuthNames = new String[] {"accessToken", "nonce", "timestamp"};
     return apiClient.buildCall(
         localVarPath,
-        "GET",
+        "POST",
         localVarQueryParams,
         localVarCollectionQueryParams,
         localVarPostBody,
@@ -488,65 +457,48 @@ public class ImagesApi {
 
   @SuppressWarnings("rawtypes")
   private com.squareup.okhttp.Call imagesDeleteValidateBeforeCall(
-      Long advertiserId,
-      String imageId,
-      List<String> fields,
+      ImagesDeleteRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
       String... headerPair)
       throws ApiException {
 
-    // verify the required parameter 'advertiserId' is set
-    if (advertiserId == null) {
+    // verify the required parameter 'data' is set
+    if (data == null) {
       throw new ApiException(
-          "Missing the required parameter 'advertiserId' when calling imagesDelete(Async)");
-    }
-
-    // verify the required parameter 'imageId' is set
-    if (imageId == null) {
-      throw new ApiException(
-          "Missing the required parameter 'imageId' when calling imagesDelete(Async)");
+          "Missing the required parameter 'data' when calling imagesDelete(Async)");
     }
 
     com.squareup.okhttp.Call call =
-        imagesDeleteCall(
-            advertiserId, imageId, fields, progressListener, progressRequestListener, headerPair);
+        imagesDeleteCall(data, progressListener, progressRequestListener, headerPair);
     return call;
   }
 
   /**
    * 删除图片
    *
-   * @param advertiserId (required)
-   * @param imageId (required)
-   * @param fields 返回参数的字段列表 (optional)
+   * @param data (required)
    * @return ImagesDeleteResponse
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
-  public ImagesDeleteResponse imagesDelete(
-      Long advertiserId, String imageId, List<String> fields, String... headerPair)
+  public ImagesDeleteResponse imagesDelete(ImagesDeleteRequest data, String... headerPair)
       throws ApiException {
-    ApiResponse<ImagesDeleteResponse> resp =
-        imagesDeleteWithHttpInfo(advertiserId, imageId, fields, headerPair);
+    ApiResponse<ImagesDeleteResponse> resp = imagesDeleteWithHttpInfo(data, headerPair);
     return resp.getData();
   }
 
   /**
    * 删除图片
    *
-   * @param advertiserId (required)
-   * @param imageId (required)
-   * @param fields 返回参数的字段列表 (optional)
+   * @param data (required)
    * @return ApiResponse&lt;ImagesDeleteResponse&gt;
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
   public ApiResponse<ImagesDeleteResponse> imagesDeleteWithHttpInfo(
-      Long advertiserId, String imageId, List<String> fields, String... headerPair)
-      throws ApiException {
-    com.squareup.okhttp.Call call =
-        imagesDeleteValidateBeforeCall(advertiserId, imageId, fields, null, null, headerPair);
+      ImagesDeleteRequest data, String... headerPair) throws ApiException {
+    com.squareup.okhttp.Call call = imagesDeleteValidateBeforeCall(data, null, null, headerPair);
     Type localVarReturnType = new TypeToken<ImagesDeleteResponse>() {}.getType();
     return apiClient.execute(call, localVarReturnType);
   }
@@ -554,17 +506,13 @@ public class ImagesApi {
   /**
    * 删除图片 (asynchronously)
    *
-   * @param advertiserId (required)
-   * @param imageId (required)
-   * @param fields 返回参数的字段列表 (optional)
+   * @param data (required)
    * @param callback The callback to be executed when the API call finishes
    * @return The request call
    * @throws ApiException If fail to process the API call, e.g. serializing the request body object
    */
   public com.squareup.okhttp.Call imagesDeleteAsync(
-      Long advertiserId,
-      String imageId,
-      List<String> fields,
+      ImagesDeleteRequest data,
       final ApiCallback<ImagesDeleteResponse> callback,
       String... headerPair)
       throws ApiException {
@@ -591,8 +539,7 @@ public class ImagesApi {
     }
 
     com.squareup.okhttp.Call call =
-        imagesDeleteValidateBeforeCall(
-            advertiserId, imageId, fields, progressListener, progressRequestListener, headerPair);
+        imagesDeleteValidateBeforeCall(data, progressListener, progressRequestListener, headerPair);
     Type localVarReturnType = new TypeToken<ImagesDeleteResponse>() {}.getType();
     apiClient.executeAsync(call, localVarReturnType, callback);
     return call;
@@ -869,39 +816,26 @@ public class ImagesApi {
   /**
    * Build call for imagesUpdate
    *
-   * @param advertiserId (required)
-   * @param imageId (required)
-   * @param description (required)
-   * @param fields 返回参数的字段列表 (optional)
+   * @param data (required)
    * @param progressListener Progress listener
    * @param progressRequestListener Progress request listener
    * @return Call to execute
    * @throws ApiException If fail to serialize the request body object
    */
   public com.squareup.okhttp.Call imagesUpdateCall(
-      Long advertiserId,
-      String imageId,
-      String description,
-      List<String> fields,
+      ImagesUpdateRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
       String... headerPair)
       throws ApiException {
 
-    Object localVarPostBody = null;
+    Object localVarPostBody = data;
 
     // create path and map variables
     String localVarPath = "/images/update";
 
     List<Pair> localVarQueryParams = new ArrayList<Pair>();
     List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
-    if (advertiserId != null)
-      localVarQueryParams.addAll(apiClient.parameterToPair("advertiser_id", advertiserId));
-    if (imageId != null) localVarQueryParams.addAll(apiClient.parameterToPair("image_id", imageId));
-    if (description != null)
-      localVarQueryParams.addAll(apiClient.parameterToPair("description", description));
-    if (fields != null)
-      localVarCollectionQueryParams.addAll(apiClient.parameterToPairs("multi", "fields", fields));
 
     Map<String, String> localVarHeaderParams = new HashMap<String, String>();
 
@@ -911,7 +845,7 @@ public class ImagesApi {
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
     if (localVarAccept != null) localVarHeaderParams.put("Accept", localVarAccept);
 
-    final String[] localVarContentTypes = {"text/plain"};
+    final String[] localVarContentTypes = {"application/json", "application/xml"};
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
     localVarHeaderParams.put("Content-Type", localVarContentType);
 
@@ -945,7 +879,7 @@ public class ImagesApi {
     String[] localVarAuthNames = new String[] {"accessToken", "nonce", "timestamp"};
     return apiClient.buildCall(
         localVarPath,
-        "GET",
+        "POST",
         localVarQueryParams,
         localVarCollectionQueryParams,
         localVarPostBody,
@@ -957,89 +891,48 @@ public class ImagesApi {
 
   @SuppressWarnings("rawtypes")
   private com.squareup.okhttp.Call imagesUpdateValidateBeforeCall(
-      Long advertiserId,
-      String imageId,
-      String description,
-      List<String> fields,
+      ImagesUpdateRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
       String... headerPair)
       throws ApiException {
 
-    // verify the required parameter 'advertiserId' is set
-    if (advertiserId == null) {
+    // verify the required parameter 'data' is set
+    if (data == null) {
       throw new ApiException(
-          "Missing the required parameter 'advertiserId' when calling imagesUpdate(Async)");
-    }
-
-    // verify the required parameter 'imageId' is set
-    if (imageId == null) {
-      throw new ApiException(
-          "Missing the required parameter 'imageId' when calling imagesUpdate(Async)");
-    }
-
-    // verify the required parameter 'description' is set
-    if (description == null) {
-      throw new ApiException(
-          "Missing the required parameter 'description' when calling imagesUpdate(Async)");
+          "Missing the required parameter 'data' when calling imagesUpdate(Async)");
     }
 
     com.squareup.okhttp.Call call =
-        imagesUpdateCall(
-            advertiserId,
-            imageId,
-            description,
-            fields,
-            progressListener,
-            progressRequestListener,
-            headerPair);
+        imagesUpdateCall(data, progressListener, progressRequestListener, headerPair);
     return call;
   }
 
   /**
    * 修改图片信息
    *
-   * @param advertiserId (required)
-   * @param imageId (required)
-   * @param description (required)
-   * @param fields 返回参数的字段列表 (optional)
+   * @param data (required)
    * @return ImagesUpdateResponse
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
-  public ImagesUpdateResponse imagesUpdate(
-      Long advertiserId,
-      String imageId,
-      String description,
-      List<String> fields,
-      String... headerPair)
+  public ImagesUpdateResponse imagesUpdate(ImagesUpdateRequest data, String... headerPair)
       throws ApiException {
-    ApiResponse<ImagesUpdateResponse> resp =
-        imagesUpdateWithHttpInfo(advertiserId, imageId, description, fields, headerPair);
+    ApiResponse<ImagesUpdateResponse> resp = imagesUpdateWithHttpInfo(data, headerPair);
     return resp.getData();
   }
 
   /**
    * 修改图片信息
    *
-   * @param advertiserId (required)
-   * @param imageId (required)
-   * @param description (required)
-   * @param fields 返回参数的字段列表 (optional)
+   * @param data (required)
    * @return ApiResponse&lt;ImagesUpdateResponse&gt;
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
   public ApiResponse<ImagesUpdateResponse> imagesUpdateWithHttpInfo(
-      Long advertiserId,
-      String imageId,
-      String description,
-      List<String> fields,
-      String... headerPair)
-      throws ApiException {
-    com.squareup.okhttp.Call call =
-        imagesUpdateValidateBeforeCall(
-            advertiserId, imageId, description, fields, null, null, headerPair);
+      ImagesUpdateRequest data, String... headerPair) throws ApiException {
+    com.squareup.okhttp.Call call = imagesUpdateValidateBeforeCall(data, null, null, headerPair);
     Type localVarReturnType = new TypeToken<ImagesUpdateResponse>() {}.getType();
     return apiClient.execute(call, localVarReturnType);
   }
@@ -1047,19 +940,13 @@ public class ImagesApi {
   /**
    * 修改图片信息 (asynchronously)
    *
-   * @param advertiserId (required)
-   * @param imageId (required)
-   * @param description (required)
-   * @param fields 返回参数的字段列表 (optional)
+   * @param data (required)
    * @param callback The callback to be executed when the API call finishes
    * @return The request call
    * @throws ApiException If fail to process the API call, e.g. serializing the request body object
    */
   public com.squareup.okhttp.Call imagesUpdateAsync(
-      Long advertiserId,
-      String imageId,
-      String description,
-      List<String> fields,
+      ImagesUpdateRequest data,
       final ApiCallback<ImagesUpdateResponse> callback,
       String... headerPair)
       throws ApiException {
@@ -1086,14 +973,7 @@ public class ImagesApi {
     }
 
     com.squareup.okhttp.Call call =
-        imagesUpdateValidateBeforeCall(
-            advertiserId,
-            imageId,
-            description,
-            fields,
-            progressListener,
-            progressRequestListener,
-            headerPair);
+        imagesUpdateValidateBeforeCall(data, progressListener, progressRequestListener, headerPair);
     Type localVarReturnType = new TypeToken<ImagesUpdateResponse>() {}.getType();
     apiClient.executeAsync(call, localVarReturnType, callback);
     return call;

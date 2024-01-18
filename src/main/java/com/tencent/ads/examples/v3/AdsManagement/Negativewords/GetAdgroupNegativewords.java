@@ -4,8 +4,8 @@ import com.tencent.ads.ApiContextConfig;
 import com.tencent.ads.exception.TencentAdsResponseException;
 import com.tencent.ads.exception.TencentAdsSDKException;
 import com.tencent.ads.model.v3.*;
-import com.tencent.ads.model.v3.AdgroupNegativewordsGetRequest;
 import com.tencent.ads.v3.TencentAds;
+import java.util.List;
 
 public class GetAdgroupNegativewords {
   /** YOUR ACCESS TOKEN */
@@ -14,7 +14,11 @@ public class GetAdgroupNegativewords {
   /** TencentAds */
   public TencentAds tencentAds;
 
-  public AdgroupNegativewordsGetRequest data = null;
+  public Long accountId = null;
+
+  public List<Long> adgroupIds = null;
+
+  public List<String> fields = null;
 
   public void init() {
     this.tencentAds = TencentAds.getInstance();
@@ -28,7 +32,7 @@ public class GetAdgroupNegativewords {
 
   public AdgroupNegativewordsGetResponseData getAdgroupNegativewords() throws Exception {
     AdgroupNegativewordsGetResponseData response =
-        tencentAds.adgroupNegativewords().adgroupNegativewordsGet(data);
+        tencentAds.adgroupNegativewords().adgroupNegativewordsGet(accountId, adgroupIds, fields);
     return response;
   }
 

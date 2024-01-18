@@ -21,12 +21,12 @@ import com.tencent.ads.exception.TencentAdsResponseException;
 import com.tencent.ads.model.v3.AdgroupNegativewordsAddRequest;
 import com.tencent.ads.model.v3.AdgroupNegativewordsAddResponse;
 import com.tencent.ads.model.v3.AdgroupNegativewordsAddResponseData;
-import com.tencent.ads.model.v3.AdgroupNegativewordsGetRequest;
 import com.tencent.ads.model.v3.AdgroupNegativewordsGetResponse;
 import com.tencent.ads.model.v3.AdgroupNegativewordsGetResponseData;
 import com.tencent.ads.model.v3.AdgroupNegativewordsUpdateRequest;
 import com.tencent.ads.model.v3.AdgroupNegativewordsUpdateResponse;
 import com.tencent.ads.model.v3.AdgroupNegativewordsUpdateResponseData;
+import java.util.List;
 
 public class AdgroupNegativewordsApiContainer extends ApiContainer {
 
@@ -51,15 +51,18 @@ public class AdgroupNegativewordsApiContainer extends ApiContainer {
   /**
    * 查询广告组否定词
    *
-   * @param data (required)
+   * @param accountId (required)
+   * @param adgroupIds (required)
+   * @param fields 返回参数的字段列表 (optional)
    * @return AdgroupNegativewordsGetResponse
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
   public AdgroupNegativewordsGetResponseData adgroupNegativewordsGet(
-      AdgroupNegativewordsGetRequest data, String... headerPair)
+      Long accountId, List<Long> adgroupIds, List<String> fields, String... headerPair)
       throws ApiException, TencentAdsResponseException {
-    AdgroupNegativewordsGetResponse resp = api.adgroupNegativewordsGet(data, headerPair);
+    AdgroupNegativewordsGetResponse resp =
+        api.adgroupNegativewordsGet(accountId, adgroupIds, fields, headerPair);
     handleResponse(gson.toJson(resp));
     return resp.getData();
   }

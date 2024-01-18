@@ -21,10 +21,12 @@ import com.tencent.ads.exception.TencentAdsResponseException;
 import com.tencent.ads.model.v3.FilteringStruct;
 import com.tencent.ads.model.v3.VideosAddResponse;
 import com.tencent.ads.model.v3.VideosAddResponseData;
+import com.tencent.ads.model.v3.VideosDeleteRequest;
 import com.tencent.ads.model.v3.VideosDeleteResponse;
 import com.tencent.ads.model.v3.VideosDeleteResponseData;
 import com.tencent.ads.model.v3.VideosGetResponse;
 import com.tencent.ads.model.v3.VideosGetResponseData;
+import com.tencent.ads.model.v3.VideosUpdateRequest;
 import com.tencent.ads.model.v3.VideosUpdateResponse;
 import com.tencent.ads.model.v3.VideosUpdateResponseData;
 import java.io.File;
@@ -42,7 +44,6 @@ public class VideosApiContainer extends ApiContainer {
    * @param signature (required)
    * @param description (optional)
    * @param adcreativeTemplateId (optional)
-   * @param fields 返回参数的字段列表 (optional)
    * @return VideosAddResponse
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
@@ -53,12 +54,11 @@ public class VideosApiContainer extends ApiContainer {
       String signature,
       String description,
       Long adcreativeTemplateId,
-      List<String> fields,
       String... headerPair)
       throws ApiException, TencentAdsResponseException {
     VideosAddResponse resp =
         api.videosAdd(
-            accountId, videoFile, signature, description, adcreativeTemplateId, fields, headerPair);
+            accountId, videoFile, signature, description, adcreativeTemplateId, headerPair);
     handleResponse(gson.toJson(resp));
     return resp.getData();
   }
@@ -66,17 +66,14 @@ public class VideosApiContainer extends ApiContainer {
   /**
    * 删除视频
    *
-   * @param accountId (required)
-   * @param videoId (required)
-   * @param fields 返回参数的字段列表 (optional)
+   * @param data (required)
    * @return VideosDeleteResponse
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
-  public VideosDeleteResponseData videosDelete(
-      Long accountId, Long videoId, List<String> fields, String... headerPair)
+  public VideosDeleteResponseData videosDelete(VideosDeleteRequest data, String... headerPair)
       throws ApiException, TencentAdsResponseException {
-    VideosDeleteResponse resp = api.videosDelete(accountId, videoId, fields, headerPair);
+    VideosDeleteResponse resp = api.videosDelete(data, headerPair);
     handleResponse(gson.toJson(resp));
     return resp.getData();
   }
@@ -115,19 +112,14 @@ public class VideosApiContainer extends ApiContainer {
   /**
    * 修改视频信息
    *
-   * @param accountId (required)
-   * @param videoId (required)
-   * @param description (required)
-   * @param fields 返回参数的字段列表 (optional)
+   * @param data (required)
    * @return VideosUpdateResponse
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
-  public VideosUpdateResponseData videosUpdate(
-      Long accountId, Long videoId, String description, List<String> fields, String... headerPair)
+  public VideosUpdateResponseData videosUpdate(VideosUpdateRequest data, String... headerPair)
       throws ApiException, TencentAdsResponseException {
-    VideosUpdateResponse resp =
-        api.videosUpdate(accountId, videoId, description, fields, headerPair);
+    VideosUpdateResponse resp = api.videosUpdate(data, headerPair);
     handleResponse(gson.toJson(resp));
     return resp.getData();
   }

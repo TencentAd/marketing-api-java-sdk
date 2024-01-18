@@ -4,8 +4,8 @@ import com.tencent.ads.ApiContextConfig;
 import com.tencent.ads.exception.TencentAdsResponseException;
 import com.tencent.ads.exception.TencentAdsSDKException;
 import com.tencent.ads.model.v3.*;
+import com.tencent.ads.model.v3.ImagesDeleteRequest;
 import com.tencent.ads.v3.TencentAds;
-import java.util.List;
 
 public class DeleteImages {
   /** YOUR ACCESS TOKEN */
@@ -14,11 +14,7 @@ public class DeleteImages {
   /** TencentAds */
   public TencentAds tencentAds;
 
-  public Long advertiserId = null;
-
-  public String imageId = null;
-
-  public List<String> fields = null;
+  public ImagesDeleteRequest data = null;
 
   public void init() {
     this.tencentAds = TencentAds.getInstance();
@@ -31,8 +27,7 @@ public class DeleteImages {
   public void buildParams() {}
 
   public ImagesDeleteResponseData deleteImages() throws Exception {
-    ImagesDeleteResponseData response =
-        tencentAds.images().imagesDelete(advertiserId, imageId, fields);
+    ImagesDeleteResponseData response = tencentAds.images().imagesDelete(data);
     return response;
   }
 

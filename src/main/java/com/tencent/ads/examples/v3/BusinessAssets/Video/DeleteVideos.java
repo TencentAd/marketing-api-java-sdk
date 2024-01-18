@@ -4,8 +4,8 @@ import com.tencent.ads.ApiContextConfig;
 import com.tencent.ads.exception.TencentAdsResponseException;
 import com.tencent.ads.exception.TencentAdsSDKException;
 import com.tencent.ads.model.v3.*;
+import com.tencent.ads.model.v3.VideosDeleteRequest;
 import com.tencent.ads.v3.TencentAds;
-import java.util.List;
 
 public class DeleteVideos {
   /** YOUR ACCESS TOKEN */
@@ -14,11 +14,7 @@ public class DeleteVideos {
   /** TencentAds */
   public TencentAds tencentAds;
 
-  public Long accountId = null;
-
-  public Long videoId = null;
-
-  public List<String> fields = null;
+  public VideosDeleteRequest data = null;
 
   public void init() {
     this.tencentAds = TencentAds.getInstance();
@@ -31,8 +27,7 @@ public class DeleteVideos {
   public void buildParams() {}
 
   public VideosDeleteResponseData deleteVideos() throws Exception {
-    VideosDeleteResponseData response =
-        tencentAds.videos().videosDelete(accountId, videoId, fields);
+    VideosDeleteResponseData response = tencentAds.videos().videosDelete(data);
     return response;
   }
 

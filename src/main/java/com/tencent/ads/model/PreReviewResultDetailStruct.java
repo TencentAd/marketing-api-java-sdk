@@ -24,7 +24,7 @@ import java.util.Objects;
 @ApiModel(description = "元素预审结果明细")
 public class PreReviewResultDetailStruct {
   @SerializedName("site_set")
-  private PreReviewSiteSetDefinitionString siteSet = null;
+  private IntSiteSetDefinition siteSet = null;
 
   @SerializedName("pre_review_result")
   private GroupRiskLevel preReviewResult = null;
@@ -32,7 +32,7 @@ public class PreReviewResultDetailStruct {
   @SerializedName("reject_reason_detail")
   private List<PreReviewResultRejectReasonDetailStruct> rejectReasonDetail = null;
 
-  public PreReviewResultDetailStruct siteSet(PreReviewSiteSetDefinitionString siteSet) {
+  public PreReviewResultDetailStruct siteSet(IntSiteSetDefinition siteSet) {
     this.siteSet = siteSet;
     return this;
   }
@@ -43,11 +43,11 @@ public class PreReviewResultDetailStruct {
    * @return siteSet
    */
   @ApiModelProperty(value = "")
-  public PreReviewSiteSetDefinitionString getSiteSet() {
+  public IntSiteSetDefinition getSiteSet() {
     return siteSet;
   }
 
-  public void setSiteSet(PreReviewSiteSetDefinitionString siteSet) {
+  public void setSiteSet(IntSiteSetDefinition siteSet) {
     this.siteSet = siteSet;
   }
 

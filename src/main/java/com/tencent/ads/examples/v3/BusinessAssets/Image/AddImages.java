@@ -6,7 +6,6 @@ import com.tencent.ads.exception.TencentAdsSDKException;
 import com.tencent.ads.model.v3.*;
 import com.tencent.ads.v3.TencentAds;
 import java.io.File;
-import java.util.List;
 
 public class AddImages {
   /** YOUR ACCESS TOKEN */
@@ -35,8 +34,6 @@ public class AddImages {
 
   public Long resizeFileSize = null;
 
-  public List<String> fields = null;
-
   public void init() {
     this.tencentAds = TencentAds.getInstance();
     this.tencentAds.init(
@@ -61,8 +58,7 @@ public class AddImages {
                 description,
                 resizeWidth,
                 resizeHeight,
-                resizeFileSize,
-                fields);
+                resizeFileSize);
     return response;
   }
 

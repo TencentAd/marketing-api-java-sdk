@@ -41,6 +41,9 @@ public class WriteTargetingSetting {
   @SerializedName("marital_status")
   private List<String> maritalStatus = null;
 
+  @SerializedName("excluded_converted_audience")
+  private ExcludedConvertedAudience excludedConvertedAudience = null;
+
   @SerializedName("custom_audience")
   private List<Long> customAudience = null;
 
@@ -220,6 +223,26 @@ public class WriteTargetingSetting {
 
   public void setMaritalStatus(List<String> maritalStatus) {
     this.maritalStatus = maritalStatus;
+  }
+
+  public WriteTargetingSetting excludedConvertedAudience(
+      ExcludedConvertedAudience excludedConvertedAudience) {
+    this.excludedConvertedAudience = excludedConvertedAudience;
+    return this;
+  }
+
+  /**
+   * Get excludedConvertedAudience
+   *
+   * @return excludedConvertedAudience
+   */
+  @ApiModelProperty(value = "")
+  public ExcludedConvertedAudience getExcludedConvertedAudience() {
+    return excludedConvertedAudience;
+  }
+
+  public void setExcludedConvertedAudience(ExcludedConvertedAudience excludedConvertedAudience) {
+    this.excludedConvertedAudience = excludedConvertedAudience;
   }
 
   public WriteTargetingSetting customAudience(List<Long> customAudience) {
@@ -464,6 +487,8 @@ public class WriteTargetingSetting {
         && Objects.equals(this.education, writeTargetingSetting.education)
         && Objects.equals(this.appInstallStatus, writeTargetingSetting.appInstallStatus)
         && Objects.equals(this.maritalStatus, writeTargetingSetting.maritalStatus)
+        && Objects.equals(
+            this.excludedConvertedAudience, writeTargetingSetting.excludedConvertedAudience)
         && Objects.equals(this.customAudience, writeTargetingSetting.customAudience)
         && Objects.equals(this.excludedCustomAudience, writeTargetingSetting.excludedCustomAudience)
         && Objects.equals(this.deviceBrandModel, writeTargetingSetting.deviceBrandModel)
@@ -484,6 +509,7 @@ public class WriteTargetingSetting {
         education,
         appInstallStatus,
         maritalStatus,
+        excludedConvertedAudience,
         customAudience,
         excludedCustomAudience,
         deviceBrandModel,

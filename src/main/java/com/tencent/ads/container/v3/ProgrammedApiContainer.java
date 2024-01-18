@@ -18,15 +18,15 @@ import com.tencent.ads.ApiException;
 import com.tencent.ads.anno.*;
 import com.tencent.ads.api.v3.ProgrammedApi;
 import com.tencent.ads.exception.TencentAdsResponseException;
-import com.tencent.ads.model.v3.MaterialGroupCreateStruct;
-import com.tencent.ads.model.v3.MaterialGroupUpdateStruct;
+import com.tencent.ads.model.v3.ProgrammedAddRequest;
 import com.tencent.ads.model.v3.ProgrammedAddResponse;
 import com.tencent.ads.model.v3.ProgrammedAddResponseData;
+import com.tencent.ads.model.v3.ProgrammedGetRequest;
 import com.tencent.ads.model.v3.ProgrammedGetResponse;
 import com.tencent.ads.model.v3.ProgrammedGetResponseData;
+import com.tencent.ads.model.v3.ProgrammedUpdateRequest;
 import com.tencent.ads.model.v3.ProgrammedUpdateResponse;
 import com.tencent.ads.model.v3.ProgrammedUpdateResponseData;
-import java.util.List;
 
 public class ProgrammedApiContainer extends ApiContainer {
 
@@ -35,34 +35,14 @@ public class ProgrammedApiContainer extends ApiContainer {
   /**
    * 创建模板预览接口
    *
-   * @param accountId (required)
-   * @param adgroupId (required)
-   * @param createMaterialGroups (required)
-   * @param autoDerivedProgramCreativeSwitch (optional)
-   * @param standardSwitch (optional)
-   * @param fields 返回参数的字段列表 (optional)
+   * @param data (required)
    * @return ProgrammedAddResponse
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
-  public ProgrammedAddResponseData programmedAdd(
-      Long accountId,
-      Long adgroupId,
-      List<MaterialGroupCreateStruct> createMaterialGroups,
-      Boolean autoDerivedProgramCreativeSwitch,
-      Boolean standardSwitch,
-      List<String> fields,
-      String... headerPair)
+  public ProgrammedAddResponseData programmedAdd(ProgrammedAddRequest data, String... headerPair)
       throws ApiException, TencentAdsResponseException {
-    ProgrammedAddResponse resp =
-        api.programmedAdd(
-            accountId,
-            adgroupId,
-            createMaterialGroups,
-            autoDerivedProgramCreativeSwitch,
-            standardSwitch,
-            fields,
-            headerPair);
+    ProgrammedAddResponse resp = api.programmedAdd(data, headerPair);
     handleResponse(gson.toJson(resp));
     return resp.getData();
   }
@@ -70,17 +50,14 @@ public class ProgrammedApiContainer extends ApiContainer {
   /**
    * 获取模板预览接口
    *
-   * @param accountId (required)
-   * @param materialDeriveId (required)
-   * @param fields 返回参数的字段列表 (optional)
+   * @param data (required)
    * @return ProgrammedGetResponse
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
-  public ProgrammedGetResponseData programmedGet(
-      Long accountId, Long materialDeriveId, List<String> fields, String... headerPair)
+  public ProgrammedGetResponseData programmedGet(ProgrammedGetRequest data, String... headerPair)
       throws ApiException, TencentAdsResponseException {
-    ProgrammedGetResponse resp = api.programmedGet(accountId, materialDeriveId, fields, headerPair);
+    ProgrammedGetResponse resp = api.programmedGet(data, headerPair);
     handleResponse(gson.toJson(resp));
     return resp.getData();
   }
@@ -88,34 +65,15 @@ public class ProgrammedApiContainer extends ApiContainer {
   /**
    * 更新模板预览接口
    *
-   * @param accountId (required)
-   * @param materialDeriveId (required)
-   * @param autoDerivedProgramCreativeSwitch (optional)
-   * @param standardSwitch (optional)
-   * @param updateMaterialGroups (optional)
-   * @param fields 返回参数的字段列表 (optional)
+   * @param data (required)
    * @return ProgrammedUpdateResponse
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
   public ProgrammedUpdateResponseData programmedUpdate(
-      Long accountId,
-      Long materialDeriveId,
-      Boolean autoDerivedProgramCreativeSwitch,
-      Boolean standardSwitch,
-      List<MaterialGroupUpdateStruct> updateMaterialGroups,
-      List<String> fields,
-      String... headerPair)
+      ProgrammedUpdateRequest data, String... headerPair)
       throws ApiException, TencentAdsResponseException {
-    ProgrammedUpdateResponse resp =
-        api.programmedUpdate(
-            accountId,
-            materialDeriveId,
-            autoDerivedProgramCreativeSwitch,
-            standardSwitch,
-            updateMaterialGroups,
-            fields,
-            headerPair);
+    ProgrammedUpdateResponse resp = api.programmedUpdate(data, headerPair);
     handleResponse(gson.toJson(resp));
     return resp.getData();
   }

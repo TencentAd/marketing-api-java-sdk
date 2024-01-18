@@ -159,6 +159,9 @@ public class DynamicCreativesAddRequest {
   @SerializedName("campaign_id")
   private Long campaignId = null;
 
+  @SerializedName("wechat_channels_tracking_spec")
+  private WechatChannelsTrackingSpec wechatChannelsTrackingSpec = null;
+
   @SerializedName("page_track_url")
   private String pageTrackUrl = null;
 
@@ -1083,6 +1086,26 @@ public class DynamicCreativesAddRequest {
     this.campaignId = campaignId;
   }
 
+  public DynamicCreativesAddRequest wechatChannelsTrackingSpec(
+      WechatChannelsTrackingSpec wechatChannelsTrackingSpec) {
+    this.wechatChannelsTrackingSpec = wechatChannelsTrackingSpec;
+    return this;
+  }
+
+  /**
+   * Get wechatChannelsTrackingSpec
+   *
+   * @return wechatChannelsTrackingSpec
+   */
+  @ApiModelProperty(value = "")
+  public WechatChannelsTrackingSpec getWechatChannelsTrackingSpec() {
+    return wechatChannelsTrackingSpec;
+  }
+
+  public void setWechatChannelsTrackingSpec(WechatChannelsTrackingSpec wechatChannelsTrackingSpec) {
+    this.wechatChannelsTrackingSpec = wechatChannelsTrackingSpec;
+  }
+
   public DynamicCreativesAddRequest pageTrackUrl(String pageTrackUrl) {
     this.pageTrackUrl = pageTrackUrl;
     return this;
@@ -1268,6 +1291,8 @@ public class DynamicCreativesAddRequest {
         && Objects.equals(this.headClickType, dynamicCreativesAddRequest.headClickType)
         && Objects.equals(this.headClickSpec, dynamicCreativesAddRequest.headClickSpec)
         && Objects.equals(this.campaignId, dynamicCreativesAddRequest.campaignId)
+        && Objects.equals(
+            this.wechatChannelsTrackingSpec, dynamicCreativesAddRequest.wechatChannelsTrackingSpec)
         && Objects.equals(this.pageTrackUrl, dynamicCreativesAddRequest.pageTrackUrl)
         && Objects.equals(this.industryLabel, dynamicCreativesAddRequest.industryLabel)
         && Objects.equals(this.sublinkSwitch, dynamicCreativesAddRequest.sublinkSwitch)
@@ -1325,6 +1350,7 @@ public class DynamicCreativesAddRequest {
         headClickType,
         headClickSpec,
         campaignId,
+        wechatChannelsTrackingSpec,
         pageTrackUrl,
         industryLabel,
         sublinkSwitch,

@@ -83,9 +83,6 @@ public class CreativeComponents {
   @SerializedName("text_link")
   private List<TextLinkComponent> textLink = null;
 
-  @SerializedName("jump_info")
-  private List<JumpinfoComponent> jumpInfo = null;
-
   @SerializedName("end_page")
   private List<EndPageComponent> endPage = null;
 
@@ -103,6 +100,9 @@ public class CreativeComponents {
 
   @SerializedName("wxgame_playable_page")
   private List<WxgamePlayablePageComponent> wxgamePlayablePage = null;
+
+  @SerializedName("main_jump_info")
+  private List<JumpinfoComponent> mainJumpInfo = null;
 
   public CreativeComponents title(List<TitleComponent> title) {
     this.title = title;
@@ -645,33 +645,6 @@ public class CreativeComponents {
     this.textLink = textLink;
   }
 
-  public CreativeComponents jumpInfo(List<JumpinfoComponent> jumpInfo) {
-    this.jumpInfo = jumpInfo;
-    return this;
-  }
-
-  public CreativeComponents addJumpInfoItem(JumpinfoComponent jumpInfoItem) {
-    if (this.jumpInfo == null) {
-      this.jumpInfo = new ArrayList<JumpinfoComponent>();
-    }
-    this.jumpInfo.add(jumpInfoItem);
-    return this;
-  }
-
-  /**
-   * Get jumpInfo
-   *
-   * @return jumpInfo
-   */
-  @ApiModelProperty(value = "")
-  public List<JumpinfoComponent> getJumpInfo() {
-    return jumpInfo;
-  }
-
-  public void setJumpInfo(List<JumpinfoComponent> jumpInfo) {
-    this.jumpInfo = jumpInfo;
-  }
-
   public CreativeComponents endPage(List<EndPageComponent> endPage) {
     this.endPage = endPage;
     return this;
@@ -836,6 +809,33 @@ public class CreativeComponents {
     this.wxgamePlayablePage = wxgamePlayablePage;
   }
 
+  public CreativeComponents mainJumpInfo(List<JumpinfoComponent> mainJumpInfo) {
+    this.mainJumpInfo = mainJumpInfo;
+    return this;
+  }
+
+  public CreativeComponents addMainJumpInfoItem(JumpinfoComponent mainJumpInfoItem) {
+    if (this.mainJumpInfo == null) {
+      this.mainJumpInfo = new ArrayList<JumpinfoComponent>();
+    }
+    this.mainJumpInfo.add(mainJumpInfoItem);
+    return this;
+  }
+
+  /**
+   * Get mainJumpInfo
+   *
+   * @return mainJumpInfo
+   */
+  @ApiModelProperty(value = "")
+  public List<JumpinfoComponent> getMainJumpInfo() {
+    return mainJumpInfo;
+  }
+
+  public void setMainJumpInfo(List<JumpinfoComponent> mainJumpInfo) {
+    this.mainJumpInfo = mainJumpInfo;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -865,13 +865,13 @@ public class CreativeComponents {
         && Objects.equals(this.barrage, creativeComponents.barrage)
         && Objects.equals(this.floatingZone, creativeComponents.floatingZone)
         && Objects.equals(this.textLink, creativeComponents.textLink)
-        && Objects.equals(this.jumpInfo, creativeComponents.jumpInfo)
         && Objects.equals(this.endPage, creativeComponents.endPage)
         && Objects.equals(this.livingDesc, creativeComponents.livingDesc)
         && Objects.equals(this.wechatChannels, creativeComponents.wechatChannels)
         && Objects.equals(this.shortVideo, creativeComponents.shortVideo)
         && Objects.equals(this.elementStory, creativeComponents.elementStory)
-        && Objects.equals(this.wxgamePlayablePage, creativeComponents.wxgamePlayablePage);
+        && Objects.equals(this.wxgamePlayablePage, creativeComponents.wxgamePlayablePage)
+        && Objects.equals(this.mainJumpInfo, creativeComponents.mainJumpInfo);
   }
 
   @Override
@@ -897,13 +897,13 @@ public class CreativeComponents {
         barrage,
         floatingZone,
         textLink,
-        jumpInfo,
         endPage,
         livingDesc,
         wechatChannels,
         shortVideo,
         elementStory,
-        wxgamePlayablePage);
+        wxgamePlayablePage,
+        mainJumpInfo);
   }
 
   @Override

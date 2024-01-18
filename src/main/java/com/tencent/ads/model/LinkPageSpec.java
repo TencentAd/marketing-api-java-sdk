@@ -33,6 +33,9 @@ public class LinkPageSpec {
   @SerializedName("mini_game_spec")
   private LinkMiniGameSpec miniGameSpec = null;
 
+  @SerializedName("channels_shop_product_spec")
+  private ChannelsShopProductSpec channelsShopProductSpec = null;
+
   public LinkPageSpec pageId(Long pageId) {
     this.pageId = pageId;
     return this;
@@ -109,6 +112,25 @@ public class LinkPageSpec {
     this.miniGameSpec = miniGameSpec;
   }
 
+  public LinkPageSpec channelsShopProductSpec(ChannelsShopProductSpec channelsShopProductSpec) {
+    this.channelsShopProductSpec = channelsShopProductSpec;
+    return this;
+  }
+
+  /**
+   * Get channelsShopProductSpec
+   *
+   * @return channelsShopProductSpec
+   */
+  @ApiModelProperty(value = "")
+  public ChannelsShopProductSpec getChannelsShopProductSpec() {
+    return channelsShopProductSpec;
+  }
+
+  public void setChannelsShopProductSpec(ChannelsShopProductSpec channelsShopProductSpec) {
+    this.channelsShopProductSpec = channelsShopProductSpec;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -121,12 +143,13 @@ public class LinkPageSpec {
     return Objects.equals(this.pageId, linkPageSpec.pageId)
         && Objects.equals(this.pageUrl, linkPageSpec.pageUrl)
         && Objects.equals(this.miniProgramSpec, linkPageSpec.miniProgramSpec)
-        && Objects.equals(this.miniGameSpec, linkPageSpec.miniGameSpec);
+        && Objects.equals(this.miniGameSpec, linkPageSpec.miniGameSpec)
+        && Objects.equals(this.channelsShopProductSpec, linkPageSpec.channelsShopProductSpec);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(pageId, pageUrl, miniProgramSpec, miniGameSpec);
+    return Objects.hash(pageId, pageUrl, miniProgramSpec, miniGameSpec, channelsShopProductSpec);
   }
 
   @Override

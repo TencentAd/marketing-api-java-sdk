@@ -24,6 +24,9 @@ public class AndroidAppPageSpec {
   @SerializedName("android_app_id")
   private String androidAppId = null;
 
+  @SerializedName("wechat_canvas_page_id")
+  private Long wechatCanvasPageId = null;
+
   public AndroidAppPageSpec androidAppId(String androidAppId) {
     this.androidAppId = androidAppId;
     return this;
@@ -43,6 +46,25 @@ public class AndroidAppPageSpec {
     this.androidAppId = androidAppId;
   }
 
+  public AndroidAppPageSpec wechatCanvasPageId(Long wechatCanvasPageId) {
+    this.wechatCanvasPageId = wechatCanvasPageId;
+    return this;
+  }
+
+  /**
+   * Get wechatCanvasPageId
+   *
+   * @return wechatCanvasPageId
+   */
+  @ApiModelProperty(value = "")
+  public Long getWechatCanvasPageId() {
+    return wechatCanvasPageId;
+  }
+
+  public void setWechatCanvasPageId(Long wechatCanvasPageId) {
+    this.wechatCanvasPageId = wechatCanvasPageId;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -52,12 +74,13 @@ public class AndroidAppPageSpec {
       return false;
     }
     AndroidAppPageSpec androidAppPageSpec = (AndroidAppPageSpec) o;
-    return Objects.equals(this.androidAppId, androidAppPageSpec.androidAppId);
+    return Objects.equals(this.androidAppId, androidAppPageSpec.androidAppId)
+        && Objects.equals(this.wechatCanvasPageId, androidAppPageSpec.wechatCanvasPageId);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(androidAppId);
+    return Objects.hash(androidAppId, wechatCanvasPageId);
   }
 
   @Override

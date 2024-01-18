@@ -18,8 +18,8 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.util.Objects;
 
-/** 落地页组件 */
-@ApiModel(description = "落地页组件")
+/** 主跳转组件 */
+@ApiModel(description = "主跳转组件")
 public class JumpinfoComponent {
   @SerializedName("component_id")
   private Long componentId = null;

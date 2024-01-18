@@ -4,8 +4,8 @@ import com.tencent.ads.ApiContextConfig;
 import com.tencent.ads.exception.TencentAdsResponseException;
 import com.tencent.ads.exception.TencentAdsSDKException;
 import com.tencent.ads.model.v3.*;
+import com.tencent.ads.model.v3.ProgrammedGetRequest;
 import com.tencent.ads.v3.TencentAds;
-import java.util.List;
 
 public class GetProgrammed {
   /** YOUR ACCESS TOKEN */
@@ -14,11 +14,7 @@ public class GetProgrammed {
   /** TencentAds */
   public TencentAds tencentAds;
 
-  public Long accountId = null;
-
-  public Long materialDeriveId = null;
-
-  public List<String> fields = null;
+  public ProgrammedGetRequest data = null;
 
   public void init() {
     this.tencentAds = TencentAds.getInstance();
@@ -31,8 +27,7 @@ public class GetProgrammed {
   public void buildParams() {}
 
   public ProgrammedGetResponseData getProgrammed() throws Exception {
-    ProgrammedGetResponseData response =
-        tencentAds.programmed().programmedGet(accountId, materialDeriveId, fields);
+    ProgrammedGetResponseData response = tencentAds.programmed().programmedGet(data);
     return response;
   }
 
