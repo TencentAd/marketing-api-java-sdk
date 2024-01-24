@@ -104,6 +104,7 @@ public class App {
   @Inject KeywordRecommendApiContainer keywordRecommendApiContainer;
   @Inject LabelAudiencesApiContainer labelAudiencesApiContainer;
   @Inject LabelsApiContainer labelsApiContainer;
+  @Inject LandingPageSellStrategyApiContainer landingPageSellStrategyApiContainer;
   @Inject LeadCluesApiContainer leadCluesApiContainer;
   @Inject LeadsCallApiContainer leadsCallApiContainer;
   @Inject LeadsCallRecordApiContainer leadsCallRecordApiContainer;
@@ -550,6 +551,10 @@ public class App {
 
   public LabelsApiContainer labels() {
     return labelsApiContainer;
+  }
+
+  public LandingPageSellStrategyApiContainer landingPageSellStrategy() {
+    return landingPageSellStrategyApiContainer;
   }
 
   public LeadCluesApiContainer leadClues() {

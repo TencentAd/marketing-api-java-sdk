@@ -66,6 +66,7 @@ public class App {
   @Inject MergeFundTypeSubcustomerTransferApiContainer mergeFundTypeSubcustomerTransferApiContainer;
   @Inject OauthApiContainer oauthApiContainer;
   @Inject PagesApiContainer pagesApiContainer;
+  @Inject ProfilesApiContainer profilesApiContainer;
   @Inject ProgrammedApiContainer programmedApiContainer;
   @Inject ProgrammedTemplateApiContainer programmedTemplateApiContainer;
   @Inject RealtimeCostApiContainer realtimeCostApiContainer;
@@ -255,6 +256,10 @@ public class App {
 
   public PagesApiContainer pages() {
     return pagesApiContainer;
+  }
+
+  public ProfilesApiContainer profiles() {
+    return profilesApiContainer;
   }
 
   public ProgrammedApiContainer programmed() {

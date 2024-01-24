@@ -218,6 +218,9 @@ public class RevisedAdcreativeElements {
   @SerializedName("wechat_channels_cover_img_show_type")
   private WechatChannelsCoverImgShowType wechatChannelsCoverImgShowType = null;
 
+  @SerializedName("mini_card_link")
+  private AdCreativeMiniCardLink miniCardLink = null;
+
   public RevisedAdcreativeElements image(String image) {
     this.image = image;
     return this;
@@ -1592,6 +1595,25 @@ public class RevisedAdcreativeElements {
     this.wechatChannelsCoverImgShowType = wechatChannelsCoverImgShowType;
   }
 
+  public RevisedAdcreativeElements miniCardLink(AdCreativeMiniCardLink miniCardLink) {
+    this.miniCardLink = miniCardLink;
+    return this;
+  }
+
+  /**
+   * Get miniCardLink
+   *
+   * @return miniCardLink
+   */
+  @ApiModelProperty(value = "")
+  public AdCreativeMiniCardLink getMiniCardLink() {
+    return miniCardLink;
+  }
+
+  public void setMiniCardLink(AdCreativeMiniCardLink miniCardLink) {
+    this.miniCardLink = miniCardLink;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -1680,7 +1702,8 @@ public class RevisedAdcreativeElements {
             this.listSublinkComponentOptions, revisedAdcreativeElements.listSublinkComponentOptions)
         && Objects.equals(
             this.wechatChannelsCoverImgShowType,
-            revisedAdcreativeElements.wechatChannelsCoverImgShowType);
+            revisedAdcreativeElements.wechatChannelsCoverImgShowType)
+        && Objects.equals(this.miniCardLink, revisedAdcreativeElements.miniCardLink);
   }
 
   @Override
@@ -1750,7 +1773,8 @@ public class RevisedAdcreativeElements {
         mdpaTitleComponentOptions,
         mdpaDescComponentOptions,
         listSublinkComponentOptions,
-        wechatChannelsCoverImgShowType);
+        wechatChannelsCoverImgShowType,
+        miniCardLink);
   }
 
   @Override

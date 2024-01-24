@@ -75,6 +75,9 @@ public class DynamicLandingPageInfo {
   @SerializedName("button_text_jump_info")
   private LandingPageStructure buttonTextJumpInfo = null;
 
+  @SerializedName("channels_shop_product_spec")
+  private ChannelsShopProductSpec channelsShopProductSpec = null;
+
   public DynamicLandingPageInfo pageType(DestinationType pageType) {
     this.pageType = pageType;
     return this;
@@ -418,6 +421,26 @@ public class DynamicLandingPageInfo {
     this.buttonTextJumpInfo = buttonTextJumpInfo;
   }
 
+  public DynamicLandingPageInfo channelsShopProductSpec(
+      ChannelsShopProductSpec channelsShopProductSpec) {
+    this.channelsShopProductSpec = channelsShopProductSpec;
+    return this;
+  }
+
+  /**
+   * Get channelsShopProductSpec
+   *
+   * @return channelsShopProductSpec
+   */
+  @ApiModelProperty(value = "")
+  public ChannelsShopProductSpec getChannelsShopProductSpec() {
+    return channelsShopProductSpec;
+  }
+
+  public void setChannelsShopProductSpec(ChannelsShopProductSpec channelsShopProductSpec) {
+    this.channelsShopProductSpec = channelsShopProductSpec;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -446,7 +469,9 @@ public class DynamicLandingPageInfo {
         && Objects.equals(this.unionMarketSwitch, dynamicLandingPageInfo.unionMarketSwitch)
         && Objects.equals(this.unionMarketSpec, dynamicLandingPageInfo.unionMarketSpec)
         && Objects.equals(this.linkNameText, dynamicLandingPageInfo.linkNameText)
-        && Objects.equals(this.buttonTextJumpInfo, dynamicLandingPageInfo.buttonTextJumpInfo);
+        && Objects.equals(this.buttonTextJumpInfo, dynamicLandingPageInfo.buttonTextJumpInfo)
+        && Objects.equals(
+            this.channelsShopProductSpec, dynamicLandingPageInfo.channelsShopProductSpec);
   }
 
   @Override
@@ -469,7 +494,8 @@ public class DynamicLandingPageInfo {
         unionMarketSwitch,
         unionMarketSpec,
         linkNameText,
-        buttonTextJumpInfo);
+        buttonTextJumpInfo,
+        channelsShopProductSpec);
   }
 
   @Override

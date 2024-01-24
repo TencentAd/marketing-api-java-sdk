@@ -19,30 +19,18 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-/** 朋友圈头像及昵称跳转页状态 */
-@JsonAdapter(SysStatus.Adapter.class)
-public enum SysStatus {
-  NORMAL("AD_STATUS_NORMAL"),
+/** 朋友圈头像及昵称跳转页类型 */
+@JsonAdapter(ProfileType.Adapter.class)
+public enum ProfileType {
+  DEFINITION("PROFILE_TYPE_DEFINITION"),
 
-  PENDING("AD_STATUS_PENDING"),
+  AUTO_GENERATE("PROFILE_TYPE_AUTO_GENERATE"),
 
-  DENIED("AD_STATUS_DENIED"),
-
-  FROZEN("AD_STATUS_FROZEN"),
-
-  PARTIALLY_PENDING("AD_STATUS_PARTIALLY_PENDING"),
-
-  PARTIALLY_NORMAL("AD_STATUS_PARTIALLY_NORMAL"),
-
-  PREPARE("AD_STATUS_PREPARE"),
-
-  DELETED("AD_STATUS_DELETED"),
-
-  INVALID("AD_STATUS_INVALID");
+  WEAPP("PROFILE_TYPE_WEAPP");
 
   private String value;
 
-  SysStatus(String value) {
+  ProfileType(String value) {
     this.value = value;
   }
 
@@ -55,8 +43,8 @@ public enum SysStatus {
     return String.valueOf(value);
   }
 
-  public static SysStatus fromValue(String text) {
-    for (SysStatus b : SysStatus.values()) {
+  public static ProfileType fromValue(String text) {
+    for (ProfileType b : ProfileType.values()) {
       if (String.valueOf(b.value).equals(text)) {
         return b;
       }
@@ -64,16 +52,17 @@ public enum SysStatus {
     return null;
   }
 
-  public static class Adapter extends TypeAdapter<SysStatus> {
+  public static class Adapter extends TypeAdapter<ProfileType> {
     @Override
-    public void write(final JsonWriter jsonWriter, final SysStatus enumeration) throws IOException {
+    public void write(final JsonWriter jsonWriter, final ProfileType enumeration)
+        throws IOException {
       jsonWriter.value(enumeration.getValue());
     }
 
     @Override
-    public SysStatus read(final JsonReader jsonReader) throws IOException {
+    public ProfileType read(final JsonReader jsonReader) throws IOException {
       String value = jsonReader.nextString();
-      return SysStatus.fromValue(String.valueOf(value));
+      return ProfileType.fromValue(String.valueOf(value));
     }
   }
 }

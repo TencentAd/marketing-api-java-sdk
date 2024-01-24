@@ -27,6 +27,9 @@ public class DynamicCreativePageSpec {
   @SerializedName("page_url")
   private String pageUrl = null;
 
+  @SerializedName("channels_shop_product_spec")
+  private ChannelsShopProductSpec channelsShopProductSpec = null;
+
   public DynamicCreativePageSpec pageId(Long pageId) {
     this.pageId = pageId;
     return this;
@@ -65,6 +68,26 @@ public class DynamicCreativePageSpec {
     this.pageUrl = pageUrl;
   }
 
+  public DynamicCreativePageSpec channelsShopProductSpec(
+      ChannelsShopProductSpec channelsShopProductSpec) {
+    this.channelsShopProductSpec = channelsShopProductSpec;
+    return this;
+  }
+
+  /**
+   * Get channelsShopProductSpec
+   *
+   * @return channelsShopProductSpec
+   */
+  @ApiModelProperty(value = "")
+  public ChannelsShopProductSpec getChannelsShopProductSpec() {
+    return channelsShopProductSpec;
+  }
+
+  public void setChannelsShopProductSpec(ChannelsShopProductSpec channelsShopProductSpec) {
+    this.channelsShopProductSpec = channelsShopProductSpec;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -75,12 +98,14 @@ public class DynamicCreativePageSpec {
     }
     DynamicCreativePageSpec dynamicCreativePageSpec = (DynamicCreativePageSpec) o;
     return Objects.equals(this.pageId, dynamicCreativePageSpec.pageId)
-        && Objects.equals(this.pageUrl, dynamicCreativePageSpec.pageUrl);
+        && Objects.equals(this.pageUrl, dynamicCreativePageSpec.pageUrl)
+        && Objects.equals(
+            this.channelsShopProductSpec, dynamicCreativePageSpec.channelsShopProductSpec);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(pageId, pageUrl);
+    return Objects.hash(pageId, pageUrl, channelsShopProductSpec);
   }
 
   @Override

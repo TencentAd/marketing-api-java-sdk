@@ -212,6 +212,9 @@ public class AdgroupsGetListStruct {
   @SerializedName("conversion_name")
   private String conversionName = null;
 
+  @SerializedName("auto_acquisition_status")
+  private AutoAcquisitionStatus autoAcquisitionStatus = null;
+
   public AdgroupsGetListStruct targeting(ReadTargetingSetting targeting) {
     this.targeting = targeting;
     return this;
@@ -1448,6 +1451,25 @@ public class AdgroupsGetListStruct {
     this.conversionName = conversionName;
   }
 
+  public AdgroupsGetListStruct autoAcquisitionStatus(AutoAcquisitionStatus autoAcquisitionStatus) {
+    this.autoAcquisitionStatus = autoAcquisitionStatus;
+    return this;
+  }
+
+  /**
+   * Get autoAcquisitionStatus
+   *
+   * @return autoAcquisitionStatus
+   */
+  @ApiModelProperty(value = "")
+  public AutoAcquisitionStatus getAutoAcquisitionStatus() {
+    return autoAcquisitionStatus;
+  }
+
+  public void setAutoAcquisitionStatus(AutoAcquisitionStatus autoAcquisitionStatus) {
+    this.autoAcquisitionStatus = autoAcquisitionStatus;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -1531,7 +1553,8 @@ public class AdgroupsGetListStruct {
         && Objects.equals(this.prioritySiteSet, adgroupsGetListStruct.prioritySiteSet)
         && Objects.equals(this.ecomPkamSwitch, adgroupsGetListStruct.ecomPkamSwitch)
         && Objects.equals(this.forwardLinkAssist, adgroupsGetListStruct.forwardLinkAssist)
-        && Objects.equals(this.conversionName, adgroupsGetListStruct.conversionName);
+        && Objects.equals(this.conversionName, adgroupsGetListStruct.conversionName)
+        && Objects.equals(this.autoAcquisitionStatus, adgroupsGetListStruct.autoAcquisitionStatus);
   }
 
   @Override
@@ -1599,7 +1622,8 @@ public class AdgroupsGetListStruct {
         prioritySiteSet,
         ecomPkamSwitch,
         forwardLinkAssist,
-        conversionName);
+        conversionName,
+        autoAcquisitionStatus);
   }
 
   @Override

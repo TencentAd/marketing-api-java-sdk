@@ -194,6 +194,9 @@ public class AdcreativeCreativeElements {
   @SerializedName("wechat_channels_cover_img_show_type")
   private WechatChannelsCoverImgShowType wechatChannelsCoverImgShowType = null;
 
+  @SerializedName("mini_card_link")
+  private AdCreativeMiniCardLink miniCardLink = null;
+
   public AdcreativeCreativeElements image(String image) {
     this.image = image;
     return this;
@@ -1334,6 +1337,25 @@ public class AdcreativeCreativeElements {
     this.wechatChannelsCoverImgShowType = wechatChannelsCoverImgShowType;
   }
 
+  public AdcreativeCreativeElements miniCardLink(AdCreativeMiniCardLink miniCardLink) {
+    this.miniCardLink = miniCardLink;
+    return this;
+  }
+
+  /**
+   * Get miniCardLink
+   *
+   * @return miniCardLink
+   */
+  @ApiModelProperty(value = "")
+  public AdCreativeMiniCardLink getMiniCardLink() {
+    return miniCardLink;
+  }
+
+  public void setMiniCardLink(AdCreativeMiniCardLink miniCardLink) {
+    this.miniCardLink = miniCardLink;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -1404,7 +1426,8 @@ public class AdcreativeCreativeElements {
         && Objects.equals(this.mainJumpInfo, adcreativeCreativeElements.mainJumpInfo)
         && Objects.equals(
             this.wechatChannelsCoverImgShowType,
-            adcreativeCreativeElements.wechatChannelsCoverImgShowType);
+            adcreativeCreativeElements.wechatChannelsCoverImgShowType)
+        && Objects.equals(this.miniCardLink, adcreativeCreativeElements.miniCardLink);
   }
 
   @Override
@@ -1466,7 +1489,8 @@ public class AdcreativeCreativeElements {
         buttonTextJumpInfo,
         wxgamePlayablePageSpec,
         mainJumpInfo,
-        wechatChannelsCoverImgShowType);
+        wechatChannelsCoverImgShowType,
+        miniCardLink);
   }
 
   @Override
