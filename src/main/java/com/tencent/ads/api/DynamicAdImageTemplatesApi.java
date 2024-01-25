@@ -387,7 +387,6 @@ public class DynamicAdImageTemplatesApi {
       final ApiCallback<DynamicAdImageTemplatesGetResponse> callback,
       String... headerPair)
       throws ApiException {
-
     ProgressResponseBody.ProgressListener progressListener = null;
     ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
 

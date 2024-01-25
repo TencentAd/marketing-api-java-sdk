@@ -190,7 +190,6 @@ public class XijingPageApi {
       final ApiCallback<XijingPageAddResponse> callback,
       String... headerPair)
       throws ApiException {
-
     ProgressResponseBody.ProgressListener progressListener = null;
     ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
 
@@ -357,7 +356,6 @@ public class XijingPageApi {
       final ApiCallback<XijingPageDeleteResponse> callback,
       String... headerPair)
       throws ApiException {
-
     ProgressResponseBody.ProgressListener progressListener = null;
     ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
 
@@ -524,7 +522,6 @@ public class XijingPageApi {
       final ApiCallback<XijingPageUpdateResponse> callback,
       String... headerPair)
       throws ApiException {
-
     ProgressResponseBody.ProgressListener progressListener = null;
     ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
 

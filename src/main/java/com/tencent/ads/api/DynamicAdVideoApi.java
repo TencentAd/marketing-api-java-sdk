@@ -188,7 +188,6 @@ public class DynamicAdVideoApi {
       final ApiCallback<DynamicAdVideoAddResponse> callback,
       String... headerPair)
       throws ApiException {
-
     ProgressResponseBody.ProgressListener progressListener = null;
     ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
 
@@ -467,7 +466,6 @@ public class DynamicAdVideoApi {
       final ApiCallback<DynamicAdVideoGetResponse> callback,
       String... headerPair)
       throws ApiException {
-
     ProgressResponseBody.ProgressListener progressListener = null;
     ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
 

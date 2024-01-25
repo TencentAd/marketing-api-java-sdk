@@ -184,7 +184,6 @@ public class AdParamApi {
   public com.squareup.okhttp.Call adParamGetAsync(
       AdParamGetRequest data, final ApiCallback<AdParamGetResponse> callback, String... headerPair)
       throws ApiException {
-
     ProgressResponseBody.ProgressListener progressListener = null;
     ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
 

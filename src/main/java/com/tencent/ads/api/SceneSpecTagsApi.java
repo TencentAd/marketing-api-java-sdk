@@ -207,7 +207,6 @@ public class SceneSpecTagsApi {
       final ApiCallback<SceneSpecTagsGetResponse> callback,
       String... headerPair)
       throws ApiException {
-
     ProgressResponseBody.ProgressListener progressListener = null;
     ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
 

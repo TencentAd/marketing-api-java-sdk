@@ -231,7 +231,6 @@ public class WechatPagesCsgroupUserApi {
       final ApiCallback<WechatPagesCsgroupUserGetResponse> callback,
       String... headerPair)
       throws ApiException {
-
     ProgressResponseBody.ProgressListener progressListener = null;
     ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
 

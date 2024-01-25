@@ -216,7 +216,6 @@ public class XijingTemplateApi {
       final ApiCallback<XijingTemplateGetResponse> callback,
       String... headerPair)
       throws ApiException {
-
     ProgressResponseBody.ProgressListener progressListener = null;
     ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
 

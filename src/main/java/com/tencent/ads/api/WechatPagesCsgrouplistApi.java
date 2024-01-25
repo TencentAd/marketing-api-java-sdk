@@ -191,7 +191,6 @@ public class WechatPagesCsgrouplistApi {
       final ApiCallback<WechatPagesCsgrouplistAddResponse> callback,
       String... headerPair)
       throws ApiException {
-
     ProgressResponseBody.ProgressListener progressListener = null;
     ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
 
@@ -417,7 +416,6 @@ public class WechatPagesCsgrouplistApi {
       final ApiCallback<WechatPagesCsgrouplistGetResponse> callback,
       String... headerPair)
       throws ApiException {
-
     ProgressResponseBody.ProgressListener progressListener = null;
     ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
 
@@ -593,7 +591,6 @@ public class WechatPagesCsgrouplistApi {
       final ApiCallback<WechatPagesCsgrouplistUpdateResponse> callback,
       String... headerPair)
       throws ApiException {
-
     ProgressResponseBody.ProgressListener progressListener = null;
     ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
 

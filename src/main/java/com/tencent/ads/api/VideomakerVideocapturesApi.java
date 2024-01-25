@@ -262,7 +262,6 @@ public class VideomakerVideocapturesApi {
       final ApiCallback<VideomakerVideocapturesAddResponse> callback,
       String... headerPair)
       throws ApiException {
-
     ProgressResponseBody.ProgressListener progressListener = null;
     ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
 

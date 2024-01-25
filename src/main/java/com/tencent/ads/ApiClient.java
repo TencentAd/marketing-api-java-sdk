@@ -58,6 +58,8 @@ public class ApiClient {
   private static ThreadLocal<Map<String, Authentication>> authenticationsLocal =
       new ThreadLocal<>();
 
+  private static ThreadLocal<String> basePathTL = new ThreadLocal<>();
+
   private DateFormat dateFormat;
   private DateFormat datetimeFormat;
   private boolean lenientDatetimeFormat;
@@ -252,6 +254,18 @@ public class ApiClient {
    */
   public Map<String, Authentication> getAuthentications() {
     return authenticationsLocal.get();
+  }
+
+  public static void setBasePathTLVal(String baseUrl) {
+    basePathTL.set(baseUrl);
+  }
+
+  public static void clearBasePathTLVal() {
+    basePathTL.set(null);
+  }
+
+  private static String getBasePathTLVal() {
+    return basePathTL.get();
   }
 
   /**
@@ -1047,7 +1061,12 @@ public class ApiClient {
    */
   public String buildUrl(String path, List<Pair> queryParams, List<Pair> collectionQueryParams) {
     final StringBuilder url = new StringBuilder();
-    url.append(basePath).append(path);
+    String basePathTLVal = getBasePathTLVal();
+    if (basePathTLVal != null && basePathTLVal.length() > 0) {
+      url.append(basePathTLVal).append(path);
+    } else {
+      url.append(basePath).append(path);
+    }
 
     if (queryParams != null && !queryParams.isEmpty()) {
       // support (constant) query string in `path`, e.g. "/posts?draft=1"

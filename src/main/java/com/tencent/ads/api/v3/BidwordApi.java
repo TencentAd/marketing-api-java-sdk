@@ -160,8 +160,13 @@ public class BidwordApi {
    */
   public BidwordAddResponse bidwordAdd(BidwordAddRequest data, String... headerPair)
       throws ApiException {
-    ApiResponse<BidwordAddResponse> resp = bidwordAddWithHttpInfo(data, headerPair);
-    return resp.getData();
+    try {
+      ApiClient.setBasePathTLVal("https://api.e.qq.com/v3.0");
+      ApiResponse<BidwordAddResponse> resp = bidwordAddWithHttpInfo(data, headerPair);
+      return resp.getData();
+    } finally {
+      ApiClient.clearBasePathTLVal();
+    }
   }
 
   /**
@@ -190,33 +195,37 @@ public class BidwordApi {
   public com.squareup.okhttp.Call bidwordAddAsync(
       BidwordAddRequest data, final ApiCallback<BidwordAddResponse> callback, String... headerPair)
       throws ApiException {
+    try {
+      ApiClient.setBasePathTLVal("https://api.e.qq.com/v3.0");
+      ProgressResponseBody.ProgressListener progressListener = null;
+      ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
 
-    ProgressResponseBody.ProgressListener progressListener = null;
-    ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
+      if (callback != null) {
+        progressListener =
+            new ProgressResponseBody.ProgressListener() {
+              @Override
+              public void update(long bytesRead, long contentLength, boolean done) {
+                callback.onDownloadProgress(bytesRead, contentLength, done);
+              }
+            };
 
-    if (callback != null) {
-      progressListener =
-          new ProgressResponseBody.ProgressListener() {
-            @Override
-            public void update(long bytesRead, long contentLength, boolean done) {
-              callback.onDownloadProgress(bytesRead, contentLength, done);
-            }
-          };
+        progressRequestListener =
+            new ProgressRequestBody.ProgressRequestListener() {
+              @Override
+              public void onRequestProgress(long bytesWritten, long contentLength, boolean done) {
+                callback.onUploadProgress(bytesWritten, contentLength, done);
+              }
+            };
+      }
 
-      progressRequestListener =
-          new ProgressRequestBody.ProgressRequestListener() {
-            @Override
-            public void onRequestProgress(long bytesWritten, long contentLength, boolean done) {
-              callback.onUploadProgress(bytesWritten, contentLength, done);
-            }
-          };
+      com.squareup.okhttp.Call call =
+          bidwordAddValidateBeforeCall(data, progressListener, progressRequestListener, headerPair);
+      Type localVarReturnType = new TypeToken<BidwordAddResponse>() {}.getType();
+      apiClient.executeAsync(call, localVarReturnType, callback);
+      return call;
+    } finally {
+      ApiClient.clearBasePathTLVal();
     }
-
-    com.squareup.okhttp.Call call =
-        bidwordAddValidateBeforeCall(data, progressListener, progressRequestListener, headerPair);
-    Type localVarReturnType = new TypeToken<BidwordAddResponse>() {}.getType();
-    apiClient.executeAsync(call, localVarReturnType, callback);
-    return call;
   }
   /**
    * Build call for bidwordDelete
@@ -323,8 +332,13 @@ public class BidwordApi {
    */
   public BidwordDeleteResponse bidwordDelete(BidwordDeleteRequest data, String... headerPair)
       throws ApiException {
-    ApiResponse<BidwordDeleteResponse> resp = bidwordDeleteWithHttpInfo(data, headerPair);
-    return resp.getData();
+    try {
+      ApiClient.setBasePathTLVal("https://api.e.qq.com/v3.0");
+      ApiResponse<BidwordDeleteResponse> resp = bidwordDeleteWithHttpInfo(data, headerPair);
+      return resp.getData();
+    } finally {
+      ApiClient.clearBasePathTLVal();
+    }
   }
 
   /**
@@ -355,34 +369,38 @@ public class BidwordApi {
       final ApiCallback<BidwordDeleteResponse> callback,
       String... headerPair)
       throws ApiException {
+    try {
+      ApiClient.setBasePathTLVal("https://api.e.qq.com/v3.0");
+      ProgressResponseBody.ProgressListener progressListener = null;
+      ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
 
-    ProgressResponseBody.ProgressListener progressListener = null;
-    ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
+      if (callback != null) {
+        progressListener =
+            new ProgressResponseBody.ProgressListener() {
+              @Override
+              public void update(long bytesRead, long contentLength, boolean done) {
+                callback.onDownloadProgress(bytesRead, contentLength, done);
+              }
+            };
 
-    if (callback != null) {
-      progressListener =
-          new ProgressResponseBody.ProgressListener() {
-            @Override
-            public void update(long bytesRead, long contentLength, boolean done) {
-              callback.onDownloadProgress(bytesRead, contentLength, done);
-            }
-          };
+        progressRequestListener =
+            new ProgressRequestBody.ProgressRequestListener() {
+              @Override
+              public void onRequestProgress(long bytesWritten, long contentLength, boolean done) {
+                callback.onUploadProgress(bytesWritten, contentLength, done);
+              }
+            };
+      }
 
-      progressRequestListener =
-          new ProgressRequestBody.ProgressRequestListener() {
-            @Override
-            public void onRequestProgress(long bytesWritten, long contentLength, boolean done) {
-              callback.onUploadProgress(bytesWritten, contentLength, done);
-            }
-          };
+      com.squareup.okhttp.Call call =
+          bidwordDeleteValidateBeforeCall(
+              data, progressListener, progressRequestListener, headerPair);
+      Type localVarReturnType = new TypeToken<BidwordDeleteResponse>() {}.getType();
+      apiClient.executeAsync(call, localVarReturnType, callback);
+      return call;
+    } finally {
+      ApiClient.clearBasePathTLVal();
     }
-
-    com.squareup.okhttp.Call call =
-        bidwordDeleteValidateBeforeCall(
-            data, progressListener, progressRequestListener, headerPair);
-    Type localVarReturnType = new TypeToken<BidwordDeleteResponse>() {}.getType();
-    apiClient.executeAsync(call, localVarReturnType, callback);
-    return call;
   }
   /**
    * Build call for bidwordGet
@@ -537,9 +555,15 @@ public class BidwordApi {
       List<String> fields,
       String... headerPair)
       throws ApiException {
-    ApiResponse<BidwordGetResponse> resp =
-        bidwordGetWithHttpInfo(accountId, filtering, page, pageSize, isDeleted, fields, headerPair);
-    return resp.getData();
+    try {
+      ApiClient.setBasePathTLVal("https://api.e.qq.com/v3.0");
+      ApiResponse<BidwordGetResponse> resp =
+          bidwordGetWithHttpInfo(
+              accountId, filtering, page, pageSize, isDeleted, fields, headerPair);
+      return resp.getData();
+    } finally {
+      ApiClient.clearBasePathTLVal();
+    }
   }
 
   /**
@@ -594,42 +618,46 @@ public class BidwordApi {
       final ApiCallback<BidwordGetResponse> callback,
       String... headerPair)
       throws ApiException {
+    try {
+      ApiClient.setBasePathTLVal("https://api.e.qq.com/v3.0");
+      ProgressResponseBody.ProgressListener progressListener = null;
+      ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
 
-    ProgressResponseBody.ProgressListener progressListener = null;
-    ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
+      if (callback != null) {
+        progressListener =
+            new ProgressResponseBody.ProgressListener() {
+              @Override
+              public void update(long bytesRead, long contentLength, boolean done) {
+                callback.onDownloadProgress(bytesRead, contentLength, done);
+              }
+            };
 
-    if (callback != null) {
-      progressListener =
-          new ProgressResponseBody.ProgressListener() {
-            @Override
-            public void update(long bytesRead, long contentLength, boolean done) {
-              callback.onDownloadProgress(bytesRead, contentLength, done);
-            }
-          };
+        progressRequestListener =
+            new ProgressRequestBody.ProgressRequestListener() {
+              @Override
+              public void onRequestProgress(long bytesWritten, long contentLength, boolean done) {
+                callback.onUploadProgress(bytesWritten, contentLength, done);
+              }
+            };
+      }
 
-      progressRequestListener =
-          new ProgressRequestBody.ProgressRequestListener() {
-            @Override
-            public void onRequestProgress(long bytesWritten, long contentLength, boolean done) {
-              callback.onUploadProgress(bytesWritten, contentLength, done);
-            }
-          };
+      com.squareup.okhttp.Call call =
+          bidwordGetValidateBeforeCall(
+              accountId,
+              filtering,
+              page,
+              pageSize,
+              isDeleted,
+              fields,
+              progressListener,
+              progressRequestListener,
+              headerPair);
+      Type localVarReturnType = new TypeToken<BidwordGetResponse>() {}.getType();
+      apiClient.executeAsync(call, localVarReturnType, callback);
+      return call;
+    } finally {
+      ApiClient.clearBasePathTLVal();
     }
-
-    com.squareup.okhttp.Call call =
-        bidwordGetValidateBeforeCall(
-            accountId,
-            filtering,
-            page,
-            pageSize,
-            isDeleted,
-            fields,
-            progressListener,
-            progressRequestListener,
-            headerPair);
-    Type localVarReturnType = new TypeToken<BidwordGetResponse>() {}.getType();
-    apiClient.executeAsync(call, localVarReturnType, callback);
-    return call;
   }
   /**
    * Build call for bidwordUpdate
@@ -736,8 +764,13 @@ public class BidwordApi {
    */
   public BidwordUpdateResponse bidwordUpdate(BidwordUpdateRequest data, String... headerPair)
       throws ApiException {
-    ApiResponse<BidwordUpdateResponse> resp = bidwordUpdateWithHttpInfo(data, headerPair);
-    return resp.getData();
+    try {
+      ApiClient.setBasePathTLVal("https://api.e.qq.com/v3.0");
+      ApiResponse<BidwordUpdateResponse> resp = bidwordUpdateWithHttpInfo(data, headerPair);
+      return resp.getData();
+    } finally {
+      ApiClient.clearBasePathTLVal();
+    }
   }
 
   /**
@@ -768,33 +801,37 @@ public class BidwordApi {
       final ApiCallback<BidwordUpdateResponse> callback,
       String... headerPair)
       throws ApiException {
+    try {
+      ApiClient.setBasePathTLVal("https://api.e.qq.com/v3.0");
+      ProgressResponseBody.ProgressListener progressListener = null;
+      ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
 
-    ProgressResponseBody.ProgressListener progressListener = null;
-    ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
+      if (callback != null) {
+        progressListener =
+            new ProgressResponseBody.ProgressListener() {
+              @Override
+              public void update(long bytesRead, long contentLength, boolean done) {
+                callback.onDownloadProgress(bytesRead, contentLength, done);
+              }
+            };
 
-    if (callback != null) {
-      progressListener =
-          new ProgressResponseBody.ProgressListener() {
-            @Override
-            public void update(long bytesRead, long contentLength, boolean done) {
-              callback.onDownloadProgress(bytesRead, contentLength, done);
-            }
-          };
+        progressRequestListener =
+            new ProgressRequestBody.ProgressRequestListener() {
+              @Override
+              public void onRequestProgress(long bytesWritten, long contentLength, boolean done) {
+                callback.onUploadProgress(bytesWritten, contentLength, done);
+              }
+            };
+      }
 
-      progressRequestListener =
-          new ProgressRequestBody.ProgressRequestListener() {
-            @Override
-            public void onRequestProgress(long bytesWritten, long contentLength, boolean done) {
-              callback.onUploadProgress(bytesWritten, contentLength, done);
-            }
-          };
+      com.squareup.okhttp.Call call =
+          bidwordUpdateValidateBeforeCall(
+              data, progressListener, progressRequestListener, headerPair);
+      Type localVarReturnType = new TypeToken<BidwordUpdateResponse>() {}.getType();
+      apiClient.executeAsync(call, localVarReturnType, callback);
+      return call;
+    } finally {
+      ApiClient.clearBasePathTLVal();
     }
-
-    com.squareup.okhttp.Call call =
-        bidwordUpdateValidateBeforeCall(
-            data, progressListener, progressRequestListener, headerPair);
-    Type localVarReturnType = new TypeToken<BidwordUpdateResponse>() {}.getType();
-    apiClient.executeAsync(call, localVarReturnType, callback);
-    return call;
   }
 }

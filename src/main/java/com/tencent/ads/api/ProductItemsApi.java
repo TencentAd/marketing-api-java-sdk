@@ -192,7 +192,6 @@ public class ProductItemsApi {
       final ApiCallback<ProductItemsAddResponse> callback,
       String... headerPair)
       throws ApiException {
-
     ProgressResponseBody.ProgressListener progressListener = null;
     ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
 
@@ -360,7 +359,6 @@ public class ProductItemsApi {
       final ApiCallback<ProductItemsBatchUpdateResponse> callback,
       String... headerPair)
       throws ApiException {
-
     ProgressResponseBody.ProgressListener progressListener = null;
     ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
 
@@ -582,7 +580,6 @@ public class ProductItemsApi {
       final ApiCallback<ProductItemsGetResponse> callback,
       String... headerPair)
       throws ApiException {
-
     ProgressResponseBody.ProgressListener progressListener = null;
     ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
 
@@ -755,7 +752,6 @@ public class ProductItemsApi {
       final ApiCallback<ProductItemsUpdateResponse> callback,
       String... headerPair)
       throws ApiException {
-
     ProgressResponseBody.ProgressListener progressListener = null;
     ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
 

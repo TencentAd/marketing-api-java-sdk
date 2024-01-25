@@ -190,7 +190,6 @@ public class PropertyFileSessionsApi {
       final ApiCallback<PropertyFileSessionsAddResponse> callback,
       String... headerPair)
       throws ApiException {
-
     ProgressResponseBody.ProgressListener progressListener = null;
     ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
 
@@ -358,7 +357,6 @@ public class PropertyFileSessionsApi {
       final ApiCallback<PropertyFileSessionsUpdateResponse> callback,
       String... headerPair)
       throws ApiException {
-
     ProgressResponseBody.ProgressListener progressListener = null;
     ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
 

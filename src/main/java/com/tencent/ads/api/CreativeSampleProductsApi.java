@@ -348,7 +348,6 @@ public class CreativeSampleProductsApi {
       final ApiCallback<CreativeSampleProductsGetResponse> callback,
       String... headerPair)
       throws ApiException {
-
     ProgressResponseBody.ProgressListener progressListener = null;
     ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
 

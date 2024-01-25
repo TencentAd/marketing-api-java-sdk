@@ -202,7 +202,6 @@ public class CampaignsApi {
       final ApiCallback<CampaignsAddResponse> callback,
       String... headerPair)
       throws ApiException {
-
     ProgressResponseBody.ProgressListener progressListener = null;
     ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
 
@@ -369,7 +368,6 @@ public class CampaignsApi {
       final ApiCallback<CampaignsAddNegativewordResponse> callback,
       String... headerPair)
       throws ApiException {
-
     ProgressResponseBody.ProgressListener progressListener = null;
     ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
 
@@ -535,7 +533,6 @@ public class CampaignsApi {
       final ApiCallback<CampaignsDeleteResponse> callback,
       String... headerPair)
       throws ApiException {
-
     ProgressResponseBody.ProgressListener progressListener = null;
     ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
 
@@ -805,7 +802,6 @@ public class CampaignsApi {
       final ApiCallback<CampaignsGetResponse> callback,
       String... headerPair)
       throws ApiException {
-
     ProgressResponseBody.ProgressListener progressListener = null;
     ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
 
@@ -982,7 +978,6 @@ public class CampaignsApi {
       final ApiCallback<CampaignsGetNegativewordResponse> callback,
       String... headerPair)
       throws ApiException {
-
     ProgressResponseBody.ProgressListener progressListener = null;
     ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
 
@@ -1148,7 +1143,6 @@ public class CampaignsApi {
       final ApiCallback<CampaignsUpdateResponse> callback,
       String... headerPair)
       throws ApiException {
-
     ProgressResponseBody.ProgressListener progressListener = null;
     ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
 
@@ -1318,7 +1312,6 @@ public class CampaignsApi {
       final ApiCallback<CampaignsUpdateConfiguredStatusResponse> callback,
       String... headerPair)
       throws ApiException {
-
     ProgressResponseBody.ProgressListener progressListener = null;
     ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
 
@@ -1486,7 +1479,6 @@ public class CampaignsApi {
       final ApiCallback<CampaignsUpdateDailyBudgetResponse> callback,
       String... headerPair)
       throws ApiException {
-
     ProgressResponseBody.ProgressListener progressListener = null;
     ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
 
@@ -1655,7 +1647,6 @@ public class CampaignsApi {
       final ApiCallback<CampaignsUpdateNegativewordResponse> callback,
       String... headerPair)
       throws ApiException {
-
     ProgressResponseBody.ProgressListener progressListener = null;
     ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
 

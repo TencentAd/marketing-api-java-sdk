@@ -188,7 +188,6 @@ public class KeywordRecommendApi {
       final ApiCallback<KeywordRecommendGetResponse> callback,
       String... headerPair)
       throws ApiException {
-
     ProgressResponseBody.ProgressListener progressListener = null;
     ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
 

@@ -280,7 +280,6 @@ public class WxPackageAccountApi {
       final ApiCallback<WxPackageAccountGetResponse> callback,
       String... headerPair)
       throws ApiException {
-
     ProgressResponseBody.ProgressListener progressListener = null;
     ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
 
@@ -518,7 +517,6 @@ public class WxPackageAccountApi {
       final ApiCallback<WxPackageAccountUpdateResponse> callback,
       String... headerPair)
       throws ApiException {
-
     ProgressResponseBody.ProgressListener progressListener = null;
     ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
 

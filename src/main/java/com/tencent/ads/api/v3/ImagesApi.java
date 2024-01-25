@@ -242,20 +242,25 @@ public class ImagesApi {
       Long resizeFileSize,
       String... headerPair)
       throws ApiException {
-    ApiResponse<ImagesAddResponse> resp =
-        imagesAddWithHttpInfo(
-            advertiserId,
-            uploadType,
-            imageSignature,
-            imageFile,
-            bytes,
-            imageUsage,
-            description,
-            resizeWidth,
-            resizeHeight,
-            resizeFileSize,
-            headerPair);
-    return resp.getData();
+    try {
+      ApiClient.setBasePathTLVal("https://api.e.qq.com/v3.0");
+      ApiResponse<ImagesAddResponse> resp =
+          imagesAddWithHttpInfo(
+              advertiserId,
+              uploadType,
+              imageSignature,
+              imageFile,
+              bytes,
+              imageUsage,
+              description,
+              resizeWidth,
+              resizeHeight,
+              resizeFileSize,
+              headerPair);
+      return resp.getData();
+    } finally {
+      ApiClient.clearBasePathTLVal();
+    }
   }
 
   /**
@@ -338,46 +343,50 @@ public class ImagesApi {
       final ApiCallback<ImagesAddResponse> callback,
       String... headerPair)
       throws ApiException {
+    try {
+      ApiClient.setBasePathTLVal("https://api.e.qq.com/v3.0");
+      ProgressResponseBody.ProgressListener progressListener = null;
+      ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
 
-    ProgressResponseBody.ProgressListener progressListener = null;
-    ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
+      if (callback != null) {
+        progressListener =
+            new ProgressResponseBody.ProgressListener() {
+              @Override
+              public void update(long bytesRead, long contentLength, boolean done) {
+                callback.onDownloadProgress(bytesRead, contentLength, done);
+              }
+            };
 
-    if (callback != null) {
-      progressListener =
-          new ProgressResponseBody.ProgressListener() {
-            @Override
-            public void update(long bytesRead, long contentLength, boolean done) {
-              callback.onDownloadProgress(bytesRead, contentLength, done);
-            }
-          };
+        progressRequestListener =
+            new ProgressRequestBody.ProgressRequestListener() {
+              @Override
+              public void onRequestProgress(long bytesWritten, long contentLength, boolean done) {
+                callback.onUploadProgress(bytesWritten, contentLength, done);
+              }
+            };
+      }
 
-      progressRequestListener =
-          new ProgressRequestBody.ProgressRequestListener() {
-            @Override
-            public void onRequestProgress(long bytesWritten, long contentLength, boolean done) {
-              callback.onUploadProgress(bytesWritten, contentLength, done);
-            }
-          };
+      com.squareup.okhttp.Call call =
+          imagesAddValidateBeforeCall(
+              advertiserId,
+              uploadType,
+              imageSignature,
+              imageFile,
+              bytes,
+              imageUsage,
+              description,
+              resizeWidth,
+              resizeHeight,
+              resizeFileSize,
+              progressListener,
+              progressRequestListener,
+              headerPair);
+      Type localVarReturnType = new TypeToken<ImagesAddResponse>() {}.getType();
+      apiClient.executeAsync(call, localVarReturnType, callback);
+      return call;
+    } finally {
+      ApiClient.clearBasePathTLVal();
     }
-
-    com.squareup.okhttp.Call call =
-        imagesAddValidateBeforeCall(
-            advertiserId,
-            uploadType,
-            imageSignature,
-            imageFile,
-            bytes,
-            imageUsage,
-            description,
-            resizeWidth,
-            resizeHeight,
-            resizeFileSize,
-            progressListener,
-            progressRequestListener,
-            headerPair);
-    Type localVarReturnType = new TypeToken<ImagesAddResponse>() {}.getType();
-    apiClient.executeAsync(call, localVarReturnType, callback);
-    return call;
   }
   /**
    * Build call for imagesDelete
@@ -484,8 +493,13 @@ public class ImagesApi {
    */
   public ImagesDeleteResponse imagesDelete(ImagesDeleteRequest data, String... headerPair)
       throws ApiException {
-    ApiResponse<ImagesDeleteResponse> resp = imagesDeleteWithHttpInfo(data, headerPair);
-    return resp.getData();
+    try {
+      ApiClient.setBasePathTLVal("https://api.e.qq.com/v3.0");
+      ApiResponse<ImagesDeleteResponse> resp = imagesDeleteWithHttpInfo(data, headerPair);
+      return resp.getData();
+    } finally {
+      ApiClient.clearBasePathTLVal();
+    }
   }
 
   /**
@@ -516,33 +530,38 @@ public class ImagesApi {
       final ApiCallback<ImagesDeleteResponse> callback,
       String... headerPair)
       throws ApiException {
+    try {
+      ApiClient.setBasePathTLVal("https://api.e.qq.com/v3.0");
+      ProgressResponseBody.ProgressListener progressListener = null;
+      ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
 
-    ProgressResponseBody.ProgressListener progressListener = null;
-    ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
+      if (callback != null) {
+        progressListener =
+            new ProgressResponseBody.ProgressListener() {
+              @Override
+              public void update(long bytesRead, long contentLength, boolean done) {
+                callback.onDownloadProgress(bytesRead, contentLength, done);
+              }
+            };
 
-    if (callback != null) {
-      progressListener =
-          new ProgressResponseBody.ProgressListener() {
-            @Override
-            public void update(long bytesRead, long contentLength, boolean done) {
-              callback.onDownloadProgress(bytesRead, contentLength, done);
-            }
-          };
+        progressRequestListener =
+            new ProgressRequestBody.ProgressRequestListener() {
+              @Override
+              public void onRequestProgress(long bytesWritten, long contentLength, boolean done) {
+                callback.onUploadProgress(bytesWritten, contentLength, done);
+              }
+            };
+      }
 
-      progressRequestListener =
-          new ProgressRequestBody.ProgressRequestListener() {
-            @Override
-            public void onRequestProgress(long bytesWritten, long contentLength, boolean done) {
-              callback.onUploadProgress(bytesWritten, contentLength, done);
-            }
-          };
+      com.squareup.okhttp.Call call =
+          imagesDeleteValidateBeforeCall(
+              data, progressListener, progressRequestListener, headerPair);
+      Type localVarReturnType = new TypeToken<ImagesDeleteResponse>() {}.getType();
+      apiClient.executeAsync(call, localVarReturnType, callback);
+      return call;
+    } finally {
+      ApiClient.clearBasePathTLVal();
     }
-
-    com.squareup.okhttp.Call call =
-        imagesDeleteValidateBeforeCall(data, progressListener, progressRequestListener, headerPair);
-    Type localVarReturnType = new TypeToken<ImagesDeleteResponse>() {}.getType();
-    apiClient.executeAsync(call, localVarReturnType, callback);
-    return call;
   }
   /**
    * Build call for imagesGet
@@ -704,10 +723,15 @@ public class ImagesApi {
       List<String> fields,
       String... headerPair)
       throws ApiException {
-    ApiResponse<ImagesGetResponse> resp =
-        imagesGetWithHttpInfo(
-            accountId, filtering, page, pageSize, labelId, businessScenario, fields, headerPair);
-    return resp.getData();
+    try {
+      ApiClient.setBasePathTLVal("https://api.e.qq.com/v3.0");
+      ApiResponse<ImagesGetResponse> resp =
+          imagesGetWithHttpInfo(
+              accountId, filtering, page, pageSize, labelId, businessScenario, fields, headerPair);
+      return resp.getData();
+    } finally {
+      ApiClient.clearBasePathTLVal();
+    }
   }
 
   /**
@@ -775,43 +799,47 @@ public class ImagesApi {
       final ApiCallback<ImagesGetResponse> callback,
       String... headerPair)
       throws ApiException {
+    try {
+      ApiClient.setBasePathTLVal("https://api.e.qq.com/v3.0");
+      ProgressResponseBody.ProgressListener progressListener = null;
+      ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
 
-    ProgressResponseBody.ProgressListener progressListener = null;
-    ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
+      if (callback != null) {
+        progressListener =
+            new ProgressResponseBody.ProgressListener() {
+              @Override
+              public void update(long bytesRead, long contentLength, boolean done) {
+                callback.onDownloadProgress(bytesRead, contentLength, done);
+              }
+            };
 
-    if (callback != null) {
-      progressListener =
-          new ProgressResponseBody.ProgressListener() {
-            @Override
-            public void update(long bytesRead, long contentLength, boolean done) {
-              callback.onDownloadProgress(bytesRead, contentLength, done);
-            }
-          };
+        progressRequestListener =
+            new ProgressRequestBody.ProgressRequestListener() {
+              @Override
+              public void onRequestProgress(long bytesWritten, long contentLength, boolean done) {
+                callback.onUploadProgress(bytesWritten, contentLength, done);
+              }
+            };
+      }
 
-      progressRequestListener =
-          new ProgressRequestBody.ProgressRequestListener() {
-            @Override
-            public void onRequestProgress(long bytesWritten, long contentLength, boolean done) {
-              callback.onUploadProgress(bytesWritten, contentLength, done);
-            }
-          };
+      com.squareup.okhttp.Call call =
+          imagesGetValidateBeforeCall(
+              accountId,
+              filtering,
+              page,
+              pageSize,
+              labelId,
+              businessScenario,
+              fields,
+              progressListener,
+              progressRequestListener,
+              headerPair);
+      Type localVarReturnType = new TypeToken<ImagesGetResponse>() {}.getType();
+      apiClient.executeAsync(call, localVarReturnType, callback);
+      return call;
+    } finally {
+      ApiClient.clearBasePathTLVal();
     }
-
-    com.squareup.okhttp.Call call =
-        imagesGetValidateBeforeCall(
-            accountId,
-            filtering,
-            page,
-            pageSize,
-            labelId,
-            businessScenario,
-            fields,
-            progressListener,
-            progressRequestListener,
-            headerPair);
-    Type localVarReturnType = new TypeToken<ImagesGetResponse>() {}.getType();
-    apiClient.executeAsync(call, localVarReturnType, callback);
-    return call;
   }
   /**
    * Build call for imagesUpdate
@@ -918,8 +946,13 @@ public class ImagesApi {
    */
   public ImagesUpdateResponse imagesUpdate(ImagesUpdateRequest data, String... headerPair)
       throws ApiException {
-    ApiResponse<ImagesUpdateResponse> resp = imagesUpdateWithHttpInfo(data, headerPair);
-    return resp.getData();
+    try {
+      ApiClient.setBasePathTLVal("https://api.e.qq.com/v3.0");
+      ApiResponse<ImagesUpdateResponse> resp = imagesUpdateWithHttpInfo(data, headerPair);
+      return resp.getData();
+    } finally {
+      ApiClient.clearBasePathTLVal();
+    }
   }
 
   /**
@@ -950,32 +983,37 @@ public class ImagesApi {
       final ApiCallback<ImagesUpdateResponse> callback,
       String... headerPair)
       throws ApiException {
+    try {
+      ApiClient.setBasePathTLVal("https://api.e.qq.com/v3.0");
+      ProgressResponseBody.ProgressListener progressListener = null;
+      ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
 
-    ProgressResponseBody.ProgressListener progressListener = null;
-    ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
+      if (callback != null) {
+        progressListener =
+            new ProgressResponseBody.ProgressListener() {
+              @Override
+              public void update(long bytesRead, long contentLength, boolean done) {
+                callback.onDownloadProgress(bytesRead, contentLength, done);
+              }
+            };
 
-    if (callback != null) {
-      progressListener =
-          new ProgressResponseBody.ProgressListener() {
-            @Override
-            public void update(long bytesRead, long contentLength, boolean done) {
-              callback.onDownloadProgress(bytesRead, contentLength, done);
-            }
-          };
+        progressRequestListener =
+            new ProgressRequestBody.ProgressRequestListener() {
+              @Override
+              public void onRequestProgress(long bytesWritten, long contentLength, boolean done) {
+                callback.onUploadProgress(bytesWritten, contentLength, done);
+              }
+            };
+      }
 
-      progressRequestListener =
-          new ProgressRequestBody.ProgressRequestListener() {
-            @Override
-            public void onRequestProgress(long bytesWritten, long contentLength, boolean done) {
-              callback.onUploadProgress(bytesWritten, contentLength, done);
-            }
-          };
+      com.squareup.okhttp.Call call =
+          imagesUpdateValidateBeforeCall(
+              data, progressListener, progressRequestListener, headerPair);
+      Type localVarReturnType = new TypeToken<ImagesUpdateResponse>() {}.getType();
+      apiClient.executeAsync(call, localVarReturnType, callback);
+      return call;
+    } finally {
+      ApiClient.clearBasePathTLVal();
     }
-
-    com.squareup.okhttp.Call call =
-        imagesUpdateValidateBeforeCall(data, progressListener, progressRequestListener, headerPair);
-    Type localVarReturnType = new TypeToken<ImagesUpdateResponse>() {}.getType();
-    apiClient.executeAsync(call, localVarReturnType, callback);
-    return call;
   }
 }

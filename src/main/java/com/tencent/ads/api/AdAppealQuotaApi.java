@@ -187,7 +187,6 @@ public class AdAppealQuotaApi {
       final ApiCallback<AdAppealQuotaGetResponse> callback,
       String... headerPair)
       throws ApiException {
-
     ProgressResponseBody.ProgressListener progressListener = null;
     ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
 

@@ -206,7 +206,6 @@ public class AdgroupsApi {
       final ApiCallback<AdgroupsAddResponse> callback,
       String... headerPair)
       throws ApiException {
-
     ProgressResponseBody.ProgressListener progressListener = null;
     ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
 
@@ -373,7 +372,6 @@ public class AdgroupsApi {
       final ApiCallback<AdgroupsAddNegativewordResponse> callback,
       String... headerPair)
       throws ApiException {
-
     ProgressResponseBody.ProgressListener progressListener = null;
     ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
 
@@ -539,7 +537,6 @@ public class AdgroupsApi {
       final ApiCallback<AdgroupsDeleteResponse> callback,
       String... headerPair)
       throws ApiException {
-
     ProgressResponseBody.ProgressListener progressListener = null;
     ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
 
@@ -809,7 +806,6 @@ public class AdgroupsApi {
       final ApiCallback<AdgroupsGetResponse> callback,
       String... headerPair)
       throws ApiException {
-
     ProgressResponseBody.ProgressListener progressListener = null;
     ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
 
@@ -986,7 +982,6 @@ public class AdgroupsApi {
       final ApiCallback<AdgroupsGetNegativewordResponse> callback,
       String... headerPair)
       throws ApiException {
-
     ProgressResponseBody.ProgressListener progressListener = null;
     ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
 
@@ -1152,7 +1147,6 @@ public class AdgroupsApi {
       final ApiCallback<AdgroupsUpdateResponse> callback,
       String... headerPair)
       throws ApiException {
-
     ProgressResponseBody.ProgressListener progressListener = null;
     ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
 
@@ -1320,7 +1314,6 @@ public class AdgroupsApi {
       final ApiCallback<AdgroupsUpdateBidAmountResponse> callback,
       String... headerPair)
       throws ApiException {
-
     ProgressResponseBody.ProgressListener progressListener = null;
     ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
 
@@ -1490,7 +1483,6 @@ public class AdgroupsApi {
       final ApiCallback<AdgroupsUpdateConfiguredStatusResponse> callback,
       String... headerPair)
       throws ApiException {
-
     ProgressResponseBody.ProgressListener progressListener = null;
     ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
 
@@ -1658,7 +1650,6 @@ public class AdgroupsApi {
       final ApiCallback<AdgroupsUpdateDailyBudgetResponse> callback,
       String... headerPair)
       throws ApiException {
-
     ProgressResponseBody.ProgressListener progressListener = null;
     ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
 
@@ -1826,7 +1817,6 @@ public class AdgroupsApi {
       final ApiCallback<AdgroupsUpdateDatetimeResponse> callback,
       String... headerPair)
       throws ApiException {
-
     ProgressResponseBody.ProgressListener progressListener = null;
     ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
 
@@ -1994,7 +1984,6 @@ public class AdgroupsApi {
       final ApiCallback<AdgroupsUpdateNegativewordResponse> callback,
       String... headerPair)
       throws ApiException {
-
     ProgressResponseBody.ProgressListener progressListener = null;
     ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
 

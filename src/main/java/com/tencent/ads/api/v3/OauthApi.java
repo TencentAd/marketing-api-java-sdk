@@ -205,10 +205,15 @@ public class OauthApi {
       List<String> fields,
       String... headerPair)
       throws ApiException {
-    ApiResponse<String> resp =
-        oauthAuthorizeWithHttpInfo(
-            clientId, redirectUri, state, scope, accountType, fields, headerPair);
-    return resp.getData();
+    try {
+      ApiClient.setBasePathTLVal("https://api.e.qq.com/v3.0");
+      ApiResponse<String> resp =
+          oauthAuthorizeWithHttpInfo(
+              clientId, redirectUri, state, scope, accountType, fields, headerPair);
+      return resp.getData();
+    } finally {
+      ApiClient.clearBasePathTLVal();
+    }
   }
 
   /**
@@ -263,42 +268,46 @@ public class OauthApi {
       final ApiCallback<String> callback,
       String... headerPair)
       throws ApiException {
+    try {
+      ApiClient.setBasePathTLVal("https://api.e.qq.com/v3.0");
+      ProgressResponseBody.ProgressListener progressListener = null;
+      ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
 
-    ProgressResponseBody.ProgressListener progressListener = null;
-    ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
+      if (callback != null) {
+        progressListener =
+            new ProgressResponseBody.ProgressListener() {
+              @Override
+              public void update(long bytesRead, long contentLength, boolean done) {
+                callback.onDownloadProgress(bytesRead, contentLength, done);
+              }
+            };
 
-    if (callback != null) {
-      progressListener =
-          new ProgressResponseBody.ProgressListener() {
-            @Override
-            public void update(long bytesRead, long contentLength, boolean done) {
-              callback.onDownloadProgress(bytesRead, contentLength, done);
-            }
-          };
+        progressRequestListener =
+            new ProgressRequestBody.ProgressRequestListener() {
+              @Override
+              public void onRequestProgress(long bytesWritten, long contentLength, boolean done) {
+                callback.onUploadProgress(bytesWritten, contentLength, done);
+              }
+            };
+      }
 
-      progressRequestListener =
-          new ProgressRequestBody.ProgressRequestListener() {
-            @Override
-            public void onRequestProgress(long bytesWritten, long contentLength, boolean done) {
-              callback.onUploadProgress(bytesWritten, contentLength, done);
-            }
-          };
+      com.squareup.okhttp.Call call =
+          oauthAuthorizeValidateBeforeCall(
+              clientId,
+              redirectUri,
+              state,
+              scope,
+              accountType,
+              fields,
+              progressListener,
+              progressRequestListener,
+              headerPair);
+      Type localVarReturnType = new TypeToken<String>() {}.getType();
+      apiClient.executeAsync(call, localVarReturnType, callback);
+      return call;
+    } finally {
+      ApiClient.clearBasePathTLVal();
     }
-
-    com.squareup.okhttp.Call call =
-        oauthAuthorizeValidateBeforeCall(
-            clientId,
-            redirectUri,
-            state,
-            scope,
-            accountType,
-            fields,
-            progressListener,
-            progressRequestListener,
-            headerPair);
-    Type localVarReturnType = new TypeToken<String>() {}.getType();
-    apiClient.executeAsync(call, localVarReturnType, callback);
-    return call;
   }
   /**
    * Build call for oauthToken
@@ -474,17 +483,22 @@ public class OauthApi {
       List<String> fields,
       String... headerPair)
       throws ApiException {
-    ApiResponse<OauthTokenResponse> resp =
-        oauthTokenWithHttpInfo(
-            clientId,
-            clientSecret,
-            grantType,
-            authorizationCode,
-            refreshToken,
-            redirectUri,
-            fields,
-            headerPair);
-    return resp.getData();
+    try {
+      ApiClient.setBasePathTLVal("https://api.e.qq.com/v3.0");
+      ApiResponse<OauthTokenResponse> resp =
+          oauthTokenWithHttpInfo(
+              clientId,
+              clientSecret,
+              grantType,
+              authorizationCode,
+              refreshToken,
+              redirectUri,
+              fields,
+              headerPair);
+      return resp.getData();
+    } finally {
+      ApiClient.clearBasePathTLVal();
+    }
   }
 
   /**
@@ -552,42 +566,46 @@ public class OauthApi {
       final ApiCallback<OauthTokenResponse> callback,
       String... headerPair)
       throws ApiException {
+    try {
+      ApiClient.setBasePathTLVal("https://api.e.qq.com/v3.0");
+      ProgressResponseBody.ProgressListener progressListener = null;
+      ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
 
-    ProgressResponseBody.ProgressListener progressListener = null;
-    ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
+      if (callback != null) {
+        progressListener =
+            new ProgressResponseBody.ProgressListener() {
+              @Override
+              public void update(long bytesRead, long contentLength, boolean done) {
+                callback.onDownloadProgress(bytesRead, contentLength, done);
+              }
+            };
 
-    if (callback != null) {
-      progressListener =
-          new ProgressResponseBody.ProgressListener() {
-            @Override
-            public void update(long bytesRead, long contentLength, boolean done) {
-              callback.onDownloadProgress(bytesRead, contentLength, done);
-            }
-          };
+        progressRequestListener =
+            new ProgressRequestBody.ProgressRequestListener() {
+              @Override
+              public void onRequestProgress(long bytesWritten, long contentLength, boolean done) {
+                callback.onUploadProgress(bytesWritten, contentLength, done);
+              }
+            };
+      }
 
-      progressRequestListener =
-          new ProgressRequestBody.ProgressRequestListener() {
-            @Override
-            public void onRequestProgress(long bytesWritten, long contentLength, boolean done) {
-              callback.onUploadProgress(bytesWritten, contentLength, done);
-            }
-          };
+      com.squareup.okhttp.Call call =
+          oauthTokenValidateBeforeCall(
+              clientId,
+              clientSecret,
+              grantType,
+              authorizationCode,
+              refreshToken,
+              redirectUri,
+              fields,
+              progressListener,
+              progressRequestListener,
+              headerPair);
+      Type localVarReturnType = new TypeToken<OauthTokenResponse>() {}.getType();
+      apiClient.executeAsync(call, localVarReturnType, callback);
+      return call;
+    } finally {
+      ApiClient.clearBasePathTLVal();
     }
-
-    com.squareup.okhttp.Call call =
-        oauthTokenValidateBeforeCall(
-            clientId,
-            clientSecret,
-            grantType,
-            authorizationCode,
-            refreshToken,
-            redirectUri,
-            fields,
-            progressListener,
-            progressRequestListener,
-            headerPair);
-    Type localVarReturnType = new TypeToken<OauthTokenResponse>() {}.getType();
-    apiClient.executeAsync(call, localVarReturnType, callback);
-    return call;
   }
 }

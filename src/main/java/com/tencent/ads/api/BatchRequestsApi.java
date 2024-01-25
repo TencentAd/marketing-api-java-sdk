@@ -187,7 +187,6 @@ public class BatchRequestsApi {
       final ApiCallback<BatchRequestsAddResponse> callback,
       String... headerPair)
       throws ApiException {
-
     ProgressResponseBody.ProgressListener progressListener = null;
     ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
 

@@ -160,8 +160,13 @@ public class LocalStoresApi {
    */
   public LocalStoresAddResponse localStoresAdd(LocalStoresAddRequest data, String... headerPair)
       throws ApiException {
-    ApiResponse<LocalStoresAddResponse> resp = localStoresAddWithHttpInfo(data, headerPair);
-    return resp.getData();
+    try {
+      ApiClient.setBasePathTLVal("https://api.e.qq.com/v3.0");
+      ApiResponse<LocalStoresAddResponse> resp = localStoresAddWithHttpInfo(data, headerPair);
+      return resp.getData();
+    } finally {
+      ApiClient.clearBasePathTLVal();
+    }
   }
 
   /**
@@ -192,34 +197,38 @@ public class LocalStoresApi {
       final ApiCallback<LocalStoresAddResponse> callback,
       String... headerPair)
       throws ApiException {
+    try {
+      ApiClient.setBasePathTLVal("https://api.e.qq.com/v3.0");
+      ProgressResponseBody.ProgressListener progressListener = null;
+      ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
 
-    ProgressResponseBody.ProgressListener progressListener = null;
-    ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
+      if (callback != null) {
+        progressListener =
+            new ProgressResponseBody.ProgressListener() {
+              @Override
+              public void update(long bytesRead, long contentLength, boolean done) {
+                callback.onDownloadProgress(bytesRead, contentLength, done);
+              }
+            };
 
-    if (callback != null) {
-      progressListener =
-          new ProgressResponseBody.ProgressListener() {
-            @Override
-            public void update(long bytesRead, long contentLength, boolean done) {
-              callback.onDownloadProgress(bytesRead, contentLength, done);
-            }
-          };
+        progressRequestListener =
+            new ProgressRequestBody.ProgressRequestListener() {
+              @Override
+              public void onRequestProgress(long bytesWritten, long contentLength, boolean done) {
+                callback.onUploadProgress(bytesWritten, contentLength, done);
+              }
+            };
+      }
 
-      progressRequestListener =
-          new ProgressRequestBody.ProgressRequestListener() {
-            @Override
-            public void onRequestProgress(long bytesWritten, long contentLength, boolean done) {
-              callback.onUploadProgress(bytesWritten, contentLength, done);
-            }
-          };
+      com.squareup.okhttp.Call call =
+          localStoresAddValidateBeforeCall(
+              data, progressListener, progressRequestListener, headerPair);
+      Type localVarReturnType = new TypeToken<LocalStoresAddResponse>() {}.getType();
+      apiClient.executeAsync(call, localVarReturnType, callback);
+      return call;
+    } finally {
+      ApiClient.clearBasePathTLVal();
     }
-
-    com.squareup.okhttp.Call call =
-        localStoresAddValidateBeforeCall(
-            data, progressListener, progressRequestListener, headerPair);
-    Type localVarReturnType = new TypeToken<LocalStoresAddResponse>() {}.getType();
-    apiClient.executeAsync(call, localVarReturnType, callback);
-    return call;
   }
   /**
    * Build call for localStoresDelete
@@ -326,8 +335,13 @@ public class LocalStoresApi {
    */
   public LocalStoresDeleteResponse localStoresDelete(
       LocalStoresDeleteRequest data, String... headerPair) throws ApiException {
-    ApiResponse<LocalStoresDeleteResponse> resp = localStoresDeleteWithHttpInfo(data, headerPair);
-    return resp.getData();
+    try {
+      ApiClient.setBasePathTLVal("https://api.e.qq.com/v3.0");
+      ApiResponse<LocalStoresDeleteResponse> resp = localStoresDeleteWithHttpInfo(data, headerPair);
+      return resp.getData();
+    } finally {
+      ApiClient.clearBasePathTLVal();
+    }
   }
 
   /**
@@ -359,34 +373,38 @@ public class LocalStoresApi {
       final ApiCallback<LocalStoresDeleteResponse> callback,
       String... headerPair)
       throws ApiException {
+    try {
+      ApiClient.setBasePathTLVal("https://api.e.qq.com/v3.0");
+      ProgressResponseBody.ProgressListener progressListener = null;
+      ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
 
-    ProgressResponseBody.ProgressListener progressListener = null;
-    ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
+      if (callback != null) {
+        progressListener =
+            new ProgressResponseBody.ProgressListener() {
+              @Override
+              public void update(long bytesRead, long contentLength, boolean done) {
+                callback.onDownloadProgress(bytesRead, contentLength, done);
+              }
+            };
 
-    if (callback != null) {
-      progressListener =
-          new ProgressResponseBody.ProgressListener() {
-            @Override
-            public void update(long bytesRead, long contentLength, boolean done) {
-              callback.onDownloadProgress(bytesRead, contentLength, done);
-            }
-          };
+        progressRequestListener =
+            new ProgressRequestBody.ProgressRequestListener() {
+              @Override
+              public void onRequestProgress(long bytesWritten, long contentLength, boolean done) {
+                callback.onUploadProgress(bytesWritten, contentLength, done);
+              }
+            };
+      }
 
-      progressRequestListener =
-          new ProgressRequestBody.ProgressRequestListener() {
-            @Override
-            public void onRequestProgress(long bytesWritten, long contentLength, boolean done) {
-              callback.onUploadProgress(bytesWritten, contentLength, done);
-            }
-          };
+      com.squareup.okhttp.Call call =
+          localStoresDeleteValidateBeforeCall(
+              data, progressListener, progressRequestListener, headerPair);
+      Type localVarReturnType = new TypeToken<LocalStoresDeleteResponse>() {}.getType();
+      apiClient.executeAsync(call, localVarReturnType, callback);
+      return call;
+    } finally {
+      ApiClient.clearBasePathTLVal();
     }
-
-    com.squareup.okhttp.Call call =
-        localStoresDeleteValidateBeforeCall(
-            data, progressListener, progressRequestListener, headerPair);
-    Type localVarReturnType = new TypeToken<LocalStoresDeleteResponse>() {}.getType();
-    apiClient.executeAsync(call, localVarReturnType, callback);
-    return call;
   }
   /**
    * Build call for localStoresGet
@@ -533,9 +551,14 @@ public class LocalStoresApi {
       List<String> fields,
       String... headerPair)
       throws ApiException {
-    ApiResponse<LocalStoresGetResponse> resp =
-        localStoresGetWithHttpInfo(accountId, filtering, page, pageSize, fields, headerPair);
-    return resp.getData();
+    try {
+      ApiClient.setBasePathTLVal("https://api.e.qq.com/v3.0");
+      ApiResponse<LocalStoresGetResponse> resp =
+          localStoresGetWithHttpInfo(accountId, filtering, page, pageSize, fields, headerPair);
+      return resp.getData();
+    } finally {
+      ApiClient.clearBasePathTLVal();
+    }
   }
 
   /**
@@ -586,41 +609,45 @@ public class LocalStoresApi {
       final ApiCallback<LocalStoresGetResponse> callback,
       String... headerPair)
       throws ApiException {
+    try {
+      ApiClient.setBasePathTLVal("https://api.e.qq.com/v3.0");
+      ProgressResponseBody.ProgressListener progressListener = null;
+      ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
 
-    ProgressResponseBody.ProgressListener progressListener = null;
-    ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
+      if (callback != null) {
+        progressListener =
+            new ProgressResponseBody.ProgressListener() {
+              @Override
+              public void update(long bytesRead, long contentLength, boolean done) {
+                callback.onDownloadProgress(bytesRead, contentLength, done);
+              }
+            };
 
-    if (callback != null) {
-      progressListener =
-          new ProgressResponseBody.ProgressListener() {
-            @Override
-            public void update(long bytesRead, long contentLength, boolean done) {
-              callback.onDownloadProgress(bytesRead, contentLength, done);
-            }
-          };
+        progressRequestListener =
+            new ProgressRequestBody.ProgressRequestListener() {
+              @Override
+              public void onRequestProgress(long bytesWritten, long contentLength, boolean done) {
+                callback.onUploadProgress(bytesWritten, contentLength, done);
+              }
+            };
+      }
 
-      progressRequestListener =
-          new ProgressRequestBody.ProgressRequestListener() {
-            @Override
-            public void onRequestProgress(long bytesWritten, long contentLength, boolean done) {
-              callback.onUploadProgress(bytesWritten, contentLength, done);
-            }
-          };
+      com.squareup.okhttp.Call call =
+          localStoresGetValidateBeforeCall(
+              accountId,
+              filtering,
+              page,
+              pageSize,
+              fields,
+              progressListener,
+              progressRequestListener,
+              headerPair);
+      Type localVarReturnType = new TypeToken<LocalStoresGetResponse>() {}.getType();
+      apiClient.executeAsync(call, localVarReturnType, callback);
+      return call;
+    } finally {
+      ApiClient.clearBasePathTLVal();
     }
-
-    com.squareup.okhttp.Call call =
-        localStoresGetValidateBeforeCall(
-            accountId,
-            filtering,
-            page,
-            pageSize,
-            fields,
-            progressListener,
-            progressRequestListener,
-            headerPair);
-    Type localVarReturnType = new TypeToken<LocalStoresGetResponse>() {}.getType();
-    apiClient.executeAsync(call, localVarReturnType, callback);
-    return call;
   }
   /**
    * Build call for localStoresUpdate
@@ -727,8 +754,13 @@ public class LocalStoresApi {
    */
   public LocalStoresUpdateResponse localStoresUpdate(
       LocalStoresUpdateRequest data, String... headerPair) throws ApiException {
-    ApiResponse<LocalStoresUpdateResponse> resp = localStoresUpdateWithHttpInfo(data, headerPair);
-    return resp.getData();
+    try {
+      ApiClient.setBasePathTLVal("https://api.e.qq.com/v3.0");
+      ApiResponse<LocalStoresUpdateResponse> resp = localStoresUpdateWithHttpInfo(data, headerPair);
+      return resp.getData();
+    } finally {
+      ApiClient.clearBasePathTLVal();
+    }
   }
 
   /**
@@ -760,33 +792,37 @@ public class LocalStoresApi {
       final ApiCallback<LocalStoresUpdateResponse> callback,
       String... headerPair)
       throws ApiException {
+    try {
+      ApiClient.setBasePathTLVal("https://api.e.qq.com/v3.0");
+      ProgressResponseBody.ProgressListener progressListener = null;
+      ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
 
-    ProgressResponseBody.ProgressListener progressListener = null;
-    ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
+      if (callback != null) {
+        progressListener =
+            new ProgressResponseBody.ProgressListener() {
+              @Override
+              public void update(long bytesRead, long contentLength, boolean done) {
+                callback.onDownloadProgress(bytesRead, contentLength, done);
+              }
+            };
 
-    if (callback != null) {
-      progressListener =
-          new ProgressResponseBody.ProgressListener() {
-            @Override
-            public void update(long bytesRead, long contentLength, boolean done) {
-              callback.onDownloadProgress(bytesRead, contentLength, done);
-            }
-          };
+        progressRequestListener =
+            new ProgressRequestBody.ProgressRequestListener() {
+              @Override
+              public void onRequestProgress(long bytesWritten, long contentLength, boolean done) {
+                callback.onUploadProgress(bytesWritten, contentLength, done);
+              }
+            };
+      }
 
-      progressRequestListener =
-          new ProgressRequestBody.ProgressRequestListener() {
-            @Override
-            public void onRequestProgress(long bytesWritten, long contentLength, boolean done) {
-              callback.onUploadProgress(bytesWritten, contentLength, done);
-            }
-          };
+      com.squareup.okhttp.Call call =
+          localStoresUpdateValidateBeforeCall(
+              data, progressListener, progressRequestListener, headerPair);
+      Type localVarReturnType = new TypeToken<LocalStoresUpdateResponse>() {}.getType();
+      apiClient.executeAsync(call, localVarReturnType, callback);
+      return call;
+    } finally {
+      ApiClient.clearBasePathTLVal();
     }
-
-    com.squareup.okhttp.Call call =
-        localStoresUpdateValidateBeforeCall(
-            data, progressListener, progressRequestListener, headerPair);
-    Type localVarReturnType = new TypeToken<LocalStoresUpdateResponse>() {}.getType();
-    apiClient.executeAsync(call, localVarReturnType, callback);
-    return call;
   }
 }

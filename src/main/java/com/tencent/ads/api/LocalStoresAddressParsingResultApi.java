@@ -192,7 +192,6 @@ public class LocalStoresAddressParsingResultApi {
       final ApiCallback<LocalStoresAddressParsingResultGetResponse> callback,
       String... headerPair)
       throws ApiException {
-
     ProgressResponseBody.ProgressListener progressListener = null;
     ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
 

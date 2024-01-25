@@ -188,7 +188,6 @@ public class AsyncReportsApi {
       final ApiCallback<AsyncReportsAddResponse> callback,
       String... headerPair)
       throws ApiException {
-
     ProgressResponseBody.ProgressListener progressListener = null;
     ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
 
@@ -444,7 +443,6 @@ public class AsyncReportsApi {
       final ApiCallback<AsyncReportsGetResponse> callback,
       String... headerPair)
       throws ApiException {
-
     ProgressResponseBody.ProgressListener progressListener = null;
     ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
 

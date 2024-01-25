@@ -160,8 +160,13 @@ public class AdgroupsApi {
    */
   public AdgroupsAddResponse adgroupsAdd(AdgroupsAddRequest data, String... headerPair)
       throws ApiException {
-    ApiResponse<AdgroupsAddResponse> resp = adgroupsAddWithHttpInfo(data, headerPair);
-    return resp.getData();
+    try {
+      ApiClient.setBasePathTLVal("https://api.e.qq.com/v3.0");
+      ApiResponse<AdgroupsAddResponse> resp = adgroupsAddWithHttpInfo(data, headerPair);
+      return resp.getData();
+    } finally {
+      ApiClient.clearBasePathTLVal();
+    }
   }
 
   /**
@@ -192,33 +197,38 @@ public class AdgroupsApi {
       final ApiCallback<AdgroupsAddResponse> callback,
       String... headerPair)
       throws ApiException {
+    try {
+      ApiClient.setBasePathTLVal("https://api.e.qq.com/v3.0");
+      ProgressResponseBody.ProgressListener progressListener = null;
+      ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
 
-    ProgressResponseBody.ProgressListener progressListener = null;
-    ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
+      if (callback != null) {
+        progressListener =
+            new ProgressResponseBody.ProgressListener() {
+              @Override
+              public void update(long bytesRead, long contentLength, boolean done) {
+                callback.onDownloadProgress(bytesRead, contentLength, done);
+              }
+            };
 
-    if (callback != null) {
-      progressListener =
-          new ProgressResponseBody.ProgressListener() {
-            @Override
-            public void update(long bytesRead, long contentLength, boolean done) {
-              callback.onDownloadProgress(bytesRead, contentLength, done);
-            }
-          };
+        progressRequestListener =
+            new ProgressRequestBody.ProgressRequestListener() {
+              @Override
+              public void onRequestProgress(long bytesWritten, long contentLength, boolean done) {
+                callback.onUploadProgress(bytesWritten, contentLength, done);
+              }
+            };
+      }
 
-      progressRequestListener =
-          new ProgressRequestBody.ProgressRequestListener() {
-            @Override
-            public void onRequestProgress(long bytesWritten, long contentLength, boolean done) {
-              callback.onUploadProgress(bytesWritten, contentLength, done);
-            }
-          };
+      com.squareup.okhttp.Call call =
+          adgroupsAddValidateBeforeCall(
+              data, progressListener, progressRequestListener, headerPair);
+      Type localVarReturnType = new TypeToken<AdgroupsAddResponse>() {}.getType();
+      apiClient.executeAsync(call, localVarReturnType, callback);
+      return call;
+    } finally {
+      ApiClient.clearBasePathTLVal();
     }
-
-    com.squareup.okhttp.Call call =
-        adgroupsAddValidateBeforeCall(data, progressListener, progressRequestListener, headerPair);
-    Type localVarReturnType = new TypeToken<AdgroupsAddResponse>() {}.getType();
-    apiClient.executeAsync(call, localVarReturnType, callback);
-    return call;
   }
   /**
    * Build call for adgroupsDelete
@@ -325,8 +335,13 @@ public class AdgroupsApi {
    */
   public AdgroupsDeleteResponse adgroupsDelete(AdgroupsDeleteRequest data, String... headerPair)
       throws ApiException {
-    ApiResponse<AdgroupsDeleteResponse> resp = adgroupsDeleteWithHttpInfo(data, headerPair);
-    return resp.getData();
+    try {
+      ApiClient.setBasePathTLVal("https://api.e.qq.com/v3.0");
+      ApiResponse<AdgroupsDeleteResponse> resp = adgroupsDeleteWithHttpInfo(data, headerPair);
+      return resp.getData();
+    } finally {
+      ApiClient.clearBasePathTLVal();
+    }
   }
 
   /**
@@ -357,34 +372,38 @@ public class AdgroupsApi {
       final ApiCallback<AdgroupsDeleteResponse> callback,
       String... headerPair)
       throws ApiException {
+    try {
+      ApiClient.setBasePathTLVal("https://api.e.qq.com/v3.0");
+      ProgressResponseBody.ProgressListener progressListener = null;
+      ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
 
-    ProgressResponseBody.ProgressListener progressListener = null;
-    ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
+      if (callback != null) {
+        progressListener =
+            new ProgressResponseBody.ProgressListener() {
+              @Override
+              public void update(long bytesRead, long contentLength, boolean done) {
+                callback.onDownloadProgress(bytesRead, contentLength, done);
+              }
+            };
 
-    if (callback != null) {
-      progressListener =
-          new ProgressResponseBody.ProgressListener() {
-            @Override
-            public void update(long bytesRead, long contentLength, boolean done) {
-              callback.onDownloadProgress(bytesRead, contentLength, done);
-            }
-          };
+        progressRequestListener =
+            new ProgressRequestBody.ProgressRequestListener() {
+              @Override
+              public void onRequestProgress(long bytesWritten, long contentLength, boolean done) {
+                callback.onUploadProgress(bytesWritten, contentLength, done);
+              }
+            };
+      }
 
-      progressRequestListener =
-          new ProgressRequestBody.ProgressRequestListener() {
-            @Override
-            public void onRequestProgress(long bytesWritten, long contentLength, boolean done) {
-              callback.onUploadProgress(bytesWritten, contentLength, done);
-            }
-          };
+      com.squareup.okhttp.Call call =
+          adgroupsDeleteValidateBeforeCall(
+              data, progressListener, progressRequestListener, headerPair);
+      Type localVarReturnType = new TypeToken<AdgroupsDeleteResponse>() {}.getType();
+      apiClient.executeAsync(call, localVarReturnType, callback);
+      return call;
+    } finally {
+      ApiClient.clearBasePathTLVal();
     }
-
-    com.squareup.okhttp.Call call =
-        adgroupsDeleteValidateBeforeCall(
-            data, progressListener, progressRequestListener, headerPair);
-    Type localVarReturnType = new TypeToken<AdgroupsDeleteResponse>() {}.getType();
-    apiClient.executeAsync(call, localVarReturnType, callback);
-    return call;
   }
   /**
    * Build call for adgroupsGet
@@ -539,10 +558,15 @@ public class AdgroupsApi {
       List<String> fields,
       String... headerPair)
       throws ApiException {
-    ApiResponse<AdgroupsGetResponse> resp =
-        adgroupsGetWithHttpInfo(
-            accountId, filtering, page, pageSize, isDeleted, fields, headerPair);
-    return resp.getData();
+    try {
+      ApiClient.setBasePathTLVal("https://api.e.qq.com/v3.0");
+      ApiResponse<AdgroupsGetResponse> resp =
+          adgroupsGetWithHttpInfo(
+              accountId, filtering, page, pageSize, isDeleted, fields, headerPair);
+      return resp.getData();
+    } finally {
+      ApiClient.clearBasePathTLVal();
+    }
   }
 
   /**
@@ -597,42 +621,46 @@ public class AdgroupsApi {
       final ApiCallback<AdgroupsGetResponse> callback,
       String... headerPair)
       throws ApiException {
+    try {
+      ApiClient.setBasePathTLVal("https://api.e.qq.com/v3.0");
+      ProgressResponseBody.ProgressListener progressListener = null;
+      ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
 
-    ProgressResponseBody.ProgressListener progressListener = null;
-    ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
+      if (callback != null) {
+        progressListener =
+            new ProgressResponseBody.ProgressListener() {
+              @Override
+              public void update(long bytesRead, long contentLength, boolean done) {
+                callback.onDownloadProgress(bytesRead, contentLength, done);
+              }
+            };
 
-    if (callback != null) {
-      progressListener =
-          new ProgressResponseBody.ProgressListener() {
-            @Override
-            public void update(long bytesRead, long contentLength, boolean done) {
-              callback.onDownloadProgress(bytesRead, contentLength, done);
-            }
-          };
+        progressRequestListener =
+            new ProgressRequestBody.ProgressRequestListener() {
+              @Override
+              public void onRequestProgress(long bytesWritten, long contentLength, boolean done) {
+                callback.onUploadProgress(bytesWritten, contentLength, done);
+              }
+            };
+      }
 
-      progressRequestListener =
-          new ProgressRequestBody.ProgressRequestListener() {
-            @Override
-            public void onRequestProgress(long bytesWritten, long contentLength, boolean done) {
-              callback.onUploadProgress(bytesWritten, contentLength, done);
-            }
-          };
+      com.squareup.okhttp.Call call =
+          adgroupsGetValidateBeforeCall(
+              accountId,
+              filtering,
+              page,
+              pageSize,
+              isDeleted,
+              fields,
+              progressListener,
+              progressRequestListener,
+              headerPair);
+      Type localVarReturnType = new TypeToken<AdgroupsGetResponse>() {}.getType();
+      apiClient.executeAsync(call, localVarReturnType, callback);
+      return call;
+    } finally {
+      ApiClient.clearBasePathTLVal();
     }
-
-    com.squareup.okhttp.Call call =
-        adgroupsGetValidateBeforeCall(
-            accountId,
-            filtering,
-            page,
-            pageSize,
-            isDeleted,
-            fields,
-            progressListener,
-            progressRequestListener,
-            headerPair);
-    Type localVarReturnType = new TypeToken<AdgroupsGetResponse>() {}.getType();
-    apiClient.executeAsync(call, localVarReturnType, callback);
-    return call;
   }
   /**
    * Build call for adgroupsUpdate
@@ -739,8 +767,13 @@ public class AdgroupsApi {
    */
   public AdgroupsUpdateResponse adgroupsUpdate(AdgroupsUpdateRequest data, String... headerPair)
       throws ApiException {
-    ApiResponse<AdgroupsUpdateResponse> resp = adgroupsUpdateWithHttpInfo(data, headerPair);
-    return resp.getData();
+    try {
+      ApiClient.setBasePathTLVal("https://api.e.qq.com/v3.0");
+      ApiResponse<AdgroupsUpdateResponse> resp = adgroupsUpdateWithHttpInfo(data, headerPair);
+      return resp.getData();
+    } finally {
+      ApiClient.clearBasePathTLVal();
+    }
   }
 
   /**
@@ -771,33 +804,37 @@ public class AdgroupsApi {
       final ApiCallback<AdgroupsUpdateResponse> callback,
       String... headerPair)
       throws ApiException {
+    try {
+      ApiClient.setBasePathTLVal("https://api.e.qq.com/v3.0");
+      ProgressResponseBody.ProgressListener progressListener = null;
+      ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
 
-    ProgressResponseBody.ProgressListener progressListener = null;
-    ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
+      if (callback != null) {
+        progressListener =
+            new ProgressResponseBody.ProgressListener() {
+              @Override
+              public void update(long bytesRead, long contentLength, boolean done) {
+                callback.onDownloadProgress(bytesRead, contentLength, done);
+              }
+            };
 
-    if (callback != null) {
-      progressListener =
-          new ProgressResponseBody.ProgressListener() {
-            @Override
-            public void update(long bytesRead, long contentLength, boolean done) {
-              callback.onDownloadProgress(bytesRead, contentLength, done);
-            }
-          };
+        progressRequestListener =
+            new ProgressRequestBody.ProgressRequestListener() {
+              @Override
+              public void onRequestProgress(long bytesWritten, long contentLength, boolean done) {
+                callback.onUploadProgress(bytesWritten, contentLength, done);
+              }
+            };
+      }
 
-      progressRequestListener =
-          new ProgressRequestBody.ProgressRequestListener() {
-            @Override
-            public void onRequestProgress(long bytesWritten, long contentLength, boolean done) {
-              callback.onUploadProgress(bytesWritten, contentLength, done);
-            }
-          };
+      com.squareup.okhttp.Call call =
+          adgroupsUpdateValidateBeforeCall(
+              data, progressListener, progressRequestListener, headerPair);
+      Type localVarReturnType = new TypeToken<AdgroupsUpdateResponse>() {}.getType();
+      apiClient.executeAsync(call, localVarReturnType, callback);
+      return call;
+    } finally {
+      ApiClient.clearBasePathTLVal();
     }
-
-    com.squareup.okhttp.Call call =
-        adgroupsUpdateValidateBeforeCall(
-            data, progressListener, progressRequestListener, headerPair);
-    Type localVarReturnType = new TypeToken<AdgroupsUpdateResponse>() {}.getType();
-    apiClient.executeAsync(call, localVarReturnType, callback);
-    return call;
   }
 }

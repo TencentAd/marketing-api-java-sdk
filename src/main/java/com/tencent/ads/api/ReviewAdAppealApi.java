@@ -189,7 +189,6 @@ public class ReviewAdAppealApi {
       final ApiCallback<ReviewAdAppealAddResponse> callback,
       String... headerPair)
       throws ApiException {
-
     ProgressResponseBody.ProgressListener progressListener = null;
     ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
 
@@ -356,7 +355,6 @@ public class ReviewAdAppealApi {
       final ApiCallback<ReviewAdAppealGetResponse> callback,
       String... headerPair)
       throws ApiException {
-
     ProgressResponseBody.ProgressListener progressListener = null;
     ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
 

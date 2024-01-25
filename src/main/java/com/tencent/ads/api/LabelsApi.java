@@ -247,7 +247,6 @@ public class LabelsApi {
       final ApiCallback<LabelsGetResponse> callback,
       String... headerPair)
       throws ApiException {
-
     ProgressResponseBody.ProgressListener progressListener = null;
     ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
 

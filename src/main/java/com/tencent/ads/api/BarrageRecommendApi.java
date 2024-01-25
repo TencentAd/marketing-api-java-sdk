@@ -199,7 +199,6 @@ public class BarrageRecommendApi {
       final ApiCallback<BarrageRecommendGetResponse> callback,
       String... headerPair)
       throws ApiException {
-
     ProgressResponseBody.ProgressListener progressListener = null;
     ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
 

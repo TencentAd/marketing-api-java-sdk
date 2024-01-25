@@ -219,7 +219,6 @@ public class BusinessManagerRelationsApi {
       final ApiCallback<BusinessManagerRelationsGetResponse> callback,
       String... headerPair)
       throws ApiException {
-
     ProgressResponseBody.ProgressListener progressListener = null;
     ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
 

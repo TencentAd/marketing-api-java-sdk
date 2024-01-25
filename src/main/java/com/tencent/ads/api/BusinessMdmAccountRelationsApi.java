@@ -253,7 +253,6 @@ public class BusinessMdmAccountRelationsApi {
       final ApiCallback<BusinessMdmAccountRelationsGetResponse> callback,
       String... headerPair)
       throws ApiException {
-
     ProgressResponseBody.ProgressListener progressListener = null;
     ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
 

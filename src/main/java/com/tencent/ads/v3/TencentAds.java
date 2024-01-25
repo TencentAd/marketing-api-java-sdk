@@ -2,6 +2,7 @@ package com.tencent.ads.v3;
 
 import com.tencent.ads.ApiClient;
 import com.tencent.ads.ApiContextConfig;
+import com.tencent.ads.Configuration;
 import com.tencent.ads.auth.ApiKeyAuth;
 import java.util.HashMap;
 import java.util.Map;
@@ -9,11 +10,11 @@ import java.util.Map;
 /** TencentAds */
 public class TencentAds extends CustomApp {
 
-  private static ApiClient defaultApiClient = new ApiClient();
+  private static ApiClient defaultApiClient = Configuration.getDefaultApiClient();
   private static final String SCHEMA = "https";
   private static final String API_VERSION = "v3.0";
   private static String basePath = "https://api.e.qq.com/v3.0";
-  private static final String SDK_VERSION = "1.1.67";
+  private static final String SDK_VERSION = "1.1.68";
   private String nameService = "";
   private String nameServiceSchema = "https";
 
@@ -31,7 +32,6 @@ public class TencentAds extends CustomApp {
   public void init(ApiContextConfig apiContextConfig) {
 
     defaultApiClient.initAuthentications();
-    defaultApiClient.setBasePath(this.getBasePath());
     if (apiContextConfig == null) {
       return;
     }

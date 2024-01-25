@@ -187,7 +187,6 @@ public class LeadsFormApi {
       final ApiCallback<LeadsFormAddResponse> callback,
       String... headerPair)
       throws ApiException {
-
     ProgressResponseBody.ProgressListener progressListener = null;
     ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
 
@@ -383,7 +382,6 @@ public class LeadsFormApi {
       final ApiCallback<LeadsFormGetResponse> callback,
       String... headerPair)
       throws ApiException {
-
     ProgressResponseBody.ProgressListener progressListener = null;
     ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
 

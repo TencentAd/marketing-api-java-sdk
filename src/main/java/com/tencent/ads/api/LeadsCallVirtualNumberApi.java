@@ -188,7 +188,6 @@ public class LeadsCallVirtualNumberApi {
       final ApiCallback<LeadsCallVirtualNumberGetResponse> callback,
       String... headerPair)
       throws ApiException {
-
     ProgressResponseBody.ProgressListener progressListener = null;
     ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
 

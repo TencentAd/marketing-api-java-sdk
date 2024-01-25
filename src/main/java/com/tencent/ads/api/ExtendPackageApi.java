@@ -191,7 +191,6 @@ public class ExtendPackageApi {
       final ApiCallback<ExtendPackageAddResponse> callback,
       String... headerPair)
       throws ApiException {
-
     ProgressResponseBody.ProgressListener progressListener = null;
     ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
 
@@ -437,7 +436,6 @@ public class ExtendPackageApi {
       final ApiCallback<ExtendPackageGetResponse> callback,
       String... headerPair)
       throws ApiException {
-
     ProgressResponseBody.ProgressListener progressListener = null;
     ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
 
@@ -613,7 +611,6 @@ public class ExtendPackageApi {
       final ApiCallback<ExtendPackageUpdateResponse> callback,
       String... headerPair)
       throws ApiException {
-
     ProgressResponseBody.ProgressListener progressListener = null;
     ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
 

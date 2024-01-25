@@ -248,7 +248,6 @@ public class CustomAudienceInsightsApi {
       final ApiCallback<CustomAudienceInsightsGetResponse> callback,
       String... headerPair)
       throws ApiException {
-
     ProgressResponseBody.ProgressListener progressListener = null;
     ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
 

@@ -281,7 +281,6 @@ public class CustomAudienceFilesApi {
       final ApiCallback<CustomAudienceFilesAddResponse> callback,
       String... headerPair)
       throws ApiException {
-
     ProgressResponseBody.ProgressListener progressListener = null;
     ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
 
@@ -537,7 +536,6 @@ public class CustomAudienceFilesApi {
       final ApiCallback<CustomAudienceFilesGetResponse> callback,
       String... headerPair)
       throws ApiException {
-
     ProgressResponseBody.ProgressListener progressListener = null;
     ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
 

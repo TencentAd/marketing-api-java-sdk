@@ -188,7 +188,6 @@ public class WechatPagesCustomApi {
       final ApiCallback<WechatPagesCustomAddResponse> callback,
       String... headerPair)
       throws ApiException {
-
     ProgressResponseBody.ProgressListener progressListener = null;
     ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
 

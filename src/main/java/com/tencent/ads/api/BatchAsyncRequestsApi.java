@@ -190,7 +190,6 @@ public class BatchAsyncRequestsApi {
       final ApiCallback<BatchAsyncRequestsAddResponse> callback,
       String... headerPair)
       throws ApiException {
-
     ProgressResponseBody.ProgressListener progressListener = null;
     ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
 
@@ -417,7 +416,6 @@ public class BatchAsyncRequestsApi {
       final ApiCallback<BatchAsyncRequestsGetResponse> callback,
       String... headerPair)
       throws ApiException {
-
     ProgressResponseBody.ProgressListener progressListener = null;
     ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
 

@@ -266,7 +266,6 @@ public class LeadsFormListApi {
       final ApiCallback<LeadsFormListGetResponse> callback,
       String... headerPair)
       throws ApiException {
-
     ProgressResponseBody.ProgressListener progressListener = null;
     ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
 

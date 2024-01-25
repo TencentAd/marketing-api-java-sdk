@@ -188,7 +188,6 @@ public class VideoChannelDealerDataApi {
       final ApiCallback<VideoChannelDealerDataGetResponse> callback,
       String... headerPair)
       throws ApiException {
-
     ProgressResponseBody.ProgressListener progressListener = null;
     ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
 

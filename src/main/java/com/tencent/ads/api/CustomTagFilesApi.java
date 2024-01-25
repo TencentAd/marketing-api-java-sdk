@@ -274,7 +274,6 @@ public class CustomTagFilesApi {
       final ApiCallback<CustomTagFilesAddResponse> callback,
       String... headerPair)
       throws ApiException {
-
     ProgressResponseBody.ProgressListener progressListener = null;
     ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
 
@@ -509,7 +508,6 @@ public class CustomTagFilesApi {
       final ApiCallback<CustomTagFilesGetResponse> callback,
       String... headerPair)
       throws ApiException {
-
     ProgressResponseBody.ProgressListener progressListener = null;
     ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
 

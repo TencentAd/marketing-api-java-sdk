@@ -289,7 +289,6 @@ public class VideomakerAutoadjustmentsApi {
       final ApiCallback<VideomakerAutoadjustmentsAddResponse> callback,
       String... headerPair)
       throws ApiException {
-
     ProgressResponseBody.ProgressListener progressListener = null;
     ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
 

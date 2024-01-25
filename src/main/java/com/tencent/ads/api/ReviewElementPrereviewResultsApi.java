@@ -191,7 +191,6 @@ public class ReviewElementPrereviewResultsApi {
       final ApiCallback<ReviewElementPrereviewResultsGetResponse> callback,
       String... headerPair)
       throws ApiException {
-
     ProgressResponseBody.ProgressListener progressListener = null;
     ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
 

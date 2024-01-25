@@ -192,7 +192,6 @@ public class CampaignNegativewordsApi {
       final ApiCallback<CampaignNegativewordsAddResponse> callback,
       String... headerPair)
       throws ApiException {
-
     ProgressResponseBody.ProgressListener progressListener = null;
     ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
 
@@ -360,7 +359,6 @@ public class CampaignNegativewordsApi {
       final ApiCallback<CampaignNegativewordsGetResponse> callback,
       String... headerPair)
       throws ApiException {
-
     ProgressResponseBody.ProgressListener progressListener = null;
     ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
 
@@ -529,7 +527,6 @@ public class CampaignNegativewordsApi {
       final ApiCallback<CampaignNegativewordsUpdateResponse> callback,
       String... headerPair)
       throws ApiException {
-
     ProgressResponseBody.ProgressListener progressListener = null;
     ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
 

@@ -271,7 +271,6 @@ public class FundStatementsDetailedApi {
       final ApiCallback<FundStatementsDetailedGetResponse> callback,
       String... headerPair)
       throws ApiException {
-
     ProgressResponseBody.ProgressListener progressListener = null;
     ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
 

@@ -199,7 +199,6 @@ public class WechatAdLabelsApi {
       final ApiCallback<WechatAdLabelsGetResponse> callback,
       String... headerPair)
       throws ApiException {
-
     ProgressResponseBody.ProgressListener progressListener = null;
     ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
 

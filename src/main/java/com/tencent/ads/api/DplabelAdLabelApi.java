@@ -199,7 +199,6 @@ public class DplabelAdLabelApi {
       final ApiCallback<DplabelAdLabelGetResponse> callback,
       String... headerPair)
       throws ApiException {
-
     ProgressResponseBody.ProgressListener progressListener = null;
     ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
 

@@ -189,7 +189,6 @@ public class LandingPageSellStrategyApi {
       final ApiCallback<LandingPageSellStrategyAddResponse> callback,
       String... headerPair)
       throws ApiException {
-
     ProgressResponseBody.ProgressListener progressListener = null;
     ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
 
@@ -470,7 +469,6 @@ public class LandingPageSellStrategyApi {
       final ApiCallback<LandingPageSellStrategyGetResponse> callback,
       String... headerPair)
       throws ApiException {
-
     ProgressResponseBody.ProgressListener progressListener = null;
     ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
 

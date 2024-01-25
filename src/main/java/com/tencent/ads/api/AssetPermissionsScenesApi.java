@@ -189,7 +189,6 @@ public class AssetPermissionsScenesApi {
       final ApiCallback<AssetPermissionsScenesUpdateResponse> callback,
       String... headerPair)
       throws ApiException {
-
     ProgressResponseBody.ProgressListener progressListener = null;
     ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
 

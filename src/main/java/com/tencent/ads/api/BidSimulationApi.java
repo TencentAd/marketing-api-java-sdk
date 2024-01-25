@@ -187,7 +187,6 @@ public class BidSimulationApi {
       final ApiCallback<BidSimulationGetResponse> callback,
       String... headerPair)
       throws ApiException {
-
     ProgressResponseBody.ProgressListener progressListener = null;
     ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
 

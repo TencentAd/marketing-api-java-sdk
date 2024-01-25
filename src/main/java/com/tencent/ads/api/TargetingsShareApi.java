@@ -188,7 +188,6 @@ public class TargetingsShareApi {
       final ApiCallback<TargetingsShareAddResponse> callback,
       String... headerPair)
       throws ApiException {
-
     ProgressResponseBody.ProgressListener progressListener = null;
     ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
 
@@ -420,7 +419,6 @@ public class TargetingsShareApi {
       final ApiCallback<TargetingsShareGetResponse> callback,
       String... headerPair)
       throws ApiException {
-
     ProgressResponseBody.ProgressListener progressListener = null;
     ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
 

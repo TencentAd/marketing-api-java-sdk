@@ -282,7 +282,6 @@ public class RealtimeCostApi {
       final ApiCallback<RealtimeCostGetResponse> callback,
       String... headerPair)
       throws ApiException {
-
     ProgressResponseBody.ProgressListener progressListener = null;
     ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
 

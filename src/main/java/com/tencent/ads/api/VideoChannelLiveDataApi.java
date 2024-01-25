@@ -188,7 +188,6 @@ public class VideoChannelLiveDataApi {
       final ApiCallback<VideoChannelLiveDataGetResponse> callback,
       String... headerPair)
       throws ApiException {
-
     ProgressResponseBody.ProgressListener progressListener = null;
     ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
 

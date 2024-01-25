@@ -217,7 +217,6 @@ public class TargetcpaTagApi {
       final ApiCallback<TargetcpaTagGetResponse> callback,
       String... headerPair)
       throws ApiException {
-
     ProgressResponseBody.ProgressListener progressListener = null;
     ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
 

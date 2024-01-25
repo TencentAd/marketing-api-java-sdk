@@ -255,7 +255,6 @@ public class MergeFundTypeDailyBalanceReportApi {
       final ApiCallback<MergeFundTypeDailyBalanceReportGetResponse> callback,
       String... headerPair)
       throws ApiException {
-
     ProgressResponseBody.ProgressListener progressListener = null;
     ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
 

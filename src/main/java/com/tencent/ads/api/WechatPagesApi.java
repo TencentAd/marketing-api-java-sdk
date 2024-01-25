@@ -190,7 +190,6 @@ public class WechatPagesApi {
       final ApiCallback<WechatPagesAddResponse> callback,
       String... headerPair)
       throws ApiException {
-
     ProgressResponseBody.ProgressListener progressListener = null;
     ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
 
@@ -357,7 +356,6 @@ public class WechatPagesApi {
       final ApiCallback<WechatPagesDeleteResponse> callback,
       String... headerPair)
       throws ApiException {
-
     ProgressResponseBody.ProgressListener progressListener = null;
     ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
 
@@ -597,7 +595,6 @@ public class WechatPagesApi {
       final ApiCallback<WechatPagesGetResponse> callback,
       String... headerPair)
       throws ApiException {
-
     ProgressResponseBody.ProgressListener progressListener = null;
     ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
 

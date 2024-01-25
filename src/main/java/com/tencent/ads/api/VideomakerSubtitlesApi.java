@@ -243,7 +243,6 @@ public class VideomakerSubtitlesApi {
       final ApiCallback<VideomakerSubtitlesAddResponse> callback,
       String... headerPair)
       throws ApiException {
-
     ProgressResponseBody.ProgressListener progressListener = null;
     ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
 

@@ -213,7 +213,6 @@ public class GameFeatureTagsApi {
       final ApiCallback<GameFeatureTagsGetResponse> callback,
       String... headerPair)
       throws ApiException {
-
     ProgressResponseBody.ProgressListener progressListener = null;
     ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
 

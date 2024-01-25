@@ -281,7 +281,6 @@ public class OptimizationGoalPermissionsApi {
       final ApiCallback<OptimizationGoalPermissionsGetResponse> callback,
       String... headerPair)
       throws ApiException {
-
     ProgressResponseBody.ProgressListener progressListener = null;
     ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
 

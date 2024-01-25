@@ -301,7 +301,6 @@ public class DataSourceDispatchApi {
       final ApiCallback<DataSourceDispatchGetResponse> callback,
       String... headerPair)
       throws ApiException {
-
     ProgressResponseBody.ProgressListener progressListener = null;
     ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
 
@@ -479,7 +478,6 @@ public class DataSourceDispatchApi {
       final ApiCallback<DataSourceDispatchUpdateResponse> callback,
       String... headerPair)
       throws ApiException {
-
     ProgressResponseBody.ProgressListener progressListener = null;
     ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
 

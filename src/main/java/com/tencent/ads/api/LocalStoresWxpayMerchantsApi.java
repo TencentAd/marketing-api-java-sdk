@@ -225,7 +225,6 @@ public class LocalStoresWxpayMerchantsApi {
       final ApiCallback<LocalStoresWxpayMerchantsGetResponse> callback,
       String... headerPair)
       throws ApiException {
-
     ProgressResponseBody.ProgressListener progressListener = null;
     ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
 

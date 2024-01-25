@@ -192,7 +192,6 @@ public class LocalStoresApi {
       final ApiCallback<LocalStoresAddResponse> callback,
       String... headerPair)
       throws ApiException {
-
     ProgressResponseBody.ProgressListener progressListener = null;
     ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
 
@@ -359,7 +358,6 @@ public class LocalStoresApi {
       final ApiCallback<LocalStoresDeleteResponse> callback,
       String... headerPair)
       throws ApiException {
-
     ProgressResponseBody.ProgressListener progressListener = null;
     ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
 
@@ -586,7 +584,6 @@ public class LocalStoresApi {
       final ApiCallback<LocalStoresGetResponse> callback,
       String... headerPair)
       throws ApiException {
-
     ProgressResponseBody.ProgressListener progressListener = null;
     ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
 
@@ -760,7 +757,6 @@ public class LocalStoresApi {
       final ApiCallback<LocalStoresUpdateResponse> callback,
       String... headerPair)
       throws ApiException {
-
     ProgressResponseBody.ProgressListener progressListener = null;
     ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
 

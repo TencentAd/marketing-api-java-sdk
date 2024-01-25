@@ -188,7 +188,6 @@ public class OuterCluesContactApi {
       final ApiCallback<OuterCluesContactUpdateResponse> callback,
       String... headerPair)
       throws ApiException {
-
     ProgressResponseBody.ProgressListener progressListener = null;
     ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
 

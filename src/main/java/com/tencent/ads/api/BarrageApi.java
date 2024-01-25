@@ -185,7 +185,6 @@ public class BarrageApi {
   public com.squareup.okhttp.Call barrageAddAsync(
       BarrageAddRequest data, final ApiCallback<BarrageAddResponse> callback, String... headerPair)
       throws ApiException {
-
     ProgressResponseBody.ProgressListener progressListener = null;
     ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
 
@@ -410,7 +409,6 @@ public class BarrageApi {
       final ApiCallback<BarrageGetResponse> callback,
       String... headerPair)
       throws ApiException {
-
     ProgressResponseBody.ProgressListener progressListener = null;
     ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
 

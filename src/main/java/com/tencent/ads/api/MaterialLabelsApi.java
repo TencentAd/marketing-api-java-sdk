@@ -189,7 +189,6 @@ public class MaterialLabelsApi {
       final ApiCallback<MaterialLabelsAddResponse> callback,
       String... headerPair)
       throws ApiException {
-
     ProgressResponseBody.ProgressListener progressListener = null;
     ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
 
@@ -356,7 +355,6 @@ public class MaterialLabelsApi {
       final ApiCallback<MaterialLabelsGetResponse> callback,
       String... headerPair)
       throws ApiException {
-
     ProgressResponseBody.ProgressListener progressListener = null;
     ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
 

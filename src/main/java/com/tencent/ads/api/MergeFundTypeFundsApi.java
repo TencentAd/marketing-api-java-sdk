@@ -199,7 +199,6 @@ public class MergeFundTypeFundsApi {
       final ApiCallback<MergeFundTypeFundsGetResponse> callback,
       String... headerPair)
       throws ApiException {
-
     ProgressResponseBody.ProgressListener progressListener = null;
     ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
 
