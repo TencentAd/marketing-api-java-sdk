@@ -22,11 +22,7 @@ import java.io.IOException;
 /** 异步报表粒度 */
 @JsonAdapter(ReportGranularity.Adapter.class)
 public enum ReportGranularity {
-  UNKNOWN("UNKNOWN"),
-
   HOURLY("HOURLY"),
-
-  SUMMARY("SUMMARY"),
 
   DAILY("DAILY");
 

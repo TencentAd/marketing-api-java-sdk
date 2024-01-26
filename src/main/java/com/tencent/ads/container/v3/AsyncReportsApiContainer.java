@@ -21,9 +21,9 @@ import com.tencent.ads.exception.TencentAdsResponseException;
 import com.tencent.ads.model.v3.AsyncReportsAddRequest;
 import com.tencent.ads.model.v3.AsyncReportsAddResponse;
 import com.tencent.ads.model.v3.AsyncReportsAddResponseData;
-import com.tencent.ads.model.v3.AsyncReportsFilteringStruct;
 import com.tencent.ads.model.v3.AsyncReportsGetResponse;
 import com.tencent.ads.model.v3.AsyncReportsGetResponseData;
+import com.tencent.ads.model.v3.GetAsyncReportsFilteringStruct;
 import java.util.List;
 
 public class AsyncReportsApiContainer extends ApiContainer {
@@ -60,7 +60,7 @@ public class AsyncReportsApiContainer extends ApiContainer {
    */
   public AsyncReportsGetResponseData asyncReportsGet(
       Long accountId,
-      List<AsyncReportsFilteringStruct> filtering,
+      List<GetAsyncReportsFilteringStruct> filtering,
       Long page,
       Long pageSize,
       List<String> fields,

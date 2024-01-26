@@ -18,8 +18,8 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.util.Objects;
 
-/** 落地页内容结构定义 */
-@ApiModel(description = "落地页内容结构定义")
+/** 兜底落地页内容结构定义 */
+@ApiModel(description = "兜底落地页内容结构定义")
 public class BackupsJumpinfoStruct {
   @SerializedName("page_type")
   private PageType pageType = null;

@@ -23,8 +23,8 @@ import com.tencent.ads.ProgressRequestBody;
 import com.tencent.ads.ProgressResponseBody;
 import com.tencent.ads.model.v3.AsyncReportsAddRequest;
 import com.tencent.ads.model.v3.AsyncReportsAddResponse;
-import com.tencent.ads.model.v3.AsyncReportsFilteringStruct;
 import com.tencent.ads.model.v3.AsyncReportsGetResponse;
+import com.tencent.ads.model.v3.GetAsyncReportsFilteringStruct;
 import java.io.IOException;
 import java.lang.reflect.Type;
 import java.util.ArrayList;
@@ -241,7 +241,7 @@ public class AsyncReportsApi {
    */
   public com.squareup.okhttp.Call asyncReportsGetCall(
       Long accountId,
-      List<AsyncReportsFilteringStruct> filtering,
+      List<GetAsyncReportsFilteringStruct> filtering,
       Long page,
       Long pageSize,
       List<String> fields,
@@ -323,7 +323,7 @@ public class AsyncReportsApi {
   @SuppressWarnings("rawtypes")
   private com.squareup.okhttp.Call asyncReportsGetValidateBeforeCall(
       Long accountId,
-      List<AsyncReportsFilteringStruct> filtering,
+      List<GetAsyncReportsFilteringStruct> filtering,
       Long page,
       Long pageSize,
       List<String> fields,
@@ -365,7 +365,7 @@ public class AsyncReportsApi {
    */
   public AsyncReportsGetResponse asyncReportsGet(
       Long accountId,
-      List<AsyncReportsFilteringStruct> filtering,
+      List<GetAsyncReportsFilteringStruct> filtering,
       Long page,
       Long pageSize,
       List<String> fields,
@@ -395,7 +395,7 @@ public class AsyncReportsApi {
    */
   public ApiResponse<AsyncReportsGetResponse> asyncReportsGetWithHttpInfo(
       Long accountId,
-      List<AsyncReportsFilteringStruct> filtering,
+      List<GetAsyncReportsFilteringStruct> filtering,
       Long page,
       Long pageSize,
       List<String> fields,
@@ -422,7 +422,7 @@ public class AsyncReportsApi {
    */
   public com.squareup.okhttp.Call asyncReportsGetAsync(
       Long accountId,
-      List<AsyncReportsFilteringStruct> filtering,
+      List<GetAsyncReportsFilteringStruct> filtering,
       Long page,
       Long pageSize,
       List<String> fields,

@@ -48,7 +48,7 @@ public class WechatPagesGetListStruct {
   private String previewUrl = null;
 
   @SerializedName("page_type")
-  private PageTypeRead pageType = null;
+  private PageType pageType = null;
 
   @SerializedName("source_type")
   private WechatPageSourceType sourceType = null;
@@ -225,7 +225,7 @@ public class WechatPagesGetListStruct {
     this.previewUrl = previewUrl;
   }
 
-  public WechatPagesGetListStruct pageType(PageTypeRead pageType) {
+  public WechatPagesGetListStruct pageType(PageType pageType) {
     this.pageType = pageType;
     return this;
   }
@@ -236,11 +236,11 @@ public class WechatPagesGetListStruct {
    * @return pageType
    */
   @ApiModelProperty(value = "")
-  public PageTypeRead getPageType() {
+  public PageType getPageType() {
     return pageType;
   }
 
-  public void setPageType(PageTypeRead pageType) {
+  public void setPageType(PageType pageType) {
     this.pageType = pageType;
   }
 
