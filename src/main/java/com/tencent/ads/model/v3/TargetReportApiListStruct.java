@@ -2217,6 +2217,9 @@ public class TargetReportApiListStruct {
   @SerializedName("clk_blessing_card_pv")
   private Long clkBlessingCardPv = null;
 
+  @SerializedName("channels_detail_btn_pv")
+  private Long channelsDetailBtnPv = null;
+
   @SerializedName("age_id")
   private Long ageId = null;
 
@@ -16187,6 +16190,25 @@ public class TargetReportApiListStruct {
     this.clkBlessingCardPv = clkBlessingCardPv;
   }
 
+  public TargetReportApiListStruct channelsDetailBtnPv(Long channelsDetailBtnPv) {
+    this.channelsDetailBtnPv = channelsDetailBtnPv;
+    return this;
+  }
+
+  /**
+   * Get channelsDetailBtnPv
+   *
+   * @return channelsDetailBtnPv
+   */
+  @ApiModelProperty(value = "")
+  public Long getChannelsDetailBtnPv() {
+    return channelsDetailBtnPv;
+  }
+
+  public void setChannelsDetailBtnPv(Long channelsDetailBtnPv) {
+    this.channelsDetailBtnPv = channelsDetailBtnPv;
+  }
+
   public TargetReportApiListStruct ageId(Long ageId) {
     this.ageId = ageId;
     return this;
@@ -17339,6 +17361,7 @@ public class TargetReportApiListStruct {
             this.inviteFriendsToWatchFireworksPv,
             targetReportApiListStruct.inviteFriendsToWatchFireworksPv)
         && Objects.equals(this.clkBlessingCardPv, targetReportApiListStruct.clkBlessingCardPv)
+        && Objects.equals(this.channelsDetailBtnPv, targetReportApiListStruct.channelsDetailBtnPv)
         && Objects.equals(this.ageId, targetReportApiListStruct.ageId)
         && Objects.equals(this.cityId, targetReportApiListStruct.cityId)
         && Objects.equals(this.regionId, targetReportApiListStruct.regionId)
@@ -18081,6 +18104,7 @@ public class TargetReportApiListStruct {
         clkRedpocketBtnSubscribePv,
         inviteFriendsToWatchFireworksPv,
         clkBlessingCardPv,
+        channelsDetailBtnPv,
         ageId,
         cityId,
         regionId,

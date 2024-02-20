@@ -39,6 +39,9 @@ public class KeywordLandingPageInfo {
   @SerializedName("xijing_spec")
   private XijingSpecStruct xijingSpec = null;
 
+  @SerializedName("lingque_spec")
+  private LingqueSpecStruct lingqueSpec = null;
+
   public KeywordLandingPageInfo pageType(PageTypeRead pageType) {
     this.pageType = pageType;
     return this;
@@ -153,6 +156,25 @@ public class KeywordLandingPageInfo {
     this.xijingSpec = xijingSpec;
   }
 
+  public KeywordLandingPageInfo lingqueSpec(LingqueSpecStruct lingqueSpec) {
+    this.lingqueSpec = lingqueSpec;
+    return this;
+  }
+
+  /**
+   * Get lingqueSpec
+   *
+   * @return lingqueSpec
+   */
+  @ApiModelProperty(value = "")
+  public LingqueSpecStruct getLingqueSpec() {
+    return lingqueSpec;
+  }
+
+  public void setLingqueSpec(LingqueSpecStruct lingqueSpec) {
+    this.lingqueSpec = lingqueSpec;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -167,13 +189,20 @@ public class KeywordLandingPageInfo {
         && Objects.equals(this.miniProgramSpec, keywordLandingPageInfo.miniProgramSpec)
         && Objects.equals(this.deepLinkSpec, keywordLandingPageInfo.deepLinkSpec)
         && Objects.equals(this.universalLinkSpec, keywordLandingPageInfo.universalLinkSpec)
-        && Objects.equals(this.xijingSpec, keywordLandingPageInfo.xijingSpec);
+        && Objects.equals(this.xijingSpec, keywordLandingPageInfo.xijingSpec)
+        && Objects.equals(this.lingqueSpec, keywordLandingPageInfo.lingqueSpec);
   }
 
   @Override
   public int hashCode() {
     return Objects.hash(
-        pageType, pageUrl, miniProgramSpec, deepLinkSpec, universalLinkSpec, xijingSpec);
+        pageType,
+        pageUrl,
+        miniProgramSpec,
+        deepLinkSpec,
+        universalLinkSpec,
+        xijingSpec,
+        lingqueSpec);
   }
 
   @Override

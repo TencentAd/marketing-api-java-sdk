@@ -19,24 +19,18 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-/** 获取报表类型级别 */
-@JsonAdapter(ReportHourlyLevel.Adapter.class)
-public enum ReportHourlyLevel {
-  ADVERTISER("REPORT_LEVEL_ADVERTISER"),
+/** 审核结果状态 */
+@JsonAdapter(ReviewResultStatus.Adapter.class)
+public enum ReviewResultStatus {
+  NORMAL("AD_STATUS_NORMAL"),
 
-  ADGROUP("REPORT_LEVEL_ADGROUP"),
+  PENDING("AD_STATUS_PENDING"),
 
-  DYNAMIC_CREATIVE("REPORT_LEVEL_DYNAMIC_CREATIVE"),
-
-  CHANNEL("REPORT_LEVEL_CHANNEL"),
-
-  BIDWORD("REPORT_LEVEL_BIDWORD"),
-
-  ADVERTISER_TOTAL("REPORT_LEVEL_ADVERTISER_TOTAL");
+  DENIED("AD_STATUS_DENIED");
 
   private String value;
 
-  ReportHourlyLevel(String value) {
+  ReviewResultStatus(String value) {
     this.value = value;
   }
 
@@ -49,8 +43,8 @@ public enum ReportHourlyLevel {
     return String.valueOf(value);
   }
 
-  public static ReportHourlyLevel fromValue(String text) {
-    for (ReportHourlyLevel b : ReportHourlyLevel.values()) {
+  public static ReviewResultStatus fromValue(String text) {
+    for (ReviewResultStatus b : ReviewResultStatus.values()) {
       if (String.valueOf(b.value).equals(text)) {
         return b;
       }
@@ -58,17 +52,17 @@ public enum ReportHourlyLevel {
     return null;
   }
 
-  public static class Adapter extends TypeAdapter<ReportHourlyLevel> {
+  public static class Adapter extends TypeAdapter<ReviewResultStatus> {
     @Override
-    public void write(final JsonWriter jsonWriter, final ReportHourlyLevel enumeration)
+    public void write(final JsonWriter jsonWriter, final ReviewResultStatus enumeration)
         throws IOException {
       jsonWriter.value(enumeration.getValue());
     }
 
     @Override
-    public ReportHourlyLevel read(final JsonReader jsonReader) throws IOException {
+    public ReviewResultStatus read(final JsonReader jsonReader) throws IOException {
       String value = jsonReader.nextString();
-      return ReportHourlyLevel.fromValue(String.valueOf(value));
+      return ReviewResultStatus.fromValue(String.valueOf(value));
     }
   }
 }

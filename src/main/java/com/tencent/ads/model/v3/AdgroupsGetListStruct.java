@@ -215,6 +215,12 @@ public class AdgroupsGetListStruct {
   @SerializedName("auto_acquisition_status")
   private AutoAcquisitionStatus autoAcquisitionStatus = null;
 
+  @SerializedName("auto_acquisition_status_text")
+  private String autoAcquisitionStatusText = null;
+
+  @SerializedName("auto_acquisition_status_message")
+  private String autoAcquisitionStatusMessage = null;
+
   public AdgroupsGetListStruct targeting(ReadTargetingSetting targeting) {
     this.targeting = targeting;
     return this;
@@ -1470,6 +1476,44 @@ public class AdgroupsGetListStruct {
     this.autoAcquisitionStatus = autoAcquisitionStatus;
   }
 
+  public AdgroupsGetListStruct autoAcquisitionStatusText(String autoAcquisitionStatusText) {
+    this.autoAcquisitionStatusText = autoAcquisitionStatusText;
+    return this;
+  }
+
+  /**
+   * Get autoAcquisitionStatusText
+   *
+   * @return autoAcquisitionStatusText
+   */
+  @ApiModelProperty(value = "")
+  public String getAutoAcquisitionStatusText() {
+    return autoAcquisitionStatusText;
+  }
+
+  public void setAutoAcquisitionStatusText(String autoAcquisitionStatusText) {
+    this.autoAcquisitionStatusText = autoAcquisitionStatusText;
+  }
+
+  public AdgroupsGetListStruct autoAcquisitionStatusMessage(String autoAcquisitionStatusMessage) {
+    this.autoAcquisitionStatusMessage = autoAcquisitionStatusMessage;
+    return this;
+  }
+
+  /**
+   * Get autoAcquisitionStatusMessage
+   *
+   * @return autoAcquisitionStatusMessage
+   */
+  @ApiModelProperty(value = "")
+  public String getAutoAcquisitionStatusMessage() {
+    return autoAcquisitionStatusMessage;
+  }
+
+  public void setAutoAcquisitionStatusMessage(String autoAcquisitionStatusMessage) {
+    this.autoAcquisitionStatusMessage = autoAcquisitionStatusMessage;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -1554,7 +1598,11 @@ public class AdgroupsGetListStruct {
         && Objects.equals(this.ecomPkamSwitch, adgroupsGetListStruct.ecomPkamSwitch)
         && Objects.equals(this.forwardLinkAssist, adgroupsGetListStruct.forwardLinkAssist)
         && Objects.equals(this.conversionName, adgroupsGetListStruct.conversionName)
-        && Objects.equals(this.autoAcquisitionStatus, adgroupsGetListStruct.autoAcquisitionStatus);
+        && Objects.equals(this.autoAcquisitionStatus, adgroupsGetListStruct.autoAcquisitionStatus)
+        && Objects.equals(
+            this.autoAcquisitionStatusText, adgroupsGetListStruct.autoAcquisitionStatusText)
+        && Objects.equals(
+            this.autoAcquisitionStatusMessage, adgroupsGetListStruct.autoAcquisitionStatusMessage);
   }
 
   @Override
@@ -1623,7 +1671,9 @@ public class AdgroupsGetListStruct {
         ecomPkamSwitch,
         forwardLinkAssist,
         conversionName,
-        autoAcquisitionStatus);
+        autoAcquisitionStatus,
+        autoAcquisitionStatusText,
+        autoAcquisitionStatusMessage);
   }
 
   @Override

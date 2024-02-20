@@ -2439,6 +2439,9 @@ public class DailyReportApiListStruct {
   @SerializedName("clk_shortcut_menus_pv")
   private Long clkShortcutMenusPv = null;
 
+  @SerializedName("channels_detail_btn_pv")
+  private Long channelsDetailBtnPv = null;
+
   @SerializedName("adgroup_id")
   private Long adgroupId = null;
 
@@ -17869,6 +17872,25 @@ public class DailyReportApiListStruct {
     this.clkShortcutMenusPv = clkShortcutMenusPv;
   }
 
+  public DailyReportApiListStruct channelsDetailBtnPv(Long channelsDetailBtnPv) {
+    this.channelsDetailBtnPv = channelsDetailBtnPv;
+    return this;
+  }
+
+  /**
+   * Get channelsDetailBtnPv
+   *
+   * @return channelsDetailBtnPv
+   */
+  @ApiModelProperty(value = "")
+  public Long getChannelsDetailBtnPv() {
+    return channelsDetailBtnPv;
+  }
+
+  public void setChannelsDetailBtnPv(Long channelsDetailBtnPv) {
+    this.channelsDetailBtnPv = channelsDetailBtnPv;
+  }
+
   public DailyReportApiListStruct adgroupId(Long adgroupId) {
     this.adgroupId = adgroupId;
     return this;
@@ -19459,6 +19481,7 @@ public class DailyReportApiListStruct {
             dailyReportApiListStruct.inviteFriendsToWatchFireworksPv)
         && Objects.equals(this.clkBlessingCardPv, dailyReportApiListStruct.clkBlessingCardPv)
         && Objects.equals(this.clkShortcutMenusPv, dailyReportApiListStruct.clkShortcutMenusPv)
+        && Objects.equals(this.channelsDetailBtnPv, dailyReportApiListStruct.channelsDetailBtnPv)
         && Objects.equals(this.adgroupId, dailyReportApiListStruct.adgroupId)
         && Objects.equals(this.adgroupName, dailyReportApiListStruct.adgroupName)
         && Objects.equals(this.dynamicCreativeId, dailyReportApiListStruct.dynamicCreativeId)
@@ -20294,6 +20317,7 @@ public class DailyReportApiListStruct {
         inviteFriendsToWatchFireworksPv,
         clkBlessingCardPv,
         clkShortcutMenusPv,
+        channelsDetailBtnPv,
         adgroupId,
         adgroupName,
         dynamicCreativeId,

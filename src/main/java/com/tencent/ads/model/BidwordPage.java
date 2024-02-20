@@ -39,6 +39,9 @@ public class BidwordPage {
   @SerializedName("xijing_spec")
   private XijingSpecStruct xijingSpec = null;
 
+  @SerializedName("lingque_spec")
+  private LingqueSpecStruct lingqueSpec = null;
+
   public BidwordPage pageType(PageTypeRead pageType) {
     this.pageType = pageType;
     return this;
@@ -153,6 +156,25 @@ public class BidwordPage {
     this.xijingSpec = xijingSpec;
   }
 
+  public BidwordPage lingqueSpec(LingqueSpecStruct lingqueSpec) {
+    this.lingqueSpec = lingqueSpec;
+    return this;
+  }
+
+  /**
+   * Get lingqueSpec
+   *
+   * @return lingqueSpec
+   */
+  @ApiModelProperty(value = "")
+  public LingqueSpecStruct getLingqueSpec() {
+    return lingqueSpec;
+  }
+
+  public void setLingqueSpec(LingqueSpecStruct lingqueSpec) {
+    this.lingqueSpec = lingqueSpec;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -167,13 +189,20 @@ public class BidwordPage {
         && Objects.equals(this.miniProgramSpec, bidwordPage.miniProgramSpec)
         && Objects.equals(this.deepLinkSpec, bidwordPage.deepLinkSpec)
         && Objects.equals(this.universalLinkSpec, bidwordPage.universalLinkSpec)
-        && Objects.equals(this.xijingSpec, bidwordPage.xijingSpec);
+        && Objects.equals(this.xijingSpec, bidwordPage.xijingSpec)
+        && Objects.equals(this.lingqueSpec, bidwordPage.lingqueSpec);
   }
 
   @Override
   public int hashCode() {
     return Objects.hash(
-        pageType, pageUrl, miniProgramSpec, deepLinkSpec, universalLinkSpec, xijingSpec);
+        pageType,
+        pageUrl,
+        miniProgramSpec,
+        deepLinkSpec,
+        universalLinkSpec,
+        xijingSpec,
+        lingqueSpec);
   }
 
   @Override

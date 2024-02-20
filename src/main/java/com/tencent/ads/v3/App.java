@@ -20,6 +20,8 @@ import com.tencent.ads.guice.GuiceModule;
 public class App {
 
   @Inject AdDiagnosisApiContainer adDiagnosisApiContainer;
+  @Inject AdcreativePreviewsApiContainer adcreativePreviewsApiContainer;
+  @Inject AdcreativePreviewsQrcodeApiContainer adcreativePreviewsQrcodeApiContainer;
   @Inject AdgroupNegativewordsApiContainer adgroupNegativewordsApiContainer;
   @Inject AdgroupsApiContainer adgroupsApiContainer;
   @Inject AgencyRealtimeCostApiContainer agencyRealtimeCostApiContainer;
@@ -38,6 +40,7 @@ public class App {
   @Inject CustomAudiencesApiContainer customAudiencesApiContainer;
   @Inject DailyBalanceReportApiContainer dailyBalanceReportApiContainer;
   @Inject DailyReportsApiContainer dailyReportsApiContainer;
+  @Inject DynamicCreativeReviewResultsApiContainer dynamicCreativeReviewResultsApiContainer;
   @Inject DynamicCreativesApiContainer dynamicCreativesApiContainer;
   @Inject EstimationApiContainer estimationApiContainer;
   @Inject ExtendPackageApiContainer extendPackageApiContainer;
@@ -84,6 +87,14 @@ public class App {
 
   public AdDiagnosisApiContainer adDiagnosis() {
     return adDiagnosisApiContainer;
+  }
+
+  public AdcreativePreviewsApiContainer adcreativePreviews() {
+    return adcreativePreviewsApiContainer;
+  }
+
+  public AdcreativePreviewsQrcodeApiContainer adcreativePreviewsQrcode() {
+    return adcreativePreviewsQrcodeApiContainer;
   }
 
   public AdgroupNegativewordsApiContainer adgroupNegativewords() {
@@ -156,6 +167,10 @@ public class App {
 
   public DailyReportsApiContainer dailyReports() {
     return dailyReportsApiContainer;
+  }
+
+  public DynamicCreativeReviewResultsApiContainer dynamicCreativeReviewResults() {
+    return dynamicCreativeReviewResultsApiContainer;
   }
 
   public DynamicCreativesApiContainer dynamicCreatives() {

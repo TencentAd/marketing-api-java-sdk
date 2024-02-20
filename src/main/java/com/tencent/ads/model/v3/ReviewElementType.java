@@ -19,24 +19,22 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-/** 获取报表类型级别 */
-@JsonAdapter(ReportHourlyLevel.Adapter.class)
-public enum ReportHourlyLevel {
-  ADVERTISER("REPORT_LEVEL_ADVERTISER"),
+/** 元素类型 */
+@JsonAdapter(ReviewElementType.Adapter.class)
+public enum ReviewElementType {
+  TEXT("ELEMENT_TYPE_TEXT"),
 
-  ADGROUP("REPORT_LEVEL_ADGROUP"),
+  URL("ELEMENT_TYPE_URL"),
 
-  DYNAMIC_CREATIVE("REPORT_LEVEL_DYNAMIC_CREATIVE"),
+  IMAGE("ELEMENT_TYPE_IMAGE"),
 
-  CHANNEL("REPORT_LEVEL_CHANNEL"),
+  VIDEO("ELEMENT_TYPE_VIDEO"),
 
-  BIDWORD("REPORT_LEVEL_BIDWORD"),
-
-  ADVERTISER_TOTAL("REPORT_LEVEL_ADVERTISER_TOTAL");
+  SELECT_NONE("ELEMENT_TYPE_SELECT_NONE");
 
   private String value;
 
-  ReportHourlyLevel(String value) {
+  ReviewElementType(String value) {
     this.value = value;
   }
 
@@ -49,8 +47,8 @@ public enum ReportHourlyLevel {
     return String.valueOf(value);
   }
 
-  public static ReportHourlyLevel fromValue(String text) {
-    for (ReportHourlyLevel b : ReportHourlyLevel.values()) {
+  public static ReviewElementType fromValue(String text) {
+    for (ReviewElementType b : ReviewElementType.values()) {
       if (String.valueOf(b.value).equals(text)) {
         return b;
       }
@@ -58,17 +56,17 @@ public enum ReportHourlyLevel {
     return null;
   }
 
-  public static class Adapter extends TypeAdapter<ReportHourlyLevel> {
+  public static class Adapter extends TypeAdapter<ReviewElementType> {
     @Override
-    public void write(final JsonWriter jsonWriter, final ReportHourlyLevel enumeration)
+    public void write(final JsonWriter jsonWriter, final ReviewElementType enumeration)
         throws IOException {
       jsonWriter.value(enumeration.getValue());
     }
 
     @Override
-    public ReportHourlyLevel read(final JsonReader jsonReader) throws IOException {
+    public ReviewElementType read(final JsonReader jsonReader) throws IOException {
       String value = jsonReader.nextString();
-      return ReportHourlyLevel.fromValue(String.valueOf(value));
+      return ReviewElementType.fromValue(String.valueOf(value));
     }
   }
 }
