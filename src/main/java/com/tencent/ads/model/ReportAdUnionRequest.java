@@ -45,6 +45,9 @@ public class ReportAdUnionRequest {
   @SerializedName("async")
   private Long async = null;
 
+  @SerializedName("adq_accounts_upgrade_enabled")
+  private Boolean adqAccountsUpgradeEnabled = null;
+
   @SerializedName("account_id")
   private Long accountId = null;
 
@@ -232,6 +235,25 @@ public class ReportAdUnionRequest {
     this.async = async;
   }
 
+  public ReportAdUnionRequest adqAccountsUpgradeEnabled(Boolean adqAccountsUpgradeEnabled) {
+    this.adqAccountsUpgradeEnabled = adqAccountsUpgradeEnabled;
+    return this;
+  }
+
+  /**
+   * Get adqAccountsUpgradeEnabled
+   *
+   * @return adqAccountsUpgradeEnabled
+   */
+  @ApiModelProperty(value = "")
+  public Boolean isAdqAccountsUpgradeEnabled() {
+    return adqAccountsUpgradeEnabled;
+  }
+
+  public void setAdqAccountsUpgradeEnabled(Boolean adqAccountsUpgradeEnabled) {
+    this.adqAccountsUpgradeEnabled = adqAccountsUpgradeEnabled;
+  }
+
   public ReportAdUnionRequest accountId(Long accountId) {
     this.accountId = accountId;
     return this;
@@ -268,13 +290,24 @@ public class ReportAdUnionRequest {
         && Objects.equals(this.pageSize, reportAdUnionRequest.pageSize)
         && Objects.equals(this.fields, reportAdUnionRequest.fields)
         && Objects.equals(this.async, reportAdUnionRequest.async)
+        && Objects.equals(
+            this.adqAccountsUpgradeEnabled, reportAdUnionRequest.adqAccountsUpgradeEnabled)
         && Objects.equals(this.accountId, reportAdUnionRequest.accountId);
   }
 
   @Override
   public int hashCode() {
     return Objects.hash(
-        filtering, dateRange, groupBy, orderBy, page, pageSize, fields, async, accountId);
+        filtering,
+        dateRange,
+        groupBy,
+        orderBy,
+        page,
+        pageSize,
+        fields,
+        async,
+        adqAccountsUpgradeEnabled,
+        accountId);
   }
 
   @Override

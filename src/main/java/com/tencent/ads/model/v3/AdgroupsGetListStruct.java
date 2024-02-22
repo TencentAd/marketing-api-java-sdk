@@ -29,9 +29,6 @@ public class AdgroupsGetListStruct {
   @SerializedName("adgroup_id")
   private Long adgroupId = null;
 
-  @SerializedName("targeting_id")
-  private Long targetingId = null;
-
   @SerializedName("targeting_translation")
   private String targetingTranslation = null;
 
@@ -49,9 +46,6 @@ public class AdgroupsGetListStruct {
 
   @SerializedName("system_status")
   private CalcAdGroupStatus systemStatus = null;
-
-  @SerializedName("account_id")
-  private Long accountId = null;
 
   @SerializedName("adgroup_name")
   private String adgroupName = null;
@@ -259,25 +253,6 @@ public class AdgroupsGetListStruct {
     this.adgroupId = adgroupId;
   }
 
-  public AdgroupsGetListStruct targetingId(Long targetingId) {
-    this.targetingId = targetingId;
-    return this;
-  }
-
-  /**
-   * Get targetingId
-   *
-   * @return targetingId
-   */
-  @ApiModelProperty(value = "")
-  public Long getTargetingId() {
-    return targetingId;
-  }
-
-  public void setTargetingId(Long targetingId) {
-    this.targetingId = targetingId;
-  }
-
   public AdgroupsGetListStruct targetingTranslation(String targetingTranslation) {
     this.targetingTranslation = targetingTranslation;
     return this;
@@ -390,25 +365,6 @@ public class AdgroupsGetListStruct {
 
   public void setSystemStatus(CalcAdGroupStatus systemStatus) {
     this.systemStatus = systemStatus;
-  }
-
-  public AdgroupsGetListStruct accountId(Long accountId) {
-    this.accountId = accountId;
-    return this;
-  }
-
-  /**
-   * Get accountId
-   *
-   * @return accountId
-   */
-  @ApiModelProperty(value = "")
-  public Long getAccountId() {
-    return accountId;
-  }
-
-  public void setAccountId(Long accountId) {
-    this.accountId = accountId;
   }
 
   public AdgroupsGetListStruct adgroupName(String adgroupName) {
@@ -1525,14 +1481,12 @@ public class AdgroupsGetListStruct {
     AdgroupsGetListStruct adgroupsGetListStruct = (AdgroupsGetListStruct) o;
     return Objects.equals(this.targeting, adgroupsGetListStruct.targeting)
         && Objects.equals(this.adgroupId, adgroupsGetListStruct.adgroupId)
-        && Objects.equals(this.targetingId, adgroupsGetListStruct.targetingId)
         && Objects.equals(this.targetingTranslation, adgroupsGetListStruct.targetingTranslation)
         && Objects.equals(this.configuredStatus, adgroupsGetListStruct.configuredStatus)
         && Objects.equals(this.createdTime, adgroupsGetListStruct.createdTime)
         && Objects.equals(this.lastModifiedTime, adgroupsGetListStruct.lastModifiedTime)
         && Objects.equals(this.isDeleted, adgroupsGetListStruct.isDeleted)
         && Objects.equals(this.systemStatus, adgroupsGetListStruct.systemStatus)
-        && Objects.equals(this.accountId, adgroupsGetListStruct.accountId)
         && Objects.equals(this.adgroupName, adgroupsGetListStruct.adgroupName)
         && Objects.equals(this.marketingGoal, adgroupsGetListStruct.marketingGoal)
         && Objects.equals(this.marketingSubGoal, adgroupsGetListStruct.marketingSubGoal)
@@ -1610,14 +1564,12 @@ public class AdgroupsGetListStruct {
     return Objects.hash(
         targeting,
         adgroupId,
-        targetingId,
         targetingTranslation,
         configuredStatus,
         createdTime,
         lastModifiedTime,
         isDeleted,
         systemStatus,
-        accountId,
         adgroupName,
         marketingGoal,
         marketingSubGoal,

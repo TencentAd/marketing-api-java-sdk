@@ -29,6 +29,7 @@ public class App {
   @Inject AsyncReportFilesApiContainer asyncReportFilesApiContainer;
   @Inject AsyncReportsApiContainer asyncReportsApiContainer;
   @Inject AudienceGrantRelationsApiContainer audienceGrantRelationsApiContainer;
+  @Inject BatchRequestsApiContainer batchRequestsApiContainer;
   @Inject BidwordApiContainer bidwordApiContainer;
   @Inject BidwordFlowApiContainer bidwordFlowApiContainer;
   @Inject BrandApiContainer brandApiContainer;
@@ -123,6 +124,10 @@ public class App {
 
   public AudienceGrantRelationsApiContainer audienceGrantRelations() {
     return audienceGrantRelationsApiContainer;
+  }
+
+  public BatchRequestsApiContainer batchRequests() {
+    return batchRequestsApiContainer;
   }
 
   public BidwordApiContainer bidword() {

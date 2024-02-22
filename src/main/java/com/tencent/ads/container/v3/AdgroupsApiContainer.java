@@ -26,6 +26,15 @@ import com.tencent.ads.model.v3.AdgroupsDeleteResponse;
 import com.tencent.ads.model.v3.AdgroupsDeleteResponseData;
 import com.tencent.ads.model.v3.AdgroupsGetResponse;
 import com.tencent.ads.model.v3.AdgroupsGetResponseData;
+import com.tencent.ads.model.v3.AdgroupsUpdateBidAmountRequest;
+import com.tencent.ads.model.v3.AdgroupsUpdateBidAmountResponse;
+import com.tencent.ads.model.v3.AdgroupsUpdateBidAmountResponseData;
+import com.tencent.ads.model.v3.AdgroupsUpdateConfiguredStatusRequest;
+import com.tencent.ads.model.v3.AdgroupsUpdateConfiguredStatusResponse;
+import com.tencent.ads.model.v3.AdgroupsUpdateConfiguredStatusResponseData;
+import com.tencent.ads.model.v3.AdgroupsUpdateDailyBudgetRequest;
+import com.tencent.ads.model.v3.AdgroupsUpdateDailyBudgetResponse;
+import com.tencent.ads.model.v3.AdgroupsUpdateDailyBudgetResponseData;
 import com.tencent.ads.model.v3.AdgroupsUpdateRequest;
 import com.tencent.ads.model.v3.AdgroupsUpdateResponse;
 import com.tencent.ads.model.v3.AdgroupsUpdateResponseData;
@@ -105,6 +114,55 @@ public class AdgroupsApiContainer extends ApiContainer {
   public AdgroupsUpdateResponseData adgroupsUpdate(AdgroupsUpdateRequest data, String... headerPair)
       throws ApiException, TencentAdsResponseException {
     AdgroupsUpdateResponse resp = api.adgroupsUpdate(data, headerPair);
+    handleResponse(gson.toJson(resp));
+    return resp.getData();
+  }
+
+  /**
+   * 更新广告组出价
+   *
+   * @param data (required)
+   * @return AdgroupsUpdateBidAmountResponse
+   * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
+   *     response body
+   */
+  public AdgroupsUpdateBidAmountResponseData adgroupsUpdateBidAmount(
+      AdgroupsUpdateBidAmountRequest data, String... headerPair)
+      throws ApiException, TencentAdsResponseException {
+    AdgroupsUpdateBidAmountResponse resp = api.adgroupsUpdateBidAmount(data, headerPair);
+    handleResponse(gson.toJson(resp));
+    return resp.getData();
+  }
+
+  /**
+   * 更新广告组状态
+   *
+   * @param data (required)
+   * @return AdgroupsUpdateConfiguredStatusResponse
+   * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
+   *     response body
+   */
+  public AdgroupsUpdateConfiguredStatusResponseData adgroupsUpdateConfiguredStatus(
+      AdgroupsUpdateConfiguredStatusRequest data, String... headerPair)
+      throws ApiException, TencentAdsResponseException {
+    AdgroupsUpdateConfiguredStatusResponse resp =
+        api.adgroupsUpdateConfiguredStatus(data, headerPair);
+    handleResponse(gson.toJson(resp));
+    return resp.getData();
+  }
+
+  /**
+   * 更新广告组日限额信息
+   *
+   * @param data (required)
+   * @return AdgroupsUpdateDailyBudgetResponse
+   * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
+   *     response body
+   */
+  public AdgroupsUpdateDailyBudgetResponseData adgroupsUpdateDailyBudget(
+      AdgroupsUpdateDailyBudgetRequest data, String... headerPair)
+      throws ApiException, TencentAdsResponseException {
+    AdgroupsUpdateDailyBudgetResponse resp = api.adgroupsUpdateDailyBudget(data, headerPair);
     handleResponse(gson.toJson(resp));
     return resp.getData();
   }

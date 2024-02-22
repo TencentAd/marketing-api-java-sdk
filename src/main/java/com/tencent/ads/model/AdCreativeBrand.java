@@ -16,6 +16,8 @@ import com.google.gson.Gson;
 import com.google.gson.annotations.SerializedName;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Objects;
 
 /** 品牌形象 */
@@ -29,6 +31,9 @@ public class AdCreativeBrand {
 
   @SerializedName("brand_description")
   private String brandDescription = null;
+
+  @SerializedName("main_jump_info")
+  private List<LandingPageStructure> mainJumpInfo = null;
 
   public AdCreativeBrand brandName(String brandName) {
     this.brandName = brandName;
@@ -87,6 +92,33 @@ public class AdCreativeBrand {
     this.brandDescription = brandDescription;
   }
 
+  public AdCreativeBrand mainJumpInfo(List<LandingPageStructure> mainJumpInfo) {
+    this.mainJumpInfo = mainJumpInfo;
+    return this;
+  }
+
+  public AdCreativeBrand addMainJumpInfoItem(LandingPageStructure mainJumpInfoItem) {
+    if (this.mainJumpInfo == null) {
+      this.mainJumpInfo = new ArrayList<LandingPageStructure>();
+    }
+    this.mainJumpInfo.add(mainJumpInfoItem);
+    return this;
+  }
+
+  /**
+   * Get mainJumpInfo
+   *
+   * @return mainJumpInfo
+   */
+  @ApiModelProperty(value = "")
+  public List<LandingPageStructure> getMainJumpInfo() {
+    return mainJumpInfo;
+  }
+
+  public void setMainJumpInfo(List<LandingPageStructure> mainJumpInfo) {
+    this.mainJumpInfo = mainJumpInfo;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -98,12 +130,13 @@ public class AdCreativeBrand {
     AdCreativeBrand adCreativeBrand = (AdCreativeBrand) o;
     return Objects.equals(this.brandName, adCreativeBrand.brandName)
         && Objects.equals(this.brandImg, adCreativeBrand.brandImg)
-        && Objects.equals(this.brandDescription, adCreativeBrand.brandDescription);
+        && Objects.equals(this.brandDescription, adCreativeBrand.brandDescription)
+        && Objects.equals(this.mainJumpInfo, adCreativeBrand.mainJumpInfo);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(brandName, brandImg, brandDescription);
+    return Objects.hash(brandName, brandImg, brandDescription, mainJumpInfo);
   }
 
   @Override
