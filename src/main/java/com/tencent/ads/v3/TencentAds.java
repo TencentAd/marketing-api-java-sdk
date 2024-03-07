@@ -10,11 +10,11 @@ import java.util.Map;
 /** TencentAds */
 public class TencentAds extends CustomApp {
 
-  private static ApiClient defaultApiClient = Configuration.getDefaultApiClient();
+  private static ApiClient defaultApiClient = Configuration.getV3DefaultApiClient();
   private static final String SCHEMA = "https";
   private static final String API_VERSION = "v3.0";
   private static String basePath = "https://api.e.qq.com/v3.0";
-  private static final String SDK_VERSION = "1.1.71";
+  private static final String SDK_VERSION = "1.1.72";
   private String nameService = "";
   private String nameServiceSchema = "https";
 
@@ -42,6 +42,7 @@ public class TencentAds extends CustomApp {
     }
     defaultApiClient.setDebugging(apiContextConfig.isDebug());
     this.addDefaultHeader();
+    this.setHost(basePath);
   }
 
   public void setDebug(boolean isDebug) {

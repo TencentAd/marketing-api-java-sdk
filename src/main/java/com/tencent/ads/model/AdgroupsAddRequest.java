@@ -165,6 +165,12 @@ public class AdgroupsAddRequest {
   @SerializedName("marketing_scene")
   private MarketingScene marketingScene = null;
 
+  @SerializedName("live_video_mode")
+  private LiveVideoMode liveVideoMode = null;
+
+  @SerializedName("live_video_sub_mode")
+  private LiveVideoSubMode liveVideoSubMode = null;
+
   @SerializedName("custom_adgroup_tag")
   private List<String> customAdgroupTag = null;
 
@@ -1171,6 +1177,44 @@ public class AdgroupsAddRequest {
     this.marketingScene = marketingScene;
   }
 
+  public AdgroupsAddRequest liveVideoMode(LiveVideoMode liveVideoMode) {
+    this.liveVideoMode = liveVideoMode;
+    return this;
+  }
+
+  /**
+   * Get liveVideoMode
+   *
+   * @return liveVideoMode
+   */
+  @ApiModelProperty(value = "")
+  public LiveVideoMode getLiveVideoMode() {
+    return liveVideoMode;
+  }
+
+  public void setLiveVideoMode(LiveVideoMode liveVideoMode) {
+    this.liveVideoMode = liveVideoMode;
+  }
+
+  public AdgroupsAddRequest liveVideoSubMode(LiveVideoSubMode liveVideoSubMode) {
+    this.liveVideoSubMode = liveVideoSubMode;
+    return this;
+  }
+
+  /**
+   * Get liveVideoSubMode
+   *
+   * @return liveVideoSubMode
+   */
+  @ApiModelProperty(value = "")
+  public LiveVideoSubMode getLiveVideoSubMode() {
+    return liveVideoSubMode;
+  }
+
+  public void setLiveVideoSubMode(LiveVideoSubMode liveVideoSubMode) {
+    this.liveVideoSubMode = liveVideoSubMode;
+  }
+
   public AdgroupsAddRequest customAdgroupTag(List<String> customAdgroupTag) {
     this.customAdgroupTag = customAdgroupTag;
     return this;
@@ -1464,6 +1508,8 @@ public class AdgroupsAddRequest {
             this.autoDerivedCreativeEnabled, adgroupsAddRequest.autoDerivedCreativeEnabled)
         && Objects.equals(this.smartBidType, adgroupsAddRequest.smartBidType)
         && Objects.equals(this.marketingScene, adgroupsAddRequest.marketingScene)
+        && Objects.equals(this.liveVideoMode, adgroupsAddRequest.liveVideoMode)
+        && Objects.equals(this.liveVideoSubMode, adgroupsAddRequest.liveVideoSubMode)
         && Objects.equals(this.customAdgroupTag, adgroupsAddRequest.customAdgroupTag)
         && Objects.equals(this.smartTargeting, adgroupsAddRequest.smartTargeting)
         && Objects.equals(this.dynamicCreativeIdSet, adgroupsAddRequest.dynamicCreativeIdSet)
@@ -1530,6 +1576,8 @@ public class AdgroupsAddRequest {
         autoDerivedCreativeEnabled,
         smartBidType,
         marketingScene,
+        liveVideoMode,
+        liveVideoSubMode,
         customAdgroupTag,
         smartTargeting,
         dynamicCreativeIdSet,

@@ -21,8 +21,30 @@ import java.util.Objects;
 /** 轮播组件 */
 @ApiModel(description = "轮播组件")
 public class FloatingZoneComponent {
+  @SerializedName("component_id")
+  private Long componentId = null;
+
   @SerializedName("value")
   private FloatingZoneStruct value = null;
+
+  public FloatingZoneComponent componentId(Long componentId) {
+    this.componentId = componentId;
+    return this;
+  }
+
+  /**
+   * Get componentId
+   *
+   * @return componentId
+   */
+  @ApiModelProperty(value = "")
+  public Long getComponentId() {
+    return componentId;
+  }
+
+  public void setComponentId(Long componentId) {
+    this.componentId = componentId;
+  }
 
   public FloatingZoneComponent value(FloatingZoneStruct value) {
     this.value = value;
@@ -52,12 +74,13 @@ public class FloatingZoneComponent {
       return false;
     }
     FloatingZoneComponent floatingZoneComponent = (FloatingZoneComponent) o;
-    return Objects.equals(this.value, floatingZoneComponent.value);
+    return Objects.equals(this.componentId, floatingZoneComponent.componentId)
+        && Objects.equals(this.value, floatingZoneComponent.value);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(value);
+    return Objects.hash(componentId, value);
   }
 
   @Override

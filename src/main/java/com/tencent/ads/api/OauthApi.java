@@ -292,6 +292,7 @@ public class OauthApi {
       final ApiCallback<String> callback,
       String... headerPair)
       throws ApiException {
+
     ProgressResponseBody.ProgressListener progressListener = null;
     ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
 
@@ -571,6 +572,7 @@ public class OauthApi {
       final ApiCallback<OauthTokenResponse> callback,
       String... headerPair)
       throws ApiException {
+
     ProgressResponseBody.ProgressListener progressListener = null;
     ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
 

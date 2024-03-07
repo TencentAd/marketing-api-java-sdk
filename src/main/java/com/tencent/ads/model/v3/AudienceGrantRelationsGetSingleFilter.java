@@ -22,7 +22,7 @@ import java.util.Objects;
 
 /** 过滤条件 */
 @ApiModel(description = "过滤条件")
-public class SingleFilter {
+public class AudienceGrantRelationsGetSingleFilter {
   @SerializedName("field")
   private String field = null;
 
@@ -32,7 +32,7 @@ public class SingleFilter {
   @SerializedName("values")
   private List<Long> values = null;
 
-  public SingleFilter field(String field) {
+  public AudienceGrantRelationsGetSingleFilter field(String field) {
     this.field = field;
     return this;
   }
@@ -51,7 +51,7 @@ public class SingleFilter {
     this.field = field;
   }
 
-  public SingleFilter operator(FilterOperator operator) {
+  public AudienceGrantRelationsGetSingleFilter operator(FilterOperator operator) {
     this.operator = operator;
     return this;
   }
@@ -70,12 +70,12 @@ public class SingleFilter {
     this.operator = operator;
   }
 
-  public SingleFilter values(List<Long> values) {
+  public AudienceGrantRelationsGetSingleFilter values(List<Long> values) {
     this.values = values;
     return this;
   }
 
-  public SingleFilter addValuesItem(Long valuesItem) {
+  public AudienceGrantRelationsGetSingleFilter addValuesItem(Long valuesItem) {
     if (this.values == null) {
       this.values = new ArrayList<Long>();
     }
@@ -105,10 +105,11 @@ public class SingleFilter {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    SingleFilter singleFilter = (SingleFilter) o;
-    return Objects.equals(this.field, singleFilter.field)
-        && Objects.equals(this.operator, singleFilter.operator)
-        && Objects.equals(this.values, singleFilter.values);
+    AudienceGrantRelationsGetSingleFilter audienceGrantRelationsGetSingleFilter =
+        (AudienceGrantRelationsGetSingleFilter) o;
+    return Objects.equals(this.field, audienceGrantRelationsGetSingleFilter.field)
+        && Objects.equals(this.operator, audienceGrantRelationsGetSingleFilter.operator)
+        && Objects.equals(this.values, audienceGrantRelationsGetSingleFilter.values);
   }
 
   @Override

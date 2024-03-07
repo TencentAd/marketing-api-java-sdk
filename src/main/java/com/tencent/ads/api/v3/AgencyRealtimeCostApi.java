@@ -33,7 +33,7 @@ public class AgencyRealtimeCostApi {
   private ApiClient apiClient;
 
   public AgencyRealtimeCostApi() {
-    this(Configuration.getDefaultApiClient());
+    this(Configuration.getV3DefaultApiClient());
   }
 
   public AgencyRealtimeCostApi(ApiClient apiClient) {
@@ -162,14 +162,9 @@ public class AgencyRealtimeCostApi {
    */
   public AgencyRealtimeCostGetResponse agencyRealtimeCostGet(
       Long advertiserId, List<String> fields, String... headerPair) throws ApiException {
-    try {
-      ApiClient.setBasePathTLVal("https://api.e.qq.com/v3.0");
-      ApiResponse<AgencyRealtimeCostGetResponse> resp =
-          agencyRealtimeCostGetWithHttpInfo(advertiserId, fields, headerPair);
-      return resp.getData();
-    } finally {
-      ApiClient.clearBasePathTLVal();
-    }
+    ApiResponse<AgencyRealtimeCostGetResponse> resp =
+        agencyRealtimeCostGetWithHttpInfo(advertiserId, fields, headerPair);
+    return resp.getData();
   }
 
   /**
@@ -204,37 +199,33 @@ public class AgencyRealtimeCostApi {
       final ApiCallback<AgencyRealtimeCostGetResponse> callback,
       String... headerPair)
       throws ApiException {
-    try {
-      ApiClient.setBasePathTLVal("https://api.e.qq.com/v3.0");
-      ProgressResponseBody.ProgressListener progressListener = null;
-      ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
 
-      if (callback != null) {
-        progressListener =
-            new ProgressResponseBody.ProgressListener() {
-              @Override
-              public void update(long bytesRead, long contentLength, boolean done) {
-                callback.onDownloadProgress(bytesRead, contentLength, done);
-              }
-            };
+    ProgressResponseBody.ProgressListener progressListener = null;
+    ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
 
-        progressRequestListener =
-            new ProgressRequestBody.ProgressRequestListener() {
-              @Override
-              public void onRequestProgress(long bytesWritten, long contentLength, boolean done) {
-                callback.onUploadProgress(bytesWritten, contentLength, done);
-              }
-            };
-      }
+    if (callback != null) {
+      progressListener =
+          new ProgressResponseBody.ProgressListener() {
+            @Override
+            public void update(long bytesRead, long contentLength, boolean done) {
+              callback.onDownloadProgress(bytesRead, contentLength, done);
+            }
+          };
 
-      com.squareup.okhttp.Call call =
-          agencyRealtimeCostGetValidateBeforeCall(
-              advertiserId, fields, progressListener, progressRequestListener, headerPair);
-      Type localVarReturnType = new TypeToken<AgencyRealtimeCostGetResponse>() {}.getType();
-      apiClient.executeAsync(call, localVarReturnType, callback);
-      return call;
-    } finally {
-      ApiClient.clearBasePathTLVal();
+      progressRequestListener =
+          new ProgressRequestBody.ProgressRequestListener() {
+            @Override
+            public void onRequestProgress(long bytesWritten, long contentLength, boolean done) {
+              callback.onUploadProgress(bytesWritten, contentLength, done);
+            }
+          };
     }
+
+    com.squareup.okhttp.Call call =
+        agencyRealtimeCostGetValidateBeforeCall(
+            advertiserId, fields, progressListener, progressRequestListener, headerPair);
+    Type localVarReturnType = new TypeToken<AgencyRealtimeCostGetResponse>() {}.getType();
+    apiClient.executeAsync(call, localVarReturnType, callback);
+    return call;
   }
 }

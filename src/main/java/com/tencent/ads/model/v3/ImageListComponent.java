@@ -21,8 +21,30 @@ import java.util.Objects;
 /** 图集组件 */
 @ApiModel(description = "图集组件")
 public class ImageListComponent {
+  @SerializedName("component_id")
+  private Long componentId = null;
+
   @SerializedName("value")
   private ImageListStruct value = null;
+
+  public ImageListComponent componentId(Long componentId) {
+    this.componentId = componentId;
+    return this;
+  }
+
+  /**
+   * Get componentId
+   *
+   * @return componentId
+   */
+  @ApiModelProperty(value = "")
+  public Long getComponentId() {
+    return componentId;
+  }
+
+  public void setComponentId(Long componentId) {
+    this.componentId = componentId;
+  }
 
   public ImageListComponent value(ImageListStruct value) {
     this.value = value;
@@ -52,12 +74,13 @@ public class ImageListComponent {
       return false;
     }
     ImageListComponent imageListComponent = (ImageListComponent) o;
-    return Objects.equals(this.value, imageListComponent.value);
+    return Objects.equals(this.componentId, imageListComponent.componentId)
+        && Objects.equals(this.value, imageListComponent.value);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(value);
+    return Objects.hash(componentId, value);
   }
 
   @Override

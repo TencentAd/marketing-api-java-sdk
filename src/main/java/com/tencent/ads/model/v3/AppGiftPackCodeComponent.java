@@ -21,8 +21,30 @@ import java.util.Objects;
 /** 礼包码组件 */
 @ApiModel(description = "礼包码组件")
 public class AppGiftPackCodeComponent {
+  @SerializedName("component_id")
+  private Long componentId = null;
+
   @SerializedName("value")
   private AppGiftPackCodeStruct value = null;
+
+  public AppGiftPackCodeComponent componentId(Long componentId) {
+    this.componentId = componentId;
+    return this;
+  }
+
+  /**
+   * Get componentId
+   *
+   * @return componentId
+   */
+  @ApiModelProperty(value = "")
+  public Long getComponentId() {
+    return componentId;
+  }
+
+  public void setComponentId(Long componentId) {
+    this.componentId = componentId;
+  }
 
   public AppGiftPackCodeComponent value(AppGiftPackCodeStruct value) {
     this.value = value;
@@ -52,12 +74,13 @@ public class AppGiftPackCodeComponent {
       return false;
     }
     AppGiftPackCodeComponent appGiftPackCodeComponent = (AppGiftPackCodeComponent) o;
-    return Objects.equals(this.value, appGiftPackCodeComponent.value);
+    return Objects.equals(this.componentId, appGiftPackCodeComponent.componentId)
+        && Objects.equals(this.value, appGiftPackCodeComponent.value);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(value);
+    return Objects.hash(componentId, value);
   }
 
   @Override

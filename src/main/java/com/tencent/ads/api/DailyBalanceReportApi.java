@@ -252,6 +252,7 @@ public class DailyBalanceReportApi {
       final ApiCallback<DailyBalanceReportGetResponse> callback,
       String... headerPair)
       throws ApiException {
+
     ProgressResponseBody.ProgressListener progressListener = null;
     ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
 

@@ -187,6 +187,7 @@ public class LeadsCallRecordApi {
       final ApiCallback<LeadsCallRecordGetResponse> callback,
       String... headerPair)
       throws ApiException {
+
     ProgressResponseBody.ProgressListener progressListener = null;
     ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
 

@@ -34,7 +34,7 @@ public class KeywordRecommendApi {
   private ApiClient apiClient;
 
   public KeywordRecommendApi() {
-    this(Configuration.getDefaultApiClient());
+    this(Configuration.getV3DefaultApiClient());
   }
 
   public KeywordRecommendApi(ApiClient apiClient) {
@@ -317,32 +317,27 @@ public class KeywordRecommendApi {
       List<String> fields,
       String... headerPair)
       throws ApiException {
-    try {
-      ApiClient.setBasePathTLVal("https://api.e.qq.com/v3.0");
-      ApiResponse<KeywordRecommendGetResponse> resp =
-          keywordRecommendGetWithHttpInfo(
-              siteSets,
-              recommendCategory,
-              accountId,
-              systemIndustryId,
-              queryWord,
-              businessPointId,
-              adgroupId,
-              campaignId,
-              includeWord,
-              excludeWord,
-              filterAdWord,
-              filterAccountWord,
-              recommendReasons,
-              province,
-              city,
-              orderBy,
-              fields,
-              headerPair);
-      return resp.getData();
-    } finally {
-      ApiClient.clearBasePathTLVal();
-    }
+    ApiResponse<KeywordRecommendGetResponse> resp =
+        keywordRecommendGetWithHttpInfo(
+            siteSets,
+            recommendCategory,
+            accountId,
+            systemIndustryId,
+            queryWord,
+            businessPointId,
+            adgroupId,
+            campaignId,
+            includeWord,
+            excludeWord,
+            filterAdWord,
+            filterAccountWord,
+            recommendReasons,
+            province,
+            city,
+            orderBy,
+            fields,
+            headerPair);
+    return resp.getData();
   }
 
   /**
@@ -460,56 +455,52 @@ public class KeywordRecommendApi {
       final ApiCallback<KeywordRecommendGetResponse> callback,
       String... headerPair)
       throws ApiException {
-    try {
-      ApiClient.setBasePathTLVal("https://api.e.qq.com/v3.0");
-      ProgressResponseBody.ProgressListener progressListener = null;
-      ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
 
-      if (callback != null) {
-        progressListener =
-            new ProgressResponseBody.ProgressListener() {
-              @Override
-              public void update(long bytesRead, long contentLength, boolean done) {
-                callback.onDownloadProgress(bytesRead, contentLength, done);
-              }
-            };
+    ProgressResponseBody.ProgressListener progressListener = null;
+    ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
 
-        progressRequestListener =
-            new ProgressRequestBody.ProgressRequestListener() {
-              @Override
-              public void onRequestProgress(long bytesWritten, long contentLength, boolean done) {
-                callback.onUploadProgress(bytesWritten, contentLength, done);
-              }
-            };
-      }
+    if (callback != null) {
+      progressListener =
+          new ProgressResponseBody.ProgressListener() {
+            @Override
+            public void update(long bytesRead, long contentLength, boolean done) {
+              callback.onDownloadProgress(bytesRead, contentLength, done);
+            }
+          };
 
-      com.squareup.okhttp.Call call =
-          keywordRecommendGetValidateBeforeCall(
-              siteSets,
-              recommendCategory,
-              accountId,
-              systemIndustryId,
-              queryWord,
-              businessPointId,
-              adgroupId,
-              campaignId,
-              includeWord,
-              excludeWord,
-              filterAdWord,
-              filterAccountWord,
-              recommendReasons,
-              province,
-              city,
-              orderBy,
-              fields,
-              progressListener,
-              progressRequestListener,
-              headerPair);
-      Type localVarReturnType = new TypeToken<KeywordRecommendGetResponse>() {}.getType();
-      apiClient.executeAsync(call, localVarReturnType, callback);
-      return call;
-    } finally {
-      ApiClient.clearBasePathTLVal();
+      progressRequestListener =
+          new ProgressRequestBody.ProgressRequestListener() {
+            @Override
+            public void onRequestProgress(long bytesWritten, long contentLength, boolean done) {
+              callback.onUploadProgress(bytesWritten, contentLength, done);
+            }
+          };
     }
+
+    com.squareup.okhttp.Call call =
+        keywordRecommendGetValidateBeforeCall(
+            siteSets,
+            recommendCategory,
+            accountId,
+            systemIndustryId,
+            queryWord,
+            businessPointId,
+            adgroupId,
+            campaignId,
+            includeWord,
+            excludeWord,
+            filterAdWord,
+            filterAccountWord,
+            recommendReasons,
+            province,
+            city,
+            orderBy,
+            fields,
+            progressListener,
+            progressRequestListener,
+            headerPair);
+    Type localVarReturnType = new TypeToken<KeywordRecommendGetResponse>() {}.getType();
+    apiClient.executeAsync(call, localVarReturnType, callback);
+    return call;
   }
 }

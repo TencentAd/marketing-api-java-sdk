@@ -191,6 +191,7 @@ public class CustomTagsApi {
       final ApiCallback<CustomTagsAddResponse> callback,
       String... headerPair)
       throws ApiException {
+
     ProgressResponseBody.ProgressListener progressListener = null;
     ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
 
@@ -357,6 +358,7 @@ public class CustomTagsApi {
       final ApiCallback<CustomTagsDeleteResponse> callback,
       String... headerPair)
       throws ApiException {
+
     ProgressResponseBody.ProgressListener progressListener = null;
     ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
 
@@ -627,6 +629,7 @@ public class CustomTagsApi {
       final ApiCallback<CustomTagsGetResponse> callback,
       String... headerPair)
       throws ApiException {
+
     ProgressResponseBody.ProgressListener progressListener = null;
     ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
 
@@ -803,6 +806,7 @@ public class CustomTagsApi {
       final ApiCallback<CustomTagsUpdateResponse> callback,
       String... headerPair)
       throws ApiException {
+
     ProgressResponseBody.ProgressListener progressListener = null;
     ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
 

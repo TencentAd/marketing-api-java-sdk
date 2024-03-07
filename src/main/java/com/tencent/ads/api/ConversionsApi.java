@@ -188,6 +188,7 @@ public class ConversionsApi {
       final ApiCallback<ConversionsAddResponse> callback,
       String... headerPair)
       throws ApiException {
+
     ProgressResponseBody.ProgressListener progressListener = null;
     ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
 
@@ -414,6 +415,7 @@ public class ConversionsApi {
       final ApiCallback<ConversionsGetResponse> callback,
       String... headerPair)
       throws ApiException {
+
     ProgressResponseBody.ProgressListener progressListener = null;
     ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
 

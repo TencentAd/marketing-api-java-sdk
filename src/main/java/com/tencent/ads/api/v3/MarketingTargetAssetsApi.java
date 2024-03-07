@@ -33,7 +33,7 @@ public class MarketingTargetAssetsApi {
   private ApiClient apiClient;
 
   public MarketingTargetAssetsApi() {
-    this(Configuration.getDefaultApiClient());
+    this(Configuration.getV3DefaultApiClient());
   }
 
   public MarketingTargetAssetsApi(ApiClient apiClient) {
@@ -199,15 +199,10 @@ public class MarketingTargetAssetsApi {
       List<String> fields,
       String... headerPair)
       throws ApiException {
-    try {
-      ApiClient.setBasePathTLVal("https://api.e.qq.com/v3.0");
-      ApiResponse<MarketingTargetAssetsGetResponse> resp =
-          marketingTargetAssetsGetWithHttpInfo(
-              accountId, marketingTargetType, page, pageSize, fields, headerPair);
-      return resp.getData();
-    } finally {
-      ApiClient.clearBasePathTLVal();
-    }
+    ApiResponse<MarketingTargetAssetsGetResponse> resp =
+        marketingTargetAssetsGetWithHttpInfo(
+            accountId, marketingTargetType, page, pageSize, fields, headerPair);
+    return resp.getData();
   }
 
   /**
@@ -258,44 +253,40 @@ public class MarketingTargetAssetsApi {
       final ApiCallback<MarketingTargetAssetsGetResponse> callback,
       String... headerPair)
       throws ApiException {
-    try {
-      ApiClient.setBasePathTLVal("https://api.e.qq.com/v3.0");
-      ProgressResponseBody.ProgressListener progressListener = null;
-      ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
 
-      if (callback != null) {
-        progressListener =
-            new ProgressResponseBody.ProgressListener() {
-              @Override
-              public void update(long bytesRead, long contentLength, boolean done) {
-                callback.onDownloadProgress(bytesRead, contentLength, done);
-              }
-            };
+    ProgressResponseBody.ProgressListener progressListener = null;
+    ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
 
-        progressRequestListener =
-            new ProgressRequestBody.ProgressRequestListener() {
-              @Override
-              public void onRequestProgress(long bytesWritten, long contentLength, boolean done) {
-                callback.onUploadProgress(bytesWritten, contentLength, done);
-              }
-            };
-      }
+    if (callback != null) {
+      progressListener =
+          new ProgressResponseBody.ProgressListener() {
+            @Override
+            public void update(long bytesRead, long contentLength, boolean done) {
+              callback.onDownloadProgress(bytesRead, contentLength, done);
+            }
+          };
 
-      com.squareup.okhttp.Call call =
-          marketingTargetAssetsGetValidateBeforeCall(
-              accountId,
-              marketingTargetType,
-              page,
-              pageSize,
-              fields,
-              progressListener,
-              progressRequestListener,
-              headerPair);
-      Type localVarReturnType = new TypeToken<MarketingTargetAssetsGetResponse>() {}.getType();
-      apiClient.executeAsync(call, localVarReturnType, callback);
-      return call;
-    } finally {
-      ApiClient.clearBasePathTLVal();
+      progressRequestListener =
+          new ProgressRequestBody.ProgressRequestListener() {
+            @Override
+            public void onRequestProgress(long bytesWritten, long contentLength, boolean done) {
+              callback.onUploadProgress(bytesWritten, contentLength, done);
+            }
+          };
     }
+
+    com.squareup.okhttp.Call call =
+        marketingTargetAssetsGetValidateBeforeCall(
+            accountId,
+            marketingTargetType,
+            page,
+            pageSize,
+            fields,
+            progressListener,
+            progressRequestListener,
+            headerPair);
+    Type localVarReturnType = new TypeToken<MarketingTargetAssetsGetResponse>() {}.getType();
+    apiClient.executeAsync(call, localVarReturnType, callback);
+    return call;
   }
 }

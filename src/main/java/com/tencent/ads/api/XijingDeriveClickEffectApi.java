@@ -188,6 +188,7 @@ public class XijingDeriveClickEffectApi {
       final ApiCallback<XijingDeriveClickEffectGetResponse> callback,
       String... headerPair)
       throws ApiException {
+
     ProgressResponseBody.ProgressListener progressListener = null;
     ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
 

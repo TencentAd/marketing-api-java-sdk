@@ -21,8 +21,30 @@ import java.util.Objects;
 /** 视频结束页组件 */
 @ApiModel(description = "视频结束页组件")
 public class EndPageComponent {
+  @SerializedName("component_id")
+  private Long componentId = null;
+
   @SerializedName("value")
   private EndPageStruct value = null;
+
+  public EndPageComponent componentId(Long componentId) {
+    this.componentId = componentId;
+    return this;
+  }
+
+  /**
+   * Get componentId
+   *
+   * @return componentId
+   */
+  @ApiModelProperty(value = "")
+  public Long getComponentId() {
+    return componentId;
+  }
+
+  public void setComponentId(Long componentId) {
+    this.componentId = componentId;
+  }
 
   public EndPageComponent value(EndPageStruct value) {
     this.value = value;
@@ -52,12 +74,13 @@ public class EndPageComponent {
       return false;
     }
     EndPageComponent endPageComponent = (EndPageComponent) o;
-    return Objects.equals(this.value, endPageComponent.value);
+    return Objects.equals(this.componentId, endPageComponent.componentId)
+        && Objects.equals(this.value, endPageComponent.value);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(value);
+    return Objects.hash(componentId, value);
   }
 
   @Override

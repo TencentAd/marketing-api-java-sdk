@@ -190,6 +190,7 @@ public class AdcreativeTemplatePreviewsApi {
       final ApiCallback<AdcreativeTemplatePreviewsGetResponse> callback,
       String... headerPair)
       throws ApiException {
+
     ProgressResponseBody.ProgressListener progressListener = null;
     ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
 

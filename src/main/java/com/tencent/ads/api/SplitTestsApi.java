@@ -192,6 +192,7 @@ public class SplitTestsApi {
       final ApiCallback<SplitTestsAddResponse> callback,
       String... headerPair)
       throws ApiException {
+
     ProgressResponseBody.ProgressListener progressListener = null;
     ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
 
@@ -358,6 +359,7 @@ public class SplitTestsApi {
       final ApiCallback<SplitTestsDeleteResponse> callback,
       String... headerPair)
       throws ApiException {
+
     ProgressResponseBody.ProgressListener progressListener = null;
     ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
 
@@ -584,6 +586,7 @@ public class SplitTestsApi {
       final ApiCallback<SplitTestsGetResponse> callback,
       String... headerPair)
       throws ApiException {
+
     ProgressResponseBody.ProgressListener progressListener = null;
     ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
 
@@ -757,6 +760,7 @@ public class SplitTestsApi {
       final ApiCallback<SplitTestsUpdateResponse> callback,
       String... headerPair)
       throws ApiException {
+
     ProgressResponseBody.ProgressListener progressListener = null;
     ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
 

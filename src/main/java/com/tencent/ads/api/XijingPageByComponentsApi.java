@@ -188,6 +188,7 @@ public class XijingPageByComponentsApi {
       final ApiCallback<XijingPageByComponentsAddResponse> callback,
       String... headerPair)
       throws ApiException {
+
     ProgressResponseBody.ProgressListener progressListener = null;
     ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
 

@@ -263,6 +263,7 @@ public class CustomAudienceReportsApi {
       final ApiCallback<CustomAudienceReportsGetResponse> callback,
       String... headerPair)
       throws ApiException {
+
     ProgressResponseBody.ProgressListener progressListener = null;
     ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
 

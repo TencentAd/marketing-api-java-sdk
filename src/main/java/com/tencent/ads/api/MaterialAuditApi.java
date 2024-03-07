@@ -189,6 +189,7 @@ public class MaterialAuditApi {
       final ApiCallback<MaterialAuditListResponse> callback,
       String... headerPair)
       throws ApiException {
+
     ProgressResponseBody.ProgressListener progressListener = null;
     ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
 
@@ -356,6 +357,7 @@ public class MaterialAuditApi {
       final ApiCallback<MaterialAuditSubmitResponse> callback,
       String... headerPair)
       throws ApiException {
+
     ProgressResponseBody.ProgressListener progressListener = null;
     ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
 

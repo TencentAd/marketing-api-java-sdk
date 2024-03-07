@@ -185,6 +185,7 @@ public class DataSetApi {
   public com.squareup.okhttp.Call dataSetAddAsync(
       DataSetAddRequest data, final ApiCallback<DataSetAddResponse> callback, String... headerPair)
       throws ApiException {
+
     ProgressResponseBody.ProgressListener progressListener = null;
     ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
 
@@ -409,6 +410,7 @@ public class DataSetApi {
       final ApiCallback<DataSetGetResponse> callback,
       String... headerPair)
       throws ApiException {
+
     ProgressResponseBody.ProgressListener progressListener = null;
     ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
 

@@ -188,6 +188,7 @@ public class LeadCluesApi {
       final ApiCallback<LeadCluesGetResponse> callback,
       String... headerPair)
       throws ApiException {
+
     ProgressResponseBody.ProgressListener progressListener = null;
     ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
 
@@ -352,6 +353,7 @@ public class LeadCluesApi {
       final ApiCallback<LeadCluesUpdateResponse> callback,
       String... headerPair)
       throws ApiException {
+
     ProgressResponseBody.ProgressListener progressListener = null;
     ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
 

@@ -299,6 +299,7 @@ public class AssetPrePermissionsApi {
       final ApiCallback<AssetPrePermissionsGetResponse> callback,
       String... headerPair)
       throws ApiException {
+
     ProgressResponseBody.ProgressListener progressListener = null;
     ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
 
@@ -476,6 +477,7 @@ public class AssetPrePermissionsApi {
       final ApiCallback<AssetPrePermissionsUpdateResponse> callback,
       String... headerPair)
       throws ApiException {
+
     ProgressResponseBody.ProgressListener progressListener = null;
     ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
 

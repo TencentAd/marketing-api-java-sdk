@@ -126,6 +126,12 @@ public class AdgroupsUpdateRequest {
   @SerializedName("auto_derived_creative_status")
   private AutoDerivedCreativeStatus autoDerivedCreativeStatus = null;
 
+  @SerializedName("live_video_mode")
+  private LiveVideoMode liveVideoMode = null;
+
+  @SerializedName("live_video_sub_mode")
+  private LiveVideoSubMode liveVideoSubMode = null;
+
   @SerializedName("user_action_sets")
   private List<UserActionSetStruct> userActionSets = null;
 
@@ -852,6 +858,44 @@ public class AdgroupsUpdateRequest {
     this.autoDerivedCreativeStatus = autoDerivedCreativeStatus;
   }
 
+  public AdgroupsUpdateRequest liveVideoMode(LiveVideoMode liveVideoMode) {
+    this.liveVideoMode = liveVideoMode;
+    return this;
+  }
+
+  /**
+   * Get liveVideoMode
+   *
+   * @return liveVideoMode
+   */
+  @ApiModelProperty(value = "")
+  public LiveVideoMode getLiveVideoMode() {
+    return liveVideoMode;
+  }
+
+  public void setLiveVideoMode(LiveVideoMode liveVideoMode) {
+    this.liveVideoMode = liveVideoMode;
+  }
+
+  public AdgroupsUpdateRequest liveVideoSubMode(LiveVideoSubMode liveVideoSubMode) {
+    this.liveVideoSubMode = liveVideoSubMode;
+    return this;
+  }
+
+  /**
+   * Get liveVideoSubMode
+   *
+   * @return liveVideoSubMode
+   */
+  @ApiModelProperty(value = "")
+  public LiveVideoSubMode getLiveVideoSubMode() {
+    return liveVideoSubMode;
+  }
+
+  public void setLiveVideoSubMode(LiveVideoSubMode liveVideoSubMode) {
+    this.liveVideoSubMode = liveVideoSubMode;
+  }
+
   public AdgroupsUpdateRequest userActionSets(List<UserActionSetStruct> userActionSets) {
     this.userActionSets = userActionSets;
     return this;
@@ -1083,6 +1127,8 @@ public class AdgroupsUpdateRequest {
             this.autoDerivedCreativeEnabled, adgroupsUpdateRequest.autoDerivedCreativeEnabled)
         && Objects.equals(
             this.autoDerivedCreativeStatus, adgroupsUpdateRequest.autoDerivedCreativeStatus)
+        && Objects.equals(this.liveVideoMode, adgroupsUpdateRequest.liveVideoMode)
+        && Objects.equals(this.liveVideoSubMode, adgroupsUpdateRequest.liveVideoSubMode)
         && Objects.equals(this.userActionSets, adgroupsUpdateRequest.userActionSets)
         && Objects.equals(this.dynamicAdSpec, adgroupsUpdateRequest.dynamicAdSpec)
         && Objects.equals(this.customAdgroupTag, adgroupsUpdateRequest.customAdgroupTag)
@@ -1132,6 +1178,8 @@ public class AdgroupsUpdateRequest {
         autoAcquisitionBudget,
         autoDerivedCreativeEnabled,
         autoDerivedCreativeStatus,
+        liveVideoMode,
+        liveVideoSubMode,
         userActionSets,
         dynamicAdSpec,
         customAdgroupTag,

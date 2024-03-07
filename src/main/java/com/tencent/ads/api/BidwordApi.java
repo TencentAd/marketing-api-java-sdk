@@ -190,6 +190,7 @@ public class BidwordApi {
   public com.squareup.okhttp.Call bidwordAddAsync(
       BidwordAddRequest data, final ApiCallback<BidwordAddResponse> callback, String... headerPair)
       throws ApiException {
+
     ProgressResponseBody.ProgressListener progressListener = null;
     ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
 
@@ -354,6 +355,7 @@ public class BidwordApi {
       final ApiCallback<BidwordDeleteResponse> callback,
       String... headerPair)
       throws ApiException {
+
     ProgressResponseBody.ProgressListener progressListener = null;
     ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
 
@@ -517,6 +519,7 @@ public class BidwordApi {
   public com.squareup.okhttp.Call bidwordGetAsync(
       BidwordGetRequest data, final ApiCallback<BidwordGetResponse> callback, String... headerPair)
       throws ApiException {
+
     ProgressResponseBody.ProgressListener progressListener = null;
     ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
 
@@ -681,6 +684,7 @@ public class BidwordApi {
       final ApiCallback<BidwordUpdateResponse> callback,
       String... headerPair)
       throws ApiException {
+
     ProgressResponseBody.ProgressListener progressListener = null;
     ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
 

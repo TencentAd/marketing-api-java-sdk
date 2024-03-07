@@ -189,6 +189,7 @@ public class DynamicAdImagesApi {
       final ApiCallback<DynamicAdImagesAddResponse> callback,
       String... headerPair)
       throws ApiException {
+
     ProgressResponseBody.ProgressListener progressListener = null;
     ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
 
@@ -415,6 +416,7 @@ public class DynamicAdImagesApi {
       final ApiCallback<DynamicAdImagesGetResponse> callback,
       String... headerPair)
       throws ApiException {
+
     ProgressResponseBody.ProgressListener progressListener = null;
     ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
 

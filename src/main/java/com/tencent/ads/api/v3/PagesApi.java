@@ -34,7 +34,7 @@ public class PagesApi {
   private ApiClient apiClient;
 
   public PagesApi() {
-    this(Configuration.getDefaultApiClient());
+    this(Configuration.getV3DefaultApiClient());
   }
 
   public PagesApi(ApiClient apiClient) {
@@ -194,14 +194,9 @@ public class PagesApi {
       List<String> fields,
       String... headerPair)
       throws ApiException {
-    try {
-      ApiClient.setBasePathTLVal("https://api.e.qq.com/v3.0");
-      ApiResponse<PagesGetResponse> resp =
-          pagesGetWithHttpInfo(accountId, filtering, page, pageSize, fields, headerPair);
-      return resp.getData();
-    } finally {
-      ApiClient.clearBasePathTLVal();
-    }
+    ApiResponse<PagesGetResponse> resp =
+        pagesGetWithHttpInfo(accountId, filtering, page, pageSize, fields, headerPair);
+    return resp.getData();
   }
 
   /**
@@ -252,44 +247,40 @@ public class PagesApi {
       final ApiCallback<PagesGetResponse> callback,
       String... headerPair)
       throws ApiException {
-    try {
-      ApiClient.setBasePathTLVal("https://api.e.qq.com/v3.0");
-      ProgressResponseBody.ProgressListener progressListener = null;
-      ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
 
-      if (callback != null) {
-        progressListener =
-            new ProgressResponseBody.ProgressListener() {
-              @Override
-              public void update(long bytesRead, long contentLength, boolean done) {
-                callback.onDownloadProgress(bytesRead, contentLength, done);
-              }
-            };
+    ProgressResponseBody.ProgressListener progressListener = null;
+    ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
 
-        progressRequestListener =
-            new ProgressRequestBody.ProgressRequestListener() {
-              @Override
-              public void onRequestProgress(long bytesWritten, long contentLength, boolean done) {
-                callback.onUploadProgress(bytesWritten, contentLength, done);
-              }
-            };
-      }
+    if (callback != null) {
+      progressListener =
+          new ProgressResponseBody.ProgressListener() {
+            @Override
+            public void update(long bytesRead, long contentLength, boolean done) {
+              callback.onDownloadProgress(bytesRead, contentLength, done);
+            }
+          };
 
-      com.squareup.okhttp.Call call =
-          pagesGetValidateBeforeCall(
-              accountId,
-              filtering,
-              page,
-              pageSize,
-              fields,
-              progressListener,
-              progressRequestListener,
-              headerPair);
-      Type localVarReturnType = new TypeToken<PagesGetResponse>() {}.getType();
-      apiClient.executeAsync(call, localVarReturnType, callback);
-      return call;
-    } finally {
-      ApiClient.clearBasePathTLVal();
+      progressRequestListener =
+          new ProgressRequestBody.ProgressRequestListener() {
+            @Override
+            public void onRequestProgress(long bytesWritten, long contentLength, boolean done) {
+              callback.onUploadProgress(bytesWritten, contentLength, done);
+            }
+          };
     }
+
+    com.squareup.okhttp.Call call =
+        pagesGetValidateBeforeCall(
+            accountId,
+            filtering,
+            page,
+            pageSize,
+            fields,
+            progressListener,
+            progressRequestListener,
+            headerPair);
+    Type localVarReturnType = new TypeToken<PagesGetResponse>() {}.getType();
+    apiClient.executeAsync(call, localVarReturnType, callback);
+    return call;
   }
 }

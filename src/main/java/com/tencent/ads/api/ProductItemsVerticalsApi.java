@@ -183,6 +183,7 @@ public class ProductItemsVerticalsApi {
       final ApiCallback<ProductItemsVerticalsGetResponse> callback,
       String... headerPair)
       throws ApiException {
+
     ProgressResponseBody.ProgressListener progressListener = null;
     ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
 

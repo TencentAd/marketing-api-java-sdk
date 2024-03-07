@@ -24,6 +24,9 @@ public class VideoStruct {
   @SerializedName("video_id")
   private String videoId = null;
 
+  @SerializedName("cover_id")
+  private String coverId = null;
+
   public VideoStruct videoId(String videoId) {
     this.videoId = videoId;
     return this;
@@ -43,6 +46,25 @@ public class VideoStruct {
     this.videoId = videoId;
   }
 
+  public VideoStruct coverId(String coverId) {
+    this.coverId = coverId;
+    return this;
+  }
+
+  /**
+   * Get coverId
+   *
+   * @return coverId
+   */
+  @ApiModelProperty(value = "")
+  public String getCoverId() {
+    return coverId;
+  }
+
+  public void setCoverId(String coverId) {
+    this.coverId = coverId;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -52,12 +74,13 @@ public class VideoStruct {
       return false;
     }
     VideoStruct videoStruct = (VideoStruct) o;
-    return Objects.equals(this.videoId, videoStruct.videoId);
+    return Objects.equals(this.videoId, videoStruct.videoId)
+        && Objects.equals(this.coverId, videoStruct.coverId);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(videoId);
+    return Objects.hash(videoId, coverId);
   }
 
   @Override

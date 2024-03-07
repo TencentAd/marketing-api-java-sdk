@@ -36,7 +36,7 @@ public class ConversionsApi {
   private ApiClient apiClient;
 
   public ConversionsApi() {
-    this(Configuration.getDefaultApiClient());
+    this(Configuration.getV3DefaultApiClient());
   }
 
   public ConversionsApi(ApiClient apiClient) {
@@ -156,13 +156,8 @@ public class ConversionsApi {
    */
   public ConversionsAddResponse conversionsAdd(ConversionsAddRequest data, String... headerPair)
       throws ApiException {
-    try {
-      ApiClient.setBasePathTLVal("https://api.e.qq.com/v3.0");
-      ApiResponse<ConversionsAddResponse> resp = conversionsAddWithHttpInfo(data, headerPair);
-      return resp.getData();
-    } finally {
-      ApiClient.clearBasePathTLVal();
-    }
+    ApiResponse<ConversionsAddResponse> resp = conversionsAddWithHttpInfo(data, headerPair);
+    return resp.getData();
   }
 
   /**
@@ -193,38 +188,34 @@ public class ConversionsApi {
       final ApiCallback<ConversionsAddResponse> callback,
       String... headerPair)
       throws ApiException {
-    try {
-      ApiClient.setBasePathTLVal("https://api.e.qq.com/v3.0");
-      ProgressResponseBody.ProgressListener progressListener = null;
-      ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
 
-      if (callback != null) {
-        progressListener =
-            new ProgressResponseBody.ProgressListener() {
-              @Override
-              public void update(long bytesRead, long contentLength, boolean done) {
-                callback.onDownloadProgress(bytesRead, contentLength, done);
-              }
-            };
+    ProgressResponseBody.ProgressListener progressListener = null;
+    ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
 
-        progressRequestListener =
-            new ProgressRequestBody.ProgressRequestListener() {
-              @Override
-              public void onRequestProgress(long bytesWritten, long contentLength, boolean done) {
-                callback.onUploadProgress(bytesWritten, contentLength, done);
-              }
-            };
-      }
+    if (callback != null) {
+      progressListener =
+          new ProgressResponseBody.ProgressListener() {
+            @Override
+            public void update(long bytesRead, long contentLength, boolean done) {
+              callback.onDownloadProgress(bytesRead, contentLength, done);
+            }
+          };
 
-      com.squareup.okhttp.Call call =
-          conversionsAddValidateBeforeCall(
-              data, progressListener, progressRequestListener, headerPair);
-      Type localVarReturnType = new TypeToken<ConversionsAddResponse>() {}.getType();
-      apiClient.executeAsync(call, localVarReturnType, callback);
-      return call;
-    } finally {
-      ApiClient.clearBasePathTLVal();
+      progressRequestListener =
+          new ProgressRequestBody.ProgressRequestListener() {
+            @Override
+            public void onRequestProgress(long bytesWritten, long contentLength, boolean done) {
+              callback.onUploadProgress(bytesWritten, contentLength, done);
+            }
+          };
     }
+
+    com.squareup.okhttp.Call call =
+        conversionsAddValidateBeforeCall(
+            data, progressListener, progressRequestListener, headerPair);
+    Type localVarReturnType = new TypeToken<ConversionsAddResponse>() {}.getType();
+    apiClient.executeAsync(call, localVarReturnType, callback);
+    return call;
   }
   /**
    * Build call for conversionsGet
@@ -371,14 +362,9 @@ public class ConversionsApi {
       List<String> fields,
       String... headerPair)
       throws ApiException {
-    try {
-      ApiClient.setBasePathTLVal("https://api.e.qq.com/v3.0");
-      ApiResponse<ConversionsGetResponse> resp =
-          conversionsGetWithHttpInfo(accountId, filtering, page, pageSize, fields, headerPair);
-      return resp.getData();
-    } finally {
-      ApiClient.clearBasePathTLVal();
-    }
+    ApiResponse<ConversionsGetResponse> resp =
+        conversionsGetWithHttpInfo(accountId, filtering, page, pageSize, fields, headerPair);
+    return resp.getData();
   }
 
   /**
@@ -429,44 +415,40 @@ public class ConversionsApi {
       final ApiCallback<ConversionsGetResponse> callback,
       String... headerPair)
       throws ApiException {
-    try {
-      ApiClient.setBasePathTLVal("https://api.e.qq.com/v3.0");
-      ProgressResponseBody.ProgressListener progressListener = null;
-      ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
 
-      if (callback != null) {
-        progressListener =
-            new ProgressResponseBody.ProgressListener() {
-              @Override
-              public void update(long bytesRead, long contentLength, boolean done) {
-                callback.onDownloadProgress(bytesRead, contentLength, done);
-              }
-            };
+    ProgressResponseBody.ProgressListener progressListener = null;
+    ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
 
-        progressRequestListener =
-            new ProgressRequestBody.ProgressRequestListener() {
-              @Override
-              public void onRequestProgress(long bytesWritten, long contentLength, boolean done) {
-                callback.onUploadProgress(bytesWritten, contentLength, done);
-              }
-            };
-      }
+    if (callback != null) {
+      progressListener =
+          new ProgressResponseBody.ProgressListener() {
+            @Override
+            public void update(long bytesRead, long contentLength, boolean done) {
+              callback.onDownloadProgress(bytesRead, contentLength, done);
+            }
+          };
 
-      com.squareup.okhttp.Call call =
-          conversionsGetValidateBeforeCall(
-              accountId,
-              filtering,
-              page,
-              pageSize,
-              fields,
-              progressListener,
-              progressRequestListener,
-              headerPair);
-      Type localVarReturnType = new TypeToken<ConversionsGetResponse>() {}.getType();
-      apiClient.executeAsync(call, localVarReturnType, callback);
-      return call;
-    } finally {
-      ApiClient.clearBasePathTLVal();
+      progressRequestListener =
+          new ProgressRequestBody.ProgressRequestListener() {
+            @Override
+            public void onRequestProgress(long bytesWritten, long contentLength, boolean done) {
+              callback.onUploadProgress(bytesWritten, contentLength, done);
+            }
+          };
     }
+
+    com.squareup.okhttp.Call call =
+        conversionsGetValidateBeforeCall(
+            accountId,
+            filtering,
+            page,
+            pageSize,
+            fields,
+            progressListener,
+            progressRequestListener,
+            headerPair);
+    Type localVarReturnType = new TypeToken<ConversionsGetResponse>() {}.getType();
+    apiClient.executeAsync(call, localVarReturnType, callback);
+    return call;
   }
 }

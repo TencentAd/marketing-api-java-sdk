@@ -188,6 +188,7 @@ public class VideoChannelFansDataApi {
       final ApiCallback<VideoChannelFansDataGetResponse> callback,
       String... headerPair)
       throws ApiException {
+
     ProgressResponseBody.ProgressListener progressListener = null;
     ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
 

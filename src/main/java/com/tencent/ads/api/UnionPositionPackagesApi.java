@@ -194,6 +194,7 @@ public class UnionPositionPackagesApi {
       final ApiCallback<UnionPositionPackagesAddResponse> callback,
       String... headerPair)
       throws ApiException {
+
     ProgressResponseBody.ProgressListener progressListener = null;
     ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
 
@@ -362,6 +363,7 @@ public class UnionPositionPackagesApi {
       final ApiCallback<UnionPositionPackagesDeleteResponse> callback,
       String... headerPair)
       throws ApiException {
+
     ProgressResponseBody.ProgressListener progressListener = null;
     ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
 
@@ -589,6 +591,7 @@ public class UnionPositionPackagesApi {
       final ApiCallback<UnionPositionPackagesGetResponse> callback,
       String... headerPair)
       throws ApiException {
+
     ProgressResponseBody.ProgressListener progressListener = null;
     ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
 
@@ -764,6 +767,7 @@ public class UnionPositionPackagesApi {
       final ApiCallback<UnionPositionPackagesUpdateResponse> callback,
       String... headerPair)
       throws ApiException {
+
     ProgressResponseBody.ProgressListener progressListener = null;
     ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
 

@@ -188,6 +188,7 @@ public class SeedElementQuotaApi {
       final ApiCallback<SeedElementQuotaGetResponse> callback,
       String... headerPair)
       throws ApiException {
+
     ProgressResponseBody.ProgressListener progressListener = null;
     ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
 

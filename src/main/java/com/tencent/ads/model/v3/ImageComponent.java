@@ -21,8 +21,30 @@ import java.util.Objects;
 /** 单图组件 */
 @ApiModel(description = "单图组件")
 public class ImageComponent {
+  @SerializedName("component_id")
+  private Long componentId = null;
+
   @SerializedName("value")
   private ImageStruct value = null;
+
+  public ImageComponent componentId(Long componentId) {
+    this.componentId = componentId;
+    return this;
+  }
+
+  /**
+   * Get componentId
+   *
+   * @return componentId
+   */
+  @ApiModelProperty(value = "")
+  public Long getComponentId() {
+    return componentId;
+  }
+
+  public void setComponentId(Long componentId) {
+    this.componentId = componentId;
+  }
 
   public ImageComponent value(ImageStruct value) {
     this.value = value;
@@ -52,12 +74,13 @@ public class ImageComponent {
       return false;
     }
     ImageComponent imageComponent = (ImageComponent) o;
-    return Objects.equals(this.value, imageComponent.value);
+    return Objects.equals(this.componentId, imageComponent.componentId)
+        && Objects.equals(this.value, imageComponent.value);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(value);
+    return Objects.hash(componentId, value);
   }
 
   @Override

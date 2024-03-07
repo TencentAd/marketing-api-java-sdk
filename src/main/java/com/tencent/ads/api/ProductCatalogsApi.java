@@ -188,6 +188,7 @@ public class ProductCatalogsApi {
       final ApiCallback<ProductCatalogsAddResponse> callback,
       String... headerPair)
       throws ApiException {
+
     ProgressResponseBody.ProgressListener progressListener = null;
     ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
 
@@ -426,6 +427,7 @@ public class ProductCatalogsApi {
       final ApiCallback<ProductCatalogsGetResponse> callback,
       String... headerPair)
       throws ApiException {
+
     ProgressResponseBody.ProgressListener progressListener = null;
     ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
 

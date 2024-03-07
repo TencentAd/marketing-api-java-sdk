@@ -192,6 +192,7 @@ public class CustomAudiencesApi {
       final ApiCallback<CustomAudiencesAddResponse> callback,
       String... headerPair)
       throws ApiException {
+
     ProgressResponseBody.ProgressListener progressListener = null;
     ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
 
@@ -359,6 +360,7 @@ public class CustomAudiencesApi {
       final ApiCallback<CustomAudiencesDeleteResponse> callback,
       String... headerPair)
       throws ApiException {
+
     ProgressResponseBody.ProgressListener progressListener = null;
     ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
 
@@ -597,6 +599,7 @@ public class CustomAudiencesApi {
       final ApiCallback<CustomAudiencesGetResponse> callback,
       String... headerPair)
       throws ApiException {
+
     ProgressResponseBody.ProgressListener progressListener = null;
     ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
 
@@ -772,6 +775,7 @@ public class CustomAudiencesApi {
       final ApiCallback<CustomAudiencesUpdateResponse> callback,
       String... headerPair)
       throws ApiException {
+
     ProgressResponseBody.ProgressListener progressListener = null;
     ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
 

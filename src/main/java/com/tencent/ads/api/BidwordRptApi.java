@@ -186,6 +186,7 @@ public class BidwordRptApi {
       final ApiCallback<BidwordRptGetResponse> callback,
       String... headerPair)
       throws ApiException {
+
     ProgressResponseBody.ProgressListener progressListener = null;
     ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
 

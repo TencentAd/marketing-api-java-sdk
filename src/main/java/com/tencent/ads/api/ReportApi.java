@@ -192,6 +192,7 @@ public class ReportApi {
       final ApiCallback<ReportAdUnionResponse> callback,
       String... headerPair)
       throws ApiException {
+
     ProgressResponseBody.ProgressListener progressListener = null;
     ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
 
@@ -359,6 +360,7 @@ public class ReportApi {
       final ApiCallback<ReportConversionsPredictResponse> callback,
       String... headerPair)
       throws ApiException {
+
     ProgressResponseBody.ProgressListener progressListener = null;
     ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
 
@@ -525,6 +527,7 @@ public class ReportApi {
       final ApiCallback<ReportLandingPageResponse> callback,
       String... headerPair)
       throws ApiException {
+
     ProgressResponseBody.ProgressListener progressListener = null;
     ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
 
@@ -691,6 +694,7 @@ public class ReportApi {
       final ApiCallback<ReportVideoFrameResponse> callback,
       String... headerPair)
       throws ApiException {
+
     ProgressResponseBody.ProgressListener progressListener = null;
     ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
 

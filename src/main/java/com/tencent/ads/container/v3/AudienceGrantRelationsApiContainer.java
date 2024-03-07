@@ -22,7 +22,7 @@ import com.tencent.ads.model.v3.AudienceGrantRelationsAddRequest;
 import com.tencent.ads.model.v3.AudienceGrantRelationsAddResponse;
 import com.tencent.ads.model.v3.AudienceGrantRelationsGetResponse;
 import com.tencent.ads.model.v3.AudienceGrantRelationsGetResponseData;
-import com.tencent.ads.model.v3.SingleFilter;
+import com.tencent.ads.model.v3.AudienceGrantRelationsGetSingleFilter;
 import java.util.List;
 
 public class AudienceGrantRelationsApiContainer extends ApiContainer {
@@ -60,7 +60,7 @@ public class AudienceGrantRelationsApiContainer extends ApiContainer {
    */
   public AudienceGrantRelationsGetResponseData audienceGrantRelationsGet(
       Long accountId,
-      List<SingleFilter> filtering,
+      List<AudienceGrantRelationsGetSingleFilter> filtering,
       Long page,
       Long pageSize,
       List<String> fields,

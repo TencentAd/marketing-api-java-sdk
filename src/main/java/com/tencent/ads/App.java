@@ -130,7 +130,6 @@ public class App {
   @Inject MergeFundTypeSubcustomerTransferApiContainer mergeFundTypeSubcustomerTransferApiContainer;
   @Inject OauthApiContainer oauthApiContainer;
   @Inject ObjectCommentFlagApiContainer objectCommentFlagApiContainer;
-  @Inject OptimizationGoalPermissionsApiContainer optimizationGoalPermissionsApiContainer;
   @Inject OuterCluesApiContainer outerCluesApiContainer;
   @Inject OuterCluesContactApiContainer outerCluesContactApiContainer;
   @Inject PagesApiContainer pagesApiContainer;
@@ -643,10 +642,6 @@ public class App {
 
   public ObjectCommentFlagApiContainer objectCommentFlag() {
     return objectCommentFlagApiContainer;
-  }
-
-  public OptimizationGoalPermissionsApiContainer optimizationGoalPermissions() {
-    return optimizationGoalPermissionsApiContainer;
   }
 
   public OuterCluesApiContainer outerClues() {

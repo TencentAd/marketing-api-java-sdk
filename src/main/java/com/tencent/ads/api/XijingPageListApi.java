@@ -429,6 +429,7 @@ public class XijingPageListApi {
       final ApiCallback<XijingPageListGetResponse> callback,
       String... headerPair)
       throws ApiException {
+
     ProgressResponseBody.ProgressListener progressListener = null;
     ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
 

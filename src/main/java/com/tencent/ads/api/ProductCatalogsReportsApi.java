@@ -305,6 +305,7 @@ public class ProductCatalogsReportsApi {
       final ApiCallback<ProductCatalogsReportsGetResponse> callback,
       String... headerPair)
       throws ApiException {
+
     ProgressResponseBody.ProgressListener progressListener = null;
     ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
 

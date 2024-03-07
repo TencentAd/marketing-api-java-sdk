@@ -186,6 +186,7 @@ public class EstimationApi {
       final ApiCallback<EstimationGetResponse> callback,
       String... headerPair)
       throws ApiException {
+
     ProgressResponseBody.ProgressListener progressListener = null;
     ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
 

@@ -21,8 +21,30 @@ import java.util.Objects;
 /** 弹幕组件 */
 @ApiModel(description = "弹幕组件")
 public class BarrageComponent {
+  @SerializedName("component_id")
+  private Long componentId = null;
+
   @SerializedName("value")
   private BarrageStruct value = null;
+
+  public BarrageComponent componentId(Long componentId) {
+    this.componentId = componentId;
+    return this;
+  }
+
+  /**
+   * Get componentId
+   *
+   * @return componentId
+   */
+  @ApiModelProperty(value = "")
+  public Long getComponentId() {
+    return componentId;
+  }
+
+  public void setComponentId(Long componentId) {
+    this.componentId = componentId;
+  }
 
   public BarrageComponent value(BarrageStruct value) {
     this.value = value;
@@ -52,12 +74,13 @@ public class BarrageComponent {
       return false;
     }
     BarrageComponent barrageComponent = (BarrageComponent) o;
-    return Objects.equals(this.value, barrageComponent.value);
+    return Objects.equals(this.componentId, barrageComponent.componentId)
+        && Objects.equals(this.value, barrageComponent.value);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(value);
+    return Objects.hash(componentId, value);
   }
 
   @Override

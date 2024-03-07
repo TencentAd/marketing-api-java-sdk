@@ -187,6 +187,7 @@ public class ImageProcessingApi {
       final ApiCallback<ImageProcessingAddResponse> callback,
       String... headerPair)
       throws ApiException {
+
     ProgressResponseBody.ProgressListener progressListener = null;
     ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
 

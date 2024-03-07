@@ -21,8 +21,30 @@ import java.util.Objects;
 /** 标题组件 */
 @ApiModel(description = "标题组件")
 public class TitleComponent {
+  @SerializedName("component_id")
+  private Long componentId = null;
+
   @SerializedName("value")
   private TitleStruct value = null;
+
+  public TitleComponent componentId(Long componentId) {
+    this.componentId = componentId;
+    return this;
+  }
+
+  /**
+   * Get componentId
+   *
+   * @return componentId
+   */
+  @ApiModelProperty(value = "")
+  public Long getComponentId() {
+    return componentId;
+  }
+
+  public void setComponentId(Long componentId) {
+    this.componentId = componentId;
+  }
 
   public TitleComponent value(TitleStruct value) {
     this.value = value;
@@ -52,12 +74,13 @@ public class TitleComponent {
       return false;
     }
     TitleComponent titleComponent = (TitleComponent) o;
-    return Objects.equals(this.value, titleComponent.value);
+    return Objects.equals(this.componentId, titleComponent.componentId)
+        && Objects.equals(this.value, titleComponent.value);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(value);
+    return Objects.hash(componentId, value);
   }
 
   @Override

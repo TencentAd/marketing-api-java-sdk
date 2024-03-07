@@ -197,6 +197,7 @@ public class AdLabelApi {
       final ApiCallback<AdLabelGetResponse> callback,
       String... headerPair)
       throws ApiException {
+
     ProgressResponseBody.ProgressListener progressListener = null;
     ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
 

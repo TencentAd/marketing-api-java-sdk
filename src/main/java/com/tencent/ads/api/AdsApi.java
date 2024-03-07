@@ -190,6 +190,7 @@ public class AdsApi {
   public com.squareup.okhttp.Call adsAddAsync(
       AdsAddRequest data, final ApiCallback<AdsAddResponse> callback, String... headerPair)
       throws ApiException {
+
     ProgressResponseBody.ProgressListener progressListener = null;
     ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
 
@@ -351,6 +352,7 @@ public class AdsApi {
   public com.squareup.okhttp.Call adsDeleteAsync(
       AdsDeleteRequest data, final ApiCallback<AdsDeleteResponse> callback, String... headerPair)
       throws ApiException {
+
     ProgressResponseBody.ProgressListener progressListener = null;
     ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
 
@@ -619,6 +621,7 @@ public class AdsApi {
       final ApiCallback<AdsGetResponse> callback,
       String... headerPair)
       throws ApiException {
+
     ProgressResponseBody.ProgressListener progressListener = null;
     ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
 
@@ -790,6 +793,7 @@ public class AdsApi {
   public com.squareup.okhttp.Call adsUpdateAsync(
       AdsUpdateRequest data, final ApiCallback<AdsUpdateResponse> callback, String... headerPair)
       throws ApiException {
+
     ProgressResponseBody.ProgressListener progressListener = null;
     ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
 
@@ -956,6 +960,7 @@ public class AdsApi {
       final ApiCallback<AdsUpdateConfiguredStatusResponse> callback,
       String... headerPair)
       throws ApiException {
+
     ProgressResponseBody.ProgressListener progressListener = null;
     ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
 

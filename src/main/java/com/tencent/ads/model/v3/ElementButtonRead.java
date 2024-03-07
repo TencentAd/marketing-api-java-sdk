@@ -63,6 +63,9 @@ public class ElementButtonRead {
   @SerializedName("tel_spec")
   private TelSpec telSpec = null;
 
+  @SerializedName("video_channel_spec")
+  private VideoChannelSpec videoChannelSpec = null;
+
   public ElementButtonRead title(String title) {
     this.title = title;
     return this;
@@ -329,6 +332,25 @@ public class ElementButtonRead {
     this.telSpec = telSpec;
   }
 
+  public ElementButtonRead videoChannelSpec(VideoChannelSpec videoChannelSpec) {
+    this.videoChannelSpec = videoChannelSpec;
+    return this;
+  }
+
+  /**
+   * Get videoChannelSpec
+   *
+   * @return videoChannelSpec
+   */
+  @ApiModelProperty(value = "")
+  public VideoChannelSpec getVideoChannelSpec() {
+    return videoChannelSpec;
+  }
+
+  public void setVideoChannelSpec(VideoChannelSpec videoChannelSpec) {
+    this.videoChannelSpec = videoChannelSpec;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -351,7 +373,8 @@ public class ElementButtonRead {
         && Objects.equals(this.serviceSpec, elementButtonRead.serviceSpec)
         && Objects.equals(this.wecomSpec, elementButtonRead.wecomSpec)
         && Objects.equals(this.useIcon, elementButtonRead.useIcon)
-        && Objects.equals(this.telSpec, elementButtonRead.telSpec);
+        && Objects.equals(this.telSpec, elementButtonRead.telSpec)
+        && Objects.equals(this.videoChannelSpec, elementButtonRead.videoChannelSpec);
   }
 
   @Override
@@ -370,7 +393,8 @@ public class ElementButtonRead {
         serviceSpec,
         wecomSpec,
         useIcon,
-        telSpec);
+        telSpec,
+        videoChannelSpec);
   }
 
   @Override

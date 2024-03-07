@@ -235,6 +235,7 @@ public class AsyncTaskFilesApi {
       final ApiCallback<String> callback,
       String... headerPair)
       throws ApiException {
+
     ProgressResponseBody.ProgressListener progressListener = null;
     ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
 

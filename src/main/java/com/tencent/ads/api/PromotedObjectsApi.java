@@ -195,6 +195,7 @@ public class PromotedObjectsApi {
       final ApiCallback<PromotedObjectsAddResponse> callback,
       String... headerPair)
       throws ApiException {
+
     ProgressResponseBody.ProgressListener progressListener = null;
     ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
 
@@ -362,6 +363,7 @@ public class PromotedObjectsApi {
       final ApiCallback<PromotedObjectsAuthorizeResponse> callback,
       String... headerPair)
       throws ApiException {
+
     ProgressResponseBody.ProgressListener progressListener = null;
     ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
 
@@ -529,6 +531,7 @@ public class PromotedObjectsApi {
       final ApiCallback<PromotedObjectsDeleteResponse> callback,
       String... headerPair)
       throws ApiException {
+
     ProgressResponseBody.ProgressListener progressListener = null;
     ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
 
@@ -755,6 +758,7 @@ public class PromotedObjectsApi {
       final ApiCallback<PromotedObjectsGetResponse> callback,
       String... headerPair)
       throws ApiException {
+
     ProgressResponseBody.ProgressListener progressListener = null;
     ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
 
@@ -929,6 +933,7 @@ public class PromotedObjectsApi {
       final ApiCallback<PromotedObjectsUpdateResponse> callback,
       String... headerPair)
       throws ApiException {
+
     ProgressResponseBody.ProgressListener progressListener = null;
     ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
 

@@ -20,6 +20,8 @@ import com.tencent.ads.guice.GuiceModule;
 public class App {
 
   @Inject AdDiagnosisApiContainer adDiagnosisApiContainer;
+  @Inject AdParamApiContainer adParamApiContainer;
+  @Inject AdUnionReportsApiContainer adUnionReportsApiContainer;
   @Inject AdcreativePreviewsApiContainer adcreativePreviewsApiContainer;
   @Inject AdcreativePreviewsQrcodeApiContainer adcreativePreviewsQrcodeApiContainer;
   @Inject AdgroupNegativewordsApiContainer adgroupNegativewordsApiContainer;
@@ -37,12 +39,14 @@ public class App {
   @Inject ConversionsApiContainer conversionsApiContainer;
   @Inject CreativeTemplateApiContainer creativeTemplateApiContainer;
   @Inject CreativeTemplateListApiContainer creativeTemplateListApiContainer;
+  @Inject CreativetoolsTextApiContainer creativetoolsTextApiContainer;
   @Inject CustomAudienceFilesApiContainer customAudienceFilesApiContainer;
   @Inject CustomAudiencesApiContainer customAudiencesApiContainer;
   @Inject DailyBalanceReportApiContainer dailyBalanceReportApiContainer;
   @Inject DailyReportsApiContainer dailyReportsApiContainer;
   @Inject DynamicCreativeReviewResultsApiContainer dynamicCreativeReviewResultsApiContainer;
   @Inject DynamicCreativesApiContainer dynamicCreativesApiContainer;
+  @Inject EcommerceOrderApiContainer ecommerceOrderApiContainer;
   @Inject EstimationApiContainer estimationApiContainer;
   @Inject ExtendPackageApiContainer extendPackageApiContainer;
   @Inject FundStatementsDetailedApiContainer fundStatementsDetailedApiContainer;
@@ -53,6 +57,8 @@ public class App {
   @Inject HourlyReportsApiContainer hourlyReportsApiContainer;
   @Inject ImagesApiContainer imagesApiContainer;
   @Inject KeywordRecommendApiContainer keywordRecommendApiContainer;
+  @Inject LiveRoomComponentStatusApiContainer liveRoomComponentStatusApiContainer;
+  @Inject LiveRoomComponentsApiContainer liveRoomComponentsApiContainer;
   @Inject LocalStoresApiContainer localStoresApiContainer;
   @Inject LocalStoresAddressParsingResultApiContainer localStoresAddressParsingResultApiContainer;
   @Inject LocalStoresCategoriesApiContainer localStoresCategoriesApiContainer;
@@ -69,6 +75,7 @@ public class App {
   @Inject MergeFundTypeFundsApiContainer mergeFundTypeFundsApiContainer;
   @Inject MergeFundTypeSubcustomerTransferApiContainer mergeFundTypeSubcustomerTransferApiContainer;
   @Inject OauthApiContainer oauthApiContainer;
+  @Inject OptimizationGoalPermissionsApiContainer optimizationGoalPermissionsApiContainer;
   @Inject PagesApiContainer pagesApiContainer;
   @Inject ProfilesApiContainer profilesApiContainer;
   @Inject ProgrammedApiContainer programmedApiContainer;
@@ -88,6 +95,14 @@ public class App {
 
   public AdDiagnosisApiContainer adDiagnosis() {
     return adDiagnosisApiContainer;
+  }
+
+  public AdParamApiContainer adParam() {
+    return adParamApiContainer;
+  }
+
+  public AdUnionReportsApiContainer adUnionReports() {
+    return adUnionReportsApiContainer;
   }
 
   public AdcreativePreviewsApiContainer adcreativePreviews() {
@@ -158,6 +173,10 @@ public class App {
     return creativeTemplateListApiContainer;
   }
 
+  public CreativetoolsTextApiContainer creativetoolsText() {
+    return creativetoolsTextApiContainer;
+  }
+
   public CustomAudienceFilesApiContainer customAudienceFiles() {
     return customAudienceFilesApiContainer;
   }
@@ -180,6 +199,10 @@ public class App {
 
   public DynamicCreativesApiContainer dynamicCreatives() {
     return dynamicCreativesApiContainer;
+  }
+
+  public EcommerceOrderApiContainer ecommerceOrder() {
+    return ecommerceOrderApiContainer;
   }
 
   public EstimationApiContainer estimation() {
@@ -220,6 +243,14 @@ public class App {
 
   public KeywordRecommendApiContainer keywordRecommend() {
     return keywordRecommendApiContainer;
+  }
+
+  public LiveRoomComponentStatusApiContainer liveRoomComponentStatus() {
+    return liveRoomComponentStatusApiContainer;
+  }
+
+  public LiveRoomComponentsApiContainer liveRoomComponents() {
+    return liveRoomComponentsApiContainer;
   }
 
   public LocalStoresApiContainer localStores() {
@@ -272,6 +303,10 @@ public class App {
 
   public OauthApiContainer oauth() {
     return oauthApiContainer;
+  }
+
+  public OptimizationGoalPermissionsApiContainer optimizationGoalPermissions() {
+    return optimizationGoalPermissionsApiContainer;
   }
 
   public PagesApiContainer pages() {

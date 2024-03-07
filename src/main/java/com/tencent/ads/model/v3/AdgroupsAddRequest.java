@@ -153,6 +153,9 @@ public class AdgroupsAddRequest {
   @SerializedName("forward_link_assist")
   private OptimizationGoal forwardLinkAssist = null;
 
+  @SerializedName("mpa_spec")
+  private MpaSpec mpaSpec = null;
+
   public AdgroupsAddRequest accountId(Long accountId) {
     this.accountId = accountId;
     return this;
@@ -1026,6 +1029,25 @@ public class AdgroupsAddRequest {
     this.forwardLinkAssist = forwardLinkAssist;
   }
 
+  public AdgroupsAddRequest mpaSpec(MpaSpec mpaSpec) {
+    this.mpaSpec = mpaSpec;
+    return this;
+  }
+
+  /**
+   * Get mpaSpec
+   *
+   * @return mpaSpec
+   */
+  @ApiModelProperty(value = "")
+  public MpaSpec getMpaSpec() {
+    return mpaSpec;
+  }
+
+  public void setMpaSpec(MpaSpec mpaSpec) {
+    this.mpaSpec = mpaSpec;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -1086,7 +1108,8 @@ public class AdgroupsAddRequest {
         && Objects.equals(this.explorationStrategy, adgroupsAddRequest.explorationStrategy)
         && Objects.equals(this.prioritySiteSet, adgroupsAddRequest.prioritySiteSet)
         && Objects.equals(this.ecomPkamSwitch, adgroupsAddRequest.ecomPkamSwitch)
-        && Objects.equals(this.forwardLinkAssist, adgroupsAddRequest.forwardLinkAssist);
+        && Objects.equals(this.forwardLinkAssist, adgroupsAddRequest.forwardLinkAssist)
+        && Objects.equals(this.mpaSpec, adgroupsAddRequest.mpaSpec);
   }
 
   @Override
@@ -1135,7 +1158,8 @@ public class AdgroupsAddRequest {
         explorationStrategy,
         prioritySiteSet,
         ecomPkamSwitch,
-        forwardLinkAssist);
+        forwardLinkAssist,
+        mpaSpec);
   }
 
   @Override

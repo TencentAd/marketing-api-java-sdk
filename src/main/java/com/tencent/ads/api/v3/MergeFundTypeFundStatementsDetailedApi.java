@@ -34,7 +34,7 @@ public class MergeFundTypeFundStatementsDetailedApi {
   private ApiClient apiClient;
 
   public MergeFundTypeFundStatementsDetailedApi() {
-    this(Configuration.getDefaultApiClient());
+    this(Configuration.getV3DefaultApiClient());
   }
 
   public MergeFundTypeFundStatementsDetailedApi(ApiClient apiClient) {
@@ -213,15 +213,10 @@ public class MergeFundTypeFundStatementsDetailedApi {
       List<String> fields,
       String... headerPair)
       throws ApiException {
-    try {
-      ApiClient.setBasePathTLVal("https://api.e.qq.com/v3.0");
-      ApiResponse<MergeFundTypeFundStatementsDetailedGetResponse> resp =
-          mergeFundTypeFundStatementsDetailedGetWithHttpInfo(
-              advertiserId, fundType, dateRange, page, pageSize, fields, headerPair);
-      return resp.getData();
-    } finally {
-      ApiClient.clearBasePathTLVal();
-    }
+    ApiResponse<MergeFundTypeFundStatementsDetailedGetResponse> resp =
+        mergeFundTypeFundStatementsDetailedGetWithHttpInfo(
+            advertiserId, fundType, dateRange, page, pageSize, fields, headerPair);
+    return resp.getData();
   }
 
   /**
@@ -278,46 +273,42 @@ public class MergeFundTypeFundStatementsDetailedApi {
       final ApiCallback<MergeFundTypeFundStatementsDetailedGetResponse> callback,
       String... headerPair)
       throws ApiException {
-    try {
-      ApiClient.setBasePathTLVal("https://api.e.qq.com/v3.0");
-      ProgressResponseBody.ProgressListener progressListener = null;
-      ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
 
-      if (callback != null) {
-        progressListener =
-            new ProgressResponseBody.ProgressListener() {
-              @Override
-              public void update(long bytesRead, long contentLength, boolean done) {
-                callback.onDownloadProgress(bytesRead, contentLength, done);
-              }
-            };
+    ProgressResponseBody.ProgressListener progressListener = null;
+    ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
 
-        progressRequestListener =
-            new ProgressRequestBody.ProgressRequestListener() {
-              @Override
-              public void onRequestProgress(long bytesWritten, long contentLength, boolean done) {
-                callback.onUploadProgress(bytesWritten, contentLength, done);
-              }
-            };
-      }
+    if (callback != null) {
+      progressListener =
+          new ProgressResponseBody.ProgressListener() {
+            @Override
+            public void update(long bytesRead, long contentLength, boolean done) {
+              callback.onDownloadProgress(bytesRead, contentLength, done);
+            }
+          };
 
-      com.squareup.okhttp.Call call =
-          mergeFundTypeFundStatementsDetailedGetValidateBeforeCall(
-              advertiserId,
-              fundType,
-              dateRange,
-              page,
-              pageSize,
-              fields,
-              progressListener,
-              progressRequestListener,
-              headerPair);
-      Type localVarReturnType =
-          new TypeToken<MergeFundTypeFundStatementsDetailedGetResponse>() {}.getType();
-      apiClient.executeAsync(call, localVarReturnType, callback);
-      return call;
-    } finally {
-      ApiClient.clearBasePathTLVal();
+      progressRequestListener =
+          new ProgressRequestBody.ProgressRequestListener() {
+            @Override
+            public void onRequestProgress(long bytesWritten, long contentLength, boolean done) {
+              callback.onUploadProgress(bytesWritten, contentLength, done);
+            }
+          };
     }
+
+    com.squareup.okhttp.Call call =
+        mergeFundTypeFundStatementsDetailedGetValidateBeforeCall(
+            advertiserId,
+            fundType,
+            dateRange,
+            page,
+            pageSize,
+            fields,
+            progressListener,
+            progressRequestListener,
+            headerPair);
+    Type localVarReturnType =
+        new TypeToken<MergeFundTypeFundStatementsDetailedGetResponse>() {}.getType();
+    apiClient.executeAsync(call, localVarReturnType, callback);
+    return call;
   }
 }

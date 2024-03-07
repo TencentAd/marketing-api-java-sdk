@@ -199,6 +199,7 @@ public class AgencyRealtimeCostApi {
       final ApiCallback<AgencyRealtimeCostGetResponse> callback,
       String... headerPair)
       throws ApiException {
+
     ProgressResponseBody.ProgressListener progressListener = null;
     ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
 

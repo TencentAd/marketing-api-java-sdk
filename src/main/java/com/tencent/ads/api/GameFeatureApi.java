@@ -189,6 +189,7 @@ public class GameFeatureApi {
       final ApiCallback<GameFeatureAddResponse> callback,
       String... headerPair)
       throws ApiException {
+
     ProgressResponseBody.ProgressListener progressListener = null;
     ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
 
@@ -417,6 +418,7 @@ public class GameFeatureApi {
       final ApiCallback<GameFeatureGetResponse> callback,
       String... headerPair)
       throws ApiException {
+
     ProgressResponseBody.ProgressListener progressListener = null;
     ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
 
@@ -589,6 +591,7 @@ public class GameFeatureApi {
       final ApiCallback<GameFeatureUpdateResponse> callback,
       String... headerPair)
       throws ApiException {
+
     ProgressResponseBody.ProgressListener progressListener = null;
     ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
 

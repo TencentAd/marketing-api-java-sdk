@@ -364,6 +364,7 @@ public class DynamicAdVideoTemplatesApi {
       final ApiCallback<DynamicAdVideoTemplatesGetResponse> callback,
       String... headerPair)
       throws ApiException {
+
     ProgressResponseBody.ProgressListener progressListener = null;
     ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
 

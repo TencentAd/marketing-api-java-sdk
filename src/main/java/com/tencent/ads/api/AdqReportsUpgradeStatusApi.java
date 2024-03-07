@@ -199,6 +199,7 @@ public class AdqReportsUpgradeStatusApi {
       final ApiCallback<AdqReportsUpgradeStatusGetResponse> callback,
       String... headerPair)
       throws ApiException {
+
     ProgressResponseBody.ProgressListener progressListener = null;
     ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
 

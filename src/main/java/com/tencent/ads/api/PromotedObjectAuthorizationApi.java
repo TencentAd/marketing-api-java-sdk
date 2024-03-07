@@ -191,6 +191,7 @@ public class PromotedObjectAuthorizationApi {
       final ApiCallback<PromotedObjectAuthorizationAddResponse> callback,
       String... headerPair)
       throws ApiException {
+
     ProgressResponseBody.ProgressListener progressListener = null;
     ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
 
@@ -446,6 +447,7 @@ public class PromotedObjectAuthorizationApi {
       final ApiCallback<PromotedObjectAuthorizationGetResponse> callback,
       String... headerPair)
       throws ApiException {
+
     ProgressResponseBody.ProgressListener progressListener = null;
     ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
 

@@ -192,6 +192,7 @@ public class MergeFundTypeSubcustomerTransferApi {
       final ApiCallback<MergeFundTypeSubcustomerTransferAddResponse> callback,
       String... headerPair)
       throws ApiException {
+
     ProgressResponseBody.ProgressListener progressListener = null;
     ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
 

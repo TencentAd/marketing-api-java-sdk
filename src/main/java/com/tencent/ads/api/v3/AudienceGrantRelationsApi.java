@@ -24,7 +24,7 @@ import com.tencent.ads.ProgressResponseBody;
 import com.tencent.ads.model.v3.AudienceGrantRelationsAddRequest;
 import com.tencent.ads.model.v3.AudienceGrantRelationsAddResponse;
 import com.tencent.ads.model.v3.AudienceGrantRelationsGetResponse;
-import com.tencent.ads.model.v3.SingleFilter;
+import com.tencent.ads.model.v3.AudienceGrantRelationsGetSingleFilter;
 import java.io.IOException;
 import java.lang.reflect.Type;
 import java.util.ArrayList;
@@ -36,7 +36,7 @@ public class AudienceGrantRelationsApi {
   private ApiClient apiClient;
 
   public AudienceGrantRelationsApi() {
-    this(Configuration.getDefaultApiClient());
+    this(Configuration.getV3DefaultApiClient());
   }
 
   public AudienceGrantRelationsApi(ApiClient apiClient) {
@@ -156,14 +156,9 @@ public class AudienceGrantRelationsApi {
    */
   public AudienceGrantRelationsAddResponse audienceGrantRelationsAdd(
       AudienceGrantRelationsAddRequest data, String... headerPair) throws ApiException {
-    try {
-      ApiClient.setBasePathTLVal("https://api.e.qq.com/v3.0");
-      ApiResponse<AudienceGrantRelationsAddResponse> resp =
-          audienceGrantRelationsAddWithHttpInfo(data, headerPair);
-      return resp.getData();
-    } finally {
-      ApiClient.clearBasePathTLVal();
-    }
+    ApiResponse<AudienceGrantRelationsAddResponse> resp =
+        audienceGrantRelationsAddWithHttpInfo(data, headerPair);
+    return resp.getData();
   }
 
   /**
@@ -195,38 +190,34 @@ public class AudienceGrantRelationsApi {
       final ApiCallback<AudienceGrantRelationsAddResponse> callback,
       String... headerPair)
       throws ApiException {
-    try {
-      ApiClient.setBasePathTLVal("https://api.e.qq.com/v3.0");
-      ProgressResponseBody.ProgressListener progressListener = null;
-      ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
 
-      if (callback != null) {
-        progressListener =
-            new ProgressResponseBody.ProgressListener() {
-              @Override
-              public void update(long bytesRead, long contentLength, boolean done) {
-                callback.onDownloadProgress(bytesRead, contentLength, done);
-              }
-            };
+    ProgressResponseBody.ProgressListener progressListener = null;
+    ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
 
-        progressRequestListener =
-            new ProgressRequestBody.ProgressRequestListener() {
-              @Override
-              public void onRequestProgress(long bytesWritten, long contentLength, boolean done) {
-                callback.onUploadProgress(bytesWritten, contentLength, done);
-              }
-            };
-      }
+    if (callback != null) {
+      progressListener =
+          new ProgressResponseBody.ProgressListener() {
+            @Override
+            public void update(long bytesRead, long contentLength, boolean done) {
+              callback.onDownloadProgress(bytesRead, contentLength, done);
+            }
+          };
 
-      com.squareup.okhttp.Call call =
-          audienceGrantRelationsAddValidateBeforeCall(
-              data, progressListener, progressRequestListener, headerPair);
-      Type localVarReturnType = new TypeToken<AudienceGrantRelationsAddResponse>() {}.getType();
-      apiClient.executeAsync(call, localVarReturnType, callback);
-      return call;
-    } finally {
-      ApiClient.clearBasePathTLVal();
+      progressRequestListener =
+          new ProgressRequestBody.ProgressRequestListener() {
+            @Override
+            public void onRequestProgress(long bytesWritten, long contentLength, boolean done) {
+              callback.onUploadProgress(bytesWritten, contentLength, done);
+            }
+          };
     }
+
+    com.squareup.okhttp.Call call =
+        audienceGrantRelationsAddValidateBeforeCall(
+            data, progressListener, progressRequestListener, headerPair);
+    Type localVarReturnType = new TypeToken<AudienceGrantRelationsAddResponse>() {}.getType();
+    apiClient.executeAsync(call, localVarReturnType, callback);
+    return call;
   }
   /**
    * Build call for audienceGrantRelationsGet
@@ -243,7 +234,7 @@ public class AudienceGrantRelationsApi {
    */
   public com.squareup.okhttp.Call audienceGrantRelationsGetCall(
       Long accountId,
-      List<SingleFilter> filtering,
+      List<AudienceGrantRelationsGetSingleFilter> filtering,
       Long page,
       Long pageSize,
       List<String> fields,
@@ -325,7 +316,7 @@ public class AudienceGrantRelationsApi {
   @SuppressWarnings("rawtypes")
   private com.squareup.okhttp.Call audienceGrantRelationsGetValidateBeforeCall(
       Long accountId,
-      List<SingleFilter> filtering,
+      List<AudienceGrantRelationsGetSingleFilter> filtering,
       Long page,
       Long pageSize,
       List<String> fields,
@@ -367,21 +358,16 @@ public class AudienceGrantRelationsApi {
    */
   public AudienceGrantRelationsGetResponse audienceGrantRelationsGet(
       Long accountId,
-      List<SingleFilter> filtering,
+      List<AudienceGrantRelationsGetSingleFilter> filtering,
       Long page,
       Long pageSize,
       List<String> fields,
       String... headerPair)
       throws ApiException {
-    try {
-      ApiClient.setBasePathTLVal("https://api.e.qq.com/v3.0");
-      ApiResponse<AudienceGrantRelationsGetResponse> resp =
-          audienceGrantRelationsGetWithHttpInfo(
-              accountId, filtering, page, pageSize, fields, headerPair);
-      return resp.getData();
-    } finally {
-      ApiClient.clearBasePathTLVal();
-    }
+    ApiResponse<AudienceGrantRelationsGetResponse> resp =
+        audienceGrantRelationsGetWithHttpInfo(
+            accountId, filtering, page, pageSize, fields, headerPair);
+    return resp.getData();
   }
 
   /**
@@ -398,7 +384,7 @@ public class AudienceGrantRelationsApi {
    */
   public ApiResponse<AudienceGrantRelationsGetResponse> audienceGrantRelationsGetWithHttpInfo(
       Long accountId,
-      List<SingleFilter> filtering,
+      List<AudienceGrantRelationsGetSingleFilter> filtering,
       Long page,
       Long pageSize,
       List<String> fields,
@@ -425,51 +411,47 @@ public class AudienceGrantRelationsApi {
    */
   public com.squareup.okhttp.Call audienceGrantRelationsGetAsync(
       Long accountId,
-      List<SingleFilter> filtering,
+      List<AudienceGrantRelationsGetSingleFilter> filtering,
       Long page,
       Long pageSize,
       List<String> fields,
       final ApiCallback<AudienceGrantRelationsGetResponse> callback,
       String... headerPair)
       throws ApiException {
-    try {
-      ApiClient.setBasePathTLVal("https://api.e.qq.com/v3.0");
-      ProgressResponseBody.ProgressListener progressListener = null;
-      ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
 
-      if (callback != null) {
-        progressListener =
-            new ProgressResponseBody.ProgressListener() {
-              @Override
-              public void update(long bytesRead, long contentLength, boolean done) {
-                callback.onDownloadProgress(bytesRead, contentLength, done);
-              }
-            };
+    ProgressResponseBody.ProgressListener progressListener = null;
+    ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
 
-        progressRequestListener =
-            new ProgressRequestBody.ProgressRequestListener() {
-              @Override
-              public void onRequestProgress(long bytesWritten, long contentLength, boolean done) {
-                callback.onUploadProgress(bytesWritten, contentLength, done);
-              }
-            };
-      }
+    if (callback != null) {
+      progressListener =
+          new ProgressResponseBody.ProgressListener() {
+            @Override
+            public void update(long bytesRead, long contentLength, boolean done) {
+              callback.onDownloadProgress(bytesRead, contentLength, done);
+            }
+          };
 
-      com.squareup.okhttp.Call call =
-          audienceGrantRelationsGetValidateBeforeCall(
-              accountId,
-              filtering,
-              page,
-              pageSize,
-              fields,
-              progressListener,
-              progressRequestListener,
-              headerPair);
-      Type localVarReturnType = new TypeToken<AudienceGrantRelationsGetResponse>() {}.getType();
-      apiClient.executeAsync(call, localVarReturnType, callback);
-      return call;
-    } finally {
-      ApiClient.clearBasePathTLVal();
+      progressRequestListener =
+          new ProgressRequestBody.ProgressRequestListener() {
+            @Override
+            public void onRequestProgress(long bytesWritten, long contentLength, boolean done) {
+              callback.onUploadProgress(bytesWritten, contentLength, done);
+            }
+          };
     }
+
+    com.squareup.okhttp.Call call =
+        audienceGrantRelationsGetValidateBeforeCall(
+            accountId,
+            filtering,
+            page,
+            pageSize,
+            fields,
+            progressListener,
+            progressRequestListener,
+            headerPair);
+    Type localVarReturnType = new TypeToken<AudienceGrantRelationsGetResponse>() {}.getType();
+    apiClient.executeAsync(call, localVarReturnType, callback);
+    return call;
   }
 }

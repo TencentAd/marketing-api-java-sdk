@@ -228,6 +228,7 @@ public class PlayablePagesApi {
       final ApiCallback<PlayablePagesAddResponse> callback,
       String... headerPair)
       throws ApiException {
+
     ProgressResponseBody.ProgressListener progressListener = null;
     ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
 
@@ -459,6 +460,7 @@ public class PlayablePagesApi {
       final ApiCallback<PlayablePagesGetResponse> callback,
       String... headerPair)
       throws ApiException {
+
     ProgressResponseBody.ProgressListener progressListener = null;
     ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
 

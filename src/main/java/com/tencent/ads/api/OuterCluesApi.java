@@ -192,6 +192,7 @@ public class OuterCluesApi {
       final ApiCallback<OuterCluesActionTypeReportResponse> callback,
       String... headerPair)
       throws ApiException {
+
     ProgressResponseBody.ProgressListener progressListener = null;
     ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
 
@@ -357,6 +358,7 @@ public class OuterCluesApi {
       final ApiCallback<OuterCluesAddResponse> callback,
       String... headerPair)
       throws ApiException {
+
     ProgressResponseBody.ProgressListener progressListener = null;
     ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
 
@@ -523,6 +525,7 @@ public class OuterCluesApi {
       final ApiCallback<OuterCluesUpdateResponse> callback,
       String... headerPair)
       throws ApiException {
+
     ProgressResponseBody.ProgressListener progressListener = null;
     ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
 

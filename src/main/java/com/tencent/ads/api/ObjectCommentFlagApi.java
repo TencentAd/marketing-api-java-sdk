@@ -188,6 +188,7 @@ public class ObjectCommentFlagApi {
       final ApiCallback<ObjectCommentFlagUpdateResponse> callback,
       String... headerPair)
       throws ApiException {
+
     ProgressResponseBody.ProgressListener progressListener = null;
     ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
 

@@ -16,14 +16,25 @@ public class DiffHostInterceptor implements MethodInterceptor {
       Object ret = invocation.proceed();
       return ret;
     }
+    Class keyClass = invocation.getThis().getClass();
+    boolean isV3 = keyClass.getName().contains(".v3");
     if (invocation.getMethod().isAnnotationPresent(NeedDiffHost.class)) {
-      Class keyClass = invocation.getThis().getClass();
       String className =
           keyClass.getSimpleName().substring(0, keyClass.getSimpleName().indexOf("$"));
-      if (DiffHostConfig.getDiffHostMap().get(className) != null) {
-        HashMap<String, String> map = DiffHostConfig.getDiffHostMap().get(className);
-        if (map.get(invocation.getMethod().getName()) != null) {
-          TencentAds.getInstance().setHost(map.get(invocation.getMethod().getName()));
+      if (isV3) {
+        if (DiffHostConfig.getDiffHostV3Map().get(className) != null) {
+          HashMap<String, String> map = DiffHostConfig.getDiffHostV3Map().get(className);
+          if (map.get(invocation.getMethod().getName()) != null) {
+            com.tencent.ads.v3.TencentAds.getInstance()
+                .setHost(map.get(invocation.getMethod().getName()));
+          }
+        }
+      } else {
+        if (DiffHostConfig.getDiffHostMap().get(className) != null) {
+          HashMap<String, String> map = DiffHostConfig.getDiffHostMap().get(className);
+          if (map.get(invocation.getMethod().getName()) != null) {
+            TencentAds.getInstance().setHost(map.get(invocation.getMethod().getName()));
+          }
         }
       }
     }
@@ -31,7 +42,12 @@ public class DiffHostInterceptor implements MethodInterceptor {
     try {
       ret = invocation.proceed();
     } finally {
-      TencentAds.getInstance().setHost(TencentAds.getInstance().getBasePath());
+      if (isV3) {
+        com.tencent.ads.v3.TencentAds.getInstance()
+            .setHost(com.tencent.ads.v3.TencentAds.getInstance().getBasePath());
+      } else {
+        TencentAds.getInstance().setHost(TencentAds.getInstance().getBasePath());
+      }
     }
     return ret;
   }

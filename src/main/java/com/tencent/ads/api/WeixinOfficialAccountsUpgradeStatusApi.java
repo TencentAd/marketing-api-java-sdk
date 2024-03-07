@@ -202,6 +202,7 @@ public class WeixinOfficialAccountsUpgradeStatusApi {
       final ApiCallback<WeixinOfficialAccountsUpgradeStatusGetResponse> callback,
       String... headerPair)
       throws ApiException {
+
     ProgressResponseBody.ProgressListener progressListener = null;
     ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
 

@@ -21,8 +21,30 @@ import java.util.Objects;
 /** 电话组件 */
 @ApiModel(description = "电话组件")
 public class PhoneComponent {
+  @SerializedName("component_id")
+  private Long componentId = null;
+
   @SerializedName("value")
   private PhoneStruct value = null;
+
+  public PhoneComponent componentId(Long componentId) {
+    this.componentId = componentId;
+    return this;
+  }
+
+  /**
+   * Get componentId
+   *
+   * @return componentId
+   */
+  @ApiModelProperty(value = "")
+  public Long getComponentId() {
+    return componentId;
+  }
+
+  public void setComponentId(Long componentId) {
+    this.componentId = componentId;
+  }
 
   public PhoneComponent value(PhoneStruct value) {
     this.value = value;
@@ -52,12 +74,13 @@ public class PhoneComponent {
       return false;
     }
     PhoneComponent phoneComponent = (PhoneComponent) o;
-    return Objects.equals(this.value, phoneComponent.value);
+    return Objects.equals(this.componentId, phoneComponent.componentId)
+        && Objects.equals(this.value, phoneComponent.value);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(value);
+    return Objects.hash(componentId, value);
   }
 
   @Override

@@ -21,8 +21,30 @@ import java.util.Objects;
 /** 卖点图组件 */
 @ApiModel(description = "卖点图组件")
 public class ShopImageComponent {
+  @SerializedName("component_id")
+  private Long componentId = null;
+
   @SerializedName("value")
   private ShopImageStruct value = null;
+
+  public ShopImageComponent componentId(Long componentId) {
+    this.componentId = componentId;
+    return this;
+  }
+
+  /**
+   * Get componentId
+   *
+   * @return componentId
+   */
+  @ApiModelProperty(value = "")
+  public Long getComponentId() {
+    return componentId;
+  }
+
+  public void setComponentId(Long componentId) {
+    this.componentId = componentId;
+  }
 
   public ShopImageComponent value(ShopImageStruct value) {
     this.value = value;
@@ -52,12 +74,13 @@ public class ShopImageComponent {
       return false;
     }
     ShopImageComponent shopImageComponent = (ShopImageComponent) o;
-    return Objects.equals(this.value, shopImageComponent.value);
+    return Objects.equals(this.componentId, shopImageComponent.componentId)
+        && Objects.equals(this.value, shopImageComponent.value);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(value);
+    return Objects.hash(componentId, value);
   }
 
   @Override

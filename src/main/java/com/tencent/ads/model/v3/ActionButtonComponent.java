@@ -21,8 +21,30 @@ import java.util.Objects;
 /** 行动按钮组件 */
 @ApiModel(description = "行动按钮组件")
 public class ActionButtonComponent {
+  @SerializedName("component_id")
+  private Long componentId = null;
+
   @SerializedName("value")
   private ActionButtonStruct value = null;
+
+  public ActionButtonComponent componentId(Long componentId) {
+    this.componentId = componentId;
+    return this;
+  }
+
+  /**
+   * Get componentId
+   *
+   * @return componentId
+   */
+  @ApiModelProperty(value = "")
+  public Long getComponentId() {
+    return componentId;
+  }
+
+  public void setComponentId(Long componentId) {
+    this.componentId = componentId;
+  }
 
   public ActionButtonComponent value(ActionButtonStruct value) {
     this.value = value;
@@ -52,12 +74,13 @@ public class ActionButtonComponent {
       return false;
     }
     ActionButtonComponent actionButtonComponent = (ActionButtonComponent) o;
-    return Objects.equals(this.value, actionButtonComponent.value);
+    return Objects.equals(this.componentId, actionButtonComponent.componentId)
+        && Objects.equals(this.value, actionButtonComponent.value);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(value);
+    return Objects.hash(componentId, value);
   }
 
   @Override

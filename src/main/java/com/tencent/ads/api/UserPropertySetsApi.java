@@ -191,6 +191,7 @@ public class UserPropertySetsApi {
       final ApiCallback<UserPropertySetsAddResponse> callback,
       String... headerPair)
       throws ApiException {
+
     ProgressResponseBody.ProgressListener progressListener = null;
     ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
 
@@ -388,6 +389,7 @@ public class UserPropertySetsApi {
       final ApiCallback<UserPropertySetsGetResponse> callback,
       String... headerPair)
       throws ApiException {
+
     ProgressResponseBody.ProgressListener progressListener = null;
     ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
 
@@ -560,6 +562,7 @@ public class UserPropertySetsApi {
       final ApiCallback<UserPropertySetsUpdateResponse> callback,
       String... headerPair)
       throws ApiException {
+
     ProgressResponseBody.ProgressListener progressListener = null;
     ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
 

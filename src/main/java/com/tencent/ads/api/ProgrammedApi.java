@@ -190,6 +190,7 @@ public class ProgrammedApi {
       final ApiCallback<ProgrammedAddResponse> callback,
       String... headerPair)
       throws ApiException {
+
     ProgressResponseBody.ProgressListener progressListener = null;
     ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
 
@@ -355,6 +356,7 @@ public class ProgrammedApi {
       final ApiCallback<ProgrammedGetResponse> callback,
       String... headerPair)
       throws ApiException {
+
     ProgressResponseBody.ProgressListener progressListener = null;
     ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
 
@@ -521,6 +523,7 @@ public class ProgrammedApi {
       final ApiCallback<ProgrammedUpdateResponse> callback,
       String... headerPair)
       throws ApiException {
+
     ProgressResponseBody.ProgressListener progressListener = null;
     ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
 

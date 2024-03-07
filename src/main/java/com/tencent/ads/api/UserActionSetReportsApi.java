@@ -292,6 +292,7 @@ public class UserActionSetReportsApi {
       final ApiCallback<UserActionSetReportsGetResponse> callback,
       String... headerPair)
       throws ApiException {
+
     ProgressResponseBody.ProgressListener progressListener = null;
     ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
 

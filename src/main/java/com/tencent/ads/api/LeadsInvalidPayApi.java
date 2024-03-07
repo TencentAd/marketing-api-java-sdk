@@ -187,6 +187,7 @@ public class LeadsInvalidPayApi {
       final ApiCallback<LeadsInvalidPayGetResponse> callback,
       String... headerPair)
       throws ApiException {
+
     ProgressResponseBody.ProgressListener progressListener = null;
     ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
 

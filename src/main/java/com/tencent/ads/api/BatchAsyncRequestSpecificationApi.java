@@ -253,6 +253,7 @@ public class BatchAsyncRequestSpecificationApi {
       final ApiCallback<BatchAsyncRequestSpecificationGetResponse> callback,
       String... headerPair)
       throws ApiException {
+
     ProgressResponseBody.ProgressListener progressListener = null;
     ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
 

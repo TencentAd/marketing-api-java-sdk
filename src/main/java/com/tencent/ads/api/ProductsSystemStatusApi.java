@@ -263,6 +263,7 @@ public class ProductsSystemStatusApi {
       final ApiCallback<ProductsSystemStatusGetResponse> callback,
       String... headerPair)
       throws ApiException {
+
     ProgressResponseBody.ProgressListener progressListener = null;
     ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
 

@@ -190,6 +190,7 @@ public class AudienceGrantRelationsApi {
       final ApiCallback<AudienceGrantRelationsAddResponse> callback,
       String... headerPair)
       throws ApiException {
+
     ProgressResponseBody.ProgressListener progressListener = null;
     ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
 
@@ -417,6 +418,7 @@ public class AudienceGrantRelationsApi {
       final ApiCallback<AudienceGrantRelationsGetResponse> callback,
       String... headerPair)
       throws ApiException {
+
     ProgressResponseBody.ProgressListener progressListener = null;
     ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
 

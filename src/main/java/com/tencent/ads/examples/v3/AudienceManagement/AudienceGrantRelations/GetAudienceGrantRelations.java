@@ -4,7 +4,7 @@ import com.tencent.ads.ApiContextConfig;
 import com.tencent.ads.exception.TencentAdsResponseException;
 import com.tencent.ads.exception.TencentAdsSDKException;
 import com.tencent.ads.model.v3.*;
-import com.tencent.ads.model.v3.SingleFilter;
+import com.tencent.ads.model.v3.AudienceGrantRelationsGetSingleFilter;
 import com.tencent.ads.v3.TencentAds;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -19,7 +19,7 @@ public class GetAudienceGrantRelations {
 
   public Long accountId = null;
 
-  public List<SingleFilter> filtering = new ArrayList<>();
+  public List<AudienceGrantRelationsGetSingleFilter> filtering = new ArrayList<>();
 
   public Long page = null;
 
@@ -37,13 +37,14 @@ public class GetAudienceGrantRelations {
 
   public void buildParams() {
     String field = "audience_id";
-    SingleFilter singleFilter = new SingleFilter();
-    singleFilter.setField(field);
+    AudienceGrantRelationsGetSingleFilter audienceGrantRelationsGetSingleFilter =
+        new AudienceGrantRelationsGetSingleFilter();
+    audienceGrantRelationsGetSingleFilter.setField(field);
     FilterOperator operator = FilterOperator.IN;
-    singleFilter.setOperator(operator);
+    audienceGrantRelationsGetSingleFilter.setOperator(operator);
     List<Long> values = Arrays.asList(0L);
-    singleFilter.setValues(values);
-    filtering.add(singleFilter);
+    audienceGrantRelationsGetSingleFilter.setValues(values);
+    filtering.add(audienceGrantRelationsGetSingleFilter);
   }
 
   public AudienceGrantRelationsGetResponseData getAudienceGrantRelations() throws Exception {

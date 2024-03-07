@@ -217,6 +217,7 @@ public class AdcreativePreviewsQrcodeApi {
       final ApiCallback<AdcreativePreviewsQrcodeGetResponse> callback,
       String... headerPair)
       throws ApiException {
+
     ProgressResponseBody.ProgressListener progressListener = null;
     ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
 

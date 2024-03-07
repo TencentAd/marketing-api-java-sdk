@@ -21,8 +21,30 @@ import java.util.Objects;
 /** 视频号信息组件 */
 @ApiModel(description = "视频号信息组件")
 public class WechatChannelsComponent {
+  @SerializedName("component_id")
+  private Long componentId = null;
+
   @SerializedName("value")
   private WechatChannelsStruct value = null;
+
+  public WechatChannelsComponent componentId(Long componentId) {
+    this.componentId = componentId;
+    return this;
+  }
+
+  /**
+   * Get componentId
+   *
+   * @return componentId
+   */
+  @ApiModelProperty(value = "")
+  public Long getComponentId() {
+    return componentId;
+  }
+
+  public void setComponentId(Long componentId) {
+    this.componentId = componentId;
+  }
 
   public WechatChannelsComponent value(WechatChannelsStruct value) {
     this.value = value;
@@ -52,12 +74,13 @@ public class WechatChannelsComponent {
       return false;
     }
     WechatChannelsComponent wechatChannelsComponent = (WechatChannelsComponent) o;
-    return Objects.equals(this.value, wechatChannelsComponent.value);
+    return Objects.equals(this.componentId, wechatChannelsComponent.componentId)
+        && Objects.equals(this.value, wechatChannelsComponent.value);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(value);
+    return Objects.hash(componentId, value);
   }
 
   @Override

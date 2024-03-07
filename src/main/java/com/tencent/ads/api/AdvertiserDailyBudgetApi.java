@@ -199,6 +199,7 @@ public class AdvertiserDailyBudgetApi {
       final ApiCallback<AdvertiserDailyBudgetGetResponse> callback,
       String... headerPair)
       throws ApiException {
+
     ProgressResponseBody.ProgressListener progressListener = null;
     ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
 

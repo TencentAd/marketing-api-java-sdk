@@ -190,6 +190,7 @@ public class AdcreativePreviewsApi {
       final ApiCallback<AdcreativePreviewsAddResponse> callback,
       String... headerPair)
       throws ApiException {
+
     ProgressResponseBody.ProgressListener progressListener = null;
     ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
 
@@ -388,6 +389,7 @@ public class AdcreativePreviewsApi {
       final ApiCallback<AdcreativePreviewsGetResponse> callback,
       String... headerPair)
       throws ApiException {
+
     ProgressResponseBody.ProgressListener progressListener = null;
     ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
 

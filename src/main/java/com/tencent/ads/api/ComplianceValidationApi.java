@@ -188,6 +188,7 @@ public class ComplianceValidationApi {
       final ApiCallback<ComplianceValidationGetResponse> callback,
       String... headerPair)
       throws ApiException {
+
     ProgressResponseBody.ProgressListener progressListener = null;
     ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
 

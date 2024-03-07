@@ -215,6 +215,7 @@ public class VideomakerTasksApi {
       final ApiCallback<VideomakerTasksGetResponse> callback,
       String... headerPair)
       throws ApiException {
+
     ProgressResponseBody.ProgressListener progressListener = null;
     ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
 

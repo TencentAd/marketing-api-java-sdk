@@ -19,7 +19,7 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-/** 朋友圈头像及昵称跳转页状态 */
+/** 组件状态 */
 @JsonAdapter(SysStatus.Adapter.class)
 public enum SysStatus {
   NORMAL("AD_STATUS_NORMAL"),
@@ -38,7 +38,9 @@ public enum SysStatus {
 
   DELETED("AD_STATUS_DELETED"),
 
-  INVALID("AD_STATUS_INVALID");
+  INVALID("AD_STATUS_INVALID"),
+
+  SUSPEND("AD_STATUS_SUSPEND");
 
   private String value;
 

@@ -247,6 +247,7 @@ public class ProductItemsDetailApi {
       final ApiCallback<ProductItemsDetailGetResponse> callback,
       String... headerPair)
       throws ApiException {
+
     ProgressResponseBody.ProgressListener progressListener = null;
     ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
 

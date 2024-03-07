@@ -21,8 +21,30 @@ import java.util.Objects;
 /** 小游戏试玩页组件 */
 @ApiModel(description = "小游戏试玩页组件")
 public class WxgamePlayablePageComponent {
+  @SerializedName("component_id")
+  private Long componentId = null;
+
   @SerializedName("value")
   private WxgamePlayablePageStruct value = null;
+
+  public WxgamePlayablePageComponent componentId(Long componentId) {
+    this.componentId = componentId;
+    return this;
+  }
+
+  /**
+   * Get componentId
+   *
+   * @return componentId
+   */
+  @ApiModelProperty(value = "")
+  public Long getComponentId() {
+    return componentId;
+  }
+
+  public void setComponentId(Long componentId) {
+    this.componentId = componentId;
+  }
 
   public WxgamePlayablePageComponent value(WxgamePlayablePageStruct value) {
     this.value = value;
@@ -52,12 +74,13 @@ public class WxgamePlayablePageComponent {
       return false;
     }
     WxgamePlayablePageComponent wxgamePlayablePageComponent = (WxgamePlayablePageComponent) o;
-    return Objects.equals(this.value, wxgamePlayablePageComponent.value);
+    return Objects.equals(this.componentId, wxgamePlayablePageComponent.componentId)
+        && Objects.equals(this.value, wxgamePlayablePageComponent.value);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(value);
+    return Objects.hash(componentId, value);
   }
 
   @Override

@@ -196,6 +196,7 @@ public class CreativeComponentsApi {
       final ApiCallback<CreativeComponentsAddResponse> callback,
       String... headerPair)
       throws ApiException {
+
     ProgressResponseBody.ProgressListener progressListener = null;
     ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
 
@@ -363,6 +364,7 @@ public class CreativeComponentsApi {
       final ApiCallback<CreativeComponentsDeleteResponse> callback,
       String... headerPair)
       throws ApiException {
+
     ProgressResponseBody.ProgressListener progressListener = null;
     ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
 
@@ -589,6 +591,7 @@ public class CreativeComponentsApi {
       final ApiCallback<CreativeComponentsGetResponse> callback,
       String... headerPair)
       throws ApiException {
+
     ProgressResponseBody.ProgressListener progressListener = null;
     ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
 
@@ -763,6 +766,7 @@ public class CreativeComponentsApi {
       final ApiCallback<CreativeComponentsUpdateResponse> callback,
       String... headerPair)
       throws ApiException {
+
     ProgressResponseBody.ProgressListener progressListener = null;
     ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
 
@@ -932,6 +936,7 @@ public class CreativeComponentsApi {
       final ApiCallback<CreativeComponentsUpdateStatusResponse> callback,
       String... headerPair)
       throws ApiException {
+
     ProgressResponseBody.ProgressListener progressListener = null;
     ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
 

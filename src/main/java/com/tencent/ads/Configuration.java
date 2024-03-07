@@ -15,6 +15,13 @@ package com.tencent.ads;
 public class Configuration {
   private static ApiClient defaultApiClient = new ApiClient();
 
+  private static ApiClient v3DefaultApiClient;
+
+  static {
+    v3DefaultApiClient = new ApiClient();
+    v3DefaultApiClient.setBasePath("https://api.e.qq.com/v3.0");
+  }
+
   /**
    * Get the default API client, which would be used when creating API instances without providing
    * an API client.
@@ -25,6 +32,10 @@ public class Configuration {
     return defaultApiClient;
   }
 
+  public static ApiClient getV3DefaultApiClient() {
+    return v3DefaultApiClient;
+  }
+
   /**
    * Set the default API client, which would be used when creating API instances without providing
    * an API client.
@@ -33,5 +44,9 @@ public class Configuration {
    */
   public static void setDefaultApiClient(ApiClient apiClient) {
     defaultApiClient = apiClient;
+  }
+
+  public static void setV3DefaultApiClient(ApiClient apiClient) {
+    v3DefaultApiClient = apiClient;
   }
 }

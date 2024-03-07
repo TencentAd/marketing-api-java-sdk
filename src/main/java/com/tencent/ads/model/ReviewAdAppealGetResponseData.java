@@ -51,6 +51,9 @@ public class ReviewAdAppealGetResponseData {
   @SerializedName("image_list")
   private List<String> imageList = null;
 
+  @SerializedName("reply_image_url_list")
+  private List<String> replyImageUrlList = null;
+
   public ReviewAdAppealGetResponseData accountId(Long accountId) {
     this.accountId = accountId;
     return this;
@@ -249,6 +252,33 @@ public class ReviewAdAppealGetResponseData {
     this.imageList = imageList;
   }
 
+  public ReviewAdAppealGetResponseData replyImageUrlList(List<String> replyImageUrlList) {
+    this.replyImageUrlList = replyImageUrlList;
+    return this;
+  }
+
+  public ReviewAdAppealGetResponseData addReplyImageUrlListItem(String replyImageUrlListItem) {
+    if (this.replyImageUrlList == null) {
+      this.replyImageUrlList = new ArrayList<String>();
+    }
+    this.replyImageUrlList.add(replyImageUrlListItem);
+    return this;
+  }
+
+  /**
+   * Get replyImageUrlList
+   *
+   * @return replyImageUrlList
+   */
+  @ApiModelProperty(value = "")
+  public List<String> getReplyImageUrlList() {
+    return replyImageUrlList;
+  }
+
+  public void setReplyImageUrlList(List<String> replyImageUrlList) {
+    this.replyImageUrlList = replyImageUrlList;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -268,7 +298,8 @@ public class ReviewAdAppealGetResponseData {
         && Objects.equals(this.appealResult, reviewAdAppealGetResponseData.appealResult)
         && Objects.equals(this.appealStatus, reviewAdAppealGetResponseData.appealStatus)
         && Objects.equals(this.description, reviewAdAppealGetResponseData.description)
-        && Objects.equals(this.imageList, reviewAdAppealGetResponseData.imageList);
+        && Objects.equals(this.imageList, reviewAdAppealGetResponseData.imageList)
+        && Objects.equals(this.replyImageUrlList, reviewAdAppealGetResponseData.replyImageUrlList);
   }
 
   @Override
@@ -283,7 +314,8 @@ public class ReviewAdAppealGetResponseData {
         appealResult,
         appealStatus,
         description,
-        imageList);
+        imageList,
+        replyImageUrlList);
   }
 
   @Override

@@ -36,7 +36,7 @@ public class TargetingTagReportsApi {
   private ApiClient apiClient;
 
   public TargetingTagReportsApi() {
-    this(Configuration.getDefaultApiClient());
+    this(Configuration.getV3DefaultApiClient());
   }
 
   public TargetingTagReportsApi(ApiClient apiClient) {
@@ -274,26 +274,21 @@ public class TargetingTagReportsApi {
       Long pageSize,
       String... headerPair)
       throws ApiException {
-    try {
-      ApiClient.setBasePathTLVal("https://api.e.qq.com/v3.0");
-      ApiResponse<TargetingTagReportsGetResponse> resp =
-          targetingTagReportsGetWithHttpInfo(
-              accountId,
-              type,
-              level,
-              dateRange,
-              groupBy,
-              fields,
-              filtering,
-              orderBy,
-              timeLine,
-              page,
-              pageSize,
-              headerPair);
-      return resp.getData();
-    } finally {
-      ApiClient.clearBasePathTLVal();
-    }
+    ApiResponse<TargetingTagReportsGetResponse> resp =
+        targetingTagReportsGetWithHttpInfo(
+            accountId,
+            type,
+            level,
+            dateRange,
+            groupBy,
+            fields,
+            filtering,
+            orderBy,
+            timeLine,
+            page,
+            pageSize,
+            headerPair);
+    return resp.getData();
   }
 
   /**
@@ -381,50 +376,46 @@ public class TargetingTagReportsApi {
       final ApiCallback<TargetingTagReportsGetResponse> callback,
       String... headerPair)
       throws ApiException {
-    try {
-      ApiClient.setBasePathTLVal("https://api.e.qq.com/v3.0");
-      ProgressResponseBody.ProgressListener progressListener = null;
-      ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
 
-      if (callback != null) {
-        progressListener =
-            new ProgressResponseBody.ProgressListener() {
-              @Override
-              public void update(long bytesRead, long contentLength, boolean done) {
-                callback.onDownloadProgress(bytesRead, contentLength, done);
-              }
-            };
+    ProgressResponseBody.ProgressListener progressListener = null;
+    ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
 
-        progressRequestListener =
-            new ProgressRequestBody.ProgressRequestListener() {
-              @Override
-              public void onRequestProgress(long bytesWritten, long contentLength, boolean done) {
-                callback.onUploadProgress(bytesWritten, contentLength, done);
-              }
-            };
-      }
+    if (callback != null) {
+      progressListener =
+          new ProgressResponseBody.ProgressListener() {
+            @Override
+            public void update(long bytesRead, long contentLength, boolean done) {
+              callback.onDownloadProgress(bytesRead, contentLength, done);
+            }
+          };
 
-      com.squareup.okhttp.Call call =
-          targetingTagReportsGetValidateBeforeCall(
-              accountId,
-              type,
-              level,
-              dateRange,
-              groupBy,
-              fields,
-              filtering,
-              orderBy,
-              timeLine,
-              page,
-              pageSize,
-              progressListener,
-              progressRequestListener,
-              headerPair);
-      Type localVarReturnType = new TypeToken<TargetingTagReportsGetResponse>() {}.getType();
-      apiClient.executeAsync(call, localVarReturnType, callback);
-      return call;
-    } finally {
-      ApiClient.clearBasePathTLVal();
+      progressRequestListener =
+          new ProgressRequestBody.ProgressRequestListener() {
+            @Override
+            public void onRequestProgress(long bytesWritten, long contentLength, boolean done) {
+              callback.onUploadProgress(bytesWritten, contentLength, done);
+            }
+          };
     }
+
+    com.squareup.okhttp.Call call =
+        targetingTagReportsGetValidateBeforeCall(
+            accountId,
+            type,
+            level,
+            dateRange,
+            groupBy,
+            fields,
+            filtering,
+            orderBy,
+            timeLine,
+            page,
+            pageSize,
+            progressListener,
+            progressRequestListener,
+            headerPair);
+    Type localVarReturnType = new TypeToken<TargetingTagReportsGetResponse>() {}.getType();
+    apiClient.executeAsync(call, localVarReturnType, callback);
+    return call;
   }
 }

@@ -21,8 +21,30 @@ import java.util.Objects;
 /** 轮播文案组件 */
 @ApiModel(description = "轮播文案组件")
 public class LivingDescComponent {
+  @SerializedName("component_id")
+  private Long componentId = null;
+
   @SerializedName("value")
   private LivingDescStruct value = null;
+
+  public LivingDescComponent componentId(Long componentId) {
+    this.componentId = componentId;
+    return this;
+  }
+
+  /**
+   * Get componentId
+   *
+   * @return componentId
+   */
+  @ApiModelProperty(value = "")
+  public Long getComponentId() {
+    return componentId;
+  }
+
+  public void setComponentId(Long componentId) {
+    this.componentId = componentId;
+  }
 
   public LivingDescComponent value(LivingDescStruct value) {
     this.value = value;
@@ -52,12 +74,13 @@ public class LivingDescComponent {
       return false;
     }
     LivingDescComponent livingDescComponent = (LivingDescComponent) o;
-    return Objects.equals(this.value, livingDescComponent.value);
+    return Objects.equals(this.componentId, livingDescComponent.componentId)
+        && Objects.equals(this.value, livingDescComponent.value);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(value);
+    return Objects.hash(componentId, value);
   }
 
   @Override

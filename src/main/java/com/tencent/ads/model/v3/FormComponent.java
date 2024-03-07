@@ -21,8 +21,30 @@ import java.util.Objects;
 /** 表单组件 */
 @ApiModel(description = "表单组件")
 public class FormComponent {
+  @SerializedName("component_id")
+  private Long componentId = null;
+
   @SerializedName("value")
   private FormStruct value = null;
+
+  public FormComponent componentId(Long componentId) {
+    this.componentId = componentId;
+    return this;
+  }
+
+  /**
+   * Get componentId
+   *
+   * @return componentId
+   */
+  @ApiModelProperty(value = "")
+  public Long getComponentId() {
+    return componentId;
+  }
+
+  public void setComponentId(Long componentId) {
+    this.componentId = componentId;
+  }
 
   public FormComponent value(FormStruct value) {
     this.value = value;
@@ -52,12 +74,13 @@ public class FormComponent {
       return false;
     }
     FormComponent formComponent = (FormComponent) o;
-    return Objects.equals(this.value, formComponent.value);
+    return Objects.equals(this.componentId, formComponent.componentId)
+        && Objects.equals(this.value, formComponent.value);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(value);
+    return Objects.hash(componentId, value);
   }
 
   @Override

@@ -21,8 +21,30 @@ import java.util.Objects;
 /** 倒计时组件 */
 @ApiModel(description = "倒计时组件")
 public class CountDownComponent {
+  @SerializedName("component_id")
+  private Long componentId = null;
+
   @SerializedName("value")
   private CountDownStruct value = null;
+
+  public CountDownComponent componentId(Long componentId) {
+    this.componentId = componentId;
+    return this;
+  }
+
+  /**
+   * Get componentId
+   *
+   * @return componentId
+   */
+  @ApiModelProperty(value = "")
+  public Long getComponentId() {
+    return componentId;
+  }
+
+  public void setComponentId(Long componentId) {
+    this.componentId = componentId;
+  }
 
   public CountDownComponent value(CountDownStruct value) {
     this.value = value;
@@ -52,12 +74,13 @@ public class CountDownComponent {
       return false;
     }
     CountDownComponent countDownComponent = (CountDownComponent) o;
-    return Objects.equals(this.value, countDownComponent.value);
+    return Objects.equals(this.componentId, countDownComponent.componentId)
+        && Objects.equals(this.value, countDownComponent.value);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(value);
+    return Objects.hash(componentId, value);
   }
 
   @Override

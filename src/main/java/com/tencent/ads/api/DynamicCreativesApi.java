@@ -192,6 +192,7 @@ public class DynamicCreativesApi {
       final ApiCallback<DynamicCreativesAddResponse> callback,
       String... headerPair)
       throws ApiException {
+
     ProgressResponseBody.ProgressListener progressListener = null;
     ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
 
@@ -418,6 +419,7 @@ public class DynamicCreativesApi {
       final ApiCallback<DynamicCreativesGetResponse> callback,
       String... headerPair)
       throws ApiException {
+
     ProgressResponseBody.ProgressListener progressListener = null;
     ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
 
@@ -592,6 +594,7 @@ public class DynamicCreativesApi {
       final ApiCallback<DynamicCreativesUpdateResponse> callback,
       String... headerPair)
       throws ApiException {
+
     ProgressResponseBody.ProgressListener progressListener = null;
     ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
 

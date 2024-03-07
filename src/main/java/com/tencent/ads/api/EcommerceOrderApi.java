@@ -269,6 +269,7 @@ public class EcommerceOrderApi {
       final ApiCallback<EcommerceOrderGetResponse> callback,
       String... headerPair)
       throws ApiException {
+
     ProgressResponseBody.ProgressListener progressListener = null;
     ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
 
@@ -444,6 +445,7 @@ public class EcommerceOrderApi {
       final ApiCallback<EcommerceOrderUpdateResponse> callback,
       String... headerPair)
       throws ApiException {
+
     ProgressResponseBody.ProgressListener progressListener = null;
     ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
 

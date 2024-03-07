@@ -347,6 +347,7 @@ public class AdcreativeTemplateListApi {
       final ApiCallback<AdcreativeTemplateListGetResponse> callback,
       String... headerPair)
       throws ApiException {
+
     ProgressResponseBody.ProgressListener progressListener = null;
     ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
 

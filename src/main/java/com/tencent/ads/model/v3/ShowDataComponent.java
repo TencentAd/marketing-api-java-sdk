@@ -21,8 +21,30 @@ import java.util.Objects;
 /** 数据外显组件 */
 @ApiModel(description = "数据外显组件")
 public class ShowDataComponent {
+  @SerializedName("component_id")
+  private Long componentId = null;
+
   @SerializedName("value")
   private ShowDataStruct value = null;
+
+  public ShowDataComponent componentId(Long componentId) {
+    this.componentId = componentId;
+    return this;
+  }
+
+  /**
+   * Get componentId
+   *
+   * @return componentId
+   */
+  @ApiModelProperty(value = "")
+  public Long getComponentId() {
+    return componentId;
+  }
+
+  public void setComponentId(Long componentId) {
+    this.componentId = componentId;
+  }
 
   public ShowDataComponent value(ShowDataStruct value) {
     this.value = value;
@@ -52,12 +74,13 @@ public class ShowDataComponent {
       return false;
     }
     ShowDataComponent showDataComponent = (ShowDataComponent) o;
-    return Objects.equals(this.value, showDataComponent.value);
+    return Objects.equals(this.componentId, showDataComponent.componentId)
+        && Objects.equals(this.value, showDataComponent.value);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(value);
+    return Objects.hash(componentId, value);
   }
 
   @Override

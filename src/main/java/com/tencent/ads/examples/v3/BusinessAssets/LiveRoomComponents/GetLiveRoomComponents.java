@@ -1,13 +1,14 @@
-package com.tencent.ads.examples.BasicOperations.Tools;
+package com.tencent.ads.examples.v3.BusinessAssets.LiveRoomComponents;
 
 import com.tencent.ads.ApiContextConfig;
-import com.tencent.ads.TencentAds;
 import com.tencent.ads.exception.TencentAdsResponseException;
 import com.tencent.ads.exception.TencentAdsSDKException;
-import com.tencent.ads.model.*;
+import com.tencent.ads.model.v3.*;
+import com.tencent.ads.model.v3.FilteringStruct;
+import com.tencent.ads.v3.TencentAds;
 import java.util.List;
 
-public class GetOptimizationGoalPermissions {
+public class GetLiveRoomComponents {
   /** YOUR ACCESS TOKEN */
   public String ACCESS_TOKEN = "YOUR ACCESS TOKEN";
 
@@ -16,13 +17,11 @@ public class GetOptimizationGoalPermissions {
 
   public Long accountId = null;
 
-  public List<String> siteSet = null;
+  public List<FilteringStruct> filtering = null;
 
-  public String promotedObjectType = null;
+  public Long page = null;
 
-  public String bidMode = null;
-
-  public String promotedObjectId = null;
+  public Long pageSize = null;
 
   public List<String> fields = null;
 
@@ -36,23 +35,19 @@ public class GetOptimizationGoalPermissions {
 
   public void buildParams() {}
 
-  public OptimizationGoalPermissionsGetResponseData getOptimizationGoalPermissions()
-      throws Exception {
-    OptimizationGoalPermissionsGetResponseData response =
+  public LiveRoomComponentsGetResponseData getLiveRoomComponents() throws Exception {
+    LiveRoomComponentsGetResponseData response =
         tencentAds
-            .optimizationGoalPermissions()
-            .optimizationGoalPermissionsGet(
-                accountId, siteSet, promotedObjectType, bidMode, promotedObjectId, fields);
+            .liveRoomComponents()
+            .liveRoomComponentsGet(accountId, filtering, page, pageSize, fields);
     return response;
   }
 
   public static void main(String[] args) {
     try {
-      GetOptimizationGoalPermissions getOptimizationGoalPermissions =
-          new GetOptimizationGoalPermissions();
-      getOptimizationGoalPermissions.init();
-      OptimizationGoalPermissionsGetResponseData response =
-          getOptimizationGoalPermissions.getOptimizationGoalPermissions();
+      GetLiveRoomComponents getLiveRoomComponents = new GetLiveRoomComponents();
+      getLiveRoomComponents.init();
+      LiveRoomComponentsGetResponseData response = getLiveRoomComponents.getLiveRoomComponents();
     } catch (TencentAdsResponseException e) {
       e.printStackTrace();
     } catch (TencentAdsSDKException e) {

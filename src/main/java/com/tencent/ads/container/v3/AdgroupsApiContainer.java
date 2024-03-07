@@ -35,6 +35,9 @@ import com.tencent.ads.model.v3.AdgroupsUpdateConfiguredStatusResponseData;
 import com.tencent.ads.model.v3.AdgroupsUpdateDailyBudgetRequest;
 import com.tencent.ads.model.v3.AdgroupsUpdateDailyBudgetResponse;
 import com.tencent.ads.model.v3.AdgroupsUpdateDailyBudgetResponseData;
+import com.tencent.ads.model.v3.AdgroupsUpdateDatetimeRequest;
+import com.tencent.ads.model.v3.AdgroupsUpdateDatetimeResponse;
+import com.tencent.ads.model.v3.AdgroupsUpdateDatetimeResponseData;
 import com.tencent.ads.model.v3.AdgroupsUpdateRequest;
 import com.tencent.ads.model.v3.AdgroupsUpdateResponse;
 import com.tencent.ads.model.v3.AdgroupsUpdateResponseData;
@@ -163,6 +166,22 @@ public class AdgroupsApiContainer extends ApiContainer {
       AdgroupsUpdateDailyBudgetRequest data, String... headerPair)
       throws ApiException, TencentAdsResponseException {
     AdgroupsUpdateDailyBudgetResponse resp = api.adgroupsUpdateDailyBudget(data, headerPair);
+    handleResponse(gson.toJson(resp));
+    return resp.getData();
+  }
+
+  /**
+   * 更新广告组投放时间
+   *
+   * @param data (required)
+   * @return AdgroupsUpdateDatetimeResponse
+   * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
+   *     response body
+   */
+  public AdgroupsUpdateDatetimeResponseData adgroupsUpdateDatetime(
+      AdgroupsUpdateDatetimeRequest data, String... headerPair)
+      throws ApiException, TencentAdsResponseException {
+    AdgroupsUpdateDatetimeResponse resp = api.adgroupsUpdateDatetime(data, headerPair);
     handleResponse(gson.toJson(resp));
     return resp.getData();
   }

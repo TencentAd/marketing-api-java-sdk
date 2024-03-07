@@ -21,8 +21,30 @@ import java.util.Objects;
 /** 选择按钮组件 */
 @ApiModel(description = "选择按钮组件")
 public class ChosenButtonComponent {
+  @SerializedName("component_id")
+  private Long componentId = null;
+
   @SerializedName("value")
   private ChosenButtonStruct value = null;
+
+  public ChosenButtonComponent componentId(Long componentId) {
+    this.componentId = componentId;
+    return this;
+  }
+
+  /**
+   * Get componentId
+   *
+   * @return componentId
+   */
+  @ApiModelProperty(value = "")
+  public Long getComponentId() {
+    return componentId;
+  }
+
+  public void setComponentId(Long componentId) {
+    this.componentId = componentId;
+  }
 
   public ChosenButtonComponent value(ChosenButtonStruct value) {
     this.value = value;
@@ -52,12 +74,13 @@ public class ChosenButtonComponent {
       return false;
     }
     ChosenButtonComponent chosenButtonComponent = (ChosenButtonComponent) o;
-    return Objects.equals(this.value, chosenButtonComponent.value);
+    return Objects.equals(this.componentId, chosenButtonComponent.componentId)
+        && Objects.equals(this.value, chosenButtonComponent.value);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(value);
+    return Objects.hash(componentId, value);
   }
 
   @Override

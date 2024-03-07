@@ -33,7 +33,7 @@ public class GameFeatureTagsApi {
   private ApiClient apiClient;
 
   public GameFeatureTagsApi() {
-    this(Configuration.getDefaultApiClient());
+    this(Configuration.getV3DefaultApiClient());
   }
 
   public GameFeatureTagsApi(ApiClient apiClient) {
@@ -173,14 +173,9 @@ public class GameFeatureTagsApi {
    */
   public GameFeatureTagsGetResponse gameFeatureTagsGet(
       Long accountId, String type, List<String> fields, String... headerPair) throws ApiException {
-    try {
-      ApiClient.setBasePathTLVal("https://api.e.qq.com/v3.0");
-      ApiResponse<GameFeatureTagsGetResponse> resp =
-          gameFeatureTagsGetWithHttpInfo(accountId, type, fields, headerPair);
-      return resp.getData();
-    } finally {
-      ApiClient.clearBasePathTLVal();
-    }
+    ApiResponse<GameFeatureTagsGetResponse> resp =
+        gameFeatureTagsGetWithHttpInfo(accountId, type, fields, headerPair);
+    return resp.getData();
   }
 
   /**
@@ -218,37 +213,33 @@ public class GameFeatureTagsApi {
       final ApiCallback<GameFeatureTagsGetResponse> callback,
       String... headerPair)
       throws ApiException {
-    try {
-      ApiClient.setBasePathTLVal("https://api.e.qq.com/v3.0");
-      ProgressResponseBody.ProgressListener progressListener = null;
-      ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
 
-      if (callback != null) {
-        progressListener =
-            new ProgressResponseBody.ProgressListener() {
-              @Override
-              public void update(long bytesRead, long contentLength, boolean done) {
-                callback.onDownloadProgress(bytesRead, contentLength, done);
-              }
-            };
+    ProgressResponseBody.ProgressListener progressListener = null;
+    ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
 
-        progressRequestListener =
-            new ProgressRequestBody.ProgressRequestListener() {
-              @Override
-              public void onRequestProgress(long bytesWritten, long contentLength, boolean done) {
-                callback.onUploadProgress(bytesWritten, contentLength, done);
-              }
-            };
-      }
+    if (callback != null) {
+      progressListener =
+          new ProgressResponseBody.ProgressListener() {
+            @Override
+            public void update(long bytesRead, long contentLength, boolean done) {
+              callback.onDownloadProgress(bytesRead, contentLength, done);
+            }
+          };
 
-      com.squareup.okhttp.Call call =
-          gameFeatureTagsGetValidateBeforeCall(
-              accountId, type, fields, progressListener, progressRequestListener, headerPair);
-      Type localVarReturnType = new TypeToken<GameFeatureTagsGetResponse>() {}.getType();
-      apiClient.executeAsync(call, localVarReturnType, callback);
-      return call;
-    } finally {
-      ApiClient.clearBasePathTLVal();
+      progressRequestListener =
+          new ProgressRequestBody.ProgressRequestListener() {
+            @Override
+            public void onRequestProgress(long bytesWritten, long contentLength, boolean done) {
+              callback.onUploadProgress(bytesWritten, contentLength, done);
+            }
+          };
     }
+
+    com.squareup.okhttp.Call call =
+        gameFeatureTagsGetValidateBeforeCall(
+            accountId, type, fields, progressListener, progressRequestListener, headerPair);
+    Type localVarReturnType = new TypeToken<GameFeatureTagsGetResponse>() {}.getType();
+    apiClient.executeAsync(call, localVarReturnType, callback);
+    return call;
   }
 }

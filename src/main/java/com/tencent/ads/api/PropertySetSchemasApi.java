@@ -191,6 +191,7 @@ public class PropertySetSchemasApi {
       final ApiCallback<PropertySetSchemasAddResponse> callback,
       String... headerPair)
       throws ApiException {
+
     ProgressResponseBody.ProgressListener progressListener = null;
     ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
 
@@ -393,6 +394,7 @@ public class PropertySetSchemasApi {
       final ApiCallback<PropertySetSchemasGetResponse> callback,
       String... headerPair)
       throws ApiException {
+
     ProgressResponseBody.ProgressListener progressListener = null;
     ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
 
@@ -565,6 +567,7 @@ public class PropertySetSchemasApi {
       final ApiCallback<PropertySetSchemasUpdateResponse> callback,
       String... headerPair)
       throws ApiException {
+
     ProgressResponseBody.ProgressListener progressListener = null;
     ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
 

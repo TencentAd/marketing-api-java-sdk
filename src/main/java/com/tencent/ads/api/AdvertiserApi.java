@@ -192,6 +192,7 @@ public class AdvertiserApi {
       final ApiCallback<AdvertiserAddResponse> callback,
       String... headerPair)
       throws ApiException {
+
     ProgressResponseBody.ProgressListener progressListener = null;
     ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
 
@@ -412,6 +413,7 @@ public class AdvertiserApi {
       final ApiCallback<AdvertiserGetResponse> callback,
       String... headerPair)
       throws ApiException {
+
     ProgressResponseBody.ProgressListener progressListener = null;
     ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
 
@@ -585,6 +587,7 @@ public class AdvertiserApi {
       final ApiCallback<AdvertiserUpdateResponse> callback,
       String... headerPair)
       throws ApiException {
+
     ProgressResponseBody.ProgressListener progressListener = null;
     ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
 
@@ -753,6 +756,7 @@ public class AdvertiserApi {
       final ApiCallback<AdvertiserUpdateDailyBudgetResponse> callback,
       String... headerPair)
       throws ApiException {
+
     ProgressResponseBody.ProgressListener progressListener = null;
     ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
 

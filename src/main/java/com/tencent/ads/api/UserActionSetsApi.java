@@ -188,6 +188,7 @@ public class UserActionSetsApi {
       final ApiCallback<UserActionSetsAddResponse> callback,
       String... headerPair)
       throws ApiException {
+
     ProgressResponseBody.ProgressListener progressListener = null;
     ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
 
@@ -469,6 +470,7 @@ public class UserActionSetsApi {
       final ApiCallback<UserActionSetsGetResponse> callback,
       String... headerPair)
       throws ApiException {
+
     ProgressResponseBody.ProgressListener progressListener = null;
     ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
 

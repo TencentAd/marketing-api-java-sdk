@@ -21,6 +21,12 @@ import java.util.Objects;
 /** 元素粒度审核结果 */
 @ApiModel(description = "元素粒度审核结果")
 public class ElementResultListStruct {
+  @SerializedName("image_id")
+  private String imageId = null;
+
+  @SerializedName("video_id")
+  private String videoId = null;
+
   @SerializedName("element_name")
   private String elementName = null;
 
@@ -32,6 +38,44 @@ public class ElementResultListStruct {
 
   @SerializedName("review_status")
   private ReviewResultStatus reviewStatus = null;
+
+  public ElementResultListStruct imageId(String imageId) {
+    this.imageId = imageId;
+    return this;
+  }
+
+  /**
+   * Get imageId
+   *
+   * @return imageId
+   */
+  @ApiModelProperty(value = "")
+  public String getImageId() {
+    return imageId;
+  }
+
+  public void setImageId(String imageId) {
+    this.imageId = imageId;
+  }
+
+  public ElementResultListStruct videoId(String videoId) {
+    this.videoId = videoId;
+    return this;
+  }
+
+  /**
+   * Get videoId
+   *
+   * @return videoId
+   */
+  @ApiModelProperty(value = "")
+  public String getVideoId() {
+    return videoId;
+  }
+
+  public void setVideoId(String videoId) {
+    this.videoId = videoId;
+  }
 
   public ElementResultListStruct elementName(String elementName) {
     this.elementName = elementName;
@@ -118,7 +162,9 @@ public class ElementResultListStruct {
       return false;
     }
     ElementResultListStruct elementResultListStruct = (ElementResultListStruct) o;
-    return Objects.equals(this.elementName, elementResultListStruct.elementName)
+    return Objects.equals(this.imageId, elementResultListStruct.imageId)
+        && Objects.equals(this.videoId, elementResultListStruct.videoId)
+        && Objects.equals(this.elementName, elementResultListStruct.elementName)
         && Objects.equals(this.elementValue, elementResultListStruct.elementValue)
         && Objects.equals(this.elementType, elementResultListStruct.elementType)
         && Objects.equals(this.reviewStatus, elementResultListStruct.reviewStatus);
@@ -126,7 +172,7 @@ public class ElementResultListStruct {
 
   @Override
   public int hashCode() {
-    return Objects.hash(elementName, elementValue, elementType, reviewStatus);
+    return Objects.hash(imageId, videoId, elementName, elementValue, elementType, reviewStatus);
   }
 
   @Override
