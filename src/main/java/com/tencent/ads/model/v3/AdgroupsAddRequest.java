@@ -156,6 +156,12 @@ public class AdgroupsAddRequest {
   @SerializedName("mpa_spec")
   private MpaSpec mpaSpec = null;
 
+  @SerializedName("cost_constraint_scene")
+  private CostConstraintScene costConstraintScene = null;
+
+  @SerializedName("custom_cost_cap")
+  private Long customCostCap = null;
+
   public AdgroupsAddRequest accountId(Long accountId) {
     this.accountId = accountId;
     return this;
@@ -1048,6 +1054,44 @@ public class AdgroupsAddRequest {
     this.mpaSpec = mpaSpec;
   }
 
+  public AdgroupsAddRequest costConstraintScene(CostConstraintScene costConstraintScene) {
+    this.costConstraintScene = costConstraintScene;
+    return this;
+  }
+
+  /**
+   * Get costConstraintScene
+   *
+   * @return costConstraintScene
+   */
+  @ApiModelProperty(value = "")
+  public CostConstraintScene getCostConstraintScene() {
+    return costConstraintScene;
+  }
+
+  public void setCostConstraintScene(CostConstraintScene costConstraintScene) {
+    this.costConstraintScene = costConstraintScene;
+  }
+
+  public AdgroupsAddRequest customCostCap(Long customCostCap) {
+    this.customCostCap = customCostCap;
+    return this;
+  }
+
+  /**
+   * Get customCostCap
+   *
+   * @return customCostCap
+   */
+  @ApiModelProperty(value = "")
+  public Long getCustomCostCap() {
+    return customCostCap;
+  }
+
+  public void setCustomCostCap(Long customCostCap) {
+    this.customCostCap = customCostCap;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -1109,7 +1153,9 @@ public class AdgroupsAddRequest {
         && Objects.equals(this.prioritySiteSet, adgroupsAddRequest.prioritySiteSet)
         && Objects.equals(this.ecomPkamSwitch, adgroupsAddRequest.ecomPkamSwitch)
         && Objects.equals(this.forwardLinkAssist, adgroupsAddRequest.forwardLinkAssist)
-        && Objects.equals(this.mpaSpec, adgroupsAddRequest.mpaSpec);
+        && Objects.equals(this.mpaSpec, adgroupsAddRequest.mpaSpec)
+        && Objects.equals(this.costConstraintScene, adgroupsAddRequest.costConstraintScene)
+        && Objects.equals(this.customCostCap, adgroupsAddRequest.customCostCap);
   }
 
   @Override
@@ -1159,7 +1205,9 @@ public class AdgroupsAddRequest {
         prioritySiteSet,
         ecomPkamSwitch,
         forwardLinkAssist,
-        mpaSpec);
+        mpaSpec,
+        costConstraintScene,
+        customCostCap);
   }
 
   @Override

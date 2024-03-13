@@ -55,7 +55,7 @@ public class MaterialLabel {
   private Long relationMediaCount = null;
 
   @SerializedName("business_scenario")
-  private BusinessScenario businessScenario = null;
+  private Long businessScenario = null;
 
   public MaterialLabel accountId(Long accountId) {
     this.accountId = accountId;
@@ -266,7 +266,7 @@ public class MaterialLabel {
     this.relationMediaCount = relationMediaCount;
   }
 
-  public MaterialLabel businessScenario(BusinessScenario businessScenario) {
+  public MaterialLabel businessScenario(Long businessScenario) {
     this.businessScenario = businessScenario;
     return this;
   }
@@ -277,11 +277,11 @@ public class MaterialLabel {
    * @return businessScenario
    */
   @ApiModelProperty(value = "")
-  public BusinessScenario getBusinessScenario() {
+  public Long getBusinessScenario() {
     return businessScenario;
   }
 
-  public void setBusinessScenario(BusinessScenario businessScenario) {
+  public void setBusinessScenario(Long businessScenario) {
     this.businessScenario = businessScenario;
   }
 

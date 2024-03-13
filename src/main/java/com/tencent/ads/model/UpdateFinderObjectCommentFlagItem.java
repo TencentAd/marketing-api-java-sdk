@@ -33,6 +33,9 @@ public class UpdateFinderObjectCommentFlagItem {
   @SerializedName("comment_id")
   private String commentId = null;
 
+  @SerializedName("comment_level")
+  private Long commentLevel = null;
+
   public UpdateFinderObjectCommentFlagItem adcreativeId(Long adcreativeId) {
     this.adcreativeId = adcreativeId;
     return this;
@@ -109,6 +112,25 @@ public class UpdateFinderObjectCommentFlagItem {
     this.commentId = commentId;
   }
 
+  public UpdateFinderObjectCommentFlagItem commentLevel(Long commentLevel) {
+    this.commentLevel = commentLevel;
+    return this;
+  }
+
+  /**
+   * Get commentLevel
+   *
+   * @return commentLevel
+   */
+  @ApiModelProperty(value = "")
+  public Long getCommentLevel() {
+    return commentLevel;
+  }
+
+  public void setCommentLevel(Long commentLevel) {
+    this.commentLevel = commentLevel;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -122,12 +144,13 @@ public class UpdateFinderObjectCommentFlagItem {
     return Objects.equals(this.adcreativeId, updateFinderObjectCommentFlagItem.adcreativeId)
         && Objects.equals(this.opType, updateFinderObjectCommentFlagItem.opType)
         && Objects.equals(this.accountId, updateFinderObjectCommentFlagItem.accountId)
-        && Objects.equals(this.commentId, updateFinderObjectCommentFlagItem.commentId);
+        && Objects.equals(this.commentId, updateFinderObjectCommentFlagItem.commentId)
+        && Objects.equals(this.commentLevel, updateFinderObjectCommentFlagItem.commentLevel);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(adcreativeId, opType, accountId, commentId);
+    return Objects.hash(adcreativeId, opType, accountId, commentId, commentLevel);
   }
 
   @Override

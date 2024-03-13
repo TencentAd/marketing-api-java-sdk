@@ -16,53 +16,41 @@ import com.google.gson.Gson;
 import com.google.gson.annotations.SerializedName;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Objects;
 
-/** 自定义落地页 */
-@ApiModel(description = "自定义落地页")
-public class H5PageSpec {
-  @SerializedName("page_url")
-  private String pageUrl = null;
+/** 营销对象属性 */
+@ApiModel(description = "营销对象属性")
+public class MarketingTargetAttr {
+  @SerializedName("attr")
+  private List<PromotedAssetAttr> attr = null;
 
-  @SerializedName("mpa_h5_wildcard_url")
-  private String mpaH5WildcardUrl = null;
+  public MarketingTargetAttr attr(List<PromotedAssetAttr> attr) {
+    this.attr = attr;
+    return this;
+  }
 
-  public H5PageSpec pageUrl(String pageUrl) {
-    this.pageUrl = pageUrl;
+  public MarketingTargetAttr addAttrItem(PromotedAssetAttr attrItem) {
+    if (this.attr == null) {
+      this.attr = new ArrayList<PromotedAssetAttr>();
+    }
+    this.attr.add(attrItem);
     return this;
   }
 
   /**
-   * Get pageUrl
+   * Get attr
    *
-   * @return pageUrl
+   * @return attr
    */
   @ApiModelProperty(value = "")
-  public String getPageUrl() {
-    return pageUrl;
+  public List<PromotedAssetAttr> getAttr() {
+    return attr;
   }
 
-  public void setPageUrl(String pageUrl) {
-    this.pageUrl = pageUrl;
-  }
-
-  public H5PageSpec mpaH5WildcardUrl(String mpaH5WildcardUrl) {
-    this.mpaH5WildcardUrl = mpaH5WildcardUrl;
-    return this;
-  }
-
-  /**
-   * Get mpaH5WildcardUrl
-   *
-   * @return mpaH5WildcardUrl
-   */
-  @ApiModelProperty(value = "")
-  public String getMpaH5WildcardUrl() {
-    return mpaH5WildcardUrl;
-  }
-
-  public void setMpaH5WildcardUrl(String mpaH5WildcardUrl) {
-    this.mpaH5WildcardUrl = mpaH5WildcardUrl;
+  public void setAttr(List<PromotedAssetAttr> attr) {
+    this.attr = attr;
   }
 
   @Override
@@ -73,14 +61,13 @@ public class H5PageSpec {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    H5PageSpec h5PageSpec = (H5PageSpec) o;
-    return Objects.equals(this.pageUrl, h5PageSpec.pageUrl)
-        && Objects.equals(this.mpaH5WildcardUrl, h5PageSpec.mpaH5WildcardUrl);
+    MarketingTargetAttr marketingTargetAttr = (MarketingTargetAttr) o;
+    return Objects.equals(this.attr, marketingTargetAttr.attr);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(pageUrl, mpaH5WildcardUrl);
+    return Objects.hash(attr);
   }
 
   @Override

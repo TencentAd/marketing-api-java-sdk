@@ -19,7 +19,7 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-/** 推广资产属性名称 */
+/** 营销资产属性key */
 @JsonAdapter(PromotedAssetAttrKey.Adapter.class)
 public enum PromotedAssetAttrKey {
   UNKNOWN("PROMOTED_ASSET_ATTR_KEY_UNKNOWN"),
@@ -825,6 +825,10 @@ public enum PromotedAssetAttrKey {
   STORE_BRAND("PROMOTED_ASSET_ATTR_KEY_STORE_BRAND"),
 
   STORE_HOMEPAGE_ADDRESS("PROMOTED_ASSET_ATTR_KEY_STORE_HOMEPAGE_ADDRESS"),
+
+  MINI_GAME_QQ_ID("PROMOTED_ASSET_ATTR_KEY_MINI_GAME_QQ_ID"),
+
+  PC_GAME_DOMAIN("PROMOTED_ASSET_ATTR_KEY_PC_GAME_DOMAIN"),
 
   LIVE_STREAM_ROOM_CATE_NAME("PROMOTED_ASSET_ATTR_KEY_LIVE_STREAM_ROOM_CATE_NAME"),
 

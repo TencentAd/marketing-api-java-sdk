@@ -34,9 +34,9 @@ public class EcommerceOrderApiContainer extends ApiContainer {
    * 获取订单
    *
    * @param accountId (required)
-   * @param date (required)
    * @param dateRange (required)
    * @param filtering (optional)
+   * @param date (optional)
    * @param page (optional)
    * @param pageSize (optional)
    * @param fields 返回参数的字段列表 (optional)
@@ -46,9 +46,9 @@ public class EcommerceOrderApiContainer extends ApiContainer {
    */
   public EcommerceOrderGetResponseData ecommerceOrderGet(
       Long accountId,
-      String date,
       DateRange dateRange,
       List<FilteringStruct> filtering,
+      String date,
       Long page,
       Long pageSize,
       List<String> fields,
@@ -56,7 +56,7 @@ public class EcommerceOrderApiContainer extends ApiContainer {
       throws ApiException, TencentAdsResponseException {
     EcommerceOrderGetResponse resp =
         api.ecommerceOrderGet(
-            accountId, date, dateRange, filtering, page, pageSize, fields, headerPair);
+            accountId, dateRange, filtering, date, page, pageSize, fields, headerPair);
     handleResponse(gson.toJson(resp));
     return resp.getData();
   }

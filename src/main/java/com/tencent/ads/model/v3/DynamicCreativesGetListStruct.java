@@ -77,6 +77,9 @@ public class DynamicCreativesGetListStruct {
   @SerializedName("system_status_explanation")
   private String systemStatusExplanation = null;
 
+  @SerializedName("marketing_asset_verification")
+  private MarketingAssetVerification marketingAssetVerification = null;
+
   public DynamicCreativesGetListStruct adgroupId(Long adgroupId) {
     this.adgroupId = adgroupId;
     return this;
@@ -431,6 +434,26 @@ public class DynamicCreativesGetListStruct {
     this.systemStatusExplanation = systemStatusExplanation;
   }
 
+  public DynamicCreativesGetListStruct marketingAssetVerification(
+      MarketingAssetVerification marketingAssetVerification) {
+    this.marketingAssetVerification = marketingAssetVerification;
+    return this;
+  }
+
+  /**
+   * Get marketingAssetVerification
+   *
+   * @return marketingAssetVerification
+   */
+  @ApiModelProperty(value = "")
+  public MarketingAssetVerification getMarketingAssetVerification() {
+    return marketingAssetVerification;
+  }
+
+  public void setMarketingAssetVerification(MarketingAssetVerification marketingAssetVerification) {
+    this.marketingAssetVerification = marketingAssetVerification;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -463,7 +486,10 @@ public class DynamicCreativesGetListStruct {
         && Objects.equals(
             this.dynamicCreativeStatusInfo, dynamicCreativesGetListStruct.dynamicCreativeStatusInfo)
         && Objects.equals(
-            this.systemStatusExplanation, dynamicCreativesGetListStruct.systemStatusExplanation);
+            this.systemStatusExplanation, dynamicCreativesGetListStruct.systemStatusExplanation)
+        && Objects.equals(
+            this.marketingAssetVerification,
+            dynamicCreativesGetListStruct.marketingAssetVerification);
   }
 
   @Override
@@ -486,7 +512,8 @@ public class DynamicCreativesGetListStruct {
         createdTime,
         lastModifiedTime,
         dynamicCreativeStatusInfo,
-        systemStatusExplanation);
+        systemStatusExplanation,
+        marketingAssetVerification);
   }
 
   @Override

@@ -108,6 +108,12 @@ public class AdgroupsUpdateRequest {
   @SerializedName("ecom_pkam_switch")
   private EcomPkamSwitch ecomPkamSwitch = null;
 
+  @SerializedName("cost_constraint_scene")
+  private CostConstraintScene costConstraintScene = null;
+
+  @SerializedName("custom_cost_cap")
+  private Long customCostCap = null;
+
   public AdgroupsUpdateRequest accountId(Long accountId) {
     this.accountId = accountId;
     return this;
@@ -677,6 +683,44 @@ public class AdgroupsUpdateRequest {
     this.ecomPkamSwitch = ecomPkamSwitch;
   }
 
+  public AdgroupsUpdateRequest costConstraintScene(CostConstraintScene costConstraintScene) {
+    this.costConstraintScene = costConstraintScene;
+    return this;
+  }
+
+  /**
+   * Get costConstraintScene
+   *
+   * @return costConstraintScene
+   */
+  @ApiModelProperty(value = "")
+  public CostConstraintScene getCostConstraintScene() {
+    return costConstraintScene;
+  }
+
+  public void setCostConstraintScene(CostConstraintScene costConstraintScene) {
+    this.costConstraintScene = costConstraintScene;
+  }
+
+  public AdgroupsUpdateRequest customCostCap(Long customCostCap) {
+    this.customCostCap = customCostCap;
+    return this;
+  }
+
+  /**
+   * Get customCostCap
+   *
+   * @return customCostCap
+   */
+  @ApiModelProperty(value = "")
+  public Long getCustomCostCap() {
+    return customCostCap;
+  }
+
+  public void setCustomCostCap(Long customCostCap) {
+    this.customCostCap = customCostCap;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -723,7 +767,9 @@ public class AdgroupsUpdateRequest {
         && Objects.equals(
             this.flowOptimizationEnabled, adgroupsUpdateRequest.flowOptimizationEnabled)
         && Objects.equals(this.poiList, adgroupsUpdateRequest.poiList)
-        && Objects.equals(this.ecomPkamSwitch, adgroupsUpdateRequest.ecomPkamSwitch);
+        && Objects.equals(this.ecomPkamSwitch, adgroupsUpdateRequest.ecomPkamSwitch)
+        && Objects.equals(this.costConstraintScene, adgroupsUpdateRequest.costConstraintScene)
+        && Objects.equals(this.customCostCap, adgroupsUpdateRequest.customCostCap);
   }
 
   @Override
@@ -757,7 +803,9 @@ public class AdgroupsUpdateRequest {
         configuredStatus,
         flowOptimizationEnabled,
         poiList,
-        ecomPkamSwitch);
+        ecomPkamSwitch,
+        costConstraintScene,
+        customCostCap);
   }
 
   @Override

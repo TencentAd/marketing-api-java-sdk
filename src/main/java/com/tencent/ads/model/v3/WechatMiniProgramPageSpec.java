@@ -35,6 +35,9 @@ public class WechatMiniProgramPageSpec {
   @SerializedName("backup_option")
   private BackUpOption backupOption = null;
 
+  @SerializedName("mpa_mini_program_wildcard_url")
+  private String mpaMiniProgramWildcardUrl = null;
+
   public WechatMiniProgramPageSpec miniProgramId(String miniProgramId) {
     this.miniProgramId = miniProgramId;
     return this;
@@ -119,6 +122,25 @@ public class WechatMiniProgramPageSpec {
     this.backupOption = backupOption;
   }
 
+  public WechatMiniProgramPageSpec mpaMiniProgramWildcardUrl(String mpaMiniProgramWildcardUrl) {
+    this.mpaMiniProgramWildcardUrl = mpaMiniProgramWildcardUrl;
+    return this;
+  }
+
+  /**
+   * Get mpaMiniProgramWildcardUrl
+   *
+   * @return mpaMiniProgramWildcardUrl
+   */
+  @ApiModelProperty(value = "")
+  public String getMpaMiniProgramWildcardUrl() {
+    return mpaMiniProgramWildcardUrl;
+  }
+
+  public void setMpaMiniProgramWildcardUrl(String mpaMiniProgramWildcardUrl) {
+    this.mpaMiniProgramWildcardUrl = mpaMiniProgramWildcardUrl;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -131,12 +153,15 @@ public class WechatMiniProgramPageSpec {
     return Objects.equals(this.miniProgramId, wechatMiniProgramPageSpec.miniProgramId)
         && Objects.equals(this.miniProgramPath, wechatMiniProgramPageSpec.miniProgramPath)
         && Objects.equals(this.miniProgramPaths, wechatMiniProgramPageSpec.miniProgramPaths)
-        && Objects.equals(this.backupOption, wechatMiniProgramPageSpec.backupOption);
+        && Objects.equals(this.backupOption, wechatMiniProgramPageSpec.backupOption)
+        && Objects.equals(
+            this.mpaMiniProgramWildcardUrl, wechatMiniProgramPageSpec.mpaMiniProgramWildcardUrl);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(miniProgramId, miniProgramPath, miniProgramPaths, backupOption);
+    return Objects.hash(
+        miniProgramId, miniProgramPath, miniProgramPaths, backupOption, mpaMiniProgramWildcardUrl);
   }
 
   @Override

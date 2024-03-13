@@ -215,6 +215,15 @@ public class AdgroupsGetListStruct {
   @SerializedName("auto_acquisition_status_message")
   private String autoAcquisitionStatusMessage = null;
 
+  @SerializedName("cost_constraint_scene")
+  private CostConstraintScene costConstraintScene = null;
+
+  @SerializedName("custom_cost_cap")
+  private Long customCostCap = null;
+
+  @SerializedName("mpa_spec")
+  private MpaSpec mpaSpec = null;
+
   public AdgroupsGetListStruct targeting(ReadTargetingSetting targeting) {
     this.targeting = targeting;
     return this;
@@ -1470,6 +1479,63 @@ public class AdgroupsGetListStruct {
     this.autoAcquisitionStatusMessage = autoAcquisitionStatusMessage;
   }
 
+  public AdgroupsGetListStruct costConstraintScene(CostConstraintScene costConstraintScene) {
+    this.costConstraintScene = costConstraintScene;
+    return this;
+  }
+
+  /**
+   * Get costConstraintScene
+   *
+   * @return costConstraintScene
+   */
+  @ApiModelProperty(value = "")
+  public CostConstraintScene getCostConstraintScene() {
+    return costConstraintScene;
+  }
+
+  public void setCostConstraintScene(CostConstraintScene costConstraintScene) {
+    this.costConstraintScene = costConstraintScene;
+  }
+
+  public AdgroupsGetListStruct customCostCap(Long customCostCap) {
+    this.customCostCap = customCostCap;
+    return this;
+  }
+
+  /**
+   * Get customCostCap
+   *
+   * @return customCostCap
+   */
+  @ApiModelProperty(value = "")
+  public Long getCustomCostCap() {
+    return customCostCap;
+  }
+
+  public void setCustomCostCap(Long customCostCap) {
+    this.customCostCap = customCostCap;
+  }
+
+  public AdgroupsGetListStruct mpaSpec(MpaSpec mpaSpec) {
+    this.mpaSpec = mpaSpec;
+    return this;
+  }
+
+  /**
+   * Get mpaSpec
+   *
+   * @return mpaSpec
+   */
+  @ApiModelProperty(value = "")
+  public MpaSpec getMpaSpec() {
+    return mpaSpec;
+  }
+
+  public void setMpaSpec(MpaSpec mpaSpec) {
+    this.mpaSpec = mpaSpec;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -1556,7 +1622,10 @@ public class AdgroupsGetListStruct {
         && Objects.equals(
             this.autoAcquisitionStatusText, adgroupsGetListStruct.autoAcquisitionStatusText)
         && Objects.equals(
-            this.autoAcquisitionStatusMessage, adgroupsGetListStruct.autoAcquisitionStatusMessage);
+            this.autoAcquisitionStatusMessage, adgroupsGetListStruct.autoAcquisitionStatusMessage)
+        && Objects.equals(this.costConstraintScene, adgroupsGetListStruct.costConstraintScene)
+        && Objects.equals(this.customCostCap, adgroupsGetListStruct.customCostCap)
+        && Objects.equals(this.mpaSpec, adgroupsGetListStruct.mpaSpec);
   }
 
   @Override
@@ -1625,7 +1694,10 @@ public class AdgroupsGetListStruct {
         conversionName,
         autoAcquisitionStatus,
         autoAcquisitionStatusText,
-        autoAcquisitionStatusMessage);
+        autoAcquisitionStatusMessage,
+        costConstraintScene,
+        customCostCap,
+        mpaSpec);
   }
 
   @Override

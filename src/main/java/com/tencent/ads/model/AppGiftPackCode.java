@@ -33,9 +33,6 @@ public class AppGiftPackCode {
   @SerializedName("game_gift_id")
   private String gameGiftId = null;
 
-  @SerializedName("game_act_id")
-  private String gameActId = null;
-
   @SerializedName("game_gift_image_id")
   private String gameGiftImageId = null;
 
@@ -115,25 +112,6 @@ public class AppGiftPackCode {
     this.gameGiftId = gameGiftId;
   }
 
-  public AppGiftPackCode gameActId(String gameActId) {
-    this.gameActId = gameActId;
-    return this;
-  }
-
-  /**
-   * Get gameActId
-   *
-   * @return gameActId
-   */
-  @ApiModelProperty(value = "")
-  public String getGameActId() {
-    return gameActId;
-  }
-
-  public void setGameActId(String gameActId) {
-    this.gameActId = gameActId;
-  }
-
   public AppGiftPackCode gameGiftImageId(String gameGiftImageId) {
     this.gameGiftImageId = gameGiftImageId;
     return this;
@@ -166,13 +144,12 @@ public class AppGiftPackCode {
         && Objects.equals(this.tips, appGiftPackCode.tips)
         && Objects.equals(this.description, appGiftPackCode.description)
         && Objects.equals(this.gameGiftId, appGiftPackCode.gameGiftId)
-        && Objects.equals(this.gameActId, appGiftPackCode.gameActId)
         && Objects.equals(this.gameGiftImageId, appGiftPackCode.gameGiftImageId);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(code, tips, description, gameGiftId, gameActId, gameGiftImageId);
+    return Objects.hash(code, tips, description, gameGiftId, gameGiftImageId);
   }
 
   @Override

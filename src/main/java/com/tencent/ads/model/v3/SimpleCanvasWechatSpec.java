@@ -42,6 +42,9 @@ public class SimpleCanvasWechatSpec {
   @SerializedName("wechat_channels_live_reserve_id")
   private String wechatChannelsLiveReserveId = null;
 
+  @SerializedName("mpa_simple_canvas_webview_wildcard_url")
+  private String mpaSimpleCanvasWebviewWildcardUrl = null;
+
   public SimpleCanvasWechatSpec simpleCanvasWebviewType(
       SimpleCanvasWebviewType simpleCanvasWebviewType) {
     this.simpleCanvasWebviewType = simpleCanvasWebviewType;
@@ -176,6 +179,26 @@ public class SimpleCanvasWechatSpec {
     this.wechatChannelsLiveReserveId = wechatChannelsLiveReserveId;
   }
 
+  public SimpleCanvasWechatSpec mpaSimpleCanvasWebviewWildcardUrl(
+      String mpaSimpleCanvasWebviewWildcardUrl) {
+    this.mpaSimpleCanvasWebviewWildcardUrl = mpaSimpleCanvasWebviewWildcardUrl;
+    return this;
+  }
+
+  /**
+   * Get mpaSimpleCanvasWebviewWildcardUrl
+   *
+   * @return mpaSimpleCanvasWebviewWildcardUrl
+   */
+  @ApiModelProperty(value = "")
+  public String getMpaSimpleCanvasWebviewWildcardUrl() {
+    return mpaSimpleCanvasWebviewWildcardUrl;
+  }
+
+  public void setMpaSimpleCanvasWebviewWildcardUrl(String mpaSimpleCanvasWebviewWildcardUrl) {
+    this.mpaSimpleCanvasWebviewWildcardUrl = mpaSimpleCanvasWebviewWildcardUrl;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -196,7 +219,10 @@ public class SimpleCanvasWechatSpec {
         && Objects.equals(
             this.simpleCanvasWebviewUrl, simpleCanvasWechatSpec.simpleCanvasWebviewUrl)
         && Objects.equals(
-            this.wechatChannelsLiveReserveId, simpleCanvasWechatSpec.wechatChannelsLiveReserveId);
+            this.wechatChannelsLiveReserveId, simpleCanvasWechatSpec.wechatChannelsLiveReserveId)
+        && Objects.equals(
+            this.mpaSimpleCanvasWebviewWildcardUrl,
+            simpleCanvasWechatSpec.mpaSimpleCanvasWebviewWildcardUrl);
   }
 
   @Override
@@ -208,7 +234,8 @@ public class SimpleCanvasWechatSpec {
         simpleCanvasShareTitle,
         simpleCanvasShareDesc,
         simpleCanvasWebviewUrl,
-        wechatChannelsLiveReserveId);
+        wechatChannelsLiveReserveId,
+        mpaSimpleCanvasWebviewWildcardUrl);
   }
 
   @Override

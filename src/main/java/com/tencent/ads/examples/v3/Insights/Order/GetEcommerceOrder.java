@@ -19,11 +19,11 @@ public class GetEcommerceOrder {
 
   public Long accountId = null;
 
-  public String date = null;
-
   public DateRange dateRange = new DateRange();
 
   public List<FilteringStruct> filtering = null;
+
+  public String date = null;
 
   public Long page = null;
 
@@ -73,7 +73,7 @@ public class GetEcommerceOrder {
     EcommerceOrderGetResponseData response =
         tencentAds
             .ecommerceOrder()
-            .ecommerceOrderGet(accountId, date, dateRange, filtering, page, pageSize, fields);
+            .ecommerceOrderGet(accountId, dateRange, filtering, date, page, pageSize, fields);
     return response;
   }
 

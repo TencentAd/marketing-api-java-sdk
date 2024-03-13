@@ -56,9 +56,9 @@ public class EcommerceOrderApi {
    * Build call for ecommerceOrderGet
    *
    * @param accountId (required)
-   * @param date (required)
    * @param dateRange (required)
    * @param filtering (optional)
+   * @param date (optional)
    * @param page (optional)
    * @param pageSize (optional)
    * @param fields 返回参数的字段列表 (optional)
@@ -69,9 +69,9 @@ public class EcommerceOrderApi {
    */
   public com.squareup.okhttp.Call ecommerceOrderGetCall(
       Long accountId,
-      String date,
       DateRange dateRange,
       List<FilteringStruct> filtering,
+      String date,
       Long page,
       Long pageSize,
       List<String> fields,
@@ -156,9 +156,9 @@ public class EcommerceOrderApi {
   @SuppressWarnings("rawtypes")
   private com.squareup.okhttp.Call ecommerceOrderGetValidateBeforeCall(
       Long accountId,
-      String date,
       DateRange dateRange,
       List<FilteringStruct> filtering,
+      String date,
       Long page,
       Long pageSize,
       List<String> fields,
@@ -173,12 +173,6 @@ public class EcommerceOrderApi {
           "Missing the required parameter 'accountId' when calling ecommerceOrderGet(Async)");
     }
 
-    // verify the required parameter 'date' is set
-    if (date == null) {
-      throw new ApiException(
-          "Missing the required parameter 'date' when calling ecommerceOrderGet(Async)");
-    }
-
     // verify the required parameter 'dateRange' is set
     if (dateRange == null) {
       throw new ApiException(
@@ -188,9 +182,9 @@ public class EcommerceOrderApi {
     com.squareup.okhttp.Call call =
         ecommerceOrderGetCall(
             accountId,
-            date,
             dateRange,
             filtering,
+            date,
             page,
             pageSize,
             fields,
@@ -204,9 +198,9 @@ public class EcommerceOrderApi {
    * 获取订单
    *
    * @param accountId (required)
-   * @param date (required)
    * @param dateRange (required)
    * @param filtering (optional)
+   * @param date (optional)
    * @param page (optional)
    * @param pageSize (optional)
    * @param fields 返回参数的字段列表 (optional)
@@ -216,9 +210,9 @@ public class EcommerceOrderApi {
    */
   public EcommerceOrderGetResponse ecommerceOrderGet(
       Long accountId,
-      String date,
       DateRange dateRange,
       List<FilteringStruct> filtering,
+      String date,
       Long page,
       Long pageSize,
       List<String> fields,
@@ -226,7 +220,7 @@ public class EcommerceOrderApi {
       throws ApiException {
     ApiResponse<EcommerceOrderGetResponse> resp =
         ecommerceOrderGetWithHttpInfo(
-            accountId, date, dateRange, filtering, page, pageSize, fields, headerPair);
+            accountId, dateRange, filtering, date, page, pageSize, fields, headerPair);
     return resp.getData();
   }
 
@@ -234,9 +228,9 @@ public class EcommerceOrderApi {
    * 获取订单
    *
    * @param accountId (required)
-   * @param date (required)
    * @param dateRange (required)
    * @param filtering (optional)
+   * @param date (optional)
    * @param page (optional)
    * @param pageSize (optional)
    * @param fields 返回参数的字段列表 (optional)
@@ -246,9 +240,9 @@ public class EcommerceOrderApi {
    */
   public ApiResponse<EcommerceOrderGetResponse> ecommerceOrderGetWithHttpInfo(
       Long accountId,
-      String date,
       DateRange dateRange,
       List<FilteringStruct> filtering,
+      String date,
       Long page,
       Long pageSize,
       List<String> fields,
@@ -256,7 +250,7 @@ public class EcommerceOrderApi {
       throws ApiException {
     com.squareup.okhttp.Call call =
         ecommerceOrderGetValidateBeforeCall(
-            accountId, date, dateRange, filtering, page, pageSize, fields, null, null, headerPair);
+            accountId, dateRange, filtering, date, page, pageSize, fields, null, null, headerPair);
     Type localVarReturnType = new TypeToken<EcommerceOrderGetResponse>() {}.getType();
     return apiClient.execute(call, localVarReturnType);
   }
@@ -265,9 +259,9 @@ public class EcommerceOrderApi {
    * 获取订单 (asynchronously)
    *
    * @param accountId (required)
-   * @param date (required)
    * @param dateRange (required)
    * @param filtering (optional)
+   * @param date (optional)
    * @param page (optional)
    * @param pageSize (optional)
    * @param fields 返回参数的字段列表 (optional)
@@ -277,9 +271,9 @@ public class EcommerceOrderApi {
    */
   public com.squareup.okhttp.Call ecommerceOrderGetAsync(
       Long accountId,
-      String date,
       DateRange dateRange,
       List<FilteringStruct> filtering,
+      String date,
       Long page,
       Long pageSize,
       List<String> fields,
@@ -311,9 +305,9 @@ public class EcommerceOrderApi {
     com.squareup.okhttp.Call call =
         ecommerceOrderGetValidateBeforeCall(
             accountId,
-            date,
             dateRange,
             filtering,
+            date,
             page,
             pageSize,
             fields,

@@ -16,53 +16,63 @@ import com.google.gson.Gson;
 import com.google.gson.annotations.SerializedName;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Objects;
 
-/** 自定义落地页 */
-@ApiModel(description = "自定义落地页")
-public class H5PageSpec {
-  @SerializedName("page_url")
-  private String pageUrl = null;
+/** 营销资产属性 */
+@ApiModel(description = "营销资产属性")
+public class PromotedAssetAttr {
+  @SerializedName("key")
+  private PromotedAssetAttrKey key = null;
 
-  @SerializedName("mpa_h5_wildcard_url")
-  private String mpaH5WildcardUrl = null;
+  @SerializedName("value")
+  private List<String> value = null;
 
-  public H5PageSpec pageUrl(String pageUrl) {
-    this.pageUrl = pageUrl;
+  public PromotedAssetAttr key(PromotedAssetAttrKey key) {
+    this.key = key;
     return this;
   }
 
   /**
-   * Get pageUrl
+   * Get key
    *
-   * @return pageUrl
+   * @return key
    */
   @ApiModelProperty(value = "")
-  public String getPageUrl() {
-    return pageUrl;
+  public PromotedAssetAttrKey getKey() {
+    return key;
   }
 
-  public void setPageUrl(String pageUrl) {
-    this.pageUrl = pageUrl;
+  public void setKey(PromotedAssetAttrKey key) {
+    this.key = key;
   }
 
-  public H5PageSpec mpaH5WildcardUrl(String mpaH5WildcardUrl) {
-    this.mpaH5WildcardUrl = mpaH5WildcardUrl;
+  public PromotedAssetAttr value(List<String> value) {
+    this.value = value;
+    return this;
+  }
+
+  public PromotedAssetAttr addValueItem(String valueItem) {
+    if (this.value == null) {
+      this.value = new ArrayList<String>();
+    }
+    this.value.add(valueItem);
     return this;
   }
 
   /**
-   * Get mpaH5WildcardUrl
+   * Get value
    *
-   * @return mpaH5WildcardUrl
+   * @return value
    */
   @ApiModelProperty(value = "")
-  public String getMpaH5WildcardUrl() {
-    return mpaH5WildcardUrl;
+  public List<String> getValue() {
+    return value;
   }
 
-  public void setMpaH5WildcardUrl(String mpaH5WildcardUrl) {
-    this.mpaH5WildcardUrl = mpaH5WildcardUrl;
+  public void setValue(List<String> value) {
+    this.value = value;
   }
 
   @Override
@@ -73,14 +83,14 @@ public class H5PageSpec {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    H5PageSpec h5PageSpec = (H5PageSpec) o;
-    return Objects.equals(this.pageUrl, h5PageSpec.pageUrl)
-        && Objects.equals(this.mpaH5WildcardUrl, h5PageSpec.mpaH5WildcardUrl);
+    PromotedAssetAttr promotedAssetAttr = (PromotedAssetAttr) o;
+    return Objects.equals(this.key, promotedAssetAttr.key)
+        && Objects.equals(this.value, promotedAssetAttr.value);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(pageUrl, mpaH5WildcardUrl);
+    return Objects.hash(key, value);
   }
 
   @Override
