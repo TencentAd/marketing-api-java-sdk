@@ -33,9 +33,6 @@ public class WxgamePlayablePageStruct {
   @SerializedName("wxgame_playable_page_end_desc")
   private String wxgamePlayablePageEndDesc = null;
 
-  @SerializedName("wxgame_playable_page_orientation")
-  private WxgamePlayablePageOrientation wxgamePlayablePageOrientation = null;
-
   public WxgamePlayablePageStruct wxgamePlayablePageSwitch(Boolean wxgamePlayablePageSwitch) {
     this.wxgamePlayablePageSwitch = wxgamePlayablePageSwitch;
     return this;
@@ -113,27 +110,6 @@ public class WxgamePlayablePageStruct {
     this.wxgamePlayablePageEndDesc = wxgamePlayablePageEndDesc;
   }
 
-  public WxgamePlayablePageStruct wxgamePlayablePageOrientation(
-      WxgamePlayablePageOrientation wxgamePlayablePageOrientation) {
-    this.wxgamePlayablePageOrientation = wxgamePlayablePageOrientation;
-    return this;
-  }
-
-  /**
-   * Get wxgamePlayablePageOrientation
-   *
-   * @return wxgamePlayablePageOrientation
-   */
-  @ApiModelProperty(value = "")
-  public WxgamePlayablePageOrientation getWxgamePlayablePageOrientation() {
-    return wxgamePlayablePageOrientation;
-  }
-
-  public void setWxgamePlayablePageOrientation(
-      WxgamePlayablePageOrientation wxgamePlayablePageOrientation) {
-    this.wxgamePlayablePageOrientation = wxgamePlayablePageOrientation;
-  }
-
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -151,10 +127,7 @@ public class WxgamePlayablePageStruct {
             this.wxgamePlayablePageEndCoverImg,
             wxgamePlayablePageStruct.wxgamePlayablePageEndCoverImg)
         && Objects.equals(
-            this.wxgamePlayablePageEndDesc, wxgamePlayablePageStruct.wxgamePlayablePageEndDesc)
-        && Objects.equals(
-            this.wxgamePlayablePageOrientation,
-            wxgamePlayablePageStruct.wxgamePlayablePageOrientation);
+            this.wxgamePlayablePageEndDesc, wxgamePlayablePageStruct.wxgamePlayablePageEndDesc);
   }
 
   @Override
@@ -163,8 +136,7 @@ public class WxgamePlayablePageStruct {
         wxgamePlayablePageSwitch,
         wxgamePlayablePagePath,
         wxgamePlayablePageEndCoverImg,
-        wxgamePlayablePageEndDesc,
-        wxgamePlayablePageOrientation);
+        wxgamePlayablePageEndDesc);
   }
 
   @Override

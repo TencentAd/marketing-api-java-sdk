@@ -24,7 +24,7 @@ import java.util.Objects;
 @ApiModel(description = "过滤条件")
 public class TargetingFilteringStruct {
   @SerializedName("field")
-  private List<String> field = null;
+  private String field = null;
 
   @SerializedName("operator")
   private FilterOperator operator = null;
@@ -32,16 +32,8 @@ public class TargetingFilteringStruct {
   @SerializedName("values")
   private List<String> values = null;
 
-  public TargetingFilteringStruct field(List<String> field) {
+  public TargetingFilteringStruct field(String field) {
     this.field = field;
-    return this;
-  }
-
-  public TargetingFilteringStruct addFieldItem(String fieldItem) {
-    if (this.field == null) {
-      this.field = new ArrayList<String>();
-    }
-    this.field.add(fieldItem);
     return this;
   }
 
@@ -51,11 +43,11 @@ public class TargetingFilteringStruct {
    * @return field
    */
   @ApiModelProperty(value = "")
-  public List<String> getField() {
+  public String getField() {
     return field;
   }
 
-  public void setField(List<String> field) {
+  public void setField(String field) {
     this.field = field;
   }
 

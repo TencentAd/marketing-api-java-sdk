@@ -22,6 +22,8 @@ import java.io.IOException;
 /** 业务场景 */
 @JsonAdapter(BusinessScenario.Adapter.class)
 public enum BusinessScenario {
+  UNKNOWN("BUSINESS_SCENARIO_UNKNOWN"),
+
   CONTENT("BUSINESS_SCENARIO_CONTENT"),
 
   DELIVERY("BUSINESS_SCENARIO_DELIVERY");

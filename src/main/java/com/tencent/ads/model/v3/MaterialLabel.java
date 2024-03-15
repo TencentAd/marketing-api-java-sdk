@@ -54,8 +54,8 @@ public class MaterialLabel {
   @SerializedName("relation_media_count")
   private Long relationMediaCount = null;
 
-  @SerializedName("business_scenario")
-  private Long businessScenario = null;
+  @SerializedName("business_scenario_val")
+  private BusinessScenario businessScenarioVal = null;
 
   public MaterialLabel accountId(Long accountId) {
     this.accountId = accountId;
@@ -266,23 +266,23 @@ public class MaterialLabel {
     this.relationMediaCount = relationMediaCount;
   }
 
-  public MaterialLabel businessScenario(Long businessScenario) {
-    this.businessScenario = businessScenario;
+  public MaterialLabel businessScenarioVal(BusinessScenario businessScenarioVal) {
+    this.businessScenarioVal = businessScenarioVal;
     return this;
   }
 
   /**
-   * Get businessScenario
+   * Get businessScenarioVal
    *
-   * @return businessScenario
+   * @return businessScenarioVal
    */
   @ApiModelProperty(value = "")
-  public Long getBusinessScenario() {
-    return businessScenario;
+  public BusinessScenario getBusinessScenarioVal() {
+    return businessScenarioVal;
   }
 
-  public void setBusinessScenario(Long businessScenario) {
-    this.businessScenario = businessScenario;
+  public void setBusinessScenarioVal(BusinessScenario businessScenarioVal) {
+    this.businessScenarioVal = businessScenarioVal;
   }
 
   @Override
@@ -305,7 +305,7 @@ public class MaterialLabel {
         && Objects.equals(this.labelSource, materialLabel.labelSource)
         && Objects.equals(this.relationImageCount, materialLabel.relationImageCount)
         && Objects.equals(this.relationMediaCount, materialLabel.relationMediaCount)
-        && Objects.equals(this.businessScenario, materialLabel.businessScenario);
+        && Objects.equals(this.businessScenarioVal, materialLabel.businessScenarioVal);
   }
 
   @Override
@@ -322,7 +322,7 @@ public class MaterialLabel {
         labelSource,
         relationImageCount,
         relationMediaCount,
-        businessScenario);
+        businessScenarioVal);
   }
 
   @Override

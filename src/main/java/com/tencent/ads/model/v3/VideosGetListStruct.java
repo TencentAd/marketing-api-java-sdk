@@ -105,9 +105,6 @@ public class VideosGetListStruct {
   @SerializedName("source_type")
   private MediaSourceType sourceType = null;
 
-  @SerializedName("product_catalog_id")
-  private Long productCatalogId = null;
-
   @SerializedName("product_outer_id")
   private String productOuterId = null;
 
@@ -652,25 +649,6 @@ public class VideosGetListStruct {
     this.sourceType = sourceType;
   }
 
-  public VideosGetListStruct productCatalogId(Long productCatalogId) {
-    this.productCatalogId = productCatalogId;
-    return this;
-  }
-
-  /**
-   * Get productCatalogId
-   *
-   * @return productCatalogId
-   */
-  @ApiModelProperty(value = "")
-  public Long getProductCatalogId() {
-    return productCatalogId;
-  }
-
-  public void setProductCatalogId(Long productCatalogId) {
-    this.productCatalogId = productCatalogId;
-  }
-
   public VideosGetListStruct productOuterId(String productOuterId) {
     this.productOuterId = productOuterId;
     return this;
@@ -786,7 +764,6 @@ public class VideosGetListStruct {
         && Objects.equals(
             this.audioDurationMillisecond, videosGetListStruct.audioDurationMillisecond)
         && Objects.equals(this.sourceType, videosGetListStruct.sourceType)
-        && Objects.equals(this.productCatalogId, videosGetListStruct.productCatalogId)
         && Objects.equals(this.productOuterId, videosGetListStruct.productOuterId)
         && Objects.equals(this.sourceReferenceId, videosGetListStruct.sourceReferenceId)
         && Objects.equals(this.ownerAccountId, videosGetListStruct.ownerAccountId)
@@ -824,7 +801,6 @@ public class VideosGetListStruct {
         imageDurationMillisecond,
         audioDurationMillisecond,
         sourceType,
-        productCatalogId,
         productOuterId,
         sourceReferenceId,
         ownerAccountId,
