@@ -15,7 +15,7 @@ public class GetFunds {
   /** TencentAds */
   public TencentAds tencentAds;
 
-  public Long advertiserId = null;
+  public Long accountId = null;
 
   public List<String> fields =
       Arrays.asList("fund_type", "balance", "fund_status", "realtime_cost");
@@ -31,7 +31,7 @@ public class GetFunds {
   public void buildParams() {}
 
   public FundsGetResponseData getFunds() throws Exception {
-    FundsGetResponseData response = tencentAds.funds().fundsGet(advertiserId, fields);
+    FundsGetResponseData response = tencentAds.funds().fundsGet(accountId, fields);
     return response;
   }
 

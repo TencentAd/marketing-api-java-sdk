@@ -25,6 +25,8 @@ import com.tencent.ads.model.v3.CustomAudiencesDeleteRequest;
 import com.tencent.ads.model.v3.CustomAudiencesDeleteResponse;
 import com.tencent.ads.model.v3.CustomAudiencesGetResponse;
 import com.tencent.ads.model.v3.CustomAudiencesGetResponseData;
+import com.tencent.ads.model.v3.CustomAudiencesUpdateRequest;
+import com.tencent.ads.model.v3.CustomAudiencesUpdateResponse;
 import java.util.List;
 
 public class CustomAudiencesApiContainer extends ApiContainer {
@@ -88,5 +90,22 @@ public class CustomAudiencesApiContainer extends ApiContainer {
         api.customAudiencesGet(accountId, audienceId, page, pageSize, fields, headerPair);
     handleResponse(gson.toJson(resp));
     return resp.getData();
+  }
+
+  /**
+   * 更新客户人群
+   *
+   * @param data (required)
+   * @return CustomAudiencesUpdateResponse
+   * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
+   *     response body
+   */
+  public CustomAudiencesUpdateResponse customAudiencesUpdate(
+      CustomAudiencesUpdateRequest data, String... headerPair)
+      throws ApiException, TencentAdsResponseException {
+    CustomAudiencesUpdateResponse resp = api.customAudiencesUpdate(data, headerPair);
+    handleResponse(gson.toJson(resp));
+
+    return resp;
   }
 }

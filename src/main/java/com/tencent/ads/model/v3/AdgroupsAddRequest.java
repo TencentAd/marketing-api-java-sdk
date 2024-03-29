@@ -162,6 +162,9 @@ public class AdgroupsAddRequest {
   @SerializedName("custom_cost_cap")
   private Long customCostCap = null;
 
+  @SerializedName("dynamic_ad_type")
+  private DynamicAdType dynamicAdType = null;
+
   public AdgroupsAddRequest accountId(Long accountId) {
     this.accountId = accountId;
     return this;
@@ -1092,6 +1095,25 @@ public class AdgroupsAddRequest {
     this.customCostCap = customCostCap;
   }
 
+  public AdgroupsAddRequest dynamicAdType(DynamicAdType dynamicAdType) {
+    this.dynamicAdType = dynamicAdType;
+    return this;
+  }
+
+  /**
+   * Get dynamicAdType
+   *
+   * @return dynamicAdType
+   */
+  @ApiModelProperty(value = "")
+  public DynamicAdType getDynamicAdType() {
+    return dynamicAdType;
+  }
+
+  public void setDynamicAdType(DynamicAdType dynamicAdType) {
+    this.dynamicAdType = dynamicAdType;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -1155,7 +1177,8 @@ public class AdgroupsAddRequest {
         && Objects.equals(this.forwardLinkAssist, adgroupsAddRequest.forwardLinkAssist)
         && Objects.equals(this.mpaSpec, adgroupsAddRequest.mpaSpec)
         && Objects.equals(this.costConstraintScene, adgroupsAddRequest.costConstraintScene)
-        && Objects.equals(this.customCostCap, adgroupsAddRequest.customCostCap);
+        && Objects.equals(this.customCostCap, adgroupsAddRequest.customCostCap)
+        && Objects.equals(this.dynamicAdType, adgroupsAddRequest.dynamicAdType);
   }
 
   @Override
@@ -1207,7 +1230,8 @@ public class AdgroupsAddRequest {
         forwardLinkAssist,
         mpaSpec,
         costConstraintScene,
-        customCostCap);
+        customCostCap,
+        dynamicAdType);
   }
 
   @Override

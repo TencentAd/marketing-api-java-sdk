@@ -21,77 +21,11 @@ import java.util.Objects;
 /** 个人身份证明 */
 @ApiModel(description = "个人身份证明")
 public class IndividualQualification {
-  @SerializedName("identification_url")
-  private String identificationUrl = null;
-
-  @SerializedName("identification_url2")
-  private String identificationUrl2 = null;
-
-  @SerializedName("photo_url")
-  private String photoUrl = null;
-
   @SerializedName("identification_front_image_id")
   private String identificationFrontImageId = null;
 
   @SerializedName("identification_back_image_id")
   private String identificationBackImageId = null;
-
-  public IndividualQualification identificationUrl(String identificationUrl) {
-    this.identificationUrl = identificationUrl;
-    return this;
-  }
-
-  /**
-   * Get identificationUrl
-   *
-   * @return identificationUrl
-   */
-  @ApiModelProperty(value = "")
-  public String getIdentificationUrl() {
-    return identificationUrl;
-  }
-
-  public void setIdentificationUrl(String identificationUrl) {
-    this.identificationUrl = identificationUrl;
-  }
-
-  public IndividualQualification identificationUrl2(String identificationUrl2) {
-    this.identificationUrl2 = identificationUrl2;
-    return this;
-  }
-
-  /**
-   * Get identificationUrl2
-   *
-   * @return identificationUrl2
-   */
-  @ApiModelProperty(value = "")
-  public String getIdentificationUrl2() {
-    return identificationUrl2;
-  }
-
-  public void setIdentificationUrl2(String identificationUrl2) {
-    this.identificationUrl2 = identificationUrl2;
-  }
-
-  public IndividualQualification photoUrl(String photoUrl) {
-    this.photoUrl = photoUrl;
-    return this;
-  }
-
-  /**
-   * Get photoUrl
-   *
-   * @return photoUrl
-   */
-  @ApiModelProperty(value = "")
-  public String getPhotoUrl() {
-    return photoUrl;
-  }
-
-  public void setPhotoUrl(String photoUrl) {
-    this.photoUrl = photoUrl;
-  }
 
   public IndividualQualification identificationFrontImageId(String identificationFrontImageId) {
     this.identificationFrontImageId = identificationFrontImageId;
@@ -140,10 +74,7 @@ public class IndividualQualification {
       return false;
     }
     IndividualQualification individualQualification = (IndividualQualification) o;
-    return Objects.equals(this.identificationUrl, individualQualification.identificationUrl)
-        && Objects.equals(this.identificationUrl2, individualQualification.identificationUrl2)
-        && Objects.equals(this.photoUrl, individualQualification.photoUrl)
-        && Objects.equals(
+    return Objects.equals(
             this.identificationFrontImageId, individualQualification.identificationFrontImageId)
         && Objects.equals(
             this.identificationBackImageId, individualQualification.identificationBackImageId);
@@ -151,12 +82,7 @@ public class IndividualQualification {
 
   @Override
   public int hashCode() {
-    return Objects.hash(
-        identificationUrl,
-        identificationUrl2,
-        photoUrl,
-        identificationFrontImageId,
-        identificationBackImageId);
+    return Objects.hash(identificationFrontImageId, identificationBackImageId);
   }
 
   @Override

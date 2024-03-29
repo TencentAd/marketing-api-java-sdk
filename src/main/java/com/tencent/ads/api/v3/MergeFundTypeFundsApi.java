@@ -51,7 +51,7 @@ public class MergeFundTypeFundsApi {
   /**
    * Build call for mergeFundTypeFundsGet
    *
-   * @param advertiserId (required)
+   * @param accountId (required)
    * @param fields 返回参数的字段列表 (optional)
    * @param progressListener Progress listener
    * @param progressRequestListener Progress request listener
@@ -59,7 +59,7 @@ public class MergeFundTypeFundsApi {
    * @throws ApiException If fail to serialize the request body object
    */
   public com.squareup.okhttp.Call mergeFundTypeFundsGetCall(
-      Long advertiserId,
+      Long accountId,
       List<String> fields,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
@@ -73,8 +73,8 @@ public class MergeFundTypeFundsApi {
 
     List<Pair> localVarQueryParams = new ArrayList<Pair>();
     List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
-    if (advertiserId != null)
-      localVarQueryParams.addAll(apiClient.parameterToPair("advertiser_id", advertiserId));
+    if (accountId != null)
+      localVarQueryParams.addAll(apiClient.parameterToPair("account_id", accountId));
     if (fields != null)
       localVarCollectionQueryParams.addAll(apiClient.parameterToPairs("multi", "fields", fields));
 
@@ -132,54 +132,54 @@ public class MergeFundTypeFundsApi {
 
   @SuppressWarnings("rawtypes")
   private com.squareup.okhttp.Call mergeFundTypeFundsGetValidateBeforeCall(
-      Long advertiserId,
+      Long accountId,
       List<String> fields,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
       String... headerPair)
       throws ApiException {
 
-    // verify the required parameter 'advertiserId' is set
-    if (advertiserId == null) {
+    // verify the required parameter 'accountId' is set
+    if (accountId == null) {
       throw new ApiException(
-          "Missing the required parameter 'advertiserId' when calling mergeFundTypeFundsGet(Async)");
+          "Missing the required parameter 'accountId' when calling mergeFundTypeFundsGet(Async)");
     }
 
     com.squareup.okhttp.Call call =
         mergeFundTypeFundsGetCall(
-            advertiserId, fields, progressListener, progressRequestListener, headerPair);
+            accountId, fields, progressListener, progressRequestListener, headerPair);
     return call;
   }
 
   /**
    * 获取资金合并类型资金账户信息
    *
-   * @param advertiserId (required)
+   * @param accountId (required)
    * @param fields 返回参数的字段列表 (optional)
    * @return MergeFundTypeFundsGetResponse
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
   public MergeFundTypeFundsGetResponse mergeFundTypeFundsGet(
-      Long advertiserId, List<String> fields, String... headerPair) throws ApiException {
+      Long accountId, List<String> fields, String... headerPair) throws ApiException {
     ApiResponse<MergeFundTypeFundsGetResponse> resp =
-        mergeFundTypeFundsGetWithHttpInfo(advertiserId, fields, headerPair);
+        mergeFundTypeFundsGetWithHttpInfo(accountId, fields, headerPair);
     return resp.getData();
   }
 
   /**
    * 获取资金合并类型资金账户信息
    *
-   * @param advertiserId (required)
+   * @param accountId (required)
    * @param fields 返回参数的字段列表 (optional)
    * @return ApiResponse&lt;MergeFundTypeFundsGetResponse&gt;
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
   public ApiResponse<MergeFundTypeFundsGetResponse> mergeFundTypeFundsGetWithHttpInfo(
-      Long advertiserId, List<String> fields, String... headerPair) throws ApiException {
+      Long accountId, List<String> fields, String... headerPair) throws ApiException {
     com.squareup.okhttp.Call call =
-        mergeFundTypeFundsGetValidateBeforeCall(advertiserId, fields, null, null, headerPair);
+        mergeFundTypeFundsGetValidateBeforeCall(accountId, fields, null, null, headerPair);
     Type localVarReturnType = new TypeToken<MergeFundTypeFundsGetResponse>() {}.getType();
     return apiClient.execute(call, localVarReturnType);
   }
@@ -187,14 +187,14 @@ public class MergeFundTypeFundsApi {
   /**
    * 获取资金合并类型资金账户信息 (asynchronously)
    *
-   * @param advertiserId (required)
+   * @param accountId (required)
    * @param fields 返回参数的字段列表 (optional)
    * @param callback The callback to be executed when the API call finishes
    * @return The request call
    * @throws ApiException If fail to process the API call, e.g. serializing the request body object
    */
   public com.squareup.okhttp.Call mergeFundTypeFundsGetAsync(
-      Long advertiserId,
+      Long accountId,
       List<String> fields,
       final ApiCallback<MergeFundTypeFundsGetResponse> callback,
       String... headerPair)
@@ -223,7 +223,7 @@ public class MergeFundTypeFundsApi {
 
     com.squareup.okhttp.Call call =
         mergeFundTypeFundsGetValidateBeforeCall(
-            advertiserId, fields, progressListener, progressRequestListener, headerPair);
+            accountId, fields, progressListener, progressRequestListener, headerPair);
     Type localVarReturnType = new TypeToken<MergeFundTypeFundsGetResponse>() {}.getType();
     apiClient.executeAsync(call, localVarReturnType, callback);
     return call;

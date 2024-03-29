@@ -16,7 +16,7 @@ public class GetFundStatementsDetailed {
   /** TencentAds */
   public TencentAds tencentAds;
 
-  public Long advertiserId = null;
+  public Long accountId = null;
 
   public String fundType = "FUND_TYPE_GIFT";
 
@@ -48,7 +48,7 @@ public class GetFundStatementsDetailed {
     FundStatementsDetailedGetResponseData response =
         tencentAds
             .fundStatementsDetailed()
-            .fundStatementsDetailedGet(advertiserId, fundType, dateRange, page, pageSize, fields);
+            .fundStatementsDetailedGet(accountId, fundType, dateRange, page, pageSize, fields);
     return response;
   }
 

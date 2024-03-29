@@ -19,14 +19,33 @@ import java.util.Objects;
 
 /** QualificationsAddRequest */
 public class QualificationsAddRequest {
+  @SerializedName("account_id")
+  private Long accountId = null;
+
   @SerializedName("qualification_type")
   private QualificationType qualificationType = null;
 
   @SerializedName("qualification_spec")
   private QualificationSpec qualificationSpec = null;
 
-  @SerializedName("account_id")
-  private Long accountId = null;
+  public QualificationsAddRequest accountId(Long accountId) {
+    this.accountId = accountId;
+    return this;
+  }
+
+  /**
+   * Get accountId
+   *
+   * @return accountId
+   */
+  @ApiModelProperty(value = "")
+  public Long getAccountId() {
+    return accountId;
+  }
+
+  public void setAccountId(Long accountId) {
+    this.accountId = accountId;
+  }
 
   public QualificationsAddRequest qualificationType(QualificationType qualificationType) {
     this.qualificationType = qualificationType;
@@ -66,25 +85,6 @@ public class QualificationsAddRequest {
     this.qualificationSpec = qualificationSpec;
   }
 
-  public QualificationsAddRequest accountId(Long accountId) {
-    this.accountId = accountId;
-    return this;
-  }
-
-  /**
-   * Get accountId
-   *
-   * @return accountId
-   */
-  @ApiModelProperty(value = "")
-  public Long getAccountId() {
-    return accountId;
-  }
-
-  public void setAccountId(Long accountId) {
-    this.accountId = accountId;
-  }
-
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -94,14 +94,14 @@ public class QualificationsAddRequest {
       return false;
     }
     QualificationsAddRequest qualificationsAddRequest = (QualificationsAddRequest) o;
-    return Objects.equals(this.qualificationType, qualificationsAddRequest.qualificationType)
-        && Objects.equals(this.qualificationSpec, qualificationsAddRequest.qualificationSpec)
-        && Objects.equals(this.accountId, qualificationsAddRequest.accountId);
+    return Objects.equals(this.accountId, qualificationsAddRequest.accountId)
+        && Objects.equals(this.qualificationType, qualificationsAddRequest.qualificationType)
+        && Objects.equals(this.qualificationSpec, qualificationsAddRequest.qualificationSpec);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(qualificationType, qualificationSpec, accountId);
+    return Objects.hash(accountId, qualificationType, qualificationSpec);
   }
 
   @Override

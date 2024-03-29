@@ -25,7 +25,7 @@ public class SortByStruct {
   private String field = null;
 
   @SerializedName("desc")
-  private SortedType desc = null;
+  private Sort desc = null;
 
   public SortByStruct field(String field) {
     this.field = field;
@@ -46,7 +46,7 @@ public class SortByStruct {
     this.field = field;
   }
 
-  public SortByStruct desc(SortedType desc) {
+  public SortByStruct desc(Sort desc) {
     this.desc = desc;
     return this;
   }
@@ -57,11 +57,11 @@ public class SortByStruct {
    * @return desc
    */
   @ApiModelProperty(value = "")
-  public SortedType getDesc() {
+  public Sort getDesc() {
     return desc;
   }
 
-  public void setDesc(SortedType desc) {
+  public void setDesc(Sort desc) {
     this.desc = desc;
   }
 

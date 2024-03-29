@@ -16,7 +16,7 @@ public class GetRealtimeCost {
   /** TencentAds */
   public TencentAds tencentAds;
 
-  public Long advertiserId = null;
+  public Long accountId = null;
 
   public String level = "ADVERTISER";
 
@@ -44,7 +44,7 @@ public class GetRealtimeCost {
     RealtimeCostGetResponseData response =
         tencentAds
             .realtimeCost()
-            .realtimeCostGet(advertiserId, level, date, filtering, page, pageSize, fields);
+            .realtimeCostGet(accountId, level, date, filtering, page, pageSize, fields);
     return response;
   }
 

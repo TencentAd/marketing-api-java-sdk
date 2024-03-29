@@ -14,7 +14,7 @@ public class GetMergeFundTypeFunds {
   /** TencentAds */
   public TencentAds tencentAds;
 
-  public Long advertiserId = null;
+  public Long accountId = null;
 
   public List<String> fields = null;
 
@@ -30,7 +30,7 @@ public class GetMergeFundTypeFunds {
 
   public MergeFundTypeFundsGetResponseData getMergeFundTypeFunds() throws Exception {
     MergeFundTypeFundsGetResponseData response =
-        tencentAds.mergeFundTypeFunds().mergeFundTypeFundsGet(advertiserId, fields);
+        tencentAds.mergeFundTypeFunds().mergeFundTypeFundsGet(accountId, fields);
     return response;
   }
 

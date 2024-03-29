@@ -30,7 +30,7 @@ public class FundStatementsDetailedApiContainer extends ApiContainer {
   /**
    * 获取资金流水
    *
-   * @param advertiserId (required)
+   * @param accountId (required)
    * @param fundType (required)
    * @param dateRange (required)
    * @param page (optional)
@@ -41,7 +41,7 @@ public class FundStatementsDetailedApiContainer extends ApiContainer {
    *     response body
    */
   public FundStatementsDetailedGetResponseData fundStatementsDetailedGet(
-      Long advertiserId,
+      Long accountId,
       String fundType,
       DateRangeTransaction dateRange,
       Long page,
@@ -51,7 +51,7 @@ public class FundStatementsDetailedApiContainer extends ApiContainer {
       throws ApiException, TencentAdsResponseException {
     FundStatementsDetailedGetResponse resp =
         api.fundStatementsDetailedGet(
-            advertiserId, fundType, dateRange, page, pageSize, fields, headerPair);
+            accountId, fundType, dateRange, page, pageSize, fields, headerPair);
     handleResponse(gson.toJson(resp));
     return resp.getData();
   }

@@ -30,7 +30,7 @@ public class MaterialGroupStruct {
   private String ratio = null;
 
   @SerializedName("material_type")
-  private ProgrammedMaterialType materialType = null;
+  private TemplateType materialType = null;
 
   @SerializedName("materials")
   private List<MaterialStruct> materials = null;
@@ -85,7 +85,7 @@ public class MaterialGroupStruct {
     this.ratio = ratio;
   }
 
-  public MaterialGroupStruct materialType(ProgrammedMaterialType materialType) {
+  public MaterialGroupStruct materialType(TemplateType materialType) {
     this.materialType = materialType;
     return this;
   }
@@ -96,11 +96,11 @@ public class MaterialGroupStruct {
    * @return materialType
    */
   @ApiModelProperty(value = "")
-  public ProgrammedMaterialType getMaterialType() {
+  public TemplateType getMaterialType() {
     return materialType;
   }
 
-  public void setMaterialType(ProgrammedMaterialType materialType) {
+  public void setMaterialType(TemplateType materialType) {
     this.materialType = materialType;
   }
 

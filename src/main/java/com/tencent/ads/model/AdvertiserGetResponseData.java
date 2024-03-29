@@ -25,7 +25,10 @@ public class AdvertiserGetResponseData {
   private List<AdvertiserGetListStruct> list = null;
 
   @SerializedName("page_info")
-  private Conf pageInfo = null;
+  private PageInfo pageInfo = null;
+
+  @SerializedName("cursor_page_info")
+  private CursorPageInfo cursorPageInfo = null;
 
   public AdvertiserGetResponseData list(List<AdvertiserGetListStruct> list) {
     this.list = list;
@@ -54,7 +57,7 @@ public class AdvertiserGetResponseData {
     this.list = list;
   }
 
-  public AdvertiserGetResponseData pageInfo(Conf pageInfo) {
+  public AdvertiserGetResponseData pageInfo(PageInfo pageInfo) {
     this.pageInfo = pageInfo;
     return this;
   }
@@ -65,12 +68,31 @@ public class AdvertiserGetResponseData {
    * @return pageInfo
    */
   @ApiModelProperty(value = "")
-  public Conf getPageInfo() {
+  public PageInfo getPageInfo() {
     return pageInfo;
   }
 
-  public void setPageInfo(Conf pageInfo) {
+  public void setPageInfo(PageInfo pageInfo) {
     this.pageInfo = pageInfo;
+  }
+
+  public AdvertiserGetResponseData cursorPageInfo(CursorPageInfo cursorPageInfo) {
+    this.cursorPageInfo = cursorPageInfo;
+    return this;
+  }
+
+  /**
+   * Get cursorPageInfo
+   *
+   * @return cursorPageInfo
+   */
+  @ApiModelProperty(value = "")
+  public CursorPageInfo getCursorPageInfo() {
+    return cursorPageInfo;
+  }
+
+  public void setCursorPageInfo(CursorPageInfo cursorPageInfo) {
+    this.cursorPageInfo = cursorPageInfo;
   }
 
   @Override
@@ -83,12 +105,13 @@ public class AdvertiserGetResponseData {
     }
     AdvertiserGetResponseData advertiserGetResponseData = (AdvertiserGetResponseData) o;
     return Objects.equals(this.list, advertiserGetResponseData.list)
-        && Objects.equals(this.pageInfo, advertiserGetResponseData.pageInfo);
+        && Objects.equals(this.pageInfo, advertiserGetResponseData.pageInfo)
+        && Objects.equals(this.cursorPageInfo, advertiserGetResponseData.cursorPageInfo);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(list, pageInfo);
+    return Objects.hash(list, pageInfo, cursorPageInfo);
   }
 
   @Override

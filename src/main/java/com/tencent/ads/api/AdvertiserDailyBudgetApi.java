@@ -52,7 +52,7 @@ public class AdvertiserDailyBudgetApi {
    * Build call for advertiserDailyBudgetGet
    *
    * @param accountId (required)
-   * @param fields 返回参数的字段列表 (optional)
+   * @param fields (optional)
    * @param progressListener Progress listener
    * @param progressRequestListener Progress request listener
    * @return Call to execute
@@ -155,7 +155,7 @@ public class AdvertiserDailyBudgetApi {
    * 获取竞价广告账户日预算
    *
    * @param accountId (required)
-   * @param fields 返回参数的字段列表 (optional)
+   * @param fields (optional)
    * @return AdvertiserDailyBudgetGetResponse
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
@@ -171,7 +171,7 @@ public class AdvertiserDailyBudgetApi {
    * 获取竞价广告账户日预算
    *
    * @param accountId (required)
-   * @param fields 返回参数的字段列表 (optional)
+   * @param fields (optional)
    * @return ApiResponse&lt;AdvertiserDailyBudgetGetResponse&gt;
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
@@ -188,7 +188,7 @@ public class AdvertiserDailyBudgetApi {
    * 获取竞价广告账户日预算 (asynchronously)
    *
    * @param accountId (required)
-   * @param fields 返回参数的字段列表 (optional)
+   * @param fields (optional)
    * @param callback The callback to be executed when the API call finishes
    * @return The request call
    * @throws ApiException If fail to process the API call, e.g. serializing the request body object

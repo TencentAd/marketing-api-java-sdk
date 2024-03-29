@@ -30,7 +30,7 @@ public class RealtimeCostApiContainer extends ApiContainer {
   /**
    * 获取实时消耗
    *
-   * @param advertiserId (required)
+   * @param accountId (required)
    * @param level (required)
    * @param date (required)
    * @param filtering (optional)
@@ -42,7 +42,7 @@ public class RealtimeCostApiContainer extends ApiContainer {
    *     response body
    */
   public RealtimeCostGetResponseData realtimeCostGet(
-      Long advertiserId,
+      Long accountId,
       String level,
       String date,
       List<FilteringStruct> filtering,
@@ -52,8 +52,7 @@ public class RealtimeCostApiContainer extends ApiContainer {
       String... headerPair)
       throws ApiException, TencentAdsResponseException {
     RealtimeCostGetResponse resp =
-        api.realtimeCostGet(
-            advertiserId, level, date, filtering, page, pageSize, fields, headerPair);
+        api.realtimeCostGet(accountId, level, date, filtering, page, pageSize, fields, headerPair);
     handleResponse(gson.toJson(resp));
     return resp.getData();
   }

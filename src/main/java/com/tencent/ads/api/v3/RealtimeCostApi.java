@@ -52,7 +52,7 @@ public class RealtimeCostApi {
   /**
    * Build call for realtimeCostGet
    *
-   * @param advertiserId (required)
+   * @param accountId (required)
    * @param level (required)
    * @param date (required)
    * @param filtering (optional)
@@ -65,7 +65,7 @@ public class RealtimeCostApi {
    * @throws ApiException If fail to serialize the request body object
    */
   public com.squareup.okhttp.Call realtimeCostGetCall(
-      Long advertiserId,
+      Long accountId,
       String level,
       String date,
       List<FilteringStruct> filtering,
@@ -84,8 +84,8 @@ public class RealtimeCostApi {
 
     List<Pair> localVarQueryParams = new ArrayList<Pair>();
     List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
-    if (advertiserId != null)
-      localVarQueryParams.addAll(apiClient.parameterToPair("advertiser_id", advertiserId));
+    if (accountId != null)
+      localVarQueryParams.addAll(apiClient.parameterToPair("account_id", accountId));
     if (level != null) localVarQueryParams.addAll(apiClient.parameterToPair("level", level));
     if (date != null) localVarQueryParams.addAll(apiClient.parameterToPair("date", date));
     if (filtering != null)
@@ -151,7 +151,7 @@ public class RealtimeCostApi {
 
   @SuppressWarnings("rawtypes")
   private com.squareup.okhttp.Call realtimeCostGetValidateBeforeCall(
-      Long advertiserId,
+      Long accountId,
       String level,
       String date,
       List<FilteringStruct> filtering,
@@ -163,10 +163,10 @@ public class RealtimeCostApi {
       String... headerPair)
       throws ApiException {
 
-    // verify the required parameter 'advertiserId' is set
-    if (advertiserId == null) {
+    // verify the required parameter 'accountId' is set
+    if (accountId == null) {
       throw new ApiException(
-          "Missing the required parameter 'advertiserId' when calling realtimeCostGet(Async)");
+          "Missing the required parameter 'accountId' when calling realtimeCostGet(Async)");
     }
 
     // verify the required parameter 'level' is set
@@ -183,7 +183,7 @@ public class RealtimeCostApi {
 
     com.squareup.okhttp.Call call =
         realtimeCostGetCall(
-            advertiserId,
+            accountId,
             level,
             date,
             filtering,
@@ -199,7 +199,7 @@ public class RealtimeCostApi {
   /**
    * 获取实时消耗
    *
-   * @param advertiserId (required)
+   * @param accountId (required)
    * @param level (required)
    * @param date (required)
    * @param filtering (optional)
@@ -211,7 +211,7 @@ public class RealtimeCostApi {
    *     response body
    */
   public RealtimeCostGetResponse realtimeCostGet(
-      Long advertiserId,
+      Long accountId,
       String level,
       String date,
       List<FilteringStruct> filtering,
@@ -222,14 +222,14 @@ public class RealtimeCostApi {
       throws ApiException {
     ApiResponse<RealtimeCostGetResponse> resp =
         realtimeCostGetWithHttpInfo(
-            advertiserId, level, date, filtering, page, pageSize, fields, headerPair);
+            accountId, level, date, filtering, page, pageSize, fields, headerPair);
     return resp.getData();
   }
 
   /**
    * 获取实时消耗
    *
-   * @param advertiserId (required)
+   * @param accountId (required)
    * @param level (required)
    * @param date (required)
    * @param filtering (optional)
@@ -241,7 +241,7 @@ public class RealtimeCostApi {
    *     response body
    */
   public ApiResponse<RealtimeCostGetResponse> realtimeCostGetWithHttpInfo(
-      Long advertiserId,
+      Long accountId,
       String level,
       String date,
       List<FilteringStruct> filtering,
@@ -252,7 +252,7 @@ public class RealtimeCostApi {
       throws ApiException {
     com.squareup.okhttp.Call call =
         realtimeCostGetValidateBeforeCall(
-            advertiserId, level, date, filtering, page, pageSize, fields, null, null, headerPair);
+            accountId, level, date, filtering, page, pageSize, fields, null, null, headerPair);
     Type localVarReturnType = new TypeToken<RealtimeCostGetResponse>() {}.getType();
     return apiClient.execute(call, localVarReturnType);
   }
@@ -260,7 +260,7 @@ public class RealtimeCostApi {
   /**
    * 获取实时消耗 (asynchronously)
    *
-   * @param advertiserId (required)
+   * @param accountId (required)
    * @param level (required)
    * @param date (required)
    * @param filtering (optional)
@@ -272,7 +272,7 @@ public class RealtimeCostApi {
    * @throws ApiException If fail to process the API call, e.g. serializing the request body object
    */
   public com.squareup.okhttp.Call realtimeCostGetAsync(
-      Long advertiserId,
+      Long accountId,
       String level,
       String date,
       List<FilteringStruct> filtering,
@@ -306,7 +306,7 @@ public class RealtimeCostApi {
 
     com.squareup.okhttp.Call call =
         realtimeCostGetValidateBeforeCall(
-            advertiserId,
+            accountId,
             level,
             date,
             filtering,

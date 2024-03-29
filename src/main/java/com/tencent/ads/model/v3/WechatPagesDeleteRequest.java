@@ -19,29 +19,29 @@ import java.util.Objects;
 
 /** WechatPagesDeleteRequest */
 public class WechatPagesDeleteRequest {
-  @SerializedName("advertiser_id")
-  private Long advertiserId = null;
+  @SerializedName("account_id")
+  private Long accountId = null;
 
   @SerializedName("page_id")
   private Long pageId = null;
 
-  public WechatPagesDeleteRequest advertiserId(Long advertiserId) {
-    this.advertiserId = advertiserId;
+  public WechatPagesDeleteRequest accountId(Long accountId) {
+    this.accountId = accountId;
     return this;
   }
 
   /**
-   * Get advertiserId
+   * Get accountId
    *
-   * @return advertiserId
+   * @return accountId
    */
   @ApiModelProperty(value = "")
-  public Long getAdvertiserId() {
-    return advertiserId;
+  public Long getAccountId() {
+    return accountId;
   }
 
-  public void setAdvertiserId(Long advertiserId) {
-    this.advertiserId = advertiserId;
+  public void setAccountId(Long accountId) {
+    this.accountId = accountId;
   }
 
   public WechatPagesDeleteRequest pageId(Long pageId) {
@@ -72,13 +72,13 @@ public class WechatPagesDeleteRequest {
       return false;
     }
     WechatPagesDeleteRequest wechatPagesDeleteRequest = (WechatPagesDeleteRequest) o;
-    return Objects.equals(this.advertiserId, wechatPagesDeleteRequest.advertiserId)
+    return Objects.equals(this.accountId, wechatPagesDeleteRequest.accountId)
         && Objects.equals(this.pageId, wechatPagesDeleteRequest.pageId);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(advertiserId, pageId);
+    return Objects.hash(accountId, pageId);
   }
 
   @Override

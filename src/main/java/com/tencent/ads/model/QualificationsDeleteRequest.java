@@ -21,6 +21,9 @@ import java.util.Objects;
 
 /** QualificationsDeleteRequest */
 public class QualificationsDeleteRequest {
+  @SerializedName("account_id")
+  private Long accountId = null;
+
   @SerializedName("qualification_type")
   private QualificationType qualificationType = null;
 
@@ -30,8 +33,24 @@ public class QualificationsDeleteRequest {
   @SerializedName("qualification_id_list")
   private List<Long> qualificationIdList = null;
 
-  @SerializedName("account_id")
-  private Long accountId = null;
+  public QualificationsDeleteRequest accountId(Long accountId) {
+    this.accountId = accountId;
+    return this;
+  }
+
+  /**
+   * Get accountId
+   *
+   * @return accountId
+   */
+  @ApiModelProperty(value = "")
+  public Long getAccountId() {
+    return accountId;
+  }
+
+  public void setAccountId(Long accountId) {
+    this.accountId = accountId;
+  }
 
   public QualificationsDeleteRequest qualificationType(QualificationType qualificationType) {
     this.qualificationType = qualificationType;
@@ -98,25 +117,6 @@ public class QualificationsDeleteRequest {
     this.qualificationIdList = qualificationIdList;
   }
 
-  public QualificationsDeleteRequest accountId(Long accountId) {
-    this.accountId = accountId;
-    return this;
-  }
-
-  /**
-   * Get accountId
-   *
-   * @return accountId
-   */
-  @ApiModelProperty(value = "")
-  public Long getAccountId() {
-    return accountId;
-  }
-
-  public void setAccountId(Long accountId) {
-    this.accountId = accountId;
-  }
-
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -126,15 +126,16 @@ public class QualificationsDeleteRequest {
       return false;
     }
     QualificationsDeleteRequest qualificationsDeleteRequest = (QualificationsDeleteRequest) o;
-    return Objects.equals(this.qualificationType, qualificationsDeleteRequest.qualificationType)
+    return Objects.equals(this.accountId, qualificationsDeleteRequest.accountId)
+        && Objects.equals(this.qualificationType, qualificationsDeleteRequest.qualificationType)
         && Objects.equals(this.qualificationId, qualificationsDeleteRequest.qualificationId)
-        && Objects.equals(this.qualificationIdList, qualificationsDeleteRequest.qualificationIdList)
-        && Objects.equals(this.accountId, qualificationsDeleteRequest.accountId);
+        && Objects.equals(
+            this.qualificationIdList, qualificationsDeleteRequest.qualificationIdList);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(qualificationType, qualificationId, qualificationIdList, accountId);
+    return Objects.hash(accountId, qualificationType, qualificationId, qualificationIdList);
   }
 
   @Override

@@ -16,6 +16,8 @@ import com.google.gson.Gson;
 import com.google.gson.annotations.SerializedName;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Objects;
 
 /** 元素粒度审核结果 */
@@ -33,11 +35,17 @@ public class ElementResultListStruct {
   @SerializedName("element_value")
   private String elementValue = null;
 
+  @SerializedName("component_info")
+  private ComponentInfoCanEmpty componentInfo = null;
+
   @SerializedName("element_type")
   private ReviewElementType elementType = null;
 
   @SerializedName("review_status")
   private ReviewResultStatus reviewStatus = null;
+
+  @SerializedName("element_reject_detail_info")
+  private List<ComponentElementRejectDetailInfoListStruct> elementRejectDetailInfo = null;
 
   public ElementResultListStruct imageId(String imageId) {
     this.imageId = imageId;
@@ -115,6 +123,25 @@ public class ElementResultListStruct {
     this.elementValue = elementValue;
   }
 
+  public ElementResultListStruct componentInfo(ComponentInfoCanEmpty componentInfo) {
+    this.componentInfo = componentInfo;
+    return this;
+  }
+
+  /**
+   * Get componentInfo
+   *
+   * @return componentInfo
+   */
+  @ApiModelProperty(value = "")
+  public ComponentInfoCanEmpty getComponentInfo() {
+    return componentInfo;
+  }
+
+  public void setComponentInfo(ComponentInfoCanEmpty componentInfo) {
+    this.componentInfo = componentInfo;
+  }
+
   public ElementResultListStruct elementType(ReviewElementType elementType) {
     this.elementType = elementType;
     return this;
@@ -153,6 +180,36 @@ public class ElementResultListStruct {
     this.reviewStatus = reviewStatus;
   }
 
+  public ElementResultListStruct elementRejectDetailInfo(
+      List<ComponentElementRejectDetailInfoListStruct> elementRejectDetailInfo) {
+    this.elementRejectDetailInfo = elementRejectDetailInfo;
+    return this;
+  }
+
+  public ElementResultListStruct addElementRejectDetailInfoItem(
+      ComponentElementRejectDetailInfoListStruct elementRejectDetailInfoItem) {
+    if (this.elementRejectDetailInfo == null) {
+      this.elementRejectDetailInfo = new ArrayList<ComponentElementRejectDetailInfoListStruct>();
+    }
+    this.elementRejectDetailInfo.add(elementRejectDetailInfoItem);
+    return this;
+  }
+
+  /**
+   * Get elementRejectDetailInfo
+   *
+   * @return elementRejectDetailInfo
+   */
+  @ApiModelProperty(value = "")
+  public List<ComponentElementRejectDetailInfoListStruct> getElementRejectDetailInfo() {
+    return elementRejectDetailInfo;
+  }
+
+  public void setElementRejectDetailInfo(
+      List<ComponentElementRejectDetailInfoListStruct> elementRejectDetailInfo) {
+    this.elementRejectDetailInfo = elementRejectDetailInfo;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -166,13 +223,24 @@ public class ElementResultListStruct {
         && Objects.equals(this.videoId, elementResultListStruct.videoId)
         && Objects.equals(this.elementName, elementResultListStruct.elementName)
         && Objects.equals(this.elementValue, elementResultListStruct.elementValue)
+        && Objects.equals(this.componentInfo, elementResultListStruct.componentInfo)
         && Objects.equals(this.elementType, elementResultListStruct.elementType)
-        && Objects.equals(this.reviewStatus, elementResultListStruct.reviewStatus);
+        && Objects.equals(this.reviewStatus, elementResultListStruct.reviewStatus)
+        && Objects.equals(
+            this.elementRejectDetailInfo, elementResultListStruct.elementRejectDetailInfo);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(imageId, videoId, elementName, elementValue, elementType, reviewStatus);
+    return Objects.hash(
+        imageId,
+        videoId,
+        elementName,
+        elementValue,
+        componentInfo,
+        elementType,
+        reviewStatus,
+        elementRejectDetailInfo);
   }
 
   @Override

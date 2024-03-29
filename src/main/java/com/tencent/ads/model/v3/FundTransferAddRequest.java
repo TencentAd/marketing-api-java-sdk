@@ -19,8 +19,8 @@ import java.util.Objects;
 
 /** FundTransferAddRequest */
 public class FundTransferAddRequest {
-  @SerializedName("advertiser_id")
-  private Long advertiserId = null;
+  @SerializedName("account_id")
+  private Long accountId = null;
 
   @SerializedName("fund_type")
   private AccountTypeMap fundType = null;
@@ -43,23 +43,23 @@ public class FundTransferAddRequest {
   @SerializedName("high_frequency_transfer")
   private Long highFrequencyTransfer = null;
 
-  public FundTransferAddRequest advertiserId(Long advertiserId) {
-    this.advertiserId = advertiserId;
+  public FundTransferAddRequest accountId(Long accountId) {
+    this.accountId = accountId;
     return this;
   }
 
   /**
-   * Get advertiserId
+   * Get accountId
    *
-   * @return advertiserId
+   * @return accountId
    */
   @ApiModelProperty(value = "")
-  public Long getAdvertiserId() {
-    return advertiserId;
+  public Long getAccountId() {
+    return accountId;
   }
 
-  public void setAdvertiserId(Long advertiserId) {
-    this.advertiserId = advertiserId;
+  public void setAccountId(Long accountId) {
+    this.accountId = accountId;
   }
 
   public FundTransferAddRequest fundType(AccountTypeMap fundType) {
@@ -204,7 +204,7 @@ public class FundTransferAddRequest {
       return false;
     }
     FundTransferAddRequest fundTransferAddRequest = (FundTransferAddRequest) o;
-    return Objects.equals(this.advertiserId, fundTransferAddRequest.advertiserId)
+    return Objects.equals(this.accountId, fundTransferAddRequest.accountId)
         && Objects.equals(this.fundType, fundTransferAddRequest.fundType)
         && Objects.equals(this.amount, fundTransferAddRequest.amount)
         && Objects.equals(this.transferType, fundTransferAddRequest.transferType)
@@ -217,7 +217,7 @@ public class FundTransferAddRequest {
   @Override
   public int hashCode() {
     return Objects.hash(
-        advertiserId,
+        accountId,
         fundType,
         amount,
         transferType,

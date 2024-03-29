@@ -23,34 +23,34 @@ import java.util.Objects;
 /** 动态商品广告属性 */
 @ApiModel(description = "动态商品广告属性")
 public class MpaSpec {
-  @SerializedName("recommend_method")
-  private List<Long> recommendMethod = null;
+  @SerializedName("recommend_method_ids")
+  private List<Long> recommendMethodIds = null;
 
-  public MpaSpec recommendMethod(List<Long> recommendMethod) {
-    this.recommendMethod = recommendMethod;
+  public MpaSpec recommendMethodIds(List<Long> recommendMethodIds) {
+    this.recommendMethodIds = recommendMethodIds;
     return this;
   }
 
-  public MpaSpec addRecommendMethodItem(Long recommendMethodItem) {
-    if (this.recommendMethod == null) {
-      this.recommendMethod = new ArrayList<Long>();
+  public MpaSpec addRecommendMethodIdsItem(Long recommendMethodIdsItem) {
+    if (this.recommendMethodIds == null) {
+      this.recommendMethodIds = new ArrayList<Long>();
     }
-    this.recommendMethod.add(recommendMethodItem);
+    this.recommendMethodIds.add(recommendMethodIdsItem);
     return this;
   }
 
   /**
-   * Get recommendMethod
+   * Get recommendMethodIds
    *
-   * @return recommendMethod
+   * @return recommendMethodIds
    */
   @ApiModelProperty(value = "")
-  public List<Long> getRecommendMethod() {
-    return recommendMethod;
+  public List<Long> getRecommendMethodIds() {
+    return recommendMethodIds;
   }
 
-  public void setRecommendMethod(List<Long> recommendMethod) {
-    this.recommendMethod = recommendMethod;
+  public void setRecommendMethodIds(List<Long> recommendMethodIds) {
+    this.recommendMethodIds = recommendMethodIds;
   }
 
   @Override
@@ -62,12 +62,12 @@ public class MpaSpec {
       return false;
     }
     MpaSpec mpaSpec = (MpaSpec) o;
-    return Objects.equals(this.recommendMethod, mpaSpec.recommendMethod);
+    return Objects.equals(this.recommendMethodIds, mpaSpec.recommendMethodIds);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(recommendMethod);
+    return Objects.hash(recommendMethodIds);
   }
 
   @Override

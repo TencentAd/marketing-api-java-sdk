@@ -21,6 +21,9 @@ import java.util.Objects;
 
 /** QualificationsUpdateRequest */
 public class QualificationsUpdateRequest {
+  @SerializedName("account_id")
+  private Long accountId = null;
+
   @SerializedName("qualification_type")
   private QualificationType qualificationType = null;
 
@@ -30,8 +33,24 @@ public class QualificationsUpdateRequest {
   @SerializedName("image_id_list")
   private List<String> imageIdList = null;
 
-  @SerializedName("account_id")
-  private Long accountId = null;
+  public QualificationsUpdateRequest accountId(Long accountId) {
+    this.accountId = accountId;
+    return this;
+  }
+
+  /**
+   * Get accountId
+   *
+   * @return accountId
+   */
+  @ApiModelProperty(value = "")
+  public Long getAccountId() {
+    return accountId;
+  }
+
+  public void setAccountId(Long accountId) {
+    this.accountId = accountId;
+  }
 
   public QualificationsUpdateRequest qualificationType(QualificationType qualificationType) {
     this.qualificationType = qualificationType;
@@ -98,25 +117,6 @@ public class QualificationsUpdateRequest {
     this.imageIdList = imageIdList;
   }
 
-  public QualificationsUpdateRequest accountId(Long accountId) {
-    this.accountId = accountId;
-    return this;
-  }
-
-  /**
-   * Get accountId
-   *
-   * @return accountId
-   */
-  @ApiModelProperty(value = "")
-  public Long getAccountId() {
-    return accountId;
-  }
-
-  public void setAccountId(Long accountId) {
-    this.accountId = accountId;
-  }
-
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -126,15 +126,15 @@ public class QualificationsUpdateRequest {
       return false;
     }
     QualificationsUpdateRequest qualificationsUpdateRequest = (QualificationsUpdateRequest) o;
-    return Objects.equals(this.qualificationType, qualificationsUpdateRequest.qualificationType)
+    return Objects.equals(this.accountId, qualificationsUpdateRequest.accountId)
+        && Objects.equals(this.qualificationType, qualificationsUpdateRequest.qualificationType)
         && Objects.equals(this.qualificationId, qualificationsUpdateRequest.qualificationId)
-        && Objects.equals(this.imageIdList, qualificationsUpdateRequest.imageIdList)
-        && Objects.equals(this.accountId, qualificationsUpdateRequest.accountId);
+        && Objects.equals(this.imageIdList, qualificationsUpdateRequest.imageIdList);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(qualificationType, qualificationId, imageIdList, accountId);
+    return Objects.hash(accountId, qualificationType, qualificationId, imageIdList);
   }
 
   @Override

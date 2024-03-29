@@ -224,22 +224,28 @@ public class AdvertiserApi {
   /**
    * Build call for advertiserGet
    *
+   * @param agencyId (optional)
    * @param accountId (optional)
    * @param filtering (optional)
    * @param fields (optional)
+   * @param paginationMode (optional)
    * @param page (optional)
    * @param pageSize (optional)
+   * @param cursor (optional)
    * @param progressListener Progress listener
    * @param progressRequestListener Progress request listener
    * @return Call to execute
    * @throws ApiException If fail to serialize the request body object
    */
   public com.squareup.okhttp.Call advertiserGetCall(
+      Long agencyId,
       Long accountId,
       List<FilteringStruct> filtering,
       List<String> fields,
+      String paginationMode,
       Long page,
       Long pageSize,
+      Long cursor,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
       String... headerPair)
@@ -252,6 +258,8 @@ public class AdvertiserApi {
 
     List<Pair> localVarQueryParams = new ArrayList<Pair>();
     List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+    if (agencyId != null)
+      localVarQueryParams.addAll(apiClient.parameterToPair("agency_id", agencyId));
     if (accountId != null)
       localVarQueryParams.addAll(apiClient.parameterToPair("account_id", accountId));
     if (filtering != null)
@@ -259,9 +267,12 @@ public class AdvertiserApi {
           apiClient.parameterToPairs("multi", "filtering", filtering));
     if (fields != null)
       localVarCollectionQueryParams.addAll(apiClient.parameterToPairs("multi", "fields", fields));
+    if (paginationMode != null)
+      localVarQueryParams.addAll(apiClient.parameterToPair("pagination_mode", paginationMode));
     if (page != null) localVarQueryParams.addAll(apiClient.parameterToPair("page", page));
     if (pageSize != null)
       localVarQueryParams.addAll(apiClient.parameterToPair("page_size", pageSize));
+    if (cursor != null) localVarQueryParams.addAll(apiClient.parameterToPair("cursor", cursor));
 
     Map<String, String> localVarHeaderParams = new HashMap<String, String>();
 
@@ -317,11 +328,14 @@ public class AdvertiserApi {
 
   @SuppressWarnings("rawtypes")
   private com.squareup.okhttp.Call advertiserGetValidateBeforeCall(
+      Long agencyId,
       Long accountId,
       List<FilteringStruct> filtering,
       List<String> fields,
+      String paginationMode,
       Long page,
       Long pageSize,
+      Long cursor,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
       String... headerPair)
@@ -329,11 +343,14 @@ public class AdvertiserApi {
 
     com.squareup.okhttp.Call call =
         advertiserGetCall(
+            agencyId,
             accountId,
             filtering,
             fields,
+            paginationMode,
             page,
             pageSize,
+            cursor,
             progressListener,
             progressRequestListener,
             headerPair);
@@ -343,51 +360,82 @@ public class AdvertiserApi {
   /**
    * 查询腾讯广告广告主信息
    *
+   * @param agencyId (optional)
    * @param accountId (optional)
    * @param filtering (optional)
    * @param fields (optional)
+   * @param paginationMode (optional)
    * @param page (optional)
    * @param pageSize (optional)
+   * @param cursor (optional)
    * @return AdvertiserGetResponse
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
   public AdvertiserGetResponse advertiserGet(
+      Long agencyId,
       Long accountId,
       List<FilteringStruct> filtering,
       List<String> fields,
+      String paginationMode,
       Long page,
       Long pageSize,
+      Long cursor,
       String... headerPair)
       throws ApiException {
     ApiResponse<AdvertiserGetResponse> resp =
-        advertiserGetWithHttpInfo(accountId, filtering, fields, page, pageSize, headerPair);
+        advertiserGetWithHttpInfo(
+            agencyId,
+            accountId,
+            filtering,
+            fields,
+            paginationMode,
+            page,
+            pageSize,
+            cursor,
+            headerPair);
     return resp.getData();
   }
 
   /**
    * 查询腾讯广告广告主信息
    *
+   * @param agencyId (optional)
    * @param accountId (optional)
    * @param filtering (optional)
    * @param fields (optional)
+   * @param paginationMode (optional)
    * @param page (optional)
    * @param pageSize (optional)
+   * @param cursor (optional)
    * @return ApiResponse&lt;AdvertiserGetResponse&gt;
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
   public ApiResponse<AdvertiserGetResponse> advertiserGetWithHttpInfo(
+      Long agencyId,
       Long accountId,
       List<FilteringStruct> filtering,
       List<String> fields,
+      String paginationMode,
       Long page,
       Long pageSize,
+      Long cursor,
       String... headerPair)
       throws ApiException {
     com.squareup.okhttp.Call call =
         advertiserGetValidateBeforeCall(
-            accountId, filtering, fields, page, pageSize, null, null, headerPair);
+            agencyId,
+            accountId,
+            filtering,
+            fields,
+            paginationMode,
+            page,
+            pageSize,
+            cursor,
+            null,
+            null,
+            headerPair);
     Type localVarReturnType = new TypeToken<AdvertiserGetResponse>() {}.getType();
     return apiClient.execute(call, localVarReturnType);
   }
@@ -395,21 +443,27 @@ public class AdvertiserApi {
   /**
    * 查询腾讯广告广告主信息 (asynchronously)
    *
+   * @param agencyId (optional)
    * @param accountId (optional)
    * @param filtering (optional)
    * @param fields (optional)
+   * @param paginationMode (optional)
    * @param page (optional)
    * @param pageSize (optional)
+   * @param cursor (optional)
    * @param callback The callback to be executed when the API call finishes
    * @return The request call
    * @throws ApiException If fail to process the API call, e.g. serializing the request body object
    */
   public com.squareup.okhttp.Call advertiserGetAsync(
+      Long agencyId,
       Long accountId,
       List<FilteringStruct> filtering,
       List<String> fields,
+      String paginationMode,
       Long page,
       Long pageSize,
+      Long cursor,
       final ApiCallback<AdvertiserGetResponse> callback,
       String... headerPair)
       throws ApiException {
@@ -437,11 +491,14 @@ public class AdvertiserApi {
 
     com.squareup.okhttp.Call call =
         advertiserGetValidateBeforeCall(
+            agencyId,
             accountId,
             filtering,
             fields,
+            paginationMode,
             page,
             pageSize,
+            cursor,
             progressListener,
             progressRequestListener,
             headerPair);

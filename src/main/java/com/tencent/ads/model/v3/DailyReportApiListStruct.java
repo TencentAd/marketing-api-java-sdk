@@ -2499,6 +2499,15 @@ public class DailyReportApiListStruct {
   @SerializedName("clk_top_pv")
   private Long clkTopPv = null;
 
+  @SerializedName("queryword")
+  private String queryword = null;
+
+  @SerializedName("ad_id")
+  private Long adId = null;
+
+  @SerializedName("trigger_type")
+  private Long triggerType = null;
+
   @SerializedName("image_id")
   private String imageId = null;
 
@@ -18252,6 +18261,63 @@ public class DailyReportApiListStruct {
     this.clkTopPv = clkTopPv;
   }
 
+  public DailyReportApiListStruct queryword(String queryword) {
+    this.queryword = queryword;
+    return this;
+  }
+
+  /**
+   * Get queryword
+   *
+   * @return queryword
+   */
+  @ApiModelProperty(value = "")
+  public String getQueryword() {
+    return queryword;
+  }
+
+  public void setQueryword(String queryword) {
+    this.queryword = queryword;
+  }
+
+  public DailyReportApiListStruct adId(Long adId) {
+    this.adId = adId;
+    return this;
+  }
+
+  /**
+   * Get adId
+   *
+   * @return adId
+   */
+  @ApiModelProperty(value = "")
+  public Long getAdId() {
+    return adId;
+  }
+
+  public void setAdId(Long adId) {
+    this.adId = adId;
+  }
+
+  public DailyReportApiListStruct triggerType(Long triggerType) {
+    this.triggerType = triggerType;
+    return this;
+  }
+
+  /**
+   * Get triggerType
+   *
+   * @return triggerType
+   */
+  @ApiModelProperty(value = "")
+  public Long getTriggerType() {
+    return triggerType;
+  }
+
+  public void setTriggerType(Long triggerType) {
+    this.triggerType = triggerType;
+  }
+
   public DailyReportApiListStruct imageId(String imageId) {
     this.imageId = imageId;
     return this;
@@ -19502,6 +19568,9 @@ public class DailyReportApiListStruct {
             this.expOverallTopPosition, dailyReportApiListStruct.expOverallTopPosition)
         && Objects.equals(this.expOverallTopPv, dailyReportApiListStruct.expOverallTopPv)
         && Objects.equals(this.clkTopPv, dailyReportApiListStruct.clkTopPv)
+        && Objects.equals(this.queryword, dailyReportApiListStruct.queryword)
+        && Objects.equals(this.adId, dailyReportApiListStruct.adId)
+        && Objects.equals(this.triggerType, dailyReportApiListStruct.triggerType)
         && Objects.equals(this.imageId, dailyReportApiListStruct.imageId)
         && Objects.equals(this.videoId, dailyReportApiListStruct.videoId)
         && Objects.equals(this.projectId, dailyReportApiListStruct.projectId)
@@ -20337,6 +20406,9 @@ public class DailyReportApiListStruct {
         expOverallTopPosition,
         expOverallTopPv,
         clkTopPv,
+        queryword,
+        adId,
+        triggerType,
         imageId,
         videoId,
         projectId,

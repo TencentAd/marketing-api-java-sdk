@@ -29,17 +29,16 @@ public class AgencyRealtimeCostApiContainer extends ApiContainer {
   /**
    * 服务商当日分账户实时消耗
    *
-   * @param advertiserId (required)
+   * @param accountId (required)
    * @param fields 返回参数的字段列表 (optional)
    * @return AgencyRealtimeCostGetResponse
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
   public AgencyRealtimeCostGetResponseData agencyRealtimeCostGet(
-      Long advertiserId, List<String> fields, String... headerPair)
+      Long accountId, List<String> fields, String... headerPair)
       throws ApiException, TencentAdsResponseException {
-    AgencyRealtimeCostGetResponse resp =
-        api.agencyRealtimeCostGet(advertiserId, fields, headerPair);
+    AgencyRealtimeCostGetResponse resp = api.agencyRealtimeCostGet(accountId, fields, headerPair);
     handleResponse(gson.toJson(resp));
     return resp.getData();
   }

@@ -21,8 +21,8 @@ import java.util.Objects;
 
 /** WechatPagesAddRequest */
 public class WechatPagesAddRequest {
-  @SerializedName("advertiser_id")
-  private Long advertiserId = null;
+  @SerializedName("account_id")
+  private Long accountId = null;
 
   @SerializedName("page_name")
   private String pageName = null;
@@ -36,23 +36,23 @@ public class WechatPagesAddRequest {
   @SerializedName("share_content_spec")
   private ShareContentSpec shareContentSpec = null;
 
-  public WechatPagesAddRequest advertiserId(Long advertiserId) {
-    this.advertiserId = advertiserId;
+  public WechatPagesAddRequest accountId(Long accountId) {
+    this.accountId = accountId;
     return this;
   }
 
   /**
-   * Get advertiserId
+   * Get accountId
    *
-   * @return advertiserId
+   * @return accountId
    */
   @ApiModelProperty(value = "")
-  public Long getAdvertiserId() {
-    return advertiserId;
+  public Long getAccountId() {
+    return accountId;
   }
 
-  public void setAdvertiserId(Long advertiserId) {
-    this.advertiserId = advertiserId;
+  public void setAccountId(Long accountId) {
+    this.accountId = accountId;
   }
 
   public WechatPagesAddRequest pageName(String pageName) {
@@ -148,7 +148,7 @@ public class WechatPagesAddRequest {
       return false;
     }
     WechatPagesAddRequest wechatPagesAddRequest = (WechatPagesAddRequest) o;
-    return Objects.equals(this.advertiserId, wechatPagesAddRequest.advertiserId)
+    return Objects.equals(this.accountId, wechatPagesAddRequest.accountId)
         && Objects.equals(this.pageName, wechatPagesAddRequest.pageName)
         && Objects.equals(this.pageTemplateId, wechatPagesAddRequest.pageTemplateId)
         && Objects.equals(this.pageElements, wechatPagesAddRequest.pageElements)
@@ -157,7 +157,7 @@ public class WechatPagesAddRequest {
 
   @Override
   public int hashCode() {
-    return Objects.hash(advertiserId, pageName, pageTemplateId, pageElements, shareContentSpec);
+    return Objects.hash(accountId, pageName, pageTemplateId, pageElements, shareContentSpec);
   }
 
   @Override

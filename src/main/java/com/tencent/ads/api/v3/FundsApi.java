@@ -51,7 +51,7 @@ public class FundsApi {
   /**
    * Build call for fundsGet
    *
-   * @param advertiserId (required)
+   * @param accountId (required)
    * @param fields 返回参数的字段列表 (optional)
    * @param progressListener Progress listener
    * @param progressRequestListener Progress request listener
@@ -59,7 +59,7 @@ public class FundsApi {
    * @throws ApiException If fail to serialize the request body object
    */
   public com.squareup.okhttp.Call fundsGetCall(
-      Long advertiserId,
+      Long accountId,
       List<String> fields,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
@@ -73,8 +73,8 @@ public class FundsApi {
 
     List<Pair> localVarQueryParams = new ArrayList<Pair>();
     List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
-    if (advertiserId != null)
-      localVarQueryParams.addAll(apiClient.parameterToPair("advertiser_id", advertiserId));
+    if (accountId != null)
+      localVarQueryParams.addAll(apiClient.parameterToPair("account_id", accountId));
     if (fields != null)
       localVarCollectionQueryParams.addAll(apiClient.parameterToPairs("multi", "fields", fields));
 
@@ -132,52 +132,52 @@ public class FundsApi {
 
   @SuppressWarnings("rawtypes")
   private com.squareup.okhttp.Call fundsGetValidateBeforeCall(
-      Long advertiserId,
+      Long accountId,
       List<String> fields,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
       String... headerPair)
       throws ApiException {
 
-    // verify the required parameter 'advertiserId' is set
-    if (advertiserId == null) {
+    // verify the required parameter 'accountId' is set
+    if (accountId == null) {
       throw new ApiException(
-          "Missing the required parameter 'advertiserId' when calling fundsGet(Async)");
+          "Missing the required parameter 'accountId' when calling fundsGet(Async)");
     }
 
     com.squareup.okhttp.Call call =
-        fundsGetCall(advertiserId, fields, progressListener, progressRequestListener, headerPair);
+        fundsGetCall(accountId, fields, progressListener, progressRequestListener, headerPair);
     return call;
   }
 
   /**
    * 获取资金账户信息
    *
-   * @param advertiserId (required)
+   * @param accountId (required)
    * @param fields 返回参数的字段列表 (optional)
    * @return FundsGetResponse
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
-  public FundsGetResponse fundsGet(Long advertiserId, List<String> fields, String... headerPair)
+  public FundsGetResponse fundsGet(Long accountId, List<String> fields, String... headerPair)
       throws ApiException {
-    ApiResponse<FundsGetResponse> resp = fundsGetWithHttpInfo(advertiserId, fields, headerPair);
+    ApiResponse<FundsGetResponse> resp = fundsGetWithHttpInfo(accountId, fields, headerPair);
     return resp.getData();
   }
 
   /**
    * 获取资金账户信息
    *
-   * @param advertiserId (required)
+   * @param accountId (required)
    * @param fields 返回参数的字段列表 (optional)
    * @return ApiResponse&lt;FundsGetResponse&gt;
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
   public ApiResponse<FundsGetResponse> fundsGetWithHttpInfo(
-      Long advertiserId, List<String> fields, String... headerPair) throws ApiException {
+      Long accountId, List<String> fields, String... headerPair) throws ApiException {
     com.squareup.okhttp.Call call =
-        fundsGetValidateBeforeCall(advertiserId, fields, null, null, headerPair);
+        fundsGetValidateBeforeCall(accountId, fields, null, null, headerPair);
     Type localVarReturnType = new TypeToken<FundsGetResponse>() {}.getType();
     return apiClient.execute(call, localVarReturnType);
   }
@@ -185,14 +185,14 @@ public class FundsApi {
   /**
    * 获取资金账户信息 (asynchronously)
    *
-   * @param advertiserId (required)
+   * @param accountId (required)
    * @param fields 返回参数的字段列表 (optional)
    * @param callback The callback to be executed when the API call finishes
    * @return The request call
    * @throws ApiException If fail to process the API call, e.g. serializing the request body object
    */
   public com.squareup.okhttp.Call fundsGetAsync(
-      Long advertiserId,
+      Long accountId,
       List<String> fields,
       final ApiCallback<FundsGetResponse> callback,
       String... headerPair)
@@ -221,7 +221,7 @@ public class FundsApi {
 
     com.squareup.okhttp.Call call =
         fundsGetValidateBeforeCall(
-            advertiserId, fields, progressListener, progressRequestListener, headerPair);
+            accountId, fields, progressListener, progressRequestListener, headerPair);
     Type localVarReturnType = new TypeToken<FundsGetResponse>() {}.getType();
     apiClient.executeAsync(call, localVarReturnType, callback);
     return call;

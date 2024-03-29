@@ -51,7 +51,7 @@ public class AgencyRealtimeCostApi {
   /**
    * Build call for agencyRealtimeCostGet
    *
-   * @param advertiserId (required)
+   * @param accountId (required)
    * @param fields 返回参数的字段列表 (optional)
    * @param progressListener Progress listener
    * @param progressRequestListener Progress request listener
@@ -59,7 +59,7 @@ public class AgencyRealtimeCostApi {
    * @throws ApiException If fail to serialize the request body object
    */
   public com.squareup.okhttp.Call agencyRealtimeCostGetCall(
-      Long advertiserId,
+      Long accountId,
       List<String> fields,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
@@ -73,8 +73,8 @@ public class AgencyRealtimeCostApi {
 
     List<Pair> localVarQueryParams = new ArrayList<Pair>();
     List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
-    if (advertiserId != null)
-      localVarQueryParams.addAll(apiClient.parameterToPair("advertiser_id", advertiserId));
+    if (accountId != null)
+      localVarQueryParams.addAll(apiClient.parameterToPair("account_id", accountId));
     if (fields != null)
       localVarCollectionQueryParams.addAll(apiClient.parameterToPairs("multi", "fields", fields));
 
@@ -132,54 +132,54 @@ public class AgencyRealtimeCostApi {
 
   @SuppressWarnings("rawtypes")
   private com.squareup.okhttp.Call agencyRealtimeCostGetValidateBeforeCall(
-      Long advertiserId,
+      Long accountId,
       List<String> fields,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
       String... headerPair)
       throws ApiException {
 
-    // verify the required parameter 'advertiserId' is set
-    if (advertiserId == null) {
+    // verify the required parameter 'accountId' is set
+    if (accountId == null) {
       throw new ApiException(
-          "Missing the required parameter 'advertiserId' when calling agencyRealtimeCostGet(Async)");
+          "Missing the required parameter 'accountId' when calling agencyRealtimeCostGet(Async)");
     }
 
     com.squareup.okhttp.Call call =
         agencyRealtimeCostGetCall(
-            advertiserId, fields, progressListener, progressRequestListener, headerPair);
+            accountId, fields, progressListener, progressRequestListener, headerPair);
     return call;
   }
 
   /**
    * 服务商当日分账户实时消耗
    *
-   * @param advertiserId (required)
+   * @param accountId (required)
    * @param fields 返回参数的字段列表 (optional)
    * @return AgencyRealtimeCostGetResponse
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
   public AgencyRealtimeCostGetResponse agencyRealtimeCostGet(
-      Long advertiserId, List<String> fields, String... headerPair) throws ApiException {
+      Long accountId, List<String> fields, String... headerPair) throws ApiException {
     ApiResponse<AgencyRealtimeCostGetResponse> resp =
-        agencyRealtimeCostGetWithHttpInfo(advertiserId, fields, headerPair);
+        agencyRealtimeCostGetWithHttpInfo(accountId, fields, headerPair);
     return resp.getData();
   }
 
   /**
    * 服务商当日分账户实时消耗
    *
-   * @param advertiserId (required)
+   * @param accountId (required)
    * @param fields 返回参数的字段列表 (optional)
    * @return ApiResponse&lt;AgencyRealtimeCostGetResponse&gt;
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
   public ApiResponse<AgencyRealtimeCostGetResponse> agencyRealtimeCostGetWithHttpInfo(
-      Long advertiserId, List<String> fields, String... headerPair) throws ApiException {
+      Long accountId, List<String> fields, String... headerPair) throws ApiException {
     com.squareup.okhttp.Call call =
-        agencyRealtimeCostGetValidateBeforeCall(advertiserId, fields, null, null, headerPair);
+        agencyRealtimeCostGetValidateBeforeCall(accountId, fields, null, null, headerPair);
     Type localVarReturnType = new TypeToken<AgencyRealtimeCostGetResponse>() {}.getType();
     return apiClient.execute(call, localVarReturnType);
   }
@@ -187,14 +187,14 @@ public class AgencyRealtimeCostApi {
   /**
    * 服务商当日分账户实时消耗 (asynchronously)
    *
-   * @param advertiserId (required)
+   * @param accountId (required)
    * @param fields 返回参数的字段列表 (optional)
    * @param callback The callback to be executed when the API call finishes
    * @return The request call
    * @throws ApiException If fail to process the API call, e.g. serializing the request body object
    */
   public com.squareup.okhttp.Call agencyRealtimeCostGetAsync(
-      Long advertiserId,
+      Long accountId,
       List<String> fields,
       final ApiCallback<AgencyRealtimeCostGetResponse> callback,
       String... headerPair)
@@ -223,7 +223,7 @@ public class AgencyRealtimeCostApi {
 
     com.squareup.okhttp.Call call =
         agencyRealtimeCostGetValidateBeforeCall(
-            advertiserId, fields, progressListener, progressRequestListener, headerPair);
+            accountId, fields, progressListener, progressRequestListener, headerPair);
     Type localVarReturnType = new TypeToken<AgencyRealtimeCostGetResponse>() {}.getType();
     apiClient.executeAsync(call, localVarReturnType, callback);
     return call;

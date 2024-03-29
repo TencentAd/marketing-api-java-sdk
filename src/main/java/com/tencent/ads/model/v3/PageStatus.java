@@ -19,7 +19,7 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-/** 落地页状态 */
+/** 状态 */
 @JsonAdapter(PageStatus.Adapter.class)
 public enum PageStatus {
   NORMAL("NORMAL"),

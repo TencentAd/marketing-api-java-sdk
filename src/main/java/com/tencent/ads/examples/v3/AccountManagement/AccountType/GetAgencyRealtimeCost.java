@@ -14,7 +14,7 @@ public class GetAgencyRealtimeCost {
   /** TencentAds */
   public TencentAds tencentAds;
 
-  public Long advertiserId = null;
+  public Long accountId = null;
 
   public List<String> fields = null;
 
@@ -30,7 +30,7 @@ public class GetAgencyRealtimeCost {
 
   public AgencyRealtimeCostGetResponseData getAgencyRealtimeCost() throws Exception {
     AgencyRealtimeCostGetResponseData response =
-        tencentAds.agencyRealtimeCost().agencyRealtimeCostGet(advertiserId, fields);
+        tencentAds.agencyRealtimeCost().agencyRealtimeCostGet(accountId, fields);
     return response;
   }
 

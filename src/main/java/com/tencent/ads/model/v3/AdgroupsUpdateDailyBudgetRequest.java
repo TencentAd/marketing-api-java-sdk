@@ -25,7 +25,7 @@ public class AdgroupsUpdateDailyBudgetRequest {
   private Long accountId = null;
 
   @SerializedName("update_daily_budget_spec")
-  private List<UpdateDailyBudgetStruct> updateDailyBudgetSpec = null;
+  private List<AdgroupsUpdateDailyBudgetUpdateDailyBudgetStruct> updateDailyBudgetSpec = null;
 
   public AdgroupsUpdateDailyBudgetRequest accountId(Long accountId) {
     this.accountId = accountId;
@@ -47,15 +47,16 @@ public class AdgroupsUpdateDailyBudgetRequest {
   }
 
   public AdgroupsUpdateDailyBudgetRequest updateDailyBudgetSpec(
-      List<UpdateDailyBudgetStruct> updateDailyBudgetSpec) {
+      List<AdgroupsUpdateDailyBudgetUpdateDailyBudgetStruct> updateDailyBudgetSpec) {
     this.updateDailyBudgetSpec = updateDailyBudgetSpec;
     return this;
   }
 
   public AdgroupsUpdateDailyBudgetRequest addUpdateDailyBudgetSpecItem(
-      UpdateDailyBudgetStruct updateDailyBudgetSpecItem) {
+      AdgroupsUpdateDailyBudgetUpdateDailyBudgetStruct updateDailyBudgetSpecItem) {
     if (this.updateDailyBudgetSpec == null) {
-      this.updateDailyBudgetSpec = new ArrayList<UpdateDailyBudgetStruct>();
+      this.updateDailyBudgetSpec =
+          new ArrayList<AdgroupsUpdateDailyBudgetUpdateDailyBudgetStruct>();
     }
     this.updateDailyBudgetSpec.add(updateDailyBudgetSpecItem);
     return this;
@@ -67,11 +68,12 @@ public class AdgroupsUpdateDailyBudgetRequest {
    * @return updateDailyBudgetSpec
    */
   @ApiModelProperty(value = "")
-  public List<UpdateDailyBudgetStruct> getUpdateDailyBudgetSpec() {
+  public List<AdgroupsUpdateDailyBudgetUpdateDailyBudgetStruct> getUpdateDailyBudgetSpec() {
     return updateDailyBudgetSpec;
   }
 
-  public void setUpdateDailyBudgetSpec(List<UpdateDailyBudgetStruct> updateDailyBudgetSpec) {
+  public void setUpdateDailyBudgetSpec(
+      List<AdgroupsUpdateDailyBudgetUpdateDailyBudgetStruct> updateDailyBudgetSpec) {
     this.updateDailyBudgetSpec = updateDailyBudgetSpec;
   }
 

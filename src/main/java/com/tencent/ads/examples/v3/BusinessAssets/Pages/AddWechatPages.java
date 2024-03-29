@@ -14,8 +14,9 @@ public class AddWechatPages {
   /** TencentAds */
   public TencentAds tencentAds;
 
-  public String pageName = "SDK原生页5ede252bee1a8";
+  public Long accountId = null;
   public WechatPagesAddRequest data = new WechatPagesAddRequest();
+  public String pageName = "SDK原生页5ede252bee1a8";
   public Long pageTemplateId = null;
   public String shareTitle = "分享标题";
   public String shareDescription = "分享内容";
@@ -29,6 +30,8 @@ public class AddWechatPages {
   }
 
   public void buildParams() {
+    data.setAccountId(accountId);
+
     data.setPageName(pageName);
 
     data.setPageTemplateId(pageTemplateId);

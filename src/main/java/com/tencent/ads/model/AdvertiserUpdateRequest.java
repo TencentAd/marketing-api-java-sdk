@@ -39,14 +39,20 @@ public class AdvertiserUpdateRequest {
   @SerializedName("certification_image_id")
   private String certificationImageId = null;
 
-  @SerializedName("corporate_image_name")
-  private String corporateImageName = null;
-
   @SerializedName("individual_qualification")
   private IndividualQualification individualQualification = null;
 
+  @SerializedName("area_code")
+  private Long areaCode = null;
+
+  @SerializedName("corporate_image_name")
+  private String corporateImageName = null;
+
   @SerializedName("introduction_url")
   private String introductionUrl = null;
+
+  @SerializedName("corporate_brand_name")
+  private String corporateBrandName = null;
 
   @SerializedName("contact_person_telephone")
   private String contactPersonTelephone = null;
@@ -56,9 +62,6 @@ public class AdvertiserUpdateRequest {
 
   @SerializedName("websites")
   private List<WebsiteUpdateStruct> websites = null;
-
-  @SerializedName("area_code")
-  private Long areaCode = null;
 
   public AdvertiserUpdateRequest accountId(Long accountId) {
     this.accountId = accountId;
@@ -174,25 +177,6 @@ public class AdvertiserUpdateRequest {
     this.certificationImageId = certificationImageId;
   }
 
-  public AdvertiserUpdateRequest corporateImageName(String corporateImageName) {
-    this.corporateImageName = corporateImageName;
-    return this;
-  }
-
-  /**
-   * Get corporateImageName
-   *
-   * @return corporateImageName
-   */
-  @ApiModelProperty(value = "")
-  public String getCorporateImageName() {
-    return corporateImageName;
-  }
-
-  public void setCorporateImageName(String corporateImageName) {
-    this.corporateImageName = corporateImageName;
-  }
-
   public AdvertiserUpdateRequest individualQualification(
       IndividualQualification individualQualification) {
     this.individualQualification = individualQualification;
@@ -213,6 +197,44 @@ public class AdvertiserUpdateRequest {
     this.individualQualification = individualQualification;
   }
 
+  public AdvertiserUpdateRequest areaCode(Long areaCode) {
+    this.areaCode = areaCode;
+    return this;
+  }
+
+  /**
+   * Get areaCode
+   *
+   * @return areaCode
+   */
+  @ApiModelProperty(value = "")
+  public Long getAreaCode() {
+    return areaCode;
+  }
+
+  public void setAreaCode(Long areaCode) {
+    this.areaCode = areaCode;
+  }
+
+  public AdvertiserUpdateRequest corporateImageName(String corporateImageName) {
+    this.corporateImageName = corporateImageName;
+    return this;
+  }
+
+  /**
+   * Get corporateImageName
+   *
+   * @return corporateImageName
+   */
+  @ApiModelProperty(value = "")
+  public String getCorporateImageName() {
+    return corporateImageName;
+  }
+
+  public void setCorporateImageName(String corporateImageName) {
+    this.corporateImageName = corporateImageName;
+  }
+
   public AdvertiserUpdateRequest introductionUrl(String introductionUrl) {
     this.introductionUrl = introductionUrl;
     return this;
@@ -230,6 +252,25 @@ public class AdvertiserUpdateRequest {
 
   public void setIntroductionUrl(String introductionUrl) {
     this.introductionUrl = introductionUrl;
+  }
+
+  public AdvertiserUpdateRequest corporateBrandName(String corporateBrandName) {
+    this.corporateBrandName = corporateBrandName;
+    return this;
+  }
+
+  /**
+   * Get corporateBrandName
+   *
+   * @return corporateBrandName
+   */
+  @ApiModelProperty(value = "")
+  public String getCorporateBrandName() {
+    return corporateBrandName;
+  }
+
+  public void setCorporateBrandName(String corporateBrandName) {
+    this.corporateBrandName = corporateBrandName;
   }
 
   public AdvertiserUpdateRequest contactPersonTelephone(String contactPersonTelephone) {
@@ -297,25 +338,6 @@ public class AdvertiserUpdateRequest {
     this.websites = websites;
   }
 
-  public AdvertiserUpdateRequest areaCode(Long areaCode) {
-    this.areaCode = areaCode;
-    return this;
-  }
-
-  /**
-   * Get areaCode
-   *
-   * @return areaCode
-   */
-  @ApiModelProperty(value = "")
-  public Long getAreaCode() {
-    return areaCode;
-  }
-
-  public void setAreaCode(Long areaCode) {
-    this.areaCode = areaCode;
-  }
-
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -331,15 +353,16 @@ public class AdvertiserUpdateRequest {
         && Objects.equals(this.corporationName, advertiserUpdateRequest.corporationName)
         && Objects.equals(this.corporationLicence, advertiserUpdateRequest.corporationLicence)
         && Objects.equals(this.certificationImageId, advertiserUpdateRequest.certificationImageId)
-        && Objects.equals(this.corporateImageName, advertiserUpdateRequest.corporateImageName)
         && Objects.equals(
             this.individualQualification, advertiserUpdateRequest.individualQualification)
+        && Objects.equals(this.areaCode, advertiserUpdateRequest.areaCode)
+        && Objects.equals(this.corporateImageName, advertiserUpdateRequest.corporateImageName)
         && Objects.equals(this.introductionUrl, advertiserUpdateRequest.introductionUrl)
+        && Objects.equals(this.corporateBrandName, advertiserUpdateRequest.corporateBrandName)
         && Objects.equals(
             this.contactPersonTelephone, advertiserUpdateRequest.contactPersonTelephone)
         && Objects.equals(this.contactPersonMobile, advertiserUpdateRequest.contactPersonMobile)
-        && Objects.equals(this.websites, advertiserUpdateRequest.websites)
-        && Objects.equals(this.areaCode, advertiserUpdateRequest.areaCode);
+        && Objects.equals(this.websites, advertiserUpdateRequest.websites);
   }
 
   @Override
@@ -351,13 +374,14 @@ public class AdvertiserUpdateRequest {
         corporationName,
         corporationLicence,
         certificationImageId,
-        corporateImageName,
         individualQualification,
+        areaCode,
+        corporateImageName,
         introductionUrl,
+        corporateBrandName,
         contactPersonTelephone,
         contactPersonMobile,
-        websites,
-        areaCode);
+        websites);
   }
 
   @Override

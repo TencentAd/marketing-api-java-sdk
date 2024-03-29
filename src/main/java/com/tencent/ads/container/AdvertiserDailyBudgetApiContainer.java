@@ -30,7 +30,7 @@ public class AdvertiserDailyBudgetApiContainer extends ApiContainer {
    * 获取竞价广告账户日预算
    *
    * @param accountId (required)
-   * @param fields 返回参数的字段列表 (optional)
+   * @param fields (optional)
    * @return AdvertiserDailyBudgetGetResponse
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body

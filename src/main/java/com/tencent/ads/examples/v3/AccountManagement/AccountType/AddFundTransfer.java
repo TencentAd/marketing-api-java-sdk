@@ -16,6 +16,7 @@ public class AddFundTransfer {
 
   public Long amount = null;
   public FundTransferAddRequest data = new FundTransferAddRequest();
+  public Long accountId = null;
   public AccountTypeMap fundType = AccountTypeMap.GIFT;
   public String transferType = "AGENCY_TO_ADVERTISER";
 
@@ -29,6 +30,8 @@ public class AddFundTransfer {
 
   public void buildParams() {
     data.setAmount(amount);
+
+    data.setAccountId(accountId);
 
     data.setFundType(fundType);
 

@@ -22,12 +22,12 @@ import java.util.Objects;
 @ApiModel(description = "素材信息")
 public class MaterialUpdateStruct {
   @SerializedName("type")
-  private ProgrammedMaterialType type = null;
+  private TemplateType type = null;
 
   @SerializedName("media_id")
   private Long mediaId = null;
 
-  public MaterialUpdateStruct type(ProgrammedMaterialType type) {
+  public MaterialUpdateStruct type(TemplateType type) {
     this.type = type;
     return this;
   }
@@ -38,11 +38,11 @@ public class MaterialUpdateStruct {
    * @return type
    */
   @ApiModelProperty(value = "")
-  public ProgrammedMaterialType getType() {
+  public TemplateType getType() {
     return type;
   }
 
-  public void setType(ProgrammedMaterialType type) {
+  public void setType(TemplateType type) {
     this.type = type;
   }
 

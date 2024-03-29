@@ -16,7 +16,7 @@ public class GetWechatPages {
   /** TencentAds */
   public TencentAds tencentAds;
 
-  public Long advertiserId = null;
+  public Long accountId = null;
 
   public Long ownerUid = null;
 
@@ -52,7 +52,7 @@ public class GetWechatPages {
     WechatPagesGetResponseData response =
         tencentAds
             .wechatPages()
-            .wechatPagesGet(advertiserId, ownerUid, filtering, page, pageSize, fields);
+            .wechatPagesGet(accountId, ownerUid, filtering, page, pageSize, fields);
     return response;
   }
 

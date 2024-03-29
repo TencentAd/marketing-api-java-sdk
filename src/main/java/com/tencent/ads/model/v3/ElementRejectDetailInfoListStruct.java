@@ -32,6 +32,9 @@ public class ElementRejectDetailInfoListStruct {
   @SerializedName("element_value")
   private String elementValue = null;
 
+  @SerializedName("component_info")
+  private ComponentInfoCanEmpty componentInfo = null;
+
   @SerializedName("reason")
   private String reason = null;
 
@@ -96,6 +99,25 @@ public class ElementRejectDetailInfoListStruct {
 
   public void setElementValue(String elementValue) {
     this.elementValue = elementValue;
+  }
+
+  public ElementRejectDetailInfoListStruct componentInfo(ComponentInfoCanEmpty componentInfo) {
+    this.componentInfo = componentInfo;
+    return this;
+  }
+
+  /**
+   * Get componentInfo
+   *
+   * @return componentInfo
+   */
+  @ApiModelProperty(value = "")
+  public ComponentInfoCanEmpty getComponentInfo() {
+    return componentInfo;
+  }
+
+  public void setComponentInfo(ComponentInfoCanEmpty componentInfo) {
+    this.componentInfo = componentInfo;
   }
 
   public ElementRejectDetailInfoListStruct reason(String reason) {
@@ -178,6 +200,7 @@ public class ElementRejectDetailInfoListStruct {
     return Objects.equals(this.elementName, elementRejectDetailInfoListStruct.elementName)
         && Objects.equals(this.elementType, elementRejectDetailInfoListStruct.elementType)
         && Objects.equals(this.elementValue, elementRejectDetailInfoListStruct.elementValue)
+        && Objects.equals(this.componentInfo, elementRejectDetailInfoListStruct.componentInfo)
         && Objects.equals(this.reason, elementRejectDetailInfoListStruct.reason)
         && Objects.equals(this.reviewStatus, elementRejectDetailInfoListStruct.reviewStatus)
         && Objects.equals(
@@ -187,7 +210,13 @@ public class ElementRejectDetailInfoListStruct {
   @Override
   public int hashCode() {
     return Objects.hash(
-        elementName, elementType, elementValue, reason, reviewStatus, rejectInfoLocation);
+        elementName,
+        elementType,
+        elementValue,
+        componentInfo,
+        reason,
+        reviewStatus,
+        rejectInfoLocation);
   }
 
   @Override

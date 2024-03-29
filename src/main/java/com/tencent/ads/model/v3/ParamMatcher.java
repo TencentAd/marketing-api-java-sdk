@@ -28,7 +28,7 @@ public class ParamMatcher {
   private String paramValue = null;
 
   @SerializedName("operator")
-  private Operator operator = null;
+  private FilterOperator operator = null;
 
   public ParamMatcher paramName(String paramName) {
     this.paramName = paramName;
@@ -68,7 +68,7 @@ public class ParamMatcher {
     this.paramValue = paramValue;
   }
 
-  public ParamMatcher operator(Operator operator) {
+  public ParamMatcher operator(FilterOperator operator) {
     this.operator = operator;
     return this;
   }
@@ -79,11 +79,11 @@ public class ParamMatcher {
    * @return operator
    */
   @ApiModelProperty(value = "")
-  public Operator getOperator() {
+  public FilterOperator getOperator() {
     return operator;
   }
 
-  public void setOperator(Operator operator) {
+  public void setOperator(FilterOperator operator) {
     this.operator = operator;
   }
 

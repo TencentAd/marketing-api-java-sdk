@@ -30,7 +30,7 @@ public class MergeFundTypeFundStatementsDetailedApiContainer extends ApiContaine
   /**
    * 获取资金合并类型资金流水
    *
-   * @param advertiserId (required)
+   * @param accountId (required)
    * @param fundType (required)
    * @param dateRange (required)
    * @param page (optional)
@@ -41,7 +41,7 @@ public class MergeFundTypeFundStatementsDetailedApiContainer extends ApiContaine
    *     response body
    */
   public MergeFundTypeFundStatementsDetailedGetResponseData mergeFundTypeFundStatementsDetailedGet(
-      Long advertiserId,
+      Long accountId,
       String fundType,
       DateRangeTransaction dateRange,
       Long page,
@@ -51,7 +51,7 @@ public class MergeFundTypeFundStatementsDetailedApiContainer extends ApiContaine
       throws ApiException, TencentAdsResponseException {
     MergeFundTypeFundStatementsDetailedGetResponse resp =
         api.mergeFundTypeFundStatementsDetailedGet(
-            advertiserId, fundType, dateRange, page, pageSize, fields, headerPair);
+            accountId, fundType, dateRange, page, pageSize, fields, headerPair);
     handleResponse(gson.toJson(resp));
     return resp.getData();
   }

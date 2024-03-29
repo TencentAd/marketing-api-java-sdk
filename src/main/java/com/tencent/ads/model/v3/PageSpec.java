@@ -54,6 +54,9 @@ public class PageSpec {
   @SerializedName("qq_app_mini_program_spec")
   private QqAppMiniProgramPageSpec qqAppMiniProgramSpec = null;
 
+  @SerializedName("qq_mini_game_spec")
+  private QqMiniGamePageSpec qqMiniGameSpec = null;
+
   @SerializedName("simple_wechat_canvas_spec")
   private SimpleCanvasWechatSpec simpleWechatCanvasSpec = null;
 
@@ -312,6 +315,25 @@ public class PageSpec {
 
   public void setQqAppMiniProgramSpec(QqAppMiniProgramPageSpec qqAppMiniProgramSpec) {
     this.qqAppMiniProgramSpec = qqAppMiniProgramSpec;
+  }
+
+  public PageSpec qqMiniGameSpec(QqMiniGamePageSpec qqMiniGameSpec) {
+    this.qqMiniGameSpec = qqMiniGameSpec;
+    return this;
+  }
+
+  /**
+   * Get qqMiniGameSpec
+   *
+   * @return qqMiniGameSpec
+   */
+  @ApiModelProperty(value = "")
+  public QqMiniGamePageSpec getQqMiniGameSpec() {
+    return qqMiniGameSpec;
+  }
+
+  public void setQqMiniGameSpec(QqMiniGamePageSpec qqMiniGameSpec) {
+    this.qqMiniGameSpec = qqMiniGameSpec;
   }
 
   public PageSpec simpleWechatCanvasSpec(SimpleCanvasWechatSpec simpleWechatCanvasSpec) {
@@ -663,6 +685,7 @@ public class PageSpec {
         && Objects.equals(this.wechatMiniProgramSpec, pageSpec.wechatMiniProgramSpec)
         && Objects.equals(this.wechatCanvasMiniProgramSpec, pageSpec.wechatCanvasMiniProgramSpec)
         && Objects.equals(this.qqAppMiniProgramSpec, pageSpec.qqAppMiniProgramSpec)
+        && Objects.equals(this.qqMiniGameSpec, pageSpec.qqMiniGameSpec)
         && Objects.equals(this.simpleWechatCanvasSpec, pageSpec.simpleWechatCanvasSpec)
         && Objects.equals(this.wechatFocusDialogSpec, pageSpec.wechatFocusDialogSpec)
         && Objects.equals(this.wechatConsultSpec, pageSpec.wechatConsultSpec)
@@ -697,6 +720,7 @@ public class PageSpec {
         wechatMiniProgramSpec,
         wechatCanvasMiniProgramSpec,
         qqAppMiniProgramSpec,
+        qqMiniGameSpec,
         simpleWechatCanvasSpec,
         wechatFocusDialogSpec,
         wechatConsultSpec,

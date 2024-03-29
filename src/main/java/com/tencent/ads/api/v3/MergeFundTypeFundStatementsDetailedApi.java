@@ -52,7 +52,7 @@ public class MergeFundTypeFundStatementsDetailedApi {
   /**
    * Build call for mergeFundTypeFundStatementsDetailedGet
    *
-   * @param advertiserId (required)
+   * @param accountId (required)
    * @param fundType (required)
    * @param dateRange (required)
    * @param page (optional)
@@ -64,7 +64,7 @@ public class MergeFundTypeFundStatementsDetailedApi {
    * @throws ApiException If fail to serialize the request body object
    */
   public com.squareup.okhttp.Call mergeFundTypeFundStatementsDetailedGetCall(
-      Long advertiserId,
+      Long accountId,
       String fundType,
       DateRangeTransaction dateRange,
       Long page,
@@ -82,8 +82,8 @@ public class MergeFundTypeFundStatementsDetailedApi {
 
     List<Pair> localVarQueryParams = new ArrayList<Pair>();
     List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
-    if (advertiserId != null)
-      localVarQueryParams.addAll(apiClient.parameterToPair("advertiser_id", advertiserId));
+    if (accountId != null)
+      localVarQueryParams.addAll(apiClient.parameterToPair("account_id", accountId));
     if (fundType != null)
       localVarQueryParams.addAll(apiClient.parameterToPair("fund_type", fundType));
     if (dateRange != null)
@@ -148,7 +148,7 @@ public class MergeFundTypeFundStatementsDetailedApi {
 
   @SuppressWarnings("rawtypes")
   private com.squareup.okhttp.Call mergeFundTypeFundStatementsDetailedGetValidateBeforeCall(
-      Long advertiserId,
+      Long accountId,
       String fundType,
       DateRangeTransaction dateRange,
       Long page,
@@ -159,10 +159,10 @@ public class MergeFundTypeFundStatementsDetailedApi {
       String... headerPair)
       throws ApiException {
 
-    // verify the required parameter 'advertiserId' is set
-    if (advertiserId == null) {
+    // verify the required parameter 'accountId' is set
+    if (accountId == null) {
       throw new ApiException(
-          "Missing the required parameter 'advertiserId' when calling mergeFundTypeFundStatementsDetailedGet(Async)");
+          "Missing the required parameter 'accountId' when calling mergeFundTypeFundStatementsDetailedGet(Async)");
     }
 
     // verify the required parameter 'fundType' is set
@@ -179,7 +179,7 @@ public class MergeFundTypeFundStatementsDetailedApi {
 
     com.squareup.okhttp.Call call =
         mergeFundTypeFundStatementsDetailedGetCall(
-            advertiserId,
+            accountId,
             fundType,
             dateRange,
             page,
@@ -194,7 +194,7 @@ public class MergeFundTypeFundStatementsDetailedApi {
   /**
    * 获取资金合并类型资金流水
    *
-   * @param advertiserId (required)
+   * @param accountId (required)
    * @param fundType (required)
    * @param dateRange (required)
    * @param page (optional)
@@ -205,7 +205,7 @@ public class MergeFundTypeFundStatementsDetailedApi {
    *     response body
    */
   public MergeFundTypeFundStatementsDetailedGetResponse mergeFundTypeFundStatementsDetailedGet(
-      Long advertiserId,
+      Long accountId,
       String fundType,
       DateRangeTransaction dateRange,
       Long page,
@@ -215,14 +215,14 @@ public class MergeFundTypeFundStatementsDetailedApi {
       throws ApiException {
     ApiResponse<MergeFundTypeFundStatementsDetailedGetResponse> resp =
         mergeFundTypeFundStatementsDetailedGetWithHttpInfo(
-            advertiserId, fundType, dateRange, page, pageSize, fields, headerPair);
+            accountId, fundType, dateRange, page, pageSize, fields, headerPair);
     return resp.getData();
   }
 
   /**
    * 获取资金合并类型资金流水
    *
-   * @param advertiserId (required)
+   * @param accountId (required)
    * @param fundType (required)
    * @param dateRange (required)
    * @param page (optional)
@@ -234,7 +234,7 @@ public class MergeFundTypeFundStatementsDetailedApi {
    */
   public ApiResponse<MergeFundTypeFundStatementsDetailedGetResponse>
       mergeFundTypeFundStatementsDetailedGetWithHttpInfo(
-          Long advertiserId,
+          Long accountId,
           String fundType,
           DateRangeTransaction dateRange,
           Long page,
@@ -244,7 +244,7 @@ public class MergeFundTypeFundStatementsDetailedApi {
           throws ApiException {
     com.squareup.okhttp.Call call =
         mergeFundTypeFundStatementsDetailedGetValidateBeforeCall(
-            advertiserId, fundType, dateRange, page, pageSize, fields, null, null, headerPair);
+            accountId, fundType, dateRange, page, pageSize, fields, null, null, headerPair);
     Type localVarReturnType =
         new TypeToken<MergeFundTypeFundStatementsDetailedGetResponse>() {}.getType();
     return apiClient.execute(call, localVarReturnType);
@@ -253,7 +253,7 @@ public class MergeFundTypeFundStatementsDetailedApi {
   /**
    * 获取资金合并类型资金流水 (asynchronously)
    *
-   * @param advertiserId (required)
+   * @param accountId (required)
    * @param fundType (required)
    * @param dateRange (required)
    * @param page (optional)
@@ -264,7 +264,7 @@ public class MergeFundTypeFundStatementsDetailedApi {
    * @throws ApiException If fail to process the API call, e.g. serializing the request body object
    */
   public com.squareup.okhttp.Call mergeFundTypeFundStatementsDetailedGetAsync(
-      Long advertiserId,
+      Long accountId,
       String fundType,
       DateRangeTransaction dateRange,
       Long page,
@@ -297,7 +297,7 @@ public class MergeFundTypeFundStatementsDetailedApi {
 
     com.squareup.okhttp.Call call =
         mergeFundTypeFundStatementsDetailedGetValidateBeforeCall(
-            advertiserId,
+            accountId,
             fundType,
             dateRange,
             page,

@@ -30,6 +30,9 @@ public class MarketingAssetVerificationLandingPageStruct {
   @SerializedName("marketing_asset_verification_status_cn")
   private String marketingAssetVerificationStatusCn = null;
 
+  @SerializedName("jump_info")
+  private JumpinfoComponent jumpInfo = null;
+
   public MarketingAssetVerificationLandingPageStruct landingPageName(String landingPageName) {
     this.landingPageName = landingPageName;
     return this;
@@ -90,6 +93,25 @@ public class MarketingAssetVerificationLandingPageStruct {
     this.marketingAssetVerificationStatusCn = marketingAssetVerificationStatusCn;
   }
 
+  public MarketingAssetVerificationLandingPageStruct jumpInfo(JumpinfoComponent jumpInfo) {
+    this.jumpInfo = jumpInfo;
+    return this;
+  }
+
+  /**
+   * Get jumpInfo
+   *
+   * @return jumpInfo
+   */
+  @ApiModelProperty(value = "")
+  public JumpinfoComponent getJumpInfo() {
+    return jumpInfo;
+  }
+
+  public void setJumpInfo(JumpinfoComponent jumpInfo) {
+    this.jumpInfo = jumpInfo;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -107,13 +129,17 @@ public class MarketingAssetVerificationLandingPageStruct {
             marketingAssetVerificationLandingPageStruct.marketingAssetVerificationStatus)
         && Objects.equals(
             this.marketingAssetVerificationStatusCn,
-            marketingAssetVerificationLandingPageStruct.marketingAssetVerificationStatusCn);
+            marketingAssetVerificationLandingPageStruct.marketingAssetVerificationStatusCn)
+        && Objects.equals(this.jumpInfo, marketingAssetVerificationLandingPageStruct.jumpInfo);
   }
 
   @Override
   public int hashCode() {
     return Objects.hash(
-        landingPageName, marketingAssetVerificationStatus, marketingAssetVerificationStatusCn);
+        landingPageName,
+        marketingAssetVerificationStatus,
+        marketingAssetVerificationStatusCn,
+        jumpInfo);
   }
 
   @Override

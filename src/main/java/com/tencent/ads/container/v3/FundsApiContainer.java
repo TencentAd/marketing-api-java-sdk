@@ -29,15 +29,15 @@ public class FundsApiContainer extends ApiContainer {
   /**
    * 获取资金账户信息
    *
-   * @param advertiserId (required)
+   * @param accountId (required)
    * @param fields 返回参数的字段列表 (optional)
    * @return FundsGetResponse
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
-  public FundsGetResponseData fundsGet(Long advertiserId, List<String> fields, String... headerPair)
+  public FundsGetResponseData fundsGet(Long accountId, List<String> fields, String... headerPair)
       throws ApiException, TencentAdsResponseException {
-    FundsGetResponse resp = api.fundsGet(advertiserId, fields, headerPair);
+    FundsGetResponse resp = api.fundsGet(accountId, fields, headerPair);
     handleResponse(gson.toJson(resp));
     return resp.getData();
   }

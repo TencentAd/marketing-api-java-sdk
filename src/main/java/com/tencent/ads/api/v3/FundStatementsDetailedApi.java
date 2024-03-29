@@ -52,7 +52,7 @@ public class FundStatementsDetailedApi {
   /**
    * Build call for fundStatementsDetailedGet
    *
-   * @param advertiserId (required)
+   * @param accountId (required)
    * @param fundType (required)
    * @param dateRange (required)
    * @param page (optional)
@@ -64,7 +64,7 @@ public class FundStatementsDetailedApi {
    * @throws ApiException If fail to serialize the request body object
    */
   public com.squareup.okhttp.Call fundStatementsDetailedGetCall(
-      Long advertiserId,
+      Long accountId,
       String fundType,
       DateRangeTransaction dateRange,
       Long page,
@@ -82,8 +82,8 @@ public class FundStatementsDetailedApi {
 
     List<Pair> localVarQueryParams = new ArrayList<Pair>();
     List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
-    if (advertiserId != null)
-      localVarQueryParams.addAll(apiClient.parameterToPair("advertiser_id", advertiserId));
+    if (accountId != null)
+      localVarQueryParams.addAll(apiClient.parameterToPair("account_id", accountId));
     if (fundType != null)
       localVarQueryParams.addAll(apiClient.parameterToPair("fund_type", fundType));
     if (dateRange != null)
@@ -148,7 +148,7 @@ public class FundStatementsDetailedApi {
 
   @SuppressWarnings("rawtypes")
   private com.squareup.okhttp.Call fundStatementsDetailedGetValidateBeforeCall(
-      Long advertiserId,
+      Long accountId,
       String fundType,
       DateRangeTransaction dateRange,
       Long page,
@@ -159,10 +159,10 @@ public class FundStatementsDetailedApi {
       String... headerPair)
       throws ApiException {
 
-    // verify the required parameter 'advertiserId' is set
-    if (advertiserId == null) {
+    // verify the required parameter 'accountId' is set
+    if (accountId == null) {
       throw new ApiException(
-          "Missing the required parameter 'advertiserId' when calling fundStatementsDetailedGet(Async)");
+          "Missing the required parameter 'accountId' when calling fundStatementsDetailedGet(Async)");
     }
 
     // verify the required parameter 'fundType' is set
@@ -179,7 +179,7 @@ public class FundStatementsDetailedApi {
 
     com.squareup.okhttp.Call call =
         fundStatementsDetailedGetCall(
-            advertiserId,
+            accountId,
             fundType,
             dateRange,
             page,
@@ -194,7 +194,7 @@ public class FundStatementsDetailedApi {
   /**
    * 获取资金流水
    *
-   * @param advertiserId (required)
+   * @param accountId (required)
    * @param fundType (required)
    * @param dateRange (required)
    * @param page (optional)
@@ -205,7 +205,7 @@ public class FundStatementsDetailedApi {
    *     response body
    */
   public FundStatementsDetailedGetResponse fundStatementsDetailedGet(
-      Long advertiserId,
+      Long accountId,
       String fundType,
       DateRangeTransaction dateRange,
       Long page,
@@ -215,14 +215,14 @@ public class FundStatementsDetailedApi {
       throws ApiException {
     ApiResponse<FundStatementsDetailedGetResponse> resp =
         fundStatementsDetailedGetWithHttpInfo(
-            advertiserId, fundType, dateRange, page, pageSize, fields, headerPair);
+            accountId, fundType, dateRange, page, pageSize, fields, headerPair);
     return resp.getData();
   }
 
   /**
    * 获取资金流水
    *
-   * @param advertiserId (required)
+   * @param accountId (required)
    * @param fundType (required)
    * @param dateRange (required)
    * @param page (optional)
@@ -233,7 +233,7 @@ public class FundStatementsDetailedApi {
    *     response body
    */
   public ApiResponse<FundStatementsDetailedGetResponse> fundStatementsDetailedGetWithHttpInfo(
-      Long advertiserId,
+      Long accountId,
       String fundType,
       DateRangeTransaction dateRange,
       Long page,
@@ -243,7 +243,7 @@ public class FundStatementsDetailedApi {
       throws ApiException {
     com.squareup.okhttp.Call call =
         fundStatementsDetailedGetValidateBeforeCall(
-            advertiserId, fundType, dateRange, page, pageSize, fields, null, null, headerPair);
+            accountId, fundType, dateRange, page, pageSize, fields, null, null, headerPair);
     Type localVarReturnType = new TypeToken<FundStatementsDetailedGetResponse>() {}.getType();
     return apiClient.execute(call, localVarReturnType);
   }
@@ -251,7 +251,7 @@ public class FundStatementsDetailedApi {
   /**
    * 获取资金流水 (asynchronously)
    *
-   * @param advertiserId (required)
+   * @param accountId (required)
    * @param fundType (required)
    * @param dateRange (required)
    * @param page (optional)
@@ -262,7 +262,7 @@ public class FundStatementsDetailedApi {
    * @throws ApiException If fail to process the API call, e.g. serializing the request body object
    */
   public com.squareup.okhttp.Call fundStatementsDetailedGetAsync(
-      Long advertiserId,
+      Long accountId,
       String fundType,
       DateRangeTransaction dateRange,
       Long page,
@@ -295,7 +295,7 @@ public class FundStatementsDetailedApi {
 
     com.squareup.okhttp.Call call =
         fundStatementsDetailedGetValidateBeforeCall(
-            advertiserId,
+            accountId,
             fundType,
             dateRange,
             page,

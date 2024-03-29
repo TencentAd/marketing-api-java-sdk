@@ -15,7 +15,7 @@ public class GetMergeFundTypeFundStatementsDetailed {
   /** TencentAds */
   public TencentAds tencentAds;
 
-  public Long advertiserId = null;
+  public Long accountId = null;
 
   public String fundType = null;
 
@@ -43,7 +43,7 @@ public class GetMergeFundTypeFundStatementsDetailed {
         tencentAds
             .mergeFundTypeFundStatementsDetailed()
             .mergeFundTypeFundStatementsDetailedGet(
-                advertiserId, fundType, dateRange, page, pageSize, fields);
+                accountId, fundType, dateRange, page, pageSize, fields);
     return response;
   }
 

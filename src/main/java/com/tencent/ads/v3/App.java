@@ -26,25 +26,39 @@ public class App {
   @Inject AdcreativePreviewsQrcodeApiContainer adcreativePreviewsQrcodeApiContainer;
   @Inject AdgroupNegativewordsApiContainer adgroupNegativewordsApiContainer;
   @Inject AdgroupsApiContainer adgroupsApiContainer;
+  @Inject AdvertiserApiContainer advertiserApiContainer;
+  @Inject AdvertiserDailyBudgetApiContainer advertiserDailyBudgetApiContainer;
+  @Inject AgencyApiContainer agencyApiContainer;
   @Inject AgencyRealtimeCostApiContainer agencyRealtimeCostApiContainer;
   @Inject AndroidChannelApiContainer androidChannelApiContainer;
   @Inject AsyncReportFilesApiContainer asyncReportFilesApiContainer;
   @Inject AsyncReportsApiContainer asyncReportsApiContainer;
+  @Inject AsyncTasksApiContainer asyncTasksApiContainer;
   @Inject AudienceGrantRelationsApiContainer audienceGrantRelationsApiContainer;
+  @Inject BatchAsyncRequestSpecificationApiContainer batchAsyncRequestSpecificationApiContainer;
+  @Inject BatchAsyncRequestsApiContainer batchAsyncRequestsApiContainer;
   @Inject BatchRequestsApiContainer batchRequestsApiContainer;
   @Inject BidSimulationApiContainer bidSimulationApiContainer;
   @Inject BidwordApiContainer bidwordApiContainer;
   @Inject BidwordFlowApiContainer bidwordFlowApiContainer;
   @Inject BrandApiContainer brandApiContainer;
   @Inject BusinessPointApiContainer businessPointApiContainer;
+  @Inject ComponentReviewResultsApiContainer componentReviewResultsApiContainer;
   @Inject ConversionsApiContainer conversionsApiContainer;
   @Inject CreativeTemplateApiContainer creativeTemplateApiContainer;
   @Inject CreativeTemplateListApiContainer creativeTemplateListApiContainer;
+  @Inject CreativeTemplatePreviewsApiContainer creativeTemplatePreviewsApiContainer;
   @Inject CreativetoolsTextApiContainer creativetoolsTextApiContainer;
+  @Inject CustomAudienceEstimationsApiContainer customAudienceEstimationsApiContainer;
   @Inject CustomAudienceFilesApiContainer customAudienceFilesApiContainer;
   @Inject CustomAudiencesApiContainer customAudiencesApiContainer;
   @Inject DailyBalanceReportApiContainer dailyBalanceReportApiContainer;
   @Inject DailyReportsApiContainer dailyReportsApiContainer;
+  @Inject DataSourceDispatchApiContainer dataSourceDispatchApiContainer;
+  @Inject DynamicAdImageTemplatesApiContainer dynamicAdImageTemplatesApiContainer;
+  @Inject DynamicAdImagesApiContainer dynamicAdImagesApiContainer;
+  @Inject DynamicAdVideoApiContainer dynamicAdVideoApiContainer;
+  @Inject DynamicAdVideoTemplatesApiContainer dynamicAdVideoTemplatesApiContainer;
   @Inject DynamicCreativeReviewResultsApiContainer dynamicCreativeReviewResultsApiContainer;
   @Inject DynamicCreativesApiContainer dynamicCreativesApiContainer;
   @Inject EcommerceOrderApiContainer ecommerceOrderApiContainer;
@@ -58,6 +72,19 @@ public class App {
   @Inject HourlyReportsApiContainer hourlyReportsApiContainer;
   @Inject ImagesApiContainer imagesApiContainer;
   @Inject KeywordRecommendApiContainer keywordRecommendApiContainer;
+  @Inject LabelsApiContainer labelsApiContainer;
+  @Inject LandingPageSellStrategyApiContainer landingPageSellStrategyApiContainer;
+  @Inject LeadsApiContainer leadsApiContainer;
+  @Inject LeadsActionTypeReportApiContainer leadsActionTypeReportApiContainer;
+  @Inject LeadsCallRecordApiContainer leadsCallRecordApiContainer;
+  @Inject LeadsCallRecordsApiContainer leadsCallRecordsApiContainer;
+  @Inject LeadsCallVirtualNumberApiContainer leadsCallVirtualNumberApiContainer;
+  @Inject LeadsClaimApiContainer leadsClaimApiContainer;
+  @Inject LeadsInvalidPayApiContainer leadsInvalidPayApiContainer;
+  @Inject LeadsListApiContainer leadsListApiContainer;
+  @Inject LeadsStatusApiContainer leadsStatusApiContainer;
+  @Inject LeadsVoipCallApiContainer leadsVoipCallApiContainer;
+  @Inject LeadsVoipCallTokenApiContainer leadsVoipCallTokenApiContainer;
   @Inject LiveRoomComponentStatusApiContainer liveRoomComponentStatusApiContainer;
   @Inject LiveRoomComponentsApiContainer liveRoomComponentsApiContainer;
   @Inject LocalStoresApiContainer localStoresApiContainer;
@@ -65,8 +92,16 @@ public class App {
   @Inject LocalStoresCategoriesApiContainer localStoresCategoriesApiContainer;
   @Inject LocalStoresSearchInfoApiContainer localStoresSearchInfoApiContainer;
   @Inject LocalStoresWxpayMerchantsApiContainer localStoresWxpayMerchantsApiContainer;
+  @Inject MarketingTargetAssetCategoriesApiContainer marketingTargetAssetCategoriesApiContainer;
+  @Inject MarketingTargetAssetDetailApiContainer marketingTargetAssetDetailApiContainer;
+  @Inject MarketingTargetAssetPropertiesApiContainer marketingTargetAssetPropertiesApiContainer;
+
+  @Inject
+  MarketingTargetAssetPropertyValuesApiContainer marketingTargetAssetPropertyValuesApiContainer;
+
   @Inject MarketingTargetAssetsApiContainer marketingTargetAssetsApiContainer;
   @Inject MarketingTargetTypesApiContainer marketingTargetTypesApiContainer;
+  @Inject MaterialDcatagApiContainer materialDcatagApiContainer;
   @Inject MaterialLabelsApiContainer materialLabelsApiContainer;
   @Inject MergeFundTypeDailyBalanceReportApiContainer mergeFundTypeDailyBalanceReportApiContainer;
 
@@ -77,18 +112,43 @@ public class App {
   @Inject MergeFundTypeSubcustomerTransferApiContainer mergeFundTypeSubcustomerTransferApiContainer;
   @Inject OauthApiContainer oauthApiContainer;
   @Inject OptimizationGoalPermissionsApiContainer optimizationGoalPermissionsApiContainer;
+  @Inject OrganizationAccountRelationApiContainer organizationAccountRelationApiContainer;
   @Inject PagesApiContainer pagesApiContainer;
+  @Inject ProductCatalogsApiContainer productCatalogsApiContainer;
+  @Inject ProductItemsApiContainer productItemsApiContainer;
+  @Inject ProductSeriesApiContainer productSeriesApiContainer;
   @Inject ProfilesApiContainer profilesApiContainer;
   @Inject ProgrammedApiContainer programmedApiContainer;
   @Inject ProgrammedTemplateApiContainer programmedTemplateApiContainer;
+  @Inject QualificationsApiContainer qualificationsApiContainer;
   @Inject RealtimeCostApiContainer realtimeCostApiContainer;
+  @Inject ReviewElementPrereviewResultsApiContainer reviewElementPrereviewResultsApiContainer;
+  @Inject SceneSpecTagsApiContainer sceneSpecTagsApiContainer;
   @Inject SubcustomerTransferApiContainer subcustomerTransferApiContainer;
   @Inject TargetingTagReportsApiContainer targetingTagReportsApiContainer;
+  @Inject TargetingTagsApiContainer targetingTagsApiContainer;
+  @Inject TargetingTagsUvApiContainer targetingTagsUvApiContainer;
   @Inject UnionPositionPackagesApiContainer unionPositionPackagesApiContainer;
+  @Inject UserActionSetReportsApiContainer userActionSetReportsApiContainer;
+  @Inject UserActionSetsApiContainer userActionSetsApiContainer;
+  @Inject UserActionsApiContainer userActionsApiContainer;
+  @Inject VideoChannelDealerDataApiContainer videoChannelDealerDataApiContainer;
+  @Inject VideoChannelFansDataApiContainer videoChannelFansDataApiContainer;
+  @Inject VideoChannelLeadsDataApiContainer videoChannelLeadsDataApiContainer;
+  @Inject VideoChannelLiveDataApiContainer videoChannelLiveDataApiContainer;
   @Inject VideosApiContainer videosApiContainer;
   @Inject WechatPagesApiContainer wechatPagesApiContainer;
   @Inject WechatPagesCustomApiContainer wechatPagesCustomApiContainer;
+  @Inject WechatPagesGrantinfoApiContainer wechatPagesGrantinfoApiContainer;
   @Inject WildcardsApiContainer wildcardsApiContainer;
+  @Inject WxPackageAccountApiContainer wxPackageAccountApiContainer;
+  @Inject WxPackagePackageApiContainer wxPackagePackageApiContainer;
+  @Inject XijingComplexTemplateApiContainer xijingComplexTemplateApiContainer;
+  @Inject XijingPageApiContainer xijingPageApiContainer;
+  @Inject XijingPageByComponentsApiContainer xijingPageByComponentsApiContainer;
+  @Inject XijingPageListApiContainer xijingPageListApiContainer;
+  @Inject XijingTemplateApiContainer xijingTemplateApiContainer;
+  @Inject XijingTemplateListApiContainer xijingTemplateListApiContainer;
 
   public App() {
     Guice.createInjector(new GuiceModule()).injectMembers(this);
@@ -122,6 +182,18 @@ public class App {
     return adgroupsApiContainer;
   }
 
+  public AdvertiserApiContainer advertiser() {
+    return advertiserApiContainer;
+  }
+
+  public AdvertiserDailyBudgetApiContainer advertiserDailyBudget() {
+    return advertiserDailyBudgetApiContainer;
+  }
+
+  public AgencyApiContainer agency() {
+    return agencyApiContainer;
+  }
+
   public AgencyRealtimeCostApiContainer agencyRealtimeCost() {
     return agencyRealtimeCostApiContainer;
   }
@@ -138,8 +210,20 @@ public class App {
     return asyncReportsApiContainer;
   }
 
+  public AsyncTasksApiContainer asyncTasks() {
+    return asyncTasksApiContainer;
+  }
+
   public AudienceGrantRelationsApiContainer audienceGrantRelations() {
     return audienceGrantRelationsApiContainer;
+  }
+
+  public BatchAsyncRequestSpecificationApiContainer batchAsyncRequestSpecification() {
+    return batchAsyncRequestSpecificationApiContainer;
+  }
+
+  public BatchAsyncRequestsApiContainer batchAsyncRequests() {
+    return batchAsyncRequestsApiContainer;
   }
 
   public BatchRequestsApiContainer batchRequests() {
@@ -166,6 +250,10 @@ public class App {
     return businessPointApiContainer;
   }
 
+  public ComponentReviewResultsApiContainer componentReviewResults() {
+    return componentReviewResultsApiContainer;
+  }
+
   public ConversionsApiContainer conversions() {
     return conversionsApiContainer;
   }
@@ -178,8 +266,16 @@ public class App {
     return creativeTemplateListApiContainer;
   }
 
+  public CreativeTemplatePreviewsApiContainer creativeTemplatePreviews() {
+    return creativeTemplatePreviewsApiContainer;
+  }
+
   public CreativetoolsTextApiContainer creativetoolsText() {
     return creativetoolsTextApiContainer;
+  }
+
+  public CustomAudienceEstimationsApiContainer customAudienceEstimations() {
+    return customAudienceEstimationsApiContainer;
   }
 
   public CustomAudienceFilesApiContainer customAudienceFiles() {
@@ -196,6 +292,26 @@ public class App {
 
   public DailyReportsApiContainer dailyReports() {
     return dailyReportsApiContainer;
+  }
+
+  public DataSourceDispatchApiContainer dataSourceDispatch() {
+    return dataSourceDispatchApiContainer;
+  }
+
+  public DynamicAdImageTemplatesApiContainer dynamicAdImageTemplates() {
+    return dynamicAdImageTemplatesApiContainer;
+  }
+
+  public DynamicAdImagesApiContainer dynamicAdImages() {
+    return dynamicAdImagesApiContainer;
+  }
+
+  public DynamicAdVideoApiContainer dynamicAdVideo() {
+    return dynamicAdVideoApiContainer;
+  }
+
+  public DynamicAdVideoTemplatesApiContainer dynamicAdVideoTemplates() {
+    return dynamicAdVideoTemplatesApiContainer;
   }
 
   public DynamicCreativeReviewResultsApiContainer dynamicCreativeReviewResults() {
@@ -250,6 +366,58 @@ public class App {
     return keywordRecommendApiContainer;
   }
 
+  public LabelsApiContainer labels() {
+    return labelsApiContainer;
+  }
+
+  public LandingPageSellStrategyApiContainer landingPageSellStrategy() {
+    return landingPageSellStrategyApiContainer;
+  }
+
+  public LeadsApiContainer leads() {
+    return leadsApiContainer;
+  }
+
+  public LeadsActionTypeReportApiContainer leadsActionTypeReport() {
+    return leadsActionTypeReportApiContainer;
+  }
+
+  public LeadsCallRecordApiContainer leadsCallRecord() {
+    return leadsCallRecordApiContainer;
+  }
+
+  public LeadsCallRecordsApiContainer leadsCallRecords() {
+    return leadsCallRecordsApiContainer;
+  }
+
+  public LeadsCallVirtualNumberApiContainer leadsCallVirtualNumber() {
+    return leadsCallVirtualNumberApiContainer;
+  }
+
+  public LeadsClaimApiContainer leadsClaim() {
+    return leadsClaimApiContainer;
+  }
+
+  public LeadsInvalidPayApiContainer leadsInvalidPay() {
+    return leadsInvalidPayApiContainer;
+  }
+
+  public LeadsListApiContainer leadsList() {
+    return leadsListApiContainer;
+  }
+
+  public LeadsStatusApiContainer leadsStatus() {
+    return leadsStatusApiContainer;
+  }
+
+  public LeadsVoipCallApiContainer leadsVoipCall() {
+    return leadsVoipCallApiContainer;
+  }
+
+  public LeadsVoipCallTokenApiContainer leadsVoipCallToken() {
+    return leadsVoipCallTokenApiContainer;
+  }
+
   public LiveRoomComponentStatusApiContainer liveRoomComponentStatus() {
     return liveRoomComponentStatusApiContainer;
   }
@@ -278,12 +446,32 @@ public class App {
     return localStoresWxpayMerchantsApiContainer;
   }
 
+  public MarketingTargetAssetCategoriesApiContainer marketingTargetAssetCategories() {
+    return marketingTargetAssetCategoriesApiContainer;
+  }
+
+  public MarketingTargetAssetDetailApiContainer marketingTargetAssetDetail() {
+    return marketingTargetAssetDetailApiContainer;
+  }
+
+  public MarketingTargetAssetPropertiesApiContainer marketingTargetAssetProperties() {
+    return marketingTargetAssetPropertiesApiContainer;
+  }
+
+  public MarketingTargetAssetPropertyValuesApiContainer marketingTargetAssetPropertyValues() {
+    return marketingTargetAssetPropertyValuesApiContainer;
+  }
+
   public MarketingTargetAssetsApiContainer marketingTargetAssets() {
     return marketingTargetAssetsApiContainer;
   }
 
   public MarketingTargetTypesApiContainer marketingTargetTypes() {
     return marketingTargetTypesApiContainer;
+  }
+
+  public MaterialDcatagApiContainer materialDcatag() {
+    return materialDcatagApiContainer;
   }
 
   public MaterialLabelsApiContainer materialLabels() {
@@ -314,8 +502,24 @@ public class App {
     return optimizationGoalPermissionsApiContainer;
   }
 
+  public OrganizationAccountRelationApiContainer organizationAccountRelation() {
+    return organizationAccountRelationApiContainer;
+  }
+
   public PagesApiContainer pages() {
     return pagesApiContainer;
+  }
+
+  public ProductCatalogsApiContainer productCatalogs() {
+    return productCatalogsApiContainer;
+  }
+
+  public ProductItemsApiContainer productItems() {
+    return productItemsApiContainer;
+  }
+
+  public ProductSeriesApiContainer productSeries() {
+    return productSeriesApiContainer;
   }
 
   public ProfilesApiContainer profiles() {
@@ -330,8 +534,20 @@ public class App {
     return programmedTemplateApiContainer;
   }
 
+  public QualificationsApiContainer qualifications() {
+    return qualificationsApiContainer;
+  }
+
   public RealtimeCostApiContainer realtimeCost() {
     return realtimeCostApiContainer;
+  }
+
+  public ReviewElementPrereviewResultsApiContainer reviewElementPrereviewResults() {
+    return reviewElementPrereviewResultsApiContainer;
+  }
+
+  public SceneSpecTagsApiContainer sceneSpecTags() {
+    return sceneSpecTagsApiContainer;
   }
 
   public SubcustomerTransferApiContainer subcustomerTransfer() {
@@ -342,8 +558,44 @@ public class App {
     return targetingTagReportsApiContainer;
   }
 
+  public TargetingTagsApiContainer targetingTags() {
+    return targetingTagsApiContainer;
+  }
+
+  public TargetingTagsUvApiContainer targetingTagsUv() {
+    return targetingTagsUvApiContainer;
+  }
+
   public UnionPositionPackagesApiContainer unionPositionPackages() {
     return unionPositionPackagesApiContainer;
+  }
+
+  public UserActionSetReportsApiContainer userActionSetReports() {
+    return userActionSetReportsApiContainer;
+  }
+
+  public UserActionSetsApiContainer userActionSets() {
+    return userActionSetsApiContainer;
+  }
+
+  public UserActionsApiContainer userActions() {
+    return userActionsApiContainer;
+  }
+
+  public VideoChannelDealerDataApiContainer videoChannelDealerData() {
+    return videoChannelDealerDataApiContainer;
+  }
+
+  public VideoChannelFansDataApiContainer videoChannelFansData() {
+    return videoChannelFansDataApiContainer;
+  }
+
+  public VideoChannelLeadsDataApiContainer videoChannelLeadsData() {
+    return videoChannelLeadsDataApiContainer;
+  }
+
+  public VideoChannelLiveDataApiContainer videoChannelLiveData() {
+    return videoChannelLiveDataApiContainer;
   }
 
   public VideosApiContainer videos() {
@@ -358,7 +610,43 @@ public class App {
     return wechatPagesCustomApiContainer;
   }
 
+  public WechatPagesGrantinfoApiContainer wechatPagesGrantinfo() {
+    return wechatPagesGrantinfoApiContainer;
+  }
+
   public WildcardsApiContainer wildcards() {
     return wildcardsApiContainer;
+  }
+
+  public WxPackageAccountApiContainer wxPackageAccount() {
+    return wxPackageAccountApiContainer;
+  }
+
+  public WxPackagePackageApiContainer wxPackagePackage() {
+    return wxPackagePackageApiContainer;
+  }
+
+  public XijingComplexTemplateApiContainer xijingComplexTemplate() {
+    return xijingComplexTemplateApiContainer;
+  }
+
+  public XijingPageApiContainer xijingPage() {
+    return xijingPageApiContainer;
+  }
+
+  public XijingPageByComponentsApiContainer xijingPageByComponents() {
+    return xijingPageByComponentsApiContainer;
+  }
+
+  public XijingPageListApiContainer xijingPageList() {
+    return xijingPageListApiContainer;
+  }
+
+  public XijingTemplateApiContainer xijingTemplate() {
+    return xijingTemplateApiContainer;
+  }
+
+  public XijingTemplateListApiContainer xijingTemplateList() {
+    return xijingTemplateListApiContainer;
   }
 }

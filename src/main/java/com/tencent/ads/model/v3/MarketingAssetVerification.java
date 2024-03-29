@@ -23,12 +23,6 @@ import java.util.Objects;
 /** 资产验真结果 */
 @ApiModel(description = "资产验真结果")
 public class MarketingAssetVerification {
-  @SerializedName("marketing_asset_name")
-  private String marketingAssetName = null;
-
-  @SerializedName("marketing_target_attr")
-  private MarketingTargetAttr marketingTargetAttr = null;
-
   @SerializedName("marketing_asset_verification_status")
   private MarketingAssetVerificationStatus marketingAssetVerificationStatus = null;
 
@@ -37,44 +31,6 @@ public class MarketingAssetVerification {
 
   @SerializedName("landing_page_list")
   private List<MarketingAssetVerificationLandingPageStruct> landingPageList = null;
-
-  public MarketingAssetVerification marketingAssetName(String marketingAssetName) {
-    this.marketingAssetName = marketingAssetName;
-    return this;
-  }
-
-  /**
-   * Get marketingAssetName
-   *
-   * @return marketingAssetName
-   */
-  @ApiModelProperty(value = "")
-  public String getMarketingAssetName() {
-    return marketingAssetName;
-  }
-
-  public void setMarketingAssetName(String marketingAssetName) {
-    this.marketingAssetName = marketingAssetName;
-  }
-
-  public MarketingAssetVerification marketingTargetAttr(MarketingTargetAttr marketingTargetAttr) {
-    this.marketingTargetAttr = marketingTargetAttr;
-    return this;
-  }
-
-  /**
-   * Get marketingTargetAttr
-   *
-   * @return marketingTargetAttr
-   */
-  @ApiModelProperty(value = "")
-  public MarketingTargetAttr getMarketingTargetAttr() {
-    return marketingTargetAttr;
-  }
-
-  public void setMarketingTargetAttr(MarketingTargetAttr marketingTargetAttr) {
-    this.marketingTargetAttr = marketingTargetAttr;
-  }
 
   public MarketingAssetVerification marketingAssetVerificationStatus(
       MarketingAssetVerificationStatus marketingAssetVerificationStatus) {
@@ -156,9 +112,7 @@ public class MarketingAssetVerification {
       return false;
     }
     MarketingAssetVerification marketingAssetVerification = (MarketingAssetVerification) o;
-    return Objects.equals(this.marketingAssetName, marketingAssetVerification.marketingAssetName)
-        && Objects.equals(this.marketingTargetAttr, marketingAssetVerification.marketingTargetAttr)
-        && Objects.equals(
+    return Objects.equals(
             this.marketingAssetVerificationStatus,
             marketingAssetVerification.marketingAssetVerificationStatus)
         && Objects.equals(
@@ -170,11 +124,7 @@ public class MarketingAssetVerification {
   @Override
   public int hashCode() {
     return Objects.hash(
-        marketingAssetName,
-        marketingTargetAttr,
-        marketingAssetVerificationStatus,
-        marketingAssetVerificationStatusCn,
-        landingPageList);
+        marketingAssetVerificationStatus, marketingAssetVerificationStatusCn, landingPageList);
   }
 
   @Override

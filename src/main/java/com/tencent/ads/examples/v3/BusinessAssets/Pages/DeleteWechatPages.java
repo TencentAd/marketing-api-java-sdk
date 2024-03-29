@@ -16,6 +16,7 @@ public class DeleteWechatPages {
 
   public Long pageId = null;
   public WechatPagesDeleteRequest data = new WechatPagesDeleteRequest();
+  public Long accountId = null;
 
   public void init() {
     this.tencentAds = TencentAds.getInstance();
@@ -27,6 +28,8 @@ public class DeleteWechatPages {
 
   public void buildParams() {
     data.setPageId(pageId);
+
+    data.setAccountId(accountId);
   }
 
   public WechatPagesDeleteResponseData deleteWechatPages() throws Exception {

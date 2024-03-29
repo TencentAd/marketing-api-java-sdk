@@ -389,7 +389,7 @@ public class WechatPagesApi {
   /**
    * Build call for wechatPagesGet
    *
-   * @param advertiserId (required)
+   * @param accountId (required)
    * @param ownerUid (optional)
    * @param filtering (optional)
    * @param page (optional)
@@ -401,7 +401,7 @@ public class WechatPagesApi {
    * @throws ApiException If fail to serialize the request body object
    */
   public com.squareup.okhttp.Call wechatPagesGetCall(
-      Long advertiserId,
+      Long accountId,
       Long ownerUid,
       List<FilteringStruct> filtering,
       Long page,
@@ -419,8 +419,8 @@ public class WechatPagesApi {
 
     List<Pair> localVarQueryParams = new ArrayList<Pair>();
     List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
-    if (advertiserId != null)
-      localVarQueryParams.addAll(apiClient.parameterToPair("advertiser_id", advertiserId));
+    if (accountId != null)
+      localVarQueryParams.addAll(apiClient.parameterToPair("account_id", accountId));
     if (ownerUid != null)
       localVarQueryParams.addAll(apiClient.parameterToPair("owner_uid", ownerUid));
     if (filtering != null)
@@ -486,7 +486,7 @@ public class WechatPagesApi {
 
   @SuppressWarnings("rawtypes")
   private com.squareup.okhttp.Call wechatPagesGetValidateBeforeCall(
-      Long advertiserId,
+      Long accountId,
       Long ownerUid,
       List<FilteringStruct> filtering,
       Long page,
@@ -497,15 +497,15 @@ public class WechatPagesApi {
       String... headerPair)
       throws ApiException {
 
-    // verify the required parameter 'advertiserId' is set
-    if (advertiserId == null) {
+    // verify the required parameter 'accountId' is set
+    if (accountId == null) {
       throw new ApiException(
-          "Missing the required parameter 'advertiserId' when calling wechatPagesGet(Async)");
+          "Missing the required parameter 'accountId' when calling wechatPagesGet(Async)");
     }
 
     com.squareup.okhttp.Call call =
         wechatPagesGetCall(
-            advertiserId,
+            accountId,
             ownerUid,
             filtering,
             page,
@@ -520,7 +520,7 @@ public class WechatPagesApi {
   /**
    * 获取微信落地页列表
    *
-   * @param advertiserId (required)
+   * @param accountId (required)
    * @param ownerUid (optional)
    * @param filtering (optional)
    * @param page (optional)
@@ -531,7 +531,7 @@ public class WechatPagesApi {
    *     response body
    */
   public WechatPagesGetResponse wechatPagesGet(
-      Long advertiserId,
+      Long accountId,
       Long ownerUid,
       List<FilteringStruct> filtering,
       Long page,
@@ -541,14 +541,14 @@ public class WechatPagesApi {
       throws ApiException {
     ApiResponse<WechatPagesGetResponse> resp =
         wechatPagesGetWithHttpInfo(
-            advertiserId, ownerUid, filtering, page, pageSize, fields, headerPair);
+            accountId, ownerUid, filtering, page, pageSize, fields, headerPair);
     return resp.getData();
   }
 
   /**
    * 获取微信落地页列表
    *
-   * @param advertiserId (required)
+   * @param accountId (required)
    * @param ownerUid (optional)
    * @param filtering (optional)
    * @param page (optional)
@@ -559,7 +559,7 @@ public class WechatPagesApi {
    *     response body
    */
   public ApiResponse<WechatPagesGetResponse> wechatPagesGetWithHttpInfo(
-      Long advertiserId,
+      Long accountId,
       Long ownerUid,
       List<FilteringStruct> filtering,
       Long page,
@@ -569,7 +569,7 @@ public class WechatPagesApi {
       throws ApiException {
     com.squareup.okhttp.Call call =
         wechatPagesGetValidateBeforeCall(
-            advertiserId, ownerUid, filtering, page, pageSize, fields, null, null, headerPair);
+            accountId, ownerUid, filtering, page, pageSize, fields, null, null, headerPair);
     Type localVarReturnType = new TypeToken<WechatPagesGetResponse>() {}.getType();
     return apiClient.execute(call, localVarReturnType);
   }
@@ -577,7 +577,7 @@ public class WechatPagesApi {
   /**
    * 获取微信落地页列表 (asynchronously)
    *
-   * @param advertiserId (required)
+   * @param accountId (required)
    * @param ownerUid (optional)
    * @param filtering (optional)
    * @param page (optional)
@@ -588,7 +588,7 @@ public class WechatPagesApi {
    * @throws ApiException If fail to process the API call, e.g. serializing the request body object
    */
   public com.squareup.okhttp.Call wechatPagesGetAsync(
-      Long advertiserId,
+      Long accountId,
       Long ownerUid,
       List<FilteringStruct> filtering,
       Long page,
@@ -621,7 +621,7 @@ public class WechatPagesApi {
 
     com.squareup.okhttp.Call call =
         wechatPagesGetValidateBeforeCall(
-            advertiserId,
+            accountId,
             ownerUid,
             filtering,
             page,
