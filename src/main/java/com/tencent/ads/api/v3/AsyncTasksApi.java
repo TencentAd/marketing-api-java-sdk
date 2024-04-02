@@ -21,10 +21,10 @@ import com.tencent.ads.Configuration;
 import com.tencent.ads.Pair;
 import com.tencent.ads.ProgressRequestBody;
 import com.tencent.ads.ProgressResponseBody;
+import com.tencent.ads.model.v3.AsyncTaskFilteringStruct;
 import com.tencent.ads.model.v3.AsyncTasksAddRequest;
 import com.tencent.ads.model.v3.AsyncTasksAddResponse;
 import com.tencent.ads.model.v3.AsyncTasksGetResponse;
-import com.tencent.ads.model.v3.FilteringStruct;
 import java.io.IOException;
 import java.lang.reflect.Type;
 import java.util.ArrayList;
@@ -232,7 +232,7 @@ public class AsyncTasksApi {
    */
   public com.squareup.okhttp.Call asyncTasksGetCall(
       Long accountId,
-      List<FilteringStruct> filtering,
+      List<AsyncTaskFilteringStruct> filtering,
       Long page,
       Long pageSize,
       List<String> fields,
@@ -314,7 +314,7 @@ public class AsyncTasksApi {
   @SuppressWarnings("rawtypes")
   private com.squareup.okhttp.Call asyncTasksGetValidateBeforeCall(
       Long accountId,
-      List<FilteringStruct> filtering,
+      List<AsyncTaskFilteringStruct> filtering,
       Long page,
       Long pageSize,
       List<String> fields,
@@ -356,7 +356,7 @@ public class AsyncTasksApi {
    */
   public AsyncTasksGetResponse asyncTasksGet(
       Long accountId,
-      List<FilteringStruct> filtering,
+      List<AsyncTaskFilteringStruct> filtering,
       Long page,
       Long pageSize,
       List<String> fields,
@@ -381,7 +381,7 @@ public class AsyncTasksApi {
    */
   public ApiResponse<AsyncTasksGetResponse> asyncTasksGetWithHttpInfo(
       Long accountId,
-      List<FilteringStruct> filtering,
+      List<AsyncTaskFilteringStruct> filtering,
       Long page,
       Long pageSize,
       List<String> fields,
@@ -408,7 +408,7 @@ public class AsyncTasksApi {
    */
   public com.squareup.okhttp.Call asyncTasksGetAsync(
       Long accountId,
-      List<FilteringStruct> filtering,
+      List<AsyncTaskFilteringStruct> filtering,
       Long page,
       Long pageSize,
       List<String> fields,

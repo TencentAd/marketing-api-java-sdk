@@ -59,6 +59,24 @@ public class TaskSpec {
   private List<UpdateDeepConversionBehaviorAdvancedBidItem>
       updateDeepConversionBehaviorAdvancedBidSpec = null;
 
+  @SerializedName("reply_finder_object_comment_spec")
+  private List<ReplyFinderObjectCommentItem> replyFinderObjectCommentSpec = null;
+
+  @SerializedName("delete_finder_object_comment_spec")
+  private List<DeleteFinderObjectCommentItem> deleteFinderObjectCommentSpec = null;
+
+  @SerializedName("update_finder_object_comment_flag_spec")
+  private List<UpdateFinderObjectCommentFlagItem> updateFinderObjectCommentFlagSpec = null;
+
+  @SerializedName("update_adgroup_time_spec")
+  private List<UpdateAdgroupTimeItem> updateAdgroupTimeSpec = null;
+
+  @SerializedName("update_adgroup_date_spec")
+  private List<UpdateAdgroupDateItem> updateAdgroupDateSpec = null;
+
+  @SerializedName("update_adgroup_bid_amount_spec")
+  private List<UpdateAdgroupBidAmountItem> updateAdgroupBidAmountSpec = null;
+
   public TaskSpec updateUnionPositionPackageSpec(
       List<UpdateUnionPositionPackageItem> updateUnionPositionPackageSpec) {
     this.updateUnionPositionPackageSpec = updateUnionPositionPackageSpec;
@@ -400,6 +418,180 @@ public class TaskSpec {
     this.updateDeepConversionBehaviorAdvancedBidSpec = updateDeepConversionBehaviorAdvancedBidSpec;
   }
 
+  public TaskSpec replyFinderObjectCommentSpec(
+      List<ReplyFinderObjectCommentItem> replyFinderObjectCommentSpec) {
+    this.replyFinderObjectCommentSpec = replyFinderObjectCommentSpec;
+    return this;
+  }
+
+  public TaskSpec addReplyFinderObjectCommentSpecItem(
+      ReplyFinderObjectCommentItem replyFinderObjectCommentSpecItem) {
+    if (this.replyFinderObjectCommentSpec == null) {
+      this.replyFinderObjectCommentSpec = new ArrayList<ReplyFinderObjectCommentItem>();
+    }
+    this.replyFinderObjectCommentSpec.add(replyFinderObjectCommentSpecItem);
+    return this;
+  }
+
+  /**
+   * Get replyFinderObjectCommentSpec
+   *
+   * @return replyFinderObjectCommentSpec
+   */
+  @ApiModelProperty(value = "")
+  public List<ReplyFinderObjectCommentItem> getReplyFinderObjectCommentSpec() {
+    return replyFinderObjectCommentSpec;
+  }
+
+  public void setReplyFinderObjectCommentSpec(
+      List<ReplyFinderObjectCommentItem> replyFinderObjectCommentSpec) {
+    this.replyFinderObjectCommentSpec = replyFinderObjectCommentSpec;
+  }
+
+  public TaskSpec deleteFinderObjectCommentSpec(
+      List<DeleteFinderObjectCommentItem> deleteFinderObjectCommentSpec) {
+    this.deleteFinderObjectCommentSpec = deleteFinderObjectCommentSpec;
+    return this;
+  }
+
+  public TaskSpec addDeleteFinderObjectCommentSpecItem(
+      DeleteFinderObjectCommentItem deleteFinderObjectCommentSpecItem) {
+    if (this.deleteFinderObjectCommentSpec == null) {
+      this.deleteFinderObjectCommentSpec = new ArrayList<DeleteFinderObjectCommentItem>();
+    }
+    this.deleteFinderObjectCommentSpec.add(deleteFinderObjectCommentSpecItem);
+    return this;
+  }
+
+  /**
+   * Get deleteFinderObjectCommentSpec
+   *
+   * @return deleteFinderObjectCommentSpec
+   */
+  @ApiModelProperty(value = "")
+  public List<DeleteFinderObjectCommentItem> getDeleteFinderObjectCommentSpec() {
+    return deleteFinderObjectCommentSpec;
+  }
+
+  public void setDeleteFinderObjectCommentSpec(
+      List<DeleteFinderObjectCommentItem> deleteFinderObjectCommentSpec) {
+    this.deleteFinderObjectCommentSpec = deleteFinderObjectCommentSpec;
+  }
+
+  public TaskSpec updateFinderObjectCommentFlagSpec(
+      List<UpdateFinderObjectCommentFlagItem> updateFinderObjectCommentFlagSpec) {
+    this.updateFinderObjectCommentFlagSpec = updateFinderObjectCommentFlagSpec;
+    return this;
+  }
+
+  public TaskSpec addUpdateFinderObjectCommentFlagSpecItem(
+      UpdateFinderObjectCommentFlagItem updateFinderObjectCommentFlagSpecItem) {
+    if (this.updateFinderObjectCommentFlagSpec == null) {
+      this.updateFinderObjectCommentFlagSpec = new ArrayList<UpdateFinderObjectCommentFlagItem>();
+    }
+    this.updateFinderObjectCommentFlagSpec.add(updateFinderObjectCommentFlagSpecItem);
+    return this;
+  }
+
+  /**
+   * Get updateFinderObjectCommentFlagSpec
+   *
+   * @return updateFinderObjectCommentFlagSpec
+   */
+  @ApiModelProperty(value = "")
+  public List<UpdateFinderObjectCommentFlagItem> getUpdateFinderObjectCommentFlagSpec() {
+    return updateFinderObjectCommentFlagSpec;
+  }
+
+  public void setUpdateFinderObjectCommentFlagSpec(
+      List<UpdateFinderObjectCommentFlagItem> updateFinderObjectCommentFlagSpec) {
+    this.updateFinderObjectCommentFlagSpec = updateFinderObjectCommentFlagSpec;
+  }
+
+  public TaskSpec updateAdgroupTimeSpec(List<UpdateAdgroupTimeItem> updateAdgroupTimeSpec) {
+    this.updateAdgroupTimeSpec = updateAdgroupTimeSpec;
+    return this;
+  }
+
+  public TaskSpec addUpdateAdgroupTimeSpecItem(UpdateAdgroupTimeItem updateAdgroupTimeSpecItem) {
+    if (this.updateAdgroupTimeSpec == null) {
+      this.updateAdgroupTimeSpec = new ArrayList<UpdateAdgroupTimeItem>();
+    }
+    this.updateAdgroupTimeSpec.add(updateAdgroupTimeSpecItem);
+    return this;
+  }
+
+  /**
+   * Get updateAdgroupTimeSpec
+   *
+   * @return updateAdgroupTimeSpec
+   */
+  @ApiModelProperty(value = "")
+  public List<UpdateAdgroupTimeItem> getUpdateAdgroupTimeSpec() {
+    return updateAdgroupTimeSpec;
+  }
+
+  public void setUpdateAdgroupTimeSpec(List<UpdateAdgroupTimeItem> updateAdgroupTimeSpec) {
+    this.updateAdgroupTimeSpec = updateAdgroupTimeSpec;
+  }
+
+  public TaskSpec updateAdgroupDateSpec(List<UpdateAdgroupDateItem> updateAdgroupDateSpec) {
+    this.updateAdgroupDateSpec = updateAdgroupDateSpec;
+    return this;
+  }
+
+  public TaskSpec addUpdateAdgroupDateSpecItem(UpdateAdgroupDateItem updateAdgroupDateSpecItem) {
+    if (this.updateAdgroupDateSpec == null) {
+      this.updateAdgroupDateSpec = new ArrayList<UpdateAdgroupDateItem>();
+    }
+    this.updateAdgroupDateSpec.add(updateAdgroupDateSpecItem);
+    return this;
+  }
+
+  /**
+   * Get updateAdgroupDateSpec
+   *
+   * @return updateAdgroupDateSpec
+   */
+  @ApiModelProperty(value = "")
+  public List<UpdateAdgroupDateItem> getUpdateAdgroupDateSpec() {
+    return updateAdgroupDateSpec;
+  }
+
+  public void setUpdateAdgroupDateSpec(List<UpdateAdgroupDateItem> updateAdgroupDateSpec) {
+    this.updateAdgroupDateSpec = updateAdgroupDateSpec;
+  }
+
+  public TaskSpec updateAdgroupBidAmountSpec(
+      List<UpdateAdgroupBidAmountItem> updateAdgroupBidAmountSpec) {
+    this.updateAdgroupBidAmountSpec = updateAdgroupBidAmountSpec;
+    return this;
+  }
+
+  public TaskSpec addUpdateAdgroupBidAmountSpecItem(
+      UpdateAdgroupBidAmountItem updateAdgroupBidAmountSpecItem) {
+    if (this.updateAdgroupBidAmountSpec == null) {
+      this.updateAdgroupBidAmountSpec = new ArrayList<UpdateAdgroupBidAmountItem>();
+    }
+    this.updateAdgroupBidAmountSpec.add(updateAdgroupBidAmountSpecItem);
+    return this;
+  }
+
+  /**
+   * Get updateAdgroupBidAmountSpec
+   *
+   * @return updateAdgroupBidAmountSpec
+   */
+  @ApiModelProperty(value = "")
+  public List<UpdateAdgroupBidAmountItem> getUpdateAdgroupBidAmountSpec() {
+    return updateAdgroupBidAmountSpec;
+  }
+
+  public void setUpdateAdgroupBidAmountSpec(
+      List<UpdateAdgroupBidAmountItem> updateAdgroupBidAmountSpec) {
+    this.updateAdgroupBidAmountSpec = updateAdgroupBidAmountSpec;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -431,7 +623,15 @@ public class TaskSpec {
             taskSpec.updateAdgroupDeepConversionWorthAdvancedRateSpec)
         && Objects.equals(
             this.updateDeepConversionBehaviorAdvancedBidSpec,
-            taskSpec.updateDeepConversionBehaviorAdvancedBidSpec);
+            taskSpec.updateDeepConversionBehaviorAdvancedBidSpec)
+        && Objects.equals(this.replyFinderObjectCommentSpec, taskSpec.replyFinderObjectCommentSpec)
+        && Objects.equals(
+            this.deleteFinderObjectCommentSpec, taskSpec.deleteFinderObjectCommentSpec)
+        && Objects.equals(
+            this.updateFinderObjectCommentFlagSpec, taskSpec.updateFinderObjectCommentFlagSpec)
+        && Objects.equals(this.updateAdgroupTimeSpec, taskSpec.updateAdgroupTimeSpec)
+        && Objects.equals(this.updateAdgroupDateSpec, taskSpec.updateAdgroupDateSpec)
+        && Objects.equals(this.updateAdgroupBidAmountSpec, taskSpec.updateAdgroupBidAmountSpec);
   }
 
   @Override
@@ -447,7 +647,13 @@ public class TaskSpec {
         updateAdgroupDailyBudgetSpec,
         updateAdgroupAutoAcquisitionSpec,
         updateAdgroupDeepConversionWorthAdvancedRateSpec,
-        updateDeepConversionBehaviorAdvancedBidSpec);
+        updateDeepConversionBehaviorAdvancedBidSpec,
+        replyFinderObjectCommentSpec,
+        deleteFinderObjectCommentSpec,
+        updateFinderObjectCommentFlagSpec,
+        updateAdgroupTimeSpec,
+        updateAdgroupDateSpec,
+        updateAdgroupBidAmountSpec);
   }
 
   @Override

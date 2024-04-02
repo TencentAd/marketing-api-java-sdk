@@ -27,9 +27,6 @@ public class UpdateAdgroupConfiguredStatusItem {
   @SerializedName("configured_status")
   private ConfiguredStatus configuredStatus = null;
 
-  @SerializedName("account_id")
-  private Long accountId = null;
-
   public UpdateAdgroupConfiguredStatusItem adgroupId(Long adgroupId) {
     this.adgroupId = adgroupId;
     return this;
@@ -68,25 +65,6 @@ public class UpdateAdgroupConfiguredStatusItem {
     this.configuredStatus = configuredStatus;
   }
 
-  public UpdateAdgroupConfiguredStatusItem accountId(Long accountId) {
-    this.accountId = accountId;
-    return this;
-  }
-
-  /**
-   * Get accountId
-   *
-   * @return accountId
-   */
-  @ApiModelProperty(value = "")
-  public Long getAccountId() {
-    return accountId;
-  }
-
-  public void setAccountId(Long accountId) {
-    this.accountId = accountId;
-  }
-
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -98,13 +76,13 @@ public class UpdateAdgroupConfiguredStatusItem {
     UpdateAdgroupConfiguredStatusItem updateAdgroupConfiguredStatusItem =
         (UpdateAdgroupConfiguredStatusItem) o;
     return Objects.equals(this.adgroupId, updateAdgroupConfiguredStatusItem.adgroupId)
-        && Objects.equals(this.configuredStatus, updateAdgroupConfiguredStatusItem.configuredStatus)
-        && Objects.equals(this.accountId, updateAdgroupConfiguredStatusItem.accountId);
+        && Objects.equals(
+            this.configuredStatus, updateAdgroupConfiguredStatusItem.configuredStatus);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(adgroupId, configuredStatus, accountId);
+    return Objects.hash(adgroupId, configuredStatus);
   }
 
   @Override

@@ -19,8 +19,8 @@ import java.util.Objects;
 
 /** ImagesUpdateRequest */
 public class ImagesUpdateRequest {
-  @SerializedName("advertiser_id")
-  private Long advertiserId = null;
+  @SerializedName("account_id")
+  private Long accountId = null;
 
   @SerializedName("image_id")
   private String imageId = null;
@@ -28,23 +28,23 @@ public class ImagesUpdateRequest {
   @SerializedName("description")
   private String description = null;
 
-  public ImagesUpdateRequest advertiserId(Long advertiserId) {
-    this.advertiserId = advertiserId;
+  public ImagesUpdateRequest accountId(Long accountId) {
+    this.accountId = accountId;
     return this;
   }
 
   /**
-   * Get advertiserId
+   * Get accountId
    *
-   * @return advertiserId
+   * @return accountId
    */
   @ApiModelProperty(value = "")
-  public Long getAdvertiserId() {
-    return advertiserId;
+  public Long getAccountId() {
+    return accountId;
   }
 
-  public void setAdvertiserId(Long advertiserId) {
-    this.advertiserId = advertiserId;
+  public void setAccountId(Long accountId) {
+    this.accountId = accountId;
   }
 
   public ImagesUpdateRequest imageId(String imageId) {
@@ -94,14 +94,14 @@ public class ImagesUpdateRequest {
       return false;
     }
     ImagesUpdateRequest imagesUpdateRequest = (ImagesUpdateRequest) o;
-    return Objects.equals(this.advertiserId, imagesUpdateRequest.advertiserId)
+    return Objects.equals(this.accountId, imagesUpdateRequest.accountId)
         && Objects.equals(this.imageId, imagesUpdateRequest.imageId)
         && Objects.equals(this.description, imagesUpdateRequest.description);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(advertiserId, imageId, description);
+    return Objects.hash(accountId, imageId, description);
   }
 
   @Override

@@ -18,6 +18,7 @@ import com.tencent.ads.ApiException;
 import com.tencent.ads.anno.*;
 import com.tencent.ads.api.v3.MarketingTargetAssetsApi;
 import com.tencent.ads.exception.TencentAdsResponseException;
+import com.tencent.ads.model.v3.FilteringStruct;
 import com.tencent.ads.model.v3.MarketingTargetAssetsAddRequest;
 import com.tencent.ads.model.v3.MarketingTargetAssetsAddResponse;
 import com.tencent.ads.model.v3.MarketingTargetAssetsAddResponseData;
@@ -71,6 +72,7 @@ public class MarketingTargetAssetsApiContainer extends ApiContainer {
    *
    * @param accountId (required)
    * @param marketingTargetType (required)
+   * @param filtering (optional)
    * @param page (optional)
    * @param pageSize (optional)
    * @param fields 返回参数的字段列表 (optional)
@@ -81,6 +83,7 @@ public class MarketingTargetAssetsApiContainer extends ApiContainer {
   public MarketingTargetAssetsGetResponseData marketingTargetAssetsGet(
       Long accountId,
       String marketingTargetType,
+      List<FilteringStruct> filtering,
       Long page,
       Long pageSize,
       List<String> fields,
@@ -88,7 +91,7 @@ public class MarketingTargetAssetsApiContainer extends ApiContainer {
       throws ApiException, TencentAdsResponseException {
     MarketingTargetAssetsGetResponse resp =
         api.marketingTargetAssetsGet(
-            accountId, marketingTargetType, page, pageSize, fields, headerPair);
+            accountId, marketingTargetType, filtering, page, pageSize, fields, headerPair);
     handleResponse(gson.toJson(resp));
     return resp.getData();
   }

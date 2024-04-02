@@ -19,29 +19,29 @@ import java.util.Objects;
 
 /** ImagesDeleteRequest */
 public class ImagesDeleteRequest {
-  @SerializedName("advertiser_id")
-  private Long advertiserId = null;
+  @SerializedName("account_id")
+  private Long accountId = null;
 
   @SerializedName("image_id")
   private String imageId = null;
 
-  public ImagesDeleteRequest advertiserId(Long advertiserId) {
-    this.advertiserId = advertiserId;
+  public ImagesDeleteRequest accountId(Long accountId) {
+    this.accountId = accountId;
     return this;
   }
 
   /**
-   * Get advertiserId
+   * Get accountId
    *
-   * @return advertiserId
+   * @return accountId
    */
   @ApiModelProperty(value = "")
-  public Long getAdvertiserId() {
-    return advertiserId;
+  public Long getAccountId() {
+    return accountId;
   }
 
-  public void setAdvertiserId(Long advertiserId) {
-    this.advertiserId = advertiserId;
+  public void setAccountId(Long accountId) {
+    this.accountId = accountId;
   }
 
   public ImagesDeleteRequest imageId(String imageId) {
@@ -72,13 +72,13 @@ public class ImagesDeleteRequest {
       return false;
     }
     ImagesDeleteRequest imagesDeleteRequest = (ImagesDeleteRequest) o;
-    return Objects.equals(this.advertiserId, imagesDeleteRequest.advertiserId)
+    return Objects.equals(this.accountId, imagesDeleteRequest.accountId)
         && Objects.equals(this.imageId, imagesDeleteRequest.imageId);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(advertiserId, imageId);
+    return Objects.hash(accountId, imageId);
   }
 
   @Override

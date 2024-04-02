@@ -4,7 +4,7 @@ import com.tencent.ads.ApiContextConfig;
 import com.tencent.ads.exception.TencentAdsResponseException;
 import com.tencent.ads.exception.TencentAdsSDKException;
 import com.tencent.ads.model.v3.*;
-import com.tencent.ads.model.v3.FilteringStruct;
+import com.tencent.ads.model.v3.AsyncTaskFilteringStruct;
 import com.tencent.ads.v3.TencentAds;
 import java.util.Arrays;
 import java.util.List;
@@ -18,7 +18,7 @@ public class GetAsyncTasks {
 
   public Long accountId = null;
 
-  public List<FilteringStruct> filtering = null;
+  public List<AsyncTaskFilteringStruct> filtering = null;
 
   public Long page = null;
 

@@ -27,9 +27,6 @@ public class UpdateAdgroupDailyBudgetItem {
   @SerializedName("daily_budget")
   private Long dailyBudget = null;
 
-  @SerializedName("account_id")
-  private Long accountId = null;
-
   public UpdateAdgroupDailyBudgetItem adgroupId(Long adgroupId) {
     this.adgroupId = adgroupId;
     return this;
@@ -68,25 +65,6 @@ public class UpdateAdgroupDailyBudgetItem {
     this.dailyBudget = dailyBudget;
   }
 
-  public UpdateAdgroupDailyBudgetItem accountId(Long accountId) {
-    this.accountId = accountId;
-    return this;
-  }
-
-  /**
-   * Get accountId
-   *
-   * @return accountId
-   */
-  @ApiModelProperty(value = "")
-  public Long getAccountId() {
-    return accountId;
-  }
-
-  public void setAccountId(Long accountId) {
-    this.accountId = accountId;
-  }
-
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -97,13 +75,12 @@ public class UpdateAdgroupDailyBudgetItem {
     }
     UpdateAdgroupDailyBudgetItem updateAdgroupDailyBudgetItem = (UpdateAdgroupDailyBudgetItem) o;
     return Objects.equals(this.adgroupId, updateAdgroupDailyBudgetItem.adgroupId)
-        && Objects.equals(this.dailyBudget, updateAdgroupDailyBudgetItem.dailyBudget)
-        && Objects.equals(this.accountId, updateAdgroupDailyBudgetItem.accountId);
+        && Objects.equals(this.dailyBudget, updateAdgroupDailyBudgetItem.dailyBudget);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(adgroupId, dailyBudget, accountId);
+    return Objects.hash(adgroupId, dailyBudget);
   }
 
   @Override

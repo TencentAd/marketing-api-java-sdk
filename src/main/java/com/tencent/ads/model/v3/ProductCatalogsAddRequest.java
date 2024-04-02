@@ -37,6 +37,9 @@ public class ProductCatalogsAddRequest {
   @SerializedName("catalog_version")
   private Long catalogVersion = null;
 
+  @SerializedName("business_unit_id")
+  private Long businessUnitId = null;
+
   public ProductCatalogsAddRequest accountId(Long accountId) {
     this.accountId = accountId;
     return this;
@@ -151,6 +154,25 @@ public class ProductCatalogsAddRequest {
     this.catalogVersion = catalogVersion;
   }
 
+  public ProductCatalogsAddRequest businessUnitId(Long businessUnitId) {
+    this.businessUnitId = businessUnitId;
+    return this;
+  }
+
+  /**
+   * Get businessUnitId
+   *
+   * @return businessUnitId
+   */
+  @ApiModelProperty(value = "")
+  public Long getBusinessUnitId() {
+    return businessUnitId;
+  }
+
+  public void setBusinessUnitId(Long businessUnitId) {
+    this.businessUnitId = businessUnitId;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -165,13 +187,20 @@ public class ProductCatalogsAddRequest {
         && Objects.equals(this.catalogScaleType, productCatalogsAddRequest.catalogScaleType)
         && Objects.equals(this.catalogType, productCatalogsAddRequest.catalogType)
         && Objects.equals(this.industryType, productCatalogsAddRequest.industryType)
-        && Objects.equals(this.catalogVersion, productCatalogsAddRequest.catalogVersion);
+        && Objects.equals(this.catalogVersion, productCatalogsAddRequest.catalogVersion)
+        && Objects.equals(this.businessUnitId, productCatalogsAddRequest.businessUnitId);
   }
 
   @Override
   public int hashCode() {
     return Objects.hash(
-        accountId, catalogName, catalogScaleType, catalogType, industryType, catalogVersion);
+        accountId,
+        catalogName,
+        catalogScaleType,
+        catalogType,
+        industryType,
+        catalogVersion,
+        businessUnitId);
   }
 
   @Override

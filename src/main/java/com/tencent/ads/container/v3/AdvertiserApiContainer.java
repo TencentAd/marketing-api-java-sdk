@@ -58,7 +58,7 @@ public class AdvertiserApiContainer extends ApiContainer {
    * @param paginationMode (required)
    * @param pageSize (required)
    * @param agencyId (optional)
-   * @param advertiserId (optional)
+   * @param accountId (optional)
    * @param filtering (optional)
    * @param page (optional)
    * @param cursor (optional)
@@ -71,7 +71,7 @@ public class AdvertiserApiContainer extends ApiContainer {
       String paginationMode,
       Long pageSize,
       Long agencyId,
-      Long advertiserId,
+      Long accountId,
       List<FilteringStruct> filtering,
       Long page,
       Long cursor,
@@ -83,7 +83,7 @@ public class AdvertiserApiContainer extends ApiContainer {
             paginationMode,
             pageSize,
             agencyId,
-            advertiserId,
+            accountId,
             filtering,
             page,
             cursor,
@@ -109,7 +109,7 @@ public class AdvertiserApiContainer extends ApiContainer {
   }
 
   /**
-   * 更新广告主日限额信息
+   * 批量修改广告主日限额
    *
    * @param data (required)
    * @return AdvertiserUpdateDailyBudgetResponse

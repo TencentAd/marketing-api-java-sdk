@@ -30,9 +30,6 @@ public class UpdateAdgroupAutoAcquisitionItem {
   @SerializedName("auto_acquisition_budget")
   private Long autoAcquisitionBudget = null;
 
-  @SerializedName("account_id")
-  private Long accountId = null;
-
   public UpdateAdgroupAutoAcquisitionItem adgroupId(Long adgroupId) {
     this.adgroupId = adgroupId;
     return this;
@@ -90,25 +87,6 @@ public class UpdateAdgroupAutoAcquisitionItem {
     this.autoAcquisitionBudget = autoAcquisitionBudget;
   }
 
-  public UpdateAdgroupAutoAcquisitionItem accountId(Long accountId) {
-    this.accountId = accountId;
-    return this;
-  }
-
-  /**
-   * Get accountId
-   *
-   * @return accountId
-   */
-  @ApiModelProperty(value = "")
-  public Long getAccountId() {
-    return accountId;
-  }
-
-  public void setAccountId(Long accountId) {
-    this.accountId = accountId;
-  }
-
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -123,13 +101,12 @@ public class UpdateAdgroupAutoAcquisitionItem {
         && Objects.equals(
             this.autoAcquisitionEnabled, updateAdgroupAutoAcquisitionItem.autoAcquisitionEnabled)
         && Objects.equals(
-            this.autoAcquisitionBudget, updateAdgroupAutoAcquisitionItem.autoAcquisitionBudget)
-        && Objects.equals(this.accountId, updateAdgroupAutoAcquisitionItem.accountId);
+            this.autoAcquisitionBudget, updateAdgroupAutoAcquisitionItem.autoAcquisitionBudget);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(adgroupId, autoAcquisitionEnabled, autoAcquisitionBudget, accountId);
+    return Objects.hash(adgroupId, autoAcquisitionEnabled, autoAcquisitionBudget);
   }
 
   @Override

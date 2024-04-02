@@ -22,19 +22,19 @@ import java.util.Objects;
 /** LabelsGetResponseData */
 public class LabelsGetResponseData {
   @SerializedName("list")
-  private List<Label> list = null;
+  private List<LabelsGetLabel> list = null;
 
   @SerializedName("page_info")
   private PageInfo pageInfo = null;
 
-  public LabelsGetResponseData list(List<Label> list) {
+  public LabelsGetResponseData list(List<LabelsGetLabel> list) {
     this.list = list;
     return this;
   }
 
-  public LabelsGetResponseData addListItem(Label listItem) {
+  public LabelsGetResponseData addListItem(LabelsGetLabel listItem) {
     if (this.list == null) {
-      this.list = new ArrayList<Label>();
+      this.list = new ArrayList<LabelsGetLabel>();
     }
     this.list.add(listItem);
     return this;
@@ -46,11 +46,11 @@ public class LabelsGetResponseData {
    * @return list
    */
   @ApiModelProperty(value = "")
-  public List<Label> getList() {
+  public List<LabelsGetLabel> getList() {
     return list;
   }
 
-  public void setList(List<Label> list) {
+  public void setList(List<LabelsGetLabel> list) {
     this.list = list;
   }
 

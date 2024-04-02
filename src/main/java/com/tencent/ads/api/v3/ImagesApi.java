@@ -58,7 +58,7 @@ public class ImagesApi {
   /**
    * Build call for imagesAdd
    *
-   * @param advertiserId (required)
+   * @param accountId (required)
    * @param uploadType (required)
    * @param imageSignature (required)
    * @param imageFile (optional)
@@ -74,7 +74,7 @@ public class ImagesApi {
    * @throws ApiException If fail to serialize the request body object
    */
   public com.squareup.okhttp.Call imagesAddCall(
-      Long advertiserId,
+      Long accountId,
       String uploadType,
       String imageSignature,
       File imageFile,
@@ -100,7 +100,7 @@ public class ImagesApi {
     Map<String, String> localVarHeaderParams = new HashMap<String, String>();
 
     Map<String, Object> localVarFormParams = new HashMap<String, Object>();
-    if (advertiserId != null) localVarFormParams.put("advertiser_id", advertiserId);
+    if (accountId != null) localVarFormParams.put("account_id", accountId);
     if (uploadType != null) localVarFormParams.put("upload_type", uploadType);
     if (imageSignature != null) localVarFormParams.put("image_signature", imageSignature);
     if (imageFile != null) localVarFormParams.put("image_file", imageFile);
@@ -161,7 +161,7 @@ public class ImagesApi {
 
   @SuppressWarnings("rawtypes")
   private com.squareup.okhttp.Call imagesAddValidateBeforeCall(
-      Long advertiserId,
+      Long accountId,
       String uploadType,
       String imageSignature,
       File imageFile,
@@ -176,10 +176,10 @@ public class ImagesApi {
       String... headerPair)
       throws ApiException {
 
-    // verify the required parameter 'advertiserId' is set
-    if (advertiserId == null) {
+    // verify the required parameter 'accountId' is set
+    if (accountId == null) {
       throw new ApiException(
-          "Missing the required parameter 'advertiserId' when calling imagesAdd(Async)");
+          "Missing the required parameter 'accountId' when calling imagesAdd(Async)");
     }
 
     // verify the required parameter 'uploadType' is set
@@ -196,7 +196,7 @@ public class ImagesApi {
 
     com.squareup.okhttp.Call call =
         imagesAddCall(
-            advertiserId,
+            accountId,
             uploadType,
             imageSignature,
             imageFile,
@@ -215,7 +215,7 @@ public class ImagesApi {
   /**
    * 添加图片文件
    *
-   * @param advertiserId (required)
+   * @param accountId (required)
    * @param uploadType (required)
    * @param imageSignature (required)
    * @param imageFile (optional)
@@ -230,7 +230,7 @@ public class ImagesApi {
    *     response body
    */
   public ImagesAddResponse imagesAdd(
-      Long advertiserId,
+      Long accountId,
       String uploadType,
       String imageSignature,
       File imageFile,
@@ -244,7 +244,7 @@ public class ImagesApi {
       throws ApiException {
     ApiResponse<ImagesAddResponse> resp =
         imagesAddWithHttpInfo(
-            advertiserId,
+            accountId,
             uploadType,
             imageSignature,
             imageFile,
@@ -261,7 +261,7 @@ public class ImagesApi {
   /**
    * 添加图片文件
    *
-   * @param advertiserId (required)
+   * @param accountId (required)
    * @param uploadType (required)
    * @param imageSignature (required)
    * @param imageFile (optional)
@@ -276,7 +276,7 @@ public class ImagesApi {
    *     response body
    */
   public ApiResponse<ImagesAddResponse> imagesAddWithHttpInfo(
-      Long advertiserId,
+      Long accountId,
       String uploadType,
       String imageSignature,
       File imageFile,
@@ -290,7 +290,7 @@ public class ImagesApi {
       throws ApiException {
     com.squareup.okhttp.Call call =
         imagesAddValidateBeforeCall(
-            advertiserId,
+            accountId,
             uploadType,
             imageSignature,
             imageFile,
@@ -310,7 +310,7 @@ public class ImagesApi {
   /**
    * 添加图片文件 (asynchronously)
    *
-   * @param advertiserId (required)
+   * @param accountId (required)
    * @param uploadType (required)
    * @param imageSignature (required)
    * @param imageFile (optional)
@@ -325,7 +325,7 @@ public class ImagesApi {
    * @throws ApiException If fail to process the API call, e.g. serializing the request body object
    */
   public com.squareup.okhttp.Call imagesAddAsync(
-      Long advertiserId,
+      Long accountId,
       String uploadType,
       String imageSignature,
       File imageFile,
@@ -362,7 +362,7 @@ public class ImagesApi {
 
     com.squareup.okhttp.Call call =
         imagesAddValidateBeforeCall(
-            advertiserId,
+            accountId,
             uploadType,
             imageSignature,
             imageFile,

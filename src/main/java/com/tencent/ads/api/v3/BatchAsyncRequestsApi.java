@@ -24,7 +24,7 @@ import com.tencent.ads.ProgressResponseBody;
 import com.tencent.ads.model.v3.BatchAsyncRequestsAddRequest;
 import com.tencent.ads.model.v3.BatchAsyncRequestsAddResponse;
 import com.tencent.ads.model.v3.BatchAsyncRequestsGetResponse;
-import com.tencent.ads.model.v3.FilteringStruct;
+import com.tencent.ads.model.v3.BatchAsyncTaskFilteringStruct;
 import java.io.IOException;
 import java.lang.reflect.Type;
 import java.util.ArrayList;
@@ -234,7 +234,7 @@ public class BatchAsyncRequestsApi {
    */
   public com.squareup.okhttp.Call batchAsyncRequestsGetCall(
       Long accountId,
-      List<FilteringStruct> filtering,
+      List<BatchAsyncTaskFilteringStruct> filtering,
       Long page,
       Long pageSize,
       List<String> fields,
@@ -316,7 +316,7 @@ public class BatchAsyncRequestsApi {
   @SuppressWarnings("rawtypes")
   private com.squareup.okhttp.Call batchAsyncRequestsGetValidateBeforeCall(
       Long accountId,
-      List<FilteringStruct> filtering,
+      List<BatchAsyncTaskFilteringStruct> filtering,
       Long page,
       Long pageSize,
       List<String> fields,
@@ -358,7 +358,7 @@ public class BatchAsyncRequestsApi {
    */
   public BatchAsyncRequestsGetResponse batchAsyncRequestsGet(
       Long accountId,
-      List<FilteringStruct> filtering,
+      List<BatchAsyncTaskFilteringStruct> filtering,
       Long page,
       Long pageSize,
       List<String> fields,
@@ -383,7 +383,7 @@ public class BatchAsyncRequestsApi {
    */
   public ApiResponse<BatchAsyncRequestsGetResponse> batchAsyncRequestsGetWithHttpInfo(
       Long accountId,
-      List<FilteringStruct> filtering,
+      List<BatchAsyncTaskFilteringStruct> filtering,
       Long page,
       Long pageSize,
       List<String> fields,
@@ -410,7 +410,7 @@ public class BatchAsyncRequestsApi {
    */
   public com.squareup.okhttp.Call batchAsyncRequestsGetAsync(
       Long accountId,
-      List<FilteringStruct> filtering,
+      List<BatchAsyncTaskFilteringStruct> filtering,
       Long page,
       Long pageSize,
       List<String> fields,

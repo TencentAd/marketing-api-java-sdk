@@ -62,9 +62,6 @@ public class DynamicCreativesGetListStruct {
   @SerializedName("is_deleted")
   private Boolean isDeleted = null;
 
-  @SerializedName("system_status")
-  private DynamicCreativeStatus systemStatus = null;
-
   @SerializedName("created_time")
   private Long createdTime = null;
 
@@ -329,25 +326,6 @@ public class DynamicCreativesGetListStruct {
     this.isDeleted = isDeleted;
   }
 
-  public DynamicCreativesGetListStruct systemStatus(DynamicCreativeStatus systemStatus) {
-    this.systemStatus = systemStatus;
-    return this;
-  }
-
-  /**
-   * Get systemStatus
-   *
-   * @return systemStatus
-   */
-  @ApiModelProperty(value = "")
-  public DynamicCreativeStatus getSystemStatus() {
-    return systemStatus;
-  }
-
-  public void setSystemStatus(DynamicCreativeStatus systemStatus) {
-    this.systemStatus = systemStatus;
-  }
-
   public DynamicCreativesGetListStruct createdTime(Long createdTime) {
     this.createdTime = createdTime;
     return this;
@@ -480,7 +458,6 @@ public class DynamicCreativesGetListStruct {
         && Objects.equals(
             this.enableBreakthroughSiteset, dynamicCreativesGetListStruct.enableBreakthroughSiteset)
         && Objects.equals(this.isDeleted, dynamicCreativesGetListStruct.isDeleted)
-        && Objects.equals(this.systemStatus, dynamicCreativesGetListStruct.systemStatus)
         && Objects.equals(this.createdTime, dynamicCreativesGetListStruct.createdTime)
         && Objects.equals(this.lastModifiedTime, dynamicCreativesGetListStruct.lastModifiedTime)
         && Objects.equals(
@@ -508,7 +485,6 @@ public class DynamicCreativesGetListStruct {
         configuredStatus,
         enableBreakthroughSiteset,
         isDeleted,
-        systemStatus,
         createdTime,
         lastModifiedTime,
         dynamicCreativeStatusInfo,

@@ -115,8 +115,11 @@ public class App {
   @Inject OrganizationAccountRelationApiContainer organizationAccountRelationApiContainer;
   @Inject PagesApiContainer pagesApiContainer;
   @Inject ProductCatalogsApiContainer productCatalogsApiContainer;
+  @Inject ProductCategoriesListApiContainer productCategoriesListApiContainer;
   @Inject ProductItemsApiContainer productItemsApiContainer;
+  @Inject ProductItemsDetailApiContainer productItemsDetailApiContainer;
   @Inject ProductSeriesApiContainer productSeriesApiContainer;
+  @Inject ProductsSystemStatusApiContainer productsSystemStatusApiContainer;
   @Inject ProfilesApiContainer profilesApiContainer;
   @Inject ProgrammedApiContainer programmedApiContainer;
   @Inject ProgrammedTemplateApiContainer programmedTemplateApiContainer;
@@ -128,6 +131,7 @@ public class App {
   @Inject TargetingTagReportsApiContainer targetingTagReportsApiContainer;
   @Inject TargetingTagsApiContainer targetingTagsApiContainer;
   @Inject TargetingTagsUvApiContainer targetingTagsUvApiContainer;
+  @Inject TargetingsApiContainer targetingsApiContainer;
   @Inject UnionPositionPackagesApiContainer unionPositionPackagesApiContainer;
   @Inject UserActionSetReportsApiContainer userActionSetReportsApiContainer;
   @Inject UserActionSetsApiContainer userActionSetsApiContainer;
@@ -514,12 +518,24 @@ public class App {
     return productCatalogsApiContainer;
   }
 
+  public ProductCategoriesListApiContainer productCategoriesList() {
+    return productCategoriesListApiContainer;
+  }
+
   public ProductItemsApiContainer productItems() {
     return productItemsApiContainer;
   }
 
+  public ProductItemsDetailApiContainer productItemsDetail() {
+    return productItemsDetailApiContainer;
+  }
+
   public ProductSeriesApiContainer productSeries() {
     return productSeriesApiContainer;
+  }
+
+  public ProductsSystemStatusApiContainer productsSystemStatus() {
+    return productsSystemStatusApiContainer;
   }
 
   public ProfilesApiContainer profiles() {
@@ -564,6 +580,10 @@ public class App {
 
   public TargetingTagsUvApiContainer targetingTagsUv() {
     return targetingTagsUvApiContainer;
+  }
+
+  public TargetingsApiContainer targetings() {
+    return targetingsApiContainer;
   }
 
   public UnionPositionPackagesApiContainer unionPositionPackages() {

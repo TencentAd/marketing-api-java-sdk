@@ -14,7 +14,7 @@ public class AddImages {
   /** TencentAds */
   public TencentAds tencentAds;
 
-  public Long advertiserId = null;
+  public Long accountId = null;
 
   public String uploadType = "UPLOAD_TYPE_FILE";
 
@@ -49,7 +49,7 @@ public class AddImages {
         tencentAds
             .images()
             .imagesAdd(
-                advertiserId,
+                accountId,
                 uploadType,
                 imageSignature,
                 imageFile,

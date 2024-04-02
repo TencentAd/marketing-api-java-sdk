@@ -22,20 +22,21 @@ import java.util.Objects;
 /** MarketingTargetAssetPropertyValuesGetResponseData */
 public class MarketingTargetAssetPropertyValuesGetResponseData {
   @SerializedName("list")
-  private List<GetPropertyListStruct> list = null;
+  private List<MarketingTargetAssetPropertyValuesGetGetPropertyListStruct> list = null;
 
   @SerializedName("page_info")
   private PageInfo pageInfo = null;
 
-  public MarketingTargetAssetPropertyValuesGetResponseData list(List<GetPropertyListStruct> list) {
+  public MarketingTargetAssetPropertyValuesGetResponseData list(
+      List<MarketingTargetAssetPropertyValuesGetGetPropertyListStruct> list) {
     this.list = list;
     return this;
   }
 
   public MarketingTargetAssetPropertyValuesGetResponseData addListItem(
-      GetPropertyListStruct listItem) {
+      MarketingTargetAssetPropertyValuesGetGetPropertyListStruct listItem) {
     if (this.list == null) {
-      this.list = new ArrayList<GetPropertyListStruct>();
+      this.list = new ArrayList<MarketingTargetAssetPropertyValuesGetGetPropertyListStruct>();
     }
     this.list.add(listItem);
     return this;
@@ -47,11 +48,11 @@ public class MarketingTargetAssetPropertyValuesGetResponseData {
    * @return list
    */
   @ApiModelProperty(value = "")
-  public List<GetPropertyListStruct> getList() {
+  public List<MarketingTargetAssetPropertyValuesGetGetPropertyListStruct> getList() {
     return list;
   }
 
-  public void setList(List<GetPropertyListStruct> list) {
+  public void setList(List<MarketingTargetAssetPropertyValuesGetGetPropertyListStruct> list) {
     this.list = list;
   }
 

@@ -228,7 +228,7 @@ public class AdvertiserApi {
    * @param paginationMode (required)
    * @param pageSize (required)
    * @param agencyId (optional)
-   * @param advertiserId (optional)
+   * @param accountId (optional)
    * @param filtering (optional)
    * @param page (optional)
    * @param cursor (optional)
@@ -242,7 +242,7 @@ public class AdvertiserApi {
       String paginationMode,
       Long pageSize,
       Long agencyId,
-      Long advertiserId,
+      Long accountId,
       List<FilteringStruct> filtering,
       Long page,
       Long cursor,
@@ -260,8 +260,8 @@ public class AdvertiserApi {
     List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
     if (agencyId != null)
       localVarQueryParams.addAll(apiClient.parameterToPair("agency_id", agencyId));
-    if (advertiserId != null)
-      localVarQueryParams.addAll(apiClient.parameterToPair("advertiser_id", advertiserId));
+    if (accountId != null)
+      localVarQueryParams.addAll(apiClient.parameterToPair("account_id", accountId));
     if (filtering != null)
       localVarCollectionQueryParams.addAll(
           apiClient.parameterToPairs("multi", "filtering", filtering));
@@ -332,7 +332,7 @@ public class AdvertiserApi {
       String paginationMode,
       Long pageSize,
       Long agencyId,
-      Long advertiserId,
+      Long accountId,
       List<FilteringStruct> filtering,
       Long page,
       Long cursor,
@@ -365,7 +365,7 @@ public class AdvertiserApi {
             paginationMode,
             pageSize,
             agencyId,
-            advertiserId,
+            accountId,
             filtering,
             page,
             cursor,
@@ -382,7 +382,7 @@ public class AdvertiserApi {
    * @param paginationMode (required)
    * @param pageSize (required)
    * @param agencyId (optional)
-   * @param advertiserId (optional)
+   * @param accountId (optional)
    * @param filtering (optional)
    * @param page (optional)
    * @param cursor (optional)
@@ -395,7 +395,7 @@ public class AdvertiserApi {
       String paginationMode,
       Long pageSize,
       Long agencyId,
-      Long advertiserId,
+      Long accountId,
       List<FilteringStruct> filtering,
       Long page,
       Long cursor,
@@ -407,7 +407,7 @@ public class AdvertiserApi {
             paginationMode,
             pageSize,
             agencyId,
-            advertiserId,
+            accountId,
             filtering,
             page,
             cursor,
@@ -422,7 +422,7 @@ public class AdvertiserApi {
    * @param paginationMode (required)
    * @param pageSize (required)
    * @param agencyId (optional)
-   * @param advertiserId (optional)
+   * @param accountId (optional)
    * @param filtering (optional)
    * @param page (optional)
    * @param cursor (optional)
@@ -435,7 +435,7 @@ public class AdvertiserApi {
       String paginationMode,
       Long pageSize,
       Long agencyId,
-      Long advertiserId,
+      Long accountId,
       List<FilteringStruct> filtering,
       Long page,
       Long cursor,
@@ -447,7 +447,7 @@ public class AdvertiserApi {
             paginationMode,
             pageSize,
             agencyId,
-            advertiserId,
+            accountId,
             filtering,
             page,
             cursor,
@@ -465,7 +465,7 @@ public class AdvertiserApi {
    * @param paginationMode (required)
    * @param pageSize (required)
    * @param agencyId (optional)
-   * @param advertiserId (optional)
+   * @param accountId (optional)
    * @param filtering (optional)
    * @param page (optional)
    * @param cursor (optional)
@@ -478,7 +478,7 @@ public class AdvertiserApi {
       String paginationMode,
       Long pageSize,
       Long agencyId,
-      Long advertiserId,
+      Long accountId,
       List<FilteringStruct> filtering,
       Long page,
       Long cursor,
@@ -513,7 +513,7 @@ public class AdvertiserApi {
             paginationMode,
             pageSize,
             agencyId,
-            advertiserId,
+            accountId,
             filtering,
             page,
             cursor,
@@ -788,7 +788,7 @@ public class AdvertiserApi {
   }
 
   /**
-   * 更新广告主日限额信息
+   * 批量修改广告主日限额
    *
    * @param data (required)
    * @return AdvertiserUpdateDailyBudgetResponse
@@ -803,7 +803,7 @@ public class AdvertiserApi {
   }
 
   /**
-   * 更新广告主日限额信息
+   * 批量修改广告主日限额
    *
    * @param data (required)
    * @return ApiResponse&lt;AdvertiserUpdateDailyBudgetResponse&gt;
@@ -819,7 +819,7 @@ public class AdvertiserApi {
   }
 
   /**
-   * 更新广告主日限额信息 (asynchronously)
+   * 批量修改广告主日限额 (asynchronously)
    *
    * @param data (required)
    * @param callback The callback to be executed when the API call finishes

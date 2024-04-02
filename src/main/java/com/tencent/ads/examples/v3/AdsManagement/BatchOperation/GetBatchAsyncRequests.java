@@ -4,7 +4,7 @@ import com.tencent.ads.ApiContextConfig;
 import com.tencent.ads.exception.TencentAdsResponseException;
 import com.tencent.ads.exception.TencentAdsSDKException;
 import com.tencent.ads.model.v3.*;
-import com.tencent.ads.model.v3.FilteringStruct;
+import com.tencent.ads.model.v3.BatchAsyncTaskFilteringStruct;
 import com.tencent.ads.v3.TencentAds;
 import java.util.List;
 
@@ -17,7 +17,7 @@ public class GetBatchAsyncRequests {
 
   public Long accountId = null;
 
-  public List<FilteringStruct> filtering = null;
+  public List<BatchAsyncTaskFilteringStruct> filtering = null;
 
   public Long page = null;
 

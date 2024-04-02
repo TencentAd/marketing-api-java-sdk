@@ -122,7 +122,7 @@ public class AdgroupsApiContainer extends ApiContainer {
   }
 
   /**
-   * 更新广告组出价
+   * 批量修改广告组出价
    *
    * @param data (required)
    * @return AdgroupsUpdateBidAmountResponse
@@ -138,7 +138,7 @@ public class AdgroupsApiContainer extends ApiContainer {
   }
 
   /**
-   * 更新广告组状态
+   * 批量修改广告组开启/暂停状态
    *
    * @param data (required)
    * @return AdgroupsUpdateConfiguredStatusResponse
@@ -155,7 +155,7 @@ public class AdgroupsApiContainer extends ApiContainer {
   }
 
   /**
-   * 更新广告组日限额信息
+   * 批量修改广告组日限额
    *
    * @param data (required)
    * @return AdgroupsUpdateDailyBudgetResponse
@@ -171,7 +171,7 @@ public class AdgroupsApiContainer extends ApiContainer {
   }
 
   /**
-   * 更新广告组投放时间
+   * 批量修改广告组投放起止时间
    *
    * @param data (required)
    * @return AdgroupsUpdateDatetimeResponse

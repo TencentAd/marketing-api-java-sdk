@@ -224,6 +224,12 @@ public class AdgroupsGetListStruct {
   @SerializedName("mpa_spec")
   private MpaSpec mpaSpec = null;
 
+  @SerializedName("short_play_pay_type")
+  private ShortPlayPayType shortPlayPayType = null;
+
+  @SerializedName("sell_strategy_id")
+  private Long sellStrategyId = null;
+
   public AdgroupsGetListStruct targeting(ReadTargetingSetting targeting) {
     this.targeting = targeting;
     return this;
@@ -1536,6 +1542,44 @@ public class AdgroupsGetListStruct {
     this.mpaSpec = mpaSpec;
   }
 
+  public AdgroupsGetListStruct shortPlayPayType(ShortPlayPayType shortPlayPayType) {
+    this.shortPlayPayType = shortPlayPayType;
+    return this;
+  }
+
+  /**
+   * Get shortPlayPayType
+   *
+   * @return shortPlayPayType
+   */
+  @ApiModelProperty(value = "")
+  public ShortPlayPayType getShortPlayPayType() {
+    return shortPlayPayType;
+  }
+
+  public void setShortPlayPayType(ShortPlayPayType shortPlayPayType) {
+    this.shortPlayPayType = shortPlayPayType;
+  }
+
+  public AdgroupsGetListStruct sellStrategyId(Long sellStrategyId) {
+    this.sellStrategyId = sellStrategyId;
+    return this;
+  }
+
+  /**
+   * Get sellStrategyId
+   *
+   * @return sellStrategyId
+   */
+  @ApiModelProperty(value = "")
+  public Long getSellStrategyId() {
+    return sellStrategyId;
+  }
+
+  public void setSellStrategyId(Long sellStrategyId) {
+    this.sellStrategyId = sellStrategyId;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -1625,7 +1669,9 @@ public class AdgroupsGetListStruct {
             this.autoAcquisitionStatusMessage, adgroupsGetListStruct.autoAcquisitionStatusMessage)
         && Objects.equals(this.costConstraintScene, adgroupsGetListStruct.costConstraintScene)
         && Objects.equals(this.customCostCap, adgroupsGetListStruct.customCostCap)
-        && Objects.equals(this.mpaSpec, adgroupsGetListStruct.mpaSpec);
+        && Objects.equals(this.mpaSpec, adgroupsGetListStruct.mpaSpec)
+        && Objects.equals(this.shortPlayPayType, adgroupsGetListStruct.shortPlayPayType)
+        && Objects.equals(this.sellStrategyId, adgroupsGetListStruct.sellStrategyId);
   }
 
   @Override
@@ -1697,7 +1743,9 @@ public class AdgroupsGetListStruct {
         autoAcquisitionStatusMessage,
         costConstraintScene,
         customCostCap,
-        mpaSpec);
+        mpaSpec,
+        shortPlayPayType,
+        sellStrategyId);
   }
 
   @Override

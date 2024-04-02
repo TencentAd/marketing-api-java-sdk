@@ -26,7 +26,7 @@ public class AsyncTasksAddRequest {
   private String taskName = null;
 
   @SerializedName("task_type")
-  private TaskType taskType = null;
+  private String taskType = null;
 
   @SerializedName("task_spec")
   private ApiTaskSpec taskSpec = null;
@@ -69,7 +69,7 @@ public class AsyncTasksAddRequest {
     this.taskName = taskName;
   }
 
-  public AsyncTasksAddRequest taskType(TaskType taskType) {
+  public AsyncTasksAddRequest taskType(String taskType) {
     this.taskType = taskType;
     return this;
   }
@@ -80,11 +80,11 @@ public class AsyncTasksAddRequest {
    * @return taskType
    */
   @ApiModelProperty(value = "")
-  public TaskType getTaskType() {
+  public String getTaskType() {
     return taskType;
   }
 
-  public void setTaskType(TaskType taskType) {
+  public void setTaskType(String taskType) {
     this.taskType = taskType;
   }
 

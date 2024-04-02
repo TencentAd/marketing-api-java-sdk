@@ -18,12 +18,12 @@ import com.tencent.ads.ApiException;
 import com.tencent.ads.anno.*;
 import com.tencent.ads.api.v3.AsyncTasksApi;
 import com.tencent.ads.exception.TencentAdsResponseException;
+import com.tencent.ads.model.v3.AsyncTaskFilteringStruct;
 import com.tencent.ads.model.v3.AsyncTasksAddRequest;
 import com.tencent.ads.model.v3.AsyncTasksAddResponse;
 import com.tencent.ads.model.v3.AsyncTasksAddResponseData;
 import com.tencent.ads.model.v3.AsyncTasksGetResponse;
 import com.tencent.ads.model.v3.AsyncTasksGetResponseData;
-import com.tencent.ads.model.v3.FilteringStruct;
 import java.util.List;
 
 public class AsyncTasksApiContainer extends ApiContainer {
@@ -59,7 +59,7 @@ public class AsyncTasksApiContainer extends ApiContainer {
    */
   public AsyncTasksGetResponseData asyncTasksGet(
       Long accountId,
-      List<FilteringStruct> filtering,
+      List<AsyncTaskFilteringStruct> filtering,
       Long page,
       Long pageSize,
       List<String> fields,

@@ -50,7 +50,7 @@ public class GetAdvertiser {
 
   public Long agencyId = null;
 
-  public Long advertiserId = null;
+  public Long accountId = null;
 
   public List<FilteringStruct> filtering = null;
 
@@ -73,7 +73,7 @@ public class GetAdvertiser {
         tencentAds
             .advertiser()
             .advertiserGet(
-                fields, paginationMode, pageSize, agencyId, advertiserId, filtering, page, cursor);
+                fields, paginationMode, pageSize, agencyId, accountId, filtering, page, cursor);
     return response;
   }
 

@@ -44,6 +44,9 @@ public class DetailPropertyStruct {
   @SerializedName("property_value")
   private List<String> propertyValue = null;
 
+  @SerializedName("recordable")
+  private Boolean recordable = null;
+
   public DetailPropertyStruct propertyName(PromotedAssetAttrKey propertyName) {
     this.propertyName = propertyName;
     return this;
@@ -185,6 +188,25 @@ public class DetailPropertyStruct {
     this.propertyValue = propertyValue;
   }
 
+  public DetailPropertyStruct recordable(Boolean recordable) {
+    this.recordable = recordable;
+    return this;
+  }
+
+  /**
+   * Get recordable
+   *
+   * @return recordable
+   */
+  @ApiModelProperty(value = "")
+  public Boolean isRecordable() {
+    return recordable;
+  }
+
+  public void setRecordable(Boolean recordable) {
+    this.recordable = recordable;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -200,7 +222,8 @@ public class DetailPropertyStruct {
         && Objects.equals(this.isRequired, detailPropertyStruct.isRequired)
         && Objects.equals(this.propertyClass, detailPropertyStruct.propertyClass)
         && Objects.equals(this.propertyType, detailPropertyStruct.propertyType)
-        && Objects.equals(this.propertyValue, detailPropertyStruct.propertyValue);
+        && Objects.equals(this.propertyValue, detailPropertyStruct.propertyValue)
+        && Objects.equals(this.recordable, detailPropertyStruct.recordable);
   }
 
   @Override
@@ -212,7 +235,8 @@ public class DetailPropertyStruct {
         isRequired,
         propertyClass,
         propertyType,
-        propertyValue);
+        propertyValue,
+        recordable);
   }
 
   @Override

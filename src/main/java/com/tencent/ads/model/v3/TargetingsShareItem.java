@@ -30,9 +30,6 @@ public class TargetingsShareItem {
   @SerializedName("share_type")
   private TargetingShareType shareType = null;
 
-  @SerializedName("is_data_model_version3")
-  private Boolean isDataModelVersion3 = null;
-
   public TargetingsShareItem targetingId(Long targetingId) {
     this.targetingId = targetingId;
     return this;
@@ -90,25 +87,6 @@ public class TargetingsShareItem {
     this.shareType = shareType;
   }
 
-  public TargetingsShareItem isDataModelVersion3(Boolean isDataModelVersion3) {
-    this.isDataModelVersion3 = isDataModelVersion3;
-    return this;
-  }
-
-  /**
-   * Get isDataModelVersion3
-   *
-   * @return isDataModelVersion3
-   */
-  @ApiModelProperty(value = "")
-  public Boolean isIsDataModelVersion3() {
-    return isDataModelVersion3;
-  }
-
-  public void setIsDataModelVersion3(Boolean isDataModelVersion3) {
-    this.isDataModelVersion3 = isDataModelVersion3;
-  }
-
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -120,13 +98,12 @@ public class TargetingsShareItem {
     TargetingsShareItem targetingsShareItem = (TargetingsShareItem) o;
     return Objects.equals(this.targetingId, targetingsShareItem.targetingId)
         && Objects.equals(this.shareToAccountId, targetingsShareItem.shareToAccountId)
-        && Objects.equals(this.shareType, targetingsShareItem.shareType)
-        && Objects.equals(this.isDataModelVersion3, targetingsShareItem.isDataModelVersion3);
+        && Objects.equals(this.shareType, targetingsShareItem.shareType);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(targetingId, shareToAccountId, shareType, isDataModelVersion3);
+    return Objects.hash(targetingId, shareToAccountId, shareType);
   }
 
   @Override

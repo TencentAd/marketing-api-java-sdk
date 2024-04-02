@@ -34,7 +34,9 @@ public enum MediaSourceType {
 
   DERIVE("SOURCE_TYPE_DERIVE"),
 
-  DERIVATION("SOURCE_TYPE_DERIVATION");
+  DERIVATION("SOURCE_TYPE_DERIVATION"),
+
+  AIGC("SOURCE_TYPE_AIGC");
 
   private String value;
 

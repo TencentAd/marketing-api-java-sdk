@@ -4,6 +4,7 @@ import com.tencent.ads.ApiContextConfig;
 import com.tencent.ads.exception.TencentAdsResponseException;
 import com.tencent.ads.exception.TencentAdsSDKException;
 import com.tencent.ads.model.v3.*;
+import com.tencent.ads.model.v3.FilteringStruct;
 import com.tencent.ads.v3.TencentAds;
 import java.util.List;
 
@@ -17,6 +18,8 @@ public class GetMarketingTargetAssets {
   public Long accountId = null;
 
   public String marketingTargetType = null;
+
+  public List<FilteringStruct> filtering = null;
 
   public Long page = null;
 
@@ -38,7 +41,8 @@ public class GetMarketingTargetAssets {
     MarketingTargetAssetsGetResponseData response =
         tencentAds
             .marketingTargetAssets()
-            .marketingTargetAssetsGet(accountId, marketingTargetType, page, pageSize, fields);
+            .marketingTargetAssetsGet(
+                accountId, marketingTargetType, filtering, page, pageSize, fields);
     return response;
   }
 

@@ -27,15 +27,6 @@ public class UpdateDeepConversionBehaviorBidItem {
   @SerializedName("deep_conversion_behavior_bid")
   private Long deepConversionBehaviorBid = null;
 
-  @SerializedName("account_id")
-  private Long accountId = null;
-
-  @SerializedName("is_potential")
-  private Boolean isPotential = null;
-
-  @SerializedName("report_potential_data")
-  private String reportPotentialData = null;
-
   public UpdateDeepConversionBehaviorBidItem adgroupId(Long adgroupId) {
     this.adgroupId = adgroupId;
     return this;
@@ -75,63 +66,6 @@ public class UpdateDeepConversionBehaviorBidItem {
     this.deepConversionBehaviorBid = deepConversionBehaviorBid;
   }
 
-  public UpdateDeepConversionBehaviorBidItem accountId(Long accountId) {
-    this.accountId = accountId;
-    return this;
-  }
-
-  /**
-   * Get accountId
-   *
-   * @return accountId
-   */
-  @ApiModelProperty(value = "")
-  public Long getAccountId() {
-    return accountId;
-  }
-
-  public void setAccountId(Long accountId) {
-    this.accountId = accountId;
-  }
-
-  public UpdateDeepConversionBehaviorBidItem isPotential(Boolean isPotential) {
-    this.isPotential = isPotential;
-    return this;
-  }
-
-  /**
-   * Get isPotential
-   *
-   * @return isPotential
-   */
-  @ApiModelProperty(value = "")
-  public Boolean isIsPotential() {
-    return isPotential;
-  }
-
-  public void setIsPotential(Boolean isPotential) {
-    this.isPotential = isPotential;
-  }
-
-  public UpdateDeepConversionBehaviorBidItem reportPotentialData(String reportPotentialData) {
-    this.reportPotentialData = reportPotentialData;
-    return this;
-  }
-
-  /**
-   * Get reportPotentialData
-   *
-   * @return reportPotentialData
-   */
-  @ApiModelProperty(value = "")
-  public String getReportPotentialData() {
-    return reportPotentialData;
-  }
-
-  public void setReportPotentialData(String reportPotentialData) {
-    this.reportPotentialData = reportPotentialData;
-  }
-
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -145,17 +79,12 @@ public class UpdateDeepConversionBehaviorBidItem {
     return Objects.equals(this.adgroupId, updateDeepConversionBehaviorBidItem.adgroupId)
         && Objects.equals(
             this.deepConversionBehaviorBid,
-            updateDeepConversionBehaviorBidItem.deepConversionBehaviorBid)
-        && Objects.equals(this.accountId, updateDeepConversionBehaviorBidItem.accountId)
-        && Objects.equals(this.isPotential, updateDeepConversionBehaviorBidItem.isPotential)
-        && Objects.equals(
-            this.reportPotentialData, updateDeepConversionBehaviorBidItem.reportPotentialData);
+            updateDeepConversionBehaviorBidItem.deepConversionBehaviorBid);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(
-        adgroupId, deepConversionBehaviorBid, accountId, isPotential, reportPotentialData);
+    return Objects.hash(adgroupId, deepConversionBehaviorBid);
   }
 
   @Override

@@ -27,9 +27,6 @@ public class UpdateAdgroupDeepConversionWorthRateItem {
   @SerializedName("deep_conversion_worth_rate")
   private Double deepConversionWorthRate = null;
 
-  @SerializedName("account_id")
-  private Long accountId = null;
-
   public UpdateAdgroupDeepConversionWorthRateItem adgroupId(Long adgroupId) {
     this.adgroupId = adgroupId;
     return this;
@@ -69,25 +66,6 @@ public class UpdateAdgroupDeepConversionWorthRateItem {
     this.deepConversionWorthRate = deepConversionWorthRate;
   }
 
-  public UpdateAdgroupDeepConversionWorthRateItem accountId(Long accountId) {
-    this.accountId = accountId;
-    return this;
-  }
-
-  /**
-   * Get accountId
-   *
-   * @return accountId
-   */
-  @ApiModelProperty(value = "")
-  public Long getAccountId() {
-    return accountId;
-  }
-
-  public void setAccountId(Long accountId) {
-    this.accountId = accountId;
-  }
-
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -101,13 +79,12 @@ public class UpdateAdgroupDeepConversionWorthRateItem {
     return Objects.equals(this.adgroupId, updateAdgroupDeepConversionWorthRateItem.adgroupId)
         && Objects.equals(
             this.deepConversionWorthRate,
-            updateAdgroupDeepConversionWorthRateItem.deepConversionWorthRate)
-        && Objects.equals(this.accountId, updateAdgroupDeepConversionWorthRateItem.accountId);
+            updateAdgroupDeepConversionWorthRateItem.deepConversionWorthRate);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(adgroupId, deepConversionWorthRate, accountId);
+    return Objects.hash(adgroupId, deepConversionWorthRate);
   }
 
   @Override

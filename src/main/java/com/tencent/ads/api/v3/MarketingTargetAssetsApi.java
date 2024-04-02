@@ -21,6 +21,7 @@ import com.tencent.ads.Configuration;
 import com.tencent.ads.Pair;
 import com.tencent.ads.ProgressRequestBody;
 import com.tencent.ads.ProgressResponseBody;
+import com.tencent.ads.model.v3.FilteringStruct;
 import com.tencent.ads.model.v3.MarketingTargetAssetsAddRequest;
 import com.tencent.ads.model.v3.MarketingTargetAssetsAddResponse;
 import com.tencent.ads.model.v3.MarketingTargetAssetsDeleteRequest;
@@ -396,6 +397,7 @@ public class MarketingTargetAssetsApi {
    *
    * @param accountId (required)
    * @param marketingTargetType (required)
+   * @param filtering (optional)
    * @param page (optional)
    * @param pageSize (optional)
    * @param fields 返回参数的字段列表 (optional)
@@ -407,6 +409,7 @@ public class MarketingTargetAssetsApi {
   public com.squareup.okhttp.Call marketingTargetAssetsGetCall(
       Long accountId,
       String marketingTargetType,
+      List<FilteringStruct> filtering,
       Long page,
       Long pageSize,
       List<String> fields,
@@ -427,6 +430,9 @@ public class MarketingTargetAssetsApi {
     if (marketingTargetType != null)
       localVarQueryParams.addAll(
           apiClient.parameterToPair("marketing_target_type", marketingTargetType));
+    if (filtering != null)
+      localVarCollectionQueryParams.addAll(
+          apiClient.parameterToPairs("multi", "filtering", filtering));
     if (page != null) localVarQueryParams.addAll(apiClient.parameterToPair("page", page));
     if (pageSize != null)
       localVarQueryParams.addAll(apiClient.parameterToPair("page_size", pageSize));
@@ -489,6 +495,7 @@ public class MarketingTargetAssetsApi {
   private com.squareup.okhttp.Call marketingTargetAssetsGetValidateBeforeCall(
       Long accountId,
       String marketingTargetType,
+      List<FilteringStruct> filtering,
       Long page,
       Long pageSize,
       List<String> fields,
@@ -513,6 +520,7 @@ public class MarketingTargetAssetsApi {
         marketingTargetAssetsGetCall(
             accountId,
             marketingTargetType,
+            filtering,
             page,
             pageSize,
             fields,
@@ -527,6 +535,7 @@ public class MarketingTargetAssetsApi {
    *
    * @param accountId (required)
    * @param marketingTargetType (required)
+   * @param filtering (optional)
    * @param page (optional)
    * @param pageSize (optional)
    * @param fields 返回参数的字段列表 (optional)
@@ -537,6 +546,7 @@ public class MarketingTargetAssetsApi {
   public MarketingTargetAssetsGetResponse marketingTargetAssetsGet(
       Long accountId,
       String marketingTargetType,
+      List<FilteringStruct> filtering,
       Long page,
       Long pageSize,
       List<String> fields,
@@ -544,7 +554,7 @@ public class MarketingTargetAssetsApi {
       throws ApiException {
     ApiResponse<MarketingTargetAssetsGetResponse> resp =
         marketingTargetAssetsGetWithHttpInfo(
-            accountId, marketingTargetType, page, pageSize, fields, headerPair);
+            accountId, marketingTargetType, filtering, page, pageSize, fields, headerPair);
     return resp.getData();
   }
 
@@ -553,6 +563,7 @@ public class MarketingTargetAssetsApi {
    *
    * @param accountId (required)
    * @param marketingTargetType (required)
+   * @param filtering (optional)
    * @param page (optional)
    * @param pageSize (optional)
    * @param fields 返回参数的字段列表 (optional)
@@ -563,6 +574,7 @@ public class MarketingTargetAssetsApi {
   public ApiResponse<MarketingTargetAssetsGetResponse> marketingTargetAssetsGetWithHttpInfo(
       Long accountId,
       String marketingTargetType,
+      List<FilteringStruct> filtering,
       Long page,
       Long pageSize,
       List<String> fields,
@@ -570,7 +582,15 @@ public class MarketingTargetAssetsApi {
       throws ApiException {
     com.squareup.okhttp.Call call =
         marketingTargetAssetsGetValidateBeforeCall(
-            accountId, marketingTargetType, page, pageSize, fields, null, null, headerPair);
+            accountId,
+            marketingTargetType,
+            filtering,
+            page,
+            pageSize,
+            fields,
+            null,
+            null,
+            headerPair);
     Type localVarReturnType = new TypeToken<MarketingTargetAssetsGetResponse>() {}.getType();
     return apiClient.execute(call, localVarReturnType);
   }
@@ -580,6 +600,7 @@ public class MarketingTargetAssetsApi {
    *
    * @param accountId (required)
    * @param marketingTargetType (required)
+   * @param filtering (optional)
    * @param page (optional)
    * @param pageSize (optional)
    * @param fields 返回参数的字段列表 (optional)
@@ -590,6 +611,7 @@ public class MarketingTargetAssetsApi {
   public com.squareup.okhttp.Call marketingTargetAssetsGetAsync(
       Long accountId,
       String marketingTargetType,
+      List<FilteringStruct> filtering,
       Long page,
       Long pageSize,
       List<String> fields,
@@ -622,6 +644,7 @@ public class MarketingTargetAssetsApi {
         marketingTargetAssetsGetValidateBeforeCall(
             accountId,
             marketingTargetType,
+            filtering,
             page,
             pageSize,
             fields,

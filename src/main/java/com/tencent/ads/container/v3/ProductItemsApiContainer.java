@@ -18,13 +18,17 @@ import com.tencent.ads.ApiException;
 import com.tencent.ads.anno.*;
 import com.tencent.ads.api.v3.ProductItemsApi;
 import com.tencent.ads.exception.TencentAdsResponseException;
+import com.tencent.ads.model.v3.FilteringStruct;
 import com.tencent.ads.model.v3.ProductItemsAddRequest;
 import com.tencent.ads.model.v3.ProductItemsAddResponse;
 import com.tencent.ads.model.v3.ProductItemsAddResponseData;
 import com.tencent.ads.model.v3.ProductItemsBatchUpdateRequest;
 import com.tencent.ads.model.v3.ProductItemsBatchUpdateResponse;
+import com.tencent.ads.model.v3.ProductItemsGetResponse;
+import com.tencent.ads.model.v3.ProductItemsGetResponseData;
 import com.tencent.ads.model.v3.ProductItemsUpdateRequest;
 import com.tencent.ads.model.v3.ProductItemsUpdateResponse;
+import java.util.List;
 
 public class ProductItemsApiContainer extends ApiContainer {
 
@@ -61,6 +65,30 @@ public class ProductItemsApiContainer extends ApiContainer {
     handleResponse(gson.toJson(resp));
 
     return resp;
+  }
+
+  /**
+   * 获取商品
+   *
+   * @param accountId (required)
+   * @param productCatalogId (required)
+   * @param filtering (optional)
+   * @param fields 返回参数的字段列表 (optional)
+   * @return ProductItemsGetResponse
+   * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
+   *     response body
+   */
+  public ProductItemsGetResponseData productItemsGet(
+      Long accountId,
+      Long productCatalogId,
+      List<FilteringStruct> filtering,
+      List<String> fields,
+      String... headerPair)
+      throws ApiException, TencentAdsResponseException {
+    ProductItemsGetResponse resp =
+        api.productItemsGet(accountId, productCatalogId, filtering, fields, headerPair);
+    handleResponse(gson.toJson(resp));
+    return resp.getData();
   }
 
   /**

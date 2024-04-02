@@ -39,7 +39,7 @@ public class ImagesApiContainer extends ApiContainer {
   /**
    * 添加图片文件
    *
-   * @param advertiserId (required)
+   * @param accountId (required)
    * @param uploadType (required)
    * @param imageSignature (required)
    * @param imageFile (optional)
@@ -54,7 +54,7 @@ public class ImagesApiContainer extends ApiContainer {
    *     response body
    */
   public ImagesAddResponseData imagesAdd(
-      Long advertiserId,
+      Long accountId,
       String uploadType,
       String imageSignature,
       File imageFile,
@@ -68,7 +68,7 @@ public class ImagesApiContainer extends ApiContainer {
       throws ApiException, TencentAdsResponseException {
     ImagesAddResponse resp =
         api.imagesAdd(
-            advertiserId,
+            accountId,
             uploadType,
             imageSignature,
             imageFile,

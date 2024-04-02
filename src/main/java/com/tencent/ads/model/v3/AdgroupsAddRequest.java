@@ -162,6 +162,12 @@ public class AdgroupsAddRequest {
   @SerializedName("custom_cost_cap")
   private Long customCostCap = null;
 
+  @SerializedName("short_play_pay_type")
+  private ShortPlayPayType shortPlayPayType = null;
+
+  @SerializedName("sell_strategy_id")
+  private Long sellStrategyId = null;
+
   @SerializedName("dynamic_ad_type")
   private DynamicAdType dynamicAdType = null;
 
@@ -1095,6 +1101,44 @@ public class AdgroupsAddRequest {
     this.customCostCap = customCostCap;
   }
 
+  public AdgroupsAddRequest shortPlayPayType(ShortPlayPayType shortPlayPayType) {
+    this.shortPlayPayType = shortPlayPayType;
+    return this;
+  }
+
+  /**
+   * Get shortPlayPayType
+   *
+   * @return shortPlayPayType
+   */
+  @ApiModelProperty(value = "")
+  public ShortPlayPayType getShortPlayPayType() {
+    return shortPlayPayType;
+  }
+
+  public void setShortPlayPayType(ShortPlayPayType shortPlayPayType) {
+    this.shortPlayPayType = shortPlayPayType;
+  }
+
+  public AdgroupsAddRequest sellStrategyId(Long sellStrategyId) {
+    this.sellStrategyId = sellStrategyId;
+    return this;
+  }
+
+  /**
+   * Get sellStrategyId
+   *
+   * @return sellStrategyId
+   */
+  @ApiModelProperty(value = "")
+  public Long getSellStrategyId() {
+    return sellStrategyId;
+  }
+
+  public void setSellStrategyId(Long sellStrategyId) {
+    this.sellStrategyId = sellStrategyId;
+  }
+
   public AdgroupsAddRequest dynamicAdType(DynamicAdType dynamicAdType) {
     this.dynamicAdType = dynamicAdType;
     return this;
@@ -1178,6 +1222,8 @@ public class AdgroupsAddRequest {
         && Objects.equals(this.mpaSpec, adgroupsAddRequest.mpaSpec)
         && Objects.equals(this.costConstraintScene, adgroupsAddRequest.costConstraintScene)
         && Objects.equals(this.customCostCap, adgroupsAddRequest.customCostCap)
+        && Objects.equals(this.shortPlayPayType, adgroupsAddRequest.shortPlayPayType)
+        && Objects.equals(this.sellStrategyId, adgroupsAddRequest.sellStrategyId)
         && Objects.equals(this.dynamicAdType, adgroupsAddRequest.dynamicAdType);
   }
 
@@ -1231,6 +1277,8 @@ public class AdgroupsAddRequest {
         mpaSpec,
         costConstraintScene,
         customCostCap,
+        shortPlayPayType,
+        sellStrategyId,
         dynamicAdType);
   }
 

@@ -21,6 +21,9 @@ import com.tencent.ads.exception.TencentAdsResponseException;
 import com.tencent.ads.model.v3.ProductCatalogsAddRequest;
 import com.tencent.ads.model.v3.ProductCatalogsAddResponse;
 import com.tencent.ads.model.v3.ProductCatalogsAddResponseData;
+import com.tencent.ads.model.v3.ProductCatalogsGetResponse;
+import com.tencent.ads.model.v3.ProductCatalogsGetResponseData;
+import java.util.List;
 
 public class ProductCatalogsApiContainer extends ApiContainer {
 
@@ -38,6 +41,35 @@ public class ProductCatalogsApiContainer extends ApiContainer {
       ProductCatalogsAddRequest data, String... headerPair)
       throws ApiException, TencentAdsResponseException {
     ProductCatalogsAddResponse resp = api.productCatalogsAdd(data, headerPair);
+    handleResponse(gson.toJson(resp));
+    return resp.getData();
+  }
+
+  /**
+   * 获取商品库
+   *
+   * @param accountId (required)
+   * @param catalogId (optional)
+   * @param catalogName (optional)
+   * @param page (optional)
+   * @param pageSize (optional)
+   * @param fields 返回参数的字段列表 (optional)
+   * @return ProductCatalogsGetResponse
+   * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
+   *     response body
+   */
+  public ProductCatalogsGetResponseData productCatalogsGet(
+      Long accountId,
+      Long catalogId,
+      String catalogName,
+      Long page,
+      Long pageSize,
+      List<String> fields,
+      String... headerPair)
+      throws ApiException, TencentAdsResponseException {
+    ProductCatalogsGetResponse resp =
+        api.productCatalogsGet(
+            accountId, catalogId, catalogName, page, pageSize, fields, headerPair);
     handleResponse(gson.toJson(resp));
     return resp.getData();
   }

@@ -23,7 +23,7 @@ import com.tencent.ads.model.v3.BatchAsyncRequestsAddResponse;
 import com.tencent.ads.model.v3.BatchAsyncRequestsAddResponseData;
 import com.tencent.ads.model.v3.BatchAsyncRequestsGetResponse;
 import com.tencent.ads.model.v3.BatchAsyncRequestsGetResponseData;
-import com.tencent.ads.model.v3.FilteringStruct;
+import com.tencent.ads.model.v3.BatchAsyncTaskFilteringStruct;
 import java.util.List;
 
 public class BatchAsyncRequestsApiContainer extends ApiContainer {
@@ -60,7 +60,7 @@ public class BatchAsyncRequestsApiContainer extends ApiContainer {
    */
   public BatchAsyncRequestsGetResponseData batchAsyncRequestsGet(
       Long accountId,
-      List<FilteringStruct> filtering,
+      List<BatchAsyncTaskFilteringStruct> filtering,
       Long page,
       Long pageSize,
       List<String> fields,

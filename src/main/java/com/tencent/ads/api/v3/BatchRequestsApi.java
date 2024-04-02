@@ -112,7 +112,7 @@ public class BatchRequestsApi {
               });
     }
 
-    String[] localVarAuthNames = new String[] {};
+    String[] localVarAuthNames = new String[] {"accessToken", "nonce", "timestamp"};
     return apiClient.buildCall(
         localVarPath,
         "POST",

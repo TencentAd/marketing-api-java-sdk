@@ -24,9 +24,6 @@ public class DeleteAdgroupItem {
   @SerializedName("adgroup_id")
   private Long adgroupId = null;
 
-  @SerializedName("account_id")
-  private Long accountId = null;
-
   public DeleteAdgroupItem adgroupId(Long adgroupId) {
     this.adgroupId = adgroupId;
     return this;
@@ -46,25 +43,6 @@ public class DeleteAdgroupItem {
     this.adgroupId = adgroupId;
   }
 
-  public DeleteAdgroupItem accountId(Long accountId) {
-    this.accountId = accountId;
-    return this;
-  }
-
-  /**
-   * Get accountId
-   *
-   * @return accountId
-   */
-  @ApiModelProperty(value = "")
-  public Long getAccountId() {
-    return accountId;
-  }
-
-  public void setAccountId(Long accountId) {
-    this.accountId = accountId;
-  }
-
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -74,13 +52,12 @@ public class DeleteAdgroupItem {
       return false;
     }
     DeleteAdgroupItem deleteAdgroupItem = (DeleteAdgroupItem) o;
-    return Objects.equals(this.adgroupId, deleteAdgroupItem.adgroupId)
-        && Objects.equals(this.accountId, deleteAdgroupItem.accountId);
+    return Objects.equals(this.adgroupId, deleteAdgroupItem.adgroupId);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(adgroupId, accountId);
+    return Objects.hash(adgroupId);
   }
 
   @Override

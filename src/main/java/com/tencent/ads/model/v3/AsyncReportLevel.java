@@ -48,6 +48,8 @@ public enum AsyncReportLevel {
 
   CHANNEL("REPORT_LEVEL_CHANNEL"),
 
+  LANDING_PAGE("REPORT_LEVEL_LANDING_PAGE"),
+
   MARKETING_ASSET("REPORT_LEVEL_MARKETING_ASSET");
 
   private String value;

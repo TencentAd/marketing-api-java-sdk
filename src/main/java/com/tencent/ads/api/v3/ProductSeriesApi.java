@@ -23,6 +23,8 @@ import com.tencent.ads.ProgressRequestBody;
 import com.tencent.ads.ProgressResponseBody;
 import com.tencent.ads.model.v3.ProductSeriesAddRequest;
 import com.tencent.ads.model.v3.ProductSeriesAddResponse;
+import com.tencent.ads.model.v3.ProductSeriesGetResponse;
+import com.tencent.ads.model.v3.ProductSeriesSearchFilteringStruct;
 import java.io.IOException;
 import java.lang.reflect.Type;
 import java.util.ArrayList;
@@ -213,6 +215,260 @@ public class ProductSeriesApi {
         productSeriesAddValidateBeforeCall(
             data, progressListener, progressRequestListener, headerPair);
     Type localVarReturnType = new TypeToken<ProductSeriesAddResponse>() {}.getType();
+    apiClient.executeAsync(call, localVarReturnType, callback);
+    return call;
+  }
+  /**
+   * Build call for productSeriesGet
+   *
+   * @param accountId (required)
+   * @param catalogId (required)
+   * @param filtering (optional)
+   * @param page (optional)
+   * @param pageSize (optional)
+   * @param fields 返回参数的字段列表 (optional)
+   * @param progressListener Progress listener
+   * @param progressRequestListener Progress request listener
+   * @return Call to execute
+   * @throws ApiException If fail to serialize the request body object
+   */
+  public com.squareup.okhttp.Call productSeriesGetCall(
+      Long accountId,
+      Long catalogId,
+      List<ProductSeriesSearchFilteringStruct> filtering,
+      Long page,
+      Long pageSize,
+      List<String> fields,
+      final ProgressResponseBody.ProgressListener progressListener,
+      final ProgressRequestBody.ProgressRequestListener progressRequestListener,
+      String... headerPair)
+      throws ApiException {
+
+    Object localVarPostBody = null;
+
+    // create path and map variables
+    String localVarPath = "/product_series/get";
+
+    List<Pair> localVarQueryParams = new ArrayList<Pair>();
+    List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+    if (accountId != null)
+      localVarQueryParams.addAll(apiClient.parameterToPair("account_id", accountId));
+    if (catalogId != null)
+      localVarQueryParams.addAll(apiClient.parameterToPair("catalog_id", catalogId));
+    if (filtering != null)
+      localVarCollectionQueryParams.addAll(
+          apiClient.parameterToPairs("multi", "filtering", filtering));
+    if (page != null) localVarQueryParams.addAll(apiClient.parameterToPair("page", page));
+    if (pageSize != null)
+      localVarQueryParams.addAll(apiClient.parameterToPair("page_size", pageSize));
+    if (fields != null)
+      localVarCollectionQueryParams.addAll(apiClient.parameterToPairs("multi", "fields", fields));
+
+    Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+
+    Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+    final String[] localVarAccepts = {"application/json"};
+    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+    if (localVarAccept != null) localVarHeaderParams.put("Accept", localVarAccept);
+
+    final String[] localVarContentTypes = {"text/plain"};
+    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+    localVarHeaderParams.put("Content-Type", localVarContentType);
+
+    if (headerPair != null && headerPair.length > 0) {
+      if (headerPair.length % 2 != 0) {
+        throw new UnsupportedOperationException("Parameter headerPair must be paired");
+      }
+      for (int i = 0; i < headerPair.length / 2; i++) {
+        localVarHeaderParams.put(headerPair[i], headerPair[i * 2 + 1]);
+      }
+    }
+
+    if (progressListener != null) {
+      apiClient
+          .getHttpClient()
+          .networkInterceptors()
+          .add(
+              new com.squareup.okhttp.Interceptor() {
+                @Override
+                public com.squareup.okhttp.Response intercept(
+                    com.squareup.okhttp.Interceptor.Chain chain) throws IOException {
+                  com.squareup.okhttp.Response originalResponse = chain.proceed(chain.request());
+                  return originalResponse
+                      .newBuilder()
+                      .body(new ProgressResponseBody(originalResponse.body(), progressListener))
+                      .build();
+                }
+              });
+    }
+
+    String[] localVarAuthNames = new String[] {"accessToken", "nonce", "timestamp"};
+    return apiClient.buildCall(
+        localVarPath,
+        "GET",
+        localVarQueryParams,
+        localVarCollectionQueryParams,
+        localVarPostBody,
+        localVarHeaderParams,
+        localVarFormParams,
+        localVarAuthNames,
+        progressRequestListener);
+  }
+
+  @SuppressWarnings("rawtypes")
+  private com.squareup.okhttp.Call productSeriesGetValidateBeforeCall(
+      Long accountId,
+      Long catalogId,
+      List<ProductSeriesSearchFilteringStruct> filtering,
+      Long page,
+      Long pageSize,
+      List<String> fields,
+      final ProgressResponseBody.ProgressListener progressListener,
+      final ProgressRequestBody.ProgressRequestListener progressRequestListener,
+      String... headerPair)
+      throws ApiException {
+
+    // verify the required parameter 'accountId' is set
+    if (accountId == null) {
+      throw new ApiException(
+          "Missing the required parameter 'accountId' when calling productSeriesGet(Async)");
+    }
+
+    // verify the required parameter 'catalogId' is set
+    if (catalogId == null) {
+      throw new ApiException(
+          "Missing the required parameter 'catalogId' when calling productSeriesGet(Async)");
+    }
+
+    com.squareup.okhttp.Call call =
+        productSeriesGetCall(
+            accountId,
+            catalogId,
+            filtering,
+            page,
+            pageSize,
+            fields,
+            progressListener,
+            progressRequestListener,
+            headerPair);
+    return call;
+  }
+
+  /**
+   * 获取商品系列
+   *
+   * @param accountId (required)
+   * @param catalogId (required)
+   * @param filtering (optional)
+   * @param page (optional)
+   * @param pageSize (optional)
+   * @param fields 返回参数的字段列表 (optional)
+   * @return ProductSeriesGetResponse
+   * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
+   *     response body
+   */
+  public ProductSeriesGetResponse productSeriesGet(
+      Long accountId,
+      Long catalogId,
+      List<ProductSeriesSearchFilteringStruct> filtering,
+      Long page,
+      Long pageSize,
+      List<String> fields,
+      String... headerPair)
+      throws ApiException {
+    ApiResponse<ProductSeriesGetResponse> resp =
+        productSeriesGetWithHttpInfo(
+            accountId, catalogId, filtering, page, pageSize, fields, headerPair);
+    return resp.getData();
+  }
+
+  /**
+   * 获取商品系列
+   *
+   * @param accountId (required)
+   * @param catalogId (required)
+   * @param filtering (optional)
+   * @param page (optional)
+   * @param pageSize (optional)
+   * @param fields 返回参数的字段列表 (optional)
+   * @return ApiResponse&lt;ProductSeriesGetResponse&gt;
+   * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
+   *     response body
+   */
+  public ApiResponse<ProductSeriesGetResponse> productSeriesGetWithHttpInfo(
+      Long accountId,
+      Long catalogId,
+      List<ProductSeriesSearchFilteringStruct> filtering,
+      Long page,
+      Long pageSize,
+      List<String> fields,
+      String... headerPair)
+      throws ApiException {
+    com.squareup.okhttp.Call call =
+        productSeriesGetValidateBeforeCall(
+            accountId, catalogId, filtering, page, pageSize, fields, null, null, headerPair);
+    Type localVarReturnType = new TypeToken<ProductSeriesGetResponse>() {}.getType();
+    return apiClient.execute(call, localVarReturnType);
+  }
+
+  /**
+   * 获取商品系列 (asynchronously)
+   *
+   * @param accountId (required)
+   * @param catalogId (required)
+   * @param filtering (optional)
+   * @param page (optional)
+   * @param pageSize (optional)
+   * @param fields 返回参数的字段列表 (optional)
+   * @param callback The callback to be executed when the API call finishes
+   * @return The request call
+   * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+   */
+  public com.squareup.okhttp.Call productSeriesGetAsync(
+      Long accountId,
+      Long catalogId,
+      List<ProductSeriesSearchFilteringStruct> filtering,
+      Long page,
+      Long pageSize,
+      List<String> fields,
+      final ApiCallback<ProductSeriesGetResponse> callback,
+      String... headerPair)
+      throws ApiException {
+
+    ProgressResponseBody.ProgressListener progressListener = null;
+    ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
+
+    if (callback != null) {
+      progressListener =
+          new ProgressResponseBody.ProgressListener() {
+            @Override
+            public void update(long bytesRead, long contentLength, boolean done) {
+              callback.onDownloadProgress(bytesRead, contentLength, done);
+            }
+          };
+
+      progressRequestListener =
+          new ProgressRequestBody.ProgressRequestListener() {
+            @Override
+            public void onRequestProgress(long bytesWritten, long contentLength, boolean done) {
+              callback.onUploadProgress(bytesWritten, contentLength, done);
+            }
+          };
+    }
+
+    com.squareup.okhttp.Call call =
+        productSeriesGetValidateBeforeCall(
+            accountId,
+            catalogId,
+            filtering,
+            page,
+            pageSize,
+            fields,
+            progressListener,
+            progressRequestListener,
+            headerPair);
+    Type localVarReturnType = new TypeToken<ProductSeriesGetResponse>() {}.getType();
     apiClient.executeAsync(call, localVarReturnType, callback);
     return call;
   }

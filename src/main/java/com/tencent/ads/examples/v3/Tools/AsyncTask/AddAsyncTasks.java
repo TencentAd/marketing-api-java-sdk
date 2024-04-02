@@ -17,7 +17,7 @@ public class AddAsyncTasks {
   public String taskName = "SDK异步任务5ede252e2f1db";
   public AsyncTasksAddRequest data = new AsyncTasksAddRequest();
   public Long accountId = null;
-  public TaskType taskType = TaskType.AD_HOURLY_REPORT;
+  public String taskType = "TASK_TYPE_AD_HOURLY_REPORT";
 
   public void init() {
     this.tencentAds = TencentAds.getInstance();
