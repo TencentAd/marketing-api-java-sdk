@@ -230,6 +230,9 @@ public class AdgroupsGetListStruct {
   @SerializedName("sell_strategy_id")
   private Long sellStrategyId = null;
 
+  @SerializedName("og_completion_type")
+  private OgCompletionType ogCompletionType = null;
+
   public AdgroupsGetListStruct targeting(ReadTargetingSetting targeting) {
     this.targeting = targeting;
     return this;
@@ -1580,6 +1583,25 @@ public class AdgroupsGetListStruct {
     this.sellStrategyId = sellStrategyId;
   }
 
+  public AdgroupsGetListStruct ogCompletionType(OgCompletionType ogCompletionType) {
+    this.ogCompletionType = ogCompletionType;
+    return this;
+  }
+
+  /**
+   * Get ogCompletionType
+   *
+   * @return ogCompletionType
+   */
+  @ApiModelProperty(value = "")
+  public OgCompletionType getOgCompletionType() {
+    return ogCompletionType;
+  }
+
+  public void setOgCompletionType(OgCompletionType ogCompletionType) {
+    this.ogCompletionType = ogCompletionType;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -1671,7 +1693,8 @@ public class AdgroupsGetListStruct {
         && Objects.equals(this.customCostCap, adgroupsGetListStruct.customCostCap)
         && Objects.equals(this.mpaSpec, adgroupsGetListStruct.mpaSpec)
         && Objects.equals(this.shortPlayPayType, adgroupsGetListStruct.shortPlayPayType)
-        && Objects.equals(this.sellStrategyId, adgroupsGetListStruct.sellStrategyId);
+        && Objects.equals(this.sellStrategyId, adgroupsGetListStruct.sellStrategyId)
+        && Objects.equals(this.ogCompletionType, adgroupsGetListStruct.ogCompletionType);
   }
 
   @Override
@@ -1745,7 +1768,8 @@ public class AdgroupsGetListStruct {
         customCostCap,
         mpaSpec,
         shortPlayPayType,
-        sellStrategyId);
+        sellStrategyId,
+        ogCompletionType);
   }
 
   @Override

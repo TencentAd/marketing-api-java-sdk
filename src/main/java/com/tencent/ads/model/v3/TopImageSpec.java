@@ -21,8 +21,8 @@ import java.util.Objects;
 /** 顶部图片组件元素 */
 @ApiModel(description = "顶部图片组件元素")
 public class TopImageSpec {
-  @SerializedName("image_id")
-  private String imageId = null;
+  @SerializedName("image_id_list")
+  private String imageIdList = null;
 
   @SerializedName("width")
   private Long width = null;
@@ -36,23 +36,23 @@ public class TopImageSpec {
   @SerializedName("outer_style")
   private Long outerStyle = null;
 
-  public TopImageSpec imageId(String imageId) {
-    this.imageId = imageId;
+  public TopImageSpec imageIdList(String imageIdList) {
+    this.imageIdList = imageIdList;
     return this;
   }
 
   /**
-   * Get imageId
+   * Get imageIdList
    *
-   * @return imageId
+   * @return imageIdList
    */
   @ApiModelProperty(value = "")
-  public String getImageId() {
-    return imageId;
+  public String getImageIdList() {
+    return imageIdList;
   }
 
-  public void setImageId(String imageId) {
-    this.imageId = imageId;
+  public void setImageIdList(String imageIdList) {
+    this.imageIdList = imageIdList;
   }
 
   public TopImageSpec width(Long width) {
@@ -140,7 +140,7 @@ public class TopImageSpec {
       return false;
     }
     TopImageSpec topImageSpec = (TopImageSpec) o;
-    return Objects.equals(this.imageId, topImageSpec.imageId)
+    return Objects.equals(this.imageIdList, topImageSpec.imageIdList)
         && Objects.equals(this.width, topImageSpec.width)
         && Objects.equals(this.height, topImageSpec.height)
         && Objects.equals(this.adLocation, topImageSpec.adLocation)
@@ -149,7 +149,7 @@ public class TopImageSpec {
 
   @Override
   public int hashCode() {
-    return Objects.hash(imageId, width, height, adLocation, outerStyle);
+    return Objects.hash(imageIdList, width, height, adLocation, outerStyle);
   }
 
   @Override

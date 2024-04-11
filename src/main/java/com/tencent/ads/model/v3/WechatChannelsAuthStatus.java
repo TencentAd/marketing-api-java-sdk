@@ -19,18 +19,26 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-/** 视频号封面图显示类型 */
-@JsonAdapter(WechatChannelsCoverImgShowType.Adapter.class)
-public enum WechatChannelsCoverImgShowType {
-  DEFAULT("COVER_IMG_SHOW_TYPE_DEFAULT"),
+/** 授权状态 */
+@JsonAdapter(WechatChannelsAuthStatus.Adapter.class)
+public enum WechatChannelsAuthStatus {
+  PENDING("PENDING"),
 
-  TITLE("COVER_IMG_SHOW_TYPE_TITLE"),
+  AUTHORIZED("AUTHORIZED"),
 
-  CENTER("COVER_IMG_SHOW_TYPE_CENTER");
+  CANCELLED("CANCELLED"),
+
+  REFUSED("REFUSED"),
+
+  EXPIRED("EXPIRED"),
+
+  AUDIT_PENDING("AUDIT_PENDING"),
+
+  AUDIT_REFUSED("AUDIT_REFUSED");
 
   private String value;
 
-  WechatChannelsCoverImgShowType(String value) {
+  WechatChannelsAuthStatus(String value) {
     this.value = value;
   }
 
@@ -43,8 +51,8 @@ public enum WechatChannelsCoverImgShowType {
     return String.valueOf(value);
   }
 
-  public static WechatChannelsCoverImgShowType fromValue(String text) {
-    for (WechatChannelsCoverImgShowType b : WechatChannelsCoverImgShowType.values()) {
+  public static WechatChannelsAuthStatus fromValue(String text) {
+    for (WechatChannelsAuthStatus b : WechatChannelsAuthStatus.values()) {
       if (String.valueOf(b.value).equals(text)) {
         return b;
       }
@@ -52,17 +60,17 @@ public enum WechatChannelsCoverImgShowType {
     return null;
   }
 
-  public static class Adapter extends TypeAdapter<WechatChannelsCoverImgShowType> {
+  public static class Adapter extends TypeAdapter<WechatChannelsAuthStatus> {
     @Override
-    public void write(final JsonWriter jsonWriter, final WechatChannelsCoverImgShowType enumeration)
+    public void write(final JsonWriter jsonWriter, final WechatChannelsAuthStatus enumeration)
         throws IOException {
       jsonWriter.value(enumeration.getValue());
     }
 
     @Override
-    public WechatChannelsCoverImgShowType read(final JsonReader jsonReader) throws IOException {
+    public WechatChannelsAuthStatus read(final JsonReader jsonReader) throws IOException {
       String value = jsonReader.nextString();
-      return WechatChannelsCoverImgShowType.fromValue(String.valueOf(value));
+      return WechatChannelsAuthStatus.fromValue(String.valueOf(value));
     }
   }
 }

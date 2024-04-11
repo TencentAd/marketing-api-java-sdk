@@ -4,6 +4,7 @@ import com.tencent.ads.ApiContextConfig;
 import com.tencent.ads.exception.TencentAdsResponseException;
 import com.tencent.ads.exception.TencentAdsSDKException;
 import com.tencent.ads.model.v3.*;
+import com.tencent.ads.model.v3.AdContext;
 import com.tencent.ads.model.v3.FilteringStruct;
 import com.tencent.ads.v3.TencentAds;
 import java.util.Arrays;
@@ -23,6 +24,8 @@ public class GetPages {
   public Long page = null;
 
   public Long pageSize = null;
+
+  public AdContext adContext = null;
 
   public List<String> fields =
       Arrays.asList(
@@ -46,7 +49,7 @@ public class GetPages {
 
   public PagesGetResponseData getPages() throws Exception {
     PagesGetResponseData response =
-        tencentAds.pages().pagesGet(accountId, filtering, page, pageSize, fields);
+        tencentAds.pages().pagesGet(accountId, filtering, page, pageSize, adContext, fields);
     return response;
   }
 

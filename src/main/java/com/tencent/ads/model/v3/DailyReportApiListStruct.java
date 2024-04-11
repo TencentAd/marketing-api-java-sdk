@@ -2442,6 +2442,9 @@ public class DailyReportApiListStruct {
   @SerializedName("channels_detail_btn_pv")
   private Long channelsDetailBtnPv = null;
 
+  @SerializedName("zone_header_live_click_cnt")
+  private Long zoneHeaderLiveClickCnt = null;
+
   @SerializedName("adgroup_id")
   private Long adgroupId = null;
 
@@ -2501,12 +2504,6 @@ public class DailyReportApiListStruct {
 
   @SerializedName("queryword")
   private String queryword = null;
-
-  @SerializedName("ad_id")
-  private Long adId = null;
-
-  @SerializedName("trigger_type")
-  private Long triggerType = null;
 
   @SerializedName("image_id")
   private String imageId = null;
@@ -17900,6 +17897,25 @@ public class DailyReportApiListStruct {
     this.channelsDetailBtnPv = channelsDetailBtnPv;
   }
 
+  public DailyReportApiListStruct zoneHeaderLiveClickCnt(Long zoneHeaderLiveClickCnt) {
+    this.zoneHeaderLiveClickCnt = zoneHeaderLiveClickCnt;
+    return this;
+  }
+
+  /**
+   * Get zoneHeaderLiveClickCnt
+   *
+   * @return zoneHeaderLiveClickCnt
+   */
+  @ApiModelProperty(value = "")
+  public Long getZoneHeaderLiveClickCnt() {
+    return zoneHeaderLiveClickCnt;
+  }
+
+  public void setZoneHeaderLiveClickCnt(Long zoneHeaderLiveClickCnt) {
+    this.zoneHeaderLiveClickCnt = zoneHeaderLiveClickCnt;
+  }
+
   public DailyReportApiListStruct adgroupId(Long adgroupId) {
     this.adgroupId = adgroupId;
     return this;
@@ -18278,44 +18294,6 @@ public class DailyReportApiListStruct {
 
   public void setQueryword(String queryword) {
     this.queryword = queryword;
-  }
-
-  public DailyReportApiListStruct adId(Long adId) {
-    this.adId = adId;
-    return this;
-  }
-
-  /**
-   * Get adId
-   *
-   * @return adId
-   */
-  @ApiModelProperty(value = "")
-  public Long getAdId() {
-    return adId;
-  }
-
-  public void setAdId(Long adId) {
-    this.adId = adId;
-  }
-
-  public DailyReportApiListStruct triggerType(Long triggerType) {
-    this.triggerType = triggerType;
-    return this;
-  }
-
-  /**
-   * Get triggerType
-   *
-   * @return triggerType
-   */
-  @ApiModelProperty(value = "")
-  public Long getTriggerType() {
-    return triggerType;
-  }
-
-  public void setTriggerType(Long triggerType) {
-    this.triggerType = triggerType;
   }
 
   public DailyReportApiListStruct imageId(String imageId) {
@@ -19548,6 +19526,8 @@ public class DailyReportApiListStruct {
         && Objects.equals(this.clkBlessingCardPv, dailyReportApiListStruct.clkBlessingCardPv)
         && Objects.equals(this.clkShortcutMenusPv, dailyReportApiListStruct.clkShortcutMenusPv)
         && Objects.equals(this.channelsDetailBtnPv, dailyReportApiListStruct.channelsDetailBtnPv)
+        && Objects.equals(
+            this.zoneHeaderLiveClickCnt, dailyReportApiListStruct.zoneHeaderLiveClickCnt)
         && Objects.equals(this.adgroupId, dailyReportApiListStruct.adgroupId)
         && Objects.equals(this.adgroupName, dailyReportApiListStruct.adgroupName)
         && Objects.equals(this.dynamicCreativeId, dailyReportApiListStruct.dynamicCreativeId)
@@ -19569,8 +19549,6 @@ public class DailyReportApiListStruct {
         && Objects.equals(this.expOverallTopPv, dailyReportApiListStruct.expOverallTopPv)
         && Objects.equals(this.clkTopPv, dailyReportApiListStruct.clkTopPv)
         && Objects.equals(this.queryword, dailyReportApiListStruct.queryword)
-        && Objects.equals(this.adId, dailyReportApiListStruct.adId)
-        && Objects.equals(this.triggerType, dailyReportApiListStruct.triggerType)
         && Objects.equals(this.imageId, dailyReportApiListStruct.imageId)
         && Objects.equals(this.videoId, dailyReportApiListStruct.videoId)
         && Objects.equals(this.projectId, dailyReportApiListStruct.projectId)
@@ -20387,6 +20365,7 @@ public class DailyReportApiListStruct {
         clkBlessingCardPv,
         clkShortcutMenusPv,
         channelsDetailBtnPv,
+        zoneHeaderLiveClickCnt,
         adgroupId,
         adgroupName,
         dynamicCreativeId,
@@ -20407,8 +20386,6 @@ public class DailyReportApiListStruct {
         expOverallTopPv,
         clkTopPv,
         queryword,
-        adId,
-        triggerType,
         imageId,
         videoId,
         projectId,

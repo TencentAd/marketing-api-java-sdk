@@ -2442,6 +2442,9 @@ public class HourlyReportApiListStruct {
   @SerializedName("channels_detail_btn_pv")
   private Long channelsDetailBtnPv = null;
 
+  @SerializedName("zone_header_live_click_cnt")
+  private Long zoneHeaderLiveClickCnt = null;
+
   @SerializedName("adgroup_id")
   private Long adgroupId = null;
 
@@ -17873,6 +17876,25 @@ public class HourlyReportApiListStruct {
     this.channelsDetailBtnPv = channelsDetailBtnPv;
   }
 
+  public HourlyReportApiListStruct zoneHeaderLiveClickCnt(Long zoneHeaderLiveClickCnt) {
+    this.zoneHeaderLiveClickCnt = zoneHeaderLiveClickCnt;
+    return this;
+  }
+
+  /**
+   * Get zoneHeaderLiveClickCnt
+   *
+   * @return zoneHeaderLiveClickCnt
+   */
+  @ApiModelProperty(value = "")
+  public Long getZoneHeaderLiveClickCnt() {
+    return zoneHeaderLiveClickCnt;
+  }
+
+  public void setZoneHeaderLiveClickCnt(Long zoneHeaderLiveClickCnt) {
+    this.zoneHeaderLiveClickCnt = zoneHeaderLiveClickCnt;
+  }
+
   public HourlyReportApiListStruct adgroupId(Long adgroupId) {
     this.adgroupId = adgroupId;
     return this;
@@ -19350,6 +19372,8 @@ public class HourlyReportApiListStruct {
         && Objects.equals(this.clkBlessingCardPv, hourlyReportApiListStruct.clkBlessingCardPv)
         && Objects.equals(this.clkShortcutMenusPv, hourlyReportApiListStruct.clkShortcutMenusPv)
         && Objects.equals(this.channelsDetailBtnPv, hourlyReportApiListStruct.channelsDetailBtnPv)
+        && Objects.equals(
+            this.zoneHeaderLiveClickCnt, hourlyReportApiListStruct.zoneHeaderLiveClickCnt)
         && Objects.equals(this.adgroupId, hourlyReportApiListStruct.adgroupId)
         && Objects.equals(this.adgroupName, hourlyReportApiListStruct.adgroupName)
         && Objects.equals(this.dynamicCreativeId, hourlyReportApiListStruct.dynamicCreativeId)
@@ -20180,6 +20204,7 @@ public class HourlyReportApiListStruct {
         clkBlessingCardPv,
         clkShortcutMenusPv,
         channelsDetailBtnPv,
+        zoneHeaderLiveClickCnt,
         adgroupId,
         adgroupName,
         dynamicCreativeId,

@@ -60,8 +60,8 @@ public class ImagesApi {
    *
    * @param accountId (required)
    * @param uploadType (required)
-   * @param imageSignature (required)
-   * @param imageFile (optional)
+   * @param signature (required)
+   * @param file (optional)
    * @param bytes (optional)
    * @param imageUsage (optional)
    * @param description (optional)
@@ -76,8 +76,8 @@ public class ImagesApi {
   public com.squareup.okhttp.Call imagesAddCall(
       Long accountId,
       String uploadType,
-      String imageSignature,
-      File imageFile,
+      String signature,
+      File file,
       String bytes,
       String imageUsage,
       String description,
@@ -102,8 +102,8 @@ public class ImagesApi {
     Map<String, Object> localVarFormParams = new HashMap<String, Object>();
     if (accountId != null) localVarFormParams.put("account_id", accountId);
     if (uploadType != null) localVarFormParams.put("upload_type", uploadType);
-    if (imageSignature != null) localVarFormParams.put("image_signature", imageSignature);
-    if (imageFile != null) localVarFormParams.put("image_file", imageFile);
+    if (signature != null) localVarFormParams.put("signature", signature);
+    if (file != null) localVarFormParams.put("file", file);
     if (bytes != null) localVarFormParams.put("bytes", bytes);
     if (imageUsage != null) localVarFormParams.put("image_usage", imageUsage);
     if (description != null) localVarFormParams.put("description", description);
@@ -163,8 +163,8 @@ public class ImagesApi {
   private com.squareup.okhttp.Call imagesAddValidateBeforeCall(
       Long accountId,
       String uploadType,
-      String imageSignature,
-      File imageFile,
+      String signature,
+      File file,
       String bytes,
       String imageUsage,
       String description,
@@ -188,18 +188,18 @@ public class ImagesApi {
           "Missing the required parameter 'uploadType' when calling imagesAdd(Async)");
     }
 
-    // verify the required parameter 'imageSignature' is set
-    if (imageSignature == null) {
+    // verify the required parameter 'signature' is set
+    if (signature == null) {
       throw new ApiException(
-          "Missing the required parameter 'imageSignature' when calling imagesAdd(Async)");
+          "Missing the required parameter 'signature' when calling imagesAdd(Async)");
     }
 
     com.squareup.okhttp.Call call =
         imagesAddCall(
             accountId,
             uploadType,
-            imageSignature,
-            imageFile,
+            signature,
+            file,
             bytes,
             imageUsage,
             description,
@@ -217,8 +217,8 @@ public class ImagesApi {
    *
    * @param accountId (required)
    * @param uploadType (required)
-   * @param imageSignature (required)
-   * @param imageFile (optional)
+   * @param signature (required)
+   * @param file (optional)
    * @param bytes (optional)
    * @param imageUsage (optional)
    * @param description (optional)
@@ -232,8 +232,8 @@ public class ImagesApi {
   public ImagesAddResponse imagesAdd(
       Long accountId,
       String uploadType,
-      String imageSignature,
-      File imageFile,
+      String signature,
+      File file,
       String bytes,
       String imageUsage,
       String description,
@@ -246,8 +246,8 @@ public class ImagesApi {
         imagesAddWithHttpInfo(
             accountId,
             uploadType,
-            imageSignature,
-            imageFile,
+            signature,
+            file,
             bytes,
             imageUsage,
             description,
@@ -263,8 +263,8 @@ public class ImagesApi {
    *
    * @param accountId (required)
    * @param uploadType (required)
-   * @param imageSignature (required)
-   * @param imageFile (optional)
+   * @param signature (required)
+   * @param file (optional)
    * @param bytes (optional)
    * @param imageUsage (optional)
    * @param description (optional)
@@ -278,8 +278,8 @@ public class ImagesApi {
   public ApiResponse<ImagesAddResponse> imagesAddWithHttpInfo(
       Long accountId,
       String uploadType,
-      String imageSignature,
-      File imageFile,
+      String signature,
+      File file,
       String bytes,
       String imageUsage,
       String description,
@@ -292,8 +292,8 @@ public class ImagesApi {
         imagesAddValidateBeforeCall(
             accountId,
             uploadType,
-            imageSignature,
-            imageFile,
+            signature,
+            file,
             bytes,
             imageUsage,
             description,
@@ -312,8 +312,8 @@ public class ImagesApi {
    *
    * @param accountId (required)
    * @param uploadType (required)
-   * @param imageSignature (required)
-   * @param imageFile (optional)
+   * @param signature (required)
+   * @param file (optional)
    * @param bytes (optional)
    * @param imageUsage (optional)
    * @param description (optional)
@@ -327,8 +327,8 @@ public class ImagesApi {
   public com.squareup.okhttp.Call imagesAddAsync(
       Long accountId,
       String uploadType,
-      String imageSignature,
-      File imageFile,
+      String signature,
+      File file,
       String bytes,
       String imageUsage,
       String description,
@@ -364,8 +364,8 @@ public class ImagesApi {
         imagesAddValidateBeforeCall(
             accountId,
             uploadType,
-            imageSignature,
-            imageFile,
+            signature,
+            file,
             bytes,
             imageUsage,
             description,

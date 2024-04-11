@@ -21,23 +21,23 @@ import java.util.Objects;
 /** 组件素材内容 */
 @ApiModel(description = "组件素材内容")
 public class PageElementsStruct {
-  @SerializedName("elements_type")
-  private PageElementsType elementsType = null;
+  @SerializedName("element_type")
+  private PageElementsType elementType = null;
 
-  @SerializedName("element_image")
-  private ElementImage elementImage = null;
+  @SerializedName("image_spec")
+  private ElementImage imageSpec = null;
 
-  @SerializedName("element_video")
-  private ElementVideo elementVideo = null;
+  @SerializedName("video_spec")
+  private ElementVideo videoSpec = null;
 
-  @SerializedName("element_text")
-  private ElementText elementText = null;
+  @SerializedName("text_spec")
+  private ElementText textSpec = null;
 
-  @SerializedName("element_button")
-  private ElementButtonRead elementButton = null;
+  @SerializedName("button_spec")
+  private ElementButtonRead buttonSpec = null;
 
-  @SerializedName("element_form")
-  private ElementForm elementForm = null;
+  @SerializedName("form_spec")
+  private ElementForm formSpec = null;
 
   @SerializedName("element_shelf")
   private ElementShelf elementShelf = null;
@@ -57,118 +57,118 @@ public class PageElementsStruct {
   @SerializedName("element_animate_float")
   private ElementAnimateFloat elementAnimateFloat = null;
 
-  public PageElementsStruct elementsType(PageElementsType elementsType) {
-    this.elementsType = elementsType;
+  public PageElementsStruct elementType(PageElementsType elementType) {
+    this.elementType = elementType;
     return this;
   }
 
   /**
-   * Get elementsType
+   * Get elementType
    *
-   * @return elementsType
+   * @return elementType
    */
   @ApiModelProperty(value = "")
-  public PageElementsType getElementsType() {
-    return elementsType;
+  public PageElementsType getElementType() {
+    return elementType;
   }
 
-  public void setElementsType(PageElementsType elementsType) {
-    this.elementsType = elementsType;
+  public void setElementType(PageElementsType elementType) {
+    this.elementType = elementType;
   }
 
-  public PageElementsStruct elementImage(ElementImage elementImage) {
-    this.elementImage = elementImage;
+  public PageElementsStruct imageSpec(ElementImage imageSpec) {
+    this.imageSpec = imageSpec;
     return this;
   }
 
   /**
-   * Get elementImage
+   * Get imageSpec
    *
-   * @return elementImage
+   * @return imageSpec
    */
   @ApiModelProperty(value = "")
-  public ElementImage getElementImage() {
-    return elementImage;
+  public ElementImage getImageSpec() {
+    return imageSpec;
   }
 
-  public void setElementImage(ElementImage elementImage) {
-    this.elementImage = elementImage;
+  public void setImageSpec(ElementImage imageSpec) {
+    this.imageSpec = imageSpec;
   }
 
-  public PageElementsStruct elementVideo(ElementVideo elementVideo) {
-    this.elementVideo = elementVideo;
+  public PageElementsStruct videoSpec(ElementVideo videoSpec) {
+    this.videoSpec = videoSpec;
     return this;
   }
 
   /**
-   * Get elementVideo
+   * Get videoSpec
    *
-   * @return elementVideo
+   * @return videoSpec
    */
   @ApiModelProperty(value = "")
-  public ElementVideo getElementVideo() {
-    return elementVideo;
+  public ElementVideo getVideoSpec() {
+    return videoSpec;
   }
 
-  public void setElementVideo(ElementVideo elementVideo) {
-    this.elementVideo = elementVideo;
+  public void setVideoSpec(ElementVideo videoSpec) {
+    this.videoSpec = videoSpec;
   }
 
-  public PageElementsStruct elementText(ElementText elementText) {
-    this.elementText = elementText;
+  public PageElementsStruct textSpec(ElementText textSpec) {
+    this.textSpec = textSpec;
     return this;
   }
 
   /**
-   * Get elementText
+   * Get textSpec
    *
-   * @return elementText
+   * @return textSpec
    */
   @ApiModelProperty(value = "")
-  public ElementText getElementText() {
-    return elementText;
+  public ElementText getTextSpec() {
+    return textSpec;
   }
 
-  public void setElementText(ElementText elementText) {
-    this.elementText = elementText;
+  public void setTextSpec(ElementText textSpec) {
+    this.textSpec = textSpec;
   }
 
-  public PageElementsStruct elementButton(ElementButtonRead elementButton) {
-    this.elementButton = elementButton;
+  public PageElementsStruct buttonSpec(ElementButtonRead buttonSpec) {
+    this.buttonSpec = buttonSpec;
     return this;
   }
 
   /**
-   * Get elementButton
+   * Get buttonSpec
    *
-   * @return elementButton
+   * @return buttonSpec
    */
   @ApiModelProperty(value = "")
-  public ElementButtonRead getElementButton() {
-    return elementButton;
+  public ElementButtonRead getButtonSpec() {
+    return buttonSpec;
   }
 
-  public void setElementButton(ElementButtonRead elementButton) {
-    this.elementButton = elementButton;
+  public void setButtonSpec(ElementButtonRead buttonSpec) {
+    this.buttonSpec = buttonSpec;
   }
 
-  public PageElementsStruct elementForm(ElementForm elementForm) {
-    this.elementForm = elementForm;
+  public PageElementsStruct formSpec(ElementForm formSpec) {
+    this.formSpec = formSpec;
     return this;
   }
 
   /**
-   * Get elementForm
+   * Get formSpec
    *
-   * @return elementForm
+   * @return formSpec
    */
   @ApiModelProperty(value = "")
-  public ElementForm getElementForm() {
-    return elementForm;
+  public ElementForm getFormSpec() {
+    return formSpec;
   }
 
-  public void setElementForm(ElementForm elementForm) {
-    this.elementForm = elementForm;
+  public void setFormSpec(ElementForm formSpec) {
+    this.formSpec = formSpec;
   }
 
   public PageElementsStruct elementShelf(ElementShelf elementShelf) {
@@ -294,12 +294,12 @@ public class PageElementsStruct {
       return false;
     }
     PageElementsStruct pageElementsStruct = (PageElementsStruct) o;
-    return Objects.equals(this.elementsType, pageElementsStruct.elementsType)
-        && Objects.equals(this.elementImage, pageElementsStruct.elementImage)
-        && Objects.equals(this.elementVideo, pageElementsStruct.elementVideo)
-        && Objects.equals(this.elementText, pageElementsStruct.elementText)
-        && Objects.equals(this.elementButton, pageElementsStruct.elementButton)
-        && Objects.equals(this.elementForm, pageElementsStruct.elementForm)
+    return Objects.equals(this.elementType, pageElementsStruct.elementType)
+        && Objects.equals(this.imageSpec, pageElementsStruct.imageSpec)
+        && Objects.equals(this.videoSpec, pageElementsStruct.videoSpec)
+        && Objects.equals(this.textSpec, pageElementsStruct.textSpec)
+        && Objects.equals(this.buttonSpec, pageElementsStruct.buttonSpec)
+        && Objects.equals(this.formSpec, pageElementsStruct.formSpec)
         && Objects.equals(this.elementShelf, pageElementsStruct.elementShelf)
         && Objects.equals(this.elementFloat, pageElementsStruct.elementFloat)
         && Objects.equals(this.elementGoods, pageElementsStruct.elementGoods)
@@ -311,12 +311,12 @@ public class PageElementsStruct {
   @Override
   public int hashCode() {
     return Objects.hash(
-        elementsType,
-        elementImage,
-        elementVideo,
-        elementText,
-        elementButton,
-        elementForm,
+        elementType,
+        imageSpec,
+        videoSpec,
+        textSpec,
+        buttonSpec,
+        formSpec,
         elementShelf,
         elementFloat,
         elementGoods,

@@ -41,8 +41,8 @@ public class ImagesApiContainer extends ApiContainer {
    *
    * @param accountId (required)
    * @param uploadType (required)
-   * @param imageSignature (required)
-   * @param imageFile (optional)
+   * @param signature (required)
+   * @param file (optional)
    * @param bytes (optional)
    * @param imageUsage (optional)
    * @param description (optional)
@@ -56,8 +56,8 @@ public class ImagesApiContainer extends ApiContainer {
   public ImagesAddResponseData imagesAdd(
       Long accountId,
       String uploadType,
-      String imageSignature,
-      File imageFile,
+      String signature,
+      File file,
       String bytes,
       String imageUsage,
       String description,
@@ -70,8 +70,8 @@ public class ImagesApiContainer extends ApiContainer {
         api.imagesAdd(
             accountId,
             uploadType,
-            imageSignature,
-            imageFile,
+            signature,
+            file,
             bytes,
             imageUsage,
             description,

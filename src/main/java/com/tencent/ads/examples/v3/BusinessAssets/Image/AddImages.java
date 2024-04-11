@@ -18,9 +18,9 @@ public class AddImages {
 
   public String uploadType = "UPLOAD_TYPE_FILE";
 
-  public String imageSignature = null;
+  public String signature = null;
 
-  public File imageFile = null;
+  public File file = new File("YOUR IMAGE FILE PATH");
 
   public String bytes = null;
 
@@ -51,8 +51,8 @@ public class AddImages {
             .imagesAdd(
                 accountId,
                 uploadType,
-                imageSignature,
-                imageFile,
+                signature,
+                file,
                 bytes,
                 imageUsage,
                 description,

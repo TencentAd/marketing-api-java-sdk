@@ -24,20 +24,11 @@ public class WechatChannelsStruct {
   @SerializedName("live_promoted_type")
   private LivePromotedType livePromotedType = null;
 
-  @SerializedName("export_id")
-  private String exportId = null;
-
   @SerializedName("username")
   private String username = null;
 
-  @SerializedName("export_id_hash_value")
-  private Long exportIdHashValue = null;
-
   @SerializedName("finder_object_visibility")
   private Boolean finderObjectVisibility = null;
-
-  @SerializedName("cover_img_show_type")
-  private WechatChannelsCoverImgShowType coverImgShowType = null;
 
   public WechatChannelsStruct livePromotedType(LivePromotedType livePromotedType) {
     this.livePromotedType = livePromotedType;
@@ -56,25 +47,6 @@ public class WechatChannelsStruct {
 
   public void setLivePromotedType(LivePromotedType livePromotedType) {
     this.livePromotedType = livePromotedType;
-  }
-
-  public WechatChannelsStruct exportId(String exportId) {
-    this.exportId = exportId;
-    return this;
-  }
-
-  /**
-   * Get exportId
-   *
-   * @return exportId
-   */
-  @ApiModelProperty(value = "")
-  public String getExportId() {
-    return exportId;
-  }
-
-  public void setExportId(String exportId) {
-    this.exportId = exportId;
   }
 
   public WechatChannelsStruct username(String username) {
@@ -96,25 +68,6 @@ public class WechatChannelsStruct {
     this.username = username;
   }
 
-  public WechatChannelsStruct exportIdHashValue(Long exportIdHashValue) {
-    this.exportIdHashValue = exportIdHashValue;
-    return this;
-  }
-
-  /**
-   * Get exportIdHashValue
-   *
-   * @return exportIdHashValue
-   */
-  @ApiModelProperty(value = "")
-  public Long getExportIdHashValue() {
-    return exportIdHashValue;
-  }
-
-  public void setExportIdHashValue(Long exportIdHashValue) {
-    this.exportIdHashValue = exportIdHashValue;
-  }
-
   public WechatChannelsStruct finderObjectVisibility(Boolean finderObjectVisibility) {
     this.finderObjectVisibility = finderObjectVisibility;
     return this;
@@ -134,25 +87,6 @@ public class WechatChannelsStruct {
     this.finderObjectVisibility = finderObjectVisibility;
   }
 
-  public WechatChannelsStruct coverImgShowType(WechatChannelsCoverImgShowType coverImgShowType) {
-    this.coverImgShowType = coverImgShowType;
-    return this;
-  }
-
-  /**
-   * Get coverImgShowType
-   *
-   * @return coverImgShowType
-   */
-  @ApiModelProperty(value = "")
-  public WechatChannelsCoverImgShowType getCoverImgShowType() {
-    return coverImgShowType;
-  }
-
-  public void setCoverImgShowType(WechatChannelsCoverImgShowType coverImgShowType) {
-    this.coverImgShowType = coverImgShowType;
-  }
-
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -163,22 +97,13 @@ public class WechatChannelsStruct {
     }
     WechatChannelsStruct wechatChannelsStruct = (WechatChannelsStruct) o;
     return Objects.equals(this.livePromotedType, wechatChannelsStruct.livePromotedType)
-        && Objects.equals(this.exportId, wechatChannelsStruct.exportId)
         && Objects.equals(this.username, wechatChannelsStruct.username)
-        && Objects.equals(this.exportIdHashValue, wechatChannelsStruct.exportIdHashValue)
-        && Objects.equals(this.finderObjectVisibility, wechatChannelsStruct.finderObjectVisibility)
-        && Objects.equals(this.coverImgShowType, wechatChannelsStruct.coverImgShowType);
+        && Objects.equals(this.finderObjectVisibility, wechatChannelsStruct.finderObjectVisibility);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(
-        livePromotedType,
-        exportId,
-        username,
-        exportIdHashValue,
-        finderObjectVisibility,
-        coverImgShowType);
+    return Objects.hash(livePromotedType, username, finderObjectVisibility);
   }
 
   @Override

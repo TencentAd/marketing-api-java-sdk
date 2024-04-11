@@ -36,8 +36,8 @@ public class ImagesGetListStruct {
   @SerializedName("image_type")
   private ImageType imageType = null;
 
-  @SerializedName("image_signature")
-  private String imageSignature = null;
+  @SerializedName("signature")
+  private String signature = null;
 
   @SerializedName("description")
   private String description = null;
@@ -173,23 +173,23 @@ public class ImagesGetListStruct {
     this.imageType = imageType;
   }
 
-  public ImagesGetListStruct imageSignature(String imageSignature) {
-    this.imageSignature = imageSignature;
+  public ImagesGetListStruct signature(String signature) {
+    this.signature = signature;
     return this;
   }
 
   /**
-   * Get imageSignature
+   * Get signature
    *
-   * @return imageSignature
+   * @return signature
    */
   @ApiModelProperty(value = "")
-  public String getImageSignature() {
-    return imageSignature;
+  public String getSignature() {
+    return signature;
   }
 
-  public void setImageSignature(String imageSignature) {
-    this.imageSignature = imageSignature;
+  public void setSignature(String signature) {
+    this.signature = signature;
   }
 
   public ImagesGetListStruct description(String description) {
@@ -453,7 +453,7 @@ public class ImagesGetListStruct {
         && Objects.equals(this.imageHeight, imagesGetListStruct.imageHeight)
         && Objects.equals(this.imageFileSize, imagesGetListStruct.imageFileSize)
         && Objects.equals(this.imageType, imagesGetListStruct.imageType)
-        && Objects.equals(this.imageSignature, imagesGetListStruct.imageSignature)
+        && Objects.equals(this.signature, imagesGetListStruct.signature)
         && Objects.equals(this.description, imagesGetListStruct.description)
         && Objects.equals(this.sourceSignature, imagesGetListStruct.sourceSignature)
         && Objects.equals(this.previewUrl, imagesGetListStruct.previewUrl)
@@ -477,7 +477,7 @@ public class ImagesGetListStruct {
         imageHeight,
         imageFileSize,
         imageType,
-        imageSignature,
+        signature,
         description,
         sourceSignature,
         previewUrl,

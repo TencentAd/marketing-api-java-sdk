@@ -21,8 +21,8 @@ import java.util.Objects;
 /** 动画悬浮组件 */
 @ApiModel(description = "动画悬浮组件")
 public class ElementAnimateFloat {
-  @SerializedName("image_id")
-  private String imageId = null;
+  @SerializedName("image_id_list")
+  private String imageIdList = null;
 
   @SerializedName("title")
   private String title = null;
@@ -33,23 +33,23 @@ public class ElementAnimateFloat {
   @SerializedName("animate_float_button_spec")
   private AnimateFloatButtonSpec animateFloatButtonSpec = null;
 
-  public ElementAnimateFloat imageId(String imageId) {
-    this.imageId = imageId;
+  public ElementAnimateFloat imageIdList(String imageIdList) {
+    this.imageIdList = imageIdList;
     return this;
   }
 
   /**
-   * Get imageId
+   * Get imageIdList
    *
-   * @return imageId
+   * @return imageIdList
    */
   @ApiModelProperty(value = "")
-  public String getImageId() {
-    return imageId;
+  public String getImageIdList() {
+    return imageIdList;
   }
 
-  public void setImageId(String imageId) {
-    this.imageId = imageId;
+  public void setImageIdList(String imageIdList) {
+    this.imageIdList = imageIdList;
   }
 
   public ElementAnimateFloat title(String title) {
@@ -118,7 +118,7 @@ public class ElementAnimateFloat {
       return false;
     }
     ElementAnimateFloat elementAnimateFloat = (ElementAnimateFloat) o;
-    return Objects.equals(this.imageId, elementAnimateFloat.imageId)
+    return Objects.equals(this.imageIdList, elementAnimateFloat.imageIdList)
         && Objects.equals(this.title, elementAnimateFloat.title)
         && Objects.equals(this.desc, elementAnimateFloat.desc)
         && Objects.equals(this.animateFloatButtonSpec, elementAnimateFloat.animateFloatButtonSpec);
@@ -126,7 +126,7 @@ public class ElementAnimateFloat {
 
   @Override
   public int hashCode() {
-    return Objects.hash(imageId, title, desc, animateFloatButtonSpec);
+    return Objects.hash(imageIdList, title, desc, animateFloatButtonSpec);
   }
 
   @Override

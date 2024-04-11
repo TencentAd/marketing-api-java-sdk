@@ -19,20 +19,14 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-/** 重试状态 */
-@JsonAdapter(DynamicCreativeRetryStatus.Adapter.class)
-public enum DynamicCreativeRetryStatus {
-  UNKNOWN("DYNAMIC_CREATIVE_RETRY_STATUS_UNKNOWN"),
-
-  WAIT_FOR_RETRY("DYNAMIC_CREATIVE_RETRY_STATUS_WAIT_FOR_RETRY"),
-
-  REJECTED("DYNAMIC_CREATIVE_RETRY_STATUS_REJECTED"),
-
-  RETRYING("DYNAMIC_CREATIVE_RETRY_STATUS_RETRYING");
+/** 蹊径互动落地页互动类型 */
+@JsonAdapter(InteractivePageType.Adapter.class)
+public enum InteractivePageType {
+  COMPRESSED_PACKAGE("COMPRESSED_PACKAGE");
 
   private String value;
 
-  DynamicCreativeRetryStatus(String value) {
+  InteractivePageType(String value) {
     this.value = value;
   }
 
@@ -45,8 +39,8 @@ public enum DynamicCreativeRetryStatus {
     return String.valueOf(value);
   }
 
-  public static DynamicCreativeRetryStatus fromValue(String text) {
-    for (DynamicCreativeRetryStatus b : DynamicCreativeRetryStatus.values()) {
+  public static InteractivePageType fromValue(String text) {
+    for (InteractivePageType b : InteractivePageType.values()) {
       if (String.valueOf(b.value).equals(text)) {
         return b;
       }
@@ -54,17 +48,17 @@ public enum DynamicCreativeRetryStatus {
     return null;
   }
 
-  public static class Adapter extends TypeAdapter<DynamicCreativeRetryStatus> {
+  public static class Adapter extends TypeAdapter<InteractivePageType> {
     @Override
-    public void write(final JsonWriter jsonWriter, final DynamicCreativeRetryStatus enumeration)
+    public void write(final JsonWriter jsonWriter, final InteractivePageType enumeration)
         throws IOException {
       jsonWriter.value(enumeration.getValue());
     }
 
     @Override
-    public DynamicCreativeRetryStatus read(final JsonReader jsonReader) throws IOException {
+    public InteractivePageType read(final JsonReader jsonReader) throws IOException {
       String value = jsonReader.nextString();
-      return DynamicCreativeRetryStatus.fromValue(String.valueOf(value));
+      return InteractivePageType.fromValue(String.valueOf(value));
     }
   }
 }

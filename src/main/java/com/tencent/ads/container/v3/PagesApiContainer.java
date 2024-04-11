@@ -18,6 +18,7 @@ import com.tencent.ads.ApiException;
 import com.tencent.ads.anno.*;
 import com.tencent.ads.api.v3.PagesApi;
 import com.tencent.ads.exception.TencentAdsResponseException;
+import com.tencent.ads.model.v3.AdContext;
 import com.tencent.ads.model.v3.FilteringStruct;
 import com.tencent.ads.model.v3.PagesGetResponse;
 import com.tencent.ads.model.v3.PagesGetResponseData;
@@ -34,6 +35,7 @@ public class PagesApiContainer extends ApiContainer {
    * @param filtering (optional)
    * @param page (optional)
    * @param pageSize (optional)
+   * @param adContext (optional)
    * @param fields 返回参数的字段列表 (optional)
    * @return PagesGetResponse
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
@@ -44,10 +46,12 @@ public class PagesApiContainer extends ApiContainer {
       List<FilteringStruct> filtering,
       Long page,
       Long pageSize,
+      AdContext adContext,
       List<String> fields,
       String... headerPair)
       throws ApiException, TencentAdsResponseException {
-    PagesGetResponse resp = api.pagesGet(accountId, filtering, page, pageSize, fields, headerPair);
+    PagesGetResponse resp =
+        api.pagesGet(accountId, filtering, page, pageSize, adContext, fields, headerPair);
     handleResponse(gson.toJson(resp));
     return resp.getData();
   }

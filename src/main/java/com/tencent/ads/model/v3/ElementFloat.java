@@ -21,8 +21,8 @@ import java.util.Objects;
 /** 悬浮组件 */
 @ApiModel(description = "悬浮组件")
 public class ElementFloat {
-  @SerializedName("image_id")
-  private String imageId = null;
+  @SerializedName("image_id_list")
+  private String imageIdList = null;
 
   @SerializedName("title")
   private String title = null;
@@ -33,23 +33,23 @@ public class ElementFloat {
   @SerializedName("float_button_spec")
   private FloatButtonSpec floatButtonSpec = null;
 
-  public ElementFloat imageId(String imageId) {
-    this.imageId = imageId;
+  public ElementFloat imageIdList(String imageIdList) {
+    this.imageIdList = imageIdList;
     return this;
   }
 
   /**
-   * Get imageId
+   * Get imageIdList
    *
-   * @return imageId
+   * @return imageIdList
    */
   @ApiModelProperty(value = "")
-  public String getImageId() {
-    return imageId;
+  public String getImageIdList() {
+    return imageIdList;
   }
 
-  public void setImageId(String imageId) {
-    this.imageId = imageId;
+  public void setImageIdList(String imageIdList) {
+    this.imageIdList = imageIdList;
   }
 
   public ElementFloat title(String title) {
@@ -118,7 +118,7 @@ public class ElementFloat {
       return false;
     }
     ElementFloat elementFloat = (ElementFloat) o;
-    return Objects.equals(this.imageId, elementFloat.imageId)
+    return Objects.equals(this.imageIdList, elementFloat.imageIdList)
         && Objects.equals(this.title, elementFloat.title)
         && Objects.equals(this.desc, elementFloat.desc)
         && Objects.equals(this.floatButtonSpec, elementFloat.floatButtonSpec);
@@ -126,7 +126,7 @@ public class ElementFloat {
 
   @Override
   public int hashCode() {
-    return Objects.hash(imageId, title, desc, floatButtonSpec);
+    return Objects.hash(imageIdList, title, desc, floatButtonSpec);
   }
 
   @Override

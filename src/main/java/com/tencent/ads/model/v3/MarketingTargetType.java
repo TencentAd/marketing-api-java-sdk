@@ -19,7 +19,7 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-/** 推广内容资产类型 */
+/** 推广产品类型 */
 @JsonAdapter(MarketingTargetType.Adapter.class)
 public enum MarketingTargetType {
   UNKNOWN("MARKETING_TARGET_TYPE_UNKNOWN"),
@@ -134,7 +134,9 @@ public enum MarketingTargetType {
 
   PLATFORM_CHANNEL("MARKETING_TARGET_TYPE_PLATFORM_CHANNEL"),
 
-  TWO_WHEEL_VEHICLE("MARKETING_TARGET_TYPE_TWO_WHEEL_VEHICLE");
+  TWO_WHEEL_VEHICLE("MARKETING_TARGET_TYPE_TWO_WHEEL_VEHICLE"),
+
+  GOVERNMENT_AFFAIRS("MARKETING_TARGET_TYPE_GOVERNMENT_AFFAIRS");
 
   private String value;
 

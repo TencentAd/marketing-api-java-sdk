@@ -24,8 +24,8 @@ public class ShelfSpecStruct {
   @SerializedName("shelf_button_spec")
   private ShelfButtonSpec shelfButtonSpec = null;
 
-  @SerializedName("image_id")
-  private String imageId = null;
+  @SerializedName("image_id_list")
+  private String imageIdList = null;
 
   @SerializedName("title")
   private String title = null;
@@ -52,23 +52,23 @@ public class ShelfSpecStruct {
     this.shelfButtonSpec = shelfButtonSpec;
   }
 
-  public ShelfSpecStruct imageId(String imageId) {
-    this.imageId = imageId;
+  public ShelfSpecStruct imageIdList(String imageIdList) {
+    this.imageIdList = imageIdList;
     return this;
   }
 
   /**
-   * Get imageId
+   * Get imageIdList
    *
-   * @return imageId
+   * @return imageIdList
    */
   @ApiModelProperty(value = "")
-  public String getImageId() {
-    return imageId;
+  public String getImageIdList() {
+    return imageIdList;
   }
 
-  public void setImageId(String imageId) {
-    this.imageId = imageId;
+  public void setImageIdList(String imageIdList) {
+    this.imageIdList = imageIdList;
   }
 
   public ShelfSpecStruct title(String title) {
@@ -119,14 +119,14 @@ public class ShelfSpecStruct {
     }
     ShelfSpecStruct shelfSpecStruct = (ShelfSpecStruct) o;
     return Objects.equals(this.shelfButtonSpec, shelfSpecStruct.shelfButtonSpec)
-        && Objects.equals(this.imageId, shelfSpecStruct.imageId)
+        && Objects.equals(this.imageIdList, shelfSpecStruct.imageIdList)
         && Objects.equals(this.title, shelfSpecStruct.title)
         && Objects.equals(this.desc, shelfSpecStruct.desc);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(shelfButtonSpec, imageId, title, desc);
+    return Objects.hash(shelfButtonSpec, imageIdList, title, desc);
   }
 
   @Override

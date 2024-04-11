@@ -16,8 +16,6 @@ import com.google.gson.Gson;
 import com.google.gson.annotations.SerializedName;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Objects;
 
 /** 返回结构 */
@@ -67,12 +65,6 @@ public class DynamicCreativesGetListStruct {
 
   @SerializedName("last_modified_time")
   private Long lastModifiedTime = null;
-
-  @SerializedName("dynamic_creative_status_info")
-  private List<DcInfoStruct> dynamicCreativeStatusInfo = null;
-
-  @SerializedName("system_status_explanation")
-  private String systemStatusExplanation = null;
 
   @SerializedName("marketing_asset_verification")
   private MarketingAssetVerification marketingAssetVerification = null;
@@ -364,54 +356,6 @@ public class DynamicCreativesGetListStruct {
     this.lastModifiedTime = lastModifiedTime;
   }
 
-  public DynamicCreativesGetListStruct dynamicCreativeStatusInfo(
-      List<DcInfoStruct> dynamicCreativeStatusInfo) {
-    this.dynamicCreativeStatusInfo = dynamicCreativeStatusInfo;
-    return this;
-  }
-
-  public DynamicCreativesGetListStruct addDynamicCreativeStatusInfoItem(
-      DcInfoStruct dynamicCreativeStatusInfoItem) {
-    if (this.dynamicCreativeStatusInfo == null) {
-      this.dynamicCreativeStatusInfo = new ArrayList<DcInfoStruct>();
-    }
-    this.dynamicCreativeStatusInfo.add(dynamicCreativeStatusInfoItem);
-    return this;
-  }
-
-  /**
-   * Get dynamicCreativeStatusInfo
-   *
-   * @return dynamicCreativeStatusInfo
-   */
-  @ApiModelProperty(value = "")
-  public List<DcInfoStruct> getDynamicCreativeStatusInfo() {
-    return dynamicCreativeStatusInfo;
-  }
-
-  public void setDynamicCreativeStatusInfo(List<DcInfoStruct> dynamicCreativeStatusInfo) {
-    this.dynamicCreativeStatusInfo = dynamicCreativeStatusInfo;
-  }
-
-  public DynamicCreativesGetListStruct systemStatusExplanation(String systemStatusExplanation) {
-    this.systemStatusExplanation = systemStatusExplanation;
-    return this;
-  }
-
-  /**
-   * Get systemStatusExplanation
-   *
-   * @return systemStatusExplanation
-   */
-  @ApiModelProperty(value = "")
-  public String getSystemStatusExplanation() {
-    return systemStatusExplanation;
-  }
-
-  public void setSystemStatusExplanation(String systemStatusExplanation) {
-    this.systemStatusExplanation = systemStatusExplanation;
-  }
-
   public DynamicCreativesGetListStruct marketingAssetVerification(
       MarketingAssetVerification marketingAssetVerification) {
     this.marketingAssetVerification = marketingAssetVerification;
@@ -461,10 +405,6 @@ public class DynamicCreativesGetListStruct {
         && Objects.equals(this.createdTime, dynamicCreativesGetListStruct.createdTime)
         && Objects.equals(this.lastModifiedTime, dynamicCreativesGetListStruct.lastModifiedTime)
         && Objects.equals(
-            this.dynamicCreativeStatusInfo, dynamicCreativesGetListStruct.dynamicCreativeStatusInfo)
-        && Objects.equals(
-            this.systemStatusExplanation, dynamicCreativesGetListStruct.systemStatusExplanation)
-        && Objects.equals(
             this.marketingAssetVerification,
             dynamicCreativesGetListStruct.marketingAssetVerification);
   }
@@ -487,8 +427,6 @@ public class DynamicCreativesGetListStruct {
         isDeleted,
         createdTime,
         lastModifiedTime,
-        dynamicCreativeStatusInfo,
-        systemStatusExplanation,
         marketingAssetVerification);
   }
 

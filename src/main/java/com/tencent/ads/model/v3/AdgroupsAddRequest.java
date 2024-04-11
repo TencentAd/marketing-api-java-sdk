@@ -171,6 +171,9 @@ public class AdgroupsAddRequest {
   @SerializedName("dynamic_ad_type")
   private DynamicAdType dynamicAdType = null;
 
+  @SerializedName("og_completion_type")
+  private OgCompletionType ogCompletionType = null;
+
   public AdgroupsAddRequest accountId(Long accountId) {
     this.accountId = accountId;
     return this;
@@ -1158,6 +1161,25 @@ public class AdgroupsAddRequest {
     this.dynamicAdType = dynamicAdType;
   }
 
+  public AdgroupsAddRequest ogCompletionType(OgCompletionType ogCompletionType) {
+    this.ogCompletionType = ogCompletionType;
+    return this;
+  }
+
+  /**
+   * Get ogCompletionType
+   *
+   * @return ogCompletionType
+   */
+  @ApiModelProperty(value = "")
+  public OgCompletionType getOgCompletionType() {
+    return ogCompletionType;
+  }
+
+  public void setOgCompletionType(OgCompletionType ogCompletionType) {
+    this.ogCompletionType = ogCompletionType;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -1224,7 +1246,8 @@ public class AdgroupsAddRequest {
         && Objects.equals(this.customCostCap, adgroupsAddRequest.customCostCap)
         && Objects.equals(this.shortPlayPayType, adgroupsAddRequest.shortPlayPayType)
         && Objects.equals(this.sellStrategyId, adgroupsAddRequest.sellStrategyId)
-        && Objects.equals(this.dynamicAdType, adgroupsAddRequest.dynamicAdType);
+        && Objects.equals(this.dynamicAdType, adgroupsAddRequest.dynamicAdType)
+        && Objects.equals(this.ogCompletionType, adgroupsAddRequest.ogCompletionType);
   }
 
   @Override
@@ -1279,7 +1302,8 @@ public class AdgroupsAddRequest {
         customCostCap,
         shortPlayPayType,
         sellStrategyId,
-        dynamicAdType);
+        dynamicAdType,
+        ogCompletionType);
   }
 
   @Override

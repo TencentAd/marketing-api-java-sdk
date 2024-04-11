@@ -6,6 +6,8 @@ import com.tencent.ads.exception.TencentAdsSDKException;
 import com.tencent.ads.model.v3.*;
 import com.tencent.ads.model.v3.WechatPagesAddRequest;
 import com.tencent.ads.v3.TencentAds;
+import java.util.ArrayList;
+import java.util.List;
 
 public class AddWechatPages {
   /** YOUR ACCESS TOKEN */
@@ -14,8 +16,12 @@ public class AddWechatPages {
   /** TencentAds */
   public TencentAds tencentAds;
 
-  public Long accountId = null;
+  public PageElementsType elementType = PageElementsType.GOODS;
+  public String title = "YOUR AD TITLE";
+  public PageElementsType elementType_1 = PageElementsType.BUTTON;
+  public String title_1 = "YOUR BUTTON TEXT";
   public WechatPagesAddRequest data = new WechatPagesAddRequest();
+  public Long accountId = null;
   public String pageName = "SDK原生页5ede252bee1a8";
   public Long pageTemplateId = null;
   public String shareTitle = "分享标题";
@@ -30,6 +36,25 @@ public class AddWechatPages {
   }
 
   public void buildParams() {
+    PageElementsStruct pageElementsStruct = new PageElementsStruct();
+    pageElementsStruct.setElementType(elementType);
+    GoodsButtonSpec goodsButtonSpec = new GoodsButtonSpec();
+    goodsButtonSpec.setTitle(title);
+    ElementGoods elementGoods = new ElementGoods();
+    elementGoods.setGoodsButtonSpec(goodsButtonSpec);
+    pageElementsStruct.setElementGoods(elementGoods);
+    PageElementsStruct pageElementsStruct_1 = new PageElementsStruct();
+    pageElementsStruct_1.setElementType(elementType_1);
+    ServiceSpec serviceSpec_1 = new ServiceSpec();
+    serviceSpec_1.setTitle(title_1);
+    ElementButtonRead buttonSpec_1 = new ElementButtonRead();
+    buttonSpec_1.setServiceSpec(serviceSpec_1);
+    pageElementsStruct_1.setButtonSpec(buttonSpec_1);
+    List<PageElementsStruct> pageElementsSpecList = new ArrayList<>();
+    pageElementsSpecList.add(pageElementsStruct);
+    pageElementsSpecList.add(pageElementsStruct_1);
+    data.setPageElementsSpecList(pageElementsSpecList);
+
     data.setAccountId(accountId);
 
     data.setPageName(pageName);

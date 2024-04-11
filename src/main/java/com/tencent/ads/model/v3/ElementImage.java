@@ -23,34 +23,34 @@ import java.util.Objects;
 /** 图片组件元素 */
 @ApiModel(description = "图片组件元素")
 public class ElementImage {
-  @SerializedName("image_id")
-  private List<String> imageId = null;
+  @SerializedName("image_id_list")
+  private List<String> imageIdList = null;
 
-  public ElementImage imageId(List<String> imageId) {
-    this.imageId = imageId;
+  public ElementImage imageIdList(List<String> imageIdList) {
+    this.imageIdList = imageIdList;
     return this;
   }
 
-  public ElementImage addImageIdItem(String imageIdItem) {
-    if (this.imageId == null) {
-      this.imageId = new ArrayList<String>();
+  public ElementImage addImageIdListItem(String imageIdListItem) {
+    if (this.imageIdList == null) {
+      this.imageIdList = new ArrayList<String>();
     }
-    this.imageId.add(imageIdItem);
+    this.imageIdList.add(imageIdListItem);
     return this;
   }
 
   /**
-   * Get imageId
+   * Get imageIdList
    *
-   * @return imageId
+   * @return imageIdList
    */
   @ApiModelProperty(value = "")
-  public List<String> getImageId() {
-    return imageId;
+  public List<String> getImageIdList() {
+    return imageIdList;
   }
 
-  public void setImageId(List<String> imageId) {
-    this.imageId = imageId;
+  public void setImageIdList(List<String> imageIdList) {
+    this.imageIdList = imageIdList;
   }
 
   @Override
@@ -62,12 +62,12 @@ public class ElementImage {
       return false;
     }
     ElementImage elementImage = (ElementImage) o;
-    return Objects.equals(this.imageId, elementImage.imageId);
+    return Objects.equals(this.imageIdList, elementImage.imageIdList);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(imageId);
+    return Objects.hash(imageIdList);
   }
 
   @Override

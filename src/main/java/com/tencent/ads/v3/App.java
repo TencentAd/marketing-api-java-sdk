@@ -19,7 +19,9 @@ import com.tencent.ads.guice.GuiceModule;
 
 public class App {
 
+  @Inject AccountVersionApiContainer accountVersionApiContainer;
   @Inject AdDiagnosisApiContainer adDiagnosisApiContainer;
+  @Inject AdLabelApiContainer adLabelApiContainer;
   @Inject AdParamApiContainer adParamApiContainer;
   @Inject AdUnionReportsApiContainer adUnionReportsApiContainer;
   @Inject AdcreativePreviewsApiContainer adcreativePreviewsApiContainer;
@@ -35,6 +37,8 @@ public class App {
   @Inject AsyncReportsApiContainer asyncReportsApiContainer;
   @Inject AsyncTasksApiContainer asyncTasksApiContainer;
   @Inject AudienceGrantRelationsApiContainer audienceGrantRelationsApiContainer;
+  @Inject BarrageApiContainer barrageApiContainer;
+  @Inject BarrageRecommendApiContainer barrageRecommendApiContainer;
   @Inject BatchAsyncRequestSpecificationApiContainer batchAsyncRequestSpecificationApiContainer;
   @Inject BatchAsyncRequestsApiContainer batchAsyncRequestsApiContainer;
   @Inject BatchRequestsApiContainer batchRequestsApiContainer;
@@ -70,6 +74,7 @@ public class App {
   @Inject GameFeatureApiContainer gameFeatureApiContainer;
   @Inject GameFeatureTagsApiContainer gameFeatureTagsApiContainer;
   @Inject HourlyReportsApiContainer hourlyReportsApiContainer;
+  @Inject ImageProcessingApiContainer imageProcessingApiContainer;
   @Inject ImagesApiContainer imagesApiContainer;
   @Inject KeywordRecommendApiContainer keywordRecommendApiContainer;
   @Inject LabelsApiContainer labelsApiContainer;
@@ -92,6 +97,7 @@ public class App {
   @Inject LocalStoresCategoriesApiContainer localStoresCategoriesApiContainer;
   @Inject LocalStoresSearchInfoApiContainer localStoresSearchInfoApiContainer;
   @Inject LocalStoresWxpayMerchantsApiContainer localStoresWxpayMerchantsApiContainer;
+  @Inject MarketingRulesApiContainer marketingRulesApiContainer;
   @Inject MarketingTargetAssetCategoriesApiContainer marketingTargetAssetCategoriesApiContainer;
   @Inject MarketingTargetAssetDetailApiContainer marketingTargetAssetDetailApiContainer;
   @Inject MarketingTargetAssetPropertiesApiContainer marketingTargetAssetPropertiesApiContainer;
@@ -111,6 +117,7 @@ public class App {
   @Inject MergeFundTypeFundsApiContainer mergeFundTypeFundsApiContainer;
   @Inject MergeFundTypeSubcustomerTransferApiContainer mergeFundTypeSubcustomerTransferApiContainer;
   @Inject OauthApiContainer oauthApiContainer;
+  @Inject ObjectCommentFlagApiContainer objectCommentFlagApiContainer;
   @Inject OptimizationGoalPermissionsApiContainer optimizationGoalPermissionsApiContainer;
   @Inject OrganizationAccountRelationApiContainer organizationAccountRelationApiContainer;
   @Inject PagesApiContainer pagesApiContainer;
@@ -118,6 +125,7 @@ public class App {
   @Inject ProductCategoriesListApiContainer productCategoriesListApiContainer;
   @Inject ProductItemsApiContainer productItemsApiContainer;
   @Inject ProductItemsDetailApiContainer productItemsDetailApiContainer;
+  @Inject ProductItemsVerticalsApiContainer productItemsVerticalsApiContainer;
   @Inject ProductSeriesApiContainer productSeriesApiContainer;
   @Inject ProductsSystemStatusApiContainer productsSystemStatusApiContainer;
   @Inject ProfilesApiContainer profilesApiContainer;
@@ -126,6 +134,12 @@ public class App {
   @Inject QualificationsApiContainer qualificationsApiContainer;
   @Inject RealtimeCostApiContainer realtimeCostApiContainer;
   @Inject ReviewElementPrereviewResultsApiContainer reviewElementPrereviewResultsApiContainer;
+  @Inject RtaApiContainer rtaApiContainer;
+  @Inject RtaexpApiContainer rtaexpApiContainer;
+  @Inject RtaexpDataRoiApiContainer rtaexpDataRoiApiContainer;
+  @Inject RtaexpDspTagDataApiContainer rtaexpDspTagDataApiContainer;
+  @Inject RtatargetApiContainer rtatargetApiContainer;
+  @Inject RtatargetBindApiContainer rtatargetBindApiContainer;
   @Inject SceneSpecTagsApiContainer sceneSpecTagsApiContainer;
   @Inject SubcustomerTransferApiContainer subcustomerTransferApiContainer;
   @Inject TargetingTagReportsApiContainer targetingTagReportsApiContainer;
@@ -141,7 +155,25 @@ public class App {
   @Inject VideoChannelLeadsDataApiContainer videoChannelLeadsDataApiContainer;
   @Inject VideoChannelLiveDataApiContainer videoChannelLiveDataApiContainer;
   @Inject VideosApiContainer videosApiContainer;
+  @Inject WechatChannelsAccountsApiContainer wechatChannelsAccountsApiContainer;
+  @Inject WechatChannelsAdAccountApiContainer wechatChannelsAdAccountApiContainer;
+
+  @Inject
+  WechatChannelsAdAccountCertificationFileApiContainer
+      wechatChannelsAdAccountCertificationFileApiContainer;
+
+  @Inject
+  WechatChannelsAdAccountValidationApiContainer wechatChannelsAdAccountValidationApiContainer;
+
+  @Inject
+  WechatChannelsAdAccountWechatBindingApiContainer wechatChannelsAdAccountWechatBindingApiContainer;
+
+  @Inject WechatChannelsAuthorizationApiContainer wechatChannelsAuthorizationApiContainer;
+  @Inject WechatOfficialAccountsApiContainer wechatOfficialAccountsApiContainer;
   @Inject WechatPagesApiContainer wechatPagesApiContainer;
+  @Inject WechatPagesCsgroupStatusApiContainer wechatPagesCsgroupStatusApiContainer;
+  @Inject WechatPagesCsgroupUserApiContainer wechatPagesCsgroupUserApiContainer;
+  @Inject WechatPagesCsgrouplistApiContainer wechatPagesCsgrouplistApiContainer;
   @Inject WechatPagesCustomApiContainer wechatPagesCustomApiContainer;
   @Inject WechatPagesGrantinfoApiContainer wechatPagesGrantinfoApiContainer;
   @Inject WildcardsApiContainer wildcardsApiContainer;
@@ -150,6 +182,7 @@ public class App {
   @Inject XijingComplexTemplateApiContainer xijingComplexTemplateApiContainer;
   @Inject XijingPageApiContainer xijingPageApiContainer;
   @Inject XijingPageByComponentsApiContainer xijingPageByComponentsApiContainer;
+  @Inject XijingPageInteractiveApiContainer xijingPageInteractiveApiContainer;
   @Inject XijingPageListApiContainer xijingPageListApiContainer;
   @Inject XijingTemplateApiContainer xijingTemplateApiContainer;
   @Inject XijingTemplateListApiContainer xijingTemplateListApiContainer;
@@ -158,8 +191,16 @@ public class App {
     Guice.createInjector(new GuiceModule()).injectMembers(this);
   }
 
+  public AccountVersionApiContainer accountVersion() {
+    return accountVersionApiContainer;
+  }
+
   public AdDiagnosisApiContainer adDiagnosis() {
     return adDiagnosisApiContainer;
+  }
+
+  public AdLabelApiContainer adLabel() {
+    return adLabelApiContainer;
   }
 
   public AdParamApiContainer adParam() {
@@ -220,6 +261,14 @@ public class App {
 
   public AudienceGrantRelationsApiContainer audienceGrantRelations() {
     return audienceGrantRelationsApiContainer;
+  }
+
+  public BarrageApiContainer barrage() {
+    return barrageApiContainer;
+  }
+
+  public BarrageRecommendApiContainer barrageRecommend() {
+    return barrageRecommendApiContainer;
   }
 
   public BatchAsyncRequestSpecificationApiContainer batchAsyncRequestSpecification() {
@@ -362,6 +411,10 @@ public class App {
     return hourlyReportsApiContainer;
   }
 
+  public ImageProcessingApiContainer imageProcessing() {
+    return imageProcessingApiContainer;
+  }
+
   public ImagesApiContainer images() {
     return imagesApiContainer;
   }
@@ -450,6 +503,10 @@ public class App {
     return localStoresWxpayMerchantsApiContainer;
   }
 
+  public MarketingRulesApiContainer marketingRules() {
+    return marketingRulesApiContainer;
+  }
+
   public MarketingTargetAssetCategoriesApiContainer marketingTargetAssetCategories() {
     return marketingTargetAssetCategoriesApiContainer;
   }
@@ -502,6 +559,10 @@ public class App {
     return oauthApiContainer;
   }
 
+  public ObjectCommentFlagApiContainer objectCommentFlag() {
+    return objectCommentFlagApiContainer;
+  }
+
   public OptimizationGoalPermissionsApiContainer optimizationGoalPermissions() {
     return optimizationGoalPermissionsApiContainer;
   }
@@ -528,6 +589,10 @@ public class App {
 
   public ProductItemsDetailApiContainer productItemsDetail() {
     return productItemsDetailApiContainer;
+  }
+
+  public ProductItemsVerticalsApiContainer productItemsVerticals() {
+    return productItemsVerticalsApiContainer;
   }
 
   public ProductSeriesApiContainer productSeries() {
@@ -560,6 +625,30 @@ public class App {
 
   public ReviewElementPrereviewResultsApiContainer reviewElementPrereviewResults() {
     return reviewElementPrereviewResultsApiContainer;
+  }
+
+  public RtaApiContainer rta() {
+    return rtaApiContainer;
+  }
+
+  public RtaexpApiContainer rtaexp() {
+    return rtaexpApiContainer;
+  }
+
+  public RtaexpDataRoiApiContainer rtaexpDataRoi() {
+    return rtaexpDataRoiApiContainer;
+  }
+
+  public RtaexpDspTagDataApiContainer rtaexpDspTagData() {
+    return rtaexpDspTagDataApiContainer;
+  }
+
+  public RtatargetApiContainer rtatarget() {
+    return rtatargetApiContainer;
+  }
+
+  public RtatargetBindApiContainer rtatargetBind() {
+    return rtatargetBindApiContainer;
   }
 
   public SceneSpecTagsApiContainer sceneSpecTags() {
@@ -622,8 +711,49 @@ public class App {
     return videosApiContainer;
   }
 
+  public WechatChannelsAccountsApiContainer wechatChannelsAccounts() {
+    return wechatChannelsAccountsApiContainer;
+  }
+
+  public WechatChannelsAdAccountApiContainer wechatChannelsAdAccount() {
+    return wechatChannelsAdAccountApiContainer;
+  }
+
+  public WechatChannelsAdAccountCertificationFileApiContainer
+      wechatChannelsAdAccountCertificationFile() {
+    return wechatChannelsAdAccountCertificationFileApiContainer;
+  }
+
+  public WechatChannelsAdAccountValidationApiContainer wechatChannelsAdAccountValidation() {
+    return wechatChannelsAdAccountValidationApiContainer;
+  }
+
+  public WechatChannelsAdAccountWechatBindingApiContainer wechatChannelsAdAccountWechatBinding() {
+    return wechatChannelsAdAccountWechatBindingApiContainer;
+  }
+
+  public WechatChannelsAuthorizationApiContainer wechatChannelsAuthorization() {
+    return wechatChannelsAuthorizationApiContainer;
+  }
+
+  public WechatOfficialAccountsApiContainer wechatOfficialAccounts() {
+    return wechatOfficialAccountsApiContainer;
+  }
+
   public WechatPagesApiContainer wechatPages() {
     return wechatPagesApiContainer;
+  }
+
+  public WechatPagesCsgroupStatusApiContainer wechatPagesCsgroupStatus() {
+    return wechatPagesCsgroupStatusApiContainer;
+  }
+
+  public WechatPagesCsgroupUserApiContainer wechatPagesCsgroupUser() {
+    return wechatPagesCsgroupUserApiContainer;
+  }
+
+  public WechatPagesCsgrouplistApiContainer wechatPagesCsgrouplist() {
+    return wechatPagesCsgrouplistApiContainer;
   }
 
   public WechatPagesCustomApiContainer wechatPagesCustom() {
@@ -656,6 +786,10 @@ public class App {
 
   public XijingPageByComponentsApiContainer xijingPageByComponents() {
     return xijingPageByComponentsApiContainer;
+  }
+
+  public XijingPageInteractiveApiContainer xijingPageInteractive() {
+    return xijingPageInteractiveApiContainer;
   }
 
   public XijingPageListApiContainer xijingPageList() {

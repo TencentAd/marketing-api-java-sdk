@@ -18,8 +18,8 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.util.Objects;
 
-/** 推广内容资产外部ID数据 */
-@ApiModel(description = "推广内容资产外部ID数据")
+/** 产品外部ID数据 */
+@ApiModel(description = "产品外部ID数据")
 public class MarketingAssetOuterSpec {
   @SerializedName("marketing_target_type")
   private MarketingTargetType marketingTargetType = null;

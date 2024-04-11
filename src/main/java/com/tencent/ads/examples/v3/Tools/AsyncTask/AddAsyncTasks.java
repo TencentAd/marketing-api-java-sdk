@@ -17,7 +17,8 @@ public class AddAsyncTasks {
   public String taskName = "SDK异步任务5ede252e2f1db";
   public AsyncTasksAddRequest data = new AsyncTasksAddRequest();
   public Long accountId = null;
-  public String taskType = "TASK_TYPE_AD_HOURLY_REPORT";
+  public String taskType = "TASK_TYPE_CREATE_ANDROID_CHANNEL_PACKAGE";
+  public Long androidAppId = 123L;
 
   public void init() {
     this.tencentAds = TencentAds.getInstance();
@@ -34,6 +35,11 @@ public class AddAsyncTasks {
 
     data.setTaskType(taskType);
 
+    TaskTypeCreateAndroidChannelPackageSpec taskTypeCreateAndroidChannelPackageSpec =
+        new TaskTypeCreateAndroidChannelPackageSpec();
+    taskTypeCreateAndroidChannelPackageSpec.setAndroidAppId(androidAppId);
+    ApiTaskSpec taskSpec = new ApiTaskSpec();
+    taskSpec.setTaskTypeCreateAndroidChannelPackageSpec(taskTypeCreateAndroidChannelPackageSpec);
     data.setTaskSpec(taskSpec);
   }
 

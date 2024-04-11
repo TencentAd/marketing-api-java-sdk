@@ -21,6 +21,7 @@ import com.tencent.ads.Configuration;
 import com.tencent.ads.Pair;
 import com.tencent.ads.ProgressRequestBody;
 import com.tencent.ads.ProgressResponseBody;
+import com.tencent.ads.model.v3.AdContext;
 import com.tencent.ads.model.v3.FilteringStruct;
 import com.tencent.ads.model.v3.PagesGetResponse;
 import java.io.IOException;
@@ -56,6 +57,7 @@ public class PagesApi {
    * @param filtering (optional)
    * @param page (optional)
    * @param pageSize (optional)
+   * @param adContext (optional)
    * @param fields 返回参数的字段列表 (optional)
    * @param progressListener Progress listener
    * @param progressRequestListener Progress request listener
@@ -67,6 +69,7 @@ public class PagesApi {
       List<FilteringStruct> filtering,
       Long page,
       Long pageSize,
+      AdContext adContext,
       List<String> fields,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
@@ -88,6 +91,8 @@ public class PagesApi {
     if (page != null) localVarQueryParams.addAll(apiClient.parameterToPair("page", page));
     if (pageSize != null)
       localVarQueryParams.addAll(apiClient.parameterToPair("page_size", pageSize));
+    if (adContext != null)
+      localVarQueryParams.addAll(apiClient.parameterToPair("ad_context", adContext));
     if (fields != null)
       localVarCollectionQueryParams.addAll(apiClient.parameterToPairs("multi", "fields", fields));
 
@@ -149,6 +154,7 @@ public class PagesApi {
       List<FilteringStruct> filtering,
       Long page,
       Long pageSize,
+      AdContext adContext,
       List<String> fields,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
@@ -167,6 +173,7 @@ public class PagesApi {
             filtering,
             page,
             pageSize,
+            adContext,
             fields,
             progressListener,
             progressRequestListener,
@@ -181,6 +188,7 @@ public class PagesApi {
    * @param filtering (optional)
    * @param page (optional)
    * @param pageSize (optional)
+   * @param adContext (optional)
    * @param fields 返回参数的字段列表 (optional)
    * @return PagesGetResponse
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
@@ -191,11 +199,12 @@ public class PagesApi {
       List<FilteringStruct> filtering,
       Long page,
       Long pageSize,
+      AdContext adContext,
       List<String> fields,
       String... headerPair)
       throws ApiException {
     ApiResponse<PagesGetResponse> resp =
-        pagesGetWithHttpInfo(accountId, filtering, page, pageSize, fields, headerPair);
+        pagesGetWithHttpInfo(accountId, filtering, page, pageSize, adContext, fields, headerPair);
     return resp.getData();
   }
 
@@ -206,6 +215,7 @@ public class PagesApi {
    * @param filtering (optional)
    * @param page (optional)
    * @param pageSize (optional)
+   * @param adContext (optional)
    * @param fields 返回参数的字段列表 (optional)
    * @return ApiResponse&lt;PagesGetResponse&gt;
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
@@ -216,12 +226,13 @@ public class PagesApi {
       List<FilteringStruct> filtering,
       Long page,
       Long pageSize,
+      AdContext adContext,
       List<String> fields,
       String... headerPair)
       throws ApiException {
     com.squareup.okhttp.Call call =
         pagesGetValidateBeforeCall(
-            accountId, filtering, page, pageSize, fields, null, null, headerPair);
+            accountId, filtering, page, pageSize, adContext, fields, null, null, headerPair);
     Type localVarReturnType = new TypeToken<PagesGetResponse>() {}.getType();
     return apiClient.execute(call, localVarReturnType);
   }
@@ -233,6 +244,7 @@ public class PagesApi {
    * @param filtering (optional)
    * @param page (optional)
    * @param pageSize (optional)
+   * @param adContext (optional)
    * @param fields 返回参数的字段列表 (optional)
    * @param callback The callback to be executed when the API call finishes
    * @return The request call
@@ -243,6 +255,7 @@ public class PagesApi {
       List<FilteringStruct> filtering,
       Long page,
       Long pageSize,
+      AdContext adContext,
       List<String> fields,
       final ApiCallback<PagesGetResponse> callback,
       String... headerPair)
@@ -275,6 +288,7 @@ public class PagesApi {
             filtering,
             page,
             pageSize,
+            adContext,
             fields,
             progressListener,
             progressRequestListener,

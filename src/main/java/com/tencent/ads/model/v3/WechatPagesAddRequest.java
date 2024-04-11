@@ -30,8 +30,8 @@ public class WechatPagesAddRequest {
   @SerializedName("page_template_id")
   private Long pageTemplateId = null;
 
-  @SerializedName("page_elements")
-  private List<PageElementsStruct> pageElements = null;
+  @SerializedName("page_elements_spec_list")
+  private List<PageElementsStruct> pageElementsSpecList = null;
 
   @SerializedName("share_content_spec")
   private ShareContentSpec shareContentSpec = null;
@@ -93,31 +93,32 @@ public class WechatPagesAddRequest {
     this.pageTemplateId = pageTemplateId;
   }
 
-  public WechatPagesAddRequest pageElements(List<PageElementsStruct> pageElements) {
-    this.pageElements = pageElements;
+  public WechatPagesAddRequest pageElementsSpecList(List<PageElementsStruct> pageElementsSpecList) {
+    this.pageElementsSpecList = pageElementsSpecList;
     return this;
   }
 
-  public WechatPagesAddRequest addPageElementsItem(PageElementsStruct pageElementsItem) {
-    if (this.pageElements == null) {
-      this.pageElements = new ArrayList<PageElementsStruct>();
+  public WechatPagesAddRequest addPageElementsSpecListItem(
+      PageElementsStruct pageElementsSpecListItem) {
+    if (this.pageElementsSpecList == null) {
+      this.pageElementsSpecList = new ArrayList<PageElementsStruct>();
     }
-    this.pageElements.add(pageElementsItem);
+    this.pageElementsSpecList.add(pageElementsSpecListItem);
     return this;
   }
 
   /**
-   * Get pageElements
+   * Get pageElementsSpecList
    *
-   * @return pageElements
+   * @return pageElementsSpecList
    */
   @ApiModelProperty(value = "")
-  public List<PageElementsStruct> getPageElements() {
-    return pageElements;
+  public List<PageElementsStruct> getPageElementsSpecList() {
+    return pageElementsSpecList;
   }
 
-  public void setPageElements(List<PageElementsStruct> pageElements) {
-    this.pageElements = pageElements;
+  public void setPageElementsSpecList(List<PageElementsStruct> pageElementsSpecList) {
+    this.pageElementsSpecList = pageElementsSpecList;
   }
 
   public WechatPagesAddRequest shareContentSpec(ShareContentSpec shareContentSpec) {
@@ -151,13 +152,14 @@ public class WechatPagesAddRequest {
     return Objects.equals(this.accountId, wechatPagesAddRequest.accountId)
         && Objects.equals(this.pageName, wechatPagesAddRequest.pageName)
         && Objects.equals(this.pageTemplateId, wechatPagesAddRequest.pageTemplateId)
-        && Objects.equals(this.pageElements, wechatPagesAddRequest.pageElements)
+        && Objects.equals(this.pageElementsSpecList, wechatPagesAddRequest.pageElementsSpecList)
         && Objects.equals(this.shareContentSpec, wechatPagesAddRequest.shareContentSpec);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(accountId, pageName, pageTemplateId, pageElements, shareContentSpec);
+    return Objects.hash(
+        accountId, pageName, pageTemplateId, pageElementsSpecList, shareContentSpec);
   }
 
   @Override
