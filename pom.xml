@@ -2,7 +2,7 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.tencent.ads</groupId>
-    <artifactId>marketing-api-java-sdk</artifactId>
+    <artifactId>marketing-api-java-sdk-private</artifactId>
     <packaging>jar</packaging>
     <name>com.tencent.ads</name>
     <version>1.1.78</version>
@@ -217,12 +217,14 @@
     </profiles>
     <distributionManagement>
         <snapshotRepository>
-            <id>ossrh</id>
-            <url>https://oss.sonatype.org/content/repositories/snapshots</url>
+            <id>rdc-snapshots</id>
+            <url>https://packages.aliyun.com/maven/repository/2273096-snapshot-JMIUQB/</url>
+            <!--            <url>https://oss.sonatype.org/content/repositories/snapshots</url>-->
         </snapshotRepository>
         <repository>
-            <id>ossrh</id>
-            <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+            <id>rdc-releases</id>
+            <url>https://packages.aliyun.com/maven/repository/2273096-release-M3OwAf/</url>
+            <!--            <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>-->
         </repository>
     </distributionManagement>
     <dependencies>
