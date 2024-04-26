@@ -24,17 +24,17 @@ public class ImagesGetListStruct {
   @SerializedName("image_id")
   private String imageId = null;
 
-  @SerializedName("image_width")
-  private Long imageWidth = null;
+  @SerializedName("width")
+  private Long width = null;
 
-  @SerializedName("image_height")
-  private Long imageHeight = null;
+  @SerializedName("height")
+  private Long height = null;
 
-  @SerializedName("image_file_size")
-  private Long imageFileSize = null;
+  @SerializedName("file_size")
+  private Long fileSize = null;
 
-  @SerializedName("image_type")
-  private ImageType imageType = null;
+  @SerializedName("type")
+  private ImageType type = null;
 
   @SerializedName("signature")
   private String signature = null;
@@ -97,80 +97,80 @@ public class ImagesGetListStruct {
     this.imageId = imageId;
   }
 
-  public ImagesGetListStruct imageWidth(Long imageWidth) {
-    this.imageWidth = imageWidth;
+  public ImagesGetListStruct width(Long width) {
+    this.width = width;
     return this;
   }
 
   /**
-   * Get imageWidth
+   * Get width
    *
-   * @return imageWidth
+   * @return width
    */
   @ApiModelProperty(value = "")
-  public Long getImageWidth() {
-    return imageWidth;
+  public Long getWidth() {
+    return width;
   }
 
-  public void setImageWidth(Long imageWidth) {
-    this.imageWidth = imageWidth;
+  public void setWidth(Long width) {
+    this.width = width;
   }
 
-  public ImagesGetListStruct imageHeight(Long imageHeight) {
-    this.imageHeight = imageHeight;
+  public ImagesGetListStruct height(Long height) {
+    this.height = height;
     return this;
   }
 
   /**
-   * Get imageHeight
+   * Get height
    *
-   * @return imageHeight
+   * @return height
    */
   @ApiModelProperty(value = "")
-  public Long getImageHeight() {
-    return imageHeight;
+  public Long getHeight() {
+    return height;
   }
 
-  public void setImageHeight(Long imageHeight) {
-    this.imageHeight = imageHeight;
+  public void setHeight(Long height) {
+    this.height = height;
   }
 
-  public ImagesGetListStruct imageFileSize(Long imageFileSize) {
-    this.imageFileSize = imageFileSize;
+  public ImagesGetListStruct fileSize(Long fileSize) {
+    this.fileSize = fileSize;
     return this;
   }
 
   /**
-   * Get imageFileSize
+   * Get fileSize
    *
-   * @return imageFileSize
+   * @return fileSize
    */
   @ApiModelProperty(value = "")
-  public Long getImageFileSize() {
-    return imageFileSize;
+  public Long getFileSize() {
+    return fileSize;
   }
 
-  public void setImageFileSize(Long imageFileSize) {
-    this.imageFileSize = imageFileSize;
+  public void setFileSize(Long fileSize) {
+    this.fileSize = fileSize;
   }
 
-  public ImagesGetListStruct imageType(ImageType imageType) {
-    this.imageType = imageType;
+  public ImagesGetListStruct type(ImageType type) {
+    this.type = type;
     return this;
   }
 
   /**
-   * Get imageType
+   * Get type
    *
-   * @return imageType
+   * @return type
    */
   @ApiModelProperty(value = "")
-  public ImageType getImageType() {
-    return imageType;
+  public ImageType getType() {
+    return type;
   }
 
-  public void setImageType(ImageType imageType) {
-    this.imageType = imageType;
+  public void setType(ImageType type) {
+    this.type = type;
   }
 
   public ImagesGetListStruct signature(String signature) {
@@ -449,10 +449,10 @@ public class ImagesGetListStruct {
     }
     ImagesGetListStruct imagesGetListStruct = (ImagesGetListStruct) o;
     return Objects.equals(this.imageId, imagesGetListStruct.imageId)
-        && Objects.equals(this.imageWidth, imagesGetListStruct.imageWidth)
-        && Objects.equals(this.imageHeight, imagesGetListStruct.imageHeight)
-        && Objects.equals(this.imageFileSize, imagesGetListStruct.imageFileSize)
-        && Objects.equals(this.imageType, imagesGetListStruct.imageType)
+        && Objects.equals(this.width, imagesGetListStruct.width)
+        && Objects.equals(this.height, imagesGetListStruct.height)
+        && Objects.equals(this.fileSize, imagesGetListStruct.fileSize)
+        && Objects.equals(this.type, imagesGetListStruct.type)
         && Objects.equals(this.signature, imagesGetListStruct.signature)
         && Objects.equals(this.description, imagesGetListStruct.description)
         && Objects.equals(this.sourceSignature, imagesGetListStruct.sourceSignature)
@@ -473,10 +473,10 @@ public class ImagesGetListStruct {
   public int hashCode() {
     return Objects.hash(
         imageId,
-        imageWidth,
-        imageHeight,
-        imageFileSize,
-        imageType,
+        width,
+        height,
+        fileSize,
+        type,
         signature,
         description,
         sourceSignature,

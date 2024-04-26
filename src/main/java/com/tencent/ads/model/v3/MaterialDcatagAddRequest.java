@@ -33,6 +33,9 @@ public class MaterialDcatagAddRequest {
   @SerializedName("marketing_asset_id")
   private Long marketingAssetId = null;
 
+  @SerializedName("marketing_target_type")
+  private MarketingTargetType marketingTargetType = null;
+
   @SerializedName("dcatag_list")
   private List<Dactag> dcatagList = null;
 
@@ -128,6 +131,25 @@ public class MaterialDcatagAddRequest {
     this.marketingAssetId = marketingAssetId;
   }
 
+  public MaterialDcatagAddRequest marketingTargetType(MarketingTargetType marketingTargetType) {
+    this.marketingTargetType = marketingTargetType;
+    return this;
+  }
+
+  /**
+   * Get marketingTargetType
+   *
+   * @return marketingTargetType
+   */
+  @ApiModelProperty(value = "")
+  public MarketingTargetType getMarketingTargetType() {
+    return marketingTargetType;
+  }
+
+  public void setMarketingTargetType(MarketingTargetType marketingTargetType) {
+    this.marketingTargetType = marketingTargetType;
+  }
+
   public MaterialDcatagAddRequest dcatagList(List<Dactag> dcatagList) {
     this.dcatagList = dcatagList;
     return this;
@@ -168,12 +190,14 @@ public class MaterialDcatagAddRequest {
         && Objects.equals(this.imageIdList, materialDcatagAddRequest.imageIdList)
         && Objects.equals(this.mediaIdList, materialDcatagAddRequest.mediaIdList)
         && Objects.equals(this.marketingAssetId, materialDcatagAddRequest.marketingAssetId)
+        && Objects.equals(this.marketingTargetType, materialDcatagAddRequest.marketingTargetType)
         && Objects.equals(this.dcatagList, materialDcatagAddRequest.dcatagList);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(accountId, imageIdList, mediaIdList, marketingAssetId, dcatagList);
+    return Objects.hash(
+        accountId, imageIdList, mediaIdList, marketingAssetId, marketingTargetType, dcatagList);
   }
 
   @Override

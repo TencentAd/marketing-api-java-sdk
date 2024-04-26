@@ -19,7 +19,7 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-/** 待衍生的素材类型 */
+/** 妙思素材类型 */
 @JsonAdapter(TemplateType.Adapter.class)
 public enum TemplateType {
   IMAGE("IMAGE"),

@@ -15,8 +15,6 @@ package com.tencent.ads.model.v3;
 import com.google.gson.Gson;
 import com.google.gson.annotations.SerializedName;
 import io.swagger.annotations.ApiModelProperty;
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Objects;
 
 /** MarketingTargetAssetsUpdateRequest */
@@ -29,9 +27,6 @@ public class MarketingTargetAssetsUpdateRequest {
 
   @SerializedName("marketing_asset_name")
   private String marketingAssetName = null;
-
-  @SerializedName("properties")
-  private List<PropertyStruct> properties = null;
 
   public MarketingTargetAssetsUpdateRequest organizationId(Long organizationId) {
     this.organizationId = organizationId;
@@ -90,33 +85,6 @@ public class MarketingTargetAssetsUpdateRequest {
     this.marketingAssetName = marketingAssetName;
   }
 
-  public MarketingTargetAssetsUpdateRequest properties(List<PropertyStruct> properties) {
-    this.properties = properties;
-    return this;
-  }
-
-  public MarketingTargetAssetsUpdateRequest addPropertiesItem(PropertyStruct propertiesItem) {
-    if (this.properties == null) {
-      this.properties = new ArrayList<PropertyStruct>();
-    }
-    this.properties.add(propertiesItem);
-    return this;
-  }
-
-  /**
-   * Get properties
-   *
-   * @return properties
-   */
-  @ApiModelProperty(value = "")
-  public List<PropertyStruct> getProperties() {
-    return properties;
-  }
-
-  public void setProperties(List<PropertyStruct> properties) {
-    this.properties = properties;
-  }
-
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -131,13 +99,12 @@ public class MarketingTargetAssetsUpdateRequest {
         && Objects.equals(
             this.marketingAssetId, marketingTargetAssetsUpdateRequest.marketingAssetId)
         && Objects.equals(
-            this.marketingAssetName, marketingTargetAssetsUpdateRequest.marketingAssetName)
-        && Objects.equals(this.properties, marketingTargetAssetsUpdateRequest.properties);
+            this.marketingAssetName, marketingTargetAssetsUpdateRequest.marketingAssetName);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(organizationId, marketingAssetId, marketingAssetName, properties);
+    return Objects.hash(organizationId, marketingAssetId, marketingAssetName);
   }
 
   @Override

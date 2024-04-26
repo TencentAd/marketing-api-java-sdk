@@ -32,6 +32,9 @@ public class ReviewResultListStruct {
   @SerializedName("site_set_result_list")
   private List<SiteSetResultListStruct> siteSetResultList = null;
 
+  @SerializedName("reject_message_list")
+  private List<String> rejectMessageList = null;
+
   public ReviewResultListStruct dynamicCreativeId(Long dynamicCreativeId) {
     this.dynamicCreativeId = dynamicCreativeId;
     return this;
@@ -107,6 +110,33 @@ public class ReviewResultListStruct {
     this.siteSetResultList = siteSetResultList;
   }
 
+  public ReviewResultListStruct rejectMessageList(List<String> rejectMessageList) {
+    this.rejectMessageList = rejectMessageList;
+    return this;
+  }
+
+  public ReviewResultListStruct addRejectMessageListItem(String rejectMessageListItem) {
+    if (this.rejectMessageList == null) {
+      this.rejectMessageList = new ArrayList<String>();
+    }
+    this.rejectMessageList.add(rejectMessageListItem);
+    return this;
+  }
+
+  /**
+   * Get rejectMessageList
+   *
+   * @return rejectMessageList
+   */
+  @ApiModelProperty(value = "")
+  public List<String> getRejectMessageList() {
+    return rejectMessageList;
+  }
+
+  public void setRejectMessageList(List<String> rejectMessageList) {
+    this.rejectMessageList = rejectMessageList;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -118,12 +148,13 @@ public class ReviewResultListStruct {
     ReviewResultListStruct reviewResultListStruct = (ReviewResultListStruct) o;
     return Objects.equals(this.dynamicCreativeId, reviewResultListStruct.dynamicCreativeId)
         && Objects.equals(this.elementResultList, reviewResultListStruct.elementResultList)
-        && Objects.equals(this.siteSetResultList, reviewResultListStruct.siteSetResultList);
+        && Objects.equals(this.siteSetResultList, reviewResultListStruct.siteSetResultList)
+        && Objects.equals(this.rejectMessageList, reviewResultListStruct.rejectMessageList);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(dynamicCreativeId, elementResultList, siteSetResultList);
+    return Objects.hash(dynamicCreativeId, elementResultList, siteSetResultList, rejectMessageList);
   }
 
   @Override

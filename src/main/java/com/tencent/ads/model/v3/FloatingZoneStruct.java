@@ -51,6 +51,9 @@ public class FloatingZoneStruct {
   @SerializedName("jump_info")
   private JumpinfoStruct jumpInfo = null;
 
+  @SerializedName("floating_zone_info_type")
+  private FloatingZoneInfoType floatingZoneInfoType = null;
+
   public FloatingZoneStruct floatingZoneSwitch(Boolean floatingZoneSwitch) {
     this.floatingZoneSwitch = floatingZoneSwitch;
     return this;
@@ -242,6 +245,25 @@ public class FloatingZoneStruct {
     this.jumpInfo = jumpInfo;
   }
 
+  public FloatingZoneStruct floatingZoneInfoType(FloatingZoneInfoType floatingZoneInfoType) {
+    this.floatingZoneInfoType = floatingZoneInfoType;
+    return this;
+  }
+
+  /**
+   * Get floatingZoneInfoType
+   *
+   * @return floatingZoneInfoType
+   */
+  @ApiModelProperty(value = "")
+  public FloatingZoneInfoType getFloatingZoneInfoType() {
+    return floatingZoneInfoType;
+  }
+
+  public void setFloatingZoneInfoType(FloatingZoneInfoType floatingZoneInfoType) {
+    this.floatingZoneInfoType = floatingZoneInfoType;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -263,7 +285,8 @@ public class FloatingZoneStruct {
         && Objects.equals(
             this.floatingZoneSingleImageId, floatingZoneStruct.floatingZoneSingleImageId)
         && Objects.equals(this.buttonBaseText, floatingZoneStruct.buttonBaseText)
-        && Objects.equals(this.jumpInfo, floatingZoneStruct.jumpInfo);
+        && Objects.equals(this.jumpInfo, floatingZoneStruct.jumpInfo)
+        && Objects.equals(this.floatingZoneInfoType, floatingZoneStruct.floatingZoneInfoType);
   }
 
   @Override
@@ -278,7 +301,8 @@ public class FloatingZoneStruct {
         floatingZoneType,
         floatingZoneSingleImageId,
         buttonBaseText,
-        jumpInfo);
+        jumpInfo,
+        floatingZoneInfoType);
   }
 
   @Override

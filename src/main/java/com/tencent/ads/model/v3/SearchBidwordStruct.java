@@ -21,9 +21,6 @@ import java.util.Objects;
 /** 关键词信息 */
 @ApiModel(description = "关键词信息")
 public class SearchBidwordStruct {
-  @SerializedName("campaign_id")
-  private Long campaignId = null;
-
   @SerializedName("adgroup_id")
   private Long adgroupId = null;
 
@@ -41,25 +38,6 @@ public class SearchBidwordStruct {
 
   @SerializedName("configured_status")
   private BidwordPauseType configuredStatus = null;
-
-  public SearchBidwordStruct campaignId(Long campaignId) {
-    this.campaignId = campaignId;
-    return this;
-  }
-
-  /**
-   * Get campaignId
-   *
-   * @return campaignId
-   */
-  @ApiModelProperty(value = "")
-  public Long getCampaignId() {
-    return campaignId;
-  }
-
-  public void setCampaignId(Long campaignId) {
-    this.campaignId = campaignId;
-  }
 
   public SearchBidwordStruct adgroupId(Long adgroupId) {
     this.adgroupId = adgroupId;
@@ -184,8 +162,7 @@ public class SearchBidwordStruct {
       return false;
     }
     SearchBidwordStruct searchBidwordStruct = (SearchBidwordStruct) o;
-    return Objects.equals(this.campaignId, searchBidwordStruct.campaignId)
-        && Objects.equals(this.adgroupId, searchBidwordStruct.adgroupId)
+    return Objects.equals(this.adgroupId, searchBidwordStruct.adgroupId)
         && Objects.equals(this.bidword, searchBidwordStruct.bidword)
         && Objects.equals(this.bidPrice, searchBidwordStruct.bidPrice)
         && Objects.equals(this.useGroupPrice, searchBidwordStruct.useGroupPrice)
@@ -195,8 +172,7 @@ public class SearchBidwordStruct {
 
   @Override
   public int hashCode() {
-    return Objects.hash(
-        campaignId, adgroupId, bidword, bidPrice, useGroupPrice, matchType, configuredStatus);
+    return Objects.hash(adgroupId, bidword, bidPrice, useGroupPrice, matchType, configuredStatus);
   }
 
   @Override

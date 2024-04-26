@@ -209,12 +209,6 @@ public class AdgroupsGetListStruct {
   @SerializedName("auto_acquisition_status")
   private AutoAcquisitionStatus autoAcquisitionStatus = null;
 
-  @SerializedName("auto_acquisition_status_text")
-  private String autoAcquisitionStatusText = null;
-
-  @SerializedName("auto_acquisition_status_message")
-  private String autoAcquisitionStatusMessage = null;
-
   @SerializedName("cost_constraint_scene")
   private CostConstraintScene costConstraintScene = null;
 
@@ -1450,44 +1444,6 @@ public class AdgroupsGetListStruct {
     this.autoAcquisitionStatus = autoAcquisitionStatus;
   }
 
-  public AdgroupsGetListStruct autoAcquisitionStatusText(String autoAcquisitionStatusText) {
-    this.autoAcquisitionStatusText = autoAcquisitionStatusText;
-    return this;
-  }
-
-  /**
-   * Get autoAcquisitionStatusText
-   *
-   * @return autoAcquisitionStatusText
-   */
-  @ApiModelProperty(value = "")
-  public String getAutoAcquisitionStatusText() {
-    return autoAcquisitionStatusText;
-  }
-
-  public void setAutoAcquisitionStatusText(String autoAcquisitionStatusText) {
-    this.autoAcquisitionStatusText = autoAcquisitionStatusText;
-  }
-
-  public AdgroupsGetListStruct autoAcquisitionStatusMessage(String autoAcquisitionStatusMessage) {
-    this.autoAcquisitionStatusMessage = autoAcquisitionStatusMessage;
-    return this;
-  }
-
-  /**
-   * Get autoAcquisitionStatusMessage
-   *
-   * @return autoAcquisitionStatusMessage
-   */
-  @ApiModelProperty(value = "")
-  public String getAutoAcquisitionStatusMessage() {
-    return autoAcquisitionStatusMessage;
-  }
-
-  public void setAutoAcquisitionStatusMessage(String autoAcquisitionStatusMessage) {
-    this.autoAcquisitionStatusMessage = autoAcquisitionStatusMessage;
-  }
-
   public AdgroupsGetListStruct costConstraintScene(CostConstraintScene costConstraintScene) {
     this.costConstraintScene = costConstraintScene;
     return this;
@@ -1685,10 +1641,6 @@ public class AdgroupsGetListStruct {
         && Objects.equals(this.forwardLinkAssist, adgroupsGetListStruct.forwardLinkAssist)
         && Objects.equals(this.conversionName, adgroupsGetListStruct.conversionName)
         && Objects.equals(this.autoAcquisitionStatus, adgroupsGetListStruct.autoAcquisitionStatus)
-        && Objects.equals(
-            this.autoAcquisitionStatusText, adgroupsGetListStruct.autoAcquisitionStatusText)
-        && Objects.equals(
-            this.autoAcquisitionStatusMessage, adgroupsGetListStruct.autoAcquisitionStatusMessage)
         && Objects.equals(this.costConstraintScene, adgroupsGetListStruct.costConstraintScene)
         && Objects.equals(this.customCostCap, adgroupsGetListStruct.customCostCap)
         && Objects.equals(this.mpaSpec, adgroupsGetListStruct.mpaSpec)
@@ -1762,8 +1714,6 @@ public class AdgroupsGetListStruct {
         forwardLinkAssist,
         conversionName,
         autoAcquisitionStatus,
-        autoAcquisitionStatusText,
-        autoAcquisitionStatusMessage,
         costConstraintScene,
         customCostCap,
         mpaSpec,

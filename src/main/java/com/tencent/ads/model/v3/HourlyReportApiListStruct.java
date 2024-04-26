@@ -2445,6 +2445,21 @@ public class HourlyReportApiListStruct {
   @SerializedName("zone_header_live_click_cnt")
   private Long zoneHeaderLiveClickCnt = null;
 
+  @SerializedName("clk_slider_card_product_pv")
+  private Long clkSliderCardProductPv = null;
+
+  @SerializedName("clk_slider_card_product_uv")
+  private Long clkSliderCardProductUv = null;
+
+  @SerializedName("after_add_wecom_negative_pv")
+  private Long afterAddWecomNegativePv = null;
+
+  @SerializedName("security_low_price_order_pv")
+  private Long securityLowPriceOrderPv = null;
+
+  @SerializedName("security_high_price_order_pv")
+  private Long securityHighPriceOrderPv = null;
+
   @SerializedName("adgroup_id")
   private Long adgroupId = null;
 
@@ -17895,6 +17910,101 @@ public class HourlyReportApiListStruct {
     this.zoneHeaderLiveClickCnt = zoneHeaderLiveClickCnt;
   }
 
+  public HourlyReportApiListStruct clkSliderCardProductPv(Long clkSliderCardProductPv) {
+    this.clkSliderCardProductPv = clkSliderCardProductPv;
+    return this;
+  }
+
+  /**
+   * Get clkSliderCardProductPv
+   *
+   * @return clkSliderCardProductPv
+   */
+  @ApiModelProperty(value = "")
+  public Long getClkSliderCardProductPv() {
+    return clkSliderCardProductPv;
+  }
+
+  public void setClkSliderCardProductPv(Long clkSliderCardProductPv) {
+    this.clkSliderCardProductPv = clkSliderCardProductPv;
+  }
+
+  public HourlyReportApiListStruct clkSliderCardProductUv(Long clkSliderCardProductUv) {
+    this.clkSliderCardProductUv = clkSliderCardProductUv;
+    return this;
+  }
+
+  /**
+   * Get clkSliderCardProductUv
+   *
+   * @return clkSliderCardProductUv
+   */
+  @ApiModelProperty(value = "")
+  public Long getClkSliderCardProductUv() {
+    return clkSliderCardProductUv;
+  }
+
+  public void setClkSliderCardProductUv(Long clkSliderCardProductUv) {
+    this.clkSliderCardProductUv = clkSliderCardProductUv;
+  }
+
+  public HourlyReportApiListStruct afterAddWecomNegativePv(Long afterAddWecomNegativePv) {
+    this.afterAddWecomNegativePv = afterAddWecomNegativePv;
+    return this;
+  }
+
+  /**
+   * Get afterAddWecomNegativePv
+   *
+   * @return afterAddWecomNegativePv
+   */
+  @ApiModelProperty(value = "")
+  public Long getAfterAddWecomNegativePv() {
+    return afterAddWecomNegativePv;
+  }
+
+  public void setAfterAddWecomNegativePv(Long afterAddWecomNegativePv) {
+    this.afterAddWecomNegativePv = afterAddWecomNegativePv;
+  }
+
+  public HourlyReportApiListStruct securityLowPriceOrderPv(Long securityLowPriceOrderPv) {
+    this.securityLowPriceOrderPv = securityLowPriceOrderPv;
+    return this;
+  }
+
+  /**
+   * Get securityLowPriceOrderPv
+   *
+   * @return securityLowPriceOrderPv
+   */
+  @ApiModelProperty(value = "")
+  public Long getSecurityLowPriceOrderPv() {
+    return securityLowPriceOrderPv;
+  }
+
+  public void setSecurityLowPriceOrderPv(Long securityLowPriceOrderPv) {
+    this.securityLowPriceOrderPv = securityLowPriceOrderPv;
+  }
+
+  public HourlyReportApiListStruct securityHighPriceOrderPv(Long securityHighPriceOrderPv) {
+    this.securityHighPriceOrderPv = securityHighPriceOrderPv;
+    return this;
+  }
+
+  /**
+   * Get securityHighPriceOrderPv
+   *
+   * @return securityHighPriceOrderPv
+   */
+  @ApiModelProperty(value = "")
+  public Long getSecurityHighPriceOrderPv() {
+    return securityHighPriceOrderPv;
+  }
+
+  public void setSecurityHighPriceOrderPv(Long securityHighPriceOrderPv) {
+    this.securityHighPriceOrderPv = securityHighPriceOrderPv;
+  }
+
   public HourlyReportApiListStruct adgroupId(Long adgroupId) {
     this.adgroupId = adgroupId;
     return this;
@@ -19374,6 +19484,16 @@ public class HourlyReportApiListStruct {
         && Objects.equals(this.channelsDetailBtnPv, hourlyReportApiListStruct.channelsDetailBtnPv)
         && Objects.equals(
             this.zoneHeaderLiveClickCnt, hourlyReportApiListStruct.zoneHeaderLiveClickCnt)
+        && Objects.equals(
+            this.clkSliderCardProductPv, hourlyReportApiListStruct.clkSliderCardProductPv)
+        && Objects.equals(
+            this.clkSliderCardProductUv, hourlyReportApiListStruct.clkSliderCardProductUv)
+        && Objects.equals(
+            this.afterAddWecomNegativePv, hourlyReportApiListStruct.afterAddWecomNegativePv)
+        && Objects.equals(
+            this.securityLowPriceOrderPv, hourlyReportApiListStruct.securityLowPriceOrderPv)
+        && Objects.equals(
+            this.securityHighPriceOrderPv, hourlyReportApiListStruct.securityHighPriceOrderPv)
         && Objects.equals(this.adgroupId, hourlyReportApiListStruct.adgroupId)
         && Objects.equals(this.adgroupName, hourlyReportApiListStruct.adgroupName)
         && Objects.equals(this.dynamicCreativeId, hourlyReportApiListStruct.dynamicCreativeId)
@@ -20205,6 +20325,11 @@ public class HourlyReportApiListStruct {
         clkShortcutMenusPv,
         channelsDetailBtnPv,
         zoneHeaderLiveClickCnt,
+        clkSliderCardProductPv,
+        clkSliderCardProductUv,
+        afterAddWecomNegativePv,
+        securityLowPriceOrderPv,
+        securityHighPriceOrderPv,
         adgroupId,
         adgroupName,
         dynamicCreativeId,

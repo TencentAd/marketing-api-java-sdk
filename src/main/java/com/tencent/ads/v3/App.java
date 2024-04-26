@@ -20,7 +20,6 @@ import com.tencent.ads.guice.GuiceModule;
 public class App {
 
   @Inject AccountVersionApiContainer accountVersionApiContainer;
-  @Inject AdDiagnosisApiContainer adDiagnosisApiContainer;
   @Inject AdLabelApiContainer adLabelApiContainer;
   @Inject AdParamApiContainer adParamApiContainer;
   @Inject AdUnionReportsApiContainer adUnionReportsApiContainer;
@@ -47,6 +46,8 @@ public class App {
   @Inject BidwordFlowApiContainer bidwordFlowApiContainer;
   @Inject BrandApiContainer brandApiContainer;
   @Inject BusinessPointApiContainer businessPointApiContainer;
+  @Inject CommentListApiContainer commentListApiContainer;
+  @Inject ComponentElementUrgeReviewApiContainer componentElementUrgeReviewApiContainer;
   @Inject ComponentReviewResultsApiContainer componentReviewResultsApiContainer;
   @Inject ConversionsApiContainer conversionsApiContainer;
   @Inject CreativeTemplateApiContainer creativeTemplateApiContainer;
@@ -66,13 +67,17 @@ public class App {
   @Inject DynamicCreativeReviewResultsApiContainer dynamicCreativeReviewResultsApiContainer;
   @Inject DynamicCreativesApiContainer dynamicCreativesApiContainer;
   @Inject EcommerceOrderApiContainer ecommerceOrderApiContainer;
+  @Inject ElementAppealQuotaApiContainer elementAppealQuotaApiContainer;
+  @Inject ElementAppealReviewApiContainer elementAppealReviewApiContainer;
   @Inject EstimationApiContainer estimationApiContainer;
   @Inject ExtendPackageApiContainer extendPackageApiContainer;
+  @Inject FinderAdObjectListApiContainer finderAdObjectListApiContainer;
   @Inject FundStatementsDetailedApiContainer fundStatementsDetailedApiContainer;
   @Inject FundTransferApiContainer fundTransferApiContainer;
   @Inject FundsApiContainer fundsApiContainer;
   @Inject GameFeatureApiContainer gameFeatureApiContainer;
   @Inject GameFeatureTagsApiContainer gameFeatureTagsApiContainer;
+  @Inject GetWxGameAppGiftPackApiContainer getWxGameAppGiftPackApiContainer;
   @Inject HourlyReportsApiContainer hourlyReportsApiContainer;
   @Inject ImageProcessingApiContainer imageProcessingApiContainer;
   @Inject ImagesApiContainer imagesApiContainer;
@@ -92,6 +97,7 @@ public class App {
   @Inject LeadsVoipCallTokenApiContainer leadsVoipCallTokenApiContainer;
   @Inject LiveRoomComponentStatusApiContainer liveRoomComponentStatusApiContainer;
   @Inject LiveRoomComponentsApiContainer liveRoomComponentsApiContainer;
+  @Inject LocalStorePackagesApiContainer localStorePackagesApiContainer;
   @Inject LocalStoresApiContainer localStoresApiContainer;
   @Inject LocalStoresAddressParsingResultApiContainer localStoresAddressParsingResultApiContainer;
   @Inject LocalStoresCategoriesApiContainer localStoresCategoriesApiContainer;
@@ -116,6 +122,8 @@ public class App {
 
   @Inject MergeFundTypeFundsApiContainer mergeFundTypeFundsApiContainer;
   @Inject MergeFundTypeSubcustomerTransferApiContainer mergeFundTypeSubcustomerTransferApiContainer;
+  @Inject MuseAiMaterialApiContainer museAiMaterialApiContainer;
+  @Inject MuseAiTaskApiContainer museAiTaskApiContainer;
   @Inject OauthApiContainer oauthApiContainer;
   @Inject ObjectCommentFlagApiContainer objectCommentFlagApiContainer;
   @Inject OptimizationGoalPermissionsApiContainer optimizationGoalPermissionsApiContainer;
@@ -130,6 +138,7 @@ public class App {
   @Inject ProductsSystemStatusApiContainer productsSystemStatusApiContainer;
   @Inject ProfilesApiContainer profilesApiContainer;
   @Inject ProgrammedApiContainer programmedApiContainer;
+  @Inject ProgrammedMaterialMappingsApiContainer programmedMaterialMappingsApiContainer;
   @Inject ProgrammedTemplateApiContainer programmedTemplateApiContainer;
   @Inject QualificationsApiContainer qualificationsApiContainer;
   @Inject RealtimeCostApiContainer realtimeCostApiContainer;
@@ -193,10 +202,6 @@ public class App {
 
   public AccountVersionApiContainer accountVersion() {
     return accountVersionApiContainer;
-  }
-
-  public AdDiagnosisApiContainer adDiagnosis() {
-    return adDiagnosisApiContainer;
   }
 
   public AdLabelApiContainer adLabel() {
@@ -303,6 +308,14 @@ public class App {
     return businessPointApiContainer;
   }
 
+  public CommentListApiContainer commentList() {
+    return commentListApiContainer;
+  }
+
+  public ComponentElementUrgeReviewApiContainer componentElementUrgeReview() {
+    return componentElementUrgeReviewApiContainer;
+  }
+
   public ComponentReviewResultsApiContainer componentReviewResults() {
     return componentReviewResultsApiContainer;
   }
@@ -379,12 +392,24 @@ public class App {
     return ecommerceOrderApiContainer;
   }
 
+  public ElementAppealQuotaApiContainer elementAppealQuota() {
+    return elementAppealQuotaApiContainer;
+  }
+
+  public ElementAppealReviewApiContainer elementAppealReview() {
+    return elementAppealReviewApiContainer;
+  }
+
   public EstimationApiContainer estimation() {
     return estimationApiContainer;
   }
 
   public ExtendPackageApiContainer extendPackage() {
     return extendPackageApiContainer;
+  }
+
+  public FinderAdObjectListApiContainer finderAdObjectList() {
+    return finderAdObjectListApiContainer;
   }
 
   public FundStatementsDetailedApiContainer fundStatementsDetailed() {
@@ -405,6 +430,10 @@ public class App {
 
   public GameFeatureTagsApiContainer gameFeatureTags() {
     return gameFeatureTagsApiContainer;
+  }
+
+  public GetWxGameAppGiftPackApiContainer getWxGameAppGiftPack() {
+    return getWxGameAppGiftPackApiContainer;
   }
 
   public HourlyReportsApiContainer hourlyReports() {
@@ -483,6 +512,10 @@ public class App {
     return liveRoomComponentsApiContainer;
   }
 
+  public LocalStorePackagesApiContainer localStorePackages() {
+    return localStorePackagesApiContainer;
+  }
+
   public LocalStoresApiContainer localStores() {
     return localStoresApiContainer;
   }
@@ -555,6 +588,14 @@ public class App {
     return mergeFundTypeSubcustomerTransferApiContainer;
   }
 
+  public MuseAiMaterialApiContainer museAiMaterial() {
+    return museAiMaterialApiContainer;
+  }
+
+  public MuseAiTaskApiContainer museAiTask() {
+    return museAiTaskApiContainer;
+  }
+
   public OauthApiContainer oauth() {
     return oauthApiContainer;
   }
@@ -609,6 +650,10 @@ public class App {
 
   public ProgrammedApiContainer programmed() {
     return programmedApiContainer;
+  }
+
+  public ProgrammedMaterialMappingsApiContainer programmedMaterialMappings() {
+    return programmedMaterialMappingsApiContainer;
   }
 
   public ProgrammedTemplateApiContainer programmedTemplate() {

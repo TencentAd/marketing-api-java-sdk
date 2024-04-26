@@ -32,6 +32,9 @@ public class GetData {
   @SerializedName("marketing_asset_id")
   private Long marketingAssetId = null;
 
+  @SerializedName("marketing_target_type")
+  private MarketingTargetType marketingTargetType = null;
+
   @SerializedName("audit_status")
   private Long auditStatus = null;
 
@@ -96,6 +99,25 @@ public class GetData {
 
   public void setMarketingAssetId(Long marketingAssetId) {
     this.marketingAssetId = marketingAssetId;
+  }
+
+  public GetData marketingTargetType(MarketingTargetType marketingTargetType) {
+    this.marketingTargetType = marketingTargetType;
+    return this;
+  }
+
+  /**
+   * Get marketingTargetType
+   *
+   * @return marketingTargetType
+   */
+  @ApiModelProperty(value = "")
+  public MarketingTargetType getMarketingTargetType() {
+    return marketingTargetType;
+  }
+
+  public void setMarketingTargetType(MarketingTargetType marketingTargetType) {
+    this.marketingTargetType = marketingTargetType;
   }
 
   public GetData auditStatus(Long auditStatus) {
@@ -175,6 +197,7 @@ public class GetData {
     return Objects.equals(this.imageId, getData.imageId)
         && Objects.equals(this.mediaId, getData.mediaId)
         && Objects.equals(this.marketingAssetId, getData.marketingAssetId)
+        && Objects.equals(this.marketingTargetType, getData.marketingTargetType)
         && Objects.equals(this.auditStatus, getData.auditStatus)
         && Objects.equals(this.auditMsg, getData.auditMsg)
         && Objects.equals(this.dcatagList, getData.dcatagList);
@@ -182,7 +205,8 @@ public class GetData {
 
   @Override
   public int hashCode() {
-    return Objects.hash(imageId, mediaId, marketingAssetId, auditStatus, auditMsg, dcatagList);
+    return Objects.hash(
+        imageId, mediaId, marketingAssetId, marketingTargetType, auditStatus, auditMsg, dcatagList);
   }
 
   @Override

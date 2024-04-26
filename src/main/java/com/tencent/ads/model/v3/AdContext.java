@@ -47,6 +47,9 @@ public class AdContext {
   @SerializedName("creative_template_id")
   private Long creativeTemplateId = null;
 
+  @SerializedName("promoted_asset_type")
+  private PromotedAssetType promotedAssetType = null;
+
   public AdContext marketingGoal(MarketingGoal marketingGoal) {
     this.marketingGoal = marketingGoal;
     return this;
@@ -207,6 +210,25 @@ public class AdContext {
     this.creativeTemplateId = creativeTemplateId;
   }
 
+  public AdContext promotedAssetType(PromotedAssetType promotedAssetType) {
+    this.promotedAssetType = promotedAssetType;
+    return this;
+  }
+
+  /**
+   * Get promotedAssetType
+   *
+   * @return promotedAssetType
+   */
+  @ApiModelProperty(value = "")
+  public PromotedAssetType getPromotedAssetType() {
+    return promotedAssetType;
+  }
+
+  public void setPromotedAssetType(PromotedAssetType promotedAssetType) {
+    this.promotedAssetType = promotedAssetType;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -223,7 +245,8 @@ public class AdContext {
         && Objects.equals(this.marketingCarrierDetail, adContext.marketingCarrierDetail)
         && Objects.equals(this.marketingAssetId, adContext.marketingAssetId)
         && Objects.equals(this.siteSet, adContext.siteSet)
-        && Objects.equals(this.creativeTemplateId, adContext.creativeTemplateId);
+        && Objects.equals(this.creativeTemplateId, adContext.creativeTemplateId)
+        && Objects.equals(this.promotedAssetType, adContext.promotedAssetType);
   }
 
   @Override
@@ -236,7 +259,8 @@ public class AdContext {
         marketingCarrierDetail,
         marketingAssetId,
         siteSet,
-        creativeTemplateId);
+        creativeTemplateId,
+        promotedAssetType);
   }
 
   @Override

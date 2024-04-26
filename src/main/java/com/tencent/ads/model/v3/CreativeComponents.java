@@ -104,6 +104,9 @@ public class CreativeComponents {
   @SerializedName("main_jump_info")
   private List<JumpinfoComponent> mainJumpInfo = null;
 
+  @SerializedName("app_promotion_video")
+  private List<AppPromotionVideoComponent> appPromotionVideo = null;
+
   public CreativeComponents title(List<TitleComponent> title) {
     this.title = title;
     return this;
@@ -836,6 +839,34 @@ public class CreativeComponents {
     this.mainJumpInfo = mainJumpInfo;
   }
 
+  public CreativeComponents appPromotionVideo(List<AppPromotionVideoComponent> appPromotionVideo) {
+    this.appPromotionVideo = appPromotionVideo;
+    return this;
+  }
+
+  public CreativeComponents addAppPromotionVideoItem(
+      AppPromotionVideoComponent appPromotionVideoItem) {
+    if (this.appPromotionVideo == null) {
+      this.appPromotionVideo = new ArrayList<AppPromotionVideoComponent>();
+    }
+    this.appPromotionVideo.add(appPromotionVideoItem);
+    return this;
+  }
+
+  /**
+   * Get appPromotionVideo
+   *
+   * @return appPromotionVideo
+   */
+  @ApiModelProperty(value = "")
+  public List<AppPromotionVideoComponent> getAppPromotionVideo() {
+    return appPromotionVideo;
+  }
+
+  public void setAppPromotionVideo(List<AppPromotionVideoComponent> appPromotionVideo) {
+    this.appPromotionVideo = appPromotionVideo;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -871,7 +902,8 @@ public class CreativeComponents {
         && Objects.equals(this.shortVideo, creativeComponents.shortVideo)
         && Objects.equals(this.elementStory, creativeComponents.elementStory)
         && Objects.equals(this.wxgamePlayablePage, creativeComponents.wxgamePlayablePage)
-        && Objects.equals(this.mainJumpInfo, creativeComponents.mainJumpInfo);
+        && Objects.equals(this.mainJumpInfo, creativeComponents.mainJumpInfo)
+        && Objects.equals(this.appPromotionVideo, creativeComponents.appPromotionVideo);
   }
 
   @Override
@@ -903,7 +935,8 @@ public class CreativeComponents {
         shortVideo,
         elementStory,
         wxgamePlayablePage,
-        mainJumpInfo);
+        mainJumpInfo,
+        appPromotionVideo);
   }
 
   @Override

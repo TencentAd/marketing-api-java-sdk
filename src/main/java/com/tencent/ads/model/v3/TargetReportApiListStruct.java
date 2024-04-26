@@ -2220,6 +2220,15 @@ public class TargetReportApiListStruct {
   @SerializedName("channels_detail_btn_pv")
   private Long channelsDetailBtnPv = null;
 
+  @SerializedName("after_add_wecom_negative_pv")
+  private Long afterAddWecomNegativePv = null;
+
+  @SerializedName("security_low_price_order_pv")
+  private Long securityLowPriceOrderPv = null;
+
+  @SerializedName("security_high_price_order_pv")
+  private Long securityHighPriceOrderPv = null;
+
   @SerializedName("age_id")
   private Long ageId = null;
 
@@ -16209,6 +16218,63 @@ public class TargetReportApiListStruct {
     this.channelsDetailBtnPv = channelsDetailBtnPv;
   }
 
+  public TargetReportApiListStruct afterAddWecomNegativePv(Long afterAddWecomNegativePv) {
+    this.afterAddWecomNegativePv = afterAddWecomNegativePv;
+    return this;
+  }
+
+  /**
+   * Get afterAddWecomNegativePv
+   *
+   * @return afterAddWecomNegativePv
+   */
+  @ApiModelProperty(value = "")
+  public Long getAfterAddWecomNegativePv() {
+    return afterAddWecomNegativePv;
+  }
+
+  public void setAfterAddWecomNegativePv(Long afterAddWecomNegativePv) {
+    this.afterAddWecomNegativePv = afterAddWecomNegativePv;
+  }
+
+  public TargetReportApiListStruct securityLowPriceOrderPv(Long securityLowPriceOrderPv) {
+    this.securityLowPriceOrderPv = securityLowPriceOrderPv;
+    return this;
+  }
+
+  /**
+   * Get securityLowPriceOrderPv
+   *
+   * @return securityLowPriceOrderPv
+   */
+  @ApiModelProperty(value = "")
+  public Long getSecurityLowPriceOrderPv() {
+    return securityLowPriceOrderPv;
+  }
+
+  public void setSecurityLowPriceOrderPv(Long securityLowPriceOrderPv) {
+    this.securityLowPriceOrderPv = securityLowPriceOrderPv;
+  }
+
+  public TargetReportApiListStruct securityHighPriceOrderPv(Long securityHighPriceOrderPv) {
+    this.securityHighPriceOrderPv = securityHighPriceOrderPv;
+    return this;
+  }
+
+  /**
+   * Get securityHighPriceOrderPv
+   *
+   * @return securityHighPriceOrderPv
+   */
+  @ApiModelProperty(value = "")
+  public Long getSecurityHighPriceOrderPv() {
+    return securityHighPriceOrderPv;
+  }
+
+  public void setSecurityHighPriceOrderPv(Long securityHighPriceOrderPv) {
+    this.securityHighPriceOrderPv = securityHighPriceOrderPv;
+  }
+
   public TargetReportApiListStruct ageId(Long ageId) {
     this.ageId = ageId;
     return this;
@@ -17362,6 +17428,12 @@ public class TargetReportApiListStruct {
             targetReportApiListStruct.inviteFriendsToWatchFireworksPv)
         && Objects.equals(this.clkBlessingCardPv, targetReportApiListStruct.clkBlessingCardPv)
         && Objects.equals(this.channelsDetailBtnPv, targetReportApiListStruct.channelsDetailBtnPv)
+        && Objects.equals(
+            this.afterAddWecomNegativePv, targetReportApiListStruct.afterAddWecomNegativePv)
+        && Objects.equals(
+            this.securityLowPriceOrderPv, targetReportApiListStruct.securityLowPriceOrderPv)
+        && Objects.equals(
+            this.securityHighPriceOrderPv, targetReportApiListStruct.securityHighPriceOrderPv)
         && Objects.equals(this.ageId, targetReportApiListStruct.ageId)
         && Objects.equals(this.cityId, targetReportApiListStruct.cityId)
         && Objects.equals(this.regionId, targetReportApiListStruct.regionId)
@@ -18105,6 +18177,9 @@ public class TargetReportApiListStruct {
         inviteFriendsToWatchFireworksPv,
         clkBlessingCardPv,
         channelsDetailBtnPv,
+        afterAddWecomNegativePv,
+        securityLowPriceOrderPv,
+        securityHighPriceOrderPv,
         ageId,
         cityId,
         regionId,

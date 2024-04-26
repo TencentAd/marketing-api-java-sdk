@@ -29,6 +29,9 @@ public class PropertyStruct {
   @SerializedName("property_value")
   private List<String> propertyValue = null;
 
+  @SerializedName("property_class")
+  private MarketingAssetAttrClass propertyClass = null;
+
   public PropertyStruct propertyName(PromotedAssetAttrKey propertyName) {
     this.propertyName = propertyName;
     return this;
@@ -75,6 +78,25 @@ public class PropertyStruct {
     this.propertyValue = propertyValue;
   }
 
+  public PropertyStruct propertyClass(MarketingAssetAttrClass propertyClass) {
+    this.propertyClass = propertyClass;
+    return this;
+  }
+
+  /**
+   * Get propertyClass
+   *
+   * @return propertyClass
+   */
+  @ApiModelProperty(value = "")
+  public MarketingAssetAttrClass getPropertyClass() {
+    return propertyClass;
+  }
+
+  public void setPropertyClass(MarketingAssetAttrClass propertyClass) {
+    this.propertyClass = propertyClass;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -85,12 +107,13 @@ public class PropertyStruct {
     }
     PropertyStruct propertyStruct = (PropertyStruct) o;
     return Objects.equals(this.propertyName, propertyStruct.propertyName)
-        && Objects.equals(this.propertyValue, propertyStruct.propertyValue);
+        && Objects.equals(this.propertyValue, propertyStruct.propertyValue)
+        && Objects.equals(this.propertyClass, propertyStruct.propertyClass);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(propertyName, propertyValue);
+    return Objects.hash(propertyName, propertyValue, propertyClass);
   }
 
   @Override
