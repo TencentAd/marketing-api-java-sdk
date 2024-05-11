@@ -27,6 +27,9 @@ public class VideoStruct {
   @SerializedName("cover_id")
   private String coverId = null;
 
+  @SerializedName("jump_info")
+  private JumpinfoStruct jumpInfo = null;
+
   public VideoStruct videoId(String videoId) {
     this.videoId = videoId;
     return this;
@@ -65,6 +68,25 @@ public class VideoStruct {
     this.coverId = coverId;
   }
 
+  public VideoStruct jumpInfo(JumpinfoStruct jumpInfo) {
+    this.jumpInfo = jumpInfo;
+    return this;
+  }
+
+  /**
+   * Get jumpInfo
+   *
+   * @return jumpInfo
+   */
+  @ApiModelProperty(value = "")
+  public JumpinfoStruct getJumpInfo() {
+    return jumpInfo;
+  }
+
+  public void setJumpInfo(JumpinfoStruct jumpInfo) {
+    this.jumpInfo = jumpInfo;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -75,12 +97,13 @@ public class VideoStruct {
     }
     VideoStruct videoStruct = (VideoStruct) o;
     return Objects.equals(this.videoId, videoStruct.videoId)
-        && Objects.equals(this.coverId, videoStruct.coverId);
+        && Objects.equals(this.coverId, videoStruct.coverId)
+        && Objects.equals(this.jumpInfo, videoStruct.jumpInfo);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(videoId, coverId);
+    return Objects.hash(videoId, coverId, jumpInfo);
   }
 
   @Override

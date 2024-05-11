@@ -24,7 +24,7 @@ import java.util.Objects;
 @ApiModel(description = "版位粒度审核结果")
 public class SiteSetResultListStruct {
   @SerializedName("site_set")
-  private List<String> siteSet = null;
+  private SiteSetDefinition siteSet = null;
 
   @SerializedName("system_status")
   private ReviewResultStatus systemStatus = null;
@@ -35,16 +35,8 @@ public class SiteSetResultListStruct {
   @SerializedName("element_reject_detail_info")
   private List<ElementRejectDetailInfoListStruct> elementRejectDetailInfo = null;
 
-  public SiteSetResultListStruct siteSet(List<String> siteSet) {
+  public SiteSetResultListStruct siteSet(SiteSetDefinition siteSet) {
     this.siteSet = siteSet;
-    return this;
-  }
-
-  public SiteSetResultListStruct addSiteSetItem(String siteSetItem) {
-    if (this.siteSet == null) {
-      this.siteSet = new ArrayList<String>();
-    }
-    this.siteSet.add(siteSetItem);
     return this;
   }
 
@@ -54,11 +46,11 @@ public class SiteSetResultListStruct {
    * @return siteSet
    */
   @ApiModelProperty(value = "")
-  public List<String> getSiteSet() {
+  public SiteSetDefinition getSiteSet() {
     return siteSet;
   }
 
-  public void setSiteSet(List<String> siteSet) {
+  public void setSiteSet(SiteSetDefinition siteSet) {
     this.siteSet = siteSet;
   }
 

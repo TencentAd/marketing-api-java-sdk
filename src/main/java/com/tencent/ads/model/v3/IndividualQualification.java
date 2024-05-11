@@ -21,11 +21,55 @@ import java.util.Objects;
 /** 个人身份证明 */
 @ApiModel(description = "个人身份证明")
 public class IndividualQualification {
+  @SerializedName("name")
+  private String name = null;
+
+  @SerializedName("identification_number")
+  private String identificationNumber = null;
+
   @SerializedName("identification_front_image_id")
   private String identificationFrontImageId = null;
 
   @SerializedName("identification_back_image_id")
   private String identificationBackImageId = null;
+
+  public IndividualQualification name(String name) {
+    this.name = name;
+    return this;
+  }
+
+  /**
+   * Get name
+   *
+   * @return name
+   */
+  @ApiModelProperty(value = "")
+  public String getName() {
+    return name;
+  }
+
+  public void setName(String name) {
+    this.name = name;
+  }
+
+  public IndividualQualification identificationNumber(String identificationNumber) {
+    this.identificationNumber = identificationNumber;
+    return this;
+  }
+
+  /**
+   * Get identificationNumber
+   *
+   * @return identificationNumber
+   */
+  @ApiModelProperty(value = "")
+  public String getIdentificationNumber() {
+    return identificationNumber;
+  }
+
+  public void setIdentificationNumber(String identificationNumber) {
+    this.identificationNumber = identificationNumber;
+  }
 
   public IndividualQualification identificationFrontImageId(String identificationFrontImageId) {
     this.identificationFrontImageId = identificationFrontImageId;
@@ -74,7 +118,9 @@ public class IndividualQualification {
       return false;
     }
     IndividualQualification individualQualification = (IndividualQualification) o;
-    return Objects.equals(
+    return Objects.equals(this.name, individualQualification.name)
+        && Objects.equals(this.identificationNumber, individualQualification.identificationNumber)
+        && Objects.equals(
             this.identificationFrontImageId, individualQualification.identificationFrontImageId)
         && Objects.equals(
             this.identificationBackImageId, individualQualification.identificationBackImageId);
@@ -82,7 +128,8 @@ public class IndividualQualification {
 
   @Override
   public int hashCode() {
-    return Objects.hash(identificationFrontImageId, identificationBackImageId);
+    return Objects.hash(
+        name, identificationNumber, identificationFrontImageId, identificationBackImageId);
   }
 
   @Override

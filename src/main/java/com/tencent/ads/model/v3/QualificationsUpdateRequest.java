@@ -33,6 +33,9 @@ public class QualificationsUpdateRequest {
   @SerializedName("image_id_list")
   private List<String> imageIdList = null;
 
+  @SerializedName("expand_field_list")
+  private List<ExpandFieldStruct> expandFieldList = null;
+
   public QualificationsUpdateRequest accountId(Long accountId) {
     this.accountId = accountId;
     return this;
@@ -117,6 +120,33 @@ public class QualificationsUpdateRequest {
     this.imageIdList = imageIdList;
   }
 
+  public QualificationsUpdateRequest expandFieldList(List<ExpandFieldStruct> expandFieldList) {
+    this.expandFieldList = expandFieldList;
+    return this;
+  }
+
+  public QualificationsUpdateRequest addExpandFieldListItem(ExpandFieldStruct expandFieldListItem) {
+    if (this.expandFieldList == null) {
+      this.expandFieldList = new ArrayList<ExpandFieldStruct>();
+    }
+    this.expandFieldList.add(expandFieldListItem);
+    return this;
+  }
+
+  /**
+   * Get expandFieldList
+   *
+   * @return expandFieldList
+   */
+  @ApiModelProperty(value = "")
+  public List<ExpandFieldStruct> getExpandFieldList() {
+    return expandFieldList;
+  }
+
+  public void setExpandFieldList(List<ExpandFieldStruct> expandFieldList) {
+    this.expandFieldList = expandFieldList;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -129,12 +159,14 @@ public class QualificationsUpdateRequest {
     return Objects.equals(this.accountId, qualificationsUpdateRequest.accountId)
         && Objects.equals(this.qualificationType, qualificationsUpdateRequest.qualificationType)
         && Objects.equals(this.qualificationId, qualificationsUpdateRequest.qualificationId)
-        && Objects.equals(this.imageIdList, qualificationsUpdateRequest.imageIdList);
+        && Objects.equals(this.imageIdList, qualificationsUpdateRequest.imageIdList)
+        && Objects.equals(this.expandFieldList, qualificationsUpdateRequest.expandFieldList);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(accountId, qualificationType, qualificationId, imageIdList);
+    return Objects.hash(
+        accountId, qualificationType, qualificationId, imageIdList, expandFieldList);
   }
 
   @Override

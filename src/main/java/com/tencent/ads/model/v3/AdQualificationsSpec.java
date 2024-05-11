@@ -29,6 +29,9 @@ public class AdQualificationsSpec {
   @SerializedName("image_id_list")
   private List<String> imageIdList = null;
 
+  @SerializedName("expand_field_list")
+  private List<ExpandFieldStruct> expandFieldList = null;
+
   public AdQualificationsSpec qualificationCode(String qualificationCode) {
     this.qualificationCode = qualificationCode;
     return this;
@@ -75,6 +78,33 @@ public class AdQualificationsSpec {
     this.imageIdList = imageIdList;
   }
 
+  public AdQualificationsSpec expandFieldList(List<ExpandFieldStruct> expandFieldList) {
+    this.expandFieldList = expandFieldList;
+    return this;
+  }
+
+  public AdQualificationsSpec addExpandFieldListItem(ExpandFieldStruct expandFieldListItem) {
+    if (this.expandFieldList == null) {
+      this.expandFieldList = new ArrayList<ExpandFieldStruct>();
+    }
+    this.expandFieldList.add(expandFieldListItem);
+    return this;
+  }
+
+  /**
+   * Get expandFieldList
+   *
+   * @return expandFieldList
+   */
+  @ApiModelProperty(value = "")
+  public List<ExpandFieldStruct> getExpandFieldList() {
+    return expandFieldList;
+  }
+
+  public void setExpandFieldList(List<ExpandFieldStruct> expandFieldList) {
+    this.expandFieldList = expandFieldList;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -85,12 +115,13 @@ public class AdQualificationsSpec {
     }
     AdQualificationsSpec adQualificationsSpec = (AdQualificationsSpec) o;
     return Objects.equals(this.qualificationCode, adQualificationsSpec.qualificationCode)
-        && Objects.equals(this.imageIdList, adQualificationsSpec.imageIdList);
+        && Objects.equals(this.imageIdList, adQualificationsSpec.imageIdList)
+        && Objects.equals(this.expandFieldList, adQualificationsSpec.expandFieldList);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(qualificationCode, imageIdList);
+    return Objects.hash(qualificationCode, imageIdList, expandFieldList);
   }
 
   @Override

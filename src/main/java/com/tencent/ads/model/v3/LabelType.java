@@ -19,7 +19,7 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-/** 创意标签类型 */
+/** 标签类型 */
 @JsonAdapter(LabelType.Adapter.class)
 public enum LabelType {
   UNKNOWN("LABEL_TYPE_UNKNOWN"),

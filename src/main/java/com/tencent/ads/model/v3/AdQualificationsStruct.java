@@ -32,6 +32,9 @@ public class AdQualificationsStruct {
   @SerializedName("image_id_list")
   private List<String> imageIdList = null;
 
+  @SerializedName("expand_field_list")
+  private List<ExpandFieldStruct> expandFieldList = null;
+
   @SerializedName("qualification_status")
   private QualificationStatus qualificationStatus = null;
 
@@ -113,6 +116,33 @@ public class AdQualificationsStruct {
 
   public void setImageIdList(List<String> imageIdList) {
     this.imageIdList = imageIdList;
+  }
+
+  public AdQualificationsStruct expandFieldList(List<ExpandFieldStruct> expandFieldList) {
+    this.expandFieldList = expandFieldList;
+    return this;
+  }
+
+  public AdQualificationsStruct addExpandFieldListItem(ExpandFieldStruct expandFieldListItem) {
+    if (this.expandFieldList == null) {
+      this.expandFieldList = new ArrayList<ExpandFieldStruct>();
+    }
+    this.expandFieldList.add(expandFieldListItem);
+    return this;
+  }
+
+  /**
+   * Get expandFieldList
+   *
+   * @return expandFieldList
+   */
+  @ApiModelProperty(value = "")
+  public List<ExpandFieldStruct> getExpandFieldList() {
+    return expandFieldList;
+  }
+
+  public void setExpandFieldList(List<ExpandFieldStruct> expandFieldList) {
+    this.expandFieldList = expandFieldList;
   }
 
   public AdQualificationsStruct qualificationStatus(QualificationStatus qualificationStatus) {
@@ -241,6 +271,7 @@ public class AdQualificationsStruct {
     return Objects.equals(this.qualificationId, adQualificationsStruct.qualificationId)
         && Objects.equals(this.qualificationCode, adQualificationsStruct.qualificationCode)
         && Objects.equals(this.imageIdList, adQualificationsStruct.imageIdList)
+        && Objects.equals(this.expandFieldList, adQualificationsStruct.expandFieldList)
         && Objects.equals(this.qualificationStatus, adQualificationsStruct.qualificationStatus)
         && Objects.equals(this.expiredDate, adQualificationsStruct.expiredDate)
         && Objects.equals(this.isMdmShared, adQualificationsStruct.isMdmShared)
@@ -255,6 +286,7 @@ public class AdQualificationsStruct {
         qualificationId,
         qualificationCode,
         imageIdList,
+        expandFieldList,
         qualificationStatus,
         expiredDate,
         isMdmShared,

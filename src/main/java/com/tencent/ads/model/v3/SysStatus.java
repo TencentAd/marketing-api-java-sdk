@@ -19,7 +19,7 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-/** 组件状态 */
+/** 审核状态 */
 @JsonAdapter(SysStatus.Adapter.class)
 public enum SysStatus {
   NORMAL("AD_STATUS_NORMAL"),

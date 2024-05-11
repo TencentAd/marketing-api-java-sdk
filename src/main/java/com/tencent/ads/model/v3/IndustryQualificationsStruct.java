@@ -38,6 +38,9 @@ public class IndustryQualificationsStruct {
   @SerializedName("image_id_list")
   private List<String> imageIdList = null;
 
+  @SerializedName("expand_field_list")
+  private List<ExpandFieldStruct> expandFieldList = null;
+
   @SerializedName("qualification_status")
   private QualificationStatus qualificationStatus = null;
 
@@ -156,6 +159,34 @@ public class IndustryQualificationsStruct {
     this.imageIdList = imageIdList;
   }
 
+  public IndustryQualificationsStruct expandFieldList(List<ExpandFieldStruct> expandFieldList) {
+    this.expandFieldList = expandFieldList;
+    return this;
+  }
+
+  public IndustryQualificationsStruct addExpandFieldListItem(
+      ExpandFieldStruct expandFieldListItem) {
+    if (this.expandFieldList == null) {
+      this.expandFieldList = new ArrayList<ExpandFieldStruct>();
+    }
+    this.expandFieldList.add(expandFieldListItem);
+    return this;
+  }
+
+  /**
+   * Get expandFieldList
+   *
+   * @return expandFieldList
+   */
+  @ApiModelProperty(value = "")
+  public List<ExpandFieldStruct> getExpandFieldList() {
+    return expandFieldList;
+  }
+
+  public void setExpandFieldList(List<ExpandFieldStruct> expandFieldList) {
+    this.expandFieldList = expandFieldList;
+  }
+
   public IndustryQualificationsStruct qualificationStatus(QualificationStatus qualificationStatus) {
     this.qualificationStatus = qualificationStatus;
     return this;
@@ -265,6 +296,7 @@ public class IndustryQualificationsStruct {
         && Objects.equals(this.businessScopeId, industryQualificationsStruct.businessScopeId)
         && Objects.equals(this.qualificationCode, industryQualificationsStruct.qualificationCode)
         && Objects.equals(this.imageIdList, industryQualificationsStruct.imageIdList)
+        && Objects.equals(this.expandFieldList, industryQualificationsStruct.expandFieldList)
         && Objects.equals(
             this.qualificationStatus, industryQualificationsStruct.qualificationStatus)
         && Objects.equals(this.expiredDate, industryQualificationsStruct.expiredDate)
@@ -281,6 +313,7 @@ public class IndustryQualificationsStruct {
         businessScopeId,
         qualificationCode,
         imageIdList,
+        expandFieldList,
         qualificationStatus,
         expiredDate,
         rejectMessage,

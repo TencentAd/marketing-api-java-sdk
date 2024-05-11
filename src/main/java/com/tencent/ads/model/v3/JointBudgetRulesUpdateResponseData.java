@@ -17,28 +17,28 @@ import com.google.gson.annotations.SerializedName;
 import io.swagger.annotations.ApiModelProperty;
 import java.util.Objects;
 
-/** RtaInfoRequest */
-public class RtaInfoRequest {
-  @SerializedName("RtaId")
-  private Long rtaId = null;
+/** JointBudgetRulesUpdateResponseData */
+public class JointBudgetRulesUpdateResponseData {
+  @SerializedName("joint_budget_rule_id")
+  private Long jointBudgetRuleId = null;
 
-  public RtaInfoRequest rtaId(Long rtaId) {
-    this.rtaId = rtaId;
+  public JointBudgetRulesUpdateResponseData jointBudgetRuleId(Long jointBudgetRuleId) {
+    this.jointBudgetRuleId = jointBudgetRuleId;
     return this;
   }
 
   /**
-   * Get rtaId
+   * Get jointBudgetRuleId
    *
-   * @return rtaId
+   * @return jointBudgetRuleId
    */
   @ApiModelProperty(value = "")
-  public Long getRtaId() {
-    return rtaId;
+  public Long getJointBudgetRuleId() {
+    return jointBudgetRuleId;
   }
 
-  public void setRtaId(Long rtaId) {
-    this.rtaId = rtaId;
+  public void setJointBudgetRuleId(Long jointBudgetRuleId) {
+    this.jointBudgetRuleId = jointBudgetRuleId;
   }
 
   @Override
@@ -49,13 +49,15 @@ public class RtaInfoRequest {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    RtaInfoRequest rtaInfoRequest = (RtaInfoRequest) o;
-    return Objects.equals(this.rtaId, rtaInfoRequest.rtaId);
+    JointBudgetRulesUpdateResponseData jointBudgetRulesUpdateResponseData =
+        (JointBudgetRulesUpdateResponseData) o;
+    return Objects.equals(
+        this.jointBudgetRuleId, jointBudgetRulesUpdateResponseData.jointBudgetRuleId);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(rtaId);
+    return Objects.hash(jointBudgetRuleId);
   }
 
   @Override

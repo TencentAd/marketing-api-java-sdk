@@ -1,20 +1,29 @@
-package com.tencent.ads.examples.v3.Tools.RtaInfo;
+package com.tencent.ads.examples.v3.Tools.JointBudgetRule;
 
 import com.tencent.ads.ApiContextConfig;
 import com.tencent.ads.exception.TencentAdsResponseException;
 import com.tencent.ads.exception.TencentAdsSDKException;
 import com.tencent.ads.model.v3.*;
-import com.tencent.ads.model.v3.RtaInfoRequest;
+import com.tencent.ads.model.v3.FilteringStruct;
 import com.tencent.ads.v3.TencentAds;
+import java.util.List;
 
-public class InfoRta {
+public class GetJointBudgetRules {
   /** YOUR ACCESS TOKEN */
   public String ACCESS_TOKEN = "YOUR ACCESS TOKEN";
 
   /** TencentAds */
   public TencentAds tencentAds;
 
-  public RtaInfoRequest data = null;
+  public Long accountId = null;
+
+  public List<FilteringStruct> filtering = null;
+
+  public Long page = null;
+
+  public Long pageSize = null;
+
+  public List<String> fields = null;
 
   public void init() {
     this.tencentAds = TencentAds.getInstance();
@@ -26,16 +35,19 @@ public class InfoRta {
 
   public void buildParams() {}
 
-  public RtaInfoResponseData infoRta() throws Exception {
-    RtaInfoResponseData response = tencentAds.rta().rtaInfo(data);
+  public JointBudgetRulesGetResponseData getJointBudgetRules() throws Exception {
+    JointBudgetRulesGetResponseData response =
+        tencentAds
+            .jointBudgetRules()
+            .jointBudgetRulesGet(accountId, filtering, page, pageSize, fields);
     return response;
   }
 
   public static void main(String[] args) {
     try {
-      InfoRta infoRta = new InfoRta();
-      infoRta.init();
-      RtaInfoResponseData response = infoRta.infoRta();
+      GetJointBudgetRules getJointBudgetRules = new GetJointBudgetRules();
+      getJointBudgetRules.init();
+      JointBudgetRulesGetResponseData response = getJointBudgetRules.getJointBudgetRules();
     } catch (TencentAdsResponseException e) {
       e.printStackTrace();
     } catch (TencentAdsSDKException e) {

@@ -19,8 +19,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
-/** RtaInfoResponse */
-public class RtaInfoResponse {
+/** QualificationStructureGetResponse */
+public class QualificationStructureGetResponse {
   @SerializedName("code")
   private Long code = null;
 
@@ -34,9 +34,9 @@ public class RtaInfoResponse {
   private List<ApiErrorStruct> errors = null;
 
   @SerializedName("data")
-  private RtaInfoResponseData data = null;
+  private QualificationStructureGetResponseData data = null;
 
-  public RtaInfoResponse code(Long code) {
+  public QualificationStructureGetResponse code(Long code) {
     this.code = code;
     return this;
   }
@@ -55,7 +55,7 @@ public class RtaInfoResponse {
     this.code = code;
   }
 
-  public RtaInfoResponse message(String message) {
+  public QualificationStructureGetResponse message(String message) {
     this.message = message;
     return this;
   }
@@ -74,7 +74,7 @@ public class RtaInfoResponse {
     this.message = message;
   }
 
-  public RtaInfoResponse messageCn(String messageCn) {
+  public QualificationStructureGetResponse messageCn(String messageCn) {
     this.messageCn = messageCn;
     return this;
   }
@@ -93,12 +93,12 @@ public class RtaInfoResponse {
     this.messageCn = messageCn;
   }
 
-  public RtaInfoResponse errors(List<ApiErrorStruct> errors) {
+  public QualificationStructureGetResponse errors(List<ApiErrorStruct> errors) {
     this.errors = errors;
     return this;
   }
 
-  public RtaInfoResponse addErrorsItem(ApiErrorStruct errorsItem) {
+  public QualificationStructureGetResponse addErrorsItem(ApiErrorStruct errorsItem) {
     if (this.errors == null) {
       this.errors = new ArrayList<ApiErrorStruct>();
     }
@@ -120,7 +120,7 @@ public class RtaInfoResponse {
     this.errors = errors;
   }
 
-  public RtaInfoResponse data(RtaInfoResponseData data) {
+  public QualificationStructureGetResponse data(QualificationStructureGetResponseData data) {
     this.data = data;
     return this;
   }
@@ -131,11 +131,11 @@ public class RtaInfoResponse {
    * @return data
    */
   @ApiModelProperty(value = "")
-  public RtaInfoResponseData getData() {
+  public QualificationStructureGetResponseData getData() {
     return data;
   }
 
-  public void setData(RtaInfoResponseData data) {
+  public void setData(QualificationStructureGetResponseData data) {
     this.data = data;
   }
 
@@ -147,12 +147,13 @@ public class RtaInfoResponse {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    RtaInfoResponse rtaInfoResponse = (RtaInfoResponse) o;
-    return Objects.equals(this.code, rtaInfoResponse.code)
-        && Objects.equals(this.message, rtaInfoResponse.message)
-        && Objects.equals(this.messageCn, rtaInfoResponse.messageCn)
-        && Objects.equals(this.errors, rtaInfoResponse.errors)
-        && Objects.equals(this.data, rtaInfoResponse.data);
+    QualificationStructureGetResponse qualificationStructureGetResponse =
+        (QualificationStructureGetResponse) o;
+    return Objects.equals(this.code, qualificationStructureGetResponse.code)
+        && Objects.equals(this.message, qualificationStructureGetResponse.message)
+        && Objects.equals(this.messageCn, qualificationStructureGetResponse.messageCn)
+        && Objects.equals(this.errors, qualificationStructureGetResponse.errors)
+        && Objects.equals(this.data, qualificationStructureGetResponse.data);
   }
 
   @Override

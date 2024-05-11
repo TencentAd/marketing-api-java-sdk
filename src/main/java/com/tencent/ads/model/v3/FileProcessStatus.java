@@ -19,18 +19,20 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-/** 出价方式 */
-@JsonAdapter(OptimizationBidMode.Adapter.class)
-public enum OptimizationBidMode {
-  OCPC("BID_MODE_OCPC"),
+/** 文件状态 */
+@JsonAdapter(FileProcessStatus.Adapter.class)
+public enum FileProcessStatus {
+  PENDING("PENDING"),
 
-  OCPA("BID_MODE_OCPA"),
+  PROCESSING("PROCESSING"),
 
-  OCPM("BID_MODE_OCPM");
+  ERROR("ERROR"),
+
+  SUCCESS("SUCCESS");
 
   private String value;
 
-  OptimizationBidMode(String value) {
+  FileProcessStatus(String value) {
     this.value = value;
   }
 
@@ -43,8 +45,8 @@ public enum OptimizationBidMode {
     return String.valueOf(value);
   }
 
-  public static OptimizationBidMode fromValue(String text) {
-    for (OptimizationBidMode b : OptimizationBidMode.values()) {
+  public static FileProcessStatus fromValue(String text) {
+    for (FileProcessStatus b : FileProcessStatus.values()) {
       if (String.valueOf(b.value).equals(text)) {
         return b;
       }
@@ -52,17 +54,17 @@ public enum OptimizationBidMode {
     return null;
   }
 
-  public static class Adapter extends TypeAdapter<OptimizationBidMode> {
+  public static class Adapter extends TypeAdapter<FileProcessStatus> {
     @Override
-    public void write(final JsonWriter jsonWriter, final OptimizationBidMode enumeration)
+    public void write(final JsonWriter jsonWriter, final FileProcessStatus enumeration)
         throws IOException {
       jsonWriter.value(enumeration.getValue());
     }
 
     @Override
-    public OptimizationBidMode read(final JsonReader jsonReader) throws IOException {
+    public FileProcessStatus read(final JsonReader jsonReader) throws IOException {
       String value = jsonReader.nextString();
-      return OptimizationBidMode.fromValue(String.valueOf(value));
+      return FileProcessStatus.fromValue(String.valueOf(value));
     }
   }
 }

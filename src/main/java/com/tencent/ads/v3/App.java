@@ -81,6 +81,7 @@ public class App {
   @Inject HourlyReportsApiContainer hourlyReportsApiContainer;
   @Inject ImageProcessingApiContainer imageProcessingApiContainer;
   @Inject ImagesApiContainer imagesApiContainer;
+  @Inject JointBudgetRulesApiContainer jointBudgetRulesApiContainer;
   @Inject KeywordRecommendApiContainer keywordRecommendApiContainer;
   @Inject LabelsApiContainer labelsApiContainer;
   @Inject LandingPageSellStrategyApiContainer landingPageSellStrategyApiContainer;
@@ -140,10 +141,11 @@ public class App {
   @Inject ProgrammedApiContainer programmedApiContainer;
   @Inject ProgrammedMaterialMappingsApiContainer programmedMaterialMappingsApiContainer;
   @Inject ProgrammedTemplateApiContainer programmedTemplateApiContainer;
+  @Inject QualificationStructureApiContainer qualificationStructureApiContainer;
   @Inject QualificationsApiContainer qualificationsApiContainer;
   @Inject RealtimeCostApiContainer realtimeCostApiContainer;
   @Inject ReviewElementPrereviewResultsApiContainer reviewElementPrereviewResultsApiContainer;
-  @Inject RtaApiContainer rtaApiContainer;
+  @Inject RtaInfoApiContainer rtaInfoApiContainer;
   @Inject RtaexpApiContainer rtaexpApiContainer;
   @Inject RtaexpDataRoiApiContainer rtaexpDataRoiApiContainer;
   @Inject RtaexpDspTagDataApiContainer rtaexpDspTagDataApiContainer;
@@ -448,6 +450,10 @@ public class App {
     return imagesApiContainer;
   }
 
+  public JointBudgetRulesApiContainer jointBudgetRules() {
+    return jointBudgetRulesApiContainer;
+  }
+
   public KeywordRecommendApiContainer keywordRecommend() {
     return keywordRecommendApiContainer;
   }
@@ -660,6 +666,10 @@ public class App {
     return programmedTemplateApiContainer;
   }
 
+  public QualificationStructureApiContainer qualificationStructure() {
+    return qualificationStructureApiContainer;
+  }
+
   public QualificationsApiContainer qualifications() {
     return qualificationsApiContainer;
   }
@@ -672,8 +682,8 @@ public class App {
     return reviewElementPrereviewResultsApiContainer;
   }
 
-  public RtaApiContainer rta() {
-    return rtaApiContainer;
+  public RtaInfoApiContainer rtaInfo() {
+    return rtaInfoApiContainer;
   }
 
   public RtaexpApiContainer rtaexp() {

@@ -107,6 +107,15 @@ public class CreativeComponents {
   @SerializedName("app_promotion_video")
   private List<AppPromotionVideoComponent> appPromotionVideo = null;
 
+  @SerializedName("video_showcase")
+  private List<VideoShowcaseComponent> videoShowcase = null;
+
+  @SerializedName("image_showcase")
+  private List<ImageShowcaseComponent> imageShowcase = null;
+
+  @SerializedName("mini_card_link")
+  private List<MiniCardLinkComponent> miniCardLink = null;
+
   public CreativeComponents title(List<TitleComponent> title) {
     this.title = title;
     return this;
@@ -867,6 +876,87 @@ public class CreativeComponents {
     this.appPromotionVideo = appPromotionVideo;
   }
 
+  public CreativeComponents videoShowcase(List<VideoShowcaseComponent> videoShowcase) {
+    this.videoShowcase = videoShowcase;
+    return this;
+  }
+
+  public CreativeComponents addVideoShowcaseItem(VideoShowcaseComponent videoShowcaseItem) {
+    if (this.videoShowcase == null) {
+      this.videoShowcase = new ArrayList<VideoShowcaseComponent>();
+    }
+    this.videoShowcase.add(videoShowcaseItem);
+    return this;
+  }
+
+  /**
+   * Get videoShowcase
+   *
+   * @return videoShowcase
+   */
+  @ApiModelProperty(value = "")
+  public List<VideoShowcaseComponent> getVideoShowcase() {
+    return videoShowcase;
+  }
+
+  public void setVideoShowcase(List<VideoShowcaseComponent> videoShowcase) {
+    this.videoShowcase = videoShowcase;
+  }
+
+  public CreativeComponents imageShowcase(List<ImageShowcaseComponent> imageShowcase) {
+    this.imageShowcase = imageShowcase;
+    return this;
+  }
+
+  public CreativeComponents addImageShowcaseItem(ImageShowcaseComponent imageShowcaseItem) {
+    if (this.imageShowcase == null) {
+      this.imageShowcase = new ArrayList<ImageShowcaseComponent>();
+    }
+    this.imageShowcase.add(imageShowcaseItem);
+    return this;
+  }
+
+  /**
+   * Get imageShowcase
+   *
+   * @return imageShowcase
+   */
+  @ApiModelProperty(value = "")
+  public List<ImageShowcaseComponent> getImageShowcase() {
+    return imageShowcase;
+  }
+
+  public void setImageShowcase(List<ImageShowcaseComponent> imageShowcase) {
+    this.imageShowcase = imageShowcase;
+  }
+
+  public CreativeComponents miniCardLink(List<MiniCardLinkComponent> miniCardLink) {
+    this.miniCardLink = miniCardLink;
+    return this;
+  }
+
+  public CreativeComponents addMiniCardLinkItem(MiniCardLinkComponent miniCardLinkItem) {
+    if (this.miniCardLink == null) {
+      this.miniCardLink = new ArrayList<MiniCardLinkComponent>();
+    }
+    this.miniCardLink.add(miniCardLinkItem);
+    return this;
+  }
+
+  /**
+   * Get miniCardLink
+   *
+   * @return miniCardLink
+   */
+  @ApiModelProperty(value = "")
+  public List<MiniCardLinkComponent> getMiniCardLink() {
+    return miniCardLink;
+  }
+
+  public void setMiniCardLink(List<MiniCardLinkComponent> miniCardLink) {
+    this.miniCardLink = miniCardLink;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -903,7 +993,10 @@ public class CreativeComponents {
         && Objects.equals(this.elementStory, creativeComponents.elementStory)
         && Objects.equals(this.wxgamePlayablePage, creativeComponents.wxgamePlayablePage)
         && Objects.equals(this.mainJumpInfo, creativeComponents.mainJumpInfo)
-        && Objects.equals(this.appPromotionVideo, creativeComponents.appPromotionVideo);
+        && Objects.equals(this.appPromotionVideo, creativeComponents.appPromotionVideo)
+        && Objects.equals(this.videoShowcase, creativeComponents.videoShowcase)
+        && Objects.equals(this.imageShowcase, creativeComponents.imageShowcase)
+        && Objects.equals(this.miniCardLink, creativeComponents.miniCardLink);
   }
 
   @Override
@@ -936,7 +1029,10 @@ public class CreativeComponents {
         elementStory,
         wxgamePlayablePage,
         mainJumpInfo,
-        appPromotionVideo);
+        appPromotionVideo,
+        videoShowcase,
+        imageShowcase,
+        miniCardLink);
   }
 
   @Override

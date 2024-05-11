@@ -21,8 +21,7 @@ import com.tencent.ads.Configuration;
 import com.tencent.ads.Pair;
 import com.tencent.ads.ProgressRequestBody;
 import com.tencent.ads.ProgressResponseBody;
-import com.tencent.ads.model.v3.RtaInfoRequest;
-import com.tencent.ads.model.v3.RtaInfoResponse;
+import com.tencent.ads.model.v3.QualificationStructureGetResponse;
 import java.io.IOException;
 import java.lang.reflect.Type;
 import java.util.ArrayList;
@@ -30,14 +29,14 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class RtaApi {
+public class QualificationStructureApi {
   private ApiClient apiClient;
 
-  public RtaApi() {
+  public QualificationStructureApi() {
     this(Configuration.getV3DefaultApiClient());
   }
 
-  public RtaApi(ApiClient apiClient) {
+  public QualificationStructureApi(ApiClient apiClient) {
     this.apiClient = apiClient;
   }
 
@@ -50,28 +49,39 @@ public class RtaApi {
   }
 
   /**
-   * Build call for rtaInfo
+   * Build call for qualificationStructureGet
    *
-   * @param data (required)
+   * @param accountId (required)
+   * @param qualificationCode (required)
+   * @param fields 返回参数的字段列表 (optional)
    * @param progressListener Progress listener
    * @param progressRequestListener Progress request listener
    * @return Call to execute
    * @throws ApiException If fail to serialize the request body object
    */
-  public com.squareup.okhttp.Call rtaInfoCall(
-      RtaInfoRequest data,
+  public com.squareup.okhttp.Call qualificationStructureGetCall(
+      Long accountId,
+      String qualificationCode,
+      List<String> fields,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
       String... headerPair)
       throws ApiException {
 
-    Object localVarPostBody = data;
+    Object localVarPostBody = null;
 
     // create path and map variables
-    String localVarPath = "/rta/info";
+    String localVarPath = "/qualification_structure/get";
 
     List<Pair> localVarQueryParams = new ArrayList<Pair>();
     List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+    if (accountId != null)
+      localVarQueryParams.addAll(apiClient.parameterToPair("account_id", accountId));
+    if (qualificationCode != null)
+      localVarQueryParams.addAll(
+          apiClient.parameterToPair("qualification_code", qualificationCode));
+    if (fields != null)
+      localVarCollectionQueryParams.addAll(apiClient.parameterToPairs("multi", "fields", fields));
 
     Map<String, String> localVarHeaderParams = new HashMap<String, String>();
 
@@ -81,7 +91,7 @@ public class RtaApi {
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
     if (localVarAccept != null) localVarHeaderParams.put("Accept", localVarAccept);
 
-    final String[] localVarContentTypes = {"application/json", "application/xml"};
+    final String[] localVarContentTypes = {"text/plain"};
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
     localVarHeaderParams.put("Content-Type", localVarContentType);
 
@@ -115,7 +125,7 @@ public class RtaApi {
     String[] localVarAuthNames = new String[] {"accessToken", "nonce", "timestamp"};
     return apiClient.buildCall(
         localVarPath,
-        "POST",
+        "GET",
         localVarQueryParams,
         localVarCollectionQueryParams,
         localVarPostBody,
@@ -126,61 +136,92 @@ public class RtaApi {
   }
 
   @SuppressWarnings("rawtypes")
-  private com.squareup.okhttp.Call rtaInfoValidateBeforeCall(
-      RtaInfoRequest data,
+  private com.squareup.okhttp.Call qualificationStructureGetValidateBeforeCall(
+      Long accountId,
+      String qualificationCode,
+      List<String> fields,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
       String... headerPair)
       throws ApiException {
 
-    // verify the required parameter 'data' is set
-    if (data == null) {
-      throw new ApiException("Missing the required parameter 'data' when calling rtaInfo(Async)");
+    // verify the required parameter 'accountId' is set
+    if (accountId == null) {
+      throw new ApiException(
+          "Missing the required parameter 'accountId' when calling qualificationStructureGet(Async)");
+    }
+
+    // verify the required parameter 'qualificationCode' is set
+    if (qualificationCode == null) {
+      throw new ApiException(
+          "Missing the required parameter 'qualificationCode' when calling qualificationStructureGet(Async)");
     }
 
     com.squareup.okhttp.Call call =
-        rtaInfoCall(data, progressListener, progressRequestListener, headerPair);
+        qualificationStructureGetCall(
+            accountId,
+            qualificationCode,
+            fields,
+            progressListener,
+            progressRequestListener,
+            headerPair);
     return call;
   }
 
   /**
-   * 基本信息查询
+   * 获取广告主资质结构
    *
-   * @param data (required)
-   * @return RtaInfoResponse
+   * @param accountId (required)
+   * @param qualificationCode (required)
+   * @param fields 返回参数的字段列表 (optional)
+   * @return QualificationStructureGetResponse
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
-  public RtaInfoResponse rtaInfo(RtaInfoRequest data, String... headerPair) throws ApiException {
-    ApiResponse<RtaInfoResponse> resp = rtaInfoWithHttpInfo(data, headerPair);
+  public QualificationStructureGetResponse qualificationStructureGet(
+      Long accountId, String qualificationCode, List<String> fields, String... headerPair)
+      throws ApiException {
+    ApiResponse<QualificationStructureGetResponse> resp =
+        qualificationStructureGetWithHttpInfo(accountId, qualificationCode, fields, headerPair);
     return resp.getData();
   }
 
   /**
-   * 基本信息查询
+   * 获取广告主资质结构
    *
-   * @param data (required)
-   * @return ApiResponse&lt;RtaInfoResponse&gt;
+   * @param accountId (required)
+   * @param qualificationCode (required)
+   * @param fields 返回参数的字段列表 (optional)
+   * @return ApiResponse&lt;QualificationStructureGetResponse&gt;
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
-  public ApiResponse<RtaInfoResponse> rtaInfoWithHttpInfo(RtaInfoRequest data, String... headerPair)
+  public ApiResponse<QualificationStructureGetResponse> qualificationStructureGetWithHttpInfo(
+      Long accountId, String qualificationCode, List<String> fields, String... headerPair)
       throws ApiException {
-    com.squareup.okhttp.Call call = rtaInfoValidateBeforeCall(data, null, null, headerPair);
-    Type localVarReturnType = new TypeToken<RtaInfoResponse>() {}.getType();
+    com.squareup.okhttp.Call call =
+        qualificationStructureGetValidateBeforeCall(
+            accountId, qualificationCode, fields, null, null, headerPair);
+    Type localVarReturnType = new TypeToken<QualificationStructureGetResponse>() {}.getType();
     return apiClient.execute(call, localVarReturnType);
   }
 
   /**
-   * 基本信息查询 (asynchronously)
+   * 获取广告主资质结构 (asynchronously)
    *
-   * @param data (required)
+   * @param accountId (required)
+   * @param qualificationCode (required)
+   * @param fields 返回参数的字段列表 (optional)
    * @param callback The callback to be executed when the API call finishes
    * @return The request call
    * @throws ApiException If fail to process the API call, e.g. serializing the request body object
    */
-  public com.squareup.okhttp.Call rtaInfoAsync(
-      RtaInfoRequest data, final ApiCallback<RtaInfoResponse> callback, String... headerPair)
+  public com.squareup.okhttp.Call qualificationStructureGetAsync(
+      Long accountId,
+      String qualificationCode,
+      List<String> fields,
+      final ApiCallback<QualificationStructureGetResponse> callback,
+      String... headerPair)
       throws ApiException {
 
     ProgressResponseBody.ProgressListener progressListener = null;
@@ -205,8 +246,14 @@ public class RtaApi {
     }
 
     com.squareup.okhttp.Call call =
-        rtaInfoValidateBeforeCall(data, progressListener, progressRequestListener, headerPair);
-    Type localVarReturnType = new TypeToken<RtaInfoResponse>() {}.getType();
+        qualificationStructureGetValidateBeforeCall(
+            accountId,
+            qualificationCode,
+            fields,
+            progressListener,
+            progressRequestListener,
+            headerPair);
+    Type localVarReturnType = new TypeToken<QualificationStructureGetResponse>() {}.getType();
     apiClient.executeAsync(call, localVarReturnType, callback);
     return call;
   }

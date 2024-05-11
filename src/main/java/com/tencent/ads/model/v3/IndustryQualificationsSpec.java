@@ -35,6 +35,9 @@ public class IndustryQualificationsSpec {
   @SerializedName("image_id_list")
   private List<String> imageIdList = null;
 
+  @SerializedName("expand_field_list")
+  private List<ExpandFieldStruct> expandFieldList = null;
+
   public IndustryQualificationsSpec systemIndustryId(Long systemIndustryId) {
     this.systemIndustryId = systemIndustryId;
     return this;
@@ -119,6 +122,33 @@ public class IndustryQualificationsSpec {
     this.imageIdList = imageIdList;
   }
 
+  public IndustryQualificationsSpec expandFieldList(List<ExpandFieldStruct> expandFieldList) {
+    this.expandFieldList = expandFieldList;
+    return this;
+  }
+
+  public IndustryQualificationsSpec addExpandFieldListItem(ExpandFieldStruct expandFieldListItem) {
+    if (this.expandFieldList == null) {
+      this.expandFieldList = new ArrayList<ExpandFieldStruct>();
+    }
+    this.expandFieldList.add(expandFieldListItem);
+    return this;
+  }
+
+  /**
+   * Get expandFieldList
+   *
+   * @return expandFieldList
+   */
+  @ApiModelProperty(value = "")
+  public List<ExpandFieldStruct> getExpandFieldList() {
+    return expandFieldList;
+  }
+
+  public void setExpandFieldList(List<ExpandFieldStruct> expandFieldList) {
+    this.expandFieldList = expandFieldList;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -131,12 +161,14 @@ public class IndustryQualificationsSpec {
     return Objects.equals(this.systemIndustryId, industryQualificationsSpec.systemIndustryId)
         && Objects.equals(this.businessScopeId, industryQualificationsSpec.businessScopeId)
         && Objects.equals(this.qualificationCode, industryQualificationsSpec.qualificationCode)
-        && Objects.equals(this.imageIdList, industryQualificationsSpec.imageIdList);
+        && Objects.equals(this.imageIdList, industryQualificationsSpec.imageIdList)
+        && Objects.equals(this.expandFieldList, industryQualificationsSpec.expandFieldList);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(systemIndustryId, businessScopeId, qualificationCode, imageIdList);
+    return Objects.hash(
+        systemIndustryId, businessScopeId, qualificationCode, imageIdList, expandFieldList);
   }
 
   @Override

@@ -19,7 +19,7 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-/** 动态商品广告类型 */
+/** 标明适用的动态商品广告类型 */
 @JsonAdapter(ProductMode.Adapter.class)
 public enum ProductMode {
   SINGLE("SINGLE"),

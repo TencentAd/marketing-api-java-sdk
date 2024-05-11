@@ -40,7 +40,7 @@ public class DataFile {
   private String openAppId = null;
 
   @SerializedName("process_status")
-  private Long processStatus = null;
+  private FileProcessStatus processStatus = null;
 
   @SerializedName("process_code")
   private Long processCode = null;
@@ -177,7 +177,7 @@ public class DataFile {
     this.openAppId = openAppId;
   }
 
-  public DataFile processStatus(Long processStatus) {
+  public DataFile processStatus(FileProcessStatus processStatus) {
     this.processStatus = processStatus;
     return this;
   }
@@ -188,11 +188,11 @@ public class DataFile {
    * @return processStatus
    */
   @ApiModelProperty(value = "")
-  public Long getProcessStatus() {
+  public FileProcessStatus getProcessStatus() {
     return processStatus;
   }
 
-  public void setProcessStatus(Long processStatus) {
+  public void setProcessStatus(FileProcessStatus processStatus) {
     this.processStatus = processStatus;
   }
 

@@ -19,8 +19,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
-/** RtaInfoResponseData */
-public class RtaInfoResponseData {
+/** RtaInfoGetResponseData */
+public class RtaInfoGetResponseData {
   @SerializedName("RtaId")
   private Long rtaId = null;
 
@@ -45,7 +45,7 @@ public class RtaInfoResponseData {
   @SerializedName("bidurls")
   private List<BidUrl> bidurls = null;
 
-  public RtaInfoResponseData rtaId(Long rtaId) {
+  public RtaInfoGetResponseData rtaId(Long rtaId) {
     this.rtaId = rtaId;
     return this;
   }
@@ -64,7 +64,7 @@ public class RtaInfoResponseData {
     this.rtaId = rtaId;
   }
 
-  public RtaInfoResponseData rtaName(String rtaName) {
+  public RtaInfoGetResponseData rtaName(String rtaName) {
     this.rtaName = rtaName;
     return this;
   }
@@ -83,7 +83,7 @@ public class RtaInfoResponseData {
     this.rtaName = rtaName;
   }
 
-  public RtaInfoResponseData rtaCompanyName(String rtaCompanyName) {
+  public RtaInfoGetResponseData rtaCompanyName(String rtaCompanyName) {
     this.rtaCompanyName = rtaCompanyName;
     return this;
   }
@@ -102,7 +102,7 @@ public class RtaInfoResponseData {
     this.rtaCompanyName = rtaCompanyName;
   }
 
-  public RtaInfoResponseData qpsLimit(Long qpsLimit) {
+  public RtaInfoGetResponseData qpsLimit(Long qpsLimit) {
     this.qpsLimit = qpsLimit;
     return this;
   }
@@ -121,7 +121,7 @@ public class RtaInfoResponseData {
     this.qpsLimit = qpsLimit;
   }
 
-  public RtaInfoResponseData cacheTime(Long cacheTime) {
+  public RtaInfoGetResponseData cacheTime(Long cacheTime) {
     this.cacheTime = cacheTime;
     return this;
   }
@@ -140,7 +140,7 @@ public class RtaInfoResponseData {
     this.cacheTime = cacheTime;
   }
 
-  public RtaInfoResponseData enable(Long enable) {
+  public RtaInfoGetResponseData enable(Long enable) {
     this.enable = enable;
     return this;
   }
@@ -159,12 +159,12 @@ public class RtaInfoResponseData {
     this.enable = enable;
   }
 
-  public RtaInfoResponseData rules(List<Rule> rules) {
+  public RtaInfoGetResponseData rules(List<Rule> rules) {
     this.rules = rules;
     return this;
   }
 
-  public RtaInfoResponseData addRulesItem(Rule rulesItem) {
+  public RtaInfoGetResponseData addRulesItem(Rule rulesItem) {
     if (this.rules == null) {
       this.rules = new ArrayList<Rule>();
     }
@@ -186,12 +186,12 @@ public class RtaInfoResponseData {
     this.rules = rules;
   }
 
-  public RtaInfoResponseData bidurls(List<BidUrl> bidurls) {
+  public RtaInfoGetResponseData bidurls(List<BidUrl> bidurls) {
     this.bidurls = bidurls;
     return this;
   }
 
-  public RtaInfoResponseData addBidurlsItem(BidUrl bidurlsItem) {
+  public RtaInfoGetResponseData addBidurlsItem(BidUrl bidurlsItem) {
     if (this.bidurls == null) {
       this.bidurls = new ArrayList<BidUrl>();
     }
@@ -221,15 +221,15 @@ public class RtaInfoResponseData {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    RtaInfoResponseData rtaInfoResponseData = (RtaInfoResponseData) o;
-    return Objects.equals(this.rtaId, rtaInfoResponseData.rtaId)
-        && Objects.equals(this.rtaName, rtaInfoResponseData.rtaName)
-        && Objects.equals(this.rtaCompanyName, rtaInfoResponseData.rtaCompanyName)
-        && Objects.equals(this.qpsLimit, rtaInfoResponseData.qpsLimit)
-        && Objects.equals(this.cacheTime, rtaInfoResponseData.cacheTime)
-        && Objects.equals(this.enable, rtaInfoResponseData.enable)
-        && Objects.equals(this.rules, rtaInfoResponseData.rules)
-        && Objects.equals(this.bidurls, rtaInfoResponseData.bidurls);
+    RtaInfoGetResponseData rtaInfoGetResponseData = (RtaInfoGetResponseData) o;
+    return Objects.equals(this.rtaId, rtaInfoGetResponseData.rtaId)
+        && Objects.equals(this.rtaName, rtaInfoGetResponseData.rtaName)
+        && Objects.equals(this.rtaCompanyName, rtaInfoGetResponseData.rtaCompanyName)
+        && Objects.equals(this.qpsLimit, rtaInfoGetResponseData.qpsLimit)
+        && Objects.equals(this.cacheTime, rtaInfoGetResponseData.cacheTime)
+        && Objects.equals(this.enable, rtaInfoGetResponseData.enable)
+        && Objects.equals(this.rules, rtaInfoGetResponseData.rules)
+        && Objects.equals(this.bidurls, rtaInfoGetResponseData.bidurls);
   }
 
   @Override

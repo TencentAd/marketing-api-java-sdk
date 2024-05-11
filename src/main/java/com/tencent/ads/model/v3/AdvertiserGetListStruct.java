@@ -47,9 +47,6 @@ public class AdvertiserGetListStruct {
   @SerializedName("certification_image")
   private String certificationImage = null;
 
-  @SerializedName("identity_number")
-  private String identityNumber = null;
-
   @SerializedName("individual_qualification")
   private IndividualQualification individualQualification = null;
 
@@ -248,25 +245,6 @@ public class AdvertiserGetListStruct {
 
   public void setCertificationImage(String certificationImage) {
     this.certificationImage = certificationImage;
-  }
-
-  public AdvertiserGetListStruct identityNumber(String identityNumber) {
-    this.identityNumber = identityNumber;
-    return this;
-  }
-
-  /**
-   * Get identityNumber
-   *
-   * @return identityNumber
-   */
-  @ApiModelProperty(value = "")
-  public String getIdentityNumber() {
-    return identityNumber;
-  }
-
-  public void setIdentityNumber(String identityNumber) {
-    this.identityNumber = identityNumber;
   }
 
   public AdvertiserGetListStruct individualQualification(
@@ -607,7 +585,6 @@ public class AdvertiserGetListStruct {
         && Objects.equals(this.corporationLicence, advertiserGetListStruct.corporationLicence)
         && Objects.equals(this.certificationImageId, advertiserGetListStruct.certificationImageId)
         && Objects.equals(this.certificationImage, advertiserGetListStruct.certificationImage)
-        && Objects.equals(this.identityNumber, advertiserGetListStruct.identityNumber)
         && Objects.equals(
             this.individualQualification, advertiserGetListStruct.individualQualification)
         && Objects.equals(this.systemIndustryId, advertiserGetListStruct.systemIndustryId)
@@ -639,7 +616,6 @@ public class AdvertiserGetListStruct {
         corporationLicence,
         certificationImageId,
         certificationImage,
-        identityNumber,
         individualQualification,
         systemIndustryId,
         customizedIndustry,

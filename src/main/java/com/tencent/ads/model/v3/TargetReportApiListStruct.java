@@ -144,20 +144,11 @@ public class TargetReportApiListStruct {
   @SerializedName("video_outer_play_user_count")
   private Long videoOuterPlayUserCount = null;
 
-  @SerializedName("video_time_total_count")
-  private Double videoTimeTotalCount = null;
-
-  @SerializedName("video_outer_play_total_time_count")
-  private Double videoOuterPlayTotalTimeCount = null;
-
   @SerializedName("avg_user_play_count")
   private Double avgUserPlayCount = null;
 
   @SerializedName("video_outer_play_time_count")
   private Double videoOuterPlayTimeCount = null;
-
-  @SerializedName("video_outer_play_time_avg")
-  private Double videoOuterPlayTimeAvg = null;
 
   @SerializedName("video_outer_play_time_avg_rate")
   private Double videoOuterPlayTimeAvgRate = null;
@@ -236,9 +227,6 @@ public class TargetReportApiListStruct {
 
   @SerializedName("click_image_count")
   private Long clickImageCount = null;
-
-  @SerializedName("click_nick_count")
-  private Long clickNickCount = null;
 
   @SerializedName("click_head_count")
   private Long clickHeadCount = null;
@@ -392,12 +380,6 @@ public class TargetReportApiListStruct {
 
   @SerializedName("guide_to_follow_page_interaction_users")
   private Long guideToFollowPageInteractionUsers = null;
-
-  @SerializedName("special_page_exp_uv")
-  private Long specialPageExpUv = null;
-
-  @SerializedName("special_page_exp_cost")
-  private Long specialPageExpCost = null;
 
   @SerializedName("landing_page_view_count")
   private Long landingPageViewCount = null;
@@ -975,12 +957,6 @@ public class TargetReportApiListStruct {
   @SerializedName("retention_rate")
   private Double retentionRate = null;
 
-  @SerializedName("app_retention_d2_pv")
-  private Long appRetentionD2Pv = null;
-
-  @SerializedName("app_retention_d3_pv")
-  private Long appRetentionD3Pv = null;
-
   @SerializedName("app_retention_d3_uv")
   private Long appRetentionD3Uv = null;
 
@@ -990,12 +966,6 @@ public class TargetReportApiListStruct {
   @SerializedName("app_retention_d3_rate")
   private Double appRetentionD3Rate = null;
 
-  @SerializedName("app_retention_d4_pv")
-  private Long appRetentionD4Pv = null;
-
-  @SerializedName("app_retention_d5_pv")
-  private Long appRetentionD5Pv = null;
-
   @SerializedName("app_retention_d5_uv")
   private Long appRetentionD5Uv = null;
 
@@ -1004,12 +974,6 @@ public class TargetReportApiListStruct {
 
   @SerializedName("app_retention_d5_rate")
   private Double appRetentionD5Rate = null;
-
-  @SerializedName("app_retention_d6_pv")
-  private Long appRetentionD6Pv = null;
-
-  @SerializedName("app_retention_d7_pv")
-  private Long appRetentionD7Pv = null;
 
   @SerializedName("app_retention_d7_uv")
   private Long appRetentionD7Uv = null;
@@ -1878,17 +1842,8 @@ public class TargetReportApiListStruct {
   @SerializedName("live_stream_commodity_shop_list_exp_pv")
   private Long liveStreamCommodityShopListExpPv = null;
 
-  @SerializedName("channels_live_exit_pla_uv")
-  private Long channelsLiveExitPlaUv = null;
-
   @SerializedName("live_stream_avg_time")
   private Double liveStreamAvgTime = null;
-
-  @SerializedName("follow_count")
-  private Long followCount = null;
-
-  @SerializedName("follow_cost")
-  private Long followCost = null;
 
   @SerializedName("from_follow_uv")
   private Long fromFollowUv = null;
@@ -1908,9 +1863,6 @@ public class TargetReportApiListStruct {
   @SerializedName("from_follow_by_click_cost")
   private Long fromFollowByClickCost = null;
 
-  @SerializedName("biz_follow_count")
-  private Long bizFollowCount = null;
-
   @SerializedName("biz_follow_rate")
   private Double bizFollowRate = null;
 
@@ -1926,44 +1878,14 @@ public class TargetReportApiListStruct {
   @SerializedName("biz_reading_count")
   private Long bizReadingCount = null;
 
-  @SerializedName("break_frame_exp_pv")
-  private Long breakFrameExpPv = null;
-
   @SerializedName("break_frame_play_pv")
   private Long breakFramePlayPv = null;
-
-  @SerializedName("break_frame_play_duration")
-  private Double breakFramePlayDuration = null;
-
-  @SerializedName("break_frame_ip_exp_pv")
-  private Long breakFrameIpExpPv = null;
 
   @SerializedName("break_frame_ip_clk_pv")
   private Long breakFrameIpClkPv = null;
 
   @SerializedName("break_frame_ip_clk_uv")
   private Long breakFrameIpClkUv = null;
-
-  @SerializedName("overall_brand_exposure")
-  private Long overallBrandExposure = null;
-
-  @SerializedName("exp_has_cost_pv")
-  private Long expHasCostPv = null;
-
-  @SerializedName("free_exposure_pv")
-  private Long freeExposurePv = null;
-
-  @SerializedName("brand_share_exposure_pv")
-  private Long brandShareExposurePv = null;
-
-  @SerializedName("cvs_share_exp_to_friend_pv")
-  private Long cvsShareExpToFriendPv = null;
-
-  @SerializedName("cvs_share_exp_to_feed_pv")
-  private Long cvsShareExpToFeedPv = null;
-
-  @SerializedName("real_cpm_cost")
-  private Long realCpmCost = null;
 
   @SerializedName("clk_material_uv")
   private Long clkMaterialUv = null;
@@ -1986,15 +1908,6 @@ public class TargetReportApiListStruct {
   @SerializedName("clk_poi_pv")
   private Long clkPoiPv = null;
 
-  @SerializedName("clk_choice_left_pv")
-  private Long clkChoiceLeftPv = null;
-
-  @SerializedName("clk_choice_right_pv")
-  private Long clkChoiceRightPv = null;
-
-  @SerializedName("clk_card_tag_pv")
-  private Long clkCardTagPv = null;
-
   @SerializedName("clk_detail_uv")
   private Long clkDetailUv = null;
 
@@ -2010,35 +1923,14 @@ public class TargetReportApiListStruct {
   @SerializedName("lp_star_page_exp_pv")
   private Long lpStarPageExpPv = null;
 
-  @SerializedName("lp_star_page_clk_pv")
-  private Long lpStarPageClkPv = null;
-
   @SerializedName("finder_topic_slider_pv")
   private Long finderTopicSliderPv = null;
-
-  @SerializedName("finder_topic_slider_uv")
-  private Long finderTopicSliderUv = null;
-
-  @SerializedName("finder_topic_slider_auto_pv")
-  private Long finderTopicSliderAutoPv = null;
 
   @SerializedName("finder_topic_slider_per_user")
   private Double finderTopicSliderPerUser = null;
 
   @SerializedName("finder_topic_slider_manual_pv")
   private Long finderTopicSliderManualPv = null;
-
-  @SerializedName("fullsrc_slide_pv")
-  private Long fullsrcSlidePv = null;
-
-  @SerializedName("gallery_card_slider_pv")
-  private Long galleryCardSliderPv = null;
-
-  @SerializedName("gallery_card_slider_uv")
-  private Long galleryCardSliderUv = null;
-
-  @SerializedName("share_uv")
-  private Long shareUv = null;
 
   @SerializedName("share_friend_pv")
   private Long shareFriendPv = null;
@@ -2052,137 +1944,20 @@ public class TargetReportApiListStruct {
   @SerializedName("comment_uv")
   private Long commentUv = null;
 
-  @SerializedName("praise_comment_pv")
-  private Long praiseCommentPv = null;
-
-  @SerializedName("praise_comment_rate")
-  private Double praiseCommentRate = null;
-
-  @SerializedName("praise_comment_share_pv")
-  private Long praiseCommentSharePv = null;
-
-  @SerializedName("praise_comment_share_uv")
-  private Long praiseCommentShareUv = null;
-
-  @SerializedName("comment_at_friend_pv")
-  private Long commentAtFriendPv = null;
-
-  @SerializedName("comment_reply_frist_pv")
-  private Long commentReplyFristPv = null;
-
-  @SerializedName("cvs_fav_pv")
-  private Long cvsFavPv = null;
-
   @SerializedName("engage_pv")
   private Long engagePv = null;
-
-  @SerializedName("engage_uv")
-  private Long engageUv = null;
-
-  @SerializedName("overall_engage_uv_rate")
-  private Double overallEngageUvRate = null;
 
   @SerializedName("interact_succ_pv")
   private Long interactSuccPv = null;
 
-  @SerializedName("stay_duration_all")
-  private Double stayDurationAll = null;
-
   @SerializedName("duration_per_user")
   private Double durationPerUser = null;
-
-  @SerializedName("short_video_avg_stay_time")
-  private Double shortVideoAvgStayTime = null;
-
-  @SerializedName("stay_duration_outer")
-  private Double stayDurationOuter = null;
 
   @SerializedName("duration_outer_per_user")
   private Double durationOuterPerUser = null;
 
-  @SerializedName("short_video_avg_view_stay_time")
-  private Double shortVideoAvgViewStayTime = null;
-
-  @SerializedName("stay_duration_cvs")
-  private Double stayDurationCvs = null;
-
   @SerializedName("duration_key_page_per_user")
   private Double durationKeyPagePerUser = null;
-
-  @SerializedName("stay_duration_all_0_2_uv")
-  private Long stayDurationAll02Uv = null;
-
-  @SerializedName("stay_duration_all_0_2_rate")
-  private Double stayDurationAll02Rate = null;
-
-  @SerializedName("stay_duration_all_3_4_uv")
-  private Long stayDurationAll34Uv = null;
-
-  @SerializedName("stay_duration_all_3_4_rate")
-  private Double stayDurationAll34Rate = null;
-
-  @SerializedName("stay_duration_all_5_10_uv")
-  private Long stayDurationAll510Uv = null;
-
-  @SerializedName("stay_duration_all_5_10_rate")
-  private Double stayDurationAll510Rate = null;
-
-  @SerializedName("stay_duration_all_above_10_uv")
-  private Long stayDurationAllAbove10Uv = null;
-
-  @SerializedName("stay_duration_all_above_10_rate")
-  private Double stayDurationAllAbove10Rate = null;
-
-  @SerializedName("stay_duration_all_above_5_uv")
-  private Long stayDurationAllAbove5Uv = null;
-
-  @SerializedName("stay_duration_all_above_5_rate")
-  private Double stayDurationAllAbove5Rate = null;
-
-  @SerializedName("stay_duration_cvs_0_2_uv")
-  private Long stayDurationCvs02Uv = null;
-
-  @SerializedName("stay_duration_cvs_0_2_rate")
-  private Double stayDurationCvs02Rate = null;
-
-  @SerializedName("stay_duration_cvs_3_9_uv")
-  private Long stayDurationCvs39Uv = null;
-
-  @SerializedName("stay_duration_cvs_3_9_rate")
-  private Double stayDurationCvs39Rate = null;
-
-  @SerializedName("stay_duration_cvs_10_29_uv")
-  private Long stayDurationCvs1029Uv = null;
-
-  @SerializedName("stay_duration_cvs_10_29_rate")
-  private Double stayDurationCvs1029Rate = null;
-
-  @SerializedName("stay_duration_cvs_above_30_uv")
-  private Long stayDurationCvsAbove30Uv = null;
-
-  @SerializedName("stay_duration_cvs_above_30_rate")
-  private Double stayDurationCvsAbove30Rate = null;
-
-  @SerializedName("stay_duration_cvs_above_10_uv")
-  private Long stayDurationCvsAbove10Uv = null;
-
-  @SerializedName("stay_duration_cvs_above_10_rate")
-  private Double stayDurationCvsAbove10Rate = null;
-
-  @SerializedName("cheer_banner_exp_pv")
-  private Long cheerBannerExpPv = null;
-
-  @SerializedName("cheer_status_set_succ_pv")
-  private Long cheerStatusSetSuccPv = null;
-
-  @SerializedName("cheer_status_set_succ_uv")
-  private Long cheerStatusSetSuccUv = null;
-
-  @SerializedName("cheer_status_clk_pv")
-  private Long cheerStatusClkPv = null;
-
-  @SerializedName("cheer_status_clk_uv")
-  private Long cheerStatusClkUv = null;
 
   @SerializedName("ad_monetization_cost")
   private Double adMonetizationCost = null;
@@ -2202,20 +1977,8 @@ public class TargetReportApiListStruct {
   @SerializedName("ad_monetization_dedup_active_7d_pv")
   private Long adMonetizationDedupActive7dPv = null;
 
-  @SerializedName("post_barrage_pv")
-  private Long postBarragePv = null;
-
-  @SerializedName("post_barrage_uv")
-  private Long postBarrageUv = null;
-
   @SerializedName("clk_redpocket_btn_subscribe_pv")
   private Long clkRedpocketBtnSubscribePv = null;
-
-  @SerializedName("invite_friends_to_watch_fireworks_pv")
-  private Long inviteFriendsToWatchFireworksPv = null;
-
-  @SerializedName("clk_blessing_card_pv")
-  private Long clkBlessingCardPv = null;
 
   @SerializedName("channels_detail_btn_pv")
   private Long channelsDetailBtnPv = null;
@@ -3027,45 +2790,6 @@ public class TargetReportApiListStruct {
     this.videoOuterPlayUserCount = videoOuterPlayUserCount;
   }
 
-  public TargetReportApiListStruct videoTimeTotalCount(Double videoTimeTotalCount) {
-    this.videoTimeTotalCount = videoTimeTotalCount;
-    return this;
-  }
-
-  /**
-   * Get videoTimeTotalCount
-   *
-   * @return videoTimeTotalCount
-   */
-  @ApiModelProperty(value = "")
-  public Double getVideoTimeTotalCount() {
-    return videoTimeTotalCount;
-  }
-
-  public void setVideoTimeTotalCount(Double videoTimeTotalCount) {
-    this.videoTimeTotalCount = videoTimeTotalCount;
-  }
-
-  public TargetReportApiListStruct videoOuterPlayTotalTimeCount(
-      Double videoOuterPlayTotalTimeCount) {
-    this.videoOuterPlayTotalTimeCount = videoOuterPlayTotalTimeCount;
-    return this;
-  }
-
-  /**
-   * Get videoOuterPlayTotalTimeCount
-   *
-   * @return videoOuterPlayTotalTimeCount
-   */
-  @ApiModelProperty(value = "")
-  public Double getVideoOuterPlayTotalTimeCount() {
-    return videoOuterPlayTotalTimeCount;
-  }
-
-  public void setVideoOuterPlayTotalTimeCount(Double videoOuterPlayTotalTimeCount) {
-    this.videoOuterPlayTotalTimeCount = videoOuterPlayTotalTimeCount;
-  }
-
   public TargetReportApiListStruct avgUserPlayCount(Double avgUserPlayCount) {
     this.avgUserPlayCount = avgUserPlayCount;
     return this;
@@ -3102,25 +2826,6 @@ public class TargetReportApiListStruct {
 
   public void setVideoOuterPlayTimeCount(Double videoOuterPlayTimeCount) {
     this.videoOuterPlayTimeCount = videoOuterPlayTimeCount;
-  }
-
-  public TargetReportApiListStruct videoOuterPlayTimeAvg(Double videoOuterPlayTimeAvg) {
-    this.videoOuterPlayTimeAvg = videoOuterPlayTimeAvg;
-    return this;
-  }
-
-  /**
-   * Get videoOuterPlayTimeAvg
-   *
-   * @return videoOuterPlayTimeAvg
-   */
-  @ApiModelProperty(value = "")
-  public Double getVideoOuterPlayTimeAvg() {
-    return videoOuterPlayTimeAvg;
-  }
-
-  public void setVideoOuterPlayTimeAvg(Double videoOuterPlayTimeAvg) {
-    this.videoOuterPlayTimeAvg = videoOuterPlayTimeAvg;
   }
 
   public TargetReportApiListStruct videoOuterPlayTimeAvgRate(Double videoOuterPlayTimeAvgRate) {
@@ -3615,25 +3320,6 @@ public class TargetReportApiListStruct {
 
   public void setClickImageCount(Long clickImageCount) {
     this.clickImageCount = clickImageCount;
-  }
-
-  public TargetReportApiListStruct clickNickCount(Long clickNickCount) {
-    this.clickNickCount = clickNickCount;
-    return this;
-  }
-
-  /**
-   * Get clickNickCount
-   *
-   * @return clickNickCount
-   */
-  @ApiModelProperty(value = "")
-  public Long getClickNickCount() {
-    return clickNickCount;
-  }
-
-  public void setClickNickCount(Long clickNickCount) {
-    this.clickNickCount = clickNickCount;
   }
 
   public TargetReportApiListStruct clickHeadCount(Long clickHeadCount) {
@@ -4608,44 +4294,6 @@ public class TargetReportApiListStruct {
 
   public void setGuideToFollowPageInteractionUsers(Long guideToFollowPageInteractionUsers) {
     this.guideToFollowPageInteractionUsers = guideToFollowPageInteractionUsers;
-  }
-
-  public TargetReportApiListStruct specialPageExpUv(Long specialPageExpUv) {
-    this.specialPageExpUv = specialPageExpUv;
-    return this;
-  }
-
-  /**
-   * Get specialPageExpUv
-   *
-   * @return specialPageExpUv
-   */
-  @ApiModelProperty(value = "")
-  public Long getSpecialPageExpUv() {
-    return specialPageExpUv;
-  }
-
-  public void setSpecialPageExpUv(Long specialPageExpUv) {
-    this.specialPageExpUv = specialPageExpUv;
-  }
-
-  public TargetReportApiListStruct specialPageExpCost(Long specialPageExpCost) {
-    this.specialPageExpCost = specialPageExpCost;
-    return this;
-  }
-
-  /**
-   * Get specialPageExpCost
-   *
-   * @return specialPageExpCost
-   */
-  @ApiModelProperty(value = "")
-  public Long getSpecialPageExpCost() {
-    return specialPageExpCost;
-  }
-
-  public void setSpecialPageExpCost(Long specialPageExpCost) {
-    this.specialPageExpCost = specialPageExpCost;
   }
 
   public TargetReportApiListStruct landingPageViewCount(Long landingPageViewCount) {
@@ -8302,44 +7950,6 @@ public class TargetReportApiListStruct {
     this.retentionRate = retentionRate;
   }
 
-  public TargetReportApiListStruct appRetentionD2Pv(Long appRetentionD2Pv) {
-    this.appRetentionD2Pv = appRetentionD2Pv;
-    return this;
-  }
-
-  /**
-   * Get appRetentionD2Pv
-   *
-   * @return appRetentionD2Pv
-   */
-  @ApiModelProperty(value = "")
-  public Long getAppRetentionD2Pv() {
-    return appRetentionD2Pv;
-  }
-
-  public void setAppRetentionD2Pv(Long appRetentionD2Pv) {
-    this.appRetentionD2Pv = appRetentionD2Pv;
-  }
-
-  public TargetReportApiListStruct appRetentionD3Pv(Long appRetentionD3Pv) {
-    this.appRetentionD3Pv = appRetentionD3Pv;
-    return this;
-  }
-
-  /**
-   * Get appRetentionD3Pv
-   *
-   * @return appRetentionD3Pv
-   */
-  @ApiModelProperty(value = "")
-  public Long getAppRetentionD3Pv() {
-    return appRetentionD3Pv;
-  }
-
-  public void setAppRetentionD3Pv(Long appRetentionD3Pv) {
-    this.appRetentionD3Pv = appRetentionD3Pv;
-  }
-
   public TargetReportApiListStruct appRetentionD3Uv(Long appRetentionD3Uv) {
     this.appRetentionD3Uv = appRetentionD3Uv;
     return this;
@@ -8397,44 +8007,6 @@ public class TargetReportApiListStruct {
     this.appRetentionD3Rate = appRetentionD3Rate;
   }
 
-  public TargetReportApiListStruct appRetentionD4Pv(Long appRetentionD4Pv) {
-    this.appRetentionD4Pv = appRetentionD4Pv;
-    return this;
-  }
-
-  /**
-   * Get appRetentionD4Pv
-   *
-   * @return appRetentionD4Pv
-   */
-  @ApiModelProperty(value = "")
-  public Long getAppRetentionD4Pv() {
-    return appRetentionD4Pv;
-  }
-
-  public void setAppRetentionD4Pv(Long appRetentionD4Pv) {
-    this.appRetentionD4Pv = appRetentionD4Pv;
-  }
-
-  public TargetReportApiListStruct appRetentionD5Pv(Long appRetentionD5Pv) {
-    this.appRetentionD5Pv = appRetentionD5Pv;
-    return this;
-  }
-
-  /**
-   * Get appRetentionD5Pv
-   *
-   * @return appRetentionD5Pv
-   */
-  @ApiModelProperty(value = "")
-  public Long getAppRetentionD5Pv() {
-    return appRetentionD5Pv;
-  }
-
-  public void setAppRetentionD5Pv(Long appRetentionD5Pv) {
-    this.appRetentionD5Pv = appRetentionD5Pv;
-  }
-
   public TargetReportApiListStruct appRetentionD5Uv(Long appRetentionD5Uv) {
     this.appRetentionD5Uv = appRetentionD5Uv;
     return this;
@@ -8490,44 +8062,6 @@ public class TargetReportApiListStruct {
 
   public void setAppRetentionD5Rate(Double appRetentionD5Rate) {
     this.appRetentionD5Rate = appRetentionD5Rate;
-  }
-
-  public TargetReportApiListStruct appRetentionD6Pv(Long appRetentionD6Pv) {
-    this.appRetentionD6Pv = appRetentionD6Pv;
-    return this;
-  }
-
-  /**
-   * Get appRetentionD6Pv
-   *
-   * @return appRetentionD6Pv
-   */
-  @ApiModelProperty(value = "")
-  public Long getAppRetentionD6Pv() {
-    return appRetentionD6Pv;
-  }
-
-  public void setAppRetentionD6Pv(Long appRetentionD6Pv) {
-    this.appRetentionD6Pv = appRetentionD6Pv;
-  }
-
-  public TargetReportApiListStruct appRetentionD7Pv(Long appRetentionD7Pv) {
-    this.appRetentionD7Pv = appRetentionD7Pv;
-    return this;
-  }
-
-  /**
-   * Get appRetentionD7Pv
-   *
-   * @return appRetentionD7Pv
-   */
-  @ApiModelProperty(value = "")
-  public Long getAppRetentionD7Pv() {
-    return appRetentionD7Pv;
-  }
-
-  public void setAppRetentionD7Pv(Long appRetentionD7Pv) {
-    this.appRetentionD7Pv = appRetentionD7Pv;
   }
 
   public TargetReportApiListStruct appRetentionD7Uv(Long appRetentionD7Uv) {
@@ -14049,25 +13583,6 @@ public class TargetReportApiListStruct {
     this.liveStreamCommodityShopListExpPv = liveStreamCommodityShopListExpPv;
   }
 
-  public TargetReportApiListStruct channelsLiveExitPlaUv(Long channelsLiveExitPlaUv) {
-    this.channelsLiveExitPlaUv = channelsLiveExitPlaUv;
-    return this;
-  }
-
-  /**
-   * Get channelsLiveExitPlaUv
-   *
-   * @return channelsLiveExitPlaUv
-   */
-  @ApiModelProperty(value = "")
-  public Long getChannelsLiveExitPlaUv() {
-    return channelsLiveExitPlaUv;
-  }
-
-  public void setChannelsLiveExitPlaUv(Long channelsLiveExitPlaUv) {
-    this.channelsLiveExitPlaUv = channelsLiveExitPlaUv;
-  }
-
   public TargetReportApiListStruct liveStreamAvgTime(Double liveStreamAvgTime) {
     this.liveStreamAvgTime = liveStreamAvgTime;
     return this;
@@ -14085,44 +13600,6 @@ public class TargetReportApiListStruct {
 
   public void setLiveStreamAvgTime(Double liveStreamAvgTime) {
     this.liveStreamAvgTime = liveStreamAvgTime;
-  }
-
-  public TargetReportApiListStruct followCount(Long followCount) {
-    this.followCount = followCount;
-    return this;
-  }
-
-  /**
-   * Get followCount
-   *
-   * @return followCount
-   */
-  @ApiModelProperty(value = "")
-  public Long getFollowCount() {
-    return followCount;
-  }
-
-  public void setFollowCount(Long followCount) {
-    this.followCount = followCount;
-  }
-
-  public TargetReportApiListStruct followCost(Long followCost) {
-    this.followCost = followCost;
-    return this;
-  }
-
-  /**
-   * Get followCost
-   *
-   * @return followCost
-   */
-  @ApiModelProperty(value = "")
-  public Long getFollowCost() {
-    return followCost;
-  }
-
-  public void setFollowCost(Long followCost) {
-    this.followCost = followCost;
   }
 
   public TargetReportApiListStruct fromFollowUv(Long fromFollowUv) {
@@ -14239,25 +13716,6 @@ public class TargetReportApiListStruct {
     this.fromFollowByClickCost = fromFollowByClickCost;
   }
 
-  public TargetReportApiListStruct bizFollowCount(Long bizFollowCount) {
-    this.bizFollowCount = bizFollowCount;
-    return this;
-  }
-
-  /**
-   * Get bizFollowCount
-   *
-   * @return bizFollowCount
-   */
-  @ApiModelProperty(value = "")
-  public Long getBizFollowCount() {
-    return bizFollowCount;
-  }
-
-  public void setBizFollowCount(Long bizFollowCount) {
-    this.bizFollowCount = bizFollowCount;
-  }
-
   public TargetReportApiListStruct bizFollowRate(Double bizFollowRate) {
     this.bizFollowRate = bizFollowRate;
     return this;
@@ -14353,25 +13811,6 @@ public class TargetReportApiListStruct {
     this.bizReadingCount = bizReadingCount;
   }
 
-  public TargetReportApiListStruct breakFrameExpPv(Long breakFrameExpPv) {
-    this.breakFrameExpPv = breakFrameExpPv;
-    return this;
-  }
-
-  /**
-   * Get breakFrameExpPv
-   *
-   * @return breakFrameExpPv
-   */
-  @ApiModelProperty(value = "")
-  public Long getBreakFrameExpPv() {
-    return breakFrameExpPv;
-  }
-
-  public void setBreakFrameExpPv(Long breakFrameExpPv) {
-    this.breakFrameExpPv = breakFrameExpPv;
-  }
-
   public TargetReportApiListStruct breakFramePlayPv(Long breakFramePlayPv) {
     this.breakFramePlayPv = breakFramePlayPv;
     return this;
@@ -14389,44 +13828,6 @@ public class TargetReportApiListStruct {
 
   public void setBreakFramePlayPv(Long breakFramePlayPv) {
     this.breakFramePlayPv = breakFramePlayPv;
-  }
-
-  public TargetReportApiListStruct breakFramePlayDuration(Double breakFramePlayDuration) {
-    this.breakFramePlayDuration = breakFramePlayDuration;
-    return this;
-  }
-
-  /**
-   * Get breakFramePlayDuration
-   *
-   * @return breakFramePlayDuration
-   */
-  @ApiModelProperty(value = "")
-  public Double getBreakFramePlayDuration() {
-    return breakFramePlayDuration;
-  }
-
-  public void setBreakFramePlayDuration(Double breakFramePlayDuration) {
-    this.breakFramePlayDuration = breakFramePlayDuration;
-  }
-
-  public TargetReportApiListStruct breakFrameIpExpPv(Long breakFrameIpExpPv) {
-    this.breakFrameIpExpPv = breakFrameIpExpPv;
-    return this;
-  }
-
-  /**
-   * Get breakFrameIpExpPv
-   *
-   * @return breakFrameIpExpPv
-   */
-  @ApiModelProperty(value = "")
-  public Long getBreakFrameIpExpPv() {
-    return breakFrameIpExpPv;
-  }
-
-  public void setBreakFrameIpExpPv(Long breakFrameIpExpPv) {
-    this.breakFrameIpExpPv = breakFrameIpExpPv;
   }
 
   public TargetReportApiListStruct breakFrameIpClkPv(Long breakFrameIpClkPv) {
@@ -14465,139 +13866,6 @@ public class TargetReportApiListStruct {
 
   public void setBreakFrameIpClkUv(Long breakFrameIpClkUv) {
     this.breakFrameIpClkUv = breakFrameIpClkUv;
-  }
-
-  public TargetReportApiListStruct overallBrandExposure(Long overallBrandExposure) {
-    this.overallBrandExposure = overallBrandExposure;
-    return this;
-  }
-
-  /**
-   * Get overallBrandExposure
-   *
-   * @return overallBrandExposure
-   */
-  @ApiModelProperty(value = "")
-  public Long getOverallBrandExposure() {
-    return overallBrandExposure;
-  }
-
-  public void setOverallBrandExposure(Long overallBrandExposure) {
-    this.overallBrandExposure = overallBrandExposure;
-  }
-
-  public TargetReportApiListStruct expHasCostPv(Long expHasCostPv) {
-    this.expHasCostPv = expHasCostPv;
-    return this;
-  }
-
-  /**
-   * Get expHasCostPv
-   *
-   * @return expHasCostPv
-   */
-  @ApiModelProperty(value = "")
-  public Long getExpHasCostPv() {
-    return expHasCostPv;
-  }
-
-  public void setExpHasCostPv(Long expHasCostPv) {
-    this.expHasCostPv = expHasCostPv;
-  }
-
-  public TargetReportApiListStruct freeExposurePv(Long freeExposurePv) {
-    this.freeExposurePv = freeExposurePv;
-    return this;
-  }
-
-  /**
-   * Get freeExposurePv
-   *
-   * @return freeExposurePv
-   */
-  @ApiModelProperty(value = "")
-  public Long getFreeExposurePv() {
-    return freeExposurePv;
-  }
-
-  public void setFreeExposurePv(Long freeExposurePv) {
-    this.freeExposurePv = freeExposurePv;
-  }
-
-  public TargetReportApiListStruct brandShareExposurePv(Long brandShareExposurePv) {
-    this.brandShareExposurePv = brandShareExposurePv;
-    return this;
-  }
-
-  /**
-   * Get brandShareExposurePv
-   *
-   * @return brandShareExposurePv
-   */
-  @ApiModelProperty(value = "")
-  public Long getBrandShareExposurePv() {
-    return brandShareExposurePv;
-  }
-
-  public void setBrandShareExposurePv(Long brandShareExposurePv) {
-    this.brandShareExposurePv = brandShareExposurePv;
-  }
-
-  public TargetReportApiListStruct cvsShareExpToFriendPv(Long cvsShareExpToFriendPv) {
-    this.cvsShareExpToFriendPv = cvsShareExpToFriendPv;
-    return this;
-  }
-
-  /**
-   * Get cvsShareExpToFriendPv
-   *
-   * @return cvsShareExpToFriendPv
-   */
-  @ApiModelProperty(value = "")
-  public Long getCvsShareExpToFriendPv() {
-    return cvsShareExpToFriendPv;
-  }
-
-  public void setCvsShareExpToFriendPv(Long cvsShareExpToFriendPv) {
-    this.cvsShareExpToFriendPv = cvsShareExpToFriendPv;
-  }
-
-  public TargetReportApiListStruct cvsShareExpToFeedPv(Long cvsShareExpToFeedPv) {
-    this.cvsShareExpToFeedPv = cvsShareExpToFeedPv;
-    return this;
-  }
-
-  /**
-   * Get cvsShareExpToFeedPv
-   *
-   * @return cvsShareExpToFeedPv
-   */
-  @ApiModelProperty(value = "")
-  public Long getCvsShareExpToFeedPv() {
-    return cvsShareExpToFeedPv;
-  }
-
-  public void setCvsShareExpToFeedPv(Long cvsShareExpToFeedPv) {
-    this.cvsShareExpToFeedPv = cvsShareExpToFeedPv;
-  }
-
-  public TargetReportApiListStruct realCpmCost(Long realCpmCost) {
-    this.realCpmCost = realCpmCost;
-    return this;
-  }
-
-  /**
-   * Get realCpmCost
-   *
-   * @return realCpmCost
-   */
-  @ApiModelProperty(value = "")
-  public Long getRealCpmCost() {
-    return realCpmCost;
-  }
-
-  public void setRealCpmCost(Long realCpmCost) {
-    this.realCpmCost = realCpmCost;
   }
 
   public TargetReportApiListStruct clkMaterialUv(Long clkMaterialUv) {
@@ -14733,63 +14001,6 @@ public class TargetReportApiListStruct {
     this.clkPoiPv = clkPoiPv;
   }
 
-  public TargetReportApiListStruct clkChoiceLeftPv(Long clkChoiceLeftPv) {
-    this.clkChoiceLeftPv = clkChoiceLeftPv;
-    return this;
-  }
-
-  /**
-   * Get clkChoiceLeftPv
-   *
-   * @return clkChoiceLeftPv
-   */
-  @ApiModelProperty(value = "")
-  public Long getClkChoiceLeftPv() {
-    return clkChoiceLeftPv;
-  }
-
-  public void setClkChoiceLeftPv(Long clkChoiceLeftPv) {
-    this.clkChoiceLeftPv = clkChoiceLeftPv;
-  }
-
-  public TargetReportApiListStruct clkChoiceRightPv(Long clkChoiceRightPv) {
-    this.clkChoiceRightPv = clkChoiceRightPv;
-    return this;
-  }
-
-  /**
-   * Get clkChoiceRightPv
-   *
-   * @return clkChoiceRightPv
-   */
-  @ApiModelProperty(value = "")
-  public Long getClkChoiceRightPv() {
-    return clkChoiceRightPv;
-  }
-
-  public void setClkChoiceRightPv(Long clkChoiceRightPv) {
-    this.clkChoiceRightPv = clkChoiceRightPv;
-  }
-
-  public TargetReportApiListStruct clkCardTagPv(Long clkCardTagPv) {
-    this.clkCardTagPv = clkCardTagPv;
-    return this;
-  }
-
-  /**
-   * Get clkCardTagPv
-   *
-   * @return clkCardTagPv
-   */
-  @ApiModelProperty(value = "")
-  public Long getClkCardTagPv() {
-    return clkCardTagPv;
-  }
-
-  public void setClkCardTagPv(Long clkCardTagPv) {
-    this.clkCardTagPv = clkCardTagPv;
-  }
-
   public TargetReportApiListStruct clkDetailUv(Long clkDetailUv) {
     this.clkDetailUv = clkDetailUv;
     return this;
@@ -14885,25 +14096,6 @@ public class TargetReportApiListStruct {
     this.lpStarPageExpPv = lpStarPageExpPv;
   }
 
-  public TargetReportApiListStruct lpStarPageClkPv(Long lpStarPageClkPv) {
-    this.lpStarPageClkPv = lpStarPageClkPv;
-    return this;
-  }
-
-  /**
-   * Get lpStarPageClkPv
-   *
-   * @return lpStarPageClkPv
-   */
-  @ApiModelProperty(value = "")
-  public Long getLpStarPageClkPv() {
-    return lpStarPageClkPv;
-  }
-
-  public void setLpStarPageClkPv(Long lpStarPageClkPv) {
-    this.lpStarPageClkPv = lpStarPageClkPv;
-  }
-
   public TargetReportApiListStruct finderTopicSliderPv(Long finderTopicSliderPv) {
     this.finderTopicSliderPv = finderTopicSliderPv;
     return this;
@@ -14921,44 +14113,6 @@ public class TargetReportApiListStruct {
 
   public void setFinderTopicSliderPv(Long finderTopicSliderPv) {
     this.finderTopicSliderPv = finderTopicSliderPv;
-  }
-
-  public TargetReportApiListStruct finderTopicSliderUv(Long finderTopicSliderUv) {
-    this.finderTopicSliderUv = finderTopicSliderUv;
-    return this;
-  }
-
-  /**
-   * Get finderTopicSliderUv
-   *
-   * @return finderTopicSliderUv
-   */
-  @ApiModelProperty(value = "")
-  public Long getFinderTopicSliderUv() {
-    return finderTopicSliderUv;
-  }
-
-  public void setFinderTopicSliderUv(Long finderTopicSliderUv) {
-    this.finderTopicSliderUv = finderTopicSliderUv;
-  }
-
-  public TargetReportApiListStruct finderTopicSliderAutoPv(Long finderTopicSliderAutoPv) {
-    this.finderTopicSliderAutoPv = finderTopicSliderAutoPv;
-    return this;
-  }
-
-  /**
-   * Get finderTopicSliderAutoPv
-   *
-   * @return finderTopicSliderAutoPv
-   */
-  @ApiModelProperty(value = "")
-  public Long getFinderTopicSliderAutoPv() {
-    return finderTopicSliderAutoPv;
-  }
-
-  public void setFinderTopicSliderAutoPv(Long finderTopicSliderAutoPv) {
-    this.finderTopicSliderAutoPv = finderTopicSliderAutoPv;
   }
 
   public TargetReportApiListStruct finderTopicSliderPerUser(Double finderTopicSliderPerUser) {
@@ -14997,82 +14151,6 @@ public class TargetReportApiListStruct {
 
   public void setFinderTopicSliderManualPv(Long finderTopicSliderManualPv) {
     this.finderTopicSliderManualPv = finderTopicSliderManualPv;
-  }
-
-  public TargetReportApiListStruct fullsrcSlidePv(Long fullsrcSlidePv) {
-    this.fullsrcSlidePv = fullsrcSlidePv;
-    return this;
-  }
-
-  /**
-   * Get fullsrcSlidePv
-   *
-   * @return fullsrcSlidePv
-   */
-  @ApiModelProperty(value = "")
-  public Long getFullsrcSlidePv() {
-    return fullsrcSlidePv;
-  }
-
-  public void setFullsrcSlidePv(Long fullsrcSlidePv) {
-    this.fullsrcSlidePv = fullsrcSlidePv;
-  }
-
-  public TargetReportApiListStruct galleryCardSliderPv(Long galleryCardSliderPv) {
-    this.galleryCardSliderPv = galleryCardSliderPv;
-    return this;
-  }
-
-  /**
-   * Get galleryCardSliderPv
-   *
-   * @return galleryCardSliderPv
-   */
-  @ApiModelProperty(value = "")
-  public Long getGalleryCardSliderPv() {
-    return galleryCardSliderPv;
-  }
-
-  public void setGalleryCardSliderPv(Long galleryCardSliderPv) {
-    this.galleryCardSliderPv = galleryCardSliderPv;
-  }
-
-  public TargetReportApiListStruct galleryCardSliderUv(Long galleryCardSliderUv) {
-    this.galleryCardSliderUv = galleryCardSliderUv;
-    return this;
-  }
-
-  /**
-   * Get galleryCardSliderUv
-   *
-   * @return galleryCardSliderUv
-   */
-  @ApiModelProperty(value = "")
-  public Long getGalleryCardSliderUv() {
-    return galleryCardSliderUv;
-  }
-
-  public void setGalleryCardSliderUv(Long galleryCardSliderUv) {
-    this.galleryCardSliderUv = galleryCardSliderUv;
-  }
-
-  public TargetReportApiListStruct shareUv(Long shareUv) {
-    this.shareUv = shareUv;
-    return this;
-  }
-
-  /**
-   * Get shareUv
-   *
-   * @return shareUv
-   */
-  @ApiModelProperty(value = "")
-  public Long getShareUv() {
-    return shareUv;
-  }
-
-  public void setShareUv(Long shareUv) {
-    this.shareUv = shareUv;
   }
 
   public TargetReportApiListStruct shareFriendPv(Long shareFriendPv) {
@@ -15151,139 +14229,6 @@ public class TargetReportApiListStruct {
     this.commentUv = commentUv;
   }
 
-  public TargetReportApiListStruct praiseCommentPv(Long praiseCommentPv) {
-    this.praiseCommentPv = praiseCommentPv;
-    return this;
-  }
-
-  /**
-   * Get praiseCommentPv
-   *
-   * @return praiseCommentPv
-   */
-  @ApiModelProperty(value = "")
-  public Long getPraiseCommentPv() {
-    return praiseCommentPv;
-  }
-
-  public void setPraiseCommentPv(Long praiseCommentPv) {
-    this.praiseCommentPv = praiseCommentPv;
-  }
-
-  public TargetReportApiListStruct praiseCommentRate(Double praiseCommentRate) {
-    this.praiseCommentRate = praiseCommentRate;
-    return this;
-  }
-
-  /**
-   * Get praiseCommentRate
-   *
-   * @return praiseCommentRate
-   */
-  @ApiModelProperty(value = "")
-  public Double getPraiseCommentRate() {
-    return praiseCommentRate;
-  }
-
-  public void setPraiseCommentRate(Double praiseCommentRate) {
-    this.praiseCommentRate = praiseCommentRate;
-  }
-
-  public TargetReportApiListStruct praiseCommentSharePv(Long praiseCommentSharePv) {
-    this.praiseCommentSharePv = praiseCommentSharePv;
-    return this;
-  }
-
-  /**
-   * Get praiseCommentSharePv
-   *
-   * @return praiseCommentSharePv
-   */
-  @ApiModelProperty(value = "")
-  public Long getPraiseCommentSharePv() {
-    return praiseCommentSharePv;
-  }
-
-  public void setPraiseCommentSharePv(Long praiseCommentSharePv) {
-    this.praiseCommentSharePv = praiseCommentSharePv;
-  }
-
-  public TargetReportApiListStruct praiseCommentShareUv(Long praiseCommentShareUv) {
-    this.praiseCommentShareUv = praiseCommentShareUv;
-    return this;
-  }
-
-  /**
-   * Get praiseCommentShareUv
-   *
-   * @return praiseCommentShareUv
-   */
-  @ApiModelProperty(value = "")
-  public Long getPraiseCommentShareUv() {
-    return praiseCommentShareUv;
-  }
-
-  public void setPraiseCommentShareUv(Long praiseCommentShareUv) {
-    this.praiseCommentShareUv = praiseCommentShareUv;
-  }
-
-  public TargetReportApiListStruct commentAtFriendPv(Long commentAtFriendPv) {
-    this.commentAtFriendPv = commentAtFriendPv;
-    return this;
-  }
-
-  /**
-   * Get commentAtFriendPv
-   *
-   * @return commentAtFriendPv
-   */
-  @ApiModelProperty(value = "")
-  public Long getCommentAtFriendPv() {
-    return commentAtFriendPv;
-  }
-
-  public void setCommentAtFriendPv(Long commentAtFriendPv) {
-    this.commentAtFriendPv = commentAtFriendPv;
-  }
-
-  public TargetReportApiListStruct commentReplyFristPv(Long commentReplyFristPv) {
-    this.commentReplyFristPv = commentReplyFristPv;
-    return this;
-  }
-
-  /**
-   * Get commentReplyFristPv
-   *
-   * @return commentReplyFristPv
-   */
-  @ApiModelProperty(value = "")
-  public Long getCommentReplyFristPv() {
-    return commentReplyFristPv;
-  }
-
-  public void setCommentReplyFristPv(Long commentReplyFristPv) {
-    this.commentReplyFristPv = commentReplyFristPv;
-  }
-
-  public TargetReportApiListStruct cvsFavPv(Long cvsFavPv) {
-    this.cvsFavPv = cvsFavPv;
-    return this;
-  }
-
-  /**
-   * Get cvsFavPv
-   *
-   * @return cvsFavPv
-   */
-  @ApiModelProperty(value = "")
-  public Long getCvsFavPv() {
-    return cvsFavPv;
-  }
-
-  public void setCvsFavPv(Long cvsFavPv) {
-    this.cvsFavPv = cvsFavPv;
-  }
-
   public TargetReportApiListStruct engagePv(Long engagePv) {
     this.engagePv = engagePv;
     return this;
@@ -15301,44 +14246,6 @@ public class TargetReportApiListStruct {
 
   public void setEngagePv(Long engagePv) {
     this.engagePv = engagePv;
-  }
-
-  public TargetReportApiListStruct engageUv(Long engageUv) {
-    this.engageUv = engageUv;
-    return this;
-  }
-
-  /**
-   * Get engageUv
-   *
-   * @return engageUv
-   */
-  @ApiModelProperty(value = "")
-  public Long getEngageUv() {
-    return engageUv;
-  }
-
-  public void setEngageUv(Long engageUv) {
-    this.engageUv = engageUv;
-  }
-
-  public TargetReportApiListStruct overallEngageUvRate(Double overallEngageUvRate) {
-    this.overallEngageUvRate = overallEngageUvRate;
-    return this;
-  }
-
-  /**
-   * Get overallEngageUvRate
-   *
-   * @return overallEngageUvRate
-   */
-  @ApiModelProperty(value = "")
-  public Double getOverallEngageUvRate() {
-    return overallEngageUvRate;
-  }
-
-  public void setOverallEngageUvRate(Double overallEngageUvRate) {
-    this.overallEngageUvRate = overallEngageUvRate;
   }
 
   public TargetReportApiListStruct interactSuccPv(Long interactSuccPv) {
@@ -15360,25 +14267,6 @@ public class TargetReportApiListStruct {
     this.interactSuccPv = interactSuccPv;
   }
 
-  public TargetReportApiListStruct stayDurationAll(Double stayDurationAll) {
-    this.stayDurationAll = stayDurationAll;
-    return this;
-  }
-
-  /**
-   * Get stayDurationAll
-   *
-   * @return stayDurationAll
-   */
-  @ApiModelProperty(value = "")
-  public Double getStayDurationAll() {
-    return stayDurationAll;
-  }
-
-  public void setStayDurationAll(Double stayDurationAll) {
-    this.stayDurationAll = stayDurationAll;
-  }
-
   public TargetReportApiListStruct durationPerUser(Double durationPerUser) {
     this.durationPerUser = durationPerUser;
     return this;
@@ -15396,44 +14284,6 @@ public class TargetReportApiListStruct {
 
   public void setDurationPerUser(Double durationPerUser) {
     this.durationPerUser = durationPerUser;
-  }
-
-  public TargetReportApiListStruct shortVideoAvgStayTime(Double shortVideoAvgStayTime) {
-    this.shortVideoAvgStayTime = shortVideoAvgStayTime;
-    return this;
-  }
-
-  /**
-   * Get shortVideoAvgStayTime
-   *
-   * @return shortVideoAvgStayTime
-   */
-  @ApiModelProperty(value = "")
-  public Double getShortVideoAvgStayTime() {
-    return shortVideoAvgStayTime;
-  }
-
-  public void setShortVideoAvgStayTime(Double shortVideoAvgStayTime) {
-    this.shortVideoAvgStayTime = shortVideoAvgStayTime;
-  }
-
-  public TargetReportApiListStruct stayDurationOuter(Double stayDurationOuter) {
-    this.stayDurationOuter = stayDurationOuter;
-    return this;
-  }
-
-  /**
-   * Get stayDurationOuter
-   *
-   * @return stayDurationOuter
-   */
-  @ApiModelProperty(value = "")
-  public Double getStayDurationOuter() {
-    return stayDurationOuter;
-  }
-
-  public void setStayDurationOuter(Double stayDurationOuter) {
-    this.stayDurationOuter = stayDurationOuter;
   }
 
   public TargetReportApiListStruct durationOuterPerUser(Double durationOuterPerUser) {
@@ -15455,44 +14305,6 @@ public class TargetReportApiListStruct {
     this.durationOuterPerUser = durationOuterPerUser;
   }
 
-  public TargetReportApiListStruct shortVideoAvgViewStayTime(Double shortVideoAvgViewStayTime) {
-    this.shortVideoAvgViewStayTime = shortVideoAvgViewStayTime;
-    return this;
-  }
-
-  /**
-   * Get shortVideoAvgViewStayTime
-   *
-   * @return shortVideoAvgViewStayTime
-   */
-  @ApiModelProperty(value = "")
-  public Double getShortVideoAvgViewStayTime() {
-    return shortVideoAvgViewStayTime;
-  }
-
-  public void setShortVideoAvgViewStayTime(Double shortVideoAvgViewStayTime) {
-    this.shortVideoAvgViewStayTime = shortVideoAvgViewStayTime;
-  }
-
-  public TargetReportApiListStruct stayDurationCvs(Double stayDurationCvs) {
-    this.stayDurationCvs = stayDurationCvs;
-    return this;
-  }
-
-  /**
-   * Get stayDurationCvs
-   *
-   * @return stayDurationCvs
-   */
-  @ApiModelProperty(value = "")
-  public Double getStayDurationCvs() {
-    return stayDurationCvs;
-  }
-
-  public void setStayDurationCvs(Double stayDurationCvs) {
-    this.stayDurationCvs = stayDurationCvs;
-  }
-
   public TargetReportApiListStruct durationKeyPagePerUser(Double durationKeyPagePerUser) {
     this.durationKeyPagePerUser = durationKeyPagePerUser;
     return this;
@@ -15510,481 +14322,6 @@ public class TargetReportApiListStruct {
 
   public void setDurationKeyPagePerUser(Double durationKeyPagePerUser) {
     this.durationKeyPagePerUser = durationKeyPagePerUser;
-  }
-
-  public TargetReportApiListStruct stayDurationAll02Uv(Long stayDurationAll02Uv) {
-    this.stayDurationAll02Uv = stayDurationAll02Uv;
-    return this;
-  }
-
-  /**
-   * Get stayDurationAll02Uv
-   *
-   * @return stayDurationAll02Uv
-   */
-  @ApiModelProperty(value = "")
-  public Long getStayDurationAll02Uv() {
-    return stayDurationAll02Uv;
-  }
-
-  public void setStayDurationAll02Uv(Long stayDurationAll02Uv) {
-    this.stayDurationAll02Uv = stayDurationAll02Uv;
-  }
-
-  public TargetReportApiListStruct stayDurationAll02Rate(Double stayDurationAll02Rate) {
-    this.stayDurationAll02Rate = stayDurationAll02Rate;
-    return this;
-  }
-
-  /**
-   * Get stayDurationAll02Rate
-   *
-   * @return stayDurationAll02Rate
-   */
-  @ApiModelProperty(value = "")
-  public Double getStayDurationAll02Rate() {
-    return stayDurationAll02Rate;
-  }
-
-  public void setStayDurationAll02Rate(Double stayDurationAll02Rate) {
-    this.stayDurationAll02Rate = stayDurationAll02Rate;
-  }
-
-  public TargetReportApiListStruct stayDurationAll34Uv(Long stayDurationAll34Uv) {
-    this.stayDurationAll34Uv = stayDurationAll34Uv;
-    return this;
-  }
-
-  /**
-   * Get stayDurationAll34Uv
-   *
-   * @return stayDurationAll34Uv
-   */
-  @ApiModelProperty(value = "")
-  public Long getStayDurationAll34Uv() {
-    return stayDurationAll34Uv;
-  }
-
-  public void setStayDurationAll34Uv(Long stayDurationAll34Uv) {
-    this.stayDurationAll34Uv = stayDurationAll34Uv;
-  }
-
-  public TargetReportApiListStruct stayDurationAll34Rate(Double stayDurationAll34Rate) {
-    this.stayDurationAll34Rate = stayDurationAll34Rate;
-    return this;
-  }
-
-  /**
-   * Get stayDurationAll34Rate
-   *
-   * @return stayDurationAll34Rate
-   */
-  @ApiModelProperty(value = "")
-  public Double getStayDurationAll34Rate() {
-    return stayDurationAll34Rate;
-  }
-
-  public void setStayDurationAll34Rate(Double stayDurationAll34Rate) {
-    this.stayDurationAll34Rate = stayDurationAll34Rate;
-  }
-
-  public TargetReportApiListStruct stayDurationAll510Uv(Long stayDurationAll510Uv) {
-    this.stayDurationAll510Uv = stayDurationAll510Uv;
-    return this;
-  }
-
-  /**
-   * Get stayDurationAll510Uv
-   *
-   * @return stayDurationAll510Uv
-   */
-  @ApiModelProperty(value = "")
-  public Long getStayDurationAll510Uv() {
-    return stayDurationAll510Uv;
-  }
-
-  public void setStayDurationAll510Uv(Long stayDurationAll510Uv) {
-    this.stayDurationAll510Uv = stayDurationAll510Uv;
-  }
-
-  public TargetReportApiListStruct stayDurationAll510Rate(Double stayDurationAll510Rate) {
-    this.stayDurationAll510Rate = stayDurationAll510Rate;
-    return this;
-  }
-
-  /**
-   * Get stayDurationAll510Rate
-   *
-   * @return stayDurationAll510Rate
-   */
-  @ApiModelProperty(value = "")
-  public Double getStayDurationAll510Rate() {
-    return stayDurationAll510Rate;
-  }
-
-  public void setStayDurationAll510Rate(Double stayDurationAll510Rate) {
-    this.stayDurationAll510Rate = stayDurationAll510Rate;
-  }
-
-  public TargetReportApiListStruct stayDurationAllAbove10Uv(Long stayDurationAllAbove10Uv) {
-    this.stayDurationAllAbove10Uv = stayDurationAllAbove10Uv;
-    return this;
-  }
-
-  /**
-   * Get stayDurationAllAbove10Uv
-   *
-   * @return stayDurationAllAbove10Uv
-   */
-  @ApiModelProperty(value = "")
-  public Long getStayDurationAllAbove10Uv() {
-    return stayDurationAllAbove10Uv;
-  }
-
-  public void setStayDurationAllAbove10Uv(Long stayDurationAllAbove10Uv) {
-    this.stayDurationAllAbove10Uv = stayDurationAllAbove10Uv;
-  }
-
-  public TargetReportApiListStruct stayDurationAllAbove10Rate(Double stayDurationAllAbove10Rate) {
-    this.stayDurationAllAbove10Rate = stayDurationAllAbove10Rate;
-    return this;
-  }
-
-  /**
-   * Get stayDurationAllAbove10Rate
-   *
-   * @return stayDurationAllAbove10Rate
-   */
-  @ApiModelProperty(value = "")
-  public Double getStayDurationAllAbove10Rate() {
-    return stayDurationAllAbove10Rate;
-  }
-
-  public void setStayDurationAllAbove10Rate(Double stayDurationAllAbove10Rate) {
-    this.stayDurationAllAbove10Rate = stayDurationAllAbove10Rate;
-  }
-
-  public TargetReportApiListStruct stayDurationAllAbove5Uv(Long stayDurationAllAbove5Uv) {
-    this.stayDurationAllAbove5Uv = stayDurationAllAbove5Uv;
-    return this;
-  }
-
-  /**
-   * Get stayDurationAllAbove5Uv
-   *
-   * @return stayDurationAllAbove5Uv
-   */
-  @ApiModelProperty(value = "")
-  public Long getStayDurationAllAbove5Uv() {
-    return stayDurationAllAbove5Uv;
-  }
-
-  public void setStayDurationAllAbove5Uv(Long stayDurationAllAbove5Uv) {
-    this.stayDurationAllAbove5Uv = stayDurationAllAbove5Uv;
-  }
-
-  public TargetReportApiListStruct stayDurationAllAbove5Rate(Double stayDurationAllAbove5Rate) {
-    this.stayDurationAllAbove5Rate = stayDurationAllAbove5Rate;
-    return this;
-  }
-
-  /**
-   * Get stayDurationAllAbove5Rate
-   *
-   * @return stayDurationAllAbove5Rate
-   */
-  @ApiModelProperty(value = "")
-  public Double getStayDurationAllAbove5Rate() {
-    return stayDurationAllAbove5Rate;
-  }
-
-  public void setStayDurationAllAbove5Rate(Double stayDurationAllAbove5Rate) {
-    this.stayDurationAllAbove5Rate = stayDurationAllAbove5Rate;
-  }
-
-  public TargetReportApiListStruct stayDurationCvs02Uv(Long stayDurationCvs02Uv) {
-    this.stayDurationCvs02Uv = stayDurationCvs02Uv;
-    return this;
-  }
-
-  /**
-   * Get stayDurationCvs02Uv
-   *
-   * @return stayDurationCvs02Uv
-   */
-  @ApiModelProperty(value = "")
-  public Long getStayDurationCvs02Uv() {
-    return stayDurationCvs02Uv;
-  }
-
-  public void setStayDurationCvs02Uv(Long stayDurationCvs02Uv) {
-    this.stayDurationCvs02Uv = stayDurationCvs02Uv;
-  }
-
-  public TargetReportApiListStruct stayDurationCvs02Rate(Double stayDurationCvs02Rate) {
-    this.stayDurationCvs02Rate = stayDurationCvs02Rate;
-    return this;
-  }
-
-  /**
-   * Get stayDurationCvs02Rate
-   *
-   * @return stayDurationCvs02Rate
-   */
-  @ApiModelProperty(value = "")
-  public Double getStayDurationCvs02Rate() {
-    return stayDurationCvs02Rate;
-  }
-
-  public void setStayDurationCvs02Rate(Double stayDurationCvs02Rate) {
-    this.stayDurationCvs02Rate = stayDurationCvs02Rate;
-  }
-
-  public TargetReportApiListStruct stayDurationCvs39Uv(Long stayDurationCvs39Uv) {
-    this.stayDurationCvs39Uv = stayDurationCvs39Uv;
-    return this;
-  }
-
-  /**
-   * Get stayDurationCvs39Uv
-   *
-   * @return stayDurationCvs39Uv
-   */
-  @ApiModelProperty(value = "")
-  public Long getStayDurationCvs39Uv() {
-    return stayDurationCvs39Uv;
-  }
-
-  public void setStayDurationCvs39Uv(Long stayDurationCvs39Uv) {
-    this.stayDurationCvs39Uv = stayDurationCvs39Uv;
-  }
-
-  public TargetReportApiListStruct stayDurationCvs39Rate(Double stayDurationCvs39Rate) {
-    this.stayDurationCvs39Rate = stayDurationCvs39Rate;
-    return this;
-  }
-
-  /**
-   * Get stayDurationCvs39Rate
-   *
-   * @return stayDurationCvs39Rate
-   */
-  @ApiModelProperty(value = "")
-  public Double getStayDurationCvs39Rate() {
-    return stayDurationCvs39Rate;
-  }
-
-  public void setStayDurationCvs39Rate(Double stayDurationCvs39Rate) {
-    this.stayDurationCvs39Rate = stayDurationCvs39Rate;
-  }
-
-  public TargetReportApiListStruct stayDurationCvs1029Uv(Long stayDurationCvs1029Uv) {
-    this.stayDurationCvs1029Uv = stayDurationCvs1029Uv;
-    return this;
-  }
-
-  /**
-   * Get stayDurationCvs1029Uv
-   *
-   * @return stayDurationCvs1029Uv
-   */
-  @ApiModelProperty(value = "")
-  public Long getStayDurationCvs1029Uv() {
-    return stayDurationCvs1029Uv;
-  }
-
-  public void setStayDurationCvs1029Uv(Long stayDurationCvs1029Uv) {
-    this.stayDurationCvs1029Uv = stayDurationCvs1029Uv;
-  }
-
-  public TargetReportApiListStruct stayDurationCvs1029Rate(Double stayDurationCvs1029Rate) {
-    this.stayDurationCvs1029Rate = stayDurationCvs1029Rate;
-    return this;
-  }
-
-  /**
-   * Get stayDurationCvs1029Rate
-   *
-   * @return stayDurationCvs1029Rate
-   */
-  @ApiModelProperty(value = "")
-  public Double getStayDurationCvs1029Rate() {
-    return stayDurationCvs1029Rate;
-  }
-
-  public void setStayDurationCvs1029Rate(Double stayDurationCvs1029Rate) {
-    this.stayDurationCvs1029Rate = stayDurationCvs1029Rate;
-  }
-
-  public TargetReportApiListStruct stayDurationCvsAbove30Uv(Long stayDurationCvsAbove30Uv) {
-    this.stayDurationCvsAbove30Uv = stayDurationCvsAbove30Uv;
-    return this;
-  }
-
-  /**
-   * Get stayDurationCvsAbove30Uv
-   *
-   * @return stayDurationCvsAbove30Uv
-   */
-  @ApiModelProperty(value = "")
-  public Long getStayDurationCvsAbove30Uv() {
-    return stayDurationCvsAbove30Uv;
-  }
-
-  public void setStayDurationCvsAbove30Uv(Long stayDurationCvsAbove30Uv) {
-    this.stayDurationCvsAbove30Uv = stayDurationCvsAbove30Uv;
-  }
-
-  public TargetReportApiListStruct stayDurationCvsAbove30Rate(Double stayDurationCvsAbove30Rate) {
-    this.stayDurationCvsAbove30Rate = stayDurationCvsAbove30Rate;
-    return this;
-  }
-
-  /**
-   * Get stayDurationCvsAbove30Rate
-   *
-   * @return stayDurationCvsAbove30Rate
-   */
-  @ApiModelProperty(value = "")
-  public Double getStayDurationCvsAbove30Rate() {
-    return stayDurationCvsAbove30Rate;
-  }
-
-  public void setStayDurationCvsAbove30Rate(Double stayDurationCvsAbove30Rate) {
-    this.stayDurationCvsAbove30Rate = stayDurationCvsAbove30Rate;
-  }
-
-  public TargetReportApiListStruct stayDurationCvsAbove10Uv(Long stayDurationCvsAbove10Uv) {
-    this.stayDurationCvsAbove10Uv = stayDurationCvsAbove10Uv;
-    return this;
-  }
-
-  /**
-   * Get stayDurationCvsAbove10Uv
-   *
-   * @return stayDurationCvsAbove10Uv
-   */
-  @ApiModelProperty(value = "")
-  public Long getStayDurationCvsAbove10Uv() {
-    return stayDurationCvsAbove10Uv;
-  }
-
-  public void setStayDurationCvsAbove10Uv(Long stayDurationCvsAbove10Uv) {
-    this.stayDurationCvsAbove10Uv = stayDurationCvsAbove10Uv;
-  }
-
-  public TargetReportApiListStruct stayDurationCvsAbove10Rate(Double stayDurationCvsAbove10Rate) {
-    this.stayDurationCvsAbove10Rate = stayDurationCvsAbove10Rate;
-    return this;
-  }
-
-  /**
-   * Get stayDurationCvsAbove10Rate
-   *
-   * @return stayDurationCvsAbove10Rate
-   */
-  @ApiModelProperty(value = "")
-  public Double getStayDurationCvsAbove10Rate() {
-    return stayDurationCvsAbove10Rate;
-  }
-
-  public void setStayDurationCvsAbove10Rate(Double stayDurationCvsAbove10Rate) {
-    this.stayDurationCvsAbove10Rate = stayDurationCvsAbove10Rate;
-  }
-
-  public TargetReportApiListStruct cheerBannerExpPv(Long cheerBannerExpPv) {
-    this.cheerBannerExpPv = cheerBannerExpPv;
-    return this;
-  }
-
-  /**
-   * Get cheerBannerExpPv
-   *
-   * @return cheerBannerExpPv
-   */
-  @ApiModelProperty(value = "")
-  public Long getCheerBannerExpPv() {
-    return cheerBannerExpPv;
-  }
-
-  public void setCheerBannerExpPv(Long cheerBannerExpPv) {
-    this.cheerBannerExpPv = cheerBannerExpPv;
-  }
-
-  public TargetReportApiListStruct cheerStatusSetSuccPv(Long cheerStatusSetSuccPv) {
-    this.cheerStatusSetSuccPv = cheerStatusSetSuccPv;
-    return this;
-  }
-
-  /**
-   * Get cheerStatusSetSuccPv
-   *
-   * @return cheerStatusSetSuccPv
-   */
-  @ApiModelProperty(value = "")
-  public Long getCheerStatusSetSuccPv() {
-    return cheerStatusSetSuccPv;
-  }
-
-  public void setCheerStatusSetSuccPv(Long cheerStatusSetSuccPv) {
-    this.cheerStatusSetSuccPv = cheerStatusSetSuccPv;
-  }
-
-  public TargetReportApiListStruct cheerStatusSetSuccUv(Long cheerStatusSetSuccUv) {
-    this.cheerStatusSetSuccUv = cheerStatusSetSuccUv;
-    return this;
-  }
-
-  /**
-   * Get cheerStatusSetSuccUv
-   *
-   * @return cheerStatusSetSuccUv
-   */
-  @ApiModelProperty(value = "")
-  public Long getCheerStatusSetSuccUv() {
-    return cheerStatusSetSuccUv;
-  }
-
-  public void setCheerStatusSetSuccUv(Long cheerStatusSetSuccUv) {
-    this.cheerStatusSetSuccUv = cheerStatusSetSuccUv;
-  }
-
-  public TargetReportApiListStruct cheerStatusClkPv(Long cheerStatusClkPv) {
-    this.cheerStatusClkPv = cheerStatusClkPv;
-    return this;
-  }
-
-  /**
-   * Get cheerStatusClkPv
-   *
-   * @return cheerStatusClkPv
-   */
-  @ApiModelProperty(value = "")
-  public Long getCheerStatusClkPv() {
-    return cheerStatusClkPv;
-  }
-
-  public void setCheerStatusClkPv(Long cheerStatusClkPv) {
-    this.cheerStatusClkPv = cheerStatusClkPv;
-  }
-
-  public TargetReportApiListStruct cheerStatusClkUv(Long cheerStatusClkUv) {
-    this.cheerStatusClkUv = cheerStatusClkUv;
-    return this;
-  }
-
-  /**
-   * Get cheerStatusClkUv
-   *
-   * @return cheerStatusClkUv
-   */
-  @ApiModelProperty(value = "")
-  public Long getCheerStatusClkUv() {
-    return cheerStatusClkUv;
-  }
-
-  public void setCheerStatusClkUv(Long cheerStatusClkUv) {
-    this.cheerStatusClkUv = cheerStatusClkUv;
   }
 
   public TargetReportApiListStruct adMonetizationCost(Double adMonetizationCost) {
@@ -16103,44 +14440,6 @@ public class TargetReportApiListStruct {
     this.adMonetizationDedupActive7dPv = adMonetizationDedupActive7dPv;
   }
 
-  public TargetReportApiListStruct postBarragePv(Long postBarragePv) {
-    this.postBarragePv = postBarragePv;
-    return this;
-  }
-
-  /**
-   * Get postBarragePv
-   *
-   * @return postBarragePv
-   */
-  @ApiModelProperty(value = "")
-  public Long getPostBarragePv() {
-    return postBarragePv;
-  }
-
-  public void setPostBarragePv(Long postBarragePv) {
-    this.postBarragePv = postBarragePv;
-  }
-
-  public TargetReportApiListStruct postBarrageUv(Long postBarrageUv) {
-    this.postBarrageUv = postBarrageUv;
-    return this;
-  }
-
-  /**
-   * Get postBarrageUv
-   *
-   * @return postBarrageUv
-   */
-  @ApiModelProperty(value = "")
-  public Long getPostBarrageUv() {
-    return postBarrageUv;
-  }
-
-  public void setPostBarrageUv(Long postBarrageUv) {
-    this.postBarrageUv = postBarrageUv;
-  }
-
   public TargetReportApiListStruct clkRedpocketBtnSubscribePv(Long clkRedpocketBtnSubscribePv) {
     this.clkRedpocketBtnSubscribePv = clkRedpocketBtnSubscribePv;
     return this;
@@ -16158,45 +14457,6 @@ public class TargetReportApiListStruct {
 
   public void setClkRedpocketBtnSubscribePv(Long clkRedpocketBtnSubscribePv) {
     this.clkRedpocketBtnSubscribePv = clkRedpocketBtnSubscribePv;
-  }
-
-  public TargetReportApiListStruct inviteFriendsToWatchFireworksPv(
-      Long inviteFriendsToWatchFireworksPv) {
-    this.inviteFriendsToWatchFireworksPv = inviteFriendsToWatchFireworksPv;
-    return this;
-  }
-
-  /**
-   * Get inviteFriendsToWatchFireworksPv
-   *
-   * @return inviteFriendsToWatchFireworksPv
-   */
-  @ApiModelProperty(value = "")
-  public Long getInviteFriendsToWatchFireworksPv() {
-    return inviteFriendsToWatchFireworksPv;
-  }
-
-  public void setInviteFriendsToWatchFireworksPv(Long inviteFriendsToWatchFireworksPv) {
-    this.inviteFriendsToWatchFireworksPv = inviteFriendsToWatchFireworksPv;
-  }
-
-  public TargetReportApiListStruct clkBlessingCardPv(Long clkBlessingCardPv) {
-    this.clkBlessingCardPv = clkBlessingCardPv;
-    return this;
-  }
-
-  /**
-   * Get clkBlessingCardPv
-   *
-   * @return clkBlessingCardPv
-   */
-  @ApiModelProperty(value = "")
-  public Long getClkBlessingCardPv() {
-    return clkBlessingCardPv;
-  }
-
-  public void setClkBlessingCardPv(Long clkBlessingCardPv) {
-    this.clkBlessingCardPv = clkBlessingCardPv;
   }
 
   public TargetReportApiListStruct channelsDetailBtnPv(Long channelsDetailBtnPv) {
@@ -16439,15 +14699,9 @@ public class TargetReportApiListStruct {
         && Objects.equals(this.videoOuterPlayCount, targetReportApiListStruct.videoOuterPlayCount)
         && Objects.equals(
             this.videoOuterPlayUserCount, targetReportApiListStruct.videoOuterPlayUserCount)
-        && Objects.equals(this.videoTimeTotalCount, targetReportApiListStruct.videoTimeTotalCount)
-        && Objects.equals(
-            this.videoOuterPlayTotalTimeCount,
-            targetReportApiListStruct.videoOuterPlayTotalTimeCount)
         && Objects.equals(this.avgUserPlayCount, targetReportApiListStruct.avgUserPlayCount)
         && Objects.equals(
             this.videoOuterPlayTimeCount, targetReportApiListStruct.videoOuterPlayTimeCount)
-        && Objects.equals(
-            this.videoOuterPlayTimeAvg, targetReportApiListStruct.videoOuterPlayTimeAvg)
         && Objects.equals(
             this.videoOuterPlayTimeAvgRate, targetReportApiListStruct.videoOuterPlayTimeAvgRate)
         && Objects.equals(this.videoOuterPlayRate, targetReportApiListStruct.videoOuterPlayRate)
@@ -16486,7 +14740,6 @@ public class TargetReportApiListStruct {
         && Objects.equals(
             this.liveStreamCrtClickCnt, targetReportApiListStruct.liveStreamCrtClickCnt)
         && Objects.equals(this.clickImageCount, targetReportApiListStruct.clickImageCount)
-        && Objects.equals(this.clickNickCount, targetReportApiListStruct.clickNickCount)
         && Objects.equals(this.clickHeadCount, targetReportApiListStruct.clickHeadCount)
         && Objects.equals(this.clickDetailCount, targetReportApiListStruct.clickDetailCount)
         && Objects.equals(this.clickPoiCount, targetReportApiListStruct.clickPoiCount)
@@ -16574,8 +14827,6 @@ public class TargetReportApiListStruct {
         && Objects.equals(
             this.guideToFollowPageInteractionUsers,
             targetReportApiListStruct.guideToFollowPageInteractionUsers)
-        && Objects.equals(this.specialPageExpUv, targetReportApiListStruct.specialPageExpUv)
-        && Objects.equals(this.specialPageExpCost, targetReportApiListStruct.specialPageExpCost)
         && Objects.equals(this.landingPageViewCount, targetReportApiListStruct.landingPageViewCount)
         && Objects.equals(
             this.landingPageEffectiveRate, targetReportApiListStruct.landingPageEffectiveRate)
@@ -16830,18 +15081,12 @@ public class TargetReportApiListStruct {
         && Objects.equals(this.retentionCount, targetReportApiListStruct.retentionCount)
         && Objects.equals(this.retentionCost, targetReportApiListStruct.retentionCost)
         && Objects.equals(this.retentionRate, targetReportApiListStruct.retentionRate)
-        && Objects.equals(this.appRetentionD2Pv, targetReportApiListStruct.appRetentionD2Pv)
-        && Objects.equals(this.appRetentionD3Pv, targetReportApiListStruct.appRetentionD3Pv)
         && Objects.equals(this.appRetentionD3Uv, targetReportApiListStruct.appRetentionD3Uv)
         && Objects.equals(this.appRetentionD3Cost, targetReportApiListStruct.appRetentionD3Cost)
         && Objects.equals(this.appRetentionD3Rate, targetReportApiListStruct.appRetentionD3Rate)
-        && Objects.equals(this.appRetentionD4Pv, targetReportApiListStruct.appRetentionD4Pv)
-        && Objects.equals(this.appRetentionD5Pv, targetReportApiListStruct.appRetentionD5Pv)
         && Objects.equals(this.appRetentionD5Uv, targetReportApiListStruct.appRetentionD5Uv)
         && Objects.equals(this.appRetentionD5Cost, targetReportApiListStruct.appRetentionD5Cost)
         && Objects.equals(this.appRetentionD5Rate, targetReportApiListStruct.appRetentionD5Rate)
-        && Objects.equals(this.appRetentionD6Pv, targetReportApiListStruct.appRetentionD6Pv)
-        && Objects.equals(this.appRetentionD7Pv, targetReportApiListStruct.appRetentionD7Pv)
         && Objects.equals(this.appRetentionD7Uv, targetReportApiListStruct.appRetentionD7Uv)
         && Objects.equals(this.appRetentionD7Cost, targetReportApiListStruct.appRetentionD7Cost)
         && Objects.equals(this.appRetentionD7Rate, targetReportApiListStruct.appRetentionD7Rate)
@@ -17278,11 +15523,7 @@ public class TargetReportApiListStruct {
         && Objects.equals(
             this.liveStreamCommodityShopListExpPv,
             targetReportApiListStruct.liveStreamCommodityShopListExpPv)
-        && Objects.equals(
-            this.channelsLiveExitPlaUv, targetReportApiListStruct.channelsLiveExitPlaUv)
         && Objects.equals(this.liveStreamAvgTime, targetReportApiListStruct.liveStreamAvgTime)
-        && Objects.equals(this.followCount, targetReportApiListStruct.followCount)
-        && Objects.equals(this.followCost, targetReportApiListStruct.followCost)
         && Objects.equals(this.fromFollowUv, targetReportApiListStruct.fromFollowUv)
         && Objects.equals(this.fromFollowCost, targetReportApiListStruct.fromFollowCost)
         && Objects.equals(
@@ -17292,27 +15533,14 @@ public class TargetReportApiListStruct {
         && Objects.equals(this.fromFollowByClickUv, targetReportApiListStruct.fromFollowByClickUv)
         && Objects.equals(
             this.fromFollowByClickCost, targetReportApiListStruct.fromFollowByClickCost)
-        && Objects.equals(this.bizFollowCount, targetReportApiListStruct.bizFollowCount)
         && Objects.equals(this.bizFollowRate, targetReportApiListStruct.bizFollowRate)
         && Objects.equals(this.bizFollowCost, targetReportApiListStruct.bizFollowCost)
         && Objects.equals(this.bizFollowUv, targetReportApiListStruct.bizFollowUv)
         && Objects.equals(this.bizConsultCount, targetReportApiListStruct.bizConsultCount)
         && Objects.equals(this.bizReadingCount, targetReportApiListStruct.bizReadingCount)
-        && Objects.equals(this.breakFrameExpPv, targetReportApiListStruct.breakFrameExpPv)
         && Objects.equals(this.breakFramePlayPv, targetReportApiListStruct.breakFramePlayPv)
-        && Objects.equals(
-            this.breakFramePlayDuration, targetReportApiListStruct.breakFramePlayDuration)
-        && Objects.equals(this.breakFrameIpExpPv, targetReportApiListStruct.breakFrameIpExpPv)
         && Objects.equals(this.breakFrameIpClkPv, targetReportApiListStruct.breakFrameIpClkPv)
         && Objects.equals(this.breakFrameIpClkUv, targetReportApiListStruct.breakFrameIpClkUv)
-        && Objects.equals(this.overallBrandExposure, targetReportApiListStruct.overallBrandExposure)
-        && Objects.equals(this.expHasCostPv, targetReportApiListStruct.expHasCostPv)
-        && Objects.equals(this.freeExposurePv, targetReportApiListStruct.freeExposurePv)
-        && Objects.equals(this.brandShareExposurePv, targetReportApiListStruct.brandShareExposurePv)
-        && Objects.equals(
-            this.cvsShareExpToFriendPv, targetReportApiListStruct.cvsShareExpToFriendPv)
-        && Objects.equals(this.cvsShareExpToFeedPv, targetReportApiListStruct.cvsShareExpToFeedPv)
-        && Objects.equals(this.realCpmCost, targetReportApiListStruct.realCpmCost)
         && Objects.equals(this.clkMaterialUv, targetReportApiListStruct.clkMaterialUv)
         && Objects.equals(this.clkMaterialRate, targetReportApiListStruct.clkMaterialRate)
         && Objects.equals(this.clkNickPv, targetReportApiListStruct.clkNickPv)
@@ -17320,93 +15548,26 @@ public class TargetReportApiListStruct {
         && Objects.equals(this.clkTagCommentPv, targetReportApiListStruct.clkTagCommentPv)
         && Objects.equals(this.clkTagContentPv, targetReportApiListStruct.clkTagContentPv)
         && Objects.equals(this.clkPoiPv, targetReportApiListStruct.clkPoiPv)
-        && Objects.equals(this.clkChoiceLeftPv, targetReportApiListStruct.clkChoiceLeftPv)
-        && Objects.equals(this.clkChoiceRightPv, targetReportApiListStruct.clkChoiceRightPv)
-        && Objects.equals(this.clkCardTagPv, targetReportApiListStruct.clkCardTagPv)
         && Objects.equals(this.clkDetailUv, targetReportApiListStruct.clkDetailUv)
         && Objects.equals(this.clkDetailRate, targetReportApiListStruct.clkDetailRate)
         && Objects.equals(this.clkSliderCardBtnPv, targetReportApiListStruct.clkSliderCardBtnPv)
         && Objects.equals(this.cvsBubbleShareClkPv, targetReportApiListStruct.cvsBubbleShareClkPv)
         && Objects.equals(this.lpStarPageExpPv, targetReportApiListStruct.lpStarPageExpPv)
-        && Objects.equals(this.lpStarPageClkPv, targetReportApiListStruct.lpStarPageClkPv)
         && Objects.equals(this.finderTopicSliderPv, targetReportApiListStruct.finderTopicSliderPv)
-        && Objects.equals(this.finderTopicSliderUv, targetReportApiListStruct.finderTopicSliderUv)
-        && Objects.equals(
-            this.finderTopicSliderAutoPv, targetReportApiListStruct.finderTopicSliderAutoPv)
         && Objects.equals(
             this.finderTopicSliderPerUser, targetReportApiListStruct.finderTopicSliderPerUser)
         && Objects.equals(
             this.finderTopicSliderManualPv, targetReportApiListStruct.finderTopicSliderManualPv)
-        && Objects.equals(this.fullsrcSlidePv, targetReportApiListStruct.fullsrcSlidePv)
-        && Objects.equals(this.galleryCardSliderPv, targetReportApiListStruct.galleryCardSliderPv)
-        && Objects.equals(this.galleryCardSliderUv, targetReportApiListStruct.galleryCardSliderUv)
-        && Objects.equals(this.shareUv, targetReportApiListStruct.shareUv)
         && Objects.equals(this.shareFriendPv, targetReportApiListStruct.shareFriendPv)
         && Objects.equals(this.shareFeedPv, targetReportApiListStruct.shareFeedPv)
         && Objects.equals(this.praiseUv, targetReportApiListStruct.praiseUv)
         && Objects.equals(this.commentUv, targetReportApiListStruct.commentUv)
-        && Objects.equals(this.praiseCommentPv, targetReportApiListStruct.praiseCommentPv)
-        && Objects.equals(this.praiseCommentRate, targetReportApiListStruct.praiseCommentRate)
-        && Objects.equals(this.praiseCommentSharePv, targetReportApiListStruct.praiseCommentSharePv)
-        && Objects.equals(this.praiseCommentShareUv, targetReportApiListStruct.praiseCommentShareUv)
-        && Objects.equals(this.commentAtFriendPv, targetReportApiListStruct.commentAtFriendPv)
-        && Objects.equals(this.commentReplyFristPv, targetReportApiListStruct.commentReplyFristPv)
-        && Objects.equals(this.cvsFavPv, targetReportApiListStruct.cvsFavPv)
         && Objects.equals(this.engagePv, targetReportApiListStruct.engagePv)
-        && Objects.equals(this.engageUv, targetReportApiListStruct.engageUv)
-        && Objects.equals(this.overallEngageUvRate, targetReportApiListStruct.overallEngageUvRate)
         && Objects.equals(this.interactSuccPv, targetReportApiListStruct.interactSuccPv)
-        && Objects.equals(this.stayDurationAll, targetReportApiListStruct.stayDurationAll)
         && Objects.equals(this.durationPerUser, targetReportApiListStruct.durationPerUser)
-        && Objects.equals(
-            this.shortVideoAvgStayTime, targetReportApiListStruct.shortVideoAvgStayTime)
-        && Objects.equals(this.stayDurationOuter, targetReportApiListStruct.stayDurationOuter)
         && Objects.equals(this.durationOuterPerUser, targetReportApiListStruct.durationOuterPerUser)
         && Objects.equals(
-            this.shortVideoAvgViewStayTime, targetReportApiListStruct.shortVideoAvgViewStayTime)
-        && Objects.equals(this.stayDurationCvs, targetReportApiListStruct.stayDurationCvs)
-        && Objects.equals(
             this.durationKeyPagePerUser, targetReportApiListStruct.durationKeyPagePerUser)
-        && Objects.equals(this.stayDurationAll02Uv, targetReportApiListStruct.stayDurationAll02Uv)
-        && Objects.equals(
-            this.stayDurationAll02Rate, targetReportApiListStruct.stayDurationAll02Rate)
-        && Objects.equals(this.stayDurationAll34Uv, targetReportApiListStruct.stayDurationAll34Uv)
-        && Objects.equals(
-            this.stayDurationAll34Rate, targetReportApiListStruct.stayDurationAll34Rate)
-        && Objects.equals(this.stayDurationAll510Uv, targetReportApiListStruct.stayDurationAll510Uv)
-        && Objects.equals(
-            this.stayDurationAll510Rate, targetReportApiListStruct.stayDurationAll510Rate)
-        && Objects.equals(
-            this.stayDurationAllAbove10Uv, targetReportApiListStruct.stayDurationAllAbove10Uv)
-        && Objects.equals(
-            this.stayDurationAllAbove10Rate, targetReportApiListStruct.stayDurationAllAbove10Rate)
-        && Objects.equals(
-            this.stayDurationAllAbove5Uv, targetReportApiListStruct.stayDurationAllAbove5Uv)
-        && Objects.equals(
-            this.stayDurationAllAbove5Rate, targetReportApiListStruct.stayDurationAllAbove5Rate)
-        && Objects.equals(this.stayDurationCvs02Uv, targetReportApiListStruct.stayDurationCvs02Uv)
-        && Objects.equals(
-            this.stayDurationCvs02Rate, targetReportApiListStruct.stayDurationCvs02Rate)
-        && Objects.equals(this.stayDurationCvs39Uv, targetReportApiListStruct.stayDurationCvs39Uv)
-        && Objects.equals(
-            this.stayDurationCvs39Rate, targetReportApiListStruct.stayDurationCvs39Rate)
-        && Objects.equals(
-            this.stayDurationCvs1029Uv, targetReportApiListStruct.stayDurationCvs1029Uv)
-        && Objects.equals(
-            this.stayDurationCvs1029Rate, targetReportApiListStruct.stayDurationCvs1029Rate)
-        && Objects.equals(
-            this.stayDurationCvsAbove30Uv, targetReportApiListStruct.stayDurationCvsAbove30Uv)
-        && Objects.equals(
-            this.stayDurationCvsAbove30Rate, targetReportApiListStruct.stayDurationCvsAbove30Rate)
-        && Objects.equals(
-            this.stayDurationCvsAbove10Uv, targetReportApiListStruct.stayDurationCvsAbove10Uv)
-        && Objects.equals(
-            this.stayDurationCvsAbove10Rate, targetReportApiListStruct.stayDurationCvsAbove10Rate)
-        && Objects.equals(this.cheerBannerExpPv, targetReportApiListStruct.cheerBannerExpPv)
-        && Objects.equals(this.cheerStatusSetSuccPv, targetReportApiListStruct.cheerStatusSetSuccPv)
-        && Objects.equals(this.cheerStatusSetSuccUv, targetReportApiListStruct.cheerStatusSetSuccUv)
-        && Objects.equals(this.cheerStatusClkPv, targetReportApiListStruct.cheerStatusClkPv)
-        && Objects.equals(this.cheerStatusClkUv, targetReportApiListStruct.cheerStatusClkUv)
         && Objects.equals(this.adMonetizationCost, targetReportApiListStruct.adMonetizationCost)
         && Objects.equals(this.adMonetizationRoi, targetReportApiListStruct.adMonetizationRoi)
         && Objects.equals(
@@ -17419,14 +15580,8 @@ public class TargetReportApiListStruct {
         && Objects.equals(
             this.adMonetizationDedupActive7dPv,
             targetReportApiListStruct.adMonetizationDedupActive7dPv)
-        && Objects.equals(this.postBarragePv, targetReportApiListStruct.postBarragePv)
-        && Objects.equals(this.postBarrageUv, targetReportApiListStruct.postBarrageUv)
         && Objects.equals(
             this.clkRedpocketBtnSubscribePv, targetReportApiListStruct.clkRedpocketBtnSubscribePv)
-        && Objects.equals(
-            this.inviteFriendsToWatchFireworksPv,
-            targetReportApiListStruct.inviteFriendsToWatchFireworksPv)
-        && Objects.equals(this.clkBlessingCardPv, targetReportApiListStruct.clkBlessingCardPv)
         && Objects.equals(this.channelsDetailBtnPv, targetReportApiListStruct.channelsDetailBtnPv)
         && Objects.equals(
             this.afterAddWecomNegativePv, targetReportApiListStruct.afterAddWecomNegativePv)
@@ -17485,11 +15640,8 @@ public class TargetReportApiListStruct {
         previewDeepConversionsCount,
         videoOuterPlayCount,
         videoOuterPlayUserCount,
-        videoTimeTotalCount,
-        videoOuterPlayTotalTimeCount,
         avgUserPlayCount,
         videoOuterPlayTimeCount,
-        videoOuterPlayTimeAvg,
         videoOuterPlayTimeAvgRate,
         videoOuterPlayRate,
         videoOuterPlayCost,
@@ -17516,7 +15668,6 @@ public class TargetReportApiListStruct {
         noInterestCount,
         liveStreamCrtClickCnt,
         clickImageCount,
-        clickNickCount,
         clickHeadCount,
         clickDetailCount,
         clickPoiCount,
@@ -17568,8 +15719,6 @@ public class TargetReportApiListStruct {
         guideToFollowPageViewers,
         guideToFollowPageInteractionAmount,
         guideToFollowPageInteractionUsers,
-        specialPageExpUv,
-        specialPageExpCost,
         landingPageViewCount,
         landingPageEffectiveRate,
         landingPageUserCount,
@@ -17762,18 +15911,12 @@ public class TargetReportApiListStruct {
         retentionCount,
         retentionCost,
         retentionRate,
-        appRetentionD2Pv,
-        appRetentionD3Pv,
         appRetentionD3Uv,
         appRetentionD3Cost,
         appRetentionD3Rate,
-        appRetentionD4Pv,
-        appRetentionD5Pv,
         appRetentionD5Uv,
         appRetentionD5Cost,
         appRetentionD5Rate,
-        appRetentionD6Pv,
-        appRetentionD7Pv,
         appRetentionD7Uv,
         appRetentionD7Cost,
         appRetentionD7Rate,
@@ -18063,35 +16206,21 @@ public class TargetReportApiListStruct {
         liveStreamCommodityBubbleClkPv,
         liveStreamCommodityShopBagClkPv,
         liveStreamCommodityShopListExpPv,
-        channelsLiveExitPlaUv,
         liveStreamAvgTime,
-        followCount,
-        followCost,
         fromFollowUv,
         fromFollowCost,
         fromFollowByDisplayUv,
         fromFollowByDisplayCost,
         fromFollowByClickUv,
         fromFollowByClickCost,
-        bizFollowCount,
         bizFollowRate,
         bizFollowCost,
         bizFollowUv,
         bizConsultCount,
         bizReadingCount,
-        breakFrameExpPv,
         breakFramePlayPv,
-        breakFramePlayDuration,
-        breakFrameIpExpPv,
         breakFrameIpClkPv,
         breakFrameIpClkUv,
-        overallBrandExposure,
-        expHasCostPv,
-        freeExposurePv,
-        brandShareExposurePv,
-        cvsShareExpToFriendPv,
-        cvsShareExpToFeedPv,
-        realCpmCost,
         clkMaterialUv,
         clkMaterialRate,
         clkNickPv,
@@ -18099,83 +16228,30 @@ public class TargetReportApiListStruct {
         clkTagCommentPv,
         clkTagContentPv,
         clkPoiPv,
-        clkChoiceLeftPv,
-        clkChoiceRightPv,
-        clkCardTagPv,
         clkDetailUv,
         clkDetailRate,
         clkSliderCardBtnPv,
         cvsBubbleShareClkPv,
         lpStarPageExpPv,
-        lpStarPageClkPv,
         finderTopicSliderPv,
-        finderTopicSliderUv,
-        finderTopicSliderAutoPv,
         finderTopicSliderPerUser,
         finderTopicSliderManualPv,
-        fullsrcSlidePv,
-        galleryCardSliderPv,
-        galleryCardSliderUv,
-        shareUv,
         shareFriendPv,
         shareFeedPv,
         praiseUv,
         commentUv,
-        praiseCommentPv,
-        praiseCommentRate,
-        praiseCommentSharePv,
-        praiseCommentShareUv,
-        commentAtFriendPv,
-        commentReplyFristPv,
-        cvsFavPv,
         engagePv,
-        engageUv,
-        overallEngageUvRate,
         interactSuccPv,
-        stayDurationAll,
         durationPerUser,
-        shortVideoAvgStayTime,
-        stayDurationOuter,
         durationOuterPerUser,
-        shortVideoAvgViewStayTime,
-        stayDurationCvs,
         durationKeyPagePerUser,
-        stayDurationAll02Uv,
-        stayDurationAll02Rate,
-        stayDurationAll34Uv,
-        stayDurationAll34Rate,
-        stayDurationAll510Uv,
-        stayDurationAll510Rate,
-        stayDurationAllAbove10Uv,
-        stayDurationAllAbove10Rate,
-        stayDurationAllAbove5Uv,
-        stayDurationAllAbove5Rate,
-        stayDurationCvs02Uv,
-        stayDurationCvs02Rate,
-        stayDurationCvs39Uv,
-        stayDurationCvs39Rate,
-        stayDurationCvs1029Uv,
-        stayDurationCvs1029Rate,
-        stayDurationCvsAbove30Uv,
-        stayDurationCvsAbove30Rate,
-        stayDurationCvsAbove10Uv,
-        stayDurationCvsAbove10Rate,
-        cheerBannerExpPv,
-        cheerStatusSetSuccPv,
-        cheerStatusSetSuccUv,
-        cheerStatusClkPv,
-        cheerStatusClkUv,
         adMonetizationCost,
         adMonetizationRoi,
         adMonetizationActive3dPv,
         adMonetizationDedupActive3dPv,
         adMonetizationActive7dPv,
         adMonetizationDedupActive7dPv,
-        postBarragePv,
-        postBarrageUv,
         clkRedpocketBtnSubscribePv,
-        inviteFriendsToWatchFireworksPv,
-        clkBlessingCardPv,
         channelsDetailBtnPv,
         afterAddWecomNegativePv,
         securityLowPriceOrderPv,

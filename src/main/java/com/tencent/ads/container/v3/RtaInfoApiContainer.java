@@ -16,27 +16,27 @@ import com.google.inject.Inject;
 import com.tencent.ads.ApiContainer;
 import com.tencent.ads.ApiException;
 import com.tencent.ads.anno.*;
-import com.tencent.ads.api.v3.RtaApi;
+import com.tencent.ads.api.v3.RtaInfoApi;
 import com.tencent.ads.exception.TencentAdsResponseException;
-import com.tencent.ads.model.v3.RtaInfoRequest;
-import com.tencent.ads.model.v3.RtaInfoResponse;
-import com.tencent.ads.model.v3.RtaInfoResponseData;
+import com.tencent.ads.model.v3.RtaInfoGetRequest;
+import com.tencent.ads.model.v3.RtaInfoGetResponse;
+import com.tencent.ads.model.v3.RtaInfoGetResponseData;
 
-public class RtaApiContainer extends ApiContainer {
+public class RtaInfoApiContainer extends ApiContainer {
 
-  @Inject RtaApi api;
+  @Inject RtaInfoApi api;
 
   /**
    * 基本信息查询
    *
    * @param data (required)
-   * @return RtaInfoResponse
+   * @return RtaInfoGetResponse
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
-  public RtaInfoResponseData rtaInfo(RtaInfoRequest data, String... headerPair)
+  public RtaInfoGetResponseData rtaInfoGet(RtaInfoGetRequest data, String... headerPair)
       throws ApiException, TencentAdsResponseException {
-    RtaInfoResponse resp = api.rtaInfo(data, headerPair);
+    RtaInfoGetResponse resp = api.rtaInfoGet(data, headerPair);
     handleResponse(gson.toJson(resp));
     return resp.getData();
   }
