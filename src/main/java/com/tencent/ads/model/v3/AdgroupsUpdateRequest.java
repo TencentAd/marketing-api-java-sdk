@@ -108,11 +108,20 @@ public class AdgroupsUpdateRequest {
   @SerializedName("ecom_pkam_switch")
   private EcomPkamSwitch ecomPkamSwitch = null;
 
+  @SerializedName("rta_id")
+  private Long rtaId = null;
+
+  @SerializedName("rta_target_id")
+  private String rtaTargetId = null;
+
   @SerializedName("cost_constraint_scene")
   private CostConstraintScene costConstraintScene = null;
 
   @SerializedName("custom_cost_cap")
   private Long customCostCap = null;
+
+  @SerializedName("feedback_id")
+  private Long feedbackId = null;
 
   public AdgroupsUpdateRequest accountId(Long accountId) {
     this.accountId = accountId;
@@ -683,6 +692,44 @@ public class AdgroupsUpdateRequest {
     this.ecomPkamSwitch = ecomPkamSwitch;
   }
 
+  public AdgroupsUpdateRequest rtaId(Long rtaId) {
+    this.rtaId = rtaId;
+    return this;
+  }
+
+  /**
+   * Get rtaId
+   *
+   * @return rtaId
+   */
+  @ApiModelProperty(value = "")
+  public Long getRtaId() {
+    return rtaId;
+  }
+
+  public void setRtaId(Long rtaId) {
+    this.rtaId = rtaId;
+  }
+
+  public AdgroupsUpdateRequest rtaTargetId(String rtaTargetId) {
+    this.rtaTargetId = rtaTargetId;
+    return this;
+  }
+
+  /**
+   * Get rtaTargetId
+   *
+   * @return rtaTargetId
+   */
+  @ApiModelProperty(value = "")
+  public String getRtaTargetId() {
+    return rtaTargetId;
+  }
+
+  public void setRtaTargetId(String rtaTargetId) {
+    this.rtaTargetId = rtaTargetId;
+  }
+
   public AdgroupsUpdateRequest costConstraintScene(CostConstraintScene costConstraintScene) {
     this.costConstraintScene = costConstraintScene;
     return this;
@@ -719,6 +766,25 @@ public class AdgroupsUpdateRequest {
 
   public void setCustomCostCap(Long customCostCap) {
     this.customCostCap = customCostCap;
+  }
+
+  public AdgroupsUpdateRequest feedbackId(Long feedbackId) {
+    this.feedbackId = feedbackId;
+    return this;
+  }
+
+  /**
+   * Get feedbackId
+   *
+   * @return feedbackId
+   */
+  @ApiModelProperty(value = "")
+  public Long getFeedbackId() {
+    return feedbackId;
+  }
+
+  public void setFeedbackId(Long feedbackId) {
+    this.feedbackId = feedbackId;
   }
 
   @Override
@@ -768,8 +834,11 @@ public class AdgroupsUpdateRequest {
             this.flowOptimizationEnabled, adgroupsUpdateRequest.flowOptimizationEnabled)
         && Objects.equals(this.poiList, adgroupsUpdateRequest.poiList)
         && Objects.equals(this.ecomPkamSwitch, adgroupsUpdateRequest.ecomPkamSwitch)
+        && Objects.equals(this.rtaId, adgroupsUpdateRequest.rtaId)
+        && Objects.equals(this.rtaTargetId, adgroupsUpdateRequest.rtaTargetId)
         && Objects.equals(this.costConstraintScene, adgroupsUpdateRequest.costConstraintScene)
-        && Objects.equals(this.customCostCap, adgroupsUpdateRequest.customCostCap);
+        && Objects.equals(this.customCostCap, adgroupsUpdateRequest.customCostCap)
+        && Objects.equals(this.feedbackId, adgroupsUpdateRequest.feedbackId);
   }
 
   @Override
@@ -804,8 +873,11 @@ public class AdgroupsUpdateRequest {
         flowOptimizationEnabled,
         poiList,
         ecomPkamSwitch,
+        rtaId,
+        rtaTargetId,
         costConstraintScene,
-        customCostCap);
+        customCostCap,
+        feedbackId);
   }
 
   @Override

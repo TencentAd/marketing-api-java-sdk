@@ -34,6 +34,9 @@ public class MuseAiTaskAddRequest {
   @SerializedName("text2img")
   private Text2imgStruct text2img = null;
 
+  @SerializedName("img2caption")
+  private Img2captionStruct img2caption = null;
+
   public MuseAiTaskAddRequest accountId(Long accountId) {
     this.accountId = accountId;
     return this;
@@ -129,6 +132,25 @@ public class MuseAiTaskAddRequest {
     this.text2img = text2img;
   }
 
+  public MuseAiTaskAddRequest img2caption(Img2captionStruct img2caption) {
+    this.img2caption = img2caption;
+    return this;
+  }
+
+  /**
+   * Get img2caption
+   *
+   * @return img2caption
+   */
+  @ApiModelProperty(value = "")
+  public Img2captionStruct getImg2caption() {
+    return img2caption;
+  }
+
+  public void setImg2caption(Img2captionStruct img2caption) {
+    this.img2caption = img2caption;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -142,12 +164,13 @@ public class MuseAiTaskAddRequest {
         && Objects.equals(this.taskType, museAiTaskAddRequest.taskType)
         && Objects.equals(this.outputImageNum, museAiTaskAddRequest.outputImageNum)
         && Objects.equals(this.img2img, museAiTaskAddRequest.img2img)
-        && Objects.equals(this.text2img, museAiTaskAddRequest.text2img);
+        && Objects.equals(this.text2img, museAiTaskAddRequest.text2img)
+        && Objects.equals(this.img2caption, museAiTaskAddRequest.img2caption);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(accountId, taskType, outputImageNum, img2img, text2img);
+    return Objects.hash(accountId, taskType, outputImageNum, img2img, text2img, img2caption);
   }
 
   @Override

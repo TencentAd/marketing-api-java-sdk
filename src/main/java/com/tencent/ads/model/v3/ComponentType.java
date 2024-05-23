@@ -88,6 +88,8 @@ public enum ComponentType {
 
   MINI_CARD_LINK("MINI_CARD_LINK"),
 
+  SUBLINK("SUBLINK"),
+
   V2_TITLE("V2_TITLE"),
 
   V2_DESCRIPTION("V2_DESCRIPTION"),

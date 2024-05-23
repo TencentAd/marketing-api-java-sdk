@@ -42,6 +42,9 @@ public class MuseAiResultItem {
   @SerializedName("url")
   private String url = null;
 
+  @SerializedName("caption_result")
+  private CaptionResult captionResult = null;
+
   public MuseAiResultItem museMaterialId(Long museMaterialId) {
     this.museMaterialId = museMaterialId;
     return this;
@@ -175,6 +178,25 @@ public class MuseAiResultItem {
     this.url = url;
   }
 
+  public MuseAiResultItem captionResult(CaptionResult captionResult) {
+    this.captionResult = captionResult;
+    return this;
+  }
+
+  /**
+   * Get captionResult
+   *
+   * @return captionResult
+   */
+  @ApiModelProperty(value = "")
+  public CaptionResult getCaptionResult() {
+    return captionResult;
+  }
+
+  public void setCaptionResult(CaptionResult captionResult) {
+    this.captionResult = captionResult;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -190,12 +212,14 @@ public class MuseAiResultItem {
         && Objects.equals(this.ratioHeight, museAiResultItem.ratioHeight)
         && Objects.equals(this.width, museAiResultItem.width)
         && Objects.equals(this.height, museAiResultItem.height)
-        && Objects.equals(this.url, museAiResultItem.url);
+        && Objects.equals(this.url, museAiResultItem.url)
+        && Objects.equals(this.captionResult, museAiResultItem.captionResult);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(museMaterialId, materialType, ratioWidth, ratioHeight, width, height, url);
+    return Objects.hash(
+        museMaterialId, materialType, ratioWidth, ratioHeight, width, height, url, captionResult);
   }
 
   @Override

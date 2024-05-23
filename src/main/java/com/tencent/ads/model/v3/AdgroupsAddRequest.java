@@ -153,6 +153,12 @@ public class AdgroupsAddRequest {
   @SerializedName("forward_link_assist")
   private OptimizationGoal forwardLinkAssist = null;
 
+  @SerializedName("rta_id")
+  private Long rtaId = null;
+
+  @SerializedName("rta_target_id")
+  private String rtaTargetId = null;
+
   @SerializedName("mpa_spec")
   private MpaSpec mpaSpec = null;
 
@@ -161,6 +167,9 @@ public class AdgroupsAddRequest {
 
   @SerializedName("custom_cost_cap")
   private Long customCostCap = null;
+
+  @SerializedName("feedback_id")
+  private Long feedbackId = null;
 
   @SerializedName("short_play_pay_type")
   private ShortPlayPayType shortPlayPayType = null;
@@ -1047,6 +1056,44 @@ public class AdgroupsAddRequest {
     this.forwardLinkAssist = forwardLinkAssist;
   }
 
+  public AdgroupsAddRequest rtaId(Long rtaId) {
+    this.rtaId = rtaId;
+    return this;
+  }
+
+  /**
+   * Get rtaId
+   *
+   * @return rtaId
+   */
+  @ApiModelProperty(value = "")
+  public Long getRtaId() {
+    return rtaId;
+  }
+
+  public void setRtaId(Long rtaId) {
+    this.rtaId = rtaId;
+  }
+
+  public AdgroupsAddRequest rtaTargetId(String rtaTargetId) {
+    this.rtaTargetId = rtaTargetId;
+    return this;
+  }
+
+  /**
+   * Get rtaTargetId
+   *
+   * @return rtaTargetId
+   */
+  @ApiModelProperty(value = "")
+  public String getRtaTargetId() {
+    return rtaTargetId;
+  }
+
+  public void setRtaTargetId(String rtaTargetId) {
+    this.rtaTargetId = rtaTargetId;
+  }
+
   public AdgroupsAddRequest mpaSpec(MpaSpec mpaSpec) {
     this.mpaSpec = mpaSpec;
     return this;
@@ -1102,6 +1149,25 @@ public class AdgroupsAddRequest {
 
   public void setCustomCostCap(Long customCostCap) {
     this.customCostCap = customCostCap;
+  }
+
+  public AdgroupsAddRequest feedbackId(Long feedbackId) {
+    this.feedbackId = feedbackId;
+    return this;
+  }
+
+  /**
+   * Get feedbackId
+   *
+   * @return feedbackId
+   */
+  @ApiModelProperty(value = "")
+  public Long getFeedbackId() {
+    return feedbackId;
+  }
+
+  public void setFeedbackId(Long feedbackId) {
+    this.feedbackId = feedbackId;
   }
 
   public AdgroupsAddRequest shortPlayPayType(ShortPlayPayType shortPlayPayType) {
@@ -1241,9 +1307,12 @@ public class AdgroupsAddRequest {
         && Objects.equals(this.prioritySiteSet, adgroupsAddRequest.prioritySiteSet)
         && Objects.equals(this.ecomPkamSwitch, adgroupsAddRequest.ecomPkamSwitch)
         && Objects.equals(this.forwardLinkAssist, adgroupsAddRequest.forwardLinkAssist)
+        && Objects.equals(this.rtaId, adgroupsAddRequest.rtaId)
+        && Objects.equals(this.rtaTargetId, adgroupsAddRequest.rtaTargetId)
         && Objects.equals(this.mpaSpec, adgroupsAddRequest.mpaSpec)
         && Objects.equals(this.costConstraintScene, adgroupsAddRequest.costConstraintScene)
         && Objects.equals(this.customCostCap, adgroupsAddRequest.customCostCap)
+        && Objects.equals(this.feedbackId, adgroupsAddRequest.feedbackId)
         && Objects.equals(this.shortPlayPayType, adgroupsAddRequest.shortPlayPayType)
         && Objects.equals(this.sellStrategyId, adgroupsAddRequest.sellStrategyId)
         && Objects.equals(this.dynamicAdType, adgroupsAddRequest.dynamicAdType)
@@ -1297,9 +1366,12 @@ public class AdgroupsAddRequest {
         prioritySiteSet,
         ecomPkamSwitch,
         forwardLinkAssist,
+        rtaId,
+        rtaTargetId,
         mpaSpec,
         costConstraintScene,
         customCostCap,
+        feedbackId,
         shortPlayPayType,
         sellStrategyId,
         dynamicAdType,

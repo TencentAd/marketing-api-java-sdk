@@ -125,6 +125,7 @@ public class App {
   @Inject MergeFundTypeSubcustomerTransferApiContainer mergeFundTypeSubcustomerTransferApiContainer;
   @Inject MuseAiMaterialApiContainer museAiMaterialApiContainer;
   @Inject MuseAiTaskApiContainer museAiTaskApiContainer;
+  @Inject MuseAiUgcApiContainer museAiUgcApiContainer;
   @Inject OauthApiContainer oauthApiContainer;
   @Inject ObjectCommentFlagApiContainer objectCommentFlagApiContainer;
   @Inject OptimizationGoalPermissionsApiContainer optimizationGoalPermissionsApiContainer;
@@ -600,6 +601,10 @@ public class App {
 
   public MuseAiTaskApiContainer museAiTask() {
     return museAiTaskApiContainer;
+  }
+
+  public MuseAiUgcApiContainer museAiUgc() {
+    return museAiUgcApiContainer;
   }
 
   public OauthApiContainer oauth() {

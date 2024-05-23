@@ -116,6 +116,9 @@ public class CreativeComponents {
   @SerializedName("mini_card_link")
   private List<MiniCardLinkComponent> miniCardLink = null;
 
+  @SerializedName("floating_zone_list")
+  private List<FloatingZoneListComponent> floatingZoneList = null;
+
   public CreativeComponents title(List<TitleComponent> title) {
     this.title = title;
     return this;
@@ -957,6 +960,34 @@ public class CreativeComponents {
     this.miniCardLink = miniCardLink;
   }
 
+  public CreativeComponents floatingZoneList(List<FloatingZoneListComponent> floatingZoneList) {
+    this.floatingZoneList = floatingZoneList;
+    return this;
+  }
+
+  public CreativeComponents addFloatingZoneListItem(
+      FloatingZoneListComponent floatingZoneListItem) {
+    if (this.floatingZoneList == null) {
+      this.floatingZoneList = new ArrayList<FloatingZoneListComponent>();
+    }
+    this.floatingZoneList.add(floatingZoneListItem);
+    return this;
+  }
+
+  /**
+   * Get floatingZoneList
+   *
+   * @return floatingZoneList
+   */
+  @ApiModelProperty(value = "")
+  public List<FloatingZoneListComponent> getFloatingZoneList() {
+    return floatingZoneList;
+  }
+
+  public void setFloatingZoneList(List<FloatingZoneListComponent> floatingZoneList) {
+    this.floatingZoneList = floatingZoneList;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -996,7 +1027,8 @@ public class CreativeComponents {
         && Objects.equals(this.appPromotionVideo, creativeComponents.appPromotionVideo)
         && Objects.equals(this.videoShowcase, creativeComponents.videoShowcase)
         && Objects.equals(this.imageShowcase, creativeComponents.imageShowcase)
-        && Objects.equals(this.miniCardLink, creativeComponents.miniCardLink);
+        && Objects.equals(this.miniCardLink, creativeComponents.miniCardLink)
+        && Objects.equals(this.floatingZoneList, creativeComponents.floatingZoneList);
   }
 
   @Override
@@ -1032,7 +1064,8 @@ public class CreativeComponents {
         appPromotionVideo,
         videoShowcase,
         imageShowcase,
-        miniCardLink);
+        miniCardLink,
+        floatingZoneList);
   }
 
   @Override

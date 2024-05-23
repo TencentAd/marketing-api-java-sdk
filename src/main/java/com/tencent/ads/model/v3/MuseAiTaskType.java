@@ -24,7 +24,9 @@ import java.io.IOException;
 public enum MuseAiTaskType {
   TEXT2IMG("MUSE_AI_TASK_TYPE_TEXT2IMG"),
 
-  IMG2IMG("MUSE_AI_TASK_TYPE_IMG2IMG");
+  IMG2IMG("MUSE_AI_TASK_TYPE_IMG2IMG"),
+
+  IMG2CAPTION("MUSE_AI_TASK_TYPE_IMG2CAPTION");
 
   private String value;
 
