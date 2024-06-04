@@ -32,6 +32,9 @@ public class PropertyStruct {
   @SerializedName("property_class")
   private MarketingAssetAttrClass propertyClass = null;
 
+  @SerializedName("property_cn")
+  private String propertyCn = null;
+
   public PropertyStruct propertyName(PromotedAssetAttrKey propertyName) {
     this.propertyName = propertyName;
     return this;
@@ -97,6 +100,25 @@ public class PropertyStruct {
     this.propertyClass = propertyClass;
   }
 
+  public PropertyStruct propertyCn(String propertyCn) {
+    this.propertyCn = propertyCn;
+    return this;
+  }
+
+  /**
+   * Get propertyCn
+   *
+   * @return propertyCn
+   */
+  @ApiModelProperty(value = "")
+  public String getPropertyCn() {
+    return propertyCn;
+  }
+
+  public void setPropertyCn(String propertyCn) {
+    this.propertyCn = propertyCn;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -108,12 +130,13 @@ public class PropertyStruct {
     PropertyStruct propertyStruct = (PropertyStruct) o;
     return Objects.equals(this.propertyName, propertyStruct.propertyName)
         && Objects.equals(this.propertyValue, propertyStruct.propertyValue)
-        && Objects.equals(this.propertyClass, propertyStruct.propertyClass);
+        && Objects.equals(this.propertyClass, propertyStruct.propertyClass)
+        && Objects.equals(this.propertyCn, propertyStruct.propertyCn);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(propertyName, propertyValue, propertyClass);
+    return Objects.hash(propertyName, propertyValue, propertyClass, propertyCn);
   }
 
   @Override

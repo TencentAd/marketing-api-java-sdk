@@ -30,6 +30,10 @@ public class App {
   @Inject AdvertiserApiContainer advertiserApiContainer;
   @Inject AdvertiserDailyBudgetApiContainer advertiserDailyBudgetApiContainer;
   @Inject AgencyApiContainer agencyApiContainer;
+  @Inject AgencyBusinessUnitApiContainer agencyBusinessUnitApiContainer;
+  @Inject AgencyBusinessUnitListApiContainer agencyBusinessUnitListApiContainer;
+  @Inject AgencyBusinessUnitListAccountApiContainer agencyBusinessUnitListAccountApiContainer;
+  @Inject AgencyBusinessUnitListByAccountApiContainer agencyBusinessUnitListByAccountApiContainer;
   @Inject AgencyRealtimeCostApiContainer agencyRealtimeCostApiContainer;
   @Inject AndroidChannelApiContainer androidChannelApiContainer;
   @Inject AsyncReportFilesApiContainer asyncReportFilesApiContainer;
@@ -49,6 +53,8 @@ public class App {
   @Inject CommentListApiContainer commentListApiContainer;
   @Inject ComponentElementUrgeReviewApiContainer componentElementUrgeReviewApiContainer;
   @Inject ComponentReviewResultsApiContainer componentReviewResultsApiContainer;
+  @Inject ConversionLinkAssetsApiContainer conversionLinkAssetsApiContainer;
+  @Inject ConversionLinksApiContainer conversionLinksApiContainer;
   @Inject ConversionsApiContainer conversionsApiContainer;
   @Inject CreativeTemplateApiContainer creativeTemplateApiContainer;
   @Inject CreativeTemplateListApiContainer creativeTemplateListApiContainer;
@@ -247,6 +253,22 @@ public class App {
     return agencyApiContainer;
   }
 
+  public AgencyBusinessUnitApiContainer agencyBusinessUnit() {
+    return agencyBusinessUnitApiContainer;
+  }
+
+  public AgencyBusinessUnitListApiContainer agencyBusinessUnitList() {
+    return agencyBusinessUnitListApiContainer;
+  }
+
+  public AgencyBusinessUnitListAccountApiContainer agencyBusinessUnitListAccount() {
+    return agencyBusinessUnitListAccountApiContainer;
+  }
+
+  public AgencyBusinessUnitListByAccountApiContainer agencyBusinessUnitListByAccount() {
+    return agencyBusinessUnitListByAccountApiContainer;
+  }
+
   public AgencyRealtimeCostApiContainer agencyRealtimeCost() {
     return agencyRealtimeCostApiContainer;
   }
@@ -321,6 +343,14 @@ public class App {
 
   public ComponentReviewResultsApiContainer componentReviewResults() {
     return componentReviewResultsApiContainer;
+  }
+
+  public ConversionLinkAssetsApiContainer conversionLinkAssets() {
+    return conversionLinkAssetsApiContainer;
+  }
+
+  public ConversionLinksApiContainer conversionLinks() {
+    return conversionLinksApiContainer;
   }
 
   public ConversionsApiContainer conversions() {

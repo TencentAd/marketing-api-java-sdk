@@ -77,6 +77,12 @@ public class TaskSpec {
   @SerializedName("update_adgroup_bid_amount_spec")
   private List<UpdateAdgroupBidAmountItem> updateAdgroupBidAmountSpec = null;
 
+  @SerializedName("update_adgroup_bind_rta_policy_spec")
+  private List<UpdateAdgroupBindRtaPolicyItem> updateAdgroupBindRtaPolicySpec = null;
+
+  @SerializedName("update_adcreative_object_comment_flag_spec")
+  private List<UpdateAdcreativeObjectCommentFlagItem> updateAdcreativeObjectCommentFlagSpec = null;
+
   public TaskSpec updateUnionPositionPackageSpec(
       List<UpdateUnionPositionPackageItem> updateUnionPositionPackageSpec) {
     this.updateUnionPositionPackageSpec = updateUnionPositionPackageSpec;
@@ -592,6 +598,67 @@ public class TaskSpec {
     this.updateAdgroupBidAmountSpec = updateAdgroupBidAmountSpec;
   }
 
+  public TaskSpec updateAdgroupBindRtaPolicySpec(
+      List<UpdateAdgroupBindRtaPolicyItem> updateAdgroupBindRtaPolicySpec) {
+    this.updateAdgroupBindRtaPolicySpec = updateAdgroupBindRtaPolicySpec;
+    return this;
+  }
+
+  public TaskSpec addUpdateAdgroupBindRtaPolicySpecItem(
+      UpdateAdgroupBindRtaPolicyItem updateAdgroupBindRtaPolicySpecItem) {
+    if (this.updateAdgroupBindRtaPolicySpec == null) {
+      this.updateAdgroupBindRtaPolicySpec = new ArrayList<UpdateAdgroupBindRtaPolicyItem>();
+    }
+    this.updateAdgroupBindRtaPolicySpec.add(updateAdgroupBindRtaPolicySpecItem);
+    return this;
+  }
+
+  /**
+   * Get updateAdgroupBindRtaPolicySpec
+   *
+   * @return updateAdgroupBindRtaPolicySpec
+   */
+  @ApiModelProperty(value = "")
+  public List<UpdateAdgroupBindRtaPolicyItem> getUpdateAdgroupBindRtaPolicySpec() {
+    return updateAdgroupBindRtaPolicySpec;
+  }
+
+  public void setUpdateAdgroupBindRtaPolicySpec(
+      List<UpdateAdgroupBindRtaPolicyItem> updateAdgroupBindRtaPolicySpec) {
+    this.updateAdgroupBindRtaPolicySpec = updateAdgroupBindRtaPolicySpec;
+  }
+
+  public TaskSpec updateAdcreativeObjectCommentFlagSpec(
+      List<UpdateAdcreativeObjectCommentFlagItem> updateAdcreativeObjectCommentFlagSpec) {
+    this.updateAdcreativeObjectCommentFlagSpec = updateAdcreativeObjectCommentFlagSpec;
+    return this;
+  }
+
+  public TaskSpec addUpdateAdcreativeObjectCommentFlagSpecItem(
+      UpdateAdcreativeObjectCommentFlagItem updateAdcreativeObjectCommentFlagSpecItem) {
+    if (this.updateAdcreativeObjectCommentFlagSpec == null) {
+      this.updateAdcreativeObjectCommentFlagSpec =
+          new ArrayList<UpdateAdcreativeObjectCommentFlagItem>();
+    }
+    this.updateAdcreativeObjectCommentFlagSpec.add(updateAdcreativeObjectCommentFlagSpecItem);
+    return this;
+  }
+
+  /**
+   * Get updateAdcreativeObjectCommentFlagSpec
+   *
+   * @return updateAdcreativeObjectCommentFlagSpec
+   */
+  @ApiModelProperty(value = "")
+  public List<UpdateAdcreativeObjectCommentFlagItem> getUpdateAdcreativeObjectCommentFlagSpec() {
+    return updateAdcreativeObjectCommentFlagSpec;
+  }
+
+  public void setUpdateAdcreativeObjectCommentFlagSpec(
+      List<UpdateAdcreativeObjectCommentFlagItem> updateAdcreativeObjectCommentFlagSpec) {
+    this.updateAdcreativeObjectCommentFlagSpec = updateAdcreativeObjectCommentFlagSpec;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -631,7 +698,12 @@ public class TaskSpec {
             this.updateFinderObjectCommentFlagSpec, taskSpec.updateFinderObjectCommentFlagSpec)
         && Objects.equals(this.updateAdgroupTimeSpec, taskSpec.updateAdgroupTimeSpec)
         && Objects.equals(this.updateAdgroupDateSpec, taskSpec.updateAdgroupDateSpec)
-        && Objects.equals(this.updateAdgroupBidAmountSpec, taskSpec.updateAdgroupBidAmountSpec);
+        && Objects.equals(this.updateAdgroupBidAmountSpec, taskSpec.updateAdgroupBidAmountSpec)
+        && Objects.equals(
+            this.updateAdgroupBindRtaPolicySpec, taskSpec.updateAdgroupBindRtaPolicySpec)
+        && Objects.equals(
+            this.updateAdcreativeObjectCommentFlagSpec,
+            taskSpec.updateAdcreativeObjectCommentFlagSpec);
   }
 
   @Override
@@ -653,7 +725,9 @@ public class TaskSpec {
         updateFinderObjectCommentFlagSpec,
         updateAdgroupTimeSpec,
         updateAdgroupDateSpec,
-        updateAdgroupBidAmountSpec);
+        updateAdgroupBidAmountSpec,
+        updateAdgroupBindRtaPolicySpec,
+        updateAdcreativeObjectCommentFlagSpec);
   }
 
   @Override

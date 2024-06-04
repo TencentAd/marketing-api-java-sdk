@@ -42,6 +42,9 @@ public class OptimizationGoalPermissionsGetResponseData {
   @SerializedName("forward_link_assist_permission_list")
   private List<ForwardLinkAssistPermissionStruct> forwardLinkAssistPermissionList = null;
 
+  @SerializedName("conversion_link_og_info")
+  private List<ConversionLinkOgItem> conversionLinkOgInfo = null;
+
   public OptimizationGoalPermissionsGetResponseData optimizationGoalPermissionList(
       List<String> optimizationGoalPermissionList) {
     this.optimizationGoalPermissionList = optimizationGoalPermissionList;
@@ -233,6 +236,35 @@ public class OptimizationGoalPermissionsGetResponseData {
     this.forwardLinkAssistPermissionList = forwardLinkAssistPermissionList;
   }
 
+  public OptimizationGoalPermissionsGetResponseData conversionLinkOgInfo(
+      List<ConversionLinkOgItem> conversionLinkOgInfo) {
+    this.conversionLinkOgInfo = conversionLinkOgInfo;
+    return this;
+  }
+
+  public OptimizationGoalPermissionsGetResponseData addConversionLinkOgInfoItem(
+      ConversionLinkOgItem conversionLinkOgInfoItem) {
+    if (this.conversionLinkOgInfo == null) {
+      this.conversionLinkOgInfo = new ArrayList<ConversionLinkOgItem>();
+    }
+    this.conversionLinkOgInfo.add(conversionLinkOgInfoItem);
+    return this;
+  }
+
+  /**
+   * Get conversionLinkOgInfo
+   *
+   * @return conversionLinkOgInfo
+   */
+  @ApiModelProperty(value = "")
+  public List<ConversionLinkOgItem> getConversionLinkOgInfo() {
+    return conversionLinkOgInfo;
+  }
+
+  public void setConversionLinkOgInfo(List<ConversionLinkOgItem> conversionLinkOgInfo) {
+    this.conversionLinkOgInfo = conversionLinkOgInfo;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -260,7 +292,10 @@ public class OptimizationGoalPermissionsGetResponseData {
             optimizationGoalPermissionsGetResponseData.deepWorthAdvancedGoalPermissionList)
         && Objects.equals(
             this.forwardLinkAssistPermissionList,
-            optimizationGoalPermissionsGetResponseData.forwardLinkAssistPermissionList);
+            optimizationGoalPermissionsGetResponseData.forwardLinkAssistPermissionList)
+        && Objects.equals(
+            this.conversionLinkOgInfo,
+            optimizationGoalPermissionsGetResponseData.conversionLinkOgInfo);
   }
 
   @Override
@@ -271,7 +306,8 @@ public class OptimizationGoalPermissionsGetResponseData {
         deepWorthOptimizationGoalPermissionList,
         deepBehaviorAdvancedGoalPermissionList,
         deepWorthAdvancedGoalPermissionList,
-        forwardLinkAssistPermissionList);
+        forwardLinkAssistPermissionList,
+        conversionLinkOgInfo);
   }
 
   @Override

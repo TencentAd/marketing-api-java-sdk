@@ -42,7 +42,7 @@ public class UserActionSet {
   private Boolean activateStatus = null;
 
   @SerializedName("created_time")
-  private Long createdTime = null;
+  private String createdTime = null;
 
   @SerializedName("access_way")
   private ActionSetAccessWayType accessWay = null;
@@ -170,7 +170,7 @@ public class UserActionSet {
     this.activateStatus = activateStatus;
   }
 
-  public UserActionSet createdTime(Long createdTime) {
+  public UserActionSet createdTime(String createdTime) {
     this.createdTime = createdTime;
     return this;
   }
@@ -181,11 +181,11 @@ public class UserActionSet {
    * @return createdTime
    */
   @ApiModelProperty(value = "")
-  public Long getCreatedTime() {
+  public String getCreatedTime() {
     return createdTime;
   }
 
-  public void setCreatedTime(Long createdTime) {
+  public void setCreatedTime(String createdTime) {
     this.createdTime = createdTime;
   }
 

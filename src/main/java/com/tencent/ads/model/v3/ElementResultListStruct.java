@@ -35,6 +35,9 @@ public class ElementResultListStruct {
   @SerializedName("element_value")
   private String elementValue = null;
 
+  @SerializedName("element_fingerprint")
+  private String elementFingerprint = null;
+
   @SerializedName("component_info")
   private ComponentInfoCanEmpty componentInfo = null;
 
@@ -121,6 +124,25 @@ public class ElementResultListStruct {
 
   public void setElementValue(String elementValue) {
     this.elementValue = elementValue;
+  }
+
+  public ElementResultListStruct elementFingerprint(String elementFingerprint) {
+    this.elementFingerprint = elementFingerprint;
+    return this;
+  }
+
+  /**
+   * Get elementFingerprint
+   *
+   * @return elementFingerprint
+   */
+  @ApiModelProperty(value = "")
+  public String getElementFingerprint() {
+    return elementFingerprint;
+  }
+
+  public void setElementFingerprint(String elementFingerprint) {
+    this.elementFingerprint = elementFingerprint;
   }
 
   public ElementResultListStruct componentInfo(ComponentInfoCanEmpty componentInfo) {
@@ -223,6 +245,7 @@ public class ElementResultListStruct {
         && Objects.equals(this.videoId, elementResultListStruct.videoId)
         && Objects.equals(this.elementName, elementResultListStruct.elementName)
         && Objects.equals(this.elementValue, elementResultListStruct.elementValue)
+        && Objects.equals(this.elementFingerprint, elementResultListStruct.elementFingerprint)
         && Objects.equals(this.componentInfo, elementResultListStruct.componentInfo)
         && Objects.equals(this.elementType, elementResultListStruct.elementType)
         && Objects.equals(this.reviewStatus, elementResultListStruct.reviewStatus)
@@ -237,6 +260,7 @@ public class ElementResultListStruct {
         videoId,
         elementName,
         elementValue,
+        elementFingerprint,
         componentInfo,
         elementType,
         reviewStatus,
