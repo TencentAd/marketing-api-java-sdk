@@ -36,7 +36,7 @@ public class MergeFundTypeFundsGetListStruct {
   private Long realtimeCost = null;
 
   @SerializedName("effect_funds")
-  private List<String> effectFunds = null;
+  private List<EffectListStruct> effectFunds = null;
 
   public MergeFundTypeFundsGetListStruct fundType(AccountMergeTypeMap fundType) {
     this.fundType = fundType;
@@ -114,14 +114,14 @@ public class MergeFundTypeFundsGetListStruct {
     this.realtimeCost = realtimeCost;
   }
 
-  public MergeFundTypeFundsGetListStruct effectFunds(List<String> effectFunds) {
+  public MergeFundTypeFundsGetListStruct effectFunds(List<EffectListStruct> effectFunds) {
     this.effectFunds = effectFunds;
     return this;
   }
 
-  public MergeFundTypeFundsGetListStruct addEffectFundsItem(String effectFundsItem) {
+  public MergeFundTypeFundsGetListStruct addEffectFundsItem(EffectListStruct effectFundsItem) {
     if (this.effectFunds == null) {
-      this.effectFunds = new ArrayList<String>();
+      this.effectFunds = new ArrayList<EffectListStruct>();
     }
     this.effectFunds.add(effectFundsItem);
     return this;
@@ -133,11 +133,11 @@ public class MergeFundTypeFundsGetListStruct {
    * @return effectFunds
    */
   @ApiModelProperty(value = "")
-  public List<String> getEffectFunds() {
+  public List<EffectListStruct> getEffectFunds() {
     return effectFunds;
   }
 
-  public void setEffectFunds(List<String> effectFunds) {
+  public void setEffectFunds(List<EffectListStruct> effectFunds) {
     this.effectFunds = effectFunds;
   }
 

@@ -31,6 +31,8 @@ public enum BidMode {
 
   CPA("BID_MODE_CPA"),
 
+  CPS("BID_MODE_CPS"),
+
   CPM("BID_MODE_CPM"),
 
   CPT("BID_MODE_CPT"),
@@ -41,7 +43,9 @@ public enum BidMode {
 
   OCPA("BID_MODE_OCPA"),
 
-  OCPM("BID_MODE_OCPM");
+  OCPM("BID_MODE_OCPM"),
+
+  YUNXUAN_CPS("BID_MODE_YUNXUAN_CPS");
 
   private String value;
 

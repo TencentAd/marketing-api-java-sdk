@@ -83,6 +83,23 @@ public class TaskSpec {
   @SerializedName("update_adcreative_object_comment_flag_spec")
   private List<UpdateAdcreativeObjectCommentFlagItem> updateAdcreativeObjectCommentFlagSpec = null;
 
+  @SerializedName("update_dynamic_creative_configured_status_spec")
+  private List<UpdateDynamicCreativeConfiguredStatusItem>
+      updateDynamicCreativeConfiguredStatusSpec = null;
+
+  @SerializedName("delete_dynamic_creative_spec")
+  private List<DeleteDynamicCreativeItem> deleteDynamicCreativeSpec = null;
+
+  @SerializedName("process_user_page_object_spec")
+  private List<ProcessUserPageObjectItem> processUserPageObjectSpec = null;
+
+  @SerializedName("create_scheduled_update_adgroup_daily_budget_spec")
+  private List<CreateScheduledUpdateAdgroupDailyBudgetItem>
+      createScheduledUpdateAdgroupDailyBudgetSpec = null;
+
+  @SerializedName("delete_scheduled_task_spec")
+  private List<DeleteScheduledTaskItem> deleteScheduledTaskSpec = null;
+
   public TaskSpec updateUnionPositionPackageSpec(
       List<UpdateUnionPositionPackageItem> updateUnionPositionPackageSpec) {
     this.updateUnionPositionPackageSpec = updateUnionPositionPackageSpec;
@@ -659,6 +676,162 @@ public class TaskSpec {
     this.updateAdcreativeObjectCommentFlagSpec = updateAdcreativeObjectCommentFlagSpec;
   }
 
+  public TaskSpec updateDynamicCreativeConfiguredStatusSpec(
+      List<UpdateDynamicCreativeConfiguredStatusItem> updateDynamicCreativeConfiguredStatusSpec) {
+    this.updateDynamicCreativeConfiguredStatusSpec = updateDynamicCreativeConfiguredStatusSpec;
+    return this;
+  }
+
+  public TaskSpec addUpdateDynamicCreativeConfiguredStatusSpecItem(
+      UpdateDynamicCreativeConfiguredStatusItem updateDynamicCreativeConfiguredStatusSpecItem) {
+    if (this.updateDynamicCreativeConfiguredStatusSpec == null) {
+      this.updateDynamicCreativeConfiguredStatusSpec =
+          new ArrayList<UpdateDynamicCreativeConfiguredStatusItem>();
+    }
+    this.updateDynamicCreativeConfiguredStatusSpec.add(
+        updateDynamicCreativeConfiguredStatusSpecItem);
+    return this;
+  }
+
+  /**
+   * Get updateDynamicCreativeConfiguredStatusSpec
+   *
+   * @return updateDynamicCreativeConfiguredStatusSpec
+   */
+  @ApiModelProperty(value = "")
+  public List<UpdateDynamicCreativeConfiguredStatusItem>
+      getUpdateDynamicCreativeConfiguredStatusSpec() {
+    return updateDynamicCreativeConfiguredStatusSpec;
+  }
+
+  public void setUpdateDynamicCreativeConfiguredStatusSpec(
+      List<UpdateDynamicCreativeConfiguredStatusItem> updateDynamicCreativeConfiguredStatusSpec) {
+    this.updateDynamicCreativeConfiguredStatusSpec = updateDynamicCreativeConfiguredStatusSpec;
+  }
+
+  public TaskSpec deleteDynamicCreativeSpec(
+      List<DeleteDynamicCreativeItem> deleteDynamicCreativeSpec) {
+    this.deleteDynamicCreativeSpec = deleteDynamicCreativeSpec;
+    return this;
+  }
+
+  public TaskSpec addDeleteDynamicCreativeSpecItem(
+      DeleteDynamicCreativeItem deleteDynamicCreativeSpecItem) {
+    if (this.deleteDynamicCreativeSpec == null) {
+      this.deleteDynamicCreativeSpec = new ArrayList<DeleteDynamicCreativeItem>();
+    }
+    this.deleteDynamicCreativeSpec.add(deleteDynamicCreativeSpecItem);
+    return this;
+  }
+
+  /**
+   * Get deleteDynamicCreativeSpec
+   *
+   * @return deleteDynamicCreativeSpec
+   */
+  @ApiModelProperty(value = "")
+  public List<DeleteDynamicCreativeItem> getDeleteDynamicCreativeSpec() {
+    return deleteDynamicCreativeSpec;
+  }
+
+  public void setDeleteDynamicCreativeSpec(
+      List<DeleteDynamicCreativeItem> deleteDynamicCreativeSpec) {
+    this.deleteDynamicCreativeSpec = deleteDynamicCreativeSpec;
+  }
+
+  public TaskSpec processUserPageObjectSpec(
+      List<ProcessUserPageObjectItem> processUserPageObjectSpec) {
+    this.processUserPageObjectSpec = processUserPageObjectSpec;
+    return this;
+  }
+
+  public TaskSpec addProcessUserPageObjectSpecItem(
+      ProcessUserPageObjectItem processUserPageObjectSpecItem) {
+    if (this.processUserPageObjectSpec == null) {
+      this.processUserPageObjectSpec = new ArrayList<ProcessUserPageObjectItem>();
+    }
+    this.processUserPageObjectSpec.add(processUserPageObjectSpecItem);
+    return this;
+  }
+
+  /**
+   * Get processUserPageObjectSpec
+   *
+   * @return processUserPageObjectSpec
+   */
+  @ApiModelProperty(value = "")
+  public List<ProcessUserPageObjectItem> getProcessUserPageObjectSpec() {
+    return processUserPageObjectSpec;
+  }
+
+  public void setProcessUserPageObjectSpec(
+      List<ProcessUserPageObjectItem> processUserPageObjectSpec) {
+    this.processUserPageObjectSpec = processUserPageObjectSpec;
+  }
+
+  public TaskSpec createScheduledUpdateAdgroupDailyBudgetSpec(
+      List<CreateScheduledUpdateAdgroupDailyBudgetItem>
+          createScheduledUpdateAdgroupDailyBudgetSpec) {
+    this.createScheduledUpdateAdgroupDailyBudgetSpec = createScheduledUpdateAdgroupDailyBudgetSpec;
+    return this;
+  }
+
+  public TaskSpec addCreateScheduledUpdateAdgroupDailyBudgetSpecItem(
+      CreateScheduledUpdateAdgroupDailyBudgetItem createScheduledUpdateAdgroupDailyBudgetSpecItem) {
+    if (this.createScheduledUpdateAdgroupDailyBudgetSpec == null) {
+      this.createScheduledUpdateAdgroupDailyBudgetSpec =
+          new ArrayList<CreateScheduledUpdateAdgroupDailyBudgetItem>();
+    }
+    this.createScheduledUpdateAdgroupDailyBudgetSpec.add(
+        createScheduledUpdateAdgroupDailyBudgetSpecItem);
+    return this;
+  }
+
+  /**
+   * Get createScheduledUpdateAdgroupDailyBudgetSpec
+   *
+   * @return createScheduledUpdateAdgroupDailyBudgetSpec
+   */
+  @ApiModelProperty(value = "")
+  public List<CreateScheduledUpdateAdgroupDailyBudgetItem>
+      getCreateScheduledUpdateAdgroupDailyBudgetSpec() {
+    return createScheduledUpdateAdgroupDailyBudgetSpec;
+  }
+
+  public void setCreateScheduledUpdateAdgroupDailyBudgetSpec(
+      List<CreateScheduledUpdateAdgroupDailyBudgetItem>
+          createScheduledUpdateAdgroupDailyBudgetSpec) {
+    this.createScheduledUpdateAdgroupDailyBudgetSpec = createScheduledUpdateAdgroupDailyBudgetSpec;
+  }
+
+  public TaskSpec deleteScheduledTaskSpec(List<DeleteScheduledTaskItem> deleteScheduledTaskSpec) {
+    this.deleteScheduledTaskSpec = deleteScheduledTaskSpec;
+    return this;
+  }
+
+  public TaskSpec addDeleteScheduledTaskSpecItem(
+      DeleteScheduledTaskItem deleteScheduledTaskSpecItem) {
+    if (this.deleteScheduledTaskSpec == null) {
+      this.deleteScheduledTaskSpec = new ArrayList<DeleteScheduledTaskItem>();
+    }
+    this.deleteScheduledTaskSpec.add(deleteScheduledTaskSpecItem);
+    return this;
+  }
+
+  /**
+   * Get deleteScheduledTaskSpec
+   *
+   * @return deleteScheduledTaskSpec
+   */
+  @ApiModelProperty(value = "")
+  public List<DeleteScheduledTaskItem> getDeleteScheduledTaskSpec() {
+    return deleteScheduledTaskSpec;
+  }
+
+  public void setDeleteScheduledTaskSpec(List<DeleteScheduledTaskItem> deleteScheduledTaskSpec) {
+    this.deleteScheduledTaskSpec = deleteScheduledTaskSpec;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -703,7 +876,16 @@ public class TaskSpec {
             this.updateAdgroupBindRtaPolicySpec, taskSpec.updateAdgroupBindRtaPolicySpec)
         && Objects.equals(
             this.updateAdcreativeObjectCommentFlagSpec,
-            taskSpec.updateAdcreativeObjectCommentFlagSpec);
+            taskSpec.updateAdcreativeObjectCommentFlagSpec)
+        && Objects.equals(
+            this.updateDynamicCreativeConfiguredStatusSpec,
+            taskSpec.updateDynamicCreativeConfiguredStatusSpec)
+        && Objects.equals(this.deleteDynamicCreativeSpec, taskSpec.deleteDynamicCreativeSpec)
+        && Objects.equals(this.processUserPageObjectSpec, taskSpec.processUserPageObjectSpec)
+        && Objects.equals(
+            this.createScheduledUpdateAdgroupDailyBudgetSpec,
+            taskSpec.createScheduledUpdateAdgroupDailyBudgetSpec)
+        && Objects.equals(this.deleteScheduledTaskSpec, taskSpec.deleteScheduledTaskSpec);
   }
 
   @Override
@@ -727,7 +909,12 @@ public class TaskSpec {
         updateAdgroupDateSpec,
         updateAdgroupBidAmountSpec,
         updateAdgroupBindRtaPolicySpec,
-        updateAdcreativeObjectCommentFlagSpec);
+        updateAdcreativeObjectCommentFlagSpec,
+        updateDynamicCreativeConfiguredStatusSpec,
+        deleteDynamicCreativeSpec,
+        processUserPageObjectSpec,
+        createScheduledUpdateAdgroupDailyBudgetSpec,
+        deleteScheduledTaskSpec);
   }
 
   @Override

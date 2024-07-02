@@ -30,6 +30,15 @@ public class FinderAdObjectListGetListStruct {
   @SerializedName("dynamic_creative_id")
   private Long dynamicCreativeId = null;
 
+  @SerializedName("visibility_code")
+  private VisibilityCode visibilityCode = null;
+
+  @SerializedName("jump_info")
+  private JumpinfoComponent jumpInfo = null;
+
+  @SerializedName("ad_export_id")
+  private String adExportId = null;
+
   public FinderAdObjectListGetListStruct finderAdObjectId(Long finderAdObjectId) {
     this.finderAdObjectId = finderAdObjectId;
     return this;
@@ -87,6 +96,63 @@ public class FinderAdObjectListGetListStruct {
     this.dynamicCreativeId = dynamicCreativeId;
   }
 
+  public FinderAdObjectListGetListStruct visibilityCode(VisibilityCode visibilityCode) {
+    this.visibilityCode = visibilityCode;
+    return this;
+  }
+
+  /**
+   * Get visibilityCode
+   *
+   * @return visibilityCode
+   */
+  @ApiModelProperty(value = "")
+  public VisibilityCode getVisibilityCode() {
+    return visibilityCode;
+  }
+
+  public void setVisibilityCode(VisibilityCode visibilityCode) {
+    this.visibilityCode = visibilityCode;
+  }
+
+  public FinderAdObjectListGetListStruct jumpInfo(JumpinfoComponent jumpInfo) {
+    this.jumpInfo = jumpInfo;
+    return this;
+  }
+
+  /**
+   * Get jumpInfo
+   *
+   * @return jumpInfo
+   */
+  @ApiModelProperty(value = "")
+  public JumpinfoComponent getJumpInfo() {
+    return jumpInfo;
+  }
+
+  public void setJumpInfo(JumpinfoComponent jumpInfo) {
+    this.jumpInfo = jumpInfo;
+  }
+
+  public FinderAdObjectListGetListStruct adExportId(String adExportId) {
+    this.adExportId = adExportId;
+    return this;
+  }
+
+  /**
+   * Get adExportId
+   *
+   * @return adExportId
+   */
+  @ApiModelProperty(value = "")
+  public String getAdExportId() {
+    return adExportId;
+  }
+
+  public void setAdExportId(String adExportId) {
+    this.adExportId = adExportId;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -99,13 +165,16 @@ public class FinderAdObjectListGetListStruct {
         (FinderAdObjectListGetListStruct) o;
     return Objects.equals(this.finderAdObjectId, finderAdObjectListGetListStruct.finderAdObjectId)
         && Objects.equals(this.finderObject, finderAdObjectListGetListStruct.finderObject)
-        && Objects.equals(
-            this.dynamicCreativeId, finderAdObjectListGetListStruct.dynamicCreativeId);
+        && Objects.equals(this.dynamicCreativeId, finderAdObjectListGetListStruct.dynamicCreativeId)
+        && Objects.equals(this.visibilityCode, finderAdObjectListGetListStruct.visibilityCode)
+        && Objects.equals(this.jumpInfo, finderAdObjectListGetListStruct.jumpInfo)
+        && Objects.equals(this.adExportId, finderAdObjectListGetListStruct.adExportId);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(finderAdObjectId, finderObject, dynamicCreativeId);
+    return Objects.hash(
+        finderAdObjectId, finderObject, dynamicCreativeId, visibilityCode, jumpInfo, adExportId);
   }
 
   @Override

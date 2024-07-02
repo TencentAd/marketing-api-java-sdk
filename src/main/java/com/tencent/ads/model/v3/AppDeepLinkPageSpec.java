@@ -45,6 +45,9 @@ public class AppDeepLinkPageSpec {
   @SerializedName("mpa_universal_link_wildcard_url")
   private String mpaUniversalLinkWildcardUrl = null;
 
+  @SerializedName("deep_link_url")
+  private String deepLinkUrl = null;
+
   public AppDeepLinkPageSpec androidDeepLinkAppId(String androidDeepLinkAppId) {
     this.androidDeepLinkAppId = androidDeepLinkAppId;
     return this;
@@ -197,6 +200,25 @@ public class AppDeepLinkPageSpec {
     this.mpaUniversalLinkWildcardUrl = mpaUniversalLinkWildcardUrl;
   }
 
+  public AppDeepLinkPageSpec deepLinkUrl(String deepLinkUrl) {
+    this.deepLinkUrl = deepLinkUrl;
+    return this;
+  }
+
+  /**
+   * Get deepLinkUrl
+   *
+   * @return deepLinkUrl
+   */
+  @ApiModelProperty(value = "")
+  public String getDeepLinkUrl() {
+    return deepLinkUrl;
+  }
+
+  public void setDeepLinkUrl(String deepLinkUrl) {
+    this.deepLinkUrl = deepLinkUrl;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -216,7 +238,8 @@ public class AppDeepLinkPageSpec {
         && Objects.equals(
             this.mpaIosDeepLinkWildcardUrl, appDeepLinkPageSpec.mpaIosDeepLinkWildcardUrl)
         && Objects.equals(
-            this.mpaUniversalLinkWildcardUrl, appDeepLinkPageSpec.mpaUniversalLinkWildcardUrl);
+            this.mpaUniversalLinkWildcardUrl, appDeepLinkPageSpec.mpaUniversalLinkWildcardUrl)
+        && Objects.equals(this.deepLinkUrl, appDeepLinkPageSpec.deepLinkUrl);
   }
 
   @Override
@@ -229,7 +252,8 @@ public class AppDeepLinkPageSpec {
         universalLinkUrl,
         mpaAndroidDeepLinkWildcardUrl,
         mpaIosDeepLinkWildcardUrl,
-        mpaUniversalLinkWildcardUrl);
+        mpaUniversalLinkWildcardUrl,
+        deepLinkUrl);
   }
 
   @Override

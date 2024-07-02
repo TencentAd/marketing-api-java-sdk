@@ -14,9 +14,7 @@ public class TencentAds extends CustomApp {
   private static final String SCHEMA = "https";
   private static final String API_VERSION = "v3.0";
   private static String basePath = "https://api.e.qq.com/v3.0";
-  private static final String SDK_VERSION = "1.1.82";
-  private String nameService = "";
-  private String nameServiceSchema = "https";
+  private static final String SDK_VERSION = "1.1.83";
 
   private TencentAds() {}
 
@@ -130,25 +128,6 @@ public class TencentAds extends CustomApp {
    */
   public void setWriteTimeout(int writeTimeout) {
     defaultApiClient.setReadTimeout(writeTimeout);
-  }
-
-  /**
-   * L5配置
-   *
-   * @param nameService modId:cmdId
-   * @param schema http or https
-   */
-  public void setNameService(String nameService, String schema) {
-    this.nameService = nameService;
-    this.nameServiceSchema = schema;
-  }
-
-  public String getNameService() {
-    return nameService;
-  }
-
-  public String getNameServiceSchema() {
-    return nameServiceSchema;
   }
 
   public String getApiVersion() {

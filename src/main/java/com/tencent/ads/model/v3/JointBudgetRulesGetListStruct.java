@@ -50,6 +50,9 @@ public class JointBudgetRulesGetListStruct {
   @SerializedName("adgroup_id_list")
   private List<Long> adgroupIdList = null;
 
+  @SerializedName("joint_budget_rule_type")
+  private JointBudgetRuleType jointBudgetRuleType = null;
+
   public JointBudgetRulesGetListStruct jointBudgetRuleId(Long jointBudgetRuleId) {
     this.jointBudgetRuleId = jointBudgetRuleId;
     return this;
@@ -229,6 +232,26 @@ public class JointBudgetRulesGetListStruct {
     this.adgroupIdList = adgroupIdList;
   }
 
+  public JointBudgetRulesGetListStruct jointBudgetRuleType(
+      JointBudgetRuleType jointBudgetRuleType) {
+    this.jointBudgetRuleType = jointBudgetRuleType;
+    return this;
+  }
+
+  /**
+   * Get jointBudgetRuleType
+   *
+   * @return jointBudgetRuleType
+   */
+  @ApiModelProperty(value = "")
+  public JointBudgetRuleType getJointBudgetRuleType() {
+    return jointBudgetRuleType;
+  }
+
+  public void setJointBudgetRuleType(JointBudgetRuleType jointBudgetRuleType) {
+    this.jointBudgetRuleType = jointBudgetRuleType;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -247,7 +270,9 @@ public class JointBudgetRulesGetListStruct {
         && Objects.equals(this.lastModTime, jointBudgetRulesGetListStruct.lastModTime)
         && Objects.equals(this.completedTime, jointBudgetRulesGetListStruct.completedTime)
         && Objects.equals(this.bldate, jointBudgetRulesGetListStruct.bldate)
-        && Objects.equals(this.adgroupIdList, jointBudgetRulesGetListStruct.adgroupIdList);
+        && Objects.equals(this.adgroupIdList, jointBudgetRulesGetListStruct.adgroupIdList)
+        && Objects.equals(
+            this.jointBudgetRuleType, jointBudgetRulesGetListStruct.jointBudgetRuleType);
   }
 
   @Override
@@ -261,7 +286,8 @@ public class JointBudgetRulesGetListStruct {
         lastModTime,
         completedTime,
         bldate,
-        adgroupIdList);
+        adgroupIdList,
+        jointBudgetRuleType);
   }
 
   @Override

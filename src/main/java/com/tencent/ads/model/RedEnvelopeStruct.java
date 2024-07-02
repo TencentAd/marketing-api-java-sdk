@@ -42,6 +42,30 @@ public class RedEnvelopeStruct {
   @SerializedName("red_barrage_switch")
   private Boolean redBarrageSwitch = null;
 
+  @SerializedName("plot_type")
+  private PlotType plotType = null;
+
+  @SerializedName("plot_wechat_status_footer_switch")
+  private Boolean plotWechatStatusFooterSwitch = null;
+
+  @SerializedName("plot_frame_color")
+  private String plotFrameColor = null;
+
+  @SerializedName("plot_send_word")
+  private String plotSendWord = null;
+
+  @SerializedName("plot_sign_text")
+  private String plotSignText = null;
+
+  @SerializedName("plot_sign_image")
+  private String plotSignImage = null;
+
+  @SerializedName("plot_brand_logo")
+  private String plotBrandLogo = null;
+
+  @SerializedName("plot_original_material")
+  private PlotOriginalMaterial plotOriginalMaterial = null;
+
   public RedEnvelopeStruct redEnvelopeSwitch(Boolean redEnvelopeSwitch) {
     this.redEnvelopeSwitch = redEnvelopeSwitch;
     return this;
@@ -175,6 +199,158 @@ public class RedEnvelopeStruct {
     this.redBarrageSwitch = redBarrageSwitch;
   }
 
+  public RedEnvelopeStruct plotType(PlotType plotType) {
+    this.plotType = plotType;
+    return this;
+  }
+
+  /**
+   * Get plotType
+   *
+   * @return plotType
+   */
+  @ApiModelProperty(value = "")
+  public PlotType getPlotType() {
+    return plotType;
+  }
+
+  public void setPlotType(PlotType plotType) {
+    this.plotType = plotType;
+  }
+
+  public RedEnvelopeStruct plotWechatStatusFooterSwitch(Boolean plotWechatStatusFooterSwitch) {
+    this.plotWechatStatusFooterSwitch = plotWechatStatusFooterSwitch;
+    return this;
+  }
+
+  /**
+   * Get plotWechatStatusFooterSwitch
+   *
+   * @return plotWechatStatusFooterSwitch
+   */
+  @ApiModelProperty(value = "")
+  public Boolean isPlotWechatStatusFooterSwitch() {
+    return plotWechatStatusFooterSwitch;
+  }
+
+  public void setPlotWechatStatusFooterSwitch(Boolean plotWechatStatusFooterSwitch) {
+    this.plotWechatStatusFooterSwitch = plotWechatStatusFooterSwitch;
+  }
+
+  public RedEnvelopeStruct plotFrameColor(String plotFrameColor) {
+    this.plotFrameColor = plotFrameColor;
+    return this;
+  }
+
+  /**
+   * Get plotFrameColor
+   *
+   * @return plotFrameColor
+   */
+  @ApiModelProperty(value = "")
+  public String getPlotFrameColor() {
+    return plotFrameColor;
+  }
+
+  public void setPlotFrameColor(String plotFrameColor) {
+    this.plotFrameColor = plotFrameColor;
+  }
+
+  public RedEnvelopeStruct plotSendWord(String plotSendWord) {
+    this.plotSendWord = plotSendWord;
+    return this;
+  }
+
+  /**
+   * Get plotSendWord
+   *
+   * @return plotSendWord
+   */
+  @ApiModelProperty(value = "")
+  public String getPlotSendWord() {
+    return plotSendWord;
+  }
+
+  public void setPlotSendWord(String plotSendWord) {
+    this.plotSendWord = plotSendWord;
+  }
+
+  public RedEnvelopeStruct plotSignText(String plotSignText) {
+    this.plotSignText = plotSignText;
+    return this;
+  }
+
+  /**
+   * Get plotSignText
+   *
+   * @return plotSignText
+   */
+  @ApiModelProperty(value = "")
+  public String getPlotSignText() {
+    return plotSignText;
+  }
+
+  public void setPlotSignText(String plotSignText) {
+    this.plotSignText = plotSignText;
+  }
+
+  public RedEnvelopeStruct plotSignImage(String plotSignImage) {
+    this.plotSignImage = plotSignImage;
+    return this;
+  }
+
+  /**
+   * Get plotSignImage
+   *
+   * @return plotSignImage
+   */
+  @ApiModelProperty(value = "")
+  public String getPlotSignImage() {
+    return plotSignImage;
+  }
+
+  public void setPlotSignImage(String plotSignImage) {
+    this.plotSignImage = plotSignImage;
+  }
+
+  public RedEnvelopeStruct plotBrandLogo(String plotBrandLogo) {
+    this.plotBrandLogo = plotBrandLogo;
+    return this;
+  }
+
+  /**
+   * Get plotBrandLogo
+   *
+   * @return plotBrandLogo
+   */
+  @ApiModelProperty(value = "")
+  public String getPlotBrandLogo() {
+    return plotBrandLogo;
+  }
+
+  public void setPlotBrandLogo(String plotBrandLogo) {
+    this.plotBrandLogo = plotBrandLogo;
+  }
+
+  public RedEnvelopeStruct plotOriginalMaterial(PlotOriginalMaterial plotOriginalMaterial) {
+    this.plotOriginalMaterial = plotOriginalMaterial;
+    return this;
+  }
+
+  /**
+   * Get plotOriginalMaterial
+   *
+   * @return plotOriginalMaterial
+   */
+  @ApiModelProperty(value = "")
+  public PlotOriginalMaterial getPlotOriginalMaterial() {
+    return plotOriginalMaterial;
+  }
+
+  public void setPlotOriginalMaterial(PlotOriginalMaterial plotOriginalMaterial) {
+    this.plotOriginalMaterial = plotOriginalMaterial;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -192,7 +368,16 @@ public class RedEnvelopeStruct {
             this.redEnvelopeDisappearTimeMs, redEnvelopeStruct.redEnvelopeDisappearTimeMs)
         && Objects.equals(
             this.redEnvelopeOriginExtraSceneId, redEnvelopeStruct.redEnvelopeOriginExtraSceneId)
-        && Objects.equals(this.redBarrageSwitch, redEnvelopeStruct.redBarrageSwitch);
+        && Objects.equals(this.redBarrageSwitch, redEnvelopeStruct.redBarrageSwitch)
+        && Objects.equals(this.plotType, redEnvelopeStruct.plotType)
+        && Objects.equals(
+            this.plotWechatStatusFooterSwitch, redEnvelopeStruct.plotWechatStatusFooterSwitch)
+        && Objects.equals(this.plotFrameColor, redEnvelopeStruct.plotFrameColor)
+        && Objects.equals(this.plotSendWord, redEnvelopeStruct.plotSendWord)
+        && Objects.equals(this.plotSignText, redEnvelopeStruct.plotSignText)
+        && Objects.equals(this.plotSignImage, redEnvelopeStruct.plotSignImage)
+        && Objects.equals(this.plotBrandLogo, redEnvelopeStruct.plotBrandLogo)
+        && Objects.equals(this.plotOriginalMaterial, redEnvelopeStruct.plotOriginalMaterial);
   }
 
   @Override
@@ -204,7 +389,15 @@ public class RedEnvelopeStruct {
         redEnvelopeAppearTimeMs,
         redEnvelopeDisappearTimeMs,
         redEnvelopeOriginExtraSceneId,
-        redBarrageSwitch);
+        redBarrageSwitch,
+        plotType,
+        plotWechatStatusFooterSwitch,
+        plotFrameColor,
+        plotSendWord,
+        plotSignText,
+        plotSignImage,
+        plotBrandLogo,
+        plotOriginalMaterial);
   }
 
   @Override

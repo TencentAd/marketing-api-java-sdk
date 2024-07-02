@@ -2136,6 +2136,117 @@ public class DailyReportApiListStruct {
   @SerializedName("video_ids")
   private String videoIds = null;
 
+  @SerializedName("exp_avg_rank")
+  private Double expAvgRank = null;
+
+  @SerializedName("exp_overall_top_pv")
+  private Long expOverallTopPv = null;
+
+  @SerializedName("clk_top_pv")
+  private Long clkTopPv = null;
+
+  @SerializedName("cvs_exp_pv")
+  private Long cvsExpPv = null;
+
+  @SerializedName("cvs_exp_uv")
+  private Long cvsExpUv = null;
+
+  @SerializedName("cvs_cpn_clk_pv")
+  private Long cvsCpnClkPv = null;
+
+  @SerializedName("cvs_cpn_clk_uv")
+  private Long cvsCpnClkUv = null;
+
+  @SerializedName("cvs_cpn_exp_pv")
+  private Long cvsCpnExpPv = null;
+
+  @SerializedName("cvs_cpn_exp_uv")
+  private Long cvsCpnExpUv = null;
+
+  @SerializedName("cvs_cpn_exp_duration")
+  private Double cvsCpnExpDuration = null;
+
+  @SerializedName("cvs_cpn_btn_clk_pv")
+  private Long cvsCpnBtnClkPv = null;
+
+  @SerializedName("cvs_cpn_btn_clk_uv")
+  private Long cvsCpnBtnClkUv = null;
+
+  @SerializedName("cvs_cpn_clk_dedup_pv")
+  private Long cvsCpnClkDedupPv = null;
+
+  @SerializedName("cvs_cpn_video_play_pv")
+  private Long cvsCpnVideoPlayPv = null;
+
+  @SerializedName("cvs_cpn_video_play_uv")
+  private Long cvsCpnVideoPlayUv = null;
+
+  @SerializedName("cvs_cpn_video_play_duration")
+  private Double cvsCpnVideoPlayDuration = null;
+
+  @SerializedName("cvs_cpn_video_play_half_uv")
+  private Long cvsCpnVideoPlayHalfUv = null;
+
+  @SerializedName("cvs_cpn_video_play_fin_uv")
+  private Long cvsCpnVideoPlayFinUv = null;
+
+  @SerializedName("cvs_cpn_media_play_pv")
+  private Long cvsCpnMediaPlayPv = null;
+
+  @SerializedName("cvs_cpn_media_play_uv")
+  private Long cvsCpnMediaPlayUv = null;
+
+  @SerializedName("cvs_cpn_media_play_duration")
+  private Double cvsCpnMediaPlayDuration = null;
+
+  @SerializedName("cvs_cpn_media_play_half_uv")
+  private Long cvsCpnMediaPlayHalfUv = null;
+
+  @SerializedName("cvs_cpn_media_play_fin_uv")
+  private Long cvsCpnMediaPlayFinUv = null;
+
+  @SerializedName("avg_cvs_viewtime")
+  private Double avgCvsViewtime = null;
+
+  @SerializedName("avg_cpnexp_viewtime")
+  private Double avgCpnexpViewtime = null;
+
+  @SerializedName("avg_cpnplay_video_time")
+  private Double avgCpnplayVideoTime = null;
+
+  @SerializedName("avg_cpnplay_media_time")
+  private Double avgCpnplayMediaTime = null;
+
+  @SerializedName("cpnclk_button_pv_rate")
+  private Double cpnclkButtonPvRate = null;
+
+  @SerializedName("cpnplay_video_and_media_pv")
+  private Long cpnplayVideoAndMediaPv = null;
+
+  @SerializedName("cpnplay_video_and_media_uv")
+  private Long cpnplayVideoAndMediaUv = null;
+
+  @SerializedName("cpnplay_video_and_media_fin_uv")
+  private Long cpnplayVideoAndMediaFinUv = null;
+
+  @SerializedName("cpnplay_video_and_media_time")
+  private Double cpnplayVideoAndMediaTime = null;
+
+  @SerializedName("avg_cpnplay_video_and_media_time")
+  private Double avgCpnplayVideoAndMediaTime = null;
+
+  @SerializedName("canvas_hb_single_receive_exp_pv")
+  private Long canvasHbSingleReceiveExpPv = null;
+
+  @SerializedName("canvas_hb_single_send_exp_pv")
+  private Long canvasHbSingleSendExpPv = null;
+
+  @SerializedName("canvas_hb_double_receive_exp_pv")
+  private Long canvasHbDoubleReceiveExpPv = null;
+
+  @SerializedName("canvas_hb_double_send_exp_pv")
+  private Long canvasHbDoubleSendExpPv = null;
+
   @SerializedName("hour")
   private Long hour = null;
 
@@ -2156,15 +2267,6 @@ public class DailyReportApiListStruct {
 
   @SerializedName("device")
   private Long device = null;
-
-  @SerializedName("exp_avg_rank")
-  private Double expAvgRank = null;
-
-  @SerializedName("exp_overall_top_pv")
-  private Long expOverallTopPv = null;
-
-  @SerializedName("clk_top_pv")
-  private Long clkTopPv = null;
 
   @SerializedName("queryword")
   private String queryword = null;
@@ -15621,6 +15723,709 @@ public class DailyReportApiListStruct {
     this.videoIds = videoIds;
   }
 
+  public DailyReportApiListStruct expAvgRank(Double expAvgRank) {
+    this.expAvgRank = expAvgRank;
+    return this;
+  }
+
+  /**
+   * Get expAvgRank
+   *
+   * @return expAvgRank
+   */
+  @ApiModelProperty(value = "")
+  public Double getExpAvgRank() {
+    return expAvgRank;
+  }
+
+  public void setExpAvgRank(Double expAvgRank) {
+    this.expAvgRank = expAvgRank;
+  }
+
+  public DailyReportApiListStruct expOverallTopPv(Long expOverallTopPv) {
+    this.expOverallTopPv = expOverallTopPv;
+    return this;
+  }
+
+  /**
+   * Get expOverallTopPv
+   *
+   * @return expOverallTopPv
+   */
+  @ApiModelProperty(value = "")
+  public Long getExpOverallTopPv() {
+    return expOverallTopPv;
+  }
+
+  public void setExpOverallTopPv(Long expOverallTopPv) {
+    this.expOverallTopPv = expOverallTopPv;
+  }
+
+  public DailyReportApiListStruct clkTopPv(Long clkTopPv) {
+    this.clkTopPv = clkTopPv;
+    return this;
+  }
+
+  /**
+   * Get clkTopPv
+   *
+   * @return clkTopPv
+   */
+  @ApiModelProperty(value = "")
+  public Long getClkTopPv() {
+    return clkTopPv;
+  }
+
+  public void setClkTopPv(Long clkTopPv) {
+    this.clkTopPv = clkTopPv;
+  }
+
+  public DailyReportApiListStruct cvsExpPv(Long cvsExpPv) {
+    this.cvsExpPv = cvsExpPv;
+    return this;
+  }
+
+  /**
+   * Get cvsExpPv
+   *
+   * @return cvsExpPv
+   */
+  @ApiModelProperty(value = "")
+  public Long getCvsExpPv() {
+    return cvsExpPv;
+  }
+
+  public void setCvsExpPv(Long cvsExpPv) {
+    this.cvsExpPv = cvsExpPv;
+  }
+
+  public DailyReportApiListStruct cvsExpUv(Long cvsExpUv) {
+    this.cvsExpUv = cvsExpUv;
+    return this;
+  }
+
+  /**
+   * Get cvsExpUv
+   *
+   * @return cvsExpUv
+   */
+  @ApiModelProperty(value = "")
+  public Long getCvsExpUv() {
+    return cvsExpUv;
+  }
+
+  public void setCvsExpUv(Long cvsExpUv) {
+    this.cvsExpUv = cvsExpUv;
+  }
+
+  public DailyReportApiListStruct cvsCpnClkPv(Long cvsCpnClkPv) {
+    this.cvsCpnClkPv = cvsCpnClkPv;
+    return this;
+  }
+
+  /**
+   * Get cvsCpnClkPv
+   *
+   * @return cvsCpnClkPv
+   */
+  @ApiModelProperty(value = "")
+  public Long getCvsCpnClkPv() {
+    return cvsCpnClkPv;
+  }
+
+  public void setCvsCpnClkPv(Long cvsCpnClkPv) {
+    this.cvsCpnClkPv = cvsCpnClkPv;
+  }
+
+  public DailyReportApiListStruct cvsCpnClkUv(Long cvsCpnClkUv) {
+    this.cvsCpnClkUv = cvsCpnClkUv;
+    return this;
+  }
+
+  /**
+   * Get cvsCpnClkUv
+   *
+   * @return cvsCpnClkUv
+   */
+  @ApiModelProperty(value = "")
+  public Long getCvsCpnClkUv() {
+    return cvsCpnClkUv;
+  }
+
+  public void setCvsCpnClkUv(Long cvsCpnClkUv) {
+    this.cvsCpnClkUv = cvsCpnClkUv;
+  }
+
+  public DailyReportApiListStruct cvsCpnExpPv(Long cvsCpnExpPv) {
+    this.cvsCpnExpPv = cvsCpnExpPv;
+    return this;
+  }
+
+  /**
+   * Get cvsCpnExpPv
+   *
+   * @return cvsCpnExpPv
+   */
+  @ApiModelProperty(value = "")
+  public Long getCvsCpnExpPv() {
+    return cvsCpnExpPv;
+  }
+
+  public void setCvsCpnExpPv(Long cvsCpnExpPv) {
+    this.cvsCpnExpPv = cvsCpnExpPv;
+  }
+
+  public DailyReportApiListStruct cvsCpnExpUv(Long cvsCpnExpUv) {
+    this.cvsCpnExpUv = cvsCpnExpUv;
+    return this;
+  }
+
+  /**
+   * Get cvsCpnExpUv
+   *
+   * @return cvsCpnExpUv
+   */
+  @ApiModelProperty(value = "")
+  public Long getCvsCpnExpUv() {
+    return cvsCpnExpUv;
+  }
+
+  public void setCvsCpnExpUv(Long cvsCpnExpUv) {
+    this.cvsCpnExpUv = cvsCpnExpUv;
+  }
+
+  public DailyReportApiListStruct cvsCpnExpDuration(Double cvsCpnExpDuration) {
+    this.cvsCpnExpDuration = cvsCpnExpDuration;
+    return this;
+  }
+
+  /**
+   * Get cvsCpnExpDuration
+   *
+   * @return cvsCpnExpDuration
+   */
+  @ApiModelProperty(value = "")
+  public Double getCvsCpnExpDuration() {
+    return cvsCpnExpDuration;
+  }
+
+  public void setCvsCpnExpDuration(Double cvsCpnExpDuration) {
+    this.cvsCpnExpDuration = cvsCpnExpDuration;
+  }
+
+  public DailyReportApiListStruct cvsCpnBtnClkPv(Long cvsCpnBtnClkPv) {
+    this.cvsCpnBtnClkPv = cvsCpnBtnClkPv;
+    return this;
+  }
+
+  /**
+   * Get cvsCpnBtnClkPv
+   *
+   * @return cvsCpnBtnClkPv
+   */
+  @ApiModelProperty(value = "")
+  public Long getCvsCpnBtnClkPv() {
+    return cvsCpnBtnClkPv;
+  }
+
+  public void setCvsCpnBtnClkPv(Long cvsCpnBtnClkPv) {
+    this.cvsCpnBtnClkPv = cvsCpnBtnClkPv;
+  }
+
+  public DailyReportApiListStruct cvsCpnBtnClkUv(Long cvsCpnBtnClkUv) {
+    this.cvsCpnBtnClkUv = cvsCpnBtnClkUv;
+    return this;
+  }
+
+  /**
+   * Get cvsCpnBtnClkUv
+   *
+   * @return cvsCpnBtnClkUv
+   */
+  @ApiModelProperty(value = "")
+  public Long getCvsCpnBtnClkUv() {
+    return cvsCpnBtnClkUv;
+  }
+
+  public void setCvsCpnBtnClkUv(Long cvsCpnBtnClkUv) {
+    this.cvsCpnBtnClkUv = cvsCpnBtnClkUv;
+  }
+
+  public DailyReportApiListStruct cvsCpnClkDedupPv(Long cvsCpnClkDedupPv) {
+    this.cvsCpnClkDedupPv = cvsCpnClkDedupPv;
+    return this;
+  }
+
+  /**
+   * Get cvsCpnClkDedupPv
+   *
+   * @return cvsCpnClkDedupPv
+   */
+  @ApiModelProperty(value = "")
+  public Long getCvsCpnClkDedupPv() {
+    return cvsCpnClkDedupPv;
+  }
+
+  public void setCvsCpnClkDedupPv(Long cvsCpnClkDedupPv) {
+    this.cvsCpnClkDedupPv = cvsCpnClkDedupPv;
+  }
+
+  public DailyReportApiListStruct cvsCpnVideoPlayPv(Long cvsCpnVideoPlayPv) {
+    this.cvsCpnVideoPlayPv = cvsCpnVideoPlayPv;
+    return this;
+  }
+
+  /**
+   * Get cvsCpnVideoPlayPv
+   *
+   * @return cvsCpnVideoPlayPv
+   */
+  @ApiModelProperty(value = "")
+  public Long getCvsCpnVideoPlayPv() {
+    return cvsCpnVideoPlayPv;
+  }
+
+  public void setCvsCpnVideoPlayPv(Long cvsCpnVideoPlayPv) {
+    this.cvsCpnVideoPlayPv = cvsCpnVideoPlayPv;
+  }
+
+  public DailyReportApiListStruct cvsCpnVideoPlayUv(Long cvsCpnVideoPlayUv) {
+    this.cvsCpnVideoPlayUv = cvsCpnVideoPlayUv;
+    return this;
+  }
+
+  /**
+   * Get cvsCpnVideoPlayUv
+   *
+   * @return cvsCpnVideoPlayUv
+   */
+  @ApiModelProperty(value = "")
+  public Long getCvsCpnVideoPlayUv() {
+    return cvsCpnVideoPlayUv;
+  }
+
+  public void setCvsCpnVideoPlayUv(Long cvsCpnVideoPlayUv) {
+    this.cvsCpnVideoPlayUv = cvsCpnVideoPlayUv;
+  }
+
+  public DailyReportApiListStruct cvsCpnVideoPlayDuration(Double cvsCpnVideoPlayDuration) {
+    this.cvsCpnVideoPlayDuration = cvsCpnVideoPlayDuration;
+    return this;
+  }
+
+  /**
+   * Get cvsCpnVideoPlayDuration
+   *
+   * @return cvsCpnVideoPlayDuration
+   */
+  @ApiModelProperty(value = "")
+  public Double getCvsCpnVideoPlayDuration() {
+    return cvsCpnVideoPlayDuration;
+  }
+
+  public void setCvsCpnVideoPlayDuration(Double cvsCpnVideoPlayDuration) {
+    this.cvsCpnVideoPlayDuration = cvsCpnVideoPlayDuration;
+  }
+
+  public DailyReportApiListStruct cvsCpnVideoPlayHalfUv(Long cvsCpnVideoPlayHalfUv) {
+    this.cvsCpnVideoPlayHalfUv = cvsCpnVideoPlayHalfUv;
+    return this;
+  }
+
+  /**
+   * Get cvsCpnVideoPlayHalfUv
+   *
+   * @return cvsCpnVideoPlayHalfUv
+   */
+  @ApiModelProperty(value = "")
+  public Long getCvsCpnVideoPlayHalfUv() {
+    return cvsCpnVideoPlayHalfUv;
+  }
+
+  public void setCvsCpnVideoPlayHalfUv(Long cvsCpnVideoPlayHalfUv) {
+    this.cvsCpnVideoPlayHalfUv = cvsCpnVideoPlayHalfUv;
+  }
+
+  public DailyReportApiListStruct cvsCpnVideoPlayFinUv(Long cvsCpnVideoPlayFinUv) {
+    this.cvsCpnVideoPlayFinUv = cvsCpnVideoPlayFinUv;
+    return this;
+  }
+
+  /**
+   * Get cvsCpnVideoPlayFinUv
+   *
+   * @return cvsCpnVideoPlayFinUv
+   */
+  @ApiModelProperty(value = "")
+  public Long getCvsCpnVideoPlayFinUv() {
+    return cvsCpnVideoPlayFinUv;
+  }
+
+  public void setCvsCpnVideoPlayFinUv(Long cvsCpnVideoPlayFinUv) {
+    this.cvsCpnVideoPlayFinUv = cvsCpnVideoPlayFinUv;
+  }
+
+  public DailyReportApiListStruct cvsCpnMediaPlayPv(Long cvsCpnMediaPlayPv) {
+    this.cvsCpnMediaPlayPv = cvsCpnMediaPlayPv;
+    return this;
+  }
+
+  /**
+   * Get cvsCpnMediaPlayPv
+   *
+   * @return cvsCpnMediaPlayPv
+   */
+  @ApiModelProperty(value = "")
+  public Long getCvsCpnMediaPlayPv() {
+    return cvsCpnMediaPlayPv;
+  }
+
+  public void setCvsCpnMediaPlayPv(Long cvsCpnMediaPlayPv) {
+    this.cvsCpnMediaPlayPv = cvsCpnMediaPlayPv;
+  }
+
+  public DailyReportApiListStruct cvsCpnMediaPlayUv(Long cvsCpnMediaPlayUv) {
+    this.cvsCpnMediaPlayUv = cvsCpnMediaPlayUv;
+    return this;
+  }
+
+  /**
+   * Get cvsCpnMediaPlayUv
+   *
+   * @return cvsCpnMediaPlayUv
+   */
+  @ApiModelProperty(value = "")
+  public Long getCvsCpnMediaPlayUv() {
+    return cvsCpnMediaPlayUv;
+  }
+
+  public void setCvsCpnMediaPlayUv(Long cvsCpnMediaPlayUv) {
+    this.cvsCpnMediaPlayUv = cvsCpnMediaPlayUv;
+  }
+
+  public DailyReportApiListStruct cvsCpnMediaPlayDuration(Double cvsCpnMediaPlayDuration) {
+    this.cvsCpnMediaPlayDuration = cvsCpnMediaPlayDuration;
+    return this;
+  }
+
+  /**
+   * Get cvsCpnMediaPlayDuration
+   *
+   * @return cvsCpnMediaPlayDuration
+   */
+  @ApiModelProperty(value = "")
+  public Double getCvsCpnMediaPlayDuration() {
+    return cvsCpnMediaPlayDuration;
+  }
+
+  public void setCvsCpnMediaPlayDuration(Double cvsCpnMediaPlayDuration) {
+    this.cvsCpnMediaPlayDuration = cvsCpnMediaPlayDuration;
+  }
+
+  public DailyReportApiListStruct cvsCpnMediaPlayHalfUv(Long cvsCpnMediaPlayHalfUv) {
+    this.cvsCpnMediaPlayHalfUv = cvsCpnMediaPlayHalfUv;
+    return this;
+  }
+
+  /**
+   * Get cvsCpnMediaPlayHalfUv
+   *
+   * @return cvsCpnMediaPlayHalfUv
+   */
+  @ApiModelProperty(value = "")
+  public Long getCvsCpnMediaPlayHalfUv() {
+    return cvsCpnMediaPlayHalfUv;
+  }
+
+  public void setCvsCpnMediaPlayHalfUv(Long cvsCpnMediaPlayHalfUv) {
+    this.cvsCpnMediaPlayHalfUv = cvsCpnMediaPlayHalfUv;
+  }
+
+  public DailyReportApiListStruct cvsCpnMediaPlayFinUv(Long cvsCpnMediaPlayFinUv) {
+    this.cvsCpnMediaPlayFinUv = cvsCpnMediaPlayFinUv;
+    return this;
+  }
+
+  /**
+   * Get cvsCpnMediaPlayFinUv
+   *
+   * @return cvsCpnMediaPlayFinUv
+   */
+  @ApiModelProperty(value = "")
+  public Long getCvsCpnMediaPlayFinUv() {
+    return cvsCpnMediaPlayFinUv;
+  }
+
+  public void setCvsCpnMediaPlayFinUv(Long cvsCpnMediaPlayFinUv) {
+    this.cvsCpnMediaPlayFinUv = cvsCpnMediaPlayFinUv;
+  }
+
+  public DailyReportApiListStruct avgCvsViewtime(Double avgCvsViewtime) {
+    this.avgCvsViewtime = avgCvsViewtime;
+    return this;
+  }
+
+  /**
+   * Get avgCvsViewtime
+   *
+   * @return avgCvsViewtime
+   */
+  @ApiModelProperty(value = "")
+  public Double getAvgCvsViewtime() {
+    return avgCvsViewtime;
+  }
+
+  public void setAvgCvsViewtime(Double avgCvsViewtime) {
+    this.avgCvsViewtime = avgCvsViewtime;
+  }
+
+  public DailyReportApiListStruct avgCpnexpViewtime(Double avgCpnexpViewtime) {
+    this.avgCpnexpViewtime = avgCpnexpViewtime;
+    return this;
+  }
+
+  /**
+   * Get avgCpnexpViewtime
+   *
+   * @return avgCpnexpViewtime
+   */
+  @ApiModelProperty(value = "")
+  public Double getAvgCpnexpViewtime() {
+    return avgCpnexpViewtime;
+  }
+
+  public void setAvgCpnexpViewtime(Double avgCpnexpViewtime) {
+    this.avgCpnexpViewtime = avgCpnexpViewtime;
+  }
+
+  public DailyReportApiListStruct avgCpnplayVideoTime(Double avgCpnplayVideoTime) {
+    this.avgCpnplayVideoTime = avgCpnplayVideoTime;
+    return this;
+  }
+
+  /**
+   * Get avgCpnplayVideoTime
+   *
+   * @return avgCpnplayVideoTime
+   */
+  @ApiModelProperty(value = "")
+  public Double getAvgCpnplayVideoTime() {
+    return avgCpnplayVideoTime;
+  }
+
+  public void setAvgCpnplayVideoTime(Double avgCpnplayVideoTime) {
+    this.avgCpnplayVideoTime = avgCpnplayVideoTime;
+  }
+
+  public DailyReportApiListStruct avgCpnplayMediaTime(Double avgCpnplayMediaTime) {
+    this.avgCpnplayMediaTime = avgCpnplayMediaTime;
+    return this;
+  }
+
+  /**
+   * Get avgCpnplayMediaTime
+   *
+   * @return avgCpnplayMediaTime
+   */
+  @ApiModelProperty(value = "")
+  public Double getAvgCpnplayMediaTime() {
+    return avgCpnplayMediaTime;
+  }
+
+  public void setAvgCpnplayMediaTime(Double avgCpnplayMediaTime) {
+    this.avgCpnplayMediaTime = avgCpnplayMediaTime;
+  }
+
+  public DailyReportApiListStruct cpnclkButtonPvRate(Double cpnclkButtonPvRate) {
+    this.cpnclkButtonPvRate = cpnclkButtonPvRate;
+    return this;
+  }
+
+  /**
+   * Get cpnclkButtonPvRate
+   *
+   * @return cpnclkButtonPvRate
+   */
+  @ApiModelProperty(value = "")
+  public Double getCpnclkButtonPvRate() {
+    return cpnclkButtonPvRate;
+  }
+
+  public void setCpnclkButtonPvRate(Double cpnclkButtonPvRate) {
+    this.cpnclkButtonPvRate = cpnclkButtonPvRate;
+  }
+
+  public DailyReportApiListStruct cpnplayVideoAndMediaPv(Long cpnplayVideoAndMediaPv) {
+    this.cpnplayVideoAndMediaPv = cpnplayVideoAndMediaPv;
+    return this;
+  }
+
+  /**
+   * Get cpnplayVideoAndMediaPv
+   *
+   * @return cpnplayVideoAndMediaPv
+   */
+  @ApiModelProperty(value = "")
+  public Long getCpnplayVideoAndMediaPv() {
+    return cpnplayVideoAndMediaPv;
+  }
+
+  public void setCpnplayVideoAndMediaPv(Long cpnplayVideoAndMediaPv) {
+    this.cpnplayVideoAndMediaPv = cpnplayVideoAndMediaPv;
+  }
+
+  public DailyReportApiListStruct cpnplayVideoAndMediaUv(Long cpnplayVideoAndMediaUv) {
+    this.cpnplayVideoAndMediaUv = cpnplayVideoAndMediaUv;
+    return this;
+  }
+
+  /**
+   * Get cpnplayVideoAndMediaUv
+   *
+   * @return cpnplayVideoAndMediaUv
+   */
+  @ApiModelProperty(value = "")
+  public Long getCpnplayVideoAndMediaUv() {
+    return cpnplayVideoAndMediaUv;
+  }
+
+  public void setCpnplayVideoAndMediaUv(Long cpnplayVideoAndMediaUv) {
+    this.cpnplayVideoAndMediaUv = cpnplayVideoAndMediaUv;
+  }
+
+  public DailyReportApiListStruct cpnplayVideoAndMediaFinUv(Long cpnplayVideoAndMediaFinUv) {
+    this.cpnplayVideoAndMediaFinUv = cpnplayVideoAndMediaFinUv;
+    return this;
+  }
+
+  /**
+   * Get cpnplayVideoAndMediaFinUv
+   *
+   * @return cpnplayVideoAndMediaFinUv
+   */
+  @ApiModelProperty(value = "")
+  public Long getCpnplayVideoAndMediaFinUv() {
+    return cpnplayVideoAndMediaFinUv;
+  }
+
+  public void setCpnplayVideoAndMediaFinUv(Long cpnplayVideoAndMediaFinUv) {
+    this.cpnplayVideoAndMediaFinUv = cpnplayVideoAndMediaFinUv;
+  }
+
+  public DailyReportApiListStruct cpnplayVideoAndMediaTime(Double cpnplayVideoAndMediaTime) {
+    this.cpnplayVideoAndMediaTime = cpnplayVideoAndMediaTime;
+    return this;
+  }
+
+  /**
+   * Get cpnplayVideoAndMediaTime
+   *
+   * @return cpnplayVideoAndMediaTime
+   */
+  @ApiModelProperty(value = "")
+  public Double getCpnplayVideoAndMediaTime() {
+    return cpnplayVideoAndMediaTime;
+  }
+
+  public void setCpnplayVideoAndMediaTime(Double cpnplayVideoAndMediaTime) {
+    this.cpnplayVideoAndMediaTime = cpnplayVideoAndMediaTime;
+  }
+
+  public DailyReportApiListStruct avgCpnplayVideoAndMediaTime(Double avgCpnplayVideoAndMediaTime) {
+    this.avgCpnplayVideoAndMediaTime = avgCpnplayVideoAndMediaTime;
+    return this;
+  }
+
+  /**
+   * Get avgCpnplayVideoAndMediaTime
+   *
+   * @return avgCpnplayVideoAndMediaTime
+   */
+  @ApiModelProperty(value = "")
+  public Double getAvgCpnplayVideoAndMediaTime() {
+    return avgCpnplayVideoAndMediaTime;
+  }
+
+  public void setAvgCpnplayVideoAndMediaTime(Double avgCpnplayVideoAndMediaTime) {
+    this.avgCpnplayVideoAndMediaTime = avgCpnplayVideoAndMediaTime;
+  }
+
+  public DailyReportApiListStruct canvasHbSingleReceiveExpPv(Long canvasHbSingleReceiveExpPv) {
+    this.canvasHbSingleReceiveExpPv = canvasHbSingleReceiveExpPv;
+    return this;
+  }
+
+  /**
+   * Get canvasHbSingleReceiveExpPv
+   *
+   * @return canvasHbSingleReceiveExpPv
+   */
+  @ApiModelProperty(value = "")
+  public Long getCanvasHbSingleReceiveExpPv() {
+    return canvasHbSingleReceiveExpPv;
+  }
+
+  public void setCanvasHbSingleReceiveExpPv(Long canvasHbSingleReceiveExpPv) {
+    this.canvasHbSingleReceiveExpPv = canvasHbSingleReceiveExpPv;
+  }
+
+  public DailyReportApiListStruct canvasHbSingleSendExpPv(Long canvasHbSingleSendExpPv) {
+    this.canvasHbSingleSendExpPv = canvasHbSingleSendExpPv;
+    return this;
+  }
+
+  /**
+   * Get canvasHbSingleSendExpPv
+   *
+   * @return canvasHbSingleSendExpPv
+   */
+  @ApiModelProperty(value = "")
+  public Long getCanvasHbSingleSendExpPv() {
+    return canvasHbSingleSendExpPv;
+  }
+
+  public void setCanvasHbSingleSendExpPv(Long canvasHbSingleSendExpPv) {
+    this.canvasHbSingleSendExpPv = canvasHbSingleSendExpPv;
+  }
+
+  public DailyReportApiListStruct canvasHbDoubleReceiveExpPv(Long canvasHbDoubleReceiveExpPv) {
+    this.canvasHbDoubleReceiveExpPv = canvasHbDoubleReceiveExpPv;
+    return this;
+  }
+
+  /**
+   * Get canvasHbDoubleReceiveExpPv
+   *
+   * @return canvasHbDoubleReceiveExpPv
+   */
+  @ApiModelProperty(value = "")
+  public Long getCanvasHbDoubleReceiveExpPv() {
+    return canvasHbDoubleReceiveExpPv;
+  }
+
+  public void setCanvasHbDoubleReceiveExpPv(Long canvasHbDoubleReceiveExpPv) {
+    this.canvasHbDoubleReceiveExpPv = canvasHbDoubleReceiveExpPv;
+  }
+
+  public DailyReportApiListStruct canvasHbDoubleSendExpPv(Long canvasHbDoubleSendExpPv) {
+    this.canvasHbDoubleSendExpPv = canvasHbDoubleSendExpPv;
+    return this;
+  }
+
+  /**
+   * Get canvasHbDoubleSendExpPv
+   *
+   * @return canvasHbDoubleSendExpPv
+   */
+  @ApiModelProperty(value = "")
+  public Long getCanvasHbDoubleSendExpPv() {
+    return canvasHbDoubleSendExpPv;
+  }
+
+  public void setCanvasHbDoubleSendExpPv(Long canvasHbDoubleSendExpPv) {
+    this.canvasHbDoubleSendExpPv = canvasHbDoubleSendExpPv;
+  }
+
   public DailyReportApiListStruct hour(Long hour) {
     this.hour = hour;
     return this;
@@ -15752,63 +16557,6 @@ public class DailyReportApiListStruct {
 
   public void setDevice(Long device) {
     this.device = device;
-  }
-
-  public DailyReportApiListStruct expAvgRank(Double expAvgRank) {
-    this.expAvgRank = expAvgRank;
-    return this;
-  }
-
-  /**
-   * Get expAvgRank
-   *
-   * @return expAvgRank
-   */
-  @ApiModelProperty(value = "")
-  public Double getExpAvgRank() {
-    return expAvgRank;
-  }
-
-  public void setExpAvgRank(Double expAvgRank) {
-    this.expAvgRank = expAvgRank;
-  }
-
-  public DailyReportApiListStruct expOverallTopPv(Long expOverallTopPv) {
-    this.expOverallTopPv = expOverallTopPv;
-    return this;
-  }
-
-  /**
-   * Get expOverallTopPv
-   *
-   * @return expOverallTopPv
-   */
-  @ApiModelProperty(value = "")
-  public Long getExpOverallTopPv() {
-    return expOverallTopPv;
-  }
-
-  public void setExpOverallTopPv(Long expOverallTopPv) {
-    this.expOverallTopPv = expOverallTopPv;
-  }
-
-  public DailyReportApiListStruct clkTopPv(Long clkTopPv) {
-    this.clkTopPv = clkTopPv;
-    return this;
-  }
-
-  /**
-   * Get clkTopPv
-   *
-   * @return clkTopPv
-   */
-  @ApiModelProperty(value = "")
-  public Long getClkTopPv() {
-    return clkTopPv;
-  }
-
-  public void setClkTopPv(Long clkTopPv) {
-    this.clkTopPv = clkTopPv;
   }
 
   public DailyReportApiListStruct queryword(String queryword) {
@@ -16925,6 +17673,56 @@ public class DailyReportApiListStruct {
         && Objects.equals(this.componentType, dailyReportApiListStruct.componentType)
         && Objects.equals(this.imageIds, dailyReportApiListStruct.imageIds)
         && Objects.equals(this.videoIds, dailyReportApiListStruct.videoIds)
+        && Objects.equals(this.expAvgRank, dailyReportApiListStruct.expAvgRank)
+        && Objects.equals(this.expOverallTopPv, dailyReportApiListStruct.expOverallTopPv)
+        && Objects.equals(this.clkTopPv, dailyReportApiListStruct.clkTopPv)
+        && Objects.equals(this.cvsExpPv, dailyReportApiListStruct.cvsExpPv)
+        && Objects.equals(this.cvsExpUv, dailyReportApiListStruct.cvsExpUv)
+        && Objects.equals(this.cvsCpnClkPv, dailyReportApiListStruct.cvsCpnClkPv)
+        && Objects.equals(this.cvsCpnClkUv, dailyReportApiListStruct.cvsCpnClkUv)
+        && Objects.equals(this.cvsCpnExpPv, dailyReportApiListStruct.cvsCpnExpPv)
+        && Objects.equals(this.cvsCpnExpUv, dailyReportApiListStruct.cvsCpnExpUv)
+        && Objects.equals(this.cvsCpnExpDuration, dailyReportApiListStruct.cvsCpnExpDuration)
+        && Objects.equals(this.cvsCpnBtnClkPv, dailyReportApiListStruct.cvsCpnBtnClkPv)
+        && Objects.equals(this.cvsCpnBtnClkUv, dailyReportApiListStruct.cvsCpnBtnClkUv)
+        && Objects.equals(this.cvsCpnClkDedupPv, dailyReportApiListStruct.cvsCpnClkDedupPv)
+        && Objects.equals(this.cvsCpnVideoPlayPv, dailyReportApiListStruct.cvsCpnVideoPlayPv)
+        && Objects.equals(this.cvsCpnVideoPlayUv, dailyReportApiListStruct.cvsCpnVideoPlayUv)
+        && Objects.equals(
+            this.cvsCpnVideoPlayDuration, dailyReportApiListStruct.cvsCpnVideoPlayDuration)
+        && Objects.equals(
+            this.cvsCpnVideoPlayHalfUv, dailyReportApiListStruct.cvsCpnVideoPlayHalfUv)
+        && Objects.equals(this.cvsCpnVideoPlayFinUv, dailyReportApiListStruct.cvsCpnVideoPlayFinUv)
+        && Objects.equals(this.cvsCpnMediaPlayPv, dailyReportApiListStruct.cvsCpnMediaPlayPv)
+        && Objects.equals(this.cvsCpnMediaPlayUv, dailyReportApiListStruct.cvsCpnMediaPlayUv)
+        && Objects.equals(
+            this.cvsCpnMediaPlayDuration, dailyReportApiListStruct.cvsCpnMediaPlayDuration)
+        && Objects.equals(
+            this.cvsCpnMediaPlayHalfUv, dailyReportApiListStruct.cvsCpnMediaPlayHalfUv)
+        && Objects.equals(this.cvsCpnMediaPlayFinUv, dailyReportApiListStruct.cvsCpnMediaPlayFinUv)
+        && Objects.equals(this.avgCvsViewtime, dailyReportApiListStruct.avgCvsViewtime)
+        && Objects.equals(this.avgCpnexpViewtime, dailyReportApiListStruct.avgCpnexpViewtime)
+        && Objects.equals(this.avgCpnplayVideoTime, dailyReportApiListStruct.avgCpnplayVideoTime)
+        && Objects.equals(this.avgCpnplayMediaTime, dailyReportApiListStruct.avgCpnplayMediaTime)
+        && Objects.equals(this.cpnclkButtonPvRate, dailyReportApiListStruct.cpnclkButtonPvRate)
+        && Objects.equals(
+            this.cpnplayVideoAndMediaPv, dailyReportApiListStruct.cpnplayVideoAndMediaPv)
+        && Objects.equals(
+            this.cpnplayVideoAndMediaUv, dailyReportApiListStruct.cpnplayVideoAndMediaUv)
+        && Objects.equals(
+            this.cpnplayVideoAndMediaFinUv, dailyReportApiListStruct.cpnplayVideoAndMediaFinUv)
+        && Objects.equals(
+            this.cpnplayVideoAndMediaTime, dailyReportApiListStruct.cpnplayVideoAndMediaTime)
+        && Objects.equals(
+            this.avgCpnplayVideoAndMediaTime, dailyReportApiListStruct.avgCpnplayVideoAndMediaTime)
+        && Objects.equals(
+            this.canvasHbSingleReceiveExpPv, dailyReportApiListStruct.canvasHbSingleReceiveExpPv)
+        && Objects.equals(
+            this.canvasHbSingleSendExpPv, dailyReportApiListStruct.canvasHbSingleSendExpPv)
+        && Objects.equals(
+            this.canvasHbDoubleReceiveExpPv, dailyReportApiListStruct.canvasHbDoubleReceiveExpPv)
+        && Objects.equals(
+            this.canvasHbDoubleSendExpPv, dailyReportApiListStruct.canvasHbDoubleSendExpPv)
         && Objects.equals(this.hour, dailyReportApiListStruct.hour)
         && Objects.equals(this.channelId, dailyReportApiListStruct.channelId)
         && Objects.equals(this.buyingType, dailyReportApiListStruct.buyingType)
@@ -16932,9 +17730,6 @@ public class DailyReportApiListStruct {
         && Objects.equals(this.bidword, dailyReportApiListStruct.bidword)
         && Objects.equals(this.matchType, dailyReportApiListStruct.matchType)
         && Objects.equals(this.device, dailyReportApiListStruct.device)
-        && Objects.equals(this.expAvgRank, dailyReportApiListStruct.expAvgRank)
-        && Objects.equals(this.expOverallTopPv, dailyReportApiListStruct.expOverallTopPv)
-        && Objects.equals(this.clkTopPv, dailyReportApiListStruct.clkTopPv)
         && Objects.equals(this.queryword, dailyReportApiListStruct.queryword)
         && Objects.equals(this.imageId, dailyReportApiListStruct.imageId)
         && Objects.equals(this.videoId, dailyReportApiListStruct.videoId)
@@ -17650,6 +18445,43 @@ public class DailyReportApiListStruct {
         componentType,
         imageIds,
         videoIds,
+        expAvgRank,
+        expOverallTopPv,
+        clkTopPv,
+        cvsExpPv,
+        cvsExpUv,
+        cvsCpnClkPv,
+        cvsCpnClkUv,
+        cvsCpnExpPv,
+        cvsCpnExpUv,
+        cvsCpnExpDuration,
+        cvsCpnBtnClkPv,
+        cvsCpnBtnClkUv,
+        cvsCpnClkDedupPv,
+        cvsCpnVideoPlayPv,
+        cvsCpnVideoPlayUv,
+        cvsCpnVideoPlayDuration,
+        cvsCpnVideoPlayHalfUv,
+        cvsCpnVideoPlayFinUv,
+        cvsCpnMediaPlayPv,
+        cvsCpnMediaPlayUv,
+        cvsCpnMediaPlayDuration,
+        cvsCpnMediaPlayHalfUv,
+        cvsCpnMediaPlayFinUv,
+        avgCvsViewtime,
+        avgCpnexpViewtime,
+        avgCpnplayVideoTime,
+        avgCpnplayMediaTime,
+        cpnclkButtonPvRate,
+        cpnplayVideoAndMediaPv,
+        cpnplayVideoAndMediaUv,
+        cpnplayVideoAndMediaFinUv,
+        cpnplayVideoAndMediaTime,
+        avgCpnplayVideoAndMediaTime,
+        canvasHbSingleReceiveExpPv,
+        canvasHbSingleSendExpPv,
+        canvasHbDoubleReceiveExpPv,
+        canvasHbDoubleSendExpPv,
         hour,
         channelId,
         buyingType,
@@ -17657,9 +18489,6 @@ public class DailyReportApiListStruct {
         bidword,
         matchType,
         device,
-        expAvgRank,
-        expOverallTopPv,
-        clkTopPv,
         queryword,
         imageId,
         videoId,

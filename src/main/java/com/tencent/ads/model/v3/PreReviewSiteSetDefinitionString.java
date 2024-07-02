@@ -100,7 +100,9 @@ public enum PreReviewSiteSetDefinitionString {
 
   QQSHOPPING("SITE_SET_QQSHOPPING"),
 
-  PCAD("SITE_SET_PCAD");
+  PCAD("SITE_SET_PCAD"),
+
+  YUNXUAN("SITE_SET_YUNXUAN");
 
   private String value;
 

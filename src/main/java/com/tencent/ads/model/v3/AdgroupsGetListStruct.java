@@ -227,6 +227,12 @@ public class AdgroupsGetListStruct {
   @SerializedName("og_completion_type")
   private OgCompletionType ogCompletionType = null;
 
+  @SerializedName("cost_guarantee_status")
+  private CostGuaranteeStatus costGuaranteeStatus = null;
+
+  @SerializedName("cost_guarantee_money")
+  private Long costGuaranteeMoney = null;
+
   public AdgroupsGetListStruct targeting(ReadTargetingSetting targeting) {
     this.targeting = targeting;
     return this;
@@ -1558,6 +1564,44 @@ public class AdgroupsGetListStruct {
     this.ogCompletionType = ogCompletionType;
   }
 
+  public AdgroupsGetListStruct costGuaranteeStatus(CostGuaranteeStatus costGuaranteeStatus) {
+    this.costGuaranteeStatus = costGuaranteeStatus;
+    return this;
+  }
+
+  /**
+   * Get costGuaranteeStatus
+   *
+   * @return costGuaranteeStatus
+   */
+  @ApiModelProperty(value = "")
+  public CostGuaranteeStatus getCostGuaranteeStatus() {
+    return costGuaranteeStatus;
+  }
+
+  public void setCostGuaranteeStatus(CostGuaranteeStatus costGuaranteeStatus) {
+    this.costGuaranteeStatus = costGuaranteeStatus;
+  }
+
+  public AdgroupsGetListStruct costGuaranteeMoney(Long costGuaranteeMoney) {
+    this.costGuaranteeMoney = costGuaranteeMoney;
+    return this;
+  }
+
+  /**
+   * Get costGuaranteeMoney
+   *
+   * @return costGuaranteeMoney
+   */
+  @ApiModelProperty(value = "")
+  public Long getCostGuaranteeMoney() {
+    return costGuaranteeMoney;
+  }
+
+  public void setCostGuaranteeMoney(Long costGuaranteeMoney) {
+    this.costGuaranteeMoney = costGuaranteeMoney;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -1646,7 +1690,9 @@ public class AdgroupsGetListStruct {
         && Objects.equals(this.mpaSpec, adgroupsGetListStruct.mpaSpec)
         && Objects.equals(this.shortPlayPayType, adgroupsGetListStruct.shortPlayPayType)
         && Objects.equals(this.sellStrategyId, adgroupsGetListStruct.sellStrategyId)
-        && Objects.equals(this.ogCompletionType, adgroupsGetListStruct.ogCompletionType);
+        && Objects.equals(this.ogCompletionType, adgroupsGetListStruct.ogCompletionType)
+        && Objects.equals(this.costGuaranteeStatus, adgroupsGetListStruct.costGuaranteeStatus)
+        && Objects.equals(this.costGuaranteeMoney, adgroupsGetListStruct.costGuaranteeMoney);
   }
 
   @Override
@@ -1719,7 +1765,9 @@ public class AdgroupsGetListStruct {
         mpaSpec,
         shortPlayPayType,
         sellStrategyId,
-        ogCompletionType);
+        ogCompletionType,
+        costGuaranteeStatus,
+        costGuaranteeMoney);
   }
 
   @Override

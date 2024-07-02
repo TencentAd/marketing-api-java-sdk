@@ -108,6 +108,9 @@ public class PageSpec {
   @SerializedName("android_quick_app_spec")
   private AndroidQuickAppPageSpec androidQuickAppSpec = null;
 
+  @SerializedName("wechat_channels_shop_product_spec")
+  private ChannelsShopProductSpec wechatChannelsShopProductSpec = null;
+
   public PageSpec androidAppSpec(AndroidAppPageSpec androidAppSpec) {
     this.androidAppSpec = androidAppSpec;
     return this;
@@ -665,6 +668,27 @@ public class PageSpec {
     this.androidQuickAppSpec = androidQuickAppSpec;
   }
 
+  public PageSpec wechatChannelsShopProductSpec(
+      ChannelsShopProductSpec wechatChannelsShopProductSpec) {
+    this.wechatChannelsShopProductSpec = wechatChannelsShopProductSpec;
+    return this;
+  }
+
+  /**
+   * Get wechatChannelsShopProductSpec
+   *
+   * @return wechatChannelsShopProductSpec
+   */
+  @ApiModelProperty(value = "")
+  public ChannelsShopProductSpec getWechatChannelsShopProductSpec() {
+    return wechatChannelsShopProductSpec;
+  }
+
+  public void setWechatChannelsShopProductSpec(
+      ChannelsShopProductSpec wechatChannelsShopProductSpec) {
+    this.wechatChannelsShopProductSpec = wechatChannelsShopProductSpec;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -703,7 +727,9 @@ public class PageSpec {
         && Objects.equals(this.wechatMiniGameSpec, pageSpec.wechatMiniGameSpec)
         && Objects.equals(this.wechatChannelsFeedSpec, pageSpec.wechatChannelsFeedSpec)
         && Objects.equals(this.wechatChannelsReserveSpec, pageSpec.wechatChannelsReserveSpec)
-        && Objects.equals(this.androidQuickAppSpec, pageSpec.androidQuickAppSpec);
+        && Objects.equals(this.androidQuickAppSpec, pageSpec.androidQuickAppSpec)
+        && Objects.equals(
+            this.wechatChannelsShopProductSpec, pageSpec.wechatChannelsShopProductSpec);
   }
 
   @Override
@@ -737,7 +763,8 @@ public class PageSpec {
         wechatMiniGameSpec,
         wechatChannelsFeedSpec,
         wechatChannelsReserveSpec,
-        androidQuickAppSpec);
+        androidQuickAppSpec,
+        wechatChannelsShopProductSpec);
   }
 
   @Override

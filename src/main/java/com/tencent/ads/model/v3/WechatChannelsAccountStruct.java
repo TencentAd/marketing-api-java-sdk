@@ -33,6 +33,12 @@ public class WechatChannelsAccountStruct {
   @SerializedName("last_modified_time")
   private Long lastModifiedTime = null;
 
+  @SerializedName("wechat_channels_spam_block")
+  private Boolean wechatChannelsSpamBlock = null;
+
+  @SerializedName("wechat_channels_spam_slient")
+  private Boolean wechatChannelsSpamSlient = null;
+
   public WechatChannelsAccountStruct wechatChannelsAccountId(String wechatChannelsAccountId) {
     this.wechatChannelsAccountId = wechatChannelsAccountId;
     return this;
@@ -109,6 +115,44 @@ public class WechatChannelsAccountStruct {
     this.lastModifiedTime = lastModifiedTime;
   }
 
+  public WechatChannelsAccountStruct wechatChannelsSpamBlock(Boolean wechatChannelsSpamBlock) {
+    this.wechatChannelsSpamBlock = wechatChannelsSpamBlock;
+    return this;
+  }
+
+  /**
+   * Get wechatChannelsSpamBlock
+   *
+   * @return wechatChannelsSpamBlock
+   */
+  @ApiModelProperty(value = "")
+  public Boolean isWechatChannelsSpamBlock() {
+    return wechatChannelsSpamBlock;
+  }
+
+  public void setWechatChannelsSpamBlock(Boolean wechatChannelsSpamBlock) {
+    this.wechatChannelsSpamBlock = wechatChannelsSpamBlock;
+  }
+
+  public WechatChannelsAccountStruct wechatChannelsSpamSlient(Boolean wechatChannelsSpamSlient) {
+    this.wechatChannelsSpamSlient = wechatChannelsSpamSlient;
+    return this;
+  }
+
+  /**
+   * Get wechatChannelsSpamSlient
+   *
+   * @return wechatChannelsSpamSlient
+   */
+  @ApiModelProperty(value = "")
+  public Boolean isWechatChannelsSpamSlient() {
+    return wechatChannelsSpamSlient;
+  }
+
+  public void setWechatChannelsSpamSlient(Boolean wechatChannelsSpamSlient) {
+    this.wechatChannelsSpamSlient = wechatChannelsSpamSlient;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -123,13 +167,22 @@ public class WechatChannelsAccountStruct {
         && Objects.equals(
             this.wechatChannelsAccountName, wechatChannelsAccountStruct.wechatChannelsAccountName)
         && Objects.equals(this.createdTime, wechatChannelsAccountStruct.createdTime)
-        && Objects.equals(this.lastModifiedTime, wechatChannelsAccountStruct.lastModifiedTime);
+        && Objects.equals(this.lastModifiedTime, wechatChannelsAccountStruct.lastModifiedTime)
+        && Objects.equals(
+            this.wechatChannelsSpamBlock, wechatChannelsAccountStruct.wechatChannelsSpamBlock)
+        && Objects.equals(
+            this.wechatChannelsSpamSlient, wechatChannelsAccountStruct.wechatChannelsSpamSlient);
   }
 
   @Override
   public int hashCode() {
     return Objects.hash(
-        wechatChannelsAccountId, wechatChannelsAccountName, createdTime, lastModifiedTime);
+        wechatChannelsAccountId,
+        wechatChannelsAccountName,
+        createdTime,
+        lastModifiedTime,
+        wechatChannelsSpamBlock,
+        wechatChannelsSpamSlient);
   }
 
   @Override

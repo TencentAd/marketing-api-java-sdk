@@ -49,7 +49,7 @@ public class ProductUpdateItem {
   private String expirationTime = null;
 
   @SerializedName("product_sale_status")
-  private DpaProductSaleStatus productSaleStatus = null;
+  private ProductSaleStatus productSaleStatus = null;
 
   public ProductUpdateItem productOuterId(String productOuterId) {
     this.productOuterId = productOuterId;
@@ -222,7 +222,7 @@ public class ProductUpdateItem {
     this.expirationTime = expirationTime;
   }
 
-  public ProductUpdateItem productSaleStatus(DpaProductSaleStatus productSaleStatus) {
+  public ProductUpdateItem productSaleStatus(ProductSaleStatus productSaleStatus) {
     this.productSaleStatus = productSaleStatus;
     return this;
   }
@@ -233,11 +233,11 @@ public class ProductUpdateItem {
    * @return productSaleStatus
    */
   @ApiModelProperty(value = "")
-  public DpaProductSaleStatus getProductSaleStatus() {
+  public ProductSaleStatus getProductSaleStatus() {
     return productSaleStatus;
   }
 
-  public void setProductSaleStatus(DpaProductSaleStatus productSaleStatus) {
+  public void setProductSaleStatus(ProductSaleStatus productSaleStatus) {
     this.productSaleStatus = productSaleStatus;
   }
 

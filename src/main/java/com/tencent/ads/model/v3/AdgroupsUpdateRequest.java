@@ -123,6 +123,12 @@ public class AdgroupsUpdateRequest {
   @SerializedName("feedback_id")
   private Long feedbackId = null;
 
+  @SerializedName("search_expand_targeting_switch")
+  private SearchExpandTargetingSwitch searchExpandTargetingSwitch = null;
+
+  @SerializedName("cloud_union_spec")
+  private CloudUnionSpec cloudUnionSpec = null;
+
   public AdgroupsUpdateRequest accountId(Long accountId) {
     this.accountId = accountId;
     return this;
@@ -787,6 +793,46 @@ public class AdgroupsUpdateRequest {
     this.feedbackId = feedbackId;
   }
 
+  public AdgroupsUpdateRequest searchExpandTargetingSwitch(
+      SearchExpandTargetingSwitch searchExpandTargetingSwitch) {
+    this.searchExpandTargetingSwitch = searchExpandTargetingSwitch;
+    return this;
+  }
+
+  /**
+   * Get searchExpandTargetingSwitch
+   *
+   * @return searchExpandTargetingSwitch
+   */
+  @ApiModelProperty(value = "")
+  public SearchExpandTargetingSwitch getSearchExpandTargetingSwitch() {
+    return searchExpandTargetingSwitch;
+  }
+
+  public void setSearchExpandTargetingSwitch(
+      SearchExpandTargetingSwitch searchExpandTargetingSwitch) {
+    this.searchExpandTargetingSwitch = searchExpandTargetingSwitch;
+  }
+
+  public AdgroupsUpdateRequest cloudUnionSpec(CloudUnionSpec cloudUnionSpec) {
+    this.cloudUnionSpec = cloudUnionSpec;
+    return this;
+  }
+
+  /**
+   * Get cloudUnionSpec
+   *
+   * @return cloudUnionSpec
+   */
+  @ApiModelProperty(value = "")
+  public CloudUnionSpec getCloudUnionSpec() {
+    return cloudUnionSpec;
+  }
+
+  public void setCloudUnionSpec(CloudUnionSpec cloudUnionSpec) {
+    this.cloudUnionSpec = cloudUnionSpec;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -838,7 +884,10 @@ public class AdgroupsUpdateRequest {
         && Objects.equals(this.rtaTargetId, adgroupsUpdateRequest.rtaTargetId)
         && Objects.equals(this.costConstraintScene, adgroupsUpdateRequest.costConstraintScene)
         && Objects.equals(this.customCostCap, adgroupsUpdateRequest.customCostCap)
-        && Objects.equals(this.feedbackId, adgroupsUpdateRequest.feedbackId);
+        && Objects.equals(this.feedbackId, adgroupsUpdateRequest.feedbackId)
+        && Objects.equals(
+            this.searchExpandTargetingSwitch, adgroupsUpdateRequest.searchExpandTargetingSwitch)
+        && Objects.equals(this.cloudUnionSpec, adgroupsUpdateRequest.cloudUnionSpec);
   }
 
   @Override
@@ -877,7 +926,9 @@ public class AdgroupsUpdateRequest {
         rtaTargetId,
         costConstraintScene,
         customCostCap,
-        feedbackId);
+        feedbackId,
+        searchExpandTargetingSwitch,
+        cloudUnionSpec);
   }
 
   @Override

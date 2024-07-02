@@ -19,7 +19,7 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-/** 商品状态 */
+/** 商品在线状态 */
 @JsonAdapter(ProductSaleStatus.Adapter.class)
 public enum ProductSaleStatus {
   ONLINE("PRODUCT_SALE_STATUS_ONLINE"),

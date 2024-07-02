@@ -153,6 +153,9 @@ public class AdgroupsUpdateRequest {
   @SerializedName("ecom_pkam_switch")
   private EcomPkamSwitch ecomPkamSwitch = null;
 
+  @SerializedName("search_expand_targeting_switch")
+  private SearchExpandTargetingSwitch searchExpandTargetingSwitch = null;
+
   @SerializedName("account_id")
   private Long accountId = null;
 
@@ -1053,6 +1056,27 @@ public class AdgroupsUpdateRequest {
     this.ecomPkamSwitch = ecomPkamSwitch;
   }
 
+  public AdgroupsUpdateRequest searchExpandTargetingSwitch(
+      SearchExpandTargetingSwitch searchExpandTargetingSwitch) {
+    this.searchExpandTargetingSwitch = searchExpandTargetingSwitch;
+    return this;
+  }
+
+  /**
+   * Get searchExpandTargetingSwitch
+   *
+   * @return searchExpandTargetingSwitch
+   */
+  @ApiModelProperty(value = "")
+  public SearchExpandTargetingSwitch getSearchExpandTargetingSwitch() {
+    return searchExpandTargetingSwitch;
+  }
+
+  public void setSearchExpandTargetingSwitch(
+      SearchExpandTargetingSwitch searchExpandTargetingSwitch) {
+    this.searchExpandTargetingSwitch = searchExpandTargetingSwitch;
+  }
+
   public AdgroupsUpdateRequest accountId(Long accountId) {
     this.accountId = accountId;
     return this;
@@ -1137,6 +1161,8 @@ public class AdgroupsUpdateRequest {
         && Objects.equals(
             this.autoDerivedLandingPageSwitch, adgroupsUpdateRequest.autoDerivedLandingPageSwitch)
         && Objects.equals(this.ecomPkamSwitch, adgroupsUpdateRequest.ecomPkamSwitch)
+        && Objects.equals(
+            this.searchExpandTargetingSwitch, adgroupsUpdateRequest.searchExpandTargetingSwitch)
         && Objects.equals(this.accountId, adgroupsUpdateRequest.accountId);
   }
 
@@ -1187,6 +1213,7 @@ public class AdgroupsUpdateRequest {
         dynamicCreativeIdSet,
         autoDerivedLandingPageSwitch,
         ecomPkamSwitch,
+        searchExpandTargetingSwitch,
         accountId);
   }
 

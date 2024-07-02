@@ -50,6 +50,9 @@ public class App {
   @Inject BidwordFlowApiContainer bidwordFlowApiContainer;
   @Inject BrandApiContainer brandApiContainer;
   @Inject BusinessPointApiContainer businessPointApiContainer;
+  @Inject ChannelsFinderobjectApiContainer channelsFinderobjectApiContainer;
+  @Inject ChannelsLivenoticeinfoApiContainer channelsLivenoticeinfoApiContainer;
+  @Inject ChannelsUserpageobjectsApiContainer channelsUserpageobjectsApiContainer;
   @Inject CommentListApiContainer commentListApiContainer;
   @Inject ComponentElementUrgeReviewApiContainer componentElementUrgeReviewApiContainer;
   @Inject ComponentReviewResultsApiContainer componentReviewResultsApiContainer;
@@ -148,6 +151,7 @@ public class App {
   @Inject ProgrammedApiContainer programmedApiContainer;
   @Inject ProgrammedMaterialMappingsApiContainer programmedMaterialMappingsApiContainer;
   @Inject ProgrammedTemplateApiContainer programmedTemplateApiContainer;
+  @Inject QualificationImagesApiContainer qualificationImagesApiContainer;
   @Inject QualificationStructureApiContainer qualificationStructureApiContainer;
   @Inject QualificationsApiContainer qualificationsApiContainer;
   @Inject RealtimeCostApiContainer realtimeCostApiContainer;
@@ -331,6 +335,18 @@ public class App {
 
   public BusinessPointApiContainer businessPoint() {
     return businessPointApiContainer;
+  }
+
+  public ChannelsFinderobjectApiContainer channelsFinderobject() {
+    return channelsFinderobjectApiContainer;
+  }
+
+  public ChannelsLivenoticeinfoApiContainer channelsLivenoticeinfo() {
+    return channelsLivenoticeinfoApiContainer;
+  }
+
+  public ChannelsUserpageobjectsApiContainer channelsUserpageobjects() {
+    return channelsUserpageobjectsApiContainer;
   }
 
   public CommentListApiContainer commentList() {
@@ -699,6 +715,10 @@ public class App {
 
   public ProgrammedTemplateApiContainer programmedTemplate() {
     return programmedTemplateApiContainer;
+  }
+
+  public QualificationImagesApiContainer qualificationImages() {
+    return qualificationImagesApiContainer;
   }
 
   public QualificationStructureApiContainer qualificationStructure() {

@@ -183,6 +183,9 @@ public class AdgroupsAddRequest {
   @SerializedName("og_completion_type")
   private OgCompletionType ogCompletionType = null;
 
+  @SerializedName("cloud_union_spec")
+  private CloudUnionSpec cloudUnionSpec = null;
+
   public AdgroupsAddRequest accountId(Long accountId) {
     this.accountId = accountId;
     return this;
@@ -1246,6 +1249,25 @@ public class AdgroupsAddRequest {
     this.ogCompletionType = ogCompletionType;
   }
 
+  public AdgroupsAddRequest cloudUnionSpec(CloudUnionSpec cloudUnionSpec) {
+    this.cloudUnionSpec = cloudUnionSpec;
+    return this;
+  }
+
+  /**
+   * Get cloudUnionSpec
+   *
+   * @return cloudUnionSpec
+   */
+  @ApiModelProperty(value = "")
+  public CloudUnionSpec getCloudUnionSpec() {
+    return cloudUnionSpec;
+  }
+
+  public void setCloudUnionSpec(CloudUnionSpec cloudUnionSpec) {
+    this.cloudUnionSpec = cloudUnionSpec;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -1316,7 +1338,8 @@ public class AdgroupsAddRequest {
         && Objects.equals(this.shortPlayPayType, adgroupsAddRequest.shortPlayPayType)
         && Objects.equals(this.sellStrategyId, adgroupsAddRequest.sellStrategyId)
         && Objects.equals(this.dynamicAdType, adgroupsAddRequest.dynamicAdType)
-        && Objects.equals(this.ogCompletionType, adgroupsAddRequest.ogCompletionType);
+        && Objects.equals(this.ogCompletionType, adgroupsAddRequest.ogCompletionType)
+        && Objects.equals(this.cloudUnionSpec, adgroupsAddRequest.cloudUnionSpec);
   }
 
   @Override
@@ -1375,7 +1398,8 @@ public class AdgroupsAddRequest {
         shortPlayPayType,
         sellStrategyId,
         dynamicAdType,
-        ogCompletionType);
+        ogCompletionType,
+        cloudUnionSpec);
   }
 
   @Override

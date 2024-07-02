@@ -36,7 +36,7 @@ public class FundsGetListStruct {
   private Long realtimeCost = null;
 
   @SerializedName("effect_funds")
-  private List<String> effectFunds = null;
+  private List<EffectListStruct> effectFunds = null;
 
   public FundsGetListStruct fundType(AccountTypeMap fundType) {
     this.fundType = fundType;
@@ -114,14 +114,14 @@ public class FundsGetListStruct {
     this.realtimeCost = realtimeCost;
   }
 
-  public FundsGetListStruct effectFunds(List<String> effectFunds) {
+  public FundsGetListStruct effectFunds(List<EffectListStruct> effectFunds) {
     this.effectFunds = effectFunds;
     return this;
   }
 
-  public FundsGetListStruct addEffectFundsItem(String effectFundsItem) {
+  public FundsGetListStruct addEffectFundsItem(EffectListStruct effectFundsItem) {
     if (this.effectFunds == null) {
-      this.effectFunds = new ArrayList<String>();
+      this.effectFunds = new ArrayList<EffectListStruct>();
     }
     this.effectFunds.add(effectFundsItem);
     return this;
@@ -133,11 +133,11 @@ public class FundsGetListStruct {
    * @return effectFunds
    */
   @ApiModelProperty(value = "")
-  public List<String> getEffectFunds() {
+  public List<EffectListStruct> getEffectFunds() {
     return effectFunds;
   }
 
-  public void setEffectFunds(List<String> effectFunds) {
+  public void setEffectFunds(List<EffectListStruct> effectFunds) {
     this.effectFunds = effectFunds;
   }
 
