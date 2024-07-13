@@ -14,55 +14,31 @@ package com.tencent.ads.model.v3;
 
 import com.google.gson.Gson;
 import com.google.gson.annotations.SerializedName;
-import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.util.Objects;
 
-/** 素材标签 */
-@ApiModel(description = "素材标签")
-public class Dactag {
-  @SerializedName("tag_name")
-  private String tagName = null;
+/** ComponentsDeleteResponseData */
+public class ComponentsDeleteResponseData {
+  @SerializedName("component_id")
+  private Long componentId = null;
 
-  @SerializedName("tag_value")
-  private String tagValue = null;
-
-  public Dactag tagName(String tagName) {
-    this.tagName = tagName;
+  public ComponentsDeleteResponseData componentId(Long componentId) {
+    this.componentId = componentId;
     return this;
   }
 
   /**
-   * Get tagName
+   * Get componentId
    *
-   * @return tagName
+   * @return componentId
    */
   @ApiModelProperty(value = "")
-  public String getTagName() {
-    return tagName;
+  public Long getComponentId() {
+    return componentId;
   }
 
-  public void setTagName(String tagName) {
-    this.tagName = tagName;
-  }
-
-  public Dactag tagValue(String tagValue) {
-    this.tagValue = tagValue;
-    return this;
-  }
-
-  /**
-   * Get tagValue
-   *
-   * @return tagValue
-   */
-  @ApiModelProperty(value = "")
-  public String getTagValue() {
-    return tagValue;
-  }
-
-  public void setTagValue(String tagValue) {
-    this.tagValue = tagValue;
+  public void setComponentId(Long componentId) {
+    this.componentId = componentId;
   }
 
   @Override
@@ -73,14 +49,13 @@ public class Dactag {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    Dactag dactag = (Dactag) o;
-    return Objects.equals(this.tagName, dactag.tagName)
-        && Objects.equals(this.tagValue, dactag.tagValue);
+    ComponentsDeleteResponseData componentsDeleteResponseData = (ComponentsDeleteResponseData) o;
+    return Objects.equals(this.componentId, componentsDeleteResponseData.componentId);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(tagName, tagValue);
+    return Objects.hash(componentId);
   }
 
   @Override

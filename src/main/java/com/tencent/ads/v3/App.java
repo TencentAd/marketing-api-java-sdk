@@ -56,6 +56,8 @@ public class App {
   @Inject CommentListApiContainer commentListApiContainer;
   @Inject ComponentElementUrgeReviewApiContainer componentElementUrgeReviewApiContainer;
   @Inject ComponentReviewResultsApiContainer componentReviewResultsApiContainer;
+  @Inject ComponentsApiContainer componentsApiContainer;
+  @Inject ComponentsMetadataApiContainer componentsMetadataApiContainer;
   @Inject ConversionLinkAssetsApiContainer conversionLinkAssetsApiContainer;
   @Inject ConversionLinksApiContainer conversionLinksApiContainer;
   @Inject ConversionsApiContainer conversionsApiContainer;
@@ -123,6 +125,7 @@ public class App {
 
   @Inject MarketingTargetAssetsApiContainer marketingTargetAssetsApiContainer;
   @Inject MarketingTargetTypesApiContainer marketingTargetTypesApiContainer;
+  @Inject MaterialDcasetApiContainer materialDcasetApiContainer;
   @Inject MaterialDcatagApiContainer materialDcatagApiContainer;
   @Inject MaterialLabelsApiContainer materialLabelsApiContainer;
   @Inject MergeFundTypeDailyBalanceReportApiContainer mergeFundTypeDailyBalanceReportApiContainer;
@@ -359,6 +362,14 @@ public class App {
 
   public ComponentReviewResultsApiContainer componentReviewResults() {
     return componentReviewResultsApiContainer;
+  }
+
+  public ComponentsApiContainer components() {
+    return componentsApiContainer;
+  }
+
+  public ComponentsMetadataApiContainer componentsMetadata() {
+    return componentsMetadataApiContainer;
   }
 
   public ConversionLinkAssetsApiContainer conversionLinkAssets() {
@@ -615,6 +626,10 @@ public class App {
 
   public MarketingTargetTypesApiContainer marketingTargetTypes() {
     return marketingTargetTypesApiContainer;
+  }
+
+  public MaterialDcasetApiContainer materialDcaset() {
+    return materialDcasetApiContainer;
   }
 
   public MaterialDcatagApiContainer materialDcatag() {

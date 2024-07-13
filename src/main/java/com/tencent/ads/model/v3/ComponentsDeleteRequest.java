@@ -14,55 +14,53 @@ package com.tencent.ads.model.v3;
 
 import com.google.gson.Gson;
 import com.google.gson.annotations.SerializedName;
-import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.util.Objects;
 
-/** 素材标签 */
-@ApiModel(description = "素材标签")
-public class Dactag {
-  @SerializedName("tag_name")
-  private String tagName = null;
+/** ComponentsDeleteRequest */
+public class ComponentsDeleteRequest {
+  @SerializedName("account_id")
+  private Long accountId = null;
 
-  @SerializedName("tag_value")
-  private String tagValue = null;
+  @SerializedName("component_id")
+  private Long componentId = null;
 
-  public Dactag tagName(String tagName) {
-    this.tagName = tagName;
+  public ComponentsDeleteRequest accountId(Long accountId) {
+    this.accountId = accountId;
     return this;
   }
 
   /**
-   * Get tagName
+   * Get accountId
    *
-   * @return tagName
+   * @return accountId
    */
   @ApiModelProperty(value = "")
-  public String getTagName() {
-    return tagName;
+  public Long getAccountId() {
+    return accountId;
   }
 
-  public void setTagName(String tagName) {
-    this.tagName = tagName;
+  public void setAccountId(Long accountId) {
+    this.accountId = accountId;
   }
 
-  public Dactag tagValue(String tagValue) {
-    this.tagValue = tagValue;
+  public ComponentsDeleteRequest componentId(Long componentId) {
+    this.componentId = componentId;
     return this;
   }
 
   /**
-   * Get tagValue
+   * Get componentId
    *
-   * @return tagValue
+   * @return componentId
    */
   @ApiModelProperty(value = "")
-  public String getTagValue() {
-    return tagValue;
+  public Long getComponentId() {
+    return componentId;
   }
 
-  public void setTagValue(String tagValue) {
-    this.tagValue = tagValue;
+  public void setComponentId(Long componentId) {
+    this.componentId = componentId;
   }
 
   @Override
@@ -73,14 +71,14 @@ public class Dactag {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    Dactag dactag = (Dactag) o;
-    return Objects.equals(this.tagName, dactag.tagName)
-        && Objects.equals(this.tagValue, dactag.tagValue);
+    ComponentsDeleteRequest componentsDeleteRequest = (ComponentsDeleteRequest) o;
+    return Objects.equals(this.accountId, componentsDeleteRequest.accountId)
+        && Objects.equals(this.componentId, componentsDeleteRequest.componentId);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(tagName, tagValue);
+    return Objects.hash(accountId, componentId);
   }
 
   @Override

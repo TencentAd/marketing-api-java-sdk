@@ -19,16 +19,16 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
-/** MaterialDcatagAddRequest */
-public class MaterialDcatagAddRequest {
+/** MaterialDcasetAddRequest */
+public class MaterialDcasetAddRequest {
   @SerializedName("account_id")
   private Long accountId = null;
 
-  @SerializedName("image_list")
-  private List<ImageItem> imageList = null;
+  @SerializedName("image_id_list")
+  private List<Long> imageIdList = null;
 
-  @SerializedName("media_list")
-  private List<MediaItem> mediaList = null;
+  @SerializedName("media_id_list")
+  private List<Long> mediaIdList = null;
 
   @SerializedName("marketing_asset_id")
   private Long marketingAssetId = null;
@@ -39,10 +39,10 @@ public class MaterialDcatagAddRequest {
   @SerializedName("marketing_asset_outer_spec")
   private MarketingAssetOuterSpecV1 marketingAssetOuterSpec = null;
 
-  @SerializedName("dcatag_list")
-  private List<Dactag> dcatagList = null;
+  @SerializedName("set_name")
+  private String setName = null;
 
-  public MaterialDcatagAddRequest accountId(Long accountId) {
+  public MaterialDcasetAddRequest accountId(Long accountId) {
     this.accountId = accountId;
     return this;
   }
@@ -61,61 +61,61 @@ public class MaterialDcatagAddRequest {
     this.accountId = accountId;
   }
 
-  public MaterialDcatagAddRequest imageList(List<ImageItem> imageList) {
-    this.imageList = imageList;
+  public MaterialDcasetAddRequest imageIdList(List<Long> imageIdList) {
+    this.imageIdList = imageIdList;
     return this;
   }
 
-  public MaterialDcatagAddRequest addImageListItem(ImageItem imageListItem) {
-    if (this.imageList == null) {
-      this.imageList = new ArrayList<ImageItem>();
+  public MaterialDcasetAddRequest addImageIdListItem(Long imageIdListItem) {
+    if (this.imageIdList == null) {
+      this.imageIdList = new ArrayList<Long>();
     }
-    this.imageList.add(imageListItem);
+    this.imageIdList.add(imageIdListItem);
     return this;
   }
 
   /**
-   * Get imageList
+   * Get imageIdList
    *
-   * @return imageList
+   * @return imageIdList
    */
   @ApiModelProperty(value = "")
-  public List<ImageItem> getImageList() {
-    return imageList;
+  public List<Long> getImageIdList() {
+    return imageIdList;
   }
 
-  public void setImageList(List<ImageItem> imageList) {
-    this.imageList = imageList;
+  public void setImageIdList(List<Long> imageIdList) {
+    this.imageIdList = imageIdList;
   }
 
-  public MaterialDcatagAddRequest mediaList(List<MediaItem> mediaList) {
-    this.mediaList = mediaList;
+  public MaterialDcasetAddRequest mediaIdList(List<Long> mediaIdList) {
+    this.mediaIdList = mediaIdList;
     return this;
   }
 
-  public MaterialDcatagAddRequest addMediaListItem(MediaItem mediaListItem) {
-    if (this.mediaList == null) {
-      this.mediaList = new ArrayList<MediaItem>();
+  public MaterialDcasetAddRequest addMediaIdListItem(Long mediaIdListItem) {
+    if (this.mediaIdList == null) {
+      this.mediaIdList = new ArrayList<Long>();
     }
-    this.mediaList.add(mediaListItem);
+    this.mediaIdList.add(mediaIdListItem);
     return this;
   }
 
   /**
-   * Get mediaList
+   * Get mediaIdList
    *
-   * @return mediaList
+   * @return mediaIdList
    */
   @ApiModelProperty(value = "")
-  public List<MediaItem> getMediaList() {
-    return mediaList;
+  public List<Long> getMediaIdList() {
+    return mediaIdList;
   }
 
-  public void setMediaList(List<MediaItem> mediaList) {
-    this.mediaList = mediaList;
+  public void setMediaIdList(List<Long> mediaIdList) {
+    this.mediaIdList = mediaIdList;
   }
 
-  public MaterialDcatagAddRequest marketingAssetId(Long marketingAssetId) {
+  public MaterialDcasetAddRequest marketingAssetId(Long marketingAssetId) {
     this.marketingAssetId = marketingAssetId;
     return this;
   }
@@ -134,7 +134,7 @@ public class MaterialDcatagAddRequest {
     this.marketingAssetId = marketingAssetId;
   }
 
-  public MaterialDcatagAddRequest marketingTargetType(MarketingTargetType marketingTargetType) {
+  public MaterialDcasetAddRequest marketingTargetType(MarketingTargetType marketingTargetType) {
     this.marketingTargetType = marketingTargetType;
     return this;
   }
@@ -153,7 +153,7 @@ public class MaterialDcatagAddRequest {
     this.marketingTargetType = marketingTargetType;
   }
 
-  public MaterialDcatagAddRequest marketingAssetOuterSpec(
+  public MaterialDcasetAddRequest marketingAssetOuterSpec(
       MarketingAssetOuterSpecV1 marketingAssetOuterSpec) {
     this.marketingAssetOuterSpec = marketingAssetOuterSpec;
     return this;
@@ -173,31 +173,23 @@ public class MaterialDcatagAddRequest {
     this.marketingAssetOuterSpec = marketingAssetOuterSpec;
   }
 
-  public MaterialDcatagAddRequest dcatagList(List<Dactag> dcatagList) {
-    this.dcatagList = dcatagList;
-    return this;
-  }
-
-  public MaterialDcatagAddRequest addDcatagListItem(Dactag dcatagListItem) {
-    if (this.dcatagList == null) {
-      this.dcatagList = new ArrayList<Dactag>();
-    }
-    this.dcatagList.add(dcatagListItem);
+  public MaterialDcasetAddRequest setName(String setName) {
+    this.setName = setName;
     return this;
   }
 
   /**
-   * Get dcatagList
+   * Get setName
    *
-   * @return dcatagList
+   * @return setName
    */
   @ApiModelProperty(value = "")
-  public List<Dactag> getDcatagList() {
-    return dcatagList;
+  public String getSetName() {
+    return setName;
   }
 
-  public void setDcatagList(List<Dactag> dcatagList) {
-    this.dcatagList = dcatagList;
+  public void setSetName(String setName) {
+    this.setName = setName;
   }
 
   @Override
@@ -208,27 +200,27 @@ public class MaterialDcatagAddRequest {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    MaterialDcatagAddRequest materialDcatagAddRequest = (MaterialDcatagAddRequest) o;
-    return Objects.equals(this.accountId, materialDcatagAddRequest.accountId)
-        && Objects.equals(this.imageList, materialDcatagAddRequest.imageList)
-        && Objects.equals(this.mediaList, materialDcatagAddRequest.mediaList)
-        && Objects.equals(this.marketingAssetId, materialDcatagAddRequest.marketingAssetId)
-        && Objects.equals(this.marketingTargetType, materialDcatagAddRequest.marketingTargetType)
+    MaterialDcasetAddRequest materialDcasetAddRequest = (MaterialDcasetAddRequest) o;
+    return Objects.equals(this.accountId, materialDcasetAddRequest.accountId)
+        && Objects.equals(this.imageIdList, materialDcasetAddRequest.imageIdList)
+        && Objects.equals(this.mediaIdList, materialDcasetAddRequest.mediaIdList)
+        && Objects.equals(this.marketingAssetId, materialDcasetAddRequest.marketingAssetId)
+        && Objects.equals(this.marketingTargetType, materialDcasetAddRequest.marketingTargetType)
         && Objects.equals(
-            this.marketingAssetOuterSpec, materialDcatagAddRequest.marketingAssetOuterSpec)
-        && Objects.equals(this.dcatagList, materialDcatagAddRequest.dcatagList);
+            this.marketingAssetOuterSpec, materialDcasetAddRequest.marketingAssetOuterSpec)
+        && Objects.equals(this.setName, materialDcasetAddRequest.setName);
   }
 
   @Override
   public int hashCode() {
     return Objects.hash(
         accountId,
-        imageList,
-        mediaList,
+        imageIdList,
+        mediaIdList,
         marketingAssetId,
         marketingTargetType,
         marketingAssetOuterSpec,
-        dcatagList);
+        setName);
   }
 
   @Override

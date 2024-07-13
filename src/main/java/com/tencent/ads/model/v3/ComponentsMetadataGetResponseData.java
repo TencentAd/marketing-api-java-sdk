@@ -14,55 +14,41 @@ package com.tencent.ads.model.v3;
 
 import com.google.gson.Gson;
 import com.google.gson.annotations.SerializedName;
-import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Objects;
 
-/** 素材标签 */
-@ApiModel(description = "素材标签")
-public class Dactag {
-  @SerializedName("tag_name")
-  private String tagName = null;
+/** ComponentsMetadataGetResponseData */
+public class ComponentsMetadataGetResponseData {
+  @SerializedName("list")
+  private List<ComponentMetadataStruct> list = null;
 
-  @SerializedName("tag_value")
-  private String tagValue = null;
+  public ComponentsMetadataGetResponseData list(List<ComponentMetadataStruct> list) {
+    this.list = list;
+    return this;
+  }
 
-  public Dactag tagName(String tagName) {
-    this.tagName = tagName;
+  public ComponentsMetadataGetResponseData addListItem(ComponentMetadataStruct listItem) {
+    if (this.list == null) {
+      this.list = new ArrayList<ComponentMetadataStruct>();
+    }
+    this.list.add(listItem);
     return this;
   }
 
   /**
-   * Get tagName
+   * Get list
    *
-   * @return tagName
+   * @return list
    */
   @ApiModelProperty(value = "")
-  public String getTagName() {
-    return tagName;
+  public List<ComponentMetadataStruct> getList() {
+    return list;
   }
 
-  public void setTagName(String tagName) {
-    this.tagName = tagName;
-  }
-
-  public Dactag tagValue(String tagValue) {
-    this.tagValue = tagValue;
-    return this;
-  }
-
-  /**
-   * Get tagValue
-   *
-   * @return tagValue
-   */
-  @ApiModelProperty(value = "")
-  public String getTagValue() {
-    return tagValue;
-  }
-
-  public void setTagValue(String tagValue) {
-    this.tagValue = tagValue;
+  public void setList(List<ComponentMetadataStruct> list) {
+    this.list = list;
   }
 
   @Override
@@ -73,14 +59,14 @@ public class Dactag {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    Dactag dactag = (Dactag) o;
-    return Objects.equals(this.tagName, dactag.tagName)
-        && Objects.equals(this.tagValue, dactag.tagValue);
+    ComponentsMetadataGetResponseData componentsMetadataGetResponseData =
+        (ComponentsMetadataGetResponseData) o;
+    return Objects.equals(this.list, componentsMetadataGetResponseData.list);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(tagName, tagValue);
+    return Objects.hash(list);
   }
 
   @Override

@@ -97,7 +97,9 @@ public enum CalcStatus {
 
   SETTLED_ACCOUNT("STATUS_SETTLED_ACCOUNT"),
 
-  PRE_LOCK("STATUS_PRE_LOCK");
+  PRE_LOCK("STATUS_PRE_LOCK"),
+
+  CANCEL("STATUS_CANCEL");
 
   private String value;
 

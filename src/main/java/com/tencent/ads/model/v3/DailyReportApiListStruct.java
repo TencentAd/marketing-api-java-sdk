@@ -2124,9 +2124,6 @@ public class DailyReportApiListStruct {
   @SerializedName("site_set")
   private String siteSet = null;
 
-  @SerializedName("component_name")
-  private String componentName = null;
-
   @SerializedName("component_type")
   private String componentType = null;
 
@@ -15647,25 +15644,6 @@ public class DailyReportApiListStruct {
     this.siteSet = siteSet;
   }
 
-  public DailyReportApiListStruct componentName(String componentName) {
-    this.componentName = componentName;
-    return this;
-  }
-
-  /**
-   * Get componentName
-   *
-   * @return componentName
-   */
-  @ApiModelProperty(value = "")
-  public String getComponentName() {
-    return componentName;
-  }
-
-  public void setComponentName(String componentName) {
-    this.componentName = componentName;
-  }
-
   public DailyReportApiListStruct componentType(String componentType) {
     this.componentType = componentType;
     return this;
@@ -17669,7 +17647,6 @@ public class DailyReportApiListStruct {
         && Objects.equals(this.dynamicCreativeName, dailyReportApiListStruct.dynamicCreativeName)
         && Objects.equals(this.componentId, dailyReportApiListStruct.componentId)
         && Objects.equals(this.siteSet, dailyReportApiListStruct.siteSet)
-        && Objects.equals(this.componentName, dailyReportApiListStruct.componentName)
         && Objects.equals(this.componentType, dailyReportApiListStruct.componentType)
         && Objects.equals(this.imageIds, dailyReportApiListStruct.imageIds)
         && Objects.equals(this.videoIds, dailyReportApiListStruct.videoIds)
@@ -18441,7 +18418,6 @@ public class DailyReportApiListStruct {
         dynamicCreativeName,
         componentId,
         siteSet,
-        componentName,
         componentType,
         imageIds,
         videoIds,

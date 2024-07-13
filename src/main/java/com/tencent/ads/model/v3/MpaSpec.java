@@ -26,6 +26,12 @@ public class MpaSpec {
   @SerializedName("recommend_method_ids")
   private List<Long> recommendMethodIds = null;
 
+  @SerializedName("product_catalog_id")
+  private String productCatalogId = null;
+
+  @SerializedName("product_series_id")
+  private String productSeriesId = null;
+
   public MpaSpec recommendMethodIds(List<Long> recommendMethodIds) {
     this.recommendMethodIds = recommendMethodIds;
     return this;
@@ -53,6 +59,44 @@ public class MpaSpec {
     this.recommendMethodIds = recommendMethodIds;
   }
 
+  public MpaSpec productCatalogId(String productCatalogId) {
+    this.productCatalogId = productCatalogId;
+    return this;
+  }
+
+  /**
+   * Get productCatalogId
+   *
+   * @return productCatalogId
+   */
+  @ApiModelProperty(value = "")
+  public String getProductCatalogId() {
+    return productCatalogId;
+  }
+
+  public void setProductCatalogId(String productCatalogId) {
+    this.productCatalogId = productCatalogId;
+  }
+
+  public MpaSpec productSeriesId(String productSeriesId) {
+    this.productSeriesId = productSeriesId;
+    return this;
+  }
+
+  /**
+   * Get productSeriesId
+   *
+   * @return productSeriesId
+   */
+  @ApiModelProperty(value = "")
+  public String getProductSeriesId() {
+    return productSeriesId;
+  }
+
+  public void setProductSeriesId(String productSeriesId) {
+    this.productSeriesId = productSeriesId;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -62,12 +106,14 @@ public class MpaSpec {
       return false;
     }
     MpaSpec mpaSpec = (MpaSpec) o;
-    return Objects.equals(this.recommendMethodIds, mpaSpec.recommendMethodIds);
+    return Objects.equals(this.recommendMethodIds, mpaSpec.recommendMethodIds)
+        && Objects.equals(this.productCatalogId, mpaSpec.productCatalogId)
+        && Objects.equals(this.productSeriesId, mpaSpec.productSeriesId);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(recommendMethodIds);
+    return Objects.hash(recommendMethodIds, productCatalogId, productSeriesId);
   }
 
   @Override

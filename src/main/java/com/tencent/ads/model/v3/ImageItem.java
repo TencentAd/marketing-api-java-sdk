@@ -16,53 +16,63 @@ import com.google.gson.Gson;
 import com.google.gson.annotations.SerializedName;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Objects;
 
-/** 素材标签 */
-@ApiModel(description = "素材标签")
-public class Dactag {
-  @SerializedName("tag_name")
-  private String tagName = null;
+/** 图片素材 */
+@ApiModel(description = "图片素材")
+public class ImageItem {
+  @SerializedName("image_id")
+  private Long imageId = null;
 
-  @SerializedName("tag_value")
-  private String tagValue = null;
+  @SerializedName("info")
+  private List<ImageInfoItem> info = null;
 
-  public Dactag tagName(String tagName) {
-    this.tagName = tagName;
+  public ImageItem imageId(Long imageId) {
+    this.imageId = imageId;
     return this;
   }
 
   /**
-   * Get tagName
+   * Get imageId
    *
-   * @return tagName
+   * @return imageId
    */
   @ApiModelProperty(value = "")
-  public String getTagName() {
-    return tagName;
+  public Long getImageId() {
+    return imageId;
   }
 
-  public void setTagName(String tagName) {
-    this.tagName = tagName;
+  public void setImageId(Long imageId) {
+    this.imageId = imageId;
   }
 
-  public Dactag tagValue(String tagValue) {
-    this.tagValue = tagValue;
+  public ImageItem info(List<ImageInfoItem> info) {
+    this.info = info;
+    return this;
+  }
+
+  public ImageItem addInfoItem(ImageInfoItem infoItem) {
+    if (this.info == null) {
+      this.info = new ArrayList<ImageInfoItem>();
+    }
+    this.info.add(infoItem);
     return this;
   }
 
   /**
-   * Get tagValue
+   * Get info
    *
-   * @return tagValue
+   * @return info
    */
   @ApiModelProperty(value = "")
-  public String getTagValue() {
-    return tagValue;
+  public List<ImageInfoItem> getInfo() {
+    return info;
   }
 
-  public void setTagValue(String tagValue) {
-    this.tagValue = tagValue;
+  public void setInfo(List<ImageInfoItem> info) {
+    this.info = info;
   }
 
   @Override
@@ -73,14 +83,14 @@ public class Dactag {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    Dactag dactag = (Dactag) o;
-    return Objects.equals(this.tagName, dactag.tagName)
-        && Objects.equals(this.tagValue, dactag.tagValue);
+    ImageItem imageItem = (ImageItem) o;
+    return Objects.equals(this.imageId, imageItem.imageId)
+        && Objects.equals(this.info, imageItem.info);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(tagName, tagValue);
+    return Objects.hash(imageId, info);
   }
 
   @Override

@@ -1,20 +1,26 @@
-package com.tencent.ads.examples.v3.CreativeToolBox.MaterialDcatag;
+package com.tencent.ads.examples.v3.CreativeToolBox.MaterialDca;
 
 import com.tencent.ads.ApiContextConfig;
 import com.tencent.ads.exception.TencentAdsResponseException;
 import com.tencent.ads.exception.TencentAdsSDKException;
 import com.tencent.ads.model.v3.*;
-import com.tencent.ads.model.v3.MaterialDcatagAddRequest;
 import com.tencent.ads.v3.TencentAds;
+import java.util.List;
 
-public class AddMaterialDcatag {
+public class GetMaterialDcatag {
   /** YOUR ACCESS TOKEN */
   public String ACCESS_TOKEN = "YOUR ACCESS TOKEN";
 
   /** TencentAds */
   public TencentAds tencentAds;
 
-  public MaterialDcatagAddRequest data = null;
+  public Long accountId = null;
+
+  public List<Long> imageIdList = null;
+
+  public List<Long> mediaIdList = null;
+
+  public List<String> fields = null;
 
   public void init() {
     this.tencentAds = TencentAds.getInstance();
@@ -26,16 +32,17 @@ public class AddMaterialDcatag {
 
   public void buildParams() {}
 
-  public MaterialDcatagAddResponseData addMaterialDcatag() throws Exception {
-    MaterialDcatagAddResponseData response = tencentAds.materialDcatag().materialDcatagAdd(data);
+  public MaterialDcatagGetResponseData getMaterialDcatag() throws Exception {
+    MaterialDcatagGetResponseData response =
+        tencentAds.materialDcatag().materialDcatagGet(accountId, imageIdList, mediaIdList, fields);
     return response;
   }
 
   public static void main(String[] args) {
     try {
-      AddMaterialDcatag addMaterialDcatag = new AddMaterialDcatag();
-      addMaterialDcatag.init();
-      MaterialDcatagAddResponseData response = addMaterialDcatag.addMaterialDcatag();
+      GetMaterialDcatag getMaterialDcatag = new GetMaterialDcatag();
+      getMaterialDcatag.init();
+      MaterialDcatagGetResponseData response = getMaterialDcatag.getMaterialDcatag();
     } catch (TencentAdsResponseException e) {
       e.printStackTrace();
     } catch (TencentAdsSDKException e) {

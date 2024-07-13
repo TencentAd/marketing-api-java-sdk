@@ -18,51 +18,51 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.util.Objects;
 
-/** 素材标签 */
-@ApiModel(description = "素材标签")
-public class Dactag {
-  @SerializedName("tag_name")
-  private String tagName = null;
+/** 图片素材属性信息 */
+@ApiModel(description = "图片素材属性信息")
+public class ImageInfoItem {
+  @SerializedName("name")
+  private String name = null;
 
-  @SerializedName("tag_value")
-  private String tagValue = null;
+  @SerializedName("value")
+  private String value = null;
 
-  public Dactag tagName(String tagName) {
-    this.tagName = tagName;
+  public ImageInfoItem name(String name) {
+    this.name = name;
     return this;
   }
 
   /**
-   * Get tagName
+   * Get name
    *
-   * @return tagName
+   * @return name
    */
   @ApiModelProperty(value = "")
-  public String getTagName() {
-    return tagName;
+  public String getName() {
+    return name;
   }
 
-  public void setTagName(String tagName) {
-    this.tagName = tagName;
+  public void setName(String name) {
+    this.name = name;
   }
 
-  public Dactag tagValue(String tagValue) {
-    this.tagValue = tagValue;
+  public ImageInfoItem value(String value) {
+    this.value = value;
     return this;
   }
 
   /**
-   * Get tagValue
+   * Get value
    *
-   * @return tagValue
+   * @return value
    */
   @ApiModelProperty(value = "")
-  public String getTagValue() {
-    return tagValue;
+  public String getValue() {
+    return value;
   }
 
-  public void setTagValue(String tagValue) {
-    this.tagValue = tagValue;
+  public void setValue(String value) {
+    this.value = value;
   }
 
   @Override
@@ -73,14 +73,14 @@ public class Dactag {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    Dactag dactag = (Dactag) o;
-    return Objects.equals(this.tagName, dactag.tagName)
-        && Objects.equals(this.tagValue, dactag.tagValue);
+    ImageInfoItem imageInfoItem = (ImageInfoItem) o;
+    return Objects.equals(this.name, imageInfoItem.name)
+        && Objects.equals(this.value, imageInfoItem.value);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(tagName, tagValue);
+    return Objects.hash(name, value);
   }
 
   @Override

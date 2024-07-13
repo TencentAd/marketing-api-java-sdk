@@ -29,11 +29,20 @@ public class GetData {
   @SerializedName("media_id")
   private Long mediaId = null;
 
+  @SerializedName("info")
+  private List<InfoItem> info = null;
+
+  @SerializedName("set_name")
+  private String setName = null;
+
   @SerializedName("marketing_asset_id")
   private Long marketingAssetId = null;
 
+  @SerializedName("marketing_asset_outer_id")
+  private String marketingAssetOuterId = null;
+
   @SerializedName("marketing_target_type")
-  private MarketingTargetType marketingTargetType = null;
+  private String marketingTargetType = null;
 
   @SerializedName("audit_status")
   private Long auditStatus = null;
@@ -82,6 +91,52 @@ public class GetData {
     this.mediaId = mediaId;
   }
 
+  public GetData info(List<InfoItem> info) {
+    this.info = info;
+    return this;
+  }
+
+  public GetData addInfoItem(InfoItem infoItem) {
+    if (this.info == null) {
+      this.info = new ArrayList<InfoItem>();
+    }
+    this.info.add(infoItem);
+    return this;
+  }
+
+  /**
+   * Get info
+   *
+   * @return info
+   */
+  @ApiModelProperty(value = "")
+  public List<InfoItem> getInfo() {
+    return info;
+  }
+
+  public void setInfo(List<InfoItem> info) {
+    this.info = info;
+  }
+
+  public GetData setName(String setName) {
+    this.setName = setName;
+    return this;
+  }
+
+  /**
+   * Get setName
+   *
+   * @return setName
+   */
+  @ApiModelProperty(value = "")
+  public String getSetName() {
+    return setName;
+  }
+
+  public void setSetName(String setName) {
+    this.setName = setName;
+  }
+
   public GetData marketingAssetId(Long marketingAssetId) {
     this.marketingAssetId = marketingAssetId;
     return this;
@@ -101,7 +156,26 @@ public class GetData {
     this.marketingAssetId = marketingAssetId;
   }
 
-  public GetData marketingTargetType(MarketingTargetType marketingTargetType) {
+  public GetData marketingAssetOuterId(String marketingAssetOuterId) {
+    this.marketingAssetOuterId = marketingAssetOuterId;
+    return this;
+  }
+
+  /**
+   * Get marketingAssetOuterId
+   *
+   * @return marketingAssetOuterId
+   */
+  @ApiModelProperty(value = "")
+  public String getMarketingAssetOuterId() {
+    return marketingAssetOuterId;
+  }
+
+  public void setMarketingAssetOuterId(String marketingAssetOuterId) {
+    this.marketingAssetOuterId = marketingAssetOuterId;
+  }
+
+  public GetData marketingTargetType(String marketingTargetType) {
     this.marketingTargetType = marketingTargetType;
     return this;
   }
@@ -112,11 +186,11 @@ public class GetData {
    * @return marketingTargetType
    */
   @ApiModelProperty(value = "")
-  public MarketingTargetType getMarketingTargetType() {
+  public String getMarketingTargetType() {
     return marketingTargetType;
   }
 
-  public void setMarketingTargetType(MarketingTargetType marketingTargetType) {
+  public void setMarketingTargetType(String marketingTargetType) {
     this.marketingTargetType = marketingTargetType;
   }
 
@@ -196,7 +270,10 @@ public class GetData {
     GetData getData = (GetData) o;
     return Objects.equals(this.imageId, getData.imageId)
         && Objects.equals(this.mediaId, getData.mediaId)
+        && Objects.equals(this.info, getData.info)
+        && Objects.equals(this.setName, getData.setName)
         && Objects.equals(this.marketingAssetId, getData.marketingAssetId)
+        && Objects.equals(this.marketingAssetOuterId, getData.marketingAssetOuterId)
         && Objects.equals(this.marketingTargetType, getData.marketingTargetType)
         && Objects.equals(this.auditStatus, getData.auditStatus)
         && Objects.equals(this.auditMsg, getData.auditMsg)
@@ -206,7 +283,16 @@ public class GetData {
   @Override
   public int hashCode() {
     return Objects.hash(
-        imageId, mediaId, marketingAssetId, marketingTargetType, auditStatus, auditMsg, dcatagList);
+        imageId,
+        mediaId,
+        info,
+        setName,
+        marketingAssetId,
+        marketingAssetOuterId,
+        marketingTargetType,
+        auditStatus,
+        auditMsg,
+        dcatagList);
   }
 
   @Override
