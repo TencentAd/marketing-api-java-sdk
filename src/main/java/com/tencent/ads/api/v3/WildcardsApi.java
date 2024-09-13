@@ -67,7 +67,7 @@ public class WildcardsApi {
       List<String> fields,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     Object localVarPostBody = null;
@@ -100,11 +100,8 @@ public class WildcardsApi {
     localVarHeaderParams.put("Content-Type", localVarContentType);
 
     if (headerPair != null && headerPair.length > 0) {
-      if (headerPair.length % 2 != 0) {
-        throw new UnsupportedOperationException("Parameter headerPair must be paired");
-      }
-      for (int i = 0; i < headerPair.length / 2; i++) {
-        localVarHeaderParams.put(headerPair[i], headerPair[i * 2 + 1]);
+      for (int i = 0; i < headerPair.length; i++) {
+        localVarHeaderParams.put(headerPair[i].getName(), headerPair[i].getValue());
       }
     }
 
@@ -147,7 +144,7 @@ public class WildcardsApi {
       List<String> fields,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     // verify the required parameter 'accountId' is set
@@ -196,7 +193,7 @@ public class WildcardsApi {
       Long productCatalogId,
       String marketingCarrierType,
       List<String> fields,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
     ApiResponse<WildcardsGetResponse> resp =
         wildcardsGetWithHttpInfo(
@@ -220,7 +217,7 @@ public class WildcardsApi {
       Long productCatalogId,
       String marketingCarrierType,
       List<String> fields,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
     com.squareup.okhttp.Call call =
         wildcardsGetValidateBeforeCall(
@@ -246,7 +243,7 @@ public class WildcardsApi {
       String marketingCarrierType,
       List<String> fields,
       final ApiCallback<WildcardsGetResponse> callback,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     ProgressResponseBody.ProgressListener progressListener = null;

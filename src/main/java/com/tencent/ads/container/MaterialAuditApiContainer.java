@@ -15,6 +15,7 @@ package com.tencent.ads.container;
 import com.google.inject.Inject;
 import com.tencent.ads.ApiContainer;
 import com.tencent.ads.ApiException;
+import com.tencent.ads.Pair;
 import com.tencent.ads.anno.*;
 import com.tencent.ads.api.MaterialAuditApi;
 import com.tencent.ads.exception.TencentAdsResponseException;
@@ -38,7 +39,7 @@ public class MaterialAuditApiContainer extends ApiContainer {
    *     response body
    */
   public MaterialAuditListResponseData materialAuditList(
-      MaterialAuditListRequest data, String... headerPair)
+      MaterialAuditListRequest data, Pair... headerPair)
       throws ApiException, TencentAdsResponseException {
     MaterialAuditListResponse resp = api.materialAuditList(data, headerPair);
     handleResponse(gson.toJson(resp));
@@ -54,7 +55,7 @@ public class MaterialAuditApiContainer extends ApiContainer {
    *     response body
    */
   public MaterialAuditSubmitResponseData materialAuditSubmit(
-      MaterialAuditSubmitRequest data, String... headerPair)
+      MaterialAuditSubmitRequest data, Pair... headerPair)
       throws ApiException, TencentAdsResponseException {
     MaterialAuditSubmitResponse resp = api.materialAuditSubmit(data, headerPair);
     handleResponse(gson.toJson(resp));

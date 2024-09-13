@@ -51,6 +51,21 @@ public class MergeFundTypeDailyBalanceReportGetListStruct {
   @SerializedName("preauth_balance")
   private Long preauthBalance = null;
 
+  @SerializedName("preauth_out_pay")
+  private Long preauthOutPay = null;
+
+  @SerializedName("preauth_in_refund")
+  private Long preauthInRefund = null;
+
+  @SerializedName("acct_out_pay")
+  private Long acctOutPay = null;
+
+  @SerializedName("acct_out_pay_share")
+  private Long acctOutPayShare = null;
+
+  @SerializedName("share_out_pay")
+  private Long shareOutPay = null;
+
   public MergeFundTypeDailyBalanceReportGetListStruct accountId(Long accountId) {
     this.accountId = accountId;
     return this;
@@ -241,6 +256,101 @@ public class MergeFundTypeDailyBalanceReportGetListStruct {
     this.preauthBalance = preauthBalance;
   }
 
+  public MergeFundTypeDailyBalanceReportGetListStruct preauthOutPay(Long preauthOutPay) {
+    this.preauthOutPay = preauthOutPay;
+    return this;
+  }
+
+  /**
+   * Get preauthOutPay
+   *
+   * @return preauthOutPay
+   */
+  @ApiModelProperty(value = "")
+  public Long getPreauthOutPay() {
+    return preauthOutPay;
+  }
+
+  public void setPreauthOutPay(Long preauthOutPay) {
+    this.preauthOutPay = preauthOutPay;
+  }
+
+  public MergeFundTypeDailyBalanceReportGetListStruct preauthInRefund(Long preauthInRefund) {
+    this.preauthInRefund = preauthInRefund;
+    return this;
+  }
+
+  /**
+   * Get preauthInRefund
+   *
+   * @return preauthInRefund
+   */
+  @ApiModelProperty(value = "")
+  public Long getPreauthInRefund() {
+    return preauthInRefund;
+  }
+
+  public void setPreauthInRefund(Long preauthInRefund) {
+    this.preauthInRefund = preauthInRefund;
+  }
+
+  public MergeFundTypeDailyBalanceReportGetListStruct acctOutPay(Long acctOutPay) {
+    this.acctOutPay = acctOutPay;
+    return this;
+  }
+
+  /**
+   * Get acctOutPay
+   *
+   * @return acctOutPay
+   */
+  @ApiModelProperty(value = "")
+  public Long getAcctOutPay() {
+    return acctOutPay;
+  }
+
+  public void setAcctOutPay(Long acctOutPay) {
+    this.acctOutPay = acctOutPay;
+  }
+
+  public MergeFundTypeDailyBalanceReportGetListStruct acctOutPayShare(Long acctOutPayShare) {
+    this.acctOutPayShare = acctOutPayShare;
+    return this;
+  }
+
+  /**
+   * Get acctOutPayShare
+   *
+   * @return acctOutPayShare
+   */
+  @ApiModelProperty(value = "")
+  public Long getAcctOutPayShare() {
+    return acctOutPayShare;
+  }
+
+  public void setAcctOutPayShare(Long acctOutPayShare) {
+    this.acctOutPayShare = acctOutPayShare;
+  }
+
+  public MergeFundTypeDailyBalanceReportGetListStruct shareOutPay(Long shareOutPay) {
+    this.shareOutPay = shareOutPay;
+    return this;
+  }
+
+  /**
+   * Get shareOutPay
+   *
+   * @return shareOutPay
+   */
+  @ApiModelProperty(value = "")
+  public Long getShareOutPay() {
+    return shareOutPay;
+  }
+
+  public void setShareOutPay(Long shareOutPay) {
+    this.shareOutPay = shareOutPay;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -262,7 +372,16 @@ public class MergeFundTypeDailyBalanceReportGetListStruct {
             this.creditModify, mergeFundTypeDailyBalanceReportGetListStruct.creditModify)
         && Objects.equals(this.balance, mergeFundTypeDailyBalanceReportGetListStruct.balance)
         && Objects.equals(
-            this.preauthBalance, mergeFundTypeDailyBalanceReportGetListStruct.preauthBalance);
+            this.preauthBalance, mergeFundTypeDailyBalanceReportGetListStruct.preauthBalance)
+        && Objects.equals(
+            this.preauthOutPay, mergeFundTypeDailyBalanceReportGetListStruct.preauthOutPay)
+        && Objects.equals(
+            this.preauthInRefund, mergeFundTypeDailyBalanceReportGetListStruct.preauthInRefund)
+        && Objects.equals(this.acctOutPay, mergeFundTypeDailyBalanceReportGetListStruct.acctOutPay)
+        && Objects.equals(
+            this.acctOutPayShare, mergeFundTypeDailyBalanceReportGetListStruct.acctOutPayShare)
+        && Objects.equals(
+            this.shareOutPay, mergeFundTypeDailyBalanceReportGetListStruct.shareOutPay);
   }
 
   @Override
@@ -277,7 +396,12 @@ public class MergeFundTypeDailyBalanceReportGetListStruct {
         transOut,
         creditModify,
         balance,
-        preauthBalance);
+        preauthBalance,
+        preauthOutPay,
+        preauthInRefund,
+        acctOutPay,
+        acctOutPayShare,
+        shareOutPay);
   }
 
   @Override

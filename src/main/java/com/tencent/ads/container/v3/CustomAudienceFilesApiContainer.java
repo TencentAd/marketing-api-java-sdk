@@ -15,6 +15,7 @@ package com.tencent.ads.container.v3;
 import com.google.inject.Inject;
 import com.tencent.ads.ApiContainer;
 import com.tencent.ads.ApiException;
+import com.tencent.ads.Pair;
 import com.tencent.ads.anno.*;
 import com.tencent.ads.api.v3.CustomAudienceFilesApi;
 import com.tencent.ads.exception.TencentAdsResponseException;
@@ -49,7 +50,7 @@ public class CustomAudienceFilesApiContainer extends ApiContainer {
       File file,
       String operationType,
       String openAppId,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException, TencentAdsResponseException {
     CustomAudienceFilesAddResponse resp =
         api.customAudienceFilesAdd(
@@ -78,7 +79,7 @@ public class CustomAudienceFilesApiContainer extends ApiContainer {
       Long page,
       Long pageSize,
       List<String> fields,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException, TencentAdsResponseException {
     CustomAudienceFilesGetResponse resp =
         api.customAudienceFilesGet(

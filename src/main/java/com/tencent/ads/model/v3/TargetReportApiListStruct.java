@@ -381,15 +381,6 @@ public class TargetReportApiListStruct {
   @SerializedName("guide_to_follow_page_interaction_users")
   private Long guideToFollowPageInteractionUsers = null;
 
-  @SerializedName("landing_page_view_count")
-  private Long landingPageViewCount = null;
-
-  @SerializedName("landing_page_effective_rate")
-  private Double landingPageEffectiveRate = null;
-
-  @SerializedName("landing_page_user_count")
-  private Long landingPageUserCount = null;
-
   @SerializedName("platform_key_page_view_user_count")
   private Long platformKeyPageViewUserCount = null;
 
@@ -1992,6 +1983,132 @@ public class TargetReportApiListStruct {
   @SerializedName("security_high_price_order_pv")
   private Long securityHighPriceOrderPv = null;
 
+  @SerializedName("mini_game_rate")
+  private Double miniGameRate = null;
+
+  @SerializedName("retention_pla_dedup_pv")
+  private Long retentionPlaDedupPv = null;
+
+  @SerializedName("retention_pla_dedup_rate")
+  private Double retentionPlaDedupRate = null;
+
+  @SerializedName("ad_monetization_pla_dedup_pv")
+  private Long adMonetizationPlaDedupPv = null;
+
+  @SerializedName("ad_monetization_pla_dedup_active_1d_pv")
+  private Long adMonetizationPlaDedupActive1dPv = null;
+
+  @SerializedName("ad_monetization_pla_dedup_active_3d_pv")
+  private Long adMonetizationPlaDedupActive3dPv = null;
+
+  @SerializedName("ad_monetization_pla_dedup_active_7d_pv")
+  private Long adMonetizationPlaDedupActive7dPv = null;
+
+  @SerializedName("ad_monetization_bk_pla_dedup_pv")
+  private Long adMonetizationBkPlaDedupPv = null;
+
+  @SerializedName("mini_game_bf_income_pla_roi")
+  private Double miniGameBfIncomePlaRoi = null;
+
+  @SerializedName("mini_game_bf_income_pla_arpu")
+  private Long miniGameBfIncomePlaArpu = null;
+
+  @SerializedName("ad_monetization_bk_pla_cost")
+  private Long adMonetizationBkPlaCost = null;
+
+  @SerializedName("ad_monetization_bk_pla_dedup_active_1d_pv")
+  private Long adMonetizationBkPlaDedupActive1dPv = null;
+
+  @SerializedName("ad_monetization_bk_pla_active_24h_amount")
+  private Long adMonetizationBkPlaActive24hAmount = null;
+
+  @SerializedName("ad_monetization_bk_pla_dedup_active_24h_pv")
+  private Long adMonetizationBkPlaDedupActive24hPv = null;
+
+  @SerializedName("ad_monetization_bk_pla_dedup_active_24h_roi")
+  private Double adMonetizationBkPlaDedupActive24hRoi = null;
+
+  @SerializedName("ad_monetization_bk_pla_dedup_active_24h_arpu")
+  private Long adMonetizationBkPlaDedupActive24hArpu = null;
+
+  @SerializedName("ad_monetization_bk_pla_dedup_active_24h_cost")
+  private Long adMonetizationBkPlaDedupActive24hCost = null;
+
+  @SerializedName("ad_monetization_bk_pla_active_3d_amount")
+  private Long adMonetizationBkPlaActive3dAmount = null;
+
+  @SerializedName("ad_monetization_bk_pla_active_3d_roi")
+  private Double adMonetizationBkPlaActive3dRoi = null;
+
+  @SerializedName("ad_monetization_bk_pla_active_7d_amount")
+  private Long adMonetizationBkPlaActive7dAmount = null;
+
+  @SerializedName("ad_monetization_bk_pla_active_14d_amount")
+  private Long adMonetizationBkPlaActive14dAmount = null;
+
+  @SerializedName("ad_monetization_bk_pla_active_7d_roi")
+  private Double adMonetizationBkPlaActive7dRoi = null;
+
+  @SerializedName("ad_monetization_bk_pla_active_14d_roi")
+  private Double adMonetizationBkPlaActive14dRoi = null;
+
+  @SerializedName("clk_appservice_pv")
+  private Long clkAppservicePv = null;
+
+  @SerializedName("purchase_bk_active_1d_amount")
+  private Long purchaseBkActive1dAmount = null;
+
+  @SerializedName("purchase_dedup_bk_active_1d_pv")
+  private Long purchaseDedupBkActive1dPv = null;
+
+  @SerializedName("purchase_dedup_pv")
+  private Long purchaseDedupPv = null;
+
+  @SerializedName("mix_purchase_amount")
+  private Long mixPurchaseAmount = null;
+
+  @SerializedName("mix_pay_arpu")
+  private Long mixPayArpu = null;
+
+  @SerializedName("mix_pay_cost")
+  private Long mixPayCost = null;
+
+  @SerializedName("mix_pay_roi")
+  private Double mixPayRoi = null;
+
+  @SerializedName("mix_purchase_active_24h_amount")
+  private Long mixPurchaseActive24hAmount = null;
+
+  @SerializedName("mix_pay_active_24h_roi")
+  private Double mixPayActive24hRoi = null;
+
+  @SerializedName("mix_purchase_amount_first_day")
+  private Long mixPurchaseAmountFirstDay = null;
+
+  @SerializedName("mix_pay_roi_first_day")
+  private Double mixPayRoiFirstDay = null;
+
+  @SerializedName("mix_purchase_active_3d_amount")
+  private Long mixPurchaseActive3dAmount = null;
+
+  @SerializedName("mix_pay_active_3d_roi")
+  private Double mixPayActive3dRoi = null;
+
+  @SerializedName("mix_purchase_active_7d_amount")
+  private Long mixPurchaseActive7dAmount = null;
+
+  @SerializedName("mix_pay_active_7d_roi")
+  private Double mixPayActive7dRoi = null;
+
+  @SerializedName("mix_purchase_active_14d_amount")
+  private Long mixPurchaseActive14dAmount = null;
+
+  @SerializedName("mix_pay_active_14d_roi")
+  private Double mixPayActive14dRoi = null;
+
+  @SerializedName("mix_purchase_dedup_pv")
+  private Long mixPurchaseDedupPv = null;
+
   @SerializedName("age_id")
   private Long ageId = null;
 
@@ -2000,6 +2117,12 @@ public class TargetReportApiListStruct {
 
   @SerializedName("region_id")
   private Long regionId = null;
+
+  @SerializedName("adgroup_id")
+  private Long adgroupId = null;
+
+  @SerializedName("audience_id")
+  private Long audienceId = null;
 
   @SerializedName("project_id")
   private Long projectId = null;
@@ -4294,63 +4417,6 @@ public class TargetReportApiListStruct {
 
   public void setGuideToFollowPageInteractionUsers(Long guideToFollowPageInteractionUsers) {
     this.guideToFollowPageInteractionUsers = guideToFollowPageInteractionUsers;
-  }
-
-  public TargetReportApiListStruct landingPageViewCount(Long landingPageViewCount) {
-    this.landingPageViewCount = landingPageViewCount;
-    return this;
-  }
-
-  /**
-   * Get landingPageViewCount
-   *
-   * @return landingPageViewCount
-   */
-  @ApiModelProperty(value = "")
-  public Long getLandingPageViewCount() {
-    return landingPageViewCount;
-  }
-
-  public void setLandingPageViewCount(Long landingPageViewCount) {
-    this.landingPageViewCount = landingPageViewCount;
-  }
-
-  public TargetReportApiListStruct landingPageEffectiveRate(Double landingPageEffectiveRate) {
-    this.landingPageEffectiveRate = landingPageEffectiveRate;
-    return this;
-  }
-
-  /**
-   * Get landingPageEffectiveRate
-   *
-   * @return landingPageEffectiveRate
-   */
-  @ApiModelProperty(value = "")
-  public Double getLandingPageEffectiveRate() {
-    return landingPageEffectiveRate;
-  }
-
-  public void setLandingPageEffectiveRate(Double landingPageEffectiveRate) {
-    this.landingPageEffectiveRate = landingPageEffectiveRate;
-  }
-
-  public TargetReportApiListStruct landingPageUserCount(Long landingPageUserCount) {
-    this.landingPageUserCount = landingPageUserCount;
-    return this;
-  }
-
-  /**
-   * Get landingPageUserCount
-   *
-   * @return landingPageUserCount
-   */
-  @ApiModelProperty(value = "")
-  public Long getLandingPageUserCount() {
-    return landingPageUserCount;
-  }
-
-  public void setLandingPageUserCount(Long landingPageUserCount) {
-    this.landingPageUserCount = landingPageUserCount;
   }
 
   public TargetReportApiListStruct platformKeyPageViewUserCount(Long platformKeyPageViewUserCount) {
@@ -14535,6 +14601,819 @@ public class TargetReportApiListStruct {
     this.securityHighPriceOrderPv = securityHighPriceOrderPv;
   }
 
+  public TargetReportApiListStruct miniGameRate(Double miniGameRate) {
+    this.miniGameRate = miniGameRate;
+    return this;
+  }
+
+  /**
+   * Get miniGameRate
+   *
+   * @return miniGameRate
+   */
+  @ApiModelProperty(value = "")
+  public Double getMiniGameRate() {
+    return miniGameRate;
+  }
+
+  public void setMiniGameRate(Double miniGameRate) {
+    this.miniGameRate = miniGameRate;
+  }
+
+  public TargetReportApiListStruct retentionPlaDedupPv(Long retentionPlaDedupPv) {
+    this.retentionPlaDedupPv = retentionPlaDedupPv;
+    return this;
+  }
+
+  /**
+   * Get retentionPlaDedupPv
+   *
+   * @return retentionPlaDedupPv
+   */
+  @ApiModelProperty(value = "")
+  public Long getRetentionPlaDedupPv() {
+    return retentionPlaDedupPv;
+  }
+
+  public void setRetentionPlaDedupPv(Long retentionPlaDedupPv) {
+    this.retentionPlaDedupPv = retentionPlaDedupPv;
+  }
+
+  public TargetReportApiListStruct retentionPlaDedupRate(Double retentionPlaDedupRate) {
+    this.retentionPlaDedupRate = retentionPlaDedupRate;
+    return this;
+  }
+
+  /**
+   * Get retentionPlaDedupRate
+   *
+   * @return retentionPlaDedupRate
+   */
+  @ApiModelProperty(value = "")
+  public Double getRetentionPlaDedupRate() {
+    return retentionPlaDedupRate;
+  }
+
+  public void setRetentionPlaDedupRate(Double retentionPlaDedupRate) {
+    this.retentionPlaDedupRate = retentionPlaDedupRate;
+  }
+
+  public TargetReportApiListStruct adMonetizationPlaDedupPv(Long adMonetizationPlaDedupPv) {
+    this.adMonetizationPlaDedupPv = adMonetizationPlaDedupPv;
+    return this;
+  }
+
+  /**
+   * Get adMonetizationPlaDedupPv
+   *
+   * @return adMonetizationPlaDedupPv
+   */
+  @ApiModelProperty(value = "")
+  public Long getAdMonetizationPlaDedupPv() {
+    return adMonetizationPlaDedupPv;
+  }
+
+  public void setAdMonetizationPlaDedupPv(Long adMonetizationPlaDedupPv) {
+    this.adMonetizationPlaDedupPv = adMonetizationPlaDedupPv;
+  }
+
+  public TargetReportApiListStruct adMonetizationPlaDedupActive1dPv(
+      Long adMonetizationPlaDedupActive1dPv) {
+    this.adMonetizationPlaDedupActive1dPv = adMonetizationPlaDedupActive1dPv;
+    return this;
+  }
+
+  /**
+   * Get adMonetizationPlaDedupActive1dPv
+   *
+   * @return adMonetizationPlaDedupActive1dPv
+   */
+  @ApiModelProperty(value = "")
+  public Long getAdMonetizationPlaDedupActive1dPv() {
+    return adMonetizationPlaDedupActive1dPv;
+  }
+
+  public void setAdMonetizationPlaDedupActive1dPv(Long adMonetizationPlaDedupActive1dPv) {
+    this.adMonetizationPlaDedupActive1dPv = adMonetizationPlaDedupActive1dPv;
+  }
+
+  public TargetReportApiListStruct adMonetizationPlaDedupActive3dPv(
+      Long adMonetizationPlaDedupActive3dPv) {
+    this.adMonetizationPlaDedupActive3dPv = adMonetizationPlaDedupActive3dPv;
+    return this;
+  }
+
+  /**
+   * Get adMonetizationPlaDedupActive3dPv
+   *
+   * @return adMonetizationPlaDedupActive3dPv
+   */
+  @ApiModelProperty(value = "")
+  public Long getAdMonetizationPlaDedupActive3dPv() {
+    return adMonetizationPlaDedupActive3dPv;
+  }
+
+  public void setAdMonetizationPlaDedupActive3dPv(Long adMonetizationPlaDedupActive3dPv) {
+    this.adMonetizationPlaDedupActive3dPv = adMonetizationPlaDedupActive3dPv;
+  }
+
+  public TargetReportApiListStruct adMonetizationPlaDedupActive7dPv(
+      Long adMonetizationPlaDedupActive7dPv) {
+    this.adMonetizationPlaDedupActive7dPv = adMonetizationPlaDedupActive7dPv;
+    return this;
+  }
+
+  /**
+   * Get adMonetizationPlaDedupActive7dPv
+   *
+   * @return adMonetizationPlaDedupActive7dPv
+   */
+  @ApiModelProperty(value = "")
+  public Long getAdMonetizationPlaDedupActive7dPv() {
+    return adMonetizationPlaDedupActive7dPv;
+  }
+
+  public void setAdMonetizationPlaDedupActive7dPv(Long adMonetizationPlaDedupActive7dPv) {
+    this.adMonetizationPlaDedupActive7dPv = adMonetizationPlaDedupActive7dPv;
+  }
+
+  public TargetReportApiListStruct adMonetizationBkPlaDedupPv(Long adMonetizationBkPlaDedupPv) {
+    this.adMonetizationBkPlaDedupPv = adMonetizationBkPlaDedupPv;
+    return this;
+  }
+
+  /**
+   * Get adMonetizationBkPlaDedupPv
+   *
+   * @return adMonetizationBkPlaDedupPv
+   */
+  @ApiModelProperty(value = "")
+  public Long getAdMonetizationBkPlaDedupPv() {
+    return adMonetizationBkPlaDedupPv;
+  }
+
+  public void setAdMonetizationBkPlaDedupPv(Long adMonetizationBkPlaDedupPv) {
+    this.adMonetizationBkPlaDedupPv = adMonetizationBkPlaDedupPv;
+  }
+
+  public TargetReportApiListStruct miniGameBfIncomePlaRoi(Double miniGameBfIncomePlaRoi) {
+    this.miniGameBfIncomePlaRoi = miniGameBfIncomePlaRoi;
+    return this;
+  }
+
+  /**
+   * Get miniGameBfIncomePlaRoi
+   *
+   * @return miniGameBfIncomePlaRoi
+   */
+  @ApiModelProperty(value = "")
+  public Double getMiniGameBfIncomePlaRoi() {
+    return miniGameBfIncomePlaRoi;
+  }
+
+  public void setMiniGameBfIncomePlaRoi(Double miniGameBfIncomePlaRoi) {
+    this.miniGameBfIncomePlaRoi = miniGameBfIncomePlaRoi;
+  }
+
+  public TargetReportApiListStruct miniGameBfIncomePlaArpu(Long miniGameBfIncomePlaArpu) {
+    this.miniGameBfIncomePlaArpu = miniGameBfIncomePlaArpu;
+    return this;
+  }
+
+  /**
+   * Get miniGameBfIncomePlaArpu
+   *
+   * @return miniGameBfIncomePlaArpu
+   */
+  @ApiModelProperty(value = "")
+  public Long getMiniGameBfIncomePlaArpu() {
+    return miniGameBfIncomePlaArpu;
+  }
+
+  public void setMiniGameBfIncomePlaArpu(Long miniGameBfIncomePlaArpu) {
+    this.miniGameBfIncomePlaArpu = miniGameBfIncomePlaArpu;
+  }
+
+  public TargetReportApiListStruct adMonetizationBkPlaCost(Long adMonetizationBkPlaCost) {
+    this.adMonetizationBkPlaCost = adMonetizationBkPlaCost;
+    return this;
+  }
+
+  /**
+   * Get adMonetizationBkPlaCost
+   *
+   * @return adMonetizationBkPlaCost
+   */
+  @ApiModelProperty(value = "")
+  public Long getAdMonetizationBkPlaCost() {
+    return adMonetizationBkPlaCost;
+  }
+
+  public void setAdMonetizationBkPlaCost(Long adMonetizationBkPlaCost) {
+    this.adMonetizationBkPlaCost = adMonetizationBkPlaCost;
+  }
+
+  public TargetReportApiListStruct adMonetizationBkPlaDedupActive1dPv(
+      Long adMonetizationBkPlaDedupActive1dPv) {
+    this.adMonetizationBkPlaDedupActive1dPv = adMonetizationBkPlaDedupActive1dPv;
+    return this;
+  }
+
+  /**
+   * Get adMonetizationBkPlaDedupActive1dPv
+   *
+   * @return adMonetizationBkPlaDedupActive1dPv
+   */
+  @ApiModelProperty(value = "")
+  public Long getAdMonetizationBkPlaDedupActive1dPv() {
+    return adMonetizationBkPlaDedupActive1dPv;
+  }
+
+  public void setAdMonetizationBkPlaDedupActive1dPv(Long adMonetizationBkPlaDedupActive1dPv) {
+    this.adMonetizationBkPlaDedupActive1dPv = adMonetizationBkPlaDedupActive1dPv;
+  }
+
+  public TargetReportApiListStruct adMonetizationBkPlaActive24hAmount(
+      Long adMonetizationBkPlaActive24hAmount) {
+    this.adMonetizationBkPlaActive24hAmount = adMonetizationBkPlaActive24hAmount;
+    return this;
+  }
+
+  /**
+   * Get adMonetizationBkPlaActive24hAmount
+   *
+   * @return adMonetizationBkPlaActive24hAmount
+   */
+  @ApiModelProperty(value = "")
+  public Long getAdMonetizationBkPlaActive24hAmount() {
+    return adMonetizationBkPlaActive24hAmount;
+  }
+
+  public void setAdMonetizationBkPlaActive24hAmount(Long adMonetizationBkPlaActive24hAmount) {
+    this.adMonetizationBkPlaActive24hAmount = adMonetizationBkPlaActive24hAmount;
+  }
+
+  public TargetReportApiListStruct adMonetizationBkPlaDedupActive24hPv(
+      Long adMonetizationBkPlaDedupActive24hPv) {
+    this.adMonetizationBkPlaDedupActive24hPv = adMonetizationBkPlaDedupActive24hPv;
+    return this;
+  }
+
+  /**
+   * Get adMonetizationBkPlaDedupActive24hPv
+   *
+   * @return adMonetizationBkPlaDedupActive24hPv
+   */
+  @ApiModelProperty(value = "")
+  public Long getAdMonetizationBkPlaDedupActive24hPv() {
+    return adMonetizationBkPlaDedupActive24hPv;
+  }
+
+  public void setAdMonetizationBkPlaDedupActive24hPv(Long adMonetizationBkPlaDedupActive24hPv) {
+    this.adMonetizationBkPlaDedupActive24hPv = adMonetizationBkPlaDedupActive24hPv;
+  }
+
+  public TargetReportApiListStruct adMonetizationBkPlaDedupActive24hRoi(
+      Double adMonetizationBkPlaDedupActive24hRoi) {
+    this.adMonetizationBkPlaDedupActive24hRoi = adMonetizationBkPlaDedupActive24hRoi;
+    return this;
+  }
+
+  /**
+   * Get adMonetizationBkPlaDedupActive24hRoi
+   *
+   * @return adMonetizationBkPlaDedupActive24hRoi
+   */
+  @ApiModelProperty(value = "")
+  public Double getAdMonetizationBkPlaDedupActive24hRoi() {
+    return adMonetizationBkPlaDedupActive24hRoi;
+  }
+
+  public void setAdMonetizationBkPlaDedupActive24hRoi(Double adMonetizationBkPlaDedupActive24hRoi) {
+    this.adMonetizationBkPlaDedupActive24hRoi = adMonetizationBkPlaDedupActive24hRoi;
+  }
+
+  public TargetReportApiListStruct adMonetizationBkPlaDedupActive24hArpu(
+      Long adMonetizationBkPlaDedupActive24hArpu) {
+    this.adMonetizationBkPlaDedupActive24hArpu = adMonetizationBkPlaDedupActive24hArpu;
+    return this;
+  }
+
+  /**
+   * Get adMonetizationBkPlaDedupActive24hArpu
+   *
+   * @return adMonetizationBkPlaDedupActive24hArpu
+   */
+  @ApiModelProperty(value = "")
+  public Long getAdMonetizationBkPlaDedupActive24hArpu() {
+    return adMonetizationBkPlaDedupActive24hArpu;
+  }
+
+  public void setAdMonetizationBkPlaDedupActive24hArpu(Long adMonetizationBkPlaDedupActive24hArpu) {
+    this.adMonetizationBkPlaDedupActive24hArpu = adMonetizationBkPlaDedupActive24hArpu;
+  }
+
+  public TargetReportApiListStruct adMonetizationBkPlaDedupActive24hCost(
+      Long adMonetizationBkPlaDedupActive24hCost) {
+    this.adMonetizationBkPlaDedupActive24hCost = adMonetizationBkPlaDedupActive24hCost;
+    return this;
+  }
+
+  /**
+   * Get adMonetizationBkPlaDedupActive24hCost
+   *
+   * @return adMonetizationBkPlaDedupActive24hCost
+   */
+  @ApiModelProperty(value = "")
+  public Long getAdMonetizationBkPlaDedupActive24hCost() {
+    return adMonetizationBkPlaDedupActive24hCost;
+  }
+
+  public void setAdMonetizationBkPlaDedupActive24hCost(Long adMonetizationBkPlaDedupActive24hCost) {
+    this.adMonetizationBkPlaDedupActive24hCost = adMonetizationBkPlaDedupActive24hCost;
+  }
+
+  public TargetReportApiListStruct adMonetizationBkPlaActive3dAmount(
+      Long adMonetizationBkPlaActive3dAmount) {
+    this.adMonetizationBkPlaActive3dAmount = adMonetizationBkPlaActive3dAmount;
+    return this;
+  }
+
+  /**
+   * Get adMonetizationBkPlaActive3dAmount
+   *
+   * @return adMonetizationBkPlaActive3dAmount
+   */
+  @ApiModelProperty(value = "")
+  public Long getAdMonetizationBkPlaActive3dAmount() {
+    return adMonetizationBkPlaActive3dAmount;
+  }
+
+  public void setAdMonetizationBkPlaActive3dAmount(Long adMonetizationBkPlaActive3dAmount) {
+    this.adMonetizationBkPlaActive3dAmount = adMonetizationBkPlaActive3dAmount;
+  }
+
+  public TargetReportApiListStruct adMonetizationBkPlaActive3dRoi(
+      Double adMonetizationBkPlaActive3dRoi) {
+    this.adMonetizationBkPlaActive3dRoi = adMonetizationBkPlaActive3dRoi;
+    return this;
+  }
+
+  /**
+   * Get adMonetizationBkPlaActive3dRoi
+   *
+   * @return adMonetizationBkPlaActive3dRoi
+   */
+  @ApiModelProperty(value = "")
+  public Double getAdMonetizationBkPlaActive3dRoi() {
+    return adMonetizationBkPlaActive3dRoi;
+  }
+
+  public void setAdMonetizationBkPlaActive3dRoi(Double adMonetizationBkPlaActive3dRoi) {
+    this.adMonetizationBkPlaActive3dRoi = adMonetizationBkPlaActive3dRoi;
+  }
+
+  public TargetReportApiListStruct adMonetizationBkPlaActive7dAmount(
+      Long adMonetizationBkPlaActive7dAmount) {
+    this.adMonetizationBkPlaActive7dAmount = adMonetizationBkPlaActive7dAmount;
+    return this;
+  }
+
+  /**
+   * Get adMonetizationBkPlaActive7dAmount
+   *
+   * @return adMonetizationBkPlaActive7dAmount
+   */
+  @ApiModelProperty(value = "")
+  public Long getAdMonetizationBkPlaActive7dAmount() {
+    return adMonetizationBkPlaActive7dAmount;
+  }
+
+  public void setAdMonetizationBkPlaActive7dAmount(Long adMonetizationBkPlaActive7dAmount) {
+    this.adMonetizationBkPlaActive7dAmount = adMonetizationBkPlaActive7dAmount;
+  }
+
+  public TargetReportApiListStruct adMonetizationBkPlaActive14dAmount(
+      Long adMonetizationBkPlaActive14dAmount) {
+    this.adMonetizationBkPlaActive14dAmount = adMonetizationBkPlaActive14dAmount;
+    return this;
+  }
+
+  /**
+   * Get adMonetizationBkPlaActive14dAmount
+   *
+   * @return adMonetizationBkPlaActive14dAmount
+   */
+  @ApiModelProperty(value = "")
+  public Long getAdMonetizationBkPlaActive14dAmount() {
+    return adMonetizationBkPlaActive14dAmount;
+  }
+
+  public void setAdMonetizationBkPlaActive14dAmount(Long adMonetizationBkPlaActive14dAmount) {
+    this.adMonetizationBkPlaActive14dAmount = adMonetizationBkPlaActive14dAmount;
+  }
+
+  public TargetReportApiListStruct adMonetizationBkPlaActive7dRoi(
+      Double adMonetizationBkPlaActive7dRoi) {
+    this.adMonetizationBkPlaActive7dRoi = adMonetizationBkPlaActive7dRoi;
+    return this;
+  }
+
+  /**
+   * Get adMonetizationBkPlaActive7dRoi
+   *
+   * @return adMonetizationBkPlaActive7dRoi
+   */
+  @ApiModelProperty(value = "")
+  public Double getAdMonetizationBkPlaActive7dRoi() {
+    return adMonetizationBkPlaActive7dRoi;
+  }
+
+  public void setAdMonetizationBkPlaActive7dRoi(Double adMonetizationBkPlaActive7dRoi) {
+    this.adMonetizationBkPlaActive7dRoi = adMonetizationBkPlaActive7dRoi;
+  }
+
+  public TargetReportApiListStruct adMonetizationBkPlaActive14dRoi(
+      Double adMonetizationBkPlaActive14dRoi) {
+    this.adMonetizationBkPlaActive14dRoi = adMonetizationBkPlaActive14dRoi;
+    return this;
+  }
+
+  /**
+   * Get adMonetizationBkPlaActive14dRoi
+   *
+   * @return adMonetizationBkPlaActive14dRoi
+   */
+  @ApiModelProperty(value = "")
+  public Double getAdMonetizationBkPlaActive14dRoi() {
+    return adMonetizationBkPlaActive14dRoi;
+  }
+
+  public void setAdMonetizationBkPlaActive14dRoi(Double adMonetizationBkPlaActive14dRoi) {
+    this.adMonetizationBkPlaActive14dRoi = adMonetizationBkPlaActive14dRoi;
+  }
+
+  public TargetReportApiListStruct clkAppservicePv(Long clkAppservicePv) {
+    this.clkAppservicePv = clkAppservicePv;
+    return this;
+  }
+
+  /**
+   * Get clkAppservicePv
+   *
+   * @return clkAppservicePv
+   */
+  @ApiModelProperty(value = "")
+  public Long getClkAppservicePv() {
+    return clkAppservicePv;
+  }
+
+  public void setClkAppservicePv(Long clkAppservicePv) {
+    this.clkAppservicePv = clkAppservicePv;
+  }
+
+  public TargetReportApiListStruct purchaseBkActive1dAmount(Long purchaseBkActive1dAmount) {
+    this.purchaseBkActive1dAmount = purchaseBkActive1dAmount;
+    return this;
+  }
+
+  /**
+   * Get purchaseBkActive1dAmount
+   *
+   * @return purchaseBkActive1dAmount
+   */
+  @ApiModelProperty(value = "")
+  public Long getPurchaseBkActive1dAmount() {
+    return purchaseBkActive1dAmount;
+  }
+
+  public void setPurchaseBkActive1dAmount(Long purchaseBkActive1dAmount) {
+    this.purchaseBkActive1dAmount = purchaseBkActive1dAmount;
+  }
+
+  public TargetReportApiListStruct purchaseDedupBkActive1dPv(Long purchaseDedupBkActive1dPv) {
+    this.purchaseDedupBkActive1dPv = purchaseDedupBkActive1dPv;
+    return this;
+  }
+
+  /**
+   * Get purchaseDedupBkActive1dPv
+   *
+   * @return purchaseDedupBkActive1dPv
+   */
+  @ApiModelProperty(value = "")
+  public Long getPurchaseDedupBkActive1dPv() {
+    return purchaseDedupBkActive1dPv;
+  }
+
+  public void setPurchaseDedupBkActive1dPv(Long purchaseDedupBkActive1dPv) {
+    this.purchaseDedupBkActive1dPv = purchaseDedupBkActive1dPv;
+  }
+
+  public TargetReportApiListStruct purchaseDedupPv(Long purchaseDedupPv) {
+    this.purchaseDedupPv = purchaseDedupPv;
+    return this;
+  }
+
+  /**
+   * Get purchaseDedupPv
+   *
+   * @return purchaseDedupPv
+   */
+  @ApiModelProperty(value = "")
+  public Long getPurchaseDedupPv() {
+    return purchaseDedupPv;
+  }
+
+  public void setPurchaseDedupPv(Long purchaseDedupPv) {
+    this.purchaseDedupPv = purchaseDedupPv;
+  }
+
+  public TargetReportApiListStruct mixPurchaseAmount(Long mixPurchaseAmount) {
+    this.mixPurchaseAmount = mixPurchaseAmount;
+    return this;
+  }
+
+  /**
+   * Get mixPurchaseAmount
+   *
+   * @return mixPurchaseAmount
+   */
+  @ApiModelProperty(value = "")
+  public Long getMixPurchaseAmount() {
+    return mixPurchaseAmount;
+  }
+
+  public void setMixPurchaseAmount(Long mixPurchaseAmount) {
+    this.mixPurchaseAmount = mixPurchaseAmount;
+  }
+
+  public TargetReportApiListStruct mixPayArpu(Long mixPayArpu) {
+    this.mixPayArpu = mixPayArpu;
+    return this;
+  }
+
+  /**
+   * Get mixPayArpu
+   *
+   * @return mixPayArpu
+   */
+  @ApiModelProperty(value = "")
+  public Long getMixPayArpu() {
+    return mixPayArpu;
+  }
+
+  public void setMixPayArpu(Long mixPayArpu) {
+    this.mixPayArpu = mixPayArpu;
+  }
+
+  public TargetReportApiListStruct mixPayCost(Long mixPayCost) {
+    this.mixPayCost = mixPayCost;
+    return this;
+  }
+
+  /**
+   * Get mixPayCost
+   *
+   * @return mixPayCost
+   */
+  @ApiModelProperty(value = "")
+  public Long getMixPayCost() {
+    return mixPayCost;
+  }
+
+  public void setMixPayCost(Long mixPayCost) {
+    this.mixPayCost = mixPayCost;
+  }
+
+  public TargetReportApiListStruct mixPayRoi(Double mixPayRoi) {
+    this.mixPayRoi = mixPayRoi;
+    return this;
+  }
+
+  /**
+   * Get mixPayRoi
+   *
+   * @return mixPayRoi
+   */
+  @ApiModelProperty(value = "")
+  public Double getMixPayRoi() {
+    return mixPayRoi;
+  }
+
+  public void setMixPayRoi(Double mixPayRoi) {
+    this.mixPayRoi = mixPayRoi;
+  }
+
+  public TargetReportApiListStruct mixPurchaseActive24hAmount(Long mixPurchaseActive24hAmount) {
+    this.mixPurchaseActive24hAmount = mixPurchaseActive24hAmount;
+    return this;
+  }
+
+  /**
+   * Get mixPurchaseActive24hAmount
+   *
+   * @return mixPurchaseActive24hAmount
+   */
+  @ApiModelProperty(value = "")
+  public Long getMixPurchaseActive24hAmount() {
+    return mixPurchaseActive24hAmount;
+  }
+
+  public void setMixPurchaseActive24hAmount(Long mixPurchaseActive24hAmount) {
+    this.mixPurchaseActive24hAmount = mixPurchaseActive24hAmount;
+  }
+
+  public TargetReportApiListStruct mixPayActive24hRoi(Double mixPayActive24hRoi) {
+    this.mixPayActive24hRoi = mixPayActive24hRoi;
+    return this;
+  }
+
+  /**
+   * Get mixPayActive24hRoi
+   *
+   * @return mixPayActive24hRoi
+   */
+  @ApiModelProperty(value = "")
+  public Double getMixPayActive24hRoi() {
+    return mixPayActive24hRoi;
+  }
+
+  public void setMixPayActive24hRoi(Double mixPayActive24hRoi) {
+    this.mixPayActive24hRoi = mixPayActive24hRoi;
+  }
+
+  public TargetReportApiListStruct mixPurchaseAmountFirstDay(Long mixPurchaseAmountFirstDay) {
+    this.mixPurchaseAmountFirstDay = mixPurchaseAmountFirstDay;
+    return this;
+  }
+
+  /**
+   * Get mixPurchaseAmountFirstDay
+   *
+   * @return mixPurchaseAmountFirstDay
+   */
+  @ApiModelProperty(value = "")
+  public Long getMixPurchaseAmountFirstDay() {
+    return mixPurchaseAmountFirstDay;
+  }
+
+  public void setMixPurchaseAmountFirstDay(Long mixPurchaseAmountFirstDay) {
+    this.mixPurchaseAmountFirstDay = mixPurchaseAmountFirstDay;
+  }
+
+  public TargetReportApiListStruct mixPayRoiFirstDay(Double mixPayRoiFirstDay) {
+    this.mixPayRoiFirstDay = mixPayRoiFirstDay;
+    return this;
+  }
+
+  /**
+   * Get mixPayRoiFirstDay
+   *
+   * @return mixPayRoiFirstDay
+   */
+  @ApiModelProperty(value = "")
+  public Double getMixPayRoiFirstDay() {
+    return mixPayRoiFirstDay;
+  }
+
+  public void setMixPayRoiFirstDay(Double mixPayRoiFirstDay) {
+    this.mixPayRoiFirstDay = mixPayRoiFirstDay;
+  }
+
+  public TargetReportApiListStruct mixPurchaseActive3dAmount(Long mixPurchaseActive3dAmount) {
+    this.mixPurchaseActive3dAmount = mixPurchaseActive3dAmount;
+    return this;
+  }
+
+  /**
+   * Get mixPurchaseActive3dAmount
+   *
+   * @return mixPurchaseActive3dAmount
+   */
+  @ApiModelProperty(value = "")
+  public Long getMixPurchaseActive3dAmount() {
+    return mixPurchaseActive3dAmount;
+  }
+
+  public void setMixPurchaseActive3dAmount(Long mixPurchaseActive3dAmount) {
+    this.mixPurchaseActive3dAmount = mixPurchaseActive3dAmount;
+  }
+
+  public TargetReportApiListStruct mixPayActive3dRoi(Double mixPayActive3dRoi) {
+    this.mixPayActive3dRoi = mixPayActive3dRoi;
+    return this;
+  }
+
+  /**
+   * Get mixPayActive3dRoi
+   *
+   * @return mixPayActive3dRoi
+   */
+  @ApiModelProperty(value = "")
+  public Double getMixPayActive3dRoi() {
+    return mixPayActive3dRoi;
+  }
+
+  public void setMixPayActive3dRoi(Double mixPayActive3dRoi) {
+    this.mixPayActive3dRoi = mixPayActive3dRoi;
+  }
+
+  public TargetReportApiListStruct mixPurchaseActive7dAmount(Long mixPurchaseActive7dAmount) {
+    this.mixPurchaseActive7dAmount = mixPurchaseActive7dAmount;
+    return this;
+  }
+
+  /**
+   * Get mixPurchaseActive7dAmount
+   *
+   * @return mixPurchaseActive7dAmount
+   */
+  @ApiModelProperty(value = "")
+  public Long getMixPurchaseActive7dAmount() {
+    return mixPurchaseActive7dAmount;
+  }
+
+  public void setMixPurchaseActive7dAmount(Long mixPurchaseActive7dAmount) {
+    this.mixPurchaseActive7dAmount = mixPurchaseActive7dAmount;
+  }
+
+  public TargetReportApiListStruct mixPayActive7dRoi(Double mixPayActive7dRoi) {
+    this.mixPayActive7dRoi = mixPayActive7dRoi;
+    return this;
+  }
+
+  /**
+   * Get mixPayActive7dRoi
+   *
+   * @return mixPayActive7dRoi
+   */
+  @ApiModelProperty(value = "")
+  public Double getMixPayActive7dRoi() {
+    return mixPayActive7dRoi;
+  }
+
+  public void setMixPayActive7dRoi(Double mixPayActive7dRoi) {
+    this.mixPayActive7dRoi = mixPayActive7dRoi;
+  }
+
+  public TargetReportApiListStruct mixPurchaseActive14dAmount(Long mixPurchaseActive14dAmount) {
+    this.mixPurchaseActive14dAmount = mixPurchaseActive14dAmount;
+    return this;
+  }
+
+  /**
+   * Get mixPurchaseActive14dAmount
+   *
+   * @return mixPurchaseActive14dAmount
+   */
+  @ApiModelProperty(value = "")
+  public Long getMixPurchaseActive14dAmount() {
+    return mixPurchaseActive14dAmount;
+  }
+
+  public void setMixPurchaseActive14dAmount(Long mixPurchaseActive14dAmount) {
+    this.mixPurchaseActive14dAmount = mixPurchaseActive14dAmount;
+  }
+
+  public TargetReportApiListStruct mixPayActive14dRoi(Double mixPayActive14dRoi) {
+    this.mixPayActive14dRoi = mixPayActive14dRoi;
+    return this;
+  }
+
+  /**
+   * Get mixPayActive14dRoi
+   *
+   * @return mixPayActive14dRoi
+   */
+  @ApiModelProperty(value = "")
+  public Double getMixPayActive14dRoi() {
+    return mixPayActive14dRoi;
+  }
+
+  public void setMixPayActive14dRoi(Double mixPayActive14dRoi) {
+    this.mixPayActive14dRoi = mixPayActive14dRoi;
+  }
+
+  public TargetReportApiListStruct mixPurchaseDedupPv(Long mixPurchaseDedupPv) {
+    this.mixPurchaseDedupPv = mixPurchaseDedupPv;
+    return this;
+  }
+
+  /**
+   * Get mixPurchaseDedupPv
+   *
+   * @return mixPurchaseDedupPv
+   */
+  @ApiModelProperty(value = "")
+  public Long getMixPurchaseDedupPv() {
+    return mixPurchaseDedupPv;
+  }
+
+  public void setMixPurchaseDedupPv(Long mixPurchaseDedupPv) {
+    this.mixPurchaseDedupPv = mixPurchaseDedupPv;
+  }
+
   public TargetReportApiListStruct ageId(Long ageId) {
     this.ageId = ageId;
     return this;
@@ -14590,6 +15469,44 @@ public class TargetReportApiListStruct {
 
   public void setRegionId(Long regionId) {
     this.regionId = regionId;
+  }
+
+  public TargetReportApiListStruct adgroupId(Long adgroupId) {
+    this.adgroupId = adgroupId;
+    return this;
+  }
+
+  /**
+   * Get adgroupId
+   *
+   * @return adgroupId
+   */
+  @ApiModelProperty(value = "")
+  public Long getAdgroupId() {
+    return adgroupId;
+  }
+
+  public void setAdgroupId(Long adgroupId) {
+    this.adgroupId = adgroupId;
+  }
+
+  public TargetReportApiListStruct audienceId(Long audienceId) {
+    this.audienceId = audienceId;
+    return this;
+  }
+
+  /**
+   * Get audienceId
+   *
+   * @return audienceId
+   */
+  @ApiModelProperty(value = "")
+  public Long getAudienceId() {
+    return audienceId;
+  }
+
+  public void setAudienceId(Long audienceId) {
+    this.audienceId = audienceId;
   }
 
   public TargetReportApiListStruct projectId(Long projectId) {
@@ -14827,10 +15744,6 @@ public class TargetReportApiListStruct {
         && Objects.equals(
             this.guideToFollowPageInteractionUsers,
             targetReportApiListStruct.guideToFollowPageInteractionUsers)
-        && Objects.equals(this.landingPageViewCount, targetReportApiListStruct.landingPageViewCount)
-        && Objects.equals(
-            this.landingPageEffectiveRate, targetReportApiListStruct.landingPageEffectiveRate)
-        && Objects.equals(this.landingPageUserCount, targetReportApiListStruct.landingPageUserCount)
         && Objects.equals(
             this.platformKeyPageViewUserCount,
             targetReportApiListStruct.platformKeyPageViewUserCount)
@@ -15589,9 +16502,96 @@ public class TargetReportApiListStruct {
             this.securityLowPriceOrderPv, targetReportApiListStruct.securityLowPriceOrderPv)
         && Objects.equals(
             this.securityHighPriceOrderPv, targetReportApiListStruct.securityHighPriceOrderPv)
+        && Objects.equals(this.miniGameRate, targetReportApiListStruct.miniGameRate)
+        && Objects.equals(this.retentionPlaDedupPv, targetReportApiListStruct.retentionPlaDedupPv)
+        && Objects.equals(
+            this.retentionPlaDedupRate, targetReportApiListStruct.retentionPlaDedupRate)
+        && Objects.equals(
+            this.adMonetizationPlaDedupPv, targetReportApiListStruct.adMonetizationPlaDedupPv)
+        && Objects.equals(
+            this.adMonetizationPlaDedupActive1dPv,
+            targetReportApiListStruct.adMonetizationPlaDedupActive1dPv)
+        && Objects.equals(
+            this.adMonetizationPlaDedupActive3dPv,
+            targetReportApiListStruct.adMonetizationPlaDedupActive3dPv)
+        && Objects.equals(
+            this.adMonetizationPlaDedupActive7dPv,
+            targetReportApiListStruct.adMonetizationPlaDedupActive7dPv)
+        && Objects.equals(
+            this.adMonetizationBkPlaDedupPv, targetReportApiListStruct.adMonetizationBkPlaDedupPv)
+        && Objects.equals(
+            this.miniGameBfIncomePlaRoi, targetReportApiListStruct.miniGameBfIncomePlaRoi)
+        && Objects.equals(
+            this.miniGameBfIncomePlaArpu, targetReportApiListStruct.miniGameBfIncomePlaArpu)
+        && Objects.equals(
+            this.adMonetizationBkPlaCost, targetReportApiListStruct.adMonetizationBkPlaCost)
+        && Objects.equals(
+            this.adMonetizationBkPlaDedupActive1dPv,
+            targetReportApiListStruct.adMonetizationBkPlaDedupActive1dPv)
+        && Objects.equals(
+            this.adMonetizationBkPlaActive24hAmount,
+            targetReportApiListStruct.adMonetizationBkPlaActive24hAmount)
+        && Objects.equals(
+            this.adMonetizationBkPlaDedupActive24hPv,
+            targetReportApiListStruct.adMonetizationBkPlaDedupActive24hPv)
+        && Objects.equals(
+            this.adMonetizationBkPlaDedupActive24hRoi,
+            targetReportApiListStruct.adMonetizationBkPlaDedupActive24hRoi)
+        && Objects.equals(
+            this.adMonetizationBkPlaDedupActive24hArpu,
+            targetReportApiListStruct.adMonetizationBkPlaDedupActive24hArpu)
+        && Objects.equals(
+            this.adMonetizationBkPlaDedupActive24hCost,
+            targetReportApiListStruct.adMonetizationBkPlaDedupActive24hCost)
+        && Objects.equals(
+            this.adMonetizationBkPlaActive3dAmount,
+            targetReportApiListStruct.adMonetizationBkPlaActive3dAmount)
+        && Objects.equals(
+            this.adMonetizationBkPlaActive3dRoi,
+            targetReportApiListStruct.adMonetizationBkPlaActive3dRoi)
+        && Objects.equals(
+            this.adMonetizationBkPlaActive7dAmount,
+            targetReportApiListStruct.adMonetizationBkPlaActive7dAmount)
+        && Objects.equals(
+            this.adMonetizationBkPlaActive14dAmount,
+            targetReportApiListStruct.adMonetizationBkPlaActive14dAmount)
+        && Objects.equals(
+            this.adMonetizationBkPlaActive7dRoi,
+            targetReportApiListStruct.adMonetizationBkPlaActive7dRoi)
+        && Objects.equals(
+            this.adMonetizationBkPlaActive14dRoi,
+            targetReportApiListStruct.adMonetizationBkPlaActive14dRoi)
+        && Objects.equals(this.clkAppservicePv, targetReportApiListStruct.clkAppservicePv)
+        && Objects.equals(
+            this.purchaseBkActive1dAmount, targetReportApiListStruct.purchaseBkActive1dAmount)
+        && Objects.equals(
+            this.purchaseDedupBkActive1dPv, targetReportApiListStruct.purchaseDedupBkActive1dPv)
+        && Objects.equals(this.purchaseDedupPv, targetReportApiListStruct.purchaseDedupPv)
+        && Objects.equals(this.mixPurchaseAmount, targetReportApiListStruct.mixPurchaseAmount)
+        && Objects.equals(this.mixPayArpu, targetReportApiListStruct.mixPayArpu)
+        && Objects.equals(this.mixPayCost, targetReportApiListStruct.mixPayCost)
+        && Objects.equals(this.mixPayRoi, targetReportApiListStruct.mixPayRoi)
+        && Objects.equals(
+            this.mixPurchaseActive24hAmount, targetReportApiListStruct.mixPurchaseActive24hAmount)
+        && Objects.equals(this.mixPayActive24hRoi, targetReportApiListStruct.mixPayActive24hRoi)
+        && Objects.equals(
+            this.mixPurchaseAmountFirstDay, targetReportApiListStruct.mixPurchaseAmountFirstDay)
+        && Objects.equals(this.mixPayRoiFirstDay, targetReportApiListStruct.mixPayRoiFirstDay)
+        && Objects.equals(
+            this.mixPurchaseActive3dAmount, targetReportApiListStruct.mixPurchaseActive3dAmount)
+        && Objects.equals(this.mixPayActive3dRoi, targetReportApiListStruct.mixPayActive3dRoi)
+        && Objects.equals(
+            this.mixPurchaseActive7dAmount, targetReportApiListStruct.mixPurchaseActive7dAmount)
+        && Objects.equals(this.mixPayActive7dRoi, targetReportApiListStruct.mixPayActive7dRoi)
+        && Objects.equals(
+            this.mixPurchaseActive14dAmount, targetReportApiListStruct.mixPurchaseActive14dAmount)
+        && Objects.equals(this.mixPayActive14dRoi, targetReportApiListStruct.mixPayActive14dRoi)
+        && Objects.equals(this.mixPurchaseDedupPv, targetReportApiListStruct.mixPurchaseDedupPv)
         && Objects.equals(this.ageId, targetReportApiListStruct.ageId)
         && Objects.equals(this.cityId, targetReportApiListStruct.cityId)
         && Objects.equals(this.regionId, targetReportApiListStruct.regionId)
+        && Objects.equals(this.adgroupId, targetReportApiListStruct.adgroupId)
+        && Objects.equals(this.audienceId, targetReportApiListStruct.audienceId)
         && Objects.equals(this.projectId, targetReportApiListStruct.projectId)
         && Objects.equals(this.projectName, targetReportApiListStruct.projectName);
   }
@@ -15719,9 +16719,6 @@ public class TargetReportApiListStruct {
         guideToFollowPageViewers,
         guideToFollowPageInteractionAmount,
         guideToFollowPageInteractionUsers,
-        landingPageViewCount,
-        landingPageEffectiveRate,
-        landingPageUserCount,
         platformKeyPageViewUserCount,
         pageConsultCount,
         consultUvCount,
@@ -16256,9 +17253,53 @@ public class TargetReportApiListStruct {
         afterAddWecomNegativePv,
         securityLowPriceOrderPv,
         securityHighPriceOrderPv,
+        miniGameRate,
+        retentionPlaDedupPv,
+        retentionPlaDedupRate,
+        adMonetizationPlaDedupPv,
+        adMonetizationPlaDedupActive1dPv,
+        adMonetizationPlaDedupActive3dPv,
+        adMonetizationPlaDedupActive7dPv,
+        adMonetizationBkPlaDedupPv,
+        miniGameBfIncomePlaRoi,
+        miniGameBfIncomePlaArpu,
+        adMonetizationBkPlaCost,
+        adMonetizationBkPlaDedupActive1dPv,
+        adMonetizationBkPlaActive24hAmount,
+        adMonetizationBkPlaDedupActive24hPv,
+        adMonetizationBkPlaDedupActive24hRoi,
+        adMonetizationBkPlaDedupActive24hArpu,
+        adMonetizationBkPlaDedupActive24hCost,
+        adMonetizationBkPlaActive3dAmount,
+        adMonetizationBkPlaActive3dRoi,
+        adMonetizationBkPlaActive7dAmount,
+        adMonetizationBkPlaActive14dAmount,
+        adMonetizationBkPlaActive7dRoi,
+        adMonetizationBkPlaActive14dRoi,
+        clkAppservicePv,
+        purchaseBkActive1dAmount,
+        purchaseDedupBkActive1dPv,
+        purchaseDedupPv,
+        mixPurchaseAmount,
+        mixPayArpu,
+        mixPayCost,
+        mixPayRoi,
+        mixPurchaseActive24hAmount,
+        mixPayActive24hRoi,
+        mixPurchaseAmountFirstDay,
+        mixPayRoiFirstDay,
+        mixPurchaseActive3dAmount,
+        mixPayActive3dRoi,
+        mixPurchaseActive7dAmount,
+        mixPayActive7dRoi,
+        mixPurchaseActive14dAmount,
+        mixPayActive14dRoi,
+        mixPurchaseDedupPv,
         ageId,
         cityId,
         regionId,
+        adgroupId,
+        audienceId,
         projectId,
         projectName);
   }

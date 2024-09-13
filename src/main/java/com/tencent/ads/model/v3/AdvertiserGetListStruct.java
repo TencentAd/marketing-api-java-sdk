@@ -26,6 +26,9 @@ public class AdvertiserGetListStruct {
   @SerializedName("account_id")
   private Long accountId = null;
 
+  @SerializedName("registration_type")
+  private CustomerRegistrationType registrationType = null;
+
   @SerializedName("daily_budget")
   private Long dailyBudget = null;
 
@@ -48,7 +51,7 @@ public class AdvertiserGetListStruct {
   private String certificationImage = null;
 
   @SerializedName("individual_qualification")
-  private IndividualQualification individualQualification = null;
+  private IndividualQualificationRsp individualQualification = null;
 
   @SerializedName("system_industry_id")
   private Long systemIndustryId = null;
@@ -112,6 +115,25 @@ public class AdvertiserGetListStruct {
 
   public void setAccountId(Long accountId) {
     this.accountId = accountId;
+  }
+
+  public AdvertiserGetListStruct registrationType(CustomerRegistrationType registrationType) {
+    this.registrationType = registrationType;
+    return this;
+  }
+
+  /**
+   * Get registrationType
+   *
+   * @return registrationType
+   */
+  @ApiModelProperty(value = "")
+  public CustomerRegistrationType getRegistrationType() {
+    return registrationType;
+  }
+
+  public void setRegistrationType(CustomerRegistrationType registrationType) {
+    this.registrationType = registrationType;
   }
 
   public AdvertiserGetListStruct dailyBudget(Long dailyBudget) {
@@ -248,7 +270,7 @@ public class AdvertiserGetListStruct {
   }
 
   public AdvertiserGetListStruct individualQualification(
-      IndividualQualification individualQualification) {
+      IndividualQualificationRsp individualQualification) {
     this.individualQualification = individualQualification;
     return this;
   }
@@ -259,11 +281,11 @@ public class AdvertiserGetListStruct {
    * @return individualQualification
    */
   @ApiModelProperty(value = "")
-  public IndividualQualification getIndividualQualification() {
+  public IndividualQualificationRsp getIndividualQualification() {
     return individualQualification;
   }
 
-  public void setIndividualQualification(IndividualQualification individualQualification) {
+  public void setIndividualQualification(IndividualQualificationRsp individualQualification) {
     this.individualQualification = individualQualification;
   }
 
@@ -578,6 +600,7 @@ public class AdvertiserGetListStruct {
     }
     AdvertiserGetListStruct advertiserGetListStruct = (AdvertiserGetListStruct) o;
     return Objects.equals(this.accountId, advertiserGetListStruct.accountId)
+        && Objects.equals(this.registrationType, advertiserGetListStruct.registrationType)
         && Objects.equals(this.dailyBudget, advertiserGetListStruct.dailyBudget)
         && Objects.equals(this.systemStatus, advertiserGetListStruct.systemStatus)
         && Objects.equals(this.rejectMessage, advertiserGetListStruct.rejectMessage)
@@ -609,6 +632,7 @@ public class AdvertiserGetListStruct {
   public int hashCode() {
     return Objects.hash(
         accountId,
+        registrationType,
         dailyBudget,
         systemStatus,
         rejectMessage,

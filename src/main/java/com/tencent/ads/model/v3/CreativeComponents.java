@@ -113,6 +113,9 @@ public class CreativeComponents {
   @SerializedName("image_showcase")
   private List<ImageShowcaseComponent> imageShowcase = null;
 
+  @SerializedName("social_skill")
+  private List<SocialSkillComponent> socialSkill = null;
+
   @SerializedName("mini_card_link")
   private List<MiniCardLinkComponent> miniCardLink = null;
 
@@ -933,6 +936,33 @@ public class CreativeComponents {
     this.imageShowcase = imageShowcase;
   }
 
+  public CreativeComponents socialSkill(List<SocialSkillComponent> socialSkill) {
+    this.socialSkill = socialSkill;
+    return this;
+  }
+
+  public CreativeComponents addSocialSkillItem(SocialSkillComponent socialSkillItem) {
+    if (this.socialSkill == null) {
+      this.socialSkill = new ArrayList<SocialSkillComponent>();
+    }
+    this.socialSkill.add(socialSkillItem);
+    return this;
+  }
+
+  /**
+   * Get socialSkill
+   *
+   * @return socialSkill
+   */
+  @ApiModelProperty(value = "")
+  public List<SocialSkillComponent> getSocialSkill() {
+    return socialSkill;
+  }
+
+  public void setSocialSkill(List<SocialSkillComponent> socialSkill) {
+    this.socialSkill = socialSkill;
+  }
+
   public CreativeComponents miniCardLink(List<MiniCardLinkComponent> miniCardLink) {
     this.miniCardLink = miniCardLink;
     return this;
@@ -1027,6 +1057,7 @@ public class CreativeComponents {
         && Objects.equals(this.appPromotionVideo, creativeComponents.appPromotionVideo)
         && Objects.equals(this.videoShowcase, creativeComponents.videoShowcase)
         && Objects.equals(this.imageShowcase, creativeComponents.imageShowcase)
+        && Objects.equals(this.socialSkill, creativeComponents.socialSkill)
         && Objects.equals(this.miniCardLink, creativeComponents.miniCardLink)
         && Objects.equals(this.floatingZoneList, creativeComponents.floatingZoneList);
   }
@@ -1064,6 +1095,7 @@ public class CreativeComponents {
         appPromotionVideo,
         videoShowcase,
         imageShowcase,
+        socialSkill,
         miniCardLink,
         floatingZoneList);
   }

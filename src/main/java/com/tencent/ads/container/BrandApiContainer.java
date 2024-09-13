@@ -15,6 +15,7 @@ package com.tencent.ads.container;
 import com.google.inject.Inject;
 import com.tencent.ads.ApiContainer;
 import com.tencent.ads.ApiException;
+import com.tencent.ads.Pair;
 import com.tencent.ads.anno.*;
 import com.tencent.ads.api.BrandApi;
 import com.tencent.ads.exception.TencentAdsResponseException;
@@ -40,7 +41,7 @@ public class BrandApiContainer extends ApiContainer {
    *     response body
    */
   public BrandAddResponseData brandAdd(
-      Long accountId, String name, File brandImageFile, String... headerPair)
+      Long accountId, String name, File brandImageFile, Pair... headerPair)
       throws ApiException, TencentAdsResponseException {
     BrandAddResponse resp = api.brandAdd(accountId, name, brandImageFile, headerPair);
     handleResponse(gson.toJson(resp));
@@ -59,7 +60,7 @@ public class BrandApiContainer extends ApiContainer {
    *     response body
    */
   public BrandGetResponseData brandGet(
-      Long accountId, Long page, Long pageSize, List<String> fields, String... headerPair)
+      Long accountId, Long page, Long pageSize, List<String> fields, Pair... headerPair)
       throws ApiException, TencentAdsResponseException {
     BrandGetResponse resp = api.brandGet(accountId, page, pageSize, fields, headerPair);
     handleResponse(gson.toJson(resp));

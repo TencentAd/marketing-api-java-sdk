@@ -21,55 +21,8 @@ import java.util.Objects;
 /** 处理操作信息 */
 @ApiModel(description = "处理操作信息")
 public class OperationSpec {
-  @SerializedName("crop_customized_spec")
-  private CropCustomizedSpec cropCustomizedSpec = null;
-
-  @SerializedName("crop_smart_spec")
-  private CropSmartSpec cropSmartSpec = null;
-
   @SerializedName("resize_spec")
   private ResizeSpec resizeSpec = null;
-
-  @SerializedName("crop_customized_spec_and_resize")
-  private CropCustomizedSpecAndResize cropCustomizedSpecAndResize = null;
-
-  public OperationSpec cropCustomizedSpec(CropCustomizedSpec cropCustomizedSpec) {
-    this.cropCustomizedSpec = cropCustomizedSpec;
-    return this;
-  }
-
-  /**
-   * Get cropCustomizedSpec
-   *
-   * @return cropCustomizedSpec
-   */
-  @ApiModelProperty(value = "")
-  public CropCustomizedSpec getCropCustomizedSpec() {
-    return cropCustomizedSpec;
-  }
-
-  public void setCropCustomizedSpec(CropCustomizedSpec cropCustomizedSpec) {
-    this.cropCustomizedSpec = cropCustomizedSpec;
-  }
-
-  public OperationSpec cropSmartSpec(CropSmartSpec cropSmartSpec) {
-    this.cropSmartSpec = cropSmartSpec;
-    return this;
-  }
-
-  /**
-   * Get cropSmartSpec
-   *
-   * @return cropSmartSpec
-   */
-  @ApiModelProperty(value = "")
-  public CropSmartSpec getCropSmartSpec() {
-    return cropSmartSpec;
-  }
-
-  public void setCropSmartSpec(CropSmartSpec cropSmartSpec) {
-    this.cropSmartSpec = cropSmartSpec;
-  }
 
   public OperationSpec resizeSpec(ResizeSpec resizeSpec) {
     this.resizeSpec = resizeSpec;
@@ -90,27 +43,6 @@ public class OperationSpec {
     this.resizeSpec = resizeSpec;
   }
 
-  public OperationSpec cropCustomizedSpecAndResize(
-      CropCustomizedSpecAndResize cropCustomizedSpecAndResize) {
-    this.cropCustomizedSpecAndResize = cropCustomizedSpecAndResize;
-    return this;
-  }
-
-  /**
-   * Get cropCustomizedSpecAndResize
-   *
-   * @return cropCustomizedSpecAndResize
-   */
-  @ApiModelProperty(value = "")
-  public CropCustomizedSpecAndResize getCropCustomizedSpecAndResize() {
-    return cropCustomizedSpecAndResize;
-  }
-
-  public void setCropCustomizedSpecAndResize(
-      CropCustomizedSpecAndResize cropCustomizedSpecAndResize) {
-    this.cropCustomizedSpecAndResize = cropCustomizedSpecAndResize;
-  }
-
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -120,16 +52,12 @@ public class OperationSpec {
       return false;
     }
     OperationSpec operationSpec = (OperationSpec) o;
-    return Objects.equals(this.cropCustomizedSpec, operationSpec.cropCustomizedSpec)
-        && Objects.equals(this.cropSmartSpec, operationSpec.cropSmartSpec)
-        && Objects.equals(this.resizeSpec, operationSpec.resizeSpec)
-        && Objects.equals(
-            this.cropCustomizedSpecAndResize, operationSpec.cropCustomizedSpecAndResize);
+    return Objects.equals(this.resizeSpec, operationSpec.resizeSpec);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(cropCustomizedSpec, cropSmartSpec, resizeSpec, cropCustomizedSpecAndResize);
+    return Objects.hash(resizeSpec);
   }
 
   @Override

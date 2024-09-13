@@ -15,6 +15,7 @@ package com.tencent.ads.container.v3;
 import com.google.inject.Inject;
 import com.tencent.ads.ApiContainer;
 import com.tencent.ads.ApiException;
+import com.tencent.ads.Pair;
 import com.tencent.ads.anno.*;
 import com.tencent.ads.api.v3.AdgroupsApi;
 import com.tencent.ads.exception.TencentAdsResponseException;
@@ -56,7 +57,7 @@ public class AdgroupsApiContainer extends ApiContainer {
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
-  public AdgroupsAddResponseData adgroupsAdd(AdgroupsAddRequest data, String... headerPair)
+  public AdgroupsAddResponseData adgroupsAdd(AdgroupsAddRequest data, Pair... headerPair)
       throws ApiException, TencentAdsResponseException {
     AdgroupsAddResponse resp = api.adgroupsAdd(data, headerPair);
     handleResponse(gson.toJson(resp));
@@ -71,7 +72,7 @@ public class AdgroupsApiContainer extends ApiContainer {
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
-  public AdgroupsDeleteResponseData adgroupsDelete(AdgroupsDeleteRequest data, String... headerPair)
+  public AdgroupsDeleteResponseData adgroupsDelete(AdgroupsDeleteRequest data, Pair... headerPair)
       throws ApiException, TencentAdsResponseException {
     AdgroupsDeleteResponse resp = api.adgroupsDelete(data, headerPair);
     handleResponse(gson.toJson(resp));
@@ -87,6 +88,8 @@ public class AdgroupsApiContainer extends ApiContainer {
    * @param pageSize (optional)
    * @param isDeleted (optional)
    * @param fields (optional)
+   * @param paginationMode (optional)
+   * @param cursor (optional)
    * @return AdgroupsGetResponse
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
@@ -98,10 +101,21 @@ public class AdgroupsApiContainer extends ApiContainer {
       Long pageSize,
       Boolean isDeleted,
       List<String> fields,
-      String... headerPair)
+      String paginationMode,
+      String cursor,
+      Pair... headerPair)
       throws ApiException, TencentAdsResponseException {
     AdgroupsGetResponse resp =
-        api.adgroupsGet(accountId, filtering, page, pageSize, isDeleted, fields, headerPair);
+        api.adgroupsGet(
+            accountId,
+            filtering,
+            page,
+            pageSize,
+            isDeleted,
+            fields,
+            paginationMode,
+            cursor,
+            headerPair);
     handleResponse(gson.toJson(resp));
     return resp.getData();
   }
@@ -114,7 +128,7 @@ public class AdgroupsApiContainer extends ApiContainer {
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
-  public AdgroupsUpdateResponseData adgroupsUpdate(AdgroupsUpdateRequest data, String... headerPair)
+  public AdgroupsUpdateResponseData adgroupsUpdate(AdgroupsUpdateRequest data, Pair... headerPair)
       throws ApiException, TencentAdsResponseException {
     AdgroupsUpdateResponse resp = api.adgroupsUpdate(data, headerPair);
     handleResponse(gson.toJson(resp));
@@ -130,7 +144,7 @@ public class AdgroupsApiContainer extends ApiContainer {
    *     response body
    */
   public AdgroupsUpdateBidAmountResponseData adgroupsUpdateBidAmount(
-      AdgroupsUpdateBidAmountRequest data, String... headerPair)
+      AdgroupsUpdateBidAmountRequest data, Pair... headerPair)
       throws ApiException, TencentAdsResponseException {
     AdgroupsUpdateBidAmountResponse resp = api.adgroupsUpdateBidAmount(data, headerPair);
     handleResponse(gson.toJson(resp));
@@ -146,7 +160,7 @@ public class AdgroupsApiContainer extends ApiContainer {
    *     response body
    */
   public AdgroupsUpdateConfiguredStatusResponseData adgroupsUpdateConfiguredStatus(
-      AdgroupsUpdateConfiguredStatusRequest data, String... headerPair)
+      AdgroupsUpdateConfiguredStatusRequest data, Pair... headerPair)
       throws ApiException, TencentAdsResponseException {
     AdgroupsUpdateConfiguredStatusResponse resp =
         api.adgroupsUpdateConfiguredStatus(data, headerPair);
@@ -163,7 +177,7 @@ public class AdgroupsApiContainer extends ApiContainer {
    *     response body
    */
   public AdgroupsUpdateDailyBudgetResponseData adgroupsUpdateDailyBudget(
-      AdgroupsUpdateDailyBudgetRequest data, String... headerPair)
+      AdgroupsUpdateDailyBudgetRequest data, Pair... headerPair)
       throws ApiException, TencentAdsResponseException {
     AdgroupsUpdateDailyBudgetResponse resp = api.adgroupsUpdateDailyBudget(data, headerPair);
     handleResponse(gson.toJson(resp));
@@ -179,7 +193,7 @@ public class AdgroupsApiContainer extends ApiContainer {
    *     response body
    */
   public AdgroupsUpdateDatetimeResponseData adgroupsUpdateDatetime(
-      AdgroupsUpdateDatetimeRequest data, String... headerPair)
+      AdgroupsUpdateDatetimeRequest data, Pair... headerPair)
       throws ApiException, TencentAdsResponseException {
     AdgroupsUpdateDatetimeResponse resp = api.adgroupsUpdateDatetime(data, headerPair);
     handleResponse(gson.toJson(resp));

@@ -68,7 +68,7 @@ public class TargetingsApi {
       TargetingsAddRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     Object localVarPostBody = data;
@@ -92,11 +92,8 @@ public class TargetingsApi {
     localVarHeaderParams.put("Content-Type", localVarContentType);
 
     if (headerPair != null && headerPair.length > 0) {
-      if (headerPair.length % 2 != 0) {
-        throw new UnsupportedOperationException("Parameter headerPair must be paired");
-      }
-      for (int i = 0; i < headerPair.length / 2; i++) {
-        localVarHeaderParams.put(headerPair[i], headerPair[i * 2 + 1]);
+      for (int i = 0; i < headerPair.length; i++) {
+        localVarHeaderParams.put(headerPair[i].getName(), headerPair[i].getValue());
       }
     }
 
@@ -136,7 +133,7 @@ public class TargetingsApi {
       TargetingsAddRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     // verify the required parameter 'data' is set
@@ -158,7 +155,7 @@ public class TargetingsApi {
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
-  public TargetingsAddResponse targetingsAdd(TargetingsAddRequest data, String... headerPair)
+  public TargetingsAddResponse targetingsAdd(TargetingsAddRequest data, Pair... headerPair)
       throws ApiException {
     ApiResponse<TargetingsAddResponse> resp = targetingsAddWithHttpInfo(data, headerPair);
     return resp.getData();
@@ -173,7 +170,7 @@ public class TargetingsApi {
    *     response body
    */
   public ApiResponse<TargetingsAddResponse> targetingsAddWithHttpInfo(
-      TargetingsAddRequest data, String... headerPair) throws ApiException {
+      TargetingsAddRequest data, Pair... headerPair) throws ApiException {
     com.squareup.okhttp.Call call = targetingsAddValidateBeforeCall(data, null, null, headerPair);
     Type localVarReturnType = new TypeToken<TargetingsAddResponse>() {}.getType();
     return apiClient.execute(call, localVarReturnType);
@@ -190,7 +187,7 @@ public class TargetingsApi {
   public com.squareup.okhttp.Call targetingsAddAsync(
       TargetingsAddRequest data,
       final ApiCallback<TargetingsAddResponse> callback,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     ProgressResponseBody.ProgressListener progressListener = null;
@@ -234,7 +231,7 @@ public class TargetingsApi {
       TargetingsDeleteRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     Object localVarPostBody = data;
@@ -258,11 +255,8 @@ public class TargetingsApi {
     localVarHeaderParams.put("Content-Type", localVarContentType);
 
     if (headerPair != null && headerPair.length > 0) {
-      if (headerPair.length % 2 != 0) {
-        throw new UnsupportedOperationException("Parameter headerPair must be paired");
-      }
-      for (int i = 0; i < headerPair.length / 2; i++) {
-        localVarHeaderParams.put(headerPair[i], headerPair[i * 2 + 1]);
+      for (int i = 0; i < headerPair.length; i++) {
+        localVarHeaderParams.put(headerPair[i].getName(), headerPair[i].getValue());
       }
     }
 
@@ -302,7 +296,7 @@ public class TargetingsApi {
       TargetingsDeleteRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     // verify the required parameter 'data' is set
@@ -324,8 +318,8 @@ public class TargetingsApi {
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
-  public TargetingsDeleteResponse targetingsDelete(
-      TargetingsDeleteRequest data, String... headerPair) throws ApiException {
+  public TargetingsDeleteResponse targetingsDelete(TargetingsDeleteRequest data, Pair... headerPair)
+      throws ApiException {
     ApiResponse<TargetingsDeleteResponse> resp = targetingsDeleteWithHttpInfo(data, headerPair);
     return resp.getData();
   }
@@ -339,7 +333,7 @@ public class TargetingsApi {
    *     response body
    */
   public ApiResponse<TargetingsDeleteResponse> targetingsDeleteWithHttpInfo(
-      TargetingsDeleteRequest data, String... headerPair) throws ApiException {
+      TargetingsDeleteRequest data, Pair... headerPair) throws ApiException {
     com.squareup.okhttp.Call call =
         targetingsDeleteValidateBeforeCall(data, null, null, headerPair);
     Type localVarReturnType = new TypeToken<TargetingsDeleteResponse>() {}.getType();
@@ -357,7 +351,7 @@ public class TargetingsApi {
   public com.squareup.okhttp.Call targetingsDeleteAsync(
       TargetingsDeleteRequest data,
       final ApiCallback<TargetingsDeleteResponse> callback,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     ProgressResponseBody.ProgressListener progressListener = null;
@@ -409,7 +403,7 @@ public class TargetingsApi {
       List<String> fields,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     Object localVarPostBody = null;
@@ -443,11 +437,8 @@ public class TargetingsApi {
     localVarHeaderParams.put("Content-Type", localVarContentType);
 
     if (headerPair != null && headerPair.length > 0) {
-      if (headerPair.length % 2 != 0) {
-        throw new UnsupportedOperationException("Parameter headerPair must be paired");
-      }
-      for (int i = 0; i < headerPair.length / 2; i++) {
-        localVarHeaderParams.put(headerPair[i], headerPair[i * 2 + 1]);
+      for (int i = 0; i < headerPair.length; i++) {
+        localVarHeaderParams.put(headerPair[i].getName(), headerPair[i].getValue());
       }
     }
 
@@ -491,7 +482,7 @@ public class TargetingsApi {
       List<String> fields,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     // verify the required parameter 'accountId' is set
@@ -531,7 +522,7 @@ public class TargetingsApi {
       Long page,
       Long pageSize,
       List<String> fields,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
     ApiResponse<TargetingsGetResponse> resp =
         targetingsGetWithHttpInfo(accountId, filtering, page, pageSize, fields, headerPair);
@@ -556,7 +547,7 @@ public class TargetingsApi {
       Long page,
       Long pageSize,
       List<String> fields,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
     com.squareup.okhttp.Call call =
         targetingsGetValidateBeforeCall(
@@ -584,7 +575,7 @@ public class TargetingsApi {
       Long pageSize,
       List<String> fields,
       final ApiCallback<TargetingsGetResponse> callback,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     ProgressResponseBody.ProgressListener progressListener = null;
@@ -635,7 +626,7 @@ public class TargetingsApi {
       TargetingsUpdateRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     Object localVarPostBody = data;
@@ -659,11 +650,8 @@ public class TargetingsApi {
     localVarHeaderParams.put("Content-Type", localVarContentType);
 
     if (headerPair != null && headerPair.length > 0) {
-      if (headerPair.length % 2 != 0) {
-        throw new UnsupportedOperationException("Parameter headerPair must be paired");
-      }
-      for (int i = 0; i < headerPair.length / 2; i++) {
-        localVarHeaderParams.put(headerPair[i], headerPair[i * 2 + 1]);
+      for (int i = 0; i < headerPair.length; i++) {
+        localVarHeaderParams.put(headerPair[i].getName(), headerPair[i].getValue());
       }
     }
 
@@ -703,7 +691,7 @@ public class TargetingsApi {
       TargetingsUpdateRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     // verify the required parameter 'data' is set
@@ -725,8 +713,8 @@ public class TargetingsApi {
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
-  public TargetingsUpdateResponse targetingsUpdate(
-      TargetingsUpdateRequest data, String... headerPair) throws ApiException {
+  public TargetingsUpdateResponse targetingsUpdate(TargetingsUpdateRequest data, Pair... headerPair)
+      throws ApiException {
     ApiResponse<TargetingsUpdateResponse> resp = targetingsUpdateWithHttpInfo(data, headerPair);
     return resp.getData();
   }
@@ -740,7 +728,7 @@ public class TargetingsApi {
    *     response body
    */
   public ApiResponse<TargetingsUpdateResponse> targetingsUpdateWithHttpInfo(
-      TargetingsUpdateRequest data, String... headerPair) throws ApiException {
+      TargetingsUpdateRequest data, Pair... headerPair) throws ApiException {
     com.squareup.okhttp.Call call =
         targetingsUpdateValidateBeforeCall(data, null, null, headerPair);
     Type localVarReturnType = new TypeToken<TargetingsUpdateResponse>() {}.getType();
@@ -758,7 +746,7 @@ public class TargetingsApi {
   public com.squareup.okhttp.Call targetingsUpdateAsync(
       TargetingsUpdateRequest data,
       final ApiCallback<TargetingsUpdateResponse> callback,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     ProgressResponseBody.ProgressListener progressListener = null;

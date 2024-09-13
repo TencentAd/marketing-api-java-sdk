@@ -19,7 +19,7 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-/** 推广类容类型 */
+/** 推广内容类型 */
 @JsonAdapter(PromotedAssetType.Adapter.class)
 public enum PromotedAssetType {
   UNKNOWN("PROMOTED_ASSET_TYPE_UNKNOWN"),

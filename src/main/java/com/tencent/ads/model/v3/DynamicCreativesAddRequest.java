@@ -58,9 +58,6 @@ public class DynamicCreativesAddRequest {
   @SerializedName("configured_status")
   private ConfiguredStatus configuredStatus = null;
 
-  @SerializedName("enable_breakthrough_siteset")
-  private Boolean enableBreakthroughSiteset = null;
-
   public DynamicCreativesAddRequest accountId(Long accountId) {
     this.accountId = accountId;
     return this;
@@ -309,25 +306,6 @@ public class DynamicCreativesAddRequest {
     this.configuredStatus = configuredStatus;
   }
 
-  public DynamicCreativesAddRequest enableBreakthroughSiteset(Boolean enableBreakthroughSiteset) {
-    this.enableBreakthroughSiteset = enableBreakthroughSiteset;
-    return this;
-  }
-
-  /**
-   * Get enableBreakthroughSiteset
-   *
-   * @return enableBreakthroughSiteset
-   */
-  @ApiModelProperty(value = "")
-  public Boolean isEnableBreakthroughSiteset() {
-    return enableBreakthroughSiteset;
-  }
-
-  public void setEnableBreakthroughSiteset(Boolean enableBreakthroughSiteset) {
-    this.enableBreakthroughSiteset = enableBreakthroughSiteset;
-  }
-
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -352,9 +330,7 @@ public class DynamicCreativesAddRequest {
         && Objects.equals(
             this.autoDerivedProgramCreativeSwitch,
             dynamicCreativesAddRequest.autoDerivedProgramCreativeSwitch)
-        && Objects.equals(this.configuredStatus, dynamicCreativesAddRequest.configuredStatus)
-        && Objects.equals(
-            this.enableBreakthroughSiteset, dynamicCreativesAddRequest.enableBreakthroughSiteset);
+        && Objects.equals(this.configuredStatus, dynamicCreativesAddRequest.configuredStatus);
   }
 
   @Override
@@ -372,8 +348,7 @@ public class DynamicCreativesAddRequest {
         programCreativeInfo,
         pageTrackUrl,
         autoDerivedProgramCreativeSwitch,
-        configuredStatus,
-        enableBreakthroughSiteset);
+        configuredStatus);
   }
 
   @Override

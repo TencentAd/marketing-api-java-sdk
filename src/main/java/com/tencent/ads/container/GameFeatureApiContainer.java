@@ -15,6 +15,7 @@ package com.tencent.ads.container;
 import com.google.inject.Inject;
 import com.tencent.ads.ApiContainer;
 import com.tencent.ads.ApiException;
+import com.tencent.ads.Pair;
 import com.tencent.ads.anno.*;
 import com.tencent.ads.api.GameFeatureApi;
 import com.tencent.ads.exception.TencentAdsResponseException;
@@ -40,7 +41,7 @@ public class GameFeatureApiContainer extends ApiContainer {
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
-  public GameFeatureAddResponseData gameFeatureAdd(GameFeatureAddRequest data, String... headerPair)
+  public GameFeatureAddResponseData gameFeatureAdd(GameFeatureAddRequest data, Pair... headerPair)
       throws ApiException, TencentAdsResponseException {
     GameFeatureAddResponse resp = api.gameFeatureAdd(data, headerPair);
     handleResponse(gson.toJson(resp));
@@ -63,7 +64,7 @@ public class GameFeatureApiContainer extends ApiContainer {
       String promotedObjectType,
       String promotedObjectId,
       List<String> fields,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException, TencentAdsResponseException {
     GameFeatureGetResponse resp =
         api.gameFeatureGet(accountId, promotedObjectType, promotedObjectId, fields, headerPair);
@@ -80,7 +81,7 @@ public class GameFeatureApiContainer extends ApiContainer {
    *     response body
    */
   public GameFeatureUpdateResponseData gameFeatureUpdate(
-      GameFeatureUpdateRequest data, String... headerPair)
+      GameFeatureUpdateRequest data, Pair... headerPair)
       throws ApiException, TencentAdsResponseException {
     GameFeatureUpdateResponse resp = api.gameFeatureUpdate(data, headerPair);
     handleResponse(gson.toJson(resp));

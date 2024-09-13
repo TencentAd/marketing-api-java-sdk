@@ -14,11 +14,13 @@ public class AddVideos {
   /** TencentAds */
   public TencentAds tencentAds;
 
-  public Long accountId = null;
-
   public File videoFile = new File("YOUR VIDEO FILE PATH");
 
   public String signature = null;
+
+  public Long accountId = null;
+
+  public Long organizationId = null;
 
   public String description = null;
 
@@ -38,7 +40,8 @@ public class AddVideos {
     VideosAddResponseData response =
         tencentAds
             .videos()
-            .videosAdd(accountId, videoFile, signature, description, adcreativeTemplateId);
+            .videosAdd(
+                videoFile, signature, accountId, organizationId, description, adcreativeTemplateId);
     return response;
   }
 

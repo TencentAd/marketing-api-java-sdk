@@ -30,6 +30,9 @@ public class RtaTargetBindDeleteRecordSuccess {
   @SerializedName("IsMp")
   private Long isMp = null;
 
+  @SerializedName("OuterTargetId")
+  private String outerTargetId = null;
+
   public RtaTargetBindDeleteRecordSuccess id(Long id) {
     this.id = id;
     return this;
@@ -87,6 +90,25 @@ public class RtaTargetBindDeleteRecordSuccess {
     this.isMp = isMp;
   }
 
+  public RtaTargetBindDeleteRecordSuccess outerTargetId(String outerTargetId) {
+    this.outerTargetId = outerTargetId;
+    return this;
+  }
+
+  /**
+   * Get outerTargetId
+   *
+   * @return outerTargetId
+   */
+  @ApiModelProperty(value = "")
+  public String getOuterTargetId() {
+    return outerTargetId;
+  }
+
+  public void setOuterTargetId(String outerTargetId) {
+    this.outerTargetId = outerTargetId;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -99,12 +121,13 @@ public class RtaTargetBindDeleteRecordSuccess {
         (RtaTargetBindDeleteRecordSuccess) o;
     return Objects.equals(this.id, rtaTargetBindDeleteRecordSuccess.id)
         && Objects.equals(this.targetType, rtaTargetBindDeleteRecordSuccess.targetType)
-        && Objects.equals(this.isMp, rtaTargetBindDeleteRecordSuccess.isMp);
+        && Objects.equals(this.isMp, rtaTargetBindDeleteRecordSuccess.isMp)
+        && Objects.equals(this.outerTargetId, rtaTargetBindDeleteRecordSuccess.outerTargetId);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, targetType, isMp);
+    return Objects.hash(id, targetType, isMp, outerTargetId);
   }
 
   @Override

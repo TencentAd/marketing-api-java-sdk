@@ -60,9 +60,6 @@ public class AdgroupsUpdateRequest {
   @SerializedName("user_action_sets")
   private List<UserActionSetStruct> userActionSets = null;
 
-  @SerializedName("bid_strategy")
-  private BidStrategy bidStrategy = null;
-
   @SerializedName("deep_conversion_spec")
   private DeepConversionSpec deepConversionSpec = null;
 
@@ -382,25 +379,6 @@ public class AdgroupsUpdateRequest {
 
   public void setUserActionSets(List<UserActionSetStruct> userActionSets) {
     this.userActionSets = userActionSets;
-  }
-
-  public AdgroupsUpdateRequest bidStrategy(BidStrategy bidStrategy) {
-    this.bidStrategy = bidStrategy;
-    return this;
-  }
-
-  /**
-   * Get bidStrategy
-   *
-   * @return bidStrategy
-   */
-  @ApiModelProperty(value = "")
-  public BidStrategy getBidStrategy() {
-    return bidStrategy;
-  }
-
-  public void setBidStrategy(BidStrategy bidStrategy) {
-    this.bidStrategy = bidStrategy;
   }
 
   public AdgroupsUpdateRequest deepConversionSpec(DeepConversionSpec deepConversionSpec) {
@@ -855,7 +833,6 @@ public class AdgroupsUpdateRequest {
         && Objects.equals(this.targeting, adgroupsUpdateRequest.targeting)
         && Objects.equals(this.sceneSpec, adgroupsUpdateRequest.sceneSpec)
         && Objects.equals(this.userActionSets, adgroupsUpdateRequest.userActionSets)
-        && Objects.equals(this.bidStrategy, adgroupsUpdateRequest.bidStrategy)
         && Objects.equals(this.deepConversionSpec, adgroupsUpdateRequest.deepConversionSpec)
         && Objects.equals(this.conversionId, adgroupsUpdateRequest.conversionId)
         && Objects.equals(
@@ -906,7 +883,6 @@ public class AdgroupsUpdateRequest {
         targeting,
         sceneSpec,
         userActionSets,
-        bidStrategy,
         deepConversionSpec,
         conversionId,
         deepConversionBehaviorBid,

@@ -34,6 +34,9 @@ public class LiveRoomComponentsAddRequest {
   @SerializedName("component_spec")
   private LiveRoomComponentSpecStruct componentSpec = null;
 
+  @SerializedName("wechat_channels_account_id")
+  private String wechatChannelsAccountId = null;
+
   public LiveRoomComponentsAddRequest accountId(Long accountId) {
     this.accountId = accountId;
     return this;
@@ -129,6 +132,25 @@ public class LiveRoomComponentsAddRequest {
     this.componentSpec = componentSpec;
   }
 
+  public LiveRoomComponentsAddRequest wechatChannelsAccountId(String wechatChannelsAccountId) {
+    this.wechatChannelsAccountId = wechatChannelsAccountId;
+    return this;
+  }
+
+  /**
+   * Get wechatChannelsAccountId
+   *
+   * @return wechatChannelsAccountId
+   */
+  @ApiModelProperty(value = "")
+  public String getWechatChannelsAccountId() {
+    return wechatChannelsAccountId;
+  }
+
+  public void setWechatChannelsAccountId(String wechatChannelsAccountId) {
+    this.wechatChannelsAccountId = wechatChannelsAccountId;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -142,12 +164,20 @@ public class LiveRoomComponentsAddRequest {
         && Objects.equals(this.componentName, liveRoomComponentsAddRequest.componentName)
         && Objects.equals(this.componentType, liveRoomComponentsAddRequest.componentType)
         && Objects.equals(this.finderUsername, liveRoomComponentsAddRequest.finderUsername)
-        && Objects.equals(this.componentSpec, liveRoomComponentsAddRequest.componentSpec);
+        && Objects.equals(this.componentSpec, liveRoomComponentsAddRequest.componentSpec)
+        && Objects.equals(
+            this.wechatChannelsAccountId, liveRoomComponentsAddRequest.wechatChannelsAccountId);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(accountId, componentName, componentType, finderUsername, componentSpec);
+    return Objects.hash(
+        accountId,
+        componentName,
+        componentType,
+        finderUsername,
+        componentSpec,
+        wechatChannelsAccountId);
   }
 
   @Override

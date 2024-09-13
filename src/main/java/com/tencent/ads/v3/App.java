@@ -50,6 +50,9 @@ public class App {
   @Inject BidwordFlowApiContainer bidwordFlowApiContainer;
   @Inject BrandApiContainer brandApiContainer;
   @Inject BusinessPointApiContainer businessPointApiContainer;
+  @Inject CategoriesApiContainer categoriesApiContainer;
+  @Inject CategoriesAttributeApiContainer categoriesAttributeApiContainer;
+  @Inject ChannelsCommentApiContainer channelsCommentApiContainer;
   @Inject ChannelsFinderobjectApiContainer channelsFinderobjectApiContainer;
   @Inject ChannelsLivenoticeinfoApiContainer channelsLivenoticeinfoApiContainer;
   @Inject ChannelsUserpageobjectsApiContainer channelsUserpageobjectsApiContainer;
@@ -58,6 +61,7 @@ public class App {
   @Inject ComponentReviewResultsApiContainer componentReviewResultsApiContainer;
   @Inject ComponentsApiContainer componentsApiContainer;
   @Inject ComponentsMetadataApiContainer componentsMetadataApiContainer;
+  @Inject ConversionLinkAssetAvailableApiContainer conversionLinkAssetAvailableApiContainer;
   @Inject ConversionLinkAssetsApiContainer conversionLinkAssetsApiContainer;
   @Inject ConversionLinksApiContainer conversionLinksApiContainer;
   @Inject ConversionsApiContainer conversionsApiContainer;
@@ -140,6 +144,7 @@ public class App {
   @Inject MuseAiUgcApiContainer museAiUgcApiContainer;
   @Inject OauthApiContainer oauthApiContainer;
   @Inject ObjectCommentFlagApiContainer objectCommentFlagApiContainer;
+  @Inject OperationLogListApiContainer operationLogListApiContainer;
   @Inject OptimizationGoalPermissionsApiContainer optimizationGoalPermissionsApiContainer;
   @Inject OrganizationAccountRelationApiContainer organizationAccountRelationApiContainer;
   @Inject PagesApiContainer pagesApiContainer;
@@ -180,6 +185,7 @@ public class App {
   @Inject VideoChannelLeadsDataApiContainer videoChannelLeadsDataApiContainer;
   @Inject VideoChannelLiveDataApiContainer videoChannelLiveDataApiContainer;
   @Inject VideosApiContainer videosApiContainer;
+  @Inject WalletApiContainer walletApiContainer;
   @Inject WechatChannelsAccountsApiContainer wechatChannelsAccountsApiContainer;
   @Inject WechatChannelsAdAccountApiContainer wechatChannelsAdAccountApiContainer;
 
@@ -202,6 +208,7 @@ public class App {
   @Inject WechatPagesCustomApiContainer wechatPagesCustomApiContainer;
   @Inject WechatPagesGrantinfoApiContainer wechatPagesGrantinfoApiContainer;
   @Inject WildcardsApiContainer wildcardsApiContainer;
+  @Inject WxGamePlayablePageApiContainer wxGamePlayablePageApiContainer;
   @Inject WxPackageAccountApiContainer wxPackageAccountApiContainer;
   @Inject WxPackagePackageApiContainer wxPackagePackageApiContainer;
   @Inject XijingComplexTemplateApiContainer xijingComplexTemplateApiContainer;
@@ -340,6 +347,18 @@ public class App {
     return businessPointApiContainer;
   }
 
+  public CategoriesApiContainer categories() {
+    return categoriesApiContainer;
+  }
+
+  public CategoriesAttributeApiContainer categoriesAttribute() {
+    return categoriesAttributeApiContainer;
+  }
+
+  public ChannelsCommentApiContainer channelsComment() {
+    return channelsCommentApiContainer;
+  }
+
   public ChannelsFinderobjectApiContainer channelsFinderobject() {
     return channelsFinderobjectApiContainer;
   }
@@ -370,6 +389,10 @@ public class App {
 
   public ComponentsMetadataApiContainer componentsMetadata() {
     return componentsMetadataApiContainer;
+  }
+
+  public ConversionLinkAssetAvailableApiContainer conversionLinkAssetAvailable() {
+    return conversionLinkAssetAvailableApiContainer;
   }
 
   public ConversionLinkAssetsApiContainer conversionLinkAssets() {
@@ -676,6 +699,10 @@ public class App {
     return objectCommentFlagApiContainer;
   }
 
+  public OperationLogListApiContainer operationLogList() {
+    return operationLogListApiContainer;
+  }
+
   public OptimizationGoalPermissionsApiContainer optimizationGoalPermissions() {
     return optimizationGoalPermissionsApiContainer;
   }
@@ -836,6 +863,10 @@ public class App {
     return videosApiContainer;
   }
 
+  public WalletApiContainer wallet() {
+    return walletApiContainer;
+  }
+
   public WechatChannelsAccountsApiContainer wechatChannelsAccounts() {
     return wechatChannelsAccountsApiContainer;
   }
@@ -891,6 +922,10 @@ public class App {
 
   public WildcardsApiContainer wildcards() {
     return wildcardsApiContainer;
+  }
+
+  public WxGamePlayablePageApiContainer wxGamePlayablePage() {
+    return wxGamePlayablePageApiContainer;
   }
 
   public WxPackageAccountApiContainer wxPackageAccount() {

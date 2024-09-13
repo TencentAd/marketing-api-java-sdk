@@ -15,6 +15,7 @@ package com.tencent.ads.container;
 import com.google.inject.Inject;
 import com.tencent.ads.ApiContainer;
 import com.tencent.ads.ApiException;
+import com.tencent.ads.Pair;
 import com.tencent.ads.anno.*;
 import com.tencent.ads.api.LeadsCallApi;
 import com.tencent.ads.exception.TencentAdsResponseException;
@@ -35,7 +36,7 @@ public class LeadsCallApiContainer extends ApiContainer {
    *     response body
    */
   public LeadsCallCreateResponseData leadsCallCreate(
-      LeadsCallCreateRequest data, String... headerPair)
+      LeadsCallCreateRequest data, Pair... headerPair)
       throws ApiException, TencentAdsResponseException {
     LeadsCallCreateResponse resp = api.leadsCallCreate(data, headerPair);
     handleResponse(gson.toJson(resp));

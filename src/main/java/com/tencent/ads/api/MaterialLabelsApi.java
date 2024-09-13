@@ -64,7 +64,7 @@ public class MaterialLabelsApi {
       MaterialLabelsAddRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     Object localVarPostBody = data;
@@ -88,11 +88,8 @@ public class MaterialLabelsApi {
     localVarHeaderParams.put("Content-Type", localVarContentType);
 
     if (headerPair != null && headerPair.length > 0) {
-      if (headerPair.length % 2 != 0) {
-        throw new UnsupportedOperationException("Parameter headerPair must be paired");
-      }
-      for (int i = 0; i < headerPair.length / 2; i++) {
-        localVarHeaderParams.put(headerPair[i], headerPair[i * 2 + 1]);
+      for (int i = 0; i < headerPair.length; i++) {
+        localVarHeaderParams.put(headerPair[i].getName(), headerPair[i].getValue());
       }
     }
 
@@ -132,7 +129,7 @@ public class MaterialLabelsApi {
       MaterialLabelsAddRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     // verify the required parameter 'data' is set
@@ -155,7 +152,7 @@ public class MaterialLabelsApi {
    *     response body
    */
   public MaterialLabelsAddResponse materialLabelsAdd(
-      MaterialLabelsAddRequest data, String... headerPair) throws ApiException {
+      MaterialLabelsAddRequest data, Pair... headerPair) throws ApiException {
     ApiResponse<MaterialLabelsAddResponse> resp = materialLabelsAddWithHttpInfo(data, headerPair);
     return resp.getData();
   }
@@ -169,7 +166,7 @@ public class MaterialLabelsApi {
    *     response body
    */
   public ApiResponse<MaterialLabelsAddResponse> materialLabelsAddWithHttpInfo(
-      MaterialLabelsAddRequest data, String... headerPair) throws ApiException {
+      MaterialLabelsAddRequest data, Pair... headerPair) throws ApiException {
     com.squareup.okhttp.Call call =
         materialLabelsAddValidateBeforeCall(data, null, null, headerPair);
     Type localVarReturnType = new TypeToken<MaterialLabelsAddResponse>() {}.getType();
@@ -187,7 +184,7 @@ public class MaterialLabelsApi {
   public com.squareup.okhttp.Call materialLabelsAddAsync(
       MaterialLabelsAddRequest data,
       final ApiCallback<MaterialLabelsAddResponse> callback,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     ProgressResponseBody.ProgressListener progressListener = null;
@@ -231,7 +228,7 @@ public class MaterialLabelsApi {
       MaterialLabelsGetRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     Object localVarPostBody = data;
@@ -255,11 +252,8 @@ public class MaterialLabelsApi {
     localVarHeaderParams.put("Content-Type", localVarContentType);
 
     if (headerPair != null && headerPair.length > 0) {
-      if (headerPair.length % 2 != 0) {
-        throw new UnsupportedOperationException("Parameter headerPair must be paired");
-      }
-      for (int i = 0; i < headerPair.length / 2; i++) {
-        localVarHeaderParams.put(headerPair[i], headerPair[i * 2 + 1]);
+      for (int i = 0; i < headerPair.length; i++) {
+        localVarHeaderParams.put(headerPair[i].getName(), headerPair[i].getValue());
       }
     }
 
@@ -299,7 +293,7 @@ public class MaterialLabelsApi {
       MaterialLabelsGetRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     // verify the required parameter 'data' is set
@@ -322,7 +316,7 @@ public class MaterialLabelsApi {
    *     response body
    */
   public MaterialLabelsGetResponse materialLabelsGet(
-      MaterialLabelsGetRequest data, String... headerPair) throws ApiException {
+      MaterialLabelsGetRequest data, Pair... headerPair) throws ApiException {
     ApiResponse<MaterialLabelsGetResponse> resp = materialLabelsGetWithHttpInfo(data, headerPair);
     return resp.getData();
   }
@@ -336,7 +330,7 @@ public class MaterialLabelsApi {
    *     response body
    */
   public ApiResponse<MaterialLabelsGetResponse> materialLabelsGetWithHttpInfo(
-      MaterialLabelsGetRequest data, String... headerPair) throws ApiException {
+      MaterialLabelsGetRequest data, Pair... headerPair) throws ApiException {
     com.squareup.okhttp.Call call =
         materialLabelsGetValidateBeforeCall(data, null, null, headerPair);
     Type localVarReturnType = new TypeToken<MaterialLabelsGetResponse>() {}.getType();
@@ -354,7 +348,7 @@ public class MaterialLabelsApi {
   public com.squareup.okhttp.Call materialLabelsGetAsync(
       MaterialLabelsGetRequest data,
       final ApiCallback<MaterialLabelsGetResponse> callback,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     ProgressResponseBody.ProgressListener progressListener = null;

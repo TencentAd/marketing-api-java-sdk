@@ -15,6 +15,7 @@ package com.tencent.ads.container.v3;
 import com.google.inject.Inject;
 import com.tencent.ads.ApiContainer;
 import com.tencent.ads.ApiException;
+import com.tencent.ads.Pair;
 import com.tencent.ads.anno.*;
 import com.tencent.ads.api.v3.DynamicAdVideoApi;
 import com.tencent.ads.exception.TencentAdsResponseException;
@@ -38,7 +39,7 @@ public class DynamicAdVideoApiContainer extends ApiContainer {
    *     response body
    */
   public DynamicAdVideoAddResponseData dynamicAdVideoAdd(
-      DynamicAdVideoAddRequest data, String... headerPair)
+      DynamicAdVideoAddRequest data, Pair... headerPair)
       throws ApiException, TencentAdsResponseException {
     DynamicAdVideoAddResponse resp = api.dynamicAdVideoAdd(data, headerPair);
     handleResponse(gson.toJson(resp));
@@ -65,7 +66,7 @@ public class DynamicAdVideoApiContainer extends ApiContainer {
       String productOuterId,
       Long dynamicAdTemplateId,
       List<String> fields,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException, TencentAdsResponseException {
     DynamicAdVideoGetResponse resp =
         api.dynamicAdVideoGet(

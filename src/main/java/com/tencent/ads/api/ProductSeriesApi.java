@@ -64,7 +64,7 @@ public class ProductSeriesApi {
       ProductSeriesAddRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     Object localVarPostBody = data;
@@ -88,11 +88,8 @@ public class ProductSeriesApi {
     localVarHeaderParams.put("Content-Type", localVarContentType);
 
     if (headerPair != null && headerPair.length > 0) {
-      if (headerPair.length % 2 != 0) {
-        throw new UnsupportedOperationException("Parameter headerPair must be paired");
-      }
-      for (int i = 0; i < headerPair.length / 2; i++) {
-        localVarHeaderParams.put(headerPair[i], headerPair[i * 2 + 1]);
+      for (int i = 0; i < headerPair.length; i++) {
+        localVarHeaderParams.put(headerPair[i].getName(), headerPair[i].getValue());
       }
     }
 
@@ -132,7 +129,7 @@ public class ProductSeriesApi {
       ProductSeriesAddRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     // verify the required parameter 'data' is set
@@ -154,8 +151,8 @@ public class ProductSeriesApi {
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
-  public ProductSeriesAddResponse productSeriesAdd(
-      ProductSeriesAddRequest data, String... headerPair) throws ApiException {
+  public ProductSeriesAddResponse productSeriesAdd(ProductSeriesAddRequest data, Pair... headerPair)
+      throws ApiException {
     ApiResponse<ProductSeriesAddResponse> resp = productSeriesAddWithHttpInfo(data, headerPair);
     return resp.getData();
   }
@@ -169,7 +166,7 @@ public class ProductSeriesApi {
    *     response body
    */
   public ApiResponse<ProductSeriesAddResponse> productSeriesAddWithHttpInfo(
-      ProductSeriesAddRequest data, String... headerPair) throws ApiException {
+      ProductSeriesAddRequest data, Pair... headerPair) throws ApiException {
     com.squareup.okhttp.Call call =
         productSeriesAddValidateBeforeCall(data, null, null, headerPair);
     Type localVarReturnType = new TypeToken<ProductSeriesAddResponse>() {}.getType();
@@ -187,7 +184,7 @@ public class ProductSeriesApi {
   public com.squareup.okhttp.Call productSeriesAddAsync(
       ProductSeriesAddRequest data,
       final ApiCallback<ProductSeriesAddResponse> callback,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     ProgressResponseBody.ProgressListener progressListener = null;
@@ -241,7 +238,7 @@ public class ProductSeriesApi {
       List<String> fields,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     Object localVarPostBody = null;
@@ -277,11 +274,8 @@ public class ProductSeriesApi {
     localVarHeaderParams.put("Content-Type", localVarContentType);
 
     if (headerPair != null && headerPair.length > 0) {
-      if (headerPair.length % 2 != 0) {
-        throw new UnsupportedOperationException("Parameter headerPair must be paired");
-      }
-      for (int i = 0; i < headerPair.length / 2; i++) {
-        localVarHeaderParams.put(headerPair[i], headerPair[i * 2 + 1]);
+      for (int i = 0; i < headerPair.length; i++) {
+        localVarHeaderParams.put(headerPair[i].getName(), headerPair[i].getValue());
       }
     }
 
@@ -326,7 +320,7 @@ public class ProductSeriesApi {
       List<String> fields,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     // verify the required parameter 'accountId' is set
@@ -375,7 +369,7 @@ public class ProductSeriesApi {
       Long page,
       Long pageSize,
       List<String> fields,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
     ApiResponse<ProductSeriesGetResponse> resp =
         productSeriesGetWithHttpInfo(
@@ -403,7 +397,7 @@ public class ProductSeriesApi {
       Long page,
       Long pageSize,
       List<String> fields,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
     com.squareup.okhttp.Call call =
         productSeriesGetValidateBeforeCall(
@@ -433,7 +427,7 @@ public class ProductSeriesApi {
       Long pageSize,
       List<String> fields,
       final ApiCallback<ProductSeriesGetResponse> callback,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     ProgressResponseBody.ProgressListener progressListener = null;

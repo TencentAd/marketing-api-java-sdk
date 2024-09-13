@@ -39,6 +39,9 @@ public class WechatChannelsAccountStruct {
   @SerializedName("wechat_channels_spam_slient")
   private Boolean wechatChannelsSpamSlient = null;
 
+  @SerializedName("wechat_channels_account_icon")
+  private String wechatChannelsAccountIcon = null;
+
   public WechatChannelsAccountStruct wechatChannelsAccountId(String wechatChannelsAccountId) {
     this.wechatChannelsAccountId = wechatChannelsAccountId;
     return this;
@@ -153,6 +156,25 @@ public class WechatChannelsAccountStruct {
     this.wechatChannelsSpamSlient = wechatChannelsSpamSlient;
   }
 
+  public WechatChannelsAccountStruct wechatChannelsAccountIcon(String wechatChannelsAccountIcon) {
+    this.wechatChannelsAccountIcon = wechatChannelsAccountIcon;
+    return this;
+  }
+
+  /**
+   * Get wechatChannelsAccountIcon
+   *
+   * @return wechatChannelsAccountIcon
+   */
+  @ApiModelProperty(value = "")
+  public String getWechatChannelsAccountIcon() {
+    return wechatChannelsAccountIcon;
+  }
+
+  public void setWechatChannelsAccountIcon(String wechatChannelsAccountIcon) {
+    this.wechatChannelsAccountIcon = wechatChannelsAccountIcon;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -171,7 +193,9 @@ public class WechatChannelsAccountStruct {
         && Objects.equals(
             this.wechatChannelsSpamBlock, wechatChannelsAccountStruct.wechatChannelsSpamBlock)
         && Objects.equals(
-            this.wechatChannelsSpamSlient, wechatChannelsAccountStruct.wechatChannelsSpamSlient);
+            this.wechatChannelsSpamSlient, wechatChannelsAccountStruct.wechatChannelsSpamSlient)
+        && Objects.equals(
+            this.wechatChannelsAccountIcon, wechatChannelsAccountStruct.wechatChannelsAccountIcon);
   }
 
   @Override
@@ -182,7 +206,8 @@ public class WechatChannelsAccountStruct {
         createdTime,
         lastModifiedTime,
         wechatChannelsSpamBlock,
-        wechatChannelsSpamSlient);
+        wechatChannelsSpamSlient,
+        wechatChannelsAccountIcon);
   }
 
   @Override

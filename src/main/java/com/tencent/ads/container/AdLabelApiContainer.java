@@ -15,6 +15,7 @@ package com.tencent.ads.container;
 import com.google.inject.Inject;
 import com.tencent.ads.ApiContainer;
 import com.tencent.ads.ApiException;
+import com.tencent.ads.Pair;
 import com.tencent.ads.anno.*;
 import com.tencent.ads.api.AdLabelApi;
 import com.tencent.ads.exception.TencentAdsResponseException;
@@ -35,8 +36,7 @@ public class AdLabelApiContainer extends ApiContainer {
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
-  public AdLabelGetResponseData adLabelGet(
-      Long accountId, List<String> fields, String... headerPair)
+  public AdLabelGetResponseData adLabelGet(Long accountId, List<String> fields, Pair... headerPair)
       throws ApiException, TencentAdsResponseException {
     AdLabelGetResponse resp = api.adLabelGet(accountId, fields, headerPair);
     handleResponse(gson.toJson(resp));

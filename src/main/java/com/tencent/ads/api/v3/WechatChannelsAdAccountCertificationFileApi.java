@@ -62,7 +62,7 @@ public class WechatChannelsAdAccountCertificationFileApi {
       WechatChannelsAdAccountCertificationFileAddRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     Object localVarPostBody = data;
@@ -86,11 +86,8 @@ public class WechatChannelsAdAccountCertificationFileApi {
     localVarHeaderParams.put("Content-Type", localVarContentType);
 
     if (headerPair != null && headerPair.length > 0) {
-      if (headerPair.length % 2 != 0) {
-        throw new UnsupportedOperationException("Parameter headerPair must be paired");
-      }
-      for (int i = 0; i < headerPair.length / 2; i++) {
-        localVarHeaderParams.put(headerPair[i], headerPair[i * 2 + 1]);
+      for (int i = 0; i < headerPair.length; i++) {
+        localVarHeaderParams.put(headerPair[i].getName(), headerPair[i].getValue());
       }
     }
 
@@ -130,7 +127,7 @@ public class WechatChannelsAdAccountCertificationFileApi {
       WechatChannelsAdAccountCertificationFileAddRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     // verify the required parameter 'data' is set
@@ -155,7 +152,7 @@ public class WechatChannelsAdAccountCertificationFileApi {
    */
   public WechatChannelsAdAccountCertificationFileAddResponse
       wechatChannelsAdAccountCertificationFileAdd(
-          WechatChannelsAdAccountCertificationFileAddRequest data, String... headerPair)
+          WechatChannelsAdAccountCertificationFileAddRequest data, Pair... headerPair)
           throws ApiException {
     ApiResponse<WechatChannelsAdAccountCertificationFileAddResponse> resp =
         wechatChannelsAdAccountCertificationFileAddWithHttpInfo(data, headerPair);
@@ -172,7 +169,7 @@ public class WechatChannelsAdAccountCertificationFileApi {
    */
   public ApiResponse<WechatChannelsAdAccountCertificationFileAddResponse>
       wechatChannelsAdAccountCertificationFileAddWithHttpInfo(
-          WechatChannelsAdAccountCertificationFileAddRequest data, String... headerPair)
+          WechatChannelsAdAccountCertificationFileAddRequest data, Pair... headerPair)
           throws ApiException {
     com.squareup.okhttp.Call call =
         wechatChannelsAdAccountCertificationFileAddValidateBeforeCall(data, null, null, headerPair);
@@ -192,7 +189,7 @@ public class WechatChannelsAdAccountCertificationFileApi {
   public com.squareup.okhttp.Call wechatChannelsAdAccountCertificationFileAddAsync(
       WechatChannelsAdAccountCertificationFileAddRequest data,
       final ApiCallback<WechatChannelsAdAccountCertificationFileAddResponse> callback,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     ProgressResponseBody.ProgressListener progressListener = null;

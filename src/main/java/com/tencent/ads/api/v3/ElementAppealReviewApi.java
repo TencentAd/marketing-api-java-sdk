@@ -63,7 +63,7 @@ public class ElementAppealReviewApi {
       ElementAppealReviewAddRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     Object localVarPostBody = data;
@@ -87,11 +87,8 @@ public class ElementAppealReviewApi {
     localVarHeaderParams.put("Content-Type", localVarContentType);
 
     if (headerPair != null && headerPair.length > 0) {
-      if (headerPair.length % 2 != 0) {
-        throw new UnsupportedOperationException("Parameter headerPair must be paired");
-      }
-      for (int i = 0; i < headerPair.length / 2; i++) {
-        localVarHeaderParams.put(headerPair[i], headerPair[i * 2 + 1]);
+      for (int i = 0; i < headerPair.length; i++) {
+        localVarHeaderParams.put(headerPair[i].getName(), headerPair[i].getValue());
       }
     }
 
@@ -131,7 +128,7 @@ public class ElementAppealReviewApi {
       ElementAppealReviewAddRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     // verify the required parameter 'data' is set
@@ -154,7 +151,7 @@ public class ElementAppealReviewApi {
    *     response body
    */
   public ElementAppealReviewAddResponse elementAppealReviewAdd(
-      ElementAppealReviewAddRequest data, String... headerPair) throws ApiException {
+      ElementAppealReviewAddRequest data, Pair... headerPair) throws ApiException {
     ApiResponse<ElementAppealReviewAddResponse> resp =
         elementAppealReviewAddWithHttpInfo(data, headerPair);
     return resp.getData();
@@ -169,7 +166,7 @@ public class ElementAppealReviewApi {
    *     response body
    */
   public ApiResponse<ElementAppealReviewAddResponse> elementAppealReviewAddWithHttpInfo(
-      ElementAppealReviewAddRequest data, String... headerPair) throws ApiException {
+      ElementAppealReviewAddRequest data, Pair... headerPair) throws ApiException {
     com.squareup.okhttp.Call call =
         elementAppealReviewAddValidateBeforeCall(data, null, null, headerPair);
     Type localVarReturnType = new TypeToken<ElementAppealReviewAddResponse>() {}.getType();
@@ -187,7 +184,7 @@ public class ElementAppealReviewApi {
   public com.squareup.okhttp.Call elementAppealReviewAddAsync(
       ElementAppealReviewAddRequest data,
       final ApiCallback<ElementAppealReviewAddResponse> callback,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     ProgressResponseBody.ProgressListener progressListener = null;
@@ -241,7 +238,7 @@ public class ElementAppealReviewApi {
       List<String> fields,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     Object localVarPostBody = null;
@@ -279,11 +276,8 @@ public class ElementAppealReviewApi {
     localVarHeaderParams.put("Content-Type", localVarContentType);
 
     if (headerPair != null && headerPair.length > 0) {
-      if (headerPair.length % 2 != 0) {
-        throw new UnsupportedOperationException("Parameter headerPair must be paired");
-      }
-      for (int i = 0; i < headerPair.length / 2; i++) {
-        localVarHeaderParams.put(headerPair[i], headerPair[i * 2 + 1]);
+      for (int i = 0; i < headerPair.length; i++) {
+        localVarHeaderParams.put(headerPair[i].getName(), headerPair[i].getValue());
       }
     }
 
@@ -328,7 +322,7 @@ public class ElementAppealReviewApi {
       List<String> fields,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     // verify the required parameter 'accountId' is set
@@ -395,7 +389,7 @@ public class ElementAppealReviewApi {
       Long elementId,
       String elementFingerPrint,
       List<String> fields,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
     ApiResponse<ElementAppealReviewGetResponse> resp =
         elementAppealReviewGetWithHttpInfo(
@@ -429,7 +423,7 @@ public class ElementAppealReviewApi {
       Long elementId,
       String elementFingerPrint,
       List<String> fields,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
     com.squareup.okhttp.Call call =
         elementAppealReviewGetValidateBeforeCall(
@@ -467,7 +461,7 @@ public class ElementAppealReviewApi {
       String elementFingerPrint,
       List<String> fields,
       final ApiCallback<ElementAppealReviewGetResponse> callback,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     ProgressResponseBody.ProgressListener progressListener = null;

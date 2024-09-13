@@ -58,9 +58,10 @@ public class VideosApi {
   /**
    * Build call for videosAdd
    *
-   * @param accountId (required)
    * @param videoFile (required)
    * @param signature (required)
+   * @param accountId (optional)
+   * @param organizationId (optional)
    * @param description (optional)
    * @param adcreativeTemplateId (optional)
    * @param progressListener Progress listener
@@ -69,14 +70,15 @@ public class VideosApi {
    * @throws ApiException If fail to serialize the request body object
    */
   public com.squareup.okhttp.Call videosAddCall(
-      Long accountId,
       File videoFile,
       String signature,
+      Long accountId,
+      Long organizationId,
       String description,
       Long adcreativeTemplateId,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     Object localVarPostBody = null;
@@ -91,6 +93,7 @@ public class VideosApi {
 
     Map<String, Object> localVarFormParams = new HashMap<String, Object>();
     if (accountId != null) localVarFormParams.put("account_id", accountId);
+    if (organizationId != null) localVarFormParams.put("organization_id", organizationId);
     if (videoFile != null) localVarFormParams.put("video_file", videoFile);
     if (signature != null) localVarFormParams.put("signature", signature);
     if (description != null) localVarFormParams.put("description", description);
@@ -106,11 +109,8 @@ public class VideosApi {
     localVarHeaderParams.put("Content-Type", localVarContentType);
 
     if (headerPair != null && headerPair.length > 0) {
-      if (headerPair.length % 2 != 0) {
-        throw new UnsupportedOperationException("Parameter headerPair must be paired");
-      }
-      for (int i = 0; i < headerPair.length / 2; i++) {
-        localVarHeaderParams.put(headerPair[i], headerPair[i * 2 + 1]);
+      for (int i = 0; i < headerPair.length; i++) {
+        localVarHeaderParams.put(headerPair[i].getName(), headerPair[i].getValue());
       }
     }
 
@@ -147,21 +147,16 @@ public class VideosApi {
 
   @SuppressWarnings("rawtypes")
   private com.squareup.okhttp.Call videosAddValidateBeforeCall(
-      Long accountId,
       File videoFile,
       String signature,
+      Long accountId,
+      Long organizationId,
       String description,
       Long adcreativeTemplateId,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
-
-    // verify the required parameter 'accountId' is set
-    if (accountId == null) {
-      throw new ApiException(
-          "Missing the required parameter 'accountId' when calling videosAdd(Async)");
-    }
 
     // verify the required parameter 'videoFile' is set
     if (videoFile == null) {
@@ -177,9 +172,10 @@ public class VideosApi {
 
     com.squareup.okhttp.Call call =
         videosAddCall(
-            accountId,
             videoFile,
             signature,
+            accountId,
+            organizationId,
             description,
             adcreativeTemplateId,
             progressListener,
@@ -191,9 +187,10 @@ public class VideosApi {
   /**
    * 添加视频文件
    *
-   * @param accountId (required)
    * @param videoFile (required)
    * @param signature (required)
+   * @param accountId (optional)
+   * @param organizationId (optional)
    * @param description (optional)
    * @param adcreativeTemplateId (optional)
    * @return VideosAddResponse
@@ -201,25 +198,33 @@ public class VideosApi {
    *     response body
    */
   public VideosAddResponse videosAdd(
-      Long accountId,
       File videoFile,
       String signature,
+      Long accountId,
+      Long organizationId,
       String description,
       Long adcreativeTemplateId,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
     ApiResponse<VideosAddResponse> resp =
         videosAddWithHttpInfo(
-            accountId, videoFile, signature, description, adcreativeTemplateId, headerPair);
+            videoFile,
+            signature,
+            accountId,
+            organizationId,
+            description,
+            adcreativeTemplateId,
+            headerPair);
     return resp.getData();
   }
 
   /**
    * 添加视频文件
    *
-   * @param accountId (required)
    * @param videoFile (required)
    * @param signature (required)
+   * @param accountId (optional)
+   * @param organizationId (optional)
    * @param description (optional)
    * @param adcreativeTemplateId (optional)
    * @return ApiResponse&lt;VideosAddResponse&gt;
@@ -227,18 +232,20 @@ public class VideosApi {
    *     response body
    */
   public ApiResponse<VideosAddResponse> videosAddWithHttpInfo(
-      Long accountId,
       File videoFile,
       String signature,
+      Long accountId,
+      Long organizationId,
       String description,
       Long adcreativeTemplateId,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
     com.squareup.okhttp.Call call =
         videosAddValidateBeforeCall(
-            accountId,
             videoFile,
             signature,
+            accountId,
+            organizationId,
             description,
             adcreativeTemplateId,
             null,
@@ -251,9 +258,10 @@ public class VideosApi {
   /**
    * 添加视频文件 (asynchronously)
    *
-   * @param accountId (required)
    * @param videoFile (required)
    * @param signature (required)
+   * @param accountId (optional)
+   * @param organizationId (optional)
    * @param description (optional)
    * @param adcreativeTemplateId (optional)
    * @param callback The callback to be executed when the API call finishes
@@ -261,13 +269,14 @@ public class VideosApi {
    * @throws ApiException If fail to process the API call, e.g. serializing the request body object
    */
   public com.squareup.okhttp.Call videosAddAsync(
-      Long accountId,
       File videoFile,
       String signature,
+      Long accountId,
+      Long organizationId,
       String description,
       Long adcreativeTemplateId,
       final ApiCallback<VideosAddResponse> callback,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     ProgressResponseBody.ProgressListener progressListener = null;
@@ -293,9 +302,10 @@ public class VideosApi {
 
     com.squareup.okhttp.Call call =
         videosAddValidateBeforeCall(
-            accountId,
             videoFile,
             signature,
+            accountId,
+            organizationId,
             description,
             adcreativeTemplateId,
             progressListener,
@@ -318,7 +328,7 @@ public class VideosApi {
       VideosDeleteRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     Object localVarPostBody = data;
@@ -342,11 +352,8 @@ public class VideosApi {
     localVarHeaderParams.put("Content-Type", localVarContentType);
 
     if (headerPair != null && headerPair.length > 0) {
-      if (headerPair.length % 2 != 0) {
-        throw new UnsupportedOperationException("Parameter headerPair must be paired");
-      }
-      for (int i = 0; i < headerPair.length / 2; i++) {
-        localVarHeaderParams.put(headerPair[i], headerPair[i * 2 + 1]);
+      for (int i = 0; i < headerPair.length; i++) {
+        localVarHeaderParams.put(headerPair[i].getName(), headerPair[i].getValue());
       }
     }
 
@@ -386,7 +393,7 @@ public class VideosApi {
       VideosDeleteRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     // verify the required parameter 'data' is set
@@ -408,7 +415,7 @@ public class VideosApi {
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
-  public VideosDeleteResponse videosDelete(VideosDeleteRequest data, String... headerPair)
+  public VideosDeleteResponse videosDelete(VideosDeleteRequest data, Pair... headerPair)
       throws ApiException {
     ApiResponse<VideosDeleteResponse> resp = videosDeleteWithHttpInfo(data, headerPair);
     return resp.getData();
@@ -423,7 +430,7 @@ public class VideosApi {
    *     response body
    */
   public ApiResponse<VideosDeleteResponse> videosDeleteWithHttpInfo(
-      VideosDeleteRequest data, String... headerPair) throws ApiException {
+      VideosDeleteRequest data, Pair... headerPair) throws ApiException {
     com.squareup.okhttp.Call call = videosDeleteValidateBeforeCall(data, null, null, headerPair);
     Type localVarReturnType = new TypeToken<VideosDeleteResponse>() {}.getType();
     return apiClient.execute(call, localVarReturnType);
@@ -440,7 +447,7 @@ public class VideosApi {
   public com.squareup.okhttp.Call videosDeleteAsync(
       VideosDeleteRequest data,
       final ApiCallback<VideosDeleteResponse> callback,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     ProgressResponseBody.ProgressListener progressListener = null;
@@ -473,7 +480,8 @@ public class VideosApi {
   /**
    * Build call for videosGet
    *
-   * @param accountId (required)
+   * @param accountId (optional)
+   * @param organizationId (optional)
    * @param filtering (optional)
    * @param page (optional)
    * @param pageSize (optional)
@@ -487,6 +495,7 @@ public class VideosApi {
    */
   public com.squareup.okhttp.Call videosGetCall(
       Long accountId,
+      Long organizationId,
       List<FilteringStruct> filtering,
       Long page,
       Long pageSize,
@@ -495,7 +504,7 @@ public class VideosApi {
       List<String> fields,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     Object localVarPostBody = null;
@@ -507,6 +516,8 @@ public class VideosApi {
     List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
     if (accountId != null)
       localVarQueryParams.addAll(apiClient.parameterToPair("account_id", accountId));
+    if (organizationId != null)
+      localVarQueryParams.addAll(apiClient.parameterToPair("organization_id", organizationId));
     if (filtering != null)
       localVarCollectionQueryParams.addAll(
           apiClient.parameterToPairs("multi", "filtering", filtering));
@@ -532,11 +543,8 @@ public class VideosApi {
     localVarHeaderParams.put("Content-Type", localVarContentType);
 
     if (headerPair != null && headerPair.length > 0) {
-      if (headerPair.length % 2 != 0) {
-        throw new UnsupportedOperationException("Parameter headerPair must be paired");
-      }
-      for (int i = 0; i < headerPair.length / 2; i++) {
-        localVarHeaderParams.put(headerPair[i], headerPair[i * 2 + 1]);
+      for (int i = 0; i < headerPair.length; i++) {
+        localVarHeaderParams.put(headerPair[i].getName(), headerPair[i].getValue());
       }
     }
 
@@ -574,6 +582,7 @@ public class VideosApi {
   @SuppressWarnings("rawtypes")
   private com.squareup.okhttp.Call videosGetValidateBeforeCall(
       Long accountId,
+      Long organizationId,
       List<FilteringStruct> filtering,
       Long page,
       Long pageSize,
@@ -582,18 +591,13 @@ public class VideosApi {
       List<String> fields,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
-
-    // verify the required parameter 'accountId' is set
-    if (accountId == null) {
-      throw new ApiException(
-          "Missing the required parameter 'accountId' when calling videosGet(Async)");
-    }
 
     com.squareup.okhttp.Call call =
         videosGetCall(
             accountId,
+            organizationId,
             filtering,
             page,
             pageSize,
@@ -609,7 +613,8 @@ public class VideosApi {
   /**
    * 获取视频文件
    *
-   * @param accountId (required)
+   * @param accountId (optional)
+   * @param organizationId (optional)
    * @param filtering (optional)
    * @param page (optional)
    * @param pageSize (optional)
@@ -622,24 +627,34 @@ public class VideosApi {
    */
   public VideosGetResponse videosGet(
       Long accountId,
+      Long organizationId,
       List<FilteringStruct> filtering,
       Long page,
       Long pageSize,
       Long labelId,
       Long businessScenario,
       List<String> fields,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
     ApiResponse<VideosGetResponse> resp =
         videosGetWithHttpInfo(
-            accountId, filtering, page, pageSize, labelId, businessScenario, fields, headerPair);
+            accountId,
+            organizationId,
+            filtering,
+            page,
+            pageSize,
+            labelId,
+            businessScenario,
+            fields,
+            headerPair);
     return resp.getData();
   }
 
   /**
    * 获取视频文件
    *
-   * @param accountId (required)
+   * @param accountId (optional)
+   * @param organizationId (optional)
    * @param filtering (optional)
    * @param page (optional)
    * @param pageSize (optional)
@@ -652,17 +667,19 @@ public class VideosApi {
    */
   public ApiResponse<VideosGetResponse> videosGetWithHttpInfo(
       Long accountId,
+      Long organizationId,
       List<FilteringStruct> filtering,
       Long page,
       Long pageSize,
       Long labelId,
       Long businessScenario,
       List<String> fields,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
     com.squareup.okhttp.Call call =
         videosGetValidateBeforeCall(
             accountId,
+            organizationId,
             filtering,
             page,
             pageSize,
@@ -679,7 +696,8 @@ public class VideosApi {
   /**
    * 获取视频文件 (asynchronously)
    *
-   * @param accountId (required)
+   * @param accountId (optional)
+   * @param organizationId (optional)
    * @param filtering (optional)
    * @param page (optional)
    * @param pageSize (optional)
@@ -692,6 +710,7 @@ public class VideosApi {
    */
   public com.squareup.okhttp.Call videosGetAsync(
       Long accountId,
+      Long organizationId,
       List<FilteringStruct> filtering,
       Long page,
       Long pageSize,
@@ -699,7 +718,7 @@ public class VideosApi {
       Long businessScenario,
       List<String> fields,
       final ApiCallback<VideosGetResponse> callback,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     ProgressResponseBody.ProgressListener progressListener = null;
@@ -726,6 +745,7 @@ public class VideosApi {
     com.squareup.okhttp.Call call =
         videosGetValidateBeforeCall(
             accountId,
+            organizationId,
             filtering,
             page,
             pageSize,
@@ -752,7 +772,7 @@ public class VideosApi {
       VideosUpdateRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     Object localVarPostBody = data;
@@ -776,11 +796,8 @@ public class VideosApi {
     localVarHeaderParams.put("Content-Type", localVarContentType);
 
     if (headerPair != null && headerPair.length > 0) {
-      if (headerPair.length % 2 != 0) {
-        throw new UnsupportedOperationException("Parameter headerPair must be paired");
-      }
-      for (int i = 0; i < headerPair.length / 2; i++) {
-        localVarHeaderParams.put(headerPair[i], headerPair[i * 2 + 1]);
+      for (int i = 0; i < headerPair.length; i++) {
+        localVarHeaderParams.put(headerPair[i].getName(), headerPair[i].getValue());
       }
     }
 
@@ -820,7 +837,7 @@ public class VideosApi {
       VideosUpdateRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     // verify the required parameter 'data' is set
@@ -842,7 +859,7 @@ public class VideosApi {
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
-  public VideosUpdateResponse videosUpdate(VideosUpdateRequest data, String... headerPair)
+  public VideosUpdateResponse videosUpdate(VideosUpdateRequest data, Pair... headerPair)
       throws ApiException {
     ApiResponse<VideosUpdateResponse> resp = videosUpdateWithHttpInfo(data, headerPair);
     return resp.getData();
@@ -857,7 +874,7 @@ public class VideosApi {
    *     response body
    */
   public ApiResponse<VideosUpdateResponse> videosUpdateWithHttpInfo(
-      VideosUpdateRequest data, String... headerPair) throws ApiException {
+      VideosUpdateRequest data, Pair... headerPair) throws ApiException {
     com.squareup.okhttp.Call call = videosUpdateValidateBeforeCall(data, null, null, headerPair);
     Type localVarReturnType = new TypeToken<VideosUpdateResponse>() {}.getType();
     return apiClient.execute(call, localVarReturnType);
@@ -874,7 +891,7 @@ public class VideosApi {
   public com.squareup.okhttp.Call videosUpdateAsync(
       VideosUpdateRequest data,
       final ApiCallback<VideosUpdateResponse> callback,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     ProgressResponseBody.ProgressListener progressListener = null;

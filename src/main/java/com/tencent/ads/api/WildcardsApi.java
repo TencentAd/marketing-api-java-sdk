@@ -62,7 +62,7 @@ public class WildcardsApi {
       WildcardsGetRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     Object localVarPostBody = data;
@@ -86,11 +86,8 @@ public class WildcardsApi {
     localVarHeaderParams.put("Content-Type", localVarContentType);
 
     if (headerPair != null && headerPair.length > 0) {
-      if (headerPair.length % 2 != 0) {
-        throw new UnsupportedOperationException("Parameter headerPair must be paired");
-      }
-      for (int i = 0; i < headerPair.length / 2; i++) {
-        localVarHeaderParams.put(headerPair[i], headerPair[i * 2 + 1]);
+      for (int i = 0; i < headerPair.length; i++) {
+        localVarHeaderParams.put(headerPair[i].getName(), headerPair[i].getValue());
       }
     }
 
@@ -130,7 +127,7 @@ public class WildcardsApi {
       WildcardsGetRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     // verify the required parameter 'data' is set
@@ -152,7 +149,7 @@ public class WildcardsApi {
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
-  public WildcardsGetResponse wildcardsGet(WildcardsGetRequest data, String... headerPair)
+  public WildcardsGetResponse wildcardsGet(WildcardsGetRequest data, Pair... headerPair)
       throws ApiException {
     ApiResponse<WildcardsGetResponse> resp = wildcardsGetWithHttpInfo(data, headerPair);
     return resp.getData();
@@ -167,7 +164,7 @@ public class WildcardsApi {
    *     response body
    */
   public ApiResponse<WildcardsGetResponse> wildcardsGetWithHttpInfo(
-      WildcardsGetRequest data, String... headerPair) throws ApiException {
+      WildcardsGetRequest data, Pair... headerPair) throws ApiException {
     com.squareup.okhttp.Call call = wildcardsGetValidateBeforeCall(data, null, null, headerPair);
     Type localVarReturnType = new TypeToken<WildcardsGetResponse>() {}.getType();
     return apiClient.execute(call, localVarReturnType);
@@ -184,7 +181,7 @@ public class WildcardsApi {
   public com.squareup.okhttp.Call wildcardsGetAsync(
       WildcardsGetRequest data,
       final ApiCallback<WildcardsGetResponse> callback,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     ProgressResponseBody.ProgressListener progressListener = null;

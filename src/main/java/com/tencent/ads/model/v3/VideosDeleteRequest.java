@@ -22,6 +22,9 @@ public class VideosDeleteRequest {
   @SerializedName("account_id")
   private Long accountId = null;
 
+  @SerializedName("organization_id")
+  private Long organizationId = null;
+
   @SerializedName("video_id")
   private Long videoId = null;
 
@@ -42,6 +45,25 @@ public class VideosDeleteRequest {
 
   public void setAccountId(Long accountId) {
     this.accountId = accountId;
+  }
+
+  public VideosDeleteRequest organizationId(Long organizationId) {
+    this.organizationId = organizationId;
+    return this;
+  }
+
+  /**
+   * Get organizationId
+   *
+   * @return organizationId
+   */
+  @ApiModelProperty(value = "")
+  public Long getOrganizationId() {
+    return organizationId;
+  }
+
+  public void setOrganizationId(Long organizationId) {
+    this.organizationId = organizationId;
   }
 
   public VideosDeleteRequest videoId(Long videoId) {
@@ -73,12 +95,13 @@ public class VideosDeleteRequest {
     }
     VideosDeleteRequest videosDeleteRequest = (VideosDeleteRequest) o;
     return Objects.equals(this.accountId, videosDeleteRequest.accountId)
+        && Objects.equals(this.organizationId, videosDeleteRequest.organizationId)
         && Objects.equals(this.videoId, videosDeleteRequest.videoId);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(accountId, videoId);
+    return Objects.hash(accountId, organizationId, videoId);
   }
 
   @Override

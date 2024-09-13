@@ -33,11 +33,20 @@ public class PageSpec {
   @SerializedName("mini_game_spec")
   private MiniGameSpec miniGameSpec = null;
 
+  @SerializedName("wechat_channels_spec")
+  private WechatChannelsSpec wechatChannelsSpec = null;
+
   @SerializedName("override_canvas_head_option")
   private OverrideCanvasHeadOption overrideCanvasHeadOption = null;
 
   @SerializedName("dynamic_product_spec")
   private DynamicProductSpec dynamicProductSpec = null;
+
+  @SerializedName("wechat_official_account_spec")
+  private LandingPageWechatOfficialAccountSpec wechatOfficialAccountSpec = null;
+
+  @SerializedName("search_brand_area_spec")
+  private SearchBrandAreaSpec searchBrandAreaSpec = null;
 
   @SerializedName("channels_shop_product_spec")
   private ChannelsShopProductSpec channelsShopProductSpec = null;
@@ -118,6 +127,25 @@ public class PageSpec {
     this.miniGameSpec = miniGameSpec;
   }
 
+  public PageSpec wechatChannelsSpec(WechatChannelsSpec wechatChannelsSpec) {
+    this.wechatChannelsSpec = wechatChannelsSpec;
+    return this;
+  }
+
+  /**
+   * Get wechatChannelsSpec
+   *
+   * @return wechatChannelsSpec
+   */
+  @ApiModelProperty(value = "")
+  public WechatChannelsSpec getWechatChannelsSpec() {
+    return wechatChannelsSpec;
+  }
+
+  public void setWechatChannelsSpec(WechatChannelsSpec wechatChannelsSpec) {
+    this.wechatChannelsSpec = wechatChannelsSpec;
+  }
+
   public PageSpec overrideCanvasHeadOption(OverrideCanvasHeadOption overrideCanvasHeadOption) {
     this.overrideCanvasHeadOption = overrideCanvasHeadOption;
     return this;
@@ -156,6 +184,46 @@ public class PageSpec {
     this.dynamicProductSpec = dynamicProductSpec;
   }
 
+  public PageSpec wechatOfficialAccountSpec(
+      LandingPageWechatOfficialAccountSpec wechatOfficialAccountSpec) {
+    this.wechatOfficialAccountSpec = wechatOfficialAccountSpec;
+    return this;
+  }
+
+  /**
+   * Get wechatOfficialAccountSpec
+   *
+   * @return wechatOfficialAccountSpec
+   */
+  @ApiModelProperty(value = "")
+  public LandingPageWechatOfficialAccountSpec getWechatOfficialAccountSpec() {
+    return wechatOfficialAccountSpec;
+  }
+
+  public void setWechatOfficialAccountSpec(
+      LandingPageWechatOfficialAccountSpec wechatOfficialAccountSpec) {
+    this.wechatOfficialAccountSpec = wechatOfficialAccountSpec;
+  }
+
+  public PageSpec searchBrandAreaSpec(SearchBrandAreaSpec searchBrandAreaSpec) {
+    this.searchBrandAreaSpec = searchBrandAreaSpec;
+    return this;
+  }
+
+  /**
+   * Get searchBrandAreaSpec
+   *
+   * @return searchBrandAreaSpec
+   */
+  @ApiModelProperty(value = "")
+  public SearchBrandAreaSpec getSearchBrandAreaSpec() {
+    return searchBrandAreaSpec;
+  }
+
+  public void setSearchBrandAreaSpec(SearchBrandAreaSpec searchBrandAreaSpec) {
+    this.searchBrandAreaSpec = searchBrandAreaSpec;
+  }
+
   public PageSpec channelsShopProductSpec(ChannelsShopProductSpec channelsShopProductSpec) {
     this.channelsShopProductSpec = channelsShopProductSpec;
     return this;
@@ -188,8 +256,11 @@ public class PageSpec {
         && Objects.equals(this.pageUrl, pageSpec.pageUrl)
         && Objects.equals(this.miniProgramSpec, pageSpec.miniProgramSpec)
         && Objects.equals(this.miniGameSpec, pageSpec.miniGameSpec)
+        && Objects.equals(this.wechatChannelsSpec, pageSpec.wechatChannelsSpec)
         && Objects.equals(this.overrideCanvasHeadOption, pageSpec.overrideCanvasHeadOption)
         && Objects.equals(this.dynamicProductSpec, pageSpec.dynamicProductSpec)
+        && Objects.equals(this.wechatOfficialAccountSpec, pageSpec.wechatOfficialAccountSpec)
+        && Objects.equals(this.searchBrandAreaSpec, pageSpec.searchBrandAreaSpec)
         && Objects.equals(this.channelsShopProductSpec, pageSpec.channelsShopProductSpec);
   }
 
@@ -200,8 +271,11 @@ public class PageSpec {
         pageUrl,
         miniProgramSpec,
         miniGameSpec,
+        wechatChannelsSpec,
         overrideCanvasHeadOption,
         dynamicProductSpec,
+        wechatOfficialAccountSpec,
+        searchBrandAreaSpec,
         channelsShopProductSpec);
   }
 

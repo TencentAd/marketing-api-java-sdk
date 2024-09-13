@@ -67,7 +67,7 @@ public class BusinessManagerRelationsApi {
       List<String> fields,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     Object localVarPostBody = null;
@@ -98,11 +98,8 @@ public class BusinessManagerRelationsApi {
     localVarHeaderParams.put("Content-Type", localVarContentType);
 
     if (headerPair != null && headerPair.length > 0) {
-      if (headerPair.length % 2 != 0) {
-        throw new UnsupportedOperationException("Parameter headerPair must be paired");
-      }
-      for (int i = 0; i < headerPair.length / 2; i++) {
-        localVarHeaderParams.put(headerPair[i], headerPair[i * 2 + 1]);
+      for (int i = 0; i < headerPair.length; i++) {
+        localVarHeaderParams.put(headerPair[i].getName(), headerPair[i].getValue());
       }
     }
 
@@ -145,7 +142,7 @@ public class BusinessManagerRelationsApi {
       List<String> fields,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     com.squareup.okhttp.Call call =
@@ -172,7 +169,7 @@ public class BusinessManagerRelationsApi {
    *     response body
    */
   public BusinessManagerRelationsGetResponse businessManagerRelationsGet(
-      Long page, Long pageSize, Long advertiserType, List<String> fields, String... headerPair)
+      Long page, Long pageSize, Long advertiserType, List<String> fields, Pair... headerPair)
       throws ApiException {
     ApiResponse<BusinessManagerRelationsGetResponse> resp =
         businessManagerRelationsGetWithHttpInfo(page, pageSize, advertiserType, fields, headerPair);
@@ -191,7 +188,7 @@ public class BusinessManagerRelationsApi {
    *     response body
    */
   public ApiResponse<BusinessManagerRelationsGetResponse> businessManagerRelationsGetWithHttpInfo(
-      Long page, Long pageSize, Long advertiserType, List<String> fields, String... headerPair)
+      Long page, Long pageSize, Long advertiserType, List<String> fields, Pair... headerPair)
       throws ApiException {
     com.squareup.okhttp.Call call =
         businessManagerRelationsGetValidateBeforeCall(
@@ -217,7 +214,7 @@ public class BusinessManagerRelationsApi {
       Long advertiserType,
       List<String> fields,
       final ApiCallback<BusinessManagerRelationsGetResponse> callback,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     ProgressResponseBody.ProgressListener progressListener = null;

@@ -15,6 +15,7 @@ package com.tencent.ads.container.v3;
 import com.google.inject.Inject;
 import com.tencent.ads.ApiContainer;
 import com.tencent.ads.ApiException;
+import com.tencent.ads.Pair;
 import com.tencent.ads.anno.*;
 import com.tencent.ads.api.v3.WechatChannelsAdAccountWechatBindingApi;
 import com.tencent.ads.exception.TencentAdsResponseException;
@@ -39,7 +40,7 @@ public class WechatChannelsAdAccountWechatBindingApiContainer extends ApiContain
    */
   public WechatChannelsAdAccountWechatBindingAddResponseData
       wechatChannelsAdAccountWechatBindingAdd(
-          WechatChannelsAdAccountWechatBindingAddRequest data, String... headerPair)
+          WechatChannelsAdAccountWechatBindingAddRequest data, Pair... headerPair)
           throws ApiException, TencentAdsResponseException {
     WechatChannelsAdAccountWechatBindingAddResponse resp =
         api.wechatChannelsAdAccountWechatBindingAdd(data, headerPair);
@@ -59,7 +60,7 @@ public class WechatChannelsAdAccountWechatBindingApiContainer extends ApiContain
    */
   public WechatChannelsAdAccountWechatBindingGetResponseData
       wechatChannelsAdAccountWechatBindingGet(
-          Long accountId, String wechatBindAuthToken, List<String> fields, String... headerPair)
+          Long accountId, String wechatBindAuthToken, List<String> fields, Pair... headerPair)
           throws ApiException, TencentAdsResponseException {
     WechatChannelsAdAccountWechatBindingGetResponse resp =
         api.wechatChannelsAdAccountWechatBindingGet(

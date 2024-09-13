@@ -74,7 +74,7 @@ public class CustomTagFilesApi {
       String openAppId,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     Object localVarPostBody = null;
@@ -104,11 +104,8 @@ public class CustomTagFilesApi {
     localVarHeaderParams.put("Content-Type", localVarContentType);
 
     if (headerPair != null && headerPair.length > 0) {
-      if (headerPair.length % 2 != 0) {
-        throw new UnsupportedOperationException("Parameter headerPair must be paired");
-      }
-      for (int i = 0; i < headerPair.length / 2; i++) {
-        localVarHeaderParams.put(headerPair[i], headerPair[i * 2 + 1]);
+      for (int i = 0; i < headerPair.length; i++) {
+        localVarHeaderParams.put(headerPair[i].getName(), headerPair[i].getValue());
       }
     }
 
@@ -153,7 +150,7 @@ public class CustomTagFilesApi {
       String openAppId,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     // verify the required parameter 'accountId' is set
@@ -214,7 +211,7 @@ public class CustomTagFilesApi {
       File file,
       String operationType,
       String openAppId,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
     ApiResponse<CustomTagFilesAddResponse> resp =
         customTagFilesAddWithHttpInfo(
@@ -242,7 +239,7 @@ public class CustomTagFilesApi {
       File file,
       String operationType,
       String openAppId,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
     com.squareup.okhttp.Call call =
         customTagFilesAddValidateBeforeCall(
@@ -272,7 +269,7 @@ public class CustomTagFilesApi {
       String operationType,
       String openAppId,
       final ApiCallback<CustomTagFilesAddResponse> callback,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     ProgressResponseBody.ProgressListener progressListener = null;
@@ -332,7 +329,7 @@ public class CustomTagFilesApi {
       List<String> fields,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     Object localVarPostBody = null;
@@ -366,11 +363,8 @@ public class CustomTagFilesApi {
     localVarHeaderParams.put("Content-Type", localVarContentType);
 
     if (headerPair != null && headerPair.length > 0) {
-      if (headerPair.length % 2 != 0) {
-        throw new UnsupportedOperationException("Parameter headerPair must be paired");
-      }
-      for (int i = 0; i < headerPair.length / 2; i++) {
-        localVarHeaderParams.put(headerPair[i], headerPair[i * 2 + 1]);
+      for (int i = 0; i < headerPair.length; i++) {
+        localVarHeaderParams.put(headerPair[i].getName(), headerPair[i].getValue());
       }
     }
 
@@ -414,7 +408,7 @@ public class CustomTagFilesApi {
       List<String> fields,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     // verify the required parameter 'accountId' is set
@@ -454,7 +448,7 @@ public class CustomTagFilesApi {
       Long page,
       Long pageSize,
       List<String> fields,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
     ApiResponse<CustomTagFilesGetResponse> resp =
         customTagFilesGetWithHttpInfo(accountId, filtering, page, pageSize, fields, headerPair);
@@ -479,7 +473,7 @@ public class CustomTagFilesApi {
       Long page,
       Long pageSize,
       List<String> fields,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
     com.squareup.okhttp.Call call =
         customTagFilesGetValidateBeforeCall(
@@ -507,7 +501,7 @@ public class CustomTagFilesApi {
       Long pageSize,
       List<String> fields,
       final ApiCallback<CustomTagFilesGetResponse> callback,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     ProgressResponseBody.ProgressListener progressListener = null;

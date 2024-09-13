@@ -15,6 +15,7 @@ package com.tencent.ads.container.v3;
 import com.google.inject.Inject;
 import com.tencent.ads.ApiContainer;
 import com.tencent.ads.ApiException;
+import com.tencent.ads.Pair;
 import com.tencent.ads.anno.*;
 import com.tencent.ads.api.v3.ElementAppealReviewApi;
 import com.tencent.ads.exception.TencentAdsResponseException;
@@ -37,7 +38,7 @@ public class ElementAppealReviewApiContainer extends ApiContainer {
    *     response body
    */
   public ElementAppealReviewAddResponse elementAppealReviewAdd(
-      ElementAppealReviewAddRequest data, String... headerPair)
+      ElementAppealReviewAddRequest data, Pair... headerPair)
       throws ApiException, TencentAdsResponseException {
     ElementAppealReviewAddResponse resp = api.elementAppealReviewAdd(data, headerPair);
     handleResponse(gson.toJson(resp));
@@ -65,7 +66,7 @@ public class ElementAppealReviewApiContainer extends ApiContainer {
       Long elementId,
       String elementFingerPrint,
       List<String> fields,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException, TencentAdsResponseException {
     ElementAppealReviewGetResponse resp =
         api.elementAppealReviewGet(

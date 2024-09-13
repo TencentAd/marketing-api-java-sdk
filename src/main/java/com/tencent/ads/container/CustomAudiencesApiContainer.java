@@ -15,6 +15,7 @@ package com.tencent.ads.container;
 import com.google.inject.Inject;
 import com.tencent.ads.ApiContainer;
 import com.tencent.ads.ApiException;
+import com.tencent.ads.Pair;
 import com.tencent.ads.anno.*;
 import com.tencent.ads.api.CustomAudiencesApi;
 import com.tencent.ads.exception.TencentAdsResponseException;
@@ -42,7 +43,7 @@ public class CustomAudiencesApiContainer extends ApiContainer {
    *     response body
    */
   public CustomAudiencesAddResponseData customAudiencesAdd(
-      CustomAudiencesAddRequest data, String... headerPair)
+      CustomAudiencesAddRequest data, Pair... headerPair)
       throws ApiException, TencentAdsResponseException {
     CustomAudiencesAddResponse resp = api.customAudiencesAdd(data, headerPair);
     handleResponse(gson.toJson(resp));
@@ -58,7 +59,7 @@ public class CustomAudiencesApiContainer extends ApiContainer {
    *     response body
    */
   public CustomAudiencesDeleteResponse customAudiencesDelete(
-      CustomAudiencesDeleteRequest data, String... headerPair)
+      CustomAudiencesDeleteRequest data, Pair... headerPair)
       throws ApiException, TencentAdsResponseException {
     CustomAudiencesDeleteResponse resp = api.customAudiencesDelete(data, headerPair);
     handleResponse(gson.toJson(resp));
@@ -86,7 +87,7 @@ public class CustomAudiencesApiContainer extends ApiContainer {
       Long pageSize,
       String platform,
       List<String> fields,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException, TencentAdsResponseException {
     CustomAudiencesGetResponse resp =
         api.customAudiencesGet(accountId, audienceId, page, pageSize, platform, fields, headerPair);
@@ -103,7 +104,7 @@ public class CustomAudiencesApiContainer extends ApiContainer {
    *     response body
    */
   public CustomAudiencesUpdateResponse customAudiencesUpdate(
-      CustomAudiencesUpdateRequest data, String... headerPair)
+      CustomAudiencesUpdateRequest data, Pair... headerPair)
       throws ApiException, TencentAdsResponseException {
     CustomAudiencesUpdateResponse resp = api.customAudiencesUpdate(data, headerPair);
     handleResponse(gson.toJson(resp));

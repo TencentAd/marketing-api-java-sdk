@@ -86,7 +86,7 @@ public class ImagesApi {
       Long resizeFileSize,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     Object localVarPostBody = null;
@@ -120,11 +120,8 @@ public class ImagesApi {
     localVarHeaderParams.put("Content-Type", localVarContentType);
 
     if (headerPair != null && headerPair.length > 0) {
-      if (headerPair.length % 2 != 0) {
-        throw new UnsupportedOperationException("Parameter headerPair must be paired");
-      }
-      for (int i = 0; i < headerPair.length / 2; i++) {
-        localVarHeaderParams.put(headerPair[i], headerPair[i * 2 + 1]);
+      for (int i = 0; i < headerPair.length; i++) {
+        localVarHeaderParams.put(headerPair[i].getName(), headerPair[i].getValue());
       }
     }
 
@@ -173,7 +170,7 @@ public class ImagesApi {
       Long resizeFileSize,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     // verify the required parameter 'accountId' is set
@@ -240,7 +237,7 @@ public class ImagesApi {
       Long resizeWidth,
       Long resizeHeight,
       Long resizeFileSize,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
     ApiResponse<ImagesAddResponse> resp =
         imagesAddWithHttpInfo(
@@ -286,7 +283,7 @@ public class ImagesApi {
       Long resizeWidth,
       Long resizeHeight,
       Long resizeFileSize,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
     com.squareup.okhttp.Call call =
         imagesAddValidateBeforeCall(
@@ -336,7 +333,7 @@ public class ImagesApi {
       Long resizeHeight,
       Long resizeFileSize,
       final ApiCallback<ImagesAddResponse> callback,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     ProgressResponseBody.ProgressListener progressListener = null;
@@ -392,7 +389,7 @@ public class ImagesApi {
       ImagesDeleteRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     Object localVarPostBody = data;
@@ -416,11 +413,8 @@ public class ImagesApi {
     localVarHeaderParams.put("Content-Type", localVarContentType);
 
     if (headerPair != null && headerPair.length > 0) {
-      if (headerPair.length % 2 != 0) {
-        throw new UnsupportedOperationException("Parameter headerPair must be paired");
-      }
-      for (int i = 0; i < headerPair.length / 2; i++) {
-        localVarHeaderParams.put(headerPair[i], headerPair[i * 2 + 1]);
+      for (int i = 0; i < headerPair.length; i++) {
+        localVarHeaderParams.put(headerPair[i].getName(), headerPair[i].getValue());
       }
     }
 
@@ -460,7 +454,7 @@ public class ImagesApi {
       ImagesDeleteRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     // verify the required parameter 'data' is set
@@ -482,7 +476,7 @@ public class ImagesApi {
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
-  public ImagesDeleteResponse imagesDelete(ImagesDeleteRequest data, String... headerPair)
+  public ImagesDeleteResponse imagesDelete(ImagesDeleteRequest data, Pair... headerPair)
       throws ApiException {
     ApiResponse<ImagesDeleteResponse> resp = imagesDeleteWithHttpInfo(data, headerPair);
     return resp.getData();
@@ -497,7 +491,7 @@ public class ImagesApi {
    *     response body
    */
   public ApiResponse<ImagesDeleteResponse> imagesDeleteWithHttpInfo(
-      ImagesDeleteRequest data, String... headerPair) throws ApiException {
+      ImagesDeleteRequest data, Pair... headerPair) throws ApiException {
     com.squareup.okhttp.Call call = imagesDeleteValidateBeforeCall(data, null, null, headerPair);
     Type localVarReturnType = new TypeToken<ImagesDeleteResponse>() {}.getType();
     return apiClient.execute(call, localVarReturnType);
@@ -514,7 +508,7 @@ public class ImagesApi {
   public com.squareup.okhttp.Call imagesDeleteAsync(
       ImagesDeleteRequest data,
       final ApiCallback<ImagesDeleteResponse> callback,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     ProgressResponseBody.ProgressListener progressListener = null;
@@ -565,7 +559,7 @@ public class ImagesApi {
       List<String> fields,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     Object localVarPostBody = null;
@@ -599,11 +593,8 @@ public class ImagesApi {
     localVarHeaderParams.put("Content-Type", localVarContentType);
 
     if (headerPair != null && headerPair.length > 0) {
-      if (headerPair.length % 2 != 0) {
-        throw new UnsupportedOperationException("Parameter headerPair must be paired");
-      }
-      for (int i = 0; i < headerPair.length / 2; i++) {
-        localVarHeaderParams.put(headerPair[i], headerPair[i * 2 + 1]);
+      for (int i = 0; i < headerPair.length; i++) {
+        localVarHeaderParams.put(headerPair[i].getName(), headerPair[i].getValue());
       }
     }
 
@@ -647,7 +638,7 @@ public class ImagesApi {
       List<String> fields,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     // verify the required parameter 'accountId' is set
@@ -687,7 +678,7 @@ public class ImagesApi {
       Long page,
       Long pageSize,
       List<String> fields,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
     ApiResponse<ImagesGetResponse> resp =
         imagesGetWithHttpInfo(accountId, filtering, page, pageSize, fields, headerPair);
@@ -712,7 +703,7 @@ public class ImagesApi {
       Long page,
       Long pageSize,
       List<String> fields,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
     com.squareup.okhttp.Call call =
         imagesGetValidateBeforeCall(
@@ -740,7 +731,7 @@ public class ImagesApi {
       Long pageSize,
       List<String> fields,
       final ApiCallback<ImagesGetResponse> callback,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     ProgressResponseBody.ProgressListener progressListener = null;
@@ -791,7 +782,7 @@ public class ImagesApi {
       ImagesUpdateRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     Object localVarPostBody = data;
@@ -815,11 +806,8 @@ public class ImagesApi {
     localVarHeaderParams.put("Content-Type", localVarContentType);
 
     if (headerPair != null && headerPair.length > 0) {
-      if (headerPair.length % 2 != 0) {
-        throw new UnsupportedOperationException("Parameter headerPair must be paired");
-      }
-      for (int i = 0; i < headerPair.length / 2; i++) {
-        localVarHeaderParams.put(headerPair[i], headerPair[i * 2 + 1]);
+      for (int i = 0; i < headerPair.length; i++) {
+        localVarHeaderParams.put(headerPair[i].getName(), headerPair[i].getValue());
       }
     }
 
@@ -859,7 +847,7 @@ public class ImagesApi {
       ImagesUpdateRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     // verify the required parameter 'data' is set
@@ -881,7 +869,7 @@ public class ImagesApi {
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
-  public ImagesUpdateResponse imagesUpdate(ImagesUpdateRequest data, String... headerPair)
+  public ImagesUpdateResponse imagesUpdate(ImagesUpdateRequest data, Pair... headerPair)
       throws ApiException {
     ApiResponse<ImagesUpdateResponse> resp = imagesUpdateWithHttpInfo(data, headerPair);
     return resp.getData();
@@ -896,7 +884,7 @@ public class ImagesApi {
    *     response body
    */
   public ApiResponse<ImagesUpdateResponse> imagesUpdateWithHttpInfo(
-      ImagesUpdateRequest data, String... headerPair) throws ApiException {
+      ImagesUpdateRequest data, Pair... headerPair) throws ApiException {
     com.squareup.okhttp.Call call = imagesUpdateValidateBeforeCall(data, null, null, headerPair);
     Type localVarReturnType = new TypeToken<ImagesUpdateResponse>() {}.getType();
     return apiClient.execute(call, localVarReturnType);
@@ -913,7 +901,7 @@ public class ImagesApi {
   public com.squareup.okhttp.Call imagesUpdateAsync(
       ImagesUpdateRequest data,
       final ApiCallback<ImagesUpdateResponse> callback,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     ProgressResponseBody.ProgressListener progressListener = null;

@@ -15,6 +15,7 @@ package com.tencent.ads.container;
 import com.google.inject.Inject;
 import com.tencent.ads.ApiContainer;
 import com.tencent.ads.ApiException;
+import com.tencent.ads.Pair;
 import com.tencent.ads.anno.*;
 import com.tencent.ads.api.CampaignsApi;
 import com.tencent.ads.exception.TencentAdsResponseException;
@@ -59,7 +60,7 @@ public class CampaignsApiContainer extends ApiContainer {
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
-  public CampaignsAddResponseData campaignsAdd(CampaignsAddRequest data, String... headerPair)
+  public CampaignsAddResponseData campaignsAdd(CampaignsAddRequest data, Pair... headerPair)
       throws ApiException, TencentAdsResponseException {
     CampaignsAddResponse resp = api.campaignsAdd(data, headerPair);
     handleResponse(gson.toJson(resp));
@@ -75,7 +76,7 @@ public class CampaignsApiContainer extends ApiContainer {
    *     response body
    */
   public CampaignsAddNegativewordResponseData campaignsAddNegativeword(
-      CampaignsAddNegativewordRequest data, String... headerPair)
+      CampaignsAddNegativewordRequest data, Pair... headerPair)
       throws ApiException, TencentAdsResponseException {
     CampaignsAddNegativewordResponse resp = api.campaignsAddNegativeword(data, headerPair);
     handleResponse(gson.toJson(resp));
@@ -91,7 +92,7 @@ public class CampaignsApiContainer extends ApiContainer {
    *     response body
    */
   public CampaignsDeleteResponseData campaignsDelete(
-      CampaignsDeleteRequest data, String... headerPair)
+      CampaignsDeleteRequest data, Pair... headerPair)
       throws ApiException, TencentAdsResponseException {
     CampaignsDeleteResponse resp = api.campaignsDelete(data, headerPair);
     handleResponse(gson.toJson(resp));
@@ -120,7 +121,7 @@ public class CampaignsApiContainer extends ApiContainer {
       Boolean isDeleted,
       Boolean weixinOfficialAccountsUpgradeEnabled,
       List<String> fields,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException, TencentAdsResponseException {
     CampaignsGetResponse resp =
         api.campaignsGet(
@@ -145,7 +146,7 @@ public class CampaignsApiContainer extends ApiContainer {
    *     response body
    */
   public CampaignsGetNegativewordResponseData campaignsGetNegativeword(
-      CampaignsGetNegativewordRequest data, String... headerPair)
+      CampaignsGetNegativewordRequest data, Pair... headerPair)
       throws ApiException, TencentAdsResponseException {
     CampaignsGetNegativewordResponse resp = api.campaignsGetNegativeword(data, headerPair);
     handleResponse(gson.toJson(resp));
@@ -161,7 +162,7 @@ public class CampaignsApiContainer extends ApiContainer {
    *     response body
    */
   public CampaignsUpdateResponseData campaignsUpdate(
-      CampaignsUpdateRequest data, String... headerPair)
+      CampaignsUpdateRequest data, Pair... headerPair)
       throws ApiException, TencentAdsResponseException {
     CampaignsUpdateResponse resp = api.campaignsUpdate(data, headerPair);
     handleResponse(gson.toJson(resp));
@@ -177,7 +178,7 @@ public class CampaignsApiContainer extends ApiContainer {
    *     response body
    */
   public CampaignsUpdateConfiguredStatusResponseData campaignsUpdateConfiguredStatus(
-      CampaignsUpdateConfiguredStatusRequest data, String... headerPair)
+      CampaignsUpdateConfiguredStatusRequest data, Pair... headerPair)
       throws ApiException, TencentAdsResponseException {
     CampaignsUpdateConfiguredStatusResponse resp =
         api.campaignsUpdateConfiguredStatus(data, headerPair);
@@ -194,7 +195,7 @@ public class CampaignsApiContainer extends ApiContainer {
    *     response body
    */
   public CampaignsUpdateDailyBudgetResponseData campaignsUpdateDailyBudget(
-      CampaignsUpdateDailyBudgetRequest data, String... headerPair)
+      CampaignsUpdateDailyBudgetRequest data, Pair... headerPair)
       throws ApiException, TencentAdsResponseException {
     CampaignsUpdateDailyBudgetResponse resp = api.campaignsUpdateDailyBudget(data, headerPair);
     handleResponse(gson.toJson(resp));
@@ -210,7 +211,7 @@ public class CampaignsApiContainer extends ApiContainer {
    *     response body
    */
   public CampaignsUpdateNegativewordResponseData campaignsUpdateNegativeword(
-      CampaignsUpdateNegativewordRequest data, String... headerPair)
+      CampaignsUpdateNegativewordRequest data, Pair... headerPair)
       throws ApiException, TencentAdsResponseException {
     CampaignsUpdateNegativewordResponse resp = api.campaignsUpdateNegativeword(data, headerPair);
     handleResponse(gson.toJson(resp));

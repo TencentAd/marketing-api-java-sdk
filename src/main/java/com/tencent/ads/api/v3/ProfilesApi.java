@@ -66,7 +66,7 @@ public class ProfilesApi {
       ProfilesAddRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     Object localVarPostBody = data;
@@ -90,11 +90,8 @@ public class ProfilesApi {
     localVarHeaderParams.put("Content-Type", localVarContentType);
 
     if (headerPair != null && headerPair.length > 0) {
-      if (headerPair.length % 2 != 0) {
-        throw new UnsupportedOperationException("Parameter headerPair must be paired");
-      }
-      for (int i = 0; i < headerPair.length / 2; i++) {
-        localVarHeaderParams.put(headerPair[i], headerPair[i * 2 + 1]);
+      for (int i = 0; i < headerPair.length; i++) {
+        localVarHeaderParams.put(headerPair[i].getName(), headerPair[i].getValue());
       }
     }
 
@@ -134,7 +131,7 @@ public class ProfilesApi {
       ProfilesAddRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     // verify the required parameter 'data' is set
@@ -156,7 +153,7 @@ public class ProfilesApi {
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
-  public ProfilesAddResponse profilesAdd(ProfilesAddRequest data, String... headerPair)
+  public ProfilesAddResponse profilesAdd(ProfilesAddRequest data, Pair... headerPair)
       throws ApiException {
     ApiResponse<ProfilesAddResponse> resp = profilesAddWithHttpInfo(data, headerPair);
     return resp.getData();
@@ -171,7 +168,7 @@ public class ProfilesApi {
    *     response body
    */
   public ApiResponse<ProfilesAddResponse> profilesAddWithHttpInfo(
-      ProfilesAddRequest data, String... headerPair) throws ApiException {
+      ProfilesAddRequest data, Pair... headerPair) throws ApiException {
     com.squareup.okhttp.Call call = profilesAddValidateBeforeCall(data, null, null, headerPair);
     Type localVarReturnType = new TypeToken<ProfilesAddResponse>() {}.getType();
     return apiClient.execute(call, localVarReturnType);
@@ -186,9 +183,7 @@ public class ProfilesApi {
    * @throws ApiException If fail to process the API call, e.g. serializing the request body object
    */
   public com.squareup.okhttp.Call profilesAddAsync(
-      ProfilesAddRequest data,
-      final ApiCallback<ProfilesAddResponse> callback,
-      String... headerPair)
+      ProfilesAddRequest data, final ApiCallback<ProfilesAddResponse> callback, Pair... headerPair)
       throws ApiException {
 
     ProgressResponseBody.ProgressListener progressListener = null;
@@ -231,7 +226,7 @@ public class ProfilesApi {
       ProfilesDeleteRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     Object localVarPostBody = data;
@@ -255,11 +250,8 @@ public class ProfilesApi {
     localVarHeaderParams.put("Content-Type", localVarContentType);
 
     if (headerPair != null && headerPair.length > 0) {
-      if (headerPair.length % 2 != 0) {
-        throw new UnsupportedOperationException("Parameter headerPair must be paired");
-      }
-      for (int i = 0; i < headerPair.length / 2; i++) {
-        localVarHeaderParams.put(headerPair[i], headerPair[i * 2 + 1]);
+      for (int i = 0; i < headerPair.length; i++) {
+        localVarHeaderParams.put(headerPair[i].getName(), headerPair[i].getValue());
       }
     }
 
@@ -299,7 +291,7 @@ public class ProfilesApi {
       ProfilesDeleteRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     // verify the required parameter 'data' is set
@@ -321,7 +313,7 @@ public class ProfilesApi {
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
-  public ProfilesDeleteResponse profilesDelete(ProfilesDeleteRequest data, String... headerPair)
+  public ProfilesDeleteResponse profilesDelete(ProfilesDeleteRequest data, Pair... headerPair)
       throws ApiException {
     ApiResponse<ProfilesDeleteResponse> resp = profilesDeleteWithHttpInfo(data, headerPair);
     return resp.getData();
@@ -336,7 +328,7 @@ public class ProfilesApi {
    *     response body
    */
   public ApiResponse<ProfilesDeleteResponse> profilesDeleteWithHttpInfo(
-      ProfilesDeleteRequest data, String... headerPair) throws ApiException {
+      ProfilesDeleteRequest data, Pair... headerPair) throws ApiException {
     com.squareup.okhttp.Call call = profilesDeleteValidateBeforeCall(data, null, null, headerPair);
     Type localVarReturnType = new TypeToken<ProfilesDeleteResponse>() {}.getType();
     return apiClient.execute(call, localVarReturnType);
@@ -353,7 +345,7 @@ public class ProfilesApi {
   public com.squareup.okhttp.Call profilesDeleteAsync(
       ProfilesDeleteRequest data,
       final ApiCallback<ProfilesDeleteResponse> callback,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     ProgressResponseBody.ProgressListener progressListener = null;
@@ -405,7 +397,7 @@ public class ProfilesApi {
       List<String> fields,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     Object localVarPostBody = null;
@@ -439,11 +431,8 @@ public class ProfilesApi {
     localVarHeaderParams.put("Content-Type", localVarContentType);
 
     if (headerPair != null && headerPair.length > 0) {
-      if (headerPair.length % 2 != 0) {
-        throw new UnsupportedOperationException("Parameter headerPair must be paired");
-      }
-      for (int i = 0; i < headerPair.length / 2; i++) {
-        localVarHeaderParams.put(headerPair[i], headerPair[i * 2 + 1]);
+      for (int i = 0; i < headerPair.length; i++) {
+        localVarHeaderParams.put(headerPair[i].getName(), headerPair[i].getValue());
       }
     }
 
@@ -487,7 +476,7 @@ public class ProfilesApi {
       List<String> fields,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     // verify the required parameter 'accountId' is set
@@ -527,7 +516,7 @@ public class ProfilesApi {
       Long page,
       Long pageSize,
       List<String> fields,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
     ApiResponse<ProfilesGetResponse> resp =
         profilesGetWithHttpInfo(accountId, filtering, page, pageSize, fields, headerPair);
@@ -552,7 +541,7 @@ public class ProfilesApi {
       Long page,
       Long pageSize,
       List<String> fields,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
     com.squareup.okhttp.Call call =
         profilesGetValidateBeforeCall(
@@ -580,7 +569,7 @@ public class ProfilesApi {
       Long pageSize,
       List<String> fields,
       final ApiCallback<ProfilesGetResponse> callback,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     ProgressResponseBody.ProgressListener progressListener = null;

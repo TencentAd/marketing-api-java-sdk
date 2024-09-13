@@ -75,7 +75,7 @@ public class EcommerceOrderApi {
       List<String> fields,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     Object localVarPostBody = null;
@@ -111,11 +111,8 @@ public class EcommerceOrderApi {
     localVarHeaderParams.put("Content-Type", localVarContentType);
 
     if (headerPair != null && headerPair.length > 0) {
-      if (headerPair.length % 2 != 0) {
-        throw new UnsupportedOperationException("Parameter headerPair must be paired");
-      }
-      for (int i = 0; i < headerPair.length / 2; i++) {
-        localVarHeaderParams.put(headerPair[i], headerPair[i * 2 + 1]);
+      for (int i = 0; i < headerPair.length; i++) {
+        localVarHeaderParams.put(headerPair[i].getName(), headerPair[i].getValue());
       }
     }
 
@@ -160,7 +157,7 @@ public class EcommerceOrderApi {
       List<String> fields,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     // verify the required parameter 'accountId' is set
@@ -209,7 +206,7 @@ public class EcommerceOrderApi {
       Long page,
       Long pageSize,
       List<String> fields,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
     ApiResponse<EcommerceOrderGetResponse> resp =
         ecommerceOrderGetWithHttpInfo(
@@ -237,7 +234,7 @@ public class EcommerceOrderApi {
       Long page,
       Long pageSize,
       List<String> fields,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
     com.squareup.okhttp.Call call =
         ecommerceOrderGetValidateBeforeCall(
@@ -267,7 +264,7 @@ public class EcommerceOrderApi {
       Long pageSize,
       List<String> fields,
       final ApiCallback<EcommerceOrderGetResponse> callback,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     ProgressResponseBody.ProgressListener progressListener = null;
@@ -319,7 +316,7 @@ public class EcommerceOrderApi {
       EcommerceOrderUpdateRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     Object localVarPostBody = data;
@@ -343,11 +340,8 @@ public class EcommerceOrderApi {
     localVarHeaderParams.put("Content-Type", localVarContentType);
 
     if (headerPair != null && headerPair.length > 0) {
-      if (headerPair.length % 2 != 0) {
-        throw new UnsupportedOperationException("Parameter headerPair must be paired");
-      }
-      for (int i = 0; i < headerPair.length / 2; i++) {
-        localVarHeaderParams.put(headerPair[i], headerPair[i * 2 + 1]);
+      for (int i = 0; i < headerPair.length; i++) {
+        localVarHeaderParams.put(headerPair[i].getName(), headerPair[i].getValue());
       }
     }
 
@@ -387,7 +381,7 @@ public class EcommerceOrderApi {
       EcommerceOrderUpdateRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     // verify the required parameter 'data' is set
@@ -410,7 +404,7 @@ public class EcommerceOrderApi {
    *     response body
    */
   public EcommerceOrderUpdateResponse ecommerceOrderUpdate(
-      EcommerceOrderUpdateRequest data, String... headerPair) throws ApiException {
+      EcommerceOrderUpdateRequest data, Pair... headerPair) throws ApiException {
     ApiResponse<EcommerceOrderUpdateResponse> resp =
         ecommerceOrderUpdateWithHttpInfo(data, headerPair);
     return resp.getData();
@@ -425,7 +419,7 @@ public class EcommerceOrderApi {
    *     response body
    */
   public ApiResponse<EcommerceOrderUpdateResponse> ecommerceOrderUpdateWithHttpInfo(
-      EcommerceOrderUpdateRequest data, String... headerPair) throws ApiException {
+      EcommerceOrderUpdateRequest data, Pair... headerPair) throws ApiException {
     com.squareup.okhttp.Call call =
         ecommerceOrderUpdateValidateBeforeCall(data, null, null, headerPair);
     Type localVarReturnType = new TypeToken<EcommerceOrderUpdateResponse>() {}.getType();
@@ -443,7 +437,7 @@ public class EcommerceOrderApi {
   public com.squareup.okhttp.Call ecommerceOrderUpdateAsync(
       EcommerceOrderUpdateRequest data,
       final ApiCallback<EcommerceOrderUpdateResponse> callback,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     ProgressResponseBody.ProgressListener progressListener = null;

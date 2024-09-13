@@ -15,6 +15,7 @@ package com.tencent.ads.container;
 import com.google.inject.Inject;
 import com.tencent.ads.ApiContainer;
 import com.tencent.ads.ApiException;
+import com.tencent.ads.Pair;
 import com.tencent.ads.anno.*;
 import com.tencent.ads.api.BidwordRptApi;
 import com.tencent.ads.exception.TencentAdsResponseException;
@@ -34,7 +35,7 @@ public class BidwordRptApiContainer extends ApiContainer {
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
-  public BidwordRptGetResponseData bidwordRptGet(BidwordRptGetRequest data, String... headerPair)
+  public BidwordRptGetResponseData bidwordRptGet(BidwordRptGetRequest data, Pair... headerPair)
       throws ApiException, TencentAdsResponseException {
     BidwordRptGetResponse resp = api.bidwordRptGet(data, headerPair);
     handleResponse(gson.toJson(resp));

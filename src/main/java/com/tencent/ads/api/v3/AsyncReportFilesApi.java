@@ -66,7 +66,7 @@ public class AsyncReportFilesApi {
       List<String> fields,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     Object localVarPostBody = null;
@@ -96,11 +96,8 @@ public class AsyncReportFilesApi {
     localVarHeaderParams.put("Content-Type", localVarContentType);
 
     if (headerPair != null && headerPair.length > 0) {
-      if (headerPair.length % 2 != 0) {
-        throw new UnsupportedOperationException("Parameter headerPair must be paired");
-      }
-      for (int i = 0; i < headerPair.length / 2; i++) {
-        localVarHeaderParams.put(headerPair[i], headerPair[i * 2 + 1]);
+      for (int i = 0; i < headerPair.length; i++) {
+        localVarHeaderParams.put(headerPair[i].getName(), headerPair[i].getValue());
       }
     }
 
@@ -143,7 +140,7 @@ public class AsyncReportFilesApi {
       List<String> fields,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     // verify the required parameter 'accountId' is set
@@ -188,7 +185,7 @@ public class AsyncReportFilesApi {
    *     response body
    */
   public String asyncReportFilesGet(
-      Long accountId, Long taskId, Long fileId, List<String> fields, String... headerPair)
+      Long accountId, Long taskId, Long fileId, List<String> fields, Pair... headerPair)
       throws ApiException {
     ApiResponse<String> resp =
         asyncReportFilesGetWithHttpInfo(accountId, taskId, fileId, fields, headerPair);
@@ -207,7 +204,7 @@ public class AsyncReportFilesApi {
    *     response body
    */
   public ApiResponse<String> asyncReportFilesGetWithHttpInfo(
-      Long accountId, Long taskId, Long fileId, List<String> fields, String... headerPair)
+      Long accountId, Long taskId, Long fileId, List<String> fields, Pair... headerPair)
       throws ApiException {
     com.squareup.okhttp.Call call =
         asyncReportFilesGetValidateBeforeCall(
@@ -233,7 +230,7 @@ public class AsyncReportFilesApi {
       Long fileId,
       List<String> fields,
       final ApiCallback<String> callback,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     ProgressResponseBody.ProgressListener progressListener = null;

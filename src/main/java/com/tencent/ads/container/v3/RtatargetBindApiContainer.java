@@ -15,6 +15,7 @@ package com.tencent.ads.container.v3;
 import com.google.inject.Inject;
 import com.tencent.ads.ApiContainer;
 import com.tencent.ads.ApiException;
+import com.tencent.ads.Pair;
 import com.tencent.ads.anno.*;
 import com.tencent.ads.api.v3.RtatargetBindApi;
 import com.tencent.ads.exception.TencentAdsResponseException;
@@ -41,7 +42,7 @@ public class RtatargetBindApiContainer extends ApiContainer {
    *     response body
    */
   public RtatargetBindAddResponseData rtatargetBindAdd(
-      RtatargetBindAddRequest data, String... headerPair)
+      RtatargetBindAddRequest data, Pair... headerPair)
       throws ApiException, TencentAdsResponseException {
     RtatargetBindAddResponse resp = api.rtatargetBindAdd(data, headerPair);
     handleResponse(gson.toJson(resp));
@@ -57,7 +58,7 @@ public class RtatargetBindApiContainer extends ApiContainer {
    *     response body
    */
   public RtatargetBindDeleteResponseData rtatargetBindDelete(
-      RtatargetBindDeleteRequest data, String... headerPair)
+      RtatargetBindDeleteRequest data, Pair... headerPair)
       throws ApiException, TencentAdsResponseException {
     RtatargetBindDeleteResponse resp = api.rtatargetBindDelete(data, headerPair);
     handleResponse(gson.toJson(resp));
@@ -73,7 +74,7 @@ public class RtatargetBindApiContainer extends ApiContainer {
    *     response body
    */
   public RtatargetBindGetResponseData rtatargetBindGet(
-      RtatargetBindGetRequest data, String... headerPair)
+      RtatargetBindGetRequest data, Pair... headerPair)
       throws ApiException, TencentAdsResponseException {
     RtatargetBindGetResponse resp = api.rtatargetBindGet(data, headerPair);
     handleResponse(gson.toJson(resp));

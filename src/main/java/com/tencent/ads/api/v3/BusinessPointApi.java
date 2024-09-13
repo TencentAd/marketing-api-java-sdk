@@ -65,7 +65,7 @@ public class BusinessPointApi {
       List<String> fields,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     Object localVarPostBody = null;
@@ -96,11 +96,8 @@ public class BusinessPointApi {
     localVarHeaderParams.put("Content-Type", localVarContentType);
 
     if (headerPair != null && headerPair.length > 0) {
-      if (headerPair.length % 2 != 0) {
-        throw new UnsupportedOperationException("Parameter headerPair must be paired");
-      }
-      for (int i = 0; i < headerPair.length / 2; i++) {
-        localVarHeaderParams.put(headerPair[i], headerPair[i * 2 + 1]);
+      for (int i = 0; i < headerPair.length; i++) {
+        localVarHeaderParams.put(headerPair[i].getName(), headerPair[i].getValue());
       }
     }
 
@@ -142,7 +139,7 @@ public class BusinessPointApi {
       List<String> fields,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     // verify the required parameter 'siteSets' is set
@@ -174,7 +171,7 @@ public class BusinessPointApi {
    *     response body
    */
   public BusinessPointGetResponse businessPointGet(
-      List<String> siteSets, Long accountId, List<String> fields, String... headerPair)
+      List<String> siteSets, Long accountId, List<String> fields, Pair... headerPair)
       throws ApiException {
     ApiResponse<BusinessPointGetResponse> resp =
         businessPointGetWithHttpInfo(siteSets, accountId, fields, headerPair);
@@ -192,7 +189,7 @@ public class BusinessPointApi {
    *     response body
    */
   public ApiResponse<BusinessPointGetResponse> businessPointGetWithHttpInfo(
-      List<String> siteSets, Long accountId, List<String> fields, String... headerPair)
+      List<String> siteSets, Long accountId, List<String> fields, Pair... headerPair)
       throws ApiException {
     com.squareup.okhttp.Call call =
         businessPointGetValidateBeforeCall(siteSets, accountId, fields, null, null, headerPair);
@@ -215,7 +212,7 @@ public class BusinessPointApi {
       Long accountId,
       List<String> fields,
       final ApiCallback<BusinessPointGetResponse> callback,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     ProgressResponseBody.ProgressListener progressListener = null;

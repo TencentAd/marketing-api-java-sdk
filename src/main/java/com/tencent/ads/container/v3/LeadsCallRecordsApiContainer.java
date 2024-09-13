@@ -15,6 +15,7 @@ package com.tencent.ads.container.v3;
 import com.google.inject.Inject;
 import com.tencent.ads.ApiContainer;
 import com.tencent.ads.ApiException;
+import com.tencent.ads.Pair;
 import com.tencent.ads.anno.*;
 import com.tencent.ads.api.v3.LeadsCallRecordsApi;
 import com.tencent.ads.exception.TencentAdsResponseException;
@@ -48,7 +49,7 @@ public class LeadsCallRecordsApiContainer extends ApiContainer {
       String endDate,
       String searchAfter,
       List<String> fields,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException, TencentAdsResponseException {
     LeadsCallRecordsGetResponse resp =
         api.leadsCallRecordsGet(

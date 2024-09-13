@@ -65,7 +65,7 @@ public class ConversionLinksApi {
       List<String> fields,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     Object localVarPostBody = null;
@@ -96,11 +96,8 @@ public class ConversionLinksApi {
     localVarHeaderParams.put("Content-Type", localVarContentType);
 
     if (headerPair != null && headerPair.length > 0) {
-      if (headerPair.length % 2 != 0) {
-        throw new UnsupportedOperationException("Parameter headerPair must be paired");
-      }
-      for (int i = 0; i < headerPair.length / 2; i++) {
-        localVarHeaderParams.put(headerPair[i], headerPair[i * 2 + 1]);
+      for (int i = 0; i < headerPair.length; i++) {
+        localVarHeaderParams.put(headerPair[i].getName(), headerPair[i].getValue());
       }
     }
 
@@ -142,7 +139,7 @@ public class ConversionLinksApi {
       List<String> fields,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     // verify the required parameter 'accountId' is set
@@ -179,7 +176,7 @@ public class ConversionLinksApi {
    *     response body
    */
   public ConversionLinksGetResponse conversionLinksGet(
-      Long accountId, String secondCategoryType, List<String> fields, String... headerPair)
+      Long accountId, String secondCategoryType, List<String> fields, Pair... headerPair)
       throws ApiException {
     ApiResponse<ConversionLinksGetResponse> resp =
         conversionLinksGetWithHttpInfo(accountId, secondCategoryType, fields, headerPair);
@@ -197,7 +194,7 @@ public class ConversionLinksApi {
    *     response body
    */
   public ApiResponse<ConversionLinksGetResponse> conversionLinksGetWithHttpInfo(
-      Long accountId, String secondCategoryType, List<String> fields, String... headerPair)
+      Long accountId, String secondCategoryType, List<String> fields, Pair... headerPair)
       throws ApiException {
     com.squareup.okhttp.Call call =
         conversionLinksGetValidateBeforeCall(
@@ -221,7 +218,7 @@ public class ConversionLinksApi {
       String secondCategoryType,
       List<String> fields,
       final ApiCallback<ConversionLinksGetResponse> callback,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     ProgressResponseBody.ProgressListener progressListener = null;

@@ -51,7 +51,9 @@ public class MarketingTargetTypesApi {
   /**
    * Build call for marketingTargetTypesGet
    *
-   * @param accountId (required)
+   * @param accountId (optional)
+   * @param organizationId (optional)
+   * @param businessType (optional)
    * @param fields 返回参数的字段列表 (optional)
    * @param progressListener Progress listener
    * @param progressRequestListener Progress request listener
@@ -60,10 +62,12 @@ public class MarketingTargetTypesApi {
    */
   public com.squareup.okhttp.Call marketingTargetTypesGetCall(
       Long accountId,
+      Long organizationId,
+      String businessType,
       List<String> fields,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     Object localVarPostBody = null;
@@ -75,6 +79,10 @@ public class MarketingTargetTypesApi {
     List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
     if (accountId != null)
       localVarQueryParams.addAll(apiClient.parameterToPair("account_id", accountId));
+    if (organizationId != null)
+      localVarQueryParams.addAll(apiClient.parameterToPair("organization_id", organizationId));
+    if (businessType != null)
+      localVarQueryParams.addAll(apiClient.parameterToPair("business_type", businessType));
     if (fields != null)
       localVarCollectionQueryParams.addAll(apiClient.parameterToPairs("multi", "fields", fields));
 
@@ -91,11 +99,8 @@ public class MarketingTargetTypesApi {
     localVarHeaderParams.put("Content-Type", localVarContentType);
 
     if (headerPair != null && headerPair.length > 0) {
-      if (headerPair.length % 2 != 0) {
-        throw new UnsupportedOperationException("Parameter headerPair must be paired");
-      }
-      for (int i = 0; i < headerPair.length / 2; i++) {
-        localVarHeaderParams.put(headerPair[i], headerPair[i * 2 + 1]);
+      for (int i = 0; i < headerPair.length; i++) {
+        localVarHeaderParams.put(headerPair[i].getName(), headerPair[i].getValue());
       }
     }
 
@@ -133,53 +138,71 @@ public class MarketingTargetTypesApi {
   @SuppressWarnings("rawtypes")
   private com.squareup.okhttp.Call marketingTargetTypesGetValidateBeforeCall(
       Long accountId,
+      Long organizationId,
+      String businessType,
       List<String> fields,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
-
-    // verify the required parameter 'accountId' is set
-    if (accountId == null) {
-      throw new ApiException(
-          "Missing the required parameter 'accountId' when calling marketingTargetTypesGet(Async)");
-    }
 
     com.squareup.okhttp.Call call =
         marketingTargetTypesGetCall(
-            accountId, fields, progressListener, progressRequestListener, headerPair);
+            accountId,
+            organizationId,
+            businessType,
+            fields,
+            progressListener,
+            progressRequestListener,
+            headerPair);
     return call;
   }
 
   /**
    * 获取可投放推广内容资产类型名称
    *
-   * @param accountId (required)
+   * @param accountId (optional)
+   * @param organizationId (optional)
+   * @param businessType (optional)
    * @param fields 返回参数的字段列表 (optional)
    * @return MarketingTargetTypesGetResponse
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
   public MarketingTargetTypesGetResponse marketingTargetTypesGet(
-      Long accountId, List<String> fields, String... headerPair) throws ApiException {
+      Long accountId,
+      Long organizationId,
+      String businessType,
+      List<String> fields,
+      Pair... headerPair)
+      throws ApiException {
     ApiResponse<MarketingTargetTypesGetResponse> resp =
-        marketingTargetTypesGetWithHttpInfo(accountId, fields, headerPair);
+        marketingTargetTypesGetWithHttpInfo(
+            accountId, organizationId, businessType, fields, headerPair);
     return resp.getData();
   }
 
   /**
    * 获取可投放推广内容资产类型名称
    *
-   * @param accountId (required)
+   * @param accountId (optional)
+   * @param organizationId (optional)
+   * @param businessType (optional)
    * @param fields 返回参数的字段列表 (optional)
    * @return ApiResponse&lt;MarketingTargetTypesGetResponse&gt;
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
   public ApiResponse<MarketingTargetTypesGetResponse> marketingTargetTypesGetWithHttpInfo(
-      Long accountId, List<String> fields, String... headerPair) throws ApiException {
+      Long accountId,
+      Long organizationId,
+      String businessType,
+      List<String> fields,
+      Pair... headerPair)
+      throws ApiException {
     com.squareup.okhttp.Call call =
-        marketingTargetTypesGetValidateBeforeCall(accountId, fields, null, null, headerPair);
+        marketingTargetTypesGetValidateBeforeCall(
+            accountId, organizationId, businessType, fields, null, null, headerPair);
     Type localVarReturnType = new TypeToken<MarketingTargetTypesGetResponse>() {}.getType();
     return apiClient.execute(call, localVarReturnType);
   }
@@ -187,7 +210,9 @@ public class MarketingTargetTypesApi {
   /**
    * 获取可投放推广内容资产类型名称 (asynchronously)
    *
-   * @param accountId (required)
+   * @param accountId (optional)
+   * @param organizationId (optional)
+   * @param businessType (optional)
    * @param fields 返回参数的字段列表 (optional)
    * @param callback The callback to be executed when the API call finishes
    * @return The request call
@@ -195,9 +220,11 @@ public class MarketingTargetTypesApi {
    */
   public com.squareup.okhttp.Call marketingTargetTypesGetAsync(
       Long accountId,
+      Long organizationId,
+      String businessType,
       List<String> fields,
       final ApiCallback<MarketingTargetTypesGetResponse> callback,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     ProgressResponseBody.ProgressListener progressListener = null;
@@ -223,7 +250,13 @@ public class MarketingTargetTypesApi {
 
     com.squareup.okhttp.Call call =
         marketingTargetTypesGetValidateBeforeCall(
-            accountId, fields, progressListener, progressRequestListener, headerPair);
+            accountId,
+            organizationId,
+            businessType,
+            fields,
+            progressListener,
+            progressRequestListener,
+            headerPair);
     Type localVarReturnType = new TypeToken<MarketingTargetTypesGetResponse>() {}.getType();
     apiClient.executeAsync(call, localVarReturnType, callback);
     return call;

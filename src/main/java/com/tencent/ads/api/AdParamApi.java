@@ -62,7 +62,7 @@ public class AdParamApi {
       AdParamGetRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     Object localVarPostBody = data;
@@ -86,11 +86,8 @@ public class AdParamApi {
     localVarHeaderParams.put("Content-Type", localVarContentType);
 
     if (headerPair != null && headerPair.length > 0) {
-      if (headerPair.length % 2 != 0) {
-        throw new UnsupportedOperationException("Parameter headerPair must be paired");
-      }
-      for (int i = 0; i < headerPair.length / 2; i++) {
-        localVarHeaderParams.put(headerPair[i], headerPair[i * 2 + 1]);
+      for (int i = 0; i < headerPair.length; i++) {
+        localVarHeaderParams.put(headerPair[i].getName(), headerPair[i].getValue());
       }
     }
 
@@ -130,7 +127,7 @@ public class AdParamApi {
       AdParamGetRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     // verify the required parameter 'data' is set
@@ -152,7 +149,7 @@ public class AdParamApi {
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
-  public AdParamGetResponse adParamGet(AdParamGetRequest data, String... headerPair)
+  public AdParamGetResponse adParamGet(AdParamGetRequest data, Pair... headerPair)
       throws ApiException {
     ApiResponse<AdParamGetResponse> resp = adParamGetWithHttpInfo(data, headerPair);
     return resp.getData();
@@ -167,7 +164,7 @@ public class AdParamApi {
    *     response body
    */
   public ApiResponse<AdParamGetResponse> adParamGetWithHttpInfo(
-      AdParamGetRequest data, String... headerPair) throws ApiException {
+      AdParamGetRequest data, Pair... headerPair) throws ApiException {
     com.squareup.okhttp.Call call = adParamGetValidateBeforeCall(data, null, null, headerPair);
     Type localVarReturnType = new TypeToken<AdParamGetResponse>() {}.getType();
     return apiClient.execute(call, localVarReturnType);
@@ -182,7 +179,7 @@ public class AdParamApi {
    * @throws ApiException If fail to process the API call, e.g. serializing the request body object
    */
   public com.squareup.okhttp.Call adParamGetAsync(
-      AdParamGetRequest data, final ApiCallback<AdParamGetResponse> callback, String... headerPair)
+      AdParamGetRequest data, final ApiCallback<AdParamGetResponse> callback, Pair... headerPair)
       throws ApiException {
 
     ProgressResponseBody.ProgressListener progressListener = null;

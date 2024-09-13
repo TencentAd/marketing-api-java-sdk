@@ -153,8 +153,14 @@ public class AdgroupsUpdateRequest {
   @SerializedName("ecom_pkam_switch")
   private EcomPkamSwitch ecomPkamSwitch = null;
 
+  @SerializedName("search_intelligent_extension")
+  private ModelSwitch searchIntelligentExtension = null;
+
   @SerializedName("search_expand_targeting_switch")
   private SearchExpandTargetingSwitch searchExpandTargetingSwitch = null;
+
+  @SerializedName("feedback_id")
+  private Long feedbackId = null;
 
   @SerializedName("account_id")
   private Long accountId = null;
@@ -1056,6 +1062,25 @@ public class AdgroupsUpdateRequest {
     this.ecomPkamSwitch = ecomPkamSwitch;
   }
 
+  public AdgroupsUpdateRequest searchIntelligentExtension(ModelSwitch searchIntelligentExtension) {
+    this.searchIntelligentExtension = searchIntelligentExtension;
+    return this;
+  }
+
+  /**
+   * Get searchIntelligentExtension
+   *
+   * @return searchIntelligentExtension
+   */
+  @ApiModelProperty(value = "")
+  public ModelSwitch getSearchIntelligentExtension() {
+    return searchIntelligentExtension;
+  }
+
+  public void setSearchIntelligentExtension(ModelSwitch searchIntelligentExtension) {
+    this.searchIntelligentExtension = searchIntelligentExtension;
+  }
+
   public AdgroupsUpdateRequest searchExpandTargetingSwitch(
       SearchExpandTargetingSwitch searchExpandTargetingSwitch) {
     this.searchExpandTargetingSwitch = searchExpandTargetingSwitch;
@@ -1075,6 +1100,25 @@ public class AdgroupsUpdateRequest {
   public void setSearchExpandTargetingSwitch(
       SearchExpandTargetingSwitch searchExpandTargetingSwitch) {
     this.searchExpandTargetingSwitch = searchExpandTargetingSwitch;
+  }
+
+  public AdgroupsUpdateRequest feedbackId(Long feedbackId) {
+    this.feedbackId = feedbackId;
+    return this;
+  }
+
+  /**
+   * Get feedbackId
+   *
+   * @return feedbackId
+   */
+  @ApiModelProperty(value = "")
+  public Long getFeedbackId() {
+    return feedbackId;
+  }
+
+  public void setFeedbackId(Long feedbackId) {
+    this.feedbackId = feedbackId;
   }
 
   public AdgroupsUpdateRequest accountId(Long accountId) {
@@ -1162,7 +1206,10 @@ public class AdgroupsUpdateRequest {
             this.autoDerivedLandingPageSwitch, adgroupsUpdateRequest.autoDerivedLandingPageSwitch)
         && Objects.equals(this.ecomPkamSwitch, adgroupsUpdateRequest.ecomPkamSwitch)
         && Objects.equals(
+            this.searchIntelligentExtension, adgroupsUpdateRequest.searchIntelligentExtension)
+        && Objects.equals(
             this.searchExpandTargetingSwitch, adgroupsUpdateRequest.searchExpandTargetingSwitch)
+        && Objects.equals(this.feedbackId, adgroupsUpdateRequest.feedbackId)
         && Objects.equals(this.accountId, adgroupsUpdateRequest.accountId);
   }
 
@@ -1213,7 +1260,9 @@ public class AdgroupsUpdateRequest {
         dynamicCreativeIdSet,
         autoDerivedLandingPageSwitch,
         ecomPkamSwitch,
+        searchIntelligentExtension,
         searchExpandTargetingSwitch,
+        feedbackId,
         accountId);
   }
 

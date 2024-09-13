@@ -67,7 +67,7 @@ public class LocalStoresWxpayMerchantsApi {
       List<String> fields,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     Object localVarPostBody = null;
@@ -98,11 +98,8 @@ public class LocalStoresWxpayMerchantsApi {
     localVarHeaderParams.put("Content-Type", localVarContentType);
 
     if (headerPair != null && headerPair.length > 0) {
-      if (headerPair.length % 2 != 0) {
-        throw new UnsupportedOperationException("Parameter headerPair must be paired");
-      }
-      for (int i = 0; i < headerPair.length / 2; i++) {
-        localVarHeaderParams.put(headerPair[i], headerPair[i * 2 + 1]);
+      for (int i = 0; i < headerPair.length; i++) {
+        localVarHeaderParams.put(headerPair[i].getName(), headerPair[i].getValue());
       }
     }
 
@@ -145,7 +142,7 @@ public class LocalStoresWxpayMerchantsApi {
       List<String> fields,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     // verify the required parameter 'accountId' is set
@@ -178,7 +175,7 @@ public class LocalStoresWxpayMerchantsApi {
    *     response body
    */
   public LocalStoresWxpayMerchantsGetResponse localStoresWxpayMerchantsGet(
-      Long accountId, Long page, Long pageSize, List<String> fields, String... headerPair)
+      Long accountId, Long page, Long pageSize, List<String> fields, Pair... headerPair)
       throws ApiException {
     ApiResponse<LocalStoresWxpayMerchantsGetResponse> resp =
         localStoresWxpayMerchantsGetWithHttpInfo(accountId, page, pageSize, fields, headerPair);
@@ -197,7 +194,7 @@ public class LocalStoresWxpayMerchantsApi {
    *     response body
    */
   public ApiResponse<LocalStoresWxpayMerchantsGetResponse> localStoresWxpayMerchantsGetWithHttpInfo(
-      Long accountId, Long page, Long pageSize, List<String> fields, String... headerPair)
+      Long accountId, Long page, Long pageSize, List<String> fields, Pair... headerPair)
       throws ApiException {
     com.squareup.okhttp.Call call =
         localStoresWxpayMerchantsGetValidateBeforeCall(
@@ -223,7 +220,7 @@ public class LocalStoresWxpayMerchantsApi {
       Long pageSize,
       List<String> fields,
       final ApiCallback<LocalStoresWxpayMerchantsGetResponse> callback,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     ProgressResponseBody.ProgressListener progressListener = null;

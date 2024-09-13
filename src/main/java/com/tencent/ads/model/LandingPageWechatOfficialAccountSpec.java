@@ -18,51 +18,29 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.util.Objects;
 
-/** 智能裁剪信息 */
-@ApiModel(description = "智能裁剪信息")
-public class CropSmartSpec {
-  @SerializedName("width")
-  private Long width = null;
+/** 落地页公众号信息 */
+@ApiModel(description = "落地页公众号信息")
+public class LandingPageWechatOfficialAccountSpec {
+  @SerializedName("app_id")
+  private String appId = null;
 
-  @SerializedName("height")
-  private Long height = null;
-
-  public CropSmartSpec width(Long width) {
-    this.width = width;
+  public LandingPageWechatOfficialAccountSpec appId(String appId) {
+    this.appId = appId;
     return this;
   }
 
   /**
-   * Get width
+   * Get appId
    *
-   * @return width
+   * @return appId
    */
   @ApiModelProperty(value = "")
-  public Long getWidth() {
-    return width;
+  public String getAppId() {
+    return appId;
   }
 
-  public void setWidth(Long width) {
-    this.width = width;
-  }
-
-  public CropSmartSpec height(Long height) {
-    this.height = height;
-    return this;
-  }
-
-  /**
-   * Get height
-   *
-   * @return height
-   */
-  @ApiModelProperty(value = "")
-  public Long getHeight() {
-    return height;
-  }
-
-  public void setHeight(Long height) {
-    this.height = height;
+  public void setAppId(String appId) {
+    this.appId = appId;
   }
 
   @Override
@@ -73,14 +51,14 @@ public class CropSmartSpec {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    CropSmartSpec cropSmartSpec = (CropSmartSpec) o;
-    return Objects.equals(this.width, cropSmartSpec.width)
-        && Objects.equals(this.height, cropSmartSpec.height);
+    LandingPageWechatOfficialAccountSpec landingPageWechatOfficialAccountSpec =
+        (LandingPageWechatOfficialAccountSpec) o;
+    return Objects.equals(this.appId, landingPageWechatOfficialAccountSpec.appId);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(width, height);
+    return Objects.hash(appId);
   }
 
   @Override

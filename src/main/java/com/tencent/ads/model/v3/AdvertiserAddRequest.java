@@ -19,6 +19,9 @@ import java.util.Objects;
 
 /** AdvertiserAddRequest */
 public class AdvertiserAddRequest {
+  @SerializedName("registration_type")
+  private CustomerRegistrationType registrationType = null;
+
   @SerializedName("corporation_name")
   private String corporationName = null;
 
@@ -48,6 +51,25 @@ public class AdvertiserAddRequest {
 
   @SerializedName("contact_person_mobile")
   private String contactPersonMobile = null;
+
+  public AdvertiserAddRequest registrationType(CustomerRegistrationType registrationType) {
+    this.registrationType = registrationType;
+    return this;
+  }
+
+  /**
+   * Get registrationType
+   *
+   * @return registrationType
+   */
+  @ApiModelProperty(value = "")
+  public CustomerRegistrationType getRegistrationType() {
+    return registrationType;
+  }
+
+  public void setRegistrationType(CustomerRegistrationType registrationType) {
+    this.registrationType = registrationType;
+  }
 
   public AdvertiserAddRequest corporationName(String corporationName) {
     this.corporationName = corporationName;
@@ -249,7 +271,8 @@ public class AdvertiserAddRequest {
       return false;
     }
     AdvertiserAddRequest advertiserAddRequest = (AdvertiserAddRequest) o;
-    return Objects.equals(this.corporationName, advertiserAddRequest.corporationName)
+    return Objects.equals(this.registrationType, advertiserAddRequest.registrationType)
+        && Objects.equals(this.corporationName, advertiserAddRequest.corporationName)
         && Objects.equals(this.corporationLicence, advertiserAddRequest.corporationLicence)
         && Objects.equals(this.certificationImageId, advertiserAddRequest.certificationImageId)
         && Objects.equals(
@@ -265,6 +288,7 @@ public class AdvertiserAddRequest {
   @Override
   public int hashCode() {
     return Objects.hash(
+        registrationType,
         corporationName,
         corporationLicence,
         certificationImageId,

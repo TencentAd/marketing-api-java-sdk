@@ -64,7 +64,7 @@ public class ReviewAdAppealApi {
       ReviewAdAppealAddRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     Object localVarPostBody = data;
@@ -88,11 +88,8 @@ public class ReviewAdAppealApi {
     localVarHeaderParams.put("Content-Type", localVarContentType);
 
     if (headerPair != null && headerPair.length > 0) {
-      if (headerPair.length % 2 != 0) {
-        throw new UnsupportedOperationException("Parameter headerPair must be paired");
-      }
-      for (int i = 0; i < headerPair.length / 2; i++) {
-        localVarHeaderParams.put(headerPair[i], headerPair[i * 2 + 1]);
+      for (int i = 0; i < headerPair.length; i++) {
+        localVarHeaderParams.put(headerPair[i].getName(), headerPair[i].getValue());
       }
     }
 
@@ -132,7 +129,7 @@ public class ReviewAdAppealApi {
       ReviewAdAppealAddRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     // verify the required parameter 'data' is set
@@ -155,7 +152,7 @@ public class ReviewAdAppealApi {
    *     response body
    */
   public ReviewAdAppealAddResponse reviewAdAppealAdd(
-      ReviewAdAppealAddRequest data, String... headerPair) throws ApiException {
+      ReviewAdAppealAddRequest data, Pair... headerPair) throws ApiException {
     ApiResponse<ReviewAdAppealAddResponse> resp = reviewAdAppealAddWithHttpInfo(data, headerPair);
     return resp.getData();
   }
@@ -169,7 +166,7 @@ public class ReviewAdAppealApi {
    *     response body
    */
   public ApiResponse<ReviewAdAppealAddResponse> reviewAdAppealAddWithHttpInfo(
-      ReviewAdAppealAddRequest data, String... headerPair) throws ApiException {
+      ReviewAdAppealAddRequest data, Pair... headerPair) throws ApiException {
     com.squareup.okhttp.Call call =
         reviewAdAppealAddValidateBeforeCall(data, null, null, headerPair);
     Type localVarReturnType = new TypeToken<ReviewAdAppealAddResponse>() {}.getType();
@@ -187,7 +184,7 @@ public class ReviewAdAppealApi {
   public com.squareup.okhttp.Call reviewAdAppealAddAsync(
       ReviewAdAppealAddRequest data,
       final ApiCallback<ReviewAdAppealAddResponse> callback,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     ProgressResponseBody.ProgressListener progressListener = null;
@@ -231,7 +228,7 @@ public class ReviewAdAppealApi {
       ReviewAdAppealGetRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     Object localVarPostBody = data;
@@ -255,11 +252,8 @@ public class ReviewAdAppealApi {
     localVarHeaderParams.put("Content-Type", localVarContentType);
 
     if (headerPair != null && headerPair.length > 0) {
-      if (headerPair.length % 2 != 0) {
-        throw new UnsupportedOperationException("Parameter headerPair must be paired");
-      }
-      for (int i = 0; i < headerPair.length / 2; i++) {
-        localVarHeaderParams.put(headerPair[i], headerPair[i * 2 + 1]);
+      for (int i = 0; i < headerPair.length; i++) {
+        localVarHeaderParams.put(headerPair[i].getName(), headerPair[i].getValue());
       }
     }
 
@@ -299,7 +293,7 @@ public class ReviewAdAppealApi {
       ReviewAdAppealGetRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     // verify the required parameter 'data' is set
@@ -322,7 +316,7 @@ public class ReviewAdAppealApi {
    *     response body
    */
   public ReviewAdAppealGetResponse reviewAdAppealGet(
-      ReviewAdAppealGetRequest data, String... headerPair) throws ApiException {
+      ReviewAdAppealGetRequest data, Pair... headerPair) throws ApiException {
     ApiResponse<ReviewAdAppealGetResponse> resp = reviewAdAppealGetWithHttpInfo(data, headerPair);
     return resp.getData();
   }
@@ -336,7 +330,7 @@ public class ReviewAdAppealApi {
    *     response body
    */
   public ApiResponse<ReviewAdAppealGetResponse> reviewAdAppealGetWithHttpInfo(
-      ReviewAdAppealGetRequest data, String... headerPair) throws ApiException {
+      ReviewAdAppealGetRequest data, Pair... headerPair) throws ApiException {
     com.squareup.okhttp.Call call =
         reviewAdAppealGetValidateBeforeCall(data, null, null, headerPair);
     Type localVarReturnType = new TypeToken<ReviewAdAppealGetResponse>() {}.getType();
@@ -354,7 +348,7 @@ public class ReviewAdAppealApi {
   public com.squareup.okhttp.Call reviewAdAppealGetAsync(
       ReviewAdAppealGetRequest data,
       final ApiCallback<ReviewAdAppealGetResponse> callback,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     ProgressResponseBody.ProgressListener progressListener = null;

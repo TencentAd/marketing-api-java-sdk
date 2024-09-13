@@ -15,6 +15,7 @@ package com.tencent.ads.container;
 import com.google.inject.Inject;
 import com.tencent.ads.ApiContainer;
 import com.tencent.ads.ApiException;
+import com.tencent.ads.Pair;
 import com.tencent.ads.anno.*;
 import com.tencent.ads.api.UserPropertySetsApi;
 import com.tencent.ads.exception.TencentAdsResponseException;
@@ -40,7 +41,7 @@ public class UserPropertySetsApiContainer extends ApiContainer {
    *     response body
    */
   public UserPropertySetsAddResponseData userPropertySetsAdd(
-      UserPropertySetsAddRequest data, String... headerPair)
+      UserPropertySetsAddRequest data, Pair... headerPair)
       throws ApiException, TencentAdsResponseException {
     UserPropertySetsAddResponse resp = api.userPropertySetsAdd(data, headerPair);
     handleResponse(gson.toJson(resp));
@@ -58,7 +59,7 @@ public class UserPropertySetsApiContainer extends ApiContainer {
    *     response body
    */
   public UserPropertySetsGetResponseData userPropertySetsGet(
-      Long accountId, Long userPropertySetId, List<String> fields, String... headerPair)
+      Long accountId, Long userPropertySetId, List<String> fields, Pair... headerPair)
       throws ApiException, TencentAdsResponseException {
     UserPropertySetsGetResponse resp =
         api.userPropertySetsGet(accountId, userPropertySetId, fields, headerPair);
@@ -75,7 +76,7 @@ public class UserPropertySetsApiContainer extends ApiContainer {
    *     response body
    */
   public UserPropertySetsUpdateResponse userPropertySetsUpdate(
-      UserPropertySetsUpdateRequest data, String... headerPair)
+      UserPropertySetsUpdateRequest data, Pair... headerPair)
       throws ApiException, TencentAdsResponseException {
     UserPropertySetsUpdateResponse resp = api.userPropertySetsUpdate(data, headerPair);
     handleResponse(gson.toJson(resp));

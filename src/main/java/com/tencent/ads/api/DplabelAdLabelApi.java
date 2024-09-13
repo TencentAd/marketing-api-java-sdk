@@ -63,7 +63,7 @@ public class DplabelAdLabelApi {
       List<String> fields,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     Object localVarPostBody = null;
@@ -91,11 +91,8 @@ public class DplabelAdLabelApi {
     localVarHeaderParams.put("Content-Type", localVarContentType);
 
     if (headerPair != null && headerPair.length > 0) {
-      if (headerPair.length % 2 != 0) {
-        throw new UnsupportedOperationException("Parameter headerPair must be paired");
-      }
-      for (int i = 0; i < headerPair.length / 2; i++) {
-        localVarHeaderParams.put(headerPair[i], headerPair[i * 2 + 1]);
+      for (int i = 0; i < headerPair.length; i++) {
+        localVarHeaderParams.put(headerPair[i].getName(), headerPair[i].getValue());
       }
     }
 
@@ -136,7 +133,7 @@ public class DplabelAdLabelApi {
       List<String> fields,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     // verify the required parameter 'accountId' is set
@@ -161,7 +158,7 @@ public class DplabelAdLabelApi {
    *     response body
    */
   public DplabelAdLabelGetResponse dplabelAdLabelGet(
-      Long accountId, List<String> fields, String... headerPair) throws ApiException {
+      Long accountId, List<String> fields, Pair... headerPair) throws ApiException {
     ApiResponse<DplabelAdLabelGetResponse> resp =
         dplabelAdLabelGetWithHttpInfo(accountId, fields, headerPair);
     return resp.getData();
@@ -177,7 +174,7 @@ public class DplabelAdLabelApi {
    *     response body
    */
   public ApiResponse<DplabelAdLabelGetResponse> dplabelAdLabelGetWithHttpInfo(
-      Long accountId, List<String> fields, String... headerPair) throws ApiException {
+      Long accountId, List<String> fields, Pair... headerPair) throws ApiException {
     com.squareup.okhttp.Call call =
         dplabelAdLabelGetValidateBeforeCall(accountId, fields, null, null, headerPair);
     Type localVarReturnType = new TypeToken<DplabelAdLabelGetResponse>() {}.getType();
@@ -197,7 +194,7 @@ public class DplabelAdLabelApi {
       Long accountId,
       List<String> fields,
       final ApiCallback<DplabelAdLabelGetResponse> callback,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     ProgressResponseBody.ProgressListener progressListener = null;

@@ -15,6 +15,7 @@ package com.tencent.ads.container.v3;
 import com.google.inject.Inject;
 import com.tencent.ads.ApiContainer;
 import com.tencent.ads.ApiException;
+import com.tencent.ads.Pair;
 import com.tencent.ads.anno.*;
 import com.tencent.ads.api.v3.TargetingsApi;
 import com.tencent.ads.exception.TencentAdsResponseException;
@@ -34,7 +35,7 @@ public class TargetingsApiContainer extends ApiContainer {
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
-  public TargetingsGetResponseData targetingsGet(TargetingsGetRequest data, String... headerPair)
+  public TargetingsGetResponseData targetingsGet(TargetingsGetRequest data, Pair... headerPair)
       throws ApiException, TencentAdsResponseException {
     TargetingsGetResponse resp = api.targetingsGet(data, headerPair);
     handleResponse(gson.toJson(resp));

@@ -78,7 +78,7 @@ public class AdUnionReportsApi {
       Long pageSize,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     Object localVarPostBody = null;
@@ -119,11 +119,8 @@ public class AdUnionReportsApi {
     localVarHeaderParams.put("Content-Type", localVarContentType);
 
     if (headerPair != null && headerPair.length > 0) {
-      if (headerPair.length % 2 != 0) {
-        throw new UnsupportedOperationException("Parameter headerPair must be paired");
-      }
-      for (int i = 0; i < headerPair.length / 2; i++) {
-        localVarHeaderParams.put(headerPair[i], headerPair[i * 2 + 1]);
+      for (int i = 0; i < headerPair.length; i++) {
+        localVarHeaderParams.put(headerPair[i].getName(), headerPair[i].getValue());
       }
     }
 
@@ -170,7 +167,7 @@ public class AdUnionReportsApi {
       Long pageSize,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     // verify the required parameter 'accountId' is set
@@ -231,7 +228,7 @@ public class AdUnionReportsApi {
       List<OrderByStruct> orderBy,
       Long page,
       Long pageSize,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
     ApiResponse<AdUnionReportsGetResponse> resp =
         adUnionReportsGetWithHttpInfo(
@@ -263,7 +260,7 @@ public class AdUnionReportsApi {
       List<OrderByStruct> orderBy,
       Long page,
       Long pageSize,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
     com.squareup.okhttp.Call call =
         adUnionReportsGetValidateBeforeCall(
@@ -307,7 +304,7 @@ public class AdUnionReportsApi {
       Long page,
       Long pageSize,
       final ApiCallback<AdUnionReportsGetResponse> callback,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     ProgressResponseBody.ProgressListener progressListener = null;

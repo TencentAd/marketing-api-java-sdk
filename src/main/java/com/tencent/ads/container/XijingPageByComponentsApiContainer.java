@@ -15,6 +15,7 @@ package com.tencent.ads.container;
 import com.google.inject.Inject;
 import com.tencent.ads.ApiContainer;
 import com.tencent.ads.ApiException;
+import com.tencent.ads.Pair;
 import com.tencent.ads.anno.*;
 import com.tencent.ads.api.XijingPageByComponentsApi;
 import com.tencent.ads.exception.TencentAdsResponseException;
@@ -34,7 +35,7 @@ public class XijingPageByComponentsApiContainer extends ApiContainer {
    *     response body
    */
   public XijingPageByComponentsAddResponse xijingPageByComponentsAdd(
-      XijingPageByComponentsAddRequest data, String... headerPair)
+      XijingPageByComponentsAddRequest data, Pair... headerPair)
       throws ApiException, TencentAdsResponseException {
     XijingPageByComponentsAddResponse resp = api.xijingPageByComponentsAdd(data, headerPair);
     handleResponse(gson.toJson(resp));

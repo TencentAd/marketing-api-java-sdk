@@ -42,6 +42,9 @@ public class ComponentsGetListStruct {
   @SerializedName("component_custom_name")
   private String componentCustomName = null;
 
+  @SerializedName("generation_type")
+  private ComponentGenerationType generationType = null;
+
   @SerializedName("is_deleted")
   private Boolean isDeleted = null;
 
@@ -178,6 +181,25 @@ public class ComponentsGetListStruct {
     this.componentCustomName = componentCustomName;
   }
 
+  public ComponentsGetListStruct generationType(ComponentGenerationType generationType) {
+    this.generationType = generationType;
+    return this;
+  }
+
+  /**
+   * Get generationType
+   *
+   * @return generationType
+   */
+  @ApiModelProperty(value = "")
+  public ComponentGenerationType getGenerationType() {
+    return generationType;
+  }
+
+  public void setGenerationType(ComponentGenerationType generationType) {
+    this.generationType = generationType;
+  }
+
   public ComponentsGetListStruct isDeleted(Boolean isDeleted) {
     this.isDeleted = isDeleted;
     return this;
@@ -213,6 +235,7 @@ public class ComponentsGetListStruct {
         && Objects.equals(this.lastModifiedTime, componentsGetListStruct.lastModifiedTime)
         && Objects.equals(this.componentSubType, componentsGetListStruct.componentSubType)
         && Objects.equals(this.componentCustomName, componentsGetListStruct.componentCustomName)
+        && Objects.equals(this.generationType, componentsGetListStruct.generationType)
         && Objects.equals(this.isDeleted, componentsGetListStruct.isDeleted);
   }
 
@@ -226,6 +249,7 @@ public class ComponentsGetListStruct {
         lastModifiedTime,
         componentSubType,
         componentCustomName,
+        generationType,
         isDeleted);
   }
 

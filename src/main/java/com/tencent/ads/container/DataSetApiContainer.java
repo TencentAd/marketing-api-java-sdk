@@ -15,6 +15,7 @@ package com.tencent.ads.container;
 import com.google.inject.Inject;
 import com.tencent.ads.ApiContainer;
 import com.tencent.ads.ApiException;
+import com.tencent.ads.Pair;
 import com.tencent.ads.anno.*;
 import com.tencent.ads.api.DataSetApi;
 import com.tencent.ads.exception.TencentAdsResponseException;
@@ -37,7 +38,7 @@ public class DataSetApiContainer extends ApiContainer {
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
-  public DataSetAddResponseData dataSetAdd(DataSetAddRequest data, String... headerPair)
+  public DataSetAddResponseData dataSetAdd(DataSetAddRequest data, Pair... headerPair)
       throws ApiException, TencentAdsResponseException {
     DataSetAddResponse resp = api.dataSetAdd(data, headerPair);
     handleResponse(gson.toJson(resp));
@@ -62,7 +63,7 @@ public class DataSetApiContainer extends ApiContainer {
       Long dataSetId,
       Long envType,
       List<String> fields,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException, TencentAdsResponseException {
     DataSetGetResponse resp =
         api.dataSetGet(accountId, userActionSetId, dataSetId, envType, fields, headerPair);

@@ -27,6 +27,9 @@ public class AdgroupsGetResponseData {
   @SerializedName("page_info")
   private Conf pageInfo = null;
 
+  @SerializedName("cursor_page_info")
+  private CursorPageInfoStruct cursorPageInfo = null;
+
   public AdgroupsGetResponseData list(List<AdgroupsGetListStruct> list) {
     this.list = list;
     return this;
@@ -73,6 +76,25 @@ public class AdgroupsGetResponseData {
     this.pageInfo = pageInfo;
   }
 
+  public AdgroupsGetResponseData cursorPageInfo(CursorPageInfoStruct cursorPageInfo) {
+    this.cursorPageInfo = cursorPageInfo;
+    return this;
+  }
+
+  /**
+   * Get cursorPageInfo
+   *
+   * @return cursorPageInfo
+   */
+  @ApiModelProperty(value = "")
+  public CursorPageInfoStruct getCursorPageInfo() {
+    return cursorPageInfo;
+  }
+
+  public void setCursorPageInfo(CursorPageInfoStruct cursorPageInfo) {
+    this.cursorPageInfo = cursorPageInfo;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -83,12 +105,13 @@ public class AdgroupsGetResponseData {
     }
     AdgroupsGetResponseData adgroupsGetResponseData = (AdgroupsGetResponseData) o;
     return Objects.equals(this.list, adgroupsGetResponseData.list)
-        && Objects.equals(this.pageInfo, adgroupsGetResponseData.pageInfo);
+        && Objects.equals(this.pageInfo, adgroupsGetResponseData.pageInfo)
+        && Objects.equals(this.cursorPageInfo, adgroupsGetResponseData.cursorPageInfo);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(list, pageInfo);
+    return Objects.hash(list, pageInfo, cursorPageInfo);
   }
 
   @Override

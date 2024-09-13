@@ -62,7 +62,7 @@ public class WechatPagesCustomApi {
       WechatPagesCustomAddRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     Object localVarPostBody = data;
@@ -86,11 +86,8 @@ public class WechatPagesCustomApi {
     localVarHeaderParams.put("Content-Type", localVarContentType);
 
     if (headerPair != null && headerPair.length > 0) {
-      if (headerPair.length % 2 != 0) {
-        throw new UnsupportedOperationException("Parameter headerPair must be paired");
-      }
-      for (int i = 0; i < headerPair.length / 2; i++) {
-        localVarHeaderParams.put(headerPair[i], headerPair[i * 2 + 1]);
+      for (int i = 0; i < headerPair.length; i++) {
+        localVarHeaderParams.put(headerPair[i].getName(), headerPair[i].getValue());
       }
     }
 
@@ -130,7 +127,7 @@ public class WechatPagesCustomApi {
       WechatPagesCustomAddRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     // verify the required parameter 'data' is set
@@ -153,7 +150,7 @@ public class WechatPagesCustomApi {
    *     response body
    */
   public WechatPagesCustomAddResponse wechatPagesCustomAdd(
-      WechatPagesCustomAddRequest data, String... headerPair) throws ApiException {
+      WechatPagesCustomAddRequest data, Pair... headerPair) throws ApiException {
     ApiResponse<WechatPagesCustomAddResponse> resp =
         wechatPagesCustomAddWithHttpInfo(data, headerPair);
     return resp.getData();
@@ -168,7 +165,7 @@ public class WechatPagesCustomApi {
    *     response body
    */
   public ApiResponse<WechatPagesCustomAddResponse> wechatPagesCustomAddWithHttpInfo(
-      WechatPagesCustomAddRequest data, String... headerPair) throws ApiException {
+      WechatPagesCustomAddRequest data, Pair... headerPair) throws ApiException {
     com.squareup.okhttp.Call call =
         wechatPagesCustomAddValidateBeforeCall(data, null, null, headerPair);
     Type localVarReturnType = new TypeToken<WechatPagesCustomAddResponse>() {}.getType();
@@ -186,7 +183,7 @@ public class WechatPagesCustomApi {
   public com.squareup.okhttp.Call wechatPagesCustomAddAsync(
       WechatPagesCustomAddRequest data,
       final ApiCallback<WechatPagesCustomAddResponse> callback,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     ProgressResponseBody.ProgressListener progressListener = null;

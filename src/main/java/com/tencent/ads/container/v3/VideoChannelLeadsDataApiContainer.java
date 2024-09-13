@@ -15,6 +15,7 @@ package com.tencent.ads.container.v3;
 import com.google.inject.Inject;
 import com.tencent.ads.ApiContainer;
 import com.tencent.ads.ApiException;
+import com.tencent.ads.Pair;
 import com.tencent.ads.anno.*;
 import com.tencent.ads.api.v3.VideoChannelLeadsDataApi;
 import com.tencent.ads.exception.TencentAdsResponseException;
@@ -35,7 +36,7 @@ public class VideoChannelLeadsDataApiContainer extends ApiContainer {
    *     response body
    */
   public VideoChannelLeadsDataGetResponseData videoChannelLeadsDataGet(
-      VideoChannelLeadsDataGetRequest data, String... headerPair)
+      VideoChannelLeadsDataGetRequest data, Pair... headerPair)
       throws ApiException, TencentAdsResponseException {
     VideoChannelLeadsDataGetResponse resp = api.videoChannelLeadsDataGet(data, headerPair);
     handleResponse(gson.toJson(resp));

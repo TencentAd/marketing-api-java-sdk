@@ -63,7 +63,7 @@ public class TargetingsShareApi {
       TargetingsShareAddRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     Object localVarPostBody = data;
@@ -87,11 +87,8 @@ public class TargetingsShareApi {
     localVarHeaderParams.put("Content-Type", localVarContentType);
 
     if (headerPair != null && headerPair.length > 0) {
-      if (headerPair.length % 2 != 0) {
-        throw new UnsupportedOperationException("Parameter headerPair must be paired");
-      }
-      for (int i = 0; i < headerPair.length / 2; i++) {
-        localVarHeaderParams.put(headerPair[i], headerPair[i * 2 + 1]);
+      for (int i = 0; i < headerPair.length; i++) {
+        localVarHeaderParams.put(headerPair[i].getName(), headerPair[i].getValue());
       }
     }
 
@@ -131,7 +128,7 @@ public class TargetingsShareApi {
       TargetingsShareAddRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     // verify the required parameter 'data' is set
@@ -154,7 +151,7 @@ public class TargetingsShareApi {
    *     response body
    */
   public TargetingsShareAddResponse targetingsShareAdd(
-      TargetingsShareAddRequest data, String... headerPair) throws ApiException {
+      TargetingsShareAddRequest data, Pair... headerPair) throws ApiException {
     ApiResponse<TargetingsShareAddResponse> resp = targetingsShareAddWithHttpInfo(data, headerPair);
     return resp.getData();
   }
@@ -168,7 +165,7 @@ public class TargetingsShareApi {
    *     response body
    */
   public ApiResponse<TargetingsShareAddResponse> targetingsShareAddWithHttpInfo(
-      TargetingsShareAddRequest data, String... headerPair) throws ApiException {
+      TargetingsShareAddRequest data, Pair... headerPair) throws ApiException {
     com.squareup.okhttp.Call call =
         targetingsShareAddValidateBeforeCall(data, null, null, headerPair);
     Type localVarReturnType = new TypeToken<TargetingsShareAddResponse>() {}.getType();
@@ -186,7 +183,7 @@ public class TargetingsShareApi {
   public com.squareup.okhttp.Call targetingsShareAddAsync(
       TargetingsShareAddRequest data,
       final ApiCallback<TargetingsShareAddResponse> callback,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     ProgressResponseBody.ProgressListener progressListener = null;
@@ -238,7 +235,7 @@ public class TargetingsShareApi {
       List<String> fields,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     Object localVarPostBody = null;
@@ -271,11 +268,8 @@ public class TargetingsShareApi {
     localVarHeaderParams.put("Content-Type", localVarContentType);
 
     if (headerPair != null && headerPair.length > 0) {
-      if (headerPair.length % 2 != 0) {
-        throw new UnsupportedOperationException("Parameter headerPair must be paired");
-      }
-      for (int i = 0; i < headerPair.length / 2; i++) {
-        localVarHeaderParams.put(headerPair[i], headerPair[i * 2 + 1]);
+      for (int i = 0; i < headerPair.length; i++) {
+        localVarHeaderParams.put(headerPair[i].getName(), headerPair[i].getValue());
       }
     }
 
@@ -319,7 +313,7 @@ public class TargetingsShareApi {
       List<String> fields,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     // verify the required parameter 'accountId' is set
@@ -365,7 +359,7 @@ public class TargetingsShareApi {
       Long page,
       Long pageSize,
       List<String> fields,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
     ApiResponse<TargetingsShareGetResponse> resp =
         targetingsShareGetWithHttpInfo(accountId, targetingId, page, pageSize, fields, headerPair);
@@ -390,7 +384,7 @@ public class TargetingsShareApi {
       Long page,
       Long pageSize,
       List<String> fields,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
     com.squareup.okhttp.Call call =
         targetingsShareGetValidateBeforeCall(
@@ -418,7 +412,7 @@ public class TargetingsShareApi {
       Long pageSize,
       List<String> fields,
       final ApiCallback<TargetingsShareGetResponse> callback,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     ProgressResponseBody.ProgressListener progressListener = null;

@@ -64,7 +64,7 @@ public class AsyncReportsApi {
       AsyncReportsAddRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     Object localVarPostBody = data;
@@ -88,11 +88,8 @@ public class AsyncReportsApi {
     localVarHeaderParams.put("Content-Type", localVarContentType);
 
     if (headerPair != null && headerPair.length > 0) {
-      if (headerPair.length % 2 != 0) {
-        throw new UnsupportedOperationException("Parameter headerPair must be paired");
-      }
-      for (int i = 0; i < headerPair.length / 2; i++) {
-        localVarHeaderParams.put(headerPair[i], headerPair[i * 2 + 1]);
+      for (int i = 0; i < headerPair.length; i++) {
+        localVarHeaderParams.put(headerPair[i].getName(), headerPair[i].getValue());
       }
     }
 
@@ -132,7 +129,7 @@ public class AsyncReportsApi {
       AsyncReportsAddRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     // verify the required parameter 'data' is set
@@ -154,7 +151,7 @@ public class AsyncReportsApi {
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
-  public AsyncReportsAddResponse asyncReportsAdd(AsyncReportsAddRequest data, String... headerPair)
+  public AsyncReportsAddResponse asyncReportsAdd(AsyncReportsAddRequest data, Pair... headerPair)
       throws ApiException {
     ApiResponse<AsyncReportsAddResponse> resp = asyncReportsAddWithHttpInfo(data, headerPair);
     return resp.getData();
@@ -169,7 +166,7 @@ public class AsyncReportsApi {
    *     response body
    */
   public ApiResponse<AsyncReportsAddResponse> asyncReportsAddWithHttpInfo(
-      AsyncReportsAddRequest data, String... headerPair) throws ApiException {
+      AsyncReportsAddRequest data, Pair... headerPair) throws ApiException {
     com.squareup.okhttp.Call call = asyncReportsAddValidateBeforeCall(data, null, null, headerPair);
     Type localVarReturnType = new TypeToken<AsyncReportsAddResponse>() {}.getType();
     return apiClient.execute(call, localVarReturnType);
@@ -186,7 +183,7 @@ public class AsyncReportsApi {
   public com.squareup.okhttp.Call asyncReportsAddAsync(
       AsyncReportsAddRequest data,
       final ApiCallback<AsyncReportsAddResponse> callback,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     ProgressResponseBody.ProgressListener progressListener = null;
@@ -238,7 +235,7 @@ public class AsyncReportsApi {
       List<String> fields,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     Object localVarPostBody = null;
@@ -272,11 +269,8 @@ public class AsyncReportsApi {
     localVarHeaderParams.put("Content-Type", localVarContentType);
 
     if (headerPair != null && headerPair.length > 0) {
-      if (headerPair.length % 2 != 0) {
-        throw new UnsupportedOperationException("Parameter headerPair must be paired");
-      }
-      for (int i = 0; i < headerPair.length / 2; i++) {
-        localVarHeaderParams.put(headerPair[i], headerPair[i * 2 + 1]);
+      for (int i = 0; i < headerPair.length; i++) {
+        localVarHeaderParams.put(headerPair[i].getName(), headerPair[i].getValue());
       }
     }
 
@@ -320,7 +314,7 @@ public class AsyncReportsApi {
       List<String> fields,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     // verify the required parameter 'accountId' is set
@@ -360,7 +354,7 @@ public class AsyncReportsApi {
       Long page,
       Long pageSize,
       List<String> fields,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
     ApiResponse<AsyncReportsGetResponse> resp =
         asyncReportsGetWithHttpInfo(accountId, filtering, page, pageSize, fields, headerPair);
@@ -385,7 +379,7 @@ public class AsyncReportsApi {
       Long page,
       Long pageSize,
       List<String> fields,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
     com.squareup.okhttp.Call call =
         asyncReportsGetValidateBeforeCall(
@@ -413,7 +407,7 @@ public class AsyncReportsApi {
       Long pageSize,
       List<String> fields,
       final ApiCallback<AsyncReportsGetResponse> callback,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     ProgressResponseBody.ProgressListener progressListener = null;

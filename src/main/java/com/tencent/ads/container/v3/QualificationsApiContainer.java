@@ -15,6 +15,7 @@ package com.tencent.ads.container.v3;
 import com.google.inject.Inject;
 import com.tencent.ads.ApiContainer;
 import com.tencent.ads.ApiException;
+import com.tencent.ads.Pair;
 import com.tencent.ads.anno.*;
 import com.tencent.ads.api.v3.QualificationsApi;
 import com.tencent.ads.exception.TencentAdsResponseException;
@@ -45,7 +46,7 @@ public class QualificationsApiContainer extends ApiContainer {
    *     response body
    */
   public QualificationsAddResponseData qualificationsAdd(
-      QualificationsAddRequest data, String... headerPair)
+      QualificationsAddRequest data, Pair... headerPair)
       throws ApiException, TencentAdsResponseException {
     QualificationsAddResponse resp = api.qualificationsAdd(data, headerPair);
     handleResponse(gson.toJson(resp));
@@ -61,7 +62,7 @@ public class QualificationsApiContainer extends ApiContainer {
    *     response body
    */
   public QualificationsDeleteResponseData qualificationsDelete(
-      QualificationsDeleteRequest data, String... headerPair)
+      QualificationsDeleteRequest data, Pair... headerPair)
       throws ApiException, TencentAdsResponseException {
     QualificationsDeleteResponse resp = api.qualificationsDelete(data, headerPair);
     handleResponse(gson.toJson(resp));
@@ -84,7 +85,7 @@ public class QualificationsApiContainer extends ApiContainer {
       String qualificationType,
       List<FilteringStruct> filtering,
       List<String> fields,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException, TencentAdsResponseException {
     QualificationsGetResponse resp =
         api.qualificationsGet(accountId, qualificationType, filtering, fields, headerPair);
@@ -101,7 +102,7 @@ public class QualificationsApiContainer extends ApiContainer {
    *     response body
    */
   public QualificationsUpdateResponseData qualificationsUpdate(
-      QualificationsUpdateRequest data, String... headerPair)
+      QualificationsUpdateRequest data, Pair... headerPair)
       throws ApiException, TencentAdsResponseException {
     QualificationsUpdateResponse resp = api.qualificationsUpdate(data, headerPair);
     handleResponse(gson.toJson(resp));

@@ -111,7 +111,9 @@ public enum DestinationTypeRead {
 
   TSA_OTT("PAGE_TYPE_TSA_OTT"),
 
-  NOT_USED("PAGE_TYPE_NOT_USED");
+  NOT_USED("PAGE_TYPE_NOT_USED"),
+
+  WECHAT_QUERY_PAGE("PAGE_TYPE_WECHAT_QUERY_PAGE");
 
   private String value;
 

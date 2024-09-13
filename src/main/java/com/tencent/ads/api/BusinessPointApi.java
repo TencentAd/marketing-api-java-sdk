@@ -62,7 +62,7 @@ public class BusinessPointApi {
       BusinessPointGetRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     Object localVarPostBody = data;
@@ -86,11 +86,8 @@ public class BusinessPointApi {
     localVarHeaderParams.put("Content-Type", localVarContentType);
 
     if (headerPair != null && headerPair.length > 0) {
-      if (headerPair.length % 2 != 0) {
-        throw new UnsupportedOperationException("Parameter headerPair must be paired");
-      }
-      for (int i = 0; i < headerPair.length / 2; i++) {
-        localVarHeaderParams.put(headerPair[i], headerPair[i * 2 + 1]);
+      for (int i = 0; i < headerPair.length; i++) {
+        localVarHeaderParams.put(headerPair[i].getName(), headerPair[i].getValue());
       }
     }
 
@@ -130,7 +127,7 @@ public class BusinessPointApi {
       BusinessPointGetRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     // verify the required parameter 'data' is set
@@ -152,8 +149,8 @@ public class BusinessPointApi {
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
-  public BusinessPointGetResponse businessPointGet(
-      BusinessPointGetRequest data, String... headerPair) throws ApiException {
+  public BusinessPointGetResponse businessPointGet(BusinessPointGetRequest data, Pair... headerPair)
+      throws ApiException {
     ApiResponse<BusinessPointGetResponse> resp = businessPointGetWithHttpInfo(data, headerPair);
     return resp.getData();
   }
@@ -167,7 +164,7 @@ public class BusinessPointApi {
    *     response body
    */
   public ApiResponse<BusinessPointGetResponse> businessPointGetWithHttpInfo(
-      BusinessPointGetRequest data, String... headerPair) throws ApiException {
+      BusinessPointGetRequest data, Pair... headerPair) throws ApiException {
     com.squareup.okhttp.Call call =
         businessPointGetValidateBeforeCall(data, null, null, headerPair);
     Type localVarReturnType = new TypeToken<BusinessPointGetResponse>() {}.getType();
@@ -185,7 +182,7 @@ public class BusinessPointApi {
   public com.squareup.okhttp.Call businessPointGetAsync(
       BusinessPointGetRequest data,
       final ApiCallback<BusinessPointGetResponse> callback,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     ProgressResponseBody.ProgressListener progressListener = null;

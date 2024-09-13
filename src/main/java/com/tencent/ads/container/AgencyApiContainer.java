@@ -15,6 +15,7 @@ package com.tencent.ads.container;
 import com.google.inject.Inject;
 import com.tencent.ads.ApiContainer;
 import com.tencent.ads.ApiException;
+import com.tencent.ads.Pair;
 import com.tencent.ads.anno.*;
 import com.tencent.ads.api.AgencyApi;
 import com.tencent.ads.exception.TencentAdsResponseException;
@@ -38,7 +39,7 @@ public class AgencyApiContainer extends ApiContainer {
    *     response body
    */
   public AgencyGetResponseData agencyGet(
-      List<String> fields, Long page, Long pageSize, Long accountId, String... headerPair)
+      List<String> fields, Long page, Long pageSize, Long accountId, Pair... headerPair)
       throws ApiException, TencentAdsResponseException {
     AgencyGetResponse resp = api.agencyGet(fields, page, pageSize, accountId, headerPair);
     handleResponse(gson.toJson(resp));

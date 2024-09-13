@@ -15,6 +15,7 @@ package com.tencent.ads.container;
 import com.google.inject.Inject;
 import com.tencent.ads.ApiContainer;
 import com.tencent.ads.ApiException;
+import com.tencent.ads.Pair;
 import com.tencent.ads.anno.*;
 import com.tencent.ads.api.AdgroupNegativewordsApi;
 import com.tencent.ads.exception.TencentAdsResponseException;
@@ -41,7 +42,7 @@ public class AdgroupNegativewordsApiContainer extends ApiContainer {
    *     response body
    */
   public AdgroupNegativewordsAddResponseData adgroupNegativewordsAdd(
-      AdgroupNegativewordsAddRequest data, String... headerPair)
+      AdgroupNegativewordsAddRequest data, Pair... headerPair)
       throws ApiException, TencentAdsResponseException {
     AdgroupNegativewordsAddResponse resp = api.adgroupNegativewordsAdd(data, headerPair);
     handleResponse(gson.toJson(resp));
@@ -57,7 +58,7 @@ public class AdgroupNegativewordsApiContainer extends ApiContainer {
    *     response body
    */
   public AdgroupNegativewordsGetResponseData adgroupNegativewordsGet(
-      AdgroupNegativewordsGetRequest data, String... headerPair)
+      AdgroupNegativewordsGetRequest data, Pair... headerPair)
       throws ApiException, TencentAdsResponseException {
     AdgroupNegativewordsGetResponse resp = api.adgroupNegativewordsGet(data, headerPair);
     handleResponse(gson.toJson(resp));
@@ -73,7 +74,7 @@ public class AdgroupNegativewordsApiContainer extends ApiContainer {
    *     response body
    */
   public AdgroupNegativewordsUpdateResponseData adgroupNegativewordsUpdate(
-      AdgroupNegativewordsUpdateRequest data, String... headerPair)
+      AdgroupNegativewordsUpdateRequest data, Pair... headerPair)
       throws ApiException, TencentAdsResponseException {
     AdgroupNegativewordsUpdateResponse resp = api.adgroupNegativewordsUpdate(data, headerPair);
     handleResponse(gson.toJson(resp));

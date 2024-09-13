@@ -62,7 +62,7 @@ public class AdcreativeTemplatePreviewApi {
       AdcreativeTemplatePreviewGetRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     Object localVarPostBody = data;
@@ -86,11 +86,8 @@ public class AdcreativeTemplatePreviewApi {
     localVarHeaderParams.put("Content-Type", localVarContentType);
 
     if (headerPair != null && headerPair.length > 0) {
-      if (headerPair.length % 2 != 0) {
-        throw new UnsupportedOperationException("Parameter headerPair must be paired");
-      }
-      for (int i = 0; i < headerPair.length / 2; i++) {
-        localVarHeaderParams.put(headerPair[i], headerPair[i * 2 + 1]);
+      for (int i = 0; i < headerPair.length; i++) {
+        localVarHeaderParams.put(headerPair[i].getName(), headerPair[i].getValue());
       }
     }
 
@@ -130,7 +127,7 @@ public class AdcreativeTemplatePreviewApi {
       AdcreativeTemplatePreviewGetRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     // verify the required parameter 'data' is set
@@ -154,7 +151,7 @@ public class AdcreativeTemplatePreviewApi {
    *     response body
    */
   public AdcreativeTemplatePreviewGetResponse adcreativeTemplatePreviewGet(
-      AdcreativeTemplatePreviewGetRequest data, String... headerPair) throws ApiException {
+      AdcreativeTemplatePreviewGetRequest data, Pair... headerPair) throws ApiException {
     ApiResponse<AdcreativeTemplatePreviewGetResponse> resp =
         adcreativeTemplatePreviewGetWithHttpInfo(data, headerPair);
     return resp.getData();
@@ -169,7 +166,7 @@ public class AdcreativeTemplatePreviewApi {
    *     response body
    */
   public ApiResponse<AdcreativeTemplatePreviewGetResponse> adcreativeTemplatePreviewGetWithHttpInfo(
-      AdcreativeTemplatePreviewGetRequest data, String... headerPair) throws ApiException {
+      AdcreativeTemplatePreviewGetRequest data, Pair... headerPair) throws ApiException {
     com.squareup.okhttp.Call call =
         adcreativeTemplatePreviewGetValidateBeforeCall(data, null, null, headerPair);
     Type localVarReturnType = new TypeToken<AdcreativeTemplatePreviewGetResponse>() {}.getType();
@@ -187,7 +184,7 @@ public class AdcreativeTemplatePreviewApi {
   public com.squareup.okhttp.Call adcreativeTemplatePreviewGetAsync(
       AdcreativeTemplatePreviewGetRequest data,
       final ApiCallback<AdcreativeTemplatePreviewGetResponse> callback,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     ProgressResponseBody.ProgressListener progressListener = null;

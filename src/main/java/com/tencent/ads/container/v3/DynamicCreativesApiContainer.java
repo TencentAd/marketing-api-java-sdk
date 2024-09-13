@@ -15,6 +15,7 @@ package com.tencent.ads.container.v3;
 import com.google.inject.Inject;
 import com.tencent.ads.ApiContainer;
 import com.tencent.ads.ApiException;
+import com.tencent.ads.Pair;
 import com.tencent.ads.anno.*;
 import com.tencent.ads.api.v3.DynamicCreativesApi;
 import com.tencent.ads.exception.TencentAdsResponseException;
@@ -45,7 +46,7 @@ public class DynamicCreativesApiContainer extends ApiContainer {
    *     response body
    */
   public DynamicCreativesAddResponseData dynamicCreativesAdd(
-      DynamicCreativesAddRequest data, String... headerPair)
+      DynamicCreativesAddRequest data, Pair... headerPair)
       throws ApiException, TencentAdsResponseException {
     DynamicCreativesAddResponse resp = api.dynamicCreativesAdd(data, headerPair);
     handleResponse(gson.toJson(resp));
@@ -61,7 +62,7 @@ public class DynamicCreativesApiContainer extends ApiContainer {
    *     response body
    */
   public DynamicCreativesDeleteResponseData dynamicCreativesDelete(
-      DynamicCreativesDeleteRequest data, String... headerPair)
+      DynamicCreativesDeleteRequest data, Pair... headerPair)
       throws ApiException, TencentAdsResponseException {
     DynamicCreativesDeleteResponse resp = api.dynamicCreativesDelete(data, headerPair);
     handleResponse(gson.toJson(resp));
@@ -77,6 +78,8 @@ public class DynamicCreativesApiContainer extends ApiContainer {
    * @param pageSize (optional)
    * @param fields (optional)
    * @param isDeleted (optional)
+   * @param paginationMode (optional)
+   * @param cursor (optional)
    * @return DynamicCreativesGetResponse
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
@@ -88,11 +91,21 @@ public class DynamicCreativesApiContainer extends ApiContainer {
       Long pageSize,
       List<String> fields,
       Boolean isDeleted,
-      String... headerPair)
+      String paginationMode,
+      String cursor,
+      Pair... headerPair)
       throws ApiException, TencentAdsResponseException {
     DynamicCreativesGetResponse resp =
         api.dynamicCreativesGet(
-            accountId, filtering, page, pageSize, fields, isDeleted, headerPair);
+            accountId,
+            filtering,
+            page,
+            pageSize,
+            fields,
+            isDeleted,
+            paginationMode,
+            cursor,
+            headerPair);
     handleResponse(gson.toJson(resp));
     return resp.getData();
   }
@@ -106,7 +119,7 @@ public class DynamicCreativesApiContainer extends ApiContainer {
    *     response body
    */
   public DynamicCreativesUpdateResponseData dynamicCreativesUpdate(
-      DynamicCreativesUpdateRequest data, String... headerPair)
+      DynamicCreativesUpdateRequest data, Pair... headerPair)
       throws ApiException, TencentAdsResponseException {
     DynamicCreativesUpdateResponse resp = api.dynamicCreativesUpdate(data, headerPair);
     handleResponse(gson.toJson(resp));

@@ -64,7 +64,7 @@ public class AgencyBusinessUnitApi {
       AgencyBusinessUnitAddRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     Object localVarPostBody = data;
@@ -88,11 +88,8 @@ public class AgencyBusinessUnitApi {
     localVarHeaderParams.put("Content-Type", localVarContentType);
 
     if (headerPair != null && headerPair.length > 0) {
-      if (headerPair.length % 2 != 0) {
-        throw new UnsupportedOperationException("Parameter headerPair must be paired");
-      }
-      for (int i = 0; i < headerPair.length / 2; i++) {
-        localVarHeaderParams.put(headerPair[i], headerPair[i * 2 + 1]);
+      for (int i = 0; i < headerPair.length; i++) {
+        localVarHeaderParams.put(headerPair[i].getName(), headerPair[i].getValue());
       }
     }
 
@@ -132,7 +129,7 @@ public class AgencyBusinessUnitApi {
       AgencyBusinessUnitAddRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     // verify the required parameter 'data' is set
@@ -155,7 +152,7 @@ public class AgencyBusinessUnitApi {
    *     response body
    */
   public AgencyBusinessUnitAddResponse agencyBusinessUnitAdd(
-      AgencyBusinessUnitAddRequest data, String... headerPair) throws ApiException {
+      AgencyBusinessUnitAddRequest data, Pair... headerPair) throws ApiException {
     ApiResponse<AgencyBusinessUnitAddResponse> resp =
         agencyBusinessUnitAddWithHttpInfo(data, headerPair);
     return resp.getData();
@@ -170,7 +167,7 @@ public class AgencyBusinessUnitApi {
    *     response body
    */
   public ApiResponse<AgencyBusinessUnitAddResponse> agencyBusinessUnitAddWithHttpInfo(
-      AgencyBusinessUnitAddRequest data, String... headerPair) throws ApiException {
+      AgencyBusinessUnitAddRequest data, Pair... headerPair) throws ApiException {
     com.squareup.okhttp.Call call =
         agencyBusinessUnitAddValidateBeforeCall(data, null, null, headerPair);
     Type localVarReturnType = new TypeToken<AgencyBusinessUnitAddResponse>() {}.getType();
@@ -188,7 +185,7 @@ public class AgencyBusinessUnitApi {
   public com.squareup.okhttp.Call agencyBusinessUnitAddAsync(
       AgencyBusinessUnitAddRequest data,
       final ApiCallback<AgencyBusinessUnitAddResponse> callback,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     ProgressResponseBody.ProgressListener progressListener = null;
@@ -232,7 +229,7 @@ public class AgencyBusinessUnitApi {
       AgencyBusinessUnitUpdateRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     Object localVarPostBody = data;
@@ -256,11 +253,8 @@ public class AgencyBusinessUnitApi {
     localVarHeaderParams.put("Content-Type", localVarContentType);
 
     if (headerPair != null && headerPair.length > 0) {
-      if (headerPair.length % 2 != 0) {
-        throw new UnsupportedOperationException("Parameter headerPair must be paired");
-      }
-      for (int i = 0; i < headerPair.length / 2; i++) {
-        localVarHeaderParams.put(headerPair[i], headerPair[i * 2 + 1]);
+      for (int i = 0; i < headerPair.length; i++) {
+        localVarHeaderParams.put(headerPair[i].getName(), headerPair[i].getValue());
       }
     }
 
@@ -300,7 +294,7 @@ public class AgencyBusinessUnitApi {
       AgencyBusinessUnitUpdateRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     // verify the required parameter 'data' is set
@@ -323,7 +317,7 @@ public class AgencyBusinessUnitApi {
    *     response body
    */
   public AgencyBusinessUnitUpdateResponse agencyBusinessUnitUpdate(
-      AgencyBusinessUnitUpdateRequest data, String... headerPair) throws ApiException {
+      AgencyBusinessUnitUpdateRequest data, Pair... headerPair) throws ApiException {
     ApiResponse<AgencyBusinessUnitUpdateResponse> resp =
         agencyBusinessUnitUpdateWithHttpInfo(data, headerPair);
     return resp.getData();
@@ -338,7 +332,7 @@ public class AgencyBusinessUnitApi {
    *     response body
    */
   public ApiResponse<AgencyBusinessUnitUpdateResponse> agencyBusinessUnitUpdateWithHttpInfo(
-      AgencyBusinessUnitUpdateRequest data, String... headerPair) throws ApiException {
+      AgencyBusinessUnitUpdateRequest data, Pair... headerPair) throws ApiException {
     com.squareup.okhttp.Call call =
         agencyBusinessUnitUpdateValidateBeforeCall(data, null, null, headerPair);
     Type localVarReturnType = new TypeToken<AgencyBusinessUnitUpdateResponse>() {}.getType();
@@ -356,7 +350,7 @@ public class AgencyBusinessUnitApi {
   public com.squareup.okhttp.Call agencyBusinessUnitUpdateAsync(
       AgencyBusinessUnitUpdateRequest data,
       final ApiCallback<AgencyBusinessUnitUpdateResponse> callback,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     ProgressResponseBody.ProgressListener progressListener = null;

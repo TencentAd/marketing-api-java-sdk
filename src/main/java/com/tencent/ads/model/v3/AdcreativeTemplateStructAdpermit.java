@@ -47,6 +47,15 @@ public class AdcreativeTemplateStructAdpermit {
   @SerializedName("support_dynamic_ability_spec_list")
   private SupportDynamicAbilitySpecList supportDynamicAbilitySpecList = null;
 
+  @SerializedName("support_mpa")
+  private Boolean supportMpa = null;
+
+  @SerializedName("support_mpa_image_template")
+  private Boolean supportMpaImageTemplate = null;
+
+  @SerializedName("support_mpa_video_template")
+  private Boolean supportMpaVideoTemplate = null;
+
   public AdcreativeTemplateStructAdpermit creativeTemplateId(Long creativeTemplateId) {
     this.creativeTemplateId = creativeTemplateId;
     return this;
@@ -231,6 +240,63 @@ public class AdcreativeTemplateStructAdpermit {
     this.supportDynamicAbilitySpecList = supportDynamicAbilitySpecList;
   }
 
+  public AdcreativeTemplateStructAdpermit supportMpa(Boolean supportMpa) {
+    this.supportMpa = supportMpa;
+    return this;
+  }
+
+  /**
+   * Get supportMpa
+   *
+   * @return supportMpa
+   */
+  @ApiModelProperty(value = "")
+  public Boolean isSupportMpa() {
+    return supportMpa;
+  }
+
+  public void setSupportMpa(Boolean supportMpa) {
+    this.supportMpa = supportMpa;
+  }
+
+  public AdcreativeTemplateStructAdpermit supportMpaImageTemplate(Boolean supportMpaImageTemplate) {
+    this.supportMpaImageTemplate = supportMpaImageTemplate;
+    return this;
+  }
+
+  /**
+   * Get supportMpaImageTemplate
+   *
+   * @return supportMpaImageTemplate
+   */
+  @ApiModelProperty(value = "")
+  public Boolean isSupportMpaImageTemplate() {
+    return supportMpaImageTemplate;
+  }
+
+  public void setSupportMpaImageTemplate(Boolean supportMpaImageTemplate) {
+    this.supportMpaImageTemplate = supportMpaImageTemplate;
+  }
+
+  public AdcreativeTemplateStructAdpermit supportMpaVideoTemplate(Boolean supportMpaVideoTemplate) {
+    this.supportMpaVideoTemplate = supportMpaVideoTemplate;
+    return this;
+  }
+
+  /**
+   * Get supportMpaVideoTemplate
+   *
+   * @return supportMpaVideoTemplate
+   */
+  @ApiModelProperty(value = "")
+  public Boolean isSupportMpaVideoTemplate() {
+    return supportMpaVideoTemplate;
+  }
+
+  public void setSupportMpaVideoTemplate(Boolean supportMpaVideoTemplate) {
+    this.supportMpaVideoTemplate = supportMpaVideoTemplate;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -258,7 +324,12 @@ public class AdcreativeTemplateStructAdpermit {
             adcreativeTemplateStructAdpermit.unsupportSitesetDetailSpec)
         && Objects.equals(
             this.supportDynamicAbilitySpecList,
-            adcreativeTemplateStructAdpermit.supportDynamicAbilitySpecList);
+            adcreativeTemplateStructAdpermit.supportDynamicAbilitySpecList)
+        && Objects.equals(this.supportMpa, adcreativeTemplateStructAdpermit.supportMpa)
+        && Objects.equals(
+            this.supportMpaImageTemplate, adcreativeTemplateStructAdpermit.supportMpaImageTemplate)
+        && Objects.equals(
+            this.supportMpaVideoTemplate, adcreativeTemplateStructAdpermit.supportMpaVideoTemplate);
   }
 
   @Override
@@ -271,7 +342,10 @@ public class AdcreativeTemplateStructAdpermit {
         siteSet,
         creativeComponents,
         unsupportSitesetDetailSpec,
-        supportDynamicAbilitySpecList);
+        supportDynamicAbilitySpecList,
+        supportMpa,
+        supportMpaImageTemplate,
+        supportMpaVideoTemplate);
   }
 
   @Override

@@ -62,7 +62,7 @@ public class LeadsVoipCallApi {
       LeadsVoipCallAddRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     Object localVarPostBody = data;
@@ -86,11 +86,8 @@ public class LeadsVoipCallApi {
     localVarHeaderParams.put("Content-Type", localVarContentType);
 
     if (headerPair != null && headerPair.length > 0) {
-      if (headerPair.length % 2 != 0) {
-        throw new UnsupportedOperationException("Parameter headerPair must be paired");
-      }
-      for (int i = 0; i < headerPair.length / 2; i++) {
-        localVarHeaderParams.put(headerPair[i], headerPair[i * 2 + 1]);
+      for (int i = 0; i < headerPair.length; i++) {
+        localVarHeaderParams.put(headerPair[i].getName(), headerPair[i].getValue());
       }
     }
 
@@ -130,7 +127,7 @@ public class LeadsVoipCallApi {
       LeadsVoipCallAddRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     // verify the required parameter 'data' is set
@@ -152,8 +149,8 @@ public class LeadsVoipCallApi {
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
-  public LeadsVoipCallAddResponse leadsVoipCallAdd(
-      LeadsVoipCallAddRequest data, String... headerPair) throws ApiException {
+  public LeadsVoipCallAddResponse leadsVoipCallAdd(LeadsVoipCallAddRequest data, Pair... headerPair)
+      throws ApiException {
     ApiResponse<LeadsVoipCallAddResponse> resp = leadsVoipCallAddWithHttpInfo(data, headerPair);
     return resp.getData();
   }
@@ -167,7 +164,7 @@ public class LeadsVoipCallApi {
    *     response body
    */
   public ApiResponse<LeadsVoipCallAddResponse> leadsVoipCallAddWithHttpInfo(
-      LeadsVoipCallAddRequest data, String... headerPair) throws ApiException {
+      LeadsVoipCallAddRequest data, Pair... headerPair) throws ApiException {
     com.squareup.okhttp.Call call =
         leadsVoipCallAddValidateBeforeCall(data, null, null, headerPair);
     Type localVarReturnType = new TypeToken<LeadsVoipCallAddResponse>() {}.getType();
@@ -185,7 +182,7 @@ public class LeadsVoipCallApi {
   public com.squareup.okhttp.Call leadsVoipCallAddAsync(
       LeadsVoipCallAddRequest data,
       final ApiCallback<LeadsVoipCallAddResponse> callback,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     ProgressResponseBody.ProgressListener progressListener = null;

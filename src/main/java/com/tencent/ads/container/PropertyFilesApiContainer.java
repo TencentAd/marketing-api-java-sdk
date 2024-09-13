@@ -15,6 +15,7 @@ package com.tencent.ads.container;
 import com.google.inject.Inject;
 import com.tencent.ads.ApiContainer;
 import com.tencent.ads.ApiException;
+import com.tencent.ads.Pair;
 import com.tencent.ads.anno.*;
 import com.tencent.ads.api.PropertyFilesApi;
 import com.tencent.ads.exception.TencentAdsResponseException;
@@ -43,7 +44,7 @@ public class PropertyFilesApiContainer extends ApiContainer {
       Long sessionId,
       String fileName,
       File file,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException, TencentAdsResponseException {
     PropertyFilesAddResponse resp =
         api.propertyFilesAdd(accountId, propertySetId, sessionId, fileName, file, headerPair);

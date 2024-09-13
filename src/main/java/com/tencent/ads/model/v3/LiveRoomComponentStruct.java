@@ -63,6 +63,9 @@ public class LiveRoomComponentStruct {
   @SerializedName("is_publish_enabled")
   private Boolean isPublishEnabled = null;
 
+  @SerializedName("wechat_channels_account_id")
+  private String wechatChannelsAccountId = null;
+
   public LiveRoomComponentStruct accountId(Long accountId) {
     this.accountId = accountId;
     return this;
@@ -330,6 +333,25 @@ public class LiveRoomComponentStruct {
     this.isPublishEnabled = isPublishEnabled;
   }
 
+  public LiveRoomComponentStruct wechatChannelsAccountId(String wechatChannelsAccountId) {
+    this.wechatChannelsAccountId = wechatChannelsAccountId;
+    return this;
+  }
+
+  /**
+   * Get wechatChannelsAccountId
+   *
+   * @return wechatChannelsAccountId
+   */
+  @ApiModelProperty(value = "")
+  public String getWechatChannelsAccountId() {
+    return wechatChannelsAccountId;
+  }
+
+  public void setWechatChannelsAccountId(String wechatChannelsAccountId) {
+    this.wechatChannelsAccountId = wechatChannelsAccountId;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -353,7 +375,9 @@ public class LiveRoomComponentStruct {
             this.componentWechatChannelSpec, liveRoomComponentStruct.componentWechatChannelSpec)
         && Objects.equals(this.createdTime, liveRoomComponentStruct.createdTime)
         && Objects.equals(this.lastModifiedTime, liveRoomComponentStruct.lastModifiedTime)
-        && Objects.equals(this.isPublishEnabled, liveRoomComponentStruct.isPublishEnabled);
+        && Objects.equals(this.isPublishEnabled, liveRoomComponentStruct.isPublishEnabled)
+        && Objects.equals(
+            this.wechatChannelsAccountId, liveRoomComponentStruct.wechatChannelsAccountId);
   }
 
   @Override
@@ -372,7 +396,8 @@ public class LiveRoomComponentStruct {
         componentWechatChannelSpec,
         createdTime,
         lastModifiedTime,
-        isPublishEnabled);
+        isPublishEnabled,
+        wechatChannelsAccountId);
   }
 
   @Override

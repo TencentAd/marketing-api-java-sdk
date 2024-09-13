@@ -15,6 +15,7 @@ package com.tencent.ads.container;
 import com.google.inject.Inject;
 import com.tencent.ads.ApiContainer;
 import com.tencent.ads.ApiException;
+import com.tencent.ads.Pair;
 import com.tencent.ads.anno.*;
 import com.tencent.ads.api.ProgrammedTemplateApi;
 import com.tencent.ads.exception.TencentAdsResponseException;
@@ -35,7 +36,7 @@ public class ProgrammedTemplateApiContainer extends ApiContainer {
    *     response body
    */
   public ProgrammedTemplateGetResponseData programmedTemplateGet(
-      ProgrammedTemplateGetRequest data, String... headerPair)
+      ProgrammedTemplateGetRequest data, Pair... headerPair)
       throws ApiException, TencentAdsResponseException {
     ProgrammedTemplateGetResponse resp = api.programmedTemplateGet(data, headerPair);
     handleResponse(gson.toJson(resp));

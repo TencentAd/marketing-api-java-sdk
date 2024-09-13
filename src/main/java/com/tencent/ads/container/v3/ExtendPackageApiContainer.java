@@ -15,6 +15,7 @@ package com.tencent.ads.container.v3;
 import com.google.inject.Inject;
 import com.tencent.ads.ApiContainer;
 import com.tencent.ads.ApiException;
+import com.tencent.ads.Pair;
 import com.tencent.ads.anno.*;
 import com.tencent.ads.api.v3.ExtendPackageApi;
 import com.tencent.ads.exception.TencentAdsResponseException;
@@ -42,7 +43,7 @@ public class ExtendPackageApiContainer extends ApiContainer {
    *     response body
    */
   public ExtendPackageAddResponseData extendPackageAdd(
-      ExtendPackageAddRequest data, String... headerPair)
+      ExtendPackageAddRequest data, Pair... headerPair)
       throws ApiException, TencentAdsResponseException {
     ExtendPackageAddResponse resp = api.extendPackageAdd(data, headerPair);
     handleResponse(gson.toJson(resp));
@@ -69,7 +70,7 @@ public class ExtendPackageApiContainer extends ApiContainer {
       Long page,
       Long pageSize,
       List<String> fields,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException, TencentAdsResponseException {
     ExtendPackageGetResponse resp =
         api.extendPackageGet(accountId, packageId, filtering, page, pageSize, fields, headerPair);
@@ -86,7 +87,7 @@ public class ExtendPackageApiContainer extends ApiContainer {
    *     response body
    */
   public ExtendPackageUpdateResponseData extendPackageUpdate(
-      ExtendPackageUpdateRequest data, String... headerPair)
+      ExtendPackageUpdateRequest data, Pair... headerPair)
       throws ApiException, TencentAdsResponseException {
     ExtendPackageUpdateResponse resp = api.extendPackageUpdate(data, headerPair);
     handleResponse(gson.toJson(resp));

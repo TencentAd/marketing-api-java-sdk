@@ -65,7 +65,7 @@ public class AdcreativePreviewsQrcodeApi {
       List<String> fields,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     Object localVarPostBody = null;
@@ -95,11 +95,8 @@ public class AdcreativePreviewsQrcodeApi {
     localVarHeaderParams.put("Content-Type", localVarContentType);
 
     if (headerPair != null && headerPair.length > 0) {
-      if (headerPair.length % 2 != 0) {
-        throw new UnsupportedOperationException("Parameter headerPair must be paired");
-      }
-      for (int i = 0; i < headerPair.length / 2; i++) {
-        localVarHeaderParams.put(headerPair[i], headerPair[i * 2 + 1]);
+      for (int i = 0; i < headerPair.length; i++) {
+        localVarHeaderParams.put(headerPair[i].getName(), headerPair[i].getValue());
       }
     }
 
@@ -141,7 +138,7 @@ public class AdcreativePreviewsQrcodeApi {
       List<String> fields,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     // verify the required parameter 'accountId' is set
@@ -173,8 +170,7 @@ public class AdcreativePreviewsQrcodeApi {
    *     response body
    */
   public AdcreativePreviewsQrcodeGetResponse adcreativePreviewsQrcodeGet(
-      Long accountId, Long adgroupId, List<String> fields, String... headerPair)
-      throws ApiException {
+      Long accountId, Long adgroupId, List<String> fields, Pair... headerPair) throws ApiException {
     ApiResponse<AdcreativePreviewsQrcodeGetResponse> resp =
         adcreativePreviewsQrcodeGetWithHttpInfo(accountId, adgroupId, fields, headerPair);
     return resp.getData();
@@ -191,8 +187,7 @@ public class AdcreativePreviewsQrcodeApi {
    *     response body
    */
   public ApiResponse<AdcreativePreviewsQrcodeGetResponse> adcreativePreviewsQrcodeGetWithHttpInfo(
-      Long accountId, Long adgroupId, List<String> fields, String... headerPair)
-      throws ApiException {
+      Long accountId, Long adgroupId, List<String> fields, Pair... headerPair) throws ApiException {
     com.squareup.okhttp.Call call =
         adcreativePreviewsQrcodeGetValidateBeforeCall(
             accountId, adgroupId, fields, null, null, headerPair);
@@ -215,7 +210,7 @@ public class AdcreativePreviewsQrcodeApi {
       Long adgroupId,
       List<String> fields,
       final ApiCallback<AdcreativePreviewsQrcodeGetResponse> callback,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     ProgressResponseBody.ProgressListener progressListener = null;

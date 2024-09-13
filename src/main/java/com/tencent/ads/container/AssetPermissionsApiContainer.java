@@ -15,6 +15,7 @@ package com.tencent.ads.container;
 import com.google.inject.Inject;
 import com.tencent.ads.ApiContainer;
 import com.tencent.ads.ApiException;
+import com.tencent.ads.Pair;
 import com.tencent.ads.anno.*;
 import com.tencent.ads.api.AssetPermissionsApi;
 import com.tencent.ads.exception.TencentAdsResponseException;
@@ -37,7 +38,7 @@ public class AssetPermissionsApiContainer extends ApiContainer {
    *     response body
    */
   public AssetPermissionsAddResponseData assetPermissionsAdd(
-      AssetPermissionsAddRequest data, String... headerPair)
+      AssetPermissionsAddRequest data, Pair... headerPair)
       throws ApiException, TencentAdsResponseException {
     AssetPermissionsAddResponse resp = api.assetPermissionsAdd(data, headerPair);
     handleResponse(gson.toJson(resp));
@@ -53,7 +54,7 @@ public class AssetPermissionsApiContainer extends ApiContainer {
    *     response body
    */
   public AssetPermissionsDeleteResponse assetPermissionsDelete(
-      AssetPermissionsDeleteRequest data, String... headerPair)
+      AssetPermissionsDeleteRequest data, Pair... headerPair)
       throws ApiException, TencentAdsResponseException {
     AssetPermissionsDeleteResponse resp = api.assetPermissionsDelete(data, headerPair);
     handleResponse(gson.toJson(resp));

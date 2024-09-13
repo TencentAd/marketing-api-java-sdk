@@ -51,9 +51,10 @@ public class MarketingTargetAssetDetailApi {
   /**
    * Build call for marketingTargetAssetDetailGet
    *
-   * @param accountId (required)
    * @param marketingAssetId (required)
    * @param marketingTargetType (required)
+   * @param accountId (optional)
+   * @param organizationId (optional)
    * @param fields 返回参数的字段列表 (optional)
    * @param progressListener Progress listener
    * @param progressRequestListener Progress request listener
@@ -61,13 +62,14 @@ public class MarketingTargetAssetDetailApi {
    * @throws ApiException If fail to serialize the request body object
    */
   public com.squareup.okhttp.Call marketingTargetAssetDetailGetCall(
-      Long accountId,
       Long marketingAssetId,
       String marketingTargetType,
+      Long accountId,
+      Long organizationId,
       List<String> fields,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     Object localVarPostBody = null;
@@ -84,6 +86,8 @@ public class MarketingTargetAssetDetailApi {
     if (marketingTargetType != null)
       localVarQueryParams.addAll(
           apiClient.parameterToPair("marketing_target_type", marketingTargetType));
+    if (organizationId != null)
+      localVarQueryParams.addAll(apiClient.parameterToPair("organization_id", organizationId));
     if (fields != null)
       localVarCollectionQueryParams.addAll(apiClient.parameterToPairs("multi", "fields", fields));
 
@@ -100,11 +104,8 @@ public class MarketingTargetAssetDetailApi {
     localVarHeaderParams.put("Content-Type", localVarContentType);
 
     if (headerPair != null && headerPair.length > 0) {
-      if (headerPair.length % 2 != 0) {
-        throw new UnsupportedOperationException("Parameter headerPair must be paired");
-      }
-      for (int i = 0; i < headerPair.length / 2; i++) {
-        localVarHeaderParams.put(headerPair[i], headerPair[i * 2 + 1]);
+      for (int i = 0; i < headerPair.length; i++) {
+        localVarHeaderParams.put(headerPair[i].getName(), headerPair[i].getValue());
       }
     }
 
@@ -141,20 +142,15 @@ public class MarketingTargetAssetDetailApi {
 
   @SuppressWarnings("rawtypes")
   private com.squareup.okhttp.Call marketingTargetAssetDetailGetValidateBeforeCall(
-      Long accountId,
       Long marketingAssetId,
       String marketingTargetType,
+      Long accountId,
+      Long organizationId,
       List<String> fields,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
-
-    // verify the required parameter 'accountId' is set
-    if (accountId == null) {
-      throw new ApiException(
-          "Missing the required parameter 'accountId' when calling marketingTargetAssetDetailGet(Async)");
-    }
 
     // verify the required parameter 'marketingAssetId' is set
     if (marketingAssetId == null) {
@@ -170,9 +166,10 @@ public class MarketingTargetAssetDetailApi {
 
     com.squareup.okhttp.Call call =
         marketingTargetAssetDetailGetCall(
-            accountId,
             marketingAssetId,
             marketingTargetType,
+            accountId,
+            organizationId,
             fields,
             progressListener,
             progressRequestListener,
@@ -183,33 +180,36 @@ public class MarketingTargetAssetDetailApi {
   /**
    * 获取推广内容资产详情
    *
-   * @param accountId (required)
    * @param marketingAssetId (required)
    * @param marketingTargetType (required)
+   * @param accountId (optional)
+   * @param organizationId (optional)
    * @param fields 返回参数的字段列表 (optional)
    * @return MarketingTargetAssetDetailGetResponse
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
   public MarketingTargetAssetDetailGetResponse marketingTargetAssetDetailGet(
-      Long accountId,
       Long marketingAssetId,
       String marketingTargetType,
+      Long accountId,
+      Long organizationId,
       List<String> fields,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
     ApiResponse<MarketingTargetAssetDetailGetResponse> resp =
         marketingTargetAssetDetailGetWithHttpInfo(
-            accountId, marketingAssetId, marketingTargetType, fields, headerPair);
+            marketingAssetId, marketingTargetType, accountId, organizationId, fields, headerPair);
     return resp.getData();
   }
 
   /**
    * 获取推广内容资产详情
    *
-   * @param accountId (required)
    * @param marketingAssetId (required)
    * @param marketingTargetType (required)
+   * @param accountId (optional)
+   * @param organizationId (optional)
    * @param fields 返回参数的字段列表 (optional)
    * @return ApiResponse&lt;MarketingTargetAssetDetailGetResponse&gt;
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
@@ -217,15 +217,23 @@ public class MarketingTargetAssetDetailApi {
    */
   public ApiResponse<MarketingTargetAssetDetailGetResponse>
       marketingTargetAssetDetailGetWithHttpInfo(
-          Long accountId,
           Long marketingAssetId,
           String marketingTargetType,
+          Long accountId,
+          Long organizationId,
           List<String> fields,
-          String... headerPair)
+          Pair... headerPair)
           throws ApiException {
     com.squareup.okhttp.Call call =
         marketingTargetAssetDetailGetValidateBeforeCall(
-            accountId, marketingAssetId, marketingTargetType, fields, null, null, headerPair);
+            marketingAssetId,
+            marketingTargetType,
+            accountId,
+            organizationId,
+            fields,
+            null,
+            null,
+            headerPair);
     Type localVarReturnType = new TypeToken<MarketingTargetAssetDetailGetResponse>() {}.getType();
     return apiClient.execute(call, localVarReturnType);
   }
@@ -233,21 +241,23 @@ public class MarketingTargetAssetDetailApi {
   /**
    * 获取推广内容资产详情 (asynchronously)
    *
-   * @param accountId (required)
    * @param marketingAssetId (required)
    * @param marketingTargetType (required)
+   * @param accountId (optional)
+   * @param organizationId (optional)
    * @param fields 返回参数的字段列表 (optional)
    * @param callback The callback to be executed when the API call finishes
    * @return The request call
    * @throws ApiException If fail to process the API call, e.g. serializing the request body object
    */
   public com.squareup.okhttp.Call marketingTargetAssetDetailGetAsync(
-      Long accountId,
       Long marketingAssetId,
       String marketingTargetType,
+      Long accountId,
+      Long organizationId,
       List<String> fields,
       final ApiCallback<MarketingTargetAssetDetailGetResponse> callback,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     ProgressResponseBody.ProgressListener progressListener = null;
@@ -273,9 +283,10 @@ public class MarketingTargetAssetDetailApi {
 
     com.squareup.okhttp.Call call =
         marketingTargetAssetDetailGetValidateBeforeCall(
-            accountId,
             marketingAssetId,
             marketingTargetType,
+            accountId,
+            organizationId,
             fields,
             progressListener,
             progressRequestListener,

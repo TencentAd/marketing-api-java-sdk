@@ -15,6 +15,7 @@ package com.tencent.ads.container;
 import com.google.inject.Inject;
 import com.tencent.ads.ApiContainer;
 import com.tencent.ads.ApiException;
+import com.tencent.ads.Pair;
 import com.tencent.ads.anno.*;
 import com.tencent.ads.api.TargetcpaTagApi;
 import com.tencent.ads.exception.TencentAdsResponseException;
@@ -37,7 +38,7 @@ public class TargetcpaTagApiContainer extends ApiContainer {
    *     response body
    */
   public TargetcpaTagGetResponseData targetcpaTagGet(
-      Long accountId, List<String> tagTypes, List<String> fields, String... headerPair)
+      Long accountId, List<String> tagTypes, List<String> fields, Pair... headerPair)
       throws ApiException, TencentAdsResponseException {
     TargetcpaTagGetResponse resp = api.targetcpaTagGet(accountId, tagTypes, fields, headerPair);
     handleResponse(gson.toJson(resp));

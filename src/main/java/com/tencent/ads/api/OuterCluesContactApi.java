@@ -62,7 +62,7 @@ public class OuterCluesContactApi {
       OuterCluesContactUpdateRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     Object localVarPostBody = data;
@@ -86,11 +86,8 @@ public class OuterCluesContactApi {
     localVarHeaderParams.put("Content-Type", localVarContentType);
 
     if (headerPair != null && headerPair.length > 0) {
-      if (headerPair.length % 2 != 0) {
-        throw new UnsupportedOperationException("Parameter headerPair must be paired");
-      }
-      for (int i = 0; i < headerPair.length / 2; i++) {
-        localVarHeaderParams.put(headerPair[i], headerPair[i * 2 + 1]);
+      for (int i = 0; i < headerPair.length; i++) {
+        localVarHeaderParams.put(headerPair[i].getName(), headerPair[i].getValue());
       }
     }
 
@@ -130,7 +127,7 @@ public class OuterCluesContactApi {
       OuterCluesContactUpdateRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     // verify the required parameter 'data' is set
@@ -153,7 +150,7 @@ public class OuterCluesContactApi {
    *     response body
    */
   public OuterCluesContactUpdateResponse outerCluesContactUpdate(
-      OuterCluesContactUpdateRequest data, String... headerPair) throws ApiException {
+      OuterCluesContactUpdateRequest data, Pair... headerPair) throws ApiException {
     ApiResponse<OuterCluesContactUpdateResponse> resp =
         outerCluesContactUpdateWithHttpInfo(data, headerPair);
     return resp.getData();
@@ -168,7 +165,7 @@ public class OuterCluesContactApi {
    *     response body
    */
   public ApiResponse<OuterCluesContactUpdateResponse> outerCluesContactUpdateWithHttpInfo(
-      OuterCluesContactUpdateRequest data, String... headerPair) throws ApiException {
+      OuterCluesContactUpdateRequest data, Pair... headerPair) throws ApiException {
     com.squareup.okhttp.Call call =
         outerCluesContactUpdateValidateBeforeCall(data, null, null, headerPair);
     Type localVarReturnType = new TypeToken<OuterCluesContactUpdateResponse>() {}.getType();
@@ -186,7 +183,7 @@ public class OuterCluesContactApi {
   public com.squareup.okhttp.Call outerCluesContactUpdateAsync(
       OuterCluesContactUpdateRequest data,
       final ApiCallback<OuterCluesContactUpdateResponse> callback,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     ProgressResponseBody.ProgressListener progressListener = null;

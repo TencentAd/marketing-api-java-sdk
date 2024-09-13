@@ -30,6 +30,9 @@ public class RtaTargetBindList {
   @SerializedName("OuterTargetId")
   private String outerTargetId = null;
 
+  @SerializedName("UId")
+  private Long uid = null;
+
   public RtaTargetBindList page(Long page) {
     this.page = page;
     return this;
@@ -87,6 +90,25 @@ public class RtaTargetBindList {
     this.outerTargetId = outerTargetId;
   }
 
+  public RtaTargetBindList uid(Long uid) {
+    this.uid = uid;
+    return this;
+  }
+
+  /**
+   * Get uid
+   *
+   * @return uid
+   */
+  @ApiModelProperty(value = "")
+  public Long getUid() {
+    return uid;
+  }
+
+  public void setUid(Long uid) {
+    this.uid = uid;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -98,12 +120,13 @@ public class RtaTargetBindList {
     RtaTargetBindList rtaTargetBindList = (RtaTargetBindList) o;
     return Objects.equals(this.page, rtaTargetBindList.page)
         && Objects.equals(this.size, rtaTargetBindList.size)
-        && Objects.equals(this.outerTargetId, rtaTargetBindList.outerTargetId);
+        && Objects.equals(this.outerTargetId, rtaTargetBindList.outerTargetId)
+        && Objects.equals(this.uid, rtaTargetBindList.uid);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(page, size, outerTargetId);
+    return Objects.hash(page, size, outerTargetId, uid);
   }
 
   @Override

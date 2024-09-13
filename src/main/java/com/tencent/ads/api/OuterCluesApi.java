@@ -66,7 +66,7 @@ public class OuterCluesApi {
       OuterCluesActionTypeReportRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     Object localVarPostBody = data;
@@ -90,11 +90,8 @@ public class OuterCluesApi {
     localVarHeaderParams.put("Content-Type", localVarContentType);
 
     if (headerPair != null && headerPair.length > 0) {
-      if (headerPair.length % 2 != 0) {
-        throw new UnsupportedOperationException("Parameter headerPair must be paired");
-      }
-      for (int i = 0; i < headerPair.length / 2; i++) {
-        localVarHeaderParams.put(headerPair[i], headerPair[i * 2 + 1]);
+      for (int i = 0; i < headerPair.length; i++) {
+        localVarHeaderParams.put(headerPair[i].getName(), headerPair[i].getValue());
       }
     }
 
@@ -134,7 +131,7 @@ public class OuterCluesApi {
       OuterCluesActionTypeReportRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     // verify the required parameter 'data' is set
@@ -157,7 +154,7 @@ public class OuterCluesApi {
    *     response body
    */
   public OuterCluesActionTypeReportResponse outerCluesActionTypeReport(
-      OuterCluesActionTypeReportRequest data, String... headerPair) throws ApiException {
+      OuterCluesActionTypeReportRequest data, Pair... headerPair) throws ApiException {
     ApiResponse<OuterCluesActionTypeReportResponse> resp =
         outerCluesActionTypeReportWithHttpInfo(data, headerPair);
     return resp.getData();
@@ -172,7 +169,7 @@ public class OuterCluesApi {
    *     response body
    */
   public ApiResponse<OuterCluesActionTypeReportResponse> outerCluesActionTypeReportWithHttpInfo(
-      OuterCluesActionTypeReportRequest data, String... headerPair) throws ApiException {
+      OuterCluesActionTypeReportRequest data, Pair... headerPair) throws ApiException {
     com.squareup.okhttp.Call call =
         outerCluesActionTypeReportValidateBeforeCall(data, null, null, headerPair);
     Type localVarReturnType = new TypeToken<OuterCluesActionTypeReportResponse>() {}.getType();
@@ -190,7 +187,7 @@ public class OuterCluesApi {
   public com.squareup.okhttp.Call outerCluesActionTypeReportAsync(
       OuterCluesActionTypeReportRequest data,
       final ApiCallback<OuterCluesActionTypeReportResponse> callback,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     ProgressResponseBody.ProgressListener progressListener = null;
@@ -234,7 +231,7 @@ public class OuterCluesApi {
       OuterCluesAddRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     Object localVarPostBody = data;
@@ -258,11 +255,8 @@ public class OuterCluesApi {
     localVarHeaderParams.put("Content-Type", localVarContentType);
 
     if (headerPair != null && headerPair.length > 0) {
-      if (headerPair.length % 2 != 0) {
-        throw new UnsupportedOperationException("Parameter headerPair must be paired");
-      }
-      for (int i = 0; i < headerPair.length / 2; i++) {
-        localVarHeaderParams.put(headerPair[i], headerPair[i * 2 + 1]);
+      for (int i = 0; i < headerPair.length; i++) {
+        localVarHeaderParams.put(headerPair[i].getName(), headerPair[i].getValue());
       }
     }
 
@@ -302,7 +296,7 @@ public class OuterCluesApi {
       OuterCluesAddRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     // verify the required parameter 'data' is set
@@ -324,7 +318,7 @@ public class OuterCluesApi {
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
-  public OuterCluesAddResponse outerCluesAdd(OuterCluesAddRequest data, String... headerPair)
+  public OuterCluesAddResponse outerCluesAdd(OuterCluesAddRequest data, Pair... headerPair)
       throws ApiException {
     ApiResponse<OuterCluesAddResponse> resp = outerCluesAddWithHttpInfo(data, headerPair);
     return resp.getData();
@@ -339,7 +333,7 @@ public class OuterCluesApi {
    *     response body
    */
   public ApiResponse<OuterCluesAddResponse> outerCluesAddWithHttpInfo(
-      OuterCluesAddRequest data, String... headerPair) throws ApiException {
+      OuterCluesAddRequest data, Pair... headerPair) throws ApiException {
     com.squareup.okhttp.Call call = outerCluesAddValidateBeforeCall(data, null, null, headerPair);
     Type localVarReturnType = new TypeToken<OuterCluesAddResponse>() {}.getType();
     return apiClient.execute(call, localVarReturnType);
@@ -356,7 +350,7 @@ public class OuterCluesApi {
   public com.squareup.okhttp.Call outerCluesAddAsync(
       OuterCluesAddRequest data,
       final ApiCallback<OuterCluesAddResponse> callback,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     ProgressResponseBody.ProgressListener progressListener = null;
@@ -400,7 +394,7 @@ public class OuterCluesApi {
       OuterCluesUpdateRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     Object localVarPostBody = data;
@@ -424,11 +418,8 @@ public class OuterCluesApi {
     localVarHeaderParams.put("Content-Type", localVarContentType);
 
     if (headerPair != null && headerPair.length > 0) {
-      if (headerPair.length % 2 != 0) {
-        throw new UnsupportedOperationException("Parameter headerPair must be paired");
-      }
-      for (int i = 0; i < headerPair.length / 2; i++) {
-        localVarHeaderParams.put(headerPair[i], headerPair[i * 2 + 1]);
+      for (int i = 0; i < headerPair.length; i++) {
+        localVarHeaderParams.put(headerPair[i].getName(), headerPair[i].getValue());
       }
     }
 
@@ -468,7 +459,7 @@ public class OuterCluesApi {
       OuterCluesUpdateRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     // verify the required parameter 'data' is set
@@ -490,8 +481,8 @@ public class OuterCluesApi {
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
-  public OuterCluesUpdateResponse outerCluesUpdate(
-      OuterCluesUpdateRequest data, String... headerPair) throws ApiException {
+  public OuterCluesUpdateResponse outerCluesUpdate(OuterCluesUpdateRequest data, Pair... headerPair)
+      throws ApiException {
     ApiResponse<OuterCluesUpdateResponse> resp = outerCluesUpdateWithHttpInfo(data, headerPair);
     return resp.getData();
   }
@@ -505,7 +496,7 @@ public class OuterCluesApi {
    *     response body
    */
   public ApiResponse<OuterCluesUpdateResponse> outerCluesUpdateWithHttpInfo(
-      OuterCluesUpdateRequest data, String... headerPair) throws ApiException {
+      OuterCluesUpdateRequest data, Pair... headerPair) throws ApiException {
     com.squareup.okhttp.Call call =
         outerCluesUpdateValidateBeforeCall(data, null, null, headerPair);
     Type localVarReturnType = new TypeToken<OuterCluesUpdateResponse>() {}.getType();
@@ -523,7 +514,7 @@ public class OuterCluesApi {
   public com.squareup.okhttp.Call outerCluesUpdateAsync(
       OuterCluesUpdateRequest data,
       final ApiCallback<OuterCluesUpdateResponse> callback,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     ProgressResponseBody.ProgressListener progressListener = null;

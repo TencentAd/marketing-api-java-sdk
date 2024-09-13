@@ -77,7 +77,7 @@ public class DataSourceDispatchApi {
       List<String> fields,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     Object localVarPostBody = null;
@@ -115,11 +115,8 @@ public class DataSourceDispatchApi {
     localVarHeaderParams.put("Content-Type", localVarContentType);
 
     if (headerPair != null && headerPair.length > 0) {
-      if (headerPair.length % 2 != 0) {
-        throw new UnsupportedOperationException("Parameter headerPair must be paired");
-      }
-      for (int i = 0; i < headerPair.length / 2; i++) {
-        localVarHeaderParams.put(headerPair[i], headerPair[i * 2 + 1]);
+      for (int i = 0; i < headerPair.length; i++) {
+        localVarHeaderParams.put(headerPair[i].getName(), headerPair[i].getValue());
       }
     }
 
@@ -166,7 +163,7 @@ public class DataSourceDispatchApi {
       List<String> fields,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     // verify the required parameter 'accountId' is set
@@ -215,7 +212,7 @@ public class DataSourceDispatchApi {
       String switchType,
       String accessWay,
       List<String> fields,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
     ApiResponse<DataSourceDispatchGetResponse> resp =
         dataSourceDispatchGetWithHttpInfo(
@@ -255,7 +252,7 @@ public class DataSourceDispatchApi {
       String switchType,
       String accessWay,
       List<String> fields,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
     com.squareup.okhttp.Call call =
         dataSourceDispatchGetValidateBeforeCall(
@@ -299,7 +296,7 @@ public class DataSourceDispatchApi {
       String accessWay,
       List<String> fields,
       final ApiCallback<DataSourceDispatchGetResponse> callback,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     ProgressResponseBody.ProgressListener progressListener = null;
@@ -353,7 +350,7 @@ public class DataSourceDispatchApi {
       DataSourceDispatchUpdateRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     Object localVarPostBody = data;
@@ -377,11 +374,8 @@ public class DataSourceDispatchApi {
     localVarHeaderParams.put("Content-Type", localVarContentType);
 
     if (headerPair != null && headerPair.length > 0) {
-      if (headerPair.length % 2 != 0) {
-        throw new UnsupportedOperationException("Parameter headerPair must be paired");
-      }
-      for (int i = 0; i < headerPair.length / 2; i++) {
-        localVarHeaderParams.put(headerPair[i], headerPair[i * 2 + 1]);
+      for (int i = 0; i < headerPair.length; i++) {
+        localVarHeaderParams.put(headerPair[i].getName(), headerPair[i].getValue());
       }
     }
 
@@ -421,7 +415,7 @@ public class DataSourceDispatchApi {
       DataSourceDispatchUpdateRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     // verify the required parameter 'data' is set
@@ -444,7 +438,7 @@ public class DataSourceDispatchApi {
    *     response body
    */
   public DataSourceDispatchUpdateResponse dataSourceDispatchUpdate(
-      DataSourceDispatchUpdateRequest data, String... headerPair) throws ApiException {
+      DataSourceDispatchUpdateRequest data, Pair... headerPair) throws ApiException {
     ApiResponse<DataSourceDispatchUpdateResponse> resp =
         dataSourceDispatchUpdateWithHttpInfo(data, headerPair);
     return resp.getData();
@@ -459,7 +453,7 @@ public class DataSourceDispatchApi {
    *     response body
    */
   public ApiResponse<DataSourceDispatchUpdateResponse> dataSourceDispatchUpdateWithHttpInfo(
-      DataSourceDispatchUpdateRequest data, String... headerPair) throws ApiException {
+      DataSourceDispatchUpdateRequest data, Pair... headerPair) throws ApiException {
     com.squareup.okhttp.Call call =
         dataSourceDispatchUpdateValidateBeforeCall(data, null, null, headerPair);
     Type localVarReturnType = new TypeToken<DataSourceDispatchUpdateResponse>() {}.getType();
@@ -477,7 +471,7 @@ public class DataSourceDispatchApi {
   public com.squareup.okhttp.Call dataSourceDispatchUpdateAsync(
       DataSourceDispatchUpdateRequest data,
       final ApiCallback<DataSourceDispatchUpdateResponse> callback,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     ProgressResponseBody.ProgressListener progressListener = null;

@@ -15,6 +15,7 @@ package com.tencent.ads.container.v3;
 import com.google.inject.Inject;
 import com.tencent.ads.ApiContainer;
 import com.tencent.ads.ApiException;
+import com.tencent.ads.Pair;
 import com.tencent.ads.anno.*;
 import com.tencent.ads.api.v3.ComponentReviewResultsApi;
 import com.tencent.ads.exception.TencentAdsResponseException;
@@ -37,7 +38,7 @@ public class ComponentReviewResultsApiContainer extends ApiContainer {
    *     response body
    */
   public ComponentReviewResultsGetResponseData componentReviewResultsGet(
-      Long accountId, List<Long> componentIdList, List<String> fields, String... headerPair)
+      Long accountId, List<Long> componentIdList, List<String> fields, Pair... headerPair)
       throws ApiException, TencentAdsResponseException {
     ComponentReviewResultsGetResponse resp =
         api.componentReviewResultsGet(accountId, componentIdList, fields, headerPair);

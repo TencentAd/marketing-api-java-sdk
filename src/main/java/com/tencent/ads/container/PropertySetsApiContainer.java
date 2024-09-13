@@ -15,6 +15,7 @@ package com.tencent.ads.container;
 import com.google.inject.Inject;
 import com.tencent.ads.ApiContainer;
 import com.tencent.ads.ApiException;
+import com.tencent.ads.Pair;
 import com.tencent.ads.anno.*;
 import com.tencent.ads.api.PropertySetsApi;
 import com.tencent.ads.exception.TencentAdsResponseException;
@@ -38,7 +39,7 @@ public class PropertySetsApiContainer extends ApiContainer {
    *     response body
    */
   public PropertySetsAddResponseData propertySetsAdd(
-      PropertySetsAddRequest data, String... headerPair)
+      PropertySetsAddRequest data, Pair... headerPair)
       throws ApiException, TencentAdsResponseException {
     PropertySetsAddResponse resp = api.propertySetsAdd(data, headerPair);
     handleResponse(gson.toJson(resp));
@@ -63,7 +64,7 @@ public class PropertySetsApiContainer extends ApiContainer {
       Long page,
       Long pageSize,
       List<String> fields,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException, TencentAdsResponseException {
     PropertySetsGetResponse resp =
         api.propertySetsGet(accountId, propertySetId, page, pageSize, fields, headerPair);

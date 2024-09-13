@@ -25,6 +25,9 @@ public class WechatChannelsAuthorizationDeleteResponseData {
   @SerializedName("finder_username")
   private String finderUsername = null;
 
+  @SerializedName("wechat_channels_account_id")
+  private String wechatChannelsAccountId = null;
+
   public WechatChannelsAuthorizationDeleteResponseData authorizationId(String authorizationId) {
     this.authorizationId = authorizationId;
     return this;
@@ -63,6 +66,26 @@ public class WechatChannelsAuthorizationDeleteResponseData {
     this.finderUsername = finderUsername;
   }
 
+  public WechatChannelsAuthorizationDeleteResponseData wechatChannelsAccountId(
+      String wechatChannelsAccountId) {
+    this.wechatChannelsAccountId = wechatChannelsAccountId;
+    return this;
+  }
+
+  /**
+   * Get wechatChannelsAccountId
+   *
+   * @return wechatChannelsAccountId
+   */
+  @ApiModelProperty(value = "")
+  public String getWechatChannelsAccountId() {
+    return wechatChannelsAccountId;
+  }
+
+  public void setWechatChannelsAccountId(String wechatChannelsAccountId) {
+    this.wechatChannelsAccountId = wechatChannelsAccountId;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -76,12 +99,15 @@ public class WechatChannelsAuthorizationDeleteResponseData {
     return Objects.equals(
             this.authorizationId, wechatChannelsAuthorizationDeleteResponseData.authorizationId)
         && Objects.equals(
-            this.finderUsername, wechatChannelsAuthorizationDeleteResponseData.finderUsername);
+            this.finderUsername, wechatChannelsAuthorizationDeleteResponseData.finderUsername)
+        && Objects.equals(
+            this.wechatChannelsAccountId,
+            wechatChannelsAuthorizationDeleteResponseData.wechatChannelsAccountId);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(authorizationId, finderUsername);
+    return Objects.hash(authorizationId, finderUsername, wechatChannelsAccountId);
   }
 
   @Override

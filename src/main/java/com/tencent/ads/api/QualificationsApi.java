@@ -68,7 +68,7 @@ public class QualificationsApi {
       QualificationsAddRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     Object localVarPostBody = data;
@@ -92,11 +92,8 @@ public class QualificationsApi {
     localVarHeaderParams.put("Content-Type", localVarContentType);
 
     if (headerPair != null && headerPair.length > 0) {
-      if (headerPair.length % 2 != 0) {
-        throw new UnsupportedOperationException("Parameter headerPair must be paired");
-      }
-      for (int i = 0; i < headerPair.length / 2; i++) {
-        localVarHeaderParams.put(headerPair[i], headerPair[i * 2 + 1]);
+      for (int i = 0; i < headerPair.length; i++) {
+        localVarHeaderParams.put(headerPair[i].getName(), headerPair[i].getValue());
       }
     }
 
@@ -136,7 +133,7 @@ public class QualificationsApi {
       QualificationsAddRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     // verify the required parameter 'data' is set
@@ -159,7 +156,7 @@ public class QualificationsApi {
    *     response body
    */
   public QualificationsAddResponse qualificationsAdd(
-      QualificationsAddRequest data, String... headerPair) throws ApiException {
+      QualificationsAddRequest data, Pair... headerPair) throws ApiException {
     ApiResponse<QualificationsAddResponse> resp = qualificationsAddWithHttpInfo(data, headerPair);
     return resp.getData();
   }
@@ -173,7 +170,7 @@ public class QualificationsApi {
    *     response body
    */
   public ApiResponse<QualificationsAddResponse> qualificationsAddWithHttpInfo(
-      QualificationsAddRequest data, String... headerPair) throws ApiException {
+      QualificationsAddRequest data, Pair... headerPair) throws ApiException {
     com.squareup.okhttp.Call call =
         qualificationsAddValidateBeforeCall(data, null, null, headerPair);
     Type localVarReturnType = new TypeToken<QualificationsAddResponse>() {}.getType();
@@ -191,7 +188,7 @@ public class QualificationsApi {
   public com.squareup.okhttp.Call qualificationsAddAsync(
       QualificationsAddRequest data,
       final ApiCallback<QualificationsAddResponse> callback,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     ProgressResponseBody.ProgressListener progressListener = null;
@@ -235,7 +232,7 @@ public class QualificationsApi {
       QualificationsDeleteRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     Object localVarPostBody = data;
@@ -259,11 +256,8 @@ public class QualificationsApi {
     localVarHeaderParams.put("Content-Type", localVarContentType);
 
     if (headerPair != null && headerPair.length > 0) {
-      if (headerPair.length % 2 != 0) {
-        throw new UnsupportedOperationException("Parameter headerPair must be paired");
-      }
-      for (int i = 0; i < headerPair.length / 2; i++) {
-        localVarHeaderParams.put(headerPair[i], headerPair[i * 2 + 1]);
+      for (int i = 0; i < headerPair.length; i++) {
+        localVarHeaderParams.put(headerPair[i].getName(), headerPair[i].getValue());
       }
     }
 
@@ -303,7 +297,7 @@ public class QualificationsApi {
       QualificationsDeleteRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     // verify the required parameter 'data' is set
@@ -326,7 +320,7 @@ public class QualificationsApi {
    *     response body
    */
   public QualificationsDeleteResponse qualificationsDelete(
-      QualificationsDeleteRequest data, String... headerPair) throws ApiException {
+      QualificationsDeleteRequest data, Pair... headerPair) throws ApiException {
     ApiResponse<QualificationsDeleteResponse> resp =
         qualificationsDeleteWithHttpInfo(data, headerPair);
     return resp.getData();
@@ -341,7 +335,7 @@ public class QualificationsApi {
    *     response body
    */
   public ApiResponse<QualificationsDeleteResponse> qualificationsDeleteWithHttpInfo(
-      QualificationsDeleteRequest data, String... headerPair) throws ApiException {
+      QualificationsDeleteRequest data, Pair... headerPair) throws ApiException {
     com.squareup.okhttp.Call call =
         qualificationsDeleteValidateBeforeCall(data, null, null, headerPair);
     Type localVarReturnType = new TypeToken<QualificationsDeleteResponse>() {}.getType();
@@ -359,7 +353,7 @@ public class QualificationsApi {
   public com.squareup.okhttp.Call qualificationsDeleteAsync(
       QualificationsDeleteRequest data,
       final ApiCallback<QualificationsDeleteResponse> callback,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     ProgressResponseBody.ProgressListener progressListener = null;
@@ -409,7 +403,7 @@ public class QualificationsApi {
       List<String> fields,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     Object localVarPostBody = null;
@@ -443,11 +437,8 @@ public class QualificationsApi {
     localVarHeaderParams.put("Content-Type", localVarContentType);
 
     if (headerPair != null && headerPair.length > 0) {
-      if (headerPair.length % 2 != 0) {
-        throw new UnsupportedOperationException("Parameter headerPair must be paired");
-      }
-      for (int i = 0; i < headerPair.length / 2; i++) {
-        localVarHeaderParams.put(headerPair[i], headerPair[i * 2 + 1]);
+      for (int i = 0; i < headerPair.length; i++) {
+        localVarHeaderParams.put(headerPair[i].getName(), headerPair[i].getValue());
       }
     }
 
@@ -490,7 +481,7 @@ public class QualificationsApi {
       List<String> fields,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     // verify the required parameter 'accountId' is set
@@ -533,7 +524,7 @@ public class QualificationsApi {
       String qualificationType,
       List<FilteringStruct> filtering,
       List<String> fields,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
     ApiResponse<QualificationsGetResponse> resp =
         qualificationsGetWithHttpInfo(accountId, qualificationType, filtering, fields, headerPair);
@@ -556,7 +547,7 @@ public class QualificationsApi {
       String qualificationType,
       List<FilteringStruct> filtering,
       List<String> fields,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
     com.squareup.okhttp.Call call =
         qualificationsGetValidateBeforeCall(
@@ -582,7 +573,7 @@ public class QualificationsApi {
       List<FilteringStruct> filtering,
       List<String> fields,
       final ApiCallback<QualificationsGetResponse> callback,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     ProgressResponseBody.ProgressListener progressListener = null;
@@ -632,7 +623,7 @@ public class QualificationsApi {
       QualificationsUpdateRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     Object localVarPostBody = data;
@@ -656,11 +647,8 @@ public class QualificationsApi {
     localVarHeaderParams.put("Content-Type", localVarContentType);
 
     if (headerPair != null && headerPair.length > 0) {
-      if (headerPair.length % 2 != 0) {
-        throw new UnsupportedOperationException("Parameter headerPair must be paired");
-      }
-      for (int i = 0; i < headerPair.length / 2; i++) {
-        localVarHeaderParams.put(headerPair[i], headerPair[i * 2 + 1]);
+      for (int i = 0; i < headerPair.length; i++) {
+        localVarHeaderParams.put(headerPair[i].getName(), headerPair[i].getValue());
       }
     }
 
@@ -700,7 +688,7 @@ public class QualificationsApi {
       QualificationsUpdateRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     // verify the required parameter 'data' is set
@@ -723,7 +711,7 @@ public class QualificationsApi {
    *     response body
    */
   public QualificationsUpdateResponse qualificationsUpdate(
-      QualificationsUpdateRequest data, String... headerPair) throws ApiException {
+      QualificationsUpdateRequest data, Pair... headerPair) throws ApiException {
     ApiResponse<QualificationsUpdateResponse> resp =
         qualificationsUpdateWithHttpInfo(data, headerPair);
     return resp.getData();
@@ -738,7 +726,7 @@ public class QualificationsApi {
    *     response body
    */
   public ApiResponse<QualificationsUpdateResponse> qualificationsUpdateWithHttpInfo(
-      QualificationsUpdateRequest data, String... headerPair) throws ApiException {
+      QualificationsUpdateRequest data, Pair... headerPair) throws ApiException {
     com.squareup.okhttp.Call call =
         qualificationsUpdateValidateBeforeCall(data, null, null, headerPair);
     Type localVarReturnType = new TypeToken<QualificationsUpdateResponse>() {}.getType();
@@ -756,7 +744,7 @@ public class QualificationsApi {
   public com.squareup.okhttp.Call qualificationsUpdateAsync(
       QualificationsUpdateRequest data,
       final ApiCallback<QualificationsUpdateResponse> callback,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     ProgressResponseBody.ProgressListener progressListener = null;

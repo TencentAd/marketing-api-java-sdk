@@ -15,6 +15,7 @@ package com.tencent.ads.container.v3;
 import com.google.inject.Inject;
 import com.tencent.ads.ApiContainer;
 import com.tencent.ads.ApiException;
+import com.tencent.ads.Pair;
 import com.tencent.ads.anno.*;
 import com.tencent.ads.api.v3.QualificationImagesApi;
 import com.tencent.ads.exception.TencentAdsResponseException;
@@ -38,7 +39,7 @@ public class QualificationImagesApiContainer extends ApiContainer {
    *     response body
    */
   public QualificationImagesAddResponseData qualificationImagesAdd(
-      Long accountId, String signature, File file, String... headerPair)
+      Long accountId, String signature, File file, Pair... headerPair)
       throws ApiException, TencentAdsResponseException {
     QualificationImagesAddResponse resp =
         api.qualificationImagesAdd(accountId, signature, file, headerPair);
@@ -62,7 +63,7 @@ public class QualificationImagesApiContainer extends ApiContainer {
       Long page,
       Long pageSize,
       List<String> fields,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException, TencentAdsResponseException {
     QualificationImagesGetResponse resp =
         api.qualificationImagesGet(accountId, imageIds, page, pageSize, fields, headerPair);

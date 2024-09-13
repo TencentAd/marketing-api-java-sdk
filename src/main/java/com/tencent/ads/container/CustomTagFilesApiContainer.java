@@ -15,6 +15,7 @@ package com.tencent.ads.container;
 import com.google.inject.Inject;
 import com.tencent.ads.ApiContainer;
 import com.tencent.ads.ApiException;
+import com.tencent.ads.Pair;
 import com.tencent.ads.anno.*;
 import com.tencent.ads.api.CustomTagFilesApi;
 import com.tencent.ads.exception.TencentAdsResponseException;
@@ -50,7 +51,7 @@ public class CustomTagFilesApiContainer extends ApiContainer {
       File file,
       String operationType,
       String openAppId,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException, TencentAdsResponseException {
     CustomTagFilesAddResponse resp =
         api.customTagFilesAdd(
@@ -77,7 +78,7 @@ public class CustomTagFilesApiContainer extends ApiContainer {
       Long page,
       Long pageSize,
       List<String> fields,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException, TencentAdsResponseException {
     CustomTagFilesGetResponse resp =
         api.customTagFilesGet(accountId, filtering, page, pageSize, fields, headerPair);

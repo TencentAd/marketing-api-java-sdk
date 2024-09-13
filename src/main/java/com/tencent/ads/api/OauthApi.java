@@ -73,7 +73,7 @@ public class OauthApi {
       List<String> fields,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     Object localVarPostBody = null;
@@ -110,11 +110,8 @@ public class OauthApi {
     localVarHeaderParams.put("Content-Type", localVarContentType);
 
     if (headerPair != null && headerPair.length > 0) {
-      if (headerPair.length % 2 != 0) {
-        throw new UnsupportedOperationException("Parameter headerPair must be paired");
-      }
-      for (int i = 0; i < headerPair.length / 2; i++) {
-        localVarHeaderParams.put(headerPair[i], headerPair[i * 2 + 1]);
+      for (int i = 0; i < headerPair.length; i++) {
+        localVarHeaderParams.put(headerPair[i].getName(), headerPair[i].getValue());
       }
     }
 
@@ -160,7 +157,7 @@ public class OauthApi {
       List<String> fields,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     // verify the required parameter 'clientId' is set
@@ -212,7 +209,7 @@ public class OauthApi {
       String accountType,
       Long accountDisplayNumber,
       List<String> fields,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
     ApiResponse<String> resp =
         oauthAuthorizeWithHttpInfo(
@@ -249,7 +246,7 @@ public class OauthApi {
       String accountType,
       Long accountDisplayNumber,
       List<String> fields,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
     com.squareup.okhttp.Call call =
         oauthAuthorizeValidateBeforeCall(
@@ -290,7 +287,7 @@ public class OauthApi {
       Long accountDisplayNumber,
       List<String> fields,
       final ApiCallback<String> callback,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     ProgressResponseBody.ProgressListener progressListener = null;
@@ -354,7 +351,7 @@ public class OauthApi {
       String redirectUri,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     Object localVarPostBody = null;
@@ -391,11 +388,8 @@ public class OauthApi {
     localVarHeaderParams.put("Content-Type", localVarContentType);
 
     if (headerPair != null && headerPair.length > 0) {
-      if (headerPair.length % 2 != 0) {
-        throw new UnsupportedOperationException("Parameter headerPair must be paired");
-      }
-      for (int i = 0; i < headerPair.length / 2; i++) {
-        localVarHeaderParams.put(headerPair[i], headerPair[i * 2 + 1]);
+      for (int i = 0; i < headerPair.length; i++) {
+        localVarHeaderParams.put(headerPair[i].getName(), headerPair[i].getValue());
       }
     }
 
@@ -440,7 +434,7 @@ public class OauthApi {
       String redirectUri,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     // verify the required parameter 'clientId' is set
@@ -496,7 +490,7 @@ public class OauthApi {
       String authorizationCode,
       String refreshToken,
       String redirectUri,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
     ApiResponse<OauthTokenResponse> resp =
         oauthTokenWithHttpInfo(
@@ -531,7 +525,7 @@ public class OauthApi {
       String authorizationCode,
       String refreshToken,
       String redirectUri,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
     com.squareup.okhttp.Call call =
         oauthTokenValidateBeforeCall(
@@ -570,7 +564,7 @@ public class OauthApi {
       String refreshToken,
       String redirectUri,
       final ApiCallback<OauthTokenResponse> callback,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     ProgressResponseBody.ProgressListener progressListener = null;

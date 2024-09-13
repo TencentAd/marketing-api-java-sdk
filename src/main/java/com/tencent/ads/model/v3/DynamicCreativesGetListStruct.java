@@ -54,9 +54,6 @@ public class DynamicCreativesGetListStruct {
   @SerializedName("configured_status")
   private ConfiguredStatus configuredStatus = null;
 
-  @SerializedName("enable_breakthrough_siteset")
-  private Boolean enableBreakthroughSiteset = null;
-
   @SerializedName("is_deleted")
   private Boolean isDeleted = null;
 
@@ -68,6 +65,12 @@ public class DynamicCreativesGetListStruct {
 
   @SerializedName("marketing_asset_verification")
   private MarketingAssetVerification marketingAssetVerification = null;
+
+  @SerializedName("source")
+  private AdCreativeSource source = null;
+
+  @SerializedName("asset_inconsistent_status")
+  private AssetInconsistentStatus assetInconsistentStatus = null;
 
   public DynamicCreativesGetListStruct adgroupId(Long adgroupId) {
     this.adgroupId = adgroupId;
@@ -279,26 +282,6 @@ public class DynamicCreativesGetListStruct {
     this.configuredStatus = configuredStatus;
   }
 
-  public DynamicCreativesGetListStruct enableBreakthroughSiteset(
-      Boolean enableBreakthroughSiteset) {
-    this.enableBreakthroughSiteset = enableBreakthroughSiteset;
-    return this;
-  }
-
-  /**
-   * Get enableBreakthroughSiteset
-   *
-   * @return enableBreakthroughSiteset
-   */
-  @ApiModelProperty(value = "")
-  public Boolean isEnableBreakthroughSiteset() {
-    return enableBreakthroughSiteset;
-  }
-
-  public void setEnableBreakthroughSiteset(Boolean enableBreakthroughSiteset) {
-    this.enableBreakthroughSiteset = enableBreakthroughSiteset;
-  }
-
   public DynamicCreativesGetListStruct isDeleted(Boolean isDeleted) {
     this.isDeleted = isDeleted;
     return this;
@@ -376,6 +359,45 @@ public class DynamicCreativesGetListStruct {
     this.marketingAssetVerification = marketingAssetVerification;
   }
 
+  public DynamicCreativesGetListStruct source(AdCreativeSource source) {
+    this.source = source;
+    return this;
+  }
+
+  /**
+   * Get source
+   *
+   * @return source
+   */
+  @ApiModelProperty(value = "")
+  public AdCreativeSource getSource() {
+    return source;
+  }
+
+  public void setSource(AdCreativeSource source) {
+    this.source = source;
+  }
+
+  public DynamicCreativesGetListStruct assetInconsistentStatus(
+      AssetInconsistentStatus assetInconsistentStatus) {
+    this.assetInconsistentStatus = assetInconsistentStatus;
+    return this;
+  }
+
+  /**
+   * Get assetInconsistentStatus
+   *
+   * @return assetInconsistentStatus
+   */
+  @ApiModelProperty(value = "")
+  public AssetInconsistentStatus getAssetInconsistentStatus() {
+    return assetInconsistentStatus;
+  }
+
+  public void setAssetInconsistentStatus(AssetInconsistentStatus assetInconsistentStatus) {
+    this.assetInconsistentStatus = assetInconsistentStatus;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -399,14 +421,15 @@ public class DynamicCreativesGetListStruct {
         && Objects.equals(this.clickTrackingUrl, dynamicCreativesGetListStruct.clickTrackingUrl)
         && Objects.equals(this.pageTrackUrl, dynamicCreativesGetListStruct.pageTrackUrl)
         && Objects.equals(this.configuredStatus, dynamicCreativesGetListStruct.configuredStatus)
-        && Objects.equals(
-            this.enableBreakthroughSiteset, dynamicCreativesGetListStruct.enableBreakthroughSiteset)
         && Objects.equals(this.isDeleted, dynamicCreativesGetListStruct.isDeleted)
         && Objects.equals(this.createdTime, dynamicCreativesGetListStruct.createdTime)
         && Objects.equals(this.lastModifiedTime, dynamicCreativesGetListStruct.lastModifiedTime)
         && Objects.equals(
             this.marketingAssetVerification,
-            dynamicCreativesGetListStruct.marketingAssetVerification);
+            dynamicCreativesGetListStruct.marketingAssetVerification)
+        && Objects.equals(this.source, dynamicCreativesGetListStruct.source)
+        && Objects.equals(
+            this.assetInconsistentStatus, dynamicCreativesGetListStruct.assetInconsistentStatus);
   }
 
   @Override
@@ -423,11 +446,12 @@ public class DynamicCreativesGetListStruct {
         clickTrackingUrl,
         pageTrackUrl,
         configuredStatus,
-        enableBreakthroughSiteset,
         isDeleted,
         createdTime,
         lastModifiedTime,
-        marketingAssetVerification);
+        marketingAssetVerification,
+        source,
+        assetInconsistentStatus);
   }
 
   @Override

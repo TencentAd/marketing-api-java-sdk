@@ -64,7 +64,7 @@ public class PropertyFileSessionsApi {
       PropertyFileSessionsAddRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     Object localVarPostBody = data;
@@ -88,11 +88,8 @@ public class PropertyFileSessionsApi {
     localVarHeaderParams.put("Content-Type", localVarContentType);
 
     if (headerPair != null && headerPair.length > 0) {
-      if (headerPair.length % 2 != 0) {
-        throw new UnsupportedOperationException("Parameter headerPair must be paired");
-      }
-      for (int i = 0; i < headerPair.length / 2; i++) {
-        localVarHeaderParams.put(headerPair[i], headerPair[i * 2 + 1]);
+      for (int i = 0; i < headerPair.length; i++) {
+        localVarHeaderParams.put(headerPair[i].getName(), headerPair[i].getValue());
       }
     }
 
@@ -132,7 +129,7 @@ public class PropertyFileSessionsApi {
       PropertyFileSessionsAddRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     // verify the required parameter 'data' is set
@@ -155,7 +152,7 @@ public class PropertyFileSessionsApi {
    *     response body
    */
   public PropertyFileSessionsAddResponse propertyFileSessionsAdd(
-      PropertyFileSessionsAddRequest data, String... headerPair) throws ApiException {
+      PropertyFileSessionsAddRequest data, Pair... headerPair) throws ApiException {
     ApiResponse<PropertyFileSessionsAddResponse> resp =
         propertyFileSessionsAddWithHttpInfo(data, headerPair);
     return resp.getData();
@@ -170,7 +167,7 @@ public class PropertyFileSessionsApi {
    *     response body
    */
   public ApiResponse<PropertyFileSessionsAddResponse> propertyFileSessionsAddWithHttpInfo(
-      PropertyFileSessionsAddRequest data, String... headerPair) throws ApiException {
+      PropertyFileSessionsAddRequest data, Pair... headerPair) throws ApiException {
     com.squareup.okhttp.Call call =
         propertyFileSessionsAddValidateBeforeCall(data, null, null, headerPair);
     Type localVarReturnType = new TypeToken<PropertyFileSessionsAddResponse>() {}.getType();
@@ -188,7 +185,7 @@ public class PropertyFileSessionsApi {
   public com.squareup.okhttp.Call propertyFileSessionsAddAsync(
       PropertyFileSessionsAddRequest data,
       final ApiCallback<PropertyFileSessionsAddResponse> callback,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     ProgressResponseBody.ProgressListener progressListener = null;
@@ -232,7 +229,7 @@ public class PropertyFileSessionsApi {
       PropertyFileSessionsUpdateRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     Object localVarPostBody = data;
@@ -256,11 +253,8 @@ public class PropertyFileSessionsApi {
     localVarHeaderParams.put("Content-Type", localVarContentType);
 
     if (headerPair != null && headerPair.length > 0) {
-      if (headerPair.length % 2 != 0) {
-        throw new UnsupportedOperationException("Parameter headerPair must be paired");
-      }
-      for (int i = 0; i < headerPair.length / 2; i++) {
-        localVarHeaderParams.put(headerPair[i], headerPair[i * 2 + 1]);
+      for (int i = 0; i < headerPair.length; i++) {
+        localVarHeaderParams.put(headerPair[i].getName(), headerPair[i].getValue());
       }
     }
 
@@ -300,7 +294,7 @@ public class PropertyFileSessionsApi {
       PropertyFileSessionsUpdateRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     // verify the required parameter 'data' is set
@@ -323,7 +317,7 @@ public class PropertyFileSessionsApi {
    *     response body
    */
   public PropertyFileSessionsUpdateResponse propertyFileSessionsUpdate(
-      PropertyFileSessionsUpdateRequest data, String... headerPair) throws ApiException {
+      PropertyFileSessionsUpdateRequest data, Pair... headerPair) throws ApiException {
     ApiResponse<PropertyFileSessionsUpdateResponse> resp =
         propertyFileSessionsUpdateWithHttpInfo(data, headerPair);
     return resp.getData();
@@ -338,7 +332,7 @@ public class PropertyFileSessionsApi {
    *     response body
    */
   public ApiResponse<PropertyFileSessionsUpdateResponse> propertyFileSessionsUpdateWithHttpInfo(
-      PropertyFileSessionsUpdateRequest data, String... headerPair) throws ApiException {
+      PropertyFileSessionsUpdateRequest data, Pair... headerPair) throws ApiException {
     com.squareup.okhttp.Call call =
         propertyFileSessionsUpdateValidateBeforeCall(data, null, null, headerPair);
     Type localVarReturnType = new TypeToken<PropertyFileSessionsUpdateResponse>() {}.getType();
@@ -356,7 +350,7 @@ public class PropertyFileSessionsApi {
   public com.squareup.okhttp.Call propertyFileSessionsUpdateAsync(
       PropertyFileSessionsUpdateRequest data,
       final ApiCallback<PropertyFileSessionsUpdateResponse> callback,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     ProgressResponseBody.ProgressListener progressListener = null;

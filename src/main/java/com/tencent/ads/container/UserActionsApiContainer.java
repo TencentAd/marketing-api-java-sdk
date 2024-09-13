@@ -15,6 +15,7 @@ package com.tencent.ads.container;
 import com.google.inject.Inject;
 import com.tencent.ads.ApiContainer;
 import com.tencent.ads.ApiException;
+import com.tencent.ads.Pair;
 import com.tencent.ads.anno.*;
 import com.tencent.ads.api.UserActionsApi;
 import com.tencent.ads.exception.TencentAdsResponseException;
@@ -33,7 +34,7 @@ public class UserActionsApiContainer extends ApiContainer {
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
-  public UserActionsAddResponse userActionsAdd(UserActionsAddRequest data, String... headerPair)
+  public UserActionsAddResponse userActionsAdd(UserActionsAddRequest data, Pair... headerPair)
       throws ApiException, TencentAdsResponseException {
     UserActionsAddResponse resp = api.userActionsAdd(data, headerPair);
     handleResponse(gson.toJson(resp));

@@ -29,6 +29,10 @@ public class GetAdgroups {
 
   public List<String> fields = Arrays.asList("adgroup_id", "campaign_id", "adgroup_name");
 
+  public String paginationMode = null;
+
+  public String cursor = null;
+
   public void init() {
     this.tencentAds = TencentAds.getInstance();
     this.tencentAds.init(
@@ -50,7 +54,10 @@ public class GetAdgroups {
 
   public AdgroupsGetResponseData getAdgroups() throws Exception {
     AdgroupsGetResponseData response =
-        tencentAds.adgroups().adgroupsGet(accountId, filtering, page, pageSize, isDeleted, fields);
+        tencentAds
+            .adgroups()
+            .adgroupsGet(
+                accountId, filtering, page, pageSize, isDeleted, fields, paginationMode, cursor);
     return response;
   }
 

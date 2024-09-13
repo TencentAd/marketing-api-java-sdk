@@ -62,7 +62,7 @@ public class FundTransferApi {
       FundTransferAddRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     Object localVarPostBody = data;
@@ -86,11 +86,8 @@ public class FundTransferApi {
     localVarHeaderParams.put("Content-Type", localVarContentType);
 
     if (headerPair != null && headerPair.length > 0) {
-      if (headerPair.length % 2 != 0) {
-        throw new UnsupportedOperationException("Parameter headerPair must be paired");
-      }
-      for (int i = 0; i < headerPair.length / 2; i++) {
-        localVarHeaderParams.put(headerPair[i], headerPair[i * 2 + 1]);
+      for (int i = 0; i < headerPair.length; i++) {
+        localVarHeaderParams.put(headerPair[i].getName(), headerPair[i].getValue());
       }
     }
 
@@ -130,7 +127,7 @@ public class FundTransferApi {
       FundTransferAddRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     // verify the required parameter 'data' is set
@@ -152,7 +149,7 @@ public class FundTransferApi {
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
-  public FundTransferAddResponse fundTransferAdd(FundTransferAddRequest data, String... headerPair)
+  public FundTransferAddResponse fundTransferAdd(FundTransferAddRequest data, Pair... headerPair)
       throws ApiException {
     ApiResponse<FundTransferAddResponse> resp = fundTransferAddWithHttpInfo(data, headerPair);
     return resp.getData();
@@ -167,7 +164,7 @@ public class FundTransferApi {
    *     response body
    */
   public ApiResponse<FundTransferAddResponse> fundTransferAddWithHttpInfo(
-      FundTransferAddRequest data, String... headerPair) throws ApiException {
+      FundTransferAddRequest data, Pair... headerPair) throws ApiException {
     com.squareup.okhttp.Call call = fundTransferAddValidateBeforeCall(data, null, null, headerPair);
     Type localVarReturnType = new TypeToken<FundTransferAddResponse>() {}.getType();
     return apiClient.execute(call, localVarReturnType);
@@ -184,7 +181,7 @@ public class FundTransferApi {
   public com.squareup.okhttp.Call fundTransferAddAsync(
       FundTransferAddRequest data,
       final ApiCallback<FundTransferAddResponse> callback,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     ProgressResponseBody.ProgressListener progressListener = null;

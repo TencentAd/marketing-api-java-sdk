@@ -78,7 +78,7 @@ public class CampaignsApi {
       CampaignsAddRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     Object localVarPostBody = data;
@@ -102,11 +102,8 @@ public class CampaignsApi {
     localVarHeaderParams.put("Content-Type", localVarContentType);
 
     if (headerPair != null && headerPair.length > 0) {
-      if (headerPair.length % 2 != 0) {
-        throw new UnsupportedOperationException("Parameter headerPair must be paired");
-      }
-      for (int i = 0; i < headerPair.length / 2; i++) {
-        localVarHeaderParams.put(headerPair[i], headerPair[i * 2 + 1]);
+      for (int i = 0; i < headerPair.length; i++) {
+        localVarHeaderParams.put(headerPair[i].getName(), headerPair[i].getValue());
       }
     }
 
@@ -146,7 +143,7 @@ public class CampaignsApi {
       CampaignsAddRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     // verify the required parameter 'data' is set
@@ -168,7 +165,7 @@ public class CampaignsApi {
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
-  public CampaignsAddResponse campaignsAdd(CampaignsAddRequest data, String... headerPair)
+  public CampaignsAddResponse campaignsAdd(CampaignsAddRequest data, Pair... headerPair)
       throws ApiException {
     ApiResponse<CampaignsAddResponse> resp = campaignsAddWithHttpInfo(data, headerPair);
     return resp.getData();
@@ -183,7 +180,7 @@ public class CampaignsApi {
    *     response body
    */
   public ApiResponse<CampaignsAddResponse> campaignsAddWithHttpInfo(
-      CampaignsAddRequest data, String... headerPair) throws ApiException {
+      CampaignsAddRequest data, Pair... headerPair) throws ApiException {
     com.squareup.okhttp.Call call = campaignsAddValidateBeforeCall(data, null, null, headerPair);
     Type localVarReturnType = new TypeToken<CampaignsAddResponse>() {}.getType();
     return apiClient.execute(call, localVarReturnType);
@@ -200,7 +197,7 @@ public class CampaignsApi {
   public com.squareup.okhttp.Call campaignsAddAsync(
       CampaignsAddRequest data,
       final ApiCallback<CampaignsAddResponse> callback,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     ProgressResponseBody.ProgressListener progressListener = null;
@@ -243,7 +240,7 @@ public class CampaignsApi {
       CampaignsAddNegativewordRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     Object localVarPostBody = data;
@@ -267,11 +264,8 @@ public class CampaignsApi {
     localVarHeaderParams.put("Content-Type", localVarContentType);
 
     if (headerPair != null && headerPair.length > 0) {
-      if (headerPair.length % 2 != 0) {
-        throw new UnsupportedOperationException("Parameter headerPair must be paired");
-      }
-      for (int i = 0; i < headerPair.length / 2; i++) {
-        localVarHeaderParams.put(headerPair[i], headerPair[i * 2 + 1]);
+      for (int i = 0; i < headerPair.length; i++) {
+        localVarHeaderParams.put(headerPair[i].getName(), headerPair[i].getValue());
       }
     }
 
@@ -311,7 +305,7 @@ public class CampaignsApi {
       CampaignsAddNegativewordRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     // verify the required parameter 'data' is set
@@ -334,7 +328,7 @@ public class CampaignsApi {
    *     response body
    */
   public CampaignsAddNegativewordResponse campaignsAddNegativeword(
-      CampaignsAddNegativewordRequest data, String... headerPair) throws ApiException {
+      CampaignsAddNegativewordRequest data, Pair... headerPair) throws ApiException {
     ApiResponse<CampaignsAddNegativewordResponse> resp =
         campaignsAddNegativewordWithHttpInfo(data, headerPair);
     return resp.getData();
@@ -349,7 +343,7 @@ public class CampaignsApi {
    *     response body
    */
   public ApiResponse<CampaignsAddNegativewordResponse> campaignsAddNegativewordWithHttpInfo(
-      CampaignsAddNegativewordRequest data, String... headerPair) throws ApiException {
+      CampaignsAddNegativewordRequest data, Pair... headerPair) throws ApiException {
     com.squareup.okhttp.Call call =
         campaignsAddNegativewordValidateBeforeCall(data, null, null, headerPair);
     Type localVarReturnType = new TypeToken<CampaignsAddNegativewordResponse>() {}.getType();
@@ -367,7 +361,7 @@ public class CampaignsApi {
   public com.squareup.okhttp.Call campaignsAddNegativewordAsync(
       CampaignsAddNegativewordRequest data,
       final ApiCallback<CampaignsAddNegativewordResponse> callback,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     ProgressResponseBody.ProgressListener progressListener = null;
@@ -411,7 +405,7 @@ public class CampaignsApi {
       CampaignsDeleteRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     Object localVarPostBody = data;
@@ -435,11 +429,8 @@ public class CampaignsApi {
     localVarHeaderParams.put("Content-Type", localVarContentType);
 
     if (headerPair != null && headerPair.length > 0) {
-      if (headerPair.length % 2 != 0) {
-        throw new UnsupportedOperationException("Parameter headerPair must be paired");
-      }
-      for (int i = 0; i < headerPair.length / 2; i++) {
-        localVarHeaderParams.put(headerPair[i], headerPair[i * 2 + 1]);
+      for (int i = 0; i < headerPair.length; i++) {
+        localVarHeaderParams.put(headerPair[i].getName(), headerPair[i].getValue());
       }
     }
 
@@ -479,7 +470,7 @@ public class CampaignsApi {
       CampaignsDeleteRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     // verify the required parameter 'data' is set
@@ -501,7 +492,7 @@ public class CampaignsApi {
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
-  public CampaignsDeleteResponse campaignsDelete(CampaignsDeleteRequest data, String... headerPair)
+  public CampaignsDeleteResponse campaignsDelete(CampaignsDeleteRequest data, Pair... headerPair)
       throws ApiException {
     ApiResponse<CampaignsDeleteResponse> resp = campaignsDeleteWithHttpInfo(data, headerPair);
     return resp.getData();
@@ -516,7 +507,7 @@ public class CampaignsApi {
    *     response body
    */
   public ApiResponse<CampaignsDeleteResponse> campaignsDeleteWithHttpInfo(
-      CampaignsDeleteRequest data, String... headerPair) throws ApiException {
+      CampaignsDeleteRequest data, Pair... headerPair) throws ApiException {
     com.squareup.okhttp.Call call = campaignsDeleteValidateBeforeCall(data, null, null, headerPair);
     Type localVarReturnType = new TypeToken<CampaignsDeleteResponse>() {}.getType();
     return apiClient.execute(call, localVarReturnType);
@@ -533,7 +524,7 @@ public class CampaignsApi {
   public com.squareup.okhttp.Call campaignsDeleteAsync(
       CampaignsDeleteRequest data,
       final ApiCallback<CampaignsDeleteResponse> callback,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     ProgressResponseBody.ProgressListener progressListener = null;
@@ -589,7 +580,7 @@ public class CampaignsApi {
       List<String> fields,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     Object localVarPostBody = null;
@@ -629,11 +620,8 @@ public class CampaignsApi {
     localVarHeaderParams.put("Content-Type", localVarContentType);
 
     if (headerPair != null && headerPair.length > 0) {
-      if (headerPair.length % 2 != 0) {
-        throw new UnsupportedOperationException("Parameter headerPair must be paired");
-      }
-      for (int i = 0; i < headerPair.length / 2; i++) {
-        localVarHeaderParams.put(headerPair[i], headerPair[i * 2 + 1]);
+      for (int i = 0; i < headerPair.length; i++) {
+        localVarHeaderParams.put(headerPair[i].getName(), headerPair[i].getValue());
       }
     }
 
@@ -679,7 +667,7 @@ public class CampaignsApi {
       List<String> fields,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     // verify the required parameter 'accountId' is set
@@ -725,7 +713,7 @@ public class CampaignsApi {
       Boolean isDeleted,
       Boolean weixinOfficialAccountsUpgradeEnabled,
       List<String> fields,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
     ApiResponse<CampaignsGetResponse> resp =
         campaignsGetWithHttpInfo(
@@ -762,7 +750,7 @@ public class CampaignsApi {
       Boolean isDeleted,
       Boolean weixinOfficialAccountsUpgradeEnabled,
       List<String> fields,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
     com.squareup.okhttp.Call call =
         campaignsGetValidateBeforeCall(
@@ -803,7 +791,7 @@ public class CampaignsApi {
       Boolean weixinOfficialAccountsUpgradeEnabled,
       List<String> fields,
       final ApiCallback<CampaignsGetResponse> callback,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     ProgressResponseBody.ProgressListener progressListener = null;
@@ -856,7 +844,7 @@ public class CampaignsApi {
       CampaignsGetNegativewordRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     Object localVarPostBody = data;
@@ -880,11 +868,8 @@ public class CampaignsApi {
     localVarHeaderParams.put("Content-Type", localVarContentType);
 
     if (headerPair != null && headerPair.length > 0) {
-      if (headerPair.length % 2 != 0) {
-        throw new UnsupportedOperationException("Parameter headerPair must be paired");
-      }
-      for (int i = 0; i < headerPair.length / 2; i++) {
-        localVarHeaderParams.put(headerPair[i], headerPair[i * 2 + 1]);
+      for (int i = 0; i < headerPair.length; i++) {
+        localVarHeaderParams.put(headerPair[i].getName(), headerPair[i].getValue());
       }
     }
 
@@ -924,7 +909,7 @@ public class CampaignsApi {
       CampaignsGetNegativewordRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     // verify the required parameter 'data' is set
@@ -947,7 +932,7 @@ public class CampaignsApi {
    *     response body
    */
   public CampaignsGetNegativewordResponse campaignsGetNegativeword(
-      CampaignsGetNegativewordRequest data, String... headerPair) throws ApiException {
+      CampaignsGetNegativewordRequest data, Pair... headerPair) throws ApiException {
     ApiResponse<CampaignsGetNegativewordResponse> resp =
         campaignsGetNegativewordWithHttpInfo(data, headerPair);
     return resp.getData();
@@ -962,7 +947,7 @@ public class CampaignsApi {
    *     response body
    */
   public ApiResponse<CampaignsGetNegativewordResponse> campaignsGetNegativewordWithHttpInfo(
-      CampaignsGetNegativewordRequest data, String... headerPair) throws ApiException {
+      CampaignsGetNegativewordRequest data, Pair... headerPair) throws ApiException {
     com.squareup.okhttp.Call call =
         campaignsGetNegativewordValidateBeforeCall(data, null, null, headerPair);
     Type localVarReturnType = new TypeToken<CampaignsGetNegativewordResponse>() {}.getType();
@@ -980,7 +965,7 @@ public class CampaignsApi {
   public com.squareup.okhttp.Call campaignsGetNegativewordAsync(
       CampaignsGetNegativewordRequest data,
       final ApiCallback<CampaignsGetNegativewordResponse> callback,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     ProgressResponseBody.ProgressListener progressListener = null;
@@ -1024,7 +1009,7 @@ public class CampaignsApi {
       CampaignsUpdateRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     Object localVarPostBody = data;
@@ -1048,11 +1033,8 @@ public class CampaignsApi {
     localVarHeaderParams.put("Content-Type", localVarContentType);
 
     if (headerPair != null && headerPair.length > 0) {
-      if (headerPair.length % 2 != 0) {
-        throw new UnsupportedOperationException("Parameter headerPair must be paired");
-      }
-      for (int i = 0; i < headerPair.length / 2; i++) {
-        localVarHeaderParams.put(headerPair[i], headerPair[i * 2 + 1]);
+      for (int i = 0; i < headerPair.length; i++) {
+        localVarHeaderParams.put(headerPair[i].getName(), headerPair[i].getValue());
       }
     }
 
@@ -1092,7 +1074,7 @@ public class CampaignsApi {
       CampaignsUpdateRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     // verify the required parameter 'data' is set
@@ -1114,7 +1096,7 @@ public class CampaignsApi {
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
-  public CampaignsUpdateResponse campaignsUpdate(CampaignsUpdateRequest data, String... headerPair)
+  public CampaignsUpdateResponse campaignsUpdate(CampaignsUpdateRequest data, Pair... headerPair)
       throws ApiException {
     ApiResponse<CampaignsUpdateResponse> resp = campaignsUpdateWithHttpInfo(data, headerPair);
     return resp.getData();
@@ -1129,7 +1111,7 @@ public class CampaignsApi {
    *     response body
    */
   public ApiResponse<CampaignsUpdateResponse> campaignsUpdateWithHttpInfo(
-      CampaignsUpdateRequest data, String... headerPair) throws ApiException {
+      CampaignsUpdateRequest data, Pair... headerPair) throws ApiException {
     com.squareup.okhttp.Call call = campaignsUpdateValidateBeforeCall(data, null, null, headerPair);
     Type localVarReturnType = new TypeToken<CampaignsUpdateResponse>() {}.getType();
     return apiClient.execute(call, localVarReturnType);
@@ -1146,7 +1128,7 @@ public class CampaignsApi {
   public com.squareup.okhttp.Call campaignsUpdateAsync(
       CampaignsUpdateRequest data,
       final ApiCallback<CampaignsUpdateResponse> callback,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     ProgressResponseBody.ProgressListener progressListener = null;
@@ -1190,7 +1172,7 @@ public class CampaignsApi {
       CampaignsUpdateConfiguredStatusRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     Object localVarPostBody = data;
@@ -1214,11 +1196,8 @@ public class CampaignsApi {
     localVarHeaderParams.put("Content-Type", localVarContentType);
 
     if (headerPair != null && headerPair.length > 0) {
-      if (headerPair.length % 2 != 0) {
-        throw new UnsupportedOperationException("Parameter headerPair must be paired");
-      }
-      for (int i = 0; i < headerPair.length / 2; i++) {
-        localVarHeaderParams.put(headerPair[i], headerPair[i * 2 + 1]);
+      for (int i = 0; i < headerPair.length; i++) {
+        localVarHeaderParams.put(headerPair[i].getName(), headerPair[i].getValue());
       }
     }
 
@@ -1258,7 +1237,7 @@ public class CampaignsApi {
       CampaignsUpdateConfiguredStatusRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     // verify the required parameter 'data' is set
@@ -1282,7 +1261,7 @@ public class CampaignsApi {
    *     response body
    */
   public CampaignsUpdateConfiguredStatusResponse campaignsUpdateConfiguredStatus(
-      CampaignsUpdateConfiguredStatusRequest data, String... headerPair) throws ApiException {
+      CampaignsUpdateConfiguredStatusRequest data, Pair... headerPair) throws ApiException {
     ApiResponse<CampaignsUpdateConfiguredStatusResponse> resp =
         campaignsUpdateConfiguredStatusWithHttpInfo(data, headerPair);
     return resp.getData();
@@ -1298,7 +1277,7 @@ public class CampaignsApi {
    */
   public ApiResponse<CampaignsUpdateConfiguredStatusResponse>
       campaignsUpdateConfiguredStatusWithHttpInfo(
-          CampaignsUpdateConfiguredStatusRequest data, String... headerPair) throws ApiException {
+          CampaignsUpdateConfiguredStatusRequest data, Pair... headerPair) throws ApiException {
     com.squareup.okhttp.Call call =
         campaignsUpdateConfiguredStatusValidateBeforeCall(data, null, null, headerPair);
     Type localVarReturnType = new TypeToken<CampaignsUpdateConfiguredStatusResponse>() {}.getType();
@@ -1316,7 +1295,7 @@ public class CampaignsApi {
   public com.squareup.okhttp.Call campaignsUpdateConfiguredStatusAsync(
       CampaignsUpdateConfiguredStatusRequest data,
       final ApiCallback<CampaignsUpdateConfiguredStatusResponse> callback,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     ProgressResponseBody.ProgressListener progressListener = null;
@@ -1360,7 +1339,7 @@ public class CampaignsApi {
       CampaignsUpdateDailyBudgetRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     Object localVarPostBody = data;
@@ -1384,11 +1363,8 @@ public class CampaignsApi {
     localVarHeaderParams.put("Content-Type", localVarContentType);
 
     if (headerPair != null && headerPair.length > 0) {
-      if (headerPair.length % 2 != 0) {
-        throw new UnsupportedOperationException("Parameter headerPair must be paired");
-      }
-      for (int i = 0; i < headerPair.length / 2; i++) {
-        localVarHeaderParams.put(headerPair[i], headerPair[i * 2 + 1]);
+      for (int i = 0; i < headerPair.length; i++) {
+        localVarHeaderParams.put(headerPair[i].getName(), headerPair[i].getValue());
       }
     }
 
@@ -1428,7 +1404,7 @@ public class CampaignsApi {
       CampaignsUpdateDailyBudgetRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     // verify the required parameter 'data' is set
@@ -1451,7 +1427,7 @@ public class CampaignsApi {
    *     response body
    */
   public CampaignsUpdateDailyBudgetResponse campaignsUpdateDailyBudget(
-      CampaignsUpdateDailyBudgetRequest data, String... headerPair) throws ApiException {
+      CampaignsUpdateDailyBudgetRequest data, Pair... headerPair) throws ApiException {
     ApiResponse<CampaignsUpdateDailyBudgetResponse> resp =
         campaignsUpdateDailyBudgetWithHttpInfo(data, headerPair);
     return resp.getData();
@@ -1466,7 +1442,7 @@ public class CampaignsApi {
    *     response body
    */
   public ApiResponse<CampaignsUpdateDailyBudgetResponse> campaignsUpdateDailyBudgetWithHttpInfo(
-      CampaignsUpdateDailyBudgetRequest data, String... headerPair) throws ApiException {
+      CampaignsUpdateDailyBudgetRequest data, Pair... headerPair) throws ApiException {
     com.squareup.okhttp.Call call =
         campaignsUpdateDailyBudgetValidateBeforeCall(data, null, null, headerPair);
     Type localVarReturnType = new TypeToken<CampaignsUpdateDailyBudgetResponse>() {}.getType();
@@ -1484,7 +1460,7 @@ public class CampaignsApi {
   public com.squareup.okhttp.Call campaignsUpdateDailyBudgetAsync(
       CampaignsUpdateDailyBudgetRequest data,
       final ApiCallback<CampaignsUpdateDailyBudgetResponse> callback,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     ProgressResponseBody.ProgressListener progressListener = null;
@@ -1528,7 +1504,7 @@ public class CampaignsApi {
       CampaignsUpdateNegativewordRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     Object localVarPostBody = data;
@@ -1552,11 +1528,8 @@ public class CampaignsApi {
     localVarHeaderParams.put("Content-Type", localVarContentType);
 
     if (headerPair != null && headerPair.length > 0) {
-      if (headerPair.length % 2 != 0) {
-        throw new UnsupportedOperationException("Parameter headerPair must be paired");
-      }
-      for (int i = 0; i < headerPair.length / 2; i++) {
-        localVarHeaderParams.put(headerPair[i], headerPair[i * 2 + 1]);
+      for (int i = 0; i < headerPair.length; i++) {
+        localVarHeaderParams.put(headerPair[i].getName(), headerPair[i].getValue());
       }
     }
 
@@ -1596,7 +1569,7 @@ public class CampaignsApi {
       CampaignsUpdateNegativewordRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     // verify the required parameter 'data' is set
@@ -1620,7 +1593,7 @@ public class CampaignsApi {
    *     response body
    */
   public CampaignsUpdateNegativewordResponse campaignsUpdateNegativeword(
-      CampaignsUpdateNegativewordRequest data, String... headerPair) throws ApiException {
+      CampaignsUpdateNegativewordRequest data, Pair... headerPair) throws ApiException {
     ApiResponse<CampaignsUpdateNegativewordResponse> resp =
         campaignsUpdateNegativewordWithHttpInfo(data, headerPair);
     return resp.getData();
@@ -1635,7 +1608,7 @@ public class CampaignsApi {
    *     response body
    */
   public ApiResponse<CampaignsUpdateNegativewordResponse> campaignsUpdateNegativewordWithHttpInfo(
-      CampaignsUpdateNegativewordRequest data, String... headerPair) throws ApiException {
+      CampaignsUpdateNegativewordRequest data, Pair... headerPair) throws ApiException {
     com.squareup.okhttp.Call call =
         campaignsUpdateNegativewordValidateBeforeCall(data, null, null, headerPair);
     Type localVarReturnType = new TypeToken<CampaignsUpdateNegativewordResponse>() {}.getType();
@@ -1653,7 +1626,7 @@ public class CampaignsApi {
   public com.squareup.okhttp.Call campaignsUpdateNegativewordAsync(
       CampaignsUpdateNegativewordRequest data,
       final ApiCallback<CampaignsUpdateNegativewordResponse> callback,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     ProgressResponseBody.ProgressListener progressListener = null;

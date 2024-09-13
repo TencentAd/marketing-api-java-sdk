@@ -75,9 +75,6 @@ public class AdgroupsAddRequest {
   @SerializedName("user_action_sets")
   private List<UserActionSetStruct> userActionSets = null;
 
-  @SerializedName("bid_strategy")
-  private BidStrategy bidStrategy = null;
-
   @SerializedName("deep_conversion_spec")
   private DeepConversionSpec deepConversionSpec = null;
 
@@ -180,11 +177,14 @@ public class AdgroupsAddRequest {
   @SerializedName("dynamic_ad_type")
   private DynamicAdType dynamicAdType = null;
 
-  @SerializedName("og_completion_type")
-  private OgCompletionType ogCompletionType = null;
-
   @SerializedName("cloud_union_spec")
   private CloudUnionSpec cloudUnionSpec = null;
+
+  @SerializedName("additional_product_spec")
+  private AdditionalProductSpec additionalProductSpec = null;
+
+  @SerializedName("enable_breakthrough_siteset")
+  private Boolean enableBreakthroughSiteset = null;
 
   public AdgroupsAddRequest accountId(Long accountId) {
     this.accountId = accountId;
@@ -542,25 +542,6 @@ public class AdgroupsAddRequest {
 
   public void setUserActionSets(List<UserActionSetStruct> userActionSets) {
     this.userActionSets = userActionSets;
-  }
-
-  public AdgroupsAddRequest bidStrategy(BidStrategy bidStrategy) {
-    this.bidStrategy = bidStrategy;
-    return this;
-  }
-
-  /**
-   * Get bidStrategy
-   *
-   * @return bidStrategy
-   */
-  @ApiModelProperty(value = "")
-  public BidStrategy getBidStrategy() {
-    return bidStrategy;
-  }
-
-  public void setBidStrategy(BidStrategy bidStrategy) {
-    this.bidStrategy = bidStrategy;
   }
 
   public AdgroupsAddRequest deepConversionSpec(DeepConversionSpec deepConversionSpec) {
@@ -1230,25 +1211,6 @@ public class AdgroupsAddRequest {
     this.dynamicAdType = dynamicAdType;
   }
 
-  public AdgroupsAddRequest ogCompletionType(OgCompletionType ogCompletionType) {
-    this.ogCompletionType = ogCompletionType;
-    return this;
-  }
-
-  /**
-   * Get ogCompletionType
-   *
-   * @return ogCompletionType
-   */
-  @ApiModelProperty(value = "")
-  public OgCompletionType getOgCompletionType() {
-    return ogCompletionType;
-  }
-
-  public void setOgCompletionType(OgCompletionType ogCompletionType) {
-    this.ogCompletionType = ogCompletionType;
-  }
-
   public AdgroupsAddRequest cloudUnionSpec(CloudUnionSpec cloudUnionSpec) {
     this.cloudUnionSpec = cloudUnionSpec;
     return this;
@@ -1266,6 +1228,44 @@ public class AdgroupsAddRequest {
 
   public void setCloudUnionSpec(CloudUnionSpec cloudUnionSpec) {
     this.cloudUnionSpec = cloudUnionSpec;
+  }
+
+  public AdgroupsAddRequest additionalProductSpec(AdditionalProductSpec additionalProductSpec) {
+    this.additionalProductSpec = additionalProductSpec;
+    return this;
+  }
+
+  /**
+   * Get additionalProductSpec
+   *
+   * @return additionalProductSpec
+   */
+  @ApiModelProperty(value = "")
+  public AdditionalProductSpec getAdditionalProductSpec() {
+    return additionalProductSpec;
+  }
+
+  public void setAdditionalProductSpec(AdditionalProductSpec additionalProductSpec) {
+    this.additionalProductSpec = additionalProductSpec;
+  }
+
+  public AdgroupsAddRequest enableBreakthroughSiteset(Boolean enableBreakthroughSiteset) {
+    this.enableBreakthroughSiteset = enableBreakthroughSiteset;
+    return this;
+  }
+
+  /**
+   * Get enableBreakthroughSiteset
+   *
+   * @return enableBreakthroughSiteset
+   */
+  @ApiModelProperty(value = "")
+  public Boolean isEnableBreakthroughSiteset() {
+    return enableBreakthroughSiteset;
+  }
+
+  public void setEnableBreakthroughSiteset(Boolean enableBreakthroughSiteset) {
+    this.enableBreakthroughSiteset = enableBreakthroughSiteset;
   }
 
   @Override
@@ -1295,7 +1295,6 @@ public class AdgroupsAddRequest {
         && Objects.equals(this.targeting, adgroupsAddRequest.targeting)
         && Objects.equals(this.sceneSpec, adgroupsAddRequest.sceneSpec)
         && Objects.equals(this.userActionSets, adgroupsAddRequest.userActionSets)
-        && Objects.equals(this.bidStrategy, adgroupsAddRequest.bidStrategy)
         && Objects.equals(this.deepConversionSpec, adgroupsAddRequest.deepConversionSpec)
         && Objects.equals(this.conversionId, adgroupsAddRequest.conversionId)
         && Objects.equals(
@@ -1338,8 +1337,10 @@ public class AdgroupsAddRequest {
         && Objects.equals(this.shortPlayPayType, adgroupsAddRequest.shortPlayPayType)
         && Objects.equals(this.sellStrategyId, adgroupsAddRequest.sellStrategyId)
         && Objects.equals(this.dynamicAdType, adgroupsAddRequest.dynamicAdType)
-        && Objects.equals(this.ogCompletionType, adgroupsAddRequest.ogCompletionType)
-        && Objects.equals(this.cloudUnionSpec, adgroupsAddRequest.cloudUnionSpec);
+        && Objects.equals(this.cloudUnionSpec, adgroupsAddRequest.cloudUnionSpec)
+        && Objects.equals(this.additionalProductSpec, adgroupsAddRequest.additionalProductSpec)
+        && Objects.equals(
+            this.enableBreakthroughSiteset, adgroupsAddRequest.enableBreakthroughSiteset);
   }
 
   @Override
@@ -1363,7 +1364,6 @@ public class AdgroupsAddRequest {
         targeting,
         sceneSpec,
         userActionSets,
-        bidStrategy,
         deepConversionSpec,
         conversionId,
         deepConversionBehaviorBid,
@@ -1398,8 +1398,9 @@ public class AdgroupsAddRequest {
         shortPlayPayType,
         sellStrategyId,
         dynamicAdType,
-        ogCompletionType,
-        cloudUnionSpec);
+        cloudUnionSpec,
+        additionalProductSpec,
+        enableBreakthroughSiteset);
   }
 
   @Override

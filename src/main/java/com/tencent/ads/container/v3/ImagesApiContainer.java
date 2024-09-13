@@ -15,6 +15,7 @@ package com.tencent.ads.container.v3;
 import com.google.inject.Inject;
 import com.tencent.ads.ApiContainer;
 import com.tencent.ads.ApiException;
+import com.tencent.ads.Pair;
 import com.tencent.ads.anno.*;
 import com.tencent.ads.api.v3.ImagesApi;
 import com.tencent.ads.exception.TencentAdsResponseException;
@@ -39,9 +40,10 @@ public class ImagesApiContainer extends ApiContainer {
   /**
    * 添加图片文件
    *
-   * @param accountId (required)
    * @param uploadType (required)
    * @param signature (required)
+   * @param accountId (optional)
+   * @param organizationId (optional)
    * @param file (optional)
    * @param bytes (optional)
    * @param imageUsage (optional)
@@ -54,9 +56,10 @@ public class ImagesApiContainer extends ApiContainer {
    *     response body
    */
   public ImagesAddResponseData imagesAdd(
-      Long accountId,
       String uploadType,
       String signature,
+      Long accountId,
+      Long organizationId,
       File file,
       String bytes,
       String imageUsage,
@@ -64,13 +67,14 @@ public class ImagesApiContainer extends ApiContainer {
       Long resizeWidth,
       Long resizeHeight,
       Long resizeFileSize,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException, TencentAdsResponseException {
     ImagesAddResponse resp =
         api.imagesAdd(
-            accountId,
             uploadType,
             signature,
+            accountId,
+            organizationId,
             file,
             bytes,
             imageUsage,
@@ -91,7 +95,7 @@ public class ImagesApiContainer extends ApiContainer {
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
-  public ImagesDeleteResponseData imagesDelete(ImagesDeleteRequest data, String... headerPair)
+  public ImagesDeleteResponseData imagesDelete(ImagesDeleteRequest data, Pair... headerPair)
       throws ApiException, TencentAdsResponseException {
     ImagesDeleteResponse resp = api.imagesDelete(data, headerPair);
     handleResponse(gson.toJson(resp));
@@ -101,7 +105,8 @@ public class ImagesApiContainer extends ApiContainer {
   /**
    * 获取图片信息
    *
-   * @param accountId (required)
+   * @param accountId (optional)
+   * @param organizationId (optional)
    * @param filtering (optional)
    * @param page (optional)
    * @param pageSize (optional)
@@ -114,17 +119,26 @@ public class ImagesApiContainer extends ApiContainer {
    */
   public ImagesGetResponseData imagesGet(
       Long accountId,
+      Long organizationId,
       List<FilteringStruct> filtering,
       Long page,
       Long pageSize,
       Long labelId,
       Long businessScenario,
       List<String> fields,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException, TencentAdsResponseException {
     ImagesGetResponse resp =
         api.imagesGet(
-            accountId, filtering, page, pageSize, labelId, businessScenario, fields, headerPair);
+            accountId,
+            organizationId,
+            filtering,
+            page,
+            pageSize,
+            labelId,
+            businessScenario,
+            fields,
+            headerPair);
     handleResponse(gson.toJson(resp));
     return resp.getData();
   }
@@ -137,7 +151,7 @@ public class ImagesApiContainer extends ApiContainer {
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
-  public ImagesUpdateResponseData imagesUpdate(ImagesUpdateRequest data, String... headerPair)
+  public ImagesUpdateResponseData imagesUpdate(ImagesUpdateRequest data, Pair... headerPair)
       throws ApiException, TencentAdsResponseException {
     ImagesUpdateResponse resp = api.imagesUpdate(data, headerPair);
     handleResponse(gson.toJson(resp));

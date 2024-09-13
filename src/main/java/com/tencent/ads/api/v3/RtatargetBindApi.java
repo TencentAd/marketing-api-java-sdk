@@ -66,7 +66,7 @@ public class RtatargetBindApi {
       RtatargetBindAddRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     Object localVarPostBody = data;
@@ -90,11 +90,8 @@ public class RtatargetBindApi {
     localVarHeaderParams.put("Content-Type", localVarContentType);
 
     if (headerPair != null && headerPair.length > 0) {
-      if (headerPair.length % 2 != 0) {
-        throw new UnsupportedOperationException("Parameter headerPair must be paired");
-      }
-      for (int i = 0; i < headerPair.length / 2; i++) {
-        localVarHeaderParams.put(headerPair[i], headerPair[i * 2 + 1]);
+      for (int i = 0; i < headerPair.length; i++) {
+        localVarHeaderParams.put(headerPair[i].getName(), headerPair[i].getValue());
       }
     }
 
@@ -134,7 +131,7 @@ public class RtatargetBindApi {
       RtatargetBindAddRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     // verify the required parameter 'data' is set
@@ -156,8 +153,8 @@ public class RtatargetBindApi {
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
-  public RtatargetBindAddResponse rtatargetBindAdd(
-      RtatargetBindAddRequest data, String... headerPair) throws ApiException {
+  public RtatargetBindAddResponse rtatargetBindAdd(RtatargetBindAddRequest data, Pair... headerPair)
+      throws ApiException {
     ApiResponse<RtatargetBindAddResponse> resp = rtatargetBindAddWithHttpInfo(data, headerPair);
     return resp.getData();
   }
@@ -171,7 +168,7 @@ public class RtatargetBindApi {
    *     response body
    */
   public ApiResponse<RtatargetBindAddResponse> rtatargetBindAddWithHttpInfo(
-      RtatargetBindAddRequest data, String... headerPair) throws ApiException {
+      RtatargetBindAddRequest data, Pair... headerPair) throws ApiException {
     com.squareup.okhttp.Call call =
         rtatargetBindAddValidateBeforeCall(data, null, null, headerPair);
     Type localVarReturnType = new TypeToken<RtatargetBindAddResponse>() {}.getType();
@@ -189,7 +186,7 @@ public class RtatargetBindApi {
   public com.squareup.okhttp.Call rtatargetBindAddAsync(
       RtatargetBindAddRequest data,
       final ApiCallback<RtatargetBindAddResponse> callback,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     ProgressResponseBody.ProgressListener progressListener = null;
@@ -233,7 +230,7 @@ public class RtatargetBindApi {
       RtatargetBindDeleteRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     Object localVarPostBody = data;
@@ -257,11 +254,8 @@ public class RtatargetBindApi {
     localVarHeaderParams.put("Content-Type", localVarContentType);
 
     if (headerPair != null && headerPair.length > 0) {
-      if (headerPair.length % 2 != 0) {
-        throw new UnsupportedOperationException("Parameter headerPair must be paired");
-      }
-      for (int i = 0; i < headerPair.length / 2; i++) {
-        localVarHeaderParams.put(headerPair[i], headerPair[i * 2 + 1]);
+      for (int i = 0; i < headerPair.length; i++) {
+        localVarHeaderParams.put(headerPair[i].getName(), headerPair[i].getValue());
       }
     }
 
@@ -301,7 +295,7 @@ public class RtatargetBindApi {
       RtatargetBindDeleteRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     // verify the required parameter 'data' is set
@@ -324,7 +318,7 @@ public class RtatargetBindApi {
    *     response body
    */
   public RtatargetBindDeleteResponse rtatargetBindDelete(
-      RtatargetBindDeleteRequest data, String... headerPair) throws ApiException {
+      RtatargetBindDeleteRequest data, Pair... headerPair) throws ApiException {
     ApiResponse<RtatargetBindDeleteResponse> resp =
         rtatargetBindDeleteWithHttpInfo(data, headerPair);
     return resp.getData();
@@ -339,7 +333,7 @@ public class RtatargetBindApi {
    *     response body
    */
   public ApiResponse<RtatargetBindDeleteResponse> rtatargetBindDeleteWithHttpInfo(
-      RtatargetBindDeleteRequest data, String... headerPair) throws ApiException {
+      RtatargetBindDeleteRequest data, Pair... headerPair) throws ApiException {
     com.squareup.okhttp.Call call =
         rtatargetBindDeleteValidateBeforeCall(data, null, null, headerPair);
     Type localVarReturnType = new TypeToken<RtatargetBindDeleteResponse>() {}.getType();
@@ -357,7 +351,7 @@ public class RtatargetBindApi {
   public com.squareup.okhttp.Call rtatargetBindDeleteAsync(
       RtatargetBindDeleteRequest data,
       final ApiCallback<RtatargetBindDeleteResponse> callback,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     ProgressResponseBody.ProgressListener progressListener = null;
@@ -401,7 +395,7 @@ public class RtatargetBindApi {
       RtatargetBindGetRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     Object localVarPostBody = data;
@@ -425,11 +419,8 @@ public class RtatargetBindApi {
     localVarHeaderParams.put("Content-Type", localVarContentType);
 
     if (headerPair != null && headerPair.length > 0) {
-      if (headerPair.length % 2 != 0) {
-        throw new UnsupportedOperationException("Parameter headerPair must be paired");
-      }
-      for (int i = 0; i < headerPair.length / 2; i++) {
-        localVarHeaderParams.put(headerPair[i], headerPair[i * 2 + 1]);
+      for (int i = 0; i < headerPair.length; i++) {
+        localVarHeaderParams.put(headerPair[i].getName(), headerPair[i].getValue());
       }
     }
 
@@ -469,7 +460,7 @@ public class RtatargetBindApi {
       RtatargetBindGetRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     // verify the required parameter 'data' is set
@@ -491,8 +482,8 @@ public class RtatargetBindApi {
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
-  public RtatargetBindGetResponse rtatargetBindGet(
-      RtatargetBindGetRequest data, String... headerPair) throws ApiException {
+  public RtatargetBindGetResponse rtatargetBindGet(RtatargetBindGetRequest data, Pair... headerPair)
+      throws ApiException {
     ApiResponse<RtatargetBindGetResponse> resp = rtatargetBindGetWithHttpInfo(data, headerPair);
     return resp.getData();
   }
@@ -506,7 +497,7 @@ public class RtatargetBindApi {
    *     response body
    */
   public ApiResponse<RtatargetBindGetResponse> rtatargetBindGetWithHttpInfo(
-      RtatargetBindGetRequest data, String... headerPair) throws ApiException {
+      RtatargetBindGetRequest data, Pair... headerPair) throws ApiException {
     com.squareup.okhttp.Call call =
         rtatargetBindGetValidateBeforeCall(data, null, null, headerPair);
     Type localVarReturnType = new TypeToken<RtatargetBindGetResponse>() {}.getType();
@@ -524,7 +515,7 @@ public class RtatargetBindApi {
   public com.squareup.okhttp.Call rtatargetBindGetAsync(
       RtatargetBindGetRequest data,
       final ApiCallback<RtatargetBindGetResponse> callback,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     ProgressResponseBody.ProgressListener progressListener = null;

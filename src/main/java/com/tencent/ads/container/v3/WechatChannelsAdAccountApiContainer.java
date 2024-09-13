@@ -15,6 +15,7 @@ package com.tencent.ads.container.v3;
 import com.google.inject.Inject;
 import com.tencent.ads.ApiContainer;
 import com.tencent.ads.ApiException;
+import com.tencent.ads.Pair;
 import com.tencent.ads.anno.*;
 import com.tencent.ads.api.v3.WechatChannelsAdAccountApi;
 import com.tencent.ads.exception.TencentAdsResponseException;
@@ -45,7 +46,7 @@ public class WechatChannelsAdAccountApiContainer extends ApiContainer {
    *     response body
    */
   public WechatChannelsAdAccountAddResponseData wechatChannelsAdAccountAdd(
-      WechatChannelsAdAccountAddRequest data, String... headerPair)
+      WechatChannelsAdAccountAddRequest data, Pair... headerPair)
       throws ApiException, TencentAdsResponseException {
     WechatChannelsAdAccountAddResponse resp = api.wechatChannelsAdAccountAdd(data, headerPair);
     handleResponse(gson.toJson(resp));
@@ -61,7 +62,7 @@ public class WechatChannelsAdAccountApiContainer extends ApiContainer {
    *     response body
    */
   public WechatChannelsAdAccountDeleteResponseData wechatChannelsAdAccountDelete(
-      WechatChannelsAdAccountDeleteRequest data, String... headerPair)
+      WechatChannelsAdAccountDeleteRequest data, Pair... headerPair)
       throws ApiException, TencentAdsResponseException {
     WechatChannelsAdAccountDeleteResponse resp =
         api.wechatChannelsAdAccountDelete(data, headerPair);
@@ -87,7 +88,7 @@ public class WechatChannelsAdAccountApiContainer extends ApiContainer {
       Long page,
       Long pageSize,
       List<String> fields,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException, TencentAdsResponseException {
     WechatChannelsAdAccountGetResponse resp =
         api.wechatChannelsAdAccountGet(accountId, filtering, page, pageSize, fields, headerPair);
@@ -104,7 +105,7 @@ public class WechatChannelsAdAccountApiContainer extends ApiContainer {
    *     response body
    */
   public WechatChannelsAdAccountUpdateResponseData wechatChannelsAdAccountUpdate(
-      WechatChannelsAdAccountUpdateRequest data, String... headerPair)
+      WechatChannelsAdAccountUpdateRequest data, Pair... headerPair)
       throws ApiException, TencentAdsResponseException {
     WechatChannelsAdAccountUpdateResponse resp =
         api.wechatChannelsAdAccountUpdate(data, headerPair);

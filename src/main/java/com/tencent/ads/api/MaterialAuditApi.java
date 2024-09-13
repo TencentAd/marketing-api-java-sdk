@@ -64,7 +64,7 @@ public class MaterialAuditApi {
       MaterialAuditListRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     Object localVarPostBody = data;
@@ -88,11 +88,8 @@ public class MaterialAuditApi {
     localVarHeaderParams.put("Content-Type", localVarContentType);
 
     if (headerPair != null && headerPair.length > 0) {
-      if (headerPair.length % 2 != 0) {
-        throw new UnsupportedOperationException("Parameter headerPair must be paired");
-      }
-      for (int i = 0; i < headerPair.length / 2; i++) {
-        localVarHeaderParams.put(headerPair[i], headerPair[i * 2 + 1]);
+      for (int i = 0; i < headerPair.length; i++) {
+        localVarHeaderParams.put(headerPair[i].getName(), headerPair[i].getValue());
       }
     }
 
@@ -132,7 +129,7 @@ public class MaterialAuditApi {
       MaterialAuditListRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     // verify the required parameter 'data' is set
@@ -155,7 +152,7 @@ public class MaterialAuditApi {
    *     response body
    */
   public MaterialAuditListResponse materialAuditList(
-      MaterialAuditListRequest data, String... headerPair) throws ApiException {
+      MaterialAuditListRequest data, Pair... headerPair) throws ApiException {
     ApiResponse<MaterialAuditListResponse> resp = materialAuditListWithHttpInfo(data, headerPair);
     return resp.getData();
   }
@@ -169,7 +166,7 @@ public class MaterialAuditApi {
    *     response body
    */
   public ApiResponse<MaterialAuditListResponse> materialAuditListWithHttpInfo(
-      MaterialAuditListRequest data, String... headerPair) throws ApiException {
+      MaterialAuditListRequest data, Pair... headerPair) throws ApiException {
     com.squareup.okhttp.Call call =
         materialAuditListValidateBeforeCall(data, null, null, headerPair);
     Type localVarReturnType = new TypeToken<MaterialAuditListResponse>() {}.getType();
@@ -187,7 +184,7 @@ public class MaterialAuditApi {
   public com.squareup.okhttp.Call materialAuditListAsync(
       MaterialAuditListRequest data,
       final ApiCallback<MaterialAuditListResponse> callback,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     ProgressResponseBody.ProgressListener progressListener = null;
@@ -231,7 +228,7 @@ public class MaterialAuditApi {
       MaterialAuditSubmitRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     Object localVarPostBody = data;
@@ -255,11 +252,8 @@ public class MaterialAuditApi {
     localVarHeaderParams.put("Content-Type", localVarContentType);
 
     if (headerPair != null && headerPair.length > 0) {
-      if (headerPair.length % 2 != 0) {
-        throw new UnsupportedOperationException("Parameter headerPair must be paired");
-      }
-      for (int i = 0; i < headerPair.length / 2; i++) {
-        localVarHeaderParams.put(headerPair[i], headerPair[i * 2 + 1]);
+      for (int i = 0; i < headerPair.length; i++) {
+        localVarHeaderParams.put(headerPair[i].getName(), headerPair[i].getValue());
       }
     }
 
@@ -299,7 +293,7 @@ public class MaterialAuditApi {
       MaterialAuditSubmitRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     // verify the required parameter 'data' is set
@@ -322,7 +316,7 @@ public class MaterialAuditApi {
    *     response body
    */
   public MaterialAuditSubmitResponse materialAuditSubmit(
-      MaterialAuditSubmitRequest data, String... headerPair) throws ApiException {
+      MaterialAuditSubmitRequest data, Pair... headerPair) throws ApiException {
     ApiResponse<MaterialAuditSubmitResponse> resp =
         materialAuditSubmitWithHttpInfo(data, headerPair);
     return resp.getData();
@@ -337,7 +331,7 @@ public class MaterialAuditApi {
    *     response body
    */
   public ApiResponse<MaterialAuditSubmitResponse> materialAuditSubmitWithHttpInfo(
-      MaterialAuditSubmitRequest data, String... headerPair) throws ApiException {
+      MaterialAuditSubmitRequest data, Pair... headerPair) throws ApiException {
     com.squareup.okhttp.Call call =
         materialAuditSubmitValidateBeforeCall(data, null, null, headerPair);
     Type localVarReturnType = new TypeToken<MaterialAuditSubmitResponse>() {}.getType();
@@ -355,7 +349,7 @@ public class MaterialAuditApi {
   public com.squareup.okhttp.Call materialAuditSubmitAsync(
       MaterialAuditSubmitRequest data,
       final ApiCallback<MaterialAuditSubmitResponse> callback,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     ProgressResponseBody.ProgressListener progressListener = null;

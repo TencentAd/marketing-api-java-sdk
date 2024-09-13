@@ -19,6 +19,8 @@ public class GetVideos {
 
   public Long accountId = null;
 
+  public Long organizationId = null;
+
   public List<FilteringStruct> filtering = new ArrayList<>();
 
   public Long page = null;
@@ -82,7 +84,15 @@ public class GetVideos {
     VideosGetResponseData response =
         tencentAds
             .videos()
-            .videosGet(accountId, filtering, page, pageSize, labelId, businessScenario, fields);
+            .videosGet(
+                accountId,
+                organizationId,
+                filtering,
+                page,
+                pageSize,
+                labelId,
+                businessScenario,
+                fields);
     return response;
   }
 

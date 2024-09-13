@@ -15,6 +15,7 @@ package com.tencent.ads.container;
 import com.google.inject.Inject;
 import com.tencent.ads.ApiContainer;
 import com.tencent.ads.ApiException;
+import com.tencent.ads.Pair;
 import com.tencent.ads.anno.*;
 import com.tencent.ads.api.ReportApi;
 import com.tencent.ads.exception.TencentAdsResponseException;
@@ -43,7 +44,7 @@ public class ReportApiContainer extends ApiContainer {
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
-  public ReportAdUnionResponseData reportAdUnion(ReportAdUnionRequest data, String... headerPair)
+  public ReportAdUnionResponseData reportAdUnion(ReportAdUnionRequest data, Pair... headerPair)
       throws ApiException, TencentAdsResponseException {
     ReportAdUnionResponse resp = api.reportAdUnion(data, headerPair);
     handleResponse(gson.toJson(resp));
@@ -59,7 +60,7 @@ public class ReportApiContainer extends ApiContainer {
    *     response body
    */
   public ReportConversionsPredictResponseData reportConversionsPredict(
-      ReportConversionsPredictRequest data, String... headerPair)
+      ReportConversionsPredictRequest data, Pair... headerPair)
       throws ApiException, TencentAdsResponseException {
     ReportConversionsPredictResponse resp = api.reportConversionsPredict(data, headerPair);
     handleResponse(gson.toJson(resp));
@@ -75,7 +76,7 @@ public class ReportApiContainer extends ApiContainer {
    *     response body
    */
   public ReportLandingPageResponseData reportLandingPage(
-      ReportLandingPageRequest data, String... headerPair)
+      ReportLandingPageRequest data, Pair... headerPair)
       throws ApiException, TencentAdsResponseException {
     ReportLandingPageResponse resp = api.reportLandingPage(data, headerPair);
     handleResponse(gson.toJson(resp));
@@ -91,7 +92,7 @@ public class ReportApiContainer extends ApiContainer {
    *     response body
    */
   public ReportVideoFrameResponseData reportVideoFrame(
-      ReportVideoFrameRequest data, String... headerPair)
+      ReportVideoFrameRequest data, Pair... headerPair)
       throws ApiException, TencentAdsResponseException {
     ReportVideoFrameResponse resp = api.reportVideoFrame(data, headerPair);
     handleResponse(gson.toJson(resp));

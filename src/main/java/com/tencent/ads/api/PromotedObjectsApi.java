@@ -70,7 +70,7 @@ public class PromotedObjectsApi {
       PromotedObjectsAddRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     Object localVarPostBody = data;
@@ -94,11 +94,8 @@ public class PromotedObjectsApi {
     localVarHeaderParams.put("Content-Type", localVarContentType);
 
     if (headerPair != null && headerPair.length > 0) {
-      if (headerPair.length % 2 != 0) {
-        throw new UnsupportedOperationException("Parameter headerPair must be paired");
-      }
-      for (int i = 0; i < headerPair.length / 2; i++) {
-        localVarHeaderParams.put(headerPair[i], headerPair[i * 2 + 1]);
+      for (int i = 0; i < headerPair.length; i++) {
+        localVarHeaderParams.put(headerPair[i].getName(), headerPair[i].getValue());
       }
     }
 
@@ -138,7 +135,7 @@ public class PromotedObjectsApi {
       PromotedObjectsAddRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     // verify the required parameter 'data' is set
@@ -161,7 +158,7 @@ public class PromotedObjectsApi {
    *     response body
    */
   public PromotedObjectsAddResponse promotedObjectsAdd(
-      PromotedObjectsAddRequest data, String... headerPair) throws ApiException {
+      PromotedObjectsAddRequest data, Pair... headerPair) throws ApiException {
     ApiResponse<PromotedObjectsAddResponse> resp = promotedObjectsAddWithHttpInfo(data, headerPair);
     return resp.getData();
   }
@@ -175,7 +172,7 @@ public class PromotedObjectsApi {
    *     response body
    */
   public ApiResponse<PromotedObjectsAddResponse> promotedObjectsAddWithHttpInfo(
-      PromotedObjectsAddRequest data, String... headerPair) throws ApiException {
+      PromotedObjectsAddRequest data, Pair... headerPair) throws ApiException {
     com.squareup.okhttp.Call call =
         promotedObjectsAddValidateBeforeCall(data, null, null, headerPair);
     Type localVarReturnType = new TypeToken<PromotedObjectsAddResponse>() {}.getType();
@@ -193,7 +190,7 @@ public class PromotedObjectsApi {
   public com.squareup.okhttp.Call promotedObjectsAddAsync(
       PromotedObjectsAddRequest data,
       final ApiCallback<PromotedObjectsAddResponse> callback,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     ProgressResponseBody.ProgressListener progressListener = null;
@@ -237,7 +234,7 @@ public class PromotedObjectsApi {
       PromotedObjectsAuthorizeRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     Object localVarPostBody = data;
@@ -261,11 +258,8 @@ public class PromotedObjectsApi {
     localVarHeaderParams.put("Content-Type", localVarContentType);
 
     if (headerPair != null && headerPair.length > 0) {
-      if (headerPair.length % 2 != 0) {
-        throw new UnsupportedOperationException("Parameter headerPair must be paired");
-      }
-      for (int i = 0; i < headerPair.length / 2; i++) {
-        localVarHeaderParams.put(headerPair[i], headerPair[i * 2 + 1]);
+      for (int i = 0; i < headerPair.length; i++) {
+        localVarHeaderParams.put(headerPair[i].getName(), headerPair[i].getValue());
       }
     }
 
@@ -305,7 +299,7 @@ public class PromotedObjectsApi {
       PromotedObjectsAuthorizeRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     // verify the required parameter 'data' is set
@@ -328,7 +322,7 @@ public class PromotedObjectsApi {
    *     response body
    */
   public PromotedObjectsAuthorizeResponse promotedObjectsAuthorize(
-      PromotedObjectsAuthorizeRequest data, String... headerPair) throws ApiException {
+      PromotedObjectsAuthorizeRequest data, Pair... headerPair) throws ApiException {
     ApiResponse<PromotedObjectsAuthorizeResponse> resp =
         promotedObjectsAuthorizeWithHttpInfo(data, headerPair);
     return resp.getData();
@@ -343,7 +337,7 @@ public class PromotedObjectsApi {
    *     response body
    */
   public ApiResponse<PromotedObjectsAuthorizeResponse> promotedObjectsAuthorizeWithHttpInfo(
-      PromotedObjectsAuthorizeRequest data, String... headerPair) throws ApiException {
+      PromotedObjectsAuthorizeRequest data, Pair... headerPair) throws ApiException {
     com.squareup.okhttp.Call call =
         promotedObjectsAuthorizeValidateBeforeCall(data, null, null, headerPair);
     Type localVarReturnType = new TypeToken<PromotedObjectsAuthorizeResponse>() {}.getType();
@@ -361,7 +355,7 @@ public class PromotedObjectsApi {
   public com.squareup.okhttp.Call promotedObjectsAuthorizeAsync(
       PromotedObjectsAuthorizeRequest data,
       final ApiCallback<PromotedObjectsAuthorizeResponse> callback,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     ProgressResponseBody.ProgressListener progressListener = null;
@@ -405,7 +399,7 @@ public class PromotedObjectsApi {
       PromotedObjectsDeleteRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     Object localVarPostBody = data;
@@ -429,11 +423,8 @@ public class PromotedObjectsApi {
     localVarHeaderParams.put("Content-Type", localVarContentType);
 
     if (headerPair != null && headerPair.length > 0) {
-      if (headerPair.length % 2 != 0) {
-        throw new UnsupportedOperationException("Parameter headerPair must be paired");
-      }
-      for (int i = 0; i < headerPair.length / 2; i++) {
-        localVarHeaderParams.put(headerPair[i], headerPair[i * 2 + 1]);
+      for (int i = 0; i < headerPair.length; i++) {
+        localVarHeaderParams.put(headerPair[i].getName(), headerPair[i].getValue());
       }
     }
 
@@ -473,7 +464,7 @@ public class PromotedObjectsApi {
       PromotedObjectsDeleteRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     // verify the required parameter 'data' is set
@@ -496,7 +487,7 @@ public class PromotedObjectsApi {
    *     response body
    */
   public PromotedObjectsDeleteResponse promotedObjectsDelete(
-      PromotedObjectsDeleteRequest data, String... headerPair) throws ApiException {
+      PromotedObjectsDeleteRequest data, Pair... headerPair) throws ApiException {
     ApiResponse<PromotedObjectsDeleteResponse> resp =
         promotedObjectsDeleteWithHttpInfo(data, headerPair);
     return resp.getData();
@@ -511,7 +502,7 @@ public class PromotedObjectsApi {
    *     response body
    */
   public ApiResponse<PromotedObjectsDeleteResponse> promotedObjectsDeleteWithHttpInfo(
-      PromotedObjectsDeleteRequest data, String... headerPair) throws ApiException {
+      PromotedObjectsDeleteRequest data, Pair... headerPair) throws ApiException {
     com.squareup.okhttp.Call call =
         promotedObjectsDeleteValidateBeforeCall(data, null, null, headerPair);
     Type localVarReturnType = new TypeToken<PromotedObjectsDeleteResponse>() {}.getType();
@@ -529,7 +520,7 @@ public class PromotedObjectsApi {
   public com.squareup.okhttp.Call promotedObjectsDeleteAsync(
       PromotedObjectsDeleteRequest data,
       final ApiCallback<PromotedObjectsDeleteResponse> callback,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     ProgressResponseBody.ProgressListener progressListener = null;
@@ -581,7 +572,7 @@ public class PromotedObjectsApi {
       List<String> fields,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     Object localVarPostBody = null;
@@ -615,11 +606,8 @@ public class PromotedObjectsApi {
     localVarHeaderParams.put("Content-Type", localVarContentType);
 
     if (headerPair != null && headerPair.length > 0) {
-      if (headerPair.length % 2 != 0) {
-        throw new UnsupportedOperationException("Parameter headerPair must be paired");
-      }
-      for (int i = 0; i < headerPair.length / 2; i++) {
-        localVarHeaderParams.put(headerPair[i], headerPair[i * 2 + 1]);
+      for (int i = 0; i < headerPair.length; i++) {
+        localVarHeaderParams.put(headerPair[i].getName(), headerPair[i].getValue());
       }
     }
 
@@ -663,7 +651,7 @@ public class PromotedObjectsApi {
       List<String> fields,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     // verify the required parameter 'accountId' is set
@@ -703,7 +691,7 @@ public class PromotedObjectsApi {
       Long page,
       Long pageSize,
       List<String> fields,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
     ApiResponse<PromotedObjectsGetResponse> resp =
         promotedObjectsGetWithHttpInfo(accountId, filtering, page, pageSize, fields, headerPair);
@@ -728,7 +716,7 @@ public class PromotedObjectsApi {
       Long page,
       Long pageSize,
       List<String> fields,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
     com.squareup.okhttp.Call call =
         promotedObjectsGetValidateBeforeCall(
@@ -756,7 +744,7 @@ public class PromotedObjectsApi {
       Long pageSize,
       List<String> fields,
       final ApiCallback<PromotedObjectsGetResponse> callback,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     ProgressResponseBody.ProgressListener progressListener = null;
@@ -807,7 +795,7 @@ public class PromotedObjectsApi {
       PromotedObjectsUpdateRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     Object localVarPostBody = data;
@@ -831,11 +819,8 @@ public class PromotedObjectsApi {
     localVarHeaderParams.put("Content-Type", localVarContentType);
 
     if (headerPair != null && headerPair.length > 0) {
-      if (headerPair.length % 2 != 0) {
-        throw new UnsupportedOperationException("Parameter headerPair must be paired");
-      }
-      for (int i = 0; i < headerPair.length / 2; i++) {
-        localVarHeaderParams.put(headerPair[i], headerPair[i * 2 + 1]);
+      for (int i = 0; i < headerPair.length; i++) {
+        localVarHeaderParams.put(headerPair[i].getName(), headerPair[i].getValue());
       }
     }
 
@@ -875,7 +860,7 @@ public class PromotedObjectsApi {
       PromotedObjectsUpdateRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     // verify the required parameter 'data' is set
@@ -898,7 +883,7 @@ public class PromotedObjectsApi {
    *     response body
    */
   public PromotedObjectsUpdateResponse promotedObjectsUpdate(
-      PromotedObjectsUpdateRequest data, String... headerPair) throws ApiException {
+      PromotedObjectsUpdateRequest data, Pair... headerPair) throws ApiException {
     ApiResponse<PromotedObjectsUpdateResponse> resp =
         promotedObjectsUpdateWithHttpInfo(data, headerPair);
     return resp.getData();
@@ -913,7 +898,7 @@ public class PromotedObjectsApi {
    *     response body
    */
   public ApiResponse<PromotedObjectsUpdateResponse> promotedObjectsUpdateWithHttpInfo(
-      PromotedObjectsUpdateRequest data, String... headerPair) throws ApiException {
+      PromotedObjectsUpdateRequest data, Pair... headerPair) throws ApiException {
     com.squareup.okhttp.Call call =
         promotedObjectsUpdateValidateBeforeCall(data, null, null, headerPair);
     Type localVarReturnType = new TypeToken<PromotedObjectsUpdateResponse>() {}.getType();
@@ -931,7 +916,7 @@ public class PromotedObjectsApi {
   public com.squareup.okhttp.Call promotedObjectsUpdateAsync(
       PromotedObjectsUpdateRequest data,
       final ApiCallback<PromotedObjectsUpdateResponse> callback,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     ProgressResponseBody.ProgressListener progressListener = null;

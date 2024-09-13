@@ -15,6 +15,8 @@ package com.tencent.ads.model.v3;
 import com.google.gson.Gson;
 import com.google.gson.annotations.SerializedName;
 import io.swagger.annotations.ApiModelProperty;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Objects;
 
 /** ProductItemsDetailGetResponseData */
@@ -27,6 +29,12 @@ public class ProductItemsDetailGetResponseData {
 
   @SerializedName("reject_message")
   private String rejectMessage = null;
+
+  @SerializedName("spu_link_status")
+  private SpuLinkStatus spuLinkStatus = null;
+
+  @SerializedName("product_verification_results")
+  private List<ProductVerificationResult> productVerificationResults = null;
 
   @SerializedName("product_item_spec")
   private ProductInfoSpec productItemSpec = null;
@@ -88,6 +96,55 @@ public class ProductItemsDetailGetResponseData {
     this.rejectMessage = rejectMessage;
   }
 
+  public ProductItemsDetailGetResponseData spuLinkStatus(SpuLinkStatus spuLinkStatus) {
+    this.spuLinkStatus = spuLinkStatus;
+    return this;
+  }
+
+  /**
+   * Get spuLinkStatus
+   *
+   * @return spuLinkStatus
+   */
+  @ApiModelProperty(value = "")
+  public SpuLinkStatus getSpuLinkStatus() {
+    return spuLinkStatus;
+  }
+
+  public void setSpuLinkStatus(SpuLinkStatus spuLinkStatus) {
+    this.spuLinkStatus = spuLinkStatus;
+  }
+
+  public ProductItemsDetailGetResponseData productVerificationResults(
+      List<ProductVerificationResult> productVerificationResults) {
+    this.productVerificationResults = productVerificationResults;
+    return this;
+  }
+
+  public ProductItemsDetailGetResponseData addProductVerificationResultsItem(
+      ProductVerificationResult productVerificationResultsItem) {
+    if (this.productVerificationResults == null) {
+      this.productVerificationResults = new ArrayList<ProductVerificationResult>();
+    }
+    this.productVerificationResults.add(productVerificationResultsItem);
+    return this;
+  }
+
+  /**
+   * Get productVerificationResults
+   *
+   * @return productVerificationResults
+   */
+  @ApiModelProperty(value = "")
+  public List<ProductVerificationResult> getProductVerificationResults() {
+    return productVerificationResults;
+  }
+
+  public void setProductVerificationResults(
+      List<ProductVerificationResult> productVerificationResults) {
+    this.productVerificationResults = productVerificationResults;
+  }
+
   public ProductItemsDetailGetResponseData productItemSpec(ProductInfoSpec productItemSpec) {
     this.productItemSpec = productItemSpec;
     return this;
@@ -120,12 +177,22 @@ public class ProductItemsDetailGetResponseData {
     return Objects.equals(this.feedId, productItemsDetailGetResponseData.feedId)
         && Objects.equals(this.systemStatus, productItemsDetailGetResponseData.systemStatus)
         && Objects.equals(this.rejectMessage, productItemsDetailGetResponseData.rejectMessage)
+        && Objects.equals(this.spuLinkStatus, productItemsDetailGetResponseData.spuLinkStatus)
+        && Objects.equals(
+            this.productVerificationResults,
+            productItemsDetailGetResponseData.productVerificationResults)
         && Objects.equals(this.productItemSpec, productItemsDetailGetResponseData.productItemSpec);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(feedId, systemStatus, rejectMessage, productItemSpec);
+    return Objects.hash(
+        feedId,
+        systemStatus,
+        rejectMessage,
+        spuLinkStatus,
+        productVerificationResults,
+        productItemSpec);
   }
 
   @Override

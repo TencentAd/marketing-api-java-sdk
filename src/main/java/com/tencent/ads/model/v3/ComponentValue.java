@@ -111,6 +111,9 @@ public class ComponentValue {
   @SerializedName("image_showcase")
   private ImageShowcaseComponent imageShowcase = null;
 
+  @SerializedName("social_skill")
+  private SocialSkillComponent socialSkill = null;
+
   @SerializedName("mini_card_link")
   private MiniCardLinkComponent miniCardLink = null;
 
@@ -687,6 +690,25 @@ public class ComponentValue {
     this.imageShowcase = imageShowcase;
   }
 
+  public ComponentValue socialSkill(SocialSkillComponent socialSkill) {
+    this.socialSkill = socialSkill;
+    return this;
+  }
+
+  /**
+   * Get socialSkill
+   *
+   * @return socialSkill
+   */
+  @ApiModelProperty(value = "")
+  public SocialSkillComponent getSocialSkill() {
+    return socialSkill;
+  }
+
+  public void setSocialSkill(SocialSkillComponent socialSkill) {
+    this.socialSkill = socialSkill;
+  }
+
   public ComponentValue miniCardLink(MiniCardLinkComponent miniCardLink) {
     this.miniCardLink = miniCardLink;
     return this;
@@ -764,6 +786,7 @@ public class ComponentValue {
         && Objects.equals(this.appPromotionVideo, componentValue.appPromotionVideo)
         && Objects.equals(this.videoShowcase, componentValue.videoShowcase)
         && Objects.equals(this.imageShowcase, componentValue.imageShowcase)
+        && Objects.equals(this.socialSkill, componentValue.socialSkill)
         && Objects.equals(this.miniCardLink, componentValue.miniCardLink)
         && Objects.equals(this.floatingZoneList, componentValue.floatingZoneList);
   }
@@ -801,6 +824,7 @@ public class ComponentValue {
         appPromotionVideo,
         videoShowcase,
         imageShowcase,
+        socialSkill,
         miniCardLink,
         floatingZoneList);
   }

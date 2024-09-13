@@ -14,11 +14,13 @@ public class GetMarketingTargetAssetDetail {
   /** TencentAds */
   public TencentAds tencentAds;
 
-  public Long accountId = null;
-
   public Long marketingAssetId = null;
 
   public String marketingTargetType = null;
+
+  public Long accountId = null;
+
+  public Long organizationId = null;
 
   public List<String> fields = null;
 
@@ -38,7 +40,7 @@ public class GetMarketingTargetAssetDetail {
         tencentAds
             .marketingTargetAssetDetail()
             .marketingTargetAssetDetailGet(
-                accountId, marketingAssetId, marketingTargetType, fields);
+                marketingAssetId, marketingTargetType, accountId, organizationId, fields);
     return response;
   }
 

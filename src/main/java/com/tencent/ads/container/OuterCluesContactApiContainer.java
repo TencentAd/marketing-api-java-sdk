@@ -15,6 +15,7 @@ package com.tencent.ads.container;
 import com.google.inject.Inject;
 import com.tencent.ads.ApiContainer;
 import com.tencent.ads.ApiException;
+import com.tencent.ads.Pair;
 import com.tencent.ads.anno.*;
 import com.tencent.ads.api.OuterCluesContactApi;
 import com.tencent.ads.exception.TencentAdsResponseException;
@@ -35,7 +36,7 @@ public class OuterCluesContactApiContainer extends ApiContainer {
    *     response body
    */
   public OuterCluesContactUpdateResponseData outerCluesContactUpdate(
-      OuterCluesContactUpdateRequest data, String... headerPair)
+      OuterCluesContactUpdateRequest data, Pair... headerPair)
       throws ApiException, TencentAdsResponseException {
     OuterCluesContactUpdateResponse resp = api.outerCluesContactUpdate(data, headerPair);
     handleResponse(gson.toJson(resp));

@@ -15,6 +15,7 @@ package com.tencent.ads.container;
 import com.google.inject.Inject;
 import com.tencent.ads.ApiContainer;
 import com.tencent.ads.ApiException;
+import com.tencent.ads.Pair;
 import com.tencent.ads.anno.*;
 import com.tencent.ads.api.LeadsFormApi;
 import com.tencent.ads.exception.TencentAdsResponseException;
@@ -37,7 +38,7 @@ public class LeadsFormApiContainer extends ApiContainer {
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
-  public LeadsFormAddResponseData leadsFormAdd(LeadsFormAddRequest data, String... headerPair)
+  public LeadsFormAddResponseData leadsFormAdd(LeadsFormAddRequest data, Pair... headerPair)
       throws ApiException, TencentAdsResponseException {
     LeadsFormAddResponse resp = api.leadsFormAdd(data, headerPair);
     handleResponse(gson.toJson(resp));
@@ -55,7 +56,7 @@ public class LeadsFormApiContainer extends ApiContainer {
    *     response body
    */
   public LeadsFormGetResponseData leadsFormGet(
-      Long accountId, String componentId, List<String> fields, String... headerPair)
+      Long accountId, String componentId, List<String> fields, Pair... headerPair)
       throws ApiException, TencentAdsResponseException {
     LeadsFormGetResponse resp = api.leadsFormGet(accountId, componentId, fields, headerPair);
     handleResponse(gson.toJson(resp));

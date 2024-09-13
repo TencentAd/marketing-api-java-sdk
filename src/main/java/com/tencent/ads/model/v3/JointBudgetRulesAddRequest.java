@@ -36,6 +36,9 @@ public class JointBudgetRulesAddRequest {
   @SerializedName("adgroup_id_list")
   private List<Long> adgroupIdList = null;
 
+  @SerializedName("joint_budget_rule_type")
+  private JointBudgetRuleType jointBudgetRuleType = null;
+
   public JointBudgetRulesAddRequest accountId(Long accountId) {
     this.accountId = accountId;
     return this;
@@ -139,6 +142,25 @@ public class JointBudgetRulesAddRequest {
     this.adgroupIdList = adgroupIdList;
   }
 
+  public JointBudgetRulesAddRequest jointBudgetRuleType(JointBudgetRuleType jointBudgetRuleType) {
+    this.jointBudgetRuleType = jointBudgetRuleType;
+    return this;
+  }
+
+  /**
+   * Get jointBudgetRuleType
+   *
+   * @return jointBudgetRuleType
+   */
+  @ApiModelProperty(value = "")
+  public JointBudgetRuleType getJointBudgetRuleType() {
+    return jointBudgetRuleType;
+  }
+
+  public void setJointBudgetRuleType(JointBudgetRuleType jointBudgetRuleType) {
+    this.jointBudgetRuleType = jointBudgetRuleType;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -152,12 +174,19 @@ public class JointBudgetRulesAddRequest {
         && Objects.equals(this.jointBudgetRuleName, jointBudgetRulesAddRequest.jointBudgetRuleName)
         && Objects.equals(this.dailyBudget, jointBudgetRulesAddRequest.dailyBudget)
         && Objects.equals(this.totalBudget, jointBudgetRulesAddRequest.totalBudget)
-        && Objects.equals(this.adgroupIdList, jointBudgetRulesAddRequest.adgroupIdList);
+        && Objects.equals(this.adgroupIdList, jointBudgetRulesAddRequest.adgroupIdList)
+        && Objects.equals(this.jointBudgetRuleType, jointBudgetRulesAddRequest.jointBudgetRuleType);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(accountId, jointBudgetRuleName, dailyBudget, totalBudget, adgroupIdList);
+    return Objects.hash(
+        accountId,
+        jointBudgetRuleName,
+        dailyBudget,
+        totalBudget,
+        adgroupIdList,
+        jointBudgetRuleType);
   }
 
   @Override

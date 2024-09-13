@@ -15,6 +15,7 @@ package com.tencent.ads.container;
 import com.google.inject.Inject;
 import com.tencent.ads.ApiContainer;
 import com.tencent.ads.ApiException;
+import com.tencent.ads.Pair;
 import com.tencent.ads.anno.*;
 import com.tencent.ads.api.XijingDeriveRoleApi;
 import com.tencent.ads.exception.TencentAdsResponseException;
@@ -35,7 +36,7 @@ public class XijingDeriveRoleApiContainer extends ApiContainer {
    *     response body
    */
   public XijingDeriveRoleGetResponseData xijingDeriveRoleGet(
-      XijingDeriveRoleGetRequest data, String... headerPair)
+      XijingDeriveRoleGetRequest data, Pair... headerPair)
       throws ApiException, TencentAdsResponseException {
     XijingDeriveRoleGetResponse resp = api.xijingDeriveRoleGet(data, headerPair);
     handleResponse(gson.toJson(resp));

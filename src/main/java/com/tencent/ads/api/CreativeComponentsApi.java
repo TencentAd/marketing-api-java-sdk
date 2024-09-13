@@ -70,7 +70,7 @@ public class CreativeComponentsApi {
       CreativeComponentsAddRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     Object localVarPostBody = data;
@@ -94,11 +94,8 @@ public class CreativeComponentsApi {
     localVarHeaderParams.put("Content-Type", localVarContentType);
 
     if (headerPair != null && headerPair.length > 0) {
-      if (headerPair.length % 2 != 0) {
-        throw new UnsupportedOperationException("Parameter headerPair must be paired");
-      }
-      for (int i = 0; i < headerPair.length / 2; i++) {
-        localVarHeaderParams.put(headerPair[i], headerPair[i * 2 + 1]);
+      for (int i = 0; i < headerPair.length; i++) {
+        localVarHeaderParams.put(headerPair[i].getName(), headerPair[i].getValue());
       }
     }
 
@@ -138,7 +135,7 @@ public class CreativeComponentsApi {
       CreativeComponentsAddRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     // verify the required parameter 'data' is set
@@ -161,7 +158,7 @@ public class CreativeComponentsApi {
    *     response body
    */
   public CreativeComponentsAddResponse creativeComponentsAdd(
-      CreativeComponentsAddRequest data, String... headerPair) throws ApiException {
+      CreativeComponentsAddRequest data, Pair... headerPair) throws ApiException {
     ApiResponse<CreativeComponentsAddResponse> resp =
         creativeComponentsAddWithHttpInfo(data, headerPair);
     return resp.getData();
@@ -176,7 +173,7 @@ public class CreativeComponentsApi {
    *     response body
    */
   public ApiResponse<CreativeComponentsAddResponse> creativeComponentsAddWithHttpInfo(
-      CreativeComponentsAddRequest data, String... headerPair) throws ApiException {
+      CreativeComponentsAddRequest data, Pair... headerPair) throws ApiException {
     com.squareup.okhttp.Call call =
         creativeComponentsAddValidateBeforeCall(data, null, null, headerPair);
     Type localVarReturnType = new TypeToken<CreativeComponentsAddResponse>() {}.getType();
@@ -194,7 +191,7 @@ public class CreativeComponentsApi {
   public com.squareup.okhttp.Call creativeComponentsAddAsync(
       CreativeComponentsAddRequest data,
       final ApiCallback<CreativeComponentsAddResponse> callback,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     ProgressResponseBody.ProgressListener progressListener = null;
@@ -238,7 +235,7 @@ public class CreativeComponentsApi {
       CreativeComponentsDeleteRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     Object localVarPostBody = data;
@@ -262,11 +259,8 @@ public class CreativeComponentsApi {
     localVarHeaderParams.put("Content-Type", localVarContentType);
 
     if (headerPair != null && headerPair.length > 0) {
-      if (headerPair.length % 2 != 0) {
-        throw new UnsupportedOperationException("Parameter headerPair must be paired");
-      }
-      for (int i = 0; i < headerPair.length / 2; i++) {
-        localVarHeaderParams.put(headerPair[i], headerPair[i * 2 + 1]);
+      for (int i = 0; i < headerPair.length; i++) {
+        localVarHeaderParams.put(headerPair[i].getName(), headerPair[i].getValue());
       }
     }
 
@@ -306,7 +300,7 @@ public class CreativeComponentsApi {
       CreativeComponentsDeleteRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     // verify the required parameter 'data' is set
@@ -329,7 +323,7 @@ public class CreativeComponentsApi {
    *     response body
    */
   public CreativeComponentsDeleteResponse creativeComponentsDelete(
-      CreativeComponentsDeleteRequest data, String... headerPair) throws ApiException {
+      CreativeComponentsDeleteRequest data, Pair... headerPair) throws ApiException {
     ApiResponse<CreativeComponentsDeleteResponse> resp =
         creativeComponentsDeleteWithHttpInfo(data, headerPair);
     return resp.getData();
@@ -344,7 +338,7 @@ public class CreativeComponentsApi {
    *     response body
    */
   public ApiResponse<CreativeComponentsDeleteResponse> creativeComponentsDeleteWithHttpInfo(
-      CreativeComponentsDeleteRequest data, String... headerPair) throws ApiException {
+      CreativeComponentsDeleteRequest data, Pair... headerPair) throws ApiException {
     com.squareup.okhttp.Call call =
         creativeComponentsDeleteValidateBeforeCall(data, null, null, headerPair);
     Type localVarReturnType = new TypeToken<CreativeComponentsDeleteResponse>() {}.getType();
@@ -362,7 +356,7 @@ public class CreativeComponentsApi {
   public com.squareup.okhttp.Call creativeComponentsDeleteAsync(
       CreativeComponentsDeleteRequest data,
       final ApiCallback<CreativeComponentsDeleteResponse> callback,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     ProgressResponseBody.ProgressListener progressListener = null;
@@ -414,7 +408,7 @@ public class CreativeComponentsApi {
       List<String> fields,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     Object localVarPostBody = null;
@@ -448,11 +442,8 @@ public class CreativeComponentsApi {
     localVarHeaderParams.put("Content-Type", localVarContentType);
 
     if (headerPair != null && headerPair.length > 0) {
-      if (headerPair.length % 2 != 0) {
-        throw new UnsupportedOperationException("Parameter headerPair must be paired");
-      }
-      for (int i = 0; i < headerPair.length / 2; i++) {
-        localVarHeaderParams.put(headerPair[i], headerPair[i * 2 + 1]);
+      for (int i = 0; i < headerPair.length; i++) {
+        localVarHeaderParams.put(headerPair[i].getName(), headerPair[i].getValue());
       }
     }
 
@@ -496,7 +487,7 @@ public class CreativeComponentsApi {
       List<String> fields,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     // verify the required parameter 'accountId' is set
@@ -536,7 +527,7 @@ public class CreativeComponentsApi {
       Long page,
       Long pageSize,
       List<String> fields,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
     ApiResponse<CreativeComponentsGetResponse> resp =
         creativeComponentsGetWithHttpInfo(accountId, filtering, page, pageSize, fields, headerPair);
@@ -561,7 +552,7 @@ public class CreativeComponentsApi {
       Long page,
       Long pageSize,
       List<String> fields,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
     com.squareup.okhttp.Call call =
         creativeComponentsGetValidateBeforeCall(
@@ -589,7 +580,7 @@ public class CreativeComponentsApi {
       Long pageSize,
       List<String> fields,
       final ApiCallback<CreativeComponentsGetResponse> callback,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     ProgressResponseBody.ProgressListener progressListener = null;
@@ -640,7 +631,7 @@ public class CreativeComponentsApi {
       CreativeComponentsUpdateRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     Object localVarPostBody = data;
@@ -664,11 +655,8 @@ public class CreativeComponentsApi {
     localVarHeaderParams.put("Content-Type", localVarContentType);
 
     if (headerPair != null && headerPair.length > 0) {
-      if (headerPair.length % 2 != 0) {
-        throw new UnsupportedOperationException("Parameter headerPair must be paired");
-      }
-      for (int i = 0; i < headerPair.length / 2; i++) {
-        localVarHeaderParams.put(headerPair[i], headerPair[i * 2 + 1]);
+      for (int i = 0; i < headerPair.length; i++) {
+        localVarHeaderParams.put(headerPair[i].getName(), headerPair[i].getValue());
       }
     }
 
@@ -708,7 +696,7 @@ public class CreativeComponentsApi {
       CreativeComponentsUpdateRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     // verify the required parameter 'data' is set
@@ -731,7 +719,7 @@ public class CreativeComponentsApi {
    *     response body
    */
   public CreativeComponentsUpdateResponse creativeComponentsUpdate(
-      CreativeComponentsUpdateRequest data, String... headerPair) throws ApiException {
+      CreativeComponentsUpdateRequest data, Pair... headerPair) throws ApiException {
     ApiResponse<CreativeComponentsUpdateResponse> resp =
         creativeComponentsUpdateWithHttpInfo(data, headerPair);
     return resp.getData();
@@ -746,7 +734,7 @@ public class CreativeComponentsApi {
    *     response body
    */
   public ApiResponse<CreativeComponentsUpdateResponse> creativeComponentsUpdateWithHttpInfo(
-      CreativeComponentsUpdateRequest data, String... headerPair) throws ApiException {
+      CreativeComponentsUpdateRequest data, Pair... headerPair) throws ApiException {
     com.squareup.okhttp.Call call =
         creativeComponentsUpdateValidateBeforeCall(data, null, null, headerPair);
     Type localVarReturnType = new TypeToken<CreativeComponentsUpdateResponse>() {}.getType();
@@ -764,7 +752,7 @@ public class CreativeComponentsApi {
   public com.squareup.okhttp.Call creativeComponentsUpdateAsync(
       CreativeComponentsUpdateRequest data,
       final ApiCallback<CreativeComponentsUpdateResponse> callback,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     ProgressResponseBody.ProgressListener progressListener = null;
@@ -808,7 +796,7 @@ public class CreativeComponentsApi {
       CreativeComponentsUpdateStatusRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     Object localVarPostBody = data;
@@ -832,11 +820,8 @@ public class CreativeComponentsApi {
     localVarHeaderParams.put("Content-Type", localVarContentType);
 
     if (headerPair != null && headerPair.length > 0) {
-      if (headerPair.length % 2 != 0) {
-        throw new UnsupportedOperationException("Parameter headerPair must be paired");
-      }
-      for (int i = 0; i < headerPair.length / 2; i++) {
-        localVarHeaderParams.put(headerPair[i], headerPair[i * 2 + 1]);
+      for (int i = 0; i < headerPair.length; i++) {
+        localVarHeaderParams.put(headerPair[i].getName(), headerPair[i].getValue());
       }
     }
 
@@ -876,7 +861,7 @@ public class CreativeComponentsApi {
       CreativeComponentsUpdateStatusRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     // verify the required parameter 'data' is set
@@ -900,7 +885,7 @@ public class CreativeComponentsApi {
    *     response body
    */
   public CreativeComponentsUpdateStatusResponse creativeComponentsUpdateStatus(
-      CreativeComponentsUpdateStatusRequest data, String... headerPair) throws ApiException {
+      CreativeComponentsUpdateStatusRequest data, Pair... headerPair) throws ApiException {
     ApiResponse<CreativeComponentsUpdateStatusResponse> resp =
         creativeComponentsUpdateStatusWithHttpInfo(data, headerPair);
     return resp.getData();
@@ -916,7 +901,7 @@ public class CreativeComponentsApi {
    */
   public ApiResponse<CreativeComponentsUpdateStatusResponse>
       creativeComponentsUpdateStatusWithHttpInfo(
-          CreativeComponentsUpdateStatusRequest data, String... headerPair) throws ApiException {
+          CreativeComponentsUpdateStatusRequest data, Pair... headerPair) throws ApiException {
     com.squareup.okhttp.Call call =
         creativeComponentsUpdateStatusValidateBeforeCall(data, null, null, headerPair);
     Type localVarReturnType = new TypeToken<CreativeComponentsUpdateStatusResponse>() {}.getType();
@@ -934,7 +919,7 @@ public class CreativeComponentsApi {
   public com.squareup.okhttp.Call creativeComponentsUpdateStatusAsync(
       CreativeComponentsUpdateStatusRequest data,
       final ApiCallback<CreativeComponentsUpdateStatusResponse> callback,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     ProgressResponseBody.ProgressListener progressListener = null;

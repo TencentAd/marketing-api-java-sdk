@@ -64,7 +64,7 @@ public class AdcreativePreviewsApi {
       AdcreativePreviewsAddRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     Object localVarPostBody = data;
@@ -88,11 +88,8 @@ public class AdcreativePreviewsApi {
     localVarHeaderParams.put("Content-Type", localVarContentType);
 
     if (headerPair != null && headerPair.length > 0) {
-      if (headerPair.length % 2 != 0) {
-        throw new UnsupportedOperationException("Parameter headerPair must be paired");
-      }
-      for (int i = 0; i < headerPair.length / 2; i++) {
-        localVarHeaderParams.put(headerPair[i], headerPair[i * 2 + 1]);
+      for (int i = 0; i < headerPair.length; i++) {
+        localVarHeaderParams.put(headerPair[i].getName(), headerPair[i].getValue());
       }
     }
 
@@ -132,7 +129,7 @@ public class AdcreativePreviewsApi {
       AdcreativePreviewsAddRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     // verify the required parameter 'data' is set
@@ -155,7 +152,7 @@ public class AdcreativePreviewsApi {
    *     response body
    */
   public AdcreativePreviewsAddResponse adcreativePreviewsAdd(
-      AdcreativePreviewsAddRequest data, String... headerPair) throws ApiException {
+      AdcreativePreviewsAddRequest data, Pair... headerPair) throws ApiException {
     ApiResponse<AdcreativePreviewsAddResponse> resp =
         adcreativePreviewsAddWithHttpInfo(data, headerPair);
     return resp.getData();
@@ -170,7 +167,7 @@ public class AdcreativePreviewsApi {
    *     response body
    */
   public ApiResponse<AdcreativePreviewsAddResponse> adcreativePreviewsAddWithHttpInfo(
-      AdcreativePreviewsAddRequest data, String... headerPair) throws ApiException {
+      AdcreativePreviewsAddRequest data, Pair... headerPair) throws ApiException {
     com.squareup.okhttp.Call call =
         adcreativePreviewsAddValidateBeforeCall(data, null, null, headerPair);
     Type localVarReturnType = new TypeToken<AdcreativePreviewsAddResponse>() {}.getType();
@@ -188,7 +185,7 @@ public class AdcreativePreviewsApi {
   public com.squareup.okhttp.Call adcreativePreviewsAddAsync(
       AdcreativePreviewsAddRequest data,
       final ApiCallback<AdcreativePreviewsAddResponse> callback,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     ProgressResponseBody.ProgressListener progressListener = null;
@@ -236,7 +233,7 @@ public class AdcreativePreviewsApi {
       List<String> fields,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     Object localVarPostBody = null;
@@ -267,11 +264,8 @@ public class AdcreativePreviewsApi {
     localVarHeaderParams.put("Content-Type", localVarContentType);
 
     if (headerPair != null && headerPair.length > 0) {
-      if (headerPair.length % 2 != 0) {
-        throw new UnsupportedOperationException("Parameter headerPair must be paired");
-      }
-      for (int i = 0; i < headerPair.length / 2; i++) {
-        localVarHeaderParams.put(headerPair[i], headerPair[i * 2 + 1]);
+      for (int i = 0; i < headerPair.length; i++) {
+        localVarHeaderParams.put(headerPair[i].getName(), headerPair[i].getValue());
       }
     }
 
@@ -313,7 +307,7 @@ public class AdcreativePreviewsApi {
       List<String> fields,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     // verify the required parameter 'accountId' is set
@@ -345,7 +339,7 @@ public class AdcreativePreviewsApi {
    *     response body
    */
   public AdcreativePreviewsGetResponse adcreativePreviewsGet(
-      Long accountId, List<FilteringStruct> filtering, List<String> fields, String... headerPair)
+      Long accountId, List<FilteringStruct> filtering, List<String> fields, Pair... headerPair)
       throws ApiException {
     ApiResponse<AdcreativePreviewsGetResponse> resp =
         adcreativePreviewsGetWithHttpInfo(accountId, filtering, fields, headerPair);
@@ -363,7 +357,7 @@ public class AdcreativePreviewsApi {
    *     response body
    */
   public ApiResponse<AdcreativePreviewsGetResponse> adcreativePreviewsGetWithHttpInfo(
-      Long accountId, List<FilteringStruct> filtering, List<String> fields, String... headerPair)
+      Long accountId, List<FilteringStruct> filtering, List<String> fields, Pair... headerPair)
       throws ApiException {
     com.squareup.okhttp.Call call =
         adcreativePreviewsGetValidateBeforeCall(
@@ -387,7 +381,7 @@ public class AdcreativePreviewsApi {
       List<FilteringStruct> filtering,
       List<String> fields,
       final ApiCallback<AdcreativePreviewsGetResponse> callback,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     ProgressResponseBody.ProgressListener progressListener = null;

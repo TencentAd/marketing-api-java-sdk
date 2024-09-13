@@ -85,6 +85,9 @@ public class ConversionsAddRequest {
   @SerializedName("forward_link_assist")
   private OptimizationGoal forwardLinkAssist = null;
 
+  @SerializedName("incubation_optimization_goal")
+  private OptimizationGoal incubationOptimizationGoal = null;
+
   public ConversionsAddRequest accountId(Long accountId) {
     this.accountId = accountId;
     return this;
@@ -507,6 +510,26 @@ public class ConversionsAddRequest {
     this.forwardLinkAssist = forwardLinkAssist;
   }
 
+  public ConversionsAddRequest incubationOptimizationGoal(
+      OptimizationGoal incubationOptimizationGoal) {
+    this.incubationOptimizationGoal = incubationOptimizationGoal;
+    return this;
+  }
+
+  /**
+   * Get incubationOptimizationGoal
+   *
+   * @return incubationOptimizationGoal
+   */
+  @ApiModelProperty(value = "")
+  public OptimizationGoal getIncubationOptimizationGoal() {
+    return incubationOptimizationGoal;
+  }
+
+  public void setIncubationOptimizationGoal(OptimizationGoal incubationOptimizationGoal) {
+    this.incubationOptimizationGoal = incubationOptimizationGoal;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -542,7 +565,9 @@ public class ConversionsAddRequest {
             this.deepBehaviorAdvancedGoal, conversionsAddRequest.deepBehaviorAdvancedGoal)
         && Objects.equals(
             this.deepOptimizationGoalType, conversionsAddRequest.deepOptimizationGoalType)
-        && Objects.equals(this.forwardLinkAssist, conversionsAddRequest.forwardLinkAssist);
+        && Objects.equals(this.forwardLinkAssist, conversionsAddRequest.forwardLinkAssist)
+        && Objects.equals(
+            this.incubationOptimizationGoal, conversionsAddRequest.incubationOptimizationGoal);
   }
 
   @Override
@@ -569,7 +594,8 @@ public class ConversionsAddRequest {
         attributionWindow,
         deepBehaviorAdvancedGoal,
         deepOptimizationGoalType,
-        forwardLinkAssist);
+        forwardLinkAssist,
+        incubationOptimizationGoal);
   }
 
   @Override

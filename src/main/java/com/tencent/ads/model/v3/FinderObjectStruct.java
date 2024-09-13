@@ -33,6 +33,9 @@ public class FinderObjectStruct {
   @SerializedName("flag")
   private Long flag = null;
 
+  @SerializedName("wechat_channels_account_id")
+  private String wechatChannelsAccountId = null;
+
   public FinderObjectStruct finderUsername(String finderUsername) {
     this.finderUsername = finderUsername;
     return this;
@@ -109,6 +112,25 @@ public class FinderObjectStruct {
     this.flag = flag;
   }
 
+  public FinderObjectStruct wechatChannelsAccountId(String wechatChannelsAccountId) {
+    this.wechatChannelsAccountId = wechatChannelsAccountId;
+    return this;
+  }
+
+  /**
+   * Get wechatChannelsAccountId
+   *
+   * @return wechatChannelsAccountId
+   */
+  @ApiModelProperty(value = "")
+  public String getWechatChannelsAccountId() {
+    return wechatChannelsAccountId;
+  }
+
+  public void setWechatChannelsAccountId(String wechatChannelsAccountId) {
+    this.wechatChannelsAccountId = wechatChannelsAccountId;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -121,12 +143,13 @@ public class FinderObjectStruct {
     return Objects.equals(this.finderUsername, finderObjectStruct.finderUsername)
         && Objects.equals(this.description, finderObjectStruct.description)
         && Objects.equals(this.medias, finderObjectStruct.medias)
-        && Objects.equals(this.flag, finderObjectStruct.flag);
+        && Objects.equals(this.flag, finderObjectStruct.flag)
+        && Objects.equals(this.wechatChannelsAccountId, finderObjectStruct.wechatChannelsAccountId);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(finderUsername, description, medias, flag);
+    return Objects.hash(finderUsername, description, medias, flag, wechatChannelsAccountId);
   }
 
   @Override

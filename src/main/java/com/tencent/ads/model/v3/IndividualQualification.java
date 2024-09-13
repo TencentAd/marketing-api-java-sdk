@@ -18,8 +18,8 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.util.Objects;
 
-/** 个人身份证明 */
-@ApiModel(description = "个人身份证明")
+/** 身份证明 */
+@ApiModel(description = "身份证明")
 public class IndividualQualification {
   @SerializedName("name")
   private String name = null;

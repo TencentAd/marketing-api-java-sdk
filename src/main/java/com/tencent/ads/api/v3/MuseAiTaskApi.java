@@ -63,7 +63,7 @@ public class MuseAiTaskApi {
       MuseAiTaskAddRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     Object localVarPostBody = data;
@@ -87,11 +87,8 @@ public class MuseAiTaskApi {
     localVarHeaderParams.put("Content-Type", localVarContentType);
 
     if (headerPair != null && headerPair.length > 0) {
-      if (headerPair.length % 2 != 0) {
-        throw new UnsupportedOperationException("Parameter headerPair must be paired");
-      }
-      for (int i = 0; i < headerPair.length / 2; i++) {
-        localVarHeaderParams.put(headerPair[i], headerPair[i * 2 + 1]);
+      for (int i = 0; i < headerPair.length; i++) {
+        localVarHeaderParams.put(headerPair[i].getName(), headerPair[i].getValue());
       }
     }
 
@@ -131,7 +128,7 @@ public class MuseAiTaskApi {
       MuseAiTaskAddRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     // verify the required parameter 'data' is set
@@ -153,7 +150,7 @@ public class MuseAiTaskApi {
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
-  public MuseAiTaskAddResponse museAiTaskAdd(MuseAiTaskAddRequest data, String... headerPair)
+  public MuseAiTaskAddResponse museAiTaskAdd(MuseAiTaskAddRequest data, Pair... headerPair)
       throws ApiException {
     ApiResponse<MuseAiTaskAddResponse> resp = museAiTaskAddWithHttpInfo(data, headerPair);
     return resp.getData();
@@ -168,7 +165,7 @@ public class MuseAiTaskApi {
    *     response body
    */
   public ApiResponse<MuseAiTaskAddResponse> museAiTaskAddWithHttpInfo(
-      MuseAiTaskAddRequest data, String... headerPair) throws ApiException {
+      MuseAiTaskAddRequest data, Pair... headerPair) throws ApiException {
     com.squareup.okhttp.Call call = museAiTaskAddValidateBeforeCall(data, null, null, headerPair);
     Type localVarReturnType = new TypeToken<MuseAiTaskAddResponse>() {}.getType();
     return apiClient.execute(call, localVarReturnType);
@@ -185,7 +182,7 @@ public class MuseAiTaskApi {
   public com.squareup.okhttp.Call museAiTaskAddAsync(
       MuseAiTaskAddRequest data,
       final ApiCallback<MuseAiTaskAddResponse> callback,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     ProgressResponseBody.ProgressListener progressListener = null;
@@ -233,7 +230,7 @@ public class MuseAiTaskApi {
       List<String> fields,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     Object localVarPostBody = null;
@@ -262,11 +259,8 @@ public class MuseAiTaskApi {
     localVarHeaderParams.put("Content-Type", localVarContentType);
 
     if (headerPair != null && headerPair.length > 0) {
-      if (headerPair.length % 2 != 0) {
-        throw new UnsupportedOperationException("Parameter headerPair must be paired");
-      }
-      for (int i = 0; i < headerPair.length / 2; i++) {
-        localVarHeaderParams.put(headerPair[i], headerPair[i * 2 + 1]);
+      for (int i = 0; i < headerPair.length; i++) {
+        localVarHeaderParams.put(headerPair[i].getName(), headerPair[i].getValue());
       }
     }
 
@@ -308,7 +302,7 @@ public class MuseAiTaskApi {
       List<String> fields,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     // verify the required parameter 'accountId' is set
@@ -340,7 +334,7 @@ public class MuseAiTaskApi {
    *     response body
    */
   public MuseAiTaskGetResponse museAiTaskGet(
-      Long accountId, Long taskId, List<String> fields, String... headerPair) throws ApiException {
+      Long accountId, Long taskId, List<String> fields, Pair... headerPair) throws ApiException {
     ApiResponse<MuseAiTaskGetResponse> resp =
         museAiTaskGetWithHttpInfo(accountId, taskId, fields, headerPair);
     return resp.getData();
@@ -357,7 +351,7 @@ public class MuseAiTaskApi {
    *     response body
    */
   public ApiResponse<MuseAiTaskGetResponse> museAiTaskGetWithHttpInfo(
-      Long accountId, Long taskId, List<String> fields, String... headerPair) throws ApiException {
+      Long accountId, Long taskId, List<String> fields, Pair... headerPair) throws ApiException {
     com.squareup.okhttp.Call call =
         museAiTaskGetValidateBeforeCall(accountId, taskId, fields, null, null, headerPair);
     Type localVarReturnType = new TypeToken<MuseAiTaskGetResponse>() {}.getType();
@@ -379,7 +373,7 @@ public class MuseAiTaskApi {
       Long taskId,
       List<String> fields,
       final ApiCallback<MuseAiTaskGetResponse> callback,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     ProgressResponseBody.ProgressListener progressListener = null;

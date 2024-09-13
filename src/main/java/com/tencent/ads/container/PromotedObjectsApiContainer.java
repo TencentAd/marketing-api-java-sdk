@@ -15,6 +15,7 @@ package com.tencent.ads.container;
 import com.google.inject.Inject;
 import com.tencent.ads.ApiContainer;
 import com.tencent.ads.ApiException;
+import com.tencent.ads.Pair;
 import com.tencent.ads.anno.*;
 import com.tencent.ads.api.PromotedObjectsApi;
 import com.tencent.ads.exception.TencentAdsResponseException;
@@ -48,7 +49,7 @@ public class PromotedObjectsApiContainer extends ApiContainer {
    *     response body
    */
   public PromotedObjectsAddResponseData promotedObjectsAdd(
-      PromotedObjectsAddRequest data, String... headerPair)
+      PromotedObjectsAddRequest data, Pair... headerPair)
       throws ApiException, TencentAdsResponseException {
     PromotedObjectsAddResponse resp = api.promotedObjectsAdd(data, headerPair);
     handleResponse(gson.toJson(resp));
@@ -64,7 +65,7 @@ public class PromotedObjectsApiContainer extends ApiContainer {
    *     response body
    */
   public PromotedObjectsAuthorizeResponseData promotedObjectsAuthorize(
-      PromotedObjectsAuthorizeRequest data, String... headerPair)
+      PromotedObjectsAuthorizeRequest data, Pair... headerPair)
       throws ApiException, TencentAdsResponseException {
     PromotedObjectsAuthorizeResponse resp = api.promotedObjectsAuthorize(data, headerPair);
     handleResponse(gson.toJson(resp));
@@ -80,7 +81,7 @@ public class PromotedObjectsApiContainer extends ApiContainer {
    *     response body
    */
   public PromotedObjectsDeleteResponseData promotedObjectsDelete(
-      PromotedObjectsDeleteRequest data, String... headerPair)
+      PromotedObjectsDeleteRequest data, Pair... headerPair)
       throws ApiException, TencentAdsResponseException {
     PromotedObjectsDeleteResponse resp = api.promotedObjectsDelete(data, headerPair);
     handleResponse(gson.toJson(resp));
@@ -105,7 +106,7 @@ public class PromotedObjectsApiContainer extends ApiContainer {
       Long page,
       Long pageSize,
       List<String> fields,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException, TencentAdsResponseException {
     PromotedObjectsGetResponse resp =
         api.promotedObjectsGet(accountId, filtering, page, pageSize, fields, headerPair);
@@ -122,7 +123,7 @@ public class PromotedObjectsApiContainer extends ApiContainer {
    *     response body
    */
   public PromotedObjectsUpdateResponseData promotedObjectsUpdate(
-      PromotedObjectsUpdateRequest data, String... headerPair)
+      PromotedObjectsUpdateRequest data, Pair... headerPair)
       throws ApiException, TencentAdsResponseException {
     PromotedObjectsUpdateResponse resp = api.promotedObjectsUpdate(data, headerPair);
     handleResponse(gson.toJson(resp));

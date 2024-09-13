@@ -15,6 +15,7 @@ package com.tencent.ads.container;
 import com.google.inject.Inject;
 import com.tencent.ads.ApiContainer;
 import com.tencent.ads.ApiException;
+import com.tencent.ads.Pair;
 import com.tencent.ads.anno.*;
 import com.tencent.ads.api.AsyncReportsApi;
 import com.tencent.ads.exception.TencentAdsResponseException;
@@ -39,7 +40,7 @@ public class AsyncReportsApiContainer extends ApiContainer {
    *     response body
    */
   public AsyncReportsAddResponseData asyncReportsAdd(
-      AsyncReportsAddRequest data, String... headerPair)
+      AsyncReportsAddRequest data, Pair... headerPair)
       throws ApiException, TencentAdsResponseException {
     AsyncReportsAddResponse resp = api.asyncReportsAdd(data, headerPair);
     handleResponse(gson.toJson(resp));
@@ -66,7 +67,7 @@ public class AsyncReportsApiContainer extends ApiContainer {
       Long pageSize,
       Boolean weixinOfficialAccountsUpgradeEnabled,
       List<String> fields,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException, TencentAdsResponseException {
     AsyncReportsGetResponse resp =
         api.asyncReportsGet(

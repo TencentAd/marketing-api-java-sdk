@@ -15,6 +15,7 @@ package com.tencent.ads.container;
 import com.google.inject.Inject;
 import com.tencent.ads.ApiContainer;
 import com.tencent.ads.ApiException;
+import com.tencent.ads.Pair;
 import com.tencent.ads.anno.*;
 import com.tencent.ads.api.OuterCluesApi;
 import com.tencent.ads.exception.TencentAdsResponseException;
@@ -41,7 +42,7 @@ public class OuterCluesApiContainer extends ApiContainer {
    *     response body
    */
   public OuterCluesActionTypeReportResponseData outerCluesActionTypeReport(
-      OuterCluesActionTypeReportRequest data, String... headerPair)
+      OuterCluesActionTypeReportRequest data, Pair... headerPair)
       throws ApiException, TencentAdsResponseException {
     OuterCluesActionTypeReportResponse resp = api.outerCluesActionTypeReport(data, headerPair);
     handleResponse(gson.toJson(resp));
@@ -56,7 +57,7 @@ public class OuterCluesApiContainer extends ApiContainer {
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
-  public OuterCluesAddResponseData outerCluesAdd(OuterCluesAddRequest data, String... headerPair)
+  public OuterCluesAddResponseData outerCluesAdd(OuterCluesAddRequest data, Pair... headerPair)
       throws ApiException, TencentAdsResponseException {
     OuterCluesAddResponse resp = api.outerCluesAdd(data, headerPair);
     handleResponse(gson.toJson(resp));
@@ -72,7 +73,7 @@ public class OuterCluesApiContainer extends ApiContainer {
    *     response body
    */
   public OuterCluesUpdateResponseData outerCluesUpdate(
-      OuterCluesUpdateRequest data, String... headerPair)
+      OuterCluesUpdateRequest data, Pair... headerPair)
       throws ApiException, TencentAdsResponseException {
     OuterCluesUpdateResponse resp = api.outerCluesUpdate(data, headerPair);
     handleResponse(gson.toJson(resp));

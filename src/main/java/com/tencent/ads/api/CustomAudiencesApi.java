@@ -67,7 +67,7 @@ public class CustomAudiencesApi {
       CustomAudiencesAddRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     Object localVarPostBody = data;
@@ -91,11 +91,8 @@ public class CustomAudiencesApi {
     localVarHeaderParams.put("Content-Type", localVarContentType);
 
     if (headerPair != null && headerPair.length > 0) {
-      if (headerPair.length % 2 != 0) {
-        throw new UnsupportedOperationException("Parameter headerPair must be paired");
-      }
-      for (int i = 0; i < headerPair.length / 2; i++) {
-        localVarHeaderParams.put(headerPair[i], headerPair[i * 2 + 1]);
+      for (int i = 0; i < headerPair.length; i++) {
+        localVarHeaderParams.put(headerPair[i].getName(), headerPair[i].getValue());
       }
     }
 
@@ -135,7 +132,7 @@ public class CustomAudiencesApi {
       CustomAudiencesAddRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     // verify the required parameter 'data' is set
@@ -158,7 +155,7 @@ public class CustomAudiencesApi {
    *     response body
    */
   public CustomAudiencesAddResponse customAudiencesAdd(
-      CustomAudiencesAddRequest data, String... headerPair) throws ApiException {
+      CustomAudiencesAddRequest data, Pair... headerPair) throws ApiException {
     ApiResponse<CustomAudiencesAddResponse> resp = customAudiencesAddWithHttpInfo(data, headerPair);
     return resp.getData();
   }
@@ -172,7 +169,7 @@ public class CustomAudiencesApi {
    *     response body
    */
   public ApiResponse<CustomAudiencesAddResponse> customAudiencesAddWithHttpInfo(
-      CustomAudiencesAddRequest data, String... headerPair) throws ApiException {
+      CustomAudiencesAddRequest data, Pair... headerPair) throws ApiException {
     com.squareup.okhttp.Call call =
         customAudiencesAddValidateBeforeCall(data, null, null, headerPair);
     Type localVarReturnType = new TypeToken<CustomAudiencesAddResponse>() {}.getType();
@@ -190,7 +187,7 @@ public class CustomAudiencesApi {
   public com.squareup.okhttp.Call customAudiencesAddAsync(
       CustomAudiencesAddRequest data,
       final ApiCallback<CustomAudiencesAddResponse> callback,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     ProgressResponseBody.ProgressListener progressListener = null;
@@ -234,7 +231,7 @@ public class CustomAudiencesApi {
       CustomAudiencesDeleteRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     Object localVarPostBody = data;
@@ -258,11 +255,8 @@ public class CustomAudiencesApi {
     localVarHeaderParams.put("Content-Type", localVarContentType);
 
     if (headerPair != null && headerPair.length > 0) {
-      if (headerPair.length % 2 != 0) {
-        throw new UnsupportedOperationException("Parameter headerPair must be paired");
-      }
-      for (int i = 0; i < headerPair.length / 2; i++) {
-        localVarHeaderParams.put(headerPair[i], headerPair[i * 2 + 1]);
+      for (int i = 0; i < headerPair.length; i++) {
+        localVarHeaderParams.put(headerPair[i].getName(), headerPair[i].getValue());
       }
     }
 
@@ -302,7 +296,7 @@ public class CustomAudiencesApi {
       CustomAudiencesDeleteRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     // verify the required parameter 'data' is set
@@ -325,7 +319,7 @@ public class CustomAudiencesApi {
    *     response body
    */
   public CustomAudiencesDeleteResponse customAudiencesDelete(
-      CustomAudiencesDeleteRequest data, String... headerPair) throws ApiException {
+      CustomAudiencesDeleteRequest data, Pair... headerPair) throws ApiException {
     ApiResponse<CustomAudiencesDeleteResponse> resp =
         customAudiencesDeleteWithHttpInfo(data, headerPair);
     return resp.getData();
@@ -340,7 +334,7 @@ public class CustomAudiencesApi {
    *     response body
    */
   public ApiResponse<CustomAudiencesDeleteResponse> customAudiencesDeleteWithHttpInfo(
-      CustomAudiencesDeleteRequest data, String... headerPair) throws ApiException {
+      CustomAudiencesDeleteRequest data, Pair... headerPair) throws ApiException {
     com.squareup.okhttp.Call call =
         customAudiencesDeleteValidateBeforeCall(data, null, null, headerPair);
     Type localVarReturnType = new TypeToken<CustomAudiencesDeleteResponse>() {}.getType();
@@ -358,7 +352,7 @@ public class CustomAudiencesApi {
   public com.squareup.okhttp.Call customAudiencesDeleteAsync(
       CustomAudiencesDeleteRequest data,
       final ApiCallback<CustomAudiencesDeleteResponse> callback,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     ProgressResponseBody.ProgressListener progressListener = null;
@@ -412,7 +406,7 @@ public class CustomAudiencesApi {
       List<String> fields,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     Object localVarPostBody = null;
@@ -447,11 +441,8 @@ public class CustomAudiencesApi {
     localVarHeaderParams.put("Content-Type", localVarContentType);
 
     if (headerPair != null && headerPair.length > 0) {
-      if (headerPair.length % 2 != 0) {
-        throw new UnsupportedOperationException("Parameter headerPair must be paired");
-      }
-      for (int i = 0; i < headerPair.length / 2; i++) {
-        localVarHeaderParams.put(headerPair[i], headerPair[i * 2 + 1]);
+      for (int i = 0; i < headerPair.length; i++) {
+        localVarHeaderParams.put(headerPair[i].getName(), headerPair[i].getValue());
       }
     }
 
@@ -496,7 +487,7 @@ public class CustomAudiencesApi {
       List<String> fields,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     // verify the required parameter 'accountId' is set
@@ -539,7 +530,7 @@ public class CustomAudiencesApi {
       Long pageSize,
       String platform,
       List<String> fields,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
     ApiResponse<CustomAudiencesGetResponse> resp =
         customAudiencesGetWithHttpInfo(
@@ -567,7 +558,7 @@ public class CustomAudiencesApi {
       Long pageSize,
       String platform,
       List<String> fields,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
     com.squareup.okhttp.Call call =
         customAudiencesGetValidateBeforeCall(
@@ -597,7 +588,7 @@ public class CustomAudiencesApi {
       String platform,
       List<String> fields,
       final ApiCallback<CustomAudiencesGetResponse> callback,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     ProgressResponseBody.ProgressListener progressListener = null;
@@ -649,7 +640,7 @@ public class CustomAudiencesApi {
       CustomAudiencesUpdateRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     Object localVarPostBody = data;
@@ -673,11 +664,8 @@ public class CustomAudiencesApi {
     localVarHeaderParams.put("Content-Type", localVarContentType);
 
     if (headerPair != null && headerPair.length > 0) {
-      if (headerPair.length % 2 != 0) {
-        throw new UnsupportedOperationException("Parameter headerPair must be paired");
-      }
-      for (int i = 0; i < headerPair.length / 2; i++) {
-        localVarHeaderParams.put(headerPair[i], headerPair[i * 2 + 1]);
+      for (int i = 0; i < headerPair.length; i++) {
+        localVarHeaderParams.put(headerPair[i].getName(), headerPair[i].getValue());
       }
     }
 
@@ -717,7 +705,7 @@ public class CustomAudiencesApi {
       CustomAudiencesUpdateRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     // verify the required parameter 'data' is set
@@ -740,7 +728,7 @@ public class CustomAudiencesApi {
    *     response body
    */
   public CustomAudiencesUpdateResponse customAudiencesUpdate(
-      CustomAudiencesUpdateRequest data, String... headerPair) throws ApiException {
+      CustomAudiencesUpdateRequest data, Pair... headerPair) throws ApiException {
     ApiResponse<CustomAudiencesUpdateResponse> resp =
         customAudiencesUpdateWithHttpInfo(data, headerPair);
     return resp.getData();
@@ -755,7 +743,7 @@ public class CustomAudiencesApi {
    *     response body
    */
   public ApiResponse<CustomAudiencesUpdateResponse> customAudiencesUpdateWithHttpInfo(
-      CustomAudiencesUpdateRequest data, String... headerPair) throws ApiException {
+      CustomAudiencesUpdateRequest data, Pair... headerPair) throws ApiException {
     com.squareup.okhttp.Call call =
         customAudiencesUpdateValidateBeforeCall(data, null, null, headerPair);
     Type localVarReturnType = new TypeToken<CustomAudiencesUpdateResponse>() {}.getType();
@@ -773,7 +761,7 @@ public class CustomAudiencesApi {
   public com.squareup.okhttp.Call customAudiencesUpdateAsync(
       CustomAudiencesUpdateRequest data,
       final ApiCallback<CustomAudiencesUpdateResponse> callback,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     ProgressResponseBody.ProgressListener progressListener = null;

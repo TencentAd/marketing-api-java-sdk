@@ -15,6 +15,7 @@ package com.tencent.ads.container;
 import com.google.inject.Inject;
 import com.tencent.ads.ApiContainer;
 import com.tencent.ads.ApiException;
+import com.tencent.ads.Pair;
 import com.tencent.ads.anno.*;
 import com.tencent.ads.api.AssetPermissionsScenesApi;
 import com.tencent.ads.exception.TencentAdsResponseException;
@@ -35,7 +36,7 @@ public class AssetPermissionsScenesApiContainer extends ApiContainer {
    *     response body
    */
   public AssetPermissionsScenesUpdateResponseData assetPermissionsScenesUpdate(
-      AssetPermissionsScenesUpdateRequest data, String... headerPair)
+      AssetPermissionsScenesUpdateRequest data, Pair... headerPair)
       throws ApiException, TencentAdsResponseException {
     AssetPermissionsScenesUpdateResponse resp = api.assetPermissionsScenesUpdate(data, headerPair);
     handleResponse(gson.toJson(resp));

@@ -67,7 +67,7 @@ public class CustomTagsApi {
       CustomTagsAddRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     Object localVarPostBody = data;
@@ -91,11 +91,8 @@ public class CustomTagsApi {
     localVarHeaderParams.put("Content-Type", localVarContentType);
 
     if (headerPair != null && headerPair.length > 0) {
-      if (headerPair.length % 2 != 0) {
-        throw new UnsupportedOperationException("Parameter headerPair must be paired");
-      }
-      for (int i = 0; i < headerPair.length / 2; i++) {
-        localVarHeaderParams.put(headerPair[i], headerPair[i * 2 + 1]);
+      for (int i = 0; i < headerPair.length; i++) {
+        localVarHeaderParams.put(headerPair[i].getName(), headerPair[i].getValue());
       }
     }
 
@@ -135,7 +132,7 @@ public class CustomTagsApi {
       CustomTagsAddRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     // verify the required parameter 'data' is set
@@ -157,7 +154,7 @@ public class CustomTagsApi {
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
-  public CustomTagsAddResponse customTagsAdd(CustomTagsAddRequest data, String... headerPair)
+  public CustomTagsAddResponse customTagsAdd(CustomTagsAddRequest data, Pair... headerPair)
       throws ApiException {
     ApiResponse<CustomTagsAddResponse> resp = customTagsAddWithHttpInfo(data, headerPair);
     return resp.getData();
@@ -172,7 +169,7 @@ public class CustomTagsApi {
    *     response body
    */
   public ApiResponse<CustomTagsAddResponse> customTagsAddWithHttpInfo(
-      CustomTagsAddRequest data, String... headerPair) throws ApiException {
+      CustomTagsAddRequest data, Pair... headerPair) throws ApiException {
     com.squareup.okhttp.Call call = customTagsAddValidateBeforeCall(data, null, null, headerPair);
     Type localVarReturnType = new TypeToken<CustomTagsAddResponse>() {}.getType();
     return apiClient.execute(call, localVarReturnType);
@@ -189,7 +186,7 @@ public class CustomTagsApi {
   public com.squareup.okhttp.Call customTagsAddAsync(
       CustomTagsAddRequest data,
       final ApiCallback<CustomTagsAddResponse> callback,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     ProgressResponseBody.ProgressListener progressListener = null;
@@ -233,7 +230,7 @@ public class CustomTagsApi {
       CustomTagsDeleteRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     Object localVarPostBody = data;
@@ -257,11 +254,8 @@ public class CustomTagsApi {
     localVarHeaderParams.put("Content-Type", localVarContentType);
 
     if (headerPair != null && headerPair.length > 0) {
-      if (headerPair.length % 2 != 0) {
-        throw new UnsupportedOperationException("Parameter headerPair must be paired");
-      }
-      for (int i = 0; i < headerPair.length / 2; i++) {
-        localVarHeaderParams.put(headerPair[i], headerPair[i * 2 + 1]);
+      for (int i = 0; i < headerPair.length; i++) {
+        localVarHeaderParams.put(headerPair[i].getName(), headerPair[i].getValue());
       }
     }
 
@@ -301,7 +295,7 @@ public class CustomTagsApi {
       CustomTagsDeleteRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     // verify the required parameter 'data' is set
@@ -323,8 +317,8 @@ public class CustomTagsApi {
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
-  public CustomTagsDeleteResponse customTagsDelete(
-      CustomTagsDeleteRequest data, String... headerPair) throws ApiException {
+  public CustomTagsDeleteResponse customTagsDelete(CustomTagsDeleteRequest data, Pair... headerPair)
+      throws ApiException {
     ApiResponse<CustomTagsDeleteResponse> resp = customTagsDeleteWithHttpInfo(data, headerPair);
     return resp.getData();
   }
@@ -338,7 +332,7 @@ public class CustomTagsApi {
    *     response body
    */
   public ApiResponse<CustomTagsDeleteResponse> customTagsDeleteWithHttpInfo(
-      CustomTagsDeleteRequest data, String... headerPair) throws ApiException {
+      CustomTagsDeleteRequest data, Pair... headerPair) throws ApiException {
     com.squareup.okhttp.Call call =
         customTagsDeleteValidateBeforeCall(data, null, null, headerPair);
     Type localVarReturnType = new TypeToken<CustomTagsDeleteResponse>() {}.getType();
@@ -356,7 +350,7 @@ public class CustomTagsApi {
   public com.squareup.okhttp.Call customTagsDeleteAsync(
       CustomTagsDeleteRequest data,
       final ApiCallback<CustomTagsDeleteResponse> callback,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     ProgressResponseBody.ProgressListener progressListener = null;
@@ -414,7 +408,7 @@ public class CustomTagsApi {
       List<String> fields,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     Object localVarPostBody = null;
@@ -451,11 +445,8 @@ public class CustomTagsApi {
     localVarHeaderParams.put("Content-Type", localVarContentType);
 
     if (headerPair != null && headerPair.length > 0) {
-      if (headerPair.length % 2 != 0) {
-        throw new UnsupportedOperationException("Parameter headerPair must be paired");
-      }
-      for (int i = 0; i < headerPair.length / 2; i++) {
-        localVarHeaderParams.put(headerPair[i], headerPair[i * 2 + 1]);
+      for (int i = 0; i < headerPair.length; i++) {
+        localVarHeaderParams.put(headerPair[i].getName(), headerPair[i].getValue());
       }
     }
 
@@ -502,7 +493,7 @@ public class CustomTagsApi {
       List<String> fields,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     // verify the required parameter 'accountId' is set
@@ -551,7 +542,7 @@ public class CustomTagsApi {
       Long page,
       Long pageSize,
       List<String> fields,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
     ApiResponse<CustomTagsGetResponse> resp =
         customTagsGetWithHttpInfo(
@@ -583,7 +574,7 @@ public class CustomTagsApi {
       Long page,
       Long pageSize,
       List<String> fields,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
     com.squareup.okhttp.Call call =
         customTagsGetValidateBeforeCall(
@@ -627,7 +618,7 @@ public class CustomTagsApi {
       Long pageSize,
       List<String> fields,
       final ApiCallback<CustomTagsGetResponse> callback,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     ProgressResponseBody.ProgressListener progressListener = null;
@@ -681,7 +672,7 @@ public class CustomTagsApi {
       CustomTagsUpdateRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     Object localVarPostBody = data;
@@ -705,11 +696,8 @@ public class CustomTagsApi {
     localVarHeaderParams.put("Content-Type", localVarContentType);
 
     if (headerPair != null && headerPair.length > 0) {
-      if (headerPair.length % 2 != 0) {
-        throw new UnsupportedOperationException("Parameter headerPair must be paired");
-      }
-      for (int i = 0; i < headerPair.length / 2; i++) {
-        localVarHeaderParams.put(headerPair[i], headerPair[i * 2 + 1]);
+      for (int i = 0; i < headerPair.length; i++) {
+        localVarHeaderParams.put(headerPair[i].getName(), headerPair[i].getValue());
       }
     }
 
@@ -749,7 +737,7 @@ public class CustomTagsApi {
       CustomTagsUpdateRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     // verify the required parameter 'data' is set
@@ -771,8 +759,8 @@ public class CustomTagsApi {
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
-  public CustomTagsUpdateResponse customTagsUpdate(
-      CustomTagsUpdateRequest data, String... headerPair) throws ApiException {
+  public CustomTagsUpdateResponse customTagsUpdate(CustomTagsUpdateRequest data, Pair... headerPair)
+      throws ApiException {
     ApiResponse<CustomTagsUpdateResponse> resp = customTagsUpdateWithHttpInfo(data, headerPair);
     return resp.getData();
   }
@@ -786,7 +774,7 @@ public class CustomTagsApi {
    *     response body
    */
   public ApiResponse<CustomTagsUpdateResponse> customTagsUpdateWithHttpInfo(
-      CustomTagsUpdateRequest data, String... headerPair) throws ApiException {
+      CustomTagsUpdateRequest data, Pair... headerPair) throws ApiException {
     com.squareup.okhttp.Call call =
         customTagsUpdateValidateBeforeCall(data, null, null, headerPair);
     Type localVarReturnType = new TypeToken<CustomTagsUpdateResponse>() {}.getType();
@@ -804,7 +792,7 @@ public class CustomTagsApi {
   public com.squareup.okhttp.Call customTagsUpdateAsync(
       CustomTagsUpdateRequest data,
       final ApiCallback<CustomTagsUpdateResponse> callback,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     ProgressResponseBody.ProgressListener progressListener = null;

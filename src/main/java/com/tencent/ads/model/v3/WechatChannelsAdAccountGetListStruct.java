@@ -65,6 +65,9 @@ public class WechatChannelsAdAccountGetListStruct {
   @SerializedName("finder_fail_ret")
   private Long finderFailRet = null;
 
+  @SerializedName("wechat_channels_account_id")
+  private String wechatChannelsAccountId = null;
+
   public WechatChannelsAdAccountGetListStruct wechatChannelsAdAccountId(
       Long wechatChannelsAdAccountId) {
     this.wechatChannelsAdAccountId = wechatChannelsAdAccountId;
@@ -343,6 +346,26 @@ public class WechatChannelsAdAccountGetListStruct {
     this.finderFailRet = finderFailRet;
   }
 
+  public WechatChannelsAdAccountGetListStruct wechatChannelsAccountId(
+      String wechatChannelsAccountId) {
+    this.wechatChannelsAccountId = wechatChannelsAccountId;
+    return this;
+  }
+
+  /**
+   * Get wechatChannelsAccountId
+   *
+   * @return wechatChannelsAccountId
+   */
+  @ApiModelProperty(value = "")
+  public String getWechatChannelsAccountId() {
+    return wechatChannelsAccountId;
+  }
+
+  public void setWechatChannelsAccountId(String wechatChannelsAccountId) {
+    this.wechatChannelsAccountId = wechatChannelsAccountId;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -372,7 +395,10 @@ public class WechatChannelsAdAccountGetListStruct {
         && Objects.equals(
             this.lastModifiedTime, wechatChannelsAdAccountGetListStruct.lastModifiedTime)
         && Objects.equals(this.finderFailMsg, wechatChannelsAdAccountGetListStruct.finderFailMsg)
-        && Objects.equals(this.finderFailRet, wechatChannelsAdAccountGetListStruct.finderFailRet);
+        && Objects.equals(this.finderFailRet, wechatChannelsAdAccountGetListStruct.finderFailRet)
+        && Objects.equals(
+            this.wechatChannelsAccountId,
+            wechatChannelsAdAccountGetListStruct.wechatChannelsAccountId);
   }
 
   @Override
@@ -391,7 +417,8 @@ public class WechatChannelsAdAccountGetListStruct {
         createdTime,
         lastModifiedTime,
         finderFailMsg,
-        finderFailRet);
+        finderFailRet,
+        wechatChannelsAccountId);
   }
 
   @Override

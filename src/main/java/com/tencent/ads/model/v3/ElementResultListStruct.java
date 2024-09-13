@@ -23,6 +23,9 @@ import java.util.Objects;
 /** 元素粒度审核结果 */
 @ApiModel(description = "元素粒度审核结果")
 public class ElementResultListStruct {
+  @SerializedName("element_id")
+  private Long elementId = null;
+
   @SerializedName("image_id")
   private String imageId = null;
 
@@ -49,6 +52,25 @@ public class ElementResultListStruct {
 
   @SerializedName("element_reject_detail_info")
   private List<ComponentElementRejectDetailInfoListStruct> elementRejectDetailInfo = null;
+
+  public ElementResultListStruct elementId(Long elementId) {
+    this.elementId = elementId;
+    return this;
+  }
+
+  /**
+   * Get elementId
+   *
+   * @return elementId
+   */
+  @ApiModelProperty(value = "")
+  public Long getElementId() {
+    return elementId;
+  }
+
+  public void setElementId(Long elementId) {
+    this.elementId = elementId;
+  }
 
   public ElementResultListStruct imageId(String imageId) {
     this.imageId = imageId;
@@ -241,7 +263,8 @@ public class ElementResultListStruct {
       return false;
     }
     ElementResultListStruct elementResultListStruct = (ElementResultListStruct) o;
-    return Objects.equals(this.imageId, elementResultListStruct.imageId)
+    return Objects.equals(this.elementId, elementResultListStruct.elementId)
+        && Objects.equals(this.imageId, elementResultListStruct.imageId)
         && Objects.equals(this.videoId, elementResultListStruct.videoId)
         && Objects.equals(this.elementName, elementResultListStruct.elementName)
         && Objects.equals(this.elementValue, elementResultListStruct.elementValue)
@@ -256,6 +279,7 @@ public class ElementResultListStruct {
   @Override
   public int hashCode() {
     return Objects.hash(
+        elementId,
         imageId,
         videoId,
         elementName,

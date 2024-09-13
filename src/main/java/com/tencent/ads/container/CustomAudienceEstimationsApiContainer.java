@@ -15,6 +15,7 @@ package com.tencent.ads.container;
 import com.google.inject.Inject;
 import com.tencent.ads.ApiContainer;
 import com.tencent.ads.ApiException;
+import com.tencent.ads.Pair;
 import com.tencent.ads.anno.*;
 import com.tencent.ads.api.CustomAudienceEstimationsApi;
 import com.tencent.ads.exception.TencentAdsResponseException;
@@ -35,7 +36,7 @@ public class CustomAudienceEstimationsApiContainer extends ApiContainer {
    *     response body
    */
   public CustomAudienceEstimationsGetResponseData customAudienceEstimationsGet(
-      CustomAudienceEstimationsGetRequest data, String... headerPair)
+      CustomAudienceEstimationsGetRequest data, Pair... headerPair)
       throws ApiException, TencentAdsResponseException {
     CustomAudienceEstimationsGetResponse resp = api.customAudienceEstimationsGet(data, headerPair);
     handleResponse(gson.toJson(resp));

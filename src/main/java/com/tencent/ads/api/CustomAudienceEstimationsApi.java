@@ -62,7 +62,7 @@ public class CustomAudienceEstimationsApi {
       CustomAudienceEstimationsGetRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     Object localVarPostBody = data;
@@ -86,11 +86,8 @@ public class CustomAudienceEstimationsApi {
     localVarHeaderParams.put("Content-Type", localVarContentType);
 
     if (headerPair != null && headerPair.length > 0) {
-      if (headerPair.length % 2 != 0) {
-        throw new UnsupportedOperationException("Parameter headerPair must be paired");
-      }
-      for (int i = 0; i < headerPair.length / 2; i++) {
-        localVarHeaderParams.put(headerPair[i], headerPair[i * 2 + 1]);
+      for (int i = 0; i < headerPair.length; i++) {
+        localVarHeaderParams.put(headerPair[i].getName(), headerPair[i].getValue());
       }
     }
 
@@ -130,7 +127,7 @@ public class CustomAudienceEstimationsApi {
       CustomAudienceEstimationsGetRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     // verify the required parameter 'data' is set
@@ -154,7 +151,7 @@ public class CustomAudienceEstimationsApi {
    *     response body
    */
   public CustomAudienceEstimationsGetResponse customAudienceEstimationsGet(
-      CustomAudienceEstimationsGetRequest data, String... headerPair) throws ApiException {
+      CustomAudienceEstimationsGetRequest data, Pair... headerPair) throws ApiException {
     ApiResponse<CustomAudienceEstimationsGetResponse> resp =
         customAudienceEstimationsGetWithHttpInfo(data, headerPair);
     return resp.getData();
@@ -169,7 +166,7 @@ public class CustomAudienceEstimationsApi {
    *     response body
    */
   public ApiResponse<CustomAudienceEstimationsGetResponse> customAudienceEstimationsGetWithHttpInfo(
-      CustomAudienceEstimationsGetRequest data, String... headerPair) throws ApiException {
+      CustomAudienceEstimationsGetRequest data, Pair... headerPair) throws ApiException {
     com.squareup.okhttp.Call call =
         customAudienceEstimationsGetValidateBeforeCall(data, null, null, headerPair);
     Type localVarReturnType = new TypeToken<CustomAudienceEstimationsGetResponse>() {}.getType();
@@ -187,7 +184,7 @@ public class CustomAudienceEstimationsApi {
   public com.squareup.okhttp.Call customAudienceEstimationsGetAsync(
       CustomAudienceEstimationsGetRequest data,
       final ApiCallback<CustomAudienceEstimationsGetResponse> callback,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     ProgressResponseBody.ProgressListener progressListener = null;

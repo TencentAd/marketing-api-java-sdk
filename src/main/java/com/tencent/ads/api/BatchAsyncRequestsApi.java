@@ -64,7 +64,7 @@ public class BatchAsyncRequestsApi {
       BatchAsyncRequestsAddRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     Object localVarPostBody = data;
@@ -88,11 +88,8 @@ public class BatchAsyncRequestsApi {
     localVarHeaderParams.put("Content-Type", localVarContentType);
 
     if (headerPair != null && headerPair.length > 0) {
-      if (headerPair.length % 2 != 0) {
-        throw new UnsupportedOperationException("Parameter headerPair must be paired");
-      }
-      for (int i = 0; i < headerPair.length / 2; i++) {
-        localVarHeaderParams.put(headerPair[i], headerPair[i * 2 + 1]);
+      for (int i = 0; i < headerPair.length; i++) {
+        localVarHeaderParams.put(headerPair[i].getName(), headerPair[i].getValue());
       }
     }
 
@@ -132,7 +129,7 @@ public class BatchAsyncRequestsApi {
       BatchAsyncRequestsAddRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     // verify the required parameter 'data' is set
@@ -155,7 +152,7 @@ public class BatchAsyncRequestsApi {
    *     response body
    */
   public BatchAsyncRequestsAddResponse batchAsyncRequestsAdd(
-      BatchAsyncRequestsAddRequest data, String... headerPair) throws ApiException {
+      BatchAsyncRequestsAddRequest data, Pair... headerPair) throws ApiException {
     ApiResponse<BatchAsyncRequestsAddResponse> resp =
         batchAsyncRequestsAddWithHttpInfo(data, headerPair);
     return resp.getData();
@@ -170,7 +167,7 @@ public class BatchAsyncRequestsApi {
    *     response body
    */
   public ApiResponse<BatchAsyncRequestsAddResponse> batchAsyncRequestsAddWithHttpInfo(
-      BatchAsyncRequestsAddRequest data, String... headerPair) throws ApiException {
+      BatchAsyncRequestsAddRequest data, Pair... headerPair) throws ApiException {
     com.squareup.okhttp.Call call =
         batchAsyncRequestsAddValidateBeforeCall(data, null, null, headerPair);
     Type localVarReturnType = new TypeToken<BatchAsyncRequestsAddResponse>() {}.getType();
@@ -188,7 +185,7 @@ public class BatchAsyncRequestsApi {
   public com.squareup.okhttp.Call batchAsyncRequestsAddAsync(
       BatchAsyncRequestsAddRequest data,
       final ApiCallback<BatchAsyncRequestsAddResponse> callback,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     ProgressResponseBody.ProgressListener progressListener = null;
@@ -240,7 +237,7 @@ public class BatchAsyncRequestsApi {
       List<String> fields,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     Object localVarPostBody = null;
@@ -274,11 +271,8 @@ public class BatchAsyncRequestsApi {
     localVarHeaderParams.put("Content-Type", localVarContentType);
 
     if (headerPair != null && headerPair.length > 0) {
-      if (headerPair.length % 2 != 0) {
-        throw new UnsupportedOperationException("Parameter headerPair must be paired");
-      }
-      for (int i = 0; i < headerPair.length / 2; i++) {
-        localVarHeaderParams.put(headerPair[i], headerPair[i * 2 + 1]);
+      for (int i = 0; i < headerPair.length; i++) {
+        localVarHeaderParams.put(headerPair[i].getName(), headerPair[i].getValue());
       }
     }
 
@@ -322,7 +316,7 @@ public class BatchAsyncRequestsApi {
       List<String> fields,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     // verify the required parameter 'accountId' is set
@@ -362,7 +356,7 @@ public class BatchAsyncRequestsApi {
       Long page,
       Long pageSize,
       List<String> fields,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
     ApiResponse<BatchAsyncRequestsGetResponse> resp =
         batchAsyncRequestsGetWithHttpInfo(accountId, filtering, page, pageSize, fields, headerPair);
@@ -387,7 +381,7 @@ public class BatchAsyncRequestsApi {
       Long page,
       Long pageSize,
       List<String> fields,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
     com.squareup.okhttp.Call call =
         batchAsyncRequestsGetValidateBeforeCall(
@@ -415,7 +409,7 @@ public class BatchAsyncRequestsApi {
       Long pageSize,
       List<String> fields,
       final ApiCallback<BatchAsyncRequestsGetResponse> callback,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     ProgressResponseBody.ProgressListener progressListener = null;

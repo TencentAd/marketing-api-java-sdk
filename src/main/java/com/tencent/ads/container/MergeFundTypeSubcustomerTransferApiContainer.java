@@ -15,6 +15,7 @@ package com.tencent.ads.container;
 import com.google.inject.Inject;
 import com.tencent.ads.ApiContainer;
 import com.tencent.ads.ApiException;
+import com.tencent.ads.Pair;
 import com.tencent.ads.anno.*;
 import com.tencent.ads.api.MergeFundTypeSubcustomerTransferApi;
 import com.tencent.ads.exception.TencentAdsResponseException;
@@ -35,7 +36,7 @@ public class MergeFundTypeSubcustomerTransferApiContainer extends ApiContainer {
    *     response body
    */
   public MergeFundTypeSubcustomerTransferAddResponseData mergeFundTypeSubcustomerTransferAdd(
-      MergeFundTypeSubcustomerTransferAddRequest data, String... headerPair)
+      MergeFundTypeSubcustomerTransferAddRequest data, Pair... headerPair)
       throws ApiException, TencentAdsResponseException {
     MergeFundTypeSubcustomerTransferAddResponse resp =
         api.mergeFundTypeSubcustomerTransferAdd(data, headerPair);

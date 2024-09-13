@@ -24,6 +24,8 @@ public class GetChannelsUserpageobjects {
 
   public Long count = null;
 
+  public String wechatChannelsAccountId = null;
+
   public List<String> fields = null;
 
   public void init() {
@@ -41,7 +43,13 @@ public class GetChannelsUserpageobjects {
         tencentAds
             .channelsUserpageobjects()
             .channelsUserpageobjectsGet(
-                accountId, finderUsername, nickname, lastBuffer, count, fields);
+                accountId,
+                finderUsername,
+                nickname,
+                lastBuffer,
+                count,
+                wechatChannelsAccountId,
+                fields);
     return response;
   }
 

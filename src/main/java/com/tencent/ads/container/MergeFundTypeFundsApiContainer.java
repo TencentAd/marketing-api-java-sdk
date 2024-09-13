@@ -15,6 +15,7 @@ package com.tencent.ads.container;
 import com.google.inject.Inject;
 import com.tencent.ads.ApiContainer;
 import com.tencent.ads.ApiException;
+import com.tencent.ads.Pair;
 import com.tencent.ads.anno.*;
 import com.tencent.ads.api.MergeFundTypeFundsApi;
 import com.tencent.ads.exception.TencentAdsResponseException;
@@ -36,7 +37,7 @@ public class MergeFundTypeFundsApiContainer extends ApiContainer {
    *     response body
    */
   public MergeFundTypeFundsGetResponseData mergeFundTypeFundsGet(
-      Long accountId, List<String> fields, String... headerPair)
+      Long accountId, List<String> fields, Pair... headerPair)
       throws ApiException, TencentAdsResponseException {
     MergeFundTypeFundsGetResponse resp = api.mergeFundTypeFundsGet(accountId, fields, headerPair);
     handleResponse(gson.toJson(resp));

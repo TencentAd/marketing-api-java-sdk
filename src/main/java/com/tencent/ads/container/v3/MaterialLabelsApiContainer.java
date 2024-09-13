@@ -15,6 +15,7 @@ package com.tencent.ads.container.v3;
 import com.google.inject.Inject;
 import com.tencent.ads.ApiContainer;
 import com.tencent.ads.ApiException;
+import com.tencent.ads.Pair;
 import com.tencent.ads.anno.*;
 import com.tencent.ads.api.v3.MaterialLabelsApi;
 import com.tencent.ads.exception.TencentAdsResponseException;
@@ -46,7 +47,7 @@ public class MaterialLabelsApiContainer extends ApiContainer {
    *     response body
    */
   public MaterialLabelsAddResponseData materialLabelsAdd(
-      MaterialLabelsAddRequest data, String... headerPair)
+      MaterialLabelsAddRequest data, Pair... headerPair)
       throws ApiException, TencentAdsResponseException {
     MaterialLabelsAddResponse resp = api.materialLabelsAdd(data, headerPair);
     handleResponse(gson.toJson(resp));
@@ -62,7 +63,7 @@ public class MaterialLabelsApiContainer extends ApiContainer {
    *     response body
    */
   public MaterialLabelsBindResponseData materialLabelsBind(
-      MaterialLabelsBindRequest data, String... headerPair)
+      MaterialLabelsBindRequest data, Pair... headerPair)
       throws ApiException, TencentAdsResponseException {
     MaterialLabelsBindResponse resp = api.materialLabelsBind(data, headerPair);
     handleResponse(gson.toJson(resp));
@@ -78,7 +79,7 @@ public class MaterialLabelsApiContainer extends ApiContainer {
    *     response body
    */
   public MaterialLabelsDeleteResponse materialLabelsDelete(
-      MaterialLabelsDeleteRequest data, String... headerPair)
+      MaterialLabelsDeleteRequest data, Pair... headerPair)
       throws ApiException, TencentAdsResponseException {
     MaterialLabelsDeleteResponse resp = api.materialLabelsDelete(data, headerPair);
     handleResponse(gson.toJson(resp));
@@ -116,7 +117,7 @@ public class MaterialLabelsApiContainer extends ApiContainer {
       Long page,
       Long pageSize,
       List<String> fields,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException, TencentAdsResponseException {
     MaterialLabelsGetResponse resp =
         api.materialLabelsGet(
@@ -145,7 +146,7 @@ public class MaterialLabelsApiContainer extends ApiContainer {
    *     response body
    */
   public MaterialLabelsUpdateResponse materialLabelsUpdate(
-      MaterialLabelsUpdateRequest data, String... headerPair)
+      MaterialLabelsUpdateRequest data, Pair... headerPair)
       throws ApiException, TencentAdsResponseException {
     MaterialLabelsUpdateResponse resp = api.materialLabelsUpdate(data, headerPair);
     handleResponse(gson.toJson(resp));

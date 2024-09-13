@@ -15,6 +15,7 @@ package com.tencent.ads.container.v3;
 import com.google.inject.Inject;
 import com.tencent.ads.ApiContainer;
 import com.tencent.ads.ApiException;
+import com.tencent.ads.Pair;
 import com.tencent.ads.anno.*;
 import com.tencent.ads.api.v3.WxPackagePackageApi;
 import com.tencent.ads.exception.TencentAdsResponseException;
@@ -39,7 +40,7 @@ public class WxPackagePackageApiContainer extends ApiContainer {
    *     response body
    */
   public WxPackagePackageAddResponse wxPackagePackageAdd(
-      WxPackagePackageAddRequest data, String... headerPair)
+      WxPackagePackageAddRequest data, Pair... headerPair)
       throws ApiException, TencentAdsResponseException {
     WxPackagePackageAddResponse resp = api.wxPackagePackageAdd(data, headerPair);
     handleResponse(gson.toJson(resp));
@@ -59,7 +60,7 @@ public class WxPackagePackageApiContainer extends ApiContainer {
    *     response body
    */
   public WxPackagePackageGetResponseData wxPackagePackageGet(
-      Long accountId, Long pageSize, Long pageIndex, List<String> fields, String... headerPair)
+      Long accountId, Long pageSize, Long pageIndex, List<String> fields, Pair... headerPair)
       throws ApiException, TencentAdsResponseException {
     WxPackagePackageGetResponse resp =
         api.wxPackagePackageGet(accountId, pageSize, pageIndex, fields, headerPair);
@@ -76,7 +77,7 @@ public class WxPackagePackageApiContainer extends ApiContainer {
    *     response body
    */
   public WxPackagePackageUpdateResponse wxPackagePackageUpdate(
-      WxPackagePackageUpdateRequest data, String... headerPair)
+      WxPackagePackageUpdateRequest data, Pair... headerPair)
       throws ApiException, TencentAdsResponseException {
     WxPackagePackageUpdateResponse resp = api.wxPackagePackageUpdate(data, headerPair);
     handleResponse(gson.toJson(resp));

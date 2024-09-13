@@ -15,15 +15,17 @@ public class GetMarketingTargetAssets {
   /** TencentAds */
   public TencentAds tencentAds;
 
-  public Long accountId = null;
-
   public String marketingTargetType = null;
+
+  public Long accountId = null;
 
   public List<FilteringStruct> filtering = null;
 
   public Long page = null;
 
   public Long pageSize = null;
+
+  public Long organizationId = null;
 
   public List<String> fields = null;
 
@@ -42,7 +44,7 @@ public class GetMarketingTargetAssets {
         tencentAds
             .marketingTargetAssets()
             .marketingTargetAssetsGet(
-                accountId, marketingTargetType, filtering, page, pageSize, fields);
+                marketingTargetType, accountId, filtering, page, pageSize, organizationId, fields);
     return response;
   }
 

@@ -15,6 +15,7 @@ package com.tencent.ads.container;
 import com.google.inject.Inject;
 import com.tencent.ads.ApiContainer;
 import com.tencent.ads.ApiException;
+import com.tencent.ads.Pair;
 import com.tencent.ads.anno.*;
 import com.tencent.ads.api.ProductCatalogsApi;
 import com.tencent.ads.exception.TencentAdsResponseException;
@@ -38,7 +39,7 @@ public class ProductCatalogsApiContainer extends ApiContainer {
    *     response body
    */
   public ProductCatalogsAddResponseData productCatalogsAdd(
-      ProductCatalogsAddRequest data, String... headerPair)
+      ProductCatalogsAddRequest data, Pair... headerPair)
       throws ApiException, TencentAdsResponseException {
     ProductCatalogsAddResponse resp = api.productCatalogsAdd(data, headerPair);
     handleResponse(gson.toJson(resp));
@@ -65,7 +66,7 @@ public class ProductCatalogsApiContainer extends ApiContainer {
       Long page,
       Long pageSize,
       List<String> fields,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException, TencentAdsResponseException {
     ProductCatalogsGetResponse resp =
         api.productCatalogsGet(

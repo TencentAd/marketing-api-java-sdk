@@ -62,7 +62,7 @@ public class RtaexpApi {
       RtaexpGetRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     Object localVarPostBody = data;
@@ -86,11 +86,8 @@ public class RtaexpApi {
     localVarHeaderParams.put("Content-Type", localVarContentType);
 
     if (headerPair != null && headerPair.length > 0) {
-      if (headerPair.length % 2 != 0) {
-        throw new UnsupportedOperationException("Parameter headerPair must be paired");
-      }
-      for (int i = 0; i < headerPair.length / 2; i++) {
-        localVarHeaderParams.put(headerPair[i], headerPair[i * 2 + 1]);
+      for (int i = 0; i < headerPair.length; i++) {
+        localVarHeaderParams.put(headerPair[i].getName(), headerPair[i].getValue());
       }
     }
 
@@ -130,7 +127,7 @@ public class RtaexpApi {
       RtaexpGetRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     // verify the required parameter 'data' is set
@@ -151,7 +148,7 @@ public class RtaexpApi {
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
-  public RtaexpGetResponse rtaexpGet(RtaexpGetRequest data, String... headerPair)
+  public RtaexpGetResponse rtaexpGet(RtaexpGetRequest data, Pair... headerPair)
       throws ApiException {
     ApiResponse<RtaexpGetResponse> resp = rtaexpGetWithHttpInfo(data, headerPair);
     return resp.getData();
@@ -166,7 +163,7 @@ public class RtaexpApi {
    *     response body
    */
   public ApiResponse<RtaexpGetResponse> rtaexpGetWithHttpInfo(
-      RtaexpGetRequest data, String... headerPair) throws ApiException {
+      RtaexpGetRequest data, Pair... headerPair) throws ApiException {
     com.squareup.okhttp.Call call = rtaexpGetValidateBeforeCall(data, null, null, headerPair);
     Type localVarReturnType = new TypeToken<RtaexpGetResponse>() {}.getType();
     return apiClient.execute(call, localVarReturnType);
@@ -181,7 +178,7 @@ public class RtaexpApi {
    * @throws ApiException If fail to process the API call, e.g. serializing the request body object
    */
   public com.squareup.okhttp.Call rtaexpGetAsync(
-      RtaexpGetRequest data, final ApiCallback<RtaexpGetResponse> callback, String... headerPair)
+      RtaexpGetRequest data, final ApiCallback<RtaexpGetResponse> callback, Pair... headerPair)
       throws ApiException {
 
     ProgressResponseBody.ProgressListener progressListener = null;

@@ -15,6 +15,7 @@ package com.tencent.ads.container;
 import com.google.inject.Inject;
 import com.tencent.ads.ApiContainer;
 import com.tencent.ads.ApiException;
+import com.tencent.ads.Pair;
 import com.tencent.ads.anno.*;
 import com.tencent.ads.api.XijingPageApi;
 import com.tencent.ads.exception.TencentAdsResponseException;
@@ -37,7 +38,7 @@ public class XijingPageApiContainer extends ApiContainer {
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
-  public XijingPageAddResponse xijingPageAdd(XijingPageAddRequest data, String... headerPair)
+  public XijingPageAddResponse xijingPageAdd(XijingPageAddRequest data, Pair... headerPair)
       throws ApiException, TencentAdsResponseException {
     XijingPageAddResponse resp = api.xijingPageAdd(data, headerPair);
     handleResponse(gson.toJson(resp));
@@ -53,8 +54,7 @@ public class XijingPageApiContainer extends ApiContainer {
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
-  public XijingPageDeleteResponse xijingPageDelete(
-      XijingPageDeleteRequest data, String... headerPair)
+  public XijingPageDeleteResponse xijingPageDelete(XijingPageDeleteRequest data, Pair... headerPair)
       throws ApiException, TencentAdsResponseException {
     XijingPageDeleteResponse resp = api.xijingPageDelete(data, headerPair);
     handleResponse(gson.toJson(resp));
@@ -70,8 +70,7 @@ public class XijingPageApiContainer extends ApiContainer {
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
-  public XijingPageUpdateResponse xijingPageUpdate(
-      XijingPageUpdateRequest data, String... headerPair)
+  public XijingPageUpdateResponse xijingPageUpdate(XijingPageUpdateRequest data, Pair... headerPair)
       throws ApiException, TencentAdsResponseException {
     XijingPageUpdateResponse resp = api.xijingPageUpdate(data, headerPair);
     handleResponse(gson.toJson(resp));

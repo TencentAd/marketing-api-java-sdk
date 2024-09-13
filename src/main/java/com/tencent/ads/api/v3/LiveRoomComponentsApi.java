@@ -68,7 +68,7 @@ public class LiveRoomComponentsApi {
       LiveRoomComponentsAddRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     Object localVarPostBody = data;
@@ -92,11 +92,8 @@ public class LiveRoomComponentsApi {
     localVarHeaderParams.put("Content-Type", localVarContentType);
 
     if (headerPair != null && headerPair.length > 0) {
-      if (headerPair.length % 2 != 0) {
-        throw new UnsupportedOperationException("Parameter headerPair must be paired");
-      }
-      for (int i = 0; i < headerPair.length / 2; i++) {
-        localVarHeaderParams.put(headerPair[i], headerPair[i * 2 + 1]);
+      for (int i = 0; i < headerPair.length; i++) {
+        localVarHeaderParams.put(headerPair[i].getName(), headerPair[i].getValue());
       }
     }
 
@@ -136,7 +133,7 @@ public class LiveRoomComponentsApi {
       LiveRoomComponentsAddRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     // verify the required parameter 'data' is set
@@ -159,7 +156,7 @@ public class LiveRoomComponentsApi {
    *     response body
    */
   public LiveRoomComponentsAddResponse liveRoomComponentsAdd(
-      LiveRoomComponentsAddRequest data, String... headerPair) throws ApiException {
+      LiveRoomComponentsAddRequest data, Pair... headerPair) throws ApiException {
     ApiResponse<LiveRoomComponentsAddResponse> resp =
         liveRoomComponentsAddWithHttpInfo(data, headerPair);
     return resp.getData();
@@ -174,7 +171,7 @@ public class LiveRoomComponentsApi {
    *     response body
    */
   public ApiResponse<LiveRoomComponentsAddResponse> liveRoomComponentsAddWithHttpInfo(
-      LiveRoomComponentsAddRequest data, String... headerPair) throws ApiException {
+      LiveRoomComponentsAddRequest data, Pair... headerPair) throws ApiException {
     com.squareup.okhttp.Call call =
         liveRoomComponentsAddValidateBeforeCall(data, null, null, headerPair);
     Type localVarReturnType = new TypeToken<LiveRoomComponentsAddResponse>() {}.getType();
@@ -192,7 +189,7 @@ public class LiveRoomComponentsApi {
   public com.squareup.okhttp.Call liveRoomComponentsAddAsync(
       LiveRoomComponentsAddRequest data,
       final ApiCallback<LiveRoomComponentsAddResponse> callback,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     ProgressResponseBody.ProgressListener progressListener = null;
@@ -236,7 +233,7 @@ public class LiveRoomComponentsApi {
       LiveRoomComponentsDeleteRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     Object localVarPostBody = data;
@@ -260,11 +257,8 @@ public class LiveRoomComponentsApi {
     localVarHeaderParams.put("Content-Type", localVarContentType);
 
     if (headerPair != null && headerPair.length > 0) {
-      if (headerPair.length % 2 != 0) {
-        throw new UnsupportedOperationException("Parameter headerPair must be paired");
-      }
-      for (int i = 0; i < headerPair.length / 2; i++) {
-        localVarHeaderParams.put(headerPair[i], headerPair[i * 2 + 1]);
+      for (int i = 0; i < headerPair.length; i++) {
+        localVarHeaderParams.put(headerPair[i].getName(), headerPair[i].getValue());
       }
     }
 
@@ -304,7 +298,7 @@ public class LiveRoomComponentsApi {
       LiveRoomComponentsDeleteRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     // verify the required parameter 'data' is set
@@ -327,7 +321,7 @@ public class LiveRoomComponentsApi {
    *     response body
    */
   public LiveRoomComponentsDeleteResponse liveRoomComponentsDelete(
-      LiveRoomComponentsDeleteRequest data, String... headerPair) throws ApiException {
+      LiveRoomComponentsDeleteRequest data, Pair... headerPair) throws ApiException {
     ApiResponse<LiveRoomComponentsDeleteResponse> resp =
         liveRoomComponentsDeleteWithHttpInfo(data, headerPair);
     return resp.getData();
@@ -342,7 +336,7 @@ public class LiveRoomComponentsApi {
    *     response body
    */
   public ApiResponse<LiveRoomComponentsDeleteResponse> liveRoomComponentsDeleteWithHttpInfo(
-      LiveRoomComponentsDeleteRequest data, String... headerPair) throws ApiException {
+      LiveRoomComponentsDeleteRequest data, Pair... headerPair) throws ApiException {
     com.squareup.okhttp.Call call =
         liveRoomComponentsDeleteValidateBeforeCall(data, null, null, headerPair);
     Type localVarReturnType = new TypeToken<LiveRoomComponentsDeleteResponse>() {}.getType();
@@ -360,7 +354,7 @@ public class LiveRoomComponentsApi {
   public com.squareup.okhttp.Call liveRoomComponentsDeleteAsync(
       LiveRoomComponentsDeleteRequest data,
       final ApiCallback<LiveRoomComponentsDeleteResponse> callback,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     ProgressResponseBody.ProgressListener progressListener = null;
@@ -412,7 +406,7 @@ public class LiveRoomComponentsApi {
       List<String> fields,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     Object localVarPostBody = null;
@@ -446,11 +440,8 @@ public class LiveRoomComponentsApi {
     localVarHeaderParams.put("Content-Type", localVarContentType);
 
     if (headerPair != null && headerPair.length > 0) {
-      if (headerPair.length % 2 != 0) {
-        throw new UnsupportedOperationException("Parameter headerPair must be paired");
-      }
-      for (int i = 0; i < headerPair.length / 2; i++) {
-        localVarHeaderParams.put(headerPair[i], headerPair[i * 2 + 1]);
+      for (int i = 0; i < headerPair.length; i++) {
+        localVarHeaderParams.put(headerPair[i].getName(), headerPair[i].getValue());
       }
     }
 
@@ -494,7 +485,7 @@ public class LiveRoomComponentsApi {
       List<String> fields,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     // verify the required parameter 'accountId' is set
@@ -534,7 +525,7 @@ public class LiveRoomComponentsApi {
       Long page,
       Long pageSize,
       List<String> fields,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
     ApiResponse<LiveRoomComponentsGetResponse> resp =
         liveRoomComponentsGetWithHttpInfo(accountId, filtering, page, pageSize, fields, headerPair);
@@ -559,7 +550,7 @@ public class LiveRoomComponentsApi {
       Long page,
       Long pageSize,
       List<String> fields,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
     com.squareup.okhttp.Call call =
         liveRoomComponentsGetValidateBeforeCall(
@@ -587,7 +578,7 @@ public class LiveRoomComponentsApi {
       Long pageSize,
       List<String> fields,
       final ApiCallback<LiveRoomComponentsGetResponse> callback,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     ProgressResponseBody.ProgressListener progressListener = null;
@@ -638,7 +629,7 @@ public class LiveRoomComponentsApi {
       LiveRoomComponentsUpdateRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     Object localVarPostBody = data;
@@ -662,11 +653,8 @@ public class LiveRoomComponentsApi {
     localVarHeaderParams.put("Content-Type", localVarContentType);
 
     if (headerPair != null && headerPair.length > 0) {
-      if (headerPair.length % 2 != 0) {
-        throw new UnsupportedOperationException("Parameter headerPair must be paired");
-      }
-      for (int i = 0; i < headerPair.length / 2; i++) {
-        localVarHeaderParams.put(headerPair[i], headerPair[i * 2 + 1]);
+      for (int i = 0; i < headerPair.length; i++) {
+        localVarHeaderParams.put(headerPair[i].getName(), headerPair[i].getValue());
       }
     }
 
@@ -706,7 +694,7 @@ public class LiveRoomComponentsApi {
       LiveRoomComponentsUpdateRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     // verify the required parameter 'data' is set
@@ -729,7 +717,7 @@ public class LiveRoomComponentsApi {
    *     response body
    */
   public LiveRoomComponentsUpdateResponse liveRoomComponentsUpdate(
-      LiveRoomComponentsUpdateRequest data, String... headerPair) throws ApiException {
+      LiveRoomComponentsUpdateRequest data, Pair... headerPair) throws ApiException {
     ApiResponse<LiveRoomComponentsUpdateResponse> resp =
         liveRoomComponentsUpdateWithHttpInfo(data, headerPair);
     return resp.getData();
@@ -744,7 +732,7 @@ public class LiveRoomComponentsApi {
    *     response body
    */
   public ApiResponse<LiveRoomComponentsUpdateResponse> liveRoomComponentsUpdateWithHttpInfo(
-      LiveRoomComponentsUpdateRequest data, String... headerPair) throws ApiException {
+      LiveRoomComponentsUpdateRequest data, Pair... headerPair) throws ApiException {
     com.squareup.okhttp.Call call =
         liveRoomComponentsUpdateValidateBeforeCall(data, null, null, headerPair);
     Type localVarReturnType = new TypeToken<LiveRoomComponentsUpdateResponse>() {}.getType();
@@ -762,7 +750,7 @@ public class LiveRoomComponentsApi {
   public com.squareup.okhttp.Call liveRoomComponentsUpdateAsync(
       LiveRoomComponentsUpdateRequest data,
       final ApiCallback<LiveRoomComponentsUpdateResponse> callback,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     ProgressResponseBody.ProgressListener progressListener = null;

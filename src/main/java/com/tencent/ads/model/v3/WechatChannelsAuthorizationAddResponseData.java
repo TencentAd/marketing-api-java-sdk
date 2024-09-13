@@ -34,6 +34,9 @@ public class WechatChannelsAuthorizationAddResponseData {
   @SerializedName("authorization_agreement")
   private String authorizationAgreement = null;
 
+  @SerializedName("wechat_channels_account_id")
+  private String wechatChannelsAccountId = null;
+
   public WechatChannelsAuthorizationAddResponseData finderUsername(String finderUsername) {
     this.finderUsername = finderUsername;
     return this;
@@ -133,6 +136,26 @@ public class WechatChannelsAuthorizationAddResponseData {
     this.authorizationAgreement = authorizationAgreement;
   }
 
+  public WechatChannelsAuthorizationAddResponseData wechatChannelsAccountId(
+      String wechatChannelsAccountId) {
+    this.wechatChannelsAccountId = wechatChannelsAccountId;
+    return this;
+  }
+
+  /**
+   * Get wechatChannelsAccountId
+   *
+   * @return wechatChannelsAccountId
+   */
+  @ApiModelProperty(value = "")
+  public String getWechatChannelsAccountId() {
+    return wechatChannelsAccountId;
+  }
+
+  public void setWechatChannelsAccountId(String wechatChannelsAccountId) {
+    this.wechatChannelsAccountId = wechatChannelsAccountId;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -156,7 +179,10 @@ public class WechatChannelsAuthorizationAddResponseData {
             wechatChannelsAuthorizationAddResponseData.authorizationExpiredTime)
         && Objects.equals(
             this.authorizationAgreement,
-            wechatChannelsAuthorizationAddResponseData.authorizationAgreement);
+            wechatChannelsAuthorizationAddResponseData.authorizationAgreement)
+        && Objects.equals(
+            this.wechatChannelsAccountId,
+            wechatChannelsAuthorizationAddResponseData.wechatChannelsAccountId);
   }
 
   @Override
@@ -166,7 +192,8 @@ public class WechatChannelsAuthorizationAddResponseData {
         authorizationQrCodeUrl,
         authorizationDescription,
         authorizationExpiredTime,
-        authorizationAgreement);
+        authorizationAgreement,
+        wechatChannelsAccountId);
   }
 
   @Override

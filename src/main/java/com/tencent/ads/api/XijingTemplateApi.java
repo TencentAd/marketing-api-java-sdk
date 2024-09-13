@@ -65,7 +65,7 @@ public class XijingTemplateApi {
       List<String> fields,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     Object localVarPostBody = null;
@@ -95,11 +95,8 @@ public class XijingTemplateApi {
     localVarHeaderParams.put("Content-Type", localVarContentType);
 
     if (headerPair != null && headerPair.length > 0) {
-      if (headerPair.length % 2 != 0) {
-        throw new UnsupportedOperationException("Parameter headerPair must be paired");
-      }
-      for (int i = 0; i < headerPair.length / 2; i++) {
-        localVarHeaderParams.put(headerPair[i], headerPair[i * 2 + 1]);
+      for (int i = 0; i < headerPair.length; i++) {
+        localVarHeaderParams.put(headerPair[i].getName(), headerPair[i].getValue());
       }
     }
 
@@ -141,7 +138,7 @@ public class XijingTemplateApi {
       List<String> fields,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     // verify the required parameter 'accountId' is set
@@ -173,7 +170,7 @@ public class XijingTemplateApi {
    *     response body
    */
   public XijingTemplateGetResponse xijingTemplateGet(
-      Long accountId, String templateId, List<String> fields, String... headerPair)
+      Long accountId, String templateId, List<String> fields, Pair... headerPair)
       throws ApiException {
     ApiResponse<XijingTemplateGetResponse> resp =
         xijingTemplateGetWithHttpInfo(accountId, templateId, fields, headerPair);
@@ -191,7 +188,7 @@ public class XijingTemplateApi {
    *     response body
    */
   public ApiResponse<XijingTemplateGetResponse> xijingTemplateGetWithHttpInfo(
-      Long accountId, String templateId, List<String> fields, String... headerPair)
+      Long accountId, String templateId, List<String> fields, Pair... headerPair)
       throws ApiException {
     com.squareup.okhttp.Call call =
         xijingTemplateGetValidateBeforeCall(accountId, templateId, fields, null, null, headerPair);
@@ -214,7 +211,7 @@ public class XijingTemplateApi {
       String templateId,
       List<String> fields,
       final ApiCallback<XijingTemplateGetResponse> callback,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     ProgressResponseBody.ProgressListener progressListener = null;

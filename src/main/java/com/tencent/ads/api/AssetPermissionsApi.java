@@ -64,7 +64,7 @@ public class AssetPermissionsApi {
       AssetPermissionsAddRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     Object localVarPostBody = data;
@@ -88,11 +88,8 @@ public class AssetPermissionsApi {
     localVarHeaderParams.put("Content-Type", localVarContentType);
 
     if (headerPair != null && headerPair.length > 0) {
-      if (headerPair.length % 2 != 0) {
-        throw new UnsupportedOperationException("Parameter headerPair must be paired");
-      }
-      for (int i = 0; i < headerPair.length / 2; i++) {
-        localVarHeaderParams.put(headerPair[i], headerPair[i * 2 + 1]);
+      for (int i = 0; i < headerPair.length; i++) {
+        localVarHeaderParams.put(headerPair[i].getName(), headerPair[i].getValue());
       }
     }
 
@@ -132,7 +129,7 @@ public class AssetPermissionsApi {
       AssetPermissionsAddRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     // verify the required parameter 'data' is set
@@ -155,7 +152,7 @@ public class AssetPermissionsApi {
    *     response body
    */
   public AssetPermissionsAddResponse assetPermissionsAdd(
-      AssetPermissionsAddRequest data, String... headerPair) throws ApiException {
+      AssetPermissionsAddRequest data, Pair... headerPair) throws ApiException {
     ApiResponse<AssetPermissionsAddResponse> resp =
         assetPermissionsAddWithHttpInfo(data, headerPair);
     return resp.getData();
@@ -170,7 +167,7 @@ public class AssetPermissionsApi {
    *     response body
    */
   public ApiResponse<AssetPermissionsAddResponse> assetPermissionsAddWithHttpInfo(
-      AssetPermissionsAddRequest data, String... headerPair) throws ApiException {
+      AssetPermissionsAddRequest data, Pair... headerPair) throws ApiException {
     com.squareup.okhttp.Call call =
         assetPermissionsAddValidateBeforeCall(data, null, null, headerPair);
     Type localVarReturnType = new TypeToken<AssetPermissionsAddResponse>() {}.getType();
@@ -188,7 +185,7 @@ public class AssetPermissionsApi {
   public com.squareup.okhttp.Call assetPermissionsAddAsync(
       AssetPermissionsAddRequest data,
       final ApiCallback<AssetPermissionsAddResponse> callback,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     ProgressResponseBody.ProgressListener progressListener = null;
@@ -232,7 +229,7 @@ public class AssetPermissionsApi {
       AssetPermissionsDeleteRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     Object localVarPostBody = data;
@@ -256,11 +253,8 @@ public class AssetPermissionsApi {
     localVarHeaderParams.put("Content-Type", localVarContentType);
 
     if (headerPair != null && headerPair.length > 0) {
-      if (headerPair.length % 2 != 0) {
-        throw new UnsupportedOperationException("Parameter headerPair must be paired");
-      }
-      for (int i = 0; i < headerPair.length / 2; i++) {
-        localVarHeaderParams.put(headerPair[i], headerPair[i * 2 + 1]);
+      for (int i = 0; i < headerPair.length; i++) {
+        localVarHeaderParams.put(headerPair[i].getName(), headerPair[i].getValue());
       }
     }
 
@@ -300,7 +294,7 @@ public class AssetPermissionsApi {
       AssetPermissionsDeleteRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     // verify the required parameter 'data' is set
@@ -323,7 +317,7 @@ public class AssetPermissionsApi {
    *     response body
    */
   public AssetPermissionsDeleteResponse assetPermissionsDelete(
-      AssetPermissionsDeleteRequest data, String... headerPair) throws ApiException {
+      AssetPermissionsDeleteRequest data, Pair... headerPair) throws ApiException {
     ApiResponse<AssetPermissionsDeleteResponse> resp =
         assetPermissionsDeleteWithHttpInfo(data, headerPair);
     return resp.getData();
@@ -338,7 +332,7 @@ public class AssetPermissionsApi {
    *     response body
    */
   public ApiResponse<AssetPermissionsDeleteResponse> assetPermissionsDeleteWithHttpInfo(
-      AssetPermissionsDeleteRequest data, String... headerPair) throws ApiException {
+      AssetPermissionsDeleteRequest data, Pair... headerPair) throws ApiException {
     com.squareup.okhttp.Call call =
         assetPermissionsDeleteValidateBeforeCall(data, null, null, headerPair);
     Type localVarReturnType = new TypeToken<AssetPermissionsDeleteResponse>() {}.getType();
@@ -356,7 +350,7 @@ public class AssetPermissionsApi {
   public com.squareup.okhttp.Call assetPermissionsDeleteAsync(
       AssetPermissionsDeleteRequest data,
       final ApiCallback<AssetPermissionsDeleteResponse> callback,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     ProgressResponseBody.ProgressListener progressListener = null;

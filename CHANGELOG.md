@@ -1,4 +1,9 @@
 # 更新日志
+
+## 2024-09-13
+1. 发布Java SDK [1.1.85] 版
+- 新增MarketingApi接口，更新模型
+- 优化自定义 header 参数的类型，将 headerPair 类型从string修改pair，已经使用过自定义header的请求，特别注意，可能会存在编译不报错而请求报错的问题。
 ## 2024-07-13
 1. 发布Java SDK [1.1.84] 版
 - 新增MarketingApi接口，更新模型

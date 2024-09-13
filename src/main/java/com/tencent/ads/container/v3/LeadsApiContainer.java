@@ -15,6 +15,7 @@ package com.tencent.ads.container.v3;
 import com.google.inject.Inject;
 import com.tencent.ads.ApiContainer;
 import com.tencent.ads.ApiException;
+import com.tencent.ads.Pair;
 import com.tencent.ads.anno.*;
 import com.tencent.ads.api.v3.LeadsApi;
 import com.tencent.ads.exception.TencentAdsResponseException;
@@ -37,7 +38,7 @@ public class LeadsApiContainer extends ApiContainer {
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
-  public LeadsAddResponseData leadsAdd(LeadsAddRequest data, String... headerPair)
+  public LeadsAddResponseData leadsAdd(LeadsAddRequest data, Pair... headerPair)
       throws ApiException, TencentAdsResponseException {
     LeadsAddResponse resp = api.leadsAdd(data, headerPair);
     handleResponse(gson.toJson(resp));
@@ -52,7 +53,7 @@ public class LeadsApiContainer extends ApiContainer {
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
-  public LeadsUpdateResponseData leadsUpdate(LeadsUpdateRequest data, String... headerPair)
+  public LeadsUpdateResponseData leadsUpdate(LeadsUpdateRequest data, Pair... headerPair)
       throws ApiException, TencentAdsResponseException {
     LeadsUpdateResponse resp = api.leadsUpdate(data, headerPair);
     handleResponse(gson.toJson(resp));

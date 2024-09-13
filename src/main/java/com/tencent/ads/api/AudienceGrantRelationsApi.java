@@ -64,7 +64,7 @@ public class AudienceGrantRelationsApi {
       AudienceGrantRelationsAddRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     Object localVarPostBody = data;
@@ -88,11 +88,8 @@ public class AudienceGrantRelationsApi {
     localVarHeaderParams.put("Content-Type", localVarContentType);
 
     if (headerPair != null && headerPair.length > 0) {
-      if (headerPair.length % 2 != 0) {
-        throw new UnsupportedOperationException("Parameter headerPair must be paired");
-      }
-      for (int i = 0; i < headerPair.length / 2; i++) {
-        localVarHeaderParams.put(headerPair[i], headerPair[i * 2 + 1]);
+      for (int i = 0; i < headerPair.length; i++) {
+        localVarHeaderParams.put(headerPair[i].getName(), headerPair[i].getValue());
       }
     }
 
@@ -132,7 +129,7 @@ public class AudienceGrantRelationsApi {
       AudienceGrantRelationsAddRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     // verify the required parameter 'data' is set
@@ -155,7 +152,7 @@ public class AudienceGrantRelationsApi {
    *     response body
    */
   public AudienceGrantRelationsAddResponse audienceGrantRelationsAdd(
-      AudienceGrantRelationsAddRequest data, String... headerPair) throws ApiException {
+      AudienceGrantRelationsAddRequest data, Pair... headerPair) throws ApiException {
     ApiResponse<AudienceGrantRelationsAddResponse> resp =
         audienceGrantRelationsAddWithHttpInfo(data, headerPair);
     return resp.getData();
@@ -170,7 +167,7 @@ public class AudienceGrantRelationsApi {
    *     response body
    */
   public ApiResponse<AudienceGrantRelationsAddResponse> audienceGrantRelationsAddWithHttpInfo(
-      AudienceGrantRelationsAddRequest data, String... headerPair) throws ApiException {
+      AudienceGrantRelationsAddRequest data, Pair... headerPair) throws ApiException {
     com.squareup.okhttp.Call call =
         audienceGrantRelationsAddValidateBeforeCall(data, null, null, headerPair);
     Type localVarReturnType = new TypeToken<AudienceGrantRelationsAddResponse>() {}.getType();
@@ -188,7 +185,7 @@ public class AudienceGrantRelationsApi {
   public com.squareup.okhttp.Call audienceGrantRelationsAddAsync(
       AudienceGrantRelationsAddRequest data,
       final ApiCallback<AudienceGrantRelationsAddResponse> callback,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     ProgressResponseBody.ProgressListener progressListener = null;
@@ -240,7 +237,7 @@ public class AudienceGrantRelationsApi {
       List<String> fields,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     Object localVarPostBody = null;
@@ -274,11 +271,8 @@ public class AudienceGrantRelationsApi {
     localVarHeaderParams.put("Content-Type", localVarContentType);
 
     if (headerPair != null && headerPair.length > 0) {
-      if (headerPair.length % 2 != 0) {
-        throw new UnsupportedOperationException("Parameter headerPair must be paired");
-      }
-      for (int i = 0; i < headerPair.length / 2; i++) {
-        localVarHeaderParams.put(headerPair[i], headerPair[i * 2 + 1]);
+      for (int i = 0; i < headerPair.length; i++) {
+        localVarHeaderParams.put(headerPair[i].getName(), headerPair[i].getValue());
       }
     }
 
@@ -322,7 +316,7 @@ public class AudienceGrantRelationsApi {
       List<String> fields,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     // verify the required parameter 'accountId' is set
@@ -362,7 +356,7 @@ public class AudienceGrantRelationsApi {
       Long page,
       Long pageSize,
       List<String> fields,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
     ApiResponse<AudienceGrantRelationsGetResponse> resp =
         audienceGrantRelationsGetWithHttpInfo(
@@ -388,7 +382,7 @@ public class AudienceGrantRelationsApi {
       Long page,
       Long pageSize,
       List<String> fields,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
     com.squareup.okhttp.Call call =
         audienceGrantRelationsGetValidateBeforeCall(
@@ -416,7 +410,7 @@ public class AudienceGrantRelationsApi {
       Long pageSize,
       List<String> fields,
       final ApiCallback<AudienceGrantRelationsGetResponse> callback,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     ProgressResponseBody.ProgressListener progressListener = null;

@@ -100,6 +100,15 @@ public class TaskSpec {
   @SerializedName("delete_scheduled_task_spec")
   private List<DeleteScheduledTaskItem> deleteScheduledTaskSpec = null;
 
+  @SerializedName("update_adgroup_targeting_task_spec")
+  private List<UpdateAdgroupTargetingTaskItem> updateAdgroupTargetingTaskSpec = null;
+
+  @SerializedName("update_adgroup_ecom_pkam_spec")
+  private List<UpdateAdgroupEcomPkamItem> updateAdgroupEcomPkamSpec = null;
+
+  @SerializedName("update_adgroup_derive_conf_spec")
+  private List<UpdateAdgroupDeriveConfItem> updateAdgroupDeriveConfSpec = null;
+
   public TaskSpec updateUnionPositionPackageSpec(
       List<UpdateUnionPositionPackageItem> updateUnionPositionPackageSpec) {
     this.updateUnionPositionPackageSpec = updateUnionPositionPackageSpec;
@@ -832,6 +841,96 @@ public class TaskSpec {
     this.deleteScheduledTaskSpec = deleteScheduledTaskSpec;
   }
 
+  public TaskSpec updateAdgroupTargetingTaskSpec(
+      List<UpdateAdgroupTargetingTaskItem> updateAdgroupTargetingTaskSpec) {
+    this.updateAdgroupTargetingTaskSpec = updateAdgroupTargetingTaskSpec;
+    return this;
+  }
+
+  public TaskSpec addUpdateAdgroupTargetingTaskSpecItem(
+      UpdateAdgroupTargetingTaskItem updateAdgroupTargetingTaskSpecItem) {
+    if (this.updateAdgroupTargetingTaskSpec == null) {
+      this.updateAdgroupTargetingTaskSpec = new ArrayList<UpdateAdgroupTargetingTaskItem>();
+    }
+    this.updateAdgroupTargetingTaskSpec.add(updateAdgroupTargetingTaskSpecItem);
+    return this;
+  }
+
+  /**
+   * Get updateAdgroupTargetingTaskSpec
+   *
+   * @return updateAdgroupTargetingTaskSpec
+   */
+  @ApiModelProperty(value = "")
+  public List<UpdateAdgroupTargetingTaskItem> getUpdateAdgroupTargetingTaskSpec() {
+    return updateAdgroupTargetingTaskSpec;
+  }
+
+  public void setUpdateAdgroupTargetingTaskSpec(
+      List<UpdateAdgroupTargetingTaskItem> updateAdgroupTargetingTaskSpec) {
+    this.updateAdgroupTargetingTaskSpec = updateAdgroupTargetingTaskSpec;
+  }
+
+  public TaskSpec updateAdgroupEcomPkamSpec(
+      List<UpdateAdgroupEcomPkamItem> updateAdgroupEcomPkamSpec) {
+    this.updateAdgroupEcomPkamSpec = updateAdgroupEcomPkamSpec;
+    return this;
+  }
+
+  public TaskSpec addUpdateAdgroupEcomPkamSpecItem(
+      UpdateAdgroupEcomPkamItem updateAdgroupEcomPkamSpecItem) {
+    if (this.updateAdgroupEcomPkamSpec == null) {
+      this.updateAdgroupEcomPkamSpec = new ArrayList<UpdateAdgroupEcomPkamItem>();
+    }
+    this.updateAdgroupEcomPkamSpec.add(updateAdgroupEcomPkamSpecItem);
+    return this;
+  }
+
+  /**
+   * Get updateAdgroupEcomPkamSpec
+   *
+   * @return updateAdgroupEcomPkamSpec
+   */
+  @ApiModelProperty(value = "")
+  public List<UpdateAdgroupEcomPkamItem> getUpdateAdgroupEcomPkamSpec() {
+    return updateAdgroupEcomPkamSpec;
+  }
+
+  public void setUpdateAdgroupEcomPkamSpec(
+      List<UpdateAdgroupEcomPkamItem> updateAdgroupEcomPkamSpec) {
+    this.updateAdgroupEcomPkamSpec = updateAdgroupEcomPkamSpec;
+  }
+
+  public TaskSpec updateAdgroupDeriveConfSpec(
+      List<UpdateAdgroupDeriveConfItem> updateAdgroupDeriveConfSpec) {
+    this.updateAdgroupDeriveConfSpec = updateAdgroupDeriveConfSpec;
+    return this;
+  }
+
+  public TaskSpec addUpdateAdgroupDeriveConfSpecItem(
+      UpdateAdgroupDeriveConfItem updateAdgroupDeriveConfSpecItem) {
+    if (this.updateAdgroupDeriveConfSpec == null) {
+      this.updateAdgroupDeriveConfSpec = new ArrayList<UpdateAdgroupDeriveConfItem>();
+    }
+    this.updateAdgroupDeriveConfSpec.add(updateAdgroupDeriveConfSpecItem);
+    return this;
+  }
+
+  /**
+   * Get updateAdgroupDeriveConfSpec
+   *
+   * @return updateAdgroupDeriveConfSpec
+   */
+  @ApiModelProperty(value = "")
+  public List<UpdateAdgroupDeriveConfItem> getUpdateAdgroupDeriveConfSpec() {
+    return updateAdgroupDeriveConfSpec;
+  }
+
+  public void setUpdateAdgroupDeriveConfSpec(
+      List<UpdateAdgroupDeriveConfItem> updateAdgroupDeriveConfSpec) {
+    this.updateAdgroupDeriveConfSpec = updateAdgroupDeriveConfSpec;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -885,7 +984,11 @@ public class TaskSpec {
         && Objects.equals(
             this.createScheduledUpdateAdgroupDailyBudgetSpec,
             taskSpec.createScheduledUpdateAdgroupDailyBudgetSpec)
-        && Objects.equals(this.deleteScheduledTaskSpec, taskSpec.deleteScheduledTaskSpec);
+        && Objects.equals(this.deleteScheduledTaskSpec, taskSpec.deleteScheduledTaskSpec)
+        && Objects.equals(
+            this.updateAdgroupTargetingTaskSpec, taskSpec.updateAdgroupTargetingTaskSpec)
+        && Objects.equals(this.updateAdgroupEcomPkamSpec, taskSpec.updateAdgroupEcomPkamSpec)
+        && Objects.equals(this.updateAdgroupDeriveConfSpec, taskSpec.updateAdgroupDeriveConfSpec);
   }
 
   @Override
@@ -914,7 +1017,10 @@ public class TaskSpec {
         deleteDynamicCreativeSpec,
         processUserPageObjectSpec,
         createScheduledUpdateAdgroupDailyBudgetSpec,
-        deleteScheduledTaskSpec);
+        deleteScheduledTaskSpec,
+        updateAdgroupTargetingTaskSpec,
+        updateAdgroupEcomPkamSpec,
+        updateAdgroupDeriveConfSpec);
   }
 
   @Override

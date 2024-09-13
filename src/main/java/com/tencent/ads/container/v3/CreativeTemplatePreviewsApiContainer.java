@@ -15,6 +15,7 @@ package com.tencent.ads.container.v3;
 import com.google.inject.Inject;
 import com.tencent.ads.ApiContainer;
 import com.tencent.ads.ApiException;
+import com.tencent.ads.Pair;
 import com.tencent.ads.anno.*;
 import com.tencent.ads.api.v3.CreativeTemplatePreviewsApi;
 import com.tencent.ads.exception.TencentAdsResponseException;
@@ -35,7 +36,7 @@ public class CreativeTemplatePreviewsApiContainer extends ApiContainer {
    *     response body
    */
   public CreativeTemplatePreviewsGetResponseData creativeTemplatePreviewsGet(
-      CreativeTemplatePreviewsGetRequest data, String... headerPair)
+      CreativeTemplatePreviewsGetRequest data, Pair... headerPair)
       throws ApiException, TencentAdsResponseException {
     CreativeTemplatePreviewsGetResponse resp = api.creativeTemplatePreviewsGet(data, headerPair);
     handleResponse(gson.toJson(resp));

@@ -15,6 +15,7 @@ package com.tencent.ads.container.v3;
 import com.google.inject.Inject;
 import com.tencent.ads.ApiContainer;
 import com.tencent.ads.ApiException;
+import com.tencent.ads.Pair;
 import com.tencent.ads.anno.*;
 import com.tencent.ads.api.v3.AgencyBusinessUnitApi;
 import com.tencent.ads.exception.TencentAdsResponseException;
@@ -38,7 +39,7 @@ public class AgencyBusinessUnitApiContainer extends ApiContainer {
    *     response body
    */
   public AgencyBusinessUnitAddResponseData agencyBusinessUnitAdd(
-      AgencyBusinessUnitAddRequest data, String... headerPair)
+      AgencyBusinessUnitAddRequest data, Pair... headerPair)
       throws ApiException, TencentAdsResponseException {
     AgencyBusinessUnitAddResponse resp = api.agencyBusinessUnitAdd(data, headerPair);
     handleResponse(gson.toJson(resp));
@@ -54,7 +55,7 @@ public class AgencyBusinessUnitApiContainer extends ApiContainer {
    *     response body
    */
   public AgencyBusinessUnitUpdateResponseData agencyBusinessUnitUpdate(
-      AgencyBusinessUnitUpdateRequest data, String... headerPair)
+      AgencyBusinessUnitUpdateRequest data, Pair... headerPair)
       throws ApiException, TencentAdsResponseException {
     AgencyBusinessUnitUpdateResponse resp = api.agencyBusinessUnitUpdate(data, headerPair);
     handleResponse(gson.toJson(resp));

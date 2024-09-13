@@ -15,6 +15,7 @@ package com.tencent.ads.container;
 import com.google.inject.Inject;
 import com.tencent.ads.ApiContainer;
 import com.tencent.ads.ApiException;
+import com.tencent.ads.Pair;
 import com.tencent.ads.anno.*;
 import com.tencent.ads.api.ProgrammedApi;
 import com.tencent.ads.exception.TencentAdsResponseException;
@@ -40,7 +41,7 @@ public class ProgrammedApiContainer extends ApiContainer {
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
-  public ProgrammedAddResponseData programmedAdd(ProgrammedAddRequest data, String... headerPair)
+  public ProgrammedAddResponseData programmedAdd(ProgrammedAddRequest data, Pair... headerPair)
       throws ApiException, TencentAdsResponseException {
     ProgrammedAddResponse resp = api.programmedAdd(data, headerPair);
     handleResponse(gson.toJson(resp));
@@ -55,7 +56,7 @@ public class ProgrammedApiContainer extends ApiContainer {
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
-  public ProgrammedGetResponseData programmedGet(ProgrammedGetRequest data, String... headerPair)
+  public ProgrammedGetResponseData programmedGet(ProgrammedGetRequest data, Pair... headerPair)
       throws ApiException, TencentAdsResponseException {
     ProgrammedGetResponse resp = api.programmedGet(data, headerPair);
     handleResponse(gson.toJson(resp));
@@ -71,7 +72,7 @@ public class ProgrammedApiContainer extends ApiContainer {
    *     response body
    */
   public ProgrammedUpdateResponseData programmedUpdate(
-      ProgrammedUpdateRequest data, String... headerPair)
+      ProgrammedUpdateRequest data, Pair... headerPair)
       throws ApiException, TencentAdsResponseException {
     ProgrammedUpdateResponse resp = api.programmedUpdate(data, headerPair);
     handleResponse(gson.toJson(resp));

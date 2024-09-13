@@ -15,6 +15,7 @@ package com.tencent.ads.container.v3;
 import com.google.inject.Inject;
 import com.tencent.ads.ApiContainer;
 import com.tencent.ads.ApiException;
+import com.tencent.ads.Pair;
 import com.tencent.ads.anno.*;
 import com.tencent.ads.api.v3.ProductItemsApi;
 import com.tencent.ads.exception.TencentAdsResponseException;
@@ -43,7 +44,7 @@ public class ProductItemsApiContainer extends ApiContainer {
    *     response body
    */
   public ProductItemsAddResponseData productItemsAdd(
-      ProductItemsAddRequest data, String... headerPair)
+      ProductItemsAddRequest data, Pair... headerPair)
       throws ApiException, TencentAdsResponseException {
     ProductItemsAddResponse resp = api.productItemsAdd(data, headerPair);
     handleResponse(gson.toJson(resp));
@@ -59,7 +60,7 @@ public class ProductItemsApiContainer extends ApiContainer {
    *     response body
    */
   public ProductItemsBatchUpdateResponse productItemsBatchUpdate(
-      ProductItemsBatchUpdateRequest data, String... headerPair)
+      ProductItemsBatchUpdateRequest data, Pair... headerPair)
       throws ApiException, TencentAdsResponseException {
     ProductItemsBatchUpdateResponse resp = api.productItemsBatchUpdate(data, headerPair);
     handleResponse(gson.toJson(resp));
@@ -83,7 +84,7 @@ public class ProductItemsApiContainer extends ApiContainer {
       Long productCatalogId,
       List<FilteringStruct> filtering,
       List<String> fields,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException, TencentAdsResponseException {
     ProductItemsGetResponse resp =
         api.productItemsGet(accountId, productCatalogId, filtering, fields, headerPair);
@@ -100,7 +101,7 @@ public class ProductItemsApiContainer extends ApiContainer {
    *     response body
    */
   public ProductItemsUpdateResponse productItemsUpdate(
-      ProductItemsUpdateRequest data, String... headerPair)
+      ProductItemsUpdateRequest data, Pair... headerPair)
       throws ApiException, TencentAdsResponseException {
     ProductItemsUpdateResponse resp = api.productItemsUpdate(data, headerPair);
     handleResponse(gson.toJson(resp));

@@ -24,6 +24,9 @@ public class WecomConsultPageSpec {
   @SerializedName("page_id")
   private Long pageId = null;
 
+  @SerializedName("group_type")
+  private GroupType groupType = null;
+
   public WecomConsultPageSpec pageId(Long pageId) {
     this.pageId = pageId;
     return this;
@@ -43,6 +46,25 @@ public class WecomConsultPageSpec {
     this.pageId = pageId;
   }
 
+  public WecomConsultPageSpec groupType(GroupType groupType) {
+    this.groupType = groupType;
+    return this;
+  }
+
+  /**
+   * Get groupType
+   *
+   * @return groupType
+   */
+  @ApiModelProperty(value = "")
+  public GroupType getGroupType() {
+    return groupType;
+  }
+
+  public void setGroupType(GroupType groupType) {
+    this.groupType = groupType;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -52,12 +74,13 @@ public class WecomConsultPageSpec {
       return false;
     }
     WecomConsultPageSpec wecomConsultPageSpec = (WecomConsultPageSpec) o;
-    return Objects.equals(this.pageId, wecomConsultPageSpec.pageId);
+    return Objects.equals(this.pageId, wecomConsultPageSpec.pageId)
+        && Objects.equals(this.groupType, wecomConsultPageSpec.groupType);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(pageId);
+    return Objects.hash(pageId, groupType);
   }
 
   @Override

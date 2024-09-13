@@ -63,7 +63,7 @@ public class ComponentElementUrgeReviewApi {
       ComponentElementUrgeReviewAddRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     Object localVarPostBody = data;
@@ -87,11 +87,8 @@ public class ComponentElementUrgeReviewApi {
     localVarHeaderParams.put("Content-Type", localVarContentType);
 
     if (headerPair != null && headerPair.length > 0) {
-      if (headerPair.length % 2 != 0) {
-        throw new UnsupportedOperationException("Parameter headerPair must be paired");
-      }
-      for (int i = 0; i < headerPair.length / 2; i++) {
-        localVarHeaderParams.put(headerPair[i], headerPair[i * 2 + 1]);
+      for (int i = 0; i < headerPair.length; i++) {
+        localVarHeaderParams.put(headerPair[i].getName(), headerPair[i].getValue());
       }
     }
 
@@ -131,7 +128,7 @@ public class ComponentElementUrgeReviewApi {
       ComponentElementUrgeReviewAddRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     // verify the required parameter 'data' is set
@@ -155,7 +152,7 @@ public class ComponentElementUrgeReviewApi {
    *     response body
    */
   public ComponentElementUrgeReviewAddResponse componentElementUrgeReviewAdd(
-      ComponentElementUrgeReviewAddRequest data, String... headerPair) throws ApiException {
+      ComponentElementUrgeReviewAddRequest data, Pair... headerPair) throws ApiException {
     ApiResponse<ComponentElementUrgeReviewAddResponse> resp =
         componentElementUrgeReviewAddWithHttpInfo(data, headerPair);
     return resp.getData();
@@ -171,7 +168,7 @@ public class ComponentElementUrgeReviewApi {
    */
   public ApiResponse<ComponentElementUrgeReviewAddResponse>
       componentElementUrgeReviewAddWithHttpInfo(
-          ComponentElementUrgeReviewAddRequest data, String... headerPair) throws ApiException {
+          ComponentElementUrgeReviewAddRequest data, Pair... headerPair) throws ApiException {
     com.squareup.okhttp.Call call =
         componentElementUrgeReviewAddValidateBeforeCall(data, null, null, headerPair);
     Type localVarReturnType = new TypeToken<ComponentElementUrgeReviewAddResponse>() {}.getType();
@@ -189,7 +186,7 @@ public class ComponentElementUrgeReviewApi {
   public com.squareup.okhttp.Call componentElementUrgeReviewAddAsync(
       ComponentElementUrgeReviewAddRequest data,
       final ApiCallback<ComponentElementUrgeReviewAddResponse> callback,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     ProgressResponseBody.ProgressListener progressListener = null;
@@ -241,7 +238,7 @@ public class ComponentElementUrgeReviewApi {
       List<String> fields,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     Object localVarPostBody = null;
@@ -278,11 +275,8 @@ public class ComponentElementUrgeReviewApi {
     localVarHeaderParams.put("Content-Type", localVarContentType);
 
     if (headerPair != null && headerPair.length > 0) {
-      if (headerPair.length % 2 != 0) {
-        throw new UnsupportedOperationException("Parameter headerPair must be paired");
-      }
-      for (int i = 0; i < headerPair.length / 2; i++) {
-        localVarHeaderParams.put(headerPair[i], headerPair[i * 2 + 1]);
+      for (int i = 0; i < headerPair.length; i++) {
+        localVarHeaderParams.put(headerPair[i].getName(), headerPair[i].getValue());
       }
     }
 
@@ -326,7 +320,7 @@ public class ComponentElementUrgeReviewApi {
       List<String> fields,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     // verify the required parameter 'accountId' is set
@@ -372,7 +366,7 @@ public class ComponentElementUrgeReviewApi {
       List<Long> componentIdList,
       List<String> elementFingerprintList,
       List<String> fields,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
     ApiResponse<ComponentElementUrgeReviewGetResponse> resp =
         componentElementUrgeReviewGetWithHttpInfo(
@@ -404,7 +398,7 @@ public class ComponentElementUrgeReviewApi {
           List<Long> componentIdList,
           List<String> elementFingerprintList,
           List<String> fields,
-          String... headerPair)
+          Pair... headerPair)
           throws ApiException {
     com.squareup.okhttp.Call call =
         componentElementUrgeReviewGetValidateBeforeCall(
@@ -439,7 +433,7 @@ public class ComponentElementUrgeReviewApi {
       List<String> elementFingerprintList,
       List<String> fields,
       final ApiCallback<ComponentElementUrgeReviewGetResponse> callback,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     ProgressResponseBody.ProgressListener progressListener = null;

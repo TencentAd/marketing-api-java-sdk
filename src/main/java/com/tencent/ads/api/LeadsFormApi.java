@@ -63,7 +63,7 @@ public class LeadsFormApi {
       LeadsFormAddRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     Object localVarPostBody = data;
@@ -87,11 +87,8 @@ public class LeadsFormApi {
     localVarHeaderParams.put("Content-Type", localVarContentType);
 
     if (headerPair != null && headerPair.length > 0) {
-      if (headerPair.length % 2 != 0) {
-        throw new UnsupportedOperationException("Parameter headerPair must be paired");
-      }
-      for (int i = 0; i < headerPair.length / 2; i++) {
-        localVarHeaderParams.put(headerPair[i], headerPair[i * 2 + 1]);
+      for (int i = 0; i < headerPair.length; i++) {
+        localVarHeaderParams.put(headerPair[i].getName(), headerPair[i].getValue());
       }
     }
 
@@ -131,7 +128,7 @@ public class LeadsFormApi {
       LeadsFormAddRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     // verify the required parameter 'data' is set
@@ -153,7 +150,7 @@ public class LeadsFormApi {
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
-  public LeadsFormAddResponse leadsFormAdd(LeadsFormAddRequest data, String... headerPair)
+  public LeadsFormAddResponse leadsFormAdd(LeadsFormAddRequest data, Pair... headerPair)
       throws ApiException {
     ApiResponse<LeadsFormAddResponse> resp = leadsFormAddWithHttpInfo(data, headerPair);
     return resp.getData();
@@ -168,7 +165,7 @@ public class LeadsFormApi {
    *     response body
    */
   public ApiResponse<LeadsFormAddResponse> leadsFormAddWithHttpInfo(
-      LeadsFormAddRequest data, String... headerPair) throws ApiException {
+      LeadsFormAddRequest data, Pair... headerPair) throws ApiException {
     com.squareup.okhttp.Call call = leadsFormAddValidateBeforeCall(data, null, null, headerPair);
     Type localVarReturnType = new TypeToken<LeadsFormAddResponse>() {}.getType();
     return apiClient.execute(call, localVarReturnType);
@@ -185,7 +182,7 @@ public class LeadsFormApi {
   public com.squareup.okhttp.Call leadsFormAddAsync(
       LeadsFormAddRequest data,
       final ApiCallback<LeadsFormAddResponse> callback,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     ProgressResponseBody.ProgressListener progressListener = null;
@@ -232,7 +229,7 @@ public class LeadsFormApi {
       List<String> fields,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     Object localVarPostBody = null;
@@ -262,11 +259,8 @@ public class LeadsFormApi {
     localVarHeaderParams.put("Content-Type", localVarContentType);
 
     if (headerPair != null && headerPair.length > 0) {
-      if (headerPair.length % 2 != 0) {
-        throw new UnsupportedOperationException("Parameter headerPair must be paired");
-      }
-      for (int i = 0; i < headerPair.length / 2; i++) {
-        localVarHeaderParams.put(headerPair[i], headerPair[i * 2 + 1]);
+      for (int i = 0; i < headerPair.length; i++) {
+        localVarHeaderParams.put(headerPair[i].getName(), headerPair[i].getValue());
       }
     }
 
@@ -308,7 +302,7 @@ public class LeadsFormApi {
       List<String> fields,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     // verify the required parameter 'accountId' is set
@@ -340,7 +334,7 @@ public class LeadsFormApi {
    *     response body
    */
   public LeadsFormGetResponse leadsFormGet(
-      Long accountId, String componentId, List<String> fields, String... headerPair)
+      Long accountId, String componentId, List<String> fields, Pair... headerPair)
       throws ApiException {
     ApiResponse<LeadsFormGetResponse> resp =
         leadsFormGetWithHttpInfo(accountId, componentId, fields, headerPair);
@@ -358,7 +352,7 @@ public class LeadsFormApi {
    *     response body
    */
   public ApiResponse<LeadsFormGetResponse> leadsFormGetWithHttpInfo(
-      Long accountId, String componentId, List<String> fields, String... headerPair)
+      Long accountId, String componentId, List<String> fields, Pair... headerPair)
       throws ApiException {
     com.squareup.okhttp.Call call =
         leadsFormGetValidateBeforeCall(accountId, componentId, fields, null, null, headerPair);
@@ -381,7 +375,7 @@ public class LeadsFormApi {
       String componentId,
       List<String> fields,
       final ApiCallback<LeadsFormGetResponse> callback,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     ProgressResponseBody.ProgressListener progressListener = null;

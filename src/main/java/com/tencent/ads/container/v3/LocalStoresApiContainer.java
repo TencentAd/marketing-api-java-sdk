@@ -15,6 +15,7 @@ package com.tencent.ads.container.v3;
 import com.google.inject.Inject;
 import com.tencent.ads.ApiContainer;
 import com.tencent.ads.ApiException;
+import com.tencent.ads.Pair;
 import com.tencent.ads.anno.*;
 import com.tencent.ads.api.v3.LocalStoresApi;
 import com.tencent.ads.exception.TencentAdsResponseException;
@@ -44,7 +45,7 @@ public class LocalStoresApiContainer extends ApiContainer {
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
-  public LocalStoresAddResponseData localStoresAdd(LocalStoresAddRequest data, String... headerPair)
+  public LocalStoresAddResponseData localStoresAdd(LocalStoresAddRequest data, Pair... headerPair)
       throws ApiException, TencentAdsResponseException {
     LocalStoresAddResponse resp = api.localStoresAdd(data, headerPair);
     handleResponse(gson.toJson(resp));
@@ -60,7 +61,7 @@ public class LocalStoresApiContainer extends ApiContainer {
    *     response body
    */
   public LocalStoresDeleteResponseData localStoresDelete(
-      LocalStoresDeleteRequest data, String... headerPair)
+      LocalStoresDeleteRequest data, Pair... headerPair)
       throws ApiException, TencentAdsResponseException {
     LocalStoresDeleteResponse resp = api.localStoresDelete(data, headerPair);
     handleResponse(gson.toJson(resp));
@@ -85,7 +86,7 @@ public class LocalStoresApiContainer extends ApiContainer {
       Long page,
       Long pageSize,
       List<String> fields,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException, TencentAdsResponseException {
     LocalStoresGetResponse resp =
         api.localStoresGet(accountId, filtering, page, pageSize, fields, headerPair);
@@ -102,7 +103,7 @@ public class LocalStoresApiContainer extends ApiContainer {
    *     response body
    */
   public LocalStoresUpdateResponseData localStoresUpdate(
-      LocalStoresUpdateRequest data, String... headerPair)
+      LocalStoresUpdateRequest data, Pair... headerPair)
       throws ApiException, TencentAdsResponseException {
     LocalStoresUpdateResponse resp = api.localStoresUpdate(data, headerPair);
     handleResponse(gson.toJson(resp));

@@ -73,7 +73,7 @@ public class AdcreativeTemplateDetailApi {
       List<String> fields,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     Object localVarPostBody = null;
@@ -116,11 +116,8 @@ public class AdcreativeTemplateDetailApi {
     localVarHeaderParams.put("Content-Type", localVarContentType);
 
     if (headerPair != null && headerPair.length > 0) {
-      if (headerPair.length % 2 != 0) {
-        throw new UnsupportedOperationException("Parameter headerPair must be paired");
-      }
-      for (int i = 0; i < headerPair.length / 2; i++) {
-        localVarHeaderParams.put(headerPair[i], headerPair[i * 2 + 1]);
+      for (int i = 0; i < headerPair.length; i++) {
+        localVarHeaderParams.put(headerPair[i].getName(), headerPair[i].getValue());
       }
     }
 
@@ -166,7 +163,7 @@ public class AdcreativeTemplateDetailApi {
       List<String> fields,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     // verify the required parameter 'adcreativeTemplateId' is set
@@ -218,7 +215,7 @@ public class AdcreativeTemplateDetailApi {
       List<String> siteSet,
       Boolean isDynamicCreativeAd,
       List<String> fields,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
     ApiResponse<AdcreativeTemplateDetailGetResponse> resp =
         adcreativeTemplateDetailGetWithHttpInfo(
@@ -255,7 +252,7 @@ public class AdcreativeTemplateDetailApi {
       List<String> siteSet,
       Boolean isDynamicCreativeAd,
       List<String> fields,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
     com.squareup.okhttp.Call call =
         adcreativeTemplateDetailGetValidateBeforeCall(
@@ -296,7 +293,7 @@ public class AdcreativeTemplateDetailApi {
       Boolean isDynamicCreativeAd,
       List<String> fields,
       final ApiCallback<AdcreativeTemplateDetailGetResponse> callback,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     ProgressResponseBody.ProgressListener progressListener = null;

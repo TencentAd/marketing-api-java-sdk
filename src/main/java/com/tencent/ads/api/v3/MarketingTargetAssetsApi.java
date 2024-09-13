@@ -68,7 +68,7 @@ public class MarketingTargetAssetsApi {
       MarketingTargetAssetsAddRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     Object localVarPostBody = data;
@@ -92,11 +92,8 @@ public class MarketingTargetAssetsApi {
     localVarHeaderParams.put("Content-Type", localVarContentType);
 
     if (headerPair != null && headerPair.length > 0) {
-      if (headerPair.length % 2 != 0) {
-        throw new UnsupportedOperationException("Parameter headerPair must be paired");
-      }
-      for (int i = 0; i < headerPair.length / 2; i++) {
-        localVarHeaderParams.put(headerPair[i], headerPair[i * 2 + 1]);
+      for (int i = 0; i < headerPair.length; i++) {
+        localVarHeaderParams.put(headerPair[i].getName(), headerPair[i].getValue());
       }
     }
 
@@ -136,7 +133,7 @@ public class MarketingTargetAssetsApi {
       MarketingTargetAssetsAddRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     // verify the required parameter 'data' is set
@@ -159,7 +156,7 @@ public class MarketingTargetAssetsApi {
    *     response body
    */
   public MarketingTargetAssetsAddResponse marketingTargetAssetsAdd(
-      MarketingTargetAssetsAddRequest data, String... headerPair) throws ApiException {
+      MarketingTargetAssetsAddRequest data, Pair... headerPair) throws ApiException {
     ApiResponse<MarketingTargetAssetsAddResponse> resp =
         marketingTargetAssetsAddWithHttpInfo(data, headerPair);
     return resp.getData();
@@ -174,7 +171,7 @@ public class MarketingTargetAssetsApi {
    *     response body
    */
   public ApiResponse<MarketingTargetAssetsAddResponse> marketingTargetAssetsAddWithHttpInfo(
-      MarketingTargetAssetsAddRequest data, String... headerPair) throws ApiException {
+      MarketingTargetAssetsAddRequest data, Pair... headerPair) throws ApiException {
     com.squareup.okhttp.Call call =
         marketingTargetAssetsAddValidateBeforeCall(data, null, null, headerPair);
     Type localVarReturnType = new TypeToken<MarketingTargetAssetsAddResponse>() {}.getType();
@@ -192,7 +189,7 @@ public class MarketingTargetAssetsApi {
   public com.squareup.okhttp.Call marketingTargetAssetsAddAsync(
       MarketingTargetAssetsAddRequest data,
       final ApiCallback<MarketingTargetAssetsAddResponse> callback,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     ProgressResponseBody.ProgressListener progressListener = null;
@@ -236,7 +233,7 @@ public class MarketingTargetAssetsApi {
       MarketingTargetAssetsDeleteRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     Object localVarPostBody = data;
@@ -260,11 +257,8 @@ public class MarketingTargetAssetsApi {
     localVarHeaderParams.put("Content-Type", localVarContentType);
 
     if (headerPair != null && headerPair.length > 0) {
-      if (headerPair.length % 2 != 0) {
-        throw new UnsupportedOperationException("Parameter headerPair must be paired");
-      }
-      for (int i = 0; i < headerPair.length / 2; i++) {
-        localVarHeaderParams.put(headerPair[i], headerPair[i * 2 + 1]);
+      for (int i = 0; i < headerPair.length; i++) {
+        localVarHeaderParams.put(headerPair[i].getName(), headerPair[i].getValue());
       }
     }
 
@@ -304,7 +298,7 @@ public class MarketingTargetAssetsApi {
       MarketingTargetAssetsDeleteRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     // verify the required parameter 'data' is set
@@ -328,7 +322,7 @@ public class MarketingTargetAssetsApi {
    *     response body
    */
   public MarketingTargetAssetsDeleteResponse marketingTargetAssetsDelete(
-      MarketingTargetAssetsDeleteRequest data, String... headerPair) throws ApiException {
+      MarketingTargetAssetsDeleteRequest data, Pair... headerPair) throws ApiException {
     ApiResponse<MarketingTargetAssetsDeleteResponse> resp =
         marketingTargetAssetsDeleteWithHttpInfo(data, headerPair);
     return resp.getData();
@@ -343,7 +337,7 @@ public class MarketingTargetAssetsApi {
    *     response body
    */
   public ApiResponse<MarketingTargetAssetsDeleteResponse> marketingTargetAssetsDeleteWithHttpInfo(
-      MarketingTargetAssetsDeleteRequest data, String... headerPair) throws ApiException {
+      MarketingTargetAssetsDeleteRequest data, Pair... headerPair) throws ApiException {
     com.squareup.okhttp.Call call =
         marketingTargetAssetsDeleteValidateBeforeCall(data, null, null, headerPair);
     Type localVarReturnType = new TypeToken<MarketingTargetAssetsDeleteResponse>() {}.getType();
@@ -361,7 +355,7 @@ public class MarketingTargetAssetsApi {
   public com.squareup.okhttp.Call marketingTargetAssetsDeleteAsync(
       MarketingTargetAssetsDeleteRequest data,
       final ApiCallback<MarketingTargetAssetsDeleteResponse> callback,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     ProgressResponseBody.ProgressListener progressListener = null;
@@ -395,11 +389,12 @@ public class MarketingTargetAssetsApi {
   /**
    * Build call for marketingTargetAssetsGet
    *
-   * @param accountId (required)
    * @param marketingTargetType (required)
+   * @param accountId (optional)
    * @param filtering (optional)
    * @param page (optional)
    * @param pageSize (optional)
+   * @param organizationId (optional)
    * @param fields 返回参数的字段列表 (optional)
    * @param progressListener Progress listener
    * @param progressRequestListener Progress request listener
@@ -407,15 +402,16 @@ public class MarketingTargetAssetsApi {
    * @throws ApiException If fail to serialize the request body object
    */
   public com.squareup.okhttp.Call marketingTargetAssetsGetCall(
-      Long accountId,
       String marketingTargetType,
+      Long accountId,
       List<FilteringStruct> filtering,
       Long page,
       Long pageSize,
+      Long organizationId,
       List<String> fields,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     Object localVarPostBody = null;
@@ -436,6 +432,8 @@ public class MarketingTargetAssetsApi {
     if (page != null) localVarQueryParams.addAll(apiClient.parameterToPair("page", page));
     if (pageSize != null)
       localVarQueryParams.addAll(apiClient.parameterToPair("page_size", pageSize));
+    if (organizationId != null)
+      localVarQueryParams.addAll(apiClient.parameterToPair("organization_id", organizationId));
     if (fields != null)
       localVarCollectionQueryParams.addAll(apiClient.parameterToPairs("multi", "fields", fields));
 
@@ -452,11 +450,8 @@ public class MarketingTargetAssetsApi {
     localVarHeaderParams.put("Content-Type", localVarContentType);
 
     if (headerPair != null && headerPair.length > 0) {
-      if (headerPair.length % 2 != 0) {
-        throw new UnsupportedOperationException("Parameter headerPair must be paired");
-      }
-      for (int i = 0; i < headerPair.length / 2; i++) {
-        localVarHeaderParams.put(headerPair[i], headerPair[i * 2 + 1]);
+      for (int i = 0; i < headerPair.length; i++) {
+        localVarHeaderParams.put(headerPair[i].getName(), headerPair[i].getValue());
       }
     }
 
@@ -493,22 +488,17 @@ public class MarketingTargetAssetsApi {
 
   @SuppressWarnings("rawtypes")
   private com.squareup.okhttp.Call marketingTargetAssetsGetValidateBeforeCall(
-      Long accountId,
       String marketingTargetType,
+      Long accountId,
       List<FilteringStruct> filtering,
       Long page,
       Long pageSize,
+      Long organizationId,
       List<String> fields,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
-
-    // verify the required parameter 'accountId' is set
-    if (accountId == null) {
-      throw new ApiException(
-          "Missing the required parameter 'accountId' when calling marketingTargetAssetsGet(Async)");
-    }
 
     // verify the required parameter 'marketingTargetType' is set
     if (marketingTargetType == null) {
@@ -518,11 +508,12 @@ public class MarketingTargetAssetsApi {
 
     com.squareup.okhttp.Call call =
         marketingTargetAssetsGetCall(
-            accountId,
             marketingTargetType,
+            accountId,
             filtering,
             page,
             pageSize,
+            organizationId,
             fields,
             progressListener,
             progressRequestListener,
@@ -533,60 +524,72 @@ public class MarketingTargetAssetsApi {
   /**
    * 获取可投放推广内容资产列表
    *
-   * @param accountId (required)
    * @param marketingTargetType (required)
+   * @param accountId (optional)
    * @param filtering (optional)
    * @param page (optional)
    * @param pageSize (optional)
+   * @param organizationId (optional)
    * @param fields 返回参数的字段列表 (optional)
    * @return MarketingTargetAssetsGetResponse
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
   public MarketingTargetAssetsGetResponse marketingTargetAssetsGet(
-      Long accountId,
       String marketingTargetType,
+      Long accountId,
       List<FilteringStruct> filtering,
       Long page,
       Long pageSize,
+      Long organizationId,
       List<String> fields,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
     ApiResponse<MarketingTargetAssetsGetResponse> resp =
         marketingTargetAssetsGetWithHttpInfo(
-            accountId, marketingTargetType, filtering, page, pageSize, fields, headerPair);
+            marketingTargetType,
+            accountId,
+            filtering,
+            page,
+            pageSize,
+            organizationId,
+            fields,
+            headerPair);
     return resp.getData();
   }
 
   /**
    * 获取可投放推广内容资产列表
    *
-   * @param accountId (required)
    * @param marketingTargetType (required)
+   * @param accountId (optional)
    * @param filtering (optional)
    * @param page (optional)
    * @param pageSize (optional)
+   * @param organizationId (optional)
    * @param fields 返回参数的字段列表 (optional)
    * @return ApiResponse&lt;MarketingTargetAssetsGetResponse&gt;
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
   public ApiResponse<MarketingTargetAssetsGetResponse> marketingTargetAssetsGetWithHttpInfo(
-      Long accountId,
       String marketingTargetType,
+      Long accountId,
       List<FilteringStruct> filtering,
       Long page,
       Long pageSize,
+      Long organizationId,
       List<String> fields,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
     com.squareup.okhttp.Call call =
         marketingTargetAssetsGetValidateBeforeCall(
-            accountId,
             marketingTargetType,
+            accountId,
             filtering,
             page,
             pageSize,
+            organizationId,
             fields,
             null,
             null,
@@ -598,25 +601,27 @@ public class MarketingTargetAssetsApi {
   /**
    * 获取可投放推广内容资产列表 (asynchronously)
    *
-   * @param accountId (required)
    * @param marketingTargetType (required)
+   * @param accountId (optional)
    * @param filtering (optional)
    * @param page (optional)
    * @param pageSize (optional)
+   * @param organizationId (optional)
    * @param fields 返回参数的字段列表 (optional)
    * @param callback The callback to be executed when the API call finishes
    * @return The request call
    * @throws ApiException If fail to process the API call, e.g. serializing the request body object
    */
   public com.squareup.okhttp.Call marketingTargetAssetsGetAsync(
-      Long accountId,
       String marketingTargetType,
+      Long accountId,
       List<FilteringStruct> filtering,
       Long page,
       Long pageSize,
+      Long organizationId,
       List<String> fields,
       final ApiCallback<MarketingTargetAssetsGetResponse> callback,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     ProgressResponseBody.ProgressListener progressListener = null;
@@ -642,11 +647,12 @@ public class MarketingTargetAssetsApi {
 
     com.squareup.okhttp.Call call =
         marketingTargetAssetsGetValidateBeforeCall(
-            accountId,
             marketingTargetType,
+            accountId,
             filtering,
             page,
             pageSize,
+            organizationId,
             fields,
             progressListener,
             progressRequestListener,
@@ -668,7 +674,7 @@ public class MarketingTargetAssetsApi {
       MarketingTargetAssetsUpdateRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     Object localVarPostBody = data;
@@ -692,11 +698,8 @@ public class MarketingTargetAssetsApi {
     localVarHeaderParams.put("Content-Type", localVarContentType);
 
     if (headerPair != null && headerPair.length > 0) {
-      if (headerPair.length % 2 != 0) {
-        throw new UnsupportedOperationException("Parameter headerPair must be paired");
-      }
-      for (int i = 0; i < headerPair.length / 2; i++) {
-        localVarHeaderParams.put(headerPair[i], headerPair[i * 2 + 1]);
+      for (int i = 0; i < headerPair.length; i++) {
+        localVarHeaderParams.put(headerPair[i].getName(), headerPair[i].getValue());
       }
     }
 
@@ -736,7 +739,7 @@ public class MarketingTargetAssetsApi {
       MarketingTargetAssetsUpdateRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     // verify the required parameter 'data' is set
@@ -760,7 +763,7 @@ public class MarketingTargetAssetsApi {
    *     response body
    */
   public MarketingTargetAssetsUpdateResponse marketingTargetAssetsUpdate(
-      MarketingTargetAssetsUpdateRequest data, String... headerPair) throws ApiException {
+      MarketingTargetAssetsUpdateRequest data, Pair... headerPair) throws ApiException {
     ApiResponse<MarketingTargetAssetsUpdateResponse> resp =
         marketingTargetAssetsUpdateWithHttpInfo(data, headerPair);
     return resp.getData();
@@ -775,7 +778,7 @@ public class MarketingTargetAssetsApi {
    *     response body
    */
   public ApiResponse<MarketingTargetAssetsUpdateResponse> marketingTargetAssetsUpdateWithHttpInfo(
-      MarketingTargetAssetsUpdateRequest data, String... headerPair) throws ApiException {
+      MarketingTargetAssetsUpdateRequest data, Pair... headerPair) throws ApiException {
     com.squareup.okhttp.Call call =
         marketingTargetAssetsUpdateValidateBeforeCall(data, null, null, headerPair);
     Type localVarReturnType = new TypeToken<MarketingTargetAssetsUpdateResponse>() {}.getType();
@@ -793,7 +796,7 @@ public class MarketingTargetAssetsApi {
   public com.squareup.okhttp.Call marketingTargetAssetsUpdateAsync(
       MarketingTargetAssetsUpdateRequest data,
       final ApiCallback<MarketingTargetAssetsUpdateResponse> callback,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     ProgressResponseBody.ProgressListener progressListener = null;

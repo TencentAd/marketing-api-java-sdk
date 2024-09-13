@@ -66,7 +66,7 @@ public class WechatPagesApi {
       WechatPagesAddRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     Object localVarPostBody = data;
@@ -90,11 +90,8 @@ public class WechatPagesApi {
     localVarHeaderParams.put("Content-Type", localVarContentType);
 
     if (headerPair != null && headerPair.length > 0) {
-      if (headerPair.length % 2 != 0) {
-        throw new UnsupportedOperationException("Parameter headerPair must be paired");
-      }
-      for (int i = 0; i < headerPair.length / 2; i++) {
-        localVarHeaderParams.put(headerPair[i], headerPair[i * 2 + 1]);
+      for (int i = 0; i < headerPair.length; i++) {
+        localVarHeaderParams.put(headerPair[i].getName(), headerPair[i].getValue());
       }
     }
 
@@ -134,7 +131,7 @@ public class WechatPagesApi {
       WechatPagesAddRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     // verify the required parameter 'data' is set
@@ -156,7 +153,7 @@ public class WechatPagesApi {
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
-  public WechatPagesAddResponse wechatPagesAdd(WechatPagesAddRequest data, String... headerPair)
+  public WechatPagesAddResponse wechatPagesAdd(WechatPagesAddRequest data, Pair... headerPair)
       throws ApiException {
     ApiResponse<WechatPagesAddResponse> resp = wechatPagesAddWithHttpInfo(data, headerPair);
     return resp.getData();
@@ -171,7 +168,7 @@ public class WechatPagesApi {
    *     response body
    */
   public ApiResponse<WechatPagesAddResponse> wechatPagesAddWithHttpInfo(
-      WechatPagesAddRequest data, String... headerPair) throws ApiException {
+      WechatPagesAddRequest data, Pair... headerPair) throws ApiException {
     com.squareup.okhttp.Call call = wechatPagesAddValidateBeforeCall(data, null, null, headerPair);
     Type localVarReturnType = new TypeToken<WechatPagesAddResponse>() {}.getType();
     return apiClient.execute(call, localVarReturnType);
@@ -188,7 +185,7 @@ public class WechatPagesApi {
   public com.squareup.okhttp.Call wechatPagesAddAsync(
       WechatPagesAddRequest data,
       final ApiCallback<WechatPagesAddResponse> callback,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     ProgressResponseBody.ProgressListener progressListener = null;
@@ -232,7 +229,7 @@ public class WechatPagesApi {
       WechatPagesDeleteRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     Object localVarPostBody = data;
@@ -256,11 +253,8 @@ public class WechatPagesApi {
     localVarHeaderParams.put("Content-Type", localVarContentType);
 
     if (headerPair != null && headerPair.length > 0) {
-      if (headerPair.length % 2 != 0) {
-        throw new UnsupportedOperationException("Parameter headerPair must be paired");
-      }
-      for (int i = 0; i < headerPair.length / 2; i++) {
-        localVarHeaderParams.put(headerPair[i], headerPair[i * 2 + 1]);
+      for (int i = 0; i < headerPair.length; i++) {
+        localVarHeaderParams.put(headerPair[i].getName(), headerPair[i].getValue());
       }
     }
 
@@ -300,7 +294,7 @@ public class WechatPagesApi {
       WechatPagesDeleteRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     // verify the required parameter 'data' is set
@@ -323,7 +317,7 @@ public class WechatPagesApi {
    *     response body
    */
   public WechatPagesDeleteResponse wechatPagesDelete(
-      WechatPagesDeleteRequest data, String... headerPair) throws ApiException {
+      WechatPagesDeleteRequest data, Pair... headerPair) throws ApiException {
     ApiResponse<WechatPagesDeleteResponse> resp = wechatPagesDeleteWithHttpInfo(data, headerPair);
     return resp.getData();
   }
@@ -337,7 +331,7 @@ public class WechatPagesApi {
    *     response body
    */
   public ApiResponse<WechatPagesDeleteResponse> wechatPagesDeleteWithHttpInfo(
-      WechatPagesDeleteRequest data, String... headerPair) throws ApiException {
+      WechatPagesDeleteRequest data, Pair... headerPair) throws ApiException {
     com.squareup.okhttp.Call call =
         wechatPagesDeleteValidateBeforeCall(data, null, null, headerPair);
     Type localVarReturnType = new TypeToken<WechatPagesDeleteResponse>() {}.getType();
@@ -355,7 +349,7 @@ public class WechatPagesApi {
   public com.squareup.okhttp.Call wechatPagesDeleteAsync(
       WechatPagesDeleteRequest data,
       final ApiCallback<WechatPagesDeleteResponse> callback,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     ProgressResponseBody.ProgressListener progressListener = null;
@@ -409,7 +403,7 @@ public class WechatPagesApi {
       List<String> fields,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     Object localVarPostBody = null;
@@ -445,11 +439,8 @@ public class WechatPagesApi {
     localVarHeaderParams.put("Content-Type", localVarContentType);
 
     if (headerPair != null && headerPair.length > 0) {
-      if (headerPair.length % 2 != 0) {
-        throw new UnsupportedOperationException("Parameter headerPair must be paired");
-      }
-      for (int i = 0; i < headerPair.length / 2; i++) {
-        localVarHeaderParams.put(headerPair[i], headerPair[i * 2 + 1]);
+      for (int i = 0; i < headerPair.length; i++) {
+        localVarHeaderParams.put(headerPair[i].getName(), headerPair[i].getValue());
       }
     }
 
@@ -494,7 +485,7 @@ public class WechatPagesApi {
       List<String> fields,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     // verify the required parameter 'accountId' is set
@@ -537,7 +528,7 @@ public class WechatPagesApi {
       Long page,
       Long pageSize,
       List<String> fields,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
     ApiResponse<WechatPagesGetResponse> resp =
         wechatPagesGetWithHttpInfo(
@@ -565,7 +556,7 @@ public class WechatPagesApi {
       Long page,
       Long pageSize,
       List<String> fields,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
     com.squareup.okhttp.Call call =
         wechatPagesGetValidateBeforeCall(
@@ -595,7 +586,7 @@ public class WechatPagesApi {
       Long pageSize,
       List<String> fields,
       final ApiCallback<WechatPagesGetResponse> callback,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     ProgressResponseBody.ProgressListener progressListener = null;

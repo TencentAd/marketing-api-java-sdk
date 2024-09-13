@@ -105,6 +105,18 @@ public class ConversionsGetListStruct {
   @SerializedName("forward_link_assist")
   private OptimizationGoal forwardLinkAssist = null;
 
+  @SerializedName("incubation_optimization_goal")
+  private OptimizationGoal incubationOptimizationGoal = null;
+
+  @SerializedName("conversion_link_info")
+  private ConversionLinkInfo conversionLinkInfo = null;
+
+  @SerializedName("disable_code")
+  private Long disableCode = null;
+
+  @SerializedName("disable_message")
+  private String disableMessage = null;
+
   public ConversionsGetListStruct conversionId(Long conversionId) {
     this.conversionId = conversionId;
     return this;
@@ -644,6 +656,83 @@ public class ConversionsGetListStruct {
     this.forwardLinkAssist = forwardLinkAssist;
   }
 
+  public ConversionsGetListStruct incubationOptimizationGoal(
+      OptimizationGoal incubationOptimizationGoal) {
+    this.incubationOptimizationGoal = incubationOptimizationGoal;
+    return this;
+  }
+
+  /**
+   * Get incubationOptimizationGoal
+   *
+   * @return incubationOptimizationGoal
+   */
+  @ApiModelProperty(value = "")
+  public OptimizationGoal getIncubationOptimizationGoal() {
+    return incubationOptimizationGoal;
+  }
+
+  public void setIncubationOptimizationGoal(OptimizationGoal incubationOptimizationGoal) {
+    this.incubationOptimizationGoal = incubationOptimizationGoal;
+  }
+
+  public ConversionsGetListStruct conversionLinkInfo(ConversionLinkInfo conversionLinkInfo) {
+    this.conversionLinkInfo = conversionLinkInfo;
+    return this;
+  }
+
+  /**
+   * Get conversionLinkInfo
+   *
+   * @return conversionLinkInfo
+   */
+  @ApiModelProperty(value = "")
+  public ConversionLinkInfo getConversionLinkInfo() {
+    return conversionLinkInfo;
+  }
+
+  public void setConversionLinkInfo(ConversionLinkInfo conversionLinkInfo) {
+    this.conversionLinkInfo = conversionLinkInfo;
+  }
+
+  public ConversionsGetListStruct disableCode(Long disableCode) {
+    this.disableCode = disableCode;
+    return this;
+  }
+
+  /**
+   * Get disableCode
+   *
+   * @return disableCode
+   */
+  @ApiModelProperty(value = "")
+  public Long getDisableCode() {
+    return disableCode;
+  }
+
+  public void setDisableCode(Long disableCode) {
+    this.disableCode = disableCode;
+  }
+
+  public ConversionsGetListStruct disableMessage(String disableMessage) {
+    this.disableMessage = disableMessage;
+    return this;
+  }
+
+  /**
+   * Get disableMessage
+   *
+   * @return disableMessage
+   */
+  @ApiModelProperty(value = "")
+  public String getDisableMessage() {
+    return disableMessage;
+  }
+
+  public void setDisableMessage(String disableMessage) {
+    this.disableMessage = disableMessage;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -692,7 +781,12 @@ public class ConversionsGetListStruct {
             conversionsGetListStruct.deepBehaviorAdvancedGoalMaxPrice)
         && Objects.equals(
             this.deepOptimizationGoalType, conversionsGetListStruct.deepOptimizationGoalType)
-        && Objects.equals(this.forwardLinkAssist, conversionsGetListStruct.forwardLinkAssist);
+        && Objects.equals(this.forwardLinkAssist, conversionsGetListStruct.forwardLinkAssist)
+        && Objects.equals(
+            this.incubationOptimizationGoal, conversionsGetListStruct.incubationOptimizationGoal)
+        && Objects.equals(this.conversionLinkInfo, conversionsGetListStruct.conversionLinkInfo)
+        && Objects.equals(this.disableCode, conversionsGetListStruct.disableCode)
+        && Objects.equals(this.disableMessage, conversionsGetListStruct.disableMessage);
   }
 
   @Override
@@ -725,7 +819,11 @@ public class ConversionsGetListStruct {
         deepBehaviorAdvancedGoalMinPrice,
         deepBehaviorAdvancedGoalMaxPrice,
         deepOptimizationGoalType,
-        forwardLinkAssist);
+        forwardLinkAssist,
+        incubationOptimizationGoal,
+        conversionLinkInfo,
+        disableCode,
+        disableMessage);
   }
 
   @Override

@@ -192,6 +192,9 @@ public class AdgroupsAddRequest {
   @SerializedName("bid_scene")
   private BidScene bidScene = null;
 
+  @SerializedName("search_intelligent_extension")
+  private ModelSwitch searchIntelligentExtension = null;
+
   @SerializedName("forward_link_assist")
   private OptimizationGoal forwardLinkAssist = null;
 
@@ -200,6 +203,9 @@ public class AdgroupsAddRequest {
 
   @SerializedName("sell_strategy_id")
   private Long sellStrategyId = null;
+
+  @SerializedName("feedback_id")
+  private Long feedbackId = null;
 
   @SerializedName("account_id")
   private Long accountId = null;
@@ -1366,6 +1372,25 @@ public class AdgroupsAddRequest {
     this.bidScene = bidScene;
   }
 
+  public AdgroupsAddRequest searchIntelligentExtension(ModelSwitch searchIntelligentExtension) {
+    this.searchIntelligentExtension = searchIntelligentExtension;
+    return this;
+  }
+
+  /**
+   * Get searchIntelligentExtension
+   *
+   * @return searchIntelligentExtension
+   */
+  @ApiModelProperty(value = "")
+  public ModelSwitch getSearchIntelligentExtension() {
+    return searchIntelligentExtension;
+  }
+
+  public void setSearchIntelligentExtension(ModelSwitch searchIntelligentExtension) {
+    this.searchIntelligentExtension = searchIntelligentExtension;
+  }
+
   public AdgroupsAddRequest forwardLinkAssist(OptimizationGoal forwardLinkAssist) {
     this.forwardLinkAssist = forwardLinkAssist;
     return this;
@@ -1421,6 +1446,25 @@ public class AdgroupsAddRequest {
 
   public void setSellStrategyId(Long sellStrategyId) {
     this.sellStrategyId = sellStrategyId;
+  }
+
+  public AdgroupsAddRequest feedbackId(Long feedbackId) {
+    this.feedbackId = feedbackId;
+    return this;
+  }
+
+  /**
+   * Get feedbackId
+   *
+   * @return feedbackId
+   */
+  @ApiModelProperty(value = "")
+  public Long getFeedbackId() {
+    return feedbackId;
+  }
+
+  public void setFeedbackId(Long feedbackId) {
+    this.feedbackId = feedbackId;
   }
 
   public AdgroupsAddRequest accountId(Long accountId) {
@@ -1519,9 +1563,12 @@ public class AdgroupsAddRequest {
             this.searchExpandTargetingSwitch, adgroupsAddRequest.searchExpandTargetingSwitch)
         && Objects.equals(this.ecomPkamSwitch, adgroupsAddRequest.ecomPkamSwitch)
         && Objects.equals(this.bidScene, adgroupsAddRequest.bidScene)
+        && Objects.equals(
+            this.searchIntelligentExtension, adgroupsAddRequest.searchIntelligentExtension)
         && Objects.equals(this.forwardLinkAssist, adgroupsAddRequest.forwardLinkAssist)
         && Objects.equals(this.shortPlayPayType, adgroupsAddRequest.shortPlayPayType)
         && Objects.equals(this.sellStrategyId, adgroupsAddRequest.sellStrategyId)
+        && Objects.equals(this.feedbackId, adgroupsAddRequest.feedbackId)
         && Objects.equals(this.accountId, adgroupsAddRequest.accountId);
   }
 
@@ -1585,9 +1632,11 @@ public class AdgroupsAddRequest {
         searchExpandTargetingSwitch,
         ecomPkamSwitch,
         bidScene,
+        searchIntelligentExtension,
         forwardLinkAssist,
         shortPlayPayType,
         sellStrategyId,
+        feedbackId,
         accountId);
   }
 

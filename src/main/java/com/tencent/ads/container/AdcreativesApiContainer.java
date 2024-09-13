@@ -15,6 +15,7 @@ package com.tencent.ads.container;
 import com.google.inject.Inject;
 import com.tencent.ads.ApiContainer;
 import com.tencent.ads.ApiException;
+import com.tencent.ads.Pair;
 import com.tencent.ads.anno.*;
 import com.tencent.ads.api.AdcreativesApi;
 import com.tencent.ads.exception.TencentAdsResponseException;
@@ -44,7 +45,7 @@ public class AdcreativesApiContainer extends ApiContainer {
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
-  public AdcreativesAddResponseData adcreativesAdd(AdcreativesAddRequest data, String... headerPair)
+  public AdcreativesAddResponseData adcreativesAdd(AdcreativesAddRequest data, Pair... headerPair)
       throws ApiException, TencentAdsResponseException {
     AdcreativesAddResponse resp = api.adcreativesAdd(data, headerPair);
     handleResponse(gson.toJson(resp));
@@ -60,7 +61,7 @@ public class AdcreativesApiContainer extends ApiContainer {
    *     response body
    */
   public AdcreativesDeleteResponseData adcreativesDelete(
-      AdcreativesDeleteRequest data, String... headerPair)
+      AdcreativesDeleteRequest data, Pair... headerPair)
       throws ApiException, TencentAdsResponseException {
     AdcreativesDeleteResponse resp = api.adcreativesDelete(data, headerPair);
     handleResponse(gson.toJson(resp));
@@ -91,7 +92,7 @@ public class AdcreativesApiContainer extends ApiContainer {
       Boolean linkPageTypeCompatible,
       Boolean weixinOfficialAccountsUpgradeEnabled,
       List<String> fields,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException, TencentAdsResponseException {
     AdcreativesGetResponse resp =
         api.adcreativesGet(
@@ -117,7 +118,7 @@ public class AdcreativesApiContainer extends ApiContainer {
    *     response body
    */
   public AdcreativesUpdateResponseData adcreativesUpdate(
-      AdcreativesUpdateRequest data, String... headerPair)
+      AdcreativesUpdateRequest data, Pair... headerPair)
       throws ApiException, TencentAdsResponseException {
     AdcreativesUpdateResponse resp = api.adcreativesUpdate(data, headerPair);
     handleResponse(gson.toJson(resp));

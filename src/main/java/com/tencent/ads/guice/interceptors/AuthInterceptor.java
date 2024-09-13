@@ -2,6 +2,7 @@ package com.tencent.ads.guice.interceptors;
 
 import com.tencent.ads.ApiClient;
 import com.tencent.ads.Configuration;
+import com.tencent.ads.Context;
 import com.tencent.ads.anno.NoInterceptor;
 import com.tencent.ads.auth.ApiKeyAuth;
 import com.tencent.ads.utils.DigestUtils;
@@ -21,6 +22,7 @@ public class AuthInterceptor implements MethodInterceptor {
       Object ret = invocation.proceed();
       return ret;
     }
+    Context.clean();
     Class keyClass = invocation.getThis().getClass();
     boolean isV3 = keyClass.getName().contains(".v3");
     if (isV3) {

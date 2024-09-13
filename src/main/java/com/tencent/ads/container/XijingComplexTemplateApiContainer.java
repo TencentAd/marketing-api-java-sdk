@@ -15,6 +15,7 @@ package com.tencent.ads.container;
 import com.google.inject.Inject;
 import com.tencent.ads.ApiContainer;
 import com.tencent.ads.ApiException;
+import com.tencent.ads.Pair;
 import com.tencent.ads.anno.*;
 import com.tencent.ads.api.XijingComplexTemplateApi;
 import com.tencent.ads.exception.TencentAdsResponseException;
@@ -37,7 +38,7 @@ public class XijingComplexTemplateApiContainer extends ApiContainer {
    *     response body
    */
   public XijingComplexTemplateGetResponseData xijingComplexTemplateGet(
-      Long accountId, String pageTemplateId, List<String> fields, String... headerPair)
+      Long accountId, String pageTemplateId, List<String> fields, Pair... headerPair)
       throws ApiException, TencentAdsResponseException {
     XijingComplexTemplateGetResponse resp =
         api.xijingComplexTemplateGet(accountId, pageTemplateId, fields, headerPair);

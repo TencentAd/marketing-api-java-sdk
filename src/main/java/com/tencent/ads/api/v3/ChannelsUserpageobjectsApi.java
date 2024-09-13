@@ -56,6 +56,7 @@ public class ChannelsUserpageobjectsApi {
    * @param nickname (optional)
    * @param lastBuffer (optional)
    * @param count (optional)
+   * @param wechatChannelsAccountId (optional)
    * @param fields 返回参数的字段列表 (optional)
    * @param progressListener Progress listener
    * @param progressRequestListener Progress request listener
@@ -68,10 +69,11 @@ public class ChannelsUserpageobjectsApi {
       String nickname,
       String lastBuffer,
       Long count,
+      String wechatChannelsAccountId,
       List<String> fields,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     Object localVarPostBody = null;
@@ -90,6 +92,9 @@ public class ChannelsUserpageobjectsApi {
     if (lastBuffer != null)
       localVarQueryParams.addAll(apiClient.parameterToPair("last_buffer", lastBuffer));
     if (count != null) localVarQueryParams.addAll(apiClient.parameterToPair("count", count));
+    if (wechatChannelsAccountId != null)
+      localVarQueryParams.addAll(
+          apiClient.parameterToPair("wechat_channels_account_id", wechatChannelsAccountId));
     if (fields != null)
       localVarCollectionQueryParams.addAll(apiClient.parameterToPairs("multi", "fields", fields));
 
@@ -106,11 +111,8 @@ public class ChannelsUserpageobjectsApi {
     localVarHeaderParams.put("Content-Type", localVarContentType);
 
     if (headerPair != null && headerPair.length > 0) {
-      if (headerPair.length % 2 != 0) {
-        throw new UnsupportedOperationException("Parameter headerPair must be paired");
-      }
-      for (int i = 0; i < headerPair.length / 2; i++) {
-        localVarHeaderParams.put(headerPair[i], headerPair[i * 2 + 1]);
+      for (int i = 0; i < headerPair.length; i++) {
+        localVarHeaderParams.put(headerPair[i].getName(), headerPair[i].getValue());
       }
     }
 
@@ -152,10 +154,11 @@ public class ChannelsUserpageobjectsApi {
       String nickname,
       String lastBuffer,
       Long count,
+      String wechatChannelsAccountId,
       List<String> fields,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     // verify the required parameter 'accountId' is set
@@ -171,6 +174,7 @@ public class ChannelsUserpageobjectsApi {
             nickname,
             lastBuffer,
             count,
+            wechatChannelsAccountId,
             fields,
             progressListener,
             progressRequestListener,
@@ -186,6 +190,7 @@ public class ChannelsUserpageobjectsApi {
    * @param nickname (optional)
    * @param lastBuffer (optional)
    * @param count (optional)
+   * @param wechatChannelsAccountId (optional)
    * @param fields 返回参数的字段列表 (optional)
    * @return ChannelsUserpageobjectsGetResponse
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
@@ -197,12 +202,20 @@ public class ChannelsUserpageobjectsApi {
       String nickname,
       String lastBuffer,
       Long count,
+      String wechatChannelsAccountId,
       List<String> fields,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
     ApiResponse<ChannelsUserpageobjectsGetResponse> resp =
         channelsUserpageobjectsGetWithHttpInfo(
-            accountId, finderUsername, nickname, lastBuffer, count, fields, headerPair);
+            accountId,
+            finderUsername,
+            nickname,
+            lastBuffer,
+            count,
+            wechatChannelsAccountId,
+            fields,
+            headerPair);
     return resp.getData();
   }
 
@@ -214,6 +227,7 @@ public class ChannelsUserpageobjectsApi {
    * @param nickname (optional)
    * @param lastBuffer (optional)
    * @param count (optional)
+   * @param wechatChannelsAccountId (optional)
    * @param fields 返回参数的字段列表 (optional)
    * @return ApiResponse&lt;ChannelsUserpageobjectsGetResponse&gt;
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
@@ -225,12 +239,22 @@ public class ChannelsUserpageobjectsApi {
       String nickname,
       String lastBuffer,
       Long count,
+      String wechatChannelsAccountId,
       List<String> fields,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
     com.squareup.okhttp.Call call =
         channelsUserpageobjectsGetValidateBeforeCall(
-            accountId, finderUsername, nickname, lastBuffer, count, fields, null, null, headerPair);
+            accountId,
+            finderUsername,
+            nickname,
+            lastBuffer,
+            count,
+            wechatChannelsAccountId,
+            fields,
+            null,
+            null,
+            headerPair);
     Type localVarReturnType = new TypeToken<ChannelsUserpageobjectsGetResponse>() {}.getType();
     return apiClient.execute(call, localVarReturnType);
   }
@@ -243,6 +267,7 @@ public class ChannelsUserpageobjectsApi {
    * @param nickname (optional)
    * @param lastBuffer (optional)
    * @param count (optional)
+   * @param wechatChannelsAccountId (optional)
    * @param fields 返回参数的字段列表 (optional)
    * @param callback The callback to be executed when the API call finishes
    * @return The request call
@@ -254,9 +279,10 @@ public class ChannelsUserpageobjectsApi {
       String nickname,
       String lastBuffer,
       Long count,
+      String wechatChannelsAccountId,
       List<String> fields,
       final ApiCallback<ChannelsUserpageobjectsGetResponse> callback,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     ProgressResponseBody.ProgressListener progressListener = null;
@@ -287,6 +313,7 @@ public class ChannelsUserpageobjectsApi {
             nickname,
             lastBuffer,
             count,
+            wechatChannelsAccountId,
             fields,
             progressListener,
             progressRequestListener,

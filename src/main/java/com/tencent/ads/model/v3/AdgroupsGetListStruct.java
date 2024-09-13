@@ -104,9 +104,6 @@ public class AdgroupsGetListStruct {
   @SerializedName("user_action_sets")
   private List<UserActionSetStruct> userActionSets = null;
 
-  @SerializedName("bid_strategy")
-  private BidStrategy bidStrategy = null;
-
   @SerializedName("deep_conversion_spec")
   private DeepConversionSpec deepConversionSpec = null;
 
@@ -232,6 +229,12 @@ public class AdgroupsGetListStruct {
 
   @SerializedName("cost_guarantee_money")
   private Long costGuaranteeMoney = null;
+
+  @SerializedName("additional_product_spec")
+  private AdditionalProductSpec additionalProductSpec = null;
+
+  @SerializedName("enable_breakthrough_siteset")
+  private Boolean enableBreakthroughSiteset = null;
 
   public AdgroupsGetListStruct targeting(ReadTargetingSetting targeting) {
     this.targeting = targeting;
@@ -761,25 +764,6 @@ public class AdgroupsGetListStruct {
 
   public void setUserActionSets(List<UserActionSetStruct> userActionSets) {
     this.userActionSets = userActionSets;
-  }
-
-  public AdgroupsGetListStruct bidStrategy(BidStrategy bidStrategy) {
-    this.bidStrategy = bidStrategy;
-    return this;
-  }
-
-  /**
-   * Get bidStrategy
-   *
-   * @return bidStrategy
-   */
-  @ApiModelProperty(value = "")
-  public BidStrategy getBidStrategy() {
-    return bidStrategy;
-  }
-
-  public void setBidStrategy(BidStrategy bidStrategy) {
-    this.bidStrategy = bidStrategy;
   }
 
   public AdgroupsGetListStruct deepConversionSpec(DeepConversionSpec deepConversionSpec) {
@@ -1602,6 +1586,44 @@ public class AdgroupsGetListStruct {
     this.costGuaranteeMoney = costGuaranteeMoney;
   }
 
+  public AdgroupsGetListStruct additionalProductSpec(AdditionalProductSpec additionalProductSpec) {
+    this.additionalProductSpec = additionalProductSpec;
+    return this;
+  }
+
+  /**
+   * Get additionalProductSpec
+   *
+   * @return additionalProductSpec
+   */
+  @ApiModelProperty(value = "")
+  public AdditionalProductSpec getAdditionalProductSpec() {
+    return additionalProductSpec;
+  }
+
+  public void setAdditionalProductSpec(AdditionalProductSpec additionalProductSpec) {
+    this.additionalProductSpec = additionalProductSpec;
+  }
+
+  public AdgroupsGetListStruct enableBreakthroughSiteset(Boolean enableBreakthroughSiteset) {
+    this.enableBreakthroughSiteset = enableBreakthroughSiteset;
+    return this;
+  }
+
+  /**
+   * Get enableBreakthroughSiteset
+   *
+   * @return enableBreakthroughSiteset
+   */
+  @ApiModelProperty(value = "")
+  public Boolean isEnableBreakthroughSiteset() {
+    return enableBreakthroughSiteset;
+  }
+
+  public void setEnableBreakthroughSiteset(Boolean enableBreakthroughSiteset) {
+    this.enableBreakthroughSiteset = enableBreakthroughSiteset;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -1638,7 +1660,6 @@ public class AdgroupsGetListStruct {
         && Objects.equals(this.dailyBudget, adgroupsGetListStruct.dailyBudget)
         && Objects.equals(this.sceneSpec, adgroupsGetListStruct.sceneSpec)
         && Objects.equals(this.userActionSets, adgroupsGetListStruct.userActionSets)
-        && Objects.equals(this.bidStrategy, adgroupsGetListStruct.bidStrategy)
         && Objects.equals(this.deepConversionSpec, adgroupsGetListStruct.deepConversionSpec)
         && Objects.equals(this.conversionId, adgroupsGetListStruct.conversionId)
         && Objects.equals(
@@ -1692,7 +1713,10 @@ public class AdgroupsGetListStruct {
         && Objects.equals(this.sellStrategyId, adgroupsGetListStruct.sellStrategyId)
         && Objects.equals(this.ogCompletionType, adgroupsGetListStruct.ogCompletionType)
         && Objects.equals(this.costGuaranteeStatus, adgroupsGetListStruct.costGuaranteeStatus)
-        && Objects.equals(this.costGuaranteeMoney, adgroupsGetListStruct.costGuaranteeMoney);
+        && Objects.equals(this.costGuaranteeMoney, adgroupsGetListStruct.costGuaranteeMoney)
+        && Objects.equals(this.additionalProductSpec, adgroupsGetListStruct.additionalProductSpec)
+        && Objects.equals(
+            this.enableBreakthroughSiteset, adgroupsGetListStruct.enableBreakthroughSiteset);
   }
 
   @Override
@@ -1725,7 +1749,6 @@ public class AdgroupsGetListStruct {
         dailyBudget,
         sceneSpec,
         userActionSets,
-        bidStrategy,
         deepConversionSpec,
         conversionId,
         deepConversionBehaviorBid,
@@ -1767,7 +1790,9 @@ public class AdgroupsGetListStruct {
         sellStrategyId,
         ogCompletionType,
         costGuaranteeStatus,
-        costGuaranteeMoney);
+        costGuaranteeMoney,
+        additionalProductSpec,
+        enableBreakthroughSiteset);
   }
 
   @Override

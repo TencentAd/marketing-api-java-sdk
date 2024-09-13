@@ -65,7 +65,7 @@ public class PropertySetSchemasApi {
       PropertySetSchemasAddRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     Object localVarPostBody = data;
@@ -89,11 +89,8 @@ public class PropertySetSchemasApi {
     localVarHeaderParams.put("Content-Type", localVarContentType);
 
     if (headerPair != null && headerPair.length > 0) {
-      if (headerPair.length % 2 != 0) {
-        throw new UnsupportedOperationException("Parameter headerPair must be paired");
-      }
-      for (int i = 0; i < headerPair.length / 2; i++) {
-        localVarHeaderParams.put(headerPair[i], headerPair[i * 2 + 1]);
+      for (int i = 0; i < headerPair.length; i++) {
+        localVarHeaderParams.put(headerPair[i].getName(), headerPair[i].getValue());
       }
     }
 
@@ -133,7 +130,7 @@ public class PropertySetSchemasApi {
       PropertySetSchemasAddRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     // verify the required parameter 'data' is set
@@ -156,7 +153,7 @@ public class PropertySetSchemasApi {
    *     response body
    */
   public PropertySetSchemasAddResponse propertySetSchemasAdd(
-      PropertySetSchemasAddRequest data, String... headerPair) throws ApiException {
+      PropertySetSchemasAddRequest data, Pair... headerPair) throws ApiException {
     ApiResponse<PropertySetSchemasAddResponse> resp =
         propertySetSchemasAddWithHttpInfo(data, headerPair);
     return resp.getData();
@@ -171,7 +168,7 @@ public class PropertySetSchemasApi {
    *     response body
    */
   public ApiResponse<PropertySetSchemasAddResponse> propertySetSchemasAddWithHttpInfo(
-      PropertySetSchemasAddRequest data, String... headerPair) throws ApiException {
+      PropertySetSchemasAddRequest data, Pair... headerPair) throws ApiException {
     com.squareup.okhttp.Call call =
         propertySetSchemasAddValidateBeforeCall(data, null, null, headerPair);
     Type localVarReturnType = new TypeToken<PropertySetSchemasAddResponse>() {}.getType();
@@ -189,7 +186,7 @@ public class PropertySetSchemasApi {
   public com.squareup.okhttp.Call propertySetSchemasAddAsync(
       PropertySetSchemasAddRequest data,
       final ApiCallback<PropertySetSchemasAddResponse> callback,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     ProgressResponseBody.ProgressListener progressListener = null;
@@ -237,7 +234,7 @@ public class PropertySetSchemasApi {
       List<String> fields,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     Object localVarPostBody = null;
@@ -267,11 +264,8 @@ public class PropertySetSchemasApi {
     localVarHeaderParams.put("Content-Type", localVarContentType);
 
     if (headerPair != null && headerPair.length > 0) {
-      if (headerPair.length % 2 != 0) {
-        throw new UnsupportedOperationException("Parameter headerPair must be paired");
-      }
-      for (int i = 0; i < headerPair.length / 2; i++) {
-        localVarHeaderParams.put(headerPair[i], headerPair[i * 2 + 1]);
+      for (int i = 0; i < headerPair.length; i++) {
+        localVarHeaderParams.put(headerPair[i].getName(), headerPair[i].getValue());
       }
     }
 
@@ -313,7 +307,7 @@ public class PropertySetSchemasApi {
       List<String> fields,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     // verify the required parameter 'accountId' is set
@@ -350,7 +344,7 @@ public class PropertySetSchemasApi {
    *     response body
    */
   public PropertySetSchemasGetResponse propertySetSchemasGet(
-      Long accountId, Long propertySetId, List<String> fields, String... headerPair)
+      Long accountId, Long propertySetId, List<String> fields, Pair... headerPair)
       throws ApiException {
     ApiResponse<PropertySetSchemasGetResponse> resp =
         propertySetSchemasGetWithHttpInfo(accountId, propertySetId, fields, headerPair);
@@ -368,7 +362,7 @@ public class PropertySetSchemasApi {
    *     response body
    */
   public ApiResponse<PropertySetSchemasGetResponse> propertySetSchemasGetWithHttpInfo(
-      Long accountId, Long propertySetId, List<String> fields, String... headerPair)
+      Long accountId, Long propertySetId, List<String> fields, Pair... headerPair)
       throws ApiException {
     com.squareup.okhttp.Call call =
         propertySetSchemasGetValidateBeforeCall(
@@ -392,7 +386,7 @@ public class PropertySetSchemasApi {
       Long propertySetId,
       List<String> fields,
       final ApiCallback<PropertySetSchemasGetResponse> callback,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     ProgressResponseBody.ProgressListener progressListener = null;
@@ -441,7 +435,7 @@ public class PropertySetSchemasApi {
       PropertySetSchemasUpdateRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     Object localVarPostBody = data;
@@ -465,11 +459,8 @@ public class PropertySetSchemasApi {
     localVarHeaderParams.put("Content-Type", localVarContentType);
 
     if (headerPair != null && headerPair.length > 0) {
-      if (headerPair.length % 2 != 0) {
-        throw new UnsupportedOperationException("Parameter headerPair must be paired");
-      }
-      for (int i = 0; i < headerPair.length / 2; i++) {
-        localVarHeaderParams.put(headerPair[i], headerPair[i * 2 + 1]);
+      for (int i = 0; i < headerPair.length; i++) {
+        localVarHeaderParams.put(headerPair[i].getName(), headerPair[i].getValue());
       }
     }
 
@@ -509,7 +500,7 @@ public class PropertySetSchemasApi {
       PropertySetSchemasUpdateRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     // verify the required parameter 'data' is set
@@ -532,7 +523,7 @@ public class PropertySetSchemasApi {
    *     response body
    */
   public PropertySetSchemasUpdateResponse propertySetSchemasUpdate(
-      PropertySetSchemasUpdateRequest data, String... headerPair) throws ApiException {
+      PropertySetSchemasUpdateRequest data, Pair... headerPair) throws ApiException {
     ApiResponse<PropertySetSchemasUpdateResponse> resp =
         propertySetSchemasUpdateWithHttpInfo(data, headerPair);
     return resp.getData();
@@ -547,7 +538,7 @@ public class PropertySetSchemasApi {
    *     response body
    */
   public ApiResponse<PropertySetSchemasUpdateResponse> propertySetSchemasUpdateWithHttpInfo(
-      PropertySetSchemasUpdateRequest data, String... headerPair) throws ApiException {
+      PropertySetSchemasUpdateRequest data, Pair... headerPair) throws ApiException {
     com.squareup.okhttp.Call call =
         propertySetSchemasUpdateValidateBeforeCall(data, null, null, headerPair);
     Type localVarReturnType = new TypeToken<PropertySetSchemasUpdateResponse>() {}.getType();
@@ -565,7 +556,7 @@ public class PropertySetSchemasApi {
   public com.squareup.okhttp.Call propertySetSchemasUpdateAsync(
       PropertySetSchemasUpdateRequest data,
       final ApiCallback<PropertySetSchemasUpdateResponse> callback,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     ProgressResponseBody.ProgressListener progressListener = null;

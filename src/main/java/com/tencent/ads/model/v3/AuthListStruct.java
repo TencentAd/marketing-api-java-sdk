@@ -51,6 +51,12 @@ public class AuthListStruct {
   @SerializedName("is_ad_acct")
   private Boolean isAdAcct = null;
 
+  @SerializedName("wechat_channels_account_icon")
+  private String wechatChannelsAccountIcon = null;
+
+  @SerializedName("wechat_channels_account_id")
+  private String wechatChannelsAccountId = null;
+
   public AuthListStruct wechatChannelsAccountName(String wechatChannelsAccountName) {
     this.wechatChannelsAccountName = wechatChannelsAccountName;
     return this;
@@ -241,6 +247,44 @@ public class AuthListStruct {
     this.isAdAcct = isAdAcct;
   }
 
+  public AuthListStruct wechatChannelsAccountIcon(String wechatChannelsAccountIcon) {
+    this.wechatChannelsAccountIcon = wechatChannelsAccountIcon;
+    return this;
+  }
+
+  /**
+   * Get wechatChannelsAccountIcon
+   *
+   * @return wechatChannelsAccountIcon
+   */
+  @ApiModelProperty(value = "")
+  public String getWechatChannelsAccountIcon() {
+    return wechatChannelsAccountIcon;
+  }
+
+  public void setWechatChannelsAccountIcon(String wechatChannelsAccountIcon) {
+    this.wechatChannelsAccountIcon = wechatChannelsAccountIcon;
+  }
+
+  public AuthListStruct wechatChannelsAccountId(String wechatChannelsAccountId) {
+    this.wechatChannelsAccountId = wechatChannelsAccountId;
+    return this;
+  }
+
+  /**
+   * Get wechatChannelsAccountId
+   *
+   * @return wechatChannelsAccountId
+   */
+  @ApiModelProperty(value = "")
+  public String getWechatChannelsAccountId() {
+    return wechatChannelsAccountId;
+  }
+
+  public void setWechatChannelsAccountId(String wechatChannelsAccountId) {
+    this.wechatChannelsAccountId = wechatChannelsAccountId;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -259,7 +303,9 @@ public class AuthListStruct {
         && Objects.equals(this.auditMsg, authListStruct.auditMsg)
         && Objects.equals(this.authorizationType, authListStruct.authorizationType)
         && Objects.equals(this.authorizationScope, authListStruct.authorizationScope)
-        && Objects.equals(this.isAdAcct, authListStruct.isAdAcct);
+        && Objects.equals(this.isAdAcct, authListStruct.isAdAcct)
+        && Objects.equals(this.wechatChannelsAccountIcon, authListStruct.wechatChannelsAccountIcon)
+        && Objects.equals(this.wechatChannelsAccountId, authListStruct.wechatChannelsAccountId);
   }
 
   @Override
@@ -274,7 +320,9 @@ public class AuthListStruct {
         auditMsg,
         authorizationType,
         authorizationScope,
-        isAdAcct);
+        isAdAcct,
+        wechatChannelsAccountIcon,
+        wechatChannelsAccountId);
   }
 
   @Override

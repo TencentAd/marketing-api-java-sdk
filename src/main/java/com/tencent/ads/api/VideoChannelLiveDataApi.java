@@ -62,7 +62,7 @@ public class VideoChannelLiveDataApi {
       VideoChannelLiveDataGetRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     Object localVarPostBody = data;
@@ -86,11 +86,8 @@ public class VideoChannelLiveDataApi {
     localVarHeaderParams.put("Content-Type", localVarContentType);
 
     if (headerPair != null && headerPair.length > 0) {
-      if (headerPair.length % 2 != 0) {
-        throw new UnsupportedOperationException("Parameter headerPair must be paired");
-      }
-      for (int i = 0; i < headerPair.length / 2; i++) {
-        localVarHeaderParams.put(headerPair[i], headerPair[i * 2 + 1]);
+      for (int i = 0; i < headerPair.length; i++) {
+        localVarHeaderParams.put(headerPair[i].getName(), headerPair[i].getValue());
       }
     }
 
@@ -130,7 +127,7 @@ public class VideoChannelLiveDataApi {
       VideoChannelLiveDataGetRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     // verify the required parameter 'data' is set
@@ -153,7 +150,7 @@ public class VideoChannelLiveDataApi {
    *     response body
    */
   public VideoChannelLiveDataGetResponse videoChannelLiveDataGet(
-      VideoChannelLiveDataGetRequest data, String... headerPair) throws ApiException {
+      VideoChannelLiveDataGetRequest data, Pair... headerPair) throws ApiException {
     ApiResponse<VideoChannelLiveDataGetResponse> resp =
         videoChannelLiveDataGetWithHttpInfo(data, headerPair);
     return resp.getData();
@@ -168,7 +165,7 @@ public class VideoChannelLiveDataApi {
    *     response body
    */
   public ApiResponse<VideoChannelLiveDataGetResponse> videoChannelLiveDataGetWithHttpInfo(
-      VideoChannelLiveDataGetRequest data, String... headerPair) throws ApiException {
+      VideoChannelLiveDataGetRequest data, Pair... headerPair) throws ApiException {
     com.squareup.okhttp.Call call =
         videoChannelLiveDataGetValidateBeforeCall(data, null, null, headerPair);
     Type localVarReturnType = new TypeToken<VideoChannelLiveDataGetResponse>() {}.getType();
@@ -186,7 +183,7 @@ public class VideoChannelLiveDataApi {
   public com.squareup.okhttp.Call videoChannelLiveDataGetAsync(
       VideoChannelLiveDataGetRequest data,
       final ApiCallback<VideoChannelLiveDataGetResponse> callback,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     ProgressResponseBody.ProgressListener progressListener = null;

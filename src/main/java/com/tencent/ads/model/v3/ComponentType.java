@@ -90,6 +90,8 @@ public enum ComponentType {
 
   SUBLINK("SUBLINK"),
 
+  CONSULT_LINK("CONSULT_LINK"),
+
   V2_TITLE("V2_TITLE"),
 
   V2_DESCRIPTION("V2_DESCRIPTION"),

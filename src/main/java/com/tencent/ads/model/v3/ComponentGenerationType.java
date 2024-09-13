@@ -19,22 +19,20 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-/** 出价策略 */
-@JsonAdapter(BidStrategy.Adapter.class)
-public enum BidStrategy {
-  UNSUPPORTED("BID_STRATEGY_UNSUPPORTED"),
+/** 创意组件产生类型 */
+@JsonAdapter(ComponentGenerationType.Adapter.class)
+public enum ComponentGenerationType {
+  USER_CREATE("COMPONENT_GENERATION_TYPE_USER_CREATE"),
 
-  AVERAGE_COST("BID_STRATEGY_AVERAGE_COST"),
+  SYSTEM_DERIVE("COMPONENT_GENERATION_TYPE_SYSTEM_DERIVE"),
 
-  TARGET_COST("BID_STRATEGY_TARGET_COST"),
+  SYSTEM_GENERATE("COMPONENT_GENERATION_TYPE_SYSTEM_GENERATE"),
 
-  PRIORITY_LOW_COST("BID_STRATEGY_PRIORITY_LOW_COST"),
-
-  PRIORITY_CAP_COST("BID_STRATEGY_PRIORITY_CAP_COST");
+  BXJG("COMPONENT_GENERATION_TYPE_BXJG");
 
   private String value;
 
-  BidStrategy(String value) {
+  ComponentGenerationType(String value) {
     this.value = value;
   }
 
@@ -47,8 +45,8 @@ public enum BidStrategy {
     return String.valueOf(value);
   }
 
-  public static BidStrategy fromValue(String text) {
-    for (BidStrategy b : BidStrategy.values()) {
+  public static ComponentGenerationType fromValue(String text) {
+    for (ComponentGenerationType b : ComponentGenerationType.values()) {
       if (String.valueOf(b.value).equals(text)) {
         return b;
       }
@@ -56,17 +54,17 @@ public enum BidStrategy {
     return null;
   }
 
-  public static class Adapter extends TypeAdapter<BidStrategy> {
+  public static class Adapter extends TypeAdapter<ComponentGenerationType> {
     @Override
-    public void write(final JsonWriter jsonWriter, final BidStrategy enumeration)
+    public void write(final JsonWriter jsonWriter, final ComponentGenerationType enumeration)
         throws IOException {
       jsonWriter.value(enumeration.getValue());
     }
 
     @Override
-    public BidStrategy read(final JsonReader jsonReader) throws IOException {
+    public ComponentGenerationType read(final JsonReader jsonReader) throws IOException {
       String value = jsonReader.nextString();
-      return BidStrategy.fromValue(String.valueOf(value));
+      return ComponentGenerationType.fromValue(String.valueOf(value));
     }
   }
 }

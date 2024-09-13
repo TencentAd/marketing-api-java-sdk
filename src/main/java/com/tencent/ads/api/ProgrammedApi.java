@@ -66,7 +66,7 @@ public class ProgrammedApi {
       ProgrammedAddRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     Object localVarPostBody = data;
@@ -90,11 +90,8 @@ public class ProgrammedApi {
     localVarHeaderParams.put("Content-Type", localVarContentType);
 
     if (headerPair != null && headerPair.length > 0) {
-      if (headerPair.length % 2 != 0) {
-        throw new UnsupportedOperationException("Parameter headerPair must be paired");
-      }
-      for (int i = 0; i < headerPair.length / 2; i++) {
-        localVarHeaderParams.put(headerPair[i], headerPair[i * 2 + 1]);
+      for (int i = 0; i < headerPair.length; i++) {
+        localVarHeaderParams.put(headerPair[i].getName(), headerPair[i].getValue());
       }
     }
 
@@ -134,7 +131,7 @@ public class ProgrammedApi {
       ProgrammedAddRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     // verify the required parameter 'data' is set
@@ -156,7 +153,7 @@ public class ProgrammedApi {
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
-  public ProgrammedAddResponse programmedAdd(ProgrammedAddRequest data, String... headerPair)
+  public ProgrammedAddResponse programmedAdd(ProgrammedAddRequest data, Pair... headerPair)
       throws ApiException {
     ApiResponse<ProgrammedAddResponse> resp = programmedAddWithHttpInfo(data, headerPair);
     return resp.getData();
@@ -171,7 +168,7 @@ public class ProgrammedApi {
    *     response body
    */
   public ApiResponse<ProgrammedAddResponse> programmedAddWithHttpInfo(
-      ProgrammedAddRequest data, String... headerPair) throws ApiException {
+      ProgrammedAddRequest data, Pair... headerPair) throws ApiException {
     com.squareup.okhttp.Call call = programmedAddValidateBeforeCall(data, null, null, headerPair);
     Type localVarReturnType = new TypeToken<ProgrammedAddResponse>() {}.getType();
     return apiClient.execute(call, localVarReturnType);
@@ -188,7 +185,7 @@ public class ProgrammedApi {
   public com.squareup.okhttp.Call programmedAddAsync(
       ProgrammedAddRequest data,
       final ApiCallback<ProgrammedAddResponse> callback,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     ProgressResponseBody.ProgressListener progressListener = null;
@@ -232,7 +229,7 @@ public class ProgrammedApi {
       ProgrammedGetRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     Object localVarPostBody = data;
@@ -256,11 +253,8 @@ public class ProgrammedApi {
     localVarHeaderParams.put("Content-Type", localVarContentType);
 
     if (headerPair != null && headerPair.length > 0) {
-      if (headerPair.length % 2 != 0) {
-        throw new UnsupportedOperationException("Parameter headerPair must be paired");
-      }
-      for (int i = 0; i < headerPair.length / 2; i++) {
-        localVarHeaderParams.put(headerPair[i], headerPair[i * 2 + 1]);
+      for (int i = 0; i < headerPair.length; i++) {
+        localVarHeaderParams.put(headerPair[i].getName(), headerPair[i].getValue());
       }
     }
 
@@ -300,7 +294,7 @@ public class ProgrammedApi {
       ProgrammedGetRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     // verify the required parameter 'data' is set
@@ -322,7 +316,7 @@ public class ProgrammedApi {
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
-  public ProgrammedGetResponse programmedGet(ProgrammedGetRequest data, String... headerPair)
+  public ProgrammedGetResponse programmedGet(ProgrammedGetRequest data, Pair... headerPair)
       throws ApiException {
     ApiResponse<ProgrammedGetResponse> resp = programmedGetWithHttpInfo(data, headerPair);
     return resp.getData();
@@ -337,7 +331,7 @@ public class ProgrammedApi {
    *     response body
    */
   public ApiResponse<ProgrammedGetResponse> programmedGetWithHttpInfo(
-      ProgrammedGetRequest data, String... headerPair) throws ApiException {
+      ProgrammedGetRequest data, Pair... headerPair) throws ApiException {
     com.squareup.okhttp.Call call = programmedGetValidateBeforeCall(data, null, null, headerPair);
     Type localVarReturnType = new TypeToken<ProgrammedGetResponse>() {}.getType();
     return apiClient.execute(call, localVarReturnType);
@@ -354,7 +348,7 @@ public class ProgrammedApi {
   public com.squareup.okhttp.Call programmedGetAsync(
       ProgrammedGetRequest data,
       final ApiCallback<ProgrammedGetResponse> callback,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     ProgressResponseBody.ProgressListener progressListener = null;
@@ -398,7 +392,7 @@ public class ProgrammedApi {
       ProgrammedUpdateRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     Object localVarPostBody = data;
@@ -422,11 +416,8 @@ public class ProgrammedApi {
     localVarHeaderParams.put("Content-Type", localVarContentType);
 
     if (headerPair != null && headerPair.length > 0) {
-      if (headerPair.length % 2 != 0) {
-        throw new UnsupportedOperationException("Parameter headerPair must be paired");
-      }
-      for (int i = 0; i < headerPair.length / 2; i++) {
-        localVarHeaderParams.put(headerPair[i], headerPair[i * 2 + 1]);
+      for (int i = 0; i < headerPair.length; i++) {
+        localVarHeaderParams.put(headerPair[i].getName(), headerPair[i].getValue());
       }
     }
 
@@ -466,7 +457,7 @@ public class ProgrammedApi {
       ProgrammedUpdateRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     // verify the required parameter 'data' is set
@@ -488,8 +479,8 @@ public class ProgrammedApi {
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
-  public ProgrammedUpdateResponse programmedUpdate(
-      ProgrammedUpdateRequest data, String... headerPair) throws ApiException {
+  public ProgrammedUpdateResponse programmedUpdate(ProgrammedUpdateRequest data, Pair... headerPair)
+      throws ApiException {
     ApiResponse<ProgrammedUpdateResponse> resp = programmedUpdateWithHttpInfo(data, headerPair);
     return resp.getData();
   }
@@ -503,7 +494,7 @@ public class ProgrammedApi {
    *     response body
    */
   public ApiResponse<ProgrammedUpdateResponse> programmedUpdateWithHttpInfo(
-      ProgrammedUpdateRequest data, String... headerPair) throws ApiException {
+      ProgrammedUpdateRequest data, Pair... headerPair) throws ApiException {
     com.squareup.okhttp.Call call =
         programmedUpdateValidateBeforeCall(data, null, null, headerPair);
     Type localVarReturnType = new TypeToken<ProgrammedUpdateResponse>() {}.getType();
@@ -521,7 +512,7 @@ public class ProgrammedApi {
   public com.squareup.okhttp.Call programmedUpdateAsync(
       ProgrammedUpdateRequest data,
       final ApiCallback<ProgrammedUpdateResponse> callback,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     ProgressResponseBody.ProgressListener progressListener = null;

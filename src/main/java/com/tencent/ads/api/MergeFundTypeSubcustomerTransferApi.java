@@ -62,7 +62,7 @@ public class MergeFundTypeSubcustomerTransferApi {
       MergeFundTypeSubcustomerTransferAddRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     Object localVarPostBody = data;
@@ -86,11 +86,8 @@ public class MergeFundTypeSubcustomerTransferApi {
     localVarHeaderParams.put("Content-Type", localVarContentType);
 
     if (headerPair != null && headerPair.length > 0) {
-      if (headerPair.length % 2 != 0) {
-        throw new UnsupportedOperationException("Parameter headerPair must be paired");
-      }
-      for (int i = 0; i < headerPair.length / 2; i++) {
-        localVarHeaderParams.put(headerPair[i], headerPair[i * 2 + 1]);
+      for (int i = 0; i < headerPair.length; i++) {
+        localVarHeaderParams.put(headerPair[i].getName(), headerPair[i].getValue());
       }
     }
 
@@ -130,7 +127,7 @@ public class MergeFundTypeSubcustomerTransferApi {
       MergeFundTypeSubcustomerTransferAddRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     // verify the required parameter 'data' is set
@@ -154,7 +151,7 @@ public class MergeFundTypeSubcustomerTransferApi {
    *     response body
    */
   public MergeFundTypeSubcustomerTransferAddResponse mergeFundTypeSubcustomerTransferAdd(
-      MergeFundTypeSubcustomerTransferAddRequest data, String... headerPair) throws ApiException {
+      MergeFundTypeSubcustomerTransferAddRequest data, Pair... headerPair) throws ApiException {
     ApiResponse<MergeFundTypeSubcustomerTransferAddResponse> resp =
         mergeFundTypeSubcustomerTransferAddWithHttpInfo(data, headerPair);
     return resp.getData();
@@ -170,8 +167,7 @@ public class MergeFundTypeSubcustomerTransferApi {
    */
   public ApiResponse<MergeFundTypeSubcustomerTransferAddResponse>
       mergeFundTypeSubcustomerTransferAddWithHttpInfo(
-          MergeFundTypeSubcustomerTransferAddRequest data, String... headerPair)
-          throws ApiException {
+          MergeFundTypeSubcustomerTransferAddRequest data, Pair... headerPair) throws ApiException {
     com.squareup.okhttp.Call call =
         mergeFundTypeSubcustomerTransferAddValidateBeforeCall(data, null, null, headerPair);
     Type localVarReturnType =
@@ -190,7 +186,7 @@ public class MergeFundTypeSubcustomerTransferApi {
   public com.squareup.okhttp.Call mergeFundTypeSubcustomerTransferAddAsync(
       MergeFundTypeSubcustomerTransferAddRequest data,
       final ApiCallback<MergeFundTypeSubcustomerTransferAddResponse> callback,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     ProgressResponseBody.ProgressListener progressListener = null;

@@ -15,6 +15,7 @@ package com.tencent.ads.container.v3;
 import com.google.inject.Inject;
 import com.tencent.ads.ApiContainer;
 import com.tencent.ads.ApiException;
+import com.tencent.ads.Pair;
 import com.tencent.ads.anno.*;
 import com.tencent.ads.api.v3.MarketingTargetAssetsApi;
 import com.tencent.ads.exception.TencentAdsResponseException;
@@ -43,7 +44,7 @@ public class MarketingTargetAssetsApiContainer extends ApiContainer {
    *     response body
    */
   public MarketingTargetAssetsAddResponseData marketingTargetAssetsAdd(
-      MarketingTargetAssetsAddRequest data, String... headerPair)
+      MarketingTargetAssetsAddRequest data, Pair... headerPair)
       throws ApiException, TencentAdsResponseException {
     MarketingTargetAssetsAddResponse resp = api.marketingTargetAssetsAdd(data, headerPair);
     handleResponse(gson.toJson(resp));
@@ -59,7 +60,7 @@ public class MarketingTargetAssetsApiContainer extends ApiContainer {
    *     response body
    */
   public MarketingTargetAssetsDeleteResponse marketingTargetAssetsDelete(
-      MarketingTargetAssetsDeleteRequest data, String... headerPair)
+      MarketingTargetAssetsDeleteRequest data, Pair... headerPair)
       throws ApiException, TencentAdsResponseException {
     MarketingTargetAssetsDeleteResponse resp = api.marketingTargetAssetsDelete(data, headerPair);
     handleResponse(gson.toJson(resp));
@@ -70,28 +71,37 @@ public class MarketingTargetAssetsApiContainer extends ApiContainer {
   /**
    * 获取可投放推广内容资产列表
    *
-   * @param accountId (required)
    * @param marketingTargetType (required)
+   * @param accountId (optional)
    * @param filtering (optional)
    * @param page (optional)
    * @param pageSize (optional)
+   * @param organizationId (optional)
    * @param fields 返回参数的字段列表 (optional)
    * @return MarketingTargetAssetsGetResponse
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
   public MarketingTargetAssetsGetResponseData marketingTargetAssetsGet(
-      Long accountId,
       String marketingTargetType,
+      Long accountId,
       List<FilteringStruct> filtering,
       Long page,
       Long pageSize,
+      Long organizationId,
       List<String> fields,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException, TencentAdsResponseException {
     MarketingTargetAssetsGetResponse resp =
         api.marketingTargetAssetsGet(
-            accountId, marketingTargetType, filtering, page, pageSize, fields, headerPair);
+            marketingTargetType,
+            accountId,
+            filtering,
+            page,
+            pageSize,
+            organizationId,
+            fields,
+            headerPair);
     handleResponse(gson.toJson(resp));
     return resp.getData();
   }
@@ -105,7 +115,7 @@ public class MarketingTargetAssetsApiContainer extends ApiContainer {
    *     response body
    */
   public MarketingTargetAssetsUpdateResponse marketingTargetAssetsUpdate(
-      MarketingTargetAssetsUpdateRequest data, String... headerPair)
+      MarketingTargetAssetsUpdateRequest data, Pair... headerPair)
       throws ApiException, TencentAdsResponseException {
     MarketingTargetAssetsUpdateResponse resp = api.marketingTargetAssetsUpdate(data, headerPair);
     handleResponse(gson.toJson(resp));

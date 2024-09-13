@@ -15,6 +15,7 @@ package com.tencent.ads.container;
 import com.google.inject.Inject;
 import com.tencent.ads.ApiContainer;
 import com.tencent.ads.ApiException;
+import com.tencent.ads.Pair;
 import com.tencent.ads.anno.*;
 import com.tencent.ads.api.CustomTagsApi;
 import com.tencent.ads.exception.TencentAdsResponseException;
@@ -41,7 +42,7 @@ public class CustomTagsApiContainer extends ApiContainer {
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
-  public CustomTagsAddResponseData customTagsAdd(CustomTagsAddRequest data, String... headerPair)
+  public CustomTagsAddResponseData customTagsAdd(CustomTagsAddRequest data, Pair... headerPair)
       throws ApiException, TencentAdsResponseException {
     CustomTagsAddResponse resp = api.customTagsAdd(data, headerPair);
     handleResponse(gson.toJson(resp));
@@ -56,8 +57,7 @@ public class CustomTagsApiContainer extends ApiContainer {
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
-  public CustomTagsDeleteResponse customTagsDelete(
-      CustomTagsDeleteRequest data, String... headerPair)
+  public CustomTagsDeleteResponse customTagsDelete(CustomTagsDeleteRequest data, Pair... headerPair)
       throws ApiException, TencentAdsResponseException {
     CustomTagsDeleteResponse resp = api.customTagsDelete(data, headerPair);
     handleResponse(gson.toJson(resp));
@@ -89,7 +89,7 @@ public class CustomTagsApiContainer extends ApiContainer {
       Long page,
       Long pageSize,
       List<String> fields,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException, TencentAdsResponseException {
     CustomTagsGetResponse resp =
         api.customTagsGet(
@@ -106,8 +106,7 @@ public class CustomTagsApiContainer extends ApiContainer {
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
-  public CustomTagsUpdateResponse customTagsUpdate(
-      CustomTagsUpdateRequest data, String... headerPair)
+  public CustomTagsUpdateResponse customTagsUpdate(CustomTagsUpdateRequest data, Pair... headerPair)
       throws ApiException, TencentAdsResponseException {
     CustomTagsUpdateResponse resp = api.customTagsUpdate(data, headerPair);
     handleResponse(gson.toJson(resp));

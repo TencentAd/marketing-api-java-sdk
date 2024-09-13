@@ -105,6 +105,12 @@ public class ConversionsGetListStruct {
   @SerializedName("forward_link_assist")
   private IntOptimizationGoal forwardLinkAssist = null;
 
+  @SerializedName("incubation_optimization_goal")
+  private IntOptimizationGoal incubationOptimizationGoal = null;
+
+  @SerializedName("disable_message")
+  private String disableMessage = null;
+
   public ConversionsGetListStruct conversionId(Long conversionId) {
     this.conversionId = conversionId;
     return this;
@@ -644,6 +650,45 @@ public class ConversionsGetListStruct {
     this.forwardLinkAssist = forwardLinkAssist;
   }
 
+  public ConversionsGetListStruct incubationOptimizationGoal(
+      IntOptimizationGoal incubationOptimizationGoal) {
+    this.incubationOptimizationGoal = incubationOptimizationGoal;
+    return this;
+  }
+
+  /**
+   * Get incubationOptimizationGoal
+   *
+   * @return incubationOptimizationGoal
+   */
+  @ApiModelProperty(value = "")
+  public IntOptimizationGoal getIncubationOptimizationGoal() {
+    return incubationOptimizationGoal;
+  }
+
+  public void setIncubationOptimizationGoal(IntOptimizationGoal incubationOptimizationGoal) {
+    this.incubationOptimizationGoal = incubationOptimizationGoal;
+  }
+
+  public ConversionsGetListStruct disableMessage(String disableMessage) {
+    this.disableMessage = disableMessage;
+    return this;
+  }
+
+  /**
+   * Get disableMessage
+   *
+   * @return disableMessage
+   */
+  @ApiModelProperty(value = "")
+  public String getDisableMessage() {
+    return disableMessage;
+  }
+
+  public void setDisableMessage(String disableMessage) {
+    this.disableMessage = disableMessage;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -692,7 +737,10 @@ public class ConversionsGetListStruct {
             conversionsGetListStruct.deepBehaviorAdvancedGoalMaxPrice)
         && Objects.equals(
             this.deepOptimizationGoalType, conversionsGetListStruct.deepOptimizationGoalType)
-        && Objects.equals(this.forwardLinkAssist, conversionsGetListStruct.forwardLinkAssist);
+        && Objects.equals(this.forwardLinkAssist, conversionsGetListStruct.forwardLinkAssist)
+        && Objects.equals(
+            this.incubationOptimizationGoal, conversionsGetListStruct.incubationOptimizationGoal)
+        && Objects.equals(this.disableMessage, conversionsGetListStruct.disableMessage);
   }
 
   @Override
@@ -725,7 +773,9 @@ public class ConversionsGetListStruct {
         deepBehaviorAdvancedGoalMinPrice,
         deepBehaviorAdvancedGoalMaxPrice,
         deepOptimizationGoalType,
-        forwardLinkAssist);
+        forwardLinkAssist,
+        incubationOptimizationGoal,
+        disableMessage);
   }
 
   @Override

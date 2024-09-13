@@ -64,7 +64,7 @@ public class LeadCluesApi {
       LeadCluesGetRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     Object localVarPostBody = data;
@@ -88,11 +88,8 @@ public class LeadCluesApi {
     localVarHeaderParams.put("Content-Type", localVarContentType);
 
     if (headerPair != null && headerPair.length > 0) {
-      if (headerPair.length % 2 != 0) {
-        throw new UnsupportedOperationException("Parameter headerPair must be paired");
-      }
-      for (int i = 0; i < headerPair.length / 2; i++) {
-        localVarHeaderParams.put(headerPair[i], headerPair[i * 2 + 1]);
+      for (int i = 0; i < headerPair.length; i++) {
+        localVarHeaderParams.put(headerPair[i].getName(), headerPair[i].getValue());
       }
     }
 
@@ -132,7 +129,7 @@ public class LeadCluesApi {
       LeadCluesGetRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     // verify the required parameter 'data' is set
@@ -154,7 +151,7 @@ public class LeadCluesApi {
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
-  public LeadCluesGetResponse leadCluesGet(LeadCluesGetRequest data, String... headerPair)
+  public LeadCluesGetResponse leadCluesGet(LeadCluesGetRequest data, Pair... headerPair)
       throws ApiException {
     ApiResponse<LeadCluesGetResponse> resp = leadCluesGetWithHttpInfo(data, headerPair);
     return resp.getData();
@@ -169,7 +166,7 @@ public class LeadCluesApi {
    *     response body
    */
   public ApiResponse<LeadCluesGetResponse> leadCluesGetWithHttpInfo(
-      LeadCluesGetRequest data, String... headerPair) throws ApiException {
+      LeadCluesGetRequest data, Pair... headerPair) throws ApiException {
     com.squareup.okhttp.Call call = leadCluesGetValidateBeforeCall(data, null, null, headerPair);
     Type localVarReturnType = new TypeToken<LeadCluesGetResponse>() {}.getType();
     return apiClient.execute(call, localVarReturnType);
@@ -186,7 +183,7 @@ public class LeadCluesApi {
   public com.squareup.okhttp.Call leadCluesGetAsync(
       LeadCluesGetRequest data,
       final ApiCallback<LeadCluesGetResponse> callback,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     ProgressResponseBody.ProgressListener progressListener = null;
@@ -229,7 +226,7 @@ public class LeadCluesApi {
       LeadCluesUpdateRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     Object localVarPostBody = data;
@@ -253,11 +250,8 @@ public class LeadCluesApi {
     localVarHeaderParams.put("Content-Type", localVarContentType);
 
     if (headerPair != null && headerPair.length > 0) {
-      if (headerPair.length % 2 != 0) {
-        throw new UnsupportedOperationException("Parameter headerPair must be paired");
-      }
-      for (int i = 0; i < headerPair.length / 2; i++) {
-        localVarHeaderParams.put(headerPair[i], headerPair[i * 2 + 1]);
+      for (int i = 0; i < headerPair.length; i++) {
+        localVarHeaderParams.put(headerPair[i].getName(), headerPair[i].getValue());
       }
     }
 
@@ -297,7 +291,7 @@ public class LeadCluesApi {
       LeadCluesUpdateRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     // verify the required parameter 'data' is set
@@ -319,7 +313,7 @@ public class LeadCluesApi {
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
-  public LeadCluesUpdateResponse leadCluesUpdate(LeadCluesUpdateRequest data, String... headerPair)
+  public LeadCluesUpdateResponse leadCluesUpdate(LeadCluesUpdateRequest data, Pair... headerPair)
       throws ApiException {
     ApiResponse<LeadCluesUpdateResponse> resp = leadCluesUpdateWithHttpInfo(data, headerPair);
     return resp.getData();
@@ -334,7 +328,7 @@ public class LeadCluesApi {
    *     response body
    */
   public ApiResponse<LeadCluesUpdateResponse> leadCluesUpdateWithHttpInfo(
-      LeadCluesUpdateRequest data, String... headerPair) throws ApiException {
+      LeadCluesUpdateRequest data, Pair... headerPair) throws ApiException {
     com.squareup.okhttp.Call call = leadCluesUpdateValidateBeforeCall(data, null, null, headerPair);
     Type localVarReturnType = new TypeToken<LeadCluesUpdateResponse>() {}.getType();
     return apiClient.execute(call, localVarReturnType);
@@ -351,7 +345,7 @@ public class LeadCluesApi {
   public com.squareup.okhttp.Call leadCluesUpdateAsync(
       LeadCluesUpdateRequest data,
       final ApiCallback<LeadCluesUpdateResponse> callback,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     ProgressResponseBody.ProgressListener progressListener = null;

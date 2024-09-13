@@ -15,6 +15,7 @@ package com.tencent.ads.container.v3;
 import com.google.inject.Inject;
 import com.tencent.ads.ApiContainer;
 import com.tencent.ads.ApiException;
+import com.tencent.ads.Pair;
 import com.tencent.ads.anno.*;
 import com.tencent.ads.api.v3.LiveRoomComponentStatusApi;
 import com.tencent.ads.exception.TencentAdsResponseException;
@@ -35,7 +36,7 @@ public class LiveRoomComponentStatusApiContainer extends ApiContainer {
    *     response body
    */
   public LiveRoomComponentStatusUpdateResponseData liveRoomComponentStatusUpdate(
-      LiveRoomComponentStatusUpdateRequest data, String... headerPair)
+      LiveRoomComponentStatusUpdateRequest data, Pair... headerPair)
       throws ApiException, TencentAdsResponseException {
     LiveRoomComponentStatusUpdateResponse resp =
         api.liveRoomComponentStatusUpdate(data, headerPair);

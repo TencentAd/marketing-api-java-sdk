@@ -62,7 +62,7 @@ public class SeedElementQuotaApi {
       SeedElementQuotaGetRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     Object localVarPostBody = data;
@@ -86,11 +86,8 @@ public class SeedElementQuotaApi {
     localVarHeaderParams.put("Content-Type", localVarContentType);
 
     if (headerPair != null && headerPair.length > 0) {
-      if (headerPair.length % 2 != 0) {
-        throw new UnsupportedOperationException("Parameter headerPair must be paired");
-      }
-      for (int i = 0; i < headerPair.length / 2; i++) {
-        localVarHeaderParams.put(headerPair[i], headerPair[i * 2 + 1]);
+      for (int i = 0; i < headerPair.length; i++) {
+        localVarHeaderParams.put(headerPair[i].getName(), headerPair[i].getValue());
       }
     }
 
@@ -130,7 +127,7 @@ public class SeedElementQuotaApi {
       SeedElementQuotaGetRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     // verify the required parameter 'data' is set
@@ -153,7 +150,7 @@ public class SeedElementQuotaApi {
    *     response body
    */
   public SeedElementQuotaGetResponse seedElementQuotaGet(
-      SeedElementQuotaGetRequest data, String... headerPair) throws ApiException {
+      SeedElementQuotaGetRequest data, Pair... headerPair) throws ApiException {
     ApiResponse<SeedElementQuotaGetResponse> resp =
         seedElementQuotaGetWithHttpInfo(data, headerPair);
     return resp.getData();
@@ -168,7 +165,7 @@ public class SeedElementQuotaApi {
    *     response body
    */
   public ApiResponse<SeedElementQuotaGetResponse> seedElementQuotaGetWithHttpInfo(
-      SeedElementQuotaGetRequest data, String... headerPair) throws ApiException {
+      SeedElementQuotaGetRequest data, Pair... headerPair) throws ApiException {
     com.squareup.okhttp.Call call =
         seedElementQuotaGetValidateBeforeCall(data, null, null, headerPair);
     Type localVarReturnType = new TypeToken<SeedElementQuotaGetResponse>() {}.getType();
@@ -186,7 +183,7 @@ public class SeedElementQuotaApi {
   public com.squareup.okhttp.Call seedElementQuotaGetAsync(
       SeedElementQuotaGetRequest data,
       final ApiCallback<SeedElementQuotaGetResponse> callback,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     ProgressResponseBody.ProgressListener progressListener = null;

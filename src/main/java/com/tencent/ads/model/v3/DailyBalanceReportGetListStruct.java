@@ -51,6 +51,21 @@ public class DailyBalanceReportGetListStruct {
   @SerializedName("preauth_balance")
   private Long preauthBalance = null;
 
+  @SerializedName("preauth_out_pay")
+  private Long preauthOutPay = null;
+
+  @SerializedName("preauth_in_refund")
+  private Long preauthInRefund = null;
+
+  @SerializedName("acct_out_pay")
+  private Long acctOutPay = null;
+
+  @SerializedName("acct_out_pay_share")
+  private Long acctOutPayShare = null;
+
+  @SerializedName("share_out_pay")
+  private Long shareOutPay = null;
+
   public DailyBalanceReportGetListStruct accountId(Long accountId) {
     this.accountId = accountId;
     return this;
@@ -241,6 +256,101 @@ public class DailyBalanceReportGetListStruct {
     this.preauthBalance = preauthBalance;
   }
 
+  public DailyBalanceReportGetListStruct preauthOutPay(Long preauthOutPay) {
+    this.preauthOutPay = preauthOutPay;
+    return this;
+  }
+
+  /**
+   * Get preauthOutPay
+   *
+   * @return preauthOutPay
+   */
+  @ApiModelProperty(value = "")
+  public Long getPreauthOutPay() {
+    return preauthOutPay;
+  }
+
+  public void setPreauthOutPay(Long preauthOutPay) {
+    this.preauthOutPay = preauthOutPay;
+  }
+
+  public DailyBalanceReportGetListStruct preauthInRefund(Long preauthInRefund) {
+    this.preauthInRefund = preauthInRefund;
+    return this;
+  }
+
+  /**
+   * Get preauthInRefund
+   *
+   * @return preauthInRefund
+   */
+  @ApiModelProperty(value = "")
+  public Long getPreauthInRefund() {
+    return preauthInRefund;
+  }
+
+  public void setPreauthInRefund(Long preauthInRefund) {
+    this.preauthInRefund = preauthInRefund;
+  }
+
+  public DailyBalanceReportGetListStruct acctOutPay(Long acctOutPay) {
+    this.acctOutPay = acctOutPay;
+    return this;
+  }
+
+  /**
+   * Get acctOutPay
+   *
+   * @return acctOutPay
+   */
+  @ApiModelProperty(value = "")
+  public Long getAcctOutPay() {
+    return acctOutPay;
+  }
+
+  public void setAcctOutPay(Long acctOutPay) {
+    this.acctOutPay = acctOutPay;
+  }
+
+  public DailyBalanceReportGetListStruct acctOutPayShare(Long acctOutPayShare) {
+    this.acctOutPayShare = acctOutPayShare;
+    return this;
+  }
+
+  /**
+   * Get acctOutPayShare
+   *
+   * @return acctOutPayShare
+   */
+  @ApiModelProperty(value = "")
+  public Long getAcctOutPayShare() {
+    return acctOutPayShare;
+  }
+
+  public void setAcctOutPayShare(Long acctOutPayShare) {
+    this.acctOutPayShare = acctOutPayShare;
+  }
+
+  public DailyBalanceReportGetListStruct shareOutPay(Long shareOutPay) {
+    this.shareOutPay = shareOutPay;
+    return this;
+  }
+
+  /**
+   * Get shareOutPay
+   *
+   * @return shareOutPay
+   */
+  @ApiModelProperty(value = "")
+  public Long getShareOutPay() {
+    return shareOutPay;
+  }
+
+  public void setShareOutPay(Long shareOutPay) {
+    this.shareOutPay = shareOutPay;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -260,7 +370,12 @@ public class DailyBalanceReportGetListStruct {
         && Objects.equals(this.transOut, dailyBalanceReportGetListStruct.transOut)
         && Objects.equals(this.creditModify, dailyBalanceReportGetListStruct.creditModify)
         && Objects.equals(this.balance, dailyBalanceReportGetListStruct.balance)
-        && Objects.equals(this.preauthBalance, dailyBalanceReportGetListStruct.preauthBalance);
+        && Objects.equals(this.preauthBalance, dailyBalanceReportGetListStruct.preauthBalance)
+        && Objects.equals(this.preauthOutPay, dailyBalanceReportGetListStruct.preauthOutPay)
+        && Objects.equals(this.preauthInRefund, dailyBalanceReportGetListStruct.preauthInRefund)
+        && Objects.equals(this.acctOutPay, dailyBalanceReportGetListStruct.acctOutPay)
+        && Objects.equals(this.acctOutPayShare, dailyBalanceReportGetListStruct.acctOutPayShare)
+        && Objects.equals(this.shareOutPay, dailyBalanceReportGetListStruct.shareOutPay);
   }
 
   @Override
@@ -275,7 +390,12 @@ public class DailyBalanceReportGetListStruct {
         transOut,
         creditModify,
         balance,
-        preauthBalance);
+        preauthBalance,
+        preauthOutPay,
+        preauthInRefund,
+        acctOutPay,
+        acctOutPayShare,
+        shareOutPay);
   }
 
   @Override

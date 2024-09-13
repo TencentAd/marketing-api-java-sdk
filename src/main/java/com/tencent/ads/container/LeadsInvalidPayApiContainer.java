@@ -15,6 +15,7 @@ package com.tencent.ads.container;
 import com.google.inject.Inject;
 import com.tencent.ads.ApiContainer;
 import com.tencent.ads.ApiException;
+import com.tencent.ads.Pair;
 import com.tencent.ads.anno.*;
 import com.tencent.ads.api.LeadsInvalidPayApi;
 import com.tencent.ads.exception.TencentAdsResponseException;
@@ -35,7 +36,7 @@ public class LeadsInvalidPayApiContainer extends ApiContainer {
    *     response body
    */
   public LeadsInvalidPayGetResponseData leadsInvalidPayGet(
-      LeadsInvalidPayGetRequest data, String... headerPair)
+      LeadsInvalidPayGetRequest data, Pair... headerPair)
       throws ApiException, TencentAdsResponseException {
     LeadsInvalidPayGetResponse resp = api.leadsInvalidPayGet(data, headerPair);
     handleResponse(gson.toJson(resp));

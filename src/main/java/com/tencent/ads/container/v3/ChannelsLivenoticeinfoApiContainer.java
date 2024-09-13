@@ -15,6 +15,7 @@ package com.tencent.ads.container.v3;
 import com.google.inject.Inject;
 import com.tencent.ads.ApiContainer;
 import com.tencent.ads.ApiException;
+import com.tencent.ads.Pair;
 import com.tencent.ads.anno.*;
 import com.tencent.ads.api.v3.ChannelsLivenoticeinfoApi;
 import com.tencent.ads.exception.TencentAdsResponseException;
@@ -32,6 +33,7 @@ public class ChannelsLivenoticeinfoApiContainer extends ApiContainer {
    * @param accountId (required)
    * @param finderUsername (optional)
    * @param nickname (optional)
+   * @param wechatChannelsAccountId (optional)
    * @param fields 返回参数的字段列表 (optional)
    * @return ChannelsLivenoticeinfoGetResponse
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
@@ -41,11 +43,13 @@ public class ChannelsLivenoticeinfoApiContainer extends ApiContainer {
       Long accountId,
       String finderUsername,
       String nickname,
+      String wechatChannelsAccountId,
       List<String> fields,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException, TencentAdsResponseException {
     ChannelsLivenoticeinfoGetResponse resp =
-        api.channelsLivenoticeinfoGet(accountId, finderUsername, nickname, fields, headerPair);
+        api.channelsLivenoticeinfoGet(
+            accountId, finderUsername, nickname, wechatChannelsAccountId, fields, headerPair);
     handleResponse(gson.toJson(resp));
     return resp.getData();
   }

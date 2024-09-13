@@ -65,7 +65,7 @@ public class AdgroupNegativewordsApi {
       AdgroupNegativewordsAddRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     Object localVarPostBody = data;
@@ -89,11 +89,8 @@ public class AdgroupNegativewordsApi {
     localVarHeaderParams.put("Content-Type", localVarContentType);
 
     if (headerPair != null && headerPair.length > 0) {
-      if (headerPair.length % 2 != 0) {
-        throw new UnsupportedOperationException("Parameter headerPair must be paired");
-      }
-      for (int i = 0; i < headerPair.length / 2; i++) {
-        localVarHeaderParams.put(headerPair[i], headerPair[i * 2 + 1]);
+      for (int i = 0; i < headerPair.length; i++) {
+        localVarHeaderParams.put(headerPair[i].getName(), headerPair[i].getValue());
       }
     }
 
@@ -133,7 +130,7 @@ public class AdgroupNegativewordsApi {
       AdgroupNegativewordsAddRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     // verify the required parameter 'data' is set
@@ -156,7 +153,7 @@ public class AdgroupNegativewordsApi {
    *     response body
    */
   public AdgroupNegativewordsAddResponse adgroupNegativewordsAdd(
-      AdgroupNegativewordsAddRequest data, String... headerPair) throws ApiException {
+      AdgroupNegativewordsAddRequest data, Pair... headerPair) throws ApiException {
     ApiResponse<AdgroupNegativewordsAddResponse> resp =
         adgroupNegativewordsAddWithHttpInfo(data, headerPair);
     return resp.getData();
@@ -171,7 +168,7 @@ public class AdgroupNegativewordsApi {
    *     response body
    */
   public ApiResponse<AdgroupNegativewordsAddResponse> adgroupNegativewordsAddWithHttpInfo(
-      AdgroupNegativewordsAddRequest data, String... headerPair) throws ApiException {
+      AdgroupNegativewordsAddRequest data, Pair... headerPair) throws ApiException {
     com.squareup.okhttp.Call call =
         adgroupNegativewordsAddValidateBeforeCall(data, null, null, headerPair);
     Type localVarReturnType = new TypeToken<AdgroupNegativewordsAddResponse>() {}.getType();
@@ -189,7 +186,7 @@ public class AdgroupNegativewordsApi {
   public com.squareup.okhttp.Call adgroupNegativewordsAddAsync(
       AdgroupNegativewordsAddRequest data,
       final ApiCallback<AdgroupNegativewordsAddResponse> callback,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     ProgressResponseBody.ProgressListener progressListener = null;
@@ -237,7 +234,7 @@ public class AdgroupNegativewordsApi {
       List<String> fields,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     Object localVarPostBody = null;
@@ -268,11 +265,8 @@ public class AdgroupNegativewordsApi {
     localVarHeaderParams.put("Content-Type", localVarContentType);
 
     if (headerPair != null && headerPair.length > 0) {
-      if (headerPair.length % 2 != 0) {
-        throw new UnsupportedOperationException("Parameter headerPair must be paired");
-      }
-      for (int i = 0; i < headerPair.length / 2; i++) {
-        localVarHeaderParams.put(headerPair[i], headerPair[i * 2 + 1]);
+      for (int i = 0; i < headerPair.length; i++) {
+        localVarHeaderParams.put(headerPair[i].getName(), headerPair[i].getValue());
       }
     }
 
@@ -314,7 +308,7 @@ public class AdgroupNegativewordsApi {
       List<String> fields,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     // verify the required parameter 'accountId' is set
@@ -346,7 +340,7 @@ public class AdgroupNegativewordsApi {
    *     response body
    */
   public AdgroupNegativewordsGetResponse adgroupNegativewordsGet(
-      Long accountId, List<Long> adgroupIds, List<String> fields, String... headerPair)
+      Long accountId, List<Long> adgroupIds, List<String> fields, Pair... headerPair)
       throws ApiException {
     ApiResponse<AdgroupNegativewordsGetResponse> resp =
         adgroupNegativewordsGetWithHttpInfo(accountId, adgroupIds, fields, headerPair);
@@ -364,7 +358,7 @@ public class AdgroupNegativewordsApi {
    *     response body
    */
   public ApiResponse<AdgroupNegativewordsGetResponse> adgroupNegativewordsGetWithHttpInfo(
-      Long accountId, List<Long> adgroupIds, List<String> fields, String... headerPair)
+      Long accountId, List<Long> adgroupIds, List<String> fields, Pair... headerPair)
       throws ApiException {
     com.squareup.okhttp.Call call =
         adgroupNegativewordsGetValidateBeforeCall(
@@ -388,7 +382,7 @@ public class AdgroupNegativewordsApi {
       List<Long> adgroupIds,
       List<String> fields,
       final ApiCallback<AdgroupNegativewordsGetResponse> callback,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     ProgressResponseBody.ProgressListener progressListener = null;
@@ -432,7 +426,7 @@ public class AdgroupNegativewordsApi {
       AdgroupNegativewordsUpdateRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     Object localVarPostBody = data;
@@ -456,11 +450,8 @@ public class AdgroupNegativewordsApi {
     localVarHeaderParams.put("Content-Type", localVarContentType);
 
     if (headerPair != null && headerPair.length > 0) {
-      if (headerPair.length % 2 != 0) {
-        throw new UnsupportedOperationException("Parameter headerPair must be paired");
-      }
-      for (int i = 0; i < headerPair.length / 2; i++) {
-        localVarHeaderParams.put(headerPair[i], headerPair[i * 2 + 1]);
+      for (int i = 0; i < headerPair.length; i++) {
+        localVarHeaderParams.put(headerPair[i].getName(), headerPair[i].getValue());
       }
     }
 
@@ -500,7 +491,7 @@ public class AdgroupNegativewordsApi {
       AdgroupNegativewordsUpdateRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     // verify the required parameter 'data' is set
@@ -523,7 +514,7 @@ public class AdgroupNegativewordsApi {
    *     response body
    */
   public AdgroupNegativewordsUpdateResponse adgroupNegativewordsUpdate(
-      AdgroupNegativewordsUpdateRequest data, String... headerPair) throws ApiException {
+      AdgroupNegativewordsUpdateRequest data, Pair... headerPair) throws ApiException {
     ApiResponse<AdgroupNegativewordsUpdateResponse> resp =
         adgroupNegativewordsUpdateWithHttpInfo(data, headerPair);
     return resp.getData();
@@ -538,7 +529,7 @@ public class AdgroupNegativewordsApi {
    *     response body
    */
   public ApiResponse<AdgroupNegativewordsUpdateResponse> adgroupNegativewordsUpdateWithHttpInfo(
-      AdgroupNegativewordsUpdateRequest data, String... headerPair) throws ApiException {
+      AdgroupNegativewordsUpdateRequest data, Pair... headerPair) throws ApiException {
     com.squareup.okhttp.Call call =
         adgroupNegativewordsUpdateValidateBeforeCall(data, null, null, headerPair);
     Type localVarReturnType = new TypeToken<AdgroupNegativewordsUpdateResponse>() {}.getType();
@@ -556,7 +547,7 @@ public class AdgroupNegativewordsApi {
   public com.squareup.okhttp.Call adgroupNegativewordsUpdateAsync(
       AdgroupNegativewordsUpdateRequest data,
       final ApiCallback<AdgroupNegativewordsUpdateResponse> callback,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     ProgressResponseBody.ProgressListener progressListener = null;

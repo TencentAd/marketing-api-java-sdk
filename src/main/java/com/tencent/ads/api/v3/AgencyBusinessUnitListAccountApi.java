@@ -67,7 +67,7 @@ public class AgencyBusinessUnitListAccountApi {
       List<String> fields,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     Object localVarPostBody = null;
@@ -98,11 +98,8 @@ public class AgencyBusinessUnitListAccountApi {
     localVarHeaderParams.put("Content-Type", localVarContentType);
 
     if (headerPair != null && headerPair.length > 0) {
-      if (headerPair.length % 2 != 0) {
-        throw new UnsupportedOperationException("Parameter headerPair must be paired");
-      }
-      for (int i = 0; i < headerPair.length / 2; i++) {
-        localVarHeaderParams.put(headerPair[i], headerPair[i * 2 + 1]);
+      for (int i = 0; i < headerPair.length; i++) {
+        localVarHeaderParams.put(headerPair[i].getName(), headerPair[i].getValue());
       }
     }
 
@@ -145,7 +142,7 @@ public class AgencyBusinessUnitListAccountApi {
       List<String> fields,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     // verify the required parameter 'organizationId' is set
@@ -190,7 +187,7 @@ public class AgencyBusinessUnitListAccountApi {
    *     response body
    */
   public AgencyBusinessUnitListAccountGetResponse agencyBusinessUnitListAccountGet(
-      Long organizationId, Long page, Long pageSize, List<String> fields, String... headerPair)
+      Long organizationId, Long page, Long pageSize, List<String> fields, Pair... headerPair)
       throws ApiException {
     ApiResponse<AgencyBusinessUnitListAccountGetResponse> resp =
         agencyBusinessUnitListAccountGetWithHttpInfo(
@@ -211,7 +208,7 @@ public class AgencyBusinessUnitListAccountApi {
    */
   public ApiResponse<AgencyBusinessUnitListAccountGetResponse>
       agencyBusinessUnitListAccountGetWithHttpInfo(
-          Long organizationId, Long page, Long pageSize, List<String> fields, String... headerPair)
+          Long organizationId, Long page, Long pageSize, List<String> fields, Pair... headerPair)
           throws ApiException {
     com.squareup.okhttp.Call call =
         agencyBusinessUnitListAccountGetValidateBeforeCall(
@@ -238,7 +235,7 @@ public class AgencyBusinessUnitListAccountApi {
       Long pageSize,
       List<String> fields,
       final ApiCallback<AgencyBusinessUnitListAccountGetResponse> callback,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     ProgressResponseBody.ProgressListener progressListener = null;

@@ -66,7 +66,7 @@ public class JointBudgetRulesApi {
       JointBudgetRulesAddRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     Object localVarPostBody = data;
@@ -90,11 +90,8 @@ public class JointBudgetRulesApi {
     localVarHeaderParams.put("Content-Type", localVarContentType);
 
     if (headerPair != null && headerPair.length > 0) {
-      if (headerPair.length % 2 != 0) {
-        throw new UnsupportedOperationException("Parameter headerPair must be paired");
-      }
-      for (int i = 0; i < headerPair.length / 2; i++) {
-        localVarHeaderParams.put(headerPair[i], headerPair[i * 2 + 1]);
+      for (int i = 0; i < headerPair.length; i++) {
+        localVarHeaderParams.put(headerPair[i].getName(), headerPair[i].getValue());
       }
     }
 
@@ -134,7 +131,7 @@ public class JointBudgetRulesApi {
       JointBudgetRulesAddRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     // verify the required parameter 'data' is set
@@ -157,7 +154,7 @@ public class JointBudgetRulesApi {
    *     response body
    */
   public JointBudgetRulesAddResponse jointBudgetRulesAdd(
-      JointBudgetRulesAddRequest data, String... headerPair) throws ApiException {
+      JointBudgetRulesAddRequest data, Pair... headerPair) throws ApiException {
     ApiResponse<JointBudgetRulesAddResponse> resp =
         jointBudgetRulesAddWithHttpInfo(data, headerPair);
     return resp.getData();
@@ -172,7 +169,7 @@ public class JointBudgetRulesApi {
    *     response body
    */
   public ApiResponse<JointBudgetRulesAddResponse> jointBudgetRulesAddWithHttpInfo(
-      JointBudgetRulesAddRequest data, String... headerPair) throws ApiException {
+      JointBudgetRulesAddRequest data, Pair... headerPair) throws ApiException {
     com.squareup.okhttp.Call call =
         jointBudgetRulesAddValidateBeforeCall(data, null, null, headerPair);
     Type localVarReturnType = new TypeToken<JointBudgetRulesAddResponse>() {}.getType();
@@ -190,7 +187,7 @@ public class JointBudgetRulesApi {
   public com.squareup.okhttp.Call jointBudgetRulesAddAsync(
       JointBudgetRulesAddRequest data,
       final ApiCallback<JointBudgetRulesAddResponse> callback,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     ProgressResponseBody.ProgressListener progressListener = null;
@@ -242,7 +239,7 @@ public class JointBudgetRulesApi {
       List<String> fields,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     Object localVarPostBody = null;
@@ -276,11 +273,8 @@ public class JointBudgetRulesApi {
     localVarHeaderParams.put("Content-Type", localVarContentType);
 
     if (headerPair != null && headerPair.length > 0) {
-      if (headerPair.length % 2 != 0) {
-        throw new UnsupportedOperationException("Parameter headerPair must be paired");
-      }
-      for (int i = 0; i < headerPair.length / 2; i++) {
-        localVarHeaderParams.put(headerPair[i], headerPair[i * 2 + 1]);
+      for (int i = 0; i < headerPair.length; i++) {
+        localVarHeaderParams.put(headerPair[i].getName(), headerPair[i].getValue());
       }
     }
 
@@ -324,7 +318,7 @@ public class JointBudgetRulesApi {
       List<String> fields,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     // verify the required parameter 'accountId' is set
@@ -364,7 +358,7 @@ public class JointBudgetRulesApi {
       Long page,
       Long pageSize,
       List<String> fields,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
     ApiResponse<JointBudgetRulesGetResponse> resp =
         jointBudgetRulesGetWithHttpInfo(accountId, filtering, page, pageSize, fields, headerPair);
@@ -389,7 +383,7 @@ public class JointBudgetRulesApi {
       Long page,
       Long pageSize,
       List<String> fields,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
     com.squareup.okhttp.Call call =
         jointBudgetRulesGetValidateBeforeCall(
@@ -417,7 +411,7 @@ public class JointBudgetRulesApi {
       Long pageSize,
       List<String> fields,
       final ApiCallback<JointBudgetRulesGetResponse> callback,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     ProgressResponseBody.ProgressListener progressListener = null;
@@ -468,7 +462,7 @@ public class JointBudgetRulesApi {
       JointBudgetRulesUpdateRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     Object localVarPostBody = data;
@@ -492,11 +486,8 @@ public class JointBudgetRulesApi {
     localVarHeaderParams.put("Content-Type", localVarContentType);
 
     if (headerPair != null && headerPair.length > 0) {
-      if (headerPair.length % 2 != 0) {
-        throw new UnsupportedOperationException("Parameter headerPair must be paired");
-      }
-      for (int i = 0; i < headerPair.length / 2; i++) {
-        localVarHeaderParams.put(headerPair[i], headerPair[i * 2 + 1]);
+      for (int i = 0; i < headerPair.length; i++) {
+        localVarHeaderParams.put(headerPair[i].getName(), headerPair[i].getValue());
       }
     }
 
@@ -536,7 +527,7 @@ public class JointBudgetRulesApi {
       JointBudgetRulesUpdateRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     // verify the required parameter 'data' is set
@@ -559,7 +550,7 @@ public class JointBudgetRulesApi {
    *     response body
    */
   public JointBudgetRulesUpdateResponse jointBudgetRulesUpdate(
-      JointBudgetRulesUpdateRequest data, String... headerPair) throws ApiException {
+      JointBudgetRulesUpdateRequest data, Pair... headerPair) throws ApiException {
     ApiResponse<JointBudgetRulesUpdateResponse> resp =
         jointBudgetRulesUpdateWithHttpInfo(data, headerPair);
     return resp.getData();
@@ -574,7 +565,7 @@ public class JointBudgetRulesApi {
    *     response body
    */
   public ApiResponse<JointBudgetRulesUpdateResponse> jointBudgetRulesUpdateWithHttpInfo(
-      JointBudgetRulesUpdateRequest data, String... headerPair) throws ApiException {
+      JointBudgetRulesUpdateRequest data, Pair... headerPair) throws ApiException {
     com.squareup.okhttp.Call call =
         jointBudgetRulesUpdateValidateBeforeCall(data, null, null, headerPair);
     Type localVarReturnType = new TypeToken<JointBudgetRulesUpdateResponse>() {}.getType();
@@ -592,7 +583,7 @@ public class JointBudgetRulesApi {
   public com.squareup.okhttp.Call jointBudgetRulesUpdateAsync(
       JointBudgetRulesUpdateRequest data,
       final ApiCallback<JointBudgetRulesUpdateResponse> callback,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     ProgressResponseBody.ProgressListener progressListener = null;

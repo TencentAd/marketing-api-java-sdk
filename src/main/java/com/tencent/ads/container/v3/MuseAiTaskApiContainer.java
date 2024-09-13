@@ -15,6 +15,7 @@ package com.tencent.ads.container.v3;
 import com.google.inject.Inject;
 import com.tencent.ads.ApiContainer;
 import com.tencent.ads.ApiException;
+import com.tencent.ads.Pair;
 import com.tencent.ads.anno.*;
 import com.tencent.ads.api.v3.MuseAiTaskApi;
 import com.tencent.ads.exception.TencentAdsResponseException;
@@ -37,7 +38,7 @@ public class MuseAiTaskApiContainer extends ApiContainer {
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
-  public MuseAiTaskAddResponseData museAiTaskAdd(MuseAiTaskAddRequest data, String... headerPair)
+  public MuseAiTaskAddResponseData museAiTaskAdd(MuseAiTaskAddRequest data, Pair... headerPair)
       throws ApiException, TencentAdsResponseException {
     MuseAiTaskAddResponse resp = api.museAiTaskAdd(data, headerPair);
     handleResponse(gson.toJson(resp));
@@ -55,7 +56,7 @@ public class MuseAiTaskApiContainer extends ApiContainer {
    *     response body
    */
   public MuseAiTaskGetResponseData museAiTaskGet(
-      Long accountId, Long taskId, List<String> fields, String... headerPair)
+      Long accountId, Long taskId, List<String> fields, Pair... headerPair)
       throws ApiException, TencentAdsResponseException {
     MuseAiTaskGetResponse resp = api.museAiTaskGet(accountId, taskId, fields, headerPair);
     handleResponse(gson.toJson(resp));

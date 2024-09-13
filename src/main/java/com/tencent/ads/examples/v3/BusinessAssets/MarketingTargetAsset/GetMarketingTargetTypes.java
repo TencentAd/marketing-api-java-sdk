@@ -16,6 +16,10 @@ public class GetMarketingTargetTypes {
 
   public Long accountId = null;
 
+  public Long organizationId = null;
+
+  public String businessType = null;
+
   public List<String> fields = null;
 
   public void init() {
@@ -30,7 +34,9 @@ public class GetMarketingTargetTypes {
 
   public MarketingTargetTypesGetResponseData getMarketingTargetTypes() throws Exception {
     MarketingTargetTypesGetResponseData response =
-        tencentAds.marketingTargetTypes().marketingTargetTypesGet(accountId, fields);
+        tencentAds
+            .marketingTargetTypes()
+            .marketingTargetTypesGet(accountId, organizationId, businessType, fields);
     return response;
   }
 

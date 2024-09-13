@@ -15,6 +15,7 @@ package com.tencent.ads.container.v3;
 import com.google.inject.Inject;
 import com.tencent.ads.ApiContainer;
 import com.tencent.ads.ApiException;
+import com.tencent.ads.Pair;
 import com.tencent.ads.anno.*;
 import com.tencent.ads.api.v3.JointBudgetRulesApi;
 import com.tencent.ads.exception.TencentAdsResponseException;
@@ -42,7 +43,7 @@ public class JointBudgetRulesApiContainer extends ApiContainer {
    *     response body
    */
   public JointBudgetRulesAddResponseData jointBudgetRulesAdd(
-      JointBudgetRulesAddRequest data, String... headerPair)
+      JointBudgetRulesAddRequest data, Pair... headerPair)
       throws ApiException, TencentAdsResponseException {
     JointBudgetRulesAddResponse resp = api.jointBudgetRulesAdd(data, headerPair);
     handleResponse(gson.toJson(resp));
@@ -67,7 +68,7 @@ public class JointBudgetRulesApiContainer extends ApiContainer {
       Long page,
       Long pageSize,
       List<String> fields,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException, TencentAdsResponseException {
     JointBudgetRulesGetResponse resp =
         api.jointBudgetRulesGet(accountId, filtering, page, pageSize, fields, headerPair);
@@ -84,7 +85,7 @@ public class JointBudgetRulesApiContainer extends ApiContainer {
    *     response body
    */
   public JointBudgetRulesUpdateResponseData jointBudgetRulesUpdate(
-      JointBudgetRulesUpdateRequest data, String... headerPair)
+      JointBudgetRulesUpdateRequest data, Pair... headerPair)
       throws ApiException, TencentAdsResponseException {
     JointBudgetRulesUpdateResponse resp = api.jointBudgetRulesUpdate(data, headerPair);
     handleResponse(gson.toJson(resp));

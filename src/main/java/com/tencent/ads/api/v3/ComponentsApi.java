@@ -66,7 +66,7 @@ public class ComponentsApi {
       ComponentsAddRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     Object localVarPostBody = data;
@@ -90,11 +90,8 @@ public class ComponentsApi {
     localVarHeaderParams.put("Content-Type", localVarContentType);
 
     if (headerPair != null && headerPair.length > 0) {
-      if (headerPair.length % 2 != 0) {
-        throw new UnsupportedOperationException("Parameter headerPair must be paired");
-      }
-      for (int i = 0; i < headerPair.length / 2; i++) {
-        localVarHeaderParams.put(headerPair[i], headerPair[i * 2 + 1]);
+      for (int i = 0; i < headerPair.length; i++) {
+        localVarHeaderParams.put(headerPair[i].getName(), headerPair[i].getValue());
       }
     }
 
@@ -134,7 +131,7 @@ public class ComponentsApi {
       ComponentsAddRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     // verify the required parameter 'data' is set
@@ -156,7 +153,7 @@ public class ComponentsApi {
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
-  public ComponentsAddResponse componentsAdd(ComponentsAddRequest data, String... headerPair)
+  public ComponentsAddResponse componentsAdd(ComponentsAddRequest data, Pair... headerPair)
       throws ApiException {
     ApiResponse<ComponentsAddResponse> resp = componentsAddWithHttpInfo(data, headerPair);
     return resp.getData();
@@ -171,7 +168,7 @@ public class ComponentsApi {
    *     response body
    */
   public ApiResponse<ComponentsAddResponse> componentsAddWithHttpInfo(
-      ComponentsAddRequest data, String... headerPair) throws ApiException {
+      ComponentsAddRequest data, Pair... headerPair) throws ApiException {
     com.squareup.okhttp.Call call = componentsAddValidateBeforeCall(data, null, null, headerPair);
     Type localVarReturnType = new TypeToken<ComponentsAddResponse>() {}.getType();
     return apiClient.execute(call, localVarReturnType);
@@ -188,7 +185,7 @@ public class ComponentsApi {
   public com.squareup.okhttp.Call componentsAddAsync(
       ComponentsAddRequest data,
       final ApiCallback<ComponentsAddResponse> callback,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     ProgressResponseBody.ProgressListener progressListener = null;
@@ -232,7 +229,7 @@ public class ComponentsApi {
       ComponentsDeleteRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     Object localVarPostBody = data;
@@ -256,11 +253,8 @@ public class ComponentsApi {
     localVarHeaderParams.put("Content-Type", localVarContentType);
 
     if (headerPair != null && headerPair.length > 0) {
-      if (headerPair.length % 2 != 0) {
-        throw new UnsupportedOperationException("Parameter headerPair must be paired");
-      }
-      for (int i = 0; i < headerPair.length / 2; i++) {
-        localVarHeaderParams.put(headerPair[i], headerPair[i * 2 + 1]);
+      for (int i = 0; i < headerPair.length; i++) {
+        localVarHeaderParams.put(headerPair[i].getName(), headerPair[i].getValue());
       }
     }
 
@@ -300,7 +294,7 @@ public class ComponentsApi {
       ComponentsDeleteRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     // verify the required parameter 'data' is set
@@ -322,8 +316,8 @@ public class ComponentsApi {
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
-  public ComponentsDeleteResponse componentsDelete(
-      ComponentsDeleteRequest data, String... headerPair) throws ApiException {
+  public ComponentsDeleteResponse componentsDelete(ComponentsDeleteRequest data, Pair... headerPair)
+      throws ApiException {
     ApiResponse<ComponentsDeleteResponse> resp = componentsDeleteWithHttpInfo(data, headerPair);
     return resp.getData();
   }
@@ -337,7 +331,7 @@ public class ComponentsApi {
    *     response body
    */
   public ApiResponse<ComponentsDeleteResponse> componentsDeleteWithHttpInfo(
-      ComponentsDeleteRequest data, String... headerPair) throws ApiException {
+      ComponentsDeleteRequest data, Pair... headerPair) throws ApiException {
     com.squareup.okhttp.Call call =
         componentsDeleteValidateBeforeCall(data, null, null, headerPair);
     Type localVarReturnType = new TypeToken<ComponentsDeleteResponse>() {}.getType();
@@ -355,7 +349,7 @@ public class ComponentsApi {
   public com.squareup.okhttp.Call componentsDeleteAsync(
       ComponentsDeleteRequest data,
       final ApiCallback<ComponentsDeleteResponse> callback,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     ProgressResponseBody.ProgressListener progressListener = null;
@@ -409,7 +403,7 @@ public class ComponentsApi {
       List<String> fields,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     Object localVarPostBody = null;
@@ -445,11 +439,8 @@ public class ComponentsApi {
     localVarHeaderParams.put("Content-Type", localVarContentType);
 
     if (headerPair != null && headerPair.length > 0) {
-      if (headerPair.length % 2 != 0) {
-        throw new UnsupportedOperationException("Parameter headerPair must be paired");
-      }
-      for (int i = 0; i < headerPair.length / 2; i++) {
-        localVarHeaderParams.put(headerPair[i], headerPair[i * 2 + 1]);
+      for (int i = 0; i < headerPair.length; i++) {
+        localVarHeaderParams.put(headerPair[i].getName(), headerPair[i].getValue());
       }
     }
 
@@ -494,7 +485,7 @@ public class ComponentsApi {
       List<String> fields,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     // verify the required parameter 'accountId' is set
@@ -537,7 +528,7 @@ public class ComponentsApi {
       Long pageSize,
       Boolean isDeleted,
       List<String> fields,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
     ApiResponse<ComponentsGetResponse> resp =
         componentsGetWithHttpInfo(
@@ -565,7 +556,7 @@ public class ComponentsApi {
       Long pageSize,
       Boolean isDeleted,
       List<String> fields,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
     com.squareup.okhttp.Call call =
         componentsGetValidateBeforeCall(
@@ -595,7 +586,7 @@ public class ComponentsApi {
       Boolean isDeleted,
       List<String> fields,
       final ApiCallback<ComponentsGetResponse> callback,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     ProgressResponseBody.ProgressListener progressListener = null;

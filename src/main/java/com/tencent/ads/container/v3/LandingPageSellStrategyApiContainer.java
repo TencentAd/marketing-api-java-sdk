@@ -15,6 +15,7 @@ package com.tencent.ads.container.v3;
 import com.google.inject.Inject;
 import com.tencent.ads.ApiContainer;
 import com.tencent.ads.ApiException;
+import com.tencent.ads.Pair;
 import com.tencent.ads.anno.*;
 import com.tencent.ads.api.v3.LandingPageSellStrategyApi;
 import com.tencent.ads.exception.TencentAdsResponseException;
@@ -38,7 +39,7 @@ public class LandingPageSellStrategyApiContainer extends ApiContainer {
    *     response body
    */
   public LandingPageSellStrategyAddResponseData landingPageSellStrategyAdd(
-      LandingPageSellStrategyAddRequest data, String... headerPair)
+      LandingPageSellStrategyAddRequest data, Pair... headerPair)
       throws ApiException, TencentAdsResponseException {
     LandingPageSellStrategyAddResponse resp = api.landingPageSellStrategyAdd(data, headerPair);
     handleResponse(gson.toJson(resp));
@@ -69,7 +70,7 @@ public class LandingPageSellStrategyApiContainer extends ApiContainer {
       Long page,
       Long pageSize,
       List<String> fields,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException, TencentAdsResponseException {
     LandingPageSellStrategyGetResponse resp =
         api.landingPageSellStrategyGet(

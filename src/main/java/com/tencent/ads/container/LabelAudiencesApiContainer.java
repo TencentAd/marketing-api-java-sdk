@@ -15,6 +15,7 @@ package com.tencent.ads.container;
 import com.google.inject.Inject;
 import com.tencent.ads.ApiContainer;
 import com.tencent.ads.ApiException;
+import com.tencent.ads.Pair;
 import com.tencent.ads.anno.*;
 import com.tencent.ads.api.LabelAudiencesApi;
 import com.tencent.ads.exception.TencentAdsResponseException;
@@ -35,7 +36,7 @@ public class LabelAudiencesApiContainer extends ApiContainer {
    *     response body
    */
   public LabelAudiencesAddResponseData labelAudiencesAdd(
-      LabelAudiencesAddRequest data, String... headerPair)
+      LabelAudiencesAddRequest data, Pair... headerPair)
       throws ApiException, TencentAdsResponseException {
     LabelAudiencesAddResponse resp = api.labelAudiencesAdd(data, headerPair);
     handleResponse(gson.toJson(resp));

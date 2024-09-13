@@ -20,6 +20,8 @@ public class GetChannelsLivenoticeinfo {
 
   public String nickname = null;
 
+  public String wechatChannelsAccountId = null;
+
   public List<String> fields = null;
 
   public void init() {
@@ -36,7 +38,8 @@ public class GetChannelsLivenoticeinfo {
     ChannelsLivenoticeinfoGetResponseData response =
         tencentAds
             .channelsLivenoticeinfo()
-            .channelsLivenoticeinfoGet(accountId, finderUsername, nickname, fields);
+            .channelsLivenoticeinfoGet(
+                accountId, finderUsername, nickname, wechatChannelsAccountId, fields);
     return response;
   }
 

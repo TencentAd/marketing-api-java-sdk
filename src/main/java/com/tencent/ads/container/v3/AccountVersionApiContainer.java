@@ -15,6 +15,7 @@ package com.tencent.ads.container.v3;
 import com.google.inject.Inject;
 import com.tencent.ads.ApiContainer;
 import com.tencent.ads.ApiException;
+import com.tencent.ads.Pair;
 import com.tencent.ads.anno.*;
 import com.tencent.ads.api.v3.AccountVersionApi;
 import com.tencent.ads.exception.TencentAdsResponseException;
@@ -36,7 +37,7 @@ public class AccountVersionApiContainer extends ApiContainer {
    *     response body
    */
   public AccountVersionGetResponseData accountVersionGet(
-      Long accountId, List<String> fields, String... headerPair)
+      Long accountId, List<String> fields, Pair... headerPair)
       throws ApiException, TencentAdsResponseException {
     AccountVersionGetResponse resp = api.accountVersionGet(accountId, fields, headerPair);
     handleResponse(gson.toJson(resp));

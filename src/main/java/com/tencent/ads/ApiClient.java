@@ -705,6 +705,11 @@ public class ApiClient {
       // ensuring a default content type
       contentType = "application/json";
     }
+    String traceId = response.headers().get("X-Tsa-Trace-Id");
+    if (traceId != null) {
+      Context.setTraceId(traceId);
+    }
+
     if (isJsonMime(contentType)) {
       return json.deserialize(respBody, returnType);
     } else if (returnType.equals(String.class)) {

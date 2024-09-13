@@ -19,6 +19,8 @@ public class GetImages {
 
   public Long accountId = null;
 
+  public Long organizationId = null;
+
   public List<FilteringStruct> filtering = new ArrayList<>();
 
   public Long page = null;
@@ -66,7 +68,15 @@ public class GetImages {
     ImagesGetResponseData response =
         tencentAds
             .images()
-            .imagesGet(accountId, filtering, page, pageSize, labelId, businessScenario, fields);
+            .imagesGet(
+                accountId,
+                organizationId,
+                filtering,
+                page,
+                pageSize,
+                labelId,
+                businessScenario,
+                fields);
     return response;
   }
 

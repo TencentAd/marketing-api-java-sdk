@@ -15,6 +15,7 @@ package com.tencent.ads.container;
 import com.google.inject.Inject;
 import com.tencent.ads.ApiContainer;
 import com.tencent.ads.ApiException;
+import com.tencent.ads.Pair;
 import com.tencent.ads.anno.*;
 import com.tencent.ads.api.WechatPagesCsgroupUserApi;
 import com.tencent.ads.exception.TencentAdsResponseException;
@@ -38,7 +39,7 @@ public class WechatPagesCsgroupUserApiContainer extends ApiContainer {
    *     response body
    */
   public WechatPagesCsgroupUserGetResponseData wechatPagesCsgroupUserGet(
-      Long accountId, String corpId, Long departmentId, List<String> fields, String... headerPair)
+      Long accountId, String corpId, Long departmentId, List<String> fields, Pair... headerPair)
       throws ApiException, TencentAdsResponseException {
     WechatPagesCsgroupUserGetResponse resp =
         api.wechatPagesCsgroupUserGet(accountId, corpId, departmentId, fields, headerPair);

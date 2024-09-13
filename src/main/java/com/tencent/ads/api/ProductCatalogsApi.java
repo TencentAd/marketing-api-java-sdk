@@ -63,7 +63,7 @@ public class ProductCatalogsApi {
       ProductCatalogsAddRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     Object localVarPostBody = data;
@@ -87,11 +87,8 @@ public class ProductCatalogsApi {
     localVarHeaderParams.put("Content-Type", localVarContentType);
 
     if (headerPair != null && headerPair.length > 0) {
-      if (headerPair.length % 2 != 0) {
-        throw new UnsupportedOperationException("Parameter headerPair must be paired");
-      }
-      for (int i = 0; i < headerPair.length / 2; i++) {
-        localVarHeaderParams.put(headerPair[i], headerPair[i * 2 + 1]);
+      for (int i = 0; i < headerPair.length; i++) {
+        localVarHeaderParams.put(headerPair[i].getName(), headerPair[i].getValue());
       }
     }
 
@@ -131,7 +128,7 @@ public class ProductCatalogsApi {
       ProductCatalogsAddRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     // verify the required parameter 'data' is set
@@ -154,7 +151,7 @@ public class ProductCatalogsApi {
    *     response body
    */
   public ProductCatalogsAddResponse productCatalogsAdd(
-      ProductCatalogsAddRequest data, String... headerPair) throws ApiException {
+      ProductCatalogsAddRequest data, Pair... headerPair) throws ApiException {
     ApiResponse<ProductCatalogsAddResponse> resp = productCatalogsAddWithHttpInfo(data, headerPair);
     return resp.getData();
   }
@@ -168,7 +165,7 @@ public class ProductCatalogsApi {
    *     response body
    */
   public ApiResponse<ProductCatalogsAddResponse> productCatalogsAddWithHttpInfo(
-      ProductCatalogsAddRequest data, String... headerPair) throws ApiException {
+      ProductCatalogsAddRequest data, Pair... headerPair) throws ApiException {
     com.squareup.okhttp.Call call =
         productCatalogsAddValidateBeforeCall(data, null, null, headerPair);
     Type localVarReturnType = new TypeToken<ProductCatalogsAddResponse>() {}.getType();
@@ -186,7 +183,7 @@ public class ProductCatalogsApi {
   public com.squareup.okhttp.Call productCatalogsAddAsync(
       ProductCatalogsAddRequest data,
       final ApiCallback<ProductCatalogsAddResponse> callback,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     ProgressResponseBody.ProgressListener progressListener = null;
@@ -240,7 +237,7 @@ public class ProductCatalogsApi {
       List<String> fields,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     Object localVarPostBody = null;
@@ -275,11 +272,8 @@ public class ProductCatalogsApi {
     localVarHeaderParams.put("Content-Type", localVarContentType);
 
     if (headerPair != null && headerPair.length > 0) {
-      if (headerPair.length % 2 != 0) {
-        throw new UnsupportedOperationException("Parameter headerPair must be paired");
-      }
-      for (int i = 0; i < headerPair.length / 2; i++) {
-        localVarHeaderParams.put(headerPair[i], headerPair[i * 2 + 1]);
+      for (int i = 0; i < headerPair.length; i++) {
+        localVarHeaderParams.put(headerPair[i].getName(), headerPair[i].getValue());
       }
     }
 
@@ -324,7 +318,7 @@ public class ProductCatalogsApi {
       List<String> fields,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     // verify the required parameter 'accountId' is set
@@ -367,7 +361,7 @@ public class ProductCatalogsApi {
       Long page,
       Long pageSize,
       List<String> fields,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
     ApiResponse<ProductCatalogsGetResponse> resp =
         productCatalogsGetWithHttpInfo(
@@ -395,7 +389,7 @@ public class ProductCatalogsApi {
       Long page,
       Long pageSize,
       List<String> fields,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
     com.squareup.okhttp.Call call =
         productCatalogsGetValidateBeforeCall(
@@ -425,7 +419,7 @@ public class ProductCatalogsApi {
       Long pageSize,
       List<String> fields,
       final ApiCallback<ProductCatalogsGetResponse> callback,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     ProgressResponseBody.ProgressListener progressListener = null;

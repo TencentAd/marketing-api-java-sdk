@@ -62,7 +62,7 @@ public class LeadsCallTokenApi {
       LeadsCallTokenGetRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     Object localVarPostBody = data;
@@ -86,11 +86,8 @@ public class LeadsCallTokenApi {
     localVarHeaderParams.put("Content-Type", localVarContentType);
 
     if (headerPair != null && headerPair.length > 0) {
-      if (headerPair.length % 2 != 0) {
-        throw new UnsupportedOperationException("Parameter headerPair must be paired");
-      }
-      for (int i = 0; i < headerPair.length / 2; i++) {
-        localVarHeaderParams.put(headerPair[i], headerPair[i * 2 + 1]);
+      for (int i = 0; i < headerPair.length; i++) {
+        localVarHeaderParams.put(headerPair[i].getName(), headerPair[i].getValue());
       }
     }
 
@@ -130,7 +127,7 @@ public class LeadsCallTokenApi {
       LeadsCallTokenGetRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     // verify the required parameter 'data' is set
@@ -153,7 +150,7 @@ public class LeadsCallTokenApi {
    *     response body
    */
   public LeadsCallTokenGetResponse leadsCallTokenGet(
-      LeadsCallTokenGetRequest data, String... headerPair) throws ApiException {
+      LeadsCallTokenGetRequest data, Pair... headerPair) throws ApiException {
     ApiResponse<LeadsCallTokenGetResponse> resp = leadsCallTokenGetWithHttpInfo(data, headerPair);
     return resp.getData();
   }
@@ -167,7 +164,7 @@ public class LeadsCallTokenApi {
    *     response body
    */
   public ApiResponse<LeadsCallTokenGetResponse> leadsCallTokenGetWithHttpInfo(
-      LeadsCallTokenGetRequest data, String... headerPair) throws ApiException {
+      LeadsCallTokenGetRequest data, Pair... headerPair) throws ApiException {
     com.squareup.okhttp.Call call =
         leadsCallTokenGetValidateBeforeCall(data, null, null, headerPair);
     Type localVarReturnType = new TypeToken<LeadsCallTokenGetResponse>() {}.getType();
@@ -185,7 +182,7 @@ public class LeadsCallTokenApi {
   public com.squareup.okhttp.Call leadsCallTokenGetAsync(
       LeadsCallTokenGetRequest data,
       final ApiCallback<LeadsCallTokenGetResponse> callback,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     ProgressResponseBody.ProgressListener progressListener = null;

@@ -35,6 +35,24 @@ public class ReviewResultListStruct {
   @SerializedName("reject_message_list")
   private List<String> rejectMessageList = null;
 
+  @SerializedName("delay_message_list")
+  private List<String> delayMessageList = null;
+
+  @SerializedName("is_all_component_compose_pending")
+  private Boolean isAllComponentComposePending = null;
+
+  @SerializedName("total_component_compose_count")
+  private Long totalComponentComposeCount = null;
+
+  @SerializedName("reject_component_compose_count")
+  private Long rejectComponentComposeCount = null;
+
+  @SerializedName("pass_component_compose_count")
+  private Long passComponentComposeCount = null;
+
+  @SerializedName("reject_component_compose_info_list")
+  private List<RejectComponentComposeInfoStruct> rejectComponentComposeInfoList = null;
+
   public ReviewResultListStruct dynamicCreativeId(Long dynamicCreativeId) {
     this.dynamicCreativeId = dynamicCreativeId;
     return this;
@@ -137,6 +155,139 @@ public class ReviewResultListStruct {
     this.rejectMessageList = rejectMessageList;
   }
 
+  public ReviewResultListStruct delayMessageList(List<String> delayMessageList) {
+    this.delayMessageList = delayMessageList;
+    return this;
+  }
+
+  public ReviewResultListStruct addDelayMessageListItem(String delayMessageListItem) {
+    if (this.delayMessageList == null) {
+      this.delayMessageList = new ArrayList<String>();
+    }
+    this.delayMessageList.add(delayMessageListItem);
+    return this;
+  }
+
+  /**
+   * Get delayMessageList
+   *
+   * @return delayMessageList
+   */
+  @ApiModelProperty(value = "")
+  public List<String> getDelayMessageList() {
+    return delayMessageList;
+  }
+
+  public void setDelayMessageList(List<String> delayMessageList) {
+    this.delayMessageList = delayMessageList;
+  }
+
+  public ReviewResultListStruct isAllComponentComposePending(Boolean isAllComponentComposePending) {
+    this.isAllComponentComposePending = isAllComponentComposePending;
+    return this;
+  }
+
+  /**
+   * Get isAllComponentComposePending
+   *
+   * @return isAllComponentComposePending
+   */
+  @ApiModelProperty(value = "")
+  public Boolean isIsAllComponentComposePending() {
+    return isAllComponentComposePending;
+  }
+
+  public void setIsAllComponentComposePending(Boolean isAllComponentComposePending) {
+    this.isAllComponentComposePending = isAllComponentComposePending;
+  }
+
+  public ReviewResultListStruct totalComponentComposeCount(Long totalComponentComposeCount) {
+    this.totalComponentComposeCount = totalComponentComposeCount;
+    return this;
+  }
+
+  /**
+   * Get totalComponentComposeCount
+   *
+   * @return totalComponentComposeCount
+   */
+  @ApiModelProperty(value = "")
+  public Long getTotalComponentComposeCount() {
+    return totalComponentComposeCount;
+  }
+
+  public void setTotalComponentComposeCount(Long totalComponentComposeCount) {
+    this.totalComponentComposeCount = totalComponentComposeCount;
+  }
+
+  public ReviewResultListStruct rejectComponentComposeCount(Long rejectComponentComposeCount) {
+    this.rejectComponentComposeCount = rejectComponentComposeCount;
+    return this;
+  }
+
+  /**
+   * Get rejectComponentComposeCount
+   *
+   * @return rejectComponentComposeCount
+   */
+  @ApiModelProperty(value = "")
+  public Long getRejectComponentComposeCount() {
+    return rejectComponentComposeCount;
+  }
+
+  public void setRejectComponentComposeCount(Long rejectComponentComposeCount) {
+    this.rejectComponentComposeCount = rejectComponentComposeCount;
+  }
+
+  public ReviewResultListStruct passComponentComposeCount(Long passComponentComposeCount) {
+    this.passComponentComposeCount = passComponentComposeCount;
+    return this;
+  }
+
+  /**
+   * Get passComponentComposeCount
+   *
+   * @return passComponentComposeCount
+   */
+  @ApiModelProperty(value = "")
+  public Long getPassComponentComposeCount() {
+    return passComponentComposeCount;
+  }
+
+  public void setPassComponentComposeCount(Long passComponentComposeCount) {
+    this.passComponentComposeCount = passComponentComposeCount;
+  }
+
+  public ReviewResultListStruct rejectComponentComposeInfoList(
+      List<RejectComponentComposeInfoStruct> rejectComponentComposeInfoList) {
+    this.rejectComponentComposeInfoList = rejectComponentComposeInfoList;
+    return this;
+  }
+
+  public ReviewResultListStruct addRejectComponentComposeInfoListItem(
+      RejectComponentComposeInfoStruct rejectComponentComposeInfoListItem) {
+    if (this.rejectComponentComposeInfoList == null) {
+      this.rejectComponentComposeInfoList = new ArrayList<RejectComponentComposeInfoStruct>();
+    }
+    this.rejectComponentComposeInfoList.add(rejectComponentComposeInfoListItem);
+    return this;
+  }
+
+  /**
+   * Get rejectComponentComposeInfoList
+   *
+   * @return rejectComponentComposeInfoList
+   */
+  @ApiModelProperty(value = "")
+  public List<RejectComponentComposeInfoStruct> getRejectComponentComposeInfoList() {
+    return rejectComponentComposeInfoList;
+  }
+
+  public void setRejectComponentComposeInfoList(
+      List<RejectComponentComposeInfoStruct> rejectComponentComposeInfoList) {
+    this.rejectComponentComposeInfoList = rejectComponentComposeInfoList;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -149,12 +300,34 @@ public class ReviewResultListStruct {
     return Objects.equals(this.dynamicCreativeId, reviewResultListStruct.dynamicCreativeId)
         && Objects.equals(this.elementResultList, reviewResultListStruct.elementResultList)
         && Objects.equals(this.siteSetResultList, reviewResultListStruct.siteSetResultList)
-        && Objects.equals(this.rejectMessageList, reviewResultListStruct.rejectMessageList);
+        && Objects.equals(this.rejectMessageList, reviewResultListStruct.rejectMessageList)
+        && Objects.equals(this.delayMessageList, reviewResultListStruct.delayMessageList)
+        && Objects.equals(
+            this.isAllComponentComposePending, reviewResultListStruct.isAllComponentComposePending)
+        && Objects.equals(
+            this.totalComponentComposeCount, reviewResultListStruct.totalComponentComposeCount)
+        && Objects.equals(
+            this.rejectComponentComposeCount, reviewResultListStruct.rejectComponentComposeCount)
+        && Objects.equals(
+            this.passComponentComposeCount, reviewResultListStruct.passComponentComposeCount)
+        && Objects.equals(
+            this.rejectComponentComposeInfoList,
+            reviewResultListStruct.rejectComponentComposeInfoList);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(dynamicCreativeId, elementResultList, siteSetResultList, rejectMessageList);
+    return Objects.hash(
+        dynamicCreativeId,
+        elementResultList,
+        siteSetResultList,
+        rejectMessageList,
+        delayMessageList,
+        isAllComponentComposePending,
+        totalComponentComposeCount,
+        rejectComponentComposeCount,
+        passComponentComposeCount,
+        rejectComponentComposeInfoList);
   }
 
   @Override

@@ -62,7 +62,7 @@ public class MaterialDcasetApi {
       MaterialDcasetAddRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     Object localVarPostBody = data;
@@ -86,11 +86,8 @@ public class MaterialDcasetApi {
     localVarHeaderParams.put("Content-Type", localVarContentType);
 
     if (headerPair != null && headerPair.length > 0) {
-      if (headerPair.length % 2 != 0) {
-        throw new UnsupportedOperationException("Parameter headerPair must be paired");
-      }
-      for (int i = 0; i < headerPair.length / 2; i++) {
-        localVarHeaderParams.put(headerPair[i], headerPair[i * 2 + 1]);
+      for (int i = 0; i < headerPair.length; i++) {
+        localVarHeaderParams.put(headerPair[i].getName(), headerPair[i].getValue());
       }
     }
 
@@ -130,7 +127,7 @@ public class MaterialDcasetApi {
       MaterialDcasetAddRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     // verify the required parameter 'data' is set
@@ -153,7 +150,7 @@ public class MaterialDcasetApi {
    *     response body
    */
   public MaterialDcasetAddResponse materialDcasetAdd(
-      MaterialDcasetAddRequest data, String... headerPair) throws ApiException {
+      MaterialDcasetAddRequest data, Pair... headerPair) throws ApiException {
     ApiResponse<MaterialDcasetAddResponse> resp = materialDcasetAddWithHttpInfo(data, headerPair);
     return resp.getData();
   }
@@ -167,7 +164,7 @@ public class MaterialDcasetApi {
    *     response body
    */
   public ApiResponse<MaterialDcasetAddResponse> materialDcasetAddWithHttpInfo(
-      MaterialDcasetAddRequest data, String... headerPair) throws ApiException {
+      MaterialDcasetAddRequest data, Pair... headerPair) throws ApiException {
     com.squareup.okhttp.Call call =
         materialDcasetAddValidateBeforeCall(data, null, null, headerPair);
     Type localVarReturnType = new TypeToken<MaterialDcasetAddResponse>() {}.getType();
@@ -185,7 +182,7 @@ public class MaterialDcasetApi {
   public com.squareup.okhttp.Call materialDcasetAddAsync(
       MaterialDcasetAddRequest data,
       final ApiCallback<MaterialDcasetAddResponse> callback,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     ProgressResponseBody.ProgressListener progressListener = null;

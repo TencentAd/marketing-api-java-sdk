@@ -15,6 +15,7 @@ package com.tencent.ads.container;
 import com.google.inject.Inject;
 import com.tencent.ads.ApiContainer;
 import com.tencent.ads.ApiException;
+import com.tencent.ads.Pair;
 import com.tencent.ads.anno.*;
 import com.tencent.ads.api.BidwordApi;
 import com.tencent.ads.exception.TencentAdsResponseException;
@@ -43,7 +44,7 @@ public class BidwordApiContainer extends ApiContainer {
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
-  public BidwordAddResponseData bidwordAdd(BidwordAddRequest data, String... headerPair)
+  public BidwordAddResponseData bidwordAdd(BidwordAddRequest data, Pair... headerPair)
       throws ApiException, TencentAdsResponseException {
     BidwordAddResponse resp = api.bidwordAdd(data, headerPair);
     handleResponse(gson.toJson(resp));
@@ -58,7 +59,7 @@ public class BidwordApiContainer extends ApiContainer {
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
-  public BidwordDeleteResponseData bidwordDelete(BidwordDeleteRequest data, String... headerPair)
+  public BidwordDeleteResponseData bidwordDelete(BidwordDeleteRequest data, Pair... headerPair)
       throws ApiException, TencentAdsResponseException {
     BidwordDeleteResponse resp = api.bidwordDelete(data, headerPair);
     handleResponse(gson.toJson(resp));
@@ -73,7 +74,7 @@ public class BidwordApiContainer extends ApiContainer {
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
-  public BidwordGetResponseData bidwordGet(BidwordGetRequest data, String... headerPair)
+  public BidwordGetResponseData bidwordGet(BidwordGetRequest data, Pair... headerPair)
       throws ApiException, TencentAdsResponseException {
     BidwordGetResponse resp = api.bidwordGet(data, headerPair);
     handleResponse(gson.toJson(resp));
@@ -88,7 +89,7 @@ public class BidwordApiContainer extends ApiContainer {
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
-  public BidwordUpdateResponseData bidwordUpdate(BidwordUpdateRequest data, String... headerPair)
+  public BidwordUpdateResponseData bidwordUpdate(BidwordUpdateRequest data, Pair... headerPair)
       throws ApiException, TencentAdsResponseException {
     BidwordUpdateResponse resp = api.bidwordUpdate(data, headerPair);
     handleResponse(gson.toJson(resp));

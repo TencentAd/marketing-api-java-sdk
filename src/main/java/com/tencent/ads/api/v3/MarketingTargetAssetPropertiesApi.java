@@ -69,7 +69,7 @@ public class MarketingTargetAssetPropertiesApi {
       List<String> fields,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     Object localVarPostBody = null;
@@ -106,11 +106,8 @@ public class MarketingTargetAssetPropertiesApi {
     localVarHeaderParams.put("Content-Type", localVarContentType);
 
     if (headerPair != null && headerPair.length > 0) {
-      if (headerPair.length % 2 != 0) {
-        throw new UnsupportedOperationException("Parameter headerPair must be paired");
-      }
-      for (int i = 0; i < headerPair.length / 2; i++) {
-        localVarHeaderParams.put(headerPair[i], headerPair[i * 2 + 1]);
+      for (int i = 0; i < headerPair.length; i++) {
+        localVarHeaderParams.put(headerPair[i].getName(), headerPair[i].getValue());
       }
     }
 
@@ -154,7 +151,7 @@ public class MarketingTargetAssetPropertiesApi {
       List<String> fields,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     // verify the required parameter 'organizationId' is set
@@ -200,7 +197,7 @@ public class MarketingTargetAssetPropertiesApi {
       String marketingAssetType,
       String marketingAssetCategory,
       List<String> fields,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
     ApiResponse<MarketingTargetAssetPropertiesGetResponse> resp =
         marketingTargetAssetPropertiesGetWithHttpInfo(
@@ -232,7 +229,7 @@ public class MarketingTargetAssetPropertiesApi {
           String marketingAssetType,
           String marketingAssetCategory,
           List<String> fields,
-          String... headerPair)
+          Pair... headerPair)
           throws ApiException {
     com.squareup.okhttp.Call call =
         marketingTargetAssetPropertiesGetValidateBeforeCall(
@@ -268,7 +265,7 @@ public class MarketingTargetAssetPropertiesApi {
       String marketingAssetCategory,
       List<String> fields,
       final ApiCallback<MarketingTargetAssetPropertiesGetResponse> callback,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     ProgressResponseBody.ProgressListener progressListener = null;

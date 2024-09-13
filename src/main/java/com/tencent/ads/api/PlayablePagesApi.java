@@ -68,7 +68,7 @@ public class PlayablePagesApi {
       File materialFile,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     Object localVarPostBody = null;
@@ -95,11 +95,8 @@ public class PlayablePagesApi {
     localVarHeaderParams.put("Content-Type", localVarContentType);
 
     if (headerPair != null && headerPair.length > 0) {
-      if (headerPair.length % 2 != 0) {
-        throw new UnsupportedOperationException("Parameter headerPair must be paired");
-      }
-      for (int i = 0; i < headerPair.length / 2; i++) {
-        localVarHeaderParams.put(headerPair[i], headerPair[i * 2 + 1]);
+      for (int i = 0; i < headerPair.length; i++) {
+        localVarHeaderParams.put(headerPair[i].getName(), headerPair[i].getValue());
       }
     }
 
@@ -141,7 +138,7 @@ public class PlayablePagesApi {
       File materialFile,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     // verify the required parameter 'accountId' is set
@@ -184,7 +181,7 @@ public class PlayablePagesApi {
    *     response body
    */
   public PlayablePagesAddResponse playablePagesAdd(
-      Long accountId, String playablePageName, File materialFile, String... headerPair)
+      Long accountId, String playablePageName, File materialFile, Pair... headerPair)
       throws ApiException {
     ApiResponse<PlayablePagesAddResponse> resp =
         playablePagesAddWithHttpInfo(accountId, playablePageName, materialFile, headerPair);
@@ -202,7 +199,7 @@ public class PlayablePagesApi {
    *     response body
    */
   public ApiResponse<PlayablePagesAddResponse> playablePagesAddWithHttpInfo(
-      Long accountId, String playablePageName, File materialFile, String... headerPair)
+      Long accountId, String playablePageName, File materialFile, Pair... headerPair)
       throws ApiException {
     com.squareup.okhttp.Call call =
         playablePagesAddValidateBeforeCall(
@@ -226,7 +223,7 @@ public class PlayablePagesApi {
       String playablePageName,
       File materialFile,
       final ApiCallback<PlayablePagesAddResponse> callback,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     ProgressResponseBody.ProgressListener progressListener = null;
@@ -283,7 +280,7 @@ public class PlayablePagesApi {
       List<String> fields,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     Object localVarPostBody = null;
@@ -317,11 +314,8 @@ public class PlayablePagesApi {
     localVarHeaderParams.put("Content-Type", localVarContentType);
 
     if (headerPair != null && headerPair.length > 0) {
-      if (headerPair.length % 2 != 0) {
-        throw new UnsupportedOperationException("Parameter headerPair must be paired");
-      }
-      for (int i = 0; i < headerPair.length / 2; i++) {
-        localVarHeaderParams.put(headerPair[i], headerPair[i * 2 + 1]);
+      for (int i = 0; i < headerPair.length; i++) {
+        localVarHeaderParams.put(headerPair[i].getName(), headerPair[i].getValue());
       }
     }
 
@@ -365,7 +359,7 @@ public class PlayablePagesApi {
       List<String> fields,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     // verify the required parameter 'accountId' is set
@@ -405,7 +399,7 @@ public class PlayablePagesApi {
       Long page,
       Long pageSize,
       List<String> fields,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
     ApiResponse<PlayablePagesGetResponse> resp =
         playablePagesGetWithHttpInfo(accountId, filtering, page, pageSize, fields, headerPair);
@@ -430,7 +424,7 @@ public class PlayablePagesApi {
       Long page,
       Long pageSize,
       List<String> fields,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
     com.squareup.okhttp.Call call =
         playablePagesGetValidateBeforeCall(
@@ -458,7 +452,7 @@ public class PlayablePagesApi {
       Long pageSize,
       List<String> fields,
       final ApiCallback<PlayablePagesGetResponse> callback,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     ProgressResponseBody.ProgressListener progressListener = null;

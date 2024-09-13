@@ -15,6 +15,7 @@ package com.tencent.ads.container;
 import com.google.inject.Inject;
 import com.tencent.ads.ApiContainer;
 import com.tencent.ads.ApiException;
+import com.tencent.ads.Pair;
 import com.tencent.ads.anno.*;
 import com.tencent.ads.api.FundTransferApi;
 import com.tencent.ads.exception.TencentAdsResponseException;
@@ -35,7 +36,7 @@ public class FundTransferApiContainer extends ApiContainer {
    *     response body
    */
   public FundTransferAddResponseData fundTransferAdd(
-      FundTransferAddRequest data, String... headerPair)
+      FundTransferAddRequest data, Pair... headerPair)
       throws ApiException, TencentAdsResponseException {
     FundTransferAddResponse resp = api.fundTransferAdd(data, headerPair);
     handleResponse(gson.toJson(resp));

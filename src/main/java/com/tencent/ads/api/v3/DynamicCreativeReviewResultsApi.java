@@ -65,7 +65,7 @@ public class DynamicCreativeReviewResultsApi {
       List<String> fields,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     Object localVarPostBody = null;
@@ -96,11 +96,8 @@ public class DynamicCreativeReviewResultsApi {
     localVarHeaderParams.put("Content-Type", localVarContentType);
 
     if (headerPair != null && headerPair.length > 0) {
-      if (headerPair.length % 2 != 0) {
-        throw new UnsupportedOperationException("Parameter headerPair must be paired");
-      }
-      for (int i = 0; i < headerPair.length / 2; i++) {
-        localVarHeaderParams.put(headerPair[i], headerPair[i * 2 + 1]);
+      for (int i = 0; i < headerPair.length; i++) {
+        localVarHeaderParams.put(headerPair[i].getName(), headerPair[i].getValue());
       }
     }
 
@@ -142,7 +139,7 @@ public class DynamicCreativeReviewResultsApi {
       List<String> fields,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     // verify the required parameter 'accountId' is set
@@ -179,7 +176,7 @@ public class DynamicCreativeReviewResultsApi {
    *     response body
    */
   public DynamicCreativeReviewResultsGetResponse dynamicCreativeReviewResultsGet(
-      Long accountId, List<Long> dynamicCreativeIdList, List<String> fields, String... headerPair)
+      Long accountId, List<Long> dynamicCreativeIdList, List<String> fields, Pair... headerPair)
       throws ApiException {
     ApiResponse<DynamicCreativeReviewResultsGetResponse> resp =
         dynamicCreativeReviewResultsGetWithHttpInfo(
@@ -199,10 +196,7 @@ public class DynamicCreativeReviewResultsApi {
    */
   public ApiResponse<DynamicCreativeReviewResultsGetResponse>
       dynamicCreativeReviewResultsGetWithHttpInfo(
-          Long accountId,
-          List<Long> dynamicCreativeIdList,
-          List<String> fields,
-          String... headerPair)
+          Long accountId, List<Long> dynamicCreativeIdList, List<String> fields, Pair... headerPair)
           throws ApiException {
     com.squareup.okhttp.Call call =
         dynamicCreativeReviewResultsGetValidateBeforeCall(
@@ -226,7 +220,7 @@ public class DynamicCreativeReviewResultsApi {
       List<Long> dynamicCreativeIdList,
       List<String> fields,
       final ApiCallback<DynamicCreativeReviewResultsGetResponse> callback,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     ProgressResponseBody.ProgressListener progressListener = null;

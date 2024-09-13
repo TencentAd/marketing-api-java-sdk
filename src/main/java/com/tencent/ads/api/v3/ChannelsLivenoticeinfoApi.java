@@ -54,6 +54,7 @@ public class ChannelsLivenoticeinfoApi {
    * @param accountId (required)
    * @param finderUsername (optional)
    * @param nickname (optional)
+   * @param wechatChannelsAccountId (optional)
    * @param fields 返回参数的字段列表 (optional)
    * @param progressListener Progress listener
    * @param progressRequestListener Progress request listener
@@ -64,10 +65,11 @@ public class ChannelsLivenoticeinfoApi {
       Long accountId,
       String finderUsername,
       String nickname,
+      String wechatChannelsAccountId,
       List<String> fields,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     Object localVarPostBody = null;
@@ -83,6 +85,9 @@ public class ChannelsLivenoticeinfoApi {
       localVarQueryParams.addAll(apiClient.parameterToPair("finder_username", finderUsername));
     if (nickname != null)
       localVarQueryParams.addAll(apiClient.parameterToPair("nickname", nickname));
+    if (wechatChannelsAccountId != null)
+      localVarQueryParams.addAll(
+          apiClient.parameterToPair("wechat_channels_account_id", wechatChannelsAccountId));
     if (fields != null)
       localVarCollectionQueryParams.addAll(apiClient.parameterToPairs("multi", "fields", fields));
 
@@ -99,11 +104,8 @@ public class ChannelsLivenoticeinfoApi {
     localVarHeaderParams.put("Content-Type", localVarContentType);
 
     if (headerPair != null && headerPair.length > 0) {
-      if (headerPair.length % 2 != 0) {
-        throw new UnsupportedOperationException("Parameter headerPair must be paired");
-      }
-      for (int i = 0; i < headerPair.length / 2; i++) {
-        localVarHeaderParams.put(headerPair[i], headerPair[i * 2 + 1]);
+      for (int i = 0; i < headerPair.length; i++) {
+        localVarHeaderParams.put(headerPair[i].getName(), headerPair[i].getValue());
       }
     }
 
@@ -143,10 +145,11 @@ public class ChannelsLivenoticeinfoApi {
       Long accountId,
       String finderUsername,
       String nickname,
+      String wechatChannelsAccountId,
       List<String> fields,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     // verify the required parameter 'accountId' is set
@@ -160,6 +163,7 @@ public class ChannelsLivenoticeinfoApi {
             accountId,
             finderUsername,
             nickname,
+            wechatChannelsAccountId,
             fields,
             progressListener,
             progressRequestListener,
@@ -173,6 +177,7 @@ public class ChannelsLivenoticeinfoApi {
    * @param accountId (required)
    * @param finderUsername (optional)
    * @param nickname (optional)
+   * @param wechatChannelsAccountId (optional)
    * @param fields 返回参数的字段列表 (optional)
    * @return ChannelsLivenoticeinfoGetResponse
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
@@ -182,12 +187,13 @@ public class ChannelsLivenoticeinfoApi {
       Long accountId,
       String finderUsername,
       String nickname,
+      String wechatChannelsAccountId,
       List<String> fields,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
     ApiResponse<ChannelsLivenoticeinfoGetResponse> resp =
         channelsLivenoticeinfoGetWithHttpInfo(
-            accountId, finderUsername, nickname, fields, headerPair);
+            accountId, finderUsername, nickname, wechatChannelsAccountId, fields, headerPair);
     return resp.getData();
   }
 
@@ -197,6 +203,7 @@ public class ChannelsLivenoticeinfoApi {
    * @param accountId (required)
    * @param finderUsername (optional)
    * @param nickname (optional)
+   * @param wechatChannelsAccountId (optional)
    * @param fields 返回参数的字段列表 (optional)
    * @return ApiResponse&lt;ChannelsLivenoticeinfoGetResponse&gt;
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
@@ -206,12 +213,20 @@ public class ChannelsLivenoticeinfoApi {
       Long accountId,
       String finderUsername,
       String nickname,
+      String wechatChannelsAccountId,
       List<String> fields,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
     com.squareup.okhttp.Call call =
         channelsLivenoticeinfoGetValidateBeforeCall(
-            accountId, finderUsername, nickname, fields, null, null, headerPair);
+            accountId,
+            finderUsername,
+            nickname,
+            wechatChannelsAccountId,
+            fields,
+            null,
+            null,
+            headerPair);
     Type localVarReturnType = new TypeToken<ChannelsLivenoticeinfoGetResponse>() {}.getType();
     return apiClient.execute(call, localVarReturnType);
   }
@@ -222,6 +237,7 @@ public class ChannelsLivenoticeinfoApi {
    * @param accountId (required)
    * @param finderUsername (optional)
    * @param nickname (optional)
+   * @param wechatChannelsAccountId (optional)
    * @param fields 返回参数的字段列表 (optional)
    * @param callback The callback to be executed when the API call finishes
    * @return The request call
@@ -231,9 +247,10 @@ public class ChannelsLivenoticeinfoApi {
       Long accountId,
       String finderUsername,
       String nickname,
+      String wechatChannelsAccountId,
       List<String> fields,
       final ApiCallback<ChannelsLivenoticeinfoGetResponse> callback,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     ProgressResponseBody.ProgressListener progressListener = null;
@@ -262,6 +279,7 @@ public class ChannelsLivenoticeinfoApi {
             accountId,
             finderUsername,
             nickname,
+            wechatChannelsAccountId,
             fields,
             progressListener,
             progressRequestListener,

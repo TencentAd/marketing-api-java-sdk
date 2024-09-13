@@ -15,6 +15,7 @@ package com.tencent.ads.container.v3;
 import com.google.inject.Inject;
 import com.tencent.ads.ApiContainer;
 import com.tencent.ads.ApiException;
+import com.tencent.ads.Pair;
 import com.tencent.ads.anno.*;
 import com.tencent.ads.api.v3.ConversionLinkAssetsApi;
 import com.tencent.ads.exception.TencentAdsResponseException;
@@ -42,7 +43,7 @@ public class ConversionLinkAssetsApiContainer extends ApiContainer {
    *     response body
    */
   public ConversionLinkAssetsAddResponseData conversionLinkAssetsAdd(
-      ConversionLinkAssetsAddRequest data, String... headerPair)
+      ConversionLinkAssetsAddRequest data, Pair... headerPair)
       throws ApiException, TencentAdsResponseException {
     ConversionLinkAssetsAddResponse resp = api.conversionLinkAssetsAdd(data, headerPair);
     handleResponse(gson.toJson(resp));
@@ -69,7 +70,7 @@ public class ConversionLinkAssetsApiContainer extends ApiContainer {
       Long pageSize,
       String key,
       List<String> fields,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException, TencentAdsResponseException {
     ConversionLinkAssetsGetResponse resp =
         api.conversionLinkAssetsGet(accountId, filtering, page, pageSize, key, fields, headerPair);
@@ -86,7 +87,7 @@ public class ConversionLinkAssetsApiContainer extends ApiContainer {
    *     response body
    */
   public ConversionLinkAssetsUpdateResponseData conversionLinkAssetsUpdate(
-      ConversionLinkAssetsUpdateRequest data, String... headerPair)
+      ConversionLinkAssetsUpdateRequest data, Pair... headerPair)
       throws ApiException, TencentAdsResponseException {
     ConversionLinkAssetsUpdateResponse resp = api.conversionLinkAssetsUpdate(data, headerPair);
     handleResponse(gson.toJson(resp));

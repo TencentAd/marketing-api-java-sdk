@@ -15,6 +15,7 @@ package com.tencent.ads.container.v3;
 import com.google.inject.Inject;
 import com.tencent.ads.ApiContainer;
 import com.tencent.ads.ApiException;
+import com.tencent.ads.Pair;
 import com.tencent.ads.anno.*;
 import com.tencent.ads.api.v3.ChannelsUserpageobjectsApi;
 import com.tencent.ads.exception.TencentAdsResponseException;
@@ -34,6 +35,7 @@ public class ChannelsUserpageobjectsApiContainer extends ApiContainer {
    * @param nickname (optional)
    * @param lastBuffer (optional)
    * @param count (optional)
+   * @param wechatChannelsAccountId (optional)
    * @param fields 返回参数的字段列表 (optional)
    * @return ChannelsUserpageobjectsGetResponse
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
@@ -45,12 +47,20 @@ public class ChannelsUserpageobjectsApiContainer extends ApiContainer {
       String nickname,
       String lastBuffer,
       Long count,
+      String wechatChannelsAccountId,
       List<String> fields,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException, TencentAdsResponseException {
     ChannelsUserpageobjectsGetResponse resp =
         api.channelsUserpageobjectsGet(
-            accountId, finderUsername, nickname, lastBuffer, count, fields, headerPair);
+            accountId,
+            finderUsername,
+            nickname,
+            lastBuffer,
+            count,
+            wechatChannelsAccountId,
+            fields,
+            headerPair);
     handleResponse(gson.toJson(resp));
     return resp.getData();
   }

@@ -15,6 +15,7 @@ package com.tencent.ads.container.v3;
 import com.google.inject.Inject;
 import com.tencent.ads.ApiContainer;
 import com.tencent.ads.ApiException;
+import com.tencent.ads.Pair;
 import com.tencent.ads.anno.*;
 import com.tencent.ads.api.v3.CreativeTemplateApi;
 import com.tencent.ads.exception.TencentAdsResponseException;
@@ -39,7 +40,6 @@ public class CreativeTemplateApiContainer extends ApiContainer {
    * @param siteSet (optional)
    * @param dynamicCreativeType (optional)
    * @param creativeTemplateId (optional)
-   * @param conversionLinkAssetId (optional)
    * @param fields 返回参数的字段列表 (optional)
    * @return CreativeTemplateGetResponse
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
@@ -56,9 +56,8 @@ public class CreativeTemplateApiContainer extends ApiContainer {
       List<String> siteSet,
       String dynamicCreativeType,
       Long creativeTemplateId,
-      Long conversionLinkAssetId,
       List<String> fields,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException, TencentAdsResponseException {
     CreativeTemplateGetResponse resp =
         api.creativeTemplateGet(
@@ -72,7 +71,6 @@ public class CreativeTemplateApiContainer extends ApiContainer {
             siteSet,
             dynamicCreativeType,
             creativeTemplateId,
-            conversionLinkAssetId,
             fields,
             headerPair);
     handleResponse(gson.toJson(resp));

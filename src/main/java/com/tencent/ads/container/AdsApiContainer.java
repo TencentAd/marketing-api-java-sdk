@@ -15,6 +15,7 @@ package com.tencent.ads.container;
 import com.google.inject.Inject;
 import com.tencent.ads.ApiContainer;
 import com.tencent.ads.ApiException;
+import com.tencent.ads.Pair;
 import com.tencent.ads.anno.*;
 import com.tencent.ads.api.AdsApi;
 import com.tencent.ads.exception.TencentAdsResponseException;
@@ -47,7 +48,7 @@ public class AdsApiContainer extends ApiContainer {
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
-  public AdsAddResponseData adsAdd(AdsAddRequest data, String... headerPair)
+  public AdsAddResponseData adsAdd(AdsAddRequest data, Pair... headerPair)
       throws ApiException, TencentAdsResponseException {
     AdsAddResponse resp = api.adsAdd(data, headerPair);
     handleResponse(gson.toJson(resp));
@@ -62,7 +63,7 @@ public class AdsApiContainer extends ApiContainer {
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
-  public AdsDeleteResponseData adsDelete(AdsDeleteRequest data, String... headerPair)
+  public AdsDeleteResponseData adsDelete(AdsDeleteRequest data, Pair... headerPair)
       throws ApiException, TencentAdsResponseException {
     AdsDeleteResponse resp = api.adsDelete(data, headerPair);
     handleResponse(gson.toJson(resp));
@@ -91,7 +92,7 @@ public class AdsApiContainer extends ApiContainer {
       Boolean isDeleted,
       Boolean weixinOfficialAccountsUpgradeEnabled,
       List<String> fields,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException, TencentAdsResponseException {
     AdsGetResponse resp =
         api.adsGet(
@@ -115,7 +116,7 @@ public class AdsApiContainer extends ApiContainer {
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
-  public AdsUpdateResponseData adsUpdate(AdsUpdateRequest data, String... headerPair)
+  public AdsUpdateResponseData adsUpdate(AdsUpdateRequest data, Pair... headerPair)
       throws ApiException, TencentAdsResponseException {
     AdsUpdateResponse resp = api.adsUpdate(data, headerPair);
     handleResponse(gson.toJson(resp));
@@ -131,7 +132,7 @@ public class AdsApiContainer extends ApiContainer {
    *     response body
    */
   public AdsUpdateConfiguredStatusResponseData adsUpdateConfiguredStatus(
-      AdsUpdateConfiguredStatusRequest data, String... headerPair)
+      AdsUpdateConfiguredStatusRequest data, Pair... headerPair)
       throws ApiException, TencentAdsResponseException {
     AdsUpdateConfiguredStatusResponse resp = api.adsUpdateConfiguredStatus(data, headerPair);
     handleResponse(gson.toJson(resp));

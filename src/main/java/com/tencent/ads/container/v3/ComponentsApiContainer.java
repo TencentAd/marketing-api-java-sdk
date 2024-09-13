@@ -15,6 +15,7 @@ package com.tencent.ads.container.v3;
 import com.google.inject.Inject;
 import com.tencent.ads.ApiContainer;
 import com.tencent.ads.ApiException;
+import com.tencent.ads.Pair;
 import com.tencent.ads.anno.*;
 import com.tencent.ads.api.v3.ComponentsApi;
 import com.tencent.ads.exception.TencentAdsResponseException;
@@ -41,7 +42,7 @@ public class ComponentsApiContainer extends ApiContainer {
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
-  public ComponentsAddResponseData componentsAdd(ComponentsAddRequest data, String... headerPair)
+  public ComponentsAddResponseData componentsAdd(ComponentsAddRequest data, Pair... headerPair)
       throws ApiException, TencentAdsResponseException {
     ComponentsAddResponse resp = api.componentsAdd(data, headerPair);
     handleResponse(gson.toJson(resp));
@@ -57,7 +58,7 @@ public class ComponentsApiContainer extends ApiContainer {
    *     response body
    */
   public ComponentsDeleteResponseData componentsDelete(
-      ComponentsDeleteRequest data, String... headerPair)
+      ComponentsDeleteRequest data, Pair... headerPair)
       throws ApiException, TencentAdsResponseException {
     ComponentsDeleteResponse resp = api.componentsDelete(data, headerPair);
     handleResponse(gson.toJson(resp));
@@ -84,7 +85,7 @@ public class ComponentsApiContainer extends ApiContainer {
       Long pageSize,
       Boolean isDeleted,
       List<String> fields,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException, TencentAdsResponseException {
     ComponentsGetResponse resp =
         api.componentsGet(accountId, filtering, page, pageSize, isDeleted, fields, headerPair);

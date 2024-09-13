@@ -15,6 +15,7 @@ package com.tencent.ads.container;
 import com.google.inject.Inject;
 import com.tencent.ads.ApiContainer;
 import com.tencent.ads.ApiException;
+import com.tencent.ads.Pair;
 import com.tencent.ads.anno.*;
 import com.tencent.ads.api.EcommerceOrderApi;
 import com.tencent.ads.exception.TencentAdsResponseException;
@@ -50,7 +51,7 @@ public class EcommerceOrderApiContainer extends ApiContainer {
       Long page,
       Long pageSize,
       List<String> fields,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException, TencentAdsResponseException {
     EcommerceOrderGetResponse resp =
         api.ecommerceOrderGet(accountId, dateRange, filtering, page, pageSize, fields, headerPair);
@@ -67,7 +68,7 @@ public class EcommerceOrderApiContainer extends ApiContainer {
    *     response body
    */
   public EcommerceOrderUpdateResponse ecommerceOrderUpdate(
-      EcommerceOrderUpdateRequest data, String... headerPair)
+      EcommerceOrderUpdateRequest data, Pair... headerPair)
       throws ApiException, TencentAdsResponseException {
     EcommerceOrderUpdateResponse resp = api.ecommerceOrderUpdate(data, headerPair);
     handleResponse(gson.toJson(resp));

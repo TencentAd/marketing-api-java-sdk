@@ -15,6 +15,7 @@ package com.tencent.ads.container;
 import com.google.inject.Inject;
 import com.tencent.ads.ApiContainer;
 import com.tencent.ads.ApiException;
+import com.tencent.ads.Pair;
 import com.tencent.ads.anno.*;
 import com.tencent.ads.api.SplitTestsApi;
 import com.tencent.ads.exception.TencentAdsResponseException;
@@ -44,7 +45,7 @@ public class SplitTestsApiContainer extends ApiContainer {
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
-  public SplitTestsAddResponseData splitTestsAdd(SplitTestsAddRequest data, String... headerPair)
+  public SplitTestsAddResponseData splitTestsAdd(SplitTestsAddRequest data, Pair... headerPair)
       throws ApiException, TencentAdsResponseException {
     SplitTestsAddResponse resp = api.splitTestsAdd(data, headerPair);
     handleResponse(gson.toJson(resp));
@@ -60,7 +61,7 @@ public class SplitTestsApiContainer extends ApiContainer {
    *     response body
    */
   public SplitTestsDeleteResponseData splitTestsDelete(
-      SplitTestsDeleteRequest data, String... headerPair)
+      SplitTestsDeleteRequest data, Pair... headerPair)
       throws ApiException, TencentAdsResponseException {
     SplitTestsDeleteResponse resp = api.splitTestsDelete(data, headerPair);
     handleResponse(gson.toJson(resp));
@@ -85,7 +86,7 @@ public class SplitTestsApiContainer extends ApiContainer {
       Long page,
       Long pageSize,
       List<String> fields,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException, TencentAdsResponseException {
     SplitTestsGetResponse resp =
         api.splitTestsGet(accountId, filtering, page, pageSize, fields, headerPair);
@@ -102,7 +103,7 @@ public class SplitTestsApiContainer extends ApiContainer {
    *     response body
    */
   public SplitTestsUpdateResponseData splitTestsUpdate(
-      SplitTestsUpdateRequest data, String... headerPair)
+      SplitTestsUpdateRequest data, Pair... headerPair)
       throws ApiException, TencentAdsResponseException {
     SplitTestsUpdateResponse resp = api.splitTestsUpdate(data, headerPair);
     handleResponse(gson.toJson(resp));

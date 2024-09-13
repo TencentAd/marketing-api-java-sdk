@@ -24,6 +24,9 @@ public class LiveConvComponentSpecStruct {
   @SerializedName("page_id")
   private Long pageId = null;
 
+  @SerializedName("page_type")
+  private PageType pageType = null;
+
   @SerializedName("title")
   private String title = null;
 
@@ -56,6 +59,25 @@ public class LiveConvComponentSpecStruct {
 
   public void setPageId(Long pageId) {
     this.pageId = pageId;
+  }
+
+  public LiveConvComponentSpecStruct pageType(PageType pageType) {
+    this.pageType = pageType;
+    return this;
+  }
+
+  /**
+   * Get pageType
+   *
+   * @return pageType
+   */
+  @ApiModelProperty(value = "")
+  public PageType getPageType() {
+    return pageType;
+  }
+
+  public void setPageType(PageType pageType) {
+    this.pageType = pageType;
   }
 
   public LiveConvComponentSpecStruct title(String title) {
@@ -163,6 +185,7 @@ public class LiveConvComponentSpecStruct {
     }
     LiveConvComponentSpecStruct liveConvComponentSpecStruct = (LiveConvComponentSpecStruct) o;
     return Objects.equals(this.pageId, liveConvComponentSpecStruct.pageId)
+        && Objects.equals(this.pageType, liveConvComponentSpecStruct.pageType)
         && Objects.equals(this.title, liveConvComponentSpecStruct.title)
         && Objects.equals(this.imgUrl, liveConvComponentSpecStruct.imgUrl)
         && Objects.equals(this.imgId, liveConvComponentSpecStruct.imgId)
@@ -172,7 +195,7 @@ public class LiveConvComponentSpecStruct {
 
   @Override
   public int hashCode() {
-    return Objects.hash(pageId, title, imgUrl, imgId, desc, buttonText);
+    return Objects.hash(pageId, pageType, title, imgUrl, imgId, desc, buttonText);
   }
 
   @Override

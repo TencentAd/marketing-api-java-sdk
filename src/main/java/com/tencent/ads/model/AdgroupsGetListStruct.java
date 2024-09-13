@@ -242,6 +242,9 @@ public class AdgroupsGetListStruct {
   @SerializedName("bid_scene")
   private BidScene bidScene = null;
 
+  @SerializedName("search_intelligent_extension")
+  private ModelSwitch searchIntelligentExtension = null;
+
   @SerializedName("forward_link_assist")
   private OptimizationGoal forwardLinkAssist = null;
 
@@ -250,6 +253,9 @@ public class AdgroupsGetListStruct {
 
   @SerializedName("sell_strategy_id")
   private Long sellStrategyId = null;
+
+  @SerializedName("feedback_id")
+  private Long feedbackId = null;
 
   public AdgroupsGetListStruct campaignId(Long campaignId) {
     this.campaignId = campaignId;
@@ -1719,6 +1725,25 @@ public class AdgroupsGetListStruct {
     this.bidScene = bidScene;
   }
 
+  public AdgroupsGetListStruct searchIntelligentExtension(ModelSwitch searchIntelligentExtension) {
+    this.searchIntelligentExtension = searchIntelligentExtension;
+    return this;
+  }
+
+  /**
+   * Get searchIntelligentExtension
+   *
+   * @return searchIntelligentExtension
+   */
+  @ApiModelProperty(value = "")
+  public ModelSwitch getSearchIntelligentExtension() {
+    return searchIntelligentExtension;
+  }
+
+  public void setSearchIntelligentExtension(ModelSwitch searchIntelligentExtension) {
+    this.searchIntelligentExtension = searchIntelligentExtension;
+  }
+
   public AdgroupsGetListStruct forwardLinkAssist(OptimizationGoal forwardLinkAssist) {
     this.forwardLinkAssist = forwardLinkAssist;
     return this;
@@ -1774,6 +1799,25 @@ public class AdgroupsGetListStruct {
 
   public void setSellStrategyId(Long sellStrategyId) {
     this.sellStrategyId = sellStrategyId;
+  }
+
+  public AdgroupsGetListStruct feedbackId(Long feedbackId) {
+    this.feedbackId = feedbackId;
+    return this;
+  }
+
+  /**
+   * Get feedbackId
+   *
+   * @return feedbackId
+   */
+  @ApiModelProperty(value = "")
+  public Long getFeedbackId() {
+    return feedbackId;
+  }
+
+  public void setFeedbackId(Long feedbackId) {
+    this.feedbackId = feedbackId;
   }
 
   @Override
@@ -1875,9 +1919,12 @@ public class AdgroupsGetListStruct {
         && Objects.equals(this.autoAcquisitionStatus, adgroupsGetListStruct.autoAcquisitionStatus)
         && Objects.equals(this.ecomPkamSwitch, adgroupsGetListStruct.ecomPkamSwitch)
         && Objects.equals(this.bidScene, adgroupsGetListStruct.bidScene)
+        && Objects.equals(
+            this.searchIntelligentExtension, adgroupsGetListStruct.searchIntelligentExtension)
         && Objects.equals(this.forwardLinkAssist, adgroupsGetListStruct.forwardLinkAssist)
         && Objects.equals(this.shortPlayPayType, adgroupsGetListStruct.shortPlayPayType)
-        && Objects.equals(this.sellStrategyId, adgroupsGetListStruct.sellStrategyId);
+        && Objects.equals(this.sellStrategyId, adgroupsGetListStruct.sellStrategyId)
+        && Objects.equals(this.feedbackId, adgroupsGetListStruct.feedbackId);
   }
 
   @Override
@@ -1956,9 +2003,11 @@ public class AdgroupsGetListStruct {
         autoAcquisitionStatus,
         ecomPkamSwitch,
         bidScene,
+        searchIntelligentExtension,
         forwardLinkAssist,
         shortPlayPayType,
-        sellStrategyId);
+        sellStrategyId,
+        feedbackId);
   }
 
   @Override

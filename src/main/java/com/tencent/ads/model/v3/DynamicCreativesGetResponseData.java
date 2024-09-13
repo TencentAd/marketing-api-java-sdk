@@ -27,6 +27,9 @@ public class DynamicCreativesGetResponseData {
   @SerializedName("page_info")
   private PageInfo pageInfo = null;
 
+  @SerializedName("cursor_page_info")
+  private CursorPageInfoStruct cursorPageInfo = null;
+
   public DynamicCreativesGetResponseData list(List<DynamicCreativesGetListStruct> list) {
     this.list = list;
     return this;
@@ -73,6 +76,25 @@ public class DynamicCreativesGetResponseData {
     this.pageInfo = pageInfo;
   }
 
+  public DynamicCreativesGetResponseData cursorPageInfo(CursorPageInfoStruct cursorPageInfo) {
+    this.cursorPageInfo = cursorPageInfo;
+    return this;
+  }
+
+  /**
+   * Get cursorPageInfo
+   *
+   * @return cursorPageInfo
+   */
+  @ApiModelProperty(value = "")
+  public CursorPageInfoStruct getCursorPageInfo() {
+    return cursorPageInfo;
+  }
+
+  public void setCursorPageInfo(CursorPageInfoStruct cursorPageInfo) {
+    this.cursorPageInfo = cursorPageInfo;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -84,12 +106,13 @@ public class DynamicCreativesGetResponseData {
     DynamicCreativesGetResponseData dynamicCreativesGetResponseData =
         (DynamicCreativesGetResponseData) o;
     return Objects.equals(this.list, dynamicCreativesGetResponseData.list)
-        && Objects.equals(this.pageInfo, dynamicCreativesGetResponseData.pageInfo);
+        && Objects.equals(this.pageInfo, dynamicCreativesGetResponseData.pageInfo)
+        && Objects.equals(this.cursorPageInfo, dynamicCreativesGetResponseData.cursorPageInfo);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(list, pageInfo);
+    return Objects.hash(list, pageInfo, cursorPageInfo);
   }
 
   @Override

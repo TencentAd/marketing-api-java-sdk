@@ -34,8 +34,6 @@ public class GetCreativeTemplate {
 
   public Long creativeTemplateId = null;
 
-  public Long conversionLinkAssetId = null;
-
   public List<String> fields = null;
 
   public void init() {
@@ -63,7 +61,6 @@ public class GetCreativeTemplate {
                 siteSet,
                 dynamicCreativeType,
                 creativeTemplateId,
-                conversionLinkAssetId,
                 fields);
     return response;
   }

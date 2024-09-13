@@ -76,7 +76,7 @@ public class VideosApi {
       Long adcreativeTemplateId,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     Object localVarPostBody = null;
@@ -106,11 +106,8 @@ public class VideosApi {
     localVarHeaderParams.put("Content-Type", localVarContentType);
 
     if (headerPair != null && headerPair.length > 0) {
-      if (headerPair.length % 2 != 0) {
-        throw new UnsupportedOperationException("Parameter headerPair must be paired");
-      }
-      for (int i = 0; i < headerPair.length / 2; i++) {
-        localVarHeaderParams.put(headerPair[i], headerPair[i * 2 + 1]);
+      for (int i = 0; i < headerPair.length; i++) {
+        localVarHeaderParams.put(headerPair[i].getName(), headerPair[i].getValue());
       }
     }
 
@@ -154,7 +151,7 @@ public class VideosApi {
       Long adcreativeTemplateId,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     // verify the required parameter 'accountId' is set
@@ -206,7 +203,7 @@ public class VideosApi {
       String signature,
       String description,
       Long adcreativeTemplateId,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
     ApiResponse<VideosAddResponse> resp =
         videosAddWithHttpInfo(
@@ -232,7 +229,7 @@ public class VideosApi {
       String signature,
       String description,
       Long adcreativeTemplateId,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
     com.squareup.okhttp.Call call =
         videosAddValidateBeforeCall(
@@ -267,7 +264,7 @@ public class VideosApi {
       String description,
       Long adcreativeTemplateId,
       final ApiCallback<VideosAddResponse> callback,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     ProgressResponseBody.ProgressListener progressListener = null;
@@ -318,7 +315,7 @@ public class VideosApi {
       VideosDeleteRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     Object localVarPostBody = data;
@@ -342,11 +339,8 @@ public class VideosApi {
     localVarHeaderParams.put("Content-Type", localVarContentType);
 
     if (headerPair != null && headerPair.length > 0) {
-      if (headerPair.length % 2 != 0) {
-        throw new UnsupportedOperationException("Parameter headerPair must be paired");
-      }
-      for (int i = 0; i < headerPair.length / 2; i++) {
-        localVarHeaderParams.put(headerPair[i], headerPair[i * 2 + 1]);
+      for (int i = 0; i < headerPair.length; i++) {
+        localVarHeaderParams.put(headerPair[i].getName(), headerPair[i].getValue());
       }
     }
 
@@ -386,7 +380,7 @@ public class VideosApi {
       VideosDeleteRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     // verify the required parameter 'data' is set
@@ -408,7 +402,7 @@ public class VideosApi {
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
-  public VideosDeleteResponse videosDelete(VideosDeleteRequest data, String... headerPair)
+  public VideosDeleteResponse videosDelete(VideosDeleteRequest data, Pair... headerPair)
       throws ApiException {
     ApiResponse<VideosDeleteResponse> resp = videosDeleteWithHttpInfo(data, headerPair);
     return resp.getData();
@@ -423,7 +417,7 @@ public class VideosApi {
    *     response body
    */
   public ApiResponse<VideosDeleteResponse> videosDeleteWithHttpInfo(
-      VideosDeleteRequest data, String... headerPair) throws ApiException {
+      VideosDeleteRequest data, Pair... headerPair) throws ApiException {
     com.squareup.okhttp.Call call = videosDeleteValidateBeforeCall(data, null, null, headerPair);
     Type localVarReturnType = new TypeToken<VideosDeleteResponse>() {}.getType();
     return apiClient.execute(call, localVarReturnType);
@@ -440,7 +434,7 @@ public class VideosApi {
   public com.squareup.okhttp.Call videosDeleteAsync(
       VideosDeleteRequest data,
       final ApiCallback<VideosDeleteResponse> callback,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     ProgressResponseBody.ProgressListener progressListener = null;
@@ -491,7 +485,7 @@ public class VideosApi {
       List<String> fields,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     Object localVarPostBody = null;
@@ -525,11 +519,8 @@ public class VideosApi {
     localVarHeaderParams.put("Content-Type", localVarContentType);
 
     if (headerPair != null && headerPair.length > 0) {
-      if (headerPair.length % 2 != 0) {
-        throw new UnsupportedOperationException("Parameter headerPair must be paired");
-      }
-      for (int i = 0; i < headerPair.length / 2; i++) {
-        localVarHeaderParams.put(headerPair[i], headerPair[i * 2 + 1]);
+      for (int i = 0; i < headerPair.length; i++) {
+        localVarHeaderParams.put(headerPair[i].getName(), headerPair[i].getValue());
       }
     }
 
@@ -573,7 +564,7 @@ public class VideosApi {
       List<String> fields,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     // verify the required parameter 'accountId' is set
@@ -613,7 +604,7 @@ public class VideosApi {
       Long page,
       Long pageSize,
       List<String> fields,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
     ApiResponse<VideosGetResponse> resp =
         videosGetWithHttpInfo(accountId, filtering, page, pageSize, fields, headerPair);
@@ -638,7 +629,7 @@ public class VideosApi {
       Long page,
       Long pageSize,
       List<String> fields,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
     com.squareup.okhttp.Call call =
         videosGetValidateBeforeCall(
@@ -666,7 +657,7 @@ public class VideosApi {
       Long pageSize,
       List<String> fields,
       final ApiCallback<VideosGetResponse> callback,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     ProgressResponseBody.ProgressListener progressListener = null;
@@ -717,7 +708,7 @@ public class VideosApi {
       VideosUpdateRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     Object localVarPostBody = data;
@@ -741,11 +732,8 @@ public class VideosApi {
     localVarHeaderParams.put("Content-Type", localVarContentType);
 
     if (headerPair != null && headerPair.length > 0) {
-      if (headerPair.length % 2 != 0) {
-        throw new UnsupportedOperationException("Parameter headerPair must be paired");
-      }
-      for (int i = 0; i < headerPair.length / 2; i++) {
-        localVarHeaderParams.put(headerPair[i], headerPair[i * 2 + 1]);
+      for (int i = 0; i < headerPair.length; i++) {
+        localVarHeaderParams.put(headerPair[i].getName(), headerPair[i].getValue());
       }
     }
 
@@ -785,7 +773,7 @@ public class VideosApi {
       VideosUpdateRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     // verify the required parameter 'data' is set
@@ -807,7 +795,7 @@ public class VideosApi {
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
-  public VideosUpdateResponse videosUpdate(VideosUpdateRequest data, String... headerPair)
+  public VideosUpdateResponse videosUpdate(VideosUpdateRequest data, Pair... headerPair)
       throws ApiException {
     ApiResponse<VideosUpdateResponse> resp = videosUpdateWithHttpInfo(data, headerPair);
     return resp.getData();
@@ -822,7 +810,7 @@ public class VideosApi {
    *     response body
    */
   public ApiResponse<VideosUpdateResponse> videosUpdateWithHttpInfo(
-      VideosUpdateRequest data, String... headerPair) throws ApiException {
+      VideosUpdateRequest data, Pair... headerPair) throws ApiException {
     com.squareup.okhttp.Call call = videosUpdateValidateBeforeCall(data, null, null, headerPair);
     Type localVarReturnType = new TypeToken<VideosUpdateResponse>() {}.getType();
     return apiClient.execute(call, localVarReturnType);
@@ -839,7 +827,7 @@ public class VideosApi {
   public com.squareup.okhttp.Call videosUpdateAsync(
       VideosUpdateRequest data,
       final ApiCallback<VideosUpdateResponse> callback,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     ProgressResponseBody.ProgressListener progressListener = null;

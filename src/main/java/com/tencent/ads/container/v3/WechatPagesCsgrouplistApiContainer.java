@@ -15,6 +15,7 @@ package com.tencent.ads.container.v3;
 import com.google.inject.Inject;
 import com.tencent.ads.ApiContainer;
 import com.tencent.ads.ApiException;
+import com.tencent.ads.Pair;
 import com.tencent.ads.anno.*;
 import com.tencent.ads.api.v3.WechatPagesCsgrouplistApi;
 import com.tencent.ads.exception.TencentAdsResponseException;
@@ -39,7 +40,7 @@ public class WechatPagesCsgrouplistApiContainer extends ApiContainer {
    *     response body
    */
   public WechatPagesCsgrouplistAddResponse wechatPagesCsgrouplistAdd(
-      WechatPagesCsgrouplistAddRequest data, String... headerPair)
+      WechatPagesCsgrouplistAddRequest data, Pair... headerPair)
       throws ApiException, TencentAdsResponseException {
     WechatPagesCsgrouplistAddResponse resp = api.wechatPagesCsgrouplistAdd(data, headerPair);
     handleResponse(gson.toJson(resp));
@@ -65,7 +66,7 @@ public class WechatPagesCsgrouplistApiContainer extends ApiContainer {
       Long pageSize,
       String corpId,
       List<String> fields,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException, TencentAdsResponseException {
     WechatPagesCsgrouplistGetResponse resp =
         api.wechatPagesCsgrouplistGet(accountId, page, pageSize, corpId, fields, headerPair);
@@ -82,7 +83,7 @@ public class WechatPagesCsgrouplistApiContainer extends ApiContainer {
    *     response body
    */
   public WechatPagesCsgrouplistUpdateResponse wechatPagesCsgrouplistUpdate(
-      WechatPagesCsgrouplistUpdateRequest data, String... headerPair)
+      WechatPagesCsgrouplistUpdateRequest data, Pair... headerPair)
       throws ApiException, TencentAdsResponseException {
     WechatPagesCsgrouplistUpdateResponse resp = api.wechatPagesCsgrouplistUpdate(data, headerPair);
     handleResponse(gson.toJson(resp));

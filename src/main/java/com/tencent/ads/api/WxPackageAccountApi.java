@@ -75,7 +75,7 @@ public class WxPackageAccountApi {
       List<String> fields,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     Object localVarPostBody = null;
@@ -111,11 +111,8 @@ public class WxPackageAccountApi {
     localVarHeaderParams.put("Content-Type", localVarContentType);
 
     if (headerPair != null && headerPair.length > 0) {
-      if (headerPair.length % 2 != 0) {
-        throw new UnsupportedOperationException("Parameter headerPair must be paired");
-      }
-      for (int i = 0; i < headerPair.length / 2; i++) {
-        localVarHeaderParams.put(headerPair[i], headerPair[i * 2 + 1]);
+      for (int i = 0; i < headerPair.length; i++) {
+        localVarHeaderParams.put(headerPair[i].getName(), headerPair[i].getValue());
       }
     }
 
@@ -161,7 +158,7 @@ public class WxPackageAccountApi {
       List<String> fields,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     // verify the required parameter 'accountId' is set
@@ -207,7 +204,7 @@ public class WxPackageAccountApi {
       String endTime,
       String keyword,
       List<String> fields,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
     ApiResponse<WxPackageAccountGetResponse> resp =
         wxPackageAccountGetWithHttpInfo(
@@ -237,7 +234,7 @@ public class WxPackageAccountApi {
       String endTime,
       String keyword,
       List<String> fields,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
     com.squareup.okhttp.Call call =
         wxPackageAccountGetValidateBeforeCall(
@@ -278,7 +275,7 @@ public class WxPackageAccountApi {
       String keyword,
       List<String> fields,
       final ApiCallback<WxPackageAccountGetResponse> callback,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     ProgressResponseBody.ProgressListener progressListener = null;
@@ -339,7 +336,7 @@ public class WxPackageAccountApi {
       Long enableFlag,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     Object localVarPostBody = null;
@@ -368,11 +365,8 @@ public class WxPackageAccountApi {
     localVarHeaderParams.put("Content-Type", localVarContentType);
 
     if (headerPair != null && headerPair.length > 0) {
-      if (headerPair.length % 2 != 0) {
-        throw new UnsupportedOperationException("Parameter headerPair must be paired");
-      }
-      for (int i = 0; i < headerPair.length / 2; i++) {
-        localVarHeaderParams.put(headerPair[i], headerPair[i * 2 + 1]);
+      for (int i = 0; i < headerPair.length; i++) {
+        localVarHeaderParams.put(headerPair[i].getName(), headerPair[i].getValue());
       }
     }
 
@@ -416,7 +410,7 @@ public class WxPackageAccountApi {
       Long enableFlag,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     // verify the required parameter 'accountId' is set
@@ -462,7 +456,7 @@ public class WxPackageAccountApi {
       String nickName,
       File file,
       Long enableFlag,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
     ApiResponse<WxPackageAccountUpdateResponse> resp =
         wxPackageAccountUpdateWithHttpInfo(
@@ -488,7 +482,7 @@ public class WxPackageAccountApi {
       String nickName,
       File file,
       Long enableFlag,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
     com.squareup.okhttp.Call call =
         wxPackageAccountUpdateValidateBeforeCall(
@@ -516,7 +510,7 @@ public class WxPackageAccountApi {
       File file,
       Long enableFlag,
       final ApiCallback<WxPackageAccountUpdateResponse> callback,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     ProgressResponseBody.ProgressListener progressListener = null;

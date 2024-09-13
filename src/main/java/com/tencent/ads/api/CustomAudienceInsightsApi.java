@@ -67,7 +67,7 @@ public class CustomAudienceInsightsApi {
       List<String> fields,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     Object localVarPostBody = null;
@@ -100,11 +100,8 @@ public class CustomAudienceInsightsApi {
     localVarHeaderParams.put("Content-Type", localVarContentType);
 
     if (headerPair != null && headerPair.length > 0) {
-      if (headerPair.length % 2 != 0) {
-        throw new UnsupportedOperationException("Parameter headerPair must be paired");
-      }
-      for (int i = 0; i < headerPair.length / 2; i++) {
-        localVarHeaderParams.put(headerPair[i], headerPair[i * 2 + 1]);
+      for (int i = 0; i < headerPair.length; i++) {
+        localVarHeaderParams.put(headerPair[i].getName(), headerPair[i].getValue());
       }
     }
 
@@ -147,7 +144,7 @@ public class CustomAudienceInsightsApi {
       List<String> fields,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     // verify the required parameter 'accountId' is set
@@ -196,7 +193,7 @@ public class CustomAudienceInsightsApi {
       Long audienceId,
       List<String> dimensionType,
       List<String> fields,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
     ApiResponse<CustomAudienceInsightsGetResponse> resp =
         customAudienceInsightsGetWithHttpInfo(
@@ -220,7 +217,7 @@ public class CustomAudienceInsightsApi {
       Long audienceId,
       List<String> dimensionType,
       List<String> fields,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
     com.squareup.okhttp.Call call =
         customAudienceInsightsGetValidateBeforeCall(
@@ -246,7 +243,7 @@ public class CustomAudienceInsightsApi {
       List<String> dimensionType,
       List<String> fields,
       final ApiCallback<CustomAudienceInsightsGetResponse> callback,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     ProgressResponseBody.ProgressListener progressListener = null;

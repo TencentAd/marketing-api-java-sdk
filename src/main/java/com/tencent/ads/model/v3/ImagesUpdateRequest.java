@@ -22,6 +22,9 @@ public class ImagesUpdateRequest {
   @SerializedName("account_id")
   private Long accountId = null;
 
+  @SerializedName("organization_id")
+  private Long organizationId = null;
+
   @SerializedName("image_id")
   private String imageId = null;
 
@@ -45,6 +48,25 @@ public class ImagesUpdateRequest {
 
   public void setAccountId(Long accountId) {
     this.accountId = accountId;
+  }
+
+  public ImagesUpdateRequest organizationId(Long organizationId) {
+    this.organizationId = organizationId;
+    return this;
+  }
+
+  /**
+   * Get organizationId
+   *
+   * @return organizationId
+   */
+  @ApiModelProperty(value = "")
+  public Long getOrganizationId() {
+    return organizationId;
+  }
+
+  public void setOrganizationId(Long organizationId) {
+    this.organizationId = organizationId;
   }
 
   public ImagesUpdateRequest imageId(String imageId) {
@@ -95,13 +117,14 @@ public class ImagesUpdateRequest {
     }
     ImagesUpdateRequest imagesUpdateRequest = (ImagesUpdateRequest) o;
     return Objects.equals(this.accountId, imagesUpdateRequest.accountId)
+        && Objects.equals(this.organizationId, imagesUpdateRequest.organizationId)
         && Objects.equals(this.imageId, imagesUpdateRequest.imageId)
         && Objects.equals(this.description, imagesUpdateRequest.description);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(accountId, imageId, description);
+    return Objects.hash(accountId, organizationId, imageId, description);
   }
 
   @Override

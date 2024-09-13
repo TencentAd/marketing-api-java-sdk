@@ -28,6 +28,10 @@ public class GetDynamicCreatives {
 
   public Boolean isDeleted = null;
 
+  public String paginationMode = null;
+
+  public String cursor = null;
+
   public void init() {
     this.tencentAds = TencentAds.getInstance();
     this.tencentAds.init(
@@ -42,7 +46,8 @@ public class GetDynamicCreatives {
     DynamicCreativesGetResponseData response =
         tencentAds
             .dynamicCreatives()
-            .dynamicCreativesGet(accountId, filtering, page, pageSize, fields, isDeleted);
+            .dynamicCreativesGet(
+                accountId, filtering, page, pageSize, fields, isDeleted, paginationMode, cursor);
     return response;
   }
 

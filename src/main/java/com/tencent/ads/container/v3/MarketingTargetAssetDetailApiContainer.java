@@ -15,6 +15,7 @@ package com.tencent.ads.container.v3;
 import com.google.inject.Inject;
 import com.tencent.ads.ApiContainer;
 import com.tencent.ads.ApiException;
+import com.tencent.ads.Pair;
 import com.tencent.ads.anno.*;
 import com.tencent.ads.api.v3.MarketingTargetAssetDetailApi;
 import com.tencent.ads.exception.TencentAdsResponseException;
@@ -29,24 +30,26 @@ public class MarketingTargetAssetDetailApiContainer extends ApiContainer {
   /**
    * 获取推广内容资产详情
    *
-   * @param accountId (required)
    * @param marketingAssetId (required)
    * @param marketingTargetType (required)
+   * @param accountId (optional)
+   * @param organizationId (optional)
    * @param fields 返回参数的字段列表 (optional)
    * @return MarketingTargetAssetDetailGetResponse
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
   public MarketingTargetAssetDetailGetResponseData marketingTargetAssetDetailGet(
-      Long accountId,
       Long marketingAssetId,
       String marketingTargetType,
+      Long accountId,
+      Long organizationId,
       List<String> fields,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException, TencentAdsResponseException {
     MarketingTargetAssetDetailGetResponse resp =
         api.marketingTargetAssetDetailGet(
-            accountId, marketingAssetId, marketingTargetType, fields, headerPair);
+            marketingAssetId, marketingTargetType, accountId, organizationId, fields, headerPair);
     handleResponse(gson.toJson(resp));
     return resp.getData();
   }

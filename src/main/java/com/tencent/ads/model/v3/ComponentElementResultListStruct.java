@@ -23,6 +23,9 @@ import java.util.Objects;
 /** 组件元素粒度审核结果 */
 @ApiModel(description = "组件元素粒度审核结果")
 public class ComponentElementResultListStruct {
+  @SerializedName("element_id")
+  private Long elementId = null;
+
   @SerializedName("image_id")
   private String imageId = null;
 
@@ -43,6 +46,25 @@ public class ComponentElementResultListStruct {
 
   @SerializedName("element_reject_detail_info")
   private List<ComponentElementRejectDetailInfoListStruct> elementRejectDetailInfo = null;
+
+  public ComponentElementResultListStruct elementId(Long elementId) {
+    this.elementId = elementId;
+    return this;
+  }
+
+  /**
+   * Get elementId
+   *
+   * @return elementId
+   */
+  @ApiModelProperty(value = "")
+  public Long getElementId() {
+    return elementId;
+  }
+
+  public void setElementId(Long elementId) {
+    this.elementId = elementId;
+  }
 
   public ComponentElementResultListStruct imageId(String imageId) {
     this.imageId = imageId;
@@ -198,7 +220,8 @@ public class ComponentElementResultListStruct {
     }
     ComponentElementResultListStruct componentElementResultListStruct =
         (ComponentElementResultListStruct) o;
-    return Objects.equals(this.imageId, componentElementResultListStruct.imageId)
+    return Objects.equals(this.elementId, componentElementResultListStruct.elementId)
+        && Objects.equals(this.imageId, componentElementResultListStruct.imageId)
         && Objects.equals(this.videoId, componentElementResultListStruct.videoId)
         && Objects.equals(this.elementName, componentElementResultListStruct.elementName)
         && Objects.equals(this.elementValue, componentElementResultListStruct.elementValue)
@@ -211,6 +234,7 @@ public class ComponentElementResultListStruct {
   @Override
   public int hashCode() {
     return Objects.hash(
+        elementId,
         imageId,
         videoId,
         elementName,

@@ -61,7 +61,6 @@ public class CreativeTemplateApi {
    * @param siteSet (optional)
    * @param dynamicCreativeType (optional)
    * @param creativeTemplateId (optional)
-   * @param conversionLinkAssetId (optional)
    * @param fields 返回参数的字段列表 (optional)
    * @param progressListener Progress listener
    * @param progressRequestListener Progress request listener
@@ -79,11 +78,10 @@ public class CreativeTemplateApi {
       List<String> siteSet,
       String dynamicCreativeType,
       Long creativeTemplateId,
-      Long conversionLinkAssetId,
       List<String> fields,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     Object localVarPostBody = null;
@@ -119,9 +117,6 @@ public class CreativeTemplateApi {
     if (creativeTemplateId != null)
       localVarQueryParams.addAll(
           apiClient.parameterToPair("creative_template_id", creativeTemplateId));
-    if (conversionLinkAssetId != null)
-      localVarQueryParams.addAll(
-          apiClient.parameterToPair("conversion_link_asset_id", conversionLinkAssetId));
     if (fields != null)
       localVarCollectionQueryParams.addAll(apiClient.parameterToPairs("multi", "fields", fields));
 
@@ -138,11 +133,8 @@ public class CreativeTemplateApi {
     localVarHeaderParams.put("Content-Type", localVarContentType);
 
     if (headerPair != null && headerPair.length > 0) {
-      if (headerPair.length % 2 != 0) {
-        throw new UnsupportedOperationException("Parameter headerPair must be paired");
-      }
-      for (int i = 0; i < headerPair.length / 2; i++) {
-        localVarHeaderParams.put(headerPair[i], headerPair[i * 2 + 1]);
+      for (int i = 0; i < headerPair.length; i++) {
+        localVarHeaderParams.put(headerPair[i].getName(), headerPair[i].getValue());
       }
     }
 
@@ -189,11 +181,10 @@ public class CreativeTemplateApi {
       List<String> siteSet,
       String dynamicCreativeType,
       Long creativeTemplateId,
-      Long conversionLinkAssetId,
       List<String> fields,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     // verify the required parameter 'accountId' is set
@@ -238,7 +229,6 @@ public class CreativeTemplateApi {
             siteSet,
             dynamicCreativeType,
             creativeTemplateId,
-            conversionLinkAssetId,
             fields,
             progressListener,
             progressRequestListener,
@@ -259,7 +249,6 @@ public class CreativeTemplateApi {
    * @param siteSet (optional)
    * @param dynamicCreativeType (optional)
    * @param creativeTemplateId (optional)
-   * @param conversionLinkAssetId (optional)
    * @param fields 返回参数的字段列表 (optional)
    * @return CreativeTemplateGetResponse
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
@@ -276,9 +265,8 @@ public class CreativeTemplateApi {
       List<String> siteSet,
       String dynamicCreativeType,
       Long creativeTemplateId,
-      Long conversionLinkAssetId,
       List<String> fields,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
     ApiResponse<CreativeTemplateGetResponse> resp =
         creativeTemplateGetWithHttpInfo(
@@ -292,7 +280,6 @@ public class CreativeTemplateApi {
             siteSet,
             dynamicCreativeType,
             creativeTemplateId,
-            conversionLinkAssetId,
             fields,
             headerPair);
     return resp.getData();
@@ -311,7 +298,6 @@ public class CreativeTemplateApi {
    * @param siteSet (optional)
    * @param dynamicCreativeType (optional)
    * @param creativeTemplateId (optional)
-   * @param conversionLinkAssetId (optional)
    * @param fields 返回参数的字段列表 (optional)
    * @return ApiResponse&lt;CreativeTemplateGetResponse&gt;
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
@@ -328,9 +314,8 @@ public class CreativeTemplateApi {
       List<String> siteSet,
       String dynamicCreativeType,
       Long creativeTemplateId,
-      Long conversionLinkAssetId,
       List<String> fields,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
     com.squareup.okhttp.Call call =
         creativeTemplateGetValidateBeforeCall(
@@ -344,7 +329,6 @@ public class CreativeTemplateApi {
             siteSet,
             dynamicCreativeType,
             creativeTemplateId,
-            conversionLinkAssetId,
             fields,
             null,
             null,
@@ -366,7 +350,6 @@ public class CreativeTemplateApi {
    * @param siteSet (optional)
    * @param dynamicCreativeType (optional)
    * @param creativeTemplateId (optional)
-   * @param conversionLinkAssetId (optional)
    * @param fields 返回参数的字段列表 (optional)
    * @param callback The callback to be executed when the API call finishes
    * @return The request call
@@ -383,10 +366,9 @@ public class CreativeTemplateApi {
       List<String> siteSet,
       String dynamicCreativeType,
       Long creativeTemplateId,
-      Long conversionLinkAssetId,
       List<String> fields,
       final ApiCallback<CreativeTemplateGetResponse> callback,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     ProgressResponseBody.ProgressListener progressListener = null;
@@ -422,7 +404,6 @@ public class CreativeTemplateApi {
             siteSet,
             dynamicCreativeType,
             creativeTemplateId,
-            conversionLinkAssetId,
             fields,
             progressListener,
             progressRequestListener,

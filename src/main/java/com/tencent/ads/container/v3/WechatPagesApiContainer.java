@@ -15,6 +15,7 @@ package com.tencent.ads.container.v3;
 import com.google.inject.Inject;
 import com.tencent.ads.ApiContainer;
 import com.tencent.ads.ApiException;
+import com.tencent.ads.Pair;
 import com.tencent.ads.anno.*;
 import com.tencent.ads.api.v3.WechatPagesApi;
 import com.tencent.ads.exception.TencentAdsResponseException;
@@ -41,7 +42,7 @@ public class WechatPagesApiContainer extends ApiContainer {
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
-  public WechatPagesAddResponseData wechatPagesAdd(WechatPagesAddRequest data, String... headerPair)
+  public WechatPagesAddResponseData wechatPagesAdd(WechatPagesAddRequest data, Pair... headerPair)
       throws ApiException, TencentAdsResponseException {
     WechatPagesAddResponse resp = api.wechatPagesAdd(data, headerPair);
     handleResponse(gson.toJson(resp));
@@ -57,7 +58,7 @@ public class WechatPagesApiContainer extends ApiContainer {
    *     response body
    */
   public WechatPagesDeleteResponseData wechatPagesDelete(
-      WechatPagesDeleteRequest data, String... headerPair)
+      WechatPagesDeleteRequest data, Pair... headerPair)
       throws ApiException, TencentAdsResponseException {
     WechatPagesDeleteResponse resp = api.wechatPagesDelete(data, headerPair);
     handleResponse(gson.toJson(resp));
@@ -84,7 +85,7 @@ public class WechatPagesApiContainer extends ApiContainer {
       Long page,
       Long pageSize,
       List<String> fields,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException, TencentAdsResponseException {
     WechatPagesGetResponse resp =
         api.wechatPagesGet(accountId, ownerUid, filtering, page, pageSize, fields, headerPair);

@@ -63,7 +63,7 @@ public class DataSetApi {
       DataSetAddRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     Object localVarPostBody = data;
@@ -87,11 +87,8 @@ public class DataSetApi {
     localVarHeaderParams.put("Content-Type", localVarContentType);
 
     if (headerPair != null && headerPair.length > 0) {
-      if (headerPair.length % 2 != 0) {
-        throw new UnsupportedOperationException("Parameter headerPair must be paired");
-      }
-      for (int i = 0; i < headerPair.length / 2; i++) {
-        localVarHeaderParams.put(headerPair[i], headerPair[i * 2 + 1]);
+      for (int i = 0; i < headerPair.length; i++) {
+        localVarHeaderParams.put(headerPair[i].getName(), headerPair[i].getValue());
       }
     }
 
@@ -131,7 +128,7 @@ public class DataSetApi {
       DataSetAddRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     // verify the required parameter 'data' is set
@@ -153,7 +150,7 @@ public class DataSetApi {
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
-  public DataSetAddResponse dataSetAdd(DataSetAddRequest data, String... headerPair)
+  public DataSetAddResponse dataSetAdd(DataSetAddRequest data, Pair... headerPair)
       throws ApiException {
     ApiResponse<DataSetAddResponse> resp = dataSetAddWithHttpInfo(data, headerPair);
     return resp.getData();
@@ -168,7 +165,7 @@ public class DataSetApi {
    *     response body
    */
   public ApiResponse<DataSetAddResponse> dataSetAddWithHttpInfo(
-      DataSetAddRequest data, String... headerPair) throws ApiException {
+      DataSetAddRequest data, Pair... headerPair) throws ApiException {
     com.squareup.okhttp.Call call = dataSetAddValidateBeforeCall(data, null, null, headerPair);
     Type localVarReturnType = new TypeToken<DataSetAddResponse>() {}.getType();
     return apiClient.execute(call, localVarReturnType);
@@ -183,7 +180,7 @@ public class DataSetApi {
    * @throws ApiException If fail to process the API call, e.g. serializing the request body object
    */
   public com.squareup.okhttp.Call dataSetAddAsync(
-      DataSetAddRequest data, final ApiCallback<DataSetAddResponse> callback, String... headerPair)
+      DataSetAddRequest data, final ApiCallback<DataSetAddResponse> callback, Pair... headerPair)
       throws ApiException {
 
     ProgressResponseBody.ProgressListener progressListener = null;
@@ -234,7 +231,7 @@ public class DataSetApi {
       List<String> fields,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     Object localVarPostBody = null;
@@ -267,11 +264,8 @@ public class DataSetApi {
     localVarHeaderParams.put("Content-Type", localVarContentType);
 
     if (headerPair != null && headerPair.length > 0) {
-      if (headerPair.length % 2 != 0) {
-        throw new UnsupportedOperationException("Parameter headerPair must be paired");
-      }
-      for (int i = 0; i < headerPair.length / 2; i++) {
-        localVarHeaderParams.put(headerPair[i], headerPair[i * 2 + 1]);
+      for (int i = 0; i < headerPair.length; i++) {
+        localVarHeaderParams.put(headerPair[i].getName(), headerPair[i].getValue());
       }
     }
 
@@ -315,7 +309,7 @@ public class DataSetApi {
       List<String> fields,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     // verify the required parameter 'accountId' is set
@@ -355,7 +349,7 @@ public class DataSetApi {
       Long dataSetId,
       Long envType,
       List<String> fields,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
     ApiResponse<DataSetGetResponse> resp =
         dataSetGetWithHttpInfo(accountId, userActionSetId, dataSetId, envType, fields, headerPair);
@@ -380,7 +374,7 @@ public class DataSetApi {
       Long dataSetId,
       Long envType,
       List<String> fields,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
     com.squareup.okhttp.Call call =
         dataSetGetValidateBeforeCall(
@@ -408,7 +402,7 @@ public class DataSetApi {
       Long envType,
       List<String> fields,
       final ApiCallback<DataSetGetResponse> callback,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     ProgressResponseBody.ProgressListener progressListener = null;

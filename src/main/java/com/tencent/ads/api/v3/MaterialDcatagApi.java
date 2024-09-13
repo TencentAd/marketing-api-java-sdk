@@ -63,7 +63,7 @@ public class MaterialDcatagApi {
       MaterialDcatagAddRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     Object localVarPostBody = data;
@@ -87,11 +87,8 @@ public class MaterialDcatagApi {
     localVarHeaderParams.put("Content-Type", localVarContentType);
 
     if (headerPair != null && headerPair.length > 0) {
-      if (headerPair.length % 2 != 0) {
-        throw new UnsupportedOperationException("Parameter headerPair must be paired");
-      }
-      for (int i = 0; i < headerPair.length / 2; i++) {
-        localVarHeaderParams.put(headerPair[i], headerPair[i * 2 + 1]);
+      for (int i = 0; i < headerPair.length; i++) {
+        localVarHeaderParams.put(headerPair[i].getName(), headerPair[i].getValue());
       }
     }
 
@@ -131,7 +128,7 @@ public class MaterialDcatagApi {
       MaterialDcatagAddRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     // verify the required parameter 'data' is set
@@ -154,7 +151,7 @@ public class MaterialDcatagApi {
    *     response body
    */
   public MaterialDcatagAddResponse materialDcatagAdd(
-      MaterialDcatagAddRequest data, String... headerPair) throws ApiException {
+      MaterialDcatagAddRequest data, Pair... headerPair) throws ApiException {
     ApiResponse<MaterialDcatagAddResponse> resp = materialDcatagAddWithHttpInfo(data, headerPair);
     return resp.getData();
   }
@@ -168,7 +165,7 @@ public class MaterialDcatagApi {
    *     response body
    */
   public ApiResponse<MaterialDcatagAddResponse> materialDcatagAddWithHttpInfo(
-      MaterialDcatagAddRequest data, String... headerPair) throws ApiException {
+      MaterialDcatagAddRequest data, Pair... headerPair) throws ApiException {
     com.squareup.okhttp.Call call =
         materialDcatagAddValidateBeforeCall(data, null, null, headerPair);
     Type localVarReturnType = new TypeToken<MaterialDcatagAddResponse>() {}.getType();
@@ -186,7 +183,7 @@ public class MaterialDcatagApi {
   public com.squareup.okhttp.Call materialDcatagAddAsync(
       MaterialDcatagAddRequest data,
       final ApiCallback<MaterialDcatagAddResponse> callback,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     ProgressResponseBody.ProgressListener progressListener = null;
@@ -236,7 +233,7 @@ public class MaterialDcatagApi {
       List<String> fields,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     Object localVarPostBody = null;
@@ -270,11 +267,8 @@ public class MaterialDcatagApi {
     localVarHeaderParams.put("Content-Type", localVarContentType);
 
     if (headerPair != null && headerPair.length > 0) {
-      if (headerPair.length % 2 != 0) {
-        throw new UnsupportedOperationException("Parameter headerPair must be paired");
-      }
-      for (int i = 0; i < headerPair.length / 2; i++) {
-        localVarHeaderParams.put(headerPair[i], headerPair[i * 2 + 1]);
+      for (int i = 0; i < headerPair.length; i++) {
+        localVarHeaderParams.put(headerPair[i].getName(), headerPair[i].getValue());
       }
     }
 
@@ -317,7 +311,7 @@ public class MaterialDcatagApi {
       List<String> fields,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     // verify the required parameter 'accountId' is set
@@ -354,7 +348,7 @@ public class MaterialDcatagApi {
       List<Long> imageIdList,
       List<Long> mediaIdList,
       List<String> fields,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
     ApiResponse<MaterialDcatagGetResponse> resp =
         materialDcatagGetWithHttpInfo(accountId, imageIdList, mediaIdList, fields, headerPair);
@@ -377,7 +371,7 @@ public class MaterialDcatagApi {
       List<Long> imageIdList,
       List<Long> mediaIdList,
       List<String> fields,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
     com.squareup.okhttp.Call call =
         materialDcatagGetValidateBeforeCall(
@@ -403,7 +397,7 @@ public class MaterialDcatagApi {
       List<Long> mediaIdList,
       List<String> fields,
       final ApiCallback<MaterialDcatagGetResponse> callback,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     ProgressResponseBody.ProgressListener progressListener = null;

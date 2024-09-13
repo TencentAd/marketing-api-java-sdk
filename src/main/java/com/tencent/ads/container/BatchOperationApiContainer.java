@@ -15,6 +15,7 @@ package com.tencent.ads.container;
 import com.google.inject.Inject;
 import com.tencent.ads.ApiContainer;
 import com.tencent.ads.ApiException;
+import com.tencent.ads.Pair;
 import com.tencent.ads.anno.*;
 import com.tencent.ads.api.BatchOperationApi;
 import com.tencent.ads.exception.TencentAdsResponseException;
@@ -34,7 +35,7 @@ public class BatchOperationApiContainer extends ApiContainer {
    *     response body
    */
   public BatchOperationAddResponse batchOperationAdd(
-      BatchOperationAddRequest data, String... headerPair)
+      BatchOperationAddRequest data, Pair... headerPair)
       throws ApiException, TencentAdsResponseException {
     BatchOperationAddResponse resp = api.batchOperationAdd(data, headerPair);
     handleResponse(gson.toJson(resp));

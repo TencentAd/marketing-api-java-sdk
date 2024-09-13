@@ -66,7 +66,7 @@ public class ExtendPackageApi {
       ExtendPackageAddRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     Object localVarPostBody = data;
@@ -90,11 +90,8 @@ public class ExtendPackageApi {
     localVarHeaderParams.put("Content-Type", localVarContentType);
 
     if (headerPair != null && headerPair.length > 0) {
-      if (headerPair.length % 2 != 0) {
-        throw new UnsupportedOperationException("Parameter headerPair must be paired");
-      }
-      for (int i = 0; i < headerPair.length / 2; i++) {
-        localVarHeaderParams.put(headerPair[i], headerPair[i * 2 + 1]);
+      for (int i = 0; i < headerPair.length; i++) {
+        localVarHeaderParams.put(headerPair[i].getName(), headerPair[i].getValue());
       }
     }
 
@@ -134,7 +131,7 @@ public class ExtendPackageApi {
       ExtendPackageAddRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     // verify the required parameter 'data' is set
@@ -156,8 +153,8 @@ public class ExtendPackageApi {
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
-  public ExtendPackageAddResponse extendPackageAdd(
-      ExtendPackageAddRequest data, String... headerPair) throws ApiException {
+  public ExtendPackageAddResponse extendPackageAdd(ExtendPackageAddRequest data, Pair... headerPair)
+      throws ApiException {
     ApiResponse<ExtendPackageAddResponse> resp = extendPackageAddWithHttpInfo(data, headerPair);
     return resp.getData();
   }
@@ -171,7 +168,7 @@ public class ExtendPackageApi {
    *     response body
    */
   public ApiResponse<ExtendPackageAddResponse> extendPackageAddWithHttpInfo(
-      ExtendPackageAddRequest data, String... headerPair) throws ApiException {
+      ExtendPackageAddRequest data, Pair... headerPair) throws ApiException {
     com.squareup.okhttp.Call call =
         extendPackageAddValidateBeforeCall(data, null, null, headerPair);
     Type localVarReturnType = new TypeToken<ExtendPackageAddResponse>() {}.getType();
@@ -189,7 +186,7 @@ public class ExtendPackageApi {
   public com.squareup.okhttp.Call extendPackageAddAsync(
       ExtendPackageAddRequest data,
       final ApiCallback<ExtendPackageAddResponse> callback,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     ProgressResponseBody.ProgressListener progressListener = null;
@@ -243,7 +240,7 @@ public class ExtendPackageApi {
       List<String> fields,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     Object localVarPostBody = null;
@@ -279,11 +276,8 @@ public class ExtendPackageApi {
     localVarHeaderParams.put("Content-Type", localVarContentType);
 
     if (headerPair != null && headerPair.length > 0) {
-      if (headerPair.length % 2 != 0) {
-        throw new UnsupportedOperationException("Parameter headerPair must be paired");
-      }
-      for (int i = 0; i < headerPair.length / 2; i++) {
-        localVarHeaderParams.put(headerPair[i], headerPair[i * 2 + 1]);
+      for (int i = 0; i < headerPair.length; i++) {
+        localVarHeaderParams.put(headerPair[i].getName(), headerPair[i].getValue());
       }
     }
 
@@ -328,7 +322,7 @@ public class ExtendPackageApi {
       List<String> fields,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     // verify the required parameter 'accountId' is set
@@ -377,7 +371,7 @@ public class ExtendPackageApi {
       Long page,
       Long pageSize,
       List<String> fields,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
     ApiResponse<ExtendPackageGetResponse> resp =
         extendPackageGetWithHttpInfo(
@@ -405,7 +399,7 @@ public class ExtendPackageApi {
       Long page,
       Long pageSize,
       List<String> fields,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
     com.squareup.okhttp.Call call =
         extendPackageGetValidateBeforeCall(
@@ -435,7 +429,7 @@ public class ExtendPackageApi {
       Long pageSize,
       List<String> fields,
       final ApiCallback<ExtendPackageGetResponse> callback,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     ProgressResponseBody.ProgressListener progressListener = null;
@@ -487,7 +481,7 @@ public class ExtendPackageApi {
       ExtendPackageUpdateRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     Object localVarPostBody = data;
@@ -511,11 +505,8 @@ public class ExtendPackageApi {
     localVarHeaderParams.put("Content-Type", localVarContentType);
 
     if (headerPair != null && headerPair.length > 0) {
-      if (headerPair.length % 2 != 0) {
-        throw new UnsupportedOperationException("Parameter headerPair must be paired");
-      }
-      for (int i = 0; i < headerPair.length / 2; i++) {
-        localVarHeaderParams.put(headerPair[i], headerPair[i * 2 + 1]);
+      for (int i = 0; i < headerPair.length; i++) {
+        localVarHeaderParams.put(headerPair[i].getName(), headerPair[i].getValue());
       }
     }
 
@@ -555,7 +546,7 @@ public class ExtendPackageApi {
       ExtendPackageUpdateRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     // verify the required parameter 'data' is set
@@ -578,7 +569,7 @@ public class ExtendPackageApi {
    *     response body
    */
   public ExtendPackageUpdateResponse extendPackageUpdate(
-      ExtendPackageUpdateRequest data, String... headerPair) throws ApiException {
+      ExtendPackageUpdateRequest data, Pair... headerPair) throws ApiException {
     ApiResponse<ExtendPackageUpdateResponse> resp =
         extendPackageUpdateWithHttpInfo(data, headerPair);
     return resp.getData();
@@ -593,7 +584,7 @@ public class ExtendPackageApi {
    *     response body
    */
   public ApiResponse<ExtendPackageUpdateResponse> extendPackageUpdateWithHttpInfo(
-      ExtendPackageUpdateRequest data, String... headerPair) throws ApiException {
+      ExtendPackageUpdateRequest data, Pair... headerPair) throws ApiException {
     com.squareup.okhttp.Call call =
         extendPackageUpdateValidateBeforeCall(data, null, null, headerPair);
     Type localVarReturnType = new TypeToken<ExtendPackageUpdateResponse>() {}.getType();
@@ -611,7 +602,7 @@ public class ExtendPackageApi {
   public com.squareup.okhttp.Call extendPackageUpdateAsync(
       ExtendPackageUpdateRequest data,
       final ApiCallback<ExtendPackageUpdateResponse> callback,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     ProgressResponseBody.ProgressListener progressListener = null;

@@ -15,6 +15,7 @@ package com.tencent.ads.container;
 import com.google.inject.Inject;
 import com.tencent.ads.ApiContainer;
 import com.tencent.ads.ApiException;
+import com.tencent.ads.Pair;
 import com.tencent.ads.anno.*;
 import com.tencent.ads.api.ReviewAdAppealApi;
 import com.tencent.ads.exception.TencentAdsResponseException;
@@ -37,7 +38,7 @@ public class ReviewAdAppealApiContainer extends ApiContainer {
    *     response body
    */
   public ReviewAdAppealAddResponse reviewAdAppealAdd(
-      ReviewAdAppealAddRequest data, String... headerPair)
+      ReviewAdAppealAddRequest data, Pair... headerPair)
       throws ApiException, TencentAdsResponseException {
     ReviewAdAppealAddResponse resp = api.reviewAdAppealAdd(data, headerPair);
     handleResponse(gson.toJson(resp));
@@ -54,7 +55,7 @@ public class ReviewAdAppealApiContainer extends ApiContainer {
    *     response body
    */
   public ReviewAdAppealGetResponseData reviewAdAppealGet(
-      ReviewAdAppealGetRequest data, String... headerPair)
+      ReviewAdAppealGetRequest data, Pair... headerPair)
       throws ApiException, TencentAdsResponseException {
     ReviewAdAppealGetResponse resp = api.reviewAdAppealGet(data, headerPair);
     handleResponse(gson.toJson(resp));

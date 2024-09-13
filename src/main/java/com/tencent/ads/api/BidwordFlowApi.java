@@ -62,7 +62,7 @@ public class BidwordFlowApi {
       BidwordFlowGetRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     Object localVarPostBody = data;
@@ -86,11 +86,8 @@ public class BidwordFlowApi {
     localVarHeaderParams.put("Content-Type", localVarContentType);
 
     if (headerPair != null && headerPair.length > 0) {
-      if (headerPair.length % 2 != 0) {
-        throw new UnsupportedOperationException("Parameter headerPair must be paired");
-      }
-      for (int i = 0; i < headerPair.length / 2; i++) {
-        localVarHeaderParams.put(headerPair[i], headerPair[i * 2 + 1]);
+      for (int i = 0; i < headerPair.length; i++) {
+        localVarHeaderParams.put(headerPair[i].getName(), headerPair[i].getValue());
       }
     }
 
@@ -130,7 +127,7 @@ public class BidwordFlowApi {
       BidwordFlowGetRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     // verify the required parameter 'data' is set
@@ -152,7 +149,7 @@ public class BidwordFlowApi {
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
-  public BidwordFlowGetResponse bidwordFlowGet(BidwordFlowGetRequest data, String... headerPair)
+  public BidwordFlowGetResponse bidwordFlowGet(BidwordFlowGetRequest data, Pair... headerPair)
       throws ApiException {
     ApiResponse<BidwordFlowGetResponse> resp = bidwordFlowGetWithHttpInfo(data, headerPair);
     return resp.getData();
@@ -167,7 +164,7 @@ public class BidwordFlowApi {
    *     response body
    */
   public ApiResponse<BidwordFlowGetResponse> bidwordFlowGetWithHttpInfo(
-      BidwordFlowGetRequest data, String... headerPair) throws ApiException {
+      BidwordFlowGetRequest data, Pair... headerPair) throws ApiException {
     com.squareup.okhttp.Call call = bidwordFlowGetValidateBeforeCall(data, null, null, headerPair);
     Type localVarReturnType = new TypeToken<BidwordFlowGetResponse>() {}.getType();
     return apiClient.execute(call, localVarReturnType);
@@ -184,7 +181,7 @@ public class BidwordFlowApi {
   public com.squareup.okhttp.Call bidwordFlowGetAsync(
       BidwordFlowGetRequest data,
       final ApiCallback<BidwordFlowGetResponse> callback,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     ProgressResponseBody.ProgressListener progressListener = null;

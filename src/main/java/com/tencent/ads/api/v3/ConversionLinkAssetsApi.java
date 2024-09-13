@@ -66,7 +66,7 @@ public class ConversionLinkAssetsApi {
       ConversionLinkAssetsAddRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     Object localVarPostBody = data;
@@ -90,11 +90,8 @@ public class ConversionLinkAssetsApi {
     localVarHeaderParams.put("Content-Type", localVarContentType);
 
     if (headerPair != null && headerPair.length > 0) {
-      if (headerPair.length % 2 != 0) {
-        throw new UnsupportedOperationException("Parameter headerPair must be paired");
-      }
-      for (int i = 0; i < headerPair.length / 2; i++) {
-        localVarHeaderParams.put(headerPair[i], headerPair[i * 2 + 1]);
+      for (int i = 0; i < headerPair.length; i++) {
+        localVarHeaderParams.put(headerPair[i].getName(), headerPair[i].getValue());
       }
     }
 
@@ -134,7 +131,7 @@ public class ConversionLinkAssetsApi {
       ConversionLinkAssetsAddRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     // verify the required parameter 'data' is set
@@ -157,7 +154,7 @@ public class ConversionLinkAssetsApi {
    *     response body
    */
   public ConversionLinkAssetsAddResponse conversionLinkAssetsAdd(
-      ConversionLinkAssetsAddRequest data, String... headerPair) throws ApiException {
+      ConversionLinkAssetsAddRequest data, Pair... headerPair) throws ApiException {
     ApiResponse<ConversionLinkAssetsAddResponse> resp =
         conversionLinkAssetsAddWithHttpInfo(data, headerPair);
     return resp.getData();
@@ -172,7 +169,7 @@ public class ConversionLinkAssetsApi {
    *     response body
    */
   public ApiResponse<ConversionLinkAssetsAddResponse> conversionLinkAssetsAddWithHttpInfo(
-      ConversionLinkAssetsAddRequest data, String... headerPair) throws ApiException {
+      ConversionLinkAssetsAddRequest data, Pair... headerPair) throws ApiException {
     com.squareup.okhttp.Call call =
         conversionLinkAssetsAddValidateBeforeCall(data, null, null, headerPair);
     Type localVarReturnType = new TypeToken<ConversionLinkAssetsAddResponse>() {}.getType();
@@ -190,7 +187,7 @@ public class ConversionLinkAssetsApi {
   public com.squareup.okhttp.Call conversionLinkAssetsAddAsync(
       ConversionLinkAssetsAddRequest data,
       final ApiCallback<ConversionLinkAssetsAddResponse> callback,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     ProgressResponseBody.ProgressListener progressListener = null;
@@ -244,7 +241,7 @@ public class ConversionLinkAssetsApi {
       List<String> fields,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     Object localVarPostBody = null;
@@ -279,11 +276,8 @@ public class ConversionLinkAssetsApi {
     localVarHeaderParams.put("Content-Type", localVarContentType);
 
     if (headerPair != null && headerPair.length > 0) {
-      if (headerPair.length % 2 != 0) {
-        throw new UnsupportedOperationException("Parameter headerPair must be paired");
-      }
-      for (int i = 0; i < headerPair.length / 2; i++) {
-        localVarHeaderParams.put(headerPair[i], headerPair[i * 2 + 1]);
+      for (int i = 0; i < headerPair.length; i++) {
+        localVarHeaderParams.put(headerPair[i].getName(), headerPair[i].getValue());
       }
     }
 
@@ -328,7 +322,7 @@ public class ConversionLinkAssetsApi {
       List<String> fields,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     // verify the required parameter 'accountId' is set
@@ -377,7 +371,7 @@ public class ConversionLinkAssetsApi {
       Long pageSize,
       String key,
       List<String> fields,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
     ApiResponse<ConversionLinkAssetsGetResponse> resp =
         conversionLinkAssetsGetWithHttpInfo(
@@ -405,7 +399,7 @@ public class ConversionLinkAssetsApi {
       Long pageSize,
       String key,
       List<String> fields,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
     com.squareup.okhttp.Call call =
         conversionLinkAssetsGetValidateBeforeCall(
@@ -435,7 +429,7 @@ public class ConversionLinkAssetsApi {
       String key,
       List<String> fields,
       final ApiCallback<ConversionLinkAssetsGetResponse> callback,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     ProgressResponseBody.ProgressListener progressListener = null;
@@ -487,7 +481,7 @@ public class ConversionLinkAssetsApi {
       ConversionLinkAssetsUpdateRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     Object localVarPostBody = data;
@@ -511,11 +505,8 @@ public class ConversionLinkAssetsApi {
     localVarHeaderParams.put("Content-Type", localVarContentType);
 
     if (headerPair != null && headerPair.length > 0) {
-      if (headerPair.length % 2 != 0) {
-        throw new UnsupportedOperationException("Parameter headerPair must be paired");
-      }
-      for (int i = 0; i < headerPair.length / 2; i++) {
-        localVarHeaderParams.put(headerPair[i], headerPair[i * 2 + 1]);
+      for (int i = 0; i < headerPair.length; i++) {
+        localVarHeaderParams.put(headerPair[i].getName(), headerPair[i].getValue());
       }
     }
 
@@ -555,7 +546,7 @@ public class ConversionLinkAssetsApi {
       ConversionLinkAssetsUpdateRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     // verify the required parameter 'data' is set
@@ -578,7 +569,7 @@ public class ConversionLinkAssetsApi {
    *     response body
    */
   public ConversionLinkAssetsUpdateResponse conversionLinkAssetsUpdate(
-      ConversionLinkAssetsUpdateRequest data, String... headerPair) throws ApiException {
+      ConversionLinkAssetsUpdateRequest data, Pair... headerPair) throws ApiException {
     ApiResponse<ConversionLinkAssetsUpdateResponse> resp =
         conversionLinkAssetsUpdateWithHttpInfo(data, headerPair);
     return resp.getData();
@@ -593,7 +584,7 @@ public class ConversionLinkAssetsApi {
    *     response body
    */
   public ApiResponse<ConversionLinkAssetsUpdateResponse> conversionLinkAssetsUpdateWithHttpInfo(
-      ConversionLinkAssetsUpdateRequest data, String... headerPair) throws ApiException {
+      ConversionLinkAssetsUpdateRequest data, Pair... headerPair) throws ApiException {
     com.squareup.okhttp.Call call =
         conversionLinkAssetsUpdateValidateBeforeCall(data, null, null, headerPair);
     Type localVarReturnType = new TypeToken<ConversionLinkAssetsUpdateResponse>() {}.getType();
@@ -611,7 +602,7 @@ public class ConversionLinkAssetsApi {
   public com.squareup.okhttp.Call conversionLinkAssetsUpdateAsync(
       ConversionLinkAssetsUpdateRequest data,
       final ApiCallback<ConversionLinkAssetsUpdateResponse> callback,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     ProgressResponseBody.ProgressListener progressListener = null;

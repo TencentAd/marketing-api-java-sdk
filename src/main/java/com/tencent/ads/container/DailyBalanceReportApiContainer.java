@@ -15,6 +15,7 @@ package com.tencent.ads.container;
 import com.google.inject.Inject;
 import com.tencent.ads.ApiContainer;
 import com.tencent.ads.ApiException;
+import com.tencent.ads.Pair;
 import com.tencent.ads.anno.*;
 import com.tencent.ads.api.DailyBalanceReportApi;
 import com.tencent.ads.exception.TencentAdsResponseException;
@@ -45,7 +46,7 @@ public class DailyBalanceReportApiContainer extends ApiContainer {
       Long page,
       Long pageSize,
       List<String> fields,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException, TencentAdsResponseException {
     DailyBalanceReportGetResponse resp =
         api.dailyBalanceReportGet(accountId, dateRange, page, pageSize, fields, headerPair);

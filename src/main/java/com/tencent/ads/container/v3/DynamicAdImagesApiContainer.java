@@ -15,6 +15,7 @@ package com.tencent.ads.container.v3;
 import com.google.inject.Inject;
 import com.tencent.ads.ApiContainer;
 import com.tencent.ads.ApiException;
+import com.tencent.ads.Pair;
 import com.tencent.ads.anno.*;
 import com.tencent.ads.api.v3.DynamicAdImagesApi;
 import com.tencent.ads.exception.TencentAdsResponseException;
@@ -39,7 +40,7 @@ public class DynamicAdImagesApiContainer extends ApiContainer {
    *     response body
    */
   public DynamicAdImagesAddResponseData dynamicAdImagesAdd(
-      DynamicAdImagesAddRequest data, String... headerPair)
+      DynamicAdImagesAddRequest data, Pair... headerPair)
       throws ApiException, TencentAdsResponseException {
     DynamicAdImagesAddResponse resp = api.dynamicAdImagesAdd(data, headerPair);
     handleResponse(gson.toJson(resp));
@@ -64,7 +65,7 @@ public class DynamicAdImagesApiContainer extends ApiContainer {
       Long page,
       Long pageSize,
       List<String> fields,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException, TencentAdsResponseException {
     DynamicAdImagesGetResponse resp =
         api.dynamicAdImagesGet(accountId, filtering, page, pageSize, fields, headerPair);

@@ -15,6 +15,7 @@ package com.tencent.ads.container;
 import com.google.inject.Inject;
 import com.tencent.ads.ApiContainer;
 import com.tencent.ads.ApiException;
+import com.tencent.ads.Pair;
 import com.tencent.ads.anno.*;
 import com.tencent.ads.api.VideosApi;
 import com.tencent.ads.exception.TencentAdsResponseException;
@@ -54,7 +55,7 @@ public class VideosApiContainer extends ApiContainer {
       String signature,
       String description,
       Long adcreativeTemplateId,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException, TencentAdsResponseException {
     VideosAddResponse resp =
         api.videosAdd(
@@ -71,7 +72,7 @@ public class VideosApiContainer extends ApiContainer {
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
-  public VideosDeleteResponseData videosDelete(VideosDeleteRequest data, String... headerPair)
+  public VideosDeleteResponseData videosDelete(VideosDeleteRequest data, Pair... headerPair)
       throws ApiException, TencentAdsResponseException {
     VideosDeleteResponse resp = api.videosDelete(data, headerPair);
     handleResponse(gson.toJson(resp));
@@ -96,7 +97,7 @@ public class VideosApiContainer extends ApiContainer {
       Long page,
       Long pageSize,
       List<String> fields,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException, TencentAdsResponseException {
     VideosGetResponse resp =
         api.videosGet(accountId, filtering, page, pageSize, fields, headerPair);
@@ -112,7 +113,7 @@ public class VideosApiContainer extends ApiContainer {
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
-  public VideosUpdateResponseData videosUpdate(VideosUpdateRequest data, String... headerPair)
+  public VideosUpdateResponseData videosUpdate(VideosUpdateRequest data, Pair... headerPair)
       throws ApiException, TencentAdsResponseException {
     VideosUpdateResponse resp = api.videosUpdate(data, headerPair);
     handleResponse(gson.toJson(resp));

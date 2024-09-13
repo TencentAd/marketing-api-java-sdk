@@ -62,7 +62,7 @@ public class XijingPageByComponentsApi {
       XijingPageByComponentsAddRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     Object localVarPostBody = data;
@@ -86,11 +86,8 @@ public class XijingPageByComponentsApi {
     localVarHeaderParams.put("Content-Type", localVarContentType);
 
     if (headerPair != null && headerPair.length > 0) {
-      if (headerPair.length % 2 != 0) {
-        throw new UnsupportedOperationException("Parameter headerPair must be paired");
-      }
-      for (int i = 0; i < headerPair.length / 2; i++) {
-        localVarHeaderParams.put(headerPair[i], headerPair[i * 2 + 1]);
+      for (int i = 0; i < headerPair.length; i++) {
+        localVarHeaderParams.put(headerPair[i].getName(), headerPair[i].getValue());
       }
     }
 
@@ -130,7 +127,7 @@ public class XijingPageByComponentsApi {
       XijingPageByComponentsAddRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     // verify the required parameter 'data' is set
@@ -153,7 +150,7 @@ public class XijingPageByComponentsApi {
    *     response body
    */
   public XijingPageByComponentsAddResponse xijingPageByComponentsAdd(
-      XijingPageByComponentsAddRequest data, String... headerPair) throws ApiException {
+      XijingPageByComponentsAddRequest data, Pair... headerPair) throws ApiException {
     ApiResponse<XijingPageByComponentsAddResponse> resp =
         xijingPageByComponentsAddWithHttpInfo(data, headerPair);
     return resp.getData();
@@ -168,7 +165,7 @@ public class XijingPageByComponentsApi {
    *     response body
    */
   public ApiResponse<XijingPageByComponentsAddResponse> xijingPageByComponentsAddWithHttpInfo(
-      XijingPageByComponentsAddRequest data, String... headerPair) throws ApiException {
+      XijingPageByComponentsAddRequest data, Pair... headerPair) throws ApiException {
     com.squareup.okhttp.Call call =
         xijingPageByComponentsAddValidateBeforeCall(data, null, null, headerPair);
     Type localVarReturnType = new TypeToken<XijingPageByComponentsAddResponse>() {}.getType();
@@ -186,7 +183,7 @@ public class XijingPageByComponentsApi {
   public com.squareup.okhttp.Call xijingPageByComponentsAddAsync(
       XijingPageByComponentsAddRequest data,
       final ApiCallback<XijingPageByComponentsAddResponse> callback,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     ProgressResponseBody.ProgressListener progressListener = null;

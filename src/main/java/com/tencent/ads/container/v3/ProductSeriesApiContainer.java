@@ -15,6 +15,7 @@ package com.tencent.ads.container.v3;
 import com.google.inject.Inject;
 import com.tencent.ads.ApiContainer;
 import com.tencent.ads.ApiException;
+import com.tencent.ads.Pair;
 import com.tencent.ads.anno.*;
 import com.tencent.ads.api.v3.ProductSeriesApi;
 import com.tencent.ads.exception.TencentAdsResponseException;
@@ -39,7 +40,7 @@ public class ProductSeriesApiContainer extends ApiContainer {
    *     response body
    */
   public ProductSeriesAddResponseData productSeriesAdd(
-      ProductSeriesAddRequest data, String... headerPair)
+      ProductSeriesAddRequest data, Pair... headerPair)
       throws ApiException, TencentAdsResponseException {
     ProductSeriesAddResponse resp = api.productSeriesAdd(data, headerPair);
     handleResponse(gson.toJson(resp));
@@ -66,7 +67,7 @@ public class ProductSeriesApiContainer extends ApiContainer {
       Long page,
       Long pageSize,
       List<String> fields,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException, TencentAdsResponseException {
     ProductSeriesGetResponse resp =
         api.productSeriesGet(accountId, catalogId, filtering, page, pageSize, fields, headerPair);

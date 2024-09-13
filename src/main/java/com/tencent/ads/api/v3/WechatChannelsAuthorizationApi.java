@@ -67,7 +67,7 @@ public class WechatChannelsAuthorizationApi {
       WechatChannelsAuthorizationAddRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     Object localVarPostBody = data;
@@ -91,11 +91,8 @@ public class WechatChannelsAuthorizationApi {
     localVarHeaderParams.put("Content-Type", localVarContentType);
 
     if (headerPair != null && headerPair.length > 0) {
-      if (headerPair.length % 2 != 0) {
-        throw new UnsupportedOperationException("Parameter headerPair must be paired");
-      }
-      for (int i = 0; i < headerPair.length / 2; i++) {
-        localVarHeaderParams.put(headerPair[i], headerPair[i * 2 + 1]);
+      for (int i = 0; i < headerPair.length; i++) {
+        localVarHeaderParams.put(headerPair[i].getName(), headerPair[i].getValue());
       }
     }
 
@@ -135,7 +132,7 @@ public class WechatChannelsAuthorizationApi {
       WechatChannelsAuthorizationAddRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     // verify the required parameter 'data' is set
@@ -159,7 +156,7 @@ public class WechatChannelsAuthorizationApi {
    *     response body
    */
   public WechatChannelsAuthorizationAddResponse wechatChannelsAuthorizationAdd(
-      WechatChannelsAuthorizationAddRequest data, String... headerPair) throws ApiException {
+      WechatChannelsAuthorizationAddRequest data, Pair... headerPair) throws ApiException {
     ApiResponse<WechatChannelsAuthorizationAddResponse> resp =
         wechatChannelsAuthorizationAddWithHttpInfo(data, headerPair);
     return resp.getData();
@@ -175,7 +172,7 @@ public class WechatChannelsAuthorizationApi {
    */
   public ApiResponse<WechatChannelsAuthorizationAddResponse>
       wechatChannelsAuthorizationAddWithHttpInfo(
-          WechatChannelsAuthorizationAddRequest data, String... headerPair) throws ApiException {
+          WechatChannelsAuthorizationAddRequest data, Pair... headerPair) throws ApiException {
     com.squareup.okhttp.Call call =
         wechatChannelsAuthorizationAddValidateBeforeCall(data, null, null, headerPair);
     Type localVarReturnType = new TypeToken<WechatChannelsAuthorizationAddResponse>() {}.getType();
@@ -193,7 +190,7 @@ public class WechatChannelsAuthorizationApi {
   public com.squareup.okhttp.Call wechatChannelsAuthorizationAddAsync(
       WechatChannelsAuthorizationAddRequest data,
       final ApiCallback<WechatChannelsAuthorizationAddResponse> callback,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     ProgressResponseBody.ProgressListener progressListener = null;
@@ -237,7 +234,7 @@ public class WechatChannelsAuthorizationApi {
       WechatChannelsAuthorizationDeleteRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     Object localVarPostBody = data;
@@ -261,11 +258,8 @@ public class WechatChannelsAuthorizationApi {
     localVarHeaderParams.put("Content-Type", localVarContentType);
 
     if (headerPair != null && headerPair.length > 0) {
-      if (headerPair.length % 2 != 0) {
-        throw new UnsupportedOperationException("Parameter headerPair must be paired");
-      }
-      for (int i = 0; i < headerPair.length / 2; i++) {
-        localVarHeaderParams.put(headerPair[i], headerPair[i * 2 + 1]);
+      for (int i = 0; i < headerPair.length; i++) {
+        localVarHeaderParams.put(headerPair[i].getName(), headerPair[i].getValue());
       }
     }
 
@@ -305,7 +299,7 @@ public class WechatChannelsAuthorizationApi {
       WechatChannelsAuthorizationDeleteRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     // verify the required parameter 'data' is set
@@ -329,7 +323,7 @@ public class WechatChannelsAuthorizationApi {
    *     response body
    */
   public WechatChannelsAuthorizationDeleteResponse wechatChannelsAuthorizationDelete(
-      WechatChannelsAuthorizationDeleteRequest data, String... headerPair) throws ApiException {
+      WechatChannelsAuthorizationDeleteRequest data, Pair... headerPair) throws ApiException {
     ApiResponse<WechatChannelsAuthorizationDeleteResponse> resp =
         wechatChannelsAuthorizationDeleteWithHttpInfo(data, headerPair);
     return resp.getData();
@@ -345,7 +339,7 @@ public class WechatChannelsAuthorizationApi {
    */
   public ApiResponse<WechatChannelsAuthorizationDeleteResponse>
       wechatChannelsAuthorizationDeleteWithHttpInfo(
-          WechatChannelsAuthorizationDeleteRequest data, String... headerPair) throws ApiException {
+          WechatChannelsAuthorizationDeleteRequest data, Pair... headerPair) throws ApiException {
     com.squareup.okhttp.Call call =
         wechatChannelsAuthorizationDeleteValidateBeforeCall(data, null, null, headerPair);
     Type localVarReturnType =
@@ -364,7 +358,7 @@ public class WechatChannelsAuthorizationApi {
   public com.squareup.okhttp.Call wechatChannelsAuthorizationDeleteAsync(
       WechatChannelsAuthorizationDeleteRequest data,
       final ApiCallback<WechatChannelsAuthorizationDeleteResponse> callback,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     ProgressResponseBody.ProgressListener progressListener = null;
@@ -417,7 +411,7 @@ public class WechatChannelsAuthorizationApi {
       List<String> fields,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     Object localVarPostBody = null;
@@ -451,11 +445,8 @@ public class WechatChannelsAuthorizationApi {
     localVarHeaderParams.put("Content-Type", localVarContentType);
 
     if (headerPair != null && headerPair.length > 0) {
-      if (headerPair.length % 2 != 0) {
-        throw new UnsupportedOperationException("Parameter headerPair must be paired");
-      }
-      for (int i = 0; i < headerPair.length / 2; i++) {
-        localVarHeaderParams.put(headerPair[i], headerPair[i * 2 + 1]);
+      for (int i = 0; i < headerPair.length; i++) {
+        localVarHeaderParams.put(headerPair[i].getName(), headerPair[i].getValue());
       }
     }
 
@@ -499,7 +490,7 @@ public class WechatChannelsAuthorizationApi {
       List<String> fields,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     // verify the required parameter 'accountId' is set
@@ -539,7 +530,7 @@ public class WechatChannelsAuthorizationApi {
       Long page,
       Long pageSize,
       List<String> fields,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
     ApiResponse<WechatChannelsAuthorizationGetResponse> resp =
         wechatChannelsAuthorizationGetWithHttpInfo(
@@ -566,7 +557,7 @@ public class WechatChannelsAuthorizationApi {
           Long page,
           Long pageSize,
           List<String> fields,
-          String... headerPair)
+          Pair... headerPair)
           throws ApiException {
     com.squareup.okhttp.Call call =
         wechatChannelsAuthorizationGetValidateBeforeCall(
@@ -594,7 +585,7 @@ public class WechatChannelsAuthorizationApi {
       Long pageSize,
       List<String> fields,
       final ApiCallback<WechatChannelsAuthorizationGetResponse> callback,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     ProgressResponseBody.ProgressListener progressListener = null;
@@ -645,7 +636,7 @@ public class WechatChannelsAuthorizationApi {
       WechatChannelsAuthorizationUpdateRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     Object localVarPostBody = data;
@@ -669,11 +660,8 @@ public class WechatChannelsAuthorizationApi {
     localVarHeaderParams.put("Content-Type", localVarContentType);
 
     if (headerPair != null && headerPair.length > 0) {
-      if (headerPair.length % 2 != 0) {
-        throw new UnsupportedOperationException("Parameter headerPair must be paired");
-      }
-      for (int i = 0; i < headerPair.length / 2; i++) {
-        localVarHeaderParams.put(headerPair[i], headerPair[i * 2 + 1]);
+      for (int i = 0; i < headerPair.length; i++) {
+        localVarHeaderParams.put(headerPair[i].getName(), headerPair[i].getValue());
       }
     }
 
@@ -713,7 +701,7 @@ public class WechatChannelsAuthorizationApi {
       WechatChannelsAuthorizationUpdateRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     // verify the required parameter 'data' is set
@@ -737,7 +725,7 @@ public class WechatChannelsAuthorizationApi {
    *     response body
    */
   public WechatChannelsAuthorizationUpdateResponse wechatChannelsAuthorizationUpdate(
-      WechatChannelsAuthorizationUpdateRequest data, String... headerPair) throws ApiException {
+      WechatChannelsAuthorizationUpdateRequest data, Pair... headerPair) throws ApiException {
     ApiResponse<WechatChannelsAuthorizationUpdateResponse> resp =
         wechatChannelsAuthorizationUpdateWithHttpInfo(data, headerPair);
     return resp.getData();
@@ -753,7 +741,7 @@ public class WechatChannelsAuthorizationApi {
    */
   public ApiResponse<WechatChannelsAuthorizationUpdateResponse>
       wechatChannelsAuthorizationUpdateWithHttpInfo(
-          WechatChannelsAuthorizationUpdateRequest data, String... headerPair) throws ApiException {
+          WechatChannelsAuthorizationUpdateRequest data, Pair... headerPair) throws ApiException {
     com.squareup.okhttp.Call call =
         wechatChannelsAuthorizationUpdateValidateBeforeCall(data, null, null, headerPair);
     Type localVarReturnType =
@@ -772,7 +760,7 @@ public class WechatChannelsAuthorizationApi {
   public com.squareup.okhttp.Call wechatChannelsAuthorizationUpdateAsync(
       WechatChannelsAuthorizationUpdateRequest data,
       final ApiCallback<WechatChannelsAuthorizationUpdateResponse> callback,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     ProgressResponseBody.ProgressListener progressListener = null;

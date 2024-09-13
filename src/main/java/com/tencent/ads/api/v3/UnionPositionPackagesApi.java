@@ -68,7 +68,7 @@ public class UnionPositionPackagesApi {
       UnionPositionPackagesAddRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     Object localVarPostBody = data;
@@ -92,11 +92,8 @@ public class UnionPositionPackagesApi {
     localVarHeaderParams.put("Content-Type", localVarContentType);
 
     if (headerPair != null && headerPair.length > 0) {
-      if (headerPair.length % 2 != 0) {
-        throw new UnsupportedOperationException("Parameter headerPair must be paired");
-      }
-      for (int i = 0; i < headerPair.length / 2; i++) {
-        localVarHeaderParams.put(headerPair[i], headerPair[i * 2 + 1]);
+      for (int i = 0; i < headerPair.length; i++) {
+        localVarHeaderParams.put(headerPair[i].getName(), headerPair[i].getValue());
       }
     }
 
@@ -136,7 +133,7 @@ public class UnionPositionPackagesApi {
       UnionPositionPackagesAddRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     // verify the required parameter 'data' is set
@@ -159,7 +156,7 @@ public class UnionPositionPackagesApi {
    *     response body
    */
   public UnionPositionPackagesAddResponse unionPositionPackagesAdd(
-      UnionPositionPackagesAddRequest data, String... headerPair) throws ApiException {
+      UnionPositionPackagesAddRequest data, Pair... headerPair) throws ApiException {
     ApiResponse<UnionPositionPackagesAddResponse> resp =
         unionPositionPackagesAddWithHttpInfo(data, headerPair);
     return resp.getData();
@@ -174,7 +171,7 @@ public class UnionPositionPackagesApi {
    *     response body
    */
   public ApiResponse<UnionPositionPackagesAddResponse> unionPositionPackagesAddWithHttpInfo(
-      UnionPositionPackagesAddRequest data, String... headerPair) throws ApiException {
+      UnionPositionPackagesAddRequest data, Pair... headerPair) throws ApiException {
     com.squareup.okhttp.Call call =
         unionPositionPackagesAddValidateBeforeCall(data, null, null, headerPair);
     Type localVarReturnType = new TypeToken<UnionPositionPackagesAddResponse>() {}.getType();
@@ -192,7 +189,7 @@ public class UnionPositionPackagesApi {
   public com.squareup.okhttp.Call unionPositionPackagesAddAsync(
       UnionPositionPackagesAddRequest data,
       final ApiCallback<UnionPositionPackagesAddResponse> callback,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     ProgressResponseBody.ProgressListener progressListener = null;
@@ -236,7 +233,7 @@ public class UnionPositionPackagesApi {
       UnionPositionPackagesDeleteRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     Object localVarPostBody = data;
@@ -260,11 +257,8 @@ public class UnionPositionPackagesApi {
     localVarHeaderParams.put("Content-Type", localVarContentType);
 
     if (headerPair != null && headerPair.length > 0) {
-      if (headerPair.length % 2 != 0) {
-        throw new UnsupportedOperationException("Parameter headerPair must be paired");
-      }
-      for (int i = 0; i < headerPair.length / 2; i++) {
-        localVarHeaderParams.put(headerPair[i], headerPair[i * 2 + 1]);
+      for (int i = 0; i < headerPair.length; i++) {
+        localVarHeaderParams.put(headerPair[i].getName(), headerPair[i].getValue());
       }
     }
 
@@ -304,7 +298,7 @@ public class UnionPositionPackagesApi {
       UnionPositionPackagesDeleteRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     // verify the required parameter 'data' is set
@@ -328,7 +322,7 @@ public class UnionPositionPackagesApi {
    *     response body
    */
   public UnionPositionPackagesDeleteResponse unionPositionPackagesDelete(
-      UnionPositionPackagesDeleteRequest data, String... headerPair) throws ApiException {
+      UnionPositionPackagesDeleteRequest data, Pair... headerPair) throws ApiException {
     ApiResponse<UnionPositionPackagesDeleteResponse> resp =
         unionPositionPackagesDeleteWithHttpInfo(data, headerPair);
     return resp.getData();
@@ -343,7 +337,7 @@ public class UnionPositionPackagesApi {
    *     response body
    */
   public ApiResponse<UnionPositionPackagesDeleteResponse> unionPositionPackagesDeleteWithHttpInfo(
-      UnionPositionPackagesDeleteRequest data, String... headerPair) throws ApiException {
+      UnionPositionPackagesDeleteRequest data, Pair... headerPair) throws ApiException {
     com.squareup.okhttp.Call call =
         unionPositionPackagesDeleteValidateBeforeCall(data, null, null, headerPair);
     Type localVarReturnType = new TypeToken<UnionPositionPackagesDeleteResponse>() {}.getType();
@@ -361,7 +355,7 @@ public class UnionPositionPackagesApi {
   public com.squareup.okhttp.Call unionPositionPackagesDeleteAsync(
       UnionPositionPackagesDeleteRequest data,
       final ApiCallback<UnionPositionPackagesDeleteResponse> callback,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     ProgressResponseBody.ProgressListener progressListener = null;
@@ -413,7 +407,7 @@ public class UnionPositionPackagesApi {
       List<String> fields,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     Object localVarPostBody = null;
@@ -447,11 +441,8 @@ public class UnionPositionPackagesApi {
     localVarHeaderParams.put("Content-Type", localVarContentType);
 
     if (headerPair != null && headerPair.length > 0) {
-      if (headerPair.length % 2 != 0) {
-        throw new UnsupportedOperationException("Parameter headerPair must be paired");
-      }
-      for (int i = 0; i < headerPair.length / 2; i++) {
-        localVarHeaderParams.put(headerPair[i], headerPair[i * 2 + 1]);
+      for (int i = 0; i < headerPair.length; i++) {
+        localVarHeaderParams.put(headerPair[i].getName(), headerPair[i].getValue());
       }
     }
 
@@ -495,7 +486,7 @@ public class UnionPositionPackagesApi {
       List<String> fields,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     // verify the required parameter 'accountId' is set
@@ -535,7 +526,7 @@ public class UnionPositionPackagesApi {
       Long page,
       Long pageSize,
       List<String> fields,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
     ApiResponse<UnionPositionPackagesGetResponse> resp =
         unionPositionPackagesGetWithHttpInfo(
@@ -561,7 +552,7 @@ public class UnionPositionPackagesApi {
       Long page,
       Long pageSize,
       List<String> fields,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
     com.squareup.okhttp.Call call =
         unionPositionPackagesGetValidateBeforeCall(
@@ -589,7 +580,7 @@ public class UnionPositionPackagesApi {
       Long pageSize,
       List<String> fields,
       final ApiCallback<UnionPositionPackagesGetResponse> callback,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     ProgressResponseBody.ProgressListener progressListener = null;
@@ -640,7 +631,7 @@ public class UnionPositionPackagesApi {
       UnionPositionPackagesUpdateRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     Object localVarPostBody = data;
@@ -664,11 +655,8 @@ public class UnionPositionPackagesApi {
     localVarHeaderParams.put("Content-Type", localVarContentType);
 
     if (headerPair != null && headerPair.length > 0) {
-      if (headerPair.length % 2 != 0) {
-        throw new UnsupportedOperationException("Parameter headerPair must be paired");
-      }
-      for (int i = 0; i < headerPair.length / 2; i++) {
-        localVarHeaderParams.put(headerPair[i], headerPair[i * 2 + 1]);
+      for (int i = 0; i < headerPair.length; i++) {
+        localVarHeaderParams.put(headerPair[i].getName(), headerPair[i].getValue());
       }
     }
 
@@ -708,7 +696,7 @@ public class UnionPositionPackagesApi {
       UnionPositionPackagesUpdateRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     // verify the required parameter 'data' is set
@@ -732,7 +720,7 @@ public class UnionPositionPackagesApi {
    *     response body
    */
   public UnionPositionPackagesUpdateResponse unionPositionPackagesUpdate(
-      UnionPositionPackagesUpdateRequest data, String... headerPair) throws ApiException {
+      UnionPositionPackagesUpdateRequest data, Pair... headerPair) throws ApiException {
     ApiResponse<UnionPositionPackagesUpdateResponse> resp =
         unionPositionPackagesUpdateWithHttpInfo(data, headerPair);
     return resp.getData();
@@ -747,7 +735,7 @@ public class UnionPositionPackagesApi {
    *     response body
    */
   public ApiResponse<UnionPositionPackagesUpdateResponse> unionPositionPackagesUpdateWithHttpInfo(
-      UnionPositionPackagesUpdateRequest data, String... headerPair) throws ApiException {
+      UnionPositionPackagesUpdateRequest data, Pair... headerPair) throws ApiException {
     com.squareup.okhttp.Call call =
         unionPositionPackagesUpdateValidateBeforeCall(data, null, null, headerPair);
     Type localVarReturnType = new TypeToken<UnionPositionPackagesUpdateResponse>() {}.getType();
@@ -765,7 +753,7 @@ public class UnionPositionPackagesApi {
   public com.squareup.okhttp.Call unionPositionPackagesUpdateAsync(
       UnionPositionPackagesUpdateRequest data,
       final ApiCallback<UnionPositionPackagesUpdateResponse> callback,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     ProgressResponseBody.ProgressListener progressListener = null;

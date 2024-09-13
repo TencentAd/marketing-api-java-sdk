@@ -14,11 +14,13 @@ public class AddImages {
   /** TencentAds */
   public TencentAds tencentAds;
 
-  public Long accountId = null;
-
   public String uploadType = "UPLOAD_TYPE_FILE";
 
   public String signature = null;
+
+  public Long accountId = null;
+
+  public Long organizationId = null;
 
   public File file = new File("YOUR IMAGE FILE PATH");
 
@@ -49,9 +51,10 @@ public class AddImages {
         tencentAds
             .images()
             .imagesAdd(
-                accountId,
                 uploadType,
                 signature,
+                accountId,
+                organizationId,
                 file,
                 bytes,
                 imageUsage,

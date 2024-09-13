@@ -66,7 +66,7 @@ public class DynamicCreativesApi {
       DynamicCreativesAddRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     Object localVarPostBody = data;
@@ -90,11 +90,8 @@ public class DynamicCreativesApi {
     localVarHeaderParams.put("Content-Type", localVarContentType);
 
     if (headerPair != null && headerPair.length > 0) {
-      if (headerPair.length % 2 != 0) {
-        throw new UnsupportedOperationException("Parameter headerPair must be paired");
-      }
-      for (int i = 0; i < headerPair.length / 2; i++) {
-        localVarHeaderParams.put(headerPair[i], headerPair[i * 2 + 1]);
+      for (int i = 0; i < headerPair.length; i++) {
+        localVarHeaderParams.put(headerPair[i].getName(), headerPair[i].getValue());
       }
     }
 
@@ -134,7 +131,7 @@ public class DynamicCreativesApi {
       DynamicCreativesAddRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     // verify the required parameter 'data' is set
@@ -157,7 +154,7 @@ public class DynamicCreativesApi {
    *     response body
    */
   public DynamicCreativesAddResponse dynamicCreativesAdd(
-      DynamicCreativesAddRequest data, String... headerPair) throws ApiException {
+      DynamicCreativesAddRequest data, Pair... headerPair) throws ApiException {
     ApiResponse<DynamicCreativesAddResponse> resp =
         dynamicCreativesAddWithHttpInfo(data, headerPair);
     return resp.getData();
@@ -172,7 +169,7 @@ public class DynamicCreativesApi {
    *     response body
    */
   public ApiResponse<DynamicCreativesAddResponse> dynamicCreativesAddWithHttpInfo(
-      DynamicCreativesAddRequest data, String... headerPair) throws ApiException {
+      DynamicCreativesAddRequest data, Pair... headerPair) throws ApiException {
     com.squareup.okhttp.Call call =
         dynamicCreativesAddValidateBeforeCall(data, null, null, headerPair);
     Type localVarReturnType = new TypeToken<DynamicCreativesAddResponse>() {}.getType();
@@ -190,7 +187,7 @@ public class DynamicCreativesApi {
   public com.squareup.okhttp.Call dynamicCreativesAddAsync(
       DynamicCreativesAddRequest data,
       final ApiCallback<DynamicCreativesAddResponse> callback,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     ProgressResponseBody.ProgressListener progressListener = null;
@@ -242,7 +239,7 @@ public class DynamicCreativesApi {
       List<String> fields,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     Object localVarPostBody = null;
@@ -276,11 +273,8 @@ public class DynamicCreativesApi {
     localVarHeaderParams.put("Content-Type", localVarContentType);
 
     if (headerPair != null && headerPair.length > 0) {
-      if (headerPair.length % 2 != 0) {
-        throw new UnsupportedOperationException("Parameter headerPair must be paired");
-      }
-      for (int i = 0; i < headerPair.length / 2; i++) {
-        localVarHeaderParams.put(headerPair[i], headerPair[i * 2 + 1]);
+      for (int i = 0; i < headerPair.length; i++) {
+        localVarHeaderParams.put(headerPair[i].getName(), headerPair[i].getValue());
       }
     }
 
@@ -324,7 +318,7 @@ public class DynamicCreativesApi {
       List<String> fields,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     // verify the required parameter 'accountId' is set
@@ -364,7 +358,7 @@ public class DynamicCreativesApi {
       Long page,
       Long pageSize,
       List<String> fields,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
     ApiResponse<DynamicCreativesGetResponse> resp =
         dynamicCreativesGetWithHttpInfo(accountId, filtering, page, pageSize, fields, headerPair);
@@ -389,7 +383,7 @@ public class DynamicCreativesApi {
       Long page,
       Long pageSize,
       List<String> fields,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
     com.squareup.okhttp.Call call =
         dynamicCreativesGetValidateBeforeCall(
@@ -417,7 +411,7 @@ public class DynamicCreativesApi {
       Long pageSize,
       List<String> fields,
       final ApiCallback<DynamicCreativesGetResponse> callback,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     ProgressResponseBody.ProgressListener progressListener = null;
@@ -468,7 +462,7 @@ public class DynamicCreativesApi {
       DynamicCreativesUpdateRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     Object localVarPostBody = data;
@@ -492,11 +486,8 @@ public class DynamicCreativesApi {
     localVarHeaderParams.put("Content-Type", localVarContentType);
 
     if (headerPair != null && headerPair.length > 0) {
-      if (headerPair.length % 2 != 0) {
-        throw new UnsupportedOperationException("Parameter headerPair must be paired");
-      }
-      for (int i = 0; i < headerPair.length / 2; i++) {
-        localVarHeaderParams.put(headerPair[i], headerPair[i * 2 + 1]);
+      for (int i = 0; i < headerPair.length; i++) {
+        localVarHeaderParams.put(headerPair[i].getName(), headerPair[i].getValue());
       }
     }
 
@@ -536,7 +527,7 @@ public class DynamicCreativesApi {
       DynamicCreativesUpdateRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     // verify the required parameter 'data' is set
@@ -559,7 +550,7 @@ public class DynamicCreativesApi {
    *     response body
    */
   public DynamicCreativesUpdateResponse dynamicCreativesUpdate(
-      DynamicCreativesUpdateRequest data, String... headerPair) throws ApiException {
+      DynamicCreativesUpdateRequest data, Pair... headerPair) throws ApiException {
     ApiResponse<DynamicCreativesUpdateResponse> resp =
         dynamicCreativesUpdateWithHttpInfo(data, headerPair);
     return resp.getData();
@@ -574,7 +565,7 @@ public class DynamicCreativesApi {
    *     response body
    */
   public ApiResponse<DynamicCreativesUpdateResponse> dynamicCreativesUpdateWithHttpInfo(
-      DynamicCreativesUpdateRequest data, String... headerPair) throws ApiException {
+      DynamicCreativesUpdateRequest data, Pair... headerPair) throws ApiException {
     com.squareup.okhttp.Call call =
         dynamicCreativesUpdateValidateBeforeCall(data, null, null, headerPair);
     Type localVarReturnType = new TypeToken<DynamicCreativesUpdateResponse>() {}.getType();
@@ -592,7 +583,7 @@ public class DynamicCreativesApi {
   public com.squareup.okhttp.Call dynamicCreativesUpdateAsync(
       DynamicCreativesUpdateRequest data,
       final ApiCallback<DynamicCreativesUpdateResponse> callback,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     ProgressResponseBody.ProgressListener progressListener = null;

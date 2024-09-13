@@ -15,6 +15,7 @@ package com.tencent.ads.container.v3;
 import com.google.inject.Inject;
 import com.tencent.ads.ApiContainer;
 import com.tencent.ads.ApiException;
+import com.tencent.ads.Pair;
 import com.tencent.ads.anno.*;
 import com.tencent.ads.api.v3.RtatargetApi;
 import com.tencent.ads.exception.TencentAdsResponseException;
@@ -38,7 +39,7 @@ public class RtatargetApiContainer extends ApiContainer {
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
-  public RtatargetAddResponse rtatargetAdd(RtatargetAddRequest data, String... headerPair)
+  public RtatargetAddResponse rtatargetAdd(RtatargetAddRequest data, Pair... headerPair)
       throws ApiException, TencentAdsResponseException {
     RtatargetAddResponse resp = api.rtatargetAdd(data, headerPair);
     handleResponse(gson.toJson(resp));
@@ -54,7 +55,7 @@ public class RtatargetApiContainer extends ApiContainer {
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
-  public RtatargetDeleteResponse rtatargetDelete(RtatargetDeleteRequest data, String... headerPair)
+  public RtatargetDeleteResponse rtatargetDelete(RtatargetDeleteRequest data, Pair... headerPair)
       throws ApiException, TencentAdsResponseException {
     RtatargetDeleteResponse resp = api.rtatargetDelete(data, headerPair);
     handleResponse(gson.toJson(resp));
@@ -70,7 +71,7 @@ public class RtatargetApiContainer extends ApiContainer {
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
-  public RtatargetGetResponseData rtatargetGet(RtatargetGetRequest data, String... headerPair)
+  public RtatargetGetResponseData rtatargetGet(RtatargetGetRequest data, Pair... headerPair)
       throws ApiException, TencentAdsResponseException {
     RtatargetGetResponse resp = api.rtatargetGet(data, headerPair);
     handleResponse(gson.toJson(resp));

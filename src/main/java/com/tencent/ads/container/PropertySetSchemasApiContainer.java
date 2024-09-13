@@ -15,6 +15,7 @@ package com.tencent.ads.container;
 import com.google.inject.Inject;
 import com.tencent.ads.ApiContainer;
 import com.tencent.ads.ApiException;
+import com.tencent.ads.Pair;
 import com.tencent.ads.anno.*;
 import com.tencent.ads.api.PropertySetSchemasApi;
 import com.tencent.ads.exception.TencentAdsResponseException;
@@ -39,7 +40,7 @@ public class PropertySetSchemasApiContainer extends ApiContainer {
    *     response body
    */
   public PropertySetSchemasAddResponse propertySetSchemasAdd(
-      PropertySetSchemasAddRequest data, String... headerPair)
+      PropertySetSchemasAddRequest data, Pair... headerPair)
       throws ApiException, TencentAdsResponseException {
     PropertySetSchemasAddResponse resp = api.propertySetSchemasAdd(data, headerPair);
     handleResponse(gson.toJson(resp));
@@ -58,7 +59,7 @@ public class PropertySetSchemasApiContainer extends ApiContainer {
    *     response body
    */
   public PropertySetSchemasGetResponseData propertySetSchemasGet(
-      Long accountId, Long propertySetId, List<String> fields, String... headerPair)
+      Long accountId, Long propertySetId, List<String> fields, Pair... headerPair)
       throws ApiException, TencentAdsResponseException {
     PropertySetSchemasGetResponse resp =
         api.propertySetSchemasGet(accountId, propertySetId, fields, headerPair);
@@ -75,7 +76,7 @@ public class PropertySetSchemasApiContainer extends ApiContainer {
    *     response body
    */
   public PropertySetSchemasUpdateResponse propertySetSchemasUpdate(
-      PropertySetSchemasUpdateRequest data, String... headerPair)
+      PropertySetSchemasUpdateRequest data, Pair... headerPair)
       throws ApiException, TencentAdsResponseException {
     PropertySetSchemasUpdateResponse resp = api.propertySetSchemasUpdate(data, headerPair);
     handleResponse(gson.toJson(resp));

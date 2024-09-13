@@ -42,6 +42,9 @@ public class WechatChannelsAdAccountUpdateRequest {
   @SerializedName("export_username")
   private String exportUsername = null;
 
+  @SerializedName("wechat_channels_account_id")
+  private String wechatChannelsAccountId = null;
+
   public WechatChannelsAdAccountUpdateRequest accountId(Long accountId) {
     this.accountId = accountId;
     return this;
@@ -186,6 +189,26 @@ public class WechatChannelsAdAccountUpdateRequest {
     this.exportUsername = exportUsername;
   }
 
+  public WechatChannelsAdAccountUpdateRequest wechatChannelsAccountId(
+      String wechatChannelsAccountId) {
+    this.wechatChannelsAccountId = wechatChannelsAccountId;
+    return this;
+  }
+
+  /**
+   * Get wechatChannelsAccountId
+   *
+   * @return wechatChannelsAccountId
+   */
+  @ApiModelProperty(value = "")
+  public String getWechatChannelsAccountId() {
+    return wechatChannelsAccountId;
+  }
+
+  public void setWechatChannelsAccountId(String wechatChannelsAccountId) {
+    this.wechatChannelsAccountId = wechatChannelsAccountId;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -206,7 +229,10 @@ public class WechatChannelsAdAccountUpdateRequest {
         && Objects.equals(this.headImageId, wechatChannelsAdAccountUpdateRequest.headImageId)
         && Objects.equals(
             this.certificationList, wechatChannelsAdAccountUpdateRequest.certificationList)
-        && Objects.equals(this.exportUsername, wechatChannelsAdAccountUpdateRequest.exportUsername);
+        && Objects.equals(this.exportUsername, wechatChannelsAdAccountUpdateRequest.exportUsername)
+        && Objects.equals(
+            this.wechatChannelsAccountId,
+            wechatChannelsAdAccountUpdateRequest.wechatChannelsAccountId);
   }
 
   @Override
@@ -218,7 +244,8 @@ public class WechatChannelsAdAccountUpdateRequest {
         nickname,
         headImageId,
         certificationList,
-        exportUsername);
+        exportUsername,
+        wechatChannelsAccountId);
   }
 
   @Override

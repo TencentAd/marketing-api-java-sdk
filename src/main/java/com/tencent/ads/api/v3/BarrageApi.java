@@ -63,7 +63,7 @@ public class BarrageApi {
       BarrageAddRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     Object localVarPostBody = data;
@@ -87,11 +87,8 @@ public class BarrageApi {
     localVarHeaderParams.put("Content-Type", localVarContentType);
 
     if (headerPair != null && headerPair.length > 0) {
-      if (headerPair.length % 2 != 0) {
-        throw new UnsupportedOperationException("Parameter headerPair must be paired");
-      }
-      for (int i = 0; i < headerPair.length / 2; i++) {
-        localVarHeaderParams.put(headerPair[i], headerPair[i * 2 + 1]);
+      for (int i = 0; i < headerPair.length; i++) {
+        localVarHeaderParams.put(headerPair[i].getName(), headerPair[i].getValue());
       }
     }
 
@@ -131,7 +128,7 @@ public class BarrageApi {
       BarrageAddRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     // verify the required parameter 'data' is set
@@ -153,7 +150,7 @@ public class BarrageApi {
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
-  public BarrageAddResponse barrageAdd(BarrageAddRequest data, String... headerPair)
+  public BarrageAddResponse barrageAdd(BarrageAddRequest data, Pair... headerPair)
       throws ApiException {
     ApiResponse<BarrageAddResponse> resp = barrageAddWithHttpInfo(data, headerPair);
     return resp.getData();
@@ -168,7 +165,7 @@ public class BarrageApi {
    *     response body
    */
   public ApiResponse<BarrageAddResponse> barrageAddWithHttpInfo(
-      BarrageAddRequest data, String... headerPair) throws ApiException {
+      BarrageAddRequest data, Pair... headerPair) throws ApiException {
     com.squareup.okhttp.Call call = barrageAddValidateBeforeCall(data, null, null, headerPair);
     Type localVarReturnType = new TypeToken<BarrageAddResponse>() {}.getType();
     return apiClient.execute(call, localVarReturnType);
@@ -183,7 +180,7 @@ public class BarrageApi {
    * @throws ApiException If fail to process the API call, e.g. serializing the request body object
    */
   public com.squareup.okhttp.Call barrageAddAsync(
-      BarrageAddRequest data, final ApiCallback<BarrageAddResponse> callback, String... headerPair)
+      BarrageAddRequest data, final ApiCallback<BarrageAddResponse> callback, Pair... headerPair)
       throws ApiException {
 
     ProgressResponseBody.ProgressListener progressListener = null;
@@ -234,7 +231,7 @@ public class BarrageApi {
       List<String> fields,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     Object localVarPostBody = null;
@@ -267,11 +264,8 @@ public class BarrageApi {
     localVarHeaderParams.put("Content-Type", localVarContentType);
 
     if (headerPair != null && headerPair.length > 0) {
-      if (headerPair.length % 2 != 0) {
-        throw new UnsupportedOperationException("Parameter headerPair must be paired");
-      }
-      for (int i = 0; i < headerPair.length / 2; i++) {
-        localVarHeaderParams.put(headerPair[i], headerPair[i * 2 + 1]);
+      for (int i = 0; i < headerPair.length; i++) {
+        localVarHeaderParams.put(headerPair[i].getName(), headerPair[i].getValue());
       }
     }
 
@@ -315,7 +309,7 @@ public class BarrageApi {
       List<String> fields,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     // verify the required parameter 'accountId' is set
@@ -355,7 +349,7 @@ public class BarrageApi {
       Long page,
       Long pageSize,
       List<String> fields,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
     ApiResponse<BarrageGetResponse> resp =
         barrageGetWithHttpInfo(accountId, idList, page, pageSize, fields, headerPair);
@@ -380,7 +374,7 @@ public class BarrageApi {
       Long page,
       Long pageSize,
       List<String> fields,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
     com.squareup.okhttp.Call call =
         barrageGetValidateBeforeCall(
@@ -408,7 +402,7 @@ public class BarrageApi {
       Long pageSize,
       List<String> fields,
       final ApiCallback<BarrageGetResponse> callback,
-      String... headerPair)
+      Pair... headerPair)
       throws ApiException {
 
     ProgressResponseBody.ProgressListener progressListener = null;
