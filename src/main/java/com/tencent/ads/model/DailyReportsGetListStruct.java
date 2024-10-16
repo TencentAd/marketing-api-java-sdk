@@ -2400,6 +2400,12 @@ public class DailyReportsGetListStruct {
   @SerializedName("project_name")
   private String projectName = null;
 
+  @SerializedName("purchase_pv")
+  private Long purchasePv = null;
+
+  @SerializedName("reg_pv")
+  private Long regPv = null;
+
   public DailyReportsGetListStruct accountId(Long accountId) {
     this.accountId = accountId;
     return this;
@@ -17520,6 +17526,44 @@ public class DailyReportsGetListStruct {
     this.projectName = projectName;
   }
 
+  public DailyReportsGetListStruct purchasePv(Long purchasePv) {
+    this.purchasePv = purchasePv;
+    return this;
+  }
+
+  /**
+   * Get purchasePv
+   *
+   * @return purchasePv
+   */
+  @ApiModelProperty(value = "")
+  public Long getPurchasePv() {
+    return purchasePv;
+  }
+
+  public void setPurchasePv(Long purchasePv) {
+    this.purchasePv = purchasePv;
+  }
+
+  public DailyReportsGetListStruct regPv(Long regPv) {
+    this.regPv = regPv;
+    return this;
+  }
+
+  /**
+   * Get regPv
+   *
+   * @return regPv
+   */
+  @ApiModelProperty(value = "")
+  public Long getRegPv() {
+    return regPv;
+  }
+
+  public void setRegPv(Long regPv) {
+    this.regPv = regPv;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -18653,7 +18697,9 @@ public class DailyReportsGetListStruct {
         && Objects.equals(this.channelsMatchSharePv, dailyReportsGetListStruct.channelsMatchSharePv)
         && Objects.equals(this.exportId, dailyReportsGetListStruct.exportId)
         && Objects.equals(this.projectId, dailyReportsGetListStruct.projectId)
-        && Objects.equals(this.projectName, dailyReportsGetListStruct.projectName);
+        && Objects.equals(this.projectName, dailyReportsGetListStruct.projectName)
+        && Objects.equals(this.purchasePv, dailyReportsGetListStruct.purchasePv)
+        && Objects.equals(this.regPv, dailyReportsGetListStruct.regPv);
   }
 
   @Override
@@ -19451,7 +19497,9 @@ public class DailyReportsGetListStruct {
         channelsMatchSharePv,
         exportId,
         projectId,
-        projectName);
+        projectName,
+        purchasePv,
+        regPv);
   }
 
   @Override

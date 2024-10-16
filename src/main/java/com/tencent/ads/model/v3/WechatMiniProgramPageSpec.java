@@ -32,9 +32,6 @@ public class WechatMiniProgramPageSpec {
   @SerializedName("mini_program_paths")
   private List<String> miniProgramPaths = null;
 
-  @SerializedName("backup_option")
-  private BackUpOption backupOption = null;
-
   @SerializedName("mpa_mini_program_wildcard_url")
   private String mpaMiniProgramWildcardUrl = null;
 
@@ -103,25 +100,6 @@ public class WechatMiniProgramPageSpec {
     this.miniProgramPaths = miniProgramPaths;
   }
 
-  public WechatMiniProgramPageSpec backupOption(BackUpOption backupOption) {
-    this.backupOption = backupOption;
-    return this;
-  }
-
-  /**
-   * Get backupOption
-   *
-   * @return backupOption
-   */
-  @ApiModelProperty(value = "")
-  public BackUpOption getBackupOption() {
-    return backupOption;
-  }
-
-  public void setBackupOption(BackUpOption backupOption) {
-    this.backupOption = backupOption;
-  }
-
   public WechatMiniProgramPageSpec mpaMiniProgramWildcardUrl(String mpaMiniProgramWildcardUrl) {
     this.mpaMiniProgramWildcardUrl = mpaMiniProgramWildcardUrl;
     return this;
@@ -153,7 +131,6 @@ public class WechatMiniProgramPageSpec {
     return Objects.equals(this.miniProgramId, wechatMiniProgramPageSpec.miniProgramId)
         && Objects.equals(this.miniProgramPath, wechatMiniProgramPageSpec.miniProgramPath)
         && Objects.equals(this.miniProgramPaths, wechatMiniProgramPageSpec.miniProgramPaths)
-        && Objects.equals(this.backupOption, wechatMiniProgramPageSpec.backupOption)
         && Objects.equals(
             this.mpaMiniProgramWildcardUrl, wechatMiniProgramPageSpec.mpaMiniProgramWildcardUrl);
   }
@@ -161,7 +138,7 @@ public class WechatMiniProgramPageSpec {
   @Override
   public int hashCode() {
     return Objects.hash(
-        miniProgramId, miniProgramPath, miniProgramPaths, backupOption, mpaMiniProgramWildcardUrl);
+        miniProgramId, miniProgramPath, miniProgramPaths, mpaMiniProgramWildcardUrl);
   }
 
   @Override

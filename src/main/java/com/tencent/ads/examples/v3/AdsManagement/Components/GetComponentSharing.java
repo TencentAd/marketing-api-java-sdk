@@ -4,22 +4,19 @@ import com.tencent.ads.ApiContextConfig;
 import com.tencent.ads.exception.TencentAdsResponseException;
 import com.tencent.ads.exception.TencentAdsSDKException;
 import com.tencent.ads.model.v3.*;
-import com.tencent.ads.model.v3.FilteringStruct;
 import com.tencent.ads.v3.TencentAds;
 import java.util.List;
 
-public class GetComponents {
+public class GetComponentSharing {
   /** YOUR ACCESS TOKEN */
   public String ACCESS_TOKEN = "YOUR ACCESS TOKEN";
 
   /** TencentAds */
   public TencentAds tencentAds;
 
-  public Long accountId = null;
-
   public Long organizationId = null;
 
-  public List<FilteringStruct> filtering = null;
+  public Long componentId = null;
 
   public Long page = null;
 
@@ -39,19 +36,19 @@ public class GetComponents {
 
   public void buildParams() {}
 
-  public ComponentsGetResponseData getComponents() throws Exception {
-    ComponentsGetResponseData response =
+  public ComponentSharingGetResponseData getComponentSharing() throws Exception {
+    ComponentSharingGetResponseData response =
         tencentAds
-            .components()
-            .componentsGet(accountId, organizationId, filtering, page, pageSize, isDeleted, fields);
+            .componentSharing()
+            .componentSharingGet(organizationId, componentId, page, pageSize, isDeleted, fields);
     return response;
   }
 
   public static void main(String[] args) {
     try {
-      GetComponents getComponents = new GetComponents();
-      getComponents.init();
-      ComponentsGetResponseData response = getComponents.getComponents();
+      GetComponentSharing getComponentSharing = new GetComponentSharing();
+      getComponentSharing.init();
+      ComponentSharingGetResponseData response = getComponentSharing.getComponentSharing();
     } catch (TencentAdsResponseException e) {
       e.printStackTrace();
     } catch (TencentAdsSDKException e) {

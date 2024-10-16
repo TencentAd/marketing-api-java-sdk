@@ -19,18 +19,18 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-/** 微信小程序/微信小游戏蹊径落地页开关选项 */
-@JsonAdapter(BackUpOption.Adapter.class)
-public enum BackUpOption {
-  UNKNOWN("BACKUP_OPTION_UNKNOWN"),
+/** 被共享账号类型 */
+@JsonAdapter(SharedAccountType.Adapter.class)
+public enum SharedAccountType {
+  INVALID("INVALID"),
 
-  DEFAULT_ON("BACKUP_OPTION_DEFAULT_ON"),
+  ADVERTISER("ADVERTISER"),
 
-  DEFAULT_OFF("BACKUP_OPTION_DEFAULT_OFF");
+  ORGANIZATION("ORGANIZATION");
 
   private String value;
 
-  BackUpOption(String value) {
+  SharedAccountType(String value) {
     this.value = value;
   }
 
@@ -43,8 +43,8 @@ public enum BackUpOption {
     return String.valueOf(value);
   }
 
-  public static BackUpOption fromValue(String text) {
-    for (BackUpOption b : BackUpOption.values()) {
+  public static SharedAccountType fromValue(String text) {
+    for (SharedAccountType b : SharedAccountType.values()) {
       if (String.valueOf(b.value).equals(text)) {
         return b;
       }
@@ -52,17 +52,17 @@ public enum BackUpOption {
     return null;
   }
 
-  public static class Adapter extends TypeAdapter<BackUpOption> {
+  public static class Adapter extends TypeAdapter<SharedAccountType> {
     @Override
-    public void write(final JsonWriter jsonWriter, final BackUpOption enumeration)
+    public void write(final JsonWriter jsonWriter, final SharedAccountType enumeration)
         throws IOException {
       jsonWriter.value(enumeration.getValue());
     }
 
     @Override
-    public BackUpOption read(final JsonReader jsonReader) throws IOException {
+    public SharedAccountType read(final JsonReader jsonReader) throws IOException {
       String value = jsonReader.nextString();
-      return BackUpOption.fromValue(String.valueOf(value));
+      return SharedAccountType.fromValue(String.valueOf(value));
     }
   }
 }

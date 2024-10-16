@@ -18,8 +18,6 @@ public class GetMarketingTargetTypes {
 
   public Long organizationId = null;
 
-  public String businessType = null;
-
   public List<String> fields = null;
 
   public void init() {
@@ -36,7 +34,7 @@ public class GetMarketingTargetTypes {
     MarketingTargetTypesGetResponseData response =
         tencentAds
             .marketingTargetTypes()
-            .marketingTargetTypesGet(accountId, organizationId, businessType, fields);
+            .marketingTargetTypesGet(accountId, organizationId, fields);
     return response;
   }
 

@@ -21,6 +21,7 @@ import com.tencent.ads.api.v3.ConversionLinksApi;
 import com.tencent.ads.exception.TencentAdsResponseException;
 import com.tencent.ads.model.v3.ConversionLinksGetResponse;
 import com.tencent.ads.model.v3.ConversionLinksGetResponseData;
+import com.tencent.ads.model.v3.LinkOptimizationGoalStruct;
 import java.util.List;
 
 public class ConversionLinksApiContainer extends ApiContainer {
@@ -32,16 +33,22 @@ public class ConversionLinksApiContainer extends ApiContainer {
    *
    * @param accountId (required)
    * @param secondCategoryType (required)
+   * @param optimizationGoalStruct (optional)
    * @param fields 返回参数的字段列表 (optional)
    * @return ConversionLinksGetResponse
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
   public ConversionLinksGetResponseData conversionLinksGet(
-      Long accountId, String secondCategoryType, List<String> fields, Pair... headerPair)
+      Long accountId,
+      String secondCategoryType,
+      LinkOptimizationGoalStruct optimizationGoalStruct,
+      List<String> fields,
+      Pair... headerPair)
       throws ApiException, TencentAdsResponseException {
     ConversionLinksGetResponse resp =
-        api.conversionLinksGet(accountId, secondCategoryType, fields, headerPair);
+        api.conversionLinksGet(
+            accountId, secondCategoryType, optimizationGoalStruct, fields, headerPair);
     handleResponse(gson.toJson(resp));
     return resp.getData();
   }

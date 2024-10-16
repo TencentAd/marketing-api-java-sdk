@@ -16,6 +16,8 @@ import com.google.gson.Gson;
 import com.google.gson.annotations.SerializedName;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Objects;
 
 /** 返回结构 */
@@ -116,6 +118,21 @@ public class ConversionsGetListStruct {
 
   @SerializedName("disable_message")
   private String disableMessage = null;
+
+  @SerializedName("inspection_free_switch")
+  private Boolean inspectionFreeSwitch = null;
+
+  @SerializedName("custom_report_node_list")
+  private List<Long> customReportNodeList = null;
+
+  @SerializedName("must_report_node_list")
+  private List<Long> mustReportNodeList = null;
+
+  @SerializedName("recommend_report_node_list")
+  private List<Long> recommendReportNodeList = null;
+
+  @SerializedName("conversion_link_nodes")
+  private List<LinkNodeStruct> conversionLinkNodes = null;
 
   public ConversionsGetListStruct conversionId(Long conversionId) {
     this.conversionId = conversionId;
@@ -733,6 +750,134 @@ public class ConversionsGetListStruct {
     this.disableMessage = disableMessage;
   }
 
+  public ConversionsGetListStruct inspectionFreeSwitch(Boolean inspectionFreeSwitch) {
+    this.inspectionFreeSwitch = inspectionFreeSwitch;
+    return this;
+  }
+
+  /**
+   * Get inspectionFreeSwitch
+   *
+   * @return inspectionFreeSwitch
+   */
+  @ApiModelProperty(value = "")
+  public Boolean isInspectionFreeSwitch() {
+    return inspectionFreeSwitch;
+  }
+
+  public void setInspectionFreeSwitch(Boolean inspectionFreeSwitch) {
+    this.inspectionFreeSwitch = inspectionFreeSwitch;
+  }
+
+  public ConversionsGetListStruct customReportNodeList(List<Long> customReportNodeList) {
+    this.customReportNodeList = customReportNodeList;
+    return this;
+  }
+
+  public ConversionsGetListStruct addCustomReportNodeListItem(Long customReportNodeListItem) {
+    if (this.customReportNodeList == null) {
+      this.customReportNodeList = new ArrayList<Long>();
+    }
+    this.customReportNodeList.add(customReportNodeListItem);
+    return this;
+  }
+
+  /**
+   * Get customReportNodeList
+   *
+   * @return customReportNodeList
+   */
+  @ApiModelProperty(value = "")
+  public List<Long> getCustomReportNodeList() {
+    return customReportNodeList;
+  }
+
+  public void setCustomReportNodeList(List<Long> customReportNodeList) {
+    this.customReportNodeList = customReportNodeList;
+  }
+
+  public ConversionsGetListStruct mustReportNodeList(List<Long> mustReportNodeList) {
+    this.mustReportNodeList = mustReportNodeList;
+    return this;
+  }
+
+  public ConversionsGetListStruct addMustReportNodeListItem(Long mustReportNodeListItem) {
+    if (this.mustReportNodeList == null) {
+      this.mustReportNodeList = new ArrayList<Long>();
+    }
+    this.mustReportNodeList.add(mustReportNodeListItem);
+    return this;
+  }
+
+  /**
+   * Get mustReportNodeList
+   *
+   * @return mustReportNodeList
+   */
+  @ApiModelProperty(value = "")
+  public List<Long> getMustReportNodeList() {
+    return mustReportNodeList;
+  }
+
+  public void setMustReportNodeList(List<Long> mustReportNodeList) {
+    this.mustReportNodeList = mustReportNodeList;
+  }
+
+  public ConversionsGetListStruct recommendReportNodeList(List<Long> recommendReportNodeList) {
+    this.recommendReportNodeList = recommendReportNodeList;
+    return this;
+  }
+
+  public ConversionsGetListStruct addRecommendReportNodeListItem(Long recommendReportNodeListItem) {
+    if (this.recommendReportNodeList == null) {
+      this.recommendReportNodeList = new ArrayList<Long>();
+    }
+    this.recommendReportNodeList.add(recommendReportNodeListItem);
+    return this;
+  }
+
+  /**
+   * Get recommendReportNodeList
+   *
+   * @return recommendReportNodeList
+   */
+  @ApiModelProperty(value = "")
+  public List<Long> getRecommendReportNodeList() {
+    return recommendReportNodeList;
+  }
+
+  public void setRecommendReportNodeList(List<Long> recommendReportNodeList) {
+    this.recommendReportNodeList = recommendReportNodeList;
+  }
+
+  public ConversionsGetListStruct conversionLinkNodes(List<LinkNodeStruct> conversionLinkNodes) {
+    this.conversionLinkNodes = conversionLinkNodes;
+    return this;
+  }
+
+  public ConversionsGetListStruct addConversionLinkNodesItem(
+      LinkNodeStruct conversionLinkNodesItem) {
+    if (this.conversionLinkNodes == null) {
+      this.conversionLinkNodes = new ArrayList<LinkNodeStruct>();
+    }
+    this.conversionLinkNodes.add(conversionLinkNodesItem);
+    return this;
+  }
+
+  /**
+   * Get conversionLinkNodes
+   *
+   * @return conversionLinkNodes
+   */
+  @ApiModelProperty(value = "")
+  public List<LinkNodeStruct> getConversionLinkNodes() {
+    return conversionLinkNodes;
+  }
+
+  public void setConversionLinkNodes(List<LinkNodeStruct> conversionLinkNodes) {
+    this.conversionLinkNodes = conversionLinkNodes;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -786,7 +931,13 @@ public class ConversionsGetListStruct {
             this.incubationOptimizationGoal, conversionsGetListStruct.incubationOptimizationGoal)
         && Objects.equals(this.conversionLinkInfo, conversionsGetListStruct.conversionLinkInfo)
         && Objects.equals(this.disableCode, conversionsGetListStruct.disableCode)
-        && Objects.equals(this.disableMessage, conversionsGetListStruct.disableMessage);
+        && Objects.equals(this.disableMessage, conversionsGetListStruct.disableMessage)
+        && Objects.equals(this.inspectionFreeSwitch, conversionsGetListStruct.inspectionFreeSwitch)
+        && Objects.equals(this.customReportNodeList, conversionsGetListStruct.customReportNodeList)
+        && Objects.equals(this.mustReportNodeList, conversionsGetListStruct.mustReportNodeList)
+        && Objects.equals(
+            this.recommendReportNodeList, conversionsGetListStruct.recommendReportNodeList)
+        && Objects.equals(this.conversionLinkNodes, conversionsGetListStruct.conversionLinkNodes);
   }
 
   @Override
@@ -823,7 +974,12 @@ public class ConversionsGetListStruct {
         incubationOptimizationGoal,
         conversionLinkInfo,
         disableCode,
-        disableMessage);
+        disableMessage,
+        inspectionFreeSwitch,
+        customReportNodeList,
+        mustReportNodeList,
+        recommendReportNodeList,
+        conversionLinkNodes);
   }
 
   @Override

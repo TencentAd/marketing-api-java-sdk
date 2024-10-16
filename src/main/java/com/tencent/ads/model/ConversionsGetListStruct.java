@@ -111,6 +111,9 @@ public class ConversionsGetListStruct {
   @SerializedName("disable_message")
   private String disableMessage = null;
 
+  @SerializedName("inspection_free_switch")
+  private Boolean inspectionFreeSwitch = null;
+
   public ConversionsGetListStruct conversionId(Long conversionId) {
     this.conversionId = conversionId;
     return this;
@@ -689,6 +692,25 @@ public class ConversionsGetListStruct {
     this.disableMessage = disableMessage;
   }
 
+  public ConversionsGetListStruct inspectionFreeSwitch(Boolean inspectionFreeSwitch) {
+    this.inspectionFreeSwitch = inspectionFreeSwitch;
+    return this;
+  }
+
+  /**
+   * Get inspectionFreeSwitch
+   *
+   * @return inspectionFreeSwitch
+   */
+  @ApiModelProperty(value = "")
+  public Boolean isInspectionFreeSwitch() {
+    return inspectionFreeSwitch;
+  }
+
+  public void setInspectionFreeSwitch(Boolean inspectionFreeSwitch) {
+    this.inspectionFreeSwitch = inspectionFreeSwitch;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -740,7 +762,8 @@ public class ConversionsGetListStruct {
         && Objects.equals(this.forwardLinkAssist, conversionsGetListStruct.forwardLinkAssist)
         && Objects.equals(
             this.incubationOptimizationGoal, conversionsGetListStruct.incubationOptimizationGoal)
-        && Objects.equals(this.disableMessage, conversionsGetListStruct.disableMessage);
+        && Objects.equals(this.disableMessage, conversionsGetListStruct.disableMessage)
+        && Objects.equals(this.inspectionFreeSwitch, conversionsGetListStruct.inspectionFreeSwitch);
   }
 
   @Override
@@ -775,7 +798,8 @@ public class ConversionsGetListStruct {
         deepOptimizationGoalType,
         forwardLinkAssist,
         incubationOptimizationGoal,
-        disableMessage);
+        disableMessage,
+        inspectionFreeSwitch);
   }
 
   @Override

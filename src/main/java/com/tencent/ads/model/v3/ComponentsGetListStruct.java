@@ -24,6 +24,9 @@ public class ComponentsGetListStruct {
   @SerializedName("account_id")
   private Long accountId = null;
 
+  @SerializedName("organization_id")
+  private Long organizationId = null;
+
   @SerializedName("component_id")
   private Long componentId = null;
 
@@ -65,6 +68,25 @@ public class ComponentsGetListStruct {
 
   public void setAccountId(Long accountId) {
     this.accountId = accountId;
+  }
+
+  public ComponentsGetListStruct organizationId(Long organizationId) {
+    this.organizationId = organizationId;
+    return this;
+  }
+
+  /**
+   * Get organizationId
+   *
+   * @return organizationId
+   */
+  @ApiModelProperty(value = "")
+  public Long getOrganizationId() {
+    return organizationId;
+  }
+
+  public void setOrganizationId(Long organizationId) {
+    this.organizationId = organizationId;
   }
 
   public ComponentsGetListStruct componentId(Long componentId) {
@@ -229,6 +251,7 @@ public class ComponentsGetListStruct {
     }
     ComponentsGetListStruct componentsGetListStruct = (ComponentsGetListStruct) o;
     return Objects.equals(this.accountId, componentsGetListStruct.accountId)
+        && Objects.equals(this.organizationId, componentsGetListStruct.organizationId)
         && Objects.equals(this.componentId, componentsGetListStruct.componentId)
         && Objects.equals(this.componentValue, componentsGetListStruct.componentValue)
         && Objects.equals(this.createdTime, componentsGetListStruct.createdTime)
@@ -243,6 +266,7 @@ public class ComponentsGetListStruct {
   public int hashCode() {
     return Objects.hash(
         accountId,
+        organizationId,
         componentId,
         componentValue,
         createdTime,

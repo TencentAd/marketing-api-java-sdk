@@ -2109,6 +2109,36 @@ public class TargetReportApiListStruct {
   @SerializedName("mix_purchase_dedup_pv")
   private Long mixPurchaseDedupPv = null;
 
+  @SerializedName("purchase_reg_amount")
+  private Long purchaseRegAmount = null;
+
+  @SerializedName("purchase_dedup_reg_pv")
+  private Long purchaseDedupRegPv = null;
+
+  @SerializedName("purchase_reg_active_24h_amount")
+  private Long purchaseRegActive24hAmount = null;
+
+  @SerializedName("purchase_reg_active_3d_amount")
+  private Long purchaseRegActive3dAmount = null;
+
+  @SerializedName("purchase_reg_active_7d_amount")
+  private Long purchaseRegActive7dAmount = null;
+
+  @SerializedName("purchase_reg_active_14d_amount")
+  private Long purchaseRegActive14dAmount = null;
+
+  @SerializedName("purchase_reg_active_1d_pv")
+  private Long purchaseRegActive1dPv = null;
+
+  @SerializedName("purchase_dedup_reg_active_1d_pv")
+  private Long purchaseDedupRegActive1dPv = null;
+
+  @SerializedName("purchase_reg_active_1d_amount")
+  private Long purchaseRegActive1dAmount = null;
+
+  @SerializedName("security_negative_dedup_pv")
+  private Long securityNegativeDedupPv = null;
+
   @SerializedName("age_id")
   private Long ageId = null;
 
@@ -15414,6 +15444,196 @@ public class TargetReportApiListStruct {
     this.mixPurchaseDedupPv = mixPurchaseDedupPv;
   }
 
+  public TargetReportApiListStruct purchaseRegAmount(Long purchaseRegAmount) {
+    this.purchaseRegAmount = purchaseRegAmount;
+    return this;
+  }
+
+  /**
+   * Get purchaseRegAmount
+   *
+   * @return purchaseRegAmount
+   */
+  @ApiModelProperty(value = "")
+  public Long getPurchaseRegAmount() {
+    return purchaseRegAmount;
+  }
+
+  public void setPurchaseRegAmount(Long purchaseRegAmount) {
+    this.purchaseRegAmount = purchaseRegAmount;
+  }
+
+  public TargetReportApiListStruct purchaseDedupRegPv(Long purchaseDedupRegPv) {
+    this.purchaseDedupRegPv = purchaseDedupRegPv;
+    return this;
+  }
+
+  /**
+   * Get purchaseDedupRegPv
+   *
+   * @return purchaseDedupRegPv
+   */
+  @ApiModelProperty(value = "")
+  public Long getPurchaseDedupRegPv() {
+    return purchaseDedupRegPv;
+  }
+
+  public void setPurchaseDedupRegPv(Long purchaseDedupRegPv) {
+    this.purchaseDedupRegPv = purchaseDedupRegPv;
+  }
+
+  public TargetReportApiListStruct purchaseRegActive24hAmount(Long purchaseRegActive24hAmount) {
+    this.purchaseRegActive24hAmount = purchaseRegActive24hAmount;
+    return this;
+  }
+
+  /**
+   * Get purchaseRegActive24hAmount
+   *
+   * @return purchaseRegActive24hAmount
+   */
+  @ApiModelProperty(value = "")
+  public Long getPurchaseRegActive24hAmount() {
+    return purchaseRegActive24hAmount;
+  }
+
+  public void setPurchaseRegActive24hAmount(Long purchaseRegActive24hAmount) {
+    this.purchaseRegActive24hAmount = purchaseRegActive24hAmount;
+  }
+
+  public TargetReportApiListStruct purchaseRegActive3dAmount(Long purchaseRegActive3dAmount) {
+    this.purchaseRegActive3dAmount = purchaseRegActive3dAmount;
+    return this;
+  }
+
+  /**
+   * Get purchaseRegActive3dAmount
+   *
+   * @return purchaseRegActive3dAmount
+   */
+  @ApiModelProperty(value = "")
+  public Long getPurchaseRegActive3dAmount() {
+    return purchaseRegActive3dAmount;
+  }
+
+  public void setPurchaseRegActive3dAmount(Long purchaseRegActive3dAmount) {
+    this.purchaseRegActive3dAmount = purchaseRegActive3dAmount;
+  }
+
+  public TargetReportApiListStruct purchaseRegActive7dAmount(Long purchaseRegActive7dAmount) {
+    this.purchaseRegActive7dAmount = purchaseRegActive7dAmount;
+    return this;
+  }
+
+  /**
+   * Get purchaseRegActive7dAmount
+   *
+   * @return purchaseRegActive7dAmount
+   */
+  @ApiModelProperty(value = "")
+  public Long getPurchaseRegActive7dAmount() {
+    return purchaseRegActive7dAmount;
+  }
+
+  public void setPurchaseRegActive7dAmount(Long purchaseRegActive7dAmount) {
+    this.purchaseRegActive7dAmount = purchaseRegActive7dAmount;
+  }
+
+  public TargetReportApiListStruct purchaseRegActive14dAmount(Long purchaseRegActive14dAmount) {
+    this.purchaseRegActive14dAmount = purchaseRegActive14dAmount;
+    return this;
+  }
+
+  /**
+   * Get purchaseRegActive14dAmount
+   *
+   * @return purchaseRegActive14dAmount
+   */
+  @ApiModelProperty(value = "")
+  public Long getPurchaseRegActive14dAmount() {
+    return purchaseRegActive14dAmount;
+  }
+
+  public void setPurchaseRegActive14dAmount(Long purchaseRegActive14dAmount) {
+    this.purchaseRegActive14dAmount = purchaseRegActive14dAmount;
+  }
+
+  public TargetReportApiListStruct purchaseRegActive1dPv(Long purchaseRegActive1dPv) {
+    this.purchaseRegActive1dPv = purchaseRegActive1dPv;
+    return this;
+  }
+
+  /**
+   * Get purchaseRegActive1dPv
+   *
+   * @return purchaseRegActive1dPv
+   */
+  @ApiModelProperty(value = "")
+  public Long getPurchaseRegActive1dPv() {
+    return purchaseRegActive1dPv;
+  }
+
+  public void setPurchaseRegActive1dPv(Long purchaseRegActive1dPv) {
+    this.purchaseRegActive1dPv = purchaseRegActive1dPv;
+  }
+
+  public TargetReportApiListStruct purchaseDedupRegActive1dPv(Long purchaseDedupRegActive1dPv) {
+    this.purchaseDedupRegActive1dPv = purchaseDedupRegActive1dPv;
+    return this;
+  }
+
+  /**
+   * Get purchaseDedupRegActive1dPv
+   *
+   * @return purchaseDedupRegActive1dPv
+   */
+  @ApiModelProperty(value = "")
+  public Long getPurchaseDedupRegActive1dPv() {
+    return purchaseDedupRegActive1dPv;
+  }
+
+  public void setPurchaseDedupRegActive1dPv(Long purchaseDedupRegActive1dPv) {
+    this.purchaseDedupRegActive1dPv = purchaseDedupRegActive1dPv;
+  }
+
+  public TargetReportApiListStruct purchaseRegActive1dAmount(Long purchaseRegActive1dAmount) {
+    this.purchaseRegActive1dAmount = purchaseRegActive1dAmount;
+    return this;
+  }
+
+  /**
+   * Get purchaseRegActive1dAmount
+   *
+   * @return purchaseRegActive1dAmount
+   */
+  @ApiModelProperty(value = "")
+  public Long getPurchaseRegActive1dAmount() {
+    return purchaseRegActive1dAmount;
+  }
+
+  public void setPurchaseRegActive1dAmount(Long purchaseRegActive1dAmount) {
+    this.purchaseRegActive1dAmount = purchaseRegActive1dAmount;
+  }
+
+  public TargetReportApiListStruct securityNegativeDedupPv(Long securityNegativeDedupPv) {
+    this.securityNegativeDedupPv = securityNegativeDedupPv;
+    return this;
+  }
+
+  /**
+   * Get securityNegativeDedupPv
+   *
+   * @return securityNegativeDedupPv
+   */
+  @ApiModelProperty(value = "")
+  public Long getSecurityNegativeDedupPv() {
+    return securityNegativeDedupPv;
+  }
+
+  public void setSecurityNegativeDedupPv(Long securityNegativeDedupPv) {
+    this.securityNegativeDedupPv = securityNegativeDedupPv;
+  }
+
   public TargetReportApiListStruct ageId(Long ageId) {
     this.ageId = ageId;
     return this;
@@ -16587,6 +16807,24 @@ public class TargetReportApiListStruct {
             this.mixPurchaseActive14dAmount, targetReportApiListStruct.mixPurchaseActive14dAmount)
         && Objects.equals(this.mixPayActive14dRoi, targetReportApiListStruct.mixPayActive14dRoi)
         && Objects.equals(this.mixPurchaseDedupPv, targetReportApiListStruct.mixPurchaseDedupPv)
+        && Objects.equals(this.purchaseRegAmount, targetReportApiListStruct.purchaseRegAmount)
+        && Objects.equals(this.purchaseDedupRegPv, targetReportApiListStruct.purchaseDedupRegPv)
+        && Objects.equals(
+            this.purchaseRegActive24hAmount, targetReportApiListStruct.purchaseRegActive24hAmount)
+        && Objects.equals(
+            this.purchaseRegActive3dAmount, targetReportApiListStruct.purchaseRegActive3dAmount)
+        && Objects.equals(
+            this.purchaseRegActive7dAmount, targetReportApiListStruct.purchaseRegActive7dAmount)
+        && Objects.equals(
+            this.purchaseRegActive14dAmount, targetReportApiListStruct.purchaseRegActive14dAmount)
+        && Objects.equals(
+            this.purchaseRegActive1dPv, targetReportApiListStruct.purchaseRegActive1dPv)
+        && Objects.equals(
+            this.purchaseDedupRegActive1dPv, targetReportApiListStruct.purchaseDedupRegActive1dPv)
+        && Objects.equals(
+            this.purchaseRegActive1dAmount, targetReportApiListStruct.purchaseRegActive1dAmount)
+        && Objects.equals(
+            this.securityNegativeDedupPv, targetReportApiListStruct.securityNegativeDedupPv)
         && Objects.equals(this.ageId, targetReportApiListStruct.ageId)
         && Objects.equals(this.cityId, targetReportApiListStruct.cityId)
         && Objects.equals(this.regionId, targetReportApiListStruct.regionId)
@@ -17295,6 +17533,16 @@ public class TargetReportApiListStruct {
         mixPurchaseActive14dAmount,
         mixPayActive14dRoi,
         mixPurchaseDedupPv,
+        purchaseRegAmount,
+        purchaseDedupRegPv,
+        purchaseRegActive24hAmount,
+        purchaseRegActive3dAmount,
+        purchaseRegActive7dAmount,
+        purchaseRegActive14dAmount,
+        purchaseRegActive1dPv,
+        purchaseDedupRegActive1dPv,
+        purchaseRegActive1dAmount,
+        securityNegativeDedupPv,
         ageId,
         cityId,
         regionId,

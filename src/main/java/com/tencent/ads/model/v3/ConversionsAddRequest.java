@@ -15,6 +15,8 @@ package com.tencent.ads.model.v3;
 import com.google.gson.Gson;
 import com.google.gson.annotations.SerializedName;
 import io.swagger.annotations.ApiModelProperty;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Objects;
 
 /** ConversionsAddRequest */
@@ -87,6 +89,12 @@ public class ConversionsAddRequest {
 
   @SerializedName("incubation_optimization_goal")
   private OptimizationGoal incubationOptimizationGoal = null;
+
+  @SerializedName("conversion_template_id")
+  private Long conversionTemplateId = null;
+
+  @SerializedName("custom_report_index")
+  private List<Long> customReportIndex = null;
 
   public ConversionsAddRequest accountId(Long accountId) {
     this.accountId = accountId;
@@ -530,6 +538,52 @@ public class ConversionsAddRequest {
     this.incubationOptimizationGoal = incubationOptimizationGoal;
   }
 
+  public ConversionsAddRequest conversionTemplateId(Long conversionTemplateId) {
+    this.conversionTemplateId = conversionTemplateId;
+    return this;
+  }
+
+  /**
+   * Get conversionTemplateId
+   *
+   * @return conversionTemplateId
+   */
+  @ApiModelProperty(value = "")
+  public Long getConversionTemplateId() {
+    return conversionTemplateId;
+  }
+
+  public void setConversionTemplateId(Long conversionTemplateId) {
+    this.conversionTemplateId = conversionTemplateId;
+  }
+
+  public ConversionsAddRequest customReportIndex(List<Long> customReportIndex) {
+    this.customReportIndex = customReportIndex;
+    return this;
+  }
+
+  public ConversionsAddRequest addCustomReportIndexItem(Long customReportIndexItem) {
+    if (this.customReportIndex == null) {
+      this.customReportIndex = new ArrayList<Long>();
+    }
+    this.customReportIndex.add(customReportIndexItem);
+    return this;
+  }
+
+  /**
+   * Get customReportIndex
+   *
+   * @return customReportIndex
+   */
+  @ApiModelProperty(value = "")
+  public List<Long> getCustomReportIndex() {
+    return customReportIndex;
+  }
+
+  public void setCustomReportIndex(List<Long> customReportIndex) {
+    this.customReportIndex = customReportIndex;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -567,7 +621,9 @@ public class ConversionsAddRequest {
             this.deepOptimizationGoalType, conversionsAddRequest.deepOptimizationGoalType)
         && Objects.equals(this.forwardLinkAssist, conversionsAddRequest.forwardLinkAssist)
         && Objects.equals(
-            this.incubationOptimizationGoal, conversionsAddRequest.incubationOptimizationGoal);
+            this.incubationOptimizationGoal, conversionsAddRequest.incubationOptimizationGoal)
+        && Objects.equals(this.conversionTemplateId, conversionsAddRequest.conversionTemplateId)
+        && Objects.equals(this.customReportIndex, conversionsAddRequest.customReportIndex);
   }
 
   @Override
@@ -595,7 +651,9 @@ public class ConversionsAddRequest {
         deepBehaviorAdvancedGoal,
         deepOptimizationGoalType,
         forwardLinkAssist,
-        incubationOptimizationGoal);
+        incubationOptimizationGoal,
+        conversionTemplateId,
+        customReportIndex);
   }
 
   @Override

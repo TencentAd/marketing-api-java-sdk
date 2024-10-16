@@ -19,16 +19,24 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-/** 资产业务场景类型 */
-@JsonAdapter(AssetBusinessType.Adapter.class)
-public enum AssetBusinessType {
-  UNKNOWN("ASSET_BUSINESS_TYPE_UNKNOWN"),
+/** 排除天数 */
+@JsonAdapter(ExcludedDay.Adapter.class)
+public enum ExcludedDay {
+  SEVEN_DAY("EXCLUDED_DAY_SEVEN_DAY"),
 
-  INSIGHT("ASSET_BUSINESS_TYPE_INSIGHT");
+  ONE_MONTH("EXCLUDED_DAY_ONE_MONTH"),
+
+  TWO_MONTH("EXCLUDED_DAY_TWO_MONTH"),
+
+  THREE_MONTH("EXCLUDED_DAY_THREE_MONTH"),
+
+  SIX_MONTH("EXCLUDED_DAY_SIX_MONTH"),
+
+  ONE_DAY("EXCLUDED_DAY_ONE_DAY");
 
   private String value;
 
-  AssetBusinessType(String value) {
+  ExcludedDay(String value) {
     this.value = value;
   }
 
@@ -41,8 +49,8 @@ public enum AssetBusinessType {
     return String.valueOf(value);
   }
 
-  public static AssetBusinessType fromValue(String text) {
-    for (AssetBusinessType b : AssetBusinessType.values()) {
+  public static ExcludedDay fromValue(String text) {
+    for (ExcludedDay b : ExcludedDay.values()) {
       if (String.valueOf(b.value).equals(text)) {
         return b;
       }
@@ -50,17 +58,17 @@ public enum AssetBusinessType {
     return null;
   }
 
-  public static class Adapter extends TypeAdapter<AssetBusinessType> {
+  public static class Adapter extends TypeAdapter<ExcludedDay> {
     @Override
-    public void write(final JsonWriter jsonWriter, final AssetBusinessType enumeration)
+    public void write(final JsonWriter jsonWriter, final ExcludedDay enumeration)
         throws IOException {
       jsonWriter.value(enumeration.getValue());
     }
 
     @Override
-    public AssetBusinessType read(final JsonReader jsonReader) throws IOException {
+    public ExcludedDay read(final JsonReader jsonReader) throws IOException {
       String value = jsonReader.nextString();
-      return AssetBusinessType.fromValue(String.valueOf(value));
+      return ExcludedDay.fromValue(String.valueOf(value));
     }
   }
 }

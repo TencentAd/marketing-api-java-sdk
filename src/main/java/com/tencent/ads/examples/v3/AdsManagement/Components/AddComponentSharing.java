@@ -4,30 +4,17 @@ import com.tencent.ads.ApiContextConfig;
 import com.tencent.ads.exception.TencentAdsResponseException;
 import com.tencent.ads.exception.TencentAdsSDKException;
 import com.tencent.ads.model.v3.*;
-import com.tencent.ads.model.v3.FilteringStruct;
+import com.tencent.ads.model.v3.ComponentSharingAddRequest;
 import com.tencent.ads.v3.TencentAds;
-import java.util.List;
 
-public class GetComponents {
+public class AddComponentSharing {
   /** YOUR ACCESS TOKEN */
   public String ACCESS_TOKEN = "YOUR ACCESS TOKEN";
 
   /** TencentAds */
   public TencentAds tencentAds;
 
-  public Long accountId = null;
-
-  public Long organizationId = null;
-
-  public List<FilteringStruct> filtering = null;
-
-  public Long page = null;
-
-  public Long pageSize = null;
-
-  public Boolean isDeleted = null;
-
-  public List<String> fields = null;
+  public ComponentSharingAddRequest data = null;
 
   public void init() {
     this.tencentAds = TencentAds.getInstance();
@@ -39,19 +26,17 @@ public class GetComponents {
 
   public void buildParams() {}
 
-  public ComponentsGetResponseData getComponents() throws Exception {
-    ComponentsGetResponseData response =
-        tencentAds
-            .components()
-            .componentsGet(accountId, organizationId, filtering, page, pageSize, isDeleted, fields);
+  public ComponentSharingAddResponseData addComponentSharing() throws Exception {
+    ComponentSharingAddResponseData response =
+        tencentAds.componentSharing().componentSharingAdd(data);
     return response;
   }
 
   public static void main(String[] args) {
     try {
-      GetComponents getComponents = new GetComponents();
-      getComponents.init();
-      ComponentsGetResponseData response = getComponents.getComponents();
+      AddComponentSharing addComponentSharing = new AddComponentSharing();
+      addComponentSharing.init();
+      ComponentSharingAddResponseData response = addComponentSharing.addComponentSharing();
     } catch (TencentAdsResponseException e) {
       e.printStackTrace();
     } catch (TencentAdsSDKException e) {

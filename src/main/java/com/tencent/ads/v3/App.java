@@ -59,6 +59,7 @@ public class App {
   @Inject CommentListApiContainer commentListApiContainer;
   @Inject ComponentElementUrgeReviewApiContainer componentElementUrgeReviewApiContainer;
   @Inject ComponentReviewResultsApiContainer componentReviewResultsApiContainer;
+  @Inject ComponentSharingApiContainer componentSharingApiContainer;
   @Inject ComponentsApiContainer componentsApiContainer;
   @Inject ComponentsMetadataApiContainer componentsMetadataApiContainer;
   @Inject ConversionLinkAssetAvailableApiContainer conversionLinkAssetAvailableApiContainer;
@@ -381,6 +382,10 @@ public class App {
 
   public ComponentReviewResultsApiContainer componentReviewResults() {
     return componentReviewResultsApiContainer;
+  }
+
+  public ComponentSharingApiContainer componentSharing() {
+    return componentSharingApiContainer;
   }
 
   public ComponentsApiContainer components() {

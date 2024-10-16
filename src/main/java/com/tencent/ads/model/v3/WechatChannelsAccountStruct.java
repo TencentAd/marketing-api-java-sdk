@@ -42,6 +42,21 @@ public class WechatChannelsAccountStruct {
   @SerializedName("wechat_channels_account_icon")
   private String wechatChannelsAccountIcon = null;
 
+  @SerializedName("authorization_type")
+  private WechatChannelsAuthType authorizationType = null;
+
+  @SerializedName("authorization_scope")
+  private WechatChannelsAuthScope authorizationScope = null;
+
+  @SerializedName("is_blocked")
+  private Boolean isBlocked = null;
+
+  @SerializedName("is_private")
+  private Boolean isPrivate = null;
+
+  @SerializedName("is_ad_acct")
+  private Boolean isAdAcct = null;
+
   public WechatChannelsAccountStruct wechatChannelsAccountId(String wechatChannelsAccountId) {
     this.wechatChannelsAccountId = wechatChannelsAccountId;
     return this;
@@ -175,6 +190,102 @@ public class WechatChannelsAccountStruct {
     this.wechatChannelsAccountIcon = wechatChannelsAccountIcon;
   }
 
+  public WechatChannelsAccountStruct authorizationType(WechatChannelsAuthType authorizationType) {
+    this.authorizationType = authorizationType;
+    return this;
+  }
+
+  /**
+   * Get authorizationType
+   *
+   * @return authorizationType
+   */
+  @ApiModelProperty(value = "")
+  public WechatChannelsAuthType getAuthorizationType() {
+    return authorizationType;
+  }
+
+  public void setAuthorizationType(WechatChannelsAuthType authorizationType) {
+    this.authorizationType = authorizationType;
+  }
+
+  public WechatChannelsAccountStruct authorizationScope(
+      WechatChannelsAuthScope authorizationScope) {
+    this.authorizationScope = authorizationScope;
+    return this;
+  }
+
+  /**
+   * Get authorizationScope
+   *
+   * @return authorizationScope
+   */
+  @ApiModelProperty(value = "")
+  public WechatChannelsAuthScope getAuthorizationScope() {
+    return authorizationScope;
+  }
+
+  public void setAuthorizationScope(WechatChannelsAuthScope authorizationScope) {
+    this.authorizationScope = authorizationScope;
+  }
+
+  public WechatChannelsAccountStruct isBlocked(Boolean isBlocked) {
+    this.isBlocked = isBlocked;
+    return this;
+  }
+
+  /**
+   * Get isBlocked
+   *
+   * @return isBlocked
+   */
+  @ApiModelProperty(value = "")
+  public Boolean isIsBlocked() {
+    return isBlocked;
+  }
+
+  public void setIsBlocked(Boolean isBlocked) {
+    this.isBlocked = isBlocked;
+  }
+
+  public WechatChannelsAccountStruct isPrivate(Boolean isPrivate) {
+    this.isPrivate = isPrivate;
+    return this;
+  }
+
+  /**
+   * Get isPrivate
+   *
+   * @return isPrivate
+   */
+  @ApiModelProperty(value = "")
+  public Boolean isIsPrivate() {
+    return isPrivate;
+  }
+
+  public void setIsPrivate(Boolean isPrivate) {
+    this.isPrivate = isPrivate;
+  }
+
+  public WechatChannelsAccountStruct isAdAcct(Boolean isAdAcct) {
+    this.isAdAcct = isAdAcct;
+    return this;
+  }
+
+  /**
+   * Get isAdAcct
+   *
+   * @return isAdAcct
+   */
+  @ApiModelProperty(value = "")
+  public Boolean isIsAdAcct() {
+    return isAdAcct;
+  }
+
+  public void setIsAdAcct(Boolean isAdAcct) {
+    this.isAdAcct = isAdAcct;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -195,7 +306,12 @@ public class WechatChannelsAccountStruct {
         && Objects.equals(
             this.wechatChannelsSpamSlient, wechatChannelsAccountStruct.wechatChannelsSpamSlient)
         && Objects.equals(
-            this.wechatChannelsAccountIcon, wechatChannelsAccountStruct.wechatChannelsAccountIcon);
+            this.wechatChannelsAccountIcon, wechatChannelsAccountStruct.wechatChannelsAccountIcon)
+        && Objects.equals(this.authorizationType, wechatChannelsAccountStruct.authorizationType)
+        && Objects.equals(this.authorizationScope, wechatChannelsAccountStruct.authorizationScope)
+        && Objects.equals(this.isBlocked, wechatChannelsAccountStruct.isBlocked)
+        && Objects.equals(this.isPrivate, wechatChannelsAccountStruct.isPrivate)
+        && Objects.equals(this.isAdAcct, wechatChannelsAccountStruct.isAdAcct);
   }
 
   @Override
@@ -207,7 +323,12 @@ public class WechatChannelsAccountStruct {
         lastModifiedTime,
         wechatChannelsSpamBlock,
         wechatChannelsSpamSlient,
-        wechatChannelsAccountIcon);
+        wechatChannelsAccountIcon,
+        authorizationType,
+        authorizationScope,
+        isBlocked,
+        isPrivate,
+        isAdAcct);
   }
 
   @Override

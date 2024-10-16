@@ -32,21 +32,16 @@ public class MarketingTargetTypesApiContainer extends ApiContainer {
    *
    * @param accountId (optional)
    * @param organizationId (optional)
-   * @param businessType (optional)
    * @param fields 返回参数的字段列表 (optional)
    * @return MarketingTargetTypesGetResponse
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
   public MarketingTargetTypesGetResponseData marketingTargetTypesGet(
-      Long accountId,
-      Long organizationId,
-      String businessType,
-      List<String> fields,
-      Pair... headerPair)
+      Long accountId, Long organizationId, List<String> fields, Pair... headerPair)
       throws ApiException, TencentAdsResponseException {
     MarketingTargetTypesGetResponse resp =
-        api.marketingTargetTypesGet(accountId, organizationId, businessType, fields, headerPair);
+        api.marketingTargetTypesGet(accountId, organizationId, fields, headerPair);
     handleResponse(gson.toJson(resp));
     return resp.getData();
   }

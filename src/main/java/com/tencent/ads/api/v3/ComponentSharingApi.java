@@ -21,12 +21,9 @@ import com.tencent.ads.Configuration;
 import com.tencent.ads.Pair;
 import com.tencent.ads.ProgressRequestBody;
 import com.tencent.ads.ProgressResponseBody;
-import com.tencent.ads.model.v3.ComponentsAddRequest;
-import com.tencent.ads.model.v3.ComponentsAddResponse;
-import com.tencent.ads.model.v3.ComponentsDeleteRequest;
-import com.tencent.ads.model.v3.ComponentsDeleteResponse;
-import com.tencent.ads.model.v3.ComponentsGetResponse;
-import com.tencent.ads.model.v3.FilteringStruct;
+import com.tencent.ads.model.v3.ComponentSharingAddRequest;
+import com.tencent.ads.model.v3.ComponentSharingAddResponse;
+import com.tencent.ads.model.v3.ComponentSharingGetResponse;
 import java.io.IOException;
 import java.lang.reflect.Type;
 import java.util.ArrayList;
@@ -34,14 +31,14 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class ComponentsApi {
+public class ComponentSharingApi {
   private ApiClient apiClient;
 
-  public ComponentsApi() {
+  public ComponentSharingApi() {
     this(Configuration.getV3DefaultApiClient());
   }
 
-  public ComponentsApi(ApiClient apiClient) {
+  public ComponentSharingApi(ApiClient apiClient) {
     this.apiClient = apiClient;
   }
 
@@ -54,7 +51,7 @@ public class ComponentsApi {
   }
 
   /**
-   * Build call for componentsAdd
+   * Build call for componentSharingAdd
    *
    * @param data (required)
    * @param progressListener Progress listener
@@ -62,8 +59,8 @@ public class ComponentsApi {
    * @return Call to execute
    * @throws ApiException If fail to serialize the request body object
    */
-  public com.squareup.okhttp.Call componentsAddCall(
-      ComponentsAddRequest data,
+  public com.squareup.okhttp.Call componentSharingAddCall(
+      ComponentSharingAddRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
       Pair... headerPair)
@@ -72,7 +69,7 @@ public class ComponentsApi {
     Object localVarPostBody = data;
 
     // create path and map variables
-    String localVarPath = "/components/add";
+    String localVarPath = "/component_sharing/add";
 
     List<Pair> localVarQueryParams = new ArrayList<Pair>();
     List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -127,8 +124,8 @@ public class ComponentsApi {
   }
 
   @SuppressWarnings("rawtypes")
-  private com.squareup.okhttp.Call componentsAddValidateBeforeCall(
-      ComponentsAddRequest data,
+  private com.squareup.okhttp.Call componentSharingAddValidateBeforeCall(
+      ComponentSharingAddRequest data,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
       Pair... headerPair)
@@ -137,54 +134,56 @@ public class ComponentsApi {
     // verify the required parameter 'data' is set
     if (data == null) {
       throw new ApiException(
-          "Missing the required parameter 'data' when calling componentsAdd(Async)");
+          "Missing the required parameter 'data' when calling componentSharingAdd(Async)");
     }
 
     com.squareup.okhttp.Call call =
-        componentsAddCall(data, progressListener, progressRequestListener, headerPair);
+        componentSharingAddCall(data, progressListener, progressRequestListener, headerPair);
     return call;
   }
 
   /**
-   * 创建创意组件
+   * 共享创意组件
    *
    * @param data (required)
-   * @return ComponentsAddResponse
+   * @return ComponentSharingAddResponse
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
-  public ComponentsAddResponse componentsAdd(ComponentsAddRequest data, Pair... headerPair)
-      throws ApiException {
-    ApiResponse<ComponentsAddResponse> resp = componentsAddWithHttpInfo(data, headerPair);
+  public ComponentSharingAddResponse componentSharingAdd(
+      ComponentSharingAddRequest data, Pair... headerPair) throws ApiException {
+    ApiResponse<ComponentSharingAddResponse> resp =
+        componentSharingAddWithHttpInfo(data, headerPair);
     return resp.getData();
   }
 
   /**
-   * 创建创意组件
+   * 共享创意组件
    *
    * @param data (required)
-   * @return ApiResponse&lt;ComponentsAddResponse&gt;
+   * @return ApiResponse&lt;ComponentSharingAddResponse&gt;
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
-  public ApiResponse<ComponentsAddResponse> componentsAddWithHttpInfo(
-      ComponentsAddRequest data, Pair... headerPair) throws ApiException {
-    com.squareup.okhttp.Call call = componentsAddValidateBeforeCall(data, null, null, headerPair);
-    Type localVarReturnType = new TypeToken<ComponentsAddResponse>() {}.getType();
+  public ApiResponse<ComponentSharingAddResponse> componentSharingAddWithHttpInfo(
+      ComponentSharingAddRequest data, Pair... headerPair) throws ApiException {
+    com.squareup.okhttp.Call call =
+        componentSharingAddValidateBeforeCall(data, null, null, headerPair);
+    Type localVarReturnType = new TypeToken<ComponentSharingAddResponse>() {}.getType();
     return apiClient.execute(call, localVarReturnType);
   }
 
   /**
-   * 创建创意组件 (asynchronously)
+   * 共享创意组件 (asynchronously)
    *
    * @param data (required)
    * @param callback The callback to be executed when the API call finishes
    * @return The request call
    * @throws ApiException If fail to process the API call, e.g. serializing the request body object
    */
-  public com.squareup.okhttp.Call componentsAddAsync(
-      ComponentsAddRequest data,
-      final ApiCallback<ComponentsAddResponse> callback,
+  public com.squareup.okhttp.Call componentSharingAddAsync(
+      ComponentSharingAddRequest data,
+      final ApiCallback<ComponentSharingAddResponse> callback,
       Pair... headerPair)
       throws ApiException {
 
@@ -210,195 +209,29 @@ public class ComponentsApi {
     }
 
     com.squareup.okhttp.Call call =
-        componentsAddValidateBeforeCall(
+        componentSharingAddValidateBeforeCall(
             data, progressListener, progressRequestListener, headerPair);
-    Type localVarReturnType = new TypeToken<ComponentsAddResponse>() {}.getType();
+    Type localVarReturnType = new TypeToken<ComponentSharingAddResponse>() {}.getType();
     apiClient.executeAsync(call, localVarReturnType, callback);
     return call;
   }
   /**
-   * Build call for componentsDelete
+   * Build call for componentSharingGet
    *
-   * @param data (required)
-   * @param progressListener Progress listener
-   * @param progressRequestListener Progress request listener
-   * @return Call to execute
-   * @throws ApiException If fail to serialize the request body object
-   */
-  public com.squareup.okhttp.Call componentsDeleteCall(
-      ComponentsDeleteRequest data,
-      final ProgressResponseBody.ProgressListener progressListener,
-      final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      Pair... headerPair)
-      throws ApiException {
-
-    Object localVarPostBody = data;
-
-    // create path and map variables
-    String localVarPath = "/components/delete";
-
-    List<Pair> localVarQueryParams = new ArrayList<Pair>();
-    List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
-
-    Map<String, String> localVarHeaderParams = new HashMap<String, String>();
-
-    Map<String, Object> localVarFormParams = new HashMap<String, Object>();
-
-    final String[] localVarAccepts = {"application/json"};
-    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
-    if (localVarAccept != null) localVarHeaderParams.put("Accept", localVarAccept);
-
-    final String[] localVarContentTypes = {"application/json", "application/xml"};
-    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
-    localVarHeaderParams.put("Content-Type", localVarContentType);
-
-    if (headerPair != null && headerPair.length > 0) {
-      for (int i = 0; i < headerPair.length; i++) {
-        localVarHeaderParams.put(headerPair[i].getName(), headerPair[i].getValue());
-      }
-    }
-
-    if (progressListener != null) {
-      apiClient
-          .getHttpClient()
-          .networkInterceptors()
-          .add(
-              new com.squareup.okhttp.Interceptor() {
-                @Override
-                public com.squareup.okhttp.Response intercept(
-                    com.squareup.okhttp.Interceptor.Chain chain) throws IOException {
-                  com.squareup.okhttp.Response originalResponse = chain.proceed(chain.request());
-                  return originalResponse
-                      .newBuilder()
-                      .body(new ProgressResponseBody(originalResponse.body(), progressListener))
-                      .build();
-                }
-              });
-    }
-
-    String[] localVarAuthNames = new String[] {"accessToken", "nonce", "timestamp"};
-    return apiClient.buildCall(
-        localVarPath,
-        "POST",
-        localVarQueryParams,
-        localVarCollectionQueryParams,
-        localVarPostBody,
-        localVarHeaderParams,
-        localVarFormParams,
-        localVarAuthNames,
-        progressRequestListener);
-  }
-
-  @SuppressWarnings("rawtypes")
-  private com.squareup.okhttp.Call componentsDeleteValidateBeforeCall(
-      ComponentsDeleteRequest data,
-      final ProgressResponseBody.ProgressListener progressListener,
-      final ProgressRequestBody.ProgressRequestListener progressRequestListener,
-      Pair... headerPair)
-      throws ApiException {
-
-    // verify the required parameter 'data' is set
-    if (data == null) {
-      throw new ApiException(
-          "Missing the required parameter 'data' when calling componentsDelete(Async)");
-    }
-
-    com.squareup.okhttp.Call call =
-        componentsDeleteCall(data, progressListener, progressRequestListener, headerPair);
-    return call;
-  }
-
-  /**
-   * 删除创意组件
-   *
-   * @param data (required)
-   * @return ComponentsDeleteResponse
-   * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
-   *     response body
-   */
-  public ComponentsDeleteResponse componentsDelete(ComponentsDeleteRequest data, Pair... headerPair)
-      throws ApiException {
-    ApiResponse<ComponentsDeleteResponse> resp = componentsDeleteWithHttpInfo(data, headerPair);
-    return resp.getData();
-  }
-
-  /**
-   * 删除创意组件
-   *
-   * @param data (required)
-   * @return ApiResponse&lt;ComponentsDeleteResponse&gt;
-   * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
-   *     response body
-   */
-  public ApiResponse<ComponentsDeleteResponse> componentsDeleteWithHttpInfo(
-      ComponentsDeleteRequest data, Pair... headerPair) throws ApiException {
-    com.squareup.okhttp.Call call =
-        componentsDeleteValidateBeforeCall(data, null, null, headerPair);
-    Type localVarReturnType = new TypeToken<ComponentsDeleteResponse>() {}.getType();
-    return apiClient.execute(call, localVarReturnType);
-  }
-
-  /**
-   * 删除创意组件 (asynchronously)
-   *
-   * @param data (required)
-   * @param callback The callback to be executed when the API call finishes
-   * @return The request call
-   * @throws ApiException If fail to process the API call, e.g. serializing the request body object
-   */
-  public com.squareup.okhttp.Call componentsDeleteAsync(
-      ComponentsDeleteRequest data,
-      final ApiCallback<ComponentsDeleteResponse> callback,
-      Pair... headerPair)
-      throws ApiException {
-
-    ProgressResponseBody.ProgressListener progressListener = null;
-    ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
-
-    if (callback != null) {
-      progressListener =
-          new ProgressResponseBody.ProgressListener() {
-            @Override
-            public void update(long bytesRead, long contentLength, boolean done) {
-              callback.onDownloadProgress(bytesRead, contentLength, done);
-            }
-          };
-
-      progressRequestListener =
-          new ProgressRequestBody.ProgressRequestListener() {
-            @Override
-            public void onRequestProgress(long bytesWritten, long contentLength, boolean done) {
-              callback.onUploadProgress(bytesWritten, contentLength, done);
-            }
-          };
-    }
-
-    com.squareup.okhttp.Call call =
-        componentsDeleteValidateBeforeCall(
-            data, progressListener, progressRequestListener, headerPair);
-    Type localVarReturnType = new TypeToken<ComponentsDeleteResponse>() {}.getType();
-    apiClient.executeAsync(call, localVarReturnType, callback);
-    return call;
-  }
-  /**
-   * Build call for componentsGet
-   *
-   * @param accountId (optional)
-   * @param organizationId (optional)
-   * @param filtering (optional)
+   * @param organizationId (required)
+   * @param componentId (optional)
    * @param page (optional)
    * @param pageSize (optional)
    * @param isDeleted (optional)
-   * @param fields (optional)
+   * @param fields 返回参数的字段列表 (optional)
    * @param progressListener Progress listener
    * @param progressRequestListener Progress request listener
    * @return Call to execute
    * @throws ApiException If fail to serialize the request body object
    */
-  public com.squareup.okhttp.Call componentsGetCall(
-      Long accountId,
+  public com.squareup.okhttp.Call componentSharingGetCall(
       Long organizationId,
-      List<FilteringStruct> filtering,
+      Long componentId,
       Long page,
       Long pageSize,
       Boolean isDeleted,
@@ -411,17 +244,14 @@ public class ComponentsApi {
     Object localVarPostBody = null;
 
     // create path and map variables
-    String localVarPath = "/components/get";
+    String localVarPath = "/component_sharing/get";
 
     List<Pair> localVarQueryParams = new ArrayList<Pair>();
     List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
-    if (accountId != null)
-      localVarQueryParams.addAll(apiClient.parameterToPair("account_id", accountId));
     if (organizationId != null)
       localVarQueryParams.addAll(apiClient.parameterToPair("organization_id", organizationId));
-    if (filtering != null)
-      localVarCollectionQueryParams.addAll(
-          apiClient.parameterToPairs("multi", "filtering", filtering));
+    if (componentId != null)
+      localVarQueryParams.addAll(apiClient.parameterToPair("component_id", componentId));
     if (page != null) localVarQueryParams.addAll(apiClient.parameterToPair("page", page));
     if (pageSize != null)
       localVarQueryParams.addAll(apiClient.parameterToPair("page_size", pageSize));
@@ -480,10 +310,9 @@ public class ComponentsApi {
   }
 
   @SuppressWarnings("rawtypes")
-  private com.squareup.okhttp.Call componentsGetValidateBeforeCall(
-      Long accountId,
+  private com.squareup.okhttp.Call componentSharingGetValidateBeforeCall(
       Long organizationId,
-      List<FilteringStruct> filtering,
+      Long componentId,
       Long page,
       Long pageSize,
       Boolean isDeleted,
@@ -493,11 +322,16 @@ public class ComponentsApi {
       Pair... headerPair)
       throws ApiException {
 
+    // verify the required parameter 'organizationId' is set
+    if (organizationId == null) {
+      throw new ApiException(
+          "Missing the required parameter 'organizationId' when calling componentSharingGet(Async)");
+    }
+
     com.squareup.okhttp.Call call =
-        componentsGetCall(
-            accountId,
+        componentSharingGetCall(
             organizationId,
-            filtering,
+            componentId,
             page,
             pageSize,
             isDeleted,
@@ -509,53 +343,49 @@ public class ComponentsApi {
   }
 
   /**
-   * 获取创意组件
+   * 查询创意组件共享信息
    *
-   * @param accountId (optional)
-   * @param organizationId (optional)
-   * @param filtering (optional)
+   * @param organizationId (required)
+   * @param componentId (optional)
    * @param page (optional)
    * @param pageSize (optional)
    * @param isDeleted (optional)
-   * @param fields (optional)
-   * @return ComponentsGetResponse
+   * @param fields 返回参数的字段列表 (optional)
+   * @return ComponentSharingGetResponse
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
-  public ComponentsGetResponse componentsGet(
-      Long accountId,
+  public ComponentSharingGetResponse componentSharingGet(
       Long organizationId,
-      List<FilteringStruct> filtering,
+      Long componentId,
       Long page,
       Long pageSize,
       Boolean isDeleted,
       List<String> fields,
       Pair... headerPair)
       throws ApiException {
-    ApiResponse<ComponentsGetResponse> resp =
-        componentsGetWithHttpInfo(
-            accountId, organizationId, filtering, page, pageSize, isDeleted, fields, headerPair);
+    ApiResponse<ComponentSharingGetResponse> resp =
+        componentSharingGetWithHttpInfo(
+            organizationId, componentId, page, pageSize, isDeleted, fields, headerPair);
     return resp.getData();
   }
 
   /**
-   * 获取创意组件
+   * 查询创意组件共享信息
    *
-   * @param accountId (optional)
-   * @param organizationId (optional)
-   * @param filtering (optional)
+   * @param organizationId (required)
+   * @param componentId (optional)
    * @param page (optional)
    * @param pageSize (optional)
    * @param isDeleted (optional)
-   * @param fields (optional)
-   * @return ApiResponse&lt;ComponentsGetResponse&gt;
+   * @param fields 返回参数的字段列表 (optional)
+   * @return ApiResponse&lt;ComponentSharingGetResponse&gt;
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
-  public ApiResponse<ComponentsGetResponse> componentsGetWithHttpInfo(
-      Long accountId,
+  public ApiResponse<ComponentSharingGetResponse> componentSharingGetWithHttpInfo(
       Long organizationId,
-      List<FilteringStruct> filtering,
+      Long componentId,
       Long page,
       Long pageSize,
       Boolean isDeleted,
@@ -563,44 +393,33 @@ public class ComponentsApi {
       Pair... headerPair)
       throws ApiException {
     com.squareup.okhttp.Call call =
-        componentsGetValidateBeforeCall(
-            accountId,
-            organizationId,
-            filtering,
-            page,
-            pageSize,
-            isDeleted,
-            fields,
-            null,
-            null,
-            headerPair);
-    Type localVarReturnType = new TypeToken<ComponentsGetResponse>() {}.getType();
+        componentSharingGetValidateBeforeCall(
+            organizationId, componentId, page, pageSize, isDeleted, fields, null, null, headerPair);
+    Type localVarReturnType = new TypeToken<ComponentSharingGetResponse>() {}.getType();
     return apiClient.execute(call, localVarReturnType);
   }
 
   /**
-   * 获取创意组件 (asynchronously)
+   * 查询创意组件共享信息 (asynchronously)
    *
-   * @param accountId (optional)
-   * @param organizationId (optional)
-   * @param filtering (optional)
+   * @param organizationId (required)
+   * @param componentId (optional)
    * @param page (optional)
    * @param pageSize (optional)
    * @param isDeleted (optional)
-   * @param fields (optional)
+   * @param fields 返回参数的字段列表 (optional)
    * @param callback The callback to be executed when the API call finishes
    * @return The request call
    * @throws ApiException If fail to process the API call, e.g. serializing the request body object
    */
-  public com.squareup.okhttp.Call componentsGetAsync(
-      Long accountId,
+  public com.squareup.okhttp.Call componentSharingGetAsync(
       Long organizationId,
-      List<FilteringStruct> filtering,
+      Long componentId,
       Long page,
       Long pageSize,
       Boolean isDeleted,
       List<String> fields,
-      final ApiCallback<ComponentsGetResponse> callback,
+      final ApiCallback<ComponentSharingGetResponse> callback,
       Pair... headerPair)
       throws ApiException {
 
@@ -626,10 +445,9 @@ public class ComponentsApi {
     }
 
     com.squareup.okhttp.Call call =
-        componentsGetValidateBeforeCall(
-            accountId,
+        componentSharingGetValidateBeforeCall(
             organizationId,
-            filtering,
+            componentId,
             page,
             pageSize,
             isDeleted,
@@ -637,7 +455,7 @@ public class ComponentsApi {
             progressListener,
             progressRequestListener,
             headerPair);
-    Type localVarReturnType = new TypeToken<ComponentsGetResponse>() {}.getType();
+    Type localVarReturnType = new TypeToken<ComponentSharingGetResponse>() {}.getType();
     apiClient.executeAsync(call, localVarReturnType, callback);
     return call;
   }

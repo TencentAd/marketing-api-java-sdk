@@ -22,6 +22,7 @@ import com.tencent.ads.Pair;
 import com.tencent.ads.ProgressRequestBody;
 import com.tencent.ads.ProgressResponseBody;
 import com.tencent.ads.model.v3.ConversionLinksGetResponse;
+import com.tencent.ads.model.v3.LinkOptimizationGoalStruct;
 import java.io.IOException;
 import java.lang.reflect.Type;
 import java.util.ArrayList;
@@ -53,6 +54,7 @@ public class ConversionLinksApi {
    *
    * @param accountId (required)
    * @param secondCategoryType (required)
+   * @param optimizationGoalStruct (optional)
    * @param fields 返回参数的字段列表 (optional)
    * @param progressListener Progress listener
    * @param progressRequestListener Progress request listener
@@ -62,6 +64,7 @@ public class ConversionLinksApi {
   public com.squareup.okhttp.Call conversionLinksGetCall(
       Long accountId,
       String secondCategoryType,
+      LinkOptimizationGoalStruct optimizationGoalStruct,
       List<String> fields,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
@@ -80,6 +83,9 @@ public class ConversionLinksApi {
     if (secondCategoryType != null)
       localVarQueryParams.addAll(
           apiClient.parameterToPair("second_category_type", secondCategoryType));
+    if (optimizationGoalStruct != null)
+      localVarQueryParams.addAll(
+          apiClient.parameterToPair("optimization_goal_struct", optimizationGoalStruct));
     if (fields != null)
       localVarCollectionQueryParams.addAll(apiClient.parameterToPairs("multi", "fields", fields));
 
@@ -136,6 +142,7 @@ public class ConversionLinksApi {
   private com.squareup.okhttp.Call conversionLinksGetValidateBeforeCall(
       Long accountId,
       String secondCategoryType,
+      LinkOptimizationGoalStruct optimizationGoalStruct,
       List<String> fields,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
@@ -158,6 +165,7 @@ public class ConversionLinksApi {
         conversionLinksGetCall(
             accountId,
             secondCategoryType,
+            optimizationGoalStruct,
             fields,
             progressListener,
             progressRequestListener,
@@ -170,16 +178,22 @@ public class ConversionLinksApi {
    *
    * @param accountId (required)
    * @param secondCategoryType (required)
+   * @param optimizationGoalStruct (optional)
    * @param fields 返回参数的字段列表 (optional)
    * @return ConversionLinksGetResponse
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
   public ConversionLinksGetResponse conversionLinksGet(
-      Long accountId, String secondCategoryType, List<String> fields, Pair... headerPair)
+      Long accountId,
+      String secondCategoryType,
+      LinkOptimizationGoalStruct optimizationGoalStruct,
+      List<String> fields,
+      Pair... headerPair)
       throws ApiException {
     ApiResponse<ConversionLinksGetResponse> resp =
-        conversionLinksGetWithHttpInfo(accountId, secondCategoryType, fields, headerPair);
+        conversionLinksGetWithHttpInfo(
+            accountId, secondCategoryType, optimizationGoalStruct, fields, headerPair);
     return resp.getData();
   }
 
@@ -188,17 +202,22 @@ public class ConversionLinksApi {
    *
    * @param accountId (required)
    * @param secondCategoryType (required)
+   * @param optimizationGoalStruct (optional)
    * @param fields 返回参数的字段列表 (optional)
    * @return ApiResponse&lt;ConversionLinksGetResponse&gt;
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
   public ApiResponse<ConversionLinksGetResponse> conversionLinksGetWithHttpInfo(
-      Long accountId, String secondCategoryType, List<String> fields, Pair... headerPair)
+      Long accountId,
+      String secondCategoryType,
+      LinkOptimizationGoalStruct optimizationGoalStruct,
+      List<String> fields,
+      Pair... headerPair)
       throws ApiException {
     com.squareup.okhttp.Call call =
         conversionLinksGetValidateBeforeCall(
-            accountId, secondCategoryType, fields, null, null, headerPair);
+            accountId, secondCategoryType, optimizationGoalStruct, fields, null, null, headerPair);
     Type localVarReturnType = new TypeToken<ConversionLinksGetResponse>() {}.getType();
     return apiClient.execute(call, localVarReturnType);
   }
@@ -208,6 +227,7 @@ public class ConversionLinksApi {
    *
    * @param accountId (required)
    * @param secondCategoryType (required)
+   * @param optimizationGoalStruct (optional)
    * @param fields 返回参数的字段列表 (optional)
    * @param callback The callback to be executed when the API call finishes
    * @return The request call
@@ -216,6 +236,7 @@ public class ConversionLinksApi {
   public com.squareup.okhttp.Call conversionLinksGetAsync(
       Long accountId,
       String secondCategoryType,
+      LinkOptimizationGoalStruct optimizationGoalStruct,
       List<String> fields,
       final ApiCallback<ConversionLinksGetResponse> callback,
       Pair... headerPair)
@@ -246,6 +267,7 @@ public class ConversionLinksApi {
         conversionLinksGetValidateBeforeCall(
             accountId,
             secondCategoryType,
+            optimizationGoalStruct,
             fields,
             progressListener,
             progressRequestListener,

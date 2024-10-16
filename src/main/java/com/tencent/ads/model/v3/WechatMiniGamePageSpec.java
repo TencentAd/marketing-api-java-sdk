@@ -24,9 +24,6 @@ public class WechatMiniGamePageSpec {
   @SerializedName("mini_game_tracking_parameter")
   private String miniGameTrackingParameter = null;
 
-  @SerializedName("backup_option")
-  private BackUpOption backupOption = null;
-
   @SerializedName("mini_game_id")
   private String miniGameId = null;
 
@@ -47,25 +44,6 @@ public class WechatMiniGamePageSpec {
 
   public void setMiniGameTrackingParameter(String miniGameTrackingParameter) {
     this.miniGameTrackingParameter = miniGameTrackingParameter;
-  }
-
-  public WechatMiniGamePageSpec backupOption(BackUpOption backupOption) {
-    this.backupOption = backupOption;
-    return this;
-  }
-
-  /**
-   * Get backupOption
-   *
-   * @return backupOption
-   */
-  @ApiModelProperty(value = "")
-  public BackUpOption getBackupOption() {
-    return backupOption;
-  }
-
-  public void setBackupOption(BackUpOption backupOption) {
-    this.backupOption = backupOption;
   }
 
   public WechatMiniGamePageSpec miniGameId(String miniGameId) {
@@ -98,13 +76,12 @@ public class WechatMiniGamePageSpec {
     WechatMiniGamePageSpec wechatMiniGamePageSpec = (WechatMiniGamePageSpec) o;
     return Objects.equals(
             this.miniGameTrackingParameter, wechatMiniGamePageSpec.miniGameTrackingParameter)
-        && Objects.equals(this.backupOption, wechatMiniGamePageSpec.backupOption)
         && Objects.equals(this.miniGameId, wechatMiniGamePageSpec.miniGameId);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(miniGameTrackingParameter, backupOption, miniGameId);
+    return Objects.hash(miniGameTrackingParameter, miniGameId);
   }
 
   @Override

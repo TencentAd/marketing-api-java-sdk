@@ -2223,6 +2223,45 @@ public class DailyReportApiListStruct {
   @SerializedName("mix_purchase_dedup_pv")
   private Long mixPurchaseDedupPv = null;
 
+  @SerializedName("purchase_reg_amount")
+  private Long purchaseRegAmount = null;
+
+  @SerializedName("purchase_dedup_reg_pv")
+  private Long purchaseDedupRegPv = null;
+
+  @SerializedName("purchase_reg_active_24h_amount")
+  private Long purchaseRegActive24hAmount = null;
+
+  @SerializedName("purchase_reg_active_3d_amount")
+  private Long purchaseRegActive3dAmount = null;
+
+  @SerializedName("purchase_reg_active_7d_amount")
+  private Long purchaseRegActive7dAmount = null;
+
+  @SerializedName("purchase_reg_active_14d_amount")
+  private Long purchaseRegActive14dAmount = null;
+
+  @SerializedName("purchase_reg_active_1d_pv")
+  private Long purchaseRegActive1dPv = null;
+
+  @SerializedName("purchase_dedup_reg_active_1d_pv")
+  private Long purchaseDedupRegActive1dPv = null;
+
+  @SerializedName("purchase_reg_active_1d_amount")
+  private Long purchaseRegActive1dAmount = null;
+
+  @SerializedName("clk_hot_element_pv")
+  private Long clkHotElementPv = null;
+
+  @SerializedName("clk_hot_element_uv")
+  private Long clkHotElementUv = null;
+
+  @SerializedName("hot_element_ctr")
+  private Double hotElementCtr = null;
+
+  @SerializedName("security_negative_dedup_pv")
+  private Long securityNegativeDedupPv = null;
+
   @SerializedName("adgroup_id")
   private Long adgroupId = null;
 
@@ -16412,6 +16451,253 @@ public class DailyReportApiListStruct {
     this.mixPurchaseDedupPv = mixPurchaseDedupPv;
   }
 
+  public DailyReportApiListStruct purchaseRegAmount(Long purchaseRegAmount) {
+    this.purchaseRegAmount = purchaseRegAmount;
+    return this;
+  }
+
+  /**
+   * Get purchaseRegAmount
+   *
+   * @return purchaseRegAmount
+   */
+  @ApiModelProperty(value = "")
+  public Long getPurchaseRegAmount() {
+    return purchaseRegAmount;
+  }
+
+  public void setPurchaseRegAmount(Long purchaseRegAmount) {
+    this.purchaseRegAmount = purchaseRegAmount;
+  }
+
+  public DailyReportApiListStruct purchaseDedupRegPv(Long purchaseDedupRegPv) {
+    this.purchaseDedupRegPv = purchaseDedupRegPv;
+    return this;
+  }
+
+  /**
+   * Get purchaseDedupRegPv
+   *
+   * @return purchaseDedupRegPv
+   */
+  @ApiModelProperty(value = "")
+  public Long getPurchaseDedupRegPv() {
+    return purchaseDedupRegPv;
+  }
+
+  public void setPurchaseDedupRegPv(Long purchaseDedupRegPv) {
+    this.purchaseDedupRegPv = purchaseDedupRegPv;
+  }
+
+  public DailyReportApiListStruct purchaseRegActive24hAmount(Long purchaseRegActive24hAmount) {
+    this.purchaseRegActive24hAmount = purchaseRegActive24hAmount;
+    return this;
+  }
+
+  /**
+   * Get purchaseRegActive24hAmount
+   *
+   * @return purchaseRegActive24hAmount
+   */
+  @ApiModelProperty(value = "")
+  public Long getPurchaseRegActive24hAmount() {
+    return purchaseRegActive24hAmount;
+  }
+
+  public void setPurchaseRegActive24hAmount(Long purchaseRegActive24hAmount) {
+    this.purchaseRegActive24hAmount = purchaseRegActive24hAmount;
+  }
+
+  public DailyReportApiListStruct purchaseRegActive3dAmount(Long purchaseRegActive3dAmount) {
+    this.purchaseRegActive3dAmount = purchaseRegActive3dAmount;
+    return this;
+  }
+
+  /**
+   * Get purchaseRegActive3dAmount
+   *
+   * @return purchaseRegActive3dAmount
+   */
+  @ApiModelProperty(value = "")
+  public Long getPurchaseRegActive3dAmount() {
+    return purchaseRegActive3dAmount;
+  }
+
+  public void setPurchaseRegActive3dAmount(Long purchaseRegActive3dAmount) {
+    this.purchaseRegActive3dAmount = purchaseRegActive3dAmount;
+  }
+
+  public DailyReportApiListStruct purchaseRegActive7dAmount(Long purchaseRegActive7dAmount) {
+    this.purchaseRegActive7dAmount = purchaseRegActive7dAmount;
+    return this;
+  }
+
+  /**
+   * Get purchaseRegActive7dAmount
+   *
+   * @return purchaseRegActive7dAmount
+   */
+  @ApiModelProperty(value = "")
+  public Long getPurchaseRegActive7dAmount() {
+    return purchaseRegActive7dAmount;
+  }
+
+  public void setPurchaseRegActive7dAmount(Long purchaseRegActive7dAmount) {
+    this.purchaseRegActive7dAmount = purchaseRegActive7dAmount;
+  }
+
+  public DailyReportApiListStruct purchaseRegActive14dAmount(Long purchaseRegActive14dAmount) {
+    this.purchaseRegActive14dAmount = purchaseRegActive14dAmount;
+    return this;
+  }
+
+  /**
+   * Get purchaseRegActive14dAmount
+   *
+   * @return purchaseRegActive14dAmount
+   */
+  @ApiModelProperty(value = "")
+  public Long getPurchaseRegActive14dAmount() {
+    return purchaseRegActive14dAmount;
+  }
+
+  public void setPurchaseRegActive14dAmount(Long purchaseRegActive14dAmount) {
+    this.purchaseRegActive14dAmount = purchaseRegActive14dAmount;
+  }
+
+  public DailyReportApiListStruct purchaseRegActive1dPv(Long purchaseRegActive1dPv) {
+    this.purchaseRegActive1dPv = purchaseRegActive1dPv;
+    return this;
+  }
+
+  /**
+   * Get purchaseRegActive1dPv
+   *
+   * @return purchaseRegActive1dPv
+   */
+  @ApiModelProperty(value = "")
+  public Long getPurchaseRegActive1dPv() {
+    return purchaseRegActive1dPv;
+  }
+
+  public void setPurchaseRegActive1dPv(Long purchaseRegActive1dPv) {
+    this.purchaseRegActive1dPv = purchaseRegActive1dPv;
+  }
+
+  public DailyReportApiListStruct purchaseDedupRegActive1dPv(Long purchaseDedupRegActive1dPv) {
+    this.purchaseDedupRegActive1dPv = purchaseDedupRegActive1dPv;
+    return this;
+  }
+
+  /**
+   * Get purchaseDedupRegActive1dPv
+   *
+   * @return purchaseDedupRegActive1dPv
+   */
+  @ApiModelProperty(value = "")
+  public Long getPurchaseDedupRegActive1dPv() {
+    return purchaseDedupRegActive1dPv;
+  }
+
+  public void setPurchaseDedupRegActive1dPv(Long purchaseDedupRegActive1dPv) {
+    this.purchaseDedupRegActive1dPv = purchaseDedupRegActive1dPv;
+  }
+
+  public DailyReportApiListStruct purchaseRegActive1dAmount(Long purchaseRegActive1dAmount) {
+    this.purchaseRegActive1dAmount = purchaseRegActive1dAmount;
+    return this;
+  }
+
+  /**
+   * Get purchaseRegActive1dAmount
+   *
+   * @return purchaseRegActive1dAmount
+   */
+  @ApiModelProperty(value = "")
+  public Long getPurchaseRegActive1dAmount() {
+    return purchaseRegActive1dAmount;
+  }
+
+  public void setPurchaseRegActive1dAmount(Long purchaseRegActive1dAmount) {
+    this.purchaseRegActive1dAmount = purchaseRegActive1dAmount;
+  }
+
+  public DailyReportApiListStruct clkHotElementPv(Long clkHotElementPv) {
+    this.clkHotElementPv = clkHotElementPv;
+    return this;
+  }
+
+  /**
+   * Get clkHotElementPv
+   *
+   * @return clkHotElementPv
+   */
+  @ApiModelProperty(value = "")
+  public Long getClkHotElementPv() {
+    return clkHotElementPv;
+  }
+
+  public void setClkHotElementPv(Long clkHotElementPv) {
+    this.clkHotElementPv = clkHotElementPv;
+  }
+
+  public DailyReportApiListStruct clkHotElementUv(Long clkHotElementUv) {
+    this.clkHotElementUv = clkHotElementUv;
+    return this;
+  }
+
+  /**
+   * Get clkHotElementUv
+   *
+   * @return clkHotElementUv
+   */
+  @ApiModelProperty(value = "")
+  public Long getClkHotElementUv() {
+    return clkHotElementUv;
+  }
+
+  public void setClkHotElementUv(Long clkHotElementUv) {
+    this.clkHotElementUv = clkHotElementUv;
+  }
+
+  public DailyReportApiListStruct hotElementCtr(Double hotElementCtr) {
+    this.hotElementCtr = hotElementCtr;
+    return this;
+  }
+
+  /**
+   * Get hotElementCtr
+   *
+   * @return hotElementCtr
+   */
+  @ApiModelProperty(value = "")
+  public Double getHotElementCtr() {
+    return hotElementCtr;
+  }
+
+  public void setHotElementCtr(Double hotElementCtr) {
+    this.hotElementCtr = hotElementCtr;
+  }
+
+  public DailyReportApiListStruct securityNegativeDedupPv(Long securityNegativeDedupPv) {
+    this.securityNegativeDedupPv = securityNegativeDedupPv;
+    return this;
+  }
+
+  /**
+   * Get securityNegativeDedupPv
+   *
+   * @return securityNegativeDedupPv
+   */
+  @ApiModelProperty(value = "")
+  public Long getSecurityNegativeDedupPv() {
+    return securityNegativeDedupPv;
+  }
+
+  public void setSecurityNegativeDedupPv(Long securityNegativeDedupPv) {
+    this.securityNegativeDedupPv = securityNegativeDedupPv;
+  }
+
   public DailyReportApiListStruct adgroupId(Long adgroupId) {
     this.adgroupId = adgroupId;
     return this;
@@ -18661,6 +18947,27 @@ public class DailyReportApiListStruct {
             this.mixPurchaseActive14dAmount, dailyReportApiListStruct.mixPurchaseActive14dAmount)
         && Objects.equals(this.mixPayActive14dRoi, dailyReportApiListStruct.mixPayActive14dRoi)
         && Objects.equals(this.mixPurchaseDedupPv, dailyReportApiListStruct.mixPurchaseDedupPv)
+        && Objects.equals(this.purchaseRegAmount, dailyReportApiListStruct.purchaseRegAmount)
+        && Objects.equals(this.purchaseDedupRegPv, dailyReportApiListStruct.purchaseDedupRegPv)
+        && Objects.equals(
+            this.purchaseRegActive24hAmount, dailyReportApiListStruct.purchaseRegActive24hAmount)
+        && Objects.equals(
+            this.purchaseRegActive3dAmount, dailyReportApiListStruct.purchaseRegActive3dAmount)
+        && Objects.equals(
+            this.purchaseRegActive7dAmount, dailyReportApiListStruct.purchaseRegActive7dAmount)
+        && Objects.equals(
+            this.purchaseRegActive14dAmount, dailyReportApiListStruct.purchaseRegActive14dAmount)
+        && Objects.equals(
+            this.purchaseRegActive1dPv, dailyReportApiListStruct.purchaseRegActive1dPv)
+        && Objects.equals(
+            this.purchaseDedupRegActive1dPv, dailyReportApiListStruct.purchaseDedupRegActive1dPv)
+        && Objects.equals(
+            this.purchaseRegActive1dAmount, dailyReportApiListStruct.purchaseRegActive1dAmount)
+        && Objects.equals(this.clkHotElementPv, dailyReportApiListStruct.clkHotElementPv)
+        && Objects.equals(this.clkHotElementUv, dailyReportApiListStruct.clkHotElementUv)
+        && Objects.equals(this.hotElementCtr, dailyReportApiListStruct.hotElementCtr)
+        && Objects.equals(
+            this.securityNegativeDedupPv, dailyReportApiListStruct.securityNegativeDedupPv)
         && Objects.equals(this.adgroupId, dailyReportApiListStruct.adgroupId)
         && Objects.equals(this.adgroupName, dailyReportApiListStruct.adgroupName)
         && Objects.equals(this.dynamicCreativeId, dailyReportApiListStruct.dynamicCreativeId)
@@ -19475,6 +19782,19 @@ public class DailyReportApiListStruct {
         mixPurchaseActive14dAmount,
         mixPayActive14dRoi,
         mixPurchaseDedupPv,
+        purchaseRegAmount,
+        purchaseDedupRegPv,
+        purchaseRegActive24hAmount,
+        purchaseRegActive3dAmount,
+        purchaseRegActive7dAmount,
+        purchaseRegActive14dAmount,
+        purchaseRegActive1dPv,
+        purchaseDedupRegActive1dPv,
+        purchaseRegActive1dAmount,
+        clkHotElementPv,
+        clkHotElementUv,
+        hotElementCtr,
+        securityNegativeDedupPv,
         adgroupId,
         adgroupName,
         dynamicCreativeId,

@@ -57,6 +57,12 @@ public class AuthListStruct {
   @SerializedName("wechat_channels_account_id")
   private String wechatChannelsAccountId = null;
 
+  @SerializedName("is_blocked")
+  private Boolean isBlocked = null;
+
+  @SerializedName("is_private")
+  private Boolean isPrivate = null;
+
   public AuthListStruct wechatChannelsAccountName(String wechatChannelsAccountName) {
     this.wechatChannelsAccountName = wechatChannelsAccountName;
     return this;
@@ -285,6 +291,44 @@ public class AuthListStruct {
     this.wechatChannelsAccountId = wechatChannelsAccountId;
   }
 
+  public AuthListStruct isBlocked(Boolean isBlocked) {
+    this.isBlocked = isBlocked;
+    return this;
+  }
+
+  /**
+   * Get isBlocked
+   *
+   * @return isBlocked
+   */
+  @ApiModelProperty(value = "")
+  public Boolean isIsBlocked() {
+    return isBlocked;
+  }
+
+  public void setIsBlocked(Boolean isBlocked) {
+    this.isBlocked = isBlocked;
+  }
+
+  public AuthListStruct isPrivate(Boolean isPrivate) {
+    this.isPrivate = isPrivate;
+    return this;
+  }
+
+  /**
+   * Get isPrivate
+   *
+   * @return isPrivate
+   */
+  @ApiModelProperty(value = "")
+  public Boolean isIsPrivate() {
+    return isPrivate;
+  }
+
+  public void setIsPrivate(Boolean isPrivate) {
+    this.isPrivate = isPrivate;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -305,7 +349,9 @@ public class AuthListStruct {
         && Objects.equals(this.authorizationScope, authListStruct.authorizationScope)
         && Objects.equals(this.isAdAcct, authListStruct.isAdAcct)
         && Objects.equals(this.wechatChannelsAccountIcon, authListStruct.wechatChannelsAccountIcon)
-        && Objects.equals(this.wechatChannelsAccountId, authListStruct.wechatChannelsAccountId);
+        && Objects.equals(this.wechatChannelsAccountId, authListStruct.wechatChannelsAccountId)
+        && Objects.equals(this.isBlocked, authListStruct.isBlocked)
+        && Objects.equals(this.isPrivate, authListStruct.isPrivate);
   }
 
   @Override
@@ -322,7 +368,9 @@ public class AuthListStruct {
         authorizationScope,
         isAdAcct,
         wechatChannelsAccountIcon,
-        wechatChannelsAccountId);
+        wechatChannelsAccountId,
+        isBlocked,
+        isPrivate);
   }
 
   @Override

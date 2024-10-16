@@ -19,7 +19,7 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-/** 深度优化ROI目标 */
+/** ROI目标 */
 @JsonAdapter(ConversionOptimizationGoal.Adapter.class)
 public enum ConversionOptimizationGoal {
   NONE("GOAL_NONE"),

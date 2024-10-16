@@ -68,7 +68,8 @@ public class ComponentsApiContainer extends ApiContainer {
   /**
    * 获取创意组件
    *
-   * @param accountId (required)
+   * @param accountId (optional)
+   * @param organizationId (optional)
    * @param filtering (optional)
    * @param page (optional)
    * @param pageSize (optional)
@@ -80,6 +81,7 @@ public class ComponentsApiContainer extends ApiContainer {
    */
   public ComponentsGetResponseData componentsGet(
       Long accountId,
+      Long organizationId,
       List<FilteringStruct> filtering,
       Long page,
       Long pageSize,
@@ -88,7 +90,8 @@ public class ComponentsApiContainer extends ApiContainer {
       Pair... headerPair)
       throws ApiException, TencentAdsResponseException {
     ComponentsGetResponse resp =
-        api.componentsGet(accountId, filtering, page, pageSize, isDeleted, fields, headerPair);
+        api.componentsGet(
+            accountId, organizationId, filtering, page, pageSize, isDeleted, fields, headerPair);
     handleResponse(gson.toJson(resp));
     return resp.getData();
   }

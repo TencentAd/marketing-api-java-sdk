@@ -53,7 +53,6 @@ public class MarketingTargetTypesApi {
    *
    * @param accountId (optional)
    * @param organizationId (optional)
-   * @param businessType (optional)
    * @param fields 返回参数的字段列表 (optional)
    * @param progressListener Progress listener
    * @param progressRequestListener Progress request listener
@@ -63,7 +62,6 @@ public class MarketingTargetTypesApi {
   public com.squareup.okhttp.Call marketingTargetTypesGetCall(
       Long accountId,
       Long organizationId,
-      String businessType,
       List<String> fields,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
@@ -81,8 +79,6 @@ public class MarketingTargetTypesApi {
       localVarQueryParams.addAll(apiClient.parameterToPair("account_id", accountId));
     if (organizationId != null)
       localVarQueryParams.addAll(apiClient.parameterToPair("organization_id", organizationId));
-    if (businessType != null)
-      localVarQueryParams.addAll(apiClient.parameterToPair("business_type", businessType));
     if (fields != null)
       localVarCollectionQueryParams.addAll(apiClient.parameterToPairs("multi", "fields", fields));
 
@@ -139,7 +135,6 @@ public class MarketingTargetTypesApi {
   private com.squareup.okhttp.Call marketingTargetTypesGetValidateBeforeCall(
       Long accountId,
       Long organizationId,
-      String businessType,
       List<String> fields,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
@@ -150,7 +145,6 @@ public class MarketingTargetTypesApi {
         marketingTargetTypesGetCall(
             accountId,
             organizationId,
-            businessType,
             fields,
             progressListener,
             progressRequestListener,
@@ -163,22 +157,16 @@ public class MarketingTargetTypesApi {
    *
    * @param accountId (optional)
    * @param organizationId (optional)
-   * @param businessType (optional)
    * @param fields 返回参数的字段列表 (optional)
    * @return MarketingTargetTypesGetResponse
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
   public MarketingTargetTypesGetResponse marketingTargetTypesGet(
-      Long accountId,
-      Long organizationId,
-      String businessType,
-      List<String> fields,
-      Pair... headerPair)
+      Long accountId, Long organizationId, List<String> fields, Pair... headerPair)
       throws ApiException {
     ApiResponse<MarketingTargetTypesGetResponse> resp =
-        marketingTargetTypesGetWithHttpInfo(
-            accountId, organizationId, businessType, fields, headerPair);
+        marketingTargetTypesGetWithHttpInfo(accountId, organizationId, fields, headerPair);
     return resp.getData();
   }
 
@@ -187,22 +175,17 @@ public class MarketingTargetTypesApi {
    *
    * @param accountId (optional)
    * @param organizationId (optional)
-   * @param businessType (optional)
    * @param fields 返回参数的字段列表 (optional)
    * @return ApiResponse&lt;MarketingTargetTypesGetResponse&gt;
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
   public ApiResponse<MarketingTargetTypesGetResponse> marketingTargetTypesGetWithHttpInfo(
-      Long accountId,
-      Long organizationId,
-      String businessType,
-      List<String> fields,
-      Pair... headerPair)
+      Long accountId, Long organizationId, List<String> fields, Pair... headerPair)
       throws ApiException {
     com.squareup.okhttp.Call call =
         marketingTargetTypesGetValidateBeforeCall(
-            accountId, organizationId, businessType, fields, null, null, headerPair);
+            accountId, organizationId, fields, null, null, headerPair);
     Type localVarReturnType = new TypeToken<MarketingTargetTypesGetResponse>() {}.getType();
     return apiClient.execute(call, localVarReturnType);
   }
@@ -212,7 +195,6 @@ public class MarketingTargetTypesApi {
    *
    * @param accountId (optional)
    * @param organizationId (optional)
-   * @param businessType (optional)
    * @param fields 返回参数的字段列表 (optional)
    * @param callback The callback to be executed when the API call finishes
    * @return The request call
@@ -221,7 +203,6 @@ public class MarketingTargetTypesApi {
   public com.squareup.okhttp.Call marketingTargetTypesGetAsync(
       Long accountId,
       Long organizationId,
-      String businessType,
       List<String> fields,
       final ApiCallback<MarketingTargetTypesGetResponse> callback,
       Pair... headerPair)
@@ -252,7 +233,6 @@ public class MarketingTargetTypesApi {
         marketingTargetTypesGetValidateBeforeCall(
             accountId,
             organizationId,
-            businessType,
             fields,
             progressListener,
             progressRequestListener,

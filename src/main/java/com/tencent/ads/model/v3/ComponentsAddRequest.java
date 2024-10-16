@@ -31,6 +31,9 @@ public class ComponentsAddRequest {
   @SerializedName("component_sub_type")
   private ComponentSubType componentSubType = null;
 
+  @SerializedName("organization_id")
+  private Long organizationId = null;
+
   public ComponentsAddRequest accountId(Long accountId) {
     this.accountId = accountId;
     return this;
@@ -107,6 +110,25 @@ public class ComponentsAddRequest {
     this.componentSubType = componentSubType;
   }
 
+  public ComponentsAddRequest organizationId(Long organizationId) {
+    this.organizationId = organizationId;
+    return this;
+  }
+
+  /**
+   * Get organizationId
+   *
+   * @return organizationId
+   */
+  @ApiModelProperty(value = "")
+  public Long getOrganizationId() {
+    return organizationId;
+  }
+
+  public void setOrganizationId(Long organizationId) {
+    this.organizationId = organizationId;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -119,12 +141,14 @@ public class ComponentsAddRequest {
     return Objects.equals(this.accountId, componentsAddRequest.accountId)
         && Objects.equals(this.componentCustomName, componentsAddRequest.componentCustomName)
         && Objects.equals(this.componentValue, componentsAddRequest.componentValue)
-        && Objects.equals(this.componentSubType, componentsAddRequest.componentSubType);
+        && Objects.equals(this.componentSubType, componentsAddRequest.componentSubType)
+        && Objects.equals(this.organizationId, componentsAddRequest.organizationId);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(accountId, componentCustomName, componentValue, componentSubType);
+    return Objects.hash(
+        accountId, componentCustomName, componentValue, componentSubType, organizationId);
   }
 
   @Override
