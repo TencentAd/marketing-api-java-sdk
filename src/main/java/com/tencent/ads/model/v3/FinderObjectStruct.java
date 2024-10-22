@@ -36,6 +36,12 @@ public class FinderObjectStruct {
   @SerializedName("wechat_channels_account_id")
   private String wechatChannelsAccountId = null;
 
+  @SerializedName("bullet_comment_open")
+  private BulletCommentStatus bulletCommentOpen = null;
+
+  @SerializedName("wechat_channels_account_name")
+  private String wechatChannelsAccountName = null;
+
   public FinderObjectStruct finderUsername(String finderUsername) {
     this.finderUsername = finderUsername;
     return this;
@@ -131,6 +137,44 @@ public class FinderObjectStruct {
     this.wechatChannelsAccountId = wechatChannelsAccountId;
   }
 
+  public FinderObjectStruct bulletCommentOpen(BulletCommentStatus bulletCommentOpen) {
+    this.bulletCommentOpen = bulletCommentOpen;
+    return this;
+  }
+
+  /**
+   * Get bulletCommentOpen
+   *
+   * @return bulletCommentOpen
+   */
+  @ApiModelProperty(value = "")
+  public BulletCommentStatus getBulletCommentOpen() {
+    return bulletCommentOpen;
+  }
+
+  public void setBulletCommentOpen(BulletCommentStatus bulletCommentOpen) {
+    this.bulletCommentOpen = bulletCommentOpen;
+  }
+
+  public FinderObjectStruct wechatChannelsAccountName(String wechatChannelsAccountName) {
+    this.wechatChannelsAccountName = wechatChannelsAccountName;
+    return this;
+  }
+
+  /**
+   * Get wechatChannelsAccountName
+   *
+   * @return wechatChannelsAccountName
+   */
+  @ApiModelProperty(value = "")
+  public String getWechatChannelsAccountName() {
+    return wechatChannelsAccountName;
+  }
+
+  public void setWechatChannelsAccountName(String wechatChannelsAccountName) {
+    this.wechatChannelsAccountName = wechatChannelsAccountName;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -144,12 +188,22 @@ public class FinderObjectStruct {
         && Objects.equals(this.description, finderObjectStruct.description)
         && Objects.equals(this.medias, finderObjectStruct.medias)
         && Objects.equals(this.flag, finderObjectStruct.flag)
-        && Objects.equals(this.wechatChannelsAccountId, finderObjectStruct.wechatChannelsAccountId);
+        && Objects.equals(this.wechatChannelsAccountId, finderObjectStruct.wechatChannelsAccountId)
+        && Objects.equals(this.bulletCommentOpen, finderObjectStruct.bulletCommentOpen)
+        && Objects.equals(
+            this.wechatChannelsAccountName, finderObjectStruct.wechatChannelsAccountName);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(finderUsername, description, medias, flag, wechatChannelsAccountId);
+    return Objects.hash(
+        finderUsername,
+        description,
+        medias,
+        flag,
+        wechatChannelsAccountId,
+        bulletCommentOpen,
+        wechatChannelsAccountName);
   }
 
   @Override

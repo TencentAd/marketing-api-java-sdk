@@ -14,7 +14,7 @@ public class TencentAds extends CustomApp {
   private static final String SCHEMA = "https";
   private static final String API_VERSION = "v3.0";
   private static String basePath = "https://api.e.qq.com/v3.0";
-  private static final String SDK_VERSION = "1.1.86";
+  private static final String SDK_VERSION = "1.1.87";
 
   private TencentAds() {}
 

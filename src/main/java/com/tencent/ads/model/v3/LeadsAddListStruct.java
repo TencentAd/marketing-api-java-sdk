@@ -28,7 +28,7 @@ public class LeadsAddListStruct {
   private String outerLeadsId = null;
 
   @SerializedName("detailed_err_code")
-  private String detailedErrCode = null;
+  private Long detailedErrCode = null;
 
   @SerializedName("detailed_err_msg")
   private String detailedErrMsg = null;
@@ -71,7 +71,7 @@ public class LeadsAddListStruct {
     this.outerLeadsId = outerLeadsId;
   }
 
-  public LeadsAddListStruct detailedErrCode(String detailedErrCode) {
+  public LeadsAddListStruct detailedErrCode(Long detailedErrCode) {
     this.detailedErrCode = detailedErrCode;
     return this;
   }
@@ -82,11 +82,11 @@ public class LeadsAddListStruct {
    * @return detailedErrCode
    */
   @ApiModelProperty(value = "")
-  public String getDetailedErrCode() {
+  public Long getDetailedErrCode() {
     return detailedErrCode;
   }
 
-  public void setDetailedErrCode(String detailedErrCode) {
+  public void setDetailedErrCode(Long detailedErrCode) {
     this.detailedErrCode = detailedErrCode;
   }
 
