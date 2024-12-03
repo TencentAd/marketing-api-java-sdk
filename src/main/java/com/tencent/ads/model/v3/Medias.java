@@ -33,6 +33,9 @@ public class Medias {
   @SerializedName("description")
   private String description = null;
 
+  @SerializedName("video_play_len")
+  private Long videoPlayLen = null;
+
   public Medias thumbUrl(String thumbUrl) {
     this.thumbUrl = thumbUrl;
     return this;
@@ -109,6 +112,25 @@ public class Medias {
     this.description = description;
   }
 
+  public Medias videoPlayLen(Long videoPlayLen) {
+    this.videoPlayLen = videoPlayLen;
+    return this;
+  }
+
+  /**
+   * Get videoPlayLen
+   *
+   * @return videoPlayLen
+   */
+  @ApiModelProperty(value = "")
+  public Long getVideoPlayLen() {
+    return videoPlayLen;
+  }
+
+  public void setVideoPlayLen(Long videoPlayLen) {
+    this.videoPlayLen = videoPlayLen;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -121,12 +143,13 @@ public class Medias {
     return Objects.equals(this.thumbUrl, medias.thumbUrl)
         && Objects.equals(this.coverUrl, medias.coverUrl)
         && Objects.equals(this.url, medias.url)
-        && Objects.equals(this.description, medias.description);
+        && Objects.equals(this.description, medias.description)
+        && Objects.equals(this.videoPlayLen, medias.videoPlayLen);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(thumbUrl, coverUrl, url, description);
+    return Objects.hash(thumbUrl, coverUrl, url, description, videoPlayLen);
   }
 
   @Override

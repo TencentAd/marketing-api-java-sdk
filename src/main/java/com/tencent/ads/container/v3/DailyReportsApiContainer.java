@@ -19,9 +19,9 @@ import com.tencent.ads.Pair;
 import com.tencent.ads.anno.*;
 import com.tencent.ads.api.v3.DailyReportsApi;
 import com.tencent.ads.exception.TencentAdsResponseException;
+import com.tencent.ads.model.v3.DailyReportsFilteringStruct;
 import com.tencent.ads.model.v3.DailyReportsGetResponse;
 import com.tencent.ads.model.v3.DailyReportsGetResponseData;
-import com.tencent.ads.model.v3.IntegratedListApiFilteringStruct;
 import com.tencent.ads.model.v3.OrderByStruct;
 import com.tencent.ads.model.v3.ReportDateRange;
 import java.util.List;
@@ -33,45 +33,48 @@ public class DailyReportsApiContainer extends ApiContainer {
   /**
    * 获取日报表
    *
-   * @param accountId (required)
    * @param level (required)
    * @param dateRange (required)
    * @param groupBy (required)
    * @param fields (required)
+   * @param accountId (optional)
    * @param filtering (optional)
    * @param orderBy (optional)
    * @param timeLine (optional)
    * @param page (optional)
    * @param pageSize (optional)
+   * @param organizationId (optional)
    * @return DailyReportsGetResponse
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
   public DailyReportsGetResponseData dailyReportsGet(
-      Long accountId,
       String level,
       ReportDateRange dateRange,
       List<String> groupBy,
       List<String> fields,
-      List<IntegratedListApiFilteringStruct> filtering,
+      Long accountId,
+      List<DailyReportsFilteringStruct> filtering,
       List<OrderByStruct> orderBy,
       String timeLine,
       Long page,
       Long pageSize,
+      Long organizationId,
       Pair... headerPair)
       throws ApiException, TencentAdsResponseException {
     DailyReportsGetResponse resp =
         api.dailyReportsGet(
-            accountId,
             level,
             dateRange,
             groupBy,
             fields,
+            accountId,
             filtering,
             orderBy,
             timeLine,
             page,
             pageSize,
+            organizationId,
             headerPair);
     handleResponse(gson.toJson(resp));
     return resp.getData();

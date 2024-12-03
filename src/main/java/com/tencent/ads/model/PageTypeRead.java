@@ -131,7 +131,9 @@ public enum PageTypeRead {
 
   WECHAT_QUERY_PAGE("PAGE_TYPE_WECHAT_QUERY_PAGE"),
 
-  TSA_OTT("PAGE_TYPE_TSA_OTT");
+  TSA_OTT("PAGE_TYPE_TSA_OTT"),
+
+  APP_HARMONY("PAGE_TYPE_APP_HARMONY");
 
   private String value;
 

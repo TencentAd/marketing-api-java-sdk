@@ -2049,12 +2049,6 @@ public class TargetingTagReportsGetListStruct {
   @SerializedName("project_name")
   private String projectName = null;
 
-  @SerializedName("purchase_pv")
-  private Long purchasePv = null;
-
-  @SerializedName("reg_pv")
-  private Long regPv = null;
-
   public TargetingTagReportsGetListStruct date(String date) {
     this.date = date;
     return this;
@@ -14993,44 +14987,6 @@ public class TargetingTagReportsGetListStruct {
     this.projectName = projectName;
   }
 
-  public TargetingTagReportsGetListStruct purchasePv(Long purchasePv) {
-    this.purchasePv = purchasePv;
-    return this;
-  }
-
-  /**
-   * Get purchasePv
-   *
-   * @return purchasePv
-   */
-  @ApiModelProperty(value = "")
-  public Long getPurchasePv() {
-    return purchasePv;
-  }
-
-  public void setPurchasePv(Long purchasePv) {
-    this.purchasePv = purchasePv;
-  }
-
-  public TargetingTagReportsGetListStruct regPv(Long regPv) {
-    this.regPv = regPv;
-    return this;
-  }
-
-  /**
-   * Get regPv
-   *
-   * @return regPv
-   */
-  @ApiModelProperty(value = "")
-  public Long getRegPv() {
-    return regPv;
-  }
-
-  public void setRegPv(Long regPv) {
-    this.regPv = regPv;
-  }
-
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -16213,9 +16169,7 @@ public class TargetingTagReportsGetListStruct {
         && Objects.equals(
             this.miniGamePayD30PlaRoi, targetingTagReportsGetListStruct.miniGamePayD30PlaRoi)
         && Objects.equals(this.projectId, targetingTagReportsGetListStruct.projectId)
-        && Objects.equals(this.projectName, targetingTagReportsGetListStruct.projectName)
-        && Objects.equals(this.purchasePv, targetingTagReportsGetListStruct.purchasePv)
-        && Objects.equals(this.regPv, targetingTagReportsGetListStruct.regPv);
+        && Objects.equals(this.projectName, targetingTagReportsGetListStruct.projectName);
   }
 
   @Override
@@ -16896,9 +16850,7 @@ public class TargetingTagReportsGetListStruct {
         miniGamePayD14PlaRoi,
         miniGamePayD30PlaRoi,
         projectId,
-        projectName,
-        purchasePv,
-        regPv);
+        projectName);
   }
 
   @Override

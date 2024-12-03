@@ -224,6 +224,9 @@ public class AdgroupsGetListStruct {
   @SerializedName("og_completion_type")
   private OgCompletionType ogCompletionType = null;
 
+  @SerializedName("aoi_optimization_strategy")
+  private AoiOptimizationStrategy aoiOptimizationStrategy = null;
+
   @SerializedName("cost_guarantee_status")
   private CostGuaranteeStatus costGuaranteeStatus = null;
 
@@ -235,6 +238,9 @@ public class AdgroupsGetListStruct {
 
   @SerializedName("enable_breakthrough_siteset")
   private Boolean enableBreakthroughSiteset = null;
+
+  @SerializedName("live_recommend_strategy_enabled")
+  private Boolean liveRecommendStrategyEnabled = null;
 
   public AdgroupsGetListStruct targeting(ReadTargetingSetting targeting) {
     this.targeting = targeting;
@@ -1548,6 +1554,26 @@ public class AdgroupsGetListStruct {
     this.ogCompletionType = ogCompletionType;
   }
 
+  public AdgroupsGetListStruct aoiOptimizationStrategy(
+      AoiOptimizationStrategy aoiOptimizationStrategy) {
+    this.aoiOptimizationStrategy = aoiOptimizationStrategy;
+    return this;
+  }
+
+  /**
+   * Get aoiOptimizationStrategy
+   *
+   * @return aoiOptimizationStrategy
+   */
+  @ApiModelProperty(value = "")
+  public AoiOptimizationStrategy getAoiOptimizationStrategy() {
+    return aoiOptimizationStrategy;
+  }
+
+  public void setAoiOptimizationStrategy(AoiOptimizationStrategy aoiOptimizationStrategy) {
+    this.aoiOptimizationStrategy = aoiOptimizationStrategy;
+  }
+
   public AdgroupsGetListStruct costGuaranteeStatus(CostGuaranteeStatus costGuaranteeStatus) {
     this.costGuaranteeStatus = costGuaranteeStatus;
     return this;
@@ -1622,6 +1648,25 @@ public class AdgroupsGetListStruct {
 
   public void setEnableBreakthroughSiteset(Boolean enableBreakthroughSiteset) {
     this.enableBreakthroughSiteset = enableBreakthroughSiteset;
+  }
+
+  public AdgroupsGetListStruct liveRecommendStrategyEnabled(Boolean liveRecommendStrategyEnabled) {
+    this.liveRecommendStrategyEnabled = liveRecommendStrategyEnabled;
+    return this;
+  }
+
+  /**
+   * Get liveRecommendStrategyEnabled
+   *
+   * @return liveRecommendStrategyEnabled
+   */
+  @ApiModelProperty(value = "")
+  public Boolean isLiveRecommendStrategyEnabled() {
+    return liveRecommendStrategyEnabled;
+  }
+
+  public void setLiveRecommendStrategyEnabled(Boolean liveRecommendStrategyEnabled) {
+    this.liveRecommendStrategyEnabled = liveRecommendStrategyEnabled;
   }
 
   @Override
@@ -1712,11 +1757,15 @@ public class AdgroupsGetListStruct {
         && Objects.equals(this.shortPlayPayType, adgroupsGetListStruct.shortPlayPayType)
         && Objects.equals(this.sellStrategyId, adgroupsGetListStruct.sellStrategyId)
         && Objects.equals(this.ogCompletionType, adgroupsGetListStruct.ogCompletionType)
+        && Objects.equals(
+            this.aoiOptimizationStrategy, adgroupsGetListStruct.aoiOptimizationStrategy)
         && Objects.equals(this.costGuaranteeStatus, adgroupsGetListStruct.costGuaranteeStatus)
         && Objects.equals(this.costGuaranteeMoney, adgroupsGetListStruct.costGuaranteeMoney)
         && Objects.equals(this.additionalProductSpec, adgroupsGetListStruct.additionalProductSpec)
         && Objects.equals(
-            this.enableBreakthroughSiteset, adgroupsGetListStruct.enableBreakthroughSiteset);
+            this.enableBreakthroughSiteset, adgroupsGetListStruct.enableBreakthroughSiteset)
+        && Objects.equals(
+            this.liveRecommendStrategyEnabled, adgroupsGetListStruct.liveRecommendStrategyEnabled);
   }
 
   @Override
@@ -1789,10 +1838,12 @@ public class AdgroupsGetListStruct {
         shortPlayPayType,
         sellStrategyId,
         ogCompletionType,
+        aoiOptimizationStrategy,
         costGuaranteeStatus,
         costGuaranteeMoney,
         additionalProductSpec,
-        enableBreakthroughSiteset);
+        enableBreakthroughSiteset,
+        liveRecommendStrategyEnabled);
   }
 
   @Override

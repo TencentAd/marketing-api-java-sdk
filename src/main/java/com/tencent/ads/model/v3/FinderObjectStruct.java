@@ -36,11 +36,14 @@ public class FinderObjectStruct {
   @SerializedName("wechat_channels_account_id")
   private String wechatChannelsAccountId = null;
 
-  @SerializedName("bullet_comment_open")
-  private BulletCommentStatus bulletCommentOpen = null;
-
   @SerializedName("wechat_channels_account_name")
   private String wechatChannelsAccountName = null;
+
+  @SerializedName("bullet_comment_switch_open")
+  private Boolean bulletCommentSwitchOpen = null;
+
+  @SerializedName("bullet_comment_supported")
+  private Boolean bulletCommentSupported = null;
 
   public FinderObjectStruct finderUsername(String finderUsername) {
     this.finderUsername = finderUsername;
@@ -137,25 +140,6 @@ public class FinderObjectStruct {
     this.wechatChannelsAccountId = wechatChannelsAccountId;
   }
 
-  public FinderObjectStruct bulletCommentOpen(BulletCommentStatus bulletCommentOpen) {
-    this.bulletCommentOpen = bulletCommentOpen;
-    return this;
-  }
-
-  /**
-   * Get bulletCommentOpen
-   *
-   * @return bulletCommentOpen
-   */
-  @ApiModelProperty(value = "")
-  public BulletCommentStatus getBulletCommentOpen() {
-    return bulletCommentOpen;
-  }
-
-  public void setBulletCommentOpen(BulletCommentStatus bulletCommentOpen) {
-    this.bulletCommentOpen = bulletCommentOpen;
-  }
-
   public FinderObjectStruct wechatChannelsAccountName(String wechatChannelsAccountName) {
     this.wechatChannelsAccountName = wechatChannelsAccountName;
     return this;
@@ -175,6 +159,44 @@ public class FinderObjectStruct {
     this.wechatChannelsAccountName = wechatChannelsAccountName;
   }
 
+  public FinderObjectStruct bulletCommentSwitchOpen(Boolean bulletCommentSwitchOpen) {
+    this.bulletCommentSwitchOpen = bulletCommentSwitchOpen;
+    return this;
+  }
+
+  /**
+   * Get bulletCommentSwitchOpen
+   *
+   * @return bulletCommentSwitchOpen
+   */
+  @ApiModelProperty(value = "")
+  public Boolean isBulletCommentSwitchOpen() {
+    return bulletCommentSwitchOpen;
+  }
+
+  public void setBulletCommentSwitchOpen(Boolean bulletCommentSwitchOpen) {
+    this.bulletCommentSwitchOpen = bulletCommentSwitchOpen;
+  }
+
+  public FinderObjectStruct bulletCommentSupported(Boolean bulletCommentSupported) {
+    this.bulletCommentSupported = bulletCommentSupported;
+    return this;
+  }
+
+  /**
+   * Get bulletCommentSupported
+   *
+   * @return bulletCommentSupported
+   */
+  @ApiModelProperty(value = "")
+  public Boolean isBulletCommentSupported() {
+    return bulletCommentSupported;
+  }
+
+  public void setBulletCommentSupported(Boolean bulletCommentSupported) {
+    this.bulletCommentSupported = bulletCommentSupported;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -189,9 +211,10 @@ public class FinderObjectStruct {
         && Objects.equals(this.medias, finderObjectStruct.medias)
         && Objects.equals(this.flag, finderObjectStruct.flag)
         && Objects.equals(this.wechatChannelsAccountId, finderObjectStruct.wechatChannelsAccountId)
-        && Objects.equals(this.bulletCommentOpen, finderObjectStruct.bulletCommentOpen)
         && Objects.equals(
-            this.wechatChannelsAccountName, finderObjectStruct.wechatChannelsAccountName);
+            this.wechatChannelsAccountName, finderObjectStruct.wechatChannelsAccountName)
+        && Objects.equals(this.bulletCommentSwitchOpen, finderObjectStruct.bulletCommentSwitchOpen)
+        && Objects.equals(this.bulletCommentSupported, finderObjectStruct.bulletCommentSupported);
   }
 
   @Override
@@ -202,8 +225,9 @@ public class FinderObjectStruct {
         medias,
         flag,
         wechatChannelsAccountId,
-        bulletCommentOpen,
-        wechatChannelsAccountName);
+        wechatChannelsAccountName,
+        bulletCommentSwitchOpen,
+        bulletCommentSupported);
   }
 
   @Override

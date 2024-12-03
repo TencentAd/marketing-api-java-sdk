@@ -16,6 +16,8 @@ import com.google.gson.Gson;
 import com.google.gson.annotations.SerializedName;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Objects;
 
 /** 创意规格和投放权限数据结构 */
@@ -35,6 +37,15 @@ public class AdcreativeTemplateListStructAdpermit {
 
   @SerializedName("site_set")
   private SiteSetDefinition siteSet = null;
+
+  @SerializedName("creative_template_size")
+  private String creativeTemplateSize = null;
+
+  @SerializedName("support_bid_mode_list")
+  private List<String> supportBidModeList = null;
+
+  @SerializedName("support_site_set_info")
+  private List<SupportSiteSetStruct> supportSiteSetInfo = null;
 
   public AdcreativeTemplateListStructAdpermit creativeTemplateId(Long creativeTemplateId) {
     this.creativeTemplateId = creativeTemplateId;
@@ -132,6 +143,82 @@ public class AdcreativeTemplateListStructAdpermit {
     this.siteSet = siteSet;
   }
 
+  public AdcreativeTemplateListStructAdpermit creativeTemplateSize(String creativeTemplateSize) {
+    this.creativeTemplateSize = creativeTemplateSize;
+    return this;
+  }
+
+  /**
+   * Get creativeTemplateSize
+   *
+   * @return creativeTemplateSize
+   */
+  @ApiModelProperty(value = "")
+  public String getCreativeTemplateSize() {
+    return creativeTemplateSize;
+  }
+
+  public void setCreativeTemplateSize(String creativeTemplateSize) {
+    this.creativeTemplateSize = creativeTemplateSize;
+  }
+
+  public AdcreativeTemplateListStructAdpermit supportBidModeList(List<String> supportBidModeList) {
+    this.supportBidModeList = supportBidModeList;
+    return this;
+  }
+
+  public AdcreativeTemplateListStructAdpermit addSupportBidModeListItem(
+      String supportBidModeListItem) {
+    if (this.supportBidModeList == null) {
+      this.supportBidModeList = new ArrayList<String>();
+    }
+    this.supportBidModeList.add(supportBidModeListItem);
+    return this;
+  }
+
+  /**
+   * Get supportBidModeList
+   *
+   * @return supportBidModeList
+   */
+  @ApiModelProperty(value = "")
+  public List<String> getSupportBidModeList() {
+    return supportBidModeList;
+  }
+
+  public void setSupportBidModeList(List<String> supportBidModeList) {
+    this.supportBidModeList = supportBidModeList;
+  }
+
+  public AdcreativeTemplateListStructAdpermit supportSiteSetInfo(
+      List<SupportSiteSetStruct> supportSiteSetInfo) {
+    this.supportSiteSetInfo = supportSiteSetInfo;
+    return this;
+  }
+
+  public AdcreativeTemplateListStructAdpermit addSupportSiteSetInfoItem(
+      SupportSiteSetStruct supportSiteSetInfoItem) {
+    if (this.supportSiteSetInfo == null) {
+      this.supportSiteSetInfo = new ArrayList<SupportSiteSetStruct>();
+    }
+    this.supportSiteSetInfo.add(supportSiteSetInfoItem);
+    return this;
+  }
+
+  /**
+   * Get supportSiteSetInfo
+   *
+   * @return supportSiteSetInfo
+   */
+  @ApiModelProperty(value = "")
+  public List<SupportSiteSetStruct> getSupportSiteSetInfo() {
+    return supportSiteSetInfo;
+  }
+
+  public void setSupportSiteSetInfo(List<SupportSiteSetStruct> supportSiteSetInfo) {
+    this.supportSiteSetInfo = supportSiteSetInfo;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -151,7 +238,13 @@ public class AdcreativeTemplateListStructAdpermit {
             adcreativeTemplateListStructAdpermit.creativeTemplateAppellation)
         && Objects.equals(
             this.creativeSampleImage, adcreativeTemplateListStructAdpermit.creativeSampleImage)
-        && Objects.equals(this.siteSet, adcreativeTemplateListStructAdpermit.siteSet);
+        && Objects.equals(this.siteSet, adcreativeTemplateListStructAdpermit.siteSet)
+        && Objects.equals(
+            this.creativeTemplateSize, adcreativeTemplateListStructAdpermit.creativeTemplateSize)
+        && Objects.equals(
+            this.supportBidModeList, adcreativeTemplateListStructAdpermit.supportBidModeList)
+        && Objects.equals(
+            this.supportSiteSetInfo, adcreativeTemplateListStructAdpermit.supportSiteSetInfo);
   }
 
   @Override
@@ -161,7 +254,10 @@ public class AdcreativeTemplateListStructAdpermit {
         creativeTemplateStyle,
         creativeTemplateAppellation,
         creativeSampleImage,
-        siteSet);
+        siteSet,
+        creativeTemplateSize,
+        supportBidModeList,
+        supportSiteSetInfo);
   }
 
   @Override

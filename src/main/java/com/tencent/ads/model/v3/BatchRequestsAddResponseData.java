@@ -22,16 +22,16 @@ import java.util.Objects;
 /** BatchRequestsAddResponseData */
 public class BatchRequestsAddResponseData {
   @SerializedName("list")
-  private List<ResponseStruct> list = null;
+  private List<BatchRequestsAddResponseStruct> list = null;
 
-  public BatchRequestsAddResponseData list(List<ResponseStruct> list) {
+  public BatchRequestsAddResponseData list(List<BatchRequestsAddResponseStruct> list) {
     this.list = list;
     return this;
   }
 
-  public BatchRequestsAddResponseData addListItem(ResponseStruct listItem) {
+  public BatchRequestsAddResponseData addListItem(BatchRequestsAddResponseStruct listItem) {
     if (this.list == null) {
-      this.list = new ArrayList<ResponseStruct>();
+      this.list = new ArrayList<BatchRequestsAddResponseStruct>();
     }
     this.list.add(listItem);
     return this;
@@ -43,11 +43,11 @@ public class BatchRequestsAddResponseData {
    * @return list
    */
   @ApiModelProperty(value = "")
-  public List<ResponseStruct> getList() {
+  public List<BatchRequestsAddResponseStruct> getList() {
     return list;
   }
 
-  public void setList(List<ResponseStruct> list) {
+  public void setList(List<BatchRequestsAddResponseStruct> list) {
     this.list = list;
   }
 

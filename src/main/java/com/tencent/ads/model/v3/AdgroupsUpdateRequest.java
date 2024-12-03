@@ -120,11 +120,17 @@ public class AdgroupsUpdateRequest {
   @SerializedName("feedback_id")
   private Long feedbackId = null;
 
+  @SerializedName("aoi_optimization_strategy")
+  private AoiOptimizationStrategy aoiOptimizationStrategy = null;
+
   @SerializedName("search_expand_targeting_switch")
   private SearchExpandTargetingSwitch searchExpandTargetingSwitch = null;
 
   @SerializedName("cloud_union_spec")
   private CloudUnionSpec cloudUnionSpec = null;
+
+  @SerializedName("live_recommend_strategy_enabled")
+  private Boolean liveRecommendStrategyEnabled = null;
 
   public AdgroupsUpdateRequest accountId(Long accountId) {
     this.accountId = accountId;
@@ -771,6 +777,26 @@ public class AdgroupsUpdateRequest {
     this.feedbackId = feedbackId;
   }
 
+  public AdgroupsUpdateRequest aoiOptimizationStrategy(
+      AoiOptimizationStrategy aoiOptimizationStrategy) {
+    this.aoiOptimizationStrategy = aoiOptimizationStrategy;
+    return this;
+  }
+
+  /**
+   * Get aoiOptimizationStrategy
+   *
+   * @return aoiOptimizationStrategy
+   */
+  @ApiModelProperty(value = "")
+  public AoiOptimizationStrategy getAoiOptimizationStrategy() {
+    return aoiOptimizationStrategy;
+  }
+
+  public void setAoiOptimizationStrategy(AoiOptimizationStrategy aoiOptimizationStrategy) {
+    this.aoiOptimizationStrategy = aoiOptimizationStrategy;
+  }
+
   public AdgroupsUpdateRequest searchExpandTargetingSwitch(
       SearchExpandTargetingSwitch searchExpandTargetingSwitch) {
     this.searchExpandTargetingSwitch = searchExpandTargetingSwitch;
@@ -809,6 +835,25 @@ public class AdgroupsUpdateRequest {
 
   public void setCloudUnionSpec(CloudUnionSpec cloudUnionSpec) {
     this.cloudUnionSpec = cloudUnionSpec;
+  }
+
+  public AdgroupsUpdateRequest liveRecommendStrategyEnabled(Boolean liveRecommendStrategyEnabled) {
+    this.liveRecommendStrategyEnabled = liveRecommendStrategyEnabled;
+    return this;
+  }
+
+  /**
+   * Get liveRecommendStrategyEnabled
+   *
+   * @return liveRecommendStrategyEnabled
+   */
+  @ApiModelProperty(value = "")
+  public Boolean isLiveRecommendStrategyEnabled() {
+    return liveRecommendStrategyEnabled;
+  }
+
+  public void setLiveRecommendStrategyEnabled(Boolean liveRecommendStrategyEnabled) {
+    this.liveRecommendStrategyEnabled = liveRecommendStrategyEnabled;
   }
 
   @Override
@@ -863,8 +908,12 @@ public class AdgroupsUpdateRequest {
         && Objects.equals(this.customCostCap, adgroupsUpdateRequest.customCostCap)
         && Objects.equals(this.feedbackId, adgroupsUpdateRequest.feedbackId)
         && Objects.equals(
+            this.aoiOptimizationStrategy, adgroupsUpdateRequest.aoiOptimizationStrategy)
+        && Objects.equals(
             this.searchExpandTargetingSwitch, adgroupsUpdateRequest.searchExpandTargetingSwitch)
-        && Objects.equals(this.cloudUnionSpec, adgroupsUpdateRequest.cloudUnionSpec);
+        && Objects.equals(this.cloudUnionSpec, adgroupsUpdateRequest.cloudUnionSpec)
+        && Objects.equals(
+            this.liveRecommendStrategyEnabled, adgroupsUpdateRequest.liveRecommendStrategyEnabled);
   }
 
   @Override
@@ -903,8 +952,10 @@ public class AdgroupsUpdateRequest {
         costConstraintScene,
         customCostCap,
         feedbackId,
+        aoiOptimizationStrategy,
         searchExpandTargetingSwitch,
-        cloudUnionSpec);
+        cloudUnionSpec,
+        liveRecommendStrategyEnabled);
   }
 
   @Override

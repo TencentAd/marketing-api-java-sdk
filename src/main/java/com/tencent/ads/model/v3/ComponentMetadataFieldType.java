@@ -28,6 +28,8 @@ public enum ComponentMetadataFieldType {
 
   INT("INT"),
 
+  BOOL("BOOL"),
+
   STRUCTURE("STRUCTURE");
 
   private String value;

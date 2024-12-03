@@ -217,10 +217,11 @@ public class AsyncReportsApi {
   /**
    * Build call for asyncReportsGet
    *
-   * @param accountId (required)
+   * @param accountId (optional)
    * @param filtering (optional)
    * @param page (optional)
    * @param pageSize (optional)
+   * @param organizationId (optional)
    * @param fields 返回参数的字段列表 (optional)
    * @param progressListener Progress listener
    * @param progressRequestListener Progress request listener
@@ -232,6 +233,7 @@ public class AsyncReportsApi {
       List<GetAsyncReportsFilteringStruct> filtering,
       Long page,
       Long pageSize,
+      Long organizationId,
       List<String> fields,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
@@ -253,6 +255,8 @@ public class AsyncReportsApi {
     if (page != null) localVarQueryParams.addAll(apiClient.parameterToPair("page", page));
     if (pageSize != null)
       localVarQueryParams.addAll(apiClient.parameterToPair("page_size", pageSize));
+    if (organizationId != null)
+      localVarQueryParams.addAll(apiClient.parameterToPair("organization_id", organizationId));
     if (fields != null)
       localVarCollectionQueryParams.addAll(apiClient.parameterToPairs("multi", "fields", fields));
 
@@ -311,17 +315,12 @@ public class AsyncReportsApi {
       List<GetAsyncReportsFilteringStruct> filtering,
       Long page,
       Long pageSize,
+      Long organizationId,
       List<String> fields,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
       Pair... headerPair)
       throws ApiException {
-
-    // verify the required parameter 'accountId' is set
-    if (accountId == null) {
-      throw new ApiException(
-          "Missing the required parameter 'accountId' when calling asyncReportsGet(Async)");
-    }
 
     com.squareup.okhttp.Call call =
         asyncReportsGetCall(
@@ -329,6 +328,7 @@ public class AsyncReportsApi {
             filtering,
             page,
             pageSize,
+            organizationId,
             fields,
             progressListener,
             progressRequestListener,
@@ -339,10 +339,11 @@ public class AsyncReportsApi {
   /**
    * 获取异步报表任务
    *
-   * @param accountId (required)
+   * @param accountId (optional)
    * @param filtering (optional)
    * @param page (optional)
    * @param pageSize (optional)
+   * @param organizationId (optional)
    * @param fields 返回参数的字段列表 (optional)
    * @return AsyncReportsGetResponse
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
@@ -353,21 +354,24 @@ public class AsyncReportsApi {
       List<GetAsyncReportsFilteringStruct> filtering,
       Long page,
       Long pageSize,
+      Long organizationId,
       List<String> fields,
       Pair... headerPair)
       throws ApiException {
     ApiResponse<AsyncReportsGetResponse> resp =
-        asyncReportsGetWithHttpInfo(accountId, filtering, page, pageSize, fields, headerPair);
+        asyncReportsGetWithHttpInfo(
+            accountId, filtering, page, pageSize, organizationId, fields, headerPair);
     return resp.getData();
   }
 
   /**
    * 获取异步报表任务
    *
-   * @param accountId (required)
+   * @param accountId (optional)
    * @param filtering (optional)
    * @param page (optional)
    * @param pageSize (optional)
+   * @param organizationId (optional)
    * @param fields 返回参数的字段列表 (optional)
    * @return ApiResponse&lt;AsyncReportsGetResponse&gt;
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
@@ -378,12 +382,13 @@ public class AsyncReportsApi {
       List<GetAsyncReportsFilteringStruct> filtering,
       Long page,
       Long pageSize,
+      Long organizationId,
       List<String> fields,
       Pair... headerPair)
       throws ApiException {
     com.squareup.okhttp.Call call =
         asyncReportsGetValidateBeforeCall(
-            accountId, filtering, page, pageSize, fields, null, null, headerPair);
+            accountId, filtering, page, pageSize, organizationId, fields, null, null, headerPair);
     Type localVarReturnType = new TypeToken<AsyncReportsGetResponse>() {}.getType();
     return apiClient.execute(call, localVarReturnType);
   }
@@ -391,10 +396,11 @@ public class AsyncReportsApi {
   /**
    * 获取异步报表任务 (asynchronously)
    *
-   * @param accountId (required)
+   * @param accountId (optional)
    * @param filtering (optional)
    * @param page (optional)
    * @param pageSize (optional)
+   * @param organizationId (optional)
    * @param fields 返回参数的字段列表 (optional)
    * @param callback The callback to be executed when the API call finishes
    * @return The request call
@@ -405,6 +411,7 @@ public class AsyncReportsApi {
       List<GetAsyncReportsFilteringStruct> filtering,
       Long page,
       Long pageSize,
+      Long organizationId,
       List<String> fields,
       final ApiCallback<AsyncReportsGetResponse> callback,
       Pair... headerPair)
@@ -437,6 +444,7 @@ public class AsyncReportsApi {
             filtering,
             page,
             pageSize,
+            organizationId,
             fields,
             progressListener,
             progressRequestListener,

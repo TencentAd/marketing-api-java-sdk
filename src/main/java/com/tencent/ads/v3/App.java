@@ -158,6 +158,8 @@ public class App {
   @Inject ProductsSystemStatusApiContainer productsSystemStatusApiContainer;
   @Inject ProfilesApiContainer profilesApiContainer;
   @Inject ProgrammedApiContainer programmedApiContainer;
+  @Inject ProgrammedCommponentPreviewApiContainer programmedCommponentPreviewApiContainer;
+  @Inject ProgrammedCommponentResultApiContainer programmedCommponentResultApiContainer;
   @Inject ProgrammedMaterialMappingsApiContainer programmedMaterialMappingsApiContainer;
   @Inject ProgrammedTemplateApiContainer programmedTemplateApiContainer;
   @Inject QualificationImagesApiContainer qualificationImagesApiContainer;
@@ -208,6 +210,13 @@ public class App {
   @Inject WechatPagesCsgrouplistApiContainer wechatPagesCsgrouplistApiContainer;
   @Inject WechatPagesCustomApiContainer wechatPagesCustomApiContainer;
   @Inject WechatPagesGrantinfoApiContainer wechatPagesGrantinfoApiContainer;
+  @Inject WechatShopApiContainer wechatShopApiContainer;
+  @Inject WechatShopAuthorizationApiContainer wechatShopAuthorizationApiContainer;
+  @Inject WechatShopAuthorizationStatusApiContainer wechatShopAuthorizationStatusApiContainer;
+
+  @Inject
+  WechatShopAuthorizationValidationApiContainer wechatShopAuthorizationValidationApiContainer;
+
   @Inject WildcardsApiContainer wildcardsApiContainer;
   @Inject WxGamePlayablePageApiContainer wxGamePlayablePageApiContainer;
   @Inject WxPackageAccountApiContainer wxPackageAccountApiContainer;
@@ -756,6 +765,14 @@ public class App {
     return programmedApiContainer;
   }
 
+  public ProgrammedCommponentPreviewApiContainer programmedCommponentPreview() {
+    return programmedCommponentPreviewApiContainer;
+  }
+
+  public ProgrammedCommponentResultApiContainer programmedCommponentResult() {
+    return programmedCommponentResultApiContainer;
+  }
+
   public ProgrammedMaterialMappingsApiContainer programmedMaterialMappings() {
     return programmedMaterialMappingsApiContainer;
   }
@@ -923,6 +940,22 @@ public class App {
 
   public WechatPagesGrantinfoApiContainer wechatPagesGrantinfo() {
     return wechatPagesGrantinfoApiContainer;
+  }
+
+  public WechatShopApiContainer wechatShop() {
+    return wechatShopApiContainer;
+  }
+
+  public WechatShopAuthorizationApiContainer wechatShopAuthorization() {
+    return wechatShopAuthorizationApiContainer;
+  }
+
+  public WechatShopAuthorizationStatusApiContainer wechatShopAuthorizationStatus() {
+    return wechatShopAuthorizationStatusApiContainer;
+  }
+
+  public WechatShopAuthorizationValidationApiContainer wechatShopAuthorizationValidation() {
+    return wechatShopAuthorizationValidationApiContainer;
   }
 
   public WildcardsApiContainer wildcards() {

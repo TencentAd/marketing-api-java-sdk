@@ -22,7 +22,7 @@ import java.util.Objects;
 
 /** 返回信息 */
 @ApiModel(description = "返回信息")
-public class ResponseStruct {
+public class BatchRequestsAddResponseStruct {
   @SerializedName("http_code")
   private Long httpCode = null;
 
@@ -32,7 +32,7 @@ public class ResponseStruct {
   @SerializedName("body")
   private String body = null;
 
-  public ResponseStruct httpCode(Long httpCode) {
+  public BatchRequestsAddResponseStruct httpCode(Long httpCode) {
     this.httpCode = httpCode;
     return this;
   }
@@ -51,12 +51,12 @@ public class ResponseStruct {
     this.httpCode = httpCode;
   }
 
-  public ResponseStruct headers(List<HeaderStruct> headers) {
+  public BatchRequestsAddResponseStruct headers(List<HeaderStruct> headers) {
     this.headers = headers;
     return this;
   }
 
-  public ResponseStruct addHeadersItem(HeaderStruct headersItem) {
+  public BatchRequestsAddResponseStruct addHeadersItem(HeaderStruct headersItem) {
     if (this.headers == null) {
       this.headers = new ArrayList<HeaderStruct>();
     }
@@ -78,7 +78,7 @@ public class ResponseStruct {
     this.headers = headers;
   }
 
-  public ResponseStruct body(String body) {
+  public BatchRequestsAddResponseStruct body(String body) {
     this.body = body;
     return this;
   }
@@ -105,10 +105,11 @@ public class ResponseStruct {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    ResponseStruct responseStruct = (ResponseStruct) o;
-    return Objects.equals(this.httpCode, responseStruct.httpCode)
-        && Objects.equals(this.headers, responseStruct.headers)
-        && Objects.equals(this.body, responseStruct.body);
+    BatchRequestsAddResponseStruct batchRequestsAddResponseStruct =
+        (BatchRequestsAddResponseStruct) o;
+    return Objects.equals(this.httpCode, batchRequestsAddResponseStruct.httpCode)
+        && Objects.equals(this.headers, batchRequestsAddResponseStruct.headers)
+        && Objects.equals(this.body, batchRequestsAddResponseStruct.body);
   }
 
   @Override

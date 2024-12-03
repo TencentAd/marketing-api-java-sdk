@@ -19,16 +19,18 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-/** 视频号弹幕开启状态 */
-@JsonAdapter(BulletCommentStatus.Adapter.class)
-public enum BulletCommentStatus {
-  DEFAULT("BULLET_COMMENT_STATUS_DEFAULT"),
+/** 动态创意类型 */
+@JsonAdapter(DeriveVersionType.Adapter.class)
+public enum DeriveVersionType {
+  UNKNOWN("DERIVE_VERSION_TYPE_UNKNOWN"),
 
-  OPEN("BULLET_COMMENT_STATUS_OPEN");
+  V2("DERIVE_VERSION_TYPE_V2"),
+
+  V3("DERIVE_VERSION_TYPE_V3");
 
   private String value;
 
-  BulletCommentStatus(String value) {
+  DeriveVersionType(String value) {
     this.value = value;
   }
 
@@ -41,8 +43,8 @@ public enum BulletCommentStatus {
     return String.valueOf(value);
   }
 
-  public static BulletCommentStatus fromValue(String text) {
-    for (BulletCommentStatus b : BulletCommentStatus.values()) {
+  public static DeriveVersionType fromValue(String text) {
+    for (DeriveVersionType b : DeriveVersionType.values()) {
       if (String.valueOf(b.value).equals(text)) {
         return b;
       }
@@ -50,17 +52,17 @@ public enum BulletCommentStatus {
     return null;
   }
 
-  public static class Adapter extends TypeAdapter<BulletCommentStatus> {
+  public static class Adapter extends TypeAdapter<DeriveVersionType> {
     @Override
-    public void write(final JsonWriter jsonWriter, final BulletCommentStatus enumeration)
+    public void write(final JsonWriter jsonWriter, final DeriveVersionType enumeration)
         throws IOException {
       jsonWriter.value(enumeration.getValue());
     }
 
     @Override
-    public BulletCommentStatus read(final JsonReader jsonReader) throws IOException {
+    public DeriveVersionType read(final JsonReader jsonReader) throws IOException {
       String value = jsonReader.nextString();
-      return BulletCommentStatus.fromValue(String.valueOf(value));
+      return DeriveVersionType.fromValue(String.valueOf(value));
     }
   }
 }

@@ -28,7 +28,9 @@ public enum ComponentMetadataFieldValidType {
 
   IMAGE("IMAGE"),
 
-  VIDEO("VIDEO");
+  VIDEO("VIDEO"),
+
+  BARRAGE("BARRAGE");
 
   private String value;
 

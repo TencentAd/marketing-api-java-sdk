@@ -50,10 +50,11 @@ public class AsyncReportsApiContainer extends ApiContainer {
   /**
    * 获取异步报表任务
    *
-   * @param accountId (required)
+   * @param accountId (optional)
    * @param filtering (optional)
    * @param page (optional)
    * @param pageSize (optional)
+   * @param organizationId (optional)
    * @param fields 返回参数的字段列表 (optional)
    * @return AsyncReportsGetResponse
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
@@ -64,11 +65,13 @@ public class AsyncReportsApiContainer extends ApiContainer {
       List<GetAsyncReportsFilteringStruct> filtering,
       Long page,
       Long pageSize,
+      Long organizationId,
       List<String> fields,
       Pair... headerPair)
       throws ApiException, TencentAdsResponseException {
     AsyncReportsGetResponse resp =
-        api.asyncReportsGet(accountId, filtering, page, pageSize, fields, headerPair);
+        api.asyncReportsGet(
+            accountId, filtering, page, pageSize, organizationId, fields, headerPair);
     handleResponse(gson.toJson(resp));
     return resp.getData();
   }

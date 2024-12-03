@@ -21,8 +21,8 @@ import com.tencent.ads.Configuration;
 import com.tencent.ads.Pair;
 import com.tencent.ads.ProgressRequestBody;
 import com.tencent.ads.ProgressResponseBody;
+import com.tencent.ads.model.v3.DailyReportsFilteringStruct;
 import com.tencent.ads.model.v3.DailyReportsGetResponse;
-import com.tencent.ads.model.v3.IntegratedListApiFilteringStruct;
 import com.tencent.ads.model.v3.OrderByStruct;
 import com.tencent.ads.model.v3.ReportDateRange;
 import java.io.IOException;
@@ -54,32 +54,34 @@ public class DailyReportsApi {
   /**
    * Build call for dailyReportsGet
    *
-   * @param accountId (required)
    * @param level (required)
    * @param dateRange (required)
    * @param groupBy (required)
    * @param fields (required)
+   * @param accountId (optional)
    * @param filtering (optional)
    * @param orderBy (optional)
    * @param timeLine (optional)
    * @param page (optional)
    * @param pageSize (optional)
+   * @param organizationId (optional)
    * @param progressListener Progress listener
    * @param progressRequestListener Progress request listener
    * @return Call to execute
    * @throws ApiException If fail to serialize the request body object
    */
   public com.squareup.okhttp.Call dailyReportsGetCall(
-      Long accountId,
       String level,
       ReportDateRange dateRange,
       List<String> groupBy,
       List<String> fields,
-      List<IntegratedListApiFilteringStruct> filtering,
+      Long accountId,
+      List<DailyReportsFilteringStruct> filtering,
       List<OrderByStruct> orderBy,
       String timeLine,
       Long page,
       Long pageSize,
+      Long organizationId,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
       Pair... headerPair)
@@ -113,6 +115,8 @@ public class DailyReportsApi {
       localVarQueryParams.addAll(apiClient.parameterToPair("page_size", pageSize));
     if (fields != null)
       localVarCollectionQueryParams.addAll(apiClient.parameterToPairs("multi", "fields", fields));
+    if (organizationId != null)
+      localVarQueryParams.addAll(apiClient.parameterToPair("organization_id", organizationId));
 
     Map<String, String> localVarHeaderParams = new HashMap<String, String>();
 
@@ -165,26 +169,21 @@ public class DailyReportsApi {
 
   @SuppressWarnings("rawtypes")
   private com.squareup.okhttp.Call dailyReportsGetValidateBeforeCall(
-      Long accountId,
       String level,
       ReportDateRange dateRange,
       List<String> groupBy,
       List<String> fields,
-      List<IntegratedListApiFilteringStruct> filtering,
+      Long accountId,
+      List<DailyReportsFilteringStruct> filtering,
       List<OrderByStruct> orderBy,
       String timeLine,
       Long page,
       Long pageSize,
+      Long organizationId,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
       Pair... headerPair)
       throws ApiException {
-
-    // verify the required parameter 'accountId' is set
-    if (accountId == null) {
-      throw new ApiException(
-          "Missing the required parameter 'accountId' when calling dailyReportsGet(Async)");
-    }
 
     // verify the required parameter 'level' is set
     if (level == null) {
@@ -212,16 +211,17 @@ public class DailyReportsApi {
 
     com.squareup.okhttp.Call call =
         dailyReportsGetCall(
-            accountId,
             level,
             dateRange,
             groupBy,
             fields,
+            accountId,
             filtering,
             orderBy,
             timeLine,
             page,
             pageSize,
+            organizationId,
             progressListener,
             progressRequestListener,
             headerPair);
@@ -231,45 +231,48 @@ public class DailyReportsApi {
   /**
    * 获取日报表
    *
-   * @param accountId (required)
    * @param level (required)
    * @param dateRange (required)
    * @param groupBy (required)
    * @param fields (required)
+   * @param accountId (optional)
    * @param filtering (optional)
    * @param orderBy (optional)
    * @param timeLine (optional)
    * @param page (optional)
    * @param pageSize (optional)
+   * @param organizationId (optional)
    * @return DailyReportsGetResponse
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
   public DailyReportsGetResponse dailyReportsGet(
-      Long accountId,
       String level,
       ReportDateRange dateRange,
       List<String> groupBy,
       List<String> fields,
-      List<IntegratedListApiFilteringStruct> filtering,
+      Long accountId,
+      List<DailyReportsFilteringStruct> filtering,
       List<OrderByStruct> orderBy,
       String timeLine,
       Long page,
       Long pageSize,
+      Long organizationId,
       Pair... headerPair)
       throws ApiException {
     ApiResponse<DailyReportsGetResponse> resp =
         dailyReportsGetWithHttpInfo(
-            accountId,
             level,
             dateRange,
             groupBy,
             fields,
+            accountId,
             filtering,
             orderBy,
             timeLine,
             page,
             pageSize,
+            organizationId,
             headerPair);
     return resp.getData();
   }
@@ -277,45 +280,48 @@ public class DailyReportsApi {
   /**
    * 获取日报表
    *
-   * @param accountId (required)
    * @param level (required)
    * @param dateRange (required)
    * @param groupBy (required)
    * @param fields (required)
+   * @param accountId (optional)
    * @param filtering (optional)
    * @param orderBy (optional)
    * @param timeLine (optional)
    * @param page (optional)
    * @param pageSize (optional)
+   * @param organizationId (optional)
    * @return ApiResponse&lt;DailyReportsGetResponse&gt;
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
   public ApiResponse<DailyReportsGetResponse> dailyReportsGetWithHttpInfo(
-      Long accountId,
       String level,
       ReportDateRange dateRange,
       List<String> groupBy,
       List<String> fields,
-      List<IntegratedListApiFilteringStruct> filtering,
+      Long accountId,
+      List<DailyReportsFilteringStruct> filtering,
       List<OrderByStruct> orderBy,
       String timeLine,
       Long page,
       Long pageSize,
+      Long organizationId,
       Pair... headerPair)
       throws ApiException {
     com.squareup.okhttp.Call call =
         dailyReportsGetValidateBeforeCall(
-            accountId,
             level,
             dateRange,
             groupBy,
             fields,
+            accountId,
             filtering,
             orderBy,
             timeLine,
             page,
             pageSize,
+            organizationId,
             null,
             null,
             headerPair);
@@ -326,31 +332,33 @@ public class DailyReportsApi {
   /**
    * 获取日报表 (asynchronously)
    *
-   * @param accountId (required)
    * @param level (required)
    * @param dateRange (required)
    * @param groupBy (required)
    * @param fields (required)
+   * @param accountId (optional)
    * @param filtering (optional)
    * @param orderBy (optional)
    * @param timeLine (optional)
    * @param page (optional)
    * @param pageSize (optional)
+   * @param organizationId (optional)
    * @param callback The callback to be executed when the API call finishes
    * @return The request call
    * @throws ApiException If fail to process the API call, e.g. serializing the request body object
    */
   public com.squareup.okhttp.Call dailyReportsGetAsync(
-      Long accountId,
       String level,
       ReportDateRange dateRange,
       List<String> groupBy,
       List<String> fields,
-      List<IntegratedListApiFilteringStruct> filtering,
+      Long accountId,
+      List<DailyReportsFilteringStruct> filtering,
       List<OrderByStruct> orderBy,
       String timeLine,
       Long page,
       Long pageSize,
+      Long organizationId,
       final ApiCallback<DailyReportsGetResponse> callback,
       Pair... headerPair)
       throws ApiException {
@@ -378,16 +386,17 @@ public class DailyReportsApi {
 
     com.squareup.okhttp.Call call =
         dailyReportsGetValidateBeforeCall(
-            accountId,
             level,
             dateRange,
             groupBy,
             fields,
+            accountId,
             filtering,
             orderBy,
             timeLine,
             page,
             pageSize,
+            organizationId,
             progressListener,
             progressRequestListener,
             headerPair);

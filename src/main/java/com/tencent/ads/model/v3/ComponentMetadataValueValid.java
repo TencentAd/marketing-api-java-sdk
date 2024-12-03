@@ -72,6 +72,12 @@ public class ComponentMetadataValueValid {
   @SerializedName("min_width")
   private Long minWidth = null;
 
+  @SerializedName("joint")
+  private ComponentMetadataValueValidJoint joint = null;
+
+  @SerializedName("default_bool_value")
+  private Boolean defaultBoolValue = null;
+
   public ComponentMetadataValueValid required(Boolean required) {
     this.required = required;
     return this;
@@ -395,6 +401,44 @@ public class ComponentMetadataValueValid {
     this.minWidth = minWidth;
   }
 
+  public ComponentMetadataValueValid joint(ComponentMetadataValueValidJoint joint) {
+    this.joint = joint;
+    return this;
+  }
+
+  /**
+   * Get joint
+   *
+   * @return joint
+   */
+  @ApiModelProperty(value = "")
+  public ComponentMetadataValueValidJoint getJoint() {
+    return joint;
+  }
+
+  public void setJoint(ComponentMetadataValueValidJoint joint) {
+    this.joint = joint;
+  }
+
+  public ComponentMetadataValueValid defaultBoolValue(Boolean defaultBoolValue) {
+    this.defaultBoolValue = defaultBoolValue;
+    return this;
+  }
+
+  /**
+   * Get defaultBoolValue
+   *
+   * @return defaultBoolValue
+   */
+  @ApiModelProperty(value = "")
+  public Boolean isDefaultBoolValue() {
+    return defaultBoolValue;
+  }
+
+  public void setDefaultBoolValue(Boolean defaultBoolValue) {
+    this.defaultBoolValue = defaultBoolValue;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -420,7 +464,9 @@ public class ComponentMetadataValueValid {
         && Objects.equals(this.minDuration, componentMetadataValueValid.minDuration)
         && Objects.equals(this.maxDuration, componentMetadataValueValid.maxDuration)
         && Objects.equals(this.minHeight, componentMetadataValueValid.minHeight)
-        && Objects.equals(this.minWidth, componentMetadataValueValid.minWidth);
+        && Objects.equals(this.minWidth, componentMetadataValueValid.minWidth)
+        && Objects.equals(this.joint, componentMetadataValueValid.joint)
+        && Objects.equals(this.defaultBoolValue, componentMetadataValueValid.defaultBoolValue);
   }
 
   @Override
@@ -442,7 +488,9 @@ public class ComponentMetadataValueValid {
         minDuration,
         maxDuration,
         minHeight,
-        minWidth);
+        minWidth,
+        joint,
+        defaultBoolValue);
   }
 
   @Override

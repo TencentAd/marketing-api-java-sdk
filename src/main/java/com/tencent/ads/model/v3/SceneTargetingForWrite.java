@@ -56,6 +56,9 @@ public class SceneTargetingForWrite {
   @SerializedName("wechat_channels_scene")
   private List<Long> wechatChannelsScene = null;
 
+  @SerializedName("pc_scene")
+  private List<String> pcScene = null;
+
   public SceneTargetingForWrite mobileUnion(List<String> mobileUnion) {
     this.mobileUnion = mobileUnion;
     return this;
@@ -347,6 +350,33 @@ public class SceneTargetingForWrite {
     this.wechatChannelsScene = wechatChannelsScene;
   }
 
+  public SceneTargetingForWrite pcScene(List<String> pcScene) {
+    this.pcScene = pcScene;
+    return this;
+  }
+
+  public SceneTargetingForWrite addPcSceneItem(String pcSceneItem) {
+    if (this.pcScene == null) {
+      this.pcScene = new ArrayList<String>();
+    }
+    this.pcScene.add(pcSceneItem);
+    return this;
+  }
+
+  /**
+   * Get pcScene
+   *
+   * @return pcScene
+   */
+  @ApiModelProperty(value = "")
+  public List<String> getPcScene() {
+    return pcScene;
+  }
+
+  public void setPcScene(List<String> pcScene) {
+    this.pcScene = pcScene;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -367,7 +397,8 @@ public class SceneTargetingForWrite {
         && Objects.equals(this.wechatPosition, sceneTargetingForWrite.wechatPosition)
         && Objects.equals(this.mobileUnionCategory, sceneTargetingForWrite.mobileUnionCategory)
         && Objects.equals(this.qbsearchScene, sceneTargetingForWrite.qbsearchScene)
-        && Objects.equals(this.wechatChannelsScene, sceneTargetingForWrite.wechatChannelsScene);
+        && Objects.equals(this.wechatChannelsScene, sceneTargetingForWrite.wechatChannelsScene)
+        && Objects.equals(this.pcScene, sceneTargetingForWrite.pcScene);
   }
 
   @Override
@@ -383,7 +414,8 @@ public class SceneTargetingForWrite {
         wechatPosition,
         mobileUnionCategory,
         qbsearchScene,
-        wechatChannelsScene);
+        wechatChannelsScene,
+        pcScene);
   }
 
   @Override

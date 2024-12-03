@@ -34,7 +34,9 @@ public enum WechatChannelsAuthStatus {
 
   AUDIT_PENDING("AUDIT_PENDING"),
 
-  AUDIT_REFUSED("AUDIT_REFUSED");
+  AUDIT_REFUSED("AUDIT_REFUSED"),
+
+  PENDING_CONFIRM("PENDING_CONFIRM");
 
   private String value;
 

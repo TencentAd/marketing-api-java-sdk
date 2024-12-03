@@ -177,6 +177,9 @@ public class AdgroupsAddRequest {
   @SerializedName("dynamic_ad_type")
   private DynamicAdType dynamicAdType = null;
 
+  @SerializedName("aoi_optimization_strategy")
+  private AoiOptimizationStrategy aoiOptimizationStrategy = null;
+
   @SerializedName("cloud_union_spec")
   private CloudUnionSpec cloudUnionSpec = null;
 
@@ -185,6 +188,12 @@ public class AdgroupsAddRequest {
 
   @SerializedName("enable_breakthrough_siteset")
   private Boolean enableBreakthroughSiteset = null;
+
+  @SerializedName("live_recommend_strategy_enabled")
+  private Boolean liveRecommendStrategyEnabled = null;
+
+  @SerializedName("search_expansion_switch")
+  private SearchExpansionSwitch searchExpansionSwitch = null;
 
   public AdgroupsAddRequest accountId(Long accountId) {
     this.accountId = accountId;
@@ -1211,6 +1220,26 @@ public class AdgroupsAddRequest {
     this.dynamicAdType = dynamicAdType;
   }
 
+  public AdgroupsAddRequest aoiOptimizationStrategy(
+      AoiOptimizationStrategy aoiOptimizationStrategy) {
+    this.aoiOptimizationStrategy = aoiOptimizationStrategy;
+    return this;
+  }
+
+  /**
+   * Get aoiOptimizationStrategy
+   *
+   * @return aoiOptimizationStrategy
+   */
+  @ApiModelProperty(value = "")
+  public AoiOptimizationStrategy getAoiOptimizationStrategy() {
+    return aoiOptimizationStrategy;
+  }
+
+  public void setAoiOptimizationStrategy(AoiOptimizationStrategy aoiOptimizationStrategy) {
+    this.aoiOptimizationStrategy = aoiOptimizationStrategy;
+  }
+
   public AdgroupsAddRequest cloudUnionSpec(CloudUnionSpec cloudUnionSpec) {
     this.cloudUnionSpec = cloudUnionSpec;
     return this;
@@ -1266,6 +1295,44 @@ public class AdgroupsAddRequest {
 
   public void setEnableBreakthroughSiteset(Boolean enableBreakthroughSiteset) {
     this.enableBreakthroughSiteset = enableBreakthroughSiteset;
+  }
+
+  public AdgroupsAddRequest liveRecommendStrategyEnabled(Boolean liveRecommendStrategyEnabled) {
+    this.liveRecommendStrategyEnabled = liveRecommendStrategyEnabled;
+    return this;
+  }
+
+  /**
+   * Get liveRecommendStrategyEnabled
+   *
+   * @return liveRecommendStrategyEnabled
+   */
+  @ApiModelProperty(value = "")
+  public Boolean isLiveRecommendStrategyEnabled() {
+    return liveRecommendStrategyEnabled;
+  }
+
+  public void setLiveRecommendStrategyEnabled(Boolean liveRecommendStrategyEnabled) {
+    this.liveRecommendStrategyEnabled = liveRecommendStrategyEnabled;
+  }
+
+  public AdgroupsAddRequest searchExpansionSwitch(SearchExpansionSwitch searchExpansionSwitch) {
+    this.searchExpansionSwitch = searchExpansionSwitch;
+    return this;
+  }
+
+  /**
+   * Get searchExpansionSwitch
+   *
+   * @return searchExpansionSwitch
+   */
+  @ApiModelProperty(value = "")
+  public SearchExpansionSwitch getSearchExpansionSwitch() {
+    return searchExpansionSwitch;
+  }
+
+  public void setSearchExpansionSwitch(SearchExpansionSwitch searchExpansionSwitch) {
+    this.searchExpansionSwitch = searchExpansionSwitch;
   }
 
   @Override
@@ -1337,10 +1404,14 @@ public class AdgroupsAddRequest {
         && Objects.equals(this.shortPlayPayType, adgroupsAddRequest.shortPlayPayType)
         && Objects.equals(this.sellStrategyId, adgroupsAddRequest.sellStrategyId)
         && Objects.equals(this.dynamicAdType, adgroupsAddRequest.dynamicAdType)
+        && Objects.equals(this.aoiOptimizationStrategy, adgroupsAddRequest.aoiOptimizationStrategy)
         && Objects.equals(this.cloudUnionSpec, adgroupsAddRequest.cloudUnionSpec)
         && Objects.equals(this.additionalProductSpec, adgroupsAddRequest.additionalProductSpec)
         && Objects.equals(
-            this.enableBreakthroughSiteset, adgroupsAddRequest.enableBreakthroughSiteset);
+            this.enableBreakthroughSiteset, adgroupsAddRequest.enableBreakthroughSiteset)
+        && Objects.equals(
+            this.liveRecommendStrategyEnabled, adgroupsAddRequest.liveRecommendStrategyEnabled)
+        && Objects.equals(this.searchExpansionSwitch, adgroupsAddRequest.searchExpansionSwitch);
   }
 
   @Override
@@ -1398,9 +1469,12 @@ public class AdgroupsAddRequest {
         shortPlayPayType,
         sellStrategyId,
         dynamicAdType,
+        aoiOptimizationStrategy,
         cloudUnionSpec,
         additionalProductSpec,
-        enableBreakthroughSiteset);
+        enableBreakthroughSiteset,
+        liveRecommendStrategyEnabled,
+        searchExpansionSwitch);
   }
 
   @Override

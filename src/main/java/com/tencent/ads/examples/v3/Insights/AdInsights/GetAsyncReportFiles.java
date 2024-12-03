@@ -14,11 +14,13 @@ public class GetAsyncReportFiles {
   /** TencentAds */
   public TencentAds tencentAds;
 
-  public Long accountId = null;
-
   public Long taskId = null;
 
   public Long fileId = null;
+
+  public Long accountId = null;
+
+  public Long organizationId = null;
 
   public List<String> fields = null;
 
@@ -34,7 +36,9 @@ public class GetAsyncReportFiles {
 
   public String getAsyncReportFiles() throws Exception {
     String response =
-        tencentAds.asyncReportFiles().asyncReportFilesGet(accountId, taskId, fileId, fields);
+        tencentAds
+            .asyncReportFiles()
+            .asyncReportFilesGet(taskId, fileId, accountId, organizationId, fields);
     return response;
   }
 

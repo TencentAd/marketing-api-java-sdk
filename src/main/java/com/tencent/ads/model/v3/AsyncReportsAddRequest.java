@@ -48,6 +48,9 @@ public class AsyncReportsAddRequest {
   @SerializedName("date")
   private String date = null;
 
+  @SerializedName("organization_id")
+  private Long organizationId = null;
+
   public AsyncReportsAddRequest accountId(Long accountId) {
     this.accountId = accountId;
     return this;
@@ -243,6 +246,25 @@ public class AsyncReportsAddRequest {
     this.date = date;
   }
 
+  public AsyncReportsAddRequest organizationId(Long organizationId) {
+    this.organizationId = organizationId;
+    return this;
+  }
+
+  /**
+   * Get organizationId
+   *
+   * @return organizationId
+   */
+  @ApiModelProperty(value = "")
+  public Long getOrganizationId() {
+    return organizationId;
+  }
+
+  public void setOrganizationId(Long organizationId) {
+    this.organizationId = organizationId;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -260,13 +282,23 @@ public class AsyncReportsAddRequest {
         && Objects.equals(this.timeLine, asyncReportsAddRequest.timeLine)
         && Objects.equals(this.groupBy, asyncReportsAddRequest.groupBy)
         && Objects.equals(this.granularity, asyncReportsAddRequest.granularity)
-        && Objects.equals(this.date, asyncReportsAddRequest.date);
+        && Objects.equals(this.date, asyncReportsAddRequest.date)
+        && Objects.equals(this.organizationId, asyncReportsAddRequest.organizationId);
   }
 
   @Override
   public int hashCode() {
     return Objects.hash(
-        accountId, taskName, reportFields, level, filtering, timeLine, groupBy, granularity, date);
+        accountId,
+        taskName,
+        reportFields,
+        level,
+        filtering,
+        timeLine,
+        groupBy,
+        granularity,
+        date,
+        organizationId);
   }
 
   @Override

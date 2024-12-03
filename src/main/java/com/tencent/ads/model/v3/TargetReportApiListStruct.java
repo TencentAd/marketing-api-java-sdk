@@ -2139,6 +2139,12 @@ public class TargetReportApiListStruct {
   @SerializedName("security_negative_dedup_pv")
   private Long securityNegativeDedupPv = null;
 
+  @SerializedName("ad_monetization_pla_reg_active_1d_mix_roi")
+  private Double adMonetizationPlaRegActive1dMixRoi = null;
+
+  @SerializedName("ad_monetization_pla_reg_active_24h_mix_roi")
+  private Double adMonetizationPlaRegActive24hMixRoi = null;
+
   @SerializedName("age_id")
   private Long ageId = null;
 
@@ -15634,6 +15640,46 @@ public class TargetReportApiListStruct {
     this.securityNegativeDedupPv = securityNegativeDedupPv;
   }
 
+  public TargetReportApiListStruct adMonetizationPlaRegActive1dMixRoi(
+      Double adMonetizationPlaRegActive1dMixRoi) {
+    this.adMonetizationPlaRegActive1dMixRoi = adMonetizationPlaRegActive1dMixRoi;
+    return this;
+  }
+
+  /**
+   * Get adMonetizationPlaRegActive1dMixRoi
+   *
+   * @return adMonetizationPlaRegActive1dMixRoi
+   */
+  @ApiModelProperty(value = "")
+  public Double getAdMonetizationPlaRegActive1dMixRoi() {
+    return adMonetizationPlaRegActive1dMixRoi;
+  }
+
+  public void setAdMonetizationPlaRegActive1dMixRoi(Double adMonetizationPlaRegActive1dMixRoi) {
+    this.adMonetizationPlaRegActive1dMixRoi = adMonetizationPlaRegActive1dMixRoi;
+  }
+
+  public TargetReportApiListStruct adMonetizationPlaRegActive24hMixRoi(
+      Double adMonetizationPlaRegActive24hMixRoi) {
+    this.adMonetizationPlaRegActive24hMixRoi = adMonetizationPlaRegActive24hMixRoi;
+    return this;
+  }
+
+  /**
+   * Get adMonetizationPlaRegActive24hMixRoi
+   *
+   * @return adMonetizationPlaRegActive24hMixRoi
+   */
+  @ApiModelProperty(value = "")
+  public Double getAdMonetizationPlaRegActive24hMixRoi() {
+    return adMonetizationPlaRegActive24hMixRoi;
+  }
+
+  public void setAdMonetizationPlaRegActive24hMixRoi(Double adMonetizationPlaRegActive24hMixRoi) {
+    this.adMonetizationPlaRegActive24hMixRoi = adMonetizationPlaRegActive24hMixRoi;
+  }
+
   public TargetReportApiListStruct ageId(Long ageId) {
     this.ageId = ageId;
     return this;
@@ -16825,6 +16871,12 @@ public class TargetReportApiListStruct {
             this.purchaseRegActive1dAmount, targetReportApiListStruct.purchaseRegActive1dAmount)
         && Objects.equals(
             this.securityNegativeDedupPv, targetReportApiListStruct.securityNegativeDedupPv)
+        && Objects.equals(
+            this.adMonetizationPlaRegActive1dMixRoi,
+            targetReportApiListStruct.adMonetizationPlaRegActive1dMixRoi)
+        && Objects.equals(
+            this.adMonetizationPlaRegActive24hMixRoi,
+            targetReportApiListStruct.adMonetizationPlaRegActive24hMixRoi)
         && Objects.equals(this.ageId, targetReportApiListStruct.ageId)
         && Objects.equals(this.cityId, targetReportApiListStruct.cityId)
         && Objects.equals(this.regionId, targetReportApiListStruct.regionId)
@@ -17543,6 +17595,8 @@ public class TargetReportApiListStruct {
         purchaseDedupRegActive1dPv,
         purchaseRegActive1dAmount,
         securityNegativeDedupPv,
+        adMonetizationPlaRegActive1dMixRoi,
+        adMonetizationPlaRegActive24hMixRoi,
         ageId,
         cityId,
         regionId,

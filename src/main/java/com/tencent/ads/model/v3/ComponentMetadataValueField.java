@@ -38,6 +38,9 @@ public class ComponentMetadataValueField {
   @SerializedName("valid")
   private ComponentMetadataValueValid valid = null;
 
+  @SerializedName("label")
+  private String label = null;
+
   public ComponentMetadataValueField name(String name) {
     this.name = name;
     return this;
@@ -143,6 +146,25 @@ public class ComponentMetadataValueField {
     this.valid = valid;
   }
 
+  public ComponentMetadataValueField label(String label) {
+    this.label = label;
+    return this;
+  }
+
+  /**
+   * Get label
+   *
+   * @return label
+   */
+  @ApiModelProperty(value = "")
+  public String getLabel() {
+    return label;
+  }
+
+  public void setLabel(String label) {
+    this.label = label;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -156,12 +178,13 @@ public class ComponentMetadataValueField {
         && Objects.equals(this.type, componentMetadataValueField.type)
         && Objects.equals(this.structure, componentMetadataValueField.structure)
         && Objects.equals(this.isArray, componentMetadataValueField.isArray)
-        && Objects.equals(this.valid, componentMetadataValueField.valid);
+        && Objects.equals(this.valid, componentMetadataValueField.valid)
+        && Objects.equals(this.label, componentMetadataValueField.label);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(name, type, structure, isArray, valid);
+    return Objects.hash(name, type, structure, isArray, valid, label);
   }
 
   @Override

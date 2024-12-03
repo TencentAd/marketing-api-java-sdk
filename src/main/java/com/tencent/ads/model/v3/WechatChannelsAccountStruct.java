@@ -57,6 +57,18 @@ public class WechatChannelsAccountStruct {
   @SerializedName("is_ad_acct")
   private Boolean isAdAcct = null;
 
+  @SerializedName("authorization_begin_time")
+  private Long authorizationBeginTime = null;
+
+  @SerializedName("authorization_ttl")
+  private Long authorizationTtl = null;
+
+  @SerializedName("is_disable")
+  private Boolean isDisable = null;
+
+  @SerializedName("disable_message")
+  private String disableMessage = null;
+
   public WechatChannelsAccountStruct wechatChannelsAccountId(String wechatChannelsAccountId) {
     this.wechatChannelsAccountId = wechatChannelsAccountId;
     return this;
@@ -286,6 +298,82 @@ public class WechatChannelsAccountStruct {
     this.isAdAcct = isAdAcct;
   }
 
+  public WechatChannelsAccountStruct authorizationBeginTime(Long authorizationBeginTime) {
+    this.authorizationBeginTime = authorizationBeginTime;
+    return this;
+  }
+
+  /**
+   * Get authorizationBeginTime
+   *
+   * @return authorizationBeginTime
+   */
+  @ApiModelProperty(value = "")
+  public Long getAuthorizationBeginTime() {
+    return authorizationBeginTime;
+  }
+
+  public void setAuthorizationBeginTime(Long authorizationBeginTime) {
+    this.authorizationBeginTime = authorizationBeginTime;
+  }
+
+  public WechatChannelsAccountStruct authorizationTtl(Long authorizationTtl) {
+    this.authorizationTtl = authorizationTtl;
+    return this;
+  }
+
+  /**
+   * Get authorizationTtl
+   *
+   * @return authorizationTtl
+   */
+  @ApiModelProperty(value = "")
+  public Long getAuthorizationTtl() {
+    return authorizationTtl;
+  }
+
+  public void setAuthorizationTtl(Long authorizationTtl) {
+    this.authorizationTtl = authorizationTtl;
+  }
+
+  public WechatChannelsAccountStruct isDisable(Boolean isDisable) {
+    this.isDisable = isDisable;
+    return this;
+  }
+
+  /**
+   * Get isDisable
+   *
+   * @return isDisable
+   */
+  @ApiModelProperty(value = "")
+  public Boolean isIsDisable() {
+    return isDisable;
+  }
+
+  public void setIsDisable(Boolean isDisable) {
+    this.isDisable = isDisable;
+  }
+
+  public WechatChannelsAccountStruct disableMessage(String disableMessage) {
+    this.disableMessage = disableMessage;
+    return this;
+  }
+
+  /**
+   * Get disableMessage
+   *
+   * @return disableMessage
+   */
+  @ApiModelProperty(value = "")
+  public String getDisableMessage() {
+    return disableMessage;
+  }
+
+  public void setDisableMessage(String disableMessage) {
+    this.disableMessage = disableMessage;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -311,7 +399,12 @@ public class WechatChannelsAccountStruct {
         && Objects.equals(this.authorizationScope, wechatChannelsAccountStruct.authorizationScope)
         && Objects.equals(this.isBlocked, wechatChannelsAccountStruct.isBlocked)
         && Objects.equals(this.isPrivate, wechatChannelsAccountStruct.isPrivate)
-        && Objects.equals(this.isAdAcct, wechatChannelsAccountStruct.isAdAcct);
+        && Objects.equals(this.isAdAcct, wechatChannelsAccountStruct.isAdAcct)
+        && Objects.equals(
+            this.authorizationBeginTime, wechatChannelsAccountStruct.authorizationBeginTime)
+        && Objects.equals(this.authorizationTtl, wechatChannelsAccountStruct.authorizationTtl)
+        && Objects.equals(this.isDisable, wechatChannelsAccountStruct.isDisable)
+        && Objects.equals(this.disableMessage, wechatChannelsAccountStruct.disableMessage);
   }
 
   @Override
@@ -328,7 +421,11 @@ public class WechatChannelsAccountStruct {
         authorizationScope,
         isBlocked,
         isPrivate,
-        isAdAcct);
+        isAdAcct,
+        authorizationBeginTime,
+        authorizationTtl,
+        isDisable,
+        disableMessage);
   }
 
   @Override

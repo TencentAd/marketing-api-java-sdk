@@ -50,9 +50,10 @@ public class AsyncReportFilesApi {
   /**
    * Build call for asyncReportFilesGet
    *
-   * @param accountId (required)
    * @param taskId (required)
    * @param fileId (required)
+   * @param accountId (optional)
+   * @param organizationId (optional)
    * @param fields 返回参数的字段列表 (optional)
    * @param progressListener Progress listener
    * @param progressRequestListener Progress request listener
@@ -60,9 +61,10 @@ public class AsyncReportFilesApi {
    * @throws ApiException If fail to serialize the request body object
    */
   public com.squareup.okhttp.Call asyncReportFilesGetCall(
-      Long accountId,
       Long taskId,
       Long fileId,
+      Long accountId,
+      Long organizationId,
       List<String> fields,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
@@ -80,6 +82,8 @@ public class AsyncReportFilesApi {
       localVarQueryParams.addAll(apiClient.parameterToPair("account_id", accountId));
     if (taskId != null) localVarQueryParams.addAll(apiClient.parameterToPair("task_id", taskId));
     if (fileId != null) localVarQueryParams.addAll(apiClient.parameterToPair("file_id", fileId));
+    if (organizationId != null)
+      localVarQueryParams.addAll(apiClient.parameterToPair("organization_id", organizationId));
     if (fields != null)
       localVarCollectionQueryParams.addAll(apiClient.parameterToPairs("multi", "fields", fields));
 
@@ -134,20 +138,15 @@ public class AsyncReportFilesApi {
 
   @SuppressWarnings("rawtypes")
   private com.squareup.okhttp.Call asyncReportFilesGetValidateBeforeCall(
-      Long accountId,
       Long taskId,
       Long fileId,
+      Long accountId,
+      Long organizationId,
       List<String> fields,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
       Pair... headerPair)
       throws ApiException {
-
-    // verify the required parameter 'accountId' is set
-    if (accountId == null) {
-      throw new ApiException(
-          "Missing the required parameter 'accountId' when calling asyncReportFilesGet(Async)");
-    }
 
     // verify the required parameter 'taskId' is set
     if (taskId == null) {
@@ -163,9 +162,10 @@ public class AsyncReportFilesApi {
 
     com.squareup.okhttp.Call call =
         asyncReportFilesGetCall(
-            accountId,
             taskId,
             fileId,
+            accountId,
+            organizationId,
             fields,
             progressListener,
             progressRequestListener,
@@ -176,39 +176,52 @@ public class AsyncReportFilesApi {
   /**
    * 获取文件接口
    *
-   * @param accountId (required)
    * @param taskId (required)
    * @param fileId (required)
+   * @param accountId (optional)
+   * @param organizationId (optional)
    * @param fields 返回参数的字段列表 (optional)
    * @return String
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
   public String asyncReportFilesGet(
-      Long accountId, Long taskId, Long fileId, List<String> fields, Pair... headerPair)
+      Long taskId,
+      Long fileId,
+      Long accountId,
+      Long organizationId,
+      List<String> fields,
+      Pair... headerPair)
       throws ApiException {
     ApiResponse<String> resp =
-        asyncReportFilesGetWithHttpInfo(accountId, taskId, fileId, fields, headerPair);
+        asyncReportFilesGetWithHttpInfo(
+            taskId, fileId, accountId, organizationId, fields, headerPair);
     return resp.getData();
   }
 
   /**
    * 获取文件接口
    *
-   * @param accountId (required)
    * @param taskId (required)
    * @param fileId (required)
+   * @param accountId (optional)
+   * @param organizationId (optional)
    * @param fields 返回参数的字段列表 (optional)
    * @return ApiResponse&lt;String&gt;
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
   public ApiResponse<String> asyncReportFilesGetWithHttpInfo(
-      Long accountId, Long taskId, Long fileId, List<String> fields, Pair... headerPair)
+      Long taskId,
+      Long fileId,
+      Long accountId,
+      Long organizationId,
+      List<String> fields,
+      Pair... headerPair)
       throws ApiException {
     com.squareup.okhttp.Call call =
         asyncReportFilesGetValidateBeforeCall(
-            accountId, taskId, fileId, fields, null, null, headerPair);
+            taskId, fileId, accountId, organizationId, fields, null, null, headerPair);
     Type localVarReturnType = new TypeToken<String>() {}.getType();
     return apiClient.execute(call, localVarReturnType);
   }
@@ -216,18 +229,20 @@ public class AsyncReportFilesApi {
   /**
    * 获取文件接口 (asynchronously)
    *
-   * @param accountId (required)
    * @param taskId (required)
    * @param fileId (required)
+   * @param accountId (optional)
+   * @param organizationId (optional)
    * @param fields 返回参数的字段列表 (optional)
    * @param callback The callback to be executed when the API call finishes
    * @return The request call
    * @throws ApiException If fail to process the API call, e.g. serializing the request body object
    */
   public com.squareup.okhttp.Call asyncReportFilesGetAsync(
-      Long accountId,
       Long taskId,
       Long fileId,
+      Long accountId,
+      Long organizationId,
       List<String> fields,
       final ApiCallback<String> callback,
       Pair... headerPair)
@@ -256,9 +271,10 @@ public class AsyncReportFilesApi {
 
     com.squareup.okhttp.Call call =
         asyncReportFilesGetValidateBeforeCall(
-            accountId,
             taskId,
             fileId,
+            accountId,
+            organizationId,
             fields,
             progressListener,
             progressRequestListener,

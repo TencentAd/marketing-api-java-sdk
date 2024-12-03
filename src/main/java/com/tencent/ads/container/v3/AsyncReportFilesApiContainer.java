@@ -29,9 +29,10 @@ public class AsyncReportFilesApiContainer extends ApiContainer {
   /**
    * 获取文件接口
    *
-   * @param accountId (required)
    * @param taskId (required)
    * @param fileId (required)
+   * @param accountId (optional)
+   * @param organizationId (optional)
    * @param fields 返回参数的字段列表 (optional)
    * @return String
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
@@ -39,9 +40,15 @@ public class AsyncReportFilesApiContainer extends ApiContainer {
    */
   @NeedDiffHost
   public String asyncReportFilesGet(
-      Long accountId, Long taskId, Long fileId, List<String> fields, Pair... headerPair)
+      Long taskId,
+      Long fileId,
+      Long accountId,
+      Long organizationId,
+      List<String> fields,
+      Pair... headerPair)
       throws ApiException, TencentAdsResponseException {
-    String resp = api.asyncReportFilesGet(accountId, taskId, fileId, fields, headerPair);
+    String resp =
+        api.asyncReportFilesGet(taskId, fileId, accountId, organizationId, fields, headerPair);
 
     return resp;
   }

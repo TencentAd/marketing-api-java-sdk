@@ -59,6 +59,9 @@ public class SceneTargeting {
   @SerializedName("wechat_channels_scene")
   private List<Long> wechatChannelsScene = null;
 
+  @SerializedName("wechat_search_scene")
+  private List<String> wechatSearchScene = null;
+
   public SceneTargeting mobileUnion(List<String> mobileUnion) {
     this.mobileUnion = mobileUnion;
     return this;
@@ -375,6 +378,33 @@ public class SceneTargeting {
     this.wechatChannelsScene = wechatChannelsScene;
   }
 
+  public SceneTargeting wechatSearchScene(List<String> wechatSearchScene) {
+    this.wechatSearchScene = wechatSearchScene;
+    return this;
+  }
+
+  public SceneTargeting addWechatSearchSceneItem(String wechatSearchSceneItem) {
+    if (this.wechatSearchScene == null) {
+      this.wechatSearchScene = new ArrayList<String>();
+    }
+    this.wechatSearchScene.add(wechatSearchSceneItem);
+    return this;
+  }
+
+  /**
+   * Get wechatSearchScene
+   *
+   * @return wechatSearchScene
+   */
+  @ApiModelProperty(value = "")
+  public List<String> getWechatSearchScene() {
+    return wechatSearchScene;
+  }
+
+  public void setWechatSearchScene(List<String> wechatSearchScene) {
+    this.wechatSearchScene = wechatSearchScene;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -396,7 +426,8 @@ public class SceneTargeting {
         && Objects.equals(this.wechatScene, sceneTargeting.wechatScene)
         && Objects.equals(this.wechatPosition, sceneTargeting.wechatPosition)
         && Objects.equals(this.qbsearchScene, sceneTargeting.qbsearchScene)
-        && Objects.equals(this.wechatChannelsScene, sceneTargeting.wechatChannelsScene);
+        && Objects.equals(this.wechatChannelsScene, sceneTargeting.wechatChannelsScene)
+        && Objects.equals(this.wechatSearchScene, sceneTargeting.wechatSearchScene);
   }
 
   @Override
@@ -413,7 +444,8 @@ public class SceneTargeting {
         wechatScene,
         wechatPosition,
         qbsearchScene,
-        wechatChannelsScene);
+        wechatChannelsScene,
+        wechatSearchScene);
   }
 
   @Override

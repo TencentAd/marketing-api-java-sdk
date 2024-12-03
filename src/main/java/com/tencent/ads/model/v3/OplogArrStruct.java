@@ -44,6 +44,9 @@ public class OplogArrStruct {
   @SerializedName("created_time")
   private Long createdTime = null;
 
+  @SerializedName("operation_info_list")
+  private List<OperationInfoListStruct> operationInfoList = null;
+
   public OplogArrStruct operationAction(OperationActionType operationAction) {
     this.operationAction = operationAction;
     return this;
@@ -185,6 +188,33 @@ public class OplogArrStruct {
     this.createdTime = createdTime;
   }
 
+  public OplogArrStruct operationInfoList(List<OperationInfoListStruct> operationInfoList) {
+    this.operationInfoList = operationInfoList;
+    return this;
+  }
+
+  public OplogArrStruct addOperationInfoListItem(OperationInfoListStruct operationInfoListItem) {
+    if (this.operationInfoList == null) {
+      this.operationInfoList = new ArrayList<OperationInfoListStruct>();
+    }
+    this.operationInfoList.add(operationInfoListItem);
+    return this;
+  }
+
+  /**
+   * Get operationInfoList
+   *
+   * @return operationInfoList
+   */
+  @ApiModelProperty(value = "")
+  public List<OperationInfoListStruct> getOperationInfoList() {
+    return operationInfoList;
+  }
+
+  public void setOperationInfoList(List<OperationInfoListStruct> operationInfoList) {
+    this.operationInfoList = operationInfoList;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -200,7 +230,8 @@ public class OplogArrStruct {
         && Objects.equals(this.operationObjectName, oplogArrStruct.operationObjectName)
         && Objects.equals(this.operatorPlatform, oplogArrStruct.operatorPlatform)
         && Objects.equals(this.operationLog, oplogArrStruct.operationLog)
-        && Objects.equals(this.createdTime, oplogArrStruct.createdTime);
+        && Objects.equals(this.createdTime, oplogArrStruct.createdTime)
+        && Objects.equals(this.operationInfoList, oplogArrStruct.operationInfoList);
   }
 
   @Override
@@ -212,7 +243,8 @@ public class OplogArrStruct {
         operationObjectName,
         operatorPlatform,
         operationLog,
-        createdTime);
+        createdTime,
+        operationInfoList);
   }
 
   @Override

@@ -32,6 +32,9 @@ public class ProgramCreativeInfo {
   @SerializedName("bid_mode")
   private BidMode bidMode = null;
 
+  @SerializedName("derive_version")
+  private DeriveVersionType deriveVersion = null;
+
   public ProgramCreativeInfo materialDeriveId(Long materialDeriveId) {
     this.materialDeriveId = materialDeriveId;
     return this;
@@ -98,6 +101,25 @@ public class ProgramCreativeInfo {
     this.bidMode = bidMode;
   }
 
+  public ProgramCreativeInfo deriveVersion(DeriveVersionType deriveVersion) {
+    this.deriveVersion = deriveVersion;
+    return this;
+  }
+
+  /**
+   * Get deriveVersion
+   *
+   * @return deriveVersion
+   */
+  @ApiModelProperty(value = "")
+  public DeriveVersionType getDeriveVersion() {
+    return deriveVersion;
+  }
+
+  public void setDeriveVersion(DeriveVersionType deriveVersion) {
+    this.deriveVersion = deriveVersion;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -109,12 +131,13 @@ public class ProgramCreativeInfo {
     ProgramCreativeInfo programCreativeInfo = (ProgramCreativeInfo) o;
     return Objects.equals(this.materialDeriveId, programCreativeInfo.materialDeriveId)
         && Objects.equals(this.materialDeriveInfo, programCreativeInfo.materialDeriveInfo)
-        && Objects.equals(this.bidMode, programCreativeInfo.bidMode);
+        && Objects.equals(this.bidMode, programCreativeInfo.bidMode)
+        && Objects.equals(this.deriveVersion, programCreativeInfo.deriveVersion);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(materialDeriveId, materialDeriveInfo, bidMode);
+    return Objects.hash(materialDeriveId, materialDeriveInfo, bidMode, deriveVersion);
   }
 
   @Override

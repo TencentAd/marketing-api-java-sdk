@@ -4,7 +4,7 @@ import com.tencent.ads.ApiContextConfig;
 import com.tencent.ads.exception.TencentAdsResponseException;
 import com.tencent.ads.exception.TencentAdsSDKException;
 import com.tencent.ads.model.v3.*;
-import com.tencent.ads.model.v3.IntegratedListApiFilteringStruct;
+import com.tencent.ads.model.v3.DailyReportsFilteringStruct;
 import com.tencent.ads.model.v3.OrderByStruct;
 import com.tencent.ads.model.v3.ReportDateRange;
 import com.tencent.ads.v3.TencentAds;
@@ -18,8 +18,6 @@ public class GetDailyReports {
   /** TencentAds */
   public TencentAds tencentAds;
 
-  public Long accountId = null;
-
   public String level = "REPORT_LEVEL_ADGROUP";
 
   public ReportDateRange dateRange = new ReportDateRange();
@@ -29,7 +27,9 @@ public class GetDailyReports {
   public List<String> fields =
       Arrays.asList("date", "view_count", "valid_click_count", "ctr", "cpc", "cost");
 
-  public List<IntegratedListApiFilteringStruct> filtering = null;
+  public Long accountId = null;
+
+  public List<DailyReportsFilteringStruct> filtering = null;
 
   public List<OrderByStruct> orderBy = null;
 
@@ -38,6 +38,8 @@ public class GetDailyReports {
   public Long page = null;
 
   public Long pageSize = null;
+
+  public Long organizationId = null;
 
   public void init() {
     this.tencentAds = TencentAds.getInstance();
@@ -59,8 +61,17 @@ public class GetDailyReports {
         tencentAds
             .dailyReports()
             .dailyReportsGet(
-                accountId, level, dateRange, groupBy, fields, filtering, orderBy, timeLine, page,
-                pageSize);
+                level,
+                dateRange,
+                groupBy,
+                fields,
+                accountId,
+                filtering,
+                orderBy,
+                timeLine,
+                page,
+                pageSize,
+                organizationId);
     return response;
   }
 

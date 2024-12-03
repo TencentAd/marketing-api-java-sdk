@@ -23,6 +23,8 @@ public class GetAsyncReports {
 
   public Long pageSize = null;
 
+  public Long organizationId = null;
+
   public List<String> fields = null;
 
   public void init() {
@@ -37,7 +39,9 @@ public class GetAsyncReports {
 
   public AsyncReportsGetResponseData getAsyncReports() throws Exception {
     AsyncReportsGetResponseData response =
-        tencentAds.asyncReports().asyncReportsGet(accountId, filtering, page, pageSize, fields);
+        tencentAds
+            .asyncReports()
+            .asyncReportsGet(accountId, filtering, page, pageSize, organizationId, fields);
     return response;
   }
 

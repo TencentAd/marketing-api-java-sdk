@@ -16,6 +16,8 @@ import com.google.gson.Gson;
 import com.google.gson.annotations.SerializedName;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Objects;
 
 /** 服务商业务单元信息 */
@@ -26,6 +28,9 @@ public class AgencyBusinessUnitListGetListStruct {
 
   @SerializedName("business_unit_name")
   private String businessUnitName = null;
+
+  @SerializedName("manager_user_id_list")
+  private List<Long> managerUserIdList = null;
 
   public AgencyBusinessUnitListGetListStruct organizationId(Long organizationId) {
     this.organizationId = organizationId;
@@ -65,6 +70,33 @@ public class AgencyBusinessUnitListGetListStruct {
     this.businessUnitName = businessUnitName;
   }
 
+  public AgencyBusinessUnitListGetListStruct managerUserIdList(List<Long> managerUserIdList) {
+    this.managerUserIdList = managerUserIdList;
+    return this;
+  }
+
+  public AgencyBusinessUnitListGetListStruct addManagerUserIdListItem(Long managerUserIdListItem) {
+    if (this.managerUserIdList == null) {
+      this.managerUserIdList = new ArrayList<Long>();
+    }
+    this.managerUserIdList.add(managerUserIdListItem);
+    return this;
+  }
+
+  /**
+   * Get managerUserIdList
+   *
+   * @return managerUserIdList
+   */
+  @ApiModelProperty(value = "")
+  public List<Long> getManagerUserIdList() {
+    return managerUserIdList;
+  }
+
+  public void setManagerUserIdList(List<Long> managerUserIdList) {
+    this.managerUserIdList = managerUserIdList;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -77,12 +109,14 @@ public class AgencyBusinessUnitListGetListStruct {
         (AgencyBusinessUnitListGetListStruct) o;
     return Objects.equals(this.organizationId, agencyBusinessUnitListGetListStruct.organizationId)
         && Objects.equals(
-            this.businessUnitName, agencyBusinessUnitListGetListStruct.businessUnitName);
+            this.businessUnitName, agencyBusinessUnitListGetListStruct.businessUnitName)
+        && Objects.equals(
+            this.managerUserIdList, agencyBusinessUnitListGetListStruct.managerUserIdList);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(organizationId, businessUnitName);
+    return Objects.hash(organizationId, businessUnitName, managerUserIdList);
   }
 
   @Override

@@ -48,6 +48,9 @@ public class DynamicCreativesGetListStruct {
   @SerializedName("click_tracking_url")
   private String clickTrackingUrl = null;
 
+  @SerializedName("program_creative_info")
+  private ProgramCreativeInfo programCreativeInfo = null;
+
   @SerializedName("page_track_url")
   private String pageTrackUrl = null;
 
@@ -71,6 +74,9 @@ public class DynamicCreativesGetListStruct {
 
   @SerializedName("asset_inconsistent_status")
   private AssetInconsistentStatus assetInconsistentStatus = null;
+
+  @SerializedName("potential_status")
+  private DynamicCreativePotentialStatus potentialStatus = null;
 
   public DynamicCreativesGetListStruct adgroupId(Long adgroupId) {
     this.adgroupId = adgroupId;
@@ -244,6 +250,26 @@ public class DynamicCreativesGetListStruct {
     this.clickTrackingUrl = clickTrackingUrl;
   }
 
+  public DynamicCreativesGetListStruct programCreativeInfo(
+      ProgramCreativeInfo programCreativeInfo) {
+    this.programCreativeInfo = programCreativeInfo;
+    return this;
+  }
+
+  /**
+   * Get programCreativeInfo
+   *
+   * @return programCreativeInfo
+   */
+  @ApiModelProperty(value = "")
+  public ProgramCreativeInfo getProgramCreativeInfo() {
+    return programCreativeInfo;
+  }
+
+  public void setProgramCreativeInfo(ProgramCreativeInfo programCreativeInfo) {
+    this.programCreativeInfo = programCreativeInfo;
+  }
+
   public DynamicCreativesGetListStruct pageTrackUrl(String pageTrackUrl) {
     this.pageTrackUrl = pageTrackUrl;
     return this;
@@ -398,6 +424,26 @@ public class DynamicCreativesGetListStruct {
     this.assetInconsistentStatus = assetInconsistentStatus;
   }
 
+  public DynamicCreativesGetListStruct potentialStatus(
+      DynamicCreativePotentialStatus potentialStatus) {
+    this.potentialStatus = potentialStatus;
+    return this;
+  }
+
+  /**
+   * Get potentialStatus
+   *
+   * @return potentialStatus
+   */
+  @ApiModelProperty(value = "")
+  public DynamicCreativePotentialStatus getPotentialStatus() {
+    return potentialStatus;
+  }
+
+  public void setPotentialStatus(DynamicCreativePotentialStatus potentialStatus) {
+    this.potentialStatus = potentialStatus;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -419,6 +465,8 @@ public class DynamicCreativesGetListStruct {
         && Objects.equals(
             this.impressionTrackingUrl, dynamicCreativesGetListStruct.impressionTrackingUrl)
         && Objects.equals(this.clickTrackingUrl, dynamicCreativesGetListStruct.clickTrackingUrl)
+        && Objects.equals(
+            this.programCreativeInfo, dynamicCreativesGetListStruct.programCreativeInfo)
         && Objects.equals(this.pageTrackUrl, dynamicCreativesGetListStruct.pageTrackUrl)
         && Objects.equals(this.configuredStatus, dynamicCreativesGetListStruct.configuredStatus)
         && Objects.equals(this.isDeleted, dynamicCreativesGetListStruct.isDeleted)
@@ -429,7 +477,8 @@ public class DynamicCreativesGetListStruct {
             dynamicCreativesGetListStruct.marketingAssetVerification)
         && Objects.equals(this.source, dynamicCreativesGetListStruct.source)
         && Objects.equals(
-            this.assetInconsistentStatus, dynamicCreativesGetListStruct.assetInconsistentStatus);
+            this.assetInconsistentStatus, dynamicCreativesGetListStruct.assetInconsistentStatus)
+        && Objects.equals(this.potentialStatus, dynamicCreativesGetListStruct.potentialStatus);
   }
 
   @Override
@@ -444,6 +493,7 @@ public class DynamicCreativesGetListStruct {
         creativeComponents,
         impressionTrackingUrl,
         clickTrackingUrl,
+        programCreativeInfo,
         pageTrackUrl,
         configuredStatus,
         isDeleted,
@@ -451,7 +501,8 @@ public class DynamicCreativesGetListStruct {
         lastModifiedTime,
         marketingAssetVerification,
         source,
-        assetInconsistentStatus);
+        assetInconsistentStatus,
+        potentialStatus);
   }
 
   @Override

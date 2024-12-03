@@ -2262,6 +2262,15 @@ public class HourlyReportApiListStruct {
   @SerializedName("security_negative_dedup_pv")
   private Long securityNegativeDedupPv = null;
 
+  @SerializedName("clk_interpage_btn_pv")
+  private Long clkInterpageBtnPv = null;
+
+  @SerializedName("ad_monetization_pla_reg_active_1d_mix_roi")
+  private Double adMonetizationPlaRegActive1dMixRoi = null;
+
+  @SerializedName("ad_monetization_pla_reg_active_24h_mix_roi")
+  private Double adMonetizationPlaRegActive24hMixRoi = null;
+
   @SerializedName("adgroup_id")
   private Long adgroupId = null;
 
@@ -16563,6 +16572,65 @@ public class HourlyReportApiListStruct {
     this.securityNegativeDedupPv = securityNegativeDedupPv;
   }
 
+  public HourlyReportApiListStruct clkInterpageBtnPv(Long clkInterpageBtnPv) {
+    this.clkInterpageBtnPv = clkInterpageBtnPv;
+    return this;
+  }
+
+  /**
+   * Get clkInterpageBtnPv
+   *
+   * @return clkInterpageBtnPv
+   */
+  @ApiModelProperty(value = "")
+  public Long getClkInterpageBtnPv() {
+    return clkInterpageBtnPv;
+  }
+
+  public void setClkInterpageBtnPv(Long clkInterpageBtnPv) {
+    this.clkInterpageBtnPv = clkInterpageBtnPv;
+  }
+
+  public HourlyReportApiListStruct adMonetizationPlaRegActive1dMixRoi(
+      Double adMonetizationPlaRegActive1dMixRoi) {
+    this.adMonetizationPlaRegActive1dMixRoi = adMonetizationPlaRegActive1dMixRoi;
+    return this;
+  }
+
+  /**
+   * Get adMonetizationPlaRegActive1dMixRoi
+   *
+   * @return adMonetizationPlaRegActive1dMixRoi
+   */
+  @ApiModelProperty(value = "")
+  public Double getAdMonetizationPlaRegActive1dMixRoi() {
+    return adMonetizationPlaRegActive1dMixRoi;
+  }
+
+  public void setAdMonetizationPlaRegActive1dMixRoi(Double adMonetizationPlaRegActive1dMixRoi) {
+    this.adMonetizationPlaRegActive1dMixRoi = adMonetizationPlaRegActive1dMixRoi;
+  }
+
+  public HourlyReportApiListStruct adMonetizationPlaRegActive24hMixRoi(
+      Double adMonetizationPlaRegActive24hMixRoi) {
+    this.adMonetizationPlaRegActive24hMixRoi = adMonetizationPlaRegActive24hMixRoi;
+    return this;
+  }
+
+  /**
+   * Get adMonetizationPlaRegActive24hMixRoi
+   *
+   * @return adMonetizationPlaRegActive24hMixRoi
+   */
+  @ApiModelProperty(value = "")
+  public Double getAdMonetizationPlaRegActive24hMixRoi() {
+    return adMonetizationPlaRegActive24hMixRoi;
+  }
+
+  public void setAdMonetizationPlaRegActive24hMixRoi(Double adMonetizationPlaRegActive24hMixRoi) {
+    this.adMonetizationPlaRegActive24hMixRoi = adMonetizationPlaRegActive24hMixRoi;
+  }
+
   public HourlyReportApiListStruct adgroupId(Long adgroupId) {
     this.adgroupId = adgroupId;
     return this;
@@ -17978,6 +18046,13 @@ public class HourlyReportApiListStruct {
         && Objects.equals(this.hotElementCtr, hourlyReportApiListStruct.hotElementCtr)
         && Objects.equals(
             this.securityNegativeDedupPv, hourlyReportApiListStruct.securityNegativeDedupPv)
+        && Objects.equals(this.clkInterpageBtnPv, hourlyReportApiListStruct.clkInterpageBtnPv)
+        && Objects.equals(
+            this.adMonetizationPlaRegActive1dMixRoi,
+            hourlyReportApiListStruct.adMonetizationPlaRegActive1dMixRoi)
+        && Objects.equals(
+            this.adMonetizationPlaRegActive24hMixRoi,
+            hourlyReportApiListStruct.adMonetizationPlaRegActive24hMixRoi)
         && Objects.equals(this.adgroupId, hourlyReportApiListStruct.adgroupId)
         && Objects.equals(this.adgroupName, hourlyReportApiListStruct.adgroupName)
         && Objects.equals(this.dynamicCreativeId, hourlyReportApiListStruct.dynamicCreativeId)
@@ -18746,6 +18821,9 @@ public class HourlyReportApiListStruct {
         clkHotElementUv,
         hotElementCtr,
         securityNegativeDedupPv,
+        clkInterpageBtnPv,
+        adMonetizationPlaRegActive1dMixRoi,
+        adMonetizationPlaRegActive24hMixRoi,
         adgroupId,
         adgroupName,
         dynamicCreativeId,
