@@ -28,7 +28,7 @@ public class CreativeTemplateApiContainer extends ApiContainer {
   @Inject CreativeTemplateApi api;
 
   /**
-   * 获取创意规格详情
+   * 获取创意形式详情
    *
    * @param accountId (required)
    * @param marketingGoal (required)

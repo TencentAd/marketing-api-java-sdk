@@ -20,8 +20,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
-/** 创意规格和投放权限数据结构 */
-@ApiModel(description = "创意规格和投放权限数据结构")
+/** 创意形式和投放权限数据结构 */
+@ApiModel(description = "创意形式和投放权限数据结构")
 public class AdcreativeTemplateStructAdpermit {
   @SerializedName("creative_template_id")
   private Long creativeTemplateId = null;

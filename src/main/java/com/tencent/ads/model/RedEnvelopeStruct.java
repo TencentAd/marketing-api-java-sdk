@@ -66,6 +66,9 @@ public class RedEnvelopeStruct {
   @SerializedName("plot_original_material")
   private PlotOriginalMaterial plotOriginalMaterial = null;
 
+  @SerializedName("red_envelope_brand_name")
+  private String redEnvelopeBrandName = null;
+
   public RedEnvelopeStruct redEnvelopeSwitch(Boolean redEnvelopeSwitch) {
     this.redEnvelopeSwitch = redEnvelopeSwitch;
     return this;
@@ -351,6 +354,25 @@ public class RedEnvelopeStruct {
     this.plotOriginalMaterial = plotOriginalMaterial;
   }
 
+  public RedEnvelopeStruct redEnvelopeBrandName(String redEnvelopeBrandName) {
+    this.redEnvelopeBrandName = redEnvelopeBrandName;
+    return this;
+  }
+
+  /**
+   * Get redEnvelopeBrandName
+   *
+   * @return redEnvelopeBrandName
+   */
+  @ApiModelProperty(value = "")
+  public String getRedEnvelopeBrandName() {
+    return redEnvelopeBrandName;
+  }
+
+  public void setRedEnvelopeBrandName(String redEnvelopeBrandName) {
+    this.redEnvelopeBrandName = redEnvelopeBrandName;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -377,7 +399,8 @@ public class RedEnvelopeStruct {
         && Objects.equals(this.plotSignText, redEnvelopeStruct.plotSignText)
         && Objects.equals(this.plotSignImage, redEnvelopeStruct.plotSignImage)
         && Objects.equals(this.plotBrandLogo, redEnvelopeStruct.plotBrandLogo)
-        && Objects.equals(this.plotOriginalMaterial, redEnvelopeStruct.plotOriginalMaterial);
+        && Objects.equals(this.plotOriginalMaterial, redEnvelopeStruct.plotOriginalMaterial)
+        && Objects.equals(this.redEnvelopeBrandName, redEnvelopeStruct.redEnvelopeBrandName);
   }
 
   @Override
@@ -397,7 +420,8 @@ public class RedEnvelopeStruct {
         plotSignText,
         plotSignImage,
         plotBrandLogo,
-        plotOriginalMaterial);
+        plotOriginalMaterial,
+        redEnvelopeBrandName);
   }
 
   @Override

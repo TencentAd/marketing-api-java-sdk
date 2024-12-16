@@ -237,7 +237,7 @@ public class CreativeTemplateApi {
   }
 
   /**
-   * 获取创意规格详情
+   * 获取创意形式详情
    *
    * @param accountId (required)
    * @param marketingGoal (required)
@@ -286,7 +286,7 @@ public class CreativeTemplateApi {
   }
 
   /**
-   * 获取创意规格详情
+   * 获取创意形式详情
    *
    * @param accountId (required)
    * @param marketingGoal (required)
@@ -338,7 +338,7 @@ public class CreativeTemplateApi {
   }
 
   /**
-   * 获取创意规格详情 (asynchronously)
+   * 获取创意形式详情 (asynchronously)
    *
    * @param accountId (required)
    * @param marketingGoal (required)

@@ -33,6 +33,9 @@ public class WechatOfficialAccountStruct {
   @SerializedName("last_modified_time")
   private Long lastModifiedTime = null;
 
+  @SerializedName("wechat_official_account_icon")
+  private String wechatOfficialAccountIcon = null;
+
   public WechatOfficialAccountStruct wechatOfficialAccountId(String wechatOfficialAccountId) {
     this.wechatOfficialAccountId = wechatOfficialAccountId;
     return this;
@@ -109,6 +112,25 @@ public class WechatOfficialAccountStruct {
     this.lastModifiedTime = lastModifiedTime;
   }
 
+  public WechatOfficialAccountStruct wechatOfficialAccountIcon(String wechatOfficialAccountIcon) {
+    this.wechatOfficialAccountIcon = wechatOfficialAccountIcon;
+    return this;
+  }
+
+  /**
+   * Get wechatOfficialAccountIcon
+   *
+   * @return wechatOfficialAccountIcon
+   */
+  @ApiModelProperty(value = "")
+  public String getWechatOfficialAccountIcon() {
+    return wechatOfficialAccountIcon;
+  }
+
+  public void setWechatOfficialAccountIcon(String wechatOfficialAccountIcon) {
+    this.wechatOfficialAccountIcon = wechatOfficialAccountIcon;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -123,13 +145,19 @@ public class WechatOfficialAccountStruct {
         && Objects.equals(
             this.wechatOfficialAccountName, wechatOfficialAccountStruct.wechatOfficialAccountName)
         && Objects.equals(this.createdTime, wechatOfficialAccountStruct.createdTime)
-        && Objects.equals(this.lastModifiedTime, wechatOfficialAccountStruct.lastModifiedTime);
+        && Objects.equals(this.lastModifiedTime, wechatOfficialAccountStruct.lastModifiedTime)
+        && Objects.equals(
+            this.wechatOfficialAccountIcon, wechatOfficialAccountStruct.wechatOfficialAccountIcon);
   }
 
   @Override
   public int hashCode() {
     return Objects.hash(
-        wechatOfficialAccountId, wechatOfficialAccountName, createdTime, lastModifiedTime);
+        wechatOfficialAccountId,
+        wechatOfficialAccountName,
+        createdTime,
+        lastModifiedTime,
+        wechatOfficialAccountIcon);
   }
 
   @Override

@@ -80,6 +80,7 @@ public class App {
   @Inject DynamicAdImagesApiContainer dynamicAdImagesApiContainer;
   @Inject DynamicAdVideoApiContainer dynamicAdVideoApiContainer;
   @Inject DynamicAdVideoTemplatesApiContainer dynamicAdVideoTemplatesApiContainer;
+  @Inject DynamicCreativePreviewsApiContainer dynamicCreativePreviewsApiContainer;
   @Inject DynamicCreativeReviewResultsApiContainer dynamicCreativeReviewResultsApiContainer;
   @Inject DynamicCreativesApiContainer dynamicCreativesApiContainer;
   @Inject EcommerceOrderApiContainer ecommerceOrderApiContainer;
@@ -159,6 +160,10 @@ public class App {
   @Inject ProfilesApiContainer profilesApiContainer;
   @Inject ProgrammedApiContainer programmedApiContainer;
   @Inject ProgrammedCommponentPreviewApiContainer programmedCommponentPreviewApiContainer;
+
+  @Inject
+  ProgrammedCommponentPreviewTemplateApiContainer programmedCommponentPreviewTemplateApiContainer;
+
   @Inject ProgrammedCommponentResultApiContainer programmedCommponentResultApiContainer;
   @Inject ProgrammedMaterialMappingsApiContainer programmedMaterialMappingsApiContainer;
   @Inject ProgrammedTemplateApiContainer programmedTemplateApiContainer;
@@ -217,6 +222,8 @@ public class App {
   @Inject
   WechatShopAuthorizationValidationApiContainer wechatShopAuthorizationValidationApiContainer;
 
+  @Inject WechatStoreCatalogsApiContainer wechatStoreCatalogsApiContainer;
+  @Inject WechatStoreProductItemsApiContainer wechatStoreProductItemsApiContainer;
   @Inject WildcardsApiContainer wildcardsApiContainer;
   @Inject WxGamePlayablePageApiContainer wxGamePlayablePageApiContainer;
   @Inject WxPackageAccountApiContainer wxPackageAccountApiContainer;
@@ -475,6 +482,10 @@ public class App {
 
   public DynamicAdVideoTemplatesApiContainer dynamicAdVideoTemplates() {
     return dynamicAdVideoTemplatesApiContainer;
+  }
+
+  public DynamicCreativePreviewsApiContainer dynamicCreativePreviews() {
+    return dynamicCreativePreviewsApiContainer;
   }
 
   public DynamicCreativeReviewResultsApiContainer dynamicCreativeReviewResults() {
@@ -769,6 +780,10 @@ public class App {
     return programmedCommponentPreviewApiContainer;
   }
 
+  public ProgrammedCommponentPreviewTemplateApiContainer programmedCommponentPreviewTemplate() {
+    return programmedCommponentPreviewTemplateApiContainer;
+  }
+
   public ProgrammedCommponentResultApiContainer programmedCommponentResult() {
     return programmedCommponentResultApiContainer;
   }
@@ -956,6 +971,14 @@ public class App {
 
   public WechatShopAuthorizationValidationApiContainer wechatShopAuthorizationValidation() {
     return wechatShopAuthorizationValidationApiContainer;
+  }
+
+  public WechatStoreCatalogsApiContainer wechatStoreCatalogs() {
+    return wechatStoreCatalogsApiContainer;
+  }
+
+  public WechatStoreProductItemsApiContainer wechatStoreProductItems() {
+    return wechatStoreProductItemsApiContainer;
   }
 
   public WildcardsApiContainer wildcards() {

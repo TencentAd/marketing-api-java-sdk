@@ -16,6 +16,8 @@ import com.google.gson.Gson;
 import com.google.gson.annotations.SerializedName;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Objects;
 
 /** 素材信息 */
@@ -35,6 +37,9 @@ public class PreviewItemStruct {
 
   @SerializedName("template_preview_url")
   private String templatePreviewUrl = null;
+
+  @SerializedName("recommend_templates")
+  private List<Long> recommendTemplates = null;
 
   public PreviewItemStruct materialPreviewId(Long materialPreviewId) {
     this.materialPreviewId = materialPreviewId;
@@ -133,6 +138,33 @@ public class PreviewItemStruct {
     this.templatePreviewUrl = templatePreviewUrl;
   }
 
+  public PreviewItemStruct recommendTemplates(List<Long> recommendTemplates) {
+    this.recommendTemplates = recommendTemplates;
+    return this;
+  }
+
+  public PreviewItemStruct addRecommendTemplatesItem(Long recommendTemplatesItem) {
+    if (this.recommendTemplates == null) {
+      this.recommendTemplates = new ArrayList<Long>();
+    }
+    this.recommendTemplates.add(recommendTemplatesItem);
+    return this;
+  }
+
+  /**
+   * Get recommendTemplates
+   *
+   * @return recommendTemplates
+   */
+  @ApiModelProperty(value = "")
+  public List<Long> getRecommendTemplates() {
+    return recommendTemplates;
+  }
+
+  public void setRecommendTemplates(List<Long> recommendTemplates) {
+    this.recommendTemplates = recommendTemplates;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -147,13 +179,19 @@ public class PreviewItemStruct {
             this.targetCreativeTemplateDimension, previewItemStruct.targetCreativeTemplateDimension)
         && Objects.equals(this.templateId, previewItemStruct.templateId)
         && Objects.equals(this.type, previewItemStruct.type)
-        && Objects.equals(this.templatePreviewUrl, previewItemStruct.templatePreviewUrl);
+        && Objects.equals(this.templatePreviewUrl, previewItemStruct.templatePreviewUrl)
+        && Objects.equals(this.recommendTemplates, previewItemStruct.recommendTemplates);
   }
 
   @Override
   public int hashCode() {
     return Objects.hash(
-        materialPreviewId, targetCreativeTemplateDimension, templateId, type, templatePreviewUrl);
+        materialPreviewId,
+        targetCreativeTemplateDimension,
+        templateId,
+        type,
+        templatePreviewUrl,
+        recommendTemplates);
   }
 
   @Override

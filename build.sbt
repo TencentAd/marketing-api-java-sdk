@@ -2,7 +2,7 @@ lazy val root = (project in file(".")).
   settings(
     organization := "com.tencent.ads",
     name := "marketing-api-java-sdk",
-    version := "1.1.88",
+    version := "1.1.89",
     scalaVersion := "2.11.4",
     scalacOptions ++= Seq("-feature"),
     javacOptions in compile ++= Seq("-Xlint:deprecation"),

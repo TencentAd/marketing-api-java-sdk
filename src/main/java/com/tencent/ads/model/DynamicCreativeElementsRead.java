@@ -356,6 +356,9 @@ public class DynamicCreativeElementsRead {
   @SerializedName("mini_card_link")
   private AdCreativeMiniCardLink miniCardLink = null;
 
+  @SerializedName("red_envelope_packet_list")
+  private List<RedEnvelopePacketSpec> redEnvelopePacketList = null;
+
   public DynamicCreativeElementsRead image(String image) {
     this.image = image;
     return this;
@@ -2849,6 +2852,35 @@ public class DynamicCreativeElementsRead {
     this.miniCardLink = miniCardLink;
   }
 
+  public DynamicCreativeElementsRead redEnvelopePacketList(
+      List<RedEnvelopePacketSpec> redEnvelopePacketList) {
+    this.redEnvelopePacketList = redEnvelopePacketList;
+    return this;
+  }
+
+  public DynamicCreativeElementsRead addRedEnvelopePacketListItem(
+      RedEnvelopePacketSpec redEnvelopePacketListItem) {
+    if (this.redEnvelopePacketList == null) {
+      this.redEnvelopePacketList = new ArrayList<RedEnvelopePacketSpec>();
+    }
+    this.redEnvelopePacketList.add(redEnvelopePacketListItem);
+    return this;
+  }
+
+  /**
+   * Get redEnvelopePacketList
+   *
+   * @return redEnvelopePacketList
+   */
+  @ApiModelProperty(value = "")
+  public List<RedEnvelopePacketSpec> getRedEnvelopePacketList() {
+    return redEnvelopePacketList;
+  }
+
+  public void setRedEnvelopePacketList(List<RedEnvelopePacketSpec> redEnvelopePacketList) {
+    this.redEnvelopePacketList = redEnvelopePacketList;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -3014,7 +3046,9 @@ public class DynamicCreativeElementsRead {
         && Objects.equals(
             this.wechatChannelsCoverImgShowType,
             dynamicCreativeElementsRead.wechatChannelsCoverImgShowType)
-        && Objects.equals(this.miniCardLink, dynamicCreativeElementsRead.miniCardLink);
+        && Objects.equals(this.miniCardLink, dynamicCreativeElementsRead.miniCardLink)
+        && Objects.equals(
+            this.redEnvelopePacketList, dynamicCreativeElementsRead.redEnvelopePacketList);
   }
 
   @Override
@@ -3130,7 +3164,8 @@ public class DynamicCreativeElementsRead {
         listSublinkComponentOptions,
         imageList3ComponentOptions,
         wechatChannelsCoverImgShowType,
-        miniCardLink);
+        miniCardLink,
+        redEnvelopePacketList);
   }
 
   @Override

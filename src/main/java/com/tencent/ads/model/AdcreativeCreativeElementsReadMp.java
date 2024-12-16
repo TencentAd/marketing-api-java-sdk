@@ -329,6 +329,9 @@ public class AdcreativeCreativeElementsReadMp {
   @SerializedName("image_list3_component_options")
   private List<ImageListComponentOption> imageList3ComponentOptions = null;
 
+  @SerializedName("red_envelope_packet_list")
+  private List<RedEnvelopePacketSpec> redEnvelopePacketList = null;
+
   public AdcreativeCreativeElementsReadMp image(String image) {
     this.image = image;
     return this;
@@ -2605,6 +2608,35 @@ public class AdcreativeCreativeElementsReadMp {
     this.imageList3ComponentOptions = imageList3ComponentOptions;
   }
 
+  public AdcreativeCreativeElementsReadMp redEnvelopePacketList(
+      List<RedEnvelopePacketSpec> redEnvelopePacketList) {
+    this.redEnvelopePacketList = redEnvelopePacketList;
+    return this;
+  }
+
+  public AdcreativeCreativeElementsReadMp addRedEnvelopePacketListItem(
+      RedEnvelopePacketSpec redEnvelopePacketListItem) {
+    if (this.redEnvelopePacketList == null) {
+      this.redEnvelopePacketList = new ArrayList<RedEnvelopePacketSpec>();
+    }
+    this.redEnvelopePacketList.add(redEnvelopePacketListItem);
+    return this;
+  }
+
+  /**
+   * Get redEnvelopePacketList
+   *
+   * @return redEnvelopePacketList
+   */
+  @ApiModelProperty(value = "")
+  public List<RedEnvelopePacketSpec> getRedEnvelopePacketList() {
+    return redEnvelopePacketList;
+  }
+
+  public void setRedEnvelopePacketList(List<RedEnvelopePacketSpec> redEnvelopePacketList) {
+    this.redEnvelopePacketList = redEnvelopePacketList;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -2772,7 +2804,9 @@ public class AdcreativeCreativeElementsReadMp {
             adcreativeCreativeElementsReadMp.listSublinkComponentOptions)
         && Objects.equals(
             this.imageList3ComponentOptions,
-            adcreativeCreativeElementsReadMp.imageList3ComponentOptions);
+            adcreativeCreativeElementsReadMp.imageList3ComponentOptions)
+        && Objects.equals(
+            this.redEnvelopePacketList, adcreativeCreativeElementsReadMp.redEnvelopePacketList);
   }
 
   @Override
@@ -2879,7 +2913,8 @@ public class AdcreativeCreativeElementsReadMp {
         mdpaTitleComponentOptions,
         mdpaDescComponentOptions,
         listSublinkComponentOptions,
-        imageList3ComponentOptions);
+        imageList3ComponentOptions,
+        redEnvelopePacketList);
   }
 
   @Override

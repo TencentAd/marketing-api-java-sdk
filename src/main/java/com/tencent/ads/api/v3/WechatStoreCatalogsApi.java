@@ -21,7 +21,7 @@ import com.tencent.ads.Configuration;
 import com.tencent.ads.Pair;
 import com.tencent.ads.ProgressRequestBody;
 import com.tencent.ads.ProgressResponseBody;
-import com.tencent.ads.model.v3.CreativeTemplateListGetResponse;
+import com.tencent.ads.model.v3.WechatStoreCatalogsGetResponse;
 import java.io.IOException;
 import java.lang.reflect.Type;
 import java.util.ArrayList;
@@ -29,14 +29,14 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class CreativeTemplateListApi {
+public class WechatStoreCatalogsApi {
   private ApiClient apiClient;
 
-  public CreativeTemplateListApi() {
+  public WechatStoreCatalogsApi() {
     this(Configuration.getV3DefaultApiClient());
   }
 
-  public CreativeTemplateListApi(ApiClient apiClient) {
+  public WechatStoreCatalogsApi(ApiClient apiClient) {
     this.apiClient = apiClient;
   }
 
@@ -49,17 +49,12 @@ public class CreativeTemplateListApi {
   }
 
   /**
-   * Build call for creativeTemplateListGet
+   * Build call for wechatStoreCatalogsGet
    *
    * @param accountId (required)
-   * @param marketingGoal (required)
-   * @param marketingTargetType (required)
-   * @param marketingCarrierType (required)
-   * @param marketingSubGoal (optional)
-   * @param siteSet (optional)
-   * @param dynamicAbilityType (optional)
-   * @param wechatSceneSpecPosition (optional)
-   * @param creativeTemplateId (optional)
+   * @param storeIds (optional)
+   * @param catalogIds (optional)
+   * @param catalogName (optional)
    * @param page (optional)
    * @param pageSize (optional)
    * @param fields 返回参数的字段列表 (optional)
@@ -68,16 +63,11 @@ public class CreativeTemplateListApi {
    * @return Call to execute
    * @throws ApiException If fail to serialize the request body object
    */
-  public com.squareup.okhttp.Call creativeTemplateListGetCall(
+  public com.squareup.okhttp.Call wechatStoreCatalogsGetCall(
       Long accountId,
-      String marketingGoal,
-      String marketingTargetType,
-      String marketingCarrierType,
-      String marketingSubGoal,
-      String siteSet,
-      String dynamicAbilityType,
-      List<Long> wechatSceneSpecPosition,
-      Long creativeTemplateId,
+      List<String> storeIds,
+      List<Long> catalogIds,
+      String catalogName,
       Long page,
       Long pageSize,
       List<String> fields,
@@ -89,33 +79,20 @@ public class CreativeTemplateListApi {
     Object localVarPostBody = null;
 
     // create path and map variables
-    String localVarPath = "/creative_template_list/get";
+    String localVarPath = "/wechat_store_catalogs/get";
 
     List<Pair> localVarQueryParams = new ArrayList<Pair>();
     List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
     if (accountId != null)
       localVarQueryParams.addAll(apiClient.parameterToPair("account_id", accountId));
-    if (marketingGoal != null)
-      localVarQueryParams.addAll(apiClient.parameterToPair("marketing_goal", marketingGoal));
-    if (marketingSubGoal != null)
-      localVarQueryParams.addAll(apiClient.parameterToPair("marketing_sub_goal", marketingSubGoal));
-    if (marketingTargetType != null)
-      localVarQueryParams.addAll(
-          apiClient.parameterToPair("marketing_target_type", marketingTargetType));
-    if (marketingCarrierType != null)
-      localVarQueryParams.addAll(
-          apiClient.parameterToPair("marketing_carrier_type", marketingCarrierType));
-    if (siteSet != null) localVarQueryParams.addAll(apiClient.parameterToPair("site_set", siteSet));
-    if (dynamicAbilityType != null)
-      localVarQueryParams.addAll(
-          apiClient.parameterToPair("dynamic_ability_type", dynamicAbilityType));
-    if (wechatSceneSpecPosition != null)
+    if (storeIds != null)
       localVarCollectionQueryParams.addAll(
-          apiClient.parameterToPairs(
-              "multi", "wechat_scene_spec_position", wechatSceneSpecPosition));
-    if (creativeTemplateId != null)
-      localVarQueryParams.addAll(
-          apiClient.parameterToPair("creative_template_id", creativeTemplateId));
+          apiClient.parameterToPairs("multi", "store_ids", storeIds));
+    if (catalogIds != null)
+      localVarCollectionQueryParams.addAll(
+          apiClient.parameterToPairs("multi", "catalog_ids", catalogIds));
+    if (catalogName != null)
+      localVarQueryParams.addAll(apiClient.parameterToPair("catalog_name", catalogName));
     if (page != null) localVarQueryParams.addAll(apiClient.parameterToPair("page", page));
     if (pageSize != null)
       localVarQueryParams.addAll(apiClient.parameterToPair("page_size", pageSize));
@@ -172,16 +149,11 @@ public class CreativeTemplateListApi {
   }
 
   @SuppressWarnings("rawtypes")
-  private com.squareup.okhttp.Call creativeTemplateListGetValidateBeforeCall(
+  private com.squareup.okhttp.Call wechatStoreCatalogsGetValidateBeforeCall(
       Long accountId,
-      String marketingGoal,
-      String marketingTargetType,
-      String marketingCarrierType,
-      String marketingSubGoal,
-      String siteSet,
-      String dynamicAbilityType,
-      List<Long> wechatSceneSpecPosition,
-      Long creativeTemplateId,
+      List<String> storeIds,
+      List<Long> catalogIds,
+      String catalogName,
       Long page,
       Long pageSize,
       List<String> fields,
@@ -193,38 +165,15 @@ public class CreativeTemplateListApi {
     // verify the required parameter 'accountId' is set
     if (accountId == null) {
       throw new ApiException(
-          "Missing the required parameter 'accountId' when calling creativeTemplateListGet(Async)");
-    }
-
-    // verify the required parameter 'marketingGoal' is set
-    if (marketingGoal == null) {
-      throw new ApiException(
-          "Missing the required parameter 'marketingGoal' when calling creativeTemplateListGet(Async)");
-    }
-
-    // verify the required parameter 'marketingTargetType' is set
-    if (marketingTargetType == null) {
-      throw new ApiException(
-          "Missing the required parameter 'marketingTargetType' when calling creativeTemplateListGet(Async)");
-    }
-
-    // verify the required parameter 'marketingCarrierType' is set
-    if (marketingCarrierType == null) {
-      throw new ApiException(
-          "Missing the required parameter 'marketingCarrierType' when calling creativeTemplateListGet(Async)");
+          "Missing the required parameter 'accountId' when calling wechatStoreCatalogsGet(Async)");
     }
 
     com.squareup.okhttp.Call call =
-        creativeTemplateListGetCall(
+        wechatStoreCatalogsGetCall(
             accountId,
-            marketingGoal,
-            marketingTargetType,
-            marketingCarrierType,
-            marketingSubGoal,
-            siteSet,
-            dynamicAbilityType,
-            wechatSceneSpecPosition,
-            creativeTemplateId,
+            storeIds,
+            catalogIds,
+            catalogName,
             page,
             pageSize,
             fields,
@@ -235,124 +184,82 @@ public class CreativeTemplateListApi {
   }
 
   /**
-   * 获取创意形式列表
+   * 获取微信小店商品库
    *
    * @param accountId (required)
-   * @param marketingGoal (required)
-   * @param marketingTargetType (required)
-   * @param marketingCarrierType (required)
-   * @param marketingSubGoal (optional)
-   * @param siteSet (optional)
-   * @param dynamicAbilityType (optional)
-   * @param wechatSceneSpecPosition (optional)
-   * @param creativeTemplateId (optional)
+   * @param storeIds (optional)
+   * @param catalogIds (optional)
+   * @param catalogName (optional)
    * @param page (optional)
    * @param pageSize (optional)
    * @param fields 返回参数的字段列表 (optional)
-   * @return CreativeTemplateListGetResponse
+   * @return WechatStoreCatalogsGetResponse
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
-  public CreativeTemplateListGetResponse creativeTemplateListGet(
+  public WechatStoreCatalogsGetResponse wechatStoreCatalogsGet(
       Long accountId,
-      String marketingGoal,
-      String marketingTargetType,
-      String marketingCarrierType,
-      String marketingSubGoal,
-      String siteSet,
-      String dynamicAbilityType,
-      List<Long> wechatSceneSpecPosition,
-      Long creativeTemplateId,
+      List<String> storeIds,
+      List<Long> catalogIds,
+      String catalogName,
       Long page,
       Long pageSize,
       List<String> fields,
       Pair... headerPair)
       throws ApiException {
-    ApiResponse<CreativeTemplateListGetResponse> resp =
-        creativeTemplateListGetWithHttpInfo(
-            accountId,
-            marketingGoal,
-            marketingTargetType,
-            marketingCarrierType,
-            marketingSubGoal,
-            siteSet,
-            dynamicAbilityType,
-            wechatSceneSpecPosition,
-            creativeTemplateId,
-            page,
-            pageSize,
-            fields,
-            headerPair);
+    ApiResponse<WechatStoreCatalogsGetResponse> resp =
+        wechatStoreCatalogsGetWithHttpInfo(
+            accountId, storeIds, catalogIds, catalogName, page, pageSize, fields, headerPair);
     return resp.getData();
   }
 
   /**
-   * 获取创意形式列表
+   * 获取微信小店商品库
    *
    * @param accountId (required)
-   * @param marketingGoal (required)
-   * @param marketingTargetType (required)
-   * @param marketingCarrierType (required)
-   * @param marketingSubGoal (optional)
-   * @param siteSet (optional)
-   * @param dynamicAbilityType (optional)
-   * @param wechatSceneSpecPosition (optional)
-   * @param creativeTemplateId (optional)
+   * @param storeIds (optional)
+   * @param catalogIds (optional)
+   * @param catalogName (optional)
    * @param page (optional)
    * @param pageSize (optional)
    * @param fields 返回参数的字段列表 (optional)
-   * @return ApiResponse&lt;CreativeTemplateListGetResponse&gt;
+   * @return ApiResponse&lt;WechatStoreCatalogsGetResponse&gt;
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
-  public ApiResponse<CreativeTemplateListGetResponse> creativeTemplateListGetWithHttpInfo(
+  public ApiResponse<WechatStoreCatalogsGetResponse> wechatStoreCatalogsGetWithHttpInfo(
       Long accountId,
-      String marketingGoal,
-      String marketingTargetType,
-      String marketingCarrierType,
-      String marketingSubGoal,
-      String siteSet,
-      String dynamicAbilityType,
-      List<Long> wechatSceneSpecPosition,
-      Long creativeTemplateId,
+      List<String> storeIds,
+      List<Long> catalogIds,
+      String catalogName,
       Long page,
       Long pageSize,
       List<String> fields,
       Pair... headerPair)
       throws ApiException {
     com.squareup.okhttp.Call call =
-        creativeTemplateListGetValidateBeforeCall(
+        wechatStoreCatalogsGetValidateBeforeCall(
             accountId,
-            marketingGoal,
-            marketingTargetType,
-            marketingCarrierType,
-            marketingSubGoal,
-            siteSet,
-            dynamicAbilityType,
-            wechatSceneSpecPosition,
-            creativeTemplateId,
+            storeIds,
+            catalogIds,
+            catalogName,
             page,
             pageSize,
             fields,
             null,
             null,
             headerPair);
-    Type localVarReturnType = new TypeToken<CreativeTemplateListGetResponse>() {}.getType();
+    Type localVarReturnType = new TypeToken<WechatStoreCatalogsGetResponse>() {}.getType();
     return apiClient.execute(call, localVarReturnType);
   }
 
   /**
-   * 获取创意形式列表 (asynchronously)
+   * 获取微信小店商品库 (asynchronously)
    *
    * @param accountId (required)
-   * @param marketingGoal (required)
-   * @param marketingTargetType (required)
-   * @param marketingCarrierType (required)
-   * @param marketingSubGoal (optional)
-   * @param siteSet (optional)
-   * @param dynamicAbilityType (optional)
-   * @param wechatSceneSpecPosition (optional)
-   * @param creativeTemplateId (optional)
+   * @param storeIds (optional)
+   * @param catalogIds (optional)
+   * @param catalogName (optional)
    * @param page (optional)
    * @param pageSize (optional)
    * @param fields 返回参数的字段列表 (optional)
@@ -360,20 +267,15 @@ public class CreativeTemplateListApi {
    * @return The request call
    * @throws ApiException If fail to process the API call, e.g. serializing the request body object
    */
-  public com.squareup.okhttp.Call creativeTemplateListGetAsync(
+  public com.squareup.okhttp.Call wechatStoreCatalogsGetAsync(
       Long accountId,
-      String marketingGoal,
-      String marketingTargetType,
-      String marketingCarrierType,
-      String marketingSubGoal,
-      String siteSet,
-      String dynamicAbilityType,
-      List<Long> wechatSceneSpecPosition,
-      Long creativeTemplateId,
+      List<String> storeIds,
+      List<Long> catalogIds,
+      String catalogName,
       Long page,
       Long pageSize,
       List<String> fields,
-      final ApiCallback<CreativeTemplateListGetResponse> callback,
+      final ApiCallback<WechatStoreCatalogsGetResponse> callback,
       Pair... headerPair)
       throws ApiException {
 
@@ -399,23 +301,18 @@ public class CreativeTemplateListApi {
     }
 
     com.squareup.okhttp.Call call =
-        creativeTemplateListGetValidateBeforeCall(
+        wechatStoreCatalogsGetValidateBeforeCall(
             accountId,
-            marketingGoal,
-            marketingTargetType,
-            marketingCarrierType,
-            marketingSubGoal,
-            siteSet,
-            dynamicAbilityType,
-            wechatSceneSpecPosition,
-            creativeTemplateId,
+            storeIds,
+            catalogIds,
+            catalogName,
             page,
             pageSize,
             fields,
             progressListener,
             progressRequestListener,
             headerPair);
-    Type localVarReturnType = new TypeToken<CreativeTemplateListGetResponse>() {}.getType();
+    Type localVarReturnType = new TypeToken<WechatStoreCatalogsGetResponse>() {}.getType();
     apiClient.executeAsync(call, localVarReturnType, callback);
     return call;
   }

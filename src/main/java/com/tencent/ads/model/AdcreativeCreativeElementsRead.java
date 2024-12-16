@@ -251,6 +251,9 @@ public class AdcreativeCreativeElementsRead {
   @SerializedName("mini_card_link")
   private AdCreativeMiniCardLink miniCardLink = null;
 
+  @SerializedName("red_envelope_packet_list")
+  private List<RedEnvelopePacketSpec> redEnvelopePacketList = null;
+
   public AdcreativeCreativeElementsRead image(String image) {
     this.image = image;
     return this;
@@ -1756,6 +1759,35 @@ public class AdcreativeCreativeElementsRead {
     this.miniCardLink = miniCardLink;
   }
 
+  public AdcreativeCreativeElementsRead redEnvelopePacketList(
+      List<RedEnvelopePacketSpec> redEnvelopePacketList) {
+    this.redEnvelopePacketList = redEnvelopePacketList;
+    return this;
+  }
+
+  public AdcreativeCreativeElementsRead addRedEnvelopePacketListItem(
+      RedEnvelopePacketSpec redEnvelopePacketListItem) {
+    if (this.redEnvelopePacketList == null) {
+      this.redEnvelopePacketList = new ArrayList<RedEnvelopePacketSpec>();
+    }
+    this.redEnvelopePacketList.add(redEnvelopePacketListItem);
+    return this;
+  }
+
+  /**
+   * Get redEnvelopePacketList
+   *
+   * @return redEnvelopePacketList
+   */
+  @ApiModelProperty(value = "")
+  public List<RedEnvelopePacketSpec> getRedEnvelopePacketList() {
+    return redEnvelopePacketList;
+  }
+
+  public void setRedEnvelopePacketList(List<RedEnvelopePacketSpec> redEnvelopePacketList) {
+    this.redEnvelopePacketList = redEnvelopePacketList;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -1852,7 +1884,9 @@ public class AdcreativeCreativeElementsRead {
         && Objects.equals(
             this.wechatChannelsCoverImgShowType,
             adcreativeCreativeElementsRead.wechatChannelsCoverImgShowType)
-        && Objects.equals(this.miniCardLink, adcreativeCreativeElementsRead.miniCardLink);
+        && Objects.equals(this.miniCardLink, adcreativeCreativeElementsRead.miniCardLink)
+        && Objects.equals(
+            this.redEnvelopePacketList, adcreativeCreativeElementsRead.redEnvelopePacketList);
   }
 
   @Override
@@ -1933,7 +1967,8 @@ public class AdcreativeCreativeElementsRead {
         wxgamePlayablePageSpec,
         mainJumpInfo,
         wechatChannelsCoverImgShowType,
-        miniCardLink);
+        miniCardLink,
+        redEnvelopePacketList);
   }
 
   @Override
