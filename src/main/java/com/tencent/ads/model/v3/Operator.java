@@ -19,16 +19,24 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-/** 号码包类型 */
-@JsonAdapter(WechatPackageType.Adapter.class)
-public enum WechatPackageType {
-  ACCOUNT("ACCOUNT"),
+/** 运算符 */
+@JsonAdapter(Operator.Adapter.class)
+public enum Operator {
+  LT("LT"),
 
-  QRCODE("QRCODE");
+  GT("GT"),
+
+  EQ("EQ"),
+
+  NE("NE"),
+
+  CONTAIN("CONTAIN"),
+
+  NOT_CONTAIN("NOT_CONTAIN");
 
   private String value;
 
-  WechatPackageType(String value) {
+  Operator(String value) {
     this.value = value;
   }
 
@@ -41,8 +49,8 @@ public enum WechatPackageType {
     return String.valueOf(value);
   }
 
-  public static WechatPackageType fromValue(String text) {
-    for (WechatPackageType b : WechatPackageType.values()) {
+  public static Operator fromValue(String text) {
+    for (Operator b : Operator.values()) {
       if (String.valueOf(b.value).equals(text)) {
         return b;
       }
@@ -50,17 +58,16 @@ public enum WechatPackageType {
     return null;
   }
 
-  public static class Adapter extends TypeAdapter<WechatPackageType> {
+  public static class Adapter extends TypeAdapter<Operator> {
     @Override
-    public void write(final JsonWriter jsonWriter, final WechatPackageType enumeration)
-        throws IOException {
+    public void write(final JsonWriter jsonWriter, final Operator enumeration) throws IOException {
       jsonWriter.value(enumeration.getValue());
     }
 
     @Override
-    public WechatPackageType read(final JsonReader jsonReader) throws IOException {
+    public Operator read(final JsonReader jsonReader) throws IOException {
       String value = jsonReader.nextString();
-      return WechatPackageType.fromValue(String.valueOf(value));
+      return Operator.fromValue(String.valueOf(value));
     }
   }
 }

@@ -63,6 +63,12 @@ public class AdgroupsAddRequest {
   @SerializedName("site_set")
   private List<String> siteSet = null;
 
+  @SerializedName("exploration_strategy")
+  private SiteSetExplorationStrategy explorationStrategy = null;
+
+  @SerializedName("priority_site_set")
+  private List<String> prioritySiteSet = null;
+
   @SerializedName("daily_budget")
   private Long dailyBudget = null;
 
@@ -137,12 +143,6 @@ public class AdgroupsAddRequest {
 
   @SerializedName("poi_list")
   private List<String> poiList = null;
-
-  @SerializedName("exploration_strategy")
-  private SiteSetExplorationStrategy explorationStrategy = null;
-
-  @SerializedName("priority_site_set")
-  private List<String> prioritySiteSet = null;
 
   @SerializedName("ecom_pkam_switch")
   private EcomPkamSwitch ecomPkamSwitch = null;
@@ -467,6 +467,52 @@ public class AdgroupsAddRequest {
 
   public void setSiteSet(List<String> siteSet) {
     this.siteSet = siteSet;
+  }
+
+  public AdgroupsAddRequest explorationStrategy(SiteSetExplorationStrategy explorationStrategy) {
+    this.explorationStrategy = explorationStrategy;
+    return this;
+  }
+
+  /**
+   * Get explorationStrategy
+   *
+   * @return explorationStrategy
+   */
+  @ApiModelProperty(value = "")
+  public SiteSetExplorationStrategy getExplorationStrategy() {
+    return explorationStrategy;
+  }
+
+  public void setExplorationStrategy(SiteSetExplorationStrategy explorationStrategy) {
+    this.explorationStrategy = explorationStrategy;
+  }
+
+  public AdgroupsAddRequest prioritySiteSet(List<String> prioritySiteSet) {
+    this.prioritySiteSet = prioritySiteSet;
+    return this;
+  }
+
+  public AdgroupsAddRequest addPrioritySiteSetItem(String prioritySiteSetItem) {
+    if (this.prioritySiteSet == null) {
+      this.prioritySiteSet = new ArrayList<String>();
+    }
+    this.prioritySiteSet.add(prioritySiteSetItem);
+    return this;
+  }
+
+  /**
+   * Get prioritySiteSet
+   *
+   * @return prioritySiteSet
+   */
+  @ApiModelProperty(value = "")
+  public List<String> getPrioritySiteSet() {
+    return prioritySiteSet;
+  }
+
+  public void setPrioritySiteSet(List<String> prioritySiteSet) {
+    this.prioritySiteSet = prioritySiteSet;
   }
 
   public AdgroupsAddRequest dailyBudget(Long dailyBudget) {
@@ -965,52 +1011,6 @@ public class AdgroupsAddRequest {
     this.poiList = poiList;
   }
 
-  public AdgroupsAddRequest explorationStrategy(SiteSetExplorationStrategy explorationStrategy) {
-    this.explorationStrategy = explorationStrategy;
-    return this;
-  }
-
-  /**
-   * Get explorationStrategy
-   *
-   * @return explorationStrategy
-   */
-  @ApiModelProperty(value = "")
-  public SiteSetExplorationStrategy getExplorationStrategy() {
-    return explorationStrategy;
-  }
-
-  public void setExplorationStrategy(SiteSetExplorationStrategy explorationStrategy) {
-    this.explorationStrategy = explorationStrategy;
-  }
-
-  public AdgroupsAddRequest prioritySiteSet(List<String> prioritySiteSet) {
-    this.prioritySiteSet = prioritySiteSet;
-    return this;
-  }
-
-  public AdgroupsAddRequest addPrioritySiteSetItem(String prioritySiteSetItem) {
-    if (this.prioritySiteSet == null) {
-      this.prioritySiteSet = new ArrayList<String>();
-    }
-    this.prioritySiteSet.add(prioritySiteSetItem);
-    return this;
-  }
-
-  /**
-   * Get prioritySiteSet
-   *
-   * @return prioritySiteSet
-   */
-  @ApiModelProperty(value = "")
-  public List<String> getPrioritySiteSet() {
-    return prioritySiteSet;
-  }
-
-  public void setPrioritySiteSet(List<String> prioritySiteSet) {
-    this.prioritySiteSet = prioritySiteSet;
-  }
-
   public AdgroupsAddRequest ecomPkamSwitch(EcomPkamSwitch ecomPkamSwitch) {
     this.ecomPkamSwitch = ecomPkamSwitch;
     return this;
@@ -1358,6 +1358,8 @@ public class AdgroupsAddRequest {
         && Objects.equals(this.timeSeries, adgroupsAddRequest.timeSeries)
         && Objects.equals(this.automaticSiteEnabled, adgroupsAddRequest.automaticSiteEnabled)
         && Objects.equals(this.siteSet, adgroupsAddRequest.siteSet)
+        && Objects.equals(this.explorationStrategy, adgroupsAddRequest.explorationStrategy)
+        && Objects.equals(this.prioritySiteSet, adgroupsAddRequest.prioritySiteSet)
         && Objects.equals(this.dailyBudget, adgroupsAddRequest.dailyBudget)
         && Objects.equals(this.targeting, adgroupsAddRequest.targeting)
         && Objects.equals(this.sceneSpec, adgroupsAddRequest.sceneSpec)
@@ -1391,8 +1393,6 @@ public class AdgroupsAddRequest {
         && Objects.equals(this.marketingAssetId, adgroupsAddRequest.marketingAssetId)
         && Objects.equals(this.marketingAssetOuterSpec, adgroupsAddRequest.marketingAssetOuterSpec)
         && Objects.equals(this.poiList, adgroupsAddRequest.poiList)
-        && Objects.equals(this.explorationStrategy, adgroupsAddRequest.explorationStrategy)
-        && Objects.equals(this.prioritySiteSet, adgroupsAddRequest.prioritySiteSet)
         && Objects.equals(this.ecomPkamSwitch, adgroupsAddRequest.ecomPkamSwitch)
         && Objects.equals(this.forwardLinkAssist, adgroupsAddRequest.forwardLinkAssist)
         && Objects.equals(this.rtaId, adgroupsAddRequest.rtaId)
@@ -1431,6 +1431,8 @@ public class AdgroupsAddRequest {
         timeSeries,
         automaticSiteEnabled,
         siteSet,
+        explorationStrategy,
+        prioritySiteSet,
         dailyBudget,
         targeting,
         sceneSpec,
@@ -1456,8 +1458,6 @@ public class AdgroupsAddRequest {
         marketingAssetId,
         marketingAssetOuterSpec,
         poiList,
-        explorationStrategy,
-        prioritySiteSet,
         ecomPkamSwitch,
         forwardLinkAssist,
         rtaId,

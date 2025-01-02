@@ -26,6 +26,9 @@ public class ComponentMetadataValueValidJoint {
   @SerializedName("total_length")
   private List<ComponentMetadataValueValidJointTotalLengthItem> totalLength = null;
 
+  @SerializedName("unique_length")
+  private List<ComponentMetadataValueValidJointUniqueLengthItem> uniqueLength = null;
+
   public ComponentMetadataValueValidJoint totalLength(
       List<ComponentMetadataValueValidJointTotalLengthItem> totalLength) {
     this.totalLength = totalLength;
@@ -55,6 +58,35 @@ public class ComponentMetadataValueValidJoint {
     this.totalLength = totalLength;
   }
 
+  public ComponentMetadataValueValidJoint uniqueLength(
+      List<ComponentMetadataValueValidJointUniqueLengthItem> uniqueLength) {
+    this.uniqueLength = uniqueLength;
+    return this;
+  }
+
+  public ComponentMetadataValueValidJoint addUniqueLengthItem(
+      ComponentMetadataValueValidJointUniqueLengthItem uniqueLengthItem) {
+    if (this.uniqueLength == null) {
+      this.uniqueLength = new ArrayList<ComponentMetadataValueValidJointUniqueLengthItem>();
+    }
+    this.uniqueLength.add(uniqueLengthItem);
+    return this;
+  }
+
+  /**
+   * Get uniqueLength
+   *
+   * @return uniqueLength
+   */
+  @ApiModelProperty(value = "")
+  public List<ComponentMetadataValueValidJointUniqueLengthItem> getUniqueLength() {
+    return uniqueLength;
+  }
+
+  public void setUniqueLength(List<ComponentMetadataValueValidJointUniqueLengthItem> uniqueLength) {
+    this.uniqueLength = uniqueLength;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -65,12 +97,13 @@ public class ComponentMetadataValueValidJoint {
     }
     ComponentMetadataValueValidJoint componentMetadataValueValidJoint =
         (ComponentMetadataValueValidJoint) o;
-    return Objects.equals(this.totalLength, componentMetadataValueValidJoint.totalLength);
+    return Objects.equals(this.totalLength, componentMetadataValueValidJoint.totalLength)
+        && Objects.equals(this.uniqueLength, componentMetadataValueValidJoint.uniqueLength);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(totalLength);
+    return Objects.hash(totalLength, uniqueLength);
   }
 
   @Override

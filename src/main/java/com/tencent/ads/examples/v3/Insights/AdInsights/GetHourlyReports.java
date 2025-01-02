@@ -4,9 +4,9 @@ import com.tencent.ads.ApiContextConfig;
 import com.tencent.ads.exception.TencentAdsResponseException;
 import com.tencent.ads.exception.TencentAdsSDKException;
 import com.tencent.ads.model.v3.*;
+import com.tencent.ads.model.v3.HourlyReportDateRange;
 import com.tencent.ads.model.v3.IntegratedListApiFilteringStruct;
 import com.tencent.ads.model.v3.OrderByStruct;
-import com.tencent.ads.model.v3.ReportDateRange;
 import com.tencent.ads.v3.TencentAds;
 import java.util.Arrays;
 import java.util.List;
@@ -22,7 +22,7 @@ public class GetHourlyReports {
 
   public String level = "REPORT_LEVEL_ADGROUP";
 
-  public ReportDateRange dateRange = new ReportDateRange();
+  public HourlyReportDateRange dateRange = new HourlyReportDateRange();
 
   public List<String> groupBy = null;
 

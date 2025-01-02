@@ -196,8 +196,6 @@ public class App {
   WeixinOfficialAccountsUpgradeStatusApiContainer weixinOfficialAccountsUpgradeStatusApiContainer;
 
   @Inject WildcardsApiContainer wildcardsApiContainer;
-  @Inject WxPackageAccountApiContainer wxPackageAccountApiContainer;
-  @Inject WxPackagePackageApiContainer wxPackagePackageApiContainer;
   @Inject XijingComplexTemplateApiContainer xijingComplexTemplateApiContainer;
   @Inject XijingDeriveClickEffectApiContainer xijingDeriveClickEffectApiContainer;
   @Inject XijingDeriveRoleApiContainer xijingDeriveRoleApiContainer;
@@ -895,14 +893,6 @@ public class App {
 
   public WildcardsApiContainer wildcards() {
     return wildcardsApiContainer;
-  }
-
-  public WxPackageAccountApiContainer wxPackageAccount() {
-    return wxPackageAccountApiContainer;
-  }
-
-  public WxPackagePackageApiContainer wxPackagePackage() {
-    return wxPackagePackageApiContainer;
   }
 
   public XijingComplexTemplateApiContainer xijingComplexTemplate() {

@@ -1,21 +1,20 @@
-package com.tencent.ads.examples.v3.BusinessAssets.WxPackage;
+package com.tencent.ads.examples.v3.AdsManagement.Components;
 
 import com.tencent.ads.ApiContextConfig;
 import com.tencent.ads.exception.TencentAdsResponseException;
 import com.tencent.ads.exception.TencentAdsSDKException;
 import com.tencent.ads.model.v3.*;
-import com.tencent.ads.model.v3.WxPackagePackageUpdateRequest;
-import com.tencent.ads.model.v3.WxPackagePackageUpdateResponse;
+import com.tencent.ads.model.v3.ComponentSharingUpdateRequest;
 import com.tencent.ads.v3.TencentAds;
 
-public class UpdateWxPackagePackage {
+public class UpdateComponentSharing {
   /** YOUR ACCESS TOKEN */
   public String ACCESS_TOKEN = "YOUR ACCESS TOKEN";
 
   /** TencentAds */
   public TencentAds tencentAds;
 
-  public WxPackagePackageUpdateRequest data = null;
+  public ComponentSharingUpdateRequest data = null;
 
   public void init() {
     this.tencentAds = TencentAds.getInstance();
@@ -27,17 +26,17 @@ public class UpdateWxPackagePackage {
 
   public void buildParams() {}
 
-  public WxPackagePackageUpdateResponse updateWxPackagePackage() throws Exception {
-    WxPackagePackageUpdateResponse response =
-        tencentAds.wxPackagePackage().wxPackagePackageUpdate(data);
+  public ComponentSharingUpdateResponseData updateComponentSharing() throws Exception {
+    ComponentSharingUpdateResponseData response =
+        tencentAds.componentSharing().componentSharingUpdate(data);
     return response;
   }
 
   public static void main(String[] args) {
     try {
-      UpdateWxPackagePackage updateWxPackagePackage = new UpdateWxPackagePackage();
-      updateWxPackagePackage.init();
-      WxPackagePackageUpdateResponse response = updateWxPackagePackage.updateWxPackagePackage();
+      UpdateComponentSharing updateComponentSharing = new UpdateComponentSharing();
+      updateComponentSharing.init();
+      ComponentSharingUpdateResponseData response = updateComponentSharing.updateComponentSharing();
     } catch (TencentAdsResponseException e) {
       e.printStackTrace();
     } catch (TencentAdsSDKException e) {

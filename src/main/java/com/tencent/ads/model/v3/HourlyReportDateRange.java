@@ -18,51 +18,51 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.util.Objects;
 
-/** 匹配规则 */
-@ApiModel(description = "匹配规则")
-public class UrlMatcher {
-  @SerializedName("param_value")
-  private String paramValue = null;
+/** 日期范围 */
+@ApiModel(description = "日期范围")
+public class HourlyReportDateRange {
+  @SerializedName("start_date")
+  private String startDate = null;
 
-  @SerializedName("operator")
-  private Operator operator = null;
+  @SerializedName("end_date")
+  private String endDate = null;
 
-  public UrlMatcher paramValue(String paramValue) {
-    this.paramValue = paramValue;
+  public HourlyReportDateRange startDate(String startDate) {
+    this.startDate = startDate;
     return this;
   }
 
   /**
-   * Get paramValue
+   * Get startDate
    *
-   * @return paramValue
+   * @return startDate
    */
   @ApiModelProperty(value = "")
-  public String getParamValue() {
-    return paramValue;
+  public String getStartDate() {
+    return startDate;
   }
 
-  public void setParamValue(String paramValue) {
-    this.paramValue = paramValue;
+  public void setStartDate(String startDate) {
+    this.startDate = startDate;
   }
 
-  public UrlMatcher operator(Operator operator) {
-    this.operator = operator;
+  public HourlyReportDateRange endDate(String endDate) {
+    this.endDate = endDate;
     return this;
   }
 
   /**
-   * Get operator
+   * Get endDate
    *
-   * @return operator
+   * @return endDate
    */
   @ApiModelProperty(value = "")
-  public Operator getOperator() {
-    return operator;
+  public String getEndDate() {
+    return endDate;
   }
 
-  public void setOperator(Operator operator) {
-    this.operator = operator;
+  public void setEndDate(String endDate) {
+    this.endDate = endDate;
   }
 
   @Override
@@ -73,14 +73,14 @@ public class UrlMatcher {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    UrlMatcher urlMatcher = (UrlMatcher) o;
-    return Objects.equals(this.paramValue, urlMatcher.paramValue)
-        && Objects.equals(this.operator, urlMatcher.operator);
+    HourlyReportDateRange hourlyReportDateRange = (HourlyReportDateRange) o;
+    return Objects.equals(this.startDate, hourlyReportDateRange.startDate)
+        && Objects.equals(this.endDate, hourlyReportDateRange.endDate);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(paramValue, operator);
+    return Objects.hash(startDate, endDate);
   }
 
   @Override

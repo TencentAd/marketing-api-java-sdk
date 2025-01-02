@@ -19,11 +19,11 @@ import com.tencent.ads.Pair;
 import com.tencent.ads.anno.*;
 import com.tencent.ads.api.v3.HourlyReportsApi;
 import com.tencent.ads.exception.TencentAdsResponseException;
+import com.tencent.ads.model.v3.HourlyReportDateRange;
 import com.tencent.ads.model.v3.HourlyReportsGetResponse;
 import com.tencent.ads.model.v3.HourlyReportsGetResponseData;
 import com.tencent.ads.model.v3.IntegratedListApiFilteringStruct;
 import com.tencent.ads.model.v3.OrderByStruct;
-import com.tencent.ads.model.v3.ReportDateRange;
 import java.util.List;
 
 public class HourlyReportsApiContainer extends ApiContainer {
@@ -50,7 +50,7 @@ public class HourlyReportsApiContainer extends ApiContainer {
   public HourlyReportsGetResponseData hourlyReportsGet(
       Long accountId,
       String level,
-      ReportDateRange dateRange,
+      HourlyReportDateRange dateRange,
       List<String> groupBy,
       List<String> fields,
       List<IntegratedListApiFilteringStruct> filtering,

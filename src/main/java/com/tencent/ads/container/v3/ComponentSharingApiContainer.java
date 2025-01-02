@@ -24,6 +24,9 @@ import com.tencent.ads.model.v3.ComponentSharingAddResponse;
 import com.tencent.ads.model.v3.ComponentSharingAddResponseData;
 import com.tencent.ads.model.v3.ComponentSharingGetResponse;
 import com.tencent.ads.model.v3.ComponentSharingGetResponseData;
+import com.tencent.ads.model.v3.ComponentSharingUpdateRequest;
+import com.tencent.ads.model.v3.ComponentSharingUpdateResponse;
+import com.tencent.ads.model.v3.ComponentSharingUpdateResponseData;
 import java.util.List;
 
 public class ComponentSharingApiContainer extends ApiContainer {
@@ -71,6 +74,22 @@ public class ComponentSharingApiContainer extends ApiContainer {
     ComponentSharingGetResponse resp =
         api.componentSharingGet(
             organizationId, componentId, page, pageSize, isDeleted, fields, headerPair);
+    handleResponse(gson.toJson(resp));
+    return resp.getData();
+  }
+
+  /**
+   * 修改创意组件共享
+   *
+   * @param data (required)
+   * @return ComponentSharingUpdateResponse
+   * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
+   *     response body
+   */
+  public ComponentSharingUpdateResponseData componentSharingUpdate(
+      ComponentSharingUpdateRequest data, Pair... headerPair)
+      throws ApiException, TencentAdsResponseException {
+    ComponentSharingUpdateResponse resp = api.componentSharingUpdate(data, headerPair);
     handleResponse(gson.toJson(resp));
     return resp.getData();
   }

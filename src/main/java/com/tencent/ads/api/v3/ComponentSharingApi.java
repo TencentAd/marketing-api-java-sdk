@@ -24,6 +24,8 @@ import com.tencent.ads.ProgressResponseBody;
 import com.tencent.ads.model.v3.ComponentSharingAddRequest;
 import com.tencent.ads.model.v3.ComponentSharingAddResponse;
 import com.tencent.ads.model.v3.ComponentSharingGetResponse;
+import com.tencent.ads.model.v3.ComponentSharingUpdateRequest;
+import com.tencent.ads.model.v3.ComponentSharingUpdateResponse;
 import java.io.IOException;
 import java.lang.reflect.Type;
 import java.util.ArrayList;
@@ -456,6 +458,171 @@ public class ComponentSharingApi {
             progressRequestListener,
             headerPair);
     Type localVarReturnType = new TypeToken<ComponentSharingGetResponse>() {}.getType();
+    apiClient.executeAsync(call, localVarReturnType, callback);
+    return call;
+  }
+  /**
+   * Build call for componentSharingUpdate
+   *
+   * @param data (required)
+   * @param progressListener Progress listener
+   * @param progressRequestListener Progress request listener
+   * @return Call to execute
+   * @throws ApiException If fail to serialize the request body object
+   */
+  public com.squareup.okhttp.Call componentSharingUpdateCall(
+      ComponentSharingUpdateRequest data,
+      final ProgressResponseBody.ProgressListener progressListener,
+      final ProgressRequestBody.ProgressRequestListener progressRequestListener,
+      Pair... headerPair)
+      throws ApiException {
+
+    Object localVarPostBody = data;
+
+    // create path and map variables
+    String localVarPath = "/component_sharing/update";
+
+    List<Pair> localVarQueryParams = new ArrayList<Pair>();
+    List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+
+    Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+
+    Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+    final String[] localVarAccepts = {"application/json"};
+    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+    if (localVarAccept != null) localVarHeaderParams.put("Accept", localVarAccept);
+
+    final String[] localVarContentTypes = {"application/json", "application/xml"};
+    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+    localVarHeaderParams.put("Content-Type", localVarContentType);
+
+    if (headerPair != null && headerPair.length > 0) {
+      for (int i = 0; i < headerPair.length; i++) {
+        localVarHeaderParams.put(headerPair[i].getName(), headerPair[i].getValue());
+      }
+    }
+
+    if (progressListener != null) {
+      apiClient
+          .getHttpClient()
+          .networkInterceptors()
+          .add(
+              new com.squareup.okhttp.Interceptor() {
+                @Override
+                public com.squareup.okhttp.Response intercept(
+                    com.squareup.okhttp.Interceptor.Chain chain) throws IOException {
+                  com.squareup.okhttp.Response originalResponse = chain.proceed(chain.request());
+                  return originalResponse
+                      .newBuilder()
+                      .body(new ProgressResponseBody(originalResponse.body(), progressListener))
+                      .build();
+                }
+              });
+    }
+
+    String[] localVarAuthNames = new String[] {"accessToken", "nonce", "timestamp"};
+    return apiClient.buildCall(
+        localVarPath,
+        "POST",
+        localVarQueryParams,
+        localVarCollectionQueryParams,
+        localVarPostBody,
+        localVarHeaderParams,
+        localVarFormParams,
+        localVarAuthNames,
+        progressRequestListener);
+  }
+
+  @SuppressWarnings("rawtypes")
+  private com.squareup.okhttp.Call componentSharingUpdateValidateBeforeCall(
+      ComponentSharingUpdateRequest data,
+      final ProgressResponseBody.ProgressListener progressListener,
+      final ProgressRequestBody.ProgressRequestListener progressRequestListener,
+      Pair... headerPair)
+      throws ApiException {
+
+    // verify the required parameter 'data' is set
+    if (data == null) {
+      throw new ApiException(
+          "Missing the required parameter 'data' when calling componentSharingUpdate(Async)");
+    }
+
+    com.squareup.okhttp.Call call =
+        componentSharingUpdateCall(data, progressListener, progressRequestListener, headerPair);
+    return call;
+  }
+
+  /**
+   * 修改创意组件共享
+   *
+   * @param data (required)
+   * @return ComponentSharingUpdateResponse
+   * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
+   *     response body
+   */
+  public ComponentSharingUpdateResponse componentSharingUpdate(
+      ComponentSharingUpdateRequest data, Pair... headerPair) throws ApiException {
+    ApiResponse<ComponentSharingUpdateResponse> resp =
+        componentSharingUpdateWithHttpInfo(data, headerPair);
+    return resp.getData();
+  }
+
+  /**
+   * 修改创意组件共享
+   *
+   * @param data (required)
+   * @return ApiResponse&lt;ComponentSharingUpdateResponse&gt;
+   * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
+   *     response body
+   */
+  public ApiResponse<ComponentSharingUpdateResponse> componentSharingUpdateWithHttpInfo(
+      ComponentSharingUpdateRequest data, Pair... headerPair) throws ApiException {
+    com.squareup.okhttp.Call call =
+        componentSharingUpdateValidateBeforeCall(data, null, null, headerPair);
+    Type localVarReturnType = new TypeToken<ComponentSharingUpdateResponse>() {}.getType();
+    return apiClient.execute(call, localVarReturnType);
+  }
+
+  /**
+   * 修改创意组件共享 (asynchronously)
+   *
+   * @param data (required)
+   * @param callback The callback to be executed when the API call finishes
+   * @return The request call
+   * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+   */
+  public com.squareup.okhttp.Call componentSharingUpdateAsync(
+      ComponentSharingUpdateRequest data,
+      final ApiCallback<ComponentSharingUpdateResponse> callback,
+      Pair... headerPair)
+      throws ApiException {
+
+    ProgressResponseBody.ProgressListener progressListener = null;
+    ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
+
+    if (callback != null) {
+      progressListener =
+          new ProgressResponseBody.ProgressListener() {
+            @Override
+            public void update(long bytesRead, long contentLength, boolean done) {
+              callback.onDownloadProgress(bytesRead, contentLength, done);
+            }
+          };
+
+      progressRequestListener =
+          new ProgressRequestBody.ProgressRequestListener() {
+            @Override
+            public void onRequestProgress(long bytesWritten, long contentLength, boolean done) {
+              callback.onUploadProgress(bytesWritten, contentLength, done);
+            }
+          };
+    }
+
+    com.squareup.okhttp.Call call =
+        componentSharingUpdateValidateBeforeCall(
+            data, progressListener, progressRequestListener, headerPair);
+    Type localVarReturnType = new TypeToken<ComponentSharingUpdateResponse>() {}.getType();
     apiClient.executeAsync(call, localVarReturnType, callback);
     return call;
   }

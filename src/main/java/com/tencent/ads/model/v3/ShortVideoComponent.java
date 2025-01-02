@@ -18,8 +18,8 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.util.Objects;
 
-/** 视频结束页组件 */
-@ApiModel(description = "视频结束页组件")
+/** 短视频组件 */
+@ApiModel(description = "短视频组件")
 public class ShortVideoComponent {
   @SerializedName("component_id")
   private Long componentId = null;

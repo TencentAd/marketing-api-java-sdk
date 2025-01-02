@@ -16,6 +16,8 @@ import com.google.gson.Gson;
 import com.google.gson.annotations.SerializedName;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Objects;
 
 /** 创意组件字段结构 */
@@ -77,6 +79,15 @@ public class ComponentMetadataValueValid {
 
   @SerializedName("default_bool_value")
   private Boolean defaultBoolValue = null;
+
+  @SerializedName("enum_options")
+  private List<ComponentMetadataValueValidEnumOption> enumOptions = null;
+
+  @SerializedName("min_occurs")
+  private Long minOccurs = null;
+
+  @SerializedName("max_occurs")
+  private Long maxOccurs = null;
 
   public ComponentMetadataValueValid required(Boolean required) {
     this.required = required;
@@ -439,6 +450,73 @@ public class ComponentMetadataValueValid {
     this.defaultBoolValue = defaultBoolValue;
   }
 
+  public ComponentMetadataValueValid enumOptions(
+      List<ComponentMetadataValueValidEnumOption> enumOptions) {
+    this.enumOptions = enumOptions;
+    return this;
+  }
+
+  public ComponentMetadataValueValid addEnumOptionsItem(
+      ComponentMetadataValueValidEnumOption enumOptionsItem) {
+    if (this.enumOptions == null) {
+      this.enumOptions = new ArrayList<ComponentMetadataValueValidEnumOption>();
+    }
+    this.enumOptions.add(enumOptionsItem);
+    return this;
+  }
+
+  /**
+   * Get enumOptions
+   *
+   * @return enumOptions
+   */
+  @ApiModelProperty(value = "")
+  public List<ComponentMetadataValueValidEnumOption> getEnumOptions() {
+    return enumOptions;
+  }
+
+  public void setEnumOptions(List<ComponentMetadataValueValidEnumOption> enumOptions) {
+    this.enumOptions = enumOptions;
+  }
+
+  public ComponentMetadataValueValid minOccurs(Long minOccurs) {
+    this.minOccurs = minOccurs;
+    return this;
+  }
+
+  /**
+   * Get minOccurs
+   *
+   * @return minOccurs
+   */
+  @ApiModelProperty(value = "")
+  public Long getMinOccurs() {
+    return minOccurs;
+  }
+
+  public void setMinOccurs(Long minOccurs) {
+    this.minOccurs = minOccurs;
+  }
+
+  public ComponentMetadataValueValid maxOccurs(Long maxOccurs) {
+    this.maxOccurs = maxOccurs;
+    return this;
+  }
+
+  /**
+   * Get maxOccurs
+   *
+   * @return maxOccurs
+   */
+  @ApiModelProperty(value = "")
+  public Long getMaxOccurs() {
+    return maxOccurs;
+  }
+
+  public void setMaxOccurs(Long maxOccurs) {
+    this.maxOccurs = maxOccurs;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -466,7 +544,10 @@ public class ComponentMetadataValueValid {
         && Objects.equals(this.minHeight, componentMetadataValueValid.minHeight)
         && Objects.equals(this.minWidth, componentMetadataValueValid.minWidth)
         && Objects.equals(this.joint, componentMetadataValueValid.joint)
-        && Objects.equals(this.defaultBoolValue, componentMetadataValueValid.defaultBoolValue);
+        && Objects.equals(this.defaultBoolValue, componentMetadataValueValid.defaultBoolValue)
+        && Objects.equals(this.enumOptions, componentMetadataValueValid.enumOptions)
+        && Objects.equals(this.minOccurs, componentMetadataValueValid.minOccurs)
+        && Objects.equals(this.maxOccurs, componentMetadataValueValid.maxOccurs);
   }
 
   @Override
@@ -490,7 +571,10 @@ public class ComponentMetadataValueValid {
         minHeight,
         minWidth,
         joint,
-        defaultBoolValue);
+        defaultBoolValue,
+        enumOptions,
+        minOccurs,
+        maxOccurs);
   }
 
   @Override

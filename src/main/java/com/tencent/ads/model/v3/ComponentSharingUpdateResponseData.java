@@ -14,55 +14,31 @@ package com.tencent.ads.model.v3;
 
 import com.google.gson.Gson;
 import com.google.gson.annotations.SerializedName;
-import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.util.Objects;
 
-/** 匹配规则 */
-@ApiModel(description = "匹配规则")
-public class UrlMatcher {
-  @SerializedName("param_value")
-  private String paramValue = null;
+/** ComponentSharingUpdateResponseData */
+public class ComponentSharingUpdateResponseData {
+  @SerializedName("component_id")
+  private Long componentId = null;
 
-  @SerializedName("operator")
-  private Operator operator = null;
-
-  public UrlMatcher paramValue(String paramValue) {
-    this.paramValue = paramValue;
+  public ComponentSharingUpdateResponseData componentId(Long componentId) {
+    this.componentId = componentId;
     return this;
   }
 
   /**
-   * Get paramValue
+   * Get componentId
    *
-   * @return paramValue
+   * @return componentId
    */
   @ApiModelProperty(value = "")
-  public String getParamValue() {
-    return paramValue;
+  public Long getComponentId() {
+    return componentId;
   }
 
-  public void setParamValue(String paramValue) {
-    this.paramValue = paramValue;
-  }
-
-  public UrlMatcher operator(Operator operator) {
-    this.operator = operator;
-    return this;
-  }
-
-  /**
-   * Get operator
-   *
-   * @return operator
-   */
-  @ApiModelProperty(value = "")
-  public Operator getOperator() {
-    return operator;
-  }
-
-  public void setOperator(Operator operator) {
-    this.operator = operator;
+  public void setComponentId(Long componentId) {
+    this.componentId = componentId;
   }
 
   @Override
@@ -73,14 +49,14 @@ public class UrlMatcher {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    UrlMatcher urlMatcher = (UrlMatcher) o;
-    return Objects.equals(this.paramValue, urlMatcher.paramValue)
-        && Objects.equals(this.operator, urlMatcher.operator);
+    ComponentSharingUpdateResponseData componentSharingUpdateResponseData =
+        (ComponentSharingUpdateResponseData) o;
+    return Objects.equals(this.componentId, componentSharingUpdateResponseData.componentId);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(paramValue, operator);
+    return Objects.hash(componentId);
   }
 
   @Override

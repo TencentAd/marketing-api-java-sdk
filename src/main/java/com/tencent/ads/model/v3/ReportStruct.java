@@ -2271,6 +2271,45 @@ public class ReportStruct {
   @SerializedName("ad_monetization_pla_reg_active_24h_mix_roi")
   private Double adMonetizationPlaRegActive24hMixRoi = null;
 
+  @SerializedName("real_cost_app_auto_download")
+  private Long realCostAppAutoDownload = null;
+
+  @SerializedName("wechat_add_fans_after_v30s_dedup_pv")
+  private Long wechatAddFansAfterV30sDedupPv = null;
+
+  @SerializedName("visit_store_pv")
+  private Long visitStorePv = null;
+
+  @SerializedName("visit_store_dedup_pv_cost")
+  private Long visitStoreDedupPvCost = null;
+
+  @SerializedName("visit_store_pv_cost")
+  private Long visitStorePvCost = null;
+
+  @SerializedName("channels_live_ele_conv_exp_pla_pv")
+  private Long channelsLiveEleConvExpPlaPv = null;
+
+  @SerializedName("channels_live_ele_conv_clk_pla_pv")
+  private Long channelsLiveEleConvClkPlaPv = null;
+
+  @SerializedName("authorize_pv")
+  private Long authorizePv = null;
+
+  @SerializedName("retention_pla_pv")
+  private Long retentionPlaPv = null;
+
+  @SerializedName("retention_d1_uv_rate")
+  private Double retentionD1UvRate = null;
+
+  @SerializedName("purchase_first_all_dedup_touch_24h_pv")
+  private Long purchaseFirstAllDedupTouch24hPv = null;
+
+  @SerializedName("purchase_first_all_dedup_touch_24h_amount")
+  private Long purchaseFirstAllDedupTouch24hAmount = null;
+
+  @SerializedName("purchase_first_all_dedup_touch_24h_unit_price")
+  private Long purchaseFirstAllDedupTouch24hUnitPrice = null;
+
   @SerializedName("adgroup_id")
   private Long adgroupId = null;
 
@@ -16722,6 +16761,256 @@ public class ReportStruct {
     this.adMonetizationPlaRegActive24hMixRoi = adMonetizationPlaRegActive24hMixRoi;
   }
 
+  public ReportStruct realCostAppAutoDownload(Long realCostAppAutoDownload) {
+    this.realCostAppAutoDownload = realCostAppAutoDownload;
+    return this;
+  }
+
+  /**
+   * Get realCostAppAutoDownload
+   *
+   * @return realCostAppAutoDownload
+   */
+  @ApiModelProperty(value = "")
+  public Long getRealCostAppAutoDownload() {
+    return realCostAppAutoDownload;
+  }
+
+  public void setRealCostAppAutoDownload(Long realCostAppAutoDownload) {
+    this.realCostAppAutoDownload = realCostAppAutoDownload;
+  }
+
+  public ReportStruct wechatAddFansAfterV30sDedupPv(Long wechatAddFansAfterV30sDedupPv) {
+    this.wechatAddFansAfterV30sDedupPv = wechatAddFansAfterV30sDedupPv;
+    return this;
+  }
+
+  /**
+   * Get wechatAddFansAfterV30sDedupPv
+   *
+   * @return wechatAddFansAfterV30sDedupPv
+   */
+  @ApiModelProperty(value = "")
+  public Long getWechatAddFansAfterV30sDedupPv() {
+    return wechatAddFansAfterV30sDedupPv;
+  }
+
+  public void setWechatAddFansAfterV30sDedupPv(Long wechatAddFansAfterV30sDedupPv) {
+    this.wechatAddFansAfterV30sDedupPv = wechatAddFansAfterV30sDedupPv;
+  }
+
+  public ReportStruct visitStorePv(Long visitStorePv) {
+    this.visitStorePv = visitStorePv;
+    return this;
+  }
+
+  /**
+   * Get visitStorePv
+   *
+   * @return visitStorePv
+   */
+  @ApiModelProperty(value = "")
+  public Long getVisitStorePv() {
+    return visitStorePv;
+  }
+
+  public void setVisitStorePv(Long visitStorePv) {
+    this.visitStorePv = visitStorePv;
+  }
+
+  public ReportStruct visitStoreDedupPvCost(Long visitStoreDedupPvCost) {
+    this.visitStoreDedupPvCost = visitStoreDedupPvCost;
+    return this;
+  }
+
+  /**
+   * Get visitStoreDedupPvCost
+   *
+   * @return visitStoreDedupPvCost
+   */
+  @ApiModelProperty(value = "")
+  public Long getVisitStoreDedupPvCost() {
+    return visitStoreDedupPvCost;
+  }
+
+  public void setVisitStoreDedupPvCost(Long visitStoreDedupPvCost) {
+    this.visitStoreDedupPvCost = visitStoreDedupPvCost;
+  }
+
+  public ReportStruct visitStorePvCost(Long visitStorePvCost) {
+    this.visitStorePvCost = visitStorePvCost;
+    return this;
+  }
+
+  /**
+   * Get visitStorePvCost
+   *
+   * @return visitStorePvCost
+   */
+  @ApiModelProperty(value = "")
+  public Long getVisitStorePvCost() {
+    return visitStorePvCost;
+  }
+
+  public void setVisitStorePvCost(Long visitStorePvCost) {
+    this.visitStorePvCost = visitStorePvCost;
+  }
+
+  public ReportStruct channelsLiveEleConvExpPlaPv(Long channelsLiveEleConvExpPlaPv) {
+    this.channelsLiveEleConvExpPlaPv = channelsLiveEleConvExpPlaPv;
+    return this;
+  }
+
+  /**
+   * Get channelsLiveEleConvExpPlaPv
+   *
+   * @return channelsLiveEleConvExpPlaPv
+   */
+  @ApiModelProperty(value = "")
+  public Long getChannelsLiveEleConvExpPlaPv() {
+    return channelsLiveEleConvExpPlaPv;
+  }
+
+  public void setChannelsLiveEleConvExpPlaPv(Long channelsLiveEleConvExpPlaPv) {
+    this.channelsLiveEleConvExpPlaPv = channelsLiveEleConvExpPlaPv;
+  }
+
+  public ReportStruct channelsLiveEleConvClkPlaPv(Long channelsLiveEleConvClkPlaPv) {
+    this.channelsLiveEleConvClkPlaPv = channelsLiveEleConvClkPlaPv;
+    return this;
+  }
+
+  /**
+   * Get channelsLiveEleConvClkPlaPv
+   *
+   * @return channelsLiveEleConvClkPlaPv
+   */
+  @ApiModelProperty(value = "")
+  public Long getChannelsLiveEleConvClkPlaPv() {
+    return channelsLiveEleConvClkPlaPv;
+  }
+
+  public void setChannelsLiveEleConvClkPlaPv(Long channelsLiveEleConvClkPlaPv) {
+    this.channelsLiveEleConvClkPlaPv = channelsLiveEleConvClkPlaPv;
+  }
+
+  public ReportStruct authorizePv(Long authorizePv) {
+    this.authorizePv = authorizePv;
+    return this;
+  }
+
+  /**
+   * Get authorizePv
+   *
+   * @return authorizePv
+   */
+  @ApiModelProperty(value = "")
+  public Long getAuthorizePv() {
+    return authorizePv;
+  }
+
+  public void setAuthorizePv(Long authorizePv) {
+    this.authorizePv = authorizePv;
+  }
+
+  public ReportStruct retentionPlaPv(Long retentionPlaPv) {
+    this.retentionPlaPv = retentionPlaPv;
+    return this;
+  }
+
+  /**
+   * Get retentionPlaPv
+   *
+   * @return retentionPlaPv
+   */
+  @ApiModelProperty(value = "")
+  public Long getRetentionPlaPv() {
+    return retentionPlaPv;
+  }
+
+  public void setRetentionPlaPv(Long retentionPlaPv) {
+    this.retentionPlaPv = retentionPlaPv;
+  }
+
+  public ReportStruct retentionD1UvRate(Double retentionD1UvRate) {
+    this.retentionD1UvRate = retentionD1UvRate;
+    return this;
+  }
+
+  /**
+   * Get retentionD1UvRate
+   *
+   * @return retentionD1UvRate
+   */
+  @ApiModelProperty(value = "")
+  public Double getRetentionD1UvRate() {
+    return retentionD1UvRate;
+  }
+
+  public void setRetentionD1UvRate(Double retentionD1UvRate) {
+    this.retentionD1UvRate = retentionD1UvRate;
+  }
+
+  public ReportStruct purchaseFirstAllDedupTouch24hPv(Long purchaseFirstAllDedupTouch24hPv) {
+    this.purchaseFirstAllDedupTouch24hPv = purchaseFirstAllDedupTouch24hPv;
+    return this;
+  }
+
+  /**
+   * Get purchaseFirstAllDedupTouch24hPv
+   *
+   * @return purchaseFirstAllDedupTouch24hPv
+   */
+  @ApiModelProperty(value = "")
+  public Long getPurchaseFirstAllDedupTouch24hPv() {
+    return purchaseFirstAllDedupTouch24hPv;
+  }
+
+  public void setPurchaseFirstAllDedupTouch24hPv(Long purchaseFirstAllDedupTouch24hPv) {
+    this.purchaseFirstAllDedupTouch24hPv = purchaseFirstAllDedupTouch24hPv;
+  }
+
+  public ReportStruct purchaseFirstAllDedupTouch24hAmount(
+      Long purchaseFirstAllDedupTouch24hAmount) {
+    this.purchaseFirstAllDedupTouch24hAmount = purchaseFirstAllDedupTouch24hAmount;
+    return this;
+  }
+
+  /**
+   * Get purchaseFirstAllDedupTouch24hAmount
+   *
+   * @return purchaseFirstAllDedupTouch24hAmount
+   */
+  @ApiModelProperty(value = "")
+  public Long getPurchaseFirstAllDedupTouch24hAmount() {
+    return purchaseFirstAllDedupTouch24hAmount;
+  }
+
+  public void setPurchaseFirstAllDedupTouch24hAmount(Long purchaseFirstAllDedupTouch24hAmount) {
+    this.purchaseFirstAllDedupTouch24hAmount = purchaseFirstAllDedupTouch24hAmount;
+  }
+
+  public ReportStruct purchaseFirstAllDedupTouch24hUnitPrice(
+      Long purchaseFirstAllDedupTouch24hUnitPrice) {
+    this.purchaseFirstAllDedupTouch24hUnitPrice = purchaseFirstAllDedupTouch24hUnitPrice;
+    return this;
+  }
+
+  /**
+   * Get purchaseFirstAllDedupTouch24hUnitPrice
+   *
+   * @return purchaseFirstAllDedupTouch24hUnitPrice
+   */
+  @ApiModelProperty(value = "")
+  public Long getPurchaseFirstAllDedupTouch24hUnitPrice() {
+    return purchaseFirstAllDedupTouch24hUnitPrice;
+  }
+
+  public void setPurchaseFirstAllDedupTouch24hUnitPrice(
+      Long purchaseFirstAllDedupTouch24hUnitPrice) {
+    this.purchaseFirstAllDedupTouch24hUnitPrice = purchaseFirstAllDedupTouch24hUnitPrice;
+  }
+
   public ReportStruct adgroupId(Long adgroupId) {
     this.adgroupId = adgroupId;
     return this;
@@ -18742,6 +19031,27 @@ public class ReportStruct {
         && Objects.equals(
             this.adMonetizationPlaRegActive24hMixRoi,
             reportStruct.adMonetizationPlaRegActive24hMixRoi)
+        && Objects.equals(this.realCostAppAutoDownload, reportStruct.realCostAppAutoDownload)
+        && Objects.equals(
+            this.wechatAddFansAfterV30sDedupPv, reportStruct.wechatAddFansAfterV30sDedupPv)
+        && Objects.equals(this.visitStorePv, reportStruct.visitStorePv)
+        && Objects.equals(this.visitStoreDedupPvCost, reportStruct.visitStoreDedupPvCost)
+        && Objects.equals(this.visitStorePvCost, reportStruct.visitStorePvCost)
+        && Objects.equals(
+            this.channelsLiveEleConvExpPlaPv, reportStruct.channelsLiveEleConvExpPlaPv)
+        && Objects.equals(
+            this.channelsLiveEleConvClkPlaPv, reportStruct.channelsLiveEleConvClkPlaPv)
+        && Objects.equals(this.authorizePv, reportStruct.authorizePv)
+        && Objects.equals(this.retentionPlaPv, reportStruct.retentionPlaPv)
+        && Objects.equals(this.retentionD1UvRate, reportStruct.retentionD1UvRate)
+        && Objects.equals(
+            this.purchaseFirstAllDedupTouch24hPv, reportStruct.purchaseFirstAllDedupTouch24hPv)
+        && Objects.equals(
+            this.purchaseFirstAllDedupTouch24hAmount,
+            reportStruct.purchaseFirstAllDedupTouch24hAmount)
+        && Objects.equals(
+            this.purchaseFirstAllDedupTouch24hUnitPrice,
+            reportStruct.purchaseFirstAllDedupTouch24hUnitPrice)
         && Objects.equals(this.adgroupId, reportStruct.adgroupId)
         && Objects.equals(this.adgroupName, reportStruct.adgroupName)
         && Objects.equals(this.dynamicCreativeId, reportStruct.dynamicCreativeId)
@@ -19559,6 +19869,19 @@ public class ReportStruct {
         clkInterpageBtnPv,
         adMonetizationPlaRegActive1dMixRoi,
         adMonetizationPlaRegActive24hMixRoi,
+        realCostAppAutoDownload,
+        wechatAddFansAfterV30sDedupPv,
+        visitStorePv,
+        visitStoreDedupPvCost,
+        visitStorePvCost,
+        channelsLiveEleConvExpPlaPv,
+        channelsLiveEleConvClkPlaPv,
+        authorizePv,
+        retentionPlaPv,
+        retentionD1UvRate,
+        purchaseFirstAllDedupTouch24hPv,
+        purchaseFirstAllDedupTouch24hAmount,
+        purchaseFirstAllDedupTouch24hUnitPrice,
         adgroupId,
         adgroupName,
         dynamicCreativeId,

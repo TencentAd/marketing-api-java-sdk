@@ -30,7 +30,11 @@ public enum ComponentMetadataFieldValidType {
 
   VIDEO("VIDEO"),
 
-  BARRAGE("BARRAGE");
+  BARRAGE("BARRAGE"),
+
+  ENUM("ENUM"),
+
+  URL("URL");
 
   private String value;
 

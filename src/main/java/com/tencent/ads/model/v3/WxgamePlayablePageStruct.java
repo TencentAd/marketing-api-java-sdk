@@ -16,6 +16,8 @@ import com.google.gson.Gson;
 import com.google.gson.annotations.SerializedName;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Objects;
 
 /** 小游戏试玩页组件 */
@@ -32,6 +34,18 @@ public class WxgamePlayablePageStruct {
 
   @SerializedName("wxgame_playable_page_end_desc")
   private String wxgamePlayablePageEndDesc = null;
+
+  @SerializedName("wxgame_playable_page_trigger_types")
+  private List<String> wxgamePlayablePageTriggerTypes = null;
+
+  @SerializedName("wxgame_playable_page_trigger_text")
+  private String wxgamePlayablePageTriggerText = null;
+
+  @SerializedName("wxgame_playable_page_card_link_image")
+  private String wxgamePlayablePageCardLinkImage = null;
+
+  @SerializedName("wxgame_playable_page_card_link_description")
+  private String wxgamePlayablePageCardLinkDescription = null;
 
   public WxgamePlayablePageStruct wxgamePlayablePageSwitch(Boolean wxgamePlayablePageSwitch) {
     this.wxgamePlayablePageSwitch = wxgamePlayablePageSwitch;
@@ -110,6 +124,96 @@ public class WxgamePlayablePageStruct {
     this.wxgamePlayablePageEndDesc = wxgamePlayablePageEndDesc;
   }
 
+  public WxgamePlayablePageStruct wxgamePlayablePageTriggerTypes(
+      List<String> wxgamePlayablePageTriggerTypes) {
+    this.wxgamePlayablePageTriggerTypes = wxgamePlayablePageTriggerTypes;
+    return this;
+  }
+
+  public WxgamePlayablePageStruct addWxgamePlayablePageTriggerTypesItem(
+      String wxgamePlayablePageTriggerTypesItem) {
+    if (this.wxgamePlayablePageTriggerTypes == null) {
+      this.wxgamePlayablePageTriggerTypes = new ArrayList<String>();
+    }
+    this.wxgamePlayablePageTriggerTypes.add(wxgamePlayablePageTriggerTypesItem);
+    return this;
+  }
+
+  /**
+   * Get wxgamePlayablePageTriggerTypes
+   *
+   * @return wxgamePlayablePageTriggerTypes
+   */
+  @ApiModelProperty(value = "")
+  public List<String> getWxgamePlayablePageTriggerTypes() {
+    return wxgamePlayablePageTriggerTypes;
+  }
+
+  public void setWxgamePlayablePageTriggerTypes(List<String> wxgamePlayablePageTriggerTypes) {
+    this.wxgamePlayablePageTriggerTypes = wxgamePlayablePageTriggerTypes;
+  }
+
+  public WxgamePlayablePageStruct wxgamePlayablePageTriggerText(
+      String wxgamePlayablePageTriggerText) {
+    this.wxgamePlayablePageTriggerText = wxgamePlayablePageTriggerText;
+    return this;
+  }
+
+  /**
+   * Get wxgamePlayablePageTriggerText
+   *
+   * @return wxgamePlayablePageTriggerText
+   */
+  @ApiModelProperty(value = "")
+  public String getWxgamePlayablePageTriggerText() {
+    return wxgamePlayablePageTriggerText;
+  }
+
+  public void setWxgamePlayablePageTriggerText(String wxgamePlayablePageTriggerText) {
+    this.wxgamePlayablePageTriggerText = wxgamePlayablePageTriggerText;
+  }
+
+  public WxgamePlayablePageStruct wxgamePlayablePageCardLinkImage(
+      String wxgamePlayablePageCardLinkImage) {
+    this.wxgamePlayablePageCardLinkImage = wxgamePlayablePageCardLinkImage;
+    return this;
+  }
+
+  /**
+   * Get wxgamePlayablePageCardLinkImage
+   *
+   * @return wxgamePlayablePageCardLinkImage
+   */
+  @ApiModelProperty(value = "")
+  public String getWxgamePlayablePageCardLinkImage() {
+    return wxgamePlayablePageCardLinkImage;
+  }
+
+  public void setWxgamePlayablePageCardLinkImage(String wxgamePlayablePageCardLinkImage) {
+    this.wxgamePlayablePageCardLinkImage = wxgamePlayablePageCardLinkImage;
+  }
+
+  public WxgamePlayablePageStruct wxgamePlayablePageCardLinkDescription(
+      String wxgamePlayablePageCardLinkDescription) {
+    this.wxgamePlayablePageCardLinkDescription = wxgamePlayablePageCardLinkDescription;
+    return this;
+  }
+
+  /**
+   * Get wxgamePlayablePageCardLinkDescription
+   *
+   * @return wxgamePlayablePageCardLinkDescription
+   */
+  @ApiModelProperty(value = "")
+  public String getWxgamePlayablePageCardLinkDescription() {
+    return wxgamePlayablePageCardLinkDescription;
+  }
+
+  public void setWxgamePlayablePageCardLinkDescription(
+      String wxgamePlayablePageCardLinkDescription) {
+    this.wxgamePlayablePageCardLinkDescription = wxgamePlayablePageCardLinkDescription;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -127,7 +231,19 @@ public class WxgamePlayablePageStruct {
             this.wxgamePlayablePageEndCoverImg,
             wxgamePlayablePageStruct.wxgamePlayablePageEndCoverImg)
         && Objects.equals(
-            this.wxgamePlayablePageEndDesc, wxgamePlayablePageStruct.wxgamePlayablePageEndDesc);
+            this.wxgamePlayablePageEndDesc, wxgamePlayablePageStruct.wxgamePlayablePageEndDesc)
+        && Objects.equals(
+            this.wxgamePlayablePageTriggerTypes,
+            wxgamePlayablePageStruct.wxgamePlayablePageTriggerTypes)
+        && Objects.equals(
+            this.wxgamePlayablePageTriggerText,
+            wxgamePlayablePageStruct.wxgamePlayablePageTriggerText)
+        && Objects.equals(
+            this.wxgamePlayablePageCardLinkImage,
+            wxgamePlayablePageStruct.wxgamePlayablePageCardLinkImage)
+        && Objects.equals(
+            this.wxgamePlayablePageCardLinkDescription,
+            wxgamePlayablePageStruct.wxgamePlayablePageCardLinkDescription);
   }
 
   @Override
@@ -136,7 +252,11 @@ public class WxgamePlayablePageStruct {
         wxgamePlayablePageSwitch,
         wxgamePlayablePagePath,
         wxgamePlayablePageEndCoverImg,
-        wxgamePlayablePageEndDesc);
+        wxgamePlayablePageEndDesc,
+        wxgamePlayablePageTriggerTypes,
+        wxgamePlayablePageTriggerText,
+        wxgamePlayablePageCardLinkImage,
+        wxgamePlayablePageCardLinkDescription);
   }
 
   @Override

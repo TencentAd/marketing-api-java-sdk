@@ -21,10 +21,10 @@ import com.tencent.ads.Configuration;
 import com.tencent.ads.Pair;
 import com.tencent.ads.ProgressRequestBody;
 import com.tencent.ads.ProgressResponseBody;
+import com.tencent.ads.model.v3.HourlyReportDateRange;
 import com.tencent.ads.model.v3.HourlyReportsGetResponse;
 import com.tencent.ads.model.v3.IntegratedListApiFilteringStruct;
 import com.tencent.ads.model.v3.OrderByStruct;
-import com.tencent.ads.model.v3.ReportDateRange;
 import java.io.IOException;
 import java.lang.reflect.Type;
 import java.util.ArrayList;
@@ -72,7 +72,7 @@ public class HourlyReportsApi {
   public com.squareup.okhttp.Call hourlyReportsGetCall(
       Long accountId,
       String level,
-      ReportDateRange dateRange,
+      HourlyReportDateRange dateRange,
       List<String> groupBy,
       List<String> fields,
       List<IntegratedListApiFilteringStruct> filtering,
@@ -167,7 +167,7 @@ public class HourlyReportsApi {
   private com.squareup.okhttp.Call hourlyReportsGetValidateBeforeCall(
       Long accountId,
       String level,
-      ReportDateRange dateRange,
+      HourlyReportDateRange dateRange,
       List<String> groupBy,
       List<String> fields,
       List<IntegratedListApiFilteringStruct> filtering,
@@ -248,7 +248,7 @@ public class HourlyReportsApi {
   public HourlyReportsGetResponse hourlyReportsGet(
       Long accountId,
       String level,
-      ReportDateRange dateRange,
+      HourlyReportDateRange dateRange,
       List<String> groupBy,
       List<String> fields,
       List<IntegratedListApiFilteringStruct> filtering,
@@ -294,7 +294,7 @@ public class HourlyReportsApi {
   public ApiResponse<HourlyReportsGetResponse> hourlyReportsGetWithHttpInfo(
       Long accountId,
       String level,
-      ReportDateRange dateRange,
+      HourlyReportDateRange dateRange,
       List<String> groupBy,
       List<String> fields,
       List<IntegratedListApiFilteringStruct> filtering,
@@ -343,7 +343,7 @@ public class HourlyReportsApi {
   public com.squareup.okhttp.Call hourlyReportsGetAsync(
       Long accountId,
       String level,
-      ReportDateRange dateRange,
+      HourlyReportDateRange dateRange,
       List<String> groupBy,
       List<String> fields,
       List<IntegratedListApiFilteringStruct> filtering,

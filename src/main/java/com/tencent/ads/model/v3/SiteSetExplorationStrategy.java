@@ -19,7 +19,7 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-/** 自动版位探索策略 */
+/** */
 @JsonAdapter(SiteSetExplorationStrategy.Adapter.class)
 public enum SiteSetExplorationStrategy {
   EXPLORATION_UNKNOW("EXPLORATION_UNKNOW"),

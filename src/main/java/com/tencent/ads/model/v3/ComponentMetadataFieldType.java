@@ -30,7 +30,13 @@ public enum ComponentMetadataFieldType {
 
   BOOL("BOOL"),
 
-  STRUCTURE("STRUCTURE");
+  STRING_ARRAY("STRING_ARRAY"),
+
+  INT_ARRAY("INT_ARRAY"),
+
+  STRUCTURE("STRUCTURE"),
+
+  STRUCTURE_ARRAY("STRUCTURE_ARRAY");
 
   private String value;
 

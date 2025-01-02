@@ -19,7 +19,7 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-/** 蹊径落地页绑定的app 类型 */
+/** 操作系统 */
 @JsonAdapter(OsV2.Adapter.class)
 public enum OsV2 {
   IOS("IOS"),
