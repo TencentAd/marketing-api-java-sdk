@@ -25,6 +25,8 @@ import com.tencent.ads.model.v3.ProductItemsAddResponse;
 import com.tencent.ads.model.v3.ProductItemsAddResponseData;
 import com.tencent.ads.model.v3.ProductItemsBatchUpdateRequest;
 import com.tencent.ads.model.v3.ProductItemsBatchUpdateResponse;
+import com.tencent.ads.model.v3.ProductItemsDeleteRequest;
+import com.tencent.ads.model.v3.ProductItemsDeleteResponse;
 import com.tencent.ads.model.v3.ProductItemsGetResponse;
 import com.tencent.ads.model.v3.ProductItemsGetResponseData;
 import com.tencent.ads.model.v3.ProductItemsUpdateRequest;
@@ -63,6 +65,23 @@ public class ProductItemsApiContainer extends ApiContainer {
       ProductItemsBatchUpdateRequest data, Pair... headerPair)
       throws ApiException, TencentAdsResponseException {
     ProductItemsBatchUpdateResponse resp = api.productItemsBatchUpdate(data, headerPair);
+    handleResponse(gson.toJson(resp));
+
+    return resp;
+  }
+
+  /**
+   * 删除商品信息
+   *
+   * @param data (required)
+   * @return ProductItemsDeleteResponse
+   * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
+   *     response body
+   */
+  public ProductItemsDeleteResponse productItemsDelete(
+      ProductItemsDeleteRequest data, Pair... headerPair)
+      throws ApiException, TencentAdsResponseException {
+    ProductItemsDeleteResponse resp = api.productItemsDelete(data, headerPair);
     handleResponse(gson.toJson(resp));
 
     return resp;
