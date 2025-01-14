@@ -242,6 +242,9 @@ public class AdgroupsGetListStruct {
   @SerializedName("live_recommend_strategy_enabled")
   private Boolean liveRecommendStrategyEnabled = null;
 
+  @SerializedName("custom_cost_roi_cap")
+  private Double customCostRoiCap = null;
+
   public AdgroupsGetListStruct targeting(ReadTargetingSetting targeting) {
     this.targeting = targeting;
     return this;
@@ -1669,6 +1672,25 @@ public class AdgroupsGetListStruct {
     this.liveRecommendStrategyEnabled = liveRecommendStrategyEnabled;
   }
 
+  public AdgroupsGetListStruct customCostRoiCap(Double customCostRoiCap) {
+    this.customCostRoiCap = customCostRoiCap;
+    return this;
+  }
+
+  /**
+   * Get customCostRoiCap
+   *
+   * @return customCostRoiCap
+   */
+  @ApiModelProperty(value = "")
+  public Double getCustomCostRoiCap() {
+    return customCostRoiCap;
+  }
+
+  public void setCustomCostRoiCap(Double customCostRoiCap) {
+    this.customCostRoiCap = customCostRoiCap;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -1765,7 +1787,8 @@ public class AdgroupsGetListStruct {
         && Objects.equals(
             this.enableBreakthroughSiteset, adgroupsGetListStruct.enableBreakthroughSiteset)
         && Objects.equals(
-            this.liveRecommendStrategyEnabled, adgroupsGetListStruct.liveRecommendStrategyEnabled);
+            this.liveRecommendStrategyEnabled, adgroupsGetListStruct.liveRecommendStrategyEnabled)
+        && Objects.equals(this.customCostRoiCap, adgroupsGetListStruct.customCostRoiCap);
   }
 
   @Override
@@ -1843,7 +1866,8 @@ public class AdgroupsGetListStruct {
         costGuaranteeMoney,
         additionalProductSpec,
         enableBreakthroughSiteset,
-        liveRecommendStrategyEnabled);
+        liveRecommendStrategyEnabled,
+        customCostRoiCap);
   }
 
   @Override

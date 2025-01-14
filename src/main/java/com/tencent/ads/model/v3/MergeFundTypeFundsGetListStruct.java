@@ -29,6 +29,9 @@ public class MergeFundTypeFundsGetListStruct {
   @SerializedName("balance")
   private Long balance = null;
 
+  @SerializedName("bill_deposit_amount")
+  private Long billDepositAmount = null;
+
   @SerializedName("fund_status")
   private FundStatus fundStatus = null;
 
@@ -74,6 +77,25 @@ public class MergeFundTypeFundsGetListStruct {
 
   public void setBalance(Long balance) {
     this.balance = balance;
+  }
+
+  public MergeFundTypeFundsGetListStruct billDepositAmount(Long billDepositAmount) {
+    this.billDepositAmount = billDepositAmount;
+    return this;
+  }
+
+  /**
+   * Get billDepositAmount
+   *
+   * @return billDepositAmount
+   */
+  @ApiModelProperty(value = "")
+  public Long getBillDepositAmount() {
+    return billDepositAmount;
+  }
+
+  public void setBillDepositAmount(Long billDepositAmount) {
+    this.billDepositAmount = billDepositAmount;
   }
 
   public MergeFundTypeFundsGetListStruct fundStatus(FundStatus fundStatus) {
@@ -153,6 +175,7 @@ public class MergeFundTypeFundsGetListStruct {
         (MergeFundTypeFundsGetListStruct) o;
     return Objects.equals(this.fundType, mergeFundTypeFundsGetListStruct.fundType)
         && Objects.equals(this.balance, mergeFundTypeFundsGetListStruct.balance)
+        && Objects.equals(this.billDepositAmount, mergeFundTypeFundsGetListStruct.billDepositAmount)
         && Objects.equals(this.fundStatus, mergeFundTypeFundsGetListStruct.fundStatus)
         && Objects.equals(this.realtimeCost, mergeFundTypeFundsGetListStruct.realtimeCost)
         && Objects.equals(this.effectFunds, mergeFundTypeFundsGetListStruct.effectFunds);
@@ -160,7 +183,8 @@ public class MergeFundTypeFundsGetListStruct {
 
   @Override
   public int hashCode() {
-    return Objects.hash(fundType, balance, fundStatus, realtimeCost, effectFunds);
+    return Objects.hash(
+        fundType, balance, billDepositAmount, fundStatus, realtimeCost, effectFunds);
   }
 
   @Override

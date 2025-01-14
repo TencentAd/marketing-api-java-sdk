@@ -21,6 +21,7 @@ import com.tencent.ads.Configuration;
 import com.tencent.ads.Pair;
 import com.tencent.ads.ProgressRequestBody;
 import com.tencent.ads.ProgressResponseBody;
+import com.tencent.ads.model.v3.MarketingAssetOuterSpecV1;
 import com.tencent.ads.model.v3.MaterialDcatagAddRequest;
 import com.tencent.ads.model.v3.MaterialDcatagAddResponse;
 import com.tencent.ads.model.v3.MaterialDcatagGetResponse;
@@ -217,9 +218,14 @@ public class MaterialDcatagApi {
   /**
    * Build call for materialDcatagGet
    *
-   * @param accountId (required)
+   * @param accountId (optional)
    * @param imageIdList (optional)
    * @param mediaIdList (optional)
+   * @param marketingAssetId (optional)
+   * @param marketingTargetType (optional)
+   * @param marketingAssetOuterSpec (optional)
+   * @param page (optional)
+   * @param pageSize (optional)
    * @param fields 返回参数的字段列表 (optional)
    * @param progressListener Progress listener
    * @param progressRequestListener Progress request listener
@@ -230,6 +236,11 @@ public class MaterialDcatagApi {
       Long accountId,
       List<Long> imageIdList,
       List<Long> mediaIdList,
+      Long marketingAssetId,
+      String marketingTargetType,
+      MarketingAssetOuterSpecV1 marketingAssetOuterSpec,
+      Long page,
+      Long pageSize,
       List<String> fields,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
@@ -251,6 +262,17 @@ public class MaterialDcatagApi {
     if (mediaIdList != null)
       localVarCollectionQueryParams.addAll(
           apiClient.parameterToPairs("multi", "media_id_list", mediaIdList));
+    if (marketingAssetId != null)
+      localVarQueryParams.addAll(apiClient.parameterToPair("marketing_asset_id", marketingAssetId));
+    if (marketingTargetType != null)
+      localVarQueryParams.addAll(
+          apiClient.parameterToPair("marketing_target_type", marketingTargetType));
+    if (marketingAssetOuterSpec != null)
+      localVarQueryParams.addAll(
+          apiClient.parameterToPair("marketing_asset_outer_spec", marketingAssetOuterSpec));
+    if (page != null) localVarQueryParams.addAll(apiClient.parameterToPair("page", page));
+    if (pageSize != null)
+      localVarQueryParams.addAll(apiClient.parameterToPair("page_size", pageSize));
     if (fields != null)
       localVarCollectionQueryParams.addAll(apiClient.parameterToPairs("multi", "fields", fields));
 
@@ -308,23 +330,27 @@ public class MaterialDcatagApi {
       Long accountId,
       List<Long> imageIdList,
       List<Long> mediaIdList,
+      Long marketingAssetId,
+      String marketingTargetType,
+      MarketingAssetOuterSpecV1 marketingAssetOuterSpec,
+      Long page,
+      Long pageSize,
       List<String> fields,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
       Pair... headerPair)
       throws ApiException {
 
-    // verify the required parameter 'accountId' is set
-    if (accountId == null) {
-      throw new ApiException(
-          "Missing the required parameter 'accountId' when calling materialDcatagGet(Async)");
-    }
-
     com.squareup.okhttp.Call call =
         materialDcatagGetCall(
             accountId,
             imageIdList,
             mediaIdList,
+            marketingAssetId,
+            marketingTargetType,
+            marketingAssetOuterSpec,
+            page,
+            pageSize,
             fields,
             progressListener,
             progressRequestListener,
@@ -335,9 +361,14 @@ public class MaterialDcatagApi {
   /**
    * 素材DCA标签绑定查询
    *
-   * @param accountId (required)
+   * @param accountId (optional)
    * @param imageIdList (optional)
    * @param mediaIdList (optional)
+   * @param marketingAssetId (optional)
+   * @param marketingTargetType (optional)
+   * @param marketingAssetOuterSpec (optional)
+   * @param page (optional)
+   * @param pageSize (optional)
    * @param fields 返回参数的字段列表 (optional)
    * @return MaterialDcatagGetResponse
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
@@ -347,20 +378,40 @@ public class MaterialDcatagApi {
       Long accountId,
       List<Long> imageIdList,
       List<Long> mediaIdList,
+      Long marketingAssetId,
+      String marketingTargetType,
+      MarketingAssetOuterSpecV1 marketingAssetOuterSpec,
+      Long page,
+      Long pageSize,
       List<String> fields,
       Pair... headerPair)
       throws ApiException {
     ApiResponse<MaterialDcatagGetResponse> resp =
-        materialDcatagGetWithHttpInfo(accountId, imageIdList, mediaIdList, fields, headerPair);
+        materialDcatagGetWithHttpInfo(
+            accountId,
+            imageIdList,
+            mediaIdList,
+            marketingAssetId,
+            marketingTargetType,
+            marketingAssetOuterSpec,
+            page,
+            pageSize,
+            fields,
+            headerPair);
     return resp.getData();
   }
 
   /**
    * 素材DCA标签绑定查询
    *
-   * @param accountId (required)
+   * @param accountId (optional)
    * @param imageIdList (optional)
    * @param mediaIdList (optional)
+   * @param marketingAssetId (optional)
+   * @param marketingTargetType (optional)
+   * @param marketingAssetOuterSpec (optional)
+   * @param page (optional)
+   * @param pageSize (optional)
    * @param fields 返回参数的字段列表 (optional)
    * @return ApiResponse&lt;MaterialDcatagGetResponse&gt;
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
@@ -370,12 +421,28 @@ public class MaterialDcatagApi {
       Long accountId,
       List<Long> imageIdList,
       List<Long> mediaIdList,
+      Long marketingAssetId,
+      String marketingTargetType,
+      MarketingAssetOuterSpecV1 marketingAssetOuterSpec,
+      Long page,
+      Long pageSize,
       List<String> fields,
       Pair... headerPair)
       throws ApiException {
     com.squareup.okhttp.Call call =
         materialDcatagGetValidateBeforeCall(
-            accountId, imageIdList, mediaIdList, fields, null, null, headerPair);
+            accountId,
+            imageIdList,
+            mediaIdList,
+            marketingAssetId,
+            marketingTargetType,
+            marketingAssetOuterSpec,
+            page,
+            pageSize,
+            fields,
+            null,
+            null,
+            headerPair);
     Type localVarReturnType = new TypeToken<MaterialDcatagGetResponse>() {}.getType();
     return apiClient.execute(call, localVarReturnType);
   }
@@ -383,9 +450,14 @@ public class MaterialDcatagApi {
   /**
    * 素材DCA标签绑定查询 (asynchronously)
    *
-   * @param accountId (required)
+   * @param accountId (optional)
    * @param imageIdList (optional)
    * @param mediaIdList (optional)
+   * @param marketingAssetId (optional)
+   * @param marketingTargetType (optional)
+   * @param marketingAssetOuterSpec (optional)
+   * @param page (optional)
+   * @param pageSize (optional)
    * @param fields 返回参数的字段列表 (optional)
    * @param callback The callback to be executed when the API call finishes
    * @return The request call
@@ -395,6 +467,11 @@ public class MaterialDcatagApi {
       Long accountId,
       List<Long> imageIdList,
       List<Long> mediaIdList,
+      Long marketingAssetId,
+      String marketingTargetType,
+      MarketingAssetOuterSpecV1 marketingAssetOuterSpec,
+      Long page,
+      Long pageSize,
       List<String> fields,
       final ApiCallback<MaterialDcatagGetResponse> callback,
       Pair... headerPair)
@@ -426,6 +503,11 @@ public class MaterialDcatagApi {
             accountId,
             imageIdList,
             mediaIdList,
+            marketingAssetId,
+            marketingTargetType,
+            marketingAssetOuterSpec,
+            page,
+            pageSize,
             fields,
             progressListener,
             progressRequestListener,

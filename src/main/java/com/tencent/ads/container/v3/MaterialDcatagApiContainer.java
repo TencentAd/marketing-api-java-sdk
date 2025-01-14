@@ -19,6 +19,7 @@ import com.tencent.ads.Pair;
 import com.tencent.ads.anno.*;
 import com.tencent.ads.api.v3.MaterialDcatagApi;
 import com.tencent.ads.exception.TencentAdsResponseException;
+import com.tencent.ads.model.v3.MarketingAssetOuterSpecV1;
 import com.tencent.ads.model.v3.MaterialDcatagAddRequest;
 import com.tencent.ads.model.v3.MaterialDcatagAddResponse;
 import com.tencent.ads.model.v3.MaterialDcatagAddResponseData;
@@ -49,9 +50,14 @@ public class MaterialDcatagApiContainer extends ApiContainer {
   /**
    * 素材DCA标签绑定查询
    *
-   * @param accountId (required)
+   * @param accountId (optional)
    * @param imageIdList (optional)
    * @param mediaIdList (optional)
+   * @param marketingAssetId (optional)
+   * @param marketingTargetType (optional)
+   * @param marketingAssetOuterSpec (optional)
+   * @param page (optional)
+   * @param pageSize (optional)
    * @param fields 返回参数的字段列表 (optional)
    * @return MaterialDcatagGetResponse
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
@@ -61,11 +67,26 @@ public class MaterialDcatagApiContainer extends ApiContainer {
       Long accountId,
       List<Long> imageIdList,
       List<Long> mediaIdList,
+      Long marketingAssetId,
+      String marketingTargetType,
+      MarketingAssetOuterSpecV1 marketingAssetOuterSpec,
+      Long page,
+      Long pageSize,
       List<String> fields,
       Pair... headerPair)
       throws ApiException, TencentAdsResponseException {
     MaterialDcatagGetResponse resp =
-        api.materialDcatagGet(accountId, imageIdList, mediaIdList, fields, headerPair);
+        api.materialDcatagGet(
+            accountId,
+            imageIdList,
+            mediaIdList,
+            marketingAssetId,
+            marketingTargetType,
+            marketingAssetOuterSpec,
+            page,
+            pageSize,
+            fields,
+            headerPair);
     handleResponse(gson.toJson(resp));
     return resp.getData();
   }

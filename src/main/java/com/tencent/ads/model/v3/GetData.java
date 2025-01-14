@@ -53,6 +53,9 @@ public class GetData {
   @SerializedName("dcatag_list")
   private List<Dactag> dcatagList = null;
 
+  @SerializedName("page_info")
+  private PageInfo pageInfo = null;
+
   public GetData imageId(Long imageId) {
     this.imageId = imageId;
     return this;
@@ -259,6 +262,25 @@ public class GetData {
     this.dcatagList = dcatagList;
   }
 
+  public GetData pageInfo(PageInfo pageInfo) {
+    this.pageInfo = pageInfo;
+    return this;
+  }
+
+  /**
+   * Get pageInfo
+   *
+   * @return pageInfo
+   */
+  @ApiModelProperty(value = "")
+  public PageInfo getPageInfo() {
+    return pageInfo;
+  }
+
+  public void setPageInfo(PageInfo pageInfo) {
+    this.pageInfo = pageInfo;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -277,7 +299,8 @@ public class GetData {
         && Objects.equals(this.marketingTargetType, getData.marketingTargetType)
         && Objects.equals(this.auditStatus, getData.auditStatus)
         && Objects.equals(this.auditMsg, getData.auditMsg)
-        && Objects.equals(this.dcatagList, getData.dcatagList);
+        && Objects.equals(this.dcatagList, getData.dcatagList)
+        && Objects.equals(this.pageInfo, getData.pageInfo);
   }
 
   @Override
@@ -292,7 +315,8 @@ public class GetData {
         marketingTargetType,
         auditStatus,
         auditMsg,
-        dcatagList);
+        dcatagList,
+        pageInfo);
   }
 
   @Override

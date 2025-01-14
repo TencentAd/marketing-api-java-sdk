@@ -132,6 +132,9 @@ public class AdgroupsUpdateRequest {
   @SerializedName("live_recommend_strategy_enabled")
   private Boolean liveRecommendStrategyEnabled = null;
 
+  @SerializedName("custom_cost_roi_cap")
+  private Double customCostRoiCap = null;
+
   public AdgroupsUpdateRequest accountId(Long accountId) {
     this.accountId = accountId;
     return this;
@@ -856,6 +859,25 @@ public class AdgroupsUpdateRequest {
     this.liveRecommendStrategyEnabled = liveRecommendStrategyEnabled;
   }
 
+  public AdgroupsUpdateRequest customCostRoiCap(Double customCostRoiCap) {
+    this.customCostRoiCap = customCostRoiCap;
+    return this;
+  }
+
+  /**
+   * Get customCostRoiCap
+   *
+   * @return customCostRoiCap
+   */
+  @ApiModelProperty(value = "")
+  public Double getCustomCostRoiCap() {
+    return customCostRoiCap;
+  }
+
+  public void setCustomCostRoiCap(Double customCostRoiCap) {
+    this.customCostRoiCap = customCostRoiCap;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -913,7 +935,8 @@ public class AdgroupsUpdateRequest {
             this.searchExpandTargetingSwitch, adgroupsUpdateRequest.searchExpandTargetingSwitch)
         && Objects.equals(this.cloudUnionSpec, adgroupsUpdateRequest.cloudUnionSpec)
         && Objects.equals(
-            this.liveRecommendStrategyEnabled, adgroupsUpdateRequest.liveRecommendStrategyEnabled);
+            this.liveRecommendStrategyEnabled, adgroupsUpdateRequest.liveRecommendStrategyEnabled)
+        && Objects.equals(this.customCostRoiCap, adgroupsUpdateRequest.customCostRoiCap);
   }
 
   @Override
@@ -955,7 +978,8 @@ public class AdgroupsUpdateRequest {
         aoiOptimizationStrategy,
         searchExpandTargetingSwitch,
         cloudUnionSpec,
-        liveRecommendStrategyEnabled);
+        liveRecommendStrategyEnabled,
+        customCostRoiCap);
   }
 
   @Override

@@ -4,6 +4,7 @@ import com.tencent.ads.ApiContextConfig;
 import com.tencent.ads.exception.TencentAdsResponseException;
 import com.tencent.ads.exception.TencentAdsSDKException;
 import com.tencent.ads.model.v3.*;
+import com.tencent.ads.model.v3.MarketingAssetOuterSpecV1;
 import com.tencent.ads.v3.TencentAds;
 import java.util.List;
 
@@ -20,6 +21,16 @@ public class GetMaterialDcatag {
 
   public List<Long> mediaIdList = null;
 
+  public Long marketingAssetId = null;
+
+  public String marketingTargetType = null;
+
+  public MarketingAssetOuterSpecV1 marketingAssetOuterSpec = null;
+
+  public Long page = null;
+
+  public Long pageSize = null;
+
   public List<String> fields = null;
 
   public void init() {
@@ -34,7 +45,18 @@ public class GetMaterialDcatag {
 
   public MaterialDcatagGetResponseData getMaterialDcatag() throws Exception {
     MaterialDcatagGetResponseData response =
-        tencentAds.materialDcatag().materialDcatagGet(accountId, imageIdList, mediaIdList, fields);
+        tencentAds
+            .materialDcatag()
+            .materialDcatagGet(
+                accountId,
+                imageIdList,
+                mediaIdList,
+                marketingAssetId,
+                marketingTargetType,
+                marketingAssetOuterSpec,
+                page,
+                pageSize,
+                fields);
     return response;
   }
 

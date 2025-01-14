@@ -35,6 +35,7 @@ public class App {
   @Inject AgencyBusinessUnitListAccountApiContainer agencyBusinessUnitListAccountApiContainer;
   @Inject AgencyBusinessUnitListByAccountApiContainer agencyBusinessUnitListByAccountApiContainer;
   @Inject AgencyRealtimeCostApiContainer agencyRealtimeCostApiContainer;
+  @Inject AgencyWalletListApiContainer agencyWalletListApiContainer;
   @Inject AndroidChannelApiContainer androidChannelApiContainer;
   @Inject AsyncReportFilesApiContainer asyncReportFilesApiContainer;
   @Inject AsyncReportsApiContainer asyncReportsApiContainer;
@@ -194,6 +195,7 @@ public class App {
   @Inject VideoChannelLiveDataApiContainer videoChannelLiveDataApiContainer;
   @Inject VideosApiContainer videosApiContainer;
   @Inject WalletApiContainer walletApiContainer;
+  @Inject WalletTransferApiContainer walletTransferApiContainer;
   @Inject WechatChannelsAccountsApiContainer wechatChannelsAccountsApiContainer;
   @Inject WechatChannelsAdAccountApiContainer wechatChannelsAdAccountApiContainer;
 
@@ -300,6 +302,10 @@ public class App {
 
   public AgencyRealtimeCostApiContainer agencyRealtimeCost() {
     return agencyRealtimeCostApiContainer;
+  }
+
+  public AgencyWalletListApiContainer agencyWalletList() {
+    return agencyWalletListApiContainer;
   }
 
   public AndroidChannelApiContainer androidChannel() {
@@ -900,6 +906,10 @@ public class App {
 
   public WalletApiContainer wallet() {
     return walletApiContainer;
+  }
+
+  public WalletTransferApiContainer walletTransfer() {
+    return walletTransferApiContainer;
   }
 
   public WechatChannelsAccountsApiContainer wechatChannelsAccounts() {

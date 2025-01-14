@@ -29,6 +29,9 @@ public class FundsGetListStruct {
   @SerializedName("balance")
   private Long balance = null;
 
+  @SerializedName("bill_deposit_amount")
+  private Long billDepositAmount = null;
+
   @SerializedName("fund_status")
   private FundStatus fundStatus = null;
 
@@ -74,6 +77,25 @@ public class FundsGetListStruct {
 
   public void setBalance(Long balance) {
     this.balance = balance;
+  }
+
+  public FundsGetListStruct billDepositAmount(Long billDepositAmount) {
+    this.billDepositAmount = billDepositAmount;
+    return this;
+  }
+
+  /**
+   * Get billDepositAmount
+   *
+   * @return billDepositAmount
+   */
+  @ApiModelProperty(value = "")
+  public Long getBillDepositAmount() {
+    return billDepositAmount;
+  }
+
+  public void setBillDepositAmount(Long billDepositAmount) {
+    this.billDepositAmount = billDepositAmount;
   }
 
   public FundsGetListStruct fundStatus(FundStatus fundStatus) {
@@ -152,6 +174,7 @@ public class FundsGetListStruct {
     FundsGetListStruct fundsGetListStruct = (FundsGetListStruct) o;
     return Objects.equals(this.fundType, fundsGetListStruct.fundType)
         && Objects.equals(this.balance, fundsGetListStruct.balance)
+        && Objects.equals(this.billDepositAmount, fundsGetListStruct.billDepositAmount)
         && Objects.equals(this.fundStatus, fundsGetListStruct.fundStatus)
         && Objects.equals(this.realtimeCost, fundsGetListStruct.realtimeCost)
         && Objects.equals(this.effectFunds, fundsGetListStruct.effectFunds);
@@ -159,7 +182,8 @@ public class FundsGetListStruct {
 
   @Override
   public int hashCode() {
-    return Objects.hash(fundType, balance, fundStatus, realtimeCost, effectFunds);
+    return Objects.hash(
+        fundType, balance, billDepositAmount, fundStatus, realtimeCost, effectFunds);
   }
 
   @Override

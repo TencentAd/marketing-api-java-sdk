@@ -192,6 +192,9 @@ public class AdgroupsAddRequest {
   @SerializedName("live_recommend_strategy_enabled")
   private Boolean liveRecommendStrategyEnabled = null;
 
+  @SerializedName("custom_cost_roi_cap")
+  private Double customCostRoiCap = null;
+
   @SerializedName("search_expansion_switch")
   private SearchExpansionSwitch searchExpansionSwitch = null;
 
@@ -1316,6 +1319,25 @@ public class AdgroupsAddRequest {
     this.liveRecommendStrategyEnabled = liveRecommendStrategyEnabled;
   }
 
+  public AdgroupsAddRequest customCostRoiCap(Double customCostRoiCap) {
+    this.customCostRoiCap = customCostRoiCap;
+    return this;
+  }
+
+  /**
+   * Get customCostRoiCap
+   *
+   * @return customCostRoiCap
+   */
+  @ApiModelProperty(value = "")
+  public Double getCustomCostRoiCap() {
+    return customCostRoiCap;
+  }
+
+  public void setCustomCostRoiCap(Double customCostRoiCap) {
+    this.customCostRoiCap = customCostRoiCap;
+  }
+
   public AdgroupsAddRequest searchExpansionSwitch(SearchExpansionSwitch searchExpansionSwitch) {
     this.searchExpansionSwitch = searchExpansionSwitch;
     return this;
@@ -1411,6 +1433,7 @@ public class AdgroupsAddRequest {
             this.enableBreakthroughSiteset, adgroupsAddRequest.enableBreakthroughSiteset)
         && Objects.equals(
             this.liveRecommendStrategyEnabled, adgroupsAddRequest.liveRecommendStrategyEnabled)
+        && Objects.equals(this.customCostRoiCap, adgroupsAddRequest.customCostRoiCap)
         && Objects.equals(this.searchExpansionSwitch, adgroupsAddRequest.searchExpansionSwitch);
   }
 
@@ -1474,6 +1497,7 @@ public class AdgroupsAddRequest {
         additionalProductSpec,
         enableBreakthroughSiteset,
         liveRecommendStrategyEnabled,
+        customCostRoiCap,
         searchExpansionSwitch);
   }
 
