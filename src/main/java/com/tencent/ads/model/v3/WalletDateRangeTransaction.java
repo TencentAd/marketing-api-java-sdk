@@ -18,51 +18,51 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.util.Objects;
 
-/** 多卡轮播组件 */
-@ApiModel(description = "多卡轮播组件")
-public class FloatingZoneListComponent {
-  @SerializedName("component_id")
-  private Long componentId = null;
+/** 日期范围 */
+@ApiModel(description = "日期范围")
+public class WalletDateRangeTransaction {
+  @SerializedName("start_date")
+  private String startDate = null;
 
-  @SerializedName("value")
-  private FloatingZoneListStruct value = null;
+  @SerializedName("end_date")
+  private String endDate = null;
 
-  public FloatingZoneListComponent componentId(Long componentId) {
-    this.componentId = componentId;
+  public WalletDateRangeTransaction startDate(String startDate) {
+    this.startDate = startDate;
     return this;
   }
 
   /**
-   * Get componentId
+   * Get startDate
    *
-   * @return componentId
+   * @return startDate
    */
   @ApiModelProperty(value = "")
-  public Long getComponentId() {
-    return componentId;
+  public String getStartDate() {
+    return startDate;
   }
 
-  public void setComponentId(Long componentId) {
-    this.componentId = componentId;
+  public void setStartDate(String startDate) {
+    this.startDate = startDate;
   }
 
-  public FloatingZoneListComponent value(FloatingZoneListStruct value) {
-    this.value = value;
+  public WalletDateRangeTransaction endDate(String endDate) {
+    this.endDate = endDate;
     return this;
   }
 
   /**
-   * Get value
+   * Get endDate
    *
-   * @return value
+   * @return endDate
    */
   @ApiModelProperty(value = "")
-  public FloatingZoneListStruct getValue() {
-    return value;
+  public String getEndDate() {
+    return endDate;
   }
 
-  public void setValue(FloatingZoneListStruct value) {
-    this.value = value;
+  public void setEndDate(String endDate) {
+    this.endDate = endDate;
   }
 
   @Override
@@ -73,14 +73,14 @@ public class FloatingZoneListComponent {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    FloatingZoneListComponent floatingZoneListComponent = (FloatingZoneListComponent) o;
-    return Objects.equals(this.componentId, floatingZoneListComponent.componentId)
-        && Objects.equals(this.value, floatingZoneListComponent.value);
+    WalletDateRangeTransaction walletDateRangeTransaction = (WalletDateRangeTransaction) o;
+    return Objects.equals(this.startDate, walletDateRangeTransaction.startDate)
+        && Objects.equals(this.endDate, walletDateRangeTransaction.endDate);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(componentId, value);
+    return Objects.hash(startDate, endDate);
   }
 
   @Override

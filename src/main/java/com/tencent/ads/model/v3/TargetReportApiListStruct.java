@@ -2184,6 +2184,9 @@ public class TargetReportApiListStruct {
   @SerializedName("purchase_first_all_dedup_touch_24h_unit_price")
   private Long purchaseFirstAllDedupTouch24hUnitPrice = null;
 
+  @SerializedName("paying_users_d1_cost")
+  private Long payingUsersD1Cost = null;
+
   @SerializedName("age_id")
   private Long ageId = null;
 
@@ -15971,6 +15974,25 @@ public class TargetReportApiListStruct {
     this.purchaseFirstAllDedupTouch24hUnitPrice = purchaseFirstAllDedupTouch24hUnitPrice;
   }
 
+  public TargetReportApiListStruct payingUsersD1Cost(Long payingUsersD1Cost) {
+    this.payingUsersD1Cost = payingUsersD1Cost;
+    return this;
+  }
+
+  /**
+   * Get payingUsersD1Cost
+   *
+   * @return payingUsersD1Cost
+   */
+  @ApiModelProperty(value = "")
+  public Long getPayingUsersD1Cost() {
+    return payingUsersD1Cost;
+  }
+
+  public void setPayingUsersD1Cost(Long payingUsersD1Cost) {
+    this.payingUsersD1Cost = payingUsersD1Cost;
+  }
+
   public TargetReportApiListStruct ageId(Long ageId) {
     this.ageId = ageId;
     return this;
@@ -17193,6 +17215,7 @@ public class TargetReportApiListStruct {
         && Objects.equals(
             this.purchaseFirstAllDedupTouch24hUnitPrice,
             targetReportApiListStruct.purchaseFirstAllDedupTouch24hUnitPrice)
+        && Objects.equals(this.payingUsersD1Cost, targetReportApiListStruct.payingUsersD1Cost)
         && Objects.equals(this.ageId, targetReportApiListStruct.ageId)
         && Objects.equals(this.cityId, targetReportApiListStruct.cityId)
         && Objects.equals(this.regionId, targetReportApiListStruct.regionId)
@@ -17926,6 +17949,7 @@ public class TargetReportApiListStruct {
         purchaseFirstAllDedupTouch24hPv,
         purchaseFirstAllDedupTouch24hAmount,
         purchaseFirstAllDedupTouch24hUnitPrice,
+        payingUsersD1Cost,
         ageId,
         cityId,
         regionId,

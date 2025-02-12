@@ -138,6 +138,14 @@ public enum LinkUrlLinkNameType {
 
   GO_SCAN("GO_SCAN"),
 
+  PICK_GIFT("PICK_GIFT"),
+
+  SELECT_GIFT("SELECT_GIFT"),
+
+  GIVING_GIFT("GIVING_GIFT"),
+
+  GIVE_FRIEND("GIVE_FRIEND"),
+
   LINK_NAME_TEXT_TEMPLATE("LINK_NAME_TEXT_TEMPLATE");
 
   private String value;

@@ -36,7 +36,9 @@ public enum ConversionScene {
 
   QUICK_APP("CONVERSION_SCENE_QUICK_APP"),
 
-  WE_COM("CONVERSION_SCENE_WE_COM");
+  WE_COM("CONVERSION_SCENE_WE_COM"),
+
+  HARMONY("CONVERSION_SCENE_HARMONY");
 
   private String value;
 

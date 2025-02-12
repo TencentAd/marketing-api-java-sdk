@@ -218,6 +218,8 @@ public enum ComponentSubType {
 
   CONSULT_LINK("CONSULT_LINK"),
 
+  SHOP_PRODUCT_CARD("SHOP_PRODUCT_CARD"),
+
   BRAND("BRAND"),
 
   BRAND_PAGE("BRAND_PAGE"),

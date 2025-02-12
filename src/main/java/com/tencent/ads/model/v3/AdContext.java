@@ -50,6 +50,9 @@ public class AdContext {
   @SerializedName("promoted_asset_type")
   private PromotedAssetType promotedAssetType = null;
 
+  @SerializedName("component_type")
+  private ComponentType componentType = null;
+
   public AdContext marketingGoal(MarketingGoal marketingGoal) {
     this.marketingGoal = marketingGoal;
     return this;
@@ -229,6 +232,25 @@ public class AdContext {
     this.promotedAssetType = promotedAssetType;
   }
 
+  public AdContext componentType(ComponentType componentType) {
+    this.componentType = componentType;
+    return this;
+  }
+
+  /**
+   * Get componentType
+   *
+   * @return componentType
+   */
+  @ApiModelProperty(value = "")
+  public ComponentType getComponentType() {
+    return componentType;
+  }
+
+  public void setComponentType(ComponentType componentType) {
+    this.componentType = componentType;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -246,7 +268,8 @@ public class AdContext {
         && Objects.equals(this.marketingAssetId, adContext.marketingAssetId)
         && Objects.equals(this.siteSet, adContext.siteSet)
         && Objects.equals(this.creativeTemplateId, adContext.creativeTemplateId)
-        && Objects.equals(this.promotedAssetType, adContext.promotedAssetType);
+        && Objects.equals(this.promotedAssetType, adContext.promotedAssetType)
+        && Objects.equals(this.componentType, adContext.componentType);
   }
 
   @Override
@@ -260,7 +283,8 @@ public class AdContext {
         marketingAssetId,
         siteSet,
         creativeTemplateId,
-        promotedAssetType);
+        promotedAssetType,
+        componentType);
   }
 
   @Override

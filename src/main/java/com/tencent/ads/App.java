@@ -197,9 +197,6 @@ public class App {
 
   @Inject WildcardsApiContainer wildcardsApiContainer;
   @Inject XijingComplexTemplateApiContainer xijingComplexTemplateApiContainer;
-  @Inject XijingDeriveClickEffectApiContainer xijingDeriveClickEffectApiContainer;
-  @Inject XijingDeriveRoleApiContainer xijingDeriveRoleApiContainer;
-  @Inject XijingDeriveTempTokenApiContainer xijingDeriveTempTokenApiContainer;
   @Inject XijingPageApiContainer xijingPageApiContainer;
   @Inject XijingPageByComponentsApiContainer xijingPageByComponentsApiContainer;
   @Inject XijingPageInteractiveApiContainer xijingPageInteractiveApiContainer;
@@ -897,18 +894,6 @@ public class App {
 
   public XijingComplexTemplateApiContainer xijingComplexTemplate() {
     return xijingComplexTemplateApiContainer;
-  }
-
-  public XijingDeriveClickEffectApiContainer xijingDeriveClickEffect() {
-    return xijingDeriveClickEffectApiContainer;
-  }
-
-  public XijingDeriveRoleApiContainer xijingDeriveRole() {
-    return xijingDeriveRoleApiContainer;
-  }
-
-  public XijingDeriveTempTokenApiContainer xijingDeriveTempToken() {
-    return xijingDeriveTempTokenApiContainer;
   }
 
   public XijingPageApiContainer xijingPage() {

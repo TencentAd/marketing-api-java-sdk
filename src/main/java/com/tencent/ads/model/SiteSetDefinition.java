@@ -131,7 +131,9 @@ public enum SiteSetDefinition {
 
   FREETRADE_QQ("SITE_SET_FREETRADE_QQ"),
 
-  YUNXUAN("SITE_SET_YUNXUAN");
+  YUNXUAN("SITE_SET_YUNXUAN"),
+
+  EXPAND("SITE_SET_EXPAND");
 
   private String value;
 

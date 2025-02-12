@@ -37,6 +37,9 @@ public class MergeFundTypeSubcustomerTransferAddRequest {
   @SerializedName("memo")
   private String memo = null;
 
+  @SerializedName("pre_fetch_amount")
+  private Long preFetchAmount = null;
+
   public MergeFundTypeSubcustomerTransferAddRequest accountId(Long accountId) {
     this.accountId = accountId;
     return this;
@@ -151,6 +154,25 @@ public class MergeFundTypeSubcustomerTransferAddRequest {
     this.memo = memo;
   }
 
+  public MergeFundTypeSubcustomerTransferAddRequest preFetchAmount(Long preFetchAmount) {
+    this.preFetchAmount = preFetchAmount;
+    return this;
+  }
+
+  /**
+   * Get preFetchAmount
+   *
+   * @return preFetchAmount
+   */
+  @ApiModelProperty(value = "")
+  public Long getPreFetchAmount() {
+    return preFetchAmount;
+  }
+
+  public void setPreFetchAmount(Long preFetchAmount) {
+    this.preFetchAmount = preFetchAmount;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -167,12 +189,15 @@ public class MergeFundTypeSubcustomerTransferAddRequest {
         && Objects.equals(this.fundType, mergeFundTypeSubcustomerTransferAddRequest.fundType)
         && Objects.equals(
             this.externalBillNo, mergeFundTypeSubcustomerTransferAddRequest.externalBillNo)
-        && Objects.equals(this.memo, mergeFundTypeSubcustomerTransferAddRequest.memo);
+        && Objects.equals(this.memo, mergeFundTypeSubcustomerTransferAddRequest.memo)
+        && Objects.equals(
+            this.preFetchAmount, mergeFundTypeSubcustomerTransferAddRequest.preFetchAmount);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(accountId, amount, toAccountId, fundType, externalBillNo, memo);
+    return Objects.hash(
+        accountId, amount, toAccountId, fundType, externalBillNo, memo, preFetchAmount);
   }
 
   @Override

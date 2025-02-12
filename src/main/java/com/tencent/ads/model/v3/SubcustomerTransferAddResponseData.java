@@ -31,6 +31,9 @@ public class SubcustomerTransferAddResponseData {
   @SerializedName("time")
   private Long time = null;
 
+  @SerializedName("recommend_amount")
+  private Long recommendAmount = null;
+
   public SubcustomerTransferAddResponseData fundType(AccountTypeMap fundType) {
     this.fundType = fundType;
     return this;
@@ -107,6 +110,25 @@ public class SubcustomerTransferAddResponseData {
     this.time = time;
   }
 
+  public SubcustomerTransferAddResponseData recommendAmount(Long recommendAmount) {
+    this.recommendAmount = recommendAmount;
+    return this;
+  }
+
+  /**
+   * Get recommendAmount
+   *
+   * @return recommendAmount
+   */
+  @ApiModelProperty(value = "")
+  public Long getRecommendAmount() {
+    return recommendAmount;
+  }
+
+  public void setRecommendAmount(Long recommendAmount) {
+    this.recommendAmount = recommendAmount;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -120,12 +142,13 @@ public class SubcustomerTransferAddResponseData {
     return Objects.equals(this.fundType, subcustomerTransferAddResponseData.fundType)
         && Objects.equals(this.amount, subcustomerTransferAddResponseData.amount)
         && Objects.equals(this.externalBillNo, subcustomerTransferAddResponseData.externalBillNo)
-        && Objects.equals(this.time, subcustomerTransferAddResponseData.time);
+        && Objects.equals(this.time, subcustomerTransferAddResponseData.time)
+        && Objects.equals(this.recommendAmount, subcustomerTransferAddResponseData.recommendAmount);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(fundType, amount, externalBillNo, time);
+    return Objects.hash(fundType, amount, externalBillNo, time, recommendAmount);
   }
 
   @Override

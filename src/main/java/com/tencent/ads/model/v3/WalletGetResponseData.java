@@ -20,9 +20,9 @@ import java.util.Objects;
 /** WalletGetResponseData */
 public class WalletGetResponseData {
   @SerializedName("wallet_info")
-  private WalletInfo walletInfo = null;
+  private WalletGetWalletInfo walletInfo = null;
 
-  public WalletGetResponseData walletInfo(WalletInfo walletInfo) {
+  public WalletGetResponseData walletInfo(WalletGetWalletInfo walletInfo) {
     this.walletInfo = walletInfo;
     return this;
   }
@@ -33,11 +33,11 @@ public class WalletGetResponseData {
    * @return walletInfo
    */
   @ApiModelProperty(value = "")
-  public WalletInfo getWalletInfo() {
+  public WalletGetWalletInfo getWalletInfo() {
     return walletInfo;
   }
 
-  public void setWalletInfo(WalletInfo walletInfo) {
+  public void setWalletInfo(WalletGetWalletInfo walletInfo) {
     this.walletInfo = walletInfo;
   }
 

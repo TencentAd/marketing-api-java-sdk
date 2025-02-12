@@ -34,7 +34,9 @@ public enum ComponentMetadataFieldValidType {
 
   ENUM("ENUM"),
 
-  URL("URL");
+  URL("URL"),
+
+  LEADS("LEADS");
 
   private String value;
 

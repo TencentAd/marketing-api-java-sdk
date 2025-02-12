@@ -195,6 +195,9 @@ public class App {
   @Inject VideoChannelLiveDataApiContainer videoChannelLiveDataApiContainer;
   @Inject VideosApiContainer videosApiContainer;
   @Inject WalletApiContainer walletApiContainer;
+  @Inject WalletBasicInfoApiContainer walletBasicInfoApiContainer;
+  @Inject WalletGetBindingAdvertiserApiContainer walletGetBindingAdvertiserApiContainer;
+  @Inject WalletInvoiceApiContainer walletInvoiceApiContainer;
   @Inject WalletTransferApiContainer walletTransferApiContainer;
   @Inject WechatChannelsAccountsApiContainer wechatChannelsAccountsApiContainer;
   @Inject WechatChannelsAdAccountApiContainer wechatChannelsAdAccountApiContainer;
@@ -906,6 +909,18 @@ public class App {
 
   public WalletApiContainer wallet() {
     return walletApiContainer;
+  }
+
+  public WalletBasicInfoApiContainer walletBasicInfo() {
+    return walletBasicInfoApiContainer;
+  }
+
+  public WalletGetBindingAdvertiserApiContainer walletGetBindingAdvertiser() {
+    return walletGetBindingAdvertiserApiContainer;
+  }
+
+  public WalletInvoiceApiContainer walletInvoice() {
+    return walletInvoiceApiContainer;
   }
 
   public WalletTransferApiContainer walletTransfer() {

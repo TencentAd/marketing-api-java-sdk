@@ -1,20 +1,24 @@
-package com.tencent.ads.examples.BasicOperations.BusinessAssets;
+package com.tencent.ads.examples.v3.AccountManagement.AccountType;
 
 import com.tencent.ads.ApiContextConfig;
-import com.tencent.ads.TencentAds;
 import com.tencent.ads.exception.TencentAdsResponseException;
 import com.tencent.ads.exception.TencentAdsSDKException;
-import com.tencent.ads.model.*;
-import com.tencent.ads.model.XijingDeriveClickEffectGetRequest;
+import com.tencent.ads.model.v3.*;
+import com.tencent.ads.v3.TencentAds;
+import java.util.List;
 
-public class GetXijingDeriveClickEffect {
+public class GetWalletBasicInfo {
   /** YOUR ACCESS TOKEN */
   public String ACCESS_TOKEN = "YOUR ACCESS TOKEN";
 
   /** TencentAds */
   public TencentAds tencentAds;
 
-  public XijingDeriveClickEffectGetRequest data = null;
+  public Long accountId = null;
+
+  public Long walletId = null;
+
+  public List<String> fields = null;
 
   public void init() {
     this.tencentAds = TencentAds.getInstance();
@@ -26,18 +30,17 @@ public class GetXijingDeriveClickEffect {
 
   public void buildParams() {}
 
-  public XijingDeriveClickEffectGetResponseData getXijingDeriveClickEffect() throws Exception {
-    XijingDeriveClickEffectGetResponseData response =
-        tencentAds.xijingDeriveClickEffect().xijingDeriveClickEffectGet(data);
+  public WalletBasicInfoGetResponseData getWalletBasicInfo() throws Exception {
+    WalletBasicInfoGetResponseData response =
+        tencentAds.walletBasicInfo().walletBasicInfoGet(accountId, walletId, fields);
     return response;
   }
 
   public static void main(String[] args) {
     try {
-      GetXijingDeriveClickEffect getXijingDeriveClickEffect = new GetXijingDeriveClickEffect();
-      getXijingDeriveClickEffect.init();
-      XijingDeriveClickEffectGetResponseData response =
-          getXijingDeriveClickEffect.getXijingDeriveClickEffect();
+      GetWalletBasicInfo getWalletBasicInfo = new GetWalletBasicInfo();
+      getWalletBasicInfo.init();
+      WalletBasicInfoGetResponseData response = getWalletBasicInfo.getWalletBasicInfo();
     } catch (TencentAdsResponseException e) {
       e.printStackTrace();
     } catch (TencentAdsSDKException e) {

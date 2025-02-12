@@ -33,7 +33,7 @@ public class ConversionLinkNodeStruct {
   private Long conversionLinkNodeIndex = null;
 
   @SerializedName("conversion_link_action_type")
-  private ActionType conversionLinkActionType = null;
+  private List<String> conversionLinkActionType = null;
 
   @SerializedName("carrier_id")
   private Long carrierId = null;
@@ -116,8 +116,17 @@ public class ConversionLinkNodeStruct {
     this.conversionLinkNodeIndex = conversionLinkNodeIndex;
   }
 
-  public ConversionLinkNodeStruct conversionLinkActionType(ActionType conversionLinkActionType) {
+  public ConversionLinkNodeStruct conversionLinkActionType(List<String> conversionLinkActionType) {
     this.conversionLinkActionType = conversionLinkActionType;
+    return this;
+  }
+
+  public ConversionLinkNodeStruct addConversionLinkActionTypeItem(
+      String conversionLinkActionTypeItem) {
+    if (this.conversionLinkActionType == null) {
+      this.conversionLinkActionType = new ArrayList<String>();
+    }
+    this.conversionLinkActionType.add(conversionLinkActionTypeItem);
     return this;
   }
 
@@ -127,11 +136,11 @@ public class ConversionLinkNodeStruct {
    * @return conversionLinkActionType
    */
   @ApiModelProperty(value = "")
-  public ActionType getConversionLinkActionType() {
+  public List<String> getConversionLinkActionType() {
     return conversionLinkActionType;
   }
 
-  public void setConversionLinkActionType(ActionType conversionLinkActionType) {
+  public void setConversionLinkActionType(List<String> conversionLinkActionType) {
     this.conversionLinkActionType = conversionLinkActionType;
   }
 

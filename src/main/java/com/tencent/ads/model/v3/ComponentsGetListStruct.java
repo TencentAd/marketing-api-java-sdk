@@ -51,6 +51,9 @@ public class ComponentsGetListStruct {
   @SerializedName("is_deleted")
   private Boolean isDeleted = null;
 
+  @SerializedName("potential_status")
+  private CommonPotentialStatus potentialStatus = null;
+
   public ComponentsGetListStruct accountId(Long accountId) {
     this.accountId = accountId;
     return this;
@@ -241,6 +244,25 @@ public class ComponentsGetListStruct {
     this.isDeleted = isDeleted;
   }
 
+  public ComponentsGetListStruct potentialStatus(CommonPotentialStatus potentialStatus) {
+    this.potentialStatus = potentialStatus;
+    return this;
+  }
+
+  /**
+   * Get potentialStatus
+   *
+   * @return potentialStatus
+   */
+  @ApiModelProperty(value = "")
+  public CommonPotentialStatus getPotentialStatus() {
+    return potentialStatus;
+  }
+
+  public void setPotentialStatus(CommonPotentialStatus potentialStatus) {
+    this.potentialStatus = potentialStatus;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -259,7 +281,8 @@ public class ComponentsGetListStruct {
         && Objects.equals(this.componentSubType, componentsGetListStruct.componentSubType)
         && Objects.equals(this.componentCustomName, componentsGetListStruct.componentCustomName)
         && Objects.equals(this.generationType, componentsGetListStruct.generationType)
-        && Objects.equals(this.isDeleted, componentsGetListStruct.isDeleted);
+        && Objects.equals(this.isDeleted, componentsGetListStruct.isDeleted)
+        && Objects.equals(this.potentialStatus, componentsGetListStruct.potentialStatus);
   }
 
   @Override
@@ -274,7 +297,8 @@ public class ComponentsGetListStruct {
         componentSubType,
         componentCustomName,
         generationType,
-        isDeleted);
+        isDeleted,
+        potentialStatus);
   }
 
   @Override

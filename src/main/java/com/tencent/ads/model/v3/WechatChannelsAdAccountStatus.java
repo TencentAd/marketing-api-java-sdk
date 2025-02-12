@@ -38,7 +38,9 @@ public enum WechatChannelsAdAccountStatus {
 
   DEACTIVATED("DEACTIVATED"),
 
-  CHECK_FAIL("CHECK_FAIL");
+  CHECK_FAIL("CHECK_FAIL"),
+
+  PROCESSING_LOGOUT("PROCESSING_LOGOUT");
 
   private String value;
 

@@ -37,6 +37,9 @@ public class SubcustomerTransferAddRequest {
   @SerializedName("memo")
   private String memo = null;
 
+  @SerializedName("pre_fetch_amount")
+  private Long preFetchAmount = null;
+
   public SubcustomerTransferAddRequest accountId(Long accountId) {
     this.accountId = accountId;
     return this;
@@ -151,6 +154,25 @@ public class SubcustomerTransferAddRequest {
     this.memo = memo;
   }
 
+  public SubcustomerTransferAddRequest preFetchAmount(Long preFetchAmount) {
+    this.preFetchAmount = preFetchAmount;
+    return this;
+  }
+
+  /**
+   * Get preFetchAmount
+   *
+   * @return preFetchAmount
+   */
+  @ApiModelProperty(value = "")
+  public Long getPreFetchAmount() {
+    return preFetchAmount;
+  }
+
+  public void setPreFetchAmount(Long preFetchAmount) {
+    this.preFetchAmount = preFetchAmount;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -165,12 +187,14 @@ public class SubcustomerTransferAddRequest {
         && Objects.equals(this.toAccountId, subcustomerTransferAddRequest.toAccountId)
         && Objects.equals(this.fundType, subcustomerTransferAddRequest.fundType)
         && Objects.equals(this.externalBillNo, subcustomerTransferAddRequest.externalBillNo)
-        && Objects.equals(this.memo, subcustomerTransferAddRequest.memo);
+        && Objects.equals(this.memo, subcustomerTransferAddRequest.memo)
+        && Objects.equals(this.preFetchAmount, subcustomerTransferAddRequest.preFetchAmount);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(accountId, amount, toAccountId, fundType, externalBillNo, memo);
+    return Objects.hash(
+        accountId, amount, toAccountId, fundType, externalBillNo, memo, preFetchAmount);
   }
 
   @Override

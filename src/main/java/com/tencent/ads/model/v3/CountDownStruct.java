@@ -21,12 +21,6 @@ import java.util.Objects;
 /** 倒计时组件 */
 @ApiModel(description = "倒计时组件")
 public class CountDownStruct {
-  @SerializedName("switch")
-  private Boolean _switch = null;
-
-  @SerializedName("begin_timestamp")
-  private Long beginTimestamp = null;
-
   @SerializedName("price")
   private String price = null;
 
@@ -35,44 +29,6 @@ public class CountDownStruct {
 
   @SerializedName("expiring_timestamp")
   private Long expiringTimestamp = null;
-
-  public CountDownStruct _switch(Boolean _switch) {
-    this._switch = _switch;
-    return this;
-  }
-
-  /**
-   * Get _switch
-   *
-   * @return _switch
-   */
-  @ApiModelProperty(value = "")
-  public Boolean isSwitch() {
-    return _switch;
-  }
-
-  public void setSwitch(Boolean _switch) {
-    this._switch = _switch;
-  }
-
-  public CountDownStruct beginTimestamp(Long beginTimestamp) {
-    this.beginTimestamp = beginTimestamp;
-    return this;
-  }
-
-  /**
-   * Get beginTimestamp
-   *
-   * @return beginTimestamp
-   */
-  @ApiModelProperty(value = "")
-  public Long getBeginTimestamp() {
-    return beginTimestamp;
-  }
-
-  public void setBeginTimestamp(Long beginTimestamp) {
-    this.beginTimestamp = beginTimestamp;
-  }
 
   public CountDownStruct price(String price) {
     this.price = price;
@@ -140,16 +96,14 @@ public class CountDownStruct {
       return false;
     }
     CountDownStruct countDownStruct = (CountDownStruct) o;
-    return Objects.equals(this._switch, countDownStruct._switch)
-        && Objects.equals(this.beginTimestamp, countDownStruct.beginTimestamp)
-        && Objects.equals(this.price, countDownStruct.price)
+    return Objects.equals(this.price, countDownStruct.price)
         && Objects.equals(this.timeType, countDownStruct.timeType)
         && Objects.equals(this.expiringTimestamp, countDownStruct.expiringTimestamp);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(_switch, beginTimestamp, price, timeType, expiringTimestamp);
+    return Objects.hash(price, timeType, expiringTimestamp);
   }
 
   @Override

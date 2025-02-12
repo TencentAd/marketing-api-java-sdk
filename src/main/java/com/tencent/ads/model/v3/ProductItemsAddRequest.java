@@ -33,6 +33,9 @@ public class ProductItemsAddRequest {
   @SerializedName("request_source")
   private String requestSource = null;
 
+  @SerializedName("usage_info")
+  private UsageInfo usageInfo = null;
+
   @SerializedName("product_item_spec_list")
   private List<ProductItemSpec> productItemSpecList = null;
 
@@ -112,6 +115,25 @@ public class ProductItemsAddRequest {
     this.requestSource = requestSource;
   }
 
+  public ProductItemsAddRequest usageInfo(UsageInfo usageInfo) {
+    this.usageInfo = usageInfo;
+    return this;
+  }
+
+  /**
+   * Get usageInfo
+   *
+   * @return usageInfo
+   */
+  @ApiModelProperty(value = "")
+  public UsageInfo getUsageInfo() {
+    return usageInfo;
+  }
+
+  public void setUsageInfo(UsageInfo usageInfo) {
+    this.usageInfo = usageInfo;
+  }
+
   public ProductItemsAddRequest productItemSpecList(List<ProductItemSpec> productItemSpecList) {
     this.productItemSpecList = productItemSpecList;
     return this;
@@ -153,12 +175,14 @@ public class ProductItemsAddRequest {
         && Objects.equals(this.productCatalogId, productItemsAddRequest.productCatalogId)
         && Objects.equals(this.feedId, productItemsAddRequest.feedId)
         && Objects.equals(this.requestSource, productItemsAddRequest.requestSource)
+        && Objects.equals(this.usageInfo, productItemsAddRequest.usageInfo)
         && Objects.equals(this.productItemSpecList, productItemsAddRequest.productItemSpecList);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(accountId, productCatalogId, feedId, requestSource, productItemSpecList);
+    return Objects.hash(
+        accountId, productCatalogId, feedId, requestSource, usageInfo, productItemSpecList);
   }
 
   @Override

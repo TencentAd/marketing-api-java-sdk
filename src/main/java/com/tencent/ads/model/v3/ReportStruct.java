@@ -2310,6 +2310,9 @@ public class ReportStruct {
   @SerializedName("purchase_first_all_dedup_touch_24h_unit_price")
   private Long purchaseFirstAllDedupTouch24hUnitPrice = null;
 
+  @SerializedName("paying_users_d1_cost")
+  private Long payingUsersD1Cost = null;
+
   @SerializedName("adgroup_id")
   private Long adgroupId = null;
 
@@ -17011,6 +17014,25 @@ public class ReportStruct {
     this.purchaseFirstAllDedupTouch24hUnitPrice = purchaseFirstAllDedupTouch24hUnitPrice;
   }
 
+  public ReportStruct payingUsersD1Cost(Long payingUsersD1Cost) {
+    this.payingUsersD1Cost = payingUsersD1Cost;
+    return this;
+  }
+
+  /**
+   * Get payingUsersD1Cost
+   *
+   * @return payingUsersD1Cost
+   */
+  @ApiModelProperty(value = "")
+  public Long getPayingUsersD1Cost() {
+    return payingUsersD1Cost;
+  }
+
+  public void setPayingUsersD1Cost(Long payingUsersD1Cost) {
+    this.payingUsersD1Cost = payingUsersD1Cost;
+  }
+
   public ReportStruct adgroupId(Long adgroupId) {
     this.adgroupId = adgroupId;
     return this;
@@ -19052,6 +19074,7 @@ public class ReportStruct {
         && Objects.equals(
             this.purchaseFirstAllDedupTouch24hUnitPrice,
             reportStruct.purchaseFirstAllDedupTouch24hUnitPrice)
+        && Objects.equals(this.payingUsersD1Cost, reportStruct.payingUsersD1Cost)
         && Objects.equals(this.adgroupId, reportStruct.adgroupId)
         && Objects.equals(this.adgroupName, reportStruct.adgroupName)
         && Objects.equals(this.dynamicCreativeId, reportStruct.dynamicCreativeId)
@@ -19882,6 +19905,7 @@ public class ReportStruct {
         purchaseFirstAllDedupTouch24hPv,
         purchaseFirstAllDedupTouch24hAmount,
         purchaseFirstAllDedupTouch24hUnitPrice,
+        payingUsersD1Cost,
         adgroupId,
         adgroupName,
         dynamicCreativeId,

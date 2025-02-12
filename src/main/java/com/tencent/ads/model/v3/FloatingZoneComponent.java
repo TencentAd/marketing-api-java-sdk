@@ -18,8 +18,8 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.util.Objects;
 
-/** 轮播组件 */
-@ApiModel(description = "轮播组件")
+/** 浮层卡片组件 */
+@ApiModel(description = "浮层卡片组件")
 public class FloatingZoneComponent {
   @SerializedName("component_id")
   private Long componentId = null;

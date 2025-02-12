@@ -27,11 +27,8 @@ public class ProgrammedTemplateGetRequest {
   @SerializedName("material_derive_id")
   private Long materialDeriveId = null;
 
-  @SerializedName("material_group_id")
-  private Long materialGroupId = null;
-
-  @SerializedName("material_derive_preview_id")
-  private Long materialDerivePreviewId = null;
+  @SerializedName("material_preview_id")
+  private Long materialPreviewId = null;
 
   @SerializedName("template_id_list")
   private List<Long> templateIdList = null;
@@ -83,42 +80,23 @@ public class ProgrammedTemplateGetRequest {
     this.materialDeriveId = materialDeriveId;
   }
 
-  public ProgrammedTemplateGetRequest materialGroupId(Long materialGroupId) {
-    this.materialGroupId = materialGroupId;
+  public ProgrammedTemplateGetRequest materialPreviewId(Long materialPreviewId) {
+    this.materialPreviewId = materialPreviewId;
     return this;
   }
 
   /**
-   * Get materialGroupId
+   * Get materialPreviewId
    *
-   * @return materialGroupId
+   * @return materialPreviewId
    */
   @ApiModelProperty(value = "")
-  public Long getMaterialGroupId() {
-    return materialGroupId;
+  public Long getMaterialPreviewId() {
+    return materialPreviewId;
   }
 
-  public void setMaterialGroupId(Long materialGroupId) {
-    this.materialGroupId = materialGroupId;
-  }
-
-  public ProgrammedTemplateGetRequest materialDerivePreviewId(Long materialDerivePreviewId) {
-    this.materialDerivePreviewId = materialDerivePreviewId;
-    return this;
-  }
-
-  /**
-   * Get materialDerivePreviewId
-   *
-   * @return materialDerivePreviewId
-   */
-  @ApiModelProperty(value = "")
-  public Long getMaterialDerivePreviewId() {
-    return materialDerivePreviewId;
-  }
-
-  public void setMaterialDerivePreviewId(Long materialDerivePreviewId) {
-    this.materialDerivePreviewId = materialDerivePreviewId;
+  public void setMaterialPreviewId(Long materialPreviewId) {
+    this.materialPreviewId = materialPreviewId;
   }
 
   public ProgrammedTemplateGetRequest templateIdList(List<Long> templateIdList) {
@@ -224,9 +202,7 @@ public class ProgrammedTemplateGetRequest {
     ProgrammedTemplateGetRequest programmedTemplateGetRequest = (ProgrammedTemplateGetRequest) o;
     return Objects.equals(this.accountId, programmedTemplateGetRequest.accountId)
         && Objects.equals(this.materialDeriveId, programmedTemplateGetRequest.materialDeriveId)
-        && Objects.equals(this.materialGroupId, programmedTemplateGetRequest.materialGroupId)
-        && Objects.equals(
-            this.materialDerivePreviewId, programmedTemplateGetRequest.materialDerivePreviewId)
+        && Objects.equals(this.materialPreviewId, programmedTemplateGetRequest.materialPreviewId)
         && Objects.equals(this.templateIdList, programmedTemplateGetRequest.templateIdList)
         && Objects.equals(this.keyWord, programmedTemplateGetRequest.keyWord)
         && Objects.equals(this.sortBy, programmedTemplateGetRequest.sortBy)
@@ -236,14 +212,7 @@ public class ProgrammedTemplateGetRequest {
   @Override
   public int hashCode() {
     return Objects.hash(
-        accountId,
-        materialDeriveId,
-        materialGroupId,
-        materialDerivePreviewId,
-        templateIdList,
-        keyWord,
-        sortBy,
-        pageInfo);
+        accountId, materialDeriveId, materialPreviewId, templateIdList, keyWord, sortBy, pageInfo);
   }
 
   @Override

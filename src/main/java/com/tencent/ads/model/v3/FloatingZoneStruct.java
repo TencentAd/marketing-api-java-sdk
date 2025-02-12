@@ -18,8 +18,8 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.util.Objects;
 
-/** 轮播组件 */
-@ApiModel(description = "轮播组件")
+/** 浮层卡片结构 */
+@ApiModel(description = "浮层卡片结构")
 public class FloatingZoneStruct {
   @SerializedName("floating_zone_switch")
   private Boolean floatingZoneSwitch = null;

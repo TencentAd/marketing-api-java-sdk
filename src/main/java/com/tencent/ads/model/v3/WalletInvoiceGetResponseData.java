@@ -14,26 +14,27 @@ package com.tencent.ads.model.v3;
 
 import com.google.gson.Gson;
 import com.google.gson.annotations.SerializedName;
-import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
-/** 多卡轮播结构 */
-@ApiModel(description = "多卡轮播结构")
-public class FloatingZoneListStruct {
+/** WalletInvoiceGetResponseData */
+public class WalletInvoiceGetResponseData {
   @SerializedName("list")
-  private List<FloatingZoneStruct> list = null;
+  private List<WalletInvoiceGetListStruct> list = null;
 
-  public FloatingZoneListStruct list(List<FloatingZoneStruct> list) {
+  @SerializedName("page_info")
+  private Conf pageInfo = null;
+
+  public WalletInvoiceGetResponseData list(List<WalletInvoiceGetListStruct> list) {
     this.list = list;
     return this;
   }
 
-  public FloatingZoneListStruct addListItem(FloatingZoneStruct listItem) {
+  public WalletInvoiceGetResponseData addListItem(WalletInvoiceGetListStruct listItem) {
     if (this.list == null) {
-      this.list = new ArrayList<FloatingZoneStruct>();
+      this.list = new ArrayList<WalletInvoiceGetListStruct>();
     }
     this.list.add(listItem);
     return this;
@@ -45,12 +46,31 @@ public class FloatingZoneListStruct {
    * @return list
    */
   @ApiModelProperty(value = "")
-  public List<FloatingZoneStruct> getList() {
+  public List<WalletInvoiceGetListStruct> getList() {
     return list;
   }
 
-  public void setList(List<FloatingZoneStruct> list) {
+  public void setList(List<WalletInvoiceGetListStruct> list) {
     this.list = list;
+  }
+
+  public WalletInvoiceGetResponseData pageInfo(Conf pageInfo) {
+    this.pageInfo = pageInfo;
+    return this;
+  }
+
+  /**
+   * Get pageInfo
+   *
+   * @return pageInfo
+   */
+  @ApiModelProperty(value = "")
+  public Conf getPageInfo() {
+    return pageInfo;
+  }
+
+  public void setPageInfo(Conf pageInfo) {
+    this.pageInfo = pageInfo;
   }
 
   @Override
@@ -61,13 +81,14 @@ public class FloatingZoneListStruct {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    FloatingZoneListStruct floatingZoneListStruct = (FloatingZoneListStruct) o;
-    return Objects.equals(this.list, floatingZoneListStruct.list);
+    WalletInvoiceGetResponseData walletInvoiceGetResponseData = (WalletInvoiceGetResponseData) o;
+    return Objects.equals(this.list, walletInvoiceGetResponseData.list)
+        && Objects.equals(this.pageInfo, walletInvoiceGetResponseData.pageInfo);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(list);
+    return Objects.hash(list, pageInfo);
   }
 
   @Override

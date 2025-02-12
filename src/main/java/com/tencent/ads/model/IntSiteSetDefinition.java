@@ -101,7 +101,9 @@ public enum IntSiteSetDefinition {
 
   PCAD("SITE_SET_PCAD"),
 
-  YUNXUAN("SITE_SET_YUNXUAN");
+  YUNXUAN("SITE_SET_YUNXUAN"),
+
+  EXPAND("SITE_SET_EXPAND");
 
   private String value;
 

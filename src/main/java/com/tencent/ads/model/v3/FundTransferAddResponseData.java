@@ -34,6 +34,9 @@ public class FundTransferAddResponseData {
   @SerializedName("is_repeated")
   private Boolean isRepeated = null;
 
+  @SerializedName("recommend_amount")
+  private Long recommendAmount = null;
+
   public FundTransferAddResponseData fundType(AccountTypeMap fundType) {
     this.fundType = fundType;
     return this;
@@ -129,6 +132,25 @@ public class FundTransferAddResponseData {
     this.isRepeated = isRepeated;
   }
 
+  public FundTransferAddResponseData recommendAmount(Long recommendAmount) {
+    this.recommendAmount = recommendAmount;
+    return this;
+  }
+
+  /**
+   * Get recommendAmount
+   *
+   * @return recommendAmount
+   */
+  @ApiModelProperty(value = "")
+  public Long getRecommendAmount() {
+    return recommendAmount;
+  }
+
+  public void setRecommendAmount(Long recommendAmount) {
+    this.recommendAmount = recommendAmount;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -142,12 +164,13 @@ public class FundTransferAddResponseData {
         && Objects.equals(this.amount, fundTransferAddResponseData.amount)
         && Objects.equals(this.externalBillNo, fundTransferAddResponseData.externalBillNo)
         && Objects.equals(this.time, fundTransferAddResponseData.time)
-        && Objects.equals(this.isRepeated, fundTransferAddResponseData.isRepeated);
+        && Objects.equals(this.isRepeated, fundTransferAddResponseData.isRepeated)
+        && Objects.equals(this.recommendAmount, fundTransferAddResponseData.recommendAmount);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(fundType, amount, externalBillNo, time, isRepeated);
+    return Objects.hash(fundType, amount, externalBillNo, time, isRepeated, recommendAmount);
   }
 
   @Override

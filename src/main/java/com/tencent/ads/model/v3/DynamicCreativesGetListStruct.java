@@ -75,9 +75,6 @@ public class DynamicCreativesGetListStruct {
   @SerializedName("asset_inconsistent_status")
   private AssetInconsistentStatus assetInconsistentStatus = null;
 
-  @SerializedName("potential_status")
-  private DynamicCreativePotentialStatus potentialStatus = null;
-
   public DynamicCreativesGetListStruct adgroupId(Long adgroupId) {
     this.adgroupId = adgroupId;
     return this;
@@ -424,26 +421,6 @@ public class DynamicCreativesGetListStruct {
     this.assetInconsistentStatus = assetInconsistentStatus;
   }
 
-  public DynamicCreativesGetListStruct potentialStatus(
-      DynamicCreativePotentialStatus potentialStatus) {
-    this.potentialStatus = potentialStatus;
-    return this;
-  }
-
-  /**
-   * Get potentialStatus
-   *
-   * @return potentialStatus
-   */
-  @ApiModelProperty(value = "")
-  public DynamicCreativePotentialStatus getPotentialStatus() {
-    return potentialStatus;
-  }
-
-  public void setPotentialStatus(DynamicCreativePotentialStatus potentialStatus) {
-    this.potentialStatus = potentialStatus;
-  }
-
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -477,8 +454,7 @@ public class DynamicCreativesGetListStruct {
             dynamicCreativesGetListStruct.marketingAssetVerification)
         && Objects.equals(this.source, dynamicCreativesGetListStruct.source)
         && Objects.equals(
-            this.assetInconsistentStatus, dynamicCreativesGetListStruct.assetInconsistentStatus)
-        && Objects.equals(this.potentialStatus, dynamicCreativesGetListStruct.potentialStatus);
+            this.assetInconsistentStatus, dynamicCreativesGetListStruct.assetInconsistentStatus);
   }
 
   @Override
@@ -501,8 +477,7 @@ public class DynamicCreativesGetListStruct {
         lastModifiedTime,
         marketingAssetVerification,
         source,
-        assetInconsistentStatus,
-        potentialStatus);
+        assetInconsistentStatus);
   }
 
   @Override

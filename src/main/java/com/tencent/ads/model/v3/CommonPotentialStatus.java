@@ -19,18 +19,18 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-/** 创意潜力 */
-@JsonAdapter(DynamicCreativePotentialStatus.Adapter.class)
-public enum DynamicCreativePotentialStatus {
-  DEFAULT("DYNAMIC_CREATIVE_POTENTIAL_DEFAULT"),
+/** 组件潜力 */
+@JsonAdapter(CommonPotentialStatus.Adapter.class)
+public enum CommonPotentialStatus {
+  DEFAULT("COMMON_POTENTIAL_STATUS_DEFAULT"),
 
-  LOW("DYNAMIC_CREATIVE_POTENTIAL_LOW"),
+  LOW("COMMON_POTENTIAL_STATUS_LOW"),
 
-  HIGH("DYNAMIC_CREATIVE_POTENTIAL_HIGH");
+  HIGH("COMMON_POTENTIAL_STATUS_HIGH");
 
   private String value;
 
-  DynamicCreativePotentialStatus(String value) {
+  CommonPotentialStatus(String value) {
     this.value = value;
   }
 
@@ -43,8 +43,8 @@ public enum DynamicCreativePotentialStatus {
     return String.valueOf(value);
   }
 
-  public static DynamicCreativePotentialStatus fromValue(String text) {
-    for (DynamicCreativePotentialStatus b : DynamicCreativePotentialStatus.values()) {
+  public static CommonPotentialStatus fromValue(String text) {
+    for (CommonPotentialStatus b : CommonPotentialStatus.values()) {
       if (String.valueOf(b.value).equals(text)) {
         return b;
       }
@@ -52,17 +52,17 @@ public enum DynamicCreativePotentialStatus {
     return null;
   }
 
-  public static class Adapter extends TypeAdapter<DynamicCreativePotentialStatus> {
+  public static class Adapter extends TypeAdapter<CommonPotentialStatus> {
     @Override
-    public void write(final JsonWriter jsonWriter, final DynamicCreativePotentialStatus enumeration)
+    public void write(final JsonWriter jsonWriter, final CommonPotentialStatus enumeration)
         throws IOException {
       jsonWriter.value(enumeration.getValue());
     }
 
     @Override
-    public DynamicCreativePotentialStatus read(final JsonReader jsonReader) throws IOException {
+    public CommonPotentialStatus read(final JsonReader jsonReader) throws IOException {
       String value = jsonReader.nextString();
-      return DynamicCreativePotentialStatus.fromValue(String.valueOf(value));
+      return CommonPotentialStatus.fromValue(String.valueOf(value));
     }
   }
 }
