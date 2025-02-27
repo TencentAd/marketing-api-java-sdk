@@ -14,43 +14,32 @@ package com.tencent.ads.model.v3;
 
 import com.google.gson.Gson;
 import com.google.gson.annotations.SerializedName;
-import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Objects;
 
-/** 素材组信息 */
-@ApiModel(description = "素材组信息")
-public class MaterialGroupCreateStruct {
-  @SerializedName("materials")
-  private List<MaterialUpdateStruct> materials = null;
+/** ComponentDefaultSharingUpdateResponseData */
+public class ComponentDefaultSharingUpdateResponseData {
+  @SerializedName("default_shared_type")
+  private DefaultSharedType defaultSharedType = null;
 
-  public MaterialGroupCreateStruct materials(List<MaterialUpdateStruct> materials) {
-    this.materials = materials;
-    return this;
-  }
-
-  public MaterialGroupCreateStruct addMaterialsItem(MaterialUpdateStruct materialsItem) {
-    if (this.materials == null) {
-      this.materials = new ArrayList<MaterialUpdateStruct>();
-    }
-    this.materials.add(materialsItem);
+  public ComponentDefaultSharingUpdateResponseData defaultSharedType(
+      DefaultSharedType defaultSharedType) {
+    this.defaultSharedType = defaultSharedType;
     return this;
   }
 
   /**
-   * Get materials
+   * Get defaultSharedType
    *
-   * @return materials
+   * @return defaultSharedType
    */
   @ApiModelProperty(value = "")
-  public List<MaterialUpdateStruct> getMaterials() {
-    return materials;
+  public DefaultSharedType getDefaultSharedType() {
+    return defaultSharedType;
   }
 
-  public void setMaterials(List<MaterialUpdateStruct> materials) {
-    this.materials = materials;
+  public void setDefaultSharedType(DefaultSharedType defaultSharedType) {
+    this.defaultSharedType = defaultSharedType;
   }
 
   @Override
@@ -61,13 +50,15 @@ public class MaterialGroupCreateStruct {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    MaterialGroupCreateStruct materialGroupCreateStruct = (MaterialGroupCreateStruct) o;
-    return Objects.equals(this.materials, materialGroupCreateStruct.materials);
+    ComponentDefaultSharingUpdateResponseData componentDefaultSharingUpdateResponseData =
+        (ComponentDefaultSharingUpdateResponseData) o;
+    return Objects.equals(
+        this.defaultSharedType, componentDefaultSharingUpdateResponseData.defaultSharedType);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(materials);
+    return Objects.hash(defaultSharedType);
   }
 
   @Override

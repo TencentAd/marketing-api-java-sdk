@@ -19,8 +19,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
-/** ProgrammedAddResponse */
-public class ProgrammedAddResponse {
+/** ComponentDefaultSharingUpdateResponse */
+public class ComponentDefaultSharingUpdateResponse {
   @SerializedName("code")
   private Long code = null;
 
@@ -34,9 +34,9 @@ public class ProgrammedAddResponse {
   private List<ApiErrorStruct> errors = null;
 
   @SerializedName("data")
-  private ProgrammedAddResponseData data = null;
+  private ComponentDefaultSharingUpdateResponseData data = null;
 
-  public ProgrammedAddResponse code(Long code) {
+  public ComponentDefaultSharingUpdateResponse code(Long code) {
     this.code = code;
     return this;
   }
@@ -55,7 +55,7 @@ public class ProgrammedAddResponse {
     this.code = code;
   }
 
-  public ProgrammedAddResponse message(String message) {
+  public ComponentDefaultSharingUpdateResponse message(String message) {
     this.message = message;
     return this;
   }
@@ -74,7 +74,7 @@ public class ProgrammedAddResponse {
     this.message = message;
   }
 
-  public ProgrammedAddResponse messageCn(String messageCn) {
+  public ComponentDefaultSharingUpdateResponse messageCn(String messageCn) {
     this.messageCn = messageCn;
     return this;
   }
@@ -93,12 +93,12 @@ public class ProgrammedAddResponse {
     this.messageCn = messageCn;
   }
 
-  public ProgrammedAddResponse errors(List<ApiErrorStruct> errors) {
+  public ComponentDefaultSharingUpdateResponse errors(List<ApiErrorStruct> errors) {
     this.errors = errors;
     return this;
   }
 
-  public ProgrammedAddResponse addErrorsItem(ApiErrorStruct errorsItem) {
+  public ComponentDefaultSharingUpdateResponse addErrorsItem(ApiErrorStruct errorsItem) {
     if (this.errors == null) {
       this.errors = new ArrayList<ApiErrorStruct>();
     }
@@ -120,7 +120,8 @@ public class ProgrammedAddResponse {
     this.errors = errors;
   }
 
-  public ProgrammedAddResponse data(ProgrammedAddResponseData data) {
+  public ComponentDefaultSharingUpdateResponse data(
+      ComponentDefaultSharingUpdateResponseData data) {
     this.data = data;
     return this;
   }
@@ -131,11 +132,11 @@ public class ProgrammedAddResponse {
    * @return data
    */
   @ApiModelProperty(value = "")
-  public ProgrammedAddResponseData getData() {
+  public ComponentDefaultSharingUpdateResponseData getData() {
     return data;
   }
 
-  public void setData(ProgrammedAddResponseData data) {
+  public void setData(ComponentDefaultSharingUpdateResponseData data) {
     this.data = data;
   }
 
@@ -147,12 +148,13 @@ public class ProgrammedAddResponse {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    ProgrammedAddResponse programmedAddResponse = (ProgrammedAddResponse) o;
-    return Objects.equals(this.code, programmedAddResponse.code)
-        && Objects.equals(this.message, programmedAddResponse.message)
-        && Objects.equals(this.messageCn, programmedAddResponse.messageCn)
-        && Objects.equals(this.errors, programmedAddResponse.errors)
-        && Objects.equals(this.data, programmedAddResponse.data);
+    ComponentDefaultSharingUpdateResponse componentDefaultSharingUpdateResponse =
+        (ComponentDefaultSharingUpdateResponse) o;
+    return Objects.equals(this.code, componentDefaultSharingUpdateResponse.code)
+        && Objects.equals(this.message, componentDefaultSharingUpdateResponse.message)
+        && Objects.equals(this.messageCn, componentDefaultSharingUpdateResponse.messageCn)
+        && Objects.equals(this.errors, componentDefaultSharingUpdateResponse.errors)
+        && Objects.equals(this.data, componentDefaultSharingUpdateResponse.data);
   }
 
   @Override

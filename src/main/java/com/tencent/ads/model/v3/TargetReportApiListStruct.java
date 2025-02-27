@@ -2187,6 +2187,21 @@ public class TargetReportApiListStruct {
   @SerializedName("paying_users_d1_cost")
   private Long payingUsersD1Cost = null;
 
+  @SerializedName("channels_live_ele_commodity_clk_pla_pv")
+  private Long channelsLiveEleCommodityClkPlaPv = null;
+
+  @SerializedName("channels_live_ele_commodity_clk_pla_dedup_pv")
+  private Long channelsLiveEleCommodityClkPlaDedupPv = null;
+
+  @SerializedName("clk_wechat_shop_pv")
+  private Long clkWechatShopPv = null;
+
+  @SerializedName("clk_topicinfo_pv")
+  private Long clkTopicinfoPv = null;
+
+  @SerializedName("clk_learn_more_pv")
+  private Long clkLearnMorePv = null;
+
   @SerializedName("age_id")
   private Long ageId = null;
 
@@ -15993,6 +16008,103 @@ public class TargetReportApiListStruct {
     this.payingUsersD1Cost = payingUsersD1Cost;
   }
 
+  public TargetReportApiListStruct channelsLiveEleCommodityClkPlaPv(
+      Long channelsLiveEleCommodityClkPlaPv) {
+    this.channelsLiveEleCommodityClkPlaPv = channelsLiveEleCommodityClkPlaPv;
+    return this;
+  }
+
+  /**
+   * Get channelsLiveEleCommodityClkPlaPv
+   *
+   * @return channelsLiveEleCommodityClkPlaPv
+   */
+  @ApiModelProperty(value = "")
+  public Long getChannelsLiveEleCommodityClkPlaPv() {
+    return channelsLiveEleCommodityClkPlaPv;
+  }
+
+  public void setChannelsLiveEleCommodityClkPlaPv(Long channelsLiveEleCommodityClkPlaPv) {
+    this.channelsLiveEleCommodityClkPlaPv = channelsLiveEleCommodityClkPlaPv;
+  }
+
+  public TargetReportApiListStruct channelsLiveEleCommodityClkPlaDedupPv(
+      Long channelsLiveEleCommodityClkPlaDedupPv) {
+    this.channelsLiveEleCommodityClkPlaDedupPv = channelsLiveEleCommodityClkPlaDedupPv;
+    return this;
+  }
+
+  /**
+   * Get channelsLiveEleCommodityClkPlaDedupPv
+   *
+   * @return channelsLiveEleCommodityClkPlaDedupPv
+   */
+  @ApiModelProperty(value = "")
+  public Long getChannelsLiveEleCommodityClkPlaDedupPv() {
+    return channelsLiveEleCommodityClkPlaDedupPv;
+  }
+
+  public void setChannelsLiveEleCommodityClkPlaDedupPv(Long channelsLiveEleCommodityClkPlaDedupPv) {
+    this.channelsLiveEleCommodityClkPlaDedupPv = channelsLiveEleCommodityClkPlaDedupPv;
+  }
+
+  public TargetReportApiListStruct clkWechatShopPv(Long clkWechatShopPv) {
+    this.clkWechatShopPv = clkWechatShopPv;
+    return this;
+  }
+
+  /**
+   * Get clkWechatShopPv
+   *
+   * @return clkWechatShopPv
+   */
+  @ApiModelProperty(value = "")
+  public Long getClkWechatShopPv() {
+    return clkWechatShopPv;
+  }
+
+  public void setClkWechatShopPv(Long clkWechatShopPv) {
+    this.clkWechatShopPv = clkWechatShopPv;
+  }
+
+  public TargetReportApiListStruct clkTopicinfoPv(Long clkTopicinfoPv) {
+    this.clkTopicinfoPv = clkTopicinfoPv;
+    return this;
+  }
+
+  /**
+   * Get clkTopicinfoPv
+   *
+   * @return clkTopicinfoPv
+   */
+  @ApiModelProperty(value = "")
+  public Long getClkTopicinfoPv() {
+    return clkTopicinfoPv;
+  }
+
+  public void setClkTopicinfoPv(Long clkTopicinfoPv) {
+    this.clkTopicinfoPv = clkTopicinfoPv;
+  }
+
+  public TargetReportApiListStruct clkLearnMorePv(Long clkLearnMorePv) {
+    this.clkLearnMorePv = clkLearnMorePv;
+    return this;
+  }
+
+  /**
+   * Get clkLearnMorePv
+   *
+   * @return clkLearnMorePv
+   */
+  @ApiModelProperty(value = "")
+  public Long getClkLearnMorePv() {
+    return clkLearnMorePv;
+  }
+
+  public void setClkLearnMorePv(Long clkLearnMorePv) {
+    this.clkLearnMorePv = clkLearnMorePv;
+  }
+
   public TargetReportApiListStruct ageId(Long ageId) {
     this.ageId = ageId;
     return this;
@@ -17216,6 +17328,15 @@ public class TargetReportApiListStruct {
             this.purchaseFirstAllDedupTouch24hUnitPrice,
             targetReportApiListStruct.purchaseFirstAllDedupTouch24hUnitPrice)
         && Objects.equals(this.payingUsersD1Cost, targetReportApiListStruct.payingUsersD1Cost)
+        && Objects.equals(
+            this.channelsLiveEleCommodityClkPlaPv,
+            targetReportApiListStruct.channelsLiveEleCommodityClkPlaPv)
+        && Objects.equals(
+            this.channelsLiveEleCommodityClkPlaDedupPv,
+            targetReportApiListStruct.channelsLiveEleCommodityClkPlaDedupPv)
+        && Objects.equals(this.clkWechatShopPv, targetReportApiListStruct.clkWechatShopPv)
+        && Objects.equals(this.clkTopicinfoPv, targetReportApiListStruct.clkTopicinfoPv)
+        && Objects.equals(this.clkLearnMorePv, targetReportApiListStruct.clkLearnMorePv)
         && Objects.equals(this.ageId, targetReportApiListStruct.ageId)
         && Objects.equals(this.cityId, targetReportApiListStruct.cityId)
         && Objects.equals(this.regionId, targetReportApiListStruct.regionId)
@@ -17950,6 +18071,11 @@ public class TargetReportApiListStruct {
         purchaseFirstAllDedupTouch24hAmount,
         purchaseFirstAllDedupTouch24hUnitPrice,
         payingUsersD1Cost,
+        channelsLiveEleCommodityClkPlaPv,
+        channelsLiveEleCommodityClkPlaDedupPv,
+        clkWechatShopPv,
+        clkTopicinfoPv,
+        clkLearnMorePv,
         ageId,
         cityId,
         regionId,

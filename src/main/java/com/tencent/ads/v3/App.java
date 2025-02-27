@@ -58,6 +58,7 @@ public class App {
   @Inject ChannelsLivenoticeinfoApiContainer channelsLivenoticeinfoApiContainer;
   @Inject ChannelsUserpageobjectsApiContainer channelsUserpageobjectsApiContainer;
   @Inject CommentListApiContainer commentListApiContainer;
+  @Inject ComponentDefaultSharingApiContainer componentDefaultSharingApiContainer;
   @Inject ComponentElementUrgeReviewApiContainer componentElementUrgeReviewApiContainer;
   @Inject ComponentReviewResultsApiContainer componentReviewResultsApiContainer;
   @Inject ComponentSharingApiContainer componentSharingApiContainer;
@@ -397,6 +398,10 @@ public class App {
 
   public CommentListApiContainer commentList() {
     return commentListApiContainer;
+  }
+
+  public ComponentDefaultSharingApiContainer componentDefaultSharing() {
+    return componentDefaultSharingApiContainer;
   }
 
   public ComponentElementUrgeReviewApiContainer componentElementUrgeReview() {

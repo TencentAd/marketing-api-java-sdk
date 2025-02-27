@@ -1,20 +1,20 @@
-package com.tencent.ads.examples.v3.CreativeToolBox.Programmed;
+package com.tencent.ads.examples.v3.AdsManagement.Components;
 
 import com.tencent.ads.ApiContextConfig;
 import com.tencent.ads.exception.TencentAdsResponseException;
 import com.tencent.ads.exception.TencentAdsSDKException;
 import com.tencent.ads.model.v3.*;
-import com.tencent.ads.model.v3.ProgrammedAddRequest;
+import com.tencent.ads.model.v3.ComponentDefaultSharingUpdateRequest;
 import com.tencent.ads.v3.TencentAds;
 
-public class AddProgrammed {
+public class UpdateComponentDefaultSharing {
   /** YOUR ACCESS TOKEN */
   public String ACCESS_TOKEN = "YOUR ACCESS TOKEN";
 
   /** TencentAds */
   public TencentAds tencentAds;
 
-  public ProgrammedAddRequest data = null;
+  public ComponentDefaultSharingUpdateRequest data = null;
 
   public void init() {
     this.tencentAds = TencentAds.getInstance();
@@ -26,16 +26,20 @@ public class AddProgrammed {
 
   public void buildParams() {}
 
-  public ProgrammedAddResponseData addProgrammed() throws Exception {
-    ProgrammedAddResponseData response = tencentAds.programmed().programmedAdd(data);
+  public ComponentDefaultSharingUpdateResponseData updateComponentDefaultSharing()
+      throws Exception {
+    ComponentDefaultSharingUpdateResponseData response =
+        tencentAds.componentDefaultSharing().componentDefaultSharingUpdate(data);
     return response;
   }
 
   public static void main(String[] args) {
     try {
-      AddProgrammed addProgrammed = new AddProgrammed();
-      addProgrammed.init();
-      ProgrammedAddResponseData response = addProgrammed.addProgrammed();
+      UpdateComponentDefaultSharing updateComponentDefaultSharing =
+          new UpdateComponentDefaultSharing();
+      updateComponentDefaultSharing.init();
+      ComponentDefaultSharingUpdateResponseData response =
+          updateComponentDefaultSharing.updateComponentDefaultSharing();
     } catch (TencentAdsResponseException e) {
       e.printStackTrace();
     } catch (TencentAdsSDKException e) {

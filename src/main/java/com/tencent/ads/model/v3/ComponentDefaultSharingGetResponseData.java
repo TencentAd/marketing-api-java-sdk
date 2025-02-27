@@ -17,28 +17,29 @@ import com.google.gson.annotations.SerializedName;
 import io.swagger.annotations.ApiModelProperty;
 import java.util.Objects;
 
-/** ProgrammedAddResponseData */
-public class ProgrammedAddResponseData {
-  @SerializedName("material_derive_id")
-  private Long materialDeriveId = null;
+/** ComponentDefaultSharingGetResponseData */
+public class ComponentDefaultSharingGetResponseData {
+  @SerializedName("default_shared_type")
+  private DefaultSharedType defaultSharedType = null;
 
-  public ProgrammedAddResponseData materialDeriveId(Long materialDeriveId) {
-    this.materialDeriveId = materialDeriveId;
+  public ComponentDefaultSharingGetResponseData defaultSharedType(
+      DefaultSharedType defaultSharedType) {
+    this.defaultSharedType = defaultSharedType;
     return this;
   }
 
   /**
-   * Get materialDeriveId
+   * Get defaultSharedType
    *
-   * @return materialDeriveId
+   * @return defaultSharedType
    */
   @ApiModelProperty(value = "")
-  public Long getMaterialDeriveId() {
-    return materialDeriveId;
+  public DefaultSharedType getDefaultSharedType() {
+    return defaultSharedType;
   }
 
-  public void setMaterialDeriveId(Long materialDeriveId) {
-    this.materialDeriveId = materialDeriveId;
+  public void setDefaultSharedType(DefaultSharedType defaultSharedType) {
+    this.defaultSharedType = defaultSharedType;
   }
 
   @Override
@@ -49,13 +50,15 @@ public class ProgrammedAddResponseData {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    ProgrammedAddResponseData programmedAddResponseData = (ProgrammedAddResponseData) o;
-    return Objects.equals(this.materialDeriveId, programmedAddResponseData.materialDeriveId);
+    ComponentDefaultSharingGetResponseData componentDefaultSharingGetResponseData =
+        (ComponentDefaultSharingGetResponseData) o;
+    return Objects.equals(
+        this.defaultSharedType, componentDefaultSharingGetResponseData.defaultSharedType);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(materialDeriveId);
+    return Objects.hash(defaultSharedType);
   }
 
   @Override

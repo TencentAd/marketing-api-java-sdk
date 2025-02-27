@@ -133,6 +133,8 @@ public enum SiteSetDefinition {
 
   YUNXUAN("SITE_SET_YUNXUAN"),
 
+  SEARCH_MOBILE_UNION("SITE_SET_SEARCH_MOBILE_UNION"),
+
   EXPAND("SITE_SET_EXPAND");
 
   private String value;

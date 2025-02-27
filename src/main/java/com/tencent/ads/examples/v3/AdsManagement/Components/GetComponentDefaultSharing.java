@@ -1,20 +1,22 @@
-package com.tencent.ads.examples.v3.CreativeToolBox.Programmed;
+package com.tencent.ads.examples.v3.AdsManagement.Components;
 
 import com.tencent.ads.ApiContextConfig;
 import com.tencent.ads.exception.TencentAdsResponseException;
 import com.tencent.ads.exception.TencentAdsSDKException;
 import com.tencent.ads.model.v3.*;
-import com.tencent.ads.model.v3.ProgrammedUpdateRequest;
 import com.tencent.ads.v3.TencentAds;
+import java.util.List;
 
-public class UpdateProgrammed {
+public class GetComponentDefaultSharing {
   /** YOUR ACCESS TOKEN */
   public String ACCESS_TOKEN = "YOUR ACCESS TOKEN";
 
   /** TencentAds */
   public TencentAds tencentAds;
 
-  public ProgrammedUpdateRequest data = null;
+  public Long organizationId = null;
+
+  public List<String> fields = null;
 
   public void init() {
     this.tencentAds = TencentAds.getInstance();
@@ -26,16 +28,18 @@ public class UpdateProgrammed {
 
   public void buildParams() {}
 
-  public ProgrammedUpdateResponseData updateProgrammed() throws Exception {
-    ProgrammedUpdateResponseData response = tencentAds.programmed().programmedUpdate(data);
+  public ComponentDefaultSharingGetResponseData getComponentDefaultSharing() throws Exception {
+    ComponentDefaultSharingGetResponseData response =
+        tencentAds.componentDefaultSharing().componentDefaultSharingGet(organizationId, fields);
     return response;
   }
 
   public static void main(String[] args) {
     try {
-      UpdateProgrammed updateProgrammed = new UpdateProgrammed();
-      updateProgrammed.init();
-      ProgrammedUpdateResponseData response = updateProgrammed.updateProgrammed();
+      GetComponentDefaultSharing getComponentDefaultSharing = new GetComponentDefaultSharing();
+      getComponentDefaultSharing.init();
+      ComponentDefaultSharingGetResponseData response =
+          getComponentDefaultSharing.getComponentDefaultSharing();
     } catch (TencentAdsResponseException e) {
       e.printStackTrace();
     } catch (TencentAdsSDKException e) {
