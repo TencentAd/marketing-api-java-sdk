@@ -63,6 +63,9 @@ public class AuthListStruct {
   @SerializedName("is_private")
   private Boolean isPrivate = null;
 
+  @SerializedName("logout_time_second")
+  private Long logoutTimeSecond = null;
+
   public AuthListStruct wechatChannelsAccountName(String wechatChannelsAccountName) {
     this.wechatChannelsAccountName = wechatChannelsAccountName;
     return this;
@@ -329,6 +332,25 @@ public class AuthListStruct {
     this.isPrivate = isPrivate;
   }
 
+  public AuthListStruct logoutTimeSecond(Long logoutTimeSecond) {
+    this.logoutTimeSecond = logoutTimeSecond;
+    return this;
+  }
+
+  /**
+   * Get logoutTimeSecond
+   *
+   * @return logoutTimeSecond
+   */
+  @ApiModelProperty(value = "")
+  public Long getLogoutTimeSecond() {
+    return logoutTimeSecond;
+  }
+
+  public void setLogoutTimeSecond(Long logoutTimeSecond) {
+    this.logoutTimeSecond = logoutTimeSecond;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -351,7 +373,8 @@ public class AuthListStruct {
         && Objects.equals(this.wechatChannelsAccountIcon, authListStruct.wechatChannelsAccountIcon)
         && Objects.equals(this.wechatChannelsAccountId, authListStruct.wechatChannelsAccountId)
         && Objects.equals(this.isBlocked, authListStruct.isBlocked)
-        && Objects.equals(this.isPrivate, authListStruct.isPrivate);
+        && Objects.equals(this.isPrivate, authListStruct.isPrivate)
+        && Objects.equals(this.logoutTimeSecond, authListStruct.logoutTimeSecond);
   }
 
   @Override
@@ -370,7 +393,8 @@ public class AuthListStruct {
         wechatChannelsAccountIcon,
         wechatChannelsAccountId,
         isBlocked,
-        isPrivate);
+        isPrivate,
+        logoutTimeSecond);
   }
 
   @Override

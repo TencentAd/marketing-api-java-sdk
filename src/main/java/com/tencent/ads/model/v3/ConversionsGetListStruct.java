@@ -134,6 +134,9 @@ public class ConversionsGetListStruct {
   @SerializedName("conversion_link_nodes")
   private List<LinkNodeStruct> conversionLinkNodes = null;
 
+  @SerializedName("created_by_action_set")
+  private Boolean createdByActionSet = null;
+
   public ConversionsGetListStruct conversionId(Long conversionId) {
     this.conversionId = conversionId;
     return this;
@@ -878,6 +881,25 @@ public class ConversionsGetListStruct {
     this.conversionLinkNodes = conversionLinkNodes;
   }
 
+  public ConversionsGetListStruct createdByActionSet(Boolean createdByActionSet) {
+    this.createdByActionSet = createdByActionSet;
+    return this;
+  }
+
+  /**
+   * Get createdByActionSet
+   *
+   * @return createdByActionSet
+   */
+  @ApiModelProperty(value = "")
+  public Boolean isCreatedByActionSet() {
+    return createdByActionSet;
+  }
+
+  public void setCreatedByActionSet(Boolean createdByActionSet) {
+    this.createdByActionSet = createdByActionSet;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -937,7 +959,8 @@ public class ConversionsGetListStruct {
         && Objects.equals(this.mustReportNodeList, conversionsGetListStruct.mustReportNodeList)
         && Objects.equals(
             this.recommendReportNodeList, conversionsGetListStruct.recommendReportNodeList)
-        && Objects.equals(this.conversionLinkNodes, conversionsGetListStruct.conversionLinkNodes);
+        && Objects.equals(this.conversionLinkNodes, conversionsGetListStruct.conversionLinkNodes)
+        && Objects.equals(this.createdByActionSet, conversionsGetListStruct.createdByActionSet);
   }
 
   @Override
@@ -979,7 +1002,8 @@ public class ConversionsGetListStruct {
         customReportNodeList,
         mustReportNodeList,
         recommendReportNodeList,
-        conversionLinkNodes);
+        conversionLinkNodes,
+        createdByActionSet);
   }
 
   @Override

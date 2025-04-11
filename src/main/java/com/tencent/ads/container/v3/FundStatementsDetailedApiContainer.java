@@ -36,6 +36,7 @@ public class FundStatementsDetailedApiContainer extends ApiContainer {
    * @param dateRange (required)
    * @param page (optional)
    * @param pageSize (optional)
+   * @param primaryKey (optional)
    * @param fields 返回参数的字段列表 (optional)
    * @return FundStatementsDetailedGetResponse
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
@@ -47,12 +48,13 @@ public class FundStatementsDetailedApiContainer extends ApiContainer {
       DateRangeTransaction dateRange,
       Long page,
       Long pageSize,
+      String primaryKey,
       List<String> fields,
       Pair... headerPair)
       throws ApiException, TencentAdsResponseException {
     FundStatementsDetailedGetResponse resp =
         api.fundStatementsDetailedGet(
-            accountId, fundType, dateRange, page, pageSize, fields, headerPair);
+            accountId, fundType, dateRange, page, pageSize, primaryKey, fields, headerPair);
     handleResponse(gson.toJson(resp));
     return resp.getData();
   }

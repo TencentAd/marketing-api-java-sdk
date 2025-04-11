@@ -53,6 +53,8 @@ public class WalletGetBindingAdvertiserApi {
    *
    * @param accountId (required)
    * @param walletId (required)
+   * @param page (required)
+   * @param pageSize (required)
    * @param fields 返回参数的字段列表 (optional)
    * @param progressListener Progress listener
    * @param progressRequestListener Progress request listener
@@ -62,6 +64,8 @@ public class WalletGetBindingAdvertiserApi {
   public com.squareup.okhttp.Call walletGetBindingAdvertiserGetCall(
       Long accountId,
       Long walletId,
+      Long page,
+      Long pageSize,
       List<String> fields,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
@@ -79,6 +83,9 @@ public class WalletGetBindingAdvertiserApi {
       localVarQueryParams.addAll(apiClient.parameterToPair("account_id", accountId));
     if (walletId != null)
       localVarQueryParams.addAll(apiClient.parameterToPair("wallet_id", walletId));
+    if (page != null) localVarQueryParams.addAll(apiClient.parameterToPair("page", page));
+    if (pageSize != null)
+      localVarQueryParams.addAll(apiClient.parameterToPair("page_size", pageSize));
     if (fields != null)
       localVarCollectionQueryParams.addAll(apiClient.parameterToPairs("multi", "fields", fields));
 
@@ -135,6 +142,8 @@ public class WalletGetBindingAdvertiserApi {
   private com.squareup.okhttp.Call walletGetBindingAdvertiserGetValidateBeforeCall(
       Long accountId,
       Long walletId,
+      Long page,
+      Long pageSize,
       List<String> fields,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
@@ -153,9 +162,28 @@ public class WalletGetBindingAdvertiserApi {
           "Missing the required parameter 'walletId' when calling walletGetBindingAdvertiserGet(Async)");
     }
 
+    // verify the required parameter 'page' is set
+    if (page == null) {
+      throw new ApiException(
+          "Missing the required parameter 'page' when calling walletGetBindingAdvertiserGet(Async)");
+    }
+
+    // verify the required parameter 'pageSize' is set
+    if (pageSize == null) {
+      throw new ApiException(
+          "Missing the required parameter 'pageSize' when calling walletGetBindingAdvertiserGet(Async)");
+    }
+
     com.squareup.okhttp.Call call =
         walletGetBindingAdvertiserGetCall(
-            accountId, walletId, fields, progressListener, progressRequestListener, headerPair);
+            accountId,
+            walletId,
+            page,
+            pageSize,
+            fields,
+            progressListener,
+            progressRequestListener,
+            headerPair);
     return call;
   }
 
@@ -164,15 +192,24 @@ public class WalletGetBindingAdvertiserApi {
    *
    * @param accountId (required)
    * @param walletId (required)
+   * @param page (required)
+   * @param pageSize (required)
    * @param fields 返回参数的字段列表 (optional)
    * @return WalletGetBindingAdvertiserGetResponse
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
   public WalletGetBindingAdvertiserGetResponse walletGetBindingAdvertiserGet(
-      Long accountId, Long walletId, List<String> fields, Pair... headerPair) throws ApiException {
+      Long accountId,
+      Long walletId,
+      Long page,
+      Long pageSize,
+      List<String> fields,
+      Pair... headerPair)
+      throws ApiException {
     ApiResponse<WalletGetBindingAdvertiserGetResponse> resp =
-        walletGetBindingAdvertiserGetWithHttpInfo(accountId, walletId, fields, headerPair);
+        walletGetBindingAdvertiserGetWithHttpInfo(
+            accountId, walletId, page, pageSize, fields, headerPair);
     return resp.getData();
   }
 
@@ -181,6 +218,8 @@ public class WalletGetBindingAdvertiserApi {
    *
    * @param accountId (required)
    * @param walletId (required)
+   * @param page (required)
+   * @param pageSize (required)
    * @param fields 返回参数的字段列表 (optional)
    * @return ApiResponse&lt;WalletGetBindingAdvertiserGetResponse&gt;
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
@@ -188,11 +227,16 @@ public class WalletGetBindingAdvertiserApi {
    */
   public ApiResponse<WalletGetBindingAdvertiserGetResponse>
       walletGetBindingAdvertiserGetWithHttpInfo(
-          Long accountId, Long walletId, List<String> fields, Pair... headerPair)
+          Long accountId,
+          Long walletId,
+          Long page,
+          Long pageSize,
+          List<String> fields,
+          Pair... headerPair)
           throws ApiException {
     com.squareup.okhttp.Call call =
         walletGetBindingAdvertiserGetValidateBeforeCall(
-            accountId, walletId, fields, null, null, headerPair);
+            accountId, walletId, page, pageSize, fields, null, null, headerPair);
     Type localVarReturnType = new TypeToken<WalletGetBindingAdvertiserGetResponse>() {}.getType();
     return apiClient.execute(call, localVarReturnType);
   }
@@ -202,6 +246,8 @@ public class WalletGetBindingAdvertiserApi {
    *
    * @param accountId (required)
    * @param walletId (required)
+   * @param page (required)
+   * @param pageSize (required)
    * @param fields 返回参数的字段列表 (optional)
    * @param callback The callback to be executed when the API call finishes
    * @return The request call
@@ -210,6 +256,8 @@ public class WalletGetBindingAdvertiserApi {
   public com.squareup.okhttp.Call walletGetBindingAdvertiserGetAsync(
       Long accountId,
       Long walletId,
+      Long page,
+      Long pageSize,
       List<String> fields,
       final ApiCallback<WalletGetBindingAdvertiserGetResponse> callback,
       Pair... headerPair)
@@ -238,7 +286,14 @@ public class WalletGetBindingAdvertiserApi {
 
     com.squareup.okhttp.Call call =
         walletGetBindingAdvertiserGetValidateBeforeCall(
-            accountId, walletId, fields, progressListener, progressRequestListener, headerPair);
+            accountId,
+            walletId,
+            page,
+            pageSize,
+            fields,
+            progressListener,
+            progressRequestListener,
+            headerPair);
     Type localVarReturnType = new TypeToken<WalletGetBindingAdvertiserGetResponse>() {}.getType();
     apiClient.executeAsync(call, localVarReturnType, callback);
     return call;

@@ -31,6 +31,8 @@ public class AgencyWalletListApiContainer extends ApiContainer {
    * 获取代理商创建的共享钱包信息列表
    *
    * @param accountId (required)
+   * @param page (required)
+   * @param pageSize (required)
    * @param mdmId (optional)
    * @param walletId (optional)
    * @param fields 返回参数的字段列表 (optional)
@@ -39,10 +41,16 @@ public class AgencyWalletListApiContainer extends ApiContainer {
    *     response body
    */
   public AgencyWalletListGetResponseData agencyWalletListGet(
-      Long accountId, Long mdmId, Long walletId, List<String> fields, Pair... headerPair)
+      Long accountId,
+      Long page,
+      Long pageSize,
+      Long mdmId,
+      Long walletId,
+      List<String> fields,
+      Pair... headerPair)
       throws ApiException, TencentAdsResponseException {
     AgencyWalletListGetResponse resp =
-        api.agencyWalletListGet(accountId, mdmId, walletId, fields, headerPair);
+        api.agencyWalletListGet(accountId, page, pageSize, mdmId, walletId, fields, headerPair);
     handleResponse(gson.toJson(resp));
     return resp.getData();
   }

@@ -31,6 +31,9 @@ public class ElementAppealQuotaGetResponseData {
   @SerializedName("leave_quota")
   private Long leaveQuota = null;
 
+  @SerializedName("quota_calculate_rule")
+  private String quotaCalculateRule = null;
+
   public ElementAppealQuotaGetResponseData accountId(Long accountId) {
     this.accountId = accountId;
     return this;
@@ -107,6 +110,25 @@ public class ElementAppealQuotaGetResponseData {
     this.leaveQuota = leaveQuota;
   }
 
+  public ElementAppealQuotaGetResponseData quotaCalculateRule(String quotaCalculateRule) {
+    this.quotaCalculateRule = quotaCalculateRule;
+    return this;
+  }
+
+  /**
+   * Get quotaCalculateRule
+   *
+   * @return quotaCalculateRule
+   */
+  @ApiModelProperty(value = "")
+  public String getQuotaCalculateRule() {
+    return quotaCalculateRule;
+  }
+
+  public void setQuotaCalculateRule(String quotaCalculateRule) {
+    this.quotaCalculateRule = quotaCalculateRule;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -120,12 +142,14 @@ public class ElementAppealQuotaGetResponseData {
     return Objects.equals(this.accountId, elementAppealQuotaGetResponseData.accountId)
         && Objects.equals(this.hasPrivilege, elementAppealQuotaGetResponseData.hasPrivilege)
         && Objects.equals(this.dailyQuota, elementAppealQuotaGetResponseData.dailyQuota)
-        && Objects.equals(this.leaveQuota, elementAppealQuotaGetResponseData.leaveQuota);
+        && Objects.equals(this.leaveQuota, elementAppealQuotaGetResponseData.leaveQuota)
+        && Objects.equals(
+            this.quotaCalculateRule, elementAppealQuotaGetResponseData.quotaCalculateRule);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(accountId, hasPrivilege, dailyQuota, leaveQuota);
+    return Objects.hash(accountId, hasPrivilege, dailyQuota, leaveQuota, quotaCalculateRule);
   }
 
   @Override

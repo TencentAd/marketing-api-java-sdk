@@ -26,6 +26,8 @@ public class GetFundStatementsDetailed {
 
   public Long pageSize = null;
 
+  public String primaryKey = null;
+
   public List<String> fields =
       Arrays.asList("time", "external_bill_no", "trade_type", "amount", "description");
 
@@ -48,7 +50,8 @@ public class GetFundStatementsDetailed {
     FundStatementsDetailedGetResponseData response =
         tencentAds
             .fundStatementsDetailed()
-            .fundStatementsDetailedGet(accountId, fundType, dateRange, page, pageSize, fields);
+            .fundStatementsDetailedGet(
+                accountId, fundType, dateRange, page, pageSize, primaryKey, fields);
     return response;
   }
 

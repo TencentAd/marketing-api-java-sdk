@@ -24,6 +24,9 @@ public class H5ProfilePageSpec {
   @SerializedName("page_id")
   private Long pageId = null;
 
+  @SerializedName("hide_company_info")
+  private Boolean hideCompanyInfo = null;
+
   public H5ProfilePageSpec pageId(Long pageId) {
     this.pageId = pageId;
     return this;
@@ -43,6 +46,25 @@ public class H5ProfilePageSpec {
     this.pageId = pageId;
   }
 
+  public H5ProfilePageSpec hideCompanyInfo(Boolean hideCompanyInfo) {
+    this.hideCompanyInfo = hideCompanyInfo;
+    return this;
+  }
+
+  /**
+   * Get hideCompanyInfo
+   *
+   * @return hideCompanyInfo
+   */
+  @ApiModelProperty(value = "")
+  public Boolean isHideCompanyInfo() {
+    return hideCompanyInfo;
+  }
+
+  public void setHideCompanyInfo(Boolean hideCompanyInfo) {
+    this.hideCompanyInfo = hideCompanyInfo;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -52,12 +74,13 @@ public class H5ProfilePageSpec {
       return false;
     }
     H5ProfilePageSpec h5ProfilePageSpec = (H5ProfilePageSpec) o;
-    return Objects.equals(this.pageId, h5ProfilePageSpec.pageId);
+    return Objects.equals(this.pageId, h5ProfilePageSpec.pageId)
+        && Objects.equals(this.hideCompanyInfo, h5ProfilePageSpec.hideCompanyInfo);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(pageId);
+    return Objects.hash(pageId, hideCompanyInfo);
   }
 
   @Override

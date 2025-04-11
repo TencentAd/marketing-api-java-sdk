@@ -245,6 +245,12 @@ public class AdgroupsGetListStruct {
   @SerializedName("custom_cost_roi_cap")
   private Double customCostRoiCap = null;
 
+  @SerializedName("enable_steady_exploration")
+  private Boolean enableSteadyExploration = null;
+
+  @SerializedName("adx_realtime_type")
+  private AdxRealtimeType adxRealtimeType = null;
+
   public AdgroupsGetListStruct targeting(ReadTargetingSetting targeting) {
     this.targeting = targeting;
     return this;
@@ -1691,6 +1697,44 @@ public class AdgroupsGetListStruct {
     this.customCostRoiCap = customCostRoiCap;
   }
 
+  public AdgroupsGetListStruct enableSteadyExploration(Boolean enableSteadyExploration) {
+    this.enableSteadyExploration = enableSteadyExploration;
+    return this;
+  }
+
+  /**
+   * Get enableSteadyExploration
+   *
+   * @return enableSteadyExploration
+   */
+  @ApiModelProperty(value = "")
+  public Boolean isEnableSteadyExploration() {
+    return enableSteadyExploration;
+  }
+
+  public void setEnableSteadyExploration(Boolean enableSteadyExploration) {
+    this.enableSteadyExploration = enableSteadyExploration;
+  }
+
+  public AdgroupsGetListStruct adxRealtimeType(AdxRealtimeType adxRealtimeType) {
+    this.adxRealtimeType = adxRealtimeType;
+    return this;
+  }
+
+  /**
+   * Get adxRealtimeType
+   *
+   * @return adxRealtimeType
+   */
+  @ApiModelProperty(value = "")
+  public AdxRealtimeType getAdxRealtimeType() {
+    return adxRealtimeType;
+  }
+
+  public void setAdxRealtimeType(AdxRealtimeType adxRealtimeType) {
+    this.adxRealtimeType = adxRealtimeType;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -1788,7 +1832,10 @@ public class AdgroupsGetListStruct {
             this.enableBreakthroughSiteset, adgroupsGetListStruct.enableBreakthroughSiteset)
         && Objects.equals(
             this.liveRecommendStrategyEnabled, adgroupsGetListStruct.liveRecommendStrategyEnabled)
-        && Objects.equals(this.customCostRoiCap, adgroupsGetListStruct.customCostRoiCap);
+        && Objects.equals(this.customCostRoiCap, adgroupsGetListStruct.customCostRoiCap)
+        && Objects.equals(
+            this.enableSteadyExploration, adgroupsGetListStruct.enableSteadyExploration)
+        && Objects.equals(this.adxRealtimeType, adgroupsGetListStruct.adxRealtimeType);
   }
 
   @Override
@@ -1867,7 +1914,9 @@ public class AdgroupsGetListStruct {
         additionalProductSpec,
         enableBreakthroughSiteset,
         liveRecommendStrategyEnabled,
-        customCostRoiCap);
+        customCostRoiCap,
+        enableSteadyExploration,
+        adxRealtimeType);
   }
 
   @Override

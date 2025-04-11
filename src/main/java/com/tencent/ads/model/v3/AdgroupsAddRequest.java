@@ -177,6 +177,9 @@ public class AdgroupsAddRequest {
   @SerializedName("dynamic_ad_type")
   private DynamicAdType dynamicAdType = null;
 
+  @SerializedName("dsp_id")
+  private Long dspId = null;
+
   @SerializedName("aoi_optimization_strategy")
   private AoiOptimizationStrategy aoiOptimizationStrategy = null;
 
@@ -197,6 +200,12 @@ public class AdgroupsAddRequest {
 
   @SerializedName("search_expansion_switch")
   private SearchExpansionSwitch searchExpansionSwitch = null;
+
+  @SerializedName("adx_realtime_type")
+  private AdxRealtimeType adxRealtimeType = null;
+
+  @SerializedName("enable_steady_exploration")
+  private Boolean enableSteadyExploration = null;
 
   public AdgroupsAddRequest accountId(Long accountId) {
     this.accountId = accountId;
@@ -1223,6 +1232,25 @@ public class AdgroupsAddRequest {
     this.dynamicAdType = dynamicAdType;
   }
 
+  public AdgroupsAddRequest dspId(Long dspId) {
+    this.dspId = dspId;
+    return this;
+  }
+
+  /**
+   * Get dspId
+   *
+   * @return dspId
+   */
+  @ApiModelProperty(value = "")
+  public Long getDspId() {
+    return dspId;
+  }
+
+  public void setDspId(Long dspId) {
+    this.dspId = dspId;
+  }
+
   public AdgroupsAddRequest aoiOptimizationStrategy(
       AoiOptimizationStrategy aoiOptimizationStrategy) {
     this.aoiOptimizationStrategy = aoiOptimizationStrategy;
@@ -1357,6 +1385,44 @@ public class AdgroupsAddRequest {
     this.searchExpansionSwitch = searchExpansionSwitch;
   }
 
+  public AdgroupsAddRequest adxRealtimeType(AdxRealtimeType adxRealtimeType) {
+    this.adxRealtimeType = adxRealtimeType;
+    return this;
+  }
+
+  /**
+   * Get adxRealtimeType
+   *
+   * @return adxRealtimeType
+   */
+  @ApiModelProperty(value = "")
+  public AdxRealtimeType getAdxRealtimeType() {
+    return adxRealtimeType;
+  }
+
+  public void setAdxRealtimeType(AdxRealtimeType adxRealtimeType) {
+    this.adxRealtimeType = adxRealtimeType;
+  }
+
+  public AdgroupsAddRequest enableSteadyExploration(Boolean enableSteadyExploration) {
+    this.enableSteadyExploration = enableSteadyExploration;
+    return this;
+  }
+
+  /**
+   * Get enableSteadyExploration
+   *
+   * @return enableSteadyExploration
+   */
+  @ApiModelProperty(value = "")
+  public Boolean isEnableSteadyExploration() {
+    return enableSteadyExploration;
+  }
+
+  public void setEnableSteadyExploration(Boolean enableSteadyExploration) {
+    this.enableSteadyExploration = enableSteadyExploration;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -1426,6 +1492,7 @@ public class AdgroupsAddRequest {
         && Objects.equals(this.shortPlayPayType, adgroupsAddRequest.shortPlayPayType)
         && Objects.equals(this.sellStrategyId, adgroupsAddRequest.sellStrategyId)
         && Objects.equals(this.dynamicAdType, adgroupsAddRequest.dynamicAdType)
+        && Objects.equals(this.dspId, adgroupsAddRequest.dspId)
         && Objects.equals(this.aoiOptimizationStrategy, adgroupsAddRequest.aoiOptimizationStrategy)
         && Objects.equals(this.cloudUnionSpec, adgroupsAddRequest.cloudUnionSpec)
         && Objects.equals(this.additionalProductSpec, adgroupsAddRequest.additionalProductSpec)
@@ -1434,7 +1501,9 @@ public class AdgroupsAddRequest {
         && Objects.equals(
             this.liveRecommendStrategyEnabled, adgroupsAddRequest.liveRecommendStrategyEnabled)
         && Objects.equals(this.customCostRoiCap, adgroupsAddRequest.customCostRoiCap)
-        && Objects.equals(this.searchExpansionSwitch, adgroupsAddRequest.searchExpansionSwitch);
+        && Objects.equals(this.searchExpansionSwitch, adgroupsAddRequest.searchExpansionSwitch)
+        && Objects.equals(this.adxRealtimeType, adgroupsAddRequest.adxRealtimeType)
+        && Objects.equals(this.enableSteadyExploration, adgroupsAddRequest.enableSteadyExploration);
   }
 
   @Override
@@ -1492,13 +1561,16 @@ public class AdgroupsAddRequest {
         shortPlayPayType,
         sellStrategyId,
         dynamicAdType,
+        dspId,
         aoiOptimizationStrategy,
         cloudUnionSpec,
         additionalProductSpec,
         enableBreakthroughSiteset,
         liveRecommendStrategyEnabled,
         customCostRoiCap,
-        searchExpansionSwitch);
+        searchExpansionSwitch,
+        adxRealtimeType,
+        enableSteadyExploration);
   }
 
   @Override

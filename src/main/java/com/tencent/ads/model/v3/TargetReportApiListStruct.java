@@ -2202,6 +2202,15 @@ public class TargetReportApiListStruct {
   @SerializedName("clk_learn_more_pv")
   private Long clkLearnMorePv = null;
 
+  @SerializedName("open_account_pv")
+  private Long openAccountPv = null;
+
+  @SerializedName("open_account_pv_cost")
+  private Long openAccountPvCost = null;
+
+  @SerializedName("video_outer_play5s_rate")
+  private Double videoOuterPlay5sRate = null;
+
   @SerializedName("age_id")
   private Long ageId = null;
 
@@ -16105,6 +16114,63 @@ public class TargetReportApiListStruct {
     this.clkLearnMorePv = clkLearnMorePv;
   }
 
+  public TargetReportApiListStruct openAccountPv(Long openAccountPv) {
+    this.openAccountPv = openAccountPv;
+    return this;
+  }
+
+  /**
+   * Get openAccountPv
+   *
+   * @return openAccountPv
+   */
+  @ApiModelProperty(value = "")
+  public Long getOpenAccountPv() {
+    return openAccountPv;
+  }
+
+  public void setOpenAccountPv(Long openAccountPv) {
+    this.openAccountPv = openAccountPv;
+  }
+
+  public TargetReportApiListStruct openAccountPvCost(Long openAccountPvCost) {
+    this.openAccountPvCost = openAccountPvCost;
+    return this;
+  }
+
+  /**
+   * Get openAccountPvCost
+   *
+   * @return openAccountPvCost
+   */
+  @ApiModelProperty(value = "")
+  public Long getOpenAccountPvCost() {
+    return openAccountPvCost;
+  }
+
+  public void setOpenAccountPvCost(Long openAccountPvCost) {
+    this.openAccountPvCost = openAccountPvCost;
+  }
+
+  public TargetReportApiListStruct videoOuterPlay5sRate(Double videoOuterPlay5sRate) {
+    this.videoOuterPlay5sRate = videoOuterPlay5sRate;
+    return this;
+  }
+
+  /**
+   * Get videoOuterPlay5sRate
+   *
+   * @return videoOuterPlay5sRate
+   */
+  @ApiModelProperty(value = "")
+  public Double getVideoOuterPlay5sRate() {
+    return videoOuterPlay5sRate;
+  }
+
+  public void setVideoOuterPlay5sRate(Double videoOuterPlay5sRate) {
+    this.videoOuterPlay5sRate = videoOuterPlay5sRate;
+  }
+
   public TargetReportApiListStruct ageId(Long ageId) {
     this.ageId = ageId;
     return this;
@@ -17337,6 +17403,9 @@ public class TargetReportApiListStruct {
         && Objects.equals(this.clkWechatShopPv, targetReportApiListStruct.clkWechatShopPv)
         && Objects.equals(this.clkTopicinfoPv, targetReportApiListStruct.clkTopicinfoPv)
         && Objects.equals(this.clkLearnMorePv, targetReportApiListStruct.clkLearnMorePv)
+        && Objects.equals(this.openAccountPv, targetReportApiListStruct.openAccountPv)
+        && Objects.equals(this.openAccountPvCost, targetReportApiListStruct.openAccountPvCost)
+        && Objects.equals(this.videoOuterPlay5sRate, targetReportApiListStruct.videoOuterPlay5sRate)
         && Objects.equals(this.ageId, targetReportApiListStruct.ageId)
         && Objects.equals(this.cityId, targetReportApiListStruct.cityId)
         && Objects.equals(this.regionId, targetReportApiListStruct.regionId)
@@ -18076,6 +18145,9 @@ public class TargetReportApiListStruct {
         clkWechatShopPv,
         clkTopicinfoPv,
         clkLearnMorePv,
+        openAccountPv,
+        openAccountPvCost,
+        videoOuterPlay5sRate,
         ageId,
         cityId,
         regionId,

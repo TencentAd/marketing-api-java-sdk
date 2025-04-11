@@ -45,6 +45,9 @@ public class FundStatementsDetailedGetListStruct {
   @SerializedName("description")
   private String description = null;
 
+  @SerializedName("primary_key")
+  private String primaryKey = null;
+
   public FundStatementsDetailedGetListStruct accountId(Long accountId) {
     this.accountId = accountId;
     return this;
@@ -197,6 +200,25 @@ public class FundStatementsDetailedGetListStruct {
     this.description = description;
   }
 
+  public FundStatementsDetailedGetListStruct primaryKey(String primaryKey) {
+    this.primaryKey = primaryKey;
+    return this;
+  }
+
+  /**
+   * Get primaryKey
+   *
+   * @return primaryKey
+   */
+  @ApiModelProperty(value = "")
+  public String getPrimaryKey() {
+    return primaryKey;
+  }
+
+  public void setPrimaryKey(String primaryKey) {
+    this.primaryKey = primaryKey;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -214,13 +236,22 @@ public class FundStatementsDetailedGetListStruct {
         && Objects.equals(this.externalBillNo, fundStatementsDetailedGetListStruct.externalBillNo)
         && Objects.equals(this.tradeTypeExt, fundStatementsDetailedGetListStruct.tradeTypeExt)
         && Objects.equals(this.amount, fundStatementsDetailedGetListStruct.amount)
-        && Objects.equals(this.description, fundStatementsDetailedGetListStruct.description);
+        && Objects.equals(this.description, fundStatementsDetailedGetListStruct.description)
+        && Objects.equals(this.primaryKey, fundStatementsDetailedGetListStruct.primaryKey);
   }
 
   @Override
   public int hashCode() {
     return Objects.hash(
-        accountId, fundType, balance, time, externalBillNo, tradeTypeExt, amount, description);
+        accountId,
+        fundType,
+        balance,
+        time,
+        externalBillNo,
+        tradeTypeExt,
+        amount,
+        description,
+        primaryKey);
   }
 
   @Override

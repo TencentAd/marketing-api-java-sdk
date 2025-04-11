@@ -30,6 +30,9 @@ public class ComponentMetadataValueValidEnumOption {
   @SerializedName("support_3link")
   private Boolean support3link = null;
 
+  @SerializedName("required")
+  private Boolean required = null;
+
   public ComponentMetadataValueValidEnumOption value(String value) {
     this.value = value;
     return this;
@@ -87,6 +90,25 @@ public class ComponentMetadataValueValidEnumOption {
     this.support3link = support3link;
   }
 
+  public ComponentMetadataValueValidEnumOption required(Boolean required) {
+    this.required = required;
+    return this;
+  }
+
+  /**
+   * Get required
+   *
+   * @return required
+   */
+  @ApiModelProperty(value = "")
+  public Boolean isRequired() {
+    return required;
+  }
+
+  public void setRequired(Boolean required) {
+    this.required = required;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -99,12 +121,13 @@ public class ComponentMetadataValueValidEnumOption {
         (ComponentMetadataValueValidEnumOption) o;
     return Objects.equals(this.value, componentMetadataValueValidEnumOption.value)
         && Objects.equals(this.desc, componentMetadataValueValidEnumOption.desc)
-        && Objects.equals(this.support3link, componentMetadataValueValidEnumOption.support3link);
+        && Objects.equals(this.support3link, componentMetadataValueValidEnumOption.support3link)
+        && Objects.equals(this.required, componentMetadataValueValidEnumOption.required);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(value, desc, support3link);
+    return Objects.hash(value, desc, support3link, required);
   }
 
   @Override

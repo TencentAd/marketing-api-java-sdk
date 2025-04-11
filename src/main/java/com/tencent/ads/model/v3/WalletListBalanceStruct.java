@@ -24,8 +24,8 @@ public class WalletListBalanceStruct {
   @SerializedName("fund_type")
   private AccountTypeMap fundType = null;
 
-  @SerializedName("amount")
-  private Long amount = null;
+  @SerializedName("balance")
+  private Long balance = null;
 
   public WalletListBalanceStruct fundType(AccountTypeMap fundType) {
     this.fundType = fundType;
@@ -46,23 +46,23 @@ public class WalletListBalanceStruct {
     this.fundType = fundType;
   }
 
-  public WalletListBalanceStruct amount(Long amount) {
-    this.amount = amount;
+  public WalletListBalanceStruct balance(Long balance) {
+    this.balance = balance;
     return this;
   }
 
   /**
-   * Get amount
+   * Get balance
    *
-   * @return amount
+   * @return balance
    */
   @ApiModelProperty(value = "")
-  public Long getAmount() {
-    return amount;
+  public Long getBalance() {
+    return balance;
   }
 
-  public void setAmount(Long amount) {
-    this.amount = amount;
+  public void setBalance(Long balance) {
+    this.balance = balance;
   }
 
   @Override
@@ -75,12 +75,12 @@ public class WalletListBalanceStruct {
     }
     WalletListBalanceStruct walletListBalanceStruct = (WalletListBalanceStruct) o;
     return Objects.equals(this.fundType, walletListBalanceStruct.fundType)
-        && Objects.equals(this.amount, walletListBalanceStruct.amount);
+        && Objects.equals(this.balance, walletListBalanceStruct.balance);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(fundType, amount);
+    return Objects.hash(fundType, balance);
   }
 
   @Override

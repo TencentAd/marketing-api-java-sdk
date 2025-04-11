@@ -96,6 +96,12 @@ public class ConversionsAddRequest {
   @SerializedName("custom_report_index")
   private List<Long> customReportIndex = null;
 
+  @SerializedName("created_by_action_set")
+  private Boolean createdByActionSet = null;
+
+  @SerializedName("feedback_id")
+  private Long feedbackId = null;
+
   public ConversionsAddRequest accountId(Long accountId) {
     this.accountId = accountId;
     return this;
@@ -584,6 +590,44 @@ public class ConversionsAddRequest {
     this.customReportIndex = customReportIndex;
   }
 
+  public ConversionsAddRequest createdByActionSet(Boolean createdByActionSet) {
+    this.createdByActionSet = createdByActionSet;
+    return this;
+  }
+
+  /**
+   * Get createdByActionSet
+   *
+   * @return createdByActionSet
+   */
+  @ApiModelProperty(value = "")
+  public Boolean isCreatedByActionSet() {
+    return createdByActionSet;
+  }
+
+  public void setCreatedByActionSet(Boolean createdByActionSet) {
+    this.createdByActionSet = createdByActionSet;
+  }
+
+  public ConversionsAddRequest feedbackId(Long feedbackId) {
+    this.feedbackId = feedbackId;
+    return this;
+  }
+
+  /**
+   * Get feedbackId
+   *
+   * @return feedbackId
+   */
+  @ApiModelProperty(value = "")
+  public Long getFeedbackId() {
+    return feedbackId;
+  }
+
+  public void setFeedbackId(Long feedbackId) {
+    this.feedbackId = feedbackId;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -623,7 +667,9 @@ public class ConversionsAddRequest {
         && Objects.equals(
             this.incubationOptimizationGoal, conversionsAddRequest.incubationOptimizationGoal)
         && Objects.equals(this.conversionTemplateId, conversionsAddRequest.conversionTemplateId)
-        && Objects.equals(this.customReportIndex, conversionsAddRequest.customReportIndex);
+        && Objects.equals(this.customReportIndex, conversionsAddRequest.customReportIndex)
+        && Objects.equals(this.createdByActionSet, conversionsAddRequest.createdByActionSet)
+        && Objects.equals(this.feedbackId, conversionsAddRequest.feedbackId);
   }
 
   @Override
@@ -653,7 +699,9 @@ public class ConversionsAddRequest {
         forwardLinkAssist,
         incubationOptimizationGoal,
         conversionTemplateId,
-        customReportIndex);
+        customReportIndex,
+        createdByActionSet,
+        feedbackId);
   }
 
   @Override

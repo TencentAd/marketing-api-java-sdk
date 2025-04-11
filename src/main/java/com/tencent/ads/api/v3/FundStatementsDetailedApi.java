@@ -57,6 +57,7 @@ public class FundStatementsDetailedApi {
    * @param dateRange (required)
    * @param page (optional)
    * @param pageSize (optional)
+   * @param primaryKey (optional)
    * @param fields 返回参数的字段列表 (optional)
    * @param progressListener Progress listener
    * @param progressRequestListener Progress request listener
@@ -69,6 +70,7 @@ public class FundStatementsDetailedApi {
       DateRangeTransaction dateRange,
       Long page,
       Long pageSize,
+      String primaryKey,
       List<String> fields,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
@@ -91,6 +93,8 @@ public class FundStatementsDetailedApi {
     if (page != null) localVarQueryParams.addAll(apiClient.parameterToPair("page", page));
     if (pageSize != null)
       localVarQueryParams.addAll(apiClient.parameterToPair("page_size", pageSize));
+    if (primaryKey != null)
+      localVarQueryParams.addAll(apiClient.parameterToPair("primary_key", primaryKey));
     if (fields != null)
       localVarCollectionQueryParams.addAll(apiClient.parameterToPairs("multi", "fields", fields));
 
@@ -150,6 +154,7 @@ public class FundStatementsDetailedApi {
       DateRangeTransaction dateRange,
       Long page,
       Long pageSize,
+      String primaryKey,
       List<String> fields,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
@@ -181,6 +186,7 @@ public class FundStatementsDetailedApi {
             dateRange,
             page,
             pageSize,
+            primaryKey,
             fields,
             progressListener,
             progressRequestListener,
@@ -196,6 +202,7 @@ public class FundStatementsDetailedApi {
    * @param dateRange (required)
    * @param page (optional)
    * @param pageSize (optional)
+   * @param primaryKey (optional)
    * @param fields 返回参数的字段列表 (optional)
    * @return FundStatementsDetailedGetResponse
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
@@ -207,12 +214,13 @@ public class FundStatementsDetailedApi {
       DateRangeTransaction dateRange,
       Long page,
       Long pageSize,
+      String primaryKey,
       List<String> fields,
       Pair... headerPair)
       throws ApiException {
     ApiResponse<FundStatementsDetailedGetResponse> resp =
         fundStatementsDetailedGetWithHttpInfo(
-            accountId, fundType, dateRange, page, pageSize, fields, headerPair);
+            accountId, fundType, dateRange, page, pageSize, primaryKey, fields, headerPair);
     return resp.getData();
   }
 
@@ -224,6 +232,7 @@ public class FundStatementsDetailedApi {
    * @param dateRange (required)
    * @param page (optional)
    * @param pageSize (optional)
+   * @param primaryKey (optional)
    * @param fields 返回参数的字段列表 (optional)
    * @return ApiResponse&lt;FundStatementsDetailedGetResponse&gt;
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
@@ -235,12 +244,22 @@ public class FundStatementsDetailedApi {
       DateRangeTransaction dateRange,
       Long page,
       Long pageSize,
+      String primaryKey,
       List<String> fields,
       Pair... headerPair)
       throws ApiException {
     com.squareup.okhttp.Call call =
         fundStatementsDetailedGetValidateBeforeCall(
-            accountId, fundType, dateRange, page, pageSize, fields, null, null, headerPair);
+            accountId,
+            fundType,
+            dateRange,
+            page,
+            pageSize,
+            primaryKey,
+            fields,
+            null,
+            null,
+            headerPair);
     Type localVarReturnType = new TypeToken<FundStatementsDetailedGetResponse>() {}.getType();
     return apiClient.execute(call, localVarReturnType);
   }
@@ -253,6 +272,7 @@ public class FundStatementsDetailedApi {
    * @param dateRange (required)
    * @param page (optional)
    * @param pageSize (optional)
+   * @param primaryKey (optional)
    * @param fields 返回参数的字段列表 (optional)
    * @param callback The callback to be executed when the API call finishes
    * @return The request call
@@ -264,6 +284,7 @@ public class FundStatementsDetailedApi {
       DateRangeTransaction dateRange,
       Long page,
       Long pageSize,
+      String primaryKey,
       List<String> fields,
       final ApiCallback<FundStatementsDetailedGetResponse> callback,
       Pair... headerPair)
@@ -297,6 +318,7 @@ public class FundStatementsDetailedApi {
             dateRange,
             page,
             pageSize,
+            primaryKey,
             fields,
             progressListener,
             progressRequestListener,

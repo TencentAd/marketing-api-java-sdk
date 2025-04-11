@@ -52,7 +52,7 @@ public class WalletBasicInfoApi {
    * Build call for walletBasicInfoGet
    *
    * @param accountId (required)
-   * @param walletId (optional)
+   * @param walletId (required)
    * @param fields 返回参数的字段列表 (optional)
    * @param progressListener Progress listener
    * @param progressRequestListener Progress request listener
@@ -147,6 +147,12 @@ public class WalletBasicInfoApi {
           "Missing the required parameter 'accountId' when calling walletBasicInfoGet(Async)");
     }
 
+    // verify the required parameter 'walletId' is set
+    if (walletId == null) {
+      throw new ApiException(
+          "Missing the required parameter 'walletId' when calling walletBasicInfoGet(Async)");
+    }
+
     com.squareup.okhttp.Call call =
         walletBasicInfoGetCall(
             accountId, walletId, fields, progressListener, progressRequestListener, headerPair);
@@ -157,7 +163,7 @@ public class WalletBasicInfoApi {
    * 通过钱包id去查询共享钱包基础信息
    *
    * @param accountId (required)
-   * @param walletId (optional)
+   * @param walletId (required)
    * @param fields 返回参数的字段列表 (optional)
    * @return WalletBasicInfoGetResponse
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
@@ -174,7 +180,7 @@ public class WalletBasicInfoApi {
    * 通过钱包id去查询共享钱包基础信息
    *
    * @param accountId (required)
-   * @param walletId (optional)
+   * @param walletId (required)
    * @param fields 返回参数的字段列表 (optional)
    * @return ApiResponse&lt;WalletBasicInfoGetResponse&gt;
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
@@ -192,7 +198,7 @@ public class WalletBasicInfoApi {
    * 通过钱包id去查询共享钱包基础信息 (asynchronously)
    *
    * @param accountId (required)
-   * @param walletId (optional)
+   * @param walletId (required)
    * @param fields 返回参数的字段列表 (optional)
    * @param callback The callback to be executed when the API call finishes
    * @return The request call

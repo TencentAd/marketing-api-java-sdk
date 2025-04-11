@@ -34,17 +34,23 @@ public class AdvertiserAddRequest {
   @SerializedName("individual_qualification")
   private IndividualQualification individualQualification = null;
 
-  @SerializedName("system_industry_id")
-  private Long systemIndustryId = null;
-
   @SerializedName("area_code")
   private Long areaCode = null;
+
+  @SerializedName("system_industry_id")
+  private Long systemIndustryId = null;
 
   @SerializedName("introduction_url")
   private String introductionUrl = null;
 
+  @SerializedName("daily_budget")
+  private Long dailyBudget = null;
+
   @SerializedName("corporate_brand_name")
   private String corporateBrandName = null;
+
+  @SerializedName("is_adx")
+  private Boolean isAdx = null;
 
   @SerializedName("contact_person_telephone")
   private String contactPersonTelephone = null;
@@ -148,25 +154,6 @@ public class AdvertiserAddRequest {
     this.individualQualification = individualQualification;
   }
 
-  public AdvertiserAddRequest systemIndustryId(Long systemIndustryId) {
-    this.systemIndustryId = systemIndustryId;
-    return this;
-  }
-
-  /**
-   * Get systemIndustryId
-   *
-   * @return systemIndustryId
-   */
-  @ApiModelProperty(value = "")
-  public Long getSystemIndustryId() {
-    return systemIndustryId;
-  }
-
-  public void setSystemIndustryId(Long systemIndustryId) {
-    this.systemIndustryId = systemIndustryId;
-  }
-
   public AdvertiserAddRequest areaCode(Long areaCode) {
     this.areaCode = areaCode;
     return this;
@@ -184,6 +171,25 @@ public class AdvertiserAddRequest {
 
   public void setAreaCode(Long areaCode) {
     this.areaCode = areaCode;
+  }
+
+  public AdvertiserAddRequest systemIndustryId(Long systemIndustryId) {
+    this.systemIndustryId = systemIndustryId;
+    return this;
+  }
+
+  /**
+   * Get systemIndustryId
+   *
+   * @return systemIndustryId
+   */
+  @ApiModelProperty(value = "")
+  public Long getSystemIndustryId() {
+    return systemIndustryId;
+  }
+
+  public void setSystemIndustryId(Long systemIndustryId) {
+    this.systemIndustryId = systemIndustryId;
   }
 
   public AdvertiserAddRequest introductionUrl(String introductionUrl) {
@@ -205,6 +211,25 @@ public class AdvertiserAddRequest {
     this.introductionUrl = introductionUrl;
   }
 
+  public AdvertiserAddRequest dailyBudget(Long dailyBudget) {
+    this.dailyBudget = dailyBudget;
+    return this;
+  }
+
+  /**
+   * Get dailyBudget
+   *
+   * @return dailyBudget
+   */
+  @ApiModelProperty(value = "")
+  public Long getDailyBudget() {
+    return dailyBudget;
+  }
+
+  public void setDailyBudget(Long dailyBudget) {
+    this.dailyBudget = dailyBudget;
+  }
+
   public AdvertiserAddRequest corporateBrandName(String corporateBrandName) {
     this.corporateBrandName = corporateBrandName;
     return this;
@@ -222,6 +247,25 @@ public class AdvertiserAddRequest {
 
   public void setCorporateBrandName(String corporateBrandName) {
     this.corporateBrandName = corporateBrandName;
+  }
+
+  public AdvertiserAddRequest isAdx(Boolean isAdx) {
+    this.isAdx = isAdx;
+    return this;
+  }
+
+  /**
+   * Get isAdx
+   *
+   * @return isAdx
+   */
+  @ApiModelProperty(value = "")
+  public Boolean isIsAdx() {
+    return isAdx;
+  }
+
+  public void setIsAdx(Boolean isAdx) {
+    this.isAdx = isAdx;
   }
 
   public AdvertiserAddRequest contactPersonTelephone(String contactPersonTelephone) {
@@ -277,10 +321,12 @@ public class AdvertiserAddRequest {
         && Objects.equals(this.certificationImageId, advertiserAddRequest.certificationImageId)
         && Objects.equals(
             this.individualQualification, advertiserAddRequest.individualQualification)
-        && Objects.equals(this.systemIndustryId, advertiserAddRequest.systemIndustryId)
         && Objects.equals(this.areaCode, advertiserAddRequest.areaCode)
+        && Objects.equals(this.systemIndustryId, advertiserAddRequest.systemIndustryId)
         && Objects.equals(this.introductionUrl, advertiserAddRequest.introductionUrl)
+        && Objects.equals(this.dailyBudget, advertiserAddRequest.dailyBudget)
         && Objects.equals(this.corporateBrandName, advertiserAddRequest.corporateBrandName)
+        && Objects.equals(this.isAdx, advertiserAddRequest.isAdx)
         && Objects.equals(this.contactPersonTelephone, advertiserAddRequest.contactPersonTelephone)
         && Objects.equals(this.contactPersonMobile, advertiserAddRequest.contactPersonMobile);
   }
@@ -293,10 +339,12 @@ public class AdvertiserAddRequest {
         corporationLicence,
         certificationImageId,
         individualQualification,
-        systemIndustryId,
         areaCode,
+        systemIndustryId,
         introductionUrl,
+        dailyBudget,
         corporateBrandName,
+        isAdx,
         contactPersonTelephone,
         contactPersonMobile);
   }

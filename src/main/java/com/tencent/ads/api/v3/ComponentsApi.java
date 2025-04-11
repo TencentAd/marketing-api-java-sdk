@@ -390,6 +390,7 @@ public class ComponentsApi {
    * @param pageSize (optional)
    * @param isDeleted (optional)
    * @param fields (optional)
+   * @param componentIdFilteringMode (optional)
    * @param progressListener Progress listener
    * @param progressRequestListener Progress request listener
    * @return Call to execute
@@ -403,6 +404,7 @@ public class ComponentsApi {
       Long pageSize,
       Boolean isDeleted,
       List<String> fields,
+      String componentIdFilteringMode,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
       Pair... headerPair)
@@ -429,6 +431,9 @@ public class ComponentsApi {
       localVarQueryParams.addAll(apiClient.parameterToPair("is_deleted", isDeleted));
     if (fields != null)
       localVarCollectionQueryParams.addAll(apiClient.parameterToPairs("multi", "fields", fields));
+    if (componentIdFilteringMode != null)
+      localVarQueryParams.addAll(
+          apiClient.parameterToPair("component_id_filtering_mode", componentIdFilteringMode));
 
     Map<String, String> localVarHeaderParams = new HashMap<String, String>();
 
@@ -488,6 +493,7 @@ public class ComponentsApi {
       Long pageSize,
       Boolean isDeleted,
       List<String> fields,
+      String componentIdFilteringMode,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
       Pair... headerPair)
@@ -502,6 +508,7 @@ public class ComponentsApi {
             pageSize,
             isDeleted,
             fields,
+            componentIdFilteringMode,
             progressListener,
             progressRequestListener,
             headerPair);
@@ -518,6 +525,7 @@ public class ComponentsApi {
    * @param pageSize (optional)
    * @param isDeleted (optional)
    * @param fields (optional)
+   * @param componentIdFilteringMode (optional)
    * @return ComponentsGetResponse
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
@@ -530,11 +538,20 @@ public class ComponentsApi {
       Long pageSize,
       Boolean isDeleted,
       List<String> fields,
+      String componentIdFilteringMode,
       Pair... headerPair)
       throws ApiException {
     ApiResponse<ComponentsGetResponse> resp =
         componentsGetWithHttpInfo(
-            accountId, organizationId, filtering, page, pageSize, isDeleted, fields, headerPair);
+            accountId,
+            organizationId,
+            filtering,
+            page,
+            pageSize,
+            isDeleted,
+            fields,
+            componentIdFilteringMode,
+            headerPair);
     return resp.getData();
   }
 
@@ -548,6 +565,7 @@ public class ComponentsApi {
    * @param pageSize (optional)
    * @param isDeleted (optional)
    * @param fields (optional)
+   * @param componentIdFilteringMode (optional)
    * @return ApiResponse&lt;ComponentsGetResponse&gt;
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
@@ -560,6 +578,7 @@ public class ComponentsApi {
       Long pageSize,
       Boolean isDeleted,
       List<String> fields,
+      String componentIdFilteringMode,
       Pair... headerPair)
       throws ApiException {
     com.squareup.okhttp.Call call =
@@ -571,6 +590,7 @@ public class ComponentsApi {
             pageSize,
             isDeleted,
             fields,
+            componentIdFilteringMode,
             null,
             null,
             headerPair);
@@ -588,6 +608,7 @@ public class ComponentsApi {
    * @param pageSize (optional)
    * @param isDeleted (optional)
    * @param fields (optional)
+   * @param componentIdFilteringMode (optional)
    * @param callback The callback to be executed when the API call finishes
    * @return The request call
    * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -600,6 +621,7 @@ public class ComponentsApi {
       Long pageSize,
       Boolean isDeleted,
       List<String> fields,
+      String componentIdFilteringMode,
       final ApiCallback<ComponentsGetResponse> callback,
       Pair... headerPair)
       throws ApiException {
@@ -634,6 +656,7 @@ public class ComponentsApi {
             pageSize,
             isDeleted,
             fields,
+            componentIdFilteringMode,
             progressListener,
             progressRequestListener,
             headerPair);

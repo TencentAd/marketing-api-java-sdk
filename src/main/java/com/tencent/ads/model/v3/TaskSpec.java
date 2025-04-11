@@ -109,6 +109,9 @@ public class TaskSpec {
   @SerializedName("update_adgroup_derive_conf_spec")
   private List<UpdateAdgroupDeriveConfItem> updateAdgroupDeriveConfSpec = null;
 
+  @SerializedName("update_component_sharing_spec")
+  private List<UpdateComponentSharingItem> updateComponentSharingSpec = null;
+
   public TaskSpec updateUnionPositionPackageSpec(
       List<UpdateUnionPositionPackageItem> updateUnionPositionPackageSpec) {
     this.updateUnionPositionPackageSpec = updateUnionPositionPackageSpec;
@@ -931,6 +934,36 @@ public class TaskSpec {
     this.updateAdgroupDeriveConfSpec = updateAdgroupDeriveConfSpec;
   }
 
+  public TaskSpec updateComponentSharingSpec(
+      List<UpdateComponentSharingItem> updateComponentSharingSpec) {
+    this.updateComponentSharingSpec = updateComponentSharingSpec;
+    return this;
+  }
+
+  public TaskSpec addUpdateComponentSharingSpecItem(
+      UpdateComponentSharingItem updateComponentSharingSpecItem) {
+    if (this.updateComponentSharingSpec == null) {
+      this.updateComponentSharingSpec = new ArrayList<UpdateComponentSharingItem>();
+    }
+    this.updateComponentSharingSpec.add(updateComponentSharingSpecItem);
+    return this;
+  }
+
+  /**
+   * Get updateComponentSharingSpec
+   *
+   * @return updateComponentSharingSpec
+   */
+  @ApiModelProperty(value = "")
+  public List<UpdateComponentSharingItem> getUpdateComponentSharingSpec() {
+    return updateComponentSharingSpec;
+  }
+
+  public void setUpdateComponentSharingSpec(
+      List<UpdateComponentSharingItem> updateComponentSharingSpec) {
+    this.updateComponentSharingSpec = updateComponentSharingSpec;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -988,7 +1021,8 @@ public class TaskSpec {
         && Objects.equals(
             this.updateAdgroupTargetingTaskSpec, taskSpec.updateAdgroupTargetingTaskSpec)
         && Objects.equals(this.updateAdgroupEcomPkamSpec, taskSpec.updateAdgroupEcomPkamSpec)
-        && Objects.equals(this.updateAdgroupDeriveConfSpec, taskSpec.updateAdgroupDeriveConfSpec);
+        && Objects.equals(this.updateAdgroupDeriveConfSpec, taskSpec.updateAdgroupDeriveConfSpec)
+        && Objects.equals(this.updateComponentSharingSpec, taskSpec.updateComponentSharingSpec);
   }
 
   @Override
@@ -1020,7 +1054,8 @@ public class TaskSpec {
         deleteScheduledTaskSpec,
         updateAdgroupTargetingTaskSpec,
         updateAdgroupEcomPkamSpec,
-        updateAdgroupDeriveConfSpec);
+        updateAdgroupDeriveConfSpec,
+        updateComponentSharingSpec);
   }
 
   @Override

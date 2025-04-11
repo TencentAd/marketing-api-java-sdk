@@ -92,6 +92,9 @@ public class WechatStoreProductItemsGetListStruct {
   @SerializedName("wechat_store_product_ad_unavailable_cause")
   private List<String> wechatStoreProductAdUnavailableCause = null;
 
+  @SerializedName("store_price_item_list")
+  private List<StorePriceItem> storePriceItemList = null;
+
   public WechatStoreProductItemsGetListStruct productOuterId(String productOuterId) {
     this.productOuterId = productOuterId;
     return this;
@@ -562,6 +565,35 @@ public class WechatStoreProductItemsGetListStruct {
     this.wechatStoreProductAdUnavailableCause = wechatStoreProductAdUnavailableCause;
   }
 
+  public WechatStoreProductItemsGetListStruct storePriceItemList(
+      List<StorePriceItem> storePriceItemList) {
+    this.storePriceItemList = storePriceItemList;
+    return this;
+  }
+
+  public WechatStoreProductItemsGetListStruct addStorePriceItemListItem(
+      StorePriceItem storePriceItemListItem) {
+    if (this.storePriceItemList == null) {
+      this.storePriceItemList = new ArrayList<StorePriceItem>();
+    }
+    this.storePriceItemList.add(storePriceItemListItem);
+    return this;
+  }
+
+  /**
+   * Get storePriceItemList
+   *
+   * @return storePriceItemList
+   */
+  @ApiModelProperty(value = "")
+  public List<StorePriceItem> getStorePriceItemList() {
+    return storePriceItemList;
+  }
+
+  public void setStorePriceItemList(List<StorePriceItem> storePriceItemList) {
+    this.storePriceItemList = storePriceItemList;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -612,7 +644,9 @@ public class WechatStoreProductItemsGetListStruct {
             wechatStoreProductItemsGetListStruct.wechatStoreProductAdStatus)
         && Objects.equals(
             this.wechatStoreProductAdUnavailableCause,
-            wechatStoreProductItemsGetListStruct.wechatStoreProductAdUnavailableCause);
+            wechatStoreProductItemsGetListStruct.wechatStoreProductAdUnavailableCause)
+        && Objects.equals(
+            this.storePriceItemList, wechatStoreProductItemsGetListStruct.storePriceItemList);
   }
 
   @Override
@@ -640,7 +674,8 @@ public class WechatStoreProductItemsGetListStruct {
         linkSpuName,
         wechatStoreProductStatus,
         wechatStoreProductAdStatus,
-        wechatStoreProductAdUnavailableCause);
+        wechatStoreProductAdUnavailableCause,
+        storePriceItemList);
   }
 
   @Override

@@ -52,6 +52,8 @@ public class AgencyWalletListApi {
    * Build call for agencyWalletListGet
    *
    * @param accountId (required)
+   * @param page (required)
+   * @param pageSize (required)
    * @param mdmId (optional)
    * @param walletId (optional)
    * @param fields 返回参数的字段列表 (optional)
@@ -62,6 +64,8 @@ public class AgencyWalletListApi {
    */
   public com.squareup.okhttp.Call agencyWalletListGetCall(
       Long accountId,
+      Long page,
+      Long pageSize,
       Long mdmId,
       Long walletId,
       List<String> fields,
@@ -82,6 +86,9 @@ public class AgencyWalletListApi {
     if (mdmId != null) localVarQueryParams.addAll(apiClient.parameterToPair("mdm_id", mdmId));
     if (walletId != null)
       localVarQueryParams.addAll(apiClient.parameterToPair("wallet_id", walletId));
+    if (page != null) localVarQueryParams.addAll(apiClient.parameterToPair("page", page));
+    if (pageSize != null)
+      localVarQueryParams.addAll(apiClient.parameterToPair("page_size", pageSize));
     if (fields != null)
       localVarCollectionQueryParams.addAll(apiClient.parameterToPairs("multi", "fields", fields));
 
@@ -137,6 +144,8 @@ public class AgencyWalletListApi {
   @SuppressWarnings("rawtypes")
   private com.squareup.okhttp.Call agencyWalletListGetValidateBeforeCall(
       Long accountId,
+      Long page,
+      Long pageSize,
       Long mdmId,
       Long walletId,
       List<String> fields,
@@ -151,9 +160,23 @@ public class AgencyWalletListApi {
           "Missing the required parameter 'accountId' when calling agencyWalletListGet(Async)");
     }
 
+    // verify the required parameter 'page' is set
+    if (page == null) {
+      throw new ApiException(
+          "Missing the required parameter 'page' when calling agencyWalletListGet(Async)");
+    }
+
+    // verify the required parameter 'pageSize' is set
+    if (pageSize == null) {
+      throw new ApiException(
+          "Missing the required parameter 'pageSize' when calling agencyWalletListGet(Async)");
+    }
+
     com.squareup.okhttp.Call call =
         agencyWalletListGetCall(
             accountId,
+            page,
+            pageSize,
             mdmId,
             walletId,
             fields,
@@ -167,6 +190,8 @@ public class AgencyWalletListApi {
    * 获取代理商创建的共享钱包信息列表
    *
    * @param accountId (required)
+   * @param page (required)
+   * @param pageSize (required)
    * @param mdmId (optional)
    * @param walletId (optional)
    * @param fields 返回参数的字段列表 (optional)
@@ -175,10 +200,17 @@ public class AgencyWalletListApi {
    *     response body
    */
   public AgencyWalletListGetResponse agencyWalletListGet(
-      Long accountId, Long mdmId, Long walletId, List<String> fields, Pair... headerPair)
+      Long accountId,
+      Long page,
+      Long pageSize,
+      Long mdmId,
+      Long walletId,
+      List<String> fields,
+      Pair... headerPair)
       throws ApiException {
     ApiResponse<AgencyWalletListGetResponse> resp =
-        agencyWalletListGetWithHttpInfo(accountId, mdmId, walletId, fields, headerPair);
+        agencyWalletListGetWithHttpInfo(
+            accountId, page, pageSize, mdmId, walletId, fields, headerPair);
     return resp.getData();
   }
 
@@ -186,6 +218,8 @@ public class AgencyWalletListApi {
    * 获取代理商创建的共享钱包信息列表
    *
    * @param accountId (required)
+   * @param page (required)
+   * @param pageSize (required)
    * @param mdmId (optional)
    * @param walletId (optional)
    * @param fields 返回参数的字段列表 (optional)
@@ -194,11 +228,17 @@ public class AgencyWalletListApi {
    *     response body
    */
   public ApiResponse<AgencyWalletListGetResponse> agencyWalletListGetWithHttpInfo(
-      Long accountId, Long mdmId, Long walletId, List<String> fields, Pair... headerPair)
+      Long accountId,
+      Long page,
+      Long pageSize,
+      Long mdmId,
+      Long walletId,
+      List<String> fields,
+      Pair... headerPair)
       throws ApiException {
     com.squareup.okhttp.Call call =
         agencyWalletListGetValidateBeforeCall(
-            accountId, mdmId, walletId, fields, null, null, headerPair);
+            accountId, page, pageSize, mdmId, walletId, fields, null, null, headerPair);
     Type localVarReturnType = new TypeToken<AgencyWalletListGetResponse>() {}.getType();
     return apiClient.execute(call, localVarReturnType);
   }
@@ -207,6 +247,8 @@ public class AgencyWalletListApi {
    * 获取代理商创建的共享钱包信息列表 (asynchronously)
    *
    * @param accountId (required)
+   * @param page (required)
+   * @param pageSize (required)
    * @param mdmId (optional)
    * @param walletId (optional)
    * @param fields 返回参数的字段列表 (optional)
@@ -216,6 +258,8 @@ public class AgencyWalletListApi {
    */
   public com.squareup.okhttp.Call agencyWalletListGetAsync(
       Long accountId,
+      Long page,
+      Long pageSize,
       Long mdmId,
       Long walletId,
       List<String> fields,
@@ -247,6 +291,8 @@ public class AgencyWalletListApi {
     com.squareup.okhttp.Call call =
         agencyWalletListGetValidateBeforeCall(
             accountId,
+            page,
+            pageSize,
             mdmId,
             walletId,
             fields,

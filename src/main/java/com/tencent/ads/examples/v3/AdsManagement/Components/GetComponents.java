@@ -29,6 +29,8 @@ public class GetComponents {
 
   public List<String> fields = null;
 
+  public String componentIdFilteringMode = null;
+
   public void init() {
     this.tencentAds = TencentAds.getInstance();
     this.tencentAds.init(
@@ -43,7 +45,15 @@ public class GetComponents {
     ComponentsGetResponseData response =
         tencentAds
             .components()
-            .componentsGet(accountId, organizationId, filtering, page, pageSize, isDeleted, fields);
+            .componentsGet(
+                accountId,
+                organizationId,
+                filtering,
+                page,
+                pageSize,
+                isDeleted,
+                fields,
+                componentIdFilteringMode);
     return response;
   }
 

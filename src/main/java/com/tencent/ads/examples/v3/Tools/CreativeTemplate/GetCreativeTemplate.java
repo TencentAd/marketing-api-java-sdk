@@ -34,6 +34,8 @@ public class GetCreativeTemplate {
 
   public Long creativeTemplateId = null;
 
+  public Boolean useNewVersion = null;
+
   public List<String> fields = null;
 
   public void init() {
@@ -61,6 +63,7 @@ public class GetCreativeTemplate {
                 siteSet,
                 dynamicCreativeType,
                 creativeTemplateId,
+                useNewVersion,
                 fields);
     return response;
   }

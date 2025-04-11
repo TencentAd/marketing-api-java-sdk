@@ -26,17 +26,11 @@ public class AdvertiserGetListStruct {
   @SerializedName("account_id")
   private Long accountId = null;
 
-  @SerializedName("registration_type")
-  private CustomerRegistrationType registrationType = null;
-
   @SerializedName("daily_budget")
   private Long dailyBudget = null;
 
-  @SerializedName("system_status")
-  private CustomerSystemStatus systemStatus = null;
-
-  @SerializedName("reject_message")
-  private String rejectMessage = null;
+  @SerializedName("registration_type")
+  private CustomerRegistrationType registrationType = null;
 
   @SerializedName("corporation_name")
   private String corporationName = null;
@@ -53,6 +47,15 @@ public class AdvertiserGetListStruct {
   @SerializedName("individual_qualification")
   private IndividualQualificationRsp individualQualification = null;
 
+  @SerializedName("area_code")
+  private Long areaCode = null;
+
+  @SerializedName("mdm_id")
+  private Long mdmId = null;
+
+  @SerializedName("mdm_name")
+  private String mdmName = null;
+
   @SerializedName("system_industry_id")
   private Long systemIndustryId = null;
 
@@ -64,6 +67,21 @@ public class AdvertiserGetListStruct {
 
   @SerializedName("corporate_brand_name")
   private String corporateBrandName = null;
+
+  @SerializedName("memo")
+  private String memo = null;
+
+  @SerializedName("system_status")
+  private CustomerSystemStatus systemStatus = null;
+
+  @SerializedName("reject_message")
+  private String rejectMessage = null;
+
+  @SerializedName("is_adx")
+  private Boolean isAdx = null;
+
+  @SerializedName("business_alias")
+  private String businessAlias = null;
 
   @SerializedName("contact_person")
   private String contactPerson = null;
@@ -80,23 +98,11 @@ public class AdvertiserGetListStruct {
   @SerializedName("websites")
   private List<WebsiteReadStruct> websites = null;
 
-  @SerializedName("mdm_id")
-  private Long mdmId = null;
-
-  @SerializedName("mdm_name")
-  private String mdmName = null;
-
   @SerializedName("agency_account_id")
   private Long agencyAccountId = null;
 
   @SerializedName("operators")
   private List<AdvertiserOperatorStruct> operators = null;
-
-  @SerializedName("memo")
-  private String memo = null;
-
-  @SerializedName("area_code")
-  private Long areaCode = null;
 
   public AdvertiserGetListStruct accountId(Long accountId) {
     this.accountId = accountId;
@@ -115,25 +121,6 @@ public class AdvertiserGetListStruct {
 
   public void setAccountId(Long accountId) {
     this.accountId = accountId;
-  }
-
-  public AdvertiserGetListStruct registrationType(CustomerRegistrationType registrationType) {
-    this.registrationType = registrationType;
-    return this;
-  }
-
-  /**
-   * Get registrationType
-   *
-   * @return registrationType
-   */
-  @ApiModelProperty(value = "")
-  public CustomerRegistrationType getRegistrationType() {
-    return registrationType;
-  }
-
-  public void setRegistrationType(CustomerRegistrationType registrationType) {
-    this.registrationType = registrationType;
   }
 
   public AdvertiserGetListStruct dailyBudget(Long dailyBudget) {
@@ -155,42 +142,23 @@ public class AdvertiserGetListStruct {
     this.dailyBudget = dailyBudget;
   }
 
-  public AdvertiserGetListStruct systemStatus(CustomerSystemStatus systemStatus) {
-    this.systemStatus = systemStatus;
+  public AdvertiserGetListStruct registrationType(CustomerRegistrationType registrationType) {
+    this.registrationType = registrationType;
     return this;
   }
 
   /**
-   * Get systemStatus
+   * Get registrationType
    *
-   * @return systemStatus
+   * @return registrationType
    */
   @ApiModelProperty(value = "")
-  public CustomerSystemStatus getSystemStatus() {
-    return systemStatus;
+  public CustomerRegistrationType getRegistrationType() {
+    return registrationType;
   }
 
-  public void setSystemStatus(CustomerSystemStatus systemStatus) {
-    this.systemStatus = systemStatus;
-  }
-
-  public AdvertiserGetListStruct rejectMessage(String rejectMessage) {
-    this.rejectMessage = rejectMessage;
-    return this;
-  }
-
-  /**
-   * Get rejectMessage
-   *
-   * @return rejectMessage
-   */
-  @ApiModelProperty(value = "")
-  public String getRejectMessage() {
-    return rejectMessage;
-  }
-
-  public void setRejectMessage(String rejectMessage) {
-    this.rejectMessage = rejectMessage;
+  public void setRegistrationType(CustomerRegistrationType registrationType) {
+    this.registrationType = registrationType;
   }
 
   public AdvertiserGetListStruct corporationName(String corporationName) {
@@ -289,6 +257,63 @@ public class AdvertiserGetListStruct {
     this.individualQualification = individualQualification;
   }
 
+  public AdvertiserGetListStruct areaCode(Long areaCode) {
+    this.areaCode = areaCode;
+    return this;
+  }
+
+  /**
+   * Get areaCode
+   *
+   * @return areaCode
+   */
+  @ApiModelProperty(value = "")
+  public Long getAreaCode() {
+    return areaCode;
+  }
+
+  public void setAreaCode(Long areaCode) {
+    this.areaCode = areaCode;
+  }
+
+  public AdvertiserGetListStruct mdmId(Long mdmId) {
+    this.mdmId = mdmId;
+    return this;
+  }
+
+  /**
+   * Get mdmId
+   *
+   * @return mdmId
+   */
+  @ApiModelProperty(value = "")
+  public Long getMdmId() {
+    return mdmId;
+  }
+
+  public void setMdmId(Long mdmId) {
+    this.mdmId = mdmId;
+  }
+
+  public AdvertiserGetListStruct mdmName(String mdmName) {
+    this.mdmName = mdmName;
+    return this;
+  }
+
+  /**
+   * Get mdmName
+   *
+   * @return mdmName
+   */
+  @ApiModelProperty(value = "")
+  public String getMdmName() {
+    return mdmName;
+  }
+
+  public void setMdmName(String mdmName) {
+    this.mdmName = mdmName;
+  }
+
   public AdvertiserGetListStruct systemIndustryId(Long systemIndustryId) {
     this.systemIndustryId = systemIndustryId;
     return this;
@@ -363,6 +388,101 @@ public class AdvertiserGetListStruct {
 
   public void setCorporateBrandName(String corporateBrandName) {
     this.corporateBrandName = corporateBrandName;
+  }
+
+  public AdvertiserGetListStruct memo(String memo) {
+    this.memo = memo;
+    return this;
+  }
+
+  /**
+   * Get memo
+   *
+   * @return memo
+   */
+  @ApiModelProperty(value = "")
+  public String getMemo() {
+    return memo;
+  }
+
+  public void setMemo(String memo) {
+    this.memo = memo;
+  }
+
+  public AdvertiserGetListStruct systemStatus(CustomerSystemStatus systemStatus) {
+    this.systemStatus = systemStatus;
+    return this;
+  }
+
+  /**
+   * Get systemStatus
+   *
+   * @return systemStatus
+   */
+  @ApiModelProperty(value = "")
+  public CustomerSystemStatus getSystemStatus() {
+    return systemStatus;
+  }
+
+  public void setSystemStatus(CustomerSystemStatus systemStatus) {
+    this.systemStatus = systemStatus;
+  }
+
+  public AdvertiserGetListStruct rejectMessage(String rejectMessage) {
+    this.rejectMessage = rejectMessage;
+    return this;
+  }
+
+  /**
+   * Get rejectMessage
+   *
+   * @return rejectMessage
+   */
+  @ApiModelProperty(value = "")
+  public String getRejectMessage() {
+    return rejectMessage;
+  }
+
+  public void setRejectMessage(String rejectMessage) {
+    this.rejectMessage = rejectMessage;
+  }
+
+  public AdvertiserGetListStruct isAdx(Boolean isAdx) {
+    this.isAdx = isAdx;
+    return this;
+  }
+
+  /**
+   * Get isAdx
+   *
+   * @return isAdx
+   */
+  @ApiModelProperty(value = "")
+  public Boolean isIsAdx() {
+    return isAdx;
+  }
+
+  public void setIsAdx(Boolean isAdx) {
+    this.isAdx = isAdx;
+  }
+
+  public AdvertiserGetListStruct businessAlias(String businessAlias) {
+    this.businessAlias = businessAlias;
+    return this;
+  }
+
+  /**
+   * Get businessAlias
+   *
+   * @return businessAlias
+   */
+  @ApiModelProperty(value = "")
+  public String getBusinessAlias() {
+    return businessAlias;
+  }
+
+  public void setBusinessAlias(String businessAlias) {
+    this.businessAlias = businessAlias;
   }
 
   public AdvertiserGetListStruct contactPerson(String contactPerson) {
@@ -468,44 +588,6 @@ public class AdvertiserGetListStruct {
     this.websites = websites;
   }
 
-  public AdvertiserGetListStruct mdmId(Long mdmId) {
-    this.mdmId = mdmId;
-    return this;
-  }
-
-  /**
-   * Get mdmId
-   *
-   * @return mdmId
-   */
-  @ApiModelProperty(value = "")
-  public Long getMdmId() {
-    return mdmId;
-  }
-
-  public void setMdmId(Long mdmId) {
-    this.mdmId = mdmId;
-  }
-
-  public AdvertiserGetListStruct mdmName(String mdmName) {
-    this.mdmName = mdmName;
-    return this;
-  }
-
-  /**
-   * Get mdmName
-   *
-   * @return mdmName
-   */
-  @ApiModelProperty(value = "")
-  public String getMdmName() {
-    return mdmName;
-  }
-
-  public void setMdmName(String mdmName) {
-    this.mdmName = mdmName;
-  }
-
   public AdvertiserGetListStruct agencyAccountId(Long agencyAccountId) {
     this.agencyAccountId = agencyAccountId;
     return this;
@@ -552,44 +634,6 @@ public class AdvertiserGetListStruct {
     this.operators = operators;
   }
 
-  public AdvertiserGetListStruct memo(String memo) {
-    this.memo = memo;
-    return this;
-  }
-
-  /**
-   * Get memo
-   *
-   * @return memo
-   */
-  @ApiModelProperty(value = "")
-  public String getMemo() {
-    return memo;
-  }
-
-  public void setMemo(String memo) {
-    this.memo = memo;
-  }
-
-  public AdvertiserGetListStruct areaCode(Long areaCode) {
-    this.areaCode = areaCode;
-    return this;
-  }
-
-  /**
-   * Get areaCode
-   *
-   * @return areaCode
-   */
-  @ApiModelProperty(value = "")
-  public Long getAreaCode() {
-    return areaCode;
-  }
-
-  public void setAreaCode(Long areaCode) {
-    this.areaCode = areaCode;
-  }
-
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -600,62 +644,66 @@ public class AdvertiserGetListStruct {
     }
     AdvertiserGetListStruct advertiserGetListStruct = (AdvertiserGetListStruct) o;
     return Objects.equals(this.accountId, advertiserGetListStruct.accountId)
-        && Objects.equals(this.registrationType, advertiserGetListStruct.registrationType)
         && Objects.equals(this.dailyBudget, advertiserGetListStruct.dailyBudget)
-        && Objects.equals(this.systemStatus, advertiserGetListStruct.systemStatus)
-        && Objects.equals(this.rejectMessage, advertiserGetListStruct.rejectMessage)
+        && Objects.equals(this.registrationType, advertiserGetListStruct.registrationType)
         && Objects.equals(this.corporationName, advertiserGetListStruct.corporationName)
         && Objects.equals(this.corporationLicence, advertiserGetListStruct.corporationLicence)
         && Objects.equals(this.certificationImageId, advertiserGetListStruct.certificationImageId)
         && Objects.equals(this.certificationImage, advertiserGetListStruct.certificationImage)
         && Objects.equals(
             this.individualQualification, advertiserGetListStruct.individualQualification)
+        && Objects.equals(this.areaCode, advertiserGetListStruct.areaCode)
+        && Objects.equals(this.mdmId, advertiserGetListStruct.mdmId)
+        && Objects.equals(this.mdmName, advertiserGetListStruct.mdmName)
         && Objects.equals(this.systemIndustryId, advertiserGetListStruct.systemIndustryId)
         && Objects.equals(this.customizedIndustry, advertiserGetListStruct.customizedIndustry)
         && Objects.equals(this.introductionUrl, advertiserGetListStruct.introductionUrl)
         && Objects.equals(this.corporateBrandName, advertiserGetListStruct.corporateBrandName)
+        && Objects.equals(this.memo, advertiserGetListStruct.memo)
+        && Objects.equals(this.systemStatus, advertiserGetListStruct.systemStatus)
+        && Objects.equals(this.rejectMessage, advertiserGetListStruct.rejectMessage)
+        && Objects.equals(this.isAdx, advertiserGetListStruct.isAdx)
+        && Objects.equals(this.businessAlias, advertiserGetListStruct.businessAlias)
         && Objects.equals(this.contactPerson, advertiserGetListStruct.contactPerson)
         && Objects.equals(this.contactPersonEmail, advertiserGetListStruct.contactPersonEmail)
         && Objects.equals(
             this.contactPersonTelephone, advertiserGetListStruct.contactPersonTelephone)
         && Objects.equals(this.contactPersonMobile, advertiserGetListStruct.contactPersonMobile)
         && Objects.equals(this.websites, advertiserGetListStruct.websites)
-        && Objects.equals(this.mdmId, advertiserGetListStruct.mdmId)
-        && Objects.equals(this.mdmName, advertiserGetListStruct.mdmName)
         && Objects.equals(this.agencyAccountId, advertiserGetListStruct.agencyAccountId)
-        && Objects.equals(this.operators, advertiserGetListStruct.operators)
-        && Objects.equals(this.memo, advertiserGetListStruct.memo)
-        && Objects.equals(this.areaCode, advertiserGetListStruct.areaCode);
+        && Objects.equals(this.operators, advertiserGetListStruct.operators);
   }
 
   @Override
   public int hashCode() {
     return Objects.hash(
         accountId,
-        registrationType,
         dailyBudget,
-        systemStatus,
-        rejectMessage,
+        registrationType,
         corporationName,
         corporationLicence,
         certificationImageId,
         certificationImage,
         individualQualification,
+        areaCode,
+        mdmId,
+        mdmName,
         systemIndustryId,
         customizedIndustry,
         introductionUrl,
         corporateBrandName,
+        memo,
+        systemStatus,
+        rejectMessage,
+        isAdx,
+        businessAlias,
         contactPerson,
         contactPersonEmail,
         contactPersonTelephone,
         contactPersonMobile,
         websites,
-        mdmId,
-        mdmName,
         agencyAccountId,
-        operators,
-        memo,
-        areaCode);
+        operators);
   }
 
   @Override

@@ -56,6 +56,9 @@ public class AdcreativeTemplateStructAdpermit {
   @SerializedName("support_mpa_video_template")
   private Boolean supportMpaVideoTemplate = null;
 
+  @SerializedName("creative_permissions")
+  private CreativePermissions creativePermissions = null;
+
   public AdcreativeTemplateStructAdpermit creativeTemplateId(Long creativeTemplateId) {
     this.creativeTemplateId = creativeTemplateId;
     return this;
@@ -297,6 +300,26 @@ public class AdcreativeTemplateStructAdpermit {
     this.supportMpaVideoTemplate = supportMpaVideoTemplate;
   }
 
+  public AdcreativeTemplateStructAdpermit creativePermissions(
+      CreativePermissions creativePermissions) {
+    this.creativePermissions = creativePermissions;
+    return this;
+  }
+
+  /**
+   * Get creativePermissions
+   *
+   * @return creativePermissions
+   */
+  @ApiModelProperty(value = "")
+  public CreativePermissions getCreativePermissions() {
+    return creativePermissions;
+  }
+
+  public void setCreativePermissions(CreativePermissions creativePermissions) {
+    this.creativePermissions = creativePermissions;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -329,7 +352,9 @@ public class AdcreativeTemplateStructAdpermit {
         && Objects.equals(
             this.supportMpaImageTemplate, adcreativeTemplateStructAdpermit.supportMpaImageTemplate)
         && Objects.equals(
-            this.supportMpaVideoTemplate, adcreativeTemplateStructAdpermit.supportMpaVideoTemplate);
+            this.supportMpaVideoTemplate, adcreativeTemplateStructAdpermit.supportMpaVideoTemplate)
+        && Objects.equals(
+            this.creativePermissions, adcreativeTemplateStructAdpermit.creativePermissions);
   }
 
   @Override
@@ -345,7 +370,8 @@ public class AdcreativeTemplateStructAdpermit {
         supportDynamicAbilitySpecList,
         supportMpa,
         supportMpaImageTemplate,
-        supportMpaVideoTemplate);
+        supportMpaVideoTemplate,
+        creativePermissions);
   }
 
   @Override

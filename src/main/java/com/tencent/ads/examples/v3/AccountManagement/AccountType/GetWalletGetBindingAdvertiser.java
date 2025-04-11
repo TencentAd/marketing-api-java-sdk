@@ -18,6 +18,10 @@ public class GetWalletGetBindingAdvertiser {
 
   public Long walletId = null;
 
+  public Long page = null;
+
+  public Long pageSize = null;
+
   public List<String> fields = null;
 
   public void init() {
@@ -35,7 +39,7 @@ public class GetWalletGetBindingAdvertiser {
     WalletGetBindingAdvertiserGetResponseData response =
         tencentAds
             .walletGetBindingAdvertiser()
-            .walletGetBindingAdvertiserGet(accountId, walletId, fields);
+            .walletGetBindingAdvertiserGet(accountId, walletId, page, pageSize, fields);
     return response;
   }
 

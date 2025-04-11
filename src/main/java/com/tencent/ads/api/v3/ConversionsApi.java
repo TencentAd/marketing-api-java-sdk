@@ -221,7 +221,7 @@ public class ConversionsApi {
    * @param filtering (optional)
    * @param page (optional)
    * @param pageSize (optional)
-   * @param fields 返回参数的字段列表 (optional)
+   * @param fields (optional)
    * @param progressListener Progress listener
    * @param progressRequestListener Progress request listener
    * @return Call to execute
@@ -343,7 +343,7 @@ public class ConversionsApi {
    * @param filtering (optional)
    * @param page (optional)
    * @param pageSize (optional)
-   * @param fields 返回参数的字段列表 (optional)
+   * @param fields (optional)
    * @return ConversionsGetResponse
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
@@ -368,7 +368,7 @@ public class ConversionsApi {
    * @param filtering (optional)
    * @param page (optional)
    * @param pageSize (optional)
-   * @param fields 返回参数的字段列表 (optional)
+   * @param fields (optional)
    * @return ApiResponse&lt;ConversionsGetResponse&gt;
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
@@ -395,7 +395,7 @@ public class ConversionsApi {
    * @param filtering (optional)
    * @param page (optional)
    * @param pageSize (optional)
-   * @param fields 返回参数的字段列表 (optional)
+   * @param fields (optional)
    * @param callback The callback to be executed when the API call finishes
    * @return The request call
    * @throws ApiException If fail to process the API call, e.g. serializing the request body object

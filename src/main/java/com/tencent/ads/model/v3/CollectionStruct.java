@@ -27,6 +27,9 @@ public class CollectionStruct {
   @SerializedName("user_id_type")
   private ViewerIdType userIdType = null;
 
+  @SerializedName("is_previewed")
+  private Boolean isPreviewed = null;
+
   public CollectionStruct userId(String userId) {
     this.userId = userId;
     return this;
@@ -65,6 +68,25 @@ public class CollectionStruct {
     this.userIdType = userIdType;
   }
 
+  public CollectionStruct isPreviewed(Boolean isPreviewed) {
+    this.isPreviewed = isPreviewed;
+    return this;
+  }
+
+  /**
+   * Get isPreviewed
+   *
+   * @return isPreviewed
+   */
+  @ApiModelProperty(value = "")
+  public Boolean isIsPreviewed() {
+    return isPreviewed;
+  }
+
+  public void setIsPreviewed(Boolean isPreviewed) {
+    this.isPreviewed = isPreviewed;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -75,12 +97,13 @@ public class CollectionStruct {
     }
     CollectionStruct collectionStruct = (CollectionStruct) o;
     return Objects.equals(this.userId, collectionStruct.userId)
-        && Objects.equals(this.userIdType, collectionStruct.userIdType);
+        && Objects.equals(this.userIdType, collectionStruct.userIdType)
+        && Objects.equals(this.isPreviewed, collectionStruct.isPreviewed);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(userId, userIdType);
+    return Objects.hash(userId, userIdType, isPreviewed);
   }
 
   @Override

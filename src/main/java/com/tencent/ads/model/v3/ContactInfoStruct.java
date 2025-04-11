@@ -27,6 +27,9 @@ public class ContactInfoStruct {
   @SerializedName("contact")
   private String contact = null;
 
+  @SerializedName("status")
+  private Long status = null;
+
   public ContactInfoStruct avatarName(String avatarName) {
     this.avatarName = avatarName;
     return this;
@@ -65,6 +68,25 @@ public class ContactInfoStruct {
     this.contact = contact;
   }
 
+  public ContactInfoStruct status(Long status) {
+    this.status = status;
+    return this;
+  }
+
+  /**
+   * Get status
+   *
+   * @return status
+   */
+  @ApiModelProperty(value = "")
+  public Long getStatus() {
+    return status;
+  }
+
+  public void setStatus(Long status) {
+    this.status = status;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -75,12 +97,13 @@ public class ContactInfoStruct {
     }
     ContactInfoStruct contactInfoStruct = (ContactInfoStruct) o;
     return Objects.equals(this.avatarName, contactInfoStruct.avatarName)
-        && Objects.equals(this.contact, contactInfoStruct.contact);
+        && Objects.equals(this.contact, contactInfoStruct.contact)
+        && Objects.equals(this.status, contactInfoStruct.status);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(avatarName, contact);
+    return Objects.hash(avatarName, contact, status);
   }
 
   @Override

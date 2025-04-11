@@ -197,6 +197,9 @@ public class App {
   @Inject VideosApiContainer videosApiContainer;
   @Inject WalletApiContainer walletApiContainer;
   @Inject WalletBasicInfoApiContainer walletBasicInfoApiContainer;
+  @Inject WalletBindAdvertiserApiContainer walletBindAdvertiserApiContainer;
+  @Inject WalletCreateApiContainer walletCreateApiContainer;
+  @Inject WalletEditApiContainer walletEditApiContainer;
   @Inject WalletGetBindingAdvertiserApiContainer walletGetBindingAdvertiserApiContainer;
   @Inject WalletInvoiceApiContainer walletInvoiceApiContainer;
   @Inject WalletTransferApiContainer walletTransferApiContainer;
@@ -918,6 +921,18 @@ public class App {
 
   public WalletBasicInfoApiContainer walletBasicInfo() {
     return walletBasicInfoApiContainer;
+  }
+
+  public WalletBindAdvertiserApiContainer walletBindAdvertiser() {
+    return walletBindAdvertiserApiContainer;
+  }
+
+  public WalletCreateApiContainer walletCreate() {
+    return walletCreateApiContainer;
+  }
+
+  public WalletEditApiContainer walletEdit() {
+    return walletEditApiContainer;
   }
 
   public WalletGetBindingAdvertiserApiContainer walletGetBindingAdvertiser() {

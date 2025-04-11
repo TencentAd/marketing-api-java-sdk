@@ -61,6 +61,7 @@ public class CreativeTemplateApi {
    * @param siteSet (optional)
    * @param dynamicCreativeType (optional)
    * @param creativeTemplateId (optional)
+   * @param useNewVersion (optional)
    * @param fields 返回参数的字段列表 (optional)
    * @param progressListener Progress listener
    * @param progressRequestListener Progress request listener
@@ -78,6 +79,7 @@ public class CreativeTemplateApi {
       List<String> siteSet,
       String dynamicCreativeType,
       Long creativeTemplateId,
+      Boolean useNewVersion,
       List<String> fields,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
@@ -117,6 +119,8 @@ public class CreativeTemplateApi {
     if (creativeTemplateId != null)
       localVarQueryParams.addAll(
           apiClient.parameterToPair("creative_template_id", creativeTemplateId));
+    if (useNewVersion != null)
+      localVarQueryParams.addAll(apiClient.parameterToPair("use_new_version", useNewVersion));
     if (fields != null)
       localVarCollectionQueryParams.addAll(apiClient.parameterToPairs("multi", "fields", fields));
 
@@ -181,6 +185,7 @@ public class CreativeTemplateApi {
       List<String> siteSet,
       String dynamicCreativeType,
       Long creativeTemplateId,
+      Boolean useNewVersion,
       List<String> fields,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
@@ -229,6 +234,7 @@ public class CreativeTemplateApi {
             siteSet,
             dynamicCreativeType,
             creativeTemplateId,
+            useNewVersion,
             fields,
             progressListener,
             progressRequestListener,
@@ -249,6 +255,7 @@ public class CreativeTemplateApi {
    * @param siteSet (optional)
    * @param dynamicCreativeType (optional)
    * @param creativeTemplateId (optional)
+   * @param useNewVersion (optional)
    * @param fields 返回参数的字段列表 (optional)
    * @return CreativeTemplateGetResponse
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
@@ -265,6 +272,7 @@ public class CreativeTemplateApi {
       List<String> siteSet,
       String dynamicCreativeType,
       Long creativeTemplateId,
+      Boolean useNewVersion,
       List<String> fields,
       Pair... headerPair)
       throws ApiException {
@@ -280,6 +288,7 @@ public class CreativeTemplateApi {
             siteSet,
             dynamicCreativeType,
             creativeTemplateId,
+            useNewVersion,
             fields,
             headerPair);
     return resp.getData();
@@ -298,6 +307,7 @@ public class CreativeTemplateApi {
    * @param siteSet (optional)
    * @param dynamicCreativeType (optional)
    * @param creativeTemplateId (optional)
+   * @param useNewVersion (optional)
    * @param fields 返回参数的字段列表 (optional)
    * @return ApiResponse&lt;CreativeTemplateGetResponse&gt;
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
@@ -314,6 +324,7 @@ public class CreativeTemplateApi {
       List<String> siteSet,
       String dynamicCreativeType,
       Long creativeTemplateId,
+      Boolean useNewVersion,
       List<String> fields,
       Pair... headerPair)
       throws ApiException {
@@ -329,6 +340,7 @@ public class CreativeTemplateApi {
             siteSet,
             dynamicCreativeType,
             creativeTemplateId,
+            useNewVersion,
             fields,
             null,
             null,
@@ -350,6 +362,7 @@ public class CreativeTemplateApi {
    * @param siteSet (optional)
    * @param dynamicCreativeType (optional)
    * @param creativeTemplateId (optional)
+   * @param useNewVersion (optional)
    * @param fields 返回参数的字段列表 (optional)
    * @param callback The callback to be executed when the API call finishes
    * @return The request call
@@ -366,6 +379,7 @@ public class CreativeTemplateApi {
       List<String> siteSet,
       String dynamicCreativeType,
       Long creativeTemplateId,
+      Boolean useNewVersion,
       List<String> fields,
       final ApiCallback<CreativeTemplateGetResponse> callback,
       Pair... headerPair)
@@ -404,6 +418,7 @@ public class CreativeTemplateApi {
             siteSet,
             dynamicCreativeType,
             creativeTemplateId,
+            useNewVersion,
             fields,
             progressListener,
             progressRequestListener,

@@ -2055,6 +2055,12 @@ public class TargetingTagReportsGetListStruct {
   @SerializedName("reg_pv")
   private Long regPv = null;
 
+  @SerializedName("order_pv")
+  private Long orderPv = null;
+
+  @SerializedName("order_uv")
+  private Long orderUv = null;
+
   public TargetingTagReportsGetListStruct date(String date) {
     this.date = date;
     return this;
@@ -15031,6 +15037,44 @@ public class TargetingTagReportsGetListStruct {
     this.regPv = regPv;
   }
 
+  public TargetingTagReportsGetListStruct orderPv(Long orderPv) {
+    this.orderPv = orderPv;
+    return this;
+  }
+
+  /**
+   * Get orderPv
+   *
+   * @return orderPv
+   */
+  @ApiModelProperty(value = "")
+  public Long getOrderPv() {
+    return orderPv;
+  }
+
+  public void setOrderPv(Long orderPv) {
+    this.orderPv = orderPv;
+  }
+
+  public TargetingTagReportsGetListStruct orderUv(Long orderUv) {
+    this.orderUv = orderUv;
+    return this;
+  }
+
+  /**
+   * Get orderUv
+   *
+   * @return orderUv
+   */
+  @ApiModelProperty(value = "")
+  public Long getOrderUv() {
+    return orderUv;
+  }
+
+  public void setOrderUv(Long orderUv) {
+    this.orderUv = orderUv;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -16215,7 +16259,9 @@ public class TargetingTagReportsGetListStruct {
         && Objects.equals(this.projectId, targetingTagReportsGetListStruct.projectId)
         && Objects.equals(this.projectName, targetingTagReportsGetListStruct.projectName)
         && Objects.equals(this.purchasePv, targetingTagReportsGetListStruct.purchasePv)
-        && Objects.equals(this.regPv, targetingTagReportsGetListStruct.regPv);
+        && Objects.equals(this.regPv, targetingTagReportsGetListStruct.regPv)
+        && Objects.equals(this.orderPv, targetingTagReportsGetListStruct.orderPv)
+        && Objects.equals(this.orderUv, targetingTagReportsGetListStruct.orderUv);
   }
 
   @Override
@@ -16898,7 +16944,9 @@ public class TargetingTagReportsGetListStruct {
         projectId,
         projectName,
         purchasePv,
-        regPv);
+        regPv,
+        orderPv,
+        orderUv);
   }
 
   @Override

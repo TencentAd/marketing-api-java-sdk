@@ -16,6 +16,10 @@ public class GetAgencyWalletList {
 
   public Long accountId = null;
 
+  public Long page = null;
+
+  public Long pageSize = null;
+
   public Long mdmId = null;
 
   public Long walletId = null;
@@ -34,7 +38,9 @@ public class GetAgencyWalletList {
 
   public AgencyWalletListGetResponseData getAgencyWalletList() throws Exception {
     AgencyWalletListGetResponseData response =
-        tencentAds.agencyWalletList().agencyWalletListGet(accountId, mdmId, walletId, fields);
+        tencentAds
+            .agencyWalletList()
+            .agencyWalletListGet(accountId, page, pageSize, mdmId, walletId, fields);
     return response;
   }
 

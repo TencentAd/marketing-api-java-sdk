@@ -2328,6 +2328,15 @@ public class HourlyReportApiListStruct {
   @SerializedName("clk_learn_more_pv")
   private Long clkLearnMorePv = null;
 
+  @SerializedName("open_account_pv")
+  private Long openAccountPv = null;
+
+  @SerializedName("open_account_pv_cost")
+  private Long openAccountPvCost = null;
+
+  @SerializedName("video_outer_play5s_rate")
+  private Double videoOuterPlay5sRate = null;
+
   @SerializedName("adgroup_id")
   private Long adgroupId = null;
 
@@ -17056,6 +17065,63 @@ public class HourlyReportApiListStruct {
     this.clkLearnMorePv = clkLearnMorePv;
   }
 
+  public HourlyReportApiListStruct openAccountPv(Long openAccountPv) {
+    this.openAccountPv = openAccountPv;
+    return this;
+  }
+
+  /**
+   * Get openAccountPv
+   *
+   * @return openAccountPv
+   */
+  @ApiModelProperty(value = "")
+  public Long getOpenAccountPv() {
+    return openAccountPv;
+  }
+
+  public void setOpenAccountPv(Long openAccountPv) {
+    this.openAccountPv = openAccountPv;
+  }
+
+  public HourlyReportApiListStruct openAccountPvCost(Long openAccountPvCost) {
+    this.openAccountPvCost = openAccountPvCost;
+    return this;
+  }
+
+  /**
+   * Get openAccountPvCost
+   *
+   * @return openAccountPvCost
+   */
+  @ApiModelProperty(value = "")
+  public Long getOpenAccountPvCost() {
+    return openAccountPvCost;
+  }
+
+  public void setOpenAccountPvCost(Long openAccountPvCost) {
+    this.openAccountPvCost = openAccountPvCost;
+  }
+
+  public HourlyReportApiListStruct videoOuterPlay5sRate(Double videoOuterPlay5sRate) {
+    this.videoOuterPlay5sRate = videoOuterPlay5sRate;
+    return this;
+  }
+
+  /**
+   * Get videoOuterPlay5sRate
+   *
+   * @return videoOuterPlay5sRate
+   */
+  @ApiModelProperty(value = "")
+  public Double getVideoOuterPlay5sRate() {
+    return videoOuterPlay5sRate;
+  }
+
+  public void setVideoOuterPlay5sRate(Double videoOuterPlay5sRate) {
+    this.videoOuterPlay5sRate = videoOuterPlay5sRate;
+  }
+
   public HourlyReportApiListStruct adgroupId(Long adgroupId) {
     this.adgroupId = adgroupId;
     return this;
@@ -18513,6 +18579,9 @@ public class HourlyReportApiListStruct {
         && Objects.equals(this.clkWechatShopPv, hourlyReportApiListStruct.clkWechatShopPv)
         && Objects.equals(this.clkTopicinfoPv, hourlyReportApiListStruct.clkTopicinfoPv)
         && Objects.equals(this.clkLearnMorePv, hourlyReportApiListStruct.clkLearnMorePv)
+        && Objects.equals(this.openAccountPv, hourlyReportApiListStruct.openAccountPv)
+        && Objects.equals(this.openAccountPvCost, hourlyReportApiListStruct.openAccountPvCost)
+        && Objects.equals(this.videoOuterPlay5sRate, hourlyReportApiListStruct.videoOuterPlay5sRate)
         && Objects.equals(this.adgroupId, hourlyReportApiListStruct.adgroupId)
         && Objects.equals(this.adgroupName, hourlyReportApiListStruct.adgroupName)
         && Objects.equals(this.dynamicCreativeId, hourlyReportApiListStruct.dynamicCreativeId)
@@ -19303,6 +19372,9 @@ public class HourlyReportApiListStruct {
         clkWechatShopPv,
         clkTopicinfoPv,
         clkLearnMorePv,
+        openAccountPv,
+        openAccountPvCost,
+        videoOuterPlay5sRate,
         adgroupId,
         adgroupName,
         dynamicCreativeId,

@@ -51,8 +51,17 @@ public class ComponentsGetListStruct {
   @SerializedName("is_deleted")
   private Boolean isDeleted = null;
 
+  @SerializedName("similarity_status")
+  private SimilarityStatus similarityStatus = null;
+
   @SerializedName("potential_status")
   private CommonPotentialStatus potentialStatus = null;
+
+  @SerializedName("disable_message")
+  private String disableMessage = null;
+
+  @SerializedName("first_publication_status")
+  private FirstPublicationStatus firstPublicationStatus = null;
 
   public ComponentsGetListStruct accountId(Long accountId) {
     this.accountId = accountId;
@@ -244,6 +253,25 @@ public class ComponentsGetListStruct {
     this.isDeleted = isDeleted;
   }
 
+  public ComponentsGetListStruct similarityStatus(SimilarityStatus similarityStatus) {
+    this.similarityStatus = similarityStatus;
+    return this;
+  }
+
+  /**
+   * Get similarityStatus
+   *
+   * @return similarityStatus
+   */
+  @ApiModelProperty(value = "")
+  public SimilarityStatus getSimilarityStatus() {
+    return similarityStatus;
+  }
+
+  public void setSimilarityStatus(SimilarityStatus similarityStatus) {
+    this.similarityStatus = similarityStatus;
+  }
+
   public ComponentsGetListStruct potentialStatus(CommonPotentialStatus potentialStatus) {
     this.potentialStatus = potentialStatus;
     return this;
@@ -261,6 +289,45 @@ public class ComponentsGetListStruct {
 
   public void setPotentialStatus(CommonPotentialStatus potentialStatus) {
     this.potentialStatus = potentialStatus;
+  }
+
+  public ComponentsGetListStruct disableMessage(String disableMessage) {
+    this.disableMessage = disableMessage;
+    return this;
+  }
+
+  /**
+   * Get disableMessage
+   *
+   * @return disableMessage
+   */
+  @ApiModelProperty(value = "")
+  public String getDisableMessage() {
+    return disableMessage;
+  }
+
+  public void setDisableMessage(String disableMessage) {
+    this.disableMessage = disableMessage;
+  }
+
+  public ComponentsGetListStruct firstPublicationStatus(
+      FirstPublicationStatus firstPublicationStatus) {
+    this.firstPublicationStatus = firstPublicationStatus;
+    return this;
+  }
+
+  /**
+   * Get firstPublicationStatus
+   *
+   * @return firstPublicationStatus
+   */
+  @ApiModelProperty(value = "")
+  public FirstPublicationStatus getFirstPublicationStatus() {
+    return firstPublicationStatus;
+  }
+
+  public void setFirstPublicationStatus(FirstPublicationStatus firstPublicationStatus) {
+    this.firstPublicationStatus = firstPublicationStatus;
   }
 
   @Override
@@ -282,7 +349,11 @@ public class ComponentsGetListStruct {
         && Objects.equals(this.componentCustomName, componentsGetListStruct.componentCustomName)
         && Objects.equals(this.generationType, componentsGetListStruct.generationType)
         && Objects.equals(this.isDeleted, componentsGetListStruct.isDeleted)
-        && Objects.equals(this.potentialStatus, componentsGetListStruct.potentialStatus);
+        && Objects.equals(this.similarityStatus, componentsGetListStruct.similarityStatus)
+        && Objects.equals(this.potentialStatus, componentsGetListStruct.potentialStatus)
+        && Objects.equals(this.disableMessage, componentsGetListStruct.disableMessage)
+        && Objects.equals(
+            this.firstPublicationStatus, componentsGetListStruct.firstPublicationStatus);
   }
 
   @Override
@@ -298,7 +369,10 @@ public class ComponentsGetListStruct {
         componentCustomName,
         generationType,
         isDeleted,
-        potentialStatus);
+        similarityStatus,
+        potentialStatus,
+        disableMessage,
+        firstPublicationStatus);
   }
 
   @Override

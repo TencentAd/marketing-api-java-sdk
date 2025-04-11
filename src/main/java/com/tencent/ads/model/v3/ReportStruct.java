@@ -2328,6 +2328,15 @@ public class ReportStruct {
   @SerializedName("clk_learn_more_pv")
   private Long clkLearnMorePv = null;
 
+  @SerializedName("open_account_pv")
+  private Long openAccountPv = null;
+
+  @SerializedName("open_account_pv_cost")
+  private Long openAccountPvCost = null;
+
+  @SerializedName("video_outer_play5s_rate")
+  private Double videoOuterPlay5sRate = null;
+
   @SerializedName("adgroup_id")
   private Long adgroupId = null;
 
@@ -17144,6 +17153,63 @@ public class ReportStruct {
     this.clkLearnMorePv = clkLearnMorePv;
   }
 
+  public ReportStruct openAccountPv(Long openAccountPv) {
+    this.openAccountPv = openAccountPv;
+    return this;
+  }
+
+  /**
+   * Get openAccountPv
+   *
+   * @return openAccountPv
+   */
+  @ApiModelProperty(value = "")
+  public Long getOpenAccountPv() {
+    return openAccountPv;
+  }
+
+  public void setOpenAccountPv(Long openAccountPv) {
+    this.openAccountPv = openAccountPv;
+  }
+
+  public ReportStruct openAccountPvCost(Long openAccountPvCost) {
+    this.openAccountPvCost = openAccountPvCost;
+    return this;
+  }
+
+  /**
+   * Get openAccountPvCost
+   *
+   * @return openAccountPvCost
+   */
+  @ApiModelProperty(value = "")
+  public Long getOpenAccountPvCost() {
+    return openAccountPvCost;
+  }
+
+  public void setOpenAccountPvCost(Long openAccountPvCost) {
+    this.openAccountPvCost = openAccountPvCost;
+  }
+
+  public ReportStruct videoOuterPlay5sRate(Double videoOuterPlay5sRate) {
+    this.videoOuterPlay5sRate = videoOuterPlay5sRate;
+    return this;
+  }
+
+  /**
+   * Get videoOuterPlay5sRate
+   *
+   * @return videoOuterPlay5sRate
+   */
+  @ApiModelProperty(value = "")
+  public Double getVideoOuterPlay5sRate() {
+    return videoOuterPlay5sRate;
+  }
+
+  public void setVideoOuterPlay5sRate(Double videoOuterPlay5sRate) {
+    this.videoOuterPlay5sRate = videoOuterPlay5sRate;
+  }
+
   public ReportStruct adgroupId(Long adgroupId) {
     this.adgroupId = adgroupId;
     return this;
@@ -19194,6 +19260,9 @@ public class ReportStruct {
         && Objects.equals(this.clkWechatShopPv, reportStruct.clkWechatShopPv)
         && Objects.equals(this.clkTopicinfoPv, reportStruct.clkTopicinfoPv)
         && Objects.equals(this.clkLearnMorePv, reportStruct.clkLearnMorePv)
+        && Objects.equals(this.openAccountPv, reportStruct.openAccountPv)
+        && Objects.equals(this.openAccountPvCost, reportStruct.openAccountPvCost)
+        && Objects.equals(this.videoOuterPlay5sRate, reportStruct.videoOuterPlay5sRate)
         && Objects.equals(this.adgroupId, reportStruct.adgroupId)
         && Objects.equals(this.adgroupName, reportStruct.adgroupName)
         && Objects.equals(this.dynamicCreativeId, reportStruct.dynamicCreativeId)
@@ -20030,6 +20099,9 @@ public class ReportStruct {
         clkWechatShopPv,
         clkTopicinfoPv,
         clkLearnMorePv,
+        openAccountPv,
+        openAccountPvCost,
+        videoOuterPlay5sRate,
         adgroupId,
         adgroupName,
         dynamicCreativeId,

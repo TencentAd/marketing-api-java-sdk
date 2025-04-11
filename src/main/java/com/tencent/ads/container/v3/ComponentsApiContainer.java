@@ -75,6 +75,7 @@ public class ComponentsApiContainer extends ApiContainer {
    * @param pageSize (optional)
    * @param isDeleted (optional)
    * @param fields (optional)
+   * @param componentIdFilteringMode (optional)
    * @return ComponentsGetResponse
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
@@ -87,11 +88,20 @@ public class ComponentsApiContainer extends ApiContainer {
       Long pageSize,
       Boolean isDeleted,
       List<String> fields,
+      String componentIdFilteringMode,
       Pair... headerPair)
       throws ApiException, TencentAdsResponseException {
     ComponentsGetResponse resp =
         api.componentsGet(
-            accountId, organizationId, filtering, page, pageSize, isDeleted, fields, headerPair);
+            accountId,
+            organizationId,
+            filtering,
+            page,
+            pageSize,
+            isDeleted,
+            fields,
+            componentIdFilteringMode,
+            headerPair);
     handleResponse(gson.toJson(resp));
     return resp.getData();
   }

@@ -53,7 +53,7 @@ public class ConversionsApiContainer extends ApiContainer {
    * @param filtering (optional)
    * @param page (optional)
    * @param pageSize (optional)
-   * @param fields 返回参数的字段列表 (optional)
+   * @param fields (optional)
    * @return ConversionsGetResponse
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body

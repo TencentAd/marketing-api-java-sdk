@@ -2406,6 +2406,12 @@ public class DailyReportsGetListStruct {
   @SerializedName("reg_pv")
   private Long regPv = null;
 
+  @SerializedName("order_pv")
+  private Long orderPv = null;
+
+  @SerializedName("order_uv")
+  private Long orderUv = null;
+
   public DailyReportsGetListStruct accountId(Long accountId) {
     this.accountId = accountId;
     return this;
@@ -17564,6 +17570,44 @@ public class DailyReportsGetListStruct {
     this.regPv = regPv;
   }
 
+  public DailyReportsGetListStruct orderPv(Long orderPv) {
+    this.orderPv = orderPv;
+    return this;
+  }
+
+  /**
+   * Get orderPv
+   *
+   * @return orderPv
+   */
+  @ApiModelProperty(value = "")
+  public Long getOrderPv() {
+    return orderPv;
+  }
+
+  public void setOrderPv(Long orderPv) {
+    this.orderPv = orderPv;
+  }
+
+  public DailyReportsGetListStruct orderUv(Long orderUv) {
+    this.orderUv = orderUv;
+    return this;
+  }
+
+  /**
+   * Get orderUv
+   *
+   * @return orderUv
+   */
+  @ApiModelProperty(value = "")
+  public Long getOrderUv() {
+    return orderUv;
+  }
+
+  public void setOrderUv(Long orderUv) {
+    this.orderUv = orderUv;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -18699,7 +18743,9 @@ public class DailyReportsGetListStruct {
         && Objects.equals(this.projectId, dailyReportsGetListStruct.projectId)
         && Objects.equals(this.projectName, dailyReportsGetListStruct.projectName)
         && Objects.equals(this.purchasePv, dailyReportsGetListStruct.purchasePv)
-        && Objects.equals(this.regPv, dailyReportsGetListStruct.regPv);
+        && Objects.equals(this.regPv, dailyReportsGetListStruct.regPv)
+        && Objects.equals(this.orderPv, dailyReportsGetListStruct.orderPv)
+        && Objects.equals(this.orderUv, dailyReportsGetListStruct.orderUv);
   }
 
   @Override
@@ -19499,7 +19545,9 @@ public class DailyReportsGetListStruct {
         projectId,
         projectName,
         purchasePv,
-        regPv);
+        regPv,
+        orderPv,
+        orderUv);
   }
 
   @Override

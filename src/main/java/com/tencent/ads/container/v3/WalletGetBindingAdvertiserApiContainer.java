@@ -32,16 +32,23 @@ public class WalletGetBindingAdvertiserApiContainer extends ApiContainer {
    *
    * @param accountId (required)
    * @param walletId (required)
+   * @param page (required)
+   * @param pageSize (required)
    * @param fields 返回参数的字段列表 (optional)
    * @return WalletGetBindingAdvertiserGetResponse
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
   public WalletGetBindingAdvertiserGetResponseData walletGetBindingAdvertiserGet(
-      Long accountId, Long walletId, List<String> fields, Pair... headerPair)
+      Long accountId,
+      Long walletId,
+      Long page,
+      Long pageSize,
+      List<String> fields,
+      Pair... headerPair)
       throws ApiException, TencentAdsResponseException {
     WalletGetBindingAdvertiserGetResponse resp =
-        api.walletGetBindingAdvertiserGet(accountId, walletId, fields, headerPair);
+        api.walletGetBindingAdvertiserGet(accountId, walletId, page, pageSize, fields, headerPair);
     handleResponse(gson.toJson(resp));
     return resp.getData();
   }

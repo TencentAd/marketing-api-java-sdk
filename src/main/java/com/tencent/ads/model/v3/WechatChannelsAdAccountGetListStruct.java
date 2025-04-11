@@ -68,6 +68,9 @@ public class WechatChannelsAdAccountGetListStruct {
   @SerializedName("wechat_channels_account_id")
   private String wechatChannelsAccountId = null;
 
+  @SerializedName("logout_time_second")
+  private Long logoutTimeSecond = null;
+
   public WechatChannelsAdAccountGetListStruct wechatChannelsAdAccountId(
       Long wechatChannelsAdAccountId) {
     this.wechatChannelsAdAccountId = wechatChannelsAdAccountId;
@@ -366,6 +369,25 @@ public class WechatChannelsAdAccountGetListStruct {
     this.wechatChannelsAccountId = wechatChannelsAccountId;
   }
 
+  public WechatChannelsAdAccountGetListStruct logoutTimeSecond(Long logoutTimeSecond) {
+    this.logoutTimeSecond = logoutTimeSecond;
+    return this;
+  }
+
+  /**
+   * Get logoutTimeSecond
+   *
+   * @return logoutTimeSecond
+   */
+  @ApiModelProperty(value = "")
+  public Long getLogoutTimeSecond() {
+    return logoutTimeSecond;
+  }
+
+  public void setLogoutTimeSecond(Long logoutTimeSecond) {
+    this.logoutTimeSecond = logoutTimeSecond;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -398,7 +420,9 @@ public class WechatChannelsAdAccountGetListStruct {
         && Objects.equals(this.finderFailRet, wechatChannelsAdAccountGetListStruct.finderFailRet)
         && Objects.equals(
             this.wechatChannelsAccountId,
-            wechatChannelsAdAccountGetListStruct.wechatChannelsAccountId);
+            wechatChannelsAdAccountGetListStruct.wechatChannelsAccountId)
+        && Objects.equals(
+            this.logoutTimeSecond, wechatChannelsAdAccountGetListStruct.logoutTimeSecond);
   }
 
   @Override
@@ -418,7 +442,8 @@ public class WechatChannelsAdAccountGetListStruct {
         lastModifiedTime,
         finderFailMsg,
         finderFailRet,
-        wechatChannelsAccountId);
+        wechatChannelsAccountId,
+        logoutTimeSecond);
   }
 
   @Override

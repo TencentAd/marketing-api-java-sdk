@@ -27,9 +27,6 @@ public class AdvertiserUpdateRequest {
   @SerializedName("daily_budget")
   private Long dailyBudget = null;
 
-  @SerializedName("system_industry_id")
-  private Long systemIndustryId = null;
-
   @SerializedName("corporation_name")
   private String corporationName = null;
 
@@ -45,6 +42,9 @@ public class AdvertiserUpdateRequest {
   @SerializedName("area_code")
   private Long areaCode = null;
 
+  @SerializedName("system_industry_id")
+  private Long systemIndustryId = null;
+
   @SerializedName("introduction_url")
   private String introductionUrl = null;
 
@@ -56,6 +56,9 @@ public class AdvertiserUpdateRequest {
 
   @SerializedName("contact_person_mobile")
   private String contactPersonMobile = null;
+
+  @SerializedName("business_alias")
+  private String businessAlias = null;
 
   @SerializedName("websites")
   private List<WebsiteUpdateStruct> websites = null;
@@ -96,25 +99,6 @@ public class AdvertiserUpdateRequest {
 
   public void setDailyBudget(Long dailyBudget) {
     this.dailyBudget = dailyBudget;
-  }
-
-  public AdvertiserUpdateRequest systemIndustryId(Long systemIndustryId) {
-    this.systemIndustryId = systemIndustryId;
-    return this;
-  }
-
-  /**
-   * Get systemIndustryId
-   *
-   * @return systemIndustryId
-   */
-  @ApiModelProperty(value = "")
-  public Long getSystemIndustryId() {
-    return systemIndustryId;
-  }
-
-  public void setSystemIndustryId(Long systemIndustryId) {
-    this.systemIndustryId = systemIndustryId;
   }
 
   public AdvertiserUpdateRequest corporationName(String corporationName) {
@@ -213,6 +197,25 @@ public class AdvertiserUpdateRequest {
     this.areaCode = areaCode;
   }
 
+  public AdvertiserUpdateRequest systemIndustryId(Long systemIndustryId) {
+    this.systemIndustryId = systemIndustryId;
+    return this;
+  }
+
+  /**
+   * Get systemIndustryId
+   *
+   * @return systemIndustryId
+   */
+  @ApiModelProperty(value = "")
+  public Long getSystemIndustryId() {
+    return systemIndustryId;
+  }
+
+  public void setSystemIndustryId(Long systemIndustryId) {
+    this.systemIndustryId = systemIndustryId;
+  }
+
   public AdvertiserUpdateRequest introductionUrl(String introductionUrl) {
     this.introductionUrl = introductionUrl;
     return this;
@@ -289,6 +292,25 @@ public class AdvertiserUpdateRequest {
     this.contactPersonMobile = contactPersonMobile;
   }
 
+  public AdvertiserUpdateRequest businessAlias(String businessAlias) {
+    this.businessAlias = businessAlias;
+    return this;
+  }
+
+  /**
+   * Get businessAlias
+   *
+   * @return businessAlias
+   */
+  @ApiModelProperty(value = "")
+  public String getBusinessAlias() {
+    return businessAlias;
+  }
+
+  public void setBusinessAlias(String businessAlias) {
+    this.businessAlias = businessAlias;
+  }
+
   public AdvertiserUpdateRequest websites(List<WebsiteUpdateStruct> websites) {
     this.websites = websites;
     return this;
@@ -327,18 +349,19 @@ public class AdvertiserUpdateRequest {
     AdvertiserUpdateRequest advertiserUpdateRequest = (AdvertiserUpdateRequest) o;
     return Objects.equals(this.accountId, advertiserUpdateRequest.accountId)
         && Objects.equals(this.dailyBudget, advertiserUpdateRequest.dailyBudget)
-        && Objects.equals(this.systemIndustryId, advertiserUpdateRequest.systemIndustryId)
         && Objects.equals(this.corporationName, advertiserUpdateRequest.corporationName)
         && Objects.equals(this.corporationLicence, advertiserUpdateRequest.corporationLicence)
         && Objects.equals(this.certificationImageId, advertiserUpdateRequest.certificationImageId)
         && Objects.equals(
             this.individualQualification, advertiserUpdateRequest.individualQualification)
         && Objects.equals(this.areaCode, advertiserUpdateRequest.areaCode)
+        && Objects.equals(this.systemIndustryId, advertiserUpdateRequest.systemIndustryId)
         && Objects.equals(this.introductionUrl, advertiserUpdateRequest.introductionUrl)
         && Objects.equals(this.corporateBrandName, advertiserUpdateRequest.corporateBrandName)
         && Objects.equals(
             this.contactPersonTelephone, advertiserUpdateRequest.contactPersonTelephone)
         && Objects.equals(this.contactPersonMobile, advertiserUpdateRequest.contactPersonMobile)
+        && Objects.equals(this.businessAlias, advertiserUpdateRequest.businessAlias)
         && Objects.equals(this.websites, advertiserUpdateRequest.websites);
   }
 
@@ -347,16 +370,17 @@ public class AdvertiserUpdateRequest {
     return Objects.hash(
         accountId,
         dailyBudget,
-        systemIndustryId,
         corporationName,
         corporationLicence,
         certificationImageId,
         individualQualification,
         areaCode,
+        systemIndustryId,
         introductionUrl,
         corporateBrandName,
         contactPersonTelephone,
         contactPersonMobile,
+        businessAlias,
         websites);
   }
 

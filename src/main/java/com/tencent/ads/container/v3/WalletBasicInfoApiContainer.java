@@ -31,7 +31,7 @@ public class WalletBasicInfoApiContainer extends ApiContainer {
    * 通过钱包id去查询共享钱包基础信息
    *
    * @param accountId (required)
-   * @param walletId (optional)
+   * @param walletId (required)
    * @param fields 返回参数的字段列表 (optional)
    * @return WalletBasicInfoGetResponse
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
