@@ -46,6 +46,9 @@ public class DynamicCreativesUpdateRequest {
   @SerializedName("is_retry_batch_update")
   private Boolean isRetryBatchUpdate = null;
 
+  @SerializedName("site_set_validate_model")
+  private SiteSetValidateModel siteSetValidateModel = null;
+
   public DynamicCreativesUpdateRequest accountId(Long accountId) {
     this.accountId = accountId;
     return this;
@@ -218,6 +221,26 @@ public class DynamicCreativesUpdateRequest {
     this.isRetryBatchUpdate = isRetryBatchUpdate;
   }
 
+  public DynamicCreativesUpdateRequest siteSetValidateModel(
+      SiteSetValidateModel siteSetValidateModel) {
+    this.siteSetValidateModel = siteSetValidateModel;
+    return this;
+  }
+
+  /**
+   * Get siteSetValidateModel
+   *
+   * @return siteSetValidateModel
+   */
+  @ApiModelProperty(value = "")
+  public SiteSetValidateModel getSiteSetValidateModel() {
+    return siteSetValidateModel;
+  }
+
+  public void setSiteSetValidateModel(SiteSetValidateModel siteSetValidateModel) {
+    this.siteSetValidateModel = siteSetValidateModel;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -239,8 +262,9 @@ public class DynamicCreativesUpdateRequest {
             this.autoDerivedProgramCreativeSwitch,
             dynamicCreativesUpdateRequest.autoDerivedProgramCreativeSwitch)
         && Objects.equals(this.configuredStatus, dynamicCreativesUpdateRequest.configuredStatus)
+        && Objects.equals(this.isRetryBatchUpdate, dynamicCreativesUpdateRequest.isRetryBatchUpdate)
         && Objects.equals(
-            this.isRetryBatchUpdate, dynamicCreativesUpdateRequest.isRetryBatchUpdate);
+            this.siteSetValidateModel, dynamicCreativesUpdateRequest.siteSetValidateModel);
   }
 
   @Override
@@ -254,7 +278,8 @@ public class DynamicCreativesUpdateRequest {
         clickTrackingUrl,
         autoDerivedProgramCreativeSwitch,
         configuredStatus,
-        isRetryBatchUpdate);
+        isRetryBatchUpdate,
+        siteSetValidateModel);
   }
 
   @Override

@@ -18,8 +18,8 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.util.Objects;
 
-/** 预设置广告组次日预算 */
-@ApiModel(description = "预设置广告组次日预算")
+/** 预设置广告次日预算 */
+@ApiModel(description = "预设置广告次日预算")
 public class CreateScheduledUpdateAdgroupDailyBudgetItem {
   @SerializedName("adgroup_id")
   private Long adgroupId = null;

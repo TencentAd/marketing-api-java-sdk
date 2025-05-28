@@ -27,7 +27,9 @@ public enum PlotType {
 
   HEART_BEAT("HEART_BEAT"),
 
-  MULTI_PACKET("MULTI_PACKET");
+  MULTI_PACKET("MULTI_PACKET"),
+
+  GIFT_STORY("GIFT_STORY");
 
   private String value;
 

@@ -27,6 +27,9 @@ public class AndroidAppPageSpec {
   @SerializedName("wechat_canvas_page_id")
   private Long wechatCanvasPageId = null;
 
+  @SerializedName("android_channel_id")
+  private String androidChannelId = null;
+
   public AndroidAppPageSpec androidAppId(String androidAppId) {
     this.androidAppId = androidAppId;
     return this;
@@ -65,6 +68,25 @@ public class AndroidAppPageSpec {
     this.wechatCanvasPageId = wechatCanvasPageId;
   }
 
+  public AndroidAppPageSpec androidChannelId(String androidChannelId) {
+    this.androidChannelId = androidChannelId;
+    return this;
+  }
+
+  /**
+   * Get androidChannelId
+   *
+   * @return androidChannelId
+   */
+  @ApiModelProperty(value = "")
+  public String getAndroidChannelId() {
+    return androidChannelId;
+  }
+
+  public void setAndroidChannelId(String androidChannelId) {
+    this.androidChannelId = androidChannelId;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -75,12 +97,13 @@ public class AndroidAppPageSpec {
     }
     AndroidAppPageSpec androidAppPageSpec = (AndroidAppPageSpec) o;
     return Objects.equals(this.androidAppId, androidAppPageSpec.androidAppId)
-        && Objects.equals(this.wechatCanvasPageId, androidAppPageSpec.wechatCanvasPageId);
+        && Objects.equals(this.wechatCanvasPageId, androidAppPageSpec.wechatCanvasPageId)
+        && Objects.equals(this.androidChannelId, androidAppPageSpec.androidChannelId);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(androidAppId, wechatCanvasPageId);
+    return Objects.hash(androidAppId, wechatCanvasPageId, androidChannelId);
   }
 
   @Override

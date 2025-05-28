@@ -27,6 +27,9 @@ public class BackupsJumpinfoStruct {
   @SerializedName("page_spec")
   private PageSpec pageSpec = null;
 
+  @SerializedName("jumpinfo_account_id")
+  private Long jumpinfoAccountId = null;
+
   public BackupsJumpinfoStruct pageType(PageType pageType) {
     this.pageType = pageType;
     return this;
@@ -65,6 +68,25 @@ public class BackupsJumpinfoStruct {
     this.pageSpec = pageSpec;
   }
 
+  public BackupsJumpinfoStruct jumpinfoAccountId(Long jumpinfoAccountId) {
+    this.jumpinfoAccountId = jumpinfoAccountId;
+    return this;
+  }
+
+  /**
+   * Get jumpinfoAccountId
+   *
+   * @return jumpinfoAccountId
+   */
+  @ApiModelProperty(value = "")
+  public Long getJumpinfoAccountId() {
+    return jumpinfoAccountId;
+  }
+
+  public void setJumpinfoAccountId(Long jumpinfoAccountId) {
+    this.jumpinfoAccountId = jumpinfoAccountId;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -75,12 +97,13 @@ public class BackupsJumpinfoStruct {
     }
     BackupsJumpinfoStruct backupsJumpinfoStruct = (BackupsJumpinfoStruct) o;
     return Objects.equals(this.pageType, backupsJumpinfoStruct.pageType)
-        && Objects.equals(this.pageSpec, backupsJumpinfoStruct.pageSpec);
+        && Objects.equals(this.pageSpec, backupsJumpinfoStruct.pageSpec)
+        && Objects.equals(this.jumpinfoAccountId, backupsJumpinfoStruct.jumpinfoAccountId);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(pageType, pageSpec);
+    return Objects.hash(pageType, pageSpec, jumpinfoAccountId);
   }
 
   @Override

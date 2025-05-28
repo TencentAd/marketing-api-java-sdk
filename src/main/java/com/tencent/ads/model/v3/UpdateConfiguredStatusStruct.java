@@ -18,8 +18,8 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.util.Objects;
 
-/** 更新单个广告组客户设置的状态条件 */
-@ApiModel(description = "更新单个广告组客户设置的状态条件")
+/** 更新单个广告客户设置的状态条件 */
+@ApiModel(description = "更新单个广告客户设置的状态条件")
 public class UpdateConfiguredStatusStruct {
   @SerializedName("adgroup_id")
   private Long adgroupId = null;

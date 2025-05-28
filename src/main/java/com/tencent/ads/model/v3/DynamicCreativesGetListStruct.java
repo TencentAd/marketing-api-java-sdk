@@ -69,6 +69,9 @@ public class DynamicCreativesGetListStruct {
   @SerializedName("marketing_asset_verification")
   private MarketingAssetVerification marketingAssetVerification = null;
 
+  @SerializedName("creative_set_approval_status")
+  private CreativeSetApprovalStatus creativeSetApprovalStatus = null;
+
   @SerializedName("source")
   private AdCreativeSource source = null;
 
@@ -382,6 +385,26 @@ public class DynamicCreativesGetListStruct {
     this.marketingAssetVerification = marketingAssetVerification;
   }
 
+  public DynamicCreativesGetListStruct creativeSetApprovalStatus(
+      CreativeSetApprovalStatus creativeSetApprovalStatus) {
+    this.creativeSetApprovalStatus = creativeSetApprovalStatus;
+    return this;
+  }
+
+  /**
+   * Get creativeSetApprovalStatus
+   *
+   * @return creativeSetApprovalStatus
+   */
+  @ApiModelProperty(value = "")
+  public CreativeSetApprovalStatus getCreativeSetApprovalStatus() {
+    return creativeSetApprovalStatus;
+  }
+
+  public void setCreativeSetApprovalStatus(CreativeSetApprovalStatus creativeSetApprovalStatus) {
+    this.creativeSetApprovalStatus = creativeSetApprovalStatus;
+  }
+
   public DynamicCreativesGetListStruct source(AdCreativeSource source) {
     this.source = source;
     return this;
@@ -452,6 +475,8 @@ public class DynamicCreativesGetListStruct {
         && Objects.equals(
             this.marketingAssetVerification,
             dynamicCreativesGetListStruct.marketingAssetVerification)
+        && Objects.equals(
+            this.creativeSetApprovalStatus, dynamicCreativesGetListStruct.creativeSetApprovalStatus)
         && Objects.equals(this.source, dynamicCreativesGetListStruct.source)
         && Objects.equals(
             this.assetInconsistentStatus, dynamicCreativesGetListStruct.assetInconsistentStatus);
@@ -476,6 +501,7 @@ public class DynamicCreativesGetListStruct {
         createdTime,
         lastModifiedTime,
         marketingAssetVerification,
+        creativeSetApprovalStatus,
         source,
         assetInconsistentStatus);
   }

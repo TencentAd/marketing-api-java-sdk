@@ -18,8 +18,8 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.util.Objects;
 
-/** 更新单个广告组日限额条件 */
-@ApiModel(description = "更新单个广告组日限额条件")
+/** 更新单个广告日限额条件 */
+@ApiModel(description = "更新单个广告日限额条件")
 public class AdgroupsUpdateDailyBudgetUpdateDailyBudgetStruct {
   @SerializedName("adgroup_id")
   private Long adgroupId = null;

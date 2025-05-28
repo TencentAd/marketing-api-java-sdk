@@ -19,16 +19,16 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-/** 深度优化目标类型 */
-@JsonAdapter(DeepOptimizationGoalType.Adapter.class)
-public enum DeepOptimizationGoalType {
-  SELF_OG("SELF_OG"),
+/** 版位校验模式 */
+@JsonAdapter(SiteSetValidateModel.Adapter.class)
+public enum SiteSetValidateModel {
+  LOOSE("SITE_SET_VALIDATE_MODEL_LOOSE"),
 
-  AUTO_OG("AUTO_OG");
+  STRICT("SITE_SET_VALIDATE_MODEL_STRICT");
 
   private String value;
 
-  DeepOptimizationGoalType(String value) {
+  SiteSetValidateModel(String value) {
     this.value = value;
   }
 
@@ -41,8 +41,8 @@ public enum DeepOptimizationGoalType {
     return String.valueOf(value);
   }
 
-  public static DeepOptimizationGoalType fromValue(String text) {
-    for (DeepOptimizationGoalType b : DeepOptimizationGoalType.values()) {
+  public static SiteSetValidateModel fromValue(String text) {
+    for (SiteSetValidateModel b : SiteSetValidateModel.values()) {
       if (String.valueOf(b.value).equals(text)) {
         return b;
       }
@@ -50,17 +50,17 @@ public enum DeepOptimizationGoalType {
     return null;
   }
 
-  public static class Adapter extends TypeAdapter<DeepOptimizationGoalType> {
+  public static class Adapter extends TypeAdapter<SiteSetValidateModel> {
     @Override
-    public void write(final JsonWriter jsonWriter, final DeepOptimizationGoalType enumeration)
+    public void write(final JsonWriter jsonWriter, final SiteSetValidateModel enumeration)
         throws IOException {
       jsonWriter.value(enumeration.getValue());
     }
 
     @Override
-    public DeepOptimizationGoalType read(final JsonReader jsonReader) throws IOException {
+    public SiteSetValidateModel read(final JsonReader jsonReader) throws IOException {
       String value = jsonReader.nextString();
-      return DeepOptimizationGoalType.fromValue(String.valueOf(value));
+      return SiteSetValidateModel.fromValue(String.valueOf(value));
     }
   }
 }

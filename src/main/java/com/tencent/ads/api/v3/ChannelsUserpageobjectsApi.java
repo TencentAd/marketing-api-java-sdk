@@ -21,6 +21,7 @@ import com.tencent.ads.Configuration;
 import com.tencent.ads.Pair;
 import com.tencent.ads.ProgressRequestBody;
 import com.tencent.ads.ProgressResponseBody;
+import com.tencent.ads.model.v3.AdContext;
 import com.tencent.ads.model.v3.ChannelsUserpageobjectsGetResponse;
 import java.io.IOException;
 import java.lang.reflect.Type;
@@ -57,6 +58,7 @@ public class ChannelsUserpageobjectsApi {
    * @param lastBuffer (optional)
    * @param count (optional)
    * @param wechatChannelsAccountId (optional)
+   * @param adContext (optional)
    * @param fields 返回参数的字段列表 (optional)
    * @param progressListener Progress listener
    * @param progressRequestListener Progress request listener
@@ -70,6 +72,7 @@ public class ChannelsUserpageobjectsApi {
       String lastBuffer,
       Long count,
       String wechatChannelsAccountId,
+      AdContext adContext,
       List<String> fields,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
@@ -95,6 +98,8 @@ public class ChannelsUserpageobjectsApi {
     if (wechatChannelsAccountId != null)
       localVarQueryParams.addAll(
           apiClient.parameterToPair("wechat_channels_account_id", wechatChannelsAccountId));
+    if (adContext != null)
+      localVarQueryParams.addAll(apiClient.parameterToPair("ad_context", adContext));
     if (fields != null)
       localVarCollectionQueryParams.addAll(apiClient.parameterToPairs("multi", "fields", fields));
 
@@ -155,6 +160,7 @@ public class ChannelsUserpageobjectsApi {
       String lastBuffer,
       Long count,
       String wechatChannelsAccountId,
+      AdContext adContext,
       List<String> fields,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
@@ -175,6 +181,7 @@ public class ChannelsUserpageobjectsApi {
             lastBuffer,
             count,
             wechatChannelsAccountId,
+            adContext,
             fields,
             progressListener,
             progressRequestListener,
@@ -191,6 +198,7 @@ public class ChannelsUserpageobjectsApi {
    * @param lastBuffer (optional)
    * @param count (optional)
    * @param wechatChannelsAccountId (optional)
+   * @param adContext (optional)
    * @param fields 返回参数的字段列表 (optional)
    * @return ChannelsUserpageobjectsGetResponse
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
@@ -203,6 +211,7 @@ public class ChannelsUserpageobjectsApi {
       String lastBuffer,
       Long count,
       String wechatChannelsAccountId,
+      AdContext adContext,
       List<String> fields,
       Pair... headerPair)
       throws ApiException {
@@ -214,6 +223,7 @@ public class ChannelsUserpageobjectsApi {
             lastBuffer,
             count,
             wechatChannelsAccountId,
+            adContext,
             fields,
             headerPair);
     return resp.getData();
@@ -228,6 +238,7 @@ public class ChannelsUserpageobjectsApi {
    * @param lastBuffer (optional)
    * @param count (optional)
    * @param wechatChannelsAccountId (optional)
+   * @param adContext (optional)
    * @param fields 返回参数的字段列表 (optional)
    * @return ApiResponse&lt;ChannelsUserpageobjectsGetResponse&gt;
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
@@ -240,6 +251,7 @@ public class ChannelsUserpageobjectsApi {
       String lastBuffer,
       Long count,
       String wechatChannelsAccountId,
+      AdContext adContext,
       List<String> fields,
       Pair... headerPair)
       throws ApiException {
@@ -251,6 +263,7 @@ public class ChannelsUserpageobjectsApi {
             lastBuffer,
             count,
             wechatChannelsAccountId,
+            adContext,
             fields,
             null,
             null,
@@ -268,6 +281,7 @@ public class ChannelsUserpageobjectsApi {
    * @param lastBuffer (optional)
    * @param count (optional)
    * @param wechatChannelsAccountId (optional)
+   * @param adContext (optional)
    * @param fields 返回参数的字段列表 (optional)
    * @param callback The callback to be executed when the API call finishes
    * @return The request call
@@ -280,6 +294,7 @@ public class ChannelsUserpageobjectsApi {
       String lastBuffer,
       Long count,
       String wechatChannelsAccountId,
+      AdContext adContext,
       List<String> fields,
       final ApiCallback<ChannelsUserpageobjectsGetResponse> callback,
       Pair... headerPair)
@@ -314,6 +329,7 @@ public class ChannelsUserpageobjectsApi {
             lastBuffer,
             count,
             wechatChannelsAccountId,
+            adContext,
             fields,
             progressListener,
             progressRequestListener,

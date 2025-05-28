@@ -13,12 +13,57 @@
 package com.tencent.ads.model.v3;
 
 import com.google.gson.Gson;
+import com.google.gson.annotations.SerializedName;
 import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
 import java.util.Objects;
 
 /** Android一键下载落地页 */
 @ApiModel(description = "Android一键下载落地页")
 public class AndroidDirectDownloadPageSpec {
+  @SerializedName("android_app_id")
+  private String androidAppId = null;
+
+  @SerializedName("android_channel_id")
+  private String androidChannelId = null;
+
+  public AndroidDirectDownloadPageSpec androidAppId(String androidAppId) {
+    this.androidAppId = androidAppId;
+    return this;
+  }
+
+  /**
+   * Get androidAppId
+   *
+   * @return androidAppId
+   */
+  @ApiModelProperty(value = "")
+  public String getAndroidAppId() {
+    return androidAppId;
+  }
+
+  public void setAndroidAppId(String androidAppId) {
+    this.androidAppId = androidAppId;
+  }
+
+  public AndroidDirectDownloadPageSpec androidChannelId(String androidChannelId) {
+    this.androidChannelId = androidChannelId;
+    return this;
+  }
+
+  /**
+   * Get androidChannelId
+   *
+   * @return androidChannelId
+   */
+  @ApiModelProperty(value = "")
+  public String getAndroidChannelId() {
+    return androidChannelId;
+  }
+
+  public void setAndroidChannelId(String androidChannelId) {
+    this.androidChannelId = androidChannelId;
+  }
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -28,12 +73,14 @@ public class AndroidDirectDownloadPageSpec {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    return true;
+    AndroidDirectDownloadPageSpec androidDirectDownloadPageSpec = (AndroidDirectDownloadPageSpec) o;
+    return Objects.equals(this.androidAppId, androidDirectDownloadPageSpec.androidAppId)
+        && Objects.equals(this.androidChannelId, androidDirectDownloadPageSpec.androidChannelId);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash();
+    return Objects.hash(androidAppId, androidChannelId);
   }
 
   @Override

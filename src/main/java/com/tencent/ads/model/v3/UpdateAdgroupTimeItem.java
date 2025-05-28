@@ -18,8 +18,8 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.util.Objects;
 
-/** 修改广告组投放时间 */
-@ApiModel(description = "修改广告组投放时间")
+/** 修改广告投放时间 */
+@ApiModel(description = "修改广告投放时间")
 public class UpdateAdgroupTimeItem {
   @SerializedName("adgroup_id")
   private Long adgroupId = null;

@@ -18,8 +18,8 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.util.Objects;
 
-/** 修改广告组一方跑量 */
-@ApiModel(description = "修改广告组一方跑量")
+/** 修改广告一方跑量 */
+@ApiModel(description = "修改广告一方跑量")
 public class UpdateAdgroupEcomPkamItem {
   @SerializedName("adgroup_id")
   private Long adgroupId = null;

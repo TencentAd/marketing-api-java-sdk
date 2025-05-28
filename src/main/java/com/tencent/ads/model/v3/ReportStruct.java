@@ -60,12 +60,6 @@ public class ReportStruct {
   @SerializedName("cost")
   private Long cost = null;
 
-  @SerializedName("wechat_cost_stage1")
-  private Long wechatCostStage1 = null;
-
-  @SerializedName("wechat_cost_stage2")
-  private Long wechatCostStage2 = null;
-
   @SerializedName("acquisition_cost")
   private Long acquisitionCost = null;
 
@@ -98,18 +92,6 @@ public class ReportStruct {
 
   @SerializedName("deep_conversions_cost")
   private Long deepConversionsCost = null;
-
-  @SerializedName("wechat_shallow_conversions_count_stage1")
-  private Long wechatShallowConversionsCountStage1 = null;
-
-  @SerializedName("wechat_shallow_conversions_count_stage2")
-  private Long wechatShallowConversionsCountStage2 = null;
-
-  @SerializedName("wechat_deep_conversions_count_stage1")
-  private Long wechatDeepConversionsCountStage1 = null;
-
-  @SerializedName("wechat_deep_conversions_count_stage2")
-  private Long wechatDeepConversionsCountStage2 = null;
 
   @SerializedName("conversions_by_display_count")
   private Long conversionsByDisplayCount = null;
@@ -1425,23 +1407,8 @@ public class ReportStruct {
   @SerializedName("mini_game_bf_income_amount")
   private Long miniGameBfIncomeAmount = null;
 
-  @SerializedName("mini_game_bf_income_uv")
-  private Long miniGameBfIncomeUv = null;
-
-  @SerializedName("mini_game_bf_income_cost")
-  private Long miniGameBfIncomeCost = null;
-
-  @SerializedName("mini_game_bf_income_arpu")
-  private Long miniGameBfIncomeArpu = null;
-
-  @SerializedName("mini_game_bf_income_roi")
-  private Double miniGameBfIncomeRoi = null;
-
   @SerializedName("mini_game_bf_income_d1_amount")
   private Long miniGameBfIncomeD1Amount = null;
-
-  @SerializedName("mini_game_bf_income_d1_uv")
-  private Long miniGameBfIncomeD1Uv = null;
 
   @SerializedName("mini_game_bf_income_d1_cost")
   private Long miniGameBfIncomeD1Cost = null;
@@ -1674,9 +1641,6 @@ public class ReportStruct {
   @SerializedName("income_roi_14")
   private Double incomeRoi14 = null;
 
-  @SerializedName("mini_game_ad_monetization_users")
-  private Long miniGameAdMonetizationUsers = null;
-
   @SerializedName("mini_game_ad_monetization_amount")
   private Long miniGameAdMonetizationAmount = null;
 
@@ -1688,9 +1652,6 @@ public class ReportStruct {
 
   @SerializedName("mini_game_ad_monetization_arpu")
   private Long miniGameAdMonetizationArpu = null;
-
-  @SerializedName("mini_game_first_day_ad_monetization_users")
-  private Long miniGameFirstDayAdMonetizationUsers = null;
 
   @SerializedName("mini_game_first_day_ad_monetization_amount")
   private Long miniGameFirstDayAdMonetizationAmount = null;
@@ -1707,9 +1668,6 @@ public class ReportStruct {
   @SerializedName("minigame_3d_income_count")
   private Long minigame3dIncomeCount = null;
 
-  @SerializedName("minigame_3d_income_uv")
-  private Long minigame3dIncomeUv = null;
-
   @SerializedName("mini_game_ad_monetization_amount_d3")
   private Long miniGameAdMonetizationAmountD3 = null;
 
@@ -1718,9 +1676,6 @@ public class ReportStruct {
 
   @SerializedName("minigame_7d_income_count")
   private Long minigame7dIncomeCount = null;
-
-  @SerializedName("minigame_7d_income_uv")
-  private Long minigame7dIncomeUv = null;
 
   @SerializedName("mini_game_ad_monetization_amount_d7")
   private Long miniGameAdMonetizationAmountD7 = null;
@@ -2337,6 +2292,84 @@ public class ReportStruct {
   @SerializedName("video_outer_play5s_rate")
   private Double videoOuterPlay5sRate = null;
 
+  @SerializedName("income_val_24h_pla_roi")
+  private Double incomeVal24hPlaRoi = null;
+
+  @SerializedName("view_drama_dedup_pv")
+  private Long viewDramaDedupPv = null;
+
+  @SerializedName("view_drama_dedup_pv_rate")
+  private Double viewDramaDedupPvRate = null;
+
+  @SerializedName("view_drama_dedup_pv_cost")
+  private Long viewDramaDedupPvCost = null;
+
+  @SerializedName("clk_selling_points_element_pv")
+  private Long clkSellingPointsElementPv = null;
+
+  @SerializedName("visit_store_first_dedup_pv")
+  private Long visitStoreFirstDedupPv = null;
+
+  @SerializedName("clk_fullwidth_background_pv")
+  private Long clkFullwidthBackgroundPv = null;
+
+  @SerializedName("clk_header_area_pv")
+  private Long clkHeaderAreaPv = null;
+
+  @SerializedName("order_first_dedup_pv")
+  private Long orderFirstDedupPv = null;
+
+  @SerializedName("order_first_dedup_pv_cost")
+  private Long orderFirstDedupPvCost = null;
+
+  @SerializedName("order_first_dedup_pv_rate")
+  private Double orderFirstDedupPvRate = null;
+
+  @SerializedName("store_pay_amount_off")
+  private Long storePayAmountOff = null;
+
+  @SerializedName("store_pay_uv_off")
+  private Long storePayUvOff = null;
+
+  @SerializedName("store_pay_pv_off")
+  private Long storePayPvOff = null;
+
+  @SerializedName("clk_selling_points_element_uv")
+  private Long clkSellingPointsElementUv = null;
+
+  @SerializedName("order_refund_active_24h_pv")
+  private Long orderRefundActive24hPv = null;
+
+  @SerializedName("order_refund_active_24h_rate")
+  private Double orderRefundActive24hRate = null;
+
+  @SerializedName("order_settle_24h_pv")
+  private Long orderSettle24hPv = null;
+
+  @SerializedName("order_settle_24h_rate")
+  private Double orderSettle24hRate = null;
+
+  @SerializedName("order_settle_24h_cost")
+  private Long orderSettle24hCost = null;
+
+  @SerializedName("lan_jump_button_rate")
+  private Double lanJumpButtonRate = null;
+
+  @SerializedName("reg_dedup1d_pv")
+  private Long regDedup1dPv = null;
+
+  @SerializedName("bf_dedup_pv")
+  private Long bfDedupPv = null;
+
+  @SerializedName("follow_biz_all_dedup_pv")
+  private Long followBizAllDedupPv = null;
+
+  @SerializedName("fir_og_conv_auto_acquisition_pv")
+  private Long firOgConvAutoAcquisitionPv = null;
+
+  @SerializedName("sec_og_conv_auto_acquisition_pv")
+  private Long secOgConvAutoAcquisitionPv = null;
+
   @SerializedName("adgroup_id")
   private Long adgroupId = null;
 
@@ -2767,44 +2800,6 @@ public class ReportStruct {
     this.cost = cost;
   }
 
-  public ReportStruct wechatCostStage1(Long wechatCostStage1) {
-    this.wechatCostStage1 = wechatCostStage1;
-    return this;
-  }
-
-  /**
-   * Get wechatCostStage1
-   *
-   * @return wechatCostStage1
-   */
-  @ApiModelProperty(value = "")
-  public Long getWechatCostStage1() {
-    return wechatCostStage1;
-  }
-
-  public void setWechatCostStage1(Long wechatCostStage1) {
-    this.wechatCostStage1 = wechatCostStage1;
-  }
-
-  public ReportStruct wechatCostStage2(Long wechatCostStage2) {
-    this.wechatCostStage2 = wechatCostStage2;
-    return this;
-  }
-
-  /**
-   * Get wechatCostStage2
-   *
-   * @return wechatCostStage2
-   */
-  @ApiModelProperty(value = "")
-  public Long getWechatCostStage2() {
-    return wechatCostStage2;
-  }
-
-  public void setWechatCostStage2(Long wechatCostStage2) {
-    this.wechatCostStage2 = wechatCostStage2;
-  }
-
   public ReportStruct acquisitionCost(Long acquisitionCost) {
     this.acquisitionCost = acquisitionCost;
     return this;
@@ -3012,84 +3007,6 @@ public class ReportStruct {
 
   public void setDeepConversionsCost(Long deepConversionsCost) {
     this.deepConversionsCost = deepConversionsCost;
-  }
-
-  public ReportStruct wechatShallowConversionsCountStage1(
-      Long wechatShallowConversionsCountStage1) {
-    this.wechatShallowConversionsCountStage1 = wechatShallowConversionsCountStage1;
-    return this;
-  }
-
-  /**
-   * Get wechatShallowConversionsCountStage1
-   *
-   * @return wechatShallowConversionsCountStage1
-   */
-  @ApiModelProperty(value = "")
-  public Long getWechatShallowConversionsCountStage1() {
-    return wechatShallowConversionsCountStage1;
-  }
-
-  public void setWechatShallowConversionsCountStage1(Long wechatShallowConversionsCountStage1) {
-    this.wechatShallowConversionsCountStage1 = wechatShallowConversionsCountStage1;
-  }
-
-  public ReportStruct wechatShallowConversionsCountStage2(
-      Long wechatShallowConversionsCountStage2) {
-    this.wechatShallowConversionsCountStage2 = wechatShallowConversionsCountStage2;
-    return this;
-  }
-
-  /**
-   * Get wechatShallowConversionsCountStage2
-   *
-   * @return wechatShallowConversionsCountStage2
-   */
-  @ApiModelProperty(value = "")
-  public Long getWechatShallowConversionsCountStage2() {
-    return wechatShallowConversionsCountStage2;
-  }
-
-  public void setWechatShallowConversionsCountStage2(Long wechatShallowConversionsCountStage2) {
-    this.wechatShallowConversionsCountStage2 = wechatShallowConversionsCountStage2;
-  }
-
-  public ReportStruct wechatDeepConversionsCountStage1(Long wechatDeepConversionsCountStage1) {
-    this.wechatDeepConversionsCountStage1 = wechatDeepConversionsCountStage1;
-    return this;
-  }
-
-  /**
-   * Get wechatDeepConversionsCountStage1
-   *
-   * @return wechatDeepConversionsCountStage1
-   */
-  @ApiModelProperty(value = "")
-  public Long getWechatDeepConversionsCountStage1() {
-    return wechatDeepConversionsCountStage1;
-  }
-
-  public void setWechatDeepConversionsCountStage1(Long wechatDeepConversionsCountStage1) {
-    this.wechatDeepConversionsCountStage1 = wechatDeepConversionsCountStage1;
-  }
-
-  public ReportStruct wechatDeepConversionsCountStage2(Long wechatDeepConversionsCountStage2) {
-    this.wechatDeepConversionsCountStage2 = wechatDeepConversionsCountStage2;
-    return this;
-  }
-
-  /**
-   * Get wechatDeepConversionsCountStage2
-   *
-   * @return wechatDeepConversionsCountStage2
-   */
-  @ApiModelProperty(value = "")
-  public Long getWechatDeepConversionsCountStage2() {
-    return wechatDeepConversionsCountStage2;
-  }
-
-  public void setWechatDeepConversionsCountStage2(Long wechatDeepConversionsCountStage2) {
-    this.wechatDeepConversionsCountStage2 = wechatDeepConversionsCountStage2;
   }
 
   public ReportStruct conversionsByDisplayCount(Long conversionsByDisplayCount) {
@@ -11414,82 +11331,6 @@ public class ReportStruct {
     this.miniGameBfIncomeAmount = miniGameBfIncomeAmount;
   }
 
-  public ReportStruct miniGameBfIncomeUv(Long miniGameBfIncomeUv) {
-    this.miniGameBfIncomeUv = miniGameBfIncomeUv;
-    return this;
-  }
-
-  /**
-   * Get miniGameBfIncomeUv
-   *
-   * @return miniGameBfIncomeUv
-   */
-  @ApiModelProperty(value = "")
-  public Long getMiniGameBfIncomeUv() {
-    return miniGameBfIncomeUv;
-  }
-
-  public void setMiniGameBfIncomeUv(Long miniGameBfIncomeUv) {
-    this.miniGameBfIncomeUv = miniGameBfIncomeUv;
-  }
-
-  public ReportStruct miniGameBfIncomeCost(Long miniGameBfIncomeCost) {
-    this.miniGameBfIncomeCost = miniGameBfIncomeCost;
-    return this;
-  }
-
-  /**
-   * Get miniGameBfIncomeCost
-   *
-   * @return miniGameBfIncomeCost
-   */
-  @ApiModelProperty(value = "")
-  public Long getMiniGameBfIncomeCost() {
-    return miniGameBfIncomeCost;
-  }
-
-  public void setMiniGameBfIncomeCost(Long miniGameBfIncomeCost) {
-    this.miniGameBfIncomeCost = miniGameBfIncomeCost;
-  }
-
-  public ReportStruct miniGameBfIncomeArpu(Long miniGameBfIncomeArpu) {
-    this.miniGameBfIncomeArpu = miniGameBfIncomeArpu;
-    return this;
-  }
-
-  /**
-   * Get miniGameBfIncomeArpu
-   *
-   * @return miniGameBfIncomeArpu
-   */
-  @ApiModelProperty(value = "")
-  public Long getMiniGameBfIncomeArpu() {
-    return miniGameBfIncomeArpu;
-  }
-
-  public void setMiniGameBfIncomeArpu(Long miniGameBfIncomeArpu) {
-    this.miniGameBfIncomeArpu = miniGameBfIncomeArpu;
-  }
-
-  public ReportStruct miniGameBfIncomeRoi(Double miniGameBfIncomeRoi) {
-    this.miniGameBfIncomeRoi = miniGameBfIncomeRoi;
-    return this;
-  }
-
-  /**
-   * Get miniGameBfIncomeRoi
-   *
-   * @return miniGameBfIncomeRoi
-   */
-  @ApiModelProperty(value = "")
-  public Double getMiniGameBfIncomeRoi() {
-    return miniGameBfIncomeRoi;
-  }
-
-  public void setMiniGameBfIncomeRoi(Double miniGameBfIncomeRoi) {
-    this.miniGameBfIncomeRoi = miniGameBfIncomeRoi;
-  }
-
   public ReportStruct miniGameBfIncomeD1Amount(Long miniGameBfIncomeD1Amount) {
     this.miniGameBfIncomeD1Amount = miniGameBfIncomeD1Amount;
     return this;
@@ -11507,25 +11348,6 @@ public class ReportStruct {
 
   public void setMiniGameBfIncomeD1Amount(Long miniGameBfIncomeD1Amount) {
     this.miniGameBfIncomeD1Amount = miniGameBfIncomeD1Amount;
-  }
-
-  public ReportStruct miniGameBfIncomeD1Uv(Long miniGameBfIncomeD1Uv) {
-    this.miniGameBfIncomeD1Uv = miniGameBfIncomeD1Uv;
-    return this;
-  }
-
-  /**
-   * Get miniGameBfIncomeD1Uv
-   *
-   * @return miniGameBfIncomeD1Uv
-   */
-  @ApiModelProperty(value = "")
-  public Long getMiniGameBfIncomeD1Uv() {
-    return miniGameBfIncomeD1Uv;
-  }
-
-  public void setMiniGameBfIncomeD1Uv(Long miniGameBfIncomeD1Uv) {
-    this.miniGameBfIncomeD1Uv = miniGameBfIncomeD1Uv;
   }
 
   public ReportStruct miniGameBfIncomeD1Cost(Long miniGameBfIncomeD1Cost) {
@@ -12991,25 +12813,6 @@ public class ReportStruct {
     this.incomeRoi14 = incomeRoi14;
   }
 
-  public ReportStruct miniGameAdMonetizationUsers(Long miniGameAdMonetizationUsers) {
-    this.miniGameAdMonetizationUsers = miniGameAdMonetizationUsers;
-    return this;
-  }
-
-  /**
-   * Get miniGameAdMonetizationUsers
-   *
-   * @return miniGameAdMonetizationUsers
-   */
-  @ApiModelProperty(value = "")
-  public Long getMiniGameAdMonetizationUsers() {
-    return miniGameAdMonetizationUsers;
-  }
-
-  public void setMiniGameAdMonetizationUsers(Long miniGameAdMonetizationUsers) {
-    this.miniGameAdMonetizationUsers = miniGameAdMonetizationUsers;
-  }
-
   public ReportStruct miniGameAdMonetizationAmount(Long miniGameAdMonetizationAmount) {
     this.miniGameAdMonetizationAmount = miniGameAdMonetizationAmount;
     return this;
@@ -13084,26 +12887,6 @@ public class ReportStruct {
 
   public void setMiniGameAdMonetizationArpu(Long miniGameAdMonetizationArpu) {
     this.miniGameAdMonetizationArpu = miniGameAdMonetizationArpu;
-  }
-
-  public ReportStruct miniGameFirstDayAdMonetizationUsers(
-      Long miniGameFirstDayAdMonetizationUsers) {
-    this.miniGameFirstDayAdMonetizationUsers = miniGameFirstDayAdMonetizationUsers;
-    return this;
-  }
-
-  /**
-   * Get miniGameFirstDayAdMonetizationUsers
-   *
-   * @return miniGameFirstDayAdMonetizationUsers
-   */
-  @ApiModelProperty(value = "")
-  public Long getMiniGameFirstDayAdMonetizationUsers() {
-    return miniGameFirstDayAdMonetizationUsers;
-  }
-
-  public void setMiniGameFirstDayAdMonetizationUsers(Long miniGameFirstDayAdMonetizationUsers) {
-    this.miniGameFirstDayAdMonetizationUsers = miniGameFirstDayAdMonetizationUsers;
   }
 
   public ReportStruct miniGameFirstDayAdMonetizationAmount(
@@ -13202,25 +12985,6 @@ public class ReportStruct {
     this.minigame3dIncomeCount = minigame3dIncomeCount;
   }
 
-  public ReportStruct minigame3dIncomeUv(Long minigame3dIncomeUv) {
-    this.minigame3dIncomeUv = minigame3dIncomeUv;
-    return this;
-  }
-
-  /**
-   * Get minigame3dIncomeUv
-   *
-   * @return minigame3dIncomeUv
-   */
-  @ApiModelProperty(value = "")
-  public Long getMinigame3dIncomeUv() {
-    return minigame3dIncomeUv;
-  }
-
-  public void setMinigame3dIncomeUv(Long minigame3dIncomeUv) {
-    this.minigame3dIncomeUv = minigame3dIncomeUv;
-  }
-
   public ReportStruct miniGameAdMonetizationAmountD3(Long miniGameAdMonetizationAmountD3) {
     this.miniGameAdMonetizationAmountD3 = miniGameAdMonetizationAmountD3;
     return this;
@@ -13276,25 +13040,6 @@ public class ReportStruct {
 
   public void setMinigame7dIncomeCount(Long minigame7dIncomeCount) {
     this.minigame7dIncomeCount = minigame7dIncomeCount;
-  }
-
-  public ReportStruct minigame7dIncomeUv(Long minigame7dIncomeUv) {
-    this.minigame7dIncomeUv = minigame7dIncomeUv;
-    return this;
-  }
-
-  /**
-   * Get minigame7dIncomeUv
-   *
-   * @return minigame7dIncomeUv
-   */
-  @ApiModelProperty(value = "")
-  public Long getMinigame7dIncomeUv() {
-    return minigame7dIncomeUv;
-  }
-
-  public void setMinigame7dIncomeUv(Long minigame7dIncomeUv) {
-    this.minigame7dIncomeUv = minigame7dIncomeUv;
   }
 
   public ReportStruct miniGameAdMonetizationAmountD7(Long miniGameAdMonetizationAmountD7) {
@@ -17210,6 +16955,500 @@ public class ReportStruct {
     this.videoOuterPlay5sRate = videoOuterPlay5sRate;
   }
 
+  public ReportStruct incomeVal24hPlaRoi(Double incomeVal24hPlaRoi) {
+    this.incomeVal24hPlaRoi = incomeVal24hPlaRoi;
+    return this;
+  }
+
+  /**
+   * Get incomeVal24hPlaRoi
+   *
+   * @return incomeVal24hPlaRoi
+   */
+  @ApiModelProperty(value = "")
+  public Double getIncomeVal24hPlaRoi() {
+    return incomeVal24hPlaRoi;
+  }
+
+  public void setIncomeVal24hPlaRoi(Double incomeVal24hPlaRoi) {
+    this.incomeVal24hPlaRoi = incomeVal24hPlaRoi;
+  }
+
+  public ReportStruct viewDramaDedupPv(Long viewDramaDedupPv) {
+    this.viewDramaDedupPv = viewDramaDedupPv;
+    return this;
+  }
+
+  /**
+   * Get viewDramaDedupPv
+   *
+   * @return viewDramaDedupPv
+   */
+  @ApiModelProperty(value = "")
+  public Long getViewDramaDedupPv() {
+    return viewDramaDedupPv;
+  }
+
+  public void setViewDramaDedupPv(Long viewDramaDedupPv) {
+    this.viewDramaDedupPv = viewDramaDedupPv;
+  }
+
+  public ReportStruct viewDramaDedupPvRate(Double viewDramaDedupPvRate) {
+    this.viewDramaDedupPvRate = viewDramaDedupPvRate;
+    return this;
+  }
+
+  /**
+   * Get viewDramaDedupPvRate
+   *
+   * @return viewDramaDedupPvRate
+   */
+  @ApiModelProperty(value = "")
+  public Double getViewDramaDedupPvRate() {
+    return viewDramaDedupPvRate;
+  }
+
+  public void setViewDramaDedupPvRate(Double viewDramaDedupPvRate) {
+    this.viewDramaDedupPvRate = viewDramaDedupPvRate;
+  }
+
+  public ReportStruct viewDramaDedupPvCost(Long viewDramaDedupPvCost) {
+    this.viewDramaDedupPvCost = viewDramaDedupPvCost;
+    return this;
+  }
+
+  /**
+   * Get viewDramaDedupPvCost
+   *
+   * @return viewDramaDedupPvCost
+   */
+  @ApiModelProperty(value = "")
+  public Long getViewDramaDedupPvCost() {
+    return viewDramaDedupPvCost;
+  }
+
+  public void setViewDramaDedupPvCost(Long viewDramaDedupPvCost) {
+    this.viewDramaDedupPvCost = viewDramaDedupPvCost;
+  }
+
+  public ReportStruct clkSellingPointsElementPv(Long clkSellingPointsElementPv) {
+    this.clkSellingPointsElementPv = clkSellingPointsElementPv;
+    return this;
+  }
+
+  /**
+   * Get clkSellingPointsElementPv
+   *
+   * @return clkSellingPointsElementPv
+   */
+  @ApiModelProperty(value = "")
+  public Long getClkSellingPointsElementPv() {
+    return clkSellingPointsElementPv;
+  }
+
+  public void setClkSellingPointsElementPv(Long clkSellingPointsElementPv) {
+    this.clkSellingPointsElementPv = clkSellingPointsElementPv;
+  }
+
+  public ReportStruct visitStoreFirstDedupPv(Long visitStoreFirstDedupPv) {
+    this.visitStoreFirstDedupPv = visitStoreFirstDedupPv;
+    return this;
+  }
+
+  /**
+   * Get visitStoreFirstDedupPv
+   *
+   * @return visitStoreFirstDedupPv
+   */
+  @ApiModelProperty(value = "")
+  public Long getVisitStoreFirstDedupPv() {
+    return visitStoreFirstDedupPv;
+  }
+
+  public void setVisitStoreFirstDedupPv(Long visitStoreFirstDedupPv) {
+    this.visitStoreFirstDedupPv = visitStoreFirstDedupPv;
+  }
+
+  public ReportStruct clkFullwidthBackgroundPv(Long clkFullwidthBackgroundPv) {
+    this.clkFullwidthBackgroundPv = clkFullwidthBackgroundPv;
+    return this;
+  }
+
+  /**
+   * Get clkFullwidthBackgroundPv
+   *
+   * @return clkFullwidthBackgroundPv
+   */
+  @ApiModelProperty(value = "")
+  public Long getClkFullwidthBackgroundPv() {
+    return clkFullwidthBackgroundPv;
+  }
+
+  public void setClkFullwidthBackgroundPv(Long clkFullwidthBackgroundPv) {
+    this.clkFullwidthBackgroundPv = clkFullwidthBackgroundPv;
+  }
+
+  public ReportStruct clkHeaderAreaPv(Long clkHeaderAreaPv) {
+    this.clkHeaderAreaPv = clkHeaderAreaPv;
+    return this;
+  }
+
+  /**
+   * Get clkHeaderAreaPv
+   *
+   * @return clkHeaderAreaPv
+   */
+  @ApiModelProperty(value = "")
+  public Long getClkHeaderAreaPv() {
+    return clkHeaderAreaPv;
+  }
+
+  public void setClkHeaderAreaPv(Long clkHeaderAreaPv) {
+    this.clkHeaderAreaPv = clkHeaderAreaPv;
+  }
+
+  public ReportStruct orderFirstDedupPv(Long orderFirstDedupPv) {
+    this.orderFirstDedupPv = orderFirstDedupPv;
+    return this;
+  }
+
+  /**
+   * Get orderFirstDedupPv
+   *
+   * @return orderFirstDedupPv
+   */
+  @ApiModelProperty(value = "")
+  public Long getOrderFirstDedupPv() {
+    return orderFirstDedupPv;
+  }
+
+  public void setOrderFirstDedupPv(Long orderFirstDedupPv) {
+    this.orderFirstDedupPv = orderFirstDedupPv;
+  }
+
+  public ReportStruct orderFirstDedupPvCost(Long orderFirstDedupPvCost) {
+    this.orderFirstDedupPvCost = orderFirstDedupPvCost;
+    return this;
+  }
+
+  /**
+   * Get orderFirstDedupPvCost
+   *
+   * @return orderFirstDedupPvCost
+   */
+  @ApiModelProperty(value = "")
+  public Long getOrderFirstDedupPvCost() {
+    return orderFirstDedupPvCost;
+  }
+
+  public void setOrderFirstDedupPvCost(Long orderFirstDedupPvCost) {
+    this.orderFirstDedupPvCost = orderFirstDedupPvCost;
+  }
+
+  public ReportStruct orderFirstDedupPvRate(Double orderFirstDedupPvRate) {
+    this.orderFirstDedupPvRate = orderFirstDedupPvRate;
+    return this;
+  }
+
+  /**
+   * Get orderFirstDedupPvRate
+   *
+   * @return orderFirstDedupPvRate
+   */
+  @ApiModelProperty(value = "")
+  public Double getOrderFirstDedupPvRate() {
+    return orderFirstDedupPvRate;
+  }
+
+  public void setOrderFirstDedupPvRate(Double orderFirstDedupPvRate) {
+    this.orderFirstDedupPvRate = orderFirstDedupPvRate;
+  }
+
+  public ReportStruct storePayAmountOff(Long storePayAmountOff) {
+    this.storePayAmountOff = storePayAmountOff;
+    return this;
+  }
+
+  /**
+   * Get storePayAmountOff
+   *
+   * @return storePayAmountOff
+   */
+  @ApiModelProperty(value = "")
+  public Long getStorePayAmountOff() {
+    return storePayAmountOff;
+  }
+
+  public void setStorePayAmountOff(Long storePayAmountOff) {
+    this.storePayAmountOff = storePayAmountOff;
+  }
+
+  public ReportStruct storePayUvOff(Long storePayUvOff) {
+    this.storePayUvOff = storePayUvOff;
+    return this;
+  }
+
+  /**
+   * Get storePayUvOff
+   *
+   * @return storePayUvOff
+   */
+  @ApiModelProperty(value = "")
+  public Long getStorePayUvOff() {
+    return storePayUvOff;
+  }
+
+  public void setStorePayUvOff(Long storePayUvOff) {
+    this.storePayUvOff = storePayUvOff;
+  }
+
+  public ReportStruct storePayPvOff(Long storePayPvOff) {
+    this.storePayPvOff = storePayPvOff;
+    return this;
+  }
+
+  /**
+   * Get storePayPvOff
+   *
+   * @return storePayPvOff
+   */
+  @ApiModelProperty(value = "")
+  public Long getStorePayPvOff() {
+    return storePayPvOff;
+  }
+
+  public void setStorePayPvOff(Long storePayPvOff) {
+    this.storePayPvOff = storePayPvOff;
+  }
+
+  public ReportStruct clkSellingPointsElementUv(Long clkSellingPointsElementUv) {
+    this.clkSellingPointsElementUv = clkSellingPointsElementUv;
+    return this;
+  }
+
+  /**
+   * Get clkSellingPointsElementUv
+   *
+   * @return clkSellingPointsElementUv
+   */
+  @ApiModelProperty(value = "")
+  public Long getClkSellingPointsElementUv() {
+    return clkSellingPointsElementUv;
+  }
+
+  public void setClkSellingPointsElementUv(Long clkSellingPointsElementUv) {
+    this.clkSellingPointsElementUv = clkSellingPointsElementUv;
+  }
+
+  public ReportStruct orderRefundActive24hPv(Long orderRefundActive24hPv) {
+    this.orderRefundActive24hPv = orderRefundActive24hPv;
+    return this;
+  }
+
+  /**
+   * Get orderRefundActive24hPv
+   *
+   * @return orderRefundActive24hPv
+   */
+  @ApiModelProperty(value = "")
+  public Long getOrderRefundActive24hPv() {
+    return orderRefundActive24hPv;
+  }
+
+  public void setOrderRefundActive24hPv(Long orderRefundActive24hPv) {
+    this.orderRefundActive24hPv = orderRefundActive24hPv;
+  }
+
+  public ReportStruct orderRefundActive24hRate(Double orderRefundActive24hRate) {
+    this.orderRefundActive24hRate = orderRefundActive24hRate;
+    return this;
+  }
+
+  /**
+   * Get orderRefundActive24hRate
+   *
+   * @return orderRefundActive24hRate
+   */
+  @ApiModelProperty(value = "")
+  public Double getOrderRefundActive24hRate() {
+    return orderRefundActive24hRate;
+  }
+
+  public void setOrderRefundActive24hRate(Double orderRefundActive24hRate) {
+    this.orderRefundActive24hRate = orderRefundActive24hRate;
+  }
+
+  public ReportStruct orderSettle24hPv(Long orderSettle24hPv) {
+    this.orderSettle24hPv = orderSettle24hPv;
+    return this;
+  }
+
+  /**
+   * Get orderSettle24hPv
+   *
+   * @return orderSettle24hPv
+   */
+  @ApiModelProperty(value = "")
+  public Long getOrderSettle24hPv() {
+    return orderSettle24hPv;
+  }
+
+  public void setOrderSettle24hPv(Long orderSettle24hPv) {
+    this.orderSettle24hPv = orderSettle24hPv;
+  }
+
+  public ReportStruct orderSettle24hRate(Double orderSettle24hRate) {
+    this.orderSettle24hRate = orderSettle24hRate;
+    return this;
+  }
+
+  /**
+   * Get orderSettle24hRate
+   *
+   * @return orderSettle24hRate
+   */
+  @ApiModelProperty(value = "")
+  public Double getOrderSettle24hRate() {
+    return orderSettle24hRate;
+  }
+
+  public void setOrderSettle24hRate(Double orderSettle24hRate) {
+    this.orderSettle24hRate = orderSettle24hRate;
+  }
+
+  public ReportStruct orderSettle24hCost(Long orderSettle24hCost) {
+    this.orderSettle24hCost = orderSettle24hCost;
+    return this;
+  }
+
+  /**
+   * Get orderSettle24hCost
+   *
+   * @return orderSettle24hCost
+   */
+  @ApiModelProperty(value = "")
+  public Long getOrderSettle24hCost() {
+    return orderSettle24hCost;
+  }
+
+  public void setOrderSettle24hCost(Long orderSettle24hCost) {
+    this.orderSettle24hCost = orderSettle24hCost;
+  }
+
+  public ReportStruct lanJumpButtonRate(Double lanJumpButtonRate) {
+    this.lanJumpButtonRate = lanJumpButtonRate;
+    return this;
+  }
+
+  /**
+   * Get lanJumpButtonRate
+   *
+   * @return lanJumpButtonRate
+   */
+  @ApiModelProperty(value = "")
+  public Double getLanJumpButtonRate() {
+    return lanJumpButtonRate;
+  }
+
+  public void setLanJumpButtonRate(Double lanJumpButtonRate) {
+    this.lanJumpButtonRate = lanJumpButtonRate;
+  }
+
+  public ReportStruct regDedup1dPv(Long regDedup1dPv) {
+    this.regDedup1dPv = regDedup1dPv;
+    return this;
+  }
+
+  /**
+   * Get regDedup1dPv
+   *
+   * @return regDedup1dPv
+   */
+  @ApiModelProperty(value = "")
+  public Long getRegDedup1dPv() {
+    return regDedup1dPv;
+  }
+
+  public void setRegDedup1dPv(Long regDedup1dPv) {
+    this.regDedup1dPv = regDedup1dPv;
+  }
+
+  public ReportStruct bfDedupPv(Long bfDedupPv) {
+    this.bfDedupPv = bfDedupPv;
+    return this;
+  }
+
+  /**
+   * Get bfDedupPv
+   *
+   * @return bfDedupPv
+   */
+  @ApiModelProperty(value = "")
+  public Long getBfDedupPv() {
+    return bfDedupPv;
+  }
+
+  public void setBfDedupPv(Long bfDedupPv) {
+    this.bfDedupPv = bfDedupPv;
+  }
+
+  public ReportStruct followBizAllDedupPv(Long followBizAllDedupPv) {
+    this.followBizAllDedupPv = followBizAllDedupPv;
+    return this;
+  }
+
+  /**
+   * Get followBizAllDedupPv
+   *
+   * @return followBizAllDedupPv
+   */
+  @ApiModelProperty(value = "")
+  public Long getFollowBizAllDedupPv() {
+    return followBizAllDedupPv;
+  }
+
+  public void setFollowBizAllDedupPv(Long followBizAllDedupPv) {
+    this.followBizAllDedupPv = followBizAllDedupPv;
+  }
+
+  public ReportStruct firOgConvAutoAcquisitionPv(Long firOgConvAutoAcquisitionPv) {
+    this.firOgConvAutoAcquisitionPv = firOgConvAutoAcquisitionPv;
+    return this;
+  }
+
+  /**
+   * Get firOgConvAutoAcquisitionPv
+   *
+   * @return firOgConvAutoAcquisitionPv
+   */
+  @ApiModelProperty(value = "")
+  public Long getFirOgConvAutoAcquisitionPv() {
+    return firOgConvAutoAcquisitionPv;
+  }
+
+  public void setFirOgConvAutoAcquisitionPv(Long firOgConvAutoAcquisitionPv) {
+    this.firOgConvAutoAcquisitionPv = firOgConvAutoAcquisitionPv;
+  }
+
+  public ReportStruct secOgConvAutoAcquisitionPv(Long secOgConvAutoAcquisitionPv) {
+    this.secOgConvAutoAcquisitionPv = secOgConvAutoAcquisitionPv;
+    return this;
+  }
+
+  /**
+   * Get secOgConvAutoAcquisitionPv
+   *
+   * @return secOgConvAutoAcquisitionPv
+   */
+  @ApiModelProperty(value = "")
+  public Long getSecOgConvAutoAcquisitionPv() {
+    return secOgConvAutoAcquisitionPv;
+  }
+
+  public void setSecOgConvAutoAcquisitionPv(Long secOgConvAutoAcquisitionPv) {
+    this.secOgConvAutoAcquisitionPv = secOgConvAutoAcquisitionPv;
+  }
+
   public ReportStruct adgroupId(Long adgroupId) {
     this.adgroupId = adgroupId;
     return this;
@@ -18391,8 +18630,6 @@ public class ReportStruct {
         && Objects.equals(this.valuableClickCost, reportStruct.valuableClickCost)
         && Objects.equals(this.valuableClickRate, reportStruct.valuableClickRate)
         && Objects.equals(this.cost, reportStruct.cost)
-        && Objects.equals(this.wechatCostStage1, reportStruct.wechatCostStage1)
-        && Objects.equals(this.wechatCostStage2, reportStruct.wechatCostStage2)
         && Objects.equals(this.acquisitionCost, reportStruct.acquisitionCost)
         && Objects.equals(this.thousandDisplayPrice, reportStruct.thousandDisplayPrice)
         && Objects.equals(this.realCostTop, reportStruct.realCostTop)
@@ -18404,16 +18641,6 @@ public class ReportStruct {
         && Objects.equals(this.deepConversionsCount, reportStruct.deepConversionsCount)
         && Objects.equals(this.deepConversionsRate, reportStruct.deepConversionsRate)
         && Objects.equals(this.deepConversionsCost, reportStruct.deepConversionsCost)
-        && Objects.equals(
-            this.wechatShallowConversionsCountStage1,
-            reportStruct.wechatShallowConversionsCountStage1)
-        && Objects.equals(
-            this.wechatShallowConversionsCountStage2,
-            reportStruct.wechatShallowConversionsCountStage2)
-        && Objects.equals(
-            this.wechatDeepConversionsCountStage1, reportStruct.wechatDeepConversionsCountStage1)
-        && Objects.equals(
-            this.wechatDeepConversionsCountStage2, reportStruct.wechatDeepConversionsCountStage2)
         && Objects.equals(this.conversionsByDisplayCount, reportStruct.conversionsByDisplayCount)
         && Objects.equals(this.conversionsByDisplayRate, reportStruct.conversionsByDisplayRate)
         && Objects.equals(this.conversionsByDisplayCost, reportStruct.conversionsByDisplayCost)
@@ -18887,12 +19114,7 @@ public class ReportStruct {
         && Objects.equals(this.miniGameBfPurchaseD1Roi, reportStruct.miniGameBfPurchaseD1Roi)
         && Objects.equals(this.miniGameBfPurchaseD1Arpu, reportStruct.miniGameBfPurchaseD1Arpu)
         && Objects.equals(this.miniGameBfIncomeAmount, reportStruct.miniGameBfIncomeAmount)
-        && Objects.equals(this.miniGameBfIncomeUv, reportStruct.miniGameBfIncomeUv)
-        && Objects.equals(this.miniGameBfIncomeCost, reportStruct.miniGameBfIncomeCost)
-        && Objects.equals(this.miniGameBfIncomeArpu, reportStruct.miniGameBfIncomeArpu)
-        && Objects.equals(this.miniGameBfIncomeRoi, reportStruct.miniGameBfIncomeRoi)
         && Objects.equals(this.miniGameBfIncomeD1Amount, reportStruct.miniGameBfIncomeD1Amount)
-        && Objects.equals(this.miniGameBfIncomeD1Uv, reportStruct.miniGameBfIncomeD1Uv)
         && Objects.equals(this.miniGameBfIncomeD1Cost, reportStruct.miniGameBfIncomeD1Cost)
         && Objects.equals(this.miniGameBfIncomeD1Roi, reportStruct.miniGameBfIncomeD1Roi)
         && Objects.equals(this.miniGameBfIncomeD1Arpu, reportStruct.miniGameBfIncomeD1Arpu)
@@ -18974,15 +19196,10 @@ public class ReportStruct {
         && Objects.equals(this.incomeVal14, reportStruct.incomeVal14)
         && Objects.equals(this.incomeRoi14, reportStruct.incomeRoi14)
         && Objects.equals(
-            this.miniGameAdMonetizationUsers, reportStruct.miniGameAdMonetizationUsers)
-        && Objects.equals(
             this.miniGameAdMonetizationAmount, reportStruct.miniGameAdMonetizationAmount)
         && Objects.equals(this.miniGameAdMonetizationCost, reportStruct.miniGameAdMonetizationCost)
         && Objects.equals(this.miniGameAdMonetizationRoi, reportStruct.miniGameAdMonetizationRoi)
         && Objects.equals(this.miniGameAdMonetizationArpu, reportStruct.miniGameAdMonetizationArpu)
-        && Objects.equals(
-            this.miniGameFirstDayAdMonetizationUsers,
-            reportStruct.miniGameFirstDayAdMonetizationUsers)
         && Objects.equals(
             this.miniGameFirstDayAdMonetizationAmount,
             reportStruct.miniGameFirstDayAdMonetizationAmount)
@@ -18992,12 +19209,10 @@ public class ReportStruct {
         && Objects.equals(
             this.miniGameFirstDayAdPayingArpu, reportStruct.miniGameFirstDayAdPayingArpu)
         && Objects.equals(this.minigame3dIncomeCount, reportStruct.minigame3dIncomeCount)
-        && Objects.equals(this.minigame3dIncomeUv, reportStruct.minigame3dIncomeUv)
         && Objects.equals(
             this.miniGameAdMonetizationAmountD3, reportStruct.miniGameAdMonetizationAmountD3)
         && Objects.equals(this.minigame3dIncomeRoi, reportStruct.minigame3dIncomeRoi)
         && Objects.equals(this.minigame7dIncomeCount, reportStruct.minigame7dIncomeCount)
-        && Objects.equals(this.minigame7dIncomeUv, reportStruct.minigame7dIncomeUv)
         && Objects.equals(
             this.miniGameAdMonetizationAmountD7, reportStruct.miniGameAdMonetizationAmountD7)
         && Objects.equals(this.minigame7dIncomeRoi, reportStruct.minigame7dIncomeRoi)
@@ -19263,6 +19478,32 @@ public class ReportStruct {
         && Objects.equals(this.openAccountPv, reportStruct.openAccountPv)
         && Objects.equals(this.openAccountPvCost, reportStruct.openAccountPvCost)
         && Objects.equals(this.videoOuterPlay5sRate, reportStruct.videoOuterPlay5sRate)
+        && Objects.equals(this.incomeVal24hPlaRoi, reportStruct.incomeVal24hPlaRoi)
+        && Objects.equals(this.viewDramaDedupPv, reportStruct.viewDramaDedupPv)
+        && Objects.equals(this.viewDramaDedupPvRate, reportStruct.viewDramaDedupPvRate)
+        && Objects.equals(this.viewDramaDedupPvCost, reportStruct.viewDramaDedupPvCost)
+        && Objects.equals(this.clkSellingPointsElementPv, reportStruct.clkSellingPointsElementPv)
+        && Objects.equals(this.visitStoreFirstDedupPv, reportStruct.visitStoreFirstDedupPv)
+        && Objects.equals(this.clkFullwidthBackgroundPv, reportStruct.clkFullwidthBackgroundPv)
+        && Objects.equals(this.clkHeaderAreaPv, reportStruct.clkHeaderAreaPv)
+        && Objects.equals(this.orderFirstDedupPv, reportStruct.orderFirstDedupPv)
+        && Objects.equals(this.orderFirstDedupPvCost, reportStruct.orderFirstDedupPvCost)
+        && Objects.equals(this.orderFirstDedupPvRate, reportStruct.orderFirstDedupPvRate)
+        && Objects.equals(this.storePayAmountOff, reportStruct.storePayAmountOff)
+        && Objects.equals(this.storePayUvOff, reportStruct.storePayUvOff)
+        && Objects.equals(this.storePayPvOff, reportStruct.storePayPvOff)
+        && Objects.equals(this.clkSellingPointsElementUv, reportStruct.clkSellingPointsElementUv)
+        && Objects.equals(this.orderRefundActive24hPv, reportStruct.orderRefundActive24hPv)
+        && Objects.equals(this.orderRefundActive24hRate, reportStruct.orderRefundActive24hRate)
+        && Objects.equals(this.orderSettle24hPv, reportStruct.orderSettle24hPv)
+        && Objects.equals(this.orderSettle24hRate, reportStruct.orderSettle24hRate)
+        && Objects.equals(this.orderSettle24hCost, reportStruct.orderSettle24hCost)
+        && Objects.equals(this.lanJumpButtonRate, reportStruct.lanJumpButtonRate)
+        && Objects.equals(this.regDedup1dPv, reportStruct.regDedup1dPv)
+        && Objects.equals(this.bfDedupPv, reportStruct.bfDedupPv)
+        && Objects.equals(this.followBizAllDedupPv, reportStruct.followBizAllDedupPv)
+        && Objects.equals(this.firOgConvAutoAcquisitionPv, reportStruct.firOgConvAutoAcquisitionPv)
+        && Objects.equals(this.secOgConvAutoAcquisitionPv, reportStruct.secOgConvAutoAcquisitionPv)
         && Objects.equals(this.adgroupId, reportStruct.adgroupId)
         && Objects.equals(this.adgroupName, reportStruct.adgroupName)
         && Objects.equals(this.dynamicCreativeId, reportStruct.dynamicCreativeId)
@@ -19343,8 +19584,6 @@ public class ReportStruct {
         valuableClickCost,
         valuableClickRate,
         cost,
-        wechatCostStage1,
-        wechatCostStage2,
         acquisitionCost,
         thousandDisplayPrice,
         realCostTop,
@@ -19356,10 +19595,6 @@ public class ReportStruct {
         deepConversionsCount,
         deepConversionsRate,
         deepConversionsCost,
-        wechatShallowConversionsCountStage1,
-        wechatShallowConversionsCountStage2,
-        wechatDeepConversionsCountStage1,
-        wechatDeepConversionsCountStage2,
         conversionsByDisplayCount,
         conversionsByDisplayRate,
         conversionsByDisplayCost,
@@ -19798,12 +20033,7 @@ public class ReportStruct {
         miniGameBfPurchaseD1Roi,
         miniGameBfPurchaseD1Arpu,
         miniGameBfIncomeAmount,
-        miniGameBfIncomeUv,
-        miniGameBfIncomeCost,
-        miniGameBfIncomeArpu,
-        miniGameBfIncomeRoi,
         miniGameBfIncomeD1Amount,
-        miniGameBfIncomeD1Uv,
         miniGameBfIncomeD1Cost,
         miniGameBfIncomeD1Roi,
         miniGameBfIncomeD1Arpu,
@@ -19881,22 +20111,18 @@ public class ReportStruct {
         incomeRoi7,
         incomeVal14,
         incomeRoi14,
-        miniGameAdMonetizationUsers,
         miniGameAdMonetizationAmount,
         miniGameAdMonetizationCost,
         miniGameAdMonetizationRoi,
         miniGameAdMonetizationArpu,
-        miniGameFirstDayAdMonetizationUsers,
         miniGameFirstDayAdMonetizationAmount,
         miniGameFirstDayAdPayingCost,
         miniGameIncomeRoi1,
         miniGameFirstDayAdPayingArpu,
         minigame3dIncomeCount,
-        minigame3dIncomeUv,
         miniGameAdMonetizationAmountD3,
         minigame3dIncomeRoi,
         minigame7dIncomeCount,
-        minigame7dIncomeUv,
         miniGameAdMonetizationAmountD7,
         minigame7dIncomeRoi,
         miniGameAdMonetizationAmountD14,
@@ -20102,6 +20328,32 @@ public class ReportStruct {
         openAccountPv,
         openAccountPvCost,
         videoOuterPlay5sRate,
+        incomeVal24hPlaRoi,
+        viewDramaDedupPv,
+        viewDramaDedupPvRate,
+        viewDramaDedupPvCost,
+        clkSellingPointsElementPv,
+        visitStoreFirstDedupPv,
+        clkFullwidthBackgroundPv,
+        clkHeaderAreaPv,
+        orderFirstDedupPv,
+        orderFirstDedupPvCost,
+        orderFirstDedupPvRate,
+        storePayAmountOff,
+        storePayUvOff,
+        storePayPvOff,
+        clkSellingPointsElementUv,
+        orderRefundActive24hPv,
+        orderRefundActive24hRate,
+        orderSettle24hPv,
+        orderSettle24hRate,
+        orderSettle24hCost,
+        lanJumpButtonRate,
+        regDedup1dPv,
+        bfDedupPv,
+        followBizAllDedupPv,
+        firOgConvAutoAcquisitionPv,
+        secOgConvAutoAcquisitionPv,
         adgroupId,
         adgroupName,
         dynamicCreativeId,

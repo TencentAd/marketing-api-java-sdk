@@ -82,7 +82,7 @@ public class ConversionsAddRequest {
   private OptimizationGoal deepBehaviorAdvancedGoal = null;
 
   @SerializedName("deep_optimization_goal_type")
-  private DeepOptimizationGoalType deepOptimizationGoalType = null;
+  private OptimizationGoal deepOptimizationGoalType = null;
 
   @SerializedName("forward_link_assist")
   private OptimizationGoal forwardLinkAssist = null;
@@ -485,8 +485,7 @@ public class ConversionsAddRequest {
     this.deepBehaviorAdvancedGoal = deepBehaviorAdvancedGoal;
   }
 
-  public ConversionsAddRequest deepOptimizationGoalType(
-      DeepOptimizationGoalType deepOptimizationGoalType) {
+  public ConversionsAddRequest deepOptimizationGoalType(OptimizationGoal deepOptimizationGoalType) {
     this.deepOptimizationGoalType = deepOptimizationGoalType;
     return this;
   }
@@ -497,11 +496,11 @@ public class ConversionsAddRequest {
    * @return deepOptimizationGoalType
    */
   @ApiModelProperty(value = "")
-  public DeepOptimizationGoalType getDeepOptimizationGoalType() {
+  public OptimizationGoal getDeepOptimizationGoalType() {
     return deepOptimizationGoalType;
   }
 
-  public void setDeepOptimizationGoalType(DeepOptimizationGoalType deepOptimizationGoalType) {
+  public void setDeepOptimizationGoalType(OptimizationGoal deepOptimizationGoalType) {
     this.deepOptimizationGoalType = deepOptimizationGoalType;
   }
 

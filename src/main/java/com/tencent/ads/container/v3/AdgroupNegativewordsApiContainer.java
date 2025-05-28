@@ -34,7 +34,7 @@ public class AdgroupNegativewordsApiContainer extends ApiContainer {
   @Inject AdgroupNegativewordsApi api;
 
   /**
-   * 新增广告组否定词
+   * 新增广告否定词
    *
    * @param data (required)
    * @return AdgroupNegativewordsAddResponse
@@ -50,7 +50,7 @@ public class AdgroupNegativewordsApiContainer extends ApiContainer {
   }
 
   /**
-   * 查询广告组否定词
+   * 查询广告否定词
    *
    * @param accountId (required)
    * @param adgroupIds (required)
@@ -69,7 +69,7 @@ public class AdgroupNegativewordsApiContainer extends ApiContainer {
   }
 
   /**
-   * 修改广告组否定词
+   * 更新广告否定词
    *
    * @param data (required)
    * @return AdgroupNegativewordsUpdateResponse

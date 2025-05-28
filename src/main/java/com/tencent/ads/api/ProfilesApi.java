@@ -379,10 +379,11 @@ public class ProfilesApi {
   /**
    * Build call for profilesGet
    *
-   * @param accountId (required)
+   * @param accountId (optional)
    * @param filtering (optional)
    * @param page (optional)
    * @param pageSize (optional)
+   * @param organizationId (optional)
    * @param fields 返回参数的字段列表 (optional)
    * @param progressListener Progress listener
    * @param progressRequestListener Progress request listener
@@ -394,6 +395,7 @@ public class ProfilesApi {
       List<FilteringStruct> filtering,
       Long page,
       Long pageSize,
+      Long organizationId,
       List<String> fields,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
@@ -415,6 +417,8 @@ public class ProfilesApi {
     if (page != null) localVarQueryParams.addAll(apiClient.parameterToPair("page", page));
     if (pageSize != null)
       localVarQueryParams.addAll(apiClient.parameterToPair("page_size", pageSize));
+    if (organizationId != null)
+      localVarQueryParams.addAll(apiClient.parameterToPair("organization_id", organizationId));
     if (fields != null)
       localVarCollectionQueryParams.addAll(apiClient.parameterToPairs("multi", "fields", fields));
 
@@ -473,17 +477,12 @@ public class ProfilesApi {
       List<FilteringStruct> filtering,
       Long page,
       Long pageSize,
+      Long organizationId,
       List<String> fields,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
       Pair... headerPair)
       throws ApiException {
-
-    // verify the required parameter 'accountId' is set
-    if (accountId == null) {
-      throw new ApiException(
-          "Missing the required parameter 'accountId' when calling profilesGet(Async)");
-    }
 
     com.squareup.okhttp.Call call =
         profilesGetCall(
@@ -491,6 +490,7 @@ public class ProfilesApi {
             filtering,
             page,
             pageSize,
+            organizationId,
             fields,
             progressListener,
             progressRequestListener,
@@ -501,10 +501,11 @@ public class ProfilesApi {
   /**
    * 获取朋友圈头像昵称跳转页
    *
-   * @param accountId (required)
+   * @param accountId (optional)
    * @param filtering (optional)
    * @param page (optional)
    * @param pageSize (optional)
+   * @param organizationId (optional)
    * @param fields 返回参数的字段列表 (optional)
    * @return ProfilesGetResponse
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
@@ -515,21 +516,24 @@ public class ProfilesApi {
       List<FilteringStruct> filtering,
       Long page,
       Long pageSize,
+      Long organizationId,
       List<String> fields,
       Pair... headerPair)
       throws ApiException {
     ApiResponse<ProfilesGetResponse> resp =
-        profilesGetWithHttpInfo(accountId, filtering, page, pageSize, fields, headerPair);
+        profilesGetWithHttpInfo(
+            accountId, filtering, page, pageSize, organizationId, fields, headerPair);
     return resp.getData();
   }
 
   /**
    * 获取朋友圈头像昵称跳转页
    *
-   * @param accountId (required)
+   * @param accountId (optional)
    * @param filtering (optional)
    * @param page (optional)
    * @param pageSize (optional)
+   * @param organizationId (optional)
    * @param fields 返回参数的字段列表 (optional)
    * @return ApiResponse&lt;ProfilesGetResponse&gt;
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
@@ -540,12 +544,13 @@ public class ProfilesApi {
       List<FilteringStruct> filtering,
       Long page,
       Long pageSize,
+      Long organizationId,
       List<String> fields,
       Pair... headerPair)
       throws ApiException {
     com.squareup.okhttp.Call call =
         profilesGetValidateBeforeCall(
-            accountId, filtering, page, pageSize, fields, null, null, headerPair);
+            accountId, filtering, page, pageSize, organizationId, fields, null, null, headerPair);
     Type localVarReturnType = new TypeToken<ProfilesGetResponse>() {}.getType();
     return apiClient.execute(call, localVarReturnType);
   }
@@ -553,10 +558,11 @@ public class ProfilesApi {
   /**
    * 获取朋友圈头像昵称跳转页 (asynchronously)
    *
-   * @param accountId (required)
+   * @param accountId (optional)
    * @param filtering (optional)
    * @param page (optional)
    * @param pageSize (optional)
+   * @param organizationId (optional)
    * @param fields 返回参数的字段列表 (optional)
    * @param callback The callback to be executed when the API call finishes
    * @return The request call
@@ -567,6 +573,7 @@ public class ProfilesApi {
       List<FilteringStruct> filtering,
       Long page,
       Long pageSize,
+      Long organizationId,
       List<String> fields,
       final ApiCallback<ProfilesGetResponse> callback,
       Pair... headerPair)
@@ -599,6 +606,7 @@ public class ProfilesApi {
             filtering,
             page,
             pageSize,
+            organizationId,
             fields,
             progressListener,
             progressRequestListener,

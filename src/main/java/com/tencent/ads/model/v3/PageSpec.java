@@ -114,6 +114,9 @@ public class PageSpec {
   @SerializedName("wechat_shop_spec")
   private WechatShopSpec wechatShopSpec = null;
 
+  @SerializedName("wechat_channels_watch_live_spec")
+  private WechatChannelsWatchLivePageSpec wechatChannelsWatchLiveSpec = null;
+
   public PageSpec androidAppSpec(AndroidAppPageSpec androidAppSpec) {
     this.androidAppSpec = androidAppSpec;
     return this;
@@ -711,6 +714,27 @@ public class PageSpec {
     this.wechatShopSpec = wechatShopSpec;
   }
 
+  public PageSpec wechatChannelsWatchLiveSpec(
+      WechatChannelsWatchLivePageSpec wechatChannelsWatchLiveSpec) {
+    this.wechatChannelsWatchLiveSpec = wechatChannelsWatchLiveSpec;
+    return this;
+  }
+
+  /**
+   * Get wechatChannelsWatchLiveSpec
+   *
+   * @return wechatChannelsWatchLiveSpec
+   */
+  @ApiModelProperty(value = "")
+  public WechatChannelsWatchLivePageSpec getWechatChannelsWatchLiveSpec() {
+    return wechatChannelsWatchLiveSpec;
+  }
+
+  public void setWechatChannelsWatchLiveSpec(
+      WechatChannelsWatchLivePageSpec wechatChannelsWatchLiveSpec) {
+    this.wechatChannelsWatchLiveSpec = wechatChannelsWatchLiveSpec;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -752,7 +776,8 @@ public class PageSpec {
         && Objects.equals(this.androidQuickAppSpec, pageSpec.androidQuickAppSpec)
         && Objects.equals(
             this.wechatChannelsShopProductSpec, pageSpec.wechatChannelsShopProductSpec)
-        && Objects.equals(this.wechatShopSpec, pageSpec.wechatShopSpec);
+        && Objects.equals(this.wechatShopSpec, pageSpec.wechatShopSpec)
+        && Objects.equals(this.wechatChannelsWatchLiveSpec, pageSpec.wechatChannelsWatchLiveSpec);
   }
 
   @Override
@@ -788,7 +813,8 @@ public class PageSpec {
         wechatChannelsReserveSpec,
         androidQuickAppSpec,
         wechatChannelsShopProductSpec,
-        wechatShopSpec);
+        wechatShopSpec,
+        wechatChannelsWatchLiveSpec);
   }
 
   @Override

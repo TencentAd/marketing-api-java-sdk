@@ -19,6 +19,7 @@ import com.tencent.ads.Pair;
 import com.tencent.ads.anno.*;
 import com.tencent.ads.api.v3.ChannelsUserpageobjectsApi;
 import com.tencent.ads.exception.TencentAdsResponseException;
+import com.tencent.ads.model.v3.AdContext;
 import com.tencent.ads.model.v3.ChannelsUserpageobjectsGetResponse;
 import com.tencent.ads.model.v3.ChannelsUserpageobjectsGetResponseData;
 import java.util.List;
@@ -36,6 +37,7 @@ public class ChannelsUserpageobjectsApiContainer extends ApiContainer {
    * @param lastBuffer (optional)
    * @param count (optional)
    * @param wechatChannelsAccountId (optional)
+   * @param adContext (optional)
    * @param fields 返回参数的字段列表 (optional)
    * @return ChannelsUserpageobjectsGetResponse
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
@@ -48,6 +50,7 @@ public class ChannelsUserpageobjectsApiContainer extends ApiContainer {
       String lastBuffer,
       Long count,
       String wechatChannelsAccountId,
+      AdContext adContext,
       List<String> fields,
       Pair... headerPair)
       throws ApiException, TencentAdsResponseException {
@@ -59,6 +62,7 @@ public class ChannelsUserpageobjectsApiContainer extends ApiContainer {
             lastBuffer,
             count,
             wechatChannelsAccountId,
+            adContext,
             fields,
             headerPair);
     handleResponse(gson.toJson(resp));

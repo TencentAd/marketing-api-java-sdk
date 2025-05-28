@@ -60,6 +60,9 @@ public class ProfilesGetListStruct {
   @SerializedName("system_status")
   private AdStatus systemStatus = null;
 
+  @SerializedName("mdm_id")
+  private Long mdmId = null;
+
   public ProfilesGetListStruct ownerId(Long ownerId) {
     this.ownerId = ownerId;
     return this;
@@ -307,6 +310,25 @@ public class ProfilesGetListStruct {
     this.systemStatus = systemStatus;
   }
 
+  public ProfilesGetListStruct mdmId(Long mdmId) {
+    this.mdmId = mdmId;
+    return this;
+  }
+
+  /**
+   * Get mdmId
+   *
+   * @return mdmId
+   */
+  @ApiModelProperty(value = "")
+  public Long getMdmId() {
+    return mdmId;
+  }
+
+  public void setMdmId(Long mdmId) {
+    this.mdmId = mdmId;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -328,7 +350,8 @@ public class ProfilesGetListStruct {
         && Objects.equals(this.createdTime, profilesGetListStruct.createdTime)
         && Objects.equals(this.lastModifiedTime, profilesGetListStruct.lastModifiedTime)
         && Objects.equals(this.profileUrl, profilesGetListStruct.profileUrl)
-        && Objects.equals(this.systemStatus, profilesGetListStruct.systemStatus);
+        && Objects.equals(this.systemStatus, profilesGetListStruct.systemStatus)
+        && Objects.equals(this.mdmId, profilesGetListStruct.mdmId);
   }
 
   @Override
@@ -346,7 +369,8 @@ public class ProfilesGetListStruct {
         createdTime,
         lastModifiedTime,
         profileUrl,
-        systemStatus);
+        systemStatus,
+        mdmId);
   }
 
   @Override

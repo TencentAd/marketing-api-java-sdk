@@ -50,7 +50,7 @@ public class AdgroupsApiContainer extends ApiContainer {
   @Inject AdgroupsApi api;
 
   /**
-   * 创建广告组
+   * 创建广告
    *
    * @param data (required)
    * @return AdgroupsAddResponse
@@ -65,7 +65,7 @@ public class AdgroupsApiContainer extends ApiContainer {
   }
 
   /**
-   * 删除广告组
+   * 删除广告
    *
    * @param data (required)
    * @return AdgroupsDeleteResponse
@@ -80,7 +80,7 @@ public class AdgroupsApiContainer extends ApiContainer {
   }
 
   /**
-   * 获取广告组
+   * 获取广告
    *
    * @param accountId (required)
    * @param filtering (optional)
@@ -121,7 +121,7 @@ public class AdgroupsApiContainer extends ApiContainer {
   }
 
   /**
-   * 更新广告组
+   * 更新广告
    *
    * @param data (required)
    * @return AdgroupsUpdateResponse
@@ -136,7 +136,7 @@ public class AdgroupsApiContainer extends ApiContainer {
   }
 
   /**
-   * 批量修改广告组出价
+   * 批量修改广告出价
    *
    * @param data (required)
    * @return AdgroupsUpdateBidAmountResponse
@@ -152,7 +152,7 @@ public class AdgroupsApiContainer extends ApiContainer {
   }
 
   /**
-   * 批量修改广告组开启/暂停状态
+   * 批量修改广告开启/暂停状态
    *
    * @param data (required)
    * @return AdgroupsUpdateConfiguredStatusResponse
@@ -169,7 +169,7 @@ public class AdgroupsApiContainer extends ApiContainer {
   }
 
   /**
-   * 批量修改广告组日限额
+   * 批量修改广告日限额
    *
    * @param data (required)
    * @return AdgroupsUpdateDailyBudgetResponse
@@ -185,7 +185,7 @@ public class AdgroupsApiContainer extends ApiContainer {
   }
 
   /**
-   * 批量修改广告组投放起止时间
+   * 批量修改广告投放起止时间
    *
    * @param data (required)
    * @return AdgroupsUpdateDatetimeResponse

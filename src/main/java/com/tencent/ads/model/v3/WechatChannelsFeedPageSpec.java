@@ -27,6 +27,9 @@ public class WechatChannelsFeedPageSpec {
   @SerializedName("action_button")
   private ActionButtonStructForWechatChannelsFeedPageSpec actionButton = null;
 
+  @SerializedName("wechat_channels_account_id")
+  private String wechatChannelsAccountId = null;
+
   public WechatChannelsFeedPageSpec feedId(String feedId) {
     this.feedId = feedId;
     return this;
@@ -66,6 +69,25 @@ public class WechatChannelsFeedPageSpec {
     this.actionButton = actionButton;
   }
 
+  public WechatChannelsFeedPageSpec wechatChannelsAccountId(String wechatChannelsAccountId) {
+    this.wechatChannelsAccountId = wechatChannelsAccountId;
+    return this;
+  }
+
+  /**
+   * Get wechatChannelsAccountId
+   *
+   * @return wechatChannelsAccountId
+   */
+  @ApiModelProperty(value = "")
+  public String getWechatChannelsAccountId() {
+    return wechatChannelsAccountId;
+  }
+
+  public void setWechatChannelsAccountId(String wechatChannelsAccountId) {
+    this.wechatChannelsAccountId = wechatChannelsAccountId;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -76,12 +98,14 @@ public class WechatChannelsFeedPageSpec {
     }
     WechatChannelsFeedPageSpec wechatChannelsFeedPageSpec = (WechatChannelsFeedPageSpec) o;
     return Objects.equals(this.feedId, wechatChannelsFeedPageSpec.feedId)
-        && Objects.equals(this.actionButton, wechatChannelsFeedPageSpec.actionButton);
+        && Objects.equals(this.actionButton, wechatChannelsFeedPageSpec.actionButton)
+        && Objects.equals(
+            this.wechatChannelsAccountId, wechatChannelsFeedPageSpec.wechatChannelsAccountId);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(feedId, actionButton);
+    return Objects.hash(feedId, actionButton, wechatChannelsAccountId);
   }
 
   @Override

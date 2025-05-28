@@ -49,6 +49,12 @@ public class ProfilesAddRequest {
   @SerializedName("description")
   private String description = null;
 
+  @SerializedName("organization_id")
+  private Long organizationId = null;
+
+  @SerializedName("mdm_id")
+  private Long mdmId = null;
+
   public ProfilesAddRequest accountId(Long accountId) {
     this.accountId = accountId;
     return this;
@@ -239,6 +245,44 @@ public class ProfilesAddRequest {
     this.description = description;
   }
 
+  public ProfilesAddRequest organizationId(Long organizationId) {
+    this.organizationId = organizationId;
+    return this;
+  }
+
+  /**
+   * Get organizationId
+   *
+   * @return organizationId
+   */
+  @ApiModelProperty(value = "")
+  public Long getOrganizationId() {
+    return organizationId;
+  }
+
+  public void setOrganizationId(Long organizationId) {
+    this.organizationId = organizationId;
+  }
+
+  public ProfilesAddRequest mdmId(Long mdmId) {
+    this.mdmId = mdmId;
+    return this;
+  }
+
+  /**
+   * Get mdmId
+   *
+   * @return mdmId
+   */
+  @ApiModelProperty(value = "")
+  public Long getMdmId() {
+    return mdmId;
+  }
+
+  public void setMdmId(Long mdmId) {
+    this.mdmId = mdmId;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -257,7 +301,9 @@ public class ProfilesAddRequest {
         && Objects.equals(this.profileType, profilesAddRequest.profileType)
         && Objects.equals(this.headImageId, profilesAddRequest.headImageId)
         && Objects.equals(this.profileName, profilesAddRequest.profileName)
-        && Objects.equals(this.description, profilesAddRequest.description);
+        && Objects.equals(this.description, profilesAddRequest.description)
+        && Objects.equals(this.organizationId, profilesAddRequest.organizationId)
+        && Objects.equals(this.mdmId, profilesAddRequest.mdmId);
   }
 
   @Override
@@ -272,7 +318,9 @@ public class ProfilesAddRequest {
         profileType,
         headImageId,
         profileName,
-        description);
+        description,
+        organizationId,
+        mdmId);
   }
 
   @Override

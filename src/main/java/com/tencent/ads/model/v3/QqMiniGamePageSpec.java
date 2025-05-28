@@ -24,6 +24,9 @@ public class QqMiniGamePageSpec {
   @SerializedName("mini_game_tracking_parameter")
   private String miniGameTrackingParameter = null;
 
+  @SerializedName("mini_game_id")
+  private String miniGameId = null;
+
   public QqMiniGamePageSpec miniGameTrackingParameter(String miniGameTrackingParameter) {
     this.miniGameTrackingParameter = miniGameTrackingParameter;
     return this;
@@ -43,6 +46,25 @@ public class QqMiniGamePageSpec {
     this.miniGameTrackingParameter = miniGameTrackingParameter;
   }
 
+  public QqMiniGamePageSpec miniGameId(String miniGameId) {
+    this.miniGameId = miniGameId;
+    return this;
+  }
+
+  /**
+   * Get miniGameId
+   *
+   * @return miniGameId
+   */
+  @ApiModelProperty(value = "")
+  public String getMiniGameId() {
+    return miniGameId;
+  }
+
+  public void setMiniGameId(String miniGameId) {
+    this.miniGameId = miniGameId;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -53,12 +75,13 @@ public class QqMiniGamePageSpec {
     }
     QqMiniGamePageSpec qqMiniGamePageSpec = (QqMiniGamePageSpec) o;
     return Objects.equals(
-        this.miniGameTrackingParameter, qqMiniGamePageSpec.miniGameTrackingParameter);
+            this.miniGameTrackingParameter, qqMiniGamePageSpec.miniGameTrackingParameter)
+        && Objects.equals(this.miniGameId, qqMiniGamePageSpec.miniGameId);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(miniGameTrackingParameter);
+    return Objects.hash(miniGameTrackingParameter, miniGameId);
   }
 
   @Override

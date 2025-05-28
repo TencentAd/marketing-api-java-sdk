@@ -60,12 +60,6 @@ public class HourlyReportApiListStruct {
   @SerializedName("cost")
   private Long cost = null;
 
-  @SerializedName("wechat_cost_stage1")
-  private Long wechatCostStage1 = null;
-
-  @SerializedName("wechat_cost_stage2")
-  private Long wechatCostStage2 = null;
-
   @SerializedName("acquisition_cost")
   private Long acquisitionCost = null;
 
@@ -98,18 +92,6 @@ public class HourlyReportApiListStruct {
 
   @SerializedName("deep_conversions_cost")
   private Long deepConversionsCost = null;
-
-  @SerializedName("wechat_shallow_conversions_count_stage1")
-  private Long wechatShallowConversionsCountStage1 = null;
-
-  @SerializedName("wechat_shallow_conversions_count_stage2")
-  private Long wechatShallowConversionsCountStage2 = null;
-
-  @SerializedName("wechat_deep_conversions_count_stage1")
-  private Long wechatDeepConversionsCountStage1 = null;
-
-  @SerializedName("wechat_deep_conversions_count_stage2")
-  private Long wechatDeepConversionsCountStage2 = null;
 
   @SerializedName("conversions_by_display_count")
   private Long conversionsByDisplayCount = null;
@@ -1425,23 +1407,8 @@ public class HourlyReportApiListStruct {
   @SerializedName("mini_game_bf_income_amount")
   private Long miniGameBfIncomeAmount = null;
 
-  @SerializedName("mini_game_bf_income_uv")
-  private Long miniGameBfIncomeUv = null;
-
-  @SerializedName("mini_game_bf_income_cost")
-  private Long miniGameBfIncomeCost = null;
-
-  @SerializedName("mini_game_bf_income_arpu")
-  private Long miniGameBfIncomeArpu = null;
-
-  @SerializedName("mini_game_bf_income_roi")
-  private Double miniGameBfIncomeRoi = null;
-
   @SerializedName("mini_game_bf_income_d1_amount")
   private Long miniGameBfIncomeD1Amount = null;
-
-  @SerializedName("mini_game_bf_income_d1_uv")
-  private Long miniGameBfIncomeD1Uv = null;
 
   @SerializedName("mini_game_bf_income_d1_cost")
   private Long miniGameBfIncomeD1Cost = null;
@@ -1674,9 +1641,6 @@ public class HourlyReportApiListStruct {
   @SerializedName("income_roi_14")
   private Double incomeRoi14 = null;
 
-  @SerializedName("mini_game_ad_monetization_users")
-  private Long miniGameAdMonetizationUsers = null;
-
   @SerializedName("mini_game_ad_monetization_amount")
   private Long miniGameAdMonetizationAmount = null;
 
@@ -1688,9 +1652,6 @@ public class HourlyReportApiListStruct {
 
   @SerializedName("mini_game_ad_monetization_arpu")
   private Long miniGameAdMonetizationArpu = null;
-
-  @SerializedName("mini_game_first_day_ad_monetization_users")
-  private Long miniGameFirstDayAdMonetizationUsers = null;
 
   @SerializedName("mini_game_first_day_ad_monetization_amount")
   private Long miniGameFirstDayAdMonetizationAmount = null;
@@ -1707,9 +1668,6 @@ public class HourlyReportApiListStruct {
   @SerializedName("minigame_3d_income_count")
   private Long minigame3dIncomeCount = null;
 
-  @SerializedName("minigame_3d_income_uv")
-  private Long minigame3dIncomeUv = null;
-
   @SerializedName("mini_game_ad_monetization_amount_d3")
   private Long miniGameAdMonetizationAmountD3 = null;
 
@@ -1718,9 +1676,6 @@ public class HourlyReportApiListStruct {
 
   @SerializedName("minigame_7d_income_count")
   private Long minigame7dIncomeCount = null;
-
-  @SerializedName("minigame_7d_income_uv")
-  private Long minigame7dIncomeUv = null;
 
   @SerializedName("mini_game_ad_monetization_amount_d7")
   private Long miniGameAdMonetizationAmountD7 = null;
@@ -2337,6 +2292,84 @@ public class HourlyReportApiListStruct {
   @SerializedName("video_outer_play5s_rate")
   private Double videoOuterPlay5sRate = null;
 
+  @SerializedName("income_val_24h_pla_roi")
+  private Double incomeVal24hPlaRoi = null;
+
+  @SerializedName("view_drama_dedup_pv")
+  private Long viewDramaDedupPv = null;
+
+  @SerializedName("view_drama_dedup_pv_rate")
+  private Double viewDramaDedupPvRate = null;
+
+  @SerializedName("view_drama_dedup_pv_cost")
+  private Long viewDramaDedupPvCost = null;
+
+  @SerializedName("clk_selling_points_element_pv")
+  private Long clkSellingPointsElementPv = null;
+
+  @SerializedName("visit_store_first_dedup_pv")
+  private Long visitStoreFirstDedupPv = null;
+
+  @SerializedName("clk_fullwidth_background_pv")
+  private Long clkFullwidthBackgroundPv = null;
+
+  @SerializedName("clk_header_area_pv")
+  private Long clkHeaderAreaPv = null;
+
+  @SerializedName("order_first_dedup_pv")
+  private Long orderFirstDedupPv = null;
+
+  @SerializedName("order_first_dedup_pv_cost")
+  private Long orderFirstDedupPvCost = null;
+
+  @SerializedName("order_first_dedup_pv_rate")
+  private Double orderFirstDedupPvRate = null;
+
+  @SerializedName("store_pay_amount_off")
+  private Long storePayAmountOff = null;
+
+  @SerializedName("store_pay_uv_off")
+  private Long storePayUvOff = null;
+
+  @SerializedName("store_pay_pv_off")
+  private Long storePayPvOff = null;
+
+  @SerializedName("clk_selling_points_element_uv")
+  private Long clkSellingPointsElementUv = null;
+
+  @SerializedName("order_refund_active_24h_pv")
+  private Long orderRefundActive24hPv = null;
+
+  @SerializedName("order_refund_active_24h_rate")
+  private Double orderRefundActive24hRate = null;
+
+  @SerializedName("order_settle_24h_pv")
+  private Long orderSettle24hPv = null;
+
+  @SerializedName("order_settle_24h_rate")
+  private Double orderSettle24hRate = null;
+
+  @SerializedName("order_settle_24h_cost")
+  private Long orderSettle24hCost = null;
+
+  @SerializedName("lan_jump_button_rate")
+  private Double lanJumpButtonRate = null;
+
+  @SerializedName("reg_dedup1d_pv")
+  private Long regDedup1dPv = null;
+
+  @SerializedName("bf_dedup_pv")
+  private Long bfDedupPv = null;
+
+  @SerializedName("follow_biz_all_dedup_pv")
+  private Long followBizAllDedupPv = null;
+
+  @SerializedName("fir_og_conv_auto_acquisition_pv")
+  private Long firOgConvAutoAcquisitionPv = null;
+
+  @SerializedName("sec_og_conv_auto_acquisition_pv")
+  private Long secOgConvAutoAcquisitionPv = null;
+
   @SerializedName("adgroup_id")
   private Long adgroupId = null;
 
@@ -2632,44 +2665,6 @@ public class HourlyReportApiListStruct {
     this.cost = cost;
   }
 
-  public HourlyReportApiListStruct wechatCostStage1(Long wechatCostStage1) {
-    this.wechatCostStage1 = wechatCostStage1;
-    return this;
-  }
-
-  /**
-   * Get wechatCostStage1
-   *
-   * @return wechatCostStage1
-   */
-  @ApiModelProperty(value = "")
-  public Long getWechatCostStage1() {
-    return wechatCostStage1;
-  }
-
-  public void setWechatCostStage1(Long wechatCostStage1) {
-    this.wechatCostStage1 = wechatCostStage1;
-  }
-
-  public HourlyReportApiListStruct wechatCostStage2(Long wechatCostStage2) {
-    this.wechatCostStage2 = wechatCostStage2;
-    return this;
-  }
-
-  /**
-   * Get wechatCostStage2
-   *
-   * @return wechatCostStage2
-   */
-  @ApiModelProperty(value = "")
-  public Long getWechatCostStage2() {
-    return wechatCostStage2;
-  }
-
-  public void setWechatCostStage2(Long wechatCostStage2) {
-    this.wechatCostStage2 = wechatCostStage2;
-  }
-
   public HourlyReportApiListStruct acquisitionCost(Long acquisitionCost) {
     this.acquisitionCost = acquisitionCost;
     return this;
@@ -2877,86 +2872,6 @@ public class HourlyReportApiListStruct {
 
   public void setDeepConversionsCost(Long deepConversionsCost) {
     this.deepConversionsCost = deepConversionsCost;
-  }
-
-  public HourlyReportApiListStruct wechatShallowConversionsCountStage1(
-      Long wechatShallowConversionsCountStage1) {
-    this.wechatShallowConversionsCountStage1 = wechatShallowConversionsCountStage1;
-    return this;
-  }
-
-  /**
-   * Get wechatShallowConversionsCountStage1
-   *
-   * @return wechatShallowConversionsCountStage1
-   */
-  @ApiModelProperty(value = "")
-  public Long getWechatShallowConversionsCountStage1() {
-    return wechatShallowConversionsCountStage1;
-  }
-
-  public void setWechatShallowConversionsCountStage1(Long wechatShallowConversionsCountStage1) {
-    this.wechatShallowConversionsCountStage1 = wechatShallowConversionsCountStage1;
-  }
-
-  public HourlyReportApiListStruct wechatShallowConversionsCountStage2(
-      Long wechatShallowConversionsCountStage2) {
-    this.wechatShallowConversionsCountStage2 = wechatShallowConversionsCountStage2;
-    return this;
-  }
-
-  /**
-   * Get wechatShallowConversionsCountStage2
-   *
-   * @return wechatShallowConversionsCountStage2
-   */
-  @ApiModelProperty(value = "")
-  public Long getWechatShallowConversionsCountStage2() {
-    return wechatShallowConversionsCountStage2;
-  }
-
-  public void setWechatShallowConversionsCountStage2(Long wechatShallowConversionsCountStage2) {
-    this.wechatShallowConversionsCountStage2 = wechatShallowConversionsCountStage2;
-  }
-
-  public HourlyReportApiListStruct wechatDeepConversionsCountStage1(
-      Long wechatDeepConversionsCountStage1) {
-    this.wechatDeepConversionsCountStage1 = wechatDeepConversionsCountStage1;
-    return this;
-  }
-
-  /**
-   * Get wechatDeepConversionsCountStage1
-   *
-   * @return wechatDeepConversionsCountStage1
-   */
-  @ApiModelProperty(value = "")
-  public Long getWechatDeepConversionsCountStage1() {
-    return wechatDeepConversionsCountStage1;
-  }
-
-  public void setWechatDeepConversionsCountStage1(Long wechatDeepConversionsCountStage1) {
-    this.wechatDeepConversionsCountStage1 = wechatDeepConversionsCountStage1;
-  }
-
-  public HourlyReportApiListStruct wechatDeepConversionsCountStage2(
-      Long wechatDeepConversionsCountStage2) {
-    this.wechatDeepConversionsCountStage2 = wechatDeepConversionsCountStage2;
-    return this;
-  }
-
-  /**
-   * Get wechatDeepConversionsCountStage2
-   *
-   * @return wechatDeepConversionsCountStage2
-   */
-  @ApiModelProperty(value = "")
-  public Long getWechatDeepConversionsCountStage2() {
-    return wechatDeepConversionsCountStage2;
-  }
-
-  public void setWechatDeepConversionsCountStage2(Long wechatDeepConversionsCountStage2) {
-    this.wechatDeepConversionsCountStage2 = wechatDeepConversionsCountStage2;
   }
 
   public HourlyReportApiListStruct conversionsByDisplayCount(Long conversionsByDisplayCount) {
@@ -11297,82 +11212,6 @@ public class HourlyReportApiListStruct {
     this.miniGameBfIncomeAmount = miniGameBfIncomeAmount;
   }
 
-  public HourlyReportApiListStruct miniGameBfIncomeUv(Long miniGameBfIncomeUv) {
-    this.miniGameBfIncomeUv = miniGameBfIncomeUv;
-    return this;
-  }
-
-  /**
-   * Get miniGameBfIncomeUv
-   *
-   * @return miniGameBfIncomeUv
-   */
-  @ApiModelProperty(value = "")
-  public Long getMiniGameBfIncomeUv() {
-    return miniGameBfIncomeUv;
-  }
-
-  public void setMiniGameBfIncomeUv(Long miniGameBfIncomeUv) {
-    this.miniGameBfIncomeUv = miniGameBfIncomeUv;
-  }
-
-  public HourlyReportApiListStruct miniGameBfIncomeCost(Long miniGameBfIncomeCost) {
-    this.miniGameBfIncomeCost = miniGameBfIncomeCost;
-    return this;
-  }
-
-  /**
-   * Get miniGameBfIncomeCost
-   *
-   * @return miniGameBfIncomeCost
-   */
-  @ApiModelProperty(value = "")
-  public Long getMiniGameBfIncomeCost() {
-    return miniGameBfIncomeCost;
-  }
-
-  public void setMiniGameBfIncomeCost(Long miniGameBfIncomeCost) {
-    this.miniGameBfIncomeCost = miniGameBfIncomeCost;
-  }
-
-  public HourlyReportApiListStruct miniGameBfIncomeArpu(Long miniGameBfIncomeArpu) {
-    this.miniGameBfIncomeArpu = miniGameBfIncomeArpu;
-    return this;
-  }
-
-  /**
-   * Get miniGameBfIncomeArpu
-   *
-   * @return miniGameBfIncomeArpu
-   */
-  @ApiModelProperty(value = "")
-  public Long getMiniGameBfIncomeArpu() {
-    return miniGameBfIncomeArpu;
-  }
-
-  public void setMiniGameBfIncomeArpu(Long miniGameBfIncomeArpu) {
-    this.miniGameBfIncomeArpu = miniGameBfIncomeArpu;
-  }
-
-  public HourlyReportApiListStruct miniGameBfIncomeRoi(Double miniGameBfIncomeRoi) {
-    this.miniGameBfIncomeRoi = miniGameBfIncomeRoi;
-    return this;
-  }
-
-  /**
-   * Get miniGameBfIncomeRoi
-   *
-   * @return miniGameBfIncomeRoi
-   */
-  @ApiModelProperty(value = "")
-  public Double getMiniGameBfIncomeRoi() {
-    return miniGameBfIncomeRoi;
-  }
-
-  public void setMiniGameBfIncomeRoi(Double miniGameBfIncomeRoi) {
-    this.miniGameBfIncomeRoi = miniGameBfIncomeRoi;
-  }
-
   public HourlyReportApiListStruct miniGameBfIncomeD1Amount(Long miniGameBfIncomeD1Amount) {
     this.miniGameBfIncomeD1Amount = miniGameBfIncomeD1Amount;
     return this;
@@ -11390,25 +11229,6 @@ public class HourlyReportApiListStruct {
 
   public void setMiniGameBfIncomeD1Amount(Long miniGameBfIncomeD1Amount) {
     this.miniGameBfIncomeD1Amount = miniGameBfIncomeD1Amount;
-  }
-
-  public HourlyReportApiListStruct miniGameBfIncomeD1Uv(Long miniGameBfIncomeD1Uv) {
-    this.miniGameBfIncomeD1Uv = miniGameBfIncomeD1Uv;
-    return this;
-  }
-
-  /**
-   * Get miniGameBfIncomeD1Uv
-   *
-   * @return miniGameBfIncomeD1Uv
-   */
-  @ApiModelProperty(value = "")
-  public Long getMiniGameBfIncomeD1Uv() {
-    return miniGameBfIncomeD1Uv;
-  }
-
-  public void setMiniGameBfIncomeD1Uv(Long miniGameBfIncomeD1Uv) {
-    this.miniGameBfIncomeD1Uv = miniGameBfIncomeD1Uv;
   }
 
   public HourlyReportApiListStruct miniGameBfIncomeD1Cost(Long miniGameBfIncomeD1Cost) {
@@ -12875,25 +12695,6 @@ public class HourlyReportApiListStruct {
     this.incomeRoi14 = incomeRoi14;
   }
 
-  public HourlyReportApiListStruct miniGameAdMonetizationUsers(Long miniGameAdMonetizationUsers) {
-    this.miniGameAdMonetizationUsers = miniGameAdMonetizationUsers;
-    return this;
-  }
-
-  /**
-   * Get miniGameAdMonetizationUsers
-   *
-   * @return miniGameAdMonetizationUsers
-   */
-  @ApiModelProperty(value = "")
-  public Long getMiniGameAdMonetizationUsers() {
-    return miniGameAdMonetizationUsers;
-  }
-
-  public void setMiniGameAdMonetizationUsers(Long miniGameAdMonetizationUsers) {
-    this.miniGameAdMonetizationUsers = miniGameAdMonetizationUsers;
-  }
-
   public HourlyReportApiListStruct miniGameAdMonetizationAmount(Long miniGameAdMonetizationAmount) {
     this.miniGameAdMonetizationAmount = miniGameAdMonetizationAmount;
     return this;
@@ -12968,26 +12769,6 @@ public class HourlyReportApiListStruct {
 
   public void setMiniGameAdMonetizationArpu(Long miniGameAdMonetizationArpu) {
     this.miniGameAdMonetizationArpu = miniGameAdMonetizationArpu;
-  }
-
-  public HourlyReportApiListStruct miniGameFirstDayAdMonetizationUsers(
-      Long miniGameFirstDayAdMonetizationUsers) {
-    this.miniGameFirstDayAdMonetizationUsers = miniGameFirstDayAdMonetizationUsers;
-    return this;
-  }
-
-  /**
-   * Get miniGameFirstDayAdMonetizationUsers
-   *
-   * @return miniGameFirstDayAdMonetizationUsers
-   */
-  @ApiModelProperty(value = "")
-  public Long getMiniGameFirstDayAdMonetizationUsers() {
-    return miniGameFirstDayAdMonetizationUsers;
-  }
-
-  public void setMiniGameFirstDayAdMonetizationUsers(Long miniGameFirstDayAdMonetizationUsers) {
-    this.miniGameFirstDayAdMonetizationUsers = miniGameFirstDayAdMonetizationUsers;
   }
 
   public HourlyReportApiListStruct miniGameFirstDayAdMonetizationAmount(
@@ -13086,25 +12867,6 @@ public class HourlyReportApiListStruct {
     this.minigame3dIncomeCount = minigame3dIncomeCount;
   }
 
-  public HourlyReportApiListStruct minigame3dIncomeUv(Long minigame3dIncomeUv) {
-    this.minigame3dIncomeUv = minigame3dIncomeUv;
-    return this;
-  }
-
-  /**
-   * Get minigame3dIncomeUv
-   *
-   * @return minigame3dIncomeUv
-   */
-  @ApiModelProperty(value = "")
-  public Long getMinigame3dIncomeUv() {
-    return minigame3dIncomeUv;
-  }
-
-  public void setMinigame3dIncomeUv(Long minigame3dIncomeUv) {
-    this.minigame3dIncomeUv = minigame3dIncomeUv;
-  }
-
   public HourlyReportApiListStruct miniGameAdMonetizationAmountD3(
       Long miniGameAdMonetizationAmountD3) {
     this.miniGameAdMonetizationAmountD3 = miniGameAdMonetizationAmountD3;
@@ -13161,25 +12923,6 @@ public class HourlyReportApiListStruct {
 
   public void setMinigame7dIncomeCount(Long minigame7dIncomeCount) {
     this.minigame7dIncomeCount = minigame7dIncomeCount;
-  }
-
-  public HourlyReportApiListStruct minigame7dIncomeUv(Long minigame7dIncomeUv) {
-    this.minigame7dIncomeUv = minigame7dIncomeUv;
-    return this;
-  }
-
-  /**
-   * Get minigame7dIncomeUv
-   *
-   * @return minigame7dIncomeUv
-   */
-  @ApiModelProperty(value = "")
-  public Long getMinigame7dIncomeUv() {
-    return minigame7dIncomeUv;
-  }
-
-  public void setMinigame7dIncomeUv(Long minigame7dIncomeUv) {
-    this.minigame7dIncomeUv = minigame7dIncomeUv;
   }
 
   public HourlyReportApiListStruct miniGameAdMonetizationAmountD7(
@@ -17122,6 +16865,500 @@ public class HourlyReportApiListStruct {
     this.videoOuterPlay5sRate = videoOuterPlay5sRate;
   }
 
+  public HourlyReportApiListStruct incomeVal24hPlaRoi(Double incomeVal24hPlaRoi) {
+    this.incomeVal24hPlaRoi = incomeVal24hPlaRoi;
+    return this;
+  }
+
+  /**
+   * Get incomeVal24hPlaRoi
+   *
+   * @return incomeVal24hPlaRoi
+   */
+  @ApiModelProperty(value = "")
+  public Double getIncomeVal24hPlaRoi() {
+    return incomeVal24hPlaRoi;
+  }
+
+  public void setIncomeVal24hPlaRoi(Double incomeVal24hPlaRoi) {
+    this.incomeVal24hPlaRoi = incomeVal24hPlaRoi;
+  }
+
+  public HourlyReportApiListStruct viewDramaDedupPv(Long viewDramaDedupPv) {
+    this.viewDramaDedupPv = viewDramaDedupPv;
+    return this;
+  }
+
+  /**
+   * Get viewDramaDedupPv
+   *
+   * @return viewDramaDedupPv
+   */
+  @ApiModelProperty(value = "")
+  public Long getViewDramaDedupPv() {
+    return viewDramaDedupPv;
+  }
+
+  public void setViewDramaDedupPv(Long viewDramaDedupPv) {
+    this.viewDramaDedupPv = viewDramaDedupPv;
+  }
+
+  public HourlyReportApiListStruct viewDramaDedupPvRate(Double viewDramaDedupPvRate) {
+    this.viewDramaDedupPvRate = viewDramaDedupPvRate;
+    return this;
+  }
+
+  /**
+   * Get viewDramaDedupPvRate
+   *
+   * @return viewDramaDedupPvRate
+   */
+  @ApiModelProperty(value = "")
+  public Double getViewDramaDedupPvRate() {
+    return viewDramaDedupPvRate;
+  }
+
+  public void setViewDramaDedupPvRate(Double viewDramaDedupPvRate) {
+    this.viewDramaDedupPvRate = viewDramaDedupPvRate;
+  }
+
+  public HourlyReportApiListStruct viewDramaDedupPvCost(Long viewDramaDedupPvCost) {
+    this.viewDramaDedupPvCost = viewDramaDedupPvCost;
+    return this;
+  }
+
+  /**
+   * Get viewDramaDedupPvCost
+   *
+   * @return viewDramaDedupPvCost
+   */
+  @ApiModelProperty(value = "")
+  public Long getViewDramaDedupPvCost() {
+    return viewDramaDedupPvCost;
+  }
+
+  public void setViewDramaDedupPvCost(Long viewDramaDedupPvCost) {
+    this.viewDramaDedupPvCost = viewDramaDedupPvCost;
+  }
+
+  public HourlyReportApiListStruct clkSellingPointsElementPv(Long clkSellingPointsElementPv) {
+    this.clkSellingPointsElementPv = clkSellingPointsElementPv;
+    return this;
+  }
+
+  /**
+   * Get clkSellingPointsElementPv
+   *
+   * @return clkSellingPointsElementPv
+   */
+  @ApiModelProperty(value = "")
+  public Long getClkSellingPointsElementPv() {
+    return clkSellingPointsElementPv;
+  }
+
+  public void setClkSellingPointsElementPv(Long clkSellingPointsElementPv) {
+    this.clkSellingPointsElementPv = clkSellingPointsElementPv;
+  }
+
+  public HourlyReportApiListStruct visitStoreFirstDedupPv(Long visitStoreFirstDedupPv) {
+    this.visitStoreFirstDedupPv = visitStoreFirstDedupPv;
+    return this;
+  }
+
+  /**
+   * Get visitStoreFirstDedupPv
+   *
+   * @return visitStoreFirstDedupPv
+   */
+  @ApiModelProperty(value = "")
+  public Long getVisitStoreFirstDedupPv() {
+    return visitStoreFirstDedupPv;
+  }
+
+  public void setVisitStoreFirstDedupPv(Long visitStoreFirstDedupPv) {
+    this.visitStoreFirstDedupPv = visitStoreFirstDedupPv;
+  }
+
+  public HourlyReportApiListStruct clkFullwidthBackgroundPv(Long clkFullwidthBackgroundPv) {
+    this.clkFullwidthBackgroundPv = clkFullwidthBackgroundPv;
+    return this;
+  }
+
+  /**
+   * Get clkFullwidthBackgroundPv
+   *
+   * @return clkFullwidthBackgroundPv
+   */
+  @ApiModelProperty(value = "")
+  public Long getClkFullwidthBackgroundPv() {
+    return clkFullwidthBackgroundPv;
+  }
+
+  public void setClkFullwidthBackgroundPv(Long clkFullwidthBackgroundPv) {
+    this.clkFullwidthBackgroundPv = clkFullwidthBackgroundPv;
+  }
+
+  public HourlyReportApiListStruct clkHeaderAreaPv(Long clkHeaderAreaPv) {
+    this.clkHeaderAreaPv = clkHeaderAreaPv;
+    return this;
+  }
+
+  /**
+   * Get clkHeaderAreaPv
+   *
+   * @return clkHeaderAreaPv
+   */
+  @ApiModelProperty(value = "")
+  public Long getClkHeaderAreaPv() {
+    return clkHeaderAreaPv;
+  }
+
+  public void setClkHeaderAreaPv(Long clkHeaderAreaPv) {
+    this.clkHeaderAreaPv = clkHeaderAreaPv;
+  }
+
+  public HourlyReportApiListStruct orderFirstDedupPv(Long orderFirstDedupPv) {
+    this.orderFirstDedupPv = orderFirstDedupPv;
+    return this;
+  }
+
+  /**
+   * Get orderFirstDedupPv
+   *
+   * @return orderFirstDedupPv
+   */
+  @ApiModelProperty(value = "")
+  public Long getOrderFirstDedupPv() {
+    return orderFirstDedupPv;
+  }
+
+  public void setOrderFirstDedupPv(Long orderFirstDedupPv) {
+    this.orderFirstDedupPv = orderFirstDedupPv;
+  }
+
+  public HourlyReportApiListStruct orderFirstDedupPvCost(Long orderFirstDedupPvCost) {
+    this.orderFirstDedupPvCost = orderFirstDedupPvCost;
+    return this;
+  }
+
+  /**
+   * Get orderFirstDedupPvCost
+   *
+   * @return orderFirstDedupPvCost
+   */
+  @ApiModelProperty(value = "")
+  public Long getOrderFirstDedupPvCost() {
+    return orderFirstDedupPvCost;
+  }
+
+  public void setOrderFirstDedupPvCost(Long orderFirstDedupPvCost) {
+    this.orderFirstDedupPvCost = orderFirstDedupPvCost;
+  }
+
+  public HourlyReportApiListStruct orderFirstDedupPvRate(Double orderFirstDedupPvRate) {
+    this.orderFirstDedupPvRate = orderFirstDedupPvRate;
+    return this;
+  }
+
+  /**
+   * Get orderFirstDedupPvRate
+   *
+   * @return orderFirstDedupPvRate
+   */
+  @ApiModelProperty(value = "")
+  public Double getOrderFirstDedupPvRate() {
+    return orderFirstDedupPvRate;
+  }
+
+  public void setOrderFirstDedupPvRate(Double orderFirstDedupPvRate) {
+    this.orderFirstDedupPvRate = orderFirstDedupPvRate;
+  }
+
+  public HourlyReportApiListStruct storePayAmountOff(Long storePayAmountOff) {
+    this.storePayAmountOff = storePayAmountOff;
+    return this;
+  }
+
+  /**
+   * Get storePayAmountOff
+   *
+   * @return storePayAmountOff
+   */
+  @ApiModelProperty(value = "")
+  public Long getStorePayAmountOff() {
+    return storePayAmountOff;
+  }
+
+  public void setStorePayAmountOff(Long storePayAmountOff) {
+    this.storePayAmountOff = storePayAmountOff;
+  }
+
+  public HourlyReportApiListStruct storePayUvOff(Long storePayUvOff) {
+    this.storePayUvOff = storePayUvOff;
+    return this;
+  }
+
+  /**
+   * Get storePayUvOff
+   *
+   * @return storePayUvOff
+   */
+  @ApiModelProperty(value = "")
+  public Long getStorePayUvOff() {
+    return storePayUvOff;
+  }
+
+  public void setStorePayUvOff(Long storePayUvOff) {
+    this.storePayUvOff = storePayUvOff;
+  }
+
+  public HourlyReportApiListStruct storePayPvOff(Long storePayPvOff) {
+    this.storePayPvOff = storePayPvOff;
+    return this;
+  }
+
+  /**
+   * Get storePayPvOff
+   *
+   * @return storePayPvOff
+   */
+  @ApiModelProperty(value = "")
+  public Long getStorePayPvOff() {
+    return storePayPvOff;
+  }
+
+  public void setStorePayPvOff(Long storePayPvOff) {
+    this.storePayPvOff = storePayPvOff;
+  }
+
+  public HourlyReportApiListStruct clkSellingPointsElementUv(Long clkSellingPointsElementUv) {
+    this.clkSellingPointsElementUv = clkSellingPointsElementUv;
+    return this;
+  }
+
+  /**
+   * Get clkSellingPointsElementUv
+   *
+   * @return clkSellingPointsElementUv
+   */
+  @ApiModelProperty(value = "")
+  public Long getClkSellingPointsElementUv() {
+    return clkSellingPointsElementUv;
+  }
+
+  public void setClkSellingPointsElementUv(Long clkSellingPointsElementUv) {
+    this.clkSellingPointsElementUv = clkSellingPointsElementUv;
+  }
+
+  public HourlyReportApiListStruct orderRefundActive24hPv(Long orderRefundActive24hPv) {
+    this.orderRefundActive24hPv = orderRefundActive24hPv;
+    return this;
+  }
+
+  /**
+   * Get orderRefundActive24hPv
+   *
+   * @return orderRefundActive24hPv
+   */
+  @ApiModelProperty(value = "")
+  public Long getOrderRefundActive24hPv() {
+    return orderRefundActive24hPv;
+  }
+
+  public void setOrderRefundActive24hPv(Long orderRefundActive24hPv) {
+    this.orderRefundActive24hPv = orderRefundActive24hPv;
+  }
+
+  public HourlyReportApiListStruct orderRefundActive24hRate(Double orderRefundActive24hRate) {
+    this.orderRefundActive24hRate = orderRefundActive24hRate;
+    return this;
+  }
+
+  /**
+   * Get orderRefundActive24hRate
+   *
+   * @return orderRefundActive24hRate
+   */
+  @ApiModelProperty(value = "")
+  public Double getOrderRefundActive24hRate() {
+    return orderRefundActive24hRate;
+  }
+
+  public void setOrderRefundActive24hRate(Double orderRefundActive24hRate) {
+    this.orderRefundActive24hRate = orderRefundActive24hRate;
+  }
+
+  public HourlyReportApiListStruct orderSettle24hPv(Long orderSettle24hPv) {
+    this.orderSettle24hPv = orderSettle24hPv;
+    return this;
+  }
+
+  /**
+   * Get orderSettle24hPv
+   *
+   * @return orderSettle24hPv
+   */
+  @ApiModelProperty(value = "")
+  public Long getOrderSettle24hPv() {
+    return orderSettle24hPv;
+  }
+
+  public void setOrderSettle24hPv(Long orderSettle24hPv) {
+    this.orderSettle24hPv = orderSettle24hPv;
+  }
+
+  public HourlyReportApiListStruct orderSettle24hRate(Double orderSettle24hRate) {
+    this.orderSettle24hRate = orderSettle24hRate;
+    return this;
+  }
+
+  /**
+   * Get orderSettle24hRate
+   *
+   * @return orderSettle24hRate
+   */
+  @ApiModelProperty(value = "")
+  public Double getOrderSettle24hRate() {
+    return orderSettle24hRate;
+  }
+
+  public void setOrderSettle24hRate(Double orderSettle24hRate) {
+    this.orderSettle24hRate = orderSettle24hRate;
+  }
+
+  public HourlyReportApiListStruct orderSettle24hCost(Long orderSettle24hCost) {
+    this.orderSettle24hCost = orderSettle24hCost;
+    return this;
+  }
+
+  /**
+   * Get orderSettle24hCost
+   *
+   * @return orderSettle24hCost
+   */
+  @ApiModelProperty(value = "")
+  public Long getOrderSettle24hCost() {
+    return orderSettle24hCost;
+  }
+
+  public void setOrderSettle24hCost(Long orderSettle24hCost) {
+    this.orderSettle24hCost = orderSettle24hCost;
+  }
+
+  public HourlyReportApiListStruct lanJumpButtonRate(Double lanJumpButtonRate) {
+    this.lanJumpButtonRate = lanJumpButtonRate;
+    return this;
+  }
+
+  /**
+   * Get lanJumpButtonRate
+   *
+   * @return lanJumpButtonRate
+   */
+  @ApiModelProperty(value = "")
+  public Double getLanJumpButtonRate() {
+    return lanJumpButtonRate;
+  }
+
+  public void setLanJumpButtonRate(Double lanJumpButtonRate) {
+    this.lanJumpButtonRate = lanJumpButtonRate;
+  }
+
+  public HourlyReportApiListStruct regDedup1dPv(Long regDedup1dPv) {
+    this.regDedup1dPv = regDedup1dPv;
+    return this;
+  }
+
+  /**
+   * Get regDedup1dPv
+   *
+   * @return regDedup1dPv
+   */
+  @ApiModelProperty(value = "")
+  public Long getRegDedup1dPv() {
+    return regDedup1dPv;
+  }
+
+  public void setRegDedup1dPv(Long regDedup1dPv) {
+    this.regDedup1dPv = regDedup1dPv;
+  }
+
+  public HourlyReportApiListStruct bfDedupPv(Long bfDedupPv) {
+    this.bfDedupPv = bfDedupPv;
+    return this;
+  }
+
+  /**
+   * Get bfDedupPv
+   *
+   * @return bfDedupPv
+   */
+  @ApiModelProperty(value = "")
+  public Long getBfDedupPv() {
+    return bfDedupPv;
+  }
+
+  public void setBfDedupPv(Long bfDedupPv) {
+    this.bfDedupPv = bfDedupPv;
+  }
+
+  public HourlyReportApiListStruct followBizAllDedupPv(Long followBizAllDedupPv) {
+    this.followBizAllDedupPv = followBizAllDedupPv;
+    return this;
+  }
+
+  /**
+   * Get followBizAllDedupPv
+   *
+   * @return followBizAllDedupPv
+   */
+  @ApiModelProperty(value = "")
+  public Long getFollowBizAllDedupPv() {
+    return followBizAllDedupPv;
+  }
+
+  public void setFollowBizAllDedupPv(Long followBizAllDedupPv) {
+    this.followBizAllDedupPv = followBizAllDedupPv;
+  }
+
+  public HourlyReportApiListStruct firOgConvAutoAcquisitionPv(Long firOgConvAutoAcquisitionPv) {
+    this.firOgConvAutoAcquisitionPv = firOgConvAutoAcquisitionPv;
+    return this;
+  }
+
+  /**
+   * Get firOgConvAutoAcquisitionPv
+   *
+   * @return firOgConvAutoAcquisitionPv
+   */
+  @ApiModelProperty(value = "")
+  public Long getFirOgConvAutoAcquisitionPv() {
+    return firOgConvAutoAcquisitionPv;
+  }
+
+  public void setFirOgConvAutoAcquisitionPv(Long firOgConvAutoAcquisitionPv) {
+    this.firOgConvAutoAcquisitionPv = firOgConvAutoAcquisitionPv;
+  }
+
+  public HourlyReportApiListStruct secOgConvAutoAcquisitionPv(Long secOgConvAutoAcquisitionPv) {
+    this.secOgConvAutoAcquisitionPv = secOgConvAutoAcquisitionPv;
+    return this;
+  }
+
+  /**
+   * Get secOgConvAutoAcquisitionPv
+   *
+   * @return secOgConvAutoAcquisitionPv
+   */
+  @ApiModelProperty(value = "")
+  public Long getSecOgConvAutoAcquisitionPv() {
+    return secOgConvAutoAcquisitionPv;
+  }
+
+  public void setSecOgConvAutoAcquisitionPv(Long secOgConvAutoAcquisitionPv) {
+    this.secOgConvAutoAcquisitionPv = secOgConvAutoAcquisitionPv;
+  }
+
   public HourlyReportApiListStruct adgroupId(Long adgroupId) {
     this.adgroupId = adgroupId;
     return this;
@@ -17448,8 +17685,6 @@ public class HourlyReportApiListStruct {
         && Objects.equals(this.valuableClickCost, hourlyReportApiListStruct.valuableClickCost)
         && Objects.equals(this.valuableClickRate, hourlyReportApiListStruct.valuableClickRate)
         && Objects.equals(this.cost, hourlyReportApiListStruct.cost)
-        && Objects.equals(this.wechatCostStage1, hourlyReportApiListStruct.wechatCostStage1)
-        && Objects.equals(this.wechatCostStage2, hourlyReportApiListStruct.wechatCostStage2)
         && Objects.equals(this.acquisitionCost, hourlyReportApiListStruct.acquisitionCost)
         && Objects.equals(this.thousandDisplayPrice, hourlyReportApiListStruct.thousandDisplayPrice)
         && Objects.equals(this.realCostTop, hourlyReportApiListStruct.realCostTop)
@@ -17463,18 +17698,6 @@ public class HourlyReportApiListStruct {
         && Objects.equals(this.deepConversionsCount, hourlyReportApiListStruct.deepConversionsCount)
         && Objects.equals(this.deepConversionsRate, hourlyReportApiListStruct.deepConversionsRate)
         && Objects.equals(this.deepConversionsCost, hourlyReportApiListStruct.deepConversionsCost)
-        && Objects.equals(
-            this.wechatShallowConversionsCountStage1,
-            hourlyReportApiListStruct.wechatShallowConversionsCountStage1)
-        && Objects.equals(
-            this.wechatShallowConversionsCountStage2,
-            hourlyReportApiListStruct.wechatShallowConversionsCountStage2)
-        && Objects.equals(
-            this.wechatDeepConversionsCountStage1,
-            hourlyReportApiListStruct.wechatDeepConversionsCountStage1)
-        && Objects.equals(
-            this.wechatDeepConversionsCountStage2,
-            hourlyReportApiListStruct.wechatDeepConversionsCountStage2)
         && Objects.equals(
             this.conversionsByDisplayCount, hourlyReportApiListStruct.conversionsByDisplayCount)
         && Objects.equals(
@@ -18093,13 +18316,8 @@ public class HourlyReportApiListStruct {
             this.miniGameBfPurchaseD1Arpu, hourlyReportApiListStruct.miniGameBfPurchaseD1Arpu)
         && Objects.equals(
             this.miniGameBfIncomeAmount, hourlyReportApiListStruct.miniGameBfIncomeAmount)
-        && Objects.equals(this.miniGameBfIncomeUv, hourlyReportApiListStruct.miniGameBfIncomeUv)
-        && Objects.equals(this.miniGameBfIncomeCost, hourlyReportApiListStruct.miniGameBfIncomeCost)
-        && Objects.equals(this.miniGameBfIncomeArpu, hourlyReportApiListStruct.miniGameBfIncomeArpu)
-        && Objects.equals(this.miniGameBfIncomeRoi, hourlyReportApiListStruct.miniGameBfIncomeRoi)
         && Objects.equals(
             this.miniGameBfIncomeD1Amount, hourlyReportApiListStruct.miniGameBfIncomeD1Amount)
-        && Objects.equals(this.miniGameBfIncomeD1Uv, hourlyReportApiListStruct.miniGameBfIncomeD1Uv)
         && Objects.equals(
             this.miniGameBfIncomeD1Cost, hourlyReportApiListStruct.miniGameBfIncomeD1Cost)
         && Objects.equals(
@@ -18204,8 +18422,6 @@ public class HourlyReportApiListStruct {
         && Objects.equals(this.incomeVal14, hourlyReportApiListStruct.incomeVal14)
         && Objects.equals(this.incomeRoi14, hourlyReportApiListStruct.incomeRoi14)
         && Objects.equals(
-            this.miniGameAdMonetizationUsers, hourlyReportApiListStruct.miniGameAdMonetizationUsers)
-        && Objects.equals(
             this.miniGameAdMonetizationAmount,
             hourlyReportApiListStruct.miniGameAdMonetizationAmount)
         && Objects.equals(
@@ -18214,9 +18430,6 @@ public class HourlyReportApiListStruct {
             this.miniGameAdMonetizationRoi, hourlyReportApiListStruct.miniGameAdMonetizationRoi)
         && Objects.equals(
             this.miniGameAdMonetizationArpu, hourlyReportApiListStruct.miniGameAdMonetizationArpu)
-        && Objects.equals(
-            this.miniGameFirstDayAdMonetizationUsers,
-            hourlyReportApiListStruct.miniGameFirstDayAdMonetizationUsers)
         && Objects.equals(
             this.miniGameFirstDayAdMonetizationAmount,
             hourlyReportApiListStruct.miniGameFirstDayAdMonetizationAmount)
@@ -18229,14 +18442,12 @@ public class HourlyReportApiListStruct {
             hourlyReportApiListStruct.miniGameFirstDayAdPayingArpu)
         && Objects.equals(
             this.minigame3dIncomeCount, hourlyReportApiListStruct.minigame3dIncomeCount)
-        && Objects.equals(this.minigame3dIncomeUv, hourlyReportApiListStruct.minigame3dIncomeUv)
         && Objects.equals(
             this.miniGameAdMonetizationAmountD3,
             hourlyReportApiListStruct.miniGameAdMonetizationAmountD3)
         && Objects.equals(this.minigame3dIncomeRoi, hourlyReportApiListStruct.minigame3dIncomeRoi)
         && Objects.equals(
             this.minigame7dIncomeCount, hourlyReportApiListStruct.minigame7dIncomeCount)
-        && Objects.equals(this.minigame7dIncomeUv, hourlyReportApiListStruct.minigame7dIncomeUv)
         && Objects.equals(
             this.miniGameAdMonetizationAmountD7,
             hourlyReportApiListStruct.miniGameAdMonetizationAmountD7)
@@ -18582,6 +18793,42 @@ public class HourlyReportApiListStruct {
         && Objects.equals(this.openAccountPv, hourlyReportApiListStruct.openAccountPv)
         && Objects.equals(this.openAccountPvCost, hourlyReportApiListStruct.openAccountPvCost)
         && Objects.equals(this.videoOuterPlay5sRate, hourlyReportApiListStruct.videoOuterPlay5sRate)
+        && Objects.equals(this.incomeVal24hPlaRoi, hourlyReportApiListStruct.incomeVal24hPlaRoi)
+        && Objects.equals(this.viewDramaDedupPv, hourlyReportApiListStruct.viewDramaDedupPv)
+        && Objects.equals(this.viewDramaDedupPvRate, hourlyReportApiListStruct.viewDramaDedupPvRate)
+        && Objects.equals(this.viewDramaDedupPvCost, hourlyReportApiListStruct.viewDramaDedupPvCost)
+        && Objects.equals(
+            this.clkSellingPointsElementPv, hourlyReportApiListStruct.clkSellingPointsElementPv)
+        && Objects.equals(
+            this.visitStoreFirstDedupPv, hourlyReportApiListStruct.visitStoreFirstDedupPv)
+        && Objects.equals(
+            this.clkFullwidthBackgroundPv, hourlyReportApiListStruct.clkFullwidthBackgroundPv)
+        && Objects.equals(this.clkHeaderAreaPv, hourlyReportApiListStruct.clkHeaderAreaPv)
+        && Objects.equals(this.orderFirstDedupPv, hourlyReportApiListStruct.orderFirstDedupPv)
+        && Objects.equals(
+            this.orderFirstDedupPvCost, hourlyReportApiListStruct.orderFirstDedupPvCost)
+        && Objects.equals(
+            this.orderFirstDedupPvRate, hourlyReportApiListStruct.orderFirstDedupPvRate)
+        && Objects.equals(this.storePayAmountOff, hourlyReportApiListStruct.storePayAmountOff)
+        && Objects.equals(this.storePayUvOff, hourlyReportApiListStruct.storePayUvOff)
+        && Objects.equals(this.storePayPvOff, hourlyReportApiListStruct.storePayPvOff)
+        && Objects.equals(
+            this.clkSellingPointsElementUv, hourlyReportApiListStruct.clkSellingPointsElementUv)
+        && Objects.equals(
+            this.orderRefundActive24hPv, hourlyReportApiListStruct.orderRefundActive24hPv)
+        && Objects.equals(
+            this.orderRefundActive24hRate, hourlyReportApiListStruct.orderRefundActive24hRate)
+        && Objects.equals(this.orderSettle24hPv, hourlyReportApiListStruct.orderSettle24hPv)
+        && Objects.equals(this.orderSettle24hRate, hourlyReportApiListStruct.orderSettle24hRate)
+        && Objects.equals(this.orderSettle24hCost, hourlyReportApiListStruct.orderSettle24hCost)
+        && Objects.equals(this.lanJumpButtonRate, hourlyReportApiListStruct.lanJumpButtonRate)
+        && Objects.equals(this.regDedup1dPv, hourlyReportApiListStruct.regDedup1dPv)
+        && Objects.equals(this.bfDedupPv, hourlyReportApiListStruct.bfDedupPv)
+        && Objects.equals(this.followBizAllDedupPv, hourlyReportApiListStruct.followBizAllDedupPv)
+        && Objects.equals(
+            this.firOgConvAutoAcquisitionPv, hourlyReportApiListStruct.firOgConvAutoAcquisitionPv)
+        && Objects.equals(
+            this.secOgConvAutoAcquisitionPv, hourlyReportApiListStruct.secOgConvAutoAcquisitionPv)
         && Objects.equals(this.adgroupId, hourlyReportApiListStruct.adgroupId)
         && Objects.equals(this.adgroupName, hourlyReportApiListStruct.adgroupName)
         && Objects.equals(this.dynamicCreativeId, hourlyReportApiListStruct.dynamicCreativeId)
@@ -18616,8 +18863,6 @@ public class HourlyReportApiListStruct {
         valuableClickCost,
         valuableClickRate,
         cost,
-        wechatCostStage1,
-        wechatCostStage2,
         acquisitionCost,
         thousandDisplayPrice,
         realCostTop,
@@ -18629,10 +18874,6 @@ public class HourlyReportApiListStruct {
         deepConversionsCount,
         deepConversionsRate,
         deepConversionsCost,
-        wechatShallowConversionsCountStage1,
-        wechatShallowConversionsCountStage2,
-        wechatDeepConversionsCountStage1,
-        wechatDeepConversionsCountStage2,
         conversionsByDisplayCount,
         conversionsByDisplayRate,
         conversionsByDisplayCost,
@@ -19071,12 +19312,7 @@ public class HourlyReportApiListStruct {
         miniGameBfPurchaseD1Roi,
         miniGameBfPurchaseD1Arpu,
         miniGameBfIncomeAmount,
-        miniGameBfIncomeUv,
-        miniGameBfIncomeCost,
-        miniGameBfIncomeArpu,
-        miniGameBfIncomeRoi,
         miniGameBfIncomeD1Amount,
-        miniGameBfIncomeD1Uv,
         miniGameBfIncomeD1Cost,
         miniGameBfIncomeD1Roi,
         miniGameBfIncomeD1Arpu,
@@ -19154,22 +19390,18 @@ public class HourlyReportApiListStruct {
         incomeRoi7,
         incomeVal14,
         incomeRoi14,
-        miniGameAdMonetizationUsers,
         miniGameAdMonetizationAmount,
         miniGameAdMonetizationCost,
         miniGameAdMonetizationRoi,
         miniGameAdMonetizationArpu,
-        miniGameFirstDayAdMonetizationUsers,
         miniGameFirstDayAdMonetizationAmount,
         miniGameFirstDayAdPayingCost,
         miniGameIncomeRoi1,
         miniGameFirstDayAdPayingArpu,
         minigame3dIncomeCount,
-        minigame3dIncomeUv,
         miniGameAdMonetizationAmountD3,
         minigame3dIncomeRoi,
         minigame7dIncomeCount,
-        minigame7dIncomeUv,
         miniGameAdMonetizationAmountD7,
         minigame7dIncomeRoi,
         miniGameAdMonetizationAmountD14,
@@ -19375,6 +19607,32 @@ public class HourlyReportApiListStruct {
         openAccountPv,
         openAccountPvCost,
         videoOuterPlay5sRate,
+        incomeVal24hPlaRoi,
+        viewDramaDedupPv,
+        viewDramaDedupPvRate,
+        viewDramaDedupPvCost,
+        clkSellingPointsElementPv,
+        visitStoreFirstDedupPv,
+        clkFullwidthBackgroundPv,
+        clkHeaderAreaPv,
+        orderFirstDedupPv,
+        orderFirstDedupPvCost,
+        orderFirstDedupPvRate,
+        storePayAmountOff,
+        storePayUvOff,
+        storePayPvOff,
+        clkSellingPointsElementUv,
+        orderRefundActive24hPv,
+        orderRefundActive24hRate,
+        orderSettle24hPv,
+        orderSettle24hRate,
+        orderSettle24hCost,
+        lanJumpButtonRate,
+        regDedup1dPv,
+        bfDedupPv,
+        followBizAllDedupPv,
+        firOgConvAutoAcquisitionPv,
+        secOgConvAutoAcquisitionPv,
         adgroupId,
         adgroupName,
         dynamicCreativeId,

@@ -31,6 +31,9 @@ public class LiveRoomComponentStatusUpdateRequest {
   @SerializedName("status")
   private SysStatus status = null;
 
+  @SerializedName("live_begin_time")
+  private Long liveBeginTime = null;
+
   public LiveRoomComponentStatusUpdateRequest accountId(Long accountId) {
     this.accountId = accountId;
     return this;
@@ -107,6 +110,25 @@ public class LiveRoomComponentStatusUpdateRequest {
     this.status = status;
   }
 
+  public LiveRoomComponentStatusUpdateRequest liveBeginTime(Long liveBeginTime) {
+    this.liveBeginTime = liveBeginTime;
+    return this;
+  }
+
+  /**
+   * Get liveBeginTime
+   *
+   * @return liveBeginTime
+   */
+  @ApiModelProperty(value = "")
+  public Long getLiveBeginTime() {
+    return liveBeginTime;
+  }
+
+  public void setLiveBeginTime(Long liveBeginTime) {
+    this.liveBeginTime = liveBeginTime;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -120,12 +142,13 @@ public class LiveRoomComponentStatusUpdateRequest {
     return Objects.equals(this.accountId, liveRoomComponentStatusUpdateRequest.accountId)
         && Objects.equals(this.componentId, liveRoomComponentStatusUpdateRequest.componentId)
         && Objects.equals(this.componentType, liveRoomComponentStatusUpdateRequest.componentType)
-        && Objects.equals(this.status, liveRoomComponentStatusUpdateRequest.status);
+        && Objects.equals(this.status, liveRoomComponentStatusUpdateRequest.status)
+        && Objects.equals(this.liveBeginTime, liveRoomComponentStatusUpdateRequest.liveBeginTime);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(accountId, componentId, componentType, status);
+    return Objects.hash(accountId, componentId, componentType, status, liveBeginTime);
   }
 
   @Override

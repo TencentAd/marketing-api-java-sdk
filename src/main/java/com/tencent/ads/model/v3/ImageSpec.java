@@ -21,8 +21,8 @@ import java.util.Objects;
 /** 基础图片组件元素 */
 @ApiModel(description = "基础图片组件元素")
 public class ImageSpec {
-  @SerializedName("image_id_list")
-  private String imageIdList = null;
+  @SerializedName("image_id")
+  private String imageId = null;
 
   @SerializedName("width")
   private Long width = null;
@@ -36,23 +36,23 @@ public class ImageSpec {
   @SerializedName("padding_bottom")
   private Long paddingBottom = null;
 
-  public ImageSpec imageIdList(String imageIdList) {
-    this.imageIdList = imageIdList;
+  public ImageSpec imageId(String imageId) {
+    this.imageId = imageId;
     return this;
   }
 
   /**
-   * Get imageIdList
+   * Get imageId
    *
-   * @return imageIdList
+   * @return imageId
    */
   @ApiModelProperty(value = "")
-  public String getImageIdList() {
-    return imageIdList;
+  public String getImageId() {
+    return imageId;
   }
 
-  public void setImageIdList(String imageIdList) {
-    this.imageIdList = imageIdList;
+  public void setImageId(String imageId) {
+    this.imageId = imageId;
   }
 
   public ImageSpec width(Long width) {
@@ -140,7 +140,7 @@ public class ImageSpec {
       return false;
     }
     ImageSpec imageSpec = (ImageSpec) o;
-    return Objects.equals(this.imageIdList, imageSpec.imageIdList)
+    return Objects.equals(this.imageId, imageSpec.imageId)
         && Objects.equals(this.width, imageSpec.width)
         && Objects.equals(this.height, imageSpec.height)
         && Objects.equals(this.paddingTop, imageSpec.paddingTop)
@@ -149,7 +149,7 @@ public class ImageSpec {
 
   @Override
   public int hashCode() {
-    return Objects.hash(imageIdList, width, height, paddingTop, paddingBottom);
+    return Objects.hash(imageId, width, height, paddingTop, paddingBottom);
   }
 
   @Override

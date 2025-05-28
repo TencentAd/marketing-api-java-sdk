@@ -22,6 +22,9 @@ public class VideosAddResponseData {
   @SerializedName("video_id")
   private Long videoId = null;
 
+  @SerializedName("cover_image_id")
+  private Long coverImageId = null;
+
   public VideosAddResponseData videoId(Long videoId) {
     this.videoId = videoId;
     return this;
@@ -41,6 +44,25 @@ public class VideosAddResponseData {
     this.videoId = videoId;
   }
 
+  public VideosAddResponseData coverImageId(Long coverImageId) {
+    this.coverImageId = coverImageId;
+    return this;
+  }
+
+  /**
+   * Get coverImageId
+   *
+   * @return coverImageId
+   */
+  @ApiModelProperty(value = "")
+  public Long getCoverImageId() {
+    return coverImageId;
+  }
+
+  public void setCoverImageId(Long coverImageId) {
+    this.coverImageId = coverImageId;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -50,12 +72,13 @@ public class VideosAddResponseData {
       return false;
     }
     VideosAddResponseData videosAddResponseData = (VideosAddResponseData) o;
-    return Objects.equals(this.videoId, videosAddResponseData.videoId);
+    return Objects.equals(this.videoId, videosAddResponseData.videoId)
+        && Objects.equals(this.coverImageId, videosAddResponseData.coverImageId);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(videoId);
+    return Objects.hash(videoId, coverImageId);
   }
 
   @Override

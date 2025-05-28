@@ -89,6 +89,12 @@ public class CreativeComponentValueValid {
   @SerializedName("enum_options")
   private List<ComponentMetadataValueValidEnumOption> enumOptions = null;
 
+  @SerializedName("min_duration_millisecond")
+  private Long minDurationMillisecond = null;
+
+  @SerializedName("max_duration_millisecond")
+  private Long maxDurationMillisecond = null;
+
   public CreativeComponentValueValid required(Boolean required) {
     this.required = required;
     return this;
@@ -517,6 +523,44 @@ public class CreativeComponentValueValid {
     this.enumOptions = enumOptions;
   }
 
+  public CreativeComponentValueValid minDurationMillisecond(Long minDurationMillisecond) {
+    this.minDurationMillisecond = minDurationMillisecond;
+    return this;
+  }
+
+  /**
+   * Get minDurationMillisecond
+   *
+   * @return minDurationMillisecond
+   */
+  @ApiModelProperty(value = "")
+  public Long getMinDurationMillisecond() {
+    return minDurationMillisecond;
+  }
+
+  public void setMinDurationMillisecond(Long minDurationMillisecond) {
+    this.minDurationMillisecond = minDurationMillisecond;
+  }
+
+  public CreativeComponentValueValid maxDurationMillisecond(Long maxDurationMillisecond) {
+    this.maxDurationMillisecond = maxDurationMillisecond;
+    return this;
+  }
+
+  /**
+   * Get maxDurationMillisecond
+   *
+   * @return maxDurationMillisecond
+   */
+  @ApiModelProperty(value = "")
+  public Long getMaxDurationMillisecond() {
+    return maxDurationMillisecond;
+  }
+
+  public void setMaxDurationMillisecond(Long maxDurationMillisecond) {
+    this.maxDurationMillisecond = maxDurationMillisecond;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -547,7 +591,11 @@ public class CreativeComponentValueValid {
         && Objects.equals(this.minOccurs, creativeComponentValueValid.minOccurs)
         && Objects.equals(this.maxOccurs, creativeComponentValueValid.maxOccurs)
         && Objects.equals(this.maxTotalContent, creativeComponentValueValid.maxTotalContent)
-        && Objects.equals(this.enumOptions, creativeComponentValueValid.enumOptions);
+        && Objects.equals(this.enumOptions, creativeComponentValueValid.enumOptions)
+        && Objects.equals(
+            this.minDurationMillisecond, creativeComponentValueValid.minDurationMillisecond)
+        && Objects.equals(
+            this.maxDurationMillisecond, creativeComponentValueValid.maxDurationMillisecond);
   }
 
   @Override
@@ -574,7 +622,9 @@ public class CreativeComponentValueValid {
         minOccurs,
         maxOccurs,
         maxTotalContent,
-        enumOptions);
+        enumOptions,
+        minDurationMillisecond,
+        maxDurationMillisecond);
   }
 
   @Override

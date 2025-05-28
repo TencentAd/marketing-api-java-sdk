@@ -4,6 +4,7 @@ import com.tencent.ads.ApiContextConfig;
 import com.tencent.ads.exception.TencentAdsResponseException;
 import com.tencent.ads.exception.TencentAdsSDKException;
 import com.tencent.ads.model.v3.*;
+import com.tencent.ads.model.v3.AdContext;
 import com.tencent.ads.v3.TencentAds;
 import java.util.List;
 
@@ -25,6 +26,8 @@ public class GetChannelsUserpageobjects {
   public Long count = null;
 
   public String wechatChannelsAccountId = null;
+
+  public AdContext adContext = null;
 
   public List<String> fields = null;
 
@@ -49,6 +52,7 @@ public class GetChannelsUserpageobjects {
                 lastBuffer,
                 count,
                 wechatChannelsAccountId,
+                adContext,
                 fields);
     return response;
   }

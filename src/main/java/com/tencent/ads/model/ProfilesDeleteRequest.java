@@ -25,6 +25,9 @@ public class ProfilesDeleteRequest {
   @SerializedName("profile_id")
   private Long profileId = null;
 
+  @SerializedName("organization_id")
+  private Long organizationId = null;
+
   public ProfilesDeleteRequest accountId(Long accountId) {
     this.accountId = accountId;
     return this;
@@ -63,6 +66,25 @@ public class ProfilesDeleteRequest {
     this.profileId = profileId;
   }
 
+  public ProfilesDeleteRequest organizationId(Long organizationId) {
+    this.organizationId = organizationId;
+    return this;
+  }
+
+  /**
+   * Get organizationId
+   *
+   * @return organizationId
+   */
+  @ApiModelProperty(value = "")
+  public Long getOrganizationId() {
+    return organizationId;
+  }
+
+  public void setOrganizationId(Long organizationId) {
+    this.organizationId = organizationId;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -73,12 +95,13 @@ public class ProfilesDeleteRequest {
     }
     ProfilesDeleteRequest profilesDeleteRequest = (ProfilesDeleteRequest) o;
     return Objects.equals(this.accountId, profilesDeleteRequest.accountId)
-        && Objects.equals(this.profileId, profilesDeleteRequest.profileId);
+        && Objects.equals(this.profileId, profilesDeleteRequest.profileId)
+        && Objects.equals(this.organizationId, profilesDeleteRequest.organizationId);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(accountId, profileId);
+    return Objects.hash(accountId, profileId, organizationId);
   }
 
   @Override

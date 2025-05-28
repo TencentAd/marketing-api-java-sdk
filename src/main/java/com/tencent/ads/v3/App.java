@@ -59,6 +59,7 @@ public class App {
   @Inject ChannelsUserpageobjectsApiContainer channelsUserpageobjectsApiContainer;
   @Inject CommentListApiContainer commentListApiContainer;
   @Inject ComponentDefaultSharingApiContainer componentDefaultSharingApiContainer;
+  @Inject ComponentDetailApiContainer componentDetailApiContainer;
   @Inject ComponentElementUrgeReviewApiContainer componentElementUrgeReviewApiContainer;
   @Inject ComponentReviewResultsApiContainer componentReviewResultsApiContainer;
   @Inject ComponentSharingApiContainer componentSharingApiContainer;
@@ -68,6 +69,7 @@ public class App {
   @Inject ConversionLinkAssetsApiContainer conversionLinkAssetsApiContainer;
   @Inject ConversionLinksApiContainer conversionLinksApiContainer;
   @Inject ConversionsApiContainer conversionsApiContainer;
+  @Inject CreativeRecommendApiContainer creativeRecommendApiContainer;
   @Inject CreativeTemplateApiContainer creativeTemplateApiContainer;
   @Inject CreativeTemplateListApiContainer creativeTemplateListApiContainer;
   @Inject CreativeTemplatePreviewsApiContainer creativeTemplatePreviewsApiContainer;
@@ -407,6 +409,10 @@ public class App {
     return componentDefaultSharingApiContainer;
   }
 
+  public ComponentDetailApiContainer componentDetail() {
+    return componentDetailApiContainer;
+  }
+
   public ComponentElementUrgeReviewApiContainer componentElementUrgeReview() {
     return componentElementUrgeReviewApiContainer;
   }
@@ -441,6 +447,10 @@ public class App {
 
   public ConversionsApiContainer conversions() {
     return conversionsApiContainer;
+  }
+
+  public CreativeRecommendApiContainer creativeRecommend() {
+    return creativeRecommendApiContainer;
   }
 
   public CreativeTemplateApiContainer creativeTemplate() {

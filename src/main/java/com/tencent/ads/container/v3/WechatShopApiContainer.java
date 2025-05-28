@@ -31,17 +31,23 @@ public class WechatShopApiContainer extends ApiContainer {
    * 查询微信小店信息
    *
    * @param accountId (required)
-   * @param wechatChannelsShopName (required)
+   * @param wechatChannelsShopName (optional)
+   * @param wechatChannelsShopId (optional)
    * @param fields 返回参数的字段列表 (optional)
    * @return WechatShopGetResponse
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
   public WechatShopGetResponseData wechatShopGet(
-      Long accountId, String wechatChannelsShopName, List<String> fields, Pair... headerPair)
+      Long accountId,
+      String wechatChannelsShopName,
+      String wechatChannelsShopId,
+      List<String> fields,
+      Pair... headerPair)
       throws ApiException, TencentAdsResponseException {
     WechatShopGetResponse resp =
-        api.wechatShopGet(accountId, wechatChannelsShopName, fields, headerPair);
+        api.wechatShopGet(
+            accountId, wechatChannelsShopName, wechatChannelsShopId, fields, headerPair);
     handleResponse(gson.toJson(resp));
     return resp.getData();
   }

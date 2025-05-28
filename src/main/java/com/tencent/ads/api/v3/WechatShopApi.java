@@ -52,7 +52,8 @@ public class WechatShopApi {
    * Build call for wechatShopGet
    *
    * @param accountId (required)
-   * @param wechatChannelsShopName (required)
+   * @param wechatChannelsShopName (optional)
+   * @param wechatChannelsShopId (optional)
    * @param fields 返回参数的字段列表 (optional)
    * @param progressListener Progress listener
    * @param progressRequestListener Progress request listener
@@ -62,6 +63,7 @@ public class WechatShopApi {
   public com.squareup.okhttp.Call wechatShopGetCall(
       Long accountId,
       String wechatChannelsShopName,
+      String wechatChannelsShopId,
       List<String> fields,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
@@ -80,6 +82,9 @@ public class WechatShopApi {
     if (wechatChannelsShopName != null)
       localVarQueryParams.addAll(
           apiClient.parameterToPair("wechat_channels_shop_name", wechatChannelsShopName));
+    if (wechatChannelsShopId != null)
+      localVarQueryParams.addAll(
+          apiClient.parameterToPair("wechat_channels_shop_id", wechatChannelsShopId));
     if (fields != null)
       localVarCollectionQueryParams.addAll(apiClient.parameterToPairs("multi", "fields", fields));
 
@@ -136,6 +141,7 @@ public class WechatShopApi {
   private com.squareup.okhttp.Call wechatShopGetValidateBeforeCall(
       Long accountId,
       String wechatChannelsShopName,
+      String wechatChannelsShopId,
       List<String> fields,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
@@ -148,16 +154,11 @@ public class WechatShopApi {
           "Missing the required parameter 'accountId' when calling wechatShopGet(Async)");
     }
 
-    // verify the required parameter 'wechatChannelsShopName' is set
-    if (wechatChannelsShopName == null) {
-      throw new ApiException(
-          "Missing the required parameter 'wechatChannelsShopName' when calling wechatShopGet(Async)");
-    }
-
     com.squareup.okhttp.Call call =
         wechatShopGetCall(
             accountId,
             wechatChannelsShopName,
+            wechatChannelsShopId,
             fields,
             progressListener,
             progressRequestListener,
@@ -169,17 +170,23 @@ public class WechatShopApi {
    * 查询微信小店信息
    *
    * @param accountId (required)
-   * @param wechatChannelsShopName (required)
+   * @param wechatChannelsShopName (optional)
+   * @param wechatChannelsShopId (optional)
    * @param fields 返回参数的字段列表 (optional)
    * @return WechatShopGetResponse
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
   public WechatShopGetResponse wechatShopGet(
-      Long accountId, String wechatChannelsShopName, List<String> fields, Pair... headerPair)
+      Long accountId,
+      String wechatChannelsShopName,
+      String wechatChannelsShopId,
+      List<String> fields,
+      Pair... headerPair)
       throws ApiException {
     ApiResponse<WechatShopGetResponse> resp =
-        wechatShopGetWithHttpInfo(accountId, wechatChannelsShopName, fields, headerPair);
+        wechatShopGetWithHttpInfo(
+            accountId, wechatChannelsShopName, wechatChannelsShopId, fields, headerPair);
     return resp.getData();
   }
 
@@ -187,18 +194,29 @@ public class WechatShopApi {
    * 查询微信小店信息
    *
    * @param accountId (required)
-   * @param wechatChannelsShopName (required)
+   * @param wechatChannelsShopName (optional)
+   * @param wechatChannelsShopId (optional)
    * @param fields 返回参数的字段列表 (optional)
    * @return ApiResponse&lt;WechatShopGetResponse&gt;
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
   public ApiResponse<WechatShopGetResponse> wechatShopGetWithHttpInfo(
-      Long accountId, String wechatChannelsShopName, List<String> fields, Pair... headerPair)
+      Long accountId,
+      String wechatChannelsShopName,
+      String wechatChannelsShopId,
+      List<String> fields,
+      Pair... headerPair)
       throws ApiException {
     com.squareup.okhttp.Call call =
         wechatShopGetValidateBeforeCall(
-            accountId, wechatChannelsShopName, fields, null, null, headerPair);
+            accountId,
+            wechatChannelsShopName,
+            wechatChannelsShopId,
+            fields,
+            null,
+            null,
+            headerPair);
     Type localVarReturnType = new TypeToken<WechatShopGetResponse>() {}.getType();
     return apiClient.execute(call, localVarReturnType);
   }
@@ -207,7 +225,8 @@ public class WechatShopApi {
    * 查询微信小店信息 (asynchronously)
    *
    * @param accountId (required)
-   * @param wechatChannelsShopName (required)
+   * @param wechatChannelsShopName (optional)
+   * @param wechatChannelsShopId (optional)
    * @param fields 返回参数的字段列表 (optional)
    * @param callback The callback to be executed when the API call finishes
    * @return The request call
@@ -216,6 +235,7 @@ public class WechatShopApi {
   public com.squareup.okhttp.Call wechatShopGetAsync(
       Long accountId,
       String wechatChannelsShopName,
+      String wechatChannelsShopId,
       List<String> fields,
       final ApiCallback<WechatShopGetResponse> callback,
       Pair... headerPair)
@@ -246,6 +266,7 @@ public class WechatShopApi {
         wechatShopGetValidateBeforeCall(
             accountId,
             wechatChannelsShopName,
+            wechatChannelsShopId,
             fields,
             progressListener,
             progressRequestListener,

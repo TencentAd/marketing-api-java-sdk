@@ -23,6 +23,8 @@ public class GetProfiles {
 
   public Long pageSize = null;
 
+  public Long organizationId = null;
+
   public List<String> fields = null;
 
   public void init() {
@@ -37,7 +39,9 @@ public class GetProfiles {
 
   public ProfilesGetResponseData getProfiles() throws Exception {
     ProfilesGetResponseData response =
-        tencentAds.profiles().profilesGet(accountId, filtering, page, pageSize, fields);
+        tencentAds
+            .profiles()
+            .profilesGet(accountId, filtering, page, pageSize, organizationId, fields);
     return response;
   }
 

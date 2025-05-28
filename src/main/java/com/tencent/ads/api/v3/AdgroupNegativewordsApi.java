@@ -145,7 +145,7 @@ public class AdgroupNegativewordsApi {
   }
 
   /**
-   * 新增广告组否定词
+   * 新增广告否定词
    *
    * @param data (required)
    * @return AdgroupNegativewordsAddResponse
@@ -160,7 +160,7 @@ public class AdgroupNegativewordsApi {
   }
 
   /**
-   * 新增广告组否定词
+   * 新增广告否定词
    *
    * @param data (required)
    * @return ApiResponse&lt;AdgroupNegativewordsAddResponse&gt;
@@ -176,7 +176,7 @@ public class AdgroupNegativewordsApi {
   }
 
   /**
-   * 新增广告组否定词 (asynchronously)
+   * 新增广告否定词 (asynchronously)
    *
    * @param data (required)
    * @param callback The callback to be executed when the API call finishes
@@ -330,7 +330,7 @@ public class AdgroupNegativewordsApi {
   }
 
   /**
-   * 查询广告组否定词
+   * 查询广告否定词
    *
    * @param accountId (required)
    * @param adgroupIds (required)
@@ -348,7 +348,7 @@ public class AdgroupNegativewordsApi {
   }
 
   /**
-   * 查询广告组否定词
+   * 查询广告否定词
    *
    * @param accountId (required)
    * @param adgroupIds (required)
@@ -368,7 +368,7 @@ public class AdgroupNegativewordsApi {
   }
 
   /**
-   * 查询广告组否定词 (asynchronously)
+   * 查询广告否定词 (asynchronously)
    *
    * @param accountId (required)
    * @param adgroupIds (required)
@@ -506,7 +506,7 @@ public class AdgroupNegativewordsApi {
   }
 
   /**
-   * 修改广告组否定词
+   * 更新广告否定词
    *
    * @param data (required)
    * @return AdgroupNegativewordsUpdateResponse
@@ -521,7 +521,7 @@ public class AdgroupNegativewordsApi {
   }
 
   /**
-   * 修改广告组否定词
+   * 更新广告否定词
    *
    * @param data (required)
    * @return ApiResponse&lt;AdgroupNegativewordsUpdateResponse&gt;
@@ -537,7 +537,7 @@ public class AdgroupNegativewordsApi {
   }
 
   /**
-   * 修改广告组否定词 (asynchronously)
+   * 更新广告否定词 (asynchronously)
    *
    * @param data (required)
    * @param callback The callback to be executed when the API call finishes

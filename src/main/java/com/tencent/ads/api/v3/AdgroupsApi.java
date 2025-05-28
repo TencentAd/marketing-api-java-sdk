@@ -156,7 +156,7 @@ public class AdgroupsApi {
   }
 
   /**
-   * 创建广告组
+   * 创建广告
    *
    * @param data (required)
    * @return AdgroupsAddResponse
@@ -170,7 +170,7 @@ public class AdgroupsApi {
   }
 
   /**
-   * 创建广告组
+   * 创建广告
    *
    * @param data (required)
    * @return ApiResponse&lt;AdgroupsAddResponse&gt;
@@ -185,7 +185,7 @@ public class AdgroupsApi {
   }
 
   /**
-   * 创建广告组 (asynchronously)
+   * 创建广告 (asynchronously)
    *
    * @param data (required)
    * @param callback The callback to be executed when the API call finishes
@@ -316,7 +316,7 @@ public class AdgroupsApi {
   }
 
   /**
-   * 删除广告组
+   * 删除广告
    *
    * @param data (required)
    * @return AdgroupsDeleteResponse
@@ -330,7 +330,7 @@ public class AdgroupsApi {
   }
 
   /**
-   * 删除广告组
+   * 删除广告
    *
    * @param data (required)
    * @return ApiResponse&lt;AdgroupsDeleteResponse&gt;
@@ -345,7 +345,7 @@ public class AdgroupsApi {
   }
 
   /**
-   * 删除广告组 (asynchronously)
+   * 删除广告 (asynchronously)
    *
    * @param data (required)
    * @param callback The callback to be executed when the API call finishes
@@ -526,7 +526,7 @@ public class AdgroupsApi {
   }
 
   /**
-   * 获取广告组
+   * 获取广告
    *
    * @param accountId (required)
    * @param filtering (optional)
@@ -566,7 +566,7 @@ public class AdgroupsApi {
   }
 
   /**
-   * 获取广告组
+   * 获取广告
    *
    * @param accountId (required)
    * @param filtering (optional)
@@ -609,7 +609,7 @@ public class AdgroupsApi {
   }
 
   /**
-   * 获取广告组 (asynchronously)
+   * 获取广告 (asynchronously)
    *
    * @param accountId (required)
    * @param filtering (optional)
@@ -767,7 +767,7 @@ public class AdgroupsApi {
   }
 
   /**
-   * 更新广告组
+   * 更新广告
    *
    * @param data (required)
    * @return AdgroupsUpdateResponse
@@ -781,7 +781,7 @@ public class AdgroupsApi {
   }
 
   /**
-   * 更新广告组
+   * 更新广告
    *
    * @param data (required)
    * @return ApiResponse&lt;AdgroupsUpdateResponse&gt;
@@ -796,7 +796,7 @@ public class AdgroupsApi {
   }
 
   /**
-   * 更新广告组 (asynchronously)
+   * 更新广告 (asynchronously)
    *
    * @param data (required)
    * @param callback The callback to be executed when the API call finishes
@@ -930,7 +930,7 @@ public class AdgroupsApi {
   }
 
   /**
-   * 批量修改广告组出价
+   * 批量修改广告出价
    *
    * @param data (required)
    * @return AdgroupsUpdateBidAmountResponse
@@ -945,7 +945,7 @@ public class AdgroupsApi {
   }
 
   /**
-   * 批量修改广告组出价
+   * 批量修改广告出价
    *
    * @param data (required)
    * @return ApiResponse&lt;AdgroupsUpdateBidAmountResponse&gt;
@@ -961,7 +961,7 @@ public class AdgroupsApi {
   }
 
   /**
-   * 批量修改广告组出价 (asynchronously)
+   * 批量修改广告出价 (asynchronously)
    *
    * @param data (required)
    * @param callback The callback to be executed when the API call finishes
@@ -1096,7 +1096,7 @@ public class AdgroupsApi {
   }
 
   /**
-   * 批量修改广告组开启/暂停状态
+   * 批量修改广告开启/暂停状态
    *
    * @param data (required)
    * @return AdgroupsUpdateConfiguredStatusResponse
@@ -1111,7 +1111,7 @@ public class AdgroupsApi {
   }
 
   /**
-   * 批量修改广告组开启/暂停状态
+   * 批量修改广告开启/暂停状态
    *
    * @param data (required)
    * @return ApiResponse&lt;AdgroupsUpdateConfiguredStatusResponse&gt;
@@ -1128,7 +1128,7 @@ public class AdgroupsApi {
   }
 
   /**
-   * 批量修改广告组开启/暂停状态 (asynchronously)
+   * 批量修改广告开启/暂停状态 (asynchronously)
    *
    * @param data (required)
    * @param callback The callback to be executed when the API call finishes
@@ -1262,7 +1262,7 @@ public class AdgroupsApi {
   }
 
   /**
-   * 批量修改广告组日限额
+   * 批量修改广告日限额
    *
    * @param data (required)
    * @return AdgroupsUpdateDailyBudgetResponse
@@ -1277,7 +1277,7 @@ public class AdgroupsApi {
   }
 
   /**
-   * 批量修改广告组日限额
+   * 批量修改广告日限额
    *
    * @param data (required)
    * @return ApiResponse&lt;AdgroupsUpdateDailyBudgetResponse&gt;
@@ -1293,7 +1293,7 @@ public class AdgroupsApi {
   }
 
   /**
-   * 批量修改广告组日限额 (asynchronously)
+   * 批量修改广告日限额 (asynchronously)
    *
    * @param data (required)
    * @param callback The callback to be executed when the API call finishes
@@ -1427,7 +1427,7 @@ public class AdgroupsApi {
   }
 
   /**
-   * 批量修改广告组投放起止时间
+   * 批量修改广告投放起止时间
    *
    * @param data (required)
    * @return AdgroupsUpdateDatetimeResponse
@@ -1442,7 +1442,7 @@ public class AdgroupsApi {
   }
 
   /**
-   * 批量修改广告组投放起止时间
+   * 批量修改广告投放起止时间
    *
    * @param data (required)
    * @return ApiResponse&lt;AdgroupsUpdateDatetimeResponse&gt;
@@ -1458,7 +1458,7 @@ public class AdgroupsApi {
   }
 
   /**
-   * 批量修改广告组投放起止时间 (asynchronously)
+   * 批量修改广告投放起止时间 (asynchronously)
    *
    * @param data (required)
    * @param callback The callback to be executed when the API call finishes

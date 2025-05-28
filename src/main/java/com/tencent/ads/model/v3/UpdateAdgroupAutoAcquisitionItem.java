@@ -18,8 +18,8 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.util.Objects;
 
-/** 修改广告组一键起量 */
-@ApiModel(description = "修改广告组一键起量")
+/** 修改广告一键起量 */
+@ApiModel(description = "修改广告一键起量")
 public class UpdateAdgroupAutoAcquisitionItem {
   @SerializedName("adgroup_id")
   private Long adgroupId = null;

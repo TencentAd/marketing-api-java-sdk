@@ -67,10 +67,11 @@ public class ProfilesApiContainer extends ApiContainer {
   /**
    * 获取朋友圈头像昵称跳转页
    *
-   * @param accountId (required)
+   * @param accountId (optional)
    * @param filtering (optional)
    * @param page (optional)
    * @param pageSize (optional)
+   * @param organizationId (optional)
    * @param fields 返回参数的字段列表 (optional)
    * @return ProfilesGetResponse
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
@@ -81,11 +82,12 @@ public class ProfilesApiContainer extends ApiContainer {
       List<FilteringStruct> filtering,
       Long page,
       Long pageSize,
+      Long organizationId,
       List<String> fields,
       Pair... headerPair)
       throws ApiException, TencentAdsResponseException {
     ProfilesGetResponse resp =
-        api.profilesGet(accountId, filtering, page, pageSize, fields, headerPair);
+        api.profilesGet(accountId, filtering, page, pageSize, organizationId, fields, headerPair);
     handleResponse(gson.toJson(resp));
     return resp.getData();
   }

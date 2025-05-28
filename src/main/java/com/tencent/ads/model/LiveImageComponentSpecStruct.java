@@ -38,6 +38,9 @@ public class LiveImageComponentSpecStruct {
   @SerializedName("is_use_bg_img")
   private Long isUseBgImg = null;
 
+  @SerializedName("live_begin_time")
+  private Long liveBeginTime = null;
+
   public LiveImageComponentSpecStruct bgImgUrl(String bgImgUrl) {
     this.bgImgUrl = bgImgUrl;
     return this;
@@ -141,6 +144,25 @@ public class LiveImageComponentSpecStruct {
     this.isUseBgImg = isUseBgImg;
   }
 
+  public LiveImageComponentSpecStruct liveBeginTime(Long liveBeginTime) {
+    this.liveBeginTime = liveBeginTime;
+    return this;
+  }
+
+  /**
+   * Get liveBeginTime
+   *
+   * @return liveBeginTime
+   */
+  @ApiModelProperty(value = "")
+  public Long getLiveBeginTime() {
+    return liveBeginTime;
+  }
+
+  public void setLiveBeginTime(Long liveBeginTime) {
+    this.liveBeginTime = liveBeginTime;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -154,12 +176,13 @@ public class LiveImageComponentSpecStruct {
         && Objects.equals(this.bgImgId, liveImageComponentSpecStruct.bgImgId)
         && Objects.equals(this.cheerIcon, liveImageComponentSpecStruct.cheerIcon)
         && Objects.equals(this.isUseCheerIcon, liveImageComponentSpecStruct.isUseCheerIcon)
-        && Objects.equals(this.isUseBgImg, liveImageComponentSpecStruct.isUseBgImg);
+        && Objects.equals(this.isUseBgImg, liveImageComponentSpecStruct.isUseBgImg)
+        && Objects.equals(this.liveBeginTime, liveImageComponentSpecStruct.liveBeginTime);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(bgImgUrl, bgImgId, cheerIcon, isUseCheerIcon, isUseBgImg);
+    return Objects.hash(bgImgUrl, bgImgId, cheerIcon, isUseCheerIcon, isUseBgImg, liveBeginTime);
   }
 
   @Override

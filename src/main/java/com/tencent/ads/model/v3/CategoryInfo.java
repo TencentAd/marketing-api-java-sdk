@@ -48,6 +48,9 @@ public class CategoryInfo {
   @SerializedName("cate3_disabled")
   private Boolean cate3Disabled = null;
 
+  @SerializedName("last_cate_tips")
+  private String lastCateTips = null;
+
   public CategoryInfo cate1Id(String cate1Id) {
     this.cate1Id = cate1Id;
     return this;
@@ -219,6 +222,25 @@ public class CategoryInfo {
     this.cate3Disabled = cate3Disabled;
   }
 
+  public CategoryInfo lastCateTips(String lastCateTips) {
+    this.lastCateTips = lastCateTips;
+    return this;
+  }
+
+  /**
+   * Get lastCateTips
+   *
+   * @return lastCateTips
+   */
+  @ApiModelProperty(value = "")
+  public String getLastCateTips() {
+    return lastCateTips;
+  }
+
+  public void setLastCateTips(String lastCateTips) {
+    this.lastCateTips = lastCateTips;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -236,7 +258,8 @@ public class CategoryInfo {
         && Objects.equals(this.cate3Name, categoryInfo.cate3Name)
         && Objects.equals(this.cate4Id, categoryInfo.cate4Id)
         && Objects.equals(this.cate4Name, categoryInfo.cate4Name)
-        && Objects.equals(this.cate3Disabled, categoryInfo.cate3Disabled);
+        && Objects.equals(this.cate3Disabled, categoryInfo.cate3Disabled)
+        && Objects.equals(this.lastCateTips, categoryInfo.lastCateTips);
   }
 
   @Override
@@ -250,7 +273,8 @@ public class CategoryInfo {
         cate3Name,
         cate4Id,
         cate4Name,
-        cate3Disabled);
+        cate3Disabled,
+        lastCateTips);
   }
 
   @Override

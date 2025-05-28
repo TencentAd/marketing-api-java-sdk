@@ -16,6 +16,8 @@ import com.google.gson.Gson;
 import com.google.gson.annotations.SerializedName;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Objects;
 
 /** 创意组件字段结构 */
@@ -32,6 +34,9 @@ public class CreativeComponentValueValidStructureFieldSub {
 
   @SerializedName("valid")
   private CreativeComponentValueValid valid = null;
+
+  @SerializedName("structure")
+  private List<CreativeComponentValueValidStructureFieldSub3> structure = null;
 
   public CreativeComponentValueValidStructureFieldSub name(String name) {
     this.name = name;
@@ -109,6 +114,35 @@ public class CreativeComponentValueValidStructureFieldSub {
     this.valid = valid;
   }
 
+  public CreativeComponentValueValidStructureFieldSub structure(
+      List<CreativeComponentValueValidStructureFieldSub3> structure) {
+    this.structure = structure;
+    return this;
+  }
+
+  public CreativeComponentValueValidStructureFieldSub addStructureItem(
+      CreativeComponentValueValidStructureFieldSub3 structureItem) {
+    if (this.structure == null) {
+      this.structure = new ArrayList<CreativeComponentValueValidStructureFieldSub3>();
+    }
+    this.structure.add(structureItem);
+    return this;
+  }
+
+  /**
+   * Get structure
+   *
+   * @return structure
+   */
+  @ApiModelProperty(value = "")
+  public List<CreativeComponentValueValidStructureFieldSub3> getStructure() {
+    return structure;
+  }
+
+  public void setStructure(List<CreativeComponentValueValidStructureFieldSub3> structure) {
+    this.structure = structure;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -122,12 +156,13 @@ public class CreativeComponentValueValidStructureFieldSub {
     return Objects.equals(this.name, creativeComponentValueValidStructureFieldSub.name)
         && Objects.equals(this.desc, creativeComponentValueValidStructureFieldSub.desc)
         && Objects.equals(this.type, creativeComponentValueValidStructureFieldSub.type)
-        && Objects.equals(this.valid, creativeComponentValueValidStructureFieldSub.valid);
+        && Objects.equals(this.valid, creativeComponentValueValidStructureFieldSub.valid)
+        && Objects.equals(this.structure, creativeComponentValueValidStructureFieldSub.structure);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(name, desc, type, valid);
+    return Objects.hash(name, desc, type, valid, structure);
   }
 
   @Override

@@ -95,6 +95,12 @@ public class WechatStoreProductItemsGetListStruct {
   @SerializedName("store_price_item_list")
   private List<StorePriceItem> storePriceItemList = null;
 
+  @SerializedName("store_id")
+  private String storeId = null;
+
+  @SerializedName("wx_store_product_operate_type")
+  private Long wxStoreProductOperateType = null;
+
   public WechatStoreProductItemsGetListStruct productOuterId(String productOuterId) {
     this.productOuterId = productOuterId;
     return this;
@@ -594,6 +600,45 @@ public class WechatStoreProductItemsGetListStruct {
     this.storePriceItemList = storePriceItemList;
   }
 
+  public WechatStoreProductItemsGetListStruct storeId(String storeId) {
+    this.storeId = storeId;
+    return this;
+  }
+
+  /**
+   * Get storeId
+   *
+   * @return storeId
+   */
+  @ApiModelProperty(value = "")
+  public String getStoreId() {
+    return storeId;
+  }
+
+  public void setStoreId(String storeId) {
+    this.storeId = storeId;
+  }
+
+  public WechatStoreProductItemsGetListStruct wxStoreProductOperateType(
+      Long wxStoreProductOperateType) {
+    this.wxStoreProductOperateType = wxStoreProductOperateType;
+    return this;
+  }
+
+  /**
+   * Get wxStoreProductOperateType
+   *
+   * @return wxStoreProductOperateType
+   */
+  @ApiModelProperty(value = "")
+  public Long getWxStoreProductOperateType() {
+    return wxStoreProductOperateType;
+  }
+
+  public void setWxStoreProductOperateType(Long wxStoreProductOperateType) {
+    this.wxStoreProductOperateType = wxStoreProductOperateType;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -646,7 +691,11 @@ public class WechatStoreProductItemsGetListStruct {
             this.wechatStoreProductAdUnavailableCause,
             wechatStoreProductItemsGetListStruct.wechatStoreProductAdUnavailableCause)
         && Objects.equals(
-            this.storePriceItemList, wechatStoreProductItemsGetListStruct.storePriceItemList);
+            this.storePriceItemList, wechatStoreProductItemsGetListStruct.storePriceItemList)
+        && Objects.equals(this.storeId, wechatStoreProductItemsGetListStruct.storeId)
+        && Objects.equals(
+            this.wxStoreProductOperateType,
+            wechatStoreProductItemsGetListStruct.wxStoreProductOperateType);
   }
 
   @Override
@@ -675,7 +724,9 @@ public class WechatStoreProductItemsGetListStruct {
         wechatStoreProductStatus,
         wechatStoreProductAdStatus,
         wechatStoreProductAdUnavailableCause,
-        storePriceItemList);
+        storePriceItemList,
+        storeId,
+        wxStoreProductOperateType);
   }
 
   @Override

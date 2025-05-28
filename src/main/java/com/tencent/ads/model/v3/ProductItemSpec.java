@@ -494,6 +494,9 @@ public class ProductItemSpec {
   @SerializedName("business_audience")
   private BusinessAudience businessAudience = null;
 
+  @SerializedName("service_tag")
+  private List<String> serviceTag = null;
+
   public ProductItemSpec productOuterId(String productOuterId) {
     this.productOuterId = productOuterId;
     return this;
@@ -3573,6 +3576,33 @@ public class ProductItemSpec {
     this.businessAudience = businessAudience;
   }
 
+  public ProductItemSpec serviceTag(List<String> serviceTag) {
+    this.serviceTag = serviceTag;
+    return this;
+  }
+
+  public ProductItemSpec addServiceTagItem(String serviceTagItem) {
+    if (this.serviceTag == null) {
+      this.serviceTag = new ArrayList<String>();
+    }
+    this.serviceTag.add(serviceTagItem);
+    return this;
+  }
+
+  /**
+   * Get serviceTag
+   *
+   * @return serviceTag
+   */
+  @ApiModelProperty(value = "")
+  public List<String> getServiceTag() {
+    return serviceTag;
+  }
+
+  public void setServiceTag(List<String> serviceTag) {
+    this.serviceTag = serviceTag;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -3739,7 +3769,8 @@ public class ProductItemSpec {
         && Objects.equals(this.productBarcode, productItemSpec.productBarcode)
         && Objects.equals(this.businessPrice, productItemSpec.businessPrice)
         && Objects.equals(this.initialTotalInvestment, productItemSpec.initialTotalInvestment)
-        && Objects.equals(this.businessAudience, productItemSpec.businessAudience);
+        && Objects.equals(this.businessAudience, productItemSpec.businessAudience)
+        && Objects.equals(this.serviceTag, productItemSpec.serviceTag);
   }
 
   @Override
@@ -3901,7 +3932,8 @@ public class ProductItemSpec {
         productBarcode,
         businessPrice,
         initialTotalInvestment,
-        businessAudience);
+        businessAudience,
+        serviceTag);
   }
 
   @Override

@@ -18,8 +18,8 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.util.Objects;
 
-/** 删除广告组 */
-@ApiModel(description = "删除广告组")
+/** 删除广告 */
+@ApiModel(description = "删除广告")
 public class DeleteAdgroupItem {
   @SerializedName("adgroup_id")
   private Long adgroupId = null;

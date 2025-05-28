@@ -18,6 +18,8 @@ public class GetWechatShop {
 
   public String wechatChannelsShopName = null;
 
+  public String wechatChannelsShopId = null;
+
   public List<String> fields = null;
 
   public void init() {
@@ -32,7 +34,9 @@ public class GetWechatShop {
 
   public WechatShopGetResponseData getWechatShop() throws Exception {
     WechatShopGetResponseData response =
-        tencentAds.wechatShop().wechatShopGet(accountId, wechatChannelsShopName, fields);
+        tencentAds
+            .wechatShop()
+            .wechatShopGet(accountId, wechatChannelsShopName, wechatChannelsShopId, fields);
     return response;
   }
 

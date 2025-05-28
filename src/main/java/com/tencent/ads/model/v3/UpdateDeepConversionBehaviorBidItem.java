@@ -18,8 +18,8 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.util.Objects;
 
-/** 修改广告组深度优化行为目标出价 */
-@ApiModel(description = "修改广告组深度优化行为目标出价")
+/** 修改广告深度优化行为目标出价 */
+@ApiModel(description = "修改广告深度优化行为目标出价")
 public class UpdateDeepConversionBehaviorBidItem {
   @SerializedName("adgroup_id")
   private Long adgroupId = null;

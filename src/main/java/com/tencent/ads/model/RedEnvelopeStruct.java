@@ -69,6 +69,18 @@ public class RedEnvelopeStruct {
   @SerializedName("red_envelope_brand_name")
   private String redEnvelopeBrandName = null;
 
+  @SerializedName("gift_story_product_desc")
+  private String giftStoryProductDesc = null;
+
+  @SerializedName("gift_story_product_name")
+  private String giftStoryProductName = null;
+
+  @SerializedName("gift_story_button_text")
+  private String giftStoryButtonText = null;
+
+  @SerializedName("plot_button_jump_info")
+  private LandingPageStructure plotButtonJumpInfo = null;
+
   public RedEnvelopeStruct redEnvelopeSwitch(Boolean redEnvelopeSwitch) {
     this.redEnvelopeSwitch = redEnvelopeSwitch;
     return this;
@@ -373,6 +385,82 @@ public class RedEnvelopeStruct {
     this.redEnvelopeBrandName = redEnvelopeBrandName;
   }
 
+  public RedEnvelopeStruct giftStoryProductDesc(String giftStoryProductDesc) {
+    this.giftStoryProductDesc = giftStoryProductDesc;
+    return this;
+  }
+
+  /**
+   * Get giftStoryProductDesc
+   *
+   * @return giftStoryProductDesc
+   */
+  @ApiModelProperty(value = "")
+  public String getGiftStoryProductDesc() {
+    return giftStoryProductDesc;
+  }
+
+  public void setGiftStoryProductDesc(String giftStoryProductDesc) {
+    this.giftStoryProductDesc = giftStoryProductDesc;
+  }
+
+  public RedEnvelopeStruct giftStoryProductName(String giftStoryProductName) {
+    this.giftStoryProductName = giftStoryProductName;
+    return this;
+  }
+
+  /**
+   * Get giftStoryProductName
+   *
+   * @return giftStoryProductName
+   */
+  @ApiModelProperty(value = "")
+  public String getGiftStoryProductName() {
+    return giftStoryProductName;
+  }
+
+  public void setGiftStoryProductName(String giftStoryProductName) {
+    this.giftStoryProductName = giftStoryProductName;
+  }
+
+  public RedEnvelopeStruct giftStoryButtonText(String giftStoryButtonText) {
+    this.giftStoryButtonText = giftStoryButtonText;
+    return this;
+  }
+
+  /**
+   * Get giftStoryButtonText
+   *
+   * @return giftStoryButtonText
+   */
+  @ApiModelProperty(value = "")
+  public String getGiftStoryButtonText() {
+    return giftStoryButtonText;
+  }
+
+  public void setGiftStoryButtonText(String giftStoryButtonText) {
+    this.giftStoryButtonText = giftStoryButtonText;
+  }
+
+  public RedEnvelopeStruct plotButtonJumpInfo(LandingPageStructure plotButtonJumpInfo) {
+    this.plotButtonJumpInfo = plotButtonJumpInfo;
+    return this;
+  }
+
+  /**
+   * Get plotButtonJumpInfo
+   *
+   * @return plotButtonJumpInfo
+   */
+  @ApiModelProperty(value = "")
+  public LandingPageStructure getPlotButtonJumpInfo() {
+    return plotButtonJumpInfo;
+  }
+
+  public void setPlotButtonJumpInfo(LandingPageStructure plotButtonJumpInfo) {
+    this.plotButtonJumpInfo = plotButtonJumpInfo;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -400,7 +488,11 @@ public class RedEnvelopeStruct {
         && Objects.equals(this.plotSignImage, redEnvelopeStruct.plotSignImage)
         && Objects.equals(this.plotBrandLogo, redEnvelopeStruct.plotBrandLogo)
         && Objects.equals(this.plotOriginalMaterial, redEnvelopeStruct.plotOriginalMaterial)
-        && Objects.equals(this.redEnvelopeBrandName, redEnvelopeStruct.redEnvelopeBrandName);
+        && Objects.equals(this.redEnvelopeBrandName, redEnvelopeStruct.redEnvelopeBrandName)
+        && Objects.equals(this.giftStoryProductDesc, redEnvelopeStruct.giftStoryProductDesc)
+        && Objects.equals(this.giftStoryProductName, redEnvelopeStruct.giftStoryProductName)
+        && Objects.equals(this.giftStoryButtonText, redEnvelopeStruct.giftStoryButtonText)
+        && Objects.equals(this.plotButtonJumpInfo, redEnvelopeStruct.plotButtonJumpInfo);
   }
 
   @Override
@@ -421,7 +513,11 @@ public class RedEnvelopeStruct {
         plotSignImage,
         plotBrandLogo,
         plotOriginalMaterial,
-        redEnvelopeBrandName);
+        redEnvelopeBrandName,
+        giftStoryProductDesc,
+        giftStoryProductName,
+        giftStoryButtonText,
+        plotButtonJumpInfo);
   }
 
   @Override

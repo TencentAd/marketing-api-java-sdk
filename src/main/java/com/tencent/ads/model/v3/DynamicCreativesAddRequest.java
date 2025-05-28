@@ -58,6 +58,9 @@ public class DynamicCreativesAddRequest {
   @SerializedName("configured_status")
   private ConfiguredStatus configuredStatus = null;
 
+  @SerializedName("site_set_validate_model")
+  private SiteSetValidateModel siteSetValidateModel = null;
+
   public DynamicCreativesAddRequest accountId(Long accountId) {
     this.accountId = accountId;
     return this;
@@ -306,6 +309,26 @@ public class DynamicCreativesAddRequest {
     this.configuredStatus = configuredStatus;
   }
 
+  public DynamicCreativesAddRequest siteSetValidateModel(
+      SiteSetValidateModel siteSetValidateModel) {
+    this.siteSetValidateModel = siteSetValidateModel;
+    return this;
+  }
+
+  /**
+   * Get siteSetValidateModel
+   *
+   * @return siteSetValidateModel
+   */
+  @ApiModelProperty(value = "")
+  public SiteSetValidateModel getSiteSetValidateModel() {
+    return siteSetValidateModel;
+  }
+
+  public void setSiteSetValidateModel(SiteSetValidateModel siteSetValidateModel) {
+    this.siteSetValidateModel = siteSetValidateModel;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -330,7 +353,9 @@ public class DynamicCreativesAddRequest {
         && Objects.equals(
             this.autoDerivedProgramCreativeSwitch,
             dynamicCreativesAddRequest.autoDerivedProgramCreativeSwitch)
-        && Objects.equals(this.configuredStatus, dynamicCreativesAddRequest.configuredStatus);
+        && Objects.equals(this.configuredStatus, dynamicCreativesAddRequest.configuredStatus)
+        && Objects.equals(
+            this.siteSetValidateModel, dynamicCreativesAddRequest.siteSetValidateModel);
   }
 
   @Override
@@ -348,7 +373,8 @@ public class DynamicCreativesAddRequest {
         programCreativeInfo,
         pageTrackUrl,
         autoDerivedProgramCreativeSwitch,
-        configuredStatus);
+        configuredStatus,
+        siteSetValidateModel);
   }
 
   @Override

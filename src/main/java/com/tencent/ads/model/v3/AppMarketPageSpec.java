@@ -13,12 +13,57 @@
 package com.tencent.ads.model.v3;
 
 import com.google.gson.Gson;
+import com.google.gson.annotations.SerializedName;
 import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
 import java.util.Objects;
 
 /** 厂商下载 */
 @ApiModel(description = "厂商下载")
 public class AppMarketPageSpec {
+  @SerializedName("android_app_id")
+  private String androidAppId = null;
+
+  @SerializedName("android_channel_id")
+  private String androidChannelId = null;
+
+  public AppMarketPageSpec androidAppId(String androidAppId) {
+    this.androidAppId = androidAppId;
+    return this;
+  }
+
+  /**
+   * Get androidAppId
+   *
+   * @return androidAppId
+   */
+  @ApiModelProperty(value = "")
+  public String getAndroidAppId() {
+    return androidAppId;
+  }
+
+  public void setAndroidAppId(String androidAppId) {
+    this.androidAppId = androidAppId;
+  }
+
+  public AppMarketPageSpec androidChannelId(String androidChannelId) {
+    this.androidChannelId = androidChannelId;
+    return this;
+  }
+
+  /**
+   * Get androidChannelId
+   *
+   * @return androidChannelId
+   */
+  @ApiModelProperty(value = "")
+  public String getAndroidChannelId() {
+    return androidChannelId;
+  }
+
+  public void setAndroidChannelId(String androidChannelId) {
+    this.androidChannelId = androidChannelId;
+  }
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -28,12 +73,14 @@ public class AppMarketPageSpec {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    return true;
+    AppMarketPageSpec appMarketPageSpec = (AppMarketPageSpec) o;
+    return Objects.equals(this.androidAppId, appMarketPageSpec.androidAppId)
+        && Objects.equals(this.androidChannelId, appMarketPageSpec.androidChannelId);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash();
+    return Objects.hash(androidAppId, androidChannelId);
   }
 
   @Override
