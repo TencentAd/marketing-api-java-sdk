@@ -69,6 +69,9 @@ public class WechatChannelsAccountStruct {
   @SerializedName("disable_message")
   private String disableMessage = null;
 
+  @SerializedName("authorization_status")
+  private WechatChannelsAuthStatus authorizationStatus = null;
+
   public WechatChannelsAccountStruct wechatChannelsAccountId(String wechatChannelsAccountId) {
     this.wechatChannelsAccountId = wechatChannelsAccountId;
     return this;
@@ -374,6 +377,26 @@ public class WechatChannelsAccountStruct {
     this.disableMessage = disableMessage;
   }
 
+  public WechatChannelsAccountStruct authorizationStatus(
+      WechatChannelsAuthStatus authorizationStatus) {
+    this.authorizationStatus = authorizationStatus;
+    return this;
+  }
+
+  /**
+   * Get authorizationStatus
+   *
+   * @return authorizationStatus
+   */
+  @ApiModelProperty(value = "")
+  public WechatChannelsAuthStatus getAuthorizationStatus() {
+    return authorizationStatus;
+  }
+
+  public void setAuthorizationStatus(WechatChannelsAuthStatus authorizationStatus) {
+    this.authorizationStatus = authorizationStatus;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -404,7 +427,9 @@ public class WechatChannelsAccountStruct {
             this.authorizationBeginTime, wechatChannelsAccountStruct.authorizationBeginTime)
         && Objects.equals(this.authorizationTtl, wechatChannelsAccountStruct.authorizationTtl)
         && Objects.equals(this.isDisable, wechatChannelsAccountStruct.isDisable)
-        && Objects.equals(this.disableMessage, wechatChannelsAccountStruct.disableMessage);
+        && Objects.equals(this.disableMessage, wechatChannelsAccountStruct.disableMessage)
+        && Objects.equals(
+            this.authorizationStatus, wechatChannelsAccountStruct.authorizationStatus);
   }
 
   @Override
@@ -425,7 +450,8 @@ public class WechatChannelsAccountStruct {
         authorizationBeginTime,
         authorizationTtl,
         isDisable,
-        disableMessage);
+        disableMessage,
+        authorizationStatus);
   }
 
   @Override

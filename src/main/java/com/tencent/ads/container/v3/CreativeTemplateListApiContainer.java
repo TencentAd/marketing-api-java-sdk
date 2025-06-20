@@ -31,16 +31,24 @@ public class CreativeTemplateListApiContainer extends ApiContainer {
    * 获取创意形式列表
    *
    * @param accountId (required)
-   * @param marketingGoal (required)
-   * @param marketingTargetType (required)
-   * @param marketingCarrierType (required)
+   * @param marketingGoal (optional)
    * @param marketingSubGoal (optional)
+   * @param marketingTargetType (optional)
+   * @param marketingCarrierType (optional)
    * @param siteSet (optional)
    * @param dynamicAbilityType (optional)
    * @param wechatSceneSpecPosition (optional)
    * @param creativeTemplateId (optional)
    * @param page (optional)
    * @param pageSize (optional)
+   * @param dynamicAdType (optional)
+   * @param dynamicCreativeType (optional)
+   * @param supportSiteSet (optional)
+   * @param bidMode (optional)
+   * @param wechatChannelsScene (optional)
+   * @param displayScene (optional)
+   * @param pcScene (optional)
+   * @param adgroupId (optional)
    * @param fields 返回参数的字段列表 (optional)
    * @return CreativeTemplateListGetResponse
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
@@ -49,15 +57,23 @@ public class CreativeTemplateListApiContainer extends ApiContainer {
   public CreativeTemplateListGetResponseData creativeTemplateListGet(
       Long accountId,
       String marketingGoal,
+      String marketingSubGoal,
       String marketingTargetType,
       String marketingCarrierType,
-      String marketingSubGoal,
       String siteSet,
       String dynamicAbilityType,
       List<Long> wechatSceneSpecPosition,
       Long creativeTemplateId,
       Long page,
       Long pageSize,
+      String dynamicAdType,
+      String dynamicCreativeType,
+      List<String> supportSiteSet,
+      String bidMode,
+      List<Long> wechatChannelsScene,
+      List<String> displayScene,
+      List<String> pcScene,
+      Long adgroupId,
       List<String> fields,
       Pair... headerPair)
       throws ApiException, TencentAdsResponseException {
@@ -65,15 +81,23 @@ public class CreativeTemplateListApiContainer extends ApiContainer {
         api.creativeTemplateListGet(
             accountId,
             marketingGoal,
+            marketingSubGoal,
             marketingTargetType,
             marketingCarrierType,
-            marketingSubGoal,
             siteSet,
             dynamicAbilityType,
             wechatSceneSpecPosition,
             creativeTemplateId,
             page,
             pageSize,
+            dynamicAdType,
+            dynamicCreativeType,
+            supportSiteSet,
+            bidMode,
+            wechatChannelsScene,
+            displayScene,
+            pcScene,
+            adgroupId,
             fields,
             headerPair);
     handleResponse(gson.toJson(resp));

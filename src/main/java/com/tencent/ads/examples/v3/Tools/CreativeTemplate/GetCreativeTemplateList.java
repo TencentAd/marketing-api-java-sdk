@@ -18,11 +18,11 @@ public class GetCreativeTemplateList {
 
   public String marketingGoal = null;
 
+  public String marketingSubGoal = null;
+
   public String marketingTargetType = null;
 
   public String marketingCarrierType = null;
-
-  public String marketingSubGoal = null;
 
   public String siteSet = null;
 
@@ -35,6 +35,22 @@ public class GetCreativeTemplateList {
   public Long page = null;
 
   public Long pageSize = null;
+
+  public String dynamicAdType = null;
+
+  public String dynamicCreativeType = null;
+
+  public List<String> supportSiteSet = null;
+
+  public String bidMode = null;
+
+  public List<Long> wechatChannelsScene = null;
+
+  public List<String> displayScene = null;
+
+  public List<String> pcScene = null;
+
+  public Long adgroupId = null;
 
   public List<String> fields = null;
 
@@ -55,15 +71,23 @@ public class GetCreativeTemplateList {
             .creativeTemplateListGet(
                 accountId,
                 marketingGoal,
+                marketingSubGoal,
                 marketingTargetType,
                 marketingCarrierType,
-                marketingSubGoal,
                 siteSet,
                 dynamicAbilityType,
                 wechatSceneSpecPosition,
                 creativeTemplateId,
                 page,
                 pageSize,
+                dynamicAdType,
+                dynamicCreativeType,
+                supportSiteSet,
+                bidMode,
+                wechatChannelsScene,
+                displayScene,
+                pcScene,
+                adgroupId,
                 fields);
     return response;
   }

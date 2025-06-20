@@ -36,7 +36,7 @@ public class FinderObject {
   private String description = null;
 
   @SerializedName("medias")
-  private List<MediaNew> medias = null;
+  private List<WechatChannelsMedia> medias = null;
 
   @SerializedName("finder_username")
   private String finderUsername = null;
@@ -120,14 +120,14 @@ public class FinderObject {
     this.description = description;
   }
 
-  public FinderObject medias(List<MediaNew> medias) {
+  public FinderObject medias(List<WechatChannelsMedia> medias) {
     this.medias = medias;
     return this;
   }
 
-  public FinderObject addMediasItem(MediaNew mediasItem) {
+  public FinderObject addMediasItem(WechatChannelsMedia mediasItem) {
     if (this.medias == null) {
-      this.medias = new ArrayList<MediaNew>();
+      this.medias = new ArrayList<WechatChannelsMedia>();
     }
     this.medias.add(mediasItem);
     return this;
@@ -139,11 +139,11 @@ public class FinderObject {
    * @return medias
    */
   @ApiModelProperty(value = "")
-  public List<MediaNew> getMedias() {
+  public List<WechatChannelsMedia> getMedias() {
     return medias;
   }
 
-  public void setMedias(List<MediaNew> medias) {
+  public void setMedias(List<WechatChannelsMedia> medias) {
     this.medias = medias;
   }
 

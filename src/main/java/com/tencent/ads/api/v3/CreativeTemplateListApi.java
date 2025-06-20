@@ -52,16 +52,24 @@ public class CreativeTemplateListApi {
    * Build call for creativeTemplateListGet
    *
    * @param accountId (required)
-   * @param marketingGoal (required)
-   * @param marketingTargetType (required)
-   * @param marketingCarrierType (required)
+   * @param marketingGoal (optional)
    * @param marketingSubGoal (optional)
+   * @param marketingTargetType (optional)
+   * @param marketingCarrierType (optional)
    * @param siteSet (optional)
    * @param dynamicAbilityType (optional)
    * @param wechatSceneSpecPosition (optional)
    * @param creativeTemplateId (optional)
    * @param page (optional)
    * @param pageSize (optional)
+   * @param dynamicAdType (optional)
+   * @param dynamicCreativeType (optional)
+   * @param supportSiteSet (optional)
+   * @param bidMode (optional)
+   * @param wechatChannelsScene (optional)
+   * @param displayScene (optional)
+   * @param pcScene (optional)
+   * @param adgroupId (optional)
    * @param fields 返回参数的字段列表 (optional)
    * @param progressListener Progress listener
    * @param progressRequestListener Progress request listener
@@ -71,15 +79,23 @@ public class CreativeTemplateListApi {
   public com.squareup.okhttp.Call creativeTemplateListGetCall(
       Long accountId,
       String marketingGoal,
+      String marketingSubGoal,
       String marketingTargetType,
       String marketingCarrierType,
-      String marketingSubGoal,
       String siteSet,
       String dynamicAbilityType,
       List<Long> wechatSceneSpecPosition,
       Long creativeTemplateId,
       Long page,
       Long pageSize,
+      String dynamicAdType,
+      String dynamicCreativeType,
+      List<String> supportSiteSet,
+      String bidMode,
+      List<Long> wechatChannelsScene,
+      List<String> displayScene,
+      List<String> pcScene,
+      Long adgroupId,
       List<String> fields,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
@@ -119,6 +135,26 @@ public class CreativeTemplateListApi {
     if (page != null) localVarQueryParams.addAll(apiClient.parameterToPair("page", page));
     if (pageSize != null)
       localVarQueryParams.addAll(apiClient.parameterToPair("page_size", pageSize));
+    if (dynamicAdType != null)
+      localVarQueryParams.addAll(apiClient.parameterToPair("dynamic_ad_type", dynamicAdType));
+    if (dynamicCreativeType != null)
+      localVarQueryParams.addAll(
+          apiClient.parameterToPair("dynamic_creative_type", dynamicCreativeType));
+    if (supportSiteSet != null)
+      localVarCollectionQueryParams.addAll(
+          apiClient.parameterToPairs("multi", "support_site_set", supportSiteSet));
+    if (bidMode != null) localVarQueryParams.addAll(apiClient.parameterToPair("bid_mode", bidMode));
+    if (wechatChannelsScene != null)
+      localVarCollectionQueryParams.addAll(
+          apiClient.parameterToPairs("multi", "wechat_channels_scene", wechatChannelsScene));
+    if (displayScene != null)
+      localVarCollectionQueryParams.addAll(
+          apiClient.parameterToPairs("multi", "display_scene", displayScene));
+    if (pcScene != null)
+      localVarCollectionQueryParams.addAll(
+          apiClient.parameterToPairs("multi", "pc_scene", pcScene));
+    if (adgroupId != null)
+      localVarQueryParams.addAll(apiClient.parameterToPair("adgroup_id", adgroupId));
     if (fields != null)
       localVarCollectionQueryParams.addAll(apiClient.parameterToPairs("multi", "fields", fields));
 
@@ -175,15 +211,23 @@ public class CreativeTemplateListApi {
   private com.squareup.okhttp.Call creativeTemplateListGetValidateBeforeCall(
       Long accountId,
       String marketingGoal,
+      String marketingSubGoal,
       String marketingTargetType,
       String marketingCarrierType,
-      String marketingSubGoal,
       String siteSet,
       String dynamicAbilityType,
       List<Long> wechatSceneSpecPosition,
       Long creativeTemplateId,
       Long page,
       Long pageSize,
+      String dynamicAdType,
+      String dynamicCreativeType,
+      List<String> supportSiteSet,
+      String bidMode,
+      List<Long> wechatChannelsScene,
+      List<String> displayScene,
+      List<String> pcScene,
+      Long adgroupId,
       List<String> fields,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
@@ -196,37 +240,27 @@ public class CreativeTemplateListApi {
           "Missing the required parameter 'accountId' when calling creativeTemplateListGet(Async)");
     }
 
-    // verify the required parameter 'marketingGoal' is set
-    if (marketingGoal == null) {
-      throw new ApiException(
-          "Missing the required parameter 'marketingGoal' when calling creativeTemplateListGet(Async)");
-    }
-
-    // verify the required parameter 'marketingTargetType' is set
-    if (marketingTargetType == null) {
-      throw new ApiException(
-          "Missing the required parameter 'marketingTargetType' when calling creativeTemplateListGet(Async)");
-    }
-
-    // verify the required parameter 'marketingCarrierType' is set
-    if (marketingCarrierType == null) {
-      throw new ApiException(
-          "Missing the required parameter 'marketingCarrierType' when calling creativeTemplateListGet(Async)");
-    }
-
     com.squareup.okhttp.Call call =
         creativeTemplateListGetCall(
             accountId,
             marketingGoal,
+            marketingSubGoal,
             marketingTargetType,
             marketingCarrierType,
-            marketingSubGoal,
             siteSet,
             dynamicAbilityType,
             wechatSceneSpecPosition,
             creativeTemplateId,
             page,
             pageSize,
+            dynamicAdType,
+            dynamicCreativeType,
+            supportSiteSet,
+            bidMode,
+            wechatChannelsScene,
+            displayScene,
+            pcScene,
+            adgroupId,
             fields,
             progressListener,
             progressRequestListener,
@@ -238,16 +272,24 @@ public class CreativeTemplateListApi {
    * 获取创意形式列表
    *
    * @param accountId (required)
-   * @param marketingGoal (required)
-   * @param marketingTargetType (required)
-   * @param marketingCarrierType (required)
+   * @param marketingGoal (optional)
    * @param marketingSubGoal (optional)
+   * @param marketingTargetType (optional)
+   * @param marketingCarrierType (optional)
    * @param siteSet (optional)
    * @param dynamicAbilityType (optional)
    * @param wechatSceneSpecPosition (optional)
    * @param creativeTemplateId (optional)
    * @param page (optional)
    * @param pageSize (optional)
+   * @param dynamicAdType (optional)
+   * @param dynamicCreativeType (optional)
+   * @param supportSiteSet (optional)
+   * @param bidMode (optional)
+   * @param wechatChannelsScene (optional)
+   * @param displayScene (optional)
+   * @param pcScene (optional)
+   * @param adgroupId (optional)
    * @param fields 返回参数的字段列表 (optional)
    * @return CreativeTemplateListGetResponse
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
@@ -256,15 +298,23 @@ public class CreativeTemplateListApi {
   public CreativeTemplateListGetResponse creativeTemplateListGet(
       Long accountId,
       String marketingGoal,
+      String marketingSubGoal,
       String marketingTargetType,
       String marketingCarrierType,
-      String marketingSubGoal,
       String siteSet,
       String dynamicAbilityType,
       List<Long> wechatSceneSpecPosition,
       Long creativeTemplateId,
       Long page,
       Long pageSize,
+      String dynamicAdType,
+      String dynamicCreativeType,
+      List<String> supportSiteSet,
+      String bidMode,
+      List<Long> wechatChannelsScene,
+      List<String> displayScene,
+      List<String> pcScene,
+      Long adgroupId,
       List<String> fields,
       Pair... headerPair)
       throws ApiException {
@@ -272,15 +322,23 @@ public class CreativeTemplateListApi {
         creativeTemplateListGetWithHttpInfo(
             accountId,
             marketingGoal,
+            marketingSubGoal,
             marketingTargetType,
             marketingCarrierType,
-            marketingSubGoal,
             siteSet,
             dynamicAbilityType,
             wechatSceneSpecPosition,
             creativeTemplateId,
             page,
             pageSize,
+            dynamicAdType,
+            dynamicCreativeType,
+            supportSiteSet,
+            bidMode,
+            wechatChannelsScene,
+            displayScene,
+            pcScene,
+            adgroupId,
             fields,
             headerPair);
     return resp.getData();
@@ -290,16 +348,24 @@ public class CreativeTemplateListApi {
    * 获取创意形式列表
    *
    * @param accountId (required)
-   * @param marketingGoal (required)
-   * @param marketingTargetType (required)
-   * @param marketingCarrierType (required)
+   * @param marketingGoal (optional)
    * @param marketingSubGoal (optional)
+   * @param marketingTargetType (optional)
+   * @param marketingCarrierType (optional)
    * @param siteSet (optional)
    * @param dynamicAbilityType (optional)
    * @param wechatSceneSpecPosition (optional)
    * @param creativeTemplateId (optional)
    * @param page (optional)
    * @param pageSize (optional)
+   * @param dynamicAdType (optional)
+   * @param dynamicCreativeType (optional)
+   * @param supportSiteSet (optional)
+   * @param bidMode (optional)
+   * @param wechatChannelsScene (optional)
+   * @param displayScene (optional)
+   * @param pcScene (optional)
+   * @param adgroupId (optional)
    * @param fields 返回参数的字段列表 (optional)
    * @return ApiResponse&lt;CreativeTemplateListGetResponse&gt;
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
@@ -308,15 +374,23 @@ public class CreativeTemplateListApi {
   public ApiResponse<CreativeTemplateListGetResponse> creativeTemplateListGetWithHttpInfo(
       Long accountId,
       String marketingGoal,
+      String marketingSubGoal,
       String marketingTargetType,
       String marketingCarrierType,
-      String marketingSubGoal,
       String siteSet,
       String dynamicAbilityType,
       List<Long> wechatSceneSpecPosition,
       Long creativeTemplateId,
       Long page,
       Long pageSize,
+      String dynamicAdType,
+      String dynamicCreativeType,
+      List<String> supportSiteSet,
+      String bidMode,
+      List<Long> wechatChannelsScene,
+      List<String> displayScene,
+      List<String> pcScene,
+      Long adgroupId,
       List<String> fields,
       Pair... headerPair)
       throws ApiException {
@@ -324,15 +398,23 @@ public class CreativeTemplateListApi {
         creativeTemplateListGetValidateBeforeCall(
             accountId,
             marketingGoal,
+            marketingSubGoal,
             marketingTargetType,
             marketingCarrierType,
-            marketingSubGoal,
             siteSet,
             dynamicAbilityType,
             wechatSceneSpecPosition,
             creativeTemplateId,
             page,
             pageSize,
+            dynamicAdType,
+            dynamicCreativeType,
+            supportSiteSet,
+            bidMode,
+            wechatChannelsScene,
+            displayScene,
+            pcScene,
+            adgroupId,
             fields,
             null,
             null,
@@ -345,16 +427,24 @@ public class CreativeTemplateListApi {
    * 获取创意形式列表 (asynchronously)
    *
    * @param accountId (required)
-   * @param marketingGoal (required)
-   * @param marketingTargetType (required)
-   * @param marketingCarrierType (required)
+   * @param marketingGoal (optional)
    * @param marketingSubGoal (optional)
+   * @param marketingTargetType (optional)
+   * @param marketingCarrierType (optional)
    * @param siteSet (optional)
    * @param dynamicAbilityType (optional)
    * @param wechatSceneSpecPosition (optional)
    * @param creativeTemplateId (optional)
    * @param page (optional)
    * @param pageSize (optional)
+   * @param dynamicAdType (optional)
+   * @param dynamicCreativeType (optional)
+   * @param supportSiteSet (optional)
+   * @param bidMode (optional)
+   * @param wechatChannelsScene (optional)
+   * @param displayScene (optional)
+   * @param pcScene (optional)
+   * @param adgroupId (optional)
    * @param fields 返回参数的字段列表 (optional)
    * @param callback The callback to be executed when the API call finishes
    * @return The request call
@@ -363,15 +453,23 @@ public class CreativeTemplateListApi {
   public com.squareup.okhttp.Call creativeTemplateListGetAsync(
       Long accountId,
       String marketingGoal,
+      String marketingSubGoal,
       String marketingTargetType,
       String marketingCarrierType,
-      String marketingSubGoal,
       String siteSet,
       String dynamicAbilityType,
       List<Long> wechatSceneSpecPosition,
       Long creativeTemplateId,
       Long page,
       Long pageSize,
+      String dynamicAdType,
+      String dynamicCreativeType,
+      List<String> supportSiteSet,
+      String bidMode,
+      List<Long> wechatChannelsScene,
+      List<String> displayScene,
+      List<String> pcScene,
+      Long adgroupId,
       List<String> fields,
       final ApiCallback<CreativeTemplateListGetResponse> callback,
       Pair... headerPair)
@@ -402,15 +500,23 @@ public class CreativeTemplateListApi {
         creativeTemplateListGetValidateBeforeCall(
             accountId,
             marketingGoal,
+            marketingSubGoal,
             marketingTargetType,
             marketingCarrierType,
-            marketingSubGoal,
             siteSet,
             dynamicAbilityType,
             wechatSceneSpecPosition,
             creativeTemplateId,
             page,
             pageSize,
+            dynamicAdType,
+            dynamicCreativeType,
+            supportSiteSet,
+            bidMode,
+            wechatChannelsScene,
+            displayScene,
+            pcScene,
+            adgroupId,
             fields,
             progressListener,
             progressRequestListener,

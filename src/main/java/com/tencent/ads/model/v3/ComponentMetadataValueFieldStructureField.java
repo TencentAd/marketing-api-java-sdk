@@ -16,6 +16,8 @@ import com.google.gson.Gson;
 import com.google.gson.annotations.SerializedName;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Objects;
 
 /** 创意组件字段结构 */
@@ -26,6 +28,9 @@ public class ComponentMetadataValueFieldStructureField {
 
   @SerializedName("type")
   private ComponentMetadataFieldType type = null;
+
+  @SerializedName("structure")
+  private List<ComponentMetadataValueFieldStructureFieldSub> structure = null;
 
   @SerializedName("is_array")
   private Boolean isArray = null;
@@ -69,6 +74,35 @@ public class ComponentMetadataValueFieldStructureField {
 
   public void setType(ComponentMetadataFieldType type) {
     this.type = type;
+  }
+
+  public ComponentMetadataValueFieldStructureField structure(
+      List<ComponentMetadataValueFieldStructureFieldSub> structure) {
+    this.structure = structure;
+    return this;
+  }
+
+  public ComponentMetadataValueFieldStructureField addStructureItem(
+      ComponentMetadataValueFieldStructureFieldSub structureItem) {
+    if (this.structure == null) {
+      this.structure = new ArrayList<ComponentMetadataValueFieldStructureFieldSub>();
+    }
+    this.structure.add(structureItem);
+    return this;
+  }
+
+  /**
+   * Get structure
+   *
+   * @return structure
+   */
+  @ApiModelProperty(value = "")
+  public List<ComponentMetadataValueFieldStructureFieldSub> getStructure() {
+    return structure;
+  }
+
+  public void setStructure(List<ComponentMetadataValueFieldStructureFieldSub> structure) {
+    this.structure = structure;
   }
 
   public ComponentMetadataValueFieldStructureField isArray(Boolean isArray) {
@@ -121,13 +155,14 @@ public class ComponentMetadataValueFieldStructureField {
         (ComponentMetadataValueFieldStructureField) o;
     return Objects.equals(this.name, componentMetadataValueFieldStructureField.name)
         && Objects.equals(this.type, componentMetadataValueFieldStructureField.type)
+        && Objects.equals(this.structure, componentMetadataValueFieldStructureField.structure)
         && Objects.equals(this.isArray, componentMetadataValueFieldStructureField.isArray)
         && Objects.equals(this.valid, componentMetadataValueFieldStructureField.valid);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(name, type, isArray, valid);
+    return Objects.hash(name, type, structure, isArray, valid);
   }
 
   @Override

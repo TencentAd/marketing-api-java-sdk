@@ -19,9 +19,6 @@ import com.tencent.ads.Pair;
 import com.tencent.ads.anno.*;
 import com.tencent.ads.api.v3.ComponentSharingApi;
 import com.tencent.ads.exception.TencentAdsResponseException;
-import com.tencent.ads.model.v3.ComponentSharingAddRequest;
-import com.tencent.ads.model.v3.ComponentSharingAddResponse;
-import com.tencent.ads.model.v3.ComponentSharingAddResponseData;
 import com.tencent.ads.model.v3.ComponentSharingGetResponse;
 import com.tencent.ads.model.v3.ComponentSharingGetResponseData;
 import com.tencent.ads.model.v3.ComponentSharingUpdateRequest;
@@ -32,22 +29,6 @@ import java.util.List;
 public class ComponentSharingApiContainer extends ApiContainer {
 
   @Inject ComponentSharingApi api;
-
-  /**
-   * 共享创意组件
-   *
-   * @param data (required)
-   * @return ComponentSharingAddResponse
-   * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
-   *     response body
-   */
-  public ComponentSharingAddResponseData componentSharingAdd(
-      ComponentSharingAddRequest data, Pair... headerPair)
-      throws ApiException, TencentAdsResponseException {
-    ComponentSharingAddResponse resp = api.componentSharingAdd(data, headerPair);
-    handleResponse(gson.toJson(resp));
-    return resp.getData();
-  }
 
   /**
    * 查询创意组件共享信息

@@ -16,6 +16,8 @@ import com.google.gson.Gson;
 import com.google.gson.annotations.SerializedName;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Objects;
 
 /** 返回结构 */
@@ -32,6 +34,9 @@ public class OrganizationAccountRelationGetListStruct {
 
   @SerializedName("is_mp")
   private Boolean isMp = null;
+
+  @SerializedName("comment_list")
+  private List<CommentDataStruct> commentList = null;
 
   public OrganizationAccountRelationGetListStruct accountId(Long accountId) {
     this.accountId = accountId;
@@ -109,6 +114,34 @@ public class OrganizationAccountRelationGetListStruct {
     this.isMp = isMp;
   }
 
+  public OrganizationAccountRelationGetListStruct commentList(List<CommentDataStruct> commentList) {
+    this.commentList = commentList;
+    return this;
+  }
+
+  public OrganizationAccountRelationGetListStruct addCommentListItem(
+      CommentDataStruct commentListItem) {
+    if (this.commentList == null) {
+      this.commentList = new ArrayList<CommentDataStruct>();
+    }
+    this.commentList.add(commentListItem);
+    return this;
+  }
+
+  /**
+   * Get commentList
+   *
+   * @return commentList
+   */
+  @ApiModelProperty(value = "")
+  public List<CommentDataStruct> getCommentList() {
+    return commentList;
+  }
+
+  public void setCommentList(List<CommentDataStruct> commentList) {
+    this.commentList = commentList;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -123,12 +156,13 @@ public class OrganizationAccountRelationGetListStruct {
         && Objects.equals(
             this.corporationName, organizationAccountRelationGetListStruct.corporationName)
         && Objects.equals(this.isAdx, organizationAccountRelationGetListStruct.isAdx)
-        && Objects.equals(this.isMp, organizationAccountRelationGetListStruct.isMp);
+        && Objects.equals(this.isMp, organizationAccountRelationGetListStruct.isMp)
+        && Objects.equals(this.commentList, organizationAccountRelationGetListStruct.commentList);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(accountId, corporationName, isAdx, isMp);
+    return Objects.hash(accountId, corporationName, isAdx, isMp, commentList);
   }
 
   @Override

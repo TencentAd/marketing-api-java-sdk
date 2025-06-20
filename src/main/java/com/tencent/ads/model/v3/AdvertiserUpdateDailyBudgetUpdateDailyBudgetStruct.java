@@ -27,6 +27,9 @@ public class AdvertiserUpdateDailyBudgetUpdateDailyBudgetStruct {
   @SerializedName("daily_budget")
   private Long dailyBudget = null;
 
+  @SerializedName("use_min_daily_budget")
+  private Boolean useMinDailyBudget = null;
+
   public AdvertiserUpdateDailyBudgetUpdateDailyBudgetStruct accountId(Long accountId) {
     this.accountId = accountId;
     return this;
@@ -65,6 +68,26 @@ public class AdvertiserUpdateDailyBudgetUpdateDailyBudgetStruct {
     this.dailyBudget = dailyBudget;
   }
 
+  public AdvertiserUpdateDailyBudgetUpdateDailyBudgetStruct useMinDailyBudget(
+      Boolean useMinDailyBudget) {
+    this.useMinDailyBudget = useMinDailyBudget;
+    return this;
+  }
+
+  /**
+   * Get useMinDailyBudget
+   *
+   * @return useMinDailyBudget
+   */
+  @ApiModelProperty(value = "")
+  public Boolean isUseMinDailyBudget() {
+    return useMinDailyBudget;
+  }
+
+  public void setUseMinDailyBudget(Boolean useMinDailyBudget) {
+    this.useMinDailyBudget = useMinDailyBudget;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -79,12 +102,15 @@ public class AdvertiserUpdateDailyBudgetUpdateDailyBudgetStruct {
     return Objects.equals(
             this.accountId, advertiserUpdateDailyBudgetUpdateDailyBudgetStruct.accountId)
         && Objects.equals(
-            this.dailyBudget, advertiserUpdateDailyBudgetUpdateDailyBudgetStruct.dailyBudget);
+            this.dailyBudget, advertiserUpdateDailyBudgetUpdateDailyBudgetStruct.dailyBudget)
+        && Objects.equals(
+            this.useMinDailyBudget,
+            advertiserUpdateDailyBudgetUpdateDailyBudgetStruct.useMinDailyBudget);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(accountId, dailyBudget);
+    return Objects.hash(accountId, dailyBudget, useMinDailyBudget);
   }
 
   @Override

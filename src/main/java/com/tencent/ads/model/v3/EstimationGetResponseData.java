@@ -66,6 +66,9 @@ public class EstimationGetResponseData {
   @SerializedName("is_real_exposure_supported")
   private Boolean isRealExposureSupported = null;
 
+  @SerializedName("stage_bid_info")
+  private List<StageBidInfoItem> stageBidInfo = null;
+
   public EstimationGetResponseData maxActiveUserCount(Long maxActiveUserCount) {
     this.maxActiveUserCount = maxActiveUserCount;
     return this;
@@ -359,6 +362,33 @@ public class EstimationGetResponseData {
     this.isRealExposureSupported = isRealExposureSupported;
   }
 
+  public EstimationGetResponseData stageBidInfo(List<StageBidInfoItem> stageBidInfo) {
+    this.stageBidInfo = stageBidInfo;
+    return this;
+  }
+
+  public EstimationGetResponseData addStageBidInfoItem(StageBidInfoItem stageBidInfoItem) {
+    if (this.stageBidInfo == null) {
+      this.stageBidInfo = new ArrayList<StageBidInfoItem>();
+    }
+    this.stageBidInfo.add(stageBidInfoItem);
+    return this;
+  }
+
+  /**
+   * Get stageBidInfo
+   *
+   * @return stageBidInfo
+   */
+  @ApiModelProperty(value = "")
+  public List<StageBidInfoItem> getStageBidInfo() {
+    return stageBidInfo;
+  }
+
+  public void setStageBidInfo(List<StageBidInfoItem> stageBidInfo) {
+    this.stageBidInfo = stageBidInfo;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -384,7 +414,8 @@ public class EstimationGetResponseData {
         && Objects.equals(this.targetingStatus, estimationGetResponseData.targetingStatus)
         && Objects.equals(this.suggestTargeting, estimationGetResponseData.suggestTargeting)
         && Objects.equals(
-            this.isRealExposureSupported, estimationGetResponseData.isRealExposureSupported);
+            this.isRealExposureSupported, estimationGetResponseData.isRealExposureSupported)
+        && Objects.equals(this.stageBidInfo, estimationGetResponseData.stageBidInfo);
   }
 
   @Override
@@ -404,7 +435,8 @@ public class EstimationGetResponseData {
         maxExposureDaily,
         targetingStatus,
         suggestTargeting,
-        isRealExposureSupported);
+        isRealExposureSupported,
+        stageBidInfo);
   }
 
   @Override

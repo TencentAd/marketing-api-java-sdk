@@ -33,6 +33,12 @@ public class AdvertiserUpdateDailyBudgetListStruct {
   @SerializedName("account_id")
   private Long accountId = null;
 
+  @SerializedName("daily_budget")
+  private Long dailyBudget = null;
+
+  @SerializedName("use_min_daily_budget")
+  private Boolean useMinDailyBudget = null;
+
   public AdvertiserUpdateDailyBudgetListStruct code(Long code) {
     this.code = code;
     return this;
@@ -109,6 +115,44 @@ public class AdvertiserUpdateDailyBudgetListStruct {
     this.accountId = accountId;
   }
 
+  public AdvertiserUpdateDailyBudgetListStruct dailyBudget(Long dailyBudget) {
+    this.dailyBudget = dailyBudget;
+    return this;
+  }
+
+  /**
+   * Get dailyBudget
+   *
+   * @return dailyBudget
+   */
+  @ApiModelProperty(value = "")
+  public Long getDailyBudget() {
+    return dailyBudget;
+  }
+
+  public void setDailyBudget(Long dailyBudget) {
+    this.dailyBudget = dailyBudget;
+  }
+
+  public AdvertiserUpdateDailyBudgetListStruct useMinDailyBudget(Boolean useMinDailyBudget) {
+    this.useMinDailyBudget = useMinDailyBudget;
+    return this;
+  }
+
+  /**
+   * Get useMinDailyBudget
+   *
+   * @return useMinDailyBudget
+   */
+  @ApiModelProperty(value = "")
+  public Boolean isUseMinDailyBudget() {
+    return useMinDailyBudget;
+  }
+
+  public void setUseMinDailyBudget(Boolean useMinDailyBudget) {
+    this.useMinDailyBudget = useMinDailyBudget;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -122,12 +166,15 @@ public class AdvertiserUpdateDailyBudgetListStruct {
     return Objects.equals(this.code, advertiserUpdateDailyBudgetListStruct.code)
         && Objects.equals(this.message, advertiserUpdateDailyBudgetListStruct.message)
         && Objects.equals(this.messageCn, advertiserUpdateDailyBudgetListStruct.messageCn)
-        && Objects.equals(this.accountId, advertiserUpdateDailyBudgetListStruct.accountId);
+        && Objects.equals(this.accountId, advertiserUpdateDailyBudgetListStruct.accountId)
+        && Objects.equals(this.dailyBudget, advertiserUpdateDailyBudgetListStruct.dailyBudget)
+        && Objects.equals(
+            this.useMinDailyBudget, advertiserUpdateDailyBudgetListStruct.useMinDailyBudget);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(code, message, messageCn, accountId);
+    return Objects.hash(code, message, messageCn, accountId, dailyBudget, useMinDailyBudget);
   }
 
   @Override

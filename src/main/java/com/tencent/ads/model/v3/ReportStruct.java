@@ -2370,6 +2370,21 @@ public class ReportStruct {
   @SerializedName("sec_og_conv_auto_acquisition_pv")
   private Long secOgConvAutoAcquisitionPv = null;
 
+  @SerializedName("scan_code_pla_pv")
+  private Long scanCodePlaPv = null;
+
+  @SerializedName("purchase_pla_bk_active_1d_amount")
+  private Long purchasePlaBkActive1dAmount = null;
+
+  @SerializedName("bf_all_dedup_pv")
+  private Long bfAllDedupPv = null;
+
+  @SerializedName("retention_dedup_pv")
+  private Long retentionDedupPv = null;
+
+  @SerializedName("retention_all_dedup_pv")
+  private Long retentionAllDedupPv = null;
+
   @SerializedName("adgroup_id")
   private Long adgroupId = null;
 
@@ -17449,6 +17464,101 @@ public class ReportStruct {
     this.secOgConvAutoAcquisitionPv = secOgConvAutoAcquisitionPv;
   }
 
+  public ReportStruct scanCodePlaPv(Long scanCodePlaPv) {
+    this.scanCodePlaPv = scanCodePlaPv;
+    return this;
+  }
+
+  /**
+   * Get scanCodePlaPv
+   *
+   * @return scanCodePlaPv
+   */
+  @ApiModelProperty(value = "")
+  public Long getScanCodePlaPv() {
+    return scanCodePlaPv;
+  }
+
+  public void setScanCodePlaPv(Long scanCodePlaPv) {
+    this.scanCodePlaPv = scanCodePlaPv;
+  }
+
+  public ReportStruct purchasePlaBkActive1dAmount(Long purchasePlaBkActive1dAmount) {
+    this.purchasePlaBkActive1dAmount = purchasePlaBkActive1dAmount;
+    return this;
+  }
+
+  /**
+   * Get purchasePlaBkActive1dAmount
+   *
+   * @return purchasePlaBkActive1dAmount
+   */
+  @ApiModelProperty(value = "")
+  public Long getPurchasePlaBkActive1dAmount() {
+    return purchasePlaBkActive1dAmount;
+  }
+
+  public void setPurchasePlaBkActive1dAmount(Long purchasePlaBkActive1dAmount) {
+    this.purchasePlaBkActive1dAmount = purchasePlaBkActive1dAmount;
+  }
+
+  public ReportStruct bfAllDedupPv(Long bfAllDedupPv) {
+    this.bfAllDedupPv = bfAllDedupPv;
+    return this;
+  }
+
+  /**
+   * Get bfAllDedupPv
+   *
+   * @return bfAllDedupPv
+   */
+  @ApiModelProperty(value = "")
+  public Long getBfAllDedupPv() {
+    return bfAllDedupPv;
+  }
+
+  public void setBfAllDedupPv(Long bfAllDedupPv) {
+    this.bfAllDedupPv = bfAllDedupPv;
+  }
+
+  public ReportStruct retentionDedupPv(Long retentionDedupPv) {
+    this.retentionDedupPv = retentionDedupPv;
+    return this;
+  }
+
+  /**
+   * Get retentionDedupPv
+   *
+   * @return retentionDedupPv
+   */
+  @ApiModelProperty(value = "")
+  public Long getRetentionDedupPv() {
+    return retentionDedupPv;
+  }
+
+  public void setRetentionDedupPv(Long retentionDedupPv) {
+    this.retentionDedupPv = retentionDedupPv;
+  }
+
+  public ReportStruct retentionAllDedupPv(Long retentionAllDedupPv) {
+    this.retentionAllDedupPv = retentionAllDedupPv;
+    return this;
+  }
+
+  /**
+   * Get retentionAllDedupPv
+   *
+   * @return retentionAllDedupPv
+   */
+  @ApiModelProperty(value = "")
+  public Long getRetentionAllDedupPv() {
+    return retentionAllDedupPv;
+  }
+
+  public void setRetentionAllDedupPv(Long retentionAllDedupPv) {
+    this.retentionAllDedupPv = retentionAllDedupPv;
+  }
+
   public ReportStruct adgroupId(Long adgroupId) {
     this.adgroupId = adgroupId;
     return this;
@@ -19504,6 +19614,12 @@ public class ReportStruct {
         && Objects.equals(this.followBizAllDedupPv, reportStruct.followBizAllDedupPv)
         && Objects.equals(this.firOgConvAutoAcquisitionPv, reportStruct.firOgConvAutoAcquisitionPv)
         && Objects.equals(this.secOgConvAutoAcquisitionPv, reportStruct.secOgConvAutoAcquisitionPv)
+        && Objects.equals(this.scanCodePlaPv, reportStruct.scanCodePlaPv)
+        && Objects.equals(
+            this.purchasePlaBkActive1dAmount, reportStruct.purchasePlaBkActive1dAmount)
+        && Objects.equals(this.bfAllDedupPv, reportStruct.bfAllDedupPv)
+        && Objects.equals(this.retentionDedupPv, reportStruct.retentionDedupPv)
+        && Objects.equals(this.retentionAllDedupPv, reportStruct.retentionAllDedupPv)
         && Objects.equals(this.adgroupId, reportStruct.adgroupId)
         && Objects.equals(this.adgroupName, reportStruct.adgroupName)
         && Objects.equals(this.dynamicCreativeId, reportStruct.dynamicCreativeId)
@@ -20354,6 +20470,11 @@ public class ReportStruct {
         followBizAllDedupPv,
         firOgConvAutoAcquisitionPv,
         secOgConvAutoAcquisitionPv,
+        scanCodePlaPv,
+        purchasePlaBkActive1dAmount,
+        bfAllDedupPv,
+        retentionDedupPv,
+        retentionAllDedupPv,
         adgroupId,
         adgroupName,
         dynamicCreativeId,

@@ -102,6 +102,9 @@ public class PageSpecWithoutWechatChannelsFeedPageSpec {
   @SerializedName("android_quick_app_spec")
   private AndroidQuickAppPageSpec androidQuickAppSpec = null;
 
+  @SerializedName("wechat_channels_shop_product_spec")
+  private ChannelsShopProductSpec wechatChannelsShopProductSpec = null;
+
   public PageSpecWithoutWechatChannelsFeedPageSpec androidAppSpec(
       AndroidAppPageSpec androidAppSpec) {
     this.androidAppSpec = androidAppSpec;
@@ -637,6 +640,27 @@ public class PageSpecWithoutWechatChannelsFeedPageSpec {
     this.androidQuickAppSpec = androidQuickAppSpec;
   }
 
+  public PageSpecWithoutWechatChannelsFeedPageSpec wechatChannelsShopProductSpec(
+      ChannelsShopProductSpec wechatChannelsShopProductSpec) {
+    this.wechatChannelsShopProductSpec = wechatChannelsShopProductSpec;
+    return this;
+  }
+
+  /**
+   * Get wechatChannelsShopProductSpec
+   *
+   * @return wechatChannelsShopProductSpec
+   */
+  @ApiModelProperty(value = "")
+  public ChannelsShopProductSpec getWechatChannelsShopProductSpec() {
+    return wechatChannelsShopProductSpec;
+  }
+
+  public void setWechatChannelsShopProductSpec(
+      ChannelsShopProductSpec wechatChannelsShopProductSpec) {
+    this.wechatChannelsShopProductSpec = wechatChannelsShopProductSpec;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -705,8 +729,10 @@ public class PageSpecWithoutWechatChannelsFeedPageSpec {
             this.wechatChannelsReserveSpec,
             pageSpecWithoutWechatChannelsFeedPageSpec.wechatChannelsReserveSpec)
         && Objects.equals(
-            this.androidQuickAppSpec,
-            pageSpecWithoutWechatChannelsFeedPageSpec.androidQuickAppSpec);
+            this.androidQuickAppSpec, pageSpecWithoutWechatChannelsFeedPageSpec.androidQuickAppSpec)
+        && Objects.equals(
+            this.wechatChannelsShopProductSpec,
+            pageSpecWithoutWechatChannelsFeedPageSpec.wechatChannelsShopProductSpec);
   }
 
   @Override
@@ -738,7 +764,8 @@ public class PageSpecWithoutWechatChannelsFeedPageSpec {
         h5Spec,
         wechatMiniGameSpec,
         wechatChannelsReserveSpec,
-        androidQuickAppSpec);
+        androidQuickAppSpec,
+        wechatChannelsShopProductSpec);
   }
 
   @Override

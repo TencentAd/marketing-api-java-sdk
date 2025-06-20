@@ -51,6 +51,9 @@ public class App {
   @Inject BidwordFlowApiContainer bidwordFlowApiContainer;
   @Inject BrandApiContainer brandApiContainer;
   @Inject BusinessPointApiContainer businessPointApiContainer;
+  @Inject BusinessUnitApiContainer businessUnitApiContainer;
+  @Inject BusinessUnitAccountApiContainer businessUnitAccountApiContainer;
+  @Inject BusinessUnitListApiContainer businessUnitListApiContainer;
   @Inject CategoriesApiContainer categoriesApiContainer;
   @Inject CategoriesAttributeApiContainer categoriesAttributeApiContainer;
   @Inject ChannelsCommentApiContainer channelsCommentApiContainer;
@@ -58,7 +61,6 @@ public class App {
   @Inject ChannelsLivenoticeinfoApiContainer channelsLivenoticeinfoApiContainer;
   @Inject ChannelsUserpageobjectsApiContainer channelsUserpageobjectsApiContainer;
   @Inject CommentListApiContainer commentListApiContainer;
-  @Inject ComponentDefaultSharingApiContainer componentDefaultSharingApiContainer;
   @Inject ComponentDetailApiContainer componentDetailApiContainer;
   @Inject ComponentElementUrgeReviewApiContainer componentElementUrgeReviewApiContainer;
   @Inject ComponentReviewResultsApiContainer componentReviewResultsApiContainer;
@@ -150,6 +152,11 @@ public class App {
   @Inject MuseAiUgcApiContainer museAiUgcApiContainer;
   @Inject OauthApiContainer oauthApiContainer;
   @Inject ObjectCommentFlagApiContainer objectCommentFlagApiContainer;
+  @Inject OfficialLandingPageApiContainer officialLandingPageApiContainer;
+  @Inject OfficialLandingPageComponentApiContainer officialLandingPageComponentApiContainer;
+  @Inject OfficialLandingPageDetailApiContainer officialLandingPageDetailApiContainer;
+  @Inject OfficialLandingPageListApiContainer officialLandingPageListApiContainer;
+  @Inject OfficialLandingPageSubmitApiContainer officialLandingPageSubmitApiContainer;
   @Inject OperationLogListApiContainer operationLogListApiContainer;
   @Inject OptimizationGoalPermissionsApiContainer optimizationGoalPermissionsApiContainer;
   @Inject OrganizationAccountRelationApiContainer organizationAccountRelationApiContainer;
@@ -377,6 +384,18 @@ public class App {
     return businessPointApiContainer;
   }
 
+  public BusinessUnitApiContainer businessUnit() {
+    return businessUnitApiContainer;
+  }
+
+  public BusinessUnitAccountApiContainer businessUnitAccount() {
+    return businessUnitAccountApiContainer;
+  }
+
+  public BusinessUnitListApiContainer businessUnitList() {
+    return businessUnitListApiContainer;
+  }
+
   public CategoriesApiContainer categories() {
     return categoriesApiContainer;
   }
@@ -403,10 +422,6 @@ public class App {
 
   public CommentListApiContainer commentList() {
     return commentListApiContainer;
-  }
-
-  public ComponentDefaultSharingApiContainer componentDefaultSharing() {
-    return componentDefaultSharingApiContainer;
   }
 
   public ComponentDetailApiContainer componentDetail() {
@@ -747,6 +762,26 @@ public class App {
 
   public ObjectCommentFlagApiContainer objectCommentFlag() {
     return objectCommentFlagApiContainer;
+  }
+
+  public OfficialLandingPageApiContainer officialLandingPage() {
+    return officialLandingPageApiContainer;
+  }
+
+  public OfficialLandingPageComponentApiContainer officialLandingPageComponent() {
+    return officialLandingPageComponentApiContainer;
+  }
+
+  public OfficialLandingPageDetailApiContainer officialLandingPageDetail() {
+    return officialLandingPageDetailApiContainer;
+  }
+
+  public OfficialLandingPageListApiContainer officialLandingPageList() {
+    return officialLandingPageListApiContainer;
+  }
+
+  public OfficialLandingPageSubmitApiContainer officialLandingPageSubmit() {
+    return officialLandingPageSubmitApiContainer;
   }
 
   public OperationLogListApiContainer operationLogList() {

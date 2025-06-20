@@ -51,6 +51,12 @@ public class SuccessPoiInfoStruct {
   @SerializedName("telephone")
   private String telephone = null;
 
+  @SerializedName("latitude")
+  private Double latitude = null;
+
+  @SerializedName("longitude")
+  private Double longitude = null;
+
   public SuccessPoiInfoStruct poiId(String poiId) {
     this.poiId = poiId;
     return this;
@@ -241,6 +247,44 @@ public class SuccessPoiInfoStruct {
     this.telephone = telephone;
   }
 
+  public SuccessPoiInfoStruct latitude(Double latitude) {
+    this.latitude = latitude;
+    return this;
+  }
+
+  /**
+   * Get latitude
+   *
+   * @return latitude
+   */
+  @ApiModelProperty(value = "")
+  public Double getLatitude() {
+    return latitude;
+  }
+
+  public void setLatitude(Double latitude) {
+    this.latitude = latitude;
+  }
+
+  public SuccessPoiInfoStruct longitude(Double longitude) {
+    this.longitude = longitude;
+    return this;
+  }
+
+  /**
+   * Get longitude
+   *
+   * @return longitude
+   */
+  @ApiModelProperty(value = "")
+  public Double getLongitude() {
+    return longitude;
+  }
+
+  public void setLongitude(Double longitude) {
+    this.longitude = longitude;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -259,7 +303,9 @@ public class SuccessPoiInfoStruct {
         && Objects.equals(this.localStoreBusinessArea, successPoiInfoStruct.localStoreBusinessArea)
         && Objects.equals(this.localStoreStreet, successPoiInfoStruct.localStoreStreet)
         && Objects.equals(this.localStoreDistrict, successPoiInfoStruct.localStoreDistrict)
-        && Objects.equals(this.telephone, successPoiInfoStruct.telephone);
+        && Objects.equals(this.telephone, successPoiInfoStruct.telephone)
+        && Objects.equals(this.latitude, successPoiInfoStruct.latitude)
+        && Objects.equals(this.longitude, successPoiInfoStruct.longitude);
   }
 
   @Override
@@ -274,7 +320,9 @@ public class SuccessPoiInfoStruct {
         localStoreBusinessArea,
         localStoreStreet,
         localStoreDistrict,
-        telephone);
+        telephone,
+        latitude,
+        longitude);
   }
 
   @Override

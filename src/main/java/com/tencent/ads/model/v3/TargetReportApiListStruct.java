@@ -2232,6 +2232,21 @@ public class TargetReportApiListStruct {
   @SerializedName("sec_og_conv_auto_acquisition_pv")
   private Long secOgConvAutoAcquisitionPv = null;
 
+  @SerializedName("scan_code_pla_pv")
+  private Long scanCodePlaPv = null;
+
+  @SerializedName("purchase_pla_bk_active_1d_amount")
+  private Long purchasePlaBkActive1dAmount = null;
+
+  @SerializedName("bf_all_dedup_pv")
+  private Long bfAllDedupPv = null;
+
+  @SerializedName("retention_dedup_pv")
+  private Long retentionDedupPv = null;
+
+  @SerializedName("retention_all_dedup_pv")
+  private Long retentionAllDedupPv = null;
+
   @SerializedName("age_id")
   private Long ageId = null;
 
@@ -16320,6 +16335,101 @@ public class TargetReportApiListStruct {
     this.secOgConvAutoAcquisitionPv = secOgConvAutoAcquisitionPv;
   }
 
+  public TargetReportApiListStruct scanCodePlaPv(Long scanCodePlaPv) {
+    this.scanCodePlaPv = scanCodePlaPv;
+    return this;
+  }
+
+  /**
+   * Get scanCodePlaPv
+   *
+   * @return scanCodePlaPv
+   */
+  @ApiModelProperty(value = "")
+  public Long getScanCodePlaPv() {
+    return scanCodePlaPv;
+  }
+
+  public void setScanCodePlaPv(Long scanCodePlaPv) {
+    this.scanCodePlaPv = scanCodePlaPv;
+  }
+
+  public TargetReportApiListStruct purchasePlaBkActive1dAmount(Long purchasePlaBkActive1dAmount) {
+    this.purchasePlaBkActive1dAmount = purchasePlaBkActive1dAmount;
+    return this;
+  }
+
+  /**
+   * Get purchasePlaBkActive1dAmount
+   *
+   * @return purchasePlaBkActive1dAmount
+   */
+  @ApiModelProperty(value = "")
+  public Long getPurchasePlaBkActive1dAmount() {
+    return purchasePlaBkActive1dAmount;
+  }
+
+  public void setPurchasePlaBkActive1dAmount(Long purchasePlaBkActive1dAmount) {
+    this.purchasePlaBkActive1dAmount = purchasePlaBkActive1dAmount;
+  }
+
+  public TargetReportApiListStruct bfAllDedupPv(Long bfAllDedupPv) {
+    this.bfAllDedupPv = bfAllDedupPv;
+    return this;
+  }
+
+  /**
+   * Get bfAllDedupPv
+   *
+   * @return bfAllDedupPv
+   */
+  @ApiModelProperty(value = "")
+  public Long getBfAllDedupPv() {
+    return bfAllDedupPv;
+  }
+
+  public void setBfAllDedupPv(Long bfAllDedupPv) {
+    this.bfAllDedupPv = bfAllDedupPv;
+  }
+
+  public TargetReportApiListStruct retentionDedupPv(Long retentionDedupPv) {
+    this.retentionDedupPv = retentionDedupPv;
+    return this;
+  }
+
+  /**
+   * Get retentionDedupPv
+   *
+   * @return retentionDedupPv
+   */
+  @ApiModelProperty(value = "")
+  public Long getRetentionDedupPv() {
+    return retentionDedupPv;
+  }
+
+  public void setRetentionDedupPv(Long retentionDedupPv) {
+    this.retentionDedupPv = retentionDedupPv;
+  }
+
+  public TargetReportApiListStruct retentionAllDedupPv(Long retentionAllDedupPv) {
+    this.retentionAllDedupPv = retentionAllDedupPv;
+    return this;
+  }
+
+  /**
+   * Get retentionAllDedupPv
+   *
+   * @return retentionAllDedupPv
+   */
+  @ApiModelProperty(value = "")
+  public Long getRetentionAllDedupPv() {
+    return retentionAllDedupPv;
+  }
+
+  public void setRetentionAllDedupPv(Long retentionAllDedupPv) {
+    this.retentionAllDedupPv = retentionAllDedupPv;
+  }
+
   public TargetReportApiListStruct ageId(Long ageId) {
     this.ageId = ageId;
     return this;
@@ -17558,6 +17668,12 @@ public class TargetReportApiListStruct {
             this.firOgConvAutoAcquisitionPv, targetReportApiListStruct.firOgConvAutoAcquisitionPv)
         && Objects.equals(
             this.secOgConvAutoAcquisitionPv, targetReportApiListStruct.secOgConvAutoAcquisitionPv)
+        && Objects.equals(this.scanCodePlaPv, targetReportApiListStruct.scanCodePlaPv)
+        && Objects.equals(
+            this.purchasePlaBkActive1dAmount, targetReportApiListStruct.purchasePlaBkActive1dAmount)
+        && Objects.equals(this.bfAllDedupPv, targetReportApiListStruct.bfAllDedupPv)
+        && Objects.equals(this.retentionDedupPv, targetReportApiListStruct.retentionDedupPv)
+        && Objects.equals(this.retentionAllDedupPv, targetReportApiListStruct.retentionAllDedupPv)
         && Objects.equals(this.ageId, targetReportApiListStruct.ageId)
         && Objects.equals(this.cityId, targetReportApiListStruct.cityId)
         && Objects.equals(this.regionId, targetReportApiListStruct.regionId)
@@ -18307,6 +18423,11 @@ public class TargetReportApiListStruct {
         followBizAllDedupPv,
         firOgConvAutoAcquisitionPv,
         secOgConvAutoAcquisitionPv,
+        scanCodePlaPv,
+        purchasePlaBkActive1dAmount,
+        bfAllDedupPv,
+        retentionDedupPv,
+        retentionAllDedupPv,
         ageId,
         cityId,
         regionId,

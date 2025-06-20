@@ -21,6 +21,9 @@ import com.tencent.ads.api.v3.AdvertiserDailyBudgetApi;
 import com.tencent.ads.exception.TencentAdsResponseException;
 import com.tencent.ads.model.v3.AdvertiserDailyBudgetGetResponse;
 import com.tencent.ads.model.v3.AdvertiserDailyBudgetGetResponseData;
+import com.tencent.ads.model.v3.AdvertiserDailyBudgetUpdateRequest;
+import com.tencent.ads.model.v3.AdvertiserDailyBudgetUpdateResponse;
+import com.tencent.ads.model.v3.AdvertiserDailyBudgetUpdateResponseData;
 import java.util.List;
 
 public class AdvertiserDailyBudgetApiContainer extends ApiContainer {
@@ -41,6 +44,22 @@ public class AdvertiserDailyBudgetApiContainer extends ApiContainer {
       throws ApiException, TencentAdsResponseException {
     AdvertiserDailyBudgetGetResponse resp =
         api.advertiserDailyBudgetGet(accountId, fields, headerPair);
+    handleResponse(gson.toJson(resp));
+    return resp.getData();
+  }
+
+  /**
+   * 更新竞价广告账户日预算
+   *
+   * @param data (required)
+   * @return AdvertiserDailyBudgetUpdateResponse
+   * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
+   *     response body
+   */
+  public AdvertiserDailyBudgetUpdateResponseData advertiserDailyBudgetUpdate(
+      AdvertiserDailyBudgetUpdateRequest data, Pair... headerPair)
+      throws ApiException, TencentAdsResponseException {
+    AdvertiserDailyBudgetUpdateResponse resp = api.advertiserDailyBudgetUpdate(data, headerPair);
     handleResponse(gson.toJson(resp));
     return resp.getData();
   }

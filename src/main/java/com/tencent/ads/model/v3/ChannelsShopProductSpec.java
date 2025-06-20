@@ -27,6 +27,12 @@ public class ChannelsShopProductSpec {
   @SerializedName("shop_id")
   private String shopId = null;
 
+  @SerializedName("catalog_id")
+  private String catalogId = null;
+
+  @SerializedName("set_id")
+  private String setId = null;
+
   public ChannelsShopProductSpec productId(Long productId) {
     this.productId = productId;
     return this;
@@ -65,6 +71,44 @@ public class ChannelsShopProductSpec {
     this.shopId = shopId;
   }
 
+  public ChannelsShopProductSpec catalogId(String catalogId) {
+    this.catalogId = catalogId;
+    return this;
+  }
+
+  /**
+   * Get catalogId
+   *
+   * @return catalogId
+   */
+  @ApiModelProperty(value = "")
+  public String getCatalogId() {
+    return catalogId;
+  }
+
+  public void setCatalogId(String catalogId) {
+    this.catalogId = catalogId;
+  }
+
+  public ChannelsShopProductSpec setId(String setId) {
+    this.setId = setId;
+    return this;
+  }
+
+  /**
+   * Get setId
+   *
+   * @return setId
+   */
+  @ApiModelProperty(value = "")
+  public String getSetId() {
+    return setId;
+  }
+
+  public void setSetId(String setId) {
+    this.setId = setId;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -75,12 +119,14 @@ public class ChannelsShopProductSpec {
     }
     ChannelsShopProductSpec channelsShopProductSpec = (ChannelsShopProductSpec) o;
     return Objects.equals(this.productId, channelsShopProductSpec.productId)
-        && Objects.equals(this.shopId, channelsShopProductSpec.shopId);
+        && Objects.equals(this.shopId, channelsShopProductSpec.shopId)
+        && Objects.equals(this.catalogId, channelsShopProductSpec.catalogId)
+        && Objects.equals(this.setId, channelsShopProductSpec.setId);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(productId, shopId);
+    return Objects.hash(productId, shopId, catalogId, setId);
   }
 
   @Override
