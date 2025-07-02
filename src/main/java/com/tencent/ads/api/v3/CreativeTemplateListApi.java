@@ -70,6 +70,7 @@ public class CreativeTemplateListApi {
    * @param displayScene (optional)
    * @param pcScene (optional)
    * @param adgroupId (optional)
+   * @param adgroupType (optional)
    * @param fields 返回参数的字段列表 (optional)
    * @param progressListener Progress listener
    * @param progressRequestListener Progress request listener
@@ -96,6 +97,7 @@ public class CreativeTemplateListApi {
       List<String> displayScene,
       List<String> pcScene,
       Long adgroupId,
+      String adgroupType,
       List<String> fields,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
@@ -155,6 +157,8 @@ public class CreativeTemplateListApi {
           apiClient.parameterToPairs("multi", "pc_scene", pcScene));
     if (adgroupId != null)
       localVarQueryParams.addAll(apiClient.parameterToPair("adgroup_id", adgroupId));
+    if (adgroupType != null)
+      localVarQueryParams.addAll(apiClient.parameterToPair("adgroup_type", adgroupType));
     if (fields != null)
       localVarCollectionQueryParams.addAll(apiClient.parameterToPairs("multi", "fields", fields));
 
@@ -228,6 +232,7 @@ public class CreativeTemplateListApi {
       List<String> displayScene,
       List<String> pcScene,
       Long adgroupId,
+      String adgroupType,
       List<String> fields,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
@@ -261,6 +266,7 @@ public class CreativeTemplateListApi {
             displayScene,
             pcScene,
             adgroupId,
+            adgroupType,
             fields,
             progressListener,
             progressRequestListener,
@@ -290,6 +296,7 @@ public class CreativeTemplateListApi {
    * @param displayScene (optional)
    * @param pcScene (optional)
    * @param adgroupId (optional)
+   * @param adgroupType (optional)
    * @param fields 返回参数的字段列表 (optional)
    * @return CreativeTemplateListGetResponse
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
@@ -315,6 +322,7 @@ public class CreativeTemplateListApi {
       List<String> displayScene,
       List<String> pcScene,
       Long adgroupId,
+      String adgroupType,
       List<String> fields,
       Pair... headerPair)
       throws ApiException {
@@ -339,6 +347,7 @@ public class CreativeTemplateListApi {
             displayScene,
             pcScene,
             adgroupId,
+            adgroupType,
             fields,
             headerPair);
     return resp.getData();
@@ -366,6 +375,7 @@ public class CreativeTemplateListApi {
    * @param displayScene (optional)
    * @param pcScene (optional)
    * @param adgroupId (optional)
+   * @param adgroupType (optional)
    * @param fields 返回参数的字段列表 (optional)
    * @return ApiResponse&lt;CreativeTemplateListGetResponse&gt;
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
@@ -391,6 +401,7 @@ public class CreativeTemplateListApi {
       List<String> displayScene,
       List<String> pcScene,
       Long adgroupId,
+      String adgroupType,
       List<String> fields,
       Pair... headerPair)
       throws ApiException {
@@ -415,6 +426,7 @@ public class CreativeTemplateListApi {
             displayScene,
             pcScene,
             adgroupId,
+            adgroupType,
             fields,
             null,
             null,
@@ -445,6 +457,7 @@ public class CreativeTemplateListApi {
    * @param displayScene (optional)
    * @param pcScene (optional)
    * @param adgroupId (optional)
+   * @param adgroupType (optional)
    * @param fields 返回参数的字段列表 (optional)
    * @param callback The callback to be executed when the API call finishes
    * @return The request call
@@ -470,6 +483,7 @@ public class CreativeTemplateListApi {
       List<String> displayScene,
       List<String> pcScene,
       Long adgroupId,
+      String adgroupType,
       List<String> fields,
       final ApiCallback<CreativeTemplateListGetResponse> callback,
       Pair... headerPair)
@@ -517,6 +531,7 @@ public class CreativeTemplateListApi {
             displayScene,
             pcScene,
             adgroupId,
+            adgroupType,
             fields,
             progressListener,
             progressRequestListener,

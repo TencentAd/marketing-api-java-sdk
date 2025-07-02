@@ -52,6 +52,8 @@ public class GetCreativeTemplateList {
 
   public Long adgroupId = null;
 
+  public String adgroupType = null;
+
   public List<String> fields = null;
 
   public void init() {
@@ -88,6 +90,7 @@ public class GetCreativeTemplateList {
                 displayScene,
                 pcScene,
                 adgroupId,
+                adgroupType,
                 fields);
     return response;
   }

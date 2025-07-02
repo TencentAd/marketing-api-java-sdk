@@ -53,6 +53,7 @@ public class CreativetoolsTextApi {
    *
    * @param accountId (required)
    * @param maxTextLength (required)
+   * @param adgroupId (optional)
    * @param keyword (optional)
    * @param filtering (optional)
    * @param number (optional)
@@ -69,6 +70,7 @@ public class CreativetoolsTextApi {
   public com.squareup.okhttp.Call creativetoolsTextGetCall(
       Long accountId,
       Long maxTextLength,
+      Long adgroupId,
       String keyword,
       List<Long> filtering,
       Long number,
@@ -93,6 +95,8 @@ public class CreativetoolsTextApi {
       localVarQueryParams.addAll(apiClient.parameterToPair("account_id", accountId));
     if (maxTextLength != null)
       localVarQueryParams.addAll(apiClient.parameterToPair("max_text_length", maxTextLength));
+    if (adgroupId != null)
+      localVarQueryParams.addAll(apiClient.parameterToPair("adgroup_id", adgroupId));
     if (keyword != null) localVarQueryParams.addAll(apiClient.parameterToPair("keyword", keyword));
     if (filtering != null)
       localVarCollectionQueryParams.addAll(
@@ -165,6 +169,7 @@ public class CreativetoolsTextApi {
   private com.squareup.okhttp.Call creativetoolsTextGetValidateBeforeCall(
       Long accountId,
       Long maxTextLength,
+      Long adgroupId,
       String keyword,
       List<Long> filtering,
       Long number,
@@ -194,6 +199,7 @@ public class CreativetoolsTextApi {
         creativetoolsTextGetCall(
             accountId,
             maxTextLength,
+            adgroupId,
             keyword,
             filtering,
             number,
@@ -213,6 +219,7 @@ public class CreativetoolsTextApi {
    *
    * @param accountId (required)
    * @param maxTextLength (required)
+   * @param adgroupId (optional)
    * @param keyword (optional)
    * @param filtering (optional)
    * @param number (optional)
@@ -228,6 +235,7 @@ public class CreativetoolsTextApi {
   public CreativetoolsTextGetResponse creativetoolsTextGet(
       Long accountId,
       Long maxTextLength,
+      Long adgroupId,
       String keyword,
       List<Long> filtering,
       Long number,
@@ -242,6 +250,7 @@ public class CreativetoolsTextApi {
         creativetoolsTextGetWithHttpInfo(
             accountId,
             maxTextLength,
+            adgroupId,
             keyword,
             filtering,
             number,
@@ -259,6 +268,7 @@ public class CreativetoolsTextApi {
    *
    * @param accountId (required)
    * @param maxTextLength (required)
+   * @param adgroupId (optional)
    * @param keyword (optional)
    * @param filtering (optional)
    * @param number (optional)
@@ -274,6 +284,7 @@ public class CreativetoolsTextApi {
   public ApiResponse<CreativetoolsTextGetResponse> creativetoolsTextGetWithHttpInfo(
       Long accountId,
       Long maxTextLength,
+      Long adgroupId,
       String keyword,
       List<Long> filtering,
       Long number,
@@ -288,6 +299,7 @@ public class CreativetoolsTextApi {
         creativetoolsTextGetValidateBeforeCall(
             accountId,
             maxTextLength,
+            adgroupId,
             keyword,
             filtering,
             number,
@@ -308,6 +320,7 @@ public class CreativetoolsTextApi {
    *
    * @param accountId (required)
    * @param maxTextLength (required)
+   * @param adgroupId (optional)
    * @param keyword (optional)
    * @param filtering (optional)
    * @param number (optional)
@@ -323,6 +336,7 @@ public class CreativetoolsTextApi {
   public com.squareup.okhttp.Call creativetoolsTextGetAsync(
       Long accountId,
       Long maxTextLength,
+      Long adgroupId,
       String keyword,
       List<Long> filtering,
       Long number,
@@ -360,6 +374,7 @@ public class CreativetoolsTextApi {
         creativetoolsTextGetValidateBeforeCall(
             accountId,
             maxTextLength,
+            adgroupId,
             keyword,
             filtering,
             number,

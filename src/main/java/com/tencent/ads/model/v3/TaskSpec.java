@@ -39,9 +39,6 @@ public class TaskSpec {
   private List<UpdateAdgroupDeepConversionWorthRateItem> updateAdgroupDeepConversionWorthRateSpec =
       null;
 
-  @SerializedName("targetings_share_spec")
-  private List<TargetingsShareItem> targetingsShareSpec = null;
-
   @SerializedName("update_adgroup_configured_status_spec")
   private List<UpdateAdgroupConfiguredStatusItem> updateAdgroupConfiguredStatusSpec = null;
 
@@ -111,6 +108,9 @@ public class TaskSpec {
 
   @SerializedName("update_component_sharing_spec")
   private List<UpdateComponentSharingItem> updateComponentSharingSpec = null;
+
+  @SerializedName("update_adgroup_smart_delivery_goal_spec")
+  private List<UpdateAdgroupSmartDeliveryGoalItem> updateAdgroupSmartDeliveryGoalSpec = null;
 
   public TaskSpec updateUnionPositionPackageSpec(
       List<UpdateUnionPositionPackageItem> updateUnionPositionPackageSpec) {
@@ -261,33 +261,6 @@ public class TaskSpec {
   public void setUpdateAdgroupDeepConversionWorthRateSpec(
       List<UpdateAdgroupDeepConversionWorthRateItem> updateAdgroupDeepConversionWorthRateSpec) {
     this.updateAdgroupDeepConversionWorthRateSpec = updateAdgroupDeepConversionWorthRateSpec;
-  }
-
-  public TaskSpec targetingsShareSpec(List<TargetingsShareItem> targetingsShareSpec) {
-    this.targetingsShareSpec = targetingsShareSpec;
-    return this;
-  }
-
-  public TaskSpec addTargetingsShareSpecItem(TargetingsShareItem targetingsShareSpecItem) {
-    if (this.targetingsShareSpec == null) {
-      this.targetingsShareSpec = new ArrayList<TargetingsShareItem>();
-    }
-    this.targetingsShareSpec.add(targetingsShareSpecItem);
-    return this;
-  }
-
-  /**
-   * Get targetingsShareSpec
-   *
-   * @return targetingsShareSpec
-   */
-  @ApiModelProperty(value = "")
-  public List<TargetingsShareItem> getTargetingsShareSpec() {
-    return targetingsShareSpec;
-  }
-
-  public void setTargetingsShareSpec(List<TargetingsShareItem> targetingsShareSpec) {
-    this.targetingsShareSpec = targetingsShareSpec;
   }
 
   public TaskSpec updateAdgroupConfiguredStatusSpec(
@@ -964,6 +937,36 @@ public class TaskSpec {
     this.updateComponentSharingSpec = updateComponentSharingSpec;
   }
 
+  public TaskSpec updateAdgroupSmartDeliveryGoalSpec(
+      List<UpdateAdgroupSmartDeliveryGoalItem> updateAdgroupSmartDeliveryGoalSpec) {
+    this.updateAdgroupSmartDeliveryGoalSpec = updateAdgroupSmartDeliveryGoalSpec;
+    return this;
+  }
+
+  public TaskSpec addUpdateAdgroupSmartDeliveryGoalSpecItem(
+      UpdateAdgroupSmartDeliveryGoalItem updateAdgroupSmartDeliveryGoalSpecItem) {
+    if (this.updateAdgroupSmartDeliveryGoalSpec == null) {
+      this.updateAdgroupSmartDeliveryGoalSpec = new ArrayList<UpdateAdgroupSmartDeliveryGoalItem>();
+    }
+    this.updateAdgroupSmartDeliveryGoalSpec.add(updateAdgroupSmartDeliveryGoalSpecItem);
+    return this;
+  }
+
+  /**
+   * Get updateAdgroupSmartDeliveryGoalSpec
+   *
+   * @return updateAdgroupSmartDeliveryGoalSpec
+   */
+  @ApiModelProperty(value = "")
+  public List<UpdateAdgroupSmartDeliveryGoalItem> getUpdateAdgroupSmartDeliveryGoalSpec() {
+    return updateAdgroupSmartDeliveryGoalSpec;
+  }
+
+  public void setUpdateAdgroupSmartDeliveryGoalSpec(
+      List<UpdateAdgroupSmartDeliveryGoalItem> updateAdgroupSmartDeliveryGoalSpec) {
+    this.updateAdgroupSmartDeliveryGoalSpec = updateAdgroupSmartDeliveryGoalSpec;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -984,7 +987,6 @@ public class TaskSpec {
         && Objects.equals(
             this.updateAdgroupDeepConversionWorthRateSpec,
             taskSpec.updateAdgroupDeepConversionWorthRateSpec)
-        && Objects.equals(this.targetingsShareSpec, taskSpec.targetingsShareSpec)
         && Objects.equals(
             this.updateAdgroupConfiguredStatusSpec, taskSpec.updateAdgroupConfiguredStatusSpec)
         && Objects.equals(this.updateAdgroupDailyBudgetSpec, taskSpec.updateAdgroupDailyBudgetSpec)
@@ -1022,7 +1024,9 @@ public class TaskSpec {
             this.updateAdgroupTargetingTaskSpec, taskSpec.updateAdgroupTargetingTaskSpec)
         && Objects.equals(this.updateAdgroupEcomPkamSpec, taskSpec.updateAdgroupEcomPkamSpec)
         && Objects.equals(this.updateAdgroupDeriveConfSpec, taskSpec.updateAdgroupDeriveConfSpec)
-        && Objects.equals(this.updateComponentSharingSpec, taskSpec.updateComponentSharingSpec);
+        && Objects.equals(this.updateComponentSharingSpec, taskSpec.updateComponentSharingSpec)
+        && Objects.equals(
+            this.updateAdgroupSmartDeliveryGoalSpec, taskSpec.updateAdgroupSmartDeliveryGoalSpec);
   }
 
   @Override
@@ -1033,7 +1037,6 @@ public class TaskSpec {
         updateDeepConversionBehaviorBidSpec,
         deleteAdgroupSpec,
         updateAdgroupDeepConversionWorthRateSpec,
-        targetingsShareSpec,
         updateAdgroupConfiguredStatusSpec,
         updateAdgroupDailyBudgetSpec,
         updateAdgroupAutoAcquisitionSpec,
@@ -1055,7 +1058,8 @@ public class TaskSpec {
         updateAdgroupTargetingTaskSpec,
         updateAdgroupEcomPkamSpec,
         updateAdgroupDeriveConfSpec,
-        updateComponentSharingSpec);
+        updateComponentSharingSpec,
+        updateAdgroupSmartDeliveryGoalSpec);
   }
 
   @Override

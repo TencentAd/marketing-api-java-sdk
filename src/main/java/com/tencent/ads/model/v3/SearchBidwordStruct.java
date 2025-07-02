@@ -39,6 +39,9 @@ public class SearchBidwordStruct {
   @SerializedName("configured_status")
   private BidwordPauseType configuredStatus = null;
 
+  @SerializedName("dynamic_creative_id")
+  private Long dynamicCreativeId = null;
+
   public SearchBidwordStruct adgroupId(Long adgroupId) {
     this.adgroupId = adgroupId;
     return this;
@@ -153,6 +156,25 @@ public class SearchBidwordStruct {
     this.configuredStatus = configuredStatus;
   }
 
+  public SearchBidwordStruct dynamicCreativeId(Long dynamicCreativeId) {
+    this.dynamicCreativeId = dynamicCreativeId;
+    return this;
+  }
+
+  /**
+   * Get dynamicCreativeId
+   *
+   * @return dynamicCreativeId
+   */
+  @ApiModelProperty(value = "")
+  public Long getDynamicCreativeId() {
+    return dynamicCreativeId;
+  }
+
+  public void setDynamicCreativeId(Long dynamicCreativeId) {
+    this.dynamicCreativeId = dynamicCreativeId;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -167,12 +189,20 @@ public class SearchBidwordStruct {
         && Objects.equals(this.bidPrice, searchBidwordStruct.bidPrice)
         && Objects.equals(this.useGroupPrice, searchBidwordStruct.useGroupPrice)
         && Objects.equals(this.matchType, searchBidwordStruct.matchType)
-        && Objects.equals(this.configuredStatus, searchBidwordStruct.configuredStatus);
+        && Objects.equals(this.configuredStatus, searchBidwordStruct.configuredStatus)
+        && Objects.equals(this.dynamicCreativeId, searchBidwordStruct.dynamicCreativeId);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(adgroupId, bidword, bidPrice, useGroupPrice, matchType, configuredStatus);
+    return Objects.hash(
+        adgroupId,
+        bidword,
+        bidPrice,
+        useGroupPrice,
+        matchType,
+        configuredStatus,
+        dynamicCreativeId);
   }
 
   @Override

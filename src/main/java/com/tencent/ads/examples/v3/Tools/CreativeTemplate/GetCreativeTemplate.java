@@ -36,6 +36,8 @@ public class GetCreativeTemplate {
 
   public Boolean useNewVersion = null;
 
+  public String adgroupType = null;
+
   public List<String> fields = null;
 
   public void init() {
@@ -64,6 +66,7 @@ public class GetCreativeTemplate {
                 dynamicCreativeType,
                 creativeTemplateId,
                 useNewVersion,
+                adgroupType,
                 fields);
     return response;
   }

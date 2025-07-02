@@ -19,30 +19,16 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-/** 操作符 */
-@JsonAdapter(FilterOperator.Adapter.class)
-public enum FilterOperator {
-  EQUALS("EQUALS"),
+/** 广告类型 */
+@JsonAdapter(AdgroupType.Adapter.class)
+public enum AdgroupType {
+  SEARCH("ADGROUP_TYPE_SEARCH"),
 
-  CONTAINS("CONTAINS"),
-
-  LESS_EQUALS("LESS_EQUALS"),
-
-  LESS("LESS"),
-
-  GREATER_EQUALS("GREATER_EQUALS"),
-
-  GREATER("GREATER"),
-
-  IN("IN"),
-
-  NOT_EQUALS("NOT_EQUALS"),
-
-  NOT_IN("NOT_IN");
+  NORMAL("ADGROUP_TYPE_NORMAL");
 
   private String value;
 
-  FilterOperator(String value) {
+  AdgroupType(String value) {
     this.value = value;
   }
 
@@ -55,8 +41,8 @@ public enum FilterOperator {
     return String.valueOf(value);
   }
 
-  public static FilterOperator fromValue(String text) {
-    for (FilterOperator b : FilterOperator.values()) {
+  public static AdgroupType fromValue(String text) {
+    for (AdgroupType b : AdgroupType.values()) {
       if (String.valueOf(b.value).equals(text)) {
         return b;
       }
@@ -64,17 +50,17 @@ public enum FilterOperator {
     return null;
   }
 
-  public static class Adapter extends TypeAdapter<FilterOperator> {
+  public static class Adapter extends TypeAdapter<AdgroupType> {
     @Override
-    public void write(final JsonWriter jsonWriter, final FilterOperator enumeration)
+    public void write(final JsonWriter jsonWriter, final AdgroupType enumeration)
         throws IOException {
       jsonWriter.value(enumeration.getValue());
     }
 
     @Override
-    public FilterOperator read(final JsonReader jsonReader) throws IOException {
+    public AdgroupType read(final JsonReader jsonReader) throws IOException {
       String value = jsonReader.nextString();
-      return FilterOperator.fromValue(String.valueOf(value));
+      return AdgroupType.fromValue(String.valueOf(value));
     }
   }
 }

@@ -32,6 +32,7 @@ public class CreativetoolsTextApiContainer extends ApiContainer {
    *
    * @param accountId (required)
    * @param maxTextLength (required)
+   * @param adgroupId (optional)
    * @param keyword (optional)
    * @param filtering (optional)
    * @param number (optional)
@@ -47,6 +48,7 @@ public class CreativetoolsTextApiContainer extends ApiContainer {
   public CreativetoolsTextGetResponseData creativetoolsTextGet(
       Long accountId,
       Long maxTextLength,
+      Long adgroupId,
       String keyword,
       List<Long> filtering,
       Long number,
@@ -61,6 +63,7 @@ public class CreativetoolsTextApiContainer extends ApiContainer {
         api.creativetoolsTextGet(
             accountId,
             maxTextLength,
+            adgroupId,
             keyword,
             filtering,
             number,

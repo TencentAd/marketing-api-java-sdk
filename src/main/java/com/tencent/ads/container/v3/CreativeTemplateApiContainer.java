@@ -41,6 +41,7 @@ public class CreativeTemplateApiContainer extends ApiContainer {
    * @param dynamicCreativeType (optional)
    * @param creativeTemplateId (optional)
    * @param useNewVersion (optional)
+   * @param adgroupType (optional)
    * @param fields 返回参数的字段列表 (optional)
    * @return CreativeTemplateGetResponse
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
@@ -58,6 +59,7 @@ public class CreativeTemplateApiContainer extends ApiContainer {
       String dynamicCreativeType,
       Long creativeTemplateId,
       Boolean useNewVersion,
+      String adgroupType,
       List<String> fields,
       Pair... headerPair)
       throws ApiException, TencentAdsResponseException {
@@ -74,6 +76,7 @@ public class CreativeTemplateApiContainer extends ApiContainer {
             dynamicCreativeType,
             creativeTemplateId,
             useNewVersion,
+            adgroupType,
             fields,
             headerPair);
     handleResponse(gson.toJson(resp));

@@ -19,16 +19,18 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-/** 分享类型 */
-@JsonAdapter(TargetingShareType.Adapter.class)
-public enum TargetingShareType {
-  BUSINESS("SHARE_TYPE_SAME_BUSINESS"),
+/** 自动投放自动续投状态 */
+@JsonAdapter(SimpleSwitchStatus.Adapter.class)
+public enum SimpleSwitchStatus {
+  UNKNOWN("STATUS_UNKNOWN"),
 
-  MDM("SHARE_TYPE_SAME_MDM");
+  ON("STATUS_ON"),
+
+  OFF("STATUS_OFF");
 
   private String value;
 
-  TargetingShareType(String value) {
+  SimpleSwitchStatus(String value) {
     this.value = value;
   }
 
@@ -41,8 +43,8 @@ public enum TargetingShareType {
     return String.valueOf(value);
   }
 
-  public static TargetingShareType fromValue(String text) {
-    for (TargetingShareType b : TargetingShareType.values()) {
+  public static SimpleSwitchStatus fromValue(String text) {
+    for (SimpleSwitchStatus b : SimpleSwitchStatus.values()) {
       if (String.valueOf(b.value).equals(text)) {
         return b;
       }
@@ -50,17 +52,17 @@ public enum TargetingShareType {
     return null;
   }
 
-  public static class Adapter extends TypeAdapter<TargetingShareType> {
+  public static class Adapter extends TypeAdapter<SimpleSwitchStatus> {
     @Override
-    public void write(final JsonWriter jsonWriter, final TargetingShareType enumeration)
+    public void write(final JsonWriter jsonWriter, final SimpleSwitchStatus enumeration)
         throws IOException {
       jsonWriter.value(enumeration.getValue());
     }
 
     @Override
-    public TargetingShareType read(final JsonReader jsonReader) throws IOException {
+    public SimpleSwitchStatus read(final JsonReader jsonReader) throws IOException {
       String value = jsonReader.nextString();
-      return TargetingShareType.fromValue(String.valueOf(value));
+      return SimpleSwitchStatus.fromValue(String.valueOf(value));
     }
   }
 }

@@ -18,6 +18,8 @@ public class GetCreativetoolsText {
 
   public Long maxTextLength = null;
 
+  public Long adgroupId = null;
+
   public String keyword = null;
 
   public List<Long> filtering = null;
@@ -51,6 +53,7 @@ public class GetCreativetoolsText {
             .creativetoolsTextGet(
                 accountId,
                 maxTextLength,
+                adgroupId,
                 keyword,
                 filtering,
                 number,

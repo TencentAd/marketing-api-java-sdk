@@ -45,6 +45,9 @@ public class BidwordRespStruct {
   @SerializedName("approval_status")
   private Long approvalStatus = null;
 
+  @SerializedName("dynamic_creative_id")
+  private Long dynamicCreativeId = null;
+
   public BidwordRespStruct index(Long index) {
     this.index = index;
     return this;
@@ -197,6 +200,25 @@ public class BidwordRespStruct {
     this.approvalStatus = approvalStatus;
   }
 
+  public BidwordRespStruct dynamicCreativeId(Long dynamicCreativeId) {
+    this.dynamicCreativeId = dynamicCreativeId;
+    return this;
+  }
+
+  /**
+   * Get dynamicCreativeId
+   *
+   * @return dynamicCreativeId
+   */
+  @ApiModelProperty(value = "")
+  public Long getDynamicCreativeId() {
+    return dynamicCreativeId;
+  }
+
+  public void setDynamicCreativeId(Long dynamicCreativeId) {
+    this.dynamicCreativeId = dynamicCreativeId;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -213,13 +235,22 @@ public class BidwordRespStruct {
         && Objects.equals(this.matchType, bidwordRespStruct.matchType)
         && Objects.equals(this.configuredStatus, bidwordRespStruct.configuredStatus)
         && Objects.equals(this.errorMsg, bidwordRespStruct.errorMsg)
-        && Objects.equals(this.approvalStatus, bidwordRespStruct.approvalStatus);
+        && Objects.equals(this.approvalStatus, bidwordRespStruct.approvalStatus)
+        && Objects.equals(this.dynamicCreativeId, bidwordRespStruct.dynamicCreativeId);
   }
 
   @Override
   public int hashCode() {
     return Objects.hash(
-        index, bidwordId, bidword, bidPrice, matchType, configuredStatus, errorMsg, approvalStatus);
+        index,
+        bidwordId,
+        bidword,
+        bidPrice,
+        matchType,
+        configuredStatus,
+        errorMsg,
+        approvalStatus,
+        dynamicCreativeId);
   }
 
   @Override

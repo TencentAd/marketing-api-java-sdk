@@ -45,6 +45,9 @@ public class BidwordUpdateStruct {
   @SerializedName("configured_status")
   private BidwordPauseType configuredStatus = null;
 
+  @SerializedName("dynamic_creative_id")
+  private Long dynamicCreativeId = null;
+
   public BidwordUpdateStruct bidwordId(Long bidwordId) {
     this.bidwordId = bidwordId;
     return this;
@@ -197,6 +200,25 @@ public class BidwordUpdateStruct {
     this.configuredStatus = configuredStatus;
   }
 
+  public BidwordUpdateStruct dynamicCreativeId(Long dynamicCreativeId) {
+    this.dynamicCreativeId = dynamicCreativeId;
+    return this;
+  }
+
+  /**
+   * Get dynamicCreativeId
+   *
+   * @return dynamicCreativeId
+   */
+  @ApiModelProperty(value = "")
+  public Long getDynamicCreativeId() {
+    return dynamicCreativeId;
+  }
+
+  public void setDynamicCreativeId(Long dynamicCreativeId) {
+    this.dynamicCreativeId = dynamicCreativeId;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -213,7 +235,8 @@ public class BidwordUpdateStruct {
         && Objects.equals(this.priceUpdateType, bidwordUpdateStruct.priceUpdateType)
         && Objects.equals(this.raisePrice, bidwordUpdateStruct.raisePrice)
         && Objects.equals(this.matchType, bidwordUpdateStruct.matchType)
-        && Objects.equals(this.configuredStatus, bidwordUpdateStruct.configuredStatus);
+        && Objects.equals(this.configuredStatus, bidwordUpdateStruct.configuredStatus)
+        && Objects.equals(this.dynamicCreativeId, bidwordUpdateStruct.dynamicCreativeId);
   }
 
   @Override
@@ -226,7 +249,8 @@ public class BidwordUpdateStruct {
         priceUpdateType,
         raisePrice,
         matchType,
-        configuredStatus);
+        configuredStatus,
+        dynamicCreativeId);
   }
 
   @Override

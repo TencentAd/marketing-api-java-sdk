@@ -53,6 +53,9 @@ public class BidwordUpdateStruct {
   @SerializedName("mobile_landing_page_info")
   private List<KeywordLandingPageInfo> mobileLandingPageInfo = null;
 
+  @SerializedName("dynamic_creative_id")
+  private Long dynamicCreativeId = null;
+
   public BidwordUpdateStruct bidwordId(Long bidwordId) {
     this.bidwordId = bidwordId;
     return this;
@@ -262,6 +265,25 @@ public class BidwordUpdateStruct {
     this.mobileLandingPageInfo = mobileLandingPageInfo;
   }
 
+  public BidwordUpdateStruct dynamicCreativeId(Long dynamicCreativeId) {
+    this.dynamicCreativeId = dynamicCreativeId;
+    return this;
+  }
+
+  /**
+   * Get dynamicCreativeId
+   *
+   * @return dynamicCreativeId
+   */
+  @ApiModelProperty(value = "")
+  public Long getDynamicCreativeId() {
+    return dynamicCreativeId;
+  }
+
+  public void setDynamicCreativeId(Long dynamicCreativeId) {
+    this.dynamicCreativeId = dynamicCreativeId;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -280,7 +302,8 @@ public class BidwordUpdateStruct {
         && Objects.equals(this.matchType, bidwordUpdateStruct.matchType)
         && Objects.equals(this.configuredStatus, bidwordUpdateStruct.configuredStatus)
         && Objects.equals(this.pcLandingPageInfo, bidwordUpdateStruct.pcLandingPageInfo)
-        && Objects.equals(this.mobileLandingPageInfo, bidwordUpdateStruct.mobileLandingPageInfo);
+        && Objects.equals(this.mobileLandingPageInfo, bidwordUpdateStruct.mobileLandingPageInfo)
+        && Objects.equals(this.dynamicCreativeId, bidwordUpdateStruct.dynamicCreativeId);
   }
 
   @Override
@@ -295,7 +318,8 @@ public class BidwordUpdateStruct {
         matchType,
         configuredStatus,
         pcLandingPageInfo,
-        mobileLandingPageInfo);
+        mobileLandingPageInfo,
+        dynamicCreativeId);
   }
 
   @Override
