@@ -27,6 +27,9 @@ public class LivingDescComponent {
   @SerializedName("value")
   private LivingDescStruct value = null;
 
+  @SerializedName("is_deleted")
+  private Boolean isDeleted = null;
+
   public LivingDescComponent componentId(Long componentId) {
     this.componentId = componentId;
     return this;
@@ -65,6 +68,25 @@ public class LivingDescComponent {
     this.value = value;
   }
 
+  public LivingDescComponent isDeleted(Boolean isDeleted) {
+    this.isDeleted = isDeleted;
+    return this;
+  }
+
+  /**
+   * Get isDeleted
+   *
+   * @return isDeleted
+   */
+  @ApiModelProperty(value = "")
+  public Boolean isIsDeleted() {
+    return isDeleted;
+  }
+
+  public void setIsDeleted(Boolean isDeleted) {
+    this.isDeleted = isDeleted;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -75,12 +97,13 @@ public class LivingDescComponent {
     }
     LivingDescComponent livingDescComponent = (LivingDescComponent) o;
     return Objects.equals(this.componentId, livingDescComponent.componentId)
-        && Objects.equals(this.value, livingDescComponent.value);
+        && Objects.equals(this.value, livingDescComponent.value)
+        && Objects.equals(this.isDeleted, livingDescComponent.isDeleted);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(componentId, value);
+    return Objects.hash(componentId, value, isDeleted);
   }
 
   @Override

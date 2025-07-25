@@ -24,6 +24,9 @@ public class MaterialLabelsAddRequest {
   @SerializedName("account_id")
   private Long accountId = null;
 
+  @SerializedName("organization_id")
+  private Long organizationId = null;
+
   @SerializedName("labels")
   private List<CreateLabel> labels = null;
 
@@ -44,6 +47,25 @@ public class MaterialLabelsAddRequest {
 
   public void setAccountId(Long accountId) {
     this.accountId = accountId;
+  }
+
+  public MaterialLabelsAddRequest organizationId(Long organizationId) {
+    this.organizationId = organizationId;
+    return this;
+  }
+
+  /**
+   * Get organizationId
+   *
+   * @return organizationId
+   */
+  @ApiModelProperty(value = "")
+  public Long getOrganizationId() {
+    return organizationId;
+  }
+
+  public void setOrganizationId(Long organizationId) {
+    this.organizationId = organizationId;
   }
 
   public MaterialLabelsAddRequest labels(List<CreateLabel> labels) {
@@ -83,12 +105,13 @@ public class MaterialLabelsAddRequest {
     }
     MaterialLabelsAddRequest materialLabelsAddRequest = (MaterialLabelsAddRequest) o;
     return Objects.equals(this.accountId, materialLabelsAddRequest.accountId)
+        && Objects.equals(this.organizationId, materialLabelsAddRequest.organizationId)
         && Objects.equals(this.labels, materialLabelsAddRequest.labels);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(accountId, labels);
+    return Objects.hash(accountId, organizationId, labels);
   }
 
   @Override

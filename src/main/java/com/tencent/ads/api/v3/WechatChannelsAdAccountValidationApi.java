@@ -54,6 +54,7 @@ public class WechatChannelsAdAccountValidationApi {
    * @param accountId (required)
    * @param nickname (optional)
    * @param headImageId (optional)
+   * @param wechatChannelsAccountId (optional)
    * @param fields 返回参数的字段列表 (optional)
    * @param progressListener Progress listener
    * @param progressRequestListener Progress request listener
@@ -64,6 +65,7 @@ public class WechatChannelsAdAccountValidationApi {
       Long accountId,
       String nickname,
       String headImageId,
+      String wechatChannelsAccountId,
       List<String> fields,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
@@ -83,6 +85,9 @@ public class WechatChannelsAdAccountValidationApi {
       localVarQueryParams.addAll(apiClient.parameterToPair("nickname", nickname));
     if (headImageId != null)
       localVarQueryParams.addAll(apiClient.parameterToPair("head_image_id", headImageId));
+    if (wechatChannelsAccountId != null)
+      localVarQueryParams.addAll(
+          apiClient.parameterToPair("wechat_channels_account_id", wechatChannelsAccountId));
     if (fields != null)
       localVarCollectionQueryParams.addAll(apiClient.parameterToPairs("multi", "fields", fields));
 
@@ -140,6 +145,7 @@ public class WechatChannelsAdAccountValidationApi {
       Long accountId,
       String nickname,
       String headImageId,
+      String wechatChannelsAccountId,
       List<String> fields,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
@@ -157,6 +163,7 @@ public class WechatChannelsAdAccountValidationApi {
             accountId,
             nickname,
             headImageId,
+            wechatChannelsAccountId,
             fields,
             progressListener,
             progressRequestListener,
@@ -170,17 +177,23 @@ public class WechatChannelsAdAccountValidationApi {
    * @param accountId (required)
    * @param nickname (optional)
    * @param headImageId (optional)
+   * @param wechatChannelsAccountId (optional)
    * @param fields 返回参数的字段列表 (optional)
    * @return WechatChannelsAdAccountValidationGetResponse
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
   public WechatChannelsAdAccountValidationGetResponse wechatChannelsAdAccountValidationGet(
-      Long accountId, String nickname, String headImageId, List<String> fields, Pair... headerPair)
+      Long accountId,
+      String nickname,
+      String headImageId,
+      String wechatChannelsAccountId,
+      List<String> fields,
+      Pair... headerPair)
       throws ApiException {
     ApiResponse<WechatChannelsAdAccountValidationGetResponse> resp =
         wechatChannelsAdAccountValidationGetWithHttpInfo(
-            accountId, nickname, headImageId, fields, headerPair);
+            accountId, nickname, headImageId, wechatChannelsAccountId, fields, headerPair);
     return resp.getData();
   }
 
@@ -190,6 +203,7 @@ public class WechatChannelsAdAccountValidationApi {
    * @param accountId (required)
    * @param nickname (optional)
    * @param headImageId (optional)
+   * @param wechatChannelsAccountId (optional)
    * @param fields 返回参数的字段列表 (optional)
    * @return ApiResponse&lt;WechatChannelsAdAccountValidationGetResponse&gt;
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
@@ -200,12 +214,20 @@ public class WechatChannelsAdAccountValidationApi {
           Long accountId,
           String nickname,
           String headImageId,
+          String wechatChannelsAccountId,
           List<String> fields,
           Pair... headerPair)
           throws ApiException {
     com.squareup.okhttp.Call call =
         wechatChannelsAdAccountValidationGetValidateBeforeCall(
-            accountId, nickname, headImageId, fields, null, null, headerPair);
+            accountId,
+            nickname,
+            headImageId,
+            wechatChannelsAccountId,
+            fields,
+            null,
+            null,
+            headerPair);
     Type localVarReturnType =
         new TypeToken<WechatChannelsAdAccountValidationGetResponse>() {}.getType();
     return apiClient.execute(call, localVarReturnType);
@@ -217,6 +239,7 @@ public class WechatChannelsAdAccountValidationApi {
    * @param accountId (required)
    * @param nickname (optional)
    * @param headImageId (optional)
+   * @param wechatChannelsAccountId (optional)
    * @param fields 返回参数的字段列表 (optional)
    * @param callback The callback to be executed when the API call finishes
    * @return The request call
@@ -226,6 +249,7 @@ public class WechatChannelsAdAccountValidationApi {
       Long accountId,
       String nickname,
       String headImageId,
+      String wechatChannelsAccountId,
       List<String> fields,
       final ApiCallback<WechatChannelsAdAccountValidationGetResponse> callback,
       Pair... headerPair)
@@ -257,6 +281,7 @@ public class WechatChannelsAdAccountValidationApi {
             accountId,
             nickname,
             headImageId,
+            wechatChannelsAccountId,
             fields,
             progressListener,
             progressRequestListener,

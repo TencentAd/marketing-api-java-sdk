@@ -27,6 +27,9 @@ public class LabelComponent {
   @SerializedName("value")
   private LabelStruct value = null;
 
+  @SerializedName("is_deleted")
+  private Boolean isDeleted = null;
+
   public LabelComponent componentId(Long componentId) {
     this.componentId = componentId;
     return this;
@@ -65,6 +68,25 @@ public class LabelComponent {
     this.value = value;
   }
 
+  public LabelComponent isDeleted(Boolean isDeleted) {
+    this.isDeleted = isDeleted;
+    return this;
+  }
+
+  /**
+   * Get isDeleted
+   *
+   * @return isDeleted
+   */
+  @ApiModelProperty(value = "")
+  public Boolean isIsDeleted() {
+    return isDeleted;
+  }
+
+  public void setIsDeleted(Boolean isDeleted) {
+    this.isDeleted = isDeleted;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -75,12 +97,13 @@ public class LabelComponent {
     }
     LabelComponent labelComponent = (LabelComponent) o;
     return Objects.equals(this.componentId, labelComponent.componentId)
-        && Objects.equals(this.value, labelComponent.value);
+        && Objects.equals(this.value, labelComponent.value)
+        && Objects.equals(this.isDeleted, labelComponent.isDeleted);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(componentId, value);
+    return Objects.hash(componentId, value, isDeleted);
   }
 
   @Override

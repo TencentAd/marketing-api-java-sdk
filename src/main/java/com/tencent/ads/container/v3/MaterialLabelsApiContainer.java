@@ -90,7 +90,8 @@ public class MaterialLabelsApiContainer extends ApiContainer {
   /**
    * 获取素材标签列表
    *
-   * @param accountId (required)
+   * @param accountId (optional)
+   * @param organizationId account_id或organization_id传其中一个即可 (optional)
    * @param labelId (optional)
    * @param labelName (optional)
    * @param firstLabelLevelIdList 一级标签类目ID列表 (optional)
@@ -107,6 +108,7 @@ public class MaterialLabelsApiContainer extends ApiContainer {
    */
   public MaterialLabelsGetResponseData materialLabelsGet(
       Long accountId,
+      Long organizationId,
       Long labelId,
       String labelName,
       List<Long> firstLabelLevelIdList,
@@ -122,6 +124,7 @@ public class MaterialLabelsApiContainer extends ApiContainer {
     MaterialLabelsGetResponse resp =
         api.materialLabelsGet(
             accountId,
+            organizationId,
             labelId,
             labelName,
             firstLabelLevelIdList,

@@ -4,6 +4,7 @@ public class ApiContextConfig {
 
   private String accessToken;
   private boolean isDebug;
+  private String userToken;
 
   public ApiContextConfig() {}
 
@@ -26,6 +27,11 @@ public class ApiContextConfig {
     return this;
   }
 
+  public ApiContextConfig userToken(String userToken) {
+    this.userToken = userToken;
+    return this;
+  }
+
   public String getAccessToken() {
     return accessToken;
   }
@@ -40,5 +46,13 @@ public class ApiContextConfig {
 
   public void setDebug(boolean debug) {
     isDebug = debug;
+  }
+
+  public String getUserToken() {
+    return userToken;
+  }
+
+  public void setUserToken(String userToken) {
+    this.userToken = userToken;
   }
 }

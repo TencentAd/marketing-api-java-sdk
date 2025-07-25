@@ -27,6 +27,9 @@ public class BarrageComponent {
   @SerializedName("value")
   private BarrageStruct value = null;
 
+  @SerializedName("is_deleted")
+  private Boolean isDeleted = null;
+
   public BarrageComponent componentId(Long componentId) {
     this.componentId = componentId;
     return this;
@@ -65,6 +68,25 @@ public class BarrageComponent {
     this.value = value;
   }
 
+  public BarrageComponent isDeleted(Boolean isDeleted) {
+    this.isDeleted = isDeleted;
+    return this;
+  }
+
+  /**
+   * Get isDeleted
+   *
+   * @return isDeleted
+   */
+  @ApiModelProperty(value = "")
+  public Boolean isIsDeleted() {
+    return isDeleted;
+  }
+
+  public void setIsDeleted(Boolean isDeleted) {
+    this.isDeleted = isDeleted;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -75,12 +97,13 @@ public class BarrageComponent {
     }
     BarrageComponent barrageComponent = (BarrageComponent) o;
     return Objects.equals(this.componentId, barrageComponent.componentId)
-        && Objects.equals(this.value, barrageComponent.value);
+        && Objects.equals(this.value, barrageComponent.value)
+        && Objects.equals(this.isDeleted, barrageComponent.isDeleted);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(componentId, value);
+    return Objects.hash(componentId, value, isDeleted);
   }
 
   @Override

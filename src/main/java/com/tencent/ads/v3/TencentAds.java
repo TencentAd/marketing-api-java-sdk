@@ -14,7 +14,7 @@ public class TencentAds extends CustomApp {
   private static final String SCHEMA = "https";
   private static final String API_VERSION = "v3.0";
   private static String basePath = "https://api.e.qq.com/v3.0";
-  private static final String SDK_VERSION = "1.1.98";
+  private static final String SDK_VERSION = "1.1.99";
 
   private TencentAds() {}
 
@@ -38,6 +38,12 @@ public class TencentAds extends CustomApp {
       ApiKeyAuth accessToken = (ApiKeyAuth) defaultApiClient.getAuthentication("accessToken");
       accessToken.setApiKey(apiContextConfig.getAccessToken());
     }
+
+    if (apiContextConfig.getUserToken() != null && !apiContextConfig.getUserToken().equals("")) {
+      ApiKeyAuth userToken = (ApiKeyAuth) defaultApiClient.getAuthentication("userToken");
+      defaultApiClient.initUserTokenAuthentications(apiContextConfig.getUserToken());
+    }
+
     defaultApiClient.setDebugging(apiContextConfig.isDebug());
     this.addDefaultHeader();
     this.setHost(basePath);

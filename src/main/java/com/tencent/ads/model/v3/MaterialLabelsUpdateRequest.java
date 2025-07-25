@@ -22,6 +22,9 @@ public class MaterialLabelsUpdateRequest {
   @SerializedName("account_id")
   private Long accountId = null;
 
+  @SerializedName("organization_id")
+  private Long organizationId = null;
+
   @SerializedName("label_id")
   private Long labelId = null;
 
@@ -51,6 +54,25 @@ public class MaterialLabelsUpdateRequest {
 
   public void setAccountId(Long accountId) {
     this.accountId = accountId;
+  }
+
+  public MaterialLabelsUpdateRequest organizationId(Long organizationId) {
+    this.organizationId = organizationId;
+    return this;
+  }
+
+  /**
+   * Get organizationId
+   *
+   * @return organizationId
+   */
+  @ApiModelProperty(value = "")
+  public Long getOrganizationId() {
+    return organizationId;
+  }
+
+  public void setOrganizationId(Long organizationId) {
+    this.organizationId = organizationId;
   }
 
   public MaterialLabelsUpdateRequest labelId(Long labelId) {
@@ -139,6 +161,7 @@ public class MaterialLabelsUpdateRequest {
     }
     MaterialLabelsUpdateRequest materialLabelsUpdateRequest = (MaterialLabelsUpdateRequest) o;
     return Objects.equals(this.accountId, materialLabelsUpdateRequest.accountId)
+        && Objects.equals(this.organizationId, materialLabelsUpdateRequest.organizationId)
         && Objects.equals(this.labelId, materialLabelsUpdateRequest.labelId)
         && Objects.equals(this.labelName, materialLabelsUpdateRequest.labelName)
         && Objects.equals(this.firstLabelLevelName, materialLabelsUpdateRequest.firstLabelLevelName)
@@ -148,7 +171,8 @@ public class MaterialLabelsUpdateRequest {
 
   @Override
   public int hashCode() {
-    return Objects.hash(accountId, labelId, labelName, firstLabelLevelName, secondLabelLevelName);
+    return Objects.hash(
+        accountId, organizationId, labelId, labelName, firstLabelLevelName, secondLabelLevelName);
   }
 
   @Override

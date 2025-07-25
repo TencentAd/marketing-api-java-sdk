@@ -24,6 +24,9 @@ public class MaterialLabelsBindRequest {
   @SerializedName("account_id")
   private Long accountId = null;
 
+  @SerializedName("organization_id")
+  private Long organizationId = null;
+
   @SerializedName("image_id_list")
   private List<String> imageIdList = null;
 
@@ -56,6 +59,25 @@ public class MaterialLabelsBindRequest {
 
   public void setAccountId(Long accountId) {
     this.accountId = accountId;
+  }
+
+  public MaterialLabelsBindRequest organizationId(Long organizationId) {
+    this.organizationId = organizationId;
+    return this;
+  }
+
+  /**
+   * Get organizationId
+   *
+   * @return organizationId
+   */
+  @ApiModelProperty(value = "")
+  public Long getOrganizationId() {
+    return organizationId;
+  }
+
+  public void setOrganizationId(Long organizationId) {
+    this.organizationId = organizationId;
   }
 
   public MaterialLabelsBindRequest imageIdList(List<String> imageIdList) {
@@ -187,6 +209,7 @@ public class MaterialLabelsBindRequest {
     }
     MaterialLabelsBindRequest materialLabelsBindRequest = (MaterialLabelsBindRequest) o;
     return Objects.equals(this.accountId, materialLabelsBindRequest.accountId)
+        && Objects.equals(this.organizationId, materialLabelsBindRequest.organizationId)
         && Objects.equals(this.imageIdList, materialLabelsBindRequest.imageIdList)
         && Objects.equals(this.mediaIdList, materialLabelsBindRequest.mediaIdList)
         && Objects.equals(this.labelIdList, materialLabelsBindRequest.labelIdList)
@@ -197,7 +220,13 @@ public class MaterialLabelsBindRequest {
   @Override
   public int hashCode() {
     return Objects.hash(
-        accountId, imageIdList, mediaIdList, labelIdList, bindingType, businessScenario);
+        accountId,
+        organizationId,
+        imageIdList,
+        mediaIdList,
+        labelIdList,
+        bindingType,
+        businessScenario);
   }
 
   @Override

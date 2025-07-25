@@ -20,6 +20,8 @@ public class GetWechatChannelsAdAccountValidation {
 
   public String headImageId = null;
 
+  public String wechatChannelsAccountId = null;
+
   public List<String> fields = null;
 
   public void init() {
@@ -37,7 +39,8 @@ public class GetWechatChannelsAdAccountValidation {
     WechatChannelsAdAccountValidationGetResponseData response =
         tencentAds
             .wechatChannelsAdAccountValidation()
-            .wechatChannelsAdAccountValidationGet(accountId, nickname, headImageId, fields);
+            .wechatChannelsAdAccountValidationGet(
+                accountId, nickname, headImageId, wechatChannelsAccountId, fields);
     return response;
   }
 

@@ -27,6 +27,9 @@ public class ChannelsUserpageobjectsGetResponseData {
   @SerializedName("last_buffer")
   private String lastBuffer = null;
 
+  @SerializedName("continue_flag")
+  private Long continueFlag = null;
+
   public ChannelsUserpageobjectsGetResponseData objects(List<FinderObject> objects) {
     this.objects = objects;
     return this;
@@ -73,6 +76,25 @@ public class ChannelsUserpageobjectsGetResponseData {
     this.lastBuffer = lastBuffer;
   }
 
+  public ChannelsUserpageobjectsGetResponseData continueFlag(Long continueFlag) {
+    this.continueFlag = continueFlag;
+    return this;
+  }
+
+  /**
+   * Get continueFlag
+   *
+   * @return continueFlag
+   */
+  @ApiModelProperty(value = "")
+  public Long getContinueFlag() {
+    return continueFlag;
+  }
+
+  public void setContinueFlag(Long continueFlag) {
+    this.continueFlag = continueFlag;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -84,12 +106,13 @@ public class ChannelsUserpageobjectsGetResponseData {
     ChannelsUserpageobjectsGetResponseData channelsUserpageobjectsGetResponseData =
         (ChannelsUserpageobjectsGetResponseData) o;
     return Objects.equals(this.objects, channelsUserpageobjectsGetResponseData.objects)
-        && Objects.equals(this.lastBuffer, channelsUserpageobjectsGetResponseData.lastBuffer);
+        && Objects.equals(this.lastBuffer, channelsUserpageobjectsGetResponseData.lastBuffer)
+        && Objects.equals(this.continueFlag, channelsUserpageobjectsGetResponseData.continueFlag);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(objects, lastBuffer);
+    return Objects.hash(objects, lastBuffer, continueFlag);
   }
 
   @Override

@@ -33,17 +33,23 @@ public class WechatChannelsAdAccountValidationApiContainer extends ApiContainer 
    * @param accountId (required)
    * @param nickname (optional)
    * @param headImageId (optional)
+   * @param wechatChannelsAccountId (optional)
    * @param fields 返回参数的字段列表 (optional)
    * @return WechatChannelsAdAccountValidationGetResponse
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
   public WechatChannelsAdAccountValidationGetResponseData wechatChannelsAdAccountValidationGet(
-      Long accountId, String nickname, String headImageId, List<String> fields, Pair... headerPair)
+      Long accountId,
+      String nickname,
+      String headImageId,
+      String wechatChannelsAccountId,
+      List<String> fields,
+      Pair... headerPair)
       throws ApiException, TencentAdsResponseException {
     WechatChannelsAdAccountValidationGetResponse resp =
         api.wechatChannelsAdAccountValidationGet(
-            accountId, nickname, headImageId, fields, headerPair);
+            accountId, nickname, headImageId, wechatChannelsAccountId, fields, headerPair);
     handleResponse(gson.toJson(resp));
     return resp.getData();
   }

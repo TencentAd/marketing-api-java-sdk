@@ -20,6 +20,8 @@ public class GetOrganizationAccountRelation {
 
   public String advertiserType = null;
 
+  public Long businessUnitId = null;
+
   public Long cursor = null;
 
   public Long page = null;
@@ -44,7 +46,14 @@ public class GetOrganizationAccountRelation {
         tencentAds
             .organizationAccountRelation()
             .organizationAccountRelationGet(
-                paginationMode, accountId, advertiserType, cursor, page, pageSize, fields);
+                paginationMode,
+                accountId,
+                advertiserType,
+                businessUnitId,
+                cursor,
+                page,
+                pageSize,
+                fields);
     return response;
   }
 

@@ -27,6 +27,9 @@ public class ImageShowcaseComponent {
   @SerializedName("value")
   private ImageShowcaseStruct value = null;
 
+  @SerializedName("is_deleted")
+  private Boolean isDeleted = null;
+
   public ImageShowcaseComponent componentId(Long componentId) {
     this.componentId = componentId;
     return this;
@@ -65,6 +68,25 @@ public class ImageShowcaseComponent {
     this.value = value;
   }
 
+  public ImageShowcaseComponent isDeleted(Boolean isDeleted) {
+    this.isDeleted = isDeleted;
+    return this;
+  }
+
+  /**
+   * Get isDeleted
+   *
+   * @return isDeleted
+   */
+  @ApiModelProperty(value = "")
+  public Boolean isIsDeleted() {
+    return isDeleted;
+  }
+
+  public void setIsDeleted(Boolean isDeleted) {
+    this.isDeleted = isDeleted;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -75,12 +97,13 @@ public class ImageShowcaseComponent {
     }
     ImageShowcaseComponent imageShowcaseComponent = (ImageShowcaseComponent) o;
     return Objects.equals(this.componentId, imageShowcaseComponent.componentId)
-        && Objects.equals(this.value, imageShowcaseComponent.value);
+        && Objects.equals(this.value, imageShowcaseComponent.value)
+        && Objects.equals(this.isDeleted, imageShowcaseComponent.isDeleted);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(componentId, value);
+    return Objects.hash(componentId, value, isDeleted);
   }
 
   @Override

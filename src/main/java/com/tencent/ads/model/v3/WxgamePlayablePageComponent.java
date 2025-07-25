@@ -27,6 +27,9 @@ public class WxgamePlayablePageComponent {
   @SerializedName("value")
   private WxgamePlayablePageStruct value = null;
 
+  @SerializedName("is_deleted")
+  private Boolean isDeleted = null;
+
   public WxgamePlayablePageComponent componentId(Long componentId) {
     this.componentId = componentId;
     return this;
@@ -65,6 +68,25 @@ public class WxgamePlayablePageComponent {
     this.value = value;
   }
 
+  public WxgamePlayablePageComponent isDeleted(Boolean isDeleted) {
+    this.isDeleted = isDeleted;
+    return this;
+  }
+
+  /**
+   * Get isDeleted
+   *
+   * @return isDeleted
+   */
+  @ApiModelProperty(value = "")
+  public Boolean isIsDeleted() {
+    return isDeleted;
+  }
+
+  public void setIsDeleted(Boolean isDeleted) {
+    this.isDeleted = isDeleted;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -75,12 +97,13 @@ public class WxgamePlayablePageComponent {
     }
     WxgamePlayablePageComponent wxgamePlayablePageComponent = (WxgamePlayablePageComponent) o;
     return Objects.equals(this.componentId, wxgamePlayablePageComponent.componentId)
-        && Objects.equals(this.value, wxgamePlayablePageComponent.value);
+        && Objects.equals(this.value, wxgamePlayablePageComponent.value)
+        && Objects.equals(this.isDeleted, wxgamePlayablePageComponent.isDeleted);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(componentId, value);
+    return Objects.hash(componentId, value, isDeleted);
   }
 
   @Override

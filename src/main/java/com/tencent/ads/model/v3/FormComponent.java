@@ -27,6 +27,9 @@ public class FormComponent {
   @SerializedName("value")
   private FormStruct value = null;
 
+  @SerializedName("is_deleted")
+  private Boolean isDeleted = null;
+
   public FormComponent componentId(Long componentId) {
     this.componentId = componentId;
     return this;
@@ -65,6 +68,25 @@ public class FormComponent {
     this.value = value;
   }
 
+  public FormComponent isDeleted(Boolean isDeleted) {
+    this.isDeleted = isDeleted;
+    return this;
+  }
+
+  /**
+   * Get isDeleted
+   *
+   * @return isDeleted
+   */
+  @ApiModelProperty(value = "")
+  public Boolean isIsDeleted() {
+    return isDeleted;
+  }
+
+  public void setIsDeleted(Boolean isDeleted) {
+    this.isDeleted = isDeleted;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -75,12 +97,13 @@ public class FormComponent {
     }
     FormComponent formComponent = (FormComponent) o;
     return Objects.equals(this.componentId, formComponent.componentId)
-        && Objects.equals(this.value, formComponent.value);
+        && Objects.equals(this.value, formComponent.value)
+        && Objects.equals(this.isDeleted, formComponent.isDeleted);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(componentId, value);
+    return Objects.hash(componentId, value, isDeleted);
   }
 
   @Override

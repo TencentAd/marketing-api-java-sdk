@@ -5,7 +5,7 @@
     <artifactId>marketing-api-java-sdk</artifactId>
     <packaging>jar</packaging>
     <name>com.tencent.ads</name>
-    <version>1.1.98</version>
+    <version>1.1.99</version>
     <url>https://developers.e.qq.com/docs/start</url>
     <description>Tencent Ads Mareting-Api Java Sdk</description>
 
@@ -169,14 +169,13 @@
             <build>
                 <plugins>
                     <plugin>
-                        <groupId>org.sonatype.plugins</groupId>
-                        <artifactId>nexus-staging-maven-plugin</artifactId>
-                        <version>1.6.7</version>
+                        <groupId>org.sonatype.central</groupId>
+                        <artifactId>central-publishing-maven-plugin</artifactId>
+                        <version>0.8.0</version>
                         <extensions>true</extensions>
                         <configuration>
-                            <serverId>ossrh</serverId>
-                            <nexusUrl>https://oss.sonatype.org/</nexusUrl>
-                            <autoReleaseAfterClose>true</autoReleaseAfterClose>
+                            <publishingServerId>central</publishingServerId>
+                            <autoPublish>true</autoPublish>
                         </configuration>
                     </plugin>
                     <plugin>

@@ -19,28 +19,16 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-/** 通配符类型 */
-@JsonAdapter(WildcardType.Adapter.class)
-public enum WildcardType {
-  UNKNOWN("UNKNOWN"),
+/** 组件删除策略 */
+@JsonAdapter(DeleteStrategy.Adapter.class)
+public enum DeleteStrategy {
+  FORCE("DELETE_STRATEGY_FORCE"),
 
-  LANDING_PAGE("LANDING_PAGE"),
-
-  PRODUCT_INDEX("PRODUCT_INDEX"),
-
-  PRODUCT_RECOMMEND("PRODUCT_RECOMMEND"),
-
-  USER_IDENTIFIER("USER_IDENTIFIER"),
-
-  DEEP_LINK("DEEP_LINK"),
-
-  UNIVERSAL_LINK("UNIVERSAL_LINK"),
-
-  QUERY_WORD("QUERY_WORD");
+  RESTRICTED("DELETE_STRATEGY_RESTRICTED");
 
   private String value;
 
-  WildcardType(String value) {
+  DeleteStrategy(String value) {
     this.value = value;
   }
 
@@ -53,8 +41,8 @@ public enum WildcardType {
     return String.valueOf(value);
   }
 
-  public static WildcardType fromValue(String text) {
-    for (WildcardType b : WildcardType.values()) {
+  public static DeleteStrategy fromValue(String text) {
+    for (DeleteStrategy b : DeleteStrategy.values()) {
       if (String.valueOf(b.value).equals(text)) {
         return b;
       }
@@ -62,17 +50,17 @@ public enum WildcardType {
     return null;
   }
 
-  public static class Adapter extends TypeAdapter<WildcardType> {
+  public static class Adapter extends TypeAdapter<DeleteStrategy> {
     @Override
-    public void write(final JsonWriter jsonWriter, final WildcardType enumeration)
+    public void write(final JsonWriter jsonWriter, final DeleteStrategy enumeration)
         throws IOException {
       jsonWriter.value(enumeration.getValue());
     }
 
     @Override
-    public WildcardType read(final JsonReader jsonReader) throws IOException {
+    public DeleteStrategy read(final JsonReader jsonReader) throws IOException {
       String value = jsonReader.nextString();
-      return WildcardType.fromValue(String.valueOf(value));
+      return DeleteStrategy.fromValue(String.valueOf(value));
     }
   }
 }

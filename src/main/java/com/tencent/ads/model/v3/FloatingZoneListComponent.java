@@ -27,6 +27,9 @@ public class FloatingZoneListComponent {
   @SerializedName("value")
   private FloatingZoneListStruct value = null;
 
+  @SerializedName("is_deleted")
+  private Boolean isDeleted = null;
+
   public FloatingZoneListComponent componentId(Long componentId) {
     this.componentId = componentId;
     return this;
@@ -65,6 +68,25 @@ public class FloatingZoneListComponent {
     this.value = value;
   }
 
+  public FloatingZoneListComponent isDeleted(Boolean isDeleted) {
+    this.isDeleted = isDeleted;
+    return this;
+  }
+
+  /**
+   * Get isDeleted
+   *
+   * @return isDeleted
+   */
+  @ApiModelProperty(value = "")
+  public Boolean isIsDeleted() {
+    return isDeleted;
+  }
+
+  public void setIsDeleted(Boolean isDeleted) {
+    this.isDeleted = isDeleted;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -75,12 +97,13 @@ public class FloatingZoneListComponent {
     }
     FloatingZoneListComponent floatingZoneListComponent = (FloatingZoneListComponent) o;
     return Objects.equals(this.componentId, floatingZoneListComponent.componentId)
-        && Objects.equals(this.value, floatingZoneListComponent.value);
+        && Objects.equals(this.value, floatingZoneListComponent.value)
+        && Objects.equals(this.isDeleted, floatingZoneListComponent.isDeleted);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(componentId, value);
+    return Objects.hash(componentId, value, isDeleted);
   }
 
   @Override

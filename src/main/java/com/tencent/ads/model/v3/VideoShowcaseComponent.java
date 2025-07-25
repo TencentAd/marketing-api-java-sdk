@@ -27,6 +27,9 @@ public class VideoShowcaseComponent {
   @SerializedName("value")
   private VideoShowcaseStruct value = null;
 
+  @SerializedName("is_deleted")
+  private Boolean isDeleted = null;
+
   public VideoShowcaseComponent componentId(Long componentId) {
     this.componentId = componentId;
     return this;
@@ -65,6 +68,25 @@ public class VideoShowcaseComponent {
     this.value = value;
   }
 
+  public VideoShowcaseComponent isDeleted(Boolean isDeleted) {
+    this.isDeleted = isDeleted;
+    return this;
+  }
+
+  /**
+   * Get isDeleted
+   *
+   * @return isDeleted
+   */
+  @ApiModelProperty(value = "")
+  public Boolean isIsDeleted() {
+    return isDeleted;
+  }
+
+  public void setIsDeleted(Boolean isDeleted) {
+    this.isDeleted = isDeleted;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -75,12 +97,13 @@ public class VideoShowcaseComponent {
     }
     VideoShowcaseComponent videoShowcaseComponent = (VideoShowcaseComponent) o;
     return Objects.equals(this.componentId, videoShowcaseComponent.componentId)
-        && Objects.equals(this.value, videoShowcaseComponent.value);
+        && Objects.equals(this.value, videoShowcaseComponent.value)
+        && Objects.equals(this.isDeleted, videoShowcaseComponent.isDeleted);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(componentId, value);
+    return Objects.hash(componentId, value, isDeleted);
   }
 
   @Override

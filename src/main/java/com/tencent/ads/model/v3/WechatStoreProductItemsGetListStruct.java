@@ -101,6 +101,9 @@ public class WechatStoreProductItemsGetListStruct {
   @SerializedName("wx_store_product_operate_type")
   private Long wxStoreProductOperateType = null;
 
+  @SerializedName("sku_stock_status")
+  private Long skuStockStatus = null;
+
   public WechatStoreProductItemsGetListStruct productOuterId(String productOuterId) {
     this.productOuterId = productOuterId;
     return this;
@@ -639,6 +642,25 @@ public class WechatStoreProductItemsGetListStruct {
     this.wxStoreProductOperateType = wxStoreProductOperateType;
   }
 
+  public WechatStoreProductItemsGetListStruct skuStockStatus(Long skuStockStatus) {
+    this.skuStockStatus = skuStockStatus;
+    return this;
+  }
+
+  /**
+   * Get skuStockStatus
+   *
+   * @return skuStockStatus
+   */
+  @ApiModelProperty(value = "")
+  public Long getSkuStockStatus() {
+    return skuStockStatus;
+  }
+
+  public void setSkuStockStatus(Long skuStockStatus) {
+    this.skuStockStatus = skuStockStatus;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -695,7 +717,8 @@ public class WechatStoreProductItemsGetListStruct {
         && Objects.equals(this.storeId, wechatStoreProductItemsGetListStruct.storeId)
         && Objects.equals(
             this.wxStoreProductOperateType,
-            wechatStoreProductItemsGetListStruct.wxStoreProductOperateType);
+            wechatStoreProductItemsGetListStruct.wxStoreProductOperateType)
+        && Objects.equals(this.skuStockStatus, wechatStoreProductItemsGetListStruct.skuStockStatus);
   }
 
   @Override
@@ -726,7 +749,8 @@ public class WechatStoreProductItemsGetListStruct {
         wechatStoreProductAdUnavailableCause,
         storePriceItemList,
         storeId,
-        wxStoreProductOperateType);
+        wxStoreProductOperateType,
+        skuStockStatus);
   }
 
   @Override

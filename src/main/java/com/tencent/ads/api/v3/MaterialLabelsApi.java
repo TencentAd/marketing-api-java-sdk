@@ -553,7 +553,8 @@ public class MaterialLabelsApi {
   /**
    * Build call for materialLabelsGet
    *
-   * @param accountId (required)
+   * @param accountId (optional)
+   * @param organizationId account_id或organization_id传其中一个即可 (optional)
    * @param labelId (optional)
    * @param labelName (optional)
    * @param firstLabelLevelIdList 一级标签类目ID列表 (optional)
@@ -571,6 +572,7 @@ public class MaterialLabelsApi {
    */
   public com.squareup.okhttp.Call materialLabelsGetCall(
       Long accountId,
+      Long organizationId,
       Long labelId,
       String labelName,
       List<Long> firstLabelLevelIdList,
@@ -595,6 +597,8 @@ public class MaterialLabelsApi {
     List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
     if (accountId != null)
       localVarQueryParams.addAll(apiClient.parameterToPair("account_id", accountId));
+    if (organizationId != null)
+      localVarQueryParams.addAll(apiClient.parameterToPair("organization_id", organizationId));
     if (labelId != null) localVarQueryParams.addAll(apiClient.parameterToPair("label_id", labelId));
     if (labelName != null)
       localVarQueryParams.addAll(apiClient.parameterToPair("label_name", labelName));
@@ -670,6 +674,7 @@ public class MaterialLabelsApi {
   @SuppressWarnings("rawtypes")
   private com.squareup.okhttp.Call materialLabelsGetValidateBeforeCall(
       Long accountId,
+      Long organizationId,
       Long labelId,
       String labelName,
       List<Long> firstLabelLevelIdList,
@@ -685,15 +690,10 @@ public class MaterialLabelsApi {
       Pair... headerPair)
       throws ApiException {
 
-    // verify the required parameter 'accountId' is set
-    if (accountId == null) {
-      throw new ApiException(
-          "Missing the required parameter 'accountId' when calling materialLabelsGet(Async)");
-    }
-
     com.squareup.okhttp.Call call =
         materialLabelsGetCall(
             accountId,
+            organizationId,
             labelId,
             labelName,
             firstLabelLevelIdList,
@@ -713,7 +713,8 @@ public class MaterialLabelsApi {
   /**
    * 获取素材标签列表
    *
-   * @param accountId (required)
+   * @param accountId (optional)
+   * @param organizationId account_id或organization_id传其中一个即可 (optional)
    * @param labelId (optional)
    * @param labelName (optional)
    * @param firstLabelLevelIdList 一级标签类目ID列表 (optional)
@@ -730,6 +731,7 @@ public class MaterialLabelsApi {
    */
   public MaterialLabelsGetResponse materialLabelsGet(
       Long accountId,
+      Long organizationId,
       Long labelId,
       String labelName,
       List<Long> firstLabelLevelIdList,
@@ -745,6 +747,7 @@ public class MaterialLabelsApi {
     ApiResponse<MaterialLabelsGetResponse> resp =
         materialLabelsGetWithHttpInfo(
             accountId,
+            organizationId,
             labelId,
             labelName,
             firstLabelLevelIdList,
@@ -762,7 +765,8 @@ public class MaterialLabelsApi {
   /**
    * 获取素材标签列表
    *
-   * @param accountId (required)
+   * @param accountId (optional)
+   * @param organizationId account_id或organization_id传其中一个即可 (optional)
    * @param labelId (optional)
    * @param labelName (optional)
    * @param firstLabelLevelIdList 一级标签类目ID列表 (optional)
@@ -779,6 +783,7 @@ public class MaterialLabelsApi {
    */
   public ApiResponse<MaterialLabelsGetResponse> materialLabelsGetWithHttpInfo(
       Long accountId,
+      Long organizationId,
       Long labelId,
       String labelName,
       List<Long> firstLabelLevelIdList,
@@ -794,6 +799,7 @@ public class MaterialLabelsApi {
     com.squareup.okhttp.Call call =
         materialLabelsGetValidateBeforeCall(
             accountId,
+            organizationId,
             labelId,
             labelName,
             firstLabelLevelIdList,
@@ -814,7 +820,8 @@ public class MaterialLabelsApi {
   /**
    * 获取素材标签列表 (asynchronously)
    *
-   * @param accountId (required)
+   * @param accountId (optional)
+   * @param organizationId account_id或organization_id传其中一个即可 (optional)
    * @param labelId (optional)
    * @param labelName (optional)
    * @param firstLabelLevelIdList 一级标签类目ID列表 (optional)
@@ -831,6 +838,7 @@ public class MaterialLabelsApi {
    */
   public com.squareup.okhttp.Call materialLabelsGetAsync(
       Long accountId,
+      Long organizationId,
       Long labelId,
       String labelName,
       List<Long> firstLabelLevelIdList,
@@ -869,6 +877,7 @@ public class MaterialLabelsApi {
     com.squareup.okhttp.Call call =
         materialLabelsGetValidateBeforeCall(
             accountId,
+            organizationId,
             labelId,
             labelName,
             firstLabelLevelIdList,

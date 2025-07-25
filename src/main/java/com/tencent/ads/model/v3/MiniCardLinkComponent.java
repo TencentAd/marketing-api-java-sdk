@@ -27,6 +27,9 @@ public class MiniCardLinkComponent {
   @SerializedName("value")
   private MiniCardLinkStruct value = null;
 
+  @SerializedName("is_deleted")
+  private Boolean isDeleted = null;
+
   public MiniCardLinkComponent componentId(Long componentId) {
     this.componentId = componentId;
     return this;
@@ -65,6 +68,25 @@ public class MiniCardLinkComponent {
     this.value = value;
   }
 
+  public MiniCardLinkComponent isDeleted(Boolean isDeleted) {
+    this.isDeleted = isDeleted;
+    return this;
+  }
+
+  /**
+   * Get isDeleted
+   *
+   * @return isDeleted
+   */
+  @ApiModelProperty(value = "")
+  public Boolean isIsDeleted() {
+    return isDeleted;
+  }
+
+  public void setIsDeleted(Boolean isDeleted) {
+    this.isDeleted = isDeleted;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -75,12 +97,13 @@ public class MiniCardLinkComponent {
     }
     MiniCardLinkComponent miniCardLinkComponent = (MiniCardLinkComponent) o;
     return Objects.equals(this.componentId, miniCardLinkComponent.componentId)
-        && Objects.equals(this.value, miniCardLinkComponent.value);
+        && Objects.equals(this.value, miniCardLinkComponent.value)
+        && Objects.equals(this.isDeleted, miniCardLinkComponent.isDeleted);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(componentId, value);
+    return Objects.hash(componentId, value, isDeleted);
   }
 
   @Override

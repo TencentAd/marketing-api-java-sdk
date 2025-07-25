@@ -33,6 +33,7 @@ public class OrganizationAccountRelationApiContainer extends ApiContainer {
    * @param paginationMode (required)
    * @param accountId (optional)
    * @param advertiserType (optional)
+   * @param businessUnitId (optional)
    * @param cursor (optional)
    * @param page (optional)
    * @param pageSize (optional)
@@ -45,6 +46,7 @@ public class OrganizationAccountRelationApiContainer extends ApiContainer {
       String paginationMode,
       Long accountId,
       String advertiserType,
+      Long businessUnitId,
       Long cursor,
       Long page,
       Long pageSize,
@@ -53,7 +55,15 @@ public class OrganizationAccountRelationApiContainer extends ApiContainer {
       throws ApiException, TencentAdsResponseException {
     OrganizationAccountRelationGetResponse resp =
         api.organizationAccountRelationGet(
-            paginationMode, accountId, advertiserType, cursor, page, pageSize, fields, headerPair);
+            paginationMode,
+            accountId,
+            advertiserType,
+            businessUnitId,
+            cursor,
+            page,
+            pageSize,
+            fields,
+            headerPair);
     handleResponse(gson.toJson(resp));
     return resp.getData();
   }

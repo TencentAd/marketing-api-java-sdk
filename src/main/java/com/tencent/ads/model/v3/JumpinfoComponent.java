@@ -27,6 +27,9 @@ public class JumpinfoComponent {
   @SerializedName("value")
   private JumpinfoStruct value = null;
 
+  @SerializedName("is_deleted")
+  private Boolean isDeleted = null;
+
   public JumpinfoComponent componentId(Long componentId) {
     this.componentId = componentId;
     return this;
@@ -65,6 +68,25 @@ public class JumpinfoComponent {
     this.value = value;
   }
 
+  public JumpinfoComponent isDeleted(Boolean isDeleted) {
+    this.isDeleted = isDeleted;
+    return this;
+  }
+
+  /**
+   * Get isDeleted
+   *
+   * @return isDeleted
+   */
+  @ApiModelProperty(value = "")
+  public Boolean isIsDeleted() {
+    return isDeleted;
+  }
+
+  public void setIsDeleted(Boolean isDeleted) {
+    this.isDeleted = isDeleted;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -75,12 +97,13 @@ public class JumpinfoComponent {
     }
     JumpinfoComponent jumpinfoComponent = (JumpinfoComponent) o;
     return Objects.equals(this.componentId, jumpinfoComponent.componentId)
-        && Objects.equals(this.value, jumpinfoComponent.value);
+        && Objects.equals(this.value, jumpinfoComponent.value)
+        && Objects.equals(this.isDeleted, jumpinfoComponent.isDeleted);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(componentId, value);
+    return Objects.hash(componentId, value, isDeleted);
   }
 
   @Override

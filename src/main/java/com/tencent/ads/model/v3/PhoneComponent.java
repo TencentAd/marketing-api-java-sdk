@@ -27,6 +27,9 @@ public class PhoneComponent {
   @SerializedName("value")
   private PhoneStruct value = null;
 
+  @SerializedName("is_deleted")
+  private Boolean isDeleted = null;
+
   public PhoneComponent componentId(Long componentId) {
     this.componentId = componentId;
     return this;
@@ -65,6 +68,25 @@ public class PhoneComponent {
     this.value = value;
   }
 
+  public PhoneComponent isDeleted(Boolean isDeleted) {
+    this.isDeleted = isDeleted;
+    return this;
+  }
+
+  /**
+   * Get isDeleted
+   *
+   * @return isDeleted
+   */
+  @ApiModelProperty(value = "")
+  public Boolean isIsDeleted() {
+    return isDeleted;
+  }
+
+  public void setIsDeleted(Boolean isDeleted) {
+    this.isDeleted = isDeleted;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -75,12 +97,13 @@ public class PhoneComponent {
     }
     PhoneComponent phoneComponent = (PhoneComponent) o;
     return Objects.equals(this.componentId, phoneComponent.componentId)
-        && Objects.equals(this.value, phoneComponent.value);
+        && Objects.equals(this.value, phoneComponent.value)
+        && Objects.equals(this.isDeleted, phoneComponent.isDeleted);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(componentId, value);
+    return Objects.hash(componentId, value, isDeleted);
   }
 
   @Override

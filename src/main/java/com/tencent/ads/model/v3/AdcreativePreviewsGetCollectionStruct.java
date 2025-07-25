@@ -20,7 +20,7 @@ import java.util.Objects;
 
 /** 返回 */
 @ApiModel(description = "返回")
-public class CollectionStruct {
+public class AdcreativePreviewsGetCollectionStruct {
   @SerializedName("user_id")
   private String userId = null;
 
@@ -30,7 +30,7 @@ public class CollectionStruct {
   @SerializedName("is_previewed")
   private Boolean isPreviewed = null;
 
-  public CollectionStruct userId(String userId) {
+  public AdcreativePreviewsGetCollectionStruct userId(String userId) {
     this.userId = userId;
     return this;
   }
@@ -49,7 +49,7 @@ public class CollectionStruct {
     this.userId = userId;
   }
 
-  public CollectionStruct userIdType(ViewerIdType userIdType) {
+  public AdcreativePreviewsGetCollectionStruct userIdType(ViewerIdType userIdType) {
     this.userIdType = userIdType;
     return this;
   }
@@ -68,7 +68,7 @@ public class CollectionStruct {
     this.userIdType = userIdType;
   }
 
-  public CollectionStruct isPreviewed(Boolean isPreviewed) {
+  public AdcreativePreviewsGetCollectionStruct isPreviewed(Boolean isPreviewed) {
     this.isPreviewed = isPreviewed;
     return this;
   }
@@ -95,10 +95,11 @@ public class CollectionStruct {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    CollectionStruct collectionStruct = (CollectionStruct) o;
-    return Objects.equals(this.userId, collectionStruct.userId)
-        && Objects.equals(this.userIdType, collectionStruct.userIdType)
-        && Objects.equals(this.isPreviewed, collectionStruct.isPreviewed);
+    AdcreativePreviewsGetCollectionStruct adcreativePreviewsGetCollectionStruct =
+        (AdcreativePreviewsGetCollectionStruct) o;
+    return Objects.equals(this.userId, adcreativePreviewsGetCollectionStruct.userId)
+        && Objects.equals(this.userIdType, adcreativePreviewsGetCollectionStruct.userIdType)
+        && Objects.equals(this.isPreviewed, adcreativePreviewsGetCollectionStruct.isPreviewed);
   }
 
   @Override

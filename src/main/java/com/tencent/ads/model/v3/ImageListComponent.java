@@ -27,6 +27,9 @@ public class ImageListComponent {
   @SerializedName("value")
   private ImageListStruct value = null;
 
+  @SerializedName("is_deleted")
+  private Boolean isDeleted = null;
+
   public ImageListComponent componentId(Long componentId) {
     this.componentId = componentId;
     return this;
@@ -65,6 +68,25 @@ public class ImageListComponent {
     this.value = value;
   }
 
+  public ImageListComponent isDeleted(Boolean isDeleted) {
+    this.isDeleted = isDeleted;
+    return this;
+  }
+
+  /**
+   * Get isDeleted
+   *
+   * @return isDeleted
+   */
+  @ApiModelProperty(value = "")
+  public Boolean isIsDeleted() {
+    return isDeleted;
+  }
+
+  public void setIsDeleted(Boolean isDeleted) {
+    this.isDeleted = isDeleted;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -75,12 +97,13 @@ public class ImageListComponent {
     }
     ImageListComponent imageListComponent = (ImageListComponent) o;
     return Objects.equals(this.componentId, imageListComponent.componentId)
-        && Objects.equals(this.value, imageListComponent.value);
+        && Objects.equals(this.value, imageListComponent.value)
+        && Objects.equals(this.isDeleted, imageListComponent.isDeleted);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(componentId, value);
+    return Objects.hash(componentId, value, isDeleted);
   }
 
   @Override

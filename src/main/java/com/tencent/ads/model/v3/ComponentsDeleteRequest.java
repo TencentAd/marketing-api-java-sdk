@@ -28,6 +28,9 @@ public class ComponentsDeleteRequest {
   @SerializedName("organization_id")
   private Long organizationId = null;
 
+  @SerializedName("delete_strategy")
+  private DeleteStrategy deleteStrategy = null;
+
   public ComponentsDeleteRequest accountId(Long accountId) {
     this.accountId = accountId;
     return this;
@@ -85,6 +88,25 @@ public class ComponentsDeleteRequest {
     this.organizationId = organizationId;
   }
 
+  public ComponentsDeleteRequest deleteStrategy(DeleteStrategy deleteStrategy) {
+    this.deleteStrategy = deleteStrategy;
+    return this;
+  }
+
+  /**
+   * Get deleteStrategy
+   *
+   * @return deleteStrategy
+   */
+  @ApiModelProperty(value = "")
+  public DeleteStrategy getDeleteStrategy() {
+    return deleteStrategy;
+  }
+
+  public void setDeleteStrategy(DeleteStrategy deleteStrategy) {
+    this.deleteStrategy = deleteStrategy;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -96,12 +118,13 @@ public class ComponentsDeleteRequest {
     ComponentsDeleteRequest componentsDeleteRequest = (ComponentsDeleteRequest) o;
     return Objects.equals(this.accountId, componentsDeleteRequest.accountId)
         && Objects.equals(this.componentId, componentsDeleteRequest.componentId)
-        && Objects.equals(this.organizationId, componentsDeleteRequest.organizationId);
+        && Objects.equals(this.organizationId, componentsDeleteRequest.organizationId)
+        && Objects.equals(this.deleteStrategy, componentsDeleteRequest.deleteStrategy);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(accountId, componentId, organizationId);
+    return Objects.hash(accountId, componentId, organizationId, deleteStrategy);
   }
 
   @Override

@@ -27,6 +27,9 @@ public class BrandComponent {
   @SerializedName("value")
   private BrandStruct value = null;
 
+  @SerializedName("is_deleted")
+  private Boolean isDeleted = null;
+
   public BrandComponent componentId(Long componentId) {
     this.componentId = componentId;
     return this;
@@ -65,6 +68,25 @@ public class BrandComponent {
     this.value = value;
   }
 
+  public BrandComponent isDeleted(Boolean isDeleted) {
+    this.isDeleted = isDeleted;
+    return this;
+  }
+
+  /**
+   * Get isDeleted
+   *
+   * @return isDeleted
+   */
+  @ApiModelProperty(value = "")
+  public Boolean isIsDeleted() {
+    return isDeleted;
+  }
+
+  public void setIsDeleted(Boolean isDeleted) {
+    this.isDeleted = isDeleted;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -75,12 +97,13 @@ public class BrandComponent {
     }
     BrandComponent brandComponent = (BrandComponent) o;
     return Objects.equals(this.componentId, brandComponent.componentId)
-        && Objects.equals(this.value, brandComponent.value);
+        && Objects.equals(this.value, brandComponent.value)
+        && Objects.equals(this.isDeleted, brandComponent.isDeleted);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(componentId, value);
+    return Objects.hash(componentId, value, isDeleted);
   }
 
   @Override

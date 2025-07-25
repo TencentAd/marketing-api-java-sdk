@@ -1,5 +1,10 @@
 # 更新日志
 
+## 2025-07-25
+1. 发布Java SDK [1.1.99] 版
+- 新增 MarketingApi 接口，更新模型
+- 新增 user_token 支持
+
 ## 2025-07-02
 1. 发布Java SDK [1.1.98] 版
 - 新增 MarketingApi 接口，更新模型

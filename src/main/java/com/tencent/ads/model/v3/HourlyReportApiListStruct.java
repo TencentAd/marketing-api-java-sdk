@@ -480,24 +480,6 @@ public class HourlyReportApiListStruct {
   @SerializedName("page_phone_call_direct_cost")
   private Long pagePhoneCallDirectCost = null;
 
-  @SerializedName("page_phone_call_back_count")
-  private Long pagePhoneCallBackCount = null;
-
-  @SerializedName("page_phone_call_back_rate")
-  private Double pagePhoneCallBackRate = null;
-
-  @SerializedName("page_phone_call_back_cost")
-  private Long pagePhoneCallBackCost = null;
-
-  @SerializedName("phone_call_count")
-  private Long phoneCallCount = null;
-
-  @SerializedName("inte_phone_count")
-  private Long intePhoneCount = null;
-
-  @SerializedName("phone_call_uv")
-  private Long phoneCallUv = null;
-
   @SerializedName("potential_phone_count")
   private Long potentialPhoneCount = null;
 
@@ -509,9 +491,6 @@ public class HourlyReportApiListStruct {
 
   @SerializedName("valid_phone_uv")
   private Long validPhoneUv = null;
-
-  @SerializedName("phone_consult_count")
-  private Long phoneConsultCount = null;
 
   @SerializedName("coupon_usage_number")
   private Long couponUsageNumber = null;
@@ -777,12 +756,6 @@ public class HourlyReportApiListStruct {
   @SerializedName("order_24h_by_click_roi")
   private Double order24hByClickRoi = null;
 
-  @SerializedName("live_stream_order_pv")
-  private Long liveStreamOrderPv = null;
-
-  @SerializedName("live_stream_order_amount")
-  private Long liveStreamOrderAmount = null;
-
   @SerializedName("deliver_count")
   private Long deliverCount = null;
 
@@ -875,9 +848,6 @@ public class HourlyReportApiListStruct {
 
   @SerializedName("reg_pla_pv")
   private Long regPlaPv = null;
-
-  @SerializedName("web_register_uv")
-  private Long webRegisterUv = null;
 
   @SerializedName("reg_all_dedup_pv")
   private Long regAllDedupPv = null;
@@ -1434,12 +1404,6 @@ public class HourlyReportApiListStruct {
   @SerializedName("apply_cost")
   private Long applyCost = null;
 
-  @SerializedName("app_apply_uv")
-  private Long appApplyUv = null;
-
-  @SerializedName("web_apply_uv")
-  private Long webApplyUv = null;
-
   @SerializedName("biz_page_apply_uv")
   private Long bizPageApplyUv = null;
 
@@ -1458,9 +1422,6 @@ public class HourlyReportApiListStruct {
   @SerializedName("pre_credit_cost")
   private Long preCreditCost = null;
 
-  @SerializedName("app_pre_credit_uv")
-  private Long appPreCreditUv = null;
-
   @SerializedName("biz_pre_credit_uv")
   private Long bizPreCreditUv = null;
 
@@ -1475,12 +1436,6 @@ public class HourlyReportApiListStruct {
 
   @SerializedName("credit_cost")
   private Long creditCost = null;
-
-  @SerializedName("app_credit_uv")
-  private Long appCreditUv = null;
-
-  @SerializedName("web_credit_uv")
-  private Long webCreditUv = null;
 
   @SerializedName("biz_credit_uv")
   private Long bizCreditUv = null;
@@ -1499,9 +1454,6 @@ public class HourlyReportApiListStruct {
 
   @SerializedName("withdraw_deposit_amount")
   private Long withdrawDepositAmount = null;
-
-  @SerializedName("app_withdraw_uv")
-  private Long appWithdrawUv = null;
 
   @SerializedName("biz_withdraw_deposits_uv")
   private Long bizWithdrawDepositsUv = null;
@@ -2385,11 +2337,101 @@ public class HourlyReportApiListStruct {
   @SerializedName("retention_all_dedup_pv")
   private Long retentionAllDedupPv = null;
 
+  @SerializedName("credit_dedup_pv")
+  private Long creditDedupPv = null;
+
+  @SerializedName("pre_credit_dedup_pv")
+  private Long preCreditDedupPv = null;
+
+  @SerializedName("withdraw_dedup_pv")
+  private Long withdrawDedupPv = null;
+
+  @SerializedName("apply_dedup_pv")
+  private Long applyDedupPv = null;
+
+  @SerializedName("purchase_dedup_imp_pv")
+  private Long purchaseDedupImpPv = null;
+
+  @SerializedName("purchase_dedup_clk_pv")
+  private Long purchaseDedupClkPv = null;
+
+  @SerializedName("purchase_imp_amount")
+  private Long purchaseImpAmount = null;
+
+  @SerializedName("purchase_clk_amount")
+  private Long purchaseClkAmount = null;
+
+  @SerializedName("purchase_imp_rate")
+  private Double purchaseImpRate = null;
+
+  @SerializedName("purchase_clk2_rate")
+  private Double purchaseClk2Rate = null;
+
+  @SerializedName("purchase_imp_cost")
+  private Long purchaseImpCost = null;
+
+  @SerializedName("purchase_clk_cost")
+  private Long purchaseClkCost = null;
+
+  @SerializedName("purchase_imp_roi")
+  private Double purchaseImpRoi = null;
+
+  @SerializedName("purchase_clk_roi")
+  private Double purchaseClkRoi = null;
+
+  @SerializedName("order_dedup_imp_pv")
+  private Long orderDedupImpPv = null;
+
+  @SerializedName("order_dedup_clk_pv")
+  private Long orderDedupClkPv = null;
+
+  @SerializedName("order_clk_3d_pv")
+  private Long orderClk3dPv = null;
+
+  @SerializedName("order_imp_3d_pv")
+  private Long orderImp3dPv = null;
+
+  @SerializedName("order_clk2_3d_pv")
+  private Long orderClk23dPv = null;
+
+  @SerializedName("order_clk_3d_amount")
+  private Long orderClk3dAmount = null;
+
+  @SerializedName("order_imp_3d_amount")
+  private Long orderImp3dAmount = null;
+
+  @SerializedName("order_clk2_3d_amount")
+  private Long orderClk23dAmount = null;
+
+  @SerializedName("order_clk_3d_cost")
+  private Long orderClk3dCost = null;
+
+  @SerializedName("order_imp_3d_cost")
+  private Long orderImp3dCost = null;
+
+  @SerializedName("order_clk2_3d_cost")
+  private Long orderClk23dCost = null;
+
+  @SerializedName("order_clk_3d_roi")
+  private Double orderClk3dRoi = null;
+
+  @SerializedName("order_imp_3d_roi")
+  private Double orderImp3dRoi = null;
+
+  @SerializedName("order_clk2_3d_roi")
+  private Double orderClk23dRoi = null;
+
   @SerializedName("adgroup_id")
   private Long adgroupId = null;
 
   @SerializedName("adgroup_name")
   private String adgroupName = null;
+
+  @SerializedName("live_stream_order_pv")
+  private Long liveStreamOrderPv = null;
+
+  @SerializedName("live_stream_order_amount")
+  private Long liveStreamOrderAmount = null;
 
   @SerializedName("dynamic_creative_id")
   private Long dynamicCreativeId = null;
@@ -5347,120 +5389,6 @@ public class HourlyReportApiListStruct {
     this.pagePhoneCallDirectCost = pagePhoneCallDirectCost;
   }
 
-  public HourlyReportApiListStruct pagePhoneCallBackCount(Long pagePhoneCallBackCount) {
-    this.pagePhoneCallBackCount = pagePhoneCallBackCount;
-    return this;
-  }
-
-  /**
-   * Get pagePhoneCallBackCount
-   *
-   * @return pagePhoneCallBackCount
-   */
-  @ApiModelProperty(value = "")
-  public Long getPagePhoneCallBackCount() {
-    return pagePhoneCallBackCount;
-  }
-
-  public void setPagePhoneCallBackCount(Long pagePhoneCallBackCount) {
-    this.pagePhoneCallBackCount = pagePhoneCallBackCount;
-  }
-
-  public HourlyReportApiListStruct pagePhoneCallBackRate(Double pagePhoneCallBackRate) {
-    this.pagePhoneCallBackRate = pagePhoneCallBackRate;
-    return this;
-  }
-
-  /**
-   * Get pagePhoneCallBackRate
-   *
-   * @return pagePhoneCallBackRate
-   */
-  @ApiModelProperty(value = "")
-  public Double getPagePhoneCallBackRate() {
-    return pagePhoneCallBackRate;
-  }
-
-  public void setPagePhoneCallBackRate(Double pagePhoneCallBackRate) {
-    this.pagePhoneCallBackRate = pagePhoneCallBackRate;
-  }
-
-  public HourlyReportApiListStruct pagePhoneCallBackCost(Long pagePhoneCallBackCost) {
-    this.pagePhoneCallBackCost = pagePhoneCallBackCost;
-    return this;
-  }
-
-  /**
-   * Get pagePhoneCallBackCost
-   *
-   * @return pagePhoneCallBackCost
-   */
-  @ApiModelProperty(value = "")
-  public Long getPagePhoneCallBackCost() {
-    return pagePhoneCallBackCost;
-  }
-
-  public void setPagePhoneCallBackCost(Long pagePhoneCallBackCost) {
-    this.pagePhoneCallBackCost = pagePhoneCallBackCost;
-  }
-
-  public HourlyReportApiListStruct phoneCallCount(Long phoneCallCount) {
-    this.phoneCallCount = phoneCallCount;
-    return this;
-  }
-
-  /**
-   * Get phoneCallCount
-   *
-   * @return phoneCallCount
-   */
-  @ApiModelProperty(value = "")
-  public Long getPhoneCallCount() {
-    return phoneCallCount;
-  }
-
-  public void setPhoneCallCount(Long phoneCallCount) {
-    this.phoneCallCount = phoneCallCount;
-  }
-
-  public HourlyReportApiListStruct intePhoneCount(Long intePhoneCount) {
-    this.intePhoneCount = intePhoneCount;
-    return this;
-  }
-
-  /**
-   * Get intePhoneCount
-   *
-   * @return intePhoneCount
-   */
-  @ApiModelProperty(value = "")
-  public Long getIntePhoneCount() {
-    return intePhoneCount;
-  }
-
-  public void setIntePhoneCount(Long intePhoneCount) {
-    this.intePhoneCount = intePhoneCount;
-  }
-
-  public HourlyReportApiListStruct phoneCallUv(Long phoneCallUv) {
-    this.phoneCallUv = phoneCallUv;
-    return this;
-  }
-
-  /**
-   * Get phoneCallUv
-   *
-   * @return phoneCallUv
-   */
-  @ApiModelProperty(value = "")
-  public Long getPhoneCallUv() {
-    return phoneCallUv;
-  }
-
-  public void setPhoneCallUv(Long phoneCallUv) {
-    this.phoneCallUv = phoneCallUv;
-  }
-
   public HourlyReportApiListStruct potentialPhoneCount(Long potentialPhoneCount) {
     this.potentialPhoneCount = potentialPhoneCount;
     return this;
@@ -5535,25 +5463,6 @@ public class HourlyReportApiListStruct {
 
   public void setValidPhoneUv(Long validPhoneUv) {
     this.validPhoneUv = validPhoneUv;
-  }
-
-  public HourlyReportApiListStruct phoneConsultCount(Long phoneConsultCount) {
-    this.phoneConsultCount = phoneConsultCount;
-    return this;
-  }
-
-  /**
-   * Get phoneConsultCount
-   *
-   * @return phoneConsultCount
-   */
-  @ApiModelProperty(value = "")
-  public Long getPhoneConsultCount() {
-    return phoneConsultCount;
-  }
-
-  public void setPhoneConsultCount(Long phoneConsultCount) {
-    this.phoneConsultCount = phoneConsultCount;
   }
 
   public HourlyReportApiListStruct couponUsageNumber(Long couponUsageNumber) {
@@ -7232,44 +7141,6 @@ public class HourlyReportApiListStruct {
     this.order24hByClickRoi = order24hByClickRoi;
   }
 
-  public HourlyReportApiListStruct liveStreamOrderPv(Long liveStreamOrderPv) {
-    this.liveStreamOrderPv = liveStreamOrderPv;
-    return this;
-  }
-
-  /**
-   * Get liveStreamOrderPv
-   *
-   * @return liveStreamOrderPv
-   */
-  @ApiModelProperty(value = "")
-  public Long getLiveStreamOrderPv() {
-    return liveStreamOrderPv;
-  }
-
-  public void setLiveStreamOrderPv(Long liveStreamOrderPv) {
-    this.liveStreamOrderPv = liveStreamOrderPv;
-  }
-
-  public HourlyReportApiListStruct liveStreamOrderAmount(Long liveStreamOrderAmount) {
-    this.liveStreamOrderAmount = liveStreamOrderAmount;
-    return this;
-  }
-
-  /**
-   * Get liveStreamOrderAmount
-   *
-   * @return liveStreamOrderAmount
-   */
-  @ApiModelProperty(value = "")
-  public Long getLiveStreamOrderAmount() {
-    return liveStreamOrderAmount;
-  }
-
-  public void setLiveStreamOrderAmount(Long liveStreamOrderAmount) {
-    this.liveStreamOrderAmount = liveStreamOrderAmount;
-  }
-
   public HourlyReportApiListStruct deliverCount(Long deliverCount) {
     this.deliverCount = deliverCount;
     return this;
@@ -7857,25 +7728,6 @@ public class HourlyReportApiListStruct {
 
   public void setRegPlaPv(Long regPlaPv) {
     this.regPlaPv = regPlaPv;
-  }
-
-  public HourlyReportApiListStruct webRegisterUv(Long webRegisterUv) {
-    this.webRegisterUv = webRegisterUv;
-    return this;
-  }
-
-  /**
-   * Get webRegisterUv
-   *
-   * @return webRegisterUv
-   */
-  @ApiModelProperty(value = "")
-  public Long getWebRegisterUv() {
-    return webRegisterUv;
-  }
-
-  public void setWebRegisterUv(Long webRegisterUv) {
-    this.webRegisterUv = webRegisterUv;
   }
 
   public HourlyReportApiListStruct regAllDedupPv(Long regAllDedupPv) {
@@ -11398,44 +11250,6 @@ public class HourlyReportApiListStruct {
     this.applyCost = applyCost;
   }
 
-  public HourlyReportApiListStruct appApplyUv(Long appApplyUv) {
-    this.appApplyUv = appApplyUv;
-    return this;
-  }
-
-  /**
-   * Get appApplyUv
-   *
-   * @return appApplyUv
-   */
-  @ApiModelProperty(value = "")
-  public Long getAppApplyUv() {
-    return appApplyUv;
-  }
-
-  public void setAppApplyUv(Long appApplyUv) {
-    this.appApplyUv = appApplyUv;
-  }
-
-  public HourlyReportApiListStruct webApplyUv(Long webApplyUv) {
-    this.webApplyUv = webApplyUv;
-    return this;
-  }
-
-  /**
-   * Get webApplyUv
-   *
-   * @return webApplyUv
-   */
-  @ApiModelProperty(value = "")
-  public Long getWebApplyUv() {
-    return webApplyUv;
-  }
-
-  public void setWebApplyUv(Long webApplyUv) {
-    this.webApplyUv = webApplyUv;
-  }
-
   public HourlyReportApiListStruct bizPageApplyUv(Long bizPageApplyUv) {
     this.bizPageApplyUv = bizPageApplyUv;
     return this;
@@ -11550,25 +11364,6 @@ public class HourlyReportApiListStruct {
     this.preCreditCost = preCreditCost;
   }
 
-  public HourlyReportApiListStruct appPreCreditUv(Long appPreCreditUv) {
-    this.appPreCreditUv = appPreCreditUv;
-    return this;
-  }
-
-  /**
-   * Get appPreCreditUv
-   *
-   * @return appPreCreditUv
-   */
-  @ApiModelProperty(value = "")
-  public Long getAppPreCreditUv() {
-    return appPreCreditUv;
-  }
-
-  public void setAppPreCreditUv(Long appPreCreditUv) {
-    this.appPreCreditUv = appPreCreditUv;
-  }
-
   public HourlyReportApiListStruct bizPreCreditUv(Long bizPreCreditUv) {
     this.bizPreCreditUv = bizPreCreditUv;
     return this;
@@ -11662,44 +11457,6 @@ public class HourlyReportApiListStruct {
 
   public void setCreditCost(Long creditCost) {
     this.creditCost = creditCost;
-  }
-
-  public HourlyReportApiListStruct appCreditUv(Long appCreditUv) {
-    this.appCreditUv = appCreditUv;
-    return this;
-  }
-
-  /**
-   * Get appCreditUv
-   *
-   * @return appCreditUv
-   */
-  @ApiModelProperty(value = "")
-  public Long getAppCreditUv() {
-    return appCreditUv;
-  }
-
-  public void setAppCreditUv(Long appCreditUv) {
-    this.appCreditUv = appCreditUv;
-  }
-
-  public HourlyReportApiListStruct webCreditUv(Long webCreditUv) {
-    this.webCreditUv = webCreditUv;
-    return this;
-  }
-
-  /**
-   * Get webCreditUv
-   *
-   * @return webCreditUv
-   */
-  @ApiModelProperty(value = "")
-  public Long getWebCreditUv() {
-    return webCreditUv;
-  }
-
-  public void setWebCreditUv(Long webCreditUv) {
-    this.webCreditUv = webCreditUv;
   }
 
   public HourlyReportApiListStruct bizCreditUv(Long bizCreditUv) {
@@ -11814,25 +11571,6 @@ public class HourlyReportApiListStruct {
 
   public void setWithdrawDepositAmount(Long withdrawDepositAmount) {
     this.withdrawDepositAmount = withdrawDepositAmount;
-  }
-
-  public HourlyReportApiListStruct appWithdrawUv(Long appWithdrawUv) {
-    this.appWithdrawUv = appWithdrawUv;
-    return this;
-  }
-
-  /**
-   * Get appWithdrawUv
-   *
-   * @return appWithdrawUv
-   */
-  @ApiModelProperty(value = "")
-  public Long getAppWithdrawUv() {
-    return appWithdrawUv;
-  }
-
-  public void setAppWithdrawUv(Long appWithdrawUv) {
-    this.appWithdrawUv = appWithdrawUv;
   }
 
   public HourlyReportApiListStruct bizWithdrawDepositsUv(Long bizWithdrawDepositsUv) {
@@ -17469,6 +17207,538 @@ public class HourlyReportApiListStruct {
     this.retentionAllDedupPv = retentionAllDedupPv;
   }
 
+  public HourlyReportApiListStruct creditDedupPv(Long creditDedupPv) {
+    this.creditDedupPv = creditDedupPv;
+    return this;
+  }
+
+  /**
+   * Get creditDedupPv
+   *
+   * @return creditDedupPv
+   */
+  @ApiModelProperty(value = "")
+  public Long getCreditDedupPv() {
+    return creditDedupPv;
+  }
+
+  public void setCreditDedupPv(Long creditDedupPv) {
+    this.creditDedupPv = creditDedupPv;
+  }
+
+  public HourlyReportApiListStruct preCreditDedupPv(Long preCreditDedupPv) {
+    this.preCreditDedupPv = preCreditDedupPv;
+    return this;
+  }
+
+  /**
+   * Get preCreditDedupPv
+   *
+   * @return preCreditDedupPv
+   */
+  @ApiModelProperty(value = "")
+  public Long getPreCreditDedupPv() {
+    return preCreditDedupPv;
+  }
+
+  public void setPreCreditDedupPv(Long preCreditDedupPv) {
+    this.preCreditDedupPv = preCreditDedupPv;
+  }
+
+  public HourlyReportApiListStruct withdrawDedupPv(Long withdrawDedupPv) {
+    this.withdrawDedupPv = withdrawDedupPv;
+    return this;
+  }
+
+  /**
+   * Get withdrawDedupPv
+   *
+   * @return withdrawDedupPv
+   */
+  @ApiModelProperty(value = "")
+  public Long getWithdrawDedupPv() {
+    return withdrawDedupPv;
+  }
+
+  public void setWithdrawDedupPv(Long withdrawDedupPv) {
+    this.withdrawDedupPv = withdrawDedupPv;
+  }
+
+  public HourlyReportApiListStruct applyDedupPv(Long applyDedupPv) {
+    this.applyDedupPv = applyDedupPv;
+    return this;
+  }
+
+  /**
+   * Get applyDedupPv
+   *
+   * @return applyDedupPv
+   */
+  @ApiModelProperty(value = "")
+  public Long getApplyDedupPv() {
+    return applyDedupPv;
+  }
+
+  public void setApplyDedupPv(Long applyDedupPv) {
+    this.applyDedupPv = applyDedupPv;
+  }
+
+  public HourlyReportApiListStruct purchaseDedupImpPv(Long purchaseDedupImpPv) {
+    this.purchaseDedupImpPv = purchaseDedupImpPv;
+    return this;
+  }
+
+  /**
+   * Get purchaseDedupImpPv
+   *
+   * @return purchaseDedupImpPv
+   */
+  @ApiModelProperty(value = "")
+  public Long getPurchaseDedupImpPv() {
+    return purchaseDedupImpPv;
+  }
+
+  public void setPurchaseDedupImpPv(Long purchaseDedupImpPv) {
+    this.purchaseDedupImpPv = purchaseDedupImpPv;
+  }
+
+  public HourlyReportApiListStruct purchaseDedupClkPv(Long purchaseDedupClkPv) {
+    this.purchaseDedupClkPv = purchaseDedupClkPv;
+    return this;
+  }
+
+  /**
+   * Get purchaseDedupClkPv
+   *
+   * @return purchaseDedupClkPv
+   */
+  @ApiModelProperty(value = "")
+  public Long getPurchaseDedupClkPv() {
+    return purchaseDedupClkPv;
+  }
+
+  public void setPurchaseDedupClkPv(Long purchaseDedupClkPv) {
+    this.purchaseDedupClkPv = purchaseDedupClkPv;
+  }
+
+  public HourlyReportApiListStruct purchaseImpAmount(Long purchaseImpAmount) {
+    this.purchaseImpAmount = purchaseImpAmount;
+    return this;
+  }
+
+  /**
+   * Get purchaseImpAmount
+   *
+   * @return purchaseImpAmount
+   */
+  @ApiModelProperty(value = "")
+  public Long getPurchaseImpAmount() {
+    return purchaseImpAmount;
+  }
+
+  public void setPurchaseImpAmount(Long purchaseImpAmount) {
+    this.purchaseImpAmount = purchaseImpAmount;
+  }
+
+  public HourlyReportApiListStruct purchaseClkAmount(Long purchaseClkAmount) {
+    this.purchaseClkAmount = purchaseClkAmount;
+    return this;
+  }
+
+  /**
+   * Get purchaseClkAmount
+   *
+   * @return purchaseClkAmount
+   */
+  @ApiModelProperty(value = "")
+  public Long getPurchaseClkAmount() {
+    return purchaseClkAmount;
+  }
+
+  public void setPurchaseClkAmount(Long purchaseClkAmount) {
+    this.purchaseClkAmount = purchaseClkAmount;
+  }
+
+  public HourlyReportApiListStruct purchaseImpRate(Double purchaseImpRate) {
+    this.purchaseImpRate = purchaseImpRate;
+    return this;
+  }
+
+  /**
+   * Get purchaseImpRate
+   *
+   * @return purchaseImpRate
+   */
+  @ApiModelProperty(value = "")
+  public Double getPurchaseImpRate() {
+    return purchaseImpRate;
+  }
+
+  public void setPurchaseImpRate(Double purchaseImpRate) {
+    this.purchaseImpRate = purchaseImpRate;
+  }
+
+  public HourlyReportApiListStruct purchaseClk2Rate(Double purchaseClk2Rate) {
+    this.purchaseClk2Rate = purchaseClk2Rate;
+    return this;
+  }
+
+  /**
+   * Get purchaseClk2Rate
+   *
+   * @return purchaseClk2Rate
+   */
+  @ApiModelProperty(value = "")
+  public Double getPurchaseClk2Rate() {
+    return purchaseClk2Rate;
+  }
+
+  public void setPurchaseClk2Rate(Double purchaseClk2Rate) {
+    this.purchaseClk2Rate = purchaseClk2Rate;
+  }
+
+  public HourlyReportApiListStruct purchaseImpCost(Long purchaseImpCost) {
+    this.purchaseImpCost = purchaseImpCost;
+    return this;
+  }
+
+  /**
+   * Get purchaseImpCost
+   *
+   * @return purchaseImpCost
+   */
+  @ApiModelProperty(value = "")
+  public Long getPurchaseImpCost() {
+    return purchaseImpCost;
+  }
+
+  public void setPurchaseImpCost(Long purchaseImpCost) {
+    this.purchaseImpCost = purchaseImpCost;
+  }
+
+  public HourlyReportApiListStruct purchaseClkCost(Long purchaseClkCost) {
+    this.purchaseClkCost = purchaseClkCost;
+    return this;
+  }
+
+  /**
+   * Get purchaseClkCost
+   *
+   * @return purchaseClkCost
+   */
+  @ApiModelProperty(value = "")
+  public Long getPurchaseClkCost() {
+    return purchaseClkCost;
+  }
+
+  public void setPurchaseClkCost(Long purchaseClkCost) {
+    this.purchaseClkCost = purchaseClkCost;
+  }
+
+  public HourlyReportApiListStruct purchaseImpRoi(Double purchaseImpRoi) {
+    this.purchaseImpRoi = purchaseImpRoi;
+    return this;
+  }
+
+  /**
+   * Get purchaseImpRoi
+   *
+   * @return purchaseImpRoi
+   */
+  @ApiModelProperty(value = "")
+  public Double getPurchaseImpRoi() {
+    return purchaseImpRoi;
+  }
+
+  public void setPurchaseImpRoi(Double purchaseImpRoi) {
+    this.purchaseImpRoi = purchaseImpRoi;
+  }
+
+  public HourlyReportApiListStruct purchaseClkRoi(Double purchaseClkRoi) {
+    this.purchaseClkRoi = purchaseClkRoi;
+    return this;
+  }
+
+  /**
+   * Get purchaseClkRoi
+   *
+   * @return purchaseClkRoi
+   */
+  @ApiModelProperty(value = "")
+  public Double getPurchaseClkRoi() {
+    return purchaseClkRoi;
+  }
+
+  public void setPurchaseClkRoi(Double purchaseClkRoi) {
+    this.purchaseClkRoi = purchaseClkRoi;
+  }
+
+  public HourlyReportApiListStruct orderDedupImpPv(Long orderDedupImpPv) {
+    this.orderDedupImpPv = orderDedupImpPv;
+    return this;
+  }
+
+  /**
+   * Get orderDedupImpPv
+   *
+   * @return orderDedupImpPv
+   */
+  @ApiModelProperty(value = "")
+  public Long getOrderDedupImpPv() {
+    return orderDedupImpPv;
+  }
+
+  public void setOrderDedupImpPv(Long orderDedupImpPv) {
+    this.orderDedupImpPv = orderDedupImpPv;
+  }
+
+  public HourlyReportApiListStruct orderDedupClkPv(Long orderDedupClkPv) {
+    this.orderDedupClkPv = orderDedupClkPv;
+    return this;
+  }
+
+  /**
+   * Get orderDedupClkPv
+   *
+   * @return orderDedupClkPv
+   */
+  @ApiModelProperty(value = "")
+  public Long getOrderDedupClkPv() {
+    return orderDedupClkPv;
+  }
+
+  public void setOrderDedupClkPv(Long orderDedupClkPv) {
+    this.orderDedupClkPv = orderDedupClkPv;
+  }
+
+  public HourlyReportApiListStruct orderClk3dPv(Long orderClk3dPv) {
+    this.orderClk3dPv = orderClk3dPv;
+    return this;
+  }
+
+  /**
+   * Get orderClk3dPv
+   *
+   * @return orderClk3dPv
+   */
+  @ApiModelProperty(value = "")
+  public Long getOrderClk3dPv() {
+    return orderClk3dPv;
+  }
+
+  public void setOrderClk3dPv(Long orderClk3dPv) {
+    this.orderClk3dPv = orderClk3dPv;
+  }
+
+  public HourlyReportApiListStruct orderImp3dPv(Long orderImp3dPv) {
+    this.orderImp3dPv = orderImp3dPv;
+    return this;
+  }
+
+  /**
+   * Get orderImp3dPv
+   *
+   * @return orderImp3dPv
+   */
+  @ApiModelProperty(value = "")
+  public Long getOrderImp3dPv() {
+    return orderImp3dPv;
+  }
+
+  public void setOrderImp3dPv(Long orderImp3dPv) {
+    this.orderImp3dPv = orderImp3dPv;
+  }
+
+  public HourlyReportApiListStruct orderClk23dPv(Long orderClk23dPv) {
+    this.orderClk23dPv = orderClk23dPv;
+    return this;
+  }
+
+  /**
+   * Get orderClk23dPv
+   *
+   * @return orderClk23dPv
+   */
+  @ApiModelProperty(value = "")
+  public Long getOrderClk23dPv() {
+    return orderClk23dPv;
+  }
+
+  public void setOrderClk23dPv(Long orderClk23dPv) {
+    this.orderClk23dPv = orderClk23dPv;
+  }
+
+  public HourlyReportApiListStruct orderClk3dAmount(Long orderClk3dAmount) {
+    this.orderClk3dAmount = orderClk3dAmount;
+    return this;
+  }
+
+  /**
+   * Get orderClk3dAmount
+   *
+   * @return orderClk3dAmount
+   */
+  @ApiModelProperty(value = "")
+  public Long getOrderClk3dAmount() {
+    return orderClk3dAmount;
+  }
+
+  public void setOrderClk3dAmount(Long orderClk3dAmount) {
+    this.orderClk3dAmount = orderClk3dAmount;
+  }
+
+  public HourlyReportApiListStruct orderImp3dAmount(Long orderImp3dAmount) {
+    this.orderImp3dAmount = orderImp3dAmount;
+    return this;
+  }
+
+  /**
+   * Get orderImp3dAmount
+   *
+   * @return orderImp3dAmount
+   */
+  @ApiModelProperty(value = "")
+  public Long getOrderImp3dAmount() {
+    return orderImp3dAmount;
+  }
+
+  public void setOrderImp3dAmount(Long orderImp3dAmount) {
+    this.orderImp3dAmount = orderImp3dAmount;
+  }
+
+  public HourlyReportApiListStruct orderClk23dAmount(Long orderClk23dAmount) {
+    this.orderClk23dAmount = orderClk23dAmount;
+    return this;
+  }
+
+  /**
+   * Get orderClk23dAmount
+   *
+   * @return orderClk23dAmount
+   */
+  @ApiModelProperty(value = "")
+  public Long getOrderClk23dAmount() {
+    return orderClk23dAmount;
+  }
+
+  public void setOrderClk23dAmount(Long orderClk23dAmount) {
+    this.orderClk23dAmount = orderClk23dAmount;
+  }
+
+  public HourlyReportApiListStruct orderClk3dCost(Long orderClk3dCost) {
+    this.orderClk3dCost = orderClk3dCost;
+    return this;
+  }
+
+  /**
+   * Get orderClk3dCost
+   *
+   * @return orderClk3dCost
+   */
+  @ApiModelProperty(value = "")
+  public Long getOrderClk3dCost() {
+    return orderClk3dCost;
+  }
+
+  public void setOrderClk3dCost(Long orderClk3dCost) {
+    this.orderClk3dCost = orderClk3dCost;
+  }
+
+  public HourlyReportApiListStruct orderImp3dCost(Long orderImp3dCost) {
+    this.orderImp3dCost = orderImp3dCost;
+    return this;
+  }
+
+  /**
+   * Get orderImp3dCost
+   *
+   * @return orderImp3dCost
+   */
+  @ApiModelProperty(value = "")
+  public Long getOrderImp3dCost() {
+    return orderImp3dCost;
+  }
+
+  public void setOrderImp3dCost(Long orderImp3dCost) {
+    this.orderImp3dCost = orderImp3dCost;
+  }
+
+  public HourlyReportApiListStruct orderClk23dCost(Long orderClk23dCost) {
+    this.orderClk23dCost = orderClk23dCost;
+    return this;
+  }
+
+  /**
+   * Get orderClk23dCost
+   *
+   * @return orderClk23dCost
+   */
+  @ApiModelProperty(value = "")
+  public Long getOrderClk23dCost() {
+    return orderClk23dCost;
+  }
+
+  public void setOrderClk23dCost(Long orderClk23dCost) {
+    this.orderClk23dCost = orderClk23dCost;
+  }
+
+  public HourlyReportApiListStruct orderClk3dRoi(Double orderClk3dRoi) {
+    this.orderClk3dRoi = orderClk3dRoi;
+    return this;
+  }
+
+  /**
+   * Get orderClk3dRoi
+   *
+   * @return orderClk3dRoi
+   */
+  @ApiModelProperty(value = "")
+  public Double getOrderClk3dRoi() {
+    return orderClk3dRoi;
+  }
+
+  public void setOrderClk3dRoi(Double orderClk3dRoi) {
+    this.orderClk3dRoi = orderClk3dRoi;
+  }
+
+  public HourlyReportApiListStruct orderImp3dRoi(Double orderImp3dRoi) {
+    this.orderImp3dRoi = orderImp3dRoi;
+    return this;
+  }
+
+  /**
+   * Get orderImp3dRoi
+   *
+   * @return orderImp3dRoi
+   */
+  @ApiModelProperty(value = "")
+  public Double getOrderImp3dRoi() {
+    return orderImp3dRoi;
+  }
+
+  public void setOrderImp3dRoi(Double orderImp3dRoi) {
+    this.orderImp3dRoi = orderImp3dRoi;
+  }
+
+  public HourlyReportApiListStruct orderClk23dRoi(Double orderClk23dRoi) {
+    this.orderClk23dRoi = orderClk23dRoi;
+    return this;
+  }
+
+  /**
+   * Get orderClk23dRoi
+   *
+   * @return orderClk23dRoi
+   */
+  @ApiModelProperty(value = "")
+  public Double getOrderClk23dRoi() {
+    return orderClk23dRoi;
+  }
+
+  public void setOrderClk23dRoi(Double orderClk23dRoi) {
+    this.orderClk23dRoi = orderClk23dRoi;
+  }
+
   public HourlyReportApiListStruct adgroupId(Long adgroupId) {
     this.adgroupId = adgroupId;
     return this;
@@ -17505,6 +17775,44 @@ public class HourlyReportApiListStruct {
 
   public void setAdgroupName(String adgroupName) {
     this.adgroupName = adgroupName;
+  }
+
+  public HourlyReportApiListStruct liveStreamOrderPv(Long liveStreamOrderPv) {
+    this.liveStreamOrderPv = liveStreamOrderPv;
+    return this;
+  }
+
+  /**
+   * Get liveStreamOrderPv
+   *
+   * @return liveStreamOrderPv
+   */
+  @ApiModelProperty(value = "")
+  public Long getLiveStreamOrderPv() {
+    return liveStreamOrderPv;
+  }
+
+  public void setLiveStreamOrderPv(Long liveStreamOrderPv) {
+    this.liveStreamOrderPv = liveStreamOrderPv;
+  }
+
+  public HourlyReportApiListStruct liveStreamOrderAmount(Long liveStreamOrderAmount) {
+    this.liveStreamOrderAmount = liveStreamOrderAmount;
+    return this;
+  }
+
+  /**
+   * Get liveStreamOrderAmount
+   *
+   * @return liveStreamOrderAmount
+   */
+  @ApiModelProperty(value = "")
+  public Long getLiveStreamOrderAmount() {
+    return liveStreamOrderAmount;
+  }
+
+  public void setLiveStreamOrderAmount(Long liveStreamOrderAmount) {
+    this.liveStreamOrderAmount = liveStreamOrderAmount;
   }
 
   public HourlyReportApiListStruct dynamicCreativeId(Long dynamicCreativeId) {
@@ -18019,21 +18327,11 @@ public class HourlyReportApiListStruct {
             this.pagePhoneCallDirectRate, hourlyReportApiListStruct.pagePhoneCallDirectRate)
         && Objects.equals(
             this.pagePhoneCallDirectCost, hourlyReportApiListStruct.pagePhoneCallDirectCost)
-        && Objects.equals(
-            this.pagePhoneCallBackCount, hourlyReportApiListStruct.pagePhoneCallBackCount)
-        && Objects.equals(
-            this.pagePhoneCallBackRate, hourlyReportApiListStruct.pagePhoneCallBackRate)
-        && Objects.equals(
-            this.pagePhoneCallBackCost, hourlyReportApiListStruct.pagePhoneCallBackCost)
-        && Objects.equals(this.phoneCallCount, hourlyReportApiListStruct.phoneCallCount)
-        && Objects.equals(this.intePhoneCount, hourlyReportApiListStruct.intePhoneCount)
-        && Objects.equals(this.phoneCallUv, hourlyReportApiListStruct.phoneCallUv)
         && Objects.equals(this.potentialPhoneCount, hourlyReportApiListStruct.potentialPhoneCount)
         && Objects.equals(
             this.potentialCustomerPhoneUv, hourlyReportApiListStruct.potentialCustomerPhoneUv)
         && Objects.equals(this.effectivePhoneCount, hourlyReportApiListStruct.effectivePhoneCount)
         && Objects.equals(this.validPhoneUv, hourlyReportApiListStruct.validPhoneUv)
-        && Objects.equals(this.phoneConsultCount, hourlyReportApiListStruct.phoneConsultCount)
         && Objects.equals(this.couponUsageNumber, hourlyReportApiListStruct.couponUsageNumber)
         && Objects.equals(this.couponUsageRate, hourlyReportApiListStruct.couponUsageRate)
         && Objects.equals(this.couponUsageCost, hourlyReportApiListStruct.couponUsageCost)
@@ -18149,9 +18447,6 @@ public class HourlyReportApiListStruct {
         && Objects.equals(
             this.order24hByClickAmount, hourlyReportApiListStruct.order24hByClickAmount)
         && Objects.equals(this.order24hByClickRoi, hourlyReportApiListStruct.order24hByClickRoi)
-        && Objects.equals(this.liveStreamOrderPv, hourlyReportApiListStruct.liveStreamOrderPv)
-        && Objects.equals(
-            this.liveStreamOrderAmount, hourlyReportApiListStruct.liveStreamOrderAmount)
         && Objects.equals(this.deliverCount, hourlyReportApiListStruct.deliverCount)
         && Objects.equals(this.deliverRate, hourlyReportApiListStruct.deliverRate)
         && Objects.equals(this.deliverCost, hourlyReportApiListStruct.deliverCost)
@@ -18187,7 +18482,6 @@ public class HourlyReportApiListStruct {
         && Objects.equals(this.regClkRate, hourlyReportApiListStruct.regClkRate)
         && Objects.equals(this.activateRegisterRate, hourlyReportApiListStruct.activateRegisterRate)
         && Objects.equals(this.regPlaPv, hourlyReportApiListStruct.regPlaPv)
-        && Objects.equals(this.webRegisterUv, hourlyReportApiListStruct.webRegisterUv)
         && Objects.equals(this.regAllDedupPv, hourlyReportApiListStruct.regAllDedupPv)
         && Objects.equals(this.regCostPla, hourlyReportApiListStruct.regCostPla)
         && Objects.equals(this.regClickRatePla, hourlyReportApiListStruct.regClickRatePla)
@@ -18442,22 +18736,17 @@ public class HourlyReportApiListStruct {
             this.keyBehaviorConversionsRate, hourlyReportApiListStruct.keyBehaviorConversionsRate)
         && Objects.equals(this.applyPv, hourlyReportApiListStruct.applyPv)
         && Objects.equals(this.applyCost, hourlyReportApiListStruct.applyCost)
-        && Objects.equals(this.appApplyUv, hourlyReportApiListStruct.appApplyUv)
-        && Objects.equals(this.webApplyUv, hourlyReportApiListStruct.webApplyUv)
         && Objects.equals(this.bizPageApplyUv, hourlyReportApiListStruct.bizPageApplyUv)
         && Objects.equals(this.bizPageApplyRate, hourlyReportApiListStruct.bizPageApplyRate)
         && Objects.equals(this.bizPageApplyCost, hourlyReportApiListStruct.bizPageApplyCost)
         && Objects.equals(this.preCreditPv, hourlyReportApiListStruct.preCreditPv)
         && Objects.equals(this.preCreditAmount, hourlyReportApiListStruct.preCreditAmount)
         && Objects.equals(this.preCreditCost, hourlyReportApiListStruct.preCreditCost)
-        && Objects.equals(this.appPreCreditUv, hourlyReportApiListStruct.appPreCreditUv)
         && Objects.equals(this.bizPreCreditUv, hourlyReportApiListStruct.bizPreCreditUv)
         && Objects.equals(this.bizPreCreditUvCost, hourlyReportApiListStruct.bizPreCreditUvCost)
         && Objects.equals(this.creditPv, hourlyReportApiListStruct.creditPv)
         && Objects.equals(this.creditAmount, hourlyReportApiListStruct.creditAmount)
         && Objects.equals(this.creditCost, hourlyReportApiListStruct.creditCost)
-        && Objects.equals(this.appCreditUv, hourlyReportApiListStruct.appCreditUv)
-        && Objects.equals(this.webCreditUv, hourlyReportApiListStruct.webCreditUv)
         && Objects.equals(this.bizCreditUv, hourlyReportApiListStruct.bizCreditUv)
         && Objects.equals(this.bizCreditCost, hourlyReportApiListStruct.bizCreditCost)
         && Objects.equals(this.bizCreditRate, hourlyReportApiListStruct.bizCreditRate)
@@ -18465,7 +18754,6 @@ public class HourlyReportApiListStruct {
         && Objects.equals(this.withdrawDepositPv, hourlyReportApiListStruct.withdrawDepositPv)
         && Objects.equals(
             this.withdrawDepositAmount, hourlyReportApiListStruct.withdrawDepositAmount)
-        && Objects.equals(this.appWithdrawUv, hourlyReportApiListStruct.appWithdrawUv)
         && Objects.equals(
             this.bizWithdrawDepositsUv, hourlyReportApiListStruct.bizWithdrawDepositsUv)
         && Objects.equals(
@@ -18945,8 +19233,39 @@ public class HourlyReportApiListStruct {
         && Objects.equals(this.bfAllDedupPv, hourlyReportApiListStruct.bfAllDedupPv)
         && Objects.equals(this.retentionDedupPv, hourlyReportApiListStruct.retentionDedupPv)
         && Objects.equals(this.retentionAllDedupPv, hourlyReportApiListStruct.retentionAllDedupPv)
+        && Objects.equals(this.creditDedupPv, hourlyReportApiListStruct.creditDedupPv)
+        && Objects.equals(this.preCreditDedupPv, hourlyReportApiListStruct.preCreditDedupPv)
+        && Objects.equals(this.withdrawDedupPv, hourlyReportApiListStruct.withdrawDedupPv)
+        && Objects.equals(this.applyDedupPv, hourlyReportApiListStruct.applyDedupPv)
+        && Objects.equals(this.purchaseDedupImpPv, hourlyReportApiListStruct.purchaseDedupImpPv)
+        && Objects.equals(this.purchaseDedupClkPv, hourlyReportApiListStruct.purchaseDedupClkPv)
+        && Objects.equals(this.purchaseImpAmount, hourlyReportApiListStruct.purchaseImpAmount)
+        && Objects.equals(this.purchaseClkAmount, hourlyReportApiListStruct.purchaseClkAmount)
+        && Objects.equals(this.purchaseImpRate, hourlyReportApiListStruct.purchaseImpRate)
+        && Objects.equals(this.purchaseClk2Rate, hourlyReportApiListStruct.purchaseClk2Rate)
+        && Objects.equals(this.purchaseImpCost, hourlyReportApiListStruct.purchaseImpCost)
+        && Objects.equals(this.purchaseClkCost, hourlyReportApiListStruct.purchaseClkCost)
+        && Objects.equals(this.purchaseImpRoi, hourlyReportApiListStruct.purchaseImpRoi)
+        && Objects.equals(this.purchaseClkRoi, hourlyReportApiListStruct.purchaseClkRoi)
+        && Objects.equals(this.orderDedupImpPv, hourlyReportApiListStruct.orderDedupImpPv)
+        && Objects.equals(this.orderDedupClkPv, hourlyReportApiListStruct.orderDedupClkPv)
+        && Objects.equals(this.orderClk3dPv, hourlyReportApiListStruct.orderClk3dPv)
+        && Objects.equals(this.orderImp3dPv, hourlyReportApiListStruct.orderImp3dPv)
+        && Objects.equals(this.orderClk23dPv, hourlyReportApiListStruct.orderClk23dPv)
+        && Objects.equals(this.orderClk3dAmount, hourlyReportApiListStruct.orderClk3dAmount)
+        && Objects.equals(this.orderImp3dAmount, hourlyReportApiListStruct.orderImp3dAmount)
+        && Objects.equals(this.orderClk23dAmount, hourlyReportApiListStruct.orderClk23dAmount)
+        && Objects.equals(this.orderClk3dCost, hourlyReportApiListStruct.orderClk3dCost)
+        && Objects.equals(this.orderImp3dCost, hourlyReportApiListStruct.orderImp3dCost)
+        && Objects.equals(this.orderClk23dCost, hourlyReportApiListStruct.orderClk23dCost)
+        && Objects.equals(this.orderClk3dRoi, hourlyReportApiListStruct.orderClk3dRoi)
+        && Objects.equals(this.orderImp3dRoi, hourlyReportApiListStruct.orderImp3dRoi)
+        && Objects.equals(this.orderClk23dRoi, hourlyReportApiListStruct.orderClk23dRoi)
         && Objects.equals(this.adgroupId, hourlyReportApiListStruct.adgroupId)
         && Objects.equals(this.adgroupName, hourlyReportApiListStruct.adgroupName)
+        && Objects.equals(this.liveStreamOrderPv, hourlyReportApiListStruct.liveStreamOrderPv)
+        && Objects.equals(
+            this.liveStreamOrderAmount, hourlyReportApiListStruct.liveStreamOrderAmount)
         && Objects.equals(this.dynamicCreativeId, hourlyReportApiListStruct.dynamicCreativeId)
         && Objects.equals(this.dynamicCreativeName, hourlyReportApiListStruct.dynamicCreativeName)
         && Objects.equals(this.siteSet, hourlyReportApiListStruct.siteSet)
@@ -19119,17 +19438,10 @@ public class HourlyReportApiListStruct {
         pagePhoneCallDirectCount,
         pagePhoneCallDirectRate,
         pagePhoneCallDirectCost,
-        pagePhoneCallBackCount,
-        pagePhoneCallBackRate,
-        pagePhoneCallBackCost,
-        phoneCallCount,
-        intePhoneCount,
-        phoneCallUv,
         potentialPhoneCount,
         potentialCustomerPhoneUv,
         effectivePhoneCount,
         validPhoneUv,
-        phoneConsultCount,
         couponUsageNumber,
         couponUsageRate,
         couponUsageCost,
@@ -19218,8 +19530,6 @@ public class HourlyReportApiListStruct {
         order24hByClickCount,
         order24hByClickAmount,
         order24hByClickRoi,
-        liveStreamOrderPv,
-        liveStreamOrderAmount,
         deliverCount,
         deliverRate,
         deliverCost,
@@ -19251,7 +19561,6 @@ public class HourlyReportApiListStruct {
         regClkRate,
         activateRegisterRate,
         regPlaPv,
-        webRegisterUv,
         regAllDedupPv,
         regCostPla,
         regClickRatePla,
@@ -19437,29 +19746,23 @@ public class HourlyReportApiListStruct {
         keyBehaviorConversionsRate,
         applyPv,
         applyCost,
-        appApplyUv,
-        webApplyUv,
         bizPageApplyUv,
         bizPageApplyRate,
         bizPageApplyCost,
         preCreditPv,
         preCreditAmount,
         preCreditCost,
-        appPreCreditUv,
         bizPreCreditUv,
         bizPreCreditUvCost,
         creditPv,
         creditAmount,
         creditCost,
-        appCreditUv,
-        webCreditUv,
         bizCreditUv,
         bizCreditCost,
         bizCreditRate,
         creApplicationRate,
         withdrawDepositPv,
         withdrawDepositAmount,
-        appWithdrawUv,
         bizWithdrawDepositsUv,
         bizWithdrawDepositsUvCost,
         couponClickCount,
@@ -19754,8 +20057,38 @@ public class HourlyReportApiListStruct {
         bfAllDedupPv,
         retentionDedupPv,
         retentionAllDedupPv,
+        creditDedupPv,
+        preCreditDedupPv,
+        withdrawDedupPv,
+        applyDedupPv,
+        purchaseDedupImpPv,
+        purchaseDedupClkPv,
+        purchaseImpAmount,
+        purchaseClkAmount,
+        purchaseImpRate,
+        purchaseClk2Rate,
+        purchaseImpCost,
+        purchaseClkCost,
+        purchaseImpRoi,
+        purchaseClkRoi,
+        orderDedupImpPv,
+        orderDedupClkPv,
+        orderClk3dPv,
+        orderImp3dPv,
+        orderClk23dPv,
+        orderClk3dAmount,
+        orderImp3dAmount,
+        orderClk23dAmount,
+        orderClk3dCost,
+        orderImp3dCost,
+        orderClk23dCost,
+        orderClk3dRoi,
+        orderImp3dRoi,
+        orderClk23dRoi,
         adgroupId,
         adgroupName,
+        liveStreamOrderPv,
+        liveStreamOrderAmount,
         dynamicCreativeId,
         dynamicCreativeName,
         siteSet,

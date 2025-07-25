@@ -54,6 +54,7 @@ public class OrganizationAccountRelationApi {
    * @param paginationMode (required)
    * @param accountId (optional)
    * @param advertiserType (optional)
+   * @param businessUnitId (optional)
    * @param cursor (optional)
    * @param page (optional)
    * @param pageSize (optional)
@@ -67,6 +68,7 @@ public class OrganizationAccountRelationApi {
       String paginationMode,
       Long accountId,
       String advertiserType,
+      Long businessUnitId,
       Long cursor,
       Long page,
       Long pageSize,
@@ -87,6 +89,8 @@ public class OrganizationAccountRelationApi {
       localVarQueryParams.addAll(apiClient.parameterToPair("account_id", accountId));
     if (advertiserType != null)
       localVarQueryParams.addAll(apiClient.parameterToPair("advertiser_type", advertiserType));
+    if (businessUnitId != null)
+      localVarQueryParams.addAll(apiClient.parameterToPair("business_unit_id", businessUnitId));
     if (paginationMode != null)
       localVarQueryParams.addAll(apiClient.parameterToPair("pagination_mode", paginationMode));
     if (cursor != null) localVarQueryParams.addAll(apiClient.parameterToPair("cursor", cursor));
@@ -150,6 +154,7 @@ public class OrganizationAccountRelationApi {
       String paginationMode,
       Long accountId,
       String advertiserType,
+      Long businessUnitId,
       Long cursor,
       Long page,
       Long pageSize,
@@ -170,6 +175,7 @@ public class OrganizationAccountRelationApi {
             paginationMode,
             accountId,
             advertiserType,
+            businessUnitId,
             cursor,
             page,
             pageSize,
@@ -186,6 +192,7 @@ public class OrganizationAccountRelationApi {
    * @param paginationMode (required)
    * @param accountId (optional)
    * @param advertiserType (optional)
+   * @param businessUnitId (optional)
    * @param cursor (optional)
    * @param page (optional)
    * @param pageSize (optional)
@@ -198,6 +205,7 @@ public class OrganizationAccountRelationApi {
       String paginationMode,
       Long accountId,
       String advertiserType,
+      Long businessUnitId,
       Long cursor,
       Long page,
       Long pageSize,
@@ -206,7 +214,15 @@ public class OrganizationAccountRelationApi {
       throws ApiException {
     ApiResponse<OrganizationAccountRelationGetResponse> resp =
         organizationAccountRelationGetWithHttpInfo(
-            paginationMode, accountId, advertiserType, cursor, page, pageSize, fields, headerPair);
+            paginationMode,
+            accountId,
+            advertiserType,
+            businessUnitId,
+            cursor,
+            page,
+            pageSize,
+            fields,
+            headerPair);
     return resp.getData();
   }
 
@@ -216,6 +232,7 @@ public class OrganizationAccountRelationApi {
    * @param paginationMode (required)
    * @param accountId (optional)
    * @param advertiserType (optional)
+   * @param businessUnitId (optional)
    * @param cursor (optional)
    * @param page (optional)
    * @param pageSize (optional)
@@ -229,6 +246,7 @@ public class OrganizationAccountRelationApi {
           String paginationMode,
           Long accountId,
           String advertiserType,
+          Long businessUnitId,
           Long cursor,
           Long page,
           Long pageSize,
@@ -240,6 +258,7 @@ public class OrganizationAccountRelationApi {
             paginationMode,
             accountId,
             advertiserType,
+            businessUnitId,
             cursor,
             page,
             pageSize,
@@ -257,6 +276,7 @@ public class OrganizationAccountRelationApi {
    * @param paginationMode (required)
    * @param accountId (optional)
    * @param advertiserType (optional)
+   * @param businessUnitId (optional)
    * @param cursor (optional)
    * @param page (optional)
    * @param pageSize (optional)
@@ -269,6 +289,7 @@ public class OrganizationAccountRelationApi {
       String paginationMode,
       Long accountId,
       String advertiserType,
+      Long businessUnitId,
       Long cursor,
       Long page,
       Long pageSize,
@@ -303,6 +324,7 @@ public class OrganizationAccountRelationApi {
             paginationMode,
             accountId,
             advertiserType,
+            businessUnitId,
             cursor,
             page,
             pageSize,

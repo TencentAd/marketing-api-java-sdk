@@ -27,6 +27,9 @@ public class ActionButtonComponent {
   @SerializedName("value")
   private ActionButtonStruct value = null;
 
+  @SerializedName("is_deleted")
+  private Boolean isDeleted = null;
+
   public ActionButtonComponent componentId(Long componentId) {
     this.componentId = componentId;
     return this;
@@ -65,6 +68,25 @@ public class ActionButtonComponent {
     this.value = value;
   }
 
+  public ActionButtonComponent isDeleted(Boolean isDeleted) {
+    this.isDeleted = isDeleted;
+    return this;
+  }
+
+  /**
+   * Get isDeleted
+   *
+   * @return isDeleted
+   */
+  @ApiModelProperty(value = "")
+  public Boolean isIsDeleted() {
+    return isDeleted;
+  }
+
+  public void setIsDeleted(Boolean isDeleted) {
+    this.isDeleted = isDeleted;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -75,12 +97,13 @@ public class ActionButtonComponent {
     }
     ActionButtonComponent actionButtonComponent = (ActionButtonComponent) o;
     return Objects.equals(this.componentId, actionButtonComponent.componentId)
-        && Objects.equals(this.value, actionButtonComponent.value);
+        && Objects.equals(this.value, actionButtonComponent.value)
+        && Objects.equals(this.isDeleted, actionButtonComponent.isDeleted);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(componentId, value);
+    return Objects.hash(componentId, value, isDeleted);
   }
 
   @Override

@@ -59,6 +59,9 @@ public class AdcreativeTemplateStructAdpermit {
   @SerializedName("creative_permissions")
   private CreativePermissions creativePermissions = null;
 
+  @SerializedName("live_promoted_type")
+  private LivePromotedType livePromotedType = null;
+
   public AdcreativeTemplateStructAdpermit creativeTemplateId(Long creativeTemplateId) {
     this.creativeTemplateId = creativeTemplateId;
     return this;
@@ -320,6 +323,25 @@ public class AdcreativeTemplateStructAdpermit {
     this.creativePermissions = creativePermissions;
   }
 
+  public AdcreativeTemplateStructAdpermit livePromotedType(LivePromotedType livePromotedType) {
+    this.livePromotedType = livePromotedType;
+    return this;
+  }
+
+  /**
+   * Get livePromotedType
+   *
+   * @return livePromotedType
+   */
+  @ApiModelProperty(value = "")
+  public LivePromotedType getLivePromotedType() {
+    return livePromotedType;
+  }
+
+  public void setLivePromotedType(LivePromotedType livePromotedType) {
+    this.livePromotedType = livePromotedType;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -354,7 +376,8 @@ public class AdcreativeTemplateStructAdpermit {
         && Objects.equals(
             this.supportMpaVideoTemplate, adcreativeTemplateStructAdpermit.supportMpaVideoTemplate)
         && Objects.equals(
-            this.creativePermissions, adcreativeTemplateStructAdpermit.creativePermissions);
+            this.creativePermissions, adcreativeTemplateStructAdpermit.creativePermissions)
+        && Objects.equals(this.livePromotedType, adcreativeTemplateStructAdpermit.livePromotedType);
   }
 
   @Override
@@ -371,7 +394,8 @@ public class AdcreativeTemplateStructAdpermit {
         supportMpa,
         supportMpaImageTemplate,
         supportMpaVideoTemplate,
-        creativePermissions);
+        creativePermissions,
+        livePromotedType);
   }
 
   @Override

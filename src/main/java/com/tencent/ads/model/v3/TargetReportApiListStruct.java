@@ -483,24 +483,6 @@ public class TargetReportApiListStruct {
   @SerializedName("page_phone_call_direct_cost")
   private Long pagePhoneCallDirectCost = null;
 
-  @SerializedName("page_phone_call_back_count")
-  private Long pagePhoneCallBackCount = null;
-
-  @SerializedName("page_phone_call_back_rate")
-  private Double pagePhoneCallBackRate = null;
-
-  @SerializedName("page_phone_call_back_cost")
-  private Long pagePhoneCallBackCost = null;
-
-  @SerializedName("phone_call_count")
-  private Long phoneCallCount = null;
-
-  @SerializedName("inte_phone_count")
-  private Long intePhoneCount = null;
-
-  @SerializedName("phone_call_uv")
-  private Long phoneCallUv = null;
-
   @SerializedName("potential_phone_count")
   private Long potentialPhoneCount = null;
 
@@ -512,9 +494,6 @@ public class TargetReportApiListStruct {
 
   @SerializedName("valid_phone_uv")
   private Long validPhoneUv = null;
-
-  @SerializedName("phone_consult_count")
-  private Long phoneConsultCount = null;
 
   @SerializedName("coupon_usage_number")
   private Long couponUsageNumber = null;
@@ -780,12 +759,6 @@ public class TargetReportApiListStruct {
   @SerializedName("order_24h_by_click_roi")
   private Double order24hByClickRoi = null;
 
-  @SerializedName("live_stream_order_pv")
-  private Long liveStreamOrderPv = null;
-
-  @SerializedName("live_stream_order_amount")
-  private Long liveStreamOrderAmount = null;
-
   @SerializedName("deliver_count")
   private Long deliverCount = null;
 
@@ -878,9 +851,6 @@ public class TargetReportApiListStruct {
 
   @SerializedName("reg_pla_pv")
   private Long regPlaPv = null;
-
-  @SerializedName("web_register_uv")
-  private Long webRegisterUv = null;
 
   @SerializedName("reg_all_dedup_pv")
   private Long regAllDedupPv = null;
@@ -1437,12 +1407,6 @@ public class TargetReportApiListStruct {
   @SerializedName("apply_cost")
   private Long applyCost = null;
 
-  @SerializedName("app_apply_uv")
-  private Long appApplyUv = null;
-
-  @SerializedName("web_apply_uv")
-  private Long webApplyUv = null;
-
   @SerializedName("biz_page_apply_uv")
   private Long bizPageApplyUv = null;
 
@@ -1461,9 +1425,6 @@ public class TargetReportApiListStruct {
   @SerializedName("pre_credit_cost")
   private Long preCreditCost = null;
 
-  @SerializedName("app_pre_credit_uv")
-  private Long appPreCreditUv = null;
-
   @SerializedName("biz_pre_credit_uv")
   private Long bizPreCreditUv = null;
 
@@ -1478,12 +1439,6 @@ public class TargetReportApiListStruct {
 
   @SerializedName("credit_cost")
   private Long creditCost = null;
-
-  @SerializedName("app_credit_uv")
-  private Long appCreditUv = null;
-
-  @SerializedName("web_credit_uv")
-  private Long webCreditUv = null;
 
   @SerializedName("biz_credit_uv")
   private Long bizCreditUv = null;
@@ -1502,9 +1457,6 @@ public class TargetReportApiListStruct {
 
   @SerializedName("withdraw_deposit_amount")
   private Long withdrawDepositAmount = null;
-
-  @SerializedName("app_withdraw_uv")
-  private Long appWithdrawUv = null;
 
   @SerializedName("biz_withdraw_deposits_uv")
   private Long bizWithdrawDepositsUv = null;
@@ -2246,6 +2198,90 @@ public class TargetReportApiListStruct {
 
   @SerializedName("retention_all_dedup_pv")
   private Long retentionAllDedupPv = null;
+
+  @SerializedName("credit_dedup_pv")
+  private Long creditDedupPv = null;
+
+  @SerializedName("pre_credit_dedup_pv")
+  private Long preCreditDedupPv = null;
+
+  @SerializedName("withdraw_dedup_pv")
+  private Long withdrawDedupPv = null;
+
+  @SerializedName("apply_dedup_pv")
+  private Long applyDedupPv = null;
+
+  @SerializedName("purchase_dedup_imp_pv")
+  private Long purchaseDedupImpPv = null;
+
+  @SerializedName("purchase_dedup_clk_pv")
+  private Long purchaseDedupClkPv = null;
+
+  @SerializedName("purchase_imp_amount")
+  private Long purchaseImpAmount = null;
+
+  @SerializedName("purchase_clk_amount")
+  private Long purchaseClkAmount = null;
+
+  @SerializedName("purchase_imp_rate")
+  private Double purchaseImpRate = null;
+
+  @SerializedName("purchase_clk2_rate")
+  private Double purchaseClk2Rate = null;
+
+  @SerializedName("purchase_imp_cost")
+  private Long purchaseImpCost = null;
+
+  @SerializedName("purchase_clk_cost")
+  private Long purchaseClkCost = null;
+
+  @SerializedName("purchase_imp_roi")
+  private Double purchaseImpRoi = null;
+
+  @SerializedName("purchase_clk_roi")
+  private Double purchaseClkRoi = null;
+
+  @SerializedName("order_dedup_imp_pv")
+  private Long orderDedupImpPv = null;
+
+  @SerializedName("order_dedup_clk_pv")
+  private Long orderDedupClkPv = null;
+
+  @SerializedName("order_clk_3d_pv")
+  private Long orderClk3dPv = null;
+
+  @SerializedName("order_imp_3d_pv")
+  private Long orderImp3dPv = null;
+
+  @SerializedName("order_clk2_3d_pv")
+  private Long orderClk23dPv = null;
+
+  @SerializedName("order_clk_3d_amount")
+  private Long orderClk3dAmount = null;
+
+  @SerializedName("order_imp_3d_amount")
+  private Long orderImp3dAmount = null;
+
+  @SerializedName("order_clk2_3d_amount")
+  private Long orderClk23dAmount = null;
+
+  @SerializedName("order_clk_3d_cost")
+  private Long orderClk3dCost = null;
+
+  @SerializedName("order_imp_3d_cost")
+  private Long orderImp3dCost = null;
+
+  @SerializedName("order_clk2_3d_cost")
+  private Long orderClk23dCost = null;
+
+  @SerializedName("order_clk_3d_roi")
+  private Double orderClk3dRoi = null;
+
+  @SerializedName("order_imp_3d_roi")
+  private Double orderImp3dRoi = null;
+
+  @SerializedName("order_clk2_3d_roi")
+  private Double orderClk23dRoi = null;
 
   @SerializedName("age_id")
   private Long ageId = null;
@@ -5201,120 +5237,6 @@ public class TargetReportApiListStruct {
     this.pagePhoneCallDirectCost = pagePhoneCallDirectCost;
   }
 
-  public TargetReportApiListStruct pagePhoneCallBackCount(Long pagePhoneCallBackCount) {
-    this.pagePhoneCallBackCount = pagePhoneCallBackCount;
-    return this;
-  }
-
-  /**
-   * Get pagePhoneCallBackCount
-   *
-   * @return pagePhoneCallBackCount
-   */
-  @ApiModelProperty(value = "")
-  public Long getPagePhoneCallBackCount() {
-    return pagePhoneCallBackCount;
-  }
-
-  public void setPagePhoneCallBackCount(Long pagePhoneCallBackCount) {
-    this.pagePhoneCallBackCount = pagePhoneCallBackCount;
-  }
-
-  public TargetReportApiListStruct pagePhoneCallBackRate(Double pagePhoneCallBackRate) {
-    this.pagePhoneCallBackRate = pagePhoneCallBackRate;
-    return this;
-  }
-
-  /**
-   * Get pagePhoneCallBackRate
-   *
-   * @return pagePhoneCallBackRate
-   */
-  @ApiModelProperty(value = "")
-  public Double getPagePhoneCallBackRate() {
-    return pagePhoneCallBackRate;
-  }
-
-  public void setPagePhoneCallBackRate(Double pagePhoneCallBackRate) {
-    this.pagePhoneCallBackRate = pagePhoneCallBackRate;
-  }
-
-  public TargetReportApiListStruct pagePhoneCallBackCost(Long pagePhoneCallBackCost) {
-    this.pagePhoneCallBackCost = pagePhoneCallBackCost;
-    return this;
-  }
-
-  /**
-   * Get pagePhoneCallBackCost
-   *
-   * @return pagePhoneCallBackCost
-   */
-  @ApiModelProperty(value = "")
-  public Long getPagePhoneCallBackCost() {
-    return pagePhoneCallBackCost;
-  }
-
-  public void setPagePhoneCallBackCost(Long pagePhoneCallBackCost) {
-    this.pagePhoneCallBackCost = pagePhoneCallBackCost;
-  }
-
-  public TargetReportApiListStruct phoneCallCount(Long phoneCallCount) {
-    this.phoneCallCount = phoneCallCount;
-    return this;
-  }
-
-  /**
-   * Get phoneCallCount
-   *
-   * @return phoneCallCount
-   */
-  @ApiModelProperty(value = "")
-  public Long getPhoneCallCount() {
-    return phoneCallCount;
-  }
-
-  public void setPhoneCallCount(Long phoneCallCount) {
-    this.phoneCallCount = phoneCallCount;
-  }
-
-  public TargetReportApiListStruct intePhoneCount(Long intePhoneCount) {
-    this.intePhoneCount = intePhoneCount;
-    return this;
-  }
-
-  /**
-   * Get intePhoneCount
-   *
-   * @return intePhoneCount
-   */
-  @ApiModelProperty(value = "")
-  public Long getIntePhoneCount() {
-    return intePhoneCount;
-  }
-
-  public void setIntePhoneCount(Long intePhoneCount) {
-    this.intePhoneCount = intePhoneCount;
-  }
-
-  public TargetReportApiListStruct phoneCallUv(Long phoneCallUv) {
-    this.phoneCallUv = phoneCallUv;
-    return this;
-  }
-
-  /**
-   * Get phoneCallUv
-   *
-   * @return phoneCallUv
-   */
-  @ApiModelProperty(value = "")
-  public Long getPhoneCallUv() {
-    return phoneCallUv;
-  }
-
-  public void setPhoneCallUv(Long phoneCallUv) {
-    this.phoneCallUv = phoneCallUv;
-  }
-
   public TargetReportApiListStruct potentialPhoneCount(Long potentialPhoneCount) {
     this.potentialPhoneCount = potentialPhoneCount;
     return this;
@@ -5389,25 +5311,6 @@ public class TargetReportApiListStruct {
 
   public void setValidPhoneUv(Long validPhoneUv) {
     this.validPhoneUv = validPhoneUv;
-  }
-
-  public TargetReportApiListStruct phoneConsultCount(Long phoneConsultCount) {
-    this.phoneConsultCount = phoneConsultCount;
-    return this;
-  }
-
-  /**
-   * Get phoneConsultCount
-   *
-   * @return phoneConsultCount
-   */
-  @ApiModelProperty(value = "")
-  public Long getPhoneConsultCount() {
-    return phoneConsultCount;
-  }
-
-  public void setPhoneConsultCount(Long phoneConsultCount) {
-    this.phoneConsultCount = phoneConsultCount;
   }
 
   public TargetReportApiListStruct couponUsageNumber(Long couponUsageNumber) {
@@ -7086,44 +6989,6 @@ public class TargetReportApiListStruct {
     this.order24hByClickRoi = order24hByClickRoi;
   }
 
-  public TargetReportApiListStruct liveStreamOrderPv(Long liveStreamOrderPv) {
-    this.liveStreamOrderPv = liveStreamOrderPv;
-    return this;
-  }
-
-  /**
-   * Get liveStreamOrderPv
-   *
-   * @return liveStreamOrderPv
-   */
-  @ApiModelProperty(value = "")
-  public Long getLiveStreamOrderPv() {
-    return liveStreamOrderPv;
-  }
-
-  public void setLiveStreamOrderPv(Long liveStreamOrderPv) {
-    this.liveStreamOrderPv = liveStreamOrderPv;
-  }
-
-  public TargetReportApiListStruct liveStreamOrderAmount(Long liveStreamOrderAmount) {
-    this.liveStreamOrderAmount = liveStreamOrderAmount;
-    return this;
-  }
-
-  /**
-   * Get liveStreamOrderAmount
-   *
-   * @return liveStreamOrderAmount
-   */
-  @ApiModelProperty(value = "")
-  public Long getLiveStreamOrderAmount() {
-    return liveStreamOrderAmount;
-  }
-
-  public void setLiveStreamOrderAmount(Long liveStreamOrderAmount) {
-    this.liveStreamOrderAmount = liveStreamOrderAmount;
-  }
-
   public TargetReportApiListStruct deliverCount(Long deliverCount) {
     this.deliverCount = deliverCount;
     return this;
@@ -7711,25 +7576,6 @@ public class TargetReportApiListStruct {
 
   public void setRegPlaPv(Long regPlaPv) {
     this.regPlaPv = regPlaPv;
-  }
-
-  public TargetReportApiListStruct webRegisterUv(Long webRegisterUv) {
-    this.webRegisterUv = webRegisterUv;
-    return this;
-  }
-
-  /**
-   * Get webRegisterUv
-   *
-   * @return webRegisterUv
-   */
-  @ApiModelProperty(value = "")
-  public Long getWebRegisterUv() {
-    return webRegisterUv;
-  }
-
-  public void setWebRegisterUv(Long webRegisterUv) {
-    this.webRegisterUv = webRegisterUv;
   }
 
   public TargetReportApiListStruct regAllDedupPv(Long regAllDedupPv) {
@@ -11252,44 +11098,6 @@ public class TargetReportApiListStruct {
     this.applyCost = applyCost;
   }
 
-  public TargetReportApiListStruct appApplyUv(Long appApplyUv) {
-    this.appApplyUv = appApplyUv;
-    return this;
-  }
-
-  /**
-   * Get appApplyUv
-   *
-   * @return appApplyUv
-   */
-  @ApiModelProperty(value = "")
-  public Long getAppApplyUv() {
-    return appApplyUv;
-  }
-
-  public void setAppApplyUv(Long appApplyUv) {
-    this.appApplyUv = appApplyUv;
-  }
-
-  public TargetReportApiListStruct webApplyUv(Long webApplyUv) {
-    this.webApplyUv = webApplyUv;
-    return this;
-  }
-
-  /**
-   * Get webApplyUv
-   *
-   * @return webApplyUv
-   */
-  @ApiModelProperty(value = "")
-  public Long getWebApplyUv() {
-    return webApplyUv;
-  }
-
-  public void setWebApplyUv(Long webApplyUv) {
-    this.webApplyUv = webApplyUv;
-  }
-
   public TargetReportApiListStruct bizPageApplyUv(Long bizPageApplyUv) {
     this.bizPageApplyUv = bizPageApplyUv;
     return this;
@@ -11404,25 +11212,6 @@ public class TargetReportApiListStruct {
     this.preCreditCost = preCreditCost;
   }
 
-  public TargetReportApiListStruct appPreCreditUv(Long appPreCreditUv) {
-    this.appPreCreditUv = appPreCreditUv;
-    return this;
-  }
-
-  /**
-   * Get appPreCreditUv
-   *
-   * @return appPreCreditUv
-   */
-  @ApiModelProperty(value = "")
-  public Long getAppPreCreditUv() {
-    return appPreCreditUv;
-  }
-
-  public void setAppPreCreditUv(Long appPreCreditUv) {
-    this.appPreCreditUv = appPreCreditUv;
-  }
-
   public TargetReportApiListStruct bizPreCreditUv(Long bizPreCreditUv) {
     this.bizPreCreditUv = bizPreCreditUv;
     return this;
@@ -11516,44 +11305,6 @@ public class TargetReportApiListStruct {
 
   public void setCreditCost(Long creditCost) {
     this.creditCost = creditCost;
-  }
-
-  public TargetReportApiListStruct appCreditUv(Long appCreditUv) {
-    this.appCreditUv = appCreditUv;
-    return this;
-  }
-
-  /**
-   * Get appCreditUv
-   *
-   * @return appCreditUv
-   */
-  @ApiModelProperty(value = "")
-  public Long getAppCreditUv() {
-    return appCreditUv;
-  }
-
-  public void setAppCreditUv(Long appCreditUv) {
-    this.appCreditUv = appCreditUv;
-  }
-
-  public TargetReportApiListStruct webCreditUv(Long webCreditUv) {
-    this.webCreditUv = webCreditUv;
-    return this;
-  }
-
-  /**
-   * Get webCreditUv
-   *
-   * @return webCreditUv
-   */
-  @ApiModelProperty(value = "")
-  public Long getWebCreditUv() {
-    return webCreditUv;
-  }
-
-  public void setWebCreditUv(Long webCreditUv) {
-    this.webCreditUv = webCreditUv;
   }
 
   public TargetReportApiListStruct bizCreditUv(Long bizCreditUv) {
@@ -11668,25 +11419,6 @@ public class TargetReportApiListStruct {
 
   public void setWithdrawDepositAmount(Long withdrawDepositAmount) {
     this.withdrawDepositAmount = withdrawDepositAmount;
-  }
-
-  public TargetReportApiListStruct appWithdrawUv(Long appWithdrawUv) {
-    this.appWithdrawUv = appWithdrawUv;
-    return this;
-  }
-
-  /**
-   * Get appWithdrawUv
-   *
-   * @return appWithdrawUv
-   */
-  @ApiModelProperty(value = "")
-  public Long getAppWithdrawUv() {
-    return appWithdrawUv;
-  }
-
-  public void setAppWithdrawUv(Long appWithdrawUv) {
-    this.appWithdrawUv = appWithdrawUv;
   }
 
   public TargetReportApiListStruct bizWithdrawDepositsUv(Long bizWithdrawDepositsUv) {
@@ -16430,6 +16162,538 @@ public class TargetReportApiListStruct {
     this.retentionAllDedupPv = retentionAllDedupPv;
   }
 
+  public TargetReportApiListStruct creditDedupPv(Long creditDedupPv) {
+    this.creditDedupPv = creditDedupPv;
+    return this;
+  }
+
+  /**
+   * Get creditDedupPv
+   *
+   * @return creditDedupPv
+   */
+  @ApiModelProperty(value = "")
+  public Long getCreditDedupPv() {
+    return creditDedupPv;
+  }
+
+  public void setCreditDedupPv(Long creditDedupPv) {
+    this.creditDedupPv = creditDedupPv;
+  }
+
+  public TargetReportApiListStruct preCreditDedupPv(Long preCreditDedupPv) {
+    this.preCreditDedupPv = preCreditDedupPv;
+    return this;
+  }
+
+  /**
+   * Get preCreditDedupPv
+   *
+   * @return preCreditDedupPv
+   */
+  @ApiModelProperty(value = "")
+  public Long getPreCreditDedupPv() {
+    return preCreditDedupPv;
+  }
+
+  public void setPreCreditDedupPv(Long preCreditDedupPv) {
+    this.preCreditDedupPv = preCreditDedupPv;
+  }
+
+  public TargetReportApiListStruct withdrawDedupPv(Long withdrawDedupPv) {
+    this.withdrawDedupPv = withdrawDedupPv;
+    return this;
+  }
+
+  /**
+   * Get withdrawDedupPv
+   *
+   * @return withdrawDedupPv
+   */
+  @ApiModelProperty(value = "")
+  public Long getWithdrawDedupPv() {
+    return withdrawDedupPv;
+  }
+
+  public void setWithdrawDedupPv(Long withdrawDedupPv) {
+    this.withdrawDedupPv = withdrawDedupPv;
+  }
+
+  public TargetReportApiListStruct applyDedupPv(Long applyDedupPv) {
+    this.applyDedupPv = applyDedupPv;
+    return this;
+  }
+
+  /**
+   * Get applyDedupPv
+   *
+   * @return applyDedupPv
+   */
+  @ApiModelProperty(value = "")
+  public Long getApplyDedupPv() {
+    return applyDedupPv;
+  }
+
+  public void setApplyDedupPv(Long applyDedupPv) {
+    this.applyDedupPv = applyDedupPv;
+  }
+
+  public TargetReportApiListStruct purchaseDedupImpPv(Long purchaseDedupImpPv) {
+    this.purchaseDedupImpPv = purchaseDedupImpPv;
+    return this;
+  }
+
+  /**
+   * Get purchaseDedupImpPv
+   *
+   * @return purchaseDedupImpPv
+   */
+  @ApiModelProperty(value = "")
+  public Long getPurchaseDedupImpPv() {
+    return purchaseDedupImpPv;
+  }
+
+  public void setPurchaseDedupImpPv(Long purchaseDedupImpPv) {
+    this.purchaseDedupImpPv = purchaseDedupImpPv;
+  }
+
+  public TargetReportApiListStruct purchaseDedupClkPv(Long purchaseDedupClkPv) {
+    this.purchaseDedupClkPv = purchaseDedupClkPv;
+    return this;
+  }
+
+  /**
+   * Get purchaseDedupClkPv
+   *
+   * @return purchaseDedupClkPv
+   */
+  @ApiModelProperty(value = "")
+  public Long getPurchaseDedupClkPv() {
+    return purchaseDedupClkPv;
+  }
+
+  public void setPurchaseDedupClkPv(Long purchaseDedupClkPv) {
+    this.purchaseDedupClkPv = purchaseDedupClkPv;
+  }
+
+  public TargetReportApiListStruct purchaseImpAmount(Long purchaseImpAmount) {
+    this.purchaseImpAmount = purchaseImpAmount;
+    return this;
+  }
+
+  /**
+   * Get purchaseImpAmount
+   *
+   * @return purchaseImpAmount
+   */
+  @ApiModelProperty(value = "")
+  public Long getPurchaseImpAmount() {
+    return purchaseImpAmount;
+  }
+
+  public void setPurchaseImpAmount(Long purchaseImpAmount) {
+    this.purchaseImpAmount = purchaseImpAmount;
+  }
+
+  public TargetReportApiListStruct purchaseClkAmount(Long purchaseClkAmount) {
+    this.purchaseClkAmount = purchaseClkAmount;
+    return this;
+  }
+
+  /**
+   * Get purchaseClkAmount
+   *
+   * @return purchaseClkAmount
+   */
+  @ApiModelProperty(value = "")
+  public Long getPurchaseClkAmount() {
+    return purchaseClkAmount;
+  }
+
+  public void setPurchaseClkAmount(Long purchaseClkAmount) {
+    this.purchaseClkAmount = purchaseClkAmount;
+  }
+
+  public TargetReportApiListStruct purchaseImpRate(Double purchaseImpRate) {
+    this.purchaseImpRate = purchaseImpRate;
+    return this;
+  }
+
+  /**
+   * Get purchaseImpRate
+   *
+   * @return purchaseImpRate
+   */
+  @ApiModelProperty(value = "")
+  public Double getPurchaseImpRate() {
+    return purchaseImpRate;
+  }
+
+  public void setPurchaseImpRate(Double purchaseImpRate) {
+    this.purchaseImpRate = purchaseImpRate;
+  }
+
+  public TargetReportApiListStruct purchaseClk2Rate(Double purchaseClk2Rate) {
+    this.purchaseClk2Rate = purchaseClk2Rate;
+    return this;
+  }
+
+  /**
+   * Get purchaseClk2Rate
+   *
+   * @return purchaseClk2Rate
+   */
+  @ApiModelProperty(value = "")
+  public Double getPurchaseClk2Rate() {
+    return purchaseClk2Rate;
+  }
+
+  public void setPurchaseClk2Rate(Double purchaseClk2Rate) {
+    this.purchaseClk2Rate = purchaseClk2Rate;
+  }
+
+  public TargetReportApiListStruct purchaseImpCost(Long purchaseImpCost) {
+    this.purchaseImpCost = purchaseImpCost;
+    return this;
+  }
+
+  /**
+   * Get purchaseImpCost
+   *
+   * @return purchaseImpCost
+   */
+  @ApiModelProperty(value = "")
+  public Long getPurchaseImpCost() {
+    return purchaseImpCost;
+  }
+
+  public void setPurchaseImpCost(Long purchaseImpCost) {
+    this.purchaseImpCost = purchaseImpCost;
+  }
+
+  public TargetReportApiListStruct purchaseClkCost(Long purchaseClkCost) {
+    this.purchaseClkCost = purchaseClkCost;
+    return this;
+  }
+
+  /**
+   * Get purchaseClkCost
+   *
+   * @return purchaseClkCost
+   */
+  @ApiModelProperty(value = "")
+  public Long getPurchaseClkCost() {
+    return purchaseClkCost;
+  }
+
+  public void setPurchaseClkCost(Long purchaseClkCost) {
+    this.purchaseClkCost = purchaseClkCost;
+  }
+
+  public TargetReportApiListStruct purchaseImpRoi(Double purchaseImpRoi) {
+    this.purchaseImpRoi = purchaseImpRoi;
+    return this;
+  }
+
+  /**
+   * Get purchaseImpRoi
+   *
+   * @return purchaseImpRoi
+   */
+  @ApiModelProperty(value = "")
+  public Double getPurchaseImpRoi() {
+    return purchaseImpRoi;
+  }
+
+  public void setPurchaseImpRoi(Double purchaseImpRoi) {
+    this.purchaseImpRoi = purchaseImpRoi;
+  }
+
+  public TargetReportApiListStruct purchaseClkRoi(Double purchaseClkRoi) {
+    this.purchaseClkRoi = purchaseClkRoi;
+    return this;
+  }
+
+  /**
+   * Get purchaseClkRoi
+   *
+   * @return purchaseClkRoi
+   */
+  @ApiModelProperty(value = "")
+  public Double getPurchaseClkRoi() {
+    return purchaseClkRoi;
+  }
+
+  public void setPurchaseClkRoi(Double purchaseClkRoi) {
+    this.purchaseClkRoi = purchaseClkRoi;
+  }
+
+  public TargetReportApiListStruct orderDedupImpPv(Long orderDedupImpPv) {
+    this.orderDedupImpPv = orderDedupImpPv;
+    return this;
+  }
+
+  /**
+   * Get orderDedupImpPv
+   *
+   * @return orderDedupImpPv
+   */
+  @ApiModelProperty(value = "")
+  public Long getOrderDedupImpPv() {
+    return orderDedupImpPv;
+  }
+
+  public void setOrderDedupImpPv(Long orderDedupImpPv) {
+    this.orderDedupImpPv = orderDedupImpPv;
+  }
+
+  public TargetReportApiListStruct orderDedupClkPv(Long orderDedupClkPv) {
+    this.orderDedupClkPv = orderDedupClkPv;
+    return this;
+  }
+
+  /**
+   * Get orderDedupClkPv
+   *
+   * @return orderDedupClkPv
+   */
+  @ApiModelProperty(value = "")
+  public Long getOrderDedupClkPv() {
+    return orderDedupClkPv;
+  }
+
+  public void setOrderDedupClkPv(Long orderDedupClkPv) {
+    this.orderDedupClkPv = orderDedupClkPv;
+  }
+
+  public TargetReportApiListStruct orderClk3dPv(Long orderClk3dPv) {
+    this.orderClk3dPv = orderClk3dPv;
+    return this;
+  }
+
+  /**
+   * Get orderClk3dPv
+   *
+   * @return orderClk3dPv
+   */
+  @ApiModelProperty(value = "")
+  public Long getOrderClk3dPv() {
+    return orderClk3dPv;
+  }
+
+  public void setOrderClk3dPv(Long orderClk3dPv) {
+    this.orderClk3dPv = orderClk3dPv;
+  }
+
+  public TargetReportApiListStruct orderImp3dPv(Long orderImp3dPv) {
+    this.orderImp3dPv = orderImp3dPv;
+    return this;
+  }
+
+  /**
+   * Get orderImp3dPv
+   *
+   * @return orderImp3dPv
+   */
+  @ApiModelProperty(value = "")
+  public Long getOrderImp3dPv() {
+    return orderImp3dPv;
+  }
+
+  public void setOrderImp3dPv(Long orderImp3dPv) {
+    this.orderImp3dPv = orderImp3dPv;
+  }
+
+  public TargetReportApiListStruct orderClk23dPv(Long orderClk23dPv) {
+    this.orderClk23dPv = orderClk23dPv;
+    return this;
+  }
+
+  /**
+   * Get orderClk23dPv
+   *
+   * @return orderClk23dPv
+   */
+  @ApiModelProperty(value = "")
+  public Long getOrderClk23dPv() {
+    return orderClk23dPv;
+  }
+
+  public void setOrderClk23dPv(Long orderClk23dPv) {
+    this.orderClk23dPv = orderClk23dPv;
+  }
+
+  public TargetReportApiListStruct orderClk3dAmount(Long orderClk3dAmount) {
+    this.orderClk3dAmount = orderClk3dAmount;
+    return this;
+  }
+
+  /**
+   * Get orderClk3dAmount
+   *
+   * @return orderClk3dAmount
+   */
+  @ApiModelProperty(value = "")
+  public Long getOrderClk3dAmount() {
+    return orderClk3dAmount;
+  }
+
+  public void setOrderClk3dAmount(Long orderClk3dAmount) {
+    this.orderClk3dAmount = orderClk3dAmount;
+  }
+
+  public TargetReportApiListStruct orderImp3dAmount(Long orderImp3dAmount) {
+    this.orderImp3dAmount = orderImp3dAmount;
+    return this;
+  }
+
+  /**
+   * Get orderImp3dAmount
+   *
+   * @return orderImp3dAmount
+   */
+  @ApiModelProperty(value = "")
+  public Long getOrderImp3dAmount() {
+    return orderImp3dAmount;
+  }
+
+  public void setOrderImp3dAmount(Long orderImp3dAmount) {
+    this.orderImp3dAmount = orderImp3dAmount;
+  }
+
+  public TargetReportApiListStruct orderClk23dAmount(Long orderClk23dAmount) {
+    this.orderClk23dAmount = orderClk23dAmount;
+    return this;
+  }
+
+  /**
+   * Get orderClk23dAmount
+   *
+   * @return orderClk23dAmount
+   */
+  @ApiModelProperty(value = "")
+  public Long getOrderClk23dAmount() {
+    return orderClk23dAmount;
+  }
+
+  public void setOrderClk23dAmount(Long orderClk23dAmount) {
+    this.orderClk23dAmount = orderClk23dAmount;
+  }
+
+  public TargetReportApiListStruct orderClk3dCost(Long orderClk3dCost) {
+    this.orderClk3dCost = orderClk3dCost;
+    return this;
+  }
+
+  /**
+   * Get orderClk3dCost
+   *
+   * @return orderClk3dCost
+   */
+  @ApiModelProperty(value = "")
+  public Long getOrderClk3dCost() {
+    return orderClk3dCost;
+  }
+
+  public void setOrderClk3dCost(Long orderClk3dCost) {
+    this.orderClk3dCost = orderClk3dCost;
+  }
+
+  public TargetReportApiListStruct orderImp3dCost(Long orderImp3dCost) {
+    this.orderImp3dCost = orderImp3dCost;
+    return this;
+  }
+
+  /**
+   * Get orderImp3dCost
+   *
+   * @return orderImp3dCost
+   */
+  @ApiModelProperty(value = "")
+  public Long getOrderImp3dCost() {
+    return orderImp3dCost;
+  }
+
+  public void setOrderImp3dCost(Long orderImp3dCost) {
+    this.orderImp3dCost = orderImp3dCost;
+  }
+
+  public TargetReportApiListStruct orderClk23dCost(Long orderClk23dCost) {
+    this.orderClk23dCost = orderClk23dCost;
+    return this;
+  }
+
+  /**
+   * Get orderClk23dCost
+   *
+   * @return orderClk23dCost
+   */
+  @ApiModelProperty(value = "")
+  public Long getOrderClk23dCost() {
+    return orderClk23dCost;
+  }
+
+  public void setOrderClk23dCost(Long orderClk23dCost) {
+    this.orderClk23dCost = orderClk23dCost;
+  }
+
+  public TargetReportApiListStruct orderClk3dRoi(Double orderClk3dRoi) {
+    this.orderClk3dRoi = orderClk3dRoi;
+    return this;
+  }
+
+  /**
+   * Get orderClk3dRoi
+   *
+   * @return orderClk3dRoi
+   */
+  @ApiModelProperty(value = "")
+  public Double getOrderClk3dRoi() {
+    return orderClk3dRoi;
+  }
+
+  public void setOrderClk3dRoi(Double orderClk3dRoi) {
+    this.orderClk3dRoi = orderClk3dRoi;
+  }
+
+  public TargetReportApiListStruct orderImp3dRoi(Double orderImp3dRoi) {
+    this.orderImp3dRoi = orderImp3dRoi;
+    return this;
+  }
+
+  /**
+   * Get orderImp3dRoi
+   *
+   * @return orderImp3dRoi
+   */
+  @ApiModelProperty(value = "")
+  public Double getOrderImp3dRoi() {
+    return orderImp3dRoi;
+  }
+
+  public void setOrderImp3dRoi(Double orderImp3dRoi) {
+    this.orderImp3dRoi = orderImp3dRoi;
+  }
+
+  public TargetReportApiListStruct orderClk23dRoi(Double orderClk23dRoi) {
+    this.orderClk23dRoi = orderClk23dRoi;
+    return this;
+  }
+
+  /**
+   * Get orderClk23dRoi
+   *
+   * @return orderClk23dRoi
+   */
+  @ApiModelProperty(value = "")
+  public Double getOrderClk23dRoi() {
+    return orderClk23dRoi;
+  }
+
+  public void setOrderClk23dRoi(Double orderClk23dRoi) {
+    this.orderClk23dRoi = orderClk23dRoi;
+  }
+
   public TargetReportApiListStruct ageId(Long ageId) {
     this.ageId = ageId;
     return this;
@@ -16810,21 +17074,11 @@ public class TargetReportApiListStruct {
             this.pagePhoneCallDirectRate, targetReportApiListStruct.pagePhoneCallDirectRate)
         && Objects.equals(
             this.pagePhoneCallDirectCost, targetReportApiListStruct.pagePhoneCallDirectCost)
-        && Objects.equals(
-            this.pagePhoneCallBackCount, targetReportApiListStruct.pagePhoneCallBackCount)
-        && Objects.equals(
-            this.pagePhoneCallBackRate, targetReportApiListStruct.pagePhoneCallBackRate)
-        && Objects.equals(
-            this.pagePhoneCallBackCost, targetReportApiListStruct.pagePhoneCallBackCost)
-        && Objects.equals(this.phoneCallCount, targetReportApiListStruct.phoneCallCount)
-        && Objects.equals(this.intePhoneCount, targetReportApiListStruct.intePhoneCount)
-        && Objects.equals(this.phoneCallUv, targetReportApiListStruct.phoneCallUv)
         && Objects.equals(this.potentialPhoneCount, targetReportApiListStruct.potentialPhoneCount)
         && Objects.equals(
             this.potentialCustomerPhoneUv, targetReportApiListStruct.potentialCustomerPhoneUv)
         && Objects.equals(this.effectivePhoneCount, targetReportApiListStruct.effectivePhoneCount)
         && Objects.equals(this.validPhoneUv, targetReportApiListStruct.validPhoneUv)
-        && Objects.equals(this.phoneConsultCount, targetReportApiListStruct.phoneConsultCount)
         && Objects.equals(this.couponUsageNumber, targetReportApiListStruct.couponUsageNumber)
         && Objects.equals(this.couponUsageRate, targetReportApiListStruct.couponUsageRate)
         && Objects.equals(this.couponUsageCost, targetReportApiListStruct.couponUsageCost)
@@ -16940,9 +17194,6 @@ public class TargetReportApiListStruct {
         && Objects.equals(
             this.order24hByClickAmount, targetReportApiListStruct.order24hByClickAmount)
         && Objects.equals(this.order24hByClickRoi, targetReportApiListStruct.order24hByClickRoi)
-        && Objects.equals(this.liveStreamOrderPv, targetReportApiListStruct.liveStreamOrderPv)
-        && Objects.equals(
-            this.liveStreamOrderAmount, targetReportApiListStruct.liveStreamOrderAmount)
         && Objects.equals(this.deliverCount, targetReportApiListStruct.deliverCount)
         && Objects.equals(this.deliverRate, targetReportApiListStruct.deliverRate)
         && Objects.equals(this.deliverCost, targetReportApiListStruct.deliverCost)
@@ -16978,7 +17229,6 @@ public class TargetReportApiListStruct {
         && Objects.equals(this.regClkRate, targetReportApiListStruct.regClkRate)
         && Objects.equals(this.activateRegisterRate, targetReportApiListStruct.activateRegisterRate)
         && Objects.equals(this.regPlaPv, targetReportApiListStruct.regPlaPv)
-        && Objects.equals(this.webRegisterUv, targetReportApiListStruct.webRegisterUv)
         && Objects.equals(this.regAllDedupPv, targetReportApiListStruct.regAllDedupPv)
         && Objects.equals(this.regCostPla, targetReportApiListStruct.regCostPla)
         && Objects.equals(this.regClickRatePla, targetReportApiListStruct.regClickRatePla)
@@ -17233,22 +17483,17 @@ public class TargetReportApiListStruct {
             this.keyBehaviorConversionsRate, targetReportApiListStruct.keyBehaviorConversionsRate)
         && Objects.equals(this.applyPv, targetReportApiListStruct.applyPv)
         && Objects.equals(this.applyCost, targetReportApiListStruct.applyCost)
-        && Objects.equals(this.appApplyUv, targetReportApiListStruct.appApplyUv)
-        && Objects.equals(this.webApplyUv, targetReportApiListStruct.webApplyUv)
         && Objects.equals(this.bizPageApplyUv, targetReportApiListStruct.bizPageApplyUv)
         && Objects.equals(this.bizPageApplyRate, targetReportApiListStruct.bizPageApplyRate)
         && Objects.equals(this.bizPageApplyCost, targetReportApiListStruct.bizPageApplyCost)
         && Objects.equals(this.preCreditPv, targetReportApiListStruct.preCreditPv)
         && Objects.equals(this.preCreditAmount, targetReportApiListStruct.preCreditAmount)
         && Objects.equals(this.preCreditCost, targetReportApiListStruct.preCreditCost)
-        && Objects.equals(this.appPreCreditUv, targetReportApiListStruct.appPreCreditUv)
         && Objects.equals(this.bizPreCreditUv, targetReportApiListStruct.bizPreCreditUv)
         && Objects.equals(this.bizPreCreditUvCost, targetReportApiListStruct.bizPreCreditUvCost)
         && Objects.equals(this.creditPv, targetReportApiListStruct.creditPv)
         && Objects.equals(this.creditAmount, targetReportApiListStruct.creditAmount)
         && Objects.equals(this.creditCost, targetReportApiListStruct.creditCost)
-        && Objects.equals(this.appCreditUv, targetReportApiListStruct.appCreditUv)
-        && Objects.equals(this.webCreditUv, targetReportApiListStruct.webCreditUv)
         && Objects.equals(this.bizCreditUv, targetReportApiListStruct.bizCreditUv)
         && Objects.equals(this.bizCreditCost, targetReportApiListStruct.bizCreditCost)
         && Objects.equals(this.bizCreditRate, targetReportApiListStruct.bizCreditRate)
@@ -17256,7 +17501,6 @@ public class TargetReportApiListStruct {
         && Objects.equals(this.withdrawDepositPv, targetReportApiListStruct.withdrawDepositPv)
         && Objects.equals(
             this.withdrawDepositAmount, targetReportApiListStruct.withdrawDepositAmount)
-        && Objects.equals(this.appWithdrawUv, targetReportApiListStruct.appWithdrawUv)
         && Objects.equals(
             this.bizWithdrawDepositsUv, targetReportApiListStruct.bizWithdrawDepositsUv)
         && Objects.equals(
@@ -17674,6 +17918,34 @@ public class TargetReportApiListStruct {
         && Objects.equals(this.bfAllDedupPv, targetReportApiListStruct.bfAllDedupPv)
         && Objects.equals(this.retentionDedupPv, targetReportApiListStruct.retentionDedupPv)
         && Objects.equals(this.retentionAllDedupPv, targetReportApiListStruct.retentionAllDedupPv)
+        && Objects.equals(this.creditDedupPv, targetReportApiListStruct.creditDedupPv)
+        && Objects.equals(this.preCreditDedupPv, targetReportApiListStruct.preCreditDedupPv)
+        && Objects.equals(this.withdrawDedupPv, targetReportApiListStruct.withdrawDedupPv)
+        && Objects.equals(this.applyDedupPv, targetReportApiListStruct.applyDedupPv)
+        && Objects.equals(this.purchaseDedupImpPv, targetReportApiListStruct.purchaseDedupImpPv)
+        && Objects.equals(this.purchaseDedupClkPv, targetReportApiListStruct.purchaseDedupClkPv)
+        && Objects.equals(this.purchaseImpAmount, targetReportApiListStruct.purchaseImpAmount)
+        && Objects.equals(this.purchaseClkAmount, targetReportApiListStruct.purchaseClkAmount)
+        && Objects.equals(this.purchaseImpRate, targetReportApiListStruct.purchaseImpRate)
+        && Objects.equals(this.purchaseClk2Rate, targetReportApiListStruct.purchaseClk2Rate)
+        && Objects.equals(this.purchaseImpCost, targetReportApiListStruct.purchaseImpCost)
+        && Objects.equals(this.purchaseClkCost, targetReportApiListStruct.purchaseClkCost)
+        && Objects.equals(this.purchaseImpRoi, targetReportApiListStruct.purchaseImpRoi)
+        && Objects.equals(this.purchaseClkRoi, targetReportApiListStruct.purchaseClkRoi)
+        && Objects.equals(this.orderDedupImpPv, targetReportApiListStruct.orderDedupImpPv)
+        && Objects.equals(this.orderDedupClkPv, targetReportApiListStruct.orderDedupClkPv)
+        && Objects.equals(this.orderClk3dPv, targetReportApiListStruct.orderClk3dPv)
+        && Objects.equals(this.orderImp3dPv, targetReportApiListStruct.orderImp3dPv)
+        && Objects.equals(this.orderClk23dPv, targetReportApiListStruct.orderClk23dPv)
+        && Objects.equals(this.orderClk3dAmount, targetReportApiListStruct.orderClk3dAmount)
+        && Objects.equals(this.orderImp3dAmount, targetReportApiListStruct.orderImp3dAmount)
+        && Objects.equals(this.orderClk23dAmount, targetReportApiListStruct.orderClk23dAmount)
+        && Objects.equals(this.orderClk3dCost, targetReportApiListStruct.orderClk3dCost)
+        && Objects.equals(this.orderImp3dCost, targetReportApiListStruct.orderImp3dCost)
+        && Objects.equals(this.orderClk23dCost, targetReportApiListStruct.orderClk23dCost)
+        && Objects.equals(this.orderClk3dRoi, targetReportApiListStruct.orderClk3dRoi)
+        && Objects.equals(this.orderImp3dRoi, targetReportApiListStruct.orderImp3dRoi)
+        && Objects.equals(this.orderClk23dRoi, targetReportApiListStruct.orderClk23dRoi)
         && Objects.equals(this.ageId, targetReportApiListStruct.ageId)
         && Objects.equals(this.cityId, targetReportApiListStruct.cityId)
         && Objects.equals(this.regionId, targetReportApiListStruct.regionId)
@@ -17840,17 +18112,10 @@ public class TargetReportApiListStruct {
         pagePhoneCallDirectCount,
         pagePhoneCallDirectRate,
         pagePhoneCallDirectCost,
-        pagePhoneCallBackCount,
-        pagePhoneCallBackRate,
-        pagePhoneCallBackCost,
-        phoneCallCount,
-        intePhoneCount,
-        phoneCallUv,
         potentialPhoneCount,
         potentialCustomerPhoneUv,
         effectivePhoneCount,
         validPhoneUv,
-        phoneConsultCount,
         couponUsageNumber,
         couponUsageRate,
         couponUsageCost,
@@ -17939,8 +18204,6 @@ public class TargetReportApiListStruct {
         order24hByClickCount,
         order24hByClickAmount,
         order24hByClickRoi,
-        liveStreamOrderPv,
-        liveStreamOrderAmount,
         deliverCount,
         deliverRate,
         deliverCost,
@@ -17972,7 +18235,6 @@ public class TargetReportApiListStruct {
         regClkRate,
         activateRegisterRate,
         regPlaPv,
-        webRegisterUv,
         regAllDedupPv,
         regCostPla,
         regClickRatePla,
@@ -18158,29 +18420,23 @@ public class TargetReportApiListStruct {
         keyBehaviorConversionsRate,
         applyPv,
         applyCost,
-        appApplyUv,
-        webApplyUv,
         bizPageApplyUv,
         bizPageApplyRate,
         bizPageApplyCost,
         preCreditPv,
         preCreditAmount,
         preCreditCost,
-        appPreCreditUv,
         bizPreCreditUv,
         bizPreCreditUvCost,
         creditPv,
         creditAmount,
         creditCost,
-        appCreditUv,
-        webCreditUv,
         bizCreditUv,
         bizCreditCost,
         bizCreditRate,
         creApplicationRate,
         withdrawDepositPv,
         withdrawDepositAmount,
-        appWithdrawUv,
         bizWithdrawDepositsUv,
         bizWithdrawDepositsUvCost,
         couponClickCount,
@@ -18428,6 +18684,34 @@ public class TargetReportApiListStruct {
         bfAllDedupPv,
         retentionDedupPv,
         retentionAllDedupPv,
+        creditDedupPv,
+        preCreditDedupPv,
+        withdrawDedupPv,
+        applyDedupPv,
+        purchaseDedupImpPv,
+        purchaseDedupClkPv,
+        purchaseImpAmount,
+        purchaseClkAmount,
+        purchaseImpRate,
+        purchaseClk2Rate,
+        purchaseImpCost,
+        purchaseClkCost,
+        purchaseImpRoi,
+        purchaseClkRoi,
+        orderDedupImpPv,
+        orderDedupClkPv,
+        orderClk3dPv,
+        orderImp3dPv,
+        orderClk23dPv,
+        orderClk3dAmount,
+        orderImp3dAmount,
+        orderClk23dAmount,
+        orderClk3dCost,
+        orderImp3dCost,
+        orderClk23dCost,
+        orderClk3dRoi,
+        orderImp3dRoi,
+        orderClk23dRoi,
         ageId,
         cityId,
         regionId,

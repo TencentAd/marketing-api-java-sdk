@@ -17,6 +17,8 @@ public class GetMaterialLabels {
 
   public Long accountId = null;
 
+  public Long organizationId = null;
+
   public Long labelId = null;
 
   public String labelName = null;
@@ -53,6 +55,7 @@ public class GetMaterialLabels {
             .materialLabels()
             .materialLabelsGet(
                 accountId,
+                organizationId,
                 labelId,
                 labelName,
                 firstLabelLevelIdList,

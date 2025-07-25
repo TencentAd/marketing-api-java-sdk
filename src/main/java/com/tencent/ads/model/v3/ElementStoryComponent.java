@@ -27,6 +27,9 @@ public class ElementStoryComponent {
   @SerializedName("value")
   private ElementStoryStruct value = null;
 
+  @SerializedName("is_deleted")
+  private Boolean isDeleted = null;
+
   public ElementStoryComponent componentId(Long componentId) {
     this.componentId = componentId;
     return this;
@@ -65,6 +68,25 @@ public class ElementStoryComponent {
     this.value = value;
   }
 
+  public ElementStoryComponent isDeleted(Boolean isDeleted) {
+    this.isDeleted = isDeleted;
+    return this;
+  }
+
+  /**
+   * Get isDeleted
+   *
+   * @return isDeleted
+   */
+  @ApiModelProperty(value = "")
+  public Boolean isIsDeleted() {
+    return isDeleted;
+  }
+
+  public void setIsDeleted(Boolean isDeleted) {
+    this.isDeleted = isDeleted;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -75,12 +97,13 @@ public class ElementStoryComponent {
     }
     ElementStoryComponent elementStoryComponent = (ElementStoryComponent) o;
     return Objects.equals(this.componentId, elementStoryComponent.componentId)
-        && Objects.equals(this.value, elementStoryComponent.value);
+        && Objects.equals(this.value, elementStoryComponent.value)
+        && Objects.equals(this.isDeleted, elementStoryComponent.isDeleted);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(componentId, value);
+    return Objects.hash(componentId, value, isDeleted);
   }
 
   @Override

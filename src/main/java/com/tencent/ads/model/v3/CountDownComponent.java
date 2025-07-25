@@ -27,6 +27,9 @@ public class CountDownComponent {
   @SerializedName("value")
   private CountDownStruct value = null;
 
+  @SerializedName("is_deleted")
+  private Boolean isDeleted = null;
+
   public CountDownComponent componentId(Long componentId) {
     this.componentId = componentId;
     return this;
@@ -65,6 +68,25 @@ public class CountDownComponent {
     this.value = value;
   }
 
+  public CountDownComponent isDeleted(Boolean isDeleted) {
+    this.isDeleted = isDeleted;
+    return this;
+  }
+
+  /**
+   * Get isDeleted
+   *
+   * @return isDeleted
+   */
+  @ApiModelProperty(value = "")
+  public Boolean isIsDeleted() {
+    return isDeleted;
+  }
+
+  public void setIsDeleted(Boolean isDeleted) {
+    this.isDeleted = isDeleted;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -75,12 +97,13 @@ public class CountDownComponent {
     }
     CountDownComponent countDownComponent = (CountDownComponent) o;
     return Objects.equals(this.componentId, countDownComponent.componentId)
-        && Objects.equals(this.value, countDownComponent.value);
+        && Objects.equals(this.value, countDownComponent.value)
+        && Objects.equals(this.isDeleted, countDownComponent.isDeleted);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(componentId, value);
+    return Objects.hash(componentId, value, isDeleted);
   }
 
   @Override

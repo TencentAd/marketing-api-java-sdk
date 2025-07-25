@@ -22,6 +22,9 @@ public class ImageProcessingAddRequest {
   @SerializedName("account_id")
   private Long accountId = null;
 
+  @SerializedName("organization_id")
+  private Long organizationId = null;
+
   @SerializedName("image_id")
   private String imageId = null;
 
@@ -51,6 +54,25 @@ public class ImageProcessingAddRequest {
 
   public void setAccountId(Long accountId) {
     this.accountId = accountId;
+  }
+
+  public ImageProcessingAddRequest organizationId(Long organizationId) {
+    this.organizationId = organizationId;
+    return this;
+  }
+
+  /**
+   * Get organizationId
+   *
+   * @return organizationId
+   */
+  @ApiModelProperty(value = "")
+  public Long getOrganizationId() {
+    return organizationId;
+  }
+
+  public void setOrganizationId(Long organizationId) {
+    this.organizationId = organizationId;
   }
 
   public ImageProcessingAddRequest imageId(String imageId) {
@@ -139,6 +161,7 @@ public class ImageProcessingAddRequest {
     }
     ImageProcessingAddRequest imageProcessingAddRequest = (ImageProcessingAddRequest) o;
     return Objects.equals(this.accountId, imageProcessingAddRequest.accountId)
+        && Objects.equals(this.organizationId, imageProcessingAddRequest.organizationId)
         && Objects.equals(this.imageId, imageProcessingAddRequest.imageId)
         && Objects.equals(this.operationType, imageProcessingAddRequest.operationType)
         && Objects.equals(this.operationSpec, imageProcessingAddRequest.operationSpec)
@@ -147,7 +170,8 @@ public class ImageProcessingAddRequest {
 
   @Override
   public int hashCode() {
-    return Objects.hash(accountId, imageId, operationType, operationSpec, fileSizeMax);
+    return Objects.hash(
+        accountId, organizationId, imageId, operationType, operationSpec, fileSizeMax);
   }
 
   @Override

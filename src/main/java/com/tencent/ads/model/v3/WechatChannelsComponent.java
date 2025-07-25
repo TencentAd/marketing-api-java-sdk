@@ -27,6 +27,9 @@ public class WechatChannelsComponent {
   @SerializedName("value")
   private WechatChannelsStruct value = null;
 
+  @SerializedName("is_deleted")
+  private Boolean isDeleted = null;
+
   public WechatChannelsComponent componentId(Long componentId) {
     this.componentId = componentId;
     return this;
@@ -65,6 +68,25 @@ public class WechatChannelsComponent {
     this.value = value;
   }
 
+  public WechatChannelsComponent isDeleted(Boolean isDeleted) {
+    this.isDeleted = isDeleted;
+    return this;
+  }
+
+  /**
+   * Get isDeleted
+   *
+   * @return isDeleted
+   */
+  @ApiModelProperty(value = "")
+  public Boolean isIsDeleted() {
+    return isDeleted;
+  }
+
+  public void setIsDeleted(Boolean isDeleted) {
+    this.isDeleted = isDeleted;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -75,12 +97,13 @@ public class WechatChannelsComponent {
     }
     WechatChannelsComponent wechatChannelsComponent = (WechatChannelsComponent) o;
     return Objects.equals(this.componentId, wechatChannelsComponent.componentId)
-        && Objects.equals(this.value, wechatChannelsComponent.value);
+        && Objects.equals(this.value, wechatChannelsComponent.value)
+        && Objects.equals(this.isDeleted, wechatChannelsComponent.isDeleted);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(componentId, value);
+    return Objects.hash(componentId, value, isDeleted);
   }
 
   @Override

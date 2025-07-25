@@ -27,6 +27,9 @@ public class EndPageComponent {
   @SerializedName("value")
   private EndPageStruct value = null;
 
+  @SerializedName("is_deleted")
+  private Boolean isDeleted = null;
+
   public EndPageComponent componentId(Long componentId) {
     this.componentId = componentId;
     return this;
@@ -65,6 +68,25 @@ public class EndPageComponent {
     this.value = value;
   }
 
+  public EndPageComponent isDeleted(Boolean isDeleted) {
+    this.isDeleted = isDeleted;
+    return this;
+  }
+
+  /**
+   * Get isDeleted
+   *
+   * @return isDeleted
+   */
+  @ApiModelProperty(value = "")
+  public Boolean isIsDeleted() {
+    return isDeleted;
+  }
+
+  public void setIsDeleted(Boolean isDeleted) {
+    this.isDeleted = isDeleted;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -75,12 +97,13 @@ public class EndPageComponent {
     }
     EndPageComponent endPageComponent = (EndPageComponent) o;
     return Objects.equals(this.componentId, endPageComponent.componentId)
-        && Objects.equals(this.value, endPageComponent.value);
+        && Objects.equals(this.value, endPageComponent.value)
+        && Objects.equals(this.isDeleted, endPageComponent.isDeleted);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(componentId, value);
+    return Objects.hash(componentId, value, isDeleted);
   }
 
   @Override

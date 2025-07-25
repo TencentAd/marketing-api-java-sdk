@@ -22,6 +22,9 @@ public class MaterialLabelsDeleteRequest {
   @SerializedName("account_id")
   private Long accountId = null;
 
+  @SerializedName("organization_id")
+  private Long organizationId = null;
+
   @SerializedName("label_id")
   private Long labelId = null;
 
@@ -42,6 +45,25 @@ public class MaterialLabelsDeleteRequest {
 
   public void setAccountId(Long accountId) {
     this.accountId = accountId;
+  }
+
+  public MaterialLabelsDeleteRequest organizationId(Long organizationId) {
+    this.organizationId = organizationId;
+    return this;
+  }
+
+  /**
+   * Get organizationId
+   *
+   * @return organizationId
+   */
+  @ApiModelProperty(value = "")
+  public Long getOrganizationId() {
+    return organizationId;
+  }
+
+  public void setOrganizationId(Long organizationId) {
+    this.organizationId = organizationId;
   }
 
   public MaterialLabelsDeleteRequest labelId(Long labelId) {
@@ -73,12 +95,13 @@ public class MaterialLabelsDeleteRequest {
     }
     MaterialLabelsDeleteRequest materialLabelsDeleteRequest = (MaterialLabelsDeleteRequest) o;
     return Objects.equals(this.accountId, materialLabelsDeleteRequest.accountId)
+        && Objects.equals(this.organizationId, materialLabelsDeleteRequest.organizationId)
         && Objects.equals(this.labelId, materialLabelsDeleteRequest.labelId);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(accountId, labelId);
+    return Objects.hash(accountId, organizationId, labelId);
   }
 
   @Override

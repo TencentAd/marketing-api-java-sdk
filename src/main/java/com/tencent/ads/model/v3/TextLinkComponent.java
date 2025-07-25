@@ -27,6 +27,9 @@ public class TextLinkComponent {
   @SerializedName("value")
   private TextLinkStruct value = null;
 
+  @SerializedName("is_deleted")
+  private Boolean isDeleted = null;
+
   public TextLinkComponent componentId(Long componentId) {
     this.componentId = componentId;
     return this;
@@ -65,6 +68,25 @@ public class TextLinkComponent {
     this.value = value;
   }
 
+  public TextLinkComponent isDeleted(Boolean isDeleted) {
+    this.isDeleted = isDeleted;
+    return this;
+  }
+
+  /**
+   * Get isDeleted
+   *
+   * @return isDeleted
+   */
+  @ApiModelProperty(value = "")
+  public Boolean isIsDeleted() {
+    return isDeleted;
+  }
+
+  public void setIsDeleted(Boolean isDeleted) {
+    this.isDeleted = isDeleted;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -75,12 +97,13 @@ public class TextLinkComponent {
     }
     TextLinkComponent textLinkComponent = (TextLinkComponent) o;
     return Objects.equals(this.componentId, textLinkComponent.componentId)
-        && Objects.equals(this.value, textLinkComponent.value);
+        && Objects.equals(this.value, textLinkComponent.value)
+        && Objects.equals(this.isDeleted, textLinkComponent.isDeleted);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(componentId, value);
+    return Objects.hash(componentId, value, isDeleted);
   }
 
   @Override
