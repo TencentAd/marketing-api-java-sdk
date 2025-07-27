@@ -2292,6 +2292,12 @@ public class TargetReportApiListStruct {
   @SerializedName("region_id")
   private Long regionId = null;
 
+  @SerializedName("live_stream_order_pv")
+  private Long liveStreamOrderPv = null;
+
+  @SerializedName("live_stream_order_amount")
+  private Long liveStreamOrderAmount = null;
+
   @SerializedName("adgroup_id")
   private Long adgroupId = null;
 
@@ -16751,6 +16757,44 @@ public class TargetReportApiListStruct {
     this.regionId = regionId;
   }
 
+  public TargetReportApiListStruct liveStreamOrderPv(Long liveStreamOrderPv) {
+    this.liveStreamOrderPv = liveStreamOrderPv;
+    return this;
+  }
+
+  /**
+   * Get liveStreamOrderPv
+   *
+   * @return liveStreamOrderPv
+   */
+  @ApiModelProperty(value = "")
+  public Long getLiveStreamOrderPv() {
+    return liveStreamOrderPv;
+  }
+
+  public void setLiveStreamOrderPv(Long liveStreamOrderPv) {
+    this.liveStreamOrderPv = liveStreamOrderPv;
+  }
+
+  public TargetReportApiListStruct liveStreamOrderAmount(Long liveStreamOrderAmount) {
+    this.liveStreamOrderAmount = liveStreamOrderAmount;
+    return this;
+  }
+
+  /**
+   * Get liveStreamOrderAmount
+   *
+   * @return liveStreamOrderAmount
+   */
+  @ApiModelProperty(value = "")
+  public Long getLiveStreamOrderAmount() {
+    return liveStreamOrderAmount;
+  }
+
+  public void setLiveStreamOrderAmount(Long liveStreamOrderAmount) {
+    this.liveStreamOrderAmount = liveStreamOrderAmount;
+  }
+
   public TargetReportApiListStruct adgroupId(Long adgroupId) {
     this.adgroupId = adgroupId;
     return this;
@@ -17949,6 +17993,9 @@ public class TargetReportApiListStruct {
         && Objects.equals(this.ageId, targetReportApiListStruct.ageId)
         && Objects.equals(this.cityId, targetReportApiListStruct.cityId)
         && Objects.equals(this.regionId, targetReportApiListStruct.regionId)
+        && Objects.equals(this.liveStreamOrderPv, targetReportApiListStruct.liveStreamOrderPv)
+        && Objects.equals(
+            this.liveStreamOrderAmount, targetReportApiListStruct.liveStreamOrderAmount)
         && Objects.equals(this.adgroupId, targetReportApiListStruct.adgroupId)
         && Objects.equals(this.audienceId, targetReportApiListStruct.audienceId)
         && Objects.equals(this.projectId, targetReportApiListStruct.projectId)
@@ -18715,6 +18762,8 @@ public class TargetReportApiListStruct {
         ageId,
         cityId,
         regionId,
+        liveStreamOrderPv,
+        liveStreamOrderAmount,
         adgroupId,
         audienceId,
         projectId,
