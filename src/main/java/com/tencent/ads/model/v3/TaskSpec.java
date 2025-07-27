@@ -112,6 +112,9 @@ public class TaskSpec {
   @SerializedName("update_adgroup_smart_delivery_goal_spec")
   private List<UpdateAdgroupSmartDeliveryGoalItem> updateAdgroupSmartDeliveryGoalSpec = null;
 
+  @SerializedName("delete_account_component_spec")
+  private List<DeleteAccountComponentItem> deleteAccountComponentSpec = null;
+
   public TaskSpec updateUnionPositionPackageSpec(
       List<UpdateUnionPositionPackageItem> updateUnionPositionPackageSpec) {
     this.updateUnionPositionPackageSpec = updateUnionPositionPackageSpec;
@@ -967,6 +970,36 @@ public class TaskSpec {
     this.updateAdgroupSmartDeliveryGoalSpec = updateAdgroupSmartDeliveryGoalSpec;
   }
 
+  public TaskSpec deleteAccountComponentSpec(
+      List<DeleteAccountComponentItem> deleteAccountComponentSpec) {
+    this.deleteAccountComponentSpec = deleteAccountComponentSpec;
+    return this;
+  }
+
+  public TaskSpec addDeleteAccountComponentSpecItem(
+      DeleteAccountComponentItem deleteAccountComponentSpecItem) {
+    if (this.deleteAccountComponentSpec == null) {
+      this.deleteAccountComponentSpec = new ArrayList<DeleteAccountComponentItem>();
+    }
+    this.deleteAccountComponentSpec.add(deleteAccountComponentSpecItem);
+    return this;
+  }
+
+  /**
+   * Get deleteAccountComponentSpec
+   *
+   * @return deleteAccountComponentSpec
+   */
+  @ApiModelProperty(value = "")
+  public List<DeleteAccountComponentItem> getDeleteAccountComponentSpec() {
+    return deleteAccountComponentSpec;
+  }
+
+  public void setDeleteAccountComponentSpec(
+      List<DeleteAccountComponentItem> deleteAccountComponentSpec) {
+    this.deleteAccountComponentSpec = deleteAccountComponentSpec;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -1026,7 +1059,8 @@ public class TaskSpec {
         && Objects.equals(this.updateAdgroupDeriveConfSpec, taskSpec.updateAdgroupDeriveConfSpec)
         && Objects.equals(this.updateComponentSharingSpec, taskSpec.updateComponentSharingSpec)
         && Objects.equals(
-            this.updateAdgroupSmartDeliveryGoalSpec, taskSpec.updateAdgroupSmartDeliveryGoalSpec);
+            this.updateAdgroupSmartDeliveryGoalSpec, taskSpec.updateAdgroupSmartDeliveryGoalSpec)
+        && Objects.equals(this.deleteAccountComponentSpec, taskSpec.deleteAccountComponentSpec);
   }
 
   @Override
@@ -1059,7 +1093,8 @@ public class TaskSpec {
         updateAdgroupEcomPkamSpec,
         updateAdgroupDeriveConfSpec,
         updateComponentSharingSpec,
-        updateAdgroupSmartDeliveryGoalSpec);
+        updateAdgroupSmartDeliveryGoalSpec,
+        deleteAccountComponentSpec);
   }
 
   @Override

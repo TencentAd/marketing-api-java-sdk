@@ -42,6 +42,12 @@ public class DetailListStruct {
   @SerializedName("scope_object_id_str")
   private String scopeObjectIdStr = null;
 
+  @SerializedName("code")
+  private Long code = null;
+
+  @SerializedName("organization_id")
+  private Long organizationId = null;
+
   public DetailListStruct scopeObjectId(Long scopeObjectId) {
     this.scopeObjectId = scopeObjectId;
     return this;
@@ -175,6 +181,44 @@ public class DetailListStruct {
     this.scopeObjectIdStr = scopeObjectIdStr;
   }
 
+  public DetailListStruct code(Long code) {
+    this.code = code;
+    return this;
+  }
+
+  /**
+   * Get code
+   *
+   * @return code
+   */
+  @ApiModelProperty(value = "")
+  public Long getCode() {
+    return code;
+  }
+
+  public void setCode(Long code) {
+    this.code = code;
+  }
+
+  public DetailListStruct organizationId(Long organizationId) {
+    this.organizationId = organizationId;
+    return this;
+  }
+
+  /**
+   * Get organizationId
+   *
+   * @return organizationId
+   */
+  @ApiModelProperty(value = "")
+  public Long getOrganizationId() {
+    return organizationId;
+  }
+
+  public void setOrganizationId(Long organizationId) {
+    this.organizationId = organizationId;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -190,7 +234,9 @@ public class DetailListStruct {
         && Objects.equals(this.message, detailListStruct.message)
         && Objects.equals(this.accountId, detailListStruct.accountId)
         && Objects.equals(this.extData, detailListStruct.extData)
-        && Objects.equals(this.scopeObjectIdStr, detailListStruct.scopeObjectIdStr);
+        && Objects.equals(this.scopeObjectIdStr, detailListStruct.scopeObjectIdStr)
+        && Objects.equals(this.code, detailListStruct.code)
+        && Objects.equals(this.organizationId, detailListStruct.organizationId);
   }
 
   @Override
@@ -202,7 +248,9 @@ public class DetailListStruct {
         message,
         accountId,
         extData,
-        scopeObjectIdStr);
+        scopeObjectIdStr,
+        code,
+        organizationId);
   }
 
   @Override

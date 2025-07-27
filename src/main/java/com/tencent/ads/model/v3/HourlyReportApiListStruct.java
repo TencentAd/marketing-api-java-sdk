@@ -2427,17 +2427,17 @@ public class HourlyReportApiListStruct {
   @SerializedName("adgroup_name")
   private String adgroupName = null;
 
-  @SerializedName("live_stream_order_pv")
-  private Long liveStreamOrderPv = null;
-
-  @SerializedName("live_stream_order_amount")
-  private Long liveStreamOrderAmount = null;
-
   @SerializedName("dynamic_creative_id")
   private Long dynamicCreativeId = null;
 
   @SerializedName("dynamic_creative_name")
   private String dynamicCreativeName = null;
+
+  @SerializedName("live_stream_order_pv")
+  private Long liveStreamOrderPv = null;
+
+  @SerializedName("live_stream_order_amount")
+  private Long liveStreamOrderAmount = null;
 
   @SerializedName("site_set")
   private String siteSet = null;
@@ -17777,44 +17777,6 @@ public class HourlyReportApiListStruct {
     this.adgroupName = adgroupName;
   }
 
-  public HourlyReportApiListStruct liveStreamOrderPv(Long liveStreamOrderPv) {
-    this.liveStreamOrderPv = liveStreamOrderPv;
-    return this;
-  }
-
-  /**
-   * Get liveStreamOrderPv
-   *
-   * @return liveStreamOrderPv
-   */
-  @ApiModelProperty(value = "")
-  public Long getLiveStreamOrderPv() {
-    return liveStreamOrderPv;
-  }
-
-  public void setLiveStreamOrderPv(Long liveStreamOrderPv) {
-    this.liveStreamOrderPv = liveStreamOrderPv;
-  }
-
-  public HourlyReportApiListStruct liveStreamOrderAmount(Long liveStreamOrderAmount) {
-    this.liveStreamOrderAmount = liveStreamOrderAmount;
-    return this;
-  }
-
-  /**
-   * Get liveStreamOrderAmount
-   *
-   * @return liveStreamOrderAmount
-   */
-  @ApiModelProperty(value = "")
-  public Long getLiveStreamOrderAmount() {
-    return liveStreamOrderAmount;
-  }
-
-  public void setLiveStreamOrderAmount(Long liveStreamOrderAmount) {
-    this.liveStreamOrderAmount = liveStreamOrderAmount;
-  }
-
   public HourlyReportApiListStruct dynamicCreativeId(Long dynamicCreativeId) {
     this.dynamicCreativeId = dynamicCreativeId;
     return this;
@@ -17851,6 +17813,44 @@ public class HourlyReportApiListStruct {
 
   public void setDynamicCreativeName(String dynamicCreativeName) {
     this.dynamicCreativeName = dynamicCreativeName;
+  }
+
+  public HourlyReportApiListStruct liveStreamOrderPv(Long liveStreamOrderPv) {
+    this.liveStreamOrderPv = liveStreamOrderPv;
+    return this;
+  }
+
+  /**
+   * Get liveStreamOrderPv
+   *
+   * @return liveStreamOrderPv
+   */
+  @ApiModelProperty(value = "")
+  public Long getLiveStreamOrderPv() {
+    return liveStreamOrderPv;
+  }
+
+  public void setLiveStreamOrderPv(Long liveStreamOrderPv) {
+    this.liveStreamOrderPv = liveStreamOrderPv;
+  }
+
+  public HourlyReportApiListStruct liveStreamOrderAmount(Long liveStreamOrderAmount) {
+    this.liveStreamOrderAmount = liveStreamOrderAmount;
+    return this;
+  }
+
+  /**
+   * Get liveStreamOrderAmount
+   *
+   * @return liveStreamOrderAmount
+   */
+  @ApiModelProperty(value = "")
+  public Long getLiveStreamOrderAmount() {
+    return liveStreamOrderAmount;
+  }
+
+  public void setLiveStreamOrderAmount(Long liveStreamOrderAmount) {
+    this.liveStreamOrderAmount = liveStreamOrderAmount;
   }
 
   public HourlyReportApiListStruct siteSet(String siteSet) {
@@ -19263,11 +19263,11 @@ public class HourlyReportApiListStruct {
         && Objects.equals(this.orderClk23dRoi, hourlyReportApiListStruct.orderClk23dRoi)
         && Objects.equals(this.adgroupId, hourlyReportApiListStruct.adgroupId)
         && Objects.equals(this.adgroupName, hourlyReportApiListStruct.adgroupName)
+        && Objects.equals(this.dynamicCreativeId, hourlyReportApiListStruct.dynamicCreativeId)
+        && Objects.equals(this.dynamicCreativeName, hourlyReportApiListStruct.dynamicCreativeName)
         && Objects.equals(this.liveStreamOrderPv, hourlyReportApiListStruct.liveStreamOrderPv)
         && Objects.equals(
             this.liveStreamOrderAmount, hourlyReportApiListStruct.liveStreamOrderAmount)
-        && Objects.equals(this.dynamicCreativeId, hourlyReportApiListStruct.dynamicCreativeId)
-        && Objects.equals(this.dynamicCreativeName, hourlyReportApiListStruct.dynamicCreativeName)
         && Objects.equals(this.siteSet, hourlyReportApiListStruct.siteSet)
         && Objects.equals(this.channelId, hourlyReportApiListStruct.channelId)
         && Objects.equals(this.buyingType, hourlyReportApiListStruct.buyingType)
@@ -20087,10 +20087,10 @@ public class HourlyReportApiListStruct {
         orderClk23dRoi,
         adgroupId,
         adgroupName,
-        liveStreamOrderPv,
-        liveStreamOrderAmount,
         dynamicCreativeId,
         dynamicCreativeName,
+        liveStreamOrderPv,
+        liveStreamOrderAmount,
         siteSet,
         channelId,
         buyingType,

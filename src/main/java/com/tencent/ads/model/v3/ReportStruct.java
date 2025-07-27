@@ -2448,12 +2448,6 @@ public class ReportStruct {
   @SerializedName("video_ids")
   private String videoIds = null;
 
-  @SerializedName("live_stream_order_pv")
-  private Long liveStreamOrderPv = null;
-
-  @SerializedName("live_stream_order_amount")
-  private Long liveStreamOrderAmount = null;
-
   @SerializedName("cvs_exp_pv")
   private Long cvsExpPv = null;
 
@@ -2585,6 +2579,9 @@ public class ReportStruct {
 
   @SerializedName("clk_top_pv")
   private Long clkTopPv = null;
+
+  @SerializedName("live_stream_order_pv")
+  private Long liveStreamOrderPv = null;
 
   @SerializedName("queryword")
   private String queryword = null;
@@ -18000,44 +17997,6 @@ public class ReportStruct {
     this.videoIds = videoIds;
   }
 
-  public ReportStruct liveStreamOrderPv(Long liveStreamOrderPv) {
-    this.liveStreamOrderPv = liveStreamOrderPv;
-    return this;
-  }
-
-  /**
-   * Get liveStreamOrderPv
-   *
-   * @return liveStreamOrderPv
-   */
-  @ApiModelProperty(value = "")
-  public Long getLiveStreamOrderPv() {
-    return liveStreamOrderPv;
-  }
-
-  public void setLiveStreamOrderPv(Long liveStreamOrderPv) {
-    this.liveStreamOrderPv = liveStreamOrderPv;
-  }
-
-  public ReportStruct liveStreamOrderAmount(Long liveStreamOrderAmount) {
-    this.liveStreamOrderAmount = liveStreamOrderAmount;
-    return this;
-  }
-
-  /**
-   * Get liveStreamOrderAmount
-   *
-   * @return liveStreamOrderAmount
-   */
-  @ApiModelProperty(value = "")
-  public Long getLiveStreamOrderAmount() {
-    return liveStreamOrderAmount;
-  }
-
-  public void setLiveStreamOrderAmount(Long liveStreamOrderAmount) {
-    this.liveStreamOrderAmount = liveStreamOrderAmount;
-  }
-
   public ReportStruct cvsExpPv(Long cvsExpPv) {
     this.cvsExpPv = cvsExpPv;
     return this;
@@ -18872,6 +18831,25 @@ public class ReportStruct {
 
   public void setClkTopPv(Long clkTopPv) {
     this.clkTopPv = clkTopPv;
+  }
+
+  public ReportStruct liveStreamOrderPv(Long liveStreamOrderPv) {
+    this.liveStreamOrderPv = liveStreamOrderPv;
+    return this;
+  }
+
+  /**
+   * Get liveStreamOrderPv
+   *
+   * @return liveStreamOrderPv
+   */
+  @ApiModelProperty(value = "")
+  public Long getLiveStreamOrderPv() {
+    return liveStreamOrderPv;
+  }
+
+  public void setLiveStreamOrderPv(Long liveStreamOrderPv) {
+    this.liveStreamOrderPv = liveStreamOrderPv;
   }
 
   public ReportStruct queryword(String queryword) {
@@ -19949,8 +19927,6 @@ public class ReportStruct {
         && Objects.equals(this.componentType, reportStruct.componentType)
         && Objects.equals(this.imageIds, reportStruct.imageIds)
         && Objects.equals(this.videoIds, reportStruct.videoIds)
-        && Objects.equals(this.liveStreamOrderPv, reportStruct.liveStreamOrderPv)
-        && Objects.equals(this.liveStreamOrderAmount, reportStruct.liveStreamOrderAmount)
         && Objects.equals(this.cvsExpPv, reportStruct.cvsExpPv)
         && Objects.equals(this.cvsExpUv, reportStruct.cvsExpUv)
         && Objects.equals(this.cvsCpnClkPv, reportStruct.cvsCpnClkPv)
@@ -19996,6 +19972,7 @@ public class ReportStruct {
         && Objects.equals(this.expAvgRank, reportStruct.expAvgRank)
         && Objects.equals(this.expOverallTopPv, reportStruct.expOverallTopPv)
         && Objects.equals(this.clkTopPv, reportStruct.clkTopPv)
+        && Objects.equals(this.liveStreamOrderPv, reportStruct.liveStreamOrderPv)
         && Objects.equals(this.queryword, reportStruct.queryword)
         && Objects.equals(this.imageId, reportStruct.imageId)
         && Objects.equals(this.videoId, reportStruct.videoId)
@@ -20818,8 +20795,6 @@ public class ReportStruct {
         componentType,
         imageIds,
         videoIds,
-        liveStreamOrderPv,
-        liveStreamOrderAmount,
         cvsExpPv,
         cvsExpUv,
         cvsCpnClkPv,
@@ -20864,6 +20839,7 @@ public class ReportStruct {
         expAvgRank,
         expOverallTopPv,
         clkTopPv,
+        liveStreamOrderPv,
         queryword,
         imageId,
         videoId,
