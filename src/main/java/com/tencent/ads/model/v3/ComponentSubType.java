@@ -232,6 +232,8 @@ public enum ComponentSubType {
 
   HOT_TOPIC("HOT_TOPIC"),
 
+  AUDIO("AUDIO"),
+
   BRAND("BRAND"),
 
   BRAND_PAGE("BRAND_PAGE"),

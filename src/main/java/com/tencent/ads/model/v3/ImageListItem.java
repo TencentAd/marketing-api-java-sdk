@@ -27,6 +27,9 @@ public class ImageListItem {
   @SerializedName("image_url")
   private String imageUrl = null;
 
+  @SerializedName("original_image_id")
+  private String originalImageId = null;
+
   public ImageListItem imageId(String imageId) {
     this.imageId = imageId;
     return this;
@@ -65,6 +68,25 @@ public class ImageListItem {
     this.imageUrl = imageUrl;
   }
 
+  public ImageListItem originalImageId(String originalImageId) {
+    this.originalImageId = originalImageId;
+    return this;
+  }
+
+  /**
+   * Get originalImageId
+   *
+   * @return originalImageId
+   */
+  @ApiModelProperty(value = "")
+  public String getOriginalImageId() {
+    return originalImageId;
+  }
+
+  public void setOriginalImageId(String originalImageId) {
+    this.originalImageId = originalImageId;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -75,12 +97,13 @@ public class ImageListItem {
     }
     ImageListItem imageListItem = (ImageListItem) o;
     return Objects.equals(this.imageId, imageListItem.imageId)
-        && Objects.equals(this.imageUrl, imageListItem.imageUrl);
+        && Objects.equals(this.imageUrl, imageListItem.imageUrl)
+        && Objects.equals(this.originalImageId, imageListItem.originalImageId);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(imageId, imageUrl);
+    return Objects.hash(imageId, imageUrl, originalImageId);
   }
 
   @Override

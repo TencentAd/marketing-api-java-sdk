@@ -22,6 +22,8 @@ import com.tencent.ads.Pair;
 import com.tencent.ads.ProgressRequestBody;
 import com.tencent.ads.ProgressResponseBody;
 import com.tencent.ads.model.v3.AdParamGetResponse;
+import com.tencent.ads.model.v3.MarketingAssetOuterSpec;
+import com.tencent.ads.model.v3.MpaSpec;
 import java.io.IOException;
 import java.lang.reflect.Type;
 import java.util.ArrayList;
@@ -59,6 +61,9 @@ public class AdParamApi {
    * @param marketingCarrierType (optional)
    * @param marketingTargetType (optional)
    * @param productCatalogId (optional)
+   * @param marketingAssetOuterSpec (optional)
+   * @param mpaSpec (optional)
+   * @param dynamicAdType (optional)
    * @param fields 返回参数的字段列表 (optional)
    * @param progressListener Progress listener
    * @param progressRequestListener Progress request listener
@@ -74,6 +79,9 @@ public class AdParamApi {
       String marketingCarrierType,
       String marketingTargetType,
       Long productCatalogId,
+      MarketingAssetOuterSpec marketingAssetOuterSpec,
+      MpaSpec mpaSpec,
+      String dynamicAdType,
       List<String> fields,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
@@ -107,6 +115,12 @@ public class AdParamApi {
           apiClient.parameterToPairs("multi", "site_set", siteSet));
     if (productCatalogId != null)
       localVarQueryParams.addAll(apiClient.parameterToPair("product_catalog_id", productCatalogId));
+    if (marketingAssetOuterSpec != null)
+      localVarQueryParams.addAll(
+          apiClient.parameterToPair("marketing_asset_outer_spec", marketingAssetOuterSpec));
+    if (mpaSpec != null) localVarQueryParams.addAll(apiClient.parameterToPair("mpa_spec", mpaSpec));
+    if (dynamicAdType != null)
+      localVarQueryParams.addAll(apiClient.parameterToPair("dynamic_ad_type", dynamicAdType));
     if (fields != null)
       localVarCollectionQueryParams.addAll(apiClient.parameterToPairs("multi", "fields", fields));
 
@@ -169,6 +183,9 @@ public class AdParamApi {
       String marketingCarrierType,
       String marketingTargetType,
       Long productCatalogId,
+      MarketingAssetOuterSpec marketingAssetOuterSpec,
+      MpaSpec mpaSpec,
+      String dynamicAdType,
       List<String> fields,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
@@ -209,6 +226,9 @@ public class AdParamApi {
             marketingCarrierType,
             marketingTargetType,
             productCatalogId,
+            marketingAssetOuterSpec,
+            mpaSpec,
+            dynamicAdType,
             fields,
             progressListener,
             progressRequestListener,
@@ -227,6 +247,9 @@ public class AdParamApi {
    * @param marketingCarrierType (optional)
    * @param marketingTargetType (optional)
    * @param productCatalogId (optional)
+   * @param marketingAssetOuterSpec (optional)
+   * @param mpaSpec (optional)
+   * @param dynamicAdType (optional)
    * @param fields 返回参数的字段列表 (optional)
    * @return AdParamGetResponse
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
@@ -241,6 +264,9 @@ public class AdParamApi {
       String marketingCarrierType,
       String marketingTargetType,
       Long productCatalogId,
+      MarketingAssetOuterSpec marketingAssetOuterSpec,
+      MpaSpec mpaSpec,
+      String dynamicAdType,
       List<String> fields,
       Pair... headerPair)
       throws ApiException {
@@ -254,6 +280,9 @@ public class AdParamApi {
             marketingCarrierType,
             marketingTargetType,
             productCatalogId,
+            marketingAssetOuterSpec,
+            mpaSpec,
+            dynamicAdType,
             fields,
             headerPair);
     return resp.getData();
@@ -270,6 +299,9 @@ public class AdParamApi {
    * @param marketingCarrierType (optional)
    * @param marketingTargetType (optional)
    * @param productCatalogId (optional)
+   * @param marketingAssetOuterSpec (optional)
+   * @param mpaSpec (optional)
+   * @param dynamicAdType (optional)
    * @param fields 返回参数的字段列表 (optional)
    * @return ApiResponse&lt;AdParamGetResponse&gt;
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
@@ -284,6 +316,9 @@ public class AdParamApi {
       String marketingCarrierType,
       String marketingTargetType,
       Long productCatalogId,
+      MarketingAssetOuterSpec marketingAssetOuterSpec,
+      MpaSpec mpaSpec,
+      String dynamicAdType,
       List<String> fields,
       Pair... headerPair)
       throws ApiException {
@@ -297,6 +332,9 @@ public class AdParamApi {
             marketingCarrierType,
             marketingTargetType,
             productCatalogId,
+            marketingAssetOuterSpec,
+            mpaSpec,
+            dynamicAdType,
             fields,
             null,
             null,
@@ -316,6 +354,9 @@ public class AdParamApi {
    * @param marketingCarrierType (optional)
    * @param marketingTargetType (optional)
    * @param productCatalogId (optional)
+   * @param marketingAssetOuterSpec (optional)
+   * @param mpaSpec (optional)
+   * @param dynamicAdType (optional)
    * @param fields 返回参数的字段列表 (optional)
    * @param callback The callback to be executed when the API call finishes
    * @return The request call
@@ -330,6 +371,9 @@ public class AdParamApi {
       String marketingCarrierType,
       String marketingTargetType,
       Long productCatalogId,
+      MarketingAssetOuterSpec marketingAssetOuterSpec,
+      MpaSpec mpaSpec,
+      String dynamicAdType,
       List<String> fields,
       final ApiCallback<AdParamGetResponse> callback,
       Pair... headerPair)
@@ -366,6 +410,9 @@ public class AdParamApi {
             marketingCarrierType,
             marketingTargetType,
             productCatalogId,
+            marketingAssetOuterSpec,
+            mpaSpec,
+            dynamicAdType,
             fields,
             progressListener,
             progressRequestListener,

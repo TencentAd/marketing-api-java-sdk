@@ -39,6 +39,7 @@ public class OptimizationGoalPermissionsApiContainer extends ApiContainer {
    * @param marketingTargetType (required)
    * @param bidMode (optional)
    * @param marketingCarrierDetail (optional)
+   * @param deliveryScene (optional)
    * @param fields 返回参数的字段列表 (optional)
    * @return OptimizationGoalPermissionsGetResponse
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
@@ -53,6 +54,7 @@ public class OptimizationGoalPermissionsApiContainer extends ApiContainer {
       String marketingTargetType,
       String bidMode,
       MarketingCarrierDetail marketingCarrierDetail,
+      String deliveryScene,
       List<String> fields,
       Pair... headerPair)
       throws ApiException, TencentAdsResponseException {
@@ -66,6 +68,7 @@ public class OptimizationGoalPermissionsApiContainer extends ApiContainer {
             marketingTargetType,
             bidMode,
             marketingCarrierDetail,
+            deliveryScene,
             fields,
             headerPair);
     handleResponse(gson.toJson(resp));

@@ -2421,6 +2421,9 @@ public class HourlyReportApiListStruct {
   @SerializedName("order_clk2_3d_roi")
   private Double orderClk23dRoi = null;
 
+  @SerializedName("intention_after_payment_dedup_pv")
+  private Long intentionAfterPaymentDedupPv = null;
+
   @SerializedName("adgroup_id")
   private Long adgroupId = null;
 
@@ -2432,12 +2435,6 @@ public class HourlyReportApiListStruct {
 
   @SerializedName("dynamic_creative_name")
   private String dynamicCreativeName = null;
-
-  @SerializedName("live_stream_order_pv")
-  private Long liveStreamOrderPv = null;
-
-  @SerializedName("live_stream_order_amount")
-  private Long liveStreamOrderAmount = null;
 
   @SerializedName("site_set")
   private String siteSet = null;
@@ -17739,6 +17736,25 @@ public class HourlyReportApiListStruct {
     this.orderClk23dRoi = orderClk23dRoi;
   }
 
+  public HourlyReportApiListStruct intentionAfterPaymentDedupPv(Long intentionAfterPaymentDedupPv) {
+    this.intentionAfterPaymentDedupPv = intentionAfterPaymentDedupPv;
+    return this;
+  }
+
+  /**
+   * Get intentionAfterPaymentDedupPv
+   *
+   * @return intentionAfterPaymentDedupPv
+   */
+  @ApiModelProperty(value = "")
+  public Long getIntentionAfterPaymentDedupPv() {
+    return intentionAfterPaymentDedupPv;
+  }
+
+  public void setIntentionAfterPaymentDedupPv(Long intentionAfterPaymentDedupPv) {
+    this.intentionAfterPaymentDedupPv = intentionAfterPaymentDedupPv;
+  }
+
   public HourlyReportApiListStruct adgroupId(Long adgroupId) {
     this.adgroupId = adgroupId;
     return this;
@@ -17813,44 +17829,6 @@ public class HourlyReportApiListStruct {
 
   public void setDynamicCreativeName(String dynamicCreativeName) {
     this.dynamicCreativeName = dynamicCreativeName;
-  }
-
-  public HourlyReportApiListStruct liveStreamOrderPv(Long liveStreamOrderPv) {
-    this.liveStreamOrderPv = liveStreamOrderPv;
-    return this;
-  }
-
-  /**
-   * Get liveStreamOrderPv
-   *
-   * @return liveStreamOrderPv
-   */
-  @ApiModelProperty(value = "")
-  public Long getLiveStreamOrderPv() {
-    return liveStreamOrderPv;
-  }
-
-  public void setLiveStreamOrderPv(Long liveStreamOrderPv) {
-    this.liveStreamOrderPv = liveStreamOrderPv;
-  }
-
-  public HourlyReportApiListStruct liveStreamOrderAmount(Long liveStreamOrderAmount) {
-    this.liveStreamOrderAmount = liveStreamOrderAmount;
-    return this;
-  }
-
-  /**
-   * Get liveStreamOrderAmount
-   *
-   * @return liveStreamOrderAmount
-   */
-  @ApiModelProperty(value = "")
-  public Long getLiveStreamOrderAmount() {
-    return liveStreamOrderAmount;
-  }
-
-  public void setLiveStreamOrderAmount(Long liveStreamOrderAmount) {
-    this.liveStreamOrderAmount = liveStreamOrderAmount;
   }
 
   public HourlyReportApiListStruct siteSet(String siteSet) {
@@ -19261,13 +19239,13 @@ public class HourlyReportApiListStruct {
         && Objects.equals(this.orderClk3dRoi, hourlyReportApiListStruct.orderClk3dRoi)
         && Objects.equals(this.orderImp3dRoi, hourlyReportApiListStruct.orderImp3dRoi)
         && Objects.equals(this.orderClk23dRoi, hourlyReportApiListStruct.orderClk23dRoi)
+        && Objects.equals(
+            this.intentionAfterPaymentDedupPv,
+            hourlyReportApiListStruct.intentionAfterPaymentDedupPv)
         && Objects.equals(this.adgroupId, hourlyReportApiListStruct.adgroupId)
         && Objects.equals(this.adgroupName, hourlyReportApiListStruct.adgroupName)
         && Objects.equals(this.dynamicCreativeId, hourlyReportApiListStruct.dynamicCreativeId)
         && Objects.equals(this.dynamicCreativeName, hourlyReportApiListStruct.dynamicCreativeName)
-        && Objects.equals(this.liveStreamOrderPv, hourlyReportApiListStruct.liveStreamOrderPv)
-        && Objects.equals(
-            this.liveStreamOrderAmount, hourlyReportApiListStruct.liveStreamOrderAmount)
         && Objects.equals(this.siteSet, hourlyReportApiListStruct.siteSet)
         && Objects.equals(this.channelId, hourlyReportApiListStruct.channelId)
         && Objects.equals(this.buyingType, hourlyReportApiListStruct.buyingType)
@@ -20085,12 +20063,11 @@ public class HourlyReportApiListStruct {
         orderClk3dRoi,
         orderImp3dRoi,
         orderClk23dRoi,
+        intentionAfterPaymentDedupPv,
         adgroupId,
         adgroupName,
         dynamicCreativeId,
         dynamicCreativeName,
-        liveStreamOrderPv,
-        liveStreamOrderAmount,
         siteSet,
         channelId,
         buyingType,

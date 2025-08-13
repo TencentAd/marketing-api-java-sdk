@@ -31,6 +31,8 @@ public class GetOptimizationGoalPermissions {
 
   public MarketingCarrierDetail marketingCarrierDetail = null;
 
+  public String deliveryScene = null;
+
   public List<String> fields = null;
 
   public void init() {
@@ -57,6 +59,7 @@ public class GetOptimizationGoalPermissions {
                 marketingTargetType,
                 bidMode,
                 marketingCarrierDetail,
+                deliveryScene,
                 fields);
     return response;
   }

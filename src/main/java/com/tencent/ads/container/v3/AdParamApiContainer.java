@@ -21,6 +21,8 @@ import com.tencent.ads.api.v3.AdParamApi;
 import com.tencent.ads.exception.TencentAdsResponseException;
 import com.tencent.ads.model.v3.AdParamGetResponse;
 import com.tencent.ads.model.v3.AdParamGetResponseData;
+import com.tencent.ads.model.v3.MarketingAssetOuterSpec;
+import com.tencent.ads.model.v3.MpaSpec;
 import java.util.List;
 
 public class AdParamApiContainer extends ApiContainer {
@@ -38,6 +40,9 @@ public class AdParamApiContainer extends ApiContainer {
    * @param marketingCarrierType (optional)
    * @param marketingTargetType (optional)
    * @param productCatalogId (optional)
+   * @param marketingAssetOuterSpec (optional)
+   * @param mpaSpec (optional)
+   * @param dynamicAdType (optional)
    * @param fields 返回参数的字段列表 (optional)
    * @return AdParamGetResponse
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
@@ -52,6 +57,9 @@ public class AdParamApiContainer extends ApiContainer {
       String marketingCarrierType,
       String marketingTargetType,
       Long productCatalogId,
+      MarketingAssetOuterSpec marketingAssetOuterSpec,
+      MpaSpec mpaSpec,
+      String dynamicAdType,
       List<String> fields,
       Pair... headerPair)
       throws ApiException, TencentAdsResponseException {
@@ -65,6 +73,9 @@ public class AdParamApiContainer extends ApiContainer {
             marketingCarrierType,
             marketingTargetType,
             productCatalogId,
+            marketingAssetOuterSpec,
+            mpaSpec,
+            dynamicAdType,
             fields,
             headerPair);
     handleResponse(gson.toJson(resp));

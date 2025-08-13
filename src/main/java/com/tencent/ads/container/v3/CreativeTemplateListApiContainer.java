@@ -21,6 +21,7 @@ import com.tencent.ads.api.v3.CreativeTemplateListApi;
 import com.tencent.ads.exception.TencentAdsResponseException;
 import com.tencent.ads.model.v3.CreativeTemplateListGetResponse;
 import com.tencent.ads.model.v3.CreativeTemplateListGetResponseData;
+import com.tencent.ads.model.v3.MpaSpec;
 import java.util.List;
 
 public class CreativeTemplateListApiContainer extends ApiContainer {
@@ -50,6 +51,7 @@ public class CreativeTemplateListApiContainer extends ApiContainer {
    * @param pcScene (optional)
    * @param adgroupId (optional)
    * @param adgroupType (optional)
+   * @param mpaSpec (optional)
    * @param fields 返回参数的字段列表 (optional)
    * @return CreativeTemplateListGetResponse
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
@@ -76,6 +78,7 @@ public class CreativeTemplateListApiContainer extends ApiContainer {
       List<String> pcScene,
       Long adgroupId,
       String adgroupType,
+      MpaSpec mpaSpec,
       List<String> fields,
       Pair... headerPair)
       throws ApiException, TencentAdsResponseException {
@@ -101,6 +104,7 @@ public class CreativeTemplateListApiContainer extends ApiContainer {
             pcScene,
             adgroupId,
             adgroupType,
+            mpaSpec,
             fields,
             headerPair);
     handleResponse(gson.toJson(resp));

@@ -95,6 +95,9 @@ public class CreativeComponentValueValid {
   @SerializedName("max_duration_millisecond")
   private Long maxDurationMillisecond = null;
 
+  @SerializedName("image_format_options")
+  private List<ComponentMetadataValueValidImageFormatOption> imageFormatOptions = null;
+
   public CreativeComponentValueValid required(Boolean required) {
     this.required = required;
     return this;
@@ -561,6 +564,36 @@ public class CreativeComponentValueValid {
     this.maxDurationMillisecond = maxDurationMillisecond;
   }
 
+  public CreativeComponentValueValid imageFormatOptions(
+      List<ComponentMetadataValueValidImageFormatOption> imageFormatOptions) {
+    this.imageFormatOptions = imageFormatOptions;
+    return this;
+  }
+
+  public CreativeComponentValueValid addImageFormatOptionsItem(
+      ComponentMetadataValueValidImageFormatOption imageFormatOptionsItem) {
+    if (this.imageFormatOptions == null) {
+      this.imageFormatOptions = new ArrayList<ComponentMetadataValueValidImageFormatOption>();
+    }
+    this.imageFormatOptions.add(imageFormatOptionsItem);
+    return this;
+  }
+
+  /**
+   * Get imageFormatOptions
+   *
+   * @return imageFormatOptions
+   */
+  @ApiModelProperty(value = "")
+  public List<ComponentMetadataValueValidImageFormatOption> getImageFormatOptions() {
+    return imageFormatOptions;
+  }
+
+  public void setImageFormatOptions(
+      List<ComponentMetadataValueValidImageFormatOption> imageFormatOptions) {
+    this.imageFormatOptions = imageFormatOptions;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -595,7 +628,8 @@ public class CreativeComponentValueValid {
         && Objects.equals(
             this.minDurationMillisecond, creativeComponentValueValid.minDurationMillisecond)
         && Objects.equals(
-            this.maxDurationMillisecond, creativeComponentValueValid.maxDurationMillisecond);
+            this.maxDurationMillisecond, creativeComponentValueValid.maxDurationMillisecond)
+        && Objects.equals(this.imageFormatOptions, creativeComponentValueValid.imageFormatOptions);
   }
 
   @Override
@@ -624,7 +658,8 @@ public class CreativeComponentValueValid {
         maxTotalContent,
         enumOptions,
         minDurationMillisecond,
-        maxDurationMillisecond);
+        maxDurationMillisecond,
+        imageFormatOptions);
   }
 
   @Override

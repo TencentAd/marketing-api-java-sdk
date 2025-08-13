@@ -27,8 +27,8 @@ public class ComponentMetadataValueValidEnumOption {
   @SerializedName("desc")
   private String desc = null;
 
-  @SerializedName("support_3link")
-  private Boolean support3link = null;
+  @SerializedName("support_trd_link")
+  private Boolean supportTrdLink = null;
 
   @SerializedName("required")
   private Boolean required = null;
@@ -71,23 +71,23 @@ public class ComponentMetadataValueValidEnumOption {
     this.desc = desc;
   }
 
-  public ComponentMetadataValueValidEnumOption support3link(Boolean support3link) {
-    this.support3link = support3link;
+  public ComponentMetadataValueValidEnumOption supportTrdLink(Boolean supportTrdLink) {
+    this.supportTrdLink = supportTrdLink;
     return this;
   }
 
   /**
-   * Get support3link
+   * Get supportTrdLink
    *
-   * @return support3link
+   * @return supportTrdLink
    */
   @ApiModelProperty(value = "")
-  public Boolean isSupport3link() {
-    return support3link;
+  public Boolean isSupportTrdLink() {
+    return supportTrdLink;
   }
 
-  public void setSupport3link(Boolean support3link) {
-    this.support3link = support3link;
+  public void setSupportTrdLink(Boolean supportTrdLink) {
+    this.supportTrdLink = supportTrdLink;
   }
 
   public ComponentMetadataValueValidEnumOption required(Boolean required) {
@@ -121,13 +121,13 @@ public class ComponentMetadataValueValidEnumOption {
         (ComponentMetadataValueValidEnumOption) o;
     return Objects.equals(this.value, componentMetadataValueValidEnumOption.value)
         && Objects.equals(this.desc, componentMetadataValueValidEnumOption.desc)
-        && Objects.equals(this.support3link, componentMetadataValueValidEnumOption.support3link)
+        && Objects.equals(this.supportTrdLink, componentMetadataValueValidEnumOption.supportTrdLink)
         && Objects.equals(this.required, componentMetadataValueValidEnumOption.required);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(value, desc, support3link, required);
+    return Objects.hash(value, desc, supportTrdLink, required);
   }
 
   @Override

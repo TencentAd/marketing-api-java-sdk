@@ -1122,6 +1122,11 @@ public class ApiClient {
       if (auth == null) throw new RuntimeException("Authentication undefined: " + authName);
       auth.applyToParams(queryParams, headerParams);
     }
+    // user_token 是非必填，这里需要特殊处理
+    if (authenticationsLocal.get().containsKey("userToken")) {
+      Authentication userAuth = authenticationsLocal.get().get("userToken");
+      userAuth.applyToParams(queryParams, headerParams);
+    }
   }
 
   /**
@@ -1263,7 +1268,13 @@ public class ApiClient {
     authentications.put("nonce", new ApiKeyAuth("query", "nonce"));
     authentications.put("timestamp", new ApiKeyAuth("query", "timestamp"));
     // Prevent the authentications from being modified.
-    authentications = Collections.unmodifiableMap(authentications);
+    // authentications = Collections.unmodifiableMap(authentications);
     authenticationsLocal.set(authentications);
+  }
+
+  public void initUserTokenAuthentications(String userToken) {
+    ApiKeyAuth userTokenAuth = new ApiKeyAuth("query", "user_token");
+    userTokenAuth.setApiKey(userToken);
+    authenticationsLocal.get().put("userToken", userTokenAuth);
   }
 }

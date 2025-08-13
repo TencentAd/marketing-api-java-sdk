@@ -4,6 +4,8 @@ import com.tencent.ads.ApiContextConfig;
 import com.tencent.ads.exception.TencentAdsResponseException;
 import com.tencent.ads.exception.TencentAdsSDKException;
 import com.tencent.ads.model.v3.*;
+import com.tencent.ads.model.v3.MarketingAssetOuterSpec;
+import com.tencent.ads.model.v3.MpaSpec;
 import com.tencent.ads.v3.TencentAds;
 import java.util.List;
 
@@ -30,6 +32,12 @@ public class GetAdParam {
 
   public Long productCatalogId = null;
 
+  public MarketingAssetOuterSpec marketingAssetOuterSpec = null;
+
+  public MpaSpec mpaSpec = null;
+
+  public String dynamicAdType = null;
+
   public List<String> fields = null;
 
   public void init() {
@@ -55,6 +63,9 @@ public class GetAdParam {
                 marketingCarrierType,
                 marketingTargetType,
                 productCatalogId,
+                marketingAssetOuterSpec,
+                mpaSpec,
+                dynamicAdType,
                 fields);
     return response;
   }

@@ -2421,6 +2421,9 @@ public class ReportStruct {
   @SerializedName("order_clk2_3d_roi")
   private Double orderClk23dRoi = null;
 
+  @SerializedName("intention_after_payment_dedup_pv")
+  private Long intentionAfterPaymentDedupPv = null;
+
   @SerializedName("adgroup_id")
   private Long adgroupId = null;
 
@@ -2579,9 +2582,6 @@ public class ReportStruct {
 
   @SerializedName("clk_top_pv")
   private Long clkTopPv = null;
-
-  @SerializedName("live_stream_order_pv")
-  private Long liveStreamOrderPv = null;
 
   @SerializedName("queryword")
   private String queryword = null;
@@ -17826,6 +17826,25 @@ public class ReportStruct {
     this.orderClk23dRoi = orderClk23dRoi;
   }
 
+  public ReportStruct intentionAfterPaymentDedupPv(Long intentionAfterPaymentDedupPv) {
+    this.intentionAfterPaymentDedupPv = intentionAfterPaymentDedupPv;
+    return this;
+  }
+
+  /**
+   * Get intentionAfterPaymentDedupPv
+   *
+   * @return intentionAfterPaymentDedupPv
+   */
+  @ApiModelProperty(value = "")
+  public Long getIntentionAfterPaymentDedupPv() {
+    return intentionAfterPaymentDedupPv;
+  }
+
+  public void setIntentionAfterPaymentDedupPv(Long intentionAfterPaymentDedupPv) {
+    this.intentionAfterPaymentDedupPv = intentionAfterPaymentDedupPv;
+  }
+
   public ReportStruct adgroupId(Long adgroupId) {
     this.adgroupId = adgroupId;
     return this;
@@ -18831,25 +18850,6 @@ public class ReportStruct {
 
   public void setClkTopPv(Long clkTopPv) {
     this.clkTopPv = clkTopPv;
-  }
-
-  public ReportStruct liveStreamOrderPv(Long liveStreamOrderPv) {
-    this.liveStreamOrderPv = liveStreamOrderPv;
-    return this;
-  }
-
-  /**
-   * Get liveStreamOrderPv
-   *
-   * @return liveStreamOrderPv
-   */
-  @ApiModelProperty(value = "")
-  public Long getLiveStreamOrderPv() {
-    return liveStreamOrderPv;
-  }
-
-  public void setLiveStreamOrderPv(Long liveStreamOrderPv) {
-    this.liveStreamOrderPv = liveStreamOrderPv;
   }
 
   public ReportStruct queryword(String queryword) {
@@ -19918,6 +19918,8 @@ public class ReportStruct {
         && Objects.equals(this.orderClk3dRoi, reportStruct.orderClk3dRoi)
         && Objects.equals(this.orderImp3dRoi, reportStruct.orderImp3dRoi)
         && Objects.equals(this.orderClk23dRoi, reportStruct.orderClk23dRoi)
+        && Objects.equals(
+            this.intentionAfterPaymentDedupPv, reportStruct.intentionAfterPaymentDedupPv)
         && Objects.equals(this.adgroupId, reportStruct.adgroupId)
         && Objects.equals(this.adgroupName, reportStruct.adgroupName)
         && Objects.equals(this.dynamicCreativeId, reportStruct.dynamicCreativeId)
@@ -19972,7 +19974,6 @@ public class ReportStruct {
         && Objects.equals(this.expAvgRank, reportStruct.expAvgRank)
         && Objects.equals(this.expOverallTopPv, reportStruct.expOverallTopPv)
         && Objects.equals(this.clkTopPv, reportStruct.clkTopPv)
-        && Objects.equals(this.liveStreamOrderPv, reportStruct.liveStreamOrderPv)
         && Objects.equals(this.queryword, reportStruct.queryword)
         && Objects.equals(this.imageId, reportStruct.imageId)
         && Objects.equals(this.videoId, reportStruct.videoId)
@@ -20786,6 +20787,7 @@ public class ReportStruct {
         orderClk3dRoi,
         orderImp3dRoi,
         orderClk23dRoi,
+        intentionAfterPaymentDedupPv,
         adgroupId,
         adgroupName,
         dynamicCreativeId,
@@ -20839,7 +20841,6 @@ public class ReportStruct {
         expAvgRank,
         expOverallTopPv,
         clkTopPv,
-        liveStreamOrderPv,
         queryword,
         imageId,
         videoId,

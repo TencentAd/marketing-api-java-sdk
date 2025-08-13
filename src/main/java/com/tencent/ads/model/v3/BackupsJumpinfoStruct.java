@@ -30,6 +30,9 @@ public class BackupsJumpinfoStruct {
   @SerializedName("jumpinfo_account_id")
   private Long jumpinfoAccountId = null;
 
+  @SerializedName("platform_type")
+  private LandingPagePlatformType platformType = null;
+
   public BackupsJumpinfoStruct pageType(PageType pageType) {
     this.pageType = pageType;
     return this;
@@ -87,6 +90,25 @@ public class BackupsJumpinfoStruct {
     this.jumpinfoAccountId = jumpinfoAccountId;
   }
 
+  public BackupsJumpinfoStruct platformType(LandingPagePlatformType platformType) {
+    this.platformType = platformType;
+    return this;
+  }
+
+  /**
+   * Get platformType
+   *
+   * @return platformType
+   */
+  @ApiModelProperty(value = "")
+  public LandingPagePlatformType getPlatformType() {
+    return platformType;
+  }
+
+  public void setPlatformType(LandingPagePlatformType platformType) {
+    this.platformType = platformType;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -98,12 +120,13 @@ public class BackupsJumpinfoStruct {
     BackupsJumpinfoStruct backupsJumpinfoStruct = (BackupsJumpinfoStruct) o;
     return Objects.equals(this.pageType, backupsJumpinfoStruct.pageType)
         && Objects.equals(this.pageSpec, backupsJumpinfoStruct.pageSpec)
-        && Objects.equals(this.jumpinfoAccountId, backupsJumpinfoStruct.jumpinfoAccountId);
+        && Objects.equals(this.jumpinfoAccountId, backupsJumpinfoStruct.jumpinfoAccountId)
+        && Objects.equals(this.platformType, backupsJumpinfoStruct.platformType);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(pageType, pageSpec, jumpinfoAccountId);
+    return Objects.hash(pageType, pageSpec, jumpinfoAccountId, platformType);
   }
 
   @Override

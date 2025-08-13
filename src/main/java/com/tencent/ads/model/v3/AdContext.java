@@ -53,6 +53,12 @@ public class AdContext {
   @SerializedName("component_type")
   private ComponentType componentType = null;
 
+  @SerializedName("mpa_spec")
+  private MpaSpec mpaSpec = null;
+
+  @SerializedName("marketing_asset_outer_spec")
+  private MarketingAssetOuterSpec marketingAssetOuterSpec = null;
+
   public AdContext marketingGoal(MarketingGoal marketingGoal) {
     this.marketingGoal = marketingGoal;
     return this;
@@ -251,6 +257,44 @@ public class AdContext {
     this.componentType = componentType;
   }
 
+  public AdContext mpaSpec(MpaSpec mpaSpec) {
+    this.mpaSpec = mpaSpec;
+    return this;
+  }
+
+  /**
+   * Get mpaSpec
+   *
+   * @return mpaSpec
+   */
+  @ApiModelProperty(value = "")
+  public MpaSpec getMpaSpec() {
+    return mpaSpec;
+  }
+
+  public void setMpaSpec(MpaSpec mpaSpec) {
+    this.mpaSpec = mpaSpec;
+  }
+
+  public AdContext marketingAssetOuterSpec(MarketingAssetOuterSpec marketingAssetOuterSpec) {
+    this.marketingAssetOuterSpec = marketingAssetOuterSpec;
+    return this;
+  }
+
+  /**
+   * Get marketingAssetOuterSpec
+   *
+   * @return marketingAssetOuterSpec
+   */
+  @ApiModelProperty(value = "")
+  public MarketingAssetOuterSpec getMarketingAssetOuterSpec() {
+    return marketingAssetOuterSpec;
+  }
+
+  public void setMarketingAssetOuterSpec(MarketingAssetOuterSpec marketingAssetOuterSpec) {
+    this.marketingAssetOuterSpec = marketingAssetOuterSpec;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -269,7 +313,9 @@ public class AdContext {
         && Objects.equals(this.siteSet, adContext.siteSet)
         && Objects.equals(this.creativeTemplateId, adContext.creativeTemplateId)
         && Objects.equals(this.promotedAssetType, adContext.promotedAssetType)
-        && Objects.equals(this.componentType, adContext.componentType);
+        && Objects.equals(this.componentType, adContext.componentType)
+        && Objects.equals(this.mpaSpec, adContext.mpaSpec)
+        && Objects.equals(this.marketingAssetOuterSpec, adContext.marketingAssetOuterSpec);
   }
 
   @Override
@@ -284,7 +330,9 @@ public class AdContext {
         siteSet,
         creativeTemplateId,
         promotedAssetType,
-        componentType);
+        componentType,
+        mpaSpec,
+        marketingAssetOuterSpec);
   }
 
   @Override

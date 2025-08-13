@@ -27,6 +27,9 @@ public class AdParamGetResponseData {
   @SerializedName("product_ad_param_list")
   private List<AdParamListStruct> productAdParamList = null;
 
+  @SerializedName("dynamic_content_ad_param_list")
+  private List<AdParamListStruct> dynamicContentAdParamList = null;
+
   public AdParamGetResponseData systemAdParamList(List<AdParamListStruct> systemAdParamList) {
     this.systemAdParamList = systemAdParamList;
     return this;
@@ -82,6 +85,35 @@ public class AdParamGetResponseData {
     this.productAdParamList = productAdParamList;
   }
 
+  public AdParamGetResponseData dynamicContentAdParamList(
+      List<AdParamListStruct> dynamicContentAdParamList) {
+    this.dynamicContentAdParamList = dynamicContentAdParamList;
+    return this;
+  }
+
+  public AdParamGetResponseData addDynamicContentAdParamListItem(
+      AdParamListStruct dynamicContentAdParamListItem) {
+    if (this.dynamicContentAdParamList == null) {
+      this.dynamicContentAdParamList = new ArrayList<AdParamListStruct>();
+    }
+    this.dynamicContentAdParamList.add(dynamicContentAdParamListItem);
+    return this;
+  }
+
+  /**
+   * Get dynamicContentAdParamList
+   *
+   * @return dynamicContentAdParamList
+   */
+  @ApiModelProperty(value = "")
+  public List<AdParamListStruct> getDynamicContentAdParamList() {
+    return dynamicContentAdParamList;
+  }
+
+  public void setDynamicContentAdParamList(List<AdParamListStruct> dynamicContentAdParamList) {
+    this.dynamicContentAdParamList = dynamicContentAdParamList;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -92,12 +124,14 @@ public class AdParamGetResponseData {
     }
     AdParamGetResponseData adParamGetResponseData = (AdParamGetResponseData) o;
     return Objects.equals(this.systemAdParamList, adParamGetResponseData.systemAdParamList)
-        && Objects.equals(this.productAdParamList, adParamGetResponseData.productAdParamList);
+        && Objects.equals(this.productAdParamList, adParamGetResponseData.productAdParamList)
+        && Objects.equals(
+            this.dynamicContentAdParamList, adParamGetResponseData.dynamicContentAdParamList);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(systemAdParamList, productAdParamList);
+    return Objects.hash(systemAdParamList, productAdParamList, dynamicContentAdParamList);
   }
 
   @Override

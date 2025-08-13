@@ -22,6 +22,7 @@ import com.tencent.ads.Pair;
 import com.tencent.ads.ProgressRequestBody;
 import com.tencent.ads.ProgressResponseBody;
 import com.tencent.ads.model.v3.CreativeTemplateListGetResponse;
+import com.tencent.ads.model.v3.MpaSpec;
 import java.io.IOException;
 import java.lang.reflect.Type;
 import java.util.ArrayList;
@@ -71,6 +72,7 @@ public class CreativeTemplateListApi {
    * @param pcScene (optional)
    * @param adgroupId (optional)
    * @param adgroupType (optional)
+   * @param mpaSpec (optional)
    * @param fields 返回参数的字段列表 (optional)
    * @param progressListener Progress listener
    * @param progressRequestListener Progress request listener
@@ -98,6 +100,7 @@ public class CreativeTemplateListApi {
       List<String> pcScene,
       Long adgroupId,
       String adgroupType,
+      MpaSpec mpaSpec,
       List<String> fields,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
@@ -159,6 +162,7 @@ public class CreativeTemplateListApi {
       localVarQueryParams.addAll(apiClient.parameterToPair("adgroup_id", adgroupId));
     if (adgroupType != null)
       localVarQueryParams.addAll(apiClient.parameterToPair("adgroup_type", adgroupType));
+    if (mpaSpec != null) localVarQueryParams.addAll(apiClient.parameterToPair("mpa_spec", mpaSpec));
     if (fields != null)
       localVarCollectionQueryParams.addAll(apiClient.parameterToPairs("multi", "fields", fields));
 
@@ -233,6 +237,7 @@ public class CreativeTemplateListApi {
       List<String> pcScene,
       Long adgroupId,
       String adgroupType,
+      MpaSpec mpaSpec,
       List<String> fields,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
@@ -267,6 +272,7 @@ public class CreativeTemplateListApi {
             pcScene,
             adgroupId,
             adgroupType,
+            mpaSpec,
             fields,
             progressListener,
             progressRequestListener,
@@ -297,6 +303,7 @@ public class CreativeTemplateListApi {
    * @param pcScene (optional)
    * @param adgroupId (optional)
    * @param adgroupType (optional)
+   * @param mpaSpec (optional)
    * @param fields 返回参数的字段列表 (optional)
    * @return CreativeTemplateListGetResponse
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
@@ -323,6 +330,7 @@ public class CreativeTemplateListApi {
       List<String> pcScene,
       Long adgroupId,
       String adgroupType,
+      MpaSpec mpaSpec,
       List<String> fields,
       Pair... headerPair)
       throws ApiException {
@@ -348,6 +356,7 @@ public class CreativeTemplateListApi {
             pcScene,
             adgroupId,
             adgroupType,
+            mpaSpec,
             fields,
             headerPair);
     return resp.getData();
@@ -376,6 +385,7 @@ public class CreativeTemplateListApi {
    * @param pcScene (optional)
    * @param adgroupId (optional)
    * @param adgroupType (optional)
+   * @param mpaSpec (optional)
    * @param fields 返回参数的字段列表 (optional)
    * @return ApiResponse&lt;CreativeTemplateListGetResponse&gt;
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
@@ -402,6 +412,7 @@ public class CreativeTemplateListApi {
       List<String> pcScene,
       Long adgroupId,
       String adgroupType,
+      MpaSpec mpaSpec,
       List<String> fields,
       Pair... headerPair)
       throws ApiException {
@@ -427,6 +438,7 @@ public class CreativeTemplateListApi {
             pcScene,
             adgroupId,
             adgroupType,
+            mpaSpec,
             fields,
             null,
             null,
@@ -458,6 +470,7 @@ public class CreativeTemplateListApi {
    * @param pcScene (optional)
    * @param adgroupId (optional)
    * @param adgroupType (optional)
+   * @param mpaSpec (optional)
    * @param fields 返回参数的字段列表 (optional)
    * @param callback The callback to be executed when the API call finishes
    * @return The request call
@@ -484,6 +497,7 @@ public class CreativeTemplateListApi {
       List<String> pcScene,
       Long adgroupId,
       String adgroupType,
+      MpaSpec mpaSpec,
       List<String> fields,
       final ApiCallback<CreativeTemplateListGetResponse> callback,
       Pair... headerPair)
@@ -532,6 +546,7 @@ public class CreativeTemplateListApi {
             pcScene,
             adgroupId,
             adgroupType,
+            mpaSpec,
             fields,
             progressListener,
             progressRequestListener,

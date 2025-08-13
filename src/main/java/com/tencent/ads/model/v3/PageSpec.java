@@ -117,6 +117,9 @@ public class PageSpec {
   @SerializedName("wechat_channels_watch_live_spec")
   private WechatChannelsWatchLivePageSpec wechatChannelsWatchLiveSpec = null;
 
+  @SerializedName("harmony_app_spec")
+  private HarmonyAppPageSpec harmonyAppSpec = null;
+
   public PageSpec androidAppSpec(AndroidAppPageSpec androidAppSpec) {
     this.androidAppSpec = androidAppSpec;
     return this;
@@ -735,6 +738,25 @@ public class PageSpec {
     this.wechatChannelsWatchLiveSpec = wechatChannelsWatchLiveSpec;
   }
 
+  public PageSpec harmonyAppSpec(HarmonyAppPageSpec harmonyAppSpec) {
+    this.harmonyAppSpec = harmonyAppSpec;
+    return this;
+  }
+
+  /**
+   * Get harmonyAppSpec
+   *
+   * @return harmonyAppSpec
+   */
+  @ApiModelProperty(value = "")
+  public HarmonyAppPageSpec getHarmonyAppSpec() {
+    return harmonyAppSpec;
+  }
+
+  public void setHarmonyAppSpec(HarmonyAppPageSpec harmonyAppSpec) {
+    this.harmonyAppSpec = harmonyAppSpec;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -777,7 +799,8 @@ public class PageSpec {
         && Objects.equals(
             this.wechatChannelsShopProductSpec, pageSpec.wechatChannelsShopProductSpec)
         && Objects.equals(this.wechatShopSpec, pageSpec.wechatShopSpec)
-        && Objects.equals(this.wechatChannelsWatchLiveSpec, pageSpec.wechatChannelsWatchLiveSpec);
+        && Objects.equals(this.wechatChannelsWatchLiveSpec, pageSpec.wechatChannelsWatchLiveSpec)
+        && Objects.equals(this.harmonyAppSpec, pageSpec.harmonyAppSpec);
   }
 
   @Override
@@ -814,7 +837,8 @@ public class PageSpec {
         androidQuickAppSpec,
         wechatChannelsShopProductSpec,
         wechatShopSpec,
-        wechatChannelsWatchLiveSpec);
+        wechatChannelsWatchLiveSpec,
+        harmonyAppSpec);
   }
 
   @Override

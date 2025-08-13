@@ -2283,6 +2283,9 @@ public class TargetReportApiListStruct {
   @SerializedName("order_clk2_3d_roi")
   private Double orderClk23dRoi = null;
 
+  @SerializedName("intention_after_payment_dedup_pv")
+  private Long intentionAfterPaymentDedupPv = null;
+
   @SerializedName("age_id")
   private Long ageId = null;
 
@@ -16694,6 +16697,25 @@ public class TargetReportApiListStruct {
     this.orderClk23dRoi = orderClk23dRoi;
   }
 
+  public TargetReportApiListStruct intentionAfterPaymentDedupPv(Long intentionAfterPaymentDedupPv) {
+    this.intentionAfterPaymentDedupPv = intentionAfterPaymentDedupPv;
+    return this;
+  }
+
+  /**
+   * Get intentionAfterPaymentDedupPv
+   *
+   * @return intentionAfterPaymentDedupPv
+   */
+  @ApiModelProperty(value = "")
+  public Long getIntentionAfterPaymentDedupPv() {
+    return intentionAfterPaymentDedupPv;
+  }
+
+  public void setIntentionAfterPaymentDedupPv(Long intentionAfterPaymentDedupPv) {
+    this.intentionAfterPaymentDedupPv = intentionAfterPaymentDedupPv;
+  }
+
   public TargetReportApiListStruct ageId(Long ageId) {
     this.ageId = ageId;
     return this;
@@ -17946,6 +17968,9 @@ public class TargetReportApiListStruct {
         && Objects.equals(this.orderClk3dRoi, targetReportApiListStruct.orderClk3dRoi)
         && Objects.equals(this.orderImp3dRoi, targetReportApiListStruct.orderImp3dRoi)
         && Objects.equals(this.orderClk23dRoi, targetReportApiListStruct.orderClk23dRoi)
+        && Objects.equals(
+            this.intentionAfterPaymentDedupPv,
+            targetReportApiListStruct.intentionAfterPaymentDedupPv)
         && Objects.equals(this.ageId, targetReportApiListStruct.ageId)
         && Objects.equals(this.cityId, targetReportApiListStruct.cityId)
         && Objects.equals(this.regionId, targetReportApiListStruct.regionId)
@@ -18712,6 +18737,7 @@ public class TargetReportApiListStruct {
         orderClk3dRoi,
         orderImp3dRoi,
         orderClk23dRoi,
+        intentionAfterPaymentDedupPv,
         ageId,
         cityId,
         regionId,

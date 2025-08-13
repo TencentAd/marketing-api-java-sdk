@@ -224,6 +224,9 @@ public class AdgroupsGetListStruct {
   @SerializedName("og_completion_type")
   private OgCompletionType ogCompletionType = null;
 
+  @SerializedName("dca_spec")
+  private DcaSpec dcaSpec = null;
+
   @SerializedName("aoi_optimization_strategy")
   private AoiOptimizationStrategy aoiOptimizationStrategy = null;
 
@@ -1563,6 +1566,25 @@ public class AdgroupsGetListStruct {
     this.ogCompletionType = ogCompletionType;
   }
 
+  public AdgroupsGetListStruct dcaSpec(DcaSpec dcaSpec) {
+    this.dcaSpec = dcaSpec;
+    return this;
+  }
+
+  /**
+   * Get dcaSpec
+   *
+   * @return dcaSpec
+   */
+  @ApiModelProperty(value = "")
+  public DcaSpec getDcaSpec() {
+    return dcaSpec;
+  }
+
+  public void setDcaSpec(DcaSpec dcaSpec) {
+    this.dcaSpec = dcaSpec;
+  }
+
   public AdgroupsGetListStruct aoiOptimizationStrategy(
       AoiOptimizationStrategy aoiOptimizationStrategy) {
     this.aoiOptimizationStrategy = aoiOptimizationStrategy;
@@ -1823,6 +1845,7 @@ public class AdgroupsGetListStruct {
         && Objects.equals(this.shortPlayPayType, adgroupsGetListStruct.shortPlayPayType)
         && Objects.equals(this.sellStrategyId, adgroupsGetListStruct.sellStrategyId)
         && Objects.equals(this.ogCompletionType, adgroupsGetListStruct.ogCompletionType)
+        && Objects.equals(this.dcaSpec, adgroupsGetListStruct.dcaSpec)
         && Objects.equals(
             this.aoiOptimizationStrategy, adgroupsGetListStruct.aoiOptimizationStrategy)
         && Objects.equals(this.costGuaranteeStatus, adgroupsGetListStruct.costGuaranteeStatus)
@@ -1908,6 +1931,7 @@ public class AdgroupsGetListStruct {
         shortPlayPayType,
         sellStrategyId,
         ogCompletionType,
+        dcaSpec,
         aoiOptimizationStrategy,
         costGuaranteeStatus,
         costGuaranteeMoney,

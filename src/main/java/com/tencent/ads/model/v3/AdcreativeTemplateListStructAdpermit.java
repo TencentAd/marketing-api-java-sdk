@@ -47,6 +47,12 @@ public class AdcreativeTemplateListStructAdpermit {
   @SerializedName("support_site_set_info")
   private List<SupportSiteSetStruct> supportSiteSetInfo = null;
 
+  @SerializedName("is_offline")
+  private Boolean isOffline = null;
+
+  @SerializedName("offline_tips")
+  private String offlineTips = null;
+
   public AdcreativeTemplateListStructAdpermit creativeTemplateId(Long creativeTemplateId) {
     this.creativeTemplateId = creativeTemplateId;
     return this;
@@ -219,6 +225,44 @@ public class AdcreativeTemplateListStructAdpermit {
     this.supportSiteSetInfo = supportSiteSetInfo;
   }
 
+  public AdcreativeTemplateListStructAdpermit isOffline(Boolean isOffline) {
+    this.isOffline = isOffline;
+    return this;
+  }
+
+  /**
+   * Get isOffline
+   *
+   * @return isOffline
+   */
+  @ApiModelProperty(value = "")
+  public Boolean isIsOffline() {
+    return isOffline;
+  }
+
+  public void setIsOffline(Boolean isOffline) {
+    this.isOffline = isOffline;
+  }
+
+  public AdcreativeTemplateListStructAdpermit offlineTips(String offlineTips) {
+    this.offlineTips = offlineTips;
+    return this;
+  }
+
+  /**
+   * Get offlineTips
+   *
+   * @return offlineTips
+   */
+  @ApiModelProperty(value = "")
+  public String getOfflineTips() {
+    return offlineTips;
+  }
+
+  public void setOfflineTips(String offlineTips) {
+    this.offlineTips = offlineTips;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -244,7 +288,9 @@ public class AdcreativeTemplateListStructAdpermit {
         && Objects.equals(
             this.supportBidModeList, adcreativeTemplateListStructAdpermit.supportBidModeList)
         && Objects.equals(
-            this.supportSiteSetInfo, adcreativeTemplateListStructAdpermit.supportSiteSetInfo);
+            this.supportSiteSetInfo, adcreativeTemplateListStructAdpermit.supportSiteSetInfo)
+        && Objects.equals(this.isOffline, adcreativeTemplateListStructAdpermit.isOffline)
+        && Objects.equals(this.offlineTips, adcreativeTemplateListStructAdpermit.offlineTips);
   }
 
   @Override
@@ -257,7 +303,9 @@ public class AdcreativeTemplateListStructAdpermit {
         siteSet,
         creativeTemplateSize,
         supportBidModeList,
-        supportSiteSetInfo);
+        supportSiteSetInfo,
+        isOffline,
+        offlineTips);
   }
 
   @Override

@@ -89,6 +89,9 @@ public class ComponentMetadataValueValid {
   @SerializedName("max_occurs")
   private Long maxOccurs = null;
 
+  @SerializedName("image_format_options")
+  private List<ComponentMetadataValueValidImageFormatOption> imageFormatOptions = null;
+
   public ComponentMetadataValueValid required(Boolean required) {
     this.required = required;
     return this;
@@ -517,6 +520,36 @@ public class ComponentMetadataValueValid {
     this.maxOccurs = maxOccurs;
   }
 
+  public ComponentMetadataValueValid imageFormatOptions(
+      List<ComponentMetadataValueValidImageFormatOption> imageFormatOptions) {
+    this.imageFormatOptions = imageFormatOptions;
+    return this;
+  }
+
+  public ComponentMetadataValueValid addImageFormatOptionsItem(
+      ComponentMetadataValueValidImageFormatOption imageFormatOptionsItem) {
+    if (this.imageFormatOptions == null) {
+      this.imageFormatOptions = new ArrayList<ComponentMetadataValueValidImageFormatOption>();
+    }
+    this.imageFormatOptions.add(imageFormatOptionsItem);
+    return this;
+  }
+
+  /**
+   * Get imageFormatOptions
+   *
+   * @return imageFormatOptions
+   */
+  @ApiModelProperty(value = "")
+  public List<ComponentMetadataValueValidImageFormatOption> getImageFormatOptions() {
+    return imageFormatOptions;
+  }
+
+  public void setImageFormatOptions(
+      List<ComponentMetadataValueValidImageFormatOption> imageFormatOptions) {
+    this.imageFormatOptions = imageFormatOptions;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -547,7 +580,8 @@ public class ComponentMetadataValueValid {
         && Objects.equals(this.defaultBoolValue, componentMetadataValueValid.defaultBoolValue)
         && Objects.equals(this.enumOptions, componentMetadataValueValid.enumOptions)
         && Objects.equals(this.minOccurs, componentMetadataValueValid.minOccurs)
-        && Objects.equals(this.maxOccurs, componentMetadataValueValid.maxOccurs);
+        && Objects.equals(this.maxOccurs, componentMetadataValueValid.maxOccurs)
+        && Objects.equals(this.imageFormatOptions, componentMetadataValueValid.imageFormatOptions);
   }
 
   @Override
@@ -574,7 +608,8 @@ public class ComponentMetadataValueValid {
         defaultBoolValue,
         enumOptions,
         minOccurs,
-        maxOccurs);
+        maxOccurs,
+        imageFormatOptions);
   }
 
   @Override

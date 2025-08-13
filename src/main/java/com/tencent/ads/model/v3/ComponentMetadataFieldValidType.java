@@ -36,7 +36,9 @@ public enum ComponentMetadataFieldValidType {
 
   URL("URL"),
 
-  LEADS("LEADS");
+  LEADS("LEADS"),
+
+  IMAGE_MULTI_FORMAT("IMAGE_MULTI_FORMAT");
 
   private String value;
 

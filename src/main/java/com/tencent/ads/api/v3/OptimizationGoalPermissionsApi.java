@@ -60,6 +60,7 @@ public class OptimizationGoalPermissionsApi {
    * @param marketingTargetType (required)
    * @param bidMode (optional)
    * @param marketingCarrierDetail (optional)
+   * @param deliveryScene (optional)
    * @param fields 返回参数的字段列表 (optional)
    * @param progressListener Progress listener
    * @param progressRequestListener Progress request listener
@@ -75,6 +76,7 @@ public class OptimizationGoalPermissionsApi {
       String marketingTargetType,
       String bidMode,
       MarketingCarrierDetail marketingCarrierDetail,
+      String deliveryScene,
       List<String> fields,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
@@ -107,6 +109,8 @@ public class OptimizationGoalPermissionsApi {
     if (marketingCarrierDetail != null)
       localVarQueryParams.addAll(
           apiClient.parameterToPair("marketing_carrier_detail", marketingCarrierDetail));
+    if (deliveryScene != null)
+      localVarQueryParams.addAll(apiClient.parameterToPair("delivery_scene", deliveryScene));
     if (fields != null)
       localVarCollectionQueryParams.addAll(apiClient.parameterToPairs("multi", "fields", fields));
 
@@ -169,6 +173,7 @@ public class OptimizationGoalPermissionsApi {
       String marketingTargetType,
       String bidMode,
       MarketingCarrierDetail marketingCarrierDetail,
+      String deliveryScene,
       List<String> fields,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
@@ -221,6 +226,7 @@ public class OptimizationGoalPermissionsApi {
             marketingTargetType,
             bidMode,
             marketingCarrierDetail,
+            deliveryScene,
             fields,
             progressListener,
             progressRequestListener,
@@ -239,6 +245,7 @@ public class OptimizationGoalPermissionsApi {
    * @param marketingTargetType (required)
    * @param bidMode (optional)
    * @param marketingCarrierDetail (optional)
+   * @param deliveryScene (optional)
    * @param fields 返回参数的字段列表 (optional)
    * @return OptimizationGoalPermissionsGetResponse
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
@@ -253,6 +260,7 @@ public class OptimizationGoalPermissionsApi {
       String marketingTargetType,
       String bidMode,
       MarketingCarrierDetail marketingCarrierDetail,
+      String deliveryScene,
       List<String> fields,
       Pair... headerPair)
       throws ApiException {
@@ -266,6 +274,7 @@ public class OptimizationGoalPermissionsApi {
             marketingTargetType,
             bidMode,
             marketingCarrierDetail,
+            deliveryScene,
             fields,
             headerPair);
     return resp.getData();
@@ -282,6 +291,7 @@ public class OptimizationGoalPermissionsApi {
    * @param marketingTargetType (required)
    * @param bidMode (optional)
    * @param marketingCarrierDetail (optional)
+   * @param deliveryScene (optional)
    * @param fields 返回参数的字段列表 (optional)
    * @return ApiResponse&lt;OptimizationGoalPermissionsGetResponse&gt;
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
@@ -297,6 +307,7 @@ public class OptimizationGoalPermissionsApi {
           String marketingTargetType,
           String bidMode,
           MarketingCarrierDetail marketingCarrierDetail,
+          String deliveryScene,
           List<String> fields,
           Pair... headerPair)
           throws ApiException {
@@ -310,6 +321,7 @@ public class OptimizationGoalPermissionsApi {
             marketingTargetType,
             bidMode,
             marketingCarrierDetail,
+            deliveryScene,
             fields,
             null,
             null,
@@ -329,6 +341,7 @@ public class OptimizationGoalPermissionsApi {
    * @param marketingTargetType (required)
    * @param bidMode (optional)
    * @param marketingCarrierDetail (optional)
+   * @param deliveryScene (optional)
    * @param fields 返回参数的字段列表 (optional)
    * @param callback The callback to be executed when the API call finishes
    * @return The request call
@@ -343,6 +356,7 @@ public class OptimizationGoalPermissionsApi {
       String marketingTargetType,
       String bidMode,
       MarketingCarrierDetail marketingCarrierDetail,
+      String deliveryScene,
       List<String> fields,
       final ApiCallback<OptimizationGoalPermissionsGetResponse> callback,
       Pair... headerPair)
@@ -379,6 +393,7 @@ public class OptimizationGoalPermissionsApi {
             marketingTargetType,
             bidMode,
             marketingCarrierDetail,
+            deliveryScene,
             fields,
             progressListener,
             progressRequestListener,

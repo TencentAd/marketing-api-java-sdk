@@ -26,8 +26,8 @@ public class CanvasFloatButtonSpecType {
   @SerializedName("style_type")
   private Long styleType = null;
 
-  @SerializedName("image_id_list")
-  private String imageIdList = null;
+  @SerializedName("image_id")
+  private String imageId = null;
 
   @SerializedName("title")
   private String title = null;
@@ -84,23 +84,23 @@ public class CanvasFloatButtonSpecType {
     this.styleType = styleType;
   }
 
-  public CanvasFloatButtonSpecType imageIdList(String imageIdList) {
-    this.imageIdList = imageIdList;
+  public CanvasFloatButtonSpecType imageId(String imageId) {
+    this.imageId = imageId;
     return this;
   }
 
   /**
-   * Get imageIdList
+   * Get imageId
    *
-   * @return imageIdList
+   * @return imageId
    */
   @ApiModelProperty(value = "")
-  public String getImageIdList() {
-    return imageIdList;
+  public String getImageId() {
+    return imageId;
   }
 
-  public void setImageIdList(String imageIdList) {
-    this.imageIdList = imageIdList;
+  public void setImageId(String imageId) {
+    this.imageId = imageId;
   }
 
   public CanvasFloatButtonSpecType title(String title) {
@@ -349,7 +349,7 @@ public class CanvasFloatButtonSpecType {
     }
     CanvasFloatButtonSpecType canvasFloatButtonSpecType = (CanvasFloatButtonSpecType) o;
     return Objects.equals(this.styleType, canvasFloatButtonSpecType.styleType)
-        && Objects.equals(this.imageIdList, canvasFloatButtonSpecType.imageIdList)
+        && Objects.equals(this.imageId, canvasFloatButtonSpecType.imageId)
         && Objects.equals(this.title, canvasFloatButtonSpecType.title)
         && Objects.equals(this.titleColor, canvasFloatButtonSpecType.titleColor)
         && Objects.equals(this.desc, canvasFloatButtonSpecType.desc)
@@ -368,7 +368,7 @@ public class CanvasFloatButtonSpecType {
   public int hashCode() {
     return Objects.hash(
         styleType,
-        imageIdList,
+        imageId,
         title,
         titleColor,
         desc,

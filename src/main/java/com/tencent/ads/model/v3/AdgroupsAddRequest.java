@@ -177,6 +177,9 @@ public class AdgroupsAddRequest {
   @SerializedName("dynamic_ad_type")
   private DynamicAdType dynamicAdType = null;
 
+  @SerializedName("dca_spec")
+  private DcaSpec dcaSpec = null;
+
   @SerializedName("dsp_id")
   private Long dspId = null;
 
@@ -188,9 +191,6 @@ public class AdgroupsAddRequest {
 
   @SerializedName("additional_product_spec")
   private AdditionalProductSpec additionalProductSpec = null;
-
-  @SerializedName("enable_breakthrough_siteset")
-  private Boolean enableBreakthroughSiteset = null;
 
   @SerializedName("live_recommend_strategy_enabled")
   private Boolean liveRecommendStrategyEnabled = null;
@@ -1232,6 +1232,25 @@ public class AdgroupsAddRequest {
     this.dynamicAdType = dynamicAdType;
   }
 
+  public AdgroupsAddRequest dcaSpec(DcaSpec dcaSpec) {
+    this.dcaSpec = dcaSpec;
+    return this;
+  }
+
+  /**
+   * Get dcaSpec
+   *
+   * @return dcaSpec
+   */
+  @ApiModelProperty(value = "")
+  public DcaSpec getDcaSpec() {
+    return dcaSpec;
+  }
+
+  public void setDcaSpec(DcaSpec dcaSpec) {
+    this.dcaSpec = dcaSpec;
+  }
+
   public AdgroupsAddRequest dspId(Long dspId) {
     this.dspId = dspId;
     return this;
@@ -1307,25 +1326,6 @@ public class AdgroupsAddRequest {
 
   public void setAdditionalProductSpec(AdditionalProductSpec additionalProductSpec) {
     this.additionalProductSpec = additionalProductSpec;
-  }
-
-  public AdgroupsAddRequest enableBreakthroughSiteset(Boolean enableBreakthroughSiteset) {
-    this.enableBreakthroughSiteset = enableBreakthroughSiteset;
-    return this;
-  }
-
-  /**
-   * Get enableBreakthroughSiteset
-   *
-   * @return enableBreakthroughSiteset
-   */
-  @ApiModelProperty(value = "")
-  public Boolean isEnableBreakthroughSiteset() {
-    return enableBreakthroughSiteset;
-  }
-
-  public void setEnableBreakthroughSiteset(Boolean enableBreakthroughSiteset) {
-    this.enableBreakthroughSiteset = enableBreakthroughSiteset;
   }
 
   public AdgroupsAddRequest liveRecommendStrategyEnabled(Boolean liveRecommendStrategyEnabled) {
@@ -1492,12 +1492,11 @@ public class AdgroupsAddRequest {
         && Objects.equals(this.shortPlayPayType, adgroupsAddRequest.shortPlayPayType)
         && Objects.equals(this.sellStrategyId, adgroupsAddRequest.sellStrategyId)
         && Objects.equals(this.dynamicAdType, adgroupsAddRequest.dynamicAdType)
+        && Objects.equals(this.dcaSpec, adgroupsAddRequest.dcaSpec)
         && Objects.equals(this.dspId, adgroupsAddRequest.dspId)
         && Objects.equals(this.aoiOptimizationStrategy, adgroupsAddRequest.aoiOptimizationStrategy)
         && Objects.equals(this.cloudUnionSpec, adgroupsAddRequest.cloudUnionSpec)
         && Objects.equals(this.additionalProductSpec, adgroupsAddRequest.additionalProductSpec)
-        && Objects.equals(
-            this.enableBreakthroughSiteset, adgroupsAddRequest.enableBreakthroughSiteset)
         && Objects.equals(
             this.liveRecommendStrategyEnabled, adgroupsAddRequest.liveRecommendStrategyEnabled)
         && Objects.equals(this.customCostRoiCap, adgroupsAddRequest.customCostRoiCap)
@@ -1561,11 +1560,11 @@ public class AdgroupsAddRequest {
         shortPlayPayType,
         sellStrategyId,
         dynamicAdType,
+        dcaSpec,
         dspId,
         aoiOptimizationStrategy,
         cloudUnionSpec,
         additionalProductSpec,
-        enableBreakthroughSiteset,
         liveRecommendStrategyEnabled,
         customCostRoiCap,
         searchExpansionSwitch,

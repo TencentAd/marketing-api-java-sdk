@@ -61,6 +61,7 @@ public class App {
   @Inject ChannelsLivenoticeinfoApiContainer channelsLivenoticeinfoApiContainer;
   @Inject ChannelsUserpageobjectsApiContainer channelsUserpageobjectsApiContainer;
   @Inject CommentListApiContainer commentListApiContainer;
+  @Inject ComponentDependsApiContainer componentDependsApiContainer;
   @Inject ComponentDetailApiContainer componentDetailApiContainer;
   @Inject ComponentElementUrgeReviewApiContainer componentElementUrgeReviewApiContainer;
   @Inject ComponentReviewResultsApiContainer componentReviewResultsApiContainer;
@@ -178,6 +179,8 @@ public class App {
   @Inject ProgrammedCommponentResultApiContainer programmedCommponentResultApiContainer;
   @Inject ProgrammedMaterialMappingsApiContainer programmedMaterialMappingsApiContainer;
   @Inject ProgrammedTemplateApiContainer programmedTemplateApiContainer;
+  @Inject PunishmentConfigApiContainer punishmentConfigApiContainer;
+  @Inject PunishmentQueryApiContainer punishmentQueryApiContainer;
   @Inject QualificationImagesApiContainer qualificationImagesApiContainer;
   @Inject QualificationStructureApiContainer qualificationStructureApiContainer;
   @Inject QualificationsApiContainer qualificationsApiContainer;
@@ -199,6 +202,7 @@ public class App {
   @Inject UserActionSetReportsApiContainer userActionSetReportsApiContainer;
   @Inject UserActionSetsApiContainer userActionSetsApiContainer;
   @Inject UserActionsApiContainer userActionsApiContainer;
+  @Inject UserOrganizationAuthenticationApiContainer userOrganizationAuthenticationApiContainer;
   @Inject VideoChannelDealerDataApiContainer videoChannelDealerDataApiContainer;
   @Inject VideoChannelFansDataApiContainer videoChannelFansDataApiContainer;
   @Inject VideoChannelLeadsDataApiContainer videoChannelLeadsDataApiContainer;
@@ -422,6 +426,10 @@ public class App {
 
   public CommentListApiContainer commentList() {
     return commentListApiContainer;
+  }
+
+  public ComponentDependsApiContainer componentDepends() {
+    return componentDependsApiContainer;
   }
 
   public ComponentDetailApiContainer componentDetail() {
@@ -856,6 +864,14 @@ public class App {
     return programmedTemplateApiContainer;
   }
 
+  public PunishmentConfigApiContainer punishmentConfig() {
+    return punishmentConfigApiContainer;
+  }
+
+  public PunishmentQueryApiContainer punishmentQuery() {
+    return punishmentQueryApiContainer;
+  }
+
   public QualificationImagesApiContainer qualificationImages() {
     return qualificationImagesApiContainer;
   }
@@ -938,6 +954,10 @@ public class App {
 
   public UserActionsApiContainer userActions() {
     return userActionsApiContainer;
+  }
+
+  public UserOrganizationAuthenticationApiContainer userOrganizationAuthentication() {
+    return userOrganizationAuthenticationApiContainer;
   }
 
   public VideoChannelDealerDataApiContainer videoChannelDealerData() {
