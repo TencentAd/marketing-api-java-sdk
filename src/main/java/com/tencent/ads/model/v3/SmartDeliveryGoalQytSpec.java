@@ -45,6 +45,12 @@ public class SmartDeliveryGoalQytSpec {
   @SerializedName("live_stream_audience_cost")
   private Long liveStreamAudienceCost = null;
 
+  @SerializedName("click_cost")
+  private Long clickCost = null;
+
+  @SerializedName("first_twenty_four_hour_ecommerce_order_cost")
+  private Long firstTwentyFourHourEcommerceOrderCost = null;
+
   public SmartDeliveryGoalQytSpec ecommerceOrderCost(Long ecommerceOrderCost) {
     this.ecommerceOrderCost = ecommerceOrderCost;
     return this;
@@ -197,6 +203,45 @@ public class SmartDeliveryGoalQytSpec {
     this.liveStreamAudienceCost = liveStreamAudienceCost;
   }
 
+  public SmartDeliveryGoalQytSpec clickCost(Long clickCost) {
+    this.clickCost = clickCost;
+    return this;
+  }
+
+  /**
+   * Get clickCost
+   *
+   * @return clickCost
+   */
+  @ApiModelProperty(value = "")
+  public Long getClickCost() {
+    return clickCost;
+  }
+
+  public void setClickCost(Long clickCost) {
+    this.clickCost = clickCost;
+  }
+
+  public SmartDeliveryGoalQytSpec firstTwentyFourHourEcommerceOrderCost(
+      Long firstTwentyFourHourEcommerceOrderCost) {
+    this.firstTwentyFourHourEcommerceOrderCost = firstTwentyFourHourEcommerceOrderCost;
+    return this;
+  }
+
+  /**
+   * Get firstTwentyFourHourEcommerceOrderCost
+   *
+   * @return firstTwentyFourHourEcommerceOrderCost
+   */
+  @ApiModelProperty(value = "")
+  public Long getFirstTwentyFourHourEcommerceOrderCost() {
+    return firstTwentyFourHourEcommerceOrderCost;
+  }
+
+  public void setFirstTwentyFourHourEcommerceOrderCost(Long firstTwentyFourHourEcommerceOrderCost) {
+    this.firstTwentyFourHourEcommerceOrderCost = firstTwentyFourHourEcommerceOrderCost;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -216,7 +261,11 @@ public class SmartDeliveryGoalQytSpec {
         && Objects.equals(this.customCostCap, smartDeliveryGoalQytSpec.customCostCap)
         && Objects.equals(this.costConstraintScene, smartDeliveryGoalQytSpec.costConstraintScene)
         && Objects.equals(
-            this.liveStreamAudienceCost, smartDeliveryGoalQytSpec.liveStreamAudienceCost);
+            this.liveStreamAudienceCost, smartDeliveryGoalQytSpec.liveStreamAudienceCost)
+        && Objects.equals(this.clickCost, smartDeliveryGoalQytSpec.clickCost)
+        && Objects.equals(
+            this.firstTwentyFourHourEcommerceOrderCost,
+            smartDeliveryGoalQytSpec.firstTwentyFourHourEcommerceOrderCost);
   }
 
   @Override
@@ -229,7 +278,9 @@ public class SmartDeliveryGoalQytSpec {
         smartBidType,
         customCostCap,
         costConstraintScene,
-        liveStreamAudienceCost);
+        liveStreamAudienceCost,
+        clickCost,
+        firstTwentyFourHourEcommerceOrderCost);
   }
 
   @Override

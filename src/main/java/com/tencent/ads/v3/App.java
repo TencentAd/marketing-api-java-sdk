@@ -103,6 +103,7 @@ public class App {
   @Inject GameFeatureTagsApiContainer gameFeatureTagsApiContainer;
   @Inject GetWxGameAppGiftPackApiContainer getWxGameAppGiftPackApiContainer;
   @Inject HourlyReportsApiContainer hourlyReportsApiContainer;
+  @Inject IllegalComplaintApiContainer illegalComplaintApiContainer;
   @Inject ImageProcessingApiContainer imageProcessingApiContainer;
   @Inject ImagesApiContainer imagesApiContainer;
   @Inject JointBudgetRulesApiContainer jointBudgetRulesApiContainer;
@@ -594,6 +595,10 @@ public class App {
 
   public HourlyReportsApiContainer hourlyReports() {
     return hourlyReportsApiContainer;
+  }
+
+  public IllegalComplaintApiContainer illegalComplaint() {
+    return illegalComplaintApiContainer;
   }
 
   public ImageProcessingApiContainer imageProcessing() {

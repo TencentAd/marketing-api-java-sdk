@@ -16,8 +16,6 @@ import com.google.gson.Gson;
 import com.google.gson.annotations.SerializedName;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Objects;
 
 /** 创意组件字段结构 */
@@ -33,7 +31,7 @@ public class CreativeComponentValueValidStructureField {
   private ComponentMetadataFieldType type = null;
 
   @SerializedName("structure")
-  private List<CreativeComponentValueValidStructureFieldSub> structure = null;
+  private CreativeComponentValueFieldStructureWithoutValueValidStructure structure = null;
 
   @SerializedName("valid")
   private CreativeComponentValueValid valid = null;
@@ -96,17 +94,8 @@ public class CreativeComponentValueValidStructureField {
   }
 
   public CreativeComponentValueValidStructureField structure(
-      List<CreativeComponentValueValidStructureFieldSub> structure) {
+      CreativeComponentValueFieldStructureWithoutValueValidStructure structure) {
     this.structure = structure;
-    return this;
-  }
-
-  public CreativeComponentValueValidStructureField addStructureItem(
-      CreativeComponentValueValidStructureFieldSub structureItem) {
-    if (this.structure == null) {
-      this.structure = new ArrayList<CreativeComponentValueValidStructureFieldSub>();
-    }
-    this.structure.add(structureItem);
     return this;
   }
 
@@ -116,11 +105,12 @@ public class CreativeComponentValueValidStructureField {
    * @return structure
    */
   @ApiModelProperty(value = "")
-  public List<CreativeComponentValueValidStructureFieldSub> getStructure() {
+  public CreativeComponentValueFieldStructureWithoutValueValidStructure getStructure() {
     return structure;
   }
 
-  public void setStructure(List<CreativeComponentValueValidStructureFieldSub> structure) {
+  public void setStructure(
+      CreativeComponentValueFieldStructureWithoutValueValidStructure structure) {
     this.structure = structure;
   }
 

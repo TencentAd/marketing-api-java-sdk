@@ -104,7 +104,9 @@ public enum PreReviewSiteSetDefinitionString {
 
   YUNXUAN("SITE_SET_YUNXUAN"),
 
-  EXPAND("SITE_SET_EXPAND");
+  EXPAND("SITE_SET_EXPAND"),
+
+  SMART("SITE_SET_SMART");
 
   private String value;
 

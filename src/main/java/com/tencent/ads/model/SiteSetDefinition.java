@@ -135,7 +135,9 @@ public enum SiteSetDefinition {
 
   SEARCH_MOBILE_UNION("SITE_SET_SEARCH_MOBILE_UNION"),
 
-  EXPAND("SITE_SET_EXPAND");
+  EXPAND("SITE_SET_EXPAND"),
+
+  SMART("SITE_SET_SMART");
 
   private String value;
 

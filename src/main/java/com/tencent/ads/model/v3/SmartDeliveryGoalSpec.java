@@ -109,6 +109,15 @@ public class SmartDeliveryGoalSpec {
   @SerializedName("product_order_spec")
   private SmartDeliveryGoalProductSpec productOrderSpec = null;
 
+  @SerializedName("cps_spec")
+  private SmartDeliveryGoalCpsSpec cpsSpec = null;
+
+  @SerializedName("qyt_click_spec")
+  private SmartDeliveryGoalQytSpec qytClickSpec = null;
+
+  @SerializedName("qyt_first_twenty_four_hour_ecommerce_order_spec")
+  private SmartDeliveryGoalQytSpec qytFirstTwentyFourHourEcommerceOrderSpec = null;
+
   public SmartDeliveryGoalSpec longTermRoiSpec(SmartDeliveryGoalLongTermRoiSpec longTermRoiSpec) {
     this.longTermRoiSpec = longTermRoiSpec;
     return this;
@@ -679,6 +688,65 @@ public class SmartDeliveryGoalSpec {
     this.productOrderSpec = productOrderSpec;
   }
 
+  public SmartDeliveryGoalSpec cpsSpec(SmartDeliveryGoalCpsSpec cpsSpec) {
+    this.cpsSpec = cpsSpec;
+    return this;
+  }
+
+  /**
+   * Get cpsSpec
+   *
+   * @return cpsSpec
+   */
+  @ApiModelProperty(value = "")
+  public SmartDeliveryGoalCpsSpec getCpsSpec() {
+    return cpsSpec;
+  }
+
+  public void setCpsSpec(SmartDeliveryGoalCpsSpec cpsSpec) {
+    this.cpsSpec = cpsSpec;
+  }
+
+  public SmartDeliveryGoalSpec qytClickSpec(SmartDeliveryGoalQytSpec qytClickSpec) {
+    this.qytClickSpec = qytClickSpec;
+    return this;
+  }
+
+  /**
+   * Get qytClickSpec
+   *
+   * @return qytClickSpec
+   */
+  @ApiModelProperty(value = "")
+  public SmartDeliveryGoalQytSpec getQytClickSpec() {
+    return qytClickSpec;
+  }
+
+  public void setQytClickSpec(SmartDeliveryGoalQytSpec qytClickSpec) {
+    this.qytClickSpec = qytClickSpec;
+  }
+
+  public SmartDeliveryGoalSpec qytFirstTwentyFourHourEcommerceOrderSpec(
+      SmartDeliveryGoalQytSpec qytFirstTwentyFourHourEcommerceOrderSpec) {
+    this.qytFirstTwentyFourHourEcommerceOrderSpec = qytFirstTwentyFourHourEcommerceOrderSpec;
+    return this;
+  }
+
+  /**
+   * Get qytFirstTwentyFourHourEcommerceOrderSpec
+   *
+   * @return qytFirstTwentyFourHourEcommerceOrderSpec
+   */
+  @ApiModelProperty(value = "")
+  public SmartDeliveryGoalQytSpec getQytFirstTwentyFourHourEcommerceOrderSpec() {
+    return qytFirstTwentyFourHourEcommerceOrderSpec;
+  }
+
+  public void setQytFirstTwentyFourHourEcommerceOrderSpec(
+      SmartDeliveryGoalQytSpec qytFirstTwentyFourHourEcommerceOrderSpec) {
+    this.qytFirstTwentyFourHourEcommerceOrderSpec = qytFirstTwentyFourHourEcommerceOrderSpec;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -733,7 +801,12 @@ public class SmartDeliveryGoalSpec {
             smartDeliveryGoalSpec.wechatStoreSingleProductOrderFirstTwentyFourHourRefundRateSpec)
         && Objects.equals(
             this.qytLiveStreamAudienceSpec, smartDeliveryGoalSpec.qytLiveStreamAudienceSpec)
-        && Objects.equals(this.productOrderSpec, smartDeliveryGoalSpec.productOrderSpec);
+        && Objects.equals(this.productOrderSpec, smartDeliveryGoalSpec.productOrderSpec)
+        && Objects.equals(this.cpsSpec, smartDeliveryGoalSpec.cpsSpec)
+        && Objects.equals(this.qytClickSpec, smartDeliveryGoalSpec.qytClickSpec)
+        && Objects.equals(
+            this.qytFirstTwentyFourHourEcommerceOrderSpec,
+            smartDeliveryGoalSpec.qytFirstTwentyFourHourEcommerceOrderSpec);
   }
 
   @Override
@@ -766,7 +839,10 @@ public class SmartDeliveryGoalSpec {
         drugProductOrderRoiSpec,
         wechatStoreSingleProductOrderFirstTwentyFourHourRefundRateSpec,
         qytLiveStreamAudienceSpec,
-        productOrderSpec);
+        productOrderSpec,
+        cpsSpec,
+        qytClickSpec,
+        qytFirstTwentyFourHourEcommerceOrderSpec);
   }
 
   @Override
