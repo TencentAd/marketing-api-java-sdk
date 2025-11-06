@@ -38,7 +38,9 @@ public enum ComponentMetadataFieldValidType {
 
   LEADS("LEADS"),
 
-  IMAGE_MULTI_FORMAT("IMAGE_MULTI_FORMAT");
+  IMAGE_MULTI_FORMAT("IMAGE_MULTI_FORMAT"),
+
+  AUDIO("AUDIO");
 
   private String value;
 

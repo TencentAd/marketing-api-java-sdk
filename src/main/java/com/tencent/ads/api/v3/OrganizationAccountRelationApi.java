@@ -187,7 +187,7 @@ public class OrganizationAccountRelationApi {
   }
 
   /**
-   * 查询组织下广告账号信息
+   * 查询组织下广告账户信息
    *
    * @param paginationMode (required)
    * @param accountId (optional)
@@ -227,7 +227,7 @@ public class OrganizationAccountRelationApi {
   }
 
   /**
-   * 查询组织下广告账号信息
+   * 查询组织下广告账户信息
    *
    * @param paginationMode (required)
    * @param accountId (optional)
@@ -271,7 +271,7 @@ public class OrganizationAccountRelationApi {
   }
 
   /**
-   * 查询组织下广告账号信息 (asynchronously)
+   * 查询组织下广告账户信息 (asynchronously)
    *
    * @param paginationMode (required)
    * @param accountId (optional)

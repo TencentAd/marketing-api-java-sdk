@@ -16,6 +16,8 @@ import com.google.gson.Gson;
 import com.google.gson.annotations.SerializedName;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Objects;
 
 /** 咨询组件 */
@@ -23,6 +25,9 @@ import java.util.Objects;
 public class ConsultStruct {
   @SerializedName("id")
   private Long id = null;
+
+  @SerializedName("jump_info_list")
+  private List<BackupsJumpinfoStruct> jumpInfoList = null;
 
   public ConsultStruct id(Long id) {
     this.id = id;
@@ -43,6 +48,33 @@ public class ConsultStruct {
     this.id = id;
   }
 
+  public ConsultStruct jumpInfoList(List<BackupsJumpinfoStruct> jumpInfoList) {
+    this.jumpInfoList = jumpInfoList;
+    return this;
+  }
+
+  public ConsultStruct addJumpInfoListItem(BackupsJumpinfoStruct jumpInfoListItem) {
+    if (this.jumpInfoList == null) {
+      this.jumpInfoList = new ArrayList<BackupsJumpinfoStruct>();
+    }
+    this.jumpInfoList.add(jumpInfoListItem);
+    return this;
+  }
+
+  /**
+   * Get jumpInfoList
+   *
+   * @return jumpInfoList
+   */
+  @ApiModelProperty(value = "")
+  public List<BackupsJumpinfoStruct> getJumpInfoList() {
+    return jumpInfoList;
+  }
+
+  public void setJumpInfoList(List<BackupsJumpinfoStruct> jumpInfoList) {
+    this.jumpInfoList = jumpInfoList;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -52,12 +84,13 @@ public class ConsultStruct {
       return false;
     }
     ConsultStruct consultStruct = (ConsultStruct) o;
-    return Objects.equals(this.id, consultStruct.id);
+    return Objects.equals(this.id, consultStruct.id)
+        && Objects.equals(this.jumpInfoList, consultStruct.jumpInfoList);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(id);
+    return Objects.hash(id, jumpInfoList);
   }
 
   @Override

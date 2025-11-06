@@ -27,7 +27,7 @@ public class ProductSeriesSpecFilteringStruct {
   private String field = null;
 
   @SerializedName("operator")
-  private String operator = null;
+  private ProductSetSpecFieldValueOperator operator = null;
 
   @SerializedName("values")
   private List<ProductSeriesSpecFilteringValueStruct> values = null;
@@ -51,7 +51,7 @@ public class ProductSeriesSpecFilteringStruct {
     this.field = field;
   }
 
-  public ProductSeriesSpecFilteringStruct operator(String operator) {
+  public ProductSeriesSpecFilteringStruct operator(ProductSetSpecFieldValueOperator operator) {
     this.operator = operator;
     return this;
   }
@@ -62,11 +62,11 @@ public class ProductSeriesSpecFilteringStruct {
    * @return operator
    */
   @ApiModelProperty(value = "")
-  public String getOperator() {
+  public ProductSetSpecFieldValueOperator getOperator() {
     return operator;
   }
 
-  public void setOperator(String operator) {
+  public void setOperator(ProductSetSpecFieldValueOperator operator) {
     this.operator = operator;
   }
 

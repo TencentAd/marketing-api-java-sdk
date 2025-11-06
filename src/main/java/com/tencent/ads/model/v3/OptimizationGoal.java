@@ -19,7 +19,7 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-/** 广告优化目标类型 */
+/** 深度优化目标类型 */
 @JsonAdapter(OptimizationGoal.Adapter.class)
 public enum OptimizationGoal {
   NONE("OPTIMIZATIONGOAL_NONE"),

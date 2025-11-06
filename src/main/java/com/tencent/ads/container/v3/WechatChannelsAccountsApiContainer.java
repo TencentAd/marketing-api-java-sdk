@@ -35,6 +35,7 @@ public class WechatChannelsAccountsApiContainer extends ApiContainer {
    * @param filtering (optional)
    * @param page (optional)
    * @param pageSize (optional)
+   * @param scene (optional)
    * @param fields 返回参数的字段列表 (optional)
    * @return WechatChannelsAccountsGetResponse
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
@@ -45,11 +46,13 @@ public class WechatChannelsAccountsApiContainer extends ApiContainer {
       List<FilteringStruct> filtering,
       Long page,
       Long pageSize,
+      String scene,
       List<String> fields,
       Pair... headerPair)
       throws ApiException, TencentAdsResponseException {
     WechatChannelsAccountsGetResponse resp =
-        api.wechatChannelsAccountsGet(accountId, filtering, page, pageSize, fields, headerPair);
+        api.wechatChannelsAccountsGet(
+            accountId, filtering, page, pageSize, scene, fields, headerPair);
     handleResponse(gson.toJson(resp));
     return resp.getData();
   }

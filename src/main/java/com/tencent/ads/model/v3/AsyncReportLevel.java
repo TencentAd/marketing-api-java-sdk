@@ -60,7 +60,9 @@ public enum AsyncReportLevel {
 
   PROJECT_CREATIVE("REPORT_LEVEL_PROJECT_CREATIVE"),
 
-  OS("REPORT_LEVEL_OS");
+  OS("REPORT_LEVEL_OS"),
+
+  CREATIVE_ASSET("REPORT_LEVEL_CREATIVE_ASSET");
 
   private String value;
 

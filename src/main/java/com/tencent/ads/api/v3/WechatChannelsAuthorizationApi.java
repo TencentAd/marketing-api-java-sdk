@@ -21,6 +21,7 @@ import com.tencent.ads.Configuration;
 import com.tencent.ads.Pair;
 import com.tencent.ads.ProgressRequestBody;
 import com.tencent.ads.ProgressResponseBody;
+import com.tencent.ads.model.v3.FilteringStruct;
 import com.tencent.ads.model.v3.WechatChannelsAuthorizationAddRequest;
 import com.tencent.ads.model.v3.WechatChannelsAuthorizationAddResponse;
 import com.tencent.ads.model.v3.WechatChannelsAuthorizationDeleteRequest;
@@ -397,6 +398,7 @@ public class WechatChannelsAuthorizationApi {
    * @param wechatChannelsAccountName (optional)
    * @param page (optional)
    * @param pageSize (optional)
+   * @param filtering (optional)
    * @param fields 返回参数的字段列表 (optional)
    * @param progressListener Progress listener
    * @param progressRequestListener Progress request listener
@@ -408,6 +410,7 @@ public class WechatChannelsAuthorizationApi {
       String wechatChannelsAccountName,
       Long page,
       Long pageSize,
+      List<FilteringStruct> filtering,
       List<String> fields,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
@@ -429,6 +432,9 @@ public class WechatChannelsAuthorizationApi {
     if (page != null) localVarQueryParams.addAll(apiClient.parameterToPair("page", page));
     if (pageSize != null)
       localVarQueryParams.addAll(apiClient.parameterToPair("page_size", pageSize));
+    if (filtering != null)
+      localVarCollectionQueryParams.addAll(
+          apiClient.parameterToPairs("multi", "filtering", filtering));
     if (fields != null)
       localVarCollectionQueryParams.addAll(apiClient.parameterToPairs("multi", "fields", fields));
 
@@ -487,6 +493,7 @@ public class WechatChannelsAuthorizationApi {
       String wechatChannelsAccountName,
       Long page,
       Long pageSize,
+      List<FilteringStruct> filtering,
       List<String> fields,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
@@ -505,6 +512,7 @@ public class WechatChannelsAuthorizationApi {
             wechatChannelsAccountName,
             page,
             pageSize,
+            filtering,
             fields,
             progressListener,
             progressRequestListener,
@@ -519,6 +527,7 @@ public class WechatChannelsAuthorizationApi {
    * @param wechatChannelsAccountName (optional)
    * @param page (optional)
    * @param pageSize (optional)
+   * @param filtering (optional)
    * @param fields 返回参数的字段列表 (optional)
    * @return WechatChannelsAuthorizationGetResponse
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
@@ -529,12 +538,13 @@ public class WechatChannelsAuthorizationApi {
       String wechatChannelsAccountName,
       Long page,
       Long pageSize,
+      List<FilteringStruct> filtering,
       List<String> fields,
       Pair... headerPair)
       throws ApiException {
     ApiResponse<WechatChannelsAuthorizationGetResponse> resp =
         wechatChannelsAuthorizationGetWithHttpInfo(
-            accountId, wechatChannelsAccountName, page, pageSize, fields, headerPair);
+            accountId, wechatChannelsAccountName, page, pageSize, filtering, fields, headerPair);
     return resp.getData();
   }
 
@@ -545,6 +555,7 @@ public class WechatChannelsAuthorizationApi {
    * @param wechatChannelsAccountName (optional)
    * @param page (optional)
    * @param pageSize (optional)
+   * @param filtering (optional)
    * @param fields 返回参数的字段列表 (optional)
    * @return ApiResponse&lt;WechatChannelsAuthorizationGetResponse&gt;
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
@@ -556,12 +567,21 @@ public class WechatChannelsAuthorizationApi {
           String wechatChannelsAccountName,
           Long page,
           Long pageSize,
+          List<FilteringStruct> filtering,
           List<String> fields,
           Pair... headerPair)
           throws ApiException {
     com.squareup.okhttp.Call call =
         wechatChannelsAuthorizationGetValidateBeforeCall(
-            accountId, wechatChannelsAccountName, page, pageSize, fields, null, null, headerPair);
+            accountId,
+            wechatChannelsAccountName,
+            page,
+            pageSize,
+            filtering,
+            fields,
+            null,
+            null,
+            headerPair);
     Type localVarReturnType = new TypeToken<WechatChannelsAuthorizationGetResponse>() {}.getType();
     return apiClient.execute(call, localVarReturnType);
   }
@@ -573,6 +593,7 @@ public class WechatChannelsAuthorizationApi {
    * @param wechatChannelsAccountName (optional)
    * @param page (optional)
    * @param pageSize (optional)
+   * @param filtering (optional)
    * @param fields 返回参数的字段列表 (optional)
    * @param callback The callback to be executed when the API call finishes
    * @return The request call
@@ -583,6 +604,7 @@ public class WechatChannelsAuthorizationApi {
       String wechatChannelsAccountName,
       Long page,
       Long pageSize,
+      List<FilteringStruct> filtering,
       List<String> fields,
       final ApiCallback<WechatChannelsAuthorizationGetResponse> callback,
       Pair... headerPair)
@@ -615,6 +637,7 @@ public class WechatChannelsAuthorizationApi {
             wechatChannelsAccountName,
             page,
             pageSize,
+            filtering,
             fields,
             progressListener,
             progressRequestListener,

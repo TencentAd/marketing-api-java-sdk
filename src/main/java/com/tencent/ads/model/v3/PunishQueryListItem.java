@@ -102,7 +102,7 @@ public class PunishQueryListItem {
   private String illegalScene = null;
 
   @SerializedName("mdm_punish_data")
-  private MdmPunishData mdmPunishData = null;
+  private List<MdmPunishData> mdmPunishData = null;
 
   @SerializedName("appeal_status")
   private Boolean appealStatus = null;
@@ -609,8 +609,16 @@ public class PunishQueryListItem {
     this.illegalScene = illegalScene;
   }
 
-  public PunishQueryListItem mdmPunishData(MdmPunishData mdmPunishData) {
+  public PunishQueryListItem mdmPunishData(List<MdmPunishData> mdmPunishData) {
     this.mdmPunishData = mdmPunishData;
+    return this;
+  }
+
+  public PunishQueryListItem addMdmPunishDataItem(MdmPunishData mdmPunishDataItem) {
+    if (this.mdmPunishData == null) {
+      this.mdmPunishData = new ArrayList<MdmPunishData>();
+    }
+    this.mdmPunishData.add(mdmPunishDataItem);
     return this;
   }
 
@@ -620,11 +628,11 @@ public class PunishQueryListItem {
    * @return mdmPunishData
    */
   @ApiModelProperty(value = "")
-  public MdmPunishData getMdmPunishData() {
+  public List<MdmPunishData> getMdmPunishData() {
     return mdmPunishData;
   }
 
-  public void setMdmPunishData(MdmPunishData mdmPunishData) {
+  public void setMdmPunishData(List<MdmPunishData> mdmPunishData) {
     this.mdmPunishData = mdmPunishData;
   }
 

@@ -33,6 +33,9 @@ public class UserActionSetsAddRequest {
   @SerializedName("wechat_app_id")
   private String wechatAppId = null;
 
+  @SerializedName("app_id_str")
+  private String appIdStr = null;
+
   @SerializedName("name")
   private String name = null;
 
@@ -119,6 +122,25 @@ public class UserActionSetsAddRequest {
 
   public void setWechatAppId(String wechatAppId) {
     this.wechatAppId = wechatAppId;
+  }
+
+  public UserActionSetsAddRequest appIdStr(String appIdStr) {
+    this.appIdStr = appIdStr;
+    return this;
+  }
+
+  /**
+   * Get appIdStr
+   *
+   * @return appIdStr
+   */
+  @ApiModelProperty(value = "")
+  public String getAppIdStr() {
+    return appIdStr;
+  }
+
+  public void setAppIdStr(String appIdStr) {
+    this.appIdStr = appIdStr;
   }
 
   public UserActionSetsAddRequest name(String name) {
@@ -218,6 +240,7 @@ public class UserActionSetsAddRequest {
         && Objects.equals(this.type, userActionSetsAddRequest.type)
         && Objects.equals(this.mobileAppId, userActionSetsAddRequest.mobileAppId)
         && Objects.equals(this.wechatAppId, userActionSetsAddRequest.wechatAppId)
+        && Objects.equals(this.appIdStr, userActionSetsAddRequest.appIdStr)
         && Objects.equals(this.name, userActionSetsAddRequest.name)
         && Objects.equals(this.description, userActionSetsAddRequest.description)
         && Objects.equals(this.usages, userActionSetsAddRequest.usages)
@@ -232,6 +255,7 @@ public class UserActionSetsAddRequest {
         type,
         mobileAppId,
         wechatAppId,
+        appIdStr,
         name,
         description,
         usages,

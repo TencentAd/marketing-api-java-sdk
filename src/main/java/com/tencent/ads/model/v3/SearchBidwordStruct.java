@@ -42,6 +42,12 @@ public class SearchBidwordStruct {
   @SerializedName("dynamic_creative_id")
   private Long dynamicCreativeId = null;
 
+  @SerializedName("pc_landing_page_info")
+  private BidwordLandingPage pcLandingPageInfo = null;
+
+  @SerializedName("mobile_landing_page_info")
+  private BidwordLandingPage mobileLandingPageInfo = null;
+
   public SearchBidwordStruct adgroupId(Long adgroupId) {
     this.adgroupId = adgroupId;
     return this;
@@ -175,6 +181,44 @@ public class SearchBidwordStruct {
     this.dynamicCreativeId = dynamicCreativeId;
   }
 
+  public SearchBidwordStruct pcLandingPageInfo(BidwordLandingPage pcLandingPageInfo) {
+    this.pcLandingPageInfo = pcLandingPageInfo;
+    return this;
+  }
+
+  /**
+   * Get pcLandingPageInfo
+   *
+   * @return pcLandingPageInfo
+   */
+  @ApiModelProperty(value = "")
+  public BidwordLandingPage getPcLandingPageInfo() {
+    return pcLandingPageInfo;
+  }
+
+  public void setPcLandingPageInfo(BidwordLandingPage pcLandingPageInfo) {
+    this.pcLandingPageInfo = pcLandingPageInfo;
+  }
+
+  public SearchBidwordStruct mobileLandingPageInfo(BidwordLandingPage mobileLandingPageInfo) {
+    this.mobileLandingPageInfo = mobileLandingPageInfo;
+    return this;
+  }
+
+  /**
+   * Get mobileLandingPageInfo
+   *
+   * @return mobileLandingPageInfo
+   */
+  @ApiModelProperty(value = "")
+  public BidwordLandingPage getMobileLandingPageInfo() {
+    return mobileLandingPageInfo;
+  }
+
+  public void setMobileLandingPageInfo(BidwordLandingPage mobileLandingPageInfo) {
+    this.mobileLandingPageInfo = mobileLandingPageInfo;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -190,7 +234,9 @@ public class SearchBidwordStruct {
         && Objects.equals(this.useGroupPrice, searchBidwordStruct.useGroupPrice)
         && Objects.equals(this.matchType, searchBidwordStruct.matchType)
         && Objects.equals(this.configuredStatus, searchBidwordStruct.configuredStatus)
-        && Objects.equals(this.dynamicCreativeId, searchBidwordStruct.dynamicCreativeId);
+        && Objects.equals(this.dynamicCreativeId, searchBidwordStruct.dynamicCreativeId)
+        && Objects.equals(this.pcLandingPageInfo, searchBidwordStruct.pcLandingPageInfo)
+        && Objects.equals(this.mobileLandingPageInfo, searchBidwordStruct.mobileLandingPageInfo);
   }
 
   @Override
@@ -202,7 +248,9 @@ public class SearchBidwordStruct {
         useGroupPrice,
         matchType,
         configuredStatus,
-        dynamicCreativeId);
+        dynamicCreativeId,
+        pcLandingPageInfo,
+        mobileLandingPageInfo);
   }
 
   @Override

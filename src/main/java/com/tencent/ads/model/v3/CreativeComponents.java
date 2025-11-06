@@ -122,6 +122,15 @@ public class CreativeComponents {
   @SerializedName("floating_zone_list")
   private List<FloatingZoneListComponent> floatingZoneList = null;
 
+  @SerializedName("video_channels_content")
+  private List<VideoChannelsContentComponent> videoChannelsContent = null;
+
+  @SerializedName("audio")
+  private List<AudioComponent> audio = null;
+
+  @SerializedName("wxgame_direct_page")
+  private List<WxgameDirectPageComponent> wxgameDirectPage = null;
+
   public CreativeComponents title(List<TitleComponent> title) {
     this.title = title;
     return this;
@@ -1018,6 +1027,90 @@ public class CreativeComponents {
     this.floatingZoneList = floatingZoneList;
   }
 
+  public CreativeComponents videoChannelsContent(
+      List<VideoChannelsContentComponent> videoChannelsContent) {
+    this.videoChannelsContent = videoChannelsContent;
+    return this;
+  }
+
+  public CreativeComponents addVideoChannelsContentItem(
+      VideoChannelsContentComponent videoChannelsContentItem) {
+    if (this.videoChannelsContent == null) {
+      this.videoChannelsContent = new ArrayList<VideoChannelsContentComponent>();
+    }
+    this.videoChannelsContent.add(videoChannelsContentItem);
+    return this;
+  }
+
+  /**
+   * Get videoChannelsContent
+   *
+   * @return videoChannelsContent
+   */
+  @ApiModelProperty(value = "")
+  public List<VideoChannelsContentComponent> getVideoChannelsContent() {
+    return videoChannelsContent;
+  }
+
+  public void setVideoChannelsContent(List<VideoChannelsContentComponent> videoChannelsContent) {
+    this.videoChannelsContent = videoChannelsContent;
+  }
+
+  public CreativeComponents audio(List<AudioComponent> audio) {
+    this.audio = audio;
+    return this;
+  }
+
+  public CreativeComponents addAudioItem(AudioComponent audioItem) {
+    if (this.audio == null) {
+      this.audio = new ArrayList<AudioComponent>();
+    }
+    this.audio.add(audioItem);
+    return this;
+  }
+
+  /**
+   * Get audio
+   *
+   * @return audio
+   */
+  @ApiModelProperty(value = "")
+  public List<AudioComponent> getAudio() {
+    return audio;
+  }
+
+  public void setAudio(List<AudioComponent> audio) {
+    this.audio = audio;
+  }
+
+  public CreativeComponents wxgameDirectPage(List<WxgameDirectPageComponent> wxgameDirectPage) {
+    this.wxgameDirectPage = wxgameDirectPage;
+    return this;
+  }
+
+  public CreativeComponents addWxgameDirectPageItem(
+      WxgameDirectPageComponent wxgameDirectPageItem) {
+    if (this.wxgameDirectPage == null) {
+      this.wxgameDirectPage = new ArrayList<WxgameDirectPageComponent>();
+    }
+    this.wxgameDirectPage.add(wxgameDirectPageItem);
+    return this;
+  }
+
+  /**
+   * Get wxgameDirectPage
+   *
+   * @return wxgameDirectPage
+   */
+  @ApiModelProperty(value = "")
+  public List<WxgameDirectPageComponent> getWxgameDirectPage() {
+    return wxgameDirectPage;
+  }
+
+  public void setWxgameDirectPage(List<WxgameDirectPageComponent> wxgameDirectPage) {
+    this.wxgameDirectPage = wxgameDirectPage;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -1059,7 +1152,10 @@ public class CreativeComponents {
         && Objects.equals(this.imageShowcase, creativeComponents.imageShowcase)
         && Objects.equals(this.socialSkill, creativeComponents.socialSkill)
         && Objects.equals(this.miniCardLink, creativeComponents.miniCardLink)
-        && Objects.equals(this.floatingZoneList, creativeComponents.floatingZoneList);
+        && Objects.equals(this.floatingZoneList, creativeComponents.floatingZoneList)
+        && Objects.equals(this.videoChannelsContent, creativeComponents.videoChannelsContent)
+        && Objects.equals(this.audio, creativeComponents.audio)
+        && Objects.equals(this.wxgameDirectPage, creativeComponents.wxgameDirectPage);
   }
 
   @Override
@@ -1097,7 +1193,10 @@ public class CreativeComponents {
         imageShowcase,
         socialSkill,
         miniCardLink,
-        floatingZoneList);
+        floatingZoneList,
+        videoChannelsContent,
+        audio,
+        wxgameDirectPage);
   }
 
   @Override

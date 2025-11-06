@@ -56,6 +56,7 @@ public class WechatChannelsAccountsApi {
    * @param filtering (optional)
    * @param page (optional)
    * @param pageSize (optional)
+   * @param scene (optional)
    * @param fields 返回参数的字段列表 (optional)
    * @param progressListener Progress listener
    * @param progressRequestListener Progress request listener
@@ -67,6 +68,7 @@ public class WechatChannelsAccountsApi {
       List<FilteringStruct> filtering,
       Long page,
       Long pageSize,
+      String scene,
       List<String> fields,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
@@ -88,6 +90,7 @@ public class WechatChannelsAccountsApi {
     if (page != null) localVarQueryParams.addAll(apiClient.parameterToPair("page", page));
     if (pageSize != null)
       localVarQueryParams.addAll(apiClient.parameterToPair("page_size", pageSize));
+    if (scene != null) localVarQueryParams.addAll(apiClient.parameterToPair("scene", scene));
     if (fields != null)
       localVarCollectionQueryParams.addAll(apiClient.parameterToPairs("multi", "fields", fields));
 
@@ -146,6 +149,7 @@ public class WechatChannelsAccountsApi {
       List<FilteringStruct> filtering,
       Long page,
       Long pageSize,
+      String scene,
       List<String> fields,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
@@ -164,6 +168,7 @@ public class WechatChannelsAccountsApi {
             filtering,
             page,
             pageSize,
+            scene,
             fields,
             progressListener,
             progressRequestListener,
@@ -178,6 +183,7 @@ public class WechatChannelsAccountsApi {
    * @param filtering (optional)
    * @param page (optional)
    * @param pageSize (optional)
+   * @param scene (optional)
    * @param fields 返回参数的字段列表 (optional)
    * @return WechatChannelsAccountsGetResponse
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
@@ -188,12 +194,13 @@ public class WechatChannelsAccountsApi {
       List<FilteringStruct> filtering,
       Long page,
       Long pageSize,
+      String scene,
       List<String> fields,
       Pair... headerPair)
       throws ApiException {
     ApiResponse<WechatChannelsAccountsGetResponse> resp =
         wechatChannelsAccountsGetWithHttpInfo(
-            accountId, filtering, page, pageSize, fields, headerPair);
+            accountId, filtering, page, pageSize, scene, fields, headerPair);
     return resp.getData();
   }
 
@@ -204,6 +211,7 @@ public class WechatChannelsAccountsApi {
    * @param filtering (optional)
    * @param page (optional)
    * @param pageSize (optional)
+   * @param scene (optional)
    * @param fields 返回参数的字段列表 (optional)
    * @return ApiResponse&lt;WechatChannelsAccountsGetResponse&gt;
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
@@ -214,12 +222,13 @@ public class WechatChannelsAccountsApi {
       List<FilteringStruct> filtering,
       Long page,
       Long pageSize,
+      String scene,
       List<String> fields,
       Pair... headerPair)
       throws ApiException {
     com.squareup.okhttp.Call call =
         wechatChannelsAccountsGetValidateBeforeCall(
-            accountId, filtering, page, pageSize, fields, null, null, headerPair);
+            accountId, filtering, page, pageSize, scene, fields, null, null, headerPair);
     Type localVarReturnType = new TypeToken<WechatChannelsAccountsGetResponse>() {}.getType();
     return apiClient.execute(call, localVarReturnType);
   }
@@ -231,6 +240,7 @@ public class WechatChannelsAccountsApi {
    * @param filtering (optional)
    * @param page (optional)
    * @param pageSize (optional)
+   * @param scene (optional)
    * @param fields 返回参数的字段列表 (optional)
    * @param callback The callback to be executed when the API call finishes
    * @return The request call
@@ -241,6 +251,7 @@ public class WechatChannelsAccountsApi {
       List<FilteringStruct> filtering,
       Long page,
       Long pageSize,
+      String scene,
       List<String> fields,
       final ApiCallback<WechatChannelsAccountsGetResponse> callback,
       Pair... headerPair)
@@ -273,6 +284,7 @@ public class WechatChannelsAccountsApi {
             filtering,
             page,
             pageSize,
+            scene,
             fields,
             progressListener,
             progressRequestListener,

@@ -19,6 +19,7 @@ import com.tencent.ads.guice.GuiceModule;
 
 public class App {
 
+  @Inject AccountSubsidyApiContainer accountSubsidyApiContainer;
   @Inject AccountVersionApiContainer accountVersionApiContainer;
   @Inject AdLabelApiContainer adLabelApiContainer;
   @Inject AdParamApiContainer adParamApiContainer;
@@ -152,6 +153,7 @@ public class App {
   @Inject MuseAiMaterialApiContainer museAiMaterialApiContainer;
   @Inject MuseAiTaskApiContainer museAiTaskApiContainer;
   @Inject MuseAiUgcApiContainer museAiUgcApiContainer;
+  @Inject NegativewordsApiContainer negativewordsApiContainer;
   @Inject OauthApiContainer oauthApiContainer;
   @Inject ObjectCommentFlagApiContainer objectCommentFlagApiContainer;
   @Inject OfficialLandingPageApiContainer officialLandingPageApiContainer;
@@ -194,7 +196,11 @@ public class App {
   @Inject RtatargetApiContainer rtatargetApiContainer;
   @Inject RtatargetBindApiContainer rtatargetBindApiContainer;
   @Inject SceneSpecTagsApiContainer sceneSpecTagsApiContainer;
+  @Inject SearchAdgroupsApiContainer searchAdgroupsApiContainer;
+  @Inject SearchDynamicCreativesApiContainer searchDynamicCreativesApiContainer;
   @Inject SubcustomerTransferApiContainer subcustomerTransferApiContainer;
+  @Inject SubsidyAccountBindApiContainer subsidyAccountBindApiContainer;
+  @Inject SubsidyBoundAccountListApiContainer subsidyBoundAccountListApiContainer;
   @Inject TargetingTagReportsApiContainer targetingTagReportsApiContainer;
   @Inject TargetingTagsApiContainer targetingTagsApiContainer;
   @Inject TargetingTagsUvApiContainer targetingTagsUvApiContainer;
@@ -259,6 +265,10 @@ public class App {
 
   public App() {
     Guice.createInjector(new GuiceModule()).injectMembers(this);
+  }
+
+  public AccountSubsidyApiContainer accountSubsidy() {
+    return accountSubsidyApiContainer;
   }
 
   public AccountVersionApiContainer accountVersion() {
@@ -769,6 +779,10 @@ public class App {
     return museAiUgcApiContainer;
   }
 
+  public NegativewordsApiContainer negativewords() {
+    return negativewordsApiContainer;
+  }
+
   public OauthApiContainer oauth() {
     return oauthApiContainer;
   }
@@ -925,8 +939,24 @@ public class App {
     return sceneSpecTagsApiContainer;
   }
 
+  public SearchAdgroupsApiContainer searchAdgroups() {
+    return searchAdgroupsApiContainer;
+  }
+
+  public SearchDynamicCreativesApiContainer searchDynamicCreatives() {
+    return searchDynamicCreativesApiContainer;
+  }
+
   public SubcustomerTransferApiContainer subcustomerTransfer() {
     return subcustomerTransferApiContainer;
+  }
+
+  public SubsidyAccountBindApiContainer subsidyAccountBind() {
+    return subsidyAccountBindApiContainer;
+  }
+
+  public SubsidyBoundAccountListApiContainer subsidyBoundAccountList() {
+    return subsidyBoundAccountListApiContainer;
   }
 
   public TargetingTagReportsApiContainer targetingTagReports() {

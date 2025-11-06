@@ -33,6 +33,18 @@ public class ComponentMetadataValueValidImageFormatOption {
   @SerializedName("width")
   private Long width = null;
 
+  @SerializedName("ratio_height")
+  private Long ratioHeight = null;
+
+  @SerializedName("ratio_width")
+  private Long ratioWidth = null;
+
+  @SerializedName("min_height")
+  private Long minHeight = null;
+
+  @SerializedName("min_width")
+  private Long minWidth = null;
+
   public ComponentMetadataValueValidImageFormatOption fileFormat(String fileFormat) {
     this.fileFormat = fileFormat;
     return this;
@@ -109,6 +121,82 @@ public class ComponentMetadataValueValidImageFormatOption {
     this.width = width;
   }
 
+  public ComponentMetadataValueValidImageFormatOption ratioHeight(Long ratioHeight) {
+    this.ratioHeight = ratioHeight;
+    return this;
+  }
+
+  /**
+   * Get ratioHeight
+   *
+   * @return ratioHeight
+   */
+  @ApiModelProperty(value = "")
+  public Long getRatioHeight() {
+    return ratioHeight;
+  }
+
+  public void setRatioHeight(Long ratioHeight) {
+    this.ratioHeight = ratioHeight;
+  }
+
+  public ComponentMetadataValueValidImageFormatOption ratioWidth(Long ratioWidth) {
+    this.ratioWidth = ratioWidth;
+    return this;
+  }
+
+  /**
+   * Get ratioWidth
+   *
+   * @return ratioWidth
+   */
+  @ApiModelProperty(value = "")
+  public Long getRatioWidth() {
+    return ratioWidth;
+  }
+
+  public void setRatioWidth(Long ratioWidth) {
+    this.ratioWidth = ratioWidth;
+  }
+
+  public ComponentMetadataValueValidImageFormatOption minHeight(Long minHeight) {
+    this.minHeight = minHeight;
+    return this;
+  }
+
+  /**
+   * Get minHeight
+   *
+   * @return minHeight
+   */
+  @ApiModelProperty(value = "")
+  public Long getMinHeight() {
+    return minHeight;
+  }
+
+  public void setMinHeight(Long minHeight) {
+    this.minHeight = minHeight;
+  }
+
+  public ComponentMetadataValueValidImageFormatOption minWidth(Long minWidth) {
+    this.minWidth = minWidth;
+    return this;
+  }
+
+  /**
+   * Get minWidth
+   *
+   * @return minWidth
+   */
+  @ApiModelProperty(value = "")
+  public Long getMinWidth() {
+    return minWidth;
+  }
+
+  public void setMinWidth(Long minWidth) {
+    this.minWidth = minWidth;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -123,12 +211,18 @@ public class ComponentMetadataValueValidImageFormatOption {
         && Objects.equals(
             this.fileSizeKbLimit, componentMetadataValueValidImageFormatOption.fileSizeKbLimit)
         && Objects.equals(this.height, componentMetadataValueValidImageFormatOption.height)
-        && Objects.equals(this.width, componentMetadataValueValidImageFormatOption.width);
+        && Objects.equals(this.width, componentMetadataValueValidImageFormatOption.width)
+        && Objects.equals(
+            this.ratioHeight, componentMetadataValueValidImageFormatOption.ratioHeight)
+        && Objects.equals(this.ratioWidth, componentMetadataValueValidImageFormatOption.ratioWidth)
+        && Objects.equals(this.minHeight, componentMetadataValueValidImageFormatOption.minHeight)
+        && Objects.equals(this.minWidth, componentMetadataValueValidImageFormatOption.minWidth);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(fileFormat, fileSizeKbLimit, height, width);
+    return Objects.hash(
+        fileFormat, fileSizeKbLimit, height, width, ratioHeight, ratioWidth, minHeight, minWidth);
   }
 
   @Override

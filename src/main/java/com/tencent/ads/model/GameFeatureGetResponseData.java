@@ -45,6 +45,15 @@ public class GameFeatureGetResponseData {
   @SerializedName("game_marketing_lifecycle_list")
   private List<GameMarketingLifecycleStruct> gameMarketingLifecycleList = null;
 
+  @SerializedName("game_type_id_v6")
+  private Long gameTypeIdV6 = null;
+
+  @SerializedName("game_play_id_v6")
+  private Long gamePlayIdV6 = null;
+
+  @SerializedName("game_sub_play_id_list_v6")
+  private List<Long> gameSubPlayIdListV6 = null;
+
   public GameFeatureGetResponseData promotedObjectType(PromotedObjectType promotedObjectType) {
     this.promotedObjectType = promotedObjectType;
     return this;
@@ -216,6 +225,71 @@ public class GameFeatureGetResponseData {
     this.gameMarketingLifecycleList = gameMarketingLifecycleList;
   }
 
+  public GameFeatureGetResponseData gameTypeIdV6(Long gameTypeIdV6) {
+    this.gameTypeIdV6 = gameTypeIdV6;
+    return this;
+  }
+
+  /**
+   * Get gameTypeIdV6
+   *
+   * @return gameTypeIdV6
+   */
+  @ApiModelProperty(value = "")
+  public Long getGameTypeIdV6() {
+    return gameTypeIdV6;
+  }
+
+  public void setGameTypeIdV6(Long gameTypeIdV6) {
+    this.gameTypeIdV6 = gameTypeIdV6;
+  }
+
+  public GameFeatureGetResponseData gamePlayIdV6(Long gamePlayIdV6) {
+    this.gamePlayIdV6 = gamePlayIdV6;
+    return this;
+  }
+
+  /**
+   * Get gamePlayIdV6
+   *
+   * @return gamePlayIdV6
+   */
+  @ApiModelProperty(value = "")
+  public Long getGamePlayIdV6() {
+    return gamePlayIdV6;
+  }
+
+  public void setGamePlayIdV6(Long gamePlayIdV6) {
+    this.gamePlayIdV6 = gamePlayIdV6;
+  }
+
+  public GameFeatureGetResponseData gameSubPlayIdListV6(List<Long> gameSubPlayIdListV6) {
+    this.gameSubPlayIdListV6 = gameSubPlayIdListV6;
+    return this;
+  }
+
+  public GameFeatureGetResponseData addGameSubPlayIdListV6Item(Long gameSubPlayIdListV6Item) {
+    if (this.gameSubPlayIdListV6 == null) {
+      this.gameSubPlayIdListV6 = new ArrayList<Long>();
+    }
+    this.gameSubPlayIdListV6.add(gameSubPlayIdListV6Item);
+    return this;
+  }
+
+  /**
+   * Get gameSubPlayIdListV6
+   *
+   * @return gameSubPlayIdListV6
+   */
+  @ApiModelProperty(value = "")
+  public List<Long> getGameSubPlayIdListV6() {
+    return gameSubPlayIdListV6;
+  }
+
+  public void setGameSubPlayIdListV6(List<Long> gameSubPlayIdListV6) {
+    this.gameSubPlayIdListV6 = gameSubPlayIdListV6;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -233,7 +307,10 @@ public class GameFeatureGetResponseData {
         && Objects.equals(this.gameThemeId, gameFeatureGetResponseData.gameThemeId)
         && Objects.equals(this.gameSubThemeId, gameFeatureGetResponseData.gameSubThemeId)
         && Objects.equals(
-            this.gameMarketingLifecycleList, gameFeatureGetResponseData.gameMarketingLifecycleList);
+            this.gameMarketingLifecycleList, gameFeatureGetResponseData.gameMarketingLifecycleList)
+        && Objects.equals(this.gameTypeIdV6, gameFeatureGetResponseData.gameTypeIdV6)
+        && Objects.equals(this.gamePlayIdV6, gameFeatureGetResponseData.gamePlayIdV6)
+        && Objects.equals(this.gameSubPlayIdListV6, gameFeatureGetResponseData.gameSubPlayIdListV6);
   }
 
   @Override
@@ -246,7 +323,10 @@ public class GameFeatureGetResponseData {
         gameplayIdList,
         gameThemeId,
         gameSubThemeId,
-        gameMarketingLifecycleList);
+        gameMarketingLifecycleList,
+        gameTypeIdV6,
+        gamePlayIdV6,
+        gameSubPlayIdListV6);
   }
 
   @Override

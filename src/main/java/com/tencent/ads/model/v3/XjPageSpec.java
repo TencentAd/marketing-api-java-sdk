@@ -27,6 +27,9 @@ public class XjPageSpec {
   @SerializedName("wechat_channels_live_reserve_id")
   private String wechatChannelsLiveReserveId = null;
 
+  @SerializedName("custom_param")
+  private String customParam = null;
+
   public XjPageSpec pageId(Long pageId) {
     this.pageId = pageId;
     return this;
@@ -65,6 +68,25 @@ public class XjPageSpec {
     this.wechatChannelsLiveReserveId = wechatChannelsLiveReserveId;
   }
 
+  public XjPageSpec customParam(String customParam) {
+    this.customParam = customParam;
+    return this;
+  }
+
+  /**
+   * Get customParam
+   *
+   * @return customParam
+   */
+  @ApiModelProperty(value = "")
+  public String getCustomParam() {
+    return customParam;
+  }
+
+  public void setCustomParam(String customParam) {
+    this.customParam = customParam;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -75,12 +97,13 @@ public class XjPageSpec {
     }
     XjPageSpec xjPageSpec = (XjPageSpec) o;
     return Objects.equals(this.pageId, xjPageSpec.pageId)
-        && Objects.equals(this.wechatChannelsLiveReserveId, xjPageSpec.wechatChannelsLiveReserveId);
+        && Objects.equals(this.wechatChannelsLiveReserveId, xjPageSpec.wechatChannelsLiveReserveId)
+        && Objects.equals(this.customParam, xjPageSpec.customParam);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(pageId, wechatChannelsLiveReserveId);
+    return Objects.hash(pageId, wechatChannelsLiveReserveId, customParam);
   }
 
   @Override

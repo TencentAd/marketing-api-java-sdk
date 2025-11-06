@@ -24,6 +24,9 @@ public class ProductSeriesSpecFilteringValueStruct {
   @SerializedName("field_value")
   private String fieldValue = null;
 
+  @SerializedName("field_value_range")
+  private ProductSeriesSpecFilteringFieldValueRange fieldValueRange = null;
+
   @SerializedName("currency_type")
   private CurrencyType currencyType = null;
 
@@ -44,6 +47,26 @@ public class ProductSeriesSpecFilteringValueStruct {
 
   public void setFieldValue(String fieldValue) {
     this.fieldValue = fieldValue;
+  }
+
+  public ProductSeriesSpecFilteringValueStruct fieldValueRange(
+      ProductSeriesSpecFilteringFieldValueRange fieldValueRange) {
+    this.fieldValueRange = fieldValueRange;
+    return this;
+  }
+
+  /**
+   * Get fieldValueRange
+   *
+   * @return fieldValueRange
+   */
+  @ApiModelProperty(value = "")
+  public ProductSeriesSpecFilteringFieldValueRange getFieldValueRange() {
+    return fieldValueRange;
+  }
+
+  public void setFieldValueRange(ProductSeriesSpecFilteringFieldValueRange fieldValueRange) {
+    this.fieldValueRange = fieldValueRange;
   }
 
   public ProductSeriesSpecFilteringValueStruct currencyType(CurrencyType currencyType) {
@@ -76,12 +99,14 @@ public class ProductSeriesSpecFilteringValueStruct {
     ProductSeriesSpecFilteringValueStruct productSeriesSpecFilteringValueStruct =
         (ProductSeriesSpecFilteringValueStruct) o;
     return Objects.equals(this.fieldValue, productSeriesSpecFilteringValueStruct.fieldValue)
+        && Objects.equals(
+            this.fieldValueRange, productSeriesSpecFilteringValueStruct.fieldValueRange)
         && Objects.equals(this.currencyType, productSeriesSpecFilteringValueStruct.currencyType);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(fieldValue, currencyType);
+    return Objects.hash(fieldValue, fieldValueRange, currencyType);
   }
 
   @Override

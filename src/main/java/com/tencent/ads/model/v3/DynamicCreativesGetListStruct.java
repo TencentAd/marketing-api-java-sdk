@@ -78,6 +78,9 @@ public class DynamicCreativesGetListStruct {
   @SerializedName("asset_inconsistent_status")
   private AssetInconsistentStatus assetInconsistentStatus = null;
 
+  @SerializedName("source_dynamic_creative_id")
+  private Long sourceDynamicCreativeId = null;
+
   public DynamicCreativesGetListStruct adgroupId(Long adgroupId) {
     this.adgroupId = adgroupId;
     return this;
@@ -444,6 +447,25 @@ public class DynamicCreativesGetListStruct {
     this.assetInconsistentStatus = assetInconsistentStatus;
   }
 
+  public DynamicCreativesGetListStruct sourceDynamicCreativeId(Long sourceDynamicCreativeId) {
+    this.sourceDynamicCreativeId = sourceDynamicCreativeId;
+    return this;
+  }
+
+  /**
+   * Get sourceDynamicCreativeId
+   *
+   * @return sourceDynamicCreativeId
+   */
+  @ApiModelProperty(value = "")
+  public Long getSourceDynamicCreativeId() {
+    return sourceDynamicCreativeId;
+  }
+
+  public void setSourceDynamicCreativeId(Long sourceDynamicCreativeId) {
+    this.sourceDynamicCreativeId = sourceDynamicCreativeId;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -479,7 +501,9 @@ public class DynamicCreativesGetListStruct {
             this.creativeSetApprovalStatus, dynamicCreativesGetListStruct.creativeSetApprovalStatus)
         && Objects.equals(this.source, dynamicCreativesGetListStruct.source)
         && Objects.equals(
-            this.assetInconsistentStatus, dynamicCreativesGetListStruct.assetInconsistentStatus);
+            this.assetInconsistentStatus, dynamicCreativesGetListStruct.assetInconsistentStatus)
+        && Objects.equals(
+            this.sourceDynamicCreativeId, dynamicCreativesGetListStruct.sourceDynamicCreativeId);
   }
 
   @Override
@@ -503,7 +527,8 @@ public class DynamicCreativesGetListStruct {
         marketingAssetVerification,
         creativeSetApprovalStatus,
         source,
-        assetInconsistentStatus);
+        assetInconsistentStatus,
+        sourceDynamicCreativeId);
   }
 
   @Override

@@ -31,6 +31,7 @@ import com.tencent.ads.model.v3.MaterialLabelsGetResponse;
 import com.tencent.ads.model.v3.MaterialLabelsGetResponseData;
 import com.tencent.ads.model.v3.MaterialLabelsUpdateRequest;
 import com.tencent.ads.model.v3.MaterialLabelsUpdateResponse;
+import com.tencent.ads.model.v3.MaterialLabelsUpdateResponseData;
 import com.tencent.ads.model.v3.OrderByStruct;
 import java.util.List;
 
@@ -148,12 +149,11 @@ public class MaterialLabelsApiContainer extends ApiContainer {
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
-  public MaterialLabelsUpdateResponse materialLabelsUpdate(
+  public MaterialLabelsUpdateResponseData materialLabelsUpdate(
       MaterialLabelsUpdateRequest data, Pair... headerPair)
       throws ApiException, TencentAdsResponseException {
     MaterialLabelsUpdateResponse resp = api.materialLabelsUpdate(data, headerPair);
     handleResponse(gson.toJson(resp));
-
-    return resp;
+    return resp.getData();
   }
 }

@@ -5,7 +5,6 @@ import com.tencent.ads.exception.TencentAdsResponseException;
 import com.tencent.ads.exception.TencentAdsSDKException;
 import com.tencent.ads.model.v3.*;
 import com.tencent.ads.model.v3.MaterialLabelsUpdateRequest;
-import com.tencent.ads.model.v3.MaterialLabelsUpdateResponse;
 import com.tencent.ads.v3.TencentAds;
 
 public class UpdateMaterialLabels {
@@ -27,8 +26,9 @@ public class UpdateMaterialLabels {
 
   public void buildParams() {}
 
-  public MaterialLabelsUpdateResponse updateMaterialLabels() throws Exception {
-    MaterialLabelsUpdateResponse response = tencentAds.materialLabels().materialLabelsUpdate(data);
+  public MaterialLabelsUpdateResponseData updateMaterialLabels() throws Exception {
+    MaterialLabelsUpdateResponseData response =
+        tencentAds.materialLabels().materialLabelsUpdate(data);
     return response;
   }
 
@@ -36,7 +36,7 @@ public class UpdateMaterialLabels {
     try {
       UpdateMaterialLabels updateMaterialLabels = new UpdateMaterialLabels();
       updateMaterialLabels.init();
-      MaterialLabelsUpdateResponse response = updateMaterialLabels.updateMaterialLabels();
+      MaterialLabelsUpdateResponseData response = updateMaterialLabels.updateMaterialLabels();
     } catch (TencentAdsResponseException e) {
       e.printStackTrace();
     } catch (TencentAdsSDKException e) {

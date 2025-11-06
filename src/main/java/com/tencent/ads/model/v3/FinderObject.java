@@ -44,6 +44,15 @@ public class FinderObject {
   @SerializedName("wechat_channels_account_id")
   private String wechatChannelsAccountId = null;
 
+  @SerializedName("is_disable")
+  private Boolean isDisable = null;
+
+  @SerializedName("disable_message")
+  private String disableMessage = null;
+
+  @SerializedName("audit_status")
+  private AdStatus auditStatus = null;
+
   public FinderObject exportId(String exportId) {
     this.exportId = exportId;
     return this;
@@ -185,6 +194,63 @@ public class FinderObject {
     this.wechatChannelsAccountId = wechatChannelsAccountId;
   }
 
+  public FinderObject isDisable(Boolean isDisable) {
+    this.isDisable = isDisable;
+    return this;
+  }
+
+  /**
+   * Get isDisable
+   *
+   * @return isDisable
+   */
+  @ApiModelProperty(value = "")
+  public Boolean isIsDisable() {
+    return isDisable;
+  }
+
+  public void setIsDisable(Boolean isDisable) {
+    this.isDisable = isDisable;
+  }
+
+  public FinderObject disableMessage(String disableMessage) {
+    this.disableMessage = disableMessage;
+    return this;
+  }
+
+  /**
+   * Get disableMessage
+   *
+   * @return disableMessage
+   */
+  @ApiModelProperty(value = "")
+  public String getDisableMessage() {
+    return disableMessage;
+  }
+
+  public void setDisableMessage(String disableMessage) {
+    this.disableMessage = disableMessage;
+  }
+
+  public FinderObject auditStatus(AdStatus auditStatus) {
+    this.auditStatus = auditStatus;
+    return this;
+  }
+
+  /**
+   * Get auditStatus
+   *
+   * @return auditStatus
+   */
+  @ApiModelProperty(value = "")
+  public AdStatus getAuditStatus() {
+    return auditStatus;
+  }
+
+  public void setAuditStatus(AdStatus auditStatus) {
+    this.auditStatus = auditStatus;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -200,7 +266,10 @@ public class FinderObject {
         && Objects.equals(this.description, finderObject.description)
         && Objects.equals(this.medias, finderObject.medias)
         && Objects.equals(this.finderUsername, finderObject.finderUsername)
-        && Objects.equals(this.wechatChannelsAccountId, finderObject.wechatChannelsAccountId);
+        && Objects.equals(this.wechatChannelsAccountId, finderObject.wechatChannelsAccountId)
+        && Objects.equals(this.isDisable, finderObject.isDisable)
+        && Objects.equals(this.disableMessage, finderObject.disableMessage)
+        && Objects.equals(this.auditStatus, finderObject.auditStatus);
   }
 
   @Override
@@ -212,7 +281,10 @@ public class FinderObject {
         description,
         medias,
         finderUsername,
-        wechatChannelsAccountId);
+        wechatChannelsAccountId,
+        isDisable,
+        disableMessage,
+        auditStatus);
   }
 
   @Override

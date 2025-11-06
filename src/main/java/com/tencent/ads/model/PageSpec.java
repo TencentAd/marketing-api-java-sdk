@@ -51,6 +51,9 @@ public class PageSpec {
   @SerializedName("channels_shop_product_spec")
   private ChannelsShopProductSpec channelsShopProductSpec = null;
 
+  @SerializedName("wechat_shop_spec")
+  private WechatShopSpec wechatShopSpec = null;
+
   public PageSpec pageId(Long pageId) {
     this.pageId = pageId;
     return this;
@@ -243,6 +246,25 @@ public class PageSpec {
     this.channelsShopProductSpec = channelsShopProductSpec;
   }
 
+  public PageSpec wechatShopSpec(WechatShopSpec wechatShopSpec) {
+    this.wechatShopSpec = wechatShopSpec;
+    return this;
+  }
+
+  /**
+   * Get wechatShopSpec
+   *
+   * @return wechatShopSpec
+   */
+  @ApiModelProperty(value = "")
+  public WechatShopSpec getWechatShopSpec() {
+    return wechatShopSpec;
+  }
+
+  public void setWechatShopSpec(WechatShopSpec wechatShopSpec) {
+    this.wechatShopSpec = wechatShopSpec;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -261,7 +283,8 @@ public class PageSpec {
         && Objects.equals(this.dynamicProductSpec, pageSpec.dynamicProductSpec)
         && Objects.equals(this.wechatOfficialAccountSpec, pageSpec.wechatOfficialAccountSpec)
         && Objects.equals(this.searchBrandAreaSpec, pageSpec.searchBrandAreaSpec)
-        && Objects.equals(this.channelsShopProductSpec, pageSpec.channelsShopProductSpec);
+        && Objects.equals(this.channelsShopProductSpec, pageSpec.channelsShopProductSpec)
+        && Objects.equals(this.wechatShopSpec, pageSpec.wechatShopSpec);
   }
 
   @Override
@@ -276,7 +299,8 @@ public class PageSpec {
         dynamicProductSpec,
         wechatOfficialAccountSpec,
         searchBrandAreaSpec,
-        channelsShopProductSpec);
+        channelsShopProductSpec,
+        wechatShopSpec);
   }
 
   @Override

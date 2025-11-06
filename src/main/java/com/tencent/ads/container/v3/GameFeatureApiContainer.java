@@ -31,7 +31,7 @@ public class GameFeatureApiContainer extends ApiContainer {
   @Inject GameFeatureApi api;
 
   /**
-   * 新增游戏App特征
+   * 新增游戏App特征V5
    *
    * @param data (required)
    * @return GameFeatureAddResponse
@@ -46,7 +46,7 @@ public class GameFeatureApiContainer extends ApiContainer {
   }
 
   /**
-   * 获取游戏App特征
+   * 获取游戏App特征V5
    *
    * @param accountId (required)
    * @param marketingTargetType (required)

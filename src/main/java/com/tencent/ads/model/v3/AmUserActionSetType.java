@@ -34,7 +34,9 @@ public enum AmUserActionSetType {
 
   WECHAT_MINI_PROGRAM("WECHAT_MINI_PROGRAM"),
 
-  WECHAT_MINI_GAME("WECHAT_MINI_GAME");
+  WECHAT_MINI_GAME("WECHAT_MINI_GAME"),
+
+  HARMONY("HARMONY");
 
   private String value;
 

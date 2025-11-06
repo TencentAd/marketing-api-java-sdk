@@ -425,6 +425,18 @@ public class ProductItemSpec {
   @SerializedName("story_school")
   private String storySchool = null;
 
+  @SerializedName("actor_list")
+  private String actorList = null;
+
+  @SerializedName("character_list")
+  private String characterList = null;
+
+  @SerializedName("episode_count")
+  private Long episodeCount = null;
+
+  @SerializedName("story_theme")
+  private String storyTheme = null;
+
   @SerializedName("story_role_identity")
   private String storyRoleIdentity = null;
 
@@ -3139,6 +3151,82 @@ public class ProductItemSpec {
     this.storySchool = storySchool;
   }
 
+  public ProductItemSpec actorList(String actorList) {
+    this.actorList = actorList;
+    return this;
+  }
+
+  /**
+   * Get actorList
+   *
+   * @return actorList
+   */
+  @ApiModelProperty(value = "")
+  public String getActorList() {
+    return actorList;
+  }
+
+  public void setActorList(String actorList) {
+    this.actorList = actorList;
+  }
+
+  public ProductItemSpec characterList(String characterList) {
+    this.characterList = characterList;
+    return this;
+  }
+
+  /**
+   * Get characterList
+   *
+   * @return characterList
+   */
+  @ApiModelProperty(value = "")
+  public String getCharacterList() {
+    return characterList;
+  }
+
+  public void setCharacterList(String characterList) {
+    this.characterList = characterList;
+  }
+
+  public ProductItemSpec episodeCount(Long episodeCount) {
+    this.episodeCount = episodeCount;
+    return this;
+  }
+
+  /**
+   * Get episodeCount
+   *
+   * @return episodeCount
+   */
+  @ApiModelProperty(value = "")
+  public Long getEpisodeCount() {
+    return episodeCount;
+  }
+
+  public void setEpisodeCount(Long episodeCount) {
+    this.episodeCount = episodeCount;
+  }
+
+  public ProductItemSpec storyTheme(String storyTheme) {
+    this.storyTheme = storyTheme;
+    return this;
+  }
+
+  /**
+   * Get storyTheme
+   *
+   * @return storyTheme
+   */
+  @ApiModelProperty(value = "")
+  public String getStoryTheme() {
+    return storyTheme;
+  }
+
+  public void setStoryTheme(String storyTheme) {
+    this.storyTheme = storyTheme;
+  }
+
   public ProductItemSpec storyRoleIdentity(String storyRoleIdentity) {
     this.storyRoleIdentity = storyRoleIdentity;
     return this;
@@ -3746,6 +3834,10 @@ public class ProductItemSpec {
         && Objects.equals(this.downloadCount, productItemSpec.downloadCount)
         && Objects.equals(this.payingReaderCount, productItemSpec.payingReaderCount)
         && Objects.equals(this.storySchool, productItemSpec.storySchool)
+        && Objects.equals(this.actorList, productItemSpec.actorList)
+        && Objects.equals(this.characterList, productItemSpec.characterList)
+        && Objects.equals(this.episodeCount, productItemSpec.episodeCount)
+        && Objects.equals(this.storyTheme, productItemSpec.storyTheme)
         && Objects.equals(this.storyRoleIdentity, productItemSpec.storyRoleIdentity)
         && Objects.equals(this.storyRoleImage, productItemSpec.storyRoleImage)
         && Objects.equals(this.storyEra, productItemSpec.storyEra)
@@ -3910,6 +4002,10 @@ public class ProductItemSpec {
         downloadCount,
         payingReaderCount,
         storySchool,
+        actorList,
+        characterList,
+        episodeCount,
+        storyTheme,
         storyRoleIdentity,
         storyRoleImage,
         storyEra,

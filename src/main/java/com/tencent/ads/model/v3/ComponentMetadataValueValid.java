@@ -92,6 +92,12 @@ public class ComponentMetadataValueValid {
   @SerializedName("image_format_options")
   private List<ComponentMetadataValueValidImageFormatOption> imageFormatOptions = null;
 
+  @SerializedName("min_duration_millisecond")
+  private Long minDurationMillisecond = null;
+
+  @SerializedName("max_duration_millisecond")
+  private Long maxDurationMillisecond = null;
+
   public ComponentMetadataValueValid required(Boolean required) {
     this.required = required;
     return this;
@@ -550,6 +556,44 @@ public class ComponentMetadataValueValid {
     this.imageFormatOptions = imageFormatOptions;
   }
 
+  public ComponentMetadataValueValid minDurationMillisecond(Long minDurationMillisecond) {
+    this.minDurationMillisecond = minDurationMillisecond;
+    return this;
+  }
+
+  /**
+   * Get minDurationMillisecond
+   *
+   * @return minDurationMillisecond
+   */
+  @ApiModelProperty(value = "")
+  public Long getMinDurationMillisecond() {
+    return minDurationMillisecond;
+  }
+
+  public void setMinDurationMillisecond(Long minDurationMillisecond) {
+    this.minDurationMillisecond = minDurationMillisecond;
+  }
+
+  public ComponentMetadataValueValid maxDurationMillisecond(Long maxDurationMillisecond) {
+    this.maxDurationMillisecond = maxDurationMillisecond;
+    return this;
+  }
+
+  /**
+   * Get maxDurationMillisecond
+   *
+   * @return maxDurationMillisecond
+   */
+  @ApiModelProperty(value = "")
+  public Long getMaxDurationMillisecond() {
+    return maxDurationMillisecond;
+  }
+
+  public void setMaxDurationMillisecond(Long maxDurationMillisecond) {
+    this.maxDurationMillisecond = maxDurationMillisecond;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -581,7 +625,11 @@ public class ComponentMetadataValueValid {
         && Objects.equals(this.enumOptions, componentMetadataValueValid.enumOptions)
         && Objects.equals(this.minOccurs, componentMetadataValueValid.minOccurs)
         && Objects.equals(this.maxOccurs, componentMetadataValueValid.maxOccurs)
-        && Objects.equals(this.imageFormatOptions, componentMetadataValueValid.imageFormatOptions);
+        && Objects.equals(this.imageFormatOptions, componentMetadataValueValid.imageFormatOptions)
+        && Objects.equals(
+            this.minDurationMillisecond, componentMetadataValueValid.minDurationMillisecond)
+        && Objects.equals(
+            this.maxDurationMillisecond, componentMetadataValueValid.maxDurationMillisecond);
   }
 
   @Override
@@ -609,7 +657,9 @@ public class ComponentMetadataValueValid {
         enumOptions,
         minOccurs,
         maxOccurs,
-        imageFormatOptions);
+        imageFormatOptions,
+        minDurationMillisecond,
+        maxDurationMillisecond);
   }
 
   @Override

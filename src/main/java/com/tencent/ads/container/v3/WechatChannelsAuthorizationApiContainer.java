@@ -19,6 +19,7 @@ import com.tencent.ads.Pair;
 import com.tencent.ads.anno.*;
 import com.tencent.ads.api.v3.WechatChannelsAuthorizationApi;
 import com.tencent.ads.exception.TencentAdsResponseException;
+import com.tencent.ads.model.v3.FilteringStruct;
 import com.tencent.ads.model.v3.WechatChannelsAuthorizationAddRequest;
 import com.tencent.ads.model.v3.WechatChannelsAuthorizationAddResponse;
 import com.tencent.ads.model.v3.WechatChannelsAuthorizationAddResponseData;
@@ -77,6 +78,7 @@ public class WechatChannelsAuthorizationApiContainer extends ApiContainer {
    * @param wechatChannelsAccountName (optional)
    * @param page (optional)
    * @param pageSize (optional)
+   * @param filtering (optional)
    * @param fields 返回参数的字段列表 (optional)
    * @return WechatChannelsAuthorizationGetResponse
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
@@ -87,12 +89,13 @@ public class WechatChannelsAuthorizationApiContainer extends ApiContainer {
       String wechatChannelsAccountName,
       Long page,
       Long pageSize,
+      List<FilteringStruct> filtering,
       List<String> fields,
       Pair... headerPair)
       throws ApiException, TencentAdsResponseException {
     WechatChannelsAuthorizationGetResponse resp =
         api.wechatChannelsAuthorizationGet(
-            accountId, wechatChannelsAccountName, page, pageSize, fields, headerPair);
+            accountId, wechatChannelsAccountName, page, pageSize, filtering, fields, headerPair);
     handleResponse(gson.toJson(resp));
     return resp.getData();
   }

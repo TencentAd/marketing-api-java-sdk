@@ -54,6 +54,7 @@ public class UserActionSetsApiContainer extends ApiContainer {
    * @param type (optional)
    * @param mobileAppId (optional)
    * @param wechatAppId (optional)
+   * @param appIdStr (optional)
    * @param name (optional)
    * @param includePermission (optional)
    * @param fields 返回参数的字段列表 (optional)
@@ -67,6 +68,7 @@ public class UserActionSetsApiContainer extends ApiContainer {
       List<String> type,
       Long mobileAppId,
       String wechatAppId,
+      String appIdStr,
       String name,
       Boolean includePermission,
       List<String> fields,
@@ -79,6 +81,7 @@ public class UserActionSetsApiContainer extends ApiContainer {
             type,
             mobileAppId,
             wechatAppId,
+            appIdStr,
             name,
             includePermission,
             fields,

@@ -120,6 +120,12 @@ public class ComponentValue {
   @SerializedName("floating_zone_list")
   private FloatingZoneListComponent floatingZoneList = null;
 
+  @SerializedName("video_channels_content")
+  private VideoChannelsContentComponent videoChannelsContent = null;
+
+  @SerializedName("wxgame_direct_page")
+  private WxgameDirectPageComponent wxgameDirectPage = null;
+
   public ComponentValue title(TitleComponent title) {
     this.title = title;
     return this;
@@ -747,6 +753,44 @@ public class ComponentValue {
     this.floatingZoneList = floatingZoneList;
   }
 
+  public ComponentValue videoChannelsContent(VideoChannelsContentComponent videoChannelsContent) {
+    this.videoChannelsContent = videoChannelsContent;
+    return this;
+  }
+
+  /**
+   * Get videoChannelsContent
+   *
+   * @return videoChannelsContent
+   */
+  @ApiModelProperty(value = "")
+  public VideoChannelsContentComponent getVideoChannelsContent() {
+    return videoChannelsContent;
+  }
+
+  public void setVideoChannelsContent(VideoChannelsContentComponent videoChannelsContent) {
+    this.videoChannelsContent = videoChannelsContent;
+  }
+
+  public ComponentValue wxgameDirectPage(WxgameDirectPageComponent wxgameDirectPage) {
+    this.wxgameDirectPage = wxgameDirectPage;
+    return this;
+  }
+
+  /**
+   * Get wxgameDirectPage
+   *
+   * @return wxgameDirectPage
+   */
+  @ApiModelProperty(value = "")
+  public WxgameDirectPageComponent getWxgameDirectPage() {
+    return wxgameDirectPage;
+  }
+
+  public void setWxgameDirectPage(WxgameDirectPageComponent wxgameDirectPage) {
+    this.wxgameDirectPage = wxgameDirectPage;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -788,7 +832,9 @@ public class ComponentValue {
         && Objects.equals(this.imageShowcase, componentValue.imageShowcase)
         && Objects.equals(this.socialSkill, componentValue.socialSkill)
         && Objects.equals(this.miniCardLink, componentValue.miniCardLink)
-        && Objects.equals(this.floatingZoneList, componentValue.floatingZoneList);
+        && Objects.equals(this.floatingZoneList, componentValue.floatingZoneList)
+        && Objects.equals(this.videoChannelsContent, componentValue.videoChannelsContent)
+        && Objects.equals(this.wxgameDirectPage, componentValue.wxgameDirectPage);
   }
 
   @Override
@@ -826,7 +872,9 @@ public class ComponentValue {
         imageShowcase,
         socialSkill,
         miniCardLink,
-        floatingZoneList);
+        floatingZoneList,
+        videoChannelsContent,
+        wxgameDirectPage);
   }
 
   @Override

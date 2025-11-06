@@ -4,6 +4,7 @@ import com.tencent.ads.ApiContextConfig;
 import com.tencent.ads.exception.TencentAdsResponseException;
 import com.tencent.ads.exception.TencentAdsSDKException;
 import com.tencent.ads.model.v3.*;
+import com.tencent.ads.model.v3.FilteringStruct;
 import com.tencent.ads.v3.TencentAds;
 import java.util.List;
 
@@ -21,6 +22,8 @@ public class GetWechatChannelsAuthorization {
   public Long page = null;
 
   public Long pageSize = null;
+
+  public List<FilteringStruct> filtering = null;
 
   public List<String> fields = null;
 
@@ -40,7 +43,7 @@ public class GetWechatChannelsAuthorization {
         tencentAds
             .wechatChannelsAuthorization()
             .wechatChannelsAuthorizationGet(
-                accountId, wechatChannelsAccountName, page, pageSize, fields);
+                accountId, wechatChannelsAccountName, page, pageSize, filtering, fields);
     return response;
   }
 

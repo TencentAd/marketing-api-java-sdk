@@ -33,6 +33,9 @@ public class MaterialLabelsUpdateResponse {
   @SerializedName("errors")
   private List<ApiErrorStruct> errors = null;
 
+  @SerializedName("data")
+  private MaterialLabelsUpdateResponseData data = null;
+
   public MaterialLabelsUpdateResponse code(Long code) {
     this.code = code;
     return this;
@@ -117,6 +120,25 @@ public class MaterialLabelsUpdateResponse {
     this.errors = errors;
   }
 
+  public MaterialLabelsUpdateResponse data(MaterialLabelsUpdateResponseData data) {
+    this.data = data;
+    return this;
+  }
+
+  /**
+   * Get data
+   *
+   * @return data
+   */
+  @ApiModelProperty(value = "")
+  public MaterialLabelsUpdateResponseData getData() {
+    return data;
+  }
+
+  public void setData(MaterialLabelsUpdateResponseData data) {
+    this.data = data;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -129,12 +151,13 @@ public class MaterialLabelsUpdateResponse {
     return Objects.equals(this.code, materialLabelsUpdateResponse.code)
         && Objects.equals(this.message, materialLabelsUpdateResponse.message)
         && Objects.equals(this.messageCn, materialLabelsUpdateResponse.messageCn)
-        && Objects.equals(this.errors, materialLabelsUpdateResponse.errors);
+        && Objects.equals(this.errors, materialLabelsUpdateResponse.errors)
+        && Objects.equals(this.data, materialLabelsUpdateResponse.data);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(code, message, messageCn, errors);
+    return Objects.hash(code, message, messageCn, errors, data);
   }
 
   @Override

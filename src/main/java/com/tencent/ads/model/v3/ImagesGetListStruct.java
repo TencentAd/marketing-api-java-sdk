@@ -73,7 +73,7 @@ public class ImagesGetListStruct {
   private String ownerAccountId = null;
 
   @SerializedName("status")
-  private MediaStatusType status = null;
+  private AdStatus status = null;
 
   @SerializedName("sample_aspect_ratio")
   private String sampleAspectRatio = null;
@@ -401,7 +401,7 @@ public class ImagesGetListStruct {
     this.ownerAccountId = ownerAccountId;
   }
 
-  public ImagesGetListStruct status(MediaStatusType status) {
+  public ImagesGetListStruct status(AdStatus status) {
     this.status = status;
     return this;
   }
@@ -412,11 +412,11 @@ public class ImagesGetListStruct {
    * @return status
    */
   @ApiModelProperty(value = "")
-  public MediaStatusType getStatus() {
+  public AdStatus getStatus() {
     return status;
   }
 
-  public void setStatus(MediaStatusType status) {
+  public void setStatus(AdStatus status) {
     this.status = status;
   }
 

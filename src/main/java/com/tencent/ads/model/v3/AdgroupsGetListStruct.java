@@ -254,6 +254,9 @@ public class AdgroupsGetListStruct {
   @SerializedName("adx_realtime_type")
   private AdxRealtimeType adxRealtimeType = null;
 
+  @SerializedName("smart_targeting_status")
+  private SmartTargetingStatus smartTargetingStatus = null;
+
   public AdgroupsGetListStruct targeting(ReadTargetingSetting targeting) {
     this.targeting = targeting;
     return this;
@@ -1757,6 +1760,25 @@ public class AdgroupsGetListStruct {
     this.adxRealtimeType = adxRealtimeType;
   }
 
+  public AdgroupsGetListStruct smartTargetingStatus(SmartTargetingStatus smartTargetingStatus) {
+    this.smartTargetingStatus = smartTargetingStatus;
+    return this;
+  }
+
+  /**
+   * Get smartTargetingStatus
+   *
+   * @return smartTargetingStatus
+   */
+  @ApiModelProperty(value = "")
+  public SmartTargetingStatus getSmartTargetingStatus() {
+    return smartTargetingStatus;
+  }
+
+  public void setSmartTargetingStatus(SmartTargetingStatus smartTargetingStatus) {
+    this.smartTargetingStatus = smartTargetingStatus;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -1858,7 +1880,8 @@ public class AdgroupsGetListStruct {
         && Objects.equals(this.customCostRoiCap, adgroupsGetListStruct.customCostRoiCap)
         && Objects.equals(
             this.enableSteadyExploration, adgroupsGetListStruct.enableSteadyExploration)
-        && Objects.equals(this.adxRealtimeType, adgroupsGetListStruct.adxRealtimeType);
+        && Objects.equals(this.adxRealtimeType, adgroupsGetListStruct.adxRealtimeType)
+        && Objects.equals(this.smartTargetingStatus, adgroupsGetListStruct.smartTargetingStatus);
   }
 
   @Override
@@ -1940,7 +1963,8 @@ public class AdgroupsGetListStruct {
         liveRecommendStrategyEnabled,
         customCostRoiCap,
         enableSteadyExploration,
-        adxRealtimeType);
+        adxRealtimeType,
+        smartTargetingStatus);
   }
 
   @Override

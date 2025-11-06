@@ -94,7 +94,9 @@ public enum PageType {
 
   OFFICIAL("PAGE_TYPE_OFFICIAL"),
 
-  NOT_USED("PAGE_TYPE_NOT_USED");
+  NOT_USED("PAGE_TYPE_NOT_USED"),
+
+  UNIVERSAL_LINK("PAGE_TYPE_UNIVERSAL_LINK");
 
   private String value;
 

@@ -16,6 +16,8 @@ import com.google.gson.Gson;
 import com.google.gson.annotations.SerializedName;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Objects;
 
 /** 返回结构 */
@@ -65,6 +67,18 @@ public class AuthListStruct {
 
   @SerializedName("logout_time_second")
   private Long logoutTimeSecond = null;
+
+  @SerializedName("created_source_list")
+  private List<String> createdSourceList = null;
+
+  @SerializedName("authorization_qr_code_url")
+  private String authorizationQrCodeUrl = null;
+
+  @SerializedName("authorization_expired_time")
+  private Long authorizationExpiredTime = null;
+
+  @SerializedName("authorization_agreement")
+  private String authorizationAgreement = null;
 
   public AuthListStruct wechatChannelsAccountName(String wechatChannelsAccountName) {
     this.wechatChannelsAccountName = wechatChannelsAccountName;
@@ -351,6 +365,90 @@ public class AuthListStruct {
     this.logoutTimeSecond = logoutTimeSecond;
   }
 
+  public AuthListStruct createdSourceList(List<String> createdSourceList) {
+    this.createdSourceList = createdSourceList;
+    return this;
+  }
+
+  public AuthListStruct addCreatedSourceListItem(String createdSourceListItem) {
+    if (this.createdSourceList == null) {
+      this.createdSourceList = new ArrayList<String>();
+    }
+    this.createdSourceList.add(createdSourceListItem);
+    return this;
+  }
+
+  /**
+   * Get createdSourceList
+   *
+   * @return createdSourceList
+   */
+  @ApiModelProperty(value = "")
+  public List<String> getCreatedSourceList() {
+    return createdSourceList;
+  }
+
+  public void setCreatedSourceList(List<String> createdSourceList) {
+    this.createdSourceList = createdSourceList;
+  }
+
+  public AuthListStruct authorizationQrCodeUrl(String authorizationQrCodeUrl) {
+    this.authorizationQrCodeUrl = authorizationQrCodeUrl;
+    return this;
+  }
+
+  /**
+   * Get authorizationQrCodeUrl
+   *
+   * @return authorizationQrCodeUrl
+   */
+  @ApiModelProperty(value = "")
+  public String getAuthorizationQrCodeUrl() {
+    return authorizationQrCodeUrl;
+  }
+
+  public void setAuthorizationQrCodeUrl(String authorizationQrCodeUrl) {
+    this.authorizationQrCodeUrl = authorizationQrCodeUrl;
+  }
+
+  public AuthListStruct authorizationExpiredTime(Long authorizationExpiredTime) {
+    this.authorizationExpiredTime = authorizationExpiredTime;
+    return this;
+  }
+
+  /**
+   * Get authorizationExpiredTime
+   *
+   * @return authorizationExpiredTime
+   */
+  @ApiModelProperty(value = "")
+  public Long getAuthorizationExpiredTime() {
+    return authorizationExpiredTime;
+  }
+
+  public void setAuthorizationExpiredTime(Long authorizationExpiredTime) {
+    this.authorizationExpiredTime = authorizationExpiredTime;
+  }
+
+  public AuthListStruct authorizationAgreement(String authorizationAgreement) {
+    this.authorizationAgreement = authorizationAgreement;
+    return this;
+  }
+
+  /**
+   * Get authorizationAgreement
+   *
+   * @return authorizationAgreement
+   */
+  @ApiModelProperty(value = "")
+  public String getAuthorizationAgreement() {
+    return authorizationAgreement;
+  }
+
+  public void setAuthorizationAgreement(String authorizationAgreement) {
+    this.authorizationAgreement = authorizationAgreement;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -374,7 +472,11 @@ public class AuthListStruct {
         && Objects.equals(this.wechatChannelsAccountId, authListStruct.wechatChannelsAccountId)
         && Objects.equals(this.isBlocked, authListStruct.isBlocked)
         && Objects.equals(this.isPrivate, authListStruct.isPrivate)
-        && Objects.equals(this.logoutTimeSecond, authListStruct.logoutTimeSecond);
+        && Objects.equals(this.logoutTimeSecond, authListStruct.logoutTimeSecond)
+        && Objects.equals(this.createdSourceList, authListStruct.createdSourceList)
+        && Objects.equals(this.authorizationQrCodeUrl, authListStruct.authorizationQrCodeUrl)
+        && Objects.equals(this.authorizationExpiredTime, authListStruct.authorizationExpiredTime)
+        && Objects.equals(this.authorizationAgreement, authListStruct.authorizationAgreement);
   }
 
   @Override
@@ -394,7 +496,11 @@ public class AuthListStruct {
         wechatChannelsAccountId,
         isBlocked,
         isPrivate,
-        logoutTimeSecond);
+        logoutTimeSecond,
+        createdSourceList,
+        authorizationQrCodeUrl,
+        authorizationExpiredTime,
+        authorizationAgreement);
   }
 
   @Override

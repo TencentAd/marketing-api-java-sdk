@@ -118,6 +118,31 @@ public class SmartDeliveryGoalSpec {
   @SerializedName("qyt_first_twenty_four_hour_ecommerce_order_spec")
   private SmartDeliveryGoalQytSpec qytFirstTwentyFourHourEcommerceOrderSpec = null;
 
+  @SerializedName("wechat_store_first_twenty_four_hour_ecommerce_order_spec")
+  private SmartDeliveryGoalFirstTwentyFourHourEcommerceOrderSpec
+      wechatStoreFirstTwentyFourHourEcommerceOrderSpec = null;
+
+  @SerializedName("fiction_follow_purchase_roi_spec")
+  private SmartDeliveryGoalFictionFollowPurchaseRoiSpec fictionFollowPurchaseRoiSpec = null;
+
+  @SerializedName("fiction_register_purchase_roi_spec")
+  private SmartDeliveryGoalFictionRegisterPurchaseRoiSpec fictionRegisterPurchaseRoiSpec = null;
+
+  @SerializedName("fiction_register_monetization_roi_spec")
+  private SmartDeliveryGoalFictionRegisterMonetizationRoiSpec fictionRegisterMonetizationRoiSpec =
+      null;
+
+  @SerializedName("game_app_activate_roi_spec")
+  private SmartDeliveryGoalGameAppActivateRoiSpec gameAppActivateRoiSpec = null;
+
+  @SerializedName("reading_app_activate_first_day_retention_spec")
+  private SmartDeliveryGoalReadingAppActivateFirstDayRetentionSpec
+      readingAppActivateFirstDayRetentionSpec = null;
+
+  @SerializedName("reading_app_activate_seven_day_retention_spec")
+  private SmartDeliveryGoalReadingAppActivateSevenDayRetentionSpec
+      readingAppActivateSevenDayRetentionSpec = null;
+
   public SmartDeliveryGoalSpec longTermRoiSpec(SmartDeliveryGoalLongTermRoiSpec longTermRoiSpec) {
     this.longTermRoiSpec = longTermRoiSpec;
     return this;
@@ -747,6 +772,165 @@ public class SmartDeliveryGoalSpec {
     this.qytFirstTwentyFourHourEcommerceOrderSpec = qytFirstTwentyFourHourEcommerceOrderSpec;
   }
 
+  public SmartDeliveryGoalSpec wechatStoreFirstTwentyFourHourEcommerceOrderSpec(
+      SmartDeliveryGoalFirstTwentyFourHourEcommerceOrderSpec
+          wechatStoreFirstTwentyFourHourEcommerceOrderSpec) {
+    this.wechatStoreFirstTwentyFourHourEcommerceOrderSpec =
+        wechatStoreFirstTwentyFourHourEcommerceOrderSpec;
+    return this;
+  }
+
+  /**
+   * Get wechatStoreFirstTwentyFourHourEcommerceOrderSpec
+   *
+   * @return wechatStoreFirstTwentyFourHourEcommerceOrderSpec
+   */
+  @ApiModelProperty(value = "")
+  public SmartDeliveryGoalFirstTwentyFourHourEcommerceOrderSpec
+      getWechatStoreFirstTwentyFourHourEcommerceOrderSpec() {
+    return wechatStoreFirstTwentyFourHourEcommerceOrderSpec;
+  }
+
+  public void setWechatStoreFirstTwentyFourHourEcommerceOrderSpec(
+      SmartDeliveryGoalFirstTwentyFourHourEcommerceOrderSpec
+          wechatStoreFirstTwentyFourHourEcommerceOrderSpec) {
+    this.wechatStoreFirstTwentyFourHourEcommerceOrderSpec =
+        wechatStoreFirstTwentyFourHourEcommerceOrderSpec;
+  }
+
+  public SmartDeliveryGoalSpec fictionFollowPurchaseRoiSpec(
+      SmartDeliveryGoalFictionFollowPurchaseRoiSpec fictionFollowPurchaseRoiSpec) {
+    this.fictionFollowPurchaseRoiSpec = fictionFollowPurchaseRoiSpec;
+    return this;
+  }
+
+  /**
+   * Get fictionFollowPurchaseRoiSpec
+   *
+   * @return fictionFollowPurchaseRoiSpec
+   */
+  @ApiModelProperty(value = "")
+  public SmartDeliveryGoalFictionFollowPurchaseRoiSpec getFictionFollowPurchaseRoiSpec() {
+    return fictionFollowPurchaseRoiSpec;
+  }
+
+  public void setFictionFollowPurchaseRoiSpec(
+      SmartDeliveryGoalFictionFollowPurchaseRoiSpec fictionFollowPurchaseRoiSpec) {
+    this.fictionFollowPurchaseRoiSpec = fictionFollowPurchaseRoiSpec;
+  }
+
+  public SmartDeliveryGoalSpec fictionRegisterPurchaseRoiSpec(
+      SmartDeliveryGoalFictionRegisterPurchaseRoiSpec fictionRegisterPurchaseRoiSpec) {
+    this.fictionRegisterPurchaseRoiSpec = fictionRegisterPurchaseRoiSpec;
+    return this;
+  }
+
+  /**
+   * Get fictionRegisterPurchaseRoiSpec
+   *
+   * @return fictionRegisterPurchaseRoiSpec
+   */
+  @ApiModelProperty(value = "")
+  public SmartDeliveryGoalFictionRegisterPurchaseRoiSpec getFictionRegisterPurchaseRoiSpec() {
+    return fictionRegisterPurchaseRoiSpec;
+  }
+
+  public void setFictionRegisterPurchaseRoiSpec(
+      SmartDeliveryGoalFictionRegisterPurchaseRoiSpec fictionRegisterPurchaseRoiSpec) {
+    this.fictionRegisterPurchaseRoiSpec = fictionRegisterPurchaseRoiSpec;
+  }
+
+  public SmartDeliveryGoalSpec fictionRegisterMonetizationRoiSpec(
+      SmartDeliveryGoalFictionRegisterMonetizationRoiSpec fictionRegisterMonetizationRoiSpec) {
+    this.fictionRegisterMonetizationRoiSpec = fictionRegisterMonetizationRoiSpec;
+    return this;
+  }
+
+  /**
+   * Get fictionRegisterMonetizationRoiSpec
+   *
+   * @return fictionRegisterMonetizationRoiSpec
+   */
+  @ApiModelProperty(value = "")
+  public SmartDeliveryGoalFictionRegisterMonetizationRoiSpec
+      getFictionRegisterMonetizationRoiSpec() {
+    return fictionRegisterMonetizationRoiSpec;
+  }
+
+  public void setFictionRegisterMonetizationRoiSpec(
+      SmartDeliveryGoalFictionRegisterMonetizationRoiSpec fictionRegisterMonetizationRoiSpec) {
+    this.fictionRegisterMonetizationRoiSpec = fictionRegisterMonetizationRoiSpec;
+  }
+
+  public SmartDeliveryGoalSpec gameAppActivateRoiSpec(
+      SmartDeliveryGoalGameAppActivateRoiSpec gameAppActivateRoiSpec) {
+    this.gameAppActivateRoiSpec = gameAppActivateRoiSpec;
+    return this;
+  }
+
+  /**
+   * Get gameAppActivateRoiSpec
+   *
+   * @return gameAppActivateRoiSpec
+   */
+  @ApiModelProperty(value = "")
+  public SmartDeliveryGoalGameAppActivateRoiSpec getGameAppActivateRoiSpec() {
+    return gameAppActivateRoiSpec;
+  }
+
+  public void setGameAppActivateRoiSpec(
+      SmartDeliveryGoalGameAppActivateRoiSpec gameAppActivateRoiSpec) {
+    this.gameAppActivateRoiSpec = gameAppActivateRoiSpec;
+  }
+
+  public SmartDeliveryGoalSpec readingAppActivateFirstDayRetentionSpec(
+      SmartDeliveryGoalReadingAppActivateFirstDayRetentionSpec
+          readingAppActivateFirstDayRetentionSpec) {
+    this.readingAppActivateFirstDayRetentionSpec = readingAppActivateFirstDayRetentionSpec;
+    return this;
+  }
+
+  /**
+   * Get readingAppActivateFirstDayRetentionSpec
+   *
+   * @return readingAppActivateFirstDayRetentionSpec
+   */
+  @ApiModelProperty(value = "")
+  public SmartDeliveryGoalReadingAppActivateFirstDayRetentionSpec
+      getReadingAppActivateFirstDayRetentionSpec() {
+    return readingAppActivateFirstDayRetentionSpec;
+  }
+
+  public void setReadingAppActivateFirstDayRetentionSpec(
+      SmartDeliveryGoalReadingAppActivateFirstDayRetentionSpec
+          readingAppActivateFirstDayRetentionSpec) {
+    this.readingAppActivateFirstDayRetentionSpec = readingAppActivateFirstDayRetentionSpec;
+  }
+
+  public SmartDeliveryGoalSpec readingAppActivateSevenDayRetentionSpec(
+      SmartDeliveryGoalReadingAppActivateSevenDayRetentionSpec
+          readingAppActivateSevenDayRetentionSpec) {
+    this.readingAppActivateSevenDayRetentionSpec = readingAppActivateSevenDayRetentionSpec;
+    return this;
+  }
+
+  /**
+   * Get readingAppActivateSevenDayRetentionSpec
+   *
+   * @return readingAppActivateSevenDayRetentionSpec
+   */
+  @ApiModelProperty(value = "")
+  public SmartDeliveryGoalReadingAppActivateSevenDayRetentionSpec
+      getReadingAppActivateSevenDayRetentionSpec() {
+    return readingAppActivateSevenDayRetentionSpec;
+  }
+
+  public void setReadingAppActivateSevenDayRetentionSpec(
+      SmartDeliveryGoalReadingAppActivateSevenDayRetentionSpec
+          readingAppActivateSevenDayRetentionSpec) {
+    this.readingAppActivateSevenDayRetentionSpec = readingAppActivateSevenDayRetentionSpec;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -806,7 +990,25 @@ public class SmartDeliveryGoalSpec {
         && Objects.equals(this.qytClickSpec, smartDeliveryGoalSpec.qytClickSpec)
         && Objects.equals(
             this.qytFirstTwentyFourHourEcommerceOrderSpec,
-            smartDeliveryGoalSpec.qytFirstTwentyFourHourEcommerceOrderSpec);
+            smartDeliveryGoalSpec.qytFirstTwentyFourHourEcommerceOrderSpec)
+        && Objects.equals(
+            this.wechatStoreFirstTwentyFourHourEcommerceOrderSpec,
+            smartDeliveryGoalSpec.wechatStoreFirstTwentyFourHourEcommerceOrderSpec)
+        && Objects.equals(
+            this.fictionFollowPurchaseRoiSpec, smartDeliveryGoalSpec.fictionFollowPurchaseRoiSpec)
+        && Objects.equals(
+            this.fictionRegisterPurchaseRoiSpec,
+            smartDeliveryGoalSpec.fictionRegisterPurchaseRoiSpec)
+        && Objects.equals(
+            this.fictionRegisterMonetizationRoiSpec,
+            smartDeliveryGoalSpec.fictionRegisterMonetizationRoiSpec)
+        && Objects.equals(this.gameAppActivateRoiSpec, smartDeliveryGoalSpec.gameAppActivateRoiSpec)
+        && Objects.equals(
+            this.readingAppActivateFirstDayRetentionSpec,
+            smartDeliveryGoalSpec.readingAppActivateFirstDayRetentionSpec)
+        && Objects.equals(
+            this.readingAppActivateSevenDayRetentionSpec,
+            smartDeliveryGoalSpec.readingAppActivateSevenDayRetentionSpec);
   }
 
   @Override
@@ -842,7 +1044,14 @@ public class SmartDeliveryGoalSpec {
         productOrderSpec,
         cpsSpec,
         qytClickSpec,
-        qytFirstTwentyFourHourEcommerceOrderSpec);
+        qytFirstTwentyFourHourEcommerceOrderSpec,
+        wechatStoreFirstTwentyFourHourEcommerceOrderSpec,
+        fictionFollowPurchaseRoiSpec,
+        fictionRegisterPurchaseRoiSpec,
+        fictionRegisterMonetizationRoiSpec,
+        gameAppActivateRoiSpec,
+        readingAppActivateFirstDayRetentionSpec,
+        readingAppActivateSevenDayRetentionSpec);
   }
 
   @Override

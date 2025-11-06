@@ -115,6 +115,10 @@ public class TaskSpec {
   @SerializedName("delete_account_component_spec")
   private List<DeleteAccountComponentItem> deleteAccountComponentSpec = null;
 
+  @SerializedName("update_dynamic_creative_search_intelligent_extension_spec")
+  private List<UpdateDynamicCreativeSearchIntelligentExtensionItem>
+      updateDynamicCreativeSearchIntelligentExtensionSpec = null;
+
   public TaskSpec updateUnionPositionPackageSpec(
       List<UpdateUnionPositionPackageItem> updateUnionPositionPackageSpec) {
     this.updateUnionPositionPackageSpec = updateUnionPositionPackageSpec;
@@ -1000,6 +1004,44 @@ public class TaskSpec {
     this.deleteAccountComponentSpec = deleteAccountComponentSpec;
   }
 
+  public TaskSpec updateDynamicCreativeSearchIntelligentExtensionSpec(
+      List<UpdateDynamicCreativeSearchIntelligentExtensionItem>
+          updateDynamicCreativeSearchIntelligentExtensionSpec) {
+    this.updateDynamicCreativeSearchIntelligentExtensionSpec =
+        updateDynamicCreativeSearchIntelligentExtensionSpec;
+    return this;
+  }
+
+  public TaskSpec addUpdateDynamicCreativeSearchIntelligentExtensionSpecItem(
+      UpdateDynamicCreativeSearchIntelligentExtensionItem
+          updateDynamicCreativeSearchIntelligentExtensionSpecItem) {
+    if (this.updateDynamicCreativeSearchIntelligentExtensionSpec == null) {
+      this.updateDynamicCreativeSearchIntelligentExtensionSpec =
+          new ArrayList<UpdateDynamicCreativeSearchIntelligentExtensionItem>();
+    }
+    this.updateDynamicCreativeSearchIntelligentExtensionSpec.add(
+        updateDynamicCreativeSearchIntelligentExtensionSpecItem);
+    return this;
+  }
+
+  /**
+   * Get updateDynamicCreativeSearchIntelligentExtensionSpec
+   *
+   * @return updateDynamicCreativeSearchIntelligentExtensionSpec
+   */
+  @ApiModelProperty(value = "")
+  public List<UpdateDynamicCreativeSearchIntelligentExtensionItem>
+      getUpdateDynamicCreativeSearchIntelligentExtensionSpec() {
+    return updateDynamicCreativeSearchIntelligentExtensionSpec;
+  }
+
+  public void setUpdateDynamicCreativeSearchIntelligentExtensionSpec(
+      List<UpdateDynamicCreativeSearchIntelligentExtensionItem>
+          updateDynamicCreativeSearchIntelligentExtensionSpec) {
+    this.updateDynamicCreativeSearchIntelligentExtensionSpec =
+        updateDynamicCreativeSearchIntelligentExtensionSpec;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -1060,7 +1102,10 @@ public class TaskSpec {
         && Objects.equals(this.updateComponentSharingSpec, taskSpec.updateComponentSharingSpec)
         && Objects.equals(
             this.updateAdgroupSmartDeliveryGoalSpec, taskSpec.updateAdgroupSmartDeliveryGoalSpec)
-        && Objects.equals(this.deleteAccountComponentSpec, taskSpec.deleteAccountComponentSpec);
+        && Objects.equals(this.deleteAccountComponentSpec, taskSpec.deleteAccountComponentSpec)
+        && Objects.equals(
+            this.updateDynamicCreativeSearchIntelligentExtensionSpec,
+            taskSpec.updateDynamicCreativeSearchIntelligentExtensionSpec);
   }
 
   @Override
@@ -1094,7 +1139,8 @@ public class TaskSpec {
         updateAdgroupDeriveConfSpec,
         updateComponentSharingSpec,
         updateAdgroupSmartDeliveryGoalSpec,
-        deleteAccountComponentSpec);
+        deleteAccountComponentSpec,
+        updateDynamicCreativeSearchIntelligentExtensionSpec);
   }
 
   @Override

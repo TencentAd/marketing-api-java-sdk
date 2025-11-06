@@ -25,6 +25,8 @@ public class GetUserActionSets {
 
   public String wechatAppId = null;
 
+  public String appIdStr = null;
+
   public String name = null;
 
   public Boolean includePermission = null;
@@ -59,6 +61,7 @@ public class GetUserActionSets {
                 type,
                 mobileAppId,
                 wechatAppId,
+                appIdStr,
                 name,
                 includePermission,
                 fields);

@@ -143,7 +143,7 @@ public class GameFeatureApi {
   }
 
   /**
-   * 新增游戏App特征
+   * 新增游戏App特征V5
    *
    * @param data (required)
    * @return GameFeatureAddResponse
@@ -157,7 +157,7 @@ public class GameFeatureApi {
   }
 
   /**
-   * 新增游戏App特征
+   * 新增游戏App特征V5
    *
    * @param data (required)
    * @return ApiResponse&lt;GameFeatureAddResponse&gt;
@@ -172,7 +172,7 @@ public class GameFeatureApi {
   }
 
   /**
-   * 新增游戏App特征 (asynchronously)
+   * 新增游戏App特征V5 (asynchronously)
    *
    * @param data (required)
    * @param callback The callback to be executed when the API call finishes
@@ -344,7 +344,7 @@ public class GameFeatureApi {
   }
 
   /**
-   * 获取游戏App特征
+   * 获取游戏App特征V5
    *
    * @param accountId (required)
    * @param marketingTargetType (required)
@@ -368,7 +368,7 @@ public class GameFeatureApi {
   }
 
   /**
-   * 获取游戏App特征
+   * 获取游戏App特征V5
    *
    * @param accountId (required)
    * @param marketingTargetType (required)
@@ -399,7 +399,7 @@ public class GameFeatureApi {
   }
 
   /**
-   * 获取游戏App特征 (asynchronously)
+   * 获取游戏App特征V5 (asynchronously)
    *
    * @param accountId (required)
    * @param marketingTargetType (required)

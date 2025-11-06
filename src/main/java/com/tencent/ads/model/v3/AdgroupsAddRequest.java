@@ -207,6 +207,9 @@ public class AdgroupsAddRequest {
   @SerializedName("enable_steady_exploration")
   private Boolean enableSteadyExploration = null;
 
+  @SerializedName("smart_targeting_mode")
+  private SmartTargetingMode smartTargetingMode = null;
+
   public AdgroupsAddRequest accountId(Long accountId) {
     this.accountId = accountId;
     return this;
@@ -1423,6 +1426,25 @@ public class AdgroupsAddRequest {
     this.enableSteadyExploration = enableSteadyExploration;
   }
 
+  public AdgroupsAddRequest smartTargetingMode(SmartTargetingMode smartTargetingMode) {
+    this.smartTargetingMode = smartTargetingMode;
+    return this;
+  }
+
+  /**
+   * Get smartTargetingMode
+   *
+   * @return smartTargetingMode
+   */
+  @ApiModelProperty(value = "")
+  public SmartTargetingMode getSmartTargetingMode() {
+    return smartTargetingMode;
+  }
+
+  public void setSmartTargetingMode(SmartTargetingMode smartTargetingMode) {
+    this.smartTargetingMode = smartTargetingMode;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -1502,7 +1524,8 @@ public class AdgroupsAddRequest {
         && Objects.equals(this.customCostRoiCap, adgroupsAddRequest.customCostRoiCap)
         && Objects.equals(this.searchExpansionSwitch, adgroupsAddRequest.searchExpansionSwitch)
         && Objects.equals(this.adxRealtimeType, adgroupsAddRequest.adxRealtimeType)
-        && Objects.equals(this.enableSteadyExploration, adgroupsAddRequest.enableSteadyExploration);
+        && Objects.equals(this.enableSteadyExploration, adgroupsAddRequest.enableSteadyExploration)
+        && Objects.equals(this.smartTargetingMode, adgroupsAddRequest.smartTargetingMode);
   }
 
   @Override
@@ -1569,7 +1592,8 @@ public class AdgroupsAddRequest {
         customCostRoiCap,
         searchExpansionSwitch,
         adxRealtimeType,
-        enableSteadyExploration);
+        enableSteadyExploration,
+        smartTargetingMode);
   }
 
   @Override

@@ -29,11 +29,14 @@ public class OrganizationAccountRelationGetListStruct {
   @SerializedName("corporation_name")
   private String corporationName = null;
 
-  @SerializedName("is_adx")
-  private Boolean isAdx = null;
+  @SerializedName("is_bid")
+  private Boolean isBid = null;
 
   @SerializedName("is_mp")
   private Boolean isMp = null;
+
+  @SerializedName("is_adx")
+  private Boolean isAdx = null;
 
   @SerializedName("comment_list")
   private List<CommentDataStruct> commentList = null;
@@ -76,23 +79,23 @@ public class OrganizationAccountRelationGetListStruct {
     this.corporationName = corporationName;
   }
 
-  public OrganizationAccountRelationGetListStruct isAdx(Boolean isAdx) {
-    this.isAdx = isAdx;
+  public OrganizationAccountRelationGetListStruct isBid(Boolean isBid) {
+    this.isBid = isBid;
     return this;
   }
 
   /**
-   * Get isAdx
+   * Get isBid
    *
-   * @return isAdx
+   * @return isBid
    */
   @ApiModelProperty(value = "")
-  public Boolean isIsAdx() {
-    return isAdx;
+  public Boolean isIsBid() {
+    return isBid;
   }
 
-  public void setIsAdx(Boolean isAdx) {
-    this.isAdx = isAdx;
+  public void setIsBid(Boolean isBid) {
+    this.isBid = isBid;
   }
 
   public OrganizationAccountRelationGetListStruct isMp(Boolean isMp) {
@@ -112,6 +115,25 @@ public class OrganizationAccountRelationGetListStruct {
 
   public void setIsMp(Boolean isMp) {
     this.isMp = isMp;
+  }
+
+  public OrganizationAccountRelationGetListStruct isAdx(Boolean isAdx) {
+    this.isAdx = isAdx;
+    return this;
+  }
+
+  /**
+   * Get isAdx
+   *
+   * @return isAdx
+   */
+  @ApiModelProperty(value = "")
+  public Boolean isIsAdx() {
+    return isAdx;
+  }
+
+  public void setIsAdx(Boolean isAdx) {
+    this.isAdx = isAdx;
   }
 
   public OrganizationAccountRelationGetListStruct commentList(List<CommentDataStruct> commentList) {
@@ -155,14 +177,15 @@ public class OrganizationAccountRelationGetListStruct {
     return Objects.equals(this.accountId, organizationAccountRelationGetListStruct.accountId)
         && Objects.equals(
             this.corporationName, organizationAccountRelationGetListStruct.corporationName)
-        && Objects.equals(this.isAdx, organizationAccountRelationGetListStruct.isAdx)
+        && Objects.equals(this.isBid, organizationAccountRelationGetListStruct.isBid)
         && Objects.equals(this.isMp, organizationAccountRelationGetListStruct.isMp)
+        && Objects.equals(this.isAdx, organizationAccountRelationGetListStruct.isAdx)
         && Objects.equals(this.commentList, organizationAccountRelationGetListStruct.commentList);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(accountId, corporationName, isAdx, isMp, commentList);
+    return Objects.hash(accountId, corporationName, isBid, isMp, isAdx, commentList);
   }
 
   @Override

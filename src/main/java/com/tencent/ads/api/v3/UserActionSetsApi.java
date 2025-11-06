@@ -222,6 +222,7 @@ public class UserActionSetsApi {
    * @param type (optional)
    * @param mobileAppId (optional)
    * @param wechatAppId (optional)
+   * @param appIdStr (optional)
    * @param name (optional)
    * @param includePermission (optional)
    * @param fields 返回参数的字段列表 (optional)
@@ -236,6 +237,7 @@ public class UserActionSetsApi {
       List<String> type,
       Long mobileAppId,
       String wechatAppId,
+      String appIdStr,
       String name,
       Boolean includePermission,
       List<String> fields,
@@ -261,6 +263,8 @@ public class UserActionSetsApi {
       localVarQueryParams.addAll(apiClient.parameterToPair("mobile_app_id", mobileAppId));
     if (wechatAppId != null)
       localVarQueryParams.addAll(apiClient.parameterToPair("wechat_app_id", wechatAppId));
+    if (appIdStr != null)
+      localVarQueryParams.addAll(apiClient.parameterToPair("app_id_str", appIdStr));
     if (name != null) localVarQueryParams.addAll(apiClient.parameterToPair("name", name));
     if (includePermission != null)
       localVarQueryParams.addAll(
@@ -324,6 +328,7 @@ public class UserActionSetsApi {
       List<String> type,
       Long mobileAppId,
       String wechatAppId,
+      String appIdStr,
       String name,
       Boolean includePermission,
       List<String> fields,
@@ -345,6 +350,7 @@ public class UserActionSetsApi {
             type,
             mobileAppId,
             wechatAppId,
+            appIdStr,
             name,
             includePermission,
             fields,
@@ -362,6 +368,7 @@ public class UserActionSetsApi {
    * @param type (optional)
    * @param mobileAppId (optional)
    * @param wechatAppId (optional)
+   * @param appIdStr (optional)
    * @param name (optional)
    * @param includePermission (optional)
    * @param fields 返回参数的字段列表 (optional)
@@ -375,6 +382,7 @@ public class UserActionSetsApi {
       List<String> type,
       Long mobileAppId,
       String wechatAppId,
+      String appIdStr,
       String name,
       Boolean includePermission,
       List<String> fields,
@@ -387,6 +395,7 @@ public class UserActionSetsApi {
             type,
             mobileAppId,
             wechatAppId,
+            appIdStr,
             name,
             includePermission,
             fields,
@@ -402,6 +411,7 @@ public class UserActionSetsApi {
    * @param type (optional)
    * @param mobileAppId (optional)
    * @param wechatAppId (optional)
+   * @param appIdStr (optional)
    * @param name (optional)
    * @param includePermission (optional)
    * @param fields 返回参数的字段列表 (optional)
@@ -415,6 +425,7 @@ public class UserActionSetsApi {
       List<String> type,
       Long mobileAppId,
       String wechatAppId,
+      String appIdStr,
       String name,
       Boolean includePermission,
       List<String> fields,
@@ -427,6 +438,7 @@ public class UserActionSetsApi {
             type,
             mobileAppId,
             wechatAppId,
+            appIdStr,
             name,
             includePermission,
             fields,
@@ -445,6 +457,7 @@ public class UserActionSetsApi {
    * @param type (optional)
    * @param mobileAppId (optional)
    * @param wechatAppId (optional)
+   * @param appIdStr (optional)
    * @param name (optional)
    * @param includePermission (optional)
    * @param fields 返回参数的字段列表 (optional)
@@ -458,6 +471,7 @@ public class UserActionSetsApi {
       List<String> type,
       Long mobileAppId,
       String wechatAppId,
+      String appIdStr,
       String name,
       Boolean includePermission,
       List<String> fields,
@@ -493,6 +507,7 @@ public class UserActionSetsApi {
             type,
             mobileAppId,
             wechatAppId,
+            appIdStr,
             name,
             includePermission,
             fields,

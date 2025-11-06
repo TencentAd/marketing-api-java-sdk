@@ -23,6 +23,8 @@ public class GetWechatChannelsAccounts {
 
   public Long pageSize = null;
 
+  public String scene = null;
+
   public List<String> fields = null;
 
   public void init() {
@@ -39,7 +41,7 @@ public class GetWechatChannelsAccounts {
     WechatChannelsAccountsGetResponseData response =
         tencentAds
             .wechatChannelsAccounts()
-            .wechatChannelsAccountsGet(accountId, filtering, page, pageSize, fields);
+            .wechatChannelsAccountsGet(accountId, filtering, page, pageSize, scene, fields);
     return response;
   }
 

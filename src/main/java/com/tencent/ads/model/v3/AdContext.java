@@ -53,11 +53,17 @@ public class AdContext {
   @SerializedName("component_type")
   private ComponentType componentType = null;
 
+  @SerializedName("optimization_goal_struct")
+  private AdContextOptimizationGoalStruct optimizationGoalStruct = null;
+
   @SerializedName("mpa_spec")
   private MpaSpec mpaSpec = null;
 
   @SerializedName("marketing_asset_outer_spec")
   private MarketingAssetOuterSpec marketingAssetOuterSpec = null;
+
+  @SerializedName("dynamic_ad_type")
+  private DynamicAdType dynamicAdType = null;
 
   public AdContext marketingGoal(MarketingGoal marketingGoal) {
     this.marketingGoal = marketingGoal;
@@ -257,6 +263,25 @@ public class AdContext {
     this.componentType = componentType;
   }
 
+  public AdContext optimizationGoalStruct(AdContextOptimizationGoalStruct optimizationGoalStruct) {
+    this.optimizationGoalStruct = optimizationGoalStruct;
+    return this;
+  }
+
+  /**
+   * Get optimizationGoalStruct
+   *
+   * @return optimizationGoalStruct
+   */
+  @ApiModelProperty(value = "")
+  public AdContextOptimizationGoalStruct getOptimizationGoalStruct() {
+    return optimizationGoalStruct;
+  }
+
+  public void setOptimizationGoalStruct(AdContextOptimizationGoalStruct optimizationGoalStruct) {
+    this.optimizationGoalStruct = optimizationGoalStruct;
+  }
+
   public AdContext mpaSpec(MpaSpec mpaSpec) {
     this.mpaSpec = mpaSpec;
     return this;
@@ -295,6 +320,25 @@ public class AdContext {
     this.marketingAssetOuterSpec = marketingAssetOuterSpec;
   }
 
+  public AdContext dynamicAdType(DynamicAdType dynamicAdType) {
+    this.dynamicAdType = dynamicAdType;
+    return this;
+  }
+
+  /**
+   * Get dynamicAdType
+   *
+   * @return dynamicAdType
+   */
+  @ApiModelProperty(value = "")
+  public DynamicAdType getDynamicAdType() {
+    return dynamicAdType;
+  }
+
+  public void setDynamicAdType(DynamicAdType dynamicAdType) {
+    this.dynamicAdType = dynamicAdType;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -314,8 +358,10 @@ public class AdContext {
         && Objects.equals(this.creativeTemplateId, adContext.creativeTemplateId)
         && Objects.equals(this.promotedAssetType, adContext.promotedAssetType)
         && Objects.equals(this.componentType, adContext.componentType)
+        && Objects.equals(this.optimizationGoalStruct, adContext.optimizationGoalStruct)
         && Objects.equals(this.mpaSpec, adContext.mpaSpec)
-        && Objects.equals(this.marketingAssetOuterSpec, adContext.marketingAssetOuterSpec);
+        && Objects.equals(this.marketingAssetOuterSpec, adContext.marketingAssetOuterSpec)
+        && Objects.equals(this.dynamicAdType, adContext.dynamicAdType);
   }
 
   @Override
@@ -331,8 +377,10 @@ public class AdContext {
         creativeTemplateId,
         promotedAssetType,
         componentType,
+        optimizationGoalStruct,
         mpaSpec,
-        marketingAssetOuterSpec);
+        marketingAssetOuterSpec,
+        dynamicAdType);
   }
 
   @Override

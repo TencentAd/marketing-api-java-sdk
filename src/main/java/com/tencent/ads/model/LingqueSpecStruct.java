@@ -24,6 +24,9 @@ public class LingqueSpecStruct {
   @SerializedName("page_id")
   private Long pageId = null;
 
+  @SerializedName("customized_param")
+  private String customizedParam = null;
+
   public LingqueSpecStruct pageId(Long pageId) {
     this.pageId = pageId;
     return this;
@@ -43,6 +46,25 @@ public class LingqueSpecStruct {
     this.pageId = pageId;
   }
 
+  public LingqueSpecStruct customizedParam(String customizedParam) {
+    this.customizedParam = customizedParam;
+    return this;
+  }
+
+  /**
+   * Get customizedParam
+   *
+   * @return customizedParam
+   */
+  @ApiModelProperty(value = "")
+  public String getCustomizedParam() {
+    return customizedParam;
+  }
+
+  public void setCustomizedParam(String customizedParam) {
+    this.customizedParam = customizedParam;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -52,12 +74,13 @@ public class LingqueSpecStruct {
       return false;
     }
     LingqueSpecStruct lingqueSpecStruct = (LingqueSpecStruct) o;
-    return Objects.equals(this.pageId, lingqueSpecStruct.pageId);
+    return Objects.equals(this.pageId, lingqueSpecStruct.pageId)
+        && Objects.equals(this.customizedParam, lingqueSpecStruct.customizedParam);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(pageId);
+    return Objects.hash(pageId, customizedParam);
   }
 
   @Override

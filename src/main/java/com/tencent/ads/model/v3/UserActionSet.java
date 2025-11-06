@@ -32,6 +32,9 @@ public class UserActionSet {
   @SerializedName("mobile_app_id")
   private Long mobileAppId = null;
 
+  @SerializedName("app_id_str")
+  private String appIdStr = null;
+
   @SerializedName("name")
   private String name = null;
 
@@ -111,6 +114,25 @@ public class UserActionSet {
 
   public void setMobileAppId(Long mobileAppId) {
     this.mobileAppId = mobileAppId;
+  }
+
+  public UserActionSet appIdStr(String appIdStr) {
+    this.appIdStr = appIdStr;
+    return this;
+  }
+
+  /**
+   * Get appIdStr
+   *
+   * @return appIdStr
+   */
+  @ApiModelProperty(value = "")
+  public String getAppIdStr() {
+    return appIdStr;
+  }
+
+  public void setAppIdStr(String appIdStr) {
+    this.appIdStr = appIdStr;
   }
 
   public UserActionSet name(String name) {
@@ -285,6 +307,7 @@ public class UserActionSet {
     return Objects.equals(this.userActionSetId, userActionSet.userActionSetId)
         && Objects.equals(this.type, userActionSet.type)
         && Objects.equals(this.mobileAppId, userActionSet.mobileAppId)
+        && Objects.equals(this.appIdStr, userActionSet.appIdStr)
         && Objects.equals(this.name, userActionSet.name)
         && Objects.equals(this.description, userActionSet.description)
         && Objects.equals(this.activateStatus, userActionSet.activateStatus)
@@ -301,6 +324,7 @@ public class UserActionSet {
         userActionSetId,
         type,
         mobileAppId,
+        appIdStr,
         name,
         description,
         activateStatus,
