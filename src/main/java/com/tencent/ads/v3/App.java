@@ -153,6 +153,7 @@ public class App {
   @Inject MuseAiMaterialApiContainer museAiMaterialApiContainer;
   @Inject MuseAiTaskApiContainer museAiTaskApiContainer;
   @Inject MuseAiUgcApiContainer museAiUgcApiContainer;
+  @Inject MuseAudiosApiContainer museAudiosApiContainer;
   @Inject NegativewordsApiContainer negativewordsApiContainer;
   @Inject OauthApiContainer oauthApiContainer;
   @Inject ObjectCommentFlagApiContainer objectCommentFlagApiContainer;
@@ -161,6 +162,7 @@ public class App {
   @Inject OfficialLandingPageDetailApiContainer officialLandingPageDetailApiContainer;
   @Inject OfficialLandingPageListApiContainer officialLandingPageListApiContainer;
   @Inject OfficialLandingPageSubmitApiContainer officialLandingPageSubmitApiContainer;
+  @Inject OnlinePreviewQrcodeApiContainer onlinePreviewQrcodeApiContainer;
   @Inject OperationLogListApiContainer operationLogListApiContainer;
   @Inject OptimizationGoalPermissionsApiContainer optimizationGoalPermissionsApiContainer;
   @Inject OrganizationAccountRelationApiContainer organizationAccountRelationApiContainer;
@@ -223,6 +225,7 @@ public class App {
   @Inject WalletGetBindingAdvertiserApiContainer walletGetBindingAdvertiserApiContainer;
   @Inject WalletInvoiceApiContainer walletInvoiceApiContainer;
   @Inject WalletTransferApiContainer walletTransferApiContainer;
+  @Inject WatermarksApiContainer watermarksApiContainer;
   @Inject WechatChannelsAccountsApiContainer wechatChannelsAccountsApiContainer;
   @Inject WechatChannelsAdAccountApiContainer wechatChannelsAdAccountApiContainer;
 
@@ -779,6 +782,10 @@ public class App {
     return museAiUgcApiContainer;
   }
 
+  public MuseAudiosApiContainer museAudios() {
+    return museAudiosApiContainer;
+  }
+
   public NegativewordsApiContainer negativewords() {
     return negativewordsApiContainer;
   }
@@ -809,6 +816,10 @@ public class App {
 
   public OfficialLandingPageSubmitApiContainer officialLandingPageSubmit() {
     return officialLandingPageSubmitApiContainer;
+  }
+
+  public OnlinePreviewQrcodeApiContainer onlinePreviewQrcode() {
+    return onlinePreviewQrcodeApiContainer;
   }
 
   public OperationLogListApiContainer operationLogList() {
@@ -1045,6 +1056,10 @@ public class App {
 
   public WalletTransferApiContainer walletTransfer() {
     return walletTransferApiContainer;
+  }
+
+  public WatermarksApiContainer watermarks() {
+    return watermarksApiContainer;
   }
 
   public WechatChannelsAccountsApiContainer wechatChannelsAccounts() {

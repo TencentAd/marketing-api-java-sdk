@@ -69,9 +69,6 @@ public class TargetReportApiListStruct {
   @SerializedName("thousand_display_price")
   private Long thousandDisplayPrice = null;
 
-  @SerializedName("real_cost_top")
-  private Long realCostTop = null;
-
   @SerializedName("conversions_count")
   private Long conversionsCount = null;
 
@@ -119,60 +116,6 @@ public class TargetReportApiListStruct {
 
   @SerializedName("preview_deep_conversions_count")
   private Long previewDeepConversionsCount = null;
-
-  @SerializedName("video_outer_play_count")
-  private Long videoOuterPlayCount = null;
-
-  @SerializedName("video_outer_play_user_count")
-  private Long videoOuterPlayUserCount = null;
-
-  @SerializedName("avg_user_play_count")
-  private Double avgUserPlayCount = null;
-
-  @SerializedName("video_outer_play_time_count")
-  private Double videoOuterPlayTimeCount = null;
-
-  @SerializedName("video_outer_play_time_avg_rate")
-  private Double videoOuterPlayTimeAvgRate = null;
-
-  @SerializedName("video_outer_play_rate")
-  private Double videoOuterPlayRate = null;
-
-  @SerializedName("video_outer_play_cost")
-  private Long videoOuterPlayCost = null;
-
-  @SerializedName("video_outer_play10_count")
-  private Long videoOuterPlay10Count = null;
-
-  @SerializedName("video_outer_play25_count")
-  private Long videoOuterPlay25Count = null;
-
-  @SerializedName("video_outer_play50_count")
-  private Long videoOuterPlay50Count = null;
-
-  @SerializedName("video_outer_play75_count")
-  private Long videoOuterPlay75Count = null;
-
-  @SerializedName("video_outer_play90_count")
-  private Long videoOuterPlay90Count = null;
-
-  @SerializedName("video_outer_play95_count")
-  private Long videoOuterPlay95Count = null;
-
-  @SerializedName("video_outer_play100_count")
-  private Long videoOuterPlay100Count = null;
-
-  @SerializedName("video_outer_play3s_count")
-  private Long videoOuterPlay3sCount = null;
-
-  @SerializedName("video_outer_play3s_rate")
-  private Double videoOuterPlay3sRate = null;
-
-  @SerializedName("video_outer_play5s_count")
-  private Long videoOuterPlay5sCount = null;
-
-  @SerializedName("video_outer_play7s_count")
-  private Long videoOuterPlay7sCount = null;
 
   @SerializedName("read_count")
   private Long readCount = null;
@@ -1641,9 +1584,6 @@ public class TargetReportApiListStruct {
   @SerializedName("video_live_exp_count")
   private Long videoLiveExpCount = null;
 
-  @SerializedName("live_stream_exp_uv")
-  private Long liveStreamExpUv = null;
-
   @SerializedName("channels_live_exit_pla_duration")
   private Double channelsLiveExitPlaDuration = null;
 
@@ -1682,9 +1622,6 @@ public class TargetReportApiListStruct {
 
   @SerializedName("live_stream_commodity_shop_list_exp_pv")
   private Long liveStreamCommodityShopListExpPv = null;
-
-  @SerializedName("live_stream_avg_time")
-  private Double liveStreamAvgTime = null;
 
   @SerializedName("from_follow_uv")
   private Long fromFollowUv = null;
@@ -1725,9 +1662,6 @@ public class TargetReportApiListStruct {
   @SerializedName("break_frame_ip_clk_pv")
   private Long breakFrameIpClkPv = null;
 
-  @SerializedName("break_frame_ip_clk_uv")
-  private Long breakFrameIpClkUv = null;
-
   @SerializedName("clk_material_uv")
   private Long clkMaterialUv = null;
 
@@ -1766,9 +1700,6 @@ public class TargetReportApiListStruct {
 
   @SerializedName("finder_topic_slider_pv")
   private Long finderTopicSliderPv = null;
-
-  @SerializedName("finder_topic_slider_per_user")
-  private Double finderTopicSliderPerUser = null;
 
   @SerializedName("finder_topic_slider_manual_pv")
   private Long finderTopicSliderManualPv = null;
@@ -2094,9 +2025,6 @@ public class TargetReportApiListStruct {
   @SerializedName("open_account_pv_cost")
   private Long openAccountPvCost = null;
 
-  @SerializedName("video_outer_play5s_rate")
-  private Double videoOuterPlay5sRate = null;
-
   @SerializedName("income_val_24h_pla_roi")
   private Double incomeVal24hPlaRoi = null;
 
@@ -2328,17 +2256,101 @@ public class TargetReportApiListStruct {
   @SerializedName("loan_dedup_cost")
   private Long loanDedupCost = null;
 
-  @SerializedName("landing_cpn_exp_pv")
-  private Long landingCpnExpPv = null;
-
-  @SerializedName("lan_button_click_rate")
-  private Double lanButtonClickRate = null;
-
   @SerializedName("clk_topic_element_pv")
   private Long clkTopicElementPv = null;
 
   @SerializedName("ad_monetization_ecpm")
   private Long adMonetizationEcpm = null;
+
+  @SerializedName("ad_monetization_reg_active_14d_amount")
+  private Long adMonetizationRegActive14dAmount = null;
+
+  @SerializedName("ad_monetization_reg_active_30d_amount")
+  private Long adMonetizationRegActive30dAmount = null;
+
+  @SerializedName("ad_monetization_reg_active_60d_amount")
+  private Long adMonetizationRegActive60dAmount = null;
+
+  @SerializedName("income_val_30")
+  private Long incomeVal30 = null;
+
+  @SerializedName("income_val_60")
+  private Long incomeVal60 = null;
+
+  @SerializedName("ad_monetization_reg_active_14d_roi")
+  private Double adMonetizationRegActive14dRoi = null;
+
+  @SerializedName("ad_monetization_reg_active_30d_roi")
+  private Double adMonetizationRegActive30dRoi = null;
+
+  @SerializedName("ad_monetization_reg_active_60d_roi")
+  private Double adMonetizationRegActive60dRoi = null;
+
+  @SerializedName("income_roi_30")
+  private Double incomeRoi30 = null;
+
+  @SerializedName("income_roi_60")
+  private Double incomeRoi60 = null;
+
+  @SerializedName("ad_monetization_dedup_reg_active_14d_pv")
+  private Long adMonetizationDedupRegActive14dPv = null;
+
+  @SerializedName("ad_monetization_dedup_reg_active_30d_pv")
+  private Long adMonetizationDedupRegActive30dPv = null;
+
+  @SerializedName("ad_monetization_dedup_reg_active_60d_pv")
+  private Long adMonetizationDedupRegActive60dPv = null;
+
+  @SerializedName("ad_monetization_dedup_active_14d_pv")
+  private Long adMonetizationDedupActive14dPv = null;
+
+  @SerializedName("ad_monetization_dedup_active_30d_pv")
+  private Long adMonetizationDedupActive30dPv = null;
+
+  @SerializedName("ad_monetization_dedup_active_60d_pv")
+  private Long adMonetizationDedupActive60dPv = null;
+
+  @SerializedName("ad_monetization_reg_active_14d_pv")
+  private Long adMonetizationRegActive14dPv = null;
+
+  @SerializedName("ad_monetization_reg_active_30d_pv")
+  private Long adMonetizationRegActive30dPv = null;
+
+  @SerializedName("ad_monetization_reg_active_60d_pv")
+  private Long adMonetizationRegActive60dPv = null;
+
+  @SerializedName("ad_monetization_active_14d_pv")
+  private Long adMonetizationActive14dPv = null;
+
+  @SerializedName("ad_monetization_active_30d_pv")
+  private Long adMonetizationActive30dPv = null;
+
+  @SerializedName("ad_monetization_active_60d_pv")
+  private Long adMonetizationActive60dPv = null;
+
+  @SerializedName("clk_ad_flip_card_pv")
+  private Long clkAdFlipCardPv = null;
+
+  @SerializedName("commission_amount")
+  private Long commissionAmount = null;
+
+  @SerializedName("commission_roi")
+  private Double commissionRoi = null;
+
+  @SerializedName("order_net_pv")
+  private Long orderNetPv = null;
+
+  @SerializedName("order_net_amount")
+  private Long orderNetAmount = null;
+
+  @SerializedName("order_net_roi")
+  private Double orderNetRoi = null;
+
+  @SerializedName("order_net_pv_cost")
+  private Long orderNetPvCost = null;
+
+  @SerializedName("clk_bh_anim_pv")
+  private Long clkBhAnimPv = null;
 
   @SerializedName("age_id")
   private Long ageId = null;
@@ -2665,25 +2677,6 @@ public class TargetReportApiListStruct {
     this.thousandDisplayPrice = thousandDisplayPrice;
   }
 
-  public TargetReportApiListStruct realCostTop(Long realCostTop) {
-    this.realCostTop = realCostTop;
-    return this;
-  }
-
-  /**
-   * Get realCostTop
-   *
-   * @return realCostTop
-   */
-  @ApiModelProperty(value = "")
-  public Long getRealCostTop() {
-    return realCostTop;
-  }
-
-  public void setRealCostTop(Long realCostTop) {
-    this.realCostTop = realCostTop;
-  }
-
   public TargetReportApiListStruct conversionsCount(Long conversionsCount) {
     this.conversionsCount = conversionsCount;
     return this;
@@ -2986,348 +2979,6 @@ public class TargetReportApiListStruct {
 
   public void setPreviewDeepConversionsCount(Long previewDeepConversionsCount) {
     this.previewDeepConversionsCount = previewDeepConversionsCount;
-  }
-
-  public TargetReportApiListStruct videoOuterPlayCount(Long videoOuterPlayCount) {
-    this.videoOuterPlayCount = videoOuterPlayCount;
-    return this;
-  }
-
-  /**
-   * Get videoOuterPlayCount
-   *
-   * @return videoOuterPlayCount
-   */
-  @ApiModelProperty(value = "")
-  public Long getVideoOuterPlayCount() {
-    return videoOuterPlayCount;
-  }
-
-  public void setVideoOuterPlayCount(Long videoOuterPlayCount) {
-    this.videoOuterPlayCount = videoOuterPlayCount;
-  }
-
-  public TargetReportApiListStruct videoOuterPlayUserCount(Long videoOuterPlayUserCount) {
-    this.videoOuterPlayUserCount = videoOuterPlayUserCount;
-    return this;
-  }
-
-  /**
-   * Get videoOuterPlayUserCount
-   *
-   * @return videoOuterPlayUserCount
-   */
-  @ApiModelProperty(value = "")
-  public Long getVideoOuterPlayUserCount() {
-    return videoOuterPlayUserCount;
-  }
-
-  public void setVideoOuterPlayUserCount(Long videoOuterPlayUserCount) {
-    this.videoOuterPlayUserCount = videoOuterPlayUserCount;
-  }
-
-  public TargetReportApiListStruct avgUserPlayCount(Double avgUserPlayCount) {
-    this.avgUserPlayCount = avgUserPlayCount;
-    return this;
-  }
-
-  /**
-   * Get avgUserPlayCount
-   *
-   * @return avgUserPlayCount
-   */
-  @ApiModelProperty(value = "")
-  public Double getAvgUserPlayCount() {
-    return avgUserPlayCount;
-  }
-
-  public void setAvgUserPlayCount(Double avgUserPlayCount) {
-    this.avgUserPlayCount = avgUserPlayCount;
-  }
-
-  public TargetReportApiListStruct videoOuterPlayTimeCount(Double videoOuterPlayTimeCount) {
-    this.videoOuterPlayTimeCount = videoOuterPlayTimeCount;
-    return this;
-  }
-
-  /**
-   * Get videoOuterPlayTimeCount
-   *
-   * @return videoOuterPlayTimeCount
-   */
-  @ApiModelProperty(value = "")
-  public Double getVideoOuterPlayTimeCount() {
-    return videoOuterPlayTimeCount;
-  }
-
-  public void setVideoOuterPlayTimeCount(Double videoOuterPlayTimeCount) {
-    this.videoOuterPlayTimeCount = videoOuterPlayTimeCount;
-  }
-
-  public TargetReportApiListStruct videoOuterPlayTimeAvgRate(Double videoOuterPlayTimeAvgRate) {
-    this.videoOuterPlayTimeAvgRate = videoOuterPlayTimeAvgRate;
-    return this;
-  }
-
-  /**
-   * Get videoOuterPlayTimeAvgRate
-   *
-   * @return videoOuterPlayTimeAvgRate
-   */
-  @ApiModelProperty(value = "")
-  public Double getVideoOuterPlayTimeAvgRate() {
-    return videoOuterPlayTimeAvgRate;
-  }
-
-  public void setVideoOuterPlayTimeAvgRate(Double videoOuterPlayTimeAvgRate) {
-    this.videoOuterPlayTimeAvgRate = videoOuterPlayTimeAvgRate;
-  }
-
-  public TargetReportApiListStruct videoOuterPlayRate(Double videoOuterPlayRate) {
-    this.videoOuterPlayRate = videoOuterPlayRate;
-    return this;
-  }
-
-  /**
-   * Get videoOuterPlayRate
-   *
-   * @return videoOuterPlayRate
-   */
-  @ApiModelProperty(value = "")
-  public Double getVideoOuterPlayRate() {
-    return videoOuterPlayRate;
-  }
-
-  public void setVideoOuterPlayRate(Double videoOuterPlayRate) {
-    this.videoOuterPlayRate = videoOuterPlayRate;
-  }
-
-  public TargetReportApiListStruct videoOuterPlayCost(Long videoOuterPlayCost) {
-    this.videoOuterPlayCost = videoOuterPlayCost;
-    return this;
-  }
-
-  /**
-   * Get videoOuterPlayCost
-   *
-   * @return videoOuterPlayCost
-   */
-  @ApiModelProperty(value = "")
-  public Long getVideoOuterPlayCost() {
-    return videoOuterPlayCost;
-  }
-
-  public void setVideoOuterPlayCost(Long videoOuterPlayCost) {
-    this.videoOuterPlayCost = videoOuterPlayCost;
-  }
-
-  public TargetReportApiListStruct videoOuterPlay10Count(Long videoOuterPlay10Count) {
-    this.videoOuterPlay10Count = videoOuterPlay10Count;
-    return this;
-  }
-
-  /**
-   * Get videoOuterPlay10Count
-   *
-   * @return videoOuterPlay10Count
-   */
-  @ApiModelProperty(value = "")
-  public Long getVideoOuterPlay10Count() {
-    return videoOuterPlay10Count;
-  }
-
-  public void setVideoOuterPlay10Count(Long videoOuterPlay10Count) {
-    this.videoOuterPlay10Count = videoOuterPlay10Count;
-  }
-
-  public TargetReportApiListStruct videoOuterPlay25Count(Long videoOuterPlay25Count) {
-    this.videoOuterPlay25Count = videoOuterPlay25Count;
-    return this;
-  }
-
-  /**
-   * Get videoOuterPlay25Count
-   *
-   * @return videoOuterPlay25Count
-   */
-  @ApiModelProperty(value = "")
-  public Long getVideoOuterPlay25Count() {
-    return videoOuterPlay25Count;
-  }
-
-  public void setVideoOuterPlay25Count(Long videoOuterPlay25Count) {
-    this.videoOuterPlay25Count = videoOuterPlay25Count;
-  }
-
-  public TargetReportApiListStruct videoOuterPlay50Count(Long videoOuterPlay50Count) {
-    this.videoOuterPlay50Count = videoOuterPlay50Count;
-    return this;
-  }
-
-  /**
-   * Get videoOuterPlay50Count
-   *
-   * @return videoOuterPlay50Count
-   */
-  @ApiModelProperty(value = "")
-  public Long getVideoOuterPlay50Count() {
-    return videoOuterPlay50Count;
-  }
-
-  public void setVideoOuterPlay50Count(Long videoOuterPlay50Count) {
-    this.videoOuterPlay50Count = videoOuterPlay50Count;
-  }
-
-  public TargetReportApiListStruct videoOuterPlay75Count(Long videoOuterPlay75Count) {
-    this.videoOuterPlay75Count = videoOuterPlay75Count;
-    return this;
-  }
-
-  /**
-   * Get videoOuterPlay75Count
-   *
-   * @return videoOuterPlay75Count
-   */
-  @ApiModelProperty(value = "")
-  public Long getVideoOuterPlay75Count() {
-    return videoOuterPlay75Count;
-  }
-
-  public void setVideoOuterPlay75Count(Long videoOuterPlay75Count) {
-    this.videoOuterPlay75Count = videoOuterPlay75Count;
-  }
-
-  public TargetReportApiListStruct videoOuterPlay90Count(Long videoOuterPlay90Count) {
-    this.videoOuterPlay90Count = videoOuterPlay90Count;
-    return this;
-  }
-
-  /**
-   * Get videoOuterPlay90Count
-   *
-   * @return videoOuterPlay90Count
-   */
-  @ApiModelProperty(value = "")
-  public Long getVideoOuterPlay90Count() {
-    return videoOuterPlay90Count;
-  }
-
-  public void setVideoOuterPlay90Count(Long videoOuterPlay90Count) {
-    this.videoOuterPlay90Count = videoOuterPlay90Count;
-  }
-
-  public TargetReportApiListStruct videoOuterPlay95Count(Long videoOuterPlay95Count) {
-    this.videoOuterPlay95Count = videoOuterPlay95Count;
-    return this;
-  }
-
-  /**
-   * Get videoOuterPlay95Count
-   *
-   * @return videoOuterPlay95Count
-   */
-  @ApiModelProperty(value = "")
-  public Long getVideoOuterPlay95Count() {
-    return videoOuterPlay95Count;
-  }
-
-  public void setVideoOuterPlay95Count(Long videoOuterPlay95Count) {
-    this.videoOuterPlay95Count = videoOuterPlay95Count;
-  }
-
-  public TargetReportApiListStruct videoOuterPlay100Count(Long videoOuterPlay100Count) {
-    this.videoOuterPlay100Count = videoOuterPlay100Count;
-    return this;
-  }
-
-  /**
-   * Get videoOuterPlay100Count
-   *
-   * @return videoOuterPlay100Count
-   */
-  @ApiModelProperty(value = "")
-  public Long getVideoOuterPlay100Count() {
-    return videoOuterPlay100Count;
-  }
-
-  public void setVideoOuterPlay100Count(Long videoOuterPlay100Count) {
-    this.videoOuterPlay100Count = videoOuterPlay100Count;
-  }
-
-  public TargetReportApiListStruct videoOuterPlay3sCount(Long videoOuterPlay3sCount) {
-    this.videoOuterPlay3sCount = videoOuterPlay3sCount;
-    return this;
-  }
-
-  /**
-   * Get videoOuterPlay3sCount
-   *
-   * @return videoOuterPlay3sCount
-   */
-  @ApiModelProperty(value = "")
-  public Long getVideoOuterPlay3sCount() {
-    return videoOuterPlay3sCount;
-  }
-
-  public void setVideoOuterPlay3sCount(Long videoOuterPlay3sCount) {
-    this.videoOuterPlay3sCount = videoOuterPlay3sCount;
-  }
-
-  public TargetReportApiListStruct videoOuterPlay3sRate(Double videoOuterPlay3sRate) {
-    this.videoOuterPlay3sRate = videoOuterPlay3sRate;
-    return this;
-  }
-
-  /**
-   * Get videoOuterPlay3sRate
-   *
-   * @return videoOuterPlay3sRate
-   */
-  @ApiModelProperty(value = "")
-  public Double getVideoOuterPlay3sRate() {
-    return videoOuterPlay3sRate;
-  }
-
-  public void setVideoOuterPlay3sRate(Double videoOuterPlay3sRate) {
-    this.videoOuterPlay3sRate = videoOuterPlay3sRate;
-  }
-
-  public TargetReportApiListStruct videoOuterPlay5sCount(Long videoOuterPlay5sCount) {
-    this.videoOuterPlay5sCount = videoOuterPlay5sCount;
-    return this;
-  }
-
-  /**
-   * Get videoOuterPlay5sCount
-   *
-   * @return videoOuterPlay5sCount
-   */
-  @ApiModelProperty(value = "")
-  public Long getVideoOuterPlay5sCount() {
-    return videoOuterPlay5sCount;
-  }
-
-  public void setVideoOuterPlay5sCount(Long videoOuterPlay5sCount) {
-    this.videoOuterPlay5sCount = videoOuterPlay5sCount;
-  }
-
-  public TargetReportApiListStruct videoOuterPlay7sCount(Long videoOuterPlay7sCount) {
-    this.videoOuterPlay7sCount = videoOuterPlay7sCount;
-    return this;
-  }
-
-  /**
-   * Get videoOuterPlay7sCount
-   *
-   * @return videoOuterPlay7sCount
-   */
-  @ApiModelProperty(value = "")
-  public Long getVideoOuterPlay7sCount() {
-    return videoOuterPlay7sCount;
-  }
-
-  public void setVideoOuterPlay7sCount(Long videoOuterPlay7sCount) {
-    this.videoOuterPlay7sCount = videoOuterPlay7sCount;
   }
 
   public TargetReportApiListStruct readCount(Long readCount) {
@@ -12653,25 +12304,6 @@ public class TargetReportApiListStruct {
     this.videoLiveExpCount = videoLiveExpCount;
   }
 
-  public TargetReportApiListStruct liveStreamExpUv(Long liveStreamExpUv) {
-    this.liveStreamExpUv = liveStreamExpUv;
-    return this;
-  }
-
-  /**
-   * Get liveStreamExpUv
-   *
-   * @return liveStreamExpUv
-   */
-  @ApiModelProperty(value = "")
-  public Long getLiveStreamExpUv() {
-    return liveStreamExpUv;
-  }
-
-  public void setLiveStreamExpUv(Long liveStreamExpUv) {
-    this.liveStreamExpUv = liveStreamExpUv;
-  }
-
   public TargetReportApiListStruct channelsLiveExitPlaDuration(Double channelsLiveExitPlaDuration) {
     this.channelsLiveExitPlaDuration = channelsLiveExitPlaDuration;
     return this;
@@ -12924,25 +12556,6 @@ public class TargetReportApiListStruct {
     this.liveStreamCommodityShopListExpPv = liveStreamCommodityShopListExpPv;
   }
 
-  public TargetReportApiListStruct liveStreamAvgTime(Double liveStreamAvgTime) {
-    this.liveStreamAvgTime = liveStreamAvgTime;
-    return this;
-  }
-
-  /**
-   * Get liveStreamAvgTime
-   *
-   * @return liveStreamAvgTime
-   */
-  @ApiModelProperty(value = "")
-  public Double getLiveStreamAvgTime() {
-    return liveStreamAvgTime;
-  }
-
-  public void setLiveStreamAvgTime(Double liveStreamAvgTime) {
-    this.liveStreamAvgTime = liveStreamAvgTime;
-  }
-
   public TargetReportApiListStruct fromFollowUv(Long fromFollowUv) {
     this.fromFollowUv = fromFollowUv;
     return this;
@@ -13190,25 +12803,6 @@ public class TargetReportApiListStruct {
     this.breakFrameIpClkPv = breakFrameIpClkPv;
   }
 
-  public TargetReportApiListStruct breakFrameIpClkUv(Long breakFrameIpClkUv) {
-    this.breakFrameIpClkUv = breakFrameIpClkUv;
-    return this;
-  }
-
-  /**
-   * Get breakFrameIpClkUv
-   *
-   * @return breakFrameIpClkUv
-   */
-  @ApiModelProperty(value = "")
-  public Long getBreakFrameIpClkUv() {
-    return breakFrameIpClkUv;
-  }
-
-  public void setBreakFrameIpClkUv(Long breakFrameIpClkUv) {
-    this.breakFrameIpClkUv = breakFrameIpClkUv;
-  }
-
   public TargetReportApiListStruct clkMaterialUv(Long clkMaterialUv) {
     this.clkMaterialUv = clkMaterialUv;
     return this;
@@ -13454,25 +13048,6 @@ public class TargetReportApiListStruct {
 
   public void setFinderTopicSliderPv(Long finderTopicSliderPv) {
     this.finderTopicSliderPv = finderTopicSliderPv;
-  }
-
-  public TargetReportApiListStruct finderTopicSliderPerUser(Double finderTopicSliderPerUser) {
-    this.finderTopicSliderPerUser = finderTopicSliderPerUser;
-    return this;
-  }
-
-  /**
-   * Get finderTopicSliderPerUser
-   *
-   * @return finderTopicSliderPerUser
-   */
-  @ApiModelProperty(value = "")
-  public Double getFinderTopicSliderPerUser() {
-    return finderTopicSliderPerUser;
-  }
-
-  public void setFinderTopicSliderPerUser(Double finderTopicSliderPerUser) {
-    this.finderTopicSliderPerUser = finderTopicSliderPerUser;
   }
 
   public TargetReportApiListStruct finderTopicSliderManualPv(Long finderTopicSliderManualPv) {
@@ -15553,25 +15128,6 @@ public class TargetReportApiListStruct {
     this.openAccountPvCost = openAccountPvCost;
   }
 
-  public TargetReportApiListStruct videoOuterPlay5sRate(Double videoOuterPlay5sRate) {
-    this.videoOuterPlay5sRate = videoOuterPlay5sRate;
-    return this;
-  }
-
-  /**
-   * Get videoOuterPlay5sRate
-   *
-   * @return videoOuterPlay5sRate
-   */
-  @ApiModelProperty(value = "")
-  public Double getVideoOuterPlay5sRate() {
-    return videoOuterPlay5sRate;
-  }
-
-  public void setVideoOuterPlay5sRate(Double videoOuterPlay5sRate) {
-    this.videoOuterPlay5sRate = videoOuterPlay5sRate;
-  }
-
   public TargetReportApiListStruct incomeVal24hPlaRoi(Double incomeVal24hPlaRoi) {
     this.incomeVal24hPlaRoi = incomeVal24hPlaRoi;
     return this;
@@ -17035,44 +16591,6 @@ public class TargetReportApiListStruct {
     this.loanDedupCost = loanDedupCost;
   }
 
-  public TargetReportApiListStruct landingCpnExpPv(Long landingCpnExpPv) {
-    this.landingCpnExpPv = landingCpnExpPv;
-    return this;
-  }
-
-  /**
-   * Get landingCpnExpPv
-   *
-   * @return landingCpnExpPv
-   */
-  @ApiModelProperty(value = "")
-  public Long getLandingCpnExpPv() {
-    return landingCpnExpPv;
-  }
-
-  public void setLandingCpnExpPv(Long landingCpnExpPv) {
-    this.landingCpnExpPv = landingCpnExpPv;
-  }
-
-  public TargetReportApiListStruct lanButtonClickRate(Double lanButtonClickRate) {
-    this.lanButtonClickRate = lanButtonClickRate;
-    return this;
-  }
-
-  /**
-   * Get lanButtonClickRate
-   *
-   * @return lanButtonClickRate
-   */
-  @ApiModelProperty(value = "")
-  public Double getLanButtonClickRate() {
-    return lanButtonClickRate;
-  }
-
-  public void setLanButtonClickRate(Double lanButtonClickRate) {
-    this.lanButtonClickRate = lanButtonClickRate;
-  }
-
   public TargetReportApiListStruct clkTopicElementPv(Long clkTopicElementPv) {
     this.clkTopicElementPv = clkTopicElementPv;
     return this;
@@ -17109,6 +16627,588 @@ public class TargetReportApiListStruct {
 
   public void setAdMonetizationEcpm(Long adMonetizationEcpm) {
     this.adMonetizationEcpm = adMonetizationEcpm;
+  }
+
+  public TargetReportApiListStruct adMonetizationRegActive14dAmount(
+      Long adMonetizationRegActive14dAmount) {
+    this.adMonetizationRegActive14dAmount = adMonetizationRegActive14dAmount;
+    return this;
+  }
+
+  /**
+   * Get adMonetizationRegActive14dAmount
+   *
+   * @return adMonetizationRegActive14dAmount
+   */
+  @ApiModelProperty(value = "")
+  public Long getAdMonetizationRegActive14dAmount() {
+    return adMonetizationRegActive14dAmount;
+  }
+
+  public void setAdMonetizationRegActive14dAmount(Long adMonetizationRegActive14dAmount) {
+    this.adMonetizationRegActive14dAmount = adMonetizationRegActive14dAmount;
+  }
+
+  public TargetReportApiListStruct adMonetizationRegActive30dAmount(
+      Long adMonetizationRegActive30dAmount) {
+    this.adMonetizationRegActive30dAmount = adMonetizationRegActive30dAmount;
+    return this;
+  }
+
+  /**
+   * Get adMonetizationRegActive30dAmount
+   *
+   * @return adMonetizationRegActive30dAmount
+   */
+  @ApiModelProperty(value = "")
+  public Long getAdMonetizationRegActive30dAmount() {
+    return adMonetizationRegActive30dAmount;
+  }
+
+  public void setAdMonetizationRegActive30dAmount(Long adMonetizationRegActive30dAmount) {
+    this.adMonetizationRegActive30dAmount = adMonetizationRegActive30dAmount;
+  }
+
+  public TargetReportApiListStruct adMonetizationRegActive60dAmount(
+      Long adMonetizationRegActive60dAmount) {
+    this.adMonetizationRegActive60dAmount = adMonetizationRegActive60dAmount;
+    return this;
+  }
+
+  /**
+   * Get adMonetizationRegActive60dAmount
+   *
+   * @return adMonetizationRegActive60dAmount
+   */
+  @ApiModelProperty(value = "")
+  public Long getAdMonetizationRegActive60dAmount() {
+    return adMonetizationRegActive60dAmount;
+  }
+
+  public void setAdMonetizationRegActive60dAmount(Long adMonetizationRegActive60dAmount) {
+    this.adMonetizationRegActive60dAmount = adMonetizationRegActive60dAmount;
+  }
+
+  public TargetReportApiListStruct incomeVal30(Long incomeVal30) {
+    this.incomeVal30 = incomeVal30;
+    return this;
+  }
+
+  /**
+   * Get incomeVal30
+   *
+   * @return incomeVal30
+   */
+  @ApiModelProperty(value = "")
+  public Long getIncomeVal30() {
+    return incomeVal30;
+  }
+
+  public void setIncomeVal30(Long incomeVal30) {
+    this.incomeVal30 = incomeVal30;
+  }
+
+  public TargetReportApiListStruct incomeVal60(Long incomeVal60) {
+    this.incomeVal60 = incomeVal60;
+    return this;
+  }
+
+  /**
+   * Get incomeVal60
+   *
+   * @return incomeVal60
+   */
+  @ApiModelProperty(value = "")
+  public Long getIncomeVal60() {
+    return incomeVal60;
+  }
+
+  public void setIncomeVal60(Long incomeVal60) {
+    this.incomeVal60 = incomeVal60;
+  }
+
+  public TargetReportApiListStruct adMonetizationRegActive14dRoi(
+      Double adMonetizationRegActive14dRoi) {
+    this.adMonetizationRegActive14dRoi = adMonetizationRegActive14dRoi;
+    return this;
+  }
+
+  /**
+   * Get adMonetizationRegActive14dRoi
+   *
+   * @return adMonetizationRegActive14dRoi
+   */
+  @ApiModelProperty(value = "")
+  public Double getAdMonetizationRegActive14dRoi() {
+    return adMonetizationRegActive14dRoi;
+  }
+
+  public void setAdMonetizationRegActive14dRoi(Double adMonetizationRegActive14dRoi) {
+    this.adMonetizationRegActive14dRoi = adMonetizationRegActive14dRoi;
+  }
+
+  public TargetReportApiListStruct adMonetizationRegActive30dRoi(
+      Double adMonetizationRegActive30dRoi) {
+    this.adMonetizationRegActive30dRoi = adMonetizationRegActive30dRoi;
+    return this;
+  }
+
+  /**
+   * Get adMonetizationRegActive30dRoi
+   *
+   * @return adMonetizationRegActive30dRoi
+   */
+  @ApiModelProperty(value = "")
+  public Double getAdMonetizationRegActive30dRoi() {
+    return adMonetizationRegActive30dRoi;
+  }
+
+  public void setAdMonetizationRegActive30dRoi(Double adMonetizationRegActive30dRoi) {
+    this.adMonetizationRegActive30dRoi = adMonetizationRegActive30dRoi;
+  }
+
+  public TargetReportApiListStruct adMonetizationRegActive60dRoi(
+      Double adMonetizationRegActive60dRoi) {
+    this.adMonetizationRegActive60dRoi = adMonetizationRegActive60dRoi;
+    return this;
+  }
+
+  /**
+   * Get adMonetizationRegActive60dRoi
+   *
+   * @return adMonetizationRegActive60dRoi
+   */
+  @ApiModelProperty(value = "")
+  public Double getAdMonetizationRegActive60dRoi() {
+    return adMonetizationRegActive60dRoi;
+  }
+
+  public void setAdMonetizationRegActive60dRoi(Double adMonetizationRegActive60dRoi) {
+    this.adMonetizationRegActive60dRoi = adMonetizationRegActive60dRoi;
+  }
+
+  public TargetReportApiListStruct incomeRoi30(Double incomeRoi30) {
+    this.incomeRoi30 = incomeRoi30;
+    return this;
+  }
+
+  /**
+   * Get incomeRoi30
+   *
+   * @return incomeRoi30
+   */
+  @ApiModelProperty(value = "")
+  public Double getIncomeRoi30() {
+    return incomeRoi30;
+  }
+
+  public void setIncomeRoi30(Double incomeRoi30) {
+    this.incomeRoi30 = incomeRoi30;
+  }
+
+  public TargetReportApiListStruct incomeRoi60(Double incomeRoi60) {
+    this.incomeRoi60 = incomeRoi60;
+    return this;
+  }
+
+  /**
+   * Get incomeRoi60
+   *
+   * @return incomeRoi60
+   */
+  @ApiModelProperty(value = "")
+  public Double getIncomeRoi60() {
+    return incomeRoi60;
+  }
+
+  public void setIncomeRoi60(Double incomeRoi60) {
+    this.incomeRoi60 = incomeRoi60;
+  }
+
+  public TargetReportApiListStruct adMonetizationDedupRegActive14dPv(
+      Long adMonetizationDedupRegActive14dPv) {
+    this.adMonetizationDedupRegActive14dPv = adMonetizationDedupRegActive14dPv;
+    return this;
+  }
+
+  /**
+   * Get adMonetizationDedupRegActive14dPv
+   *
+   * @return adMonetizationDedupRegActive14dPv
+   */
+  @ApiModelProperty(value = "")
+  public Long getAdMonetizationDedupRegActive14dPv() {
+    return adMonetizationDedupRegActive14dPv;
+  }
+
+  public void setAdMonetizationDedupRegActive14dPv(Long adMonetizationDedupRegActive14dPv) {
+    this.adMonetizationDedupRegActive14dPv = adMonetizationDedupRegActive14dPv;
+  }
+
+  public TargetReportApiListStruct adMonetizationDedupRegActive30dPv(
+      Long adMonetizationDedupRegActive30dPv) {
+    this.adMonetizationDedupRegActive30dPv = adMonetizationDedupRegActive30dPv;
+    return this;
+  }
+
+  /**
+   * Get adMonetizationDedupRegActive30dPv
+   *
+   * @return adMonetizationDedupRegActive30dPv
+   */
+  @ApiModelProperty(value = "")
+  public Long getAdMonetizationDedupRegActive30dPv() {
+    return adMonetizationDedupRegActive30dPv;
+  }
+
+  public void setAdMonetizationDedupRegActive30dPv(Long adMonetizationDedupRegActive30dPv) {
+    this.adMonetizationDedupRegActive30dPv = adMonetizationDedupRegActive30dPv;
+  }
+
+  public TargetReportApiListStruct adMonetizationDedupRegActive60dPv(
+      Long adMonetizationDedupRegActive60dPv) {
+    this.adMonetizationDedupRegActive60dPv = adMonetizationDedupRegActive60dPv;
+    return this;
+  }
+
+  /**
+   * Get adMonetizationDedupRegActive60dPv
+   *
+   * @return adMonetizationDedupRegActive60dPv
+   */
+  @ApiModelProperty(value = "")
+  public Long getAdMonetizationDedupRegActive60dPv() {
+    return adMonetizationDedupRegActive60dPv;
+  }
+
+  public void setAdMonetizationDedupRegActive60dPv(Long adMonetizationDedupRegActive60dPv) {
+    this.adMonetizationDedupRegActive60dPv = adMonetizationDedupRegActive60dPv;
+  }
+
+  public TargetReportApiListStruct adMonetizationDedupActive14dPv(
+      Long adMonetizationDedupActive14dPv) {
+    this.adMonetizationDedupActive14dPv = adMonetizationDedupActive14dPv;
+    return this;
+  }
+
+  /**
+   * Get adMonetizationDedupActive14dPv
+   *
+   * @return adMonetizationDedupActive14dPv
+   */
+  @ApiModelProperty(value = "")
+  public Long getAdMonetizationDedupActive14dPv() {
+    return adMonetizationDedupActive14dPv;
+  }
+
+  public void setAdMonetizationDedupActive14dPv(Long adMonetizationDedupActive14dPv) {
+    this.adMonetizationDedupActive14dPv = adMonetizationDedupActive14dPv;
+  }
+
+  public TargetReportApiListStruct adMonetizationDedupActive30dPv(
+      Long adMonetizationDedupActive30dPv) {
+    this.adMonetizationDedupActive30dPv = adMonetizationDedupActive30dPv;
+    return this;
+  }
+
+  /**
+   * Get adMonetizationDedupActive30dPv
+   *
+   * @return adMonetizationDedupActive30dPv
+   */
+  @ApiModelProperty(value = "")
+  public Long getAdMonetizationDedupActive30dPv() {
+    return adMonetizationDedupActive30dPv;
+  }
+
+  public void setAdMonetizationDedupActive30dPv(Long adMonetizationDedupActive30dPv) {
+    this.adMonetizationDedupActive30dPv = adMonetizationDedupActive30dPv;
+  }
+
+  public TargetReportApiListStruct adMonetizationDedupActive60dPv(
+      Long adMonetizationDedupActive60dPv) {
+    this.adMonetizationDedupActive60dPv = adMonetizationDedupActive60dPv;
+    return this;
+  }
+
+  /**
+   * Get adMonetizationDedupActive60dPv
+   *
+   * @return adMonetizationDedupActive60dPv
+   */
+  @ApiModelProperty(value = "")
+  public Long getAdMonetizationDedupActive60dPv() {
+    return adMonetizationDedupActive60dPv;
+  }
+
+  public void setAdMonetizationDedupActive60dPv(Long adMonetizationDedupActive60dPv) {
+    this.adMonetizationDedupActive60dPv = adMonetizationDedupActive60dPv;
+  }
+
+  public TargetReportApiListStruct adMonetizationRegActive14dPv(Long adMonetizationRegActive14dPv) {
+    this.adMonetizationRegActive14dPv = adMonetizationRegActive14dPv;
+    return this;
+  }
+
+  /**
+   * Get adMonetizationRegActive14dPv
+   *
+   * @return adMonetizationRegActive14dPv
+   */
+  @ApiModelProperty(value = "")
+  public Long getAdMonetizationRegActive14dPv() {
+    return adMonetizationRegActive14dPv;
+  }
+
+  public void setAdMonetizationRegActive14dPv(Long adMonetizationRegActive14dPv) {
+    this.adMonetizationRegActive14dPv = adMonetizationRegActive14dPv;
+  }
+
+  public TargetReportApiListStruct adMonetizationRegActive30dPv(Long adMonetizationRegActive30dPv) {
+    this.adMonetizationRegActive30dPv = adMonetizationRegActive30dPv;
+    return this;
+  }
+
+  /**
+   * Get adMonetizationRegActive30dPv
+   *
+   * @return adMonetizationRegActive30dPv
+   */
+  @ApiModelProperty(value = "")
+  public Long getAdMonetizationRegActive30dPv() {
+    return adMonetizationRegActive30dPv;
+  }
+
+  public void setAdMonetizationRegActive30dPv(Long adMonetizationRegActive30dPv) {
+    this.adMonetizationRegActive30dPv = adMonetizationRegActive30dPv;
+  }
+
+  public TargetReportApiListStruct adMonetizationRegActive60dPv(Long adMonetizationRegActive60dPv) {
+    this.adMonetizationRegActive60dPv = adMonetizationRegActive60dPv;
+    return this;
+  }
+
+  /**
+   * Get adMonetizationRegActive60dPv
+   *
+   * @return adMonetizationRegActive60dPv
+   */
+  @ApiModelProperty(value = "")
+  public Long getAdMonetizationRegActive60dPv() {
+    return adMonetizationRegActive60dPv;
+  }
+
+  public void setAdMonetizationRegActive60dPv(Long adMonetizationRegActive60dPv) {
+    this.adMonetizationRegActive60dPv = adMonetizationRegActive60dPv;
+  }
+
+  public TargetReportApiListStruct adMonetizationActive14dPv(Long adMonetizationActive14dPv) {
+    this.adMonetizationActive14dPv = adMonetizationActive14dPv;
+    return this;
+  }
+
+  /**
+   * Get adMonetizationActive14dPv
+   *
+   * @return adMonetizationActive14dPv
+   */
+  @ApiModelProperty(value = "")
+  public Long getAdMonetizationActive14dPv() {
+    return adMonetizationActive14dPv;
+  }
+
+  public void setAdMonetizationActive14dPv(Long adMonetizationActive14dPv) {
+    this.adMonetizationActive14dPv = adMonetizationActive14dPv;
+  }
+
+  public TargetReportApiListStruct adMonetizationActive30dPv(Long adMonetizationActive30dPv) {
+    this.adMonetizationActive30dPv = adMonetizationActive30dPv;
+    return this;
+  }
+
+  /**
+   * Get adMonetizationActive30dPv
+   *
+   * @return adMonetizationActive30dPv
+   */
+  @ApiModelProperty(value = "")
+  public Long getAdMonetizationActive30dPv() {
+    return adMonetizationActive30dPv;
+  }
+
+  public void setAdMonetizationActive30dPv(Long adMonetizationActive30dPv) {
+    this.adMonetizationActive30dPv = adMonetizationActive30dPv;
+  }
+
+  public TargetReportApiListStruct adMonetizationActive60dPv(Long adMonetizationActive60dPv) {
+    this.adMonetizationActive60dPv = adMonetizationActive60dPv;
+    return this;
+  }
+
+  /**
+   * Get adMonetizationActive60dPv
+   *
+   * @return adMonetizationActive60dPv
+   */
+  @ApiModelProperty(value = "")
+  public Long getAdMonetizationActive60dPv() {
+    return adMonetizationActive60dPv;
+  }
+
+  public void setAdMonetizationActive60dPv(Long adMonetizationActive60dPv) {
+    this.adMonetizationActive60dPv = adMonetizationActive60dPv;
+  }
+
+  public TargetReportApiListStruct clkAdFlipCardPv(Long clkAdFlipCardPv) {
+    this.clkAdFlipCardPv = clkAdFlipCardPv;
+    return this;
+  }
+
+  /**
+   * Get clkAdFlipCardPv
+   *
+   * @return clkAdFlipCardPv
+   */
+  @ApiModelProperty(value = "")
+  public Long getClkAdFlipCardPv() {
+    return clkAdFlipCardPv;
+  }
+
+  public void setClkAdFlipCardPv(Long clkAdFlipCardPv) {
+    this.clkAdFlipCardPv = clkAdFlipCardPv;
+  }
+
+  public TargetReportApiListStruct commissionAmount(Long commissionAmount) {
+    this.commissionAmount = commissionAmount;
+    return this;
+  }
+
+  /**
+   * Get commissionAmount
+   *
+   * @return commissionAmount
+   */
+  @ApiModelProperty(value = "")
+  public Long getCommissionAmount() {
+    return commissionAmount;
+  }
+
+  public void setCommissionAmount(Long commissionAmount) {
+    this.commissionAmount = commissionAmount;
+  }
+
+  public TargetReportApiListStruct commissionRoi(Double commissionRoi) {
+    this.commissionRoi = commissionRoi;
+    return this;
+  }
+
+  /**
+   * Get commissionRoi
+   *
+   * @return commissionRoi
+   */
+  @ApiModelProperty(value = "")
+  public Double getCommissionRoi() {
+    return commissionRoi;
+  }
+
+  public void setCommissionRoi(Double commissionRoi) {
+    this.commissionRoi = commissionRoi;
+  }
+
+  public TargetReportApiListStruct orderNetPv(Long orderNetPv) {
+    this.orderNetPv = orderNetPv;
+    return this;
+  }
+
+  /**
+   * Get orderNetPv
+   *
+   * @return orderNetPv
+   */
+  @ApiModelProperty(value = "")
+  public Long getOrderNetPv() {
+    return orderNetPv;
+  }
+
+  public void setOrderNetPv(Long orderNetPv) {
+    this.orderNetPv = orderNetPv;
+  }
+
+  public TargetReportApiListStruct orderNetAmount(Long orderNetAmount) {
+    this.orderNetAmount = orderNetAmount;
+    return this;
+  }
+
+  /**
+   * Get orderNetAmount
+   *
+   * @return orderNetAmount
+   */
+  @ApiModelProperty(value = "")
+  public Long getOrderNetAmount() {
+    return orderNetAmount;
+  }
+
+  public void setOrderNetAmount(Long orderNetAmount) {
+    this.orderNetAmount = orderNetAmount;
+  }
+
+  public TargetReportApiListStruct orderNetRoi(Double orderNetRoi) {
+    this.orderNetRoi = orderNetRoi;
+    return this;
+  }
+
+  /**
+   * Get orderNetRoi
+   *
+   * @return orderNetRoi
+   */
+  @ApiModelProperty(value = "")
+  public Double getOrderNetRoi() {
+    return orderNetRoi;
+  }
+
+  public void setOrderNetRoi(Double orderNetRoi) {
+    this.orderNetRoi = orderNetRoi;
+  }
+
+  public TargetReportApiListStruct orderNetPvCost(Long orderNetPvCost) {
+    this.orderNetPvCost = orderNetPvCost;
+    return this;
+  }
+
+  /**
+   * Get orderNetPvCost
+   *
+   * @return orderNetPvCost
+   */
+  @ApiModelProperty(value = "")
+  public Long getOrderNetPvCost() {
+    return orderNetPvCost;
+  }
+
+  public void setOrderNetPvCost(Long orderNetPvCost) {
+    this.orderNetPvCost = orderNetPvCost;
+  }
+
+  public TargetReportApiListStruct clkBhAnimPv(Long clkBhAnimPv) {
+    this.clkBhAnimPv = clkBhAnimPv;
+    return this;
+  }
+
+  /**
+   * Get clkBhAnimPv
+   *
+   * @return clkBhAnimPv
+   */
+  @ApiModelProperty(value = "")
+  public Long getClkBhAnimPv() {
+    return clkBhAnimPv;
+  }
+
+  public void setClkBhAnimPv(Long clkBhAnimPv) {
+    this.clkBhAnimPv = clkBhAnimPv;
   }
 
   public TargetReportApiListStruct ageId(Long ageId) {
@@ -17269,7 +17369,6 @@ public class TargetReportApiListStruct {
         && Objects.equals(this.cost, targetReportApiListStruct.cost)
         && Objects.equals(this.acquisitionCost, targetReportApiListStruct.acquisitionCost)
         && Objects.equals(this.thousandDisplayPrice, targetReportApiListStruct.thousandDisplayPrice)
-        && Objects.equals(this.realCostTop, targetReportApiListStruct.realCostTop)
         && Objects.equals(this.conversionsCount, targetReportApiListStruct.conversionsCount)
         && Objects.equals(
             this.requestConversionsCount, targetReportApiListStruct.requestConversionsCount)
@@ -17296,37 +17395,6 @@ public class TargetReportApiListStruct {
             this.previewConversionsCount, targetReportApiListStruct.previewConversionsCount)
         && Objects.equals(
             this.previewDeepConversionsCount, targetReportApiListStruct.previewDeepConversionsCount)
-        && Objects.equals(this.videoOuterPlayCount, targetReportApiListStruct.videoOuterPlayCount)
-        && Objects.equals(
-            this.videoOuterPlayUserCount, targetReportApiListStruct.videoOuterPlayUserCount)
-        && Objects.equals(this.avgUserPlayCount, targetReportApiListStruct.avgUserPlayCount)
-        && Objects.equals(
-            this.videoOuterPlayTimeCount, targetReportApiListStruct.videoOuterPlayTimeCount)
-        && Objects.equals(
-            this.videoOuterPlayTimeAvgRate, targetReportApiListStruct.videoOuterPlayTimeAvgRate)
-        && Objects.equals(this.videoOuterPlayRate, targetReportApiListStruct.videoOuterPlayRate)
-        && Objects.equals(this.videoOuterPlayCost, targetReportApiListStruct.videoOuterPlayCost)
-        && Objects.equals(
-            this.videoOuterPlay10Count, targetReportApiListStruct.videoOuterPlay10Count)
-        && Objects.equals(
-            this.videoOuterPlay25Count, targetReportApiListStruct.videoOuterPlay25Count)
-        && Objects.equals(
-            this.videoOuterPlay50Count, targetReportApiListStruct.videoOuterPlay50Count)
-        && Objects.equals(
-            this.videoOuterPlay75Count, targetReportApiListStruct.videoOuterPlay75Count)
-        && Objects.equals(
-            this.videoOuterPlay90Count, targetReportApiListStruct.videoOuterPlay90Count)
-        && Objects.equals(
-            this.videoOuterPlay95Count, targetReportApiListStruct.videoOuterPlay95Count)
-        && Objects.equals(
-            this.videoOuterPlay100Count, targetReportApiListStruct.videoOuterPlay100Count)
-        && Objects.equals(
-            this.videoOuterPlay3sCount, targetReportApiListStruct.videoOuterPlay3sCount)
-        && Objects.equals(this.videoOuterPlay3sRate, targetReportApiListStruct.videoOuterPlay3sRate)
-        && Objects.equals(
-            this.videoOuterPlay5sCount, targetReportApiListStruct.videoOuterPlay5sCount)
-        && Objects.equals(
-            this.videoOuterPlay7sCount, targetReportApiListStruct.videoOuterPlay7sCount)
         && Objects.equals(this.readCount, targetReportApiListStruct.readCount)
         && Objects.equals(this.readCost, targetReportApiListStruct.readCost)
         && Objects.equals(this.commentCount, targetReportApiListStruct.commentCount)
@@ -18024,7 +18092,6 @@ public class TargetReportApiListStruct {
         && Objects.equals(
             this.videoLiveSubscribeCount, targetReportApiListStruct.videoLiveSubscribeCount)
         && Objects.equals(this.videoLiveExpCount, targetReportApiListStruct.videoLiveExpCount)
-        && Objects.equals(this.liveStreamExpUv, targetReportApiListStruct.liveStreamExpUv)
         && Objects.equals(
             this.channelsLiveExitPlaDuration, targetReportApiListStruct.channelsLiveExitPlaDuration)
         && Objects.equals(this.videoLiveHeartCount, targetReportApiListStruct.videoLiveHeartCount)
@@ -18054,7 +18121,6 @@ public class TargetReportApiListStruct {
         && Objects.equals(
             this.liveStreamCommodityShopListExpPv,
             targetReportApiListStruct.liveStreamCommodityShopListExpPv)
-        && Objects.equals(this.liveStreamAvgTime, targetReportApiListStruct.liveStreamAvgTime)
         && Objects.equals(this.fromFollowUv, targetReportApiListStruct.fromFollowUv)
         && Objects.equals(this.fromFollowCost, targetReportApiListStruct.fromFollowCost)
         && Objects.equals(
@@ -18071,7 +18137,6 @@ public class TargetReportApiListStruct {
         && Objects.equals(this.bizReadingCount, targetReportApiListStruct.bizReadingCount)
         && Objects.equals(this.breakFramePlayPv, targetReportApiListStruct.breakFramePlayPv)
         && Objects.equals(this.breakFrameIpClkPv, targetReportApiListStruct.breakFrameIpClkPv)
-        && Objects.equals(this.breakFrameIpClkUv, targetReportApiListStruct.breakFrameIpClkUv)
         && Objects.equals(this.clkMaterialUv, targetReportApiListStruct.clkMaterialUv)
         && Objects.equals(this.clkMaterialRate, targetReportApiListStruct.clkMaterialRate)
         && Objects.equals(this.clkNickPv, targetReportApiListStruct.clkNickPv)
@@ -18085,8 +18150,6 @@ public class TargetReportApiListStruct {
         && Objects.equals(this.cvsBubbleShareClkPv, targetReportApiListStruct.cvsBubbleShareClkPv)
         && Objects.equals(this.lpStarPageExpPv, targetReportApiListStruct.lpStarPageExpPv)
         && Objects.equals(this.finderTopicSliderPv, targetReportApiListStruct.finderTopicSliderPv)
-        && Objects.equals(
-            this.finderTopicSliderPerUser, targetReportApiListStruct.finderTopicSliderPerUser)
         && Objects.equals(
             this.finderTopicSliderManualPv, targetReportApiListStruct.finderTopicSliderManualPv)
         && Objects.equals(this.shareFriendPv, targetReportApiListStruct.shareFriendPv)
@@ -18283,7 +18346,6 @@ public class TargetReportApiListStruct {
         && Objects.equals(this.clkLearnMorePv, targetReportApiListStruct.clkLearnMorePv)
         && Objects.equals(this.openAccountPv, targetReportApiListStruct.openAccountPv)
         && Objects.equals(this.openAccountPvCost, targetReportApiListStruct.openAccountPvCost)
-        && Objects.equals(this.videoOuterPlay5sRate, targetReportApiListStruct.videoOuterPlay5sRate)
         && Objects.equals(this.incomeVal24hPlaRoi, targetReportApiListStruct.incomeVal24hPlaRoi)
         && Objects.equals(this.viewDramaDedupPv, targetReportApiListStruct.viewDramaDedupPv)
         && Objects.equals(this.viewDramaDedupPvRate, targetReportApiListStruct.viewDramaDedupPvRate)
@@ -18374,10 +18436,71 @@ public class TargetReportApiListStruct {
             this.loanQuotaOpenDedupCost, targetReportApiListStruct.loanQuotaOpenDedupCost)
         && Objects.equals(this.loanDedupPv, targetReportApiListStruct.loanDedupPv)
         && Objects.equals(this.loanDedupCost, targetReportApiListStruct.loanDedupCost)
-        && Objects.equals(this.landingCpnExpPv, targetReportApiListStruct.landingCpnExpPv)
-        && Objects.equals(this.lanButtonClickRate, targetReportApiListStruct.lanButtonClickRate)
         && Objects.equals(this.clkTopicElementPv, targetReportApiListStruct.clkTopicElementPv)
         && Objects.equals(this.adMonetizationEcpm, targetReportApiListStruct.adMonetizationEcpm)
+        && Objects.equals(
+            this.adMonetizationRegActive14dAmount,
+            targetReportApiListStruct.adMonetizationRegActive14dAmount)
+        && Objects.equals(
+            this.adMonetizationRegActive30dAmount,
+            targetReportApiListStruct.adMonetizationRegActive30dAmount)
+        && Objects.equals(
+            this.adMonetizationRegActive60dAmount,
+            targetReportApiListStruct.adMonetizationRegActive60dAmount)
+        && Objects.equals(this.incomeVal30, targetReportApiListStruct.incomeVal30)
+        && Objects.equals(this.incomeVal60, targetReportApiListStruct.incomeVal60)
+        && Objects.equals(
+            this.adMonetizationRegActive14dRoi,
+            targetReportApiListStruct.adMonetizationRegActive14dRoi)
+        && Objects.equals(
+            this.adMonetizationRegActive30dRoi,
+            targetReportApiListStruct.adMonetizationRegActive30dRoi)
+        && Objects.equals(
+            this.adMonetizationRegActive60dRoi,
+            targetReportApiListStruct.adMonetizationRegActive60dRoi)
+        && Objects.equals(this.incomeRoi30, targetReportApiListStruct.incomeRoi30)
+        && Objects.equals(this.incomeRoi60, targetReportApiListStruct.incomeRoi60)
+        && Objects.equals(
+            this.adMonetizationDedupRegActive14dPv,
+            targetReportApiListStruct.adMonetizationDedupRegActive14dPv)
+        && Objects.equals(
+            this.adMonetizationDedupRegActive30dPv,
+            targetReportApiListStruct.adMonetizationDedupRegActive30dPv)
+        && Objects.equals(
+            this.adMonetizationDedupRegActive60dPv,
+            targetReportApiListStruct.adMonetizationDedupRegActive60dPv)
+        && Objects.equals(
+            this.adMonetizationDedupActive14dPv,
+            targetReportApiListStruct.adMonetizationDedupActive14dPv)
+        && Objects.equals(
+            this.adMonetizationDedupActive30dPv,
+            targetReportApiListStruct.adMonetizationDedupActive30dPv)
+        && Objects.equals(
+            this.adMonetizationDedupActive60dPv,
+            targetReportApiListStruct.adMonetizationDedupActive60dPv)
+        && Objects.equals(
+            this.adMonetizationRegActive14dPv,
+            targetReportApiListStruct.adMonetizationRegActive14dPv)
+        && Objects.equals(
+            this.adMonetizationRegActive30dPv,
+            targetReportApiListStruct.adMonetizationRegActive30dPv)
+        && Objects.equals(
+            this.adMonetizationRegActive60dPv,
+            targetReportApiListStruct.adMonetizationRegActive60dPv)
+        && Objects.equals(
+            this.adMonetizationActive14dPv, targetReportApiListStruct.adMonetizationActive14dPv)
+        && Objects.equals(
+            this.adMonetizationActive30dPv, targetReportApiListStruct.adMonetizationActive30dPv)
+        && Objects.equals(
+            this.adMonetizationActive60dPv, targetReportApiListStruct.adMonetizationActive60dPv)
+        && Objects.equals(this.clkAdFlipCardPv, targetReportApiListStruct.clkAdFlipCardPv)
+        && Objects.equals(this.commissionAmount, targetReportApiListStruct.commissionAmount)
+        && Objects.equals(this.commissionRoi, targetReportApiListStruct.commissionRoi)
+        && Objects.equals(this.orderNetPv, targetReportApiListStruct.orderNetPv)
+        && Objects.equals(this.orderNetAmount, targetReportApiListStruct.orderNetAmount)
+        && Objects.equals(this.orderNetRoi, targetReportApiListStruct.orderNetRoi)
+        && Objects.equals(this.orderNetPvCost, targetReportApiListStruct.orderNetPvCost)
+        && Objects.equals(this.clkBhAnimPv, targetReportApiListStruct.clkBhAnimPv)
         && Objects.equals(this.ageId, targetReportApiListStruct.ageId)
         && Objects.equals(this.cityId, targetReportApiListStruct.cityId)
         && Objects.equals(this.regionId, targetReportApiListStruct.regionId)
@@ -18406,7 +18529,6 @@ public class TargetReportApiListStruct {
         cost,
         acquisitionCost,
         thousandDisplayPrice,
-        realCostTop,
         conversionsCount,
         requestConversionsCount,
         conversionsRate,
@@ -18423,24 +18545,6 @@ public class TargetReportApiListStruct {
         conversionsByClickCost,
         previewConversionsCount,
         previewDeepConversionsCount,
-        videoOuterPlayCount,
-        videoOuterPlayUserCount,
-        avgUserPlayCount,
-        videoOuterPlayTimeCount,
-        videoOuterPlayTimeAvgRate,
-        videoOuterPlayRate,
-        videoOuterPlayCost,
-        videoOuterPlay10Count,
-        videoOuterPlay25Count,
-        videoOuterPlay50Count,
-        videoOuterPlay75Count,
-        videoOuterPlay90Count,
-        videoOuterPlay95Count,
-        videoOuterPlay100Count,
-        videoOuterPlay3sCount,
-        videoOuterPlay3sRate,
-        videoOuterPlay5sCount,
-        videoOuterPlay7sCount,
         readCount,
         readCost,
         commentCount,
@@ -18930,7 +19034,6 @@ public class TargetReportApiListStruct {
         channelsSharePlaPv,
         videoLiveSubscribeCount,
         videoLiveExpCount,
-        liveStreamExpUv,
         channelsLiveExitPlaDuration,
         videoLiveHeartCount,
         videoLiveHeartUserCount,
@@ -18944,7 +19047,6 @@ public class TargetReportApiListStruct {
         liveStreamCommodityBubbleClkPv,
         liveStreamCommodityShopBagClkPv,
         liveStreamCommodityShopListExpPv,
-        liveStreamAvgTime,
         fromFollowUv,
         fromFollowCost,
         fromFollowByDisplayUv,
@@ -18958,7 +19060,6 @@ public class TargetReportApiListStruct {
         bizReadingCount,
         breakFramePlayPv,
         breakFrameIpClkPv,
-        breakFrameIpClkUv,
         clkMaterialUv,
         clkMaterialRate,
         clkNickPv,
@@ -18972,7 +19073,6 @@ public class TargetReportApiListStruct {
         cvsBubbleShareClkPv,
         lpStarPageExpPv,
         finderTopicSliderPv,
-        finderTopicSliderPerUser,
         finderTopicSliderManualPv,
         shareFriendPv,
         shareFeedPv,
@@ -19081,7 +19181,6 @@ public class TargetReportApiListStruct {
         clkLearnMorePv,
         openAccountPv,
         openAccountPvCost,
-        videoOuterPlay5sRate,
         incomeVal24hPlaRoi,
         viewDramaDedupPv,
         viewDramaDedupPvRate,
@@ -19159,10 +19258,38 @@ public class TargetReportApiListStruct {
         loanQuotaOpenDedupCost,
         loanDedupPv,
         loanDedupCost,
-        landingCpnExpPv,
-        lanButtonClickRate,
         clkTopicElementPv,
         adMonetizationEcpm,
+        adMonetizationRegActive14dAmount,
+        adMonetizationRegActive30dAmount,
+        adMonetizationRegActive60dAmount,
+        incomeVal30,
+        incomeVal60,
+        adMonetizationRegActive14dRoi,
+        adMonetizationRegActive30dRoi,
+        adMonetizationRegActive60dRoi,
+        incomeRoi30,
+        incomeRoi60,
+        adMonetizationDedupRegActive14dPv,
+        adMonetizationDedupRegActive30dPv,
+        adMonetizationDedupRegActive60dPv,
+        adMonetizationDedupActive14dPv,
+        adMonetizationDedupActive30dPv,
+        adMonetizationDedupActive60dPv,
+        adMonetizationRegActive14dPv,
+        adMonetizationRegActive30dPv,
+        adMonetizationRegActive60dPv,
+        adMonetizationActive14dPv,
+        adMonetizationActive30dPv,
+        adMonetizationActive60dPv,
+        clkAdFlipCardPv,
+        commissionAmount,
+        commissionRoi,
+        orderNetPv,
+        orderNetAmount,
+        orderNetRoi,
+        orderNetPvCost,
+        clkBhAnimPv,
         ageId,
         cityId,
         regionId,

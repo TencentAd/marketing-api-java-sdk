@@ -22,15 +22,18 @@ import java.util.Objects;
 @ApiModel(description = "CPS投放目标")
 public class SmartDeliveryGoalCpsSpec {
   @SerializedName("ecommerce_order_cost")
-  private Double ecommerceOrderCost = null;
+  private Long ecommerceOrderCost = null;
 
   @SerializedName("promotion_view_key_page_cost")
-  private Double promotionViewKeyPageCost = null;
+  private Long promotionViewKeyPageCost = null;
 
   @SerializedName("view_commodity_page_cost")
-  private Double viewCommodityPageCost = null;
+  private Long viewCommodityPageCost = null;
 
-  public SmartDeliveryGoalCpsSpec ecommerceOrderCost(Double ecommerceOrderCost) {
+  @SerializedName("commission_roi")
+  private Double commissionRoi = null;
+
+  public SmartDeliveryGoalCpsSpec ecommerceOrderCost(Long ecommerceOrderCost) {
     this.ecommerceOrderCost = ecommerceOrderCost;
     return this;
   }
@@ -41,15 +44,15 @@ public class SmartDeliveryGoalCpsSpec {
    * @return ecommerceOrderCost
    */
   @ApiModelProperty(value = "")
-  public Double getEcommerceOrderCost() {
+  public Long getEcommerceOrderCost() {
     return ecommerceOrderCost;
   }
 
-  public void setEcommerceOrderCost(Double ecommerceOrderCost) {
+  public void setEcommerceOrderCost(Long ecommerceOrderCost) {
     this.ecommerceOrderCost = ecommerceOrderCost;
   }
 
-  public SmartDeliveryGoalCpsSpec promotionViewKeyPageCost(Double promotionViewKeyPageCost) {
+  public SmartDeliveryGoalCpsSpec promotionViewKeyPageCost(Long promotionViewKeyPageCost) {
     this.promotionViewKeyPageCost = promotionViewKeyPageCost;
     return this;
   }
@@ -60,15 +63,15 @@ public class SmartDeliveryGoalCpsSpec {
    * @return promotionViewKeyPageCost
    */
   @ApiModelProperty(value = "")
-  public Double getPromotionViewKeyPageCost() {
+  public Long getPromotionViewKeyPageCost() {
     return promotionViewKeyPageCost;
   }
 
-  public void setPromotionViewKeyPageCost(Double promotionViewKeyPageCost) {
+  public void setPromotionViewKeyPageCost(Long promotionViewKeyPageCost) {
     this.promotionViewKeyPageCost = promotionViewKeyPageCost;
   }
 
-  public SmartDeliveryGoalCpsSpec viewCommodityPageCost(Double viewCommodityPageCost) {
+  public SmartDeliveryGoalCpsSpec viewCommodityPageCost(Long viewCommodityPageCost) {
     this.viewCommodityPageCost = viewCommodityPageCost;
     return this;
   }
@@ -79,12 +82,31 @@ public class SmartDeliveryGoalCpsSpec {
    * @return viewCommodityPageCost
    */
   @ApiModelProperty(value = "")
-  public Double getViewCommodityPageCost() {
+  public Long getViewCommodityPageCost() {
     return viewCommodityPageCost;
   }
 
-  public void setViewCommodityPageCost(Double viewCommodityPageCost) {
+  public void setViewCommodityPageCost(Long viewCommodityPageCost) {
     this.viewCommodityPageCost = viewCommodityPageCost;
+  }
+
+  public SmartDeliveryGoalCpsSpec commissionRoi(Double commissionRoi) {
+    this.commissionRoi = commissionRoi;
+    return this;
+  }
+
+  /**
+   * Get commissionRoi
+   *
+   * @return commissionRoi
+   */
+  @ApiModelProperty(value = "")
+  public Double getCommissionRoi() {
+    return commissionRoi;
+  }
+
+  public void setCommissionRoi(Double commissionRoi) {
+    this.commissionRoi = commissionRoi;
   }
 
   @Override
@@ -100,12 +122,14 @@ public class SmartDeliveryGoalCpsSpec {
         && Objects.equals(
             this.promotionViewKeyPageCost, smartDeliveryGoalCpsSpec.promotionViewKeyPageCost)
         && Objects.equals(
-            this.viewCommodityPageCost, smartDeliveryGoalCpsSpec.viewCommodityPageCost);
+            this.viewCommodityPageCost, smartDeliveryGoalCpsSpec.viewCommodityPageCost)
+        && Objects.equals(this.commissionRoi, smartDeliveryGoalCpsSpec.commissionRoi);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(ecommerceOrderCost, promotionViewKeyPageCost, viewCommodityPageCost);
+    return Objects.hash(
+        ecommerceOrderCost, promotionViewKeyPageCost, viewCommodityPageCost, commissionRoi);
   }
 
   @Override

@@ -63,6 +63,9 @@ public class ComponentsGetListStruct {
   @SerializedName("first_publication_status")
   private FirstPublicationStatus firstPublicationStatus = null;
 
+  @SerializedName("scene")
+  private ComponentScene scene = null;
+
   public ComponentsGetListStruct accountId(Long accountId) {
     this.accountId = accountId;
     return this;
@@ -330,6 +333,25 @@ public class ComponentsGetListStruct {
     this.firstPublicationStatus = firstPublicationStatus;
   }
 
+  public ComponentsGetListStruct scene(ComponentScene scene) {
+    this.scene = scene;
+    return this;
+  }
+
+  /**
+   * Get scene
+   *
+   * @return scene
+   */
+  @ApiModelProperty(value = "")
+  public ComponentScene getScene() {
+    return scene;
+  }
+
+  public void setScene(ComponentScene scene) {
+    this.scene = scene;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -353,7 +375,8 @@ public class ComponentsGetListStruct {
         && Objects.equals(this.potentialStatus, componentsGetListStruct.potentialStatus)
         && Objects.equals(this.disableMessage, componentsGetListStruct.disableMessage)
         && Objects.equals(
-            this.firstPublicationStatus, componentsGetListStruct.firstPublicationStatus);
+            this.firstPublicationStatus, componentsGetListStruct.firstPublicationStatus)
+        && Objects.equals(this.scene, componentsGetListStruct.scene);
   }
 
   @Override
@@ -372,7 +395,8 @@ public class ComponentsGetListStruct {
         similarityStatus,
         potentialStatus,
         disableMessage,
-        firstPublicationStatus);
+        firstPublicationStatus,
+        scene);
   }
 
   @Override

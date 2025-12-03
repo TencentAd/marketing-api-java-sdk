@@ -37,6 +37,7 @@ public class WalletInvoiceApiContainer extends ApiContainer {
    * @param fundType (optional)
    * @param page (optional)
    * @param pageSize (optional)
+   * @param primaryKey (optional)
    * @param fields 返回参数的字段列表 (optional)
    * @return WalletInvoiceGetResponse
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
@@ -49,12 +50,21 @@ public class WalletInvoiceApiContainer extends ApiContainer {
       String fundType,
       Long page,
       Long pageSize,
+      String primaryKey,
       List<String> fields,
       Pair... headerPair)
       throws ApiException, TencentAdsResponseException {
     WalletInvoiceGetResponse resp =
         api.walletInvoiceGet(
-            accountId, walletIdList, dateRange, fundType, page, pageSize, fields, headerPair);
+            accountId,
+            walletIdList,
+            dateRange,
+            fundType,
+            page,
+            pageSize,
+            primaryKey,
+            fields,
+            headerPair);
     handleResponse(gson.toJson(resp));
     return resp.getData();
   }

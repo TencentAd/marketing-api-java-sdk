@@ -58,6 +58,7 @@ public class WalletInvoiceApi {
    * @param fundType (optional)
    * @param page (optional)
    * @param pageSize (optional)
+   * @param primaryKey (optional)
    * @param fields 返回参数的字段列表 (optional)
    * @param progressListener Progress listener
    * @param progressRequestListener Progress request listener
@@ -71,6 +72,7 @@ public class WalletInvoiceApi {
       String fundType,
       Long page,
       Long pageSize,
+      String primaryKey,
       List<String> fields,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
@@ -95,6 +97,8 @@ public class WalletInvoiceApi {
     if (page != null) localVarQueryParams.addAll(apiClient.parameterToPair("page", page));
     if (pageSize != null)
       localVarQueryParams.addAll(apiClient.parameterToPair("page_size", pageSize));
+    if (primaryKey != null)
+      localVarQueryParams.addAll(apiClient.parameterToPair("primary_key", primaryKey));
     if (fields != null)
       localVarCollectionQueryParams.addAll(apiClient.parameterToPairs("multi", "fields", fields));
 
@@ -155,6 +159,7 @@ public class WalletInvoiceApi {
       String fundType,
       Long page,
       Long pageSize,
+      String primaryKey,
       List<String> fields,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
@@ -187,6 +192,7 @@ public class WalletInvoiceApi {
             fundType,
             page,
             pageSize,
+            primaryKey,
             fields,
             progressListener,
             progressRequestListener,
@@ -203,6 +209,7 @@ public class WalletInvoiceApi {
    * @param fundType (optional)
    * @param page (optional)
    * @param pageSize (optional)
+   * @param primaryKey (optional)
    * @param fields 返回参数的字段列表 (optional)
    * @return WalletInvoiceGetResponse
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
@@ -215,12 +222,21 @@ public class WalletInvoiceApi {
       String fundType,
       Long page,
       Long pageSize,
+      String primaryKey,
       List<String> fields,
       Pair... headerPair)
       throws ApiException {
     ApiResponse<WalletInvoiceGetResponse> resp =
         walletInvoiceGetWithHttpInfo(
-            accountId, walletIdList, dateRange, fundType, page, pageSize, fields, headerPair);
+            accountId,
+            walletIdList,
+            dateRange,
+            fundType,
+            page,
+            pageSize,
+            primaryKey,
+            fields,
+            headerPair);
     return resp.getData();
   }
 
@@ -233,6 +249,7 @@ public class WalletInvoiceApi {
    * @param fundType (optional)
    * @param page (optional)
    * @param pageSize (optional)
+   * @param primaryKey (optional)
    * @param fields 返回参数的字段列表 (optional)
    * @return ApiResponse&lt;WalletInvoiceGetResponse&gt;
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
@@ -245,6 +262,7 @@ public class WalletInvoiceApi {
       String fundType,
       Long page,
       Long pageSize,
+      String primaryKey,
       List<String> fields,
       Pair... headerPair)
       throws ApiException {
@@ -256,6 +274,7 @@ public class WalletInvoiceApi {
             fundType,
             page,
             pageSize,
+            primaryKey,
             fields,
             null,
             null,
@@ -273,6 +292,7 @@ public class WalletInvoiceApi {
    * @param fundType (optional)
    * @param page (optional)
    * @param pageSize (optional)
+   * @param primaryKey (optional)
    * @param fields 返回参数的字段列表 (optional)
    * @param callback The callback to be executed when the API call finishes
    * @return The request call
@@ -285,6 +305,7 @@ public class WalletInvoiceApi {
       String fundType,
       Long page,
       Long pageSize,
+      String primaryKey,
       List<String> fields,
       final ApiCallback<WalletInvoiceGetResponse> callback,
       Pair... headerPair)
@@ -319,6 +340,7 @@ public class WalletInvoiceApi {
             fundType,
             page,
             pageSize,
+            primaryKey,
             fields,
             progressListener,
             progressRequestListener,

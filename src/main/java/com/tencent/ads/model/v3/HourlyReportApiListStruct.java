@@ -66,9 +66,6 @@ public class HourlyReportApiListStruct {
   @SerializedName("thousand_display_price")
   private Long thousandDisplayPrice = null;
 
-  @SerializedName("real_cost_top")
-  private Long realCostTop = null;
-
   @SerializedName("conversions_count")
   private Long conversionsCount = null;
 
@@ -1902,6 +1899,9 @@ public class HourlyReportApiListStruct {
   @SerializedName("clk_right_grid_pv")
   private Long clkRightGridPv = null;
 
+  @SerializedName("cvs_cpn_video_play_uv")
+  private Long cvsCpnVideoPlayUv = null;
+
   @SerializedName("ad_monetization_cost")
   private Double adMonetizationCost = null;
 
@@ -2466,17 +2466,101 @@ public class HourlyReportApiListStruct {
   @SerializedName("loan_dedup_cost")
   private Long loanDedupCost = null;
 
-  @SerializedName("landing_cpn_exp_pv")
-  private Long landingCpnExpPv = null;
-
-  @SerializedName("lan_button_click_rate")
-  private Double lanButtonClickRate = null;
-
   @SerializedName("clk_topic_element_pv")
   private Long clkTopicElementPv = null;
 
   @SerializedName("ad_monetization_ecpm")
   private Long adMonetizationEcpm = null;
+
+  @SerializedName("ad_monetization_reg_active_14d_amount")
+  private Long adMonetizationRegActive14dAmount = null;
+
+  @SerializedName("ad_monetization_reg_active_30d_amount")
+  private Long adMonetizationRegActive30dAmount = null;
+
+  @SerializedName("ad_monetization_reg_active_60d_amount")
+  private Long adMonetizationRegActive60dAmount = null;
+
+  @SerializedName("income_val_30")
+  private Long incomeVal30 = null;
+
+  @SerializedName("income_val_60")
+  private Long incomeVal60 = null;
+
+  @SerializedName("ad_monetization_reg_active_14d_roi")
+  private Double adMonetizationRegActive14dRoi = null;
+
+  @SerializedName("ad_monetization_reg_active_30d_roi")
+  private Double adMonetizationRegActive30dRoi = null;
+
+  @SerializedName("ad_monetization_reg_active_60d_roi")
+  private Double adMonetizationRegActive60dRoi = null;
+
+  @SerializedName("income_roi_30")
+  private Double incomeRoi30 = null;
+
+  @SerializedName("income_roi_60")
+  private Double incomeRoi60 = null;
+
+  @SerializedName("ad_monetization_dedup_reg_active_14d_pv")
+  private Long adMonetizationDedupRegActive14dPv = null;
+
+  @SerializedName("ad_monetization_dedup_reg_active_30d_pv")
+  private Long adMonetizationDedupRegActive30dPv = null;
+
+  @SerializedName("ad_monetization_dedup_reg_active_60d_pv")
+  private Long adMonetizationDedupRegActive60dPv = null;
+
+  @SerializedName("ad_monetization_dedup_active_14d_pv")
+  private Long adMonetizationDedupActive14dPv = null;
+
+  @SerializedName("ad_monetization_dedup_active_30d_pv")
+  private Long adMonetizationDedupActive30dPv = null;
+
+  @SerializedName("ad_monetization_dedup_active_60d_pv")
+  private Long adMonetizationDedupActive60dPv = null;
+
+  @SerializedName("ad_monetization_reg_active_14d_pv")
+  private Long adMonetizationRegActive14dPv = null;
+
+  @SerializedName("ad_monetization_reg_active_30d_pv")
+  private Long adMonetizationRegActive30dPv = null;
+
+  @SerializedName("ad_monetization_reg_active_60d_pv")
+  private Long adMonetizationRegActive60dPv = null;
+
+  @SerializedName("ad_monetization_active_14d_pv")
+  private Long adMonetizationActive14dPv = null;
+
+  @SerializedName("ad_monetization_active_30d_pv")
+  private Long adMonetizationActive30dPv = null;
+
+  @SerializedName("ad_monetization_active_60d_pv")
+  private Long adMonetizationActive60dPv = null;
+
+  @SerializedName("clk_ad_flip_card_pv")
+  private Long clkAdFlipCardPv = null;
+
+  @SerializedName("commission_amount")
+  private Long commissionAmount = null;
+
+  @SerializedName("commission_roi")
+  private Double commissionRoi = null;
+
+  @SerializedName("order_net_pv")
+  private Long orderNetPv = null;
+
+  @SerializedName("order_net_amount")
+  private Long orderNetAmount = null;
+
+  @SerializedName("order_net_roi")
+  private Double orderNetRoi = null;
+
+  @SerializedName("order_net_pv_cost")
+  private Long orderNetPvCost = null;
+
+  @SerializedName("clk_bh_anim_pv")
+  private Long clkBhAnimPv = null;
 
   @SerializedName("adgroup_id")
   private Long adgroupId = null;
@@ -2519,6 +2603,12 @@ public class HourlyReportApiListStruct {
 
   @SerializedName("clk_top_pv")
   private Long clkTopPv = null;
+
+  @SerializedName("real_cost_top")
+  private Long realCostTop = null;
+
+  @SerializedName("lan_button_click_rate")
+  private Double lanButtonClickRate = null;
 
   @SerializedName("project_id")
   private Long projectId = null;
@@ -2809,25 +2899,6 @@ public class HourlyReportApiListStruct {
 
   public void setThousandDisplayPrice(Long thousandDisplayPrice) {
     this.thousandDisplayPrice = thousandDisplayPrice;
-  }
-
-  public HourlyReportApiListStruct realCostTop(Long realCostTop) {
-    this.realCostTop = realCostTop;
-    return this;
-  }
-
-  /**
-   * Get realCostTop
-   *
-   * @return realCostTop
-   */
-  @ApiModelProperty(value = "")
-  public Long getRealCostTop() {
-    return realCostTop;
-  }
-
-  public void setRealCostTop(Long realCostTop) {
-    this.realCostTop = realCostTop;
   }
 
   public HourlyReportApiListStruct conversionsCount(Long conversionsCount) {
@@ -14476,6 +14547,25 @@ public class HourlyReportApiListStruct {
     this.clkRightGridPv = clkRightGridPv;
   }
 
+  public HourlyReportApiListStruct cvsCpnVideoPlayUv(Long cvsCpnVideoPlayUv) {
+    this.cvsCpnVideoPlayUv = cvsCpnVideoPlayUv;
+    return this;
+  }
+
+  /**
+   * Get cvsCpnVideoPlayUv
+   *
+   * @return cvsCpnVideoPlayUv
+   */
+  @ApiModelProperty(value = "")
+  public Long getCvsCpnVideoPlayUv() {
+    return cvsCpnVideoPlayUv;
+  }
+
+  public void setCvsCpnVideoPlayUv(Long cvsCpnVideoPlayUv) {
+    this.cvsCpnVideoPlayUv = cvsCpnVideoPlayUv;
+  }
+
   public HourlyReportApiListStruct adMonetizationCost(Double adMonetizationCost) {
     this.adMonetizationCost = adMonetizationCost;
     return this;
@@ -18074,44 +18164,6 @@ public class HourlyReportApiListStruct {
     this.loanDedupCost = loanDedupCost;
   }
 
-  public HourlyReportApiListStruct landingCpnExpPv(Long landingCpnExpPv) {
-    this.landingCpnExpPv = landingCpnExpPv;
-    return this;
-  }
-
-  /**
-   * Get landingCpnExpPv
-   *
-   * @return landingCpnExpPv
-   */
-  @ApiModelProperty(value = "")
-  public Long getLandingCpnExpPv() {
-    return landingCpnExpPv;
-  }
-
-  public void setLandingCpnExpPv(Long landingCpnExpPv) {
-    this.landingCpnExpPv = landingCpnExpPv;
-  }
-
-  public HourlyReportApiListStruct lanButtonClickRate(Double lanButtonClickRate) {
-    this.lanButtonClickRate = lanButtonClickRate;
-    return this;
-  }
-
-  /**
-   * Get lanButtonClickRate
-   *
-   * @return lanButtonClickRate
-   */
-  @ApiModelProperty(value = "")
-  public Double getLanButtonClickRate() {
-    return lanButtonClickRate;
-  }
-
-  public void setLanButtonClickRate(Double lanButtonClickRate) {
-    this.lanButtonClickRate = lanButtonClickRate;
-  }
-
   public HourlyReportApiListStruct clkTopicElementPv(Long clkTopicElementPv) {
     this.clkTopicElementPv = clkTopicElementPv;
     return this;
@@ -18148,6 +18200,588 @@ public class HourlyReportApiListStruct {
 
   public void setAdMonetizationEcpm(Long adMonetizationEcpm) {
     this.adMonetizationEcpm = adMonetizationEcpm;
+  }
+
+  public HourlyReportApiListStruct adMonetizationRegActive14dAmount(
+      Long adMonetizationRegActive14dAmount) {
+    this.adMonetizationRegActive14dAmount = adMonetizationRegActive14dAmount;
+    return this;
+  }
+
+  /**
+   * Get adMonetizationRegActive14dAmount
+   *
+   * @return adMonetizationRegActive14dAmount
+   */
+  @ApiModelProperty(value = "")
+  public Long getAdMonetizationRegActive14dAmount() {
+    return adMonetizationRegActive14dAmount;
+  }
+
+  public void setAdMonetizationRegActive14dAmount(Long adMonetizationRegActive14dAmount) {
+    this.adMonetizationRegActive14dAmount = adMonetizationRegActive14dAmount;
+  }
+
+  public HourlyReportApiListStruct adMonetizationRegActive30dAmount(
+      Long adMonetizationRegActive30dAmount) {
+    this.adMonetizationRegActive30dAmount = adMonetizationRegActive30dAmount;
+    return this;
+  }
+
+  /**
+   * Get adMonetizationRegActive30dAmount
+   *
+   * @return adMonetizationRegActive30dAmount
+   */
+  @ApiModelProperty(value = "")
+  public Long getAdMonetizationRegActive30dAmount() {
+    return adMonetizationRegActive30dAmount;
+  }
+
+  public void setAdMonetizationRegActive30dAmount(Long adMonetizationRegActive30dAmount) {
+    this.adMonetizationRegActive30dAmount = adMonetizationRegActive30dAmount;
+  }
+
+  public HourlyReportApiListStruct adMonetizationRegActive60dAmount(
+      Long adMonetizationRegActive60dAmount) {
+    this.adMonetizationRegActive60dAmount = adMonetizationRegActive60dAmount;
+    return this;
+  }
+
+  /**
+   * Get adMonetizationRegActive60dAmount
+   *
+   * @return adMonetizationRegActive60dAmount
+   */
+  @ApiModelProperty(value = "")
+  public Long getAdMonetizationRegActive60dAmount() {
+    return adMonetizationRegActive60dAmount;
+  }
+
+  public void setAdMonetizationRegActive60dAmount(Long adMonetizationRegActive60dAmount) {
+    this.adMonetizationRegActive60dAmount = adMonetizationRegActive60dAmount;
+  }
+
+  public HourlyReportApiListStruct incomeVal30(Long incomeVal30) {
+    this.incomeVal30 = incomeVal30;
+    return this;
+  }
+
+  /**
+   * Get incomeVal30
+   *
+   * @return incomeVal30
+   */
+  @ApiModelProperty(value = "")
+  public Long getIncomeVal30() {
+    return incomeVal30;
+  }
+
+  public void setIncomeVal30(Long incomeVal30) {
+    this.incomeVal30 = incomeVal30;
+  }
+
+  public HourlyReportApiListStruct incomeVal60(Long incomeVal60) {
+    this.incomeVal60 = incomeVal60;
+    return this;
+  }
+
+  /**
+   * Get incomeVal60
+   *
+   * @return incomeVal60
+   */
+  @ApiModelProperty(value = "")
+  public Long getIncomeVal60() {
+    return incomeVal60;
+  }
+
+  public void setIncomeVal60(Long incomeVal60) {
+    this.incomeVal60 = incomeVal60;
+  }
+
+  public HourlyReportApiListStruct adMonetizationRegActive14dRoi(
+      Double adMonetizationRegActive14dRoi) {
+    this.adMonetizationRegActive14dRoi = adMonetizationRegActive14dRoi;
+    return this;
+  }
+
+  /**
+   * Get adMonetizationRegActive14dRoi
+   *
+   * @return adMonetizationRegActive14dRoi
+   */
+  @ApiModelProperty(value = "")
+  public Double getAdMonetizationRegActive14dRoi() {
+    return adMonetizationRegActive14dRoi;
+  }
+
+  public void setAdMonetizationRegActive14dRoi(Double adMonetizationRegActive14dRoi) {
+    this.adMonetizationRegActive14dRoi = adMonetizationRegActive14dRoi;
+  }
+
+  public HourlyReportApiListStruct adMonetizationRegActive30dRoi(
+      Double adMonetizationRegActive30dRoi) {
+    this.adMonetizationRegActive30dRoi = adMonetizationRegActive30dRoi;
+    return this;
+  }
+
+  /**
+   * Get adMonetizationRegActive30dRoi
+   *
+   * @return adMonetizationRegActive30dRoi
+   */
+  @ApiModelProperty(value = "")
+  public Double getAdMonetizationRegActive30dRoi() {
+    return adMonetizationRegActive30dRoi;
+  }
+
+  public void setAdMonetizationRegActive30dRoi(Double adMonetizationRegActive30dRoi) {
+    this.adMonetizationRegActive30dRoi = adMonetizationRegActive30dRoi;
+  }
+
+  public HourlyReportApiListStruct adMonetizationRegActive60dRoi(
+      Double adMonetizationRegActive60dRoi) {
+    this.adMonetizationRegActive60dRoi = adMonetizationRegActive60dRoi;
+    return this;
+  }
+
+  /**
+   * Get adMonetizationRegActive60dRoi
+   *
+   * @return adMonetizationRegActive60dRoi
+   */
+  @ApiModelProperty(value = "")
+  public Double getAdMonetizationRegActive60dRoi() {
+    return adMonetizationRegActive60dRoi;
+  }
+
+  public void setAdMonetizationRegActive60dRoi(Double adMonetizationRegActive60dRoi) {
+    this.adMonetizationRegActive60dRoi = adMonetizationRegActive60dRoi;
+  }
+
+  public HourlyReportApiListStruct incomeRoi30(Double incomeRoi30) {
+    this.incomeRoi30 = incomeRoi30;
+    return this;
+  }
+
+  /**
+   * Get incomeRoi30
+   *
+   * @return incomeRoi30
+   */
+  @ApiModelProperty(value = "")
+  public Double getIncomeRoi30() {
+    return incomeRoi30;
+  }
+
+  public void setIncomeRoi30(Double incomeRoi30) {
+    this.incomeRoi30 = incomeRoi30;
+  }
+
+  public HourlyReportApiListStruct incomeRoi60(Double incomeRoi60) {
+    this.incomeRoi60 = incomeRoi60;
+    return this;
+  }
+
+  /**
+   * Get incomeRoi60
+   *
+   * @return incomeRoi60
+   */
+  @ApiModelProperty(value = "")
+  public Double getIncomeRoi60() {
+    return incomeRoi60;
+  }
+
+  public void setIncomeRoi60(Double incomeRoi60) {
+    this.incomeRoi60 = incomeRoi60;
+  }
+
+  public HourlyReportApiListStruct adMonetizationDedupRegActive14dPv(
+      Long adMonetizationDedupRegActive14dPv) {
+    this.adMonetizationDedupRegActive14dPv = adMonetizationDedupRegActive14dPv;
+    return this;
+  }
+
+  /**
+   * Get adMonetizationDedupRegActive14dPv
+   *
+   * @return adMonetizationDedupRegActive14dPv
+   */
+  @ApiModelProperty(value = "")
+  public Long getAdMonetizationDedupRegActive14dPv() {
+    return adMonetizationDedupRegActive14dPv;
+  }
+
+  public void setAdMonetizationDedupRegActive14dPv(Long adMonetizationDedupRegActive14dPv) {
+    this.adMonetizationDedupRegActive14dPv = adMonetizationDedupRegActive14dPv;
+  }
+
+  public HourlyReportApiListStruct adMonetizationDedupRegActive30dPv(
+      Long adMonetizationDedupRegActive30dPv) {
+    this.adMonetizationDedupRegActive30dPv = adMonetizationDedupRegActive30dPv;
+    return this;
+  }
+
+  /**
+   * Get adMonetizationDedupRegActive30dPv
+   *
+   * @return adMonetizationDedupRegActive30dPv
+   */
+  @ApiModelProperty(value = "")
+  public Long getAdMonetizationDedupRegActive30dPv() {
+    return adMonetizationDedupRegActive30dPv;
+  }
+
+  public void setAdMonetizationDedupRegActive30dPv(Long adMonetizationDedupRegActive30dPv) {
+    this.adMonetizationDedupRegActive30dPv = adMonetizationDedupRegActive30dPv;
+  }
+
+  public HourlyReportApiListStruct adMonetizationDedupRegActive60dPv(
+      Long adMonetizationDedupRegActive60dPv) {
+    this.adMonetizationDedupRegActive60dPv = adMonetizationDedupRegActive60dPv;
+    return this;
+  }
+
+  /**
+   * Get adMonetizationDedupRegActive60dPv
+   *
+   * @return adMonetizationDedupRegActive60dPv
+   */
+  @ApiModelProperty(value = "")
+  public Long getAdMonetizationDedupRegActive60dPv() {
+    return adMonetizationDedupRegActive60dPv;
+  }
+
+  public void setAdMonetizationDedupRegActive60dPv(Long adMonetizationDedupRegActive60dPv) {
+    this.adMonetizationDedupRegActive60dPv = adMonetizationDedupRegActive60dPv;
+  }
+
+  public HourlyReportApiListStruct adMonetizationDedupActive14dPv(
+      Long adMonetizationDedupActive14dPv) {
+    this.adMonetizationDedupActive14dPv = adMonetizationDedupActive14dPv;
+    return this;
+  }
+
+  /**
+   * Get adMonetizationDedupActive14dPv
+   *
+   * @return adMonetizationDedupActive14dPv
+   */
+  @ApiModelProperty(value = "")
+  public Long getAdMonetizationDedupActive14dPv() {
+    return adMonetizationDedupActive14dPv;
+  }
+
+  public void setAdMonetizationDedupActive14dPv(Long adMonetizationDedupActive14dPv) {
+    this.adMonetizationDedupActive14dPv = adMonetizationDedupActive14dPv;
+  }
+
+  public HourlyReportApiListStruct adMonetizationDedupActive30dPv(
+      Long adMonetizationDedupActive30dPv) {
+    this.adMonetizationDedupActive30dPv = adMonetizationDedupActive30dPv;
+    return this;
+  }
+
+  /**
+   * Get adMonetizationDedupActive30dPv
+   *
+   * @return adMonetizationDedupActive30dPv
+   */
+  @ApiModelProperty(value = "")
+  public Long getAdMonetizationDedupActive30dPv() {
+    return adMonetizationDedupActive30dPv;
+  }
+
+  public void setAdMonetizationDedupActive30dPv(Long adMonetizationDedupActive30dPv) {
+    this.adMonetizationDedupActive30dPv = adMonetizationDedupActive30dPv;
+  }
+
+  public HourlyReportApiListStruct adMonetizationDedupActive60dPv(
+      Long adMonetizationDedupActive60dPv) {
+    this.adMonetizationDedupActive60dPv = adMonetizationDedupActive60dPv;
+    return this;
+  }
+
+  /**
+   * Get adMonetizationDedupActive60dPv
+   *
+   * @return adMonetizationDedupActive60dPv
+   */
+  @ApiModelProperty(value = "")
+  public Long getAdMonetizationDedupActive60dPv() {
+    return adMonetizationDedupActive60dPv;
+  }
+
+  public void setAdMonetizationDedupActive60dPv(Long adMonetizationDedupActive60dPv) {
+    this.adMonetizationDedupActive60dPv = adMonetizationDedupActive60dPv;
+  }
+
+  public HourlyReportApiListStruct adMonetizationRegActive14dPv(Long adMonetizationRegActive14dPv) {
+    this.adMonetizationRegActive14dPv = adMonetizationRegActive14dPv;
+    return this;
+  }
+
+  /**
+   * Get adMonetizationRegActive14dPv
+   *
+   * @return adMonetizationRegActive14dPv
+   */
+  @ApiModelProperty(value = "")
+  public Long getAdMonetizationRegActive14dPv() {
+    return adMonetizationRegActive14dPv;
+  }
+
+  public void setAdMonetizationRegActive14dPv(Long adMonetizationRegActive14dPv) {
+    this.adMonetizationRegActive14dPv = adMonetizationRegActive14dPv;
+  }
+
+  public HourlyReportApiListStruct adMonetizationRegActive30dPv(Long adMonetizationRegActive30dPv) {
+    this.adMonetizationRegActive30dPv = adMonetizationRegActive30dPv;
+    return this;
+  }
+
+  /**
+   * Get adMonetizationRegActive30dPv
+   *
+   * @return adMonetizationRegActive30dPv
+   */
+  @ApiModelProperty(value = "")
+  public Long getAdMonetizationRegActive30dPv() {
+    return adMonetizationRegActive30dPv;
+  }
+
+  public void setAdMonetizationRegActive30dPv(Long adMonetizationRegActive30dPv) {
+    this.adMonetizationRegActive30dPv = adMonetizationRegActive30dPv;
+  }
+
+  public HourlyReportApiListStruct adMonetizationRegActive60dPv(Long adMonetizationRegActive60dPv) {
+    this.adMonetizationRegActive60dPv = adMonetizationRegActive60dPv;
+    return this;
+  }
+
+  /**
+   * Get adMonetizationRegActive60dPv
+   *
+   * @return adMonetizationRegActive60dPv
+   */
+  @ApiModelProperty(value = "")
+  public Long getAdMonetizationRegActive60dPv() {
+    return adMonetizationRegActive60dPv;
+  }
+
+  public void setAdMonetizationRegActive60dPv(Long adMonetizationRegActive60dPv) {
+    this.adMonetizationRegActive60dPv = adMonetizationRegActive60dPv;
+  }
+
+  public HourlyReportApiListStruct adMonetizationActive14dPv(Long adMonetizationActive14dPv) {
+    this.adMonetizationActive14dPv = adMonetizationActive14dPv;
+    return this;
+  }
+
+  /**
+   * Get adMonetizationActive14dPv
+   *
+   * @return adMonetizationActive14dPv
+   */
+  @ApiModelProperty(value = "")
+  public Long getAdMonetizationActive14dPv() {
+    return adMonetizationActive14dPv;
+  }
+
+  public void setAdMonetizationActive14dPv(Long adMonetizationActive14dPv) {
+    this.adMonetizationActive14dPv = adMonetizationActive14dPv;
+  }
+
+  public HourlyReportApiListStruct adMonetizationActive30dPv(Long adMonetizationActive30dPv) {
+    this.adMonetizationActive30dPv = adMonetizationActive30dPv;
+    return this;
+  }
+
+  /**
+   * Get adMonetizationActive30dPv
+   *
+   * @return adMonetizationActive30dPv
+   */
+  @ApiModelProperty(value = "")
+  public Long getAdMonetizationActive30dPv() {
+    return adMonetizationActive30dPv;
+  }
+
+  public void setAdMonetizationActive30dPv(Long adMonetizationActive30dPv) {
+    this.adMonetizationActive30dPv = adMonetizationActive30dPv;
+  }
+
+  public HourlyReportApiListStruct adMonetizationActive60dPv(Long adMonetizationActive60dPv) {
+    this.adMonetizationActive60dPv = adMonetizationActive60dPv;
+    return this;
+  }
+
+  /**
+   * Get adMonetizationActive60dPv
+   *
+   * @return adMonetizationActive60dPv
+   */
+  @ApiModelProperty(value = "")
+  public Long getAdMonetizationActive60dPv() {
+    return adMonetizationActive60dPv;
+  }
+
+  public void setAdMonetizationActive60dPv(Long adMonetizationActive60dPv) {
+    this.adMonetizationActive60dPv = adMonetizationActive60dPv;
+  }
+
+  public HourlyReportApiListStruct clkAdFlipCardPv(Long clkAdFlipCardPv) {
+    this.clkAdFlipCardPv = clkAdFlipCardPv;
+    return this;
+  }
+
+  /**
+   * Get clkAdFlipCardPv
+   *
+   * @return clkAdFlipCardPv
+   */
+  @ApiModelProperty(value = "")
+  public Long getClkAdFlipCardPv() {
+    return clkAdFlipCardPv;
+  }
+
+  public void setClkAdFlipCardPv(Long clkAdFlipCardPv) {
+    this.clkAdFlipCardPv = clkAdFlipCardPv;
+  }
+
+  public HourlyReportApiListStruct commissionAmount(Long commissionAmount) {
+    this.commissionAmount = commissionAmount;
+    return this;
+  }
+
+  /**
+   * Get commissionAmount
+   *
+   * @return commissionAmount
+   */
+  @ApiModelProperty(value = "")
+  public Long getCommissionAmount() {
+    return commissionAmount;
+  }
+
+  public void setCommissionAmount(Long commissionAmount) {
+    this.commissionAmount = commissionAmount;
+  }
+
+  public HourlyReportApiListStruct commissionRoi(Double commissionRoi) {
+    this.commissionRoi = commissionRoi;
+    return this;
+  }
+
+  /**
+   * Get commissionRoi
+   *
+   * @return commissionRoi
+   */
+  @ApiModelProperty(value = "")
+  public Double getCommissionRoi() {
+    return commissionRoi;
+  }
+
+  public void setCommissionRoi(Double commissionRoi) {
+    this.commissionRoi = commissionRoi;
+  }
+
+  public HourlyReportApiListStruct orderNetPv(Long orderNetPv) {
+    this.orderNetPv = orderNetPv;
+    return this;
+  }
+
+  /**
+   * Get orderNetPv
+   *
+   * @return orderNetPv
+   */
+  @ApiModelProperty(value = "")
+  public Long getOrderNetPv() {
+    return orderNetPv;
+  }
+
+  public void setOrderNetPv(Long orderNetPv) {
+    this.orderNetPv = orderNetPv;
+  }
+
+  public HourlyReportApiListStruct orderNetAmount(Long orderNetAmount) {
+    this.orderNetAmount = orderNetAmount;
+    return this;
+  }
+
+  /**
+   * Get orderNetAmount
+   *
+   * @return orderNetAmount
+   */
+  @ApiModelProperty(value = "")
+  public Long getOrderNetAmount() {
+    return orderNetAmount;
+  }
+
+  public void setOrderNetAmount(Long orderNetAmount) {
+    this.orderNetAmount = orderNetAmount;
+  }
+
+  public HourlyReportApiListStruct orderNetRoi(Double orderNetRoi) {
+    this.orderNetRoi = orderNetRoi;
+    return this;
+  }
+
+  /**
+   * Get orderNetRoi
+   *
+   * @return orderNetRoi
+   */
+  @ApiModelProperty(value = "")
+  public Double getOrderNetRoi() {
+    return orderNetRoi;
+  }
+
+  public void setOrderNetRoi(Double orderNetRoi) {
+    this.orderNetRoi = orderNetRoi;
+  }
+
+  public HourlyReportApiListStruct orderNetPvCost(Long orderNetPvCost) {
+    this.orderNetPvCost = orderNetPvCost;
+    return this;
+  }
+
+  /**
+   * Get orderNetPvCost
+   *
+   * @return orderNetPvCost
+   */
+  @ApiModelProperty(value = "")
+  public Long getOrderNetPvCost() {
+    return orderNetPvCost;
+  }
+
+  public void setOrderNetPvCost(Long orderNetPvCost) {
+    this.orderNetPvCost = orderNetPvCost;
+  }
+
+  public HourlyReportApiListStruct clkBhAnimPv(Long clkBhAnimPv) {
+    this.clkBhAnimPv = clkBhAnimPv;
+    return this;
+  }
+
+  /**
+   * Get clkBhAnimPv
+   *
+   * @return clkBhAnimPv
+   */
+  @ApiModelProperty(value = "")
+  public Long getClkBhAnimPv() {
+    return clkBhAnimPv;
+  }
+
+  public void setClkBhAnimPv(Long clkBhAnimPv) {
+    this.clkBhAnimPv = clkBhAnimPv;
   }
 
   public HourlyReportApiListStruct adgroupId(Long adgroupId) {
@@ -18416,6 +19050,44 @@ public class HourlyReportApiListStruct {
     this.clkTopPv = clkTopPv;
   }
 
+  public HourlyReportApiListStruct realCostTop(Long realCostTop) {
+    this.realCostTop = realCostTop;
+    return this;
+  }
+
+  /**
+   * Get realCostTop
+   *
+   * @return realCostTop
+   */
+  @ApiModelProperty(value = "")
+  public Long getRealCostTop() {
+    return realCostTop;
+  }
+
+  public void setRealCostTop(Long realCostTop) {
+    this.realCostTop = realCostTop;
+  }
+
+  public HourlyReportApiListStruct lanButtonClickRate(Double lanButtonClickRate) {
+    this.lanButtonClickRate = lanButtonClickRate;
+    return this;
+  }
+
+  /**
+   * Get lanButtonClickRate
+   *
+   * @return lanButtonClickRate
+   */
+  @ApiModelProperty(value = "")
+  public Double getLanButtonClickRate() {
+    return lanButtonClickRate;
+  }
+
+  public void setLanButtonClickRate(Double lanButtonClickRate) {
+    this.lanButtonClickRate = lanButtonClickRate;
+  }
+
   public HourlyReportApiListStruct projectId(Long projectId) {
     this.projectId = projectId;
     return this;
@@ -18478,7 +19150,6 @@ public class HourlyReportApiListStruct {
         && Objects.equals(this.cost, hourlyReportApiListStruct.cost)
         && Objects.equals(this.acquisitionCost, hourlyReportApiListStruct.acquisitionCost)
         && Objects.equals(this.thousandDisplayPrice, hourlyReportApiListStruct.thousandDisplayPrice)
-        && Objects.equals(this.realCostTop, hourlyReportApiListStruct.realCostTop)
         && Objects.equals(this.conversionsCount, hourlyReportApiListStruct.conversionsCount)
         && Objects.equals(
             this.requestConversionsCount, hourlyReportApiListStruct.requestConversionsCount)
@@ -19352,6 +20023,7 @@ public class HourlyReportApiListStruct {
         && Objects.equals(this.clkLeftGridInfoPv, hourlyReportApiListStruct.clkLeftGridInfoPv)
         && Objects.equals(this.clkLeftGridMiddlePv, hourlyReportApiListStruct.clkLeftGridMiddlePv)
         && Objects.equals(this.clkRightGridPv, hourlyReportApiListStruct.clkRightGridPv)
+        && Objects.equals(this.cvsCpnVideoPlayUv, hourlyReportApiListStruct.cvsCpnVideoPlayUv)
         && Objects.equals(this.adMonetizationCost, hourlyReportApiListStruct.adMonetizationCost)
         && Objects.equals(this.adMonetizationRoi, hourlyReportApiListStruct.adMonetizationRoi)
         && Objects.equals(
@@ -19645,10 +20317,71 @@ public class HourlyReportApiListStruct {
             this.loanQuotaOpenDedupCost, hourlyReportApiListStruct.loanQuotaOpenDedupCost)
         && Objects.equals(this.loanDedupPv, hourlyReportApiListStruct.loanDedupPv)
         && Objects.equals(this.loanDedupCost, hourlyReportApiListStruct.loanDedupCost)
-        && Objects.equals(this.landingCpnExpPv, hourlyReportApiListStruct.landingCpnExpPv)
-        && Objects.equals(this.lanButtonClickRate, hourlyReportApiListStruct.lanButtonClickRate)
         && Objects.equals(this.clkTopicElementPv, hourlyReportApiListStruct.clkTopicElementPv)
         && Objects.equals(this.adMonetizationEcpm, hourlyReportApiListStruct.adMonetizationEcpm)
+        && Objects.equals(
+            this.adMonetizationRegActive14dAmount,
+            hourlyReportApiListStruct.adMonetizationRegActive14dAmount)
+        && Objects.equals(
+            this.adMonetizationRegActive30dAmount,
+            hourlyReportApiListStruct.adMonetizationRegActive30dAmount)
+        && Objects.equals(
+            this.adMonetizationRegActive60dAmount,
+            hourlyReportApiListStruct.adMonetizationRegActive60dAmount)
+        && Objects.equals(this.incomeVal30, hourlyReportApiListStruct.incomeVal30)
+        && Objects.equals(this.incomeVal60, hourlyReportApiListStruct.incomeVal60)
+        && Objects.equals(
+            this.adMonetizationRegActive14dRoi,
+            hourlyReportApiListStruct.adMonetizationRegActive14dRoi)
+        && Objects.equals(
+            this.adMonetizationRegActive30dRoi,
+            hourlyReportApiListStruct.adMonetizationRegActive30dRoi)
+        && Objects.equals(
+            this.adMonetizationRegActive60dRoi,
+            hourlyReportApiListStruct.adMonetizationRegActive60dRoi)
+        && Objects.equals(this.incomeRoi30, hourlyReportApiListStruct.incomeRoi30)
+        && Objects.equals(this.incomeRoi60, hourlyReportApiListStruct.incomeRoi60)
+        && Objects.equals(
+            this.adMonetizationDedupRegActive14dPv,
+            hourlyReportApiListStruct.adMonetizationDedupRegActive14dPv)
+        && Objects.equals(
+            this.adMonetizationDedupRegActive30dPv,
+            hourlyReportApiListStruct.adMonetizationDedupRegActive30dPv)
+        && Objects.equals(
+            this.adMonetizationDedupRegActive60dPv,
+            hourlyReportApiListStruct.adMonetizationDedupRegActive60dPv)
+        && Objects.equals(
+            this.adMonetizationDedupActive14dPv,
+            hourlyReportApiListStruct.adMonetizationDedupActive14dPv)
+        && Objects.equals(
+            this.adMonetizationDedupActive30dPv,
+            hourlyReportApiListStruct.adMonetizationDedupActive30dPv)
+        && Objects.equals(
+            this.adMonetizationDedupActive60dPv,
+            hourlyReportApiListStruct.adMonetizationDedupActive60dPv)
+        && Objects.equals(
+            this.adMonetizationRegActive14dPv,
+            hourlyReportApiListStruct.adMonetizationRegActive14dPv)
+        && Objects.equals(
+            this.adMonetizationRegActive30dPv,
+            hourlyReportApiListStruct.adMonetizationRegActive30dPv)
+        && Objects.equals(
+            this.adMonetizationRegActive60dPv,
+            hourlyReportApiListStruct.adMonetizationRegActive60dPv)
+        && Objects.equals(
+            this.adMonetizationActive14dPv, hourlyReportApiListStruct.adMonetizationActive14dPv)
+        && Objects.equals(
+            this.adMonetizationActive30dPv, hourlyReportApiListStruct.adMonetizationActive30dPv)
+        && Objects.equals(
+            this.adMonetizationActive60dPv, hourlyReportApiListStruct.adMonetizationActive60dPv)
+        && Objects.equals(this.clkAdFlipCardPv, hourlyReportApiListStruct.clkAdFlipCardPv)
+        && Objects.equals(this.commissionAmount, hourlyReportApiListStruct.commissionAmount)
+        && Objects.equals(this.commissionRoi, hourlyReportApiListStruct.commissionRoi)
+        && Objects.equals(this.orderNetPv, hourlyReportApiListStruct.orderNetPv)
+        && Objects.equals(this.orderNetAmount, hourlyReportApiListStruct.orderNetAmount)
+        && Objects.equals(this.orderNetRoi, hourlyReportApiListStruct.orderNetRoi)
+        && Objects.equals(this.orderNetPvCost, hourlyReportApiListStruct.orderNetPvCost)
+        && Objects.equals(this.clkBhAnimPv, hourlyReportApiListStruct.clkBhAnimPv)
         && Objects.equals(this.adgroupId, hourlyReportApiListStruct.adgroupId)
         && Objects.equals(this.adgroupName, hourlyReportApiListStruct.adgroupName)
         && Objects.equals(this.dynamicCreativeId, hourlyReportApiListStruct.dynamicCreativeId)
@@ -19663,6 +20396,8 @@ public class HourlyReportApiListStruct {
         && Objects.equals(this.expAvgRank, hourlyReportApiListStruct.expAvgRank)
         && Objects.equals(this.expOverallTopPv, hourlyReportApiListStruct.expOverallTopPv)
         && Objects.equals(this.clkTopPv, hourlyReportApiListStruct.clkTopPv)
+        && Objects.equals(this.realCostTop, hourlyReportApiListStruct.realCostTop)
+        && Objects.equals(this.lanButtonClickRate, hourlyReportApiListStruct.lanButtonClickRate)
         && Objects.equals(this.projectId, hourlyReportApiListStruct.projectId)
         && Objects.equals(this.projectName, hourlyReportApiListStruct.projectName);
   }
@@ -19685,7 +20420,6 @@ public class HourlyReportApiListStruct {
         cost,
         acquisitionCost,
         thousandDisplayPrice,
-        realCostTop,
         conversionsCount,
         requestConversionsCount,
         conversionsRate,
@@ -20297,6 +21031,7 @@ public class HourlyReportApiListStruct {
         clkLeftGridInfoPv,
         clkLeftGridMiddlePv,
         clkRightGridPv,
+        cvsCpnVideoPlayUv,
         adMonetizationCost,
         adMonetizationRoi,
         adMonetizationActive3dPv,
@@ -20485,10 +21220,38 @@ public class HourlyReportApiListStruct {
         loanQuotaOpenDedupCost,
         loanDedupPv,
         loanDedupCost,
-        landingCpnExpPv,
-        lanButtonClickRate,
         clkTopicElementPv,
         adMonetizationEcpm,
+        adMonetizationRegActive14dAmount,
+        adMonetizationRegActive30dAmount,
+        adMonetizationRegActive60dAmount,
+        incomeVal30,
+        incomeVal60,
+        adMonetizationRegActive14dRoi,
+        adMonetizationRegActive30dRoi,
+        adMonetizationRegActive60dRoi,
+        incomeRoi30,
+        incomeRoi60,
+        adMonetizationDedupRegActive14dPv,
+        adMonetizationDedupRegActive30dPv,
+        adMonetizationDedupRegActive60dPv,
+        adMonetizationDedupActive14dPv,
+        adMonetizationDedupActive30dPv,
+        adMonetizationDedupActive60dPv,
+        adMonetizationRegActive14dPv,
+        adMonetizationRegActive30dPv,
+        adMonetizationRegActive60dPv,
+        adMonetizationActive14dPv,
+        adMonetizationActive30dPv,
+        adMonetizationActive60dPv,
+        clkAdFlipCardPv,
+        commissionAmount,
+        commissionRoi,
+        orderNetPv,
+        orderNetAmount,
+        orderNetRoi,
+        orderNetPvCost,
+        clkBhAnimPv,
         adgroupId,
         adgroupName,
         dynamicCreativeId,
@@ -20503,6 +21266,8 @@ public class HourlyReportApiListStruct {
         expAvgRank,
         expOverallTopPv,
         clkTopPv,
+        realCostTop,
+        lanButtonClickRate,
         projectId,
         projectName);
   }

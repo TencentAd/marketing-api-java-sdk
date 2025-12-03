@@ -19,24 +19,20 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-/** 运算符 */
-@JsonAdapter(Operator.Adapter.class)
-public enum Operator {
-  LT("LT"),
+/** 创意组件适用场景 */
+@JsonAdapter(ComponentScene.Adapter.class)
+public enum ComponentScene {
+  DEFAULT("DEFAULT"),
 
-  GT("GT"),
+  MPA("MPA"),
 
-  EQ("EQ"),
+  DCA("DCA"),
 
-  NE("NE"),
-
-  CONTAIN("CONTAIN"),
-
-  NOT_CONTAIN("NOT_CONTAIN");
+  MPA_DCA("MPA_DCA");
 
   private String value;
 
-  Operator(String value) {
+  ComponentScene(String value) {
     this.value = value;
   }
 
@@ -49,8 +45,8 @@ public enum Operator {
     return String.valueOf(value);
   }
 
-  public static Operator fromValue(String text) {
-    for (Operator b : Operator.values()) {
+  public static ComponentScene fromValue(String text) {
+    for (ComponentScene b : ComponentScene.values()) {
       if (String.valueOf(b.value).equals(text)) {
         return b;
       }
@@ -58,16 +54,17 @@ public enum Operator {
     return null;
   }
 
-  public static class Adapter extends TypeAdapter<Operator> {
+  public static class Adapter extends TypeAdapter<ComponentScene> {
     @Override
-    public void write(final JsonWriter jsonWriter, final Operator enumeration) throws IOException {
+    public void write(final JsonWriter jsonWriter, final ComponentScene enumeration)
+        throws IOException {
       jsonWriter.value(enumeration.getValue());
     }
 
     @Override
-    public Operator read(final JsonReader jsonReader) throws IOException {
+    public ComponentScene read(final JsonReader jsonReader) throws IOException {
       String value = jsonReader.nextString();
-      return Operator.fromValue(String.valueOf(value));
+      return ComponentScene.fromValue(String.valueOf(value));
     }
   }
 }

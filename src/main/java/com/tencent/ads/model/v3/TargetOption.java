@@ -32,6 +32,9 @@ public class TargetOption {
   @SerializedName("use")
   private ComponentDependUseType use = null;
 
+  @SerializedName("tip")
+  private String tip = null;
+
   public TargetOption depends(List<DependItem> depends) {
     this.depends = depends;
     return this;
@@ -105,6 +108,25 @@ public class TargetOption {
     this.use = use;
   }
 
+  public TargetOption tip(String tip) {
+    this.tip = tip;
+    return this;
+  }
+
+  /**
+   * Get tip
+   *
+   * @return tip
+   */
+  @ApiModelProperty(value = "")
+  public String getTip() {
+    return tip;
+  }
+
+  public void setTip(String tip) {
+    this.tip = tip;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -116,12 +138,13 @@ public class TargetOption {
     TargetOption targetOption = (TargetOption) o;
     return Objects.equals(this.depends, targetOption.depends)
         && Objects.equals(this.supportOptions, targetOption.supportOptions)
-        && Objects.equals(this.use, targetOption.use);
+        && Objects.equals(this.use, targetOption.use)
+        && Objects.equals(this.tip, targetOption.tip);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(depends, supportOptions, use);
+    return Objects.hash(depends, supportOptions, use, tip);
   }
 
   @Override

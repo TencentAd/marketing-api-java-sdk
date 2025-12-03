@@ -143,6 +143,37 @@ public class SmartDeliveryGoalSpec {
   private SmartDeliveryGoalReadingAppActivateSevenDayRetentionSpec
       readingAppActivateSevenDayRetentionSpec = null;
 
+  @SerializedName("ai_app_activate_first_day_retention_spec")
+  private SmartDeliveryGoalAiAppActivateFirstDayRetentionSpec aiAppActivateFirstDayRetentionSpec =
+      null;
+
+  @SerializedName("ai_app_register_first_day_retention_spec")
+  private SmartDeliveryGoalAiAppRegisterFirstDayRetentionSpec aiAppRegisterFirstDayRetentionSpec =
+      null;
+
+  @SerializedName("bid_amount_spec")
+  private SmartDeliveryGoalBidAmountSpec bidAmountSpec = null;
+
+  @SerializedName("bid_amount_deep_conversion_worth_rate_spec")
+  private SmartDeliveryGoalBidAmountDeepConversionWorthRateSpec
+      bidAmountDeepConversionWorthRateSpec = null;
+
+  @SerializedName("bid_amount_deep_conversion_behavior_bid_spec")
+  private SmartDeliveryGoalBidAmountDeepConversionBehaviorBidSpec
+      bidAmountDeepConversionBehaviorBidSpec = null;
+
+  @SerializedName("qyt_net_profit_spec")
+  private SmartDeliveryGoalQytSpec qytNetProfitSpec = null;
+
+  @SerializedName("qyt_net_profit_roi_spec")
+  private SmartDeliveryGoalQytSpec qytNetProfitRoiSpec = null;
+
+  @SerializedName("wechat_store_net_profit_roi_spec")
+  private SmartDeliveryGoalWechatStoreNetProfitRoiSpec wechatStoreNetProfitRoiSpec = null;
+
+  @SerializedName("wechat_store_net_profit_spec")
+  private SmartDeliveryGoalWechatStoreNetProfitSpec wechatStoreNetProfitSpec = null;
+
   public SmartDeliveryGoalSpec longTermRoiSpec(SmartDeliveryGoalLongTermRoiSpec longTermRoiSpec) {
     this.longTermRoiSpec = longTermRoiSpec;
     return this;
@@ -931,6 +962,195 @@ public class SmartDeliveryGoalSpec {
     this.readingAppActivateSevenDayRetentionSpec = readingAppActivateSevenDayRetentionSpec;
   }
 
+  public SmartDeliveryGoalSpec aiAppActivateFirstDayRetentionSpec(
+      SmartDeliveryGoalAiAppActivateFirstDayRetentionSpec aiAppActivateFirstDayRetentionSpec) {
+    this.aiAppActivateFirstDayRetentionSpec = aiAppActivateFirstDayRetentionSpec;
+    return this;
+  }
+
+  /**
+   * Get aiAppActivateFirstDayRetentionSpec
+   *
+   * @return aiAppActivateFirstDayRetentionSpec
+   */
+  @ApiModelProperty(value = "")
+  public SmartDeliveryGoalAiAppActivateFirstDayRetentionSpec
+      getAiAppActivateFirstDayRetentionSpec() {
+    return aiAppActivateFirstDayRetentionSpec;
+  }
+
+  public void setAiAppActivateFirstDayRetentionSpec(
+      SmartDeliveryGoalAiAppActivateFirstDayRetentionSpec aiAppActivateFirstDayRetentionSpec) {
+    this.aiAppActivateFirstDayRetentionSpec = aiAppActivateFirstDayRetentionSpec;
+  }
+
+  public SmartDeliveryGoalSpec aiAppRegisterFirstDayRetentionSpec(
+      SmartDeliveryGoalAiAppRegisterFirstDayRetentionSpec aiAppRegisterFirstDayRetentionSpec) {
+    this.aiAppRegisterFirstDayRetentionSpec = aiAppRegisterFirstDayRetentionSpec;
+    return this;
+  }
+
+  /**
+   * Get aiAppRegisterFirstDayRetentionSpec
+   *
+   * @return aiAppRegisterFirstDayRetentionSpec
+   */
+  @ApiModelProperty(value = "")
+  public SmartDeliveryGoalAiAppRegisterFirstDayRetentionSpec
+      getAiAppRegisterFirstDayRetentionSpec() {
+    return aiAppRegisterFirstDayRetentionSpec;
+  }
+
+  public void setAiAppRegisterFirstDayRetentionSpec(
+      SmartDeliveryGoalAiAppRegisterFirstDayRetentionSpec aiAppRegisterFirstDayRetentionSpec) {
+    this.aiAppRegisterFirstDayRetentionSpec = aiAppRegisterFirstDayRetentionSpec;
+  }
+
+  public SmartDeliveryGoalSpec bidAmountSpec(SmartDeliveryGoalBidAmountSpec bidAmountSpec) {
+    this.bidAmountSpec = bidAmountSpec;
+    return this;
+  }
+
+  /**
+   * Get bidAmountSpec
+   *
+   * @return bidAmountSpec
+   */
+  @ApiModelProperty(value = "")
+  public SmartDeliveryGoalBidAmountSpec getBidAmountSpec() {
+    return bidAmountSpec;
+  }
+
+  public void setBidAmountSpec(SmartDeliveryGoalBidAmountSpec bidAmountSpec) {
+    this.bidAmountSpec = bidAmountSpec;
+  }
+
+  public SmartDeliveryGoalSpec bidAmountDeepConversionWorthRateSpec(
+      SmartDeliveryGoalBidAmountDeepConversionWorthRateSpec bidAmountDeepConversionWorthRateSpec) {
+    this.bidAmountDeepConversionWorthRateSpec = bidAmountDeepConversionWorthRateSpec;
+    return this;
+  }
+
+  /**
+   * Get bidAmountDeepConversionWorthRateSpec
+   *
+   * @return bidAmountDeepConversionWorthRateSpec
+   */
+  @ApiModelProperty(value = "")
+  public SmartDeliveryGoalBidAmountDeepConversionWorthRateSpec
+      getBidAmountDeepConversionWorthRateSpec() {
+    return bidAmountDeepConversionWorthRateSpec;
+  }
+
+  public void setBidAmountDeepConversionWorthRateSpec(
+      SmartDeliveryGoalBidAmountDeepConversionWorthRateSpec bidAmountDeepConversionWorthRateSpec) {
+    this.bidAmountDeepConversionWorthRateSpec = bidAmountDeepConversionWorthRateSpec;
+  }
+
+  public SmartDeliveryGoalSpec bidAmountDeepConversionBehaviorBidSpec(
+      SmartDeliveryGoalBidAmountDeepConversionBehaviorBidSpec
+          bidAmountDeepConversionBehaviorBidSpec) {
+    this.bidAmountDeepConversionBehaviorBidSpec = bidAmountDeepConversionBehaviorBidSpec;
+    return this;
+  }
+
+  /**
+   * Get bidAmountDeepConversionBehaviorBidSpec
+   *
+   * @return bidAmountDeepConversionBehaviorBidSpec
+   */
+  @ApiModelProperty(value = "")
+  public SmartDeliveryGoalBidAmountDeepConversionBehaviorBidSpec
+      getBidAmountDeepConversionBehaviorBidSpec() {
+    return bidAmountDeepConversionBehaviorBidSpec;
+  }
+
+  public void setBidAmountDeepConversionBehaviorBidSpec(
+      SmartDeliveryGoalBidAmountDeepConversionBehaviorBidSpec
+          bidAmountDeepConversionBehaviorBidSpec) {
+    this.bidAmountDeepConversionBehaviorBidSpec = bidAmountDeepConversionBehaviorBidSpec;
+  }
+
+  public SmartDeliveryGoalSpec qytNetProfitSpec(SmartDeliveryGoalQytSpec qytNetProfitSpec) {
+    this.qytNetProfitSpec = qytNetProfitSpec;
+    return this;
+  }
+
+  /**
+   * Get qytNetProfitSpec
+   *
+   * @return qytNetProfitSpec
+   */
+  @ApiModelProperty(value = "")
+  public SmartDeliveryGoalQytSpec getQytNetProfitSpec() {
+    return qytNetProfitSpec;
+  }
+
+  public void setQytNetProfitSpec(SmartDeliveryGoalQytSpec qytNetProfitSpec) {
+    this.qytNetProfitSpec = qytNetProfitSpec;
+  }
+
+  public SmartDeliveryGoalSpec qytNetProfitRoiSpec(SmartDeliveryGoalQytSpec qytNetProfitRoiSpec) {
+    this.qytNetProfitRoiSpec = qytNetProfitRoiSpec;
+    return this;
+  }
+
+  /**
+   * Get qytNetProfitRoiSpec
+   *
+   * @return qytNetProfitRoiSpec
+   */
+  @ApiModelProperty(value = "")
+  public SmartDeliveryGoalQytSpec getQytNetProfitRoiSpec() {
+    return qytNetProfitRoiSpec;
+  }
+
+  public void setQytNetProfitRoiSpec(SmartDeliveryGoalQytSpec qytNetProfitRoiSpec) {
+    this.qytNetProfitRoiSpec = qytNetProfitRoiSpec;
+  }
+
+  public SmartDeliveryGoalSpec wechatStoreNetProfitRoiSpec(
+      SmartDeliveryGoalWechatStoreNetProfitRoiSpec wechatStoreNetProfitRoiSpec) {
+    this.wechatStoreNetProfitRoiSpec = wechatStoreNetProfitRoiSpec;
+    return this;
+  }
+
+  /**
+   * Get wechatStoreNetProfitRoiSpec
+   *
+   * @return wechatStoreNetProfitRoiSpec
+   */
+  @ApiModelProperty(value = "")
+  public SmartDeliveryGoalWechatStoreNetProfitRoiSpec getWechatStoreNetProfitRoiSpec() {
+    return wechatStoreNetProfitRoiSpec;
+  }
+
+  public void setWechatStoreNetProfitRoiSpec(
+      SmartDeliveryGoalWechatStoreNetProfitRoiSpec wechatStoreNetProfitRoiSpec) {
+    this.wechatStoreNetProfitRoiSpec = wechatStoreNetProfitRoiSpec;
+  }
+
+  public SmartDeliveryGoalSpec wechatStoreNetProfitSpec(
+      SmartDeliveryGoalWechatStoreNetProfitSpec wechatStoreNetProfitSpec) {
+    this.wechatStoreNetProfitSpec = wechatStoreNetProfitSpec;
+    return this;
+  }
+
+  /**
+   * Get wechatStoreNetProfitSpec
+   *
+   * @return wechatStoreNetProfitSpec
+   */
+  @ApiModelProperty(value = "")
+  public SmartDeliveryGoalWechatStoreNetProfitSpec getWechatStoreNetProfitSpec() {
+    return wechatStoreNetProfitSpec;
+  }
+
+  public void setWechatStoreNetProfitSpec(
+      SmartDeliveryGoalWechatStoreNetProfitSpec wechatStoreNetProfitSpec) {
+    this.wechatStoreNetProfitSpec = wechatStoreNetProfitSpec;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -1008,7 +1228,26 @@ public class SmartDeliveryGoalSpec {
             smartDeliveryGoalSpec.readingAppActivateFirstDayRetentionSpec)
         && Objects.equals(
             this.readingAppActivateSevenDayRetentionSpec,
-            smartDeliveryGoalSpec.readingAppActivateSevenDayRetentionSpec);
+            smartDeliveryGoalSpec.readingAppActivateSevenDayRetentionSpec)
+        && Objects.equals(
+            this.aiAppActivateFirstDayRetentionSpec,
+            smartDeliveryGoalSpec.aiAppActivateFirstDayRetentionSpec)
+        && Objects.equals(
+            this.aiAppRegisterFirstDayRetentionSpec,
+            smartDeliveryGoalSpec.aiAppRegisterFirstDayRetentionSpec)
+        && Objects.equals(this.bidAmountSpec, smartDeliveryGoalSpec.bidAmountSpec)
+        && Objects.equals(
+            this.bidAmountDeepConversionWorthRateSpec,
+            smartDeliveryGoalSpec.bidAmountDeepConversionWorthRateSpec)
+        && Objects.equals(
+            this.bidAmountDeepConversionBehaviorBidSpec,
+            smartDeliveryGoalSpec.bidAmountDeepConversionBehaviorBidSpec)
+        && Objects.equals(this.qytNetProfitSpec, smartDeliveryGoalSpec.qytNetProfitSpec)
+        && Objects.equals(this.qytNetProfitRoiSpec, smartDeliveryGoalSpec.qytNetProfitRoiSpec)
+        && Objects.equals(
+            this.wechatStoreNetProfitRoiSpec, smartDeliveryGoalSpec.wechatStoreNetProfitRoiSpec)
+        && Objects.equals(
+            this.wechatStoreNetProfitSpec, smartDeliveryGoalSpec.wechatStoreNetProfitSpec);
   }
 
   @Override
@@ -1051,7 +1290,16 @@ public class SmartDeliveryGoalSpec {
         fictionRegisterMonetizationRoiSpec,
         gameAppActivateRoiSpec,
         readingAppActivateFirstDayRetentionSpec,
-        readingAppActivateSevenDayRetentionSpec);
+        readingAppActivateSevenDayRetentionSpec,
+        aiAppActivateFirstDayRetentionSpec,
+        aiAppRegisterFirstDayRetentionSpec,
+        bidAmountSpec,
+        bidAmountDeepConversionWorthRateSpec,
+        bidAmountDeepConversionBehaviorBidSpec,
+        qytNetProfitSpec,
+        qytNetProfitRoiSpec,
+        wechatStoreNetProfitRoiSpec,
+        wechatStoreNetProfitSpec);
   }
 
   @Override

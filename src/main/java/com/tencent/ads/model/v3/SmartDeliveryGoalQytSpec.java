@@ -51,6 +51,12 @@ public class SmartDeliveryGoalQytSpec {
   @SerializedName("first_twenty_four_hour_ecommerce_order_cost")
   private Long firstTwentyFourHourEcommerceOrderCost = null;
 
+  @SerializedName("net_profit_cost")
+  private Long netProfitCost = null;
+
+  @SerializedName("net_profit_roi")
+  private Double netProfitRoi = null;
+
   public SmartDeliveryGoalQytSpec ecommerceOrderCost(Long ecommerceOrderCost) {
     this.ecommerceOrderCost = ecommerceOrderCost;
     return this;
@@ -242,6 +248,44 @@ public class SmartDeliveryGoalQytSpec {
     this.firstTwentyFourHourEcommerceOrderCost = firstTwentyFourHourEcommerceOrderCost;
   }
 
+  public SmartDeliveryGoalQytSpec netProfitCost(Long netProfitCost) {
+    this.netProfitCost = netProfitCost;
+    return this;
+  }
+
+  /**
+   * Get netProfitCost
+   *
+   * @return netProfitCost
+   */
+  @ApiModelProperty(value = "")
+  public Long getNetProfitCost() {
+    return netProfitCost;
+  }
+
+  public void setNetProfitCost(Long netProfitCost) {
+    this.netProfitCost = netProfitCost;
+  }
+
+  public SmartDeliveryGoalQytSpec netProfitRoi(Double netProfitRoi) {
+    this.netProfitRoi = netProfitRoi;
+    return this;
+  }
+
+  /**
+   * Get netProfitRoi
+   *
+   * @return netProfitRoi
+   */
+  @ApiModelProperty(value = "")
+  public Double getNetProfitRoi() {
+    return netProfitRoi;
+  }
+
+  public void setNetProfitRoi(Double netProfitRoi) {
+    this.netProfitRoi = netProfitRoi;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -265,7 +309,9 @@ public class SmartDeliveryGoalQytSpec {
         && Objects.equals(this.clickCost, smartDeliveryGoalQytSpec.clickCost)
         && Objects.equals(
             this.firstTwentyFourHourEcommerceOrderCost,
-            smartDeliveryGoalQytSpec.firstTwentyFourHourEcommerceOrderCost);
+            smartDeliveryGoalQytSpec.firstTwentyFourHourEcommerceOrderCost)
+        && Objects.equals(this.netProfitCost, smartDeliveryGoalQytSpec.netProfitCost)
+        && Objects.equals(this.netProfitRoi, smartDeliveryGoalQytSpec.netProfitRoi);
   }
 
   @Override
@@ -280,7 +326,9 @@ public class SmartDeliveryGoalQytSpec {
         costConstraintScene,
         liveStreamAudienceCost,
         clickCost,
-        firstTwentyFourHourEcommerceOrderCost);
+        firstTwentyFourHourEcommerceOrderCost,
+        netProfitCost,
+        netProfitRoi);
   }
 
   @Override

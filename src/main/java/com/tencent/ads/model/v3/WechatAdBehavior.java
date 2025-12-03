@@ -29,6 +29,9 @@ public class WechatAdBehavior {
   @SerializedName("excluded_actions")
   private List<String> excludedActions = null;
 
+  @SerializedName("corp_id")
+  private List<String> corpId = null;
+
   public WechatAdBehavior actions(List<String> actions) {
     this.actions = actions;
     return this;
@@ -83,6 +86,33 @@ public class WechatAdBehavior {
     this.excludedActions = excludedActions;
   }
 
+  public WechatAdBehavior corpId(List<String> corpId) {
+    this.corpId = corpId;
+    return this;
+  }
+
+  public WechatAdBehavior addCorpIdItem(String corpIdItem) {
+    if (this.corpId == null) {
+      this.corpId = new ArrayList<String>();
+    }
+    this.corpId.add(corpIdItem);
+    return this;
+  }
+
+  /**
+   * Get corpId
+   *
+   * @return corpId
+   */
+  @ApiModelProperty(value = "")
+  public List<String> getCorpId() {
+    return corpId;
+  }
+
+  public void setCorpId(List<String> corpId) {
+    this.corpId = corpId;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -93,12 +123,13 @@ public class WechatAdBehavior {
     }
     WechatAdBehavior wechatAdBehavior = (WechatAdBehavior) o;
     return Objects.equals(this.actions, wechatAdBehavior.actions)
-        && Objects.equals(this.excludedActions, wechatAdBehavior.excludedActions);
+        && Objects.equals(this.excludedActions, wechatAdBehavior.excludedActions)
+        && Objects.equals(this.corpId, wechatAdBehavior.corpId);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(actions, excludedActions);
+    return Objects.hash(actions, excludedActions, corpId);
   }
 
   @Override

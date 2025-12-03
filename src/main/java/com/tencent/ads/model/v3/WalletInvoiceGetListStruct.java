@@ -45,6 +45,9 @@ public class WalletInvoiceGetListStruct {
   @SerializedName("description")
   private String description = null;
 
+  @SerializedName("primary_key")
+  private String primaryKey = null;
+
   public WalletInvoiceGetListStruct accountId(Long accountId) {
     this.accountId = accountId;
     return this;
@@ -197,6 +200,25 @@ public class WalletInvoiceGetListStruct {
     this.description = description;
   }
 
+  public WalletInvoiceGetListStruct primaryKey(String primaryKey) {
+    this.primaryKey = primaryKey;
+    return this;
+  }
+
+  /**
+   * Get primaryKey
+   *
+   * @return primaryKey
+   */
+  @ApiModelProperty(value = "")
+  public String getPrimaryKey() {
+    return primaryKey;
+  }
+
+  public void setPrimaryKey(String primaryKey) {
+    this.primaryKey = primaryKey;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -213,13 +235,22 @@ public class WalletInvoiceGetListStruct {
         && Objects.equals(this.externalBillNo, walletInvoiceGetListStruct.externalBillNo)
         && Objects.equals(this.tradeTypeExt, walletInvoiceGetListStruct.tradeTypeExt)
         && Objects.equals(this.amount, walletInvoiceGetListStruct.amount)
-        && Objects.equals(this.description, walletInvoiceGetListStruct.description);
+        && Objects.equals(this.description, walletInvoiceGetListStruct.description)
+        && Objects.equals(this.primaryKey, walletInvoiceGetListStruct.primaryKey);
   }
 
   @Override
   public int hashCode() {
     return Objects.hash(
-        accountId, accountName, fundType, time, externalBillNo, tradeTypeExt, amount, description);
+        accountId,
+        accountName,
+        fundType,
+        time,
+        externalBillNo,
+        tradeTypeExt,
+        amount,
+        description,
+        primaryKey);
   }
 
   @Override

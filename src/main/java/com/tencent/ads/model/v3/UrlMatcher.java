@@ -25,7 +25,7 @@ public class UrlMatcher {
   private String paramValue = null;
 
   @SerializedName("operator")
-  private Operator operator = null;
+  private FilterOperator operator = null;
 
   public UrlMatcher paramValue(String paramValue) {
     this.paramValue = paramValue;
@@ -46,7 +46,7 @@ public class UrlMatcher {
     this.paramValue = paramValue;
   }
 
-  public UrlMatcher operator(Operator operator) {
+  public UrlMatcher operator(FilterOperator operator) {
     this.operator = operator;
     return this;
   }
@@ -57,11 +57,11 @@ public class UrlMatcher {
    * @return operator
    */
   @ApiModelProperty(value = "")
-  public Operator getOperator() {
+  public FilterOperator getOperator() {
     return operator;
   }
 
-  public void setOperator(Operator operator) {
+  public void setOperator(FilterOperator operator) {
     this.operator = operator;
   }
 

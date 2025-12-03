@@ -27,6 +27,8 @@ public class GetWalletInvoice {
 
   public Long pageSize = null;
 
+  public String primaryKey = null;
+
   public List<String> fields = null;
 
   public void init() {
@@ -43,7 +45,8 @@ public class GetWalletInvoice {
     WalletInvoiceGetResponseData response =
         tencentAds
             .walletInvoice()
-            .walletInvoiceGet(accountId, walletIdList, dateRange, fundType, page, pageSize, fields);
+            .walletInvoiceGet(
+                accountId, walletIdList, dateRange, fundType, page, pageSize, primaryKey, fields);
     return response;
   }
 
