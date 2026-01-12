@@ -43,6 +43,7 @@ public class AdParamApiContainer extends ApiContainer {
    * @param marketingAssetOuterSpec (optional)
    * @param mpaSpec (optional)
    * @param dynamicAdType (optional)
+   * @param adgroupType (optional)
    * @param fields 返回参数的字段列表 (optional)
    * @return AdParamGetResponse
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
@@ -60,6 +61,7 @@ public class AdParamApiContainer extends ApiContainer {
       MarketingAssetOuterSpec marketingAssetOuterSpec,
       MpaSpec mpaSpec,
       String dynamicAdType,
+      String adgroupType,
       List<String> fields,
       Pair... headerPair)
       throws ApiException, TencentAdsResponseException {
@@ -76,6 +78,7 @@ public class AdParamApiContainer extends ApiContainer {
             marketingAssetOuterSpec,
             mpaSpec,
             dynamicAdType,
+            adgroupType,
             fields,
             headerPair);
     handleResponse(gson.toJson(resp));

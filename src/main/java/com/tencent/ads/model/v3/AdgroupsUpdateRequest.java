@@ -93,6 +93,9 @@ public class AdgroupsUpdateRequest {
   @SerializedName("auto_derived_creative_enabled")
   private Boolean autoDerivedCreativeEnabled = null;
 
+  @SerializedName("auto_derived_creative_preference")
+  private AutoDerivedCreativePreference autoDerivedCreativePreference = null;
+
   @SerializedName("configured_status")
   private ConfiguredStatus configuredStatus = null;
 
@@ -604,6 +607,27 @@ public class AdgroupsUpdateRequest {
     this.autoDerivedCreativeEnabled = autoDerivedCreativeEnabled;
   }
 
+  public AdgroupsUpdateRequest autoDerivedCreativePreference(
+      AutoDerivedCreativePreference autoDerivedCreativePreference) {
+    this.autoDerivedCreativePreference = autoDerivedCreativePreference;
+    return this;
+  }
+
+  /**
+   * Get autoDerivedCreativePreference
+   *
+   * @return autoDerivedCreativePreference
+   */
+  @ApiModelProperty(value = "")
+  public AutoDerivedCreativePreference getAutoDerivedCreativePreference() {
+    return autoDerivedCreativePreference;
+  }
+
+  public void setAutoDerivedCreativePreference(
+      AutoDerivedCreativePreference autoDerivedCreativePreference) {
+    this.autoDerivedCreativePreference = autoDerivedCreativePreference;
+  }
+
   public AdgroupsUpdateRequest configuredStatus(ConfiguredStatus configuredStatus) {
     this.configuredStatus = configuredStatus;
     return this;
@@ -941,6 +965,8 @@ public class AdgroupsUpdateRequest {
             this.autoDerivedLandingPageSwitch, adgroupsUpdateRequest.autoDerivedLandingPageSwitch)
         && Objects.equals(
             this.autoDerivedCreativeEnabled, adgroupsUpdateRequest.autoDerivedCreativeEnabled)
+        && Objects.equals(
+            this.autoDerivedCreativePreference, adgroupsUpdateRequest.autoDerivedCreativePreference)
         && Objects.equals(this.configuredStatus, adgroupsUpdateRequest.configuredStatus)
         && Objects.equals(
             this.flowOptimizationEnabled, adgroupsUpdateRequest.flowOptimizationEnabled)
@@ -989,6 +1015,7 @@ public class AdgroupsUpdateRequest {
         autoAcquisitionBudget,
         autoDerivedLandingPageSwitch,
         autoDerivedCreativeEnabled,
+        autoDerivedCreativePreference,
         configuredStatus,
         flowOptimizationEnabled,
         poiList,

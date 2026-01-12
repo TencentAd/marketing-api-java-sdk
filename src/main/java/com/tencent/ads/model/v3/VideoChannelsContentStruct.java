@@ -27,6 +27,9 @@ public class VideoChannelsContentStruct {
   @SerializedName("wechat_channels_account_id")
   private String wechatChannelsAccountId = null;
 
+  @SerializedName("mini_game_tracking_parameter")
+  private String miniGameTrackingParameter = null;
+
   public VideoChannelsContentStruct adExportId(String adExportId) {
     this.adExportId = adExportId;
     return this;
@@ -65,6 +68,25 @@ public class VideoChannelsContentStruct {
     this.wechatChannelsAccountId = wechatChannelsAccountId;
   }
 
+  public VideoChannelsContentStruct miniGameTrackingParameter(String miniGameTrackingParameter) {
+    this.miniGameTrackingParameter = miniGameTrackingParameter;
+    return this;
+  }
+
+  /**
+   * Get miniGameTrackingParameter
+   *
+   * @return miniGameTrackingParameter
+   */
+  @ApiModelProperty(value = "")
+  public String getMiniGameTrackingParameter() {
+    return miniGameTrackingParameter;
+  }
+
+  public void setMiniGameTrackingParameter(String miniGameTrackingParameter) {
+    this.miniGameTrackingParameter = miniGameTrackingParameter;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -76,12 +98,14 @@ public class VideoChannelsContentStruct {
     VideoChannelsContentStruct videoChannelsContentStruct = (VideoChannelsContentStruct) o;
     return Objects.equals(this.adExportId, videoChannelsContentStruct.adExportId)
         && Objects.equals(
-            this.wechatChannelsAccountId, videoChannelsContentStruct.wechatChannelsAccountId);
+            this.wechatChannelsAccountId, videoChannelsContentStruct.wechatChannelsAccountId)
+        && Objects.equals(
+            this.miniGameTrackingParameter, videoChannelsContentStruct.miniGameTrackingParameter);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(adExportId, wechatChannelsAccountId);
+    return Objects.hash(adExportId, wechatChannelsAccountId, miniGameTrackingParameter);
   }
 
   @Override

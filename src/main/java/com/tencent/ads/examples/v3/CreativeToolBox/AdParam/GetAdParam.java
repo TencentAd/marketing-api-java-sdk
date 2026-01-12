@@ -38,6 +38,8 @@ public class GetAdParam {
 
   public String dynamicAdType = null;
 
+  public String adgroupType = null;
+
   public List<String> fields = null;
 
   public void init() {
@@ -66,6 +68,7 @@ public class GetAdParam {
                 marketingAssetOuterSpec,
                 mpaSpec,
                 dynamicAdType,
+                adgroupType,
                 fields);
     return response;
   }

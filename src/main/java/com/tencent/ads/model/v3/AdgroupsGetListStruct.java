@@ -140,6 +140,9 @@ public class AdgroupsGetListStruct {
   @SerializedName("auto_derived_creative_enabled")
   private Boolean autoDerivedCreativeEnabled = null;
 
+  @SerializedName("auto_derived_creative_preference")
+  private AutoDerivedCreativePreference autoDerivedCreativePreference = null;
+
   @SerializedName("search_expand_targeting_switch")
   private SearchExpandTargetingSwitch searchExpandTargetingSwitch = null;
 
@@ -1017,6 +1020,27 @@ public class AdgroupsGetListStruct {
     this.autoDerivedCreativeEnabled = autoDerivedCreativeEnabled;
   }
 
+  public AdgroupsGetListStruct autoDerivedCreativePreference(
+      AutoDerivedCreativePreference autoDerivedCreativePreference) {
+    this.autoDerivedCreativePreference = autoDerivedCreativePreference;
+    return this;
+  }
+
+  /**
+   * Get autoDerivedCreativePreference
+   *
+   * @return autoDerivedCreativePreference
+   */
+  @ApiModelProperty(value = "")
+  public AutoDerivedCreativePreference getAutoDerivedCreativePreference() {
+    return autoDerivedCreativePreference;
+  }
+
+  public void setAutoDerivedCreativePreference(
+      AutoDerivedCreativePreference autoDerivedCreativePreference) {
+    this.autoDerivedCreativePreference = autoDerivedCreativePreference;
+  }
+
   public AdgroupsGetListStruct searchExpandTargetingSwitch(
       SearchExpandTargetingSwitch searchExpandTargetingSwitch) {
     this.searchExpandTargetingSwitch = searchExpandTargetingSwitch;
@@ -1835,6 +1859,8 @@ public class AdgroupsGetListStruct {
         && Objects.equals(
             this.autoDerivedCreativeEnabled, adgroupsGetListStruct.autoDerivedCreativeEnabled)
         && Objects.equals(
+            this.autoDerivedCreativePreference, adgroupsGetListStruct.autoDerivedCreativePreference)
+        && Objects.equals(
             this.searchExpandTargetingSwitch, adgroupsGetListStruct.searchExpandTargetingSwitch)
         && Objects.equals(
             this.autoDerivedLandingPageSwitch, adgroupsGetListStruct.autoDerivedLandingPageSwitch)
@@ -1926,6 +1952,7 @@ public class AdgroupsGetListStruct {
         smartBidType,
         smartCostCap,
         autoDerivedCreativeEnabled,
+        autoDerivedCreativePreference,
         searchExpandTargetingSwitch,
         autoDerivedLandingPageSwitch,
         dataModelVersion,

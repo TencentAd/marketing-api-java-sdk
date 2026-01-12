@@ -1899,8 +1899,17 @@ public class ReportStruct {
   @SerializedName("clk_right_grid_pv")
   private Long clkRightGridPv = null;
 
+  @SerializedName("cvs_cpn_video_play_pv")
+  private Long cvsCpnVideoPlayPv = null;
+
   @SerializedName("cvs_cpn_video_play_uv")
   private Long cvsCpnVideoPlayUv = null;
+
+  @SerializedName("cvs_cpn_video_play_duration")
+  private Double cvsCpnVideoPlayDuration = null;
+
+  @SerializedName("avg_cpnplay_video_time")
+  private Double avgCpnplayVideoTime = null;
 
   @SerializedName("ad_monetization_cost")
   private Double adMonetizationCost = null;
@@ -2562,6 +2571,54 @@ public class ReportStruct {
   @SerializedName("clk_bh_anim_pv")
   private Long clkBhAnimPv = null;
 
+  @SerializedName("clk_bredpocket_pv")
+  private Long clkBredpocketPv = null;
+
+  @SerializedName("clk_br_sub_pv")
+  private Long clkBrSubPv = null;
+
+  @SerializedName("clk_br_share_pv")
+  private Long clkBrSharePv = null;
+
+  @SerializedName("clk_br_btn_pv")
+  private Long clkBrBtnPv = null;
+
+  @SerializedName("clk_br_drive_pv")
+  private Long clkBrDrivePv = null;
+
+  @SerializedName("clk_bquick_pv")
+  private Long clkBquickPv = null;
+
+  @SerializedName("clk_bapp_pv")
+  private Long clkBappPv = null;
+
+  @SerializedName("clk_bacount_pv")
+  private Long clkBacountPv = null;
+
+  @SerializedName("clk_ba_more_pv")
+  private Long clkBaMorePv = null;
+
+  @SerializedName("clk_bm_activity_pv")
+  private Long clkBmActivityPv = null;
+
+  @SerializedName("clk_bm_vertical_pv")
+  private Long clkBmVerticalPv = null;
+
+  @SerializedName("clk_bm_privilege_pv")
+  private Long clkBmPrivilegePv = null;
+
+  @SerializedName("clk_bm_series_pv")
+  private Long clkBmSeriesPv = null;
+
+  @SerializedName("clk_bm_detail_pv")
+  private Long clkBmDetailPv = null;
+
+  @SerializedName("clk_rps_pv")
+  private Long clkRpsPv = null;
+
+  @SerializedName("slider_pv")
+  private Long sliderPv = null;
+
   @SerializedName("adgroup_id")
   private Long adgroupId = null;
 
@@ -2588,96 +2645,6 @@ public class ReportStruct {
 
   @SerializedName("video_ids")
   private String videoIds = null;
-
-  @SerializedName("cvs_exp_pv")
-  private Long cvsExpPv = null;
-
-  @SerializedName("cvs_exp_uv")
-  private Long cvsExpUv = null;
-
-  @SerializedName("cvs_cpn_clk_pv")
-  private Long cvsCpnClkPv = null;
-
-  @SerializedName("cvs_cpn_clk_uv")
-  private Long cvsCpnClkUv = null;
-
-  @SerializedName("cvs_cpn_exp_pv")
-  private Long cvsCpnExpPv = null;
-
-  @SerializedName("cvs_cpn_exp_uv")
-  private Long cvsCpnExpUv = null;
-
-  @SerializedName("cvs_cpn_exp_duration")
-  private Double cvsCpnExpDuration = null;
-
-  @SerializedName("cvs_cpn_btn_clk_pv")
-  private Long cvsCpnBtnClkPv = null;
-
-  @SerializedName("cvs_cpn_btn_clk_uv")
-  private Long cvsCpnBtnClkUv = null;
-
-  @SerializedName("cvs_cpn_clk_dedup_pv")
-  private Long cvsCpnClkDedupPv = null;
-
-  @SerializedName("cvs_cpn_video_play_pv")
-  private Long cvsCpnVideoPlayPv = null;
-
-  @SerializedName("cvs_cpn_video_play_duration")
-  private Double cvsCpnVideoPlayDuration = null;
-
-  @SerializedName("cvs_cpn_video_play_half_uv")
-  private Long cvsCpnVideoPlayHalfUv = null;
-
-  @SerializedName("cvs_cpn_video_play_fin_uv")
-  private Long cvsCpnVideoPlayFinUv = null;
-
-  @SerializedName("cvs_cpn_media_play_pv")
-  private Long cvsCpnMediaPlayPv = null;
-
-  @SerializedName("cvs_cpn_media_play_uv")
-  private Long cvsCpnMediaPlayUv = null;
-
-  @SerializedName("cvs_cpn_media_play_duration")
-  private Double cvsCpnMediaPlayDuration = null;
-
-  @SerializedName("cvs_cpn_media_play_half_uv")
-  private Long cvsCpnMediaPlayHalfUv = null;
-
-  @SerializedName("cvs_cpn_media_play_fin_uv")
-  private Long cvsCpnMediaPlayFinUv = null;
-
-  @SerializedName("avg_cvs_viewtime")
-  private Double avgCvsViewtime = null;
-
-  @SerializedName("avg_cpnexp_viewtime")
-  private Double avgCpnexpViewtime = null;
-
-  @SerializedName("avg_cpnplay_media_time")
-  private Double avgCpnplayMediaTime = null;
-
-  @SerializedName("cpnclk_button_pv_rate")
-  private Double cpnclkButtonPvRate = null;
-
-  @SerializedName("cpnplay_video_and_media_pv")
-  private Long cpnplayVideoAndMediaPv = null;
-
-  @SerializedName("cpnplay_video_and_media_fin_uv")
-  private Long cpnplayVideoAndMediaFinUv = null;
-
-  @SerializedName("cpnplay_video_and_media_time")
-  private Double cpnplayVideoAndMediaTime = null;
-
-  @SerializedName("canvas_hb_single_receive_exp_pv")
-  private Long canvasHbSingleReceiveExpPv = null;
-
-  @SerializedName("canvas_hb_single_send_exp_pv")
-  private Long canvasHbSingleSendExpPv = null;
-
-  @SerializedName("canvas_hb_double_receive_exp_pv")
-  private Long canvasHbDoubleReceiveExpPv = null;
-
-  @SerializedName("canvas_hb_double_send_exp_pv")
-  private Long canvasHbDoubleSendExpPv = null;
 
   @SerializedName("hour")
   private Long hour = null;
@@ -2711,9 +2678,6 @@ public class ReportStruct {
 
   @SerializedName("real_cost_top")
   private Long realCostTop = null;
-
-  @SerializedName("lan_button_click_rate")
-  private Double lanButtonClickRate = null;
 
   @SerializedName("queryword")
   private String queryword = null;
@@ -14642,6 +14606,25 @@ public class ReportStruct {
     this.clkRightGridPv = clkRightGridPv;
   }
 
+  public ReportStruct cvsCpnVideoPlayPv(Long cvsCpnVideoPlayPv) {
+    this.cvsCpnVideoPlayPv = cvsCpnVideoPlayPv;
+    return this;
+  }
+
+  /**
+   * Get cvsCpnVideoPlayPv
+   *
+   * @return cvsCpnVideoPlayPv
+   */
+  @ApiModelProperty(value = "")
+  public Long getCvsCpnVideoPlayPv() {
+    return cvsCpnVideoPlayPv;
+  }
+
+  public void setCvsCpnVideoPlayPv(Long cvsCpnVideoPlayPv) {
+    this.cvsCpnVideoPlayPv = cvsCpnVideoPlayPv;
+  }
+
   public ReportStruct cvsCpnVideoPlayUv(Long cvsCpnVideoPlayUv) {
     this.cvsCpnVideoPlayUv = cvsCpnVideoPlayUv;
     return this;
@@ -14659,6 +14642,44 @@ public class ReportStruct {
 
   public void setCvsCpnVideoPlayUv(Long cvsCpnVideoPlayUv) {
     this.cvsCpnVideoPlayUv = cvsCpnVideoPlayUv;
+  }
+
+  public ReportStruct cvsCpnVideoPlayDuration(Double cvsCpnVideoPlayDuration) {
+    this.cvsCpnVideoPlayDuration = cvsCpnVideoPlayDuration;
+    return this;
+  }
+
+  /**
+   * Get cvsCpnVideoPlayDuration
+   *
+   * @return cvsCpnVideoPlayDuration
+   */
+  @ApiModelProperty(value = "")
+  public Double getCvsCpnVideoPlayDuration() {
+    return cvsCpnVideoPlayDuration;
+  }
+
+  public void setCvsCpnVideoPlayDuration(Double cvsCpnVideoPlayDuration) {
+    this.cvsCpnVideoPlayDuration = cvsCpnVideoPlayDuration;
+  }
+
+  public ReportStruct avgCpnplayVideoTime(Double avgCpnplayVideoTime) {
+    this.avgCpnplayVideoTime = avgCpnplayVideoTime;
+    return this;
+  }
+
+  /**
+   * Get avgCpnplayVideoTime
+   *
+   * @return avgCpnplayVideoTime
+   */
+  @ApiModelProperty(value = "")
+  public Double getAvgCpnplayVideoTime() {
+    return avgCpnplayVideoTime;
+  }
+
+  public void setAvgCpnplayVideoTime(Double avgCpnplayVideoTime) {
+    this.avgCpnplayVideoTime = avgCpnplayVideoTime;
   }
 
   public ReportStruct adMonetizationCost(Double adMonetizationCost) {
@@ -18851,6 +18872,310 @@ public class ReportStruct {
     this.clkBhAnimPv = clkBhAnimPv;
   }
 
+  public ReportStruct clkBredpocketPv(Long clkBredpocketPv) {
+    this.clkBredpocketPv = clkBredpocketPv;
+    return this;
+  }
+
+  /**
+   * Get clkBredpocketPv
+   *
+   * @return clkBredpocketPv
+   */
+  @ApiModelProperty(value = "")
+  public Long getClkBredpocketPv() {
+    return clkBredpocketPv;
+  }
+
+  public void setClkBredpocketPv(Long clkBredpocketPv) {
+    this.clkBredpocketPv = clkBredpocketPv;
+  }
+
+  public ReportStruct clkBrSubPv(Long clkBrSubPv) {
+    this.clkBrSubPv = clkBrSubPv;
+    return this;
+  }
+
+  /**
+   * Get clkBrSubPv
+   *
+   * @return clkBrSubPv
+   */
+  @ApiModelProperty(value = "")
+  public Long getClkBrSubPv() {
+    return clkBrSubPv;
+  }
+
+  public void setClkBrSubPv(Long clkBrSubPv) {
+    this.clkBrSubPv = clkBrSubPv;
+  }
+
+  public ReportStruct clkBrSharePv(Long clkBrSharePv) {
+    this.clkBrSharePv = clkBrSharePv;
+    return this;
+  }
+
+  /**
+   * Get clkBrSharePv
+   *
+   * @return clkBrSharePv
+   */
+  @ApiModelProperty(value = "")
+  public Long getClkBrSharePv() {
+    return clkBrSharePv;
+  }
+
+  public void setClkBrSharePv(Long clkBrSharePv) {
+    this.clkBrSharePv = clkBrSharePv;
+  }
+
+  public ReportStruct clkBrBtnPv(Long clkBrBtnPv) {
+    this.clkBrBtnPv = clkBrBtnPv;
+    return this;
+  }
+
+  /**
+   * Get clkBrBtnPv
+   *
+   * @return clkBrBtnPv
+   */
+  @ApiModelProperty(value = "")
+  public Long getClkBrBtnPv() {
+    return clkBrBtnPv;
+  }
+
+  public void setClkBrBtnPv(Long clkBrBtnPv) {
+    this.clkBrBtnPv = clkBrBtnPv;
+  }
+
+  public ReportStruct clkBrDrivePv(Long clkBrDrivePv) {
+    this.clkBrDrivePv = clkBrDrivePv;
+    return this;
+  }
+
+  /**
+   * Get clkBrDrivePv
+   *
+   * @return clkBrDrivePv
+   */
+  @ApiModelProperty(value = "")
+  public Long getClkBrDrivePv() {
+    return clkBrDrivePv;
+  }
+
+  public void setClkBrDrivePv(Long clkBrDrivePv) {
+    this.clkBrDrivePv = clkBrDrivePv;
+  }
+
+  public ReportStruct clkBquickPv(Long clkBquickPv) {
+    this.clkBquickPv = clkBquickPv;
+    return this;
+  }
+
+  /**
+   * Get clkBquickPv
+   *
+   * @return clkBquickPv
+   */
+  @ApiModelProperty(value = "")
+  public Long getClkBquickPv() {
+    return clkBquickPv;
+  }
+
+  public void setClkBquickPv(Long clkBquickPv) {
+    this.clkBquickPv = clkBquickPv;
+  }
+
+  public ReportStruct clkBappPv(Long clkBappPv) {
+    this.clkBappPv = clkBappPv;
+    return this;
+  }
+
+  /**
+   * Get clkBappPv
+   *
+   * @return clkBappPv
+   */
+  @ApiModelProperty(value = "")
+  public Long getClkBappPv() {
+    return clkBappPv;
+  }
+
+  public void setClkBappPv(Long clkBappPv) {
+    this.clkBappPv = clkBappPv;
+  }
+
+  public ReportStruct clkBacountPv(Long clkBacountPv) {
+    this.clkBacountPv = clkBacountPv;
+    return this;
+  }
+
+  /**
+   * Get clkBacountPv
+   *
+   * @return clkBacountPv
+   */
+  @ApiModelProperty(value = "")
+  public Long getClkBacountPv() {
+    return clkBacountPv;
+  }
+
+  public void setClkBacountPv(Long clkBacountPv) {
+    this.clkBacountPv = clkBacountPv;
+  }
+
+  public ReportStruct clkBaMorePv(Long clkBaMorePv) {
+    this.clkBaMorePv = clkBaMorePv;
+    return this;
+  }
+
+  /**
+   * Get clkBaMorePv
+   *
+   * @return clkBaMorePv
+   */
+  @ApiModelProperty(value = "")
+  public Long getClkBaMorePv() {
+    return clkBaMorePv;
+  }
+
+  public void setClkBaMorePv(Long clkBaMorePv) {
+    this.clkBaMorePv = clkBaMorePv;
+  }
+
+  public ReportStruct clkBmActivityPv(Long clkBmActivityPv) {
+    this.clkBmActivityPv = clkBmActivityPv;
+    return this;
+  }
+
+  /**
+   * Get clkBmActivityPv
+   *
+   * @return clkBmActivityPv
+   */
+  @ApiModelProperty(value = "")
+  public Long getClkBmActivityPv() {
+    return clkBmActivityPv;
+  }
+
+  public void setClkBmActivityPv(Long clkBmActivityPv) {
+    this.clkBmActivityPv = clkBmActivityPv;
+  }
+
+  public ReportStruct clkBmVerticalPv(Long clkBmVerticalPv) {
+    this.clkBmVerticalPv = clkBmVerticalPv;
+    return this;
+  }
+
+  /**
+   * Get clkBmVerticalPv
+   *
+   * @return clkBmVerticalPv
+   */
+  @ApiModelProperty(value = "")
+  public Long getClkBmVerticalPv() {
+    return clkBmVerticalPv;
+  }
+
+  public void setClkBmVerticalPv(Long clkBmVerticalPv) {
+    this.clkBmVerticalPv = clkBmVerticalPv;
+  }
+
+  public ReportStruct clkBmPrivilegePv(Long clkBmPrivilegePv) {
+    this.clkBmPrivilegePv = clkBmPrivilegePv;
+    return this;
+  }
+
+  /**
+   * Get clkBmPrivilegePv
+   *
+   * @return clkBmPrivilegePv
+   */
+  @ApiModelProperty(value = "")
+  public Long getClkBmPrivilegePv() {
+    return clkBmPrivilegePv;
+  }
+
+  public void setClkBmPrivilegePv(Long clkBmPrivilegePv) {
+    this.clkBmPrivilegePv = clkBmPrivilegePv;
+  }
+
+  public ReportStruct clkBmSeriesPv(Long clkBmSeriesPv) {
+    this.clkBmSeriesPv = clkBmSeriesPv;
+    return this;
+  }
+
+  /**
+   * Get clkBmSeriesPv
+   *
+   * @return clkBmSeriesPv
+   */
+  @ApiModelProperty(value = "")
+  public Long getClkBmSeriesPv() {
+    return clkBmSeriesPv;
+  }
+
+  public void setClkBmSeriesPv(Long clkBmSeriesPv) {
+    this.clkBmSeriesPv = clkBmSeriesPv;
+  }
+
+  public ReportStruct clkBmDetailPv(Long clkBmDetailPv) {
+    this.clkBmDetailPv = clkBmDetailPv;
+    return this;
+  }
+
+  /**
+   * Get clkBmDetailPv
+   *
+   * @return clkBmDetailPv
+   */
+  @ApiModelProperty(value = "")
+  public Long getClkBmDetailPv() {
+    return clkBmDetailPv;
+  }
+
+  public void setClkBmDetailPv(Long clkBmDetailPv) {
+    this.clkBmDetailPv = clkBmDetailPv;
+  }
+
+  public ReportStruct clkRpsPv(Long clkRpsPv) {
+    this.clkRpsPv = clkRpsPv;
+    return this;
+  }
+
+  /**
+   * Get clkRpsPv
+   *
+   * @return clkRpsPv
+   */
+  @ApiModelProperty(value = "")
+  public Long getClkRpsPv() {
+    return clkRpsPv;
+  }
+
+  public void setClkRpsPv(Long clkRpsPv) {
+    this.clkRpsPv = clkRpsPv;
+  }
+
+  public ReportStruct sliderPv(Long sliderPv) {
+    this.sliderPv = sliderPv;
+    return this;
+  }
+
+  /**
+   * Get sliderPv
+   *
+   * @return sliderPv
+   */
+  @ApiModelProperty(value = "")
+  public Long getSliderPv() {
+    return sliderPv;
+  }
+
+  public void setSliderPv(Long sliderPv) {
+    this.sliderPv = sliderPv;
+  }
+
   public ReportStruct adgroupId(Long adgroupId) {
     this.adgroupId = adgroupId;
     return this;
@@ -19020,576 +19345,6 @@ public class ReportStruct {
 
   public void setVideoIds(String videoIds) {
     this.videoIds = videoIds;
-  }
-
-  public ReportStruct cvsExpPv(Long cvsExpPv) {
-    this.cvsExpPv = cvsExpPv;
-    return this;
-  }
-
-  /**
-   * Get cvsExpPv
-   *
-   * @return cvsExpPv
-   */
-  @ApiModelProperty(value = "")
-  public Long getCvsExpPv() {
-    return cvsExpPv;
-  }
-
-  public void setCvsExpPv(Long cvsExpPv) {
-    this.cvsExpPv = cvsExpPv;
-  }
-
-  public ReportStruct cvsExpUv(Long cvsExpUv) {
-    this.cvsExpUv = cvsExpUv;
-    return this;
-  }
-
-  /**
-   * Get cvsExpUv
-   *
-   * @return cvsExpUv
-   */
-  @ApiModelProperty(value = "")
-  public Long getCvsExpUv() {
-    return cvsExpUv;
-  }
-
-  public void setCvsExpUv(Long cvsExpUv) {
-    this.cvsExpUv = cvsExpUv;
-  }
-
-  public ReportStruct cvsCpnClkPv(Long cvsCpnClkPv) {
-    this.cvsCpnClkPv = cvsCpnClkPv;
-    return this;
-  }
-
-  /**
-   * Get cvsCpnClkPv
-   *
-   * @return cvsCpnClkPv
-   */
-  @ApiModelProperty(value = "")
-  public Long getCvsCpnClkPv() {
-    return cvsCpnClkPv;
-  }
-
-  public void setCvsCpnClkPv(Long cvsCpnClkPv) {
-    this.cvsCpnClkPv = cvsCpnClkPv;
-  }
-
-  public ReportStruct cvsCpnClkUv(Long cvsCpnClkUv) {
-    this.cvsCpnClkUv = cvsCpnClkUv;
-    return this;
-  }
-
-  /**
-   * Get cvsCpnClkUv
-   *
-   * @return cvsCpnClkUv
-   */
-  @ApiModelProperty(value = "")
-  public Long getCvsCpnClkUv() {
-    return cvsCpnClkUv;
-  }
-
-  public void setCvsCpnClkUv(Long cvsCpnClkUv) {
-    this.cvsCpnClkUv = cvsCpnClkUv;
-  }
-
-  public ReportStruct cvsCpnExpPv(Long cvsCpnExpPv) {
-    this.cvsCpnExpPv = cvsCpnExpPv;
-    return this;
-  }
-
-  /**
-   * Get cvsCpnExpPv
-   *
-   * @return cvsCpnExpPv
-   */
-  @ApiModelProperty(value = "")
-  public Long getCvsCpnExpPv() {
-    return cvsCpnExpPv;
-  }
-
-  public void setCvsCpnExpPv(Long cvsCpnExpPv) {
-    this.cvsCpnExpPv = cvsCpnExpPv;
-  }
-
-  public ReportStruct cvsCpnExpUv(Long cvsCpnExpUv) {
-    this.cvsCpnExpUv = cvsCpnExpUv;
-    return this;
-  }
-
-  /**
-   * Get cvsCpnExpUv
-   *
-   * @return cvsCpnExpUv
-   */
-  @ApiModelProperty(value = "")
-  public Long getCvsCpnExpUv() {
-    return cvsCpnExpUv;
-  }
-
-  public void setCvsCpnExpUv(Long cvsCpnExpUv) {
-    this.cvsCpnExpUv = cvsCpnExpUv;
-  }
-
-  public ReportStruct cvsCpnExpDuration(Double cvsCpnExpDuration) {
-    this.cvsCpnExpDuration = cvsCpnExpDuration;
-    return this;
-  }
-
-  /**
-   * Get cvsCpnExpDuration
-   *
-   * @return cvsCpnExpDuration
-   */
-  @ApiModelProperty(value = "")
-  public Double getCvsCpnExpDuration() {
-    return cvsCpnExpDuration;
-  }
-
-  public void setCvsCpnExpDuration(Double cvsCpnExpDuration) {
-    this.cvsCpnExpDuration = cvsCpnExpDuration;
-  }
-
-  public ReportStruct cvsCpnBtnClkPv(Long cvsCpnBtnClkPv) {
-    this.cvsCpnBtnClkPv = cvsCpnBtnClkPv;
-    return this;
-  }
-
-  /**
-   * Get cvsCpnBtnClkPv
-   *
-   * @return cvsCpnBtnClkPv
-   */
-  @ApiModelProperty(value = "")
-  public Long getCvsCpnBtnClkPv() {
-    return cvsCpnBtnClkPv;
-  }
-
-  public void setCvsCpnBtnClkPv(Long cvsCpnBtnClkPv) {
-    this.cvsCpnBtnClkPv = cvsCpnBtnClkPv;
-  }
-
-  public ReportStruct cvsCpnBtnClkUv(Long cvsCpnBtnClkUv) {
-    this.cvsCpnBtnClkUv = cvsCpnBtnClkUv;
-    return this;
-  }
-
-  /**
-   * Get cvsCpnBtnClkUv
-   *
-   * @return cvsCpnBtnClkUv
-   */
-  @ApiModelProperty(value = "")
-  public Long getCvsCpnBtnClkUv() {
-    return cvsCpnBtnClkUv;
-  }
-
-  public void setCvsCpnBtnClkUv(Long cvsCpnBtnClkUv) {
-    this.cvsCpnBtnClkUv = cvsCpnBtnClkUv;
-  }
-
-  public ReportStruct cvsCpnClkDedupPv(Long cvsCpnClkDedupPv) {
-    this.cvsCpnClkDedupPv = cvsCpnClkDedupPv;
-    return this;
-  }
-
-  /**
-   * Get cvsCpnClkDedupPv
-   *
-   * @return cvsCpnClkDedupPv
-   */
-  @ApiModelProperty(value = "")
-  public Long getCvsCpnClkDedupPv() {
-    return cvsCpnClkDedupPv;
-  }
-
-  public void setCvsCpnClkDedupPv(Long cvsCpnClkDedupPv) {
-    this.cvsCpnClkDedupPv = cvsCpnClkDedupPv;
-  }
-
-  public ReportStruct cvsCpnVideoPlayPv(Long cvsCpnVideoPlayPv) {
-    this.cvsCpnVideoPlayPv = cvsCpnVideoPlayPv;
-    return this;
-  }
-
-  /**
-   * Get cvsCpnVideoPlayPv
-   *
-   * @return cvsCpnVideoPlayPv
-   */
-  @ApiModelProperty(value = "")
-  public Long getCvsCpnVideoPlayPv() {
-    return cvsCpnVideoPlayPv;
-  }
-
-  public void setCvsCpnVideoPlayPv(Long cvsCpnVideoPlayPv) {
-    this.cvsCpnVideoPlayPv = cvsCpnVideoPlayPv;
-  }
-
-  public ReportStruct cvsCpnVideoPlayDuration(Double cvsCpnVideoPlayDuration) {
-    this.cvsCpnVideoPlayDuration = cvsCpnVideoPlayDuration;
-    return this;
-  }
-
-  /**
-   * Get cvsCpnVideoPlayDuration
-   *
-   * @return cvsCpnVideoPlayDuration
-   */
-  @ApiModelProperty(value = "")
-  public Double getCvsCpnVideoPlayDuration() {
-    return cvsCpnVideoPlayDuration;
-  }
-
-  public void setCvsCpnVideoPlayDuration(Double cvsCpnVideoPlayDuration) {
-    this.cvsCpnVideoPlayDuration = cvsCpnVideoPlayDuration;
-  }
-
-  public ReportStruct cvsCpnVideoPlayHalfUv(Long cvsCpnVideoPlayHalfUv) {
-    this.cvsCpnVideoPlayHalfUv = cvsCpnVideoPlayHalfUv;
-    return this;
-  }
-
-  /**
-   * Get cvsCpnVideoPlayHalfUv
-   *
-   * @return cvsCpnVideoPlayHalfUv
-   */
-  @ApiModelProperty(value = "")
-  public Long getCvsCpnVideoPlayHalfUv() {
-    return cvsCpnVideoPlayHalfUv;
-  }
-
-  public void setCvsCpnVideoPlayHalfUv(Long cvsCpnVideoPlayHalfUv) {
-    this.cvsCpnVideoPlayHalfUv = cvsCpnVideoPlayHalfUv;
-  }
-
-  public ReportStruct cvsCpnVideoPlayFinUv(Long cvsCpnVideoPlayFinUv) {
-    this.cvsCpnVideoPlayFinUv = cvsCpnVideoPlayFinUv;
-    return this;
-  }
-
-  /**
-   * Get cvsCpnVideoPlayFinUv
-   *
-   * @return cvsCpnVideoPlayFinUv
-   */
-  @ApiModelProperty(value = "")
-  public Long getCvsCpnVideoPlayFinUv() {
-    return cvsCpnVideoPlayFinUv;
-  }
-
-  public void setCvsCpnVideoPlayFinUv(Long cvsCpnVideoPlayFinUv) {
-    this.cvsCpnVideoPlayFinUv = cvsCpnVideoPlayFinUv;
-  }
-
-  public ReportStruct cvsCpnMediaPlayPv(Long cvsCpnMediaPlayPv) {
-    this.cvsCpnMediaPlayPv = cvsCpnMediaPlayPv;
-    return this;
-  }
-
-  /**
-   * Get cvsCpnMediaPlayPv
-   *
-   * @return cvsCpnMediaPlayPv
-   */
-  @ApiModelProperty(value = "")
-  public Long getCvsCpnMediaPlayPv() {
-    return cvsCpnMediaPlayPv;
-  }
-
-  public void setCvsCpnMediaPlayPv(Long cvsCpnMediaPlayPv) {
-    this.cvsCpnMediaPlayPv = cvsCpnMediaPlayPv;
-  }
-
-  public ReportStruct cvsCpnMediaPlayUv(Long cvsCpnMediaPlayUv) {
-    this.cvsCpnMediaPlayUv = cvsCpnMediaPlayUv;
-    return this;
-  }
-
-  /**
-   * Get cvsCpnMediaPlayUv
-   *
-   * @return cvsCpnMediaPlayUv
-   */
-  @ApiModelProperty(value = "")
-  public Long getCvsCpnMediaPlayUv() {
-    return cvsCpnMediaPlayUv;
-  }
-
-  public void setCvsCpnMediaPlayUv(Long cvsCpnMediaPlayUv) {
-    this.cvsCpnMediaPlayUv = cvsCpnMediaPlayUv;
-  }
-
-  public ReportStruct cvsCpnMediaPlayDuration(Double cvsCpnMediaPlayDuration) {
-    this.cvsCpnMediaPlayDuration = cvsCpnMediaPlayDuration;
-    return this;
-  }
-
-  /**
-   * Get cvsCpnMediaPlayDuration
-   *
-   * @return cvsCpnMediaPlayDuration
-   */
-  @ApiModelProperty(value = "")
-  public Double getCvsCpnMediaPlayDuration() {
-    return cvsCpnMediaPlayDuration;
-  }
-
-  public void setCvsCpnMediaPlayDuration(Double cvsCpnMediaPlayDuration) {
-    this.cvsCpnMediaPlayDuration = cvsCpnMediaPlayDuration;
-  }
-
-  public ReportStruct cvsCpnMediaPlayHalfUv(Long cvsCpnMediaPlayHalfUv) {
-    this.cvsCpnMediaPlayHalfUv = cvsCpnMediaPlayHalfUv;
-    return this;
-  }
-
-  /**
-   * Get cvsCpnMediaPlayHalfUv
-   *
-   * @return cvsCpnMediaPlayHalfUv
-   */
-  @ApiModelProperty(value = "")
-  public Long getCvsCpnMediaPlayHalfUv() {
-    return cvsCpnMediaPlayHalfUv;
-  }
-
-  public void setCvsCpnMediaPlayHalfUv(Long cvsCpnMediaPlayHalfUv) {
-    this.cvsCpnMediaPlayHalfUv = cvsCpnMediaPlayHalfUv;
-  }
-
-  public ReportStruct cvsCpnMediaPlayFinUv(Long cvsCpnMediaPlayFinUv) {
-    this.cvsCpnMediaPlayFinUv = cvsCpnMediaPlayFinUv;
-    return this;
-  }
-
-  /**
-   * Get cvsCpnMediaPlayFinUv
-   *
-   * @return cvsCpnMediaPlayFinUv
-   */
-  @ApiModelProperty(value = "")
-  public Long getCvsCpnMediaPlayFinUv() {
-    return cvsCpnMediaPlayFinUv;
-  }
-
-  public void setCvsCpnMediaPlayFinUv(Long cvsCpnMediaPlayFinUv) {
-    this.cvsCpnMediaPlayFinUv = cvsCpnMediaPlayFinUv;
-  }
-
-  public ReportStruct avgCvsViewtime(Double avgCvsViewtime) {
-    this.avgCvsViewtime = avgCvsViewtime;
-    return this;
-  }
-
-  /**
-   * Get avgCvsViewtime
-   *
-   * @return avgCvsViewtime
-   */
-  @ApiModelProperty(value = "")
-  public Double getAvgCvsViewtime() {
-    return avgCvsViewtime;
-  }
-
-  public void setAvgCvsViewtime(Double avgCvsViewtime) {
-    this.avgCvsViewtime = avgCvsViewtime;
-  }
-
-  public ReportStruct avgCpnexpViewtime(Double avgCpnexpViewtime) {
-    this.avgCpnexpViewtime = avgCpnexpViewtime;
-    return this;
-  }
-
-  /**
-   * Get avgCpnexpViewtime
-   *
-   * @return avgCpnexpViewtime
-   */
-  @ApiModelProperty(value = "")
-  public Double getAvgCpnexpViewtime() {
-    return avgCpnexpViewtime;
-  }
-
-  public void setAvgCpnexpViewtime(Double avgCpnexpViewtime) {
-    this.avgCpnexpViewtime = avgCpnexpViewtime;
-  }
-
-  public ReportStruct avgCpnplayMediaTime(Double avgCpnplayMediaTime) {
-    this.avgCpnplayMediaTime = avgCpnplayMediaTime;
-    return this;
-  }
-
-  /**
-   * Get avgCpnplayMediaTime
-   *
-   * @return avgCpnplayMediaTime
-   */
-  @ApiModelProperty(value = "")
-  public Double getAvgCpnplayMediaTime() {
-    return avgCpnplayMediaTime;
-  }
-
-  public void setAvgCpnplayMediaTime(Double avgCpnplayMediaTime) {
-    this.avgCpnplayMediaTime = avgCpnplayMediaTime;
-  }
-
-  public ReportStruct cpnclkButtonPvRate(Double cpnclkButtonPvRate) {
-    this.cpnclkButtonPvRate = cpnclkButtonPvRate;
-    return this;
-  }
-
-  /**
-   * Get cpnclkButtonPvRate
-   *
-   * @return cpnclkButtonPvRate
-   */
-  @ApiModelProperty(value = "")
-  public Double getCpnclkButtonPvRate() {
-    return cpnclkButtonPvRate;
-  }
-
-  public void setCpnclkButtonPvRate(Double cpnclkButtonPvRate) {
-    this.cpnclkButtonPvRate = cpnclkButtonPvRate;
-  }
-
-  public ReportStruct cpnplayVideoAndMediaPv(Long cpnplayVideoAndMediaPv) {
-    this.cpnplayVideoAndMediaPv = cpnplayVideoAndMediaPv;
-    return this;
-  }
-
-  /**
-   * Get cpnplayVideoAndMediaPv
-   *
-   * @return cpnplayVideoAndMediaPv
-   */
-  @ApiModelProperty(value = "")
-  public Long getCpnplayVideoAndMediaPv() {
-    return cpnplayVideoAndMediaPv;
-  }
-
-  public void setCpnplayVideoAndMediaPv(Long cpnplayVideoAndMediaPv) {
-    this.cpnplayVideoAndMediaPv = cpnplayVideoAndMediaPv;
-  }
-
-  public ReportStruct cpnplayVideoAndMediaFinUv(Long cpnplayVideoAndMediaFinUv) {
-    this.cpnplayVideoAndMediaFinUv = cpnplayVideoAndMediaFinUv;
-    return this;
-  }
-
-  /**
-   * Get cpnplayVideoAndMediaFinUv
-   *
-   * @return cpnplayVideoAndMediaFinUv
-   */
-  @ApiModelProperty(value = "")
-  public Long getCpnplayVideoAndMediaFinUv() {
-    return cpnplayVideoAndMediaFinUv;
-  }
-
-  public void setCpnplayVideoAndMediaFinUv(Long cpnplayVideoAndMediaFinUv) {
-    this.cpnplayVideoAndMediaFinUv = cpnplayVideoAndMediaFinUv;
-  }
-
-  public ReportStruct cpnplayVideoAndMediaTime(Double cpnplayVideoAndMediaTime) {
-    this.cpnplayVideoAndMediaTime = cpnplayVideoAndMediaTime;
-    return this;
-  }
-
-  /**
-   * Get cpnplayVideoAndMediaTime
-   *
-   * @return cpnplayVideoAndMediaTime
-   */
-  @ApiModelProperty(value = "")
-  public Double getCpnplayVideoAndMediaTime() {
-    return cpnplayVideoAndMediaTime;
-  }
-
-  public void setCpnplayVideoAndMediaTime(Double cpnplayVideoAndMediaTime) {
-    this.cpnplayVideoAndMediaTime = cpnplayVideoAndMediaTime;
-  }
-
-  public ReportStruct canvasHbSingleReceiveExpPv(Long canvasHbSingleReceiveExpPv) {
-    this.canvasHbSingleReceiveExpPv = canvasHbSingleReceiveExpPv;
-    return this;
-  }
-
-  /**
-   * Get canvasHbSingleReceiveExpPv
-   *
-   * @return canvasHbSingleReceiveExpPv
-   */
-  @ApiModelProperty(value = "")
-  public Long getCanvasHbSingleReceiveExpPv() {
-    return canvasHbSingleReceiveExpPv;
-  }
-
-  public void setCanvasHbSingleReceiveExpPv(Long canvasHbSingleReceiveExpPv) {
-    this.canvasHbSingleReceiveExpPv = canvasHbSingleReceiveExpPv;
-  }
-
-  public ReportStruct canvasHbSingleSendExpPv(Long canvasHbSingleSendExpPv) {
-    this.canvasHbSingleSendExpPv = canvasHbSingleSendExpPv;
-    return this;
-  }
-
-  /**
-   * Get canvasHbSingleSendExpPv
-   *
-   * @return canvasHbSingleSendExpPv
-   */
-  @ApiModelProperty(value = "")
-  public Long getCanvasHbSingleSendExpPv() {
-    return canvasHbSingleSendExpPv;
-  }
-
-  public void setCanvasHbSingleSendExpPv(Long canvasHbSingleSendExpPv) {
-    this.canvasHbSingleSendExpPv = canvasHbSingleSendExpPv;
-  }
-
-  public ReportStruct canvasHbDoubleReceiveExpPv(Long canvasHbDoubleReceiveExpPv) {
-    this.canvasHbDoubleReceiveExpPv = canvasHbDoubleReceiveExpPv;
-    return this;
-  }
-
-  /**
-   * Get canvasHbDoubleReceiveExpPv
-   *
-   * @return canvasHbDoubleReceiveExpPv
-   */
-  @ApiModelProperty(value = "")
-  public Long getCanvasHbDoubleReceiveExpPv() {
-    return canvasHbDoubleReceiveExpPv;
-  }
-
-  public void setCanvasHbDoubleReceiveExpPv(Long canvasHbDoubleReceiveExpPv) {
-    this.canvasHbDoubleReceiveExpPv = canvasHbDoubleReceiveExpPv;
-  }
-
-  public ReportStruct canvasHbDoubleSendExpPv(Long canvasHbDoubleSendExpPv) {
-    this.canvasHbDoubleSendExpPv = canvasHbDoubleSendExpPv;
-    return this;
-  }
-
-  /**
-   * Get canvasHbDoubleSendExpPv
-   *
-   * @return canvasHbDoubleSendExpPv
-   */
-  @ApiModelProperty(value = "")
-  public Long getCanvasHbDoubleSendExpPv() {
-    return canvasHbDoubleSendExpPv;
-  }
-
-  public void setCanvasHbDoubleSendExpPv(Long canvasHbDoubleSendExpPv) {
-    this.canvasHbDoubleSendExpPv = canvasHbDoubleSendExpPv;
   }
 
   public ReportStruct hour(Long hour) {
@@ -19799,25 +19554,6 @@ public class ReportStruct {
 
   public void setRealCostTop(Long realCostTop) {
     this.realCostTop = realCostTop;
-  }
-
-  public ReportStruct lanButtonClickRate(Double lanButtonClickRate) {
-    this.lanButtonClickRate = lanButtonClickRate;
-    return this;
-  }
-
-  /**
-   * Get lanButtonClickRate
-   *
-   * @return lanButtonClickRate
-   */
-  @ApiModelProperty(value = "")
-  public Double getLanButtonClickRate() {
-    return lanButtonClickRate;
-  }
-
-  public void setLanButtonClickRate(Double lanButtonClickRate) {
-    this.lanButtonClickRate = lanButtonClickRate;
   }
 
   public ReportStruct queryword(String queryword) {
@@ -20671,7 +20407,10 @@ public class ReportStruct {
         && Objects.equals(this.clkLeftGridInfoPv, reportStruct.clkLeftGridInfoPv)
         && Objects.equals(this.clkLeftGridMiddlePv, reportStruct.clkLeftGridMiddlePv)
         && Objects.equals(this.clkRightGridPv, reportStruct.clkRightGridPv)
+        && Objects.equals(this.cvsCpnVideoPlayPv, reportStruct.cvsCpnVideoPlayPv)
         && Objects.equals(this.cvsCpnVideoPlayUv, reportStruct.cvsCpnVideoPlayUv)
+        && Objects.equals(this.cvsCpnVideoPlayDuration, reportStruct.cvsCpnVideoPlayDuration)
+        && Objects.equals(this.avgCpnplayVideoTime, reportStruct.avgCpnplayVideoTime)
         && Objects.equals(this.adMonetizationCost, reportStruct.adMonetizationCost)
         && Objects.equals(this.adMonetizationRoi, reportStruct.adMonetizationRoi)
         && Objects.equals(this.adMonetizationActive3dPv, reportStruct.adMonetizationActive3dPv)
@@ -20948,6 +20687,22 @@ public class ReportStruct {
         && Objects.equals(this.orderNetRoi, reportStruct.orderNetRoi)
         && Objects.equals(this.orderNetPvCost, reportStruct.orderNetPvCost)
         && Objects.equals(this.clkBhAnimPv, reportStruct.clkBhAnimPv)
+        && Objects.equals(this.clkBredpocketPv, reportStruct.clkBredpocketPv)
+        && Objects.equals(this.clkBrSubPv, reportStruct.clkBrSubPv)
+        && Objects.equals(this.clkBrSharePv, reportStruct.clkBrSharePv)
+        && Objects.equals(this.clkBrBtnPv, reportStruct.clkBrBtnPv)
+        && Objects.equals(this.clkBrDrivePv, reportStruct.clkBrDrivePv)
+        && Objects.equals(this.clkBquickPv, reportStruct.clkBquickPv)
+        && Objects.equals(this.clkBappPv, reportStruct.clkBappPv)
+        && Objects.equals(this.clkBacountPv, reportStruct.clkBacountPv)
+        && Objects.equals(this.clkBaMorePv, reportStruct.clkBaMorePv)
+        && Objects.equals(this.clkBmActivityPv, reportStruct.clkBmActivityPv)
+        && Objects.equals(this.clkBmVerticalPv, reportStruct.clkBmVerticalPv)
+        && Objects.equals(this.clkBmPrivilegePv, reportStruct.clkBmPrivilegePv)
+        && Objects.equals(this.clkBmSeriesPv, reportStruct.clkBmSeriesPv)
+        && Objects.equals(this.clkBmDetailPv, reportStruct.clkBmDetailPv)
+        && Objects.equals(this.clkRpsPv, reportStruct.clkRpsPv)
+        && Objects.equals(this.sliderPv, reportStruct.sliderPv)
         && Objects.equals(this.adgroupId, reportStruct.adgroupId)
         && Objects.equals(this.adgroupName, reportStruct.adgroupName)
         && Objects.equals(this.dynamicCreativeId, reportStruct.dynamicCreativeId)
@@ -20957,36 +20712,6 @@ public class ReportStruct {
         && Objects.equals(this.componentType, reportStruct.componentType)
         && Objects.equals(this.imageIds, reportStruct.imageIds)
         && Objects.equals(this.videoIds, reportStruct.videoIds)
-        && Objects.equals(this.cvsExpPv, reportStruct.cvsExpPv)
-        && Objects.equals(this.cvsExpUv, reportStruct.cvsExpUv)
-        && Objects.equals(this.cvsCpnClkPv, reportStruct.cvsCpnClkPv)
-        && Objects.equals(this.cvsCpnClkUv, reportStruct.cvsCpnClkUv)
-        && Objects.equals(this.cvsCpnExpPv, reportStruct.cvsCpnExpPv)
-        && Objects.equals(this.cvsCpnExpUv, reportStruct.cvsCpnExpUv)
-        && Objects.equals(this.cvsCpnExpDuration, reportStruct.cvsCpnExpDuration)
-        && Objects.equals(this.cvsCpnBtnClkPv, reportStruct.cvsCpnBtnClkPv)
-        && Objects.equals(this.cvsCpnBtnClkUv, reportStruct.cvsCpnBtnClkUv)
-        && Objects.equals(this.cvsCpnClkDedupPv, reportStruct.cvsCpnClkDedupPv)
-        && Objects.equals(this.cvsCpnVideoPlayPv, reportStruct.cvsCpnVideoPlayPv)
-        && Objects.equals(this.cvsCpnVideoPlayDuration, reportStruct.cvsCpnVideoPlayDuration)
-        && Objects.equals(this.cvsCpnVideoPlayHalfUv, reportStruct.cvsCpnVideoPlayHalfUv)
-        && Objects.equals(this.cvsCpnVideoPlayFinUv, reportStruct.cvsCpnVideoPlayFinUv)
-        && Objects.equals(this.cvsCpnMediaPlayPv, reportStruct.cvsCpnMediaPlayPv)
-        && Objects.equals(this.cvsCpnMediaPlayUv, reportStruct.cvsCpnMediaPlayUv)
-        && Objects.equals(this.cvsCpnMediaPlayDuration, reportStruct.cvsCpnMediaPlayDuration)
-        && Objects.equals(this.cvsCpnMediaPlayHalfUv, reportStruct.cvsCpnMediaPlayHalfUv)
-        && Objects.equals(this.cvsCpnMediaPlayFinUv, reportStruct.cvsCpnMediaPlayFinUv)
-        && Objects.equals(this.avgCvsViewtime, reportStruct.avgCvsViewtime)
-        && Objects.equals(this.avgCpnexpViewtime, reportStruct.avgCpnexpViewtime)
-        && Objects.equals(this.avgCpnplayMediaTime, reportStruct.avgCpnplayMediaTime)
-        && Objects.equals(this.cpnclkButtonPvRate, reportStruct.cpnclkButtonPvRate)
-        && Objects.equals(this.cpnplayVideoAndMediaPv, reportStruct.cpnplayVideoAndMediaPv)
-        && Objects.equals(this.cpnplayVideoAndMediaFinUv, reportStruct.cpnplayVideoAndMediaFinUv)
-        && Objects.equals(this.cpnplayVideoAndMediaTime, reportStruct.cpnplayVideoAndMediaTime)
-        && Objects.equals(this.canvasHbSingleReceiveExpPv, reportStruct.canvasHbSingleReceiveExpPv)
-        && Objects.equals(this.canvasHbSingleSendExpPv, reportStruct.canvasHbSingleSendExpPv)
-        && Objects.equals(this.canvasHbDoubleReceiveExpPv, reportStruct.canvasHbDoubleReceiveExpPv)
-        && Objects.equals(this.canvasHbDoubleSendExpPv, reportStruct.canvasHbDoubleSendExpPv)
         && Objects.equals(this.hour, reportStruct.hour)
         && Objects.equals(this.channelId, reportStruct.channelId)
         && Objects.equals(this.buyingType, reportStruct.buyingType)
@@ -20998,7 +20723,6 @@ public class ReportStruct {
         && Objects.equals(this.expOverallTopPv, reportStruct.expOverallTopPv)
         && Objects.equals(this.clkTopPv, reportStruct.clkTopPv)
         && Objects.equals(this.realCostTop, reportStruct.realCostTop)
-        && Objects.equals(this.lanButtonClickRate, reportStruct.lanButtonClickRate)
         && Objects.equals(this.queryword, reportStruct.queryword)
         && Objects.equals(this.imageId, reportStruct.imageId)
         && Objects.equals(this.videoId, reportStruct.videoId)
@@ -21638,7 +21362,10 @@ public class ReportStruct {
         clkLeftGridInfoPv,
         clkLeftGridMiddlePv,
         clkRightGridPv,
+        cvsCpnVideoPlayPv,
         cvsCpnVideoPlayUv,
+        cvsCpnVideoPlayDuration,
+        avgCpnplayVideoTime,
         adMonetizationCost,
         adMonetizationRoi,
         adMonetizationActive3dPv,
@@ -21859,6 +21586,22 @@ public class ReportStruct {
         orderNetRoi,
         orderNetPvCost,
         clkBhAnimPv,
+        clkBredpocketPv,
+        clkBrSubPv,
+        clkBrSharePv,
+        clkBrBtnPv,
+        clkBrDrivePv,
+        clkBquickPv,
+        clkBappPv,
+        clkBacountPv,
+        clkBaMorePv,
+        clkBmActivityPv,
+        clkBmVerticalPv,
+        clkBmPrivilegePv,
+        clkBmSeriesPv,
+        clkBmDetailPv,
+        clkRpsPv,
+        sliderPv,
         adgroupId,
         adgroupName,
         dynamicCreativeId,
@@ -21868,36 +21611,6 @@ public class ReportStruct {
         componentType,
         imageIds,
         videoIds,
-        cvsExpPv,
-        cvsExpUv,
-        cvsCpnClkPv,
-        cvsCpnClkUv,
-        cvsCpnExpPv,
-        cvsCpnExpUv,
-        cvsCpnExpDuration,
-        cvsCpnBtnClkPv,
-        cvsCpnBtnClkUv,
-        cvsCpnClkDedupPv,
-        cvsCpnVideoPlayPv,
-        cvsCpnVideoPlayDuration,
-        cvsCpnVideoPlayHalfUv,
-        cvsCpnVideoPlayFinUv,
-        cvsCpnMediaPlayPv,
-        cvsCpnMediaPlayUv,
-        cvsCpnMediaPlayDuration,
-        cvsCpnMediaPlayHalfUv,
-        cvsCpnMediaPlayFinUv,
-        avgCvsViewtime,
-        avgCpnexpViewtime,
-        avgCpnplayMediaTime,
-        cpnclkButtonPvRate,
-        cpnplayVideoAndMediaPv,
-        cpnplayVideoAndMediaFinUv,
-        cpnplayVideoAndMediaTime,
-        canvasHbSingleReceiveExpPv,
-        canvasHbSingleSendExpPv,
-        canvasHbDoubleReceiveExpPv,
-        canvasHbDoubleSendExpPv,
         hour,
         channelId,
         buyingType,
@@ -21909,7 +21622,6 @@ public class ReportStruct {
         expOverallTopPv,
         clkTopPv,
         realCostTop,
-        lanButtonClickRate,
         queryword,
         imageId,
         videoId,

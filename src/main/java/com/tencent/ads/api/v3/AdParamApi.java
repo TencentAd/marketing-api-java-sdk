@@ -64,6 +64,7 @@ public class AdParamApi {
    * @param marketingAssetOuterSpec (optional)
    * @param mpaSpec (optional)
    * @param dynamicAdType (optional)
+   * @param adgroupType (optional)
    * @param fields 返回参数的字段列表 (optional)
    * @param progressListener Progress listener
    * @param progressRequestListener Progress request listener
@@ -82,6 +83,7 @@ public class AdParamApi {
       MarketingAssetOuterSpec marketingAssetOuterSpec,
       MpaSpec mpaSpec,
       String dynamicAdType,
+      String adgroupType,
       List<String> fields,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
@@ -121,6 +123,8 @@ public class AdParamApi {
     if (mpaSpec != null) localVarQueryParams.addAll(apiClient.parameterToPair("mpa_spec", mpaSpec));
     if (dynamicAdType != null)
       localVarQueryParams.addAll(apiClient.parameterToPair("dynamic_ad_type", dynamicAdType));
+    if (adgroupType != null)
+      localVarQueryParams.addAll(apiClient.parameterToPair("adgroup_type", adgroupType));
     if (fields != null)
       localVarCollectionQueryParams.addAll(apiClient.parameterToPairs("multi", "fields", fields));
 
@@ -186,6 +190,7 @@ public class AdParamApi {
       MarketingAssetOuterSpec marketingAssetOuterSpec,
       MpaSpec mpaSpec,
       String dynamicAdType,
+      String adgroupType,
       List<String> fields,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
@@ -229,6 +234,7 @@ public class AdParamApi {
             marketingAssetOuterSpec,
             mpaSpec,
             dynamicAdType,
+            adgroupType,
             fields,
             progressListener,
             progressRequestListener,
@@ -250,6 +256,7 @@ public class AdParamApi {
    * @param marketingAssetOuterSpec (optional)
    * @param mpaSpec (optional)
    * @param dynamicAdType (optional)
+   * @param adgroupType (optional)
    * @param fields 返回参数的字段列表 (optional)
    * @return AdParamGetResponse
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
@@ -267,6 +274,7 @@ public class AdParamApi {
       MarketingAssetOuterSpec marketingAssetOuterSpec,
       MpaSpec mpaSpec,
       String dynamicAdType,
+      String adgroupType,
       List<String> fields,
       Pair... headerPair)
       throws ApiException {
@@ -283,6 +291,7 @@ public class AdParamApi {
             marketingAssetOuterSpec,
             mpaSpec,
             dynamicAdType,
+            adgroupType,
             fields,
             headerPair);
     return resp.getData();
@@ -302,6 +311,7 @@ public class AdParamApi {
    * @param marketingAssetOuterSpec (optional)
    * @param mpaSpec (optional)
    * @param dynamicAdType (optional)
+   * @param adgroupType (optional)
    * @param fields 返回参数的字段列表 (optional)
    * @return ApiResponse&lt;AdParamGetResponse&gt;
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
@@ -319,6 +329,7 @@ public class AdParamApi {
       MarketingAssetOuterSpec marketingAssetOuterSpec,
       MpaSpec mpaSpec,
       String dynamicAdType,
+      String adgroupType,
       List<String> fields,
       Pair... headerPair)
       throws ApiException {
@@ -335,6 +346,7 @@ public class AdParamApi {
             marketingAssetOuterSpec,
             mpaSpec,
             dynamicAdType,
+            adgroupType,
             fields,
             null,
             null,
@@ -357,6 +369,7 @@ public class AdParamApi {
    * @param marketingAssetOuterSpec (optional)
    * @param mpaSpec (optional)
    * @param dynamicAdType (optional)
+   * @param adgroupType (optional)
    * @param fields 返回参数的字段列表 (optional)
    * @param callback The callback to be executed when the API call finishes
    * @return The request call
@@ -374,6 +387,7 @@ public class AdParamApi {
       MarketingAssetOuterSpec marketingAssetOuterSpec,
       MpaSpec mpaSpec,
       String dynamicAdType,
+      String adgroupType,
       List<String> fields,
       final ApiCallback<AdParamGetResponse> callback,
       Pair... headerPair)
@@ -413,6 +427,7 @@ public class AdParamApi {
             marketingAssetOuterSpec,
             mpaSpec,
             dynamicAdType,
+            adgroupType,
             fields,
             progressListener,
             progressRequestListener,

@@ -1578,6 +1578,21 @@ public class TargetReportApiListStruct {
   @SerializedName("channels_share_pla_pv")
   private Long channelsSharePlaPv = null;
 
+  @SerializedName("channels_read_offline_pv")
+  private Long channelsReadOfflinePv = null;
+
+  @SerializedName("channels_heart_offline_pv")
+  private Long channelsHeartOfflinePv = null;
+
+  @SerializedName("channels_comment_offline_pv")
+  private Long channelsCommentOfflinePv = null;
+
+  @SerializedName("channels_share_offline_pv")
+  private Long channelsShareOfflinePv = null;
+
+  @SerializedName("channels_fav_offline_pv")
+  private Long channelsFavOfflinePv = null;
+
   @SerializedName("video_live_subscribe_count")
   private Long videoLiveSubscribeCount = null;
 
@@ -1731,6 +1746,78 @@ public class TargetReportApiListStruct {
   @SerializedName("duration_key_page_per_user")
   private Double durationKeyPagePerUser = null;
 
+  @SerializedName("clk_ad_element_pv")
+  private Long clkAdElementPv = null;
+
+  @SerializedName("channels_praise_pla_pv")
+  private Long channelsPraisePlaPv = null;
+
+  @SerializedName("clk_redpocket_btn_get_pv")
+  private Long clkRedpocketBtnGetPv = null;
+
+  @SerializedName("clk_redpocket_btn_share_pv")
+  private Long clkRedpocketBtnSharePv = null;
+
+  @SerializedName("clk_redpocket_btn_jump_pv")
+  private Long clkRedpocketBtnJumpPv = null;
+
+  @SerializedName("clk_goods_header_pv")
+  private Long clkGoodsHeaderPv = null;
+
+  @SerializedName("clk_goods_info_pv")
+  private Long clkGoodsInfoPv = null;
+
+  @SerializedName("clk_goods_recommend_pv")
+  private Long clkGoodsRecommendPv = null;
+
+  @SerializedName("clk_middle_showwindow_pv")
+  private Long clkMiddleShowwindowPv = null;
+
+  @SerializedName("clk_footer_pv")
+  private Long clkFooterPv = null;
+
+  @SerializedName("clk_middle_goods_pv")
+  private Long clkMiddleGoodsPv = null;
+
+  @SerializedName("clk_middle_btn_pv")
+  private Long clkMiddleBtnPv = null;
+
+  @SerializedName("clk_middle_section_pv")
+  private Long clkMiddleSectionPv = null;
+
+  @SerializedName("clk_middle_gridview_pv")
+  private Long clkMiddleGridviewPv = null;
+
+  @SerializedName("clk_break_pv")
+  private Long clkBreakPv = null;
+
+  @SerializedName("clk_redpocket_shake_pv")
+  private Long clkRedpocketShakePv = null;
+
+  @SerializedName("clk_related_video_pv")
+  private Long clkRelatedVideoPv = null;
+
+  @SerializedName("clk_brand_pedia_pv")
+  private Long clkBrandPediaPv = null;
+
+  @SerializedName("clk_activity_news_pv")
+  private Long clkActivityNewsPv = null;
+
+  @SerializedName("clk_left_grid_info_pv")
+  private Long clkLeftGridInfoPv = null;
+
+  @SerializedName("clk_left_grid_middle_pv")
+  private Long clkLeftGridMiddlePv = null;
+
+  @SerializedName("clk_right_grid_pv")
+  private Long clkRightGridPv = null;
+
+  @SerializedName("cvs_cpn_video_play_pv")
+  private Long cvsCpnVideoPlayPv = null;
+
+  @SerializedName("cvs_cpn_video_play_duration")
+  private Double cvsCpnVideoPlayDuration = null;
+
   @SerializedName("ad_monetization_cost")
   private Double adMonetizationCost = null;
 
@@ -1752,8 +1839,17 @@ public class TargetReportApiListStruct {
   @SerializedName("clk_redpocket_btn_subscribe_pv")
   private Long clkRedpocketBtnSubscribePv = null;
 
+  @SerializedName("clk_shortcut_menus_pv")
+  private Long clkShortcutMenusPv = null;
+
   @SerializedName("channels_detail_btn_pv")
   private Long channelsDetailBtnPv = null;
+
+  @SerializedName("zone_header_live_click_cnt")
+  private Long zoneHeaderLiveClickCnt = null;
+
+  @SerializedName("clk_slider_card_product_pv")
+  private Long clkSliderCardProductPv = null;
 
   @SerializedName("after_add_wecom_negative_pv")
   private Long afterAddWecomNegativePv = null;
@@ -1953,8 +2049,17 @@ public class TargetReportApiListStruct {
   @SerializedName("purchase_reg_active_1d_amount")
   private Long purchaseRegActive1dAmount = null;
 
+  @SerializedName("clk_hot_element_pv")
+  private Long clkHotElementPv = null;
+
+  @SerializedName("hot_element_ctr")
+  private Double hotElementCtr = null;
+
   @SerializedName("security_negative_dedup_pv")
   private Long securityNegativeDedupPv = null;
+
+  @SerializedName("clk_interpage_btn_pv")
+  private Long clkInterpageBtnPv = null;
 
   @SerializedName("ad_monetization_pla_reg_active_1d_mix_roi")
   private Double adMonetizationPlaRegActive1dMixRoi = null;
@@ -2037,8 +2142,17 @@ public class TargetReportApiListStruct {
   @SerializedName("view_drama_dedup_pv_cost")
   private Long viewDramaDedupPvCost = null;
 
+  @SerializedName("clk_selling_points_element_pv")
+  private Long clkSellingPointsElementPv = null;
+
   @SerializedName("visit_store_first_dedup_pv")
   private Long visitStoreFirstDedupPv = null;
+
+  @SerializedName("clk_fullwidth_background_pv")
+  private Long clkFullwidthBackgroundPv = null;
+
+  @SerializedName("clk_header_area_pv")
+  private Long clkHeaderAreaPv = null;
 
   @SerializedName("order_first_dedup_pv")
   private Long orderFirstDedupPv = null;
@@ -2057,6 +2171,9 @@ public class TargetReportApiListStruct {
 
   @SerializedName("store_pay_pv_off")
   private Long storePayPvOff = null;
+
+  @SerializedName("clk_selling_points_element_uv")
+  private Long clkSellingPointsElementUv = null;
 
   @SerializedName("order_refund_active_24h_pv")
   private Long orderRefundActive24hPv = null;
@@ -2351,6 +2468,54 @@ public class TargetReportApiListStruct {
 
   @SerializedName("clk_bh_anim_pv")
   private Long clkBhAnimPv = null;
+
+  @SerializedName("clk_bredpocket_pv")
+  private Long clkBredpocketPv = null;
+
+  @SerializedName("clk_br_sub_pv")
+  private Long clkBrSubPv = null;
+
+  @SerializedName("clk_br_share_pv")
+  private Long clkBrSharePv = null;
+
+  @SerializedName("clk_br_btn_pv")
+  private Long clkBrBtnPv = null;
+
+  @SerializedName("clk_br_drive_pv")
+  private Long clkBrDrivePv = null;
+
+  @SerializedName("clk_bquick_pv")
+  private Long clkBquickPv = null;
+
+  @SerializedName("clk_bapp_pv")
+  private Long clkBappPv = null;
+
+  @SerializedName("clk_bacount_pv")
+  private Long clkBacountPv = null;
+
+  @SerializedName("clk_ba_more_pv")
+  private Long clkBaMorePv = null;
+
+  @SerializedName("clk_bm_activity_pv")
+  private Long clkBmActivityPv = null;
+
+  @SerializedName("clk_bm_vertical_pv")
+  private Long clkBmVerticalPv = null;
+
+  @SerializedName("clk_bm_privilege_pv")
+  private Long clkBmPrivilegePv = null;
+
+  @SerializedName("clk_bm_series_pv")
+  private Long clkBmSeriesPv = null;
+
+  @SerializedName("clk_bm_detail_pv")
+  private Long clkBmDetailPv = null;
+
+  @SerializedName("clk_rps_pv")
+  private Long clkRpsPv = null;
+
+  @SerializedName("slider_pv")
+  private Long sliderPv = null;
 
   @SerializedName("age_id")
   private Long ageId = null;
@@ -12266,6 +12431,101 @@ public class TargetReportApiListStruct {
     this.channelsSharePlaPv = channelsSharePlaPv;
   }
 
+  public TargetReportApiListStruct channelsReadOfflinePv(Long channelsReadOfflinePv) {
+    this.channelsReadOfflinePv = channelsReadOfflinePv;
+    return this;
+  }
+
+  /**
+   * Get channelsReadOfflinePv
+   *
+   * @return channelsReadOfflinePv
+   */
+  @ApiModelProperty(value = "")
+  public Long getChannelsReadOfflinePv() {
+    return channelsReadOfflinePv;
+  }
+
+  public void setChannelsReadOfflinePv(Long channelsReadOfflinePv) {
+    this.channelsReadOfflinePv = channelsReadOfflinePv;
+  }
+
+  public TargetReportApiListStruct channelsHeartOfflinePv(Long channelsHeartOfflinePv) {
+    this.channelsHeartOfflinePv = channelsHeartOfflinePv;
+    return this;
+  }
+
+  /**
+   * Get channelsHeartOfflinePv
+   *
+   * @return channelsHeartOfflinePv
+   */
+  @ApiModelProperty(value = "")
+  public Long getChannelsHeartOfflinePv() {
+    return channelsHeartOfflinePv;
+  }
+
+  public void setChannelsHeartOfflinePv(Long channelsHeartOfflinePv) {
+    this.channelsHeartOfflinePv = channelsHeartOfflinePv;
+  }
+
+  public TargetReportApiListStruct channelsCommentOfflinePv(Long channelsCommentOfflinePv) {
+    this.channelsCommentOfflinePv = channelsCommentOfflinePv;
+    return this;
+  }
+
+  /**
+   * Get channelsCommentOfflinePv
+   *
+   * @return channelsCommentOfflinePv
+   */
+  @ApiModelProperty(value = "")
+  public Long getChannelsCommentOfflinePv() {
+    return channelsCommentOfflinePv;
+  }
+
+  public void setChannelsCommentOfflinePv(Long channelsCommentOfflinePv) {
+    this.channelsCommentOfflinePv = channelsCommentOfflinePv;
+  }
+
+  public TargetReportApiListStruct channelsShareOfflinePv(Long channelsShareOfflinePv) {
+    this.channelsShareOfflinePv = channelsShareOfflinePv;
+    return this;
+  }
+
+  /**
+   * Get channelsShareOfflinePv
+   *
+   * @return channelsShareOfflinePv
+   */
+  @ApiModelProperty(value = "")
+  public Long getChannelsShareOfflinePv() {
+    return channelsShareOfflinePv;
+  }
+
+  public void setChannelsShareOfflinePv(Long channelsShareOfflinePv) {
+    this.channelsShareOfflinePv = channelsShareOfflinePv;
+  }
+
+  public TargetReportApiListStruct channelsFavOfflinePv(Long channelsFavOfflinePv) {
+    this.channelsFavOfflinePv = channelsFavOfflinePv;
+    return this;
+  }
+
+  /**
+   * Get channelsFavOfflinePv
+   *
+   * @return channelsFavOfflinePv
+   */
+  @ApiModelProperty(value = "")
+  public Long getChannelsFavOfflinePv() {
+    return channelsFavOfflinePv;
+  }
+
+  public void setChannelsFavOfflinePv(Long channelsFavOfflinePv) {
+    this.channelsFavOfflinePv = channelsFavOfflinePv;
+  }
+
   public TargetReportApiListStruct videoLiveSubscribeCount(Long videoLiveSubscribeCount) {
     this.videoLiveSubscribeCount = videoLiveSubscribeCount;
     return this;
@@ -13240,6 +13500,462 @@ public class TargetReportApiListStruct {
     this.durationKeyPagePerUser = durationKeyPagePerUser;
   }
 
+  public TargetReportApiListStruct clkAdElementPv(Long clkAdElementPv) {
+    this.clkAdElementPv = clkAdElementPv;
+    return this;
+  }
+
+  /**
+   * Get clkAdElementPv
+   *
+   * @return clkAdElementPv
+   */
+  @ApiModelProperty(value = "")
+  public Long getClkAdElementPv() {
+    return clkAdElementPv;
+  }
+
+  public void setClkAdElementPv(Long clkAdElementPv) {
+    this.clkAdElementPv = clkAdElementPv;
+  }
+
+  public TargetReportApiListStruct channelsPraisePlaPv(Long channelsPraisePlaPv) {
+    this.channelsPraisePlaPv = channelsPraisePlaPv;
+    return this;
+  }
+
+  /**
+   * Get channelsPraisePlaPv
+   *
+   * @return channelsPraisePlaPv
+   */
+  @ApiModelProperty(value = "")
+  public Long getChannelsPraisePlaPv() {
+    return channelsPraisePlaPv;
+  }
+
+  public void setChannelsPraisePlaPv(Long channelsPraisePlaPv) {
+    this.channelsPraisePlaPv = channelsPraisePlaPv;
+  }
+
+  public TargetReportApiListStruct clkRedpocketBtnGetPv(Long clkRedpocketBtnGetPv) {
+    this.clkRedpocketBtnGetPv = clkRedpocketBtnGetPv;
+    return this;
+  }
+
+  /**
+   * Get clkRedpocketBtnGetPv
+   *
+   * @return clkRedpocketBtnGetPv
+   */
+  @ApiModelProperty(value = "")
+  public Long getClkRedpocketBtnGetPv() {
+    return clkRedpocketBtnGetPv;
+  }
+
+  public void setClkRedpocketBtnGetPv(Long clkRedpocketBtnGetPv) {
+    this.clkRedpocketBtnGetPv = clkRedpocketBtnGetPv;
+  }
+
+  public TargetReportApiListStruct clkRedpocketBtnSharePv(Long clkRedpocketBtnSharePv) {
+    this.clkRedpocketBtnSharePv = clkRedpocketBtnSharePv;
+    return this;
+  }
+
+  /**
+   * Get clkRedpocketBtnSharePv
+   *
+   * @return clkRedpocketBtnSharePv
+   */
+  @ApiModelProperty(value = "")
+  public Long getClkRedpocketBtnSharePv() {
+    return clkRedpocketBtnSharePv;
+  }
+
+  public void setClkRedpocketBtnSharePv(Long clkRedpocketBtnSharePv) {
+    this.clkRedpocketBtnSharePv = clkRedpocketBtnSharePv;
+  }
+
+  public TargetReportApiListStruct clkRedpocketBtnJumpPv(Long clkRedpocketBtnJumpPv) {
+    this.clkRedpocketBtnJumpPv = clkRedpocketBtnJumpPv;
+    return this;
+  }
+
+  /**
+   * Get clkRedpocketBtnJumpPv
+   *
+   * @return clkRedpocketBtnJumpPv
+   */
+  @ApiModelProperty(value = "")
+  public Long getClkRedpocketBtnJumpPv() {
+    return clkRedpocketBtnJumpPv;
+  }
+
+  public void setClkRedpocketBtnJumpPv(Long clkRedpocketBtnJumpPv) {
+    this.clkRedpocketBtnJumpPv = clkRedpocketBtnJumpPv;
+  }
+
+  public TargetReportApiListStruct clkGoodsHeaderPv(Long clkGoodsHeaderPv) {
+    this.clkGoodsHeaderPv = clkGoodsHeaderPv;
+    return this;
+  }
+
+  /**
+   * Get clkGoodsHeaderPv
+   *
+   * @return clkGoodsHeaderPv
+   */
+  @ApiModelProperty(value = "")
+  public Long getClkGoodsHeaderPv() {
+    return clkGoodsHeaderPv;
+  }
+
+  public void setClkGoodsHeaderPv(Long clkGoodsHeaderPv) {
+    this.clkGoodsHeaderPv = clkGoodsHeaderPv;
+  }
+
+  public TargetReportApiListStruct clkGoodsInfoPv(Long clkGoodsInfoPv) {
+    this.clkGoodsInfoPv = clkGoodsInfoPv;
+    return this;
+  }
+
+  /**
+   * Get clkGoodsInfoPv
+   *
+   * @return clkGoodsInfoPv
+   */
+  @ApiModelProperty(value = "")
+  public Long getClkGoodsInfoPv() {
+    return clkGoodsInfoPv;
+  }
+
+  public void setClkGoodsInfoPv(Long clkGoodsInfoPv) {
+    this.clkGoodsInfoPv = clkGoodsInfoPv;
+  }
+
+  public TargetReportApiListStruct clkGoodsRecommendPv(Long clkGoodsRecommendPv) {
+    this.clkGoodsRecommendPv = clkGoodsRecommendPv;
+    return this;
+  }
+
+  /**
+   * Get clkGoodsRecommendPv
+   *
+   * @return clkGoodsRecommendPv
+   */
+  @ApiModelProperty(value = "")
+  public Long getClkGoodsRecommendPv() {
+    return clkGoodsRecommendPv;
+  }
+
+  public void setClkGoodsRecommendPv(Long clkGoodsRecommendPv) {
+    this.clkGoodsRecommendPv = clkGoodsRecommendPv;
+  }
+
+  public TargetReportApiListStruct clkMiddleShowwindowPv(Long clkMiddleShowwindowPv) {
+    this.clkMiddleShowwindowPv = clkMiddleShowwindowPv;
+    return this;
+  }
+
+  /**
+   * Get clkMiddleShowwindowPv
+   *
+   * @return clkMiddleShowwindowPv
+   */
+  @ApiModelProperty(value = "")
+  public Long getClkMiddleShowwindowPv() {
+    return clkMiddleShowwindowPv;
+  }
+
+  public void setClkMiddleShowwindowPv(Long clkMiddleShowwindowPv) {
+    this.clkMiddleShowwindowPv = clkMiddleShowwindowPv;
+  }
+
+  public TargetReportApiListStruct clkFooterPv(Long clkFooterPv) {
+    this.clkFooterPv = clkFooterPv;
+    return this;
+  }
+
+  /**
+   * Get clkFooterPv
+   *
+   * @return clkFooterPv
+   */
+  @ApiModelProperty(value = "")
+  public Long getClkFooterPv() {
+    return clkFooterPv;
+  }
+
+  public void setClkFooterPv(Long clkFooterPv) {
+    this.clkFooterPv = clkFooterPv;
+  }
+
+  public TargetReportApiListStruct clkMiddleGoodsPv(Long clkMiddleGoodsPv) {
+    this.clkMiddleGoodsPv = clkMiddleGoodsPv;
+    return this;
+  }
+
+  /**
+   * Get clkMiddleGoodsPv
+   *
+   * @return clkMiddleGoodsPv
+   */
+  @ApiModelProperty(value = "")
+  public Long getClkMiddleGoodsPv() {
+    return clkMiddleGoodsPv;
+  }
+
+  public void setClkMiddleGoodsPv(Long clkMiddleGoodsPv) {
+    this.clkMiddleGoodsPv = clkMiddleGoodsPv;
+  }
+
+  public TargetReportApiListStruct clkMiddleBtnPv(Long clkMiddleBtnPv) {
+    this.clkMiddleBtnPv = clkMiddleBtnPv;
+    return this;
+  }
+
+  /**
+   * Get clkMiddleBtnPv
+   *
+   * @return clkMiddleBtnPv
+   */
+  @ApiModelProperty(value = "")
+  public Long getClkMiddleBtnPv() {
+    return clkMiddleBtnPv;
+  }
+
+  public void setClkMiddleBtnPv(Long clkMiddleBtnPv) {
+    this.clkMiddleBtnPv = clkMiddleBtnPv;
+  }
+
+  public TargetReportApiListStruct clkMiddleSectionPv(Long clkMiddleSectionPv) {
+    this.clkMiddleSectionPv = clkMiddleSectionPv;
+    return this;
+  }
+
+  /**
+   * Get clkMiddleSectionPv
+   *
+   * @return clkMiddleSectionPv
+   */
+  @ApiModelProperty(value = "")
+  public Long getClkMiddleSectionPv() {
+    return clkMiddleSectionPv;
+  }
+
+  public void setClkMiddleSectionPv(Long clkMiddleSectionPv) {
+    this.clkMiddleSectionPv = clkMiddleSectionPv;
+  }
+
+  public TargetReportApiListStruct clkMiddleGridviewPv(Long clkMiddleGridviewPv) {
+    this.clkMiddleGridviewPv = clkMiddleGridviewPv;
+    return this;
+  }
+
+  /**
+   * Get clkMiddleGridviewPv
+   *
+   * @return clkMiddleGridviewPv
+   */
+  @ApiModelProperty(value = "")
+  public Long getClkMiddleGridviewPv() {
+    return clkMiddleGridviewPv;
+  }
+
+  public void setClkMiddleGridviewPv(Long clkMiddleGridviewPv) {
+    this.clkMiddleGridviewPv = clkMiddleGridviewPv;
+  }
+
+  public TargetReportApiListStruct clkBreakPv(Long clkBreakPv) {
+    this.clkBreakPv = clkBreakPv;
+    return this;
+  }
+
+  /**
+   * Get clkBreakPv
+   *
+   * @return clkBreakPv
+   */
+  @ApiModelProperty(value = "")
+  public Long getClkBreakPv() {
+    return clkBreakPv;
+  }
+
+  public void setClkBreakPv(Long clkBreakPv) {
+    this.clkBreakPv = clkBreakPv;
+  }
+
+  public TargetReportApiListStruct clkRedpocketShakePv(Long clkRedpocketShakePv) {
+    this.clkRedpocketShakePv = clkRedpocketShakePv;
+    return this;
+  }
+
+  /**
+   * Get clkRedpocketShakePv
+   *
+   * @return clkRedpocketShakePv
+   */
+  @ApiModelProperty(value = "")
+  public Long getClkRedpocketShakePv() {
+    return clkRedpocketShakePv;
+  }
+
+  public void setClkRedpocketShakePv(Long clkRedpocketShakePv) {
+    this.clkRedpocketShakePv = clkRedpocketShakePv;
+  }
+
+  public TargetReportApiListStruct clkRelatedVideoPv(Long clkRelatedVideoPv) {
+    this.clkRelatedVideoPv = clkRelatedVideoPv;
+    return this;
+  }
+
+  /**
+   * Get clkRelatedVideoPv
+   *
+   * @return clkRelatedVideoPv
+   */
+  @ApiModelProperty(value = "")
+  public Long getClkRelatedVideoPv() {
+    return clkRelatedVideoPv;
+  }
+
+  public void setClkRelatedVideoPv(Long clkRelatedVideoPv) {
+    this.clkRelatedVideoPv = clkRelatedVideoPv;
+  }
+
+  public TargetReportApiListStruct clkBrandPediaPv(Long clkBrandPediaPv) {
+    this.clkBrandPediaPv = clkBrandPediaPv;
+    return this;
+  }
+
+  /**
+   * Get clkBrandPediaPv
+   *
+   * @return clkBrandPediaPv
+   */
+  @ApiModelProperty(value = "")
+  public Long getClkBrandPediaPv() {
+    return clkBrandPediaPv;
+  }
+
+  public void setClkBrandPediaPv(Long clkBrandPediaPv) {
+    this.clkBrandPediaPv = clkBrandPediaPv;
+  }
+
+  public TargetReportApiListStruct clkActivityNewsPv(Long clkActivityNewsPv) {
+    this.clkActivityNewsPv = clkActivityNewsPv;
+    return this;
+  }
+
+  /**
+   * Get clkActivityNewsPv
+   *
+   * @return clkActivityNewsPv
+   */
+  @ApiModelProperty(value = "")
+  public Long getClkActivityNewsPv() {
+    return clkActivityNewsPv;
+  }
+
+  public void setClkActivityNewsPv(Long clkActivityNewsPv) {
+    this.clkActivityNewsPv = clkActivityNewsPv;
+  }
+
+  public TargetReportApiListStruct clkLeftGridInfoPv(Long clkLeftGridInfoPv) {
+    this.clkLeftGridInfoPv = clkLeftGridInfoPv;
+    return this;
+  }
+
+  /**
+   * Get clkLeftGridInfoPv
+   *
+   * @return clkLeftGridInfoPv
+   */
+  @ApiModelProperty(value = "")
+  public Long getClkLeftGridInfoPv() {
+    return clkLeftGridInfoPv;
+  }
+
+  public void setClkLeftGridInfoPv(Long clkLeftGridInfoPv) {
+    this.clkLeftGridInfoPv = clkLeftGridInfoPv;
+  }
+
+  public TargetReportApiListStruct clkLeftGridMiddlePv(Long clkLeftGridMiddlePv) {
+    this.clkLeftGridMiddlePv = clkLeftGridMiddlePv;
+    return this;
+  }
+
+  /**
+   * Get clkLeftGridMiddlePv
+   *
+   * @return clkLeftGridMiddlePv
+   */
+  @ApiModelProperty(value = "")
+  public Long getClkLeftGridMiddlePv() {
+    return clkLeftGridMiddlePv;
+  }
+
+  public void setClkLeftGridMiddlePv(Long clkLeftGridMiddlePv) {
+    this.clkLeftGridMiddlePv = clkLeftGridMiddlePv;
+  }
+
+  public TargetReportApiListStruct clkRightGridPv(Long clkRightGridPv) {
+    this.clkRightGridPv = clkRightGridPv;
+    return this;
+  }
+
+  /**
+   * Get clkRightGridPv
+   *
+   * @return clkRightGridPv
+   */
+  @ApiModelProperty(value = "")
+  public Long getClkRightGridPv() {
+    return clkRightGridPv;
+  }
+
+  public void setClkRightGridPv(Long clkRightGridPv) {
+    this.clkRightGridPv = clkRightGridPv;
+  }
+
+  public TargetReportApiListStruct cvsCpnVideoPlayPv(Long cvsCpnVideoPlayPv) {
+    this.cvsCpnVideoPlayPv = cvsCpnVideoPlayPv;
+    return this;
+  }
+
+  /**
+   * Get cvsCpnVideoPlayPv
+   *
+   * @return cvsCpnVideoPlayPv
+   */
+  @ApiModelProperty(value = "")
+  public Long getCvsCpnVideoPlayPv() {
+    return cvsCpnVideoPlayPv;
+  }
+
+  public void setCvsCpnVideoPlayPv(Long cvsCpnVideoPlayPv) {
+    this.cvsCpnVideoPlayPv = cvsCpnVideoPlayPv;
+  }
+
+  public TargetReportApiListStruct cvsCpnVideoPlayDuration(Double cvsCpnVideoPlayDuration) {
+    this.cvsCpnVideoPlayDuration = cvsCpnVideoPlayDuration;
+    return this;
+  }
+
+  /**
+   * Get cvsCpnVideoPlayDuration
+   *
+   * @return cvsCpnVideoPlayDuration
+   */
+  @ApiModelProperty(value = "")
+  public Double getCvsCpnVideoPlayDuration() {
+    return cvsCpnVideoPlayDuration;
+  }
+
+  public void setCvsCpnVideoPlayDuration(Double cvsCpnVideoPlayDuration) {
+    this.cvsCpnVideoPlayDuration = cvsCpnVideoPlayDuration;
+  }
+
   public TargetReportApiListStruct adMonetizationCost(Double adMonetizationCost) {
     this.adMonetizationCost = adMonetizationCost;
     return this;
@@ -13375,6 +14091,25 @@ public class TargetReportApiListStruct {
     this.clkRedpocketBtnSubscribePv = clkRedpocketBtnSubscribePv;
   }
 
+  public TargetReportApiListStruct clkShortcutMenusPv(Long clkShortcutMenusPv) {
+    this.clkShortcutMenusPv = clkShortcutMenusPv;
+    return this;
+  }
+
+  /**
+   * Get clkShortcutMenusPv
+   *
+   * @return clkShortcutMenusPv
+   */
+  @ApiModelProperty(value = "")
+  public Long getClkShortcutMenusPv() {
+    return clkShortcutMenusPv;
+  }
+
+  public void setClkShortcutMenusPv(Long clkShortcutMenusPv) {
+    this.clkShortcutMenusPv = clkShortcutMenusPv;
+  }
+
   public TargetReportApiListStruct channelsDetailBtnPv(Long channelsDetailBtnPv) {
     this.channelsDetailBtnPv = channelsDetailBtnPv;
     return this;
@@ -13392,6 +14127,44 @@ public class TargetReportApiListStruct {
 
   public void setChannelsDetailBtnPv(Long channelsDetailBtnPv) {
     this.channelsDetailBtnPv = channelsDetailBtnPv;
+  }
+
+  public TargetReportApiListStruct zoneHeaderLiveClickCnt(Long zoneHeaderLiveClickCnt) {
+    this.zoneHeaderLiveClickCnt = zoneHeaderLiveClickCnt;
+    return this;
+  }
+
+  /**
+   * Get zoneHeaderLiveClickCnt
+   *
+   * @return zoneHeaderLiveClickCnt
+   */
+  @ApiModelProperty(value = "")
+  public Long getZoneHeaderLiveClickCnt() {
+    return zoneHeaderLiveClickCnt;
+  }
+
+  public void setZoneHeaderLiveClickCnt(Long zoneHeaderLiveClickCnt) {
+    this.zoneHeaderLiveClickCnt = zoneHeaderLiveClickCnt;
+  }
+
+  public TargetReportApiListStruct clkSliderCardProductPv(Long clkSliderCardProductPv) {
+    this.clkSliderCardProductPv = clkSliderCardProductPv;
+    return this;
+  }
+
+  /**
+   * Get clkSliderCardProductPv
+   *
+   * @return clkSliderCardProductPv
+   */
+  @ApiModelProperty(value = "")
+  public Long getClkSliderCardProductPv() {
+    return clkSliderCardProductPv;
+  }
+
+  public void setClkSliderCardProductPv(Long clkSliderCardProductPv) {
+    this.clkSliderCardProductPv = clkSliderCardProductPv;
   }
 
   public TargetReportApiListStruct afterAddWecomNegativePv(Long afterAddWecomNegativePv) {
@@ -14663,6 +15436,44 @@ public class TargetReportApiListStruct {
     this.purchaseRegActive1dAmount = purchaseRegActive1dAmount;
   }
 
+  public TargetReportApiListStruct clkHotElementPv(Long clkHotElementPv) {
+    this.clkHotElementPv = clkHotElementPv;
+    return this;
+  }
+
+  /**
+   * Get clkHotElementPv
+   *
+   * @return clkHotElementPv
+   */
+  @ApiModelProperty(value = "")
+  public Long getClkHotElementPv() {
+    return clkHotElementPv;
+  }
+
+  public void setClkHotElementPv(Long clkHotElementPv) {
+    this.clkHotElementPv = clkHotElementPv;
+  }
+
+  public TargetReportApiListStruct hotElementCtr(Double hotElementCtr) {
+    this.hotElementCtr = hotElementCtr;
+    return this;
+  }
+
+  /**
+   * Get hotElementCtr
+   *
+   * @return hotElementCtr
+   */
+  @ApiModelProperty(value = "")
+  public Double getHotElementCtr() {
+    return hotElementCtr;
+  }
+
+  public void setHotElementCtr(Double hotElementCtr) {
+    this.hotElementCtr = hotElementCtr;
+  }
+
   public TargetReportApiListStruct securityNegativeDedupPv(Long securityNegativeDedupPv) {
     this.securityNegativeDedupPv = securityNegativeDedupPv;
     return this;
@@ -14680,6 +15491,25 @@ public class TargetReportApiListStruct {
 
   public void setSecurityNegativeDedupPv(Long securityNegativeDedupPv) {
     this.securityNegativeDedupPv = securityNegativeDedupPv;
+  }
+
+  public TargetReportApiListStruct clkInterpageBtnPv(Long clkInterpageBtnPv) {
+    this.clkInterpageBtnPv = clkInterpageBtnPv;
+    return this;
+  }
+
+  /**
+   * Get clkInterpageBtnPv
+   *
+   * @return clkInterpageBtnPv
+   */
+  @ApiModelProperty(value = "")
+  public Long getClkInterpageBtnPv() {
+    return clkInterpageBtnPv;
+  }
+
+  public void setClkInterpageBtnPv(Long clkInterpageBtnPv) {
+    this.clkInterpageBtnPv = clkInterpageBtnPv;
   }
 
   public TargetReportApiListStruct adMonetizationPlaRegActive1dMixRoi(
@@ -15204,6 +16034,25 @@ public class TargetReportApiListStruct {
     this.viewDramaDedupPvCost = viewDramaDedupPvCost;
   }
 
+  public TargetReportApiListStruct clkSellingPointsElementPv(Long clkSellingPointsElementPv) {
+    this.clkSellingPointsElementPv = clkSellingPointsElementPv;
+    return this;
+  }
+
+  /**
+   * Get clkSellingPointsElementPv
+   *
+   * @return clkSellingPointsElementPv
+   */
+  @ApiModelProperty(value = "")
+  public Long getClkSellingPointsElementPv() {
+    return clkSellingPointsElementPv;
+  }
+
+  public void setClkSellingPointsElementPv(Long clkSellingPointsElementPv) {
+    this.clkSellingPointsElementPv = clkSellingPointsElementPv;
+  }
+
   public TargetReportApiListStruct visitStoreFirstDedupPv(Long visitStoreFirstDedupPv) {
     this.visitStoreFirstDedupPv = visitStoreFirstDedupPv;
     return this;
@@ -15221,6 +16070,44 @@ public class TargetReportApiListStruct {
 
   public void setVisitStoreFirstDedupPv(Long visitStoreFirstDedupPv) {
     this.visitStoreFirstDedupPv = visitStoreFirstDedupPv;
+  }
+
+  public TargetReportApiListStruct clkFullwidthBackgroundPv(Long clkFullwidthBackgroundPv) {
+    this.clkFullwidthBackgroundPv = clkFullwidthBackgroundPv;
+    return this;
+  }
+
+  /**
+   * Get clkFullwidthBackgroundPv
+   *
+   * @return clkFullwidthBackgroundPv
+   */
+  @ApiModelProperty(value = "")
+  public Long getClkFullwidthBackgroundPv() {
+    return clkFullwidthBackgroundPv;
+  }
+
+  public void setClkFullwidthBackgroundPv(Long clkFullwidthBackgroundPv) {
+    this.clkFullwidthBackgroundPv = clkFullwidthBackgroundPv;
+  }
+
+  public TargetReportApiListStruct clkHeaderAreaPv(Long clkHeaderAreaPv) {
+    this.clkHeaderAreaPv = clkHeaderAreaPv;
+    return this;
+  }
+
+  /**
+   * Get clkHeaderAreaPv
+   *
+   * @return clkHeaderAreaPv
+   */
+  @ApiModelProperty(value = "")
+  public Long getClkHeaderAreaPv() {
+    return clkHeaderAreaPv;
+  }
+
+  public void setClkHeaderAreaPv(Long clkHeaderAreaPv) {
+    this.clkHeaderAreaPv = clkHeaderAreaPv;
   }
 
   public TargetReportApiListStruct orderFirstDedupPv(Long orderFirstDedupPv) {
@@ -15335,6 +16222,25 @@ public class TargetReportApiListStruct {
 
   public void setStorePayPvOff(Long storePayPvOff) {
     this.storePayPvOff = storePayPvOff;
+  }
+
+  public TargetReportApiListStruct clkSellingPointsElementUv(Long clkSellingPointsElementUv) {
+    this.clkSellingPointsElementUv = clkSellingPointsElementUv;
+    return this;
+  }
+
+  /**
+   * Get clkSellingPointsElementUv
+   *
+   * @return clkSellingPointsElementUv
+   */
+  @ApiModelProperty(value = "")
+  public Long getClkSellingPointsElementUv() {
+    return clkSellingPointsElementUv;
+  }
+
+  public void setClkSellingPointsElementUv(Long clkSellingPointsElementUv) {
+    this.clkSellingPointsElementUv = clkSellingPointsElementUv;
   }
 
   public TargetReportApiListStruct orderRefundActive24hPv(Long orderRefundActive24hPv) {
@@ -17211,6 +18117,310 @@ public class TargetReportApiListStruct {
     this.clkBhAnimPv = clkBhAnimPv;
   }
 
+  public TargetReportApiListStruct clkBredpocketPv(Long clkBredpocketPv) {
+    this.clkBredpocketPv = clkBredpocketPv;
+    return this;
+  }
+
+  /**
+   * Get clkBredpocketPv
+   *
+   * @return clkBredpocketPv
+   */
+  @ApiModelProperty(value = "")
+  public Long getClkBredpocketPv() {
+    return clkBredpocketPv;
+  }
+
+  public void setClkBredpocketPv(Long clkBredpocketPv) {
+    this.clkBredpocketPv = clkBredpocketPv;
+  }
+
+  public TargetReportApiListStruct clkBrSubPv(Long clkBrSubPv) {
+    this.clkBrSubPv = clkBrSubPv;
+    return this;
+  }
+
+  /**
+   * Get clkBrSubPv
+   *
+   * @return clkBrSubPv
+   */
+  @ApiModelProperty(value = "")
+  public Long getClkBrSubPv() {
+    return clkBrSubPv;
+  }
+
+  public void setClkBrSubPv(Long clkBrSubPv) {
+    this.clkBrSubPv = clkBrSubPv;
+  }
+
+  public TargetReportApiListStruct clkBrSharePv(Long clkBrSharePv) {
+    this.clkBrSharePv = clkBrSharePv;
+    return this;
+  }
+
+  /**
+   * Get clkBrSharePv
+   *
+   * @return clkBrSharePv
+   */
+  @ApiModelProperty(value = "")
+  public Long getClkBrSharePv() {
+    return clkBrSharePv;
+  }
+
+  public void setClkBrSharePv(Long clkBrSharePv) {
+    this.clkBrSharePv = clkBrSharePv;
+  }
+
+  public TargetReportApiListStruct clkBrBtnPv(Long clkBrBtnPv) {
+    this.clkBrBtnPv = clkBrBtnPv;
+    return this;
+  }
+
+  /**
+   * Get clkBrBtnPv
+   *
+   * @return clkBrBtnPv
+   */
+  @ApiModelProperty(value = "")
+  public Long getClkBrBtnPv() {
+    return clkBrBtnPv;
+  }
+
+  public void setClkBrBtnPv(Long clkBrBtnPv) {
+    this.clkBrBtnPv = clkBrBtnPv;
+  }
+
+  public TargetReportApiListStruct clkBrDrivePv(Long clkBrDrivePv) {
+    this.clkBrDrivePv = clkBrDrivePv;
+    return this;
+  }
+
+  /**
+   * Get clkBrDrivePv
+   *
+   * @return clkBrDrivePv
+   */
+  @ApiModelProperty(value = "")
+  public Long getClkBrDrivePv() {
+    return clkBrDrivePv;
+  }
+
+  public void setClkBrDrivePv(Long clkBrDrivePv) {
+    this.clkBrDrivePv = clkBrDrivePv;
+  }
+
+  public TargetReportApiListStruct clkBquickPv(Long clkBquickPv) {
+    this.clkBquickPv = clkBquickPv;
+    return this;
+  }
+
+  /**
+   * Get clkBquickPv
+   *
+   * @return clkBquickPv
+   */
+  @ApiModelProperty(value = "")
+  public Long getClkBquickPv() {
+    return clkBquickPv;
+  }
+
+  public void setClkBquickPv(Long clkBquickPv) {
+    this.clkBquickPv = clkBquickPv;
+  }
+
+  public TargetReportApiListStruct clkBappPv(Long clkBappPv) {
+    this.clkBappPv = clkBappPv;
+    return this;
+  }
+
+  /**
+   * Get clkBappPv
+   *
+   * @return clkBappPv
+   */
+  @ApiModelProperty(value = "")
+  public Long getClkBappPv() {
+    return clkBappPv;
+  }
+
+  public void setClkBappPv(Long clkBappPv) {
+    this.clkBappPv = clkBappPv;
+  }
+
+  public TargetReportApiListStruct clkBacountPv(Long clkBacountPv) {
+    this.clkBacountPv = clkBacountPv;
+    return this;
+  }
+
+  /**
+   * Get clkBacountPv
+   *
+   * @return clkBacountPv
+   */
+  @ApiModelProperty(value = "")
+  public Long getClkBacountPv() {
+    return clkBacountPv;
+  }
+
+  public void setClkBacountPv(Long clkBacountPv) {
+    this.clkBacountPv = clkBacountPv;
+  }
+
+  public TargetReportApiListStruct clkBaMorePv(Long clkBaMorePv) {
+    this.clkBaMorePv = clkBaMorePv;
+    return this;
+  }
+
+  /**
+   * Get clkBaMorePv
+   *
+   * @return clkBaMorePv
+   */
+  @ApiModelProperty(value = "")
+  public Long getClkBaMorePv() {
+    return clkBaMorePv;
+  }
+
+  public void setClkBaMorePv(Long clkBaMorePv) {
+    this.clkBaMorePv = clkBaMorePv;
+  }
+
+  public TargetReportApiListStruct clkBmActivityPv(Long clkBmActivityPv) {
+    this.clkBmActivityPv = clkBmActivityPv;
+    return this;
+  }
+
+  /**
+   * Get clkBmActivityPv
+   *
+   * @return clkBmActivityPv
+   */
+  @ApiModelProperty(value = "")
+  public Long getClkBmActivityPv() {
+    return clkBmActivityPv;
+  }
+
+  public void setClkBmActivityPv(Long clkBmActivityPv) {
+    this.clkBmActivityPv = clkBmActivityPv;
+  }
+
+  public TargetReportApiListStruct clkBmVerticalPv(Long clkBmVerticalPv) {
+    this.clkBmVerticalPv = clkBmVerticalPv;
+    return this;
+  }
+
+  /**
+   * Get clkBmVerticalPv
+   *
+   * @return clkBmVerticalPv
+   */
+  @ApiModelProperty(value = "")
+  public Long getClkBmVerticalPv() {
+    return clkBmVerticalPv;
+  }
+
+  public void setClkBmVerticalPv(Long clkBmVerticalPv) {
+    this.clkBmVerticalPv = clkBmVerticalPv;
+  }
+
+  public TargetReportApiListStruct clkBmPrivilegePv(Long clkBmPrivilegePv) {
+    this.clkBmPrivilegePv = clkBmPrivilegePv;
+    return this;
+  }
+
+  /**
+   * Get clkBmPrivilegePv
+   *
+   * @return clkBmPrivilegePv
+   */
+  @ApiModelProperty(value = "")
+  public Long getClkBmPrivilegePv() {
+    return clkBmPrivilegePv;
+  }
+
+  public void setClkBmPrivilegePv(Long clkBmPrivilegePv) {
+    this.clkBmPrivilegePv = clkBmPrivilegePv;
+  }
+
+  public TargetReportApiListStruct clkBmSeriesPv(Long clkBmSeriesPv) {
+    this.clkBmSeriesPv = clkBmSeriesPv;
+    return this;
+  }
+
+  /**
+   * Get clkBmSeriesPv
+   *
+   * @return clkBmSeriesPv
+   */
+  @ApiModelProperty(value = "")
+  public Long getClkBmSeriesPv() {
+    return clkBmSeriesPv;
+  }
+
+  public void setClkBmSeriesPv(Long clkBmSeriesPv) {
+    this.clkBmSeriesPv = clkBmSeriesPv;
+  }
+
+  public TargetReportApiListStruct clkBmDetailPv(Long clkBmDetailPv) {
+    this.clkBmDetailPv = clkBmDetailPv;
+    return this;
+  }
+
+  /**
+   * Get clkBmDetailPv
+   *
+   * @return clkBmDetailPv
+   */
+  @ApiModelProperty(value = "")
+  public Long getClkBmDetailPv() {
+    return clkBmDetailPv;
+  }
+
+  public void setClkBmDetailPv(Long clkBmDetailPv) {
+    this.clkBmDetailPv = clkBmDetailPv;
+  }
+
+  public TargetReportApiListStruct clkRpsPv(Long clkRpsPv) {
+    this.clkRpsPv = clkRpsPv;
+    return this;
+  }
+
+  /**
+   * Get clkRpsPv
+   *
+   * @return clkRpsPv
+   */
+  @ApiModelProperty(value = "")
+  public Long getClkRpsPv() {
+    return clkRpsPv;
+  }
+
+  public void setClkRpsPv(Long clkRpsPv) {
+    this.clkRpsPv = clkRpsPv;
+  }
+
+  public TargetReportApiListStruct sliderPv(Long sliderPv) {
+    this.sliderPv = sliderPv;
+    return this;
+  }
+
+  /**
+   * Get sliderPv
+   *
+   * @return sliderPv
+   */
+  @ApiModelProperty(value = "")
+  public Long getSliderPv() {
+    return sliderPv;
+  }
+
+  public void setSliderPv(Long sliderPv) {
+    this.sliderPv = sliderPv;
+  }
+
   public TargetReportApiListStruct ageId(Long ageId) {
     this.ageId = ageId;
     return this;
@@ -18090,6 +19300,15 @@ public class TargetReportApiListStruct {
         && Objects.equals(this.videoCommentCount, targetReportApiListStruct.videoCommentCount)
         && Objects.equals(this.channelsSharePlaPv, targetReportApiListStruct.channelsSharePlaPv)
         && Objects.equals(
+            this.channelsReadOfflinePv, targetReportApiListStruct.channelsReadOfflinePv)
+        && Objects.equals(
+            this.channelsHeartOfflinePv, targetReportApiListStruct.channelsHeartOfflinePv)
+        && Objects.equals(
+            this.channelsCommentOfflinePv, targetReportApiListStruct.channelsCommentOfflinePv)
+        && Objects.equals(
+            this.channelsShareOfflinePv, targetReportApiListStruct.channelsShareOfflinePv)
+        && Objects.equals(this.channelsFavOfflinePv, targetReportApiListStruct.channelsFavOfflinePv)
+        && Objects.equals(
             this.videoLiveSubscribeCount, targetReportApiListStruct.videoLiveSubscribeCount)
         && Objects.equals(this.videoLiveExpCount, targetReportApiListStruct.videoLiveExpCount)
         && Objects.equals(
@@ -18162,6 +19381,34 @@ public class TargetReportApiListStruct {
         && Objects.equals(this.durationOuterPerUser, targetReportApiListStruct.durationOuterPerUser)
         && Objects.equals(
             this.durationKeyPagePerUser, targetReportApiListStruct.durationKeyPagePerUser)
+        && Objects.equals(this.clkAdElementPv, targetReportApiListStruct.clkAdElementPv)
+        && Objects.equals(this.channelsPraisePlaPv, targetReportApiListStruct.channelsPraisePlaPv)
+        && Objects.equals(this.clkRedpocketBtnGetPv, targetReportApiListStruct.clkRedpocketBtnGetPv)
+        && Objects.equals(
+            this.clkRedpocketBtnSharePv, targetReportApiListStruct.clkRedpocketBtnSharePv)
+        && Objects.equals(
+            this.clkRedpocketBtnJumpPv, targetReportApiListStruct.clkRedpocketBtnJumpPv)
+        && Objects.equals(this.clkGoodsHeaderPv, targetReportApiListStruct.clkGoodsHeaderPv)
+        && Objects.equals(this.clkGoodsInfoPv, targetReportApiListStruct.clkGoodsInfoPv)
+        && Objects.equals(this.clkGoodsRecommendPv, targetReportApiListStruct.clkGoodsRecommendPv)
+        && Objects.equals(
+            this.clkMiddleShowwindowPv, targetReportApiListStruct.clkMiddleShowwindowPv)
+        && Objects.equals(this.clkFooterPv, targetReportApiListStruct.clkFooterPv)
+        && Objects.equals(this.clkMiddleGoodsPv, targetReportApiListStruct.clkMiddleGoodsPv)
+        && Objects.equals(this.clkMiddleBtnPv, targetReportApiListStruct.clkMiddleBtnPv)
+        && Objects.equals(this.clkMiddleSectionPv, targetReportApiListStruct.clkMiddleSectionPv)
+        && Objects.equals(this.clkMiddleGridviewPv, targetReportApiListStruct.clkMiddleGridviewPv)
+        && Objects.equals(this.clkBreakPv, targetReportApiListStruct.clkBreakPv)
+        && Objects.equals(this.clkRedpocketShakePv, targetReportApiListStruct.clkRedpocketShakePv)
+        && Objects.equals(this.clkRelatedVideoPv, targetReportApiListStruct.clkRelatedVideoPv)
+        && Objects.equals(this.clkBrandPediaPv, targetReportApiListStruct.clkBrandPediaPv)
+        && Objects.equals(this.clkActivityNewsPv, targetReportApiListStruct.clkActivityNewsPv)
+        && Objects.equals(this.clkLeftGridInfoPv, targetReportApiListStruct.clkLeftGridInfoPv)
+        && Objects.equals(this.clkLeftGridMiddlePv, targetReportApiListStruct.clkLeftGridMiddlePv)
+        && Objects.equals(this.clkRightGridPv, targetReportApiListStruct.clkRightGridPv)
+        && Objects.equals(this.cvsCpnVideoPlayPv, targetReportApiListStruct.cvsCpnVideoPlayPv)
+        && Objects.equals(
+            this.cvsCpnVideoPlayDuration, targetReportApiListStruct.cvsCpnVideoPlayDuration)
         && Objects.equals(this.adMonetizationCost, targetReportApiListStruct.adMonetizationCost)
         && Objects.equals(this.adMonetizationRoi, targetReportApiListStruct.adMonetizationRoi)
         && Objects.equals(
@@ -18176,7 +19423,12 @@ public class TargetReportApiListStruct {
             targetReportApiListStruct.adMonetizationDedupActive7dPv)
         && Objects.equals(
             this.clkRedpocketBtnSubscribePv, targetReportApiListStruct.clkRedpocketBtnSubscribePv)
+        && Objects.equals(this.clkShortcutMenusPv, targetReportApiListStruct.clkShortcutMenusPv)
         && Objects.equals(this.channelsDetailBtnPv, targetReportApiListStruct.channelsDetailBtnPv)
+        && Objects.equals(
+            this.zoneHeaderLiveClickCnt, targetReportApiListStruct.zoneHeaderLiveClickCnt)
+        && Objects.equals(
+            this.clkSliderCardProductPv, targetReportApiListStruct.clkSliderCardProductPv)
         && Objects.equals(
             this.afterAddWecomNegativePv, targetReportApiListStruct.afterAddWecomNegativePv)
         && Objects.equals(
@@ -18301,8 +19553,11 @@ public class TargetReportApiListStruct {
             this.purchaseDedupRegActive1dPv, targetReportApiListStruct.purchaseDedupRegActive1dPv)
         && Objects.equals(
             this.purchaseRegActive1dAmount, targetReportApiListStruct.purchaseRegActive1dAmount)
+        && Objects.equals(this.clkHotElementPv, targetReportApiListStruct.clkHotElementPv)
+        && Objects.equals(this.hotElementCtr, targetReportApiListStruct.hotElementCtr)
         && Objects.equals(
             this.securityNegativeDedupPv, targetReportApiListStruct.securityNegativeDedupPv)
+        && Objects.equals(this.clkInterpageBtnPv, targetReportApiListStruct.clkInterpageBtnPv)
         && Objects.equals(
             this.adMonetizationPlaRegActive1dMixRoi,
             targetReportApiListStruct.adMonetizationPlaRegActive1dMixRoi)
@@ -18351,7 +19606,12 @@ public class TargetReportApiListStruct {
         && Objects.equals(this.viewDramaDedupPvRate, targetReportApiListStruct.viewDramaDedupPvRate)
         && Objects.equals(this.viewDramaDedupPvCost, targetReportApiListStruct.viewDramaDedupPvCost)
         && Objects.equals(
+            this.clkSellingPointsElementPv, targetReportApiListStruct.clkSellingPointsElementPv)
+        && Objects.equals(
             this.visitStoreFirstDedupPv, targetReportApiListStruct.visitStoreFirstDedupPv)
+        && Objects.equals(
+            this.clkFullwidthBackgroundPv, targetReportApiListStruct.clkFullwidthBackgroundPv)
+        && Objects.equals(this.clkHeaderAreaPv, targetReportApiListStruct.clkHeaderAreaPv)
         && Objects.equals(this.orderFirstDedupPv, targetReportApiListStruct.orderFirstDedupPv)
         && Objects.equals(
             this.orderFirstDedupPvCost, targetReportApiListStruct.orderFirstDedupPvCost)
@@ -18360,6 +19620,8 @@ public class TargetReportApiListStruct {
         && Objects.equals(this.storePayAmountOff, targetReportApiListStruct.storePayAmountOff)
         && Objects.equals(this.storePayUvOff, targetReportApiListStruct.storePayUvOff)
         && Objects.equals(this.storePayPvOff, targetReportApiListStruct.storePayPvOff)
+        && Objects.equals(
+            this.clkSellingPointsElementUv, targetReportApiListStruct.clkSellingPointsElementUv)
         && Objects.equals(
             this.orderRefundActive24hPv, targetReportApiListStruct.orderRefundActive24hPv)
         && Objects.equals(
@@ -18501,6 +19763,22 @@ public class TargetReportApiListStruct {
         && Objects.equals(this.orderNetRoi, targetReportApiListStruct.orderNetRoi)
         && Objects.equals(this.orderNetPvCost, targetReportApiListStruct.orderNetPvCost)
         && Objects.equals(this.clkBhAnimPv, targetReportApiListStruct.clkBhAnimPv)
+        && Objects.equals(this.clkBredpocketPv, targetReportApiListStruct.clkBredpocketPv)
+        && Objects.equals(this.clkBrSubPv, targetReportApiListStruct.clkBrSubPv)
+        && Objects.equals(this.clkBrSharePv, targetReportApiListStruct.clkBrSharePv)
+        && Objects.equals(this.clkBrBtnPv, targetReportApiListStruct.clkBrBtnPv)
+        && Objects.equals(this.clkBrDrivePv, targetReportApiListStruct.clkBrDrivePv)
+        && Objects.equals(this.clkBquickPv, targetReportApiListStruct.clkBquickPv)
+        && Objects.equals(this.clkBappPv, targetReportApiListStruct.clkBappPv)
+        && Objects.equals(this.clkBacountPv, targetReportApiListStruct.clkBacountPv)
+        && Objects.equals(this.clkBaMorePv, targetReportApiListStruct.clkBaMorePv)
+        && Objects.equals(this.clkBmActivityPv, targetReportApiListStruct.clkBmActivityPv)
+        && Objects.equals(this.clkBmVerticalPv, targetReportApiListStruct.clkBmVerticalPv)
+        && Objects.equals(this.clkBmPrivilegePv, targetReportApiListStruct.clkBmPrivilegePv)
+        && Objects.equals(this.clkBmSeriesPv, targetReportApiListStruct.clkBmSeriesPv)
+        && Objects.equals(this.clkBmDetailPv, targetReportApiListStruct.clkBmDetailPv)
+        && Objects.equals(this.clkRpsPv, targetReportApiListStruct.clkRpsPv)
+        && Objects.equals(this.sliderPv, targetReportApiListStruct.sliderPv)
         && Objects.equals(this.ageId, targetReportApiListStruct.ageId)
         && Objects.equals(this.cityId, targetReportApiListStruct.cityId)
         && Objects.equals(this.regionId, targetReportApiListStruct.regionId)
@@ -19032,6 +20310,11 @@ public class TargetReportApiListStruct {
         videoHeartCount,
         videoCommentCount,
         channelsSharePlaPv,
+        channelsReadOfflinePv,
+        channelsHeartOfflinePv,
+        channelsCommentOfflinePv,
+        channelsShareOfflinePv,
+        channelsFavOfflinePv,
         videoLiveSubscribeCount,
         videoLiveExpCount,
         channelsLiveExitPlaDuration,
@@ -19083,6 +20366,30 @@ public class TargetReportApiListStruct {
         durationPerUser,
         durationOuterPerUser,
         durationKeyPagePerUser,
+        clkAdElementPv,
+        channelsPraisePlaPv,
+        clkRedpocketBtnGetPv,
+        clkRedpocketBtnSharePv,
+        clkRedpocketBtnJumpPv,
+        clkGoodsHeaderPv,
+        clkGoodsInfoPv,
+        clkGoodsRecommendPv,
+        clkMiddleShowwindowPv,
+        clkFooterPv,
+        clkMiddleGoodsPv,
+        clkMiddleBtnPv,
+        clkMiddleSectionPv,
+        clkMiddleGridviewPv,
+        clkBreakPv,
+        clkRedpocketShakePv,
+        clkRelatedVideoPv,
+        clkBrandPediaPv,
+        clkActivityNewsPv,
+        clkLeftGridInfoPv,
+        clkLeftGridMiddlePv,
+        clkRightGridPv,
+        cvsCpnVideoPlayPv,
+        cvsCpnVideoPlayDuration,
         adMonetizationCost,
         adMonetizationRoi,
         adMonetizationActive3dPv,
@@ -19090,7 +20397,10 @@ public class TargetReportApiListStruct {
         adMonetizationActive7dPv,
         adMonetizationDedupActive7dPv,
         clkRedpocketBtnSubscribePv,
+        clkShortcutMenusPv,
         channelsDetailBtnPv,
+        zoneHeaderLiveClickCnt,
+        clkSliderCardProductPv,
         afterAddWecomNegativePv,
         securityLowPriceOrderPv,
         securityHighPriceOrderPv,
@@ -19157,7 +20467,10 @@ public class TargetReportApiListStruct {
         purchaseRegActive1dPv,
         purchaseDedupRegActive1dPv,
         purchaseRegActive1dAmount,
+        clkHotElementPv,
+        hotElementCtr,
         securityNegativeDedupPv,
+        clkInterpageBtnPv,
         adMonetizationPlaRegActive1dMixRoi,
         adMonetizationPlaRegActive24hMixRoi,
         realCostAppAutoDownload,
@@ -19185,13 +20498,17 @@ public class TargetReportApiListStruct {
         viewDramaDedupPv,
         viewDramaDedupPvRate,
         viewDramaDedupPvCost,
+        clkSellingPointsElementPv,
         visitStoreFirstDedupPv,
+        clkFullwidthBackgroundPv,
+        clkHeaderAreaPv,
         orderFirstDedupPv,
         orderFirstDedupPvCost,
         orderFirstDedupPvRate,
         storePayAmountOff,
         storePayUvOff,
         storePayPvOff,
+        clkSellingPointsElementUv,
         orderRefundActive24hPv,
         orderRefundActive24hRate,
         orderSettle24hPv,
@@ -19290,6 +20607,22 @@ public class TargetReportApiListStruct {
         orderNetRoi,
         orderNetPvCost,
         clkBhAnimPv,
+        clkBredpocketPv,
+        clkBrSubPv,
+        clkBrSharePv,
+        clkBrBtnPv,
+        clkBrDrivePv,
+        clkBquickPv,
+        clkBappPv,
+        clkBacountPv,
+        clkBaMorePv,
+        clkBmActivityPv,
+        clkBmVerticalPv,
+        clkBmPrivilegePv,
+        clkBmSeriesPv,
+        clkBmDetailPv,
+        clkRpsPv,
+        sliderPv,
         ageId,
         cityId,
         regionId,

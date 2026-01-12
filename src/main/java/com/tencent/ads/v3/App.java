@@ -102,6 +102,7 @@ public class App {
   @Inject FundsApiContainer fundsApiContainer;
   @Inject GameFeatureApiContainer gameFeatureApiContainer;
   @Inject GameFeatureTagsApiContainer gameFeatureTagsApiContainer;
+  @Inject GameFeatureV6ApiContainer gameFeatureV6ApiContainer;
   @Inject GetWxGameAppGiftPackApiContainer getWxGameAppGiftPackApiContainer;
   @Inject HourlyReportsApiContainer hourlyReportsApiContainer;
   @Inject IllegalComplaintApiContainer illegalComplaintApiContainer;
@@ -184,6 +185,8 @@ public class App {
   @Inject ProgrammedCommponentResultApiContainer programmedCommponentResultApiContainer;
   @Inject ProgrammedMaterialMappingsApiContainer programmedMaterialMappingsApiContainer;
   @Inject ProgrammedTemplateApiContainer programmedTemplateApiContainer;
+  @Inject PunishDetailApiContainer punishDetailApiContainer;
+  @Inject PunishMetricsApiContainer punishMetricsApiContainer;
   @Inject PunishmentConfigApiContainer punishmentConfigApiContainer;
   @Inject PunishmentQueryApiContainer punishmentQueryApiContainer;
   @Inject QualificationImagesApiContainer qualificationImagesApiContainer;
@@ -602,6 +605,10 @@ public class App {
     return gameFeatureTagsApiContainer;
   }
 
+  public GameFeatureV6ApiContainer gameFeatureV6() {
+    return gameFeatureV6ApiContainer;
+  }
+
   public GetWxGameAppGiftPackApiContainer getWxGameAppGiftPack() {
     return getWxGameAppGiftPackApiContainer;
   }
@@ -892,6 +899,14 @@ public class App {
 
   public ProgrammedTemplateApiContainer programmedTemplate() {
     return programmedTemplateApiContainer;
+  }
+
+  public PunishDetailApiContainer punishDetail() {
+    return punishDetailApiContainer;
+  }
+
+  public PunishMetricsApiContainer punishMetrics() {
+    return punishMetricsApiContainer;
   }
 
   public PunishmentConfigApiContainer punishmentConfig() {

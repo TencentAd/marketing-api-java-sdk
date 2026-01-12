@@ -117,6 +117,9 @@ public class AdgroupsAddRequest {
   @SerializedName("auto_derived_creative_enabled")
   private Boolean autoDerivedCreativeEnabled = null;
 
+  @SerializedName("auto_derived_creative_preference")
+  private AutoDerivedCreativePreference autoDerivedCreativePreference = null;
+
   @SerializedName("search_expand_targeting_switch")
   private SearchExpandTargetingSwitch searchExpandTargetingSwitch = null;
 
@@ -844,6 +847,27 @@ public class AdgroupsAddRequest {
     this.autoDerivedCreativeEnabled = autoDerivedCreativeEnabled;
   }
 
+  public AdgroupsAddRequest autoDerivedCreativePreference(
+      AutoDerivedCreativePreference autoDerivedCreativePreference) {
+    this.autoDerivedCreativePreference = autoDerivedCreativePreference;
+    return this;
+  }
+
+  /**
+   * Get autoDerivedCreativePreference
+   *
+   * @return autoDerivedCreativePreference
+   */
+  @ApiModelProperty(value = "")
+  public AutoDerivedCreativePreference getAutoDerivedCreativePreference() {
+    return autoDerivedCreativePreference;
+  }
+
+  public void setAutoDerivedCreativePreference(
+      AutoDerivedCreativePreference autoDerivedCreativePreference) {
+    this.autoDerivedCreativePreference = autoDerivedCreativePreference;
+  }
+
   public AdgroupsAddRequest searchExpandTargetingSwitch(
       SearchExpandTargetingSwitch searchExpandTargetingSwitch) {
     this.searchExpandTargetingSwitch = searchExpandTargetingSwitch;
@@ -1493,6 +1517,8 @@ public class AdgroupsAddRequest {
         && Objects.equals(
             this.autoDerivedCreativeEnabled, adgroupsAddRequest.autoDerivedCreativeEnabled)
         && Objects.equals(
+            this.autoDerivedCreativePreference, adgroupsAddRequest.autoDerivedCreativePreference)
+        && Objects.equals(
             this.searchExpandTargetingSwitch, adgroupsAddRequest.searchExpandTargetingSwitch)
         && Objects.equals(
             this.autoDerivedLandingPageSwitch, adgroupsAddRequest.autoDerivedLandingPageSwitch)
@@ -1563,6 +1589,7 @@ public class AdgroupsAddRequest {
         smartBidType,
         smartCostCap,
         autoDerivedCreativeEnabled,
+        autoDerivedCreativePreference,
         searchExpandTargetingSwitch,
         autoDerivedLandingPageSwitch,
         bidScene,

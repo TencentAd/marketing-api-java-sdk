@@ -27,6 +27,9 @@ public class ImageListItem {
   @SerializedName("image_url")
   private String imageUrl = null;
 
+  @SerializedName("jump_info")
+  private JumpinfoStruct jumpInfo = null;
+
   @SerializedName("original_image_id")
   private String originalImageId = null;
 
@@ -68,6 +71,25 @@ public class ImageListItem {
     this.imageUrl = imageUrl;
   }
 
+  public ImageListItem jumpInfo(JumpinfoStruct jumpInfo) {
+    this.jumpInfo = jumpInfo;
+    return this;
+  }
+
+  /**
+   * Get jumpInfo
+   *
+   * @return jumpInfo
+   */
+  @ApiModelProperty(value = "")
+  public JumpinfoStruct getJumpInfo() {
+    return jumpInfo;
+  }
+
+  public void setJumpInfo(JumpinfoStruct jumpInfo) {
+    this.jumpInfo = jumpInfo;
+  }
+
   public ImageListItem originalImageId(String originalImageId) {
     this.originalImageId = originalImageId;
     return this;
@@ -98,12 +120,13 @@ public class ImageListItem {
     ImageListItem imageListItem = (ImageListItem) o;
     return Objects.equals(this.imageId, imageListItem.imageId)
         && Objects.equals(this.imageUrl, imageListItem.imageUrl)
+        && Objects.equals(this.jumpInfo, imageListItem.jumpInfo)
         && Objects.equals(this.originalImageId, imageListItem.originalImageId);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(imageId, imageUrl, originalImageId);
+    return Objects.hash(imageId, imageUrl, jumpInfo, originalImageId);
   }
 
   @Override

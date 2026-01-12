@@ -33,6 +33,9 @@ public class SmartDeliveryGoalCpsSpec {
   @SerializedName("commission_roi")
   private Double commissionRoi = null;
 
+  @SerializedName("view_key_page_uv")
+  private Long viewKeyPageUv = null;
+
   public SmartDeliveryGoalCpsSpec ecommerceOrderCost(Long ecommerceOrderCost) {
     this.ecommerceOrderCost = ecommerceOrderCost;
     return this;
@@ -109,6 +112,25 @@ public class SmartDeliveryGoalCpsSpec {
     this.commissionRoi = commissionRoi;
   }
 
+  public SmartDeliveryGoalCpsSpec viewKeyPageUv(Long viewKeyPageUv) {
+    this.viewKeyPageUv = viewKeyPageUv;
+    return this;
+  }
+
+  /**
+   * Get viewKeyPageUv
+   *
+   * @return viewKeyPageUv
+   */
+  @ApiModelProperty(value = "")
+  public Long getViewKeyPageUv() {
+    return viewKeyPageUv;
+  }
+
+  public void setViewKeyPageUv(Long viewKeyPageUv) {
+    this.viewKeyPageUv = viewKeyPageUv;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -123,13 +145,18 @@ public class SmartDeliveryGoalCpsSpec {
             this.promotionViewKeyPageCost, smartDeliveryGoalCpsSpec.promotionViewKeyPageCost)
         && Objects.equals(
             this.viewCommodityPageCost, smartDeliveryGoalCpsSpec.viewCommodityPageCost)
-        && Objects.equals(this.commissionRoi, smartDeliveryGoalCpsSpec.commissionRoi);
+        && Objects.equals(this.commissionRoi, smartDeliveryGoalCpsSpec.commissionRoi)
+        && Objects.equals(this.viewKeyPageUv, smartDeliveryGoalCpsSpec.viewKeyPageUv);
   }
 
   @Override
   public int hashCode() {
     return Objects.hash(
-        ecommerceOrderCost, promotionViewKeyPageCost, viewCommodityPageCost, commissionRoi);
+        ecommerceOrderCost,
+        promotionViewKeyPageCost,
+        viewCommodityPageCost,
+        commissionRoi,
+        viewKeyPageUv);
   }
 
   @Override

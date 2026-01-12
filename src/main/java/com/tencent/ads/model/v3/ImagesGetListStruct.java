@@ -78,6 +78,9 @@ public class ImagesGetListStruct {
   @SerializedName("sample_aspect_ratio")
   private String sampleAspectRatio = null;
 
+  @SerializedName("similarity_status")
+  private SimilarityStatus similarityStatus = null;
+
   public ImagesGetListStruct imageId(String imageId) {
     this.imageId = imageId;
     return this;
@@ -439,6 +442,25 @@ public class ImagesGetListStruct {
     this.sampleAspectRatio = sampleAspectRatio;
   }
 
+  public ImagesGetListStruct similarityStatus(SimilarityStatus similarityStatus) {
+    this.similarityStatus = similarityStatus;
+    return this;
+  }
+
+  /**
+   * Get similarityStatus
+   *
+   * @return similarityStatus
+   */
+  @ApiModelProperty(value = "")
+  public SimilarityStatus getSimilarityStatus() {
+    return similarityStatus;
+  }
+
+  public void setSimilarityStatus(SimilarityStatus similarityStatus) {
+    this.similarityStatus = similarityStatus;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -466,7 +488,8 @@ public class ImagesGetListStruct {
         && Objects.equals(this.sourceReferenceId, imagesGetListStruct.sourceReferenceId)
         && Objects.equals(this.ownerAccountId, imagesGetListStruct.ownerAccountId)
         && Objects.equals(this.status, imagesGetListStruct.status)
-        && Objects.equals(this.sampleAspectRatio, imagesGetListStruct.sampleAspectRatio);
+        && Objects.equals(this.sampleAspectRatio, imagesGetListStruct.sampleAspectRatio)
+        && Objects.equals(this.similarityStatus, imagesGetListStruct.similarityStatus);
   }
 
   @Override
@@ -490,7 +513,8 @@ public class ImagesGetListStruct {
         sourceReferenceId,
         ownerAccountId,
         status,
-        sampleAspectRatio);
+        sampleAspectRatio,
+        similarityStatus);
   }
 
   @Override

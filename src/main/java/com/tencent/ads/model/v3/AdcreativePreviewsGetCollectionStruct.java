@@ -30,6 +30,12 @@ public class AdcreativePreviewsGetCollectionStruct {
   @SerializedName("is_previewed")
   private Boolean isPreviewed = null;
 
+  @SerializedName("adgroup_id")
+  private Long adgroupId = null;
+
+  @SerializedName("dynamic_creative_id")
+  private Long dynamicCreativeId = null;
+
   public AdcreativePreviewsGetCollectionStruct userId(String userId) {
     this.userId = userId;
     return this;
@@ -87,6 +93,44 @@ public class AdcreativePreviewsGetCollectionStruct {
     this.isPreviewed = isPreviewed;
   }
 
+  public AdcreativePreviewsGetCollectionStruct adgroupId(Long adgroupId) {
+    this.adgroupId = adgroupId;
+    return this;
+  }
+
+  /**
+   * Get adgroupId
+   *
+   * @return adgroupId
+   */
+  @ApiModelProperty(value = "")
+  public Long getAdgroupId() {
+    return adgroupId;
+  }
+
+  public void setAdgroupId(Long adgroupId) {
+    this.adgroupId = adgroupId;
+  }
+
+  public AdcreativePreviewsGetCollectionStruct dynamicCreativeId(Long dynamicCreativeId) {
+    this.dynamicCreativeId = dynamicCreativeId;
+    return this;
+  }
+
+  /**
+   * Get dynamicCreativeId
+   *
+   * @return dynamicCreativeId
+   */
+  @ApiModelProperty(value = "")
+  public Long getDynamicCreativeId() {
+    return dynamicCreativeId;
+  }
+
+  public void setDynamicCreativeId(Long dynamicCreativeId) {
+    this.dynamicCreativeId = dynamicCreativeId;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -99,12 +143,15 @@ public class AdcreativePreviewsGetCollectionStruct {
         (AdcreativePreviewsGetCollectionStruct) o;
     return Objects.equals(this.userId, adcreativePreviewsGetCollectionStruct.userId)
         && Objects.equals(this.userIdType, adcreativePreviewsGetCollectionStruct.userIdType)
-        && Objects.equals(this.isPreviewed, adcreativePreviewsGetCollectionStruct.isPreviewed);
+        && Objects.equals(this.isPreviewed, adcreativePreviewsGetCollectionStruct.isPreviewed)
+        && Objects.equals(this.adgroupId, adcreativePreviewsGetCollectionStruct.adgroupId)
+        && Objects.equals(
+            this.dynamicCreativeId, adcreativePreviewsGetCollectionStruct.dynamicCreativeId);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(userId, userIdType, isPreviewed);
+    return Objects.hash(userId, userIdType, isPreviewed, adgroupId, dynamicCreativeId);
   }
 
   @Override

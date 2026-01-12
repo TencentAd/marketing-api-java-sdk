@@ -81,6 +81,9 @@ public class DynamicCreativesGetListStruct {
   @SerializedName("source_dynamic_creative_id")
   private Long sourceDynamicCreativeId = null;
 
+  @SerializedName("creative_insight")
+  private CreativeInsight creativeInsight = null;
+
   public DynamicCreativesGetListStruct adgroupId(Long adgroupId) {
     this.adgroupId = adgroupId;
     return this;
@@ -466,6 +469,25 @@ public class DynamicCreativesGetListStruct {
     this.sourceDynamicCreativeId = sourceDynamicCreativeId;
   }
 
+  public DynamicCreativesGetListStruct creativeInsight(CreativeInsight creativeInsight) {
+    this.creativeInsight = creativeInsight;
+    return this;
+  }
+
+  /**
+   * Get creativeInsight
+   *
+   * @return creativeInsight
+   */
+  @ApiModelProperty(value = "")
+  public CreativeInsight getCreativeInsight() {
+    return creativeInsight;
+  }
+
+  public void setCreativeInsight(CreativeInsight creativeInsight) {
+    this.creativeInsight = creativeInsight;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -503,7 +525,8 @@ public class DynamicCreativesGetListStruct {
         && Objects.equals(
             this.assetInconsistentStatus, dynamicCreativesGetListStruct.assetInconsistentStatus)
         && Objects.equals(
-            this.sourceDynamicCreativeId, dynamicCreativesGetListStruct.sourceDynamicCreativeId);
+            this.sourceDynamicCreativeId, dynamicCreativesGetListStruct.sourceDynamicCreativeId)
+        && Objects.equals(this.creativeInsight, dynamicCreativesGetListStruct.creativeInsight);
   }
 
   @Override
@@ -528,7 +551,8 @@ public class DynamicCreativesGetListStruct {
         creativeSetApprovalStatus,
         source,
         assetInconsistentStatus,
-        sourceDynamicCreativeId);
+        sourceDynamicCreativeId,
+        creativeInsight);
   }
 
   @Override

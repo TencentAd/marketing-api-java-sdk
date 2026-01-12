@@ -65,6 +65,9 @@ public class AdContext {
   @SerializedName("dynamic_ad_type")
   private DynamicAdType dynamicAdType = null;
 
+  @SerializedName("adgroup_type")
+  private AdgroupType adgroupType = null;
+
   public AdContext marketingGoal(MarketingGoal marketingGoal) {
     this.marketingGoal = marketingGoal;
     return this;
@@ -339,6 +342,25 @@ public class AdContext {
     this.dynamicAdType = dynamicAdType;
   }
 
+  public AdContext adgroupType(AdgroupType adgroupType) {
+    this.adgroupType = adgroupType;
+    return this;
+  }
+
+  /**
+   * Get adgroupType
+   *
+   * @return adgroupType
+   */
+  @ApiModelProperty(value = "")
+  public AdgroupType getAdgroupType() {
+    return adgroupType;
+  }
+
+  public void setAdgroupType(AdgroupType adgroupType) {
+    this.adgroupType = adgroupType;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -361,7 +383,8 @@ public class AdContext {
         && Objects.equals(this.optimizationGoalStruct, adContext.optimizationGoalStruct)
         && Objects.equals(this.mpaSpec, adContext.mpaSpec)
         && Objects.equals(this.marketingAssetOuterSpec, adContext.marketingAssetOuterSpec)
-        && Objects.equals(this.dynamicAdType, adContext.dynamicAdType);
+        && Objects.equals(this.dynamicAdType, adContext.dynamicAdType)
+        && Objects.equals(this.adgroupType, adContext.adgroupType);
   }
 
   @Override
@@ -380,7 +403,8 @@ public class AdContext {
         optimizationGoalStruct,
         mpaSpec,
         marketingAssetOuterSpec,
-        dynamicAdType);
+        dynamicAdType,
+        adgroupType);
   }
 
   @Override
