@@ -1932,6 +1932,9 @@ public class ReportStruct {
   @SerializedName("clk_redpocket_btn_subscribe_pv")
   private Long clkRedpocketBtnSubscribePv = null;
 
+  @SerializedName("clk_blessing_card_pv")
+  private Long clkBlessingCardPv = null;
+
   @SerializedName("clk_shortcut_menus_pv")
   private Long clkShortcutMenusPv = null;
 
@@ -14815,6 +14818,25 @@ public class ReportStruct {
     this.clkRedpocketBtnSubscribePv = clkRedpocketBtnSubscribePv;
   }
 
+  public ReportStruct clkBlessingCardPv(Long clkBlessingCardPv) {
+    this.clkBlessingCardPv = clkBlessingCardPv;
+    return this;
+  }
+
+  /**
+   * Get clkBlessingCardPv
+   *
+   * @return clkBlessingCardPv
+   */
+  @ApiModelProperty(value = "")
+  public Long getClkBlessingCardPv() {
+    return clkBlessingCardPv;
+  }
+
+  public void setClkBlessingCardPv(Long clkBlessingCardPv) {
+    this.clkBlessingCardPv = clkBlessingCardPv;
+  }
+
   public ReportStruct clkShortcutMenusPv(Long clkShortcutMenusPv) {
     this.clkShortcutMenusPv = clkShortcutMenusPv;
     return this;
@@ -20420,6 +20442,7 @@ public class ReportStruct {
         && Objects.equals(
             this.adMonetizationDedupActive7dPv, reportStruct.adMonetizationDedupActive7dPv)
         && Objects.equals(this.clkRedpocketBtnSubscribePv, reportStruct.clkRedpocketBtnSubscribePv)
+        && Objects.equals(this.clkBlessingCardPv, reportStruct.clkBlessingCardPv)
         && Objects.equals(this.clkShortcutMenusPv, reportStruct.clkShortcutMenusPv)
         && Objects.equals(this.channelsDetailBtnPv, reportStruct.channelsDetailBtnPv)
         && Objects.equals(this.zoneHeaderLiveClickCnt, reportStruct.zoneHeaderLiveClickCnt)
@@ -21373,6 +21396,7 @@ public class ReportStruct {
         adMonetizationActive7dPv,
         adMonetizationDedupActive7dPv,
         clkRedpocketBtnSubscribePv,
+        clkBlessingCardPv,
         clkShortcutMenusPv,
         channelsDetailBtnPv,
         zoneHeaderLiveClickCnt,

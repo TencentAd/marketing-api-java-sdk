@@ -141,6 +141,7 @@ public class App {
 
   @Inject MarketingTargetAssetsApiContainer marketingTargetAssetsApiContainer;
   @Inject MarketingTargetTypesApiContainer marketingTargetTypesApiContainer;
+  @Inject MaterialAsyncTasksApiContainer materialAsyncTasksApiContainer;
   @Inject MaterialDcasetApiContainer materialDcasetApiContainer;
   @Inject MaterialDcatagApiContainer materialDcatagApiContainer;
   @Inject MaterialLabelsApiContainer materialLabelsApiContainer;
@@ -747,6 +748,10 @@ public class App {
 
   public MarketingTargetTypesApiContainer marketingTargetTypes() {
     return marketingTargetTypesApiContainer;
+  }
+
+  public MaterialAsyncTasksApiContainer materialAsyncTasks() {
+    return materialAsyncTasksApiContainer;
   }
 
   public MaterialDcasetApiContainer materialDcaset() {

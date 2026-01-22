@@ -53,12 +53,6 @@ public class AdvertiserGetListStruct {
   @SerializedName("individual_qualification")
   private IndividualQualificationRead individualQualification = null;
 
-  @SerializedName("corporate_image_name")
-  private String corporateImageName = null;
-
-  @SerializedName("corporate_image_logo")
-  private String corporateImageLogo = null;
-
   @SerializedName("system_industry_id")
   private Long systemIndustryId = null;
 
@@ -70,18 +64,6 @@ public class AdvertiserGetListStruct {
 
   @SerializedName("corporate_brand_name")
   private String corporateBrandName = null;
-
-  @SerializedName("industry_qualification_image_id_list")
-  private List<String> industryQualificationImageIdList = null;
-
-  @SerializedName("industry_qualification_image")
-  private List<String> industryQualificationImage = null;
-
-  @SerializedName("ad_qualification_image_id_list")
-  private List<String> adQualificationImageIdList = null;
-
-  @SerializedName("ad_qualification_image")
-  private List<String> adQualificationImage = null;
 
   @SerializedName("contact_person")
   private String contactPerson = null;
@@ -115,9 +97,6 @@ public class AdvertiserGetListStruct {
 
   @SerializedName("area_code")
   private Long areaCode = null;
-
-  @SerializedName("is_local_business")
-  private Boolean isLocalBusiness = null;
 
   public AdvertiserGetListStruct accountId(Long accountId) {
     this.accountId = accountId;
@@ -310,44 +289,6 @@ public class AdvertiserGetListStruct {
     this.individualQualification = individualQualification;
   }
 
-  public AdvertiserGetListStruct corporateImageName(String corporateImageName) {
-    this.corporateImageName = corporateImageName;
-    return this;
-  }
-
-  /**
-   * Get corporateImageName
-   *
-   * @return corporateImageName
-   */
-  @ApiModelProperty(value = "")
-  public String getCorporateImageName() {
-    return corporateImageName;
-  }
-
-  public void setCorporateImageName(String corporateImageName) {
-    this.corporateImageName = corporateImageName;
-  }
-
-  public AdvertiserGetListStruct corporateImageLogo(String corporateImageLogo) {
-    this.corporateImageLogo = corporateImageLogo;
-    return this;
-  }
-
-  /**
-   * Get corporateImageLogo
-   *
-   * @return corporateImageLogo
-   */
-  @ApiModelProperty(value = "")
-  public String getCorporateImageLogo() {
-    return corporateImageLogo;
-  }
-
-  public void setCorporateImageLogo(String corporateImageLogo) {
-    this.corporateImageLogo = corporateImageLogo;
-  }
-
   public AdvertiserGetListStruct systemIndustryId(Long systemIndustryId) {
     this.systemIndustryId = systemIndustryId;
     return this;
@@ -422,120 +363,6 @@ public class AdvertiserGetListStruct {
 
   public void setCorporateBrandName(String corporateBrandName) {
     this.corporateBrandName = corporateBrandName;
-  }
-
-  public AdvertiserGetListStruct industryQualificationImageIdList(
-      List<String> industryQualificationImageIdList) {
-    this.industryQualificationImageIdList = industryQualificationImageIdList;
-    return this;
-  }
-
-  public AdvertiserGetListStruct addIndustryQualificationImageIdListItem(
-      String industryQualificationImageIdListItem) {
-    if (this.industryQualificationImageIdList == null) {
-      this.industryQualificationImageIdList = new ArrayList<String>();
-    }
-    this.industryQualificationImageIdList.add(industryQualificationImageIdListItem);
-    return this;
-  }
-
-  /**
-   * Get industryQualificationImageIdList
-   *
-   * @return industryQualificationImageIdList
-   */
-  @ApiModelProperty(value = "")
-  public List<String> getIndustryQualificationImageIdList() {
-    return industryQualificationImageIdList;
-  }
-
-  public void setIndustryQualificationImageIdList(List<String> industryQualificationImageIdList) {
-    this.industryQualificationImageIdList = industryQualificationImageIdList;
-  }
-
-  public AdvertiserGetListStruct industryQualificationImage(
-      List<String> industryQualificationImage) {
-    this.industryQualificationImage = industryQualificationImage;
-    return this;
-  }
-
-  public AdvertiserGetListStruct addIndustryQualificationImageItem(
-      String industryQualificationImageItem) {
-    if (this.industryQualificationImage == null) {
-      this.industryQualificationImage = new ArrayList<String>();
-    }
-    this.industryQualificationImage.add(industryQualificationImageItem);
-    return this;
-  }
-
-  /**
-   * Get industryQualificationImage
-   *
-   * @return industryQualificationImage
-   */
-  @ApiModelProperty(value = "")
-  public List<String> getIndustryQualificationImage() {
-    return industryQualificationImage;
-  }
-
-  public void setIndustryQualificationImage(List<String> industryQualificationImage) {
-    this.industryQualificationImage = industryQualificationImage;
-  }
-
-  public AdvertiserGetListStruct adQualificationImageIdList(
-      List<String> adQualificationImageIdList) {
-    this.adQualificationImageIdList = adQualificationImageIdList;
-    return this;
-  }
-
-  public AdvertiserGetListStruct addAdQualificationImageIdListItem(
-      String adQualificationImageIdListItem) {
-    if (this.adQualificationImageIdList == null) {
-      this.adQualificationImageIdList = new ArrayList<String>();
-    }
-    this.adQualificationImageIdList.add(adQualificationImageIdListItem);
-    return this;
-  }
-
-  /**
-   * Get adQualificationImageIdList
-   *
-   * @return adQualificationImageIdList
-   */
-  @ApiModelProperty(value = "")
-  public List<String> getAdQualificationImageIdList() {
-    return adQualificationImageIdList;
-  }
-
-  public void setAdQualificationImageIdList(List<String> adQualificationImageIdList) {
-    this.adQualificationImageIdList = adQualificationImageIdList;
-  }
-
-  public AdvertiserGetListStruct adQualificationImage(List<String> adQualificationImage) {
-    this.adQualificationImage = adQualificationImage;
-    return this;
-  }
-
-  public AdvertiserGetListStruct addAdQualificationImageItem(String adQualificationImageItem) {
-    if (this.adQualificationImage == null) {
-      this.adQualificationImage = new ArrayList<String>();
-    }
-    this.adQualificationImage.add(adQualificationImageItem);
-    return this;
-  }
-
-  /**
-   * Get adQualificationImage
-   *
-   * @return adQualificationImage
-   */
-  @ApiModelProperty(value = "")
-  public List<String> getAdQualificationImage() {
-    return adQualificationImage;
-  }
-
-  public void setAdQualificationImage(List<String> adQualificationImage) {
-    this.adQualificationImage = adQualificationImage;
   }
 
   public AdvertiserGetListStruct contactPerson(String contactPerson) {
@@ -763,25 +590,6 @@ public class AdvertiserGetListStruct {
     this.areaCode = areaCode;
   }
 
-  public AdvertiserGetListStruct isLocalBusiness(Boolean isLocalBusiness) {
-    this.isLocalBusiness = isLocalBusiness;
-    return this;
-  }
-
-  /**
-   * Get isLocalBusiness
-   *
-   * @return isLocalBusiness
-   */
-  @ApiModelProperty(value = "")
-  public Boolean isIsLocalBusiness() {
-    return isLocalBusiness;
-  }
-
-  public void setIsLocalBusiness(Boolean isLocalBusiness) {
-    this.isLocalBusiness = isLocalBusiness;
-  }
-
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -802,20 +610,10 @@ public class AdvertiserGetListStruct {
         && Objects.equals(this.identityNumber, advertiserGetListStruct.identityNumber)
         && Objects.equals(
             this.individualQualification, advertiserGetListStruct.individualQualification)
-        && Objects.equals(this.corporateImageName, advertiserGetListStruct.corporateImageName)
-        && Objects.equals(this.corporateImageLogo, advertiserGetListStruct.corporateImageLogo)
         && Objects.equals(this.systemIndustryId, advertiserGetListStruct.systemIndustryId)
         && Objects.equals(this.customizedIndustry, advertiserGetListStruct.customizedIndustry)
         && Objects.equals(this.introductionUrl, advertiserGetListStruct.introductionUrl)
         && Objects.equals(this.corporateBrandName, advertiserGetListStruct.corporateBrandName)
-        && Objects.equals(
-            this.industryQualificationImageIdList,
-            advertiserGetListStruct.industryQualificationImageIdList)
-        && Objects.equals(
-            this.industryQualificationImage, advertiserGetListStruct.industryQualificationImage)
-        && Objects.equals(
-            this.adQualificationImageIdList, advertiserGetListStruct.adQualificationImageIdList)
-        && Objects.equals(this.adQualificationImage, advertiserGetListStruct.adQualificationImage)
         && Objects.equals(this.contactPerson, advertiserGetListStruct.contactPerson)
         && Objects.equals(this.contactPersonEmail, advertiserGetListStruct.contactPersonEmail)
         && Objects.equals(
@@ -827,8 +625,7 @@ public class AdvertiserGetListStruct {
         && Objects.equals(this.agencyAccountId, advertiserGetListStruct.agencyAccountId)
         && Objects.equals(this.operators, advertiserGetListStruct.operators)
         && Objects.equals(this.memo, advertiserGetListStruct.memo)
-        && Objects.equals(this.areaCode, advertiserGetListStruct.areaCode)
-        && Objects.equals(this.isLocalBusiness, advertiserGetListStruct.isLocalBusiness);
+        && Objects.equals(this.areaCode, advertiserGetListStruct.areaCode);
   }
 
   @Override
@@ -844,16 +641,10 @@ public class AdvertiserGetListStruct {
         certificationImage,
         identityNumber,
         individualQualification,
-        corporateImageName,
-        corporateImageLogo,
         systemIndustryId,
         customizedIndustry,
         introductionUrl,
         corporateBrandName,
-        industryQualificationImageIdList,
-        industryQualificationImage,
-        adQualificationImageIdList,
-        adQualificationImage,
         contactPerson,
         contactPersonEmail,
         contactPersonTelephone,
@@ -864,8 +655,7 @@ public class AdvertiserGetListStruct {
         agencyAccountId,
         operators,
         memo,
-        areaCode,
-        isLocalBusiness);
+        areaCode);
   }
 
   @Override

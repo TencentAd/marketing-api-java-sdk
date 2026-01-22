@@ -81,8 +81,11 @@ public class PunishDetailGetRequest {
   @SerializedName("query_account_id_list")
   private List<Long> queryAccountIdList = null;
 
-  @SerializedName("page_conf")
-  private PunishDetailPageConf pageConf = null;
+  @SerializedName("page_num")
+  private Long pageNum = null;
+
+  @SerializedName("page_size")
+  private Long pageSize = null;
 
   public PunishDetailGetRequest partitionTime(Long partitionTime) {
     this.partitionTime = partitionTime;
@@ -528,23 +531,42 @@ public class PunishDetailGetRequest {
     this.queryAccountIdList = queryAccountIdList;
   }
 
-  public PunishDetailGetRequest pageConf(PunishDetailPageConf pageConf) {
-    this.pageConf = pageConf;
+  public PunishDetailGetRequest pageNum(Long pageNum) {
+    this.pageNum = pageNum;
     return this;
   }
 
   /**
-   * Get pageConf
+   * Get pageNum
    *
-   * @return pageConf
+   * @return pageNum
    */
   @ApiModelProperty(value = "")
-  public PunishDetailPageConf getPageConf() {
-    return pageConf;
+  public Long getPageNum() {
+    return pageNum;
   }
 
-  public void setPageConf(PunishDetailPageConf pageConf) {
-    this.pageConf = pageConf;
+  public void setPageNum(Long pageNum) {
+    this.pageNum = pageNum;
+  }
+
+  public PunishDetailGetRequest pageSize(Long pageSize) {
+    this.pageSize = pageSize;
+    return this;
+  }
+
+  /**
+   * Get pageSize
+   *
+   * @return pageSize
+   */
+  @ApiModelProperty(value = "")
+  public Long getPageSize() {
+    return pageSize;
+  }
+
+  public void setPageSize(Long pageSize) {
+    this.pageSize = pageSize;
   }
 
   @Override
@@ -578,7 +600,8 @@ public class PunishDetailGetRequest {
         && Objects.equals(this.reviewBeginTime, punishDetailGetRequest.reviewBeginTime)
         && Objects.equals(this.reviewEndTime, punishDetailGetRequest.reviewEndTime)
         && Objects.equals(this.queryAccountIdList, punishDetailGetRequest.queryAccountIdList)
-        && Objects.equals(this.pageConf, punishDetailGetRequest.pageConf);
+        && Objects.equals(this.pageNum, punishDetailGetRequest.pageNum)
+        && Objects.equals(this.pageSize, punishDetailGetRequest.pageSize);
   }
 
   @Override
@@ -604,7 +627,8 @@ public class PunishDetailGetRequest {
         reviewBeginTime,
         reviewEndTime,
         queryAccountIdList,
-        pageConf);
+        pageNum,
+        pageSize);
   }
 
   @Override

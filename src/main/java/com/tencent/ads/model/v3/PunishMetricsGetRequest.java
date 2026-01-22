@@ -45,8 +45,11 @@ public class PunishMetricsGetRequest {
   @SerializedName("second_level_industry_name")
   private String secondLevelIndustryName = null;
 
-  @SerializedName("page_conf")
-  private PunishMetricsPageConf pageConf = null;
+  @SerializedName("page_num")
+  private Long pageNum = null;
+
+  @SerializedName("page_size")
+  private Long pageSize = null;
 
   public PunishMetricsGetRequest partitionTime(Long partitionTime) {
     this.partitionTime = partitionTime;
@@ -208,23 +211,42 @@ public class PunishMetricsGetRequest {
     this.secondLevelIndustryName = secondLevelIndustryName;
   }
 
-  public PunishMetricsGetRequest pageConf(PunishMetricsPageConf pageConf) {
-    this.pageConf = pageConf;
+  public PunishMetricsGetRequest pageNum(Long pageNum) {
+    this.pageNum = pageNum;
     return this;
   }
 
   /**
-   * Get pageConf
+   * Get pageNum
    *
-   * @return pageConf
+   * @return pageNum
    */
   @ApiModelProperty(value = "")
-  public PunishMetricsPageConf getPageConf() {
-    return pageConf;
+  public Long getPageNum() {
+    return pageNum;
   }
 
-  public void setPageConf(PunishMetricsPageConf pageConf) {
-    this.pageConf = pageConf;
+  public void setPageNum(Long pageNum) {
+    this.pageNum = pageNum;
+  }
+
+  public PunishMetricsGetRequest pageSize(Long pageSize) {
+    this.pageSize = pageSize;
+    return this;
+  }
+
+  /**
+   * Get pageSize
+   *
+   * @return pageSize
+   */
+  @ApiModelProperty(value = "")
+  public Long getPageSize() {
+    return pageSize;
+  }
+
+  public void setPageSize(Long pageSize) {
+    this.pageSize = pageSize;
   }
 
   @Override
@@ -246,7 +268,8 @@ public class PunishMetricsGetRequest {
             this.firstLevelIndustryName, punishMetricsGetRequest.firstLevelIndustryName)
         && Objects.equals(
             this.secondLevelIndustryName, punishMetricsGetRequest.secondLevelIndustryName)
-        && Objects.equals(this.pageConf, punishMetricsGetRequest.pageConf);
+        && Objects.equals(this.pageNum, punishMetricsGetRequest.pageNum)
+        && Objects.equals(this.pageSize, punishMetricsGetRequest.pageSize);
   }
 
   @Override
@@ -260,7 +283,8 @@ public class PunishMetricsGetRequest {
         zcAgentGroup,
         firstLevelIndustryName,
         secondLevelIndustryName,
-        pageConf);
+        pageNum,
+        pageSize);
   }
 
   @Override

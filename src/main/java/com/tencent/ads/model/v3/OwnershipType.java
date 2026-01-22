@@ -19,16 +19,18 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-/** 素材类型 */
-@JsonAdapter(TemplateType.Adapter.class)
-public enum TemplateType {
-  IMAGE("IMAGE"),
+/** 素材所属类型 */
+@JsonAdapter(OwnershipType.Adapter.class)
+public enum OwnershipType {
+  UNKNOWN("UNKNOWN"),
 
-  VIDEO("VIDEO");
+  OWNED("OWNED"),
+
+  AUTHORIZED("AUTHORIZED");
 
   private String value;
 
-  TemplateType(String value) {
+  OwnershipType(String value) {
     this.value = value;
   }
 
@@ -41,8 +43,8 @@ public enum TemplateType {
     return String.valueOf(value);
   }
 
-  public static TemplateType fromValue(String text) {
-    for (TemplateType b : TemplateType.values()) {
+  public static OwnershipType fromValue(String text) {
+    for (OwnershipType b : OwnershipType.values()) {
       if (String.valueOf(b.value).equals(text)) {
         return b;
       }
@@ -50,17 +52,17 @@ public enum TemplateType {
     return null;
   }
 
-  public static class Adapter extends TypeAdapter<TemplateType> {
+  public static class Adapter extends TypeAdapter<OwnershipType> {
     @Override
-    public void write(final JsonWriter jsonWriter, final TemplateType enumeration)
+    public void write(final JsonWriter jsonWriter, final OwnershipType enumeration)
         throws IOException {
       jsonWriter.value(enumeration.getValue());
     }
 
     @Override
-    public TemplateType read(final JsonReader jsonReader) throws IOException {
+    public OwnershipType read(final JsonReader jsonReader) throws IOException {
       String value = jsonReader.nextString();
-      return TemplateType.fromValue(String.valueOf(value));
+      return OwnershipType.fromValue(String.valueOf(value));
     }
   }
 }

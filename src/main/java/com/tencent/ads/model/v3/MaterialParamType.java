@@ -19,16 +19,16 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-/** 素材类型 */
-@JsonAdapter(TemplateType.Adapter.class)
-public enum TemplateType {
-  IMAGE("IMAGE"),
+/** 素材传参类型 */
+@JsonAdapter(MaterialParamType.Adapter.class)
+public enum MaterialParamType {
+  ID("MATERIAL_PARAM_TYPE_ID"),
 
-  VIDEO("VIDEO");
+  URL("MATERIAL_PARAM_TYPE_URL");
 
   private String value;
 
-  TemplateType(String value) {
+  MaterialParamType(String value) {
     this.value = value;
   }
 
@@ -41,8 +41,8 @@ public enum TemplateType {
     return String.valueOf(value);
   }
 
-  public static TemplateType fromValue(String text) {
-    for (TemplateType b : TemplateType.values()) {
+  public static MaterialParamType fromValue(String text) {
+    for (MaterialParamType b : MaterialParamType.values()) {
       if (String.valueOf(b.value).equals(text)) {
         return b;
       }
@@ -50,17 +50,17 @@ public enum TemplateType {
     return null;
   }
 
-  public static class Adapter extends TypeAdapter<TemplateType> {
+  public static class Adapter extends TypeAdapter<MaterialParamType> {
     @Override
-    public void write(final JsonWriter jsonWriter, final TemplateType enumeration)
+    public void write(final JsonWriter jsonWriter, final MaterialParamType enumeration)
         throws IOException {
       jsonWriter.value(enumeration.getValue());
     }
 
     @Override
-    public TemplateType read(final JsonReader jsonReader) throws IOException {
+    public MaterialParamType read(final JsonReader jsonReader) throws IOException {
       String value = jsonReader.nextString();
-      return TemplateType.fromValue(String.valueOf(value));
+      return MaterialParamType.fromValue(String.valueOf(value));
     }
   }
 }

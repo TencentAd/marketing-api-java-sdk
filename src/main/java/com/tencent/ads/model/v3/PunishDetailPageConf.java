@@ -21,29 +21,35 @@ import java.util.Objects;
 /** 分页内容 */
 @ApiModel(description = "分页内容")
 public class PunishDetailPageConf {
-  @SerializedName("page_num")
-  private Long pageNum = null;
+  @SerializedName("page")
+  private Long page = null;
 
-  @SerializedName("page_size")
+  @SerializedName("pageSize")
   private Long pageSize = null;
 
-  public PunishDetailPageConf pageNum(Long pageNum) {
-    this.pageNum = pageNum;
+  @SerializedName("totalPage")
+  private Long totalPage = null;
+
+  @SerializedName("totalNum")
+  private Long totalNum = null;
+
+  public PunishDetailPageConf page(Long page) {
+    this.page = page;
     return this;
   }
 
   /**
-   * Get pageNum
+   * Get page
    *
-   * @return pageNum
+   * @return page
    */
   @ApiModelProperty(value = "")
-  public Long getPageNum() {
-    return pageNum;
+  public Long getPage() {
+    return page;
   }
 
-  public void setPageNum(Long pageNum) {
-    this.pageNum = pageNum;
+  public void setPage(Long page) {
+    this.page = page;
   }
 
   public PunishDetailPageConf pageSize(Long pageSize) {
@@ -65,6 +71,44 @@ public class PunishDetailPageConf {
     this.pageSize = pageSize;
   }
 
+  public PunishDetailPageConf totalPage(Long totalPage) {
+    this.totalPage = totalPage;
+    return this;
+  }
+
+  /**
+   * Get totalPage
+   *
+   * @return totalPage
+   */
+  @ApiModelProperty(value = "")
+  public Long getTotalPage() {
+    return totalPage;
+  }
+
+  public void setTotalPage(Long totalPage) {
+    this.totalPage = totalPage;
+  }
+
+  public PunishDetailPageConf totalNum(Long totalNum) {
+    this.totalNum = totalNum;
+    return this;
+  }
+
+  /**
+   * Get totalNum
+   *
+   * @return totalNum
+   */
+  @ApiModelProperty(value = "")
+  public Long getTotalNum() {
+    return totalNum;
+  }
+
+  public void setTotalNum(Long totalNum) {
+    this.totalNum = totalNum;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -74,13 +118,15 @@ public class PunishDetailPageConf {
       return false;
     }
     PunishDetailPageConf punishDetailPageConf = (PunishDetailPageConf) o;
-    return Objects.equals(this.pageNum, punishDetailPageConf.pageNum)
-        && Objects.equals(this.pageSize, punishDetailPageConf.pageSize);
+    return Objects.equals(this.page, punishDetailPageConf.page)
+        && Objects.equals(this.pageSize, punishDetailPageConf.pageSize)
+        && Objects.equals(this.totalPage, punishDetailPageConf.totalPage)
+        && Objects.equals(this.totalNum, punishDetailPageConf.totalNum);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(pageNum, pageSize);
+    return Objects.hash(page, pageSize, totalPage, totalNum);
   }
 
   @Override

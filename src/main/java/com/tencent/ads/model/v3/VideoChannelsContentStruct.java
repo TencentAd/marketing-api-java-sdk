@@ -18,8 +18,8 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.util.Objects;
 
-/** 视频号内容组件 */
-@ApiModel(description = "视频号内容组件")
+/** 视频号主页视频组件 */
+@ApiModel(description = "视频号主页视频组件")
 public class VideoChannelsContentStruct {
   @SerializedName("ad_export_id")
   private String adExportId = null;
