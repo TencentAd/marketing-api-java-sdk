@@ -60,9 +60,6 @@ public class UserIdDn {
   @SerializedName("caid")
   private String caid = null;
 
-  @SerializedName("caid_version")
-  private Long caidVersion = null;
-
   public UserIdDn hashImei(String hashImei) {
     this.hashImei = hashImei;
     return this;
@@ -310,25 +307,6 @@ public class UserIdDn {
     this.caid = caid;
   }
 
-  public UserIdDn caidVersion(Long caidVersion) {
-    this.caidVersion = caidVersion;
-    return this;
-  }
-
-  /**
-   * Get caidVersion
-   *
-   * @return caidVersion
-   */
-  @ApiModelProperty(value = "")
-  public Long getCaidVersion() {
-    return caidVersion;
-  }
-
-  public void setCaidVersion(Long caidVersion) {
-    this.caidVersion = caidVersion;
-  }
-
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -350,8 +328,7 @@ public class UserIdDn {
         && Objects.equals(this.wechatOpenid, userIdDn.wechatOpenid)
         && Objects.equals(this.wechatUnionid, userIdDn.wechatUnionid)
         && Objects.equals(this.wechatAppId, userIdDn.wechatAppId)
-        && Objects.equals(this.caid, userIdDn.caid)
-        && Objects.equals(this.caidVersion, userIdDn.caidVersion);
+        && Objects.equals(this.caid, userIdDn.caid);
   }
 
   @Override
@@ -369,8 +346,7 @@ public class UserIdDn {
         wechatOpenid,
         wechatUnionid,
         wechatAppId,
-        caid,
-        caidVersion);
+        caid);
   }
 
   @Override

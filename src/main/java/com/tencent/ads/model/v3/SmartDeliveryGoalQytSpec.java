@@ -57,6 +57,9 @@ public class SmartDeliveryGoalQytSpec {
   @SerializedName("net_profit_roi")
   private Double netProfitRoi = null;
 
+  @SerializedName("collect_cost")
+  private Long collectCost = null;
+
   public SmartDeliveryGoalQytSpec ecommerceOrderCost(Long ecommerceOrderCost) {
     this.ecommerceOrderCost = ecommerceOrderCost;
     return this;
@@ -286,6 +289,25 @@ public class SmartDeliveryGoalQytSpec {
     this.netProfitRoi = netProfitRoi;
   }
 
+  public SmartDeliveryGoalQytSpec collectCost(Long collectCost) {
+    this.collectCost = collectCost;
+    return this;
+  }
+
+  /**
+   * Get collectCost
+   *
+   * @return collectCost
+   */
+  @ApiModelProperty(value = "")
+  public Long getCollectCost() {
+    return collectCost;
+  }
+
+  public void setCollectCost(Long collectCost) {
+    this.collectCost = collectCost;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -311,7 +333,8 @@ public class SmartDeliveryGoalQytSpec {
             this.firstTwentyFourHourEcommerceOrderCost,
             smartDeliveryGoalQytSpec.firstTwentyFourHourEcommerceOrderCost)
         && Objects.equals(this.netProfitCost, smartDeliveryGoalQytSpec.netProfitCost)
-        && Objects.equals(this.netProfitRoi, smartDeliveryGoalQytSpec.netProfitRoi);
+        && Objects.equals(this.netProfitRoi, smartDeliveryGoalQytSpec.netProfitRoi)
+        && Objects.equals(this.collectCost, smartDeliveryGoalQytSpec.collectCost);
   }
 
   @Override
@@ -328,7 +351,8 @@ public class SmartDeliveryGoalQytSpec {
         clickCost,
         firstTwentyFourHourEcommerceOrderCost,
         netProfitCost,
-        netProfitRoi);
+        netProfitRoi,
+        collectCost);
   }
 
   @Override

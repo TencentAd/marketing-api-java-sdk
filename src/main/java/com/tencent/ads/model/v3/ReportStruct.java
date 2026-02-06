@@ -2622,6 +2622,9 @@ public class ReportStruct {
   @SerializedName("slider_pv")
   private Long sliderPv = null;
 
+  @SerializedName("insurance_dedup_pv")
+  private Long insuranceDedupPv = null;
+
   @SerializedName("adgroup_id")
   private Long adgroupId = null;
 
@@ -19198,6 +19201,25 @@ public class ReportStruct {
     this.sliderPv = sliderPv;
   }
 
+  public ReportStruct insuranceDedupPv(Long insuranceDedupPv) {
+    this.insuranceDedupPv = insuranceDedupPv;
+    return this;
+  }
+
+  /**
+   * Get insuranceDedupPv
+   *
+   * @return insuranceDedupPv
+   */
+  @ApiModelProperty(value = "")
+  public Long getInsuranceDedupPv() {
+    return insuranceDedupPv;
+  }
+
+  public void setInsuranceDedupPv(Long insuranceDedupPv) {
+    this.insuranceDedupPv = insuranceDedupPv;
+  }
+
   public ReportStruct adgroupId(Long adgroupId) {
     this.adgroupId = adgroupId;
     return this;
@@ -20726,6 +20748,7 @@ public class ReportStruct {
         && Objects.equals(this.clkBmDetailPv, reportStruct.clkBmDetailPv)
         && Objects.equals(this.clkRpsPv, reportStruct.clkRpsPv)
         && Objects.equals(this.sliderPv, reportStruct.sliderPv)
+        && Objects.equals(this.insuranceDedupPv, reportStruct.insuranceDedupPv)
         && Objects.equals(this.adgroupId, reportStruct.adgroupId)
         && Objects.equals(this.adgroupName, reportStruct.adgroupName)
         && Objects.equals(this.dynamicCreativeId, reportStruct.dynamicCreativeId)
@@ -21626,6 +21649,7 @@ public class ReportStruct {
         clkBmDetailPv,
         clkRpsPv,
         sliderPv,
+        insuranceDedupPv,
         adgroupId,
         adgroupName,
         dynamicCreativeId,

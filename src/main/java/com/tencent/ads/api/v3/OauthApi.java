@@ -21,6 +21,7 @@ import com.tencent.ads.Configuration;
 import com.tencent.ads.Pair;
 import com.tencent.ads.ProgressRequestBody;
 import com.tencent.ads.ProgressResponseBody;
+import com.tencent.ads.model.v3.OauthRefreshTokenResponse;
 import com.tencent.ads.model.v3.OauthTokenResponse;
 import java.io.IOException;
 import java.lang.reflect.Type;
@@ -294,6 +295,236 @@ public class OauthApi {
             progressRequestListener,
             headerPair);
     Type localVarReturnType = new TypeToken<String>() {}.getType();
+    apiClient.executeAsync(call, localVarReturnType, callback);
+    return call;
+  }
+  /**
+   * Build call for oauthRefreshToken
+   *
+   * @param clientId (required)
+   * @param clientSecret (required)
+   * @param refreshToken (required)
+   * @param fields 返回参数的字段列表 (optional)
+   * @param progressListener Progress listener
+   * @param progressRequestListener Progress request listener
+   * @return Call to execute
+   * @throws ApiException If fail to serialize the request body object
+   */
+  public com.squareup.okhttp.Call oauthRefreshTokenCall(
+      Long clientId,
+      String clientSecret,
+      String refreshToken,
+      List<String> fields,
+      final ProgressResponseBody.ProgressListener progressListener,
+      final ProgressRequestBody.ProgressRequestListener progressRequestListener,
+      Pair... headerPair)
+      throws ApiException {
+
+    Object localVarPostBody = null;
+
+    // create path and map variables
+    String localVarPath = "/oauth/refresh_token";
+
+    List<Pair> localVarQueryParams = new ArrayList<Pair>();
+    List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
+    if (clientId != null)
+      localVarQueryParams.addAll(apiClient.parameterToPair("client_id", clientId));
+    if (clientSecret != null)
+      localVarQueryParams.addAll(apiClient.parameterToPair("client_secret", clientSecret));
+    if (refreshToken != null)
+      localVarQueryParams.addAll(apiClient.parameterToPair("refresh_token", refreshToken));
+    if (fields != null)
+      localVarCollectionQueryParams.addAll(apiClient.parameterToPairs("multi", "fields", fields));
+
+    Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+
+    Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+    final String[] localVarAccepts = {"application/json"};
+    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+    if (localVarAccept != null) localVarHeaderParams.put("Accept", localVarAccept);
+
+    final String[] localVarContentTypes = {"text/plain"};
+    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+    localVarHeaderParams.put("Content-Type", localVarContentType);
+
+    if (headerPair != null && headerPair.length > 0) {
+      for (int i = 0; i < headerPair.length; i++) {
+        localVarHeaderParams.put(headerPair[i].getName(), headerPair[i].getValue());
+      }
+    }
+
+    if (progressListener != null) {
+      apiClient
+          .getHttpClient()
+          .networkInterceptors()
+          .add(
+              new com.squareup.okhttp.Interceptor() {
+                @Override
+                public com.squareup.okhttp.Response intercept(
+                    com.squareup.okhttp.Interceptor.Chain chain) throws IOException {
+                  com.squareup.okhttp.Response originalResponse = chain.proceed(chain.request());
+                  return originalResponse
+                      .newBuilder()
+                      .body(new ProgressResponseBody(originalResponse.body(), progressListener))
+                      .build();
+                }
+              });
+    }
+
+    String[] localVarAuthNames = new String[] {"accessToken", "nonce", "timestamp"};
+    return apiClient.buildCall(
+        localVarPath,
+        "GET",
+        localVarQueryParams,
+        localVarCollectionQueryParams,
+        localVarPostBody,
+        localVarHeaderParams,
+        localVarFormParams,
+        localVarAuthNames,
+        progressRequestListener);
+  }
+
+  @SuppressWarnings("rawtypes")
+  private com.squareup.okhttp.Call oauthRefreshTokenValidateBeforeCall(
+      Long clientId,
+      String clientSecret,
+      String refreshToken,
+      List<String> fields,
+      final ProgressResponseBody.ProgressListener progressListener,
+      final ProgressRequestBody.ProgressRequestListener progressRequestListener,
+      Pair... headerPair)
+      throws ApiException {
+
+    // verify the required parameter 'clientId' is set
+    if (clientId == null) {
+      throw new ApiException(
+          "Missing the required parameter 'clientId' when calling oauthRefreshToken(Async)");
+    }
+
+    // verify the required parameter 'clientSecret' is set
+    if (clientSecret == null) {
+      throw new ApiException(
+          "Missing the required parameter 'clientSecret' when calling oauthRefreshToken(Async)");
+    }
+
+    // verify the required parameter 'refreshToken' is set
+    if (refreshToken == null) {
+      throw new ApiException(
+          "Missing the required parameter 'refreshToken' when calling oauthRefreshToken(Async)");
+    }
+
+    com.squareup.okhttp.Call call =
+        oauthRefreshTokenCall(
+            clientId,
+            clientSecret,
+            refreshToken,
+            fields,
+            progressListener,
+            progressRequestListener,
+            headerPair);
+    return call;
+  }
+
+  /**
+   * 刷新 Refresh Token
+   *
+   * @param clientId (required)
+   * @param clientSecret (required)
+   * @param refreshToken (required)
+   * @param fields 返回参数的字段列表 (optional)
+   * @return OauthRefreshTokenResponse
+   * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
+   *     response body
+   */
+  public OauthRefreshTokenResponse oauthRefreshToken(
+      Long clientId,
+      String clientSecret,
+      String refreshToken,
+      List<String> fields,
+      Pair... headerPair)
+      throws ApiException {
+    ApiResponse<OauthRefreshTokenResponse> resp =
+        oauthRefreshTokenWithHttpInfo(clientId, clientSecret, refreshToken, fields, headerPair);
+    return resp.getData();
+  }
+
+  /**
+   * 刷新 Refresh Token
+   *
+   * @param clientId (required)
+   * @param clientSecret (required)
+   * @param refreshToken (required)
+   * @param fields 返回参数的字段列表 (optional)
+   * @return ApiResponse&lt;OauthRefreshTokenResponse&gt;
+   * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
+   *     response body
+   */
+  public ApiResponse<OauthRefreshTokenResponse> oauthRefreshTokenWithHttpInfo(
+      Long clientId,
+      String clientSecret,
+      String refreshToken,
+      List<String> fields,
+      Pair... headerPair)
+      throws ApiException {
+    com.squareup.okhttp.Call call =
+        oauthRefreshTokenValidateBeforeCall(
+            clientId, clientSecret, refreshToken, fields, null, null, headerPair);
+    Type localVarReturnType = new TypeToken<OauthRefreshTokenResponse>() {}.getType();
+    return apiClient.execute(call, localVarReturnType);
+  }
+
+  /**
+   * 刷新 Refresh Token (asynchronously)
+   *
+   * @param clientId (required)
+   * @param clientSecret (required)
+   * @param refreshToken (required)
+   * @param fields 返回参数的字段列表 (optional)
+   * @param callback The callback to be executed when the API call finishes
+   * @return The request call
+   * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+   */
+  public com.squareup.okhttp.Call oauthRefreshTokenAsync(
+      Long clientId,
+      String clientSecret,
+      String refreshToken,
+      List<String> fields,
+      final ApiCallback<OauthRefreshTokenResponse> callback,
+      Pair... headerPair)
+      throws ApiException {
+
+    ProgressResponseBody.ProgressListener progressListener = null;
+    ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
+
+    if (callback != null) {
+      progressListener =
+          new ProgressResponseBody.ProgressListener() {
+            @Override
+            public void update(long bytesRead, long contentLength, boolean done) {
+              callback.onDownloadProgress(bytesRead, contentLength, done);
+            }
+          };
+
+      progressRequestListener =
+          new ProgressRequestBody.ProgressRequestListener() {
+            @Override
+            public void onRequestProgress(long bytesWritten, long contentLength, boolean done) {
+              callback.onUploadProgress(bytesWritten, contentLength, done);
+            }
+          };
+    }
+
+    com.squareup.okhttp.Call call =
+        oauthRefreshTokenValidateBeforeCall(
+            clientId,
+            clientSecret,
+            refreshToken,
+            fields,
+            progressListener,
+            progressRequestListener,
+            headerPair);
+    Type localVarReturnType = new TypeToken<OauthRefreshTokenResponse>() {}.getType();
     apiClient.executeAsync(call, localVarReturnType, callback);
     return call;
   }

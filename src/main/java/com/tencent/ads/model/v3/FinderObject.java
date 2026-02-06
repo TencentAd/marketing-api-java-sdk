@@ -44,6 +44,15 @@ public class FinderObject {
   @SerializedName("wechat_channels_account_id")
   private String wechatChannelsAccountId = null;
 
+  @SerializedName("created_source")
+  private CreatedSourceType createdSource = null;
+
+  @SerializedName("wechat_channels_components")
+  private List<WxgWechatChannelsComponent> wechatChannelsComponents = null;
+
+  @SerializedName("feeds_source_type")
+  private FeedsSourceType feedsSourceType = null;
+
   @SerializedName("is_disable")
   private Boolean isDisable = null;
 
@@ -194,6 +203,74 @@ public class FinderObject {
     this.wechatChannelsAccountId = wechatChannelsAccountId;
   }
 
+  public FinderObject createdSource(CreatedSourceType createdSource) {
+    this.createdSource = createdSource;
+    return this;
+  }
+
+  /**
+   * Get createdSource
+   *
+   * @return createdSource
+   */
+  @ApiModelProperty(value = "")
+  public CreatedSourceType getCreatedSource() {
+    return createdSource;
+  }
+
+  public void setCreatedSource(CreatedSourceType createdSource) {
+    this.createdSource = createdSource;
+  }
+
+  public FinderObject wechatChannelsComponents(
+      List<WxgWechatChannelsComponent> wechatChannelsComponents) {
+    this.wechatChannelsComponents = wechatChannelsComponents;
+    return this;
+  }
+
+  public FinderObject addWechatChannelsComponentsItem(
+      WxgWechatChannelsComponent wechatChannelsComponentsItem) {
+    if (this.wechatChannelsComponents == null) {
+      this.wechatChannelsComponents = new ArrayList<WxgWechatChannelsComponent>();
+    }
+    this.wechatChannelsComponents.add(wechatChannelsComponentsItem);
+    return this;
+  }
+
+  /**
+   * Get wechatChannelsComponents
+   *
+   * @return wechatChannelsComponents
+   */
+  @ApiModelProperty(value = "")
+  public List<WxgWechatChannelsComponent> getWechatChannelsComponents() {
+    return wechatChannelsComponents;
+  }
+
+  public void setWechatChannelsComponents(
+      List<WxgWechatChannelsComponent> wechatChannelsComponents) {
+    this.wechatChannelsComponents = wechatChannelsComponents;
+  }
+
+  public FinderObject feedsSourceType(FeedsSourceType feedsSourceType) {
+    this.feedsSourceType = feedsSourceType;
+    return this;
+  }
+
+  /**
+   * Get feedsSourceType
+   *
+   * @return feedsSourceType
+   */
+  @ApiModelProperty(value = "")
+  public FeedsSourceType getFeedsSourceType() {
+    return feedsSourceType;
+  }
+
+  public void setFeedsSourceType(FeedsSourceType feedsSourceType) {
+    this.feedsSourceType = feedsSourceType;
+  }
+
   public FinderObject isDisable(Boolean isDisable) {
     this.isDisable = isDisable;
     return this;
@@ -267,6 +344,9 @@ public class FinderObject {
         && Objects.equals(this.medias, finderObject.medias)
         && Objects.equals(this.finderUsername, finderObject.finderUsername)
         && Objects.equals(this.wechatChannelsAccountId, finderObject.wechatChannelsAccountId)
+        && Objects.equals(this.createdSource, finderObject.createdSource)
+        && Objects.equals(this.wechatChannelsComponents, finderObject.wechatChannelsComponents)
+        && Objects.equals(this.feedsSourceType, finderObject.feedsSourceType)
         && Objects.equals(this.isDisable, finderObject.isDisable)
         && Objects.equals(this.disableMessage, finderObject.disableMessage)
         && Objects.equals(this.auditStatus, finderObject.auditStatus);
@@ -282,6 +362,9 @@ public class FinderObject {
         medias,
         finderUsername,
         wechatChannelsAccountId,
+        createdSource,
+        wechatChannelsComponents,
+        feedsSourceType,
         isDisable,
         disableMessage,
         auditStatus);

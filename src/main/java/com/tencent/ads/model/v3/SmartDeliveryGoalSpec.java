@@ -174,6 +174,9 @@ public class SmartDeliveryGoalSpec {
   @SerializedName("wechat_store_net_profit_spec")
   private SmartDeliveryGoalWechatStoreNetProfitSpec wechatStoreNetProfitSpec = null;
 
+  @SerializedName("qyt_collect_spec")
+  private SmartDeliveryGoalQytSpec qytCollectSpec = null;
+
   public SmartDeliveryGoalSpec longTermRoiSpec(SmartDeliveryGoalLongTermRoiSpec longTermRoiSpec) {
     this.longTermRoiSpec = longTermRoiSpec;
     return this;
@@ -1151,6 +1154,25 @@ public class SmartDeliveryGoalSpec {
     this.wechatStoreNetProfitSpec = wechatStoreNetProfitSpec;
   }
 
+  public SmartDeliveryGoalSpec qytCollectSpec(SmartDeliveryGoalQytSpec qytCollectSpec) {
+    this.qytCollectSpec = qytCollectSpec;
+    return this;
+  }
+
+  /**
+   * Get qytCollectSpec
+   *
+   * @return qytCollectSpec
+   */
+  @ApiModelProperty(value = "")
+  public SmartDeliveryGoalQytSpec getQytCollectSpec() {
+    return qytCollectSpec;
+  }
+
+  public void setQytCollectSpec(SmartDeliveryGoalQytSpec qytCollectSpec) {
+    this.qytCollectSpec = qytCollectSpec;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -1247,7 +1269,8 @@ public class SmartDeliveryGoalSpec {
         && Objects.equals(
             this.wechatStoreNetProfitRoiSpec, smartDeliveryGoalSpec.wechatStoreNetProfitRoiSpec)
         && Objects.equals(
-            this.wechatStoreNetProfitSpec, smartDeliveryGoalSpec.wechatStoreNetProfitSpec);
+            this.wechatStoreNetProfitSpec, smartDeliveryGoalSpec.wechatStoreNetProfitSpec)
+        && Objects.equals(this.qytCollectSpec, smartDeliveryGoalSpec.qytCollectSpec);
   }
 
   @Override
@@ -1299,7 +1322,8 @@ public class SmartDeliveryGoalSpec {
         qytNetProfitSpec,
         qytNetProfitRoiSpec,
         wechatStoreNetProfitRoiSpec,
-        wechatStoreNetProfitSpec);
+        wechatStoreNetProfitSpec,
+        qytCollectSpec);
   }
 
   @Override

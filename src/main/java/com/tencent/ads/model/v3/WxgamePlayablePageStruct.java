@@ -47,6 +47,9 @@ public class WxgamePlayablePageStruct {
   @SerializedName("wxgame_playable_page_card_link_description")
   private String wxgamePlayablePageCardLinkDescription = null;
 
+  @SerializedName("wxgame_playable_page_end_time_type")
+  private WxgamePlayablePageEndTimeType wxgamePlayablePageEndTimeType = null;
+
   public WxgamePlayablePageStruct wxgamePlayablePageSwitch(Boolean wxgamePlayablePageSwitch) {
     this.wxgamePlayablePageSwitch = wxgamePlayablePageSwitch;
     return this;
@@ -214,6 +217,27 @@ public class WxgamePlayablePageStruct {
     this.wxgamePlayablePageCardLinkDescription = wxgamePlayablePageCardLinkDescription;
   }
 
+  public WxgamePlayablePageStruct wxgamePlayablePageEndTimeType(
+      WxgamePlayablePageEndTimeType wxgamePlayablePageEndTimeType) {
+    this.wxgamePlayablePageEndTimeType = wxgamePlayablePageEndTimeType;
+    return this;
+  }
+
+  /**
+   * Get wxgamePlayablePageEndTimeType
+   *
+   * @return wxgamePlayablePageEndTimeType
+   */
+  @ApiModelProperty(value = "")
+  public WxgamePlayablePageEndTimeType getWxgamePlayablePageEndTimeType() {
+    return wxgamePlayablePageEndTimeType;
+  }
+
+  public void setWxgamePlayablePageEndTimeType(
+      WxgamePlayablePageEndTimeType wxgamePlayablePageEndTimeType) {
+    this.wxgamePlayablePageEndTimeType = wxgamePlayablePageEndTimeType;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -243,7 +267,10 @@ public class WxgamePlayablePageStruct {
             wxgamePlayablePageStruct.wxgamePlayablePageCardLinkImage)
         && Objects.equals(
             this.wxgamePlayablePageCardLinkDescription,
-            wxgamePlayablePageStruct.wxgamePlayablePageCardLinkDescription);
+            wxgamePlayablePageStruct.wxgamePlayablePageCardLinkDescription)
+        && Objects.equals(
+            this.wxgamePlayablePageEndTimeType,
+            wxgamePlayablePageStruct.wxgamePlayablePageEndTimeType);
   }
 
   @Override
@@ -256,7 +283,8 @@ public class WxgamePlayablePageStruct {
         wxgamePlayablePageTriggerTypes,
         wxgamePlayablePageTriggerText,
         wxgamePlayablePageCardLinkImage,
-        wxgamePlayablePageCardLinkDescription);
+        wxgamePlayablePageCardLinkDescription,
+        wxgamePlayablePageEndTimeType);
   }
 
   @Override

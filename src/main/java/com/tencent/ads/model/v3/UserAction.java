@@ -52,9 +52,6 @@ public class UserAction {
   @SerializedName("channel")
   private ActionChannelType channel = null;
 
-  @SerializedName("ext_info")
-  private DeviceInfo extInfo = null;
-
   public UserAction actionTime(Long actionTime) {
     this.actionTime = actionTime;
     return this;
@@ -245,25 +242,6 @@ public class UserAction {
     this.channel = channel;
   }
 
-  public UserAction extInfo(DeviceInfo extInfo) {
-    this.extInfo = extInfo;
-    return this;
-  }
-
-  /**
-   * Get extInfo
-   *
-   * @return extInfo
-   */
-  @ApiModelProperty(value = "")
-  public DeviceInfo getExtInfo() {
-    return extInfo;
-  }
-
-  public void setExtInfo(DeviceInfo extInfo) {
-    this.extInfo = extInfo;
-  }
-
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -282,8 +260,7 @@ public class UserAction {
         && Objects.equals(this.trace, userAction.trace)
         && Objects.equals(this.url, userAction.url)
         && Objects.equals(this.productInform, userAction.productInform)
-        && Objects.equals(this.channel, userAction.channel)
-        && Objects.equals(this.extInfo, userAction.extInfo);
+        && Objects.equals(this.channel, userAction.channel);
   }
 
   @Override
@@ -298,8 +275,7 @@ public class UserAction {
         trace,
         url,
         productInform,
-        channel,
-        extInfo);
+        channel);
   }
 
   @Override

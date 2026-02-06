@@ -141,6 +141,9 @@ public class AdgroupsUpdateRequest {
   @SerializedName("smart_targeting_mode")
   private SmartTargetingMode smartTargetingMode = null;
 
+  @SerializedName("smart_coupon_mode")
+  private SmartCouponMode smartCouponMode = null;
+
   public AdgroupsUpdateRequest accountId(Long accountId) {
     this.accountId = accountId;
     return this;
@@ -924,6 +927,25 @@ public class AdgroupsUpdateRequest {
     this.smartTargetingMode = smartTargetingMode;
   }
 
+  public AdgroupsUpdateRequest smartCouponMode(SmartCouponMode smartCouponMode) {
+    this.smartCouponMode = smartCouponMode;
+    return this;
+  }
+
+  /**
+   * Get smartCouponMode
+   *
+   * @return smartCouponMode
+   */
+  @ApiModelProperty(value = "")
+  public SmartCouponMode getSmartCouponMode() {
+    return smartCouponMode;
+  }
+
+  public void setSmartCouponMode(SmartCouponMode smartCouponMode) {
+    this.smartCouponMode = smartCouponMode;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -985,7 +1007,8 @@ public class AdgroupsUpdateRequest {
         && Objects.equals(
             this.liveRecommendStrategyEnabled, adgroupsUpdateRequest.liveRecommendStrategyEnabled)
         && Objects.equals(this.customCostRoiCap, adgroupsUpdateRequest.customCostRoiCap)
-        && Objects.equals(this.smartTargetingMode, adgroupsUpdateRequest.smartTargetingMode);
+        && Objects.equals(this.smartTargetingMode, adgroupsUpdateRequest.smartTargetingMode)
+        && Objects.equals(this.smartCouponMode, adgroupsUpdateRequest.smartCouponMode);
   }
 
   @Override
@@ -1030,7 +1053,8 @@ public class AdgroupsUpdateRequest {
         cloudUnionSpec,
         liveRecommendStrategyEnabled,
         customCostRoiCap,
-        smartTargetingMode);
+        smartTargetingMode,
+        smartCouponMode);
   }
 
   @Override

@@ -29,6 +29,7 @@ public class App {
   @Inject AdgroupNegativewordsApiContainer adgroupNegativewordsApiContainer;
   @Inject AdgroupsApiContainer adgroupsApiContainer;
   @Inject AdvertiserApiContainer advertiserApiContainer;
+  @Inject AdvertiserConfigApiContainer advertiserConfigApiContainer;
   @Inject AdvertiserDailyBudgetApiContainer advertiserDailyBudgetApiContainer;
   @Inject AgencyApiContainer agencyApiContainer;
   @Inject AgencyBusinessUnitApiContainer agencyBusinessUnitApiContainer;
@@ -141,6 +142,7 @@ public class App {
 
   @Inject MarketingTargetAssetsApiContainer marketingTargetAssetsApiContainer;
   @Inject MarketingTargetTypesApiContainer marketingTargetTypesApiContainer;
+  @Inject MaterialAiAnnotationApiContainer materialAiAnnotationApiContainer;
   @Inject MaterialAsyncTasksApiContainer materialAsyncTasksApiContainer;
   @Inject MaterialDcasetApiContainer materialDcasetApiContainer;
   @Inject MaterialDcatagApiContainer materialDcatagApiContainer;
@@ -312,6 +314,10 @@ public class App {
 
   public AdvertiserApiContainer advertiser() {
     return advertiserApiContainer;
+  }
+
+  public AdvertiserConfigApiContainer advertiserConfig() {
+    return advertiserConfigApiContainer;
   }
 
   public AdvertiserDailyBudgetApiContainer advertiserDailyBudget() {
@@ -748,6 +754,10 @@ public class App {
 
   public MarketingTargetTypesApiContainer marketingTargetTypes() {
     return marketingTargetTypesApiContainer;
+  }
+
+  public MaterialAiAnnotationApiContainer materialAiAnnotation() {
+    return materialAiAnnotationApiContainer;
   }
 
   public MaterialAsyncTasksApiContainer materialAsyncTasks() {

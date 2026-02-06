@@ -19,6 +19,8 @@ import com.tencent.ads.Pair;
 import com.tencent.ads.anno.*;
 import com.tencent.ads.api.v3.OauthApi;
 import com.tencent.ads.exception.TencentAdsResponseException;
+import com.tencent.ads.model.v3.OauthRefreshTokenResponse;
+import com.tencent.ads.model.v3.OauthRefreshTokenResponseData;
 import com.tencent.ads.model.v3.OauthTokenResponse;
 import com.tencent.ads.model.v3.OauthTokenResponseData;
 import java.util.List;
@@ -55,6 +57,30 @@ public class OauthApiContainer extends ApiContainer {
         api.oauthAuthorize(clientId, redirectUri, state, scope, accountType, fields, headerPair);
 
     return resp;
+  }
+
+  /**
+   * 刷新 Refresh Token
+   *
+   * @param clientId (required)
+   * @param clientSecret (required)
+   * @param refreshToken (required)
+   * @param fields 返回参数的字段列表 (optional)
+   * @return OauthRefreshTokenResponse
+   * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
+   *     response body
+   */
+  public OauthRefreshTokenResponseData oauthRefreshToken(
+      Long clientId,
+      String clientSecret,
+      String refreshToken,
+      List<String> fields,
+      Pair... headerPair)
+      throws ApiException, TencentAdsResponseException {
+    OauthRefreshTokenResponse resp =
+        api.oauthRefreshToken(clientId, clientSecret, refreshToken, fields, headerPair);
+    handleResponse(gson.toJson(resp));
+    return resp.getData();
   }
 
   /**
