@@ -46,6 +46,9 @@ public class FundTransferAddRequest {
   @SerializedName("pre_fetch_amount")
   private Long preFetchAmount = null;
 
+  @SerializedName("pre_check")
+  private Long preCheck = null;
+
   public FundTransferAddRequest accountId(Long accountId) {
     this.accountId = accountId;
     return this;
@@ -217,6 +220,25 @@ public class FundTransferAddRequest {
     this.preFetchAmount = preFetchAmount;
   }
 
+  public FundTransferAddRequest preCheck(Long preCheck) {
+    this.preCheck = preCheck;
+    return this;
+  }
+
+  /**
+   * Get preCheck
+   *
+   * @return preCheck
+   */
+  @ApiModelProperty(value = "")
+  public Long getPreCheck() {
+    return preCheck;
+  }
+
+  public void setPreCheck(Long preCheck) {
+    this.preCheck = preCheck;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -234,7 +256,8 @@ public class FundTransferAddRequest {
         && Objects.equals(this.memo, fundTransferAddRequest.memo)
         && Objects.equals(this.transferTryBest, fundTransferAddRequest.transferTryBest)
         && Objects.equals(this.highFrequencyTransfer, fundTransferAddRequest.highFrequencyTransfer)
-        && Objects.equals(this.preFetchAmount, fundTransferAddRequest.preFetchAmount);
+        && Objects.equals(this.preFetchAmount, fundTransferAddRequest.preFetchAmount)
+        && Objects.equals(this.preCheck, fundTransferAddRequest.preCheck);
   }
 
   @Override
@@ -248,7 +271,8 @@ public class FundTransferAddRequest {
         memo,
         transferTryBest,
         highFrequencyTransfer,
-        preFetchAmount);
+        preFetchAmount,
+        preCheck);
   }
 
   @Override

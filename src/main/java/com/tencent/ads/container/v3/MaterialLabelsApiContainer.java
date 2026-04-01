@@ -27,6 +27,7 @@ import com.tencent.ads.model.v3.MaterialLabelsBindResponse;
 import com.tencent.ads.model.v3.MaterialLabelsBindResponseData;
 import com.tencent.ads.model.v3.MaterialLabelsDeleteRequest;
 import com.tencent.ads.model.v3.MaterialLabelsDeleteResponse;
+import com.tencent.ads.model.v3.MaterialLabelsDeleteResponseData;
 import com.tencent.ads.model.v3.MaterialLabelsGetResponse;
 import com.tencent.ads.model.v3.MaterialLabelsGetResponseData;
 import com.tencent.ads.model.v3.MaterialLabelsUpdateRequest;
@@ -79,13 +80,12 @@ public class MaterialLabelsApiContainer extends ApiContainer {
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
-  public MaterialLabelsDeleteResponse materialLabelsDelete(
+  public MaterialLabelsDeleteResponseData materialLabelsDelete(
       MaterialLabelsDeleteRequest data, Pair... headerPair)
       throws ApiException, TencentAdsResponseException {
     MaterialLabelsDeleteResponse resp = api.materialLabelsDelete(data, headerPair);
     handleResponse(gson.toJson(resp));
-
-    return resp;
+    return resp.getData();
   }
 
   /**
@@ -99,6 +99,7 @@ public class MaterialLabelsApiContainer extends ApiContainer {
    * @param secondLabelLevelIdList 二级标签类目ID列表 (optional)
    * @param needCount (optional)
    * @param businessScenario (optional)
+   * @param ownershipType 素材归属类型过滤 (optional)
    * @param orderBy (optional)
    * @param page (optional)
    * @param pageSize (optional)
@@ -116,6 +117,7 @@ public class MaterialLabelsApiContainer extends ApiContainer {
       List<Long> secondLabelLevelIdList,
       Boolean needCount,
       String businessScenario,
+      String ownershipType,
       List<OrderByStruct> orderBy,
       Long page,
       Long pageSize,
@@ -132,6 +134,7 @@ public class MaterialLabelsApiContainer extends ApiContainer {
             secondLabelLevelIdList,
             needCount,
             businessScenario,
+            ownershipType,
             orderBy,
             page,
             pageSize,

@@ -2625,6 +2625,9 @@ public class HourlyReportApiListStruct {
   @SerializedName("insurance_dedup_pv")
   private Long insuranceDedupPv = null;
 
+  @SerializedName("clk_bm_live_pv")
+  private Long clkBmLivePv = null;
+
   @SerializedName("adgroup_id")
   private Long adgroupId = null;
 
@@ -19243,6 +19246,25 @@ public class HourlyReportApiListStruct {
     this.insuranceDedupPv = insuranceDedupPv;
   }
 
+  public HourlyReportApiListStruct clkBmLivePv(Long clkBmLivePv) {
+    this.clkBmLivePv = clkBmLivePv;
+    return this;
+  }
+
+  /**
+   * Get clkBmLivePv
+   *
+   * @return clkBmLivePv
+   */
+  @ApiModelProperty(value = "")
+  public Long getClkBmLivePv() {
+    return clkBmLivePv;
+  }
+
+  public void setClkBmLivePv(Long clkBmLivePv) {
+    this.clkBmLivePv = clkBmLivePv;
+  }
+
   public HourlyReportApiListStruct adgroupId(Long adgroupId) {
     this.adgroupId = adgroupId;
     return this;
@@ -20844,6 +20866,7 @@ public class HourlyReportApiListStruct {
         && Objects.equals(this.clkRpsPv, hourlyReportApiListStruct.clkRpsPv)
         && Objects.equals(this.sliderPv, hourlyReportApiListStruct.sliderPv)
         && Objects.equals(this.insuranceDedupPv, hourlyReportApiListStruct.insuranceDedupPv)
+        && Objects.equals(this.clkBmLivePv, hourlyReportApiListStruct.clkBmLivePv)
         && Objects.equals(this.adgroupId, hourlyReportApiListStruct.adgroupId)
         && Objects.equals(this.adgroupName, hourlyReportApiListStruct.adgroupName)
         && Objects.equals(this.dynamicCreativeId, hourlyReportApiListStruct.dynamicCreativeId)
@@ -21734,6 +21757,7 @@ public class HourlyReportApiListStruct {
         clkRpsPv,
         sliderPv,
         insuranceDedupPv,
+        clkBmLivePv,
         adgroupId,
         adgroupName,
         dynamicCreativeId,

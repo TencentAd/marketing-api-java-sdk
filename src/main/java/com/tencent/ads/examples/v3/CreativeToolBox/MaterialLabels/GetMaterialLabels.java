@@ -31,6 +31,8 @@ public class GetMaterialLabels {
 
   public String businessScenario = null;
 
+  public String ownershipType = null;
+
   public List<OrderByStruct> orderBy = null;
 
   public Long page = null;
@@ -62,6 +64,7 @@ public class GetMaterialLabels {
                 secondLabelLevelIdList,
                 needCount,
                 businessScenario,
+                ownershipType,
                 orderBy,
                 page,
                 pageSize,

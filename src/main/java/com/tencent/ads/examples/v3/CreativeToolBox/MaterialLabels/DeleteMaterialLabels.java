@@ -5,7 +5,6 @@ import com.tencent.ads.exception.TencentAdsResponseException;
 import com.tencent.ads.exception.TencentAdsSDKException;
 import com.tencent.ads.model.v3.*;
 import com.tencent.ads.model.v3.MaterialLabelsDeleteRequest;
-import com.tencent.ads.model.v3.MaterialLabelsDeleteResponse;
 import com.tencent.ads.v3.TencentAds;
 
 public class DeleteMaterialLabels {
@@ -27,8 +26,9 @@ public class DeleteMaterialLabels {
 
   public void buildParams() {}
 
-  public MaterialLabelsDeleteResponse deleteMaterialLabels() throws Exception {
-    MaterialLabelsDeleteResponse response = tencentAds.materialLabels().materialLabelsDelete(data);
+  public MaterialLabelsDeleteResponseData deleteMaterialLabels() throws Exception {
+    MaterialLabelsDeleteResponseData response =
+        tencentAds.materialLabels().materialLabelsDelete(data);
     return response;
   }
 
@@ -36,7 +36,7 @@ public class DeleteMaterialLabels {
     try {
       DeleteMaterialLabels deleteMaterialLabels = new DeleteMaterialLabels();
       deleteMaterialLabels.init();
-      MaterialLabelsDeleteResponse response = deleteMaterialLabels.deleteMaterialLabels();
+      MaterialLabelsDeleteResponseData response = deleteMaterialLabels.deleteMaterialLabels();
     } catch (TencentAdsResponseException e) {
       e.printStackTrace();
     } catch (TencentAdsSDKException e) {

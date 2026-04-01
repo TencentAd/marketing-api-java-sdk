@@ -158,6 +158,7 @@ public class App {
   @Inject MuseAiTaskApiContainer museAiTaskApiContainer;
   @Inject MuseAiUgcApiContainer museAiUgcApiContainer;
   @Inject MuseAudiosApiContainer museAudiosApiContainer;
+  @Inject MuseDeriveSwitchSettingsApiContainer museDeriveSwitchSettingsApiContainer;
   @Inject NegativewordsApiContainer negativewordsApiContainer;
   @Inject OauthApiContainer oauthApiContainer;
   @Inject ObjectCommentFlagApiContainer objectCommentFlagApiContainer;
@@ -806,6 +807,10 @@ public class App {
 
   public MuseAudiosApiContainer museAudios() {
     return museAudiosApiContainer;
+  }
+
+  public MuseDeriveSwitchSettingsApiContainer museDeriveSwitchSettings() {
+    return museDeriveSwitchSettingsApiContainer;
   }
 
   public NegativewordsApiContainer negativewords() {

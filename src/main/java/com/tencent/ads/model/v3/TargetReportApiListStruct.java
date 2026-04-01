@@ -2523,6 +2523,9 @@ public class TargetReportApiListStruct {
   @SerializedName("insurance_dedup_pv")
   private Long insuranceDedupPv = null;
 
+  @SerializedName("clk_bm_live_pv")
+  private Long clkBmLivePv = null;
+
   @SerializedName("age_id")
   private Long ageId = null;
 
@@ -18465,6 +18468,25 @@ public class TargetReportApiListStruct {
     this.insuranceDedupPv = insuranceDedupPv;
   }
 
+  public TargetReportApiListStruct clkBmLivePv(Long clkBmLivePv) {
+    this.clkBmLivePv = clkBmLivePv;
+    return this;
+  }
+
+  /**
+   * Get clkBmLivePv
+   *
+   * @return clkBmLivePv
+   */
+  @ApiModelProperty(value = "")
+  public Long getClkBmLivePv() {
+    return clkBmLivePv;
+  }
+
+  public void setClkBmLivePv(Long clkBmLivePv) {
+    this.clkBmLivePv = clkBmLivePv;
+  }
+
   public TargetReportApiListStruct ageId(Long ageId) {
     this.ageId = ageId;
     return this;
@@ -19825,6 +19847,7 @@ public class TargetReportApiListStruct {
         && Objects.equals(this.clkRpsPv, targetReportApiListStruct.clkRpsPv)
         && Objects.equals(this.sliderPv, targetReportApiListStruct.sliderPv)
         && Objects.equals(this.insuranceDedupPv, targetReportApiListStruct.insuranceDedupPv)
+        && Objects.equals(this.clkBmLivePv, targetReportApiListStruct.clkBmLivePv)
         && Objects.equals(this.ageId, targetReportApiListStruct.ageId)
         && Objects.equals(this.cityId, targetReportApiListStruct.cityId)
         && Objects.equals(this.regionId, targetReportApiListStruct.regionId)
@@ -20671,6 +20694,7 @@ public class TargetReportApiListStruct {
         clkRpsPv,
         sliderPv,
         insuranceDedupPv,
+        clkBmLivePv,
         ageId,
         cityId,
         regionId,

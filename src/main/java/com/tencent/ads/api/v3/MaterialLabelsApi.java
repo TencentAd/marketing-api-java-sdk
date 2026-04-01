@@ -561,6 +561,7 @@ public class MaterialLabelsApi {
    * @param secondLabelLevelIdList 二级标签类目ID列表 (optional)
    * @param needCount (optional)
    * @param businessScenario (optional)
+   * @param ownershipType 素材归属类型过滤 (optional)
    * @param orderBy (optional)
    * @param page (optional)
    * @param pageSize (optional)
@@ -579,6 +580,7 @@ public class MaterialLabelsApi {
       List<Long> secondLabelLevelIdList,
       Boolean needCount,
       String businessScenario,
+      String ownershipType,
       List<OrderByStruct> orderBy,
       Long page,
       Long pageSize,
@@ -613,6 +615,8 @@ public class MaterialLabelsApi {
       localVarQueryParams.addAll(apiClient.parameterToPair("need_count", needCount));
     if (businessScenario != null)
       localVarQueryParams.addAll(apiClient.parameterToPair("business_scenario", businessScenario));
+    if (ownershipType != null)
+      localVarQueryParams.addAll(apiClient.parameterToPair("ownership_type", ownershipType));
     if (orderBy != null)
       localVarCollectionQueryParams.addAll(
           apiClient.parameterToPairs("multi", "order_by", orderBy));
@@ -681,6 +685,7 @@ public class MaterialLabelsApi {
       List<Long> secondLabelLevelIdList,
       Boolean needCount,
       String businessScenario,
+      String ownershipType,
       List<OrderByStruct> orderBy,
       Long page,
       Long pageSize,
@@ -700,6 +705,7 @@ public class MaterialLabelsApi {
             secondLabelLevelIdList,
             needCount,
             businessScenario,
+            ownershipType,
             orderBy,
             page,
             pageSize,
@@ -721,6 +727,7 @@ public class MaterialLabelsApi {
    * @param secondLabelLevelIdList 二级标签类目ID列表 (optional)
    * @param needCount (optional)
    * @param businessScenario (optional)
+   * @param ownershipType 素材归属类型过滤 (optional)
    * @param orderBy (optional)
    * @param page (optional)
    * @param pageSize (optional)
@@ -738,6 +745,7 @@ public class MaterialLabelsApi {
       List<Long> secondLabelLevelIdList,
       Boolean needCount,
       String businessScenario,
+      String ownershipType,
       List<OrderByStruct> orderBy,
       Long page,
       Long pageSize,
@@ -754,6 +762,7 @@ public class MaterialLabelsApi {
             secondLabelLevelIdList,
             needCount,
             businessScenario,
+            ownershipType,
             orderBy,
             page,
             pageSize,
@@ -773,6 +782,7 @@ public class MaterialLabelsApi {
    * @param secondLabelLevelIdList 二级标签类目ID列表 (optional)
    * @param needCount (optional)
    * @param businessScenario (optional)
+   * @param ownershipType 素材归属类型过滤 (optional)
    * @param orderBy (optional)
    * @param page (optional)
    * @param pageSize (optional)
@@ -790,6 +800,7 @@ public class MaterialLabelsApi {
       List<Long> secondLabelLevelIdList,
       Boolean needCount,
       String businessScenario,
+      String ownershipType,
       List<OrderByStruct> orderBy,
       Long page,
       Long pageSize,
@@ -806,6 +817,7 @@ public class MaterialLabelsApi {
             secondLabelLevelIdList,
             needCount,
             businessScenario,
+            ownershipType,
             orderBy,
             page,
             pageSize,
@@ -828,6 +840,7 @@ public class MaterialLabelsApi {
    * @param secondLabelLevelIdList 二级标签类目ID列表 (optional)
    * @param needCount (optional)
    * @param businessScenario (optional)
+   * @param ownershipType 素材归属类型过滤 (optional)
    * @param orderBy (optional)
    * @param page (optional)
    * @param pageSize (optional)
@@ -845,6 +858,7 @@ public class MaterialLabelsApi {
       List<Long> secondLabelLevelIdList,
       Boolean needCount,
       String businessScenario,
+      String ownershipType,
       List<OrderByStruct> orderBy,
       Long page,
       Long pageSize,
@@ -884,6 +898,7 @@ public class MaterialLabelsApi {
             secondLabelLevelIdList,
             needCount,
             businessScenario,
+            ownershipType,
             orderBy,
             page,
             pageSize,

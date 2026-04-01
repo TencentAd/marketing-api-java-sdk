@@ -19,8 +19,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
-/** MaterialLabelsDeleteResponse */
-public class MaterialLabelsDeleteResponse {
+/** MuseDeriveSwitchSettingsGetResponse */
+public class MuseDeriveSwitchSettingsGetResponse {
   @SerializedName("code")
   private Long code = null;
 
@@ -34,9 +34,9 @@ public class MaterialLabelsDeleteResponse {
   private List<ApiErrorStruct> errors = null;
 
   @SerializedName("data")
-  private MaterialLabelsDeleteResponseData data = null;
+  private MuseDeriveSwitchSettingsGetResponseData data = null;
 
-  public MaterialLabelsDeleteResponse code(Long code) {
+  public MuseDeriveSwitchSettingsGetResponse code(Long code) {
     this.code = code;
     return this;
   }
@@ -55,7 +55,7 @@ public class MaterialLabelsDeleteResponse {
     this.code = code;
   }
 
-  public MaterialLabelsDeleteResponse message(String message) {
+  public MuseDeriveSwitchSettingsGetResponse message(String message) {
     this.message = message;
     return this;
   }
@@ -74,7 +74,7 @@ public class MaterialLabelsDeleteResponse {
     this.message = message;
   }
 
-  public MaterialLabelsDeleteResponse messageCn(String messageCn) {
+  public MuseDeriveSwitchSettingsGetResponse messageCn(String messageCn) {
     this.messageCn = messageCn;
     return this;
   }
@@ -93,12 +93,12 @@ public class MaterialLabelsDeleteResponse {
     this.messageCn = messageCn;
   }
 
-  public MaterialLabelsDeleteResponse errors(List<ApiErrorStruct> errors) {
+  public MuseDeriveSwitchSettingsGetResponse errors(List<ApiErrorStruct> errors) {
     this.errors = errors;
     return this;
   }
 
-  public MaterialLabelsDeleteResponse addErrorsItem(ApiErrorStruct errorsItem) {
+  public MuseDeriveSwitchSettingsGetResponse addErrorsItem(ApiErrorStruct errorsItem) {
     if (this.errors == null) {
       this.errors = new ArrayList<ApiErrorStruct>();
     }
@@ -120,7 +120,7 @@ public class MaterialLabelsDeleteResponse {
     this.errors = errors;
   }
 
-  public MaterialLabelsDeleteResponse data(MaterialLabelsDeleteResponseData data) {
+  public MuseDeriveSwitchSettingsGetResponse data(MuseDeriveSwitchSettingsGetResponseData data) {
     this.data = data;
     return this;
   }
@@ -131,11 +131,11 @@ public class MaterialLabelsDeleteResponse {
    * @return data
    */
   @ApiModelProperty(value = "")
-  public MaterialLabelsDeleteResponseData getData() {
+  public MuseDeriveSwitchSettingsGetResponseData getData() {
     return data;
   }
 
-  public void setData(MaterialLabelsDeleteResponseData data) {
+  public void setData(MuseDeriveSwitchSettingsGetResponseData data) {
     this.data = data;
   }
 
@@ -147,12 +147,13 @@ public class MaterialLabelsDeleteResponse {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    MaterialLabelsDeleteResponse materialLabelsDeleteResponse = (MaterialLabelsDeleteResponse) o;
-    return Objects.equals(this.code, materialLabelsDeleteResponse.code)
-        && Objects.equals(this.message, materialLabelsDeleteResponse.message)
-        && Objects.equals(this.messageCn, materialLabelsDeleteResponse.messageCn)
-        && Objects.equals(this.errors, materialLabelsDeleteResponse.errors)
-        && Objects.equals(this.data, materialLabelsDeleteResponse.data);
+    MuseDeriveSwitchSettingsGetResponse museDeriveSwitchSettingsGetResponse =
+        (MuseDeriveSwitchSettingsGetResponse) o;
+    return Objects.equals(this.code, museDeriveSwitchSettingsGetResponse.code)
+        && Objects.equals(this.message, museDeriveSwitchSettingsGetResponse.message)
+        && Objects.equals(this.messageCn, museDeriveSwitchSettingsGetResponse.messageCn)
+        && Objects.equals(this.errors, museDeriveSwitchSettingsGetResponse.errors)
+        && Objects.equals(this.data, museDeriveSwitchSettingsGetResponse.data);
   }
 
   @Override
