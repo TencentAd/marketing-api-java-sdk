@@ -2526,6 +2526,15 @@ public class TargetReportApiListStruct {
   @SerializedName("clk_bm_live_pv")
   private Long clkBmLivePv = null;
 
+  @SerializedName("ad_monetization_ipu")
+  private Long adMonetizationIpu = null;
+
+  @SerializedName("ad_monetization_ltv")
+  private Long adMonetizationLtv = null;
+
+  @SerializedName("ad_monetization_pla_reg_amount")
+  private Long adMonetizationPlaRegAmount = null;
+
   @SerializedName("age_id")
   private Long ageId = null;
 
@@ -18487,6 +18496,63 @@ public class TargetReportApiListStruct {
     this.clkBmLivePv = clkBmLivePv;
   }
 
+  public TargetReportApiListStruct adMonetizationIpu(Long adMonetizationIpu) {
+    this.adMonetizationIpu = adMonetizationIpu;
+    return this;
+  }
+
+  /**
+   * Get adMonetizationIpu
+   *
+   * @return adMonetizationIpu
+   */
+  @ApiModelProperty(value = "")
+  public Long getAdMonetizationIpu() {
+    return adMonetizationIpu;
+  }
+
+  public void setAdMonetizationIpu(Long adMonetizationIpu) {
+    this.adMonetizationIpu = adMonetizationIpu;
+  }
+
+  public TargetReportApiListStruct adMonetizationLtv(Long adMonetizationLtv) {
+    this.adMonetizationLtv = adMonetizationLtv;
+    return this;
+  }
+
+  /**
+   * Get adMonetizationLtv
+   *
+   * @return adMonetizationLtv
+   */
+  @ApiModelProperty(value = "")
+  public Long getAdMonetizationLtv() {
+    return adMonetizationLtv;
+  }
+
+  public void setAdMonetizationLtv(Long adMonetizationLtv) {
+    this.adMonetizationLtv = adMonetizationLtv;
+  }
+
+  public TargetReportApiListStruct adMonetizationPlaRegAmount(Long adMonetizationPlaRegAmount) {
+    this.adMonetizationPlaRegAmount = adMonetizationPlaRegAmount;
+    return this;
+  }
+
+  /**
+   * Get adMonetizationPlaRegAmount
+   *
+   * @return adMonetizationPlaRegAmount
+   */
+  @ApiModelProperty(value = "")
+  public Long getAdMonetizationPlaRegAmount() {
+    return adMonetizationPlaRegAmount;
+  }
+
+  public void setAdMonetizationPlaRegAmount(Long adMonetizationPlaRegAmount) {
+    this.adMonetizationPlaRegAmount = adMonetizationPlaRegAmount;
+  }
+
   public TargetReportApiListStruct ageId(Long ageId) {
     this.ageId = ageId;
     return this;
@@ -19848,6 +19914,10 @@ public class TargetReportApiListStruct {
         && Objects.equals(this.sliderPv, targetReportApiListStruct.sliderPv)
         && Objects.equals(this.insuranceDedupPv, targetReportApiListStruct.insuranceDedupPv)
         && Objects.equals(this.clkBmLivePv, targetReportApiListStruct.clkBmLivePv)
+        && Objects.equals(this.adMonetizationIpu, targetReportApiListStruct.adMonetizationIpu)
+        && Objects.equals(this.adMonetizationLtv, targetReportApiListStruct.adMonetizationLtv)
+        && Objects.equals(
+            this.adMonetizationPlaRegAmount, targetReportApiListStruct.adMonetizationPlaRegAmount)
         && Objects.equals(this.ageId, targetReportApiListStruct.ageId)
         && Objects.equals(this.cityId, targetReportApiListStruct.cityId)
         && Objects.equals(this.regionId, targetReportApiListStruct.regionId)
@@ -20695,6 +20765,9 @@ public class TargetReportApiListStruct {
         sliderPv,
         insuranceDedupPv,
         clkBmLivePv,
+        adMonetizationIpu,
+        adMonetizationLtv,
+        adMonetizationPlaRegAmount,
         ageId,
         cityId,
         regionId,

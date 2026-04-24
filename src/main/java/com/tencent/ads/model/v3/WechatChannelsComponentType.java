@@ -32,6 +32,8 @@ public enum WechatChannelsComponentType {
 
   NATIVE_DRAMA("NATIVE_DRAMA"),
 
+  NATIVE_DRAMA_ATTACHMENT("NATIVE_DRAMA_ATTACHMENT"),
+
   WITHOUT_COMPONENT("WITHOUT_COMPONENT");
 
   private String value;

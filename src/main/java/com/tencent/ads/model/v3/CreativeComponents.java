@@ -131,6 +131,9 @@ public class CreativeComponents {
   @SerializedName("wxgame_direct_page")
   private List<WxgameDirectPageComponent> wxgameDirectPage = null;
 
+  @SerializedName("video_list")
+  private List<VideoListComponent> videoList = null;
+
   public CreativeComponents title(List<TitleComponent> title) {
     this.title = title;
     return this;
@@ -1111,6 +1114,33 @@ public class CreativeComponents {
     this.wxgameDirectPage = wxgameDirectPage;
   }
 
+  public CreativeComponents videoList(List<VideoListComponent> videoList) {
+    this.videoList = videoList;
+    return this;
+  }
+
+  public CreativeComponents addVideoListItem(VideoListComponent videoListItem) {
+    if (this.videoList == null) {
+      this.videoList = new ArrayList<VideoListComponent>();
+    }
+    this.videoList.add(videoListItem);
+    return this;
+  }
+
+  /**
+   * Get videoList
+   *
+   * @return videoList
+   */
+  @ApiModelProperty(value = "")
+  public List<VideoListComponent> getVideoList() {
+    return videoList;
+  }
+
+  public void setVideoList(List<VideoListComponent> videoList) {
+    this.videoList = videoList;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -1155,7 +1185,8 @@ public class CreativeComponents {
         && Objects.equals(this.floatingZoneList, creativeComponents.floatingZoneList)
         && Objects.equals(this.videoChannelsContent, creativeComponents.videoChannelsContent)
         && Objects.equals(this.audio, creativeComponents.audio)
-        && Objects.equals(this.wxgameDirectPage, creativeComponents.wxgameDirectPage);
+        && Objects.equals(this.wxgameDirectPage, creativeComponents.wxgameDirectPage)
+        && Objects.equals(this.videoList, creativeComponents.videoList);
   }
 
   @Override
@@ -1196,7 +1227,8 @@ public class CreativeComponents {
         floatingZoneList,
         videoChannelsContent,
         audio,
-        wxgameDirectPage);
+        wxgameDirectPage,
+        videoList);
   }
 
   @Override

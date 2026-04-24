@@ -191,6 +191,7 @@ public class App {
   @Inject ProgrammedTemplateApiContainer programmedTemplateApiContainer;
   @Inject PunishDetailApiContainer punishDetailApiContainer;
   @Inject PunishMetricsApiContainer punishMetricsApiContainer;
+  @Inject PunishUidMetricsApiContainer punishUidMetricsApiContainer;
   @Inject PunishmentConfigApiContainer punishmentConfigApiContainer;
   @Inject PunishmentQueryApiContainer punishmentQueryApiContainer;
   @Inject QualificationImagesApiContainer qualificationImagesApiContainer;
@@ -927,6 +928,10 @@ public class App {
 
   public PunishMetricsApiContainer punishMetrics() {
     return punishMetricsApiContainer;
+  }
+
+  public PunishUidMetricsApiContainer punishUidMetrics() {
+    return punishUidMetricsApiContainer;
   }
 
   public PunishmentConfigApiContainer punishmentConfig() {

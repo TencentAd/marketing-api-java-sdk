@@ -2628,6 +2628,27 @@ public class HourlyReportApiListStruct {
   @SerializedName("clk_bm_live_pv")
   private Long clkBmLivePv = null;
 
+  @SerializedName("ad_monetization_ipu")
+  private Long adMonetizationIpu = null;
+
+  @SerializedName("ad_monetization_ltv")
+  private Long adMonetizationLtv = null;
+
+  @SerializedName("effective_seeding_count")
+  private Long effectiveSeedingCount = null;
+
+  @SerializedName("effective_seeding_cost")
+  private Long effectiveSeedingCost = null;
+
+  @SerializedName("effective_seeding_rate")
+  private Double effectiveSeedingRate = null;
+
+  @SerializedName("effective_seeding_convertions_rate")
+  private Double effectiveSeedingConvertionsRate = null;
+
+  @SerializedName("ad_monetization_pla_reg_amount")
+  private Long adMonetizationPlaRegAmount = null;
+
   @SerializedName("adgroup_id")
   private Long adgroupId = null;
 
@@ -19265,6 +19286,140 @@ public class HourlyReportApiListStruct {
     this.clkBmLivePv = clkBmLivePv;
   }
 
+  public HourlyReportApiListStruct adMonetizationIpu(Long adMonetizationIpu) {
+    this.adMonetizationIpu = adMonetizationIpu;
+    return this;
+  }
+
+  /**
+   * Get adMonetizationIpu
+   *
+   * @return adMonetizationIpu
+   */
+  @ApiModelProperty(value = "")
+  public Long getAdMonetizationIpu() {
+    return adMonetizationIpu;
+  }
+
+  public void setAdMonetizationIpu(Long adMonetizationIpu) {
+    this.adMonetizationIpu = adMonetizationIpu;
+  }
+
+  public HourlyReportApiListStruct adMonetizationLtv(Long adMonetizationLtv) {
+    this.adMonetizationLtv = adMonetizationLtv;
+    return this;
+  }
+
+  /**
+   * Get adMonetizationLtv
+   *
+   * @return adMonetizationLtv
+   */
+  @ApiModelProperty(value = "")
+  public Long getAdMonetizationLtv() {
+    return adMonetizationLtv;
+  }
+
+  public void setAdMonetizationLtv(Long adMonetizationLtv) {
+    this.adMonetizationLtv = adMonetizationLtv;
+  }
+
+  public HourlyReportApiListStruct effectiveSeedingCount(Long effectiveSeedingCount) {
+    this.effectiveSeedingCount = effectiveSeedingCount;
+    return this;
+  }
+
+  /**
+   * Get effectiveSeedingCount
+   *
+   * @return effectiveSeedingCount
+   */
+  @ApiModelProperty(value = "")
+  public Long getEffectiveSeedingCount() {
+    return effectiveSeedingCount;
+  }
+
+  public void setEffectiveSeedingCount(Long effectiveSeedingCount) {
+    this.effectiveSeedingCount = effectiveSeedingCount;
+  }
+
+  public HourlyReportApiListStruct effectiveSeedingCost(Long effectiveSeedingCost) {
+    this.effectiveSeedingCost = effectiveSeedingCost;
+    return this;
+  }
+
+  /**
+   * Get effectiveSeedingCost
+   *
+   * @return effectiveSeedingCost
+   */
+  @ApiModelProperty(value = "")
+  public Long getEffectiveSeedingCost() {
+    return effectiveSeedingCost;
+  }
+
+  public void setEffectiveSeedingCost(Long effectiveSeedingCost) {
+    this.effectiveSeedingCost = effectiveSeedingCost;
+  }
+
+  public HourlyReportApiListStruct effectiveSeedingRate(Double effectiveSeedingRate) {
+    this.effectiveSeedingRate = effectiveSeedingRate;
+    return this;
+  }
+
+  /**
+   * Get effectiveSeedingRate
+   *
+   * @return effectiveSeedingRate
+   */
+  @ApiModelProperty(value = "")
+  public Double getEffectiveSeedingRate() {
+    return effectiveSeedingRate;
+  }
+
+  public void setEffectiveSeedingRate(Double effectiveSeedingRate) {
+    this.effectiveSeedingRate = effectiveSeedingRate;
+  }
+
+  public HourlyReportApiListStruct effectiveSeedingConvertionsRate(
+      Double effectiveSeedingConvertionsRate) {
+    this.effectiveSeedingConvertionsRate = effectiveSeedingConvertionsRate;
+    return this;
+  }
+
+  /**
+   * Get effectiveSeedingConvertionsRate
+   *
+   * @return effectiveSeedingConvertionsRate
+   */
+  @ApiModelProperty(value = "")
+  public Double getEffectiveSeedingConvertionsRate() {
+    return effectiveSeedingConvertionsRate;
+  }
+
+  public void setEffectiveSeedingConvertionsRate(Double effectiveSeedingConvertionsRate) {
+    this.effectiveSeedingConvertionsRate = effectiveSeedingConvertionsRate;
+  }
+
+  public HourlyReportApiListStruct adMonetizationPlaRegAmount(Long adMonetizationPlaRegAmount) {
+    this.adMonetizationPlaRegAmount = adMonetizationPlaRegAmount;
+    return this;
+  }
+
+  /**
+   * Get adMonetizationPlaRegAmount
+   *
+   * @return adMonetizationPlaRegAmount
+   */
+  @ApiModelProperty(value = "")
+  public Long getAdMonetizationPlaRegAmount() {
+    return adMonetizationPlaRegAmount;
+  }
+
+  public void setAdMonetizationPlaRegAmount(Long adMonetizationPlaRegAmount) {
+    this.adMonetizationPlaRegAmount = adMonetizationPlaRegAmount;
+  }
+
   public HourlyReportApiListStruct adgroupId(Long adgroupId) {
     this.adgroupId = adgroupId;
     return this;
@@ -20867,6 +21022,17 @@ public class HourlyReportApiListStruct {
         && Objects.equals(this.sliderPv, hourlyReportApiListStruct.sliderPv)
         && Objects.equals(this.insuranceDedupPv, hourlyReportApiListStruct.insuranceDedupPv)
         && Objects.equals(this.clkBmLivePv, hourlyReportApiListStruct.clkBmLivePv)
+        && Objects.equals(this.adMonetizationIpu, hourlyReportApiListStruct.adMonetizationIpu)
+        && Objects.equals(this.adMonetizationLtv, hourlyReportApiListStruct.adMonetizationLtv)
+        && Objects.equals(
+            this.effectiveSeedingCount, hourlyReportApiListStruct.effectiveSeedingCount)
+        && Objects.equals(this.effectiveSeedingCost, hourlyReportApiListStruct.effectiveSeedingCost)
+        && Objects.equals(this.effectiveSeedingRate, hourlyReportApiListStruct.effectiveSeedingRate)
+        && Objects.equals(
+            this.effectiveSeedingConvertionsRate,
+            hourlyReportApiListStruct.effectiveSeedingConvertionsRate)
+        && Objects.equals(
+            this.adMonetizationPlaRegAmount, hourlyReportApiListStruct.adMonetizationPlaRegAmount)
         && Objects.equals(this.adgroupId, hourlyReportApiListStruct.adgroupId)
         && Objects.equals(this.adgroupName, hourlyReportApiListStruct.adgroupName)
         && Objects.equals(this.dynamicCreativeId, hourlyReportApiListStruct.dynamicCreativeId)
@@ -21758,6 +21924,13 @@ public class HourlyReportApiListStruct {
         sliderPv,
         insuranceDedupPv,
         clkBmLivePv,
+        adMonetizationIpu,
+        adMonetizationLtv,
+        effectiveSeedingCount,
+        effectiveSeedingCost,
+        effectiveSeedingRate,
+        effectiveSeedingConvertionsRate,
+        adMonetizationPlaRegAmount,
         adgroupId,
         adgroupName,
         dynamicCreativeId,

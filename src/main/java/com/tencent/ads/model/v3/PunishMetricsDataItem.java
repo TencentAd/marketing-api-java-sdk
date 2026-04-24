@@ -48,6 +48,21 @@ public class PunishMetricsDataItem {
   @SerializedName("penalty_reject_rate")
   private String penaltyRejectRate = null;
 
+  @SerializedName("penalty_unit_price")
+  private String penaltyUnitPrice = null;
+
+  @SerializedName("penalty_amount")
+  private String penaltyAmount = null;
+
+  @SerializedName("penalty_uid_cnt")
+  private Long penaltyUidCnt = null;
+
+  @SerializedName("capped_reject_cnt")
+  private Long cappedRejectCnt = null;
+
+  @SerializedName("final_penalty_amount")
+  private String finalPenaltyAmount = null;
+
   public PunishMetricsDataItem partitionTime(Long partitionTime) {
     this.partitionTime = partitionTime;
     return this;
@@ -219,6 +234,101 @@ public class PunishMetricsDataItem {
     this.penaltyRejectRate = penaltyRejectRate;
   }
 
+  public PunishMetricsDataItem penaltyUnitPrice(String penaltyUnitPrice) {
+    this.penaltyUnitPrice = penaltyUnitPrice;
+    return this;
+  }
+
+  /**
+   * Get penaltyUnitPrice
+   *
+   * @return penaltyUnitPrice
+   */
+  @ApiModelProperty(value = "")
+  public String getPenaltyUnitPrice() {
+    return penaltyUnitPrice;
+  }
+
+  public void setPenaltyUnitPrice(String penaltyUnitPrice) {
+    this.penaltyUnitPrice = penaltyUnitPrice;
+  }
+
+  public PunishMetricsDataItem penaltyAmount(String penaltyAmount) {
+    this.penaltyAmount = penaltyAmount;
+    return this;
+  }
+
+  /**
+   * Get penaltyAmount
+   *
+   * @return penaltyAmount
+   */
+  @ApiModelProperty(value = "")
+  public String getPenaltyAmount() {
+    return penaltyAmount;
+  }
+
+  public void setPenaltyAmount(String penaltyAmount) {
+    this.penaltyAmount = penaltyAmount;
+  }
+
+  public PunishMetricsDataItem penaltyUidCnt(Long penaltyUidCnt) {
+    this.penaltyUidCnt = penaltyUidCnt;
+    return this;
+  }
+
+  /**
+   * Get penaltyUidCnt
+   *
+   * @return penaltyUidCnt
+   */
+  @ApiModelProperty(value = "")
+  public Long getPenaltyUidCnt() {
+    return penaltyUidCnt;
+  }
+
+  public void setPenaltyUidCnt(Long penaltyUidCnt) {
+    this.penaltyUidCnt = penaltyUidCnt;
+  }
+
+  public PunishMetricsDataItem cappedRejectCnt(Long cappedRejectCnt) {
+    this.cappedRejectCnt = cappedRejectCnt;
+    return this;
+  }
+
+  /**
+   * Get cappedRejectCnt
+   *
+   * @return cappedRejectCnt
+   */
+  @ApiModelProperty(value = "")
+  public Long getCappedRejectCnt() {
+    return cappedRejectCnt;
+  }
+
+  public void setCappedRejectCnt(Long cappedRejectCnt) {
+    this.cappedRejectCnt = cappedRejectCnt;
+  }
+
+  public PunishMetricsDataItem finalPenaltyAmount(String finalPenaltyAmount) {
+    this.finalPenaltyAmount = finalPenaltyAmount;
+    return this;
+  }
+
+  /**
+   * Get finalPenaltyAmount
+   *
+   * @return finalPenaltyAmount
+   */
+  @ApiModelProperty(value = "")
+  public String getFinalPenaltyAmount() {
+    return finalPenaltyAmount;
+  }
+
+  public void setFinalPenaltyAmount(String finalPenaltyAmount) {
+    this.finalPenaltyAmount = finalPenaltyAmount;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -237,7 +347,12 @@ public class PunishMetricsDataItem {
         && Objects.equals(this.isPenalized, punishMetricsDataItem.isPenalized)
         && Objects.equals(this.penaltyReviewTotal, punishMetricsDataItem.penaltyReviewTotal)
         && Objects.equals(this.penaltyReviewRejectCnt, punishMetricsDataItem.penaltyReviewRejectCnt)
-        && Objects.equals(this.penaltyRejectRate, punishMetricsDataItem.penaltyRejectRate);
+        && Objects.equals(this.penaltyRejectRate, punishMetricsDataItem.penaltyRejectRate)
+        && Objects.equals(this.penaltyUnitPrice, punishMetricsDataItem.penaltyUnitPrice)
+        && Objects.equals(this.penaltyAmount, punishMetricsDataItem.penaltyAmount)
+        && Objects.equals(this.penaltyUidCnt, punishMetricsDataItem.penaltyUidCnt)
+        && Objects.equals(this.cappedRejectCnt, punishMetricsDataItem.cappedRejectCnt)
+        && Objects.equals(this.finalPenaltyAmount, punishMetricsDataItem.finalPenaltyAmount);
   }
 
   @Override
@@ -251,7 +366,12 @@ public class PunishMetricsDataItem {
         isPenalized,
         penaltyReviewTotal,
         penaltyReviewRejectCnt,
-        penaltyRejectRate);
+        penaltyRejectRate,
+        penaltyUnitPrice,
+        penaltyAmount,
+        penaltyUidCnt,
+        cappedRejectCnt,
+        finalPenaltyAmount);
   }
 
   @Override

@@ -29,6 +29,9 @@ public class ImageListStruct {
   @SerializedName("list")
   private List<ImageListItem> list = null;
 
+  @SerializedName("display_mode")
+  private DisplayMode displayMode = null;
+
   public ImageListStruct jumpInfo(JumpinfoStruct jumpInfo) {
     this.jumpInfo = jumpInfo;
     return this;
@@ -75,6 +78,25 @@ public class ImageListStruct {
     this.list = list;
   }
 
+  public ImageListStruct displayMode(DisplayMode displayMode) {
+    this.displayMode = displayMode;
+    return this;
+  }
+
+  /**
+   * Get displayMode
+   *
+   * @return displayMode
+   */
+  @ApiModelProperty(value = "")
+  public DisplayMode getDisplayMode() {
+    return displayMode;
+  }
+
+  public void setDisplayMode(DisplayMode displayMode) {
+    this.displayMode = displayMode;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -85,12 +107,13 @@ public class ImageListStruct {
     }
     ImageListStruct imageListStruct = (ImageListStruct) o;
     return Objects.equals(this.jumpInfo, imageListStruct.jumpInfo)
-        && Objects.equals(this.list, imageListStruct.list);
+        && Objects.equals(this.list, imageListStruct.list)
+        && Objects.equals(this.displayMode, imageListStruct.displayMode);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(jumpInfo, list);
+    return Objects.hash(jumpInfo, list, displayMode);
   }
 
   @Override

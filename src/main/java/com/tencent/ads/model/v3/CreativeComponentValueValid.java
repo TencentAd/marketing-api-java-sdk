@@ -98,6 +98,9 @@ public class CreativeComponentValueValid {
   @SerializedName("image_format_options")
   private List<ComponentMetadataValueValidImageFormatOption> imageFormatOptions = null;
 
+  @SerializedName("video_format_options")
+  private List<ComponentMetadataValueValidVideoFormatOption> videoFormatOptions = null;
+
   public CreativeComponentValueValid required(Boolean required) {
     this.required = required;
     return this;
@@ -594,6 +597,36 @@ public class CreativeComponentValueValid {
     this.imageFormatOptions = imageFormatOptions;
   }
 
+  public CreativeComponentValueValid videoFormatOptions(
+      List<ComponentMetadataValueValidVideoFormatOption> videoFormatOptions) {
+    this.videoFormatOptions = videoFormatOptions;
+    return this;
+  }
+
+  public CreativeComponentValueValid addVideoFormatOptionsItem(
+      ComponentMetadataValueValidVideoFormatOption videoFormatOptionsItem) {
+    if (this.videoFormatOptions == null) {
+      this.videoFormatOptions = new ArrayList<ComponentMetadataValueValidVideoFormatOption>();
+    }
+    this.videoFormatOptions.add(videoFormatOptionsItem);
+    return this;
+  }
+
+  /**
+   * Get videoFormatOptions
+   *
+   * @return videoFormatOptions
+   */
+  @ApiModelProperty(value = "")
+  public List<ComponentMetadataValueValidVideoFormatOption> getVideoFormatOptions() {
+    return videoFormatOptions;
+  }
+
+  public void setVideoFormatOptions(
+      List<ComponentMetadataValueValidVideoFormatOption> videoFormatOptions) {
+    this.videoFormatOptions = videoFormatOptions;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -629,7 +662,8 @@ public class CreativeComponentValueValid {
             this.minDurationMillisecond, creativeComponentValueValid.minDurationMillisecond)
         && Objects.equals(
             this.maxDurationMillisecond, creativeComponentValueValid.maxDurationMillisecond)
-        && Objects.equals(this.imageFormatOptions, creativeComponentValueValid.imageFormatOptions);
+        && Objects.equals(this.imageFormatOptions, creativeComponentValueValid.imageFormatOptions)
+        && Objects.equals(this.videoFormatOptions, creativeComponentValueValid.videoFormatOptions);
   }
 
   @Override
@@ -659,7 +693,8 @@ public class CreativeComponentValueValid {
         enumOptions,
         minDurationMillisecond,
         maxDurationMillisecond,
-        imageFormatOptions);
+        imageFormatOptions,
+        videoFormatOptions);
   }
 
   @Override

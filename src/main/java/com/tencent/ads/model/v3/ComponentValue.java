@@ -126,6 +126,9 @@ public class ComponentValue {
   @SerializedName("wxgame_direct_page")
   private WxgameDirectPageComponent wxgameDirectPage = null;
 
+  @SerializedName("video_list")
+  private VideoListComponent videoList = null;
+
   public ComponentValue title(TitleComponent title) {
     this.title = title;
     return this;
@@ -791,6 +794,25 @@ public class ComponentValue {
     this.wxgameDirectPage = wxgameDirectPage;
   }
 
+  public ComponentValue videoList(VideoListComponent videoList) {
+    this.videoList = videoList;
+    return this;
+  }
+
+  /**
+   * Get videoList
+   *
+   * @return videoList
+   */
+  @ApiModelProperty(value = "")
+  public VideoListComponent getVideoList() {
+    return videoList;
+  }
+
+  public void setVideoList(VideoListComponent videoList) {
+    this.videoList = videoList;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -834,7 +856,8 @@ public class ComponentValue {
         && Objects.equals(this.miniCardLink, componentValue.miniCardLink)
         && Objects.equals(this.floatingZoneList, componentValue.floatingZoneList)
         && Objects.equals(this.videoChannelsContent, componentValue.videoChannelsContent)
-        && Objects.equals(this.wxgameDirectPage, componentValue.wxgameDirectPage);
+        && Objects.equals(this.wxgameDirectPage, componentValue.wxgameDirectPage)
+        && Objects.equals(this.videoList, componentValue.videoList);
   }
 
   @Override
@@ -874,7 +897,8 @@ public class ComponentValue {
         miniCardLink,
         floatingZoneList,
         videoChannelsContent,
-        wxgameDirectPage);
+        wxgameDirectPage,
+        videoList);
   }
 
   @Override

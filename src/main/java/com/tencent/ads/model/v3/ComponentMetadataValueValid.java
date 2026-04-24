@@ -98,6 +98,9 @@ public class ComponentMetadataValueValid {
   @SerializedName("max_duration_millisecond")
   private Long maxDurationMillisecond = null;
 
+  @SerializedName("video_format_options")
+  private List<ComponentMetadataValueValidVideoFormatOption> videoFormatOptions = null;
+
   public ComponentMetadataValueValid required(Boolean required) {
     this.required = required;
     return this;
@@ -594,6 +597,36 @@ public class ComponentMetadataValueValid {
     this.maxDurationMillisecond = maxDurationMillisecond;
   }
 
+  public ComponentMetadataValueValid videoFormatOptions(
+      List<ComponentMetadataValueValidVideoFormatOption> videoFormatOptions) {
+    this.videoFormatOptions = videoFormatOptions;
+    return this;
+  }
+
+  public ComponentMetadataValueValid addVideoFormatOptionsItem(
+      ComponentMetadataValueValidVideoFormatOption videoFormatOptionsItem) {
+    if (this.videoFormatOptions == null) {
+      this.videoFormatOptions = new ArrayList<ComponentMetadataValueValidVideoFormatOption>();
+    }
+    this.videoFormatOptions.add(videoFormatOptionsItem);
+    return this;
+  }
+
+  /**
+   * Get videoFormatOptions
+   *
+   * @return videoFormatOptions
+   */
+  @ApiModelProperty(value = "")
+  public List<ComponentMetadataValueValidVideoFormatOption> getVideoFormatOptions() {
+    return videoFormatOptions;
+  }
+
+  public void setVideoFormatOptions(
+      List<ComponentMetadataValueValidVideoFormatOption> videoFormatOptions) {
+    this.videoFormatOptions = videoFormatOptions;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -629,7 +662,8 @@ public class ComponentMetadataValueValid {
         && Objects.equals(
             this.minDurationMillisecond, componentMetadataValueValid.minDurationMillisecond)
         && Objects.equals(
-            this.maxDurationMillisecond, componentMetadataValueValid.maxDurationMillisecond);
+            this.maxDurationMillisecond, componentMetadataValueValid.maxDurationMillisecond)
+        && Objects.equals(this.videoFormatOptions, componentMetadataValueValid.videoFormatOptions);
   }
 
   @Override
@@ -659,7 +693,8 @@ public class ComponentMetadataValueValid {
         maxOccurs,
         imageFormatOptions,
         minDurationMillisecond,
-        maxDurationMillisecond);
+        maxDurationMillisecond,
+        videoFormatOptions);
   }
 
   @Override
