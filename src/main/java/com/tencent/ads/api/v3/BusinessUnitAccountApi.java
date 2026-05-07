@@ -144,7 +144,7 @@ public class BusinessUnitAccountApi {
   }
 
   /**
-   * 查询广告主账号所属的业务单元
+   * 查询账号所属的业务单元
    *
    * @param data (required)
    * @return BusinessUnitAccountGetResponse
@@ -159,7 +159,7 @@ public class BusinessUnitAccountApi {
   }
 
   /**
-   * 查询广告主账号所属的业务单元
+   * 查询账号所属的业务单元
    *
    * @param data (required)
    * @return ApiResponse&lt;BusinessUnitAccountGetResponse&gt;
@@ -175,7 +175,7 @@ public class BusinessUnitAccountApi {
   }
 
   /**
-   * 查询广告主账号所属的业务单元 (asynchronously)
+   * 查询账号所属的业务单元 (asynchronously)
    *
    * @param data (required)
    * @param callback The callback to be executed when the API call finishes

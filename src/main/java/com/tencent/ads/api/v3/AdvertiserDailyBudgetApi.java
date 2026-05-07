@@ -157,7 +157,7 @@ public class AdvertiserDailyBudgetApi {
   }
 
   /**
-   * 获取竞价广告账户日预算
+   * 获取竞价账户日预算
    *
    * @param accountId (required)
    * @param fields (required)
@@ -173,7 +173,7 @@ public class AdvertiserDailyBudgetApi {
   }
 
   /**
-   * 获取竞价广告账户日预算
+   * 获取竞价账户日预算
    *
    * @param accountId (required)
    * @param fields (required)
@@ -190,7 +190,7 @@ public class AdvertiserDailyBudgetApi {
   }
 
   /**
-   * 获取竞价广告账户日预算 (asynchronously)
+   * 获取竞价账户日预算 (asynchronously)
    *
    * @param accountId (required)
    * @param fields (required)
@@ -327,7 +327,7 @@ public class AdvertiserDailyBudgetApi {
   }
 
   /**
-   * 更新竞价广告账户日预算
+   * 更新竞价账户日预算
    *
    * @param data (required)
    * @return AdvertiserDailyBudgetUpdateResponse
@@ -342,7 +342,7 @@ public class AdvertiserDailyBudgetApi {
   }
 
   /**
-   * 更新竞价广告账户日预算
+   * 更新竞价账户日预算
    *
    * @param data (required)
    * @return ApiResponse&lt;AdvertiserDailyBudgetUpdateResponse&gt;
@@ -358,7 +358,7 @@ public class AdvertiserDailyBudgetApi {
   }
 
   /**
-   * 更新竞价广告账户日预算 (asynchronously)
+   * 更新竞价账户日预算 (asynchronously)
    *
    * @param data (required)
    * @param callback The callback to be executed when the API call finishes

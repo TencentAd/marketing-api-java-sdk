@@ -28,7 +28,7 @@ public class SubsidyBoundAccountListApiContainer extends ApiContainer {
   @Inject SubsidyBoundAccountListApi api;
 
   /**
-   * 获取补贴账号关联的广告主账号列表
+   * 获取补贴账号关联的账号列表
    *
    * @param accountId (required)
    * @param page (required)

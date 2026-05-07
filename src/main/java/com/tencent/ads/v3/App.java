@@ -39,6 +39,7 @@ public class App {
   @Inject AgencyRealtimeCostApiContainer agencyRealtimeCostApiContainer;
   @Inject AgencyWalletListApiContainer agencyWalletListApiContainer;
   @Inject AndroidChannelApiContainer androidChannelApiContainer;
+  @Inject AssetSimilarityDetailApiContainer assetSimilarityDetailApiContainer;
   @Inject AsyncReportFilesApiContainer asyncReportFilesApiContainer;
   @Inject AsyncReportsApiContainer asyncReportsApiContainer;
   @Inject AsyncTasksApiContainer asyncTasksApiContainer;
@@ -356,6 +357,10 @@ public class App {
 
   public AndroidChannelApiContainer androidChannel() {
     return androidChannelApiContainer;
+  }
+
+  public AssetSimilarityDetailApiContainer assetSimilarityDetail() {
+    return assetSimilarityDetailApiContainer;
   }
 
   public AsyncReportFilesApiContainer asyncReportFiles() {

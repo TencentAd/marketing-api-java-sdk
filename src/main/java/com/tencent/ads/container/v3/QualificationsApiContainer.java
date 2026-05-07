@@ -38,7 +38,7 @@ public class QualificationsApiContainer extends ApiContainer {
   @Inject QualificationsApi api;
 
   /**
-   * 创建广告主资质
+   * 创建客户资质
    *
    * @param data (required)
    * @return QualificationsAddResponse
@@ -54,7 +54,7 @@ public class QualificationsApiContainer extends ApiContainer {
   }
 
   /**
-   * 删除广告主资质
+   * 删除客户资质
    *
    * @param data (required)
    * @return QualificationsDeleteResponse
@@ -70,7 +70,7 @@ public class QualificationsApiContainer extends ApiContainer {
   }
 
   /**
-   * 获取广告主资质
+   * 获取客户资质
    *
    * @param accountId (required)
    * @param qualificationType (required)
@@ -94,7 +94,7 @@ public class QualificationsApiContainer extends ApiContainer {
   }
 
   /**
-   * 更新广告主资质
+   * 更新客户资质
    *
    * @param data (required)
    * @return QualificationsUpdateResponse

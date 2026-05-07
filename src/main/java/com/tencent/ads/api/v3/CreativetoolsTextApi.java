@@ -215,7 +215,7 @@ public class CreativetoolsTextApi {
   }
 
   /**
-   * 获取广告文案
+   * 获取创意文案
    *
    * @param accountId (required)
    * @param maxTextLength (required)
@@ -264,7 +264,7 @@ public class CreativetoolsTextApi {
   }
 
   /**
-   * 获取广告文案
+   * 获取创意文案
    *
    * @param accountId (required)
    * @param maxTextLength (required)
@@ -316,7 +316,7 @@ public class CreativetoolsTextApi {
   }
 
   /**
-   * 获取广告文案 (asynchronously)
+   * 获取创意文案 (asynchronously)
    *
    * @param accountId (required)
    * @param maxTextLength (required)

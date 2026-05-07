@@ -148,7 +148,7 @@ public class QualificationsApi {
   }
 
   /**
-   * 创建广告主资质
+   * 创建客户资质
    *
    * @param data (required)
    * @return QualificationsAddResponse
@@ -162,7 +162,7 @@ public class QualificationsApi {
   }
 
   /**
-   * 创建广告主资质
+   * 创建客户资质
    *
    * @param data (required)
    * @return ApiResponse&lt;QualificationsAddResponse&gt;
@@ -178,7 +178,7 @@ public class QualificationsApi {
   }
 
   /**
-   * 创建广告主资质 (asynchronously)
+   * 创建客户资质 (asynchronously)
    *
    * @param data (required)
    * @param callback The callback to be executed when the API call finishes
@@ -312,7 +312,7 @@ public class QualificationsApi {
   }
 
   /**
-   * 删除广告主资质
+   * 删除客户资质
    *
    * @param data (required)
    * @return QualificationsDeleteResponse
@@ -327,7 +327,7 @@ public class QualificationsApi {
   }
 
   /**
-   * 删除广告主资质
+   * 删除客户资质
    *
    * @param data (required)
    * @return ApiResponse&lt;QualificationsDeleteResponse&gt;
@@ -343,7 +343,7 @@ public class QualificationsApi {
   }
 
   /**
-   * 删除广告主资质 (asynchronously)
+   * 删除客户资质 (asynchronously)
    *
    * @param data (required)
    * @param callback The callback to be executed when the API call finishes
@@ -509,7 +509,7 @@ public class QualificationsApi {
   }
 
   /**
-   * 获取广告主资质
+   * 获取客户资质
    *
    * @param accountId (required)
    * @param qualificationType (required)
@@ -532,7 +532,7 @@ public class QualificationsApi {
   }
 
   /**
-   * 获取广告主资质
+   * 获取客户资质
    *
    * @param accountId (required)
    * @param qualificationType (required)
@@ -557,7 +557,7 @@ public class QualificationsApi {
   }
 
   /**
-   * 获取广告主资质 (asynchronously)
+   * 获取客户资质 (asynchronously)
    *
    * @param accountId (required)
    * @param qualificationType (required)
@@ -703,7 +703,7 @@ public class QualificationsApi {
   }
 
   /**
-   * 更新广告主资质
+   * 更新客户资质
    *
    * @param data (required)
    * @return QualificationsUpdateResponse
@@ -718,7 +718,7 @@ public class QualificationsApi {
   }
 
   /**
-   * 更新广告主资质
+   * 更新客户资质
    *
    * @param data (required)
    * @return ApiResponse&lt;QualificationsUpdateResponse&gt;
@@ -734,7 +734,7 @@ public class QualificationsApi {
   }
 
   /**
-   * 更新广告主资质 (asynchronously)
+   * 更新客户资质 (asynchronously)
    *
    * @param data (required)
    * @param callback The callback to be executed when the API call finishes

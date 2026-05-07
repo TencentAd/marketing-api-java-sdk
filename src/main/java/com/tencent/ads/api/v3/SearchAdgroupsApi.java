@@ -144,7 +144,7 @@ public class SearchAdgroupsApi {
   }
 
   /**
-   * 创建搜索广告
+   * 创建营销单元
    *
    * @param data (required)
    * @return SearchAdgroupsAddResponse
@@ -158,7 +158,7 @@ public class SearchAdgroupsApi {
   }
 
   /**
-   * 创建搜索广告
+   * 创建营销单元
    *
    * @param data (required)
    * @return ApiResponse&lt;SearchAdgroupsAddResponse&gt;
@@ -174,7 +174,7 @@ public class SearchAdgroupsApi {
   }
 
   /**
-   * 创建搜索广告 (asynchronously)
+   * 创建营销单元 (asynchronously)
    *
    * @param data (required)
    * @param callback The callback to be executed when the API call finishes
@@ -308,7 +308,7 @@ public class SearchAdgroupsApi {
   }
 
   /**
-   * 更新搜索广告
+   * 更新营销单元
    *
    * @param data (required)
    * @return SearchAdgroupsUpdateResponse
@@ -323,7 +323,7 @@ public class SearchAdgroupsApi {
   }
 
   /**
-   * 更新搜索广告
+   * 更新营销单元
    *
    * @param data (required)
    * @return ApiResponse&lt;SearchAdgroupsUpdateResponse&gt;
@@ -339,7 +339,7 @@ public class SearchAdgroupsApi {
   }
 
   /**
-   * 更新搜索广告 (asynchronously)
+   * 更新营销单元 (asynchronously)
    *
    * @param data (required)
    * @param callback The callback to be executed when the API call finishes

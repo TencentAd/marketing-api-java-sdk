@@ -28,7 +28,7 @@ public class SubsidyAccountBindApiContainer extends ApiContainer {
   @Inject SubsidyAccountBindApi api;
 
   /**
-   * 补贴账号绑定或解绑广告账户
+   * 补贴账号绑定或解绑账户
    *
    * @param data (required)
    * @return SubsidyAccountBindAddResponse

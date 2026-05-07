@@ -149,7 +149,7 @@ public class AccountSubsidyApi {
   }
 
   /**
-   * 获取广告主关联的补贴账号
+   * 获取客户关联的补贴账号
    *
    * @param accountId (required)
    * @param fields 返回参数的字段列表 (optional)
@@ -165,7 +165,7 @@ public class AccountSubsidyApi {
   }
 
   /**
-   * 获取广告主关联的补贴账号
+   * 获取客户关联的补贴账号
    *
    * @param accountId (required)
    * @param fields 返回参数的字段列表 (optional)
@@ -182,7 +182,7 @@ public class AccountSubsidyApi {
   }
 
   /**
-   * 获取广告主关联的补贴账号 (asynchronously)
+   * 获取客户关联的补贴账号 (asynchronously)
    *
    * @param accountId (required)
    * @param fields 返回参数的字段列表 (optional)

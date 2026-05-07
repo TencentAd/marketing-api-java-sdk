@@ -31,7 +31,7 @@ public class BusinessUnitAccountApiContainer extends ApiContainer {
   @Inject BusinessUnitAccountApi api;
 
   /**
-   * 查询广告主账号所属的业务单元
+   * 查询账号所属的业务单元
    *
    * @param data (required)
    * @return BusinessUnitAccountGetResponse

@@ -28,7 +28,7 @@ public class OrganizationAccountRelationApiContainer extends ApiContainer {
   @Inject OrganizationAccountRelationApi api;
 
   /**
-   * 查询组织下广告账户信息
+   * 查询组织下账户信息
    *
    * @param paginationMode (required)
    * @param accountId (optional)

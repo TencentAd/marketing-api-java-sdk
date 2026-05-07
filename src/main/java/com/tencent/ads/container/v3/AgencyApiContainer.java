@@ -28,7 +28,7 @@ public class AgencyApiContainer extends ApiContainer {
   @Inject AgencyApi api;
 
   /**
-   * 查询腾讯广告服务商信息
+   * 查询服务商信息
    *
    * @param fields (required)
    * @param page (required)

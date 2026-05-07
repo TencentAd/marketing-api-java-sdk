@@ -142,7 +142,7 @@ public class SubsidyAccountBindApi {
   }
 
   /**
-   * 补贴账号绑定或解绑广告账户
+   * 补贴账号绑定或解绑账户
    *
    * @param data (required)
    * @return SubsidyAccountBindAddResponse
@@ -157,7 +157,7 @@ public class SubsidyAccountBindApi {
   }
 
   /**
-   * 补贴账号绑定或解绑广告账户
+   * 补贴账号绑定或解绑账户
    *
    * @param data (required)
    * @return ApiResponse&lt;SubsidyAccountBindAddResponse&gt;
@@ -173,7 +173,7 @@ public class SubsidyAccountBindApi {
   }
 
   /**
-   * 补贴账号绑定或解绑广告账户 (asynchronously)
+   * 补贴账号绑定或解绑账户 (asynchronously)
    *
    * @param data (required)
    * @param callback The callback to be executed when the API call finishes

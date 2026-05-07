@@ -176,7 +176,7 @@ public class SubsidyBoundAccountListApi {
   }
 
   /**
-   * 获取补贴账号关联的广告主账号列表
+   * 获取补贴账号关联的账号列表
    *
    * @param accountId (required)
    * @param page (required)
@@ -195,7 +195,7 @@ public class SubsidyBoundAccountListApi {
   }
 
   /**
-   * 获取补贴账号关联的广告主账号列表
+   * 获取补贴账号关联的账号列表
    *
    * @param accountId (required)
    * @param page (required)
@@ -216,7 +216,7 @@ public class SubsidyBoundAccountListApi {
   }
 
   /**
-   * 获取补贴账号关联的广告主账号列表 (asynchronously)
+   * 获取补贴账号关联的账号列表 (asynchronously)
    *
    * @param accountId (required)
    * @param page (required)

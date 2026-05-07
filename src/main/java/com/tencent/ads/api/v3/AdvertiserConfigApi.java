@@ -143,7 +143,7 @@ public class AdvertiserConfigApi {
   }
 
   /**
-   * 添加广告主配置
+   * 设置客户投放偏好
    *
    * @param data (required)
    * @return AdvertiserConfigAddResponse
@@ -158,7 +158,7 @@ public class AdvertiserConfigApi {
   }
 
   /**
-   * 添加广告主配置
+   * 设置客户投放偏好
    *
    * @param data (required)
    * @return ApiResponse&lt;AdvertiserConfigAddResponse&gt;
@@ -174,7 +174,7 @@ public class AdvertiserConfigApi {
   }
 
   /**
-   * 添加广告主配置 (asynchronously)
+   * 设置客户投放偏好 (asynchronously)
    *
    * @param data (required)
    * @param callback The callback to be executed when the API call finishes
@@ -326,7 +326,7 @@ public class AdvertiserConfigApi {
   }
 
   /**
-   * 查询广告主配置
+   * 获取客户投放偏好
    *
    * @param accountId (required)
    * @param organizationId (optional)
@@ -344,7 +344,7 @@ public class AdvertiserConfigApi {
   }
 
   /**
-   * 查询广告主配置
+   * 获取客户投放偏好
    *
    * @param accountId (required)
    * @param organizationId (optional)
@@ -364,7 +364,7 @@ public class AdvertiserConfigApi {
   }
 
   /**
-   * 查询广告主配置 (asynchronously)
+   * 获取客户投放偏好 (asynchronously)
    *
    * @param accountId (required)
    * @param organizationId (optional)

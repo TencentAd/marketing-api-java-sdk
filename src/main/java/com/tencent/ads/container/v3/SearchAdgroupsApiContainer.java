@@ -31,7 +31,7 @@ public class SearchAdgroupsApiContainer extends ApiContainer {
   @Inject SearchAdgroupsApi api;
 
   /**
-   * 创建搜索广告
+   * 创建营销单元
    *
    * @param data (required)
    * @return SearchAdgroupsAddResponse
@@ -47,7 +47,7 @@ public class SearchAdgroupsApiContainer extends ApiContainer {
   }
 
   /**
-   * 更新搜索广告
+   * 更新营销单元
    *
    * @param data (required)
    * @return SearchAdgroupsUpdateResponse

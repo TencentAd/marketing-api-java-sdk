@@ -30,7 +30,7 @@ public class AdvertiserConfigApiContainer extends ApiContainer {
   @Inject AdvertiserConfigApi api;
 
   /**
-   * 添加广告主配置
+   * 设置客户投放偏好
    *
    * @param data (required)
    * @return AdvertiserConfigAddResponse
@@ -47,7 +47,7 @@ public class AdvertiserConfigApiContainer extends ApiContainer {
   }
 
   /**
-   * 查询广告主配置
+   * 获取客户投放偏好
    *
    * @param accountId (required)
    * @param organizationId (optional)

@@ -176,7 +176,7 @@ public class AgencyBusinessUnitListAccountApi {
   }
 
   /**
-   * 查询服务商业务单元下的广告主账号列表
+   * 查询服务商业务单元下的账号列表
    *
    * @param organizationId (required)
    * @param page (required)
@@ -196,7 +196,7 @@ public class AgencyBusinessUnitListAccountApi {
   }
 
   /**
-   * 查询服务商业务单元下的广告主账号列表
+   * 查询服务商业务单元下的账号列表
    *
    * @param organizationId (required)
    * @param page (required)
@@ -219,7 +219,7 @@ public class AgencyBusinessUnitListAccountApi {
   }
 
   /**
-   * 查询服务商业务单元下的广告主账号列表 (asynchronously)
+   * 查询服务商业务单元下的账号列表 (asynchronously)
    *
    * @param organizationId (required)
    * @param page (required)

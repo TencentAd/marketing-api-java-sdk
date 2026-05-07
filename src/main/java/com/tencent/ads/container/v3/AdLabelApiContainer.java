@@ -28,7 +28,7 @@ public class AdLabelApiContainer extends ApiContainer {
   @Inject AdLabelApi api;
 
   /**
-   * 获取广告标签
+   * 获取创意标签
    *
    * @param accountId (required)
    * @param fields 返回参数的字段列表 (optional)

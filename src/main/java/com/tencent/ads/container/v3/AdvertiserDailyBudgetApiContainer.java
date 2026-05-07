@@ -31,7 +31,7 @@ public class AdvertiserDailyBudgetApiContainer extends ApiContainer {
   @Inject AdvertiserDailyBudgetApi api;
 
   /**
-   * 获取竞价广告账户日预算
+   * 获取竞价账户日预算
    *
    * @param accountId (required)
    * @param fields (required)
@@ -49,7 +49,7 @@ public class AdvertiserDailyBudgetApiContainer extends ApiContainer {
   }
 
   /**
-   * 更新竞价广告账户日预算
+   * 更新竞价账户日预算
    *
    * @param data (required)
    * @return AdvertiserDailyBudgetUpdateResponse

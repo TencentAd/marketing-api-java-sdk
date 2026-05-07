@@ -175,7 +175,7 @@ public class AgencyApi {
   }
 
   /**
-   * 查询腾讯广告服务商信息
+   * 查询服务商信息
    *
    * @param fields (required)
    * @param page (required)
@@ -194,7 +194,7 @@ public class AgencyApi {
   }
 
   /**
-   * 查询腾讯广告服务商信息
+   * 查询服务商信息
    *
    * @param fields (required)
    * @param page (required)
@@ -214,7 +214,7 @@ public class AgencyApi {
   }
 
   /**
-   * 查询腾讯广告服务商信息 (asynchronously)
+   * 查询服务商信息 (asynchronously)
    *
    * @param fields (required)
    * @param page (required)

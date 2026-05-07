@@ -166,7 +166,7 @@ public class QualificationStructureApi {
   }
 
   /**
-   * 获取广告主资质结构
+   * 获取客户资质结构
    *
    * @param accountId (required)
    * @param qualificationCode (required)
@@ -184,7 +184,7 @@ public class QualificationStructureApi {
   }
 
   /**
-   * 获取广告主资质结构
+   * 获取客户资质结构
    *
    * @param accountId (required)
    * @param qualificationCode (required)
@@ -204,7 +204,7 @@ public class QualificationStructureApi {
   }
 
   /**
-   * 获取广告主资质结构 (asynchronously)
+   * 获取客户资质结构 (asynchronously)
    *
    * @param accountId (required)
    * @param qualificationCode (required)

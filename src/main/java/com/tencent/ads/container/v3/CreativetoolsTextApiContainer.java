@@ -28,7 +28,7 @@ public class CreativetoolsTextApiContainer extends ApiContainer {
   @Inject CreativetoolsTextApi api;
 
   /**
-   * 获取广告文案
+   * 获取创意文案
    *
    * @param accountId (required)
    * @param maxTextLength (required)

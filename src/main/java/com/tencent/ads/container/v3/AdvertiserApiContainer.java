@@ -38,7 +38,7 @@ public class AdvertiserApiContainer extends ApiContainer {
   @Inject AdvertiserApi api;
 
   /**
-   * 添加腾讯广告服务商子客
+   * 添加服务商子客
    *
    * @param data (required)
    * @return AdvertiserAddResponse
@@ -53,7 +53,7 @@ public class AdvertiserApiContainer extends ApiContainer {
   }
 
   /**
-   * 查询腾讯广告广告主信息
+   * 查询客户信息
    *
    * @param fields (required)
    * @param paginationMode (required)
@@ -94,7 +94,7 @@ public class AdvertiserApiContainer extends ApiContainer {
   }
 
   /**
-   * 更新腾讯广告广告主信息
+   * 更新客户信息
    *
    * @param data (required)
    * @return AdvertiserUpdateResponse
@@ -110,7 +110,7 @@ public class AdvertiserApiContainer extends ApiContainer {
   }
 
   /**
-   * 批量修改广告主日限额
+   * 批量修改账户日预算
    *
    * @param data (required)
    * @return AdvertiserUpdateDailyBudgetResponse

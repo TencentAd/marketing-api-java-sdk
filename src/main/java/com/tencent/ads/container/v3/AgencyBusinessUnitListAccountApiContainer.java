@@ -28,7 +28,7 @@ public class AgencyBusinessUnitListAccountApiContainer extends ApiContainer {
   @Inject AgencyBusinessUnitListAccountApi api;
 
   /**
-   * 查询服务商业务单元下的广告主账号列表
+   * 查询服务商业务单元下的账号列表
    *
    * @param organizationId (required)
    * @param page (required)

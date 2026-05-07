@@ -148,7 +148,7 @@ public class AdvertiserApi {
   }
 
   /**
-   * 添加腾讯广告服务商子客
+   * 添加服务商子客
    *
    * @param data (required)
    * @return AdvertiserAddResponse
@@ -162,7 +162,7 @@ public class AdvertiserApi {
   }
 
   /**
-   * 添加腾讯广告服务商子客
+   * 添加服务商子客
    *
    * @param data (required)
    * @return ApiResponse&lt;AdvertiserAddResponse&gt;
@@ -177,7 +177,7 @@ public class AdvertiserApi {
   }
 
   /**
-   * 添加腾讯广告服务商子客 (asynchronously)
+   * 添加服务商子客 (asynchronously)
    *
    * @param data (required)
    * @param callback The callback to be executed when the API call finishes
@@ -370,7 +370,7 @@ public class AdvertiserApi {
   }
 
   /**
-   * 查询腾讯广告广告主信息
+   * 查询客户信息
    *
    * @param fields (required)
    * @param paginationMode (required)
@@ -410,7 +410,7 @@ public class AdvertiserApi {
   }
 
   /**
-   * 查询腾讯广告广告主信息
+   * 查询客户信息
    *
    * @param fields (required)
    * @param paginationMode (required)
@@ -453,7 +453,7 @@ public class AdvertiserApi {
   }
 
   /**
-   * 查询腾讯广告广告主信息 (asynchronously)
+   * 查询客户信息 (asynchronously)
    *
    * @param fields (required)
    * @param paginationMode (required)
@@ -611,7 +611,7 @@ public class AdvertiserApi {
   }
 
   /**
-   * 更新腾讯广告广告主信息
+   * 更新客户信息
    *
    * @param data (required)
    * @return AdvertiserUpdateResponse
@@ -625,7 +625,7 @@ public class AdvertiserApi {
   }
 
   /**
-   * 更新腾讯广告广告主信息
+   * 更新客户信息
    *
    * @param data (required)
    * @return ApiResponse&lt;AdvertiserUpdateResponse&gt;
@@ -641,7 +641,7 @@ public class AdvertiserApi {
   }
 
   /**
-   * 更新腾讯广告广告主信息 (asynchronously)
+   * 更新客户信息 (asynchronously)
    *
    * @param data (required)
    * @param callback The callback to be executed when the API call finishes
@@ -776,7 +776,7 @@ public class AdvertiserApi {
   }
 
   /**
-   * 批量修改广告主日限额
+   * 批量修改账户日预算
    *
    * @param data (required)
    * @return AdvertiserUpdateDailyBudgetResponse
@@ -791,7 +791,7 @@ public class AdvertiserApi {
   }
 
   /**
-   * 批量修改广告主日限额
+   * 批量修改账户日预算
    *
    * @param data (required)
    * @return ApiResponse&lt;AdvertiserUpdateDailyBudgetResponse&gt;
@@ -807,7 +807,7 @@ public class AdvertiserApi {
   }
 
   /**
-   * 批量修改广告主日限额 (asynchronously)
+   * 批量修改账户日预算 (asynchronously)
    *
    * @param data (required)
    * @param callback The callback to be executed when the API call finishes
