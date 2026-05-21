@@ -2649,6 +2649,15 @@ public class ReportStruct {
   @SerializedName("ad_monetization_pla_reg_amount")
   private Long adMonetizationPlaRegAmount = null;
 
+  @SerializedName("real_cost_value_explore")
+  private Long realCostValueExplore = null;
+
+  @SerializedName("clk_action_content_pv")
+  private Long clkActionContentPv = null;
+
+  @SerializedName("clk_action_content_uv")
+  private Long clkActionContentUv = null;
+
   @SerializedName("adgroup_id")
   private Long adgroupId = null;
 
@@ -19396,6 +19405,63 @@ public class ReportStruct {
     this.adMonetizationPlaRegAmount = adMonetizationPlaRegAmount;
   }
 
+  public ReportStruct realCostValueExplore(Long realCostValueExplore) {
+    this.realCostValueExplore = realCostValueExplore;
+    return this;
+  }
+
+  /**
+   * Get realCostValueExplore
+   *
+   * @return realCostValueExplore
+   */
+  @ApiModelProperty(value = "")
+  public Long getRealCostValueExplore() {
+    return realCostValueExplore;
+  }
+
+  public void setRealCostValueExplore(Long realCostValueExplore) {
+    this.realCostValueExplore = realCostValueExplore;
+  }
+
+  public ReportStruct clkActionContentPv(Long clkActionContentPv) {
+    this.clkActionContentPv = clkActionContentPv;
+    return this;
+  }
+
+  /**
+   * Get clkActionContentPv
+   *
+   * @return clkActionContentPv
+   */
+  @ApiModelProperty(value = "")
+  public Long getClkActionContentPv() {
+    return clkActionContentPv;
+  }
+
+  public void setClkActionContentPv(Long clkActionContentPv) {
+    this.clkActionContentPv = clkActionContentPv;
+  }
+
+  public ReportStruct clkActionContentUv(Long clkActionContentUv) {
+    this.clkActionContentUv = clkActionContentUv;
+    return this;
+  }
+
+  /**
+   * Get clkActionContentUv
+   *
+   * @return clkActionContentUv
+   */
+  @ApiModelProperty(value = "")
+  public Long getClkActionContentUv() {
+    return clkActionContentUv;
+  }
+
+  public void setClkActionContentUv(Long clkActionContentUv) {
+    this.clkActionContentUv = clkActionContentUv;
+  }
+
   public ReportStruct adgroupId(Long adgroupId) {
     this.adgroupId = adgroupId;
     return this;
@@ -20934,6 +21000,9 @@ public class ReportStruct {
         && Objects.equals(
             this.effectiveSeedingConvertionsRate, reportStruct.effectiveSeedingConvertionsRate)
         && Objects.equals(this.adMonetizationPlaRegAmount, reportStruct.adMonetizationPlaRegAmount)
+        && Objects.equals(this.realCostValueExplore, reportStruct.realCostValueExplore)
+        && Objects.equals(this.clkActionContentPv, reportStruct.clkActionContentPv)
+        && Objects.equals(this.clkActionContentUv, reportStruct.clkActionContentUv)
         && Objects.equals(this.adgroupId, reportStruct.adgroupId)
         && Objects.equals(this.adgroupName, reportStruct.adgroupName)
         && Objects.equals(this.dynamicCreativeId, reportStruct.dynamicCreativeId)
@@ -21843,6 +21912,9 @@ public class ReportStruct {
         effectiveSeedingRate,
         effectiveSeedingConvertionsRate,
         adMonetizationPlaRegAmount,
+        realCostValueExplore,
+        clkActionContentPv,
+        clkActionContentUv,
         adgroupId,
         adgroupName,
         dynamicCreativeId,

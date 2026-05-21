@@ -27,6 +27,10 @@ public class GetPages {
 
   public AdContext adContext = null;
 
+  public String paginationMode = null;
+
+  public String cursor = null;
+
   public List<String> fields =
       Arrays.asList(
           "page_id",
@@ -49,7 +53,10 @@ public class GetPages {
 
   public PagesGetResponseData getPages() throws Exception {
     PagesGetResponseData response =
-        tencentAds.pages().pagesGet(accountId, filtering, page, pageSize, adContext, fields);
+        tencentAds
+            .pages()
+            .pagesGet(
+                accountId, filtering, page, pageSize, adContext, paginationMode, cursor, fields);
     return response;
   }
 

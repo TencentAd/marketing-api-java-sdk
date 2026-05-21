@@ -193,7 +193,7 @@ public class MuseDeriveSwitchSettingsApi {
   }
 
   /**
-   * 创意增强配置
+   * 查询生成偏好设置
    *
    * @param accountId (required)
    * @param marketingTargetType (required)
@@ -227,7 +227,7 @@ public class MuseDeriveSwitchSettingsApi {
   }
 
   /**
-   * 创意增强配置
+   * 查询生成偏好设置
    *
    * @param accountId (required)
    * @param marketingTargetType (required)
@@ -264,7 +264,7 @@ public class MuseDeriveSwitchSettingsApi {
   }
 
   /**
-   * 创意增强配置 (asynchronously)
+   * 查询生成偏好设置 (asynchronously)
    *
    * @param accountId (required)
    * @param marketingTargetType (required)

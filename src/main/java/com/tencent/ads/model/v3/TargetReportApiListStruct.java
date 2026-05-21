@@ -2535,6 +2535,15 @@ public class TargetReportApiListStruct {
   @SerializedName("ad_monetization_pla_reg_amount")
   private Long adMonetizationPlaRegAmount = null;
 
+  @SerializedName("real_cost_value_explore")
+  private Long realCostValueExplore = null;
+
+  @SerializedName("clk_action_content_pv")
+  private Long clkActionContentPv = null;
+
+  @SerializedName("clk_action_content_uv")
+  private Long clkActionContentUv = null;
+
   @SerializedName("age_id")
   private Long ageId = null;
 
@@ -18553,6 +18562,63 @@ public class TargetReportApiListStruct {
     this.adMonetizationPlaRegAmount = adMonetizationPlaRegAmount;
   }
 
+  public TargetReportApiListStruct realCostValueExplore(Long realCostValueExplore) {
+    this.realCostValueExplore = realCostValueExplore;
+    return this;
+  }
+
+  /**
+   * Get realCostValueExplore
+   *
+   * @return realCostValueExplore
+   */
+  @ApiModelProperty(value = "")
+  public Long getRealCostValueExplore() {
+    return realCostValueExplore;
+  }
+
+  public void setRealCostValueExplore(Long realCostValueExplore) {
+    this.realCostValueExplore = realCostValueExplore;
+  }
+
+  public TargetReportApiListStruct clkActionContentPv(Long clkActionContentPv) {
+    this.clkActionContentPv = clkActionContentPv;
+    return this;
+  }
+
+  /**
+   * Get clkActionContentPv
+   *
+   * @return clkActionContentPv
+   */
+  @ApiModelProperty(value = "")
+  public Long getClkActionContentPv() {
+    return clkActionContentPv;
+  }
+
+  public void setClkActionContentPv(Long clkActionContentPv) {
+    this.clkActionContentPv = clkActionContentPv;
+  }
+
+  public TargetReportApiListStruct clkActionContentUv(Long clkActionContentUv) {
+    this.clkActionContentUv = clkActionContentUv;
+    return this;
+  }
+
+  /**
+   * Get clkActionContentUv
+   *
+   * @return clkActionContentUv
+   */
+  @ApiModelProperty(value = "")
+  public Long getClkActionContentUv() {
+    return clkActionContentUv;
+  }
+
+  public void setClkActionContentUv(Long clkActionContentUv) {
+    this.clkActionContentUv = clkActionContentUv;
+  }
+
   public TargetReportApiListStruct ageId(Long ageId) {
     this.ageId = ageId;
     return this;
@@ -19918,6 +19984,9 @@ public class TargetReportApiListStruct {
         && Objects.equals(this.adMonetizationLtv, targetReportApiListStruct.adMonetizationLtv)
         && Objects.equals(
             this.adMonetizationPlaRegAmount, targetReportApiListStruct.adMonetizationPlaRegAmount)
+        && Objects.equals(this.realCostValueExplore, targetReportApiListStruct.realCostValueExplore)
+        && Objects.equals(this.clkActionContentPv, targetReportApiListStruct.clkActionContentPv)
+        && Objects.equals(this.clkActionContentUv, targetReportApiListStruct.clkActionContentUv)
         && Objects.equals(this.ageId, targetReportApiListStruct.ageId)
         && Objects.equals(this.cityId, targetReportApiListStruct.cityId)
         && Objects.equals(this.regionId, targetReportApiListStruct.regionId)
@@ -20768,6 +20837,9 @@ public class TargetReportApiListStruct {
         adMonetizationIpu,
         adMonetizationLtv,
         adMonetizationPlaRegAmount,
+        realCostValueExplore,
+        clkActionContentPv,
+        clkActionContentUv,
         ageId,
         cityId,
         regionId,

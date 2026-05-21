@@ -75,6 +75,12 @@ public class PunishDetailDataItem {
   @SerializedName("account_frame")
   private String accountFrame = null;
 
+  @SerializedName("account_operate_identity")
+  private String accountOperateIdentity = null;
+
+  @SerializedName("compliance_owner")
+  private String complianceOwner = null;
+
   public PunishDetailDataItem partitionTime(Long partitionTime) {
     this.partitionTime = partitionTime;
     return this;
@@ -417,6 +423,44 @@ public class PunishDetailDataItem {
     this.accountFrame = accountFrame;
   }
 
+  public PunishDetailDataItem accountOperateIdentity(String accountOperateIdentity) {
+    this.accountOperateIdentity = accountOperateIdentity;
+    return this;
+  }
+
+  /**
+   * Get accountOperateIdentity
+   *
+   * @return accountOperateIdentity
+   */
+  @ApiModelProperty(value = "")
+  public String getAccountOperateIdentity() {
+    return accountOperateIdentity;
+  }
+
+  public void setAccountOperateIdentity(String accountOperateIdentity) {
+    this.accountOperateIdentity = accountOperateIdentity;
+  }
+
+  public PunishDetailDataItem complianceOwner(String complianceOwner) {
+    this.complianceOwner = complianceOwner;
+    return this;
+  }
+
+  /**
+   * Get complianceOwner
+   *
+   * @return complianceOwner
+   */
+  @ApiModelProperty(value = "")
+  public String getComplianceOwner() {
+    return complianceOwner;
+  }
+
+  public void setComplianceOwner(String complianceOwner) {
+    this.complianceOwner = complianceOwner;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -444,7 +488,9 @@ public class PunishDetailDataItem {
         && Objects.equals(this.rejectReason, punishDetailDataItem.rejectReason)
         && Objects.equals(this.isElementAppeal, punishDetailDataItem.isElementAppeal)
         && Objects.equals(this.agencyName, punishDetailDataItem.agencyName)
-        && Objects.equals(this.accountFrame, punishDetailDataItem.accountFrame);
+        && Objects.equals(this.accountFrame, punishDetailDataItem.accountFrame)
+        && Objects.equals(this.accountOperateIdentity, punishDetailDataItem.accountOperateIdentity)
+        && Objects.equals(this.complianceOwner, punishDetailDataItem.complianceOwner);
   }
 
   @Override
@@ -467,7 +513,9 @@ public class PunishDetailDataItem {
         rejectReason,
         isElementAppeal,
         agencyName,
-        accountFrame);
+        accountFrame,
+        accountOperateIdentity,
+        complianceOwner);
   }
 
   @Override

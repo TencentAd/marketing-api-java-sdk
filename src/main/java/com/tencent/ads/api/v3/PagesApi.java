@@ -58,6 +58,8 @@ public class PagesApi {
    * @param page (optional)
    * @param pageSize (optional)
    * @param adContext (optional)
+   * @param paginationMode (optional)
+   * @param cursor (optional)
    * @param fields 返回参数的字段列表 (optional)
    * @param progressListener Progress listener
    * @param progressRequestListener Progress request listener
@@ -70,6 +72,8 @@ public class PagesApi {
       Long page,
       Long pageSize,
       AdContext adContext,
+      String paginationMode,
+      String cursor,
       List<String> fields,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
@@ -93,6 +97,9 @@ public class PagesApi {
       localVarQueryParams.addAll(apiClient.parameterToPair("page_size", pageSize));
     if (adContext != null)
       localVarQueryParams.addAll(apiClient.parameterToPair("ad_context", adContext));
+    if (paginationMode != null)
+      localVarQueryParams.addAll(apiClient.parameterToPair("pagination_mode", paginationMode));
+    if (cursor != null) localVarQueryParams.addAll(apiClient.parameterToPair("cursor", cursor));
     if (fields != null)
       localVarCollectionQueryParams.addAll(apiClient.parameterToPairs("multi", "fields", fields));
 
@@ -152,6 +159,8 @@ public class PagesApi {
       Long page,
       Long pageSize,
       AdContext adContext,
+      String paginationMode,
+      String cursor,
       List<String> fields,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
@@ -171,6 +180,8 @@ public class PagesApi {
             page,
             pageSize,
             adContext,
+            paginationMode,
+            cursor,
             fields,
             progressListener,
             progressRequestListener,
@@ -186,6 +197,8 @@ public class PagesApi {
    * @param page (optional)
    * @param pageSize (optional)
    * @param adContext (optional)
+   * @param paginationMode (optional)
+   * @param cursor (optional)
    * @param fields 返回参数的字段列表 (optional)
    * @return PagesGetResponse
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
@@ -197,11 +210,22 @@ public class PagesApi {
       Long page,
       Long pageSize,
       AdContext adContext,
+      String paginationMode,
+      String cursor,
       List<String> fields,
       Pair... headerPair)
       throws ApiException {
     ApiResponse<PagesGetResponse> resp =
-        pagesGetWithHttpInfo(accountId, filtering, page, pageSize, adContext, fields, headerPair);
+        pagesGetWithHttpInfo(
+            accountId,
+            filtering,
+            page,
+            pageSize,
+            adContext,
+            paginationMode,
+            cursor,
+            fields,
+            headerPair);
     return resp.getData();
   }
 
@@ -213,6 +237,8 @@ public class PagesApi {
    * @param page (optional)
    * @param pageSize (optional)
    * @param adContext (optional)
+   * @param paginationMode (optional)
+   * @param cursor (optional)
    * @param fields 返回参数的字段列表 (optional)
    * @return ApiResponse&lt;PagesGetResponse&gt;
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
@@ -224,12 +250,24 @@ public class PagesApi {
       Long page,
       Long pageSize,
       AdContext adContext,
+      String paginationMode,
+      String cursor,
       List<String> fields,
       Pair... headerPair)
       throws ApiException {
     com.squareup.okhttp.Call call =
         pagesGetValidateBeforeCall(
-            accountId, filtering, page, pageSize, adContext, fields, null, null, headerPair);
+            accountId,
+            filtering,
+            page,
+            pageSize,
+            adContext,
+            paginationMode,
+            cursor,
+            fields,
+            null,
+            null,
+            headerPair);
     Type localVarReturnType = new TypeToken<PagesGetResponse>() {}.getType();
     return apiClient.execute(call, localVarReturnType);
   }
@@ -242,6 +280,8 @@ public class PagesApi {
    * @param page (optional)
    * @param pageSize (optional)
    * @param adContext (optional)
+   * @param paginationMode (optional)
+   * @param cursor (optional)
    * @param fields 返回参数的字段列表 (optional)
    * @param callback The callback to be executed when the API call finishes
    * @return The request call
@@ -253,6 +293,8 @@ public class PagesApi {
       Long page,
       Long pageSize,
       AdContext adContext,
+      String paginationMode,
+      String cursor,
       List<String> fields,
       final ApiCallback<PagesGetResponse> callback,
       Pair... headerPair)
@@ -286,6 +328,8 @@ public class PagesApi {
             page,
             pageSize,
             adContext,
+            paginationMode,
+            cursor,
             fields,
             progressListener,
             progressRequestListener,

@@ -86,6 +86,7 @@ public class App {
   @Inject DailyBalanceReportApiContainer dailyBalanceReportApiContainer;
   @Inject DailyReportsApiContainer dailyReportsApiContainer;
   @Inject DataSourceDispatchApiContainer dataSourceDispatchApiContainer;
+  @Inject DcComponentSummaryInfoApiContainer dcComponentSummaryInfoApiContainer;
   @Inject DynamicAdImageTemplatesApiContainer dynamicAdImageTemplatesApiContainer;
   @Inject DynamicAdImagesApiContainer dynamicAdImagesApiContainer;
   @Inject DynamicAdVideoApiContainer dynamicAdVideoApiContainer;
@@ -545,6 +546,10 @@ public class App {
 
   public DataSourceDispatchApiContainer dataSourceDispatch() {
     return dataSourceDispatchApiContainer;
+  }
+
+  public DcComponentSummaryInfoApiContainer dcComponentSummaryInfo() {
+    return dcComponentSummaryInfoApiContainer;
   }
 
   public DynamicAdImageTemplatesApiContainer dynamicAdImageTemplates() {

@@ -21,6 +21,7 @@ import com.tencent.ads.Configuration;
 import com.tencent.ads.Pair;
 import com.tencent.ads.ProgressRequestBody;
 import com.tencent.ads.ProgressResponseBody;
+import com.tencent.ads.model.v3.FilteringStruct;
 import com.tencent.ads.model.v3.WechatOfficialAccountsGetResponse;
 import java.io.IOException;
 import java.lang.reflect.Type;
@@ -52,6 +53,9 @@ public class WechatOfficialAccountsApi {
    * Build call for wechatOfficialAccountsGet
    *
    * @param accountId (required)
+   * @param filtering (optional)
+   * @param page (optional)
+   * @param pageSize (optional)
    * @param fields 返回参数的字段列表 (optional)
    * @param progressListener Progress listener
    * @param progressRequestListener Progress request listener
@@ -60,6 +64,9 @@ public class WechatOfficialAccountsApi {
    */
   public com.squareup.okhttp.Call wechatOfficialAccountsGetCall(
       Long accountId,
+      List<FilteringStruct> filtering,
+      Long page,
+      Long pageSize,
       List<String> fields,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
@@ -75,6 +82,12 @@ public class WechatOfficialAccountsApi {
     List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
     if (accountId != null)
       localVarQueryParams.addAll(apiClient.parameterToPair("account_id", accountId));
+    if (filtering != null)
+      localVarCollectionQueryParams.addAll(
+          apiClient.parameterToPairs("multi", "filtering", filtering));
+    if (page != null) localVarQueryParams.addAll(apiClient.parameterToPair("page", page));
+    if (pageSize != null)
+      localVarQueryParams.addAll(apiClient.parameterToPair("page_size", pageSize));
     if (fields != null)
       localVarCollectionQueryParams.addAll(apiClient.parameterToPairs("multi", "fields", fields));
 
@@ -130,6 +143,9 @@ public class WechatOfficialAccountsApi {
   @SuppressWarnings("rawtypes")
   private com.squareup.okhttp.Call wechatOfficialAccountsGetValidateBeforeCall(
       Long accountId,
+      List<FilteringStruct> filtering,
+      Long page,
+      Long pageSize,
       List<String> fields,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
@@ -144,7 +160,14 @@ public class WechatOfficialAccountsApi {
 
     com.squareup.okhttp.Call call =
         wechatOfficialAccountsGetCall(
-            accountId, fields, progressListener, progressRequestListener, headerPair);
+            accountId,
+            filtering,
+            page,
+            pageSize,
+            fields,
+            progressListener,
+            progressRequestListener,
+            headerPair);
     return call;
   }
 
@@ -152,15 +175,25 @@ public class WechatOfficialAccountsApi {
    * 获取公众号列表
    *
    * @param accountId (required)
+   * @param filtering (optional)
+   * @param page (optional)
+   * @param pageSize (optional)
    * @param fields 返回参数的字段列表 (optional)
    * @return WechatOfficialAccountsGetResponse
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
   public WechatOfficialAccountsGetResponse wechatOfficialAccountsGet(
-      Long accountId, List<String> fields, Pair... headerPair) throws ApiException {
+      Long accountId,
+      List<FilteringStruct> filtering,
+      Long page,
+      Long pageSize,
+      List<String> fields,
+      Pair... headerPair)
+      throws ApiException {
     ApiResponse<WechatOfficialAccountsGetResponse> resp =
-        wechatOfficialAccountsGetWithHttpInfo(accountId, fields, headerPair);
+        wechatOfficialAccountsGetWithHttpInfo(
+            accountId, filtering, page, pageSize, fields, headerPair);
     return resp.getData();
   }
 
@@ -168,15 +201,25 @@ public class WechatOfficialAccountsApi {
    * 获取公众号列表
    *
    * @param accountId (required)
+   * @param filtering (optional)
+   * @param page (optional)
+   * @param pageSize (optional)
    * @param fields 返回参数的字段列表 (optional)
    * @return ApiResponse&lt;WechatOfficialAccountsGetResponse&gt;
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
   public ApiResponse<WechatOfficialAccountsGetResponse> wechatOfficialAccountsGetWithHttpInfo(
-      Long accountId, List<String> fields, Pair... headerPair) throws ApiException {
+      Long accountId,
+      List<FilteringStruct> filtering,
+      Long page,
+      Long pageSize,
+      List<String> fields,
+      Pair... headerPair)
+      throws ApiException {
     com.squareup.okhttp.Call call =
-        wechatOfficialAccountsGetValidateBeforeCall(accountId, fields, null, null, headerPair);
+        wechatOfficialAccountsGetValidateBeforeCall(
+            accountId, filtering, page, pageSize, fields, null, null, headerPair);
     Type localVarReturnType = new TypeToken<WechatOfficialAccountsGetResponse>() {}.getType();
     return apiClient.execute(call, localVarReturnType);
   }
@@ -185,6 +228,9 @@ public class WechatOfficialAccountsApi {
    * 获取公众号列表 (asynchronously)
    *
    * @param accountId (required)
+   * @param filtering (optional)
+   * @param page (optional)
+   * @param pageSize (optional)
    * @param fields 返回参数的字段列表 (optional)
    * @param callback The callback to be executed when the API call finishes
    * @return The request call
@@ -192,6 +238,9 @@ public class WechatOfficialAccountsApi {
    */
   public com.squareup.okhttp.Call wechatOfficialAccountsGetAsync(
       Long accountId,
+      List<FilteringStruct> filtering,
+      Long page,
+      Long pageSize,
       List<String> fields,
       final ApiCallback<WechatOfficialAccountsGetResponse> callback,
       Pair... headerPair)
@@ -220,7 +269,14 @@ public class WechatOfficialAccountsApi {
 
     com.squareup.okhttp.Call call =
         wechatOfficialAccountsGetValidateBeforeCall(
-            accountId, fields, progressListener, progressRequestListener, headerPair);
+            accountId,
+            filtering,
+            page,
+            pageSize,
+            fields,
+            progressListener,
+            progressRequestListener,
+            headerPair);
     Type localVarReturnType = new TypeToken<WechatOfficialAccountsGetResponse>() {}.getType();
     apiClient.executeAsync(call, localVarReturnType, callback);
     return call;

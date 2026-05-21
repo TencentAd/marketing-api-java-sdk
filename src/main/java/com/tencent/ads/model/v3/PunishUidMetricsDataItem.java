@@ -60,6 +60,12 @@ public class PunishUidMetricsDataItem {
   @SerializedName("uid_final_penalty_amount")
   private String uidFinalPenaltyAmount = null;
 
+  @SerializedName("account_operate_identity")
+  private String accountOperateIdentity = null;
+
+  @SerializedName("compliance_owner")
+  private String complianceOwner = null;
+
   public PunishUidMetricsDataItem partitionTime(Long partitionTime) {
     this.partitionTime = partitionTime;
     return this;
@@ -307,6 +313,44 @@ public class PunishUidMetricsDataItem {
     this.uidFinalPenaltyAmount = uidFinalPenaltyAmount;
   }
 
+  public PunishUidMetricsDataItem accountOperateIdentity(String accountOperateIdentity) {
+    this.accountOperateIdentity = accountOperateIdentity;
+    return this;
+  }
+
+  /**
+   * Get accountOperateIdentity
+   *
+   * @return accountOperateIdentity
+   */
+  @ApiModelProperty(value = "")
+  public String getAccountOperateIdentity() {
+    return accountOperateIdentity;
+  }
+
+  public void setAccountOperateIdentity(String accountOperateIdentity) {
+    this.accountOperateIdentity = accountOperateIdentity;
+  }
+
+  public PunishUidMetricsDataItem complianceOwner(String complianceOwner) {
+    this.complianceOwner = complianceOwner;
+    return this;
+  }
+
+  /**
+   * Get complianceOwner
+   *
+   * @return complianceOwner
+   */
+  @ApiModelProperty(value = "")
+  public String getComplianceOwner() {
+    return complianceOwner;
+  }
+
+  public void setComplianceOwner(String complianceOwner) {
+    this.complianceOwner = complianceOwner;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -332,7 +376,10 @@ public class PunishUidMetricsDataItem {
         && Objects.equals(this.uidCappedRejectCnt, punishUidMetricsDataItem.uidCappedRejectCnt)
         && Objects.equals(this.penaltyUnitPrice, punishUidMetricsDataItem.penaltyUnitPrice)
         && Objects.equals(
-            this.uidFinalPenaltyAmount, punishUidMetricsDataItem.uidFinalPenaltyAmount);
+            this.uidFinalPenaltyAmount, punishUidMetricsDataItem.uidFinalPenaltyAmount)
+        && Objects.equals(
+            this.accountOperateIdentity, punishUidMetricsDataItem.accountOperateIdentity)
+        && Objects.equals(this.complianceOwner, punishUidMetricsDataItem.complianceOwner);
   }
 
   @Override
@@ -350,7 +397,9 @@ public class PunishUidMetricsDataItem {
         penaltyRejectRate,
         uidCappedRejectCnt,
         penaltyUnitPrice,
-        uidFinalPenaltyAmount);
+        uidFinalPenaltyAmount,
+        accountOperateIdentity,
+        complianceOwner);
   }
 
   @Override

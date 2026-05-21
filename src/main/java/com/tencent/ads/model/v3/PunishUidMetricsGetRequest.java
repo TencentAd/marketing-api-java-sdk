@@ -51,6 +51,12 @@ public class PunishUidMetricsGetRequest {
   @SerializedName("page_conf")
   private PunishUidMetricsReqPageConf pageConf = null;
 
+  @SerializedName("account_operate_identity_list")
+  private List<String> accountOperateIdentityList = null;
+
+  @SerializedName("compliance_owner_list")
+  private List<String> complianceOwnerList = null;
+
   public PunishUidMetricsGetRequest partitionTime(Long partitionTime) {
     this.partitionTime = partitionTime;
     return this;
@@ -257,6 +263,62 @@ public class PunishUidMetricsGetRequest {
     this.pageConf = pageConf;
   }
 
+  public PunishUidMetricsGetRequest accountOperateIdentityList(
+      List<String> accountOperateIdentityList) {
+    this.accountOperateIdentityList = accountOperateIdentityList;
+    return this;
+  }
+
+  public PunishUidMetricsGetRequest addAccountOperateIdentityListItem(
+      String accountOperateIdentityListItem) {
+    if (this.accountOperateIdentityList == null) {
+      this.accountOperateIdentityList = new ArrayList<String>();
+    }
+    this.accountOperateIdentityList.add(accountOperateIdentityListItem);
+    return this;
+  }
+
+  /**
+   * Get accountOperateIdentityList
+   *
+   * @return accountOperateIdentityList
+   */
+  @ApiModelProperty(value = "")
+  public List<String> getAccountOperateIdentityList() {
+    return accountOperateIdentityList;
+  }
+
+  public void setAccountOperateIdentityList(List<String> accountOperateIdentityList) {
+    this.accountOperateIdentityList = accountOperateIdentityList;
+  }
+
+  public PunishUidMetricsGetRequest complianceOwnerList(List<String> complianceOwnerList) {
+    this.complianceOwnerList = complianceOwnerList;
+    return this;
+  }
+
+  public PunishUidMetricsGetRequest addComplianceOwnerListItem(String complianceOwnerListItem) {
+    if (this.complianceOwnerList == null) {
+      this.complianceOwnerList = new ArrayList<String>();
+    }
+    this.complianceOwnerList.add(complianceOwnerListItem);
+    return this;
+  }
+
+  /**
+   * Get complianceOwnerList
+   *
+   * @return complianceOwnerList
+   */
+  @ApiModelProperty(value = "")
+  public List<String> getComplianceOwnerList() {
+    return complianceOwnerList;
+  }
+
+  public void setComplianceOwnerList(List<String> complianceOwnerList) {
+    this.complianceOwnerList = complianceOwnerList;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -278,7 +340,10 @@ public class PunishUidMetricsGetRequest {
         && Objects.equals(
             this.secondLevelIndustryName, punishUidMetricsGetRequest.secondLevelIndustryName)
         && Objects.equals(this.queryAccountIdList, punishUidMetricsGetRequest.queryAccountIdList)
-        && Objects.equals(this.pageConf, punishUidMetricsGetRequest.pageConf);
+        && Objects.equals(this.pageConf, punishUidMetricsGetRequest.pageConf)
+        && Objects.equals(
+            this.accountOperateIdentityList, punishUidMetricsGetRequest.accountOperateIdentityList)
+        && Objects.equals(this.complianceOwnerList, punishUidMetricsGetRequest.complianceOwnerList);
   }
 
   @Override
@@ -293,7 +358,9 @@ public class PunishUidMetricsGetRequest {
         firstLevelIndustryName,
         secondLevelIndustryName,
         queryAccountIdList,
-        pageConf);
+        pageConf,
+        accountOperateIdentityList,
+        complianceOwnerList);
   }
 
   @Override

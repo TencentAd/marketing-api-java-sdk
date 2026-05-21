@@ -2649,11 +2649,20 @@ public class HourlyReportApiListStruct {
   @SerializedName("ad_monetization_pla_reg_amount")
   private Long adMonetizationPlaRegAmount = null;
 
+  @SerializedName("real_cost_value_explore")
+  private Long realCostValueExplore = null;
+
   @SerializedName("adgroup_id")
   private Long adgroupId = null;
 
   @SerializedName("adgroup_name")
   private String adgroupName = null;
+
+  @SerializedName("clk_action_content_pv")
+  private Long clkActionContentPv = null;
+
+  @SerializedName("clk_action_content_uv")
+  private Long clkActionContentUv = null;
 
   @SerializedName("dynamic_creative_id")
   private Long dynamicCreativeId = null;
@@ -19420,6 +19429,25 @@ public class HourlyReportApiListStruct {
     this.adMonetizationPlaRegAmount = adMonetizationPlaRegAmount;
   }
 
+  public HourlyReportApiListStruct realCostValueExplore(Long realCostValueExplore) {
+    this.realCostValueExplore = realCostValueExplore;
+    return this;
+  }
+
+  /**
+   * Get realCostValueExplore
+   *
+   * @return realCostValueExplore
+   */
+  @ApiModelProperty(value = "")
+  public Long getRealCostValueExplore() {
+    return realCostValueExplore;
+  }
+
+  public void setRealCostValueExplore(Long realCostValueExplore) {
+    this.realCostValueExplore = realCostValueExplore;
+  }
+
   public HourlyReportApiListStruct adgroupId(Long adgroupId) {
     this.adgroupId = adgroupId;
     return this;
@@ -19456,6 +19484,44 @@ public class HourlyReportApiListStruct {
 
   public void setAdgroupName(String adgroupName) {
     this.adgroupName = adgroupName;
+  }
+
+  public HourlyReportApiListStruct clkActionContentPv(Long clkActionContentPv) {
+    this.clkActionContentPv = clkActionContentPv;
+    return this;
+  }
+
+  /**
+   * Get clkActionContentPv
+   *
+   * @return clkActionContentPv
+   */
+  @ApiModelProperty(value = "")
+  public Long getClkActionContentPv() {
+    return clkActionContentPv;
+  }
+
+  public void setClkActionContentPv(Long clkActionContentPv) {
+    this.clkActionContentPv = clkActionContentPv;
+  }
+
+  public HourlyReportApiListStruct clkActionContentUv(Long clkActionContentUv) {
+    this.clkActionContentUv = clkActionContentUv;
+    return this;
+  }
+
+  /**
+   * Get clkActionContentUv
+   *
+   * @return clkActionContentUv
+   */
+  @ApiModelProperty(value = "")
+  public Long getClkActionContentUv() {
+    return clkActionContentUv;
+  }
+
+  public void setClkActionContentUv(Long clkActionContentUv) {
+    this.clkActionContentUv = clkActionContentUv;
   }
 
   public HourlyReportApiListStruct dynamicCreativeId(Long dynamicCreativeId) {
@@ -21033,8 +21099,11 @@ public class HourlyReportApiListStruct {
             hourlyReportApiListStruct.effectiveSeedingConvertionsRate)
         && Objects.equals(
             this.adMonetizationPlaRegAmount, hourlyReportApiListStruct.adMonetizationPlaRegAmount)
+        && Objects.equals(this.realCostValueExplore, hourlyReportApiListStruct.realCostValueExplore)
         && Objects.equals(this.adgroupId, hourlyReportApiListStruct.adgroupId)
         && Objects.equals(this.adgroupName, hourlyReportApiListStruct.adgroupName)
+        && Objects.equals(this.clkActionContentPv, hourlyReportApiListStruct.clkActionContentPv)
+        && Objects.equals(this.clkActionContentUv, hourlyReportApiListStruct.clkActionContentUv)
         && Objects.equals(this.dynamicCreativeId, hourlyReportApiListStruct.dynamicCreativeId)
         && Objects.equals(this.dynamicCreativeName, hourlyReportApiListStruct.dynamicCreativeName)
         && Objects.equals(this.siteSet, hourlyReportApiListStruct.siteSet)
@@ -21931,8 +22000,11 @@ public class HourlyReportApiListStruct {
         effectiveSeedingRate,
         effectiveSeedingConvertionsRate,
         adMonetizationPlaRegAmount,
+        realCostValueExplore,
         adgroupId,
         adgroupName,
+        clkActionContentPv,
+        clkActionContentUv,
         dynamicCreativeId,
         dynamicCreativeName,
         siteSet,

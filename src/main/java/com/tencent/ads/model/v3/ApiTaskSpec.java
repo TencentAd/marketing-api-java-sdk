@@ -27,6 +27,9 @@ public class ApiTaskSpec {
   @SerializedName("task_type_update_android_channel_package_spec")
   private TaskTypeUpdateAndroidChannelPackageSpec taskTypeUpdateAndroidChannelPackageSpec = null;
 
+  @SerializedName("task_type_delete_creative_asset_spec")
+  private TaskTypeDeleteCreativeAssetSpec taskTypeDeleteCreativeAssetSpec = null;
+
   public ApiTaskSpec taskTypeCreateAndroidChannelPackageSpec(
       TaskTypeCreateAndroidChannelPackageSpec taskTypeCreateAndroidChannelPackageSpec) {
     this.taskTypeCreateAndroidChannelPackageSpec = taskTypeCreateAndroidChannelPackageSpec;
@@ -69,6 +72,27 @@ public class ApiTaskSpec {
     this.taskTypeUpdateAndroidChannelPackageSpec = taskTypeUpdateAndroidChannelPackageSpec;
   }
 
+  public ApiTaskSpec taskTypeDeleteCreativeAssetSpec(
+      TaskTypeDeleteCreativeAssetSpec taskTypeDeleteCreativeAssetSpec) {
+    this.taskTypeDeleteCreativeAssetSpec = taskTypeDeleteCreativeAssetSpec;
+    return this;
+  }
+
+  /**
+   * Get taskTypeDeleteCreativeAssetSpec
+   *
+   * @return taskTypeDeleteCreativeAssetSpec
+   */
+  @ApiModelProperty(value = "")
+  public TaskTypeDeleteCreativeAssetSpec getTaskTypeDeleteCreativeAssetSpec() {
+    return taskTypeDeleteCreativeAssetSpec;
+  }
+
+  public void setTaskTypeDeleteCreativeAssetSpec(
+      TaskTypeDeleteCreativeAssetSpec taskTypeDeleteCreativeAssetSpec) {
+    this.taskTypeDeleteCreativeAssetSpec = taskTypeDeleteCreativeAssetSpec;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -83,13 +107,17 @@ public class ApiTaskSpec {
             apiTaskSpec.taskTypeCreateAndroidChannelPackageSpec)
         && Objects.equals(
             this.taskTypeUpdateAndroidChannelPackageSpec,
-            apiTaskSpec.taskTypeUpdateAndroidChannelPackageSpec);
+            apiTaskSpec.taskTypeUpdateAndroidChannelPackageSpec)
+        && Objects.equals(
+            this.taskTypeDeleteCreativeAssetSpec, apiTaskSpec.taskTypeDeleteCreativeAssetSpec);
   }
 
   @Override
   public int hashCode() {
     return Objects.hash(
-        taskTypeCreateAndroidChannelPackageSpec, taskTypeUpdateAndroidChannelPackageSpec);
+        taskTypeCreateAndroidChannelPackageSpec,
+        taskTypeUpdateAndroidChannelPackageSpec,
+        taskTypeDeleteCreativeAssetSpec);
   }
 
   @Override

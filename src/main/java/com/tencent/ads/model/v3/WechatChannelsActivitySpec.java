@@ -24,6 +24,9 @@ public class WechatChannelsActivitySpec {
   @SerializedName("activity_id")
   private String activityId = null;
 
+  @SerializedName("wechat_channels_account_id")
+  private String wechatChannelsAccountId = null;
+
   public WechatChannelsActivitySpec activityId(String activityId) {
     this.activityId = activityId;
     return this;
@@ -43,6 +46,25 @@ public class WechatChannelsActivitySpec {
     this.activityId = activityId;
   }
 
+  public WechatChannelsActivitySpec wechatChannelsAccountId(String wechatChannelsAccountId) {
+    this.wechatChannelsAccountId = wechatChannelsAccountId;
+    return this;
+  }
+
+  /**
+   * Get wechatChannelsAccountId
+   *
+   * @return wechatChannelsAccountId
+   */
+  @ApiModelProperty(value = "")
+  public String getWechatChannelsAccountId() {
+    return wechatChannelsAccountId;
+  }
+
+  public void setWechatChannelsAccountId(String wechatChannelsAccountId) {
+    this.wechatChannelsAccountId = wechatChannelsAccountId;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -52,12 +74,14 @@ public class WechatChannelsActivitySpec {
       return false;
     }
     WechatChannelsActivitySpec wechatChannelsActivitySpec = (WechatChannelsActivitySpec) o;
-    return Objects.equals(this.activityId, wechatChannelsActivitySpec.activityId);
+    return Objects.equals(this.activityId, wechatChannelsActivitySpec.activityId)
+        && Objects.equals(
+            this.wechatChannelsAccountId, wechatChannelsActivitySpec.wechatChannelsAccountId);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(activityId);
+    return Objects.hash(activityId, wechatChannelsAccountId);
   }
 
   @Override

@@ -27,6 +27,9 @@ public class PagesGetResponseData {
   @SerializedName("page_info")
   private PageInfo pageInfo = null;
 
+  @SerializedName("cursor_page_info")
+  private CursorPageInfoStructLandingPage cursorPageInfo = null;
+
   public PagesGetResponseData list(List<PagesGetListStruct> list) {
     this.list = list;
     return this;
@@ -73,6 +76,25 @@ public class PagesGetResponseData {
     this.pageInfo = pageInfo;
   }
 
+  public PagesGetResponseData cursorPageInfo(CursorPageInfoStructLandingPage cursorPageInfo) {
+    this.cursorPageInfo = cursorPageInfo;
+    return this;
+  }
+
+  /**
+   * Get cursorPageInfo
+   *
+   * @return cursorPageInfo
+   */
+  @ApiModelProperty(value = "")
+  public CursorPageInfoStructLandingPage getCursorPageInfo() {
+    return cursorPageInfo;
+  }
+
+  public void setCursorPageInfo(CursorPageInfoStructLandingPage cursorPageInfo) {
+    this.cursorPageInfo = cursorPageInfo;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -83,12 +105,13 @@ public class PagesGetResponseData {
     }
     PagesGetResponseData pagesGetResponseData = (PagesGetResponseData) o;
     return Objects.equals(this.list, pagesGetResponseData.list)
-        && Objects.equals(this.pageInfo, pagesGetResponseData.pageInfo);
+        && Objects.equals(this.pageInfo, pagesGetResponseData.pageInfo)
+        && Objects.equals(this.cursorPageInfo, pagesGetResponseData.cursorPageInfo);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(list, pageInfo);
+    return Objects.hash(list, pageInfo, cursorPageInfo);
   }
 
   @Override

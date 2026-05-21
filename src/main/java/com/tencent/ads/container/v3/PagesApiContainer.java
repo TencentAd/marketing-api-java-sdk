@@ -37,6 +37,8 @@ public class PagesApiContainer extends ApiContainer {
    * @param page (optional)
    * @param pageSize (optional)
    * @param adContext (optional)
+   * @param paginationMode (optional)
+   * @param cursor (optional)
    * @param fields 返回参数的字段列表 (optional)
    * @return PagesGetResponse
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
@@ -48,11 +50,22 @@ public class PagesApiContainer extends ApiContainer {
       Long page,
       Long pageSize,
       AdContext adContext,
+      String paginationMode,
+      String cursor,
       List<String> fields,
       Pair... headerPair)
       throws ApiException, TencentAdsResponseException {
     PagesGetResponse resp =
-        api.pagesGet(accountId, filtering, page, pageSize, adContext, fields, headerPair);
+        api.pagesGet(
+            accountId,
+            filtering,
+            page,
+            pageSize,
+            adContext,
+            paginationMode,
+            cursor,
+            fields,
+            headerPair);
     handleResponse(gson.toJson(resp));
     return resp.getData();
   }

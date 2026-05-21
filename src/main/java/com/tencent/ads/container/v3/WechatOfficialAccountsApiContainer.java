@@ -19,6 +19,7 @@ import com.tencent.ads.Pair;
 import com.tencent.ads.anno.*;
 import com.tencent.ads.api.v3.WechatOfficialAccountsApi;
 import com.tencent.ads.exception.TencentAdsResponseException;
+import com.tencent.ads.model.v3.FilteringStruct;
 import com.tencent.ads.model.v3.WechatOfficialAccountsGetResponse;
 import com.tencent.ads.model.v3.WechatOfficialAccountsGetResponseData;
 import java.util.List;
@@ -31,16 +32,24 @@ public class WechatOfficialAccountsApiContainer extends ApiContainer {
    * 获取公众号列表
    *
    * @param accountId (required)
+   * @param filtering (optional)
+   * @param page (optional)
+   * @param pageSize (optional)
    * @param fields 返回参数的字段列表 (optional)
    * @return WechatOfficialAccountsGetResponse
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
   public WechatOfficialAccountsGetResponseData wechatOfficialAccountsGet(
-      Long accountId, List<String> fields, Pair... headerPair)
+      Long accountId,
+      List<FilteringStruct> filtering,
+      Long page,
+      Long pageSize,
+      List<String> fields,
+      Pair... headerPair)
       throws ApiException, TencentAdsResponseException {
     WechatOfficialAccountsGetResponse resp =
-        api.wechatOfficialAccountsGet(accountId, fields, headerPair);
+        api.wechatOfficialAccountsGet(accountId, filtering, page, pageSize, fields, headerPair);
     handleResponse(gson.toJson(resp));
     return resp.getData();
   }

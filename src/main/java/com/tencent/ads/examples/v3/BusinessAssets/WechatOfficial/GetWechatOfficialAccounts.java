@@ -4,6 +4,7 @@ import com.tencent.ads.ApiContextConfig;
 import com.tencent.ads.exception.TencentAdsResponseException;
 import com.tencent.ads.exception.TencentAdsSDKException;
 import com.tencent.ads.model.v3.*;
+import com.tencent.ads.model.v3.FilteringStruct;
 import com.tencent.ads.v3.TencentAds;
 import java.util.List;
 
@@ -15,6 +16,12 @@ public class GetWechatOfficialAccounts {
   public TencentAds tencentAds;
 
   public Long accountId = null;
+
+  public List<FilteringStruct> filtering = null;
+
+  public Long page = null;
+
+  public Long pageSize = null;
 
   public List<String> fields = null;
 
@@ -30,7 +37,9 @@ public class GetWechatOfficialAccounts {
 
   public WechatOfficialAccountsGetResponseData getWechatOfficialAccounts() throws Exception {
     WechatOfficialAccountsGetResponseData response =
-        tencentAds.wechatOfficialAccounts().wechatOfficialAccountsGet(accountId, fields);
+        tencentAds
+            .wechatOfficialAccounts()
+            .wechatOfficialAccountsGet(accountId, filtering, page, pageSize, fields);
     return response;
   }
 
