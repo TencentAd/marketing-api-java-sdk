@@ -28,7 +28,7 @@ public class PunishUidMetricsApiContainer extends ApiContainer {
   @Inject PunishUidMetricsApi api;
 
   /**
-   * 获取处罚UID维度指标数据
+   * 获取素材计量治理账户指标数据
    *
    * @param data (required)
    * @return PunishUidMetricsGetResponse

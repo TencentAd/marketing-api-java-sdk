@@ -44,6 +44,12 @@ public class CommentListGetListStruct {
   @SerializedName("comment_level")
   private Long commentLevel = null;
 
+  @SerializedName("content_type")
+  private FinderCommentContentType contentType = null;
+
+  @SerializedName("image_comment_info")
+  private ImageCommentInfo imageCommentInfo = null;
+
   public CommentListGetListStruct commentId(String commentId) {
     this.commentId = commentId;
     return this;
@@ -185,6 +191,44 @@ public class CommentListGetListStruct {
     this.commentLevel = commentLevel;
   }
 
+  public CommentListGetListStruct contentType(FinderCommentContentType contentType) {
+    this.contentType = contentType;
+    return this;
+  }
+
+  /**
+   * Get contentType
+   *
+   * @return contentType
+   */
+  @ApiModelProperty(value = "")
+  public FinderCommentContentType getContentType() {
+    return contentType;
+  }
+
+  public void setContentType(FinderCommentContentType contentType) {
+    this.contentType = contentType;
+  }
+
+  public CommentListGetListStruct imageCommentInfo(ImageCommentInfo imageCommentInfo) {
+    this.imageCommentInfo = imageCommentInfo;
+    return this;
+  }
+
+  /**
+   * Get imageCommentInfo
+   *
+   * @return imageCommentInfo
+   */
+  @ApiModelProperty(value = "")
+  public ImageCommentInfo getImageCommentInfo() {
+    return imageCommentInfo;
+  }
+
+  public void setImageCommentInfo(ImageCommentInfo imageCommentInfo) {
+    this.imageCommentInfo = imageCommentInfo;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -200,13 +244,23 @@ public class CommentListGetListStruct {
         && Objects.equals(this.commentFlag, commentListGetListStruct.commentFlag)
         && Objects.equals(this.finderAdObjectId, commentListGetListStruct.finderAdObjectId)
         && Objects.equals(this.authorReplys, commentListGetListStruct.authorReplys)
-        && Objects.equals(this.commentLevel, commentListGetListStruct.commentLevel);
+        && Objects.equals(this.commentLevel, commentListGetListStruct.commentLevel)
+        && Objects.equals(this.contentType, commentListGetListStruct.contentType)
+        && Objects.equals(this.imageCommentInfo, commentListGetListStruct.imageCommentInfo);
   }
 
   @Override
   public int hashCode() {
     return Objects.hash(
-        commentId, content, createdTime, commentFlag, finderAdObjectId, authorReplys, commentLevel);
+        commentId,
+        content,
+        createdTime,
+        commentFlag,
+        finderAdObjectId,
+        authorReplys,
+        commentLevel,
+        contentType,
+        imageCommentInfo);
   }
 
   @Override

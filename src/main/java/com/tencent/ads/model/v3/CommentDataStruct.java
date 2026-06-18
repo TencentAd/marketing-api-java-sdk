@@ -18,8 +18,8 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.util.Objects;
 
-/** 广告主备注struct */
-@ApiModel(description = "广告主备注struct")
+/** 客户备注struct */
+@ApiModel(description = "客户备注struct")
 public class CommentDataStruct {
   @SerializedName("user_id")
   private Long userId = null;

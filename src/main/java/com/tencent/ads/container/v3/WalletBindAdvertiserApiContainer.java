@@ -27,7 +27,7 @@ public class WalletBindAdvertiserApiContainer extends ApiContainer {
   @Inject WalletBindAdvertiserApi api;
 
   /**
-   * 共享钱包绑定或解绑广告账户
+   * 共享钱包绑定或解绑投放账户
    *
    * @param data (required)
    * @return WalletBindAdvertiserAddResponse

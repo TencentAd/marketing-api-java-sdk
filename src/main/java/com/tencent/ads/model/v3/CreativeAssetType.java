@@ -32,7 +32,9 @@ public enum CreativeAssetType {
 
   VIDEO_SHOWCASE("VIDEO_SHOWCASE"),
 
-  IMAGE_SHOWCASE("IMAGE_SHOWCASE");
+  IMAGE_SHOWCASE("IMAGE_SHOWCASE"),
+
+  VIDEO_LIST("VIDEO_LIST");
 
   private String value;
 

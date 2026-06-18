@@ -16,9 +16,9 @@ public class GetAdvertiserConfig {
 
   public Long accountId = null;
 
-  public Long organizationId = null;
-
   public List<String> fields = null;
+
+  public Long organizationId = null;
 
   public void init() {
     this.tencentAds = TencentAds.getInstance();
@@ -32,7 +32,7 @@ public class GetAdvertiserConfig {
 
   public AdvertiserConfigGetResponseData getAdvertiserConfig() throws Exception {
     AdvertiserConfigGetResponseData response =
-        tencentAds.advertiserConfig().advertiserConfigGet(accountId, organizationId, fields);
+        tencentAds.advertiserConfig().advertiserConfigGet(accountId, fields, organizationId);
     return response;
   }
 

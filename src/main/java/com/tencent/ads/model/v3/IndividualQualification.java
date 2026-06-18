@@ -27,12 +27,6 @@ public class IndividualQualification {
   @SerializedName("identification_number")
   private String identificationNumber = null;
 
-  @SerializedName("identification_front_image_id")
-  private String identificationFrontImageId = null;
-
-  @SerializedName("identification_back_image_id")
-  private String identificationBackImageId = null;
-
   public IndividualQualification name(String name) {
     this.name = name;
     return this;
@@ -71,44 +65,6 @@ public class IndividualQualification {
     this.identificationNumber = identificationNumber;
   }
 
-  public IndividualQualification identificationFrontImageId(String identificationFrontImageId) {
-    this.identificationFrontImageId = identificationFrontImageId;
-    return this;
-  }
-
-  /**
-   * Get identificationFrontImageId
-   *
-   * @return identificationFrontImageId
-   */
-  @ApiModelProperty(value = "")
-  public String getIdentificationFrontImageId() {
-    return identificationFrontImageId;
-  }
-
-  public void setIdentificationFrontImageId(String identificationFrontImageId) {
-    this.identificationFrontImageId = identificationFrontImageId;
-  }
-
-  public IndividualQualification identificationBackImageId(String identificationBackImageId) {
-    this.identificationBackImageId = identificationBackImageId;
-    return this;
-  }
-
-  /**
-   * Get identificationBackImageId
-   *
-   * @return identificationBackImageId
-   */
-  @ApiModelProperty(value = "")
-  public String getIdentificationBackImageId() {
-    return identificationBackImageId;
-  }
-
-  public void setIdentificationBackImageId(String identificationBackImageId) {
-    this.identificationBackImageId = identificationBackImageId;
-  }
-
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -119,17 +75,12 @@ public class IndividualQualification {
     }
     IndividualQualification individualQualification = (IndividualQualification) o;
     return Objects.equals(this.name, individualQualification.name)
-        && Objects.equals(this.identificationNumber, individualQualification.identificationNumber)
-        && Objects.equals(
-            this.identificationFrontImageId, individualQualification.identificationFrontImageId)
-        && Objects.equals(
-            this.identificationBackImageId, individualQualification.identificationBackImageId);
+        && Objects.equals(this.identificationNumber, individualQualification.identificationNumber);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(
-        name, identificationNumber, identificationFrontImageId, identificationBackImageId);
+    return Objects.hash(name, identificationNumber);
   }
 
   @Override

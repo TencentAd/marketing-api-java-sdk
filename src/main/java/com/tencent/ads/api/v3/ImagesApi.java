@@ -556,6 +556,7 @@ public class ImagesApi {
    * @param pageSize (optional)
    * @param labelId (optional)
    * @param businessScenario (optional)
+   * @param needAigcFlag (optional)
    * @param fields 返回参数的字段列表 (optional)
    * @param progressListener Progress listener
    * @param progressRequestListener Progress request listener
@@ -570,6 +571,7 @@ public class ImagesApi {
       Long pageSize,
       Long labelId,
       Long businessScenario,
+      Boolean needAigcFlag,
       List<String> fields,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
@@ -596,6 +598,8 @@ public class ImagesApi {
     if (labelId != null) localVarQueryParams.addAll(apiClient.parameterToPair("label_id", labelId));
     if (businessScenario != null)
       localVarQueryParams.addAll(apiClient.parameterToPair("business_scenario", businessScenario));
+    if (needAigcFlag != null)
+      localVarQueryParams.addAll(apiClient.parameterToPair("need_aigc_flag", needAigcFlag));
     if (fields != null)
       localVarCollectionQueryParams.addAll(apiClient.parameterToPairs("multi", "fields", fields));
 
@@ -657,6 +661,7 @@ public class ImagesApi {
       Long pageSize,
       Long labelId,
       Long businessScenario,
+      Boolean needAigcFlag,
       List<String> fields,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
@@ -672,6 +677,7 @@ public class ImagesApi {
             pageSize,
             labelId,
             businessScenario,
+            needAigcFlag,
             fields,
             progressListener,
             progressRequestListener,
@@ -689,6 +695,7 @@ public class ImagesApi {
    * @param pageSize (optional)
    * @param labelId (optional)
    * @param businessScenario (optional)
+   * @param needAigcFlag (optional)
    * @param fields 返回参数的字段列表 (optional)
    * @return ImagesGetResponse
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
@@ -702,6 +709,7 @@ public class ImagesApi {
       Long pageSize,
       Long labelId,
       Long businessScenario,
+      Boolean needAigcFlag,
       List<String> fields,
       Pair... headerPair)
       throws ApiException {
@@ -714,6 +722,7 @@ public class ImagesApi {
             pageSize,
             labelId,
             businessScenario,
+            needAigcFlag,
             fields,
             headerPair);
     return resp.getData();
@@ -729,6 +738,7 @@ public class ImagesApi {
    * @param pageSize (optional)
    * @param labelId (optional)
    * @param businessScenario (optional)
+   * @param needAigcFlag (optional)
    * @param fields 返回参数的字段列表 (optional)
    * @return ApiResponse&lt;ImagesGetResponse&gt;
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
@@ -742,6 +752,7 @@ public class ImagesApi {
       Long pageSize,
       Long labelId,
       Long businessScenario,
+      Boolean needAigcFlag,
       List<String> fields,
       Pair... headerPair)
       throws ApiException {
@@ -754,6 +765,7 @@ public class ImagesApi {
             pageSize,
             labelId,
             businessScenario,
+            needAigcFlag,
             fields,
             null,
             null,
@@ -772,6 +784,7 @@ public class ImagesApi {
    * @param pageSize (optional)
    * @param labelId (optional)
    * @param businessScenario (optional)
+   * @param needAigcFlag (optional)
    * @param fields 返回参数的字段列表 (optional)
    * @param callback The callback to be executed when the API call finishes
    * @return The request call
@@ -785,6 +798,7 @@ public class ImagesApi {
       Long pageSize,
       Long labelId,
       Long businessScenario,
+      Boolean needAigcFlag,
       List<String> fields,
       final ApiCallback<ImagesGetResponse> callback,
       Pair... headerPair)
@@ -820,6 +834,7 @@ public class ImagesApi {
             pageSize,
             labelId,
             businessScenario,
+            needAigcFlag,
             fields,
             progressListener,
             progressRequestListener,

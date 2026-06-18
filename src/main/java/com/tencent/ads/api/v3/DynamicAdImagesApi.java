@@ -144,7 +144,7 @@ public class DynamicAdImagesApi {
   }
 
   /**
-   * 创建用于广告投放的动态广告图片
+   * 创建用于投放的动态广告图片
    *
    * @param data (required)
    * @return DynamicAdImagesAddResponse
@@ -158,7 +158,7 @@ public class DynamicAdImagesApi {
   }
 
   /**
-   * 创建用于广告投放的动态广告图片
+   * 创建用于投放的动态广告图片
    *
    * @param data (required)
    * @return ApiResponse&lt;DynamicAdImagesAddResponse&gt;
@@ -174,7 +174,7 @@ public class DynamicAdImagesApi {
   }
 
   /**
-   * 创建用于广告投放的动态广告图片 (asynchronously)
+   * 创建用于投放的动态广告图片 (asynchronously)
    *
    * @param data (required)
    * @param callback The callback to be executed when the API call finishes

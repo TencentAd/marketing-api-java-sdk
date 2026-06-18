@@ -31,16 +31,17 @@ public class CreativeTemplateApiContainer extends ApiContainer {
    * 获取创意形式详情
    *
    * @param accountId (required)
-   * @param marketingGoal (required)
-   * @param marketingTargetType (required)
-   * @param marketingCarrierType (required)
    * @param deliveryMode (required)
+   * @param marketingGoal (optional)
    * @param marketingSubGoal (optional)
+   * @param marketingTargetType (optional)
+   * @param marketingCarrierType (optional)
    * @param automaticSiteEnabled (optional)
    * @param siteSet (optional)
    * @param dynamicCreativeType (optional)
    * @param creativeTemplateId (optional)
    * @param useNewVersion (optional)
+   * @param adgroupId (optional)
    * @param adgroupType (optional)
    * @param fields 返回参数的字段列表 (optional)
    * @return CreativeTemplateGetResponse
@@ -49,16 +50,17 @@ public class CreativeTemplateApiContainer extends ApiContainer {
    */
   public CreativeTemplateGetResponseData creativeTemplateGet(
       Long accountId,
+      String deliveryMode,
       String marketingGoal,
+      String marketingSubGoal,
       String marketingTargetType,
       String marketingCarrierType,
-      String deliveryMode,
-      String marketingSubGoal,
       Boolean automaticSiteEnabled,
       List<String> siteSet,
       String dynamicCreativeType,
       Long creativeTemplateId,
       Boolean useNewVersion,
+      Long adgroupId,
       String adgroupType,
       List<String> fields,
       Pair... headerPair)
@@ -66,16 +68,17 @@ public class CreativeTemplateApiContainer extends ApiContainer {
     CreativeTemplateGetResponse resp =
         api.creativeTemplateGet(
             accountId,
+            deliveryMode,
             marketingGoal,
+            marketingSubGoal,
             marketingTargetType,
             marketingCarrierType,
-            deliveryMode,
-            marketingSubGoal,
             automaticSiteEnabled,
             siteSet,
             dynamicCreativeType,
             creativeTemplateId,
             useNewVersion,
+            adgroupId,
             adgroupType,
             fields,
             headerPair);

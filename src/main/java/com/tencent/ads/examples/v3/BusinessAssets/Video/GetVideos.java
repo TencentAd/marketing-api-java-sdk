@@ -31,6 +31,8 @@ public class GetVideos {
 
   public Long businessScenario = null;
 
+  public Boolean needAigcFlag = null;
+
   public List<String> fields =
       Arrays.asList(
           "video_id",
@@ -92,6 +94,7 @@ public class GetVideos {
                 pageSize,
                 labelId,
                 businessScenario,
+                needAigcFlag,
                 fields);
     return response;
   }

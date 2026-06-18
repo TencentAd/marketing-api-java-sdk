@@ -182,7 +182,7 @@ public class IllegalComplaintApi {
   }
 
   /**
-   * 新增广告主违规申述
+   * 新增客户违规申述
    *
    * @param accountId (required)
    * @param illegalOrderId (required)
@@ -202,7 +202,7 @@ public class IllegalComplaintApi {
   }
 
   /**
-   * 新增广告主违规申述
+   * 新增客户违规申述
    *
    * @param accountId (required)
    * @param illegalOrderId (required)
@@ -223,7 +223,7 @@ public class IllegalComplaintApi {
   }
 
   /**
-   * 新增广告主违规申述 (asynchronously)
+   * 新增客户违规申述 (asynchronously)
    *
    * @param accountId (required)
    * @param illegalOrderId (required)
@@ -369,7 +369,7 @@ public class IllegalComplaintApi {
   }
 
   /**
-   * 获取直客广告主违规申述列表
+   * 获取直客客户违规申述列表
    *
    * @param data (required)
    * @return IllegalComplaintGetResponse
@@ -384,7 +384,7 @@ public class IllegalComplaintApi {
   }
 
   /**
-   * 获取直客广告主违规申述列表
+   * 获取直客客户违规申述列表
    *
    * @param data (required)
    * @return ApiResponse&lt;IllegalComplaintGetResponse&gt;
@@ -400,7 +400,7 @@ public class IllegalComplaintApi {
   }
 
   /**
-   * 获取直客广告主违规申述列表 (asynchronously)
+   * 获取直客客户违规申述列表 (asynchronously)
    *
    * @param data (required)
    * @param callback The callback to be executed when the API call finishes

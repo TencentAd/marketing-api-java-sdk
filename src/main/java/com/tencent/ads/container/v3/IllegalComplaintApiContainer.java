@@ -30,7 +30,7 @@ public class IllegalComplaintApiContainer extends ApiContainer {
   @Inject IllegalComplaintApi api;
 
   /**
-   * 新增广告主违规申述
+   * 新增客户违规申述
    *
    * @param accountId (required)
    * @param illegalOrderId (required)
@@ -51,7 +51,7 @@ public class IllegalComplaintApiContainer extends ApiContainer {
   }
 
   /**
-   * 获取直客广告主违规申述列表
+   * 获取直客客户违规申述列表
    *
    * @param data (required)
    * @return IllegalComplaintGetResponse

@@ -20,8 +20,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
-/** 广告主违规申述信息 */
-@ApiModel(description = "广告主违规申述信息")
+/** 客户违规申述信息 */
+@ApiModel(description = "客户违规申述信息")
 public class AdvertiserIllegalComplaint {
   @SerializedName("illegal_order_id")
   private String illegalOrderId = null;

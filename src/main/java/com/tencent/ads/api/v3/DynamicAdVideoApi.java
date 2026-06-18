@@ -143,7 +143,7 @@ public class DynamicAdVideoApi {
   }
 
   /**
-   * 创建用于广告投放的动态广告视频
+   * 创建用于投放的动态投放视频
    *
    * @param data (required)
    * @return DynamicAdVideoAddResponse
@@ -157,7 +157,7 @@ public class DynamicAdVideoApi {
   }
 
   /**
-   * 创建用于广告投放的动态广告视频
+   * 创建用于投放的动态投放视频
    *
    * @param data (required)
    * @return ApiResponse&lt;DynamicAdVideoAddResponse&gt;
@@ -173,7 +173,7 @@ public class DynamicAdVideoApi {
   }
 
   /**
-   * 创建用于广告投放的动态广告视频 (asynchronously)
+   * 创建用于投放的动态投放视频 (asynchronously)
    *
    * @param data (required)
    * @param callback The callback to be executed when the API call finishes
@@ -368,7 +368,7 @@ public class DynamicAdVideoApi {
   }
 
   /**
-   * 获取广告投放的动态广告视频
+   * 获取投放的动态广告视频
    *
    * @param accountId (required)
    * @param productCatalogId (required)
@@ -402,7 +402,7 @@ public class DynamicAdVideoApi {
   }
 
   /**
-   * 获取广告投放的动态广告视频
+   * 获取投放的动态广告视频
    *
    * @param accountId (required)
    * @param productCatalogId (required)
@@ -439,7 +439,7 @@ public class DynamicAdVideoApi {
   }
 
   /**
-   * 获取广告投放的动态广告视频 (asynchronously)
+   * 获取投放的动态广告视频 (asynchronously)
    *
    * @param accountId (required)
    * @param productCatalogId (required)

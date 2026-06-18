@@ -134,6 +134,12 @@ public class CreativeComponents {
   @SerializedName("video_list")
   private List<VideoListComponent> videoList = null;
 
+  @SerializedName("doctor_card")
+  private List<DoctorCardComponent> doctorCard = null;
+
+  @SerializedName("channels_live_feed")
+  private List<ChannelsLiveFeedComponent> channelsLiveFeed = null;
+
   public CreativeComponents title(List<TitleComponent> title) {
     this.title = title;
     return this;
@@ -1141,6 +1147,61 @@ public class CreativeComponents {
     this.videoList = videoList;
   }
 
+  public CreativeComponents doctorCard(List<DoctorCardComponent> doctorCard) {
+    this.doctorCard = doctorCard;
+    return this;
+  }
+
+  public CreativeComponents addDoctorCardItem(DoctorCardComponent doctorCardItem) {
+    if (this.doctorCard == null) {
+      this.doctorCard = new ArrayList<DoctorCardComponent>();
+    }
+    this.doctorCard.add(doctorCardItem);
+    return this;
+  }
+
+  /**
+   * Get doctorCard
+   *
+   * @return doctorCard
+   */
+  @ApiModelProperty(value = "")
+  public List<DoctorCardComponent> getDoctorCard() {
+    return doctorCard;
+  }
+
+  public void setDoctorCard(List<DoctorCardComponent> doctorCard) {
+    this.doctorCard = doctorCard;
+  }
+
+  public CreativeComponents channelsLiveFeed(List<ChannelsLiveFeedComponent> channelsLiveFeed) {
+    this.channelsLiveFeed = channelsLiveFeed;
+    return this;
+  }
+
+  public CreativeComponents addChannelsLiveFeedItem(
+      ChannelsLiveFeedComponent channelsLiveFeedItem) {
+    if (this.channelsLiveFeed == null) {
+      this.channelsLiveFeed = new ArrayList<ChannelsLiveFeedComponent>();
+    }
+    this.channelsLiveFeed.add(channelsLiveFeedItem);
+    return this;
+  }
+
+  /**
+   * Get channelsLiveFeed
+   *
+   * @return channelsLiveFeed
+   */
+  @ApiModelProperty(value = "")
+  public List<ChannelsLiveFeedComponent> getChannelsLiveFeed() {
+    return channelsLiveFeed;
+  }
+
+  public void setChannelsLiveFeed(List<ChannelsLiveFeedComponent> channelsLiveFeed) {
+    this.channelsLiveFeed = channelsLiveFeed;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -1186,7 +1247,9 @@ public class CreativeComponents {
         && Objects.equals(this.videoChannelsContent, creativeComponents.videoChannelsContent)
         && Objects.equals(this.audio, creativeComponents.audio)
         && Objects.equals(this.wxgameDirectPage, creativeComponents.wxgameDirectPage)
-        && Objects.equals(this.videoList, creativeComponents.videoList);
+        && Objects.equals(this.videoList, creativeComponents.videoList)
+        && Objects.equals(this.doctorCard, creativeComponents.doctorCard)
+        && Objects.equals(this.channelsLiveFeed, creativeComponents.channelsLiveFeed);
   }
 
   @Override
@@ -1228,7 +1291,9 @@ public class CreativeComponents {
         videoChannelsContent,
         audio,
         wxgameDirectPage,
-        videoList);
+        videoList,
+        doctorCard,
+        channelsLiveFeed);
   }
 
   @Override

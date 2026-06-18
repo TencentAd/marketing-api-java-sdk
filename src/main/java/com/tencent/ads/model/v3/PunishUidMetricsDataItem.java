@@ -18,8 +18,8 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.util.Objects;
 
-/** 处罚指标数据项 */
-@ApiModel(description = "处罚指标数据项")
+/** 治理账户指标数据项 */
+@ApiModel(description = "治理账户指标数据项")
 public class PunishUidMetricsDataItem {
   @SerializedName("partition_time")
   private Long partitionTime = null;

@@ -50,17 +50,17 @@ public class AdvertiserConfigApiContainer extends ApiContainer {
    * 获取客户投放偏好
    *
    * @param accountId (required)
+   * @param fields (required)
    * @param organizationId (optional)
-   * @param fields (optional)
    * @return AdvertiserConfigGetResponse
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
   public AdvertiserConfigGetResponseData advertiserConfigGet(
-      Long accountId, Long organizationId, List<String> fields, Pair... headerPair)
+      Long accountId, List<String> fields, Long organizationId, Pair... headerPair)
       throws ApiException, TencentAdsResponseException {
     AdvertiserConfigGetResponse resp =
-        api.advertiserConfigGet(accountId, organizationId, fields, headerPair);
+        api.advertiserConfigGet(accountId, fields, organizationId, headerPair);
     handleResponse(gson.toJson(resp));
     return resp.getData();
   }

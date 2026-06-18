@@ -32,7 +32,7 @@ public class DynamicAdImagesApiContainer extends ApiContainer {
   @Inject DynamicAdImagesApi api;
 
   /**
-   * 创建用于广告投放的动态广告图片
+   * 创建用于投放的动态广告图片
    *
    * @param data (required)
    * @return DynamicAdImagesAddResponse

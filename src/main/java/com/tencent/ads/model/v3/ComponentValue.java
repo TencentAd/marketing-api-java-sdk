@@ -129,6 +129,12 @@ public class ComponentValue {
   @SerializedName("video_list")
   private VideoListComponent videoList = null;
 
+  @SerializedName("channels_live_feed")
+  private ChannelsLiveFeedComponent channelsLiveFeed = null;
+
+  @SerializedName("doctor_card")
+  private DoctorCardComponent doctorCard = null;
+
   public ComponentValue title(TitleComponent title) {
     this.title = title;
     return this;
@@ -813,6 +819,44 @@ public class ComponentValue {
     this.videoList = videoList;
   }
 
+  public ComponentValue channelsLiveFeed(ChannelsLiveFeedComponent channelsLiveFeed) {
+    this.channelsLiveFeed = channelsLiveFeed;
+    return this;
+  }
+
+  /**
+   * Get channelsLiveFeed
+   *
+   * @return channelsLiveFeed
+   */
+  @ApiModelProperty(value = "")
+  public ChannelsLiveFeedComponent getChannelsLiveFeed() {
+    return channelsLiveFeed;
+  }
+
+  public void setChannelsLiveFeed(ChannelsLiveFeedComponent channelsLiveFeed) {
+    this.channelsLiveFeed = channelsLiveFeed;
+  }
+
+  public ComponentValue doctorCard(DoctorCardComponent doctorCard) {
+    this.doctorCard = doctorCard;
+    return this;
+  }
+
+  /**
+   * Get doctorCard
+   *
+   * @return doctorCard
+   */
+  @ApiModelProperty(value = "")
+  public DoctorCardComponent getDoctorCard() {
+    return doctorCard;
+  }
+
+  public void setDoctorCard(DoctorCardComponent doctorCard) {
+    this.doctorCard = doctorCard;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -857,7 +901,9 @@ public class ComponentValue {
         && Objects.equals(this.floatingZoneList, componentValue.floatingZoneList)
         && Objects.equals(this.videoChannelsContent, componentValue.videoChannelsContent)
         && Objects.equals(this.wxgameDirectPage, componentValue.wxgameDirectPage)
-        && Objects.equals(this.videoList, componentValue.videoList);
+        && Objects.equals(this.videoList, componentValue.videoList)
+        && Objects.equals(this.channelsLiveFeed, componentValue.channelsLiveFeed)
+        && Objects.equals(this.doctorCard, componentValue.doctorCard);
   }
 
   @Override
@@ -898,7 +944,9 @@ public class ComponentValue {
         floatingZoneList,
         videoChannelsContent,
         wxgameDirectPage,
-        videoList);
+        videoList,
+        channelsLiveFeed,
+        doctorCard);
   }
 
   @Override

@@ -81,6 +81,9 @@ public class ImagesGetListStruct {
   @SerializedName("similarity_status")
   private SimilarityStatus similarityStatus = null;
 
+  @SerializedName("aigc_flag")
+  private AigcFlag aigcFlag = null;
+
   public ImagesGetListStruct imageId(String imageId) {
     this.imageId = imageId;
     return this;
@@ -461,6 +464,25 @@ public class ImagesGetListStruct {
     this.similarityStatus = similarityStatus;
   }
 
+  public ImagesGetListStruct aigcFlag(AigcFlag aigcFlag) {
+    this.aigcFlag = aigcFlag;
+    return this;
+  }
+
+  /**
+   * Get aigcFlag
+   *
+   * @return aigcFlag
+   */
+  @ApiModelProperty(value = "")
+  public AigcFlag getAigcFlag() {
+    return aigcFlag;
+  }
+
+  public void setAigcFlag(AigcFlag aigcFlag) {
+    this.aigcFlag = aigcFlag;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -489,7 +511,8 @@ public class ImagesGetListStruct {
         && Objects.equals(this.ownerAccountId, imagesGetListStruct.ownerAccountId)
         && Objects.equals(this.status, imagesGetListStruct.status)
         && Objects.equals(this.sampleAspectRatio, imagesGetListStruct.sampleAspectRatio)
-        && Objects.equals(this.similarityStatus, imagesGetListStruct.similarityStatus);
+        && Objects.equals(this.similarityStatus, imagesGetListStruct.similarityStatus)
+        && Objects.equals(this.aigcFlag, imagesGetListStruct.aigcFlag);
   }
 
   @Override
@@ -514,7 +537,8 @@ public class ImagesGetListStruct {
         ownerAccountId,
         status,
         sampleAspectRatio,
-        similarityStatus);
+        similarityStatus,
+        aigcFlag);
   }
 
   @Override

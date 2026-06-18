@@ -120,6 +120,12 @@ public class VideosGetListStruct {
   @SerializedName("similarity_status")
   private SimilarityStatus similarityStatus = null;
 
+  @SerializedName("aigc_flag")
+  private AigcFlag aigcFlag = null;
+
+  @SerializedName("cover_id")
+  private String coverId = null;
+
   public VideosGetListStruct videoId(Long videoId) {
     this.videoId = videoId;
     return this;
@@ -747,6 +753,44 @@ public class VideosGetListStruct {
     this.similarityStatus = similarityStatus;
   }
 
+  public VideosGetListStruct aigcFlag(AigcFlag aigcFlag) {
+    this.aigcFlag = aigcFlag;
+    return this;
+  }
+
+  /**
+   * Get aigcFlag
+   *
+   * @return aigcFlag
+   */
+  @ApiModelProperty(value = "")
+  public AigcFlag getAigcFlag() {
+    return aigcFlag;
+  }
+
+  public void setAigcFlag(AigcFlag aigcFlag) {
+    this.aigcFlag = aigcFlag;
+  }
+
+  public VideosGetListStruct coverId(String coverId) {
+    this.coverId = coverId;
+    return this;
+  }
+
+  /**
+   * Get coverId
+   *
+   * @return coverId
+   */
+  @ApiModelProperty(value = "")
+  public String getCoverId() {
+    return coverId;
+  }
+
+  public void setCoverId(String coverId) {
+    this.coverId = coverId;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -790,7 +834,9 @@ public class VideosGetListStruct {
         && Objects.equals(this.sourceReferenceId, videosGetListStruct.sourceReferenceId)
         && Objects.equals(this.ownerAccountId, videosGetListStruct.ownerAccountId)
         && Objects.equals(this.status, videosGetListStruct.status)
-        && Objects.equals(this.similarityStatus, videosGetListStruct.similarityStatus);
+        && Objects.equals(this.similarityStatus, videosGetListStruct.similarityStatus)
+        && Objects.equals(this.aigcFlag, videosGetListStruct.aigcFlag)
+        && Objects.equals(this.coverId, videosGetListStruct.coverId);
   }
 
   @Override
@@ -828,7 +874,9 @@ public class VideosGetListStruct {
         sourceReferenceId,
         ownerAccountId,
         status,
-        similarityStatus);
+        similarityStatus,
+        aigcFlag,
+        coverId);
   }
 
   @Override

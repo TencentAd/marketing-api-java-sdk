@@ -142,7 +142,7 @@ public class WalletBindAdvertiserApi {
   }
 
   /**
-   * 共享钱包绑定或解绑广告账户
+   * 共享钱包绑定或解绑投放账户
    *
    * @param data (required)
    * @return WalletBindAdvertiserAddResponse
@@ -157,7 +157,7 @@ public class WalletBindAdvertiserApi {
   }
 
   /**
-   * 共享钱包绑定或解绑广告账户
+   * 共享钱包绑定或解绑投放账户
    *
    * @param data (required)
    * @return ApiResponse&lt;WalletBindAdvertiserAddResponse&gt;
@@ -173,7 +173,7 @@ public class WalletBindAdvertiserApi {
   }
 
   /**
-   * 共享钱包绑定或解绑广告账户 (asynchronously)
+   * 共享钱包绑定或解绑投放账户 (asynchronously)
    *
    * @param data (required)
    * @param callback The callback to be executed when the API call finishes

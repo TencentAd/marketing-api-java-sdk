@@ -18,8 +18,8 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.util.Objects;
 
-/** 广告主账号ID */
-@ApiModel(description = "广告主账号ID")
+/** 账户ID */
+@ApiModel(description = "账户ID")
 public class AgencyBusinessUnitListAccountGetListStruct {
   @SerializedName("account_id")
   private Long accountId = null;

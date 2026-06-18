@@ -52,16 +52,17 @@ public class CreativeTemplateApi {
    * Build call for creativeTemplateGet
    *
    * @param accountId (required)
-   * @param marketingGoal (required)
-   * @param marketingTargetType (required)
-   * @param marketingCarrierType (required)
    * @param deliveryMode (required)
+   * @param marketingGoal (optional)
    * @param marketingSubGoal (optional)
+   * @param marketingTargetType (optional)
+   * @param marketingCarrierType (optional)
    * @param automaticSiteEnabled (optional)
    * @param siteSet (optional)
    * @param dynamicCreativeType (optional)
    * @param creativeTemplateId (optional)
    * @param useNewVersion (optional)
+   * @param adgroupId (optional)
    * @param adgroupType (optional)
    * @param fields 返回参数的字段列表 (optional)
    * @param progressListener Progress listener
@@ -71,16 +72,17 @@ public class CreativeTemplateApi {
    */
   public com.squareup.okhttp.Call creativeTemplateGetCall(
       Long accountId,
+      String deliveryMode,
       String marketingGoal,
+      String marketingSubGoal,
       String marketingTargetType,
       String marketingCarrierType,
-      String deliveryMode,
-      String marketingSubGoal,
       Boolean automaticSiteEnabled,
       List<String> siteSet,
       String dynamicCreativeType,
       Long creativeTemplateId,
       Boolean useNewVersion,
+      Long adgroupId,
       String adgroupType,
       List<String> fields,
       final ProgressResponseBody.ProgressListener progressListener,
@@ -123,6 +125,8 @@ public class CreativeTemplateApi {
           apiClient.parameterToPair("creative_template_id", creativeTemplateId));
     if (useNewVersion != null)
       localVarQueryParams.addAll(apiClient.parameterToPair("use_new_version", useNewVersion));
+    if (adgroupId != null)
+      localVarQueryParams.addAll(apiClient.parameterToPair("adgroup_id", adgroupId));
     if (adgroupType != null)
       localVarQueryParams.addAll(apiClient.parameterToPair("adgroup_type", adgroupType));
     if (fields != null)
@@ -180,16 +184,17 @@ public class CreativeTemplateApi {
   @SuppressWarnings("rawtypes")
   private com.squareup.okhttp.Call creativeTemplateGetValidateBeforeCall(
       Long accountId,
+      String deliveryMode,
       String marketingGoal,
+      String marketingSubGoal,
       String marketingTargetType,
       String marketingCarrierType,
-      String deliveryMode,
-      String marketingSubGoal,
       Boolean automaticSiteEnabled,
       List<String> siteSet,
       String dynamicCreativeType,
       Long creativeTemplateId,
       Boolean useNewVersion,
+      Long adgroupId,
       String adgroupType,
       List<String> fields,
       final ProgressResponseBody.ProgressListener progressListener,
@@ -203,24 +208,6 @@ public class CreativeTemplateApi {
           "Missing the required parameter 'accountId' when calling creativeTemplateGet(Async)");
     }
 
-    // verify the required parameter 'marketingGoal' is set
-    if (marketingGoal == null) {
-      throw new ApiException(
-          "Missing the required parameter 'marketingGoal' when calling creativeTemplateGet(Async)");
-    }
-
-    // verify the required parameter 'marketingTargetType' is set
-    if (marketingTargetType == null) {
-      throw new ApiException(
-          "Missing the required parameter 'marketingTargetType' when calling creativeTemplateGet(Async)");
-    }
-
-    // verify the required parameter 'marketingCarrierType' is set
-    if (marketingCarrierType == null) {
-      throw new ApiException(
-          "Missing the required parameter 'marketingCarrierType' when calling creativeTemplateGet(Async)");
-    }
-
     // verify the required parameter 'deliveryMode' is set
     if (deliveryMode == null) {
       throw new ApiException(
@@ -230,16 +217,17 @@ public class CreativeTemplateApi {
     com.squareup.okhttp.Call call =
         creativeTemplateGetCall(
             accountId,
+            deliveryMode,
             marketingGoal,
+            marketingSubGoal,
             marketingTargetType,
             marketingCarrierType,
-            deliveryMode,
-            marketingSubGoal,
             automaticSiteEnabled,
             siteSet,
             dynamicCreativeType,
             creativeTemplateId,
             useNewVersion,
+            adgroupId,
             adgroupType,
             fields,
             progressListener,
@@ -252,16 +240,17 @@ public class CreativeTemplateApi {
    * 获取创意形式详情
    *
    * @param accountId (required)
-   * @param marketingGoal (required)
-   * @param marketingTargetType (required)
-   * @param marketingCarrierType (required)
    * @param deliveryMode (required)
+   * @param marketingGoal (optional)
    * @param marketingSubGoal (optional)
+   * @param marketingTargetType (optional)
+   * @param marketingCarrierType (optional)
    * @param automaticSiteEnabled (optional)
    * @param siteSet (optional)
    * @param dynamicCreativeType (optional)
    * @param creativeTemplateId (optional)
    * @param useNewVersion (optional)
+   * @param adgroupId (optional)
    * @param adgroupType (optional)
    * @param fields 返回参数的字段列表 (optional)
    * @return CreativeTemplateGetResponse
@@ -270,16 +259,17 @@ public class CreativeTemplateApi {
    */
   public CreativeTemplateGetResponse creativeTemplateGet(
       Long accountId,
+      String deliveryMode,
       String marketingGoal,
+      String marketingSubGoal,
       String marketingTargetType,
       String marketingCarrierType,
-      String deliveryMode,
-      String marketingSubGoal,
       Boolean automaticSiteEnabled,
       List<String> siteSet,
       String dynamicCreativeType,
       Long creativeTemplateId,
       Boolean useNewVersion,
+      Long adgroupId,
       String adgroupType,
       List<String> fields,
       Pair... headerPair)
@@ -287,16 +277,17 @@ public class CreativeTemplateApi {
     ApiResponse<CreativeTemplateGetResponse> resp =
         creativeTemplateGetWithHttpInfo(
             accountId,
+            deliveryMode,
             marketingGoal,
+            marketingSubGoal,
             marketingTargetType,
             marketingCarrierType,
-            deliveryMode,
-            marketingSubGoal,
             automaticSiteEnabled,
             siteSet,
             dynamicCreativeType,
             creativeTemplateId,
             useNewVersion,
+            adgroupId,
             adgroupType,
             fields,
             headerPair);
@@ -307,16 +298,17 @@ public class CreativeTemplateApi {
    * 获取创意形式详情
    *
    * @param accountId (required)
-   * @param marketingGoal (required)
-   * @param marketingTargetType (required)
-   * @param marketingCarrierType (required)
    * @param deliveryMode (required)
+   * @param marketingGoal (optional)
    * @param marketingSubGoal (optional)
+   * @param marketingTargetType (optional)
+   * @param marketingCarrierType (optional)
    * @param automaticSiteEnabled (optional)
    * @param siteSet (optional)
    * @param dynamicCreativeType (optional)
    * @param creativeTemplateId (optional)
    * @param useNewVersion (optional)
+   * @param adgroupId (optional)
    * @param adgroupType (optional)
    * @param fields 返回参数的字段列表 (optional)
    * @return ApiResponse&lt;CreativeTemplateGetResponse&gt;
@@ -325,16 +317,17 @@ public class CreativeTemplateApi {
    */
   public ApiResponse<CreativeTemplateGetResponse> creativeTemplateGetWithHttpInfo(
       Long accountId,
+      String deliveryMode,
       String marketingGoal,
+      String marketingSubGoal,
       String marketingTargetType,
       String marketingCarrierType,
-      String deliveryMode,
-      String marketingSubGoal,
       Boolean automaticSiteEnabled,
       List<String> siteSet,
       String dynamicCreativeType,
       Long creativeTemplateId,
       Boolean useNewVersion,
+      Long adgroupId,
       String adgroupType,
       List<String> fields,
       Pair... headerPair)
@@ -342,16 +335,17 @@ public class CreativeTemplateApi {
     com.squareup.okhttp.Call call =
         creativeTemplateGetValidateBeforeCall(
             accountId,
+            deliveryMode,
             marketingGoal,
+            marketingSubGoal,
             marketingTargetType,
             marketingCarrierType,
-            deliveryMode,
-            marketingSubGoal,
             automaticSiteEnabled,
             siteSet,
             dynamicCreativeType,
             creativeTemplateId,
             useNewVersion,
+            adgroupId,
             adgroupType,
             fields,
             null,
@@ -365,16 +359,17 @@ public class CreativeTemplateApi {
    * 获取创意形式详情 (asynchronously)
    *
    * @param accountId (required)
-   * @param marketingGoal (required)
-   * @param marketingTargetType (required)
-   * @param marketingCarrierType (required)
    * @param deliveryMode (required)
+   * @param marketingGoal (optional)
    * @param marketingSubGoal (optional)
+   * @param marketingTargetType (optional)
+   * @param marketingCarrierType (optional)
    * @param automaticSiteEnabled (optional)
    * @param siteSet (optional)
    * @param dynamicCreativeType (optional)
    * @param creativeTemplateId (optional)
    * @param useNewVersion (optional)
+   * @param adgroupId (optional)
    * @param adgroupType (optional)
    * @param fields 返回参数的字段列表 (optional)
    * @param callback The callback to be executed when the API call finishes
@@ -383,16 +378,17 @@ public class CreativeTemplateApi {
    */
   public com.squareup.okhttp.Call creativeTemplateGetAsync(
       Long accountId,
+      String deliveryMode,
       String marketingGoal,
+      String marketingSubGoal,
       String marketingTargetType,
       String marketingCarrierType,
-      String deliveryMode,
-      String marketingSubGoal,
       Boolean automaticSiteEnabled,
       List<String> siteSet,
       String dynamicCreativeType,
       Long creativeTemplateId,
       Boolean useNewVersion,
+      Long adgroupId,
       String adgroupType,
       List<String> fields,
       final ApiCallback<CreativeTemplateGetResponse> callback,
@@ -423,16 +419,17 @@ public class CreativeTemplateApi {
     com.squareup.okhttp.Call call =
         creativeTemplateGetValidateBeforeCall(
             accountId,
+            deliveryMode,
             marketingGoal,
+            marketingSubGoal,
             marketingTargetType,
             marketingCarrierType,
-            deliveryMode,
-            marketingSubGoal,
             automaticSiteEnabled,
             siteSet,
             dynamicCreativeType,
             creativeTemplateId,
             useNewVersion,
+            adgroupId,
             adgroupType,
             fields,
             progressListener,

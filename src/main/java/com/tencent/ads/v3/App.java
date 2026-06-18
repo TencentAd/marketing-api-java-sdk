@@ -39,6 +39,8 @@ public class App {
   @Inject AgencyRealtimeCostApiContainer agencyRealtimeCostApiContainer;
   @Inject AgencyWalletListApiContainer agencyWalletListApiContainer;
   @Inject AndroidChannelApiContainer androidChannelApiContainer;
+  @Inject AssetPermissionsApiContainer assetPermissionsApiContainer;
+  @Inject AssetPrePermissionsApiContainer assetPrePermissionsApiContainer;
   @Inject AssetSimilarityDetailApiContainer assetSimilarityDetailApiContainer;
   @Inject AsyncReportFilesApiContainer asyncReportFilesApiContainer;
   @Inject AsyncReportsApiContainer asyncReportsApiContainer;
@@ -144,7 +146,6 @@ public class App {
 
   @Inject MarketingTargetAssetsApiContainer marketingTargetAssetsApiContainer;
   @Inject MarketingTargetTypesApiContainer marketingTargetTypesApiContainer;
-  @Inject MaterialAiAnnotationApiContainer materialAiAnnotationApiContainer;
   @Inject MaterialAsyncTasksApiContainer materialAsyncTasksApiContainer;
   @Inject MaterialDcasetApiContainer materialDcasetApiContainer;
   @Inject MaterialDcatagApiContainer materialDcatagApiContainer;
@@ -156,9 +157,6 @@ public class App {
 
   @Inject MergeFundTypeFundsApiContainer mergeFundTypeFundsApiContainer;
   @Inject MergeFundTypeSubcustomerTransferApiContainer mergeFundTypeSubcustomerTransferApiContainer;
-  @Inject MuseAiMaterialApiContainer museAiMaterialApiContainer;
-  @Inject MuseAiTaskApiContainer museAiTaskApiContainer;
-  @Inject MuseAiUgcApiContainer museAiUgcApiContainer;
   @Inject MuseAudiosApiContainer museAudiosApiContainer;
   @Inject MuseDeriveSwitchSettingsApiContainer museDeriveSwitchSettingsApiContainer;
   @Inject NegativewordsApiContainer negativewordsApiContainer;
@@ -235,7 +233,6 @@ public class App {
   @Inject WalletGetBindingAdvertiserApiContainer walletGetBindingAdvertiserApiContainer;
   @Inject WalletInvoiceApiContainer walletInvoiceApiContainer;
   @Inject WalletTransferApiContainer walletTransferApiContainer;
-  @Inject WatermarksApiContainer watermarksApiContainer;
   @Inject WechatChannelsAccountsApiContainer wechatChannelsAccountsApiContainer;
   @Inject WechatChannelsAdAccountApiContainer wechatChannelsAdAccountApiContainer;
 
@@ -358,6 +355,14 @@ public class App {
 
   public AndroidChannelApiContainer androidChannel() {
     return androidChannelApiContainer;
+  }
+
+  public AssetPermissionsApiContainer assetPermissions() {
+    return assetPermissionsApiContainer;
+  }
+
+  public AssetPrePermissionsApiContainer assetPrePermissions() {
+    return assetPrePermissionsApiContainer;
   }
 
   public AssetSimilarityDetailApiContainer assetSimilarityDetail() {
@@ -768,10 +773,6 @@ public class App {
     return marketingTargetTypesApiContainer;
   }
 
-  public MaterialAiAnnotationApiContainer materialAiAnnotation() {
-    return materialAiAnnotationApiContainer;
-  }
-
   public MaterialAsyncTasksApiContainer materialAsyncTasks() {
     return materialAsyncTasksApiContainer;
   }
@@ -802,18 +803,6 @@ public class App {
 
   public MergeFundTypeSubcustomerTransferApiContainer mergeFundTypeSubcustomerTransfer() {
     return mergeFundTypeSubcustomerTransferApiContainer;
-  }
-
-  public MuseAiMaterialApiContainer museAiMaterial() {
-    return museAiMaterialApiContainer;
-  }
-
-  public MuseAiTaskApiContainer museAiTask() {
-    return museAiTaskApiContainer;
-  }
-
-  public MuseAiUgcApiContainer museAiUgc() {
-    return museAiUgcApiContainer;
   }
 
   public MuseAudiosApiContainer museAudios() {
@@ -1106,10 +1095,6 @@ public class App {
 
   public WalletTransferApiContainer walletTransfer() {
     return walletTransferApiContainer;
-  }
-
-  public WatermarksApiContainer watermarks() {
-    return watermarksApiContainer;
   }
 
   public WechatChannelsAccountsApiContainer wechatChannelsAccounts() {

@@ -36,6 +36,12 @@ public class ReplyCommentInfoItem {
   @SerializedName("comment_level")
   private Long commentLevel = null;
 
+  @SerializedName("content_type")
+  private FinderCommentContentType contentType = null;
+
+  @SerializedName("image_comment_info")
+  private ImageCommentInfo imageCommentInfo = null;
+
   public ReplyCommentInfoItem commentId(String commentId) {
     this.commentId = commentId;
     return this;
@@ -131,6 +137,44 @@ public class ReplyCommentInfoItem {
     this.commentLevel = commentLevel;
   }
 
+  public ReplyCommentInfoItem contentType(FinderCommentContentType contentType) {
+    this.contentType = contentType;
+    return this;
+  }
+
+  /**
+   * Get contentType
+   *
+   * @return contentType
+   */
+  @ApiModelProperty(value = "")
+  public FinderCommentContentType getContentType() {
+    return contentType;
+  }
+
+  public void setContentType(FinderCommentContentType contentType) {
+    this.contentType = contentType;
+  }
+
+  public ReplyCommentInfoItem imageCommentInfo(ImageCommentInfo imageCommentInfo) {
+    this.imageCommentInfo = imageCommentInfo;
+    return this;
+  }
+
+  /**
+   * Get imageCommentInfo
+   *
+   * @return imageCommentInfo
+   */
+  @ApiModelProperty(value = "")
+  public ImageCommentInfo getImageCommentInfo() {
+    return imageCommentInfo;
+  }
+
+  public void setImageCommentInfo(ImageCommentInfo imageCommentInfo) {
+    this.imageCommentInfo = imageCommentInfo;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -144,12 +188,15 @@ public class ReplyCommentInfoItem {
         && Objects.equals(this.content, replyCommentInfoItem.content)
         && Objects.equals(this.createdTime, replyCommentInfoItem.createdTime)
         && Objects.equals(this.commentFlag, replyCommentInfoItem.commentFlag)
-        && Objects.equals(this.commentLevel, replyCommentInfoItem.commentLevel);
+        && Objects.equals(this.commentLevel, replyCommentInfoItem.commentLevel)
+        && Objects.equals(this.contentType, replyCommentInfoItem.contentType)
+        && Objects.equals(this.imageCommentInfo, replyCommentInfoItem.imageCommentInfo);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(commentId, content, createdTime, commentFlag, commentLevel);
+    return Objects.hash(
+        commentId, content, createdTime, commentFlag, commentLevel, contentType, imageCommentInfo);
   }
 
   @Override

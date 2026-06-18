@@ -216,9 +216,6 @@ public class AdgroupsAddRequest {
   @SerializedName("smart_coupon_mode")
   private SmartCouponMode smartCouponMode = null;
 
-  @SerializedName("billing_model")
-  private BillingModel billingModel = null;
-
   public AdgroupsAddRequest accountId(Long accountId) {
     this.accountId = accountId;
     return this;
@@ -1494,25 +1491,6 @@ public class AdgroupsAddRequest {
     this.smartCouponMode = smartCouponMode;
   }
 
-  public AdgroupsAddRequest billingModel(BillingModel billingModel) {
-    this.billingModel = billingModel;
-    return this;
-  }
-
-  /**
-   * Get billingModel
-   *
-   * @return billingModel
-   */
-  @ApiModelProperty(value = "")
-  public BillingModel getBillingModel() {
-    return billingModel;
-  }
-
-  public void setBillingModel(BillingModel billingModel) {
-    this.billingModel = billingModel;
-  }
-
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -1596,8 +1574,7 @@ public class AdgroupsAddRequest {
         && Objects.equals(this.adxRealtimeType, adgroupsAddRequest.adxRealtimeType)
         && Objects.equals(this.enableSteadyExploration, adgroupsAddRequest.enableSteadyExploration)
         && Objects.equals(this.smartTargetingMode, adgroupsAddRequest.smartTargetingMode)
-        && Objects.equals(this.smartCouponMode, adgroupsAddRequest.smartCouponMode)
-        && Objects.equals(this.billingModel, adgroupsAddRequest.billingModel);
+        && Objects.equals(this.smartCouponMode, adgroupsAddRequest.smartCouponMode);
   }
 
   @Override
@@ -1667,8 +1644,7 @@ public class AdgroupsAddRequest {
         adxRealtimeType,
         enableSteadyExploration,
         smartTargetingMode,
-        smartCouponMode,
-        billingModel);
+        smartCouponMode);
   }
 
   @Override

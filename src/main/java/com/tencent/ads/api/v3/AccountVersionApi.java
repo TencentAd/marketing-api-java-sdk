@@ -149,7 +149,7 @@ public class AccountVersionApi {
   }
 
   /**
-   * 获取广告主新版API投放状态版本
+   * 获取客户新版API投放状态版本
    *
    * @param accountId (required)
    * @param fields 返回参数的字段列表 (optional)
@@ -165,7 +165,7 @@ public class AccountVersionApi {
   }
 
   /**
-   * 获取广告主新版API投放状态版本
+   * 获取客户新版API投放状态版本
    *
    * @param accountId (required)
    * @param fields 返回参数的字段列表 (optional)
@@ -182,7 +182,7 @@ public class AccountVersionApi {
   }
 
   /**
-   * 获取广告主新版API投放状态版本 (asynchronously)
+   * 获取客户新版API投放状态版本 (asynchronously)
    *
    * @param accountId (required)
    * @param fields 返回参数的字段列表 (optional)

@@ -509,6 +509,21 @@ public class ProductItemSpec {
   @SerializedName("service_tag")
   private List<String> serviceTag = null;
 
+  @SerializedName("street_number")
+  private String streetNumber = null;
+
+  @SerializedName("commercial_area")
+  private List<String> commercialArea = null;
+
+  @SerializedName("stars_level")
+  private Long starsLevel = null;
+
+  @SerializedName("departure")
+  private String departure = null;
+
+  @SerializedName("destination")
+  private String destination = null;
+
   public ProductItemSpec productOuterId(String productOuterId) {
     this.productOuterId = productOuterId;
     return this;
@@ -3691,6 +3706,109 @@ public class ProductItemSpec {
     this.serviceTag = serviceTag;
   }
 
+  public ProductItemSpec streetNumber(String streetNumber) {
+    this.streetNumber = streetNumber;
+    return this;
+  }
+
+  /**
+   * Get streetNumber
+   *
+   * @return streetNumber
+   */
+  @ApiModelProperty(value = "")
+  public String getStreetNumber() {
+    return streetNumber;
+  }
+
+  public void setStreetNumber(String streetNumber) {
+    this.streetNumber = streetNumber;
+  }
+
+  public ProductItemSpec commercialArea(List<String> commercialArea) {
+    this.commercialArea = commercialArea;
+    return this;
+  }
+
+  public ProductItemSpec addCommercialAreaItem(String commercialAreaItem) {
+    if (this.commercialArea == null) {
+      this.commercialArea = new ArrayList<String>();
+    }
+    this.commercialArea.add(commercialAreaItem);
+    return this;
+  }
+
+  /**
+   * Get commercialArea
+   *
+   * @return commercialArea
+   */
+  @ApiModelProperty(value = "")
+  public List<String> getCommercialArea() {
+    return commercialArea;
+  }
+
+  public void setCommercialArea(List<String> commercialArea) {
+    this.commercialArea = commercialArea;
+  }
+
+  public ProductItemSpec starsLevel(Long starsLevel) {
+    this.starsLevel = starsLevel;
+    return this;
+  }
+
+  /**
+   * Get starsLevel
+   *
+   * @return starsLevel
+   */
+  @ApiModelProperty(value = "")
+  public Long getStarsLevel() {
+    return starsLevel;
+  }
+
+  public void setStarsLevel(Long starsLevel) {
+    this.starsLevel = starsLevel;
+  }
+
+  public ProductItemSpec departure(String departure) {
+    this.departure = departure;
+    return this;
+  }
+
+  /**
+   * Get departure
+   *
+   * @return departure
+   */
+  @ApiModelProperty(value = "")
+  public String getDeparture() {
+    return departure;
+  }
+
+  public void setDeparture(String departure) {
+    this.departure = departure;
+  }
+
+  public ProductItemSpec destination(String destination) {
+    this.destination = destination;
+    return this;
+  }
+
+  /**
+   * Get destination
+   *
+   * @return destination
+   */
+  @ApiModelProperty(value = "")
+  public String getDestination() {
+    return destination;
+  }
+
+  public void setDestination(String destination) {
+    this.destination = destination;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -3862,7 +3980,12 @@ public class ProductItemSpec {
         && Objects.equals(this.businessPrice, productItemSpec.businessPrice)
         && Objects.equals(this.initialTotalInvestment, productItemSpec.initialTotalInvestment)
         && Objects.equals(this.businessAudience, productItemSpec.businessAudience)
-        && Objects.equals(this.serviceTag, productItemSpec.serviceTag);
+        && Objects.equals(this.serviceTag, productItemSpec.serviceTag)
+        && Objects.equals(this.streetNumber, productItemSpec.streetNumber)
+        && Objects.equals(this.commercialArea, productItemSpec.commercialArea)
+        && Objects.equals(this.starsLevel, productItemSpec.starsLevel)
+        && Objects.equals(this.departure, productItemSpec.departure)
+        && Objects.equals(this.destination, productItemSpec.destination);
   }
 
   @Override
@@ -4029,7 +4152,12 @@ public class ProductItemSpec {
         businessPrice,
         initialTotalInvestment,
         businessAudience,
-        serviceTag);
+        serviceTag,
+        streetNumber,
+        commercialArea,
+        starsLevel,
+        departure,
+        destination);
   }
 
   @Override

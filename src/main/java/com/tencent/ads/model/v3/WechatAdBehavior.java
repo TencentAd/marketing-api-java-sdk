@@ -20,8 +20,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
-/** 微信广告行为定向 */
-@ApiModel(description = "微信广告行为定向")
+/** 微信营销行为定向 */
+@ApiModel(description = "微信营销行为定向")
 public class WechatAdBehavior {
   @SerializedName("actions")
   private List<String> actions = null;

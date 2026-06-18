@@ -28,6 +28,12 @@ public class AdvertiserConfigAddRequest {
   @SerializedName("cover_image_snapshot_type")
   private CoverImageSnapshotType coverImageSnapshotType = null;
 
+  @SerializedName("multi_image_collage_status")
+  private MultiImageCollageStatus multiImageCollageStatus = null;
+
+  @SerializedName("multi_image_collage_aigc_status")
+  private MultiImageCollageAigcStatus multiImageCollageAigcStatus = null;
+
   public AdvertiserConfigAddRequest accountId(Long accountId) {
     this.accountId = accountId;
     return this;
@@ -86,6 +92,47 @@ public class AdvertiserConfigAddRequest {
     this.coverImageSnapshotType = coverImageSnapshotType;
   }
 
+  public AdvertiserConfigAddRequest multiImageCollageStatus(
+      MultiImageCollageStatus multiImageCollageStatus) {
+    this.multiImageCollageStatus = multiImageCollageStatus;
+    return this;
+  }
+
+  /**
+   * Get multiImageCollageStatus
+   *
+   * @return multiImageCollageStatus
+   */
+  @ApiModelProperty(value = "")
+  public MultiImageCollageStatus getMultiImageCollageStatus() {
+    return multiImageCollageStatus;
+  }
+
+  public void setMultiImageCollageStatus(MultiImageCollageStatus multiImageCollageStatus) {
+    this.multiImageCollageStatus = multiImageCollageStatus;
+  }
+
+  public AdvertiserConfigAddRequest multiImageCollageAigcStatus(
+      MultiImageCollageAigcStatus multiImageCollageAigcStatus) {
+    this.multiImageCollageAigcStatus = multiImageCollageAigcStatus;
+    return this;
+  }
+
+  /**
+   * Get multiImageCollageAigcStatus
+   *
+   * @return multiImageCollageAigcStatus
+   */
+  @ApiModelProperty(value = "")
+  public MultiImageCollageAigcStatus getMultiImageCollageAigcStatus() {
+    return multiImageCollageAigcStatus;
+  }
+
+  public void setMultiImageCollageAigcStatus(
+      MultiImageCollageAigcStatus multiImageCollageAigcStatus) {
+    this.multiImageCollageAigcStatus = multiImageCollageAigcStatus;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -98,12 +145,22 @@ public class AdvertiserConfigAddRequest {
     return Objects.equals(this.accountId, advertiserConfigAddRequest.accountId)
         && Objects.equals(this.organizationId, advertiserConfigAddRequest.organizationId)
         && Objects.equals(
-            this.coverImageSnapshotType, advertiserConfigAddRequest.coverImageSnapshotType);
+            this.coverImageSnapshotType, advertiserConfigAddRequest.coverImageSnapshotType)
+        && Objects.equals(
+            this.multiImageCollageStatus, advertiserConfigAddRequest.multiImageCollageStatus)
+        && Objects.equals(
+            this.multiImageCollageAigcStatus,
+            advertiserConfigAddRequest.multiImageCollageAigcStatus);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(accountId, organizationId, coverImageSnapshotType);
+    return Objects.hash(
+        accountId,
+        organizationId,
+        coverImageSnapshotType,
+        multiImageCollageStatus,
+        multiImageCollageAigcStatus);
   }
 
   @Override

@@ -45,6 +45,12 @@ public class FinderObjectStruct {
   @SerializedName("bullet_comment_supported")
   private Boolean bulletCommentSupported = null;
 
+  @SerializedName("object_private_switch_open")
+  private Boolean objectPrivateSwitchOpen = null;
+
+  @SerializedName("object_private_disable_code")
+  private ObjectPrivateDisableCode objectPrivateDisableCode = null;
+
   public FinderObjectStruct finderUsername(String finderUsername) {
     this.finderUsername = finderUsername;
     return this;
@@ -197,6 +203,45 @@ public class FinderObjectStruct {
     this.bulletCommentSupported = bulletCommentSupported;
   }
 
+  public FinderObjectStruct objectPrivateSwitchOpen(Boolean objectPrivateSwitchOpen) {
+    this.objectPrivateSwitchOpen = objectPrivateSwitchOpen;
+    return this;
+  }
+
+  /**
+   * Get objectPrivateSwitchOpen
+   *
+   * @return objectPrivateSwitchOpen
+   */
+  @ApiModelProperty(value = "")
+  public Boolean isObjectPrivateSwitchOpen() {
+    return objectPrivateSwitchOpen;
+  }
+
+  public void setObjectPrivateSwitchOpen(Boolean objectPrivateSwitchOpen) {
+    this.objectPrivateSwitchOpen = objectPrivateSwitchOpen;
+  }
+
+  public FinderObjectStruct objectPrivateDisableCode(
+      ObjectPrivateDisableCode objectPrivateDisableCode) {
+    this.objectPrivateDisableCode = objectPrivateDisableCode;
+    return this;
+  }
+
+  /**
+   * Get objectPrivateDisableCode
+   *
+   * @return objectPrivateDisableCode
+   */
+  @ApiModelProperty(value = "")
+  public ObjectPrivateDisableCode getObjectPrivateDisableCode() {
+    return objectPrivateDisableCode;
+  }
+
+  public void setObjectPrivateDisableCode(ObjectPrivateDisableCode objectPrivateDisableCode) {
+    this.objectPrivateDisableCode = objectPrivateDisableCode;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -214,7 +259,10 @@ public class FinderObjectStruct {
         && Objects.equals(
             this.wechatChannelsAccountName, finderObjectStruct.wechatChannelsAccountName)
         && Objects.equals(this.bulletCommentSwitchOpen, finderObjectStruct.bulletCommentSwitchOpen)
-        && Objects.equals(this.bulletCommentSupported, finderObjectStruct.bulletCommentSupported);
+        && Objects.equals(this.bulletCommentSupported, finderObjectStruct.bulletCommentSupported)
+        && Objects.equals(this.objectPrivateSwitchOpen, finderObjectStruct.objectPrivateSwitchOpen)
+        && Objects.equals(
+            this.objectPrivateDisableCode, finderObjectStruct.objectPrivateDisableCode);
   }
 
   @Override
@@ -227,7 +275,9 @@ public class FinderObjectStruct {
         wechatChannelsAccountId,
         wechatChannelsAccountName,
         bulletCommentSwitchOpen,
-        bulletCommentSupported);
+        bulletCommentSupported,
+        objectPrivateSwitchOpen,
+        objectPrivateDisableCode);
   }
 
   @Override

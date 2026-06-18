@@ -32,6 +32,15 @@ public class ComponentElementRejectDetailInfoListStruct {
   @SerializedName("reject_info_location")
   private List<RejectInfoLocationListStruct> rejectInfoLocation = null;
 
+  @SerializedName("video_asr_infos")
+  private List<VideoAsrInfoStruct> videoAsrInfos = null;
+
+  @SerializedName("video_ocr_infos")
+  private List<VideoOcrInfoStruct> videoOcrInfos = null;
+
+  @SerializedName("caption_infos")
+  private List<CaptionInfoStruct> captionInfos = null;
+
   public ComponentElementRejectDetailInfoListStruct reason(String reason) {
     this.reason = reason;
     return this;
@@ -109,6 +118,93 @@ public class ComponentElementRejectDetailInfoListStruct {
     this.rejectInfoLocation = rejectInfoLocation;
   }
 
+  public ComponentElementRejectDetailInfoListStruct videoAsrInfos(
+      List<VideoAsrInfoStruct> videoAsrInfos) {
+    this.videoAsrInfos = videoAsrInfos;
+    return this;
+  }
+
+  public ComponentElementRejectDetailInfoListStruct addVideoAsrInfosItem(
+      VideoAsrInfoStruct videoAsrInfosItem) {
+    if (this.videoAsrInfos == null) {
+      this.videoAsrInfos = new ArrayList<VideoAsrInfoStruct>();
+    }
+    this.videoAsrInfos.add(videoAsrInfosItem);
+    return this;
+  }
+
+  /**
+   * Get videoAsrInfos
+   *
+   * @return videoAsrInfos
+   */
+  @ApiModelProperty(value = "")
+  public List<VideoAsrInfoStruct> getVideoAsrInfos() {
+    return videoAsrInfos;
+  }
+
+  public void setVideoAsrInfos(List<VideoAsrInfoStruct> videoAsrInfos) {
+    this.videoAsrInfos = videoAsrInfos;
+  }
+
+  public ComponentElementRejectDetailInfoListStruct videoOcrInfos(
+      List<VideoOcrInfoStruct> videoOcrInfos) {
+    this.videoOcrInfos = videoOcrInfos;
+    return this;
+  }
+
+  public ComponentElementRejectDetailInfoListStruct addVideoOcrInfosItem(
+      VideoOcrInfoStruct videoOcrInfosItem) {
+    if (this.videoOcrInfos == null) {
+      this.videoOcrInfos = new ArrayList<VideoOcrInfoStruct>();
+    }
+    this.videoOcrInfos.add(videoOcrInfosItem);
+    return this;
+  }
+
+  /**
+   * Get videoOcrInfos
+   *
+   * @return videoOcrInfos
+   */
+  @ApiModelProperty(value = "")
+  public List<VideoOcrInfoStruct> getVideoOcrInfos() {
+    return videoOcrInfos;
+  }
+
+  public void setVideoOcrInfos(List<VideoOcrInfoStruct> videoOcrInfos) {
+    this.videoOcrInfos = videoOcrInfos;
+  }
+
+  public ComponentElementRejectDetailInfoListStruct captionInfos(
+      List<CaptionInfoStruct> captionInfos) {
+    this.captionInfos = captionInfos;
+    return this;
+  }
+
+  public ComponentElementRejectDetailInfoListStruct addCaptionInfosItem(
+      CaptionInfoStruct captionInfosItem) {
+    if (this.captionInfos == null) {
+      this.captionInfos = new ArrayList<CaptionInfoStruct>();
+    }
+    this.captionInfos.add(captionInfosItem);
+    return this;
+  }
+
+  /**
+   * Get captionInfos
+   *
+   * @return captionInfos
+   */
+  @ApiModelProperty(value = "")
+  public List<CaptionInfoStruct> getCaptionInfos() {
+    return captionInfos;
+  }
+
+  public void setCaptionInfos(List<CaptionInfoStruct> captionInfos) {
+    this.captionInfos = captionInfos;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -122,12 +218,19 @@ public class ComponentElementRejectDetailInfoListStruct {
     return Objects.equals(this.reason, componentElementRejectDetailInfoListStruct.reason)
         && Objects.equals(this.siteSetList, componentElementRejectDetailInfoListStruct.siteSetList)
         && Objects.equals(
-            this.rejectInfoLocation, componentElementRejectDetailInfoListStruct.rejectInfoLocation);
+            this.rejectInfoLocation, componentElementRejectDetailInfoListStruct.rejectInfoLocation)
+        && Objects.equals(
+            this.videoAsrInfos, componentElementRejectDetailInfoListStruct.videoAsrInfos)
+        && Objects.equals(
+            this.videoOcrInfos, componentElementRejectDetailInfoListStruct.videoOcrInfos)
+        && Objects.equals(
+            this.captionInfos, componentElementRejectDetailInfoListStruct.captionInfos);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(reason, siteSetList, rejectInfoLocation);
+    return Objects.hash(
+        reason, siteSetList, rejectInfoLocation, videoAsrInfos, videoOcrInfos, captionInfos);
   }
 
   @Override

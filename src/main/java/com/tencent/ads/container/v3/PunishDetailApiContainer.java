@@ -28,7 +28,7 @@ public class PunishDetailApiContainer extends ApiContainer {
   @Inject PunishDetailApi api;
 
   /**
-   * 获取计量处罚明细
+   * 获取素材计量治理明细数据
    *
    * @param data (required)
    * @return PunishDetailGetResponse

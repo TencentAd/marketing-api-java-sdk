@@ -2544,6 +2544,45 @@ public class TargetReportApiListStruct {
   @SerializedName("clk_action_content_uv")
   private Long clkActionContentUv = null;
 
+  @SerializedName("retention_14d_dedup_pv")
+  private Long retention14dDedupPv = null;
+
+  @SerializedName("retention_30d_dedup_pv")
+  private Long retention30dDedupPv = null;
+
+  @SerializedName("retention_rate_d14")
+  private Double retentionRateD14 = null;
+
+  @SerializedName("retention_rate_d30")
+  private Double retentionRateD30 = null;
+
+  @SerializedName("app_retention_d14_cost")
+  private Long appRetentionD14Cost = null;
+
+  @SerializedName("app_retention_d30_cost")
+  private Long appRetentionD30Cost = null;
+
+  @SerializedName("clk_fifa_ip_pv")
+  private Long clkFifaIpPv = null;
+
+  @SerializedName("landing_fifa_ip_gen_pv")
+  private Long landingFifaIpGenPv = null;
+
+  @SerializedName("after_add_wecom_delete_pv")
+  private Long afterAddWecomDeletePv = null;
+
+  @SerializedName("after_add_wecom_delete_rate")
+  private Double afterAddWecomDeleteRate = null;
+
+  @SerializedName("after_add_wecom_consult_dedup_rate")
+  private Double afterAddWecomConsultDedupRate = null;
+
+  @SerializedName("after_add_wecom_class_participated_fisrt_uv_rate")
+  private Double afterAddWecomClassParticipatedFisrtUvRate = null;
+
+  @SerializedName("order_coupon_amount")
+  private Long orderCouponAmount = null;
+
   @SerializedName("age_id")
   private Long ageId = null;
 
@@ -18619,6 +18658,256 @@ public class TargetReportApiListStruct {
     this.clkActionContentUv = clkActionContentUv;
   }
 
+  public TargetReportApiListStruct retention14dDedupPv(Long retention14dDedupPv) {
+    this.retention14dDedupPv = retention14dDedupPv;
+    return this;
+  }
+
+  /**
+   * Get retention14dDedupPv
+   *
+   * @return retention14dDedupPv
+   */
+  @ApiModelProperty(value = "")
+  public Long getRetention14dDedupPv() {
+    return retention14dDedupPv;
+  }
+
+  public void setRetention14dDedupPv(Long retention14dDedupPv) {
+    this.retention14dDedupPv = retention14dDedupPv;
+  }
+
+  public TargetReportApiListStruct retention30dDedupPv(Long retention30dDedupPv) {
+    this.retention30dDedupPv = retention30dDedupPv;
+    return this;
+  }
+
+  /**
+   * Get retention30dDedupPv
+   *
+   * @return retention30dDedupPv
+   */
+  @ApiModelProperty(value = "")
+  public Long getRetention30dDedupPv() {
+    return retention30dDedupPv;
+  }
+
+  public void setRetention30dDedupPv(Long retention30dDedupPv) {
+    this.retention30dDedupPv = retention30dDedupPv;
+  }
+
+  public TargetReportApiListStruct retentionRateD14(Double retentionRateD14) {
+    this.retentionRateD14 = retentionRateD14;
+    return this;
+  }
+
+  /**
+   * Get retentionRateD14
+   *
+   * @return retentionRateD14
+   */
+  @ApiModelProperty(value = "")
+  public Double getRetentionRateD14() {
+    return retentionRateD14;
+  }
+
+  public void setRetentionRateD14(Double retentionRateD14) {
+    this.retentionRateD14 = retentionRateD14;
+  }
+
+  public TargetReportApiListStruct retentionRateD30(Double retentionRateD30) {
+    this.retentionRateD30 = retentionRateD30;
+    return this;
+  }
+
+  /**
+   * Get retentionRateD30
+   *
+   * @return retentionRateD30
+   */
+  @ApiModelProperty(value = "")
+  public Double getRetentionRateD30() {
+    return retentionRateD30;
+  }
+
+  public void setRetentionRateD30(Double retentionRateD30) {
+    this.retentionRateD30 = retentionRateD30;
+  }
+
+  public TargetReportApiListStruct appRetentionD14Cost(Long appRetentionD14Cost) {
+    this.appRetentionD14Cost = appRetentionD14Cost;
+    return this;
+  }
+
+  /**
+   * Get appRetentionD14Cost
+   *
+   * @return appRetentionD14Cost
+   */
+  @ApiModelProperty(value = "")
+  public Long getAppRetentionD14Cost() {
+    return appRetentionD14Cost;
+  }
+
+  public void setAppRetentionD14Cost(Long appRetentionD14Cost) {
+    this.appRetentionD14Cost = appRetentionD14Cost;
+  }
+
+  public TargetReportApiListStruct appRetentionD30Cost(Long appRetentionD30Cost) {
+    this.appRetentionD30Cost = appRetentionD30Cost;
+    return this;
+  }
+
+  /**
+   * Get appRetentionD30Cost
+   *
+   * @return appRetentionD30Cost
+   */
+  @ApiModelProperty(value = "")
+  public Long getAppRetentionD30Cost() {
+    return appRetentionD30Cost;
+  }
+
+  public void setAppRetentionD30Cost(Long appRetentionD30Cost) {
+    this.appRetentionD30Cost = appRetentionD30Cost;
+  }
+
+  public TargetReportApiListStruct clkFifaIpPv(Long clkFifaIpPv) {
+    this.clkFifaIpPv = clkFifaIpPv;
+    return this;
+  }
+
+  /**
+   * Get clkFifaIpPv
+   *
+   * @return clkFifaIpPv
+   */
+  @ApiModelProperty(value = "")
+  public Long getClkFifaIpPv() {
+    return clkFifaIpPv;
+  }
+
+  public void setClkFifaIpPv(Long clkFifaIpPv) {
+    this.clkFifaIpPv = clkFifaIpPv;
+  }
+
+  public TargetReportApiListStruct landingFifaIpGenPv(Long landingFifaIpGenPv) {
+    this.landingFifaIpGenPv = landingFifaIpGenPv;
+    return this;
+  }
+
+  /**
+   * Get landingFifaIpGenPv
+   *
+   * @return landingFifaIpGenPv
+   */
+  @ApiModelProperty(value = "")
+  public Long getLandingFifaIpGenPv() {
+    return landingFifaIpGenPv;
+  }
+
+  public void setLandingFifaIpGenPv(Long landingFifaIpGenPv) {
+    this.landingFifaIpGenPv = landingFifaIpGenPv;
+  }
+
+  public TargetReportApiListStruct afterAddWecomDeletePv(Long afterAddWecomDeletePv) {
+    this.afterAddWecomDeletePv = afterAddWecomDeletePv;
+    return this;
+  }
+
+  /**
+   * Get afterAddWecomDeletePv
+   *
+   * @return afterAddWecomDeletePv
+   */
+  @ApiModelProperty(value = "")
+  public Long getAfterAddWecomDeletePv() {
+    return afterAddWecomDeletePv;
+  }
+
+  public void setAfterAddWecomDeletePv(Long afterAddWecomDeletePv) {
+    this.afterAddWecomDeletePv = afterAddWecomDeletePv;
+  }
+
+  public TargetReportApiListStruct afterAddWecomDeleteRate(Double afterAddWecomDeleteRate) {
+    this.afterAddWecomDeleteRate = afterAddWecomDeleteRate;
+    return this;
+  }
+
+  /**
+   * Get afterAddWecomDeleteRate
+   *
+   * @return afterAddWecomDeleteRate
+   */
+  @ApiModelProperty(value = "")
+  public Double getAfterAddWecomDeleteRate() {
+    return afterAddWecomDeleteRate;
+  }
+
+  public void setAfterAddWecomDeleteRate(Double afterAddWecomDeleteRate) {
+    this.afterAddWecomDeleteRate = afterAddWecomDeleteRate;
+  }
+
+  public TargetReportApiListStruct afterAddWecomConsultDedupRate(
+      Double afterAddWecomConsultDedupRate) {
+    this.afterAddWecomConsultDedupRate = afterAddWecomConsultDedupRate;
+    return this;
+  }
+
+  /**
+   * Get afterAddWecomConsultDedupRate
+   *
+   * @return afterAddWecomConsultDedupRate
+   */
+  @ApiModelProperty(value = "")
+  public Double getAfterAddWecomConsultDedupRate() {
+    return afterAddWecomConsultDedupRate;
+  }
+
+  public void setAfterAddWecomConsultDedupRate(Double afterAddWecomConsultDedupRate) {
+    this.afterAddWecomConsultDedupRate = afterAddWecomConsultDedupRate;
+  }
+
+  public TargetReportApiListStruct afterAddWecomClassParticipatedFisrtUvRate(
+      Double afterAddWecomClassParticipatedFisrtUvRate) {
+    this.afterAddWecomClassParticipatedFisrtUvRate = afterAddWecomClassParticipatedFisrtUvRate;
+    return this;
+  }
+
+  /**
+   * Get afterAddWecomClassParticipatedFisrtUvRate
+   *
+   * @return afterAddWecomClassParticipatedFisrtUvRate
+   */
+  @ApiModelProperty(value = "")
+  public Double getAfterAddWecomClassParticipatedFisrtUvRate() {
+    return afterAddWecomClassParticipatedFisrtUvRate;
+  }
+
+  public void setAfterAddWecomClassParticipatedFisrtUvRate(
+      Double afterAddWecomClassParticipatedFisrtUvRate) {
+    this.afterAddWecomClassParticipatedFisrtUvRate = afterAddWecomClassParticipatedFisrtUvRate;
+  }
+
+  public TargetReportApiListStruct orderCouponAmount(Long orderCouponAmount) {
+    this.orderCouponAmount = orderCouponAmount;
+    return this;
+  }
+
+  /**
+   * Get orderCouponAmount
+   *
+   * @return orderCouponAmount
+   */
+  @ApiModelProperty(value = "")
+  public Long getOrderCouponAmount() {
+    return orderCouponAmount;
+  }
+
+  public void setOrderCouponAmount(Long orderCouponAmount) {
+    this.orderCouponAmount = orderCouponAmount;
+  }
+
   public TargetReportApiListStruct ageId(Long ageId) {
     this.ageId = ageId;
     return this;
@@ -19987,6 +20276,25 @@ public class TargetReportApiListStruct {
         && Objects.equals(this.realCostValueExplore, targetReportApiListStruct.realCostValueExplore)
         && Objects.equals(this.clkActionContentPv, targetReportApiListStruct.clkActionContentPv)
         && Objects.equals(this.clkActionContentUv, targetReportApiListStruct.clkActionContentUv)
+        && Objects.equals(this.retention14dDedupPv, targetReportApiListStruct.retention14dDedupPv)
+        && Objects.equals(this.retention30dDedupPv, targetReportApiListStruct.retention30dDedupPv)
+        && Objects.equals(this.retentionRateD14, targetReportApiListStruct.retentionRateD14)
+        && Objects.equals(this.retentionRateD30, targetReportApiListStruct.retentionRateD30)
+        && Objects.equals(this.appRetentionD14Cost, targetReportApiListStruct.appRetentionD14Cost)
+        && Objects.equals(this.appRetentionD30Cost, targetReportApiListStruct.appRetentionD30Cost)
+        && Objects.equals(this.clkFifaIpPv, targetReportApiListStruct.clkFifaIpPv)
+        && Objects.equals(this.landingFifaIpGenPv, targetReportApiListStruct.landingFifaIpGenPv)
+        && Objects.equals(
+            this.afterAddWecomDeletePv, targetReportApiListStruct.afterAddWecomDeletePv)
+        && Objects.equals(
+            this.afterAddWecomDeleteRate, targetReportApiListStruct.afterAddWecomDeleteRate)
+        && Objects.equals(
+            this.afterAddWecomConsultDedupRate,
+            targetReportApiListStruct.afterAddWecomConsultDedupRate)
+        && Objects.equals(
+            this.afterAddWecomClassParticipatedFisrtUvRate,
+            targetReportApiListStruct.afterAddWecomClassParticipatedFisrtUvRate)
+        && Objects.equals(this.orderCouponAmount, targetReportApiListStruct.orderCouponAmount)
         && Objects.equals(this.ageId, targetReportApiListStruct.ageId)
         && Objects.equals(this.cityId, targetReportApiListStruct.cityId)
         && Objects.equals(this.regionId, targetReportApiListStruct.regionId)
@@ -20840,6 +21148,19 @@ public class TargetReportApiListStruct {
         realCostValueExplore,
         clkActionContentPv,
         clkActionContentUv,
+        retention14dDedupPv,
+        retention30dDedupPv,
+        retentionRateD14,
+        retentionRateD30,
+        appRetentionD14Cost,
+        appRetentionD30Cost,
+        clkFifaIpPv,
+        landingFifaIpGenPv,
+        afterAddWecomDeletePv,
+        afterAddWecomDeleteRate,
+        afterAddWecomConsultDedupRate,
+        afterAddWecomClassParticipatedFisrtUvRate,
+        orderCouponAmount,
         ageId,
         cityId,
         regionId,

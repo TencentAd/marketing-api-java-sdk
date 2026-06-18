@@ -112,6 +112,7 @@ public class ImagesApiContainer extends ApiContainer {
    * @param pageSize (optional)
    * @param labelId (optional)
    * @param businessScenario (optional)
+   * @param needAigcFlag (optional)
    * @param fields 返回参数的字段列表 (optional)
    * @return ImagesGetResponse
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
@@ -125,6 +126,7 @@ public class ImagesApiContainer extends ApiContainer {
       Long pageSize,
       Long labelId,
       Long businessScenario,
+      Boolean needAigcFlag,
       List<String> fields,
       Pair... headerPair)
       throws ApiException, TencentAdsResponseException {
@@ -137,6 +139,7 @@ public class ImagesApiContainer extends ApiContainer {
             pageSize,
             labelId,
             businessScenario,
+            needAigcFlag,
             fields,
             headerPair);
     handleResponse(gson.toJson(resp));

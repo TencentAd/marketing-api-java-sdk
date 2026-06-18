@@ -31,6 +31,8 @@ public class GetImages {
 
   public Long businessScenario = null;
 
+  public Boolean needAigcFlag = null;
+
   public List<String> fields =
       Arrays.asList(
           "image_id",
@@ -76,6 +78,7 @@ public class GetImages {
                 pageSize,
                 labelId,
                 businessScenario,
+                needAigcFlag,
                 fields);
     return response;
   }

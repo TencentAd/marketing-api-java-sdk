@@ -19,7 +19,7 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-/** 广告主类型 */
+/** 客户类型 */
 @JsonAdapter(AdvertiserTypeEnum.Adapter.class)
 public enum AdvertiserTypeEnum {
   DIRECT_ADVERTISER("DIRECT_ADVERTISER"),

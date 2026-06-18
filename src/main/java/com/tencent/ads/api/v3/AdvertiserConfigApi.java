@@ -219,8 +219,8 @@ public class AdvertiserConfigApi {
    * Build call for advertiserConfigGet
    *
    * @param accountId (required)
+   * @param fields (required)
    * @param organizationId (optional)
-   * @param fields (optional)
    * @param progressListener Progress listener
    * @param progressRequestListener Progress request listener
    * @return Call to execute
@@ -228,8 +228,8 @@ public class AdvertiserConfigApi {
    */
   public com.squareup.okhttp.Call advertiserConfigGetCall(
       Long accountId,
-      Long organizationId,
       List<String> fields,
+      Long organizationId,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
       Pair... headerPair)
@@ -301,8 +301,8 @@ public class AdvertiserConfigApi {
   @SuppressWarnings("rawtypes")
   private com.squareup.okhttp.Call advertiserConfigGetValidateBeforeCall(
       Long accountId,
-      Long organizationId,
       List<String> fields,
+      Long organizationId,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
       Pair... headerPair)
@@ -314,11 +314,17 @@ public class AdvertiserConfigApi {
           "Missing the required parameter 'accountId' when calling advertiserConfigGet(Async)");
     }
 
+    // verify the required parameter 'fields' is set
+    if (fields == null) {
+      throw new ApiException(
+          "Missing the required parameter 'fields' when calling advertiserConfigGet(Async)");
+    }
+
     com.squareup.okhttp.Call call =
         advertiserConfigGetCall(
             accountId,
-            organizationId,
             fields,
+            organizationId,
             progressListener,
             progressRequestListener,
             headerPair);
@@ -329,17 +335,17 @@ public class AdvertiserConfigApi {
    * 获取客户投放偏好
    *
    * @param accountId (required)
+   * @param fields (required)
    * @param organizationId (optional)
-   * @param fields (optional)
    * @return AdvertiserConfigGetResponse
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
   public AdvertiserConfigGetResponse advertiserConfigGet(
-      Long accountId, Long organizationId, List<String> fields, Pair... headerPair)
+      Long accountId, List<String> fields, Long organizationId, Pair... headerPair)
       throws ApiException {
     ApiResponse<AdvertiserConfigGetResponse> resp =
-        advertiserConfigGetWithHttpInfo(accountId, organizationId, fields, headerPair);
+        advertiserConfigGetWithHttpInfo(accountId, fields, organizationId, headerPair);
     return resp.getData();
   }
 
@@ -347,18 +353,18 @@ public class AdvertiserConfigApi {
    * 获取客户投放偏好
    *
    * @param accountId (required)
+   * @param fields (required)
    * @param organizationId (optional)
-   * @param fields (optional)
    * @return ApiResponse&lt;AdvertiserConfigGetResponse&gt;
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
    *     response body
    */
   public ApiResponse<AdvertiserConfigGetResponse> advertiserConfigGetWithHttpInfo(
-      Long accountId, Long organizationId, List<String> fields, Pair... headerPair)
+      Long accountId, List<String> fields, Long organizationId, Pair... headerPair)
       throws ApiException {
     com.squareup.okhttp.Call call =
         advertiserConfigGetValidateBeforeCall(
-            accountId, organizationId, fields, null, null, headerPair);
+            accountId, fields, organizationId, null, null, headerPair);
     Type localVarReturnType = new TypeToken<AdvertiserConfigGetResponse>() {}.getType();
     return apiClient.execute(call, localVarReturnType);
   }
@@ -367,16 +373,16 @@ public class AdvertiserConfigApi {
    * 获取客户投放偏好 (asynchronously)
    *
    * @param accountId (required)
+   * @param fields (required)
    * @param organizationId (optional)
-   * @param fields (optional)
    * @param callback The callback to be executed when the API call finishes
    * @return The request call
    * @throws ApiException If fail to process the API call, e.g. serializing the request body object
    */
   public com.squareup.okhttp.Call advertiserConfigGetAsync(
       Long accountId,
-      Long organizationId,
       List<String> fields,
+      Long organizationId,
       final ApiCallback<AdvertiserConfigGetResponse> callback,
       Pair... headerPair)
       throws ApiException {
@@ -405,8 +411,8 @@ public class AdvertiserConfigApi {
     com.squareup.okhttp.Call call =
         advertiserConfigGetValidateBeforeCall(
             accountId,
-            organizationId,
             fields,
+            organizationId,
             progressListener,
             progressRequestListener,
             headerPair);

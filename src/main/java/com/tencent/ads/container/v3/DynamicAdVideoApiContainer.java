@@ -31,7 +31,7 @@ public class DynamicAdVideoApiContainer extends ApiContainer {
   @Inject DynamicAdVideoApi api;
 
   /**
-   * 创建用于广告投放的动态广告视频
+   * 创建用于投放的动态投放视频
    *
    * @param data (required)
    * @return DynamicAdVideoAddResponse
@@ -47,7 +47,7 @@ public class DynamicAdVideoApiContainer extends ApiContainer {
   }
 
   /**
-   * 获取广告投放的动态广告视频
+   * 获取投放的动态广告视频
    *
    * @param accountId (required)
    * @param productCatalogId (required)

@@ -22,6 +22,12 @@ public class AdvertiserConfigGetResponseData {
   @SerializedName("cover_image_snapshot_type")
   private CoverImageSnapshotType coverImageSnapshotType = null;
 
+  @SerializedName("multi_image_collage_status")
+  private MultiImageCollageStatus multiImageCollageStatus = null;
+
+  @SerializedName("multi_image_collage_aigc_status")
+  private MultiImageCollageAigcStatus multiImageCollageAigcStatus = null;
+
   public AdvertiserConfigGetResponseData coverImageSnapshotType(
       CoverImageSnapshotType coverImageSnapshotType) {
     this.coverImageSnapshotType = coverImageSnapshotType;
@@ -42,6 +48,47 @@ public class AdvertiserConfigGetResponseData {
     this.coverImageSnapshotType = coverImageSnapshotType;
   }
 
+  public AdvertiserConfigGetResponseData multiImageCollageStatus(
+      MultiImageCollageStatus multiImageCollageStatus) {
+    this.multiImageCollageStatus = multiImageCollageStatus;
+    return this;
+  }
+
+  /**
+   * Get multiImageCollageStatus
+   *
+   * @return multiImageCollageStatus
+   */
+  @ApiModelProperty(value = "")
+  public MultiImageCollageStatus getMultiImageCollageStatus() {
+    return multiImageCollageStatus;
+  }
+
+  public void setMultiImageCollageStatus(MultiImageCollageStatus multiImageCollageStatus) {
+    this.multiImageCollageStatus = multiImageCollageStatus;
+  }
+
+  public AdvertiserConfigGetResponseData multiImageCollageAigcStatus(
+      MultiImageCollageAigcStatus multiImageCollageAigcStatus) {
+    this.multiImageCollageAigcStatus = multiImageCollageAigcStatus;
+    return this;
+  }
+
+  /**
+   * Get multiImageCollageAigcStatus
+   *
+   * @return multiImageCollageAigcStatus
+   */
+  @ApiModelProperty(value = "")
+  public MultiImageCollageAigcStatus getMultiImageCollageAigcStatus() {
+    return multiImageCollageAigcStatus;
+  }
+
+  public void setMultiImageCollageAigcStatus(
+      MultiImageCollageAigcStatus multiImageCollageAigcStatus) {
+    this.multiImageCollageAigcStatus = multiImageCollageAigcStatus;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -53,12 +100,18 @@ public class AdvertiserConfigGetResponseData {
     AdvertiserConfigGetResponseData advertiserConfigGetResponseData =
         (AdvertiserConfigGetResponseData) o;
     return Objects.equals(
-        this.coverImageSnapshotType, advertiserConfigGetResponseData.coverImageSnapshotType);
+            this.coverImageSnapshotType, advertiserConfigGetResponseData.coverImageSnapshotType)
+        && Objects.equals(
+            this.multiImageCollageStatus, advertiserConfigGetResponseData.multiImageCollageStatus)
+        && Objects.equals(
+            this.multiImageCollageAigcStatus,
+            advertiserConfigGetResponseData.multiImageCollageAigcStatus);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(coverImageSnapshotType);
+    return Objects.hash(
+        coverImageSnapshotType, multiImageCollageStatus, multiImageCollageAigcStatus);
   }
 
   @Override

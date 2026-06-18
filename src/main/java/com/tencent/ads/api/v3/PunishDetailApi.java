@@ -142,7 +142,7 @@ public class PunishDetailApi {
   }
 
   /**
-   * 获取计量处罚明细
+   * 获取素材计量治理明细数据
    *
    * @param data (required)
    * @return PunishDetailGetResponse
@@ -156,7 +156,7 @@ public class PunishDetailApi {
   }
 
   /**
-   * 获取计量处罚明细
+   * 获取素材计量治理明细数据
    *
    * @param data (required)
    * @return ApiResponse&lt;PunishDetailGetResponse&gt;
@@ -171,7 +171,7 @@ public class PunishDetailApi {
   }
 
   /**
-   * 获取计量处罚明细 (asynchronously)
+   * 获取素材计量治理明细数据 (asynchronously)
    *
    * @param data (required)
    * @param callback The callback to be executed when the API call finishes

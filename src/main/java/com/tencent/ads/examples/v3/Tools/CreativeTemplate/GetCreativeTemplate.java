@@ -16,15 +16,15 @@ public class GetCreativeTemplate {
 
   public Long accountId = null;
 
+  public String deliveryMode = null;
+
   public String marketingGoal = null;
+
+  public String marketingSubGoal = null;
 
   public String marketingTargetType = null;
 
   public String marketingCarrierType = null;
-
-  public String deliveryMode = null;
-
-  public String marketingSubGoal = null;
 
   public Boolean automaticSiteEnabled = null;
 
@@ -35,6 +35,8 @@ public class GetCreativeTemplate {
   public Long creativeTemplateId = null;
 
   public Boolean useNewVersion = null;
+
+  public Long adgroupId = null;
 
   public String adgroupType = null;
 
@@ -56,16 +58,17 @@ public class GetCreativeTemplate {
             .creativeTemplate()
             .creativeTemplateGet(
                 accountId,
+                deliveryMode,
                 marketingGoal,
+                marketingSubGoal,
                 marketingTargetType,
                 marketingCarrierType,
-                deliveryMode,
-                marketingSubGoal,
                 automaticSiteEnabled,
                 siteSet,
                 dynamicCreativeType,
                 creativeTemplateId,
                 useNewVersion,
+                adgroupId,
                 adgroupType,
                 fields);
     return response;

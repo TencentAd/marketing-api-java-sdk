@@ -2652,17 +2652,59 @@ public class HourlyReportApiListStruct {
   @SerializedName("real_cost_value_explore")
   private Long realCostValueExplore = null;
 
-  @SerializedName("adgroup_id")
-  private Long adgroupId = null;
-
-  @SerializedName("adgroup_name")
-  private String adgroupName = null;
-
   @SerializedName("clk_action_content_pv")
   private Long clkActionContentPv = null;
 
   @SerializedName("clk_action_content_uv")
   private Long clkActionContentUv = null;
+
+  @SerializedName("retention_14d_dedup_pv")
+  private Long retention14dDedupPv = null;
+
+  @SerializedName("retention_30d_dedup_pv")
+  private Long retention30dDedupPv = null;
+
+  @SerializedName("retention_rate_d14")
+  private Double retentionRateD14 = null;
+
+  @SerializedName("retention_rate_d30")
+  private Double retentionRateD30 = null;
+
+  @SerializedName("app_retention_d14_cost")
+  private Long appRetentionD14Cost = null;
+
+  @SerializedName("app_retention_d30_cost")
+  private Long appRetentionD30Cost = null;
+
+  @SerializedName("clk_fifa_ip_pv")
+  private Long clkFifaIpPv = null;
+
+  @SerializedName("landing_fifa_ip_gen_pv")
+  private Long landingFifaIpGenPv = null;
+
+  @SerializedName("landing_fifa_ip_gen_uv")
+  private Long landingFifaIpGenUv = null;
+
+  @SerializedName("after_add_wecom_delete_pv")
+  private Long afterAddWecomDeletePv = null;
+
+  @SerializedName("after_add_wecom_delete_rate")
+  private Double afterAddWecomDeleteRate = null;
+
+  @SerializedName("after_add_wecom_consult_dedup_rate")
+  private Double afterAddWecomConsultDedupRate = null;
+
+  @SerializedName("after_add_wecom_class_participated_fisrt_uv_rate")
+  private Double afterAddWecomClassParticipatedFisrtUvRate = null;
+
+  @SerializedName("order_coupon_amount")
+  private Long orderCouponAmount = null;
+
+  @SerializedName("adgroup_id")
+  private Long adgroupId = null;
+
+  @SerializedName("adgroup_name")
+  private String adgroupName = null;
 
   @SerializedName("dynamic_creative_id")
   private Long dynamicCreativeId = null;
@@ -19448,44 +19490,6 @@ public class HourlyReportApiListStruct {
     this.realCostValueExplore = realCostValueExplore;
   }
 
-  public HourlyReportApiListStruct adgroupId(Long adgroupId) {
-    this.adgroupId = adgroupId;
-    return this;
-  }
-
-  /**
-   * Get adgroupId
-   *
-   * @return adgroupId
-   */
-  @ApiModelProperty(value = "")
-  public Long getAdgroupId() {
-    return adgroupId;
-  }
-
-  public void setAdgroupId(Long adgroupId) {
-    this.adgroupId = adgroupId;
-  }
-
-  public HourlyReportApiListStruct adgroupName(String adgroupName) {
-    this.adgroupName = adgroupName;
-    return this;
-  }
-
-  /**
-   * Get adgroupName
-   *
-   * @return adgroupName
-   */
-  @ApiModelProperty(value = "")
-  public String getAdgroupName() {
-    return adgroupName;
-  }
-
-  public void setAdgroupName(String adgroupName) {
-    this.adgroupName = adgroupName;
-  }
-
   public HourlyReportApiListStruct clkActionContentPv(Long clkActionContentPv) {
     this.clkActionContentPv = clkActionContentPv;
     return this;
@@ -19522,6 +19526,313 @@ public class HourlyReportApiListStruct {
 
   public void setClkActionContentUv(Long clkActionContentUv) {
     this.clkActionContentUv = clkActionContentUv;
+  }
+
+  public HourlyReportApiListStruct retention14dDedupPv(Long retention14dDedupPv) {
+    this.retention14dDedupPv = retention14dDedupPv;
+    return this;
+  }
+
+  /**
+   * Get retention14dDedupPv
+   *
+   * @return retention14dDedupPv
+   */
+  @ApiModelProperty(value = "")
+  public Long getRetention14dDedupPv() {
+    return retention14dDedupPv;
+  }
+
+  public void setRetention14dDedupPv(Long retention14dDedupPv) {
+    this.retention14dDedupPv = retention14dDedupPv;
+  }
+
+  public HourlyReportApiListStruct retention30dDedupPv(Long retention30dDedupPv) {
+    this.retention30dDedupPv = retention30dDedupPv;
+    return this;
+  }
+
+  /**
+   * Get retention30dDedupPv
+   *
+   * @return retention30dDedupPv
+   */
+  @ApiModelProperty(value = "")
+  public Long getRetention30dDedupPv() {
+    return retention30dDedupPv;
+  }
+
+  public void setRetention30dDedupPv(Long retention30dDedupPv) {
+    this.retention30dDedupPv = retention30dDedupPv;
+  }
+
+  public HourlyReportApiListStruct retentionRateD14(Double retentionRateD14) {
+    this.retentionRateD14 = retentionRateD14;
+    return this;
+  }
+
+  /**
+   * Get retentionRateD14
+   *
+   * @return retentionRateD14
+   */
+  @ApiModelProperty(value = "")
+  public Double getRetentionRateD14() {
+    return retentionRateD14;
+  }
+
+  public void setRetentionRateD14(Double retentionRateD14) {
+    this.retentionRateD14 = retentionRateD14;
+  }
+
+  public HourlyReportApiListStruct retentionRateD30(Double retentionRateD30) {
+    this.retentionRateD30 = retentionRateD30;
+    return this;
+  }
+
+  /**
+   * Get retentionRateD30
+   *
+   * @return retentionRateD30
+   */
+  @ApiModelProperty(value = "")
+  public Double getRetentionRateD30() {
+    return retentionRateD30;
+  }
+
+  public void setRetentionRateD30(Double retentionRateD30) {
+    this.retentionRateD30 = retentionRateD30;
+  }
+
+  public HourlyReportApiListStruct appRetentionD14Cost(Long appRetentionD14Cost) {
+    this.appRetentionD14Cost = appRetentionD14Cost;
+    return this;
+  }
+
+  /**
+   * Get appRetentionD14Cost
+   *
+   * @return appRetentionD14Cost
+   */
+  @ApiModelProperty(value = "")
+  public Long getAppRetentionD14Cost() {
+    return appRetentionD14Cost;
+  }
+
+  public void setAppRetentionD14Cost(Long appRetentionD14Cost) {
+    this.appRetentionD14Cost = appRetentionD14Cost;
+  }
+
+  public HourlyReportApiListStruct appRetentionD30Cost(Long appRetentionD30Cost) {
+    this.appRetentionD30Cost = appRetentionD30Cost;
+    return this;
+  }
+
+  /**
+   * Get appRetentionD30Cost
+   *
+   * @return appRetentionD30Cost
+   */
+  @ApiModelProperty(value = "")
+  public Long getAppRetentionD30Cost() {
+    return appRetentionD30Cost;
+  }
+
+  public void setAppRetentionD30Cost(Long appRetentionD30Cost) {
+    this.appRetentionD30Cost = appRetentionD30Cost;
+  }
+
+  public HourlyReportApiListStruct clkFifaIpPv(Long clkFifaIpPv) {
+    this.clkFifaIpPv = clkFifaIpPv;
+    return this;
+  }
+
+  /**
+   * Get clkFifaIpPv
+   *
+   * @return clkFifaIpPv
+   */
+  @ApiModelProperty(value = "")
+  public Long getClkFifaIpPv() {
+    return clkFifaIpPv;
+  }
+
+  public void setClkFifaIpPv(Long clkFifaIpPv) {
+    this.clkFifaIpPv = clkFifaIpPv;
+  }
+
+  public HourlyReportApiListStruct landingFifaIpGenPv(Long landingFifaIpGenPv) {
+    this.landingFifaIpGenPv = landingFifaIpGenPv;
+    return this;
+  }
+
+  /**
+   * Get landingFifaIpGenPv
+   *
+   * @return landingFifaIpGenPv
+   */
+  @ApiModelProperty(value = "")
+  public Long getLandingFifaIpGenPv() {
+    return landingFifaIpGenPv;
+  }
+
+  public void setLandingFifaIpGenPv(Long landingFifaIpGenPv) {
+    this.landingFifaIpGenPv = landingFifaIpGenPv;
+  }
+
+  public HourlyReportApiListStruct landingFifaIpGenUv(Long landingFifaIpGenUv) {
+    this.landingFifaIpGenUv = landingFifaIpGenUv;
+    return this;
+  }
+
+  /**
+   * Get landingFifaIpGenUv
+   *
+   * @return landingFifaIpGenUv
+   */
+  @ApiModelProperty(value = "")
+  public Long getLandingFifaIpGenUv() {
+    return landingFifaIpGenUv;
+  }
+
+  public void setLandingFifaIpGenUv(Long landingFifaIpGenUv) {
+    this.landingFifaIpGenUv = landingFifaIpGenUv;
+  }
+
+  public HourlyReportApiListStruct afterAddWecomDeletePv(Long afterAddWecomDeletePv) {
+    this.afterAddWecomDeletePv = afterAddWecomDeletePv;
+    return this;
+  }
+
+  /**
+   * Get afterAddWecomDeletePv
+   *
+   * @return afterAddWecomDeletePv
+   */
+  @ApiModelProperty(value = "")
+  public Long getAfterAddWecomDeletePv() {
+    return afterAddWecomDeletePv;
+  }
+
+  public void setAfterAddWecomDeletePv(Long afterAddWecomDeletePv) {
+    this.afterAddWecomDeletePv = afterAddWecomDeletePv;
+  }
+
+  public HourlyReportApiListStruct afterAddWecomDeleteRate(Double afterAddWecomDeleteRate) {
+    this.afterAddWecomDeleteRate = afterAddWecomDeleteRate;
+    return this;
+  }
+
+  /**
+   * Get afterAddWecomDeleteRate
+   *
+   * @return afterAddWecomDeleteRate
+   */
+  @ApiModelProperty(value = "")
+  public Double getAfterAddWecomDeleteRate() {
+    return afterAddWecomDeleteRate;
+  }
+
+  public void setAfterAddWecomDeleteRate(Double afterAddWecomDeleteRate) {
+    this.afterAddWecomDeleteRate = afterAddWecomDeleteRate;
+  }
+
+  public HourlyReportApiListStruct afterAddWecomConsultDedupRate(
+      Double afterAddWecomConsultDedupRate) {
+    this.afterAddWecomConsultDedupRate = afterAddWecomConsultDedupRate;
+    return this;
+  }
+
+  /**
+   * Get afterAddWecomConsultDedupRate
+   *
+   * @return afterAddWecomConsultDedupRate
+   */
+  @ApiModelProperty(value = "")
+  public Double getAfterAddWecomConsultDedupRate() {
+    return afterAddWecomConsultDedupRate;
+  }
+
+  public void setAfterAddWecomConsultDedupRate(Double afterAddWecomConsultDedupRate) {
+    this.afterAddWecomConsultDedupRate = afterAddWecomConsultDedupRate;
+  }
+
+  public HourlyReportApiListStruct afterAddWecomClassParticipatedFisrtUvRate(
+      Double afterAddWecomClassParticipatedFisrtUvRate) {
+    this.afterAddWecomClassParticipatedFisrtUvRate = afterAddWecomClassParticipatedFisrtUvRate;
+    return this;
+  }
+
+  /**
+   * Get afterAddWecomClassParticipatedFisrtUvRate
+   *
+   * @return afterAddWecomClassParticipatedFisrtUvRate
+   */
+  @ApiModelProperty(value = "")
+  public Double getAfterAddWecomClassParticipatedFisrtUvRate() {
+    return afterAddWecomClassParticipatedFisrtUvRate;
+  }
+
+  public void setAfterAddWecomClassParticipatedFisrtUvRate(
+      Double afterAddWecomClassParticipatedFisrtUvRate) {
+    this.afterAddWecomClassParticipatedFisrtUvRate = afterAddWecomClassParticipatedFisrtUvRate;
+  }
+
+  public HourlyReportApiListStruct orderCouponAmount(Long orderCouponAmount) {
+    this.orderCouponAmount = orderCouponAmount;
+    return this;
+  }
+
+  /**
+   * Get orderCouponAmount
+   *
+   * @return orderCouponAmount
+   */
+  @ApiModelProperty(value = "")
+  public Long getOrderCouponAmount() {
+    return orderCouponAmount;
+  }
+
+  public void setOrderCouponAmount(Long orderCouponAmount) {
+    this.orderCouponAmount = orderCouponAmount;
+  }
+
+  public HourlyReportApiListStruct adgroupId(Long adgroupId) {
+    this.adgroupId = adgroupId;
+    return this;
+  }
+
+  /**
+   * Get adgroupId
+   *
+   * @return adgroupId
+   */
+  @ApiModelProperty(value = "")
+  public Long getAdgroupId() {
+    return adgroupId;
+  }
+
+  public void setAdgroupId(Long adgroupId) {
+    this.adgroupId = adgroupId;
+  }
+
+  public HourlyReportApiListStruct adgroupName(String adgroupName) {
+    this.adgroupName = adgroupName;
+    return this;
+  }
+
+  /**
+   * Get adgroupName
+   *
+   * @return adgroupName
+   */
+  @ApiModelProperty(value = "")
+  public String getAdgroupName() {
+    return adgroupName;
+  }
+
+  public void setAdgroupName(String adgroupName) {
+    this.adgroupName = adgroupName;
   }
 
   public HourlyReportApiListStruct dynamicCreativeId(Long dynamicCreativeId) {
@@ -21100,10 +21411,30 @@ public class HourlyReportApiListStruct {
         && Objects.equals(
             this.adMonetizationPlaRegAmount, hourlyReportApiListStruct.adMonetizationPlaRegAmount)
         && Objects.equals(this.realCostValueExplore, hourlyReportApiListStruct.realCostValueExplore)
-        && Objects.equals(this.adgroupId, hourlyReportApiListStruct.adgroupId)
-        && Objects.equals(this.adgroupName, hourlyReportApiListStruct.adgroupName)
         && Objects.equals(this.clkActionContentPv, hourlyReportApiListStruct.clkActionContentPv)
         && Objects.equals(this.clkActionContentUv, hourlyReportApiListStruct.clkActionContentUv)
+        && Objects.equals(this.retention14dDedupPv, hourlyReportApiListStruct.retention14dDedupPv)
+        && Objects.equals(this.retention30dDedupPv, hourlyReportApiListStruct.retention30dDedupPv)
+        && Objects.equals(this.retentionRateD14, hourlyReportApiListStruct.retentionRateD14)
+        && Objects.equals(this.retentionRateD30, hourlyReportApiListStruct.retentionRateD30)
+        && Objects.equals(this.appRetentionD14Cost, hourlyReportApiListStruct.appRetentionD14Cost)
+        && Objects.equals(this.appRetentionD30Cost, hourlyReportApiListStruct.appRetentionD30Cost)
+        && Objects.equals(this.clkFifaIpPv, hourlyReportApiListStruct.clkFifaIpPv)
+        && Objects.equals(this.landingFifaIpGenPv, hourlyReportApiListStruct.landingFifaIpGenPv)
+        && Objects.equals(this.landingFifaIpGenUv, hourlyReportApiListStruct.landingFifaIpGenUv)
+        && Objects.equals(
+            this.afterAddWecomDeletePv, hourlyReportApiListStruct.afterAddWecomDeletePv)
+        && Objects.equals(
+            this.afterAddWecomDeleteRate, hourlyReportApiListStruct.afterAddWecomDeleteRate)
+        && Objects.equals(
+            this.afterAddWecomConsultDedupRate,
+            hourlyReportApiListStruct.afterAddWecomConsultDedupRate)
+        && Objects.equals(
+            this.afterAddWecomClassParticipatedFisrtUvRate,
+            hourlyReportApiListStruct.afterAddWecomClassParticipatedFisrtUvRate)
+        && Objects.equals(this.orderCouponAmount, hourlyReportApiListStruct.orderCouponAmount)
+        && Objects.equals(this.adgroupId, hourlyReportApiListStruct.adgroupId)
+        && Objects.equals(this.adgroupName, hourlyReportApiListStruct.adgroupName)
         && Objects.equals(this.dynamicCreativeId, hourlyReportApiListStruct.dynamicCreativeId)
         && Objects.equals(this.dynamicCreativeName, hourlyReportApiListStruct.dynamicCreativeName)
         && Objects.equals(this.siteSet, hourlyReportApiListStruct.siteSet)
@@ -22001,10 +22332,24 @@ public class HourlyReportApiListStruct {
         effectiveSeedingConvertionsRate,
         adMonetizationPlaRegAmount,
         realCostValueExplore,
-        adgroupId,
-        adgroupName,
         clkActionContentPv,
         clkActionContentUv,
+        retention14dDedupPv,
+        retention30dDedupPv,
+        retentionRateD14,
+        retentionRateD30,
+        appRetentionD14Cost,
+        appRetentionD30Cost,
+        clkFifaIpPv,
+        landingFifaIpGenPv,
+        landingFifaIpGenUv,
+        afterAddWecomDeletePv,
+        afterAddWecomDeleteRate,
+        afterAddWecomConsultDedupRate,
+        afterAddWecomClassParticipatedFisrtUvRate,
+        orderCouponAmount,
+        adgroupId,
+        adgroupName,
         dynamicCreativeId,
         dynamicCreativeName,
         siteSet,

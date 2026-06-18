@@ -15,18 +15,28 @@ package com.tencent.ads.model.v3;
 import com.google.gson.Gson;
 import com.google.gson.annotations.SerializedName;
 import io.swagger.annotations.ApiModelProperty;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Objects;
 
 /** LeadsListGetResponseData */
 public class LeadsListGetResponseData {
   @SerializedName("leads_info")
-  private LeadsListStruct leadsInfo = null;
+  private List<LeadsListStruct> leadsInfo = null;
 
   @SerializedName("page_info")
   private PageInfo pageInfo = null;
 
-  public LeadsListGetResponseData leadsInfo(LeadsListStruct leadsInfo) {
+  public LeadsListGetResponseData leadsInfo(List<LeadsListStruct> leadsInfo) {
     this.leadsInfo = leadsInfo;
+    return this;
+  }
+
+  public LeadsListGetResponseData addLeadsInfoItem(LeadsListStruct leadsInfoItem) {
+    if (this.leadsInfo == null) {
+      this.leadsInfo = new ArrayList<LeadsListStruct>();
+    }
+    this.leadsInfo.add(leadsInfoItem);
     return this;
   }
 
@@ -36,11 +46,11 @@ public class LeadsListGetResponseData {
    * @return leadsInfo
    */
   @ApiModelProperty(value = "")
-  public LeadsListStruct getLeadsInfo() {
+  public List<LeadsListStruct> getLeadsInfo() {
     return leadsInfo;
   }
 
-  public void setLeadsInfo(LeadsListStruct leadsInfo) {
+  public void setLeadsInfo(List<LeadsListStruct> leadsInfo) {
     this.leadsInfo = leadsInfo;
   }
 
