@@ -144,7 +144,7 @@ public class AdcreativePreviewsApi {
   }
 
   /**
-   * 绑定广告预览受众
+   * 绑定营销预览受众
    *
    * @param data (required)
    * @return AdcreativePreviewsAddResponse
@@ -159,7 +159,7 @@ public class AdcreativePreviewsApi {
   }
 
   /**
-   * 绑定广告预览受众
+   * 绑定营销预览受众
    *
    * @param data (required)
    * @return ApiResponse&lt;AdcreativePreviewsAddResponse&gt;
@@ -175,7 +175,7 @@ public class AdcreativePreviewsApi {
   }
 
   /**
-   * 绑定广告预览受众 (asynchronously)
+   * 绑定营销预览受众 (asynchronously)
    *
    * @param data (required)
    * @param callback The callback to be executed when the API call finishes
@@ -329,7 +329,7 @@ public class AdcreativePreviewsApi {
   }
 
   /**
-   * 获取绑定的广告预览受众列表
+   * 获取绑定的营销预览受众列表
    *
    * @param accountId (required)
    * @param filtering (required)
@@ -347,7 +347,7 @@ public class AdcreativePreviewsApi {
   }
 
   /**
-   * 获取绑定的广告预览受众列表
+   * 获取绑定的营销预览受众列表
    *
    * @param accountId (required)
    * @param filtering (required)
@@ -367,7 +367,7 @@ public class AdcreativePreviewsApi {
   }
 
   /**
-   * 获取绑定的广告预览受众列表 (asynchronously)
+   * 获取绑定的营销预览受众列表 (asynchronously)
    *
    * @param accountId (required)
    * @param filtering (required)

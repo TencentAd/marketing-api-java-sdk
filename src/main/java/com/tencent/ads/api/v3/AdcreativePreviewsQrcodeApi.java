@@ -160,7 +160,7 @@ public class AdcreativePreviewsQrcodeApi {
   }
 
   /**
-   * 获取广告预览二维码
+   * 获取营销单元预览二维码
    *
    * @param accountId (required)
    * @param adgroupId (required)
@@ -177,7 +177,7 @@ public class AdcreativePreviewsQrcodeApi {
   }
 
   /**
-   * 获取广告预览二维码
+   * 获取营销单元预览二维码
    *
    * @param accountId (required)
    * @param adgroupId (required)
@@ -196,7 +196,7 @@ public class AdcreativePreviewsQrcodeApi {
   }
 
   /**
-   * 获取广告预览二维码 (asynchronously)
+   * 获取营销单元预览二维码 (asynchronously)
    *
    * @param accountId (required)
    * @param adgroupId (required)

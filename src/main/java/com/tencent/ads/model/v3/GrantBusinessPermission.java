@@ -20,8 +20,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
-/** 授权给商务管家账号认领所有广告账号的权限信息 */
-@ApiModel(description = "授权给商务管家账号认领所有广告账号的权限信息")
+/** 授权给商务管家账号认领所有营销账号的权限信息 */
+@ApiModel(description = "授权给商务管家账号认领所有营销账号的权限信息")
 public class GrantBusinessPermission {
   @SerializedName("grant_permission_type_list")
   private List<String> grantPermissionTypeList = null;

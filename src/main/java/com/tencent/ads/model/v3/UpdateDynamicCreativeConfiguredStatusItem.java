@@ -18,8 +18,8 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.util.Objects;
 
-/** 修改广告创意客户设置的状态 */
-@ApiModel(description = "修改广告创意客户设置的状态")
+/** 修改创意客户设置的状态 */
+@ApiModel(description = "修改创意客户设置的状态")
 public class UpdateDynamicCreativeConfiguredStatusItem {
   @SerializedName("dynamic_creative_id")
   private Long dynamicCreativeId = null;

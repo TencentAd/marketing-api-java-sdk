@@ -18,8 +18,8 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.util.Objects;
 
-/** 修改广告绑定的rta策略 */
-@ApiModel(description = "修改广告绑定的rta策略")
+/** 修改营销单元绑定的rta策略 */
+@ApiModel(description = "修改营销单元绑定的rta策略")
 public class UpdateAdgroupBindRtaPolicyItem {
   @SerializedName("adgroup_id")
   private Long adgroupId = null;

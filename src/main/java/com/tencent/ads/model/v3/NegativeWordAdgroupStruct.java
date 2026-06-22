@@ -20,8 +20,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
-/** 广告否定词 */
-@ApiModel(description = "广告否定词")
+/** 否定词 */
+@ApiModel(description = "否定词")
 public class NegativeWordAdgroupStruct {
   @SerializedName("adgroup_id")
   private Long adgroupId = null;

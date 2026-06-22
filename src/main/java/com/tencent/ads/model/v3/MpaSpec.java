@@ -20,8 +20,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
-/** 动态商品广告属性 */
-@ApiModel(description = "动态商品广告属性")
+/** 动态商品营销属性 */
+@ApiModel(description = "动态商品营销属性")
 public class MpaSpec {
   @SerializedName("recommend_method_ids")
   private List<Long> recommendMethodIds = null;

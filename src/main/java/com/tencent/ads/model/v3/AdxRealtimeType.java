@@ -19,7 +19,7 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-/** ADX程序化广告素材实时回复类型 */
+/** ADX程序化投放素材实时回复类型 */
 @JsonAdapter(AdxRealtimeType.Adapter.class)
 public enum AdxRealtimeType {
   DEFAULT("ADX_REALTIME_TYPE_DEFAULT"),

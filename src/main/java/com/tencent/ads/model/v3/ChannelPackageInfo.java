@@ -18,8 +18,8 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.util.Objects;
 
-/** 广告渠道包任务处理信息 */
-@ApiModel(description = "广告渠道包任务处理信息")
+/** 营销渠道包任务处理信息 */
+@ApiModel(description = "营销渠道包任务处理信息")
 public class ChannelPackageInfo {
   @SerializedName("android_app_id")
   private Long androidAppId = null;

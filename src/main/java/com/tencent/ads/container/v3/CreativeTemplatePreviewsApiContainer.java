@@ -28,7 +28,7 @@ public class CreativeTemplatePreviewsApiContainer extends ApiContainer {
   @Inject CreativeTemplatePreviewsApi api;
 
   /**
-   * 获取广告创意预览
+   * 获取创意预览
    *
    * @param data (required)
    * @return CreativeTemplatePreviewsGetResponse

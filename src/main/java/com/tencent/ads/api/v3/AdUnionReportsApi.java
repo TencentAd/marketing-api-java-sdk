@@ -205,7 +205,7 @@ public class AdUnionReportsApi {
   }
 
   /**
-   * 联盟广告位报表接口
+   * 联盟营销位报表接口
    *
    * @param accountId (required)
    * @param dateRange (required)
@@ -237,7 +237,7 @@ public class AdUnionReportsApi {
   }
 
   /**
-   * 联盟广告位报表接口
+   * 联盟营销位报表接口
    *
    * @param accountId (required)
    * @param dateRange (required)
@@ -280,7 +280,7 @@ public class AdUnionReportsApi {
   }
 
   /**
-   * 联盟广告位报表接口 (asynchronously)
+   * 联盟营销位报表接口 (asynchronously)
    *
    * @param accountId (required)
    * @param dateRange (required)

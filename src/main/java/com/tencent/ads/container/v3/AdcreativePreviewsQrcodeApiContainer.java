@@ -28,7 +28,7 @@ public class AdcreativePreviewsQrcodeApiContainer extends ApiContainer {
   @Inject AdcreativePreviewsQrcodeApi api;
 
   /**
-   * 获取广告预览二维码
+   * 获取营销单元预览二维码
    *
    * @param accountId (required)
    * @param adgroupId (required)

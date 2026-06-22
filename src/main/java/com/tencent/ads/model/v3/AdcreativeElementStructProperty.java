@@ -18,8 +18,8 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.util.Objects;
 
-/** 广告创意元素结构体特性 */
-@ApiModel(description = "广告创意元素结构体特性")
+/** 创意元素结构体特性 */
+@ApiModel(description = "创意元素结构体特性")
 public class AdcreativeElementStructProperty {
   @SerializedName("element_mutual_exclusive")
   private Boolean elementMutualExclusive = null;

@@ -20,8 +20,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
-/** 动态广告支持情况 */
-@ApiModel(description = "动态广告支持情况")
+/** 动态营销支持情况 */
+@ApiModel(description = "动态营销支持情况")
 public class SupportDynamicAbilitySpecList {
   @SerializedName("dynamic_ability_type")
   private List<String> dynamicAbilityType = null;

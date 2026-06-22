@@ -32,7 +32,7 @@ public class AdcreativePreviewsApiContainer extends ApiContainer {
   @Inject AdcreativePreviewsApi api;
 
   /**
-   * 绑定广告预览受众
+   * 绑定营销预览受众
    *
    * @param data (required)
    * @return AdcreativePreviewsAddResponse
@@ -48,7 +48,7 @@ public class AdcreativePreviewsApiContainer extends ApiContainer {
   }
 
   /**
-   * 获取绑定的广告预览受众列表
+   * 获取绑定的营销预览受众列表
    *
    * @param accountId (required)
    * @param filtering (required)

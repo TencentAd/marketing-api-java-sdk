@@ -31,7 +31,7 @@ public class AdUnionReportsApiContainer extends ApiContainer {
   @Inject AdUnionReportsApi api;
 
   /**
-   * 联盟广告位报表接口
+   * 联盟营销位报表接口
    *
    * @param accountId (required)
    * @param dateRange (required)

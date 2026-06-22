@@ -54,7 +54,7 @@ public class DynamicCreativesApiContainer extends ApiContainer {
   }
 
   /**
-   * 删除广告创意
+   * 删除创意
    *
    * @param data (required)
    * @return DynamicCreativesDeleteResponse

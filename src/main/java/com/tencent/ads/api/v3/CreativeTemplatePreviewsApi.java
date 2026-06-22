@@ -143,7 +143,7 @@ public class CreativeTemplatePreviewsApi {
   }
 
   /**
-   * 获取广告创意预览
+   * 获取创意预览
    *
    * @param data (required)
    * @return CreativeTemplatePreviewsGetResponse
@@ -158,7 +158,7 @@ public class CreativeTemplatePreviewsApi {
   }
 
   /**
-   * 获取广告创意预览
+   * 获取创意预览
    *
    * @param data (required)
    * @return ApiResponse&lt;CreativeTemplatePreviewsGetResponse&gt;
@@ -174,7 +174,7 @@ public class CreativeTemplatePreviewsApi {
   }
 
   /**
-   * 获取广告创意预览 (asynchronously)
+   * 获取创意预览 (asynchronously)
    *
    * @param data (required)
    * @param callback The callback to be executed when the API call finishes

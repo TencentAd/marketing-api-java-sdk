@@ -20,8 +20,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
-/** 广告创意元素枚举值特性 */
-@ApiModel(description = "广告创意元素枚举值特性")
+/** 创意元素枚举值特性 */
+@ApiModel(description = "创意元素枚举值特性")
 public class AdcreativeElementEnumProperty {
   @SerializedName("default")
   private String _default = null;

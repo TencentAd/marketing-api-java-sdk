@@ -18,8 +18,8 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.util.Objects;
 
-/** 修改广告衍生创意配置出价 */
-@ApiModel(description = "修改广告衍生创意配置出价")
+/** 修改营销衍生创意配置出价 */
+@ApiModel(description = "修改营销衍生创意配置出价")
 public class UpdateAdgroupDeriveConfItem {
   @SerializedName("adgroup_id")
   private Long adgroupId = null;

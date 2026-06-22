@@ -20,8 +20,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
-/** 广告上下文信息 */
-@ApiModel(description = "广告上下文信息")
+/** 营销上下文信息 */
+@ApiModel(description = "营销上下文信息")
 public class AdContext {
   @SerializedName("marketing_goal")
   private MarketingGoal marketingGoal = null;

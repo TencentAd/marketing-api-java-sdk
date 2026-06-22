@@ -18,8 +18,8 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.util.Objects;
 
-/** 广告创意元素数组特性 */
-@ApiModel(description = "广告创意元素数组特性")
+/** 创意元素数组特性 */
+@ApiModel(description = "创意元素数组特性")
 public class AdcreativeElementArrayProperty {
   @SerializedName("min_number")
   private Long minNumber = null;

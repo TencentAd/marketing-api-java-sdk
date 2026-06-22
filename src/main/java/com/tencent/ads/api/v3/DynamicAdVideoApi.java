@@ -368,7 +368,7 @@ public class DynamicAdVideoApi {
   }
 
   /**
-   * 获取投放的动态广告视频
+   * 获取投放的动态营销视频
    *
    * @param accountId (required)
    * @param productCatalogId (required)
@@ -402,7 +402,7 @@ public class DynamicAdVideoApi {
   }
 
   /**
-   * 获取投放的动态广告视频
+   * 获取投放的动态营销视频
    *
    * @param accountId (required)
    * @param productCatalogId (required)
@@ -439,7 +439,7 @@ public class DynamicAdVideoApi {
   }
 
   /**
-   * 获取投放的动态广告视频 (asynchronously)
+   * 获取投放的动态营销视频 (asynchronously)
    *
    * @param accountId (required)
    * @param productCatalogId (required)

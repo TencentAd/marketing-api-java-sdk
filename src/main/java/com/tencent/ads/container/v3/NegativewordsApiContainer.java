@@ -34,7 +34,7 @@ public class NegativewordsApiContainer extends ApiContainer {
   @Inject NegativewordsApi api;
 
   /**
-   * 新增否定词，可在广告、创意上新增
+   * 新增否定词，可在营销单元、创意上新增
    *
    * @param data (required)
    * @return NegativewordsAddResponse
@@ -50,7 +50,7 @@ public class NegativewordsApiContainer extends ApiContainer {
   }
 
   /**
-   * 查询否定词，可查询广告、创意的否词
+   * 查询否定词，可查询营销单元、创意的否词
    *
    * @param accountId (required)
    * @param adgroupIds (optional)
@@ -74,7 +74,7 @@ public class NegativewordsApiContainer extends ApiContainer {
   }
 
   /**
-   * 更新否定词，可在广告、创意上更新
+   * 更新否定词，可在营销单元、创意上更新
    *
    * @param data (required)
    * @return NegativewordsUpdateResponse

@@ -145,7 +145,7 @@ public class NegativewordsApi {
   }
 
   /**
-   * 新增否定词，可在广告、创意上新增
+   * 新增否定词，可在营销单元、创意上新增
    *
    * @param data (required)
    * @return NegativewordsAddResponse
@@ -159,7 +159,7 @@ public class NegativewordsApi {
   }
 
   /**
-   * 新增否定词，可在广告、创意上新增
+   * 新增否定词，可在营销单元、创意上新增
    *
    * @param data (required)
    * @return ApiResponse&lt;NegativewordsAddResponse&gt;
@@ -175,7 +175,7 @@ public class NegativewordsApi {
   }
 
   /**
-   * 新增否定词，可在广告、创意上新增 (asynchronously)
+   * 新增否定词，可在营销单元、创意上新增 (asynchronously)
    *
    * @param data (required)
    * @param callback The callback to be executed when the API call finishes
@@ -335,7 +335,7 @@ public class NegativewordsApi {
   }
 
   /**
-   * 查询否定词，可查询广告、创意的否词
+   * 查询否定词，可查询营销单元、创意的否词
    *
    * @param accountId (required)
    * @param adgroupIds (optional)
@@ -358,7 +358,7 @@ public class NegativewordsApi {
   }
 
   /**
-   * 查询否定词，可查询广告、创意的否词
+   * 查询否定词，可查询营销单元、创意的否词
    *
    * @param accountId (required)
    * @param adgroupIds (optional)
@@ -383,7 +383,7 @@ public class NegativewordsApi {
   }
 
   /**
-   * 查询否定词，可查询广告、创意的否词 (asynchronously)
+   * 查询否定词，可查询营销单元、创意的否词 (asynchronously)
    *
    * @param accountId (required)
    * @param adgroupIds (optional)
@@ -529,7 +529,7 @@ public class NegativewordsApi {
   }
 
   /**
-   * 更新否定词，可在广告、创意上更新
+   * 更新否定词，可在营销单元、创意上更新
    *
    * @param data (required)
    * @return NegativewordsUpdateResponse
@@ -544,7 +544,7 @@ public class NegativewordsApi {
   }
 
   /**
-   * 更新否定词，可在广告、创意上更新
+   * 更新否定词，可在营销单元、创意上更新
    *
    * @param data (required)
    * @return ApiResponse&lt;NegativewordsUpdateResponse&gt;
@@ -560,7 +560,7 @@ public class NegativewordsApi {
   }
 
   /**
-   * 更新否定词，可在广告、创意上更新 (asynchronously)
+   * 更新否定词，可在营销单元、创意上更新 (asynchronously)
    *
    * @param data (required)
    * @param callback The callback to be executed when the API call finishes

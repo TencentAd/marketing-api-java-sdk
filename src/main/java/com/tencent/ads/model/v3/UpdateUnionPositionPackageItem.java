@@ -20,8 +20,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
-/** 修改广告定投腾讯广告联盟流量包信息 */
-@ApiModel(description = "修改广告定投腾讯广告联盟流量包信息")
+/** 修改营销定投腾讯营销联盟流量包信息 */
+@ApiModel(description = "修改营销定投腾讯营销联盟流量包信息")
 public class UpdateUnionPositionPackageItem {
   @SerializedName("adgroup_id")
   private Long adgroupId = null;

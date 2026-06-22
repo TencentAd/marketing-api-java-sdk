@@ -19,7 +19,7 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-/** 原生推广页顶部素材和广告创意素材之间的替换关系 */
+/** 原生推广页顶部素材和创意素材之间的替换关系 */
 @JsonAdapter(OverrideCanvasHeadOption.Adapter.class)
 public enum OverrideCanvasHeadOption {
   CANVAS_OVERRIDE_CREATIVE("OPTION_CANVAS_OVERRIDE_CREATIVE"),

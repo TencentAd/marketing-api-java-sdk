@@ -19,7 +19,7 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-/** 广告行为类型 */
+/** 营销行为类型 */
 @JsonAdapter(AdRuleType.Adapter.class)
 public enum AdRuleType {
   EXPOSURE("EXPOSURE"),

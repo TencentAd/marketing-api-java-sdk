@@ -47,7 +47,7 @@ public class DynamicAdVideoApiContainer extends ApiContainer {
   }
 
   /**
-   * 获取投放的动态广告视频
+   * 获取投放的动态营销视频
    *
    * @param accountId (required)
    * @param productCatalogId (required)

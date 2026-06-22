@@ -19,7 +19,7 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-/** 动态广告类型 */
+/** 动态营销类型 */
 @JsonAdapter(DynamicAdType.Adapter.class)
 public enum DynamicAdType {
   COMMON("DYNAMIC_AD_TYPE_COMMON"),

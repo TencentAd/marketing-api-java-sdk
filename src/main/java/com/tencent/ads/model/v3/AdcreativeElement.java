@@ -18,8 +18,8 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.util.Objects;
 
-/** 广告创意元素 */
-@ApiModel(description = "广告创意元素")
+/** 创意元素 */
+@ApiModel(description = "创意元素")
 public class AdcreativeElement {
   @SerializedName("name")
   private String name = null;

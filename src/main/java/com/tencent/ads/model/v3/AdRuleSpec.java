@@ -20,8 +20,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
-/** 广告人群信息 */
-@ApiModel(description = "广告人群信息")
+/** 营销人群信息 */
+@ApiModel(description = "营销人群信息")
 public class AdRuleSpec {
   @SerializedName("rule_type")
   private AdRuleType ruleType = null;

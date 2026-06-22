@@ -19,7 +19,7 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-/** 广告在系统中的状态 */
+/** 营销单元在系统中的状态 */
 @JsonAdapter(CalcAdGroupStatus.Adapter.class)
 public enum CalcAdGroupStatus {
   ADGROUP_STATUS_FROZEN("ADGROUP_STATUS_FROZEN"),

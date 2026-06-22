@@ -19,7 +19,7 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-/** 广告智能定向功能 */
+/** 营销智能定向功能 */
 @JsonAdapter(SmartTargetingMode.Adapter.class)
 public enum SmartTargetingMode {
   SMART_TARGETING_MANUAL("SMART_TARGETING_MANUAL");

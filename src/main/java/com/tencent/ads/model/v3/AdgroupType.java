@@ -19,7 +19,7 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-/** 广告类型 */
+/** 营销类型 */
 @JsonAdapter(AdgroupType.Adapter.class)
 public enum AdgroupType {
   SEARCH("ADGROUP_TYPE_SEARCH"),

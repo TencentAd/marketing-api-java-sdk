@@ -18,8 +18,8 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.util.Objects;
 
-/** 删除广告创意 */
-@ApiModel(description = "删除广告创意")
+/** 删除创意 */
+@ApiModel(description = "删除创意")
 public class DeleteDynamicCreativeItem {
   @SerializedName("dynamic_creative_id")
   private Long dynamicCreativeId = null;

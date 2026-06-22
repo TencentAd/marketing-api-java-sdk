@@ -18,8 +18,8 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.util.Objects;
 
-/** 智投广告组参数列表 */
-@ApiModel(description = "智投广告组参数列表")
+/** 智投营销组参数列表 */
+@ApiModel(description = "智投营销组参数列表")
 public class SmartDeliveryAdgroupParameter {
   @SerializedName("optimization_goal")
   private OptimizationGoal optimizationGoal = null;

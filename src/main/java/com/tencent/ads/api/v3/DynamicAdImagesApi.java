@@ -144,7 +144,7 @@ public class DynamicAdImagesApi {
   }
 
   /**
-   * 创建用于投放的动态广告图片
+   * 创建用于投放的动态营销图片
    *
    * @param data (required)
    * @return DynamicAdImagesAddResponse
@@ -158,7 +158,7 @@ public class DynamicAdImagesApi {
   }
 
   /**
-   * 创建用于投放的动态广告图片
+   * 创建用于投放的动态营销图片
    *
    * @param data (required)
    * @return ApiResponse&lt;DynamicAdImagesAddResponse&gt;
@@ -174,7 +174,7 @@ public class DynamicAdImagesApi {
   }
 
   /**
-   * 创建用于投放的动态广告图片 (asynchronously)
+   * 创建用于投放的动态营销图片 (asynchronously)
    *
    * @param data (required)
    * @param callback The callback to be executed when the API call finishes
@@ -338,7 +338,7 @@ public class DynamicAdImagesApi {
   }
 
   /**
-   * 获取动态广告图片信息
+   * 获取动态营销图片信息
    *
    * @param accountId (required)
    * @param filtering (optional)
@@ -363,7 +363,7 @@ public class DynamicAdImagesApi {
   }
 
   /**
-   * 获取动态广告图片信息
+   * 获取动态营销图片信息
    *
    * @param accountId (required)
    * @param filtering (optional)
@@ -390,7 +390,7 @@ public class DynamicAdImagesApi {
   }
 
   /**
-   * 获取动态广告图片信息 (asynchronously)
+   * 获取动态营销图片信息 (asynchronously)
    *
    * @param accountId (required)
    * @param filtering (optional)

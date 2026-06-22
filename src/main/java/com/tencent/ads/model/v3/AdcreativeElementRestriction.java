@@ -20,8 +20,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
-/** 广告创意元素需满足的限制条件 */
-@ApiModel(description = "广告创意元素需满足的限制条件")
+/** 创意元素需满足的限制条件 */
+@ApiModel(description = "创意元素需满足的限制条件")
 public class AdcreativeElementRestriction {
   @SerializedName("text_restriction")
   private TextRestriction textRestriction = null;

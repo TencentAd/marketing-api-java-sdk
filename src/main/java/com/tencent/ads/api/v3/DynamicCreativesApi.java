@@ -313,7 +313,7 @@ public class DynamicCreativesApi {
   }
 
   /**
-   * 删除广告创意
+   * 删除创意
    *
    * @param data (required)
    * @return DynamicCreativesDeleteResponse
@@ -328,7 +328,7 @@ public class DynamicCreativesApi {
   }
 
   /**
-   * 删除广告创意
+   * 删除创意
    *
    * @param data (required)
    * @return ApiResponse&lt;DynamicCreativesDeleteResponse&gt;
@@ -344,7 +344,7 @@ public class DynamicCreativesApi {
   }
 
   /**
-   * 删除广告创意 (asynchronously)
+   * 删除创意 (asynchronously)
    *
    * @param data (required)
    * @param callback The callback to be executed when the API call finishes

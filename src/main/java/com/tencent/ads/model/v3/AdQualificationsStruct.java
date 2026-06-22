@@ -20,8 +20,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
-/** 广告资质信息 */
-@ApiModel(description = "广告资质信息")
+/** 资质信息 */
+@ApiModel(description = "资质信息")
 public class AdQualificationsStruct {
   @SerializedName("qualification_id")
   private Long qualificationId = null;
