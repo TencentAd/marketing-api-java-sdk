@@ -251,6 +251,9 @@ public class AdgroupsGetListStruct {
   @SerializedName("custom_cost_roi_cap")
   private Double customCostRoiCap = null;
 
+  @SerializedName("industry_value_explore")
+  private IndustryValueExplore industryValueExplore = null;
+
   @SerializedName("enable_steady_exploration")
   private Boolean enableSteadyExploration = null;
 
@@ -1746,6 +1749,25 @@ public class AdgroupsGetListStruct {
     this.customCostRoiCap = customCostRoiCap;
   }
 
+  public AdgroupsGetListStruct industryValueExplore(IndustryValueExplore industryValueExplore) {
+    this.industryValueExplore = industryValueExplore;
+    return this;
+  }
+
+  /**
+   * Get industryValueExplore
+   *
+   * @return industryValueExplore
+   */
+  @ApiModelProperty(value = "")
+  public IndustryValueExplore getIndustryValueExplore() {
+    return industryValueExplore;
+  }
+
+  public void setIndustryValueExplore(IndustryValueExplore industryValueExplore) {
+    this.industryValueExplore = industryValueExplore;
+  }
+
   public AdgroupsGetListStruct enableSteadyExploration(Boolean enableSteadyExploration) {
     this.enableSteadyExploration = enableSteadyExploration;
     return this;
@@ -1904,6 +1926,7 @@ public class AdgroupsGetListStruct {
         && Objects.equals(
             this.liveRecommendStrategyEnabled, adgroupsGetListStruct.liveRecommendStrategyEnabled)
         && Objects.equals(this.customCostRoiCap, adgroupsGetListStruct.customCostRoiCap)
+        && Objects.equals(this.industryValueExplore, adgroupsGetListStruct.industryValueExplore)
         && Objects.equals(
             this.enableSteadyExploration, adgroupsGetListStruct.enableSteadyExploration)
         && Objects.equals(this.adxRealtimeType, adgroupsGetListStruct.adxRealtimeType)
@@ -1989,6 +2012,7 @@ public class AdgroupsGetListStruct {
         enableBreakthroughSiteset,
         liveRecommendStrategyEnabled,
         customCostRoiCap,
+        industryValueExplore,
         enableSteadyExploration,
         adxRealtimeType,
         smartTargetingStatus);

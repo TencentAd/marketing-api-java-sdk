@@ -138,6 +138,9 @@ public class AdgroupsUpdateRequest {
   @SerializedName("custom_cost_roi_cap")
   private Double customCostRoiCap = null;
 
+  @SerializedName("industry_value_explore")
+  private IndustryValueExplore industryValueExplore = null;
+
   @SerializedName("smart_targeting_mode")
   private SmartTargetingMode smartTargetingMode = null;
 
@@ -908,6 +911,25 @@ public class AdgroupsUpdateRequest {
     this.customCostRoiCap = customCostRoiCap;
   }
 
+  public AdgroupsUpdateRequest industryValueExplore(IndustryValueExplore industryValueExplore) {
+    this.industryValueExplore = industryValueExplore;
+    return this;
+  }
+
+  /**
+   * Get industryValueExplore
+   *
+   * @return industryValueExplore
+   */
+  @ApiModelProperty(value = "")
+  public IndustryValueExplore getIndustryValueExplore() {
+    return industryValueExplore;
+  }
+
+  public void setIndustryValueExplore(IndustryValueExplore industryValueExplore) {
+    this.industryValueExplore = industryValueExplore;
+  }
+
   public AdgroupsUpdateRequest smartTargetingMode(SmartTargetingMode smartTargetingMode) {
     this.smartTargetingMode = smartTargetingMode;
     return this;
@@ -1007,6 +1029,7 @@ public class AdgroupsUpdateRequest {
         && Objects.equals(
             this.liveRecommendStrategyEnabled, adgroupsUpdateRequest.liveRecommendStrategyEnabled)
         && Objects.equals(this.customCostRoiCap, adgroupsUpdateRequest.customCostRoiCap)
+        && Objects.equals(this.industryValueExplore, adgroupsUpdateRequest.industryValueExplore)
         && Objects.equals(this.smartTargetingMode, adgroupsUpdateRequest.smartTargetingMode)
         && Objects.equals(this.smartCouponMode, adgroupsUpdateRequest.smartCouponMode);
   }
@@ -1053,6 +1076,7 @@ public class AdgroupsUpdateRequest {
         cloudUnionSpec,
         liveRecommendStrategyEnabled,
         customCostRoiCap,
+        industryValueExplore,
         smartTargetingMode,
         smartCouponMode);
   }

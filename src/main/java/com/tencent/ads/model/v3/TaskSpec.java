@@ -119,6 +119,9 @@ public class TaskSpec {
   private List<UpdateDynamicCreativeSearchIntelligentExtensionItem>
       updateDynamicCreativeSearchIntelligentExtensionSpec = null;
 
+  @SerializedName("dpadbuddy_spec")
+  private List<DpadbuddyItem> dpadbuddySpec = null;
+
   public TaskSpec updateUnionPositionPackageSpec(
       List<UpdateUnionPositionPackageItem> updateUnionPositionPackageSpec) {
     this.updateUnionPositionPackageSpec = updateUnionPositionPackageSpec;
@@ -1042,6 +1045,33 @@ public class TaskSpec {
         updateDynamicCreativeSearchIntelligentExtensionSpec;
   }
 
+  public TaskSpec dpadbuddySpec(List<DpadbuddyItem> dpadbuddySpec) {
+    this.dpadbuddySpec = dpadbuddySpec;
+    return this;
+  }
+
+  public TaskSpec addDpadbuddySpecItem(DpadbuddyItem dpadbuddySpecItem) {
+    if (this.dpadbuddySpec == null) {
+      this.dpadbuddySpec = new ArrayList<DpadbuddyItem>();
+    }
+    this.dpadbuddySpec.add(dpadbuddySpecItem);
+    return this;
+  }
+
+  /**
+   * Get dpadbuddySpec
+   *
+   * @return dpadbuddySpec
+   */
+  @ApiModelProperty(value = "")
+  public List<DpadbuddyItem> getDpadbuddySpec() {
+    return dpadbuddySpec;
+  }
+
+  public void setDpadbuddySpec(List<DpadbuddyItem> dpadbuddySpec) {
+    this.dpadbuddySpec = dpadbuddySpec;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -1105,7 +1135,8 @@ public class TaskSpec {
         && Objects.equals(this.deleteAccountComponentSpec, taskSpec.deleteAccountComponentSpec)
         && Objects.equals(
             this.updateDynamicCreativeSearchIntelligentExtensionSpec,
-            taskSpec.updateDynamicCreativeSearchIntelligentExtensionSpec);
+            taskSpec.updateDynamicCreativeSearchIntelligentExtensionSpec)
+        && Objects.equals(this.dpadbuddySpec, taskSpec.dpadbuddySpec);
   }
 
   @Override
@@ -1140,7 +1171,8 @@ public class TaskSpec {
         updateComponentSharingSpec,
         updateAdgroupSmartDeliveryGoalSpec,
         deleteAccountComponentSpec,
-        updateDynamicCreativeSearchIntelligentExtensionSpec);
+        updateDynamicCreativeSearchIntelligentExtensionSpec,
+        dpadbuddySpec);
   }
 
   @Override

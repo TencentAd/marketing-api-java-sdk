@@ -93,10 +93,8 @@ public class App {
   @Inject DynamicAdImagesApiContainer dynamicAdImagesApiContainer;
   @Inject DynamicAdVideoApiContainer dynamicAdVideoApiContainer;
   @Inject DynamicAdVideoTemplatesApiContainer dynamicAdVideoTemplatesApiContainer;
-  @Inject DynamicCreativePreviewsApiContainer dynamicCreativePreviewsApiContainer;
   @Inject DynamicCreativeReviewResultsApiContainer dynamicCreativeReviewResultsApiContainer;
   @Inject DynamicCreativesApiContainer dynamicCreativesApiContainer;
-  @Inject EcommerceOrderApiContainer ecommerceOrderApiContainer;
   @Inject ElementAppealQuotaApiContainer elementAppealQuotaApiContainer;
   @Inject ElementAppealReviewApiContainer elementAppealReviewApiContainer;
   @Inject EstimationApiContainer estimationApiContainer;
@@ -172,6 +170,7 @@ public class App {
   @Inject OptimizationGoalPermissionsApiContainer optimizationGoalPermissionsApiContainer;
   @Inject OrganizationAccountRelationApiContainer organizationAccountRelationApiContainer;
   @Inject PagesApiContainer pagesApiContainer;
+  @Inject PreReviewTaskApiContainer preReviewTaskApiContainer;
   @Inject ProductCatalogsApiContainer productCatalogsApiContainer;
   @Inject ProductCategoriesListApiContainer productCategoriesListApiContainer;
   @Inject ProductItemsApiContainer productItemsApiContainer;
@@ -205,6 +204,7 @@ public class App {
   @Inject RtaexpDspTagDataApiContainer rtaexpDspTagDataApiContainer;
   @Inject RtatargetApiContainer rtatargetApiContainer;
   @Inject RtatargetBindApiContainer rtatargetBindApiContainer;
+  @Inject SaasMiniprogramPrereviewApiContainer saasMiniprogramPrereviewApiContainer;
   @Inject SceneSpecTagsApiContainer sceneSpecTagsApiContainer;
   @Inject SearchAdgroupsApiContainer searchAdgroupsApiContainer;
   @Inject SearchDynamicCreativesApiContainer searchDynamicCreativesApiContainer;
@@ -255,6 +255,8 @@ public class App {
   @Inject WechatPagesCustomApiContainer wechatPagesCustomApiContainer;
   @Inject WechatPagesGrantinfoApiContainer wechatPagesGrantinfoApiContainer;
   @Inject WechatShopApiContainer wechatShopApiContainer;
+  @Inject WechatShopActivityApiContainer wechatShopActivityApiContainer;
+  @Inject WechatShopActivityListApiContainer wechatShopActivityListApiContainer;
   @Inject WechatShopAuthorizationApiContainer wechatShopAuthorizationApiContainer;
   @Inject WechatShopAuthorizationStatusApiContainer wechatShopAuthorizationStatusApiContainer;
 
@@ -263,6 +265,8 @@ public class App {
 
   @Inject WechatStoreCatalogsApiContainer wechatStoreCatalogsApiContainer;
   @Inject WechatStoreProductItemsApiContainer wechatStoreProductItemsApiContainer;
+  @Inject WecomCustomerAcquisitionLinkApiContainer wecomCustomerAcquisitionLinkApiContainer;
+  @Inject WecomDepartmentUserApiContainer wecomDepartmentUserApiContainer;
   @Inject WildcardsApiContainer wildcardsApiContainer;
   @Inject WxGamePlayablePageApiContainer wxGamePlayablePageApiContainer;
   @Inject XijingComplexTemplateApiContainer xijingComplexTemplateApiContainer;
@@ -573,20 +577,12 @@ public class App {
     return dynamicAdVideoTemplatesApiContainer;
   }
 
-  public DynamicCreativePreviewsApiContainer dynamicCreativePreviews() {
-    return dynamicCreativePreviewsApiContainer;
-  }
-
   public DynamicCreativeReviewResultsApiContainer dynamicCreativeReviewResults() {
     return dynamicCreativeReviewResultsApiContainer;
   }
 
   public DynamicCreativesApiContainer dynamicCreatives() {
     return dynamicCreativesApiContainer;
-  }
-
-  public EcommerceOrderApiContainer ecommerceOrder() {
-    return ecommerceOrderApiContainer;
   }
 
   public ElementAppealQuotaApiContainer elementAppealQuota() {
@@ -865,6 +861,10 @@ public class App {
     return pagesApiContainer;
   }
 
+  public PreReviewTaskApiContainer preReviewTask() {
+    return preReviewTaskApiContainer;
+  }
+
   public ProductCatalogsApiContainer productCatalogs() {
     return productCatalogsApiContainer;
   }
@@ -983,6 +983,10 @@ public class App {
 
   public RtatargetBindApiContainer rtatargetBind() {
     return rtatargetBindApiContainer;
+  }
+
+  public SaasMiniprogramPrereviewApiContainer saasMiniprogramPrereview() {
+    return saasMiniprogramPrereviewApiContainer;
   }
 
   public SceneSpecTagsApiContainer sceneSpecTags() {
@@ -1154,6 +1158,14 @@ public class App {
     return wechatShopApiContainer;
   }
 
+  public WechatShopActivityApiContainer wechatShopActivity() {
+    return wechatShopActivityApiContainer;
+  }
+
+  public WechatShopActivityListApiContainer wechatShopActivityList() {
+    return wechatShopActivityListApiContainer;
+  }
+
   public WechatShopAuthorizationApiContainer wechatShopAuthorization() {
     return wechatShopAuthorizationApiContainer;
   }
@@ -1172,6 +1184,14 @@ public class App {
 
   public WechatStoreProductItemsApiContainer wechatStoreProductItems() {
     return wechatStoreProductItemsApiContainer;
+  }
+
+  public WecomCustomerAcquisitionLinkApiContainer wecomCustomerAcquisitionLink() {
+    return wecomCustomerAcquisitionLinkApiContainer;
+  }
+
+  public WecomDepartmentUserApiContainer wecomDepartmentUser() {
+    return wecomDepartmentUserApiContainer;
   }
 
   public WildcardsApiContainer wildcards() {

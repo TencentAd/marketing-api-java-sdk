@@ -44,6 +44,15 @@ public class ElementRejectDetailInfoListStruct {
   @SerializedName("reject_info_location")
   private List<RejectInfoLocationListStruct> rejectInfoLocation = null;
 
+  @SerializedName("video_asr_infos")
+  private List<VideoAsrInfoStruct> videoAsrInfos = null;
+
+  @SerializedName("video_ocr_infos")
+  private List<VideoOcrInfoStruct> videoOcrInfos = null;
+
+  @SerializedName("caption_infos")
+  private List<CaptionInfoStruct> captionInfos = null;
+
   public ElementRejectDetailInfoListStruct elementName(String elementName) {
     this.elementName = elementName;
     return this;
@@ -187,6 +196,89 @@ public class ElementRejectDetailInfoListStruct {
     this.rejectInfoLocation = rejectInfoLocation;
   }
 
+  public ElementRejectDetailInfoListStruct videoAsrInfos(List<VideoAsrInfoStruct> videoAsrInfos) {
+    this.videoAsrInfos = videoAsrInfos;
+    return this;
+  }
+
+  public ElementRejectDetailInfoListStruct addVideoAsrInfosItem(
+      VideoAsrInfoStruct videoAsrInfosItem) {
+    if (this.videoAsrInfos == null) {
+      this.videoAsrInfos = new ArrayList<VideoAsrInfoStruct>();
+    }
+    this.videoAsrInfos.add(videoAsrInfosItem);
+    return this;
+  }
+
+  /**
+   * Get videoAsrInfos
+   *
+   * @return videoAsrInfos
+   */
+  @ApiModelProperty(value = "")
+  public List<VideoAsrInfoStruct> getVideoAsrInfos() {
+    return videoAsrInfos;
+  }
+
+  public void setVideoAsrInfos(List<VideoAsrInfoStruct> videoAsrInfos) {
+    this.videoAsrInfos = videoAsrInfos;
+  }
+
+  public ElementRejectDetailInfoListStruct videoOcrInfos(List<VideoOcrInfoStruct> videoOcrInfos) {
+    this.videoOcrInfos = videoOcrInfos;
+    return this;
+  }
+
+  public ElementRejectDetailInfoListStruct addVideoOcrInfosItem(
+      VideoOcrInfoStruct videoOcrInfosItem) {
+    if (this.videoOcrInfos == null) {
+      this.videoOcrInfos = new ArrayList<VideoOcrInfoStruct>();
+    }
+    this.videoOcrInfos.add(videoOcrInfosItem);
+    return this;
+  }
+
+  /**
+   * Get videoOcrInfos
+   *
+   * @return videoOcrInfos
+   */
+  @ApiModelProperty(value = "")
+  public List<VideoOcrInfoStruct> getVideoOcrInfos() {
+    return videoOcrInfos;
+  }
+
+  public void setVideoOcrInfos(List<VideoOcrInfoStruct> videoOcrInfos) {
+    this.videoOcrInfos = videoOcrInfos;
+  }
+
+  public ElementRejectDetailInfoListStruct captionInfos(List<CaptionInfoStruct> captionInfos) {
+    this.captionInfos = captionInfos;
+    return this;
+  }
+
+  public ElementRejectDetailInfoListStruct addCaptionInfosItem(CaptionInfoStruct captionInfosItem) {
+    if (this.captionInfos == null) {
+      this.captionInfos = new ArrayList<CaptionInfoStruct>();
+    }
+    this.captionInfos.add(captionInfosItem);
+    return this;
+  }
+
+  /**
+   * Get captionInfos
+   *
+   * @return captionInfos
+   */
+  @ApiModelProperty(value = "")
+  public List<CaptionInfoStruct> getCaptionInfos() {
+    return captionInfos;
+  }
+
+  public void setCaptionInfos(List<CaptionInfoStruct> captionInfos) {
+    this.captionInfos = captionInfos;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -204,7 +296,10 @@ public class ElementRejectDetailInfoListStruct {
         && Objects.equals(this.reason, elementRejectDetailInfoListStruct.reason)
         && Objects.equals(this.reviewStatus, elementRejectDetailInfoListStruct.reviewStatus)
         && Objects.equals(
-            this.rejectInfoLocation, elementRejectDetailInfoListStruct.rejectInfoLocation);
+            this.rejectInfoLocation, elementRejectDetailInfoListStruct.rejectInfoLocation)
+        && Objects.equals(this.videoAsrInfos, elementRejectDetailInfoListStruct.videoAsrInfos)
+        && Objects.equals(this.videoOcrInfos, elementRejectDetailInfoListStruct.videoOcrInfos)
+        && Objects.equals(this.captionInfos, elementRejectDetailInfoListStruct.captionInfos);
   }
 
   @Override
@@ -216,7 +311,10 @@ public class ElementRejectDetailInfoListStruct {
         componentInfo,
         reason,
         reviewStatus,
-        rejectInfoLocation);
+        rejectInfoLocation,
+        videoAsrInfos,
+        videoOcrInfos,
+        captionInfos);
   }
 
   @Override

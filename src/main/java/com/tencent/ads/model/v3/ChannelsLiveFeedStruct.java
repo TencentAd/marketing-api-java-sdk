@@ -24,9 +24,6 @@ public class ChannelsLiveFeedStruct {
   @SerializedName("wechat_channels_account_id")
   private String wechatChannelsAccountId = null;
 
-  @SerializedName("cover_id")
-  private String coverId = null;
-
   @SerializedName("rewarded_mask_switch")
   private Boolean rewardedMaskSwitch = null;
 
@@ -47,25 +44,6 @@ public class ChannelsLiveFeedStruct {
 
   public void setWechatChannelsAccountId(String wechatChannelsAccountId) {
     this.wechatChannelsAccountId = wechatChannelsAccountId;
-  }
-
-  public ChannelsLiveFeedStruct coverId(String coverId) {
-    this.coverId = coverId;
-    return this;
-  }
-
-  /**
-   * Get coverId
-   *
-   * @return coverId
-   */
-  @ApiModelProperty(value = "")
-  public String getCoverId() {
-    return coverId;
-  }
-
-  public void setCoverId(String coverId) {
-    this.coverId = coverId;
   }
 
   public ChannelsLiveFeedStruct rewardedMaskSwitch(Boolean rewardedMaskSwitch) {
@@ -98,13 +76,12 @@ public class ChannelsLiveFeedStruct {
     ChannelsLiveFeedStruct channelsLiveFeedStruct = (ChannelsLiveFeedStruct) o;
     return Objects.equals(
             this.wechatChannelsAccountId, channelsLiveFeedStruct.wechatChannelsAccountId)
-        && Objects.equals(this.coverId, channelsLiveFeedStruct.coverId)
         && Objects.equals(this.rewardedMaskSwitch, channelsLiveFeedStruct.rewardedMaskSwitch);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(wechatChannelsAccountId, coverId, rewardedMaskSwitch);
+    return Objects.hash(wechatChannelsAccountId, rewardedMaskSwitch);
   }
 
   @Override

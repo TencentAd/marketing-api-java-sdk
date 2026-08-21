@@ -29,6 +29,10 @@ public class GetChannelsUserpageobjects {
 
   public AdContext adContext = null;
 
+  public List<String> componentTypeList = null;
+
+  public String componentUuid = null;
+
   public List<String> fields = null;
 
   public void init() {
@@ -53,6 +57,8 @@ public class GetChannelsUserpageobjects {
                 count,
                 wechatChannelsAccountId,
                 adContext,
+                componentTypeList,
+                componentUuid,
                 fields);
     return response;
   }

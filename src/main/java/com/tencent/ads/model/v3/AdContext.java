@@ -68,6 +68,9 @@ public class AdContext {
   @SerializedName("adgroup_type")
   private AdgroupType adgroupType = null;
 
+  @SerializedName("delivery_scene")
+  private DeliveryScene deliveryScene = null;
+
   public AdContext marketingGoal(MarketingGoal marketingGoal) {
     this.marketingGoal = marketingGoal;
     return this;
@@ -361,6 +364,25 @@ public class AdContext {
     this.adgroupType = adgroupType;
   }
 
+  public AdContext deliveryScene(DeliveryScene deliveryScene) {
+    this.deliveryScene = deliveryScene;
+    return this;
+  }
+
+  /**
+   * Get deliveryScene
+   *
+   * @return deliveryScene
+   */
+  @ApiModelProperty(value = "")
+  public DeliveryScene getDeliveryScene() {
+    return deliveryScene;
+  }
+
+  public void setDeliveryScene(DeliveryScene deliveryScene) {
+    this.deliveryScene = deliveryScene;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -384,7 +406,8 @@ public class AdContext {
         && Objects.equals(this.mpaSpec, adContext.mpaSpec)
         && Objects.equals(this.marketingAssetOuterSpec, adContext.marketingAssetOuterSpec)
         && Objects.equals(this.dynamicAdType, adContext.dynamicAdType)
-        && Objects.equals(this.adgroupType, adContext.adgroupType);
+        && Objects.equals(this.adgroupType, adContext.adgroupType)
+        && Objects.equals(this.deliveryScene, adContext.deliveryScene);
   }
 
   @Override
@@ -404,7 +427,8 @@ public class AdContext {
         mpaSpec,
         marketingAssetOuterSpec,
         dynamicAdType,
-        adgroupType);
+        adgroupType,
+        deliveryScene);
   }
 
   @Override

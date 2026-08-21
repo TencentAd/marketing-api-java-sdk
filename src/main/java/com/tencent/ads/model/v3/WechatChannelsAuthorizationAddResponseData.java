@@ -19,9 +19,6 @@ import java.util.Objects;
 
 /** WechatChannelsAuthorizationAddResponseData */
 public class WechatChannelsAuthorizationAddResponseData {
-  @SerializedName("finder_username")
-  private String finderUsername = null;
-
   @SerializedName("authorization_qr_code_url")
   private String authorizationQrCodeUrl = null;
 
@@ -37,24 +34,8 @@ public class WechatChannelsAuthorizationAddResponseData {
   @SerializedName("wechat_channels_account_id")
   private String wechatChannelsAccountId = null;
 
-  public WechatChannelsAuthorizationAddResponseData finderUsername(String finderUsername) {
-    this.finderUsername = finderUsername;
-    return this;
-  }
-
-  /**
-   * Get finderUsername
-   *
-   * @return finderUsername
-   */
-  @ApiModelProperty(value = "")
-  public String getFinderUsername() {
-    return finderUsername;
-  }
-
-  public void setFinderUsername(String finderUsername) {
-    this.finderUsername = finderUsername;
-  }
+  @SerializedName("authorization_id")
+  private String authorizationId = null;
 
   public WechatChannelsAuthorizationAddResponseData authorizationQrCodeUrl(
       String authorizationQrCodeUrl) {
@@ -156,6 +137,25 @@ public class WechatChannelsAuthorizationAddResponseData {
     this.wechatChannelsAccountId = wechatChannelsAccountId;
   }
 
+  public WechatChannelsAuthorizationAddResponseData authorizationId(String authorizationId) {
+    this.authorizationId = authorizationId;
+    return this;
+  }
+
+  /**
+   * Get authorizationId
+   *
+   * @return authorizationId
+   */
+  @ApiModelProperty(value = "")
+  public String getAuthorizationId() {
+    return authorizationId;
+  }
+
+  public void setAuthorizationId(String authorizationId) {
+    this.authorizationId = authorizationId;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -167,8 +167,6 @@ public class WechatChannelsAuthorizationAddResponseData {
     WechatChannelsAuthorizationAddResponseData wechatChannelsAuthorizationAddResponseData =
         (WechatChannelsAuthorizationAddResponseData) o;
     return Objects.equals(
-            this.finderUsername, wechatChannelsAuthorizationAddResponseData.finderUsername)
-        && Objects.equals(
             this.authorizationQrCodeUrl,
             wechatChannelsAuthorizationAddResponseData.authorizationQrCodeUrl)
         && Objects.equals(
@@ -182,18 +180,20 @@ public class WechatChannelsAuthorizationAddResponseData {
             wechatChannelsAuthorizationAddResponseData.authorizationAgreement)
         && Objects.equals(
             this.wechatChannelsAccountId,
-            wechatChannelsAuthorizationAddResponseData.wechatChannelsAccountId);
+            wechatChannelsAuthorizationAddResponseData.wechatChannelsAccountId)
+        && Objects.equals(
+            this.authorizationId, wechatChannelsAuthorizationAddResponseData.authorizationId);
   }
 
   @Override
   public int hashCode() {
     return Objects.hash(
-        finderUsername,
         authorizationQrCodeUrl,
         authorizationDescription,
         authorizationExpiredTime,
         authorizationAgreement,
-        wechatChannelsAccountId);
+        wechatChannelsAccountId,
+        authorizationId);
   }
 
   @Override

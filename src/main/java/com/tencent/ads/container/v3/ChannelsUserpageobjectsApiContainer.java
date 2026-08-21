@@ -38,6 +38,8 @@ public class ChannelsUserpageobjectsApiContainer extends ApiContainer {
    * @param count (optional)
    * @param wechatChannelsAccountId (optional)
    * @param adContext (optional)
+   * @param componentTypeList (optional)
+   * @param componentUuid (optional)
    * @param fields 返回参数的字段列表 (optional)
    * @return ChannelsUserpageobjectsGetResponse
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
@@ -51,6 +53,8 @@ public class ChannelsUserpageobjectsApiContainer extends ApiContainer {
       Long count,
       String wechatChannelsAccountId,
       AdContext adContext,
+      List<String> componentTypeList,
+      String componentUuid,
       List<String> fields,
       Pair... headerPair)
       throws ApiException, TencentAdsResponseException {
@@ -63,6 +67,8 @@ public class ChannelsUserpageobjectsApiContainer extends ApiContainer {
             count,
             wechatChannelsAccountId,
             adContext,
+            componentTypeList,
+            componentUuid,
             fields,
             headerPair);
     handleResponse(gson.toJson(resp));

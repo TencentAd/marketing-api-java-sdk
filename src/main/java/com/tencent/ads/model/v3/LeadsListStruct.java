@@ -103,7 +103,7 @@ public class LeadsListStruct {
   private String leadsWechat = null;
 
   @SerializedName("leads_gender")
-  private LeadsGenderType leadsGender = null;
+  private GenderType leadsGender = null;
 
   @SerializedName("nationality")
   private String nationality = null;
@@ -185,6 +185,21 @@ public class LeadsListStruct {
 
   @SerializedName("leads_response_duration")
   private Long leadsResponseDuration = null;
+
+  @SerializedName("leads_ip_location")
+  private String leadsIpLocation = null;
+
+  @SerializedName("finder_nick_name")
+  private String finderNickName = null;
+
+  @SerializedName("fan_status")
+  private Long fanStatus = null;
+
+  @SerializedName("staff_name")
+  private String staffName = null;
+
+  @SerializedName("common_page_id")
+  private String commonPageId = null;
 
   public LeadsListStruct accountId(Long accountId) {
     this.accountId = accountId;
@@ -699,7 +714,7 @@ public class LeadsListStruct {
     this.leadsWechat = leadsWechat;
   }
 
-  public LeadsListStruct leadsGender(LeadsGenderType leadsGender) {
+  public LeadsListStruct leadsGender(GenderType leadsGender) {
     this.leadsGender = leadsGender;
     return this;
   }
@@ -710,11 +725,11 @@ public class LeadsListStruct {
    * @return leadsGender
    */
   @ApiModelProperty(value = "")
-  public LeadsGenderType getLeadsGender() {
+  public GenderType getLeadsGender() {
     return leadsGender;
   }
 
-  public void setLeadsGender(LeadsGenderType leadsGender) {
+  public void setLeadsGender(GenderType leadsGender) {
     this.leadsGender = leadsGender;
   }
 
@@ -1231,6 +1246,101 @@ public class LeadsListStruct {
     this.leadsResponseDuration = leadsResponseDuration;
   }
 
+  public LeadsListStruct leadsIpLocation(String leadsIpLocation) {
+    this.leadsIpLocation = leadsIpLocation;
+    return this;
+  }
+
+  /**
+   * Get leadsIpLocation
+   *
+   * @return leadsIpLocation
+   */
+  @ApiModelProperty(value = "")
+  public String getLeadsIpLocation() {
+    return leadsIpLocation;
+  }
+
+  public void setLeadsIpLocation(String leadsIpLocation) {
+    this.leadsIpLocation = leadsIpLocation;
+  }
+
+  public LeadsListStruct finderNickName(String finderNickName) {
+    this.finderNickName = finderNickName;
+    return this;
+  }
+
+  /**
+   * Get finderNickName
+   *
+   * @return finderNickName
+   */
+  @ApiModelProperty(value = "")
+  public String getFinderNickName() {
+    return finderNickName;
+  }
+
+  public void setFinderNickName(String finderNickName) {
+    this.finderNickName = finderNickName;
+  }
+
+  public LeadsListStruct fanStatus(Long fanStatus) {
+    this.fanStatus = fanStatus;
+    return this;
+  }
+
+  /**
+   * Get fanStatus
+   *
+   * @return fanStatus
+   */
+  @ApiModelProperty(value = "")
+  public Long getFanStatus() {
+    return fanStatus;
+  }
+
+  public void setFanStatus(Long fanStatus) {
+    this.fanStatus = fanStatus;
+  }
+
+  public LeadsListStruct staffName(String staffName) {
+    this.staffName = staffName;
+    return this;
+  }
+
+  /**
+   * Get staffName
+   *
+   * @return staffName
+   */
+  @ApiModelProperty(value = "")
+  public String getStaffName() {
+    return staffName;
+  }
+
+  public void setStaffName(String staffName) {
+    this.staffName = staffName;
+  }
+
+  public LeadsListStruct commonPageId(String commonPageId) {
+    this.commonPageId = commonPageId;
+    return this;
+  }
+
+  /**
+   * Get commonPageId
+   *
+   * @return commonPageId
+   */
+  @ApiModelProperty(value = "")
+  public String getCommonPageId() {
+    return commonPageId;
+  }
+
+  public void setCommonPageId(String commonPageId) {
+    this.commonPageId = commonPageId;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -1294,7 +1404,12 @@ public class LeadsListStruct {
         && Objects.equals(this.allFollowRecords, leadsListStruct.allFollowRecords)
         && Objects.equals(this.correlationFactorRank, leadsListStruct.correlationFactorRank)
         && Objects.equals(this.claimAccountId, leadsListStruct.claimAccountId)
-        && Objects.equals(this.leadsResponseDuration, leadsListStruct.leadsResponseDuration);
+        && Objects.equals(this.leadsResponseDuration, leadsListStruct.leadsResponseDuration)
+        && Objects.equals(this.leadsIpLocation, leadsListStruct.leadsIpLocation)
+        && Objects.equals(this.finderNickName, leadsListStruct.finderNickName)
+        && Objects.equals(this.fanStatus, leadsListStruct.fanStatus)
+        && Objects.equals(this.staffName, leadsListStruct.staffName)
+        && Objects.equals(this.commonPageId, leadsListStruct.commonPageId);
   }
 
   @Override
@@ -1354,7 +1469,12 @@ public class LeadsListStruct {
         allFollowRecords,
         correlationFactorRank,
         claimAccountId,
-        leadsResponseDuration);
+        leadsResponseDuration,
+        leadsIpLocation,
+        finderNickName,
+        fanStatus,
+        staffName,
+        commonPageId);
   }
 
   @Override

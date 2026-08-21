@@ -51,6 +51,9 @@ public class FinderObjectStruct {
   @SerializedName("object_private_disable_code")
   private ObjectPrivateDisableCode objectPrivateDisableCode = null;
 
+  @SerializedName("wechat_channels_account_icon")
+  private String wechatChannelsAccountIcon = null;
+
   public FinderObjectStruct finderUsername(String finderUsername) {
     this.finderUsername = finderUsername;
     return this;
@@ -242,6 +245,25 @@ public class FinderObjectStruct {
     this.objectPrivateDisableCode = objectPrivateDisableCode;
   }
 
+  public FinderObjectStruct wechatChannelsAccountIcon(String wechatChannelsAccountIcon) {
+    this.wechatChannelsAccountIcon = wechatChannelsAccountIcon;
+    return this;
+  }
+
+  /**
+   * Get wechatChannelsAccountIcon
+   *
+   * @return wechatChannelsAccountIcon
+   */
+  @ApiModelProperty(value = "")
+  public String getWechatChannelsAccountIcon() {
+    return wechatChannelsAccountIcon;
+  }
+
+  public void setWechatChannelsAccountIcon(String wechatChannelsAccountIcon) {
+    this.wechatChannelsAccountIcon = wechatChannelsAccountIcon;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -262,7 +284,9 @@ public class FinderObjectStruct {
         && Objects.equals(this.bulletCommentSupported, finderObjectStruct.bulletCommentSupported)
         && Objects.equals(this.objectPrivateSwitchOpen, finderObjectStruct.objectPrivateSwitchOpen)
         && Objects.equals(
-            this.objectPrivateDisableCode, finderObjectStruct.objectPrivateDisableCode);
+            this.objectPrivateDisableCode, finderObjectStruct.objectPrivateDisableCode)
+        && Objects.equals(
+            this.wechatChannelsAccountIcon, finderObjectStruct.wechatChannelsAccountIcon);
   }
 
   @Override
@@ -277,7 +301,8 @@ public class FinderObjectStruct {
         bulletCommentSwitchOpen,
         bulletCommentSupported,
         objectPrivateSwitchOpen,
-        objectPrivateDisableCode);
+        objectPrivateDisableCode,
+        wechatChannelsAccountIcon);
   }
 
   @Override

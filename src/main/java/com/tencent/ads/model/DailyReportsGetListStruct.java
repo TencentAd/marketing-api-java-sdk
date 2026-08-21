@@ -27,6 +27,18 @@ public class DailyReportsGetListStruct {
   @SerializedName("date")
   private String date = null;
 
+  @SerializedName("campaign_id")
+  private Long campaignId = null;
+
+  @SerializedName("adgroup_id")
+  private Long adgroupId = null;
+
+  @SerializedName("ad_id")
+  private Long adId = null;
+
+  @SerializedName("ad_name")
+  private String adName = null;
+
   @SerializedName("view_count")
   private Long viewCount = null;
 
@@ -1338,50 +1350,8 @@ public class DailyReportsGetListStruct {
   @SerializedName("mini_game_pay_d30_roi")
   private Double miniGamePayD30Roi = null;
 
-  @SerializedName("video_follow_count")
-  private Long videoFollowCount = null;
-
-  @SerializedName("video_heart_count")
-  private Long videoHeartCount = null;
-
-  @SerializedName("video_comment_count")
-  private Long videoCommentCount = null;
-
-  @SerializedName("video_live_subscribe_count")
-  private Long videoLiveSubscribeCount = null;
-
-  @SerializedName("video_live_exp_count")
-  private Long videoLiveExpCount = null;
-
-  @SerializedName("video_live_heart_count")
-  private Long videoLiveHeartCount = null;
-
-  @SerializedName("video_live_comment_count")
-  private Long videoLiveCommentCount = null;
-
-  @SerializedName("video_live_share_count")
-  private Long videoLiveShareCount = null;
-
-  @SerializedName("video_live_cick_commodity_count")
-  private Long videoLiveCickCommodityCount = null;
-
   @SerializedName("live_stream_exp_uv")
   private Long liveStreamExpUv = null;
-
-  @SerializedName("video_live_heart_user_count")
-  private Long videoLiveHeartUserCount = null;
-
-  @SerializedName("video_live_comment_user_count")
-  private Long videoLiveCommentUserCount = null;
-
-  @SerializedName("video_live_share_user_count")
-  private Long videoLiveShareUserCount = null;
-
-  @SerializedName("video_live_click_commodity_user_count")
-  private Long videoLiveClickCommodityUserCount = null;
-
-  @SerializedName("video_live_commodity_bubble_exp_count")
-  private Long videoLiveCommodityBubbleExpCount = null;
 
   @SerializedName("scan_code_add_fans_uv")
   private Long scanCodeAddFansUv = null;
@@ -1818,6 +1788,141 @@ public class DailyReportsGetListStruct {
   @SerializedName("after_add_wecom_intention_dedup_pv_cost")
   private Long afterAddWecomIntentionDedupPvCost = null;
 
+  @SerializedName("exp_pv")
+  private Long expPv = null;
+
+  @SerializedName("impression")
+  private Long impression = null;
+
+  @SerializedName("exposure")
+  private Long exposure = null;
+
+  @SerializedName("download")
+  private Long download = null;
+
+  @SerializedName("activation")
+  private Long activation = null;
+
+  @SerializedName("app_activated_count")
+  private Long appActivatedCount = null;
+
+  @SerializedName("app_activated_rate")
+  private Double appActivatedRate = null;
+
+  @SerializedName("thousand_display_cost")
+  private Long thousandDisplayCost = null;
+
+  @SerializedName("click")
+  private Long click = null;
+
+  @SerializedName("web_consult_count")
+  private Long webConsultCount = null;
+
+  @SerializedName("web_consult_cost")
+  private Long webConsultCost = null;
+
+  @SerializedName("web_phone_call_direct_count")
+  private Long webPhoneCallDirectCount = null;
+
+  @SerializedName("web_phone_call_direct_cost")
+  private Long webPhoneCallDirectCost = null;
+
+  @SerializedName("web_phone_call_back_count")
+  private Long webPhoneCallBackCount = null;
+
+  @SerializedName("web_phone_call_back_cost")
+  private Long webPhoneCallBackCost = null;
+
+  @SerializedName("own_page_navigation_cost")
+  private Long ownPageNavigationCost = null;
+
+  @SerializedName("reservation")
+  private Long reservation = null;
+
+  @SerializedName("web_page_reservation_count")
+  private Long webPageReservationCount = null;
+
+  @SerializedName("web_page_reservation_rate")
+  private Double webPageReservationRate = null;
+
+  @SerializedName("web_page_reservation_cost")
+  private Long webPageReservationCost = null;
+
+  @SerializedName("web_add_to_car_count")
+  private Long webAddToCarCount = null;
+
+  @SerializedName("web_add_to_car_cost")
+  private Long webAddToCarCost = null;
+
+  @SerializedName("web_order_unit_price")
+  private Long webOrderUnitPrice = null;
+
+  @SerializedName("web_order_roi")
+  private Double webOrderRoi = null;
+
+  @SerializedName("web_deliver_count")
+  private Long webDeliverCount = null;
+
+  @SerializedName("web_deliver_cost")
+  private Long webDeliverCost = null;
+
+  @SerializedName("web_sign_in_count")
+  private Long webSignInCount = null;
+
+  @SerializedName("web_sign_in_cost")
+  private Long webSignInCost = null;
+
+  @SerializedName("app_installation")
+  private Long appInstallation = null;
+
+  @SerializedName("app_activated_cost")
+  private Long appActivatedCost = null;
+
+  @SerializedName("app_retention_count")
+  private Long appRetentionCount = null;
+
+  @SerializedName("app_retention_rate")
+  private Double appRetentionRate = null;
+
+  @SerializedName("app_retention_cost")
+  private Long appRetentionCost = null;
+
+  @SerializedName("app_add_to_car_count")
+  private Long appAddToCarCount = null;
+
+  @SerializedName("app_add_to_car_amount")
+  private Long appAddToCarAmount = null;
+
+  @SerializedName("app_cart_amount")
+  private Long appCartAmount = null;
+
+  @SerializedName("app_add_to_car_cost")
+  private Long appAddToCarCost = null;
+
+  @SerializedName("app_payment_count")
+  private Long appPaymentCount = null;
+
+  @SerializedName("app_payment_amount")
+  private Long appPaymentAmount = null;
+
+  @SerializedName("platform_coupon_click")
+  private Long platformCouponClick = null;
+
+  @SerializedName("follow")
+  private Long follow = null;
+
+  @SerializedName("share")
+  private Long share = null;
+
+  @SerializedName("read")
+  private Long read = null;
+
+  @SerializedName("intelligent_phone_call_direct_count")
+  private Long intelligentPhoneCallDirectCount = null;
+
+  @SerializedName("video_live_exp_user_count")
+  private Long videoLiveExpUserCount = null;
+
   @SerializedName("request_conversions_count")
   private Long requestConversionsCount = null;
 
@@ -2049,15 +2154,6 @@ public class DailyReportsGetListStruct {
   @SerializedName("mini_game_pay_d30_pla_roi")
   private Double miniGamePayD30PlaRoi = null;
 
-  @SerializedName("campaign_id")
-  private Long campaignId = null;
-
-  @SerializedName("campaign_name")
-  private String campaignName = null;
-
-  @SerializedName("adgroup_id")
-  private Long adgroupId = null;
-
   @SerializedName("adgroup_name")
   private String adgroupName = null;
 
@@ -2070,83 +2166,59 @@ public class DailyReportsGetListStruct {
   @SerializedName("acquisition_cost")
   private Long acquisitionCost = null;
 
-  @SerializedName("ad_id")
-  private Long adId = null;
+  @SerializedName("video_follow_count")
+  private Long videoFollowCount = null;
 
-  @SerializedName("ad_name")
-  private String adName = null;
+  @SerializedName("video_heart_count")
+  private Long videoHeartCount = null;
 
-  @SerializedName("promoted_object_type")
-  private String promotedObjectType = null;
+  @SerializedName("video_comment_count")
+  private Long videoCommentCount = null;
 
-  @SerializedName("promoted_object_id")
-  private String promotedObjectId = null;
+  @SerializedName("video_live_subscribe_count")
+  private Long videoLiveSubscribeCount = null;
 
-  @SerializedName("union_position_id")
-  private Long unionPositionId = null;
+  @SerializedName("video_live_exp_count")
+  private Long videoLiveExpCount = null;
 
-  @SerializedName("industry_parent_name")
-  private String industryParentName = null;
+  @SerializedName("video_live_heart_count")
+  private Long videoLiveHeartCount = null;
 
-  @SerializedName("placement_name")
-  private String placementName = null;
+  @SerializedName("video_live_comment_count")
+  private Long videoLiveCommentCount = null;
 
-  @SerializedName("template_id")
-  private Long templateId = null;
+  @SerializedName("video_live_share_count")
+  private Long videoLiveShareCount = null;
 
-  @SerializedName("add_to_cart_cost")
-  private Long addToCartCost = null;
+  @SerializedName("video_live_cick_commodity_count")
+  private Long videoLiveCickCommodityCount = null;
 
-  @SerializedName("web_add_to_cart_rate")
-  private Double webAddToCartRate = null;
+  @SerializedName("video_live_heart_user_count")
+  private Long videoLiveHeartUserCount = null;
 
-  @SerializedName("app_add_to_cart_rate")
-  private Double appAddToCartRate = null;
+  @SerializedName("video_live_comment_user_count")
+  private Long videoLiveCommentUserCount = null;
 
-  @SerializedName("is_expand_targeting")
-  private Boolean isExpandTargeting = null;
+  @SerializedName("video_live_share_user_count")
+  private Long videoLiveShareUserCount = null;
 
-  @SerializedName("site_set")
-  private String siteSet = null;
+  @SerializedName("video_live_click_commodity_user_count")
+  private Long videoLiveClickCommodityUserCount = null;
 
-  @SerializedName("material_id")
-  private String materialId = null;
-
-  @SerializedName("signature")
-  private String signature = null;
-
-  @SerializedName("product_catalog_id")
-  private Long productCatalogId = null;
-
-  @SerializedName("product_outer_id")
-  private String productOuterId = null;
-
-  @SerializedName("brand_id")
-  private Long brandId = null;
-
-  @SerializedName("product_set_id")
-  private Long productSetId = null;
-
-  @SerializedName("shop_id")
-  private Long shopId = null;
-
-  @SerializedName("first_category_id")
-  private Long firstCategoryId = null;
-
-  @SerializedName("second_category_id")
-  private Long secondCategoryId = null;
-
-  @SerializedName("third_category_id")
-  private Long thirdCategoryId = null;
-
-  @SerializedName("match_type")
-  private Long matchType = null;
+  @SerializedName("video_live_commodity_bubble_exp_count")
+  private Long videoLiveCommodityBubbleExpCount = null;
 
   @SerializedName("bidword_id")
   private Long bidwordId = null;
 
   @SerializedName("bidword")
   private String bidword = null;
+
+  @SerializedName("match_type")
+  private Long matchType = null;
+
+  @SerializedName("site_set")
+  private String siteSet = null;
 
   @SerializedName("exp_overall_top_pv")
   private Long expOverallTopPv = null;
@@ -2160,239 +2232,50 @@ public class DailyReportsGetListStruct {
   @SerializedName("real_cost_top")
   private Long realCostTop = null;
 
+  @SerializedName("campaign_name")
+  private String campaignName = null;
+
+  @SerializedName("template_id")
+  private Long templateId = null;
+
+  @SerializedName("add_to_cart_cost")
+  private Long addToCartCost = null;
+
+  @SerializedName("web_add_to_cart_rate")
+  private Double webAddToCartRate = null;
+
+  @SerializedName("app_add_to_cart_rate")
+  private Double appAddToCartRate = null;
+
+  @SerializedName("app_add_to_car_rate")
+  private Double appAddToCarRate = null;
+
+  @SerializedName("is_expand_targeting")
+  private Boolean isExpandTargeting = null;
+
+  @SerializedName("material_id")
+  private String materialId = null;
+
+  @SerializedName("signature")
+  private String signature = null;
+
+  @SerializedName("promoted_object_type")
+  private String promotedObjectType = null;
+
+  @SerializedName("promoted_object_id")
+  private String promotedObjectId = null;
+
   @SerializedName("queryword")
   private String queryword = null;
 
-  @SerializedName("hour")
-  private Long hour = null;
+  @SerializedName("union_position_id")
+  private Long unionPositionId = null;
 
-  @SerializedName("wechat_account_id")
-  private String wechatAccountId = null;
+  @SerializedName("industry_parent_name")
+  private String industryParentName = null;
 
-  @SerializedName("wechat_agency_id")
-  private String wechatAgencyId = null;
-
-  @SerializedName("cost_deviation_rate")
-  private Double costDeviationRate = null;
-
-  @SerializedName("compensation_amount")
-  private Long compensationAmount = null;
-
-  @SerializedName("view_user_count")
-  private Long viewUserCount = null;
-
-  @SerializedName("avg_view_per_user")
-  private Double avgViewPerUser = null;
-
-  @SerializedName("click_user_count")
-  private Long clickUserCount = null;
-
-  @SerializedName("image_click_user_count")
-  private Long imageClickUserCount = null;
-
-  @SerializedName("video_click_user_count")
-  private Long videoClickUserCount = null;
-
-  @SerializedName("link_click_user_count")
-  private Long linkClickUserCount = null;
-
-  @SerializedName("portrait_click_user_count")
-  private Long portraitClickUserCount = null;
-
-  @SerializedName("nickname_click_user_count")
-  private Long nicknameClickUserCount = null;
-
-  @SerializedName("poi_click_user_count")
-  private Long poiClickUserCount = null;
-
-  @SerializedName("platform_key_page_view_user_count")
-  private Long platformKeyPageViewUserCount = null;
-
-  @SerializedName("platform_key_page_avg_view_per_user")
-  private Double platformKeyPageAvgViewPerUser = null;
-
-  @SerializedName("platform_key_page_view_duration")
-  private Double platformKeyPageViewDuration = null;
-
-  @SerializedName("cpn_click_button_cost")
-  private Long cpnClickButtonCost = null;
-
-  @SerializedName("praise_user_count")
-  private Long praiseUserCount = null;
-
-  @SerializedName("comment_user_count")
-  private Long commentUserCount = null;
-
-  @SerializedName("order_count")
-  private Long orderCount = null;
-
-  @SerializedName("order_rate")
-  private Double orderRate = null;
-
-  @SerializedName("quest_reservation_pv_cost")
-  private Long questReservationPvCost = null;
-
-  @SerializedName("leads_rate")
-  private Double leadsRate = null;
-
-  @SerializedName("leads_user_count")
-  private Long leadsUserCount = null;
-
-  @SerializedName("leads_cost")
-  private Long leadsCost = null;
-
-  @SerializedName("leads_user_rate")
-  private Double leadsUserRate = null;
-
-  @SerializedName("valid_leads_cost")
-  private Long validLeadsCost = null;
-
-  @SerializedName("valid_leads_rate")
-  private Double validLeadsRate = null;
-
-  @SerializedName("page_consult_user_count")
-  private Long pageConsultUserCount = null;
-
-  @SerializedName("valid_page_consult_user_count")
-  private Long validPageConsultUserCount = null;
-
-  @SerializedName("withdr_dep_web_user_count")
-  private Long withdrDepWebUserCount = null;
-
-  @SerializedName("wechat_minigame_register_cost")
-  private Long wechatMinigameRegisterCost = null;
-
-  @SerializedName("wechat_minigame_register_rate")
-  private Double wechatMinigameRegisterRate = null;
-
-  @SerializedName("wechat_minigame_arpu")
-  private Double wechatMinigameArpu = null;
-
-  @SerializedName("wechat_minigame_retention_count")
-  private Long wechatMinigameRetentionCount = null;
-
-  @SerializedName("wechat_minigame_checkout_count")
-  private Long wechatMinigameCheckoutCount = null;
-
-  @SerializedName("wechat_minigame_checkout_amount")
-  private Long wechatMinigameCheckoutAmount = null;
-
-  @SerializedName("official_account_follow_count")
-  private Long officialAccountFollowCount = null;
-
-  @SerializedName("official_account_follow_cost")
-  private Long officialAccountFollowCost = null;
-
-  @SerializedName("official_account_follow_rate")
-  private Double officialAccountFollowRate = null;
-
-  @SerializedName("official_account_register_user_count")
-  private Long officialAccountRegisterUserCount = null;
-
-  @SerializedName("official_account_register_rate")
-  private Double officialAccountRegisterRate = null;
-
-  @SerializedName("official_account_register_cost")
-  private Long officialAccountRegisterCost = null;
-
-  @SerializedName("official_account_register_amount")
-  private Long officialAccountRegisterAmount = null;
-
-  @SerializedName("official_account_register_roi")
-  private Long officialAccountRegisterRoi = null;
-
-  @SerializedName("official_account_apply_count")
-  private Long officialAccountApplyCount = null;
-
-  @SerializedName("official_account_apply_user_count")
-  private Long officialAccountApplyUserCount = null;
-
-  @SerializedName("official_account_apply_rate")
-  private Double officialAccountApplyRate = null;
-
-  @SerializedName("official_account_apply_cost")
-  private Long officialAccountApplyCost = null;
-
-  @SerializedName("official_account_apply_amount")
-  private Long officialAccountApplyAmount = null;
-
-  @SerializedName("official_account_apply_roi")
-  private Long officialAccountApplyRoi = null;
-
-  @SerializedName("official_account_order_count")
-  private Long officialAccountOrderCount = null;
-
-  @SerializedName("official_account_first_day_order_count")
-  private Long officialAccountFirstDayOrderCount = null;
-
-  @SerializedName("official_account_order_user_count")
-  private Long officialAccountOrderUserCount = null;
-
-  @SerializedName("official_account_order_rate")
-  private Double officialAccountOrderRate = null;
-
-  @SerializedName("official_account_order_cost")
-  private Long officialAccountOrderCost = null;
-
-  @SerializedName("official_account_order_amount")
-  private Long officialAccountOrderAmount = null;
-
-  @SerializedName("official_account_first_day_order_amount")
-  private Long officialAccountFirstDayOrderAmount = null;
-
-  @SerializedName("official_account_order_roi")
-  private Long officialAccountOrderRoi = null;
-
-  @SerializedName("official_account_consult_count")
-  private Long officialAccountConsultCount = null;
-
-  @SerializedName("official_account_reader_count")
-  private Long officialAccountReaderCount = null;
-
-  @SerializedName("official_account_credit_apply_user_count")
-  private Long officialAccountCreditApplyUserCount = null;
-
-  @SerializedName("official_account_credit_user_count")
-  private Long officialAccountCreditUserCount = null;
-
-  @SerializedName("coupon_get_cost")
-  private Long couponGetCost = null;
-
-  @SerializedName("coupon_get_rate")
-  private Double couponGetRate = null;
-
-  @SerializedName("coupon_use_count")
-  private Long couponUseCount = null;
-
-  @SerializedName("forward_user_count")
-  private Long forwardUserCount = null;
-
-  @SerializedName("video_outer_play_user_count")
-  private Long videoOuterPlayUserCount = null;
-
-  @SerializedName("video_inner_play_user_count")
-  private Long videoInnerPlayUserCount = null;
-
-  @SerializedName("channels_half_screen_card_exp_pv")
-  private Long channelsHalfScreenCardExpPv = null;
-
-  @SerializedName("channels_half_screen_button_clk_pv")
-  private Long channelsHalfScreenButtonClkPv = null;
-
-  @SerializedName("channels_match_read_pv")
-  private Long channelsMatchReadPv = null;
-
-  @SerializedName("channels_match_heart_pv")
-  private Long channelsMatchHeartPv = null;
-
-  @SerializedName("channels_match_comment_pv")
-  private Long channelsMatchCommentPv = null;
-
-  @SerializedName("channels_match_share_pv")
-  private Long channelsMatchSharePv = null;
-
-  @SerializedName("export_id")
-  private String exportId = null;
+  @SerializedName("placement_name")
+  private String placementName = null;
 
   @SerializedName("project_id")
   private Long projectId = null;
@@ -2448,6 +2331,82 @@ public class DailyReportsGetListStruct {
 
   public void setDate(String date) {
     this.date = date;
+  }
+
+  public DailyReportsGetListStruct campaignId(Long campaignId) {
+    this.campaignId = campaignId;
+    return this;
+  }
+
+  /**
+   * Get campaignId
+   *
+   * @return campaignId
+   */
+  @ApiModelProperty(value = "")
+  public Long getCampaignId() {
+    return campaignId;
+  }
+
+  public void setCampaignId(Long campaignId) {
+    this.campaignId = campaignId;
+  }
+
+  public DailyReportsGetListStruct adgroupId(Long adgroupId) {
+    this.adgroupId = adgroupId;
+    return this;
+  }
+
+  /**
+   * Get adgroupId
+   *
+   * @return adgroupId
+   */
+  @ApiModelProperty(value = "")
+  public Long getAdgroupId() {
+    return adgroupId;
+  }
+
+  public void setAdgroupId(Long adgroupId) {
+    this.adgroupId = adgroupId;
+  }
+
+  public DailyReportsGetListStruct adId(Long adId) {
+    this.adId = adId;
+    return this;
+  }
+
+  /**
+   * Get adId
+   *
+   * @return adId
+   */
+  @ApiModelProperty(value = "")
+  public Long getAdId() {
+    return adId;
+  }
+
+  public void setAdId(Long adId) {
+    this.adId = adId;
+  }
+
+  public DailyReportsGetListStruct adName(String adName) {
+    this.adName = adName;
+    return this;
+  }
+
+  /**
+   * Get adName
+   *
+   * @return adName
+   */
+  @ApiModelProperty(value = "")
+  public String getAdName() {
+    return adName;
+  }
+
+  public void setAdName(String adName) {
+    this.adName = adName;
   }
 
   public DailyReportsGetListStruct viewCount(Long viewCount) {
@@ -10773,177 +10732,6 @@ public class DailyReportsGetListStruct {
     this.miniGamePayD30Roi = miniGamePayD30Roi;
   }
 
-  public DailyReportsGetListStruct videoFollowCount(Long videoFollowCount) {
-    this.videoFollowCount = videoFollowCount;
-    return this;
-  }
-
-  /**
-   * Get videoFollowCount
-   *
-   * @return videoFollowCount
-   */
-  @ApiModelProperty(value = "")
-  public Long getVideoFollowCount() {
-    return videoFollowCount;
-  }
-
-  public void setVideoFollowCount(Long videoFollowCount) {
-    this.videoFollowCount = videoFollowCount;
-  }
-
-  public DailyReportsGetListStruct videoHeartCount(Long videoHeartCount) {
-    this.videoHeartCount = videoHeartCount;
-    return this;
-  }
-
-  /**
-   * Get videoHeartCount
-   *
-   * @return videoHeartCount
-   */
-  @ApiModelProperty(value = "")
-  public Long getVideoHeartCount() {
-    return videoHeartCount;
-  }
-
-  public void setVideoHeartCount(Long videoHeartCount) {
-    this.videoHeartCount = videoHeartCount;
-  }
-
-  public DailyReportsGetListStruct videoCommentCount(Long videoCommentCount) {
-    this.videoCommentCount = videoCommentCount;
-    return this;
-  }
-
-  /**
-   * Get videoCommentCount
-   *
-   * @return videoCommentCount
-   */
-  @ApiModelProperty(value = "")
-  public Long getVideoCommentCount() {
-    return videoCommentCount;
-  }
-
-  public void setVideoCommentCount(Long videoCommentCount) {
-    this.videoCommentCount = videoCommentCount;
-  }
-
-  public DailyReportsGetListStruct videoLiveSubscribeCount(Long videoLiveSubscribeCount) {
-    this.videoLiveSubscribeCount = videoLiveSubscribeCount;
-    return this;
-  }
-
-  /**
-   * Get videoLiveSubscribeCount
-   *
-   * @return videoLiveSubscribeCount
-   */
-  @ApiModelProperty(value = "")
-  public Long getVideoLiveSubscribeCount() {
-    return videoLiveSubscribeCount;
-  }
-
-  public void setVideoLiveSubscribeCount(Long videoLiveSubscribeCount) {
-    this.videoLiveSubscribeCount = videoLiveSubscribeCount;
-  }
-
-  public DailyReportsGetListStruct videoLiveExpCount(Long videoLiveExpCount) {
-    this.videoLiveExpCount = videoLiveExpCount;
-    return this;
-  }
-
-  /**
-   * Get videoLiveExpCount
-   *
-   * @return videoLiveExpCount
-   */
-  @ApiModelProperty(value = "")
-  public Long getVideoLiveExpCount() {
-    return videoLiveExpCount;
-  }
-
-  public void setVideoLiveExpCount(Long videoLiveExpCount) {
-    this.videoLiveExpCount = videoLiveExpCount;
-  }
-
-  public DailyReportsGetListStruct videoLiveHeartCount(Long videoLiveHeartCount) {
-    this.videoLiveHeartCount = videoLiveHeartCount;
-    return this;
-  }
-
-  /**
-   * Get videoLiveHeartCount
-   *
-   * @return videoLiveHeartCount
-   */
-  @ApiModelProperty(value = "")
-  public Long getVideoLiveHeartCount() {
-    return videoLiveHeartCount;
-  }
-
-  public void setVideoLiveHeartCount(Long videoLiveHeartCount) {
-    this.videoLiveHeartCount = videoLiveHeartCount;
-  }
-
-  public DailyReportsGetListStruct videoLiveCommentCount(Long videoLiveCommentCount) {
-    this.videoLiveCommentCount = videoLiveCommentCount;
-    return this;
-  }
-
-  /**
-   * Get videoLiveCommentCount
-   *
-   * @return videoLiveCommentCount
-   */
-  @ApiModelProperty(value = "")
-  public Long getVideoLiveCommentCount() {
-    return videoLiveCommentCount;
-  }
-
-  public void setVideoLiveCommentCount(Long videoLiveCommentCount) {
-    this.videoLiveCommentCount = videoLiveCommentCount;
-  }
-
-  public DailyReportsGetListStruct videoLiveShareCount(Long videoLiveShareCount) {
-    this.videoLiveShareCount = videoLiveShareCount;
-    return this;
-  }
-
-  /**
-   * Get videoLiveShareCount
-   *
-   * @return videoLiveShareCount
-   */
-  @ApiModelProperty(value = "")
-  public Long getVideoLiveShareCount() {
-    return videoLiveShareCount;
-  }
-
-  public void setVideoLiveShareCount(Long videoLiveShareCount) {
-    this.videoLiveShareCount = videoLiveShareCount;
-  }
-
-  public DailyReportsGetListStruct videoLiveCickCommodityCount(Long videoLiveCickCommodityCount) {
-    this.videoLiveCickCommodityCount = videoLiveCickCommodityCount;
-    return this;
-  }
-
-  /**
-   * Get videoLiveCickCommodityCount
-   *
-   * @return videoLiveCickCommodityCount
-   */
-  @ApiModelProperty(value = "")
-  public Long getVideoLiveCickCommodityCount() {
-    return videoLiveCickCommodityCount;
-  }
-
-  public void setVideoLiveCickCommodityCount(Long videoLiveCickCommodityCount) {
-    this.videoLiveCickCommodityCount = videoLiveCickCommodityCount;
-  }
-
   public DailyReportsGetListStruct liveStreamExpUv(Long liveStreamExpUv) {
     this.liveStreamExpUv = liveStreamExpUv;
     return this;
@@ -10961,103 +10749,6 @@ public class DailyReportsGetListStruct {
 
   public void setLiveStreamExpUv(Long liveStreamExpUv) {
     this.liveStreamExpUv = liveStreamExpUv;
-  }
-
-  public DailyReportsGetListStruct videoLiveHeartUserCount(Long videoLiveHeartUserCount) {
-    this.videoLiveHeartUserCount = videoLiveHeartUserCount;
-    return this;
-  }
-
-  /**
-   * Get videoLiveHeartUserCount
-   *
-   * @return videoLiveHeartUserCount
-   */
-  @ApiModelProperty(value = "")
-  public Long getVideoLiveHeartUserCount() {
-    return videoLiveHeartUserCount;
-  }
-
-  public void setVideoLiveHeartUserCount(Long videoLiveHeartUserCount) {
-    this.videoLiveHeartUserCount = videoLiveHeartUserCount;
-  }
-
-  public DailyReportsGetListStruct videoLiveCommentUserCount(Long videoLiveCommentUserCount) {
-    this.videoLiveCommentUserCount = videoLiveCommentUserCount;
-    return this;
-  }
-
-  /**
-   * Get videoLiveCommentUserCount
-   *
-   * @return videoLiveCommentUserCount
-   */
-  @ApiModelProperty(value = "")
-  public Long getVideoLiveCommentUserCount() {
-    return videoLiveCommentUserCount;
-  }
-
-  public void setVideoLiveCommentUserCount(Long videoLiveCommentUserCount) {
-    this.videoLiveCommentUserCount = videoLiveCommentUserCount;
-  }
-
-  public DailyReportsGetListStruct videoLiveShareUserCount(Long videoLiveShareUserCount) {
-    this.videoLiveShareUserCount = videoLiveShareUserCount;
-    return this;
-  }
-
-  /**
-   * Get videoLiveShareUserCount
-   *
-   * @return videoLiveShareUserCount
-   */
-  @ApiModelProperty(value = "")
-  public Long getVideoLiveShareUserCount() {
-    return videoLiveShareUserCount;
-  }
-
-  public void setVideoLiveShareUserCount(Long videoLiveShareUserCount) {
-    this.videoLiveShareUserCount = videoLiveShareUserCount;
-  }
-
-  public DailyReportsGetListStruct videoLiveClickCommodityUserCount(
-      Long videoLiveClickCommodityUserCount) {
-    this.videoLiveClickCommodityUserCount = videoLiveClickCommodityUserCount;
-    return this;
-  }
-
-  /**
-   * Get videoLiveClickCommodityUserCount
-   *
-   * @return videoLiveClickCommodityUserCount
-   */
-  @ApiModelProperty(value = "")
-  public Long getVideoLiveClickCommodityUserCount() {
-    return videoLiveClickCommodityUserCount;
-  }
-
-  public void setVideoLiveClickCommodityUserCount(Long videoLiveClickCommodityUserCount) {
-    this.videoLiveClickCommodityUserCount = videoLiveClickCommodityUserCount;
-  }
-
-  public DailyReportsGetListStruct videoLiveCommodityBubbleExpCount(
-      Long videoLiveCommodityBubbleExpCount) {
-    this.videoLiveCommodityBubbleExpCount = videoLiveCommodityBubbleExpCount;
-    return this;
-  }
-
-  /**
-   * Get videoLiveCommodityBubbleExpCount
-   *
-   * @return videoLiveCommodityBubbleExpCount
-   */
-  @ApiModelProperty(value = "")
-  public Long getVideoLiveCommodityBubbleExpCount() {
-    return videoLiveCommodityBubbleExpCount;
-  }
-
-  public void setVideoLiveCommodityBubbleExpCount(Long videoLiveCommodityBubbleExpCount) {
-    this.videoLiveCommodityBubbleExpCount = videoLiveCommodityBubbleExpCount;
   }
 
   public DailyReportsGetListStruct scanCodeAddFansUv(Long scanCodeAddFansUv) {
@@ -13822,6 +13513,862 @@ public class DailyReportsGetListStruct {
     this.afterAddWecomIntentionDedupPvCost = afterAddWecomIntentionDedupPvCost;
   }
 
+  public DailyReportsGetListStruct expPv(Long expPv) {
+    this.expPv = expPv;
+    return this;
+  }
+
+  /**
+   * Get expPv
+   *
+   * @return expPv
+   */
+  @ApiModelProperty(value = "")
+  public Long getExpPv() {
+    return expPv;
+  }
+
+  public void setExpPv(Long expPv) {
+    this.expPv = expPv;
+  }
+
+  public DailyReportsGetListStruct impression(Long impression) {
+    this.impression = impression;
+    return this;
+  }
+
+  /**
+   * Get impression
+   *
+   * @return impression
+   */
+  @ApiModelProperty(value = "")
+  public Long getImpression() {
+    return impression;
+  }
+
+  public void setImpression(Long impression) {
+    this.impression = impression;
+  }
+
+  public DailyReportsGetListStruct exposure(Long exposure) {
+    this.exposure = exposure;
+    return this;
+  }
+
+  /**
+   * Get exposure
+   *
+   * @return exposure
+   */
+  @ApiModelProperty(value = "")
+  public Long getExposure() {
+    return exposure;
+  }
+
+  public void setExposure(Long exposure) {
+    this.exposure = exposure;
+  }
+
+  public DailyReportsGetListStruct download(Long download) {
+    this.download = download;
+    return this;
+  }
+
+  /**
+   * Get download
+   *
+   * @return download
+   */
+  @ApiModelProperty(value = "")
+  public Long getDownload() {
+    return download;
+  }
+
+  public void setDownload(Long download) {
+    this.download = download;
+  }
+
+  public DailyReportsGetListStruct activation(Long activation) {
+    this.activation = activation;
+    return this;
+  }
+
+  /**
+   * Get activation
+   *
+   * @return activation
+   */
+  @ApiModelProperty(value = "")
+  public Long getActivation() {
+    return activation;
+  }
+
+  public void setActivation(Long activation) {
+    this.activation = activation;
+  }
+
+  public DailyReportsGetListStruct appActivatedCount(Long appActivatedCount) {
+    this.appActivatedCount = appActivatedCount;
+    return this;
+  }
+
+  /**
+   * Get appActivatedCount
+   *
+   * @return appActivatedCount
+   */
+  @ApiModelProperty(value = "")
+  public Long getAppActivatedCount() {
+    return appActivatedCount;
+  }
+
+  public void setAppActivatedCount(Long appActivatedCount) {
+    this.appActivatedCount = appActivatedCount;
+  }
+
+  public DailyReportsGetListStruct appActivatedRate(Double appActivatedRate) {
+    this.appActivatedRate = appActivatedRate;
+    return this;
+  }
+
+  /**
+   * Get appActivatedRate
+   *
+   * @return appActivatedRate
+   */
+  @ApiModelProperty(value = "")
+  public Double getAppActivatedRate() {
+    return appActivatedRate;
+  }
+
+  public void setAppActivatedRate(Double appActivatedRate) {
+    this.appActivatedRate = appActivatedRate;
+  }
+
+  public DailyReportsGetListStruct thousandDisplayCost(Long thousandDisplayCost) {
+    this.thousandDisplayCost = thousandDisplayCost;
+    return this;
+  }
+
+  /**
+   * Get thousandDisplayCost
+   *
+   * @return thousandDisplayCost
+   */
+  @ApiModelProperty(value = "")
+  public Long getThousandDisplayCost() {
+    return thousandDisplayCost;
+  }
+
+  public void setThousandDisplayCost(Long thousandDisplayCost) {
+    this.thousandDisplayCost = thousandDisplayCost;
+  }
+
+  public DailyReportsGetListStruct click(Long click) {
+    this.click = click;
+    return this;
+  }
+
+  /**
+   * Get click
+   *
+   * @return click
+   */
+  @ApiModelProperty(value = "")
+  public Long getClick() {
+    return click;
+  }
+
+  public void setClick(Long click) {
+    this.click = click;
+  }
+
+  public DailyReportsGetListStruct webConsultCount(Long webConsultCount) {
+    this.webConsultCount = webConsultCount;
+    return this;
+  }
+
+  /**
+   * Get webConsultCount
+   *
+   * @return webConsultCount
+   */
+  @ApiModelProperty(value = "")
+  public Long getWebConsultCount() {
+    return webConsultCount;
+  }
+
+  public void setWebConsultCount(Long webConsultCount) {
+    this.webConsultCount = webConsultCount;
+  }
+
+  public DailyReportsGetListStruct webConsultCost(Long webConsultCost) {
+    this.webConsultCost = webConsultCost;
+    return this;
+  }
+
+  /**
+   * Get webConsultCost
+   *
+   * @return webConsultCost
+   */
+  @ApiModelProperty(value = "")
+  public Long getWebConsultCost() {
+    return webConsultCost;
+  }
+
+  public void setWebConsultCost(Long webConsultCost) {
+    this.webConsultCost = webConsultCost;
+  }
+
+  public DailyReportsGetListStruct webPhoneCallDirectCount(Long webPhoneCallDirectCount) {
+    this.webPhoneCallDirectCount = webPhoneCallDirectCount;
+    return this;
+  }
+
+  /**
+   * Get webPhoneCallDirectCount
+   *
+   * @return webPhoneCallDirectCount
+   */
+  @ApiModelProperty(value = "")
+  public Long getWebPhoneCallDirectCount() {
+    return webPhoneCallDirectCount;
+  }
+
+  public void setWebPhoneCallDirectCount(Long webPhoneCallDirectCount) {
+    this.webPhoneCallDirectCount = webPhoneCallDirectCount;
+  }
+
+  public DailyReportsGetListStruct webPhoneCallDirectCost(Long webPhoneCallDirectCost) {
+    this.webPhoneCallDirectCost = webPhoneCallDirectCost;
+    return this;
+  }
+
+  /**
+   * Get webPhoneCallDirectCost
+   *
+   * @return webPhoneCallDirectCost
+   */
+  @ApiModelProperty(value = "")
+  public Long getWebPhoneCallDirectCost() {
+    return webPhoneCallDirectCost;
+  }
+
+  public void setWebPhoneCallDirectCost(Long webPhoneCallDirectCost) {
+    this.webPhoneCallDirectCost = webPhoneCallDirectCost;
+  }
+
+  public DailyReportsGetListStruct webPhoneCallBackCount(Long webPhoneCallBackCount) {
+    this.webPhoneCallBackCount = webPhoneCallBackCount;
+    return this;
+  }
+
+  /**
+   * Get webPhoneCallBackCount
+   *
+   * @return webPhoneCallBackCount
+   */
+  @ApiModelProperty(value = "")
+  public Long getWebPhoneCallBackCount() {
+    return webPhoneCallBackCount;
+  }
+
+  public void setWebPhoneCallBackCount(Long webPhoneCallBackCount) {
+    this.webPhoneCallBackCount = webPhoneCallBackCount;
+  }
+
+  public DailyReportsGetListStruct webPhoneCallBackCost(Long webPhoneCallBackCost) {
+    this.webPhoneCallBackCost = webPhoneCallBackCost;
+    return this;
+  }
+
+  /**
+   * Get webPhoneCallBackCost
+   *
+   * @return webPhoneCallBackCost
+   */
+  @ApiModelProperty(value = "")
+  public Long getWebPhoneCallBackCost() {
+    return webPhoneCallBackCost;
+  }
+
+  public void setWebPhoneCallBackCost(Long webPhoneCallBackCost) {
+    this.webPhoneCallBackCost = webPhoneCallBackCost;
+  }
+
+  public DailyReportsGetListStruct ownPageNavigationCost(Long ownPageNavigationCost) {
+    this.ownPageNavigationCost = ownPageNavigationCost;
+    return this;
+  }
+
+  /**
+   * Get ownPageNavigationCost
+   *
+   * @return ownPageNavigationCost
+   */
+  @ApiModelProperty(value = "")
+  public Long getOwnPageNavigationCost() {
+    return ownPageNavigationCost;
+  }
+
+  public void setOwnPageNavigationCost(Long ownPageNavigationCost) {
+    this.ownPageNavigationCost = ownPageNavigationCost;
+  }
+
+  public DailyReportsGetListStruct reservation(Long reservation) {
+    this.reservation = reservation;
+    return this;
+  }
+
+  /**
+   * Get reservation
+   *
+   * @return reservation
+   */
+  @ApiModelProperty(value = "")
+  public Long getReservation() {
+    return reservation;
+  }
+
+  public void setReservation(Long reservation) {
+    this.reservation = reservation;
+  }
+
+  public DailyReportsGetListStruct webPageReservationCount(Long webPageReservationCount) {
+    this.webPageReservationCount = webPageReservationCount;
+    return this;
+  }
+
+  /**
+   * Get webPageReservationCount
+   *
+   * @return webPageReservationCount
+   */
+  @ApiModelProperty(value = "")
+  public Long getWebPageReservationCount() {
+    return webPageReservationCount;
+  }
+
+  public void setWebPageReservationCount(Long webPageReservationCount) {
+    this.webPageReservationCount = webPageReservationCount;
+  }
+
+  public DailyReportsGetListStruct webPageReservationRate(Double webPageReservationRate) {
+    this.webPageReservationRate = webPageReservationRate;
+    return this;
+  }
+
+  /**
+   * Get webPageReservationRate
+   *
+   * @return webPageReservationRate
+   */
+  @ApiModelProperty(value = "")
+  public Double getWebPageReservationRate() {
+    return webPageReservationRate;
+  }
+
+  public void setWebPageReservationRate(Double webPageReservationRate) {
+    this.webPageReservationRate = webPageReservationRate;
+  }
+
+  public DailyReportsGetListStruct webPageReservationCost(Long webPageReservationCost) {
+    this.webPageReservationCost = webPageReservationCost;
+    return this;
+  }
+
+  /**
+   * Get webPageReservationCost
+   *
+   * @return webPageReservationCost
+   */
+  @ApiModelProperty(value = "")
+  public Long getWebPageReservationCost() {
+    return webPageReservationCost;
+  }
+
+  public void setWebPageReservationCost(Long webPageReservationCost) {
+    this.webPageReservationCost = webPageReservationCost;
+  }
+
+  public DailyReportsGetListStruct webAddToCarCount(Long webAddToCarCount) {
+    this.webAddToCarCount = webAddToCarCount;
+    return this;
+  }
+
+  /**
+   * Get webAddToCarCount
+   *
+   * @return webAddToCarCount
+   */
+  @ApiModelProperty(value = "")
+  public Long getWebAddToCarCount() {
+    return webAddToCarCount;
+  }
+
+  public void setWebAddToCarCount(Long webAddToCarCount) {
+    this.webAddToCarCount = webAddToCarCount;
+  }
+
+  public DailyReportsGetListStruct webAddToCarCost(Long webAddToCarCost) {
+    this.webAddToCarCost = webAddToCarCost;
+    return this;
+  }
+
+  /**
+   * Get webAddToCarCost
+   *
+   * @return webAddToCarCost
+   */
+  @ApiModelProperty(value = "")
+  public Long getWebAddToCarCost() {
+    return webAddToCarCost;
+  }
+
+  public void setWebAddToCarCost(Long webAddToCarCost) {
+    this.webAddToCarCost = webAddToCarCost;
+  }
+
+  public DailyReportsGetListStruct webOrderUnitPrice(Long webOrderUnitPrice) {
+    this.webOrderUnitPrice = webOrderUnitPrice;
+    return this;
+  }
+
+  /**
+   * Get webOrderUnitPrice
+   *
+   * @return webOrderUnitPrice
+   */
+  @ApiModelProperty(value = "")
+  public Long getWebOrderUnitPrice() {
+    return webOrderUnitPrice;
+  }
+
+  public void setWebOrderUnitPrice(Long webOrderUnitPrice) {
+    this.webOrderUnitPrice = webOrderUnitPrice;
+  }
+
+  public DailyReportsGetListStruct webOrderRoi(Double webOrderRoi) {
+    this.webOrderRoi = webOrderRoi;
+    return this;
+  }
+
+  /**
+   * Get webOrderRoi
+   *
+   * @return webOrderRoi
+   */
+  @ApiModelProperty(value = "")
+  public Double getWebOrderRoi() {
+    return webOrderRoi;
+  }
+
+  public void setWebOrderRoi(Double webOrderRoi) {
+    this.webOrderRoi = webOrderRoi;
+  }
+
+  public DailyReportsGetListStruct webDeliverCount(Long webDeliverCount) {
+    this.webDeliverCount = webDeliverCount;
+    return this;
+  }
+
+  /**
+   * Get webDeliverCount
+   *
+   * @return webDeliverCount
+   */
+  @ApiModelProperty(value = "")
+  public Long getWebDeliverCount() {
+    return webDeliverCount;
+  }
+
+  public void setWebDeliverCount(Long webDeliverCount) {
+    this.webDeliverCount = webDeliverCount;
+  }
+
+  public DailyReportsGetListStruct webDeliverCost(Long webDeliverCost) {
+    this.webDeliverCost = webDeliverCost;
+    return this;
+  }
+
+  /**
+   * Get webDeliverCost
+   *
+   * @return webDeliverCost
+   */
+  @ApiModelProperty(value = "")
+  public Long getWebDeliverCost() {
+    return webDeliverCost;
+  }
+
+  public void setWebDeliverCost(Long webDeliverCost) {
+    this.webDeliverCost = webDeliverCost;
+  }
+
+  public DailyReportsGetListStruct webSignInCount(Long webSignInCount) {
+    this.webSignInCount = webSignInCount;
+    return this;
+  }
+
+  /**
+   * Get webSignInCount
+   *
+   * @return webSignInCount
+   */
+  @ApiModelProperty(value = "")
+  public Long getWebSignInCount() {
+    return webSignInCount;
+  }
+
+  public void setWebSignInCount(Long webSignInCount) {
+    this.webSignInCount = webSignInCount;
+  }
+
+  public DailyReportsGetListStruct webSignInCost(Long webSignInCost) {
+    this.webSignInCost = webSignInCost;
+    return this;
+  }
+
+  /**
+   * Get webSignInCost
+   *
+   * @return webSignInCost
+   */
+  @ApiModelProperty(value = "")
+  public Long getWebSignInCost() {
+    return webSignInCost;
+  }
+
+  public void setWebSignInCost(Long webSignInCost) {
+    this.webSignInCost = webSignInCost;
+  }
+
+  public DailyReportsGetListStruct appInstallation(Long appInstallation) {
+    this.appInstallation = appInstallation;
+    return this;
+  }
+
+  /**
+   * Get appInstallation
+   *
+   * @return appInstallation
+   */
+  @ApiModelProperty(value = "")
+  public Long getAppInstallation() {
+    return appInstallation;
+  }
+
+  public void setAppInstallation(Long appInstallation) {
+    this.appInstallation = appInstallation;
+  }
+
+  public DailyReportsGetListStruct appActivatedCost(Long appActivatedCost) {
+    this.appActivatedCost = appActivatedCost;
+    return this;
+  }
+
+  /**
+   * Get appActivatedCost
+   *
+   * @return appActivatedCost
+   */
+  @ApiModelProperty(value = "")
+  public Long getAppActivatedCost() {
+    return appActivatedCost;
+  }
+
+  public void setAppActivatedCost(Long appActivatedCost) {
+    this.appActivatedCost = appActivatedCost;
+  }
+
+  public DailyReportsGetListStruct appRetentionCount(Long appRetentionCount) {
+    this.appRetentionCount = appRetentionCount;
+    return this;
+  }
+
+  /**
+   * Get appRetentionCount
+   *
+   * @return appRetentionCount
+   */
+  @ApiModelProperty(value = "")
+  public Long getAppRetentionCount() {
+    return appRetentionCount;
+  }
+
+  public void setAppRetentionCount(Long appRetentionCount) {
+    this.appRetentionCount = appRetentionCount;
+  }
+
+  public DailyReportsGetListStruct appRetentionRate(Double appRetentionRate) {
+    this.appRetentionRate = appRetentionRate;
+    return this;
+  }
+
+  /**
+   * Get appRetentionRate
+   *
+   * @return appRetentionRate
+   */
+  @ApiModelProperty(value = "")
+  public Double getAppRetentionRate() {
+    return appRetentionRate;
+  }
+
+  public void setAppRetentionRate(Double appRetentionRate) {
+    this.appRetentionRate = appRetentionRate;
+  }
+
+  public DailyReportsGetListStruct appRetentionCost(Long appRetentionCost) {
+    this.appRetentionCost = appRetentionCost;
+    return this;
+  }
+
+  /**
+   * Get appRetentionCost
+   *
+   * @return appRetentionCost
+   */
+  @ApiModelProperty(value = "")
+  public Long getAppRetentionCost() {
+    return appRetentionCost;
+  }
+
+  public void setAppRetentionCost(Long appRetentionCost) {
+    this.appRetentionCost = appRetentionCost;
+  }
+
+  public DailyReportsGetListStruct appAddToCarCount(Long appAddToCarCount) {
+    this.appAddToCarCount = appAddToCarCount;
+    return this;
+  }
+
+  /**
+   * Get appAddToCarCount
+   *
+   * @return appAddToCarCount
+   */
+  @ApiModelProperty(value = "")
+  public Long getAppAddToCarCount() {
+    return appAddToCarCount;
+  }
+
+  public void setAppAddToCarCount(Long appAddToCarCount) {
+    this.appAddToCarCount = appAddToCarCount;
+  }
+
+  public DailyReportsGetListStruct appAddToCarAmount(Long appAddToCarAmount) {
+    this.appAddToCarAmount = appAddToCarAmount;
+    return this;
+  }
+
+  /**
+   * Get appAddToCarAmount
+   *
+   * @return appAddToCarAmount
+   */
+  @ApiModelProperty(value = "")
+  public Long getAppAddToCarAmount() {
+    return appAddToCarAmount;
+  }
+
+  public void setAppAddToCarAmount(Long appAddToCarAmount) {
+    this.appAddToCarAmount = appAddToCarAmount;
+  }
+
+  public DailyReportsGetListStruct appCartAmount(Long appCartAmount) {
+    this.appCartAmount = appCartAmount;
+    return this;
+  }
+
+  /**
+   * Get appCartAmount
+   *
+   * @return appCartAmount
+   */
+  @ApiModelProperty(value = "")
+  public Long getAppCartAmount() {
+    return appCartAmount;
+  }
+
+  public void setAppCartAmount(Long appCartAmount) {
+    this.appCartAmount = appCartAmount;
+  }
+
+  public DailyReportsGetListStruct appAddToCarCost(Long appAddToCarCost) {
+    this.appAddToCarCost = appAddToCarCost;
+    return this;
+  }
+
+  /**
+   * Get appAddToCarCost
+   *
+   * @return appAddToCarCost
+   */
+  @ApiModelProperty(value = "")
+  public Long getAppAddToCarCost() {
+    return appAddToCarCost;
+  }
+
+  public void setAppAddToCarCost(Long appAddToCarCost) {
+    this.appAddToCarCost = appAddToCarCost;
+  }
+
+  public DailyReportsGetListStruct appPaymentCount(Long appPaymentCount) {
+    this.appPaymentCount = appPaymentCount;
+    return this;
+  }
+
+  /**
+   * Get appPaymentCount
+   *
+   * @return appPaymentCount
+   */
+  @ApiModelProperty(value = "")
+  public Long getAppPaymentCount() {
+    return appPaymentCount;
+  }
+
+  public void setAppPaymentCount(Long appPaymentCount) {
+    this.appPaymentCount = appPaymentCount;
+  }
+
+  public DailyReportsGetListStruct appPaymentAmount(Long appPaymentAmount) {
+    this.appPaymentAmount = appPaymentAmount;
+    return this;
+  }
+
+  /**
+   * Get appPaymentAmount
+   *
+   * @return appPaymentAmount
+   */
+  @ApiModelProperty(value = "")
+  public Long getAppPaymentAmount() {
+    return appPaymentAmount;
+  }
+
+  public void setAppPaymentAmount(Long appPaymentAmount) {
+    this.appPaymentAmount = appPaymentAmount;
+  }
+
+  public DailyReportsGetListStruct platformCouponClick(Long platformCouponClick) {
+    this.platformCouponClick = platformCouponClick;
+    return this;
+  }
+
+  /**
+   * Get platformCouponClick
+   *
+   * @return platformCouponClick
+   */
+  @ApiModelProperty(value = "")
+  public Long getPlatformCouponClick() {
+    return platformCouponClick;
+  }
+
+  public void setPlatformCouponClick(Long platformCouponClick) {
+    this.platformCouponClick = platformCouponClick;
+  }
+
+  public DailyReportsGetListStruct follow(Long follow) {
+    this.follow = follow;
+    return this;
+  }
+
+  /**
+   * Get follow
+   *
+   * @return follow
+   */
+  @ApiModelProperty(value = "")
+  public Long getFollow() {
+    return follow;
+  }
+
+  public void setFollow(Long follow) {
+    this.follow = follow;
+  }
+
+  public DailyReportsGetListStruct share(Long share) {
+    this.share = share;
+    return this;
+  }
+
+  /**
+   * Get share
+   *
+   * @return share
+   */
+  @ApiModelProperty(value = "")
+  public Long getShare() {
+    return share;
+  }
+
+  public void setShare(Long share) {
+    this.share = share;
+  }
+
+  public DailyReportsGetListStruct read(Long read) {
+    this.read = read;
+    return this;
+  }
+
+  /**
+   * Get read
+   *
+   * @return read
+   */
+  @ApiModelProperty(value = "")
+  public Long getRead() {
+    return read;
+  }
+
+  public void setRead(Long read) {
+    this.read = read;
+  }
+
+  public DailyReportsGetListStruct intelligentPhoneCallDirectCount(
+      Long intelligentPhoneCallDirectCount) {
+    this.intelligentPhoneCallDirectCount = intelligentPhoneCallDirectCount;
+    return this;
+  }
+
+  /**
+   * Get intelligentPhoneCallDirectCount
+   *
+   * @return intelligentPhoneCallDirectCount
+   */
+  @ApiModelProperty(value = "")
+  public Long getIntelligentPhoneCallDirectCount() {
+    return intelligentPhoneCallDirectCount;
+  }
+
+  public void setIntelligentPhoneCallDirectCount(Long intelligentPhoneCallDirectCount) {
+    this.intelligentPhoneCallDirectCount = intelligentPhoneCallDirectCount;
+  }
+
+  public DailyReportsGetListStruct videoLiveExpUserCount(Long videoLiveExpUserCount) {
+    this.videoLiveExpUserCount = videoLiveExpUserCount;
+    return this;
+  }
+
+  /**
+   * Get videoLiveExpUserCount
+   *
+   * @return videoLiveExpUserCount
+   */
+  @ApiModelProperty(value = "")
+  public Long getVideoLiveExpUserCount() {
+    return videoLiveExpUserCount;
+  }
+
+  public void setVideoLiveExpUserCount(Long videoLiveExpUserCount) {
+    this.videoLiveExpUserCount = videoLiveExpUserCount;
+  }
+
   public DailyReportsGetListStruct requestConversionsCount(Long requestConversionsCount) {
     this.requestConversionsCount = requestConversionsCount;
     return this;
@@ -15299,63 +15846,6 @@ public class DailyReportsGetListStruct {
     this.miniGamePayD30PlaRoi = miniGamePayD30PlaRoi;
   }
 
-  public DailyReportsGetListStruct campaignId(Long campaignId) {
-    this.campaignId = campaignId;
-    return this;
-  }
-
-  /**
-   * Get campaignId
-   *
-   * @return campaignId
-   */
-  @ApiModelProperty(value = "")
-  public Long getCampaignId() {
-    return campaignId;
-  }
-
-  public void setCampaignId(Long campaignId) {
-    this.campaignId = campaignId;
-  }
-
-  public DailyReportsGetListStruct campaignName(String campaignName) {
-    this.campaignName = campaignName;
-    return this;
-  }
-
-  /**
-   * Get campaignName
-   *
-   * @return campaignName
-   */
-  @ApiModelProperty(value = "")
-  public String getCampaignName() {
-    return campaignName;
-  }
-
-  public void setCampaignName(String campaignName) {
-    this.campaignName = campaignName;
-  }
-
-  public DailyReportsGetListStruct adgroupId(Long adgroupId) {
-    this.adgroupId = adgroupId;
-    return this;
-  }
-
-  /**
-   * Get adgroupId
-   *
-   * @return adgroupId
-   */
-  @ApiModelProperty(value = "")
-  public Long getAdgroupId() {
-    return adgroupId;
-  }
-
-  public void setAdgroupId(Long adgroupId) {
-    this.adgroupId = adgroupId;
-  }
-
   public DailyReportsGetListStruct adgroupName(String adgroupName) {
     this.adgroupName = adgroupName;
     return this;
@@ -15432,460 +15922,272 @@ public class DailyReportsGetListStruct {
     this.acquisitionCost = acquisitionCost;
   }
 
-  public DailyReportsGetListStruct adId(Long adId) {
-    this.adId = adId;
+  public DailyReportsGetListStruct videoFollowCount(Long videoFollowCount) {
+    this.videoFollowCount = videoFollowCount;
     return this;
   }
 
   /**
-   * Get adId
+   * Get videoFollowCount
    *
-   * @return adId
+   * @return videoFollowCount
    */
   @ApiModelProperty(value = "")
-  public Long getAdId() {
-    return adId;
+  public Long getVideoFollowCount() {
+    return videoFollowCount;
   }
 
-  public void setAdId(Long adId) {
-    this.adId = adId;
+  public void setVideoFollowCount(Long videoFollowCount) {
+    this.videoFollowCount = videoFollowCount;
   }
 
-  public DailyReportsGetListStruct adName(String adName) {
-    this.adName = adName;
+  public DailyReportsGetListStruct videoHeartCount(Long videoHeartCount) {
+    this.videoHeartCount = videoHeartCount;
     return this;
   }
 
   /**
-   * Get adName
+   * Get videoHeartCount
    *
-   * @return adName
+   * @return videoHeartCount
    */
   @ApiModelProperty(value = "")
-  public String getAdName() {
-    return adName;
+  public Long getVideoHeartCount() {
+    return videoHeartCount;
   }
 
-  public void setAdName(String adName) {
-    this.adName = adName;
+  public void setVideoHeartCount(Long videoHeartCount) {
+    this.videoHeartCount = videoHeartCount;
   }
 
-  public DailyReportsGetListStruct promotedObjectType(String promotedObjectType) {
-    this.promotedObjectType = promotedObjectType;
+  public DailyReportsGetListStruct videoCommentCount(Long videoCommentCount) {
+    this.videoCommentCount = videoCommentCount;
     return this;
   }
 
   /**
-   * Get promotedObjectType
+   * Get videoCommentCount
    *
-   * @return promotedObjectType
+   * @return videoCommentCount
    */
   @ApiModelProperty(value = "")
-  public String getPromotedObjectType() {
-    return promotedObjectType;
+  public Long getVideoCommentCount() {
+    return videoCommentCount;
   }
 
-  public void setPromotedObjectType(String promotedObjectType) {
-    this.promotedObjectType = promotedObjectType;
+  public void setVideoCommentCount(Long videoCommentCount) {
+    this.videoCommentCount = videoCommentCount;
   }
 
-  public DailyReportsGetListStruct promotedObjectId(String promotedObjectId) {
-    this.promotedObjectId = promotedObjectId;
+  public DailyReportsGetListStruct videoLiveSubscribeCount(Long videoLiveSubscribeCount) {
+    this.videoLiveSubscribeCount = videoLiveSubscribeCount;
     return this;
   }
 
   /**
-   * Get promotedObjectId
+   * Get videoLiveSubscribeCount
    *
-   * @return promotedObjectId
+   * @return videoLiveSubscribeCount
    */
   @ApiModelProperty(value = "")
-  public String getPromotedObjectId() {
-    return promotedObjectId;
+  public Long getVideoLiveSubscribeCount() {
+    return videoLiveSubscribeCount;
   }
 
-  public void setPromotedObjectId(String promotedObjectId) {
-    this.promotedObjectId = promotedObjectId;
+  public void setVideoLiveSubscribeCount(Long videoLiveSubscribeCount) {
+    this.videoLiveSubscribeCount = videoLiveSubscribeCount;
   }
 
-  public DailyReportsGetListStruct unionPositionId(Long unionPositionId) {
-    this.unionPositionId = unionPositionId;
+  public DailyReportsGetListStruct videoLiveExpCount(Long videoLiveExpCount) {
+    this.videoLiveExpCount = videoLiveExpCount;
     return this;
   }
 
   /**
-   * Get unionPositionId
+   * Get videoLiveExpCount
    *
-   * @return unionPositionId
+   * @return videoLiveExpCount
    */
   @ApiModelProperty(value = "")
-  public Long getUnionPositionId() {
-    return unionPositionId;
+  public Long getVideoLiveExpCount() {
+    return videoLiveExpCount;
   }
 
-  public void setUnionPositionId(Long unionPositionId) {
-    this.unionPositionId = unionPositionId;
+  public void setVideoLiveExpCount(Long videoLiveExpCount) {
+    this.videoLiveExpCount = videoLiveExpCount;
   }
 
-  public DailyReportsGetListStruct industryParentName(String industryParentName) {
-    this.industryParentName = industryParentName;
+  public DailyReportsGetListStruct videoLiveHeartCount(Long videoLiveHeartCount) {
+    this.videoLiveHeartCount = videoLiveHeartCount;
     return this;
   }
 
   /**
-   * Get industryParentName
+   * Get videoLiveHeartCount
    *
-   * @return industryParentName
+   * @return videoLiveHeartCount
    */
   @ApiModelProperty(value = "")
-  public String getIndustryParentName() {
-    return industryParentName;
+  public Long getVideoLiveHeartCount() {
+    return videoLiveHeartCount;
   }
 
-  public void setIndustryParentName(String industryParentName) {
-    this.industryParentName = industryParentName;
+  public void setVideoLiveHeartCount(Long videoLiveHeartCount) {
+    this.videoLiveHeartCount = videoLiveHeartCount;
   }
 
-  public DailyReportsGetListStruct placementName(String placementName) {
-    this.placementName = placementName;
+  public DailyReportsGetListStruct videoLiveCommentCount(Long videoLiveCommentCount) {
+    this.videoLiveCommentCount = videoLiveCommentCount;
     return this;
   }
 
   /**
-   * Get placementName
+   * Get videoLiveCommentCount
    *
-   * @return placementName
+   * @return videoLiveCommentCount
    */
   @ApiModelProperty(value = "")
-  public String getPlacementName() {
-    return placementName;
+  public Long getVideoLiveCommentCount() {
+    return videoLiveCommentCount;
   }
 
-  public void setPlacementName(String placementName) {
-    this.placementName = placementName;
+  public void setVideoLiveCommentCount(Long videoLiveCommentCount) {
+    this.videoLiveCommentCount = videoLiveCommentCount;
   }
 
-  public DailyReportsGetListStruct templateId(Long templateId) {
-    this.templateId = templateId;
+  public DailyReportsGetListStruct videoLiveShareCount(Long videoLiveShareCount) {
+    this.videoLiveShareCount = videoLiveShareCount;
     return this;
   }
 
   /**
-   * Get templateId
+   * Get videoLiveShareCount
    *
-   * @return templateId
+   * @return videoLiveShareCount
    */
   @ApiModelProperty(value = "")
-  public Long getTemplateId() {
-    return templateId;
+  public Long getVideoLiveShareCount() {
+    return videoLiveShareCount;
   }
 
-  public void setTemplateId(Long templateId) {
-    this.templateId = templateId;
+  public void setVideoLiveShareCount(Long videoLiveShareCount) {
+    this.videoLiveShareCount = videoLiveShareCount;
   }
 
-  public DailyReportsGetListStruct addToCartCost(Long addToCartCost) {
-    this.addToCartCost = addToCartCost;
+  public DailyReportsGetListStruct videoLiveCickCommodityCount(Long videoLiveCickCommodityCount) {
+    this.videoLiveCickCommodityCount = videoLiveCickCommodityCount;
     return this;
   }
 
   /**
-   * Get addToCartCost
+   * Get videoLiveCickCommodityCount
    *
-   * @return addToCartCost
+   * @return videoLiveCickCommodityCount
    */
   @ApiModelProperty(value = "")
-  public Long getAddToCartCost() {
-    return addToCartCost;
+  public Long getVideoLiveCickCommodityCount() {
+    return videoLiveCickCommodityCount;
   }
 
-  public void setAddToCartCost(Long addToCartCost) {
-    this.addToCartCost = addToCartCost;
+  public void setVideoLiveCickCommodityCount(Long videoLiveCickCommodityCount) {
+    this.videoLiveCickCommodityCount = videoLiveCickCommodityCount;
   }
 
-  public DailyReportsGetListStruct webAddToCartRate(Double webAddToCartRate) {
-    this.webAddToCartRate = webAddToCartRate;
+  public DailyReportsGetListStruct videoLiveHeartUserCount(Long videoLiveHeartUserCount) {
+    this.videoLiveHeartUserCount = videoLiveHeartUserCount;
     return this;
   }
 
   /**
-   * Get webAddToCartRate
+   * Get videoLiveHeartUserCount
    *
-   * @return webAddToCartRate
+   * @return videoLiveHeartUserCount
    */
   @ApiModelProperty(value = "")
-  public Double getWebAddToCartRate() {
-    return webAddToCartRate;
+  public Long getVideoLiveHeartUserCount() {
+    return videoLiveHeartUserCount;
   }
 
-  public void setWebAddToCartRate(Double webAddToCartRate) {
-    this.webAddToCartRate = webAddToCartRate;
+  public void setVideoLiveHeartUserCount(Long videoLiveHeartUserCount) {
+    this.videoLiveHeartUserCount = videoLiveHeartUserCount;
   }
 
-  public DailyReportsGetListStruct appAddToCartRate(Double appAddToCartRate) {
-    this.appAddToCartRate = appAddToCartRate;
+  public DailyReportsGetListStruct videoLiveCommentUserCount(Long videoLiveCommentUserCount) {
+    this.videoLiveCommentUserCount = videoLiveCommentUserCount;
     return this;
   }
 
   /**
-   * Get appAddToCartRate
+   * Get videoLiveCommentUserCount
    *
-   * @return appAddToCartRate
+   * @return videoLiveCommentUserCount
    */
   @ApiModelProperty(value = "")
-  public Double getAppAddToCartRate() {
-    return appAddToCartRate;
+  public Long getVideoLiveCommentUserCount() {
+    return videoLiveCommentUserCount;
   }
 
-  public void setAppAddToCartRate(Double appAddToCartRate) {
-    this.appAddToCartRate = appAddToCartRate;
+  public void setVideoLiveCommentUserCount(Long videoLiveCommentUserCount) {
+    this.videoLiveCommentUserCount = videoLiveCommentUserCount;
   }
 
-  public DailyReportsGetListStruct isExpandTargeting(Boolean isExpandTargeting) {
-    this.isExpandTargeting = isExpandTargeting;
+  public DailyReportsGetListStruct videoLiveShareUserCount(Long videoLiveShareUserCount) {
+    this.videoLiveShareUserCount = videoLiveShareUserCount;
     return this;
   }
 
   /**
-   * Get isExpandTargeting
+   * Get videoLiveShareUserCount
    *
-   * @return isExpandTargeting
+   * @return videoLiveShareUserCount
    */
   @ApiModelProperty(value = "")
-  public Boolean isIsExpandTargeting() {
-    return isExpandTargeting;
+  public Long getVideoLiveShareUserCount() {
+    return videoLiveShareUserCount;
   }
 
-  public void setIsExpandTargeting(Boolean isExpandTargeting) {
-    this.isExpandTargeting = isExpandTargeting;
+  public void setVideoLiveShareUserCount(Long videoLiveShareUserCount) {
+    this.videoLiveShareUserCount = videoLiveShareUserCount;
   }
 
-  public DailyReportsGetListStruct siteSet(String siteSet) {
-    this.siteSet = siteSet;
+  public DailyReportsGetListStruct videoLiveClickCommodityUserCount(
+      Long videoLiveClickCommodityUserCount) {
+    this.videoLiveClickCommodityUserCount = videoLiveClickCommodityUserCount;
     return this;
   }
 
   /**
-   * Get siteSet
+   * Get videoLiveClickCommodityUserCount
    *
-   * @return siteSet
+   * @return videoLiveClickCommodityUserCount
    */
   @ApiModelProperty(value = "")
-  public String getSiteSet() {
-    return siteSet;
+  public Long getVideoLiveClickCommodityUserCount() {
+    return videoLiveClickCommodityUserCount;
   }
 
-  public void setSiteSet(String siteSet) {
-    this.siteSet = siteSet;
+  public void setVideoLiveClickCommodityUserCount(Long videoLiveClickCommodityUserCount) {
+    this.videoLiveClickCommodityUserCount = videoLiveClickCommodityUserCount;
   }
 
-  public DailyReportsGetListStruct materialId(String materialId) {
-    this.materialId = materialId;
+  public DailyReportsGetListStruct videoLiveCommodityBubbleExpCount(
+      Long videoLiveCommodityBubbleExpCount) {
+    this.videoLiveCommodityBubbleExpCount = videoLiveCommodityBubbleExpCount;
     return this;
   }
 
   /**
-   * Get materialId
+   * Get videoLiveCommodityBubbleExpCount
    *
-   * @return materialId
+   * @return videoLiveCommodityBubbleExpCount
    */
   @ApiModelProperty(value = "")
-  public String getMaterialId() {
-    return materialId;
+  public Long getVideoLiveCommodityBubbleExpCount() {
+    return videoLiveCommodityBubbleExpCount;
   }
 
-  public void setMaterialId(String materialId) {
-    this.materialId = materialId;
-  }
-
-  public DailyReportsGetListStruct signature(String signature) {
-    this.signature = signature;
-    return this;
-  }
-
-  /**
-   * Get signature
-   *
-   * @return signature
-   */
-  @ApiModelProperty(value = "")
-  public String getSignature() {
-    return signature;
-  }
-
-  public void setSignature(String signature) {
-    this.signature = signature;
-  }
-
-  public DailyReportsGetListStruct productCatalogId(Long productCatalogId) {
-    this.productCatalogId = productCatalogId;
-    return this;
-  }
-
-  /**
-   * Get productCatalogId
-   *
-   * @return productCatalogId
-   */
-  @ApiModelProperty(value = "")
-  public Long getProductCatalogId() {
-    return productCatalogId;
-  }
-
-  public void setProductCatalogId(Long productCatalogId) {
-    this.productCatalogId = productCatalogId;
-  }
-
-  public DailyReportsGetListStruct productOuterId(String productOuterId) {
-    this.productOuterId = productOuterId;
-    return this;
-  }
-
-  /**
-   * Get productOuterId
-   *
-   * @return productOuterId
-   */
-  @ApiModelProperty(value = "")
-  public String getProductOuterId() {
-    return productOuterId;
-  }
-
-  public void setProductOuterId(String productOuterId) {
-    this.productOuterId = productOuterId;
-  }
-
-  public DailyReportsGetListStruct brandId(Long brandId) {
-    this.brandId = brandId;
-    return this;
-  }
-
-  /**
-   * Get brandId
-   *
-   * @return brandId
-   */
-  @ApiModelProperty(value = "")
-  public Long getBrandId() {
-    return brandId;
-  }
-
-  public void setBrandId(Long brandId) {
-    this.brandId = brandId;
-  }
-
-  public DailyReportsGetListStruct productSetId(Long productSetId) {
-    this.productSetId = productSetId;
-    return this;
-  }
-
-  /**
-   * Get productSetId
-   *
-   * @return productSetId
-   */
-  @ApiModelProperty(value = "")
-  public Long getProductSetId() {
-    return productSetId;
-  }
-
-  public void setProductSetId(Long productSetId) {
-    this.productSetId = productSetId;
-  }
-
-  public DailyReportsGetListStruct shopId(Long shopId) {
-    this.shopId = shopId;
-    return this;
-  }
-
-  /**
-   * Get shopId
-   *
-   * @return shopId
-   */
-  @ApiModelProperty(value = "")
-  public Long getShopId() {
-    return shopId;
-  }
-
-  public void setShopId(Long shopId) {
-    this.shopId = shopId;
-  }
-
-  public DailyReportsGetListStruct firstCategoryId(Long firstCategoryId) {
-    this.firstCategoryId = firstCategoryId;
-    return this;
-  }
-
-  /**
-   * Get firstCategoryId
-   *
-   * @return firstCategoryId
-   */
-  @ApiModelProperty(value = "")
-  public Long getFirstCategoryId() {
-    return firstCategoryId;
-  }
-
-  public void setFirstCategoryId(Long firstCategoryId) {
-    this.firstCategoryId = firstCategoryId;
-  }
-
-  public DailyReportsGetListStruct secondCategoryId(Long secondCategoryId) {
-    this.secondCategoryId = secondCategoryId;
-    return this;
-  }
-
-  /**
-   * Get secondCategoryId
-   *
-   * @return secondCategoryId
-   */
-  @ApiModelProperty(value = "")
-  public Long getSecondCategoryId() {
-    return secondCategoryId;
-  }
-
-  public void setSecondCategoryId(Long secondCategoryId) {
-    this.secondCategoryId = secondCategoryId;
-  }
-
-  public DailyReportsGetListStruct thirdCategoryId(Long thirdCategoryId) {
-    this.thirdCategoryId = thirdCategoryId;
-    return this;
-  }
-
-  /**
-   * Get thirdCategoryId
-   *
-   * @return thirdCategoryId
-   */
-  @ApiModelProperty(value = "")
-  public Long getThirdCategoryId() {
-    return thirdCategoryId;
-  }
-
-  public void setThirdCategoryId(Long thirdCategoryId) {
-    this.thirdCategoryId = thirdCategoryId;
-  }
-
-  public DailyReportsGetListStruct matchType(Long matchType) {
-    this.matchType = matchType;
-    return this;
-  }
-
-  /**
-   * Get matchType
-   *
-   * @return matchType
-   */
-  @ApiModelProperty(value = "")
-  public Long getMatchType() {
-    return matchType;
-  }
-
-  public void setMatchType(Long matchType) {
-    this.matchType = matchType;
+  public void setVideoLiveCommodityBubbleExpCount(Long videoLiveCommodityBubbleExpCount) {
+    this.videoLiveCommodityBubbleExpCount = videoLiveCommodityBubbleExpCount;
   }
 
   public DailyReportsGetListStruct bidwordId(Long bidwordId) {
@@ -15924,6 +16226,44 @@ public class DailyReportsGetListStruct {
 
   public void setBidword(String bidword) {
     this.bidword = bidword;
+  }
+
+  public DailyReportsGetListStruct matchType(Long matchType) {
+    this.matchType = matchType;
+    return this;
+  }
+
+  /**
+   * Get matchType
+   *
+   * @return matchType
+   */
+  @ApiModelProperty(value = "")
+  public Long getMatchType() {
+    return matchType;
+  }
+
+  public void setMatchType(Long matchType) {
+    this.matchType = matchType;
+  }
+
+  public DailyReportsGetListStruct siteSet(String siteSet) {
+    this.siteSet = siteSet;
+    return this;
+  }
+
+  /**
+   * Get siteSet
+   *
+   * @return siteSet
+   */
+  @ApiModelProperty(value = "")
+  public String getSiteSet() {
+    return siteSet;
+  }
+
+  public void setSiteSet(String siteSet) {
+    this.siteSet = siteSet;
   }
 
   public DailyReportsGetListStruct expOverallTopPv(Long expOverallTopPv) {
@@ -16002,6 +16342,215 @@ public class DailyReportsGetListStruct {
     this.realCostTop = realCostTop;
   }
 
+  public DailyReportsGetListStruct campaignName(String campaignName) {
+    this.campaignName = campaignName;
+    return this;
+  }
+
+  /**
+   * Get campaignName
+   *
+   * @return campaignName
+   */
+  @ApiModelProperty(value = "")
+  public String getCampaignName() {
+    return campaignName;
+  }
+
+  public void setCampaignName(String campaignName) {
+    this.campaignName = campaignName;
+  }
+
+  public DailyReportsGetListStruct templateId(Long templateId) {
+    this.templateId = templateId;
+    return this;
+  }
+
+  /**
+   * Get templateId
+   *
+   * @return templateId
+   */
+  @ApiModelProperty(value = "")
+  public Long getTemplateId() {
+    return templateId;
+  }
+
+  public void setTemplateId(Long templateId) {
+    this.templateId = templateId;
+  }
+
+  public DailyReportsGetListStruct addToCartCost(Long addToCartCost) {
+    this.addToCartCost = addToCartCost;
+    return this;
+  }
+
+  /**
+   * Get addToCartCost
+   *
+   * @return addToCartCost
+   */
+  @ApiModelProperty(value = "")
+  public Long getAddToCartCost() {
+    return addToCartCost;
+  }
+
+  public void setAddToCartCost(Long addToCartCost) {
+    this.addToCartCost = addToCartCost;
+  }
+
+  public DailyReportsGetListStruct webAddToCartRate(Double webAddToCartRate) {
+    this.webAddToCartRate = webAddToCartRate;
+    return this;
+  }
+
+  /**
+   * Get webAddToCartRate
+   *
+   * @return webAddToCartRate
+   */
+  @ApiModelProperty(value = "")
+  public Double getWebAddToCartRate() {
+    return webAddToCartRate;
+  }
+
+  public void setWebAddToCartRate(Double webAddToCartRate) {
+    this.webAddToCartRate = webAddToCartRate;
+  }
+
+  public DailyReportsGetListStruct appAddToCartRate(Double appAddToCartRate) {
+    this.appAddToCartRate = appAddToCartRate;
+    return this;
+  }
+
+  /**
+   * Get appAddToCartRate
+   *
+   * @return appAddToCartRate
+   */
+  @ApiModelProperty(value = "")
+  public Double getAppAddToCartRate() {
+    return appAddToCartRate;
+  }
+
+  public void setAppAddToCartRate(Double appAddToCartRate) {
+    this.appAddToCartRate = appAddToCartRate;
+  }
+
+  public DailyReportsGetListStruct appAddToCarRate(Double appAddToCarRate) {
+    this.appAddToCarRate = appAddToCarRate;
+    return this;
+  }
+
+  /**
+   * Get appAddToCarRate
+   *
+   * @return appAddToCarRate
+   */
+  @ApiModelProperty(value = "")
+  public Double getAppAddToCarRate() {
+    return appAddToCarRate;
+  }
+
+  public void setAppAddToCarRate(Double appAddToCarRate) {
+    this.appAddToCarRate = appAddToCarRate;
+  }
+
+  public DailyReportsGetListStruct isExpandTargeting(Boolean isExpandTargeting) {
+    this.isExpandTargeting = isExpandTargeting;
+    return this;
+  }
+
+  /**
+   * Get isExpandTargeting
+   *
+   * @return isExpandTargeting
+   */
+  @ApiModelProperty(value = "")
+  public Boolean isIsExpandTargeting() {
+    return isExpandTargeting;
+  }
+
+  public void setIsExpandTargeting(Boolean isExpandTargeting) {
+    this.isExpandTargeting = isExpandTargeting;
+  }
+
+  public DailyReportsGetListStruct materialId(String materialId) {
+    this.materialId = materialId;
+    return this;
+  }
+
+  /**
+   * Get materialId
+   *
+   * @return materialId
+   */
+  @ApiModelProperty(value = "")
+  public String getMaterialId() {
+    return materialId;
+  }
+
+  public void setMaterialId(String materialId) {
+    this.materialId = materialId;
+  }
+
+  public DailyReportsGetListStruct signature(String signature) {
+    this.signature = signature;
+    return this;
+  }
+
+  /**
+   * Get signature
+   *
+   * @return signature
+   */
+  @ApiModelProperty(value = "")
+  public String getSignature() {
+    return signature;
+  }
+
+  public void setSignature(String signature) {
+    this.signature = signature;
+  }
+
+  public DailyReportsGetListStruct promotedObjectType(String promotedObjectType) {
+    this.promotedObjectType = promotedObjectType;
+    return this;
+  }
+
+  /**
+   * Get promotedObjectType
+   *
+   * @return promotedObjectType
+   */
+  @ApiModelProperty(value = "")
+  public String getPromotedObjectType() {
+    return promotedObjectType;
+  }
+
+  public void setPromotedObjectType(String promotedObjectType) {
+    this.promotedObjectType = promotedObjectType;
+  }
+
+  public DailyReportsGetListStruct promotedObjectId(String promotedObjectId) {
+    this.promotedObjectId = promotedObjectId;
+    return this;
+  }
+
+  /**
+   * Get promotedObjectId
+   *
+   * @return promotedObjectId
+   */
+  @ApiModelProperty(value = "")
+  public String getPromotedObjectId() {
+    return promotedObjectId;
+  }
+
+  public void setPromotedObjectId(String promotedObjectId) {
+    this.promotedObjectId = promotedObjectId;
+  }
+
   public DailyReportsGetListStruct queryword(String queryword) {
     this.queryword = queryword;
     return this;
@@ -16021,1477 +16570,61 @@ public class DailyReportsGetListStruct {
     this.queryword = queryword;
   }
 
-  public DailyReportsGetListStruct hour(Long hour) {
-    this.hour = hour;
+  public DailyReportsGetListStruct unionPositionId(Long unionPositionId) {
+    this.unionPositionId = unionPositionId;
     return this;
   }
 
   /**
-   * Get hour
+   * Get unionPositionId
    *
-   * @return hour
+   * @return unionPositionId
    */
   @ApiModelProperty(value = "")
-  public Long getHour() {
-    return hour;
+  public Long getUnionPositionId() {
+    return unionPositionId;
   }
 
-  public void setHour(Long hour) {
-    this.hour = hour;
+  public void setUnionPositionId(Long unionPositionId) {
+    this.unionPositionId = unionPositionId;
   }
 
-  public DailyReportsGetListStruct wechatAccountId(String wechatAccountId) {
-    this.wechatAccountId = wechatAccountId;
+  public DailyReportsGetListStruct industryParentName(String industryParentName) {
+    this.industryParentName = industryParentName;
     return this;
   }
 
   /**
-   * Get wechatAccountId
+   * Get industryParentName
    *
-   * @return wechatAccountId
+   * @return industryParentName
    */
   @ApiModelProperty(value = "")
-  public String getWechatAccountId() {
-    return wechatAccountId;
+  public String getIndustryParentName() {
+    return industryParentName;
   }
 
-  public void setWechatAccountId(String wechatAccountId) {
-    this.wechatAccountId = wechatAccountId;
+  public void setIndustryParentName(String industryParentName) {
+    this.industryParentName = industryParentName;
   }
 
-  public DailyReportsGetListStruct wechatAgencyId(String wechatAgencyId) {
-    this.wechatAgencyId = wechatAgencyId;
+  public DailyReportsGetListStruct placementName(String placementName) {
+    this.placementName = placementName;
     return this;
   }
 
   /**
-   * Get wechatAgencyId
+   * Get placementName
    *
-   * @return wechatAgencyId
+   * @return placementName
    */
   @ApiModelProperty(value = "")
-  public String getWechatAgencyId() {
-    return wechatAgencyId;
+  public String getPlacementName() {
+    return placementName;
   }
 
-  public void setWechatAgencyId(String wechatAgencyId) {
-    this.wechatAgencyId = wechatAgencyId;
-  }
-
-  public DailyReportsGetListStruct costDeviationRate(Double costDeviationRate) {
-    this.costDeviationRate = costDeviationRate;
-    return this;
-  }
-
-  /**
-   * Get costDeviationRate
-   *
-   * @return costDeviationRate
-   */
-  @ApiModelProperty(value = "")
-  public Double getCostDeviationRate() {
-    return costDeviationRate;
-  }
-
-  public void setCostDeviationRate(Double costDeviationRate) {
-    this.costDeviationRate = costDeviationRate;
-  }
-
-  public DailyReportsGetListStruct compensationAmount(Long compensationAmount) {
-    this.compensationAmount = compensationAmount;
-    return this;
-  }
-
-  /**
-   * Get compensationAmount
-   *
-   * @return compensationAmount
-   */
-  @ApiModelProperty(value = "")
-  public Long getCompensationAmount() {
-    return compensationAmount;
-  }
-
-  public void setCompensationAmount(Long compensationAmount) {
-    this.compensationAmount = compensationAmount;
-  }
-
-  public DailyReportsGetListStruct viewUserCount(Long viewUserCount) {
-    this.viewUserCount = viewUserCount;
-    return this;
-  }
-
-  /**
-   * Get viewUserCount
-   *
-   * @return viewUserCount
-   */
-  @ApiModelProperty(value = "")
-  public Long getViewUserCount() {
-    return viewUserCount;
-  }
-
-  public void setViewUserCount(Long viewUserCount) {
-    this.viewUserCount = viewUserCount;
-  }
-
-  public DailyReportsGetListStruct avgViewPerUser(Double avgViewPerUser) {
-    this.avgViewPerUser = avgViewPerUser;
-    return this;
-  }
-
-  /**
-   * Get avgViewPerUser
-   *
-   * @return avgViewPerUser
-   */
-  @ApiModelProperty(value = "")
-  public Double getAvgViewPerUser() {
-    return avgViewPerUser;
-  }
-
-  public void setAvgViewPerUser(Double avgViewPerUser) {
-    this.avgViewPerUser = avgViewPerUser;
-  }
-
-  public DailyReportsGetListStruct clickUserCount(Long clickUserCount) {
-    this.clickUserCount = clickUserCount;
-    return this;
-  }
-
-  /**
-   * Get clickUserCount
-   *
-   * @return clickUserCount
-   */
-  @ApiModelProperty(value = "")
-  public Long getClickUserCount() {
-    return clickUserCount;
-  }
-
-  public void setClickUserCount(Long clickUserCount) {
-    this.clickUserCount = clickUserCount;
-  }
-
-  public DailyReportsGetListStruct imageClickUserCount(Long imageClickUserCount) {
-    this.imageClickUserCount = imageClickUserCount;
-    return this;
-  }
-
-  /**
-   * Get imageClickUserCount
-   *
-   * @return imageClickUserCount
-   */
-  @ApiModelProperty(value = "")
-  public Long getImageClickUserCount() {
-    return imageClickUserCount;
-  }
-
-  public void setImageClickUserCount(Long imageClickUserCount) {
-    this.imageClickUserCount = imageClickUserCount;
-  }
-
-  public DailyReportsGetListStruct videoClickUserCount(Long videoClickUserCount) {
-    this.videoClickUserCount = videoClickUserCount;
-    return this;
-  }
-
-  /**
-   * Get videoClickUserCount
-   *
-   * @return videoClickUserCount
-   */
-  @ApiModelProperty(value = "")
-  public Long getVideoClickUserCount() {
-    return videoClickUserCount;
-  }
-
-  public void setVideoClickUserCount(Long videoClickUserCount) {
-    this.videoClickUserCount = videoClickUserCount;
-  }
-
-  public DailyReportsGetListStruct linkClickUserCount(Long linkClickUserCount) {
-    this.linkClickUserCount = linkClickUserCount;
-    return this;
-  }
-
-  /**
-   * Get linkClickUserCount
-   *
-   * @return linkClickUserCount
-   */
-  @ApiModelProperty(value = "")
-  public Long getLinkClickUserCount() {
-    return linkClickUserCount;
-  }
-
-  public void setLinkClickUserCount(Long linkClickUserCount) {
-    this.linkClickUserCount = linkClickUserCount;
-  }
-
-  public DailyReportsGetListStruct portraitClickUserCount(Long portraitClickUserCount) {
-    this.portraitClickUserCount = portraitClickUserCount;
-    return this;
-  }
-
-  /**
-   * Get portraitClickUserCount
-   *
-   * @return portraitClickUserCount
-   */
-  @ApiModelProperty(value = "")
-  public Long getPortraitClickUserCount() {
-    return portraitClickUserCount;
-  }
-
-  public void setPortraitClickUserCount(Long portraitClickUserCount) {
-    this.portraitClickUserCount = portraitClickUserCount;
-  }
-
-  public DailyReportsGetListStruct nicknameClickUserCount(Long nicknameClickUserCount) {
-    this.nicknameClickUserCount = nicknameClickUserCount;
-    return this;
-  }
-
-  /**
-   * Get nicknameClickUserCount
-   *
-   * @return nicknameClickUserCount
-   */
-  @ApiModelProperty(value = "")
-  public Long getNicknameClickUserCount() {
-    return nicknameClickUserCount;
-  }
-
-  public void setNicknameClickUserCount(Long nicknameClickUserCount) {
-    this.nicknameClickUserCount = nicknameClickUserCount;
-  }
-
-  public DailyReportsGetListStruct poiClickUserCount(Long poiClickUserCount) {
-    this.poiClickUserCount = poiClickUserCount;
-    return this;
-  }
-
-  /**
-   * Get poiClickUserCount
-   *
-   * @return poiClickUserCount
-   */
-  @ApiModelProperty(value = "")
-  public Long getPoiClickUserCount() {
-    return poiClickUserCount;
-  }
-
-  public void setPoiClickUserCount(Long poiClickUserCount) {
-    this.poiClickUserCount = poiClickUserCount;
-  }
-
-  public DailyReportsGetListStruct platformKeyPageViewUserCount(Long platformKeyPageViewUserCount) {
-    this.platformKeyPageViewUserCount = platformKeyPageViewUserCount;
-    return this;
-  }
-
-  /**
-   * Get platformKeyPageViewUserCount
-   *
-   * @return platformKeyPageViewUserCount
-   */
-  @ApiModelProperty(value = "")
-  public Long getPlatformKeyPageViewUserCount() {
-    return platformKeyPageViewUserCount;
-  }
-
-  public void setPlatformKeyPageViewUserCount(Long platformKeyPageViewUserCount) {
-    this.platformKeyPageViewUserCount = platformKeyPageViewUserCount;
-  }
-
-  public DailyReportsGetListStruct platformKeyPageAvgViewPerUser(
-      Double platformKeyPageAvgViewPerUser) {
-    this.platformKeyPageAvgViewPerUser = platformKeyPageAvgViewPerUser;
-    return this;
-  }
-
-  /**
-   * Get platformKeyPageAvgViewPerUser
-   *
-   * @return platformKeyPageAvgViewPerUser
-   */
-  @ApiModelProperty(value = "")
-  public Double getPlatformKeyPageAvgViewPerUser() {
-    return platformKeyPageAvgViewPerUser;
-  }
-
-  public void setPlatformKeyPageAvgViewPerUser(Double platformKeyPageAvgViewPerUser) {
-    this.platformKeyPageAvgViewPerUser = platformKeyPageAvgViewPerUser;
-  }
-
-  public DailyReportsGetListStruct platformKeyPageViewDuration(Double platformKeyPageViewDuration) {
-    this.platformKeyPageViewDuration = platformKeyPageViewDuration;
-    return this;
-  }
-
-  /**
-   * Get platformKeyPageViewDuration
-   *
-   * @return platformKeyPageViewDuration
-   */
-  @ApiModelProperty(value = "")
-  public Double getPlatformKeyPageViewDuration() {
-    return platformKeyPageViewDuration;
-  }
-
-  public void setPlatformKeyPageViewDuration(Double platformKeyPageViewDuration) {
-    this.platformKeyPageViewDuration = platformKeyPageViewDuration;
-  }
-
-  public DailyReportsGetListStruct cpnClickButtonCost(Long cpnClickButtonCost) {
-    this.cpnClickButtonCost = cpnClickButtonCost;
-    return this;
-  }
-
-  /**
-   * Get cpnClickButtonCost
-   *
-   * @return cpnClickButtonCost
-   */
-  @ApiModelProperty(value = "")
-  public Long getCpnClickButtonCost() {
-    return cpnClickButtonCost;
-  }
-
-  public void setCpnClickButtonCost(Long cpnClickButtonCost) {
-    this.cpnClickButtonCost = cpnClickButtonCost;
-  }
-
-  public DailyReportsGetListStruct praiseUserCount(Long praiseUserCount) {
-    this.praiseUserCount = praiseUserCount;
-    return this;
-  }
-
-  /**
-   * Get praiseUserCount
-   *
-   * @return praiseUserCount
-   */
-  @ApiModelProperty(value = "")
-  public Long getPraiseUserCount() {
-    return praiseUserCount;
-  }
-
-  public void setPraiseUserCount(Long praiseUserCount) {
-    this.praiseUserCount = praiseUserCount;
-  }
-
-  public DailyReportsGetListStruct commentUserCount(Long commentUserCount) {
-    this.commentUserCount = commentUserCount;
-    return this;
-  }
-
-  /**
-   * Get commentUserCount
-   *
-   * @return commentUserCount
-   */
-  @ApiModelProperty(value = "")
-  public Long getCommentUserCount() {
-    return commentUserCount;
-  }
-
-  public void setCommentUserCount(Long commentUserCount) {
-    this.commentUserCount = commentUserCount;
-  }
-
-  public DailyReportsGetListStruct orderCount(Long orderCount) {
-    this.orderCount = orderCount;
-    return this;
-  }
-
-  /**
-   * Get orderCount
-   *
-   * @return orderCount
-   */
-  @ApiModelProperty(value = "")
-  public Long getOrderCount() {
-    return orderCount;
-  }
-
-  public void setOrderCount(Long orderCount) {
-    this.orderCount = orderCount;
-  }
-
-  public DailyReportsGetListStruct orderRate(Double orderRate) {
-    this.orderRate = orderRate;
-    return this;
-  }
-
-  /**
-   * Get orderRate
-   *
-   * @return orderRate
-   */
-  @ApiModelProperty(value = "")
-  public Double getOrderRate() {
-    return orderRate;
-  }
-
-  public void setOrderRate(Double orderRate) {
-    this.orderRate = orderRate;
-  }
-
-  public DailyReportsGetListStruct questReservationPvCost(Long questReservationPvCost) {
-    this.questReservationPvCost = questReservationPvCost;
-    return this;
-  }
-
-  /**
-   * Get questReservationPvCost
-   *
-   * @return questReservationPvCost
-   */
-  @ApiModelProperty(value = "")
-  public Long getQuestReservationPvCost() {
-    return questReservationPvCost;
-  }
-
-  public void setQuestReservationPvCost(Long questReservationPvCost) {
-    this.questReservationPvCost = questReservationPvCost;
-  }
-
-  public DailyReportsGetListStruct leadsRate(Double leadsRate) {
-    this.leadsRate = leadsRate;
-    return this;
-  }
-
-  /**
-   * Get leadsRate
-   *
-   * @return leadsRate
-   */
-  @ApiModelProperty(value = "")
-  public Double getLeadsRate() {
-    return leadsRate;
-  }
-
-  public void setLeadsRate(Double leadsRate) {
-    this.leadsRate = leadsRate;
-  }
-
-  public DailyReportsGetListStruct leadsUserCount(Long leadsUserCount) {
-    this.leadsUserCount = leadsUserCount;
-    return this;
-  }
-
-  /**
-   * Get leadsUserCount
-   *
-   * @return leadsUserCount
-   */
-  @ApiModelProperty(value = "")
-  public Long getLeadsUserCount() {
-    return leadsUserCount;
-  }
-
-  public void setLeadsUserCount(Long leadsUserCount) {
-    this.leadsUserCount = leadsUserCount;
-  }
-
-  public DailyReportsGetListStruct leadsCost(Long leadsCost) {
-    this.leadsCost = leadsCost;
-    return this;
-  }
-
-  /**
-   * Get leadsCost
-   *
-   * @return leadsCost
-   */
-  @ApiModelProperty(value = "")
-  public Long getLeadsCost() {
-    return leadsCost;
-  }
-
-  public void setLeadsCost(Long leadsCost) {
-    this.leadsCost = leadsCost;
-  }
-
-  public DailyReportsGetListStruct leadsUserRate(Double leadsUserRate) {
-    this.leadsUserRate = leadsUserRate;
-    return this;
-  }
-
-  /**
-   * Get leadsUserRate
-   *
-   * @return leadsUserRate
-   */
-  @ApiModelProperty(value = "")
-  public Double getLeadsUserRate() {
-    return leadsUserRate;
-  }
-
-  public void setLeadsUserRate(Double leadsUserRate) {
-    this.leadsUserRate = leadsUserRate;
-  }
-
-  public DailyReportsGetListStruct validLeadsCost(Long validLeadsCost) {
-    this.validLeadsCost = validLeadsCost;
-    return this;
-  }
-
-  /**
-   * Get validLeadsCost
-   *
-   * @return validLeadsCost
-   */
-  @ApiModelProperty(value = "")
-  public Long getValidLeadsCost() {
-    return validLeadsCost;
-  }
-
-  public void setValidLeadsCost(Long validLeadsCost) {
-    this.validLeadsCost = validLeadsCost;
-  }
-
-  public DailyReportsGetListStruct validLeadsRate(Double validLeadsRate) {
-    this.validLeadsRate = validLeadsRate;
-    return this;
-  }
-
-  /**
-   * Get validLeadsRate
-   *
-   * @return validLeadsRate
-   */
-  @ApiModelProperty(value = "")
-  public Double getValidLeadsRate() {
-    return validLeadsRate;
-  }
-
-  public void setValidLeadsRate(Double validLeadsRate) {
-    this.validLeadsRate = validLeadsRate;
-  }
-
-  public DailyReportsGetListStruct pageConsultUserCount(Long pageConsultUserCount) {
-    this.pageConsultUserCount = pageConsultUserCount;
-    return this;
-  }
-
-  /**
-   * Get pageConsultUserCount
-   *
-   * @return pageConsultUserCount
-   */
-  @ApiModelProperty(value = "")
-  public Long getPageConsultUserCount() {
-    return pageConsultUserCount;
-  }
-
-  public void setPageConsultUserCount(Long pageConsultUserCount) {
-    this.pageConsultUserCount = pageConsultUserCount;
-  }
-
-  public DailyReportsGetListStruct validPageConsultUserCount(Long validPageConsultUserCount) {
-    this.validPageConsultUserCount = validPageConsultUserCount;
-    return this;
-  }
-
-  /**
-   * Get validPageConsultUserCount
-   *
-   * @return validPageConsultUserCount
-   */
-  @ApiModelProperty(value = "")
-  public Long getValidPageConsultUserCount() {
-    return validPageConsultUserCount;
-  }
-
-  public void setValidPageConsultUserCount(Long validPageConsultUserCount) {
-    this.validPageConsultUserCount = validPageConsultUserCount;
-  }
-
-  public DailyReportsGetListStruct withdrDepWebUserCount(Long withdrDepWebUserCount) {
-    this.withdrDepWebUserCount = withdrDepWebUserCount;
-    return this;
-  }
-
-  /**
-   * Get withdrDepWebUserCount
-   *
-   * @return withdrDepWebUserCount
-   */
-  @ApiModelProperty(value = "")
-  public Long getWithdrDepWebUserCount() {
-    return withdrDepWebUserCount;
-  }
-
-  public void setWithdrDepWebUserCount(Long withdrDepWebUserCount) {
-    this.withdrDepWebUserCount = withdrDepWebUserCount;
-  }
-
-  public DailyReportsGetListStruct wechatMinigameRegisterCost(Long wechatMinigameRegisterCost) {
-    this.wechatMinigameRegisterCost = wechatMinigameRegisterCost;
-    return this;
-  }
-
-  /**
-   * Get wechatMinigameRegisterCost
-   *
-   * @return wechatMinigameRegisterCost
-   */
-  @ApiModelProperty(value = "")
-  public Long getWechatMinigameRegisterCost() {
-    return wechatMinigameRegisterCost;
-  }
-
-  public void setWechatMinigameRegisterCost(Long wechatMinigameRegisterCost) {
-    this.wechatMinigameRegisterCost = wechatMinigameRegisterCost;
-  }
-
-  public DailyReportsGetListStruct wechatMinigameRegisterRate(Double wechatMinigameRegisterRate) {
-    this.wechatMinigameRegisterRate = wechatMinigameRegisterRate;
-    return this;
-  }
-
-  /**
-   * Get wechatMinigameRegisterRate
-   *
-   * @return wechatMinigameRegisterRate
-   */
-  @ApiModelProperty(value = "")
-  public Double getWechatMinigameRegisterRate() {
-    return wechatMinigameRegisterRate;
-  }
-
-  public void setWechatMinigameRegisterRate(Double wechatMinigameRegisterRate) {
-    this.wechatMinigameRegisterRate = wechatMinigameRegisterRate;
-  }
-
-  public DailyReportsGetListStruct wechatMinigameArpu(Double wechatMinigameArpu) {
-    this.wechatMinigameArpu = wechatMinigameArpu;
-    return this;
-  }
-
-  /**
-   * Get wechatMinigameArpu
-   *
-   * @return wechatMinigameArpu
-   */
-  @ApiModelProperty(value = "")
-  public Double getWechatMinigameArpu() {
-    return wechatMinigameArpu;
-  }
-
-  public void setWechatMinigameArpu(Double wechatMinigameArpu) {
-    this.wechatMinigameArpu = wechatMinigameArpu;
-  }
-
-  public DailyReportsGetListStruct wechatMinigameRetentionCount(Long wechatMinigameRetentionCount) {
-    this.wechatMinigameRetentionCount = wechatMinigameRetentionCount;
-    return this;
-  }
-
-  /**
-   * Get wechatMinigameRetentionCount
-   *
-   * @return wechatMinigameRetentionCount
-   */
-  @ApiModelProperty(value = "")
-  public Long getWechatMinigameRetentionCount() {
-    return wechatMinigameRetentionCount;
-  }
-
-  public void setWechatMinigameRetentionCount(Long wechatMinigameRetentionCount) {
-    this.wechatMinigameRetentionCount = wechatMinigameRetentionCount;
-  }
-
-  public DailyReportsGetListStruct wechatMinigameCheckoutCount(Long wechatMinigameCheckoutCount) {
-    this.wechatMinigameCheckoutCount = wechatMinigameCheckoutCount;
-    return this;
-  }
-
-  /**
-   * Get wechatMinigameCheckoutCount
-   *
-   * @return wechatMinigameCheckoutCount
-   */
-  @ApiModelProperty(value = "")
-  public Long getWechatMinigameCheckoutCount() {
-    return wechatMinigameCheckoutCount;
-  }
-
-  public void setWechatMinigameCheckoutCount(Long wechatMinigameCheckoutCount) {
-    this.wechatMinigameCheckoutCount = wechatMinigameCheckoutCount;
-  }
-
-  public DailyReportsGetListStruct wechatMinigameCheckoutAmount(Long wechatMinigameCheckoutAmount) {
-    this.wechatMinigameCheckoutAmount = wechatMinigameCheckoutAmount;
-    return this;
-  }
-
-  /**
-   * Get wechatMinigameCheckoutAmount
-   *
-   * @return wechatMinigameCheckoutAmount
-   */
-  @ApiModelProperty(value = "")
-  public Long getWechatMinigameCheckoutAmount() {
-    return wechatMinigameCheckoutAmount;
-  }
-
-  public void setWechatMinigameCheckoutAmount(Long wechatMinigameCheckoutAmount) {
-    this.wechatMinigameCheckoutAmount = wechatMinigameCheckoutAmount;
-  }
-
-  public DailyReportsGetListStruct officialAccountFollowCount(Long officialAccountFollowCount) {
-    this.officialAccountFollowCount = officialAccountFollowCount;
-    return this;
-  }
-
-  /**
-   * Get officialAccountFollowCount
-   *
-   * @return officialAccountFollowCount
-   */
-  @ApiModelProperty(value = "")
-  public Long getOfficialAccountFollowCount() {
-    return officialAccountFollowCount;
-  }
-
-  public void setOfficialAccountFollowCount(Long officialAccountFollowCount) {
-    this.officialAccountFollowCount = officialAccountFollowCount;
-  }
-
-  public DailyReportsGetListStruct officialAccountFollowCost(Long officialAccountFollowCost) {
-    this.officialAccountFollowCost = officialAccountFollowCost;
-    return this;
-  }
-
-  /**
-   * Get officialAccountFollowCost
-   *
-   * @return officialAccountFollowCost
-   */
-  @ApiModelProperty(value = "")
-  public Long getOfficialAccountFollowCost() {
-    return officialAccountFollowCost;
-  }
-
-  public void setOfficialAccountFollowCost(Long officialAccountFollowCost) {
-    this.officialAccountFollowCost = officialAccountFollowCost;
-  }
-
-  public DailyReportsGetListStruct officialAccountFollowRate(Double officialAccountFollowRate) {
-    this.officialAccountFollowRate = officialAccountFollowRate;
-    return this;
-  }
-
-  /**
-   * Get officialAccountFollowRate
-   *
-   * @return officialAccountFollowRate
-   */
-  @ApiModelProperty(value = "")
-  public Double getOfficialAccountFollowRate() {
-    return officialAccountFollowRate;
-  }
-
-  public void setOfficialAccountFollowRate(Double officialAccountFollowRate) {
-    this.officialAccountFollowRate = officialAccountFollowRate;
-  }
-
-  public DailyReportsGetListStruct officialAccountRegisterUserCount(
-      Long officialAccountRegisterUserCount) {
-    this.officialAccountRegisterUserCount = officialAccountRegisterUserCount;
-    return this;
-  }
-
-  /**
-   * Get officialAccountRegisterUserCount
-   *
-   * @return officialAccountRegisterUserCount
-   */
-  @ApiModelProperty(value = "")
-  public Long getOfficialAccountRegisterUserCount() {
-    return officialAccountRegisterUserCount;
-  }
-
-  public void setOfficialAccountRegisterUserCount(Long officialAccountRegisterUserCount) {
-    this.officialAccountRegisterUserCount = officialAccountRegisterUserCount;
-  }
-
-  public DailyReportsGetListStruct officialAccountRegisterRate(Double officialAccountRegisterRate) {
-    this.officialAccountRegisterRate = officialAccountRegisterRate;
-    return this;
-  }
-
-  /**
-   * Get officialAccountRegisterRate
-   *
-   * @return officialAccountRegisterRate
-   */
-  @ApiModelProperty(value = "")
-  public Double getOfficialAccountRegisterRate() {
-    return officialAccountRegisterRate;
-  }
-
-  public void setOfficialAccountRegisterRate(Double officialAccountRegisterRate) {
-    this.officialAccountRegisterRate = officialAccountRegisterRate;
-  }
-
-  public DailyReportsGetListStruct officialAccountRegisterCost(Long officialAccountRegisterCost) {
-    this.officialAccountRegisterCost = officialAccountRegisterCost;
-    return this;
-  }
-
-  /**
-   * Get officialAccountRegisterCost
-   *
-   * @return officialAccountRegisterCost
-   */
-  @ApiModelProperty(value = "")
-  public Long getOfficialAccountRegisterCost() {
-    return officialAccountRegisterCost;
-  }
-
-  public void setOfficialAccountRegisterCost(Long officialAccountRegisterCost) {
-    this.officialAccountRegisterCost = officialAccountRegisterCost;
-  }
-
-  public DailyReportsGetListStruct officialAccountRegisterAmount(
-      Long officialAccountRegisterAmount) {
-    this.officialAccountRegisterAmount = officialAccountRegisterAmount;
-    return this;
-  }
-
-  /**
-   * Get officialAccountRegisterAmount
-   *
-   * @return officialAccountRegisterAmount
-   */
-  @ApiModelProperty(value = "")
-  public Long getOfficialAccountRegisterAmount() {
-    return officialAccountRegisterAmount;
-  }
-
-  public void setOfficialAccountRegisterAmount(Long officialAccountRegisterAmount) {
-    this.officialAccountRegisterAmount = officialAccountRegisterAmount;
-  }
-
-  public DailyReportsGetListStruct officialAccountRegisterRoi(Long officialAccountRegisterRoi) {
-    this.officialAccountRegisterRoi = officialAccountRegisterRoi;
-    return this;
-  }
-
-  /**
-   * Get officialAccountRegisterRoi
-   *
-   * @return officialAccountRegisterRoi
-   */
-  @ApiModelProperty(value = "")
-  public Long getOfficialAccountRegisterRoi() {
-    return officialAccountRegisterRoi;
-  }
-
-  public void setOfficialAccountRegisterRoi(Long officialAccountRegisterRoi) {
-    this.officialAccountRegisterRoi = officialAccountRegisterRoi;
-  }
-
-  public DailyReportsGetListStruct officialAccountApplyCount(Long officialAccountApplyCount) {
-    this.officialAccountApplyCount = officialAccountApplyCount;
-    return this;
-  }
-
-  /**
-   * Get officialAccountApplyCount
-   *
-   * @return officialAccountApplyCount
-   */
-  @ApiModelProperty(value = "")
-  public Long getOfficialAccountApplyCount() {
-    return officialAccountApplyCount;
-  }
-
-  public void setOfficialAccountApplyCount(Long officialAccountApplyCount) {
-    this.officialAccountApplyCount = officialAccountApplyCount;
-  }
-
-  public DailyReportsGetListStruct officialAccountApplyUserCount(
-      Long officialAccountApplyUserCount) {
-    this.officialAccountApplyUserCount = officialAccountApplyUserCount;
-    return this;
-  }
-
-  /**
-   * Get officialAccountApplyUserCount
-   *
-   * @return officialAccountApplyUserCount
-   */
-  @ApiModelProperty(value = "")
-  public Long getOfficialAccountApplyUserCount() {
-    return officialAccountApplyUserCount;
-  }
-
-  public void setOfficialAccountApplyUserCount(Long officialAccountApplyUserCount) {
-    this.officialAccountApplyUserCount = officialAccountApplyUserCount;
-  }
-
-  public DailyReportsGetListStruct officialAccountApplyRate(Double officialAccountApplyRate) {
-    this.officialAccountApplyRate = officialAccountApplyRate;
-    return this;
-  }
-
-  /**
-   * Get officialAccountApplyRate
-   *
-   * @return officialAccountApplyRate
-   */
-  @ApiModelProperty(value = "")
-  public Double getOfficialAccountApplyRate() {
-    return officialAccountApplyRate;
-  }
-
-  public void setOfficialAccountApplyRate(Double officialAccountApplyRate) {
-    this.officialAccountApplyRate = officialAccountApplyRate;
-  }
-
-  public DailyReportsGetListStruct officialAccountApplyCost(Long officialAccountApplyCost) {
-    this.officialAccountApplyCost = officialAccountApplyCost;
-    return this;
-  }
-
-  /**
-   * Get officialAccountApplyCost
-   *
-   * @return officialAccountApplyCost
-   */
-  @ApiModelProperty(value = "")
-  public Long getOfficialAccountApplyCost() {
-    return officialAccountApplyCost;
-  }
-
-  public void setOfficialAccountApplyCost(Long officialAccountApplyCost) {
-    this.officialAccountApplyCost = officialAccountApplyCost;
-  }
-
-  public DailyReportsGetListStruct officialAccountApplyAmount(Long officialAccountApplyAmount) {
-    this.officialAccountApplyAmount = officialAccountApplyAmount;
-    return this;
-  }
-
-  /**
-   * Get officialAccountApplyAmount
-   *
-   * @return officialAccountApplyAmount
-   */
-  @ApiModelProperty(value = "")
-  public Long getOfficialAccountApplyAmount() {
-    return officialAccountApplyAmount;
-  }
-
-  public void setOfficialAccountApplyAmount(Long officialAccountApplyAmount) {
-    this.officialAccountApplyAmount = officialAccountApplyAmount;
-  }
-
-  public DailyReportsGetListStruct officialAccountApplyRoi(Long officialAccountApplyRoi) {
-    this.officialAccountApplyRoi = officialAccountApplyRoi;
-    return this;
-  }
-
-  /**
-   * Get officialAccountApplyRoi
-   *
-   * @return officialAccountApplyRoi
-   */
-  @ApiModelProperty(value = "")
-  public Long getOfficialAccountApplyRoi() {
-    return officialAccountApplyRoi;
-  }
-
-  public void setOfficialAccountApplyRoi(Long officialAccountApplyRoi) {
-    this.officialAccountApplyRoi = officialAccountApplyRoi;
-  }
-
-  public DailyReportsGetListStruct officialAccountOrderCount(Long officialAccountOrderCount) {
-    this.officialAccountOrderCount = officialAccountOrderCount;
-    return this;
-  }
-
-  /**
-   * Get officialAccountOrderCount
-   *
-   * @return officialAccountOrderCount
-   */
-  @ApiModelProperty(value = "")
-  public Long getOfficialAccountOrderCount() {
-    return officialAccountOrderCount;
-  }
-
-  public void setOfficialAccountOrderCount(Long officialAccountOrderCount) {
-    this.officialAccountOrderCount = officialAccountOrderCount;
-  }
-
-  public DailyReportsGetListStruct officialAccountFirstDayOrderCount(
-      Long officialAccountFirstDayOrderCount) {
-    this.officialAccountFirstDayOrderCount = officialAccountFirstDayOrderCount;
-    return this;
-  }
-
-  /**
-   * Get officialAccountFirstDayOrderCount
-   *
-   * @return officialAccountFirstDayOrderCount
-   */
-  @ApiModelProperty(value = "")
-  public Long getOfficialAccountFirstDayOrderCount() {
-    return officialAccountFirstDayOrderCount;
-  }
-
-  public void setOfficialAccountFirstDayOrderCount(Long officialAccountFirstDayOrderCount) {
-    this.officialAccountFirstDayOrderCount = officialAccountFirstDayOrderCount;
-  }
-
-  public DailyReportsGetListStruct officialAccountOrderUserCount(
-      Long officialAccountOrderUserCount) {
-    this.officialAccountOrderUserCount = officialAccountOrderUserCount;
-    return this;
-  }
-
-  /**
-   * Get officialAccountOrderUserCount
-   *
-   * @return officialAccountOrderUserCount
-   */
-  @ApiModelProperty(value = "")
-  public Long getOfficialAccountOrderUserCount() {
-    return officialAccountOrderUserCount;
-  }
-
-  public void setOfficialAccountOrderUserCount(Long officialAccountOrderUserCount) {
-    this.officialAccountOrderUserCount = officialAccountOrderUserCount;
-  }
-
-  public DailyReportsGetListStruct officialAccountOrderRate(Double officialAccountOrderRate) {
-    this.officialAccountOrderRate = officialAccountOrderRate;
-    return this;
-  }
-
-  /**
-   * Get officialAccountOrderRate
-   *
-   * @return officialAccountOrderRate
-   */
-  @ApiModelProperty(value = "")
-  public Double getOfficialAccountOrderRate() {
-    return officialAccountOrderRate;
-  }
-
-  public void setOfficialAccountOrderRate(Double officialAccountOrderRate) {
-    this.officialAccountOrderRate = officialAccountOrderRate;
-  }
-
-  public DailyReportsGetListStruct officialAccountOrderCost(Long officialAccountOrderCost) {
-    this.officialAccountOrderCost = officialAccountOrderCost;
-    return this;
-  }
-
-  /**
-   * Get officialAccountOrderCost
-   *
-   * @return officialAccountOrderCost
-   */
-  @ApiModelProperty(value = "")
-  public Long getOfficialAccountOrderCost() {
-    return officialAccountOrderCost;
-  }
-
-  public void setOfficialAccountOrderCost(Long officialAccountOrderCost) {
-    this.officialAccountOrderCost = officialAccountOrderCost;
-  }
-
-  public DailyReportsGetListStruct officialAccountOrderAmount(Long officialAccountOrderAmount) {
-    this.officialAccountOrderAmount = officialAccountOrderAmount;
-    return this;
-  }
-
-  /**
-   * Get officialAccountOrderAmount
-   *
-   * @return officialAccountOrderAmount
-   */
-  @ApiModelProperty(value = "")
-  public Long getOfficialAccountOrderAmount() {
-    return officialAccountOrderAmount;
-  }
-
-  public void setOfficialAccountOrderAmount(Long officialAccountOrderAmount) {
-    this.officialAccountOrderAmount = officialAccountOrderAmount;
-  }
-
-  public DailyReportsGetListStruct officialAccountFirstDayOrderAmount(
-      Long officialAccountFirstDayOrderAmount) {
-    this.officialAccountFirstDayOrderAmount = officialAccountFirstDayOrderAmount;
-    return this;
-  }
-
-  /**
-   * Get officialAccountFirstDayOrderAmount
-   *
-   * @return officialAccountFirstDayOrderAmount
-   */
-  @ApiModelProperty(value = "")
-  public Long getOfficialAccountFirstDayOrderAmount() {
-    return officialAccountFirstDayOrderAmount;
-  }
-
-  public void setOfficialAccountFirstDayOrderAmount(Long officialAccountFirstDayOrderAmount) {
-    this.officialAccountFirstDayOrderAmount = officialAccountFirstDayOrderAmount;
-  }
-
-  public DailyReportsGetListStruct officialAccountOrderRoi(Long officialAccountOrderRoi) {
-    this.officialAccountOrderRoi = officialAccountOrderRoi;
-    return this;
-  }
-
-  /**
-   * Get officialAccountOrderRoi
-   *
-   * @return officialAccountOrderRoi
-   */
-  @ApiModelProperty(value = "")
-  public Long getOfficialAccountOrderRoi() {
-    return officialAccountOrderRoi;
-  }
-
-  public void setOfficialAccountOrderRoi(Long officialAccountOrderRoi) {
-    this.officialAccountOrderRoi = officialAccountOrderRoi;
-  }
-
-  public DailyReportsGetListStruct officialAccountConsultCount(Long officialAccountConsultCount) {
-    this.officialAccountConsultCount = officialAccountConsultCount;
-    return this;
-  }
-
-  /**
-   * Get officialAccountConsultCount
-   *
-   * @return officialAccountConsultCount
-   */
-  @ApiModelProperty(value = "")
-  public Long getOfficialAccountConsultCount() {
-    return officialAccountConsultCount;
-  }
-
-  public void setOfficialAccountConsultCount(Long officialAccountConsultCount) {
-    this.officialAccountConsultCount = officialAccountConsultCount;
-  }
-
-  public DailyReportsGetListStruct officialAccountReaderCount(Long officialAccountReaderCount) {
-    this.officialAccountReaderCount = officialAccountReaderCount;
-    return this;
-  }
-
-  /**
-   * Get officialAccountReaderCount
-   *
-   * @return officialAccountReaderCount
-   */
-  @ApiModelProperty(value = "")
-  public Long getOfficialAccountReaderCount() {
-    return officialAccountReaderCount;
-  }
-
-  public void setOfficialAccountReaderCount(Long officialAccountReaderCount) {
-    this.officialAccountReaderCount = officialAccountReaderCount;
-  }
-
-  public DailyReportsGetListStruct officialAccountCreditApplyUserCount(
-      Long officialAccountCreditApplyUserCount) {
-    this.officialAccountCreditApplyUserCount = officialAccountCreditApplyUserCount;
-    return this;
-  }
-
-  /**
-   * Get officialAccountCreditApplyUserCount
-   *
-   * @return officialAccountCreditApplyUserCount
-   */
-  @ApiModelProperty(value = "")
-  public Long getOfficialAccountCreditApplyUserCount() {
-    return officialAccountCreditApplyUserCount;
-  }
-
-  public void setOfficialAccountCreditApplyUserCount(Long officialAccountCreditApplyUserCount) {
-    this.officialAccountCreditApplyUserCount = officialAccountCreditApplyUserCount;
-  }
-
-  public DailyReportsGetListStruct officialAccountCreditUserCount(
-      Long officialAccountCreditUserCount) {
-    this.officialAccountCreditUserCount = officialAccountCreditUserCount;
-    return this;
-  }
-
-  /**
-   * Get officialAccountCreditUserCount
-   *
-   * @return officialAccountCreditUserCount
-   */
-  @ApiModelProperty(value = "")
-  public Long getOfficialAccountCreditUserCount() {
-    return officialAccountCreditUserCount;
-  }
-
-  public void setOfficialAccountCreditUserCount(Long officialAccountCreditUserCount) {
-    this.officialAccountCreditUserCount = officialAccountCreditUserCount;
-  }
-
-  public DailyReportsGetListStruct couponGetCost(Long couponGetCost) {
-    this.couponGetCost = couponGetCost;
-    return this;
-  }
-
-  /**
-   * Get couponGetCost
-   *
-   * @return couponGetCost
-   */
-  @ApiModelProperty(value = "")
-  public Long getCouponGetCost() {
-    return couponGetCost;
-  }
-
-  public void setCouponGetCost(Long couponGetCost) {
-    this.couponGetCost = couponGetCost;
-  }
-
-  public DailyReportsGetListStruct couponGetRate(Double couponGetRate) {
-    this.couponGetRate = couponGetRate;
-    return this;
-  }
-
-  /**
-   * Get couponGetRate
-   *
-   * @return couponGetRate
-   */
-  @ApiModelProperty(value = "")
-  public Double getCouponGetRate() {
-    return couponGetRate;
-  }
-
-  public void setCouponGetRate(Double couponGetRate) {
-    this.couponGetRate = couponGetRate;
-  }
-
-  public DailyReportsGetListStruct couponUseCount(Long couponUseCount) {
-    this.couponUseCount = couponUseCount;
-    return this;
-  }
-
-  /**
-   * Get couponUseCount
-   *
-   * @return couponUseCount
-   */
-  @ApiModelProperty(value = "")
-  public Long getCouponUseCount() {
-    return couponUseCount;
-  }
-
-  public void setCouponUseCount(Long couponUseCount) {
-    this.couponUseCount = couponUseCount;
-  }
-
-  public DailyReportsGetListStruct forwardUserCount(Long forwardUserCount) {
-    this.forwardUserCount = forwardUserCount;
-    return this;
-  }
-
-  /**
-   * Get forwardUserCount
-   *
-   * @return forwardUserCount
-   */
-  @ApiModelProperty(value = "")
-  public Long getForwardUserCount() {
-    return forwardUserCount;
-  }
-
-  public void setForwardUserCount(Long forwardUserCount) {
-    this.forwardUserCount = forwardUserCount;
-  }
-
-  public DailyReportsGetListStruct videoOuterPlayUserCount(Long videoOuterPlayUserCount) {
-    this.videoOuterPlayUserCount = videoOuterPlayUserCount;
-    return this;
-  }
-
-  /**
-   * Get videoOuterPlayUserCount
-   *
-   * @return videoOuterPlayUserCount
-   */
-  @ApiModelProperty(value = "")
-  public Long getVideoOuterPlayUserCount() {
-    return videoOuterPlayUserCount;
-  }
-
-  public void setVideoOuterPlayUserCount(Long videoOuterPlayUserCount) {
-    this.videoOuterPlayUserCount = videoOuterPlayUserCount;
-  }
-
-  public DailyReportsGetListStruct videoInnerPlayUserCount(Long videoInnerPlayUserCount) {
-    this.videoInnerPlayUserCount = videoInnerPlayUserCount;
-    return this;
-  }
-
-  /**
-   * Get videoInnerPlayUserCount
-   *
-   * @return videoInnerPlayUserCount
-   */
-  @ApiModelProperty(value = "")
-  public Long getVideoInnerPlayUserCount() {
-    return videoInnerPlayUserCount;
-  }
-
-  public void setVideoInnerPlayUserCount(Long videoInnerPlayUserCount) {
-    this.videoInnerPlayUserCount = videoInnerPlayUserCount;
-  }
-
-  public DailyReportsGetListStruct channelsHalfScreenCardExpPv(Long channelsHalfScreenCardExpPv) {
-    this.channelsHalfScreenCardExpPv = channelsHalfScreenCardExpPv;
-    return this;
-  }
-
-  /**
-   * Get channelsHalfScreenCardExpPv
-   *
-   * @return channelsHalfScreenCardExpPv
-   */
-  @ApiModelProperty(value = "")
-  public Long getChannelsHalfScreenCardExpPv() {
-    return channelsHalfScreenCardExpPv;
-  }
-
-  public void setChannelsHalfScreenCardExpPv(Long channelsHalfScreenCardExpPv) {
-    this.channelsHalfScreenCardExpPv = channelsHalfScreenCardExpPv;
-  }
-
-  public DailyReportsGetListStruct channelsHalfScreenButtonClkPv(
-      Long channelsHalfScreenButtonClkPv) {
-    this.channelsHalfScreenButtonClkPv = channelsHalfScreenButtonClkPv;
-    return this;
-  }
-
-  /**
-   * Get channelsHalfScreenButtonClkPv
-   *
-   * @return channelsHalfScreenButtonClkPv
-   */
-  @ApiModelProperty(value = "")
-  public Long getChannelsHalfScreenButtonClkPv() {
-    return channelsHalfScreenButtonClkPv;
-  }
-
-  public void setChannelsHalfScreenButtonClkPv(Long channelsHalfScreenButtonClkPv) {
-    this.channelsHalfScreenButtonClkPv = channelsHalfScreenButtonClkPv;
-  }
-
-  public DailyReportsGetListStruct channelsMatchReadPv(Long channelsMatchReadPv) {
-    this.channelsMatchReadPv = channelsMatchReadPv;
-    return this;
-  }
-
-  /**
-   * Get channelsMatchReadPv
-   *
-   * @return channelsMatchReadPv
-   */
-  @ApiModelProperty(value = "")
-  public Long getChannelsMatchReadPv() {
-    return channelsMatchReadPv;
-  }
-
-  public void setChannelsMatchReadPv(Long channelsMatchReadPv) {
-    this.channelsMatchReadPv = channelsMatchReadPv;
-  }
-
-  public DailyReportsGetListStruct channelsMatchHeartPv(Long channelsMatchHeartPv) {
-    this.channelsMatchHeartPv = channelsMatchHeartPv;
-    return this;
-  }
-
-  /**
-   * Get channelsMatchHeartPv
-   *
-   * @return channelsMatchHeartPv
-   */
-  @ApiModelProperty(value = "")
-  public Long getChannelsMatchHeartPv() {
-    return channelsMatchHeartPv;
-  }
-
-  public void setChannelsMatchHeartPv(Long channelsMatchHeartPv) {
-    this.channelsMatchHeartPv = channelsMatchHeartPv;
-  }
-
-  public DailyReportsGetListStruct channelsMatchCommentPv(Long channelsMatchCommentPv) {
-    this.channelsMatchCommentPv = channelsMatchCommentPv;
-    return this;
-  }
-
-  /**
-   * Get channelsMatchCommentPv
-   *
-   * @return channelsMatchCommentPv
-   */
-  @ApiModelProperty(value = "")
-  public Long getChannelsMatchCommentPv() {
-    return channelsMatchCommentPv;
-  }
-
-  public void setChannelsMatchCommentPv(Long channelsMatchCommentPv) {
-    this.channelsMatchCommentPv = channelsMatchCommentPv;
-  }
-
-  public DailyReportsGetListStruct channelsMatchSharePv(Long channelsMatchSharePv) {
-    this.channelsMatchSharePv = channelsMatchSharePv;
-    return this;
-  }
-
-  /**
-   * Get channelsMatchSharePv
-   *
-   * @return channelsMatchSharePv
-   */
-  @ApiModelProperty(value = "")
-  public Long getChannelsMatchSharePv() {
-    return channelsMatchSharePv;
-  }
-
-  public void setChannelsMatchSharePv(Long channelsMatchSharePv) {
-    this.channelsMatchSharePv = channelsMatchSharePv;
-  }
-
-  public DailyReportsGetListStruct exportId(String exportId) {
-    this.exportId = exportId;
-    return this;
-  }
-
-  /**
-   * Get exportId
-   *
-   * @return exportId
-   */
-  @ApiModelProperty(value = "")
-  public String getExportId() {
-    return exportId;
-  }
-
-  public void setExportId(String exportId) {
-    this.exportId = exportId;
+  public void setPlacementName(String placementName) {
+    this.placementName = placementName;
   }
 
   public DailyReportsGetListStruct projectId(Long projectId) {
@@ -17619,6 +16752,10 @@ public class DailyReportsGetListStruct {
     DailyReportsGetListStruct dailyReportsGetListStruct = (DailyReportsGetListStruct) o;
     return Objects.equals(this.accountId, dailyReportsGetListStruct.accountId)
         && Objects.equals(this.date, dailyReportsGetListStruct.date)
+        && Objects.equals(this.campaignId, dailyReportsGetListStruct.campaignId)
+        && Objects.equals(this.adgroupId, dailyReportsGetListStruct.adgroupId)
+        && Objects.equals(this.adId, dailyReportsGetListStruct.adId)
+        && Objects.equals(this.adName, dailyReportsGetListStruct.adName)
         && Objects.equals(this.viewCount, dailyReportsGetListStruct.viewCount)
         && Objects.equals(this.downloadCount, dailyReportsGetListStruct.downloadCount)
         && Objects.equals(this.activatedCount, dailyReportsGetListStruct.activatedCount)
@@ -18233,31 +17370,7 @@ public class DailyReportsGetListStruct {
         && Objects.equals(this.miniGamePayD7Roi, dailyReportsGetListStruct.miniGamePayD7Roi)
         && Objects.equals(this.miniGamePayD14Roi, dailyReportsGetListStruct.miniGamePayD14Roi)
         && Objects.equals(this.miniGamePayD30Roi, dailyReportsGetListStruct.miniGamePayD30Roi)
-        && Objects.equals(this.videoFollowCount, dailyReportsGetListStruct.videoFollowCount)
-        && Objects.equals(this.videoHeartCount, dailyReportsGetListStruct.videoHeartCount)
-        && Objects.equals(this.videoCommentCount, dailyReportsGetListStruct.videoCommentCount)
-        && Objects.equals(
-            this.videoLiveSubscribeCount, dailyReportsGetListStruct.videoLiveSubscribeCount)
-        && Objects.equals(this.videoLiveExpCount, dailyReportsGetListStruct.videoLiveExpCount)
-        && Objects.equals(this.videoLiveHeartCount, dailyReportsGetListStruct.videoLiveHeartCount)
-        && Objects.equals(
-            this.videoLiveCommentCount, dailyReportsGetListStruct.videoLiveCommentCount)
-        && Objects.equals(this.videoLiveShareCount, dailyReportsGetListStruct.videoLiveShareCount)
-        && Objects.equals(
-            this.videoLiveCickCommodityCount, dailyReportsGetListStruct.videoLiveCickCommodityCount)
         && Objects.equals(this.liveStreamExpUv, dailyReportsGetListStruct.liveStreamExpUv)
-        && Objects.equals(
-            this.videoLiveHeartUserCount, dailyReportsGetListStruct.videoLiveHeartUserCount)
-        && Objects.equals(
-            this.videoLiveCommentUserCount, dailyReportsGetListStruct.videoLiveCommentUserCount)
-        && Objects.equals(
-            this.videoLiveShareUserCount, dailyReportsGetListStruct.videoLiveShareUserCount)
-        && Objects.equals(
-            this.videoLiveClickCommodityUserCount,
-            dailyReportsGetListStruct.videoLiveClickCommodityUserCount)
-        && Objects.equals(
-            this.videoLiveCommodityBubbleExpCount,
-            dailyReportsGetListStruct.videoLiveCommodityBubbleExpCount)
         && Objects.equals(this.scanCodeAddFansUv, dailyReportsGetListStruct.scanCodeAddFansUv)
         && Objects.equals(this.scanCodeAddFansCount, dailyReportsGetListStruct.scanCodeAddFansCount)
         && Objects.equals(
@@ -18442,6 +17555,61 @@ public class DailyReportsGetListStruct {
         && Objects.equals(
             this.afterAddWecomIntentionDedupPvCost,
             dailyReportsGetListStruct.afterAddWecomIntentionDedupPvCost)
+        && Objects.equals(this.expPv, dailyReportsGetListStruct.expPv)
+        && Objects.equals(this.impression, dailyReportsGetListStruct.impression)
+        && Objects.equals(this.exposure, dailyReportsGetListStruct.exposure)
+        && Objects.equals(this.download, dailyReportsGetListStruct.download)
+        && Objects.equals(this.activation, dailyReportsGetListStruct.activation)
+        && Objects.equals(this.appActivatedCount, dailyReportsGetListStruct.appActivatedCount)
+        && Objects.equals(this.appActivatedRate, dailyReportsGetListStruct.appActivatedRate)
+        && Objects.equals(this.thousandDisplayCost, dailyReportsGetListStruct.thousandDisplayCost)
+        && Objects.equals(this.click, dailyReportsGetListStruct.click)
+        && Objects.equals(this.webConsultCount, dailyReportsGetListStruct.webConsultCount)
+        && Objects.equals(this.webConsultCost, dailyReportsGetListStruct.webConsultCost)
+        && Objects.equals(
+            this.webPhoneCallDirectCount, dailyReportsGetListStruct.webPhoneCallDirectCount)
+        && Objects.equals(
+            this.webPhoneCallDirectCost, dailyReportsGetListStruct.webPhoneCallDirectCost)
+        && Objects.equals(
+            this.webPhoneCallBackCount, dailyReportsGetListStruct.webPhoneCallBackCount)
+        && Objects.equals(this.webPhoneCallBackCost, dailyReportsGetListStruct.webPhoneCallBackCost)
+        && Objects.equals(
+            this.ownPageNavigationCost, dailyReportsGetListStruct.ownPageNavigationCost)
+        && Objects.equals(this.reservation, dailyReportsGetListStruct.reservation)
+        && Objects.equals(
+            this.webPageReservationCount, dailyReportsGetListStruct.webPageReservationCount)
+        && Objects.equals(
+            this.webPageReservationRate, dailyReportsGetListStruct.webPageReservationRate)
+        && Objects.equals(
+            this.webPageReservationCost, dailyReportsGetListStruct.webPageReservationCost)
+        && Objects.equals(this.webAddToCarCount, dailyReportsGetListStruct.webAddToCarCount)
+        && Objects.equals(this.webAddToCarCost, dailyReportsGetListStruct.webAddToCarCost)
+        && Objects.equals(this.webOrderUnitPrice, dailyReportsGetListStruct.webOrderUnitPrice)
+        && Objects.equals(this.webOrderRoi, dailyReportsGetListStruct.webOrderRoi)
+        && Objects.equals(this.webDeliverCount, dailyReportsGetListStruct.webDeliverCount)
+        && Objects.equals(this.webDeliverCost, dailyReportsGetListStruct.webDeliverCost)
+        && Objects.equals(this.webSignInCount, dailyReportsGetListStruct.webSignInCount)
+        && Objects.equals(this.webSignInCost, dailyReportsGetListStruct.webSignInCost)
+        && Objects.equals(this.appInstallation, dailyReportsGetListStruct.appInstallation)
+        && Objects.equals(this.appActivatedCost, dailyReportsGetListStruct.appActivatedCost)
+        && Objects.equals(this.appRetentionCount, dailyReportsGetListStruct.appRetentionCount)
+        && Objects.equals(this.appRetentionRate, dailyReportsGetListStruct.appRetentionRate)
+        && Objects.equals(this.appRetentionCost, dailyReportsGetListStruct.appRetentionCost)
+        && Objects.equals(this.appAddToCarCount, dailyReportsGetListStruct.appAddToCarCount)
+        && Objects.equals(this.appAddToCarAmount, dailyReportsGetListStruct.appAddToCarAmount)
+        && Objects.equals(this.appCartAmount, dailyReportsGetListStruct.appCartAmount)
+        && Objects.equals(this.appAddToCarCost, dailyReportsGetListStruct.appAddToCarCost)
+        && Objects.equals(this.appPaymentCount, dailyReportsGetListStruct.appPaymentCount)
+        && Objects.equals(this.appPaymentAmount, dailyReportsGetListStruct.appPaymentAmount)
+        && Objects.equals(this.platformCouponClick, dailyReportsGetListStruct.platformCouponClick)
+        && Objects.equals(this.follow, dailyReportsGetListStruct.follow)
+        && Objects.equals(this.share, dailyReportsGetListStruct.share)
+        && Objects.equals(this.read, dailyReportsGetListStruct.read)
+        && Objects.equals(
+            this.intelligentPhoneCallDirectCount,
+            dailyReportsGetListStruct.intelligentPhoneCallDirectCount)
+        && Objects.equals(
+            this.videoLiveExpUserCount, dailyReportsGetListStruct.videoLiveExpUserCount)
         && Objects.equals(
             this.requestConversionsCount, dailyReportsGetListStruct.requestConversionsCount)
         && Objects.equals(
@@ -18566,180 +17734,59 @@ public class DailyReportsGetListStruct {
         && Objects.equals(this.miniGamePayD7PlaRoi, dailyReportsGetListStruct.miniGamePayD7PlaRoi)
         && Objects.equals(this.miniGamePayD14PlaRoi, dailyReportsGetListStruct.miniGamePayD14PlaRoi)
         && Objects.equals(this.miniGamePayD30PlaRoi, dailyReportsGetListStruct.miniGamePayD30PlaRoi)
-        && Objects.equals(this.campaignId, dailyReportsGetListStruct.campaignId)
-        && Objects.equals(this.campaignName, dailyReportsGetListStruct.campaignName)
-        && Objects.equals(this.adgroupId, dailyReportsGetListStruct.adgroupId)
         && Objects.equals(this.adgroupName, dailyReportsGetListStruct.adgroupName)
         && Objects.equals(
             this.previewConversionsCount, dailyReportsGetListStruct.previewConversionsCount)
         && Objects.equals(
             this.previewDeepConversionsCount, dailyReportsGetListStruct.previewDeepConversionsCount)
         && Objects.equals(this.acquisitionCost, dailyReportsGetListStruct.acquisitionCost)
-        && Objects.equals(this.adId, dailyReportsGetListStruct.adId)
-        && Objects.equals(this.adName, dailyReportsGetListStruct.adName)
-        && Objects.equals(this.promotedObjectType, dailyReportsGetListStruct.promotedObjectType)
-        && Objects.equals(this.promotedObjectId, dailyReportsGetListStruct.promotedObjectId)
-        && Objects.equals(this.unionPositionId, dailyReportsGetListStruct.unionPositionId)
-        && Objects.equals(this.industryParentName, dailyReportsGetListStruct.industryParentName)
-        && Objects.equals(this.placementName, dailyReportsGetListStruct.placementName)
-        && Objects.equals(this.templateId, dailyReportsGetListStruct.templateId)
-        && Objects.equals(this.addToCartCost, dailyReportsGetListStruct.addToCartCost)
-        && Objects.equals(this.webAddToCartRate, dailyReportsGetListStruct.webAddToCartRate)
-        && Objects.equals(this.appAddToCartRate, dailyReportsGetListStruct.appAddToCartRate)
-        && Objects.equals(this.isExpandTargeting, dailyReportsGetListStruct.isExpandTargeting)
-        && Objects.equals(this.siteSet, dailyReportsGetListStruct.siteSet)
-        && Objects.equals(this.materialId, dailyReportsGetListStruct.materialId)
-        && Objects.equals(this.signature, dailyReportsGetListStruct.signature)
-        && Objects.equals(this.productCatalogId, dailyReportsGetListStruct.productCatalogId)
-        && Objects.equals(this.productOuterId, dailyReportsGetListStruct.productOuterId)
-        && Objects.equals(this.brandId, dailyReportsGetListStruct.brandId)
-        && Objects.equals(this.productSetId, dailyReportsGetListStruct.productSetId)
-        && Objects.equals(this.shopId, dailyReportsGetListStruct.shopId)
-        && Objects.equals(this.firstCategoryId, dailyReportsGetListStruct.firstCategoryId)
-        && Objects.equals(this.secondCategoryId, dailyReportsGetListStruct.secondCategoryId)
-        && Objects.equals(this.thirdCategoryId, dailyReportsGetListStruct.thirdCategoryId)
-        && Objects.equals(this.matchType, dailyReportsGetListStruct.matchType)
+        && Objects.equals(this.videoFollowCount, dailyReportsGetListStruct.videoFollowCount)
+        && Objects.equals(this.videoHeartCount, dailyReportsGetListStruct.videoHeartCount)
+        && Objects.equals(this.videoCommentCount, dailyReportsGetListStruct.videoCommentCount)
+        && Objects.equals(
+            this.videoLiveSubscribeCount, dailyReportsGetListStruct.videoLiveSubscribeCount)
+        && Objects.equals(this.videoLiveExpCount, dailyReportsGetListStruct.videoLiveExpCount)
+        && Objects.equals(this.videoLiveHeartCount, dailyReportsGetListStruct.videoLiveHeartCount)
+        && Objects.equals(
+            this.videoLiveCommentCount, dailyReportsGetListStruct.videoLiveCommentCount)
+        && Objects.equals(this.videoLiveShareCount, dailyReportsGetListStruct.videoLiveShareCount)
+        && Objects.equals(
+            this.videoLiveCickCommodityCount, dailyReportsGetListStruct.videoLiveCickCommodityCount)
+        && Objects.equals(
+            this.videoLiveHeartUserCount, dailyReportsGetListStruct.videoLiveHeartUserCount)
+        && Objects.equals(
+            this.videoLiveCommentUserCount, dailyReportsGetListStruct.videoLiveCommentUserCount)
+        && Objects.equals(
+            this.videoLiveShareUserCount, dailyReportsGetListStruct.videoLiveShareUserCount)
+        && Objects.equals(
+            this.videoLiveClickCommodityUserCount,
+            dailyReportsGetListStruct.videoLiveClickCommodityUserCount)
+        && Objects.equals(
+            this.videoLiveCommodityBubbleExpCount,
+            dailyReportsGetListStruct.videoLiveCommodityBubbleExpCount)
         && Objects.equals(this.bidwordId, dailyReportsGetListStruct.bidwordId)
         && Objects.equals(this.bidword, dailyReportsGetListStruct.bidword)
+        && Objects.equals(this.matchType, dailyReportsGetListStruct.matchType)
+        && Objects.equals(this.siteSet, dailyReportsGetListStruct.siteSet)
         && Objects.equals(this.expOverallTopPv, dailyReportsGetListStruct.expOverallTopPv)
         && Objects.equals(this.expAvgRank, dailyReportsGetListStruct.expAvgRank)
         && Objects.equals(this.clkTopPv, dailyReportsGetListStruct.clkTopPv)
         && Objects.equals(this.realCostTop, dailyReportsGetListStruct.realCostTop)
+        && Objects.equals(this.campaignName, dailyReportsGetListStruct.campaignName)
+        && Objects.equals(this.templateId, dailyReportsGetListStruct.templateId)
+        && Objects.equals(this.addToCartCost, dailyReportsGetListStruct.addToCartCost)
+        && Objects.equals(this.webAddToCartRate, dailyReportsGetListStruct.webAddToCartRate)
+        && Objects.equals(this.appAddToCartRate, dailyReportsGetListStruct.appAddToCartRate)
+        && Objects.equals(this.appAddToCarRate, dailyReportsGetListStruct.appAddToCarRate)
+        && Objects.equals(this.isExpandTargeting, dailyReportsGetListStruct.isExpandTargeting)
+        && Objects.equals(this.materialId, dailyReportsGetListStruct.materialId)
+        && Objects.equals(this.signature, dailyReportsGetListStruct.signature)
+        && Objects.equals(this.promotedObjectType, dailyReportsGetListStruct.promotedObjectType)
+        && Objects.equals(this.promotedObjectId, dailyReportsGetListStruct.promotedObjectId)
         && Objects.equals(this.queryword, dailyReportsGetListStruct.queryword)
-        && Objects.equals(this.hour, dailyReportsGetListStruct.hour)
-        && Objects.equals(this.wechatAccountId, dailyReportsGetListStruct.wechatAccountId)
-        && Objects.equals(this.wechatAgencyId, dailyReportsGetListStruct.wechatAgencyId)
-        && Objects.equals(this.costDeviationRate, dailyReportsGetListStruct.costDeviationRate)
-        && Objects.equals(this.compensationAmount, dailyReportsGetListStruct.compensationAmount)
-        && Objects.equals(this.viewUserCount, dailyReportsGetListStruct.viewUserCount)
-        && Objects.equals(this.avgViewPerUser, dailyReportsGetListStruct.avgViewPerUser)
-        && Objects.equals(this.clickUserCount, dailyReportsGetListStruct.clickUserCount)
-        && Objects.equals(this.imageClickUserCount, dailyReportsGetListStruct.imageClickUserCount)
-        && Objects.equals(this.videoClickUserCount, dailyReportsGetListStruct.videoClickUserCount)
-        && Objects.equals(this.linkClickUserCount, dailyReportsGetListStruct.linkClickUserCount)
-        && Objects.equals(
-            this.portraitClickUserCount, dailyReportsGetListStruct.portraitClickUserCount)
-        && Objects.equals(
-            this.nicknameClickUserCount, dailyReportsGetListStruct.nicknameClickUserCount)
-        && Objects.equals(this.poiClickUserCount, dailyReportsGetListStruct.poiClickUserCount)
-        && Objects.equals(
-            this.platformKeyPageViewUserCount,
-            dailyReportsGetListStruct.platformKeyPageViewUserCount)
-        && Objects.equals(
-            this.platformKeyPageAvgViewPerUser,
-            dailyReportsGetListStruct.platformKeyPageAvgViewPerUser)
-        && Objects.equals(
-            this.platformKeyPageViewDuration, dailyReportsGetListStruct.platformKeyPageViewDuration)
-        && Objects.equals(this.cpnClickButtonCost, dailyReportsGetListStruct.cpnClickButtonCost)
-        && Objects.equals(this.praiseUserCount, dailyReportsGetListStruct.praiseUserCount)
-        && Objects.equals(this.commentUserCount, dailyReportsGetListStruct.commentUserCount)
-        && Objects.equals(this.orderCount, dailyReportsGetListStruct.orderCount)
-        && Objects.equals(this.orderRate, dailyReportsGetListStruct.orderRate)
-        && Objects.equals(
-            this.questReservationPvCost, dailyReportsGetListStruct.questReservationPvCost)
-        && Objects.equals(this.leadsRate, dailyReportsGetListStruct.leadsRate)
-        && Objects.equals(this.leadsUserCount, dailyReportsGetListStruct.leadsUserCount)
-        && Objects.equals(this.leadsCost, dailyReportsGetListStruct.leadsCost)
-        && Objects.equals(this.leadsUserRate, dailyReportsGetListStruct.leadsUserRate)
-        && Objects.equals(this.validLeadsCost, dailyReportsGetListStruct.validLeadsCost)
-        && Objects.equals(this.validLeadsRate, dailyReportsGetListStruct.validLeadsRate)
-        && Objects.equals(this.pageConsultUserCount, dailyReportsGetListStruct.pageConsultUserCount)
-        && Objects.equals(
-            this.validPageConsultUserCount, dailyReportsGetListStruct.validPageConsultUserCount)
-        && Objects.equals(
-            this.withdrDepWebUserCount, dailyReportsGetListStruct.withdrDepWebUserCount)
-        && Objects.equals(
-            this.wechatMinigameRegisterCost, dailyReportsGetListStruct.wechatMinigameRegisterCost)
-        && Objects.equals(
-            this.wechatMinigameRegisterRate, dailyReportsGetListStruct.wechatMinigameRegisterRate)
-        && Objects.equals(this.wechatMinigameArpu, dailyReportsGetListStruct.wechatMinigameArpu)
-        && Objects.equals(
-            this.wechatMinigameRetentionCount,
-            dailyReportsGetListStruct.wechatMinigameRetentionCount)
-        && Objects.equals(
-            this.wechatMinigameCheckoutCount, dailyReportsGetListStruct.wechatMinigameCheckoutCount)
-        && Objects.equals(
-            this.wechatMinigameCheckoutAmount,
-            dailyReportsGetListStruct.wechatMinigameCheckoutAmount)
-        && Objects.equals(
-            this.officialAccountFollowCount, dailyReportsGetListStruct.officialAccountFollowCount)
-        && Objects.equals(
-            this.officialAccountFollowCost, dailyReportsGetListStruct.officialAccountFollowCost)
-        && Objects.equals(
-            this.officialAccountFollowRate, dailyReportsGetListStruct.officialAccountFollowRate)
-        && Objects.equals(
-            this.officialAccountRegisterUserCount,
-            dailyReportsGetListStruct.officialAccountRegisterUserCount)
-        && Objects.equals(
-            this.officialAccountRegisterRate, dailyReportsGetListStruct.officialAccountRegisterRate)
-        && Objects.equals(
-            this.officialAccountRegisterCost, dailyReportsGetListStruct.officialAccountRegisterCost)
-        && Objects.equals(
-            this.officialAccountRegisterAmount,
-            dailyReportsGetListStruct.officialAccountRegisterAmount)
-        && Objects.equals(
-            this.officialAccountRegisterRoi, dailyReportsGetListStruct.officialAccountRegisterRoi)
-        && Objects.equals(
-            this.officialAccountApplyCount, dailyReportsGetListStruct.officialAccountApplyCount)
-        && Objects.equals(
-            this.officialAccountApplyUserCount,
-            dailyReportsGetListStruct.officialAccountApplyUserCount)
-        && Objects.equals(
-            this.officialAccountApplyRate, dailyReportsGetListStruct.officialAccountApplyRate)
-        && Objects.equals(
-            this.officialAccountApplyCost, dailyReportsGetListStruct.officialAccountApplyCost)
-        && Objects.equals(
-            this.officialAccountApplyAmount, dailyReportsGetListStruct.officialAccountApplyAmount)
-        && Objects.equals(
-            this.officialAccountApplyRoi, dailyReportsGetListStruct.officialAccountApplyRoi)
-        && Objects.equals(
-            this.officialAccountOrderCount, dailyReportsGetListStruct.officialAccountOrderCount)
-        && Objects.equals(
-            this.officialAccountFirstDayOrderCount,
-            dailyReportsGetListStruct.officialAccountFirstDayOrderCount)
-        && Objects.equals(
-            this.officialAccountOrderUserCount,
-            dailyReportsGetListStruct.officialAccountOrderUserCount)
-        && Objects.equals(
-            this.officialAccountOrderRate, dailyReportsGetListStruct.officialAccountOrderRate)
-        && Objects.equals(
-            this.officialAccountOrderCost, dailyReportsGetListStruct.officialAccountOrderCost)
-        && Objects.equals(
-            this.officialAccountOrderAmount, dailyReportsGetListStruct.officialAccountOrderAmount)
-        && Objects.equals(
-            this.officialAccountFirstDayOrderAmount,
-            dailyReportsGetListStruct.officialAccountFirstDayOrderAmount)
-        && Objects.equals(
-            this.officialAccountOrderRoi, dailyReportsGetListStruct.officialAccountOrderRoi)
-        && Objects.equals(
-            this.officialAccountConsultCount, dailyReportsGetListStruct.officialAccountConsultCount)
-        && Objects.equals(
-            this.officialAccountReaderCount, dailyReportsGetListStruct.officialAccountReaderCount)
-        && Objects.equals(
-            this.officialAccountCreditApplyUserCount,
-            dailyReportsGetListStruct.officialAccountCreditApplyUserCount)
-        && Objects.equals(
-            this.officialAccountCreditUserCount,
-            dailyReportsGetListStruct.officialAccountCreditUserCount)
-        && Objects.equals(this.couponGetCost, dailyReportsGetListStruct.couponGetCost)
-        && Objects.equals(this.couponGetRate, dailyReportsGetListStruct.couponGetRate)
-        && Objects.equals(this.couponUseCount, dailyReportsGetListStruct.couponUseCount)
-        && Objects.equals(this.forwardUserCount, dailyReportsGetListStruct.forwardUserCount)
-        && Objects.equals(
-            this.videoOuterPlayUserCount, dailyReportsGetListStruct.videoOuterPlayUserCount)
-        && Objects.equals(
-            this.videoInnerPlayUserCount, dailyReportsGetListStruct.videoInnerPlayUserCount)
-        && Objects.equals(
-            this.channelsHalfScreenCardExpPv, dailyReportsGetListStruct.channelsHalfScreenCardExpPv)
-        && Objects.equals(
-            this.channelsHalfScreenButtonClkPv,
-            dailyReportsGetListStruct.channelsHalfScreenButtonClkPv)
-        && Objects.equals(this.channelsMatchReadPv, dailyReportsGetListStruct.channelsMatchReadPv)
-        && Objects.equals(this.channelsMatchHeartPv, dailyReportsGetListStruct.channelsMatchHeartPv)
-        && Objects.equals(
-            this.channelsMatchCommentPv, dailyReportsGetListStruct.channelsMatchCommentPv)
-        && Objects.equals(this.channelsMatchSharePv, dailyReportsGetListStruct.channelsMatchSharePv)
-        && Objects.equals(this.exportId, dailyReportsGetListStruct.exportId)
+        && Objects.equals(this.unionPositionId, dailyReportsGetListStruct.unionPositionId)
+        && Objects.equals(this.industryParentName, dailyReportsGetListStruct.industryParentName)
+        && Objects.equals(this.placementName, dailyReportsGetListStruct.placementName)
         && Objects.equals(this.projectId, dailyReportsGetListStruct.projectId)
         && Objects.equals(this.projectName, dailyReportsGetListStruct.projectName)
         && Objects.equals(this.purchasePv, dailyReportsGetListStruct.purchasePv)
@@ -18753,6 +17800,10 @@ public class DailyReportsGetListStruct {
     return Objects.hash(
         accountId,
         date,
+        campaignId,
+        adgroupId,
+        adId,
+        adName,
         viewCount,
         downloadCount,
         activatedCount,
@@ -19190,21 +18241,7 @@ public class DailyReportsGetListStruct {
         miniGamePayD7Roi,
         miniGamePayD14Roi,
         miniGamePayD30Roi,
-        videoFollowCount,
-        videoHeartCount,
-        videoCommentCount,
-        videoLiveSubscribeCount,
-        videoLiveExpCount,
-        videoLiveHeartCount,
-        videoLiveCommentCount,
-        videoLiveShareCount,
-        videoLiveCickCommodityCount,
         liveStreamExpUv,
-        videoLiveHeartUserCount,
-        videoLiveCommentUserCount,
-        videoLiveShareUserCount,
-        videoLiveClickCommodityUserCount,
-        videoLiveCommodityBubbleExpCount,
         scanCodeAddFansUv,
         scanCodeAddFansCount,
         scanCodeAddFansUvCost,
@@ -19350,6 +18387,51 @@ public class DailyReportsGetListStruct {
         afterAddWecomConsultDedupPvCost,
         afterAddWecomIntentionDedupPv,
         afterAddWecomIntentionDedupPvCost,
+        expPv,
+        impression,
+        exposure,
+        download,
+        activation,
+        appActivatedCount,
+        appActivatedRate,
+        thousandDisplayCost,
+        click,
+        webConsultCount,
+        webConsultCost,
+        webPhoneCallDirectCount,
+        webPhoneCallDirectCost,
+        webPhoneCallBackCount,
+        webPhoneCallBackCost,
+        ownPageNavigationCost,
+        reservation,
+        webPageReservationCount,
+        webPageReservationRate,
+        webPageReservationCost,
+        webAddToCarCount,
+        webAddToCarCost,
+        webOrderUnitPrice,
+        webOrderRoi,
+        webDeliverCount,
+        webDeliverCost,
+        webSignInCount,
+        webSignInCost,
+        appInstallation,
+        appActivatedCost,
+        appRetentionCount,
+        appRetentionRate,
+        appRetentionCost,
+        appAddToCarCount,
+        appAddToCarAmount,
+        appCartAmount,
+        appAddToCarCost,
+        appPaymentCount,
+        appPaymentAmount,
+        platformCouponClick,
+        follow,
+        share,
+        read,
+        intelligentPhoneCallDirectCount,
+        videoLiveExpUserCount,
         requestConversionsCount,
         requestConversionsCost,
         incomeVal1,
@@ -19427,121 +18509,47 @@ public class DailyReportsGetListStruct {
         miniGamePayD7PlaRoi,
         miniGamePayD14PlaRoi,
         miniGamePayD30PlaRoi,
-        campaignId,
-        campaignName,
-        adgroupId,
         adgroupName,
         previewConversionsCount,
         previewDeepConversionsCount,
         acquisitionCost,
-        adId,
-        adName,
-        promotedObjectType,
-        promotedObjectId,
-        unionPositionId,
-        industryParentName,
-        placementName,
-        templateId,
-        addToCartCost,
-        webAddToCartRate,
-        appAddToCartRate,
-        isExpandTargeting,
-        siteSet,
-        materialId,
-        signature,
-        productCatalogId,
-        productOuterId,
-        brandId,
-        productSetId,
-        shopId,
-        firstCategoryId,
-        secondCategoryId,
-        thirdCategoryId,
-        matchType,
+        videoFollowCount,
+        videoHeartCount,
+        videoCommentCount,
+        videoLiveSubscribeCount,
+        videoLiveExpCount,
+        videoLiveHeartCount,
+        videoLiveCommentCount,
+        videoLiveShareCount,
+        videoLiveCickCommodityCount,
+        videoLiveHeartUserCount,
+        videoLiveCommentUserCount,
+        videoLiveShareUserCount,
+        videoLiveClickCommodityUserCount,
+        videoLiveCommodityBubbleExpCount,
         bidwordId,
         bidword,
+        matchType,
+        siteSet,
         expOverallTopPv,
         expAvgRank,
         clkTopPv,
         realCostTop,
+        campaignName,
+        templateId,
+        addToCartCost,
+        webAddToCartRate,
+        appAddToCartRate,
+        appAddToCarRate,
+        isExpandTargeting,
+        materialId,
+        signature,
+        promotedObjectType,
+        promotedObjectId,
         queryword,
-        hour,
-        wechatAccountId,
-        wechatAgencyId,
-        costDeviationRate,
-        compensationAmount,
-        viewUserCount,
-        avgViewPerUser,
-        clickUserCount,
-        imageClickUserCount,
-        videoClickUserCount,
-        linkClickUserCount,
-        portraitClickUserCount,
-        nicknameClickUserCount,
-        poiClickUserCount,
-        platformKeyPageViewUserCount,
-        platformKeyPageAvgViewPerUser,
-        platformKeyPageViewDuration,
-        cpnClickButtonCost,
-        praiseUserCount,
-        commentUserCount,
-        orderCount,
-        orderRate,
-        questReservationPvCost,
-        leadsRate,
-        leadsUserCount,
-        leadsCost,
-        leadsUserRate,
-        validLeadsCost,
-        validLeadsRate,
-        pageConsultUserCount,
-        validPageConsultUserCount,
-        withdrDepWebUserCount,
-        wechatMinigameRegisterCost,
-        wechatMinigameRegisterRate,
-        wechatMinigameArpu,
-        wechatMinigameRetentionCount,
-        wechatMinigameCheckoutCount,
-        wechatMinigameCheckoutAmount,
-        officialAccountFollowCount,
-        officialAccountFollowCost,
-        officialAccountFollowRate,
-        officialAccountRegisterUserCount,
-        officialAccountRegisterRate,
-        officialAccountRegisterCost,
-        officialAccountRegisterAmount,
-        officialAccountRegisterRoi,
-        officialAccountApplyCount,
-        officialAccountApplyUserCount,
-        officialAccountApplyRate,
-        officialAccountApplyCost,
-        officialAccountApplyAmount,
-        officialAccountApplyRoi,
-        officialAccountOrderCount,
-        officialAccountFirstDayOrderCount,
-        officialAccountOrderUserCount,
-        officialAccountOrderRate,
-        officialAccountOrderCost,
-        officialAccountOrderAmount,
-        officialAccountFirstDayOrderAmount,
-        officialAccountOrderRoi,
-        officialAccountConsultCount,
-        officialAccountReaderCount,
-        officialAccountCreditApplyUserCount,
-        officialAccountCreditUserCount,
-        couponGetCost,
-        couponGetRate,
-        couponUseCount,
-        forwardUserCount,
-        videoOuterPlayUserCount,
-        videoInnerPlayUserCount,
-        channelsHalfScreenCardExpPv,
-        channelsHalfScreenButtonClkPv,
-        channelsMatchReadPv,
-        channelsMatchHeartPv,
-        channelsMatchCommentPv,
-        channelsMatchSharePv,
-        exportId,
+        unionPositionId,
+        industryParentName,
+        placementName,
         projectId,
         projectName,
         purchasePv,

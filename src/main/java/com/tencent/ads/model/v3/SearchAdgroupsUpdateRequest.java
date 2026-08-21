@@ -90,6 +90,9 @@ public class SearchAdgroupsUpdateRequest {
   @SerializedName("search_expand_targeting_switch")
   private SearchExpandTargetingSwitch searchExpandTargetingSwitch = null;
 
+  @SerializedName("industry_value_explore")
+  private IndustryValueExplore industryValueExplore = null;
+
   public SearchAdgroupsUpdateRequest accountId(Long accountId) {
     this.accountId = accountId;
     return this;
@@ -539,6 +542,26 @@ public class SearchAdgroupsUpdateRequest {
     this.searchExpandTargetingSwitch = searchExpandTargetingSwitch;
   }
 
+  public SearchAdgroupsUpdateRequest industryValueExplore(
+      IndustryValueExplore industryValueExplore) {
+    this.industryValueExplore = industryValueExplore;
+    return this;
+  }
+
+  /**
+   * Get industryValueExplore
+   *
+   * @return industryValueExplore
+   */
+  @ApiModelProperty(value = "")
+  public IndustryValueExplore getIndustryValueExplore() {
+    return industryValueExplore;
+  }
+
+  public void setIndustryValueExplore(IndustryValueExplore industryValueExplore) {
+    this.industryValueExplore = industryValueExplore;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -578,7 +601,9 @@ public class SearchAdgroupsUpdateRequest {
         && Objects.equals(this.feedbackId, searchAdgroupsUpdateRequest.feedbackId)
         && Objects.equals(
             this.searchExpandTargetingSwitch,
-            searchAdgroupsUpdateRequest.searchExpandTargetingSwitch);
+            searchAdgroupsUpdateRequest.searchExpandTargetingSwitch)
+        && Objects.equals(
+            this.industryValueExplore, searchAdgroupsUpdateRequest.industryValueExplore);
   }
 
   @Override
@@ -606,7 +631,8 @@ public class SearchAdgroupsUpdateRequest {
         bidMode,
         configuredStatus,
         feedbackId,
-        searchExpandTargetingSwitch);
+        searchExpandTargetingSwitch,
+        industryValueExplore);
   }
 
   @Override

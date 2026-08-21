@@ -125,6 +125,9 @@ public class CreativeComponents {
   @SerializedName("video_channels_content")
   private List<VideoChannelsContentComponent> videoChannelsContent = null;
 
+  @SerializedName("wechat_shop_activity")
+  private List<WechatShopActivityComponent> wechatShopActivity = null;
+
   @SerializedName("audio")
   private List<AudioComponent> audio = null;
 
@@ -139,6 +142,12 @@ public class CreativeComponents {
 
   @SerializedName("channels_live_feed")
   private List<ChannelsLiveFeedComponent> channelsLiveFeed = null;
+
+  @SerializedName("rewarded_browse")
+  private List<RewardedBrowseComponent> rewardedBrowse = null;
+
+  @SerializedName("channels_brand")
+  private List<BrandComponent> channelsBrand = null;
 
   public CreativeComponents title(List<TitleComponent> title) {
     this.title = title;
@@ -1065,6 +1074,35 @@ public class CreativeComponents {
     this.videoChannelsContent = videoChannelsContent;
   }
 
+  public CreativeComponents wechatShopActivity(
+      List<WechatShopActivityComponent> wechatShopActivity) {
+    this.wechatShopActivity = wechatShopActivity;
+    return this;
+  }
+
+  public CreativeComponents addWechatShopActivityItem(
+      WechatShopActivityComponent wechatShopActivityItem) {
+    if (this.wechatShopActivity == null) {
+      this.wechatShopActivity = new ArrayList<WechatShopActivityComponent>();
+    }
+    this.wechatShopActivity.add(wechatShopActivityItem);
+    return this;
+  }
+
+  /**
+   * Get wechatShopActivity
+   *
+   * @return wechatShopActivity
+   */
+  @ApiModelProperty(value = "")
+  public List<WechatShopActivityComponent> getWechatShopActivity() {
+    return wechatShopActivity;
+  }
+
+  public void setWechatShopActivity(List<WechatShopActivityComponent> wechatShopActivity) {
+    this.wechatShopActivity = wechatShopActivity;
+  }
+
   public CreativeComponents audio(List<AudioComponent> audio) {
     this.audio = audio;
     return this;
@@ -1202,6 +1240,60 @@ public class CreativeComponents {
     this.channelsLiveFeed = channelsLiveFeed;
   }
 
+  public CreativeComponents rewardedBrowse(List<RewardedBrowseComponent> rewardedBrowse) {
+    this.rewardedBrowse = rewardedBrowse;
+    return this;
+  }
+
+  public CreativeComponents addRewardedBrowseItem(RewardedBrowseComponent rewardedBrowseItem) {
+    if (this.rewardedBrowse == null) {
+      this.rewardedBrowse = new ArrayList<RewardedBrowseComponent>();
+    }
+    this.rewardedBrowse.add(rewardedBrowseItem);
+    return this;
+  }
+
+  /**
+   * Get rewardedBrowse
+   *
+   * @return rewardedBrowse
+   */
+  @ApiModelProperty(value = "")
+  public List<RewardedBrowseComponent> getRewardedBrowse() {
+    return rewardedBrowse;
+  }
+
+  public void setRewardedBrowse(List<RewardedBrowseComponent> rewardedBrowse) {
+    this.rewardedBrowse = rewardedBrowse;
+  }
+
+  public CreativeComponents channelsBrand(List<BrandComponent> channelsBrand) {
+    this.channelsBrand = channelsBrand;
+    return this;
+  }
+
+  public CreativeComponents addChannelsBrandItem(BrandComponent channelsBrandItem) {
+    if (this.channelsBrand == null) {
+      this.channelsBrand = new ArrayList<BrandComponent>();
+    }
+    this.channelsBrand.add(channelsBrandItem);
+    return this;
+  }
+
+  /**
+   * Get channelsBrand
+   *
+   * @return channelsBrand
+   */
+  @ApiModelProperty(value = "")
+  public List<BrandComponent> getChannelsBrand() {
+    return channelsBrand;
+  }
+
+  public void setChannelsBrand(List<BrandComponent> channelsBrand) {
+    this.channelsBrand = channelsBrand;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -1245,11 +1337,14 @@ public class CreativeComponents {
         && Objects.equals(this.miniCardLink, creativeComponents.miniCardLink)
         && Objects.equals(this.floatingZoneList, creativeComponents.floatingZoneList)
         && Objects.equals(this.videoChannelsContent, creativeComponents.videoChannelsContent)
+        && Objects.equals(this.wechatShopActivity, creativeComponents.wechatShopActivity)
         && Objects.equals(this.audio, creativeComponents.audio)
         && Objects.equals(this.wxgameDirectPage, creativeComponents.wxgameDirectPage)
         && Objects.equals(this.videoList, creativeComponents.videoList)
         && Objects.equals(this.doctorCard, creativeComponents.doctorCard)
-        && Objects.equals(this.channelsLiveFeed, creativeComponents.channelsLiveFeed);
+        && Objects.equals(this.channelsLiveFeed, creativeComponents.channelsLiveFeed)
+        && Objects.equals(this.rewardedBrowse, creativeComponents.rewardedBrowse)
+        && Objects.equals(this.channelsBrand, creativeComponents.channelsBrand);
   }
 
   @Override
@@ -1289,11 +1384,14 @@ public class CreativeComponents {
         miniCardLink,
         floatingZoneList,
         videoChannelsContent,
+        wechatShopActivity,
         audio,
         wxgameDirectPage,
         videoList,
         doctorCard,
-        channelsLiveFeed);
+        channelsLiveFeed,
+        rewardedBrowse,
+        channelsBrand);
   }
 
   @Override

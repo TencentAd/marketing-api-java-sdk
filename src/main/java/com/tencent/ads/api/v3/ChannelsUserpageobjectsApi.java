@@ -59,6 +59,8 @@ public class ChannelsUserpageobjectsApi {
    * @param count (optional)
    * @param wechatChannelsAccountId (optional)
    * @param adContext (optional)
+   * @param componentTypeList (optional)
+   * @param componentUuid (optional)
    * @param fields 返回参数的字段列表 (optional)
    * @param progressListener Progress listener
    * @param progressRequestListener Progress request listener
@@ -73,6 +75,8 @@ public class ChannelsUserpageobjectsApi {
       Long count,
       String wechatChannelsAccountId,
       AdContext adContext,
+      List<String> componentTypeList,
+      String componentUuid,
       List<String> fields,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
@@ -100,6 +104,11 @@ public class ChannelsUserpageobjectsApi {
           apiClient.parameterToPair("wechat_channels_account_id", wechatChannelsAccountId));
     if (adContext != null)
       localVarQueryParams.addAll(apiClient.parameterToPair("ad_context", adContext));
+    if (componentTypeList != null)
+      localVarCollectionQueryParams.addAll(
+          apiClient.parameterToPairs("multi", "component_type_list", componentTypeList));
+    if (componentUuid != null)
+      localVarQueryParams.addAll(apiClient.parameterToPair("component_uuid", componentUuid));
     if (fields != null)
       localVarCollectionQueryParams.addAll(apiClient.parameterToPairs("multi", "fields", fields));
 
@@ -161,6 +170,8 @@ public class ChannelsUserpageobjectsApi {
       Long count,
       String wechatChannelsAccountId,
       AdContext adContext,
+      List<String> componentTypeList,
+      String componentUuid,
       List<String> fields,
       final ProgressResponseBody.ProgressListener progressListener,
       final ProgressRequestBody.ProgressRequestListener progressRequestListener,
@@ -182,6 +193,8 @@ public class ChannelsUserpageobjectsApi {
             count,
             wechatChannelsAccountId,
             adContext,
+            componentTypeList,
+            componentUuid,
             fields,
             progressListener,
             progressRequestListener,
@@ -199,6 +212,8 @@ public class ChannelsUserpageobjectsApi {
    * @param count (optional)
    * @param wechatChannelsAccountId (optional)
    * @param adContext (optional)
+   * @param componentTypeList (optional)
+   * @param componentUuid (optional)
    * @param fields 返回参数的字段列表 (optional)
    * @return ChannelsUserpageobjectsGetResponse
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
@@ -212,6 +227,8 @@ public class ChannelsUserpageobjectsApi {
       Long count,
       String wechatChannelsAccountId,
       AdContext adContext,
+      List<String> componentTypeList,
+      String componentUuid,
       List<String> fields,
       Pair... headerPair)
       throws ApiException {
@@ -224,6 +241,8 @@ public class ChannelsUserpageobjectsApi {
             count,
             wechatChannelsAccountId,
             adContext,
+            componentTypeList,
+            componentUuid,
             fields,
             headerPair);
     return resp.getData();
@@ -239,6 +258,8 @@ public class ChannelsUserpageobjectsApi {
    * @param count (optional)
    * @param wechatChannelsAccountId (optional)
    * @param adContext (optional)
+   * @param componentTypeList (optional)
+   * @param componentUuid (optional)
    * @param fields 返回参数的字段列表 (optional)
    * @return ApiResponse&lt;ChannelsUserpageobjectsGetResponse&gt;
    * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
@@ -252,6 +273,8 @@ public class ChannelsUserpageobjectsApi {
       Long count,
       String wechatChannelsAccountId,
       AdContext adContext,
+      List<String> componentTypeList,
+      String componentUuid,
       List<String> fields,
       Pair... headerPair)
       throws ApiException {
@@ -264,6 +287,8 @@ public class ChannelsUserpageobjectsApi {
             count,
             wechatChannelsAccountId,
             adContext,
+            componentTypeList,
+            componentUuid,
             fields,
             null,
             null,
@@ -282,6 +307,8 @@ public class ChannelsUserpageobjectsApi {
    * @param count (optional)
    * @param wechatChannelsAccountId (optional)
    * @param adContext (optional)
+   * @param componentTypeList (optional)
+   * @param componentUuid (optional)
    * @param fields 返回参数的字段列表 (optional)
    * @param callback The callback to be executed when the API call finishes
    * @return The request call
@@ -295,6 +322,8 @@ public class ChannelsUserpageobjectsApi {
       Long count,
       String wechatChannelsAccountId,
       AdContext adContext,
+      List<String> componentTypeList,
+      String componentUuid,
       List<String> fields,
       final ApiCallback<ChannelsUserpageobjectsGetResponse> callback,
       Pair... headerPair)
@@ -330,6 +359,8 @@ public class ChannelsUserpageobjectsApi {
             count,
             wechatChannelsAccountId,
             adContext,
+            componentTypeList,
+            componentUuid,
             fields,
             progressListener,
             progressRequestListener,

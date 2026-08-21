@@ -19,9 +19,6 @@ import com.tencent.ads.Pair;
 import com.tencent.ads.anno.*;
 import com.tencent.ads.api.v3.AdcreativePreviewsApi;
 import com.tencent.ads.exception.TencentAdsResponseException;
-import com.tencent.ads.model.v3.AdcreativePreviewsAddRequest;
-import com.tencent.ads.model.v3.AdcreativePreviewsAddResponse;
-import com.tencent.ads.model.v3.AdcreativePreviewsAddResponseData;
 import com.tencent.ads.model.v3.AdcreativePreviewsGetResponse;
 import com.tencent.ads.model.v3.AdcreativePreviewsGetResponseData;
 import com.tencent.ads.model.v3.FilteringStruct;
@@ -30,22 +27,6 @@ import java.util.List;
 public class AdcreativePreviewsApiContainer extends ApiContainer {
 
   @Inject AdcreativePreviewsApi api;
-
-  /**
-   * 绑定营销预览受众
-   *
-   * @param data (required)
-   * @return AdcreativePreviewsAddResponse
-   * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the
-   *     response body
-   */
-  public AdcreativePreviewsAddResponseData adcreativePreviewsAdd(
-      AdcreativePreviewsAddRequest data, Pair... headerPair)
-      throws ApiException, TencentAdsResponseException {
-    AdcreativePreviewsAddResponse resp = api.adcreativePreviewsAdd(data, headerPair);
-    handleResponse(gson.toJson(resp));
-    return resp.getData();
-  }
 
   /**
    * 获取绑定的营销预览受众列表

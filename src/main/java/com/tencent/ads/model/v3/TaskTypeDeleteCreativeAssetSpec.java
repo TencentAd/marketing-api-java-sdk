@@ -23,9 +23,6 @@ import java.util.Objects;
 /** 删除组件并取消关联动态创意 */
 @ApiModel(description = "删除组件并取消关联动态创意")
 public class TaskTypeDeleteCreativeAssetSpec {
-  @SerializedName("account_id")
-  private Long accountId = null;
-
   @SerializedName("component_id_list")
   private List<Long> componentIdList = null;
 
@@ -37,25 +34,6 @@ public class TaskTypeDeleteCreativeAssetSpec {
 
   @SerializedName("component_clean_strategy")
   private ComponentCleanStrategy componentCleanStrategy = null;
-
-  public TaskTypeDeleteCreativeAssetSpec accountId(Long accountId) {
-    this.accountId = accountId;
-    return this;
-  }
-
-  /**
-   * Get accountId
-   *
-   * @return accountId
-   */
-  @ApiModelProperty(value = "")
-  public Long getAccountId() {
-    return accountId;
-  }
-
-  public void setAccountId(Long accountId) {
-    this.accountId = accountId;
-  }
 
   public TaskTypeDeleteCreativeAssetSpec componentIdList(List<Long> componentIdList) {
     this.componentIdList = componentIdList;
@@ -168,8 +146,7 @@ public class TaskTypeDeleteCreativeAssetSpec {
     }
     TaskTypeDeleteCreativeAssetSpec taskTypeDeleteCreativeAssetSpec =
         (TaskTypeDeleteCreativeAssetSpec) o;
-    return Objects.equals(this.accountId, taskTypeDeleteCreativeAssetSpec.accountId)
-        && Objects.equals(this.componentIdList, taskTypeDeleteCreativeAssetSpec.componentIdList)
+    return Objects.equals(this.componentIdList, taskTypeDeleteCreativeAssetSpec.componentIdList)
         && Objects.equals(this.imageIdList, taskTypeDeleteCreativeAssetSpec.imageIdList)
         && Objects.equals(this.videoIdList, taskTypeDeleteCreativeAssetSpec.videoIdList)
         && Objects.equals(
@@ -178,8 +155,7 @@ public class TaskTypeDeleteCreativeAssetSpec {
 
   @Override
   public int hashCode() {
-    return Objects.hash(
-        accountId, componentIdList, imageIdList, videoIdList, componentCleanStrategy);
+    return Objects.hash(componentIdList, imageIdList, videoIdList, componentCleanStrategy);
   }
 
   @Override

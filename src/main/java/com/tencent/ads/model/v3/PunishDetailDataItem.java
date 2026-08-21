@@ -81,6 +81,12 @@ public class PunishDetailDataItem {
   @SerializedName("compliance_owner")
   private String complianceOwner = null;
 
+  @SerializedName("element_id")
+  private Long elementId = null;
+
+  @SerializedName("element_finger_print")
+  private String elementFingerPrint = null;
+
   public PunishDetailDataItem partitionTime(Long partitionTime) {
     this.partitionTime = partitionTime;
     return this;
@@ -461,6 +467,44 @@ public class PunishDetailDataItem {
     this.complianceOwner = complianceOwner;
   }
 
+  public PunishDetailDataItem elementId(Long elementId) {
+    this.elementId = elementId;
+    return this;
+  }
+
+  /**
+   * Get elementId
+   *
+   * @return elementId
+   */
+  @ApiModelProperty(value = "")
+  public Long getElementId() {
+    return elementId;
+  }
+
+  public void setElementId(Long elementId) {
+    this.elementId = elementId;
+  }
+
+  public PunishDetailDataItem elementFingerPrint(String elementFingerPrint) {
+    this.elementFingerPrint = elementFingerPrint;
+    return this;
+  }
+
+  /**
+   * Get elementFingerPrint
+   *
+   * @return elementFingerPrint
+   */
+  @ApiModelProperty(value = "")
+  public String getElementFingerPrint() {
+    return elementFingerPrint;
+  }
+
+  public void setElementFingerPrint(String elementFingerPrint) {
+    this.elementFingerPrint = elementFingerPrint;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -490,7 +534,9 @@ public class PunishDetailDataItem {
         && Objects.equals(this.agencyName, punishDetailDataItem.agencyName)
         && Objects.equals(this.accountFrame, punishDetailDataItem.accountFrame)
         && Objects.equals(this.accountOperateIdentity, punishDetailDataItem.accountOperateIdentity)
-        && Objects.equals(this.complianceOwner, punishDetailDataItem.complianceOwner);
+        && Objects.equals(this.complianceOwner, punishDetailDataItem.complianceOwner)
+        && Objects.equals(this.elementId, punishDetailDataItem.elementId)
+        && Objects.equals(this.elementFingerPrint, punishDetailDataItem.elementFingerPrint);
   }
 
   @Override
@@ -515,7 +561,9 @@ public class PunishDetailDataItem {
         agencyName,
         accountFrame,
         accountOperateIdentity,
-        complianceOwner);
+        complianceOwner,
+        elementId,
+        elementFingerPrint);
   }
 
   @Override

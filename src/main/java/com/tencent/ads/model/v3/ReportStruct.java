@@ -2700,6 +2700,15 @@ public class ReportStruct {
   @SerializedName("order_coupon_amount")
   private Long orderCouponAmount = null;
 
+  @SerializedName("effective_consult_dedup_pv")
+  private Long effectiveConsultDedupPv = null;
+
+  @SerializedName("effective_consult_dedup_cost")
+  private Long effectiveConsultDedupCost = null;
+
+  @SerializedName("effective_consult_dedup_rate")
+  private Double effectiveConsultDedupRate = null;
+
   @SerializedName("adgroup_id")
   private Long adgroupId = null;
 
@@ -19772,6 +19781,63 @@ public class ReportStruct {
     this.orderCouponAmount = orderCouponAmount;
   }
 
+  public ReportStruct effectiveConsultDedupPv(Long effectiveConsultDedupPv) {
+    this.effectiveConsultDedupPv = effectiveConsultDedupPv;
+    return this;
+  }
+
+  /**
+   * Get effectiveConsultDedupPv
+   *
+   * @return effectiveConsultDedupPv
+   */
+  @ApiModelProperty(value = "")
+  public Long getEffectiveConsultDedupPv() {
+    return effectiveConsultDedupPv;
+  }
+
+  public void setEffectiveConsultDedupPv(Long effectiveConsultDedupPv) {
+    this.effectiveConsultDedupPv = effectiveConsultDedupPv;
+  }
+
+  public ReportStruct effectiveConsultDedupCost(Long effectiveConsultDedupCost) {
+    this.effectiveConsultDedupCost = effectiveConsultDedupCost;
+    return this;
+  }
+
+  /**
+   * Get effectiveConsultDedupCost
+   *
+   * @return effectiveConsultDedupCost
+   */
+  @ApiModelProperty(value = "")
+  public Long getEffectiveConsultDedupCost() {
+    return effectiveConsultDedupCost;
+  }
+
+  public void setEffectiveConsultDedupCost(Long effectiveConsultDedupCost) {
+    this.effectiveConsultDedupCost = effectiveConsultDedupCost;
+  }
+
+  public ReportStruct effectiveConsultDedupRate(Double effectiveConsultDedupRate) {
+    this.effectiveConsultDedupRate = effectiveConsultDedupRate;
+    return this;
+  }
+
+  /**
+   * Get effectiveConsultDedupRate
+   *
+   * @return effectiveConsultDedupRate
+   */
+  @ApiModelProperty(value = "")
+  public Double getEffectiveConsultDedupRate() {
+    return effectiveConsultDedupRate;
+  }
+
+  public void setEffectiveConsultDedupRate(Double effectiveConsultDedupRate) {
+    this.effectiveConsultDedupRate = effectiveConsultDedupRate;
+  }
+
   public ReportStruct adgroupId(Long adgroupId) {
     this.adgroupId = adgroupId;
     return this;
@@ -21330,6 +21396,9 @@ public class ReportStruct {
             this.afterAddWecomClassParticipatedFisrtUvRate,
             reportStruct.afterAddWecomClassParticipatedFisrtUvRate)
         && Objects.equals(this.orderCouponAmount, reportStruct.orderCouponAmount)
+        && Objects.equals(this.effectiveConsultDedupPv, reportStruct.effectiveConsultDedupPv)
+        && Objects.equals(this.effectiveConsultDedupCost, reportStruct.effectiveConsultDedupCost)
+        && Objects.equals(this.effectiveConsultDedupRate, reportStruct.effectiveConsultDedupRate)
         && Objects.equals(this.adgroupId, reportStruct.adgroupId)
         && Objects.equals(this.adgroupName, reportStruct.adgroupName)
         && Objects.equals(this.dynamicCreativeId, reportStruct.dynamicCreativeId)
@@ -22256,6 +22325,9 @@ public class ReportStruct {
         afterAddWecomConsultDedupRate,
         afterAddWecomClassParticipatedFisrtUvRate,
         orderCouponAmount,
+        effectiveConsultDedupPv,
+        effectiveConsultDedupCost,
+        effectiveConsultDedupRate,
         adgroupId,
         adgroupName,
         dynamicCreativeId,

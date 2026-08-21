@@ -21,6 +21,9 @@ import java.util.Objects;
 /** 医生卡结构 */
 @ApiModel(description = "医生卡结构")
 public class DoctorCardStruct {
+  @SerializedName("doctor_head_image_id")
+  private String doctorHeadImageId = null;
+
   @SerializedName("doctor_head_url")
   private String doctorHeadUrl = null;
 
@@ -38,6 +41,25 @@ public class DoctorCardStruct {
 
   @SerializedName("areas_of_expertise")
   private String areasOfExpertise = null;
+
+  public DoctorCardStruct doctorHeadImageId(String doctorHeadImageId) {
+    this.doctorHeadImageId = doctorHeadImageId;
+    return this;
+  }
+
+  /**
+   * Get doctorHeadImageId
+   *
+   * @return doctorHeadImageId
+   */
+  @ApiModelProperty(value = "")
+  public String getDoctorHeadImageId() {
+    return doctorHeadImageId;
+  }
+
+  public void setDoctorHeadImageId(String doctorHeadImageId) {
+    this.doctorHeadImageId = doctorHeadImageId;
+  }
 
   public DoctorCardStruct doctorHeadUrl(String doctorHeadUrl) {
     this.doctorHeadUrl = doctorHeadUrl;
@@ -162,7 +184,8 @@ public class DoctorCardStruct {
       return false;
     }
     DoctorCardStruct doctorCardStruct = (DoctorCardStruct) o;
-    return Objects.equals(this.doctorHeadUrl, doctorCardStruct.doctorHeadUrl)
+    return Objects.equals(this.doctorHeadImageId, doctorCardStruct.doctorHeadImageId)
+        && Objects.equals(this.doctorHeadUrl, doctorCardStruct.doctorHeadUrl)
         && Objects.equals(this.doctorName, doctorCardStruct.doctorName)
         && Objects.equals(this.doctorTitle, doctorCardStruct.doctorTitle)
         && Objects.equals(this.doctorPosition, doctorCardStruct.doctorPosition)
@@ -173,7 +196,13 @@ public class DoctorCardStruct {
   @Override
   public int hashCode() {
     return Objects.hash(
-        doctorHeadUrl, doctorName, doctorTitle, doctorPosition, department, areasOfExpertise);
+        doctorHeadImageId,
+        doctorHeadUrl,
+        doctorName,
+        doctorTitle,
+        doctorPosition,
+        department,
+        areasOfExpertise);
   }
 
   @Override

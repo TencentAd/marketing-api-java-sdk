@@ -52,7 +52,7 @@ public class LeadsUpdateInfoStruct {
   private String leadsName = null;
 
   @SerializedName("leads_gender")
-  private LeadsGenderType leadsGender = null;
+  private GenderType leadsGender = null;
 
   @SerializedName("leads_email")
   private String leadsEmail = null;
@@ -259,7 +259,7 @@ public class LeadsUpdateInfoStruct {
     this.leadsName = leadsName;
   }
 
-  public LeadsUpdateInfoStruct leadsGender(LeadsGenderType leadsGender) {
+  public LeadsUpdateInfoStruct leadsGender(GenderType leadsGender) {
     this.leadsGender = leadsGender;
     return this;
   }
@@ -270,11 +270,11 @@ public class LeadsUpdateInfoStruct {
    * @return leadsGender
    */
   @ApiModelProperty(value = "")
-  public LeadsGenderType getLeadsGender() {
+  public GenderType getLeadsGender() {
     return leadsGender;
   }
 
-  public void setLeadsGender(LeadsGenderType leadsGender) {
+  public void setLeadsGender(GenderType leadsGender) {
     this.leadsGender = leadsGender;
   }
 

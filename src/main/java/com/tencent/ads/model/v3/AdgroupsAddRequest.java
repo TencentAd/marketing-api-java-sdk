@@ -204,6 +204,9 @@ public class AdgroupsAddRequest {
   @SerializedName("search_expansion_switch")
   private SearchExpansionSwitch searchExpansionSwitch = null;
 
+  @SerializedName("industry_value_explore")
+  private IndustryValueExplore industryValueExplore = null;
+
   @SerializedName("adx_realtime_type")
   private AdxRealtimeType adxRealtimeType = null;
 
@@ -215,6 +218,9 @@ public class AdgroupsAddRequest {
 
   @SerializedName("smart_coupon_mode")
   private SmartCouponMode smartCouponMode = null;
+
+  @SerializedName("is_smart_delivery_upgrade_project")
+  private Boolean isSmartDeliveryUpgradeProject = null;
 
   public AdgroupsAddRequest accountId(Long accountId) {
     this.accountId = accountId;
@@ -1415,6 +1421,25 @@ public class AdgroupsAddRequest {
     this.searchExpansionSwitch = searchExpansionSwitch;
   }
 
+  public AdgroupsAddRequest industryValueExplore(IndustryValueExplore industryValueExplore) {
+    this.industryValueExplore = industryValueExplore;
+    return this;
+  }
+
+  /**
+   * Get industryValueExplore
+   *
+   * @return industryValueExplore
+   */
+  @ApiModelProperty(value = "")
+  public IndustryValueExplore getIndustryValueExplore() {
+    return industryValueExplore;
+  }
+
+  public void setIndustryValueExplore(IndustryValueExplore industryValueExplore) {
+    this.industryValueExplore = industryValueExplore;
+  }
+
   public AdgroupsAddRequest adxRealtimeType(AdxRealtimeType adxRealtimeType) {
     this.adxRealtimeType = adxRealtimeType;
     return this;
@@ -1489,6 +1514,25 @@ public class AdgroupsAddRequest {
 
   public void setSmartCouponMode(SmartCouponMode smartCouponMode) {
     this.smartCouponMode = smartCouponMode;
+  }
+
+  public AdgroupsAddRequest isSmartDeliveryUpgradeProject(Boolean isSmartDeliveryUpgradeProject) {
+    this.isSmartDeliveryUpgradeProject = isSmartDeliveryUpgradeProject;
+    return this;
+  }
+
+  /**
+   * Get isSmartDeliveryUpgradeProject
+   *
+   * @return isSmartDeliveryUpgradeProject
+   */
+  @ApiModelProperty(value = "")
+  public Boolean isIsSmartDeliveryUpgradeProject() {
+    return isSmartDeliveryUpgradeProject;
+  }
+
+  public void setIsSmartDeliveryUpgradeProject(Boolean isSmartDeliveryUpgradeProject) {
+    this.isSmartDeliveryUpgradeProject = isSmartDeliveryUpgradeProject;
   }
 
   @Override
@@ -1571,10 +1615,13 @@ public class AdgroupsAddRequest {
             this.liveRecommendStrategyEnabled, adgroupsAddRequest.liveRecommendStrategyEnabled)
         && Objects.equals(this.customCostRoiCap, adgroupsAddRequest.customCostRoiCap)
         && Objects.equals(this.searchExpansionSwitch, adgroupsAddRequest.searchExpansionSwitch)
+        && Objects.equals(this.industryValueExplore, adgroupsAddRequest.industryValueExplore)
         && Objects.equals(this.adxRealtimeType, adgroupsAddRequest.adxRealtimeType)
         && Objects.equals(this.enableSteadyExploration, adgroupsAddRequest.enableSteadyExploration)
         && Objects.equals(this.smartTargetingMode, adgroupsAddRequest.smartTargetingMode)
-        && Objects.equals(this.smartCouponMode, adgroupsAddRequest.smartCouponMode);
+        && Objects.equals(this.smartCouponMode, adgroupsAddRequest.smartCouponMode)
+        && Objects.equals(
+            this.isSmartDeliveryUpgradeProject, adgroupsAddRequest.isSmartDeliveryUpgradeProject);
   }
 
   @Override
@@ -1641,10 +1688,12 @@ public class AdgroupsAddRequest {
         liveRecommendStrategyEnabled,
         customCostRoiCap,
         searchExpansionSwitch,
+        industryValueExplore,
         adxRealtimeType,
         enableSteadyExploration,
         smartTargetingMode,
-        smartCouponMode);
+        smartCouponMode,
+        isSmartDeliveryUpgradeProject);
   }
 
   @Override

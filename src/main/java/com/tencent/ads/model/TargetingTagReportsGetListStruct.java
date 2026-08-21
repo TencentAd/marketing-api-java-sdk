@@ -24,8 +24,8 @@ public class TargetingTagReportsGetListStruct {
   @SerializedName("date")
   private String date = null;
 
-  @SerializedName("gender")
-  private String gender = null;
+  @SerializedName("age")
+  private String age = null;
 
   @SerializedName("view_count")
   private Long viewCount = null;
@@ -1713,62 +1713,146 @@ public class TargetingTagReportsGetListStruct {
   @SerializedName("after_add_wecom_intention_dedup_pv_cost")
   private Long afterAddWecomIntentionDedupPvCost = null;
 
-  @SerializedName("age")
-  private String age = null;
+  @SerializedName("exp_pv")
+  private Long expPv = null;
 
-  @SerializedName("region_id")
-  private Long regionId = null;
+  @SerializedName("impression")
+  private Long impression = null;
 
-  @SerializedName("city_id")
-  private Long cityId = null;
+  @SerializedName("exposure")
+  private Long exposure = null;
 
-  @SerializedName("province")
-  private String province = null;
+  @SerializedName("download")
+  private Long download = null;
 
-  @SerializedName("city")
-  private String city = null;
+  @SerializedName("activation")
+  private Long activation = null;
 
-  @SerializedName("view_user_count")
-  private Long viewUserCount = null;
+  @SerializedName("app_activated_count")
+  private Long appActivatedCount = null;
 
-  @SerializedName("avg_view_per_user")
-  private Double avgViewPerUser = null;
+  @SerializedName("app_activated_rate")
+  private Double appActivatedRate = null;
 
-  @SerializedName("click_user_count")
-  private Long clickUserCount = null;
+  @SerializedName("thousand_display_cost")
+  private Long thousandDisplayCost = null;
 
-  @SerializedName("link_click_user_count")
-  private Long linkClickUserCount = null;
+  @SerializedName("click")
+  private Long click = null;
 
-  @SerializedName("portrait_click_user_count")
-  private Long portraitClickUserCount = null;
+  @SerializedName("web_consult_count")
+  private Long webConsultCount = null;
 
-  @SerializedName("nickname_click_user_count")
-  private Long nicknameClickUserCount = null;
+  @SerializedName("web_consult_cost")
+  private Long webConsultCost = null;
 
-  @SerializedName("poi_click_user_count")
-  private Long poiClickUserCount = null;
+  @SerializedName("web_phone_call_direct_count")
+  private Long webPhoneCallDirectCount = null;
 
-  @SerializedName("praise_user_count")
-  private Long praiseUserCount = null;
+  @SerializedName("web_phone_call_direct_cost")
+  private Long webPhoneCallDirectCost = null;
 
-  @SerializedName("comment_user_count")
-  private Long commentUserCount = null;
+  @SerializedName("web_phone_call_back_count")
+  private Long webPhoneCallBackCount = null;
 
-  @SerializedName("order_count")
-  private Long orderCount = null;
+  @SerializedName("web_phone_call_back_cost")
+  private Long webPhoneCallBackCost = null;
 
-  @SerializedName("leads_user_count")
-  private Long leadsUserCount = null;
+  @SerializedName("own_page_navigation_cost")
+  private Long ownPageNavigationCost = null;
 
-  @SerializedName("valid_leads_cost")
-  private Long validLeadsCost = null;
+  @SerializedName("reservation")
+  private Long reservation = null;
 
-  @SerializedName("official_account_follow_count")
-  private Long officialAccountFollowCount = null;
+  @SerializedName("web_page_reservation_count")
+  private Long webPageReservationCount = null;
 
-  @SerializedName("coupon_use_count")
-  private Long couponUseCount = null;
+  @SerializedName("web_page_reservation_rate")
+  private Double webPageReservationRate = null;
+
+  @SerializedName("web_page_reservation_cost")
+  private Long webPageReservationCost = null;
+
+  @SerializedName("web_add_to_car_count")
+  private Long webAddToCarCount = null;
+
+  @SerializedName("web_add_to_car_cost")
+  private Long webAddToCarCost = null;
+
+  @SerializedName("web_order_unit_price")
+  private Long webOrderUnitPrice = null;
+
+  @SerializedName("web_order_roi")
+  private Double webOrderRoi = null;
+
+  @SerializedName("web_deliver_count")
+  private Long webDeliverCount = null;
+
+  @SerializedName("web_deliver_cost")
+  private Long webDeliverCost = null;
+
+  @SerializedName("web_sign_in_count")
+  private Long webSignInCount = null;
+
+  @SerializedName("web_sign_in_cost")
+  private Long webSignInCost = null;
+
+  @SerializedName("app_installation")
+  private Long appInstallation = null;
+
+  @SerializedName("app_activated_cost")
+  private Long appActivatedCost = null;
+
+  @SerializedName("app_retention_count")
+  private Long appRetentionCount = null;
+
+  @SerializedName("app_retention_rate")
+  private Double appRetentionRate = null;
+
+  @SerializedName("app_retention_cost")
+  private Long appRetentionCost = null;
+
+  @SerializedName("app_add_to_car_count")
+  private Long appAddToCarCount = null;
+
+  @SerializedName("app_add_to_car_amount")
+  private Long appAddToCarAmount = null;
+
+  @SerializedName("app_cart_amount")
+  private Long appCartAmount = null;
+
+  @SerializedName("app_add_to_car_cost")
+  private Long appAddToCarCost = null;
+
+  @SerializedName("app_payment_count")
+  private Long appPaymentCount = null;
+
+  @SerializedName("app_payment_amount")
+  private Long appPaymentAmount = null;
+
+  @SerializedName("platform_coupon_click")
+  private Long platformCouponClick = null;
+
+  @SerializedName("follow")
+  private Long follow = null;
+
+  @SerializedName("share")
+  private Long share = null;
+
+  @SerializedName("read")
+  private Long read = null;
+
+  @SerializedName("intelligent_phone_call_direct_count")
+  private Long intelligentPhoneCallDirectCount = null;
+
+  @SerializedName("video_live_exp_user_count")
+  private Long videoLiveExpUserCount = null;
+
+  @SerializedName("campaign_id")
+  private Long campaignId = null;
+
+  @SerializedName("adgroup_id")
+  private Long adgroupId = null;
 
   @SerializedName("targeting_type")
   private String targetingType = null;
@@ -1788,35 +1872,23 @@ public class TargetingTagReportsGetListStruct {
   @SerializedName("behavior_intensity")
   private String behaviorIntensity = null;
 
-  @SerializedName("gender_name")
-  private String genderName = null;
+  @SerializedName("region_id")
+  private Long regionId = null;
 
-  @SerializedName("account_id")
-  private Long accountId = null;
-
-  @SerializedName("campaign_id")
-  private Long campaignId = null;
-
-  @SerializedName("adgroup_id")
-  private Long adgroupId = null;
-
-  @SerializedName("ad_id")
-  private Long adId = null;
-
-  @SerializedName("audience_id")
-  private Long audienceId = null;
-
-  @SerializedName("promoted_object_type")
-  private String promotedObjectType = null;
-
-  @SerializedName("promoted_object_id")
-  private String promotedObjectId = null;
+  @SerializedName("city_id")
+  private Long cityId = null;
 
   @SerializedName("request_conversions_count")
   private Long requestConversionsCount = null;
 
   @SerializedName("request_conversions_cost")
   private Long requestConversionsCost = null;
+
+  @SerializedName("ad_id")
+  private Long adId = null;
+
+  @SerializedName("audience_id")
+  private Long audienceId = null;
 
   @SerializedName("income_val_1")
   private Long incomeVal1 = null;
@@ -2043,6 +2115,9 @@ public class TargetingTagReportsGetListStruct {
   @SerializedName("mini_game_pay_d30_pla_roi")
   private Double miniGamePayD30PlaRoi = null;
 
+  @SerializedName("gender")
+  private String gender = null;
+
   @SerializedName("project_id")
   private Long projectId = null;
 
@@ -2080,23 +2155,23 @@ public class TargetingTagReportsGetListStruct {
     this.date = date;
   }
 
-  public TargetingTagReportsGetListStruct gender(String gender) {
-    this.gender = gender;
+  public TargetingTagReportsGetListStruct age(String age) {
+    this.age = age;
     return this;
   }
 
   /**
-   * Get gender
+   * Get age
    *
-   * @return gender
+   * @return age
    */
   @ApiModelProperty(value = "")
-  public String getGender() {
-    return gender;
+  public String getAge() {
+    return age;
   }
 
-  public void setGender(String gender) {
-    this.gender = gender;
+  public void setAge(String age) {
+    this.age = age;
   }
 
   public TargetingTagReportsGetListStruct viewCount(Long viewCount) {
@@ -12851,366 +12926,898 @@ public class TargetingTagReportsGetListStruct {
     this.afterAddWecomIntentionDedupPvCost = afterAddWecomIntentionDedupPvCost;
   }
 
-  public TargetingTagReportsGetListStruct age(String age) {
-    this.age = age;
+  public TargetingTagReportsGetListStruct expPv(Long expPv) {
+    this.expPv = expPv;
     return this;
   }
 
   /**
-   * Get age
+   * Get expPv
    *
-   * @return age
+   * @return expPv
    */
   @ApiModelProperty(value = "")
-  public String getAge() {
-    return age;
+  public Long getExpPv() {
+    return expPv;
   }
 
-  public void setAge(String age) {
-    this.age = age;
+  public void setExpPv(Long expPv) {
+    this.expPv = expPv;
   }
 
-  public TargetingTagReportsGetListStruct regionId(Long regionId) {
-    this.regionId = regionId;
+  public TargetingTagReportsGetListStruct impression(Long impression) {
+    this.impression = impression;
     return this;
   }
 
   /**
-   * Get regionId
+   * Get impression
    *
-   * @return regionId
+   * @return impression
    */
   @ApiModelProperty(value = "")
-  public Long getRegionId() {
-    return regionId;
+  public Long getImpression() {
+    return impression;
   }
 
-  public void setRegionId(Long regionId) {
-    this.regionId = regionId;
+  public void setImpression(Long impression) {
+    this.impression = impression;
   }
 
-  public TargetingTagReportsGetListStruct cityId(Long cityId) {
-    this.cityId = cityId;
+  public TargetingTagReportsGetListStruct exposure(Long exposure) {
+    this.exposure = exposure;
     return this;
   }
 
   /**
-   * Get cityId
+   * Get exposure
    *
-   * @return cityId
+   * @return exposure
    */
   @ApiModelProperty(value = "")
-  public Long getCityId() {
-    return cityId;
+  public Long getExposure() {
+    return exposure;
   }
 
-  public void setCityId(Long cityId) {
-    this.cityId = cityId;
+  public void setExposure(Long exposure) {
+    this.exposure = exposure;
   }
 
-  public TargetingTagReportsGetListStruct province(String province) {
-    this.province = province;
+  public TargetingTagReportsGetListStruct download(Long download) {
+    this.download = download;
     return this;
   }
 
   /**
-   * Get province
+   * Get download
    *
-   * @return province
+   * @return download
    */
   @ApiModelProperty(value = "")
-  public String getProvince() {
-    return province;
+  public Long getDownload() {
+    return download;
   }
 
-  public void setProvince(String province) {
-    this.province = province;
+  public void setDownload(Long download) {
+    this.download = download;
   }
 
-  public TargetingTagReportsGetListStruct city(String city) {
-    this.city = city;
+  public TargetingTagReportsGetListStruct activation(Long activation) {
+    this.activation = activation;
     return this;
   }
 
   /**
-   * Get city
+   * Get activation
    *
-   * @return city
+   * @return activation
    */
   @ApiModelProperty(value = "")
-  public String getCity() {
-    return city;
+  public Long getActivation() {
+    return activation;
   }
 
-  public void setCity(String city) {
-    this.city = city;
+  public void setActivation(Long activation) {
+    this.activation = activation;
   }
 
-  public TargetingTagReportsGetListStruct viewUserCount(Long viewUserCount) {
-    this.viewUserCount = viewUserCount;
+  public TargetingTagReportsGetListStruct appActivatedCount(Long appActivatedCount) {
+    this.appActivatedCount = appActivatedCount;
     return this;
   }
 
   /**
-   * Get viewUserCount
+   * Get appActivatedCount
    *
-   * @return viewUserCount
+   * @return appActivatedCount
    */
   @ApiModelProperty(value = "")
-  public Long getViewUserCount() {
-    return viewUserCount;
+  public Long getAppActivatedCount() {
+    return appActivatedCount;
   }
 
-  public void setViewUserCount(Long viewUserCount) {
-    this.viewUserCount = viewUserCount;
+  public void setAppActivatedCount(Long appActivatedCount) {
+    this.appActivatedCount = appActivatedCount;
   }
 
-  public TargetingTagReportsGetListStruct avgViewPerUser(Double avgViewPerUser) {
-    this.avgViewPerUser = avgViewPerUser;
+  public TargetingTagReportsGetListStruct appActivatedRate(Double appActivatedRate) {
+    this.appActivatedRate = appActivatedRate;
     return this;
   }
 
   /**
-   * Get avgViewPerUser
+   * Get appActivatedRate
    *
-   * @return avgViewPerUser
+   * @return appActivatedRate
    */
   @ApiModelProperty(value = "")
-  public Double getAvgViewPerUser() {
-    return avgViewPerUser;
+  public Double getAppActivatedRate() {
+    return appActivatedRate;
   }
 
-  public void setAvgViewPerUser(Double avgViewPerUser) {
-    this.avgViewPerUser = avgViewPerUser;
+  public void setAppActivatedRate(Double appActivatedRate) {
+    this.appActivatedRate = appActivatedRate;
   }
 
-  public TargetingTagReportsGetListStruct clickUserCount(Long clickUserCount) {
-    this.clickUserCount = clickUserCount;
+  public TargetingTagReportsGetListStruct thousandDisplayCost(Long thousandDisplayCost) {
+    this.thousandDisplayCost = thousandDisplayCost;
     return this;
   }
 
   /**
-   * Get clickUserCount
+   * Get thousandDisplayCost
    *
-   * @return clickUserCount
+   * @return thousandDisplayCost
    */
   @ApiModelProperty(value = "")
-  public Long getClickUserCount() {
-    return clickUserCount;
+  public Long getThousandDisplayCost() {
+    return thousandDisplayCost;
   }
 
-  public void setClickUserCount(Long clickUserCount) {
-    this.clickUserCount = clickUserCount;
+  public void setThousandDisplayCost(Long thousandDisplayCost) {
+    this.thousandDisplayCost = thousandDisplayCost;
   }
 
-  public TargetingTagReportsGetListStruct linkClickUserCount(Long linkClickUserCount) {
-    this.linkClickUserCount = linkClickUserCount;
+  public TargetingTagReportsGetListStruct click(Long click) {
+    this.click = click;
     return this;
   }
 
   /**
-   * Get linkClickUserCount
+   * Get click
    *
-   * @return linkClickUserCount
+   * @return click
    */
   @ApiModelProperty(value = "")
-  public Long getLinkClickUserCount() {
-    return linkClickUserCount;
+  public Long getClick() {
+    return click;
   }
 
-  public void setLinkClickUserCount(Long linkClickUserCount) {
-    this.linkClickUserCount = linkClickUserCount;
+  public void setClick(Long click) {
+    this.click = click;
   }
 
-  public TargetingTagReportsGetListStruct portraitClickUserCount(Long portraitClickUserCount) {
-    this.portraitClickUserCount = portraitClickUserCount;
+  public TargetingTagReportsGetListStruct webConsultCount(Long webConsultCount) {
+    this.webConsultCount = webConsultCount;
     return this;
   }
 
   /**
-   * Get portraitClickUserCount
+   * Get webConsultCount
    *
-   * @return portraitClickUserCount
+   * @return webConsultCount
    */
   @ApiModelProperty(value = "")
-  public Long getPortraitClickUserCount() {
-    return portraitClickUserCount;
+  public Long getWebConsultCount() {
+    return webConsultCount;
   }
 
-  public void setPortraitClickUserCount(Long portraitClickUserCount) {
-    this.portraitClickUserCount = portraitClickUserCount;
+  public void setWebConsultCount(Long webConsultCount) {
+    this.webConsultCount = webConsultCount;
   }
 
-  public TargetingTagReportsGetListStruct nicknameClickUserCount(Long nicknameClickUserCount) {
-    this.nicknameClickUserCount = nicknameClickUserCount;
+  public TargetingTagReportsGetListStruct webConsultCost(Long webConsultCost) {
+    this.webConsultCost = webConsultCost;
     return this;
   }
 
   /**
-   * Get nicknameClickUserCount
+   * Get webConsultCost
    *
-   * @return nicknameClickUserCount
+   * @return webConsultCost
    */
   @ApiModelProperty(value = "")
-  public Long getNicknameClickUserCount() {
-    return nicknameClickUserCount;
+  public Long getWebConsultCost() {
+    return webConsultCost;
   }
 
-  public void setNicknameClickUserCount(Long nicknameClickUserCount) {
-    this.nicknameClickUserCount = nicknameClickUserCount;
+  public void setWebConsultCost(Long webConsultCost) {
+    this.webConsultCost = webConsultCost;
   }
 
-  public TargetingTagReportsGetListStruct poiClickUserCount(Long poiClickUserCount) {
-    this.poiClickUserCount = poiClickUserCount;
+  public TargetingTagReportsGetListStruct webPhoneCallDirectCount(Long webPhoneCallDirectCount) {
+    this.webPhoneCallDirectCount = webPhoneCallDirectCount;
     return this;
   }
 
   /**
-   * Get poiClickUserCount
+   * Get webPhoneCallDirectCount
    *
-   * @return poiClickUserCount
+   * @return webPhoneCallDirectCount
    */
   @ApiModelProperty(value = "")
-  public Long getPoiClickUserCount() {
-    return poiClickUserCount;
+  public Long getWebPhoneCallDirectCount() {
+    return webPhoneCallDirectCount;
   }
 
-  public void setPoiClickUserCount(Long poiClickUserCount) {
-    this.poiClickUserCount = poiClickUserCount;
+  public void setWebPhoneCallDirectCount(Long webPhoneCallDirectCount) {
+    this.webPhoneCallDirectCount = webPhoneCallDirectCount;
   }
 
-  public TargetingTagReportsGetListStruct praiseUserCount(Long praiseUserCount) {
-    this.praiseUserCount = praiseUserCount;
+  public TargetingTagReportsGetListStruct webPhoneCallDirectCost(Long webPhoneCallDirectCost) {
+    this.webPhoneCallDirectCost = webPhoneCallDirectCost;
     return this;
   }
 
   /**
-   * Get praiseUserCount
+   * Get webPhoneCallDirectCost
    *
-   * @return praiseUserCount
+   * @return webPhoneCallDirectCost
    */
   @ApiModelProperty(value = "")
-  public Long getPraiseUserCount() {
-    return praiseUserCount;
+  public Long getWebPhoneCallDirectCost() {
+    return webPhoneCallDirectCost;
   }
 
-  public void setPraiseUserCount(Long praiseUserCount) {
-    this.praiseUserCount = praiseUserCount;
+  public void setWebPhoneCallDirectCost(Long webPhoneCallDirectCost) {
+    this.webPhoneCallDirectCost = webPhoneCallDirectCost;
   }
 
-  public TargetingTagReportsGetListStruct commentUserCount(Long commentUserCount) {
-    this.commentUserCount = commentUserCount;
+  public TargetingTagReportsGetListStruct webPhoneCallBackCount(Long webPhoneCallBackCount) {
+    this.webPhoneCallBackCount = webPhoneCallBackCount;
     return this;
   }
 
   /**
-   * Get commentUserCount
+   * Get webPhoneCallBackCount
    *
-   * @return commentUserCount
+   * @return webPhoneCallBackCount
    */
   @ApiModelProperty(value = "")
-  public Long getCommentUserCount() {
-    return commentUserCount;
+  public Long getWebPhoneCallBackCount() {
+    return webPhoneCallBackCount;
   }
 
-  public void setCommentUserCount(Long commentUserCount) {
-    this.commentUserCount = commentUserCount;
+  public void setWebPhoneCallBackCount(Long webPhoneCallBackCount) {
+    this.webPhoneCallBackCount = webPhoneCallBackCount;
   }
 
-  public TargetingTagReportsGetListStruct orderCount(Long orderCount) {
-    this.orderCount = orderCount;
+  public TargetingTagReportsGetListStruct webPhoneCallBackCost(Long webPhoneCallBackCost) {
+    this.webPhoneCallBackCost = webPhoneCallBackCost;
     return this;
   }
 
   /**
-   * Get orderCount
+   * Get webPhoneCallBackCost
    *
-   * @return orderCount
+   * @return webPhoneCallBackCost
    */
   @ApiModelProperty(value = "")
-  public Long getOrderCount() {
-    return orderCount;
+  public Long getWebPhoneCallBackCost() {
+    return webPhoneCallBackCost;
   }
 
-  public void setOrderCount(Long orderCount) {
-    this.orderCount = orderCount;
+  public void setWebPhoneCallBackCost(Long webPhoneCallBackCost) {
+    this.webPhoneCallBackCost = webPhoneCallBackCost;
   }
 
-  public TargetingTagReportsGetListStruct leadsUserCount(Long leadsUserCount) {
-    this.leadsUserCount = leadsUserCount;
+  public TargetingTagReportsGetListStruct ownPageNavigationCost(Long ownPageNavigationCost) {
+    this.ownPageNavigationCost = ownPageNavigationCost;
     return this;
   }
 
   /**
-   * Get leadsUserCount
+   * Get ownPageNavigationCost
    *
-   * @return leadsUserCount
+   * @return ownPageNavigationCost
    */
   @ApiModelProperty(value = "")
-  public Long getLeadsUserCount() {
-    return leadsUserCount;
+  public Long getOwnPageNavigationCost() {
+    return ownPageNavigationCost;
   }
 
-  public void setLeadsUserCount(Long leadsUserCount) {
-    this.leadsUserCount = leadsUserCount;
+  public void setOwnPageNavigationCost(Long ownPageNavigationCost) {
+    this.ownPageNavigationCost = ownPageNavigationCost;
   }
 
-  public TargetingTagReportsGetListStruct validLeadsCost(Long validLeadsCost) {
-    this.validLeadsCost = validLeadsCost;
+  public TargetingTagReportsGetListStruct reservation(Long reservation) {
+    this.reservation = reservation;
     return this;
   }
 
   /**
-   * Get validLeadsCost
+   * Get reservation
    *
-   * @return validLeadsCost
+   * @return reservation
    */
   @ApiModelProperty(value = "")
-  public Long getValidLeadsCost() {
-    return validLeadsCost;
+  public Long getReservation() {
+    return reservation;
   }
 
-  public void setValidLeadsCost(Long validLeadsCost) {
-    this.validLeadsCost = validLeadsCost;
+  public void setReservation(Long reservation) {
+    this.reservation = reservation;
   }
 
-  public TargetingTagReportsGetListStruct officialAccountFollowCount(
-      Long officialAccountFollowCount) {
-    this.officialAccountFollowCount = officialAccountFollowCount;
+  public TargetingTagReportsGetListStruct webPageReservationCount(Long webPageReservationCount) {
+    this.webPageReservationCount = webPageReservationCount;
     return this;
   }
 
   /**
-   * Get officialAccountFollowCount
+   * Get webPageReservationCount
    *
-   * @return officialAccountFollowCount
+   * @return webPageReservationCount
    */
   @ApiModelProperty(value = "")
-  public Long getOfficialAccountFollowCount() {
-    return officialAccountFollowCount;
+  public Long getWebPageReservationCount() {
+    return webPageReservationCount;
   }
 
-  public void setOfficialAccountFollowCount(Long officialAccountFollowCount) {
-    this.officialAccountFollowCount = officialAccountFollowCount;
+  public void setWebPageReservationCount(Long webPageReservationCount) {
+    this.webPageReservationCount = webPageReservationCount;
   }
 
-  public TargetingTagReportsGetListStruct couponUseCount(Long couponUseCount) {
-    this.couponUseCount = couponUseCount;
+  public TargetingTagReportsGetListStruct webPageReservationRate(Double webPageReservationRate) {
+    this.webPageReservationRate = webPageReservationRate;
     return this;
   }
 
   /**
-   * Get couponUseCount
+   * Get webPageReservationRate
    *
-   * @return couponUseCount
+   * @return webPageReservationRate
    */
   @ApiModelProperty(value = "")
-  public Long getCouponUseCount() {
-    return couponUseCount;
+  public Double getWebPageReservationRate() {
+    return webPageReservationRate;
   }
 
-  public void setCouponUseCount(Long couponUseCount) {
-    this.couponUseCount = couponUseCount;
+  public void setWebPageReservationRate(Double webPageReservationRate) {
+    this.webPageReservationRate = webPageReservationRate;
+  }
+
+  public TargetingTagReportsGetListStruct webPageReservationCost(Long webPageReservationCost) {
+    this.webPageReservationCost = webPageReservationCost;
+    return this;
+  }
+
+  /**
+   * Get webPageReservationCost
+   *
+   * @return webPageReservationCost
+   */
+  @ApiModelProperty(value = "")
+  public Long getWebPageReservationCost() {
+    return webPageReservationCost;
+  }
+
+  public void setWebPageReservationCost(Long webPageReservationCost) {
+    this.webPageReservationCost = webPageReservationCost;
+  }
+
+  public TargetingTagReportsGetListStruct webAddToCarCount(Long webAddToCarCount) {
+    this.webAddToCarCount = webAddToCarCount;
+    return this;
+  }
+
+  /**
+   * Get webAddToCarCount
+   *
+   * @return webAddToCarCount
+   */
+  @ApiModelProperty(value = "")
+  public Long getWebAddToCarCount() {
+    return webAddToCarCount;
+  }
+
+  public void setWebAddToCarCount(Long webAddToCarCount) {
+    this.webAddToCarCount = webAddToCarCount;
+  }
+
+  public TargetingTagReportsGetListStruct webAddToCarCost(Long webAddToCarCost) {
+    this.webAddToCarCost = webAddToCarCost;
+    return this;
+  }
+
+  /**
+   * Get webAddToCarCost
+   *
+   * @return webAddToCarCost
+   */
+  @ApiModelProperty(value = "")
+  public Long getWebAddToCarCost() {
+    return webAddToCarCost;
+  }
+
+  public void setWebAddToCarCost(Long webAddToCarCost) {
+    this.webAddToCarCost = webAddToCarCost;
+  }
+
+  public TargetingTagReportsGetListStruct webOrderUnitPrice(Long webOrderUnitPrice) {
+    this.webOrderUnitPrice = webOrderUnitPrice;
+    return this;
+  }
+
+  /**
+   * Get webOrderUnitPrice
+   *
+   * @return webOrderUnitPrice
+   */
+  @ApiModelProperty(value = "")
+  public Long getWebOrderUnitPrice() {
+    return webOrderUnitPrice;
+  }
+
+  public void setWebOrderUnitPrice(Long webOrderUnitPrice) {
+    this.webOrderUnitPrice = webOrderUnitPrice;
+  }
+
+  public TargetingTagReportsGetListStruct webOrderRoi(Double webOrderRoi) {
+    this.webOrderRoi = webOrderRoi;
+    return this;
+  }
+
+  /**
+   * Get webOrderRoi
+   *
+   * @return webOrderRoi
+   */
+  @ApiModelProperty(value = "")
+  public Double getWebOrderRoi() {
+    return webOrderRoi;
+  }
+
+  public void setWebOrderRoi(Double webOrderRoi) {
+    this.webOrderRoi = webOrderRoi;
+  }
+
+  public TargetingTagReportsGetListStruct webDeliverCount(Long webDeliverCount) {
+    this.webDeliverCount = webDeliverCount;
+    return this;
+  }
+
+  /**
+   * Get webDeliverCount
+   *
+   * @return webDeliverCount
+   */
+  @ApiModelProperty(value = "")
+  public Long getWebDeliverCount() {
+    return webDeliverCount;
+  }
+
+  public void setWebDeliverCount(Long webDeliverCount) {
+    this.webDeliverCount = webDeliverCount;
+  }
+
+  public TargetingTagReportsGetListStruct webDeliverCost(Long webDeliverCost) {
+    this.webDeliverCost = webDeliverCost;
+    return this;
+  }
+
+  /**
+   * Get webDeliverCost
+   *
+   * @return webDeliverCost
+   */
+  @ApiModelProperty(value = "")
+  public Long getWebDeliverCost() {
+    return webDeliverCost;
+  }
+
+  public void setWebDeliverCost(Long webDeliverCost) {
+    this.webDeliverCost = webDeliverCost;
+  }
+
+  public TargetingTagReportsGetListStruct webSignInCount(Long webSignInCount) {
+    this.webSignInCount = webSignInCount;
+    return this;
+  }
+
+  /**
+   * Get webSignInCount
+   *
+   * @return webSignInCount
+   */
+  @ApiModelProperty(value = "")
+  public Long getWebSignInCount() {
+    return webSignInCount;
+  }
+
+  public void setWebSignInCount(Long webSignInCount) {
+    this.webSignInCount = webSignInCount;
+  }
+
+  public TargetingTagReportsGetListStruct webSignInCost(Long webSignInCost) {
+    this.webSignInCost = webSignInCost;
+    return this;
+  }
+
+  /**
+   * Get webSignInCost
+   *
+   * @return webSignInCost
+   */
+  @ApiModelProperty(value = "")
+  public Long getWebSignInCost() {
+    return webSignInCost;
+  }
+
+  public void setWebSignInCost(Long webSignInCost) {
+    this.webSignInCost = webSignInCost;
+  }
+
+  public TargetingTagReportsGetListStruct appInstallation(Long appInstallation) {
+    this.appInstallation = appInstallation;
+    return this;
+  }
+
+  /**
+   * Get appInstallation
+   *
+   * @return appInstallation
+   */
+  @ApiModelProperty(value = "")
+  public Long getAppInstallation() {
+    return appInstallation;
+  }
+
+  public void setAppInstallation(Long appInstallation) {
+    this.appInstallation = appInstallation;
+  }
+
+  public TargetingTagReportsGetListStruct appActivatedCost(Long appActivatedCost) {
+    this.appActivatedCost = appActivatedCost;
+    return this;
+  }
+
+  /**
+   * Get appActivatedCost
+   *
+   * @return appActivatedCost
+   */
+  @ApiModelProperty(value = "")
+  public Long getAppActivatedCost() {
+    return appActivatedCost;
+  }
+
+  public void setAppActivatedCost(Long appActivatedCost) {
+    this.appActivatedCost = appActivatedCost;
+  }
+
+  public TargetingTagReportsGetListStruct appRetentionCount(Long appRetentionCount) {
+    this.appRetentionCount = appRetentionCount;
+    return this;
+  }
+
+  /**
+   * Get appRetentionCount
+   *
+   * @return appRetentionCount
+   */
+  @ApiModelProperty(value = "")
+  public Long getAppRetentionCount() {
+    return appRetentionCount;
+  }
+
+  public void setAppRetentionCount(Long appRetentionCount) {
+    this.appRetentionCount = appRetentionCount;
+  }
+
+  public TargetingTagReportsGetListStruct appRetentionRate(Double appRetentionRate) {
+    this.appRetentionRate = appRetentionRate;
+    return this;
+  }
+
+  /**
+   * Get appRetentionRate
+   *
+   * @return appRetentionRate
+   */
+  @ApiModelProperty(value = "")
+  public Double getAppRetentionRate() {
+    return appRetentionRate;
+  }
+
+  public void setAppRetentionRate(Double appRetentionRate) {
+    this.appRetentionRate = appRetentionRate;
+  }
+
+  public TargetingTagReportsGetListStruct appRetentionCost(Long appRetentionCost) {
+    this.appRetentionCost = appRetentionCost;
+    return this;
+  }
+
+  /**
+   * Get appRetentionCost
+   *
+   * @return appRetentionCost
+   */
+  @ApiModelProperty(value = "")
+  public Long getAppRetentionCost() {
+    return appRetentionCost;
+  }
+
+  public void setAppRetentionCost(Long appRetentionCost) {
+    this.appRetentionCost = appRetentionCost;
+  }
+
+  public TargetingTagReportsGetListStruct appAddToCarCount(Long appAddToCarCount) {
+    this.appAddToCarCount = appAddToCarCount;
+    return this;
+  }
+
+  /**
+   * Get appAddToCarCount
+   *
+   * @return appAddToCarCount
+   */
+  @ApiModelProperty(value = "")
+  public Long getAppAddToCarCount() {
+    return appAddToCarCount;
+  }
+
+  public void setAppAddToCarCount(Long appAddToCarCount) {
+    this.appAddToCarCount = appAddToCarCount;
+  }
+
+  public TargetingTagReportsGetListStruct appAddToCarAmount(Long appAddToCarAmount) {
+    this.appAddToCarAmount = appAddToCarAmount;
+    return this;
+  }
+
+  /**
+   * Get appAddToCarAmount
+   *
+   * @return appAddToCarAmount
+   */
+  @ApiModelProperty(value = "")
+  public Long getAppAddToCarAmount() {
+    return appAddToCarAmount;
+  }
+
+  public void setAppAddToCarAmount(Long appAddToCarAmount) {
+    this.appAddToCarAmount = appAddToCarAmount;
+  }
+
+  public TargetingTagReportsGetListStruct appCartAmount(Long appCartAmount) {
+    this.appCartAmount = appCartAmount;
+    return this;
+  }
+
+  /**
+   * Get appCartAmount
+   *
+   * @return appCartAmount
+   */
+  @ApiModelProperty(value = "")
+  public Long getAppCartAmount() {
+    return appCartAmount;
+  }
+
+  public void setAppCartAmount(Long appCartAmount) {
+    this.appCartAmount = appCartAmount;
+  }
+
+  public TargetingTagReportsGetListStruct appAddToCarCost(Long appAddToCarCost) {
+    this.appAddToCarCost = appAddToCarCost;
+    return this;
+  }
+
+  /**
+   * Get appAddToCarCost
+   *
+   * @return appAddToCarCost
+   */
+  @ApiModelProperty(value = "")
+  public Long getAppAddToCarCost() {
+    return appAddToCarCost;
+  }
+
+  public void setAppAddToCarCost(Long appAddToCarCost) {
+    this.appAddToCarCost = appAddToCarCost;
+  }
+
+  public TargetingTagReportsGetListStruct appPaymentCount(Long appPaymentCount) {
+    this.appPaymentCount = appPaymentCount;
+    return this;
+  }
+
+  /**
+   * Get appPaymentCount
+   *
+   * @return appPaymentCount
+   */
+  @ApiModelProperty(value = "")
+  public Long getAppPaymentCount() {
+    return appPaymentCount;
+  }
+
+  public void setAppPaymentCount(Long appPaymentCount) {
+    this.appPaymentCount = appPaymentCount;
+  }
+
+  public TargetingTagReportsGetListStruct appPaymentAmount(Long appPaymentAmount) {
+    this.appPaymentAmount = appPaymentAmount;
+    return this;
+  }
+
+  /**
+   * Get appPaymentAmount
+   *
+   * @return appPaymentAmount
+   */
+  @ApiModelProperty(value = "")
+  public Long getAppPaymentAmount() {
+    return appPaymentAmount;
+  }
+
+  public void setAppPaymentAmount(Long appPaymentAmount) {
+    this.appPaymentAmount = appPaymentAmount;
+  }
+
+  public TargetingTagReportsGetListStruct platformCouponClick(Long platformCouponClick) {
+    this.platformCouponClick = platformCouponClick;
+    return this;
+  }
+
+  /**
+   * Get platformCouponClick
+   *
+   * @return platformCouponClick
+   */
+  @ApiModelProperty(value = "")
+  public Long getPlatformCouponClick() {
+    return platformCouponClick;
+  }
+
+  public void setPlatformCouponClick(Long platformCouponClick) {
+    this.platformCouponClick = platformCouponClick;
+  }
+
+  public TargetingTagReportsGetListStruct follow(Long follow) {
+    this.follow = follow;
+    return this;
+  }
+
+  /**
+   * Get follow
+   *
+   * @return follow
+   */
+  @ApiModelProperty(value = "")
+  public Long getFollow() {
+    return follow;
+  }
+
+  public void setFollow(Long follow) {
+    this.follow = follow;
+  }
+
+  public TargetingTagReportsGetListStruct share(Long share) {
+    this.share = share;
+    return this;
+  }
+
+  /**
+   * Get share
+   *
+   * @return share
+   */
+  @ApiModelProperty(value = "")
+  public Long getShare() {
+    return share;
+  }
+
+  public void setShare(Long share) {
+    this.share = share;
+  }
+
+  public TargetingTagReportsGetListStruct read(Long read) {
+    this.read = read;
+    return this;
+  }
+
+  /**
+   * Get read
+   *
+   * @return read
+   */
+  @ApiModelProperty(value = "")
+  public Long getRead() {
+    return read;
+  }
+
+  public void setRead(Long read) {
+    this.read = read;
+  }
+
+  public TargetingTagReportsGetListStruct intelligentPhoneCallDirectCount(
+      Long intelligentPhoneCallDirectCount) {
+    this.intelligentPhoneCallDirectCount = intelligentPhoneCallDirectCount;
+    return this;
+  }
+
+  /**
+   * Get intelligentPhoneCallDirectCount
+   *
+   * @return intelligentPhoneCallDirectCount
+   */
+  @ApiModelProperty(value = "")
+  public Long getIntelligentPhoneCallDirectCount() {
+    return intelligentPhoneCallDirectCount;
+  }
+
+  public void setIntelligentPhoneCallDirectCount(Long intelligentPhoneCallDirectCount) {
+    this.intelligentPhoneCallDirectCount = intelligentPhoneCallDirectCount;
+  }
+
+  public TargetingTagReportsGetListStruct videoLiveExpUserCount(Long videoLiveExpUserCount) {
+    this.videoLiveExpUserCount = videoLiveExpUserCount;
+    return this;
+  }
+
+  /**
+   * Get videoLiveExpUserCount
+   *
+   * @return videoLiveExpUserCount
+   */
+  @ApiModelProperty(value = "")
+  public Long getVideoLiveExpUserCount() {
+    return videoLiveExpUserCount;
+  }
+
+  public void setVideoLiveExpUserCount(Long videoLiveExpUserCount) {
+    this.videoLiveExpUserCount = videoLiveExpUserCount;
+  }
+
+  public TargetingTagReportsGetListStruct campaignId(Long campaignId) {
+    this.campaignId = campaignId;
+    return this;
+  }
+
+  /**
+   * Get campaignId
+   *
+   * @return campaignId
+   */
+  @ApiModelProperty(value = "")
+  public Long getCampaignId() {
+    return campaignId;
+  }
+
+  public void setCampaignId(Long campaignId) {
+    this.campaignId = campaignId;
+  }
+
+  public TargetingTagReportsGetListStruct adgroupId(Long adgroupId) {
+    this.adgroupId = adgroupId;
+    return this;
+  }
+
+  /**
+   * Get adgroupId
+   *
+   * @return adgroupId
+   */
+  @ApiModelProperty(value = "")
+  public Long getAdgroupId() {
+    return adgroupId;
+  }
+
+  public void setAdgroupId(Long adgroupId) {
+    this.adgroupId = adgroupId;
   }
 
   public TargetingTagReportsGetListStruct targetingType(String targetingType) {
@@ -13327,156 +13934,42 @@ public class TargetingTagReportsGetListStruct {
     this.behaviorIntensity = behaviorIntensity;
   }
 
-  public TargetingTagReportsGetListStruct genderName(String genderName) {
-    this.genderName = genderName;
+  public TargetingTagReportsGetListStruct regionId(Long regionId) {
+    this.regionId = regionId;
     return this;
   }
 
   /**
-   * Get genderName
+   * Get regionId
    *
-   * @return genderName
+   * @return regionId
    */
   @ApiModelProperty(value = "")
-  public String getGenderName() {
-    return genderName;
+  public Long getRegionId() {
+    return regionId;
   }
 
-  public void setGenderName(String genderName) {
-    this.genderName = genderName;
+  public void setRegionId(Long regionId) {
+    this.regionId = regionId;
   }
 
-  public TargetingTagReportsGetListStruct accountId(Long accountId) {
-    this.accountId = accountId;
+  public TargetingTagReportsGetListStruct cityId(Long cityId) {
+    this.cityId = cityId;
     return this;
   }
 
   /**
-   * Get accountId
+   * Get cityId
    *
-   * @return accountId
+   * @return cityId
    */
   @ApiModelProperty(value = "")
-  public Long getAccountId() {
-    return accountId;
+  public Long getCityId() {
+    return cityId;
   }
 
-  public void setAccountId(Long accountId) {
-    this.accountId = accountId;
-  }
-
-  public TargetingTagReportsGetListStruct campaignId(Long campaignId) {
-    this.campaignId = campaignId;
-    return this;
-  }
-
-  /**
-   * Get campaignId
-   *
-   * @return campaignId
-   */
-  @ApiModelProperty(value = "")
-  public Long getCampaignId() {
-    return campaignId;
-  }
-
-  public void setCampaignId(Long campaignId) {
-    this.campaignId = campaignId;
-  }
-
-  public TargetingTagReportsGetListStruct adgroupId(Long adgroupId) {
-    this.adgroupId = adgroupId;
-    return this;
-  }
-
-  /**
-   * Get adgroupId
-   *
-   * @return adgroupId
-   */
-  @ApiModelProperty(value = "")
-  public Long getAdgroupId() {
-    return adgroupId;
-  }
-
-  public void setAdgroupId(Long adgroupId) {
-    this.adgroupId = adgroupId;
-  }
-
-  public TargetingTagReportsGetListStruct adId(Long adId) {
-    this.adId = adId;
-    return this;
-  }
-
-  /**
-   * Get adId
-   *
-   * @return adId
-   */
-  @ApiModelProperty(value = "")
-  public Long getAdId() {
-    return adId;
-  }
-
-  public void setAdId(Long adId) {
-    this.adId = adId;
-  }
-
-  public TargetingTagReportsGetListStruct audienceId(Long audienceId) {
-    this.audienceId = audienceId;
-    return this;
-  }
-
-  /**
-   * Get audienceId
-   *
-   * @return audienceId
-   */
-  @ApiModelProperty(value = "")
-  public Long getAudienceId() {
-    return audienceId;
-  }
-
-  public void setAudienceId(Long audienceId) {
-    this.audienceId = audienceId;
-  }
-
-  public TargetingTagReportsGetListStruct promotedObjectType(String promotedObjectType) {
-    this.promotedObjectType = promotedObjectType;
-    return this;
-  }
-
-  /**
-   * Get promotedObjectType
-   *
-   * @return promotedObjectType
-   */
-  @ApiModelProperty(value = "")
-  public String getPromotedObjectType() {
-    return promotedObjectType;
-  }
-
-  public void setPromotedObjectType(String promotedObjectType) {
-    this.promotedObjectType = promotedObjectType;
-  }
-
-  public TargetingTagReportsGetListStruct promotedObjectId(String promotedObjectId) {
-    this.promotedObjectId = promotedObjectId;
-    return this;
-  }
-
-  /**
-   * Get promotedObjectId
-   *
-   * @return promotedObjectId
-   */
-  @ApiModelProperty(value = "")
-  public String getPromotedObjectId() {
-    return promotedObjectId;
-  }
-
-  public void setPromotedObjectId(String promotedObjectId) {
-    this.promotedObjectId = promotedObjectId;
+  public void setCityId(Long cityId) {
+    this.cityId = cityId;
   }
 
   public TargetingTagReportsGetListStruct requestConversionsCount(Long requestConversionsCount) {
@@ -13515,6 +14008,44 @@ public class TargetingTagReportsGetListStruct {
 
   public void setRequestConversionsCost(Long requestConversionsCost) {
     this.requestConversionsCost = requestConversionsCost;
+  }
+
+  public TargetingTagReportsGetListStruct adId(Long adId) {
+    this.adId = adId;
+    return this;
+  }
+
+  /**
+   * Get adId
+   *
+   * @return adId
+   */
+  @ApiModelProperty(value = "")
+  public Long getAdId() {
+    return adId;
+  }
+
+  public void setAdId(Long adId) {
+    this.adId = adId;
+  }
+
+  public TargetingTagReportsGetListStruct audienceId(Long audienceId) {
+    this.audienceId = audienceId;
+    return this;
+  }
+
+  /**
+   * Get audienceId
+   *
+   * @return audienceId
+   */
+  @ApiModelProperty(value = "")
+  public Long getAudienceId() {
+    return audienceId;
+  }
+
+  public void setAudienceId(Long audienceId) {
+    this.audienceId = audienceId;
   }
 
   public TargetingTagReportsGetListStruct incomeVal1(Long incomeVal1) {
@@ -14961,6 +15492,25 @@ public class TargetingTagReportsGetListStruct {
     this.miniGamePayD30PlaRoi = miniGamePayD30PlaRoi;
   }
 
+  public TargetingTagReportsGetListStruct gender(String gender) {
+    this.gender = gender;
+    return this;
+  }
+
+  /**
+   * Get gender
+   *
+   * @return gender
+   */
+  @ApiModelProperty(value = "")
+  public String getGender() {
+    return gender;
+  }
+
+  public void setGender(String gender) {
+    this.gender = gender;
+  }
+
   public TargetingTagReportsGetListStruct projectId(Long projectId) {
     this.projectId = projectId;
     return this;
@@ -15086,7 +15636,7 @@ public class TargetingTagReportsGetListStruct {
     TargetingTagReportsGetListStruct targetingTagReportsGetListStruct =
         (TargetingTagReportsGetListStruct) o;
     return Objects.equals(this.date, targetingTagReportsGetListStruct.date)
-        && Objects.equals(this.gender, targetingTagReportsGetListStruct.gender)
+        && Objects.equals(this.age, targetingTagReportsGetListStruct.age)
         && Objects.equals(this.viewCount, targetingTagReportsGetListStruct.viewCount)
         && Objects.equals(this.downloadCount, targetingTagReportsGetListStruct.downloadCount)
         && Objects.equals(this.activatedCount, targetingTagReportsGetListStruct.activatedCount)
@@ -16063,31 +16613,70 @@ public class TargetingTagReportsGetListStruct {
         && Objects.equals(
             this.afterAddWecomIntentionDedupPvCost,
             targetingTagReportsGetListStruct.afterAddWecomIntentionDedupPvCost)
-        && Objects.equals(this.age, targetingTagReportsGetListStruct.age)
-        && Objects.equals(this.regionId, targetingTagReportsGetListStruct.regionId)
-        && Objects.equals(this.cityId, targetingTagReportsGetListStruct.cityId)
-        && Objects.equals(this.province, targetingTagReportsGetListStruct.province)
-        && Objects.equals(this.city, targetingTagReportsGetListStruct.city)
-        && Objects.equals(this.viewUserCount, targetingTagReportsGetListStruct.viewUserCount)
-        && Objects.equals(this.avgViewPerUser, targetingTagReportsGetListStruct.avgViewPerUser)
-        && Objects.equals(this.clickUserCount, targetingTagReportsGetListStruct.clickUserCount)
+        && Objects.equals(this.expPv, targetingTagReportsGetListStruct.expPv)
+        && Objects.equals(this.impression, targetingTagReportsGetListStruct.impression)
+        && Objects.equals(this.exposure, targetingTagReportsGetListStruct.exposure)
+        && Objects.equals(this.download, targetingTagReportsGetListStruct.download)
+        && Objects.equals(this.activation, targetingTagReportsGetListStruct.activation)
         && Objects.equals(
-            this.linkClickUserCount, targetingTagReportsGetListStruct.linkClickUserCount)
+            this.appActivatedCount, targetingTagReportsGetListStruct.appActivatedCount)
+        && Objects.equals(this.appActivatedRate, targetingTagReportsGetListStruct.appActivatedRate)
         && Objects.equals(
-            this.portraitClickUserCount, targetingTagReportsGetListStruct.portraitClickUserCount)
+            this.thousandDisplayCost, targetingTagReportsGetListStruct.thousandDisplayCost)
+        && Objects.equals(this.click, targetingTagReportsGetListStruct.click)
+        && Objects.equals(this.webConsultCount, targetingTagReportsGetListStruct.webConsultCount)
+        && Objects.equals(this.webConsultCost, targetingTagReportsGetListStruct.webConsultCost)
         && Objects.equals(
-            this.nicknameClickUserCount, targetingTagReportsGetListStruct.nicknameClickUserCount)
+            this.webPhoneCallDirectCount, targetingTagReportsGetListStruct.webPhoneCallDirectCount)
         && Objects.equals(
-            this.poiClickUserCount, targetingTagReportsGetListStruct.poiClickUserCount)
-        && Objects.equals(this.praiseUserCount, targetingTagReportsGetListStruct.praiseUserCount)
-        && Objects.equals(this.commentUserCount, targetingTagReportsGetListStruct.commentUserCount)
-        && Objects.equals(this.orderCount, targetingTagReportsGetListStruct.orderCount)
-        && Objects.equals(this.leadsUserCount, targetingTagReportsGetListStruct.leadsUserCount)
-        && Objects.equals(this.validLeadsCost, targetingTagReportsGetListStruct.validLeadsCost)
+            this.webPhoneCallDirectCost, targetingTagReportsGetListStruct.webPhoneCallDirectCost)
         && Objects.equals(
-            this.officialAccountFollowCount,
-            targetingTagReportsGetListStruct.officialAccountFollowCount)
-        && Objects.equals(this.couponUseCount, targetingTagReportsGetListStruct.couponUseCount)
+            this.webPhoneCallBackCount, targetingTagReportsGetListStruct.webPhoneCallBackCount)
+        && Objects.equals(
+            this.webPhoneCallBackCost, targetingTagReportsGetListStruct.webPhoneCallBackCost)
+        && Objects.equals(
+            this.ownPageNavigationCost, targetingTagReportsGetListStruct.ownPageNavigationCost)
+        && Objects.equals(this.reservation, targetingTagReportsGetListStruct.reservation)
+        && Objects.equals(
+            this.webPageReservationCount, targetingTagReportsGetListStruct.webPageReservationCount)
+        && Objects.equals(
+            this.webPageReservationRate, targetingTagReportsGetListStruct.webPageReservationRate)
+        && Objects.equals(
+            this.webPageReservationCost, targetingTagReportsGetListStruct.webPageReservationCost)
+        && Objects.equals(this.webAddToCarCount, targetingTagReportsGetListStruct.webAddToCarCount)
+        && Objects.equals(this.webAddToCarCost, targetingTagReportsGetListStruct.webAddToCarCost)
+        && Objects.equals(
+            this.webOrderUnitPrice, targetingTagReportsGetListStruct.webOrderUnitPrice)
+        && Objects.equals(this.webOrderRoi, targetingTagReportsGetListStruct.webOrderRoi)
+        && Objects.equals(this.webDeliverCount, targetingTagReportsGetListStruct.webDeliverCount)
+        && Objects.equals(this.webDeliverCost, targetingTagReportsGetListStruct.webDeliverCost)
+        && Objects.equals(this.webSignInCount, targetingTagReportsGetListStruct.webSignInCount)
+        && Objects.equals(this.webSignInCost, targetingTagReportsGetListStruct.webSignInCost)
+        && Objects.equals(this.appInstallation, targetingTagReportsGetListStruct.appInstallation)
+        && Objects.equals(this.appActivatedCost, targetingTagReportsGetListStruct.appActivatedCost)
+        && Objects.equals(
+            this.appRetentionCount, targetingTagReportsGetListStruct.appRetentionCount)
+        && Objects.equals(this.appRetentionRate, targetingTagReportsGetListStruct.appRetentionRate)
+        && Objects.equals(this.appRetentionCost, targetingTagReportsGetListStruct.appRetentionCost)
+        && Objects.equals(this.appAddToCarCount, targetingTagReportsGetListStruct.appAddToCarCount)
+        && Objects.equals(
+            this.appAddToCarAmount, targetingTagReportsGetListStruct.appAddToCarAmount)
+        && Objects.equals(this.appCartAmount, targetingTagReportsGetListStruct.appCartAmount)
+        && Objects.equals(this.appAddToCarCost, targetingTagReportsGetListStruct.appAddToCarCost)
+        && Objects.equals(this.appPaymentCount, targetingTagReportsGetListStruct.appPaymentCount)
+        && Objects.equals(this.appPaymentAmount, targetingTagReportsGetListStruct.appPaymentAmount)
+        && Objects.equals(
+            this.platformCouponClick, targetingTagReportsGetListStruct.platformCouponClick)
+        && Objects.equals(this.follow, targetingTagReportsGetListStruct.follow)
+        && Objects.equals(this.share, targetingTagReportsGetListStruct.share)
+        && Objects.equals(this.read, targetingTagReportsGetListStruct.read)
+        && Objects.equals(
+            this.intelligentPhoneCallDirectCount,
+            targetingTagReportsGetListStruct.intelligentPhoneCallDirectCount)
+        && Objects.equals(
+            this.videoLiveExpUserCount, targetingTagReportsGetListStruct.videoLiveExpUserCount)
+        && Objects.equals(this.campaignId, targetingTagReportsGetListStruct.campaignId)
+        && Objects.equals(this.adgroupId, targetingTagReportsGetListStruct.adgroupId)
         && Objects.equals(this.targetingType, targetingTagReportsGetListStruct.targetingType)
         && Objects.equals(this.targetingTag, targetingTagReportsGetListStruct.targetingTag)
         && Objects.equals(this.tagClass, targetingTagReportsGetListStruct.tagClass)
@@ -16096,19 +16685,14 @@ public class TargetingTagReportsGetListStruct {
             this.behaviorTimeWindow, targetingTagReportsGetListStruct.behaviorTimeWindow)
         && Objects.equals(
             this.behaviorIntensity, targetingTagReportsGetListStruct.behaviorIntensity)
-        && Objects.equals(this.genderName, targetingTagReportsGetListStruct.genderName)
-        && Objects.equals(this.accountId, targetingTagReportsGetListStruct.accountId)
-        && Objects.equals(this.campaignId, targetingTagReportsGetListStruct.campaignId)
-        && Objects.equals(this.adgroupId, targetingTagReportsGetListStruct.adgroupId)
-        && Objects.equals(this.adId, targetingTagReportsGetListStruct.adId)
-        && Objects.equals(this.audienceId, targetingTagReportsGetListStruct.audienceId)
-        && Objects.equals(
-            this.promotedObjectType, targetingTagReportsGetListStruct.promotedObjectType)
-        && Objects.equals(this.promotedObjectId, targetingTagReportsGetListStruct.promotedObjectId)
+        && Objects.equals(this.regionId, targetingTagReportsGetListStruct.regionId)
+        && Objects.equals(this.cityId, targetingTagReportsGetListStruct.cityId)
         && Objects.equals(
             this.requestConversionsCount, targetingTagReportsGetListStruct.requestConversionsCount)
         && Objects.equals(
             this.requestConversionsCost, targetingTagReportsGetListStruct.requestConversionsCost)
+        && Objects.equals(this.adId, targetingTagReportsGetListStruct.adId)
+        && Objects.equals(this.audienceId, targetingTagReportsGetListStruct.audienceId)
         && Objects.equals(this.incomeVal1, targetingTagReportsGetListStruct.incomeVal1)
         && Objects.equals(this.incomeVal3, targetingTagReportsGetListStruct.incomeVal3)
         && Objects.equals(this.incomeVal7, targetingTagReportsGetListStruct.incomeVal7)
@@ -16256,6 +16840,7 @@ public class TargetingTagReportsGetListStruct {
             this.miniGamePayD14PlaRoi, targetingTagReportsGetListStruct.miniGamePayD14PlaRoi)
         && Objects.equals(
             this.miniGamePayD30PlaRoi, targetingTagReportsGetListStruct.miniGamePayD30PlaRoi)
+        && Objects.equals(this.gender, targetingTagReportsGetListStruct.gender)
         && Objects.equals(this.projectId, targetingTagReportsGetListStruct.projectId)
         && Objects.equals(this.projectName, targetingTagReportsGetListStruct.projectName)
         && Objects.equals(this.purchasePv, targetingTagReportsGetListStruct.purchasePv)
@@ -16268,7 +16853,7 @@ public class TargetingTagReportsGetListStruct {
   public int hashCode() {
     return Objects.hash(
         date,
-        gender,
+        age,
         viewCount,
         downloadCount,
         activatedCount,
@@ -16831,41 +17416,65 @@ public class TargetingTagReportsGetListStruct {
         afterAddWecomConsultDedupPvCost,
         afterAddWecomIntentionDedupPv,
         afterAddWecomIntentionDedupPvCost,
-        age,
-        regionId,
-        cityId,
-        province,
-        city,
-        viewUserCount,
-        avgViewPerUser,
-        clickUserCount,
-        linkClickUserCount,
-        portraitClickUserCount,
-        nicknameClickUserCount,
-        poiClickUserCount,
-        praiseUserCount,
-        commentUserCount,
-        orderCount,
-        leadsUserCount,
-        validLeadsCost,
-        officialAccountFollowCount,
-        couponUseCount,
+        expPv,
+        impression,
+        exposure,
+        download,
+        activation,
+        appActivatedCount,
+        appActivatedRate,
+        thousandDisplayCost,
+        click,
+        webConsultCount,
+        webConsultCost,
+        webPhoneCallDirectCount,
+        webPhoneCallDirectCost,
+        webPhoneCallBackCount,
+        webPhoneCallBackCost,
+        ownPageNavigationCost,
+        reservation,
+        webPageReservationCount,
+        webPageReservationRate,
+        webPageReservationCost,
+        webAddToCarCount,
+        webAddToCarCost,
+        webOrderUnitPrice,
+        webOrderRoi,
+        webDeliverCount,
+        webDeliverCost,
+        webSignInCount,
+        webSignInCost,
+        appInstallation,
+        appActivatedCost,
+        appRetentionCount,
+        appRetentionRate,
+        appRetentionCost,
+        appAddToCarCount,
+        appAddToCarAmount,
+        appCartAmount,
+        appAddToCarCost,
+        appPaymentCount,
+        appPaymentAmount,
+        platformCouponClick,
+        follow,
+        share,
+        read,
+        intelligentPhoneCallDirectCount,
+        videoLiveExpUserCount,
+        campaignId,
+        adgroupId,
         targetingType,
         targetingTag,
         tagClass,
         behaviorScene,
         behaviorTimeWindow,
         behaviorIntensity,
-        genderName,
-        accountId,
-        campaignId,
-        adgroupId,
-        adId,
-        audienceId,
-        promotedObjectType,
-        promotedObjectId,
+        regionId,
+        cityId,
         requestConversionsCount,
         requestConversionsCost,
+        adId,
+        audienceId,
         incomeVal1,
         incomeVal3,
         incomeVal7,
@@ -16941,6 +17550,7 @@ public class TargetingTagReportsGetListStruct {
         miniGamePayD7PlaRoi,
         miniGamePayD14PlaRoi,
         miniGamePayD30PlaRoi,
+        gender,
         projectId,
         projectName,
         purchasePv,

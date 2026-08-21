@@ -120,6 +120,9 @@ public class SearchAdgroupsAddRequest {
   @SerializedName("search_expansion_switch")
   private SearchExpansionSwitch searchExpansionSwitch = null;
 
+  @SerializedName("industry_value_explore")
+  private IndustryValueExplore industryValueExplore = null;
+
   public SearchAdgroupsAddRequest accountId(Long accountId) {
     this.accountId = accountId;
     return this;
@@ -769,6 +772,25 @@ public class SearchAdgroupsAddRequest {
     this.searchExpansionSwitch = searchExpansionSwitch;
   }
 
+  public SearchAdgroupsAddRequest industryValueExplore(IndustryValueExplore industryValueExplore) {
+    this.industryValueExplore = industryValueExplore;
+    return this;
+  }
+
+  /**
+   * Get industryValueExplore
+   *
+   * @return industryValueExplore
+   */
+  @ApiModelProperty(value = "")
+  public IndustryValueExplore getIndustryValueExplore() {
+    return industryValueExplore;
+  }
+
+  public void setIndustryValueExplore(IndustryValueExplore industryValueExplore) {
+    this.industryValueExplore = industryValueExplore;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -819,7 +841,8 @@ public class SearchAdgroupsAddRequest {
         && Objects.equals(this.feedbackId, searchAdgroupsAddRequest.feedbackId)
         && Objects.equals(this.dynamicAdType, searchAdgroupsAddRequest.dynamicAdType)
         && Objects.equals(
-            this.searchExpansionSwitch, searchAdgroupsAddRequest.searchExpansionSwitch);
+            this.searchExpansionSwitch, searchAdgroupsAddRequest.searchExpansionSwitch)
+        && Objects.equals(this.industryValueExplore, searchAdgroupsAddRequest.industryValueExplore);
   }
 
   @Override
@@ -857,7 +880,8 @@ public class SearchAdgroupsAddRequest {
         marketingAssetOuterSpec,
         feedbackId,
         dynamicAdType,
-        searchExpansionSwitch);
+        searchExpansionSwitch,
+        industryValueExplore);
   }
 
   @Override

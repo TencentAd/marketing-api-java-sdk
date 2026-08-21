@@ -39,6 +39,9 @@ public class OfficialPageStruct {
   @SerializedName("page_status")
   private OfficialPageStatus pageStatus = null;
 
+  @SerializedName("reject_reason")
+  private String rejectReason = null;
+
   public OfficialPageStruct pageId(Long pageId) {
     this.pageId = pageId;
     return this;
@@ -153,6 +156,25 @@ public class OfficialPageStruct {
     this.pageStatus = pageStatus;
   }
 
+  public OfficialPageStruct rejectReason(String rejectReason) {
+    this.rejectReason = rejectReason;
+    return this;
+  }
+
+  /**
+   * Get rejectReason
+   *
+   * @return rejectReason
+   */
+  @ApiModelProperty(value = "")
+  public String getRejectReason() {
+    return rejectReason;
+  }
+
+  public void setRejectReason(String rejectReason) {
+    this.rejectReason = rejectReason;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -167,12 +189,14 @@ public class OfficialPageStruct {
         && Objects.equals(this.pageName, officialPageStruct.pageName)
         && Objects.equals(this.pageTitle, officialPageStruct.pageTitle)
         && Objects.equals(this.pageType, officialPageStruct.pageType)
-        && Objects.equals(this.pageStatus, officialPageStruct.pageStatus);
+        && Objects.equals(this.pageStatus, officialPageStruct.pageStatus)
+        && Objects.equals(this.rejectReason, officialPageStruct.rejectReason);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(pageId, landingPageId, pageName, pageTitle, pageType, pageStatus);
+    return Objects.hash(
+        pageId, landingPageId, pageName, pageTitle, pageType, pageStatus, rejectReason);
   }
 
   @Override

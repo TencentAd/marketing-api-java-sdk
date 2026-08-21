@@ -123,6 +123,9 @@ public class ComponentValue {
   @SerializedName("video_channels_content")
   private VideoChannelsContentComponent videoChannelsContent = null;
 
+  @SerializedName("wechat_shop_activity")
+  private WechatShopActivityComponent wechatShopActivity = null;
+
   @SerializedName("wxgame_direct_page")
   private WxgameDirectPageComponent wxgameDirectPage = null;
 
@@ -134,6 +137,9 @@ public class ComponentValue {
 
   @SerializedName("doctor_card")
   private DoctorCardComponent doctorCard = null;
+
+  @SerializedName("rewarded_browse")
+  private RewardedBrowseComponent rewardedBrowse = null;
 
   public ComponentValue title(TitleComponent title) {
     this.title = title;
@@ -781,6 +787,25 @@ public class ComponentValue {
     this.videoChannelsContent = videoChannelsContent;
   }
 
+  public ComponentValue wechatShopActivity(WechatShopActivityComponent wechatShopActivity) {
+    this.wechatShopActivity = wechatShopActivity;
+    return this;
+  }
+
+  /**
+   * Get wechatShopActivity
+   *
+   * @return wechatShopActivity
+   */
+  @ApiModelProperty(value = "")
+  public WechatShopActivityComponent getWechatShopActivity() {
+    return wechatShopActivity;
+  }
+
+  public void setWechatShopActivity(WechatShopActivityComponent wechatShopActivity) {
+    this.wechatShopActivity = wechatShopActivity;
+  }
+
   public ComponentValue wxgameDirectPage(WxgameDirectPageComponent wxgameDirectPage) {
     this.wxgameDirectPage = wxgameDirectPage;
     return this;
@@ -857,6 +882,25 @@ public class ComponentValue {
     this.doctorCard = doctorCard;
   }
 
+  public ComponentValue rewardedBrowse(RewardedBrowseComponent rewardedBrowse) {
+    this.rewardedBrowse = rewardedBrowse;
+    return this;
+  }
+
+  /**
+   * Get rewardedBrowse
+   *
+   * @return rewardedBrowse
+   */
+  @ApiModelProperty(value = "")
+  public RewardedBrowseComponent getRewardedBrowse() {
+    return rewardedBrowse;
+  }
+
+  public void setRewardedBrowse(RewardedBrowseComponent rewardedBrowse) {
+    this.rewardedBrowse = rewardedBrowse;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -900,10 +944,12 @@ public class ComponentValue {
         && Objects.equals(this.miniCardLink, componentValue.miniCardLink)
         && Objects.equals(this.floatingZoneList, componentValue.floatingZoneList)
         && Objects.equals(this.videoChannelsContent, componentValue.videoChannelsContent)
+        && Objects.equals(this.wechatShopActivity, componentValue.wechatShopActivity)
         && Objects.equals(this.wxgameDirectPage, componentValue.wxgameDirectPage)
         && Objects.equals(this.videoList, componentValue.videoList)
         && Objects.equals(this.channelsLiveFeed, componentValue.channelsLiveFeed)
-        && Objects.equals(this.doctorCard, componentValue.doctorCard);
+        && Objects.equals(this.doctorCard, componentValue.doctorCard)
+        && Objects.equals(this.rewardedBrowse, componentValue.rewardedBrowse);
   }
 
   @Override
@@ -943,10 +989,12 @@ public class ComponentValue {
         miniCardLink,
         floatingZoneList,
         videoChannelsContent,
+        wechatShopActivity,
         wxgameDirectPage,
         videoList,
         channelsLiveFeed,
-        doctorCard);
+        doctorCard,
+        rewardedBrowse);
   }
 
   @Override
