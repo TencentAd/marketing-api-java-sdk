@@ -2709,6 +2709,27 @@ public class HourlyReportApiListStruct {
   @SerializedName("effective_consult_dedup_rate")
   private Double effectiveConsultDedupRate = null;
 
+  @SerializedName("payment_amount_activated_multiple_d7")
+  private Double paymentAmountActivatedMultipleD7 = null;
+
+  @SerializedName("wecom_effective_add_group_dedup_pv")
+  private Long wecomEffectiveAddGroupDedupPv = null;
+
+  @SerializedName("mix_income_roi_1d")
+  private Double mixIncomeRoi1d = null;
+
+  @SerializedName("mix_income_roi_3d")
+  private Double mixIncomeRoi3d = null;
+
+  @SerializedName("mix_income_roi_7d")
+  private Double mixIncomeRoi7d = null;
+
+  @SerializedName("mix_income_roi_14d")
+  private Double mixIncomeRoi14d = null;
+
+  @SerializedName("mix_income_roi")
+  private Double mixIncomeRoi = null;
+
   @SerializedName("adgroup_id")
   private Long adgroupId = null;
 
@@ -19863,6 +19884,141 @@ public class HourlyReportApiListStruct {
     this.effectiveConsultDedupRate = effectiveConsultDedupRate;
   }
 
+  public HourlyReportApiListStruct paymentAmountActivatedMultipleD7(
+      Double paymentAmountActivatedMultipleD7) {
+    this.paymentAmountActivatedMultipleD7 = paymentAmountActivatedMultipleD7;
+    return this;
+  }
+
+  /**
+   * Get paymentAmountActivatedMultipleD7
+   *
+   * @return paymentAmountActivatedMultipleD7
+   */
+  @ApiModelProperty(value = "")
+  public Double getPaymentAmountActivatedMultipleD7() {
+    return paymentAmountActivatedMultipleD7;
+  }
+
+  public void setPaymentAmountActivatedMultipleD7(Double paymentAmountActivatedMultipleD7) {
+    this.paymentAmountActivatedMultipleD7 = paymentAmountActivatedMultipleD7;
+  }
+
+  public HourlyReportApiListStruct wecomEffectiveAddGroupDedupPv(
+      Long wecomEffectiveAddGroupDedupPv) {
+    this.wecomEffectiveAddGroupDedupPv = wecomEffectiveAddGroupDedupPv;
+    return this;
+  }
+
+  /**
+   * Get wecomEffectiveAddGroupDedupPv
+   *
+   * @return wecomEffectiveAddGroupDedupPv
+   */
+  @ApiModelProperty(value = "")
+  public Long getWecomEffectiveAddGroupDedupPv() {
+    return wecomEffectiveAddGroupDedupPv;
+  }
+
+  public void setWecomEffectiveAddGroupDedupPv(Long wecomEffectiveAddGroupDedupPv) {
+    this.wecomEffectiveAddGroupDedupPv = wecomEffectiveAddGroupDedupPv;
+  }
+
+  public HourlyReportApiListStruct mixIncomeRoi1d(Double mixIncomeRoi1d) {
+    this.mixIncomeRoi1d = mixIncomeRoi1d;
+    return this;
+  }
+
+  /**
+   * Get mixIncomeRoi1d
+   *
+   * @return mixIncomeRoi1d
+   */
+  @ApiModelProperty(value = "")
+  public Double getMixIncomeRoi1d() {
+    return mixIncomeRoi1d;
+  }
+
+  public void setMixIncomeRoi1d(Double mixIncomeRoi1d) {
+    this.mixIncomeRoi1d = mixIncomeRoi1d;
+  }
+
+  public HourlyReportApiListStruct mixIncomeRoi3d(Double mixIncomeRoi3d) {
+    this.mixIncomeRoi3d = mixIncomeRoi3d;
+    return this;
+  }
+
+  /**
+   * Get mixIncomeRoi3d
+   *
+   * @return mixIncomeRoi3d
+   */
+  @ApiModelProperty(value = "")
+  public Double getMixIncomeRoi3d() {
+    return mixIncomeRoi3d;
+  }
+
+  public void setMixIncomeRoi3d(Double mixIncomeRoi3d) {
+    this.mixIncomeRoi3d = mixIncomeRoi3d;
+  }
+
+  public HourlyReportApiListStruct mixIncomeRoi7d(Double mixIncomeRoi7d) {
+    this.mixIncomeRoi7d = mixIncomeRoi7d;
+    return this;
+  }
+
+  /**
+   * Get mixIncomeRoi7d
+   *
+   * @return mixIncomeRoi7d
+   */
+  @ApiModelProperty(value = "")
+  public Double getMixIncomeRoi7d() {
+    return mixIncomeRoi7d;
+  }
+
+  public void setMixIncomeRoi7d(Double mixIncomeRoi7d) {
+    this.mixIncomeRoi7d = mixIncomeRoi7d;
+  }
+
+  public HourlyReportApiListStruct mixIncomeRoi14d(Double mixIncomeRoi14d) {
+    this.mixIncomeRoi14d = mixIncomeRoi14d;
+    return this;
+  }
+
+  /**
+   * Get mixIncomeRoi14d
+   *
+   * @return mixIncomeRoi14d
+   */
+  @ApiModelProperty(value = "")
+  public Double getMixIncomeRoi14d() {
+    return mixIncomeRoi14d;
+  }
+
+  public void setMixIncomeRoi14d(Double mixIncomeRoi14d) {
+    this.mixIncomeRoi14d = mixIncomeRoi14d;
+  }
+
+  public HourlyReportApiListStruct mixIncomeRoi(Double mixIncomeRoi) {
+    this.mixIncomeRoi = mixIncomeRoi;
+    return this;
+  }
+
+  /**
+   * Get mixIncomeRoi
+   *
+   * @return mixIncomeRoi
+   */
+  @ApiModelProperty(value = "")
+  public Double getMixIncomeRoi() {
+    return mixIncomeRoi;
+  }
+
+  public void setMixIncomeRoi(Double mixIncomeRoi) {
+    this.mixIncomeRoi = mixIncomeRoi;
+  }
+
   public HourlyReportApiListStruct adgroupId(Long adgroupId) {
     this.adgroupId = adgroupId;
     return this;
@@ -21505,6 +21661,17 @@ public class HourlyReportApiListStruct {
             this.effectiveConsultDedupCost, hourlyReportApiListStruct.effectiveConsultDedupCost)
         && Objects.equals(
             this.effectiveConsultDedupRate, hourlyReportApiListStruct.effectiveConsultDedupRate)
+        && Objects.equals(
+            this.paymentAmountActivatedMultipleD7,
+            hourlyReportApiListStruct.paymentAmountActivatedMultipleD7)
+        && Objects.equals(
+            this.wecomEffectiveAddGroupDedupPv,
+            hourlyReportApiListStruct.wecomEffectiveAddGroupDedupPv)
+        && Objects.equals(this.mixIncomeRoi1d, hourlyReportApiListStruct.mixIncomeRoi1d)
+        && Objects.equals(this.mixIncomeRoi3d, hourlyReportApiListStruct.mixIncomeRoi3d)
+        && Objects.equals(this.mixIncomeRoi7d, hourlyReportApiListStruct.mixIncomeRoi7d)
+        && Objects.equals(this.mixIncomeRoi14d, hourlyReportApiListStruct.mixIncomeRoi14d)
+        && Objects.equals(this.mixIncomeRoi, hourlyReportApiListStruct.mixIncomeRoi)
         && Objects.equals(this.adgroupId, hourlyReportApiListStruct.adgroupId)
         && Objects.equals(this.adgroupName, hourlyReportApiListStruct.adgroupName)
         && Objects.equals(this.dynamicCreativeId, hourlyReportApiListStruct.dynamicCreativeId)
@@ -22423,6 +22590,13 @@ public class HourlyReportApiListStruct {
         effectiveConsultDedupPv,
         effectiveConsultDedupCost,
         effectiveConsultDedupRate,
+        paymentAmountActivatedMultipleD7,
+        wecomEffectiveAddGroupDedupPv,
+        mixIncomeRoi1d,
+        mixIncomeRoi3d,
+        mixIncomeRoi7d,
+        mixIncomeRoi14d,
+        mixIncomeRoi,
         adgroupId,
         adgroupName,
         dynamicCreativeId,

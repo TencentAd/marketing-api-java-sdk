@@ -50,6 +50,18 @@ public class CommentListGetListStruct {
   @SerializedName("image_comment_info")
   private ImageCommentInfo imageCommentInfo = null;
 
+  @SerializedName("wechat_channels_account_id")
+  private String wechatChannelsAccountId = null;
+
+  @SerializedName("dynamic_creative_id")
+  private Long dynamicCreativeId = null;
+
+  @SerializedName("marketing_asset_outer_spec")
+  private MarketingAssetOuterSpec marketingAssetOuterSpec = null;
+
+  @SerializedName("component_list")
+  private List<CommentComponentStruct> componentList = null;
+
   public CommentListGetListStruct commentId(String commentId) {
     this.commentId = commentId;
     return this;
@@ -229,6 +241,91 @@ public class CommentListGetListStruct {
     this.imageCommentInfo = imageCommentInfo;
   }
 
+  public CommentListGetListStruct wechatChannelsAccountId(String wechatChannelsAccountId) {
+    this.wechatChannelsAccountId = wechatChannelsAccountId;
+    return this;
+  }
+
+  /**
+   * Get wechatChannelsAccountId
+   *
+   * @return wechatChannelsAccountId
+   */
+  @ApiModelProperty(value = "")
+  public String getWechatChannelsAccountId() {
+    return wechatChannelsAccountId;
+  }
+
+  public void setWechatChannelsAccountId(String wechatChannelsAccountId) {
+    this.wechatChannelsAccountId = wechatChannelsAccountId;
+  }
+
+  public CommentListGetListStruct dynamicCreativeId(Long dynamicCreativeId) {
+    this.dynamicCreativeId = dynamicCreativeId;
+    return this;
+  }
+
+  /**
+   * Get dynamicCreativeId
+   *
+   * @return dynamicCreativeId
+   */
+  @ApiModelProperty(value = "")
+  public Long getDynamicCreativeId() {
+    return dynamicCreativeId;
+  }
+
+  public void setDynamicCreativeId(Long dynamicCreativeId) {
+    this.dynamicCreativeId = dynamicCreativeId;
+  }
+
+  public CommentListGetListStruct marketingAssetOuterSpec(
+      MarketingAssetOuterSpec marketingAssetOuterSpec) {
+    this.marketingAssetOuterSpec = marketingAssetOuterSpec;
+    return this;
+  }
+
+  /**
+   * Get marketingAssetOuterSpec
+   *
+   * @return marketingAssetOuterSpec
+   */
+  @ApiModelProperty(value = "")
+  public MarketingAssetOuterSpec getMarketingAssetOuterSpec() {
+    return marketingAssetOuterSpec;
+  }
+
+  public void setMarketingAssetOuterSpec(MarketingAssetOuterSpec marketingAssetOuterSpec) {
+    this.marketingAssetOuterSpec = marketingAssetOuterSpec;
+  }
+
+  public CommentListGetListStruct componentList(List<CommentComponentStruct> componentList) {
+    this.componentList = componentList;
+    return this;
+  }
+
+  public CommentListGetListStruct addComponentListItem(CommentComponentStruct componentListItem) {
+    if (this.componentList == null) {
+      this.componentList = new ArrayList<CommentComponentStruct>();
+    }
+    this.componentList.add(componentListItem);
+    return this;
+  }
+
+  /**
+   * Get componentList
+   *
+   * @return componentList
+   */
+  @ApiModelProperty(value = "")
+  public List<CommentComponentStruct> getComponentList() {
+    return componentList;
+  }
+
+  public void setComponentList(List<CommentComponentStruct> componentList) {
+    this.componentList = componentList;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -246,7 +343,13 @@ public class CommentListGetListStruct {
         && Objects.equals(this.authorReplys, commentListGetListStruct.authorReplys)
         && Objects.equals(this.commentLevel, commentListGetListStruct.commentLevel)
         && Objects.equals(this.contentType, commentListGetListStruct.contentType)
-        && Objects.equals(this.imageCommentInfo, commentListGetListStruct.imageCommentInfo);
+        && Objects.equals(this.imageCommentInfo, commentListGetListStruct.imageCommentInfo)
+        && Objects.equals(
+            this.wechatChannelsAccountId, commentListGetListStruct.wechatChannelsAccountId)
+        && Objects.equals(this.dynamicCreativeId, commentListGetListStruct.dynamicCreativeId)
+        && Objects.equals(
+            this.marketingAssetOuterSpec, commentListGetListStruct.marketingAssetOuterSpec)
+        && Objects.equals(this.componentList, commentListGetListStruct.componentList);
   }
 
   @Override
@@ -260,7 +363,11 @@ public class CommentListGetListStruct {
         authorReplys,
         commentLevel,
         contentType,
-        imageCommentInfo);
+        imageCommentInfo,
+        wechatChannelsAccountId,
+        dynamicCreativeId,
+        marketingAssetOuterSpec,
+        componentList);
   }
 
   @Override

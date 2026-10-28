@@ -62,6 +62,9 @@ public class AdcreativeTemplateStructAdpermit {
   @SerializedName("live_promoted_type")
   private LivePromotedType livePromotedType = null;
 
+  @SerializedName("default_enable_rules")
+  private List<DefaultEnableRule> defaultEnableRules = null;
+
   public AdcreativeTemplateStructAdpermit creativeTemplateId(Long creativeTemplateId) {
     this.creativeTemplateId = creativeTemplateId;
     return this;
@@ -342,6 +345,35 @@ public class AdcreativeTemplateStructAdpermit {
     this.livePromotedType = livePromotedType;
   }
 
+  public AdcreativeTemplateStructAdpermit defaultEnableRules(
+      List<DefaultEnableRule> defaultEnableRules) {
+    this.defaultEnableRules = defaultEnableRules;
+    return this;
+  }
+
+  public AdcreativeTemplateStructAdpermit addDefaultEnableRulesItem(
+      DefaultEnableRule defaultEnableRulesItem) {
+    if (this.defaultEnableRules == null) {
+      this.defaultEnableRules = new ArrayList<DefaultEnableRule>();
+    }
+    this.defaultEnableRules.add(defaultEnableRulesItem);
+    return this;
+  }
+
+  /**
+   * Get defaultEnableRules
+   *
+   * @return defaultEnableRules
+   */
+  @ApiModelProperty(value = "")
+  public List<DefaultEnableRule> getDefaultEnableRules() {
+    return defaultEnableRules;
+  }
+
+  public void setDefaultEnableRules(List<DefaultEnableRule> defaultEnableRules) {
+    this.defaultEnableRules = defaultEnableRules;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -377,7 +409,9 @@ public class AdcreativeTemplateStructAdpermit {
             this.supportMpaVideoTemplate, adcreativeTemplateStructAdpermit.supportMpaVideoTemplate)
         && Objects.equals(
             this.creativePermissions, adcreativeTemplateStructAdpermit.creativePermissions)
-        && Objects.equals(this.livePromotedType, adcreativeTemplateStructAdpermit.livePromotedType);
+        && Objects.equals(this.livePromotedType, adcreativeTemplateStructAdpermit.livePromotedType)
+        && Objects.equals(
+            this.defaultEnableRules, adcreativeTemplateStructAdpermit.defaultEnableRules);
   }
 
   @Override
@@ -395,7 +429,8 @@ public class AdcreativeTemplateStructAdpermit {
         supportMpaImageTemplate,
         supportMpaVideoTemplate,
         creativePermissions,
-        livePromotedType);
+        livePromotedType,
+        defaultEnableRules);
   }
 
   @Override

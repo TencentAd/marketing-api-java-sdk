@@ -224,6 +224,12 @@ public class RevisedAdcreativeElements {
   @SerializedName("red_envelope_packet_list")
   private List<RedEnvelopePacketSpec> redEnvelopePacketList = null;
 
+  @SerializedName("image_list_display_mode")
+  private Long imageListDisplayMode = null;
+
+  @SerializedName("multi_materials_display_mode")
+  private Long multiMaterialsDisplayMode = null;
+
   public RevisedAdcreativeElements image(String image) {
     this.image = image;
     return this;
@@ -1646,6 +1652,44 @@ public class RevisedAdcreativeElements {
     this.redEnvelopePacketList = redEnvelopePacketList;
   }
 
+  public RevisedAdcreativeElements imageListDisplayMode(Long imageListDisplayMode) {
+    this.imageListDisplayMode = imageListDisplayMode;
+    return this;
+  }
+
+  /**
+   * Get imageListDisplayMode
+   *
+   * @return imageListDisplayMode
+   */
+  @ApiModelProperty(value = "")
+  public Long getImageListDisplayMode() {
+    return imageListDisplayMode;
+  }
+
+  public void setImageListDisplayMode(Long imageListDisplayMode) {
+    this.imageListDisplayMode = imageListDisplayMode;
+  }
+
+  public RevisedAdcreativeElements multiMaterialsDisplayMode(Long multiMaterialsDisplayMode) {
+    this.multiMaterialsDisplayMode = multiMaterialsDisplayMode;
+    return this;
+  }
+
+  /**
+   * Get multiMaterialsDisplayMode
+   *
+   * @return multiMaterialsDisplayMode
+   */
+  @ApiModelProperty(value = "")
+  public Long getMultiMaterialsDisplayMode() {
+    return multiMaterialsDisplayMode;
+  }
+
+  public void setMultiMaterialsDisplayMode(Long multiMaterialsDisplayMode) {
+    this.multiMaterialsDisplayMode = multiMaterialsDisplayMode;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -1737,7 +1781,10 @@ public class RevisedAdcreativeElements {
             revisedAdcreativeElements.wechatChannelsCoverImgShowType)
         && Objects.equals(this.miniCardLink, revisedAdcreativeElements.miniCardLink)
         && Objects.equals(
-            this.redEnvelopePacketList, revisedAdcreativeElements.redEnvelopePacketList);
+            this.redEnvelopePacketList, revisedAdcreativeElements.redEnvelopePacketList)
+        && Objects.equals(this.imageListDisplayMode, revisedAdcreativeElements.imageListDisplayMode)
+        && Objects.equals(
+            this.multiMaterialsDisplayMode, revisedAdcreativeElements.multiMaterialsDisplayMode);
   }
 
   @Override
@@ -1809,7 +1856,9 @@ public class RevisedAdcreativeElements {
         listSublinkComponentOptions,
         wechatChannelsCoverImgShowType,
         miniCardLink,
-        redEnvelopePacketList);
+        redEnvelopePacketList,
+        imageListDisplayMode,
+        multiMaterialsDisplayMode);
   }
 
   @Override

@@ -27,6 +27,9 @@ public class ActionButtonStruct {
   @SerializedName("jump_info")
   private JumpinfoStruct jumpInfo = null;
 
+  @SerializedName("mini_program_button_text")
+  private String miniProgramButtonText = null;
+
   public ActionButtonStruct buttonText(String buttonText) {
     this.buttonText = buttonText;
     return this;
@@ -65,6 +68,25 @@ public class ActionButtonStruct {
     this.jumpInfo = jumpInfo;
   }
 
+  public ActionButtonStruct miniProgramButtonText(String miniProgramButtonText) {
+    this.miniProgramButtonText = miniProgramButtonText;
+    return this;
+  }
+
+  /**
+   * Get miniProgramButtonText
+   *
+   * @return miniProgramButtonText
+   */
+  @ApiModelProperty(value = "")
+  public String getMiniProgramButtonText() {
+    return miniProgramButtonText;
+  }
+
+  public void setMiniProgramButtonText(String miniProgramButtonText) {
+    this.miniProgramButtonText = miniProgramButtonText;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -75,12 +97,13 @@ public class ActionButtonStruct {
     }
     ActionButtonStruct actionButtonStruct = (ActionButtonStruct) o;
     return Objects.equals(this.buttonText, actionButtonStruct.buttonText)
-        && Objects.equals(this.jumpInfo, actionButtonStruct.jumpInfo);
+        && Objects.equals(this.jumpInfo, actionButtonStruct.jumpInfo)
+        && Objects.equals(this.miniProgramButtonText, actionButtonStruct.miniProgramButtonText);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(buttonText, jumpInfo);
+    return Objects.hash(buttonText, jumpInfo, miniProgramButtonText);
   }
 
   @Override

@@ -132,6 +132,9 @@ public class AdcreativesUpdateRequest {
   @SerializedName("link_name_text")
   private String linkNameText = null;
 
+  @SerializedName("mac_deep_link_app_id")
+  private String macDeepLinkAppId = null;
+
   @SerializedName("account_id")
   private Long accountId = null;
 
@@ -852,6 +855,25 @@ public class AdcreativesUpdateRequest {
     this.linkNameText = linkNameText;
   }
 
+  public AdcreativesUpdateRequest macDeepLinkAppId(String macDeepLinkAppId) {
+    this.macDeepLinkAppId = macDeepLinkAppId;
+    return this;
+  }
+
+  /**
+   * Get macDeepLinkAppId
+   *
+   * @return macDeepLinkAppId
+   */
+  @ApiModelProperty(value = "")
+  public String getMacDeepLinkAppId() {
+    return macDeepLinkAppId;
+  }
+
+  public void setMacDeepLinkAppId(String macDeepLinkAppId) {
+    this.macDeepLinkAppId = macDeepLinkAppId;
+  }
+
   public AdcreativesUpdateRequest accountId(Long accountId) {
     this.accountId = accountId;
     return this;
@@ -944,6 +966,7 @@ public class AdcreativesUpdateRequest {
         && Objects.equals(this.unionMarketSpec, adcreativesUpdateRequest.unionMarketSpec)
         && Objects.equals(this.androidQuickAppSpec, adcreativesUpdateRequest.androidQuickAppSpec)
         && Objects.equals(this.linkNameText, adcreativesUpdateRequest.linkNameText)
+        && Objects.equals(this.macDeepLinkAppId, adcreativesUpdateRequest.macDeepLinkAppId)
         && Objects.equals(this.accountId, adcreativesUpdateRequest.accountId)
         && Objects.equals(this.adcreativeElements, adcreativesUpdateRequest.adcreativeElements);
   }
@@ -988,6 +1011,7 @@ public class AdcreativesUpdateRequest {
         unionMarketSpec,
         androidQuickAppSpec,
         linkNameText,
+        macDeepLinkAppId,
         accountId,
         adcreativeElements);
   }

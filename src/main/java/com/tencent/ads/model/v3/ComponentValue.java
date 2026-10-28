@@ -141,6 +141,12 @@ public class ComponentValue {
   @SerializedName("rewarded_browse")
   private RewardedBrowseComponent rewardedBrowse = null;
 
+  @SerializedName("mdpa_title")
+  private MdpaTitleComponent mdpaTitle = null;
+
+  @SerializedName("mdpa_description")
+  private MdpaDescriptionComponent mdpaDescription = null;
+
   public ComponentValue title(TitleComponent title) {
     this.title = title;
     return this;
@@ -901,6 +907,44 @@ public class ComponentValue {
     this.rewardedBrowse = rewardedBrowse;
   }
 
+  public ComponentValue mdpaTitle(MdpaTitleComponent mdpaTitle) {
+    this.mdpaTitle = mdpaTitle;
+    return this;
+  }
+
+  /**
+   * Get mdpaTitle
+   *
+   * @return mdpaTitle
+   */
+  @ApiModelProperty(value = "")
+  public MdpaTitleComponent getMdpaTitle() {
+    return mdpaTitle;
+  }
+
+  public void setMdpaTitle(MdpaTitleComponent mdpaTitle) {
+    this.mdpaTitle = mdpaTitle;
+  }
+
+  public ComponentValue mdpaDescription(MdpaDescriptionComponent mdpaDescription) {
+    this.mdpaDescription = mdpaDescription;
+    return this;
+  }
+
+  /**
+   * Get mdpaDescription
+   *
+   * @return mdpaDescription
+   */
+  @ApiModelProperty(value = "")
+  public MdpaDescriptionComponent getMdpaDescription() {
+    return mdpaDescription;
+  }
+
+  public void setMdpaDescription(MdpaDescriptionComponent mdpaDescription) {
+    this.mdpaDescription = mdpaDescription;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -949,7 +993,9 @@ public class ComponentValue {
         && Objects.equals(this.videoList, componentValue.videoList)
         && Objects.equals(this.channelsLiveFeed, componentValue.channelsLiveFeed)
         && Objects.equals(this.doctorCard, componentValue.doctorCard)
-        && Objects.equals(this.rewardedBrowse, componentValue.rewardedBrowse);
+        && Objects.equals(this.rewardedBrowse, componentValue.rewardedBrowse)
+        && Objects.equals(this.mdpaTitle, componentValue.mdpaTitle)
+        && Objects.equals(this.mdpaDescription, componentValue.mdpaDescription);
   }
 
   @Override
@@ -994,7 +1040,9 @@ public class ComponentValue {
         videoList,
         channelsLiveFeed,
         doctorCard,
-        rewardedBrowse);
+        rewardedBrowse,
+        mdpaTitle,
+        mdpaDescription);
   }
 
   @Override

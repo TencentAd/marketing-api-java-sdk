@@ -30,6 +30,12 @@ public class WechatChannelsFeedPageSpec {
   @SerializedName("wechat_channels_account_id")
   private String wechatChannelsAccountId = null;
 
+  @SerializedName("export_native_drama_id")
+  private String exportNativeDramaId = null;
+
+  @SerializedName("native_drama_sort_id")
+  private Long nativeDramaSortId = null;
+
   public WechatChannelsFeedPageSpec feedId(String feedId) {
     this.feedId = feedId;
     return this;
@@ -88,6 +94,44 @@ public class WechatChannelsFeedPageSpec {
     this.wechatChannelsAccountId = wechatChannelsAccountId;
   }
 
+  public WechatChannelsFeedPageSpec exportNativeDramaId(String exportNativeDramaId) {
+    this.exportNativeDramaId = exportNativeDramaId;
+    return this;
+  }
+
+  /**
+   * Get exportNativeDramaId
+   *
+   * @return exportNativeDramaId
+   */
+  @ApiModelProperty(value = "")
+  public String getExportNativeDramaId() {
+    return exportNativeDramaId;
+  }
+
+  public void setExportNativeDramaId(String exportNativeDramaId) {
+    this.exportNativeDramaId = exportNativeDramaId;
+  }
+
+  public WechatChannelsFeedPageSpec nativeDramaSortId(Long nativeDramaSortId) {
+    this.nativeDramaSortId = nativeDramaSortId;
+    return this;
+  }
+
+  /**
+   * Get nativeDramaSortId
+   *
+   * @return nativeDramaSortId
+   */
+  @ApiModelProperty(value = "")
+  public Long getNativeDramaSortId() {
+    return nativeDramaSortId;
+  }
+
+  public void setNativeDramaSortId(Long nativeDramaSortId) {
+    this.nativeDramaSortId = nativeDramaSortId;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -100,12 +144,15 @@ public class WechatChannelsFeedPageSpec {
     return Objects.equals(this.feedId, wechatChannelsFeedPageSpec.feedId)
         && Objects.equals(this.actionButton, wechatChannelsFeedPageSpec.actionButton)
         && Objects.equals(
-            this.wechatChannelsAccountId, wechatChannelsFeedPageSpec.wechatChannelsAccountId);
+            this.wechatChannelsAccountId, wechatChannelsFeedPageSpec.wechatChannelsAccountId)
+        && Objects.equals(this.exportNativeDramaId, wechatChannelsFeedPageSpec.exportNativeDramaId)
+        && Objects.equals(this.nativeDramaSortId, wechatChannelsFeedPageSpec.nativeDramaSortId);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(feedId, actionButton, wechatChannelsAccountId);
+    return Objects.hash(
+        feedId, actionButton, wechatChannelsAccountId, exportNativeDramaId, nativeDramaSortId);
   }
 
   @Override

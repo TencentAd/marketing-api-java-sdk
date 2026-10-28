@@ -153,6 +153,9 @@ public class AdcreativesAddRequest {
   @SerializedName("link_name_text")
   private String linkNameText = null;
 
+  @SerializedName("mac_deep_link_app_id")
+  private String macDeepLinkAppId = null;
+
   @SerializedName("account_id")
   private Long accountId = null;
 
@@ -1015,6 +1018,25 @@ public class AdcreativesAddRequest {
     this.linkNameText = linkNameText;
   }
 
+  public AdcreativesAddRequest macDeepLinkAppId(String macDeepLinkAppId) {
+    this.macDeepLinkAppId = macDeepLinkAppId;
+    return this;
+  }
+
+  /**
+   * Get macDeepLinkAppId
+   *
+   * @return macDeepLinkAppId
+   */
+  @ApiModelProperty(value = "")
+  public String getMacDeepLinkAppId() {
+    return macDeepLinkAppId;
+  }
+
+  public void setMacDeepLinkAppId(String macDeepLinkAppId) {
+    this.macDeepLinkAppId = macDeepLinkAppId;
+  }
+
   public AdcreativesAddRequest accountId(Long accountId) {
     this.accountId = accountId;
     return this;
@@ -1130,6 +1152,7 @@ public class AdcreativesAddRequest {
         && Objects.equals(this.liveVideoMode, adcreativesAddRequest.liveVideoMode)
         && Objects.equals(this.liveVideoSubMode, adcreativesAddRequest.liveVideoSubMode)
         && Objects.equals(this.linkNameText, adcreativesAddRequest.linkNameText)
+        && Objects.equals(this.macDeepLinkAppId, adcreativesAddRequest.macDeepLinkAppId)
         && Objects.equals(this.accountId, adcreativesAddRequest.accountId)
         && Objects.equals(this.adcreativeTemplateId, adcreativesAddRequest.adcreativeTemplateId)
         && Objects.equals(this.adcreativeElements, adcreativesAddRequest.adcreativeElements);
@@ -1182,6 +1205,7 @@ public class AdcreativesAddRequest {
         liveVideoMode,
         liveVideoSubMode,
         linkNameText,
+        macDeepLinkAppId,
         accountId,
         adcreativeTemplateId,
         adcreativeElements);

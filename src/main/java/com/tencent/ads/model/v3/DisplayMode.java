@@ -24,7 +24,9 @@ import java.io.IOException;
 public enum DisplayMode {
   DEFAULT("DEFAULT"),
 
-  CAROUSEL("CAROUSEL");
+  CAROUSEL("CAROUSEL"),
+
+  TILE("TILE");
 
   private String value;
 

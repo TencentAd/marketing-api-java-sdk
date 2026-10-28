@@ -35,6 +35,9 @@ public class MaterialDeriveInfoStruct {
   @SerializedName("derive_data_list")
   private List<DeriveDataStruct> deriveDataList = null;
 
+  @SerializedName("original_component_id")
+  private Long originalComponentId = null;
+
   public MaterialDeriveInfoStruct originalMaterialIdList(List<String> originalMaterialIdList) {
     this.originalMaterialIdList = originalMaterialIdList;
     return this;
@@ -137,6 +140,25 @@ public class MaterialDeriveInfoStruct {
     this.deriveDataList = deriveDataList;
   }
 
+  public MaterialDeriveInfoStruct originalComponentId(Long originalComponentId) {
+    this.originalComponentId = originalComponentId;
+    return this;
+  }
+
+  /**
+   * Get originalComponentId
+   *
+   * @return originalComponentId
+   */
+  @ApiModelProperty(value = "")
+  public Long getOriginalComponentId() {
+    return originalComponentId;
+  }
+
+  public void setOriginalComponentId(Long originalComponentId) {
+    this.originalComponentId = originalComponentId;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -152,7 +174,8 @@ public class MaterialDeriveInfoStruct {
             this.originalAdcreativeTemplateIdList,
             materialDeriveInfoStruct.originalAdcreativeTemplateIdList)
         && Objects.equals(this.originalCoverImageId, materialDeriveInfoStruct.originalCoverImageId)
-        && Objects.equals(this.deriveDataList, materialDeriveInfoStruct.deriveDataList);
+        && Objects.equals(this.deriveDataList, materialDeriveInfoStruct.deriveDataList)
+        && Objects.equals(this.originalComponentId, materialDeriveInfoStruct.originalComponentId);
   }
 
   @Override
@@ -161,7 +184,8 @@ public class MaterialDeriveInfoStruct {
         originalMaterialIdList,
         originalAdcreativeTemplateIdList,
         originalCoverImageId,
-        deriveDataList);
+        deriveDataList,
+        originalComponentId);
   }
 
   @Override

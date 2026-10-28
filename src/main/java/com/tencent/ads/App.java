@@ -69,6 +69,8 @@ public class App {
   @Inject CampaignsApiContainer campaignsApiContainer;
   @Inject CapabilitiesApiContainer capabilitiesApiContainer;
   @Inject ComplianceValidationApiContainer complianceValidationApiContainer;
+  @Inject ContractPagesApiContainer contractPagesApiContainer;
+  @Inject ContractPromotedObjectsApiContainer contractPromotedObjectsApiContainer;
   @Inject ConversionsApiContainer conversionsApiContainer;
   @Inject CreativeComponentsApiContainer creativeComponentsApiContainer;
   @Inject CreativeSampleProductsApiContainer creativeSampleProductsApiContainer;
@@ -406,6 +408,14 @@ public class App {
 
   public ComplianceValidationApiContainer complianceValidation() {
     return complianceValidationApiContainer;
+  }
+
+  public ContractPagesApiContainer contractPages() {
+    return contractPagesApiContainer;
+  }
+
+  public ContractPromotedObjectsApiContainer contractPromotedObjects() {
+    return contractPromotedObjectsApiContainer;
   }
 
   public ConversionsApiContainer conversions() {

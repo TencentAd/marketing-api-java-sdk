@@ -26,6 +26,9 @@ public class AutoDerivedCreativePreference {
   @SerializedName("auto_derived_creative_method_type_list")
   private List<String> autoDerivedCreativeMethodTypeList = null;
 
+  @SerializedName("auto_derived_creative_select_product_list")
+  private List<AutoDerivedCreativeSelectProductStruct> autoDerivedCreativeSelectProductList = null;
+
   public AutoDerivedCreativePreference autoDerivedCreativeMethodTypeList(
       List<String> autoDerivedCreativeMethodTypeList) {
     this.autoDerivedCreativeMethodTypeList = autoDerivedCreativeMethodTypeList;
@@ -55,6 +58,37 @@ public class AutoDerivedCreativePreference {
     this.autoDerivedCreativeMethodTypeList = autoDerivedCreativeMethodTypeList;
   }
 
+  public AutoDerivedCreativePreference autoDerivedCreativeSelectProductList(
+      List<AutoDerivedCreativeSelectProductStruct> autoDerivedCreativeSelectProductList) {
+    this.autoDerivedCreativeSelectProductList = autoDerivedCreativeSelectProductList;
+    return this;
+  }
+
+  public AutoDerivedCreativePreference addAutoDerivedCreativeSelectProductListItem(
+      AutoDerivedCreativeSelectProductStruct autoDerivedCreativeSelectProductListItem) {
+    if (this.autoDerivedCreativeSelectProductList == null) {
+      this.autoDerivedCreativeSelectProductList =
+          new ArrayList<AutoDerivedCreativeSelectProductStruct>();
+    }
+    this.autoDerivedCreativeSelectProductList.add(autoDerivedCreativeSelectProductListItem);
+    return this;
+  }
+
+  /**
+   * Get autoDerivedCreativeSelectProductList
+   *
+   * @return autoDerivedCreativeSelectProductList
+   */
+  @ApiModelProperty(value = "")
+  public List<AutoDerivedCreativeSelectProductStruct> getAutoDerivedCreativeSelectProductList() {
+    return autoDerivedCreativeSelectProductList;
+  }
+
+  public void setAutoDerivedCreativeSelectProductList(
+      List<AutoDerivedCreativeSelectProductStruct> autoDerivedCreativeSelectProductList) {
+    this.autoDerivedCreativeSelectProductList = autoDerivedCreativeSelectProductList;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -65,13 +99,16 @@ public class AutoDerivedCreativePreference {
     }
     AutoDerivedCreativePreference autoDerivedCreativePreference = (AutoDerivedCreativePreference) o;
     return Objects.equals(
-        this.autoDerivedCreativeMethodTypeList,
-        autoDerivedCreativePreference.autoDerivedCreativeMethodTypeList);
+            this.autoDerivedCreativeMethodTypeList,
+            autoDerivedCreativePreference.autoDerivedCreativeMethodTypeList)
+        && Objects.equals(
+            this.autoDerivedCreativeSelectProductList,
+            autoDerivedCreativePreference.autoDerivedCreativeSelectProductList);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(autoDerivedCreativeMethodTypeList);
+    return Objects.hash(autoDerivedCreativeMethodTypeList, autoDerivedCreativeSelectProductList);
   }
 
   @Override

@@ -242,9 +242,6 @@ public class ProductInfoSpec {
   @SerializedName("detail_img")
   private List<String> detailImg = null;
 
-  @SerializedName("high_info_tag")
-  private Long highInfoTag = null;
-
   @SerializedName("show_count")
   private Long showCount = null;
 
@@ -1938,25 +1935,6 @@ public class ProductInfoSpec {
 
   public void setDetailImg(List<String> detailImg) {
     this.detailImg = detailImg;
-  }
-
-  public ProductInfoSpec highInfoTag(Long highInfoTag) {
-    this.highInfoTag = highInfoTag;
-    return this;
-  }
-
-  /**
-   * Get highInfoTag
-   *
-   * @return highInfoTag
-   */
-  @ApiModelProperty(value = "")
-  public Long getHighInfoTag() {
-    return highInfoTag;
-  }
-
-  public void setHighInfoTag(Long highInfoTag) {
-    this.highInfoTag = highInfoTag;
   }
 
   public ProductInfoSpec showCount(Long showCount) {
@@ -3693,7 +3671,6 @@ public class ProductInfoSpec {
         && Objects.equals(this.authorFansCount, productInfoSpec.authorFansCount)
         && Objects.equals(this.semanticLabels, productInfoSpec.semanticLabels)
         && Objects.equals(this.detailImg, productInfoSpec.detailImg)
-        && Objects.equals(this.highInfoTag, productInfoSpec.highInfoTag)
         && Objects.equals(this.showCount, productInfoSpec.showCount)
         && Objects.equals(this.playRate, productInfoSpec.playRate)
         && Objects.equals(this.makeMoneyOnline, productInfoSpec.makeMoneyOnline)
@@ -3857,7 +3834,6 @@ public class ProductInfoSpec {
         authorFansCount,
         semanticLabels,
         detailImg,
-        highInfoTag,
         showCount,
         playRate,
         makeMoneyOnline,

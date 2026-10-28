@@ -43,6 +43,12 @@ public class NegativewordsAddResponseData {
   @SerializedName("success_words")
   private SuccessNegativeWordStruct successWords = null;
 
+  @SerializedName("duplicate_with_bid_words")
+  private DuplicateNegativeWordStruct duplicateWithBidWords = null;
+
+  @SerializedName("duplicate_with_existing_words")
+  private DuplicateNegativeWordStruct duplicateWithExistingWords = null;
+
   public NegativewordsAddResponseData adgroupId(Long adgroupId) {
     this.adgroupId = adgroupId;
     return this;
@@ -198,6 +204,47 @@ public class NegativewordsAddResponseData {
     this.successWords = successWords;
   }
 
+  public NegativewordsAddResponseData duplicateWithBidWords(
+      DuplicateNegativeWordStruct duplicateWithBidWords) {
+    this.duplicateWithBidWords = duplicateWithBidWords;
+    return this;
+  }
+
+  /**
+   * Get duplicateWithBidWords
+   *
+   * @return duplicateWithBidWords
+   */
+  @ApiModelProperty(value = "")
+  public DuplicateNegativeWordStruct getDuplicateWithBidWords() {
+    return duplicateWithBidWords;
+  }
+
+  public void setDuplicateWithBidWords(DuplicateNegativeWordStruct duplicateWithBidWords) {
+    this.duplicateWithBidWords = duplicateWithBidWords;
+  }
+
+  public NegativewordsAddResponseData duplicateWithExistingWords(
+      DuplicateNegativeWordStruct duplicateWithExistingWords) {
+    this.duplicateWithExistingWords = duplicateWithExistingWords;
+    return this;
+  }
+
+  /**
+   * Get duplicateWithExistingWords
+   *
+   * @return duplicateWithExistingWords
+   */
+  @ApiModelProperty(value = "")
+  public DuplicateNegativeWordStruct getDuplicateWithExistingWords() {
+    return duplicateWithExistingWords;
+  }
+
+  public void setDuplicateWithExistingWords(
+      DuplicateNegativeWordStruct duplicateWithExistingWords) {
+    this.duplicateWithExistingWords = duplicateWithExistingWords;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -214,7 +261,12 @@ public class NegativewordsAddResponseData {
         && Objects.equals(this.exceedLengthWords, negativewordsAddResponseData.exceedLengthWords)
         && Objects.equals(this.exceedLimitWords, negativewordsAddResponseData.exceedLimitWords)
         && Objects.equals(this.hasSpecialWords, negativewordsAddResponseData.hasSpecialWords)
-        && Objects.equals(this.successWords, negativewordsAddResponseData.successWords);
+        && Objects.equals(this.successWords, negativewordsAddResponseData.successWords)
+        && Objects.equals(
+            this.duplicateWithBidWords, negativewordsAddResponseData.duplicateWithBidWords)
+        && Objects.equals(
+            this.duplicateWithExistingWords,
+            negativewordsAddResponseData.duplicateWithExistingWords);
   }
 
   @Override
@@ -227,7 +279,9 @@ public class NegativewordsAddResponseData {
         exceedLengthWords,
         exceedLimitWords,
         hasSpecialWords,
-        successWords);
+        successWords,
+        duplicateWithBidWords,
+        duplicateWithExistingWords);
   }
 
   @Override

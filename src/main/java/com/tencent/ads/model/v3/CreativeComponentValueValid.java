@@ -101,6 +101,9 @@ public class CreativeComponentValueValid {
   @SerializedName("video_format_options")
   private List<ComponentMetadataValueValidVideoFormatOption> videoFormatOptions = null;
 
+  @SerializedName("tile_fixed_occurs")
+  private List<Long> tileFixedOccurs = null;
+
   public CreativeComponentValueValid required(Boolean required) {
     this.required = required;
     return this;
@@ -627,6 +630,33 @@ public class CreativeComponentValueValid {
     this.videoFormatOptions = videoFormatOptions;
   }
 
+  public CreativeComponentValueValid tileFixedOccurs(List<Long> tileFixedOccurs) {
+    this.tileFixedOccurs = tileFixedOccurs;
+    return this;
+  }
+
+  public CreativeComponentValueValid addTileFixedOccursItem(Long tileFixedOccursItem) {
+    if (this.tileFixedOccurs == null) {
+      this.tileFixedOccurs = new ArrayList<Long>();
+    }
+    this.tileFixedOccurs.add(tileFixedOccursItem);
+    return this;
+  }
+
+  /**
+   * Get tileFixedOccurs
+   *
+   * @return tileFixedOccurs
+   */
+  @ApiModelProperty(value = "")
+  public List<Long> getTileFixedOccurs() {
+    return tileFixedOccurs;
+  }
+
+  public void setTileFixedOccurs(List<Long> tileFixedOccurs) {
+    this.tileFixedOccurs = tileFixedOccurs;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -663,7 +693,8 @@ public class CreativeComponentValueValid {
         && Objects.equals(
             this.maxDurationMillisecond, creativeComponentValueValid.maxDurationMillisecond)
         && Objects.equals(this.imageFormatOptions, creativeComponentValueValid.imageFormatOptions)
-        && Objects.equals(this.videoFormatOptions, creativeComponentValueValid.videoFormatOptions);
+        && Objects.equals(this.videoFormatOptions, creativeComponentValueValid.videoFormatOptions)
+        && Objects.equals(this.tileFixedOccurs, creativeComponentValueValid.tileFixedOccurs);
   }
 
   @Override
@@ -694,7 +725,8 @@ public class CreativeComponentValueValid {
         minDurationMillisecond,
         maxDurationMillisecond,
         imageFormatOptions,
-        videoFormatOptions);
+        videoFormatOptions,
+        tileFixedOccurs);
   }
 
   @Override

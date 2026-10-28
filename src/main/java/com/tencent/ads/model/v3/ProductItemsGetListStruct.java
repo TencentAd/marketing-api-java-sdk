@@ -78,9 +78,6 @@ public class ProductItemsGetListStruct {
   @SerializedName("data_source")
   private String dataSource = null;
 
-  @SerializedName("product_select_score")
-  private Double productSelectScore = null;
-
   public ProductItemsGetListStruct productOuterId(String productOuterId) {
     this.productOuterId = productOuterId;
     return this;
@@ -442,25 +439,6 @@ public class ProductItemsGetListStruct {
     this.dataSource = dataSource;
   }
 
-  public ProductItemsGetListStruct productSelectScore(Double productSelectScore) {
-    this.productSelectScore = productSelectScore;
-    return this;
-  }
-
-  /**
-   * Get productSelectScore
-   *
-   * @return productSelectScore
-   */
-  @ApiModelProperty(value = "")
-  public Double getProductSelectScore() {
-    return productSelectScore;
-  }
-
-  public void setProductSelectScore(Double productSelectScore) {
-    this.productSelectScore = productSelectScore;
-  }
-
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -488,8 +466,7 @@ public class ProductItemsGetListStruct {
         && Objects.equals(this.description, productItemsGetListStruct.description)
         && Objects.equals(this.customData, productItemsGetListStruct.customData)
         && Objects.equals(this.isVideo, productItemsGetListStruct.isVideo)
-        && Objects.equals(this.dataSource, productItemsGetListStruct.dataSource)
-        && Objects.equals(this.productSelectScore, productItemsGetListStruct.productSelectScore);
+        && Objects.equals(this.dataSource, productItemsGetListStruct.dataSource);
   }
 
   @Override
@@ -513,8 +490,7 @@ public class ProductItemsGetListStruct {
         description,
         customData,
         isVideo,
-        dataSource,
-        productSelectScore);
+        dataSource);
   }
 
   @Override

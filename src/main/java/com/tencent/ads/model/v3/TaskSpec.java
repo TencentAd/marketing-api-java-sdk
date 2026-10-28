@@ -122,6 +122,9 @@ public class TaskSpec {
   @SerializedName("dpadbuddy_spec")
   private List<DpadbuddyItem> dpadbuddySpec = null;
 
+  @SerializedName("common_string_spec")
+  private String commonStringSpec = null;
+
   public TaskSpec updateUnionPositionPackageSpec(
       List<UpdateUnionPositionPackageItem> updateUnionPositionPackageSpec) {
     this.updateUnionPositionPackageSpec = updateUnionPositionPackageSpec;
@@ -1072,6 +1075,25 @@ public class TaskSpec {
     this.dpadbuddySpec = dpadbuddySpec;
   }
 
+  public TaskSpec commonStringSpec(String commonStringSpec) {
+    this.commonStringSpec = commonStringSpec;
+    return this;
+  }
+
+  /**
+   * Get commonStringSpec
+   *
+   * @return commonStringSpec
+   */
+  @ApiModelProperty(value = "")
+  public String getCommonStringSpec() {
+    return commonStringSpec;
+  }
+
+  public void setCommonStringSpec(String commonStringSpec) {
+    this.commonStringSpec = commonStringSpec;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -1136,7 +1158,8 @@ public class TaskSpec {
         && Objects.equals(
             this.updateDynamicCreativeSearchIntelligentExtensionSpec,
             taskSpec.updateDynamicCreativeSearchIntelligentExtensionSpec)
-        && Objects.equals(this.dpadbuddySpec, taskSpec.dpadbuddySpec);
+        && Objects.equals(this.dpadbuddySpec, taskSpec.dpadbuddySpec)
+        && Objects.equals(this.commonStringSpec, taskSpec.commonStringSpec);
   }
 
   @Override
@@ -1172,7 +1195,8 @@ public class TaskSpec {
         updateAdgroupSmartDeliveryGoalSpec,
         deleteAccountComponentSpec,
         updateDynamicCreativeSearchIntelligentExtensionSpec,
-        dpadbuddySpec);
+        dpadbuddySpec,
+        commonStringSpec);
   }
 
   @Override

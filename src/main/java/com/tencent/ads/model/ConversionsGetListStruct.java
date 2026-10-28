@@ -114,6 +114,9 @@ public class ConversionsGetListStruct {
   @SerializedName("inspection_free_switch")
   private Boolean inspectionFreeSwitch = null;
 
+  @SerializedName("dow_grade_flag")
+  private Long dowGradeFlag = null;
+
   public ConversionsGetListStruct conversionId(Long conversionId) {
     this.conversionId = conversionId;
     return this;
@@ -711,6 +714,25 @@ public class ConversionsGetListStruct {
     this.inspectionFreeSwitch = inspectionFreeSwitch;
   }
 
+  public ConversionsGetListStruct dowGradeFlag(Long dowGradeFlag) {
+    this.dowGradeFlag = dowGradeFlag;
+    return this;
+  }
+
+  /**
+   * Get dowGradeFlag
+   *
+   * @return dowGradeFlag
+   */
+  @ApiModelProperty(value = "")
+  public Long getDowGradeFlag() {
+    return dowGradeFlag;
+  }
+
+  public void setDowGradeFlag(Long dowGradeFlag) {
+    this.dowGradeFlag = dowGradeFlag;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -763,7 +785,8 @@ public class ConversionsGetListStruct {
         && Objects.equals(
             this.incubationOptimizationGoal, conversionsGetListStruct.incubationOptimizationGoal)
         && Objects.equals(this.disableMessage, conversionsGetListStruct.disableMessage)
-        && Objects.equals(this.inspectionFreeSwitch, conversionsGetListStruct.inspectionFreeSwitch);
+        && Objects.equals(this.inspectionFreeSwitch, conversionsGetListStruct.inspectionFreeSwitch)
+        && Objects.equals(this.dowGradeFlag, conversionsGetListStruct.dowGradeFlag);
   }
 
   @Override
@@ -799,7 +822,8 @@ public class ConversionsGetListStruct {
         forwardLinkAssist,
         incubationOptimizationGoal,
         disableMessage,
-        inspectionFreeSwitch);
+        inspectionFreeSwitch,
+        dowGradeFlag);
   }
 
   @Override

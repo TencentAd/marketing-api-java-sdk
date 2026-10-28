@@ -203,6 +203,18 @@ public class AdcreativeCreativeElementsMp {
   @SerializedName("red_envelope_packet_list")
   private List<RedEnvelopePacketSpec> redEnvelopePacketList = null;
 
+  @SerializedName("description_en")
+  private String descriptionEn = null;
+
+  @SerializedName("description_tw")
+  private String descriptionTw = null;
+
+  @SerializedName("image_list_display_mode")
+  private Long imageListDisplayMode = null;
+
+  @SerializedName("multi_materials_display_mode")
+  private Long multiMaterialsDisplayMode = null;
+
   public AdcreativeCreativeElementsMp image(String image) {
     this.image = image;
     return this;
@@ -1412,6 +1424,82 @@ public class AdcreativeCreativeElementsMp {
     this.redEnvelopePacketList = redEnvelopePacketList;
   }
 
+  public AdcreativeCreativeElementsMp descriptionEn(String descriptionEn) {
+    this.descriptionEn = descriptionEn;
+    return this;
+  }
+
+  /**
+   * Get descriptionEn
+   *
+   * @return descriptionEn
+   */
+  @ApiModelProperty(value = "")
+  public String getDescriptionEn() {
+    return descriptionEn;
+  }
+
+  public void setDescriptionEn(String descriptionEn) {
+    this.descriptionEn = descriptionEn;
+  }
+
+  public AdcreativeCreativeElementsMp descriptionTw(String descriptionTw) {
+    this.descriptionTw = descriptionTw;
+    return this;
+  }
+
+  /**
+   * Get descriptionTw
+   *
+   * @return descriptionTw
+   */
+  @ApiModelProperty(value = "")
+  public String getDescriptionTw() {
+    return descriptionTw;
+  }
+
+  public void setDescriptionTw(String descriptionTw) {
+    this.descriptionTw = descriptionTw;
+  }
+
+  public AdcreativeCreativeElementsMp imageListDisplayMode(Long imageListDisplayMode) {
+    this.imageListDisplayMode = imageListDisplayMode;
+    return this;
+  }
+
+  /**
+   * Get imageListDisplayMode
+   *
+   * @return imageListDisplayMode
+   */
+  @ApiModelProperty(value = "")
+  public Long getImageListDisplayMode() {
+    return imageListDisplayMode;
+  }
+
+  public void setImageListDisplayMode(Long imageListDisplayMode) {
+    this.imageListDisplayMode = imageListDisplayMode;
+  }
+
+  public AdcreativeCreativeElementsMp multiMaterialsDisplayMode(Long multiMaterialsDisplayMode) {
+    this.multiMaterialsDisplayMode = multiMaterialsDisplayMode;
+    return this;
+  }
+
+  /**
+   * Get multiMaterialsDisplayMode
+   *
+   * @return multiMaterialsDisplayMode
+   */
+  @ApiModelProperty(value = "")
+  public Long getMultiMaterialsDisplayMode() {
+    return multiMaterialsDisplayMode;
+  }
+
+  public void setMultiMaterialsDisplayMode(Long multiMaterialsDisplayMode) {
+    this.multiMaterialsDisplayMode = multiMaterialsDisplayMode;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -1487,7 +1575,13 @@ public class AdcreativeCreativeElementsMp {
             adcreativeCreativeElementsMp.wechatChannelsCoverImgShowType)
         && Objects.equals(this.miniCardLink, adcreativeCreativeElementsMp.miniCardLink)
         && Objects.equals(
-            this.redEnvelopePacketList, adcreativeCreativeElementsMp.redEnvelopePacketList);
+            this.redEnvelopePacketList, adcreativeCreativeElementsMp.redEnvelopePacketList)
+        && Objects.equals(this.descriptionEn, adcreativeCreativeElementsMp.descriptionEn)
+        && Objects.equals(this.descriptionTw, adcreativeCreativeElementsMp.descriptionTw)
+        && Objects.equals(
+            this.imageListDisplayMode, adcreativeCreativeElementsMp.imageListDisplayMode)
+        && Objects.equals(
+            this.multiMaterialsDisplayMode, adcreativeCreativeElementsMp.multiMaterialsDisplayMode);
   }
 
   @Override
@@ -1552,7 +1646,11 @@ public class AdcreativeCreativeElementsMp {
         mainJumpInfo,
         wechatChannelsCoverImgShowType,
         miniCardLink,
-        redEnvelopePacketList);
+        redEnvelopePacketList,
+        descriptionEn,
+        descriptionTw,
+        imageListDisplayMode,
+        multiMaterialsDisplayMode);
   }
 
   @Override

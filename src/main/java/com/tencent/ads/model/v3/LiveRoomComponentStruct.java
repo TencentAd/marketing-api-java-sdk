@@ -66,6 +66,15 @@ public class LiveRoomComponentStruct {
   @SerializedName("wechat_channels_account_id")
   private String wechatChannelsAccountId = null;
 
+  @SerializedName("is_auto_publish_enabled")
+  private Boolean isAutoPublishEnabled = null;
+
+  @SerializedName("auto_publish_begin_time")
+  private Long autoPublishBeginTime = null;
+
+  @SerializedName("auto_publish_end_time")
+  private Long autoPublishEndTime = null;
+
   public LiveRoomComponentStruct accountId(Long accountId) {
     this.accountId = accountId;
     return this;
@@ -352,6 +361,63 @@ public class LiveRoomComponentStruct {
     this.wechatChannelsAccountId = wechatChannelsAccountId;
   }
 
+  public LiveRoomComponentStruct isAutoPublishEnabled(Boolean isAutoPublishEnabled) {
+    this.isAutoPublishEnabled = isAutoPublishEnabled;
+    return this;
+  }
+
+  /**
+   * Get isAutoPublishEnabled
+   *
+   * @return isAutoPublishEnabled
+   */
+  @ApiModelProperty(value = "")
+  public Boolean isIsAutoPublishEnabled() {
+    return isAutoPublishEnabled;
+  }
+
+  public void setIsAutoPublishEnabled(Boolean isAutoPublishEnabled) {
+    this.isAutoPublishEnabled = isAutoPublishEnabled;
+  }
+
+  public LiveRoomComponentStruct autoPublishBeginTime(Long autoPublishBeginTime) {
+    this.autoPublishBeginTime = autoPublishBeginTime;
+    return this;
+  }
+
+  /**
+   * Get autoPublishBeginTime
+   *
+   * @return autoPublishBeginTime
+   */
+  @ApiModelProperty(value = "")
+  public Long getAutoPublishBeginTime() {
+    return autoPublishBeginTime;
+  }
+
+  public void setAutoPublishBeginTime(Long autoPublishBeginTime) {
+    this.autoPublishBeginTime = autoPublishBeginTime;
+  }
+
+  public LiveRoomComponentStruct autoPublishEndTime(Long autoPublishEndTime) {
+    this.autoPublishEndTime = autoPublishEndTime;
+    return this;
+  }
+
+  /**
+   * Get autoPublishEndTime
+   *
+   * @return autoPublishEndTime
+   */
+  @ApiModelProperty(value = "")
+  public Long getAutoPublishEndTime() {
+    return autoPublishEndTime;
+  }
+
+  public void setAutoPublishEndTime(Long autoPublishEndTime) {
+    this.autoPublishEndTime = autoPublishEndTime;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -377,7 +443,10 @@ public class LiveRoomComponentStruct {
         && Objects.equals(this.lastModifiedTime, liveRoomComponentStruct.lastModifiedTime)
         && Objects.equals(this.isPublishEnabled, liveRoomComponentStruct.isPublishEnabled)
         && Objects.equals(
-            this.wechatChannelsAccountId, liveRoomComponentStruct.wechatChannelsAccountId);
+            this.wechatChannelsAccountId, liveRoomComponentStruct.wechatChannelsAccountId)
+        && Objects.equals(this.isAutoPublishEnabled, liveRoomComponentStruct.isAutoPublishEnabled)
+        && Objects.equals(this.autoPublishBeginTime, liveRoomComponentStruct.autoPublishBeginTime)
+        && Objects.equals(this.autoPublishEndTime, liveRoomComponentStruct.autoPublishEndTime);
   }
 
   @Override
@@ -397,7 +466,10 @@ public class LiveRoomComponentStruct {
         createdTime,
         lastModifiedTime,
         isPublishEnabled,
-        wechatChannelsAccountId);
+        wechatChannelsAccountId,
+        isAutoPublishEnabled,
+        autoPublishBeginTime,
+        autoPublishEndTime);
   }
 
   @Override

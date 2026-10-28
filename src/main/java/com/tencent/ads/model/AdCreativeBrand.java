@@ -35,6 +35,12 @@ public class AdCreativeBrand {
   @SerializedName("main_jump_info")
   private List<LandingPageStructure> mainJumpInfo = null;
 
+  @SerializedName("brand_name_en")
+  private String brandNameEn = null;
+
+  @SerializedName("brand_name_tw")
+  private String brandNameTw = null;
+
   public AdCreativeBrand brandName(String brandName) {
     this.brandName = brandName;
     return this;
@@ -119,6 +125,44 @@ public class AdCreativeBrand {
     this.mainJumpInfo = mainJumpInfo;
   }
 
+  public AdCreativeBrand brandNameEn(String brandNameEn) {
+    this.brandNameEn = brandNameEn;
+    return this;
+  }
+
+  /**
+   * Get brandNameEn
+   *
+   * @return brandNameEn
+   */
+  @ApiModelProperty(value = "")
+  public String getBrandNameEn() {
+    return brandNameEn;
+  }
+
+  public void setBrandNameEn(String brandNameEn) {
+    this.brandNameEn = brandNameEn;
+  }
+
+  public AdCreativeBrand brandNameTw(String brandNameTw) {
+    this.brandNameTw = brandNameTw;
+    return this;
+  }
+
+  /**
+   * Get brandNameTw
+   *
+   * @return brandNameTw
+   */
+  @ApiModelProperty(value = "")
+  public String getBrandNameTw() {
+    return brandNameTw;
+  }
+
+  public void setBrandNameTw(String brandNameTw) {
+    this.brandNameTw = brandNameTw;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -131,12 +175,15 @@ public class AdCreativeBrand {
     return Objects.equals(this.brandName, adCreativeBrand.brandName)
         && Objects.equals(this.brandImg, adCreativeBrand.brandImg)
         && Objects.equals(this.brandDescription, adCreativeBrand.brandDescription)
-        && Objects.equals(this.mainJumpInfo, adCreativeBrand.mainJumpInfo);
+        && Objects.equals(this.mainJumpInfo, adCreativeBrand.mainJumpInfo)
+        && Objects.equals(this.brandNameEn, adCreativeBrand.brandNameEn)
+        && Objects.equals(this.brandNameTw, adCreativeBrand.brandNameTw);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(brandName, brandImg, brandDescription, mainJumpInfo);
+    return Objects.hash(
+        brandName, brandImg, brandDescription, mainJumpInfo, brandNameEn, brandNameTw);
   }
 
   @Override

@@ -34,6 +34,15 @@ public class LiveRoomComponentStatusUpdateRequest {
   @SerializedName("live_begin_time")
   private Long liveBeginTime = null;
 
+  @SerializedName("is_auto_publish_enabled")
+  private Boolean isAutoPublishEnabled = null;
+
+  @SerializedName("auto_publish_begin_time")
+  private Long autoPublishBeginTime = null;
+
+  @SerializedName("auto_publish_end_time")
+  private Long autoPublishEndTime = null;
+
   public LiveRoomComponentStatusUpdateRequest accountId(Long accountId) {
     this.accountId = accountId;
     return this;
@@ -129,6 +138,63 @@ public class LiveRoomComponentStatusUpdateRequest {
     this.liveBeginTime = liveBeginTime;
   }
 
+  public LiveRoomComponentStatusUpdateRequest isAutoPublishEnabled(Boolean isAutoPublishEnabled) {
+    this.isAutoPublishEnabled = isAutoPublishEnabled;
+    return this;
+  }
+
+  /**
+   * Get isAutoPublishEnabled
+   *
+   * @return isAutoPublishEnabled
+   */
+  @ApiModelProperty(value = "")
+  public Boolean isIsAutoPublishEnabled() {
+    return isAutoPublishEnabled;
+  }
+
+  public void setIsAutoPublishEnabled(Boolean isAutoPublishEnabled) {
+    this.isAutoPublishEnabled = isAutoPublishEnabled;
+  }
+
+  public LiveRoomComponentStatusUpdateRequest autoPublishBeginTime(Long autoPublishBeginTime) {
+    this.autoPublishBeginTime = autoPublishBeginTime;
+    return this;
+  }
+
+  /**
+   * Get autoPublishBeginTime
+   *
+   * @return autoPublishBeginTime
+   */
+  @ApiModelProperty(value = "")
+  public Long getAutoPublishBeginTime() {
+    return autoPublishBeginTime;
+  }
+
+  public void setAutoPublishBeginTime(Long autoPublishBeginTime) {
+    this.autoPublishBeginTime = autoPublishBeginTime;
+  }
+
+  public LiveRoomComponentStatusUpdateRequest autoPublishEndTime(Long autoPublishEndTime) {
+    this.autoPublishEndTime = autoPublishEndTime;
+    return this;
+  }
+
+  /**
+   * Get autoPublishEndTime
+   *
+   * @return autoPublishEndTime
+   */
+  @ApiModelProperty(value = "")
+  public Long getAutoPublishEndTime() {
+    return autoPublishEndTime;
+  }
+
+  public void setAutoPublishEndTime(Long autoPublishEndTime) {
+    this.autoPublishEndTime = autoPublishEndTime;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -143,12 +209,26 @@ public class LiveRoomComponentStatusUpdateRequest {
         && Objects.equals(this.componentId, liveRoomComponentStatusUpdateRequest.componentId)
         && Objects.equals(this.componentType, liveRoomComponentStatusUpdateRequest.componentType)
         && Objects.equals(this.status, liveRoomComponentStatusUpdateRequest.status)
-        && Objects.equals(this.liveBeginTime, liveRoomComponentStatusUpdateRequest.liveBeginTime);
+        && Objects.equals(this.liveBeginTime, liveRoomComponentStatusUpdateRequest.liveBeginTime)
+        && Objects.equals(
+            this.isAutoPublishEnabled, liveRoomComponentStatusUpdateRequest.isAutoPublishEnabled)
+        && Objects.equals(
+            this.autoPublishBeginTime, liveRoomComponentStatusUpdateRequest.autoPublishBeginTime)
+        && Objects.equals(
+            this.autoPublishEndTime, liveRoomComponentStatusUpdateRequest.autoPublishEndTime);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(accountId, componentId, componentType, status, liveBeginTime);
+    return Objects.hash(
+        accountId,
+        componentId,
+        componentType,
+        status,
+        liveBeginTime,
+        isAutoPublishEnabled,
+        autoPublishBeginTime,
+        autoPublishEndTime);
   }
 
   @Override

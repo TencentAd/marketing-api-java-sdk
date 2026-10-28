@@ -42,7 +42,9 @@ public enum OauthAccountType {
 
   BM("ACCOUNT_TYPE_BM"),
 
-  DATA_NEXUS("ACCOUNT_TYPE_DATA_NEXUS");
+  DATA_NEXUS("ACCOUNT_TYPE_DATA_NEXUS"),
+
+  BOP("ACCOUNT_TYPE_BOP");
 
   private String value;
 

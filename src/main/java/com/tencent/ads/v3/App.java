@@ -78,6 +78,7 @@ public class App {
   @Inject ConversionLinksApiContainer conversionLinksApiContainer;
   @Inject ConversionsApiContainer conversionsApiContainer;
   @Inject CreativeRecommendApiContainer creativeRecommendApiContainer;
+  @Inject CreativeReviewApiContainer creativeReviewApiContainer;
   @Inject CreativeTemplateApiContainer creativeTemplateApiContainer;
   @Inject CreativeTemplateListApiContainer creativeTemplateListApiContainer;
   @Inject CreativeTemplatePreviewsApiContainer creativeTemplatePreviewsApiContainer;
@@ -515,6 +516,10 @@ public class App {
 
   public CreativeRecommendApiContainer creativeRecommend() {
     return creativeRecommendApiContainer;
+  }
+
+  public CreativeReviewApiContainer creativeReview() {
+    return creativeReviewApiContainer;
   }
 
   public CreativeTemplateApiContainer creativeTemplate() {

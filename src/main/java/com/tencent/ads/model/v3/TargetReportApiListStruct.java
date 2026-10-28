@@ -2592,6 +2592,27 @@ public class TargetReportApiListStruct {
   @SerializedName("effective_consult_dedup_rate")
   private Double effectiveConsultDedupRate = null;
 
+  @SerializedName("payment_amount_activated_multiple_d7")
+  private Double paymentAmountActivatedMultipleD7 = null;
+
+  @SerializedName("wecom_effective_add_group_dedup_pv")
+  private Long wecomEffectiveAddGroupDedupPv = null;
+
+  @SerializedName("mix_income_roi_1d")
+  private Double mixIncomeRoi1d = null;
+
+  @SerializedName("mix_income_roi_3d")
+  private Double mixIncomeRoi3d = null;
+
+  @SerializedName("mix_income_roi_7d")
+  private Double mixIncomeRoi7d = null;
+
+  @SerializedName("mix_income_roi_14d")
+  private Double mixIncomeRoi14d = null;
+
+  @SerializedName("mix_income_roi")
+  private Double mixIncomeRoi = null;
+
   @SerializedName("age_id")
   private Long ageId = null;
 
@@ -18974,6 +18995,141 @@ public class TargetReportApiListStruct {
     this.effectiveConsultDedupRate = effectiveConsultDedupRate;
   }
 
+  public TargetReportApiListStruct paymentAmountActivatedMultipleD7(
+      Double paymentAmountActivatedMultipleD7) {
+    this.paymentAmountActivatedMultipleD7 = paymentAmountActivatedMultipleD7;
+    return this;
+  }
+
+  /**
+   * Get paymentAmountActivatedMultipleD7
+   *
+   * @return paymentAmountActivatedMultipleD7
+   */
+  @ApiModelProperty(value = "")
+  public Double getPaymentAmountActivatedMultipleD7() {
+    return paymentAmountActivatedMultipleD7;
+  }
+
+  public void setPaymentAmountActivatedMultipleD7(Double paymentAmountActivatedMultipleD7) {
+    this.paymentAmountActivatedMultipleD7 = paymentAmountActivatedMultipleD7;
+  }
+
+  public TargetReportApiListStruct wecomEffectiveAddGroupDedupPv(
+      Long wecomEffectiveAddGroupDedupPv) {
+    this.wecomEffectiveAddGroupDedupPv = wecomEffectiveAddGroupDedupPv;
+    return this;
+  }
+
+  /**
+   * Get wecomEffectiveAddGroupDedupPv
+   *
+   * @return wecomEffectiveAddGroupDedupPv
+   */
+  @ApiModelProperty(value = "")
+  public Long getWecomEffectiveAddGroupDedupPv() {
+    return wecomEffectiveAddGroupDedupPv;
+  }
+
+  public void setWecomEffectiveAddGroupDedupPv(Long wecomEffectiveAddGroupDedupPv) {
+    this.wecomEffectiveAddGroupDedupPv = wecomEffectiveAddGroupDedupPv;
+  }
+
+  public TargetReportApiListStruct mixIncomeRoi1d(Double mixIncomeRoi1d) {
+    this.mixIncomeRoi1d = mixIncomeRoi1d;
+    return this;
+  }
+
+  /**
+   * Get mixIncomeRoi1d
+   *
+   * @return mixIncomeRoi1d
+   */
+  @ApiModelProperty(value = "")
+  public Double getMixIncomeRoi1d() {
+    return mixIncomeRoi1d;
+  }
+
+  public void setMixIncomeRoi1d(Double mixIncomeRoi1d) {
+    this.mixIncomeRoi1d = mixIncomeRoi1d;
+  }
+
+  public TargetReportApiListStruct mixIncomeRoi3d(Double mixIncomeRoi3d) {
+    this.mixIncomeRoi3d = mixIncomeRoi3d;
+    return this;
+  }
+
+  /**
+   * Get mixIncomeRoi3d
+   *
+   * @return mixIncomeRoi3d
+   */
+  @ApiModelProperty(value = "")
+  public Double getMixIncomeRoi3d() {
+    return mixIncomeRoi3d;
+  }
+
+  public void setMixIncomeRoi3d(Double mixIncomeRoi3d) {
+    this.mixIncomeRoi3d = mixIncomeRoi3d;
+  }
+
+  public TargetReportApiListStruct mixIncomeRoi7d(Double mixIncomeRoi7d) {
+    this.mixIncomeRoi7d = mixIncomeRoi7d;
+    return this;
+  }
+
+  /**
+   * Get mixIncomeRoi7d
+   *
+   * @return mixIncomeRoi7d
+   */
+  @ApiModelProperty(value = "")
+  public Double getMixIncomeRoi7d() {
+    return mixIncomeRoi7d;
+  }
+
+  public void setMixIncomeRoi7d(Double mixIncomeRoi7d) {
+    this.mixIncomeRoi7d = mixIncomeRoi7d;
+  }
+
+  public TargetReportApiListStruct mixIncomeRoi14d(Double mixIncomeRoi14d) {
+    this.mixIncomeRoi14d = mixIncomeRoi14d;
+    return this;
+  }
+
+  /**
+   * Get mixIncomeRoi14d
+   *
+   * @return mixIncomeRoi14d
+   */
+  @ApiModelProperty(value = "")
+  public Double getMixIncomeRoi14d() {
+    return mixIncomeRoi14d;
+  }
+
+  public void setMixIncomeRoi14d(Double mixIncomeRoi14d) {
+    this.mixIncomeRoi14d = mixIncomeRoi14d;
+  }
+
+  public TargetReportApiListStruct mixIncomeRoi(Double mixIncomeRoi) {
+    this.mixIncomeRoi = mixIncomeRoi;
+    return this;
+  }
+
+  /**
+   * Get mixIncomeRoi
+   *
+   * @return mixIncomeRoi
+   */
+  @ApiModelProperty(value = "")
+  public Double getMixIncomeRoi() {
+    return mixIncomeRoi;
+  }
+
+  public void setMixIncomeRoi(Double mixIncomeRoi) {
+    this.mixIncomeRoi = mixIncomeRoi;
+  }
+
   public TargetReportApiListStruct ageId(Long ageId) {
     this.ageId = ageId;
     return this;
@@ -20367,6 +20523,17 @@ public class TargetReportApiListStruct {
             this.effectiveConsultDedupCost, targetReportApiListStruct.effectiveConsultDedupCost)
         && Objects.equals(
             this.effectiveConsultDedupRate, targetReportApiListStruct.effectiveConsultDedupRate)
+        && Objects.equals(
+            this.paymentAmountActivatedMultipleD7,
+            targetReportApiListStruct.paymentAmountActivatedMultipleD7)
+        && Objects.equals(
+            this.wecomEffectiveAddGroupDedupPv,
+            targetReportApiListStruct.wecomEffectiveAddGroupDedupPv)
+        && Objects.equals(this.mixIncomeRoi1d, targetReportApiListStruct.mixIncomeRoi1d)
+        && Objects.equals(this.mixIncomeRoi3d, targetReportApiListStruct.mixIncomeRoi3d)
+        && Objects.equals(this.mixIncomeRoi7d, targetReportApiListStruct.mixIncomeRoi7d)
+        && Objects.equals(this.mixIncomeRoi14d, targetReportApiListStruct.mixIncomeRoi14d)
+        && Objects.equals(this.mixIncomeRoi, targetReportApiListStruct.mixIncomeRoi)
         && Objects.equals(this.ageId, targetReportApiListStruct.ageId)
         && Objects.equals(this.cityId, targetReportApiListStruct.cityId)
         && Objects.equals(this.regionId, targetReportApiListStruct.regionId)
@@ -21236,6 +21403,13 @@ public class TargetReportApiListStruct {
         effectiveConsultDedupPv,
         effectiveConsultDedupCost,
         effectiveConsultDedupRate,
+        paymentAmountActivatedMultipleD7,
+        wecomEffectiveAddGroupDedupPv,
+        mixIncomeRoi1d,
+        mixIncomeRoi3d,
+        mixIncomeRoi7d,
+        mixIncomeRoi14d,
+        mixIncomeRoi,
         ageId,
         cityId,
         regionId,

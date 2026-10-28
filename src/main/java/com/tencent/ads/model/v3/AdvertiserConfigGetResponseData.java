@@ -28,6 +28,9 @@ public class AdvertiserConfigGetResponseData {
   @SerializedName("multi_image_collage_aigc_status")
   private MultiImageCollageAigcStatus multiImageCollageAigcStatus = null;
 
+  @SerializedName("multi_image_display_area")
+  private MultiImageDisplayArea multiImageDisplayArea = null;
+
   public AdvertiserConfigGetResponseData coverImageSnapshotType(
       CoverImageSnapshotType coverImageSnapshotType) {
     this.coverImageSnapshotType = coverImageSnapshotType;
@@ -89,6 +92,26 @@ public class AdvertiserConfigGetResponseData {
     this.multiImageCollageAigcStatus = multiImageCollageAigcStatus;
   }
 
+  public AdvertiserConfigGetResponseData multiImageDisplayArea(
+      MultiImageDisplayArea multiImageDisplayArea) {
+    this.multiImageDisplayArea = multiImageDisplayArea;
+    return this;
+  }
+
+  /**
+   * Get multiImageDisplayArea
+   *
+   * @return multiImageDisplayArea
+   */
+  @ApiModelProperty(value = "")
+  public MultiImageDisplayArea getMultiImageDisplayArea() {
+    return multiImageDisplayArea;
+  }
+
+  public void setMultiImageDisplayArea(MultiImageDisplayArea multiImageDisplayArea) {
+    this.multiImageDisplayArea = multiImageDisplayArea;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -105,13 +128,18 @@ public class AdvertiserConfigGetResponseData {
             this.multiImageCollageStatus, advertiserConfigGetResponseData.multiImageCollageStatus)
         && Objects.equals(
             this.multiImageCollageAigcStatus,
-            advertiserConfigGetResponseData.multiImageCollageAigcStatus);
+            advertiserConfigGetResponseData.multiImageCollageAigcStatus)
+        && Objects.equals(
+            this.multiImageDisplayArea, advertiserConfigGetResponseData.multiImageDisplayArea);
   }
 
   @Override
   public int hashCode() {
     return Objects.hash(
-        coverImageSnapshotType, multiImageCollageStatus, multiImageCollageAigcStatus);
+        coverImageSnapshotType,
+        multiImageCollageStatus,
+        multiImageCollageAigcStatus,
+        multiImageDisplayArea);
   }
 
   @Override

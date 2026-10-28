@@ -36,6 +36,12 @@ public class SaasMiniprogramPrereviewAddRequest {
   @SerializedName("product_detail_page_signature")
   private String productDetailPageSignature = null;
 
+  @SerializedName("source")
+  private String source = null;
+
+  @SerializedName("product_detail_page_url")
+  private String productDetailPageUrl = null;
+
   @SerializedName("saas_miniprogram_preview_qrcode_url")
   private String saasMiniprogramPreviewQrcodeUrl = null;
 
@@ -138,6 +144,44 @@ public class SaasMiniprogramPrereviewAddRequest {
     this.productDetailPageSignature = productDetailPageSignature;
   }
 
+  public SaasMiniprogramPrereviewAddRequest source(String source) {
+    this.source = source;
+    return this;
+  }
+
+  /**
+   * Get source
+   *
+   * @return source
+   */
+  @ApiModelProperty(value = "")
+  public String getSource() {
+    return source;
+  }
+
+  public void setSource(String source) {
+    this.source = source;
+  }
+
+  public SaasMiniprogramPrereviewAddRequest productDetailPageUrl(String productDetailPageUrl) {
+    this.productDetailPageUrl = productDetailPageUrl;
+    return this;
+  }
+
+  /**
+   * Get productDetailPageUrl
+   *
+   * @return productDetailPageUrl
+   */
+  @ApiModelProperty(value = "")
+  public String getProductDetailPageUrl() {
+    return productDetailPageUrl;
+  }
+
+  public void setProductDetailPageUrl(String productDetailPageUrl) {
+    this.productDetailPageUrl = productDetailPageUrl;
+  }
+
   public SaasMiniprogramPrereviewAddRequest saasMiniprogramPreviewQrcodeUrl(
       String saasMiniprogramPreviewQrcodeUrl) {
     this.saasMiniprogramPreviewQrcodeUrl = saasMiniprogramPreviewQrcodeUrl;
@@ -203,6 +247,9 @@ public class SaasMiniprogramPrereviewAddRequest {
         && Objects.equals(
             this.productDetailPageSignature,
             saasMiniprogramPrereviewAddRequest.productDetailPageSignature)
+        && Objects.equals(this.source, saasMiniprogramPrereviewAddRequest.source)
+        && Objects.equals(
+            this.productDetailPageUrl, saasMiniprogramPrereviewAddRequest.productDetailPageUrl)
         && Objects.equals(
             this.saasMiniprogramPreviewQrcodeUrl,
             saasMiniprogramPrereviewAddRequest.saasMiniprogramPreviewQrcodeUrl)
@@ -217,6 +264,8 @@ public class SaasMiniprogramPrereviewAddRequest {
         productId,
         miniProgramPath,
         productDetailPageSignature,
+        source,
+        productDetailPageUrl,
         saasMiniprogramPreviewQrcodeUrl,
         componentInfo);
   }

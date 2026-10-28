@@ -43,6 +43,9 @@ public class WalletTransferAddRequest {
   @SerializedName("memo")
   private String memo = null;
 
+  @SerializedName("pre_check")
+  private Long preCheck = null;
+
   public WalletTransferAddRequest accountId(Long accountId) {
     this.accountId = accountId;
     return this;
@@ -195,6 +198,25 @@ public class WalletTransferAddRequest {
     this.memo = memo;
   }
 
+  public WalletTransferAddRequest preCheck(Long preCheck) {
+    this.preCheck = preCheck;
+    return this;
+  }
+
+  /**
+   * Get preCheck
+   *
+   * @return preCheck
+   */
+  @ApiModelProperty(value = "")
+  public Long getPreCheck() {
+    return preCheck;
+  }
+
+  public void setPreCheck(Long preCheck) {
+    this.preCheck = preCheck;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -211,7 +233,8 @@ public class WalletTransferAddRequest {
         && Objects.equals(this.transferType, walletTransferAddRequest.transferType)
         && Objects.equals(this.transferTryBest, walletTransferAddRequest.transferTryBest)
         && Objects.equals(this.externalBillNo, walletTransferAddRequest.externalBillNo)
-        && Objects.equals(this.memo, walletTransferAddRequest.memo);
+        && Objects.equals(this.memo, walletTransferAddRequest.memo)
+        && Objects.equals(this.preCheck, walletTransferAddRequest.preCheck);
   }
 
   @Override
@@ -224,7 +247,8 @@ public class WalletTransferAddRequest {
         transferType,
         transferTryBest,
         externalBillNo,
-        memo);
+        memo,
+        preCheck);
   }
 
   @Override

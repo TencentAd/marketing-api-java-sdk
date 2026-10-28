@@ -149,6 +149,12 @@ public class CreativeComponents {
   @SerializedName("channels_brand")
   private List<BrandComponent> channelsBrand = null;
 
+  @SerializedName("mdpa_title")
+  private List<MdpaTitleComponent> mdpaTitle = null;
+
+  @SerializedName("mdpa_description")
+  private List<MdpaDescriptionComponent> mdpaDescription = null;
+
   public CreativeComponents title(List<TitleComponent> title) {
     this.title = title;
     return this;
@@ -1294,6 +1300,60 @@ public class CreativeComponents {
     this.channelsBrand = channelsBrand;
   }
 
+  public CreativeComponents mdpaTitle(List<MdpaTitleComponent> mdpaTitle) {
+    this.mdpaTitle = mdpaTitle;
+    return this;
+  }
+
+  public CreativeComponents addMdpaTitleItem(MdpaTitleComponent mdpaTitleItem) {
+    if (this.mdpaTitle == null) {
+      this.mdpaTitle = new ArrayList<MdpaTitleComponent>();
+    }
+    this.mdpaTitle.add(mdpaTitleItem);
+    return this;
+  }
+
+  /**
+   * Get mdpaTitle
+   *
+   * @return mdpaTitle
+   */
+  @ApiModelProperty(value = "")
+  public List<MdpaTitleComponent> getMdpaTitle() {
+    return mdpaTitle;
+  }
+
+  public void setMdpaTitle(List<MdpaTitleComponent> mdpaTitle) {
+    this.mdpaTitle = mdpaTitle;
+  }
+
+  public CreativeComponents mdpaDescription(List<MdpaDescriptionComponent> mdpaDescription) {
+    this.mdpaDescription = mdpaDescription;
+    return this;
+  }
+
+  public CreativeComponents addMdpaDescriptionItem(MdpaDescriptionComponent mdpaDescriptionItem) {
+    if (this.mdpaDescription == null) {
+      this.mdpaDescription = new ArrayList<MdpaDescriptionComponent>();
+    }
+    this.mdpaDescription.add(mdpaDescriptionItem);
+    return this;
+  }
+
+  /**
+   * Get mdpaDescription
+   *
+   * @return mdpaDescription
+   */
+  @ApiModelProperty(value = "")
+  public List<MdpaDescriptionComponent> getMdpaDescription() {
+    return mdpaDescription;
+  }
+
+  public void setMdpaDescription(List<MdpaDescriptionComponent> mdpaDescription) {
+    this.mdpaDescription = mdpaDescription;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -1344,7 +1404,9 @@ public class CreativeComponents {
         && Objects.equals(this.doctorCard, creativeComponents.doctorCard)
         && Objects.equals(this.channelsLiveFeed, creativeComponents.channelsLiveFeed)
         && Objects.equals(this.rewardedBrowse, creativeComponents.rewardedBrowse)
-        && Objects.equals(this.channelsBrand, creativeComponents.channelsBrand);
+        && Objects.equals(this.channelsBrand, creativeComponents.channelsBrand)
+        && Objects.equals(this.mdpaTitle, creativeComponents.mdpaTitle)
+        && Objects.equals(this.mdpaDescription, creativeComponents.mdpaDescription);
   }
 
   @Override
@@ -1391,7 +1453,9 @@ public class CreativeComponents {
         doctorCard,
         channelsLiveFeed,
         rewardedBrowse,
-        channelsBrand);
+        channelsBrand,
+        mdpaTitle,
+        mdpaDescription);
   }
 
   @Override

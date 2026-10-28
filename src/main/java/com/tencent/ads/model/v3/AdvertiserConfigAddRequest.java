@@ -34,6 +34,9 @@ public class AdvertiserConfigAddRequest {
   @SerializedName("multi_image_collage_aigc_status")
   private MultiImageCollageAigcStatus multiImageCollageAigcStatus = null;
 
+  @SerializedName("multi_image_display_area")
+  private MultiImageDisplayArea multiImageDisplayArea = null;
+
   public AdvertiserConfigAddRequest accountId(Long accountId) {
     this.accountId = accountId;
     return this;
@@ -133,6 +136,26 @@ public class AdvertiserConfigAddRequest {
     this.multiImageCollageAigcStatus = multiImageCollageAigcStatus;
   }
 
+  public AdvertiserConfigAddRequest multiImageDisplayArea(
+      MultiImageDisplayArea multiImageDisplayArea) {
+    this.multiImageDisplayArea = multiImageDisplayArea;
+    return this;
+  }
+
+  /**
+   * Get multiImageDisplayArea
+   *
+   * @return multiImageDisplayArea
+   */
+  @ApiModelProperty(value = "")
+  public MultiImageDisplayArea getMultiImageDisplayArea() {
+    return multiImageDisplayArea;
+  }
+
+  public void setMultiImageDisplayArea(MultiImageDisplayArea multiImageDisplayArea) {
+    this.multiImageDisplayArea = multiImageDisplayArea;
+  }
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -150,7 +173,9 @@ public class AdvertiserConfigAddRequest {
             this.multiImageCollageStatus, advertiserConfigAddRequest.multiImageCollageStatus)
         && Objects.equals(
             this.multiImageCollageAigcStatus,
-            advertiserConfigAddRequest.multiImageCollageAigcStatus);
+            advertiserConfigAddRequest.multiImageCollageAigcStatus)
+        && Objects.equals(
+            this.multiImageDisplayArea, advertiserConfigAddRequest.multiImageDisplayArea);
   }
 
   @Override
@@ -160,7 +185,8 @@ public class AdvertiserConfigAddRequest {
         organizationId,
         coverImageSnapshotType,
         multiImageCollageStatus,
-        multiImageCollageAigcStatus);
+        multiImageCollageAigcStatus,
+        multiImageDisplayArea);
   }
 
   @Override

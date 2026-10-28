@@ -191,6 +191,9 @@ public class AdcreativesGetListStruct {
   @SerializedName("contract_universal_link_url")
   private String contractUniversalLinkUrl = null;
 
+  @SerializedName("mac_deep_link_app_id")
+  private String macDeepLinkAppId = null;
+
   @SerializedName("adcreative_template_id")
   private Long adcreativeTemplateId = null;
 
@@ -1282,6 +1285,25 @@ public class AdcreativesGetListStruct {
     this.contractUniversalLinkUrl = contractUniversalLinkUrl;
   }
 
+  public AdcreativesGetListStruct macDeepLinkAppId(String macDeepLinkAppId) {
+    this.macDeepLinkAppId = macDeepLinkAppId;
+    return this;
+  }
+
+  /**
+   * Get macDeepLinkAppId
+   *
+   * @return macDeepLinkAppId
+   */
+  @ApiModelProperty(value = "")
+  public String getMacDeepLinkAppId() {
+    return macDeepLinkAppId;
+  }
+
+  public void setMacDeepLinkAppId(String macDeepLinkAppId) {
+    this.macDeepLinkAppId = macDeepLinkAppId;
+  }
+
   public AdcreativesGetListStruct adcreativeTemplateId(Long adcreativeTemplateId) {
     this.adcreativeTemplateId = adcreativeTemplateId;
     return this;
@@ -1397,6 +1419,7 @@ public class AdcreativesGetListStruct {
         && Objects.equals(this.dynamicCreativeId, adcreativesGetListStruct.dynamicCreativeId)
         && Objects.equals(
             this.contractUniversalLinkUrl, adcreativesGetListStruct.contractUniversalLinkUrl)
+        && Objects.equals(this.macDeepLinkAppId, adcreativesGetListStruct.macDeepLinkAppId)
         && Objects.equals(this.adcreativeTemplateId, adcreativesGetListStruct.adcreativeTemplateId)
         && Objects.equals(this.adcreativeElements, adcreativesGetListStruct.adcreativeElements);
   }
@@ -1460,6 +1483,7 @@ public class AdcreativesGetListStruct {
         linkNameText,
         dynamicCreativeId,
         contractUniversalLinkUrl,
+        macDeepLinkAppId,
         adcreativeTemplateId,
         adcreativeElements);
   }
